@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulBasak
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA05801304068
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Demek
+    senin de dikkatini, utanga\xE7 fakat haz\u0131rcevap ve zeki bir ba\u015Fak burcu
+    {{data, cinsiyet=erkek, kad\u0131n\u0131 | cinsiyet=kad\u0131n, erke\u011Fi |
+    cinsiyet=lgbt, mensubu}} \xE7ekti {{isim}}. Ger\xE7ekten ho\u015F insanlard\u0131r.
+    O nedenle seni, hali haz\u0131rda bir ili\u015Fkin varken onu merak ettin diye
+    inan gram yarg\u0131lam\u0131yorum. {{burc}} burcu {{data, cinsiyet=erkek, erkekleri
+    | cinsiyet=kad\u0131n, kad\u0131nlar\u0131 | cinsiyet=lgbt, ki\u015Filer}} aras\u0131ndan
+    k\xF6t\xFC kalpli pek \xE7\u0131kmaz. Senin niyetinin ne kadar halis oldu\u011Funu
+    biliyorum. Onunla \xE7ok uyumlu oldu\u011Funuzu ve \xE7ok yak\u0131\u015Faca\u011F\u0131n\u0131z\u0131
+    da biliyorum. Bilmedi\u011Fim \u015Fey, {{data, cinsiyet=kad\u0131n, erkek arkada\u015F\u0131n\u0131
+    | cinsiyet=erkek, k\u0131z arkada\u015F\u0131n\u0131 | cinsiyet=lgbt, sevgilini}}
+    ne yapaca\u011F\u0131n... Onu da hayal k\u0131r\u0131kl\u0131\u011F\u0131na u\u011Fratmaman
+    laz\u0131m, bu merak etti\u011Fin okul arkada\u015F\u0131n\u0131 da. Hele hayatlar\u0131na
+    h\u0131zl\u0131 bir giri\u015F \xE7\u0131k\u0131\u015F yap\u0131ld\u0131\u011F\u0131nda,
+    ba\u015Fak burcu {{data, cinsiyet=kad\u0131n, erkekleri | cinsiyet=erkek, kad\u0131nlar\u0131
+    | cinsiyet=lgbt, ki\u015Filer}} hemen y\u0131k\u0131l\u0131verir, an\u0131nda!
+    Her ne yaparsan yap, onu \xFCzme derim. K\u0131ymetli bir insan var kar\u015F\u0131nda
+    {{isim}}.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "ba\u015Fak"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

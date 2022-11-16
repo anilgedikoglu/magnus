@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 146
+  m_EditorClassIdentifier: 
+  idIndex: 20227101240AA35177872861
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Merhaba {{isim}}. D\u0131\u015Far\u0131dan pek \xF6yle g\xF6z\xFCkmeseler de,
+    da\u011F\u0131n\u0131k fincan g\xF6rsellerindeki derin anlamlar insan\u0131n
+    i\xE7ini huzurla kapl\u0131yor. Sa\u011Fl\u0131k konusunda \xE7ok \u015F\xFCk\xFCr
+    ki sana ferahlat\u0131c\u0131 bilgiler aktaraca\u011F\u0131m. Haydi yorumuna
+    start verelim!"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar:
+  - "kahve fal\u0131 giri\u015F"
+  - "kahve fal\u0131 ba\u011Flama"
+  - "kahve fal\u0131 geli\u015Fme"
+  - "kahve fal\u0131 sonu\xE7"
+  - "kahve fal\u0131 u\u011Furlama"
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahveanimsonras\u0131"
+    islem: 0
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

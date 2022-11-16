@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimbeslisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA44870028903
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 08d6c93060b02e540b24f0eb93721c3f, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 08d6c93060b02e540b24f0eb93721c3f, type: 3}
+  contentPhotoId: tilsimbeslisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"T\u0131ls\u0131m Be\u015Flisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nOlumsuz bir kart ters \xE7\u0131kt\u0131\u011F\u0131 i\xE7in ger\xE7ekten
+    \xE7ok \u015Fansl\u0131s\u0131n. Bor\xE7lar\u0131n\u0131 \xF6demeye ba\u015Fl\u0131yorsun.
+    S\u0131k\u0131nt\u0131lar\u0131n karanl\u0131\u011F\u0131ndan ayd\u0131nl\u0131klara
+    \xE7\u0131k\u0131yor, kasvetten, elem ve kederden kurtuluyorsun. \xC7evrenden
+    en kritik zamanlarda yard\u0131mlar gelmeye ba\u015Flam\u0131\u015F {{isim}}.
+    Zorluklar\u0131n ger\xE7ek anlamda sonuna yakla\u015Fm\u0131\u015Fs\u0131n. Son
+    y\u0131llarda ya\u015Fad\u0131\u011F\u0131n bir kay\u0131ptan kaynaklanan duygusal
+    yaralar\u0131n var m\u0131yd\u0131? O yaralar bir \u015Fekilde kapanmaya ba\u015Fl\u0131yor.
+    Gidenin ya da yitirilenin yeri elbette dolmaz fakat \xE7ok farkl\u0131 deneyimler
+    ya\u015Fayabilece\u011Fin, sevgini ve dostlu\u011Funu payla\u015Fabilece\u011Fin
+    bamba\u015Fka insanlarla kar\u015F\u0131la\u015Fmak \xFCzeresin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi tilsimbeslisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme733
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA32911678370
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n kuzeydo\u011Fu y\xF6n\xFCnde g\xF6z\xFCme \xE7arpan \"\xE7a\u011Flayan\"
+    fig\xFCr\xFC, {{kelime, \xF6n\xFCndeki telveleri adeta arkas\u0131na takm\u0131\u015F
+    | civar\u0131ndaki telveleri adeta \xF6n\xFCne katm\u0131\u015F}}, taban k\u0131sm\u0131na
+    do\u011Fru \u015Fiddetle akmakta {{isim}}. Bu \xE7a\u011Flayan fig\xFCr\xFCn\xFCn
+    evlili\u011Fini temsil etti\u011Fini, \u015Fu \xF6zelli\u011Finden anlad\u0131m;
+    adeta y\xFCre\u011Finin derinliklerine do\u011Fru akmakta olan sular, ne a\u015Fk\u0131n\u0131z\u0131n
+    susuzlu\u011Funu giderebilmi\u015F, ne de gere\u011Finden fazla birikerek sizi
+    sular alt\u0131nda b\u0131rakm\u0131\u015F. Anlayaca\u011F\u0131n, evlili\u011Finde
+    a\u015Fk ile mant\u0131k aras\u0131nda asl\u0131nda fark\u0131nda olmad\u0131\u011F\u0131n\u0131z
+    m\xFCthi\u015F bir denge kurulu. Bu denge sayesinde, hayata dair y\xFCzle\u015Fece\u011Finiz
+    sorunlar\u0131n \xFCstesinden e\u015Finiz {{data, cinsiyet=erkek, han\u0131mefendiyle
+    | cinsiyet=kad\u0131n, beyefendiyle | cinsiyet=lgbt, olan ki\u015Fiyle}} birlikte
+    kolayca gelebileceksiniz.\n\nDi\u011Fer taraftan, {{ay_1}} ay\u0131n\u0131n {{kelime,
+    ikinci | \xFC\xE7\xFCnc\xFC | son}} haftas\u0131nda \xF6nemli bir meselenin s\xF6z
+    konusu olaca\u011F\u0131n\u0131 hissediyorum. Bu mesele, ad\u0131nda \"{{harf}}\"
+    ya da \"{{harf}}\" harfi olan \xFC\xE7\xFCnc\xFC bir ki\u015Fiyi ilgilendirece\u011Finden,
+    e\u015Finle aranda baz\u0131 fikir ayr\u0131l\u0131klar\u0131 ya\u015Fanabilir.
+    Bu konuda olabildi\u011Fince objektif ve adil davranman, meseleyi h\u0131zla
+    \xE7\xF6z\xFCme ula\u015Ft\u0131racak {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

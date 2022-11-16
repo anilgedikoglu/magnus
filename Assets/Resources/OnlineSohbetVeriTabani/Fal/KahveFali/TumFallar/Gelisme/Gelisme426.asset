@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme426
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA27374379514
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ay\xE7i\xE7ekleriyle dolu d\xFCmd\xFCz ve u\xE7suz bucaks\u0131z bir tarlan\u0131n
+    ortas\u0131nda, tek ve b\xFCy\xFCk bir \xE7\u0131nar a\u011Fac\u0131 g\xF6r\xFCyorum
+    {{isim}}. Bu ya\u015Fl\u0131 ve kal\u0131n g\xF6vdeli a\u011Fa\xE7, nimetlerle
+    \xE7evrili olundu\u011Fu halde huzurun tam manas\u0131yla yakalanamad\u0131\u011F\u0131n\u0131,
+    yaln\u0131zl\u0131k hissini ve \"anla\u015F\u0131lamamay\u0131\" ifade eder.
+    Bu {{mevsim_0}} mevsimi senin i\xE7in zor ge\xE7iyor anla\u015F\u0131lan. Hayat\u0131ndaki
+    ta\u015Flar\u0131n tam istedi\u011Fin gibi yerlerine oturmad\u0131\u011F\u0131n\u0131
+    ve \xF6zellikle de insan ili\u015Fkilerinde zorland\u0131\u011F\u0131n\u0131
+    hissediyorum. {{gun_+3}} g\xFCn\xFC bir akrabanla telefon g\xF6r\xFC\u015Fmesi
+    yapacaks\u0131n. Bu g\xF6r\xFC\u015Fme sonras\u0131 ailenin i\xE7 dinamikleri
+    senin i\xE7in daha umut verir bir hale gelecek {{isim}}; belki de bir k\xFCsk\xFCnl\xFCk
+    ortadan kalkacak. \n\n\xD6te yandan, telvelerinin bir noktada \"\xFC\xE7gen\"
+    \u015Feklini ald\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum. Ezoterik \xF6\u011Fretilerde
+    \xFC\xE7genin, \"g\xF6z de\u011Fmesinler diye insanlara s\xF6ylemekten \xE7ekinilecek
+    kadar iyi bir geli\u015Fme ya\u015Famaya\" i\u015Faret oldu\u011Funu bilmeni
+    isterim. \"Nerede bizde o \u015Fans\" dedi\u011Fini duyar gibiyim {{isim}}. {{ay_+4}}
+    ay\u0131ndaki ilk d\xF6rd\xFCn'de, dolunay'dan iki yahut \xFC\xE7 g\xFCn \xF6nce,
+    \xF6\u011Flen \xFCzeri g\xF6receksin..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

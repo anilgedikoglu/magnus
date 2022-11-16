@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: S5Cevap2002
+  m_EditorClassIdentifier: 
+  etiket: dogc
+  aciklama:
+  - "2002 mi?\r\nO y\u0131l Eurovision \u015Eark\u0131 Yar\u0131\u015Fmas\u0131'n\u0131
+    Letonya kazanm\u0131\u015Ft\u0131. \u015Eark\u0131n\u0131n ad\u0131 da san\u0131r\u0131m
+    \"I wanna\" idi. M\xFCzikle aran nas\u0131l?"
+  - "Demek 2002 y\u0131l\u0131...\r\n\xD6tenaziyi yasalla\u015Ft\u0131ran karar,
+    Hollanda'da o y\u0131l y\xFCr\xFCrl\xFC\u011Fe girmi\u015Fti. Sence do\u011Fru
+    bir \u015Fey mi? Ben karars\u0131z\u0131m..."
+  - "2002 y\u0131l\u0131 \xF6yle mi?\r\nEdebiyat\xE7\u0131 ve yazar Melih Cevdet
+    Anday, o y\u0131l ya\u015Fam\u0131n\u0131 yitirmi\u015Fti. Okumak ve yazmak o
+    kadar \xF6nemli ki..."
+  - "2002 mi?\r\n Londra'da 51.'si yap\u0131lan D\xFCnya G\xFCzellik Yar\u0131\u015Fmas\u0131'nda
+    T\xFCrkiye G\xFCzeli Azra Ak\u0131n o y\u0131l D\xFCnya G\xFCzeli se\xE7ilmi\u015Fti.
+    G\xFCzelden ben de anlar\u0131m..."
+  - "2002 ha?\r\nTofa\u015F, o y\u0131l Ku\u015F Serisi olarak bilinen otomobillerin
+    \xFCretimini durdurmu\u015Ftu. Ama efsaneler \xF6lmez!"
+  aranacakEtiket: konum izin
+  gerekenDegiskenler:
+  - degiskenAdi: dogum yili
+    degiskenDegeri: 2002
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

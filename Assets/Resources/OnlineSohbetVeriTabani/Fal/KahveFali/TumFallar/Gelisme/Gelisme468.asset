@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme468
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA15780931126
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{kelime, 7-8 | 8-9 | 6-7}} katl\u0131 bir binan\u0131n {{kelime, ilk katlar\u0131nda
+    | orta katlar\u0131nda | \xFCst katlar\u0131nda}} oturan, senden 2-3 ya\u015F
+    b\xFCy\xFCk, yani {{yas_+2}}-{{yas_+3}} ya\u015Flar\u0131nda biri var {{isim}}
+    fincan\u0131nda. \U0001F3E2Bu ki\u015Fiyle samimiyetini bir d\xF6nem ilerletme
+    potansiyelin varm\u0131\u015F, fakat uygun \u015Fartlar tam manas\u0131yla olu\u015Fmam\u0131\u015F.
+    Yar\u0131n de\u011Fil haftaya {{gun_+1}} g\xFCn\xFC, bu ki\u015Fi {{kelime, sana
+    mesaj atacak | seni arayacak}}. Konu\u015Ftu\u011Funuzda, son birka\xE7 haftad\u0131r
+    akl\u0131nda olan bir sorunun yan\u0131t\u0131n\u0131 alacak ya da onun vesilesiyle
+    bir sorununu \xE7\xF6zeceksin.\n\nAyr\u0131ca telvelerinde, oval ve damla formu
+    aras\u0131nda kesilmi\u015F, \"lacivert ta\u015F\u0131\" diye de bilinen bir
+    lapis lazuli ta\u015F\u0131 g\xF6r\xFCyorum. Bu ta\u015F, uzakta olanlarla manevi
+    irtibata, ruhani alg\u0131lar\u0131n a\xE7\u0131lmas\u0131na ve insanlar\u0131n
+    akl\u0131ndan ge\xE7enleri sezebilmeye i\u015Farettir. E\u011Fer \xF6n\xFCm\xFCzdeki
+    {{sayi,2,7}} g\xFCn i\xE7erisinde ikindi vakti akl\u0131ndan birini ge\xE7irirsen
+    gece onun r\xFCyas\u0131na girebilir ya da onun zihnine sirayet ederek seni aramas\u0131n\u0131,
+    sana ula\u015Fmas\u0131n\u0131 sa\u011Flayabilirsin {{isim}}. Unutma; bu yeti
+    falda \xE7\u0131kan g\xF6rselin akabinde bir hafta i\xE7inde zay\u0131flayarak
+    yok olur."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

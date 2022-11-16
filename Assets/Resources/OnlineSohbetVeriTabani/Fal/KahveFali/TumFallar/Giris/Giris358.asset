@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris358
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA80398039201
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Hem \xF6zel hayat\u0131nda hem de di\u011Fer konularda yolunda gitmeyen bir
+    \u015Feyler oldu\u011Funu hissediyorum {{isim}}. Telvelerinin en kilit noktlar\u0131;
+    ya\u015Fam\u0131ndaki baz\u0131 kav\u015Faklar ve karar alman gereken en \xF6nemli
+    anlar, koyu kahve tortular\u0131yla adeta bloke edilmi\u015F. Yakla\u015F\u0131k
+    {{sayi,2,4}} {{kelime, ayd\u0131r | senedir}} y\xFCz\xFCn\xFCn bir t\xFCrl\xFC
+    {{kelime, diledi\u011Fince | tam istedi\u011Fin gibi | doya doya}} g\xFClmedi\u011Fini
+    g\xF6r\xFCyorum. Fakat \u015Funu da alt\u0131n\u0131 \xE7izerek belirtmem gerek;
+    fincan taban\u0131ndan y\xFCzeye do\u011Fru, telvelerinin kara ferini s\xF6nd\xFCren
+    bir g\xFCne\u015F do\u011Fuyor. {{kelime, \"12 ay d\xF6n\xFCm\xFC\" yani 1 y\u0131ll\u0131k
+    bir zaman i\xE7erisinde | \"24 ay d\xF6n\xFCm\xFC\" yani 2 y\u0131ll\u0131k bir
+    zaman i\xE7erisinde | \"36 ay d\xF6n\xFCm\xFC\" yani 3 y\u0131ll\u0131k biri
+    zaman i\xE7erisinde | \"18 ay d\xF6n\xFCm\xFC\" yani 1.5 y\u0131ll\u0131k bir
+    zaman i\xE7erisinde | \"30 ay d\xF6n\xFCm\xFC\" yani 2.5 y\u0131ll\u0131k bir
+    zaman i\xE7erisinde}} ya\u015Fayaca\u011F\u0131n \xE7ok b\xFCy\xFCk {{kelime,
+    bir | \"iki\" | \"\xFC\xE7\"}} geli\u015Fme ile hayat\u0131n, bamba\u015Fka bir
+    mutluluk d\xFCzeyine ula\u015Facak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "ev han\u0131m\u0131"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "i\u015F ar\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xE7al\u0131\u015Fm\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: emekli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "ev han\u0131m\u0131"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "i\u015F ar\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xE7al\u0131\u015Fm\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: emekli
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UySevgiliTerazi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA95723533990
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Bir
+    terazi {{data, cinsiyet=erkek, kad\u0131n\u0131yla | cinsiyet=kad\u0131n, erke\u011Fiyle
+    | cinsiyet=lgbt, mensubuyla}} birlikteysen ve ondaki baz\u0131 y\xF6nleri de\u011Fi\u015Ftirmek,
+    onunla konu\u015Fmak, onu uyarmak ve ona eksiklerini anlatmak istiyorsan, i\u015Fin
+    var demektir... Onlar tart\u0131\u015Fmak i\xE7in mindere \xE7ekilmeye \xE7al\u0131\u015F\u0131ld\u0131klar\u0131n\u0131
+    anlad\u0131klar\u0131 anda ka\xE7\u0131p toz olmaya niyetlenirler. Uygun bir
+    zemin bulup ona kendi fikirlerini empoze etmen bir hayli g\xFC\xE7 olacakt\u0131r.
+    {{burc}} burcu {{data, cinsiyet=erkek, erke\u011Fi | cinsiyet=kad\u0131n, kad\u0131n\u0131
+    | cinsiyet=lgbt, mensubu}} olarak, hata yapt\u0131\u011F\u0131n yerlerde kendini
+    seve seve, bile isteye yarg\u0131lad\u0131\u011F\u0131n\u0131 biliyorum. Hatalar\u0131n\u0131
+    bulup d\xFCzeltmeye \xE7al\u0131\u015F\u0131yorsun. Bu m\xFCthi\u015F bir \xF6zele\u015Ftiri
+    kabiliyeti. Terazilerde ise bu pek yoktur. Onlar, kendilerini kaybetmi\u015F
+    ve ma\u011Fdur g\xF6rd\xFCkleri her seferde kendilerine ac\u0131rlar. Bu sayede
+    kendilerini ne olursa olsun hakl\u0131 g\xF6rmeyi becerirler. Sevgiline kar\u015F\u0131
+    hakl\u0131 \xE7\u0131kmaya \xE7al\u0131\u015Fmad\u0131\u011F\u0131n ve istedi\u011Fin
+    \u015Feyi kabul ettirmek i\xE7in en \u0131l\u0131ml\u0131 yollar\u0131 tercih
+    etti\u011Fin s\xFCrece, onunla ba\u015Fka bir s\u0131k\u0131nt\u0131 ya\u015Fayabilece\u011Finizi
+    zannetmiyorum {{isim}}.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: sevgili
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: terazi
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

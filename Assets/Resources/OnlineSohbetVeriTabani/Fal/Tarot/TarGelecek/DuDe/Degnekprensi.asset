@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA36502417867
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 45ad4ceb9a88660409f6f6f7f0d50b98, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 45ad4ceb9a88660409f6f6f7f0d50b98, type: 3}
+  contentPhotoId: asaprensi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek Prensi\" kart\u0131n\u0131 se\xE7tin.\n\nSen ilerleyen
+    zamanlarda amat\xF6rce u\u011Fra\u015Ft\u0131\u011F\u0131n bir \u015Feyin uzman\u0131
+    ya da dal\u0131nda en iyisi olacaks\u0131n. Kart\u0131n, \xE7ok severek ilgilendi\u011Fin
+    bir konuda m\xFChti\u015F bir yolculu\u011Fa ba\u015Flayaca\u011F\u0131n\u0131
+    ifade ediyor {{isim}}. Hem \u015Fans\u0131n yard\u0131m edecek, hem de i\xE7ini
+    dolduran ilham, neyi nas\u0131l yapman gerekti\u011Fini sana f\u0131s\u0131ldayacak.
+    Art\u0131k geri planda kalmayacak, kabu\u011Fundan \xE7\u0131kacak ve insanlara
+    ger\xE7ek yeteneklerini g\xF6stereceksin. Sende b\xFCy\xFCk bir potansiyel var.
+    \u015Eimdiye kadar \xE7ekemeyenler taraf\u0131ndan kabul g\xF6rmeyen ya da inkar
+    edilen bu potansiyel, yak\u0131nda meyvelerini verecek. \xC7ok konu\u015Fulacak
+    i\u015Fler yapacaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asaprensi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

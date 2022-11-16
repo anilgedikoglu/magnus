@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sohbet 240
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA33620118072
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\"Bir araya gelen her \u015Fey par\xE7alan\u0131r, her \u015Fey. Oturdu\u011Fum
+    sandalye; birle\u015Ftirildi ve sonunda par\xE7alanacak. Ben de par\xE7alanaca\u011F\u0131m,
+    muhtemelen sandalyeden \xF6nce... Ve siz de par\xE7alanacaks\u0131n\u0131z. Sizi
+    siz yapan h\xFCcreler, dokular, organlar ve sistemler bir araya geldiler, birlikte
+    b\xFCy\xFCd\xFCler ve sonunda par\xE7alanmal\u0131lar. Buddha, \xF6l\xFCm\xFCnden
+    bin y\u0131l sonraya kadar bilimin kan\u0131tlayamad\u0131\u011F\u0131 bir \u015Feyi
+    biliyordu; entropi artar. Her \u015Fey par\xE7alan\u0131r.\n\nHat\u0131ralar
+    da par\xE7alan\u0131yordu. Ve sonra elinizde hi\xE7bir \u015Fey kalm\u0131yordu,
+    bir hayalet bile... Ancak g\xF6lgesi kal\u0131yordu. \u0130lk ba\u015Fta o ki\u015Fi,
+    o mekan akl\u0131m\u0131zdan, r\xFCyalar\u0131m\u0131zdan hi\xE7 \xE7\u0131kmam\u0131\u015Ft\u0131.
+    Ancak \u015Fimdi, sadece haftalar sonra bile sessizce uzakla\u015F\u0131yor,
+    benim ve di\u011Fer herkesin haf\u0131zas\u0131nda par\xE7alan\u0131yor, tekrar
+    \xF6l\xFCyordu... \u0130lk defa bir araya getiren, yeniden b\xFCt\xFCnle\u015Ftirecek.
+    O g\xFCn birbirimizi yeniden hat\u0131rlayaca\u011F\u0131z. Buddha'n\u0131n bilmedi\u011Fi
+    buydu; final, sonsuz bir kaos de\u011Fil. Sabredin ve nefesinizi tutun!...\""
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "\xF6zl\xFCs\xF6z1"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "\xF6zl\xFCs\xF6z1"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

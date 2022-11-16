@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicasi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA81308436822
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: ad6288c55197be24ab1e00a5ec980b42, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: ad6288c55197be24ab1e00a5ec980b42, type: 3}
+  contentPhotoId: kilicasi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 As\u0131\" kart\u0131n\u0131 se\xE7tin
+    {{isim}}.\n\nSan\u0131yorum senin ad\u0131na hi\xE7bir \u015Fey \xE7ok kolay
+    olmuyor. Ge\xE7mi\u015Fin adeta sava\u015Farak ge\xE7mi\u015F. \u0130stedi\u011Fin
+    hemen her \u015Fey i\xE7in m\xFCcadele etmek durumunda kalm\u0131\u015Fs\u0131n.
+    \u0130\u015Fin iyi yan\u0131 ise \u015Fu; kart\u0131n, hi\xE7bir zorluk kar\u015F\u0131s\u0131nda
+    vazge\xE7medi\u011Fini ve hedeflerin do\u011Frultusunda her zaman kararl\u0131l\u0131kla
+    ilerledi\u011Fini s\xF6yl\xFCyor. Hen\xFCz varamad\u0131\u011F\u0131n baz\u0131
+    hedefler var ki, senin taraf\u0131ndan \xE7ok eski zamanlarda belirlenmi\u015F.
+    Onlara hen\xFCz ula\u015Famasan da, varmay\u0131 bir defa kafana koymu\u015Fsun.
+    Seni amac\u0131na ula\u015Ft\u0131rabilecek her fikri de\u011Ferlendirmi\u015F,
+    her kap\u0131y\u0131 \xE7alarak bug\xFCnlere gelmi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kilicasi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

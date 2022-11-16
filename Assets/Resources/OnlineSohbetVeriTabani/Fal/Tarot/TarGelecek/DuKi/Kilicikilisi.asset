@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicikilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA59978824989
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 26deb53680f2a5249b10087df24effa1, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 26deb53680f2a5249b10087df24effa1, type: 3}
+  contentPhotoId: kilicikilisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"K\u0131l\u0131\xE7 \u0130kilisi\" kart\u0131n\u0131 se\xE7tin.\n\nYak\u0131nda
+    iki arada bir derede kalacaks\u0131n. Bir \u015Feyi yap\u0131p yapmamak ya da
+    bir insan\u0131 di\u011Ferine tercih edip etmemek aras\u0131nda uzunca bir s\xFCre
+    gidip geleceksin {{isim}}. Bu se\xE7im s\xFCreci, her \u015Feyin s\xFCt liman
+    g\xF6z\xFCkt\xFC\u011F\xFC son d\xF6nem olacak. Sonras\u0131nda seni hem b\xFCy\xFCk
+    geli\u015Fmeler hem de yo\u011Fun bir hareketlilik bekliyor. Se\xE7ti\u011Fin
+    kart, tercihini yapmadan \xF6nce \xE7ok dikkatli ve etrafl\u0131ca d\xFC\u015F\xFCnmen
+    gerekti\u011Fini ifade ediyor. Kesinlikle duygusal davranmamal\u0131, durumlar\u0131
+    ak\u0131l s\xFCzgecinden enine boyuna ge\xE7irip zekice hareket etmelisin. Do\u011Fru
+    karar verece\u011Fini ve bu karar\u0131n\u0131n g\xFCzel sonu\xE7lar\u0131 olaca\u011F\u0131n\u0131
+    \u015Fimdiden bilmeni isterim."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kilicikilisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme436
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA24625877579
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xC7ok ilgin\xE7; telvelerinin merkezinde, k\xF6kleri insana benzeyen ve kopar\u0131ld\u0131\u011F\u0131nda
+    \xE7\u0131\u011Fl\u0131k att\u0131\u011F\u0131na inan\u0131lan \"adamotu\" bitkisinden
+    g\xF6r\xFCyorum {{isim}}. \U0001F644Sen birine ya da bir \u015Feye \xF6zeniyor
+    ve enerjinin bir k\u0131sm\u0131n\u0131 bu \u015Feye d\xF6n\xFC\u015Fmek ya da
+    bu \u015Feyi elde etmek i\xE7in mi t\xFCketiyorsun? Bu yans\u0131ma, \xF6yk\xFCnd\xFC\u011F\xFCn
+    bir ya\u015Fam ya da \"birileri\" oldu\u011Funu ifade ediyor. Zay\u0131f bir
+    ihtimal oldu\u011Funu ya da bunun bir hayal oldu\u011Funu d\xFC\u015F\xFCn\xFCyorsan,
+    hayli yan\u0131lacaks\u0131n. Hayat\u0131n sana bu noktada \xE7ok b\xFCy\xFCk
+    bir s\xFCrpriz haz\u0131rlad\u0131\u011F\u0131n\u0131 bilmeni isterim. \U0001F31FSana
+    \u015Fimdilik yaln\u0131zca \u015Funu s\xF6yleyebilirim; \xF6n\xFCnde en fazla
+    {{sayi,2,6}} sene var...\n\nAd\u0131nda senin ad\u0131nda oldu\u011Fu gibi {{isimilk}}
+    harfi bulunan, eski e\u015Fyalar\u0131n\u0131 atmay\u0131p saklayan, hatta c\xFCzdan\u0131nda
+    \u015Fans paras\u0131 dahi bulundurup, harcamayacak kadar naif bir insan var.
+    Tasarrufu, tedbiri ve elindeki her \u015Feyin k\u0131ymetini iyi bilen bu insanla
+    birlikte, gelecek hafta {{gun_+2}} ya da {{gun_+3}} g\xFCn\xFC birlikte bir al\u0131\u015Fveri\u015F
+    yapacaks\u0131n\u0131z. Bu ki\u015Finin sana \xF6nemli bir katk\u0131s\u0131
+    olacak; onun sayesinde ya istedi\u011Fin \u015Feyi daha uyguna bulacaks\u0131n,
+    ya da sana farkl\u0131 bir alternatif konusunda do\u011Fru y\xF6nlendirmede bulunacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 22
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 22
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

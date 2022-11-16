@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA44673617461
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a67fceea06ca01b48b321b69c9eaf370, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a67fceea06ca01b48b321b69c9eaf370, type: 3}
+  contentPhotoId: kilicprensi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"K\u0131l\u0131\xE7 Prensi\" kart\u0131n\u0131 se\xE7tin.\n\n\xD6n\xFCnde
+    seni bekleyen \xE7ok g\xFCzel g\xFCnler ve sevindirici geli\u015Fmeler var {{isim}}.
+    Fakat ad\u0131mlar\u0131n\u0131 son ana kadar \xE7ok dikkatli atman zorundas\u0131n.
+    \u0130\u015F bitti ya da mesele sonu\xE7land\u0131 diye gev\u015Fememelisin.
+    Se\xE7ti\u011Fin kart, kararlar\u0131n\u0131 do\u011Fru analiz etmen ve so\u011Fukkanl\u0131
+    davranman durumunda kazan\xE7\u0131 \xE7\u0131kaca\u011F\u0131n\u0131 m\xFCjdeliyor.
+    Ge\xE7ici \xE7\xF6z\xFCmler kesinlikle i\u015Fe yaramaz. Meselenin \xFCzerine
+    gitmelisin. \u0130yice irdeleyip, etraf\u0131n\u0131 temkinli bir \u015Fekilde
+    yoklay\u0131p, do\u011Fru planlanm\u0131\u015F hamleler yapmal\u0131s\u0131n.
+    Herkese de fazla g\xFCvenmemen gerekti\u011Fini hat\u0131rlat\u0131r\u0131m.
+    Kart\u0131n, iyi niyetle anlatt\u0131klar\u0131n\u0131n \"istemedi\u011Fin ki\u015Filer
+    taraf\u0131ndan\" duyulabilece\u011Fini s\xF6yl\xFCyor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kilicprensi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

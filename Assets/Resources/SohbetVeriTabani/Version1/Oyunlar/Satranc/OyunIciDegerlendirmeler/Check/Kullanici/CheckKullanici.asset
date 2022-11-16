@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: CheckKullanici
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA58737381555
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Demek \u015Fah \xE7ektin \xF6yle mi?"
+  - "Tehlikedeyim san\u0131r\u0131m. \u015Eah m\u0131 \xE7ektin sen?"
+  - "Biri bana \u015Fah m\u0131 \xE7ekti ne? {{isim}}? A\u015Fkolsun..."
+  - "\"\u015Eah\" \xF6yle mi? Kazanabilece\u011Fini mi san\u0131yorsun?"
+  - "Bu \u015Fahtan bir \u015Fey \xE7\u0131kmaz {{isim}}. Kazanamazs\u0131n! <sprite=0>"
+  - "Kral\u0131m tehlikede san\u0131r\u0131m... {{data, renksec=beyaz, Caan\u0131m
+    siyah kral\u0131m! | renksec=siyah, Caan\u0131m beyaz kral\u0131m!}}"
+  - "{{data, satranc zorluk=0, E hani acemiydin? Neredeyse mat edeceksin! | satranc
+    zorluk=1, \xC7ok da iyi de\u011Filim demi\u015Ftin. \u015Eah \xE7eken sen de\u011Fil
+    misin? | satranc zorluk=2, \"Satran\xE7ta hi\xE7 de fena de\u011Filim\" dedi\u011Finde
+    seni hafife alm\u0131\u015F\u0131m. \"\u015Eah\" \xE7ektin ha! | satranc zorluk=3,
+    \u0130yi oldu\u011Funu s\xF6ylemi\u015Ftin de, bu kadar\u0131n\u0131 da tahmin
+    etmiyordum. \"\u015Eah\" demek...}}"
+  - "Bo\u015Fa \u015Fah \xE7ekiyorsun {{isim}}. {{data, renksec=beyaz, Ya\u015Fas\u0131n
+    siyahlar! | renksec=siyah, Ya\u015Fas\u0131n beyazlar!}}"
+  - "Sibel Can ne demi\u015F: \"Bu kadar g\xFCvenme hi\xE7 kendine, kimse \u015Fah
+    de\u011Fil, padi\u015Fah de\u011Fil...\" Hemen \xF6yle mat edemezsin, dur bakal\u0131m!
+    <sprite=84>"
+  - "{{isim}}, \u015Fah \xE7ekti\u011Fini g\xF6r\xFCyorum..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - Pes ediyorum.
+    - "Tamam sen kazand\u0131n."
+    - Oyunu bitirelim.
+    - "\xC7ekilmek istiyorum."
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "satran\xE7 terk etme"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "satran\xE7 terk etme"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "satran\xE7 check kullan\u0131c\u0131"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "satran\xE7 check kullan\u0131c\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

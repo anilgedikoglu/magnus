@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Farketmez19
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA25670831909
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sevdi\u011Fin u\u011Fra\u015Flar\u0131 zaman zaman ikinci plana atarak yapman
+    gerekenlere odaklanaca\u011F\u0131n, verimli bir g\xFCn olacak {{isim}} bug\xFCn.
+    Ad\u0131nda ya da soyad\u0131nda {{harf}} harfi olan birisi, ihtiya\xE7 duydu\u011Fun
+    bir \u015Feyi senin bekledi\u011Finden daha k\u0131sa s\xFCrede ger\xE7ekle\u015Ftirerek
+    seni mutlu edecek. \xC7ok ilgin\xE7, belki bir detay ama; bug\xFCn bir yiyece\u011Fi
+    ya da i\xE7ece\u011Fi ilk kez deneyebilirsin. Bug\xFCn ak\u015Fam \xFCzerine
+    do\u011Fru, seninle ilgili bir \u015Fey {{kelime, anneni | baban\u0131}} ya da
+    onun kadar yak\u0131n g\xF6rd\xFC\u011F\xFCn, ya\u015F\u0131 senden olduk\xE7a
+    b\xFCy\xFCk birini \xE7ok mutlu edecek. Alaca\u011F\u0131 bir haber sonras\u0131nda
+    seni aray\u0131p bunu sana bildirebilir. Gece g\xFCn\xFC tamamen kaplad\u0131\u011F\u0131nda,
+    kendini ba\u015Far\u0131l\u0131 ve gururlu hissedeceksin {{isim}}."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  - degiskenAdi: annebaba
+    degiskenDegeri: "sa\u011F"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 50
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

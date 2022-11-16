@@ -1,0 +1,297 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9a4062947ce944491b0839d885463b, type: 3}
+  m_Name: WheelModSelector
+  m_EditorClassIdentifier: 
+  datas:
+  - type: 0
+    wheelPhoto: {fileID: 21300000, guid: 9786dc05b04040847a0043b97e120257, type: 3}
+    wheelPhotoHiglLight: {fileID: 21300000, guid: be0fd691b7606bf4187951717308f4ec, type: 3}
+    items:
+    - baslik: "Bo\u011Fa"
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: "bo\u011Fa"
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: "\u0130kizler"
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: ikizler
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: "Yenge\xE7"
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: "yenge\xE7"
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Aslan
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: aslan
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: "Ba\u015Fak"
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: "ba\u015Fak"
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Terazi
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: terazi
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Akrep
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: akrep
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Yay
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: yay
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: "O\u011Flak"
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: "o\u011Flak"
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Kova
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: kova
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: "Bal\u0131k"
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: "bal\u0131k"
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: "Ko\xE7"
+      fotograf: {fileID: 0}
+      ayarlananMod: uyumstep2
+      ayarlananDegiskenler:
+        degiskenAdi: "uybur\xE7"
+        degiskenDegeri: "ko\xE7"
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    wheelModu: uyumstep1
+    showAd: 0
+  - type: 1
+    wheelPhoto: {fileID: 0}
+    wheelPhotoHiglLight: {fileID: 0}
+    items:
+    - baslik: "Kaz\u0131 - Bil"
+      fotograf: {fileID: 21300000, guid: 776ca6a12f18b480d94205d09964fd18, type: 3}
+      ayarlananMod: "kaz\u0131bil kar\u015F\u0131lama"
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: "Bilgi Yar\u0131\u015Fmas\u0131"
+      fotograf: {fileID: 21300000, guid: adbfa341dda3948a5967242f69fc47f1, type: 3}
+      ayarlananMod: bilgi hangi konu
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Mbers</color>
+      fotograf: {fileID: 21300000, guid: d53e4b050c3134e7e8ac8613a40a8a6a, type: 3}
+      ayarlananMod: magnumbers
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Tris</color>
+      fotograf: {fileID: 21300000, guid: 2ecd2ca27d7e448c0bc1742c8a788c3a, type: 3}
+      ayarlananMod: magnutris oyun modu
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Dots</color>
+      fotograf: {fileID: 21300000, guid: 0d6d85d6216cc4302bda1e51bb51eb4a, type: 3}
+      ayarlananMod: magnudots
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: MagnuFlow
+      fotograf: {fileID: 21300000, guid: 200a4cefbec954d3b9498b4a8aae34b9, type: 3}
+      ayarlananMod: magnuflow
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Mag<color=#f400ff>Nukem</color>
+      fotograf: {fileID: 21300000, guid: 8ff1fab0ec0ca442f8c24c03ba026723, type: 3}
+      ayarlananMod: magnukem
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Stab</color>
+      fotograf: {fileID: 21300000, guid: 273d15bebb5844972a89274e50e56b5b, type: 3}
+      ayarlananMod: aa oyun
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: KelimeLink
+      fotograf: {fileID: 21300000, guid: 1dc85329fe576496b88a9c1508cd1a4c, type: 3}
+      ayarlananMod: "kelime oyunu ba\u015Flat"
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Kelam</color>
+      fotograf: {fileID: 21300000, guid: 1dcfbc568fd6b1b4f911592c05e808f0, type: 3}
+      ayarlananMod: kare kelime baslat
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    wheelModu: "oyunmen\xFC"
+    showAd: 1
+  - type: 1
+    wheelPhoto: {fileID: 0}
+    wheelPhotoHiglLight: {fileID: 0}
+    items:
+    - baslik: "Kaz\u0131 - Bil"
+      fotograf: {fileID: 21300000, guid: 776ca6a12f18b480d94205d09964fd18, type: 3}
+      ayarlananMod: "kaz\u0131bil kar\u015F\u0131lama"
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: "Bilgi Yar\u0131\u015Fmas\u0131"
+      fotograf: {fileID: 21300000, guid: adbfa341dda3948a5967242f69fc47f1, type: 3}
+      ayarlananMod: bilgi hangi konu
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Mbers</color>
+      fotograf: {fileID: 21300000, guid: d53e4b050c3134e7e8ac8613a40a8a6a, type: 3}
+      ayarlananMod: magnumbers
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Tris</color>
+      fotograf: {fileID: 21300000, guid: 2ecd2ca27d7e448c0bc1742c8a788c3a, type: 3}
+      ayarlananMod: magnutris oyun modu
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Dots</color>
+      fotograf: {fileID: 21300000, guid: 0d6d85d6216cc4302bda1e51bb51eb4a, type: 3}
+      ayarlananMod: magnudots
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Flow</color>
+      fotograf: {fileID: 21300000, guid: 200a4cefbec954d3b9498b4a8aae34b9, type: 3}
+      ayarlananMod: magnuflow
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Mag<color=#f400ff>Nukem</color>
+      fotograf: {fileID: 21300000, guid: 8ff1fab0ec0ca442f8c24c03ba026723, type: 3}
+      ayarlananMod: magnukem
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Stab</color>
+      fotograf: {fileID: 21300000, guid: 273d15bebb5844972a89274e50e56b5b, type: 3}
+      ayarlananMod: aa oyun
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: KelimeLink
+      fotograf: {fileID: 21300000, guid: 1dc85329fe576496b88a9c1508cd1a4c, type: 3}
+      ayarlananMod: "kelime oyunu ba\u015Flat"
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: Magnu<color=#f400ff>Kelam</color>
+      fotograf: {fileID: 21300000, guid: 1dcfbc568fd6b1b4f911592c05e808f0, type: 3}
+      ayarlananMod: kare kelime baslat
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    - baslik: "Satran\xE7"
+      fotograf: {fileID: 21300000, guid: 4198e8aff6cdf413b8fcabfc40adb23a, type: 3}
+      ayarlananMod: "satran\xE7 renk se\xE7"
+      ayarlananDegiskenler:
+        degiskenAdi: 
+        degiskenDegeri: 
+        kontrolOperatoru: 0
+        ayarlamaOperatoru: 0
+    wheelModu: "oyunmen\xFC plus"
+    showAd: 1

@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme765
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA40498639738
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\u0130\u015F bulmaya dair umutlar\u0131n\u0131n azald\u0131\u011F\u0131 \u015Fu
+    g\xFCnlerde, seni {{kelime, 3-4 basamak \xE7\u0131k\u0131ld\u0131ktan sonra kap\u0131s\u0131ndan
+    girilen bir binan\u0131n | 8-10 basamak \xE7\u0131k\u0131ld\u0131ktan sonra kap\u0131s\u0131ndan
+    girilen asans\xF6rl\xFC bir binan\u0131n | 8-10 katl\u0131 bir apartman\u0131n
+    zemin kap\u0131ndaki camekanl\u0131 bir i\u015Fyerinin | yerle\u015Fkesi 15-20
+    katl\u0131 bir binan\u0131n ara katlar\u0131ndan birinde olan bir i\u015Fyerinin
+    kap\u0131s\u0131n\u0131n | aras\u0131 \xE7ok yak\u0131n olan y\xFCksek\xE7e binalardan
+    birinin kap\u0131s\u0131n\u0131n}} \xF6n\xFCnde g\xF6r\xFCyorum {{isim}}. Telvelerin,
+    {{kelime, gelecek ay | 2 ay sonra | 6-7 hafta sonra | 3 ay sonra | 8 hafta kadar
+    sonra | 1.5-2 ay sonra | 3-4 hafta sonra | 4 ay sonra}} burada {{kelime, sa\xE7lar\u0131
+    seyrelmi\u015F ve zay\u0131f bir adamla | g\xFCr, siyah sa\xE7l\u0131 ve uzun
+    boylu bir adamla | d\xFCz, uzun sa\xE7l\u0131 ve renkli g\xF6zl\xFC bir han\u0131mefendiyle
+    | dalgal\u0131 sa\xE7lar\u0131 olan ve parmaklar\u0131 y\xFCz\xFCklerle dolu
+    bir han\u0131mefendiyle | dalgal\u0131 sa\xE7lar\u0131 olan ve kolu bileziklerle
+    dolu bir han\u0131mefendiyle | sa\xE7lar\u0131n\u0131 at kuyru\u011Fu yapm\u0131\u015F,
+    bak\u0131ml\u0131 ve uzun t\u0131rnaklar\u0131 olan bir han\u0131mefendiyle |
+    aln\u0131n\u0131n kenar\u0131nda yara izi olan, k\u0131sa sa\xE7l\u0131 bir beyefendiyle}}
+    g\xF6r\xFC\u015Fme yapaca\u011F\u0131n\u0131 s\xF6yl\xFCyor. Bu g\xF6r\xFC\u015Fmenin
+    ard\u0131ndan, ayn\u0131 yerden {{kelime, iki defa aranacaks\u0131n. \xDC\xE7\xFCnc\xFC
+    | iki defa aranacaks\u0131n. \u0130kinci | \xFC\xE7 defa farkl\u0131 zamanlarda
+    aranacaks\u0131n. \xDC\xE7\xFCnc\xFC | tekrar aranacaks\u0131n\u0131z. O}} aranmanda
+    yeniden \xE7a\u011Fr\u0131lacak ve {{kelime, bir hafta sonra | g\xFCnler sonras\u0131nda
+    | birka\xE7 hafta sonras\u0131nda}} i\u015Fe ba\u015Flayacaks\u0131n.\n\nFincan\u0131n\u0131n
+    farkl\u0131 bir noktas\u0131nda ise ayak izlerin var {{isim}}. Bu ayak izleri
+    ya kar \xFCzerinde, ya da deniz kenar\u0131nda olu\u015Fmu\u015F olmal\u0131.
+    6 ay 1 sene sonra bu g\xF6rd\xFC\u011F\xFCm yere sevdiklerinle birlikte, maddi
+    durumun da olduk\xE7a iyi bir seviyede gideceksin. Hatta o yolculuktan, seni
+    mutlu edecek yeni bir de kararla d\xF6nebilirsin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "i\u015F ar\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "i\u015F ar\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegnekkrali
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA23635799908
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 11711b5a889361d459bdd8ebc69a73d0, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 11711b5a889361d459bdd8ebc69a73d0, type: 3}
+  contentPhotoId: asakrali-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek Kral\u0131\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nYa\u015Fanacak
+    garip hadiselerin haberini de bu kart\u0131n ters a\xE7\u0131lmas\u0131yla birlikte
+    alm\u0131\u015F bulunuyoruz K\u0131ymetli {{soyisim}}... Bak hep ba\u015Fkalar\u0131nda
+    g\xF6r\xFCp ele\u015Ftirirdin, \u015Fimdi senin ba\u015F\u0131na gelecek. \u0130lerleyen
+    zamanlarda eline \xF6nemli yetkiler, b\xFCy\xFCk bir g\xFC\xE7 ya da kritik baz\u0131
+    konularda se\xE7me hakk\u0131 verilecek. S\xF6z sahibi, n\xFCfuz sahibi, hak
+    sahibi ya da kontrol merkezi sen olacaks\u0131n. Bunu kendi \xE7\u0131karlar\u0131n
+    i\xE7in k\xF6t\xFCye kullanaca\u011F\u0131n\u0131 ve ba\u015Fkalar\u0131na kar\u015F\u0131
+    avantaj sa\u011Flayaca\u011F\u0131n\u0131 hissediyorum. Belki de ba\u015Fka bir
+    se\xE7ene\u011Fin olmaya\u011F\u0131 i\xE7in b\xF6yle yapacaks\u0131n; bilemiyorum.
+    Bildi\u011Fim \u015Fey \u015Fu; yerine ge\xE7meden, kimseyi yarg\u0131lamamak
+    gerek."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asakrali ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

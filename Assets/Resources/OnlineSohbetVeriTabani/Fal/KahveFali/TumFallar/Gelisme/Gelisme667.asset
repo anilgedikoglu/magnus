@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme667
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA21295977894
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xC7atla\u011F\u0131ndan bir insan sil\xFCetinin yans\u0131d\u0131\u011F\u0131
+    kristal bir kadeh var {{isim}} telvelerinde. Bug\xFCnk\xFC yaln\u0131z ancak
+    asil duru\u015Funda, ge\xE7mi\u015Findeki bir insan\u0131n izleri oldu\u011Funu
+    g\xF6r\xFCyorum. Ya\u015Fad\u0131\u011F\u0131n g\xFCzellikleri doyas\u0131ya
+    sindiremiyor gibisin; t\u0131pk\u0131 bu kadehin usul usul s\u0131zd\u0131r\u0131\u015F\u0131
+    gibi... Zaman\u0131n \"do\u011Frusal\" olmad\u0131\u011F\u0131 art\u0131k hepimizin
+    malumu. Kadehin yan\u0131nda duran \"\xE7embersel\" simge, ge\xE7mi\u015Fteki
+    insan\u0131n yeniden kar\u015F\u0131na \xE7\u0131kaca\u011F\u0131n\u0131 i\u015Faret
+    ediyor. \"3 vakte kadar\" ya da \"ilerleyen aylarda\" deyip b\u0131rakmam seni.
+    Bizi ba\u015Fka fal uygulamalar\u0131yla kar\u0131\u015Ft\u0131rma! <sprite=23>
+    Elimdeki g\xF6rsellerden elde etti\u011Fim analizler, bu olay\u0131n 3 ay sonra,
+    yani {{ay_2}} ve {{ay_4}} aylar\u0131 aras\u0131nda ger\xE7ekle\u015Fece\u011Fini
+    s\xF6yl\xFCyor. Bir {{kelime, sal\u0131 | \xE7ar\u015Famba | per\u015Fembe |
+    cuma | cumartesi}} {{kelime, ak\u015Fam\u0131 | \xF6\u011Fleni | \xF6\u011Fleden
+    sonras\u0131}}...\n\n\xD6te yandan, beyaz bir kap\u0131n\u0131n ard\u0131nda
+    duran ve oturdu\u011Fu yerden pek \xE7ok insana hitap eden bir {{data, cinsiyet=erkek,
+    han\u0131mefendi | cinsiyet=kad\u0131n, beyefendi | cinsiyet=lgbt, ki\u015Fi}}
+    g\xF6r\xFCyorum. Bu ki\u015Finin bir eli mahiyeten \"insanlarda\" di\u011Fer
+    eli ise \"bilgisayar\" klavyesinde. Onda, senin hayran olaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCm iki \xF6nemli \xF6zellik var {{isim}}. Bunlardan
+    bir tanesi {{kelime, renkli g\xF6z | inci gibi di\u015Fler | karizmatik bir ses
+    tonu | g\xFCzel ve bak\u0131ml\u0131 el ve ayaklar | bakmaya doyamayaca\u011F\u0131n
+    bir y\xFCz}} ve {{kelime, ileri d\xFCzeyde bir zeka | \xFCst d\xFCzey ve giri\u015Fken
+    bir ki\u015Filik | kolay ula\u015F\u0131lamayacak bir kariyer}}. Bu insanla sizin
+    bir g\xFCn yollar\u0131n\u0131z kesi\u015Fecek ve \"\u0130\u015Fte arad\u0131\u011F\u0131m
+    ki\u015Fi bu!\" diyeceksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme571
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA06610105837
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin en yo\u011Fun noktas\u0131ndaki \"Ankh\" sembol\xFCn\xFC sen de
+    g\xF6rebiliyor musun? \U0001F632\"Nil anahtar\u0131\" ya da \"ya\u015Fam anahtar\u0131\"
+    olarak da ge\xE7en bu sembol, senin d\xFCnyevi ve semavi alem aras\u0131ndaki
+    s\u0131k\u0131 ba\u011Flant\u0131lar\u0131n\u0131 i\u015Faret etmekte. Fark\u0131nda
+    m\u0131s\u0131n bilmem ama, sen neyi dilesen k\u0131sa s\xFCre i\xE7erisinde
+    ger\xE7ekle\u015Fiyor, kime yan baksan, birka\xE7 ad\u0131m sonras\u0131nda kay\u0131p
+    d\xFC\u015F\xFCyor... \U0001F928Sendeki bu \"ruhuna i\xE7kin\" kuvvet, her falda
+    kar\u015F\u0131la\u015F\u0131labilen basit bir \u015Fey de\u011Fil {{isimcigim}}.
+    Bunun, yaln\u0131zca baz\u0131 {{burc}} bur\xE7lar\u0131na \xF6zel oldu\u011Funu
+    da bilmeni isterim.\n\n\xDCstte bahsetti\u011Fim bu Ankh anahtar\u0131, a\u015Fk
+    hayat\u0131nla ilgili bir b\xFCy\xFCk dile\u011Finin ilerleyen y\u0131llarda
+    ola\u011Fan\xFCst\xFC bir \u015Fekilde ger\xE7ekle\u015Fece\u011Fine i\u015Faret
+    etmekte. Maddi olarak \xE7ok g\xFC\xE7l\xFC olan fakat bunu belli etmeyi pek
+    de sevmeyen biriyle birlikte olacaks\u0131n. \U0001F387Bu ki\u015Finin kim oldu\u011Funu
+    zaman\u0131 gelince anlaman i\xE7in sana fincan\u0131ndan 2 emare aktaraca\u011F\u0131m.
+    Birincisi, bu ki\u015Finin {{kelime, BMW | Mercedes | Seat | Audi | Ford | Renault
+    | Mazda | Fiat | Citroen | Suzuki | Volvo | Skoda | Honda | Hyundai | Opel |
+    Peugeot | Kia | Volkswagen | Dacia | Daihatsu | Alfa Romeo}} marka bir arabas\u0131
+    olacak {{isim}}. \u0130kincisi ise, tan\u0131\u015Ft\u0131\u011F\u0131nda babas\u0131n\u0131n
+    kolunda antika bir {{kelime, Rolex | Patek Philippe | Hublot | Zenith | IWC |
+    Panerai | Tag Heuer | Cartier | Omega | Tudor | Seiko | Audemars Piguet | Richard
+    Mille | Longines | Vacheron Constantin | Breitling}} saat g\xF6rebilirsin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

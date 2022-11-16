@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: iliskisivarkucukyas
+  m_EditorClassIdentifier: 
+  etiket: S9Cevap
+  aciklama:
+  - "Ya\u015F\u0131n daha gen\xE7. {{data, cinsiyet=erkek, Han\u0131mefendi | cinsiyet=kad\u0131n,
+    Delikanl\u0131 | cinsiyet=lgbt, Bu \u015Fah\u0131s}} ilk a\u015Fk\u0131n m\u0131
+    {{isim}}? K\u0131ymetini bil bug\xFCnlerin. Her ikiniz de birbirinize s\u0131k\u0131
+    s\u0131k\u0131ya tutunursan\u0131z, ayr\u0131l\u0131k olmaz. Hat\u0131ralar sizinle
+    kal\u0131r..."
+  - "B\xF6yle gen\xE7 bir ya\u015Fta en g\xFCzel, en unutulmaz zamanlarda olmal\u0131s\u0131n\u0131z.
+    Sak\u0131n araya k\xFCsk\xFCnl\xFCk, k\u0131rg\u0131nl\u0131k sokmay\u0131n.
+    Birlikte ge\xE7iriyor oldu\u011Funuz her saniye \xE7ok k\u0131ymetli {{isim}}."
+  - "20'li ya\u015Flar ve alt\u0131ndakiler, ya\u015Fad\u0131klar\u0131 ili\u015Fkilerle
+    b\xFCy\xFCr. Verdikleri s\xF6zler ve \"niyetleri\" \xF6rt\xFC\u015Ft\xFCk\xE7e,
+    karakterleri demlenir. Umar\u0131m sizinki de k\u0131ymetli bir arkada\u015Fl\u0131kt\u0131r."
+  - "Evlenmeyi d\xFC\u015F\xFCn\xFCyor musunuz? \u015Eaka \u015Faka, daha gen\xE7siniz;
+    durun yahu! <sprite=0>"
+  - "Bur\xE7lar\u0131n\u0131zdan yola \xE7\u0131karak siz gen\xE7lerin a\u015Fk uyumunu
+    de\u011Ferlendirmek i\xE7in sab\u0131rs\u0131zlan\u0131yorum {{isim}}! <sprite=7>"
+  aranacakEtiket: son
+  gerekenDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

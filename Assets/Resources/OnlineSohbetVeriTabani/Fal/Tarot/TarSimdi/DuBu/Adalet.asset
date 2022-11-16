@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Adalet
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA24109404787
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: f3def41e63d7b3e4a9d830a281abc196, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: f3def41e63d7b3e4a9d830a281abc196, type: 3}
+  contentPhotoId: adalet
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Adalet\" kart\u0131n\u0131 se\xE7tin.\n\nKart\u0131n\u0131n
+    dile getirdi\u011Fi kadar\u0131yla, ge\xE7mi\u015Fte verdi\u011Fin emeklerin
+    kar\u015F\u0131l\u0131\u011F\u0131n\u0131 \u015Fu s\u0131ralar almaya ba\u015Flam\u0131\u015Fs\u0131n
+    {{isim}}. Yolunda gitmekte olan i\u015F fikirlerin ve giri\u015Fimlerin var.
+    Malumundur, herkes k\u0131s\u0131tl\u0131 bir enerjiye sahip. Sen bu k\u0131s\u0131tl\u0131
+    enerjini en do\u011Fru zamanda en do\u011Fru kanallara aktarmakta ve daha iyi
+    ko\u015Fullar elde edebilecek g\xFCzel hamleler yapmaktas\u0131n. \xC7evrenden
+    gelen t\xFCm olumsuz sinyallere ve ya\u015Fanan tats\u0131zl\u0131klara ra\u011Fmen,
+    i\xE7 dengelerini de o kadar iyi sa\u011Fl\u0131yorsun ki, g\xFC\xE7l\xFC bir
+    psikoloji ile \xF6n\xFCne \xE7\u0131kan her engelin \xFCzerinden tek hamlede
+    atl\u0131yorsun. \xC7evrendeki insanlar sana g\u0131pta ediyor. Aleyhine sand\u0131\u011F\u0131n
+    konular bile lehine i\u015Fliyor. T\xFCm bunlar dolay\u0131s\u0131yla bir miktar
+    da k\u0131skan\u0131ld\u0131\u011F\u0131n\u0131 bilmeni isterim."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi adalet
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

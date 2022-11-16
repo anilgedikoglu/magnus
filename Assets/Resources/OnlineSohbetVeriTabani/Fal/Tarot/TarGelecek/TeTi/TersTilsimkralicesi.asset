@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimkralicesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA39270548651
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 57d4c5f6f1141c84ba22f9c9903e4122, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 57d4c5f6f1141c84ba22f9c9903e4122, type: 3}
+  contentPhotoId: tilsimkralicesi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"T\u0131ls\u0131m Krali\xE7esi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nSenin \xE7ok g\xFCvendi\u011Fin biri var {{isim}}. Daha \xF6nce
+    onun tavsiyelerine defalarca uymu\u015F ve hep kazan\xE7l\u0131 \xE7\u0131km\u0131\u015Fs\u0131n.
+    Her zaman iyili\u011Fini isteyen ve sana de\u011Fer veren biri. Se\xE7ti\u011Fin
+    kart ise, bu defa o ki\u015Fiyi dinlememen gerekece\u011Finin haberini veriyor.
+    Dinlersen, en iyi ihtimalle kardan zarar edeceksin. Ak\u0131lc\u0131 d\xFC\u015F\xFCnmek
+    insan\u0131 her zaman en do\u011Fru sonuca ula\u015Ft\u0131rmayabilir. {{burc}}
+    burcu biri olarak sen paran\u0131n hesab\u0131n\u0131 \xE7ok fazla yapm\u0131yorsun.
+    Kalbinden ne ge\xE7erse, elindekini o \u015Fekilde de\u011Ferlendiriyorsun. Bana
+    sorarsan yine \xF6yle yapman gerekecek. Tarihteki say\u0131l\u0131 seferde oldu\u011Fu
+    gibi; y\xFCrek, mant\u0131\u011F\u0131 ma\u011Flup edecek."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek tilsimkralicesi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

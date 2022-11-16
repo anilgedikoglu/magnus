@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc868
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA32830793074
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Son b\xF6l\xFCmlerde, k\xFC\xE7\xFCk bir kutunun i\xE7erisine konmu\u015F \xE7ivi,
+    vida ve raptiye gibi h\u0131rdavatlar g\xF6r\xFCyorum. Ni\u015Fanl\u0131n\u0131n
+    baz\u0131 a\xE7\u0131klar\u0131n\u0131 kapatmaya, baz\u0131 eksiklerini gidermeye
+    \xE7al\u0131\u015F\u0131yor gibisin {{isim}}. \xD6zellikle de ailelerinizin bilmemesi
+    ve aran\u0131zda kalmas\u0131 gereken \xF6zel bir mesele oldu\u011Funu s\xF6yl\xFCyor
+    fal\u0131n. Bu konu, k\u0131zg\u0131n bir an\u0131n\u0131zda ikinizden biri taraf\u0131ndan
+    ailelere s\u0131zacak. Tats\u0131z, hatta gergin ba\u015Flayacak uzun konu\u015Fmalar
+    neticesinde, tahmin bile etmedi\u011Finiz etkin bir \xE7\xF6z\xFCm geli\u015Ftireceksiniz
+    ve bunda da ailelerinizin rol\xFC \xE7ok b\xFCy\xFCk olacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

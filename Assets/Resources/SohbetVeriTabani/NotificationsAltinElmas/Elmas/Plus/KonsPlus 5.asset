@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: KonsPlus 5
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "\u015Eu an delicesine konsantreyim {{isim}}! De\u011Ferlerim full. \u0130nan
+    sen s\u0131navlar\u0131na bile bu kadar haz\u0131r girmiyorsundur. <sprite=84>
+    <sprite=0>"
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 1
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0

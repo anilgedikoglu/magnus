@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Flort
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA17496669639
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "G\xF6r\xFC\u015Ft\xFC\u011F\xFCn ki\u015Fiyle nas\u0131l bir sorun ya\u015F\u0131yorsun
+    {{isim}}?"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - "\u0130li\u015Fkinin ad\u0131n\u0131 koyam\u0131yoruz"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 22b622dfe78e14104a15e7ac624aea41, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  - cevapVaryasyonlari:
+    - "Bir s\u0131cak bir so\u011Fuk davran\u0131yor"
+    - "Hislerinden tam emin olam\u0131yorum"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 6aa64f5d3b73444b5a6aee0c299f84ab, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  - cevapVaryasyonlari:
+    - "Anla\u015Famad\u0131\u011F\u0131m\u0131z noktalar var"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: b8ff4d471149f4341bf87349b1731737, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  - cevapVaryasyonlari:
+    - "Ba\u015Fka bir \u015Fey"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 42c254818b0c5425cb04012932b79c63, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "a\u015Fkn"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "a\u015Fkn"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

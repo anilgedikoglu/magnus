@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tgozukara
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA08228863655
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn hi\xE7bir konuda g\xF6z\xFCn\xFC budaktan sak\u0131naca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnm\xFCyorum {{isim}}. {{burc}} bur\xE7lar\u0131 bug\xFCn fevkalade
+    g\xF6z\xFC kara bir g\xFCnlerindeler. Genelde k\xF6t\xFC sonu\xE7lar do\u011Furabilece\u011Fini
+    d\xFC\u015F\xFCnerek ad\u0131m atmaktan korktu\u011Fun her ne varsa, bug\xFCn
+    hi\xE7 d\xFC\u015F\xFCnmeden giri\u015Feceksin. Adeta cesaret hap\u0131 yutmu\u015F
+    gibisin. Bu sana korkular\u0131nla y\xFCzle\u015Fmek i\xE7in de harika bir f\u0131rsat
+    yaratacak. \xC7ekindi\u011Fin insanlarla konu\u015Fman\u0131, korktu\u011Fun
+    ortamlara rahat\xE7a girmeni ve s\xF6ylemekten imtina etti\u011Fin s\xF6zleri
+    rahatl\u0131kla s\xF6ylemeni tavsiye ediyorum. Asl\u0131nda hi\xE7bir \u015Feyin
+    senin g\xFCc\xFCn\xFC ve potansiyelini a\u015Fmad\u0131\u011F\u0131n\u0131 bug\xFCn
+    bir kez daha anlayacaks\u0131n. Her zamanki giri\u015Fimlerle ve \xE7ekincelerle
+    farkl\u0131 sonu\xE7lar elde edemezsin. Neticeyi de\u011Fi\u015Ftirmek istiyorsan,
+    g\xFCc\xFC, bask\u0131y\u0131, \u015Fiddeti, h\u0131z\u0131 ya da cesareti art\u0131rmal\u0131s\u0131n.
+    Bug\xFCn bu, senin elinde!"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

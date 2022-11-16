@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme453
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA12609859582
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n belirli b\xF6lgelerine da\u011F\u0131lm\u0131\u015F nokta
+    nokta \u015Fekiller nas\u0131l da kar tanelerini and\u0131r\u0131yor... S\u0131k\u0131nt\u0131lardan
+    bunalan y\xFCre\u011Fini adeta beyaz bir \xF6rt\xFC kaplamaya ba\u015Flam\u0131\u015F.
+    Her derin solu\u011Funda sana do\u011Fru yakla\u015Fan k\u0131smetlerin, hay\u0131rl\u0131
+    geli\u015Fmelerin var ve ne ac\u0131 ki sen bunlardan b\xFCt\xFCn\xFCyle bihabersin
+    {{isim}}. Biraz sabretmeli ve her vaktin girmesini beklemelisin. \n\nYakla\u015F\u0131k
+    son {{sayi,2,6}} ayd\u0131r {{rastgeleburc}} burcu birinin g\xF6zlemi alt\u0131ndas\u0131n.
+    Bu ki\u015Fi ya senin bir ihtiyac\u0131nda devreye girmek \xFCzere bekliyor,
+    ya da sana baz\u0131 s\xF6yleyecekleri var. Telvelerindeki e\u015Fit kollu terazi,
+    kar\u015F\u0131l\u0131kl\u0131 bir menfaatten bahsediyor. Bu ki\u015Finin kim
+    oldu\u011Funu {{gun_+6}} g\xFCn\xFC anlayacaks\u0131n.\n\nAyr\u0131ca, sivri
+    sivri kenarlar\u0131 olan bir yaprak var fincan\u0131nda. Kronik bir yorgunluk
+    halin mi var {{isim}} senin? Bu yaprak, \u015Fifa edecek bir besin ya da ilac\u0131n
+    zaruri olabilece\u011Fini i\u015Faret eder. Demir ya da B12 eksikli\u011Fin olabilir.
+    Daha dengeli beslenerek bu durumdan s\u0131yr\u0131lmal\u0131s\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

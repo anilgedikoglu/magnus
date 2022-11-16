@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulYay
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA46685409194
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Ya\u015Fam
+    enerjisiyle dolu ve her konuda d\xFCr\xFCst yay burcu {{data, cinsiyet=erkek,
+    kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, mensuplar\u0131}},
+    okul gibi kalabal\u0131k ortamlarda dahi kendilerini h\u0131zla belli ederler.
+    Havay\u0131 koklamay\u0131 iyi bilen {{burc}} bur\xE7lar\u0131n\u0131n ise yaylar\u0131n
+    ay\u0131rd\u0131m\u0131na varmas\u0131 \xE7ok zor de\u011Fildir. Ancak \u015Funu
+    en ba\u015Fta belirtmek isterim; sen de biliyorsun {{isim}}, evlilik ba\u015Fka
+    bir \u015Fey, sevgililik ba\u015Fka bir \u015Fey... E\u011Fer e\u015Fin yerine
+    bu yay burcu {{data, cinsiyet=kad\u0131n, beyefendiyle | cinsiyet=erkek, han\u0131mefendiyle
+    | cinsiyet=lgbt, mensubuyla}} evli olsayd\u0131n, ne kadar tart\u0131\u015Fmac\u0131
+    olabildi\u011Fine ak\u0131l dahi erdiremezdin. Kendinden fazla emin ve tuhaf
+    tav\u0131rlar\u0131, yay burcu insanlar\u0131n\u0131 ciddi ili\u015Fkilerin i\xE7erisinde
+    anla\u015F\u0131lmaz ve tahamm\xFCl edilemez k\u0131lar. Bunlar\u0131 en ba\u015Ftan
+    bilerek yola \xE7\u0131kmak da senin en do\u011Fal hakk\u0131n {{isim}}. \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: yay
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

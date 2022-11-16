@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris215
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA85063848148
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "A\u011Faca ba\u011Fl\u0131 bir koyun var fincan\u0131nda. Aile b\xFCy\xFCklerinden
+    {{kelime, \"ad\u0131 iki heceli\" | \"uzun sa\xE7l\u0131, 50 ya\u015Flar\u0131nda\"
+    | \"k\u0131sa sa\xE7l\u0131, 50 ya\u015Flar\u0131nda\"}} birinin seninle ilgili
+    bir ada\u011F\u0131 oldu\u011Funu d\xFC\u015F\xFCn\xFCyorum {{isim}}. Lakin sen
+    bu a\u011Fac\u0131n uza\u011F\u0131nda duruyorsun. Ailenin {{kelime, senden istedi\u011Fi
+    \u015Fey | sana dair iste\u011Fi}} ile, senin \xE7ok istedi\u011Fin bir \u015Fey
+    aras\u0131nda fark oldu\u011Funu s\xF6yleyebilirim. Sen \xF6zel hayat\u0131na
+    biraz daha fazla \xF6nem veriyor olabilir misin? Telvelerin, ho\u015Fland\u0131\u011F\u0131n
+    ki\u015Fiyle ilgili dileklerin oldu\u011Funu s\xF6yl\xFCyor. Ailen ise daha ziyade
+    e\u011Fitimini \xF6nceliyor. Her iki konuda da muvaffak olacaks\u0131n, ancak
+    belirli bir s\u0131ra ile."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

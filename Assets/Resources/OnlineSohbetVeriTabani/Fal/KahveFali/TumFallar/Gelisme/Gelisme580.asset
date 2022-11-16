@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme580
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA73033920736
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\u0130lerleyen g\xFCnlerde seni \xE7ok g\xFCzel bir geli\u015Fmenin bekledi\u011Fini
+    s\xF6yl\xFCyor telvelerin {{isim}}. \U0001F9D0{{kelime, Do\u011Fum tarihinin
+    g\xFCn, ay ve y\u0131l \u015Feklinde rakamlar\u0131 toplam\u0131 20'nin \xFCzerinde
+    olan birinden bir m\xFCjde duyaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Do\u011Fum
+    tarihinin g\xFCn, ay ve y\u0131l \u015Feklinde rakamlar\u0131 toplam\u0131 25'in
+    \xFCzerinde olan birinden \xE7ok \xF6nemli bir haber alaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim. | Do\u011Fum tarihinin g\xFCn, ay ve y\u0131l \u015Feklinde
+    rakamlar\u0131 toplam\u0131 20'nin alt\u0131nda olan birinden bir m\xFCjde duyaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim. | Do\u011Fum tarihinin g\xFCn, ay ve y\u0131l \u015Feklinde
+    rakamlar\u0131 toplam\u0131 25'in alt\u0131nda olan birinden bir m\xFCjde duyaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim. | Ad\u0131n\u0131n ve soyad\u0131n\u0131n harf say\u0131lar\u0131
+    toplam\u0131 14 olan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.
+    | Ad\u0131n\u0131n ve soyad\u0131n\u0131n harf say\u0131lar\u0131 toplam\u0131
+    10'un alt\u0131nda olan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim. | Ad\u0131n\u0131n ve soyad\u0131n\u0131n harf say\u0131lar\u0131
+    toplam\u0131 13 olan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.
+    | Ad\u0131n\u0131n ve soyad\u0131n\u0131n harf say\u0131lar\u0131 toplam\u0131
+    12 olan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.
+    | Ad\u0131n\u0131n ve soyad\u0131n\u0131n harf say\u0131lar\u0131 toplam\u0131
+    11 olan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.
+    | Ad\u0131n\u0131n ve soyad\u0131n\u0131n harf say\u0131lar\u0131 toplam\u0131
+    10 olan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.
+    | Ad\u0131n\u0131n ve soyad\u0131n\u0131n harf say\u0131lar\u0131 toplam\u0131
+    14'\xFCn \xFCzerinde olan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim. | Ba\u015F harfi A olan ve ad\u0131nda toplam 4 harf bulunan
+    birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F
+    harfi S olan ve ad\u0131nda toplam 4 harf bulunan birinden g\xFCzel bir haber
+    alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F harfi K olan ve ad\u0131nda
+    toplam 4 harf bulunan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.
+    | Ba\u015F harfi \xD6 olan ve ad\u0131nda toplam 4 harf bulunan birinden g\xFCzel
+    bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F harfi S olan
+    ve ad\u0131nda toplam 5 harf bulunan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim. | Ba\u015F harfi M olan ve ad\u0131nda toplam 5 harf bulunan
+    birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F
+    harfi Z olan ve ad\u0131nda toplam 5 harf bulunan birinden g\xFCzel bir haber
+    alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F harfi B olan ve ad\u0131nda
+    toplam 5 harf bulunan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.
+    | Ba\u015F harfi M olan ve ad\u0131nda toplam 4 harf bulunan birinden g\xFCzel
+    bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F harfi M olan
+    ve ad\u0131nda toplam 6 harf bulunan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim. | Ba\u015F harfi \u0130 olan ve ad\u0131nda toplam 4 harf
+    bulunan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.
+    | Ba\u015F harfi D olan ve ad\u0131nda toplam 6 harf bulunan birinden g\xFCzel
+    bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F harfi D olan
+    ve ad\u0131nda toplam 5 harf bulunan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim. | Ba\u015F harfi E olan ve ad\u0131nda toplam 4 harf bulunan
+    birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F
+    harfi T olan ve ad\u0131nda toplam 5 harf bulunan birinden g\xFCzel bir haber
+    alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F harfi U olan ve ad\u0131nda
+    toplam 4 harf bulunan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.
+    | Ba\u015F harfi \xC7 olan ve ad\u0131nda toplam 6 harf bulunan birinden g\xFCzel
+    bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F harfi C olan
+    ve ad\u0131nda toplam 3 harf bulunan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim. | Ba\u015F harfi Y olan ve ad\u0131nda toplam 5 harf bulunan
+    birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F
+    harfi \xD6 olan ve ad\u0131nda toplam 5 harf bulunan birinden g\xFCzel bir haber
+    alaca\u011F\u0131n\u0131 s\xF6yleyebilirim. | Ba\u015F harfi N olan ve ad\u0131nda
+    toplam 5 harf bulunan birinden g\xFCzel bir haber alaca\u011F\u0131n\u0131 s\xF6yleyebilirim.}}
+    Bu haberi verecek olan ki\u015Fi, birinin seninle ilgili hislerini, duygu ve
+    d\xFC\u015F\xFCncelerini aktaracak. Hem \xE7ok \u015Fa\u015F\u0131racak, hem
+    de sevineceksin. \u2728S\xF6z konusu ki\u015Fi ile bire bir ileti\u015Fiminiz
+    ise {{gelecek_ay}} ay\u0131n\u0131n {{kelime, ikinci | \xFC\xE7\xFCnc\xFC | d\xF6rd\xFCnc\xFC}}
+    \xE7eyre\u011Fi i\xE7erisinde ba\u015Flayacak. {{ay_2}} ay\u0131nda bir ili\u015Fkiye
+    ba\u015Flam\u0131\u015F olaca\u011F\u0131n\u0131 \xE7ok net bir \u015Fekilde
+    g\xF6rebiliyorum.\n\nFincan\u0131nda bir de \"keser\" var {{isim}}. \u26CF\uFE0FZihninde
+    halen eski bir ili\u015Fkinle ilgili detaylar\u0131 de\u015Feliyor gibisin. G\xFCndeminde
+    olmayan ki\u015Filere ve ge\xE7mi\u015Fe s\u0131rt\u0131n\u0131 d\xF6nmeli, kar\u015F\u0131na
+    \xE7\u0131kacak olan g\xFCzelliklere odaklanmal\u0131s\u0131n. An'da kalm\u0131yorsun;
+    biraz an'\u0131 ya\u015Famay\u0131 dene. \u0130nan gelece\u011Fin, ge\xE7mi\u015Finden
+    daha g\xFCzel olacak!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

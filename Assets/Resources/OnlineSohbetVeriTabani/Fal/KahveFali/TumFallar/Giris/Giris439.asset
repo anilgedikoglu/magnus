@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris439
+  m_EditorClassIdentifier: 
+  idIndex: 20228124122AA06134553191
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131nda ilk g\xF6z\xFCme \xE7arpan \u015Fey, i\u015Flemeli bir \"rahle\"
+    oldu. \xDCzerinde a\xE7\u0131k duran kitab\u0131n Kur'an-\u0131 Kerim oldu\u011Funu
+    d\xFC\u015F\xFCn\xFCyorum. Kitap \xFCzerinde belirmi\u015F rakamlar\u0131 yan
+    yana koydu\u011Fumda ise \"100\" say\u0131s\u0131n\u0131 elde ettim. Bu, 100.
+    sure olan \"Adiyat Suresi'ne\" i\u015Faret ediyor. O suredeki uyar\u0131, senin
+    i\xE7in ge\xE7erli g\xF6z\xFCk\xFCyor {{isim}}. San\u0131r\u0131m mal, para ya
+    da a\u015Fk i\xE7in aceleci olmaman, \"darday\u0131m\" diye \xFCz\xFClmemen,
+    bolca \u015F\xFCkretmen ve sana verilece\u011Finden \"emin olman\" isteniyor.\n\nBu
+    arada, \"E\" harfleri hemen orac\u0131kta bir yerde pe\u015F pe\u015Fe s\u0131ralanm\u0131\u015F
+    {{isim}}. Ad\u0131nda iki tane \"E\" bulunan bir insandan sana bug\xFCn yar\u0131n
+    olumlu bir geli\u015Fme aktar\u0131lacak. Bence bu ki\u015Fi bir {{kelime, kad\u0131n
+    | erkek}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

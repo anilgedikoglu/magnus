@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: EkoNegSebepBorclarimvar
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA05302495091
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bor\xE7lar\u0131n\u0131 en k\u0131sa zamanda \xF6deyece\u011Fini ve rahatlayaca\u011F\u0131n\u0131
+    umuyorum {{isim}}. Ne demi\u015Fler, eline ne ge\xE7ti\u011Fi ya da ne kadar
+    kazand\u0131\u011F\u0131n de\u011Fil, nas\u0131l harcad\u0131\u011F\u0131n \xF6nemli."
+  - "Bor\xE7lar\u0131n\u0131 \xF6deyebilmen i\xE7in \xF6n\xFCne {{gelecek_ay}} ay\u0131n\u0131n
+    \xFC\xE7\xFCnc\xFC \xE7eyre\u011Finde bir f\u0131rsat ge\xE7ecek. Bu ilk f\u0131rsat,
+    seni bir hayli rahatlatacak. \u0130kinci ve b\xFCy\xFCk f\u0131rsat\u0131 ise
+    {{ay_+4}} ay\u0131n\u0131n ba\u015Flar\u0131nda yakalayacaks\u0131n {{isim}}.
+    Onu iyi de\u011Ferlendirirsen, bor\xE7lar\u0131n neredeyse kapanma a\u015Famas\u0131na
+    gelecek."
+  - "{{gelecek_ay}} ay\u0131n\u0131n sonlar\u0131 senin i\xE7in maddi anlamda olduk\xE7a
+    iyi ge\xE7ecek. O d\xF6nemde \xFCzerindeki bolluk ve bereketin artaca\u011F\u0131n\u0131
+    hissediyorum. De\u011Ferlendirmelerim, sana {{ay_+2}} ay\u0131n\u0131n ilk haftas\u0131
+    i\xE7inde, ad\u0131nda {{harf}} harfi olan bir beyefendinin yard\u0131mc\u0131
+    olaca\u011F\u0131n\u0131 g\xF6steriyor {{isim}}. Bor\xE7lar\u0131ndan b\xFCy\xFCk
+    \xF6l\xE7\xFCde kurtulacaks\u0131n. "
+  - "Gelecek hafta bug\xFCn, yani {{gun_+7}} g\xFCn\xFC senden tahminim 5-10 ya\u015F
+    daha b\xFCy\xFCk, yakla\u015F\u0131k {{yas_+7}}-{{yas_+8}} ya\u015Flar\u0131nda
+    biriyle \xF6nemli bir g\xF6r\xFC\u015Fmen olacak. Onun y\xF6nlendirmesini iyi
+    de\u011Ferlendirir ya da yard\u0131m\u0131n\u0131 kabul edersen, bor\xE7lar\u0131ndan
+    kurtulmak i\xE7in harika bir f\u0131rsat yakalam\u0131\u015F olacaks\u0131n {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - "Te\u015Fekk\xFCrler Magnus."
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 24d770fd4f7234b8bad0e760acfb89b9, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Pek umudum yok.
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 99a3baeca011f4ae1907e8616367f8bf, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler: []
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

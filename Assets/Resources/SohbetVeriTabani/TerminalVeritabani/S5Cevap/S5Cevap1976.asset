@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: S5Cevap1976
+  m_EditorClassIdentifier: 
+  etiket: dogc
+  aciklama:
+  - "1976 m\u0131? Vayy...\r\nO y\u0131l Apple Computer, Steve Jobs ve Steve Wozniak
+    taraf\u0131ndan kurulmu\u015Ftu. Sen Apple'c\u0131 m\u0131s\u0131n Android'ci
+    mi?"
+  - "1976 m\u0131? Vayy...\r\n\u0130lk Ebola salg\u0131n\u0131 o y\u0131l Demokratik
+    Kongo Cumhuriyeti s\u0131n\u0131rlar\u0131 i\xE7erisinde yer alan Yambuku kasabas\u0131nda
+    ortaya \xE7\u0131km\u0131\u015Ft\u0131. \u0130yi ki oralarda do\u011Fmad\u0131n
+    bak... "
+  aranacakEtiket: konum izin
+  gerekenDegiskenler:
+  - degiskenAdi: dogum yili
+    degiskenDegeri: 1976
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

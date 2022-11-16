@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulBalik
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA99941745041
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"{{burc}}
+    burcu {{data, cinsiyet=erkek, erkekleri | cinsiyet=kad\u0131n, kad\u0131nlar\u0131
+    | cinsiyet=lgbt, mensuplar\u0131}} kar\u015F\u0131lar\u0131nda nazik, romantik,
+    halden anlayan, yard\u0131msever ve \u015Fefkat dolu bir bal\u0131k burcu {{data,
+    cinsiyet=erkek, kad\u0131n\u0131 | cinsiyet=kad\u0131n, erke\u011Fi | cinsiyet=lgbt,
+    insan\u0131}} g\xF6rmeyiversin!... Ortal\u0131k bu ikili y\xFCz\xFCnden y\xFCzy\u0131llard\u0131r
+    alev al\u0131r ve yanlar\u0131nda ne varsa, ne kadar insan varsa tutu\u015Fur
+    kal\u0131r. E\u011Fitim hayat\u0131, bal\u0131k burcu mensuplar\u0131n\u0131n
+    ne kadar bilge ve yarat\u0131c\u0131 olduklar\u0131n\u0131 g\xF6rebilmek i\xE7in
+    de uygun bir ortamd\u0131r. Diyece\u011Fim o ki, birbirinizden ho\u015Flanman\u0131z
+    i\xE7in \u015Fartlar son derece m\xFCsait. Evlili\u011Finde bo\u015Fluklar olu\u015Ftuk\xE7a,
+    f\u0131rsatlar\u0131 hi\xE7 ka\xE7\u0131rmadan ona y\xF6nelece\u011Fini biliyorum
+    {{isim}}. Zamanla o da sana kar\u015F\u0131 daha a\xE7\u0131k olacak, hislerini
+    daha yal\u0131n bir \u015Fekilde belli edecektir. Bir tek noktaya dikkat etmen
+    gerekli; bal\u0131k burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n,
+    erkekleri | cinsiyet=lgbt, mensuplar\u0131}} bir kere severse, fena ba\u011Flan\u0131r.
+    Hatta kar\u015F\u0131lar\u0131ndaki insana \\\"ba\u011F\u0131ml\u0131\\\" hale
+    gelirler. Ona kendini ya sevdir ve ada, ya da k\xF6\u015Fe bucak uzak dur derim.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "bal\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme421
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA18277139109
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "A\u011Fz\u0131na kadar dolu bir kazan\u0131n, bir kep\xE7e taraf\u0131ndan kendi
+    kendine kar\u0131\u015Ft\u0131r\u0131ld\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum
+    telvelerinde. Bu kazan, zihninin son zamanlardaki halini temsil ediyor {{isim}}.
+    Akl\u0131n, pek \xE7ok sorun ve s\u0131k\u0131nt\u0131yla me\u015Fgul g\xF6r\xFCn\xFCyor.
+    Fakat \xF6zellikle zora girmi\u015F bir m\xFC\u015Fk\xFCl\xFCn var ki, ak\u0131betini
+    \xE7ok merak ediyor ve s\u0131k\u0131nt\u0131s\u0131ndan bir an \xF6nce kurtulmak
+    istiyorsun. Bu sorun iki basamakta \xE7\xF6z\xFClecek. Birinci basamakta, senin
+    atman gereken bir ad\u0131m oldu\u011Fu g\xF6z\xFCk\xFCyor. Bu ad\u0131m\u0131
+    takiben {{sayi,2,5}} hafta i\xE7erisinde, {{kelime, yaln\u0131z olmad\u0131\u011F\u0131n
+    | kalabal\u0131k| yan\u0131nda pek kimsenin olmad\u0131\u011F\u0131 | yaln\u0131z
+    oldu\u011Fun}} bir ortamda, hay\u0131rl\u0131 bir telefon alacak, akl\u0131n\u0131n
+    derinliklerindeki t\xFCm y\xFCklerden kurtulacaks\u0131n. \n\nFincan\u0131n\u0131n
+    saat {{sayi,10,14}} y\xF6n\xFCnde, bir erke\u011Fin seni d\u0131\u015F etkenlerden
+    koruma ama\xE7l\u0131 \xFCzerine b\xFCy\xFCk bir \u015Femsiye a\xE7t\u0131\u011F\u0131n\u0131
+    g\xF6r\xFCyorum. Bu ki\u015Fi, mesle\u011Fi gere\u011Fi olduk\xE7a etkin biri
+    olsa gerek. Maddi g\xFCc\xFCn\xFC sana y\xF6neltecek ve {{gelecek_ay}} ay\u0131n\u0131n
+    {{kelime, ikinci haftas\u0131 i\xE7erisinde | \xFC\xE7\xFCnc\xFC haftas\u0131
+    i\xE7erisinde | sonlar\u0131na do\u011Fru | ortalar\u0131nda}} ondan parasal
+    yard\u0131m alacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

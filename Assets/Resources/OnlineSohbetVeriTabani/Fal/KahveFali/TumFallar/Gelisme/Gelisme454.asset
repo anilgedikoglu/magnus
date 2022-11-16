@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme454
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA85305962441
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131ndaki \"bir k\u0131sm\u0131 telveleli, bir k\u0131sm\u0131 beyaz\"
+    olan b\xF6lgeler, adeta kozmik toz bulutlar\u0131na benziyor. Bu g\xF6rsellerin,
+    kafan\u0131 kar\u0131\u015Ft\u0131ran baz\u0131 konulara i\u015Faret olduklar\u0131n\u0131
+    ve seni ruhen yorduklar\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorum. \U0001F9D0Fakat
+    tam aralar\u0131nda bir yerde, kuyruklu y\u0131ld\u0131za benzetti\u011Fim bir
+    g\xF6k cismi belirmi\u015F {{isim}}. \u2728Parlakl\u0131\u011F\u0131 giderek
+    artan ve kendisini g\xFCn ge\xE7tik\xE7e daha \xE7ok belli eden bu cisim, alaca\u011F\u0131n
+    bir haberin i\u015Fareti. {{kelime, Bir | \u0130ki}} hafta i\xE7erisinde telefonunda
+    kay\u0131tl\u0131 olmayan bir numaradan aranacaks\u0131n. Telefonunu a\xE7t\u0131\u011F\u0131nda
+    ise, ses tan\u0131d\u0131k gelecek. Ad\u0131nda {{harf}} harfi olan ve {{kelime,
+    y\xFCz\xFCn\xFC uzun y\u0131llard\u0131r hi\xE7 g\xF6rmedi\u011Fin | uzun y\u0131llard\u0131r
+    sesini dahi duymad\u0131\u011F\u0131n | kendisiyle son iki \xFC\xE7 senedir hi\xE7
+    kar\u015F\u0131 kar\u015F\u0131ya gelmedi\u011Fin | kendisiyle son \xFC\xE7 d\xF6rt
+    senedir hi\xE7 kar\u015F\u0131 kar\u015F\u0131ya gelmedi\u011Fin | kendisiyle
+    uzun bir zamand\u0131r hi\xE7 konu\u015Fmad\u0131\u011F\u0131n}} bu ki\u015Fi,
+    verece\u011Fi haber ve yapaca\u011F\u0131 a\xE7\u0131klamalarla kafandaki pek
+    \xE7ok sorunun da yan\u0131t\u0131 olacak.\n\nDi\u011Fer taraftan, kolunda \"kartal\"
+    tutan, kal\u0131n giyimli biri var fal\u0131nda. \U0001F985Bu ki\u015Fi seninle
+    ilgili d\xFC\u015F\xFCncelerini \xE7ok yak\u0131nda cesurce itiraf edecek. K\u0131smi
+    bir ele\u015Ftiri de i\xE7erece\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu
+    konu\u015Fma sonras\u0131nda, ondan bir yard\u0131m g\xF6receksin {{isim}}. Ya
+    seni birilerine kar\u015F\u0131 savunacak, ya da kafana koydu\u011Fun bir \u015Feyi
+    \"ele ge\xE7irebilmen i\xE7in\" sald\u0131r\u0131 esnas\u0131nda sana yard\u0131m
+    edecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme652
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA79369000937
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinde tats\u0131z bir karma\u015Fa g\xF6r\xFCyorum. Anla\u015F\u0131lan
+    ayr\u0131ld\u0131\u011F\u0131n {{data, cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n,
+    beyefendi | cinsiyet=lgbt, ki\u015Fi}} seni iyi tan\u0131yamam\u0131\u015F {{isim}}.
+    Seni di\u011Fer insanlardan farkl\u0131 k\u0131lan \"cevheri\" ne yaz\u0131k
+    ki net g\xF6rememi\u015F. Hislerim senin, tavr\u0131n\u0131 a\xE7\u0131k\xE7a
+    ortaya koyan net bir insan oldu\u011Funu s\xF6yl\xFCyor. \u0130li\u015Fkiye bo\u015F
+    bir tuval g\xF6z\xFCyle bakan ve her bir f\u0131r\xE7a darbesiyle, emek emek
+    i\u015Flenmesi gerekti\u011Fine inanan bir yap\u0131n var. \u015Eimdiye kadar
+    b\xF6yle de yapm\u0131\u015Fs\u0131n. Fakat ald\u0131\u011F\u0131n kar\u015F\u0131l\u0131k,
+    verdi\u011Fin emek d\xFCzeyinde g\xF6z\xFCkm\xFCyor. Kar\u015F\u0131 tarafta,
+    \"istedi\u011Fim gibi \u0131s\u0131nm\u0131yorsak, g\xFCne\u015Fimi de al\u0131r
+    giderim\" gibi bir tav\u0131r seziyorum. Bu {{data, cinsiyet=erkek, han\u0131mefendi
+    | cinsiyet=kad\u0131n, beyefendi | cinsiyet=lgbt, ki\u015Fi}} san\u0131r\u0131m
+    \u015Funu bilmiyor; sen, gerekti\u011Finde \xE7izdi\u011Fi resimleri yakarak
+    \u0131s\u0131nabilecek y\xFCreklilikte birisin. Bunu idrak etmesi i\xE7in bir
+    miktar zaman gerekece\u011Fini hissediyorum.\n\nFal\u0131n\u0131n biraz daha
+    yan k\u0131s\u0131mlar\u0131nda ise k\u0131r\u0131k bir \"ayna\" var. Ayr\u0131ld\u0131\u011F\u0131n
+    ki\u015Fi, {{kelime, aralar\u0131nda kan ba\u011F\u0131 olan birisi taraf\u0131ndan
+    | seni de tan\u0131yan ortak bir arkada\u015F\u0131n\u0131z taraf\u0131ndan |
+    senin hi\xE7 g\xF6r\xFC\u015Fmedi\u011Fin ancak ili\u015Fkinizden haberdar olan
+    ve sevgilini tan\u0131yan birisi taraf\u0131ndan}} ilerleyen g\xFCnlerde sana
+    yapt\u0131\u011F\u0131 hatalarla ilgili uyar\u0131lacak. Kar\u015F\u0131s\u0131na
+    konacak olan bu ayna, kendisiyle y\xFCzle\u015Fme s\xFCrecini ba\u015Flatacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

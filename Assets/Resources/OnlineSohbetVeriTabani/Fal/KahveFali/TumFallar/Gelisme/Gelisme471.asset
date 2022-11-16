@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme471
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA94620832213
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Senin akl\u0131n gelece\u011Fe, y\xFCz\xFCnse \xE7ok uzaklara d\xF6n\xFCk g\xF6z\xFCk\xFCyor
+    {{isim}}. \U0001F324\uFE0FHayat\u0131n seni \xE7ok b\xFCy\xFCk zorluklarla s\u0131namaya
+    niyetli oldu\u011Funu d\xFC\u015F\xFCnm\xFCyorum; fakat ona kar\u015F\u0131 san\u0131r\u0131m
+    as\u0131l alacakl\u0131 sensin. Fikrinin derinliklerinde her \u015Feyin en iyisi
+    ve en g\xFCzeli yat\u0131yor. \xD6n\xFCndeki puslu kader perdesine pen\xE7elerini
+    ge\xE7irip istedi\u011Fin her \u015Feyi alana kadar durmayaca\u011F\u0131na ve
+    harbinin, sonuna kadar s\xFCrece\u011Fine inan\u0131yorum.\n\nDe\u011Ferli {{isim}},
+    bundan sonra gelece\u011Fini iki \xF6nemli se\xE7imin belirleyecek. Telvelerinde,
+    yolun {{sayi,2,3}} y\u0131l i\xE7inde \xF6nce ikiye ayr\u0131l\u0131yor. Se\xE7ece\u011Fin
+    istikamet ise {{yil_+3}} y\u0131l\u0131ndan sonraki {{sayi,2,3}} sene i\xE7erisinde
+    tekrar ikiye ayr\u0131lacak. Varaca\u011F\u0131n son yerde, ortaya koydu\u011Fun
+    \xE7aba sonras\u0131 \xE7ok hakl\u0131 bir gurur ya\u015F\u0131yor olacaks\u0131n.
+    Etraf\u0131nda ise pek \xE7ok insan g\xF6r\xFCyorum. Bilinen, takdir edilen ve
+    her konuda insanlara s\xF6z\xFC ge\xE7en biri haline geleceksin. O zamana kadar
+    \xE7evren de bir hayli geni\u015Fleyecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 35
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 35
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

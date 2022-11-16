@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekonlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA59253490708
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 59ac37f26aaa8c640a19e0639a9db374, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 59ac37f26aaa8c640a19e0639a9db374, type: 3}
+  contentPhotoId: asaonlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"De\u011Fnek Onlusu\" kart\u0131n\u0131 se\xE7tin.\n\n\xC7o\u011Fu
+    gitmi\u015F, az\u0131 kalm\u0131\u015F {{isim}}. Beklentilerine ula\u015Fabilmek
+    i\xE7in son eforu sarf ediyor, son imtihanlar\u0131 veriyorsun. \u015Eimdiye
+    kadar ortaya koydu\u011Fun t\xFCm emekleri kucaklam\u0131\u015F, hedeflerinle
+    seni bulu\u015Fturacak olan merdivenlerin son basamaklar\u0131n\u0131 \xE7\u0131k\u0131yorsun.
+    \u0130\xE7inde bulundu\u011Fun yo\u011Funluk gayet do\u011Fal. Bitirici vuru\u015Ftan
+    hemen \xF6nce g\xF6sterilen \"son diren\xE7lerle\" kar\u015F\u0131 kar\u015F\u0131yas\u0131n.
+    Hem i\xE7g\xFCd\xFClerin hem de \xE7evrende meydana gelen de\u011Fi\u015Fimler,
+    senin zirve iklimine girdi\u011Fini, ba\u015Far\u0131n\u0131n il s\u0131n\u0131rlar\u0131
+    i\xE7inde oldu\u011Funu anlat\u0131yor. Kapasiteni zorlad\u0131\u011F\u0131na
+    de\u011Fiyor. Bekledi\u011Fin zamanda, planlad\u0131\u011F\u0131n \u015Fekilde
+    noktalanacak i\u015Flerle me\u015Fguls\xFCn."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi asaonlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

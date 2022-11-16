@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicdokuzlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA02664964961
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 99eaec929c6801442b1dd8fa8fc5e3f8, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 99eaec929c6801442b1dd8fa8fc5e3f8, type: 3}
+  contentPhotoId: kilicdokuzlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 Dokuzlusu\" kart\u0131n\u0131
+    se\xE7tin.\n\nBir zamanlar \"I\u015F\u0131\u011F\u0131m!\" dedi\u011Fin bir \u015Fey
+    varm\u0131\u015F ve onu o d\xF6nemde kaybetmi\u015Fsin. Bir s\xFCre karanl\u0131\u011Fa
+    hapsolmu\u015F, ya\u015Fam\u0131 sorgulam\u0131\u015F, kendini ve \xE7evreni
+    yarg\u0131lam\u0131\u015F, su\xE7lu aramaya \xE7al\u0131\u015Fm\u0131\u015Fs\u0131n.
+    Bu kart \xF6yle bir buhrandan bahsediyor ki {{isim}}, bir \xE7\u0131k\u0131\u015F
+    yolu bulamasan, sonsuz bir dehlizde kaybolup, ac\u0131 i\xE7inde t\xFCm ya\u015Fam
+    enerjini sulara b\u0131rak\u0131rm\u0131\u015Fs\u0131n. Elem ve keder dolu g\xFCnlerin,
+    uykusuz gecelerin \xFCstesinden gelmen gerekmi\u015F. Kendini zar zor kontrol
+    edip yeniden aya\u011Fa kald\u0131rm\u0131\u015F, b\xFCy\xFCk \xE7\xF6k\xFC\u015F\xFC
+    ve ac\u0131 bir felaketi ucuz atlatm\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kilicdokuzlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

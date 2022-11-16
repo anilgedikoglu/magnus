@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: Kurban2022bir
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "De\u011Ferli {{isim}}, Kurban Bayram\u0131'n\u0131 kutlar\u0131m! Sa\u011Fl\u0131k,
+    huzur ve mutlulukla ge\xE7irmen dile\u011Fiyle..."
+  tip: 2
+  yil: 2022
+  ay: 7
+  gun: 9
+  saat: 1
+  gonderilecegiZaman: 1
+  platform: 0
+  gerekliDegiskenler: []

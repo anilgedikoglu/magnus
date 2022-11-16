@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris27
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA92093143592
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131ndaki g\xF6rseller, mesajlar\u0131n\u0131 iletmeye olduk\xE7a \u015Fa\u015F\u0131rt\u0131c\u0131
+    bir \u015Fekilde ba\u015Flad\u0131. G\xF6kten ans\u0131z\u0131n d\xFC\u015Fen
+    bir mektubu a\xE7m\u0131\u015F ve okumaya koyulmu\u015Fsun. \xC7ok yak\u0131nda,
+    seni bir s\u0131k\u0131nt\u0131ndan uzakla\u015Ft\u0131racak ve zaman zaman i\xE7inde
+    bulundu\u011Fun kederli ruh halinden ar\u0131nd\u0131racak bir haber alacaks\u0131n
+    {{isim}}. \u015Eer sand\u0131\u011F\u0131n bir yolun sonu, hayra \xE7\u0131kacak.
+    Ad\u0131nda {{harf}} harfi bulunan ve iki heceli isme sahip {{kelime, geni\u015F
+    g\xF6bekli | tombul yanakl\u0131 | aln\u0131 a\xE7\u0131k | sa\xE7lar\u0131 hafif
+    k\u0131rl\u0131 | kal\u0131n enseli, orta boylu}} birinden {{saat, b\xF6yle bir
+    sabah vakti | b\xF6yle bir \xF6\u011Fle vakti | b\xF6yle bir ikindi vakti | b\xF6yle
+    bir ak\u015Fam vakti | b\xF6yle bir gece vakti}} alaca\u011F\u0131n haber, seni
+    sevince bo\u011Facak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

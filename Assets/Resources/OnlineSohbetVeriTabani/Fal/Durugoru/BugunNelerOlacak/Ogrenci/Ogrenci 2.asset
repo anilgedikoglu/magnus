@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Ogrenci 2
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA52552129521
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xC7evrende k\u0131nad\u0131\u011F\u0131n baz\u0131 \u015Feyleri bug\xFCn sen
+    yapabilirsin {{isim}}. G\xFCn\xFCn\xFC analiz etti\u011Fimde, kendi \xE7\u0131karlar\u0131n
+    do\u011Frultusunda baz\u0131 kararlar verece\u011Fini g\xF6rd\xFCm. Akl\u0131ma
+    ise hemen \u015Fu s\xF6z geldi: \"Bir u\xE7urumun i\xE7ine uzun s\xFCre bakarsan,
+    u\xE7urum da senin i\xE7ine bakar.\" \xD6\u011Fleden sonra, akl\u0131na bir arkada\u015F\u0131na
+    yazmak ya da onu aramak gelebilir. Bu senin i\xE7in isabetli de olacak. Onunla
+    ileti\u015Fim kurarsan, ondan \xE7ok faydal\u0131 ve seni memnun edecek bir \u015Fey
+    \xF6\u011Freneceksin. Senin kedi ya da k\xF6pek sahiplenmek gibi bir fikrin mi
+    var? Bu fikrin bug\xFCn olgunla\u015Fabilir, hatta belki bir \u015Fekilde ger\xE7ekle\u015Febilir.
+    \xD6zel hayat\u0131nla ilgili ne istedi\u011Fini bug\xFCn her zamankinden daha
+    iyi biliyor olacaks\u0131n {{isim}}. Hayat ise ak\u015Fam saatlerine do\u011Fru
+    bu anlamda beklentilerini kar\u015F\u0131lamaya ba\u015Flayacak gibi g\xF6z\xFCk\xFCyor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme706
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA27774037096
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n orta-\xFCst k\u0131s\u0131mlar\u0131nda, adeta \"g\xFCll\xFCk
+    g\xFClistanl\u0131k\" bir manzara g\xF6r\xFCyorum {{isim}}. \U0001F490Il\u0131man
+    bir iklimden kopmu\u015F gibi g\xF6r\xFCnen telvelerinde, \xE7e\u015Fit \xE7e\u015Fit
+    \xE7i\xE7ekler ve bulutsuz bir g\xF6ky\xFCz\xFC var. Ne var ki, s\u0131cak hislerle
+    dolup ta\u015Fan bu manzaran\u0131n tam ortas\u0131ndan kapkara bir \"karga\"
+    ge\xE7iyor. \U0001F985{{data, cinsiyet=erkek, Hayat\u0131ndaki han\u0131mefendiyle
+    | cinsiyet=kad\u0131n, Hayat\u0131ndaki beyefendiyle | cinsiyet=lgbt, Hayat\u0131ndaki
+    insanla}} ilgili {{kelime, duydu\u011Fun bir \u015F\xFCphe | akl\u0131ndaki bir
+    soru i\u015Fareti | kafandaki bir \u015F\xFCphe}}, aran\u0131zdaki {{kelime,
+    samimiyete g\xF6lge d\xFC\u015F\xFCr\xFCr gibi | duygulara g\xF6lge d\xFC\u015F\xFCr\xFCr
+    gibi}} olmu\u015F.\n\nBu durumu Shakespeare \u015Fu s\xF6zlerle y\u0131llar \xF6ncesinden
+    anlatm\u0131\u015F asl\u0131nda: \"G\xFCzelli\u011Fe tak\u0131lan bir s\xFCs
+    gibidir ku\u015Fku. Karga, g\xF6kteki en ho\u015F havalara y\xF6nelir.\" \u0130li\u015Fkinin
+    derinli\u011Fi g\u0131pta edilecek boyutta. Bu sebeple duydu\u011Fun \u015F\xFCphe,
+    ili\u015Fkinin adeta tuzu biberi niteli\u011Finde. Yine de sevgilin, i\xE7indeki
+    \u015F\xFCphelerin k\xF6k\xFCn\xFC kuratacak bir s\xFCrpriz planl\u0131yor {{isim}}.
+    \U0001F48CSana olan a\u015Fk\u0131n\u0131 adeta \"{{kelime, t\xFCm d\xFCnyaya
+    | \xE7evresindeki herkese | sizi tan\u0131yan herkese}}\" duyuraca\u011F\u0131
+    bu s\xFCrpriz i\xE7in {{ay_2}} ay\u0131n\u0131n {{kelime, son g\xFCnlerini |\xFC\xE7\xFCnc\xFC
+    haftas\u0131n\u0131 | son haftas\u0131n\u0131}} beklemen gerek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

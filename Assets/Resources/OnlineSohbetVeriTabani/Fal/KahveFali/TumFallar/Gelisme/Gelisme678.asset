@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme678
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA38070122163
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerin koyula\u015Ft\u0131\u011F\u0131 orta kesimlerde, bozuk bir pikap
+    ba\u015F\u0131nda beklemekte olan h\xFCz\xFCnl\xFC bir \xE7ehre g\xF6r\xFCyorum
+    {{isim}}. \U0001F3B6Ba\u015F\u0131 yana \xE7evrilmi\u015F, ancak dudaklar\u0131n\u0131n
+    karakteristik k\u0131vr\u0131m\u0131ndan bu \xE7ehrenin sana ait oldu\u011Funu
+    hemencecik anlad\u0131m. Bu pikap\u0131n i\u011Fnesi, \u015Fark\u0131n\u0131n
+    adeta \"bam teline vurdu\u011Fu\" an\u0131nda tak\u0131lm\u0131\u015F. A\u015Fk\u0131na
+    kar\u015F\u0131l\u0131k bulamad\u0131\u011F\u0131n\u0131 d\xFC\u015F\xFCnd\xFC\u011F\xFCn
+    vakit hissetti\u011Fin olumsuz duygular, adeta bir padi\u015Fah ferman\u0131
+    gibi yank\u0131lanm\u0131\u015F zihninde. Bu anlar seni i\xE7 d\xFCnyan\u0131n
+    \xE7\u0131kmaz sokaklar\u0131na s\xFCrg\xFCne yollam\u0131\u015F.\n\nTelvelerindeki
+    pikap\u0131n arkas\u0131nda dikilen ve ad\u0131n\u0131n ilk hecesinde {{harf}}
+    harfi olan bir arkada\u015F\u0131n ya da akraban, durmadan ayn\u0131 melodiyi
+    \xE7alan d\xFCzene\u011Fi do\u011Frultuyor {{isim}}. Kederli h\xFClyalar aleminden
+    seni apans\u0131z \xE7ekip \xE7\u0131kar\u0131yor bu ki\u015Fi. Telvelerin bu
+    insan\u0131n, ho\u015Fland\u0131\u011F\u0131n {{data, cinsiyet=erkek, han\u0131mefendinin
+    | cinsiyet=kad\u0131n, erke\u011Fin | cinsiyet=lgbt, ki\u015Finin}} hayat\u0131nda
+    meydana gelen son geli\u015Fmeler hakk\u0131nda seni \xE7ok sevindirecek baz\u0131
+    haberler getirece\u011Fini s\xF6yl\xFCyor. Sana adeta hayali bir esinti gibi
+    gelecek ve tam da duymak istedi\u011Fin s\xF6zleri ta\u015F\u0131yacak olan bu
+    insan\u0131n, seni \xFCz\xFCnt\xFCden kurtarmas\u0131 an meselesi. {{gelecek_ay}}
+    ay\u0131n\u0131n \xFC\xE7\xFCnc\xFC haftas\u0131n\u0131n ilk g\xFCnleri, hayat\u0131nda
+    yeni bir d\xF6neme a\xE7\u0131lan kap\u0131lar\u0131 aralayacak, benden s\xF6ylemesi..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

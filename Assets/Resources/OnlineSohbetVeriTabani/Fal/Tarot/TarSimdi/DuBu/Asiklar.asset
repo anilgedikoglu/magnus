@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Asiklar
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA46034778158
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: e22caf990b42ff14d895067eae29b8dd, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: e22caf990b42ff14d895067eae29b8dd, type: 3}
+  contentPhotoId: asiklar
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"A\u015F\u0131klar\" kart\u0131n\u0131 se\xE7tin.\n\nDe\u011Ferli
+    {{isim}}, \u015Fu s\u0131ralar kiminle yan yana y\xFCr\xFCsen, sana u\u011Furlu
+    geliyor. A\u015Fk hayat\u0131nda da i\u015F birliklerinde de arkada\u015Fl\u0131klar\u0131nda
+    da olduk\xE7a uyumlu ve verimli ilerliyorsun. \xC7evrenle g\xFCzel bir bar\u0131\u015F
+    ve uzla\u015F\u0131 i\xE7erisindesin. D\xFC\u015Fman say\u0131n neredeyse s\u0131f\u0131ra
+    inmi\u015F oldu\u011Fu i\xE7in, huzurlu ve g\xFCvenli bir alan\u0131n ortas\u0131ndas\u0131n.
+    Do\u011Fru se\xE7imler yap\u0131yor ve do\u011Fru ad\u0131mlar at\u0131yorsun.
+    Bu yapt\u0131klar\u0131n da seni en ferah ve \"engelsiz\" yollara \xE7\u0131kar\u0131yor.
+    Kart\u0131n, ge\xE7mi\u015Fte \xF6zlemini duydu\u011Fun her ne varsa, \u015Fu
+    aralar kavu\u015Fmaya ba\u015Flad\u0131\u011F\u0131n\u0131 i\u015Faret ediyor.
+    Evren, \xF6nceki y\u0131llarda senden ald\u0131klar\u0131n\u0131 bu d\xF6nemlerde
+    adeta sana geri veriyor. Kozmostan talep etti\u011Fin baz\u0131 yeni \u015Feyler
+    de neredeyse ger\xE7ekle\u015Fmek \xFCzereler. Eli kula\u011F\u0131nda..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi asiklar
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

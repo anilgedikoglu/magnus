@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisKovaEvli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA43811972495
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Kar\u015F\u0131m\u0131zda,
+    insani y\xF6nleri olduk\xE7a geli\u015Fmi\u015F bir kova burcu {{data, cinsiyet=erkek,
+    kad\u0131n\u0131 | cinsiyet=kad\u0131n, erke\u011Fi | cinsiyet=lgbt, mensubu}}
+    g\xF6r\xFCyorum {{isim}}. Bunu i\u015F ortam\u0131ndaki hareketlerinden ve \xE7evresinin
+    ona olan ilgisinden de anl\u0131yorsundur. Duygularun\u0131 sana kar\u015F\u0131
+    tam a\xE7\u0131k etmese de, muhtemelen baz\u0131 i\u015Faretlerle hevesini belli
+    ediyordur. {{burc}} burcu olarak, ya\u015F tahtaya basmay\u0131 sevmeyen birisin.
+    \u0130li\u015Fkilerinde stabilite ve s\xFCrd\xFCr\xFClebilirlik istiyorsun. Evlili\u011Finde
+    ya\u015Fad\u0131\u011F\u0131n k\u0131r\u0131lmalar\u0131n benzerleriyle yeni
+    ili\u015Fkilerde kar\u015F\u0131la\u015Fmak istemiyorsun. T\xFCm bunlar g\xFCzel,
+    fakat kar\u015F\u0131nda hevesi \xE7abuk k\u0131r\u0131labilen biri oldu\u011Funu
+    da unutmamal\u0131s\u0131n. Yepyeni fikirleriyle ve mant\u0131kl\u0131 yakla\u015F\u0131mlar\u0131yla,
+    g\xFCnden g\xFCne seni kendisine daha da hayran b\u0131rakacak. Ate\u015Ften
+    bir g\xF6mlek giymeye cesaretin varsa, yan\u0131lma ihtimalini g\xF6z \xF6n\xFCnde
+    bulundurup yine de denemek istiyorsan, e\u015Fsiz bir ili\u015Fkiye haz\u0131rs\u0131n
+    demektir. Tavsiyem \u015Fu {{isim}}; ate\u015Fe u\xE7an pervaneler gibi olmamak
+    i\xE7in, bu {{data, cinsiyet=erkek, han\u0131mefendiye | cinsiyet=kad\u0131n,
+    beyefendiye | cinsiyet=lgbt, insana}} kar\u015F\u0131 her ad\u0131m\u0131n\u0131
+    dikkatli atmal\u0131s\u0131n.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: kova
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

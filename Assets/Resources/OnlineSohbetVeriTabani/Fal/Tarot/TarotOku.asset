@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TarotOku
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA73195054088
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot fal\u0131 ayarla"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 \u0130kilisi\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nKart\u0131n bize, bir d\xF6nem baz\u0131 konularda ciddi
+    \u015Fekilde ikilemde kald\u0131\u011F\u0131n\u0131 anlat\u0131yor. Bu ikilem,
+    iki farkl\u0131 mesele aras\u0131nda cereyan etmi\u015F. Bu meselelerin her ikisi
+    de senin i\xE7in hayati \xF6neme sahip olmas\u0131na ra\u011Fmen, s\u0131n\u0131rl\u0131
+    enerjini ve dikkatini hangisine y\xF6neltece\u011Fini bilememi\u015Fsin. Kaynaklar\u0131n\u0131
+    efektif kullan\u0131p, her iki konuda da iyi neticeler almak i\xE7in \xE7ok \xE7abalam\u0131\u015Fs\u0131n.
+    Fiziken \xE7ok yorulmu\u015F, kendini \xE7ok y\u0131pratm\u0131\u015F ve kendi
+    i\xE7 dengelerini sarsm\u0131\u015Fs\u0131n {{isim}}. Birden fazla konuyla ayn\u0131
+    anda u\u011Fra\u015Fman gereken zorlu bir s\xFCreci, her yere e\u015Fit \u015Fekilde
+    yetmeye \xE7al\u0131\u015Farak ge\xE7irmi\u015F ve k\u0131smen de olsa \xFCstesinden
+    gelmi\u015Fsin. Ancak geriye bitkin bir \"sen\" kalm\u0131\u015F.\n\n\u015Eimdi
+    i\xE7in \"De\u011Fnek Prensi\" kart\u0131n\u0131 se\xE7tin.\n\nNe kadar b\xFCy\xFCk
+    bir potansiyelin oldu\u011Funu \u015Fimdiye kadar bilmiyordun, \xF6yle de\u011Fil
+    mi? Bu potansiyel, insanlar\u0131 etkileyebilmene, onlar\u0131 istedi\u011Fin
+    \u015Fekilde sevk ve idare edebilmene hatta onlardan destek alarak b\xFCy\xFCk
+    i\u015Fler ba\u015Farmana yetiyor. Akl\u0131na g\xFCnden g\xFCne yeni fikirler
+    geliyor olmal\u0131. Bu fikirler ve bu potansiyel bir araya geldi\u011Finde,
+    kar\u015F\u0131nda durabilecek hi\xE7bir \u015Fey yok {{isim}}. Seni istedi\u011Fin
+    noktaya \u0131\u015F\u0131nlayabilecek bir g\xFC\xE7 ve b\xFCy\xFCk biz \xF6zg\xFCrl\xFCk,
+    avu\xE7lar\u0131nda. Bunun fark\u0131na vard\u0131k\xE7a, ya\u015Fam yolculu\u011Fun
+    daha b\xFCy\xFCk bir anlam kazan\u0131yor. F\u0131rsatlar\u0131 yaln\u0131zca
+    g\xF6rm\xFCyor, art\u0131k onlar\u0131 bir bir de\u011Ferlendirebiliyorsun.\n\nGelecek
+    i\xE7in \"Kupa \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131 se\xE7tin.\n\nKar\u015F\u0131m\u0131za
+    \xE7\u0131kan bu kart, yapt\u0131\u011F\u0131n her \u015Feyin bir bir seni ba\u015Far\u0131ya
+    ula\u015Ft\u0131racak basamaklar\u0131 olu\u015Fturdu\u011Funu s\xF6yl\xFCyor.
+    Verimli zamanlar ge\xE7iriyor, yerinde kararlar veriyor, do\u011Fru insanlarla
+    ileti\u015Fim kuruyor ve hedeflerini g\xFCzel belirliyorsun. Gayretlerin kar\u015F\u0131l\u0131ks\u0131z
+    kalmayacak {{isim}}. \u0130lerleyen d\xF6nemlerde sevdiklerinle bir \u015Feyleri
+    kutlayacaks\u0131n. Ba\u015Far\u0131ya ula\u015Fman\u0131n ve ama\xE7lananan
+    \u015Feylerin elde edilmesinin hazz\u0131 seni \xE7ok mutlu ederken, sevdiklerin
+    taraf\u0131ndan da takdir ve tebrik g\xF6recek. Bug\xFCn sana manevi anlamda
+    destek olanlar, o g\xFCn de yan\u0131nda olacaklar. Sevmedi\u011Fin insanlar\u0131
+    ise geride b\u0131rakacaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarotanisonrasi
+    islem: 0
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot oku
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

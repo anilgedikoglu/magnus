@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme516
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA54740084590
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Beli b\xFCk\xFCk ve s\u0131rt\u0131nda a\u011F\u0131r y\xFCk ta\u015F\u0131yan
+    bir kanguru var fincan g\xF6rsellerinde; sen de g\xF6rebiliyor musun? Her konuda,
+    elindekilerin \xE7ok daha fazlas\u0131na sahip olabilmek i\xE7in m\xFCthi\u015F
+    bir potansiyelin var asl\u0131nda. Fakat baz\u0131 s\u0131k\u0131nt\u0131 ve
+    sorumluluklar ge\xE7ti\u011Fimiz aylarda belini \xE7ok b\xFCkm\xFC\u015F {{isim}}.
+    Hedeflerinle aranda engeller \xE7\u0131km\u0131\u015F. \U0001F644Ya\u015F\u0131na
+    g\xF6re ta\u015F\u0131makta zorlanabilece\u011Fin y\xFCklerle y\xFCklenmi\u015F,
+    fakat bu zamana kadar ba\u015Far\u0131yla \xFCstesinden gelmi\u015Fsin. \u015Eimdiden
+    sonra ise hayata kar\u015F\u0131 daha dik durabileceksin. \xDCzerindeki a\u011F\u0131rl\u0131klar\u0131
+    \xF6n\xFCm\xFCzdeki ay\u0131n ikinci yar\u0131s\u0131ndan itibaren atmaya ba\u015Fl\u0131yorsun.
+    {{ay_+2}} ay\u0131n\u0131n ortalar\u0131nda, neredeyse hi\xE7bir ciddi s\u0131k\u0131nt\u0131n
+    kalmayacak. Y\xFCz\xFCn\xFC d\xF6nd\xFC\u011F\xFCn istikamet \xE7ok ayd\u0131nl\u0131k.
+    \n\nBir {{kelime, adam | kad\u0131n | k\u0131z}} g\xF6r\xFCyorum telvelerinde.
+    Elinde, yar\u0131s\u0131na kadar dolu bir fincan var bu ki\u015Finin. Fakat \xE7evresine
+    m\xFCtemadiyen \u015Fikayetleniyor. \"Yar\u0131s\u0131 neden bo\u015F?\" dedi\u011Fini
+    duyar gibiyim. Bu ki\u015Fi, s\xFCrekli olarak odakland\u0131\u011F\u0131 olumsuzluklarla,
+    senin huzur b\xFCt\xFCnl\xFC\u011F\xFCn\xFC de sekteye u\u011Frat\u0131yor {{isim}}.
+    Onunla {{sayi,3,7}} g\xFCn i\xE7inde bir konu\u015Fma ger\xE7ekle\u015Ftirece\u011Finizi
+    g\xF6r\xFCyorum. S\u0131k\u0131nt\u0131n\u0131 a\xE7\u0131k\xE7a dile getirdikten
+    sonra, benzeri bir \u015Feye yeniden maruz kalmayacaks\u0131n. \u0130nsanlar,
+    i\xE7inde bulunduklar\u0131 durumlara biraz da \u015F\xFCkretmeyi \xF6\u011Frenmeliler..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 26
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 26
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

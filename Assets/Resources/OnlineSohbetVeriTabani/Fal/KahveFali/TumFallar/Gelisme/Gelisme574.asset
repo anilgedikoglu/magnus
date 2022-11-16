@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme574
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA48771345108
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin oda\u011F\u0131nda sap\u0131 k\u0131r\u0131k bir cezve var. \U0001F9C9G\xF6r\xFC\u015Ft\xFC\u011F\xFCn
+    ki\u015Fiyle arandaki bir s\u0131k\u0131nt\u0131y\u0131 temsil eden bu cezve,
+    konunun neresinden tutsan\u0131z elinizde kald\u0131\u011F\u0131n\u0131 i\u015Faret
+    ediyor {{isim}}. \U0001F914\xD6n\xFCm\xFCzdeki g\xFCnlerde, {{rastgeleburc}}
+    burcu birinin bu konuda devreye girece\u011Fini, sorunu \xE7\xF6zece\u011Fini
+    ya da \xE7\xF6zmeye vesile olaca\u011F\u0131n\u0131 hissediyorum. \u0130sminde,
+    sende oldu\u011Fu gibi bir {{isimiki}} harfi ta\u015F\u0131yan bu ki\u015Fi,
+    sosyal medyay\u0131 aktif kullanan birisi. Son payla\u015F\u0131mlar\u0131nda
+    onu, \xFCzerinde {{kelime, K\u0131rm\u0131z\u0131 | Sar\u0131 | Mavi | Ye\u015Fil
+    | Mor | Turuncu | A\xE7\u0131k ye\u015Fil | A\xE7\u0131k mavi | Fildi\u015Fi
+    rengi | Vi\u015Fne rengi | Gri | Bordo | Koyu ye\u015Fil | U\xE7uk mavi | Haki
+    | F\xFCme rengi | Menek\u015Fe rengi | Antrasit gri | Su mavisi | Yaprak ye\u015Fili
+    | \xC7am ye\u015Fili | Buz mavisi | Alt\u0131n rengi | Bronz rengi | G\xFCm\xFC\u015F
+    rengi | Siyah | Beyaz | Lacivert | Pastel sar\u0131 | Lila | Fu\u015Fya | Lavanta
+    | G\xFCl pembe | A\xE7\u0131k pembe | Su mavisi | Yavrua\u011Fz\u0131 | Turkuaz
+    | Magenta | Gece mavisi}} bir k\u0131yafet ya da aksesuarla g\xF6rebilirsin.\n\nAyr\u0131ca
+    fincan\u0131n\u0131n tam saat {{sayi,10,14}} y\xF6n\xFCnde, alt k\u0131s\u0131mlar\u0131na
+    do\u011Fru bir {{sabit_sayi,2,8}} rakam\u0131 var. Sevdi\u011Fin ki\u015Fi ile
+    gelecek ay \xF6nemli bir olay ya\u015Fayacaks\u0131n\u0131z. Tahminim {{sabit_sayi,2,8}}
+    {{gelecek_ay}}, 1{{sabit_sayi,2,8}} {{gelecek_ay}} ya da 2{{sabit_sayi,2,8}}
+    {{gelecek_ay}} tarihinde ger\xE7ekle\u015Fece\u011Fi y\xF6n\xFCnde. O g\xFCnden
+    sonra ileti\u015Fiminiz boyut de\u011Fi\u015Ftirerek daima iyiye do\u011Fru gidecek
+    {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

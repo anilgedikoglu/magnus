@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme464
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA98135564388
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{isim}} \xE7ok bariz bir \u015Fekilde fincan\u0131n tam {{kelime, sa\u011F
+    yan | sol yan | sa\u011F alt | sol alt}} k\u0131sm\u0131nda belirmi\u015Fsin.
+    Elinde kapal\u0131 bir istiridye tutuyor ve onu inatla a\xE7maya \xE7al\u0131\u015F\u0131yor
+    gibisin. \u0130\xE7inde inci oldu\u011Fundan da ne kadar eminsin b\xF6yle! \U0001F928Bu
+    u\u011Fruna ter d\xF6kt\xFC\u011F\xFCn ve \xE7ok u\u011Fra\u015Ft\u0131\u011F\u0131n
+    \u015Fey her ne ise, bunca gayretinin \xFCzerine, uzaksa bile evren taraf\u0131ndan
+    sana yak\u0131n edilip getirilecek...\n\nFincan\u0131nda 45-50'li ya\u015Flar\u0131nda,
+    {{kelime, narin ellere sahip, zaman zaman bel ve boyun a\u011Fr\u0131lar\u0131
+    \xE7eken bir kad\u0131n var. | tombik parmaklara ve a\xE7\u0131k bir alna sahip,
+    zaman zaman eklem a\u011Fr\u0131lar\u0131 \xE7eken bir erkek var.}} Bu ki\u015Finin
+    seninle payla\u015Fmak istedi\u011Fi baz\u0131 \u015Feyler oldu\u011Funu g\xF6r\xFCyorum.
+    Onu dinlemeyece\u011Fini d\xFC\u015F\xFCn\xFCyor gibi; nedense buna \xFCz\xFCld\xFCm.
+    E\u011Fer gelecek hafta bir nedenden kar\u015F\u0131na gelirse, l\xFCtfen hi\xE7
+    kesmeden ona kulak ver {{isim}}. Senin yapaca\u011F\u0131n tespitler ve ortaya
+    koyaca\u011F\u0131n fikir, yaln\u0131zca o ki\u015Finin de\u011Fil, senin de
+    yarar\u0131na olacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 26
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

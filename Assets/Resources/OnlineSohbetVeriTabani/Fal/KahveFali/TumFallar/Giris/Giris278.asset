@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris278
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA27827193795
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131nda 40'l\u0131 ya\u015Flarda, yan\u0131ndaki \xE7ocuklar\u0131n
+    ba\u015F\u0131n\u0131 ok\u015Fayan, {{rastgeleburc}} ya da {{burc}} burcu bir
+    {{data, cinsiyet=erkek, erkek | cinsiyet=kad\u0131n, kad\u0131n | cinsiyet=lgbt,
+    ki\u015Fi}} var. G\xFCl\xFCyor, \xE7\xFCnk\xFC \u015Fa\u015Fk\u0131n... Bu sen
+    olabilir misin {{isim}}? \U0001F9D0 \xC7ocu\u011Fun varsa ve {{data, cinsiyet=erkek,
+    boyun 1.80'in \xFCzerindeyse | cinsiyet=kad\u0131n, boyun 1.75'in alt\u0131ndaysa
+    | cinsiyet=lgbt, boyun 1.70 civar\u0131ndaysa}}, bence sensin; yoksa, \xE7ok
+    yak\u0131n bir akraban ya da arkada\u015F\u0131n. E\u015Fiyle ba\u015Fka \xE7ocuk
+    istemediklerine dair konu\u015Furlarken ya da \"bir \xE7ocu\u011Fumuz daha olsa
+    nas\u0131l olurdu\" diye kendi aralar\u0131nda birbirlerini k\u0131zd\u0131rmak
+    ad\u0131na espriler yaparlarken yazg\u0131lar\u0131n\u0131n etkilenece\u011Fini
+    ve {{sayi,2,4}} y\u0131l i\xE7inde bir \xE7ocuklar\u0131n\u0131n daha olaca\u011F\u0131n\u0131
+    i\u015Faret ediyor telveler. Hay\u0131r olsun in\u015Fallah. Onlar e\u015Fin
+    ve sen de\u011Filsiniz de\u011Fil mi, do\u011Fruyu s\xF6yle? <sprite=0>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 35
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 43
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 35
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 43
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

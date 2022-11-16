@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme589
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA59506379900
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n {{kelime, \xFCst | alt}} kaidesinde yan yana duran 3 k\xFC\xE7\xFCk
+    baloncuk belirmi\u015F {{isim}}. Her bir baloncuk, bir konudaki s\u0131k\u0131nt\u0131n\u0131
+    ve i\xE7sel yo\u011Funlu\u011Funu yans\u0131t\u0131yor. Baloncuklardan biri sa\u011Fl\u0131\u011F\u0131n\u0131,
+    di\u011Feri moralini, \xFC\xE7\xFCnc\xFCs\xFC ise maddi durumunu temsil ediyor.
+    Bu g\xF6rselin bir miktar dikkate al\u0131nmas\u0131 gerekti\u011Fini d\xFC\u015F\xFCn\xFCyorum,
+    \xE7\xFCnk\xFC bunlar adeta birer uyar\u0131 niteli\u011Finde. \u0130lerleyen
+    g\xFCnlerde bedensel, zihininsel ve ekonomik g\xF6stergelerini rahatlatabilmek
+    i\xE7in evrenle do\u011Fru \"uyumlanmal\u0131\" ve kainata, kar\u015F\u0131l\u0131\u011F\u0131n\u0131
+    h\u0131zla alabilece\u011Fin olumlu enerjiler yaymal\u0131s\u0131n. Telvelerinin
+    f\u0131s\u0131lt\u0131lar\u0131ndan anlad\u0131\u011F\u0131m kadar\u0131yla {{kelime,
+    g\xFCne ve g\xFCne\u015Fe hakim pencere kenarlar\u0131 | ferah ve ayd\u0131nl\u0131k
+    alanlar | suya yak\u0131n ve dingin yerler | ayna bulunan ve i\xE7 enerjini sakl\u0131
+    tutman\u0131 sa\u011Flayan yerler | sessiz ve insanlardan uzak mekanlar | g\xF6lgelik
+    ve do\u011Fa ile i\xE7 i\xE7e alanlar | y\xFCksek ve atmosferik d\u0131\u015F
+    bas\u0131nc\u0131n d\xFC\u015F\xFCk oldu\u011Fu mekanlar | giri\u015F kat\u0131
+    ve d\xFCz ayak yerler | mum \u0131\u015F\u0131\u011F\u0131 bulunan, lo\u015F
+    yerler | g\xFCzel kokan ve zihnini dinlendirebildi\u011Fin yerler | iyi havaland\u0131r\u0131lan,
+    bol oksijenli yerler | elektronik e\u015Fyalar\u0131n, radyasyonun ve radyo dalgalar\u0131n\u0131n
+    az oldu\u011Fu yerler | yal\u0131n ayak durulabilen, topraklan\u0131labilen yerler
+    | parke d\xF6\u015Feli, bol ah\u015Fap mobilya i\xE7eren yerler | mermer d\xF6\u015Feli
+    ve biyoenerjiyi i\xE7eride tutabilen yerler | insans\u0131z, g\xF6zlerden uzak
+    ve bakir mekanlar | kitaplara ve kitapl\u0131\u011Fa yak\u0131n yerler | lo\u015F
+    \u0131\u015F\u0131kland\u0131r\u0131lm\u0131\u015F dingin yerler | hafif m\xFCzik
+    \xE7alan, iyi havaland\u0131r\u0131lan yerler}} sana \xE7ok iyi gelecek.\n\nFal\u0131nda,
+    sana konum ya da durum itibariyle hayli uzak g\xF6z\xFCken bir {{kelime, kad\u0131n
+    | erkek}} var. Bu ki\u015Finin seninle aras\u0131nda ise fincan\u0131 \xE7epe\xE7evre
+    saran ve araya giren onca olaya, belki de aradan ge\xE7en onca zamana ra\u011Fmen
+    kopmam\u0131\u015F bir \"iplik\" mevcut. \U0001F9F6{{kelime, Gelecek haftan\u0131n
+    son g\xFCnleri i\xE7erisinde | 2 hafta i\xE7erisinde | 3 hafta gibi bir zaman
+    zarf\u0131nda}} kendisiyle kar\u015F\u0131la\u015Facak, sonras\u0131nda ise {{kelime,
+    yaz\u0131l\u0131 bir \u015Fekilde haberle\u015Fmeye | ara ara bulu\u015Fup g\xF6r\xFC\u015Fmeye
+    | telefonla haberle\u015Fmeye}} ba\u015Flayacaks\u0131n. Hayat, kendisi istemedik\xE7e
+    kimi ba\u011Flar\u0131n kopmas\u0131na asla izin vermiyor {{isim}}; i\u015Fte
+    tam da b\xF6yle..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

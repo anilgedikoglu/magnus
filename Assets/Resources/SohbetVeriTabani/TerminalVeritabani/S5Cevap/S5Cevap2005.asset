@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: S5Cevap2005
+  m_EditorClassIdentifier: 
+  etiket: dogc
+  aciklama:
+  - "2005 y\u0131l\u0131 m\u0131? Of off...\r\nO y\u0131l \xE7ok sevdi\u011Fim m\xFCzisyen
+    Kaz\u0131m Koyuncu vefat etmi\u015Fti. Nurlar i\xE7inde yats\u0131n."
+  - "2005 y\u0131l\u0131 m\u0131?\r\nY\u0131ld\u0131z Sava\u015Flar\u0131 serisinin
+    son b\xF6l\xFCm\xFC o y\u0131l g\xF6sterime girmi\u015Fti. Hi\xE7bir zaman delisi
+    olmad\u0131m, o ayr\u0131. Ben kesinlikle daha teknoloji\u011Fim!"
+  - "2005 dedin de\u011Fil mi?\r\nVideo payla\u015F\u0131m sitesi YouTube o y\u0131l
+    kurulmu\u015Ftu. Ben do\u011Fdu\u011Fumda internet bile yoktu. Hey gidi heyy!"
+  - "2005 y\u0131l\u0131 \xF6yle mi?\r\nAfyon ilinin ad\u0131 o y\u0131l Afyonkarahisar
+    olarak de\u011Fi\u015Ftirilmi\u015Fti. Bir bilgi olarak burada dursun; zarar
+    gelmez..."
+  - "2005 ha?\r\nT\xFCrk liras\u0131'ndan o y\u0131l 6 s\u0131f\u0131r at\u0131lm\u0131\u015Ft\u0131.
+    Eski hali bol milyonluydu, sen elbette hat\u0131rlamazs\u0131n..."
+  aranacakEtiket: konum izin
+  gerekenDegiskenler:
+  - degiskenAdi: dogum yili
+    degiskenDegeri: 2005
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

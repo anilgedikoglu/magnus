@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupasekizlisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA54089846153
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 4405b34baea15bb4caa1461dee5bbd82, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 4405b34baea15bb4caa1461dee5bbd82, type: 3}
+  contentPhotoId: kupasekizlisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Kupa Sekizlisi\" kart\u0131n\u0131 se\xE7tin {{isim}}.\n\nBir
+    noktaya kadar \xFCst \xFCste ba\u015Far\u0131lar elde edeceksin. Neredeyse elini
+    atmad\u0131\u011F\u0131n hi\xE7bir mesele, hayal edip, kafana koyup ger\xE7ekle\u015Ftirmedi\u011Fin
+    hi\xE7bir konu ba\u015Fl\u0131\u011F\u0131 kalmayacak. Fakat o noktadan sonra
+    her \u015Feyin sana s\u0131radan gelece\u011Fini ve sahip olduklar\u0131ndan
+    uzakla\u015Fmak isteyece\u011Fini d\xFC\u015F\xFCn\xFCyorum. Se\xE7ti\u011Fin
+    kart, Ferrari'sini sanat bilge gibi ka\xE7\u0131p gitmeye meyil edece\u011Fini
+    s\xF6yl\xFCyor. Huzuru farkl\u0131 bir tandansta, farkl\u0131 kaynaklarda aramak
+    isteyeceksin. Uzun s\xFCrebilecek bir ya da birka\xE7 yolculuk var \xF6n\xFCnde.
+    Sevdi\u011Fin \u015Feylerin yaln\u0131zca birka\xE7\u0131n\u0131 yan\u0131nda
+    g\xF6recek ve yeni maceralara yelken a\xE7acaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kupasekizlisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

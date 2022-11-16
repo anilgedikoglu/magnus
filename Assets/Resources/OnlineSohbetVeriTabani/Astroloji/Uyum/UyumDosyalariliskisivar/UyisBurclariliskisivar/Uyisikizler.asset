@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Uyisikizler
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA94830239040
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Ah
+    ikizler ahh! \u0130kizler burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131 |
+    cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, mensuplar\u0131}} al\u0131ml\u0131,
+    ak\u0131ll\u0131 ve macerac\u0131lard\u0131r. Onlar\u0131n derin ve \xF6zellikli
+    ruhlar\u0131n\u0131 sezmek, sende oldu\u011Fu gibi imkanlar\u0131 dar i\u015F
+    ortamlar\u0131nda bile m\xFCmk\xFCnd\xFCr {{isim}}. Ondaki \xF6zg\xFCr ruh ve
+    ya\u015Faman\u0131z m\xFCmk\xFCn mutluluklar, bir ili\u015Fkin olmas\u0131na
+    ra\u011Fmen akl\u0131n\u0131 \xE7eliyor olabilir; \xE7\xFCnk\xFC \xE7ok uyumlu
+    g\xF6z\xFCk\xFCyorsunuz. Yaln\u0131z \u015Fu konuda uyaray\u0131m; ona evcimen
+    bir ruhla yakla\u015Famazs\u0131n. \xD6n\xFCne yeni a\xE7\u0131l\u0131mlar sermeli,
+    ona yeni umutlar vermeli ve s\u0131rad\u0131\u015F\u0131 bir hayat sunaca\u011F\u0131n
+    izlenimini yaratmal\u0131s\u0131n. \u0130kizler burcunun {{burc}} burcu {{data,
+    cinsiyet=erkek, kad\u0131nlar\u0131ndan | cinsiyet=kad\u0131n, erkeklerinden
+    | cinsiyet=lgbt, ki\u015Filerden en \xF6nemli fark\u0131 ise \u015Fudur; \xE7ok
+    \xE7abuk depresyona girerler. Onunla derdini ve kederini payla\u015Fman demek,
+    kendini ondan uzakla\u015Ft\u0131rman demek olabilir {{isim}}. Her konuya olumlu
+    yanlar\u0131ndan bak\u0131yormu\u015F gibi g\xF6z\xFCkmen yarar\u0131na olur.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: ikizler
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

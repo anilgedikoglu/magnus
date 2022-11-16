@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimkralicesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA45203153135
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 8c0f51a75af530b49adc110817623b4b, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 8c0f51a75af530b49adc110817623b4b, type: 3}
+  contentPhotoId: tilsimkralicesi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"T\u0131ls\u0131m Krali\xE7esi\" kart\u0131n\u0131
+    se\xE7tin.\n\nOrtaya koydu\u011Fun \xE7aba ve etti\u011Fin dualar, seni her konuda
+    zirveye \xE7ok yakla\u015Ft\u0131rm\u0131\u015F {{isim}}. Hay\u0131rl\u0131 olmayanlar
+    hari\xE7, pek \xE7ok \u015Fey g\xF6nl\xFCne g\xF6re olmu\u015F. Tarafs\u0131z
+    de\u011Ferlendirmek gerekirse, bug\xFCne dek olduk\xE7a huzurlu ve verimli bir
+    ya\u015Fam s\xFCrd\xFC\u011F\xFCn\xFC s\xF6ylemek m\xFCmk\xFCn. Maddi kaynaklar\u0131n\u0131
+    ve enerjini do\u011Fru yerlere kanalize etmi\u015F ve ak\u0131ll\u0131ca davranm\u0131\u015Fs\u0131n.
+    \u0130nsanlarla olan ba\u015Far\u0131l\u0131 ileti\u015Fimin ve yapt\u0131\u011F\u0131n
+    g\xFCzel i\u015Fler, karizman\u0131n ve prestijinin artmas\u0131n\u0131 sa\u011Flam\u0131\u015F.
+    Gelece\u011Fini g\xFCvence alt\u0131na alabilmek i\xE7in hi\xE7bir a\xE7\u0131k
+    kap\u0131 b\u0131rakmam\u0131\u015F, sorun yaratabilecek herkese g\xF6nl\xFCn\xFC
+    kitlemi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis tilsimkralicesi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

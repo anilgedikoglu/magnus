@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 14
+  m_EditorClassIdentifier: 
+  idIndex: 20224103044AA90782732284
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bir m\xFChendis d\xFC\u015F\xFCn. Bu ki\u015Fi d\xFCnya devi firmalardan birinde,
+    iyi bir maa\u015Fa \xE7al\u0131\u015F\u0131yor. Evli, \xE7ocuklar\u0131 var.
+    Ailesi sa\u011Fl\u0131kl\u0131. Bug\xFCn nedense bi karamsar, bi mutsuz, bi huzursuz;
+    y\xFCz\xFC asla g\xFClm\xFCyor... Sebebi acaba arabas\u0131n\u0131n sol \xF6n
+    tekerini sabah hafif inik g\xF6rmesi mi? Birka\xE7 g\xFCn sonraya yeti\u015Ftirmesi
+    gereken i\u015Fleri mi? Hen\xFCz \xF6demedi\u011Fi ve tahmininden y\xFCksek gelen
+    birka\xE7 fatura m\u0131?\n\n\u015Eimdi tekrar d\xFC\u015F\xFCn; o ki\u015Fi
+    \u015Fu an 15 ya\u015F\u0131nda olsayd\u0131... Biri ona \xFCniversitede nereyi
+    kazanaca\u011F\u0131n\u0131 s\xF6yleseydi, mutlu olmaz m\u0131yd\u0131? Ne zaman
+    mezun olaca\u011F\u0131n\u0131, ne zaman i\u015F bulaca\u011F\u0131n\u0131, ne
+    zaman evlenece\u011Fini, ka\xE7 \xE7ocu\u011Fu olaca\u011F\u0131n\u0131 s\xF6yleseydi;
+    bug\xFCn\xFCn\xFC sihirli bir k\xFCrede g\xF6rebilseydi mutlu olmaz m\u0131yd\u0131?
+    \u015Eimdi neden mutlu de\u011Fil? \xC7\xFCnk\xFC mutluluklar \xF6z\xFCmsenip
+    t\xFCketiliyor. En g\xFCzel \u015Feyler bile bir s\xFCre sonra insana \"normal\"
+    geliyor ve bu normal geli\u015Fin bir sonu yok. Her \u015Feyi t\xFCketiyoruz,
+    hem de her \u015Feyi...\n\nB\xF6yle zamanlarda eski g\xFCnlerine d\xF6n. Bug\xFCnlerine
+    ne zorluklarla geldi\u011Fini hat\u0131rla {{isim}}. Eskiden olmayan ve bug\xFCn
+    sahip oldu\u011Fun \u015Feyleri hat\u0131rla. Ruhunun \xFCst\xFCn\xFC kire\xE7
+    gibi kaplayan o mutsuzlu\u011Fu k\u0131r ve ge\xE7mi\u015Fin hakl\u0131 gururuyla
+    ba\u015F\u0131n\u0131 g\xFCne\u015Fe, gelece\u011Fe \xE7evir!"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: motivasyon
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme465
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA37834478507
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xD6n\xFCnde uzunlu k\u0131sal\u0131 yollar g\xF6r\xFCyorum {{isim}}. Bu yollar\u0131n
+    hepsinin ard\u0131 ayd\u0131nl\u0131k, bunu sen de g\xF6r\xFCyorsun. Fakat nedense
+    tam o ayr\u0131mda, \xF6ylece bekliyorsun. Hangisini se\xE7ece\u011Fini sorgulamak
+    yerine, nelerden vazge\xE7ece\u011Fini d\xFC\u015F\xFCn\xFCyor gibisin... \U0001F928
+    Sana bu konuda yard\u0131mc\u0131 olmak isterim. Bir {{sabit_harf}} harfi var
+    yollar\u0131n birinde. Bu {{sabit_harf}} harfi bir ki\u015Finin, bir kurumun,
+    varaca\u011F\u0131n bir ilin ad\u0131n\u0131n i\xE7inde olabilir. Onu se\xE7.
+    Senin i\xE7in en hay\u0131rl\u0131 olan\u0131n, bu olaca\u011F\u0131n\u0131 f\u0131s\u0131ld\u0131yor
+    telvelerin.\n\nAnne babandan bir nesil daha \xFCstte, \u015Fu an 80'li ya\u015Flar\u0131na
+    yakla\u015Fm\u0131\u015F ya da yeni ge\xE7mi\u015F bir kad\u0131n g\xF6r\xFCyorum.
+    Sa\xE7lar\u0131 k\u0131sa olsa gerek ki, \xFCstten kolayl\u0131kla \xF6rt\xFCp
+    ba\u011Flam\u0131\u015F. A\u011Fz\u0131nda baz\u0131 sorunlar var bu ki\u015Finin,
+    belki damak sorunu, belki di\u015F a\u011Fr\u0131s\u0131, ya da belki duydu\u011Fu
+    baz\u0131 s\xF6zlerden sonra y\xFCre\u011Finde ac\u0131 bir \"dil\" yaras\u0131;
+    her neyse, konu bu de\u011Fil. Mesele \u015Fu ki, bu ki\u015Fi, sen ona s\xF6ylemesen
+    de, senin bir dile\u011Fine \"vak\u0131f\". Ne istedi\u011Fini biliyor ve senin
+    ad\u0131na dua ediyor. \U0001F64FEllerinin \xF6zellikle d\u0131\u015F k\u0131sm\u0131
+    buru\u015F buru\u015F olan bu ki\u015Finin duas\u0131 {{kelime, bir seneye kalmadan
+    | iki seneyi bulmadan | \xFC\xE7 seneyi ge\xE7meden | d\xF6rt seneyi a\u015Fmadan
+    | y\u0131l seneyi devirmeden}} kabul olacak {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

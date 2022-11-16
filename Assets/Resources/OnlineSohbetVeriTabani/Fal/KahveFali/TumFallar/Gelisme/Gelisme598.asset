@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme598
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA46696980514
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xDCzerinde, kalabal\u0131k bir ortam i\xE7erisinde seni yandan yandan hayranl\u0131kla
+    s\xFCzen birinin bak\u0131\u015Flar\u0131n\u0131n \"izi\" kalm\u0131\u015F {{isim}}.
+    \xC7ok be\u011Fenilmi\u015F, bir anda sen de be\u011Fenmi\u015F fakat o ki\u015Fi
+    ile tek kelime konu\u015Fma f\u0131rsat\u0131 yakalayamam\u0131\u015Fs\u0131n.
+    Bu ki\u015Fiyle sosyal medya \xFCzerinden takiple\u015Fiyor musunuz? Yapm\u0131yorsan\u0131z,
+    yak\u0131nda bu olacak. Bak; bug\xFCn g\xFCnlerden neydi? {{gun_0}}. Tam 13 g\xFCn
+    sonra {{gun_-1}} g\xFCn\xFC o ki\u015Fiden bir i\u015Faret alacaks\u0131n. Kar\u015F\u0131l\u0131k
+    vermez ya da harekete ge\xE7mezsen, \xE7ok afedersin ama \u015Fa\u015Fkolozluk
+    edersin! <sprite=0>\n\nTelvelerinde, \u015Faha kalkm\u0131\u015F bir de \"at\"
+    g\xF6r\xFCyorum. \U0001F3C7\u015Eu an a\u015Fk hayat\u0131n\u0131n durgunlu\u011Fundan
+    yak\u0131n\u0131yorsun, \xF6yle de\u011Fil mi? Gelecek aylarda sorar\u0131m sana!
+    Fincan\u0131na yans\u0131yan bu at, ba\u015Flad\u0131ktan sonra h\u0131z\u0131
+    giderek artan ve y\xFCksek \u015Fekilde ivmelenen bir beraberli\u011Fi simgeler.
+    Senin evlenmek i\xE7in 30'lar\u0131n\u0131 bekleyece\u011Fini hi\xE7 sanm\u0131yorum
+    ben {{isim}}, a\xE7\u0131k s\xF6yleyeyim..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme637
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA09528674570
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n orta k\u0131s\u0131mlar\u0131nda kiremitlerle \xF6r\xFClm\xFC\u015F
+    fakat \xFCst\xFC s\u0131vanmam\u0131\u015F, eski bir duvar var. Tamamlanamadan
+    y\u0131k\u0131k d\xF6k\xFCk bir hale gelmi\u015F bu duvar\u0131n baz\u0131 yerlerinde
+    biten yabani otlar bile g\xF6r\xFCyorum. Kar\u015F\u0131na \xE7\u0131kan engeller,
+    ruh sa\u011Fl\u0131\u011F\u0131n\u0131 olumsuz y\xF6nde etkiliyor gibi g\xF6z\xFCk\xFCyor.
+    Tamamlayamad\u0131\u011F\u0131n i\u015Flerin ve hen\xFCz eri\u015Femedi\u011Fin
+    hayallerin, ilerleme g\xFCc\xFCn\xFC bloke etmi\u015F {{isim}}. Neyse ki kal\u0131c\u0131
+    bir buhran\u0131n i\xE7erisinde de\u011Filsin.\n\nTelvelerin, hayat\u0131n sana
+    g\xF6re farkl\u0131 bir yerinde duran ve kim oldu\u011Funu pek de tahmin edemeyece\u011Fin
+    birinden baz\u0131 yard\u0131mlar g\xF6rece\u011Fini i\u015Faret ediyor. Ad\u0131nda
+    {{harf}} harfi olan bu ki\u015Fi, \xF6n\xFCnde duran bu duvar\u0131n kalkmas\u0131na
+    \xF6n ayak olacak. Gelece\u011Fine bakt\u0131\u011F\u0131mda, umutsuzlu\u011Fa
+    hi\xE7 yer olmad\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum {{isim}}. Dara d\xFC\u015Ft\xFC\u011F\xFCnde
+    yeti\u015Fecek olan eller, her k\xF6\u015Fe ba\u015F\u0131nda haz\u0131r bekliyor
+    seni."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Deli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA51674499683
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: dff42594630547d4d92bb24cd859a26d, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: dff42594630547d4d92bb24cd859a26d, type: 3}
+  contentPhotoId: Budala-Deli
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Deli\" kart\u0131n\u0131 se\xE7tin.\n\nDe\u011Ferli {{isim}},
+    kart\u0131n \u015Fu son zamanlarda bir hayli pozitif ve yarat\u0131c\u0131 oldu\u011Funu
+    s\xF6yl\xFCyor. Do\u011Fall\u0131\u011F\u0131n ve i\xE7tenli\u011Fin insanlar\u0131
+    cezbediyor. Etraf\u0131ndaki g\xF6zler sana imrenerek ve g\u0131ptayla bakt\u0131klar\u0131
+    i\xE7in de, \u015Fans enerjisini b\xFCt\xFCn\xFCyle \xFCzerine \xE7ekiyorsun.
+    Neye el atsan i\u015Flerinin yaver gitti\u011Fini g\xF6r\xFCyorum. Kafanda mevcut
+    oldu\u011Funu hissetti\u011Fim birtak\u0131m endi\u015Felerin ise \xE7o\u011Funlukla
+    yersiz. Bu endi\u015Feler seni g\xFCvenli sularda y\xFCzmeye sevk ediyor. Asl\u0131nda
+    \xE7ok de\u011Ferli bir d\xF6nemdesin {{isim}}. Ne istesen elde edebilecek bir
+    auran var. Risk almal\u0131 ve alt\u0131nc\u0131 hislerine g\xFCvenmelisin. Art\u0131k
+    kalbini dinlemekten de \xE7ekinme bence."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi budala deli
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

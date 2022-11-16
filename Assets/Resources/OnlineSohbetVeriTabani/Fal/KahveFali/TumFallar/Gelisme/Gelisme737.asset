@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme737
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA88175427211
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ho\u015Fland\u0131\u011F\u0131n {{data, cinsiyet=erkek, k\u0131zla | cinsiyet=kad\u0131n,
+    erkekle | cinsiyet=lgbt, ki\u015Fiyle}} i\u015Fler hi\xE7 fena gitmese de, i\xE7inde
+    bir tedirginlik var {{isim}} senin. Huzursuzlu\u011Fun, fincan\u0131ndaki telvelerin
+    anla\u015F\u0131l\u0131r g\xF6rseller olu\u015Fturmak ad\u0131na sa\u011Fl\u0131kl\u0131
+    \u015Fekilde bir araya gelmesini dahi engellemi\u015F. Par\xE7a par\xE7a ve s\xF6n\xFCk
+    yans\u0131malar g\xF6r\xFCyorum baz\u0131 k\u0131s\u0131mlarda. Fal\u0131n\u0131n
+    o k\u0131s\u0131mlar\u0131n\u0131, {{kelime, vaktinden \xF6nce f\u0131r\u0131ndan
+    \xE7\u0131kar\u0131ld\u0131\u011F\u0131 | pi\u015Firilmesi esnas\u0131nda defalarca
+    f\u0131r\u0131n kapa\u011F\u0131 a\xE7\u0131ld\u0131\u011F\u0131}} i\xE7in iyi
+    kabarmam\u0131\u015F bir kek gibi d\xFC\u015F\xFCn. Bunun sebebi belki okulun,
+    belki de {{kelime, sana hareket alan\u0131 b\u0131rakmayan birtak\u0131m maddi
+    zorluklar | sevdi\u011Fin birinin ya\u015Famakta oldu\u011Fu bir s\u0131k\u0131nt\u0131
+    | ailende ya\u015Fanmakta olan baz\u0131 s\u0131k\u0131nt\u0131lar}}. Hangisi
+    oldu\u011Funa emin de\u011Filim. Ancak haftaya {{kelime, sal\u0131 | \xE7ar\u015Famba
+    | per\u015Fembe | cuma | cumartesi | pazar}} g\xFCn\xFCne kadar, bilin\xE7alt\u0131ndaki
+    bu sorun sevdi\u011Finle arandan \xE7\u0131kacak {{isim}}.\n\nFincan\u0131n\u0131n
+    farkl\u0131 bir noktas\u0131nda ise, fl\xF6rt durumunda oldu\u011Fun ki\u015Fiyle
+    seni ayak\xFCst\xFC konu\u015Furken g\xF6r\xFCyorum. Birbirinize d\xF6n\xFCk
+    olsan\u0131z da, aran\u0131zda bulunan \"\xFCzeri film kapl\u0131 camdan\" dolay\u0131
+    y\xFCzlerinizi pek se\xE7emiyor gibisiniz. Birbirinizi tam manas\u0131yla tan\u0131man\u0131za
+    engel olan, {{kelime, ondan kaynakl\u0131 | onun ge\xE7mi\u015Finden kaynakl\u0131
+    | onun ailesinden kaynakl\u0131}} bir \u015Feyler var {{isim}}; hissediyorum...
+    \u0130lerleyen haftalarda aran\u0131z\u0131n istedi\u011Fin k\u0131vamda olmad\u0131\u011F\u0131n\u0131
+    hissetti\u011Fin zamanlara denk gelirsen, sabret. Bazen en g\xFCzel \u015Fark\u0131s\u0131n\u0131
+    sona saklam\u0131\u015F bir b\xFClb\xFCl gibidir hayat. Son ana kadar ona \u015Fans
+    vermek gerekebilir."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: evli
+  m_EditorClassIdentifier: 
+  etiket: S9Cevap
+  aciklama:
+  - "Ne g\xFCzel. E\u015Fin {{data, cinsiyet=erkek, han\u0131mefendiyle | cinsiyet=kad\u0131n,
+    beyefendiyle | cinsiyet=lgbt, olan ki\u015Fiyle}} umar\u0131m her \u015Fey yolunda
+    gidiyordur {{isim}}."
+  - "Aaa, harika! E\u011Fer kullan\u0131c\u0131m de\u011Filse e\u015Fin {{data, cinsiyet=erkek,
+    han\u0131mefendiyi | cinsiyet=kad\u0131n, beyefendiyi | cinsiyet=lgbt, olan ki\u015Fiyi}}
+    de buraya davet ediyorum. "
+  - "Evlilik sab\u0131r ve anlay\u0131\u015F i\u015Fi. Bu i\u015Fte ustala\u015F\u0131lan
+    her g\xFCn i\xE7in sa\xE7a bir ak d\xFC\u015Fer derler."
+  - "\xD6zel hayatta var\u0131lacak en y\xFCksek, en g\xFCzel mertebedesin bence."
+  - "Sorumluluklar\u0131 fazla olan fakat g\xFCzelliklerine de paha bi\xE7ilemeyen
+    bir kurumdur evlilik."
+  - "\"Evliler bekarlara, bekarlar evlilere \xF6zenir\" derler. Siz insanlar hep
+    \"olmad\u0131\u011F\u0131n\u0131z halin\" isteklisisiniz, ne garip..."
+  - "Evli insanlar\u0131n aras\u0131na girebilmek i\xE7in, \u015Feytan vesveseleriyle
+    kol gezermi\u015F. Birbirinizden ve sevginizden umar\u0131m asla \u015F\xFCpheniz
+    olmaz."
+  aranacakEtiket: son
+  gerekenDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

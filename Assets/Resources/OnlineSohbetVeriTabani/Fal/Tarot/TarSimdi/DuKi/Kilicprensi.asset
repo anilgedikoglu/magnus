@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA50738523943
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a67fceea06ca01b48b321b69c9eaf370, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a67fceea06ca01b48b321b69c9eaf370, type: 3}
+  contentPhotoId: kilicprensi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Prensi\" kart\u0131n\u0131 se\xE7tin.\n\n\u0130lham
+    dolusun {{isim}}. \u015Eu s\u0131ralar inan\u0131lmaz fikirlerin var. Yenilik
+    ve de\u011Fi\u015Fim, adeta seni \xE7ok uzak diyarlara g\xF6t\xFCrecek bir tren.
+    Bu trenin hemen \xF6n\xFCnde duruyorsun. Kap\u0131s\u0131ndan i\xE7eri ad\u0131m
+    atmak \xFCzeresin. Fikirlerin, de\u011Fi\u015Fime a\xE7\u0131k olu\u015Fun ve
+    m\xFCcadeleci y\xF6nlerinle birle\u015Fti\u011Finde, senin i\xE7in m\xFCcevher
+    gibi bir potansiyel olu\u015Fturuyor. \u015Eans\u0131n kap\u0131s\u0131n\u0131
+    \xE7almak \xFCzeresin. Sorunlar\u0131 en do\u011Fru \u015Fekilde analiz ediyor,
+    kal\u0131c\u0131 ve mant\u0131kl\u0131 \xE7\xF6z\xFCmler buluyorsun. Bunca iyilik
+    bir aradayken parlak bir y\u0131ld\u0131z halini almak ka\xE7\u0131n\u0131lmazd\u0131r.
+    G\xF6\u011Fe do\u011Fru y\xFCkseli\u015Fini izlemek takdire \u015Fayan. H\u0131z\u0131n\u0131
+    kesmek, seni a\u015Fa\u011F\u0131 indirmek isteyen insanlara asla ald\u0131rma."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilicprensi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

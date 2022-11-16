@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Seytan
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA38112780033
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 99bce2467bab21644bf922448836eb46, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 99bce2467bab21644bf922448836eb46, type: 3}
+  contentPhotoId: seytan
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"\u015Eeytan\" kart\u0131n\u0131 se\xE7tin.\n\n\u0130lgi alan\u0131n\u0131n,
+    be\u011Fenilerinin ya da \xE7evrendeki insanlar\u0131n baz\u0131lar\u0131n\u0131n
+    de\u011Fi\u015Fece\u011Fini g\xF6r\xFCyorum. Se\xE7ti\u011Fin bu kart, sayd\u0131\u011F\u0131m
+    \u015Feylerin birine kar\u015F\u0131 a\u015F\u0131r\u0131 ilgi ve tutku geli\u015Ftirece\u011Fini
+    i\u015Faret ediyor. O \u015Fey her ne ise, onda \u015Feytan t\xFCy\xFC olacak.
+    Onsuz yapamayacak, o \u015Feyle, ki bu bir insan da olabilir, vaktinin \xE7o\u011Funu
+    harcayacaks\u0131n. Sana pek faydas\u0131 olabilece\u011Fini de d\xFC\u015F\xFCnm\xFCyorum
+    {{isim}}. Odaklanaca\u011F\u0131n bu \u015Feyin d\u0131\u015F\u0131nda kalan
+    konularda ise geriye d\xFC\u015Febilirsin. Paran\u0131n da zaman\u0131n\u0131n
+    da ne kadar k\u0131ymetli oldu\u011Funu anlaman kolay olmayacak. Kolay olan\u0131n
+    ya da tatl\u0131 olan\u0131n seni cezbedece\u011Fini hissediyorum."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek seytan
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

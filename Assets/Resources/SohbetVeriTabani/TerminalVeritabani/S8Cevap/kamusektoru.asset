@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: kamusektoru
+  m_EditorClassIdentifier: 
+  etiket: S8Cevap
+  aciklama:
+  - "Devlet memuru olmak d\u0131\u015Far\u0131dan \"ideal\" gibi dursa da, \xE7ok
+    yorucu oldu\u011Funu tahmin ediyorum. "
+  - "Eminim \xF6nemli ve toplum i\xE7in \xE7ok de\u011Ferli bir pozisyondas\u0131nd\u0131r."
+  - "Devlet memurlu\u011Funu rahat san\u0131rlar ama atanmas\u0131, mecburi hizmeti,
+    sonras\u0131nda tayini. Zor i\u015F..."
+  - "Topluma hizmet etmek bence fevkalade sayg\u0131n bir i\u015F."
+  aranacakEtiket: medeni
+  gerekenDegiskenler:
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

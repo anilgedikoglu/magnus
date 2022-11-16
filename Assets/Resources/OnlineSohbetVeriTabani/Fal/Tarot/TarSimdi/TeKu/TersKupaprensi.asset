@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKupaprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA53823271860
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 04ed768db0c9a6740a0f43f918ea5340, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 04ed768db0c9a6740a0f43f918ea5340, type: 3}
+  contentPhotoId: kupaprensi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kupa Prensi\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nBir
+    \xE7ocuksu, bir melankolik haller var \xFCzerinde. Hay\u0131rd\u0131r in\u015Fallah
+    {{isim}}, neden b\xF6ylesin? Kart\u0131n, dalg\u0131nl\u0131\u011F\u0131ndan
+    ve sorumsuzlu\u011Fundan \u015Fikayet ediyor. Her \u015Feyi bir sonraki zamana
+    erteleyip duruyorsun. Peki \u015Fu anda neyin zaman\u0131? Bu halet-i ruhiye
+    i\xE7in iyi bir zamanlama de\u011Fil, emin ol. Yapman gereken \xE7ok kritik \u015Feyler
+    var. Gelecekte sonu\xE7lar\u0131yla y\xFCz y\xFCze gelece\u011Fin baz\u0131 sebeplerle
+    kar\u015F\u0131la\u015F\u0131yorsun. Do\u011Fru hamleleri yapmak ve hayata as\u0131lmak
+    varken, \xF6n\xFCne gelen f\u0131rsatlar\u0131 ka\xE7\u0131rman hi\xE7 iyi olmuyor.
+    Hayat\u0131n\u0131n de\u011Fi\u015Fmesini beklemen bo\u015Fa olur. Bu evrende
+    de\u011Fi\u015Febilecek tek \u015Fey sensin; de\u011Fi\u015Fim senle ba\u015Flar."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kupaprensi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

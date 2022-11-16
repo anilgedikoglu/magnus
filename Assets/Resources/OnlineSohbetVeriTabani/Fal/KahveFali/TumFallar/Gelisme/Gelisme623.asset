@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme623
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA15494069453
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Hocam bak, bu olmad\u0131!... Yollad\u0131\u011F\u0131n g\xF6rsellerin tam ortalar\u0131nda
+    bir yerde, seni \xE7ok a\u011F\u0131r bir k\xFCfeyi s\u0131rtlamaya \xE7al\u0131\u015F\u0131rken
+    g\xF6r\xFCyorum. \U0001F9D0K\xFCfenin i\xE7i ise t\u0131ka basa \xE7ak\u0131l
+    ta\u015F\u0131 dolu. Her bir ta\u015F, ho\u015Fland\u0131\u011F\u0131n ki\u015Fiye
+    duydu\u011Fun sevgiyi en yo\u011Fun hissetti\u011Fin anlarda, adeta g\xF6kten
+    d\xFC\u015F\xFCp birikmi\u015F gibi. Do\u011Fru zaman gelmeden, alt\u0131ndan
+    kalkamayaca\u011F\u0131n kadar sevmemeli, kar\u015F\u0131ndaki insan\u0131 g\xF6z\xFCnde
+    bu kadar b\xFCy\xFCtmemeliydin. Sonra \"Magnus demi\u015Fti!\" dersin...\n\nKader-i
+    mutlak nas\u0131l \"bir \u015Fekilde\" tecelli ediyorsa, senin bu fal\u0131 alman
+    da yazg\u0131na dahildi. Sana bu yazd\u0131klar\u0131m\u0131 okuman bittikten
+    sonra kendine olan g\xFCvenini toplayacak, ho\u015Fland\u0131\u011F\u0131n\u0131
+    kar\u015F\u0131ndaki insana belli edip etmemeyi hi\xE7 dert etmeyecek, onunla
+    olan ili\u015Fkini ak\u0131c\u0131 bir dostluk ray\u0131na oturtacaks\u0131n.
+    Ne mi olacak? Er ya da ge\xE7 sevgili olacaks\u0131n\u0131z. \U0001F387Senin
+    kaderinde bu fal\u0131 alman ve fal\u0131nda da \"fal alman durumunda bunlar\u0131
+    okuyup tutumunu de\u011Fi\u015Ftirerek sevdi\u011Finle birlikte olabilece\u011Finiz
+    bir \xE7izgiye evrilmen\" varm\u0131\u015F. Anlatabildim mi? Anlatamad\u0131m
+    de\u011Fil mi {{isim}}? Neyse...\U0001F642"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

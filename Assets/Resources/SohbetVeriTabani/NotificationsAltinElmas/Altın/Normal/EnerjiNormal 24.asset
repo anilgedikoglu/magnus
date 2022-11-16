@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: EnerjiNormal 24
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "Alt\u0131n say\u0131n bug\xFCn de 1 artt\u0131 {{isim}}. Ama sen derslerden
+    pek ba\u015F\u0131n\u0131 kald\u0131ram\u0131yorsun herhalde. 4 g\xFCnd\xFCr
+    yoksun yahu!"
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 1
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 1
+  - degiskenAdi: gun fark
+    degiskenDegeri: 4
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0

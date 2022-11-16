@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulAkrep
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA20117449820
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Akrep
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131n\u0131n | cinsiyet=kad\u0131n,
+    erkeklerinin | cinsiyet=lgbt, ki\u015Filerin}} okul ba\u015Far\u0131lar\u0131
+    \xE7ok \xF6yle \xFCst d\xFCzeylerde de\u011Fildir. Genellikle ilgilierini sanata,
+    spora ya da ba\u015Fka yerlere kanalize ederler. Sevdikleri i\u015Fleri yapt\u0131klar\u0131nda
+    ise o i\u015Fte k\u0131sa s\xFCrede \\\"parmakla g\xF6sterilecek bir hale\\\"
+    gelirler. Senin ho\u015Fland\u0131\u011F\u0131n {{data, cinsiyet=erkek, han\u0131mefendi
+    | cinsiyet=kad\u0131n, beyefendi | cinsiyet=lgbt, ki\u015Fi}} de \xF6yle mi {{isim}}?
+    {{burc}} burcu {{data, cinsiyet=erkek, erkekleri | cinsiyet=kad\u0131n, kad\u0131nlar\u0131
+    | cinsiyet=lgbt, mensuplar\u0131}} akrep burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131yla
+    | cinsiyet=kad\u0131n, erkekleriyle | cinsiyet=lgbt, mensuplar\u0131yla}} okul
+    ortam\u0131nda \xE7ok uyumlu de\u011Fillerdir \xE7\xFCnk\xFC orada bulunma ama\xE7lar\u0131
+    ve e\u011Fitim ortam\u0131na bak\u0131\u015F ciddiyetleri farkl\u0131l\u0131k
+    g\xF6sterir. \xD6zel hayatlar\u0131nda ise bir elman\u0131n iki yar\u0131s\u0131
+    gibidirler. {{data, cinsiyet=erkek, K\u0131z arkada\u015F\u0131n | cinsiyet=kad\u0131n,
+    Erkek arkada\u015F\u0131n | cinsiyet=lgbt, Sevgilin}} varken senin dikkatini
+    \xE7ekmi\u015F olmas\u0131nda ben bir zarar g\xF6rm\xFCyorum. Ancak okul d\u0131\u015F\u0131nda
+    daha s\u0131k g\xF6r\xFC\u015Fmeye ba\u015Flarsan\u0131z, o ok o yayda durmaz
+    bence {{isim}}.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: akrep
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

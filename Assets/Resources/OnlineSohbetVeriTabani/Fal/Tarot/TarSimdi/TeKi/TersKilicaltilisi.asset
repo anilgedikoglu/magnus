@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicaltilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA98549416069
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 9dae354b9968d0a4aac12e14cab08107, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 9dae354b9968d0a4aac12e14cab08107, type: 3}
+  contentPhotoId: kilicaltilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Alt\u0131l\u0131s\u0131\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nBa\u015Far\u0131s\u0131zl\u0131klar\u0131n\u0131 ve kay\u0131plar\u0131n\u0131
+    kolay kabullenebilen biri de\u011Filsin. Baz\u0131 zamanlarda bu reddedi\u015F
+    ve mutsuzluk, sende daha \xE7ok ortaya \xE7\u0131k\u0131yor {{isim}}. Yine \xF6yle
+    bir d\xF6nemden ge\xE7ti\u011Fini s\xF6yl\xFCyor kart\u0131n. Hayat seni pek
+    \xE7ok badire ile belli bir noktaya getirmi\u015F. T\xF6rp\xFClenerek, ac\u0131larla,
+    sanc\u0131larla \u015Fekillenmi\u015Fsin. Kaybetti\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCn
+    \u015Feylere \u015Fu anki \u015Feklini ve ki\u015Fili\u011Fini bor\xE7lu olsan
+    da, i\xE7in pi\u015Fmanl\u0131klarla dolu g\xF6z\xFCk\xFCyor. Art\u0131k eskiye
+    s\u0131rt\u0131n\u0131 d\xF6nme zaman\u0131. \u015Eimdiyi ve gelece\u011Fi kaybetmemek
+    i\xE7in, ge\xE7mi\u015Fle olan t\xFCm ba\u011Flar\u0131n\u0131 koparmal\u0131s\u0131n.
+    Kendin i\xE7in yararl\u0131 olan yollar\u0131 se\xE7ip, o istikamette y\xFCr\xFCmelisin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilicaltilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKadercarki
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA10421445342
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 701a9d311413d344aa0092e367cc7d29, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 701a9d311413d344aa0092e367cc7d29, type: 3}
+  contentPhotoId: kadercarki-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Kader \xC7ark\u0131\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nGe\xE7mi\u015Fte alamad\u0131\u011F\u0131n virajlar, \"dur\" diyemedi\u011Fin
+    k\xF6t\xFCye gidi\u015Fler olmu\u015F. Sen her zorlukta \xE7\u0131k\u0131\u015Fa
+    do\u011Fru ko\u015Fmu\u015Fsun fakat kader yollar\u0131n\u0131 tekrar tekrar
+    kapatm\u0131\u015F. Yeni ba\u015Flang\u0131\xE7lar ya gecikmi\u015F ya da iptal
+    olmu\u015F. S\xFCreci devam eden i\u015Flerin yoku\u015Flara tak\u0131lm\u0131\u015F.
+    Ne yapaca\u011F\u0131n\u0131, nas\u0131l yapaca\u011F\u0131n\u0131 bilememi\u015F,
+    sorunlar\u0131n \xFCstesinden bir anda gelememi\u015Fsin {{isim}}. Mevcut hi\xE7bir
+    istikamet sana \xFCmit vadetmedi\u011Finde, kendine yeni yollar a\xE7maya \xE7al\u0131\u015Fm\u0131\u015F,
+    daha \xF6nce g\xF6r\xFClmemi\u015F \xE7\xF6z\xFCmler \xFCretmeye gayret etmi\u015Fsin.
+    Denenmemi\u015Fi yaratmak mevcut halinle zor geldi\u011Finde, sen de de\u011Fi\u015Fmi\u015F,
+    yenilenmi\u015F, o \u015Fekilde ilerlemi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kadercarki ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

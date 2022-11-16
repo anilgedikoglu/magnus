@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersSavasarabasi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA92846008578
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: c467c0a6168650e49a8c28d5eacd1371, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: c467c0a6168650e49a8c28d5eacd1371, type: 3}
+  contentPhotoId: araba-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Sava\u015F Arabas\u0131\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nYa\u015Fam\u0131n\u0131n
+    ilerleyen b\xF6l\xFCmlerinde kritik bir se\xE7imle kar\u015F\u0131 kar\u015F\u0131ya
+    kalacak ve ne yapaca\u011F\u0131ndan tam emin olamad\u0131\u011F\u0131n o anda
+    elindeki t\xFCm g\xFCc\xFC \xF6n\xFCndeki \u015F\u0131klardan birine sarf edeceksin.
+    \u0130kilemler i\xE7erisinde ve stres alt\u0131ndayken, kararlar\u0131n\u0131
+    vermeden \xF6nce sa\u011Fl\u0131kl\u0131 d\xFC\u015F\xFCnemeyece\u011Fini hissediyorum
+    {{isim}}. Yo\u011Fun d\u0131\u015F etkenlere maruz kald\u0131\u011F\u0131nda,
+    kontrol\xFCn\xFC yitirmen ve bilin\xE7sizce hamle yapman s\xF6z konusu olabilir.
+    Her \u015Feyin \xFCstesinden gelmene yetecek iradeye ve sana avantaj sa\u011Flayacak
+    ko\u015Fullara sahip olmana ra\u011Fmen hataya d\xFC\u015Fmemek i\xE7in, hamlelerini
+    en y\xFCksek bilin\xE7 seviyesinde ve kontroll\xFC \u015Fekilde yapman gerekecek."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek araba ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

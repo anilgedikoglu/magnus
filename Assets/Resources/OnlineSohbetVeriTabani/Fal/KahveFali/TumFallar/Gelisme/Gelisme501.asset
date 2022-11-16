@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme501
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA63282598581
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xDCff {{isim}}, i\xE7ini ne kadar karartm\u0131\u015Fs\u0131n! Fincan\u0131ndaki
+    t\xFCm enerjiyi merkezleyen bir noktada, \xF6bek \xF6bek bulutlar g\xF6r\xFCyorum.
+    Hem beynini kemiren sorunlar, hem de rahats\u0131z oldu\u011Fun insanlar var
+    sanki. \xD6l\xFC \"bir de\u011Fil ki\" a\u011Flayas\u0131n, deli \"bir de\u011Fil
+    ki\" ba\u011Flayas\u0131n... Biraz rahatlamal\u0131s\u0131n. Bak, kabu\u011Funun
+    \xFCzerindeki k\xFCfede k\u0131smetler ta\u015F\u0131yan bir kaplumba\u011Fa,
+    yava\u015F ad\u0131mlarla sana do\u011Fru yakla\u015F\u0131yor. \U0001F422Kendi
+    a\u011F\u0131r, eyvallah; fakat y\xFCk\xFC de a\u011F\u0131r. M\xFCjdeler aya\u011F\u0131na
+    b\xF6yle gelse ne yapabilirsin ki? \U0001F60B\U0001F60ABu bulutlar da\u011F\u0131lacak
+    in\u015Fallah. Bug\xFCn {{gun_0}} de\u011Fil mi? Bak, haftaya {{gun_4}} g\xFCn\xFC
+    gelmeden, y\xFCz\xFCn\xFCn {{sayi,2,3}} kez art arda g\xFClece\u011Fini f\u0131s\u0131ld\u0131yor
+    telvelerin. Hadi, ilki \u015Fimdi olsun; l\xFCtfen... \U0001F64F\U0001F643\n\nAaa,
+    bak! {{kelime, 40'l\u0131 ya\u015Flarda | 50'li ya\u015Flarda}}, karpuz dilimleyen
+    bir {{kelime, kad\u0131n | erkek}} ili\u015Fti g\xF6z\xFCme. Karpuz sa\u011Fl\u0131\u011Fa,
+    ilme ve kazanca i\u015Faret eder. \xD6n\xFCm\xFCzdeki {{ay_+1}}, {{ay_+2}} ve
+    {{ay_+3}} aylar\u0131 boyunca hanendeki insanlarda her ay bu konular\u0131n biriyle
+    ilgili art\u0131\u015F g\xF6receksin {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 24
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 24
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

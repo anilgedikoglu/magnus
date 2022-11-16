@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Ermis
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA38236616393
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 6b1469781a0da4a41baa8964c0b53e1c, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 6b1469781a0da4a41baa8964c0b53e1c, type: 3}
+  contentPhotoId: munzevi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Ermi\u015F\" kart\u0131n\u0131 se\xE7tin.\n\n\xC7evresel
+    fakt\xF6rleri kontrol edemedi\u011Fini anlam\u0131\u015Fs\u0131n. Ya\u015Fam\u0131
+    iyi g\xF6zlemleyip, onu alt edebilmek i\xE7in yepyeni bir yol geli\u015Ftirmi\u015F,
+    kendi i\xE7ine, kendi arka bah\xE7ene d\xF6nm\xFC\u015Fs\xFCn. Bu kart, i\xE7ine
+    kapand\u0131\u011F\u0131n ve adeta inzivaya \xE7ekildi\u011Fin d\xF6nemler oldu\u011Funu
+    ve o d\xF6nemlerden daha donan\u0131ml\u0131 \u015Fekilde \xE7\u0131kt\u0131\u011F\u0131n\u0131
+    anlat\u0131yor {{isim}}. Ya\u015Fad\u0131klar\u0131n neticesinde, ba\u015Fkalar\u0131na
+    \xF6rnek olabilecek derecede iyi g\xF6zlemler yapm\u0131\u015Fs\u0131n. Neye
+    ve kime kar\u015F\u0131 ne \u015Fekilde aksiyon alman gerekti\u011Fine iyi karar
+    vermi\u015F, sorunlarla ba\u015F ederken kullanabilece\u011Fin \xE7e\u015Fitli
+    m\xFChimmatlarla ruhunu donatm\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis munzevi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

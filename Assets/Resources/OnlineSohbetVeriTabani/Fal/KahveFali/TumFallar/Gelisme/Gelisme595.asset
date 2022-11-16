@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme595
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA82158622214
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n farkl\u0131 yerlerinde asimetrik \u015Fekillerde \xF6bekle\u015Fmi\u015F
+    telveler, \xE7ok ilgin\xE7 ayr\u0131nt\u0131lar ve gelecekte ya\u015Fayaca\u011F\u0131n
+    ili\u015Fkiye dair farkl\u0131 ipu\xE7lar\u0131 bar\u0131nd\u0131r\u0131yor {{isim}}.
+    Telvelerin, {{sayi,2,8}} hafta sonra ya\u015Fad\u0131\u011F\u0131n muhitten daha
+    uzakta bir yerde bulunan, {{sayi,2,3}} katl\u0131 bir ma\u011Fazaya girece\u011Fini
+    i\u015Faret ediyor. \"-1\" kat\u0131n\u0131 da sayarsan, bir kat daha fazla diyebiliriz.
+    O g\xFCn orada, hayat\u0131n\u0131n a\u015Fk\u0131 da bulunacak. Ondan \xF6nce
+    giri\u015F \xE7\u0131k\u0131\u015F yap\u0131p onu te\u011Fet mi ge\xE7ersin,
+    i\xE7eride onunla g\xF6z g\xF6ze mi gelirsin, yoksa oray\u0131 sen gelmeden \xE7ok
+    \xF6nce mi terk etmi\u015F olur, bilemiyorum. \u015Eunu bilmeni isterim, hen\xFCz
+    hi\xE7 tan\u0131\u015Fmad\u0131\u011F\u0131n bu ki\u015Fi ile, o tesad\xFCfi
+    g\xFCnden \"senin ad\u0131n\u0131n ve soyad\u0131n\u0131n {{kelime, sessiz |
+    sesli}} harf say\u0131s\u0131 toplam\u0131 kadar\" hafta sonra tan\u0131\u015Facaks\u0131n\u0131z.\n\nSeni,
+    k\u0131skan\xE7l\u0131\u011F\u0131n \xE7ok \xF6n planda olaca\u011F\u0131 bir
+    ili\u015Fki bekliyor {{isim}}; \xE7\xFCnk\xFC sevgilin, hem fizi\u011Fiyle hem
+    de zekas\u0131yla olduk\xE7a dikkat \xE7ekici olacak. \xC7ok s\u0131k meydana
+    \xE7\u0131kmas\u0131na izin vermedi\u011Fin o dominant ve sahiplenici yan\u0131n,
+    onunlayken kendini s\u0131k s\u0131k g\xF6sterebilir."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

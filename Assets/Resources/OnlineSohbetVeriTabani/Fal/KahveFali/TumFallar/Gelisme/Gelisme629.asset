@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme629
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA41206403509
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131nda seni temsil eden, yakla\u015F\u0131k {{yas_0}} - {{yas_+5}}
+    y\u0131ll\u0131k oldu\u011Funu tahmin etti\u011Fim, kocaman g\xF6vdesi olan ve
+    dallar\u0131 t\u0131ka basa zeytinle dolu bir zeytin a\u011Fac\u0131 g\xF6r\xFCyorum.
+    \xC7evresinden insanlar ge\xE7iyor bu a\u011Fac\u0131n. Kimi dallar\u0131na as\u0131l\u0131yor,
+    kimi g\xF6lgesine uzanm\u0131\u015F, kimiyse ellerindeki sopalarla olgunla\u015Fmam\u0131\u015F
+    zeytinlerini silkelemeye \xE7al\u0131\u015F\u0131yor. Bu yans\u0131malardan,
+    \xF6zel hayat\u0131na dair derin bir \xE7\u0131kar\u0131m yapmak m\xFCmk\xFCn
+    {{isim}}.\n\nNas\u0131l oldu\u011Funu soran fakat \xF6nemsemeyen, be\u011Fenisini
+    dile getiren fakat beklentilerini sormayan, benzer hatalar\u0131 defaatle yapan
+    fakat sundu\u011Fun \xE7\xF6z\xFCm \xF6nerilerini umursamayan insanlar gelip
+    ge\xE7mi\u015F hayat\u0131ndan. Talihsizlik mi dedin, k\u0131smetsizlik mi? \u0130kisi
+    de de\u011Fil. \"D\xFCzensiz\" sand\u0131\u011F\u0131m\u0131z \u015Fu evrende
+    \xF6yle bir d\xFCzen var ki, her milisaniye tekrar eden \"ol\" emri ile s\xFCrekli
+    yeni \xE7i\xE7ekler filizleniyor. Olumsuzluk gibi g\xF6z\xFCken ve g\xF6nl\xFCm\xFCz\xFCn
+    ilk etapta raz\u0131 gelmedi\u011Fi baz\u0131 durumlar, s\xFCrecin sonunu ku\u015F
+    bak\u0131\u015F\u0131 g\xF6rebilen i\xE7in hay\u0131r'd\u0131r. Fincan\u0131nda,
+    senin de ak\u0131betin \u0131\u015F\u0131l \u0131\u015F\u0131l g\xF6z\xFCkmekte
+    {{kelime, K\u0131ymetli | Say\u0131n}} {{soyisim}}. Hayat\u0131na a\u015Fk bir
+    girecek, \"pir\" girecek!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 35
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 35
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

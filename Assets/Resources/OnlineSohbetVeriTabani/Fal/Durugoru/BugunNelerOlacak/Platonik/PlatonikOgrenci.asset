@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: PlatonikOgrenci
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA69523071231
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "G\xFCn\xFCn bug\xFCn garipliklerle ba\u015Fl\u0131yor {{isim}}. {{sayi 2,4}}
+    saat i\xE7inde {{kelime, tan\u0131d\u0131\u011F\u0131n | ailenden | arkada\u015Flar\u0131ndan}}
+    birinin de\u011Fi\u015Fik bir hareketine \"Allahallah, niye b\xF6yle yapt\u0131
+    ki?\" diyerek yakla\u015Fabilirsin. G\xFCn sonunda, o hareketin alt\u0131nda
+    bir kas\u0131t olmad\u0131\u011F\u0131n\u0131 ya da senin de bir menfaatin oldu\u011Funu
+    fark edeceksin. Daha sonraki saatler, okulunla ilgili birtak\u0131m meselelerle
+    nas\u0131l ba\u015Fa \xE7\u0131kaca\u011F\u0131n\u0131 d\xFC\u015F\xFCnerek ge\xE7ecek.
+    Ak\u015Fama do\u011Fru ise ho\u015Fland\u0131\u011F\u0131n ki\u015Finin bir payla\u015F\u0131m\u0131na
+    ya da hareketine \u015Fahit olacaks\u0131n. Yapt\u0131\u011F\u0131n\u0131 garip
+    kar\u015F\u0131layabilir, yap\u0131\u015F sebebini kendisine sorma ihtiyac\u0131
+    hissedebilirsin. Ne var ki, bunun da alt\u0131ndan korktu\u011Fun gibi bir \u015Fey
+    \xE7\u0131kmayacak Sevgili {{isim}}."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme605
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA42673211787
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n orta k\u0131s\u0131mlar\u0131nda g\xF6rd\xFCklerim, hem
+    sana hem de ayr\u0131ld\u0131\u011F\u0131n ki\u015Fiye y\xF6nelik baz\u0131 ele\u015Ftirilerimi
+    a\xE7\u0131k\xE7a ifade etmemi gerektiriyor {{isim}}. Her iki taraf\u0131n da
+    hatalar\u0131 oldu\u011Funu g\xF6r\xFCyorum. \u0130li\u015Fkiniz, bir g\xFC\xE7
+    sava\u015F\u0131 haline, bir \"kendinizi ifade edebilme yar\u0131\u015F\u0131na\"
+    d\xF6n\xFC\u015Fm\xFC\u015F. A\u015Fkta sava\u015F bir defa ba\u015Flad\u0131
+    m\u0131, tek bir k\xF6t\xFC s\xF6ylem, \xF6ncesinde sarf edilmi\u015F olan bin
+    g\xFCzel s\xF6z\xFC yok eder. Sevginizin b\xFCy\xFCkl\xFC\u011F\xFCn\xFC sergiledi\u011Finiz
+    bin eylemi, tek bir k\u0131r\u0131c\u0131 \"son eylem\" hi\xE7e sayar. Birbirinizin
+    \"i\xE7ini\" ve \xF6z\xFCn\xFC fark ederek ili\u015Fkiye ba\u015Flam\u0131\u015F,
+    bamba\u015Fka insanlar gibi \"yabanc\u0131la\u015Farak\" birlikteli\u011Finizi
+    noktalam\u0131\u015Fs\u0131n\u0131z.\n\nTelvelerin, \xF6n\xFCm\xFCzdeki {{sayi,2,8}}
+    hafta boyunca birbirinizi gizliden g\xF6zlemleyece\u011Finizi i\u015Faret ediyor
+    {{isim}}. Bu s\xFCre i\xE7erisinde her iki taraftan da bir ad\u0131m beklemiyorum.
+    Fakat sonras\u0131nda, boyundan dolay\u0131 \xE7ok dar ya da kilosundan dolay\u0131
+    \xE7ok geni\u015F elbiseler giyen ve ad\u0131nda da {{harf}} harfi olan biri,
+    senin bu s\u0131k\u0131nt\u0131na \"dur\" demek i\xE7in harekete ge\xE7ecek.
+    Sizi bar\u0131\u015Ft\u0131racak m\u0131, yoksa onu sana unutturacak m\u0131;
+    beraberce g\xF6rece\u011Fiz..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

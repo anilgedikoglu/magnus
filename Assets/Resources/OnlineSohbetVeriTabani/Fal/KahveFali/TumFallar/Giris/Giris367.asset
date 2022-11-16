@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris367
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA79248469806
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Seni, fincan\u0131nda g\xF6z\xFCme tak\u0131lan ilk noktalarda \"pejm\xFCrde\"
+    bir halde g\xF6r\xFCyorum Sayg\u0131de\u011Fer {{soyisim}}. Y\xFCz\xFCn g\xFCl\xFCyor,
+    oysa i\xE7in? Hi\xE7li\u011Fin ortas\u0131nda s\xFCz\xFClen, yaza yabac\u0131
+    g\xFCz yapraklar\u0131 gibi savruluyor ruhun. \U0001F342Karars\u0131zl\u0131k
+    var son {{kelime, g\xFCnlerde | haftalarda | aylarda}} sende, hissediyorum. Eski
+    ve yeni aras\u0131nda, ge\xE7mi\u015F ve gelecek aras\u0131nda, \"{{harf}}\"
+    ve \"{{harf}}\" aras\u0131nda, yap\u0131p yapmamak, gidip gitmemek, k\xFCsmekle
+    bar\u0131\u015Fmak, tutmakla b\u0131rakmak aras\u0131nda adeta gidip geliyorsun...
+    Seyrini izledi\u011Fin ve neticelerini bekledi\u011Fin baz\u0131 olaylar ilerleyen
+    {{kelime, g\xFCnlerde | haftalarda | aylarda}} sonu\xE7lanacak. Ruhun ikilemlerden
+    ar\u0131n\u0131p, yal\u0131n ve duru bir hale gelecek {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

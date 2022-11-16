@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme769
+  m_EditorClassIdentifier: 
+  idIndex: 20224201630AA85992828583
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "G\xF6r\xFCnen o ki, fincan\u0131n merkezine do\u011Fru yerle\u015Fmi\u015F telvelerde
+    bir kutupla\u015Fma var. \u0130kiye ayr\u0131lm\u0131\u015F gibiler. Bu yans\u0131malar,
+    kafandaki z\u0131t iki farkl\u0131 fikri sembolize ediyor {{isim}}. Bir yan\u0131n
+    \xF6nemli bir i\u015Fle ilgili sonucun k\xF6t\xFCye varaca\u011F\u0131n\u0131
+    s\xF6ylerken, di\u011Fer yan\u0131n adeta umutla bo\u015Flu\u011Fa kanat \xE7\u0131rpan
+    ku\u015Flar gibi. Y\xFCksek hedeflerin ve risk almay\u0131 gerektiren hayallerin
+    var san\u0131r\u0131m. \xDCrkek durmana neden olan vesveseler bo\u015Fa \xE7\u0131kacak.
+    Bu konuda senin i\xE7in {{ay_+3}} ay\u0131nda ciddi bir rahatlama g\xF6z\xFCk\xFCyor.
+    Bu tedirginli\u011Fe 3 ay daha dayanmal\u0131s\u0131n.\n\nK\u0131ymetli {{isim}},
+    \xF6n\xFCm\xFCzdeki {{sayi,2,3}} hafta i\xE7inde birinin sana olan sevgisinden
+    iyice emin olacaks\u0131n. Bu ki\u015Fi sana \xF6nemli bir ayr\u0131cal\u0131k
+    tan\u0131yacak. Avu\xE7lar\u0131na b\u0131rak\u0131lan anahtarlar oldu\u011Funu
+    g\xF6r\xFCyorum. Bir yere ait de\u011Filseler, bir \u015Feye ge\xE7it verecek
+    ve seni y\xFCceltecekler. Ad\u0131 {{kelime, iki | \xFC\xE7}} heceli bu ki\u015Fiyle
+    olan ba\u011Flar\u0131n\u0131z bu ve benzeri vesilelerle ilerleyen y\u0131llarda
+    iyice kuvvetlenecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 40
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

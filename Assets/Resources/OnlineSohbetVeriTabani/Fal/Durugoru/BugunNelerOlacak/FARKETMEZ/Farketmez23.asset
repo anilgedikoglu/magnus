@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Farketmez23
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA30927229996
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ad\u0131nda {{harf}} ya da {{harf}} harfi olan ve soyad\u0131 {{sayi 3,4}} heceli
+    bir {{kelime, han\u0131mefendi | beyefendi}} g\xF6r\xFCyorum. Bu ki\u015Fi bug\xFCn
+    senin bir yak\u0131n\u0131nla konu\u015Facak. Kendi do\u011Frular\u0131n\u0131
+    kar\u015F\u0131s\u0131ndaki insana empoze etmeye \xE7al\u0131\u015Fan ve seninle
+    z\u0131t fikirlere sahip oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu ki\u015Fi,
+    s\xF6yleyeceklerini duydu\u011Funda seni biraz k\u0131zd\u0131rabilir {{isim}}.
+    Yapaca\u011F\u0131n en ak\u0131ll\u0131ca \u015Fey, onu umursamamak olacak. Bug\xFCn
+    g\xFCn\xFCn tam bir tahterevalli \xFCzerine kurulu gibi. \xD6zel hayat\u0131na
+    dair olumlu \u015Feyler hissetti\u011Finde, ekonomik s\u0131k\u0131nt\u0131lar\u0131n
+    akl\u0131na gelecek. Parasal anlamda ufac\u0131k bir umutla dolsan, sa\u011Fl\u0131\u011F\u0131na
+    dair baz\u0131 ufak tefek s\u0131k\u0131nt\u0131lar\u0131n peydah olacak. Dengeyi
+    sa\u011Flamaya \xE7al\u0131\u015Farak g\xFCn\xFC tamamlayaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorum. \u0130laveten; bug\xFCn g\xF6rece\u011Fin ve \xF6zenece\u011Fin
+    bir \u015Feye gelecekte sahip olacaks\u0131n. Ak\u015Fam \xFCzeri ise sabah uyand\u0131\u011F\u0131ndan
+    daha keyifli olaca\u011F\u0131n kesin De\u011Ferli {{isim}}. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

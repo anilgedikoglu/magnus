@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilickralicesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA91317667054
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 71cec1b89d12d5041baa04d76e03a90e, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 71cec1b89d12d5041baa04d76e03a90e, type: 3}
+  contentPhotoId: kilickralicesi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Krali\xE7esi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nVermen gereken \xE7ok \xF6nemli baz\u0131 kararlar oldu\u011Funu
+    fakat bu kararlar\u0131 erteledi\u011Fini g\xF6r\xFCyorum. Bu kararlar, uzun
+    zamand\u0131r u\u011Fruna emek harcad\u0131\u011F\u0131n ya da yo\u011Fun u\u011Fra\u015Flar
+    verdi\u011Fin konularla alakal\u0131 gibi g\xF6z\xFCk\xFCyor. Neden erteledi\u011Fini
+    anlamak zor; lakin i\u015Fin i\xE7inde birilerine duydu\u011Fun k\u0131zg\u0131nl\u0131k
+    oldu\u011Funu anlamak da imkans\u0131z de\u011Fil. Kazanmana \xE7ok \xE7ok az
+    kalm\u0131\u015Fken, amac\u0131na bu kadar yakla\u015Fm\u0131\u015Fken neden
+    geriye \xE7ekiliyorsun, bilemiyorum {{isim}}. Kafan\u0131 bir an evvel toplay\u0131p
+    konular\u0131 yeniden masaya yat\u0131rmal\u0131 ve kararlar\u0131n\u0131 ge\xE7
+    kalmadan vermelisin. Bunu yaparken de kimseyi hesaba katmamal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilickralicesi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1114
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA39190546814
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131ndaki son telve \xF6beklerinde, g\xF6z\xFCme bir \"baca\" fig\xFCr\xFC
+    kestirdim {{isim}}. Bu bacan\u0131n i\xE7inden g\xF6ky\xFCz\xFCne do\u011Fru
+    y\xFCkselmekte olan kara dumanlar, t\u0131pk\u0131 bir \"kurdele\" \u015Feklini
+    alm\u0131\u015F. Ni\u015Fanl\u0131n {{data, cinsiyet=erkek, han\u0131mefendinin
+    | cinsiyet=kad\u0131n, beyefendinin}} arkada\u015F ya da yak\u0131n akraba \xE7evresinden
+    {{kelime, orta ya\u015Flarda olmas\u0131na ra\u011Fmen hen\xFCz evlenmemi\u015F
+    | evlenip \xE7ocuk sahibi olmas\u0131na ra\u011Fmen durumundan ho\u015Fnutsuz
+    olan | kendi evlili\u011Finde her \u015Fey yolunda olmas\u0131na ra\u011Fmen
+    ba\u015Fkalar\u0131n\u0131 k\u0131skanan | daha \xF6nce evlenip ayr\u0131lm\u0131\u015F
+    ve k\xF6t\xFC tecr\xFCbeler ya\u015Fam\u0131\u015F | \xF6zg\xFCrl\xFC\u011F\xFCne
+    d\xFC\u015Fk\xFCn ve ileri ya\u015Flardaki}} bir {{kelime, kad\u0131n\u0131n
+    | adam\u0131n}}, evlilik fikrine kar\u015F\u0131 olmas\u0131ndan dolay\u0131
+    ni\u015Fanl\u0131na zaman zaman \"imal\u0131\" mesajlar verdi\u011Fini ve hay\u0131rla
+    sonu\xE7lanacak olan i\u015Fini d\xFC\u011F\xFCmlemeye \xE7al\u0131\u015Ft\u0131\u011F\u0131n\u0131
+    hissediyorum. Bu konuda i\xE7ini ferah tutmal\u0131s\u0131n. Zira ba\u015Fta
+    ni\u015Fanl\u0131n olmak \xFCzere, her ikinizin de yak\u0131n \xE7evresi seni
+    takdire ve sayg\u0131ya \u015Fayan bir insan olarak g\xF6r\xFCyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

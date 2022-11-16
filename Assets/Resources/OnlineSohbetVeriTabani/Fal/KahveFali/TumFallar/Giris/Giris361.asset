@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris361
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA15326162133
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ya\u015Fam\u0131n\u0131 temsil eden telveler, adeta bir \u015Fehri and\u0131r\u0131yor.
+    \U0001F306Ve kurakl\u0131ktan dolay\u0131 i\xE7ecek su dahi bulamayan sokak hayvanlar\u0131yla,
+    pencere kenarlar\u0131na yerle\u015Ftirilmi\u015F, solmakta olan saks\u0131 \xE7i\xE7eklerinin
+    dualar\u0131 h\xFCrmetine, bu \u015Fehre ya\u011Fmurlar ya\u011Fmaya ba\u015Flam\u0131\u015F.
+    Senin \xE7ok saf ve temiz bir y\xF6n\xFCn var {{isim}}. Bunu \u015Fu anda buram
+    buram hissediyorum. Bu tertemiz kalan yan\u0131n\u0131n hat\u0131r\u0131na, hayat\u0131nda
+    baz\u0131 \u015Feyler m\xFCspet y\xF6nde de\u011Fi\u015Fecek. \"Bulutlar\u0131n
+    kuruyan g\xF6zlerinden\" d\xF6k\xFClen son ya\u011Fmurlar, y\xFCre\u011Finde
+    ye\u015Fermek i\xE7in can atan \"sevin\xE7lere\" can suyu olacak. Bekle ve g\xF6r
+    derim!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

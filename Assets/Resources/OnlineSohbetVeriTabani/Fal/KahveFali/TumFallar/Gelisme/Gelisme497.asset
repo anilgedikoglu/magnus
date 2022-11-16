@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme497
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA75809790967
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n en can al\u0131c\u0131 ve ilk dikkat \xE7eken noktalar\u0131ndan
+    birinde, eski bir ka\u011Fn\u0131 var. \U0001F402Bu ka\u011Fn\u0131 \xF6yle bir
+    mesuliyet ta\u015F\u0131yor ki, y\xFCk\xFC a\u011F\u0131r, i\u015Fi zor... Telvelerin,
+    bu ka\u011Fn\u0131 arac\u0131l\u0131\u011F\u0131 ile senin ger\xE7ekle\u015Fmesi
+    zor bir i\u015Finden bahsediyor {{isim}}. Her zaman \"ula\u015F\u0131lmazlar\u0131\"
+    hedefleyen bir zihnin var. Akl\u0131n daima \"olmazlar\u0131n zoru\" i\xE7inde,
+    \xF6yle de\u011Fil mi? Fakat bu defa, hem aileni hem de yak\u0131n \xE7evreni
+    \xE7ok \u015Fa\u015F\u0131rtacak, zor bir i\u015Fi ba\u015Faracaks\u0131n. Birden
+    bire olmasa da, a\u011F\u0131r a\u011F\u0131r...\n\nFincan g\xF6rsellerindeki
+    \xFCst kesimlere yak\u0131n duran kakt\xFCs\xFC sen de fark ettin mi? Didi\u015Fti\u011Fin,
+    z\u0131tla\u015Ft\u0131\u011F\u0131n hatta s\xFCrt\xFC\u015Fmeler ya\u015Fad\u0131\u011F\u0131n,
+    ad\u0131nda {{sayi,4,5}} harf olan ve soyad\u0131nda {{harf}} harfi ta\u015F\u0131yan
+    biri oldu\u011Funu hissediyorum. Bu ki\u015Fi ile bir t\xFCrl\xFC tutmayan enerjileriniz,
+    \xF6n\xFCm\xFCzdeki g\xFCnlerde b\xFCy\xFCk bir de\u011Fi\u015Fim ge\xE7irecek
+    {{isim}}. Bu b\xFCy\xFCk z\u0131tl\u0131k, yerini e\u015Fsiz bir uyuma b\u0131rakacak.
+    Evren, ileti\u015Fim frekanslar\u0131n\u0131z\u0131 yeniden d\xFCzenliyor olsa
+    gerek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

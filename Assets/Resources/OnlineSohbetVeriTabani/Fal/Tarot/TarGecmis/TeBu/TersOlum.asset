@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersOlum
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA10961650589
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 971cc11632904584dafc1b7f7503dfa4, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 971cc11632904584dafc1b7f7503dfa4, type: 3}
+  contentPhotoId: olum-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"\xD6l\xFCm\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nBu
+    da demek oluyor ki, ge\xE7mi\u015Fte bir g\xFCne, bir an'a, bir d\xF6neme tak\u0131l\u0131p
+    kalm\u0131\u015Fs\u0131n {{isim}}. Akl\u0131n birilerinde ya da bir \u015Feylerde
+    kalm\u0131\u015F. Sonras\u0131nda da ya\u015Famaya pek hevesli devam etmemi\u015Fsin
+    sanki. Her ne ya\u015Fad\u0131ysan ya da her kim buna sebep olduysa, ruhuna \xE7\xF6ken
+    bir karanl\u0131k h\xFCkm\xFCndeymi\u015F. \xD6n\xFCnde olduk\xE7a ayd\u0131nl\u0131k
+    bir gelecek olmas\u0131na ra\u011Fmen, bir t\xFCrl\xFC zincirlerini k\u0131r\u0131p
+    \xF6zg\xFCrce gelece\u011Fe y\xFCr\xFCyememi\u015Fsin. Ko\u015Fullara uyum sa\u011Flamay\u0131
+    ve yenilenmeyi reddetmi\u015F, o zamanki kafada kalm\u0131\u015Fs\u0131n. T\xFCm
+    bunlar\u0131n yan\u0131 s\u0131ra, verdi\u011Fin kararlardan da pek pi\u015Fman
+    olmam\u0131\u015F gibisin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis olum ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

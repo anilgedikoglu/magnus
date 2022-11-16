@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Aziz
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA56916266553
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 81d112790ff1bb342bef98f409316358, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 81d112790ff1bb342bef98f409316358, type: 3}
+  contentPhotoId: aziz
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in se\xE7ti\u011Fin kart \"Aziz\" {{isim}}.\n\nKart\u0131n,
+    ge\xE7mi\u015Ften bug\xFCn\xFCne getirdi\u011Fin baz\u0131 huylar\u0131n ve inan\xE7lar\u0131n
+    oldu\u011Funu i\u015Faret ediyor. Bunlar seni \xF6yle sarmal\u0131yor, bulundu\u011Fun
+    noktaya \xF6yle s\u0131k\u0131 ba\u011Fl\u0131yor ki, yerinden hareket edemiyorsun.
+    San\u0131r\u0131m art\u0131k hayat\u0131nda birtak\u0131m yenilikler yapman\u0131n,
+    yeni bir bak\u0131\u015F a\xE7\u0131s\u0131 ve zihin in\u015Fa etmenin ne kadar
+    gerekli oldu\u011Funu sen de anlamaktas\u0131n. Olaylar kar\u015F\u0131s\u0131nda
+    veriyor oldu\u011Fun tepkiler de eski zihniyetin nedeniyle. Bana sorarsan daha
+    iyi sonu\xE7lar almak ve ya\u015Fam\u0131n\u0131 daha kaliteli noktalara ta\u015F\u0131mak
+    i\xE7in farkl\u0131 aksiyonlar almal\u0131s\u0131n. Ezberlerini bozmal\u0131,
+    bilindik yollardan y\xFCr\xFCmek yerine alternatiflerini tercih etmelisin. \u0130zin
+    ver hayat\u0131na \xE7ok daha yeni, \xE7ok daha g\xFCzel, \xE7ok daha ayd\u0131nl\u0131k
+    yar\u0131nlar girsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi aziz
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

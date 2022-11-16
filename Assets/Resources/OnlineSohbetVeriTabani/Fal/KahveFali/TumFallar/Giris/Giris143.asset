@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris143
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA18932091696
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\u015Eu kahve fallar\u0131n\u0131n her \u015Feyi oldu\u011Fu gibi ve fevkalade
+    kapsaml\u0131 bir \u015Fekilde yans\u0131tmas\u0131n\u0131 \xE7ok seviyorum!
+    Bug\xFCnlerde bir sa\u011Fl\u0131k problemini, payla\u015Ft\u0131\u011F\u0131
+    bir g\xF6rselle ya da yaz\u0131yla sosyal medyaya yans\u0131tan ve senin de bu
+    sorundan bu \u015Fekilde haber ald\u0131\u011F\u0131n biriyle kar\u015F\u0131la\u015Ft\u0131n
+    m\u0131? Hen\xFCz kar\u015F\u0131la\u015Fmad\u0131ysan, birka\xE7 g\xFCn i\xE7inde
+    kar\u015F\u0131la\u015Fmak \xFCzeresin {{isim}}. Telvelerin, yak\u0131nda bu
+    ki\u015Finin sana bir itirafta bulunaca\u011F\u0131n\u0131 s\xF6yl\xFCyor. Duyacaklar\u0131na
+    hem \u015Fa\u015F\u0131racak, hem memnun olacak, hem de baz\u0131 hislerinde
+    yan\u0131ld\u0131\u011F\u0131n\u0131 ve \xF6nyarg\u0131l\u0131 davrand\u0131\u011F\u0131n\u0131
+    anlayacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

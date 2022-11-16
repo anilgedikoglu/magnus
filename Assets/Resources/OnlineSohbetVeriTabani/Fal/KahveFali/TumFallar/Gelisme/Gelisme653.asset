@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme653
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA47422777248
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n daha merkezi k\u0131s\u0131mlar\u0131ndaki baz\u0131 telveler,
+    bir spiral olu\u015Fturmu\u015Flar. Yak\u0131nda seni i\xE7ine \xE7ekecek ve
+    bal\u0131klama atlamak isteyece\u011Fin bir f\u0131rsatla kar\u015F\u0131la\u015Facaks\u0131n
+    {{isim}}. Ad\u0131nda \"R\" ya da \"N\" harfi olan bir bankadan kredi \xE7ekebilir,
+    marka isminde \"M\" ya da \"O\" harfi olan bir ara\xE7 sat\u0131n alabilir ya
+    da 4 harfli bir muhitten bir ev ya da yazl\u0131k edinebilirsin.\n\nHoros'un
+    g\xF6z\xFC'n\xFC hi\xE7 duymu\u015F muydunuz {{isim}}? Baz\u0131 telvelerin,
+    bu simgeyi and\u0131r\u0131yor. {{ay_1}} ay\u0131na girerken vicdan ve g\xF6n\xFCl
+    g\xF6z\xFCn\xFCn bir hayli a\xE7\u0131laca\u011F\u0131n\u0131 ifade ediyor. Do\u011Fruyu
+    yanl\u0131\u015Ftan ay\u0131rmakta zorlanmayacak, \xF6n\xFCm\xFCzdeki {{kelime,
+    bir | iki | \xFC\xE7}} ay boyunca hayat\u0131na dair {{sayi,2,3}} do\u011Fru
+    ve \xF6nemli karar vereceksin. Bu simge ayr\u0131ca Tanr\u0131'n\u0131n bir'li\u011Fini
+    ve tekli\u011Fini ifade eder. Fal\u0131n, ataca\u011F\u0131n ad\u0131mlarda yarat\u0131c\u0131y\u0131
+    referans alman ve ona g\xFCvenmen durumunda s\u0131rt\u0131n\u0131n yere gelmeyece\u011Fini
+    f\u0131s\u0131ld\u0131yor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

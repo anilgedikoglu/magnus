@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegnekonlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA00532763793
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a6792ccb6e7e9684caa75b36ecfda96e, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a6792ccb6e7e9684caa75b36ecfda96e, type: 3}
+  contentPhotoId: asaonlusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"De\u011Fnek Onlusu\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nKar\u0131ncalar,
+    kendilerinden \xE7ok daha b\xFCy\xFCk boyutlarda yiyecekleri top haline getirip,
+    s\u0131rtlar\u0131nda yuvalar\u0131na kadar ta\u015F\u0131rlar. Yuvalar\u0131na
+    girmelerini sa\u011Flayan delikler ise, bir yanarda\u011F a\u011Fz\u0131 gibi
+    y\xFCksekte konumland\u0131r\u0131lm\u0131\u015Ft\u0131r. Onca yoldan gelip,
+    o yolu t\u0131rman\u0131rken zirvenin ete\u011Finde duran ve i\u015Fi b\u0131rakan
+    bir kar\u0131ncaya rastlad\u0131n m\u0131 hi\xE7 {{isim}}? \u0130\u015Fte sen
+    o kar\u0131ncas\u0131n. Se\xE7ti\u011Fin kart, tam ipi g\xF6\u011F\xFCsleyecekken
+    pes etti\u011Fini anlat\u0131yor. Engellerin sana fazla geldi\u011Fini, b\xF6yle
+    bir y\xFCk\xFC zihninin ve bedeninin art\u0131k ta\u015F\u0131yamad\u0131\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorsun. Kald\u0131raca\u011F\u0131ndan fazlas\u0131na m\u0131
+    sahiptin? Peki ya sonu\xE7 da bekledi\u011Finden daha g\xFCzel olacaksa? Son
+    bir vuru\u015Fa de\u011Fmez mi?..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi asaonlusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

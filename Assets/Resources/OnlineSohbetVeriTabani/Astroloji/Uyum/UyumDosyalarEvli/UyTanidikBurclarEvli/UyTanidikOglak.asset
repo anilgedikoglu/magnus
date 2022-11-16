@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyTanidikOglak
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA85825195633
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"O\u011Flak
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131n\u0131n | cinsiyet=kad\u0131n,
+    erkeklerinin | cinsiyet=lgbt, mensuplar\u0131n\u0131n}}, kendilerini sevdiklerine
+    b\xFCt\xFCn\xFCyle adad\u0131klar\u0131 g\xF6r\xFCl\xFCr. Sen de bir {{burc}}
+    {{data, cinsiyet=erkek, erke\u011Fi | cinsiyet=kad\u0131n, kad\u0131n\u0131 |
+    cinsiyet=lgbt, insan\u0131}} olarak ba\u011Flanmaya ve kendini a\u015F\u0131k
+    oldu\u011Fun ki\u015Fiye endekslemeye \xE7ok m\xFCsaitsin {{isim}}. Bu ba\u011Fl\u0131l\u0131\u011F\u0131n\u0131n
+    e\u015Fin {{data, cinsiyet=erkek, han\u0131mefendiye | cinsiyet=kad\u0131n, beyefendiye
+    | cinsiyet=lgbt, olan ki\u015Fiye}} y\xF6nelik de oldu\u011Funu biliyorum. Fakat
+    baz\u0131 \u015Feyler yolunda gitmemi\u015F anla\u015F\u0131lan. Tan\u0131d\u0131\u011F\u0131n
+    bu ki\u015Finin sana \u015Fu an so\u011Fuk davran\u0131yor olmas\u0131 normal;
+    bu tamamen onun toprak grubu bir burcun mensubu olmas\u0131ndan kaynakl\u0131
+    {{isim}}. Onu \\\"haval\u0131\\\" ya da \\\"eri\u015Filmez\\\" bulsan da, birbirinize
+    al\u0131\u015Fman\u0131z i\xE7in yaln\u0131zca tek bir k\u0131v\u0131lc\u0131m
+    gerekiyor.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "tan\u0131d\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "o\u011Flak"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

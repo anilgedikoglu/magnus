@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 11
+  m_EditorClassIdentifier: 
+  idIndex: 20223313717AA07683931337
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ho\u015F bir parf\xFCm kokusu, r\xFCzgarda dalgalanan bir tutam sa\xE7 ya da
+    endam pe\u015Finde ko\u015Fanlar g\xF6r\xFCyorum. \xD6mr\xFCn\xFC bir bak\u0131\u015Fa
+    heba edenler, bir \xE7ift g\xFCzel g\xF6ze t\xFCrk\xFCler yak\u0131p hayat\u0131
+    boyunca karalar ba\u011Flayanlar var {{isim}}. Soruyorlar: \"Do\u011Fru insan
+    kimdir?\" Her heyecan yaratan \"sevgili\" de\u011Fildir.\n\n\u0130nsan, ruhunda
+    hortumlar yarat\u0131p kendi i\xE7 alemini allak bullak edeni \"a\u015Fk\u0131\"
+    san\u0131yor. Renkli g\xF6zlere her g\xFCn bak\u0131ld\u0131\u011F\u0131nda,
+    o renkler sinede kayboluyor. G\xF6z yaln\u0131zca s\xF6zleri g\xF6r\xFCr oluyor.
+    Do\u011Fru insan, \"sabitin olabilecek\" ve seni durultacak insand\u0131r, kar\u0131\u015Ft\u0131racak
+    de\u011Fil. Do\u011Fru insan, \"anla\u015F\u0131labildi\u011Fin\" insand\u0131r.
+    Do\u011Fru insan, kar\u015F\u0131l\u0131kl\u0131 sevgi ve sayg\u0131 i\xE7inde
+    oldu\u011Fun, s\u0131k\u0131lmayaca\u011F\u0131n kadar derin ve \"farkl\u0131\"
+    insand\u0131r.\n\nDo\u011Fru insan kendini bilen, ne arad\u0131\u011F\u0131n\u0131
+    bilen ve nihayetinde seni bulan \"d\xFCr\xFCst\" insand\u0131r. G\xF6z bebeklerindeki
+    melanin pigmenti az olan ya da boyu selviden hallice olan de\u011Fil."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: motivasyon
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

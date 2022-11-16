@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulAslan
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA95741582045
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Aslan
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri
+    | cinsiyet=lgbt, insanlar\u0131}} \xE7ok ne\u015Feli ve \xE7ok esprilidirler.
+    Okul ortam\u0131nda da bu pozitif hallerini korurlar. Kendilerine gelece\u011Fe
+    y\xF6nelik \xE7ok b\xFCy\xFCk ve uzun vadeli hedefler belirlemek yerine, daha
+    k\u0131sa ama\xE7larla ilerlerler. Bir {{burc}} burcu {{data, cinsiyet=erkek,
+    erke\u011Fi | cinsiyet=kad\u0131n, kad\u0131n\u0131 | cinsiyet=lgbt, mensubu}}
+    olarak sen de g\xFCler y\xFCzl\xFC, latif ve ho\u015F sohbet birisin. Bu y\xF6nden
+    \xE7ok fazla benze\u015Fiyorsunuz {{isim}}. Ancak senin planlar\u0131n daha uzun
+    vadeli. Sen hem okulunla ilgili, hem de \xF6zel hayat\u0131nda \xF6n\xFCn\xFC
+    g\xF6rmek istersin. Belirsizlikler seni huzursuz eder ve kar\u015F\u0131ndaki
+    insandan baz\u0131 garantiler duymay\u0131 arzulars\u0131n. S\xF6zler verilsin,
+    yeminler edilsin ve bunlar tutulsun diye d\xFC\u015F\xFCnd\xFC\u011F\xFCne eminim.
+    Sordu\u011Fun aslan burcu bu {{data, cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n,
+    beyefendi | cinsiyet=lgbt, ki\u015Fi}} sana g\xF6re biraz daha, hani nas\u0131l
+    desem, \\\"duygusuz\\\" ya da \\\"ruhsuz\\\" gibi kal\u0131yor. Kat\u0131 tavr\u0131,
+    seni zorlayabilir. Buna ald\u0131r\u0131\u015F etmezsen, ihtiras\u0131n da hakim
+    oldu\u011Fu \xE7ok tutkulu bir ili\u015Fkin olur.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: aslan
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

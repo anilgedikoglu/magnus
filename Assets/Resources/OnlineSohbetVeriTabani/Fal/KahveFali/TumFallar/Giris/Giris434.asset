@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris434
+  m_EditorClassIdentifier: 
+  idIndex: 20228124122AA66169827209
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Hay\u0131rd\u0131r {{isim}}, yolculuk nereye? <sprite=0> Yoksa \"gene nereye\"
+    mi demeliyim? <sprite=7> Telvelerin fincan\u0131n en \xFCst k\u0131s\u0131mlar\u0131nda
+    adeta bir navigasyon ekran\u0131 halini alm\u0131\u015F. \"L\" \u015Feklinde
+    bir rota g\xF6r\xFCyorum. Bana sorarsan \xF6n\xFCm\xFCzdeki {{ay_+2}} ay\u0131n\u0131n
+    ikinci haftas\u0131na girmeden, e\u015Fin beyefendiyle bir yerlere gideceksiniz
+    siz.\n\nBu \xFCstteki rotan\u0131n hemen yan\u0131nda, telefonunu elinden asla
+    d\xFC\u015F\xFCrmeyen bir \xE7ocuk g\xF6r\xFCyorum. Onun kar\u015F\u0131s\u0131na
+    dikilecek olan birileri, ondan o telefonu al\u0131p g\xF6\u011Fs\xFCne bir rozet
+    takacaklar. \xC7ocu\u011Fun hayr\u0131na olacak. \xC7ok ilgin\xE7. Kim ki bunlar?
+    <sprite=85>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "ev han\u0131m\u0131"
+    kontrol: 0
+  - degiskenAdi: "ka\xE7\xE7ocuk"
+    degiskenDegeri: "\xE7ocukyok"
+    kontrol: 1
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegnekikilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA74141047139
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 63dac19b48a5a024791f57f5a27ff60c, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 63dac19b48a5a024791f57f5a27ff60c, type: 3}
+  contentPhotoId: asaikilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"De\u011Fnek \u0130kilisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nSenin i\xE7in zorlu birtak\u0131m kararlar verme zaman\u0131ym\u0131\u015F.
+    Se\xE7enekleri ve sonu\xE7lar\u0131n\u0131 \xF6ng\xF6rsen de, her biri kendi
+    i\xE7inde bir \"de\u011Fi\u015Fim\" gerektirdi\u011Fi i\xE7in, farkl\u0131la\u015Fmaktan
+    ve s\u0131rtlanaca\u011F\u0131n sorumluluklardan korkmu\u015Fsun {{isim}}. Elinde
+    olan\u0131 rahat\xE7a ve risksiz bir \u015Fekilde korumak, yeni bir \u015Feyler
+    elde etmek ad\u0131na riskler alarak u\u011Fra\u015Fmaktan sana her zaman daha
+    kolay gelmi\u015F. Vizyonunu yitirmi\u015F, gelecek odakl\u0131 planlar yapmak
+    yerine g\xFCn\xFC kurtarmay\u0131 kendi ad\u0131na daha faydal\u0131 ve basit
+    bulmu\u015Fsun. \xC7ok b\xFCy\xFCk bir ilerleme potansiyelin olmas\u0131na ra\u011Fmen,
+    a\xE7\u0131\u011Fa \xE7\u0131kamam\u0131\u015F."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis asaikilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

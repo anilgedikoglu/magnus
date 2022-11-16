@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1088
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA23207948245
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n son demlerine do\u011Fru bir kavak a\u011Fac\u0131 g\xF6r\xFCyorum.
+    Senin sevgini temsil eden \"sarma\u015F\u0131klar\", yapraklar\u0131 durmak bilmeyen
+    bir r\xFCzgar taraf\u0131ndan sallanan bu kavak a\u011Fac\u0131na bir t\xFCrl\xFC
+    tutunam\u0131yor gibi g\xF6r\xFCnm\xFC\u015F {{isim}}. \U0001F343 Ho\u015Fland\u0131\u011F\u0131n
+    {{data, cinsiyet=erkek, k\u0131z\u0131n | cinsiyet=kad\u0131n, erke\u011Fin |
+    cinsiyet=lgbt, insan\u0131n}} olduk\xE7a {{kelime, hareketli | yo\u011Fun}} bir
+    hayat temposu oldu\u011Funu d\xFC\u015F\xFCn\xFCyorum. \xD6yle de\u011Filse bile,
+    zihni fas\u0131las\u0131z d\xFC\u015F\xFCncelerle dolup ta\u015F\u0131yor. Sana
+    yeterli ilgiyi g\xF6stermedi\u011Fini d\xFC\u015F\xFCn\xFCyor olabilirsin. Fakat
+    bilmen gereken bir detay var. Bu ki\u015Fi seni tam anlam\u0131yla hayat\u0131na
+    almak i\xE7in baz\u0131 {{kelime, maddi | ailevi | manevi}} sorunlar\u0131n\u0131
+    \xE7\xF6zmeye \xE7al\u0131\u015F\u0131yor. Bu konuda sana yak\u0131n zamanda
+    bir a\xE7\u0131klama yapaca\u011F\u0131n\u0131 hissediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 26
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 26
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

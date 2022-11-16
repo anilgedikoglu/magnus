@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme685
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA41536133235
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin odak noktas\u0131nda, \u015Fiddetli r\xFCzg\xE2rlar\u0131n sapmas\u0131yla
+    olu\u015Fmu\u015F \"siklonlar\" g\xF6r\xFCyorum. D\xF6nmekte olan bu r\xFCzg\xE2r
+    \xE7emberlerinin merkezinde ise, bak\u0131\u015Flar\u0131 telvelerin her bir
+    zerresine kenetlenmi\u015F \"g\xF6zler\" var. Hem yak\u0131n \xE7evrendeki hem
+    de i\u015F vesilesiyle tan\u0131d\u0131\u011F\u0131n insanlar senin \xF6zel hayat\u0131nla
+    neden bu kadar ilgileniyorlar {{isim}}? Bu durumdan huzursuz oldu\u011Funu seziyorum.
+    \"Huzur ve memnuniyet\" seni tamamlayan hissiyatlar iken, bak\u0131\u015Flar\u0131n\u0131
+    \xFCzerine diken insanlar i\xE7in yaln\u0131zca uzak ve yabanc\u0131 kavramlar.
+    \n\nFal\u0131nda beliren g\xF6zlerin \xFCst k\u0131sm\u0131nda, senin gibi {{yas_-3}}-{{yas_+3}}
+    ya\u015Flar\u0131 aras\u0131nda ve {{kelime, kariyeriyle a\u015Fk hayat\u0131n\u0131
+    uzla\u015Ft\u0131ramayan | a\u015Fktan yana \xE7ok bahts\u0131z | a\u015Fk hayat\u0131ndaki
+    bahts\u0131zl\u0131\u011F\u0131 kariyerini de olumsuz etkileyen}} biri belirmi\u015F;
+    i\u015F ile a\u015Fk aras\u0131nda kurdu\u011Fun dengeye imreniyor. Ne var ki
+    {{isim}}; bahsini etti\u011Fim mevcut d\xFCzen, asl\u0131nda senin lehine \xE7al\u0131\u015Fmakta.
+    Ya\u015Fam enerjine g\u0131pta eden insanlar\u0131n yayd\u0131\u011F\u0131 enerji
+    \xF6yle bir frekansta ki, bunu \"nazar\" olarak de\u011Fil de bir \xE7e\u015Fit
+    \u201Ckald\u0131ra\xE7\u201D olarak adland\u0131rabilirim ancak. \u0130nsanlar\u0131n
+    {{kelime, olumsuz d\xFC\u015F\xFCncelerini | i\u011Fneleyici imalar\u0131n\u0131}}
+    \"iltifat\" olarak kabul etmen en iyisi. \xC7\xFCnk\xFC hayat\u0131ndaki huzur
+    ve bolluk, insanlar\u0131n imrenmeleriyle \"do\u011Fru orant\u0131l\u0131\" olarak
+    artacak.\n\nHaset duygusuyla a\u011F\u0131rla\u015Fan ruhlar, bir tahterevalliye
+    oturtulmu\u015F\xE7as\u0131na g\xF6klere \xE7\u0131karacak seni. \xD6yle ki,
+    {{ay_6}} ay\u0131n\u0131n sonunda bulundu\u011Fun konumdan her anlamda ad\u0131m
+    ad\u0131m yukar\u0131 \xE7\u0131kt\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum.
+    G\u0131pta eden bak\u0131\u015Flar taraf\u0131ndan bereketle kutsanan bir gelece\u011Fi,
+    san\u0131yorum yaln\u0131zca senin fal\u0131nda g\xF6rd\xFCm..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

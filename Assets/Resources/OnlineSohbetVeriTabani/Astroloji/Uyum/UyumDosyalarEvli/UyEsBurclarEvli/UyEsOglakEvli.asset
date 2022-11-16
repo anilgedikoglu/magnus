@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyEsOglakEvli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA16218103222
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"\\\"En
+    sad\u0131k ve ailesine en d\xFC\u015Fk\xFCn bur\xE7 hangisi?\\\" diye sorsalar,
+    hi\xE7 d\xFC\u015F\xFCnmeden \\\"o\u011Flak\\\" diyebilirim. \xD6zellikle de
+    o\u011Flak {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n,
+    erkekleri}}. G\xF6z\xFCn\xFCn asla arkada kalmayaca\u011F\u0131 bir e\u015Fe
+    sahipsin {{isim}}. {{burc}} burcu mensubu olarak sana bakt\u0131\u011F\u0131mda
+    ise, i\u015Fin ak\u0131\u015F\u0131na kar\u0131\u015Fmasan da son karar\u0131
+    veren ki\u015Fi olmay\u0131 sevdi\u011Fini g\xF6r\xFCyorum. Bu noktada e\u015Finle
+    biraz ayr\u0131l\u0131yorsunuz. \\\"Ayr\u0131lmak\\\" do\u011Fru kelime olmayabilir;
+    belki de \\\"\xE7ak\u0131\u015F\u0131yorsunuz\\\" demek gerekliydi... O\u011Flak
+    bur\xE7lar\u0131 y\xF6netmeyi sever {{isim}}. Sizde ise patronun tek oldu\u011Funu
+    anlamak \xE7ok zor de\u011Fil. :) Her ikiniz de kaliteli insanlars\u0131n\u0131z;
+    bu su g\xF6t\xFCrmez bir ger\xE7ek. Sen hata yapmaya e\u015Fine g\xF6re biraz
+    daha a\xE7\u0131k g\xF6z\xFCk\xFCyorsun. Seni uyarmak istedi\u011Fim tek konu
+    bu; y\xF6netici gezegeni Sat\xFCrn olan o\u011Flak burcu, hatay\u0131 kolay kolay
+    affetmez. E\u015Fine kar\u015F\u0131 hata yapma ki, ba\u011F\u0131\u015Flanma
+    beklemeyesin.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "e\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "o\u011Flak"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

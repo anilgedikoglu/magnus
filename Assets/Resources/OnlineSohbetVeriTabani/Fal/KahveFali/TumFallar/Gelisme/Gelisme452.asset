@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme452
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA16339272714
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131nda odakland\u0131\u011F\u0131m kimi k\u0131s\u0131mlar, olduk\xE7a
+    telvesiz ve ayd\u0131nl\u0131k. Nas\u0131l ki bu k\u0131s\u0131mlara kahve tortular\u0131
+    yap\u0131\u015Fam\u0131yorsa, sorunlar da senin ya\u015Fam\u0131na adeta pek
+    tutunam\u0131yor. Bunun 3 sebebi oldu\u011Funu g\xF6r\xFCyorum {{isim}}; birincisi,
+    \u015Fans enerjin \xE7ok y\xFCksek. \u0130kincisi, kar\u015F\u0131na dikilen
+    s\u0131k\u0131nt\u0131lar \xE7elikten de olsa, onlar\u0131n h\u0131zla \xFCstesinden
+    gelebilecek \"titanyum\" bir iradeye sahipsin. \xDC\xE7\xFCnc\xFCs\xFC ve en
+    \u015Fa\u015F\u0131rd\u0131\u011F\u0131msa \u015Fu; sen korunuyorsun! Evet; birileri
+    ya da bir \u015Feyler taraf\u0131ndan bariz bir bi\xE7imde korunuyorsun...\n\nFal\u0131nda
+    toplu bir anahtarl\u0131k var. Bu anahtarl\u0131kta {{sayi,2,3}} anahtar tak\u0131l\u0131.
+    \u015Eu an ba\u015Fkalar\u0131na ait oldu\u011Funu ya da veraset durumunun muallakta
+    oldu\u011Funu hissetti\u011Fim bu anahtarlar\u0131n a\xE7t\u0131\u011F\u0131
+    \u015Feyler, yak\u0131nda senin ya da ailenin eline ge\xE7ecek. Maddi anlamda
+    bu durum senin i\xE7in bir d\xF6n\xFCm noktas\u0131 olacak {{isim}}. O zamana
+    kadar \xE7evrenden y\xFCkselen seslere kulaklar\u0131n\u0131 t\u0131kamal\u0131,
+    yanl\u0131\u015F y\xF6nlendirmeleri iyi ay\u0131rt etmeli ve kimsenin laf\u0131yla
+    istikametini de\u011Fi\u015Ftirmemelisin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

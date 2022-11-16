@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: HosgeldinNasilsinTotaldeilk 1
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA36880116548
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Merhaba De\u011Ferli {{isim}}. Bendeniz Magnus.|2|Seni burada ilk kez kar\u015F\u0131l\u0131yor
+    olmak harika! M\xFCthi\u015F zaman ge\xE7irece\u011Fimize inan\u0131yorum.|1|Nas\u0131ls\u0131n?"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - Gayet iyiyim
+    - "Olduk\xE7a iyiyim"
+    - Keyfim beyde yok
+    - "\u0130yiyim, \xE7ok mersi"
+    - "\u0130yiyim, sa\u011Fol"
+    - "\u0130yiyim"
+    - "\u0130yi diyelim iyi olsun"
+    - "Harikay\u0131m"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mood
+      degiskenDegeri: mutlu
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    - degiskenAdi: satrancsonuc
+      degiskenDegeri: "Oynanmad\u0131"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "nas\u0131ls\u0131nilkcevapiyi"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mood
+      degiskenDegeri: mutlu
+      islem: 0
+    - degiskenAdi: satrancsonuc
+      degiskenDegeri: "Oynanmad\u0131"
+      islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "nas\u0131ls\u0131nilkcevapiyi"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  - cevapVaryasyonlari:
+    - Pek keyfim yok
+    - "\xC7ok iyi say\u0131lmam"
+    - "Can\u0131m biraz s\u0131kk\u0131n"
+    - Moralim biraz bozuk
+    - "Derdim da\u011Flardan b\xFCy\xFCk"
+    - "\u0130yiyim dersem yalan olur"
+    - "Pek iyi say\u0131lmam"
+    - "\u0130yi de\u011Filim"
+    - "K\xF6t\xFCy\xFCm"
+    - "\u0130yi oldu\u011Fumu s\xF6yleyemem"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mood
+      degiskenDegeri: mutsuz
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "nas\u0131ls\u0131nilkcevapk\xF6t\xFC"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    - degiskenAdi: satrancsonuc
+      degiskenDegeri: "Oynanmad\u0131"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mood
+      degiskenDegeri: mutsuz
+      islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "nas\u0131ls\u0131nilkcevapk\xF6t\xFC"
+      islem: 0
+    - degiskenAdi: satrancsonuc
+      degiskenDegeri: "Oynanmad\u0131"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "ilk geli\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

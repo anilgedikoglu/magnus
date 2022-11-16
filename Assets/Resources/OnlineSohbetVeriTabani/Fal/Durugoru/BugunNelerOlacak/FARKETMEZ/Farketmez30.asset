@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Farketmez30
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA17522531331
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Kafanda d\xFCnden kalma soru i\u015Faretlerinin tek tek yan\u0131tlanaca\u011F\u0131
+    bir g\xFCndesin {{isim}}. \u0130lk cevab\u0131 \xF6\u011Flen saatlerinin sonlar\u0131nda
+    alacak, hem tatmin olacak hem de i\xE7ini rahatlatacaks\u0131n. Saat 1{{sayi,5,8}}
+    dolaylar\u0131nda kalbinde anlam veremedi\u011Fin bir \xE7arp\u0131nt\u0131 hissedebilirsin.
+    Bu tecr\xFCbenin hemen ard\u0131ndan ya\u015Fayaca\u011F\u0131n k\xFC\xE7\xFCk
+    bir geli\u015Fme, y\xFCre\u011Fini \"f\u0131rt\u0131na sonras\u0131 sessizli\u011Fin\"
+    kaplamas\u0131na neden olacak ve keyifli bir dinginli\u011Fe b\xFCr\xFCneceksin.
+    Ak\u015Fam saatlerinde ise, senden yakla\u015F\u0131k {{kelime, yar\u0131m saatlik
+    mesafede | 20 km uzakl\u0131kta | 10 km uzakl\u0131kta | 30 km uzakl\u0131kta}}
+    oturan eski bir {{kelime, arkada\u015F\u0131nla | tan\u0131d\u0131\u011F\u0131nla}}
+    ilgili \xF6\u011Frenece\u011Fin bir bilgi, seni bir hayli mutlu edecek. G\xFCn\xFC
+    yorgun fakat pozitif noktalayacaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

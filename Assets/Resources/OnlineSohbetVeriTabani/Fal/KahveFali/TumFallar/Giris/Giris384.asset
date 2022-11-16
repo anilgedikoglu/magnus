@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris384
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA99543920483
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerine bakar bakmaz, en tepede \"tam g\xFCne\u015F tutulmas\u0131\" olu\u015Ftu\u011Funu
+    g\xF6rd\xFCm {{isim}}. \U0001F31EMalumun, g\xFCne\u015Fin tam tutulmas\u0131
+    her 1,5 y\u0131lda bir ger\xE7ekle\u015Fir. Fincan\u0131n\u0131n ayr\u0131ld\u0131\u011F\u0131
+    \"be\u015Fli\" dilimler, fal\u0131ndaki tam tutulman\u0131n tekrarlanmas\u0131na
+    3 ay kald\u0131\u011F\u0131n\u0131 g\xF6steriyor. Bu da demek oluyor ki, \xF6n\xFCm\xFCzdeki
+    {{ay_+3}} ay\u0131nda g\xF6lgesinde kalaca\u011F\u0131n ve kontrol alt\u0131na
+    alamayaca\u011F\u0131n bir olay meydana gelecek. A\u015Fk hayat\u0131n\u0131
+    ilgilendiren ve bir {{data, cinsiyet=erkek, han\u0131mefendiyle | cinsiyet=kad\u0131n,
+    beyefendiyle | cinsiyet=lgbt, insanla}} ya\u015Fayaca\u011F\u0131n bu olay boyunca
+    sab\u0131rl\u0131 oldu\u011Fun ve tart\u0131\u015Fmaktan ka\xE7\u0131nd\u0131\u011F\u0131n
+    takdirde, {{kelime, olumlu sonu\xE7lar | lehine olacak sonu\xE7lar | krizi f\u0131rsata
+    \xE7evirdi\u011Finin g\xF6stergesi olan sonu\xE7lar | hi\xE7 beklemedi\u011Fin
+    ve \u015Fa\u015F\u0131rt\u0131c\u0131 derecede g\xFCzel bir sonu\xE7}} alaca\u011F\u0131n\u0131
+    hissediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

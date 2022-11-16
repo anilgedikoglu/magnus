@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme763
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA62862800700
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerin orta k\u0131s\u0131mlar\u0131nda belirmi\u015F kuvvetli bir \u0131\u015F\u0131k
+    kayna\u011F\u0131 var, t\u0131pk\u0131 g\xFCne\u015Fe benziyor. E\u015Fin han\u0131mefendinin
+    ve di\u011Fer aile fertlerinin senin \xFCzerindeki sorumluluklar\u0131n\u0131
+    sembolize ediyor. Sen ise bu \u0131\u015F\u0131k kayna\u011F\u0131n\u0131n alt\u0131ndas\u0131n.
+    Erimemek ve ayakta durabilmek ad\u0131na hem bedeninde hem de ruhunda birtak\u0131m
+    de\u011Fi\u015Fiklikler ge\xE7irmekte oldu\u011Funu a\xE7\u0131k\xE7a g\xF6zlemleyebiliyorum.
+    Paran\u0131n \xF6nemli bir iyile\u015Ftirici oldu\u011Fu d\xFC\u015F\xFCn\xFCl\xFCr,
+    ancak senin durumunda hayatta kalabilmeni sa\u011Flayacak olan as\u0131l unsur,
+    \"huzur\" De\u011Ferli {{isim}}. Kendi i\u015Finin d\u0131\u015F\u0131nda bug\xFCne
+    kadar erteledi\u011Fin bir u\u011Fra\u015F\u0131 hayata ge\xE7irmek, yak\u0131nda
+    sana bu huzuru sa\u011Flayacak.\n\nFincan\u0131n\u0131 {{kelime, saat 3 y\xF6n\xFCnde
+    | saat 9 y\xF6n\xFCnde | do\u011Fu y\xF6n\xFCnde | bat\u0131 y\xF6n\xFCnde}}
+    biraz \xE7evirdi\u011Fimde, orada seni bir ekrana bakarken g\xF6r\xFCyorum. Rakamlar\u0131n
+    {{kelime, yan yana | alt alta}} dizildi\u011Fi bu ekran, ilk etapta sana huzursuzluk
+    verecek. G\xF6rd\xFCklerin sanki senin i\xE7in birer kriter niteli\u011Finde.
+    Zor durumda oldu\u011Funa kanaat getirecek ve can\u0131n\u0131 s\u0131kacaks\u0131n.
+    Fakat bu durumun ger\xE7ekle\u015Fmesinin \xFCzerinden {{kelime, 24 | 48 | 36
+    | 72}} saat ge\xE7meden, {{kelime, tan\u0131d\u0131\u011F\u0131n | tan\u0131mad\u0131\u011F\u0131n
+    | sana yabanc\u0131 gelen | kayna\u011F\u0131n\u0131 kestiremedi\u011Fin | kayna\u011F\u0131ndan
+    \xE7ok da umutlu olmad\u0131\u011F\u0131n}} bir telefon numaras\u0131ndan aranacak
+    ve duyacaklar\u0131ndan sonra derin bir \"oh!\" \xE7ekeceksin {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

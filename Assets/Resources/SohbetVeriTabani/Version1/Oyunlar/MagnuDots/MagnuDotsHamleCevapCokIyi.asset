@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: MagnuDotsHamleCevapCokIyi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA58005090248
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - Tek kelimeyle haaa riiii kaaaa!!!
+  - "\u0130nan\u0131l\u0131r gibi de\u011Fil! S\xF6yleyecek s\xF6z bulam\u0131yorum
+    {{isim}}!..."
+  - "M\xFCk kem melll..."
+  - "\"Bu i\u015Fin ustas\u0131y\u0131m, MagnuDots'un hastas\u0131y\u0131m\" diyorsun
+    ha? Bravo ger\xE7ekten!!!"
+  - "Boooooom! \u0130nan\u0131lmazs\u0131n {{isim}}..."
+  - "Bu yapt\u0131\u011F\u0131n, futbolda orta sahadan gol atmak gibi bir \u015Fey.
+    Kusursuzzz!"
+  - "Huuuvvv!!! Onca noktay\u0131 tek seferde 90'a takt\u0131n {{isim}}, vallahi
+    bravo!"
+  - "Vaaayy anas\u0131n\u0131\u0131\u0131! <sprite=13><sprite=13><sprite=13>"
+  - "G\xF6zlerime inanam\u0131yorum, o nas\u0131l hareket! <sprite=17> <sprite=13>
+    <sprite=13>"
+  - "Sen bu oyunda ger\xE7ekten en iyisisin {{isim}}!"
+  - "Tebrikler!!! \u0130nan\u0131lmaz k\u0131vrak hareketlerle harika bir i\u015F
+    \xE7\u0131kard\u0131n {{isim}}!"
+  - "Muhte\u015Femmm! 7-8-9 derken heyecandan sonras\u0131n\u0131 sayamad\u0131m.
+    Harikas\u0131n!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - Pes ediyorum.
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnudots cikis
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnudots cikis
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: magnusdots hamle cevap cok iyi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

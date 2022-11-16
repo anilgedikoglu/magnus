@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme681
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA92501936620
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n orta noktas\u0131nda, telvelerine \u0131\u015F\u0131lt\u0131 sa\xE7an
+    bir \u015F\xF6mine g\xF6r\xFCn\xFCyor {{isim}}. \U0001F525{{kelime, Geni\u015F
+    omuzlu | Orta-uzun boylu | Aln\u0131 geni\u015F}} yabanc\u0131 bir adam, \u015F\xF6minede
+    yanan c\u0131l\u0131z ate\u015F topunu yeni odunlar ekleyerek s\xF6nmekten kurtarmakta.
+    \u015Eiddetlenen alazlar, \xE7evresinde de\u011Fdi\u011Fi her e\u015Fyan\u0131n
+    i\xE7ine s\u0131zarak so\u011Fuklu\u011Fu adeta bertaraf ediyor. Anlad\u0131\u011F\u0131m
+    kadar\u0131yla, e\u015Fin beyefendi ile aran\u0131zda cereyan eden maddiyata
+    ba\u011Fl\u0131 tart\u0131\u015Fmalar can\u0131n\u0131 s\u0131km\u0131\u015F
+    ve bir k\u0131rg\u0131nl\u0131\u011Fa neden olmu\u015F {{isim}}. Ge\xE7inme kayg\u0131s\u0131
+    zihnini ku\u015Fatm\u0131\u015Fa benziyor. Aran\u0131zda esen poyraz r\xFCzgarlar\u0131
+    sebebiyle haneniz so\u011Fuk bir hissiyat\u0131n esiri haline gelmi\u015F.\n\nBu
+    durum seni daha fazla huzursuz edemeyecek {{isim}}. \xC7ok yak\u0131n bir zamanda
+    e\u015Finin eline kariyer ba\u011Flam\u0131nda \xE7ok b\xFCy\xFCk bir f\u0131rsat
+    ge\xE7ecek. Fal\u0131na ilk bak\u0131\u015Fta bahsini etti\u011Fim, {{kelime,
+    kapsaml\u0131 \xE7evresi olan | e\u015Fine kapsaml\u0131 olanaklar sunabilecek
+    | yapacaklar\u0131yla e\u015Finin kariyerinde d\xF6n\xFCm noktas\u0131 say\u0131labilecek}}
+    bu adam, hanende cereyan eden so\u011Fuk r\xFCzgarlar\u0131n, yerini tatl\u0131
+    bir s\u0131cakl\u0131\u011Fa b\u0131rakmas\u0131n\u0131 sa\u011Flamada ilk ad\u0131m
+    olacak. \xDCstelik {{sayi,4,8}} hafta gibi \xE7ok da yak\u0131n bir zamanda,
+    maddi sorunlar\u0131n ve e\u015Finle aran\u0131zdaki manevi uzakl\u0131\u011F\u0131n
+    yok oldu\u011Funu g\xF6receksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "ev han\u0131m\u0131"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "ev han\u0131m\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

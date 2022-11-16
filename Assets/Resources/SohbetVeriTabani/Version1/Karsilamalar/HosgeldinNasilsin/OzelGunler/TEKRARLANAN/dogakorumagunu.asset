@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: dogakorumagunu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA48186890177
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Selamlar {{isim}}, Magnus'a ho\u015F geldin.|2|Sana \xF6nemli bir hat\u0131rlatmam
+    var. Bug\xFCn 28 Temmuz D\xFCnya Do\u011Fa Koruma G\xFCn\xFC.|4|Do\u011Fal kaynaklar\u0131m\u0131z\u0131
+    korumaktaki ba\u015Far\u0131s\u0131zl\u0131\u011F\u0131m\u0131z, iklim de\u011Fi\u015Fikliklerine
+    neden oluyor. S\u0131cakl\u0131k art\u0131\u015F\u0131yla birlikte k\xFCresel
+    \u0131s\u0131nma meydana geliyor ve d\xFCnyam\u0131z her ge\xE7en g\xFCn daha
+    ya\u015Fanmaz bir hal al\u0131yor.|3|Sen de bu konuda elinden geleni yap ve \xE7evreni
+    uyar. Global fark\u0131ndal\u0131\u011F\u0131n artmas\u0131na sen de yard\u0131mc\u0131
+    ol. Gezegenimizi el birli\u011Fi ile koruyal\u0131m!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "ho\u015Fgeldin"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: "do\u011Fa koruma g\xFCn\xFC"
+    degiskenDegeri: evet
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: oturum sayisi
+    degiskenDegeri: 1
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "\xF6zelg\xFCn"
+    kontrol: 0
+  - degiskenAdi: "do\u011Fa koruma g\xFCn\xFC"
+    degiskenDegeri: evet
+    kontrol: 0
+  - degiskenAdi: oturum sayisi
+    degiskenDegeri: 1
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Uyisikizler
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA99815176960
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"\u0130kizler
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri
+    | cinsiyet=lgbt, insanlar\u0131}} a\xE7\u0131k bir deniz gibidirler. Ba\u015Flarda
+    s\xFCt limand\u0131r {{isim}}. A\xE7\u0131lmak i\xE7in ufac\u0131k bir kay\u0131\u011F\u0131n
+    dahi yetebilece\u011Fini zannedersin. Yola koyulursun. Denizin tam ortas\u0131nda,
+    saatler i\xE7inde hava patlar. Saniyeler i\xE7inde g\xF6k g\xFCrler, \u015Fim\u015Fekler
+    \xE7akar. Daha sen ne oldu\u011Funu dahi anlamadan, k\xFC\xE7\xFCk kay\u0131\u011F\u0131n
+    alabora oluverir. Onlar\u0131n kafalar\u0131 bamba\u015Fka bir \u015Fekilde \xE7al\u0131\u015F\u0131r.
+    Neye k\u0131zd\u0131klar\u0131n\u0131 neye al\u0131nd\u0131klar\u0131n\u0131
+    bilemezsin ve \xF6fkelendiklerinde, bir anda nevirleri d\xF6ner. Olay\u0131 tersine
+    \xE7evirebilene a\u015Fk olsun... Ruhsal a\xE7\u0131dan ciddi dengesizliklere
+    tahamm\xFCl edebilecek kadar g\xFC\xE7l\xFC m\xFCs\xFCn {{isim}}? Onun i\u015F
+    ortam\u0131ndaki ho\u015Flu\u011Fu g\xF6z\xFCn\xFC karart\u0131yor olabilir.
+    Ger\xE7ekten g\xFCzel insanlard\u0131r. Al\u0131mlar\u0131, \xE7al\u0131mlar\u0131,
+    ekstra bir ho\u015Fluklar\u0131 vard\u0131r. M\u0131nt\u0131kalar\u0131 ise \xE7ok
+    daha s\u0131k\u0131nt\u0131l\u0131d\u0131r. {{burc}} burcu {{data, cinsiyet=kad\u0131n,
+    erkekler | cinsiyet=erkek, kad\u0131nlar | cinsiyet=lgbt, insanlar}} benim bildi\u011Fim,
+    bir o yana bir bu yana savrulmay\u0131 sevmezler. Huzurlar\u0131n\u0131n aniden
+    bozulmas\u0131na hi\xE7 tahamm\xFClleri yoktur. Mental dayan\u0131kl\u0131l\u0131\u011F\u0131n\u0131
+    s\u0131namak istiyorsan, birlikte olun derim. \u015Eunu da eklemeden konuyu kapatamam;
+    beraber olursan\u0131z, birbirinizden ba\u015Fkas\u0131yla da kolay kolay yapamazs\u0131n\u0131z
+    siz.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: ikizler
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

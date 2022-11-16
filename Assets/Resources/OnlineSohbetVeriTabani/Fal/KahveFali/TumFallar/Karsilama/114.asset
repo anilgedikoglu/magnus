@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 114
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA96139154443
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Evet, san\u0131r\u0131m haz\u0131r\u0131z. Fincan\u0131n\u0131n {{kelime, d\u0131\u015F
+    | \xFCst | alt}} kenarlar\u0131nda minik ta\u015Fmalar g\xF6zlemledim {{isim}}.
+    {{kelime, Bug\xFCn | Son zamanlarda | Ge\xE7irdi\u011Fimiz \u015Fu son saatlerde}}
+    {{kelime, birileri kulaklar\u0131n\u0131 \xE7\u0131nlatabilir | bir akraban senin
+    dedikodunu ediyor olabilir | baz\u0131 tan\u0131d\u0131klar\u0131n senin dedikodunu
+    ediyor olabilir | sevdi\u011Fin ve uzun s\xFCredir g\xF6r\xFC\u015Fmedi\u011Fin
+    biri seni an\u0131yor olabilir | s\xFCr\xFCncemede olan ve vadesi dolmu\u015F
+    bir soruna \xE7\xF6z\xFCm bulmak \xFCzere olabilirsin | uzun s\xFCredir g\xF6r\xFC\u015Fmedi\u011Fin
+    biri taraf\u0131ndan \xF6zleniyor olabilirsin | seni seven ve uzun s\xFCredir
+    g\xF6r\xFC\u015Fmedi\u011Fin biri, kafas\u0131n\u0131n i\xE7inde seninle konu\u015Fuyor
+    olabilir}}. \U0001F41F Bakal\u0131m fal\u0131nda neler var;"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar:
+  - "kahve fal\u0131 giri\u015F"
+  - "kahve fal\u0131 ba\u011Flama"
+  - "kahve fal\u0131 geli\u015Fme"
+  - "kahve fal\u0131 sonu\xE7"
+  - "kahve fal\u0131 u\u011Furlama"
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahveanimsonras\u0131"
+    islem: 0
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

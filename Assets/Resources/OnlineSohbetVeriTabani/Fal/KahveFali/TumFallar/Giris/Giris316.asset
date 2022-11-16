@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris316
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA72705282512
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n i\xE7ini uhrevi bir hissiyatla dolduran b\xFCy\xFCl\xFC \"mandala\"
+    \xE7emberleri g\xF6r\xFCyorum {{isim}}. \xC7emberlerin merkezinde ise sen vars\u0131n.
+    Uzuvlar\u0131n mandala desenlerini olu\u015Fturan \xE7izgilerle adeta b\xFCt\xFCnle\u015Fmi\u015F.
+    \U0001F938\u200DFal\u0131nda beliren bu kudretli sembol, ruhunun kayboldu\u011Fu
+    derinlikleri yans\u0131tt\u0131\u011F\u0131 gibi hayat\u0131n\u0131n ufkunu rehin
+    alacak olan de\u011Fi\u015Fimlerin de habercisi asl\u0131nda. Y\xFCre\u011Finin
+    derinliklerinde titre\u015Fen a\u015Fk ve sevgi \xE7a\u011Fr\u0131s\u0131, kozmosun
+    en \xFCcra k\xF6\u015Felerinde yank\u0131lanm\u0131\u015F. \U0001F320\"Do\u011Fum
+    sanc\u0131lar\u0131\" i\xE7inde bir a\u015Fk\u0131n yakla\u015Fmakta olan seslerini
+    duyuyorum {{isim}}. \xC7ok yak\u0131nda hayat\u0131na girecek olan {{data, cinsiyet=erkek,
+    kad\u0131n | cinsiyet=kad\u0131n, erkek | cinsiyet=lgbt, insan}} ile ya\u015Fayaca\u011F\u0131n
+    ili\u015Fkiyi adeta \"ayn\u0131 ruhun iki ayr\u0131 bedende can bulmas\u0131\"
+    olarak tan\u0131mlayabilirim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

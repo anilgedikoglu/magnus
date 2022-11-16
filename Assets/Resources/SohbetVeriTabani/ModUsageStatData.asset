@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4bdb1b82c4dc3418c8e201daa7b35c, type: 3}
+  m_Name: ModUsageStatData
+  m_EditorClassIdentifier: 
+  mods:
+  - mod: "kahve fal\u0131 kar\u015F\u0131lama"
+    onlineKey: kahvefali
+    UITitle: "Kahve Fal\u0131"
+  - mod: "tarot zaman se\xE7im"
+    onlineKey: tarot
+    UITitle: Tarot
+  - mod: bno
+    onlineKey: bno
+    UITitle: "Bug\xFCn Neler Olacak"
+  - mod: yno
+    onlineKey: yno
+    UITitle: "Yar\u0131n Neler Olacak"
+  - mod: gno
+    onlineKey: gno
+    UITitle: Gelecekte Neler Olacak
+  - mod: "kehanetya\u015Fama"
+    onlineKey: kehanetyasama
+    UITitle: "Kehanet (Ya\u015Fama)"
+  - mod: kehanetbana
+    onlineKey: kehanetbana
+    UITitle: Kehanet (Bana)
+  - mod: tefeul
+    onlineKey: tefeul
+    UITitle: "Tefe\xFCl"
+  - mod: niyet
+    onlineKey: niyet
+    UITitle: Niyet
+  - mod: "el fal\u0131 foto\u011Fraf y\xFCkleme tipi ilk"
+    onlineKey: elfali
+    UITitle: "El Fal\u0131"
+  - mod: "y\xFCz fal\u0131 kimin"
+    onlineKey: yuzfali
+    UITitle: "Y\xFCz Fal\u0131"
+  - mod: wheelspin fal baslangic
+    onlineKey: kadercarki
+    UITitle: "Kader \xC7ark\u0131"
+  - mod: burcsistem1
+    onlineKey: gunlukastroloji
+    UITitle: "Bur\xE7 Yorumu"
+  - mod: dogumharitasi
+    onlineKey: dogumharitasi
+    UITitle: "Do\u011Fum Haritas\u0131"
+  - mod: biyoritim
+    onlineKey: biyoritim
+    UITitle: Biyoritim
+  - mod: uyumstep1
+    onlineKey: askuyumu
+    UITitle: "A\u015Fk Uyumu"
+  - mod: smsohbet
+    onlineKey: sohbet
+    UITitle: Sohbet
+  - mod: motivasyon
+    onlineKey: motivasyon
+    UITitle: Motivasyon
+  - mod: hangi analiz
+    onlineKey: analiz
+    UITitle: Analiz
+  - mod: "kaz\u0131bil kar\u015F\u0131lama"
+    onlineKey: kazibil
+    UITitle: "Kaz\u0131bil"
+  - mod: bilgi hangi konu
+    onlineKey: bilgiyarismasi
+    UITitle: "Bilgi Yar\u0131\u015Fmas\u0131"
+  - mod: magnumbers
+    onlineKey: magnumbers
+    UITitle: MagnuMBers
+  - mod: magnutris son oyun kontrol
+    onlineKey: magnutris
+    UITitle: ManguTris
+  - mod: magnudots
+    onlineKey: magnudots
+    UITitle: MagnuDots
+  - mod: magnuflow
+    onlineKey: magnuflow
+    UITitle: MagnuFlow
+  - mod: magnukem
+    onlineKey: magnukem
+    UITitle: MagnuKem
+  - mod: "satran\xE7 renk se\xE7"
+    onlineKey: satranc
+    UITitle: "Satran\xE7"
+  - mod: aa oyun
+    onlineKey: magnustab
+    UITitle: MagnuStab
+  - mod: wheelspin reklam goster
+    onlineKey: sanscarki
+    UITitle: "\u015Eans \xC7ark\u0131"
+  - mod: "\xF6zl\xFCs\xF6z1"
+    onlineKey: ozlusoz
+    UITitle: "\xD6zl\xFC S\xF6z"
+  - mod: "kedini tan\u0131t"
+    onlineKey: kendinitanit
+    UITitle: "Kendini Tan\u0131t"
+  - mod: sss
+    onlineKey: sss
+    UITitle: "S\u0131k Sorulan Sorular"

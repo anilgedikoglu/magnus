@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris320
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA74841587438
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131nda \"{{kelime, tambur | nefesli bir \xE7alg\u0131 | yayl\u0131 bir
+    \xE7alg\u0131 | \xFCflemeli bir \xE7alg\u0131 | vurmal\u0131 bir \xE7alg\u0131
+    | c\xFCmb\xFC\u015F | kanun}}\" \xE7almakta olan {{kelime, 50'li | 60'l\u0131
+    | 70'li}} ya\u015Flarda bir beyefendi belirmi\u015F. Bu ki\u015Finin ustaca \xE7ald\u0131\u011F\u0131
+    ezgiyi dinlemeye koyulmu\u015F kalabal\u0131\u011F\u0131n i\xE7inde sen de vars\u0131n.
+    \U0001F3B6Herkes birbirine \xF6yle yak\u0131n temas halinde ki, bedenlerin nerede
+    ba\u015Flay\u0131p nerede bitti\u011Fini net bir \u015Fekilde g\xF6remiyorum.
+    Telvelerin, {{kelime, 2-3 |4-5}} sene \xF6ncesine dayanan g\xFCzel ve e\u011Flenceli
+    baz\u0131 zamanlar\u0131 arad\u0131\u011F\u0131n\u0131, ancak \xE7evrende art\u0131k
+    o s\u0131cakl\u0131\u011F\u0131 bulamad\u0131\u011F\u0131n\u0131 s\xF6yl\xFCyor.
+    Hakl\u0131 bir aray\u0131\u015F i\xE7indesin {{isim}}. \u0130li\u015Fkinde yolunda
+    gitmeyen meseleler seni \xF6zellikle ge\xE7mi\u015F zaman\u0131 d\xFC\u015F\xFCnmeye
+    itmi\u015F. \U0001F4AD Telvelerin, hayallerinin meyvelerini verece\u011Fini f\u0131s\u0131ld\u0131yor.
+    \xD6n\xFCm\xFCzdeki {{ay_+3}} ve {{ay_+6}} aylar\u0131 aras\u0131nda \xE7evrende
+    meydana gelecek baz\u0131 geli\u015Fmeler sana t\u0131pk\u0131 eski g\xFCzel
+    zamanlar\u0131n tad\u0131n\u0131 verecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 33
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 33
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

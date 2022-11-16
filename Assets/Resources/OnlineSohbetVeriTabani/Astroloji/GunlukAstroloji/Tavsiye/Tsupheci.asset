@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tsupheci
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA56691653931
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn kula\u011F\u0131na \xE7e\u015Fitli konularda farkl\u0131 f\u0131s\u0131lt\u0131lar
+    gelebilir {{isim}}. {{burc}} bur\xE7lar\u0131 bug\xFCn olduk\xE7a \u015F\xFCpheci
+    bir g\xFCnlerindeler. Belirli saatlerde i\xE7ine baz\u0131 meselelerle ilgili
+    ard\u0131 s\u0131ra vesveseler do\u011Fabilir. Bu durumun karar vermeni ve harekete
+    ge\xE7meni geciktirebilir, hatta engelleyebilir. \"Gittim mi? A\xE7t\u0131m m\u0131?
+    Ald\u0131m m\u0131? Kapatt\u0131m m\u0131? S\xF6yledim mi? G\xF6nderdim mi? B\u0131rakt\u0131m
+    m\u0131?\" gibi kuruntularla kar\u015F\u0131la\u015F\u0131rsan, baz\u0131 \u015Feyleri
+    gereksiz yere iki defa yapabilirsin. Bu \u015F\xFCphecili\u011Fin seni bug\xFCn
+    biraz yorabilir. \u0130li\u015Fkilerinde ise \u015F\xFCphelerini kar\u015F\u0131ndaki
+    insanlara yans\u0131tman ho\u015F kar\u015F\u0131lanmayabilir. Baz\u0131 sorulara
+    yan\u0131tlar\u0131 kendin vermen gerekti\u011Fini d\xFC\u015F\xFCn\xFCyorum.
+    En rahats\u0131z edici tedirginli\u011Fi ise sa\u011Fl\u0131\u011F\u0131nla ilgili
+    ya\u015Fayabilirsin. Kendini gere\u011Finden fazla dinleyece\u011Fini ve s\xFCrekli
+    bir \u015Feylerin olup olmad\u0131\u011F\u0131n\u0131 sorgulayaca\u011F\u0131n\u0131
+    hissediyorum {{isim}}. Bug\xFCn bu d\xFC\u015F\xFCncelere ge\xE7it vermemeli
+    ve asl\u0131 astar\u0131 olmayan tats\u0131z fikirleri susturmal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

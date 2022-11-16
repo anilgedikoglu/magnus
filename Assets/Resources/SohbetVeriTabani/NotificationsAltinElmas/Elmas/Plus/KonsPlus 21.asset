@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: KonsPlus 21
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "Konsantrasyonum doldu! Yemek, temizlik, \xE7ama\u015F\u0131r, bula\u015F\u0131k...
+    Hepsi bittiyse kendine biraz zaman ay\u0131r {{isim}}. Kahveni haz\u0131r etti\u011Finde
+    ben buraday\u0131m! <sprite=7>"
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 1
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "ev han\u0131m\u0131"
+    kontrol: 0

@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme585
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA17725355633
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xC7ok \xE7ok ilgin\xE7 baz\u0131 detaylar g\xF6r\xFCyorum fal\u0131nda. Gelecek
+    {{sayi,2,3}} hafta i\xE7erisinde bir ak\u015Fam \xFCst\xFC, sen internetten film
+    izlemek i\xE7in ekran ba\u015F\u0131na oturdu\u011Funda, hi\xE7 ummad\u0131\u011F\u0131n
+    birinin sana mesaj ataca\u011F\u0131n\u0131 hissediyorum. Seni dikkatle filmlere
+    bakarken ve birini se\xE7meye \xE7al\u0131\u015F\u0131rken g\xF6r\xFCyorum {{isim}}.
+    \"Kim oldu\u011Funu s\xF6yleyebilir misin?\" ya da \"ba\u015Fka ak\u015Famlarda
+    da izleyebilirim, hangi ak\u015Fam ki o?\" dedi\u011Fini duyar gibiyim. G\xF6z\xFCne
+    {{kelime, \"esaretin bedeli\" | \"baba\" | \"ucuz roman\" | \"Schindler'in listesi\"
+    | \"12 \xF6fkeli adam\" | \"ba\u015Flang\u0131\xE7\" | \"forrest gump\" | \"iyi,
+    k\xF6t\xFC ve \xE7irkin\" | \"matrix\" | \"s\u0131k\u0131 dostlar\" | \"guguk
+    ku\u015Fu\" | \"parazit\" | \"y\u0131ld\u0131zlararas\u0131\" | \"tanr\u0131
+    kent\" | \"ruhlar\u0131n ka\xE7\u0131\u015F\u0131\" | \"Er Ryan'\u0131 kurtarmak\"
+    | \"ye\u015Fil yol\" | \"hayat g\xFCzeldir\" | \"yedi\" | \"kuzular\u0131n sessizli\u011Fi\"
+    | \"joker\" | \"Ayla\" | \"whiplash\" | \"can dostum\" | \"prestij\" | \"k\xF6stebek\"
+    | \"piyanist\" | \"ge\xE7mi\u015Fin g\xF6lgesinde\" | \"ola\u011Fan \u015F\xFCpheliler\"
+    | \"sevginin g\xFCc\xFC\" | \"aslan kral\" | \"cennet sinemas\u0131\" | \"ate\u015Fb\xF6ceklerinin
+    mezar\u0131\" | \"gelece\u011Fe d\xF6n\xFC\u015F\" | \"Casablanca\" | \"Kefernahum\"
+    | \"Dangal\" | \"zincirsiz\" | \"3 ahmak\" | \"ba\u015Fkalar\u0131n\u0131n hayat\u0131\"
+    | \"ihtiyar delikanl\u0131\" | \"ak\u0131l defteri\" | \"onur sava\u015F\u0131\"
+    | \"beklenmeyen \u015Fahit\" | \"bir ayr\u0131l\u0131k\" | \"i\xE7imdeki yang\u0131n\"
+    | \"babam ve o\u011Flum\" | \"sil ba\u015Ftan\" | \"soysuzlar \xE7etesi\" | \"Amelie\"
+    | \"bir r\xFCya i\xE7in a\u011F\u0131t\" | \"can dostum\" | \"e\u015Fkiya\" |
+    \"cesur y\xFCrek\" | \"rezervuar k\xF6pekleri\" | \"full metal jacket\" | \"gel
+    ve g\xF6r\" | \"amadeus\" | \"yaral\u0131 y\xFCz\" | \"taksi \u015Fof\xF6r\xFC\"
+    | \"otomatik portakal\" | \"birka\xE7 dolar i\xE7in\" | \"ye\u015Fil rehber\"
+    | \"Talvar\" | \"Drishyam\" | \"mandalina bah\xE7esi\" | \"gully boy\" | \"ters
+    y\xFCz\" | \"g\xF6zlerindeki s\u0131r\" | \"b\xFCy\xFCk d\xF6v\xFC\u015F\" |
+    \"para avc\u0131s\u0131\" | \"onu sar\u0131ya boya\" | \"\xE7\xF6k\xFC\u015F\"
+    | \"y\xFCr\xFCyen \u015Fato\"}} filminin ili\u015Fti\u011Fi bir g\xFCnde olacak.
+    Bahane etti\u011Fi \u015Feylerin alt\u0131nda, sana kar\u015F\u0131 baz\u0131
+    hisleri oldu\u011Funu anlayacaks\u0131n.\n\nTelvelerinin petek petek oldu\u011Fu
+    bir b\xF6l\xFCmde, k\xFC\xE7\xFCk bir ar\u0131 g\xF6z\xFCme tak\u0131ld\u0131.
+    \U0001F41DSen sanki a\u015Fk\u0131n kendisinden \xE7ok, o u\u011Furda u\u011Fra\u015Fmay\u0131
+    seviyor gibisin {{isim}}. Adeta ilmek ilmek olsun, kolay olmas\u0131n, \"hemen
+    olmas\u0131n\" istiyor gibisin. Sana g\xF6re a\u015Fk\u0131, \"zorluk\" de\u011Ferli
+    k\u0131l\u0131yor. Sen, kar\u015F\u0131ndaki ki\u015Fiye hayran olmak istiyorsun.
+    Bu amac\u0131na ula\u015Facaks\u0131n. \u0130lk ad\u0131m\u0131 o atsa da s\u0131k\u0131
+    biriyle kar\u015F\u0131 kar\u015F\u0131ya gelecek, onu kendine \xE7ekebilmek
+    ve seni tam olarak anlamas\u0131n\u0131 sa\u011Flayabilmek i\xE7in emek vermek
+    durumunda kalacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 27
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 27
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

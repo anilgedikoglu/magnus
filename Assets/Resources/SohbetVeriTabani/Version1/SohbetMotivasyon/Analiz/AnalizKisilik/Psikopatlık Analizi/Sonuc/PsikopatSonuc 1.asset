@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: PsikopatSonuc 1
+  m_EditorClassIdentifier: 
+  idIndex: 20221042134AA51713650572
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Psikopatl\u0131k Analizi\n\nSeninle ilgili de\u011Ferlendirmem \u015Fu \u015Fekilde
+    {{isim}};\n\n{{data, psikopat1=a, Daha \xE7ok \xF6zele\u015Ftiri yapmal\u0131s\u0131n.
+    Kendini yarg\u0131layamad\u0131\u011F\u0131n zaman, su\xE7lu sana g\xF6re her
+    zaman ba\u015Fkalar\u0131 olacakt\u0131r. Sorunun kendinde oldu\u011Funu tespit
+    etti\u011Finde, \xE7\xF6z\xFCm\xFCn de kendi ellerinde oldu\u011Funu fark ederek
+    harekete ge\xE7ebilirsin. | psikopat1=b, Gerekti\u011Fi zaman sorumlulu\u011Fu
+    \xFCzerine alabilen birisin. Neyin do\u011Fru neyin yanl\u0131\u015F oldu\u011Funu
+    yerinde bir d\u0131\u015Fg\xF6r\xFC ile tespit edebiliyorsun. Hatalar\u0131n\u0131
+    d\xFCzeltece\u011Fine ve ruhunla bar\u0131\u015F\u0131 sa\u011Flayaca\u011F\u0131na
+    inan\u0131yorum.}} {{data, psikopat2=a, Duygular\u0131n\u0131 dizginlemeyi ba\u015Farmak,
+    hayat\u0131n\u0131 kontrol alt\u0131na alabilmenin ilk ad\u0131m\u0131d\u0131r.
+    Kendini disiplinize etmeli ve yeni kazan\u0131mlar i\xE7in kap\u0131lar\u0131n\u0131
+    a\xE7mal\u0131s\u0131n. H\u0131r\xE7\u0131n bir \u015Felale ancak kendi dibini
+    a\u015F\u0131nd\u0131r\u0131r. | psikopat2=b, Kendini bilen insan d\xFC\u015F\xFCncelerini
+    kontrol edebilendir. D\xFC\u015F\xFCnceler ise fiillere d\xF6n\xFC\u015F\xFCr.
+    Sen kendi kontrol\xFCn\xFC ele alabildi\u011Fin s\xFCrece do\u011Fru ad\u0131mlar\u0131
+    atarak hayat boyu kazanan olacaks\u0131n.}} {{data, psikopat4=a, \u0130yilik
+    g\xF6ren de\u011Fil iyilik yapan biri olmal\u0131s\u0131n. I\u015F\u0131\u011F\u0131
+    so\u011Furan bir karanl\u0131k olmak sana yara\u015Fmaz. I\u015F\u0131k sa\xE7an
+    bir g\xFCne\u015F olmak ise bence senin ruhuna daha uygun. | psikopat4=b, \u0130nsanlara
+    de\u011Fer veriyor ve onlara y\xFCk olmak istemiyorsun. Bu bak\u0131\u015F a\xE7\u0131n
+    \xE7evren taraf\u0131ndan da fark ediliyor. Yan\u0131ndakini d\xFC\u015F\xFCn\xFCp
+    \xF6n\xFCne konan taba\u011Fa ona g\xF6re el uzatan, her zaman sevgi ve sayg\u0131
+    g\xF6r\xFCr. \u0130yi niyet, fark edilmemesi imkans\u0131z bir \u0131\u015F\u0131lt\u0131d\u0131r.}}\n\n{{data,
+    psikopat5=a, Ge\xE7mi\u015Fte yapt\u0131\u011F\u0131n hatalar, gelecek yar\u0131\u015F\u0131nda
+    seni geriye d\xFC\u015F\xFCrmez. Bilakis, tecr\xFCbelerinle daha \xF6ndesin.
+    Tek yapman gereken, kendi hatalar\u0131ndan \xE7\u0131kard\u0131\u011F\u0131n
+    dersleri unutmamak. | psikopat5=b, D\xFCzene ve topluma uyumlu birisin. Hem vicdani
+    hem de ahlaki de\u011Ferlerin var. Gelecekte de yolundan asla sapmayaca\u011F\u0131na
+    inan\u0131yorum. Bu \u015Fekliyle g\xFCzel ve huzurlu bir hayat seni bekliyor.}}
+    {{data, psikopat6=a, Rasyonel d\xFC\u015F\xFCnebilen, realist biri oldu\u011Funu
+    g\xF6r\xFCyorum. Ak\u0131ll\u0131 insan her zaman ba\u015Farabileceklerini hedefleyendir.
+    Bu hedeflere ula\u015Ft\u0131k\xE7a, ba\u015Farabileceklerinin de artaca\u011F\u0131n\u0131
+    g\xF6receksin. | psikopat6=b, Boy yetmeyen y\xFCksek idealler insan\u0131 yorar.
+    Ka\xE7\u0131n\u0131lmaz ba\u015Far\u0131s\u0131zl\u0131klarla zaman kaybetmek
+    yerine, daha rasyonel hedefler koymal\u0131 ve merdivenleri ad\u0131m ad\u0131m
+    \xE7\u0131kmal\u0131s\u0131n.}}\n\nAnalizini derinle\u015Ftirecek olursak {{isim}};\n\n{{data,
+    psikopat9=a, Ortaya \xE7\u0131kabilecek baz\u0131 zamans\u0131z arzular\u0131
+    bast\u0131rmaya al\u0131\u015Fmak gerek. \u0130htiya\xE7lar\u0131n sonu yok.
+    Yeterli diren\xE7 ve g\xFC\xE7l\xFC bir kabuk ise kendimize her zaman yetmemizi
+    sa\u011Flar. | psikopat9=b, Kendine yetebilen ve i\xE7 stabilitesini sa\u011Flayabilen
+    biri olman o kadar b\xFCy\xFCk avantaj ki. Ko\u015Fullar senin i\xE7in ani ve
+    yeni ihtiya\xE7lar do\u011Furmuyor. Bu nedenle hayat denizinde \xE7ok fazla dalgalanm\u0131yorsun.}}
+    {{data, psikopat10=a, Gelelim yalan konusuna. Yalan bir zorunluluk olmaktan \xE7\u0131k\u0131p
+    al\u0131\u015Fkanl\u0131\u011Fa d\xF6n\xFC\u015Ft\xFCyse, genel toplamda ba\u015Fa
+    b\xFCy\xFCk dertler a\xE7abilir. Karma, d\xFCr\xFCst olanlar\u0131 sever. Kendini
+    hi\xE7 hesap etmedi\u011Fin s\u0131k\u0131nt\u0131lar\u0131n g\xF6be\u011Finde
+    bulmak istemiyorsan do\u011Fruculuktan \u015Fa\u015Fmamal\u0131s\u0131n. | psikopat10=b,
+    \xC7evren taraf\u0131ndan en be\u011Fenilen \xF6zelliklerinden birinin de a\xE7\u0131k
+    s\xF6zl\xFCl\xFC\u011F\xFCn ve d\xFCr\xFCstl\xFC\u011F\xFCn oldu\u011Funa eminim.
+    B\xF6yle olan ve bunu korumay\u0131 ba\u015Farabilen insan \xE7ok az.}}\n\n{{data,
+    psikopat12=a, G\xF6rd\xFC\u011F\xFCm kadar\u0131yla senin hesaplar\u0131n kendinle
+    ve Allahla aranda. Bu seni bir bak\u0131ma \"daha \xF6zg\xFCr\" k\u0131lar. Ancak
+    faydal\u0131 aktiviteler se\xE7iyorsan... | psikopat12=b, Sorumluluklar\u0131n\u0131
+    bilen birisin sen. Bunu da inkar etmiyorsun. B\xF6yle insanlar birilerine hesap
+    vermekten gocunmaz. \xC7\xFCnk\xFC veremeyecek hesaplar\u0131 yoktur.}} {{data,
+    psikopat13=a, Kendini oyalamay\u0131 \xF6\u011Frenmen laz\u0131m. S\u0131k\u0131lmak,
+    akl\u0131 ve eli me\u015Fgul tutamayan insanlara \xF6zg\xFCd\xFCr. | psikopat13=b,
+    Kendini oyalamay\u0131 bilen ve me\u015Fgalesi olan birisin. Senden kolay kolay
+    k\xF6t\xFCl\xFCk gelmez.}}\n\n{{data, psikopat14=a, \u0130li\u015Fkilere gelecek
+    olursak; bir ili\u015Fkiyi hem yo\u011Fun ve duygusal ya\u015F\u0131yor hem de
+    s\xFCrd\xFCremiyorsan, o noktada sende bir s\u0131k\u0131nt\u0131 var demektir.
+    \xC7abuk ba\u011Flanan, a\u015Fk hayat\u0131 \xE7alkant\u0131l\u0131 biri olmal\u0131s\u0131n.
+    Sevmene ra\u011Fmen de ge\xE7imi s\xFCrd\xFCrmek i\xE7in elinden gelen her \u015Feyi
+    yeterince yapm\u0131yor olabilirsin. | psikopat14=b, \u0130li\u015Fkilere gelecek
+    olursak; sen zor seven ve birliktelik ba\u015Flad\u0131\u011F\u0131nda da s\xFCrs\xFCn
+    diye elinden gelen iyi niyeti g\xF6steren birisin. \u0130yi niyetin \xE7ok belli.
+    \xC7alkant\u0131l\u0131 ve \u015F\u0131psevdi olmad\u0131\u011F\u0131n anla\u015F\u0131l\u0131yor.
+    \u0130deal olan\u0131 da bu.}}"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "psikopatsonu\xE7son"
+    kontrol: 0
+  - degiskenAdi: psikopat6
+    degiskenDegeri: b
+    kontrol: 0
+  - degiskenAdi: psikopat11
+    degiskenDegeri: b
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 2
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

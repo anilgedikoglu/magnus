@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme592
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA02445106651
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\u0130nsanlar\u0131n s\u0131k ge\xE7ti\u011Fi toprak bir yolun kenar\u0131nda,
+    kendisini kamufle etmi\u015F, k\u0131p\u0131rdamadan \xF6ylece duran bir kurba\u011Fa
+    g\xF6r\xFCyorum. \U0001F438G\xF6r\xFCnmemekten ve fark edilmemekten memnun gibi.
+    \"Kurba\u011Fa prens\" hikayesini hat\u0131rlar m\u0131s\u0131n {{isim}}? Bu
+    kurba\u011Fan\u0131n da senin i\xE7in bir erke\u011Fi temsil etti\u011Fini hissediyorum.
+    \U0001F914Bu ki\u015Fiyi \xE7ok iyi tan\u0131m\u0131yorsun fakat varl\u0131\u011F\u0131ndan
+    haberdars\u0131n. Bilmesine biliyorsun ama, ondaki meziyetleri ve onu di\u011Fer
+    erkeklerden farkl\u0131 k\u0131lan \xF6zellikleri hen\xFCz tam fark etmemi\u015Fsin.
+    Sa\xE7lar\u0131n\u0131n yanlar\u0131n\u0131 k\u0131sadan uzuna do\u011Fru kestirmi\u015F
+    olan, {{kelime, keskin | yuvarlak}} \xE7ene hatlar\u0131na sahip bu {{kelime,
+    g\xFCzel g\xF6zl\xFC | g\xF6zl\xFCkl\xFC}} erkekle yak\u0131nda s\u0131k\u0131
+    bir ileti\u015Fiminizin ba\u015Flayaca\u011F\u0131n\u0131 s\xF6yl\xFCyor fincan\u0131n.\n\n\u015Eu
+    anda \xE7\u0131kt\u0131\u011F\u0131 olan, arada muhabbet etti\u011Finiz, arkada\u015F
+    g\xF6z\xFCyle bakt\u0131\u011F\u0131n fakat k\u0131z arkada\u015F\u0131n\u0131
+    y\xFCz y\xFCze hi\xE7 g\xF6rmedi\u011Fin bir erkek var m\u0131? Telvelerinde,
+    ad\u0131nda {{harf}} harfi olan bu erke\u011Fi k\u0131z arkada\u015F\u0131n\u0131n
+    elinden s\u0131k\u0131ca tutmu\u015F \u015Fekilde g\xF6r\xFCyorum. Ancak g\xF6z
+    ucuyla seni takip ediyor. Sence bu neye i\u015Faret {{isim}}? <sprite=85>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

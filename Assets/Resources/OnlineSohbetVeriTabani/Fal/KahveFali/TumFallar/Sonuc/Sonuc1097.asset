@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1097
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA39448748553
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n alt y\xFCzeyinde, etraf\u0131nda {{kelime, g\xFCvelerin
+    | kelebeklerin}} u\xE7u\u015Ftu\u011Fu bir \"lamba\" g\xF6r\xFCyorum {{isim}}.
+    Anlad\u0131\u011F\u0131m kadar\u0131yla, en yak\u0131nlar\u0131nda sana bel ba\u011Flam\u0131\u015F
+    ve seni bir \xE7e\u015Fit \"hayat g\xFCvencesi\" olarak g\xF6ren insanlar var.
+    Bu durumun seni y\u0131pratt\u0131\u011F\u0131n\u0131, dile getirmesen bile telvelerindeki
+    yans\u0131malardan anl\u0131yorum. S\xFCrekli \"veren\" tarafta olmak {{kelime,
+    sabr\u0131ndan | takatinden}} azar azar eksiltmi\u015F. Bu durum k\xF6kl\xFC
+    bir de\u011Fi\u015Fime u\u011Frayacak De\u011Ferli {{soyisim}}. Bir terazi fig\xFCr\xFCn\xFCn
+    a\u011F\u0131r basan k\u0131sm\u0131nda {{kelime, A veya E | T veya I | O veya
+    \xD6 | C veya \xC7 | D veya B}} harfi var. \u0130sminde bu harflerden birini
+    ta\u015F\u0131yan, \xE7ok s\u0131k g\xF6r\xFC\u015Femesen bile \xE7ok sevdi\u011Fin
+    bir ki\u015Fi, omuzlar\u0131ndaki y\xFCk\xFC ciddi \xF6l\xE7\xFCde azaltacak.
+    \xD6n\xFCm\xFCzdeki {{mevsim_2}} mevsimine omuzlar\u0131n hafif, ba\u015F\u0131n
+    dik girece\u011Fini g\xF6r\xFCyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

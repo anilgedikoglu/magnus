@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1086
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA70271561834
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n son k\u0131s\u0131mlar\u0131nda, a\u011Flayan bir {{kelime,
+    kad\u0131n | adam}} var. Bu ki\u015Finin a\u011Fz\u0131n\u0131n i\xE7inde saklad\u0131\u011F\u0131
+    {{kelime, kirli | naho\u015F}} ya\u011Fmur bulutlar\u0131, sanki g\xF6zlerinden
+    ya\u015F olarak akm\u0131\u015F. \u26C8\uFE0FAk\u0131tt\u0131\u011F\u0131 g\xF6z
+    ya\u015Flar\u0131, san\u0131r\u0131m d\xFC\u015Fmans\u0131 duygulardan besleniyor.
+    Etraf\u0131nda sana kar\u015F\u0131 yakla\u015F\u0131m\u0131nda samimi olmayan
+    birisi var {{isim}}. Yak\u0131n zamanda sana bir konuda \"yak\u0131nm\u0131\u015F\"
+    ve senden yard\u0131m istemi\u015F olabilir. Bu ki\u015Finin seninle kendi i\xE7inde
+    {{kelime, yersiz | gereksiz}} bir rekabet i\xE7inde oldu\u011Funu seziyorum.
+    \U0001F914Asl\u0131nda senden yard\u0131m istemiyor. Yard\u0131ma ihtiyac\u0131
+    oldu\u011Funu d\xFC\u015F\xFCnmeni sa\u011Flamaya \xE7al\u0131\u015F\u0131yor.
+    Kim oldu\u011Funu bu sat\u0131rlar\u0131 okuduktan sonra fark edece\u011Fin bu
+    ki\u015Fiden, \xF6n\xFCm\xFCzdeki g\xFCnlerde otomatikman uzakla\u015Facaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

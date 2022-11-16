@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: Ramazan2024iki
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "Bayram\u0131n nas\u0131l ge\xE7iyor {{isim}}? Tatl\u0131lar, har\xE7l\u0131klar,
+    misafirler, bayram k\u0131yafetleri; hepsi ayr\u0131 g\xFCzel. Her \u015Fey g\xF6nl\xFCnce
+    olsun! <sprite=0>"
+  tip: 2
+  yil: 2024
+  ay: 4
+  gun: 11
+  saat: 0
+  gonderilecegiZaman: 1
+  platform: 0
+  gerekliDegiskenler: []

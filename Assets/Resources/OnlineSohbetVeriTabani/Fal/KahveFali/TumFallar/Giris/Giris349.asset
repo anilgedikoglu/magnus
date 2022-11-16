@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris349
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA30748691231
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131n\u0131n ilk g\xF6ze \xE7arpan b\xF6l\xFCmlerinde {{data, cinsiyet=erkek,
+    egzotik g\xF6r\xFCn\xFCml\xFC bir kad\u0131n | cinsiye=kad\u0131n, egzotik g\xF6r\xFCn\xFCml\xFC
+    bir erkek | cinsiyet=lgbt, egzotik g\xF6r\xFCn\xFCml\xFC bir insan}} belirmi\u015F
+    {{isim}}. Adeta bir \"y\u0131lan oynat\u0131c\u0131s\u0131\" edas\u0131yla, \xF6n\xFCnde
+    duran \"y\u0131lan\" fig\xFCr\xFCn\xFC \xE7e\u015Fitli hallere sokuyor. \U0001F40DBu
+    ki\u015Finin kafa ve beden hareketlerini taklit eden y\u0131lan fig\xFCr\xFC,
+    hissetti\u011Fin amans\u0131z duygular\u0131n seni neleri yapmaya s\xFCr\xFCkledi\u011Finin
+    i\u015Fareti. Ho\u015Fland\u0131\u011F\u0131n {{data, cinsiyet=erkek, han\u0131mefendinin
+    | cinsiyet=kad\u0131n, beyefendinin | cinsiyet=lgbt, insan\u0131n}} sana duydu\u011Fu
+    sevgiyi art\u0131rabilmek ad\u0131na, onun ilgilendi\u011Fi {{kelime, alanlara
+    | u\u011Fra\u015Flara}} merak salm\u0131\u015Fs\u0131n. O'nun \"olman\u0131 istedi\u011Fi\"
+    insan olmaya \xE7al\u0131\u015Fman, gereksiz bir efor. Do\u011Frusunu istersen,
+    sen son derece \u015Fahs\u0131na m\xFCnhas\u0131r birisin. E\u015Fi benzeri olmayan
+    y\xF6nlerin, {{data, cinsiyet=erkek, han\u0131mefendinin | cinsiyet=kad\u0131n,
+    beyefendinin | cinsiyet=lgbt, o insan\u0131n}} bir girdaba kap\u0131lm\u0131\u015F\xE7as\u0131na
+    sana \xE7ekilmesi i\xE7in yeterli olacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 23
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 23
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

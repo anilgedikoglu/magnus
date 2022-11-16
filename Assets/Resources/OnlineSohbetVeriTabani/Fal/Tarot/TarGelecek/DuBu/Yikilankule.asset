@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Yikilankule
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA75245723941
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 00e8a399fb9d80c4aabae7dee311c460, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 00e8a399fb9d80c4aabae7dee311c460, type: 3}
+  contentPhotoId: yikilankule
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Y\u0131k\u0131lan Kule\" kart\u0131n\u0131 se\xE7tin.\n\n\xC7ok
+    ba\u011Fl\u0131 oldu\u011Fun ve ayr\u0131lmak istemedi\u011Fin konfor alan\u0131nda
+    de\u011Fi\u015Fiklikler olaca\u011F\u0131n\u0131 g\xF6zl\xFCyorum {{isim}}. Se\xE7ti\u011Fin
+    bu kart, al\u0131\u015Ft\u0131\u011F\u0131n rutinden ayr\u0131laca\u011F\u0131n\u0131
+    ve yeni bir s\xFCre\xE7 i\xE7erisine girece\u011Fini i\u015Faret ediyor. Plan
+    d\u0131\u015F\u0131 geli\u015Fmelerle kar\u015F\u0131 kar\u015F\u0131ya kalabilirsin.
+    Bu geli\u015Fmler tahmin etmedi\u011Fin kadar ani cereyan edebilir ve seni haz\u0131rl\u0131ks\u0131z
+    yakalayabilir. Senin i\xE7in kar\u015F\u0131la\u015F\u0131lacak en b\xFCy\xFCk
+    zorluk, de\u011Fi\u015Fimler olacak. Hem kendi ellerinle, mecburiyetten, hem
+    de iste\u011Fin d\u0131\u015F\u0131nda girece\u011Fin ciddi bir de\u011Fi\u015Fim
+    s\xFCreci var. Kendini bir anda s\u0131f\u0131r noktas\u0131nda bulabilirsin.
+    O noktan\u0131n seni daha y\xFCksek mertebelere ula\u015Ft\u0131racak tertemiz
+    bir ba\u015Flang\u0131\xE7 olabilece\u011Fini unutma."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek yikilankule
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

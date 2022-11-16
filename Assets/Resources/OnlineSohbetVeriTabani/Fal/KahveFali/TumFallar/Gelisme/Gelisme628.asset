@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme628
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA98101627463
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinde, biyoenerjinle \xE7evrene bir \"fanus\" olu\u015Fturmu\u015F gibisin.
+    \U0001F9D0\u0130nsanlara kendini kapat\u0131yor, seni tan\u0131mak isteyenleri
+    \"fark\u0131nda olarak ya da olmayarak\" itiyor, kimseye ge\xE7it vermiyorsun.
+    K\u0131sacas\u0131 {{isim}}, sen asl\u0131nda insanlar\u0131n seni sevmelerine
+    izin vermiyor gibisin. Bu hale, ge\xE7mi\u015F y\u0131llarda ya\u015Fad\u0131\u011F\u0131n
+    baz\u0131 olaylardan sonra geldi\u011Fini f\u0131s\u0131ld\u0131yor telvelerin.\n\nYak\u0131n
+    gelecekte s\u0131ras\u0131 ile kar\u015F\u0131na 2 ki\u015Fi gelecek. Bunlardan
+    bir tanesine \"bir istisna\" tan\u0131yarak y\xFCre\u011Fini a\xE7may\u0131 d\xFC\u015F\xFCnecek,
+    daha ilk g\xFCnlerde \"olmayaca\u011F\u0131n\u0131 ve s\xFCrmeyece\u011Fini\"
+    anlayacak, tekrar i\xE7ine kapanacaks\u0131n. \U0001F615Bu ki\u015Finin ad\u0131nda
+    bir {{harf}} harfi g\xF6r\xFCl\xFCyor. Hemen sonras\u0131nda ise {{harf}} harfli
+    ba\u015Fka biri \xE7\u0131kacak kar\u015F\u0131na. \u0130ki ki\u015Finin aras\u0131nda
+    anlad\u0131\u011F\u0131m kadar\u0131yla {{sayi,3,6}} hafta kadar bir s\xFCre
+    ya var, ya yok. Bu ikinci ki\u015Fiye, ilk ki\u015Fiden \xE7ok daha fazla diren\xE7
+    g\xF6stermene ve onu adamak\u0131ll\u0131 s\u0131namana ra\u011Fmen, senin, \xFCzerine
+    sald\u0131\u011F\u0131n dikenlere \"g\xFCllerle\" kar\u015F\u0131l\u0131k verecek
+    ve g\xF6nl\xFCne girecek!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

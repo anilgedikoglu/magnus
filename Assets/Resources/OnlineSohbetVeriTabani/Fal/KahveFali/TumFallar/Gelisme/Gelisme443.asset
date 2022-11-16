@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme443
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA64349802576
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n merkezinde, tabandan \xFCst kesimlere do\u011Fru yay\u0131lan
+    negatif bir enerji duyumsuyorum {{isim}}. \U0001F928Bu enerji nedeniyle son zamanlarda
+    \"nedensiz bir \u015Fekilde\" huzursuz hissediyor olabilirsin. \xD6zellikle kapal\u0131
+    alanlardayken ve evdeyken ya\u015F\u0131yor olabilece\u011Fin yorgunluk, dikkat
+    da\u011F\u0131n\u0131kl\u0131\u011F\u0131, mutsuzluk ve odaklanamama problemlerin,
+    hep ayn\u0131 nedenden gibi g\xF6z\xFCk\xFCyor. Telveleri daha detayl\u0131 irdeledi\u011Fimde,
+    k\u0131r\u0131k olmas\u0131na ra\u011Fmen \xF6ylece b\u0131rak\u0131lm\u0131\u015F
+    ve at\u0131lmam\u0131\u015F bir e\u015Fya g\xF6r\xFCyorum. Bu e\u015Fya, ka\u015Flar\u0131n\u0131n
+    aras\u0131ndaki \xE7akra olan \"ajna \xE7akra\" yani \xFC\xE7\xFCnc\xFC g\xF6z
+    \xE7akran\u0131 bloke ediyor. Bu e\u015Fyay\u0131 ivedi \u015Fekilde bulup, hanenden
+    uzakla\u015Ft\u0131rmal\u0131s\u0131n. \U0001F91E \n\n{{isim}} telvelerinde ayr\u0131ca,
+    uzun tren raylar\u0131 g\xF6r\xFCyorum. Bu raylar belirli bir noktaya kadar tek
+    bir \xE7izgi olarak giderken, o noktada iki farkl\u0131 y\xF6ne ayr\u0131l\u0131yorlar.
+    Tam o yol ayr\u0131m\u0131nda ise, yere oturmu\u015F, adeta elindeki bir \"keski\"
+    ile gelecek olan trenin y\xF6n\xFCn\xFC de\u011Fi\u015Ftirmeyi planlayan, {{kelime,
+    orta ya\u015Flarda | 40'l\u0131 ya\u015Flarda | 50'li ya\u015Flarda | sen ya\u015Flar\u0131nda}}
+    bir insan bekliyor. Ad\u0131nda, senin soyisminin ba\u015F harfi gibi bir {{soyisimilk}}
+    harfi ta\u015F\u0131yan bu ki\u015Finin, gelecek aylarda senin i\xE7in hayati
+    \xF6neme sahip bir meselede aktif rol oynayarak, \"m\xFCjdeye\" \xE7\u0131kacak
+    olan yolu se\xE7mende ve o yolda ilerlemende yard\u0131mc\u0131 olaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

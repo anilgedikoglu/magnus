@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme473
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA67913227478
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n daha derin kesimlerinde, p\u0131r\u0131l p\u0131r\u0131l
+    sular\u0131 olan p\u0131narlar ve \xE7evresinde de yemye\u015Fil k\u0131rlar
+    g\xF6r\xFCyorum. Orada, t\xFCm bu g\xF6rsellerin ortas\u0131nda, tek ba\u015F\u0131na
+    bir kayan\u0131n \xFCzerinde adeta d\xFC\u015F\xFCnceli d\xFC\u015F\xFCnceli
+    oturuyorsun. \xDCzerinden ise, her \xE7\u0131rp\u0131\u015Fta kanatlar\u0131
+    yald\u0131zl\u0131 izler b\u0131rakan bir ku\u015F var {{isim}}. \U0001F54A\uFE0FBu
+    ku\u015F, b\xFCy\xFCl\xFC birka\xE7 manevra ile ini\u015Fe ge\xE7ip senin yan\u0131na
+    konacak, belli. A\u015Fk hayat\u0131nda g\xFCzel geli\u015Fmeler bekliyor seni.
+    Bu ku\u015F, sevday\u0131, tutkuyu ve a\u015Fk\u0131 ifade ediyor.\n\nSon aylarda
+    birinin kalbini istemeden de olsa k\u0131rd\u0131n m\u0131 {{isim}}? Burada,
+    elinde yaln\u0131zca kitaplar\u0131, kula\u011F\u0131nda kulakl\u0131\u011F\u0131
+    olan ve \xE7evresinde hi\xE7 kimsenin olmad\u0131\u011F\u0131, yapayaln\u0131z
+    bir insan g\xF6r\xFCyorum. K\u0131z m\u0131 erkek mi oldu\u011Funa ise pek emin
+    de\u011Filim. Senden uzakta ve puslu bir cam\u0131n ard\u0131nda belirmi\u015F
+    olan bu yans\u0131malar, bu ki\u015Finin g\xF6nl\xFCn\xFCn sana k\u0131r\u0131k
+    oldu\u011Funu i\u015Faret ediyor. \U0001F494\u0130lerleyen g\xFCnlerde, ad\u0131nda
+    {{harf}} harfi olan bu ki\u015Fi sana dair \xF6yle bir \u015Fey yapacak ki, buram
+    buram sitem dolu oldu\u011Funu anlayacaks\u0131n. Bu bir sosyal medya payla\u015F\u0131m\u0131
+    da olabilir, sana ataca\u011F\u0131 direkt bir mesaj da..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

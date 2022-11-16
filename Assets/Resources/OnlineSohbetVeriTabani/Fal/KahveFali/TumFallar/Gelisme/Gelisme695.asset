@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme695
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA25809673728
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Tek ba\u015F\u0131na y\xFCr\xFCd\xFC\u011F\xFCn bir yolun kenar\u0131nda, beyaz
+    zambaklar g\xF6r\xFCyorum {{isim}}. Bu zambaklar, ho\u015Fland\u0131\u011F\u0131n
+    han\u0131mefendinin durulu\u011Funu, safl\u0131\u011F\u0131n\u0131 ve temizli\u011Fini
+    temsil ediyor. Bize fincan\u0131n\u0131n neden bu mesaj\u0131 verdi\u011Fini
+    ve han\u0131mefendinin bu \xF6zelliklerinin neden alt\u0131n\u0131 \xE7izdi\u011Fini
+    sorgulad\u0131\u011F\u0131mda, ona y\xF6neltti\u011Fin \"i\xE7sel\" su\xE7lamalar\u0131n
+    oldu\u011Funu fark ettim. Bekledi\u011Fin sinyalleri ondan alamad\u0131\u011F\u0131n
+    ya da istedi\u011Fin kar\u015F\u0131l\u0131\u011F\u0131 tam olarak g\xF6remedi\u011Fin
+    zamanlarda, zihninde onu k\xF6t\xFCl\xFCyor gibisin. Bu \xE7aban nafile. Kar\u015F\u0131nda
+    harikulade bir insan var {{isim}}.\n\nBu yans\u0131malar\u0131n hemen yan\u0131nda
+    ise kap\u0131s\u0131 olan ve y\xFCksek surlarla \xE7evrelenmi\u015F bir alan
+    bulunuyor. Kap\u0131n\u0131n \xF6n\xFCndeki \xE7aresiz duru\u015Fun, ho\u015Fland\u0131\u011F\u0131n
+    han\u0131mefendinin \"kalbini ve hayat\u0131n\u0131\" temsil eden bu alana legal
+    yollardan giremedi\u011Fini i\u015Faret ediyor. Surlar\u0131n yan taraf\u0131nda
+    duran, {{kelime, 25-30 ya\u015Flar\u0131nda | 35-40 ya\u015Flar\u0131nda | 45-50
+    ya\u015Flar\u0131nda}} bir {{kelime, erkek | kad\u0131n}} var. Ho\u015Fland\u0131\u011F\u0131n
+    han\u0131mefendiyle bir ili\u015Fkiye ba\u015Flayabilmen i\xE7in, ad\u0131nda
+    ya da soyad\u0131nda {{harf}} harfi bulunan bu ki\u015Fi sana {{ay_1}} ay\u0131n\u0131n
+    {{kelime, ilk yar\u0131s\u0131nda | ikinci yar\u0131s\u0131nda}} yard\u0131mc\u0131
+    olacak. {{kelime, Han\u0131mefendiyi tan\u0131d\u0131\u011F\u0131 i\xE7in, onunla
+    senin ad\u0131na konu\u015Faca\u011F\u0131n\u0131 hissediyorum. | Han\u0131mefendinin
+    yak\u0131n arkada\u015F\u0131 oldu\u011Fu i\xE7in, sana baz\u0131 t\xFCyolar
+    verece\u011Fini hissediyorum. | Han\u0131mefendinin akrabas\u0131 oldu\u011Fu
+    i\xE7in, han\u0131mefendiyi seninle g\xF6r\xFC\u015Fmeye bir \u015Fekilde ikna
+    edece\u011Fini d\xFC\u015F\xFCn\xFCyorum. | Han\u0131mefendiyi iyi tan\u0131d\u0131\u011F\u0131
+    i\xE7in, sana onun g\xF6nl\xFCn\xFC nas\u0131l kazanabilece\u011Fini anlataca\u011F\u0131n\u0131
+    hissediyorum. | \u0130kili ili\u015Fkilerden iyi anlad\u0131\u011F\u0131 i\xE7in,
+    sana do\u011Fru taktikler verece\u011Fini hissediyorum. | Sezgileri kuvvetli
+    oldu\u011Fu i\xE7in, sana yapman gereken en do\u011Fru hamlenin ne oldu\u011Funu
+    s\xF6yleyece\u011Fini hissediyorum.}}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme537
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA01169429308
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Devrilmi\u015F bir kahve kupas\u0131 var fal\u0131nda. \u2615\u0130ki kur\u015Fun
+    kalem d\u0131\u015Far\u0131ya do\u011Fru sa\xE7\u0131lm\u0131\u015F, \xFC\xE7\xFCnc\xFC
+    ise yatay vaziyette halen i\xE7inde duruyor. \u0130lgin\xE7 olan detay \u015Fu
+    ki, bu sa\xE7\u0131lan kur\u015Fun kalemlerden bir tanesi ortadan k\u0131r\u0131lm\u0131\u015F.
+    Bu kalemler, 3 ayr\u0131 erke\u011Fi temsil ediyor sevgili {{isim}}. \u0130kisini
+    sen tan\u0131yorsun, biriyle ise hen\xFCz tan\u0131\u015Fmad\u0131n.\n\nK\u0131r\u0131k
+    olan kalem, kader kitab\u0131na kal\u0131c\u0131 yazg\u0131lar yazamayaca\u011F\u0131n\u0131
+    anlad\u0131\u011F\u0131nda g\xF6zden \xE7\u0131kard\u0131\u011F\u0131n ki\u015Fiyi
+    temsil ediyor. D\u0131\u015Far\u0131daki di\u011Fer kalem ise, akl\u0131ndaki
+    biri. Ara s\u0131ra \"acaba m\u0131?\" diyorsun; fakat senden mahiyeten uzakta.
+    Sorunun cevab\u0131, \"hay\u0131r\" \u015Feklinde. \U0001F928\xDC\xE7\xFCnc\xFC
+    ve i\xE7eride kalan t\xFCkenmez kalem ise, kar\u015F\u0131na \xE7\u0131kacak
+    olan kal\u0131c\u0131 insan\u0131 nitelemekte. Burada ne ad\u0131, ne san\u0131
+    var. Yaln\u0131zca vaktini seziyorum. Gelecek {{kelime, ocak | \u015Fubat | mart
+    | nisan | may\u0131s | haziran | temmuz | a\u011Fustos | eyl\xFCl | ekim | kas\u0131m
+    | aral\u0131k}} ay\u0131 i\xE7erisinde...\n\nFincan\u0131ndaki bir di\u011Fer
+    g\xF6rsel olan \"zar\" ise, hayat\u0131na girecek olan bu kal\u0131c\u0131 insanla,
+    b\xFCy\xFCk rastlant\u0131lar sonucu tan\u0131\u015Faca\u011F\u0131n\u0131 i\u015Faret
+    ediyor. \xD6yle ki; k\xFC\xE7\xFCc\xFCk bir zamanlama hatas\u0131 olsayd\u0131,
+    tek bir ko\u015Ful farkl\u0131 olsayd\u0131, kar\u015F\u0131 kar\u015F\u0131ya
+    gelemezdiniz {{isimcigim}}; fakat geleceksiniz."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

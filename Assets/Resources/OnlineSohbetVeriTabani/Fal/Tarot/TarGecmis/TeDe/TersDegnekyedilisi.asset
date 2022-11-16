@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegnekyedilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA15249862956
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 4898d1416967ea74f9b0ab382c8e77ee, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 4898d1416967ea74f9b0ab382c8e77ee, type: 3}
+  contentPhotoId: asayedilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"De\u011Fnek Yedilisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin K\u0131ymetli {{isim}}.\n\n\u0130yiye gitmesi i\xE7in u\u011Fra\u015Ft\u0131\u011F\u0131n
+    baz\u0131 \u015Feyler seni yormu\u015F. Kart\u0131n, uzun s\xFCre m\xFCcadele
+    etti\u011Fini ve istedi\u011Fin sonu\xE7lara ula\u015Famadan m\xFCcadele g\xFCc\xFCn\xFC
+    kaybetti\u011Fini i\u015Faret ediyor. Kaderin yoku\u015Flar\u0131nda enerjinin
+    ve umutlar\u0131n\u0131n t\xFCkendi\u011Fini anl\u0131yorum. Y\xFCr\xFCd\xFC\u011F\xFCn
+    istikamette, senin i\xE7in \xF6nemli olan insan ya da insanlar sana diren\xE7
+    g\xF6stermi\u015F. Hi\xE7bir yard\u0131m olmadan, tek tarafl\u0131 istemek ve
+    \"sonu g\xFCzel olsun diye\" \xFCstelemek, bir yerden sonra nafileymi\u015F.
+    Bunu anlad\u0131\u011F\u0131n anda kenara \xE7ekilmi\u015Fsin. Emek verdi\u011Fin
+    ve didindi\u011Fin s\xFCre boyunca \xE7ok yoruldu\u011Fun i\xE7in, ba\u011F\u0131\u015F\u0131kl\u0131k
+    sisteminin de zay\u0131flad\u0131\u011F\u0131n\u0131 anl\u0131yorum. Hastal\u0131klara
+    a\xE7\u0131k bir d\xF6nemden ge\xE7mi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis asayedilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

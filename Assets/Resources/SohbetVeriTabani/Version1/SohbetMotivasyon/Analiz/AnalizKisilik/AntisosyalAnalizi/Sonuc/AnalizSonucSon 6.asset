@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: AnalizSonucSon 6
+  m_EditorClassIdentifier: 
+  idIndex: 20221042134AA86191913940
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Antisosyallik Analizi\n\nDe\u011Ferli {{isim}}, antisosyal olup olmad\u0131\u011F\u0131n\u0131,
+    Star Wars tabiriyle \"karanl\u0131k tarafta\" olup olmad\u0131\u011F\u0131n\u0131
+    \xFC\xE7 a\u015Fa\u011F\u0131 be\u015F yukar\u0131 hesaplad\u0131m. De\u011Ferlendirmelerim
+    \u015F\xF6yle;\n\n{{data, antisosyal1=a, Hassas birisin. Empati yapmay\u0131
+    iyi biliyorsun ve yard\u0131mseversin. Bu seni d\u0131\u015F d\xFCnyaya kar\u015F\u0131
+    bir miktar hassas k\u0131lsa da, evrene yayd\u0131\u011F\u0131n pozitif enerji
+    her zaman kar\u015F\u0131l\u0131\u011F\u0131n\u0131 buluyor; er ya da ge\xE7.
+    Bunu sen de hissediyorsun. | antisosyal1=b, \u0130nsanlarla olan etkile\u015Fimlerini
+    ideal bir dengede tutuyorsun. Ne onlar\u0131n dertlerini tamamen kulak arkas\u0131
+    ediyor, ne de onlar\u0131n s\u0131k\u0131nt\u0131lar\u0131yla tamamen hemhal
+    oluyorsun. Bu durumunun faydalar\u0131n\u0131 da zararlar\u0131n\u0131 da zaman
+    zaman g\xF6rebilirsin. | antisosyal1=c, Sen d\xFCnyan\u0131n emir eri de\u011Filsin;
+    adeta d\xFCnya senin u\u015Fa\u011F\u0131n. Duygular\u0131na h\xFCkmetmeyi iyi
+    biliyor, ortaya \xE7\u0131kan g\xFCc\xFCn\xFC d\xFCnyay\u0131 ve ya\u015Fam\u0131n\u0131
+    \u015Fekillendirmek i\xE7in kullan\u0131yorsun. Senin moralini kimse kolay kolay
+    bozamayaca\u011F\u0131 gibi, yolundan da kimse bir anda d\xF6nd\xFCremez.}}\n\n{{data,
+    antisosyal2=a, Ak\u0131ll\u0131 birisin. Zekan\u0131, insanlar\u0131 do\u011Fru
+    y\xF6nlendirmek i\xE7in kullanabiliyorsun. Bu yetene\u011Fin \xE7evrendeki herkesi
+    senin i\xE7in gerekti\u011Fi zamanlarda birer \"aparat\" haline getiriyor. Kendini
+    ak\u0131ll\u0131 sananlar\u0131n kendilerini ak\u0131ll\u0131 sand\u0131klar\u0131n\u0131
+    ve asl\u0131nda ne olduklar\u0131n\u0131 \xE7ok iyi fark edebilecek \xFCst\xFCn
+    bir yap\u0131n var. | antisosyal2=b, Ba\u015Fkalar\u0131n\u0131n h\xFCr iradelerine
+    \xE7ok fazla kar\u0131\u015Fan ya da onlar\u0131 kendi se\xE7imlerine ve isteklerine
+    alet eden biri de\u011Filsin. Gerekirse ve zorda kal\u0131rsan, durum ba\u015Fka.
+    Kendini daha avantajl\u0131 bir hale getirebilmek i\xE7in var olan t\xFCm yeteneklerini
+    sergilemekten ka\xE7mayaca\u011F\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorum. | antisosyal2=c,
+    Farkl\u0131 fikirlere sayg\u0131s\u0131 sonsuz olan birisin. Bununla beraber
+    de iyi niyetlisin. Sevdi\u011Fin insanlar\u0131n istekleri, senin beklentilerinin
+    zaman zaman \xF6n\xFCne ge\xE7ebilir. Buna da izin vermekten rahats\u0131zl\u0131k
+    duymazs\u0131n.}}\n\n{{data, antisosyal3=a, Sana g\xF6re senin gizli birtak\u0131m
+    g\xFCzelliklerin var. Bunlar insanlar taraf\u0131ndan yeterince ortaya \xE7\u0131kmam\u0131\u015F
+    \xF6zellikler. Bunlar\u0131n bilinmesini ve takdir g\xF6rmesini b\xFCt\xFCn kalbinle
+    arzuluyorsun. | antisosyal3=b, Tan\u0131d\u0131\u011F\u0131n ya da tan\u0131mad\u0131\u011F\u0131n
+    pek \xE7ok insana g\xF6re \xE7ok daha \xFCst\xFCn \xF6zelliklerin var. Bu \xF6zelliklerinin
+    toplum taraf\u0131ndan fark edilmesi sana b\xFCy\xFCk art\u0131lar katmazken,
+    g\xF6r\xFClmemesi ise senden bir \u015Fey eksiltmiyor. Kendi \xF6z sayg\u0131s\u0131
+    olan ve bununla fazlaca yetinebilen bir karaktersin. | antisosyal3=c, Ki\u015Fi,
+    sana g\xF6re \xF6nce kendisini bilmeli. Sen kendini iyi tan\u0131yorsun ve di\u011Fer
+    insanlar\u0131n fikirleri sana g\xF6re o kadar da \xF6nemli ya da anlaml\u0131
+    de\u011Fil. \"Ki\u015Filikli\" denebilecek insanlar\u0131n bu ba\u011Flamda a\u011Fa
+    babas\u0131 say\u0131l\u0131rs\u0131n.}}\n\n{{data, antisosyal4=a, Senin i\xE7in
+    planl\u0131 ve programl\u0131 davranmak ay\u0131p de\u011Fil. \u0130nsan ili\u015Fkilerinde
+    bir miktar siyaset g\xF6zetmek ve ge\xE7imli olmak, hi\xE7 de gocunulacak bir
+    hal yaratm\u0131yor. Stratejik d\xFC\u015F\xFCnmekte ustas\u0131n. \u0130nsanlar
+    ise senin piyonlar\u0131n. | antisosyal4=b, Yerine g\xF6re hay\u0131r diyebilen
+    ve yerine g\xF6re de durumu idare edebilen birisin. Ko\u015Fullar ve kar\u015F\u0131ndaki
+    insan\u0131n kim oldu\u011Fu, ona kar\u015F\u0131 davran\u0131\u015F \u015Fekillerinde
+    b\xFCy\xFCk rol oynuyor. Sevdi\u011Fin birinin bazen seni \xFCzmesine izin verebilecekken,
+    sevmedi\u011Fin bir insan\u0131n yan g\xF6zle sana bakmas\u0131na dahi m\xFCsaaden
+    yok. | antisosyal4=c, Kimseye minnet etmeyen g\xFC\xE7l\xFC ve p\u0131r\u0131l
+    p\u0131r\u0131l bir yap\u0131n var. Elmas gibi  sa\u011Flam, sert, dayan\u0131kl\u0131
+    ve keskinsin. Sana kar\u015F\u0131 ak\u0131ll\u0131 olmayan, senin hayat\u0131nda
+    bar\u0131namaz.}}\n\n{{data, antisosyal10=a, Tam bir k\xF6t\xFC g\xFCn dostusun.
+    De\u011Ferli olan\u0131n, binlerce iyi g\xFCnde de\u011Fil, birinin yan\u0131nda
+    nadir rastlanan k\xF6t\xFC g\xFCnlerde bulunmak oldu\u011Funa inanm\u0131\u015Fs\u0131n.
+    Sana g\xF6re herkes iyi g\xFCn dostu olabilir. K\xF6t\xFC g\xFCn dostu olmak
+    ise ayr\u0131 bir h\xFCner ister. Kendi dostlar\u0131n\u0131 da b\xF6ylelerinden
+    se\xE7meye azami \xF6zen g\xF6steriyorsun. | antisosyal10=b, Dar zamanda birinin
+    senin yan\u0131nda olmas\u0131n\u0131n ne kadar de\u011Ferli bir \u015Fey oldu\u011Funu
+    bizzat ya\u015Fam\u0131\u015Fs\u0131n. Buradan hareketle, sen de ba\u015Fkalar\u0131
+    i\xE7in de\u011Ferli olmak ve onlar\u0131 elinden geldi\u011Fince zor zamanlar\u0131nda
+    yaln\u0131z b\u0131rakmamak istiyorsun. | antisosyal10=c, Birinci \xF6ncelik
+    senin i\xE7in her zaman sensin. Sen olmad\u0131\u011F\u0131n zaman, sen iyi olmad\u0131\u011F\u0131n
+    zaman, sen mutlu olmad\u0131\u011F\u0131n zaman ba\u015Fka hi\xE7 kimseyi de
+    mutlu edemeyece\u011Finin bilincindesin. Ba\u015Fkalar\u0131 i\xE7in kendini
+    harap etmek yerine, kendi ali menfaatlerini hep en \xFCstte konumland\u0131r\u0131yorsun.}}"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "antisosyalsonu\xE7son"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 2
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

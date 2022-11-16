@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme517
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA55851428684
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "A\u015Fka ve g\xF6n\xFCl i\u015Flerine bak\u0131\u015F\u0131n\u0131n zaman zaman
+    negatifle\u015Fti\u011Fini sezdim. \U0001F9D0Fincan\u0131nda, g\xF6l gibi bir
+    su birikintisinin \xF6n\xFCnde duruyor, suya do\u011Fru ta\u015Flar f\u0131rlat\u0131yorsun;
+    hem de eline ne ge\xE7erse! Sitemlerin, \u015Fikayetlerin hatta ithamlar\u0131n
+    oluyor gibi. Hayat\u0131n\u0131n merkezine koymaktan ka\xE7\u0131nsan da, a\u015Fk
+    asl\u0131nda \xF6nemli bir konudur {{isim}}. \"Ya\u015Fam\u0131n ard\u0131, \xF6l\xFCm\xFCn
+    \xF6n\xFC, yarat\u0131m\u0131n ba\u015F\u0131, nefesin anlam\u0131 a\u015Fkt\u0131r\"
+    der eskiler. Baz\u0131 \u015Feyler payla\u015Ft\u0131k\xE7a ve biriyle beraber
+    \u015Fahit olduk\xE7a anlam kazan\u0131yor. Bunu \xE7ok yak\u0131nda daha iyi
+    anlayaca\u011F\u0131n\u0131 s\xF6yl\xFCyor telvelerin.\n\nSen \"bir konuda\"
+    ya da \"birine kar\u015F\u0131\" yenilgiye mi u\u011Frad\u0131n {{isim}}? Fincan\u0131n\u0131n
+    merkezindeki bir telve \xF6be\u011Finde, seni s\u0131rt \xFCst\xFC uzan\u0131rken
+    g\xF6r\xFCyorum. Adeta tozun topra\u011F\u0131n i\xE7inde kalm\u0131\u015Fs\u0131n.
+    Son d\xFCd\xFCk \xE7alana kadar, son saniye dolana kadar, son nefes verilene
+    kadar, kim kazand\u0131, kim kaybetti, kim hakl\u0131, kim su\xE7lu, belli olmaz.
+    \U0001F44A\xC7ok g\xFC\xE7l\xFC bir i\xE7 alemin var senin. Yere d\xFC\u015F\xFCnce,
+    \"bir avu\xE7 toprakla kalkmay\u0131\" iyi bilen birisin sen. \u0130lerleyen
+    aylarda hem seni sevenleri, hem de g\xF6zleri \xFCzerinde olanlar\u0131 \xE7ok
+    \u015Fa\u015F\u0131rtacaks\u0131n. Bilhassa \xF6n\xFCm\xFCzdeki {{ay_+3}} ay\u0131nda,
+    emsalsiz bir ba\u015Far\u0131 yaz\u0131lacak hanene!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

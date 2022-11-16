@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekkralicesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA72685642793
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 5220143ef9195784880b34f299331f88, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 5220143ef9195784880b34f299331f88, type: 3}
+  contentPhotoId: asakralicesi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "K\u0131ymetli {{isim}}, ge\xE7mi\u015Fin i\xE7in \"De\u011Fnek Krali\xE7esi\"
+    kart\u0131n\u0131 se\xE7tin.\n\nBu kart, ge\xE7mi\u015Fte hep zirveyi d\xFC\u015Flemi\u015F
+    olanlar\u0131n eline ge\xE7er. \xD6zel hayat\u0131nda da maddi anlamda da kendin
+    i\xE7in en iyiyi ve en hay\u0131rl\u0131y\u0131 arzulam\u0131\u015Fs\u0131n.
+    Diledi\u011Fin her ne varsa yazg\u0131nda sana ihsan edilmi\u015F. Onlara kavu\u015Fman\u0131
+    sa\u011Flayacak basamaklarda \xE7\u0131karken, bir han\u0131mefendiden de yard\u0131m
+    alman kararla\u015Ft\u0131r\u0131lm\u0131\u015F. Bu yard\u0131m hen\xFCz sana
+    ula\u015Fmam\u0131\u015F olabilir ancak zaman\u0131 belirlenmi\u015F. G\xF6rd\xFC\u011F\xFCm
+    kadar\u0131yla bo\u015Flukta as\u0131l\u0131 kald\u0131\u011F\u0131n\u0131 d\xFC\u015F\xFCnd\xFC\u011F\xFCn
+    her evrede, sana k\xFClli irade taraf\u0131ndan kendini yukar\u0131ya \xE7ekebilece\u011Fin
+    bir ip uzat\u0131lmas\u0131 planlanm\u0131\u015F."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis asakralicesi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

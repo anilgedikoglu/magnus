@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris165
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA27198146566
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131 a\xE7ar a\xE7maz kar\u015F\u0131ma yar\u0131m ay \u015Feklinde
+    bir \"kese\" g\xF6rseli \xE7\u0131kt\u0131. Mide ve ba\u011F\u0131rsak sistemine
+    dikkat \xE7eken bu yans\u0131ma, son g\xFCnlerde \xF6zellikle de i\u015F stresinden
+    dolay\u0131 kar\u0131n a\u011Fr\u0131s\u0131, \u015Fi\u015Fkinlik, haz\u0131ms\u0131zl\u0131k,
+    ishal ya da kab\u0131zl\u0131k \u015Fikayetlerin olabilece\u011Fini s\xF6yl\xFCyor.
+    Bununla birlikte ya\u011Fl\u0131 yiyecekler, asitli i\xE7ecekler ve hamur i\u015Fi
+    g\u0131dalar t\xFCketmeye meyilli oldu\u011Fun g\xF6r\xFCl\xFCyor {{isim}}. Uzun
+    saatler a\xE7 kald\u0131ktan sonra bu tip sa\u011Fl\u0131ks\u0131z besinlerle
+    sindirim sistemini zorlamamaya \xF6zen g\xF6stermeli ve baz\u0131 beslenme al\u0131\u015Fkanl\u0131klar\u0131n\u0131
+    k\xF6kten de\u011Fi\u015Ftirmeye gayret etmelisin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

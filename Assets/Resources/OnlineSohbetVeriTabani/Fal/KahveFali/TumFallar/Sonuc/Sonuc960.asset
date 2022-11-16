@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc960
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA23874140335
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sa\xE7lar\u0131 ya\u011Fmurun \u015Fiddetli elleriyle taranan bir {{data, cinsiyet=erkek,
+    kad\u0131n | cinsiyet=kad\u0131n, erkek | cinsiyet=lgbt, insan}} var fincan\u0131n\u0131n
+    son k\u0131s\u0131mlar\u0131nda. Kapkaranl\u0131k, f\u0131rt\u0131nal\u0131 bir
+    gecede, c\u0131l\u0131z yanan bir sokak lambas\u0131n\u0131n alt\u0131nda duruyor.
+    \u0130\xE7indeki karanl\u0131k adeta g\xF6\u011Fe yans\u0131m\u0131\u015F; \xE7aresiz...
+    Ba\u015F\u0131n\u0131 g\xF6ky\xFCz\xFCne kald\u0131rm\u0131\u015F, ellerini yanlara
+    a\xE7m\u0131\u015F ve g\xF6zlerini \"yalvar\u0131rcas\u0131na\" kapam\u0131\u015F.
+    Bu ki\u015Fi ayr\u0131ld\u0131\u011F\u0131n sevgilin {{isim}}; ve \xE7ok \xFCzg\xFCn.
+    \u0130\u015Fler onun istemedi\u011Fi ve asla da istemeyece\u011Fi bir noktaya
+    gelmi\u015F. \u015Eu sahne, onun seni ne kadar sevdi\u011Fini fazlas\u0131yla
+    anlat\u0131yor. Bir karar daha vermen gerekecek. Bu s\xF6ylediklerimi de g\xF6z
+    \xF6n\xFCnde bulundurman\u0131 dilerim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

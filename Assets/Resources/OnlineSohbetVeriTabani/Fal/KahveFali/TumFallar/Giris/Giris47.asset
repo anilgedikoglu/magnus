@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris47
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA03375530716
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\u0130nsanlar, \xE7ok istedikleri bir \u015Feyin ger\xE7ekle\u015Fmesi i\xE7in
+    \xF6nce dua ediyor, hedeflerine ula\u015Ft\u0131klar\u0131ndaysa ettikleri dua'y\u0131
+    ve \u015F\xFCkretmeyi unutuyorlar. Sende de benzeri bir durum meydana gelmek
+    \xFCzere {{isim}}. Bir \u015Feyi \xE7ok istemi\u015Fsin; \xF6zellikle de {{yil_-5}},
+    {{yil_-4}} senelerinde. \u015Eimdi bu b\xFCy\xFCk hayalin ger\xE7ekle\u015Fmek
+    \xFCzere; dualar\u0131n kabul oluyor! Fakat fincan\u0131nda, yere d\xFC\u015F\xFCp
+    k\u0131r\u0131lm\u0131\u015F ve par\xE7alar\u0131 d\xF6rt yana savrulmu\u015F,
+    \xE7i\xE7ekleri ortal\u0131\u011Fa sa\xE7\u0131l\u0131p a\xE7\u0131kta kalm\u0131\u015F
+    bir \"vazo\" g\xF6r\xFCyorum. Hedeflerine ula\u015Ft\u0131ktan sonra durumunu
+    korumak ve t\xFCrl\xFC aksiliklerden kendini uzak tutabilmek ad\u0131na bolca
+    \u015F\xFCkretmen gerekti\u011Fini, hatta o i\u015Fin sadakas\u0131n\u0131 vermen
+    gerekece\u011Fini hissediyorum. Aman unutma!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

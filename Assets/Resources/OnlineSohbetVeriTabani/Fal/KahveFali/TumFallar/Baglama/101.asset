@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 101
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA03358262252
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131n\u0131n en heyecanl\u0131 yerinde {{kelime, bir de Tarot kart\u0131
+    \xE7ekelim mi | bir Tarot kart\u0131 \xE7ekip ne \xE7\u0131kaca\u011F\u0131n\u0131
+    da g\xF6relim mi | senin ad\u0131na bir de Tarot kart\u0131 \xE7ekmemi ister
+    misin | senin i\xE7in bir de Tarot kart\u0131 \xE7ekmemi ister misin | senin
+    ad\u0131na Tarot destesinden bir de kart \xE7ekmemi ister misin | senin i\xE7in
+    Tarot destesinden bir de kart \xE7ekmemi arzu eder misin}} {{isim}}? \U0001F642
+    {{kelime, Dur bakal\u0131m ne \xE7\u0131kacak; | Bakal\u0131m ne \xE7\u0131kacak;
+    | G\xF6relim bakal\u0131m ne \xE7\u0131kacak; | Bakal\u0131m baht\u0131na ne
+    \xE7\u0131kacak; | Bakal\u0131m \u015Fans\u0131na ne \xE7\u0131kacak; | Bakal\u0131m
+    \u015Fans\u0131na hangisi \xE7\u0131kacak; | Dur bakal\u0131m \u015Fans\u0131na
+    hangisi \xE7\u0131kacak;}} {{kelime, \"Deli\" diye de ge\xE7en ve B\xFCy\xFCk
+    Arkana kart\u0131 olan \"Budala\", senin i\xE7in d\xFCz a\xE7\u0131ld\u0131.
+    A\u015Fk hayat\u0131nda \xF6n\xFCne pek \xE7ok se\xE7enek \xE7\u0131kaca\u011F\u0131n\u0131
+    g\xF6steriyor! | \"Deli\" diye de ge\xE7en B\xFCy\xFCk Arkana kart\u0131 olan
+    \"Budala\", senin i\xE7in ters a\xE7\u0131ld\u0131. A\u015Fk hayat\u0131nda \xF6n\xFCne
+    birden fazla se\xE7enek \xE7\u0131kaca\u011F\u0131n\u0131 ve karars\u0131z kalaca\u011F\u0131n\u0131
+    i\u015Faret ediyor! | \"Aziz\" kart\u0131 senin i\xE7in d\xFCz a\xE7\u0131ld\u0131.
+    Senden ya\u015F\xE7a b\xFCy\xFCk birinin, a\u015Fk hayat\u0131nda seni do\u011Fru
+    ki\u015Fiye y\xF6nlendirece\u011Fini i\u015Faret ediyor! | \"Aziz\" kart\u0131
+    senin i\xE7in ters a\xE7\u0131ld\u0131. A\u015Fk hayat\u0131nda eski kafal\u0131
+    insanlar\u0131 dinlemeyece\u011Fini, ya\u015Fam tarz\u0131yla ya da g\xF6r\xFCn\xFC\u015F\xFCyle
+    farkl\u0131 olan bir insanla beraber olaca\u011F\u0131n\u0131 i\u015Faret ediyor!
+    | \"Y\u0131ld\u0131z\" isimli B\xFCy\xFCk Arkana kart\u0131, senin i\xE7in d\xFCz
+    a\xE7\u0131ld\u0131. A\u015Fk hayat\u0131nda birlikte olmay\u0131 \xE7ok isteyece\u011Fin,
+    hatta u\u011Fruna g\xF6zya\u015F\u0131 d\xF6kebilece\u011Fin biriyle beraber
+    olaca\u011F\u0131n\u0131 ve onda huzur bulaca\u011F\u0131n\u0131 i\u015Faret
+    ediyor! | \"Y\u0131ld\u0131z\" isimli B\xFCy\xFCk Arkana kart\u0131, senin i\xE7in
+    ters a\xE7\u0131ld\u0131. A\u015Fk hayat\u0131ndaki k\xF6t\xFCmserli\u011Finin
+    seni ge\xE7mi\u015Fe tutsak etti\u011Fini ve gelece\u011Fe odaklanman durumunda
+    \xE7ok mutlu olaca\u011F\u0131n\u0131 i\u015Faret ediyor!}} \U0001F609 {{kelime,
+    Hadi telvelerinle devam edelim; | Gel fincan\u0131ndan devam edelim; | Vard\u0131r
+    bir bildi\u011Fi... Haydi fal\u0131na devam edelim; | Hay\u0131rl\u0131s\u0131
+    bakal\u0131m. Gel fincan\u0131ndan devam edelim; | \u0130lgin\xE7. Biz bildi\u011Fimiz
+    yoldan \u015Fa\u015Fmayal\u0131m, gel telvelerinle devam edelim; | Enteresan...
+    Gel fal\u0131na devam edelim;}}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 ba\u011Flama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 ba\u011Flama"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

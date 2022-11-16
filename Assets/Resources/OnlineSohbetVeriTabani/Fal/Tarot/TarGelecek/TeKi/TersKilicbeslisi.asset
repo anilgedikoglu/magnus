@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicbeslisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA31111502191
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 951ea35cdd2ccdb4f85e49df17603ea3, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 951ea35cdd2ccdb4f85e49df17603ea3, type: 3}
+  contentPhotoId: kilicbeslisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"K\u0131l\u0131\xE7 Be\u015Flisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nSava\u015F hangi meydanda olmaz ki? A\u015Fk i\xE7in, arkada\u015Fl\u0131k
+    i\xE7in, para i\xE7in, \u015Feref ve \u015Fan i\xE7in... {{burc}} bur\xE7lar\u0131
+    da yeri geldi\u011Finde \xF6l\xFCm\xFCne sava\u015F\xE7\u0131d\u0131r, bu herkes\xE7e
+    bilinir. Se\xE7ti\u011Fin kart ise ters a\xE7\u0131larak aksi bir durumla kar\u015F\u0131la\u015Faca\u011F\u0131n\u0131n
+    haberini veriyor bizlere... O m\xFCcadeleden, o g\xFC\xE7 g\xF6sterisinden ka\xE7acaks\u0131n.
+    \u0130steklerini ve h\u0131rslar\u0131n\u0131 yan\u0131na al\u0131p, alan\u0131
+    terk edeceksin. G\xF6z g\xF6re g\xF6re yenilmek istemeyeceksin. Yenilece\u011Fini
+    nereden biliyorsun ki? Bunun tek bir a\xE7\u0131klamas\u0131 var; kendini yetersiz
+    g\xF6receksin {{isim}}. Ger\xE7ekten yapamayacaksan, olmayacaksa, \"diretme\"
+    diyor kart\u0131n. Vard\u0131r bunda da bir hay\u0131r..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kilicbeslisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

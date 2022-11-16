@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: S5Cevap2003
+  m_EditorClassIdentifier: 
+  etiket: dogc
+  aciklama:
+  - "Demek 2003 y\u0131l\u0131...\r\nO y\u0131l A Milli Bayan Voleybol Tak\u0131m\u0131m\u0131z,
+    tarihinde ilk defa Avrupa 2.'si olmu\u015Ftu. Sa\u011Flam kafa sa\u011Flam v\xFCcutta... "
+  - "2003 m\xFC?\r\nO y\u0131l Iron Maiden on \xFC\xE7\xFCnc\xFC alb\xFCm\xFC Dance
+    of Death'i yay\u0131nlam\u0131\u015Ft\u0131. Heavy Metal sever misin?"
+  - "2003 \xF6yle mi?\r\nO y\u0131l genetik haritan\u0131n tamamland\u0131\u011F\u0131
+    ve DNA'n\u0131n \u015Fifresinin \xE7\xF6z\xFCld\xFC\u011F\xFC y\u0131l olmu\u015Ftu.
+    Yalan olmas\u0131n, \xF6yle hat\u0131rl\u0131yorum..."
+  - "2003 y\u0131l\u0131 \xF6yle mi?\r\nSinema oyuncusu Arnold Schwarzenegger, o
+    y\u0131l California valisi se\xE7ilmi\u015Fti. Bize ne, onu bilmiyorum..."
+  - "2003 ha?\r\n\"Everyway that I can\"demi\u015Ftik o sene! T\xFCrkiye, Eurovision
+    \u015Fark\u0131 yar\u0131\u015Fmas\u0131nda ilk birincili\u011Fini Sertab Erener
+    ile kazanm\u0131\u015Ft\u0131. Dinlerken seni uyand\u0131rmad\u0131k umar\u0131m?"
+  aranacakEtiket: konum izin
+  gerekenDegiskenler:
+  - degiskenAdi: dogum yili
+    degiskenDegeri: 2003
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

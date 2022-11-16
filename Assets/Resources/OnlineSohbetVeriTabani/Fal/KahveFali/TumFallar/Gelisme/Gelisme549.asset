@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme549
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA35275189312
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131n\u0131n detaylar\u0131na \xE7ok daha g\xFCzel havadislerle devam etmek
+    isterdim {{isim}}. Fakat fincan\u0131n\u0131n yan y\xFCzeyinde, seni \"karanl\u0131k\"
+    baz\u0131 telvelerin aras\u0131nda g\xF6r\xFCyorum. \U0001F644Ba\u015F\u0131n\u0131
+    yukar\u0131 kald\u0131rm\u0131\u015F, adeta birka\xE7 \"y\u0131ld\u0131z \u0131\u015F\u0131\u011F\u0131\"
+    arar gibi g\xF6\u011Fe bak\u0131yorsun. Sen de sevindi\u011Finde topra\u011Fa,
+    \xFCz\xFCld\xFC\u011F\xFCnde g\xF6ky\xFCz\xFCne bakanlardan m\u0131s\u0131n?
+    \xD6zel hayat\u0131n\u0131n tam istedi\u011Fin gibi olmad\u0131\u011F\u0131n\u0131
+    hissediyorum. \U0001F928Beklentilerinin bo\u015Fa \xE7\u0131kt\u0131\u011F\u0131n\u0131
+    ve yan\u0131lg\u0131lar i\xE7inde oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCn,
+    huzurdan uzakla\u015Ft\u0131\u011F\u0131n\u0131 hissetti\u011Fin bir d\xF6nem
+    ge\xE7irmi\u015Fsin. {{burc}} burcu olu\u015Funu ve {{ay_0}} ay\u0131nda oldu\u011Fumuzu
+    da d\xFC\u015F\xFCn\xFCrsek, bu gayet normal. \u015Euna emin ol, {{ay_+1}} ay\u0131nda
+    a\u015Fk hayat\u0131n senin i\xE7in daha mutlu ge\xE7ecek.\n\n{{kelime, 20'li
+    ya\u015Flarda | 30'lu ya\u015Flarda | Yakla\u015F\u0131k 23-24 ya\u015Flar\u0131nda
+    | 40'l\u0131 ya\u015Flarda | 50'li ya\u015Flarda | 60'l\u0131 ya\u015Flarda |
+    30-35 ya\u015Flar\u0131nda | Senin ya\u015Flar\u0131nda | Senden \xFC\xE7 d\xF6rt
+    ay daha b\xFCy\xFCk | Senden iki \xFC\xE7 ya\u015F daha b\xFCy\xFCk}}, {{kelime,
+    zor zamanlar\u0131nda hep yan\u0131nda oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    | dar zamanlar\u0131nda sana her daim el uzatmaya \xE7al\u0131\u015Fan | \xE7ok
+    s\u0131k g\xF6r\xFC\u015Fmedi\u011Finiz fakat ne zaman bir sorunun olsa hissedip
+    sana yazan | s\u0131k\u0131nt\u0131l\u0131 zamanlar\u0131n\u0131 adeta hisseden
+    ve seni \xE7ok ge\xE7meden arayan | lokalizasyon olarak uza\u011F\u0131nda olan
+    fakat kalben sana \xE7ok yak\u0131n}}, {{kelime, 1.70 boylar\u0131nda klasik
+    giyimli | 1.65 boylar\u0131nda iyi giyimli | 1.60 boylar\u0131nda sala\u015F
+    giyimli | 1.64 boylar\u0131nda modern giyimli | 1.80 boylar\u0131nda sportif
+    giyimli}} bir {{kelime, kad\u0131n | erkek | han\u0131mefendi}} var fincan\u0131nda.
+    Bu ki\u015Fiyle {{kelime, ilerleyen g\xFCnlerde | gelecek hafta | 2 g\xFCn sonra
+    | 3 g\xFCn sonra | d\xF6rt g\xFCn sonra | be\u015F g\xFCn sonra | haftaya cumartesi
+    | haftaya pazar g\xFCn\xFC}} a\u015Fk hayat\u0131na dair bir g\xF6r\xFC\u015Fme
+    yapacaks\u0131n {{isim}}. Hem duyacaklar\u0131n hem de alaca\u011F\u0131n g\xFCzel
+    bir haber, sana \xE7ok iyi gelecek!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

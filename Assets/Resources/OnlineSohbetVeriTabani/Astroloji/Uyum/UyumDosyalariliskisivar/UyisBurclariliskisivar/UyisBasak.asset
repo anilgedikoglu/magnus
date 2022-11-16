@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisBasak
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA51497604027
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Ba\u015Fak
+    burcu {{data, cinsiyet=kad\u0131n, erkekleri | cinsiyet=erkek, kad\u0131nlar\u0131
+    | cinsiyet=lgbt, mensuplar\u0131}} {{burc}} burcu {{data, cinsiyet=kad\u0131n,
+    kad\u0131nlar\u0131n\u0131n | cinsiyet=erkek, erkeklerinin | cinsiyet=lgbt, insanlar\u0131n\u0131n}}
+    aksine \u015Fekilcili\u011Fi severler. Birlikte bulundu\u011Funuz i\u015F ortam\u0131nda
+    bunu sen de kolayl\u0131kla g\xF6zlemleyebilirsin. Sahip oldu\u011Fu \u015Feylerle
+    \xF6v\xFCnmesi, d\u0131\u015F g\xF6r\xFCn\xFC\u015Fe haddinden fazla \xF6nem
+    vermesi ve mazrufa bakmak yerine zarf ile ilgilenmesi seni de rahats\u0131z edebilir.
+    B\xF6yle bir durumda, sevgilinin k\u0131ymetini belki de daha iyi anlars\u0131n.
+    E\u011Fer buna tak\u0131lmazsan, aran\u0131zda kar\u015F\u0131 konulmas\u0131
+    zor bir \\\"uzak uyum\\\" oldu\u011Funu da hissedeceksindir {{isim}}. Birbirinize
+    uzaktan dahi baksan\u0131z, her ikinizin de kimyas\u0131nda de\u011Fi\u015Fiklikler
+    olmas\u0131 m\xFCmk\xFCn. \\\"Mant\u0131\u011F\u0131 \xF6n planda tutmam. Ben
+    mutlu olmak ve an'\u0131 ya\u015Famak istiyorum\\\" diyorsan, Halep de ar\u015F\u0131n
+    da orada.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "ba\u015Fak"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

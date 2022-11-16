@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1008
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA67077369739
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin alt kenar\u0131na bir \"h\xFCdh\xFCd ku\u015Fu\" konmu\u015F. Kayd\u0131rak
+    gibi k\u0131vr\u0131lan gagas\u0131n\u0131n ucunda senin i\xE7in bir arma\u011Fan
+    var. K\xFC\xE7\xFCc\xFCk, kalp \u015Feklinde bir kolye ucu bu! \u0130nsanlar
+    taraf\u0131ndan \xE7ok seviliyor ve takdir ediliyorsun {{isim}} sen. Bu sevginin
+    yak\u0131nda somut bir delili olacak. {{kelime, Bir haftay\u0131 a\u015Fmayacak
+    bir s\xFCre zarf\u0131nda | \xDC\xE7 d\xF6rt g\xFCn\xFC a\u015Fmayacak bir s\xFCre
+    zarf\u0131nda | \u0130ki haftay\u0131 a\u015Fmayacak bir s\xFCre zarf\u0131nda
+    | Birka\xE7 g\xFCn\xFC a\u015Fmayacak bir s\xFCre zarf\u0131nda}}, ad\u0131nda
+    {{kelime, iki sesli harf bulunan bir dostun | K ya da L harfi bulunan bir yak\u0131n\u0131n
+    | M ya da N harfi bulunan bir yak\u0131n\u0131n | R ya da T harfi bulunan bir
+    yak\u0131n\u0131n | V ya da Z harfi bulunan bir yak\u0131n\u0131n}}, sana ihtiyac\u0131n
+    olan bir konuda yard\u0131mc\u0131 olarak i\u015Fini kolayla\u015Ft\u0131racak.
+    K\xFC\xE7\xFCc\xFCk bir hareket dahi olsa, sende b\xFCy\xFCk bir sevince yol
+    a\xE7aca\u011F\u0131n\u0131 hissediyorum. Bik bik bik! <sprite=10>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisBogaEvli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA52453161671
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"{{burc}}
+    burcu birinin kar\u015F\u0131s\u0131na kapsay\u0131c\u0131, ho\u015Fg\xF6r\xFCl\xFC
+    ve sahiplenici bir bo\u011Fa burcu {{data, cinsiyet=kad\u0131n, erke\u011Fi |
+    cinsiyet=erkek, kad\u0131n\u0131 | cinsiyet=lgbt, insan\u0131}} \xE7\u0131kt\u0131ysa,
+    oradan ne \xE7\u0131kaca\u011F\u0131 az \xE7ok bellidir {{isim}}; a\u015Fk \xE7\u0131kar.
+    Olgun, sab\u0131rl\u0131 ve yard\u0131msever birine \xE7ok ihtiya\xE7 duydu\u011Funu
+    ve bunu evlili\u011Finde tam manas\u0131yla bulamad\u0131\u011F\u0131n\u0131
+    hissediyorum. Teoride, elementi toprak olan insanlarla daimi mutlulu\u011Fun
+    ka\xE7\u0131n\u0131lmaz g\xF6z\xFCk\xFCyor. Ancak elbette h\u0131zl\u0131 kararlardan
+    uzak durmakta fayda olabilir. Bu {{data, cinsiyet=kad\u0131n, beyefendinin |
+    cinsiyet=erkek, han\u0131mefendinin | cinsiyet=lgbt, ki\u015Finin}} i\u015F ortam\u0131ndaki
+    hareketlerini bir s\xFCre daha g\xF6zle Sevgili {{isim}}. Benim tek bir konuda
+    \xE7ekincem var, o da \u015Fu; bo\u011Fa burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131
+    | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, insanlar\u0131}} \xE7evrelerindeki
+    {{data, cinsiyet=kad\u0131n, kad\u0131nlara | cinsiyet=erkek, erkeklere | cinsiyet=lgbt,
+    insanlara}} kar\u015F\u0131 fazla ho\u015Fg\xF6r\xFCl\xFCd\xFCrler. Sen ise biraz
+    fazla sahiplenicisin. Bu durum ilerleyen zamanlarda ho\u015Funa gitmeyebilir.
+    Kar\u015F\u0131ndaki insan k\u0131s\u0131tlanmak da istemeyece\u011Finden, s\u0131k\u0131
+    \xE7at\u0131\u015Fmalar ya\u015Fayabilirsiniz. Olmazs\u0131n\u0131z demiyorum,
+    fakat iki kere d\xFC\u015F\xFCn\xFCp bir kere hareket etmeni \xF6neriyorum. \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "bo\u011Fa"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

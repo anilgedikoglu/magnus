@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKupadortlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA63814720286
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: d79c37eff887d004bb44ec35111b972d, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: d79c37eff887d004bb44ec35111b972d, type: 3}
+  contentPhotoId: kupadortlusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Kupa D\xF6rtl\xFCs\xFC\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nBaz\u0131 olaylar seni adeta paralize etmi\u015F. \u0130\u015Fler
+    tam istedi\u011Fin gibi gitmeyince, ne yapaca\u011F\u0131n\u0131 ve nas\u0131l
+    devam edece\u011Fini bir s\xFCre bilememi\u015Fsin {{isim}}. \u0130lerlemek i\xE7in
+    baz\u0131 cevaplar arad\u0131\u011F\u0131n\u0131, bu cevaplar\u0131 ba\u015Fkalar\u0131ndan
+    almak yerine kendi i\xE7ine kapan\u0131p yard\u0131ms\u0131z bulmaya \xE7al\u0131\u015Ft\u0131\u011F\u0131n\u0131
+    g\xF6r\xFCyorum. Cevap bulma iste\u011Fine o kadar tak\u0131lm\u0131\u015Fs\u0131n
+    ki, keyif alabilece\u011Fin g\xFCnleri ve anlar\u0131 ka\xE7\u0131rm\u0131\u015Fs\u0131n.
+    \xC7evrende seni de ilgilendiren geli\u015Fmeler olmas\u0131na ra\u011Fmen, t\xFCm
+    olan bitene kulak t\u0131kam\u0131\u015F ve ya\u015Fad\u0131\u011F\u0131n sorunlar\u0131
+    \xE7\xF6zmek \xFCzere hayat\u0131na adeta bir \"mola\" vermi\u015Fsin. O s\xFCre
+    i\xE7erisinde yaln\u0131z kalmak, senin i\xE7in isabetli bir karar olmu\u015F.
+    Bu sayede do\u011Frular\u0131 daha net g\xF6rm\xFC\u015Fs\xFCn."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kupadortlusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

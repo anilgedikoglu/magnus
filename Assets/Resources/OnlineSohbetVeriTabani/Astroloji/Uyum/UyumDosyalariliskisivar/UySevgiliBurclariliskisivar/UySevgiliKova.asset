@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UySevgiliKova
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA32237205255
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Sevgilinin
+    kova burcu olu\u015Funa hem sevindim hem \xFCz\xFCld\xFCm {{isim}}. Kova {{data,
+    cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt,
+    mensuplar\u0131}} yeniliklere a\xE7\u0131k insanlard\u0131r. Bir \u015Feyler
+    i\xE7in onlar\u0131 ikna etmen \xE7ok zor olmaz. Yeni \u015Feyler denemeyi severler.
+    Di\u011Fer taraftan, genellikle verdikleri s\xF6zde durmazlar; hele ki bunu bask\u0131
+    alt\u0131nda yapm\u0131\u015Flarsa... Ondan tutmayaca\u011F\u0131n\u0131 bildi\u011Fin
+    bir s\xF6z vermesini istemedi\u011Fin s\xFCrece, sizin aran\u0131zda b\xFCy\xFCk
+    bir anla\u015Fmazl\u0131k ya\u015Fanaca\u011F\u0131n\u0131 sanm\u0131yorum. Dikkat
+    etmen di\u011Fer bir konu da \u015Fu {{isim}}; {{burc}} burcu {{data, cinsiyet=erkek,
+    erkeklerinin | cinsiyet=kad\u0131n, kad\u0131nlar\u0131n\u0131n | cinsiyet=lgbt,
+    mensuplar\u0131n\u0131n}} ne kadar haz\u0131r cevap ve hitabeti y\xFCksek insanlar
+    olduklar\u0131n\u0131 iyi bilirim. Fakat sevgiline her ne s\xF6ylersen s\xF6yle,
+    laf sokma ama\xE7l\u0131 ya da onu k\u0131racak bir \u015Fey s\xF6ylememelisin.
+    Bundan tek kelimeyle nefret ederler. Sen ona do\u011Fru bir odun par\xE7as\u0131n\u0131n
+    ucunu g\xF6sterirsen, onun koskoca bir k\u0131l\u0131\xE7 \xE7\u0131karabilece\u011Fini
+    bilmen laz\u0131m. Bence her zaman k\xF6t\xFCl\xFCkte de\u011Fil, iyilikte yar\u0131\u015Fmas\u0131
+    gereken ki\u015Filersiniz. \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: sevgili
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: kova
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

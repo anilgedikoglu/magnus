@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Thuzursuz
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA14418897998
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{burc}} bur\xE7lar\u0131 i\xE7in belirsizliklerle dolu ve \"huzursuz hissedebilecekleri\"
+    bir g\xFCndeyiz Sevgili {{isim}}. Bilinmezliklerin, seni yolundan ve ray\u0131ndan
+    sapt\u0131rabilece\u011Fini d\xFC\u015F\xFCnebilirsin. Bug\xFCn kar\u015F\u0131na
+    \xE7\u0131kabilecek ihtimallerin hep en k\xF6t\xFClerini d\xFC\u015F\xFCnmeye
+    meyillisin. Her \u015Feyin kontrol\xFCn\xFCn sende olmad\u0131\u011F\u0131n\u0131
+    ve her \u015Feyin bir \u015Fekilde olaca\u011F\u0131na varaca\u011F\u0131n\u0131
+    bug\xFCn sak\u0131n akl\u0131ndan \xE7\u0131karma. Hay\u0131rl\u0131 olan\u0131
+    iste, elinden gelen her \u015Feyi yap ve geriye \xE7ekil. Her karanl\u0131\u011F\u0131n
+    alt\u0131ndan bir k\xF6t\xFCl\xFCk \xE7\u0131kabilece\u011Fini ve \u015Fansa
+    ba\u011Fl\u0131 olan i\u015Flerinin hep \"istemedi\u011Fin gibi\" sonu\xE7lanaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnmene hi\xE7 gerek yok. Y\xFCre\u011Fi temiz bir insansan, korunuyorsun
+    ve g\xFCvendesin demektir {{isim}}. Evrenin seni yard\u0131ms\u0131z b\u0131rakmayaca\u011F\u0131n\u0131
+    ve g\xF6\u011Fs\xFCn\xFC geni\u015Fleterek i\xE7ine huzur yerle\u015Ftirece\u011Fini
+    d\xFC\u015F\xFCnmeni, buna da b\xFCt\xFCn kalbinle inanman\u0131 tavsiye ederim."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

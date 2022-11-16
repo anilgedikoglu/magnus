@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Farketmez27
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA94202698092
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn \"d\u0131t\", \"bip\" ya da \"ding dong\" seslerinden bir ya da birka\xE7\u0131n\u0131
+    birden fazla kez duyabilirsin. Belki yapman gereken i\u015Fler, belki de birileri
+    veya bir \u015Feyler g\xFCn i\xE7erisinde hep seni \xE7a\u011F\u0131r\u0131yor
+    olacak. Biliyor musun, d\xFCn gece ad\u0131nda {{harf}} harfi olan birinin r\xFCyas\u0131ndayd\u0131n
+    {{isim}}. Bu ki\u015Fi {{gun_-2}} g\xFCn\xFC ve d\xFCn, g\xFCn boyu seni d\xFC\u015F\xFCnd\xFC.
+    Gece bilin\xE7 alt\u0131n\u0131n seni ortaya \xE7\u0131karmas\u0131 gayet normal.
+    Bu ki\u015Fi sana dair g\xFCzel g\xFCnler hat\u0131rl\u0131yor... \xD6\u011Fleden
+    sonra seni memnun edecek bir tesad\xFCf ya\u015Fayacaks\u0131n. Akl\u0131ndan
+    ge\xE7en, kar\u015F\u0131na gelecek. Belki kar\u015F\u0131na, belki \xF6n\xFCne,
+    belki de telefonuna... Ak\u015Fam \xFCzerine do\u011Fru ise ba\u015F ya da di\u015F
+    a\u011Fr\u0131s\u0131 \xE7ekme ihtimalinle ilgili seni uyarmak isterim. Bu ihtimal
+    az da de\u011Fil; hesaplamalar\u0131m %{{sayi,60,90}} dolaylar\u0131nda oldu\u011Funu
+    s\xF6yl\xFCyor. Zihinsel olarak yoruldu\u011Fun bir g\xFCn\xFCn sonunda, oturdu\u011Fun
+    ya da uzand\u0131\u011F\u0131n yerde uyuyakalabilirsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

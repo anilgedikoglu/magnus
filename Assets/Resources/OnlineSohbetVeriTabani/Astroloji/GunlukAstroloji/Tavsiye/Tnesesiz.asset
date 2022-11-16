@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tnesesiz
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA94253268417
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{burc}} bur\xE7lar\u0131n\u0131n keyfi zor yerine gelir ve ne\u015Fesi \xE7abuk
+    ka\xE7abilir. Bug\xFCn de ne\u015Felerinin yerinde olmad\u0131\u011F\u0131 bir
+    g\xFCndeyiz. Bug\xFCn seni g\xF6ren, denizlerin birinde gemilerinin batt\u0131\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnebilir. Ne\u015Feni yerine getirmek isteyenler de olacak. Ba\u015Far\u0131s\u0131zl\u0131klar\u0131,
+    onlar\u0131 senden uzakla\u015Ft\u0131rabilir. Bu ruh halin, u\u011Fra\u015Ft\u0131\u011F\u0131n
+    i\u015Flerde elinden gelenin en iyisini yapmana engel olacakt\u0131r. Bug\xFCn
+    her \u015Feyi a\u011F\u0131rdan alman\u0131 tavsiye ediyorum {{isim}}. \xC7al\u0131\u015F,
+    \xE7abala, u\u011Fra\u015F, konu\u015F, g\xF6r\xFC\u015F; fakat acele etme. Daha
+    sab\u0131rl\u0131 davranman, daha fazla emek harcaman ve hedefine varmak i\xE7in
+    daha uzun yollardan dola\u015Fman gerekebilir. Ne\u015Feni yerine getirebilmek
+    i\xE7in bug\xFCn kendine biraz iltimas ge\xE7; al\u0131\u015Fveri\u015F yap ve
+    istedi\u011Fin bir \u015Feyleri al. \u0130stedi\u011Fin bir yerlere git. Uzun
+    zamand\u0131r merak etti\u011Fin bir filmi izle. Bug\xFCn \"isteklerine\" kulak
+    ver ve i\xE7 sesine cevap ver. Kendine izin ver. Bug\xFCn\xFC kendin i\xE7in
+    ya\u015Fa {{isim}}. G\xF6receksin, keyfin biraz olsun yerine gelecek."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

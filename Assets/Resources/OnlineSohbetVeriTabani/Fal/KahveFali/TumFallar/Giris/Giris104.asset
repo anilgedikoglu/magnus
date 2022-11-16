@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris104
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA29179539620
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan g\xF6rsellerindeki kulp k\u0131sm\u0131n\u0131 \"pupa\" kabul edersek,
+    tam \"{{kelime, iskele | sancak}}\" y\xF6n\xFCnde baz\u0131 rakamlar\u0131n i\u015Flenmi\u015F
+    oldu\u011Funu g\xF6r\xFCyorum. \u0130\xE7erisinde {{sayi,2,3}} adet {{kelime,
+    0'\u0131n bulundu\u011Fu | 1'in bulundu\u011Fu | 2'nin bulundu\u011Fu | 3'\xFCn
+    bulundu\u011Fu | 4'\xFCn bulundu\u011Fu | 5'in bulundu\u011Fu | 6'n\u0131n bulundu\u011Fu
+    | 7'nin bulundu\u011Fu | 8'in bulundu\u011Fu | 9'un bulundu\u011Fu}} bu rakamlar,
+    {{kelime, iki \xFC\xE7 g\xFCn i\xE7erisinde | \xFC\xE7 be\u015F g\xFCn i\xE7erisinde
+    | be\u015F on g\xFCn i\xE7erisinde | birka\xE7 hafta i\xE7erisinde | iki \xFC\xE7
+    hafta i\xE7erisinde}} kazara ya bir tan\u0131d\u0131\u011F\u0131n\u0131n kimli\u011Finde
+    g\xF6z\xFCne ili\u015Fecek, ya da senin yan\u0131nda birine sesli olarak s\xF6ylerken
+    duyacaks\u0131n. Bu ki\u015Fi her kimse, senin i\xE7in yapaca\u011F\u0131 bir
+    \u015Fey sayesinde \xF6zel sekt\xF6rde \xE7al\u0131\u015Fman\u0131n baz\u0131
+    dezavantajlar\u0131, bir anda avantaja d\xF6n\xFC\u015Fecek {{isim}}. \u0130\u015Finle
+    ilgili elindeki bir imkan\u0131 ya da hareket kabiliyetini, bu ki\u015Finin sana
+    yapaca\u011F\u0131 yard\u0131mla, a\xE7aca\u011F\u0131 kap\u0131yla, sunaca\u011F\u0131
+    yol veya y\xF6ntemle birle\u015Ftirerek, parasal s\u0131k\u0131nt\u0131n\u0131
+    uzun vadede gidereceksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

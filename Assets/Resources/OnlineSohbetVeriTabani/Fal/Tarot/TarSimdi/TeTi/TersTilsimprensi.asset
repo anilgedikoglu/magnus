@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA31390939021
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 079f47950c792b9449ccc42b41a6f040, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 079f47950c792b9449ccc42b41a6f040, type: 3}
+  contentPhotoId: tilsimprensi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"T\u0131ls\u0131m Prensi\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSanat\xE7\u0131
+    \"Sevmeler uzak, bu sevda tuzak bana\" diyor ya; sana da \u015Fu s\u0131ralar
+    ba\u015Far\u0131 uzak, para ise bir tuzak. Se\xE7ti\u011Fin kart, \xE7al\u0131\u015Fmalar\u0131ndaki
+    disiplinsizlikten bahsediyor {{isim}}. \u015Eans\u0131n\u0131n yaver gitmesi
+    i\xE7in sen de yard\u0131mc\u0131 olmal\u0131s\u0131n. \u015Eu s\u0131ralar bunu
+    yapm\u0131yor, aya\u011F\u0131na \xE7elme takmak isteyenlerin i\u015Flerini kolayla\u015Ft\u0131r\u0131yorsun.
+    Beynin adeta durmu\u015F gibi. \xC7evrendeki ko\u015Fullar s\xFCrekli de\u011Fi\u015Fiyor
+    ve sen neyin neden oldu\u011Funu anlay\u0131p adapte olmakta zorlan\u0131yorsun.
+    \u0130yi idrak etmedi\u011Fin ve do\u011Fru analiz yapmad\u0131\u011F\u0131n
+    zamanlarda ise ad\u0131mlar\u0131n yanl\u0131\u015F oluyor. Bir s\xFCre g\xF6z\xFCn\xFC
+    d\xF6rt a\xE7man gerekiyor. Durum bu."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi tilsimprensi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

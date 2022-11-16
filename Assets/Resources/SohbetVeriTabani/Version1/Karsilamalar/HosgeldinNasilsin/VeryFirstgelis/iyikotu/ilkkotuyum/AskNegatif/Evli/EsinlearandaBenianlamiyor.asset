@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: EsinlearandaBenianlamiyor
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA66504078527
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Anla\u015F\u0131lmad\u0131\u011F\u0131n\u0131 d\xFC\u015F\xFCnmek, travmatik
+    zamanlarda hepimizin ba\u015F\u0131na gelebiliyor {{isim}}. Anla\u015F\u0131lmak,
+    belki de sevilmekten daha b\xFCy\xFCk bir ihtiya\xE7. Ancak ileti\u015Fim probleminin
+    temellerine inmekte her zaman yarar var. E\u015Fin, her zaman oldu\u011Fundan
+    daha farkl\u0131 bir portre \xE7iziyorsa, karakterinde birtak\u0131m tutars\u0131zl\u0131klar
+    g\xF6r\xFCyorsan ya da tepkileri olmas\u0131 gerekti\u011Fi gibi de\u011Filse,
+    bu gibi durumlar onun hormonlar\u0131ndan, stres seviyesinden hatta \xE7evresel
+    fakt\xF6rlerden bile kaynaklan\u0131yor olabilir. Bu halinizin ve bu hissiyat\u0131n\u0131n
+    ge\xE7ici oldu\u011Funu bilmeni isterim."
+  - "Biliyor musun, zaman zaman e\u015Fin de senin taraf\u0131ndan anla\u015F\u0131lmad\u0131\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyor. Fakat her ikiniz de ayn\u0131 \u015Feyleri benzer metotlarla
+    anlatmaya \xE7al\u0131\u015F\u0131yor, farkl\u0131 bir teknik ya da yakla\u015F\u0131m
+    denemiyorsunuz {{isim}}. Son zamanlarda d\u0131\u015F etkenler her ikinizin de
+    \xFCzerine fazlaca geliyor. Ac\u0131s\u0131 ise birbirinizden \xE7\u0131k\u0131yor.
+    Evlili\u011Finize bir \u015Fans vermeli, birbirinize zaman tan\u0131mal\u0131
+    ve kimi zaman en ba\u015Fa d\xF6n\xFCp, birbirinizi \"neden sevdi\u011Finizi\"
+    hat\u0131rlamal\u0131s\u0131n\u0131z. D\xFCzeleceksiniz Sevgili {{isim}}."
+  - "Birini anlamak, onu dinlemekten ge\xE7iyor {{isim}}. E\u015Fin ise dinlemek
+    i\xE7in ihtiya\xE7 duydu\u011Fu tahamm\xFCl\xFC kaybetmi\u015F g\xF6z\xFCk\xFCyor.
+    \xD6zellikle son {{sayi, 2, 9}} ayd\u0131r \xE7ok yoruluyor; bunun sen de fark\u0131ndas\u0131nd\u0131r.
+    Onun seni anlamas\u0131n\u0131 ummak ya da onun taraf\u0131ndan anla\u015F\u0131lmak
+    ad\u0131na kendini paralamak yerine, birbirinize zaman tan\u0131mal\u0131s\u0131n\u0131z.
+    Sizin i\xE7in her \u015Fey daha g\xFCzel olacak, buna eminim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler: []
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

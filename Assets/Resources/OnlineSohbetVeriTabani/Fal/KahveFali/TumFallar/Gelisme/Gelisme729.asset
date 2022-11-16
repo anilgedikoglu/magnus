@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme729
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA19125774353
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "A\u015Fa\u011F\u0131 do\u011Fru uzanan telvelerin, fincan\u0131n orta k\u0131sm\u0131nda
+    k\xFC\xE7\xFCk g\xF6letlere d\xF6n\xFC\u015Fm\xFC\u015F {{isim}}. Bu g\xF6letlere
+    akmakta olan telvelerin kayna\u011F\u0131nda ise seni g\xF6rd\xFCm. Akt\u0131k\xE7a
+    koyula\u015Fm\u0131\u015F telvelerin, halinden de anlad\u0131\u011F\u0131m kadar\u0131yla
+    gizledi\u011Fin baz\u0131 duygular\u0131n \xE7atlam\u0131\u015F olan deliklerinden
+    s\u0131z\u0131yor. Ciddi manada ho\u015Fland\u0131\u011F\u0131n o {{data, cinsiyet=erkek,
+    han\u0131mefendiden | cinsiyet=kad\u0131n, beyefendiden | cinsiyet=lgbt, insandan}}
+    bekledi\u011Fin kar\u015F\u0131l\u0131\u011F\u0131 hen\xFCz alamam\u0131\u015F
+    olmak, san\u0131r\u0131m sana kendi \xF6zde\u011Ferini sorgulatm\u0131\u015F.\n\nUmutsuz
+    duygular\u0131n\u0131 temsil eden g\xF6let sembol\xFC, ho\u015Fland\u0131\u011F\u0131n
+    {{data, cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n, beyefendi | cinsiyet=lgbt,
+    insan}} oldu\u011Funu hissetti\u011Fim birinin ayaklar\u0131na kadar uzanm\u0131\u015F.
+    Bu ki\u015Fi, \u0131slanmas\u0131n diye pa\xE7alar\u0131n\u0131 adeta yukar\u0131
+    \xE7ekmi\u015F. \U0001F92BHislerinin tam manas\u0131yla bilincinde olmasa bile,
+    olumsuz duygular\u0131n\u0131n merkezinden yay\u0131lan negatif enerjiyi adeta
+    soluyabiliyor. Bu durum onu senden biraz uzakla\u015Ft\u0131rm\u0131\u015F {{isim}}.
+    Ne var ki, {{kelime, yak\u0131n gelecekte | gelecek ay\u0131n ilk haftas\u0131n\u0131n
+    son g\xFCnlerinde | gelecek ay\u0131n ikinci haftas\u0131nda | gelecek ay\u0131n
+    \xFC\xE7\xFCnc\xFC haftas\u0131n\u0131n ilk g\xFCnlerinde | gelecek ay\u0131n
+    d\xF6rd\xFCnc\xFC haftas\u0131n\u0131n ilk g\xFCnlerinde | gelecek ay\u0131n
+    ikinci \xE7eyre\u011Finin ilk g\xFCnlerinde | 3 hafta i\xE7inde bir \"sal\u0131\"
+    g\xFCn\xFC | 2 hafta i\xE7inde havan\u0131n bozuk oldu\u011Fu bir g\xFCnde |
+    2 hafta i\xE7inde keyifsiz hissetti\u011Fin bir ak\u015Famda | 2 hafta i\xE7inde,
+    i\u015Flerin pek de yolunda gitmedi\u011Fi bir g\xFCn\xFCn \xF6\u011Fleninde
+    | 3 hafta i\xE7inde, \u0131l\u0131man bir g\xFCn\xFCn \xF6\u011Fleden sonras\u0131nda}}
+    y\xFCre\u011Finde aniden kabaracak olan cesaret hissiyle ataca\u011F\u0131n ad\u0131mlar,
+    bu vaziyeti tamamen tersine \xE7evirecek g\xFC\xE7te olacaklar."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

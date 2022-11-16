@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme432
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA25360627085
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131nda, evindeki {{kelime, k\xFC\xE7\xFCc\xFCk, oval aynas\u0131n\u0131n
+    \xF6n\xFCnde duran | orta boylardaki dikd\xF6rtgen aynas\u0131n\u0131n \xF6n\xFCnde
+    duran | b\xFCy\xFCk ve dikd\xF6rtgen boy aynas\u0131n\u0131n \xF6n\xFCnde duran
+    | orta boylardaki oval aynas\u0131n\u0131n \xF6n\xFCnde duran}}, \xE7aresizce
+    kendi y\xFCz\xFCne bakan ve d\xFC\u015F\xFCnen, {{kelime, orta ya\u015Flarda
+    | senin ya\u015Flar\u0131nda}} bir {{kelime, kad\u0131n | erkek | han\u0131mefendi
+    | beyefendi}} g\xF6r\xFCyorum. Bu ki\u015Fi her kimse, iki ki\u015Finin aras\u0131nda
+    ya da zorlu bir durumun i\xE7erisinde kalm\u0131\u015F {{isim}}. \U0001F928 {{kelime,
+    Akraban | Arkada\u015F\u0131n | Tan\u0131d\u0131\u011F\u0131n}} oldu\u011Funu
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu ki\u015Fi, gelecek hafta olumlu bir geli\u015Fme
+    ya\u015Fayacak. Olay\u0131n hemen ertesi g\xFCn\xFC, bilgisi sana ula\u015Fm\u0131\u015F
+    olacak; \xE7\xFCnk\xFC meselenin seni de ilgilendirdi\u011Fini hissediyorum.
+    \n\nGelecek {{sabit_sayi,2,4}} ay boyunca, son {{sabit_sayi,2,4}} senedir ekti\u011Fin
+    \xE7o\u011Fu eme\u011Fin sonu\xE7lar\u0131n\u0131 bi\xE7eceksin. Hayat\u0131nda
+    b\xFCy\xFCk at\u0131l\u0131m ve de\u011Fi\u015Fikliklerin olaca\u011F\u0131 en
+    \xF6nemli d\xF6nemlerden birine do\u011Fru ilerliyorsun. \u23F1\uFE0F {{ay_+5}}
+    ve {{ay_+6}} aylar\u0131 gibi, \u015Fu anda oldu\u011Fundan \xE7ok daha rahat,
+    mutlu ve huzurlu olaca\u011F\u0131n\u0131 bilmeni isterim. Endi\u015Feler senden
+    gitgide uzakla\u015F\u0131yor {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

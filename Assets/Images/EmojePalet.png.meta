@@ -1,0 +1,2732 @@
+fileFormatVersion: 2
+guid: 9e565c7c62aacea45bde4339d0108fa8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2432417821153575780
+    second: 12
+  - first:
+      213: 9178141435036925187
+    second: 13
+  - first:
+      213: -5395470139794544022
+    second: 19
+  - first:
+      213: 2864579467011787851
+    second: 14
+  - first:
+      213: 7859334699537086325
+    second: 15
+  - first:
+      213: -5043059766964350712
+    second: 16
+  - first:
+      213: 7837535047190701976
+    second: 18
+  - first:
+      213: -525182366651043311
+    second: 20
+  - first:
+      213: 7912288501623904656
+    second: 21
+  - first:
+      213: -933436552116338402
+    second: 22
+  - first:
+      213: 1952930533653461796
+    second: 17
+  - first:
+      213: 7945165836697739542
+    second: 23
+  - first:
+      213: -7552795392269207937
+    second: 27
+  - first:
+      213: -5827799024045430246
+    second: 35
+  - first:
+      213: -2970210903955500709
+    second: 33
+  - first:
+      213: -1103441144380080835
+    second: 28
+  - first:
+      213: -8160341011298170979
+    second: 34
+  - first:
+      213: -525093034408271420
+    second: 29
+  - first:
+      213: 3426259077141947583
+    second: 26
+  - first:
+      213: 5439768039306877871
+    second: 24
+  - first:
+      213: 6213000114059378958
+    second: 25
+  - first:
+      213: -4514039305212646113
+    second: 31
+  - first:
+      213: -1600413813662533640
+    second: 26
+  - first:
+      213: 1926178861847954572
+    second: 32
+  - first:
+      213: 5294997822393718827
+    second: 40
+  - first:
+      213: 8410199189054956973
+    second: 41
+  - first:
+      213: 465525764939933465
+    second: 45
+  - first:
+      213: 5085009384515683892
+    second: 46
+  - first:
+      213: 1418146912092334846
+    second: 42
+  - first:
+      213: 5079986209905439299
+    second: 47
+  - first:
+      213: 2967360798426274374
+    second: 37
+  - first:
+      213: -1808660652143525082
+    second: 43
+  - first:
+      213: 6628675001412701971
+    second: 38
+  - first:
+      213: 5963492208737763620
+    second: 39
+  - first:
+      213: -5934881981543408917
+    second: 36
+  - first:
+      213: 2443477274866603470
+    second: 44
+  - first:
+      213: 6819356618852126260
+    second: 56
+  - first:
+      213: -4980291576723295606
+    second: 48
+  - first:
+      213: 140398946005539291
+    second: 49
+  - first:
+      213: 4795706565091701290
+    second: 53
+  - first:
+      213: -3159774792900228028
+    second: 59
+  - first:
+      213: 9159563060352380780
+    second: 54
+  - first:
+      213: -3266614087329396519
+    second: 50
+  - first:
+      213: 6523868172996271995
+    second: 51
+  - first:
+      213: -1049091812320238184
+    second: 52
+  - first:
+      213: -1823704454549698053
+    second: 57
+  - first:
+      213: 970247370124245545
+    second: 58
+  - first:
+      213: -7037158972359310101
+    second: 55
+  - first:
+      213: 3779876261210676467
+    second: 60
+  - first:
+      213: 2223265178543182685
+    second: 64
+  - first:
+      213: 3674331384847768756
+    second: 61
+  - first:
+      213: 115884399828796487
+    second: 62
+  - first:
+      213: -2307710083638676402
+    second: 65
+  - first:
+      213: -8678028404018159501
+    second: 70
+  - first:
+      213: 4209250648113881786
+    second: 66
+  - first:
+      213: 207284037596381753
+    second: 67
+  - first:
+      213: -7745196121652039934
+    second: 63
+  - first:
+      213: 4956042841768816512
+    second: 69
+  - first:
+      213: 9073770814975081033
+    second: 68
+  - first:
+      213: 4728114983327907639
+    second: 71
+  - first:
+      213: -7730366888161728752
+    second: 75
+  - first:
+      213: 1863067860814124596
+    second: 73
+  - first:
+      213: 3439091076608953833
+    second: 76
+  - first:
+      213: 8707304132967387697
+    second: 77
+  - first:
+      213: 4223863619819949418
+    second: 78
+  - first:
+      213: -3619492652763823502
+    second: 72
+  - first:
+      213: 6357299733532686133
+    second: 74
+  - first:
+      213: 2888879146454251940
+    second: 79
+  - first:
+      213: -5045563541261434319
+    second: 80
+  - first:
+      213: -4148295589196064084
+    second: 81
+  - first:
+      213: 5976651089097086768
+    second: 82
+  - first:
+      213: 7166981976435331476
+    second: 83
+  - first:
+      213: 1265518386070407884
+    second: 84
+  - first:
+      213: -3002197142840514568
+    second: 85
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EmojePalet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 981
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61447b8c519e0744ad9f0661346f69b
+      internalID: -1922025434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 981
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea372e180a2dfa14b8c4fdf83b2e17d2
+      internalID: 1048375234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_2
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 981
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d7aa40fe6618247bd66ec507a2edce
+      internalID: -419734540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 981
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3bf71baff16fb498f0c995ac0a0548
+      internalID: 679753050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_4
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 981
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ff78a5c5e811046af3916e30fb83f3
+      internalID: 186019937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_5
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 981
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bf5532552ee4c47bfa5f30e2118829
+      internalID: -854068788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_6
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 982
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716ffe132dd0f23438a54d0848fc9e5b
+      internalID: 485608554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_7
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 982
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d943fb12797a86840a3d22b630e9f233
+      internalID: 197147197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_8
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 982
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee98bb7c57956f41bbeb628c3cae822
+      internalID: -263668885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_9
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 981
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a7486a3fe106644a31c7adaf1d7c82
+      internalID: 75738044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_10
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 981
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8e0ae2f65ed3244a85f66fb38363fa
+      internalID: 1904248081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_11
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 982
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fdb74f07bebfd4fb1284e034a9d14e
+      internalID: -40376447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 886
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd32cbfae55d90499e6a4ffb6ebe652
+      internalID: 619741762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_13
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 886
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3267ced7fe88f11419e58e6b31467b75
+      internalID: -418318122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_14
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 886
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beed8e7bbb5148d46ab5edb94ff4f629
+      internalID: 332103694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 886
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4769b7f6f7b4e44bd1823bff3ba4bb
+      internalID: -1221266796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_16
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 886
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b92d4e6ef97ef4bacbdb7efe828388
+      internalID: -523565609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_17
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 886
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c57684aa02d75a4ea330fb4f4feada1
+      internalID: 520958313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_18
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 884
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7f120d5c7ec8745b52b5e2c4bcd116
+      internalID: -1408837883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_19
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 884
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6fbfcc8cb9ea44fa5116d0955adb0d
+      internalID: 2038230080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_20
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 884
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035dffb89be8b554f9e59cdde6df5dc5
+      internalID: 1239622220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_21
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 885
+        width: 59
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4069ae9f4294b46a7071d43b9f1ac2
+      internalID: -2094777874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_22
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 887
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bb18e86d181e9498d5cd3fefc32e30
+      internalID: 1651208784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_23
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 887
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32dd861e8015d74eb7a464e098e59b8
+      internalID: -918791881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 792
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b574efc9747c4754f870e03a8a12201b
+      internalID: -127657309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_25
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 791
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f0a5c0a1858d24d85cda39d7de1196
+      internalID: -1987959875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_26
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 791
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e34e29135d29f34ab4e660097962abf
+      internalID: 1144505136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_27
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 792
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8378ceebbefd2489bd509f74e28519
+      internalID: 1613878823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_28
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 788
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e15c33ec4ece54a9230647f9a95479
+      internalID: 232464470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_29
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 791
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dfe12abb747dcd4688522bda1d493a9
+      internalID: 863543442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_30
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 791
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb9635d9197bde4ea87d25f6c2761cb
+      internalID: 2025584963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_31
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 791
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5227e96d4d99f14fb00a41e492b354a
+      internalID: 672331496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_32
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 791
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11e2e37ca7288d4fb5c52ad427ca001
+      internalID: 1357081400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_33
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 791
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2699e595c397d44867ee02a69fc888
+      internalID: -1754007959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_34
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 791
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b81b9dab5c636c48bc8735d09229ab6
+      internalID: 1873420034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_35
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 791
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08de82ab3ffe74443ae853b16d3ef9b0
+      internalID: -1777744462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_36
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 696
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23666fb68d6750b4f833e2f60989776b
+      internalID: -2004105615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_37
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 696
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ceb87fae0ab99478b75cd4c31b0f3f
+      internalID: 928951151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_38
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 696
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dc2fc49c93abe4eb012949c401eaed
+      internalID: 179445128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_39
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 693
+        width: 60
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332a7be22a73c82459e725589f84a916
+      internalID: 817020717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_40
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 696
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4787fe4f01d80e6498a9da3fd556a9e6
+      internalID: -1851802412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_41
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 694
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f591ac4b5fe9bb448b043b2152adbb10
+      internalID: 1866405115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_42
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 696
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b44e20b862517f46bdb6c2cc66852d1
+      internalID: 1933015163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_43
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 696
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f525e761bf468db42b085199fff0ec1f
+      internalID: -1303428851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_44
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 696
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13da42e328b9c348bee65bff783cdd2
+      internalID: 72819421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_45
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 696
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bac2e261ec0cfe41980de3185afd1df
+      internalID: 1671637250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_46
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 696
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16ee6a3798deaa4e880d9ab6c46a6b3
+      internalID: 105971899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_47
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 696
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a939f26750c90594b98836391d8b20c9
+      internalID: 2020613857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_48
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 601
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d836bba971bae2f4098ebda7e012ef38
+      internalID: 83030704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_49
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 601
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a091b2a2d8ff2a4eab52060230b37a0
+      internalID: 1367888395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_50
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 601
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e5ce2ee3b407b4288e16ba7e18b891
+      internalID: 464785304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_51
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 602
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc55fc56a3f0584083ae256f6ccb335
+      internalID: -441348292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_52
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 601
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3241e7113da07924ea612a5e9d087b8e
+      internalID: 690268411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_53
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 602
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c965fb96957727c4ebcf0526a8b118be
+      internalID: 579971273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_54
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 601
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb666442e62dbc74dbc66ef50f49daf0
+      internalID: -520413845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_55
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 601
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ef23a06bdcfa44bb97254a1e5c4d88
+      internalID: 422462776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_56
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 614
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02a9cb9ea1c05544beb8116a1b45c16
+      internalID: 1661234399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_57
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 624
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054bbfbf446c14645bbee06fb5f0e407
+      internalID: -135816218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_58
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 601
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bc7044cb7723b4da8af7fc40d2393a
+      internalID: 815325741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_59
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 601
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296d96ec15485a3428a40ced70428bde
+      internalID: 506522974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_60
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 601
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53572722d263054888c9f9736707702
+      internalID: 340347263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_61
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 608
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65cd36e884cb7b459482dbf6abdfd89
+      internalID: -1375951330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_62
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 506
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23ecd8520c61484aaefc0810280ffc3
+      internalID: 2133865020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_63
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 506
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6608f66110cac6468fa57973fff606a
+      internalID: 1582368341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_64
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 506
+        width: 60
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58dfb8f4ea733104dbeeaf756c8317ac
+      internalID: -1607413184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_65
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 507
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5d47b7ef661e64c8a958cfafd5e9a1
+      internalID: -1906719184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_66
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 507
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37c98b1c4564db43b747c063f0626ad
+      internalID: 1414982567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_67
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 507
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18a7012e2c93754da35324c1280810d
+      internalID: 421115269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_68
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 507
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a940d9f19cffa004e8caf1c048c6776f
+      internalID: -1243406567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_69
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 507
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f247e0376e20c8e4c9c7909d58d08454
+      internalID: 364359868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_70
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 507
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b8f006f2e564443a21f82baab4264d
+      internalID: -1763809268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_71
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 504
+        width: 61
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073e18e7a21ce6743b6d0fc9cf118b06
+      internalID: 1252399761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_72
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 507
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca5cdaf7a424494f8669be6865262e7
+      internalID: 95441718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_73
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 509
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84172f8585b0c64ab5b753fb4679785
+      internalID: -1489728894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_74
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 411
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1fde82288b4964190a8136b5834a65
+      internalID: 544217443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_75
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 415
+        width: 59
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a99f4c5288e924db3ca784638754bc
+      internalID: -2115259397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_76
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 411
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2488754340d39d4abccbc442c64977d
+      internalID: 442710007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_77
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 412
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b733eb002406be84b8d32b721e44afa3
+      internalID: -1358217909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_78
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 412
+        width: 45
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3eff321d6c6ed4c96e7dca175b5b66
+      internalID: -1442690987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_79
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 414
+        width: 46
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f62250b90c0594a8c105bbce05371d
+      internalID: -1532672800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_80
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 411
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0446ddedbf25da3419358b49f2ad11bb
+      internalID: -1469178439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_81
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 407
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ceb258dfb4a57419d89629ae4b40a2
+      internalID: 484093150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_82
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 414
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406733717b2e7914cb178b62c4e8effc
+      internalID: -834021869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_83
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 411
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c605b1f5459bd41a9e99a3ba48fea2
+      internalID: 1610563924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_84
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 411
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e34e5ea404f6364a9fa9f3a01cebc4a
+      internalID: -832992312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_85
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 424
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc49f8ca40285f47a048f3e3e3dae21
+      internalID: 264055582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_86
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 338
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa7f7eac5b1954439b8e84bd06700be
+      internalID: -1557493663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_87
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 338
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62676078ac0c4d42aa8762c9aae4b09
+      internalID: -1062659383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_88
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 338
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6661c8f1836ca2e4796d9e71e720455e
+      internalID: -779719669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_89
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 339
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af261a0bca4e3944ad8acb39d2dfe4a
+      internalID: -1626417124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_90
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 338
+        width: 68
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05ed71ab4fddd546a3835274eb93109
+      internalID: -512826355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_91
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 338
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acec9ee8b7f285e45b5b088e68717318
+      internalID: 1421499414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_92
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 336
+        width: 74
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5722f3be4f85a944b8ea1cb5dd8b2ea
+      internalID: 1584240742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_93
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 336
+        width: 58
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cd15f771f1cb346aeafee6a1bb6b88
+      internalID: 1376381443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_94
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 336
+        width: 51
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0725268facab61f428723fa13139b7b7
+      internalID: -546607389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_95
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 336
+        width: 44
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3098ffef9645a4342892fbeefc4635e3
+      internalID: -1973107797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_96
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 341
+        width: 61
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418bca5732e9e5e47aa3f459584bb68b
+      internalID: 905064617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_97
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 335
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef826e53d5cae644b5a27c6d6658307
+      internalID: -716571968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_98
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 335
+        width: 76
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef4a5ccec8e74842b921a84597754dc
+      internalID: 146575413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_99
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 266
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefe9a3b294304149813eae06a5b21bf
+      internalID: 1542282562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_100
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 273
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28618a96691ecc4b99173b2a7621cb1
+      internalID: -195120084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_101
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 266
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4d2ebd70178cc438f9695da0fc0943
+      internalID: -219527852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_102
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 263
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f388c50dc289d84eb8963d0d9956726
+      internalID: 1450297096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_103
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 264
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee05131026d4704a8ccb160c4d4e72a
+      internalID: 1649064633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_104
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 266
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eae4f24d68aa5141b5cb7738df3ec50
+      internalID: -1644215926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_105
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 266
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78ebffe532ded94ea6afbe4bc330998
+      internalID: 1465870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_106
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 264
+        width: 70
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e970186a11e7d4ea0ff0a5314f2bd7
+      internalID: -881600201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojePalet_107
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 261
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b5b438e1b3d94499186309528136b9
+      internalID: 1861068051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EmojePalet_87: -1062659383
+      EmojePalet_71: 1252399761
+      EmojePalet_47: 2020613857
+      EmojePalet_95: -1973107797
+      EmojePalet_22: 1651208784
+      EmojePalet_98: 146575413
+      EmojePalet_99: 1542282562
+      EmojePalet_74: 544217443
+      EmojePalet_61: -1375951330
+      EmojePalet_70: -1763809268
+      EmojePalet_97: -716571968
+      EmojePalet_10: 1904248081
+      EmojePalet_31: 672331496
+      EmojePalet_37: 928951151
+      EmojePalet_66: 1414982567
+      EmojePalet_73: -1489728894
+      EmojePalet_88: -779719669
+      EmojePalet_105: 1465870
+      EmojePalet_63: 1582368341
+      EmojePalet_43: -1303428851
+      EmojePalet_17: 520958313
+      EmojePalet_20: 1239622220
+      EmojePalet_62: 2133865020
+      EmojePalet_81: 484093150
+      EmojePalet_93: 1376381443
+      EmojePalet_84: -832992312
+      EmojePalet_7: 197147197
+      EmojePalet_15: -1221266796
+      EmojePalet_102: 1450297096
+      EmojePalet_83: 1610563924
+      EmojePalet_34: 1873420034
+      EmojePalet_103: 1649064633
+      EmojePalet_40: -1851802412
+      EmojePalet_58: 815325741
+      EmojePalet_8: -263668885
+      EmojePalet_29: 863543442
+      EmojePalet_50: 464785304
+      EmojePalet_100: -195120084
+      EmojePalet_85: 264055582
+      EmojePalet_82: -834021869
+      EmojePalet_11: -40376447
+      EmojePalet_72: 95441718
+      EmojePalet_57: -135816218
+      EmojePalet_0: -1922025434
+      EmojePalet_65: -1906719184
+      EmojePalet_14: 332103694
+      EmojePalet_6: 485608554
+      EmojePalet_28: 232464470
+      EmojePalet_67: 421115269
+      EmojePalet_48: 83030704
+      EmojePalet_41: 1866405115
+      EmojePalet_3: 679753050
+      EmojePalet_5: -854068788
+      EmojePalet_42: 1933015163
+      EmojePalet_64: -1607413184
+      EmojePalet_19: 2038230080
+      EmojePalet_35: -1777744462
+      EmojePalet_49: 1367888395
+      EmojePalet_91: 1421499414
+      EmojePalet_36: -2004105615
+      EmojePalet_76: 442710007
+      EmojePalet_18: -1408837883
+      EmojePalet_12: 619741762
+      EmojePalet_96: 905064617
+      EmojePalet_44: 72819421
+      EmojePalet_4: 186019937
+      EmojePalet_9: 75738044
+      EmojePalet_106: -881600201
+      EmojePalet_60: 340347263
+      EmojePalet_21: -2094777874
+      EmojePalet_46: 105971899
+      EmojePalet_2: -419734540
+      EmojePalet_53: 579971273
+      EmojePalet_86: -1557493663
+      EmojePalet_101: -219527852
+      EmojePalet_90: -512826355
+      EmojePalet_77: -1358217909
+      EmojePalet_45: 1671637250
+      EmojePalet_32: 1357081400
+      EmojePalet_26: 1144505136
+      EmojePalet_78: -1442690987
+      EmojePalet_68: -1243406567
+      EmojePalet_89: -1626417124
+      EmojePalet_25: -1987959875
+      EmojePalet_30: 2025584963
+      EmojePalet_69: 364359868
+      EmojePalet_23: -918791881
+      EmojePalet_1: 1048375234
+      EmojePalet_38: 179445128
+      EmojePalet_94: -546607389
+      EmojePalet_92: 1584240742
+      EmojePalet_55: 422462776
+      EmojePalet_75: -2115259397
+      EmojePalet_27: 1613878823
+      EmojePalet_13: -418318122
+      EmojePalet_59: 506522974
+      EmojePalet_33: -1754007959
+      EmojePalet_51: -441348292
+      EmojePalet_79: -1532672800
+      EmojePalet_24: -127657309
+      EmojePalet_39: 817020717
+      EmojePalet_54: -520413845
+      EmojePalet_107: 1861068051
+      EmojePalet_56: 1661234399
+      EmojePalet_80: -1469178439
+      EmojePalet_52: 690268411
+      EmojePalet_16: -523565609
+      EmojePalet_104: -1644215926
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

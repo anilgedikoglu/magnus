@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tersimparator
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA30129928367
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 099e286b93e7fe64cbfb4c080a892c83, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 099e286b93e7fe64cbfb4c080a892c83, type: 3}
+  contentPhotoId: imparator-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"\u0130mparator\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nHem
+    ekonomik konularda hem de \xF6zel hayat\u0131m\u0131zda zaman zaman baz\u0131
+    olu\u015Fumlar i\xE7erisine gireriz. Bu olu\u015Fumlar\u0131n baz\u0131lar\u0131n\u0131
+    kendimiz kurar, bir k\u0131sm\u0131na da sonradan dahil oluruz. Senin de meydana
+    getirmek ya da dahil olmak istedi\u011Fin baz\u0131 yap\u0131lar varm\u0131\u015F.
+    Bunu ba\u015Faramam\u0131\u015F, ya\u015Fam\u0131nda olmas\u0131n\u0131 istedi\u011Fin
+    yap\u0131la\u015Fmay\u0131 tesis edememi\u015Fsin. Kart\u0131n, nas\u0131l yapaca\u011F\u0131n\u0131
+    bilmedi\u011Fin ya da tek ba\u015F\u0131na g\xFC\xE7 yetiremedi\u011Fin i\xE7in
+    bir kaosun i\xE7ine s\xFCr\xFCklendi\u011Fini anlat\u0131yor. Neyin eksik, neyin
+    yanl\u0131\u015F oldu\u011Funu uzun s\xFCre sorgulam\u0131\u015F, elinden geleni
+    yapmana ra\u011Fmen \u015Fans\u0131n yard\u0131m\u0131n\u0131 bir t\xFCrl\xFC
+    alamam\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis imparator ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

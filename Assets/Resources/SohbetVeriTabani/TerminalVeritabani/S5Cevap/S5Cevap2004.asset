@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: S5Cevap2004
+  m_EditorClassIdentifier: 
+  etiket: dogc
+  aciklama:
+  - "2004 m\xFC?\r\nO y\u0131l anadolu rock'\u0131n en \xF6nemli seslerinden biri
+    olan Cem Karaca'y\u0131 kaybetmi\u015Ftik. O g\xFCnden beri akl\u0131m ceviz
+    a\u011Fac\u0131'nda..."
+  - "2004 y\u0131l\u0131 m\u0131 dedin?\r\nO y\u0131l Clint Eastwood'un y\xF6netti\u011Fi
+    Million Dollar Baby isimli g\xFCzel film g\xF6sterime girmi\u015Fti. \u0130zlemediysen
+    tavsiye ederim."
+  - "Demek 2004 y\u0131l\u0131...\r\nO y\u0131l Elvan Abeylegesse d\xFCnya rekoru
+    k\u0131ran ilk T\xFCrk atlet olmu\u015Ftu. H\u0131zl\u0131 ko\u015Fmak ve en
+    iyisi olmak \xF6nemli..."
+  - "2004 \xF6yle mi?\r\nVen\xFCs, G\xFCne\u015F'in \xF6n\xFCnden 223 y\u0131l sonra,
+    o y\u0131l ilk defa ge\xE7mi\u015Fti. Etkile\u015Fimleri hep yans\u0131m\u0131\u015Ft\u0131r
+    o y\u0131l do\u011Fanlara... Nas\u0131l hissediyorsun kendini?"
+  - "2004 y\u0131l\u0131 ha?\r\n4 \u015Eubat 2004 tarihinda Facebook kurulmu\u015Ftu.
+    D\xFCnyada bir d\xF6n\xFCm noktas\u0131 oldu. \u0130kinci d\xF6n\xFCm noktas\u0131'da
+    \"Yalanc\u0131\" i\u015Fte..."
+  aranacakEtiket: konum izin
+  gerekenDegiskenler:
+  - degiskenAdi: dogum yili
+    degiskenDegeri: 2004
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

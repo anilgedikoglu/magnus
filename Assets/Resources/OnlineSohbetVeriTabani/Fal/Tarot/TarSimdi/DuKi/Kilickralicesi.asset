@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilickralicesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA97545382121
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 23672ca3272611249a86777eda3fd136, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 23672ca3272611249a86777eda3fd136, type: 3}
+  contentPhotoId: kilickralicesi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Krali\xE7esi\" kart\u0131n\u0131 se\xE7tin.\n\nBir
+    jeton daha atsan, Amerika. Evet {{isim}}, yanl\u0131\u015F duymad\u0131n. Uzun
+    zamand\u0131r varmak istedi\u011Fin hedefe o kadar yak\u0131ns\u0131n ki, tek
+    bir ad\u0131m kalm\u0131\u015F. Tek bir hamlene bak\u0131yor b\xFCt\xFCn i\u015F.
+    Tek bir karar\u0131nla ya da tek bir i\u015Faretinle, y\xFCr\xFCyece\u011Fin
+    yollara toz olacak y\u0131ld\u0131zlar var. T\xFCm g\xFCzellikler \u015Fu a\u015Famada
+    seni bekliyor. Etraf\u0131ndaki insanlar\u0131n g\xF6z\xFCnde ne kadar g\xFC\xE7l\xFC
+    durdu\u011Funa inanamazs\u0131n. Sayg\u0131yla kar\u015F\u0131lan\u0131yor ve
+    geldi\u011Fin nokta nedeniyle takdir ediliyorsun. \u0130htiyac\u0131n olan son
+    tu\u011Flay\u0131 da yerden kald\u0131r\u0131p in\u015Fa etti\u011Fin gelece\u011Fin
+    \xFCzerine koydu\u011Funda, her \u015Fey senin i\xE7in daha g\xFCzel olacak.
+    Bunu yapabilecek bir durumdas\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilickralicesi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

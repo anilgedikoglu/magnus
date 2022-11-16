@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme660
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11506295468
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xDCzerindeki uzun kollu giysiyi abdest almak \xFCzere dirseklerine kadar s\u0131vayan
+    bir beyefendi var fal\u0131nda. Bu ki\u015Fi, riskli g\xF6z\xFCkmesine ra\u011Fmen
+    sonu hay\u0131r getirecek bir i\u015Fe soyunacak {{isim}}. Manevi iklimi olduk\xE7a
+    g\xFC\xE7l\xFC olan bu beyefendinin \xF6n\xFCnde durmaya \xE7al\u0131\u015Fan
+    \xE7ok insan oldu\u011Funu hissediyorum. Kimi iyili\u011Fi i\xE7in h\u0131z\u0131n\u0131
+    kesmeye \xE7al\u0131\u015F\u0131yor, kimiyse verdi\u011Fi h\u0131zl\u0131 ve
+    isabetli kararlar sonucu elde etti\u011Fi kazan\u0131mlar\u0131 \xE7ekemiyor.
+    Aran\u0131zdaki irtibat\u0131 bilmedi\u011Fim bu beyefendi yine kazanacak ve
+    mutlulu\u011Fu sana da yans\u0131yacak.\n\nTelvelerinin devam\u0131nda ise bir
+    tepsi \"baklava\" g\xF6r\xFCyorum. Yakla\u015F\u0131k {{sayi,3,9}} ayd\u0131r
+    huzurunu bozan ve sa\u011Fl\u0131\u011F\u0131n\u0131 dahi etkileyen s\u0131k\u0131nt\u0131l\u0131
+    bir mesele, gelecek ay\u0131n sonlar\u0131nda ayd\u0131nl\u0131\u011Fa kavu\u015Facak
+    ve {{ay_2}} ay\u0131nda tamamen ortadan kalkacak {{isim}}. Bu baklava, {{kelime,
+    bo\u011Faz\u0131ndaki | i\xE7indeki | y\xFCre\u011Findeki}} kekremsi s\u0131k\u0131nt\u0131y\u0131
+    ataca\u011F\u0131n\u0131 ve uzun d\xF6nemde a\u011Fz\u0131n\u0131n tatlanaca\u011F\u0131n\u0131
+    ifade etmekte."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

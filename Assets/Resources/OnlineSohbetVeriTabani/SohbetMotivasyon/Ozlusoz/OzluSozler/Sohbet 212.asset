@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sohbet 212
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11020767988
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Vars\u0131n g\xFCne\u015F saklans\u0131n bulutlar\u0131n ard\u0131na\nAklar
+    ile karan\u0131n aras\u0131nda yolcuyum\nBeni davet ederler hakik\xE2tler yurduna\nCevap
+    ile sorunun aras\u0131nda yolcuyum\n\nAns\u0131z\u0131n gelip ge\xE7ti kazanc\u0131m
+    yok d\xFCn\xFCmde\nKorkular korkutmad\u0131 \xFCmit vard\u0131 g\xFCn\xFCmde\nDereler
+    derinle\u015F\u015Fin da\u011Flar dursun \xF6n\xFCmde\nKolay ile zorun aras\u0131nda
+    yolcuyum\n\nTepeleri d\xFCzleyip dumana yol g\xF6sterdim\nSevenlere sayg\u0131m\u0131
+    sorana hal g\xF6sterdim\nToprak oldum serildim g\xF6\u011Fs\xFCmde g\xFCl g\xF6sterdim\n\xC7i\xE7ek
+    ile ar\u0131n\u0131n aras\u0131nda yolcuyum\n\nG\xF6z\xFCme izin verdim doyas\u0131
+    ya\u015F\u0131 aks\u0131n\nTeselliye gerek yok a\u011Flatan d\xF6n\xFCp baks\u0131n\nAte\u015Fle
+    karde\u015F oldum yakarsa hemen yaks\u0131n\nK\xFCl\xFC ile nar\u0131n\u0131n
+    aras\u0131nda yolcuyum\n\n\u0130smeti'yi sorarsan g\xFCn\xFCne g\xFCn ekliyor\nAt\u0131m
+    binek ta\u015F\u0131nda gem vurulmu\u015F bekliyor\nBilmiyorum terkime y\xFCkleyen
+    ne y\xFCkl\xFCyor\nBu g\xFCn ile yar\u0131n\u0131n aras\u0131nda yolcuyum\n\nTepedeki
+    I\u015F\u0131k. - A\u015F\u0131k \u0130smeti Sivas"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "\xF6zl\xFCs\xF6z1"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "\xF6zl\xFCs\xF6z1"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

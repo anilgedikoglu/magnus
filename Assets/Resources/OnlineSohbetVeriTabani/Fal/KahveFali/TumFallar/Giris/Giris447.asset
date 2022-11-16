@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris447
+  m_EditorClassIdentifier: 
+  idIndex: 20228124122AA18235282402
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan g\xF6rselini kendime do\u011Fru hafif\xE7e yat\u0131rd\u0131\u011F\u0131mda,
+    ulu bir \xE7\u0131nar kar\u015F\u0131lad\u0131 beni. Bu uzun ve ya\u015Fl\u0131
+    \xE7\u0131nar\u0131n g\xF6vdesine t\u0131rmanmaya \xE7al\u0131\u015F\u0131yor
+    gibisin. O kadar gayretlisin ki, ne yer\xE7ekimi ne de ayk\u0131r\u0131 dallar,
+    kollar\u0131ndaki kuvveti eksiltemiyor {{isim}}. \u015Eu s\u0131ralar e\u011Fitiminde
+    zor ko\u015Fullar alt\u0131nda olsan da, sen baz\u0131 \u015Feyleri \xE7oktan
+    kafana koymu\u015Fsun. Ne istedi\u011Fin belli. Bu yolda \xE7ok fazla deste\u011Finin
+    olmad\u0131\u011F\u0131 da g\xFCn gibi ortada. Motivasyonunu d\xFC\u015F\xFCren
+    {{ay_-1}} ay\u0131 geride kalm\u0131\u015F. Bu ay da ge\xE7ti\u011Finde, {{ay_+1}}
+    ay\u0131 senin i\xE7in g\xFCzel geli\u015Fmeler sunmaya haz\u0131r g\xF6z\xFCk\xFCyor.
+    Belki de sana bu t\u0131rman\u0131\u015Fta \"g\xF6kler\" el verecektir, kim bilir...
+    <sprite=7>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimdortlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA34299878533
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: dc44e765eec70614b9f56939ecbeef5e, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: dc44e765eec70614b9f56939ecbeef5e, type: 3}
+  contentPhotoId: tilsimdortlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in a\xE7\u0131lan kart \"T\u0131ls\u0131m D\xF6rtl\xFCs\xFC\"
+    {{isim}}.\n\nKaybetme korkusuyla ge\xE7en zamanlar... Asl\u0131nda ortada bir
+    kay\u0131p ya da b\xFCy\xFCk bir tehlike de yokken, kuruntulu bir d\xF6nem ya\u015Fam\u0131\u015Fs\u0131n.
+    Birka\xE7 sand\u0131k elmaya sahipken, onlar\u0131 yerde b\u0131rakman durumunda
+    \xE7al\u0131nabilecekleri korkusuyla a\u011Faca \xE7\u0131kmam\u0131\u015F, ilave
+    \xFC\xE7 be\u015F sand\u0131kl\u0131k kazan\xE7tan olmu\u015Fsun. Elinde olanlara
+    s\u0131k\u0131 s\u0131k\u0131ya sar\u0131lm\u0131\u015F, ihtiyac\u0131 olanlarla
+    dahi payla\u015Fmayarak, hesab\u0131 \xE7ok materyalist bir bak\u0131\u015F a\xE7\u0131s\u0131yla
+    yapm\u0131\u015Fs\u0131n. \xC7evrendeki insanlara \xE7ok ba\u011Flanm\u0131\u015F,
+    yeni birilerini hayat\u0131nda istememi\u015F, \"az olsun \xF6z olsun\" demi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis tilsimdortlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

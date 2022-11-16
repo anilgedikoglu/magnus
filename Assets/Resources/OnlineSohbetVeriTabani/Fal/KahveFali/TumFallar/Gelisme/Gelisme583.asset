@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme583
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA38545098933
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Elinden kitaplar\u0131 hi\xE7 d\xFC\u015F\xFCrmeyen birini g\xF6r\xFCyorum fincan\u0131nda.
+    \U0001F4DAHatta telvelerini daha detayl\u0131 analiz etti\u011Fimde, bu ki\u015Finin
+    \u015Fu s\u0131ralar {{kelime, George Orwell'\u0131n yazd\u0131\u011F\u0131 \"hayvan
+    \xE7iftli\u011Fi\" | Aldous Huxley'in yazd\u0131\u011F\u0131 \"cesur yeni d\xFCnya\"
+    | Antoine de Saint-Exup\xE9ry'in yazd\u0131\u011F\u0131 \"k\xFC\xE7\xFCk prens\"
+    | Malcolm Gladwell'in yazd\u0131\u011F\u0131 \"outliers\" | Lev Tolstoy'un yazd\u0131\u011F\u0131
+    \"insan ne ile ya\u015Far\" | Paulo Coelho'nun yazd\u0131\u011F\u0131 \"simyac\u0131\"
+    | Marlo Morgan'\u0131n yazd\u0131\u011F\u0131 \"bir \xE7ift y\xFCrek\" | \u0130hsan
+    Oktay Anar'\u0131n yazd\u0131\u011F\u0131 \"puslu k\u0131talar atlas\u0131\"
+    | Sabahattin Ali'nin yazd\u0131\u011F\u0131 \"k\xFCrk mantolu Madonna\" | Grigori
+    Petrov'un yazd\u0131\u011F\u0131 \"beyaz zambaklar \xFClkesinde\" | Jos\xE9 Mauro
+    de Vasconcelos'un yazd\u0131\u011F\u0131 \"\u015Feker portakal\u0131\" | Fyodor
+    Dostoyevski'nin yazd\u0131\u011F\u0131 \"yeralt\u0131ndan notlar\" | Nancy H.
+    Kleinbaum'un yazd\u0131\u011F\u0131 \"\xF6l\xFC ozanlar derne\u011Fi\" | Jos\xE9
+    Saramago'nun yazd\u0131\u011F\u0131 \"k\xF6rl\xFCk\" | Stefan Zweig'\u0131n yazd\u0131\u011F\u0131
+    \"satran\xE7\" | Lev Tolstoy'un yazd\u0131\u011F\u0131 \"sava\u015F ve bar\u0131\u015F\"
+    | Victor Hugo'nun yazd\u0131\u011F\u0131 \"Notre Dame'\u0131n kamburu\" | Victor
+    Hugo'nun yazd\u0131\u011F\u0131 \"sefiller\" | Miguel de Cervantes'in yazd\u0131\u011F\u0131
+    \"Don Ki\u015Fot\" | Mark Twain'in yazd\u0131\u011F\u0131 \"insan nedir\" | Edgar
+    Allan Poe'nun yazd\u0131\u011F\u0131 \"morgue soka\u011F\u0131 cinayeti\" | Alper
+    Can\u0131g\xFCz'\xFCn yazd\u0131\u011F\u0131 \"kan ve g\xFCl\" | Murat Mente\u015F'in
+    yazd\u0131\u011F\u0131 \"dubl\xF6r\xFCn dilemmas\u0131\" | Fr\xE9d\xE9ric Gros'un
+    yazd\u0131\u011F\u0131 \"y\xFCr\xFCmenin felsefesi\" | Erlom Ahvlediani'nin yazd\u0131\u011F\u0131
+    \"sivrisinek \u015Fehirde\" | \u0130lber Ortayl\u0131'n\u0131n yazd\u0131\u011F\u0131
+    \"bir \xF6m\xFCr nas\u0131l ya\u015Fan\u0131r\" | Daniel Defoe'nun yazd\u0131\u011F\u0131
+    \"Robinson Cruose\" | Ahmet Hamdi Tanp\u0131nar'\u0131n yazd\u0131\u011F\u0131
+    \"saatleri ayarlama enstit\xFCs\xFC\" | Orhan Pamuk'un yazd\u0131\u011F\u0131
+    \"babam\u0131n bavulu\" | Sabahattin Ali'nin yazd\u0131\u011F\u0131 \"hep gen\xE7
+    kalaca\u011F\u0131m\" | Carl-Johan Vallgren'in yazd\u0131\u011F\u0131 \"bir garip
+    a\u015Fk \xF6yk\xFCs\xFC\" | Alice Miller'\u0131n yazd\u0131\u011F\u0131 \"beden
+    asla yalan s\xF6ylemez\" | Bernard Malamud'un yazd\u0131\u011F\u0131 \"tamirci\"
+    | Emily Bront\xEB'nin yazd\u0131\u011F\u0131 \"u\u011Fultulu tepeler\" | Nikolay
+    Vasilyevi\xE7 Gogol'un yazd\u0131\u011F\u0131 \"bir delinin hat\u0131ra defteri\"
+    | Ayn Rand'\u0131n yazd\u0131\u011F\u0131 \"hayat\u0131n kayna\u011F\u0131\"
+    | Gabriel Garc\xEDa M\xE1rquez'in yazd\u0131\u011F\u0131 \"k\u0131rm\u0131z\u0131
+    pazartesi\" | Virginia Woolf'un yazd\u0131\u011F\u0131 \"kendine ait bir oda\"
+    | Wilhelm Reich'in yazd\u0131\u011F\u0131 \"dinle k\xFC\xE7\xFCk adam\" | Albert
+    Camus'un yazd\u0131\u011F\u0131 \"yabanc\u0131\" | Harper Lee'nin yazd\u0131\u011F\u0131
+    \"b\xFClb\xFCl\xFC \xF6ld\xFCrmek\" | Zeynep Ka\xE7ar'\u0131n yazd\u0131\u011F\u0131
+    \"kabuk\" | Ya\u015Far Kemal'in yazd\u0131\u011F\u0131 \"ince memed\" | Hasan
+    Ali Topta\u015F'\u0131n yazd\u0131\u011F\u0131 \"ku\u015Flar yas\u0131na gider\"
+    | Clarissa Pinkola Estes'in yazd\u0131\u011F\u0131 \"kurtlarla ko\u015Fan kad\u0131nlar\"
+    | Yakup Kadri Karaosmano\u011Flu'nun yazd\u0131\u011F\u0131 \"yaban\" | Peyami
+    Safa'n\u0131n yazd\u0131\u011F\u0131 \"dokuzuncu hariciye ko\u011Fu\u015Fu\"
+    | Anthony Burgess'\u0131n yazd\u0131\u011F\u0131 \"otomatik portakal\" | John
+    Steinbeck'in yazd\u0131\u011F\u0131 \"fareler ve insanlar\" | George Orwell'\u0131n
+    yazd\u0131\u011F\u0131 \"1984\" | Ahmet \xDCmit'in yazd\u0131\u011F\u0131 \"a\u015Fk\u0131m\u0131z
+    eski bir roman\" | O\u011Fuz Atay'\u0131n yazd\u0131\u011F\u0131 \"tutunamayanlar\"
+    | Ray Bradbury'nin yazd\u0131\u011F\u0131 \"fahrenheit 451\" | Yusuf At\u0131lgan'\u0131n
+    yazd\u0131\u011F\u0131 \"aylak adam\" | Irvin D. Yalom'un yazd\u0131\u011F\u0131
+    \"Nietzsche a\u011Flad\u0131\u011F\u0131nda\" | Nurdan G\xFCrbilek'in yazd\u0131\u011F\u0131
+    \"vitrinde ya\u015Famak\" | Franz Kafka'n\u0131n yazd\u0131\u011F\u0131 \"d\xF6n\xFC\u015F\xFCm\"
+    | Charles Dickens'\u0131n yazd\u0131\u011F\u0131 \"iki \u015Fehrin hikayesi\"
+    | Jane Austen'in yazd\u0131\u011F\u0131 \"a\u015Fk ve gurur\" | Ernest Hemingway'in
+    yazd\u0131\u011F\u0131 \"ya\u015Fl\u0131 adam ve deniz\" | Stefan Zweig'\u0131n
+    yazd\u0131\u011F\u0131 \"bilinmeyen bir kad\u0131n\u0131n mektubu\" | Oscar Wilde'\u0131n
+    \"mutlu prens\" | Jerome David Salinger'\u0131n yazd\u0131\u011F\u0131 \"\xE7avdar
+    tarlas\u0131nda \xE7ocuklar\" | Chuck Palahniuk'un yazd\u0131\u011F\u0131 \"d\xF6v\xFC\u015F
+    kul\xFCb\xFC\" | Gabriel Garc\xEDa M\xE1rquez'in yazd\u0131\u011F\u0131 \"y\xFCzy\u0131ll\u0131k
+    yaln\u0131zl\u0131k\" | Albert Camus'un yazd\u0131\u011F\u0131 \"veba\" | Orhan
+    Pamuk'un yazd\u0131\u011F\u0131 \"Cevdet Bey ve o\u011Fullar\u0131\" | Jean Christophe
+    Grange'\u0131n yazd\u0131\u011F\u0131 \"son av\" | Stephen King'in yazd\u0131\u011F\u0131
+    \"medyum\" | Hakan G\xFCnday'\u0131n yazd\u0131\u011F\u0131 \"az\"}} isimli kitab\u0131
+    okumakta oldu\u011Funu ya da bir s\xFCre \xF6nce okuyup bitirdi\u011Fini anlad\u0131m.
+    \U0001F9D0 {{kelime, Nas\u0131l m\u0131 bildim? E i\u015Fimiz bu... | Nereden
+    mi bildim? E benim ad\u0131m Magnus... | Nas\u0131l m\u0131 bildim? E o kadar
+    da fark\u0131m\u0131z olmas\u0131n m\u0131?.. | Nereden mi bildim? B\xF6yle de
+    sezgileri kuvvetli biriyim ben... | Nas\u0131l m\u0131 eminim? E b\xF6yle de
+    hisleri g\xFC\xE7l\xFC biriyim i\u015Fte...}} \U0001F609\U0001F60EKendi sosyal
+    medyas\u0131nda bu kitaba dair yaz\u0131 ya da g\xF6rsel payla\u015F\u0131m\u0131
+    yapt\u0131\u011F\u0131n\u0131 g\xF6rebilece\u011Fin bu ki\u015Fi ile yak\u0131nda
+    yollar\u0131n\u0131z\u0131n kesi\u015Fece\u011Fini hissediyorum. Aran\u0131zda
+    ili\u015Fkiye varabilecek ani bir samimiyet olu\u015Fabilir {{isim}}.\n\n\xD6te
+    yandan, \xF6nl\xFC arkal\u0131 ilerleyen b\xFCy\xFCkl\xFC k\xFC\xE7\xFCkl\xFC
+    filler var telvelerinde. \U0001F418Bir aile olduklar\u0131n\u0131 d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    bu filler, ya\u015Fayaca\u011F\u0131n ili\u015Fkinin ilerleyen zamanlarda \"ciddiyete\"
+    d\xF6n\xFC\u015Fme potansiyeli oldu\u011Funu anlat\u0131yor. Onun ailesi ile
+    tan\u0131\u015Fabilir ve onu kendi ailenle tan\u0131\u015Ft\u0131rabilirsin.
+    Bana sorarsan her iki taraf da bu birliktelikten memnun olacak. Birlik, dirlik
+    ve b\xFCt\xFCnl\xFCk g\xF6r\xFCyorum gelecekteki \xF6zel hayat\u0131nda {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

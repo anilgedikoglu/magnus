@@ -1,0 +1,313 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: MagnusPlus 14
+  m_EditorClassIdentifier: 
+  idIndex: 20229273753AA67554074974
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{data, plus=var, Senin yerinde olsam | plus=yok, Senin yerinde olsam ve elbette
+    Magnus Plus \xFCyesi olsam}} \u015Fu an {{kelime, el fal\u0131n\u0131 | y\xFCz
+    fal\u0131n\u0131 | kader \xE7ark\u0131n\u0131}} tercih ederdim {{isim}}. <sprite=0>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - "Y\xFCz Fal\u0131"
+    contentImage:
+      imageId: 
+      gifId: L2DhrbxPMjfQ74umUo
+      image: {fileID: 21300000, guid: e43817fadd6714df789a042005633ec0, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 54de7232e9a9ecf47be3e999a600dbad, type: 3}
+    contentPhotoId: yuzanaliz
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "y\xFCz fal\u0131 kimin"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 1
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "y\xFCz fal\u0131 kimin"
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Y\xFCz Fal\u0131"
+    contentImage:
+      imageId: 
+      gifId: L2DhrbxPMjfQ74umUo
+      image: {fileID: 21300000, guid: e43817fadd6714df789a042005633ec0, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 54de7232e9a9ecf47be3e999a600dbad, type: 3}
+    contentPhotoId: yuzanaliz
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "y\xFCz fal\u0131 kimin"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: plus yok
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 1
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "El Fal\u0131"
+    contentImage:
+      imageId: 
+      gifId: epDkz7vwDV29QbpWUI
+      image: {fileID: 21300000, guid: f6a3da5104f544425a0a64e0de5e0046, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 54de7232e9a9ecf47be3e999a600dbad, type: 3}
+    contentPhotoId: yuzanaliz
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "el fal\u0131 foto\u011Fraf y\xFCkleme tipi"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 1
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "el fal\u0131 foto\u011Fraf y\xFCkleme tipi ilk"
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "El Fal\u0131"
+    contentImage:
+      imageId: 
+      gifId: epDkz7vwDV29QbpWUI
+      image: {fileID: 21300000, guid: f6a3da5104f544425a0a64e0de5e0046, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 54de7232e9a9ecf47be3e999a600dbad, type: 3}
+    contentPhotoId: yuzanaliz
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "el fal\u0131 foto\u011Fraf y\xFCkleme tipi"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: plus yok
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 1
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Kader \xC7ark\u0131"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
+    contentPhoto: {fileID: 21300000, guid: f4572e16e9ded438cbe9170f1a3bfd81, type: 3}
+    contentPhotoId: kadercarki
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: wheelspin
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    - degiskenAdi: wheel mod
+      degiskenDegeri: fal
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 1
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: wheelspin fal baslangic
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Kader \xC7ark\u0131"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
+    contentPhoto: {fileID: 21300000, guid: f4572e16e9ded438cbe9170f1a3bfd81, type: 3}
+    contentPhotoId: kadercarki
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: wheelspin
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    - degiskenAdi: wheel mod
+      degiskenDegeri: fal
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: plus yok
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 1
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Geri git
+    contentImage:
+      imageId: 
+      gifId: 5AlDZql0RkRS2uthw2
+      image: {fileID: 21300000, guid: f1f014b76fee5450190731a8feeabada, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
+    contentPhotoId: back
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: d50bb91187995664b92efe347e56ce39, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 1
+  balonTipi: 1
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 30
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: "oradam\u0131s\u0131n2"
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

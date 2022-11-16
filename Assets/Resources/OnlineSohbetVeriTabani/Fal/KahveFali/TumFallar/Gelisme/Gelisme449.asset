@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme449
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA56176073329
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Rasyonel d\xFC\u015F\xFCnceyi ve akl\u0131n g\xFCc\xFCn\xFC merkeze alan yap\u0131n,
+    {{burc}} burcu olu\u015Funun sana getirdi\u011Fi y\xFCksek \xF6zg\xFCvenle birle\u015Fmi\u015F
+    \u015Fekilde telvelerinin her yan\u0131nda kendini belli ediyor {{isim}}. M\xFCthi\u015F
+    bir \"plan yapma\" kabiliyetin ve her t\xFCrl\xFC olas\u0131l\u0131\u011F\u0131
+    birka\xE7 saniye i\xE7erisinde g\xF6zden ge\xE7irebilme yetene\u011Fin var. Var
+    olan imkanlar\u0131ndan en do\u011Fru \u015Fekilde istifade ederken kar\u015F\u0131la\u015Faca\u011F\u0131n
+    yeni f\u0131rsatlar, \xFCst\xFCn yetilerin sayesinde k\u0131sa vadeler i\xE7erisinde
+    daha fazla ba\u015Far\u0131 ve mutlulu\u011Fa d\xF6n\xFC\u015Fecek.\n\nTelvelerinde
+    ayr\u0131ca, olduk\xE7a verimli ve g\xFCr \xFCz\xFCm ba\u011Flar\u0131 g\xF6rmekteyim
+    {{isim}}. \U0001F347Bu nefis manzara, tabiat\u0131 gere\u011Fi ku\u015Flar\u0131
+    ve daha pek \xE7ok canl\u0131y\u0131 davetkar \u015Fekilde b\xFCnyesine toplar.
+    Senin de t\u0131pk\u0131 bu yans\u0131malarda oldu\u011Fu gibi, ilerleyen zamanlarda
+    akrabalar\u0131n ve t\xFCm sevenlerin a\xE7\u0131s\u0131ndan bir \"cazibe merkezi\"
+    haline gelece\u011Fini, insanlar\u0131n seninle gurur duyacaklar\u0131n\u0131
+    ve yapt\u0131klar\u0131nla g\u0131pta edeceklerini s\xF6yleyebilirim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme429
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA00703929348
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n merkezindeki \xE7ok kritik bir noktada, k\xFC\xE7\xFCk
+    fakat net bir \"soru i\u015Fareti\" kar\u015F\u0131lad\u0131 {{isim}} bizi. \u0130tiraf
+    et; sen birini merak ediyorsun... Bazen o ki\u015Fiye dair akl\u0131na sorular
+    geliyor ve sanki cevaplar\u0131 aramaktan ya da almaktan korkuyor, kendini bu
+    konudan uzak tutmaya \xE7al\u0131\u015F\u0131yorsun. {{burc}} burcu olu\u015Funu
+    ve biyomanyetik g\xFCc\xFCn\xFCn burcundan dolay\u0131 bug\xFCnlerde ne kadar
+    y\xFCksek oldu\u011Funu da hesaba katarsak, o ki\u015Fiye dair merak etti\u011Fin
+    her \u015Feyin, {{kelime, \xF6n\xFCm\xFCzdeki | 2 hafta sonraki ilk | \xFC\xE7
+    hafta sonraki ilk}} {{kelime, pazartesi ak\u015Fam\u0131 | sal\u0131 g\xFCn\xFC
+    \xF6\u011Fleden sonra | sal\u0131 g\xFCn\xFC \xF6\u011Fle vakitlerinde | \xE7ar\u015Famba
+    g\xFCn\xFC ak\u015Fam \xFCzerine do\u011Fru | per\u015Fembe g\xFCn\xFC hava karard\u0131ktan
+    sonra | cuma g\xFCn\xFC, sen yat\u0131p uyumadan biraz \xF6nce | cumartesi g\xFCn\xFC,
+    \xF6\u011Flen'i ikindiye ba\u011Flayan bir vakitte | pazar g\xFCn\xFC, yaln\u0131z
+    oldu\u011Fun bir anda}} topyek\xFCn \xF6n\xFCne serilece\u011Fini s\xF6yleyebilirim.
+    {{kelime, Kar\u015F\u0131na \xE7\u0131kanlara | G\xF6receklerine}} \xE7ok \u015Fa\u015F\u0131racak,
+    hem sevinecek, hem de ince bir burukluk ya\u015Fayacaks\u0131n. \n\nFincan g\xF6rsellerini
+    daha detayl\u0131 irdeledi\u011Fimde, {{kelime, orta boylu, zay\u0131f bir han\u0131mefendi
+    | orta ya\u015Flarda, minyon bir han\u0131mefendi | kilolu say\u0131labilecek,
+    orta boylu bir han\u0131mefendi | yuvarlak hatl\u0131, sen ya\u015Flarda bir
+    han\u0131mefendi | a\xE7\u0131k kumral ve senden ya\u015F\xE7a k\xFC\xE7\xFCk
+    biri | siyah sa\xE7l\u0131 ve a\xE7\u0131k tenli biri | hafif g\xF6bekli ve yanaklar\u0131
+    toplu bir beyefendi}} tak\u0131ld\u0131 g\xF6z\xFCme. Tan\u0131d\u0131\u011F\u0131n\u0131
+    ve hatta sevdi\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu ki\u015Fi, avu\xE7lar\u0131yla
+    bir \u015Felalenin alt\u0131nda adeta kana kana su i\xE7iyor! E\u011Fer kronik
+    bir rahats\u0131zl\u0131\u011F\u0131 ya da \xE7\xF6zemedi\u011Fi ve yeni geli\u015Fen
+    ciddi bir sa\u011Fl\u0131k sorunu varsa, k\u0131sa zamanda atlataca\u011F\u0131
+    bilmeni isterim {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

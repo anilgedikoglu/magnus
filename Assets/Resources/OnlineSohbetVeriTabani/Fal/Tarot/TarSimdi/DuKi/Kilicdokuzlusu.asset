@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicdokuzlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA30393865891
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 99eaec929c6801442b1dd8fa8fc5e3f8, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 99eaec929c6801442b1dd8fa8fc5e3f8, type: 3}
+  contentPhotoId: kilicdokuzlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Dokuzlusu\" kart\u0131n\u0131 se\xE7tin.\n\nGenel
+    anlamda negatif bir s\xFCrecin i\xE7inde oldu\u011Funu s\xF6yleyebilirim. Allahtan
+    olumsuzluklar, gelece\u011Fini etkileyebilecek t\xFCrden de\u011Filler. Bunlar
+    \u015Fimdi'nin zorluklar\u0131 {{isim}}. Pi\u015Fmanl\u0131klar\u0131n oldu\u011Funu
+    g\xF6r\xFCyorum. Verdi\u011Fin birtak\u0131m kay\u0131plara dair su\xE7luluk
+    duygusu i\xE7indesin. Bir \xE7\u0131kar yol bulamad\u0131\u011F\u0131n zamanlardas\u0131n
+    ve etraf\u0131ndaki karanl\u0131\u011F\u0131n y\u0131rt\u0131lmas\u0131n\u0131
+    bekliyorsun. \u015Eifa i\xE7in zaman gerek. G\xFCne\u015Fin bereketini yeniden
+    \xFCzerinde g\xF6rece\u011Fin g\xFCnler gelene kadar, zorluklar\u0131n yaratt\u0131\u011F\u0131
+    i\xE7sel ac\u0131lara odaklanmamal\u0131 ve gelen her ne varsa ge\xE7ip gitmesine
+    izin vermelisin. Neye konsantre oldu\u011Fun, bu ge\xE7i\u015F d\xF6neminde \xE7ok
+    \xF6nemli. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilicdokuzlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

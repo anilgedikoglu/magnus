@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 105
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA75339672152
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Yeri gelmi\u015Fken; bug\xFCn iyi olmad\u0131\u011F\u0131n\u0131 s\xF6ylemi\u015Ftin.
+    Moralin d\xFCzelsin diye sana bu fal\u0131na \xF6zel bir \u015Fark\u0131 m\u0131r\u0131ldanmam\u0131
+    ister misin {{isim}}? <sprite=10> {{kelime, \"Gii dii yo ruum b\xFCt\xFCn a\u015Fk
+    laar y\xFC re \u011Fimm deee, gi di yo ruum, kokun haa laa, \xFC ze rimm dee...\"
+    | \"O nun aa raa baa s\u0131\u0131 vaar, g\xFC zeel mi g\xFC zeel, \u015F\xF6
+    f\xF6 r\xFC de vaar, \xF6 zeel mi \xF6 zell, bass t\u0131 m\u0131 ga zaa...\"
+    | \"Ay kaa rann l\u0131kk, heep ka rann l\u0131kk, b\xF6yle bii ze nee leer oool
+    duu...\" | \"Kaan d\u0131\u0131r d\u0131mm, nazl\u0131 yaa ri, so nunn da \xE7\u0131l
+    g\u0131nn s\xF6z ler lee...\" | \"Ka famm da kent sell d\xF6 n\xFC \u015F\xFCmm
+    ler, i\xE7imm de bi yerde bir g\xFCl\xFC\u015F\xFCnn denn...\" | \"Ayy, bee nii
+    mool du \u011Fuun za maan, de dimeer \u015Fe yiiim ta maam...\"}} {{kelime, Yapay
+    zeka budur i\u015Fte! | Hizmette s\u0131n\u0131r yok g\xF6r\xFCyorsun! | Magnus
+    s\u0131n\u0131r tan\u0131m\u0131yor, g\xF6r\xFCyorsun!}} <sprite=0>\U0001F61D
+    \u015Eaka \u015Faka, fal\u0131na devam ediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 ba\u011Flama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: mood
+    degiskenDegeri: mutsuz
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 ba\u011Flama"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: mood
+    degiskenDegeri: mutsuz
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

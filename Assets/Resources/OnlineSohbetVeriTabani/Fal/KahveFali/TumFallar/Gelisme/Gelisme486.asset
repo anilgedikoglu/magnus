@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme486
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA98374420848
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n orta k\u0131s\u0131mlar\u0131ndaki bir g\xF6rsel, beni ger\xE7ekten
+    g\xFCl\xFCmsetti. Kar\u015F\u0131na ge\xE7mi\u015F ve sana kar\u015F\u0131 gard\u0131n\u0131
+    alm\u0131\u015F bir {{kelime, kad\u0131n | erkek}} g\xF6r\xFCyorum {{isim}}.
+    Eskrimciler gibi pozisyon alm\u0131\u015F ve elindeki fl\xF6reyi havaya kald\u0131rm\u0131\u015F.
+    \U0001F93A S\xF6z\xFCm ona kendini savunacak; e ama senin elinde kocaman bir
+    Battal Gazi k\u0131l\u0131c\u0131 var? <sprite=0> \U0001F601Bu ki\u015Finin sana
+    kar\u015F\u0131 gizli bir k\u0131skan\xE7l\u0131\u011F\u0131, hayranl\u0131kla
+    kar\u0131\u015F\u0131k bir \"\xE7ekememezli\u011Fi\" var gibi. Kim oldu\u011Funu
+    {{sayi,2,7}} g\xFCn i\xE7erisinde tek bir hareketiyle anlayacak, ona gerekli
+    cevab\u0131 s\xF6zl\xFC ya da yaz\u0131l\u0131 olarak verecek ve {{kelime, \xFCst\xFCnl\xFC\u011F\xFCn\xFC
+    bir kez daha peki\u015Ftireceksin. | fark\u0131n\u0131 bir kez daha ortaya koyacaks\u0131n.}}\n\nDaha
+    alt k\u0131s\u0131mlara do\u011Fru ise bir \xE7ift \"geyik boynuzu\" g\xF6r\xFCyorum.
+    \U0001F98C Kuzeydeki pek \xE7ok \xFClkede kutsal say\u0131lan geyi\u011Fin telvelere
+    yans\u0131yan boynuzlar\u0131, sa\u011Fl\u0131kl\u0131 ve uzun bir \xF6mre, mutlu
+    ve kem g\xF6zlerden korunan bir hayata delalettir. Bir jilet keskinli\u011Findeki
+    yan\u0131lmaz hislerim diyor ki; tahmin etti\u011Finden \xE7ok daha g\xFCzel
+    bir hayat\u0131n olacak {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

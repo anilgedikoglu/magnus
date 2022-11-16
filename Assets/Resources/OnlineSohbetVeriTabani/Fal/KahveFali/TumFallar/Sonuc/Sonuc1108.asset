@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1108
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA44055347352
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan taban\u0131ndaki karanl\u0131k k\u0131s\u0131mlar\u0131 dekupe etti\u011Fimde,
+    geriye kalan ayd\u0131nl\u0131klar i\xE7inde belirsiz say\u0131da \"papatya yapraklar\u0131\"
+    g\xF6r\xFCyorum {{isim}}. Bu yapraklar, ho\u015Fland\u0131\u011F\u0131n {{data,
+    cinsiyet=erkek, k\u0131z\u0131n | cinsiyet=kad\u0131n, erke\u011Fin | cinsiyet=lgbt,
+    insan\u0131n}} ayaklar\u0131yla ayn\u0131 hizada g\xF6r\xFCn\xFCyor. Anla\u015F\u0131lan,
+    bu ki\u015Fi papatya yapraklar\u0131n\u0131 adeta \"seviyor, sevmiyor\" diye
+    i\xE7inden sayarak koparm\u0131\u015F. Bu {{data, cinsiyet=erkek, gen\xE7 k\u0131z
+    | cinsiyet=kad\u0131n, \xE7ocuk | cinsiyet=lgbt, arkada\u015F}} san\u0131yorum
+    sana kar\u015F\u0131 kendisine bile itiraf edemedi\u011Fi hisler geli\u015Ftirmi\u015F.
+    Hislerinin \"kar\u015F\u0131l\u0131kl\u0131 olup olmad\u0131\u011F\u0131\" hususunu
+    kafas\u0131nda s\xFCrekli tart\u0131yor. Belli etsen bile, bundan emin olmak
+    istiyor. {{kelime, \xD6n\xFCm\xFCzdeki 2-3 g\xFCn i\xE7inde | \xD6n\xFCm\xFCzdeki
+    3-4 g\xFCn i\xE7inde | \xD6n\xFCm\xFCzdeki 4-5 g\xFCn i\xE7inde | 3-4 g\xFCn
+    sonra bir ak\u015Fam vakti | 5-6 g\xFCn sonra bir \xF6\u011Fle vakti}} sana baz\u0131
+    ucu a\xE7\u0131k sorular y\xF6nelterek duygular\u0131n\u0131 anlamaya \xE7al\u0131\u015Faca\u011F\u0131n\u0131
+    hissediyorum {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 26
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 26
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

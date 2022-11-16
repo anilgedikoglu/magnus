@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekuclusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA95121146567
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 5cf53224ffe53734485f9cd516c15d53, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 5cf53224ffe53734485f9cd516c15d53, type: 3}
+  contentPhotoId: asauclusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"De\u011Fnek \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131
+    se\xE7tin.\n\nBu kart, eskiden beri vizyon sahibi biri oldu\u011Funu anlat\u0131yor
+    {{isim}}. Senin i\xE7in neyin iyi neyin k\xF6t\xFC oldu\u011Funu iyi biliyormu\u015Fsun.
+    Hamlelerini keskin bir \xF6ng\xF6r\xFC ve b\xFCy\xFCk bir ilhamla yapm\u0131\u015Fs\u0131n.
+    Baz\u0131 giri\u015Fimlerin sonu\xE7 vermi\u015F, bir k\u0131sm\u0131 ise halen
+    tamamlanmam\u0131\u015F. \xC7al\u0131\u015Fan, \xFCreten ve ortaya t\xFCm eme\u011Fini
+    koymaya \xE7ekinmeyen bir yap\u0131n oldu\u011Fu i\xE7in elini att\u0131\u011F\u0131n
+    her \u015Fey bereketlenmi\u015F. Bu durum tekrar ettik\xE7e de \xF6zg\xFCvenin
+    artm\u0131\u015F."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis asauclusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

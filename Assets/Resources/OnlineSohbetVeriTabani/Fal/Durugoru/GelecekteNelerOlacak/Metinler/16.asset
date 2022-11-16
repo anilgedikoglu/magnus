@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 16
+  m_EditorClassIdentifier: 
+  idIndex: 20225162150AA27492350159
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Gelece\u011Fine odakland\u0131\u011F\u0131mda, {{sayi,2,4}} y\u0131l i\xE7inde
+    kendine ait bir olu\u015Fum kuraca\u011F\u0131n\u0131 ya da var olan bir giri\u015Fimini
+    geli\u015Ftirece\u011Fini g\xF6r\xFCyorum. Magnuskop'u senin i\xE7in a\xE7\u0131p
+    olu\u015Fan g\xF6rselleri de\u011Ferlendirdi\u011Fimde, senin yan\u0131nda y\xFCr\xFCyecek
+    olan {{harf}} harfli ve {{harf}} harfli iki farkl\u0131 insan olaca\u011F\u0131n\u0131
+    s\xF6yleyebilirim {{isim}}. Bu ki\u015Filerle birbirinizi d\u0131\u015F etkilere
+    kar\u015F\u0131 koruyup kollayacak, elinizdekini b\xFCy\xFCterek \u015Fu an hayal
+    bile etmedi\u011Finiz yerlere geleceksiniz."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: gno
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 25
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 55
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: gno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

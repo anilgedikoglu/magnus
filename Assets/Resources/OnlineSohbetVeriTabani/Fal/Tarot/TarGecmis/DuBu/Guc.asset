@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Guc
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA92652406647
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: b042e5f65e59959458fe58cf9b1a0df4, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: b042e5f65e59959458fe58cf9b1a0df4, type: 3}
+  contentPhotoId: guc
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"G\xFC\xE7\" kart\u0131n\u0131 se\xE7tin {{isim}}.\n\nS\u0131k\u0131nt\u0131larda
+    sabretmi\u015F ve zorluklar\u0131n \xFCstesinden ba\u015Far\u0131yla gelmi\u015Fsin.
+    Bu karta g\xF6re \xF6yle tecr\xFCbeler edinmi\u015Fsin ki, pek \xE7ok \u015Feye
+    dair hayati birtak\u0131m korkular\u0131n\u0131 yenmi\u015Fsin. \"G\xFC\xE7 ve
+    cesaret\" art\u0131k senin. Kritik ve seni kal\u0131c\u0131 mutsuzlu\u011Fa s\xFCr\xFCkleyebilecek
+    d\xF6nemleri atlatm\u0131\u015F, yontularak da olsa harika \u015Fekillenmi\u015Fsin.
+    Hayat seni, risk almaktan korkmayan, kendine g\xFCveni y\xFCksek ve cesur birine
+    d\xF6n\xFC\u015Ft\xFCrm\xFC\u015F. Seni zora sokmak isteyen ki\u015Fileri saf
+    d\u0131\u015F\u0131 b\u0131rakm\u0131\u015F ve mutlu bir gelecek i\xE7in \xF6n\xFCn\xFC
+    a\xE7m\u0131\u015Fs\u0131n. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis guc
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

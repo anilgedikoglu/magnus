@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimkrali
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA40460777585
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 01246ef42f6f16c45ae1351aa03deb50, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 01246ef42f6f16c45ae1351aa03deb50, type: 3}
+  contentPhotoId: tilsimkrali
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"T\u0131ls\u0131m Kral\u0131\" kart\u0131n\u0131 se\xE7tin.\n\nGe\xE7mi\u015Fte
+    di\u015F biledi\u011Fin d\xFC\u015Fmanlar\u0131na ve seni \xE7ekemeyenlere kar\u015F\u0131
+    \xF6yle bir yere gelmi\u015F, \xF6yle g\xFC\xE7 kazanm\u0131\u015Fs\u0131n ki,
+    duru\u015Fun, se\xE7imlerin ve ba\u015Far\u0131n kar\u015F\u0131s\u0131nda t\u0131rnaklar\u0131n\u0131
+    yemek durumunda kalm\u0131\u015Flar {{isim}}. Bu kart, kolay kolay kimselerin
+    varamayaca\u011F\u0131 bir m\xFCkemmelli\u011Fe ula\u015Ft\u0131\u011F\u0131n\u0131
+    g\xF6steriyor. \xD6n\xFCne \xE7\u0131kan f\u0131rsatlar\u0131 daima k\xFC\xE7\xFCk
+    b\xFCy\xFCk demeden en iyi \u015Fekilde de\u011Ferlendirmi\u015Fsin. Yan\u0131na
+    insanlar\u0131n en vefal\u0131lar\u0131, hanene ise e\u015Fyan\u0131n en u\u011Furlusu
+    kat\u0131lm\u0131\u015F. G\xF6z kama\u015Ft\u0131r\u0131c\u0131 pozisyonun, nadide
+    imkanlar\u0131n ve \xE7evrendeki de\u011Ferli kalabal\u0131kla, her zaman birileri
+    taraf\u0131ndan k\u0131skan\u0131lm\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis tilsimkrali
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

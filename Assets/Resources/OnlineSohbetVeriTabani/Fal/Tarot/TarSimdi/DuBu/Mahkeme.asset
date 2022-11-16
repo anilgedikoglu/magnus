@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Mahkeme
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA09755652466
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 90e5e51ef7f50e946a0df5e379a652ef, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 90e5e51ef7f50e946a0df5e379a652ef, type: 3}
+  contentPhotoId: mahkeme
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Mahkeme\" kart\u0131n\u0131 se\xE7tin.\n\nB\xFCy\xFCk ve
+    \xF6nemli haberlerin pe\u015Fi s\u0131ra anons edildi\u011Fi bir t\xFCnel d\xFC\u015F\xFCn.
+    Sen \u015Fu anda bu t\xFCnelin ba\u015Flar\u0131ndas\u0131n. Anonslar\u0131 s\u0131ras\u0131yla
+    duyuyor, ya direkt seviniyor ya da belirtilen tarafa y\xF6neldikten sonra kar\u015F\u0131la\u015Ft\u0131klar\u0131nla
+    mutlu oluyorsun. Zorlu bir s\xFCre\xE7ten ve i\u015Fsel birtak\u0131m harplerden
+    kurtulma a\u015Famas\u0131ndas\u0131n. Seni k\u0131s\u0131tlayan ve elini kolunu
+    ba\u011Flayan insanlardan uzakla\u015F\u0131yor, ilerlemeni engelleyen imkans\u0131zl\u0131klardan
+    s\u0131ras\u0131yla kurtuluyorsun. Diledi\u011Fin \u015Feyleri yava\u015F yava\u015F
+    yapmaya ba\u015Fl\u0131yorsun, bunu fark ediyorsun \xF6yle de\u011Fil mi {{isim}}?
+    \u0130stedi\u011Fin kanatlar sana verilmi\u015F durumda. Tek yapman gereken onlar\u0131
+    \xE7\u0131rpmak ve kendini ak\u0131\u015Fa b\u0131rakmak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi mahkeme
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

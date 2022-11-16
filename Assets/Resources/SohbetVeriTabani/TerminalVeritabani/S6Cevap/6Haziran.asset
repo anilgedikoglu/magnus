@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: 6Haziran
+  m_EditorClassIdentifier: 
+  etiket: dayc
+  aciklama:
+  - "\u0130ngilizcesi June olan Haziran'\u0131n Roma'daki ad\u0131 Junius, J\xFCpiter'in
+    e\u015Fi, Roma tanr\u0131\xE7as\u0131 Juno'dan gelmektedir. Gen\xE7lik, gen\xE7
+    anlamlar\u0131na gelir."
+  - "Fevkalade bir zamanda d\xFCnyaya gelmi\u015Fsin. Haziran demek g\xFCl demektir.
+    T\u0131rman\u0131c\u0131 \xE7i\xE7ekler bu ayda ekilir ve sardunya, ortanca,
+    petunya, a\xE7elya gibi \xE7i\xE7ekler de bu ayda a\xE7maya ba\u015Flar."
+  aranacakEtiket: dgun
+  gerekenDegiskenler:
+  - degiskenAdi: dogum ayi
+    degiskenDegeri: 6
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 1
+  ozelKontrol: 
+  ayarlanacakDegisken: 

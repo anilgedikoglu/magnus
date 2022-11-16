@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupasovalyesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA40987760068
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: fa62608fe01cc54418d0f497d9668dc6, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: fa62608fe01cc54418d0f497d9668dc6, type: 3}
+  contentPhotoId: kupasovalyesi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kupa \u015E\xF6valyesi\" kart\u0131n\u0131 se\xE7tin.\n\nPek
+    \xE7ok \u015Feyle m\xFCcadele etmi\u015F, ba\u015Fkalar\u0131 i\xE7in elinden
+    geleni yapm\u0131\u015Fs\u0131n. \u015Eimdi s\u0131ra sana gelmi\u015F {{isim}}.
+    Nihayet s\u0131ra a\u015Fka, arkada\u015Fl\u0131\u011Fa, romantizme ve varolu\u015F
+    nedenlerini ara\u015Ft\u0131rmaya gelmi\u015F. Bug\xFCnlerde duygusal ba\u015Flang\u0131\xE7lar
+    yap\u0131yor olmal\u0131s\u0131n. Kendini insanlar\u0131n g\xF6z\xFCnde g\xF6r\xFCyor,
+    de\u011Ferli oldu\u011Funu belki de ilk defa bu denli yo\u011Fun hissediyorsun.
+    Atmakta oldu\u011Fun her ad\u0131m, seni ama\xE7lar\u0131na biraz daha yakla\u015Ft\u0131r\u0131yor.
+    Hareketli d\xF6nemlerin kap\u0131s\u0131ndas\u0131n. Dura\u011Fanl\u0131ktan
+    kurtuluyor, devinim ve ivme kazan\u0131yorsun. \xC7ok s\u0131k hata yapm\u0131yor
+    olmana ra\u011Fmen, temkini yine de elden b\u0131rakmad\u0131\u011F\u0131n\u0131
+    g\xF6zlemliyorum."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kupasovalyesi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

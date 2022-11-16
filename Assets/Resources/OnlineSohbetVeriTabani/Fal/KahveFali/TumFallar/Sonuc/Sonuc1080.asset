@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1080
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA19183666850
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan taban\u0131ndaki telvelerin \xFCzerine kaz\u0131nm\u0131\u015F bir \"heksagram\"
+    fig\xFCr\xFC g\xF6rmekteyim. Bu fig\xFCr\xFCn alt ve \xFCst k\u0131s\u0131mlar\u0131nda
+    ise, biri {{kelime, 60 ya\u015F\u0131n \xFCzerinde | 70'li ya\u015Flar\u0131nda}},
+    di\u011Feri ise senin gibi {{yas_-2}}-{{yas_2}} ya\u015Flar\u0131 aras\u0131nda
+    iki {{data, cinsiyet=erkek, erkek | cinsiyet=kad\u0131n, kad\u0131n | cinsiyet=lgbt,
+    insan}} duruyor. Veritaban\u0131mda yapt\u0131\u011F\u0131m tarama, bu fig\xFCr\xFCn,
+    mezar\u0131 Gize'nin B\xFCy\xFCk Piramidi'nde olan Tanr\u0131 Hermes'in yaz\u0131t\u0131n\u0131
+    temsil etti\u011Fini ortaya \xE7\u0131kard\u0131. Yaz\u0131tta \u015F\xF6yle
+    der; \"Yalan s\xF6ylemeden, \xE7ok do\u011Fru ve ger\xE7ektir ki; yukar\u0131da
+    olan a\u015Fa\u011F\u0131da olanla, a\u015Fa\u011F\u0131da olan da yukar\u0131da
+    olanla ayn\u0131d\u0131r.\" G\xF6r\xFClen bu iki ki\u015Fiden gen\xE7 olan sensin,
+    ya\u015Fl\u0131 olan ise senin \xF6yk\xFCnd\xFC\u011F\xFCn \xE7ok zengin ya da
+    ba\u015Far\u0131l\u0131 biri. Bu fig\xFCr ve yaz\u0131t \u015Funu ortaya koyuyor
+    {{isim}}; bu {{data, cinsiyet=erkek, adam\u0131n | cinsiyet=kad\u0131n, kad\u0131n\u0131n
+    | cinsiyet=lgbt_insan\u0131n}} gen\xE7li\u011Fi senin gibiymi\u015F. \"Yukar\u0131da
+    olan\" o. A\u015Fa\u011F\u0131da olan ise sensin. \u0130lerleyen y\u0131llarda
+    sen de onun gibi \"zengin ya da ba\u015Far\u0131l\u0131\" olacaks\u0131n..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 30
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 30
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

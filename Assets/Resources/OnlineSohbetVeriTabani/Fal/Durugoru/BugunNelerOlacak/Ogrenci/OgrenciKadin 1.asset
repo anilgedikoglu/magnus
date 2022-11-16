@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: OgrenciKadin 1
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA49625994907
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Of off, bu ne k\u0131skan\xE7l\u0131k! Son {{sayi 2, 5}} g\xFCn i\xE7erisinde
+    al\u0131p satt\u0131\u011F\u0131n bir \u015Feye tan\u0131k oldu\u011Fu i\xE7in
+    ya da sosyal medyada payla\u015Ft\u0131\u011F\u0131n bir foto\u011Fraf\u0131
+    g\xF6rd\xFC\u011F\xFC i\xE7in sana nazar\u0131 de\u011Fen, ad\u0131nda da {{harf}}
+    ya da {{harf}} harfi olan birini g\xF6r\xFCyorum. Okuldan arkada\u015F\u0131n
+    oldu\u011Funu tahmin etti\u011Fim bu ki\u015Finin g\xF6z\xFC s\xFCrekli senin
+    \xFCzerinde. Bug\xFCn bu insan\u0131n negatif enerjisinden dolay\u0131 ya sana
+    ait bir \u015Fey \xE7izilecek, ya bir \u015Fey kopacak ya da bir \u015Fey k\u0131r\u0131lacak
+    {{isim}}. Bu yine de moralini bozmas\u0131n \xE7\xFCnk\xFC yine bug\xFCn g\xFCn
+    i\xE7erisinde {{kelime, esmer bir erkekten | kumral ve orta ya\u015Flarda bir
+    erkekten | renkli g\xF6zl\xFC bir han\u0131mefendiden | g\xF6zl\xFCk takan bir
+    beyefendiden}} \xE7ok g\xFCzel bir haber alacaks\u0131n. Sen ba\u015Faramad\u0131\u011F\u0131n
+    \u015Feylerin \xFCzerine gitmeyi ya da ba\u015Fkalar\u0131n\u0131n yapt\u0131\u011F\u0131
+    birtak\u0131m \u015Feylerin daha iyisini yapabiliyor olmay\u0131 seviyorsun.
+    Bug\xFCn, ge\xE7mi\u015Fte yapt\u0131\u011F\u0131n bir \u015Feyle ya da verdi\u011Fin
+    bir kararla, baz\u0131 insanlar\u0131n \xF6n\xFCne ge\xE7ti\u011Fini fark edeceksin.
+    Senin her g\xFCn\xFCn bug\xFCn gibi ge\xE7erse, gelecekte seni \xE7ok b\xFCy\xFCk
+    ba\u015Far\u0131lar bekler {{isim}}."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimyedilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11363302897
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 51ff7f9f4c67abf45bbae0d7467f1631, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 51ff7f9f4c67abf45bbae0d7467f1631, type: 3}
+  contentPhotoId: tilsimyedilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"T\u0131ls\u0131m Yedilisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin {{isim}}.\n\nBu kart, ge\xE7mi\u015Fte birtak\u0131m isteklerinin oldu\u011Funu
+    ancak bu isteklerini hayata ge\xE7irebilecek kadar etkin \u015Fekilde harekete
+    ge\xE7medi\u011Fini anlat\u0131yor. \xC7ok b\xFCy\xFCk zaferler ve \xE7ok uzun
+    vadeli planlar, iyi bir haz\u0131rl\u0131k ve her safhas\u0131nda yo\u011Fun
+    bir emek gerektirir. Sen programlar\u0131n\u0131 k\u0131sa vadeli tutmu\u015F,
+    vizyoner davranmam\u0131\u015F ve kazan\xE7 elde etmek i\xE7in gereken t\xFCm
+    eforu sergilemekten ka\xE7\u0131nm\u0131\u015Fs\u0131n. Elinden mi gelmiyormu\u015F?
+    Hay\u0131r. Buna biraz \"tembellik\" ya da belki \"\xFC\u015Fenge\xE7lik\" denebilir.
+    Bunlar\u0131n yan\u0131 s\u0131ra, i\u015F s\u0131ralamanda da hatalar oldu\u011Funu
+    g\xF6r\xFCyorum. \xD6nceliklerini daha iyi belirleyebilecekken, enerjini kafandaki
+    konulara s\u0131ral\u0131 bir \u015Fekilde aktarmad\u0131\u011F\u0131n i\xE7in
+    baz\u0131 meselelerde treni ka\xE7\u0131rm\u0131\u015F ya da beklenen fayday\u0131
+    elde edememi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis tilsimyedilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDenge
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11584690758
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 79eb523a5eed7bb4b9c4f5f8105dbef7, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 79eb523a5eed7bb4b9c4f5f8105dbef7, type: 3}
+  contentPhotoId: denge-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Denge\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nBu kart kar\u015F\u0131la\u015Faca\u011F\u0131n
+    olaylara \xF6l\xE7\xFCs\xFCz tepkiler verebilece\u011Fini i\u015Faret ediyor.
+    Duygular\u0131n\u0131 kontrol etmekte zorlanaca\u011F\u0131n bir d\xF6neme giriyorsun.
+    Kendini yeterince ifade edemedi\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCn zamanlarda
+    denizlerin kabarabilir. \u0130nsanlara tahamm\xFCl e\u015Fi\u011Fin bir s\xFCre
+    d\xFC\u015Fecek gibi g\xF6z\xFCk\xFCyor {{isim}}. Akl\u0131 \xF6n plana \xE7\u0131karman,
+    her anlamda seni koruyacak. Mant\u0131kl\u0131 kararlar almal\u0131, mant\u0131kl\u0131
+    tepkiler vermeli ve mant\u0131kl\u0131 hareket etmelisin. Her \u015Feyin bir
+    telafisi oldu\u011Funu unutmamal\u0131, hi\xE7bir zorluk kar\u015F\u0131s\u0131nda
+    kendini tamamen \xE7aresiz ve \"s\u0131k\u0131\u015Fm\u0131\u015F\" hissetmemeli,
+    bir \u015Fekilde atlatabilece\u011Fine inanmal\u0131s\u0131n. Sorunlar\u0131
+    abartmazsan \xE7\xF6z\xFCmler \xE7abuk bulunur."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek denge ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

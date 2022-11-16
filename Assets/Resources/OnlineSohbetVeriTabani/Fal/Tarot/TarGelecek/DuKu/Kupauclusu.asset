@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupauclusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA96199589769
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 2944a5724a951b642879d3b7afc1d72f, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 2944a5724a951b642879d3b7afc1d72f, type: 3}
+  contentPhotoId: kupauclusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Kupa \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131 se\xE7tin.\n\nKar\u015F\u0131m\u0131za
+    \xE7\u0131kan bu kart, yapt\u0131\u011F\u0131n her \u015Feyin bir bir seni ba\u015Far\u0131ya
+    ula\u015Ft\u0131racak basamaklar\u0131 olu\u015Fturdu\u011Funu s\xF6yl\xFCyor.
+    Verimli zamanlar ge\xE7iriyor, yerinde kararlar veriyor, do\u011Fru insanlarla
+    ileti\u015Fim kuruyor ve hedeflerini g\xFCzel belirliyorsun. Gayretlerin kar\u015F\u0131l\u0131ks\u0131z
+    kalmayacak {{isim}}. \u0130lerleyen d\xF6nemlerde sevdiklerinle bir \u015Feyleri
+    kutlayacaks\u0131n. Ba\u015Far\u0131ya ula\u015Fman\u0131n ve ama\xE7lananan
+    \u015Feylerin elde edilmesinin hazz\u0131 seni \xE7ok mutlu ederken, sevdiklerin
+    taraf\u0131ndan da takdir ve tebrik g\xF6recek. Bug\xFCn sana manevi anlamda
+    destek olanlar, o g\xFCn de yan\u0131nda olacaklar. Sevmedi\u011Fin insanlar\u0131
+    ise geride b\u0131rakacaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kupauclusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

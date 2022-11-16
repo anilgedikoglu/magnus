@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDenge
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA97398116155
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 79eb523a5eed7bb4b9c4f5f8105dbef7, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 79eb523a5eed7bb4b9c4f5f8105dbef7, type: 3}
+  contentPhotoId: denge-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Denge\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nKimselere
+    belli etmek istemedi\u011Fin bir huzursuzluk hakim sende. Kontrol\xFCn d\u0131\u015F\u0131nda
+    geli\u015Fmeler oldu\u011Funu ya da olabilece\u011Fini hissediyorsun. Bu seni
+    rahats\u0131z ediyor. Ya\u015Fam\u0131nda bir \u015Feylerin \xF6l\xE7\xFCs\xFC
+    az kal\u0131rsa ya da baz\u0131 \u015Feyler \xE7ok ka\xE7arsa, nelere mal olabilece\u011Fini
+    irdeliyor olabilirsin. Bu d\xFC\u015F\xFCncelere dalm\u0131\u015Fken, bast\u0131\u011F\u0131n
+    yeri ve i\xE7inde bulundu\u011Fun ko\u015Fullar\u0131 unutmamal\u0131, kendini
+    ihmal etmemelisin {{isim}}. Endi\u015Felerini kontrol etmeli ve olumlu ihtimallere
+    odaklanmal\u0131s\u0131n. En k\xF6t\xFC ihtimalle ne olabilir ki? \xC7ok titiz
+    olmak ve \xE7ok tasalanmak, p\xFCr\xFCzlerin \xE7\u0131kmas\u0131nda en b\xFCy\xFCk
+    etkenlerden. Bu belki de bir paradoks. Bu tuza\u011Fa d\xFC\u015Fmemelisin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi denge ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

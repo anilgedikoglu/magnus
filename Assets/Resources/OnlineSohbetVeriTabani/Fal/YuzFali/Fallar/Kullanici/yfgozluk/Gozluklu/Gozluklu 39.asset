@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gozluklu 39
+  m_EditorClassIdentifier: 
+  idIndex: 20228124123AA12755365707
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "G\xF6zl\xFCk camlar\u0131n\u0131n odak noktalar\u0131 aras\u0131ndaki mesafeyi
+    \xF6l\xE7\xFCmledi\u011Fimde \u015Funu anl\u0131yorum {{isim}}; {{kelime, sen
+    s\u0131k\u0131lgan bir insans\u0131n. Bug\xFCn hayat\u0131nla ilgili bir de\u011Fi\u015Fikli\u011Fe
+    gitmek isteyebilirsin. | sen giri\u015Fken bir insans\u0131n. Bug\xFCn hayat\u0131na
+    dair \xF6nemli bir at\u0131l\u0131m yapmak isteyebilirsin. | sen a\xE7\u0131k
+    s\xF6zl\xFC bir insans\u0131n. Bug\xFCn sana yanl\u0131\u015F yapan birine hislerini
+    a\xE7\u0131k\xE7a ifade edebilir ve o ki\u015Finin negatif enerjisinden kurtulabilirsin.}}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "yfg\xF6zl\xFCk"
+    kontrol: 0
+  - degiskenAdi: yuz fali gozluk
+    degiskenDegeri: gozluklu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

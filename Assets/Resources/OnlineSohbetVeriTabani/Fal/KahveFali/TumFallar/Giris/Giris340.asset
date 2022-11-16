@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris340
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA04762153369
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Hayat\u0131ndaki beyefendiye bir konuda \xF6fkelendi\u011Fini hissediyorum {{isim}}.
+    \u0130li\u015Fkine daha fazla zarar vermemek ad\u0131na \xF6fkeni istikrarla
+    bask\u0131lam\u0131\u015Fs\u0131n. Telvelerin sana bu konuda bir \xE7\xF6z\xFCm
+    sunuyor. Bast\u0131rd\u0131\u011F\u0131n \xF6fkenin, en az \"{{kelime, ac\u0131mas\u0131zca
+    | zalimce | merhametsizce | bilin\xE7sizce | gaddarca}} s\xF6ylenmi\u015F s\xF6zler
+    kadar\" {{kelime, ili\u015Fkinde yaralar a\xE7t\u0131\u011F\u0131n\u0131 | ili\u015Fkine
+    zehir zerk etti\u011Fini}} s\xF6yl\xFCyor telvelerin. \U0001F5E3\uFE0FBu hususta,
+    \xF6fkeni bast\u0131rmak yerine, hislerini hayat\u0131ndaki beyefendiye a\xE7madan
+    evvel en yak\u0131n \xE7evrenden bir insana bahsetmen, ili\u015Fkindeki p\xFCr\xFCzlere
+    merhem olacak. Zira yanl\u0131\u015F anla\u015F\u0131lmalara sebep olan baz\u0131
+    olaylar\u0131n as\u0131l y\xFCz\xFCn\xFC tek ba\u015F\u0131na g\xF6remedi\u011Fini
+    hissediyorum. Soyad\u0131nda seninki gibi bir \"{{soyisimiki}}\" harfi bulunan
+    biri, b\xF6ylelikle sana yol g\xF6sterecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 22
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 22
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

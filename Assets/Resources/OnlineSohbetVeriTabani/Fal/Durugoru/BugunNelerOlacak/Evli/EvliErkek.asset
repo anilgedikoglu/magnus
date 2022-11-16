@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: EvliErkek
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA43053722329
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Uzak mesafelerdeki iki kad\u0131n\u0131n, bug\xFCn saat 13:00-14:00 sular\u0131nda
+    konu\u015Facaklar\u0131n\u0131 hissediyorum. Bunlardan bir tanesi e\u015Fin,
+    di\u011Feri ise senin de tan\u0131d\u0131\u011F\u0131n ve k\u0131sa s\xFCre \xF6nce
+    e\u015Fin han\u0131mefendiyle hakk\u0131nda konu\u015Ftu\u011Funuz birisi. Konu\u015Fmadan
+    seninde haberin olacak {{isim}}. Konu\u015Fulanlar pek ho\u015Funa gitmese de,
+    e\u015Finin do\u011Fru \u015Feyleri s\xF6yledi\u011Fine ve yap\u0131lmas\u0131
+    gerekeni yapt\u0131\u011F\u0131na inan\u0131yorum. \xD6\u011Fleden sonra, memleketi
+    g\xFCney illerinden biri olan fakat y\u0131llard\u0131r seninle ayn\u0131 \u015Fehirde
+    ya\u015Fayan bir arkada\u015F\u0131ndan, \u015Fa\u015F\u0131rt\u0131c\u0131 bir
+    yard\u0131m g\xF6rebilirsin. Bu yard\u0131m\u0131n konusunu saptayamamakla birlikte,
+    mahiyetinin senin i\xE7in b\xFCy\xFCk olaca\u011F\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorum
+    {{isim}}. Bug\xFCn \u015Fans seninle birlikte, onu s\xF6yleyeyim. Fakat sa\u011Fl\u0131k
+    durumunun g\xFCn boyu en \xFCst d\xFCzeyde olaca\u011F\u0131n\u0131 s\xF6ylersem
+    yalan olur. Ak\u015Fam saatlerine do\u011Fru ne kadar bitkin d\xFC\u015Ft\xFC\u011F\xFCn\xFC
+    anlayacaks\u0131n. Kendine bu anlamda biraz \"hor\" davran\u0131yorsun. Keyifli
+    bir g\xFCn ge\xE7irmeni dilerim.    "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme642
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA16313853805
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ge\xE7ti\u011Fimiz senelerde kaybetti\u011Fin bir yak\u0131n\u0131n oldu mu
+    {{isim}}? Telvelerinde, adeta g\xF6\u011Fe y\xFCkselmi\u015F bir \"y\xFCz\" g\xF6r\xFCyorum.
+    Bu ki\u015Finin ba\u015F\u0131n\u0131n \xFCzerinde ise serpilmi\u015F pek \xE7ok
+    y\u0131ld\u0131z var. Seni oradan \xF6ylece izliyor ve eline de sanki sana yard\u0131mc\u0131
+    olabilecek baz\u0131 imkanlar ge\xE7mi\u015F gibi. \u0130lerleyen g\xFCnlerde
+    bu y\u0131ld\u0131zlar\u0131 senin i\xE7in kullanacak ve o ki\u015Finin y\xFCz\xFC
+    suyu h\xFCrmetine dardaki bir i\u015Fin hallolacak. Bu i\u015Fin ya sa\u011Fl\u0131kla
+    alakal\u0131, ya da etkisi sa\u011Fl\u0131\u011F\u0131na da iyi gelecek...\n\nFincan\u0131n\u0131n
+    daha yan k\u0131s\u0131mlar\u0131nda ise \"omurga\" benzeri bir \u015Fekil olu\u015Fmu\u015F.
+    \xC7izgiler, bu omurgan\u0131n alt ve \xFCst noktalar\u0131n\u0131 i\u015Faret
+    ediyor. Gelecekte seni kimi zaman s\u0131rt, kimi zaman bel, kimi zaman da omuz
+    a\u011Fr\u0131lar\u0131 bekliyor olabilir {{isim}}. Bu a\u011Fr\u0131lar \u015Fimdiden
+    ba\u015Flad\u0131ysa, g\xFCn i\xE7erisinde \xE7ok fazla sabit kalmamaya ya da
+    birden bire a\u011F\u0131r i\u015Fler yapmamaya \xF6zen g\xF6stermelisin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

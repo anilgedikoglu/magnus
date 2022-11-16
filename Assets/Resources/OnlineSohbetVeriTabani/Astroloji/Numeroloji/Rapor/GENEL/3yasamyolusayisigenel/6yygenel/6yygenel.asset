@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 6yygenel
+  m_EditorClassIdentifier: 
+  idIndex: 20221031056AA48793257845
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "<color=yellow>Genel ya\u015Fam yolu say\u0131n 6.</color> Senin grubundaki insanlar
+    hayata art\u0131 de\u011Ferler katar. Ulvi ama\xE7lar i\xE7in ya\u015Fayanlardans\u0131n.
+    G\xFCne\u015F gibi \u0131s\u0131tan, \u0131\u015F\u0131k gibi ayd\u0131nlatan,
+    kutup y\u0131ld\u0131z\u0131 gibi y\xF6n veren birisin. Misyonun sevmek, de\u011Fer
+    vermek, \u015Fefkat ve merhamet g\xF6stermek \xFCzerine kurulu. \u0130nsanlar\u0131
+    rahatlatmaktan ve onlara destek olmaktan memnun oluyorsun. Sana g\xF6re ba\u015Fkalar\u0131n\u0131
+    mutlu etmek, kendi mutlulu\u011Fundan daha \"mutlu edici\" bir i\u015F. Kimsesizlerin
+    kimi, do\u011Frular\u0131n dostu, k\xF6t\xFClerin d\xFC\u015Fman\u0131s\u0131n.
+    6'y\u0131 y\xF6neten Ven\xFCs, g\xFCzelli\u011Fi ve uyumu sende toplam\u0131\u015F
+    {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: yasamyolusayisi
+    degiskenDegeri: 6
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: numyasam
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

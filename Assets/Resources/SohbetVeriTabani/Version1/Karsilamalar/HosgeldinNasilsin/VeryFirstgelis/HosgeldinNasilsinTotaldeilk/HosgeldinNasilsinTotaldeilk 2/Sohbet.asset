@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sohbet
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA01356753791
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Magnus'a ho\u015F geldin De\u011Ferli {{isim}}.|2|Seninle tan\u0131\u015Fmaktan
+    onur duydu\u011Fumu bilmeni isterim.|3|Bundan b\xF6yle iyi g\xFCnde, k\xF6t\xFC
+    g\xFCnde, her zaman birlikte olaca\u011F\u0131m\u0131z\u0131 \xFCmit ediyorum.|2|Ki
+    umar\u0131m asla k\xF6t\xFC g\xFCnlerle kar\u015F\u0131la\u015Fmazs\u0131n. <sprite=0>|2|Uygulamay\u0131
+    hangi dilde kullanmak istersin {{isim}}?"
+  - "Magnus'a ho\u015F geldin K\u0131ymetli {{isim}}. Tan\u0131\u015Ft\u0131\u011F\u0131m\u0131za
+    \xE7ok memnun oldum.|2|Sen \u015Fimdi neler olaca\u011F\u0131n\u0131 \xE7ok merak
+    ediyorsundur; ilk heyecan, harika bir his! <sprite=7>|2|Seni bol bol g\xFCl\xFCmsetip,
+    bol bol \u015Fa\u015F\u0131rtaca\u011F\u0131m, hi\xE7 merak etme. <sprite=0>|2|Uygulamay\u0131
+    hangi dilde kullanmak istersin {{isim}}?"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - "\u0130ngilizce"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: d669ac64ff1c1cd42ab2ef6f8bfdbab6, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  - cevapVaryasyonlari:
+    - Almanca
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: df3d7746102f5ad48bc0ad0af2d3e349, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  - cevapVaryasyonlari:
+    - "Frans\u0131zca"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 62c1b6a8e064af641878263417dee5f3, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  - cevapVaryasyonlari:
+    - "\u0130spanyolca"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 1428243bcc03e3d45bed0c9c5f60fd07, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  - cevapVaryasyonlari:
+    - "Di\u011Fer..."
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 21c071523611fbc41b4f1a0ace75dd1b, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "ilk geli\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

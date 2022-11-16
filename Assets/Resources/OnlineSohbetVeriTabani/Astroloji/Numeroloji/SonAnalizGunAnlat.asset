@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: SonAnalizGunAnlat
+  m_EditorClassIdentifier: 
+  idIndex: 20221125037AA90369673152
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "G\xFCnl\xFCk numeroloji analizini se\xE7tin {{isim}}.|2|Ad\u0131n\u0131 {{isim}}
+    {{soyisim}} olarak, do\u011Fum tarihini ise {{dogum gunu}} {{dogum ayi yazi}}
+    {{dogum yili}} olarak hesaba kat\u0131yorum.|2|Birinci maddemiz olan yetenek
+    say\u0131n i\xE7in ad\u0131ndaki ve soyad\u0131ndaki harfleri bug\xFCn\xFCn tarihi
+    ile toplad\u0131\u011F\u0131mda \"{{ifadesayisibugun}}\" rakam\u0131na ula\u015Ft\u0131m.|2|\u0130kinci
+    maddemiz olan ruh say\u0131n i\xE7in ad\u0131ndaki ve soyad\u0131ndaki sesli
+    harfleri bug\xFCn\xFCn tarihi ile toplad\u0131\u011F\u0131mda \"{{ruhsayisibugun}}\"
+    rakam\u0131n\u0131 buldum.|2|\xDC\xE7\xFCnc\xFC maddemiz olan ya\u015Fam yolu
+    say\u0131n i\xE7in do\u011Fum tarihindeki rakamlar\u0131 bug\xFCn\xFCn tarihi
+    ile toplad\u0131m ve buldu\u011Fum sonu\xE7 {{yasamyolusayisibugun}}.|2|D\xF6rd\xFCnc\xFC
+    maddemiz olan sessiz benlik say\u0131n i\xE7in ad\u0131ndaki ve soyad\u0131ndaki
+    sessiz harfleri bug\xFCn\xFCn tarihi ile toplay\u0131p \"{{sessizbenliksayisibugun}}\"
+    buldum.|2|Be\u015Finci maddemiz, olgunluk say\u0131s\u0131yd\u0131. Yetenek say\u0131n
+    ve ya\u015Fam yolu say\u0131n\u0131 bug\xFCn\xFCn tarihi ile toplayarak onun
+    i\xE7in de \"{{olgunluksayisibugun}}\" rakam\u0131n\u0131 elde ettim.|2|Alt\u0131nc\u0131
+    maddemiz do\u011Fum g\xFCn\xFC say\u0131s\u0131. Bunun i\xE7in do\u011Fum tarihindeki
+    rakamlar\u0131 tek rakam haline gelene kadar s\xFCrekli toplad\u0131m ve bug\xFCn\xFCn
+    tarihini ekledim. Sonu\xE7 {{dogumgunusayisibugun}}.|2|Son maddemiz olan karmik
+    bor\xE7 say\u0131n ise, 1'den 9'a kadar olan say\u0131lar\u0131n harf kar\u015F\u0131l\u0131klar\u0131n\u0131n,
+    ad\u0131nda olmayanlar\u0131n\u0131n rakamlar\u0131 ve bug\xFCn\xFCn tarihi toplanarak
+    bulundu. Onda da elde etti\u011Fimiz sonu\xE7 {{karmikborcsayisibugun}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: numeroanlatgun
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 2
+  tekrarlama: 0
+  sohbetBitimModu: sonanalizgunanlat
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyTanidikTerazi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA98726872028
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"De\u011Ferli
+    {{isim}}, uyumunuzu merak etti\u011Fin bu {{data, cinsiyet=erkek, kad\u0131n
+    | cinsiyet=kad\u0131n, erkek | cinsiyet=lgbt, ki\u015Fi}} a\u015F\u0131r\u0131
+    duygusal. Sen \xF6yle de\u011Filsin. Gezmeyi e\u011Flenmeyi pek sever. Sen bir
+    t\u0131k daha evcimensin. K\u0131l\u0131k k\u0131yafete, de\u011Ferli tak\u0131lara,
+    m\xFCcevherlere ve aksesuarlara pek tutkundur. Senin yine o derece oldu\u011Funu
+    sanm\u0131yorum. Bu ki\u015Fi yap\u0131 olarak senin \u015Fu anki {{data, cinsiyet=erkek,
+    k\u0131z arkada\u015F\u0131ndan da | cinsiyet=kad\u0131n, erkek arkada\u015F\u0131ndan
+    da | cinsiyet=lgbt, sevgilinden de}} \xE7ok farkl\u0131. Sen ne istedi\u011Fini
+    bilen birisin asl\u0131nda; neden b\xF6yle y\xF6n de\u011Fi\u015Ftirdin acaba?
+    \xC7ok sivri dilli konu\u015Fay\u0131m m\u0131? {{data, cinsiyet=erkek, K\u0131z
+    arkada\u015F\u0131ndan | cinsiyet=kad\u0131n, Erkek arkada\u015F\u0131ndan |
+    cinsiyet=lgbt, Sevgilinden}} ayr\u0131l\u0131r bu {{data, cinsiyet=erkek, han\u0131mefendiyle
+    | cinsiyet=kad\u0131n, beyefendiyle | cinsiyet=lgbt, ki\u015Fiyle}} beraber olursan,
+    baz\u0131 \u015Feyler senin i\xE7in daha iyi de olabilir. Misal; adil, tarafs\u0131z
+    ve payla\u015F\u0131mc\u0131 bir sevgilin olur. {{burc}} burcu {{data, cinsiyet=kad\u0131n,
+    kad\u0131nlar\u0131n\u0131n | cinsiyet=erkek, erkeklerinin | cinsiyet=lgbt, mensuplar\u0131n\u0131n}}
+    en ihtiya\xE7 duyduklar\u0131 \u015Feyler... Birlikte bol bol kitap okursunuz.
+    Sana \u015Fiirler bile yazabilir. Romantiktirler. Olur musunuz? Olursunuz. M\xFCthi\u015F
+    mi? C\u0131ks.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "tan\u0131d\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: terazi
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

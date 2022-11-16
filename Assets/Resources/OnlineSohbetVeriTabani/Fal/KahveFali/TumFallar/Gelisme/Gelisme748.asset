@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme748
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA19873379629
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Orta k\u0131s\u0131mlar\u0131 inceledi\u011Fimde, bir k\u0131y\u0131 \xE7izgisi
+    boyunca uzanm\u0131\u015F, \"lag\xFCne\" benzeyen co\u011Frafi \u015Fekiller
+    g\xF6r\xFCyorum {{isim}}. Bak\u0131\u015F a\xE7\u0131m\u0131n neredeyse d\u0131\u015F\u0131nda
+    kalan bir {{data, cinsiyet=erkek, kad\u0131n | cinsiyet=kad\u0131n, erkek | cinsiyet=lgbt,
+    insan}} fig\xFCr\xFC, sahil \xE7izgisinin d\u0131\u015F\u0131na do\u011Fru y\xFCzerek
+    epeyce uzakla\u015Fm\u0131\u015F. Denizi g\xF6vdesiyle ikiye ay\u0131rm\u0131\u015F
+    olan bu lag\xFCn\xFCn sular\u0131nda y\xFCzen ve k\u0131ta sahanl\u0131\u011F\u0131
+    d\u0131\u015F\u0131na \xE7\u0131km\u0131\u015F olan insan, sevgilinden ba\u015Fkas\u0131
+    de\u011Fil. Belli etmemeye \xE7al\u0131\u015Fsa da, sevgilinin sen de dahil pek
+    \xE7ok ki\u015Fiden saklad\u0131\u011F\u0131 bir konu oldu\u011Funu hissediyorum
+    {{isim}}.\n\nTelvelerinin s\xF6yledi\u011Fine g\xF6re, sevgilin bu meselenin
+    a\xE7\u0131\u011Fa \xE7\u0131kmas\u0131ndan biraz \xE7ekiniyor ve konuyu g\xFCndemden
+    uzak tutmaya \xE7al\u0131\u015F\u0131yor. Bu konu hakk\u0131nda hen\xFCz kesin
+    bilgi sahibi olmasan bile, kuvvetli sezgilerinle bu meselenin i\xE7 y\xFCz\xFC
+    hakk\u0131nda fikir sahibi oldu\u011Funu hissediyorum. Hislerin do\u011Fru {{isim}};
+    ancak bu konuyu ortaya getirip masaya yat\u0131ran ki\u015Finin sen olmaman \xF6nemli.
+    Kar\u015F\u0131 taraf\u0131n ad\u0131m atmas\u0131n\u0131 beklemen en do\u011Frusu
+    olacakt\u0131r."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

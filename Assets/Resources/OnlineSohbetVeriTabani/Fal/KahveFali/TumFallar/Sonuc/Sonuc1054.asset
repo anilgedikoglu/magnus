@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1054
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA07311101448
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan dibine do\u011Fru uzanan telvelerin aras\u0131ndan tela\u015Fl\u0131
+    \xE7ehreni se\xE7ebildim. En alttaki telvelerin aras\u0131nda g\xF6r\xFCnmen,
+    avuntu bulamad\u0131\u011F\u0131n halde, istemeden ge\xE7mi\u015Fin \xE7\u0131kmaz
+    sokaklar\u0131na girdi\u011Fini g\xF6steriyor. Seni \xE7ok \xF6zel bir kitab\u0131
+    bulmak \xFCzere tenha bir k\xFCt\xFCphanede, raflar\u0131 didiklerken g\xF6r\xFCyorum
+    {{isim}}. Sanki aylar \xF6nce bir kas\u0131mpat\u0131 \xE7i\xE7e\u011Fini, kurumak
+    \xFCzere sayfalar\u0131n merhametine teslim etmi\u015Fsin; \u015Fimdi de o \xE7i\xE7e\u011Fi
+    tekrar ar\u0131yorsun.\n\nSa\xE7lar\u0131n h\xFCz\xFCn rengine boyanm\u0131\u015F,
+    ellerin bir kitaptan di\u011Ferine bocal\u0131yor. Aray\u0131\u015F\u0131n, karanl\u0131kta
+    el yordam\u0131yla yol bulmaya benziyor. Teselli istedi\u011Fin hat\u0131ralar
+    ve eskisi gibi bulmay\u0131 umdu\u011Fun arzular, t\u0131pk\u0131 kitap aras\u0131na
+    kondurulmu\u015F \xE7i\xE7ek gibi kurumu\u015F vaziyette. Onu hala seviyorsan,
+    yeni bir safhaya ge\xE7i\u015F yapmak i\xE7in ge\xE7mi\u015Fin h\xFCkm\xFCnden
+    kurtulman ve hatalara s\xFCnger \xE7ekmen gerekecek {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

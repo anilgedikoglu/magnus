@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tisrarci
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA17211927996
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Hadi itiraf et {{isim}}; senin, kaybetti\u011Fi durumlarda dahi yeni kazan\u0131mlar
+    i\xE7in tekrar harekete ge\xE7meyi bilen, kolay kolay y\u0131lmayan ve \u0131srarc\u0131
+    bir yap\u0131n var. Bunda {{burc}} burcu olman\u0131n da etkisi var m\u0131d\u0131r?
+    K\u0131smen... Fakat bu \xF6zellik \xF6z\xFCnde sana has bir \u015Fekilde sivriliyor.
+    Bug\xFCn bu \xF6zelli\u011Finin devreye girmesini gerektirecek bir durumla kar\u015F\u0131la\u015Fmayacaks\u0131n,
+    merak etme. Ancak daha \xF6ncelerde sekteye u\u011Frad\u0131\u011F\u0131n ve
+    tekrar ad\u0131m att\u0131\u011F\u0131n bir giri\u015Fiminin, bug\xFCn g\xFCzel
+    sonu\xE7lar\u0131yla kar\u015F\u0131la\u015Fabilirsin. Buna tan\u0131k olursan,
+    kendine olan g\xFCvenini per\xE7inlemeni istiyorum. Bir daha hi\xE7bir zaman
+    kendinden \u015F\xFCphe etme. Hi\xE7bir yenilgiden korkma. Denemeye devam edebildi\u011Fin
+    s\xFCrece, sen asla yenilmi\u015F say\u0131lmayacaks\u0131n..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

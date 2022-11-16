@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tersmahkeme
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA51107375082
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a6d10d86f4a0f174b852c936a3aa476c, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a6d10d86f4a0f174b852c936a3aa476c, type: 3}
+  contentPhotoId: mahkeme-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Mahkeme\" kart\u0131n\u0131 \"ters\" se\xE7tin {{isim}}.\n\n\u0130nsan\u0131
+    bildikleri yan\u0131lt\u0131r derler. Bilmedikleri ise duraklat\u0131r. Se\xE7ti\u011Fin
+    kart, ge\xE7mi\u015Fte baz\u0131 konularda bilgi eksiklikleri ya\u015Fad\u0131\u011F\u0131n\u0131
+    s\xF6yl\xFCyor. Haberin olsa, belki baz\u0131 \u015Feyleri daha farkl\u0131 de\u011Ferlendirir,
+    daha do\u011Fru ilerlerdin. Kar\u015F\u0131na haz\u0131rl\u0131kl\u0131 olmad\u0131\u011F\u0131n
+    engeller \xE7\u0131km\u0131\u015F. Yolunu de\u011Fi\u015Ftirmekte ya da engellerin
+    \xFCstesinden gelmekte zorlanm\u0131\u015Fs\u0131n. Senin duymad\u0131klar\u0131n
+    kadar, sana s\xF6ylenmeyenler de oldu\u011Funu g\xF6r\xFCyorum. Moralin bozulmas\u0131n
+    ya da zarar g\xF6rme diye, senden birtak\u0131m \u015Feyler saklanm\u0131\u015F.
+    Bu sayede korunmu\u015F fakat biraz geride kalm\u0131\u015Fs\u0131n. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis mahkeme ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

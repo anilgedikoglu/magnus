@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc949
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA02455726592
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Geldik fincan\u0131n son k\u0131s\u0131mlar\u0131na. Burada, kayalar\u0131n
+    aras\u0131nda ye\u015Fermi\u015F yaln\u0131z ve ma\u011Frur bir \"\xE7i\xE7ek\"
+    g\xF6rd\xFCm. Fal\u0131n i\xE7inde h\xFCz\xFCnl\xFC duran, g\xFCzel bir yans\u0131ma
+    bu {{isim}}. Hen\xFCz hayalden \xF6teye ge\xE7ememi\u015F baz\u0131 planlar\u0131n
+    oldu\u011Funu hissediyorum. Bunlar\u0131 ger\xE7ekle\u015Ftirebilmek i\xE7in
+    maddi deste\u011Fe ya da referansa ihtiyac\u0131n var. Ailen bunu sa\u011Flayam\u0131yor.
+    Fikir ve destekleriyle yan\u0131nda bulunacak bir sevgilin de yok. Bu tek ba\u015F\u0131nal\u0131k,
+    asl\u0131nda sana ek bir g\xFC\xE7 getirecek. {{ay_2}} ay\u0131n\u0131n son \xE7eyre\u011Finde
+    ya da {{ay_3}} ay\u0131n\u0131n ba\u015F\u0131nda, normalde yapmaya cesaret edemeyece\u011Fin
+    bir giri\u015Fimde bulunacak, paraya ya da farkl\u0131 kaynaklara ula\u015Facak,
+    bu \xE7i\xE7ek gibi a\xE7acaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xE7al\u0131\u015Fm\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 20
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xE7al\u0131\u015Fm\u0131yor"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 20
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

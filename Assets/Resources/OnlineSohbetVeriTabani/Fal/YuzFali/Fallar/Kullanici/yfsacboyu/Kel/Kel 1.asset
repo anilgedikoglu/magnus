@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kel 1
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA47802265678
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sa\xE7lar\u0131n bana biraz k\u0131sa gibi geldi, foto\u011Fraftan m\u0131 \xF6yle
+    g\xF6z\xFCk\xFCyor dersin? <sprite=84> Bu k\u0131sal\u0131k senin tercihin mi
+    yoksa sa\xE7 k\xF6klerin zay\u0131flad\u0131\u011F\u0131 i\xE7in mi b\xF6yle,
+    bilemiyorum. Neticede pek sa\xE7la u\u011Fra\u015Fma derdin yok anlad\u0131\u011F\u0131m
+    kadar\u0131yla. Bu halin g\xFC\xE7l\xFC bir imaj yarat\u0131yor. Seni tan\u0131mayan
+    insanlar\u0131n seninle ilgili edinece\u011Fi ilk intiba, dobral\u0131\u011F\u0131n
+    ve d\xFCr\xFCstl\xFC\u011F\xFCn olacakt\u0131r {{isim}}. \xC7evrendeki insanlar
+    sana kar\u015F\u0131 her zaman g\xFCven duyacaklar. Sana \"hay\u0131r\" denmesinin
+    pek m\xFCmk\xFCn olmad\u0131\u011F\u0131n\u0131 sen de g\xF6receksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "yfsa\xE7boyu"
+    kontrol: 0
+  - degiskenAdi: yuz fali sac boyu
+    degiskenDegeri: kel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

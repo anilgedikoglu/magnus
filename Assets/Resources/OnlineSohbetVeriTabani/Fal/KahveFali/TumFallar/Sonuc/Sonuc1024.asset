@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1024
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA03821846949
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan taban\u0131nda seni ola\u011Fan\xFCst\xFC bir \u015Fehirde g\xF6r\xFCyorum
+    {{isim}}. San\u0131yorum buras\u0131 {{kelime, r\xF6nesans'\u0131n do\u011Fdu\u011Fu
+    \u015Fehirlerden biri olan, k\xFClt\xFCr, sanat ve tarih a\xE7\u0131s\u0131ndan
+    a\u015Fm\u0131\u015F bir kent olan Floransa | medeniyet merkezi olan Semerkand
+    | \xD6zbekistan s\u0131n\u0131rlar\u0131nda olan Buhara | a\u015Fk \xE7e\u015Fmesi
+    ve \u0130spanyol merdivenleriyle \xFCnl\xFC Roma | 3 ilahi din taraf\u0131ndan
+    da kutsal say\u0131lan Kud\xFCs}}. Burada {{yil_8}} ya da {{yil_9}} y\u0131l\u0131n\u0131n
+    yaz aylar\u0131nda, bir i\u015F sebebiyle bulunacaks\u0131n. {{kelime, Elindeki
+    \xE7anta ve yan\u0131ndaki kalabal\u0131ktan | \xDCzerindeki k\u0131yafet ve
+    aksesuarlardan | Senin i\xE7in \xE7evrende ko\u015Fu\u015Fturan insanlardan}}
+    anlad\u0131\u011F\u0131m kadar\u0131yla, maddi durumun da olduk\xE7a iyi g\xF6z\xFCk\xFCyor.
+    Demek ki \xE7ok y\xFCkseleceksin!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 18
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 18
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

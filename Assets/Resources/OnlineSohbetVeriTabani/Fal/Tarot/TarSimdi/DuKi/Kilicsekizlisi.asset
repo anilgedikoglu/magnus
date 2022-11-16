@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicsekizlisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA10427497720
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: d86b7756c6feac246ba7d5956eb9d3a2, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: d86b7756c6feac246ba7d5956eb9d3a2, type: 3}
+  contentPhotoId: kilicsekizlisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Sekizlisi\" kart\u0131n\u0131 se\xE7tin.\n\nKafana
+    koydu\u011Fun baz\u0131 hedefler ya da kafana takt\u0131\u011F\u0131n bir \u015Feyler
+    var. Bunlara kendini o kadar kapt\u0131r\u0131yor ve di\u011Fer her \u015Feyden
+    kendini o kadar soyutluyorsun ki, hareket edecek farkl\u0131 bir yerin, kendine
+    b\u0131rakt\u0131\u011F\u0131n ilave bir u\u011Fra\u015F alan\u0131n kalm\u0131yor
+    {{isim}}. Beklentilerinin esiri gibisin. Atlaman gereken bir t\xFCmsel oldu\u011Funu
+    d\xFC\u015F\xFCn\xFCyor ve bu ger\xE7ekle\u015Fmeden ba\u015Fka hi\xE7bir \u015Feyle
+    ilgilenemeyece\u011Fini san\u0131yorsun. Oda\u011F\u0131n\u0131 da\u011F\u0131tmaktan
+    korkuyorsun. Bu izolasyon seni ba\u015Far\u0131ya m\u0131 haz\u0131rl\u0131yor
+    yoksa yan\u0131na kaybetti\u011Fin zaman olarak \"zarar\" m\u0131 kalacak, bunu
+    ancak zamanla g\xF6rebilirsin. Umar\u0131m g\xF6nl\xFCnden ge\xE7ene nail olursun."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilicsekizlisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

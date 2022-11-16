@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme431
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA73522108769
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ba\u015F\u0131n\u0131 hafif\xE7e \xF6ne do\u011Fru e\u011Fmi\u015F, ba\u015Fka
+    insanlar\u0131n da oldu\u011Fu bir ortamda \xF6n\xFCndeki hal\u0131ya dikkat
+    kesildi\u011Fini g\xF6r\xFCyorum. Bir konu konu\u015Fuluyor; fakat s\xF6ylenenler
+    senin i\xE7in adeta bir \"u\u011Fultudan\" \xF6te de\u011Fil. G\xF6zlerin, hal\u0131n\u0131n
+    \xFCzerindeki {{kelime, halkalara | desenlere | karelere}} tak\u0131lm\u0131\u015F
+    vaziyette. O an i\xE7inden \"\u015Fu konu bir hallolsa\" diye dua etti\u011Fini
+    hissediyorum. Bu g\xF6rsellerin \xFCzerinde ise, s\xF6kmekte olan bir \u015Fafak
+    misali, karanl\u0131ktan s\u0131yr\u0131lmakta olan g\xFCne\u015F \u0131\u015F\u0131nlar\u0131
+    var. \U0001F324\uFE0FO an edece\u011Fin dua kabul olacak ve o zorlu konu, \xE7ok
+    k\u0131sa bir s\xFCre i\xE7erisinde \xE7\xF6z\xFCme kavu\u015Facak {{isim}}.
+    \n\nFincan\u0131n\u0131n daha alt kesimlerinde ise, aras\u0131 \"iki ayr\u0131
+    nokta\" gibi olan, geni\u015F bir u\xE7urum var. Senin bulunmak, varmak ya da
+    ula\u015Fmak istedi\u011Fin bir konum, bir durum var. Fakat bunun i\xE7in hem
+    maddi, hem de manevi deste\u011Fe ihtiya\xE7 duyuyorsun {{isim}}. Tasviri \xE7ok
+    zor olan inan\u0131lmaz b\xFCy\xFCkl\xFCkte bir g\xFCc\xFCn, sana do\u011Fru
+    \xFCfleyerek seni tek nefeste {{sayi,6,14}} hafta i\xE7erisinde bulundu\u011Fun
+    yerden istedi\u011Finiz noktaya savuraca\u011F\u0131n\u0131 f\u0131s\u0131ld\u0131yor
+    telvelerin. So\u011Fuk esen r\xFCzgarlar, bazen umudun kanatlar\u0131na dolar..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

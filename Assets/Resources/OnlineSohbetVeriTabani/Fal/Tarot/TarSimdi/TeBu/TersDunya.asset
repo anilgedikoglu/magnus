@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDunya
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA69204624616
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 82a45f2600e00cf4abdfb28dcf724ec4, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 82a45f2600e00cf4abdfb28dcf724ec4, type: 3}
+  contentPhotoId: dunya-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"D\xFCnya\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nYa\u015Fam\u0131ndaki
+    aktif ak\u0131\u015F bir anda t\u0131kanma e\u011Filimi g\xF6stermeye ba\u015Flam\u0131\u015F.
+    \u0130stedi\u011Fin \u015Feyler planlad\u0131\u011F\u0131n zamanlarda olmuyor.
+    Zorlan\u0131yor ve istedi\u011Fin h\u0131zda devam edemeyince huzursuz oluyorsun.
+    Elindekileri kaybetti\u011Fini ve ba\u015Fa d\xF6nd\xFC\u011F\xFCn\xFC d\xFC\u015F\xFCn\xFCyor
+    bile olabilirsin. Baz\u0131 \u015Feyleri yeniden ba\u015Flatmak, birka\xE7 konuda
+    biraz geriye d\xFC\u015Fmek seni bu kadar tasaland\u0131rmas\u0131n {{isim}}.
+    Atalar\u0131m\u0131z \"ge\xE7 olsun g\xFC\xE7 olmas\u0131n\" diye bo\u015Fa dememi\u015Fler.
+    Hayat\u0131ndaki par\xE7alar yava\u015F yava\u015F yerlerine oturuyor. Eksik
+    hi\xE7bir nokta kalmad\u0131\u011F\u0131nda, ba\u015Far\u0131 kendili\u011Finden
+    gelir. Sen i\xE7ini ferah tut, karmaya inan ve mutlulu\u011Fu yakalamak i\xE7in
+    g\xFCl\xFCc\xFCkler sa\xE7."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi dunya ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

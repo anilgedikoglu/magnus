@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sohbet 213
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA67503909268
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xC7i\xE7eklerle ho\u015F ge\xE7in,\nBal\u0131 incitme g\xF6n\xFCl.\nBir k\xFC\xE7\xFCk
+    meyve i\xE7in\nDal\u0131 incitme g\xF6n\xFCl.\n\nKonu\u015Fmak bize mahsus,\nOlsa
+    da bir g\xFCzel s\xFCs,\nYa \"hay\u0131r\" de, yahut sus,\nDili incitme g\xF6n\xFCl.\n\nSevmekten
+    geri kalma,\nYapan ol, y\u0131kan olma,\nSevene diken olma,\nG\xFCl\xFC incitme
+    g\xF6n\xFCl.\n\nBa\u015F\u0131n olsa da y\xFCksek,\nG\xF6z\xFCn enginde gerek,\nKibirle
+    y\xFCr\xFCyerek\nYolu incitme g\xF6n\xFCl\n\nMevl\xE2 verince azma,\nGeri al\u0131nca
+    k\u0131zma,\nT\xFCten oca\u011F\u0131 bozma,\nK\xFCl\xFC incitme g\xF6n\xFCl.\n\nDokunur
+    gayretine,\nKar\u0131\u015Fma hikmetine.\nSahibi h\xFCrmetine,\nKulu incitme
+    g\xF6n\xFCl.\n\nBestami Yazgan"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "\xF6zl\xFCs\xF6z1"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "\xF6zl\xFCs\xF6z1"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

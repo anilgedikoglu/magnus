@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyEsYengecEvli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA06978484842
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"E\u015Finin
+    istemedi\u011Fi bir \u015Feyi asla ona yapt\u0131rmaya kalkma derim {{isim}}.
+    {{burc}} burcu {{data, cinsiyet=kad\u0131n, kad\u0131nlar\u0131 | cinsiyet=erkek,
+    erkekleri}} emrivakiye biraz meyilli olurlar, bunu biliyorum. Fakat bu defa kar\u015F\u0131nda
+    sa\u011Flam ve g\xFC\xE7l\xFC k\u0131ska\xE7lar\u0131 olan, hakiki bir yenge\xE7
+    burcu {{data, cinsiyet=erkek, kad\u0131n\u0131 | cinsiyet=kad\u0131n, erke\u011Fi}}
+    duruyor. :) Sevgili {{isim}}, sana, \xE7evrene ve ailene en uygun burcun insan\u0131yla
+    evlendi\u011Fine emin olabilirsin. Yenge\xE7 bur\xE7lar\u0131 e\u015Flerinin
+    yak\u0131nlar\u0131na kar\u015F\u0131 sevecen ve samimidir. Yeri gelir, e\u015Finin
+    aileni senden daha fazla d\xFC\u015F\xFCnd\xFC\u011F\xFCn\xFC g\xF6r\xFCrs\xFCn.
+    Arkada\u015Flar\u0131n sana ula\u015Fmak i\xE7in seni de\u011Fil \xF6ncelikle
+    e\u015Fini aramaya ba\u015Flar. Kendisini sevdirmeyi bilen bir bur\xE7tur. {{burc}}
+    ve yenge\xE7 {{data, cinsiyet=erkek, kad\u0131n\u0131 | cinsiyet=kad\u0131n,
+    erke\u011Fi}} birbirlerini de\u011Fi\u015Ftirmeye \xE7al\u0131\u015Fmad\u0131klar\u0131
+    s\xFCrece, a\u015Fklar\u0131 da evlilikleri de her zaman g\xF6z kama\u015Ft\u0131r\u0131c\u0131d\u0131r.
+    \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "e\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "yenge\xE7"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

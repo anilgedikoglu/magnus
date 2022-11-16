@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisOglak
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA04246011256
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Ultra
+    sad\u0131k ve a\u015F\u0131r\u0131 d\xFCr\xFCst o\u011Flak {{data, cinsiyet=kad\u0131n,
+    erkekleri | cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=lgbt, insanlar\u0131}}
+    harika birer i\u015F arkada\u015F\u0131 ve muhte\u015Fem birer sevgilidirler.
+    {{data, cinsiyet=erkek, K\u0131z arkada\u015F\u0131n\u0131n | cinsiyet=kad\u0131n,
+    Erkek arkada\u015F\u0131n\u0131n | cinsiyet=lgbt, Sevgilinin}} ondan a\u015Fa\u011F\u0131
+    kal\u0131r yan\u0131 oldu\u011Funu sanm\u0131yorum, ancak onlar\u0131n kendi
+    \u015Fah\u0131slar\u0131na m\xFCnhas\u0131r, \xE7ok benzersiz y\xF6nleri de vard\u0131r.
+    Hem i\u015Fi, hem arkada\u015Fl\u0131\u011F\u0131, hem de ili\u015Fkilerini \xE7ok
+    iyi y\xF6netirler. {{burc}} burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131n\u0131n
+    | cinsiyet=kad\u0131n, erkeklerinin | cinsiyet=lgbt, mensuplar\u0131n\u0131n}}
+    belki de en \xE7ok ihtiya\xE7 duyduklar\u0131 \u015Fey, onlara yol g\xF6sterecek,
+    ilham verecek ve vizyonlar\u0131n\u0131 geni\u015Fletecek bir sevgili olsa gerek.
+    Dikkat etmen gereken \xF6nemli bir nokta var. Ona kar\u015F\u0131 hata yapmaman
+    gerek {{isim}}. Bir hata yaparsan, asla ama asla affetmezler... Eline onu daha
+    iyi tan\u0131mak i\xE7in f\u0131rsatlar ge\xE7ecek. Samimiyetinden endi\u015Fe
+    duymazsa ve sen de sevgilinle onun aras\u0131nda bu s\u0131rada bir karar verebilirsen,
+    birlikte \xE7ok ba\u015Fka noktalara gelebilirsiniz. Bu potansiyel sizde var.
+    \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "o\u011Flak"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

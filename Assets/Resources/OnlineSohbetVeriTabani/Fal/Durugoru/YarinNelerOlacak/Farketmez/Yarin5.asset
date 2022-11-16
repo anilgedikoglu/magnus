@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Yarin5
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA40594155888
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Yar\u0131n, kimsenin akl\u0131na gelmeyen \u015Feylerin akl\u0131na gelmeye
+    ba\u015Flayaca\u011F\u0131 ve bu yarat\u0131c\u0131 s\xFCrecinin iki \xFC\xE7
+    g\xFCn boyunca s\xFCrece\u011Fi bir g\xFCn olacak {{isim}}. Enerjini kanalize
+    edebilece\u011Fin aktiviteler yapaca\u011F\u0131n\u0131 hissediyorum. Bu seni
+    hem daha dinamik hem de daha huzurlu k\u0131lacak. \xD6\u011Fleden sonraki saatlerde,
+    yak\u0131ndan tan\u0131d\u0131\u011F\u0131n ve ad\u0131nda {{harf}} harfi olan
+    birinden fiziksel \xF6zelliklerinle ilgili bir iltifat alacaks\u0131n. Bu, ihtiyac\u0131n
+    olan motivasyonu daha da kam\xE7\u0131layacak. Kahve ya da \xE7ay i\xE7ti\u011Fin
+    saatlerde dinginle\u015Feyece\u011Fini ve ekstra odaklanaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorum. O saatlerde evrene g\xFCzel enerjiler yollarsan, kesinlikle
+    kabul olaca\u011F\u0131n\u0131 bilmelisin {{isim}}. Birinden bir telefon ya da
+    haber bekliyor musun? Yar\u0131n uyumadan \xF6nce bu beklentinin kar\u015F\u0131lanma
+    ihtimalini %{{kelime, 60'larda | 70'lerde | 80'lerde | 90'larda}} g\xF6r\xFCyorum."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: yno
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: lgbt
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: yno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

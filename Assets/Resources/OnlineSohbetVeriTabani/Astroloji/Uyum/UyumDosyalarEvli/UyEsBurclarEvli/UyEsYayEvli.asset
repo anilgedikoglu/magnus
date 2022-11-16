@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyEsYayEvli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA63183093612
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Yay
+    burcu {{data, cinsiyet=kad\u0131n, han\u0131mefendileriyle | cinsiyet=erkek,
+    beyefendileriyle}} ilgili bilinen baz\u0131 ger\xE7ekler vard\u0131r. Evlenmeden
+    \xF6nce olduk\xE7a fl\xF6rt\xF6zlerken, evlendikten sonra g\xF6zlerini d\u0131\u015F
+    d\xFCnyaya kapat\u0131p kendilerini e\u015Flerine adarlar. E\u015Fin {{data,
+    cinsiyet=erkek, han\u0131mefendinin | cinsiyet=kad\u0131n, beyefendinin}} ge\xE7mi\u015Fini
+    herhangi bir tart\u0131\u015Fmada \xF6n\xFCne getirmedi\u011Fin s\xFCrece, y\u0131k\u0131c\u0131
+    bir sorunla kolay kolay kar\u015F\u0131la\u015Fmazs\u0131n\u0131z {{isim}}. Bunu
+    neden s\xF6yl\xFCyorum; \xE7\xFCnk\xFC {{burc}} burcu {{data, cinsiyet=erkek,
+    ekekleri | cinsiyet=kad\u0131n, kad\u0131nlar\u0131}} sava\u015Fta, ellerinde
+    k\u0131l\u0131\xE7 kalkan ne varsa kullanmaya meyillidirler. :) Kural koymay\u0131
+    seven fakat bir o kadar da d\xFCr\xFCst bir insanla evlisin. Kendi burcunun ba\u015Fl\u0131ca
+    reflekslerinden birinin \\\"ba\u015Fkald\u0131r\u0131\\\" oldu\u011Funu unutmamal\u0131,
+    evlilikte bayra\u011F\u0131 zaman zaman e\u015Fine teslim etmeyi bilmelisin.
+    Hep onda dursun demiyorum; ancak zaman zaman el de\u011Fi\u015Ftirmesi, san\u0131r\u0131m
+    kimseyi \xFCzmez. Sevmeyi, d\xFC\u015Feni kald\u0131rmay\u0131 ve moral vermeyi
+    bilen \xF6ylesine co\u015Fkulu biriyle evlisin ki, \xF6mr\xFCn boyunca s\u0131rt\u0131n\u0131n
+    hayat taraf\u0131ndan yere getirilebilece\u011Fini sanm\u0131yorum Sevgili {{isim}}.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "e\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: yay
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

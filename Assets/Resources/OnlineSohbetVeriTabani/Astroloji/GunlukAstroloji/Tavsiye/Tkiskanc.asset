@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tkiskanc
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA80053676833
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn {{burc}} bur\xE7lar\u0131n\u0131n hayatlar\u0131nda ciddi sorunlar
+    \xE7\u0131kabilir. Nedeni ise asl\u0131nda basit; k\u0131skan\xE7l\u0131k. Bunu
+    yaln\u0131zca sevdi\u011Fini k\u0131skanmak olarak da alg\u0131lama {{isim}}.
+    Normalde huyun de\u011Fildir, biliyorum ama bug\xFCn ba\u015Fkalar\u0131n\u0131n
+    sahip oldu\u011Fu ve sende olmayan \u015Feyleri de k\u0131skanabilirsin. Hatta
+    ba\u015Fkalar\u0131n\u0131 ba\u015Farabildi\u011Fi ve senin yapamad\u0131\u011F\u0131n
+    \u015Feyler de senin i\xE7in birer k\u0131skan\xE7l\u0131k unsuru olacak. Taviyeme
+    gelince; bu duygusal durumunu h\u0131rslanmak ve motive olmak i\xE7in kullanabilirsin.
+    K\u0131skan\xE7l\u0131k do\u011Fru kanalize edildi\u011Finde \xE7ok g\xFC\xE7l\xFC
+    bir silah ve kataliz\xF6rd\xFCr. D\u0131\u015Far\u0131ya fazla yans\u0131t\u0131lmamal\u0131,
+    i\xE7 motorlara p\xFCsk\xFCrt\xFClmeli, yanma sa\u011Flanmal\u0131 ve onun sayesinde
+    harekete ge\xE7ilmelidir. Bunu yapabilece\u011Fini biliyorum!"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

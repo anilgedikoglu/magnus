@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme550
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA83400447847
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131ndaki detaylarlarda \xE7ok ilgin\xE7 bir durum var {{isimcigim}}.
+    \xD6n\xFCnde ve arkanda duran iki erkek g\xF6r\xFCyorum. \U0001F9D0\xD6n\xFCndeki
+    erkek, sana yan d\xF6nm\xFC\u015F vaziyette. Adeta senin \"tam olarak\" fark\u0131nda
+    de\u011Fil gibi. Arkandaki ki\u015Fi ise, elindeki bir somun ekme\u011Fi ikiye
+    b\xF6lm\xFC\u015F, yar\u0131s\u0131n\u0131 sana uzat\u0131yor; fakat senin bundan
+    haberin yok. \U0001F956\xD6n\xFCndeki erkek ho\u015Fland\u0131\u011F\u0131n ki\u015Fiyi,
+    arkandaki erkek ise ad\u0131nda {{harf}} harfi olan, sana kar\u015F\u0131 gizli
+    duygular besleyen fakat var g\xFCc\xFCyle \"arkada\u015F\xE7a\" yakla\u015Fan,
+    \xE7ekingen birini sembolize ediyor.\n\nHo\u015Fland\u0131\u011F\u0131n ki\u015Finin
+    sana do\u011Fru d\xF6nmesi ve sendeki \"farklar\u0131\" tam manas\u0131yla fark
+    edebilmesi i\xE7in, \xF6n\xFCnde {{sayi,2,9}} hafta gibi bir s\xFCre oldu\u011Funu
+    hissediyorum. Fakat arkandaki erkek, gelecek hafta tek bir hareketiyle kendini
+    a\xE7\u0131k edecek. \U0001F440Telveler, ilerleyen aylarda bir se\xE7im yapmak
+    durumunda kalabilece\u011Finden s\xF6z ediyor {{isim}}. \u0130ki farkl\u0131
+    \xF6zellikte, iki bamba\u015Fka insan olacak g\xFCndeminde. Akl\u0131n ve kalbin
+    aras\u0131nda kalabilirsin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

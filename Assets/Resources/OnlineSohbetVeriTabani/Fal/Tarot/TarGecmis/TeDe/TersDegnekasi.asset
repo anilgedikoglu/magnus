@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegnekasi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA53760160027
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 4ea76a58831b92e478a640709bb444ae, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 4ea76a58831b92e478a640709bb444ae, type: 3}
+  contentPhotoId: asaasi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"De\u011Fnek As\u0131\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nHemen hemen herkesin bir d\xF6nem ya\u015Fad\u0131\u011F\u0131
+    s\u0131k\u0131nt\u0131 senin de ba\u015F\u0131na gelmi\u015F. Y\xF6n\xFCn\xFC
+    ve ya\u015Fama amac\u0131n\u0131 kaybetmi\u015F, bocalam\u0131\u015F, k\xFC\xE7\xFCk
+    \xE7apl\u0131 bir depresyon ya\u015Fam\u0131\u015Fs\u0131n {{isim}}. Motivasyonunu
+    yitirmi\u015F, sevdi\u011Fin aktivitelerden uzakla\u015Fm\u0131\u015F, nas\u0131l
+    bir cenderenin i\xE7inde oldu\u011Funun fark\u0131na dahi varamam\u0131\u015Fs\u0131n.
+    Se\xE7ti\u011Fin kart \xF6yle bir arada kalm\u0131\u015Fl\u0131k ve ikilemden
+    bahsediyor ki, ne yapmak istedi\u011Fine karar vermen bile zor olmu\u015F. Kaderinin
+    akmad\u0131\u011F\u0131n\u0131 hissetmi\u015Fsin. \"\u0130yi ya da k\xF6t\xFC,
+    bir \u015Feyler olsun, i\u015Fler bir yere vars\u0131n art\u0131k\" diye d\xFC\u015F\xFCnm\xFC\u015Fs\xFCn.
+    Yazg\u0131ndaki a\xE7\u0131k denizler seni yormu\u015F."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis asaasi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

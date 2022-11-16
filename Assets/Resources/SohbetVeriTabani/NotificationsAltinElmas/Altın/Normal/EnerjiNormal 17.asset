@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: EnerjiNormal 17
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "Alt\u0131n say\u0131n 1 tane artt\u0131. <sprite=10> Az de\u011Fil, neler
+    yap\u0131lmaz ki! \u0130lk f\u0131rsatta \xE7al kap\u0131m\u0131 {{isim}}. <sprite=7>"
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 2
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 1

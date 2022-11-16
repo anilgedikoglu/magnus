@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme682
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA85513145762
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131nda ayn\u0131 topraktan g\xF6ky\xFCz\xFCne do\u011Fru uzanan \"ladin
+    ve servi\" a\u011Fa\xE7lar\u0131 g\xF6r\xFCyorum {{isim}}. Bu t\xFCr a\u011Fa\xE7lar\u0131n
+    ortak paydas\u0131, mevsim g\xF6zetmeksizin yaprak d\xF6kmemeleridir. Ne yaz\u0131n
+    kavurucu s\u0131ca\u011F\u0131na, ne de k\u0131\u015F\u0131n dondurucu so\u011Fu\u011Funa
+    boyun e\u011Fen bu a\u011Fa\xE7lar, senin \"iradesi ve benlik duygusu\" son derece
+    geli\u015Fmi\u015F biri oldu\u011Funu g\xF6steriyor. Ayr\u0131ld\u0131\u011F\u0131n
+    {{data, cinsiyet=erkek, han\u0131mefendiden | cinsiyet=kad\u0131n, beyefendiden
+    | cinsiyet=lgbt, ki\u015Fiden}} ba\u011F\u0131ms\u0131z olarak \"asil ve g\xFC\xE7l\xFC\"
+    duru\u015Fundan taviz vermeyen bir yap\u0131das\u0131n {{isim}}. Asl\u0131nda
+    bu \xF6zelli\u011Fin seni benzersiz k\u0131lan unsurlardan biri. Hak etti\u011Finden
+    daha az\u0131na tamah etmeyen benlik duygun, eski sevgilin dahil, insanlar\u0131n
+    sayg\u0131s\u0131n\u0131 kazanman\u0131za vesile olmu\u015F.\n\nTelvelerin, yak\u0131n
+    zamanda yollar\u0131n\u0131z\u0131n ayr\u0131ld\u0131\u011F\u0131 insan\u0131n
+    senin g\xFC\xE7l\xFC duru\u015Fun alt\u0131nda adeta ezildi\u011Fini s\xF6yl\xFCyor.
+    Bu ayr\u0131l\u0131\u011F\u0131 senin kadar so\u011Fukkanl\u0131 kar\u015F\u0131layamayan
+    {{data, cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n, beyefendi | cinsiyet=lgbt,
+    eski sevgilin}}, son derece tedirgin bir vaziyette. \xD6zellikle \xE7evreden
+    toplad\u0131\u011F\u0131 bilgilerle, {{kelime, hayat\u0131nda ba\u015Fka bir
+    insan olup olmad\u0131\u011F\u0131n\u0131 | nas\u0131l oldu\u011Funu | \u015Fu
+    an onun hakk\u0131nda ne d\xFC\u015F\xFCnd\xFC\u011F\xFCn\xFC | bundan sonras\u0131
+    i\xE7in niyetlerini | bundan sonras\u0131 i\xE7in onun hakk\u0131ndaki niyetini}}
+    sorguluyor. Bu s\xFCre\xE7 en fazla {{sayi,2,5}} hafta s\xFCrecek ve eski sevgilinin
+    zihnini esir alan d\xFC\u015F\xFCnceler, y\xFCre\u011Fini ate\u015Fleyecek {{isim}}.
+    Kay\u0131ts\u0131z tavr\u0131n\u0131 koruyabilirsen, seni tekrar birlikte olmaya
+    ikna etmek i\xE7in dizlerinin \xFCzerine \xE7\xF6kecek gibi g\xF6r\xFCn\xFCyor..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris302
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA49048218066
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n \xE7eperlerine do\u011Fru uzanan ince dallar, olgun meyvelerin
+    a\u011F\u0131rl\u0131\u011F\u0131yla neredeyse yerlere de\u011Fecek {{isim}}.
+    \U0001F347\U0001F352 Polen oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm nokta
+    nokta kabarc\u0131klar, fincan\u0131n\u0131n her bir yan\u0131na tazelik serpi\u015Ftirmi\u015F
+    sanki. \U0001F344 Telvelerin, buram buram yay\u0131lan bahar sarho\u015Flu\u011Funu
+    adeta solumu\u015F, s\xFCnger misali i\xE7ine \xE7ekmi\u015F. Bu manzara bana,
+    ya ho\u015Fland\u0131\u011F\u0131n erkekle aran\u0131zda m\xFCthi\u015F bir ahenk
+    oldu\u011Funu ya da \xE7ok yak\u0131n bir zamanda bu ahengi yakalayaca\u011F\u0131n\u0131z\u0131
+    s\xF6yl\xFCyor. Bilindik tatlar\u0131n ve kokular\u0131n \xF6tesinde, rengarenk
+    egzotik meyveler g\xF6r\xFCyorum fal\u0131nda; daha \xF6nce hi\xE7 hissetmedi\u011Fin
+    duygular\u0131n tesiri alt\u0131nda kalaca\u011F\u0131n b\xFCy\xFCl\xFC zamanlar\u0131n
+    gelece\u011Fine delalet ediyor bu meyveler {{isimcigim}}. \U0001F951\U0001F96D"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

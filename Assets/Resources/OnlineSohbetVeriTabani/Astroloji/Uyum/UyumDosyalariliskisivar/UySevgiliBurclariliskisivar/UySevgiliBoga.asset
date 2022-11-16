@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UySevgiliBoga
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA92501150755
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Bo\u011Fa
+    burcu {{data, cinsiyet=kad\u0131n, erkeklerinde | cinsiyet=erkek, kad\u0131nlar\u0131nda
+    | cinsiyet=lgbt, insanlarda}} sende olmayan \xF6nemli bir fark bulunuyor {{isim}};
+    onlar haddinden fazla ihtiyatl\u0131lar. Onlara yeni bir \u015Feyi kabul ettirmek
+    ya da bir \u015Feyden vazge\xE7irmek \xE7ok fazla zaman alabilir. Al\u0131\u015Ft\u0131klar\u0131
+    d\xFCzen bozulsun istemezler ve her konuda garanticidirler. Sonuna kadar hesap
+    kitap yapmadan yeni yollara \xE7\u0131kmazlar. Sevgiline bir fikrini kabul ettirebilmek
+    i\xE7in \xE7ok u\u011Fra\u015Fman gerekiyor olabilir. Onun kalbine giden yolu
+    merak ediyor musun {{isim}}? O yol kesinlikle midesinin tam ortas\u0131ndan ge\xE7iyor.
+    Bak bu konuda benzersiniz. Onu etkilemek istiyorsan, yemek \xFCzerine daha fazla
+    kafa yorman gerekebilir. Bo\u011Fa {{data, cinsiyet=erkek, kad\u0131nlar\u0131
+    | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, burcu mensuplar\u0131}} tam
+    bir gurmedir. G\xFCzel sanatlara ilgileri ise yads\u0131namaz. Ellerine f\u0131r\xE7a
+    ver, resim yaps\u0131nlar, bir m\xFCzik aleti ver, k\u0131sa s\xFCrede \xE7almay\u0131
+    \xF6\u011Frensinler. {{burc}} burcu {{data, cinsiyet=erkek, erkekleri | cinsiyet=kad\u0131n,
+    kad\u0131nlar\u0131 | cinsiyet=lgbt, ki\u015Filer}} bo\u011Fa burcu {{data, cinsiyet=kad\u0131n,
+    erkeklerden | cinsiyet=erkek, kad\u0131nlardan | cinsiyet=lgbt, insanlardan}}
+    \xF6m\xFCrleri boyunca kolay kolay s\u0131k\u0131lmayacaklard\u0131r. \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: sevgili
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "bo\u011Fa"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

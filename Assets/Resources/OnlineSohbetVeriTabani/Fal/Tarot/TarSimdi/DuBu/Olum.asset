@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Olum
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA72878415769
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 7b4b58c709c5a10418142cbd9374fd52, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 7b4b58c709c5a10418142cbd9374fd52, type: 3}
+  contentPhotoId: olum
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"\xD6l\xFCm\" kart\u0131n\u0131 se\xE7tin.\n\nBu kart\u0131n
+    ad\u0131 sana hi\xE7 korkun\xE7 gelmesin. Yeni \u015Feylerin ba\u015Flamas\u0131
+    i\xE7in, eskilerin noktalanmas\u0131 gerekir. Daha g\xFCzel ve y\xFCksek a\u011Fa\xE7lar
+    i\xE7in, eski otlar\u0131n alan\u0131 bo\u015Faltmas\u0131, fosille\u015Ferek
+    g\xFCbre yaratmas\u0131 \u015Fartt\u0131r. \u015Eu s\u0131ralar senin i\xE7in
+    baz\u0131 \u015Feylerin son b\xF6l\xFCmleri gibi g\xF6z\xFCk\xFCrken, birtak\u0131m
+    yeni ba\u015Flang\u0131\xE7lar da sana do\u011Fru giderek yakla\u015F\u0131yor
+    {{isim}}. Seni gelecekte bekleyen g\xFCzellikler ama\xE7land\u0131\u011F\u0131nda,
+    korkular\u0131n\u0131 yenmen gerekti\u011Fini de biliyorsun. Endi\u015Fe etti\u011Fin
+    her ne varsa, \xFCzerine \xFCzerine gidiyorsun. \u0130\xE7 teredd\xFCtlerine
+    kar\u015F\u0131 verdi\u011Fin manevi sava\u015F\u0131 kazanmakta ve bayra\u011F\u0131n\u0131
+    g\xF6ndere \xE7ekmektesin. Yenilikler zaman zaman seni bocalat\u0131yor olabilir,
+    bu normal."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi olum
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisKocEvli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA14003524842
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Hali
+    haz\u0131rda bir ili\u015Fkisi olsun ya da olmas\u0131n, kar\u015F\u0131s\u0131na
+    s\u0131k\u0131 ve koyu bir ko\xE7 burcu {{data, cinsiyet=kad\u0131n, erke\u011Fi
+    | cinsiyet=erkek, kad\u0131n\u0131 | cinsiyet=lgbt, insan\u0131}} \xE7\u0131kanlar\u0131n,
+    g\xF6n\xFCllerini o ki\u015Fiye h\u0131zla kapt\u0131rd\u0131klar\u0131n\u0131
+    g\xF6r\xFCyorum. Hele de {{burc}} burcuysan, y\xF6netici gezegeni b\xFCy\xFCleyici
+    \\\"Mars\\\" olan \\\"kardinal\\\" ko\xE7lara ilgin ka\xE7\u0131n\u0131lmazd\u0131r.
+    Sen \\\"en iyiyi\\\" ve \\\"en m\xFCkemmeli\\\" istiyorsun {{isim}}. Asl\u0131nda
+    evlili\u011Fini de bu sanr\u0131 ile yapm\u0131\u015Ft\u0131n. Fakat bu defa
+    kar\u015F\u0131nda ger\xE7ekten m\xFCkemmele yak\u0131n bir insan var. Fl\xF6rt
+    yetene\u011Fi en \xFCst seviyede, cesaretlendirici ve i\xE7 g\u0131c\u0131klay\u0131c\u0131.
+    Ona teslim olmadan \xF6nce \u015Funlar\u0131 akl\u0131ndan \xE7\u0131karmaman
+    gerekiyor; ko\xE7 burcu {{data, cinsiyet=kad\u0131n, erkekleri | cinsiyet=erkek,
+    kad\u0131nlar\u0131 | cinsiyet=lgbt, insanlar\u0131}} olduk\xE7a kibirli, buyurgan
+    ve dengesizdirler. B\xFCy\xFClenmi\u015F bir \u015Fekilde ipiyle derin kuyulara
+    inmeden \xF6nce tekrar tekrar d\xFC\u015F\xFCnmeli, durumunuzu etrafl\u0131ca
+    de\u011Ferlendirmelisin. Aran\u0131zdaki ciddiyet artt\u0131k\xE7a omuzlar\u0131nda
+    a\u011F\u0131r sorumluluklar hissedebilir, \xF6rselenebilirsin {{isim}}. T\xFCm
+    bunlara haz\u0131rsan ve dipsiz sularda sahipsiz g\xFCzelliklere yelken a\xE7mak
+    istiyorsan, o zaman yolun a\xE7\u0131kt\u0131r, a\xE7\u0131k olsun...\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "ko\xE7"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

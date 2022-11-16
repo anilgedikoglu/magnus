@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisBalik
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA36958832947
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Ona
+    hen\xFCz a\xE7\u0131lmad\u0131n de\u011Fil mi? Yoksa sana kar\u015F\u0131 hislerini
+    a\xE7\u0131k etmesini ondan m\u0131 bekliyorsun? Ahh {{isim}} ah, bu hi\xE7bir
+    zaman ger\xE7ekle\u015Fmeyebilir. Bal\u0131k burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131
+    | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, insanlar\u0131}} biraz korkakt\u0131r.
+    Cesaretini toplay\u0131p, anlatacaklar\u0131n\u0131 kafas\u0131nda kurgulay\u0131p
+    gelip sana s\xF6ylemesini bekleme. Bunu ona kar\u015F\u0131 sen yapmal\u0131s\u0131n.
+    Bir {{burc}} burcu {{data, cinsiyet=erkek, erke\u011Fi | cinsiyet=kad\u0131n,
+    kad\u0131n\u0131 | cinsiyet=lgbt, mensubu}} olarak ona g\xF6re medeni cesaretin
+    \xE7ok daha y\xFCksek senin. Onu iyi tan\u0131m\u0131yorsan, \xF6zeline girdik\xE7e
+    fikirlerinin biraz da\u011F\u0131n\u0131k oldu\u011Funu da fark edeceksin. Dene
+    onu; i\u015Fle ilgili bir \u015Fey sor ya da bir \u015Fey hat\u0131rlat. Sana
+    \u015Fa\u015Fk\u0131nl\u0131k i\xE7inde bakt\u0131\u011F\u0131n\u0131 ve s\xF6yledi\u011Fin
+    \u015Feyin onun hi\xE7 akl\u0131na gelmedi\u011Fini fark edeceksin. E\u011Fer
+    ondaki bu tip eksikleri orta vadede tamamlayabilece\u011Fini d\xFC\u015F\xFCn\xFCyorsan,
+    siz olursunuz. Olursan\u0131z da neden g\xFCzel olursunuz biliyor musun, halden
+    anlayan, romantik biri. Sen a\u015Fka dair duygusuz ve so\u011Fuk insanlar\u0131
+    sevmezsin. Mant\u0131k ili\u015Fkileri senden uzak, bunun fark\u0131nday\u0131m.
+    \u0130n\u015Fallah g\xFCzel olur. Hay\u0131rl\u0131 haberlerini bekliyorum. <sprite=10>\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "bal\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

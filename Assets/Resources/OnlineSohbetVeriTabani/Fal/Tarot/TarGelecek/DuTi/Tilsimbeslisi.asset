@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimbeslisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA75729090354
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: df6a1965990793541a803ed5b322cc95, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: df6a1965990793541a803ed5b322cc95, type: 3}
+  contentPhotoId: tilsimbeslisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"T\u0131ls\u0131m Be\u015Flisi\" kart\u0131n\u0131 se\xE7tin.\n\n\xD6n\xFCm\xFCze
+    a\xE7\u0131lan bu son kart, maddi olarak \xE7ok fazla a\xE7\u0131laca\u011F\u0131n\u0131
+    ya da manevi olarak kendini \xE7ok y\u0131prat\u0131p her konuya yeti\u015Femeyece\u011Fini
+    i\u015Faret ediyor. Bug\xFCn elinde olana yar\u0131n da ihtiyac\u0131n olabilece\u011Fini
+    pek d\xFC\u015F\xFCnmeyen birisin. Cebinde 5 lira olsa, 3'\xFCn\xFC harcar, 2'sini
+    de ihtiya\xE7 sahiplerine verirsin. Yar\u0131nlar i\xE7in kenara en az\u0131ndan
+    1 liras\u0131n\u0131 koymaya ba\u015Flaman gerekiyor {{isim}}. Yar\u0131nlar
+    olmayacakm\u0131\u015F\xE7as\u0131na \xE7al\u0131\u015Famazs\u0131n s\xFCrekli.
+    Kendine zaman ay\u0131rmadan ve dinlenmeden ge\xE7irdi\u011Fin her an, zay\u0131f
+    d\xFC\u015Fece\u011Fin ve halsiz hissedece\u011Fin g\xFCnler olarak sana geri
+    d\xF6nebilir. Olumlu hareket etmeye devam etmeli, olumsuz i\xE7in de haz\u0131rl\u0131kl\u0131
+    olmal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek tilsimbeslisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

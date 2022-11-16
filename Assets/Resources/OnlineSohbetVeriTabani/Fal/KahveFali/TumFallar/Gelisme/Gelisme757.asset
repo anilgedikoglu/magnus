@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme757
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA94380220280
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Gelelim orta k\u0131s\u0131mlara. \u0130lk g\xF6z\xFCme \xE7arpan, akmas\u0131n
+    diye iki eliyle \xF6n\xFCndeki kum saatinin boynunu s\u0131kan, {{yas_0}}-{{yas_1}}
+    ya\u015Flar\u0131nda bir {{data, cinsiyet=erkek, erkek | cinsiyet=kad\u0131n,
+    k\u0131z | cinsiyet=lgbt, insan}} oldu. Telveler \xFCzerinde yapt\u0131\u011F\u0131m
+    makro inceleme, bu yans\u0131malar\u0131n \xB1{{sayi,2,9}} g\xFCn sapmayla {{sayi,6,28}}
+    {{ay_1}} tarihine ait oldu\u011Funu s\xF6yl\xFCyor. O g\xFCn\xFCn sabah\u0131na,
+    bir g\xFCn \xF6ncesi \"{{kelime, ak\u015Fam saatlerinde | \xF6\u011Fleden sonra}}\"
+    {{kelime, yan\u0131na gelecek olan bir ki\u015Fiden dolay\u0131 | gitmi\u015F
+    ve bulunuyor oldu\u011Fun yerden dolay\u0131 | alaca\u011F\u0131n bir haberden
+    dolay\u0131}} \xF6yle mutlu uyanacaks\u0131n ki {{isim}}, g\xFCn {{kelime, ge\xE7sin
+    istemeyeceksin | ge\xE7mesin isteyeceksin}}.\n\nFincan\u0131n\u0131n bu b\xF6l\xFCm\xFCndeki
+    bir di\u011Fer g\xF6rsel ise, karanl\u0131klar i\xE7inde elindeki me\u015Faleyi
+    havaya kald\u0131rm\u0131\u015F, seni bulundu\u011Fu yere \xE7a\u011F\u0131ran
+    ve yoluna \u0131\u015F\u0131k tutmak isteyen bir han\u0131mefendi. {{kelime,
+    40-45 ya\u015Flar\u0131 aras\u0131nda | 45-50 ya\u015Flar\u0131 aras\u0131nda
+    | 50-55 ya\u015Flar\u0131 aras\u0131nda}}. {{kelime, BMW marka beyaz bir otomobile
+    | BMW marka siyah bir otomobile | Mercedes marka siyah bir otomobile | Mercedes
+    marka beyaz bir otomobile | Opel marka beyaz bir otomobile | Kia marka gri bir
+    otomobile | Hyundai marka beyaz bir otomobile | Citroen marka gri bir otomobile
+    | Ford marka beyaz bir otomobile | Fiat marka bir otomobile | Honda marka gri
+    bir otomobile | Peugeot marka k\u0131rm\u0131z\u0131 bir otomobile | Skoda marka
+    mavi bir otomobile | Volkswagen marka beyaz bir otomobile | Audi marka beyaz
+    bir otomobile | Audi marka siyah bir otomobile | Michael Kors kahverengi bir
+    \xE7antaya | Michael Kors marka siyah bir \xE7antaya | Kahverengi Pierre Cardin
+    marka bir \xE7antaya | Siyah renkte Pierre Cardin marka bir \xE7antaya | Guess
+    marka siyah bir \xE7antaya | Guess marka kahverengi bir \xE7antaya | Tergan marka
+    lacivert bir \xE7antaya | U.S. Polo Assn. marka bir \xE7antaya | Kahverengi,
+    yumurta burun, k\u0131sa topuk bir ayakkab\u0131ya | Lacivert, ba\u011Fc\u0131kl\u0131
+    ve orta topuklu bir ayakkab\u0131ya | havuzlu site i\xE7erisinde bir eve | g\xFCndelik
+    olarak giydi\u011Fi Oxford ayakkab\u0131lara}} sahip. Bu han\u0131mefendi kariyerindeki
+    en b\xFCy\xFCk basamaklar\u0131n birinde, \xE7ok b\xFCy\xFCk bir \xF6neme sahip
+    olacak {{isim}}.\n\nAlt k\u0131s\u0131mlara ge\xE7meden bahsetmek istedi\u011Fim
+    son fig\xFCr ise, ayd\u0131nl\u0131k b\xF6l\xFCmlerin olu\u015Fturdu\u011Fu \"\xF6p\xFC\u015Fen
+    \xE7ift\" sembol\xFC. {{mevsim_1}} mevsimiyle beraber evrendeki a\u015Fk enerjisinin
+    senin hayat\u0131na do\u011Fru daha aktif ve yo\u011Fun bir \u015Fekilde odaklan\u0131yor
+    olaca\u011F\u0131n\u0131 bilmeni isterim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme474
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA16417325101
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Havada u\xE7u\u015Fan s\xF6zler var telvelerinde... \U0001F644Birileri seninle
+    ilgili engin y\xFCksek yorumlar yapm\u0131\u015F gibi. Neyi se\xE7ece\u011Fini,
+    nas\u0131l tepki verece\u011Fini, nas\u0131l hissetti\u011Fini ya da bir sonraki
+    ad\u0131m\u0131n\u0131n ne olaca\u011F\u0131n\u0131 merak ediyor gibiler. Konuyu
+    ise inan bilmiyorum {{isim}}. Fakat {{sayi,2,3}} ay i\xE7erisinde \xF6yle bir
+    manevra, \xF6yle bir hamle yapacaks\u0131n ki, do\u011Furaca\u011F\u0131 sonu\xE7lar
+    herkesi oturduklar\u0131 yerden kald\u0131racak. Dilleri m\xFCh\xFCrlenecek ve
+    \u015Fa\u015Fk\u0131n vaziyette sana odaklan\u0131p, seni alk\u0131\u015Flamaktan
+    ba\u015Fka \xE7areleri kalmayacak!\n\nK\u0131ymetli {{isim}}, kaderi b\xFCy\xFCk
+    \xF6l\xE7\xFCde sana benzeyen bir arkada\u015F\u0131n\u0131 g\xF6r\xFCyorum fal\u0131nda.
+    Hatta o kadar ki, her ikinizin ad\u0131nda da birer {{isimson}} ya da {{isimiki}}
+    harfi  var. Bu ki\u015Finin senden bir fark\u0131 var; hanesinin \xFCzerinde
+    u\xE7makta olan bayku\u015F, ailesinde bir sorun oldu\u011Funu g\xF6steriyor.
+    \U0001F989{{kelime, Annesi ya da babas\u0131 rahat\u0131z olabilir. | Ailecek
+    maddi bir s\u0131k\u0131nt\u0131 i\xE7erisinde olabilirler. | Annesi ve babas\u0131
+    aras\u0131nda baz\u0131 \xE7at\u0131\u015Fmalar olabilir. | Annesi ya da babas\u0131yla,
+    bir sebepten s\u0131k\u0131 bir \xE7at\u0131\u015Fma i\xE7erisinde olabilir.}}
+    Yard\u0131m elini uzatabilmen i\xE7in, hi\xE7bir talepte bulunmam\u0131\u015F.
+    Hatta gururlu bir \u015Fekilde sana arkas\u0131n\u0131 d\xF6nm\xFC\u015F. Fakat
+    birka\xE7 hafta i\xE7inde alaca\u011F\u0131n bir haberle harekete ge\xE7men ve
+    ona destek olman gerekecek. "
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

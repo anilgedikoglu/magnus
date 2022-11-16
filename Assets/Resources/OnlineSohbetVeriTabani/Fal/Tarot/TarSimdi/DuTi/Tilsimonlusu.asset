@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimonlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA31673385538
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: eccdae3a7262c3e4ba30a81be85d59a1, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: eccdae3a7262c3e4ba30a81be85d59a1, type: 3}
+  contentPhotoId: tilsimonlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"T\u0131ls\u0131m Onlusu\" kart\u0131n\u0131 se\xE7tin.\n\nDerdi
+    ve tasay\u0131 her saniye daha fazla geride b\u0131rak\u0131yorsun. Ya\u015Fam\u0131nda
+    g\xFCzel bir istikrar yakalad\u0131\u011F\u0131n\u0131 ve bunu hi\xE7bir aksili\u011Fin
+    sarsamad\u0131\u011F\u0131n\u0131 anlat\u0131yor kart\u0131n. Verdi\u011Fin kararlar\u0131n
+    sonu\xE7lar\u0131 olumlu geldik\xE7e, prestij kazan\u0131yorsun. Eskiden belki
+    de kendini bu kadar g\xFCvencede hissetmiyordun {{isim}}. Art\u0131k yar\u0131nlar\u0131na
+    daha emin bir \u015Fekilde bak\u0131yorsun ve gelecekte y\u0131pranmayacak g\xFC\xE7l\xFC
+    temeller at\u0131yorsun. Se\xE7ti\u011Fin bu kart, ailenin stat\xFCs\xFCn\xFCn
+    de seninle birlikte artt\u0131\u011F\u0131n\u0131 i\u015Faret ediyor. Parasal
+    anlamda onlar\u0131 da dolayl\u0131 yoldan sa\u011Flama al\u0131yor ve ya\u015Fanacak
+    daha mutlu g\xFCnleri \u015Fimdiden, ilmek ilmek, bir dantel gibi i\u015Fliyorsun."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi tilsimonlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

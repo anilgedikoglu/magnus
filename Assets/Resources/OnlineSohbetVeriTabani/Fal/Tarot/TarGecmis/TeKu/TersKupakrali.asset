@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKupakrali
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA20591504236
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 066f94dc0f35956478e7c81d15a1a8be, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 066f94dc0f35956478e7c81d15a1a8be, type: 3}
+  contentPhotoId: kupakrali-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Kupa Kral\u0131\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\n\u0130nsanlar\u0131n
+    g\xF6z\xFCnde her zaman daha da iyi bir noktada olmak istemi\u015Fsin. Sayg\u0131
+    g\xF6rmeye \xF6nem vermi\u015F, sevmek ve sevilmekten her \u015Feyden daha fazla
+    mutlu olmu\u015Fsun {{isim}}. Onaylanmak, alk\u0131\u015Flanmak, takdir edilmek
+    hep ho\u015Funa gitse de, bunun tam tersi zamanlar ya\u015Fam\u0131\u015Fs\u0131n.
+    Bekledi\u011Fin ilgiyi g\xF6rememi\u015F, ikinci plana at\u0131lm\u0131\u015F
+    gibi hissetmi\u015Fsin. Fikirlerin ve sergiledi\u011Fin efor, \xF6zellikle de
+    bir erkek taraf\u0131ndan senin hak etti\u011Fin \u015Fekilde kabul g\xF6rmemi\u015F.
+    O moral bozuklu\u011Fu ile performans\u0131n azalm\u0131\u015F, h\u0131z\u0131n
+    kesilmi\u015F ve hayallerinin \xF6n\xFCne kendi kendine ket vurmaya ba\u015Flam\u0131\u015F,
+    bu durumu zar zor a\u015Fm\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kupakrali ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

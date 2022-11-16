@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tbolunmus
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA60964327929
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn bir \u015Feyle u\u011Fra\u015F\u0131rken, akl\u0131n ba\u015Fka bir
+    yerde olabilir. Biriyle konu\u015Furken, bir ba\u015Fkas\u0131n\u0131 d\xFC\u015F\xFCn\xFCyor
+    olabilirsin. Bir yan\u0131n mutluyken di\u011Fer yan\u0131n h\xFCz\xFCnl\xFC,
+    bir yan\u0131n huzurluyken di\u011Fer yan\u0131n kayg\u0131l\u0131 olabilir {{isim}}.
+    {{burc}} bur\xE7lar\u0131 ve {{rastgeleburc}} burcu mensuplar\u0131, bug\xFCn
+    birbirlerini zihinsel anlamda \xE7ok etiliyor olacaklar. Y\xFCksek bir \"duygu
+    de\u011Fi\u015Fimi\" halinde g\xF6r\xFCl\xFCyorlar.  Bir {{burc}} mutluyken di\u011Fer
+    burcun \xFCyesi mutsuzsa, o mutsuzluk telepatik \u015Fekilde {{burc}} burcuna
+    da sirayet edebilir. E\u015Flenik bir g\xFCn ya\u015Fan\u0131yor olacak. O anda
+    hissetmemen gereken bir duygu i\xE7indeysen, bunun di\u011Fer bur\xE7taki e\u015Fleni\u011Finden
+    geldi\u011Fini akl\u0131nda tutmal\u0131s\u0131n {{isim}}. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

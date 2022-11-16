@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 35
+  m_EditorClassIdentifier: 
+  idIndex: 20226105950AA71554106396
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Gelece\u011Fine odakland\u0131\u011F\u0131mda, seni kilitli bir sand\u0131\u011F\u0131n
+    ba\u015F\u0131nda g\xF6r\xFCyorum {{isim}}. B\xFCy\xFCk\xE7e bir sand\u0131k
+    bu. \xC7ok u\u011Fra\u015F\u0131yor ve nihayet a\xE7\u0131yorsun. Sand\u0131k,
+    uzaktaki bir k\u0131smetin aya\u011F\u0131na gelmesi, veraset payla\u015F\u0131m\u0131
+    ve gizli duygular\u0131n a\xE7\u0131\u011Fa \xE7\u0131kmas\u0131 anlamlar\u0131
+    ta\u015F\u0131r. Bu 3 olas\u0131l\u0131\u011F\u0131n her biri, belirli aral\u0131klarla
+    gelecek aylarda senin ya da ailenin ba\u015F\u0131na gelecek. Sana kar\u015F\u0131
+    tamamen \"kapal\u0131 kutu\" birinin seni ne kadar sevdi\u011Fini anlayacaks\u0131n.
+    Ula\u015F\u0131lmas\u0131 zor gelen bir \u015Feye eri\u015Fme f\u0131rsat\u0131n
+    olacak ve seni de olumlu etkileyecek olan bir mal b\xF6l\xFC\u015F\xFCm\xFC ger\xE7ekle\u015Fecek."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: gno
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: gno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Ugurlama1445
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA81470564865
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{kelime, Fal\u0131n\u0131n | Yorumunun | Telvelerinin}} sonuna geldik {{isim}}.
+    {{kelime, Ayr\u0131lmadan | Veda etmeden}} {{kelime, \xF6nce | evvel}} sana mini
+    bir \"sa\u011Fl\u0131k tombalas\u0131\" \xE7ekmek istiyorum. H\u0131zla daha
+    iyi hissedebilmen i\xE7in neler yapabilece\u011Fini yazan, her biri birbirinden
+    farkl\u0131, k\u0131sac\u0131k kartlar\u0131m var. Bakal\u0131m kart\u0131nda
+    senin i\xE7in ne yaz\u0131yor;\n\n\"{{kelime, kitap ya da dergi oku | birine
+    sar\u0131l | y\xFCr\xFCy\xFC\u015Fe \xE7\u0131k | \u0131l\u0131k bir du\u015F
+    al | so\u011Fuk bir du\u015F al | uzun bir du\u015F al | s\u0131cak bir du\u015F
+    al | spor yap | s\u0131cak bir \xE7ay i\xE7 | s\u0131cak bir bitki \xE7ay\u0131
+    i\xE7 | puzzle yap | bisiklete bin | origami yap | yemek yap | araba kullan |
+    g\xFCvendi\u011Fin biriyle konu\u015F | bir akrabanla konu\u015F | en sevdi\u011Fin
+    yere git | en sevdi\u011Fin \u015Feyi i\xE7 | resim yap | yeni bir \u015Feyler
+    \xF6\u011Fren | biraz uyu | foto\u011Fraf \xE7ek | \u015Fark\u0131 s\xF6yle |
+    dans et | m\xFCzik dinle | ko\u015F | hayvan sev | yoga yap | g\xFCl\xFCmse |
+    oyun oyna | \xE7i\xE7ek ek | film seyret | sevdi\u011Fin birini ara}}\" diyor!\n\n\u0130mkan\u0131n
+    varsa yapman\u0131 \xF6neririm. Magnus'dan sevgilerle..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 u\u011Furlama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 u\u011Furlama"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

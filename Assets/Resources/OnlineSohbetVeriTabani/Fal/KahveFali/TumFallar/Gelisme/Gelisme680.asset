@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme680
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA96556373650
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n orta k\u0131sm\u0131nda bulunan \u015Ferit \u015Feklindeki baz\u0131
+    telvelerin \xFCzerinde \"hey kuf mem\" \u015Feklinde hecelenen ve Kabala \xF6\u011Fretisinde
+    yarat\u0131c\u0131n\u0131n s\u0131fatlar\u0131ndan biri olarak kabul edilen \xFC\xE7
+    ayr\u0131 sembol g\xF6r\xFCyorum {{isim}}. <sprite=85> Bu simgeler, seni ya\u011Fmura
+    tutan keder ve \xFCz\xFCnt\xFC bulutlar\u0131n\u0131n da\u011F\u0131laca\u011F\u0131n\u0131n
+    habercisi. Depresif bir halet-i ruhiyeden, ilahi ve evrensel g\xFC\xE7ler taraf\u0131ndan
+    bah\u015Fedilmi\u015F bir mutlulu\u011Fa intikal edece\u011Fini hissediyorum.
+    Bu ge\xE7i\u015Fte, isminde {{kelime, Y veya U | E veya \xDC | A veya \u015E
+    | H veya M}} harfi bulunan bir yak\u0131n\u0131n\u0131n \xE7ok b\xFCy\xFCk katk\u0131s\u0131
+    olacak.\n\nAyr\u0131l\u0131k sonras\u0131 kendini, h\u0131zla gitmekte olan bir
+    arabadan at\u0131lm\u0131\u015F gibi hissetmi\u015Fsin; yal\u0131n ayakla \u0131ss\u0131z
+    bir otoyolda, oldu\u011Fun yere adeta m\u0131hlanm\u0131\u015F gibi kalm\u0131\u015Fs\u0131n.
+    Emin ol ki bu durum \xE7ok yak\u0131n zamanda mutlulu\u011Fa evrilecek {{isim}}.
+    Telvelerinde g\xF6rd\xFC\u011F\xFCm \"\u0131\u015F\u0131\u011F\u0131 s\xF6nm\xFC\u015F
+    fener\" eski sevgilinin {{kelime, senden ba\u015Fkas\u0131yla | hayat\u0131nda
+    sen olmadan}} mutlu olamayaca\u011F\u0131n\u0131 fark edece\u011Fini s\xF6yl\xFCyor.
+    Eski sevgilin, \xF6n\xFCm\xFCzdeki haftalar\u0131n {{kelime, pazartesiye | sal\u0131ya
+    | \xE7ar\u015Fambaya | per\u015Fembeye | cumaya}} denk gelen bir g\xFCn\xFCnde,
+    {{kelime, ak\u015Fam saatlerinde | gece yar\u0131s\u0131na do\u011Fru}} daha
+    fazla dayanamay\u0131p i\xE7indeki sevgiyi ve pi\u015Fmanl\u0131\u011F\u0131
+    sana {{kelime, bir sosyal medya payla\u015F\u0131m\u0131 vas\u0131tas\u0131yla
+    | uzun bir SMS yollayarak | telefonda yapaca\u011F\u0131n\u0131z uzun bir konu\u015Fma
+    ile}} aktaracak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 50
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 50
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

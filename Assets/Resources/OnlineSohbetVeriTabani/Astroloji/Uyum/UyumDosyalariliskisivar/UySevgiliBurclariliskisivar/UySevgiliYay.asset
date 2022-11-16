@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UySevgiliYay
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA04866038362
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"En
+    son s\xF6yleyece\u011Fimi en ba\u015Fta s\xF6ylememi ister misin {{isim}}? Yay
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar | cinsiyet=kad\u0131n, erkekler |
+    cinsiyet=lgbt, ki\u015Filer}} {{burc}} burcu {{data, cinsiyet=erkek, erkeklerin
+    | cinsiyet=kad\u0131n, kad\u0131nlar\u0131n | cinsiyet=lgbt, mensuplar\u0131n\u0131n}}
+    oklar\u0131ndan \xE7\u0131kt\u0131klar\u0131 s\xFCrece, hedefi her zaman 12'den
+    vururlar. Sevgilinle pek \xE7ok a\xE7\u0131dan inan\u0131lmaz uyumlusunuz. Birbirinizi
+    en do\u011Fru yerlerde tamaml\u0131yorsunuz. Fiziken yak\u0131\u015F\u0131yor,
+    ruhsal olarak da b\xFCt\xFCnl\xFCyor olmal\u0131s\u0131n\u0131z. \xC7evrenizdeki
+    insanlar sizin gibi \xE7iftlere \xE7ok \xF6zenir ve nazar de\u011Ferler. Sosyal
+    medya platformlar\u0131nda \xE7ok\xE7a g\xF6z\xFCkmemeli, a\u015Fk\u0131n\u0131z\u0131
+    kem g\xF6zlerden sak\u0131nmal\u0131s\u0131n\u0131z. Yay burcu {{data, cinsiyet=erkek,
+    kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, insanlar\u0131}}
+    \xE7ok d\xFCr\xFCst ve \xE7ok a\xE7\u0131k s\xF6zl\xFCd\xFCr. {{burc}} burcu
+    {{data, cinsiyet=erkek, erke\u011Fi | cinsiyet=kad\u0131n, kad\u0131n\u0131 |
+    cinsiyet=lgbt, insan\u0131}} olarak bunun senin i\xE7in ne kadar \xF6nemli oldu\u011Funu
+    biliyorum. Ona arkan\u0131 rahat\xE7a yaslayabilirsin. D\xFC\u015Fmene asla izin
+    vermeyecek ya da d\xFC\u015Fsen de seni h\u0131zla yerden kald\u0131racakt\u0131r
+    {{isim}}. Siz, \\\"uyum\\\" kelimesinden biraz daha fazlas\u0131s\u0131n\u0131z
+    bana g\xF6re.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: sevgili
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: yay
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

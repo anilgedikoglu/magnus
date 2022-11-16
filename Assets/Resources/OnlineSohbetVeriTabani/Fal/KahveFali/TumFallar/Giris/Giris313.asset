@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris313
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA21323220318
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Dik bir yoku\u015F boyunca, a\u011F\u0131r bir kaya par\xE7as\u0131n\u0131 doruk
+    noktas\u0131na ta\u015F\u0131maya \xE7al\u0131\u015F\u0131rken g\xF6rd\xFCm seni
+    {{isim}}. \U0001F9D7\U0001F3FC\u200DBu g\xF6r\xFCnt\xFC bana Sisifos'u \xE7a\u011Fr\u0131\u015Ft\u0131rd\u0131.
+    Efsaneye g\xF6re, tanr\u0131lar taraf\u0131ndan amans\u0131z bir kadere mahkum
+    edilmi\u015F olan Sisifos'un nice zorluklarla ta\u015F\u0131d\u0131\u011F\u0131
+    kaya, her seferinde tam hedefe ula\u015Fmak \xFCzereyken a\u015Fa\u011F\u0131
+    yuvarlan\u0131r. Seni zaman zaman \xE7\u0131kmazda hissettiren melankolik taraf\u0131n,
+    kariyer ve maddiyat noktas\u0131nda, \u015Fans\u0131n\u0131n ve gayretinin yerle
+    bir oldu\u011Funu hissetmene sebep oluyor. \U0001F914 Bunlar\u0131n yaln\u0131zca
+    i\xE7indeki olumsuzlu\u011Fun vesvesesi oldu\u011Funu bilmen gerek. \xC7\xFCnk\xFC,
+    verimli topraklar\u0131n uzand\u0131\u011F\u0131 platolar belirmi\u015F fincan\u0131n
+    tepesinde. Sisifos'un aksine, basamaklar\u0131 kolayl\u0131kla \xE7\u0131kacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xE7al\u0131\u015Fm\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "i\u015F ar\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xE7al\u0131\u015Fm\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "i\u015F ar\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

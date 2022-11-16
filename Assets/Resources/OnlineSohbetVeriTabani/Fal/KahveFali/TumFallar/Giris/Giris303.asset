@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris303
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA51169145551
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131 \xFC\xE7 bir yandan muhabbet ku\u015Flar\u0131 \xE7evrelemi\u015F
+    {{isim}}. Her biri farkl\u0131 renkte olan bu geveze ku\u015Flar, onlar\u0131
+    birbirinden ay\u0131ran fincan duvarlar\u0131na zihninin yo\u011Fun imgeleminden
+    izler b\u0131rakm\u0131\u015F. \U0001F99C Resmedilen imgeler aras\u0131nda en
+    dikkat \xE7ekici olan\u0131 ise bir \"ying yang\" fig\xFCr\xFC. Akla karan\u0131n
+    durmak bilmeyen bir girdap halinde birbirine ak\u0131\u015Ft\u0131\u011F\u0131
+    bu sembol, ho\u015Fland\u0131\u011F\u0131n {{data, cinsiyet=erkek, k\u0131zla
+    | cinsiyet=kad\u0131n, erkekle | cinsiyet=lgbt, ki\u015Fiyle}} z\u0131tla\u015Ft\u0131\u011F\u0131n\u0131z
+    konular\u0131n g\xFCn ge\xE7tik\xE7e artmas\u0131n\u0131n, sende bu\u011Fulu
+    \u015F\xFCpheler do\u011Furdu\u011Funu anlat\u0131yor. Fakat, siz, ayn\u0131
+    kaynaktan beslenen ve yekpare bir havzaya d\xF6k\xFClen akarsular gibisiniz {{isim}}.
+    Aran\u0131zdaki farkl\u0131l\u0131klara ald\u0131r\u0131\u015F etmeden, onlar\u0131
+    bilhassa kucaklayarak \xE7ok g\xFCzel bir ili\u015Fkinin tohumlar\u0131n\u0131
+    atacaks\u0131n\u0131z."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

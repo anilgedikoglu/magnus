@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53432a60b49d41b41a68c6774a36d311, type: 3}
+  m_Name: WeatherGeoApiVariables
+  m_EditorClassIdentifier: 
+  id: havadurumu id
+  main: havadurumu main
+  temp: havadurumu sicaklik
+  feels_like: havadurumu hissedilen sicaklik
+  temp_min: havadurumu sicaklik min
+  temp_max: havadurumu sicaklik max
+  humidity: havadurumu nem
+  windSpeed: havadurumu ruzgar hizi
+  userCurrentCity: kullanici sehri

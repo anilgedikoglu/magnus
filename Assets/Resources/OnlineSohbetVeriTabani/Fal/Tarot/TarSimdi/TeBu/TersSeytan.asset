@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersSeytan
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA43116606644
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 0a47efa0caf426b4aa9c76b4ed90acfb, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 0a47efa0caf426b4aa9c76b4ed90acfb, type: 3}
+  contentPhotoId: seytan-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"\u015Eeytan\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nNihayet
+    {{isim}}; nihayet! Kart\u0131n, kaderinin art\u0131k seni \xF6zg\xFCr b\u0131rakt\u0131\u011F\u0131n\u0131
+    s\xF6yl\xFCyor. Gereken t\xFCm s\u0131navlar\u0131 vermi\u015Fsin. Seni \xFCzen
+    ve y\u0131pratan esaretten kurtuluyorsun. \xDCzerinde g\xFCnden g\xFCne artan
+    bir ferahlama hissediyor olabilirsin. K\xF6t\xFC olan, mutsuz eden, seni a\u015Fa\u011F\u0131
+    \xE7eken her ne varsa senden kopuyor. A\u011F\u0131rl\u0131klar\u0131n\u0131
+    att\u0131k\xE7a y\xFCkseliyor ve p\u0131r\u0131l p\u0131r\u0131l bir g\xF6\u011Fe
+    ula\u015F\u0131yorsun. Bundan b\xF6yle g\xFCc\xFCn\xFC toplayabilir, kafandaki
+    en u\xE7uk planlar i\xE7in kullanabilirsin. Eksiklikler senin ad\u0131na tamamlan\u0131yor.
+    Topal ve yar\u0131m sevin\xE7ler, m\xFCjdelerle tamamlan\u0131yor. S\u0131n\u0131rlar
+    art\u0131k senin i\xE7in kalkm\u0131\u015F durumda. Hayal edip harekete ge\xE7men
+    yeterli."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi seytan ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

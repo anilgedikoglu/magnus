@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersAsilanadam
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA62121426349
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 9ac53d2da19e1794c8df0ff82bc0ae59, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 9ac53d2da19e1794c8df0ff82bc0ae59, type: 3}
+  contentPhotoId: asilanadam-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"As\u0131lan Adam\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nTersi
+    a\xE7\u0131ld\u0131\u011F\u0131nda y\xFCzde g\xFCl\xFCc\xFCkler a\xE7\u0131lmas\u0131na
+    vesile olan bu kart, bir i\u015Finin \xF6n\xFCndeki b\xFCy\xFCk engelin nihayet
+    kalkaca\u011F\u0131n\u0131 belirtmekte {{isim}}. Engelle \u015Fu anda kar\u015F\u0131
+    kar\u015F\u0131ya m\u0131s\u0131n? K\u0131smen. Bu engel bir m\xFCddet b\xFCy\xFCmeye
+    devam edecek. Seni umutsuzlu\u011Fa d\xFC\u015F\xFCrecek bir noktaya geldi\u011Finde,
+    terslikler yok olacak ve takip edece\u011Fin bir \u0131\u015F\u0131k belirecek.
+    \"Olmad\u0131\u011F\u0131n\u0131\" d\xFC\u015F\xFCnerek rehavete kap\u0131lma.
+    Bir anda \"olabilece\u011Fini\" g\xF6receksin ve h\u0131zla harekete ge\xE7mek
+    durumunda kalacaks\u0131n. E\u011Fer \xF6n\xFCn a\xE7\u0131ld\u0131\u011F\u0131nda
+    vaktini iyi de\u011Ferlendirirsen, bir \u015Feylere ge\xE7 kalmadan, bir \u015Feyleri
+    ka\xE7\u0131rmadan yeti\u015Fecek ve ama\xE7lad\u0131\u011F\u0131n ne ise onu
+    elde edeceksin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asilanadam ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

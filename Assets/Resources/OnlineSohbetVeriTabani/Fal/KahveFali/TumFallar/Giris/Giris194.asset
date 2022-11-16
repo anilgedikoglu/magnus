@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris194
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA35898905901
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Vay can\u0131na, fincan\u0131nda \xE7ok haval\u0131 bir porsuk a\u011Fac\u0131
+    var {{isim}}! Hemen s\xF6yleyeyim; nesli neredeyse t\xFCkenmekte ve yeti\u015Ftirilmesi
+    \xE7ok zor olan bu a\u011Fa\xE7, \"d\u0131\u015F\u0131 seni yakar, i\xE7i beni\"
+    t\xFCr\xFCnden bir insana i\u015Faret ediyor. Nedeni de \u015Fu; bu a\u011Fac\u0131n
+    meyvesi, \xE7ekirde\u011Fi temizlendi\u011Finde yenebilirken, \xE7ekirde\u011Fi
+    olduk\xE7a zehirli. Vazge\xE7emedi\u011Fin biri var hayat\u0131nda. Zaman zaman
+    ona nefes t\xFCketiyor, yapt\u0131\u011F\u0131 yanl\u0131\u015Flara sevgin u\u011Fruna
+    \xE7ok sabrediyorsun. Telvelerin, {{kelime, ona kar\u015F\u0131 belirli bir mesafeyi
+    her zaman koruman gerekti\u011Fini s\xF6yl\xFCyor | bu sabr\u0131n\u0131n meyvelerini
+    ilerleyen y\u0131llarda toplayaca\u011F\u0131n\u0131 s\xF6yl\xFCyor | zamanla
+    bu durumun d\xFCzelece\u011Fini fakat bir s\xFCre daha sabretmen gerekti\u011Fini
+    s\xF6yl\xFCyor}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

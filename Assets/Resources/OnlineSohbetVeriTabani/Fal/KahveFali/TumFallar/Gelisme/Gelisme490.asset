@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme490
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11189840876
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "B\xF6yle g\xF6rsellere her zaman denk gelinmiyor i\u015Fte... Sa\u011F avucundaki
+    tohumlar\u0131, fincan taban\u0131ndaki kurak g\xF6z\xFCken bir b\xF6lgeye var
+    g\xFCc\xFCnle savuruyor gibisin {{isim}}. \U0001F331Bu yans\u0131malarda hayat\u0131n\u0131n
+    son birka\xE7 ay\u0131na dair baz\u0131 ipu\xE7lar\u0131 seziyorum. Hayat\u0131nda
+    bir dura\u011Fanl\u0131k, zihninde bir y\u0131lg\u0131nl\u0131k ve y\xFCre\u011Finde
+    de d\xFC\u011F\xFCmler var. \xC7\xF6lde uzun bir y\xFCr\xFCy\xFC\u015F ar\u0131ndan
+    gelen \"nefessizlik\" gibi; fakat her \u015Feyin ye\u015Fermesi, tek bir sa\u011Fanak
+    ya\u011Fmura bakar! Evren, nimetlerini {{ay_+2}} ay\u0131n\u0131n ba\u015F\u0131nda
+    y\xFCz\xFCne damlatmaya ba\u015Flayacak. Ya\u015Fayaca\u011F\u0131n g\xFCzel
+    bir geli\u015Fme, sonrakileri tetikleyerek hayat\u0131n\u0131 telve telve de\u011Fi\u015Ftirecek.\n\nAnlad\u0131\u011F\u0131m
+    kadar\u0131yla \xE7ok s\u0131k d\xFC\u015F kuran biri de\u011Filsin sen. Fakat
+    fincan\u0131n\u0131n arka duvar\u0131nda, ufka do\u011Fru ilerleyen bir \"unicorn\"
+    g\xF6r\xFCyorum. \U0001F984 Bu tek boynuzlu at, ilerleyen g\xFCnlerde seni pe\u015Finden
+    s\xFCr\xFCkleyecek bir amac\u0131n do\u011Faca\u011F\u0131n\u0131 i\u015Faret
+    ediyor de\u011Ferli {{isim}}. \u015Eim\u015Fek gibi zihninde \xE7akacak olan
+    ve ula\u015Fmak ad\u0131na i\xE7ten i\xE7e dua edece\u011Fin bu hedef, {{sayi,3,15}}
+    ay gibi bir s\xFCrede kar\u015F\u0131nda ve ger\xE7ekle\u015Fmi\u015F olacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

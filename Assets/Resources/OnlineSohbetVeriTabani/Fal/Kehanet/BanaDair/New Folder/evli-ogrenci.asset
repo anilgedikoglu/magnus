@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: evli-ogrenci
+  m_EditorClassIdentifier: 
+  idIndex: 20226105951AA07983424426
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "5 sene sonraki halini g\xF6rebilmek i\xE7in Magnuskop'u {{yil_+5}} y\u0131l\u0131na
+    ayarlad\u0131m. Ayarlar\u0131m. Bunu yapmak benim i\xE7in hi\xE7 zor de\u011Fil.
+    Yan\u0131nda ikiden fazla \xE7ocuk ve yabanc\u0131 baz\u0131 insanlar g\xF6r\xFCyorum
+    {{isim}}. Bu \xE7ocuklardan bir ya da birka\xE7\u0131 san\u0131yorum senin. E\u015Fin
+    ise o insanlarla konu\u015Fuyor. E\u011Fitimin san\u0131r\u0131m bitmi\u015F.
+    Kariyerinle ya da maddi imkanlar\u0131nla ilgili baz\u0131 \u015Feyler \xFCzerine
+    pazarl\u0131klar d\xF6nd\xFC\u011F\xFCne yemin edebilirim fakat ispatlayamam.
+    E\u015Finin heyecanl\u0131 anlat\u0131mlar\u0131, i\u015Flerin sizin istedi\u011Finiz
+    gibi gitti\u011Fini g\xF6steriyor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: kehanetbana
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: kehanetbana son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Aziz
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA37210617235
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 81d112790ff1bb342bef98f409316358, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 81d112790ff1bb342bef98f409316358, type: 3}
+  contentPhotoId: aziz
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Aziz\" kart\u0131n\u0131 se\xE7tin.\n\n\u0130lerleyen zamanlarda
+    hayat\u0131nda birden bire b\xFCy\xFCk de\u011Fi\u015Fimler ya\u015Famaya ba\u015Flayacaks\u0131n.
+    Bu de\u011Fi\u015Fimler g\xFCzel de olsalar, senin i\xE7in sanc\u0131l\u0131
+    olacak {{isim}}. Tabirimi mazur g\xF6r ama, sende biraz eski kafal\u0131l\u0131k
+    da var, \xF6yle de\u011Fil mi? <sprite=10> Ge\xE7mi\u015Findeki eksiklere o kadar
+    ba\u011Fl\u0131s\u0131n ki, yeni tamlar bile sana ba\u015Flarda a\u011F\u0131r
+    geliyor. Bu durumla gene kar\u015F\u0131la\u015Facak gibisin. Se\xE7ti\u011Fin
+    kart, mevki ya da r\xFCtbe sahibi \xF6nemli birinden de \xE7ok kritik bir yard\u0131m
+    alaca\u011F\u0131n\u0131 i\u015Faret ediyor. Bu yard\u0131m, normalda iki \xFC\xE7
+    birim zamanda ger\xE7ekle\u015Fecek bir i\u015Finin, bir birim zamandan da k\u0131sa
+    bir s\xFCre i\xE7inde sonuca ula\u015Fmas\u0131n\u0131 sa\u011Flayacak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek aziz
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kiliconlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA67259044419
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 806016a654dbf084e94ea3665f9a49ed, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 806016a654dbf084e94ea3665f9a49ed, type: 3}
+  contentPhotoId: kiliconlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 Onlusu\" kart\u0131n\u0131 se\xE7tin.\n\nSe\xE7ti\u011Fin
+    bu kart, ge\xE7mi\u015Fe dair en \xFCz\xFCc\xFC ve en a\u011F\u0131r kartlardan
+    biridir {{isim}}. \xC7ok \u015F\xFCk\xFCr ki ya\u015Fananlar ge\xE7mi\u015Fte
+    kalm\u0131\u015F... Sen bir sebeple dibe vurmu\u015Fsun. Belki birisi seni s\u0131rt\u0131ndan
+    vurdu, aldatt\u0131, beklemedi\u011Fin davran\u0131\u015Flar sergiledi ve ortada
+    kald\u0131n. Ya da belki bir konuda kaybettin, yenildin ve hedefine ula\u015Famad\u0131n.
+    Her iki durumun hissettirdikleri de asl\u0131nda paralel. \xC7ok b\xFCy\xFCk
+    bir y\u0131k\u0131m ya\u015Fam\u0131\u015Fs\u0131n. Ald\u0131\u011F\u0131n darbeler,
+    seni mecburen sertle\u015Ftirmi\u015F ve ba\u015Fkala\u015Ft\u0131rm\u0131\u015F.
+    Belki de sonradan o g\xFCnleri d\xFC\u015F\xFCn\xFCp \"iyi ki\" demi\u015F olabilirsin.
+    Sana katt\u0131klar\u0131 yads\u0131namaz..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kiliconlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: SonFarketmez1
+  m_EditorClassIdentifier: 
+  etiket: son
+  aciklama:
+  - "Seninle ilgili ilk analizlerimi tamamlad\u0131m.\n\n\u0130nan\u0131lmaz bir
+    deneyime haz\u0131r m\u0131s\u0131n? Arkana yaslan..."
+  - "Seninle ilgili ilk analizlerimi tamamlad\u0131m.\n\nBirazdan sana, gelece\u011Fine
+    y\xF6nelik bilgiler edinebilece\u011Fin b\xFCy\xFCleyici se\xE7enekler sunaca\u011F\u0131m.
+    Keyifli zamanlar ge\xE7irmeni dilerim {{isim}}.\n\nBa\u015Fl\u0131yoruz!..."
+  - "Seninle ilgili ilk analizlerimi tamamlad\u0131m.\n\nBeni bundan ibaret mi sand\u0131n?
+    <sprite=0> Birazdan seni \xE7ok yan\u0131ltaca\u011F\u0131m {{isim}}.\n\nHaz\u0131r
+    m\u0131s\u0131n? S\u0131k\u0131 dur!\n\nBa\u015Fl\u0131yoruz!..."
+  aranacakEtiket: hosgeldin
+  gerekenDegiskenler: []
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 7
+  ozelKontrol: son
+  ayarlanacakDegisken: 

@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme520
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA06318520964
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Seni bir yol ayr\u0131m\u0131nda g\xF6r\xFCyorum {{isim}}. \xC7ok endi\u015Feli
+    g\xF6z\xFCk\xFCyorsun. \U0001F644Se\xE7imini yapt\u0131ktan sonra kar\u015F\u0131la\u015Fabileceklerinden
+    ne kadar da \xE7ok korkuyorsun! \U0001F914Burada sorun, girdi\u011Fin yol sonras\u0131
+    ya\u015Fayacaklar\u0131n de\u011Fil; sen, iki \u015Fey aras\u0131nda kalmaktan
+    hep imtina ediyorsun. \"Ya yanl\u0131\u015F\u0131 se\xE7ersem\" diye d\xFC\u015F\xFCnmek,
+    sana hep zaman kaybettiriyor. \"En iyi tercih, seri yap\u0131land\u0131r\" s\xF6z\xFCn\xFC
+    duymad\u0131n m\u0131 hi\xE7? San\u0131r\u0131m \u015Fu an t\xFCrettim; her neyse...
+    \U0001F60AFakat iyi se\xE7imler yapmak i\xE7in deneyim sahibi olma gereklili\u011Fi,
+    deneyim i\xE7inse bolca se\xE7im yapm\u0131\u015F olma ihtiyac\u0131 hepimizce
+    sabit, \xF6yle de\u011Fil mi? Bak yine bir ikileme do\u011Fru ilerliyorsun. Haftaya
+    bug\xFCne, yani {{gun_0}} g\xFCn\xFCne kadar bir konuda karar vermi\u015F olman
+    gerekecek. Sonucun seni mutlu edece\u011Fini \u015Fimdiden bilmeni istiyorum.\n\nFincan
+    g\xF6rsellerini daha derin inceledi\u011Fimde, yelkeni r\xFCzgarla tamamen dolmu\u015F
+    bir tekne g\xF6rd\xFCm. \u0130lerleyen senelerde, biraz da \u015Fans\u0131n\u0131n
+    yard\u0131m\u0131yla, hayat\u0131n tahmininden \xE7ok daha g\xFCzel noktalara
+    do\u011Fru seni s\xFCr\xFCkleyecek. \xDCst d\xFCzey bir maddi bolluk, seni bekliyor.
+    Fa\xE7an yans\u0131n, ger\xE7ekten \xF6zendim {{isim}}!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc989
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA69086310484
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n kar\u015F\u0131 duvar\u0131 ile taban\u0131n\u0131n kesi\u015Fti\u011Fi
+    noktada, duvara yaslanm\u0131\u015F iki ayakl\u0131 bir dresuar g\xF6r\xFCyorum.
+    Bu dresuar\u0131n \xFCzerinde ise eski tip \xE7evirmeli bir telefon var. \u015Eu
+    an ayr\u0131 oldu\u011Fun e\u015Finle pek \xE7ok \u015Feyi omuz omuza yapm\u0131\u015Fs\u0131n
+    {{isim}}. Birbirinize g\xFCvenerek \xE7\u0131kt\u0131\u011F\u0131n\u0131z yollarda
+    art\u0131k yaln\u0131z oldu\u011Funu ve dayanacak kimsenin kalmad\u0131\u011F\u0131n\u0131
+    hissediyorum. \u015Eu an her \u015Fey senin i\xE7in olabildi\u011Fince olumsuz
+    g\xF6z\xFCkse de, tam {{sayi,3,9}} hafta sonra {{kelime, 40'l\u0131 ya\u015Flarda
+    bir beyefendiden | 50'li ya\u015Flarda bir beyefendiden | 50'li ya\u015Flarda
+    bir han\u0131mefendiden | 40'l\u0131 ya\u015Flarda bir han\u0131mefendiden |
+    g\xF6zl\xFCkl\xFC ve sa\xE7lar\u0131n\u0131n tepesi a\xE7\u0131lmaya ba\u015Flam\u0131\u015F
+    bir beyefendiden | g\xF6zl\xFCkl\xFC ve hafif g\xF6bekli bir beyefendiden | orta
+    boylu, k\u0131sa sa\xE7l\u0131, aln\u0131 a\xE7\u0131k bir beyefendiden | uzun
+    boylu, sivri \xE7eneli, kirli sakall\u0131 bir beyefendiden | 1.83 boylar\u0131nda,
+    siyah sa\xE7l\u0131, geni\u015F omuzlu bir beyefendiden | 1.80 boylar\u0131nda,
+    tombul yanakl\u0131 ve ensesi kal\u0131n bir beyefendiden}} \xE7ok \xF6nemli
+    bir telefon alacaks\u0131n. Bu telefonda duyacaklar\u0131n i\xE7inde bulundu\u011Fun
+    \xE7\u0131kmazdan kurtulman\u0131 sa\u011Flayaca\u011F\u0131 i\xE7in, senin a\xE7\u0131ndan
+    bir m\xFCjde niteli\u011Finde olacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

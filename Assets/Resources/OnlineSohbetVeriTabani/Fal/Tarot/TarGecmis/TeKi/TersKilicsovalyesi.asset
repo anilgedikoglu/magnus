@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicsovalyesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA39466655005
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a2ed13ca13c874e4a9d6fe99110b033f, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a2ed13ca13c874e4a9d6fe99110b033f, type: 3}
+  contentPhotoId: kilicsovalyesi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 \u015E\xF6valyesi\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nKiraz a\u011Fac\u0131 gibi bir a\u011Fa\xE7 d\xFC\u015F\xFCn,
+    belki biraz daha y\xFCksek\xE7e. Dallar\u0131ndan a\u015Fa\u011F\u0131 kiraz
+    gibi sarkan alt\u0131nlar oldu\u011Funu hayal et. Bu a\u011Fac\u0131n yan\u0131nda
+    olsan ve a\u011Fa\xE7 senin boyunu biraz a\u015F\u0131yor olsa ne yapard\u0131n?
+    Ya bir gayretle z\u0131playa z\u0131playa onlar\u0131 toplar, ya da bir merdiven
+    getirip oraya dayar, a\u011Faca \xE7\u0131kard\u0131n, \xF6yle de\u011Fil mi?
+    Bir sopa vas\u0131tas\u0131yla vurup d\xFC\u015F\xFCrmek de bir se\xE7enek; fakat
+    hepsi \xE7al\u0131\u015Fma ve efor gerektiriyor. Sen ge\xE7mi\u015Fte buna benzer
+    f\u0131rsatlar yakalam\u0131\u015F fakat o alt\u0131nlar\u0131 toplamaya \xFC\u015Fenmi\u015Fsin
+    {{isim}}. Tembellik etti\u011Fin, kendine inanmad\u0131\u011F\u0131n ya da birilerinin
+    sana negatif telkinlerde bulundu\u011Fu \xE7ok a\xE7\u0131k. Hepsi senin olabilirdi..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kilicsovalyesi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

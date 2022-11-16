@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicdokuzlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA71916744421
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 9ec5fc5d9b0fb9f43aed38419148c4bd, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 9ec5fc5d9b0fb9f43aed38419148c4bd, type: 3}
+  contentPhotoId: kilicdokuzlusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 Dokuzlusu\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nHer an k\xF6t\xFC bir haber alabilece\u011Fini ve elindeki
+    her \u015Feyin bir anda avu\xE7lar\u0131ndan kay\u0131p gidece\u011Fini d\xFC\u015F\xFCnerek
+    ya\u015Fam\u0131\u015Fs\u0131n {{isim}}. Bu negatif bak\u0131\u015F a\xE7\u0131s\u0131
+    ve paranoya, verimli d\xFC\u015F\xFCnmeni ve do\u011Fru kararlar alman\u0131
+    engellemi\u015F. Birilerinin \xE7\u0131k\u0131p \"Yan\u0131nday\u0131m, merak
+    etme. Her \u015Fey daha g\xFCzel olacak!\" demesine ihtiya\xE7 duymu\u015Fsun.
+    \u0130\xE7inde bulundu\u011Fun o k\xF6t\xFCmser halin fark\u0131nda oldu\u011Funu
+    ve kendini \xE7ekip \xE7\u0131karmak i\xE7in \xE7ok m\xFCcadele etti\u011Fini
+    de g\xF6r\xFCyorum. Kart\u0131n, en sonunda seni daha iyi, daha g\xFC\xE7l\xFC
+    hissettirecek ve inanc\u0131n\u0131 tazeleyecek \u0131\u015F\u0131\u011Fa kavu\u015Ftu\u011Funu
+    i\u015Faret ediyor. Kendine daha g\xFCzel g\xFCnlerin gelmekte oldu\u011Funu
+    kan\u0131tlam\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kilicdokuzlusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

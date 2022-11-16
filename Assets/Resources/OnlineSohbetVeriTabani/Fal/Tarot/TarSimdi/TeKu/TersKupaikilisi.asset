@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKupaikilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA82705795698
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 60e441ad2ca62b74b9fbebf2e4e70c19, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 60e441ad2ca62b74b9fbebf2e4e70c19, type: 3}
+  contentPhotoId: kupaikilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kupa \u0130kilisi\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\n\u015Eu
+    s\u0131ralar ortakl\u0131klar hi\xE7 sana g\xF6re de\u011Fil {{isim}}. Sen daha
+    \xF6nce beraber i\u015Fler yapt\u0131\u011F\u0131n ya da ortak hayaller kurdu\u011Fun
+    insanlar\u0131 bile bug\xFCnlerde ge\xE7mek istiyorsun. Kimseye aff\u0131n kalmam\u0131\u015F.
+    \u0130nsanlar, senin onlara g\xF6sterdi\u011Fin iyi niyeti kullanarak yol katediyorlar.
+    Senin stratejilerini ve senin fikirlerini kullan\u0131yorlar. Seninse bundan
+    sa\u011Flad\u0131\u011F\u0131n hi\xE7bir yarar olmuyor. Bunu art\u0131k a\xE7\u0131k
+    \u015Fekilde g\xF6r\xFCyor ve onlar\u0131 reddediyorsun. Art\u0131k ortakl\u0131k
+    kurmak ya da onlarla bir orta yol bulmak asla planlar\u0131n aras\u0131nda de\u011Fil.
+    Tek tabanca, yaln\u0131z y\xFCr\xFCmeye kararl\u0131s\u0131n. Zirveye kendinle
+    birlikte kimseyi ta\u015F\u0131mak istemiyorsun."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kupaikilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

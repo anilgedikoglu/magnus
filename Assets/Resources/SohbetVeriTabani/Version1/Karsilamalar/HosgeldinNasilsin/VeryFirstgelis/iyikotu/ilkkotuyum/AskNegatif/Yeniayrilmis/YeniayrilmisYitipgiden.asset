@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: YeniayrilmisYitipgiden
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA07041495318
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Evet, konu \"ya\u015Fanmas\u0131 muhtemelken ya\u015Fanamayaca\u011F\u0131 anla\u015F\u0131lan
+    hayaller\" oldu\u011Funda, ve konu kaybolup giden zaman, emek, sevgi, hatta para
+    oldu\u011Funda, insan \xFCz\xFCl\xFCyor. Fakat evren genellikle ona verdi\u011Fini
+    misliyle geri veren bir yap\u0131da. D\xFCnya dahi yuvarlak; bir ucundan d\xFCmd\xFCz
+    yola \xE7\u0131k, geri gelece\u011Fin nokta yine ayn\u0131. E her geceden sonra
+    yine, yeniden sabah oluyor. Sonraki sabah\u0131 bir ak\u015Fam takip ediyor,
+    ve sonra yine sabah... Batan bir g\xFCne\u015Fin ard\u0131ndan do\u011Facak olan
+    yine sonsuz say\u0131da g\xFCne\u015F var. S\xF6ylemesi kolay oldu\u011Fu i\xE7in
+    s\xF6ylemiyorum {{isim}} ama \xFCz\xFClme. \xDCz\xFClme, \xE7\xFCnk\xFC s\u0131rada
+    ne oldu\u011Funu hi\xE7 birimiz bilmiyoruz. Bildi\u011Fim bir \u015Fey var benim;
+    daha mutlu g\xFCnler seni bekliyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler: []
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

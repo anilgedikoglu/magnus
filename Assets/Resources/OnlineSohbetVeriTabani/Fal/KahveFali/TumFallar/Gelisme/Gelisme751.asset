@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme751
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA94732422605
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n merkezindeki esmer telvelerin aras\u0131nda kalan ayd\u0131nl\u0131k
+    k\u0131s\u0131mlar, {{kelime, 2'ye | 3'e}} ayr\u0131lan uzun yollar olu\u015Fturmu\u015F.
+    Bu yollardan geni\u015F g\xF6z\xFCkeninin sonunda bir \"kafatas\u0131\" sembol\xFC
+    var. {{sayi,2,6}} hafta i\xE7inde hayat\u0131na dair \xF6nemli bir konuda farkl\u0131
+    se\xE7enekler aras\u0131nda kalacaks\u0131n {{isim}}. Bu se\xE7eneklerden biri
+    seni \xE7ok cezbedecek. Ancak g\xFCzel ya da avantajl\u0131 buldu\u011Funu de\u011Fil,
+    senin i\xE7in hay\u0131rl\u0131 olan\u0131 se\xE7melisin. Kalbin ve beynin aras\u0131nda
+    kal\u0131rsan ve mant\u0131kl\u0131 davranmay\u0131 ba\u015Farabilirsen, se\xE7imin
+    sana uzun vadede \xE7ok b\xFCy\xFCk mutluluk getirecek. Aksi halde kalp k\u0131r\u0131kl\u0131\u011F\u0131
+    ve h\xFCsran ya\u015Fayabilirsin.\n\nFal\u0131nda {{kelime, \u015Fi\u015Fmanca
+    | zay\u0131f\xE7a}} bir de {{data, cinsiyet=erkek, adam | cinsiyet=kad\u0131n,
+    kad\u0131n | cinsiyet=lgbt, insan}} g\xF6r\xFCyorum; sanki {{kelime, 20'li ya\u015Flar\u0131nda
+    | 40'l\u0131 ya\u015Flar\u0131nda | 30'lu ya\u015Flar\u0131nda | 50'li ya\u015Flar\u0131nda}},
+    tam se\xE7emiyorum. Bu {{data, cinsiyet=erkek, adam | cinsiyet=kad\u0131n, kad\u0131n
+    | cinsiyet=lgbt, ki\u015Fi}} ho\u015Fland\u0131\u011F\u0131n {{data, cinsiyet=erkek,
+    han\u0131mefendiyi | cinsiyet=kad\u0131n, erke\u011Fi | cinsiyet=lgbt, insan\u0131}}
+    \xE7ok yanl\u0131\u015F y\xF6nlendiriyor. Bu ki\u015Finin fikirlerinin etkisi
+    alt\u0131nda kald\u0131\u011F\u0131 i\xE7in, \xF6zel hayat\u0131n\u0131 bile
+    o ki\u015Fiye dan\u0131\u015Fmadan pek kurgulayam\u0131yor. {{ay_2}} ay\u0131nda
+    bir istisna ya\u015Fanacak {{isim}}. Yaln\u0131z ve kendi hisleriyle ba\u015Fba\u015Fa
+    kalacak. {{ay_2}} ay\u0131n\u0131n ilk haftas\u0131 i\xE7inde onunla konu\u015Fman\u0131
+    ve f\u0131rsat bulmu\u015Fken duygular\u0131n\u0131 tamamen a\xE7\u0131k etmeni
+    tavsiye ediyorum. Alaca\u011F\u0131n olumlu tepkiye \xE7ok \u015Fa\u015F\u0131rabilirsin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

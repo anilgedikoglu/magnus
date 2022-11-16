@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyEsBogaEvli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA04534948284
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Neredeyse
+    hi\xE7bir konuda tavizi olmayan bir bo\u011Fa burcu {{data, cinsiyet=erkek, kad\u0131n\u0131yla
+    | cinsiyet=kad\u0131n, erke\u011Fiyle}} evli olmak, her yi\u011Fidin harc\u0131
+    de\u011Fildir. Sen ise ak\u0131ll\u0131 bir {{burc}} burcu olarak, belki de tek
+    istisnas\u0131n {{isim}}. \u0130nsanlar\u0131 y\xF6netebilen, y\xF6nlendirebilen
+    bir yap\u0131n var. \xD6zellikle de bo\u011Fa bur\xE7lar\u0131 \xFCzerindeki
+    ikna kabiliyetin olduk\xE7a y\xFCksek. E\u015Fin seni dinlemiyormu\u015F gibi
+    g\xF6z\xFCkt\xFC\u011F\xFC zamanlarda dahi, alttan alta senin nabz\u0131n\u0131
+    \xF6l\xE7\xFCp, tercihlerini dikkate al\u0131yor. Sana g\xFCveniyor, isabetli
+    kararlar alaca\u011F\u0131n\u0131 biliyor ve seni ger\xE7ek anlamda sorgulam\u0131yor.
+    Yarg\u0131l\u0131yormu\u015F gibi g\xF6z\xFCkt\xFC\u011F\xFC zamanlar\u0131 dikkate
+    almamal\u0131, onun ihtiyatl\u0131 yan\u0131na vermeli, ho\u015Fg\xF6rmelisin.
+    Her ikiniz de do\u011Fay\u0131, m\xFCzi\u011Fi ve yeme i\xE7meyi seven insanlars\u0131n\u0131z.
+    Bu y\xF6n\xFCn\xFCz de yine sizi birbiriniz i\xE7in bi\xE7ilmi\u015F kaftan yap\u0131yor
+    {{isim}}. Siz asl\u0131nda hem iyi birer e\u015F, hem de iyi birer arkada\u015Fs\u0131n\u0131z.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "e\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "bo\u011Fa"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

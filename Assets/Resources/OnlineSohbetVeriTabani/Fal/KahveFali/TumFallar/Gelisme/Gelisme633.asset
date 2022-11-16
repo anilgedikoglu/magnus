@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme633
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA68566321152
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xC7i\u011F bir bal\u0131k g\xF6r\xFCyorum fincan\u0131n\u0131n {{kelime, sa\u011F
+    alt | sol alt | orta alt | sa\u011F \xFCst | sol \xFCst}} b\xF6lgesinde. \U0001F41F
+    Adeta koku\u015Fmaya ba\u015Flam\u0131\u015F gibi duruyor... \U0001F443Baz\u0131
+    insanlar\u0131n s\xF6ylemlerinden, tav\u0131rlar\u0131ndan, \xE7\u0131karc\u0131l\u0131klar\u0131ndan,
+    k\u0131skan\xE7l\u0131klar\u0131ndan hatta k\xFCsk\xFCnl\xFCklerinden dahi b\u0131km\u0131\u015F
+    gibisin. Bir bayatl\u0131k, bir baya\u011F\u0131l\u0131k seziyor, kendini onlardan
+    olabildi\u011Fince uza\u011Fa atmaya \xE7al\u0131\u015F\u0131yorsun.\n\nGitti\u011Fin
+    istikamette ise limon a\u011Fa\xE7lar\u0131 var {{isim}}. Asitli olmas\u0131na
+    ra\u011Fmen v\xFCcutta alkali gibi fayda sa\u011Flayan ve \u015Fifa kayna\u011F\u0131
+    olan limon, kendisini yeti\u015Ftirmi\u015F, \xE7ok daha d\xFCr\xFCst ve kaliteli
+    insanlarla tan\u0131\u015Faca\u011F\u0131n\u0131 ve \xE7evreni {{yil_2}} y\u0131l\u0131na
+    kadar tamamen yenileyece\u011Fini i\u015Faret ediyor.\n\nAd\u0131nda {{harf}}
+    ya da {{harf}} harfi olan, uzun s\xFCredir y\xFCz y\xFCze g\xF6r\xFC\u015Fmedi\u011Finiz
+    bir akrabandan, ilerleyen g\xFCnlerde bir telefon alacaks\u0131n {{isim}}. Sana
+    bir konuda \xE7ok \u0131srarc\u0131 olacak. Bu konu al\u0131n\u0131p sat\u0131lacak
+    bir \u015Feyle ya da gidilip gelinecek bir yerle ilgili de\u011Fil. Fakat s\xF6yledi\u011Fi
+    \u015Feyi kabul eder ve s\xF6yledi\u011Fi gibi yaparsan, eline {{sayi,2,9}} ay
+    i\xE7inde \xE7ok b\xFCy\xFCk bir para ge\xE7ecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

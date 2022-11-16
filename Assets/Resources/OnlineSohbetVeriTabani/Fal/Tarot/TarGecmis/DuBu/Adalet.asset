@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Adalet
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA89967058172
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: f3def41e63d7b3e4a9d830a281abc196, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: f3def41e63d7b3e4a9d830a281abc196, type: 3}
+  contentPhotoId: adalet
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in a\xE7\u0131lan kart\u0131n \"Adalet\" {{isim}}.\n\nBu
+    kart, ge\xE7mi\u015Fte baz\u0131 \xF6nemli kararlar ald\u0131\u011F\u0131n\u0131
+    i\u015Faret ediyor. Bu kararlar\u0131 olduk\xE7a bilin\xE7li bir \u015Fekilde
+    alm\u0131\u015F ve karar ald\u0131\u011F\u0131n konular\u0131n gelecekte seni
+    daha iyi g\xFCnlere ta\u015F\u0131mas\u0131n\u0131 \xFCmit etmi\u015Fsin. Her
+    ald\u0131\u011F\u0131n karar ise \xE7ok isteyerek al\u0131nmam\u0131\u015F. Baz\u0131lar\u0131
+    senin i\xE7in zorunlulukmu\u015F. Yine de yapt\u0131\u011F\u0131n ya da yapmak
+    zorunda kald\u0131\u011F\u0131n her \u015Fey, gelecekteki mutluluklar\u0131n\u0131n
+    tohumlar\u0131n\u0131 ekmi\u015F. Her \u015Feye ra\u011Fmen kendi i\xE7 dengelerini
+    \xE7ok iyi sa\u011Flam\u0131\u015Fs\u0131n. Hak edene hak etti\u011Fi de\u011Feri,
+    hak etmeyene gereken cezay\u0131 vermi\u015Fsin. \xD6zetle \u015Funu s\xF6ylemek
+    m\xFCmk\xFCn {{isim}}; adil olmayan bir oyunda, adil olmayan insanlara kar\u015F\u0131
+    olduk\xE7a adil bir efor sergilemi\u015F ve kendi kurallar\u0131n\u0131 kendin
+    belirleyerek gerekli galibiyetleri elde etmi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis adalet
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

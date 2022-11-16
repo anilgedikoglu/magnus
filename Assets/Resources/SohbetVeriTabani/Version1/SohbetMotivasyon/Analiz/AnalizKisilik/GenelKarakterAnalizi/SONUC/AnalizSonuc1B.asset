@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: AnalizSonuc1B
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA70868305139
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "<color=green><b>KARAKTER ANAL\u0130Z\u0130N</b></color> \u015Fu \u015Fekilde
+    {{isim}};\n\n{{data, smanalizrenk=siyah, Son zamanlarda dikkat \xE7ekmeyi pek
+    sevmiyor, s\xF6zlerin de\u011Fil ba\u015Far\u0131lar\u0131n konu\u015Fulsun istiyorsun.
+    | smanalizrenk=beyaz, Son d\xF6nemde i\xE7inde hi\xE7bir kin ve nefret bar\u0131ns\u0131n
+    istemiyor, hem d\u0131\u015F d\xFCnya ile hem de kendinle bar\u0131\u015F\u0131k
+    ya\u015F\u0131yorsun. | smanalizrenk=k\u0131rm\u0131z\u0131, Son g\xFCnlerde
+    seni k\u0131zd\u0131ran ve h\u0131rsland\u0131ran baz\u0131 \u015Feyler var.
+    \xD6n\xFCne \xE7\u0131kan her problemi h\u0131zla halletmek i\xE7in adeta ant
+    i\xE7mi\u015F gibisin. | smanalizrenk=mor, Son zamanlarda s\u0131radanl\u0131\u011F\u0131
+    sevmiyor, \xE7evreni \xE7ok\xE7a ele\u015Ftiriyorsun.  | smanalizrenk=ye\u015Fil,
+    Kapal\u0131 alanlarda de\u011Fil de do\u011Fa ile i\xE7 i\xE7e olmay\u0131 arzulayan
+    bir ruh hali i\xE7indesin. Tabiat, yenilemek ve ar\u0131nd\u0131rmak i\xE7in
+    adeta seni \xE7a\u011F\u0131r\u0131yor.}} {{data, smanalizpi\u015Fmanl\u0131k=evet,
+    Daha iyi bir \"sen\" yaratman\u0131n aray\u0131\u015F\u0131 i\xE7erisindesin
+    | smanalizpi\u015Fmanl\u0131k=hay\u0131r, Kararlar\u0131ndan memnunsun ve do\u011Fru
+    yolda oldu\u011Funa inan\u0131yorsun. Ektiklerinin meyvelerini toplamak i\xE7in
+    sab\u0131rs\u0131zland\u0131\u011F\u0131n\u0131 hissediyorum}} {{isim}}.\n\n{{data,
+    smanalizgelinen=evet, Kanaat ve \u015F\xFCk\xFCr, yeni daha g\xFC\xE7l\xFC ve
+    daha \xF6zel k\u0131l\u0131yor. \xC7ok daha fazlas\u0131na eri\u015Febilmek i\xE7in
+    de ruhunda adeta zemin haz\u0131rl\u0131yor. | smanalizgelinen=hay\u0131r, Kendini
+    g\xFCncelleyebilmek ad\u0131na elde etti\u011Fini hi\xE7bir f\u0131rsat\u0131
+    ka\xE7\u0131rm\u0131yorsun. Rakiplerinin \xF6n\xFCne ge\xE7meyi ne kadar istedi\u011Fini
+    g\xF6rebiliyorum.}}||{{data, smanaliz\xFCmit=evet, Potansiyelinin ve zekan\u0131n
+    fark\u0131ndas\u0131n. Bunun \u015Fansla birle\u015Fmesini ve ortaya art\u0131k
+    hak etti\u011Fin zaferlerin \xE7\u0131kmas\u0131n\u0131 arzuluyorsun. | smanaliz\xFCmit=hay\u0131r,
+    Ayn\u0131 \u015Feyler i\xE7in s\xFCrekli \xE7abal\u0131yor ve tam netice alam\u0131yor
+    olmak seni yormu\u015F. Farkl\u0131 bir ki\u015Fi haline gelmeden farkl\u0131
+    sonu\xE7lar elde etmek istiyor, bunun da m\xFCmk\xFCn olamayaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnerek yan\u0131l\u0131yorsun.}} {{data, smanalizde\u011Fer=evet,
+    Son zamanlarda insanlar taraf\u0131ndan hayal k\u0131r\u0131kl\u0131\u011F\u0131na
+    u\u011Frad\u0131\u011F\u0131n\u0131 ve onlara olan sevgini sorgulad\u0131\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorum. | smanalizde\u011Fer=hay\u0131r, Sevdiklerine gerekti\u011Fi
+    kadar sevgi ve sayg\u0131 g\xF6steriyor, kimseyi kendi \xF6z de\u011Ferinin \xFCzerine
+    \xE7\u0131kartmayarak, belki de en g\xFCzelini yap\u0131yorsun.}}||{{data, smanalizanlam=keyif,
+    Hayat senin i\xE7in bir oyun alan\u0131. Onu \xE7\xF6zm\xFC\u015Fs\xFCn, kurallar\u0131na
+    g\xF6re oynuyorsun ve genellikle kazanan olmaktan da memnunsun. | smanalizanlam=umut,
+    Hayattan beklentilerin \xE7ok fazla; \xF6yle ki, ger\xE7ekten varmak istedi\u011Fin
+    noktan\u0131n \xE7\u0131tas\u0131n\u0131 belki de g\xF6klerde bir yere yerle\u015Ftirdin,
+    kendin dahi g\xF6remiyorsun. Senin i\xE7in \xF6nemli olan, o noktaya olan yolculuk.
+    O'na eri\u015Fmek de\u011Fil. | smanalizanlam=korku, Hayat seni bir\xE7ok kez
+    a\u011F\u0131r \u015Fekilde s\u0131nad\u0131. Ondan alacakl\u0131 oldu\u011Funu
+    biliyorsun. O'na kar\u015F\u0131 s\xFCrekli ay\u0131k ve tetikte kalman gerekti\u011Fini
+    de biliyorsun.}}\n\n{{data, smanalizsa\u011Fl\u0131k=evet, Al\u0131\u015Fkanl\u0131klar\u0131n\u0131
+    kontrol edebiliyor, iyi bir psikolojinin sa\u011Fl\u0131kl\u0131 bir bedenin
+    alt\u0131nda muhafaza edilebildi\u011Fini d\xFC\u015F\xFCn\xFCyorsun. | smanalizsa\u011Fl\u0131k=hay\u0131r,
+    Sa\u011Fl\u0131\u011F\u0131n, \xE7ekti\u011Fin manevi s\u0131k\u0131nt\u0131lar\u0131n
+    yan\u0131nda senin i\xE7in \xF6nemsiz gibi geliyor. Bir \u015Feyler iyiye gitmeden,
+    sa\u011Fl\u0131\u011F\u0131n\u0131n da daha iyi olmayaca\u011F\u0131 fikrindesin.}}
+    {{data, smanalizduygu=evet, \xC7evrende sorunlar\u0131n\u0131 payla\u015Fabilece\u011Fini
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCn, seni seven ve koruyup kollayan insanlar var.
+    Onlar\u0131n varl\u0131\u011F\u0131 seni huzurlu ve emniyette k\u0131l\u0131yor.
+    | smanalizduygu=hay\u0131r, Kimi zaman \xE7ekti\u011Fin s\u0131k\u0131nt\u0131lara
+    en yak\u0131nlar\u0131n\u0131n dahi ellerinin yetmeyece\u011Fini d\xFC\u015F\xFCn\xFCyor,
+    madden kimseden medet ummuyorsun.}}\n\n{{data, smanalizkay\u0131p=evet, Sahip
+    oldu\u011Fun her \u015Feyin bedelini fazlas\u0131yla \xF6dedin ve senin i\xE7in
+    k\u0131ymetliler. Anlamlar\u0131, onlar\u0131 vazge\xE7ilmez k\u0131l\u0131yor.
+    | smanalizkay\u0131p=hay\u0131r, Giden her \u015Feyin bu sistemde geri gelebilece\u011Fini
+    ya da yenisi ile yer de\u011Fi\u015Ftirebilece\u011Fini biliyorsun. Kayb\u0131n
+    hicran\u0131na de\u011Fil hayr\u0131n varl\u0131\u011F\u0131na inan\u0131yorsun.}}
+    {{data, smanaliz\xF6ncelik=a\u015Fk, Matriks benzeri bu alemde, aslolan\u0131n
+    her zaman maneviyat ve sevgi oldu\u011Fu bilincini ta\u015F\u0131yorsun. | smanaliz\xF6ncelik=para,
+    Hi\xE7bir zaman vazge\xE7medi\u011Fin rasyonel bir yan\u0131n var. Para olmadan
+    di\u011Fer hi\xE7bir \u015Feyin b\xFCt\xFCnl\xFCk arzetmedi\u011Fi inanc\u0131ndas\u0131n.
+    Paran\u0131n, saadetin ve a\u015Fk\u0131n dahi m\u0131knat\u0131s\u0131 oldu\u011Funu
+    hissediyorsun. | smanaliz\xF6ncelik=sa\u011Fl\u0131k, Sa\u011Fl\u0131k sorunlar\u0131yla
+    s\u0131nanman\u0131n en zor \u015Fey oldu\u011Funu d\xFC\u015F\xFCn\xFCyor, huzur
+    ve sa\u011Fl\u0131\u011F\u0131 her \u015Feyin \xF6n\xFCnde tutarak ald\u0131\u011F\u0131n
+    nefesin dahi k\u0131ymetini biliyorsun.}}"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "analizsonu\xE71"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

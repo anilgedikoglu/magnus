@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme723
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA57858182426
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n yanal kesimlerini inceledi\u011Fimde, saat y\xF6n\xFCn\xFCn tersine
+    do\u011Fru d\xF6nmekte olan kabarc\u0131klar g\xF6r\xFCyorum. Aralar\u0131ndan
+    yaln\u0131zca bir tanesi saat y\xF6n\xFCnde d\xF6n\xFCyor gibi g\xF6r\xFCnd\xFC\u011F\xFCne
+    g\xF6re, bu kabarc\u0131klar gezegenleri temsil ediyor. Telvelerinin belirtti\u011Fi
+    kadar\u0131yla, sekiz gezegen aras\u0131nda saat y\xF6n\xFCnde d\xF6nen tek gezegen
+    Ven\xFCs, hem kariyer hem de a\u015Fk hayat\u0131nda \u015Fans\u0131n\u0131n
+    adeta geri d\xF6nece\u011Finin habercisi. Bu gezegen bir bak\u0131ma \"zevki
+    sefan\u0131n\" merkezi olmas\u0131yla, seni sevindirecek haberlerle dolu \"gelece\u011Fini\"
+    de simgeliyor {{isim}}.\n\nBundan {{sayi,2,4}} hafta sonras\u0131n\u0131 g\xF6r\xFCr
+    gibiyim. \u0130li\u015Fkinin bitmesiyle birlikte dikkatini i\u015Flerine yo\u011Funla\u015Ft\u0131rm\u0131\u015Fs\u0131n
+    ve g\xFCzel sonu\xE7lar\u0131n arefesinde oldu\u011Funu hisseder gibisin. Yak\u0131n
+    zamanda ayr\u0131ld\u0131\u011F\u0131n {{data, cinsiyet=erkek, k\u0131z arkada\u015F\u0131n
+    | cinsiyet=kad\u0131n, erkek arkada\u015F\u0131n | cinsiyet=lgbt, sevgilin}}
+    ise ayr\u0131ld\u0131\u011F\u0131n\u0131z an tam olarak anlamland\u0131ramad\u0131\u011F\u0131
+    {{kelime, kederi | h\xFCzn\xFC | \xFCz\xFCnt\xFCy\xFC}} iliklerine kadar hissetmeye
+    ba\u015Flam\u0131\u015F {{isim}}. {{kelime, O g\xFCnlerde sosyal medya \xFCzerindeki
+    \"fake\" bir profilden ekleme talebi ya da mesaj al\u0131rsan, kimden geldi\u011Fini
+    bileceksin... | Ani gelen pi\u015Fmanl\u0131k hissiyle d\xFC\u015F\xFCnmeden
+    hareket edece\u011Fini, sonradan utanaca\u011F\u0131 davran\u0131\u015Flar sergileyece\u011Fini
+    hissediyorum...}}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

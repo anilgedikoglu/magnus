@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicbeslisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA00423214771
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: c0391702b37af4546b15b172920002e5, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: c0391702b37af4546b15b172920002e5, type: 3}
+  contentPhotoId: kilicbeslisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 Be\u015Flisi\" kart\u0131n\u0131
+    se\xE7tin.\n\nBu kart, hem kendinle hem de d\u0131\u015F d\xFCnya ile s\u0131k\u0131
+    bir m\xFCcadeleye giri\u015Fti\u011Fini anlat\u0131yor. \xD6n\xFCn\xFC kesmek
+    ya da umutlar\u0131n\u0131 \xE7almak isteyen insanlar olmu\u015F. Onlara, b\xF6ld\xFC\u011F\xFCn
+    ekme\u011Finden, zaman\u0131ndan, hatta sevginden vermi\u015Fsin. S\u0131ra ki\u015Fili\u011Finden
+    \xF6d\xFCn vermeye geldi\u011Finde ise, orada \"Dur!\" demi\u015Fsin. Gerekti\u011Finde
+    baz\u0131lar\u0131n\u0131 kendi s\u0131n\u0131rlar\u0131na geri yollam\u0131\u015F,
+    yapmak zorunda oldu\u011Funda da onlar\u0131n alanlar\u0131na girip yetkilerini
+    ellerinden alm\u0131\u015Fs\u0131n {{isim}}. Neticede \xE7evrendeki d\xFC\u015Fmanlarla
+    meselelerinin \xE7o\u011Funu halletmi\u015F, en zorlusu \"nefsinle\" ba\u015F
+    ba\u015Fa kalm\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kilicbeslisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

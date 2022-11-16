@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Yarin3
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA56797830531
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Yar\u0131n inan\u0131lmaz keyifli bir g\xFCn seni bekliyor {{isim}}. Bana sorarsan
+    i\xE7inde bulundu\u011Fumuz \u015Fu {{mevsim_0}} mevsiminin, hava olarak olmasa
+    da, geli\u015Fmeler anlam\u0131nda en g\xFCzel g\xFCnlerinden birini ya\u015Fayabilirsin.
+    Sabah uyand\u0131\u011F\u0131n andan itibaren evren adeta senin mutlu olman i\xE7in
+    \xE7al\u0131\u015F\u0131yormu\u015F gibi hissetmeye ba\u015Flayacaks\u0131n.
+    Belki geceden gelmi\u015F ve hen\xFCz okumad\u0131\u011F\u0131n g\xFCzel bir
+    mesaj, belki bilgisayar\u0131 ya da televizyonu a\xE7t\u0131\u011F\u0131nda duyaca\u011F\u0131n
+    sevindirici haberler, belki de sen talep etmeden \xE7e\u015Fitli vesilelerle
+    \xF6n\xFCne serilecek olan bolluk ve bereket... Hepsi sana \xE7ok iyi gelecek.
+    G\xFCn\xFC dinamik ve enerjik ge\xE7irecek, geceye ise ya\u015Fad\u0131klar\u0131ndan
+    bir hayli memnun \u015Fekilde eri\u015Feceksin. Ak\u015Fam\u0131na ise ho\u015F
+    bir s\xFCrprizin gizlendi\u011Fini hissediyorum {{isim}}. Hakk\u0131ndaki duygu
+    ya da d\xFC\u015F\xFCncelerini merak etti\u011Fin {{rastgeleburc}} burcu birinden
+    g\xFCzel s\xF6zler duyacak, g\xFCn\xFC tatminkar duygularla kapatacaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: yno
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: yno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

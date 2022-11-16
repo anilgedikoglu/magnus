@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: FlorthalindeCalisiyor
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA98209956048
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn i\u015Finle ilgili baz\u0131 meseleler kafanda \xF6n plandayken, g\xFCndeminin
+    ilk s\u0131ras\u0131n\u0131 aniden, g\xF6r\xFC\u015Ft\xFC\u011F\xFCn han\u0131mefendi
+    alabilir {{isim}}. Bir soru ile seni bir anda s\u0131nayaca\u011F\u0131n\u0131
+    hissediyorum. Merak etti\u011Fi \u015Feyin alt metninde g\xFCvensizlik yatt\u0131\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnebilir, buna \xFCz\xFClebilirsin. Neyse ki ak\u015Fam\u0131 bulmadan
+    i\u015F tatl\u0131ya ba\u011Flanacak. Maddi konularda bug\xFCn kafanda olu\u015Fabilecek
+    belirsizlikleri yersiz buluyorum. Gelecekte daha konforlu g\xFCnlere ula\u015Fabilece\u011Fin
+    bir pozisyonda duruyor, gerekeni de yap\u0131yorsun. Bug\xFCn de yapacaks\u0131n
+    {{isim}}. Ad\u0131n\u0131n i\xE7inde {{harf}} harfi bulunan biri bug\xFCn s\u0131k\xE7a
+    seni d\xFC\u015F\xFCn\xFCyor olacak. Hemcinsin de olabilir. Kim oldu\u011Funun
+    kokusu g\xFCn sonuna dek \xE7\u0131kar..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: 'saatmin '
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

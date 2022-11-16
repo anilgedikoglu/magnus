@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme556
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA62926278622
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sence ayr\u0131ld\u0131\u011F\u0131n ki\u015Fi, \"kendine do\u011Fru\" \xE7\u0131kt\u0131\u011F\u0131n
+    yolda, verdi\u011Fin bir mola m\u0131yd\u0131? Bu i\u015Fin tamamen bitti\u011Fine
+    y\xFCrekten inan\u0131yor musun sen {{isim}}? \U0001F914Fincan\u0131n, \xE7ok
+    arada derede oldu\u011Funu s\xF6yl\xFCyor. Sanki art\u0131k baz\u0131 \u015Feyler
+    senden \xE7\u0131km\u0131\u015F ve senin elinde de\u011Filmi\u015F gibi, \xF6yle
+    de\u011Fil mi? Bu konuda hakl\u0131s\u0131n. \U0001F9D0 Bundan sonras\u0131n\u0131,
+    biraz da kar\u015F\u0131ndaki insan\u0131n yapacaklar\u0131 belirleyecek.\n\nKendince
+    hakl\u0131 yanlar\u0131 olsa da, onun yapt\u0131\u011F\u0131 \xF6nemli bir hatadan
+    bahsediyor telvelerin. \U0001F928\u0130\u015Fin ilginci de, bunun bir hata oldu\u011Funu
+    bile bile, gururuna leke s\xFCrd\xFCrmemek i\xE7in diretiyor ve geri ad\u0131m
+    atm\u0131yor olmas\u0131. Sizin \xF6n\xFCn\xFCzde, bir k\xFCs bir bar\u0131\u015F\u0131k
+    s\xFCrd\xFCrece\u011Finiz {{kelime, 3-4 haftal\u0131k | 4-5 haftal\u0131k | 2-3
+    ayl\u0131k | 3-4 ayl\u0131k}} bir d\xF6nem g\xF6r\xFCyorum {{isim}}. Bu d\xF6nemde
+    kimi zaman uzun s\xFCreler k\xFCs ve ileti\u015Fimsiz kalacak, kimi zamansa tart\u0131\u015Facaks\u0131n\u0131z.
+    Fakat fincan taban\u0131ndaki halka, s\u0131rt\u0131n\u0131z\u0131 birbirinize
+    verip ilerleseniz dahi d\xF6n\xFCp dola\u015F\u0131p yine ayn\u0131 noktada \"kar\u015F\u0131
+    kar\u015F\u0131ya\" gelece\u011Finizi anlat\u0131yor. \u2B55"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

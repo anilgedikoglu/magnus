@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme446
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA42050910232
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n derinliklerinde seni {{kelime, kalabal\u0131k bir kafe'nin
+    d\u0131\u015F k\u0131sm\u0131nda | ev ortam\u0131nda, balkon gibi ferah bir yerde}},
+    {{kelime, uzun zamand\u0131r g\xF6r\xFC\u015Fmedi\u011Fin bir dostunla bulu\u015Fmu\u015F,
+    sohbet ederken | bir s\xFCredir g\xF6r\xFC\u015Femedi\u011Fin eski bir dostunla
+    bir araya gelmi\u015F, sohbet ederken | en son \xFC\xE7 d\xF6rt ay kadar \xF6nce
+    g\xF6r\xFC\u015Ft\xFC\u011F\xFCn fakat \xE7ok sevdi\u011Fin bir yak\u0131n\u0131nla
+    bir araya gelmi\u015F, sohbet ederken}} g\xF6r\xFCyorum {{isim}}. Elindeki {{kelime,
+    porselen ve geni\u015F fincandan | seramik oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    geni\u015F fincandan}} \xE7ay ya da kahve yudumluyor gibisin. \u2615 Her ikinizin
+    de y\xFCz\xFCndeki g\xFCl\xFCmsemeden, bir \u015Feyleri kutlad\u0131\u011F\u0131n\u0131z\u0131
+    anl\u0131yorum. U\u011Frunda emek sarf etti\u011Fin bir d\xF6n\xFCm noktas\u0131n\u0131
+    ba\u015Far\u0131yla atlatm\u0131\u015F, \xFCzerinden bir s\u0131k\u0131nt\u0131y\u0131
+    savm\u0131\u015F veya b\xFCy\xFCk bir kazan\u0131m elde etmi\u015F gibisin. \U0001F31FBu
+    yans\u0131malar, \xF6yle zannediyorum tarih olarak \"g\xFCn\" hanesinde {{sayi,1,4}}
+    ya da {{sayi,5,8}} rakam\u0131 olan bir \"{{kelime, cumartesi | pazar}}\" g\xFCn\xFCnde
+    ve {{sayi,2,4}} ay i\xE7erisinde ya\u015Fanacak. \n\nFincan g\xF6rsellerini \xE7evirirken,
+    di\u015Fi bir kedi dikkatimi \xE7ekti. \U0001F408 Bu kedi, seninle ba\u011Flant\u0131s\u0131
+    olan, ya\u015F\u0131 gen\xE7 ya da gen\xE7 g\xF6z\xFCken, {{kelime, tatl\u0131
+    | ho\u015F}} bir han\u0131mefendinin evinde ya\u015F\u0131yor gibi duruyor. Bu
+    han\u0131mefendi her kimse, baz\u0131 s\u0131k\u0131nt\u0131lar\u0131 var {{isim}}.
+    \U0001F9D0 \xD6te yandan, hanesine do\u011Fru yakla\u015Fan da bir \"y\u0131ld\u0131z\"
+    var. Pek yak\u0131nda, \xE7ok b\xFCy\xFCk bir m\xFCjde ile hayat\u0131, ya\u015Fam
+    tarz\u0131 ya da hayat standartlar\u0131 de\u011Fi\u015Febilir. Buna sen de \xE7ok
+    sevineceksin!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 20
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 20
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupasekizlisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA75240109989
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 4405b34baea15bb4caa1461dee5bbd82, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 4405b34baea15bb4caa1461dee5bbd82, type: 3}
+  contentPhotoId: kupasekizlisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kupa Sekizlisi\" kart\u0131n\u0131 se\xE7tin.\n\nYa\u015Famdan
+    hesab\u0131 istemi\u015F, adisyonu alm\u0131\u015F, nakit \xF6d\xFCyor gibisin.
+    Ge\xE7mi\u015Fle ilgili hi\xE7bir alacak verecek b\u0131rakmama niyetinde oldu\u011Funu
+    g\xF6r\xFCyorum. Sanki kendinden bile uzaklara, bilinmez diyarlara gitmeye haz\u0131rlan\u0131yorsun.
+    Gelece\u011Fe do\u011Fru yol alma hevesindesin. Yine de i\xE7inde bir burukluk,
+    nedensiz bir h\xFCz\xFCn var. De\u011Fer verdi\u011Fin ve sevdi\u011Fin baz\u0131
+    \u015Feylerden g\xF6nl\xFCn ge\xE7mi\u015F. Art\u0131k \"olsun\" istemiyorsun.
+    Hevesin ka\xE7m\u0131\u015F {{isim}}. Zaman\u0131nda olmayan \u015Feyler, sonradan
+    sana tat vermiyor. Yeni g\xFCne uyanmaya, yenilikleri kucaklamaya ve yeni olan
+    her \u015Feyi kar\u015F\u0131lamaya haz\u0131rs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kupasekizlisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

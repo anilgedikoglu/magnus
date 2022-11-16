@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris428
+  m_EditorClassIdentifier: 
+  idIndex: 20228124122AA81823625671
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131nda ilk g\xF6z\xFCme \xE7arpan, kal\u0131n g\xF6vdeli ya\u015Fl\u0131
+    bir zeytin a\u011Fac\u0131 oldu. A\u011Fac\u0131n \xFCzerine baz\u0131 kelimeler
+    kaz\u0131nm\u0131\u015F. Belli belirsiz se\xE7ebildi\u011Fim bu kelimelerde a\u011F\u0131rl\u0131kl\u0131
+    olarak {{harf}}, {{harf}}, {{harf}} harfleri var ve senin ge\xE7mi\u015Ften bug\xFCne
+    ta\u015F\u0131d\u0131\u011F\u0131n ukdelerini yans\u0131t\u0131yor. Bunlardan
+    bir tanesine \"...\" dersek, \"... olmak\", \"... ile olmak\" ya da \"...'da
+    olmak\" istemi\u015Fsin ve gelecekte bu dile\u011Fin ger\xE7ekle\u015Fecek {{isim}}.\n\nHaftaya
+    bug\xFCn yani {{gun_+7}} g\xFCn\xFC, renkli g\xF6zlerindeki hassasiyetten dolay\u0131
+    s\u0131cak havalarda siyah \xE7er\xE7eveli \"{{g\xFCne\u015Fg\xF6zl\xFC\u011F\xFC}}\"
+    marka g\xFCne\u015F g\xF6zl\xFC\u011F\xFC takan biriyle el s\u0131k\u0131\u015Facaks\u0131n.
+    G\xF6zlerinde b\xFCy\xFCk sevin\xE7 g\xF6r\xFCyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

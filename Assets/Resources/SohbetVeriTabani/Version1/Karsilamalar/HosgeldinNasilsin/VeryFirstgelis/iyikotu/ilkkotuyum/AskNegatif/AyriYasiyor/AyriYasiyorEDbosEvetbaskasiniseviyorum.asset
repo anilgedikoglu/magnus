@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: AyriYasiyorEDbosEvetbaskasiniseviyorum
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA53113184471
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Kimse ya\u015Fananlar\u0131 ya\u015Fayan kadar iyi bilemez. Bir kan\u0131ya
+    varmak i\xE7in dahi o ki\u015Finin ge\xE7ti\u011Fi yoldan ge\xE7mek, o ki\u015Finin
+    giydi\u011Fi ayakkab\u0131lar\u0131 giymek gerekir. Senin e\u015Fine kar\u015F\u0131
+    sevginin zaman i\xE7erisinde azald\u0131\u011F\u0131n\u0131 ve t\xFCkenme noktas\u0131na
+    geldi\u011Fini g\xF6r\xFCyorum. \u0130\xE7inde olu\u015Fan bo\u015Flu\u011Fu
+    birba\u015Fkas\u0131 doldurmu\u015F ve bunda senin bir su\xE7un oldu\u011Funu
+    da d\xFC\u015F\xFCnm\xFCyorum {{isim}}. Ruhuna hitap eden biriyle kar\u015F\u0131
+    kar\u015F\u0131ya oldu\u011Funa eminsen, gereken ad\u0131mlar\u0131 atmaktan
+    asla \xE7ekinmemelisin. Bir s\xFCre nefesini tutarsan, daha b\xFCy\xFCk g\xFCzelliklerin
+    oldu\u011Fu bir noktada y\xFCzeye \xE7\u0131kars\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler: []
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

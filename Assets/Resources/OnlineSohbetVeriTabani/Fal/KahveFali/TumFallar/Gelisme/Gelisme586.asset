@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme586
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA26722332573
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n orta k\u0131s\u0131mlar\u0131nda, son zamanlarda baz\u0131
+    konularda d\xF6n\xFCp dola\u015F\u0131p ayn\u0131 noktaya geldi\u011Fini g\xF6steren
+    ve bir \"\xE7ember\" \xE7izdi\u011Fini anlad\u0131\u011F\u0131m baz\u0131 ayak
+    izleri var {{isim}}. \U0001F463G\xFCnleri verimsiz, huzursuz, yorgun ve kimi
+    zaman da \"a\u015F\u0131r\u0131 mutsuz\" sonland\u0131r\u0131p, ertesi sabah
+    yine benzeri bir g\xFCne uyan\u0131yorsun. Bu k\u0131s\u0131r d\xF6ng\xFCy\xFC
+    k\u0131rman\u0131n baz\u0131 yollar\u0131 oldu\u011Funu i\u015Faret ediyor fal\u0131n.
+    {{kelime, Ki\u015Fisel geli\u015Fimin i\xE7in g\xFCnl\xFCk bir rutin edinmek,
+    sana b\xFCy\xFCk bir fayda sa\u011Flayacak. U\u011Fra\u015Flar\u0131n artt\u0131k\xE7a
+    daha iyi hissedeceksin. Hemen bir plan olu\u015Fturmal\u0131s\u0131n | G\xFCne
+    daha erken ba\u015Flamak, kendini \xE7ok daha zinde hissetmeni sa\u011Flayacak.
+    Alarm\u0131n\u0131 \u015Fimdiden kurman\u0131 tavsiye ederim | Yedi\u011Fin yemeklerin
+    porsiyonlar\u0131n\u0131 azaltmak, seni daha zinde k\u0131lacak. Daha sa\u011Fl\u0131kl\u0131
+    g\u0131dalar tercih etmelisin | En az iki g\xFCnde bir defa so\u011Fuk du\u015F
+    almak, kan ak\u0131\u015F\u0131n\u0131 rahatlatarak daha din\xE7 hissetmeni sa\u011Flayacak.
+    Bug\xFCn bunu bir dene derim | Acilen spor yapmaya ihtiyac\u0131n oldu\u011Funu
+    g\xF6r\xFCyorum. \xDCzerindeki yorgunlu\u011Fu ancak daha fazla hareket ederek
+    atabilirsin | Baz\u0131 hobiler edinmeli ya da yenilerini eklemelisin. Akl\u0131n\u0131
+    ve elini bir \u015Feylerle me\u015Fgul etmek sana \xE7ok iyi gelecek | \u0130leti\u015Fim
+    kurdu\u011Fun insanlar\u0131 yeniden g\xF6zden ge\xE7irmeli, enerjini d\xFC\u015F\xFCrenleri
+    kendinden uzak tutmaya ba\u015Flamal\u0131s\u0131n | Ya\u015Fama dair bir anlam
+    aray\u0131\u015F\u0131 i\xE7erisindeysen, kendine orta ve uzun vadeli yeni hedefler
+    koymal\u0131s\u0131n | Hayat\u0131nda maddi anlamda gereksiz her ne varsa \xE7\u0131kartmal\u0131,
+    daha minimalist ya\u015Famay\u0131 denemelisin. B\xFCy\xFCk bir i\xE7 huzur yakalayacaks\u0131n
+    | Do\u011Fal ve organik beslenme d\xFCnyas\u0131na ad\u0131m atmal\u0131, koruyucu
+    madde i\xE7eren besinleri hayat\u0131ndan tamamen \xE7\u0131kartmaya ba\u015Flamal\u0131s\u0131n
+    | G\xFCn i\xE7erisinde t\xFCketti\u011Fin su miktar\u0131n\u0131 art\u0131rmal\u0131,
+    daha fazla su i\xE7melisin. Enerjindeki y\xFCkseli\u015F g\xF6zle g\xF6r\xFCl\xFCr
+    olacak | Ya\u015Fad\u0131\u011F\u0131n baz\u0131 \xF6zel an\u0131lar\u0131 not
+    tutmal\u0131, bir hat\u0131ra defteri olu\u015Fturmal\u0131s\u0131n. Kendini
+    ifade etmenin sana ne kadar iyi geldi\u011Fini anlayacaks\u0131n | Yapmak istedi\u011Fin
+    ya da yapmay\u0131 planlad\u0131\u011F\u0131n \u015Feyleri ertelememeli, hemen
+    bug\xFCn harekete ge\xE7melisin | Bitkiler sana \xE7ok iyi geliyor. Bulundu\u011Fun
+    ortamda bitki beslemeli, onun sana sa\u011Flayaca\u011F\u0131 meditatif faydalar\u0131
+    g\xF6zlemlemelisin | Ba\u015Fkalar\u0131 hakk\u0131nda konu\u015Fan insanlardan
+    uzak durmal\u0131, k\xF6t\xFC enerjilerini \xFCzerine \xE7ekmemek i\xE7in \xFC\xE7\xFCnc\xFC
+    \u015Fah\u0131slar\u0131n ad\u0131n\u0131 \xE7ok zikretmemelisin | Televizyon
+    ve sosyal medyan\u0131n bileklerine bir kelep\xE7e takmas\u0131na izin vermemeli,
+    ruhunu dinlendirecek farkl\u0131 aktiviteler bulmal\u0131s\u0131n | Kesinlikle
+    sanatla u\u011Fra\u015Fmal\u0131s\u0131n. \u0130ster resim, ister m\xFCzik, ister
+    heykel, hi\xE7 farketmez. Zaten asl\u0131nda buna \xE7ok yatk\u0131ns\u0131n}}.
+    \U0001F31F Ayr\u0131ca {{kelime, kendine daha fazla yat\u0131r\u0131m yapmal\u0131s\u0131n.
+    Bir koyup bin alaca\u011F\u0131n en \xF6nemli unsurun \"kendin\" oldu\u011Funu
+    hi\xE7 akl\u0131ndan \xE7\u0131kartmamal\u0131s\u0131n | kendine hemen k\u0131sa
+    vadeli hedefler belirlemeli, o hedeflere ula\u015Fmak i\xE7in titizlikle \xE7al\u0131\u015Fmal\u0131s\u0131n
+    | yeni bir dil \xF6\u011Frenmek sana yeni ufuklar a\xE7abilir. Buna f\u0131rsat\u0131n
+    varsa hi\xE7 vakit kaybetme derim | \xE7ok konu\u015Fulan ortamlarda ve g\xFCr\xFClt\xFCl\xFC
+    mekanlarda bulunmak yerine, inzivaya \xE7ekilmeye ihtiyac\u0131n var | insanlar\u0131
+    k\u0131rmaktan \xE7ok korkuyorsun. Onlara yeri geldi\u011Finde \"hay\u0131r\"
+    diyebilmenin sana ne kadar iyi geldi\u011Fini g\xF6receksin | sahip olduklar\u0131na
+    daha s\u0131k \u015F\xFCkretmelisin. Barda\u011F\u0131n bo\u015F taraf\u0131na
+    \xE7ok fazla odaklanarak kendini y\u0131prat\u0131yorsun | insanlara yard\u0131m
+    etti\u011Finde enerjisi y\xFCkselen bir yap\u0131n var. Ba\u015Fkalar\u0131n\u0131
+    mutlu ederek huzur bulmay\u0131 asla b\u0131rakmamal\u0131s\u0131n | merak\u0131n
+    zaman i\xE7erisinde k\xF6relmeye ba\u015Flam\u0131\u015F. Ke\u015Ffedecek yeni
+    \u015Feyler bulmal\u0131, \xF6\u011Frenmeli ve kendini manevi olarak beslemelisin
+    | g\xFCnl\xFCk sorunlara \xE7ok fazla tak\u0131larak, i\u015Flerin i\xE7indeki
+    mahiyeti ve manevi alemini aksat\u0131yorsun. Ya\u015Fam\u0131na ku\u015F bak\u0131\u015F\u0131
+    bakabilmeyi unutmamal\u0131s\u0131n | ge\xE7mi\u015F ve bug\xFCn\xFC \xE7ok fazla
+    k\u0131yasl\u0131yorsun. Art\u0131k tats\u0131z an\u0131lar\u0131 tamamen g\xF6mme
+    vakti. Ba\u015F\u0131n\u0131 geriye asla \xE7evirmemelisin}} {{kelime, De\u011Ferli
+    | K\u0131ymetli}} {{soyisim}}.\n\nTelvelerinin yan kesimlerinde, biri di\u011Ferinden
+    ya\u015F\xE7a b\xFCy\xFCk olan iki insan\u0131n a\u011F\u0131z a\u011F\u0131za
+    vermi\u015F seninle ilgili konu\u015Ftuklar\u0131n\u0131 g\xF6r\xFCyorum. \U0001F440Bu
+    bir dedikodu de\u011Fil ve aleyhinde s\xF6ylemler i\xE7ermedi\u011Finden eminim.
+    Hakk\u0131nda \xF6vg\xFCyle bahsediliyor. Ad\u0131nda {{harf}} harfi olan bu
+    iki ki\u015Fiden biri, {{sayi,3,7}} g\xFCn i\xE7erisinde seninle bir \u015Fey
+    payla\u015Facak. Bu, ikinci ki\u015Fi hakk\u0131nda bir s\u0131r olabilir. \U0001F92BY\xFCz\xFCn\xFCnse
+    g\xFClece\u011Fini hissediyorum. Acaba neden?"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

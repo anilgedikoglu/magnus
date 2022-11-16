@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: DogumHaritasi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA63634167259
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: wheelchart
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: wheelchart
+  fotografKonum: 2
+  ozelFonksiyon: 
+  aciklama:
+  - "De\u011Ferli {{isim}}, {{dogum gunu}}.{{dogum ayi}}.{{dogum yili}} tarihinde
+    do\u011Fdu\u011Funu biliyorum. {{burc}} burcusun, y\xFCkselenin {{yukselen}}
+    ve Ay senin i\xE7in {{ayburcu}} burcunda. Bug\xFCn d\xFCnyadaki {{xgundur}},
+    g\xFCn\xFCn!\n\nHesaplamalar\u0131ma g\xF6re do\u011Fum haritan \xFCstteki gibi.
+    \xDCzerine t\u0131klay\u0131p b\xFCy\xFCk halini g\xF6rebilirsin.\n\n{{gunsayi_0}}
+    {{ay_0}} {{yil_0}} tarihinde, {{gun_0}} g\xFCn\xFCnde oldu\u011Fumuzu da de\u011Ferlendirdi\u011Fimde,
+    bug\xFCn\xFCn i\xE7in \u015Funlar\u0131 s\xF6yleyebilirim;"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar:
+  - dogumharitasi1
+  - dogumharitasi2
+  - dogumharitasi3
+  - dogumharitasison
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: dogumharitasi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: dogumharitasi son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

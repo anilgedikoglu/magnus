@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tacili
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA30783970897
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Hayat bazen \"ge\xE7mi\u015Ften\" bir zaman yolcusu getirir kar\u015F\u0131m\u0131za.
+    Bu yolcu, elem ve kederle doldu\u011Fumuz eski bir an\u0131n \u015Fahididir.
+    Y\xFCz\xFCm\xFCze kar\u015F\u0131 o zaman\u0131 kurak nefesiyle hat\u0131rlat\u0131r
+    ve bizi yeniden \xFCzg\xFCn g\xF6rmekten adeta zevk al\u0131r. {{burc}} burcu
+    mensuplar\u0131 bug\xFCn o yolcu ile kar\u015F\u0131la\u015Fm\u0131\u015F gibi
+    hissedebilirler. Eskiye dair k\xF6t\xFC bir an\u0131, hi\xE7 olmam\u0131\u015F\xE7as\u0131na
+    silinsin istenen naho\u015F bir yazg\u0131, bir saniyenin binde biri bir an i\xE7inde
+    hat\u0131ra gelebilir. \xD6yle bir durumda kal\u0131rsan metin olmal\u0131 ve
+    kendini do\u011Fru telkin etmelisin {{isim}}. \xC7ok daha g\xFCzel g\xFCnler
+    g\xF6rd\xFCn ve g\xF6receksin. Yolun uzun... Hayat seni umutlar\u0131na ta\u015F\u0131rken,
+    kimi zaman asfalttan \xE7\u0131kartarak tali yollar kullan\u0131r. Neler ya\u015Fad\u0131\u011F\u0131na
+    ya da ya\u015Famakta oldu\u011Funa de\u011Fil, nereye varaca\u011F\u0131na bak.
+    Oras\u0131 en hay\u0131rl\u0131 olansa, varmak i\xE7in \xE7ekilen t\xFCm \xE7ileler
+    kutsald\u0131r. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: MagnuDotsHamleCevap 7
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA52842161823
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "7'si birden! G\xFCzel hareket. Bunu her ya\u015Fta yapabilirsin. \u0130nsan
+    7'sinde neyse 70'inde de o'dur! <sprite=7>"
+  - "7'si birden? Alk\u0131\u015Flar {{isime}} gelsin!"
+  - "O d\xF6neme\xE7leri g\xFCzel yakalad\u0131n. 7 nokta u\xE7tu!"
+  - "Beklentileri y\xFCkseltiyorsun {{isim}}. Art\u0131k 7'den a\u015Fa\u011F\u0131
+    kabul etmeyiz senden, haberin olsun! <sprite=84>"
+  - "Ooo, 7 adet. G\xFCzeeel..."
+  - Bravo, 7'si birden!
+  - "D\xFC\u015F\xFCn\xFClm\xFC\u015F bir hareket! 7 nokta buhar oldu."
+  - "7din 7din doymad\u0131n {{isim}}! <sprite=84>"
+  - "7'yi bulan 8'i de bulur. Bast\u0131r {{isim}}!"
+  - "G\xF6zlerim 7 tane mi g\xF6r\xFCyor, do\u011Fru mu sayd\u0131m?"
+  - "{{isimden}} 7'lik bir say\u0131 geliyor!"
+  - "De\u011Ferli {{soyisim}}? 7 noktay\u0131 birden imha etmi\u015F gibi g\xF6z\xFCk\xFCyorsun."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - Pes ediyorum.
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnudots cikis
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnudots cikis
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: magnusdots hamle cevap 7
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: magnusdots hamle cevap 7
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

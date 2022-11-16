@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: PlatonikAkademisyenE
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA82482930293
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ho\u015Fland\u0131\u011F\u0131n ki\u015Finin, bir i\u015F arkada\u015F\u0131nla
+    ileti\u015Fimine \u015Fahit olup, onu k\u0131skanabilirsin. Meseleyi kendi i\xE7inde
+    b\xFCy\xFCtmene gerek olmadan i\u015Fin asl\u0131n\u0131 anlayaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorum {{isim}}. Planda olmayan bir de harcaman olabilir bug\xFCn."
+  - "\xC7al\u0131\u015Ft\u0131\u011F\u0131n yerde ho\u015Fland\u0131\u011F\u0131n
+    ki\u015Fiyle daha s\u0131k g\xF6r\xFC\u015Fmene vesile olacak bir i\u015F planlamas\u0131
+    yap\u0131ld\u0131\u011F\u0131 duyumunu alabilirsin. Bu seni bir hayli memnun
+    edecek {{isim}}. Bug\xFCn ayr\u0131ca, sana do\u011Fru bir posta ya da kargonun
+    yola \xE7\u0131kabilece\u011Fini hissediyorum. G\xF6nderildi\u011Fini anlad\u0131\u011F\u0131nda
+    ya da g\xF6nderilen eline ge\xE7ti\u011Finde memnun olaca\u011F\u0131n bir \u015Fey
+    bu."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersOlum
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA48978010487
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 971cc11632904584dafc1b7f7503dfa4, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 971cc11632904584dafc1b7f7503dfa4, type: 3}
+  contentPhotoId: olum-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"\xD6l\xFCm\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSevmedi\u011Fin
+    insanlardan, memnun olmad\u0131\u011F\u0131n ko\u015Fullardan ve sana u\u011Furlu
+    gelmeyen t\xFCm o eski zamanlardan kurtulacaks\u0131n. Hayal k\u0131r\u0131kl\u0131klar\u0131n\u0131n,
+    biti\u015Flerin ve ma\u011Flubiyetlerin seni ge\xE7mi\u015Ften beri kovalad\u0131\u011F\u0131n\u0131
+    biliyorum. Art\u0131k g\xF6rebildi\u011Fin en dibi g\xF6rm\xFC\u015F bir vaziyettesin
+    ve yukar\u0131ya do\u011Fru s\u0131\xE7raman\u0131n vakti gelmek \xFCzere {{isim}}.
+    \xDC\xE7\xFCnc\xFC se\xE7imin olan bu kart, yeni bir y\xFCkseli\u015F ba\u015Flatmak
+    i\xE7in elinden gelen her \u015Feyi yapman gerekti\u011Fini i\u015Faret ediyor.
+    Sahip oldu\u011Fun t\xFCm olanaklar\u0131 kullanmal\u0131, gerekiyorsa duruma
+    g\xF6re \u015Fekillenmeli, daha iyi pozisyon almal\u0131 ve harekete ge\xE7melisin.
+    Yenilgilerinden ve kay\u0131plar\u0131ndan yeniden do\u011Fmaya ba\u015Fl\u0131yorsun,
+    haz\u0131r ol!"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek olum ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

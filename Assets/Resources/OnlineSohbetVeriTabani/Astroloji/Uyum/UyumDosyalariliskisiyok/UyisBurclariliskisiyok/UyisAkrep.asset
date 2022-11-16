@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisAkrep
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA67656141796
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Uyumunuzu
+    merak etti\u011Fin bu i\u015F arkada\u015F\u0131n\u0131n senin hakk\u0131nda
+    ne d\xFC\u015F\xFCnd\xFC\u011F\xFCn\xFC kestirebiliyor musun {{isim}}? Bunu yapman
+    zor, \xE7\xFCnk\xFC kar\u015F\u0131nda bir akrep {{data, cinsiyet=erkek, kad\u0131n\u0131
+    | cinsiyet=kad\u0131n, erke\u011Fi | cinsiyet=lgbt, insan\u0131}} var. Duygular\u0131n\u0131
+    iyi kontrol eden, a\xE7\u0131k vermeyen, d\xFC\u015F\xFCncelerini hareketlerine
+    ve mimiklerine kolay kolay yans\u0131tmayan biriyle kar\u015F\u0131 kar\u015F\u0131yas\u0131n.
+    Bir {{burc}} {{data, cinsiyet=erkek, erke\u011Fi | cinsiyet=kad\u0131n, kad\u0131n\u0131
+    | cinsiyet=lgbt, mensubu}} olarak onda be\u011Fenebilece\u011Fin \xE7ok fazla
+    \xFCst\xFCn \xF6zellik var. Sen zaten kolay olan\u0131 ve \xE7abuk olan\u0131
+    sevmezsin. Senin i\xE7in k\u0131ymetli olan, seni zorlayand\u0131r. Bu {{data,
+    cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n, beyefendi | cinsiyet=lgbt,
+    ki\u015Fi}} de seni zorlayacak gibi g\xF6z\xFCk\xFCyor. Zekice ve ince esprilerle
+    onun \xFCzerine gitmelisin. Bir di\u011Fer akrep \xF6zelli\u011Fi, ho\u015Flar\u0131na
+    giden s\xF6zler duyduklar\u0131nda sessiz kalmalar\u0131d\u0131r. E\u011Fer hi\xE7bir
+    \u015Fey s\xF6ylemeden yaln\u0131zca g\xFCl\xFCms\xFCyorsa, akl\u0131ndan seninle
+    ilgili g\xFCzel \u015Feyler ge\xE7iyor demektir. Bu kaleyi fethedebilirsen, siz
+    \xE7ok uyumlu bir \xE7ift olursunuz {{isim}}. Ben genellikle \xF6nyarg\u0131l\u0131
+    olmamaya \xE7al\u0131\u015F\u0131r\u0131m fakat bu {{data, cinsiyet=erkek, han\u0131mefendiye
+    | cinsiyet=kad\u0131n, beyefendiye | cinsiyet=lgbt, \u015Fahsa}} i\xE7im \u0131s\u0131nd\u0131.
+    Olursan\u0131z \xE7ok g\xFCzel olursunuz. <sprite=7>\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: akrep
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

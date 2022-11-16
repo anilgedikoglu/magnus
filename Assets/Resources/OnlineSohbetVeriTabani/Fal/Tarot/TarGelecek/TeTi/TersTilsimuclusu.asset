@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimuclusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA09155378426
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 515d171284af89e4a9c84d3ac79b06a7, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 515d171284af89e4a9c84d3ac79b06a7, type: 3}
+  contentPhotoId: tilsimuclusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"T\u0131ls\u0131m \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin {{isim}}.\n\nBaz\u0131 konular b\xFCy\xFCk bir i\u015Fbirli\u011Fi
+    ve \xF6zen gerektiriyor. \xD6yle durumlarda birka\xE7 ki\u015Finin g\xF6sterdi\u011Fi
+    hassasiyet yetmeyebiliyor. Bazen herkes, ayn\u0131 anda kusursuz olmal\u0131.
+    Ters olarak a\xE7\u0131lan kart\u0131n, b\xFCy\xFCk bir i\u015Fin dikkatsiz birileri
+    taraf\u0131ndan sekteye u\u011Frayabilece\u011Fini i\u015Faret ediyor. Bu sen
+    misin yoksa senin de dahil oldu\u011Fun bir meselede ba\u015Fka bir insan m\u0131,
+    bilemiyorum. Ortaya \xE7\u0131kacak p\xFCr\xFCzlerin kas\u0131t ta\u015F\u0131yaca\u011F\u0131n\u0131
+    da d\xFC\u015F\xFCnm\xFCyorum. Belki hava muhalefeti, belki rahats\u0131zl\u0131klar,
+    belki ba\u015Fka bir eksiklik... Neticede, elde olandan daha fazlas\u0131 isteniyor
+    ve hayata meydan okunuyorsa, \u015Fartlar da zorlanmal\u0131. Kafana ger\xE7ekten
+    koyduysan, \xFCstesinden gelmek i\xE7in bir yol bulman gerekecek."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek tilsimuclusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

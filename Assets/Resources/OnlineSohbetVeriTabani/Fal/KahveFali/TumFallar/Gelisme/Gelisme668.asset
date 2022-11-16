@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme668
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA17251271905
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n cidar\u0131nda \"toplama ta\u015F\u0131\" olarak da bilinen
+    bir ha\xE7 ta\u015F\u0131 g\xF6r\xFCyorum {{isim}}. Bu ta\u015Flar\u0131n belirleyici
+    \xF6zelli\u011Fi, y\xFCzeyindeki en zay\u0131f noktalarda olu\u015Fan deliklerdir.
+    G\xF6r\xFCyorum ki ge\xE7ti\u011Fimiz haftalarda kendini koruman\u0131 gerektiren
+    baz\u0131 durumlar ba\u015F g\xF6stermi\u015F. Bahsetti\u011Fim bu durum san\u0131yorum
+    {{kelime, hayat\u0131ndaki insanla | ailevi meselelerle | okul hayat\u0131nla}}
+    ilgili ba\u015F etmekte son derece zorland\u0131\u011F\u0131n bir konuda cereyan
+    etmi\u015F. Bir cankurtaran edas\u0131yla seni bu karma\u015Fan\u0131n i\xE7inden
+    \xE7ekip \xE7\u0131karacak, isminde ya da soyisminde {{harf}} harfi bulunan {{kelime,
+    orta ya\u015Fl\u0131 bir kad\u0131n | yirmili ya\u015Flar\u0131n sonunda bir
+    erkek}} g\xF6r\xFCyorum; bu ki\u015Fiye minnettar kalacaks\u0131n {{isim}}.\n\nFincan\u0131n
+    orta k\u0131s\u0131mlar\u0131na do\u011Fru g\xF6z\xFCme kestirdi\u011Fim, kaynarken
+    \"ta\u015Fmak \xFCzere olan \xE7aydanl\u0131k\" fig\xFCr\xFC ise, hayat\u0131ndaki
+    erkekle ilgili i\xE7inde adeta fokurdayan, bir \xE7\u0131k\u0131\u015F yolu bulamayan
+    duygu ve d\xFC\u015F\xFCnceleri serbest b\u0131rakman gerekti\u011Fini sal\u0131k
+    veriyor. Gelece\u011Finize dair akl\u0131ndaki sorular\u0131 s\xFCrekli olarak
+    kendine sormaktan vazge\xE7meli, ili\u015Fkiyi biraz ak\u0131\u015F\u0131na b\u0131rakmal\u0131s\u0131n.
+    Her \u015Feyi kontrol etmeye \xE7al\u0131\u015Fmad\u0131\u011F\u0131nda, i\u015Flerin
+    nas\u0131l da \"kendili\u011Finden\" yoluna girdi\u011Fini g\xF6receksin {{isimcigim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

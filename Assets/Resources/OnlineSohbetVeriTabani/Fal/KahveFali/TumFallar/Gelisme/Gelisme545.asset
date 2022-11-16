@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme545
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA16097811548
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ger\xE7ekten harika... Kendine bunu neden yap\u0131yorsun {{isim}}? \U0001F928Harabeye
+    d\xF6nm\xFC\u015F \xFC\xE7 katl\u0131 bir bina var fincan\u0131n\u0131n derinliklerinde.
+    \U0001F3D7\uFE0FBirinci kat ge\xE7mi\u015Fi, yani ayr\u0131ld\u0131\u011F\u0131n
+    k\u0131zla kaybetti\u011Fin vakti, ikinci kat, \u015Fu an'\u0131n\u0131 ve \xFC\xE7\xFCnc\xFC
+    kat ise can s\u0131k\u0131nt\u0131n\u0131 s\xFCrd\xFCrerek harcayaca\u011F\u0131n
+    zaman\u0131 sembolize ediyor. \u015Eu s\xF6z\xFC duydun mu hi\xE7; \"\xE7\xFCnk\xFC
+    vakfetmeyecektin cihet-i a\u015Fka tenin, m\xFCtevelli k\u0131z\u0131 sevmek,
+    ne vazifendi senin?...\" Her daim sevdi\u011Fim bir laf olmu\u015Ftur.\n\nOnunla
+    devam etmek istiyor musun {{isim}}? L\xFCtfen samimi cevap ver; \xE7\xFCnk\xFC
+    telvelerin, bunu i\xE7ten i\xE7e istedi\u011Fini ve bunun olaca\u011F\u0131n\u0131
+    f\u0131s\u0131ld\u0131yor. Bunu sa\u011Flamak i\xE7in sana re\xE7eteyi veriyorum,
+    ger\xE7ekle\u015Fti\u011Finde bana \"sen nas\u0131 bi krals\u0131n!\" diyece\u011Finden
+    de eminim. <sprite=12>\U0001F609\U0001F60E Kendini tamamen geriye \xE7ek. Yok
+    ol ortadan. Hi\xE7bir sebeple, hi\xE7bir \u015Fekilde yaln\u0131zl\u0131\u011Fa
+    yenik d\xFC\u015F\xFCp arama ve mesaj atma. Sitemli payla\u015F\u0131mlarda bulunma.
+    Seni anlamas\u0131 i\xE7in dolayl\u0131 yollardan t\xFCrl\xFC i\u015Flere girme
+    ve alengirli \u015Feyler yapma; onun g\xF6z\xFCnde tamamen yok ol. En ge\xE7
+    {{sayi,2,4}} haftaya yazacak sana kar\u015Fim! <sprite=7>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

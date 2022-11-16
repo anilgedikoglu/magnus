@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 38
+  m_EditorClassIdentifier: 
+  idIndex: 20226105950AA25368225802
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Gelece\u011Fine odakland\u0131\u011F\u0131mda, seni dev bir krali\xE7e ar\u0131
+    ile kar\u015F\u0131 kar\u015F\u0131ya g\xF6r\xFCyorum. Nutkun tutulmu\u015F gibi,
+    donup kalm\u0131\u015Fs\u0131n {{isim}}. Ar\u0131n\u0131n a\u011Fz\u0131ndan
+    \xE7\u0131kacak s\xF6zleri bekliyorsun sanki. Krali\xE7e ar\u0131, g\xFCne\u015Fte
+    alacal\u0131 \u015Fekilde parlayan dev kanatlar\u0131n\u0131 yanlara do\u011Fru
+    a\xE7arak sana bir mesel f\u0131rlat\u0131yor. S\xF6yledi\u011Fi s\xF6z, senin
+    gelece\u011Fini ilgilendiren ve \xF6n\xFCn\xFC a\xE7acak bir tavsiye niteli\u011Finde.
+    Ayn\u0131 zamanda da sana \xF6nemli bir sorumluluk y\xFCkl\xFCyor. Gelecek hafta,
+    bu krali\xE7e ar\u0131y\u0131 temsil eden ve ad\u0131 iki heceden olu\u015Fan
+    dominant han\u0131mefendiyle yapaca\u011F\u0131n konu\u015Fma sonras\u0131 harekete
+    ge\xE7men gerekecek. S\xF6ylediklerine harfiyen uyarsan, sen kazanacaks\u0131n. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: gno
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: gno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

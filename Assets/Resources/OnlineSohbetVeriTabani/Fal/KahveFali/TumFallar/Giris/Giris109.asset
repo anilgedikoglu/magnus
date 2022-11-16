@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris109
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA97275483797
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n \xFCst kesimlerine yerle\u015Fmi\u015F, birbirleri ile
+    zincir \u015Feklinde ili\u015Fkili, dairesel ve yar\u0131 ayd\u0131nl\u0131k
+    telveler g\xF6r\xFCyorum. Bunlar\u0131n ortas\u0131nda ise el s\u0131k\u0131\u015Fan
+    iki insan duruyor. {{isim}}, \xF6n\xFCm\xFCzdeki {{ay_+2}} ay\u0131n\u0131n {{kelime,
+    7'si ile 13'\xFC aras\u0131 bir tarihte | 13'\xFC ile 17'si aras\u0131 bir tarihte
+    | 17'si ile 24'\xFC aras\u0131 bir tarihte}}, {{kelime, orta boylu, hafif g\xF6bekli
+    ve g\xF6zl\xFCkl\xFC bir bey ile | uzunca boylu, aln\u0131 a\xE7\u0131k ve sa\xE7lar\u0131
+    seyrek bir bey ile | orta boylu, hafif toplu ve yanaklar\u0131 dolgun bir bey
+    ile | orta boylu, g\xF6zl\xFCkl\xFC ve a\u011F\u0131r ba\u015Fl\u0131 bir bey
+    ile | uzunca boylu, k\u0131r sa\xE7l\u0131 ve elleri b\xFCy\xFCk olan bir bey
+    ile|uzunca boylu, kirli sakall\u0131 ve 50'li ya\u015Flar\u0131nda bir bey ile
+    | uzun boylu, y\xFCz\xFCnde yara izi olan ve \u015F\u0131k giyimli bir bey ile
+    | esmer, uzunca boylu ve iyi e\u011Fitimli oldu\u011Fu her halinden belli olan
+    bir bey ile}} \xF6nemli bir konuda mutabakata varacaks\u0131n. Fal\u0131n, bu
+    anla\u015Fma sonras\u0131 hanene ya tek seferde y\xFCksek miktarda para giri\u015Fi
+    olaca\u011F\u0131n\u0131 ya da az miktarda ve d\xFCzenli bir gelir elde edece\u011Fini
+    s\xF6yl\xFCyor. Bu geli\u015Fme, i\u015Fini ve gelecek hedeflerini olumlu etkileyecek.
+    E\u015Finin de bu duruma \xE7ok sevinece\u011Fini hissediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

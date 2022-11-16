@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: MagnumbersPuan8
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA45496005801
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - 8'i buldun.
+  - "4'ler bulu\u015Ftular..."
+  - "8 ile yolculuk ba\u015Fl\u0131yor!"
+  - "4+4 yine 8 etti. Hep eder, \xF6yledir..."
+  - "8'i buldun. Bunu bir \u015Fekilde 16 yapal\u0131m {{isim}}."
+  - 8 elde ettik.
+  - "8'i g\xFCzel g\xF6rd\xFCn {{isim}}."
+  - "D\u0131r\u0131n\u0131nnn! 8 etti. "
+  - "8 oldu. Olmasa m\u0131yd\u0131? <sprite=84>"
+  - "8 oldu. \u0130yi de oldu."
+  - "8 oldu. 7 olacak de\u011Fildi ya. <sprite=84>"
+  - "8 olan neden 16 olmas\u0131n?"
+  - "Baharda \xE7i\xE7ek olan, meyvedir yaza. 16'y\u0131 yakalamak \xFCzeresin burada."
+  - "\u0130nceden bir 8 elde ettik. \u0130nce belli."
+  - "8'im hadi g\xFCl biraz, bu bahar dallar kiraz..."
+  - "Neden 8 deme. 16'ya giden yol 8'den ge\xE7er."
+  - "E g\xFCzel... Sekiz."
+  - "Is\u0131nmaya ba\u015Flad\u0131n san\u0131r\u0131m. 8!"
+  - "{{isime}} Magnus'dan 10 \xFCzerinden 8 puan! <sprite=0>"
+  - Sen {{isimsin}} 16 da yapabilirsin. <sprite=0>
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - Pes ediyorum.
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnumbers cikis
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnumbers cikis
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: magnumbers 8 puan
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: magnumbers 8 puan
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

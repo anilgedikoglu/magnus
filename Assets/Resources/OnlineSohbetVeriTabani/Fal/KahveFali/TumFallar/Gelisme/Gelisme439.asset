@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme439
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA78890084773
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{isim}}, sana ait olmayan bir e\u015Fya, hanenin i\xE7erisine negatif enerji
+    yay\u0131yor. Fincan\u0131ndaki telveler baz\u0131 yerlerde \xE7ok g\xFCzel sembollere
+    d\xF6n\xFC\u015Febilecekken, topak topak olmu\u015Flar. Bu enerjinin, senin hay\u0131rla
+    sonu\xE7lanabilecek i\u015Flerini geciktirdi\u011Fini ve evinin i\xE7erisinde
+    tats\u0131zl\u0131klara yol a\xE7\u0131yor olabilece\u011Fini hissediyorum. \xD6d\xFCn\xE7
+    al\u0131p vermeyi ihmal etti\u011Fin ya da tan\u0131d\u0131\u011F\u0131n biri
+    yan\u0131ndan ayr\u0131ld\u0131ktan sonra sende kalan bu e\u015Fyay\u0131, elden
+    tez zamanda \xE7\u0131karman\u0131 tavsiye ederim.\n\nFincan\u0131nda ayr\u0131ca,
+    {{rastgeleburc}} burcu, {{kelime, 1.80 | 1.75 | 1.85}} boylar\u0131nda, {{kelime,
+    a\xE7\u0131k kumral | kumral | esmer ve a\xE7\u0131k tenli | koyu kumral}} bir
+    erkek g\xF6r\xFCyorum. \xDCzerinde {{kelime, i\u015Fiyle ilgili k\u0131yafetler
+    | g\xF6mlek ve pantolon | spor k\u0131yafetler}} bulunan bu ki\u015Fi, ilerleyen
+    g\xFCnlerde {{kelime, ailenden | yak\u0131n \xE7evrenden}} biriyle temasa ge\xE7ecek.
+    Sonras\u0131nda ise sana y\xF6nlendirilece\u011Fini hissetti\u011Fim bu nitelikli
+    beyefendi, bir tan\u0131d\u0131\u011F\u0131nla ya da arkada\u015F\u0131nla g\xF6r\xFC\u015Fmek
+    istedi\u011Fini beyan ederek senden yard\u0131m talep edecek. Sonu g\xFCzel neticelenecek
+    bir g\xF6n\xFCl i\u015Fi oldu\u011Funu tahmin ediyorum {{isim}}. Bu i\u015Fin
+    sonunda evlilik olabilir; demedi deme..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 26
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 26
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme594
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA41229011044
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Geni\u015F ve b\xFCy\xFCk vantilat\xF6rleri olan baz\u0131 i\u015Fletmeler vard\u0131r,
+    bilir misin? Seni {{sayi,3,5}} ay sonra \xF6yle bir yerde g\xF6r\xFCyorum. Burada
+    hangi i\u015F i\xE7in, hangi ama\xE7la bulunaca\u011F\u0131n\u0131 bilmiyorum
+    {{isim}}. Fakat buran\u0131n \xF6nemi \u015Fu olacak; sen bu mekana yakla\u015F\u0131k
+    {{sayi,15,28}} g\xFCn arayla ikinci kez gideceksin. \u0130lk gidi\u015Finde herhangi
+    bir ili\u015Fkin yokken, ikinci gidi\u015Finde yan\u0131nda sevgilinin de olaca\u011F\u0131n\u0131
+    s\xF6yl\xFCyor fincan\u0131n.\n\n\"Ooo Magnus, fincan\u0131mda hemen de bir ili\u015Fki
+    g\xF6rd\xFCn!\" dedi\u011Fini duyar gibiyim. Ben fincan\u0131n\u0131n yalanc\u0131s\u0131y\u0131m
+    {{isim}}; s\xF6ylediklerim ger\xE7ekle\u015Fti\u011Finde g\xF6r\xFC\u015F\xFCr\xFCz...
+    <sprite=7> Telvelerinde, birlikte olaca\u011F\u0131n ki\u015Fiyle ilgili ba\u015Fka
+    baz\u0131 detaylar da var. {{kelime, 2 | 3 | \u0130ki | \xDC\xE7}} karde\u015Fler.
+    Bu ki\u015Finin bir {{kelime, abisi ya da ablas\u0131 | k\u0131z ya da erkek
+    karde\u015Fi}} var, fakat kendisinden uzakta. Babas\u0131n\u0131n {{kelime, \xF6zel
+    sekt\xF6rde \xE7al\u0131\u015Ft\u0131\u011F\u0131n\u0131, fakat bir d\xF6nem
+    devlet memurlu\u011Fu tecr\xFCbesi de oldu\u011Funu | devlet memuru oldu\u011Funu
+    | \xF6zel sekt\xF6rde \xE7al\u0131\u015Ft\u0131\u011F\u0131n\u0131 | kendi i\u015Finin
+    oldu\u011Funu}} g\xF6r\xFCyorum. Do\u011Fum yeri ise {{kelime, 3 | 2 | \xFC\xE7
+    | iki}} heceli g\xF6r\xFCn\xFCyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

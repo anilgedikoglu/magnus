@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: EsinlearandaFarklidurumBaskasindanhos
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA08867970968
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ho\u015Flan\u0131yor musun yoksa \xF6yle oldu\u011Funu mu san\u0131yorsun? Seni
+    yarg\u0131lamak asla bana d\xFC\u015Fmez {{isim}}, ancak bundan emin misin? Biliyorsun,
+    ilk izlenim her zaman bir \"hale sendromu\" yarat\u0131yor, Ay'\u0131 \xE7evresindeki
+    \u0131\u015F\u0131\u011F\u0131yla birlikte alg\u0131l\u0131yor, oldu\u011Fundan
+    daha b\xFCy\xFCk g\xF6r\xFCyoruz. Bir yan\u0131lsama i\xE7inde olabilece\u011Fini
+    d\xFC\u015F\xFCn\xFCyorum. Ho\u015Fland\u0131\u011F\u0131n ki\u015Fiye biraz
+    daha yak\u0131ndan bakma imkan\u0131 bulduk\xE7a, ondaki kusurlar\u0131 ve kraterleri
+    fark edebilir, yan\u0131nda olan\u0131n eline asla su dahi d\xF6kemeyece\u011Fini
+    fark edebilirsin."
+  - "{{yas}} y\u0131ld\u0131r karakterine yat\u0131r\u0131m yap\u0131yor ve kendini
+    geli\u015Ftiriyorsun. Art\u0131k ne arad\u0131\u011F\u0131n\u0131 ve gelecekten
+    ne istedi\u011Fini \xE7ok daha iyi biliyorsun {{isim}}. Kar\u015F\u0131na \xE7\u0131kan
+    ki\u015Fi beklentilerini daha iyi kar\u015F\u0131l\u0131yor ve sana daha parlak
+    bir ya\u015Fam vadediyorsa, seni yarg\u0131lamak hi\xE7 kimsenin hakk\u0131 de\u011Fil.
+    Se\xE7imin her ne olursa olsun, ben senin akl\u0131 ba\u015F\u0131nda davranaca\u011F\u0131na,
+    kalbini dinlerken mant\u0131\u011F\u0131n\u0131 susturmayaca\u011F\u0131na ve
+    hay\u0131rl\u0131 olana eri\u015Fece\u011Fine g\xFCveniyorum. Senin yazg\u0131nda
+    \xE7ok mutlu olmak var."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler: []
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

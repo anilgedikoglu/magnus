@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degneksovalyesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA73421188118
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: e72714a3a9899e3428a5c2a9ee535d86, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: e72714a3a9899e3428a5c2a9ee535d86, type: 3}
+  contentPhotoId: asasovalyesi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"De\u011Fnek \u015E\xF6valyesi\" kart\u0131n\u0131 se\xE7tin.\n\nSe\xE7ti\u011Fin
+    kart, i\xE7indeki h\u0131rs\u0131n ve motivasyonun adeta yans\u0131mas\u0131.
+    Kafanda neler planlad\u0131n, i\xE7 d\xFCnyanda neler kurgulad\u0131n, ya\u015Fam\u0131nda
+    nelerin daha iyi olmas\u0131n\u0131 istiyorsun, bilmiyorum {{isim}}. Bildi\u011Fim
+    \u015Fey \u015Fu; kar\u015F\u0131la\u015Faca\u011F\u0131n t\xFCm yol ayr\u0131mlar\u0131nda
+    neler, se\xE7ece\u011Fini, hangi zamanda nelerden vazge\xE7ece\u011Fini \xE7ok
+    iyi biliyorsun. Ba\u015Faraca\u011F\u0131na olan inanc\u0131n, insanlar\u0131n
+    g\xF6z\xFCnde seni \xE7ok y\xFCksek bir mertebeye konumland\u0131r\u0131yor.
+    \u015Eans genellikle yaver gider ya da gitmez. Senin her iki durum i\xE7in de
+    haz\u0131rda tuttu\u011Fun hamlelerin var. \u0130htiya\xE7 duydu\u011Fun donan\u0131ma
+    fazlas\u0131yla sahipsin. \u0130stedi\u011Fin ne varsa elde etmek \xFCzeresin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi asasovalyesi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

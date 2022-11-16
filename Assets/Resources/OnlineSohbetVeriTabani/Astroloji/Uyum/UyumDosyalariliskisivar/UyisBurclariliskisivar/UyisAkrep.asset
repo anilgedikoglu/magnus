@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisAkrep
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA60148327304
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"{{burc_ilkHarfBuyuk}}
+    burcu {{data, cinsiyet=erkek, erke\u011Fi | cinsiyet=kad\u0131n, kad\u0131n\u0131
+    | cinsiyet=lgbt, mensubu}} oldu\u011Funu bilmeyen, sevgilin varken i\u015F arkada\u015F\u0131nla
+    olan uyumunu sordu\u011Fun i\xE7in seni yarg\u0131layabilir. Bilmezler ki {{burc}}
+    burcu {{data, cinsiyet=erkek, erkeklerinin | cinsiyet=kad\u0131n, kad\u0131nlar\u0131n\u0131n
+    | cinsiyet=lgbt, mensuplar\u0131n\u0131n}} alg\u0131lar\u0131 hep a\xE7\u0131kt\u0131r.
+    Bu \xE7ok \xE7apk\u0131n olduklar\u0131 anlam\u0131na gelmez; merakl\u0131d\u0131rlar.
+    Hele de kar\u015F\u0131lar\u0131nda, meraklar\u0131n\u0131 ekstra celbeden bir
+    Akrep burcu {{data, cinsiyet=erkek, kad\u0131n\u0131 | cinsiyet=kad\u0131n, erke\u011Fi
+    | cinsiyet=lgbt, insan\u0131}} varsa! Akrep burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131
+    | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, mensuplar\u0131}} dikkatlidirler
+    {{isim}}. E\u011Fer bulunduklar\u0131 i\u015F ortam\u0131 gibi kalabal\u0131k
+    ortamlarda onlar\u0131 merak eden g\xF6zler varsa, o g\xF6zleri fark eder ve
+    niyetlerini okurlar. Muhtemelen \u015Fimdiye kadar ilgin bir \u015Fekilde a\xE7\u0131\u011Fa
+    \xE7\u0131km\u0131\u015Ft\u0131r. Kar\u015F\u0131l\u0131k alamad\u0131ysan, bu
+    sana kar\u015F\u0131 bo\u015F oldu\u011Fu i\xE7in de\u011Fil, bir {{data, cinsiyet=erkek,
+    k\u0131z arkada\u015F\u0131n | cinsiyet=kad\u0131n, erkek arkada\u015F\u0131n
+    | cinsiyet=lgbt, sevgilin}} oldu\u011Funu bildi\u011Fi i\xE7indir. E\u011Fer
+    bir g\xFCn bir araya gelirseniz, ili\u015Fkinizin h\u0131zla ciddiyete uzanaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorum {{isim}}. Birbirinizde \xE7ok \u015Fey bulacaks\u0131n\u0131z...\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: akrep
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

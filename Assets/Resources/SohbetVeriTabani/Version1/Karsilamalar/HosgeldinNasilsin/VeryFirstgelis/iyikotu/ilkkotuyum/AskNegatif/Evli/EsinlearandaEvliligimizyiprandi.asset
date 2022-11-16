@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: EsinlearandaEvliligimizyiprandi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA84268633526
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bu konuda sana kat\u0131lm\u0131yorum {{isim}}. E\u015Fiyle birlikte hayatlar\u0131
+    boyunca ne badireler atlatan insanlar var. Sevgi ve birliktelik, paslanan, oksitlenen,
+    ezilen, azalan bir kurum de\u011Fil, olamaz da. \xC7\xFCnk\xFC yeri g\xF6\u011Fs\xFCm\xFCzdeki
+    cevher, yani kalbimiz. H\xFCcrelerimizle birlikte o da yenileniyor ve zaman meydan
+    okuyor. En ba\u015Fa, evlili\u011Finizin ilk g\xFCn\xFCne d\xF6n\xFCn. \u0130stikametiniz
+    neydi? \"\u0130yi g\xFCnde, k\xF6t\xFC g\xFCnde...\" Bunlar k\xF6t\xFC g\xFCn
+    say\u0131lmaz; ve daha \xE7ook iyi g\xFCnleriniz olacak."
+  - "Siz izin vermezseniz, b\xF6yle bir \u015Fey asla m\xFCmk\xFCn olmaz. Eksilen,
+    azalan ve y\u0131pranan yanlar\u0131 d\xFCzeltmek elimizde. Kar\u015F\u0131m\u0131zdaki
+    bir \u015Fey yapam\u0131yorsa bile, \xE7\xF6z\xFCm her zaman bizim kendi arka
+    bah\xE7emizde. Sen bir \u015Feyler yapmakla ba\u015Fla {{isim}}. E\u015Fin ve
+    sen, kolay bir araraya gelebilecek insanlar de\u011Filsiniz. \u0130kiniz de \xF6zel
+    ve de\u011Ferlisiniz. \u0130yisiyle k\xF6t\xFCs\xFCyle, ama \"beraberce\" ya\u015F
+    almaya, y\u0131llanmaya devam edeceksiniz; her \u015Feyin \xFCstesinden gelerek. "
+  - "Y\u0131pranan evlili\u011Finiz de\u011Fil Sevgili {{isim}}, biraz sanki ruhlar\u0131n\u0131z.
+    E\u015Fin ve sen, bir anahtar\u0131n kilidine uydu\u011Fu gibi uyuyorsunuz asl\u0131nda
+    birbirinize. Ba\u015Fkas\u0131 a\xE7amaz o kilidi. Belki biraz ho\u015Fg\xF6r\xFCyle,
+    belki biraz daha fazla ilgiyle ya\u011Flamak, sevgiyi tazelemek, heyecan\u0131
+    yeniden kazanmak gerek. Sizin biraz de\u011Fi\u015Fikli\u011Fe ihtiyac\u0131n\u0131z
+    var. Bunu da \xF6n\xFCm\xFCzdeki {{sayi, 3, 8}} i\xE7inde yapacaks\u0131n\u0131z.
+    Ne demi\u015Fler, tebdil-i mekanda ferahl\u0131k vard\u0131r."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler: []
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

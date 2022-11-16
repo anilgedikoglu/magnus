@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris140
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA05934828047
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131nda g\xF6rd\xFC\u011F\xFCm kadar\u0131yla burcun {{burc}}, \xF6n\xFCm\xFCzdeki
+    {{sabit_sayi,4,14}} g\xFCn boyunca {{kelime, terazi, ko\xE7, o\u011Flak ve yenge\xE7
+    gibi \"\xF6nc\xFC\" di\u011Fer bur\xE7lar\u0131n | bo\u011Fa, aslan, akrep ve
+    kova gibi \"sabit\" di\u011Fer bur\xE7lar\u0131n | ikizler, ba\u015Fak, yay ve
+    bal\u0131k gibi \"de\u011Fi\u015Fken\" di\u011Fer bur\xE7lar\u0131n}} negatif
+    etkileri alt\u0131nda olacak. Bu bur\xE7lara mensup insanlarla {{sayi,1,3}} saatten
+    fazla yan yana geldi\u011Finde enerjin so\u011Furuluyormu\u015F gibi hissedebilir,
+    g\xFCn sonunda halsiz kalabilirsin. Telvelerin, mecbur kalmad\u0131k\xE7a bu
+    ki\u015Filerle d\xF6rt duvar aras\u0131na girmekten {{sabit_sayi,4,14}} g\xFCn
+    boyunca ka\xE7\u0131nman\u0131 tavsiye ediyor {{isim}}. Bunu ba\u015Faramayacaksan,
+    \xFCzerinde bir \"{{kelime, akik ta\u015F\u0131 | ye\u015Fim ta\u015F\u0131 |
+    ametist ta\u015F\u0131 | apatit ta\u015F\u0131 | akuamarin ta\u015F\u0131 | aragonit
+    ta\u015F\u0131 | y\u0131ld\u0131z ta\u015F\u0131 | amazon ta\u015F\u0131 | kan
+    ta\u015F\u0131 | amber ta\u015F\u0131 | azurit ta\u015F\u0131 | krizokol ta\u015F\u0131
+    | sitrin ta\u015F\u0131 | garnet ta\u015F\u0131 | hematit ta\u015F\u0131 | labradorit
+    ta\u015F\u0131 | lacivert ta\u015F\u0131 | krisopraz ta\u015F\u0131 | bak\u0131r
+    ta\u015F\u0131 | ay ta\u015F\u0131 | morganit ta\u015F\u0131 | oniks ta\u015F\u0131
+    | rodokrozit ta\u015F\u0131 | peridot ta\u015F\u0131 | kuartz ta\u015F\u0131
+    | obsidyan ta\u015F\u0131 | zebercet ta\u015F\u0131 | kehribar ta\u015F\u0131}}\"
+    bulundurman\u0131n koruyucu faydas\u0131 olacakt\u0131r."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

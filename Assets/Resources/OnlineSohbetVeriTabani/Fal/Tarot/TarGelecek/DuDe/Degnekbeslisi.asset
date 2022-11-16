@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekbeslisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA69415185966
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 434f75dad43766c49a9e33e0ca9dc13f, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 434f75dad43766c49a9e33e0ca9dc13f, type: 3}
+  contentPhotoId: asabeslisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek Be\u015Flisi\" kart\u0131n\u0131 se\xE7tin.\n\n\u0130\xE7ten
+    pazarl\u0131kl\u0131 ve hesap\xE7\u0131 insanlar\u0131 iyi sezme ve ama\xE7lar\u0131n\u0131
+    \xF6nceden fark etme gibi bir kabiliyetin var senin. Se\xE7ti\u011Fin bu kart,
+    \xE7eki\u015Fme ya\u015Fad\u0131\u011F\u0131n, rekabet halinde oldu\u011Fun ya
+    da fikir uyu\u015Fmazl\u0131klar\u0131n\u0131zdan dolay\u0131 yan yana pek gelmek
+    istemedi\u011Fin bu insanlarla s\u0131k ileti\u015Fim i\xE7ine girece\u011Fini
+    i\u015Faret ediyor {{isim}}. S\xF6zl\xFC ve gizli bir sava\u015F ger\xE7ekle\u015Fecek,
+    kazanan ise sen olacaks\u0131n. Tansiyon y\xFCkselten s\xFCrt\xFC\u015Fmelerden
+    akl\u0131n ve iraden sayesinde galip ayr\u0131laca\u011F\u0131n\u0131 g\xF6r\xFCyorum.
+    Zekan\u0131 kabul edecek, fikirlerine nihayet sayg\u0131 g\xF6sterecekler. Senin
+    yan\u0131nda durana ne mutlu; kar\u015F\u0131na ge\xE7en ise ziyan olacak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asabeslisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

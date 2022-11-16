@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: PazarCalisiyor
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA57455292051
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Seni yar\u0131n m\xFCthi\u015F bir ko\u015Fu\u015Fturmacan\u0131n bekledi\u011Fini
+    d\xFC\u015F\xFCn\xFCyor olabilirsin. Hatta bununla ilgili olarak i\xE7inde \u015Fimdiden
+    ba\u015Flam\u0131\u015F bir huzursuzluk olabilir. Genelde hislerinde yan\u0131lmayan
+    birisin; bunu biliyorum {{isim}}. Fakat bu defa yan\u0131l\u0131yorsun. Sana
+    iyi haberlerim var. De\u011Ferlendirmelerim, ge\xE7mi\u015F haftalarda yolunda
+    olmayan i\u015Flerinin bile yar\u0131n ray\u0131na girece\u011Fini s\xF6yl\xFCyor.
+    Hayat seni yormayacak. Mesle\u011Finle ilgili sarf edece\u011Fin efor, sana misliyle
+    geri d\xF6necek. \u0130sminde {{harf}} harfi olan birinin de deste\u011Fi ile,
+    i\u015Finin kapsam\u0131nda olan bir engelin \xFCzerinden kolayca atlayacaks\u0131n.
+    Yar\u0131n \xF6\u011Fleden sonra, eline hi\xE7 beklemedi\u011Fin bir miktar para
+    ge\xE7ebilir. E\u011Fer hesab\u0131n varsa, bunun direkt olarak hesab\u0131na
+    gelece\u011Fini d\xFC\u015F\xFCn\xFCyorum. Bu sende memnuniyet uyand\u0131racak.
+    Ak\u015Fam saatlerinde soyad\u0131 seninle ayn\u0131 olan biriyle yapaca\u011F\u0131n
+    telefon konu\u015Fmas\u0131nda, sal\u0131 g\xFCn\xFC onun i\xE7in bir \u015Fey
+    yapman gerekti\u011Fini \xF6\u011Frenebilirsin Sevgili {{isim}}. Gece ise r\xFCyanda
+    {{kelime, beyaz bir at | kocaman bir sal\u0131ncakta salland\u0131\u011F\u0131n\u0131
+    | sevdi\u011Fin biriyle b\xFCy\xFCk bir a\u011Fac\u0131n alt\u0131nda oturdu\u011Funuzu
+    ve sohbet etti\u011Finizi | kuca\u011F\u0131nda bir bebek ta\u015F\u0131d\u0131\u011F\u0131n\u0131
+    | bir \xE7al\u0131 s\xFCp\xFCrgesi ile bulundu\u011Fun yeri s\xFCp\xFCrd\xFC\u011F\xFCn\xFC}}
+    g\xF6rme ihtimalin var. Bu, hay\u0131rl\u0131 bir havadise i\u015Faret edecek.
+    ;)"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: yno
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: bugun
+    degiskenDegeri: 7
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: yno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

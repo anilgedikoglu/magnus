@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: 2Subat
+  m_EditorClassIdentifier: 
+  etiket: dayc
+  aciklama:
+  - "\u015Eubat ay\u0131n\u0131n bat\u0131l\u0131 dillerdeki adlar\u0131, Roma ar\u0131nma
+    tanr\u0131\xE7as\u0131 Februus'un ad\u0131ndan gelir. Senin ad\u0131n nereden
+    geliyor?"
+  - "G\xFCl fidanlar\u0131n\u0131n budand\u0131\u011F\u0131 ve \xE7im alanlara k\u0131\u015F
+    g\xFCbresinin at\u0131ld\u0131\u011F\u0131 ay."
+  aranacakEtiket: dgun
+  gerekenDegiskenler:
+  - degiskenAdi: dogum ayi
+    degiskenDegeri: 2
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 1
+  ozelKontrol: 
+  ayarlanacakDegisken: 

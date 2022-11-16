@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tguclu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA98916168589
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "En g\xFC\xE7l\xFC bur\xE7 bug\xFCn hangisi diye sorsalar, verece\u011Fim cevap
+    \"{{burc}}\" olurdu. Bug\xFCn g\xFCn i\xE7erisinde kendini {{kelime, \u0131spanak
+    yutmu\u015F Temel Reis | k\u0131l\u0131c\u0131n\u0131 havaya kald\u0131rm\u0131\u015F
+    He-Man | Mortal Combat'da herkesi dondurma yetene\u011Fine sahip Sub-Zero | k\u0131rm\u0131z\u0131
+    pelerinini kuru temizlemeciden yeni alm\u0131\u015F Superman | kripto para de\u011Ferlerini
+    bir s\xF6z\xFCyle indirip y\xFCkseltebilen Elon Musk | mahalledeki arkada\u015Flar\u0131yla
+    iddias\u0131na hal\u0131 saha ma\xE7\u0131 yapacak olan Cristiano Ronaldo}} gibi
+    hissedebilirsin. Her \u015Feyin senin kontrol\xFCnde oldu\u011Funu ve hi\xE7
+    kimsenin senin yeteneklerini a\u015Famad\u0131\u011F\u0131n\u0131 fark edeceksin.
+    Baz\u0131 \xF6nemli i\u015Flere s\u0131f\u0131rdan ba\u015Flamak ve \xE7ok yol
+    katedebilmek i\xE7in harika bir g\xFCndesin. U\u011Fra\u015Ft\u0131\u011F\u0131n
+    spor dallar\u0131 varsa, bug\xFCn senin i\xE7in kazan\xE7 ka\xE7\u0131n\u0131lmaz.
+    Her t\xFCrl\xFC ikili rekabetin galibi sen olacaks\u0131n. \xD6zel hayat\u0131nda
+    ise g\xFCc\xFCn, mant\u0131\u011F\u0131n ve s\xF6zlerin olacak. T\xFCm bu g\xFCc\xFC
+    iyi de\u011Ferlendirmeni tavsiye ediyorum {{isim}}."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

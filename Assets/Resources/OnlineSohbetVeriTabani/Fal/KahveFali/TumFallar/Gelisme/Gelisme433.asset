@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme433
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA41608484952
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131nda, insanlarla \xE7ok\xE7a muhatap olan ve olduk\xE7a kalabal\u0131k
+    bir ortamda \xE7al\u0131\u015Fan, \xE7ok sa\u011Flam karakterli bir erkek g\xF6r\xFCyorum.
+    Omuzlar\u0131ndaki y\xFCklere ra\u011Fmen belinin bir milim dahi b\xFCk\xFClmemesi,
+    karakterinin ne kadar g\xFC\xE7l\xFC oldu\u011Funun en b\xFCy\xFCk i\u015Fareti.
+    Seninle yak\u0131n temasta olan bu ki\u015Fi, son zamanlarda maddi olarak \xE7ok
+    \xF6rseleniyor gibi g\xF6z\xFCk\xFCyor {{isim}}. Ancak az kalm\u0131\u015F; ona
+    \xE7ok yak\u0131nda bir yard\u0131m eli uzanacak. Ad\u0131nda {{harf}} harfi
+    olan \xFC\xE7\xFCnc\xFC bir \u015Fah\u0131stan eline ge\xE7ecek olan para onu
+    ve dolay\u0131s\u0131yla da seni \xE7ok rahatlatacak. Kimseye eyvallah etmeyen
+    ve haram\u0131n lokmas\u0131na dahi tenezz\xFCl etmeyenlere, rabbim b\xF6yle
+    yard\u0131m ediyor i\u015Fte...\n\n{{isim}} senin {{ay_+5}} ay\u0131n\u0131n
+    ba\u015F\u0131nda hay\u0131rl\u0131 bir i\u015F i\xE7in {{kelime, iki \xFC\xE7
+    saat | bir iki saat | \xFC\xE7 d\xF6rt saat | d\xF6rt be\u015F saat | be\u015F
+    alt\u0131 saat}} kadar s\xFCrecek bir yolculu\u011Fun var. Bu i\u015Fte sana
+    da ihtiya\xE7 oldu\u011Funu ve i\u015Fin sonunun seni de mutlu edece\u011Fini
+    hissediyorum. \n\nAyr\u0131ca y\xFCkselmekte olan bir de \xE7\u0131nar var telvelerinde.
+    \U0001F332 {{mevsim_+1}} mevsimine do\u011Fru ailenin kalabal\u0131kla\u015Faca\u011F\u0131n\u0131
+    ya da hane i\xE7i mutlulu\u011Funuzun artaca\u011F\u0131n\u0131 bilmeni isterim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

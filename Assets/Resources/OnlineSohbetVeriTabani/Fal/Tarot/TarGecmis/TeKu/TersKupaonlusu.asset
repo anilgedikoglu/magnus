@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKupaonlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA56540773988
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 8f595b1d8d6c79144bb7826c8364c954, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 8f595b1d8d6c79144bb7826c8364c954, type: 3}
+  contentPhotoId: kupaonlusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Kupa Onlusu\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nG\xF6rd\xFC\u011F\xFCm
+    kadar\u0131yla birtak\u0131m nedenlerden dolay\u0131 huzurun ka\xE7m\u0131\u015F.
+    Her \u015Feyi yoluna koydu\u011Funu d\xFC\u015F\xFCn\xFCrken, i\u015Fleyi\u015F
+    kendili\u011Finden bozulma emareleri g\xF6stermi\u015F. Kart\u0131n, ruh dengeni
+    sa\u011Flayan \xE7ivilerden baz\u0131lar\u0131n\u0131n s\xF6k\xFCld\xFC\u011F\xFCn\xFC
+    ve y\u0131k\u0131lmaktan korkmaya ba\u015Flad\u0131\u011F\u0131n\u0131 i\u015Faret
+    ediyor. \u0130stedi\u011Fin gibi gitmeyen \u015Feyler oldu\u011Funu d\xFC\u015F\xFCnmeye
+    dayanamam\u0131\u015Fs\u0131n. Kontrol kayb\u0131 hissi, zamanlamalar\u0131n
+    konusunda da senkronizasyonunu bozmu\u015F {{isim}}. Gecikmeler ve zaman\u0131nda
+    atmad\u0131\u011F\u0131n ad\u0131mlar, seni baz\u0131 \u015Feylerin iptal olmas\u0131n\u0131n
+    e\u015Fi\u011Finden d\xF6nd\xFCrm\xFC\u015F. \xD6nem verdi\u011Fin konularda
+    i\u015Fleri zar zor toparlam\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kupaonlusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

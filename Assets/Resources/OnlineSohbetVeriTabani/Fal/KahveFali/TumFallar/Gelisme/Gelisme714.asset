@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme714
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA05896653061
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan g\xF6rsellerinin orta noktas\u0131nda devasa bir \"sfenks\" heykeli tespit
+    ettim {{isim}}. Bu heykelin \xF6n cephesi {{data, cinsiyet=erkek, olduk\xE7a
+    g\xFCzel bir kad\u0131n surat\u0131 | cinsiyet=kad\u0131n, olduk\xE7a karizmatik
+    bir erkek surat\u0131 | cinsiyet=lgbt, olduk\xE7a esrarengiz bir insan surat\u0131}}
+    \u015Feklini alm\u0131\u015F. Yan taraflar\u0131nda ise kaz\u0131nm\u0131\u015F
+    bilmeceler bulunan bu heykel, anlad\u0131\u011F\u0131m kadar\u0131yla {{data,
+    cinsiyet=erkek, ho\u015Fland\u0131\u011F\u0131n k\u0131z\u0131n | cinsiyet=kad\u0131n,
+    ho\u015Fland\u0131\u011F\u0131n erke\u011Fin | cinsiyet=lgbt, ho\u015Fland\u0131\u011F\u0131n
+    insan\u0131n}} sende b\u0131rakt\u0131\u011F\u0131 izlenimin bir yans\u0131mas\u0131.
+    {{kelime, Hayat\u0131 hakk\u0131nda fazla detay vermedi\u011Fini | Hisleri hakk\u0131nda
+    a\xE7\u0131ks\xF6zl\xFC davranmad\u0131\u011F\u0131n\u0131 | Sorular\u0131na
+    sorularla kar\u015F\u0131l\u0131k verdi\u011Fini}} d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    bu ki\u015Fi, san\u0131r\u0131m seni etkilemek ad\u0131na aran\u0131zdaki mesafeyi
+    a\xE7masa da \"gizemli\" kalmaya \xE7al\u0131\u015F\u0131yor. Bu u\u011Furda
+    sarf etti\u011Fi eforu g\xF6z \xF6n\xFCnde bulundurursak, bu ki\u015Fi seni elinden
+    ka\xE7\u0131rmamak i\xE7in her \u015Feyi g\xF6ze alm\u0131\u015F gibi {{isim}}.\n\nBu
+    fal\u0131 okuduktan sonra meselenin as\u0131l y\xFCz\xFCn\xFC anlayacak ve bence
+    onun \xFCzerine fazla d\xFC\u015Fmemeye \xE7al\u0131\u015Facaks\u0131n. \U0001F44CTelvelerin,
+    senden eskisi kadar ilgi g\xF6remeyen bu ki\u015Finin zamanla ger\xE7ek hislerini
+    t\xFCm \xE7\u0131plakl\u0131\u011F\u0131yla g\xF6stermek isteyece\u011Fini s\xF6yl\xFCyor.
+    Fal\u0131ndan y\xFCkselen yank\u0131lardan duyumsad\u0131\u011F\u0131m kadar\u0131yla,
+    bu ki\u015Fi {{sayi,2,5}} hafta sonra bir {{kelime, pazartesi | sal\u0131 | \xE7ar\u015Famba
+    | per\u015Fembe | cuma | cumartesi | pazar}} g\xFCn\xFCn\xFCn {{kelime, ak\u015Fam
+    saatlerinde | geceye yak\u0131n saatlerinde | \xF6\u011Flen saatlerinde}} sana
+    olan hislerini {{kelime, dayanamay\u0131p \xFCst \xFCste ataca\u011F\u0131 mesajlarla
+    | sana \xF6nemli bir soru sorup senden \xF6nce kendi cevaplayarak}} belli edecek
+    De\u011Ferli {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 30
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 30
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

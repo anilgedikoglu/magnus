@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: KarmasikBirvarbiryok
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA40820603646
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sevgisinden \u015F\xFCphem yok. Niyetinin de iyi oldu\u011Funu d\xFC\u015F\xFCn\xFCyorum.
+    Fakat fikirlerini eyleme ge\xE7irme noktas\u0131nda s\u0131k\u0131nt\u0131 ya\u015F\u0131yor.
+    Sevdi\u011Fin ki\u015Fi, sana nas\u0131l bir yakla\u015F\u0131m sergilemesi gerekti\u011Fini
+    hala anlayamam\u0131\u015F. Seni istedi\u011Fi kadar \xE7\xF6z\xFCmleyememi\u015F.
+    O nedenle zaman zaman kendisini \xE7ekiyor. Kafas\u0131nda da baz\u0131 soru
+    i\u015Faretleri g\xF6r\xFCyorum. Hemfikir olmad\u0131\u011F\u0131n\u0131z baz\u0131
+    konular, birlikteli\u011Finizi ilerletmenizin sa\u011Fl\u0131kl\u0131 olmayaca\u011F\u0131
+    fikrini onda uyand\u0131r\u0131yor olabilir. Yak\u0131nda onunla a\xE7\u0131k
+    konu\u015Fabilece\u011Fin bir f\u0131rsat yakalayacaks\u0131n\_{{isim}}. Bunu
+    iyi de\u011Ferlendirirsen, pek \xE7ok \u015Fey netle\u015Fecek. "
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler: []
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

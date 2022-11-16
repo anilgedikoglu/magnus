@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyTanidikYay
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA19904318614
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Yay
+    {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri
+    | cinsiyet=lgbt, mensuplar\u0131}} {{burc}} {{data, cinsiyet=erkek, erkeklerine
+    | cinsiyet=kad\u0131n, kad\u0131nlar\u0131na | cinsiyet=lgbt, insanlar\u0131na}}
+    kar\u015F\u0131 ekstra d\xFCr\xFCstt\xFCr. Evli oldu\u011Fun i\xE7in seninle
+    olmas\u0131n\u0131n m\xFCmk\xFCn olmad\u0131\u011F\u0131n\u0131 a\xE7\u0131k
+    bir dille belli edebilir ya da hareketleriyle ima edebilir. Fakat bunu bir n\xFCans
+    ile yapt\u0131\u011F\u0131n\u0131 g\xF6receksin; fl\xF6rt\xF6z bir yolla. Onu
+    tan\u0131mak ya da onunla yak\u0131nla\u015Fmak istiyorsan, \\\"yapabileceklerinin\\\"
+    de\u011Fil, \\\"yap\u0131labileceklerin\\\" en iyisini yapt\u0131\u011F\u0131n\u0131
+    g\xF6rmek isteyecektir. Fakat bu noktada senin i\xE7in yine bir zorluk var {{isim}}.
+    Onlar, l\xFCzumundan samimi ve v\u0131c\u0131k v\u0131c\u0131k insanlar\u0131
+    asla sevmezler. Ona do\u011Fru zamanda ve gerekti\u011Fi yerde i\xE7ten ve samimi
+    davranmal\u0131, niyetini \xFCzeri kapal\u0131 bir \u015Fekilde belli etmelisin.
+    Mesaj yerine ula\u015F\u0131rsa, fitil ate\u015Flendi demektir, pim \xE7ekildi
+    demektir. Daha fazlas\u0131n\u0131n olmas\u0131, o saatten sonra an meselesidir.
+    ;) \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "tan\u0131d\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: yay
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

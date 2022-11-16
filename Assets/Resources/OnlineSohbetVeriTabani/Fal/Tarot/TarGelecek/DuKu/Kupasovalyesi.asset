@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupasovalyesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA28998966398
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: fa62608fe01cc54418d0f497d9668dc6, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: fa62608fe01cc54418d0f497d9668dc6, type: 3}
+  contentPhotoId: kupasovalyesi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Kupa \u015E\xF6valyesi\" kart\u0131n\u0131 se\xE7tin.\n\nSen
+    bug\xFCne kadar bir \u015Feylere \xE7ok sabretmi\u015Fsin. Birileri se\xE7imleri
+    yapm\u0131\u015F, birileri komut vermi\u015F, birileri h\xFCkm\xFCn\xFC s\xFCrm\xFC\u015F
+    ve sesini hi\xE7 \xE7\u0131kartmadan sab\u0131rla onlar\u0131 izlemi\u015Fsin.
+    \xD6n\xFCm\xFCze a\xE7\u0131lan bu kart ise s\xF6z s\xF6yleme s\u0131ras\u0131n\u0131n
+    sana gelece\u011Fini ifade ediyor {{isim}}. Yetki, g\xFC\xE7 ve sorumluluk senin
+    eline ge\xE7ecek. O g\xFCn sen hamle yapacaks\u0131n ve di\u011Ferleri izleyecek.
+    Bu kontrol seni hayattaki amac\u0131na \xE7ok fazla yakla\u015Ft\u0131racak.
+    O duruma do\u011Fru emin ad\u0131mlarla ilerliyorsun. Yapt\u0131\u011F\u0131n
+    her \u015Fey seni o pozisyona do\u011Fru s\xFCr\xFCkl\xFCyor. Donan\u0131m\u0131n
+    giderek art\u0131yor ve avantajlarla ku\u015Fan\u0131yorsun. O g\xFCn t\xFCm
+    s\xF6z sende olacak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kupasovalyesi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

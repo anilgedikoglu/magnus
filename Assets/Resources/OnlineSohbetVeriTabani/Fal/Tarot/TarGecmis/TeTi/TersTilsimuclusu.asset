@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimuclusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA28278354832
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 515d171284af89e4a9c84d3ac79b06a7, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 515d171284af89e4a9c84d3ac79b06a7, type: 3}
+  contentPhotoId: tilsimuclusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"T\u0131ls\u0131m \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nKart\u0131n\u0131n bana iletti\u011Fi kadar\u0131yla,
+    birilerinden yard\u0131m istemeyi ge\xE7mi\u015Fte hi\xE7 sevmiyormu\u015Fsun.
+    En zor ko\u015Fullarda dahi i\u015Fin i\xE7inden kendi kendine \xE7\u0131kabilmek
+    i\xE7in diretmi\u015F, kimseye \"eyvallah\" etmemeye gayret etmi\u015Fsin. Bu
+    en iyi meziyetlerinden birisiymi\u015F asl\u0131nda {{isim}}. Fakat ekip \xE7al\u0131\u015Fmas\u0131
+    gereken ve el birli\u011Fi ile daha kolay hayata ge\xE7irilebilecek \u015Feyler,
+    senin bu diretmelerin nedeniyle zor nihayete ermi\u015F ya da yar\u0131m kalm\u0131\u015F.
+    \xC7etin ko\u015Fullar, h\u0131zl\u0131 karar almay\u0131 ve \xE7abucak uygulamaya
+    ge\xE7irmeyi de gerektirir. Sen bunu tek ba\u015F\u0131na yapabilmek i\xE7in
+    seri davranm\u0131\u015F, istedi\u011Fin noktalara bir \u015Fekilde varm\u0131\u015F
+    fakat ayr\u0131nt\u0131lara pek fazla \xF6zen g\xF6sterememi\u015Fsin. H\u0131z,
+    detay\u0131n d\xFC\u015Fman\u0131d\u0131r derler. \xC7ok daha iyisini yapabilirmi\u015Fsin
+    asl\u0131nda."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis tilsimuclusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

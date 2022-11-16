@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc954
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA41278504834
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Kay\u0131\u015F\u0131 terden a\u015F\u0131nm\u0131\u015F, \xE7izikler i\xE7erisindeki
+    cam\u0131 sararm\u0131\u015F, beyaz kadranl\u0131 bir saat g\xF6r\xFCyorum. Bu
+    saatin sahibinin \u015Fu anda hayatta olmad\u0131\u011F\u0131n\u0131 hissediyorum
+    {{isim}}. Fakat sa\u011Fken seni g\xF6rmeyi, \xF6zel hayat\u0131nda senin mutlu
+    oldu\u011Funu duymay\u0131, senin bir aile kurdu\u011Funa \u015Fahit olmay\u0131
+    \xE7ok istermi\u015F. \u0130leride sen, {{kelime, bu ki\u015Finin bizzat tan\u0131mad\u0131\u011F\u0131
+    fakat ad\u0131n\u0131 duydu\u011Fu | bu ki\u015Finin dolayl\u0131 yollarla ad\u0131n\u0131
+    duydu\u011Fu ya da babas\u0131n\u0131 tan\u0131d\u0131\u011F\u0131 | bu ki\u015Finin
+    uzaktan uza\u011Fa ad\u0131n\u0131 duydu\u011Fu ve annesini tan\u0131d\u0131\u011F\u0131}}
+    biriyle, {{kelime, uzun bir ili\u015Fki | \xE7ok da uzun olmayan bir ili\u015Fki
+    | 2 y\u0131la varan bir ili\u015Fki | 3 y\u0131la varan bir ili\u015Fki | 4.5
+    y\u0131la varan bir ili\u015Fki | 1 y\u0131la varan bir ili\u015Fki}} neticesinde
+    evleneceksin. Telvelerin, bu ki\u015Finin enerjisinin, deste\u011Finin ve g\xFCc\xFCn\xFCn
+    hala senin \xFCzerinde oldu\u011Funu s\xF6yl\xFCyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 28
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 28
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

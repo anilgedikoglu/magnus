@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersAdalet
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA04501546734
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 272abd7cd1157944f93831df40191c18, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 272abd7cd1157944f93831df40191c18, type: 3}
+  contentPhotoId: adalet-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Adalet\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSevdi\u011Fin
+    insanlar taraf\u0131ndan son zamanlarda haks\u0131zl\u0131\u011Fa u\u011Fruyorsun.
+    Bu insanlara \xE7ok fazla g\xFCvenmenin san\u0131r\u0131m ufak ufak cezas\u0131n\u0131
+    \xE7ekmeye ba\u015Flad\u0131n {{isim}}. Benzerini daha \xF6nce defalarca kez
+    ya\u015Fam\u0131\u015F olmana ra\u011Fmen, g\xF6n\xFCl yine de s\xF6z dinlemiyor,
+    \xF6yle de\u011Fil mi? Dengelerin her defas\u0131nda bozuluyor ve t\xFCm g\xFCc\xFCnle
+    yeniden sa\u011Fl\u0131yorsun. Se\xE7ti\u011Fin kart, kritik konularda en yak\u0131nlar\u0131nla
+    dahi istedi\u011Fin \u015Fekilde uzla\u015Fmaya varamad\u0131\u011F\u0131n\u0131
+    i\u015Faret ediyor. Yasal s\xFCre\xE7ler, yap\u0131lan hatalar ya da birilerinin
+    umursamaz tav\u0131rlar\u0131, planlar\u0131n\u0131 ertelemene sebep oluyor olabilir.
+    Bekledi\u011Fin sonu\xE7lara ula\u015Fman ve \xE7\u0131kan sorunlar\u0131 telafi
+    etmen zaman al\u0131yor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi adalet ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

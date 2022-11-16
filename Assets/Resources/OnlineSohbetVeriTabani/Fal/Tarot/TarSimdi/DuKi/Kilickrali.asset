@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilickrali
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA36484104502
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: fa50f76b7bc301545a70f3a0d133ee93, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: fa50f76b7bc301545a70f3a0d133ee93, type: 3}
+  contentPhotoId: kilickrali
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Kral\u0131\" kart\u0131n\u0131 se\xE7tin.\n\nHay\u0131rl\u0131
+    u\u011Furlu olsun {{isim}}. Se\xE7ti\u011Fin bu kart, sonu\xE7lar\u0131n belli
+    oldu\u011Funu ve istedi\u011Fin gibi oldu\u011Funu s\xF6yl\xFCyor. Hen\xFCz haberleri
+    sana gelmemi\u015F olabilir. Yoldad\u0131r... G\xF6sterdi\u011Fin efor seni zirveye
+    ta\u015F\u0131m\u0131\u015F. Baz\u0131 insanlara kar\u015F\u0131 verdi\u011Fin
+    m\xFCcadelede kazanan sensin. S\u0131rt\u0131 yere gelenleri bir bir g\xF6r\xFCyorsun.
+    \u0130dare art\u0131k tamamen senin ellerinde. Ya\u015Fam\u0131ndaki tek otorite
+    sensin. \u0130steklerinin ger\xE7ekle\u015Fmesi i\xE7in bir i\u015Faretin yeterli.
+    Amac\u0131na ula\u015Fmak i\xE7in kalk\u0131p ilerlemen gerekmiyor. Talep etti\u011Fin
+    her ne varsa art\u0131k \xF6n\xFCnde buluyorsun. \xC7evresel g\xFC\xE7lerin sundu\u011Fu
+    yard\u0131mlar\u0131n odak noktas\u0131nda da sen vars\u0131n. Destekleniyor
+    ve kollan\u0131yorsun."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilickrali
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

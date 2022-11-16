@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme726
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA77599335784
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Orta k\u0131s\u0131mlardaki yans\u0131malar\u0131nda kar\u015F\u0131la\u015Ft\u0131\u011F\u0131m
+    ve t\u0131pta \"abdomen\" olarak bilinen \"kar\u0131n b\xF6lgesi\" g\xF6r\xFCnt\xFCleri,
+    do\u011Frusu biraz acayip {{isim}}. Normalde karaci\u011Fer, safra kesesi ve
+    ba\u011F\u0131rsaklar\u0131 da i\xE7ermesi gerekirken, fal\u0131ndaki abdomen
+    b\xF6lgesinde yaln\u0131zca dalak organ\u0131 mevcut. Orta \xC7a\u011F'da t\u0131p
+    bilimi g\xFCn\xFCm\xFCzdeki kadar geli\u015Fmemi\u015Fken, \"dalak\" organ\u0131n\u0131n
+    insanlar\u0131n hissetti\u011Fi melankoli duygusundan sorumlu tutuldu\u011Funu
+    biliyor muydun?\n\nTelvelerin, uzun zamand\u0131r ruhunu paralayan, hatta beden
+    sa\u011Fl\u0131\u011F\u0131n\u0131 da etkileyen h\xFCzn\xFCn nihayet sona ermeye
+    ba\u015Flad\u0131\u011F\u0131n\u0131 s\xF6yl\xFCyor. Melankolik duygular\u0131n\u0131n
+    bir\xE7ok kayna\u011F\u0131 oldu\u011Funu hissediyorum. E\u015Fin beyefendiyi
+    kaybetmenin \xFCzerine \"kendi ayaklar\u0131 \xFCzerinde durabilen\" bir kad\u0131n
+    olman toplum nezdinde \u015Fa\u015Fk\u0131nl\u0131kla kar\u015F\u0131lanm\u0131\u015F,
+    k\u0131skan\u0131lm\u0131\u015F ve baz\u0131 yersiz yorumlara konu olmu\u015F
+    olabilir Sevgili {{isim}}. Ancak bilmelisin ki, insanlar\u0131 adeta susturacak
+    olan birtak\u0131m yeni geli\u015Fmeler, {{gelecek_ay}} ay\u0131ndan tezi yok
+    sana huzur a\u015F\u0131lamaya ba\u015Flayacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

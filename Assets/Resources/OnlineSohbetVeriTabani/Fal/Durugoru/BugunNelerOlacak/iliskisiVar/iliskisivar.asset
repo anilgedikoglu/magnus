@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: iliskisivar
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA36320884499
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Senin se\xE7imlerin d\u0131\u015F\u0131nda ger\xE7ekle\u015Fen birtak\u0131m
+    olaylar, bug\xFCn y\xFCz\xFCn\xFC g\xFCld\xFCrecek. Bir telefon alabilir, sana
+    uzak fakat k\u0131ymet verdi\u011Fin bir yer ile ilgili sevdiklerinden g\xFCzel
+    bir geli\u015Fme duyabilirsin {{isim}}. Belki bir yap\u0131la\u015Fma, belki
+    bir in\u015Faat, bir restorasyon, belki de bir el de\u011Fi\u015Ftirme durumu...
+    Sevgilin, sana s\xF6yleyece\u011Fi baz\u0131 \u015Feylerle i\xE7inin bir anda
+    umut dolmas\u0131n\u0131 sa\u011Flayacak. Ona bug\xFCn nazik davranmal\u0131s\u0131n,
+    \xE7\xFCnk\xFC hakediyor. Y\xFCkte hafif ancak pahada a\u011F\u0131r elektronik
+    cihazlardan bug\xFCn biraz uzak olsan iyi edersin {{isim}}. Aksilik r\xFCzgarlar\u0131
+    ba\u015F\u0131nda esiyor; sakarl\u0131kla birini d\xFC\u015F\xFCrebilir, \xE7izebilir,
+    k\u0131rabilir ve kendini maddi zarara sokabilirsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: 'saatmin '
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

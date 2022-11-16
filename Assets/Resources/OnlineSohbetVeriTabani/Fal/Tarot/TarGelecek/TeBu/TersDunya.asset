@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDunya
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA82688154040
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 82a45f2600e00cf4abdfb28dcf724ec4, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 82a45f2600e00cf4abdfb28dcf724ec4, type: 3}
+  contentPhotoId: dunya-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"D\xFCnya\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSe\xE7ti\u011Fin
+    kart, mutlu bir son ile \xE7emberin k\u0131r\u0131ld\u0131\u011F\u0131n\u0131
+    ve d\xF6ng\xFCn\xFCn bozuldu\u011Funu i\u015Faret ederken, sende bu kart ters
+    a\xE7\u0131lm\u0131\u015F {{isim}}. Bekledi\u011Fin neticelere ula\u015Fman zaman
+    alacak. Baz\u0131 \u015Feylere en ba\u015F\u0131ndan ba\u015Flaman gerekece\u011Fini
+    ve bir \u015Feylerden de umudu tamamen kesece\u011Fini d\xFC\u015F\xFCn\xFCyorum.
+    Bir yerlerde tak\u0131ld\u0131ysan, ilerleyemiyorsan, sil ba\u015Ftan denemenin
+    faydal\u0131 olaca\u011F\u0131n\u0131 s\xF6yleyebilirim. Bu kart vesilesiyle
+    en b\xFCy\xFCk tavsiyem ise \u015Fu; ne olursa olsun moralini asla bozmamal\u0131,
+    hayal etti\u011Fin \u015Feylerin pe\u015Finden ko\u015Fmal\u0131s\u0131n. Israr\u0131nda
+    ne kadar diretirsen, hayat umutlar\u0131n\u0131 o oranda ayaklar\u0131na getirir."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek dunya ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

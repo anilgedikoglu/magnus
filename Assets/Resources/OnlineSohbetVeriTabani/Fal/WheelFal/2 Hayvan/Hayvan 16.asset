@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Hayvan 16
+  m_EditorClassIdentifier: 
+  idIndex: 20222173246AA50348582763
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: f670e838b08a34c95a692cd41645c76f, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: f670e838b08a34c95a692cd41645c76f, type: 3}
+  contentPhotoId: hayvansohbet
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Senin i\xE7in \xE7\u0131kan hayvan, bir kurba\u011Fa! \u0130\xE7inde bulundu\u011Fun
+    zaman diliminden \xFCrkt\xFC\u011F\xFCn\xFC g\xF6r\xFCyorum {{isim}}. Tekinsiz
+    sulardaki c\u0131l\u0131z bir yapra\u011F\u0131n \xFCzerinde oldu\u011Funu d\xFC\u015F\xFCn\xFCyor
+    gibisin. Bir i\u015Faret gelse, bir f\u0131rsat yakalasan, var g\xFCc\xFCnle
+    kendini \xF6telere bir yere atacaks\u0131n. Bekledi\u011Fin zaman\u0131n gelmesine
+    {{sayi,2,14}} haftadan daha k\u0131sa bir s\xFCre var."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: wheelspin fal hayvan
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: wheel mod
+    degiskenDegeri: fal
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: wheelspin fal hayvan
+    kontrol: 0
+  - degiskenAdi: wheel mod
+    degiskenDegeri: fal
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

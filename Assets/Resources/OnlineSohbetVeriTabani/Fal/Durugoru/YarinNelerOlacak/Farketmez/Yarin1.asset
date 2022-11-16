@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Yarin1
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA30712332182
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Yar\u0131n sabah senin i\xE7in g\xFCn, karma\u015F\u0131k ba\u015Flayacak {{isim}}.
+    Uyu\u015Fuk ve ku\u015Fkulu uyanacak, ne sebeple huzursuz hissetti\u011Fini bir
+    s\xFCre anlayamayacaks\u0131n. G\xFCn\xFCn ilk \xF6\u011F\xFCn\xFCnden yakla\u015F\u0131k
+    {{kelime, yar\u0131m saat | 45 dakika | 1-1.5 saat | 2-2.5 saat}} kadar sonra,
+    kendini bir anda rahat ve \xF6zg\xFCvenli hissetmeye ba\u015Flayacaks\u0131n.
+    Bu ruh halinin fark\u0131na varmanla g\xFCn\xFCn ilk g\xFCzel haberini alman
+    aras\u0131nda \xE7ok fazla s\xFCre de olmayacak. Tamamlanmas\u0131n\u0131 bekledi\u011Fin
+    ancak buna pek ihtimal de vermedi\u011Fin bir i\u015Finin sonu\xE7land\u0131\u011F\u0131n\u0131
+    duymak, seni ziyadesiyle sevindirecek. \xD6te yandan, \xF6\u011Fleden sonraki
+    saatlerde,  tan\u0131d\u0131\u011F\u0131n iki insan aras\u0131ndaki s\u0131k\u0131nt\u0131l\u0131
+    diyalo\u011Fun geli\u015Fti\u011Fini ya da ayr\u0131 d\xFC\u015Ft\xFCkleri bir
+    konuda hemfikir olduklar\u0131n\u0131 duymak seni memnun edecek {{isim}}. Ak\u015Fam
+    \xFCzeri yapacaklar\u0131n, kafanda planlad\u0131klar\u0131n\u0131n biraz d\u0131\u015F\u0131na
+    \xE7\u0131kabilir. Yine de g\xFCzel bir gece ge\xE7ireceksin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: yno
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: yno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

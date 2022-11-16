@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme483
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA70766240564
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\"Harar\" nedir bilir misin {{isim}}? K\u0131ldan dokunmu\u015F, \xE7ok b\xFCy\xFCk
+    bir \xE7uvald\u0131r. Fincan\u0131nda seni, s\u0131rt\u0131na ald\u0131\u011F\u0131n
+    t\u0131ka basa dolu bir harar ile g\xF6r\xFCyorum. Genellikle f\u0131nd\u0131k
+    gibi g\u0131dalar\u0131n ta\u015F\u0131nd\u0131\u011F\u0131 bu b\xFCy\xFCk \xE7uval,
+    senin g\xF6rsellerinde \xE7ok daha de\u011Ferli baz\u0131 \u015Feylerle dolu
+    gibi geldi bana. Sen bir konuda \xFCzerine d\xFC\u015Feni yapm\u0131\u015F, g\xF6revini
+    tamamlam\u0131\u015F ve \"bedel \xF6demi\u015F\" gibisin. Almak \xFCzere oldu\u011Fun
+    \"kar\u015F\u0131l\u0131k\" ise o kadar b\xFCy\xFCk ki... \U0001F387 Fal\u0131nda
+    bu konuda tek bir \u015Feyin haricinde fazla detay yok ne yaz\u0131k ki. Yaln\u0131zca
+    {{sayi,2,3}} heceli ve silik yaz\u0131lm\u0131\u015F bir kelime var. \U0001F9D0Bir
+    kurum ya da kurulu\u015F mudur, marka m\u0131d\u0131r, \u015Fah\u0131s m\u0131d\u0131r,
+    bilemem. Belki sen \xE7oktan anlad\u0131n?... \n\n\xD6te yandan, ba\u015F\u0131nda
+    oturanlar\u0131n aras\u0131nda senin de oldu\u011Fun tahta bir masa g\xF6r\xFCyorum.
+    {{sayi,3,4}} ki\u015Fi, {{kelime, kafe | restoran}} gibi bir yerdesiniz. Bu masada
+    ise \u015F\xF6yle bir detay var; ince uzun tahtalar\u0131n birle\u015Fimiyle
+    yap\u0131lm\u0131\u015F ve aralar\u0131nda \xE7ok k\xFC\xE7\xFCk bo\u015Fluklar
+    var. O g\xFCn o masadaki biriyle bir konuda anla\u015Facaks\u0131n {{isim}}.
+    Her ikinizin de g\xFCl\xFCmseyerek kalkt\u0131\u011F\u0131n\u0131 bilmeni isterim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

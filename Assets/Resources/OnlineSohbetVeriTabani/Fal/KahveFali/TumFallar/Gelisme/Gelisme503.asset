@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme503
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA14902339612
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Seni {{kelime, gri | siyah | beyaz}} bir araban\u0131n i\xE7inde, yan\u0131ndaki
+    iki ki\u015Fi ile birlikte, bulundu\u011Fun ilin d\u0131\u015F\u0131na bir yere
+    \xF6\u011Fleden sonra {{sayi,13,18}} sular\u0131nda seyahat ederken g\xF6r\xFCyorum.
+    \U0001F3CE\uFE0FBu yolculu\u011Fun, alaca\u011F\u0131n hay\u0131rl\u0131 bir
+    haber ya da ya\u015Fayaca\u011F\u0131n g\xFCzel bir geli\u015Fme sonras\u0131,
+    {{ay_+2}} ay\u0131nda ger\xE7ekle\u015Fece\u011Fini hissediyorum. Yan\u0131ndaki
+    insanlardan birinin ad\u0131nda \"E\" harfi var {{isim}}. Araban\u0131n kap\u0131
+    i\xE7lerinden birinde, yar\u0131m bir pet \u015Fi\u015Fe su ya da \u0131slak
+    mendil g\xF6z\xFCk\xFCyor. Torpido g\xF6z\xFCnde ise eski bir CD var. Varaca\u011F\u0131n\u0131z
+    ile, ad\u0131nda 4 harf olan ba\u015Fka bir ilden ge\xE7erek gideceksiniz. Vard\u0131\u011F\u0131n\u0131zda,
+    \xE7ok ge\xE7meden i\xE7inizden \"telefonu iPhone olan\" birine, hepinizi ilgilendiren
+    bir g\xFCzel haber daha gelecek. \U0001F387B\xF6yle de detayl\u0131d\u0131r fal
+    okumalar\u0131m! <sprite=0>\n\nDaha alt k\u0131s\u0131mlarda, kanad\u0131 yaral\u0131
+    bir de keklik \xE7arpt\u0131 g\xF6z\xFCme. Uzak akrabalar\u0131ndan ya\u015F\xE7a
+    senden daha b\xFCy\xFCk fakat pek de sevmedi\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    birinin, i\u015F ya da e\u011Fitim hayat\u0131nda yolunda gitmeyen \u015Feyler
+    oldu\u011Funu hissediyorum. Haberi yar\u0131n \xF6b\xFCr g\xFCn kula\u011F\u0131na
+    gelir {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

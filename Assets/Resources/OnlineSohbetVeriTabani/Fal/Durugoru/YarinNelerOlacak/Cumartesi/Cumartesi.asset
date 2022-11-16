@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Cumartesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA96111226173
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Yar\u0131n dingin ve huzurlu bir pazar g\xFCn\xFC ya\u015Fayaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorsun, \xF6yle de\u011Fil mi {{isim}}? \"Huzurlu\" k\u0131sm\u0131nda
+    mutab\u0131\u011F\u0131z fakat dinginlik konusunda seninle ayn\u0131 hislere
+    sahip de\u011Filim. Sessiz ve dura\u011Fan bir g\xFCne uyanacaks\u0131n. \xD6\u011Flene
+    kadar zaman senin i\xE7in yava\u015F akacak. \xD6\u011Fleden itibaren ise kar\u015F\u0131na
+    dikilecek baz\u0131 meselelerden \xF6t\xFCr\xFC tetiklenebilir, harekete ge\xE7me
+    ihtiyac\u0131 hissedebilirsin. Analizlerim, 2 ayr\u0131 duyum alaca\u011F\u0131n\u0131
+    s\xF6yl\xFCyor. Bunlardan bir tanesi, gelecek hafta hayata ge\xE7irmeyi d\xFC\u015F\xFCnd\xFC\u011F\xFCn
+    bir plan\u0131nla ba\u011Flant\u0131l\u0131. O plan\u0131nla ilgili baz\u0131
+    haz\u0131rl\u0131klar\u0131n\u0131 \xF6ne alman ya da ilk ad\u0131mlar\u0131
+    bug\xFCnden atman gerekebilir. Alaca\u011F\u0131n ikinci duyum ise senin i\xE7in
+    \xF6nemli olan bir ba\u015Fka i\u015Fle ya da m\xFChim bir \u015Fah\u0131sla
+    alakal\u0131. Bu konuda baz\u0131 telefon g\xF6r\xFC\u015Fmeleri yapabilir, her
+    \u015Feyin yolunda oldu\u011Fundan emin olmak isteyebilirsin. Ak\u015Fama kadar
+    nispeten azalan enerjin, ge\xE7irece\u011Fin keyifli bir ak\u015Fam ile yenilenecek."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: yno
+    kontrol: 0
+  - degiskenAdi: bugun
+    degiskenDegeri: 6
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: yno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

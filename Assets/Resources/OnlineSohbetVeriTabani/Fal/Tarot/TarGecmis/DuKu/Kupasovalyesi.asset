@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupasovalyesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA67345324045
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: fa62608fe01cc54418d0f497d9668dc6, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: fa62608fe01cc54418d0f497d9668dc6, type: 3}
+  contentPhotoId: kupasovalyesi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Kupa \u015E\xF6valyesi\" kart\u0131n\u0131 se\xE7tin.\n\nHayat\u0131ndaki
+    dura\u011Fanl\u0131k, yerini ciddi bir hareketlili\u011Fe b\u0131rakm\u0131\u015F.
+    Planlar\u0131n\u0131 yapm\u0131\u015F, varmak istedi\u011Fin noktay\u0131 g\xF6z\xFCne
+    kestirmi\u015F, emin ad\u0131mlarla ilerlemeye ba\u015Flam\u0131\u015Fs\u0131n
+    {{isim}}. A\u015Fk\u0131n ve romantizmin, ya\u015Fam\u0131n\u0131 \u015Fekillendirmendeki
+    en \xF6nemli etkenler oldu\u011Funu g\xF6r\xFCyorum. Bu konularda \u015Fansl\u0131
+    biri oldu\u011Funu da d\xFC\u015F\xFCn\xFCrsek, duygusal yap\u0131n\u0131n seni
+    bir hayli olumlu etkiledi\u011Fini s\xF6yleyebilirim. Kayda de\u011Fer hamleler
+    yapm\u0131\u015F ve her defas\u0131nda hayalini kurdu\u011Fun ufuk \xE7izgisine
+    biraz daha yakla\u015Fm\u0131\u015Fs\u0131n. G\xFC\xE7l\xFC hayal g\xFCc\xFCn,
+    yolda seni hep en \xF6zel ve en s\u0131ra d\u0131\u015F\u0131 olanlarla kar\u015F\u0131la\u015Ft\u0131rm\u0131\u015F."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kupasovalyesi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

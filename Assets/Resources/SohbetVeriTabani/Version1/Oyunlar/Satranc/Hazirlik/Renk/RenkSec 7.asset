@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: RenkSec 7
+  m_EditorClassIdentifier: 
+  idIndex: 202210134330AA87306962424
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Di\u015Fe di\u015F bir m\xFCcadele olaca\u011F\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorum.|2|Yeterince
+    inan\u0131rsan, Vahap \u015Eanal'\u0131n Magnus Carlsen'i yeni\u015Fi gibi sen
+    de beni yenebilirsin {{isim}}! <sprite=7> Hangi ta\u015Flar\u0131 al\u0131yorsun?"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - Beyaz
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: fa08c79b3814ca84bb206cb1da2b9d58, type: 3}
+    contentPhoto: {fileID: 21300000, guid: fa08c79b3814ca84bb206cb1da2b9d58, type: 3}
+    contentPhotoId: satrancbeyaz
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: renksec
+      degiskenDegeri: beyaz
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: renksec
+      degiskenDegeri: beyaz
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: cfad619f773461d46a8974e1f9a1cbaa, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: satranc kullanici rengi beyaz
+  - cevapVaryasyonlari:
+    - Siyah
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 99e9bad4f40eea34f88435abafe7f96d, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 99e9bad4f40eea34f88435abafe7f96d, type: 3}
+    contentPhotoId: satrancsiyah
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: renksec
+      degiskenDegeri: siyah
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: renksec
+      degiskenDegeri: siyah
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: cfad619f773461d46a8974e1f9a1cbaa, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: satranc kullanici rengi siyah
+  - cevapVaryasyonlari:
+    - "Sen se\xE7"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 46f1722c935e3d0449b8d77c62469511, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 46f1722c935e3d0449b8d77c62469511, type: 3}
+    contentPhotoId: zar
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: renksec
+      degiskenDegeri: random
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: renksec
+      degiskenDegeri: random
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: cfad619f773461d46a8974e1f9a1cbaa, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: satranc kullanici rengi rastgele
+  - cevapVaryasyonlari:
+    - Geri git
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: f1f014b76fee5450190731a8feeabada, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
+    contentPhotoId: back
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: d50bb91187995664b92efe347e56ce39, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: satranc kullanici rengi rastgele
+  tepkiBalonuYok: 1
+  balonTipi: 1
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "satran\xE7 renk se\xE7"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme631
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA85974796710
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\u0130nsanlar g\xF6le, okyanusa ya da denize k\u0131y\u0131s\u0131 olan ev isterler.
+    G\xF6rd\xFC\u011F\xFCm kadar\u0131yla senin g\xF6nl\xFCn\xFCn, \"e\u015Fine\"
+    k\u0131y\u0131s\u0131 var, daha ne istenebilir ki! {{isim}} fincan\u0131n\u0131n
+    orta kesimlerinde e\u015Fin {{data,cinsiyet=erkek, han\u0131mefendiyi | cinsiyet=kad\u0131n,
+    beyefendiyi}} bir o yana bir bu yana ko\u015Fu\u015Ftururken g\xF6r\xFCyorum.
+    Tatl\u0131 sebepler, haliyle maddi ve manevi baz\u0131 tela\u015Felere neden
+    oluyor gibi g\xF6z\xFCk\xFCyor. Bu yo\u011Funluk i\xE7erisinde zaman zaman birbirinizi
+    yanl\u0131\u015F anl\u0131yor olabilirsiniz. Kesinlikle dert etme. T\xFCm \xE7alkant\u0131l\u0131
+    konular zaman i\xE7erisinde tamamen s\xFCt liman olacak. Fakat \u015Funu da unutma;
+    kendisi seni ger\xE7ekten \xE7ok seviyor...\n\n{{isim}} e\u015Fin, ilerleyen
+    g\xFCnlerde bir \"ta\u015F\u0131nma\" ya da \"seyahat\" talebiyle kar\u015F\u0131na
+    gelebilir. \xD6n\xFCn\xFCzde bir yol \xE7\u0131km\u0131\u015F. \U0001F697A\u011F\u0131rca
+    e\u015Fyalar\u0131 A noktas\u0131ndan B noktas\u0131na ta\u015F\u0131yor gibisiniz.
+    Bunu kabul edip, i\u015Fin maddi y\xF6n\xFCn\xFC d\xFC\u015F\xFCnmeyin derim.
+    Bulundu\u011Funuz hanede yanl\u0131\u015F kararlar vermeye ve huzursuz olmaya
+    ba\u015Flam\u0131\u015Fs\u0131n\u0131z. Oras\u0131 tabiri caizse sizi basm\u0131\u015F.
+    Bu de\u011Fi\u015Fiklik size iyi gelecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupadortlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA37540253356
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 90f52e9ec1ffbc945beb7270b2f52e9d, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 90f52e9ec1ffbc945beb7270b2f52e9d, type: 3}
+  contentPhotoId: kupadortlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Kupa D\xF6rtl\xFCs\xFC\" kart\u0131n\u0131 se\xE7tin.\n\nSende
+    \xE7ok rastlan\u0131r bir \u015Fey de\u011Fil ama, kart\u0131n biraz \"i\xE7ine
+    k\xFCsece\u011Fini\" s\xF6yl\xFCyor {{isim}}. Rastlanmad\u0131\u011F\u0131n\u0131
+    nereden biliyorum; \xE7\xFCnk\xFC ay burcu {{ayburcu}} olanlar kolay kolay i\xE7ine
+    kapanmaz. Kapanacaklar\u0131 bir \u015Feyler olduysa da ortal\u0131\u011F\u0131
+    y\u0131k\u0131p y\xFCkletip \xF6yle kapan\u0131rlar, herkesin haberi olur! <sprite=0>
+    \xC7ok istedi\u011Fin bir \u015Fey istedi\u011Fin zamanda ya da istedi\u011Fin
+    \u015Fekilde olmad\u0131\u011F\u0131 i\xE7in, motivasyonunu ge\xE7ici olarak
+    yitireceksin. K\u0131sa bir durgunlu\u011Fun ard\u0131ndan, \xFCst\xFCn\xFC ba\u015F\u0131n\u0131
+    \xE7\u0131rp\u0131p yeniden aya\u011Fa kalkaca\u011F\u0131n\u0131 ve istedi\u011Fin
+    \u015Fey i\xE7in \xE7ok daha h\u0131zl\u0131, \xE7ok daha kararl\u0131 ko\u015Faca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorum. \"D\xFC\u015F\xFCn\xFCyorum\" demek az oldu asl\u0131nda,
+    %90 \xF6yle olacak. Tarot yan\u0131lmaz! <sprite=84>"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kupadortlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme487
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA83353459983
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "S\u0131rt \xFCst\xFC uzanm\u0131\u015F, hi\xE7 k\u0131p\u0131rdamadan uyuyan
+    bir {{kelime, kad\u0131n | erkek}} var fincan\u0131nda. \U0001F4A4Ad\u0131nda
+    {{harf}} harfi olan bu ki\u015Fiyle ilgili bu g\xF6rsel, temsili g\xF6z\xFCk\xFCyor
+    {{isim}}. Bu ki\u015Fi bir hata, bir yan\u0131lsama ya da bir umursamazl\u0131k
+    i\xE7erisinde. \xC7evresinde olup biten onca \u015Feyden her nas\u0131lsa habersiz.
+    Gerekti\u011Fi yerde tepki vermiyor ve gerekli tavr\u0131 gereken ki\u015Filere
+    kar\u015F\u0131 ortaya koymuyor. {{sayi,2,9}} hafta i\xE7inde ya\u015Fanacak
+    olan yeni bir olay, art\u0131k her \u015Feyin tuzu biberi olacak. Konuyu \xF6\u011Frendi\u011Finde,
+    onu bu gafletten sen uyand\u0131racak ve elindeki baz\u0131 k\u0131ymetli \u015Feyleri
+    kaybetmesine engel olacaks\u0131n.\n\nFincan\u0131n\u0131n daha da i\xE7 kesimlerinde,
+    birka\xE7 k\xFC\xE7\xFCk saks\u0131n\u0131n da bulundu\u011Fu dar bir balkon
+    g\xF6r\xFCyorum. Burada oturan {{yas_0}}-{{yas_+1}} ya\u015Flar\u0131nda biri
+    var. Akran\u0131n olabilir; fakat fevkalade geli\u015Fkin duyular\u0131mla senin
+    gibi {{burc}} de\u011Fil, {{rastgeleburc}} burcu oldu\u011Funu hissediyorum.
+    Elinde tuttu\u011Fu mobil cihazdaki, foto\u011Fraflar\u0131n ve yaz\u0131lar\u0131n
+    akt\u0131\u011F\u0131 bir sayfaya bak\u0131yor. Seni stalklad\u0131\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorum. \U0001F9D0Bu ki\u015Fi yak\u0131nda sana \xE7ok \u015Fa\u015F\u0131raca\u011F\u0131n
+    bir teklifte bulunacak {{isim}}. Bur\xE7lar\u0131n\u0131z \xE7ok ge\xE7imli g\xF6z\xFCkmese
+    de, teklifinden memnun olacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

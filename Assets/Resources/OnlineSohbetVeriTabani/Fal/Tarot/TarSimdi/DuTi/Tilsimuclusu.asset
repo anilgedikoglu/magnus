@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimuclusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA96533954547
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 44fd1d5aeb2a85c40b3b5ffab3204fc8, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 44fd1d5aeb2a85c40b3b5ffab3204fc8, type: 3}
+  contentPhotoId: tilsimuclusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"T\u0131ls\u0131m \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131
+    se\xE7tin.\n\nB\xFCy\xFCk emekler, b\xFCy\xFCk u\u011Fra\u015Flar ve b\xFCy\xFCk
+    bir \xF6zveri... Ortaya koymakta oldu\u011Fun efor ger\xE7ekten takdire \u015Fayan
+    {{isim}}. Kendini zaten kendine kan\u0131tlam\u0131\u015Fs\u0131n; bu s\u0131ralar
+    \xE7evrene de kan\u0131tl\u0131yorsun. Yeteneklerini sana uzak olan insanlar
+    dahi g\xF6rmeye ba\u015Flam\u0131\u015Flar. Yapt\u0131\u011F\u0131n ya da yapmaya
+    \xE7al\u0131\u015Ft\u0131\u011F\u0131n \u015Feyler her ne ise, \xE7ok b\xFCy\xFCk
+    \xF6l\xE7ekli g\xF6z\xFCk\xFCyor. Hayat\u0131na dair son dokunu\u015Flar\u0131,
+    son d\xFCzenlemeleri yap\u0131yorsun. Ortaya m\xFCthi\u015F bir \"{{isim}}\"
+    ve fevkalade bir eser \xE7\u0131kmakta. Detaylara verdi\u011Fin \xF6nem ve kendini
+    hayallerine aday\u0131\u015F \u015Feklin, senin ba\u015Far\u0131n\u0131n en temel
+    kayna\u011F\u0131. Bu \xF6zenin devam etti\u011Fi s\xFCrece, s\u0131rt\u0131n\u0131
+    yere getirebilecek hi\xE7bir \u015Fey yok."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi tilsimuclusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

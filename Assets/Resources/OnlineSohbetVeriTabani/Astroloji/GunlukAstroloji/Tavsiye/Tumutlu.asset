@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tumutlu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA31781114178
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{burc}} bur\xE7lar\u0131 bug\xFCn \xE7ok umutlular. \u0130\xE7leri, \"yapacaklar\u0131na\"
+    dair \xF6yle heyecanla dolu ki, bug\xFCn onlar\u0131n hayallerine hi\xE7bir \u015Fey
+    g\xF6lge d\xFC\u015F\xFCremez. Sen de bir {{burc}} burcu olarak g\xFCzel birtak\u0131m
+    m\xFCjdeler duymaya ve g\xFCzel geli\u015Fmelerle kar\u015F\u0131la\u015Fmaya
+    \xE7ok yak\u0131n oldu\u011Funu g\xF6n\xFClden hissedebilirsin. \u0130\xE7indeki
+    co\u015Fku, ileriye z\u0131playabilmek i\xE7in ihtiya\xE7 duyaca\u011F\u0131n
+    enerjiyi sana fazlas\u0131yla verecek {{isim}}. Bu co\u015Fkuyu ve kayna\u011F\u0131n\u0131
+    hedeflerinden alan g\xFCc\xFC sonuna kadar kullanmal\u0131s\u0131n. Bu halin
+    bug\xFCn \xF6zel hayat\u0131nda \"kendine g\xFCven\" olarak sana geri d\xF6necek
+    ve \xE7ok i\u015Fine yarayacak. \u0130nsanlar\u0131 inand\u0131rman ve fikirlerinin
+    pe\u015Finden s\xFCr\xFCklemen kolayl\u0131kla m\xFCmk\xFCn olacak. Umut, bir
+    insan\u0131n elindeki belki de en b\xFCy\xFCk silah {{isim}}. Bug\xFCn bu silahla
+    ku\u015Fanm\u0131\u015F haldeyken, hakk\u0131n\u0131 vermeli ve gere\u011Fini
+    yapmal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

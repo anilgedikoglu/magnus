@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme569
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA25628253549
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xD6n\xFCne arabalar\u0131n yo\u011Fun bir \u015Fekilde park etti\u011Fi, geni\u015F
+    camekanlar\u0131 olan bir yer g\xF6r\xFCyorum fal\u0131nda. \U0001F644A\u015Fk
+    hayat\u0131nla buran\u0131n direkt olarak ba\u011Flant\u0131s\u0131n\u0131 kestiremedim
+    {{isim}}; fakat sen a\u015Fk\u0131 ya burada bulacaks\u0131n, ya da kar\u015F\u0131na
+    \xE7\u0131kacak olan ki\u015Finin bura ile bir ilgisi var...\n\nFincan\u0131n\u0131n
+    yan y\xFCzeyindeki \"totem dire\u011Fine\" benzer sembol\xFC sen de g\xF6r\xFCyor
+    musun? Senin u\u011Furuna inand\u0131\u011F\u0131n bir tak\u0131n ya da giysin
+    mi var? \U0001F387Onu \xFCzerinde bulundurdu\u011Fun bir g\xFCn, birine \xE7ok
+    \"be\u011Fenerek\" bakm\u0131\u015Fs\u0131n {{isim}}. \u0130\xE7inden ge\xE7irdi\u011Fin
+    sessiz dilek kabul olmu\u015F. Ya o insan\u0131n kendisiyle ya da o insana \xE7ok
+    benzeyen fakat daha hay\u0131rl\u0131 biri ile kar\u015F\u0131la\u015Ft\u0131r\u0131lacak
+    ve bir araya getirileceksin sen {{isim}}. \U0001F609Bo\u015Funa dememi\u015Fler
+    \"a\u011F\u0131zdan \xE7\u0131kan her s\xF6z, ak\u0131ldan ge\xE7en her d\xFC\u015F\xFCnce
+    dua h\xFCkm\xFCndedir\" diye... {{sayi,2,5}} ay sonra hayat\u0131da h\u0131zl\u0131
+    ve sert bir de\u011Fi\u015Fim ba\u015Flayacak. B\xFCy\xFCk bir \u015Fa\u015Fk\u0131nl\u0131k
+    ve mutlulu\u011Fu bir arada ya\u015Fayaca\u011F\u0131n\u0131 bilmeni isterim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

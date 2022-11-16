@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme643
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA30013910361
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131n\u0131n merkezindeki telvelerin bir tanesi t\u0131pk\u0131 bir \"d\xFCd\xFC\u011F\xFC\"
+    and\u0131r\u0131yor. Beden ve ruh sa\u011Fl\u0131\u011F\u0131n\u0131 \xE7ok yak\u0131ndan
+    ilgilendiren ve ger\xE7ekle\u015Ftirmeyi d\xFC\u015F\xFCnd\xFC\u011F\xFCn bir
+    plan hissediyorum. Harekete ge\xE7mek i\xE7inse bu d\xFCd\xFC\u011F\xFCn kader
+    taraf\u0131ndan adeta \xE7al\u0131nmas\u0131n\u0131 bekliyor gibisin. Plan\u0131n
+    daha huzurlu bir ortamda ya\u015Famak ad\u0131na ev ya da \u015Fehir de\u011Fi\u015Ftirmek
+    mi? Bu sana \xE7ok da uzak de\u011Fil {{isim}}. {{yil_1}} y\u0131l\u0131n\u0131n
+    ikinci \xE7eyre\u011Finde bu d\xFCd\xFCk \xE7alacak ve sana \"Nas\u0131l olur
+    ki?\" dedirtecek g\xFCzel bir f\u0131rsat yakalayacaks\u0131n.\n\n\xD6te yandan,
+    telvelerinde bir de t\xFCts\xFC g\xF6r\xFCyorum. Bu t\xFCts\xFCden kara dumanlar
+    yay\u0131l\u0131yor ve bu duman \"bir \xE7ift g\xF6z\" \u015Feklini alm\u0131\u015F
+    {{isim}}. Enerji so\u011Furucu bir nazar\u0131n de\u011Febilece\u011Finin i\u015Fareti
+    bu. {{sayi,2,3}} hafta i\xE7inde hanene girme ihtimali olan ya da senin, onun
+    bulundu\u011Fu yere gitme ihtimalinin oldu\u011Fu bir {{data, cinsiyet=erkek,
+    erkek | cinsiyet=kad\u0131n, kad\u0131n | cinsiyet=lgbt, insan}} var. Nazar\u0131
+    engellemek i\xE7in bu plan\u0131 ger\xE7ekle\u015Ftirme derim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

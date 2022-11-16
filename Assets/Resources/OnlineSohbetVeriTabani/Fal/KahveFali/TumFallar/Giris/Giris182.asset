@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris182
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA39487210323
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerin endi\u015Fe verici bir g\xF6rselle a\xE7\u0131l\u0131yor {{isim}}.
+    \xC7ember halini alm\u0131\u015F ve birbirlerine {{kelime, ta\u015Flar | c\xFCmleler
+    | meseller | karalar}} f\u0131rlatan yo\u011Fun bir kalabal\u0131k g\xF6r\xFCyorum.
+    Akrabalar\u0131nla aranda, haneni zaman zaman sarsan s\xF6zl\xFC at\u0131\u015Fmalar
+    olmu\u015F. \u0130nsanlar birbirleri ard\u0131ndan ac\u0131mas\u0131zca konu\u015Fmu\u015F
+    ve dedikodu etmi\u015Fler. \xD6zellikle de ad\u0131nda {{harf}}, {{harf}} ya
+    da {{harf}} harfi bulundu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm, {{kelime,
+    orta boylu, siyah sa\xE7l\u0131 bir erkek | orta boylu, koyu kumral bir erkek
+    | orta-uzun boylu, zay\u0131f\xE7a bir erkek | orta-uzun boylu, siyah sa\xE7l\u0131,
+    g\xF6zl\xFCkl\xFC bir erkek | 1.78 boylar\u0131nda, k\u0131sa sa\xE7l\u0131,
+    a\xE7\u0131k tenli bir erkek | 1.76 boylar\u0131nda, g\xF6z altlar\u0131 karanl\u0131k
+    bir erkek | orta boylu, a\xE7\u0131k tenli bir kad\u0131n | orta boylu, g\xF6zl\xFCkl\xFC
+    bir kad\u0131n | 1.70 boylar\u0131nda, k\u0131sa sa\xE7l\u0131, g\xF6zl\xFCkl\xFC
+    bir kad\u0131n}} var ki, i\u015Fleri kar\u0131\u015Ft\u0131r\u0131\u015F \u015Feklinden
+    anla\u015F\u0131ld\u0131\u011F\u0131 kadar\u0131yla iyi niyetli oldu\u011Funu
+    {{kelime, d\xFC\u015F\xFCnmek | s\xF6ylemek}} imkans\u0131z. Bu insanlardan {{kelime,
+    6 ay | 9 ay | 1 sene | 2 sene | 1.5 sene}} sonra hakk\u0131n olan\u0131 alacak
+    ya da onlara kar\u015F\u0131 bir konuda galip gelerek pek \xE7o\u011Fu ile ileti\u015Fimi
+    keseceksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

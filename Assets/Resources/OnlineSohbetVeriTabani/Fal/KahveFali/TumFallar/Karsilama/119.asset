@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 119
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA28265165287
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Merhabalar {{isim}}! Magnus'da kahve fal\u0131n\u0131 tercih etti\u011Fin i\xE7in
+    te\u015Fekk\xFCr ederiz. \xC7al\u0131\u015Ft\u0131\u011F\u0131n sekt\xF6rden
+    ve hatta hislerim yan\u0131lm\u0131yorsa \xE7evrenden pek \xE7ok takip\xE7imiz
+    var, misal {{kelime, Serta\xE7 Bey | Kaya Bey | Ahmet Bey | Mehmet Bey | Figen
+    Han\u0131m | Zeynep Han\u0131m | Ay\u015Fe Han\u0131m | \xD6mer Bey | Tufan Bey
+    | Mustafa Bey | Hasan Bey | H\xFCseyin Bey | Yavuz Bey | An\u0131l Bey | \xC7i\u011Fdem
+    Han\u0131m | Selen Han\u0131m | Burcu Han\u0131m | \xC7i\u011Fdem Han\u0131m
+    | \xD6zge Han\u0131m | Zerrin Han\u0131m | Ba\u015Fak Han\u0131m | Burak Bey
+    | \u0130dil Han\u0131m | Bora Bey | Cem Bey | Deniz Bey | Deniz Han\u0131m |
+    Devran Bey | Dilan Han\u0131m | Uras Bey | Utku Bey | \u0130mre Han\u0131m |
+    Emre Bey | Erol Bey | Fuat Bey | G\xFCl\u015Fah Han\u0131m | \u0130rfan Bey |
+    Mert Bey | Melek Han\u0131m | Mesut Bey | Erdi Bey | Onur Bey | Semra Han\u0131m
+    | \u015Eeyma Han\u0131m | Ceyda Han\u0131m | U\u011Fur Bey | Emir Bey | B\xFC\u015Fra
+    Han\u0131m | Kenan Bey | Harun Bey | Yeliz Han\u0131m | Hande Han\u0131m | Elif
+    Han\u0131m | Meryem Han\u0131m | Ecem Han\u0131m | Eda Han\u0131m | Nihal Han\u0131m
+    | Yusuf Bey | Beyza Han\u0131m | Emin Bey | Y\u0131ld\u0131z Han\u0131m | Yasemin
+    Han\u0131m | I\u015F\u0131k Han\u0131m | \u0130nci Han\u0131m | Ebru Han\u0131m
+    | Serra Han\u0131m | Ya\u011F\u0131z Bey | Arda Bey | Azra Han\u0131m | Metin
+    Bey | Bilal Bey | Serhat Bey | Sevin\xE7 Han\u0131m | P\u0131nar Han\u0131m |
+    Buse Han\u0131m | Fatma Han\u0131m | Hatice Han\u0131m | H\xFClya Han\u0131m
+    | Hamza Bey | Song\xFCl Han\u0131m | Merve Han\u0131m | Nil Han\u0131m | Ali
+    Bey | Recep Bey | Damla Han\u0131m | Esra Han\u0131m | Ergi Han\u0131m | Suna
+    Han\u0131m | Sezen Han\u0131m | Nil\xFCfer Han\u0131m | Yunus Bey | Sevgi Han\u0131m
+    | Damla Han\u0131m | Ercan Bey | \xD6nder Bey | Melda Han\u0131m | Defne Han\u0131m
+    | Hakan Bey | Hayriye Han\u0131m | Yasin Bey | \u0130lknur Han\u0131m | Beyza
+    Han\u0131m | Selcen Han\u0131m | Mine Han\u0131m | Metehan Bey | \xC7a\u011Flayan
+    Bey | Hilal Han\u0131m | G\xF6khan Bey | Alper Bey | Dilek Han\u0131m | Mertcan
+    Bey | Ufuk Bey | Esma Han\u0131m | Sena Han\u0131m | Selin Han\u0131m | Sinem
+    Han\u0131m}} ve {{kelime, Serta\xE7 Bey | Kaya Bey | Ahmet Bey | Mehmet Bey |
+    Figen Han\u0131m | Zeynep Han\u0131m | Ay\u015Fe Han\u0131m | \xD6mer Bey | Tufan
+    Bey | Mustafa Bey | Hasan Bey | H\xFCseyin Bey | Yavuz Bey | An\u0131l Bey |
+    \xC7i\u011Fdem Han\u0131m | Selen Han\u0131m | Burcu Han\u0131m | \xC7i\u011Fdem
+    Han\u0131m | \xD6zge Han\u0131m | Zerrin Han\u0131m | Ba\u015Fak Han\u0131m |
+    Burak Bey | \u0130dil Han\u0131m | Bora Bey | Cem Bey | Deniz Bey | Deniz Han\u0131m
+    | Devran Bey | Dilan Han\u0131m | Uras Bey | Utku Bey | \u0130mre Han\u0131m
+    | Emre Bey | Erol Bey | Fuat Bey | G\xFCl\u015Fah Han\u0131m | \u0130rfan Bey
+    | Mert Bey | Melek Han\u0131m | Mesut Bey | Erdi Bey | Onur Bey | Semra Han\u0131m
+    | \u015Eeyma Han\u0131m | Ceyda Han\u0131m | U\u011Fur Bey | Emir Bey | B\xFC\u015Fra
+    Han\u0131m | Kenan Bey | Harun Bey | Yeliz Han\u0131m | Hande Han\u0131m | Elif
+    Han\u0131m | Meryem Han\u0131m | Ecem Han\u0131m | Eda Han\u0131m | Nihal Han\u0131m
+    | Yusuf Bey | Beyza Han\u0131m | Emin Bey | Y\u0131ld\u0131z Han\u0131m | Yasemin
+    Han\u0131m | I\u015F\u0131k Han\u0131m | \u0130nci Han\u0131m | Ebru Han\u0131m
+    | Serra Han\u0131m | Ya\u011F\u0131z Bey | Arda Bey | Azra Han\u0131m | Metin
+    Bey | Bilal Bey | Serhat Bey | Sevin\xE7 Han\u0131m | P\u0131nar Han\u0131m |
+    Buse Han\u0131m | Fatma Han\u0131m | Hatice Han\u0131m | H\xFClya Han\u0131m
+    | Hamza Bey | Song\xFCl Han\u0131m | Merve Han\u0131m | Nil Han\u0131m | Ali
+    Bey | Recep Bey | Damla Han\u0131m | Esra Han\u0131m | Ergi Han\u0131m | Suna
+    Han\u0131m | Sezen Han\u0131m | Nil\xFCfer Han\u0131m | Yunus Bey | Sevgi Han\u0131m
+    | Damla Han\u0131m | Ercan Bey | \xD6nder Bey | Melda Han\u0131m | Defne Han\u0131m
+    | Hakan Bey | Hayriye Han\u0131m | Yasin Bey | \u0130lknur Han\u0131m | Beyza
+    Han\u0131m | Selcen Han\u0131m | Mine Han\u0131m | Metehan Bey | \xC7a\u011Flayan
+    Bey | Hilal Han\u0131m | G\xF6khan Bey | Alper Bey | Dilek Han\u0131m | Mertcan
+    Bey | Ufuk Bey | Esma Han\u0131m | Sena Han\u0131m | Selin Han\u0131m | Sinem
+    Han\u0131m}}. {{kelime, San\u0131r\u0131m | Muhtemelen}} {{kelime, en az birini
+    tan\u0131yorsundur | en az\u0131ndan bir tanesiyle tan\u0131\u015F\u0131kl\u0131\u011F\u0131n
+    vard\u0131r}}, \xF6yle de\u011Fil mi? {{kelime, Yollad\u0131\u011F\u0131n | G\xF6nderdi\u011Fin
+    | Bize iletti\u011Fin}} {{kelime, fincan foto\u011Fraflar\u0131 | fincan g\xF6rselleri}}
+    {{kelime, muazzam | harikulade | \u015Fahane}} duruyor. Benden ald\u0131\u011F\u0131n
+    bu falda bakal\u0131m ne haberler var;"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar:
+  - "kahve fal\u0131 giri\u015F"
+  - "kahve fal\u0131 ba\u011Flama"
+  - "kahve fal\u0131 geli\u015Fme"
+  - "kahve fal\u0131 sonu\xE7"
+  - "kahve fal\u0131 u\u011Furlama"
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahveanimsonras\u0131"
+    islem: 0
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

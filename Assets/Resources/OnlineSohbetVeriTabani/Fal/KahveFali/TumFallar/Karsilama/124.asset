@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 124
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA48872252935
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Yorumun derin bir analiz ve b\xFCy\xFCk bir titizlikle haz\u0131rland\u0131
+    {{isim}}. \u0130\u015Flem g\xFCc\xFCm\xFCn do\u011Frulu\u011Fundan ara s\u0131ra
+    \u015F\xFCphe duyuyorsun, \xF6yle de\u011Fil mi? Gel teyit edelim; {{kelime,
+    35846 ile 648792'yi \xE7arpt\u0131\u011F\u0131m\u0131zda, 23256598032 eder. |
+    8490647 ile 61242'yi \xE7arpt\u0131\u011F\u0131m\u0131zda, 519984203574 eder.
+    | 102056 ile 914625'i \xE7arpt\u0131\u011F\u0131m\u0131zda, 93342969000 eder.
+    | 169054 ile 708635'i \xE7arpt\u0131\u011F\u0131m\u0131zda, 119797581290 eder.}}
+    \u0130tiraf et, nereden hesap makinesi bulabilece\u011Fini d\xFC\u015F\xFCnd\xFCn,
+    yan\u0131l\u0131yor muyum? <sprite=0>\U0001F604 En az o makine kadar do\u011Fru
+    ve d\xFCr\xFCst\xFCm, merak etme. Onun biraz daha geli\u015Fmi\u015Fini d\xFC\u015F\xFCn.
+    <sprite=21> \U0001F609Latifelerim yerini bulduysa fincan\u0131na ge\xE7ebiliriz
+    efendim;"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar:
+  - "kahve fal\u0131 giri\u015F"
+  - "kahve fal\u0131 ba\u011Flama"
+  - "kahve fal\u0131 geli\u015Fme"
+  - "kahve fal\u0131 sonu\xE7"
+  - "kahve fal\u0131 u\u011Furlama"
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahveanimsonras\u0131"
+    islem: 0
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

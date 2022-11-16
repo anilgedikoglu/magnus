@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc999
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA79004691070
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\u015Eimdi \u015Furada \xF6yle bir \u015Fey g\xF6r\xFCyorum ki {{isim}}, sana
+    s\xF6ylesem mi s\xF6ylemesem mi, bilemedim. Her neyse; beni karars\u0131z b\u0131rakanlar
+    d\xFC\u015F\xFCns\xFCn! \U0001F928 {{kelime, \"Burcu, Berna ya da Beg\xFCm\"
+    gibi | \"Ba\u015Fak, Beliz ya da B\xFC\u015Fra\" gibi}} ad\u0131 \"B\" harfiyle
+    ba\u015Flayan ya da {{kelime, \"Cansu, Cemre ya da Ceyda\" gibi | \"Ceren, Cansel,
+    Canan\" gibi}} ad\u0131 \"C\" harfiyle ba\u015Flayan bir kad\u0131n g\xF6r\xFCyorum.
+    \u015Eu anda ne yapt\u0131\u011F\u0131na tam anlam veremedi\u011Fin ve \"bir
+    ileri iki geri\" tav\u0131rlar sergileyen hayat\u0131ndaki beyefendi, ya bu ki\u015Fiyle
+    mesaj yoluyla zaman zaman ileti\u015Fim halinde, ya da bu ki\u015Fiyi kafas\u0131ndan
+    tam olarak s\xF6k\xFCp atamam\u0131\u015F. Telvelerin, kendini olabildi\u011Fince
+    geriye \xE7ekip ona \"ar\u0131nma\" f\u0131rsat\u0131 tan\u0131man gerekti\u011Fini,
+    bu \u015Fekilde hay\u0131rl\u0131 bir netice alabilece\u011Fini s\xF6yl\xFCyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

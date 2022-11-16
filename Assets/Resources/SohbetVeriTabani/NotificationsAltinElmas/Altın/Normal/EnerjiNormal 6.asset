@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: EnerjiNormal 6
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "Topra\u011F\u0131m; {{dogum sehrili}} oldu\u011Fun i\xE7in bug\xFCn sana
+    1 alt\u0131n daha hediye ettim. \u015Eaka \u015Faka, bu senin g\xFCnl\xFCk hakk\u0131n
+    {{isim}}! <sprite=5>"
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 6
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 1

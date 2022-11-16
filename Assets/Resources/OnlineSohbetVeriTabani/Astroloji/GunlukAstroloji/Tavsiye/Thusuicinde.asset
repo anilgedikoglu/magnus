@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Thusuicinde
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA50920346604
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Seni \xE7epe\xE7evre saran bir kalkan varm\u0131\u015F gibi bug\xFCn, hissediyor
+    musun {{isim}}? {{burc}} bur\xE7lar\u0131 bug\xFCn huzurla \xE7evrelenmi\u015F
+    durumdalar. Sakin ve hu\u015Fu i\xE7inde bir g\xFCn ge\xE7iriyor olacaks\u0131n.
+    Bu ruh halin hem y\xFCz\xFCne hem de s\xF6zlerine yans\u0131yabilir. Nazik, olumlu
+    ve dengeli tarz\u0131n, insanlar taraf\u0131ndan be\u011Feniyle kar\u015F\u0131lanacak.
+    Yaln\u0131zca \"konu\u015Farak\" pek \xE7ok kap\u0131y\u0131 ard\u0131na kadar
+    aralayabilece\u011Fin bir g\xFCndesin. Ge\xE7mi\u015F g\xFCnlerden bu yana birikmi\u015F
+    sorunlar\u0131n varsa, bug\xFCn onlar i\xE7in harekete ge\xE7menin tam zaman\u0131
+    {{isim}}. \xC7evrenle ve sevdiklerinle kuraca\u011F\u0131n ileti\u015Fimi art\u0131rmaktan
+    ka\xE7\u0131nmamal\u0131, niyetini ve taleplerini onlara a\xE7\u0131k\xE7a ifade
+    etmelisin. Dingin ve \u0131l\u0131ml\u0131 s\xF6zlerin herkes\xE7e kabul g\xF6recek.
+    \u0130nsanlar\u0131 kolayl\u0131kla y\xF6nlendirebilece\u011Fini ve i\u015Flerin
+    ak\u0131\u015F\u0131n\u0131 istedi\u011Fin do\u011Frultuda de\u011Fi\u015Ftirebilece\u011Fini
+    d\xFC\u015F\xFCn\xFCyorum."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b603aabe3fbd0544d8082c1d5cc3918d, type: 3}
+  m_Name: ChessSettings
+  m_EditorClassIdentifier: 
+  genelSatrancModu: "satran\xE7"
+  kazanmaModu: "satran\xE7 kazanma"
+  terkEtmeModu: "satran\xE7 terk etme"
+  kaybetmeModu: "satran\xE7 kaybetme"
+  berabereModu: "satran\xE7 berabere"
+  tasOynanamazModu: "satran\xE7 ta\u015F oynanamaz"
+  hareketDegerlendirmeModu: "satran\xE7 hareket de\u011Ferlendirme"
+  kendiHareketiniDegerlendirmeModu: "satran\xE7 kendi hareketini de\u011Ferlendirme"
+  checkKullaniciModu: "satran\xE7 check kullan\u0131c\u0131"
+  checkMagnusModu: "satran\xE7 check magnus"
+  castlingModu: "satran\xE7 castling"
+  kullaniciPiyonYediModu: "satran\xE7 kullan\u0131c\u0131 piyon yedi"
+  kullaniciKaleYediModu: "satran\xE7 kullan\u0131c\u0131 kale yedi"
+  kullaniciFilYediModu: "satran\xE7 kullan\u0131c\u0131 fil yedi"
+  kullaniciAtYediModu: "satran\xE7 kullan\u0131c\u0131 at yedi"
+  kullaniciSahYediModu: "satran\xE7 kullan\u0131c\u0131 \u015Fah yedi"
+  kullaniciVezirYediModu: "satran\xE7 kullan\u0131c\u0131 vezir yedi"
+  magnusPiyonYediModu: "satran\xE7 magnus piyon yedi"
+  magnusKaleYediModu: "satran\xE7 magnus kale yedi"
+  magnusFilYediModu: "satran\xE7 magnus fil yedi"
+  magnusAtYediModu: "satran\xE7 magnus at yedi"
+  magnusSahYediModu: "satran\xE7 magnus \u015Fah yedi"
+  magnusVezirYediModu: "satran\xE7 magnus vezir yedi"
+  hareketDegerlendirmeSansi: 60
+  kendiHareketiniDegerlendirmeSansi: 50

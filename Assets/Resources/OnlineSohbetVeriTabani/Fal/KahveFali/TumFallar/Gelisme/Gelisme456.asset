@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme456
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA65797099095
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Geni\u015F ve oval bir fincan taba\u011F\u0131n\u0131n i\xE7ine konulmu\u015F,
+    \xFCzerleri k\u0131lcal ve beyaz damarlarla kapl\u0131 {{sabit_sayi,2,5}} adet
+    \"akik ta\u015F\u0131\" g\xF6r\xFCyorum telvelerinde. \U0001F48EG\xFCndelik hayat\u0131nda
+    sonucuna dair sab\u0131rs\u0131zland\u0131\u011F\u0131n, belirsizli\u011Fi ile
+    \xFCzerinde sinir ve stres yaratan bir konu mu var {{isim}}? Bu ta\u015Flar\u0131n
+    her biri \xE7eyrek ay'\u0131 temsil ediyor ve yakla\u015F\u0131k {{sabit_sayi,2,5}}
+    hafta i\xE7erisinde bu ruh halinden ad\u0131m ad\u0131m kurtulaca\u011F\u0131n\u0131
+    i\u015Faret ediyor.\n\nEvrenin i\u015Fleyi\u015Fi, senin ge\xE7mek istedi\u011Fin
+    yollar\u0131 \xF6nemsemez. Baz\u0131lar\u0131n\u0131 kullanabilmen ad\u0131na
+    sana ancak \"f\u0131rsat\" verir.  Neticede, seni yine kozmik amaca en iyi hizmet
+    edecek noktaya ta\u015F\u0131r. O nedenle hi\xE7bir bilinmezlik, sende b\xFCy\xFCk
+    endi\u015Felere yol a\xE7mas\u0131n. Mutlak kaderin lehine olmas\u0131 sana ba\u011Fl\u0131d\u0131r;
+    sonu\xE7lar\u0131n g\xFCzelli\u011Fi, temiz bir kalple etti\u011Fin dualarla
+    do\u011Fru, ba\u015Fka insanlar\u0131n haklar\u0131 ile ters orant\u0131l\u0131d\u0131r.
+    G\xF6rd\xFC\u011F\xFCm kadar\u0131yla sen, elinden geleni de\u011Fil, \"yap\u0131labileceklerin
+    en iyisini\" can-\u0131 y\xFCrekten yapmaya u\u011Fra\u015F\u0131yorsun {{isim}}.
+    Emin ol {{kelime, g\xFCzel neticeler alacaks\u0131n | hayalini kurdu\u011Fun
+    g\xFCnlere ula\u015Ft\u0131r\u0131lacaks\u0131n | beklentilerinin \xE7ok daha
+    \xF6tesine kavu\u015Fturulacaks\u0131n}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

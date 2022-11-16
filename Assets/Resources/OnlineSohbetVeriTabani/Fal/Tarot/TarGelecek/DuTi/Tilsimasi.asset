@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimasi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA91325895595
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: c501c24c7607adf4f9d608d75b6c18db, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: c501c24c7607adf4f9d608d75b6c18db, type: 3}
+  contentPhotoId: tilsimasi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"T\u0131ls\u0131m As\u0131\" kart\u0131n\u0131 se\xE7tin.\n\nBu
+    kart yeni bir ba\u015Flang\u0131\xE7, yeni bir tohum demek. Gelecekte ormana
+    d\xF6n\xFC\u015Fecek fideler ekece\u011Fini g\xF6r\xFCyorum. Yapaca\u011F\u0131n
+    manevi baz\u0131 yat\u0131r\u0131mlar, kendin i\xE7in o g\xFCne kadar verdi\u011Fin
+    en do\u011Fru kararlardan olacak. Tan\u0131d\u0131k \xE7evreni mi de\u011Fi\u015Ftireceksin,
+    ortam m\u0131 de\u011Fi\u015Ftireceksin, do\u011Fru birtak\u0131m insanlarla
+    do\u011Fru zamanlarda ileti\u015Fim kurarak baz\u0131 menfaatler mi elde edeceksin,
+    bilemiyorum. Bildi\u011Fim \u015Fey \u015Fu ki, elinde bozdurdu\u011Funda \xE7o\u011Falacak
+    ge\xE7er bir \"ak\xE7e\" olacak. Uzun vadede de\u011Ferlenecek bir \u015Feyler
+    bulacak, ona sahip olacaks\u0131n. \u0130\xE7inde bulundu\u011Fun ko\u015Fullar\u0131
+    \xE7ok iyi de\u011Ferlendirece\u011Finden hi\xE7bir \u015F\xFCphem yok."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek tilsimasi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme661
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA62016867717
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131 biraz daha detayl\u0131 irdeledi\u011Fimde, denize f\u0131rlat\u0131lm\u0131\u015F
+    bir \"bal\u0131k a\u011F\u0131\" g\xF6r\xFCyorum. Bu a\u011Fa tak\u0131lan baz\u0131
+    \u015Fanss\u0131z bal\u0131klar var; ancak baz\u0131lar\u0131 yan\u0131ndan te\u011Fet
+    ge\xE7ip gidiyor. Bu yans\u0131malarda, \xE7al\u0131\u015Ft\u0131\u011F\u0131n
+    i\u015Fe dair bir ipucu bulunuyor {{isim}}. \u0130lerleyen haftalarda, seninle
+    benzer meslekte olan bir k\u0131s\u0131m kamu \xE7al\u0131\u015Fan\u0131 insan
+    ya bir i\u015Fle g\xF6revlendirilerek sorumluluk alt\u0131na girecek, ya da istemedikleri
+    bir durumla kar\u015F\u0131 kar\u015F\u0131ya kalacaklar. Telvelerin, senin \"a\u011Fa
+    tak\u0131lan\" bu topluluk i\xE7inde olmayaca\u011F\u0131n\u0131 ve d\xFCzeninin
+    korunaca\u011F\u0131n\u0131 i\u015Faret ediyor. \u015Eansl\u0131s\u0131n...\n\n\xD6te
+    yandan, fal\u0131nda seni karl\u0131 havada bir ate\u015Fin ba\u015F\u0131nda
+    \u0131s\u0131nmaya \xE7al\u0131\u015F\u0131rken g\xF6r\xFCyorum. Odunlar t\xFCkendik\xE7e
+    alevler zay\u0131fl\u0131yor. \xDC\u015F\xFCyece\u011Fini d\xFC\u015F\xFCn\xFCyor,
+    adeta i\xE7ten i\xE7e \xFCz\xFCl\xFCyorsun. Arkanda ise bir adam var K\u0131ymetli
+    {{isim}}. Eline ald\u0131\u011F\u0131 \"nacak\" ile senin i\xE7in odun k\u0131r\u0131yor.
+    Onu g\xF6rm\xFCyor, duymuyor ve farketmiyorsun. {{kelime, \u0130ki haftaya kalmaz,
+    | \xDC\xE7 haftaya kalmaz, | D\xF6rt haftaya kalmaz,}} bu ki\u015Fiden beklemedi\u011Fin
+    bir yard\u0131m alacaks\u0131n. Bu yard\u0131m maddi mi manevi mi bilemiyorum
+    ancak bu yard\u0131m vesilesiyle ate\u015Fin s\xF6nmeyecek!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

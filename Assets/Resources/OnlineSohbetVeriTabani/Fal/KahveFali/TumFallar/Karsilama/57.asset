@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 57
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11253580919
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Kahve fal\u0131 yorumunla kar\u015F\u0131nday\u0131m {{isim}}. Fincan\u0131n
+    {{kelime, pek iyi tutmam\u0131\u015F gibi. Belki biraz daha bekletebilirdin...
+    | \xE7ok iyi tutmam\u0131\u015F gibi. At\u0131lan kahve miktar\u0131 belki daha
+    iyi dengelenebilirdi... | az \u015Fekerli ya da \u015Fekerli miydi? Tatl\u0131
+    bir auras\u0131 var. | iyi tutmu\u015F gibi g\xF6z\xFCk\xFCyor. Yeterince bekletmi\u015Fsin.
+    | iyi tutmu\u015F fakat kendini b\u0131rakmaya ba\u015Flam\u0131\u015F. Biraz
+    fazla m\u0131 beklettin? | iyi tutmu\u015F fakat telveler gev\u015Femeye ba\u015Flam\u0131\u015F.
+    Kahve miktar\u0131 az m\u0131yd\u0131 acaba? | g\xFCzel tutmu\u015F gibi g\xF6z\xFCk\xFCyor.
+    Do\u011Fru miktarda kahve at\u0131lm\u0131\u015F; yapan\u0131n ellerine sa\u011Fl\u0131k.
+    | iyi tutmu\u015F gibi g\xF6z\xFCk\xFCyor. Kapat\u0131rken bir niyetin varsa,
+    ger\xE7ekle\u015Fece\u011Fini en ba\u015F\u0131ndan bilmeni isterim. | bekledi\u011Fim
+    kadar iyi tutmam\u0131\u015F. Kapat\u0131rken i\xE7inden bir niyet ge\xE7irdiysen,
+    ger\xE7ekle\u015Fmesine bir miktar vakit var.}} Bakal\u0131m maddi konularda
+    bizi ne haberler bekliyor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar:
+  - "kahve fal\u0131 giri\u015F"
+  - "kahve fal\u0131 ba\u011Flama"
+  - "kahve fal\u0131 geli\u015Fme"
+  - "kahve fal\u0131 sonu\xE7"
+  - "kahve fal\u0131 u\u011Furlama"
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahveanimsonras\u0131"
+    islem: 0
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

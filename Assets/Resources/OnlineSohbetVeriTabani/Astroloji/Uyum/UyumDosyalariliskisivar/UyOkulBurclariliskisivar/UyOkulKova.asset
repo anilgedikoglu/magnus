@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulKova
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA61804363726
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Uran\xFCs'\xFCn
+    y\xF6neticili\u011Findeki kova burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131
+    | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, insanlar}} \xE7ok farkl\u0131d\u0131rlar.
+    Olduk\xE7a \u015Fahs\u0131na m\xFCnhas\u0131r yap\u0131lar\u0131, okul ortam\u0131
+    gibi kalabal\u0131k yerlerde bile kendini belli eder. Ruhsal farkl\u0131l\u0131klar\u0131n\u0131
+    d\u0131\u015F g\xF6r\xFCn\xFC\u015Flerine yans\u0131tma e\u011Filiminde ise de\u011Fillerdir.
+    \\\"Normal\\\" g\xF6z\xFCken alternatif tiplerden bahsediyoruz {{isim}}. {{burc}}
+    burcu {{data, cinsiyet=erkek, erke\u011Fi | cinsiyet=kad\u0131n, kad\u0131n\u0131
+    | cinsiyet, lgbt, insan\u0131}} olarak bir kova burcu {{data, cinsiyet=erkek,
+    kad\u0131n\u0131yla | cinsiyet=kad\u0131n, erke\u011Fiyle | cinsiyet=lgbt, mensubuyla}}
+    \xE7ok u\xE7 ve g\xFCzel \u015Feyler ya\u015Fayabilirsin. \xDCstelik bunlar\u0131
+    ya\u015Farken, bir sevgilin oldu\u011Fu ger\xE7e\u011Fi onlar\u0131n umurlar\u0131nda
+    bile olmayacakt\u0131r. Dikkat etmen gereken bir \u015Fey var Sevgili {{isim}};
+    e\u011Fer ona haddinden fazla ba\u011Flan\u0131rsan, hap\u0131 yutabilirsin.
+    Ba\u011F\u0131ms\u0131zkl\u0131klar\u0131na d\xFC\u015Fk\xFCn kova {{data, cinsiyet=kad\u0131n,
+    erkekleri | cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=lgbt, ki\u015Filer}}
+    a\xE7\u0131k bir pencere bulduklar\u0131nda her an yeni maviliklere do\u011Fru
+    kanatlanabilirler.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: kova
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

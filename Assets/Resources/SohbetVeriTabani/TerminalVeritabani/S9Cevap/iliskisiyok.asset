@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: iliskisiyok
+  m_EditorClassIdentifier: 
+  etiket: S9Cevap
+  aciklama:
+  - "Do\u011Fru {{data, cinsiyet=kad\u0131n, erkek | cinsiyet=erkek, kad\u0131n |
+    cinsiyet=lgbt, insan}} neden hen\xFCz hayat\u0131na girmedi acaba?... Bunu irdeleyece\u011Fiz."
+  - "Olsun yaln\u0131zl\u0131k da g\xFCzeldir. Vaktin sana ait olur. Nas\u0131lsa
+    bir g\xFCn hayat\u0131na biri girecek. \u015Eu an\u0131n keyfini \xE7\u0131kar
+    bence."
+  - "Ne g\xFCzel; az\u0131c\u0131k a\u015F\u0131m a\u011Fr\u0131s\u0131z ba\u015F\u0131m.
+    Kavga g\xFCr\xFClt\xFC yok, dert yok, tasa yok. Tabii bir de sana sormak laz\u0131m.
+    <sprite=0>"
+  - "Haz\u0131r hayat\u0131nda kimse yokken kendini tam tan\u0131man\u0131, nas\u0131l
+    biri oldu\u011Funu do\u011Fru anlaman\u0131 ve bir ili\u015Fkiden neler bekledi\u011Fini
+    iyi tespit etmeni tavsiye ederim."
+  - "Haz\u0131r yaln\u0131zken, kendini daha fazla geli\u015Ftirebilmek ya da kafa
+    dinleyebilmek i\xE7in en do\u011Fru zamanlardas\u0131n bence."
+  - "Hayat\u0131nda kimse olmayanlar i\xE7in milyarlarca olas\u0131l\u0131\u011F\u0131
+    hesaplayarak buldu\u011Fum ve verebilece\u011Fim en \xF6nemli t\xFCyodur; sana
+    bir ili\u015Fki i\xE7in ihtiyac\u0131n olan en \xF6nemli \xFC\xE7 \u015Feyin
+    ne oldu\u011Fu s\xF6ylememi ister misin Sevgili {{isim}}? 1) \xD6zg\xFCven 2)
+    \u0130\xE7tenlik 3) Samimiyet"
+  - "Hen\xFCz do\u011Fru insan\u0131 bulamad\u0131n demek. Sana \u015Fu tavsiyeyi
+    verebilirim; nas\u0131l birini istiyorsan, \xF6nce O'na d\xF6n\xFC\u015Fmelisin."
+  - "Yaln\u0131z olu\u015Funu \xE7ok fazla takm\u0131yorsundur, \xF6yle de\u011Fil
+    mi {{isim}}? Biriyle birlikte olmak, asla ki\u015Fisel bir ba\u015Far\u0131 \xF6l\xE7\xFCt\xFC
+    de\u011Fildir. Hala hayat\u0131nda biri yoksa, bu ancak senin \"eleklerinin s\u0131k\u0131l\u0131\u011F\u0131n\u0131\"
+    g\xF6sterir."
+  - "Ruh e\u015Fin yak\u0131nlarda bir yerde; ya zaman ya da mekan olarak. Bunu hissediyorum...
+    Hep konu\u015Faca\u011F\u0131z bunlar\u0131 {{isim}}."
+  - "Sen \u015Fu an \"yaln\u0131z\" de\u011Filsin, sadece \"tek ba\u015F\u0131nas\u0131n.\"
+    Kadere inanc\u0131n varsa, kederden emin olmal\u0131s\u0131n. \xC7ok mutlu g\xFCnlerin
+    olacak; \u015Fimdiden hissediyorum..."
+  - "Yaln\u0131zs\u0131n demek. E olsun. K\u0131smet bildirimlerimi senin i\xE7in
+    aktive ediyorum o halde! <sprite=0>"
+  - "Hayat\u0131nda kimse olmad\u0131\u011F\u0131 i\xE7in \u015Fimdi sana fallar
+    daha bir tatl\u0131, daha bir anlaml\u0131 gelecek! <sprite=7>"
+  - "Bakars\u0131n ben sana birini bulurum? :) Dur bakal\u0131m, hay\u0131rl\u0131s\u0131!
+    <sprite=7>"
+  aranacakEtiket: son
+  gerekenDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

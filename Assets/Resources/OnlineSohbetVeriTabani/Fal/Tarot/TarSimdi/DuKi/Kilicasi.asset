@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicasi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA61569597248
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: ad6288c55197be24ab1e00a5ec980b42, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: ad6288c55197be24ab1e00a5ec980b42, type: 3}
+  contentPhotoId: kilicasi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 As\u0131\" kart\u0131n\u0131 se\xE7tin.\n\nKendi
+    sava\u015F\u0131n\u0131n tam ortas\u0131ndas\u0131n {{isim}}. \u015Eu anda yapmakta
+    olduklar\u0131n, gelecekteki kaderini belirleyecek. Ne mutlu ki se\xE7ti\u011Fin
+    kart a\xE7\u0131k fikirli oldu\u011Funu ifade ediyor. Azimlisin, f\u0131rsat\xE7\u0131s\u0131n
+    ve yeniliklere a\xE7\u0131ks\u0131n. Hedeflerini g\xF6rebilece\u011Fin bir yere
+    kendini konumlam\u0131\u015Fs\u0131n. Kar\u015F\u0131na \xE7\u0131kan her engeli
+    s\u0131ras\u0131yla bertaraf ediyorsun. \u0130\xE7inde \xF6yle b\xFCy\xFCk bir
+    arzu var ki, adeta yang\u0131n yeri. Seni pes ettirebilecek ya da umutlar\u0131n\u0131
+    teslim alabilecek hi\xE7bir g\xFC\xE7 g\xF6rm\xFCyorum. Sunulmakta olan f\u0131rsatlar\u0131
+    hi\xE7 ka\xE7\u0131rmadan de\u011Ferlendirmeye devam etti\u011Fin s\xFCrece,
+    kutlu bir zafer ve afilli mutluluklar seni bekliyor.\n"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilicasi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

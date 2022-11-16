@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: OgrenciKarmasik 1
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA15742269749
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn g\xFCn i\xE7erisinde ya\u015Fanabilecek olumlu ve olumsuz her t\xFCrl\xFC
+    geli\u015Fmeyi g\xF6\u011F\xFCslemeye haz\u0131r bir \u015Fekilde uyanm\u0131\u015Fs\u0131n
+    {{isim}}. Lakin daha iyimser olabilirsin \xE7\xFCnk\xFC \xF6n\xFCnde parlak bir
+    g\xFCn var. Sevdi\u011Fin ki\u015Fiyle aran\u0131zdaki belirsizliklerin d\u0131\u015F\u0131nda,
+    kafanda yeni soru i\u015Fareti yaratabilecek bir olumsuzluk g\xF6rm\xFCyorum.
+    Ya\u015Fayabilece\u011Fin tek s\u0131k\u0131nt\u0131, g\xFCn\xFCn belli bir an\u0131nda
+    maddi bir konuda olabilir gibi g\xF6z\xFCk\xFCyor. Onu da h\u0131zla \xE7\xF6z\xFCme
+    kavu\u015Fturabileceksin. Ak\u015Fam saatlerine do\u011Fru, soyad\u0131nda {{soyisimiki}}
+    harfi olan birinin olumlu bir geli\u015Fme ya\u015Fad\u0131\u011F\u0131n\u0131
+    duyman m\xFCmk\xFCn De\u011Ferli {{isim}}. Bu geli\u015Fme seni de ilgilendirdi\u011Fi
+    i\xE7in, \xE7ok mutlu olacaks\u0131n. G\xFCn\xFC m\xFCthi\u015F bir moralle kapataca\u011F\u0131n\u0131
+    s\xF6yleyebilirim."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

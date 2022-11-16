@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris351
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA76127016665
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sahil boyunca uzanan bir \"dalgak\u0131ran\" g\xF6r\xFCyorum {{isim}}. \U0001F30ATelvelerindeki
+    dalgak\u0131rana \xE7arp\u0131p g\xF6ky\xFCz\xFCne uzanan sular, son zamanlarda
+    kontrol alt\u0131na alamad\u0131\u011F\u0131n d\xFC\u015F\xFCncelerin seni adeta
+    sarst\u0131\u011F\u0131n\u0131 s\xF6yl\xFCyor. Zihninde evirip \xE7evirdi\u011Fin
+    bu d\xFC\u015F\xFCnceler dudaklar\u0131n\u0131n aras\u0131ndan d\xF6k\xFClmedik\xE7e,
+    ayn\u0131 k\u0131s\u0131r d\xF6ng\xFC i\xE7inde can\u0131n\u0131 s\u0131kmaya
+    devam edecek. Bu g\xF6r\xFCnt\xFClerin hemen yan\u0131nda ise seninkiyle ayn\u0131
+    {{kelime, sorunlardan | d\xFC\u015F\xFCncelerden}} muzdarip bir {{data, cinsiyet=erkek,
+    adam | cinsiyet=kad\u0131n, kad\u0131n | cinsiyet=lgbt, insan}} belirmi\u015F.
+    Benzer \u015Fartlara sahip oldu\u011Funuzu d\xFC\u015F\xFCnd\xFC\u011F\xFCm ve
+    isminde ya da soyisminde {{harf}} harfi olan bu ki\u015Fi ile 2-3 g\xFCn i\xE7inde,
+    en ge\xE7 {{gun_+3}} g\xFCn\xFC konu\u015Faca\u011F\u0131n\u0131z\u0131 ve bu
+    ki\u015Finin kendisi i\xE7in buldu\u011Fu \xE7\xF6z\xFCm yollar\u0131n\u0131n
+    sana da \u015Fifa olaca\u011F\u0131n\u0131 hissediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

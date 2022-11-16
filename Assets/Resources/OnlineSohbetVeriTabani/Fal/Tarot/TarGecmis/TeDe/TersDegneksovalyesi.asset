@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegneksovalyesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA30526117392
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 2c39bc9f7737a3048a7c876f63ae7e85, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 2c39bc9f7737a3048a7c876f63ae7e85, type: 3}
+  contentPhotoId: asasovalyesi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"De\u011Fnek \u015E\xF6valyesi\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nGeli\u015Fmeni ve ilerlemeni sa\u011Flayan en \xF6nemli
+    \xF6zelli\u011Fini yani h\u0131rs\u0131n\u0131, baz\u0131 olaylar sonras\u0131nda
+    kaybetmi\u015Fsin {{isim}}. \xC7ok tenkit edilmi\u015F ya da haketti\u011Fin
+    takdiri bulamam\u0131\u015F olman, seni bo\u015Fvermeye s\xFCr\xFCklemi\u015F.
+    Kart\u0131n, bir noktadan sonra i\u015Fleri tamamen oluruna b\u0131rakt\u0131\u011F\u0131n\u0131
+    ve kendine yeni y\xF6nler tayin etmek yerine suyun ak\u0131\u015F\u0131na teslim
+    etti\u011Fini i\u015Faret ediyor. Kontrols\xFCzl\xFC\u011F\xFCn ve disiplinsizli\u011Fin,
+    enerjini bo\u015Fa sarf etmene neden olmu\u015F. Ya erken davranm\u0131\u015F
+    ya da ge\xE7 kalm\u0131\u015Fs\u0131n. Oturup sakince d\xFC\u015F\xFCnmen, kendini
+    toparlaman ve yeni bir hevesle yola koyulman gerekirken, yapmam\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis asasovalyesi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

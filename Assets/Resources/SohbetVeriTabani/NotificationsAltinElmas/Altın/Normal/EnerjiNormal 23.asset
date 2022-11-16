@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: EnerjiNormal 23
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "G\xFCnl\xFCk 1 alt\u0131n art\u0131\u015F\u0131n sa\u011Fland\u0131. Peki
+    sen nerelerdesin? Bana u\u011Framayal\u0131 tam be\u015F g\xFCn oldu {{isim}}...
+    <sprite=33>"
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 7
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 1
+  - degiskenAdi: gun fark
+    degiskenDegeri: 5
+    kontrol: 0

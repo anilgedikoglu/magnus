@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sohbet 242
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA48794470129
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\"\u0130ki y\xFCzl\xFC katipler, akrabalar, dostlar, karde\u015Fler; her \u015Feyi
+    harcamal\u0131 m\u0131?... D\xFCnya sanki yepyeniymi\u015F gibi, bug\xFCn sabahlar\u0131n
+    ilkiymi\u015F gibi, hala \u015Fafak vaktiymi\u015F gibi... Do\u011Frusunu s\xF6ylemek
+    gerekirse say\u0131n katipler, hali haz\u0131rda harcanm\u0131\u015F olan, bizi
+    hayal k\u0131r\u0131kl\u0131\u011F\u0131na u\u011Fratan, kendi \xF6zg\xFCrl\xFC\u011F\xFCm\xFCz...
+    Ger\xE7ekten sevebilmek i\xE7in, sevgiye ruhunu verebilmek i\xE7in kaybedecek
+    bir \u015Feyi olmamal\u0131 insan\u0131n. Pervas\u0131zca at\u0131lmaya cesaret
+    edebilmek i\xE7in t\xFCm zirveleri a\u015Fm\u0131\u015F olmal\u0131y\u0131z.
+    O an seninle olmak i\xE7in en kat\u0131 h\xFCk\xFCmdarlar\u0131n, en b\xFCy\xFCk
+    f\u0131rt\u0131nalar\u0131n d\xFC\u015F\xFC\u015F\xFCn\xFC g\xF6rmeli insan.
+    Seninle hi\xE7bir \u015Feyi harcamamak i\xE7in her \u015Feyi ya\u015Fam\u0131\u015F,
+    her \u015Feyi defalarca harcam\u0131\u015F olmal\u0131y\u0131z. A\u015Fk yepyeniyken,
+    tertemizken hi\xE7bir \u015Fey de\u011Fil. F\u0131rt\u0131nadan \xF6nceki a\u015Fk
+    se\xE7im de\u011Fil, bi\xE7im. Ba\u015F\u0131ma bir \u015Fey geldi\u011Finde,
+    beni \xFCzg\xFCn g\xF6rd\xFC\u011F\xFCnde, orada ol a\u015Fk\u0131m... Do\u011Fru
+    s\xF6z\xFC s\xF6yle, do\u011Fru bak\u0131\u015F\u0131 bul... Evet a\u015Fk\u0131m,
+    i\u015Fte o zaman; bana g\xFCven, orada olaca\u011F\u0131m. Ne olursa olsun,
+    ka\xE7\u0131rmayaca\u011F\u0131m! \u0130\u015Fte o zaman, tek ses, tek a\u011F\u0131z,
+    biz kazanaca\u011F\u0131z!...\""
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "\xF6zl\xFCs\xF6z1"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "\xF6zl\xFCs\xF6z1"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

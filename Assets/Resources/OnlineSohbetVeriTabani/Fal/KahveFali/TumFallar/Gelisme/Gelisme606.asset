@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme606
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA33063399498
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ayr\u0131ld\u0131\u011F\u0131n ki\u015Fiyi ve seni beraberce, baz\u0131 y\xFCksek
+    ve s\u0131k dall\u0131 a\u011Fa\xE7lar\u0131n alt\u0131nda g\xF6r\xFCyorum {{isim}}.
+    \U0001F332 Fincanlarda genellikle ferahl\u0131\u011F\u0131 ve ili\u015Fkilerin
+    k\xF6klenmesini sembolize eden bu a\u011Fa\xE7lar, bu defa g\xF6ky\xFCz\xFCn\xFC
+    g\xF6rmenizi bile engelleyen \"birer d\xFC\u015Fman\" gibiler. \U0001F928Her
+    ikiniz de bask\u0131 alt\u0131nda ve nefes alam\u0131yor g\xF6z\xFCk\xFCyorsunuz.
+    Sonu\xE7 olarak birinin oradan ayr\u0131lmak istemesi ka\xE7\u0131n\u0131lmaz
+    bir hal alm\u0131\u015F.\n\nS\u0131k\u0131 s\u0131k\u0131ya savundu\u011Fun fikirlerden,
+    do\u011Frulu\u011Fundan asla teredd\xFCt dahi etmedi\u011Fin baz\u0131 kararlar\u0131ndan
+    ve gururundan, a\u015Fk u\u011Fruna bazen \xF6d\xFCn vermen gerekebilir {{isim}}.
+    Na\xE7izane tavsiyem; o a\u011Fa\xE7lar\u0131n alt\u0131ndan ve sevdi\u011Fin
+    ki\u015Fiye dayatt\u0131\u011F\u0131n do\u011Frular\u0131ndan uzakla\u015Farak
+    ayd\u0131nl\u0131\u011Fa \xE7\u0131kmal\u0131, kendi g\xF6lgeni olu\u015Fturmal\u0131
+    ve onu da yan\u0131na \xE7ekmelisin. Her ikinizin de nefes almaya ihtiyac\u0131
+    var. Sevgi ve ili\u015Fki kalmay\u0131nca, hakl\u0131n\u0131n da su\xE7lunun
+    da anlam\u0131 kalm\u0131yor. Telvelerin, onun seni haz\u0131r bekledi\u011Fini
+    s\xF6yl\xFCyor. Ataca\u011F\u0131n g\xF6n\xFClden bir ad\u0131m, t\xFCm buzlar\u0131
+    tahminlerinden de h\u0131zl\u0131 bir \u015Fekilde eritecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

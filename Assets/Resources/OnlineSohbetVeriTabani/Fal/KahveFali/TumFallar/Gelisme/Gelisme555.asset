@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme555
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA72741813187
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ey yolcu! Yolunu yitirdi\u011Fin i\xE7in kendine yeni bir yol mu ar\u0131yorsun?
+    \U0001F928 Ahh {{isim}}... Devam\u0131nda sapaklar olan bir yolda y\xFCr\xFCrken
+    g\xF6r\xFCyorum seni. Ayr\u0131ld\u0131\u011F\u0131n ki\u015Fiden gitgide uzakla\u015F\u0131yorsun,
+    fakat \xF6n\xFCne de\u011Fil, ard\u0131na bak\u0131yorsun. G\xF6z\xFCn bu \u015Fekilde
+    arkada olursa, gelecekte \xF6n\xFCne \xE7\u0131kabilecek ta\u015Flar\u0131 fark
+    edemez, tak\u0131l\u0131r, d\xFC\u015Fersin. \U0001F61FBelki de yeni f\u0131rsatlar\u0131n
+    \xF6n\xFCnden \xF6ylece, fark etmeden ge\xE7ip gidersin.\n\nFakat fincan\u0131n,
+    \"durman\u0131\" tembihliyor. Yol almadan \xF6nce, geride kalan k\xF6z s\xF6nmeli;
+    yoksa tek bir r\xFCzgarla aleve d\xF6n\xFC\u015F\xFCr, ormanlar\u0131n yanar!
+    \U0001F525Niyetin bu k\xF6z\xFCn s\xF6nmesi de\u011Filse, \u015Funu bilmeni isterim
+    {{isim}}; hen\xFCz her \u015Fey bitmi\u015F g\xF6z\xFCkm\xFCyor. Ayr\u0131ld\u0131\u011F\u0131n
+    ki\u015Fiyle ani bir \"y\xFCz y\xFCze g\xF6r\xFC\u015Fmeniz\" olacak. Sa\u011Flama
+    almaya ba\u015Flad\u0131\u011F\u0131n gemileri bir anda yakacak, tekrar, ko\u015Fa
+    ko\u015Fa yan\u0131na gideceksin. Telvelerinde sar\u0131l\u0131rken \xE7\u0131km\u0131\u015Fs\u0131n\u0131z.
+    Bana sorarsan, siz yeniden bir araya gelip, bu defa birbirinize daha s\u0131k\u0131
+    sar\u0131lacaks\u0131n\u0131z. \U0001F46B"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

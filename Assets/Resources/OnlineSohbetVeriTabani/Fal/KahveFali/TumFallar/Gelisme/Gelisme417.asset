@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme417
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA27470489428
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xC7ok ilgin\xE7 bir detay g\xF6r\xFCyorum telvelerinde. Y\xFCz\xFCk parma\u011F\u0131,
+    i\u015Faret parma\u011F\u0131ndan daha uzun bir el var. Bu bir erkek eline benziyor.
+    Bu elin sahibinin, y\xFCksek bir sosyal stat\xFCye sahip ve olduk\xE7a da zeki
+    biri oldu\u011Funu hissediyorum. {{sayi,2,5}} g\xFCn i\xE7erisinde bu ki\u015Fiyle
+    telefonda g\xF6r\xFC\u015Fecek, ondan \xE7ok \xF6nemli bir konuda i\u015Fine
+    \xE7ok yarayacak bir bilgi alarak, hemen harekete ge\xE7eceksin. Bu ki\u015Finin
+    eli, senin ya\u015Fam\u0131na daha \xF6nce de de\u011Fmi\u015F {{isim}}.\n\nDaha
+    alt k\u0131s\u0131mlarda ise, arka iki patisinin \xFCzerinde aya\u011Fa kalkm\u0131\u015F
+    bir \"tilki\" g\xF6z\xFCme \xE7arpt\u0131. Hemen kar\u015F\u0131s\u0131nda ise,
+    onu \xF6n patilerinden tutan, enerjisi olduk\xE7a y\xFCksek, orta ya\u015Flarda
+    bir han\u0131mefendi var. Tilki, burada senin aleyhine konu\u015Fan, sana kar\u015F\u0131
+    gelen, senden \xE7ok hazzetmeyen birini temsil ediyor {{isim}}. Bu kad\u0131n
+    ise seninle g\xF6n\xFCl ba\u011F\u0131 olan, seni \xE7ok seven birisi. Bu iki
+    ki\u015Fi, ilerleyen g\xFCnlerde senin olmad\u0131\u011F\u0131n bir yerde kar\u015F\u0131
+    kar\u015F\u0131ya gelecek. Buradaki han\u0131mefendi kar\u015F\u0131s\u0131ndaki
+    ki\u015Fiye kar\u015F\u0131 senin hakk\u0131n\u0131 savunarak, onu ehlile\u015Ftirecek.
+    Bu durumdan sen kazan\xE7l\u0131 \xE7\u0131kacak ve olay\u0131 duydu\u011Funda
+    \xE7ok memnun olacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

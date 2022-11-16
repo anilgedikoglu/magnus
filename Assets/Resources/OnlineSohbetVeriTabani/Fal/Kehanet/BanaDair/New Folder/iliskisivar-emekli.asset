@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: iliskisivar-emekli
+  m_EditorClassIdentifier: 
+  idIndex: 20226105951AA49419442269
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Magnuskop'u bir sene sonra bug\xFCne ayarlad\u0131m. Seni sevgilinle bir anla\u015Fmazl\u0131k
+    \xFCzerine konu\u015Furken g\xF6r\xFCyorum. \u0130\u015Fin ilgin\xE7 yan\u0131,
+    bunu da hakk\u0131nda anla\u015Famad\u0131\u011F\u0131n\u0131z yere ya da insanlar\u0131n
+    yan\u0131na giderken yap\u0131yorsunuz. Sevgilin \xE7ok \xE7etin biri {{isim}}.
+    Bu durum zaman ge\xE7tik\xE7e kendini daha da g\xF6stermi\u015F belli ki. Bir
+    detay daha var. Sen, \u015Fu anda sahip olmad\u0131\u011F\u0131n ve \xE7ok istedi\u011Fin
+    bir \u015Feye sahipsin ve bu maddi bir \u015Fey. Ne oldu\u011Fu bana kals\u0131n...
+    <sprite=7>"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: emekli
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: kehanetbana
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: kehanetbana son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

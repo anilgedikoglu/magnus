@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKupadokuzlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA14090206582
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: e9588186351bcbb43a95673be94bffbf, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: e9588186351bcbb43a95673be94bffbf, type: 3}
+  contentPhotoId: kupadokuzlusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Kupa Dokuzlusu\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nBu
+    kart, ge\xE7mi\u015Fte \u015Fimdiye oranla daha k\xF6t\xFCmser bir yap\u0131n
+    oldu\u011Funu i\u015Faret ediyor {{isim}}. Zaman ge\xE7tik\xE7e ve olgunla\u015Ft\u0131k\xE7a
+    kaybetmekten korkmamaya ba\u015Flam\u0131\u015F, t\xF6kezledi\u011Fin zamanlar\u0131
+    anlay\u0131\u015Fla kar\u015F\u0131lam\u0131\u015F ve pes etmeden bir \xE7\u0131kar
+    yol aram\u0131\u015F, gitgide daha da olgunla\u015Farak barda\u011F\u0131n dolu
+    taraf\u0131n\u0131 g\xF6rmeyi al\u0131\u015Fkanl\u0131k haline getirmi\u015Fsin.
+    Hayattan \xE7\u0131kard\u0131\u011F\u0131n tek ders iyimserlik de olmam\u0131\u015F.
+    Kart\u0131n\u0131n s\xF6yledi\u011Fi kadar\u0131yla elindekilerin k\u0131ymetini
+    daha iyi anlamaya ba\u015Flam\u0131\u015F, ihtiyac\u0131n olmayan bir \u015Fey
+    ald\u0131\u011F\u0131n zamanlarda, ihtiyac\u0131n olan\u0131 satmak durumunda
+    kalabilece\u011Fini fark etmi\u015Fsin. Para idaresi konusunda da kendini geli\u015Ftirdi\u011Fini
+    g\xF6r\xFCyorum."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kupadokuzlusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicuclusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA52124040424
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: c3b991398b9fd1f41b4e6323c37e2f7e, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: c3b991398b9fd1f41b4e6323c37e2f7e, type: 3}
+  contentPhotoId: kilicuclusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nManevi anlamda ki\u015Finin deh\u015Fetli bir \u015Fekilde
+    sars\u0131lmas\u0131n\u0131 konu alan bu kart\u0131 ters \xE7ekerek, ge\xE7mi\u015Finden
+    bug\xFCne g\xFCzel haberler getirmi\u015F oldun {{isim}}. Derin bir kalp a\u011Fr\u0131s\u0131
+    ya\u015Fam\u0131\u015Fs\u0131n. Baz\u0131 insanlar seni ziyadesiyle \xFCzm\xFC\u015F.
+    Halini g\xF6ren sevdiklerin de bu durumdan k\xF6t\xFC etkilenmi\u015F. Birilerinin
+    yapt\u0131\u011F\u0131 tercihler nedeniyle kendi kendimizi mutsuz etmememiz gerekti\u011Fini
+    \xE7ok sonralar anlam\u0131\u015Fs\u0131n. Kendine etti\u011Fin zul\xFCm son
+    bulmu\u015F. \xDCzerindeki f\u0131rt\u0131na dinmi\u015F ve tedbiren \u015Femsiyeni
+    sonraki ya\u011Fmurlar i\xE7in sonuna kadar a\xE7m\u0131\u015Fs\u0131n. Tats\u0131z
+    an\u0131lar\u0131n kalbinin \xFCzerinde yaratt\u0131\u011F\u0131 ka\u011F\u0131t
+    kesikleri, g\xFCnbeg\xFCn iyile\u015Fmeye ba\u015Flam\u0131\u015F."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kilicuclusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

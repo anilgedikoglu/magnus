@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme410
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA43731944818
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Kalabal\u0131k bir m\xFCze ya da sergi alan\u0131nda, tek ba\u015F\u0131na g\xF6r\xFCyorum
+    {{isimcigim}} seni. \u0130lgin\xE7 olan \u015Fu; i\xE7eride senden ba\u015Fka
+    tek bir ki\u015Fi bile yok. Fakat kap\u0131n\u0131n \xF6n\xFCnde biri bekliyor...
+    Bu ki\u015Fi seni beklemiyor asl\u0131nda. Hatta bana sorarsan, senin varl\u0131\u011F\u0131ndan
+    bile habersiz; fakat onun kaderi, orada beklemek belli ki. Bu erkek ailesi taraf\u0131ndan
+    biraz y\u0131prat\u0131lm\u0131\u015F sanki. Sorumluluklar\u0131 a\u011F\u0131r.
+    Sense i\xE7eride adeta \xE7evreyi g\xF6zlemliyorsun. Etraf\u0131nda duran \"s\xF6z\xFCm
+    ona\" de\u011Ferli \u015Feylerin varl\u0131\u011F\u0131, seni memnun etmiyor
+    gibi. Telvelerine bak\u0131l\u0131rsa, senin kaderin buradan yaln\u0131z \xE7\u0131k\u0131p,
+    kap\u0131da bekleyen ki\u015Fiyle tan\u0131\u015Fmak. {{gelecek_ay}} ay\u0131n\u0131n
+    \xFC\xE7\xFCnc\xFC \xE7eyre\u011Fi i\xE7erisinde alaca\u011F\u0131n i\u015Fareti
+    bekle {{isim}}!\n\nFincan\u0131n\u0131n {{kelime, sa\u011F alt | sa\u011F \xFCst
+    | sol alt | sol \xFCst}} k\xF6\u015Fesinde, uzaklardan g\xF6z k\u0131rpan kocaman
+    bir u\xE7urtma g\xF6r\xFCyorum. Bu u\xE7urtma, e\u011Fitim hayat\u0131n\u0131
+    temsil ediyor. Senin bir r\xFCzgara ihtiyac\u0131n varm\u0131\u015F. Bu r\xFCzgar
+    \xE7ok yak\u0131nda kanatlar\u0131n\u0131 doldurmaya ba\u015Flad\u0131\u011F\u0131nda,
+    ne kadar y\xFCkseklere \xE7\u0131kabildi\u011Fini g\xF6recek, neler yapabilece\u011Fini
+    anlayacaks\u0131n. Senin yerin enginler de\u011Fil sevgili {{isim}}!..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulYengec
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA20341414001
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Yenge\xE7
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131na | cinsiyet=kad\u0131n, erkeklerine
+    | cinsiyet=lgbt, insanlara}} hi\xE7bir konuda \\\"bo\u015Fver\\\" diyemezsin.
+    Sorunlar\u0131n ve yanl\u0131\u015F oldu\u011Funu g\xF6rd\xFCkleri \u015Feylerin
+    yan\u0131ndan asla ge\xE7ip gitmezler. Do\u011Fayla, hayvanlarla ve \xE7ocuklarla
+    ilgili konularda a\u015F\u0131r\u0131 duyarl\u0131d\u0131rlar. Bunlar\u0131 senin
+    de sevmeni ve bunlara senin de de\u011Fer vermeni ister. Yapmazsan, seni bir
+    kalemde silmesi i\u015Ften bile de\u011Fildir. {{burc}} burcu {{data, cinsiyet=erkek,
+    erkekleri | cinsiyet=kad\u0131n, kad\u0131nlar\u0131 | cinsiyet=lgbt, mensuplar\u0131}}
+    biraz gelenek\xE7idir. O ise sana oranla daha yenilik\xE7i {{isim}}. Adet ve
+    t\xF6re gerektiriyor diye, ona asla aksiyon ald\u0131ramazs\u0131n. Bunu anlamayacak,
+    \xF6zg\xFCrl\xFCk\xE7\xFC davranmak isteyecektir. Yenge\xE7 {{data, cinsiyet=erkek,
+    kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, burcu insanlar}}
+    okul gibi kalabal\u0131k ortamlarda pek sevilmezler. Her nabza g\xF6re ayr\u0131
+    \u015Ferbet veren insanlardan de\u011Fillerdir. Ona yak\u0131nla\u015Fmak ve
+    onun g\xF6z\xFCne girmek istiyorsan, okul ortam\u0131nda b\xFCy\xFCk bir kalabal\u0131\u011F\u0131
+    kar\u015F\u0131na almak zorunda kalabilirsin. Hatta yak\u0131n arkada\u015Flar\u0131n,
+    senin ne yapmaya \xE7al\u0131\u015Ft\u0131\u011F\u0131n\u0131 anlamayabilir.
+    O'nun yak\u0131n\u0131na ancak yaln\u0131z ba\u015F\u0131na, emellerinden ar\u0131nm\u0131\u015F,
+    niyetlerini bir kenara b\u0131rakm\u0131\u015F ve \\\"\xE7\u0131r\u0131l\xE7\u0131plak\\\"
+    varabilirsin {{isim}}. Seninle olabilmesi i\xE7in, do\u011Fru bildi\u011Fin ve
+    sevdi\u011Fin pek \xE7ok \u015Feyi terk etmelisin.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "yenge\xE7"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

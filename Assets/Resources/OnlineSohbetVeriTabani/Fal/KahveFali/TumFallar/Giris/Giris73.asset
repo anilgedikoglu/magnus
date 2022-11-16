@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris73
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA91590102233
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n \xFCst k\u0131s\u0131mlar\u0131nda, kafes \u015Feklinde
+    bir \"su alt\u0131 bal\u0131k tuza\u011F\u0131\" g\xF6z\xFCk\xFCyor. \u0130\xE7i
+    ise t\u0131kl\u0131m t\u0131kl\u0131m bal\u0131kla dolu. Bu yans\u0131malar,
+    \u015Fans eseri ataca\u011F\u0131n bir ad\u0131m, girece\u011Fin bir i\u015F
+    ya da ba\u015Fvuru sonras\u0131 kayda de\u011Fer bir gelir elde edece\u011Finin
+    i\u015Fareti. Hemen yan k\u0131s\u0131mda bir de {{kelime, \"2\" rakam\u0131
+    var. Gelecek ay\u0131n 2'sinde, 12'sinde ya da 22'sinde | \"3\" rakam\u0131 var.
+    Gelecek ay\u0131n 3'\xFCnde, 13'\xFCnde ya da 23'\xFCnde | \"4\" rakam\u0131
+    var. Gelecek ay\u0131n 4'\xFCnde, 14'\xFCnde ya da 24'\xFCnde | \"5\" rakam\u0131
+    var. Gelecek ay\u0131n 5'inde, 15'inde ya da 25'inde | \"6\" rakam\u0131 var.
+    Gelecek ay\u0131n 6's\u0131nda, 16's\u0131nda ya da 26's\u0131nda | \"7\" rakam\u0131
+    var. Gelecek ay\u0131n 7'sinde, 17'sinde ya da 27'sinde | \"8\" rakam\u0131 var.
+    Gelecek ay\u0131n 8'inde, 18'inde ya da 28'inde}} ger\xE7ekle\u015Ftirece\u011Fin
+    b\xF6yle bir eylem, eline ciddi miktarda para ge\xE7mesine sebep olabilir. Misal,
+    normalde say\u0131sal loto ya da milli piyango oynam\u0131yorsan, bu tarihlerde
+    \u015Fans\u0131n\u0131 denemeni tavsiye ederim {{isim}}. {{gelecek_ay}} ay\u0131nda,
+    do\u011Fum ay\u0131n olan \"{{dogum ayi}}\" rakam\u0131n\u0131n da sana u\u011Fur
+    getirebilece\u011Fini akl\u0131ndan \xE7\u0131karma. \xC7al\u0131\u015Fm\u0131yor
+    olmana ra\u011Fmen {{gelecek_ay}} ay\u0131 ve sonras\u0131ndaki {{sayi,2,4}}
+    ay, sana ciddi bir gelir vadediyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xE7al\u0131\u015Fm\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xE7al\u0131\u015Fm\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

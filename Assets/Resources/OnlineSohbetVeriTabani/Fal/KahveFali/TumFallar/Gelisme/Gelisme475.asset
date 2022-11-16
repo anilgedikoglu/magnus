@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme475
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA14627484430
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Benim g\xF6rd\xFC\u011F\xFCm \"balina\" kuyru\u011Funu sen de g\xF6r\xFCyor
+    musun? \U0001F41FA\xE7\u0131k bir denizin \xFCzerinde oldu\u011Funu tahmin etti\u011Fim
+    bu yans\u0131ma, \xE7ok b\xFCy\xFCk bir k\u0131smetle kar\u015F\u0131la\u015Faca\u011F\u0131n\u0131
+    fakat ona ula\u015F\u0131p sahip olmadan \xF6nce, pe\u015Finden bir s\xFCre ko\u015Faca\u011F\u0131n\u0131
+    i\u015Faret ediyor {{isim}}. \xC7abalaman, sabretmen ve do\u011Fru ad\u0131mlar\u0131
+    atman gerekecek. Seni sonuca ula\u015Ft\u0131racak en do\u011Fru yakla\u015F\u0131m\u0131
+    sergilemen, fevkalade \xF6nem ta\u015F\u0131yor. Neticeyi ise {{ay_+4}} ay\u0131n\u0131n
+    ikinci \xE7eyre\u011Fi i\xE7inde alacaks\u0131n.\n\nBir \"keman\" sembol\xFC
+    var fincan taban\u0131na do\u011Fru. \U0001F3BBH\xFCzn\xFC ve maceray\u0131 seven
+    bir yap\u0131n var senin. \"Olmazlardan\" ve zorlardan besleniyorsun. Kolay,
+    asla sana g\xF6re de\u011Fil. \u0130lerleyen y\u0131llarda g\xFCc\xFCn\xFC ve
+    sabr\u0131n\u0131 adeta de\u011Firmende \xF6\u011F\xFCt\xFCp, sana diledi\u011Fin
+    o yald\u0131zl\u0131 ve parlak g\xF6\u011F\xFC meydana getirmesi i\xE7in g\xFCne\u015Fe
+    do\u011Fru sa\xE7acaks\u0131n! Zor elde edilecek olan fakat bir o kadar da k\u0131ymetli
+    \u015Feyler gelece\u011Finde seni bekliyor {{isim}}. \U0001F324\uFE0F"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

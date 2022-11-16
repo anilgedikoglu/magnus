@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme743
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA24371546219
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{isimcigim}} fincan\u0131n\u0131n orta k\u0131s\u0131mlar\u0131nda erkek arkada\u015F\u0131n\u0131
+    {{kelime, duvara as\u0131l\u0131 bir resmin alt\u0131nda, \xFC\xE7l\xFC bir kanepede
+    | geni\u015F bir televizyonun kar\u015F\u0131s\u0131nda, \xFC\xE7l\xFC bir koltukta
+    | i\xE7inde kitapl\u0131k da olan bir odada, yata\u011F\u0131n \xFCzerinde |
+    orta sehpas\u0131 da olan bir odada, lo\u015F bir \u0131\u015F\u0131k alt\u0131nda
+    | yan\u0131 mutfak olan bir odada, geni\u015F ve ah\u015Fap bir yemek masas\u0131n\u0131n
+    \xF6n\xFCnde, sandalyede | mutfa\u011Fa ya da oturma odas\u0131na a\xE7\u0131lan
+    bir balkonda, k\xFC\xE7\xFCc\xFCk bir sandalyede}} can\u0131 s\u0131kk\u0131n
+    ve d\xFC\u015F\xFCnceli bir \u015Fekilde otururken g\xF6r\xFCyorum. Morali kariyeri
+    ile ilgili bir \u015Feye bozulmu\u015F gibi duruyor. Hislerim beni yan\u0131ltm\u0131yorsa,
+    {{kelime, 1 hafta 10 g\xFCn | 7-8 g\xFCn | 8-9 g\xFCn | 5-6 g\xFCn | 10-15 g\xFCn
+    | 3-4 | 2-3 g\xFCn}} {{kelime, sonra | i\xE7inde}} ya\u015Fayaca\u011F\u0131
+    bir sorun, onu \xE7ok \xFCzecek. O psikoloji ile kap\u0131lar\u0131n\u0131 kapatm\u0131\u015F
+    ve seni d\u0131\u015Far\u0131da b\u0131rakm\u0131\u015F gibi hissedebilirsin.
+    Telvelerin, \u015Funu unutmaman\u0131 \xF6\u011F\xFCtl\xFCyor; ya\u015Fayaca\u011F\u0131
+    sorun, onun daha hay\u0131rl\u0131 bir \u015Feye y\xF6nlenmesine vesile olacak.
+    {{ay_2}} ay\u0131n\u0131n ba\u015Flar\u0131nda y\xFCz\xFC yeniden g\xFClecek.
+    Bu konuda onu da bilgilendirmelisin.\n\nTelvelerinde 3 ya da 4 \u015Feritlik
+    geni\u015F bir de yol g\xF6r\xFCyorum. Erkek arkada\u015F\u0131n ve sen, yan\u0131n\u0131zdaki
+    iki ki\u015Fi ile birlikte {{mevsim_2}} mevsiminde bir yere gideceksiniz. Gitti\u011Finiz
+    o yerde mutlu kalabal\u0131klar var. O yolculuk, orada ya\u015Fayacaklar\u0131n\u0131z
+    ya da alaca\u011F\u0131n\u0131z kararlar itibariyle ili\u015Fkiniz i\xE7in bir
+    d\xF6n\xFCm noktas\u0131 olacak. Orada sizi birbirinize daha \xE7ok ba\u011Flayacak
+    bir neden, bir vesile bulacaks\u0131n\u0131z {{isim}}. Sonras\u0131nda seni daha
+    mutlu g\xFCnler bekliyor..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

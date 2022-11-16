@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris268
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA84230306059
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "G\xF6vdesi iri bir a\u011Fac\u0131n dal\u0131nda as\u0131l\u0131 duran k\xFC\xE7\xFCk
+    bir \"\xE7an\" g\xF6r\xFCyorum telvelerinde. Kar\u015F\u0131s\u0131na ge\xE7mi\u015F
+    \xF6ylece sab\u0131rla bekleyen bir de {{data, cinsiyet=erkek, kad\u0131n | cinsiyet=kad\u0131n,
+    erkek | cinsiyet=lgbt, insan}} var. Dallar\u0131 k\u0131rarcas\u0131na esip yapraklar\u0131
+    d\xF6ken onca r\xFCzgara ra\u011Fmen, \xE7an sanki yine de yerinden k\u0131p\u0131rdam\u0131yor
+    gibi. \xC7\u0131t ses yok; \xE7alm\u0131yor... Senin yak\u0131n \xE7evrenden
+    oldu\u011Funu tahmin etti\u011Fim bu {{data, cinsiyet=erkek, han\u0131mefendi
+    | cinsiyet=kad\u0131n, beyefendi | cinsiyet=lgbt, \u015Fah\u0131s}}, bir \u015Feyde
+    tutuklu kalm\u0131\u015F. Y\xFCz\xFC nedense bir t\xFCrl\xFC g\xFClm\xFCyor.
+    Bunun seninle nas\u0131l bir ba\u011Flant\u0131s\u0131 var bilemiyorum {{isim}};
+    bildi\u011Fim \u015Fey \u015Fu ki, bu ki\u015Finin seninle derin bir g\xF6n\xFCl
+    ba\u011F\u0131 var..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisKova
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA83193688563
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Kova
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri
+    | cinsiyet=lgbt, ki\u015Filer}} i\u015F ortam\u0131nda \xE7ok g\xF6steri\u015F\xE7ilerdir.
+    \xC7evrelerinde olumlu izlenimler yaratmaya ve insanlar\u0131 etkileri alt\u0131na
+    almaya bay\u0131l\u0131rlar. Onun da bir sevgilisi varsa, akl\u0131n\u0131 \xE7elmenin
+    imkans\u0131za yak\u0131n oldu\u011Funu s\xF6ylemek isterim. Olduk\xE7a mant\u0131kl\u0131
+    olduklar\u0131 i\xE7in, gelecek g\xF6rmedikleri ili\u015Fkilerden uzak dururlar.
+    \xD6te yandan ba\u011F\u0131ms\u0131z da bir y\xF6nleri vard\u0131r {{isim}}.
+    T\xFCm arkada\u015F \xE7evresi seni sevmese bile, kimseyi dinlemeden yine de
+    sana ko\u015Facakt\u0131r. Bu \xF6zg\xFCr ruhu, senin en ho\u015Funa giden \xF6zelliklerinden
+    biri olabilir. E\u011Fer {{data, cinsiyet=erkek, k\u0131z arkada\u015F\u0131nla
+    | cinsiyet=kad\u0131n, erkek arkada\u015F\u0131nla | cinsiyet=lgbt, sevgilinle}}
+    ba\u011Flar\u0131n\u0131 koparmadan ona yak\u0131nla\u015Fmaya kalkarsan, sevgilini
+    ve bu i\u015Fin ahlaki y\xF6nlerini d\xFC\u015F\xFCnerek seni ref\xFCze edecektir
+    {{isim}}. Do\u011Fru zaman\u0131 kollamal\u0131, do\u011Fru hareketi do\u011Fru
+    yerde ve do\u011Fru anda yapmal\u0131s\u0131n.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: kova
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

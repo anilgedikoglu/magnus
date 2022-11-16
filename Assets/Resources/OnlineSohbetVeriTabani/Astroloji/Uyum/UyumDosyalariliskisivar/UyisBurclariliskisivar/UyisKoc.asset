@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisKoc
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA24436620341
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Ko\xE7
+    {{data, cinsiyet=kad\u0131n, erkekleri | cinsiyet=erkek, kad\u0131nlar\u0131
+    | cinsiyet=lgbt, burcu ki\u015Filer}} {{burc}} burcu {{data, cinsiyet=erkek,
+    erkekleri | cinsiyet=kad\u0131n, kad\u0131nlar\u0131 | cinsiyet=lgbt, mensuplar\u0131}}
+    i\xE7in iyi birer i\u015F arkada\u015F\u0131d\u0131r. Ancak \xF6zel hayatlar\u0131nda
+    bir yak\u0131nla\u015Fma ger\xE7ekle\u015Firse, anla\u015Fmalar\u0131 \xE7ok
+    zordur. {{data, cinsiyet=erkek, k\u0131z arkada\u015F\u0131ndaki | cinsiyet=kad\u0131n,
+    erkek arkada\u015F\u0131ndaki | cinsiyet=lgbt, sevgilindeki}} anlay\u0131\u015F\u0131,
+    sabr\u0131 ve ho\u015Fg\xF6r\xFCy\xFC onda bulabilece\u011Fini san\u0131yorsan,
+    aldan\u0131rs\u0131n. Onu d\xF6rt duvar aras\u0131na kapatamazs\u0131n, bundan
+    nefret edecektir. Genellikle evcimen de\u011Fillerdir. \xC7abuk s\u0131k\u0131l\u0131rlar
+    ve yeni aray\u0131\u015Flara girmeye meyillidirler. Bir ili\u015Fkin oldu\u011Funu
+    bilmesine ra\u011Fmen seni cesaretlendirebilir. Bu, onun burcunun en karakteristik
+    \xF6zelliklerinden biridir. Bilinmezliklere do\u011Fru yelken a\xE7mak istiyorsan,
+    kar\u015F\u0131ndaki do\u011Fru ki\u015Fi {{isim}}. Yar\u0131 yolda kalma endi\u015Fen
+    varsa, kendine \xE7ok g\xFCvenmiyorsan, hi\xE7 bu i\u015Fe giri\u015Fme derim.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "ko\xE7"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

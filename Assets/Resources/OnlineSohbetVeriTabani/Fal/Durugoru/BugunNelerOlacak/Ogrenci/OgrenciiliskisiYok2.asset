@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: OgrenciiliskisiYok2
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA63208858386
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn g\xFCn\xFCn ilk saatlerinde, hayat\u0131n daha \xF6nce hi\xE7 tecr\xFCbe
+    etmedi\u011Fin bir olumsuzlu\u011Fu ile kar\u015F\u0131la\u015Fabilirsin. Bu
+    seni e\u011Fitim hayat\u0131na ve  sonras\u0131ndaki kariyerine y\xF6nelik daha
+    da h\u0131rsland\u0131racak {{isim}}. Ad\u0131nda {{harf}} ya da {{harf}} harfi
+    olan, a\xE7\u0131k kumral ve aksesuar kullanmay\u0131 seven biri, \xF6\u011Fleden
+    sonra senin hayat\u0131na girmek istedi\u011Fini belirtir tarzda bir davran\u0131\u015Fta
+    bulunarak kafan\u0131 kar\u0131\u015Ft\u0131rabilir. \u0130lk anda amac\u0131ndan
+    emin olamayacak ve onu g\xF6zlemlemeye karar vereceksin. Yine ayn\u0131 saatlerde,
+    ailenden senden ya\u015F\xE7a b\xFCy\xFCk birinin senin bir konuda g\xF6nl\xFCn\xFC
+    almak istedi\u011Fine \u015Fahit olacaks\u0131n. Pek belli etmesen de, bu seni
+    i\xE7ten i\xE7e \xE7ok mutlu edecek {{isim}}. Bug\xFCn sosyal medya uygulamalar\u0131n\u0131n
+    birinde, \xFCzerinde bir par\xE7a {{kelime, mavi | ye\u015Fil | beyaz | siyah}}
+    k\u0131yafet olan \"sen ya\u015Flarda\" birini g\xF6recek ve o ki\u015Fiye dair
+    merak etti\u011Fin bir ger\xE7e\u011Fi nihayet \xF6\u011Freneceksin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 18
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

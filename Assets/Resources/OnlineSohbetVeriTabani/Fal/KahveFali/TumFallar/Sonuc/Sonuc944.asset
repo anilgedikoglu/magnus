@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc944
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA15189584446
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Adeta buz kesmi\u015F bir \"\xE7akmak ta\u015F\u0131\" var son k\u0131s\u0131mlarda.
+    K\xFC\xE7\xFCk bir s\xFCrt\xFCnmeyle alev alabilecekken, so\u011Fuktan \xE7atlamak
+    \xFCzere. Seni temsil etti\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu ta\u015Fa
+    {{sayi,4,19}} g\xFCn sonra birilerinin elleri dokunacak. {{kelime, Yaz k\u0131\u015F
+    demeden ince giyinen | Maddi imkanlar\u0131 \xE7ok yerinde olmas\u0131na ra\u011Fmen
+    al\xE7akg\xF6n\xFCll\xFCl\xFC\u011F\xFCn\xFC her daim koruyan | G\xFCzel olmas\u0131na
+    ra\u011Fmen bir o kadar da m\xFCtevaz\u0131 | Zeki, yak\u0131\u015F\u0131kl\u0131
+    ve bir o kadar da m\xFCtevaz\u0131 | Babas\u0131n\u0131n ya da annesinin doktor
+    oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm | Babas\u0131n\u0131n ya da annesinin
+    \xF6\u011Fretmen oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm | Babas\u0131n\u0131n
+    ya da annesinin avukat oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm | Babas\u0131n\u0131n
+    ticaretle u\u011Fra\u015Ft\u0131\u011F\u0131n\u0131 ve annesinin de ev han\u0131m\u0131
+    oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm | Anne ve babas\u0131n\u0131n
+    ayr\u0131 oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm | Anne ya da babas\u0131ndan
+    birinin vefat etti\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm | Anne ya da babas\u0131n\u0131n
+    eczac\u0131 oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm | Anne ya da babas\u0131n\u0131n
+    bankac\u0131 oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm | Anne ya da babas\u0131n\u0131n
+    sat\u0131\u015F veya pazarlama i\u015Fiyle u\u011Fra\u015Ft\u0131\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCm}} ilk ki\u015Fi, \xE7ok \xF6nemli bir \u015Fey
+    yaparak keyfini yerine getirecek. Ho\u015Fland\u0131\u011F\u0131n ki\u015Fiyle
+    bu durumun bir ilgisi var ama \xE7\xF6zemedim {{isim}}! Baz\u0131 hastal\u0131klar\u0131
+    olan ya\u015Fl\u0131 bir akraban ise e\u011Fitimine dair dua ediyor. Bu dualar\u0131n
+    y\xFCz\xFC suyu h\xFCrmetine, beklemedi\u011Fin bir ba\u015Far\u0131ya imza atacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

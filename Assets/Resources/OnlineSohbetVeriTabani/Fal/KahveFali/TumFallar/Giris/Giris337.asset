@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris337
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA25567138905
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Elinde tuttu\u011Fun \"ele\u011Fin\" deliklerinden ge\xE7emeyecek kadar b\xFCy\xFCk
+    ta\u015Flar\u0131 ufalamaya \xE7al\u0131\u015F\u0131rken g\xF6r\xFCyorum {{isim}}
+    seni. \U0001F914Ele\u011Fin i\xE7indeki ta\u015Flar, kursa\u011F\u0131nda kalan
+    {{kelime, kelimelerin | duygular\u0131n | hislerin | d\xFC\u015F\xFCncelerin}},
+    zaman\u0131n gazab\u0131na u\u011Fray\u0131p ta\u015Fla\u015Ft\u0131\u011F\u0131n\u0131
+    g\xF6steriyor. \U0001F9F1Surat\u0131ndaki b\u0131kk\u0131nl\u0131k ifadesi ise,
+    bo\u011Faz\u0131na d\xFC\u011F\xFCmlenenlerin a\u011F\u0131rl\u0131\u011F\u0131n\u0131
+    daha fazla ta\u015F\u0131yamad\u0131\u011F\u0131n\u0131n somut g\xF6stergesi.
+    Bunlar\u0131 ifade etmenin yolunu bir t\xFCrl\xFC bulamam\u0131\u015Fs\u0131n.
+    \U0001F4ADEmin ol ki, {{data, cinsiyet=erkek, hayat\u0131ndaki han\u0131mefendi
+    de | cinsiyet=kad\u0131n, hayat\u0131ndaki erkek de | cinsiyet=lgbt, hayat\u0131ndaki
+    insan da}} seninle ayn\u0131 hissiyata sahip. Ne var ki o, senin kadar {{kelime,
+    ketum | suskun}} kalamayacak ve kaynama noktas\u0131na ula\u015Fan d\xFC\u015F\xFCncelerini
+    ortaya sa\xE7acak. E\u011Fer varsa, aran\u0131zdaki sorunlar\u0131n d\xFC\u015F\xFCnd\xFC\u011F\xFCn
+    kadar vahim olmad\u0131\u011F\u0131n\u0131 anlay\u0131p derin bir \u201Coh!\u201D
+    \xE7ekece\u011Fini g\xF6r\xFCyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

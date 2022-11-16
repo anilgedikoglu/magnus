@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris144
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA49694210937
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Kozmik toz bulutlar\u0131na benzeyen telvelerinin aras\u0131ndan, {{burc}} burcunu
+    {{sayi,3,27}} g\xFCn i\xE7erisinde etkilemeye ba\u015Flayacak olan \u015Fifac\u0131
+    bir y\u0131ld\u0131z kay\u0131yor {{isim}}. Kendine ya da tan\u0131d\u0131\u011F\u0131n
+    birinin sa\u011Fl\u0131k durumuna ili\u015Fkin \xF6nemli bir dile\u011Fin oldu\u011Funu
+    g\xF6r\xFCyorum. De\u011Fi\u015Fmesini ya da daha iyiye gitmesini istedi\u011Fin
+    bir \u015Feyler mi var? \u015Eu anda bu dile\u011Fine dair akl\u0131ndan \"...
+    istiyorum\" \u015Feklinde bir c\xFCmle ge\xE7irmeni ve sonra da bu c\xFCmleyi
+    sesli s\xF6ylemeni rica ediyorum. Dile\u011Fin 4 kelimeden olu\u015Fuyorsa ve
+    bir \u015Feyin \"ge\xE7mesini\" ya da bir \u015Feylerden \"kurtulmay\u0131\"
+    istiyorsan {{sayi,2,4}} ayda; 3 kelimeden olu\u015Fuyorsa ve \"d\xFCzelme, iyile\u015Fme,
+    normalle\u015Fme\" bekliyorsan {{sayi,5,9}} ayda ger\xE7ekle\u015Fecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

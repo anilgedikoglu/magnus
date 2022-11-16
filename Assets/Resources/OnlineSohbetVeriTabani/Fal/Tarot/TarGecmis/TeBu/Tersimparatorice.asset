@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tersimparatorice
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA28688011733
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 50e892d78a7ed6c4b9ba1715fab58772, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 50e892d78a7ed6c4b9ba1715fab58772, type: 3}
+  contentPhotoId: imparatorice-Ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"\u0130mparatori\xE7e\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nTabiat anan\u0131n her \u015Feyi ye\u015Ferten, olgunla\u015Ft\u0131ran
+    ve filizlendiren kart\u0131n\u0131 ters se\xE7men, ellerinin ba\u011Fl\u0131
+    kald\u0131\u011F\u0131 d\xF6nemleri i\u015Faret ediyor. Birbirinden \xE7ok da
+    fark\u0131 olmayan az say\u0131da se\xE7enek aras\u0131nda b\u0131rak\u0131lm\u0131\u015F,
+    zor olan ve daha zor olan aras\u0131nda tercihler yaparak ilerlemi\u015Fsin {{isim}}.
+    Sana ilham verecek ve devam etmene yard\u0131mc\u0131 olacak en b\xFCy\xFCk kaynak
+    olan \"sevgi\" bir d\xF6nem sende yoksunluk s\u0131n\u0131rlar\u0131na ula\u015Fm\u0131\u015F.
+    Maddi ve manevi anlamda d\xF6rt taraf\u0131n duvarlarla \xE7evrilmi\u015F ve
+    elini sana uzat\u0131p oradan kurtulmana yard\u0131mc\u0131 olacak birileri \xE7\u0131kmam\u0131\u015F.
+    Artaca\u011F\u0131n yerde, azalmaya sabretmi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis imparatorice ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

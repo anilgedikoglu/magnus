@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4eb02b4e4de4aa48ab7aa27e5f2b048, type: 3}
+  m_Name: DegiskeneGoreSohbetOlusturucuData
+  m_EditorClassIdentifier: 
+  degiskenler:
+  - degiskenAdi: meslek
+    degiskenDegerleri:
+    - "ev han\u0131m\u0131"
+    - "\xE7al\u0131\u015Fm\u0131yor"
+    - "i\u015F ar\u0131yor"
+    - "\xF6\u011Frenci"
+    - akademisyen
+    - "kendi i\u015Fini yap\u0131yor"
+    - "kamu sekt\xF6r\xFC"
+    - "\xF6zel sekt\xF6r"
+    - emekli
+  onTanimliDegiskenler:
+  - degiskenAdi: cinsiyet
+    degiskenDegerleri:
+    - erkek
+    - "kad\u0131n"
+    - lgbt
+  - degiskenAdi: meslek
+    degiskenDegerleri:
+    - "\xE7al\u0131\u015Fm\u0131yor"
+    - "i\u015F ar\u0131yor"
+    - "\xF6\u011Frenci"
+    - akademisyen
+    - "kendi i\u015Fini yap\u0131yor"
+    - "kamu sekt\xF6r\xFC"
+    - "\xF6zel sekt\xF6r"
+    - emekli
+    - "ev han\u0131m\u0131"
+  - degiskenAdi: medeni durum
+    degiskenDegerleri:
+    - "ili\u015Fkisi yok"
+    - platonik
+    - "ili\u015Fkisi var"
+    - "fl\xF6rt halinde"
+    - "karma\u015F\u0131k"
+    - "yeni ayr\u0131lm\u0131\u015F"
+    - "ni\u015Fanl\u0131"
+    - evli
+    - "ayr\u0131 ya\u015F\u0131yor"
+    - "bo\u015Fanm\u0131\u015F"
+    - dul
+  - degiskenAdi: burc
+    degiskenDegerleri:
+    - kova
+    - "bal\u0131k"
+    - "ko\xE7"
+    - "bo\u011Fa"
+    - ikizler
+    - "yenge\xE7"
+    - aslan
+    - "ba\u015Fak"
+    - terazi
+    - akrep
+    - yay
+    - "o\u011Flak"
+  - degiskenAdi: ayburcu
+    degiskenDegerleri:
+    - kova
+    - "bal\u0131k"
+    - "ko\xE7"
+    - "bo\u011Fa"
+    - ikizler
+    - "yenge\xE7"
+    - aslan
+    - "ba\u015Fak"
+    - terazi
+    - akrep
+    - yay
+    - "o\u011Flak"
+  - degiskenAdi: yukselen
+    degiskenDegerleri:
+    - kova
+    - "bal\u0131k"
+    - "ko\xE7"
+    - "bo\u011Fa"
+    - ikizler
+    - "yenge\xE7"
+    - aslan
+    - "ba\u015Fak"
+    - terazi
+    - akrep
+    - yay
+    - "o\u011Flak"
+  datas:
+  - sohbetAdi: evhanimi
+    aciklama: "Magnus'un kahve fal\u0131 yorumuna ho\u015F geldin De\u011Ferli {{isim}}.
+      Ev han\u0131mlar\u0131ndan g\xFCn i\xE7erisinde \xE7ok fazla fal iste\u011Fi
+      al\u0131yorum. Umar\u0131m seninle de kahve fal\u0131nda \xE7ok daha s\u0131k
+      kar\u015F\u0131la\u015F\u0131r\u0131z. G\xF6nderdi\u011Fin fincan foto\u011Fraflar\u0131
+      bir yandan i\xE7imi a\xE7t\u0131, bir yandan da seninle ilgili baz\u0131 \u015Feylere
+      a\xE7\u0131kl\u0131k getirdi. Dilersen yorumuna ge\xE7elim."
+    gerekenDegiskenler:
+    - degiskenAdi: meslek
+      degiskenDegeri: "ev han\u0131m\u0131"
+      kontrol: 0
+  - sohbetAdi: calismiyor
+    aciklama: "Fincan g\xF6rsellerinin detayl\u0131 de\u011Ferlendirmesiyle kar\u015F\u0131nday\u0131m!
+      Baz\u0131 konularda \xE7ok heyecanl\u0131 oldu\u011Funu g\xF6r\xFCyorum; bu
+      telvelerine de yans\u0131m\u0131\u015F {{isim}}. Belli ki ilerleyen zamanlarda
+      me\u015Fguliyetlerin artacak. Daha yo\u011Fun ge\xE7en ve daha tatmin edici
+      g\xFCnler seni bekliyor. Fal\u0131n\u0131n detaylar\u0131 i\xE7in sab\u0131rs\u0131zlan\u0131yorum.
+      Hadi gel ba\u015Flayal\u0131m..."
+    gerekenDegiskenler:
+    - degiskenAdi: meslek
+      degiskenDegeri: "\xE7al\u0131\u015Fm\u0131yor"
+      kontrol: 0
+  - sohbetAdi: isariyor
+    aciklama: "Tekrar merhaba {{isim}}! Usuldendir, bence kahve fal\u0131 ayr\u0131
+      bir ho\u015F geldin'i hak ediyor. Sence de \xF6yle de\u011Fil mi? <sprite=0>
+      Bu fincandan b\xFCy\xFCk beklentilerin olmas\u0131n. Baz\u0131 konular biraz
+      muallakta \xE7\u0131km\u0131\u015F. Yine de ba\u015Fta i\u015F arama s\xFCrecin
+      olmak \xFCzere hemen her konunun hay\u0131rl\u0131 ak\u0131betlere varaca\u011F\u0131n\u0131
+      telvelerin genel halinden \xE7\u0131karmak \xE7ok da zor de\u011Fil. Ba\u015Flayal\u0131m
+      m\u0131?"
+    gerekenDegiskenler:
+    - degiskenAdi: meslek
+      degiskenDegeri: "i\u015F ar\u0131yor"
+      kontrol: 0
+  - sohbetAdi: ogrenci
+    aciklama: "Magnus'un en keyifli b\xF6l\xFCmlerinden birine, kahve fal\u0131 yorumuna
+      ho\u015F geldin {{isim}}! <sprite=0> Bendeniz Magnus, fincan\u0131nda boylu
+      boyunca sana e\u015Flik edece\u011Fim. \xD6\u011Frenci arkada\u015Flar\u0131m\u0131
+      asla yaln\u0131z b\u0131rakmam! <sprite=10> Haz\u0131r m\u0131y\u0131z? Ba\u015Fl\u0131yoruz..."
+    gerekenDegiskenler:
+    - degiskenAdi: meslek
+      degiskenDegeri: "\xF6\u011Frenci"
+      kontrol: 0
+  - sohbetAdi: akademisyen
+    aciklama: "Efendim merhabalar. Kahve fal\u0131 b\xF6l\xFCm\xFCnde b\xF6yle k\u0131ymetli
+      akademisyenleri a\u011F\u0131rlamak ger\xE7ekten b\xFCy\xFCk \u015Feref. Her
+      zamanki azami titizli\u011Fimi sergileyerek fal\u0131n\u0131 yorumlad\u0131m
+      {{isim}}. Heyecanl\u0131 dakikalar bizi bekliyor. Arzu edersen hi\xE7 vakit
+      kaybetmeden ba\u015Flayal\u0131m."
+    gerekenDegiskenler:
+    - degiskenAdi: meslek
+      degiskenDegeri: akademisyen
+      kontrol: 0
+  - sohbetAdi: kendiisiniyapiyor
+    aciklama: "\u0130\u015Finle ilgili omuzlar\u0131na binen t\xFCm y\xFCk ve sorumlulu\u011Fu
+      \xFC\xE7 be\u015F dakika da olsa unutaca\u011F\u0131n\u0131 umdu\u011Fum keyifli
+      bir kahve fal\u0131ndan merhaba {{isim}}! Fincan\u0131n\u0131 incelerken benim
+      y\xFCz\xFCm g\xFCld\xFC. Umar\u0131m okurken seninki de g\xFClecek. <sprite=10>
+      \u0130zninle ba\u015Fl\u0131yorum."
+    gerekenDegiskenler:
+    - degiskenAdi: meslek
+      degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+      kontrol: 0
+  - sohbetAdi: kamusektoru
+    aciklama: "Selamlar {{isim}}! O yo\u011Fun i\u015F rutininden ve ko\u015Fu\u015Fturmacadan
+      vakit bulup bana kahve fal\u0131 g\xF6nderdi\u011Fin i\xE7in \xE7ok te\u015Fekk\xFCr
+      ederim. Bilenler bilir; benim i\xE7in t\xFCm fallar bir yana, kahve fal\u0131
+      bir yana. F\u0131rt\u0131na gibi haberlerin efil efil esti\u011Fi bir fincan
+      duruyor \xF6n\xFCmde. Kaybedecek vakit yok, hemen ba\u015Flayal\u0131m. <sprite=0>"
+    gerekenDegiskenler:
+    - degiskenAdi: meslek
+      degiskenDegeri: "kamu sekt\xF6r\xFC"
+      kontrol: 0
+  - sohbetAdi: ozelsektor
+    aciklama: "Ho\u015F geldin {{isim}}. Magnus'un deniz manzaral\u0131 kahve fal\u0131
+      roof'undas\u0131n. <sprite=7> \xC7al\u0131\u015Ft\u0131\u011F\u0131n sekt\xF6rdeki
+      insanlar\u0131n pek \xE7ok de\u011Fi\u015Fik zorlukla ayn\u0131 anda m\xFCcadele
+      etti\u011Finin fark\u0131nday\u0131m. \xD6n\xFCmde ilham verici bir fincan
+      duruyor ve beni hi\xE7 mahcup etmeyecek haberler ta\u015F\u0131yor. Dilersen
+      hemen aktarmaya ba\u015Flayay\u0131m."
+    gerekenDegiskenler:
+    - degiskenAdi: meslek
+      degiskenDegeri: "\xF6zel sekt\xF6r"
+      kontrol: 0
+  - sohbetAdi: emekli
+    aciklama: "K\u0131ymetli {{isim}}, Magnus kahve fal\u0131 yorumuyla kar\u015F\u0131nda.
+      Keyifli bir fincan g\xF6ndermi\u015Fsin bana. Hakk\u0131n\u0131 vererek yorumlayabilmek
+      ad\u0131na her \u015Feyi yapt\u0131m. Emekli dostlar\u0131n k\u0131ymetli vakitlerine
+      de\u011Fer katmak benim i\xE7in onur verici. \u0130zninle yorumuna hemen ba\u015Flamak
+      istiyorum."
+    gerekenDegiskenler:
+    - degiskenAdi: meslek
+      degiskenDegeri: emekli
+      kontrol: 0
+  menuState: 1

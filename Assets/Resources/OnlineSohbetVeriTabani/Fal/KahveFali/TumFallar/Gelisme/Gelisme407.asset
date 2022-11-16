@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme407
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA62406667270
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin orta k\u0131s\u0131mlar\u0131nda, iki ki\u015Finin arkas\u0131nda
+    bekleyen bir \"bek\xE7i\" g\xF6r\xFCyorum. Bu insanlardan birinin sen oldu\u011Funu
+    hissediyorum {{isim}}. Muhatap oldu\u011Fun bir insanla ilgili {{gecen_ay}} ay\u0131nda
+    bir sorun mu ya\u015Fad\u0131n? G\xF6rd\xFC\u011F\xFCm bu bek\xE7i, seni uzaktan
+    izliyor ve olu\u015Fabilecek herhangi bir sorunda devreye girmek \xFCzere adeta
+    haz\u0131r bekliyor. Fakat bana sorarsan, buna gerek kalmayacak.\n\nHemen yan
+    k\u0131s\u0131mda ise yapraklar\u0131 g\xFCr, ya\u015Fl\u0131 ve \xFCzerinde
+    {{sabit_harf}} harfi olan bir zeytin a\u011Fac\u0131 g\xF6z\xFCme \xE7arpt\u0131.
+    \xD6n\xFCm\xFCzdeki g\xFCnlerde, senin i\xE7in \xE7ok \xF6nemli bir hat\u0131raya
+    rastlay\u0131p, ad\u0131nda {{sabit_harf}} harfi olan bir insan taraf\u0131ndan
+    ne kadar sevildi\u011Fini yeniden anlay\u0131p, h\xFCz\xFCnlenebilirsin.\n\nSaat
+    {{sayi,1,11}} y\xF6n\xFCnde, k\xFC\xE7\xFCc\xFCk bir mart\u0131n\u0131n, boyundan
+    b\xFCy\xFCk bir dalgan\u0131n \xFCzerinden u\xE7arak a\u015Fmaya \xE7al\u0131\u015Ft\u0131\u011F\u0131n\u0131
+    g\xF6r\xFCyorum {{isim}}. Ailenden birinin, \"yapamazs\u0131n, ba\u015Faramazs\u0131n\"
+    dedi\u011Fin bir i\u015F i\xE7in, yo\u011Fun bir gayreti oldu\u011Funu s\xF6yleyebilirim.
+    Bu ki\u015Fi bu i\u015Fin \xFCstesinden gelecek. Hay\u0131rl\u0131 haberleri
+    ise seni de \u015Fahsen \xE7ok sevindirecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

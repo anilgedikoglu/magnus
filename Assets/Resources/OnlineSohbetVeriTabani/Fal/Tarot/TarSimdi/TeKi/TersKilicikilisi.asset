@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicikilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA05013690351
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 98c307d5c2bd170409f175a07ae7f912, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 98c307d5c2bd170409f175a07ae7f912, type: 3}
+  contentPhotoId: kilicikilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 \u0130kilisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin {{isim}}.\n\n\u0130ki ayr\u0131 cephede birden sava\u015Ft\u0131\u011F\u0131n\u0131
+    g\xF6r\xFCyorum. Senin i\xE7in \xE7ok \xF6nemli olan iki konu ya da iki ki\u015Fi
+    var. Bu ikili olgu ve \xE7ift tarafl\u0131 takip zorunlulu\u011Fu seni bir hayli
+    y\u0131prat\u0131yor. Birden fazla alanda at ko\u015Fturmak, konsantrasyonundan
+    da \xE7al\u0131yor. Ne yapaca\u011F\u0131n\u0131 bilemez bir haldesin ve ciddi
+    bir g\xFC\xE7 b\xF6l\xFCnmesi ya\u015F\u0131yorsun. Acilen kafan\u0131 toplamaya
+    ihtiyac\u0131n var. Duygular\u0131ndan ziyade mant\u0131\u011F\u0131n\u0131 dinleyerek,
+    senin i\xE7in neyin \xF6ncelikli oldu\u011Funa karar vermeli ve o tarafa as\u0131lmal\u0131s\u0131n.
+    Hedeflerini s\u0131raya sokman bu saatten sonra \u015Fart. Bunu yapamazsan, her
+    iki sorununu da e\u015F zamanl\u0131 \xE7\xF6zmek durumunda kal\u0131yorsun."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilicikilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

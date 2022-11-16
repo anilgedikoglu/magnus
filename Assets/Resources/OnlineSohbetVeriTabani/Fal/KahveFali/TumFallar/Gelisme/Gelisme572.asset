@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme572
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA36900314017
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "T\xF6vbe bismillah! \U0001F632Fincan\u0131n\u0131n alt k\u0131s\u0131mlar\u0131nda
+    bir \"Tau ha\xE7\u0131\" ili\u015Fti g\xF6z\xFCme. Sen son y\u0131llarda birinin
+    kalbini k\u0131rd\u0131n m\u0131 {{isim}}? Senden ho\u015Flanan birinin duygular\u0131na
+    yan\u0131t vermemi\u015F ya da sevdi\u011Fin birine kar\u015F\u0131 \"sevgi s\u0131n\u0131r\u0131ndan
+    nefret b\xF6lgesine\" ge\xE7i\u015F yaparak, istenmeyen s\xF6ylemlerde bulunmu\u015F
+    olabilirsin. Bu insan\u0131n ah\u0131, evrensel armoniklerini bozmu\u015F ve
+    yaln\u0131z kalmana sebep olmu\u015F. Telvelerindeki ha\xE7, k\u0131rg\u0131nl\u0131\u011F\u0131n
+    sahibine ula\u015F\u0131p g\xF6nl\xFCn\xFC alman\u0131 ve ya\u015Fam\u0131n\u0131
+    temize \xE7ekmeni \xF6\u011F\xFCtl\xFCyor. Bunu yaparsan, k\u0131smetin birden
+    a\xE7\u0131lacak!\n\nTelvelerinde, bir arada duran {{sabit_sayi,2,4}} adet de
+    \"fulya \xE7i\xE7e\u011Fi\" g\xF6r\xFCyorum. \U0001F4AE Bu {{sabit_sayi,2,4}}
+    rakam\u0131nda bir gizem sakl\u0131 sanki. \U0001F914Fulyalar, \xE7evresindeki
+    yo\u011Fun karart\u0131lara ra\u011Fmen o kadar g\xFCzel a\xE7m\u0131\u015Flar
+    ki, miss gibi kokusu burnuma kadar geldi! {{kelime, Gelecek hafta | 2 hafta i\xE7inde
+    | 3 hafta i\xE7inde}}, hi\xE7 ummad\u0131\u011F\u0131n birinden \u015Fa\u015F\u0131rt\u0131c\u0131
+    bir mesaj alacaks\u0131n {{isim}}. Bence senden ho\u015Fland\u0131\u011F\u0131n\u0131
+    bariz bir \u015Fekilde a\xE7\u0131k edecek olan bu ki\u015Finin ya ad\u0131 ya
+    da soyad\u0131 {{sabit_sayi,2,4}} heceli olacak. Gizemleri \xE7\xF6zmek de bizim
+    i\u015Fimiz g\xF6rd\xFC\u011F\xFCn gibi... <sprite=23>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

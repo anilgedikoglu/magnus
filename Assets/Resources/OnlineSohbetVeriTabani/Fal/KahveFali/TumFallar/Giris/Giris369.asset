@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris369
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA58625292473
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n ilk g\xF6ze \xE7arpan noktas\u0131nda k\xFC\xE7\xFCc\xFCk,
+    \"b\xF6brek\" \u015Fekline benzer 3-4 yap\u0131 g\xF6rd\xFCm {{data, cinsiyet=erkek,
+    De\u011Ferli | cinsiyet=kad\u0131n, Sevgili | cinsiyet=lgbt, De\u011Ferli}} {{isim}}.
+    Bunlar san\u0131yorum \"Ganoderma Lingzhi\" yani \"\xF6l\xFCms\xFCzl\xFCk mantar\u0131\"
+    olarak da bilinen Reishi mantarlar\u0131. \U0001F344Bir a\u011Fac\u0131n dibinde
+    bulunan bu mantarlar\u0131n hemen yan\u0131nda ise, sandalyesini \xE7ekmi\u015F
+    oturan ve eli yana\u011F\u0131nda \xF6ylece d\xFC\u015F\xFCnen bir {{kelime,
+    adam | kad\u0131n}} var. Telvelerin, annenle ya da babanla ba\u011Flant\u0131s\u0131
+    oldu\u011Funu hissetti\u011Fim bu ki\u015Finin, yeni meydana \xE7\u0131kacak
+    olan bir sa\u011Fl\u0131k sorunundan bahsediyor. Ba\u015Fta haber moral bozsa
+    da, g\xF6rd\xFC\u011F\xFCm Reishi mantarlar\u0131 bu insan\u0131n \xF6mr\xFCn\xFCn
+    \xE7ok \xE7ok uzun olaca\u011F\u0131n\u0131 i\u015Faret ediyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

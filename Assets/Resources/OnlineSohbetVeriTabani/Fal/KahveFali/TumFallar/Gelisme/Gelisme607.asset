@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme607
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA78955167619
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ya\u015Fam\u0131m\u0131z\u0131n bir d\xF6neminde ailemiz, bir d\xF6neminde sevdiklerimiz
+    ve bir d\xF6neminde e\u015Fimiz bize e\u015Flik etse de, insan\u0131n mutlak
+    yazg\u0131s\u0131nda \xE7o\u011Funlukla \"yaln\u0131zl\u0131k\" vard\u0131r.
+    Kader, varl\u0131\u011F\u0131n\u0131n k\u0131ymeti bilinmeyen \u015Feylerin yoklu\u011Fuyla
+    s\u0131namak ad\u0131na zaman zaman ki\u015Fileri \"teke tek\" yan\u0131na \xE7eker.
+    Ayr\u0131ld\u0131\u011F\u0131n ki\u015Finin de \xE7a\u011Fr\u0131ld\u0131\u011F\u0131n\u0131
+    s\xF6yl\xFCyor fincan\u0131n.\n\nBu durumdan \u015Fu anda senin de muzdarip oldu\u011Fun
+    a\u015Fikar {{isim}}. Fakat bu art\u0131k son zamanlarda iyiden iyiye \"gerekli\"
+    bir hal alm\u0131\u015F. Yapt\u0131klar\u0131n fark edilmemeye, iyi niyetin anla\u015F\u0131lmamaya
+    ba\u015Flanm\u0131\u015F. Yoksunlu\u011Funun ve a\u015Fk nadas\u0131n\u0131n
+    iyile\u015Ftirici etkisi ise, sevdi\u011Fin ki\u015Finin y\xFCre\u011Finde \xE7oktan
+    g\xF6r\xFClmeye ba\u015Flanm\u0131\u015F bile... \U0001F33A Telvelerinde yar\u0131m
+    bir kalp var. Di\u011Fer yar\u0131s\u0131n\u0131 kaybetti\u011Fi i\xE7in \u015Fekli
+    iyiden iyiye bozulmaya ba\u015Flam\u0131\u015F olan bu kalp, kar\u015F\u0131ndaki
+    insan\u0131n pi\u015Fmanl\u0131\u011F\u0131n\u0131 \xE7ok net bir \u015Fekilde
+    anlat\u0131yor De\u011Ferli {{isim}}. Gelecek {{sayi,3,13}} g\xFCn i\xE7erisinde,
+    hi\xE7 haz\u0131rl\u0131kl\u0131 olmad\u0131\u011F\u0131n bir anda onun taraf\u0131ndan
+    aranacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

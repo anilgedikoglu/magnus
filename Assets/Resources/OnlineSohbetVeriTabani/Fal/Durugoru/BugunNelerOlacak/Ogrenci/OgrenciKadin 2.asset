@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: OgrenciKadin 2
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA63629328624
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ge\xE7mi\u015Fte ileti\u015Fim sorunlar\u0131 ya\u015Fad\u0131\u011F\u0131n
+    bir erkekle bug\xFCn bir konu\u015Fman olacak. Seni \u0131l\u0131ml\u0131 bir
+    \u015Fekilde dinledi\u011Finde hak verece\u011Fini ve aran\u0131zdaki s\u0131k\u0131nt\u0131n\u0131n
+    giderilece\u011Fini d\xFC\u015F\xFCn\xFCyorum {{isim}}. Bug\xFCn sosyal medyada
+    ya da televizyonda, e\u011Fitiminle ilgili bir geli\u015Fme duyabilirsin. Bu
+    ilk etapta pek ho\u015Funa gitmese de, uzun vadede yarar\u0131na olaca\u011F\u0131n\u0131
+    bilmeni isterim. Karma bug\xFCn fevkalade lehine \xE7al\u0131\u015F\u0131yor.
+    Ad\u0131nda ya da soyad\u0131nda {{harf}} harfi bulunan bir k\u0131z arkada\u015F\u0131n,
+    yak\u0131n ge\xE7mi\u015Fte asl\u0131nda senin sahip olman gereken bir \u015Feyi
+    ya da senin hak etti\u011Fin bir konumu elde etmi\u015F. Bug\xFCn bunu geri alabilmek
+    ya da ayn\u0131s\u0131n\u0131 elde edebilmek ad\u0131na \xF6nemli bir geli\u015Fme
+    kaydedeceksin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA49758435235
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 45ad4ceb9a88660409f6f6f7f0d50b98, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 45ad4ceb9a88660409f6f6f7f0d50b98, type: 3}
+  contentPhotoId: asaprensi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"De\u011Fnek Prensi\" kart\u0131n\u0131 se\xE7tin.\n\nNe
+    kadar b\xFCy\xFCk bir potansiyelin oldu\u011Funu \u015Fimdiye kadar bilmiyordun,
+    \xF6yle de\u011Fil mi? Bu potansiyel, insanlar\u0131 etkileyebilmene, onlar\u0131
+    istedi\u011Fin \u015Fekilde sevk ve idare edebilmene hatta onlardan destek alarak
+    b\xFCy\xFCk i\u015Fler ba\u015Farmana yetiyor. Akl\u0131na g\xFCnden g\xFCne
+    yeni fikirler geliyor olmal\u0131. Bu fikirler ve bu potansiyel bir araya geldi\u011Finde,
+    kar\u015F\u0131nda durabilecek hi\xE7bir \u015Fey yok {{isim}}. Seni istedi\u011Fin
+    noktaya \u0131\u015F\u0131nlayabilecek bir g\xFC\xE7 ve b\xFCy\xFCk biz \xF6zg\xFCrl\xFCk,
+    avu\xE7lar\u0131nda. Bunun fark\u0131na vard\u0131k\xE7a, ya\u015Fam yolculu\u011Fun
+    daha b\xFCy\xFCk bir anlam kazan\u0131yor. F\u0131rsatlar\u0131 yaln\u0131zca
+    g\xF6rm\xFCyor, art\u0131k onlar\u0131 bir bir de\u011Ferlendirebiliyorsun."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi asaprensi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

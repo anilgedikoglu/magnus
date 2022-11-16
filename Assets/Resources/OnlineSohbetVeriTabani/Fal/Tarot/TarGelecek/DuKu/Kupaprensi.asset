@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupaprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11159703844
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: c1fd54565668e7d4aaf567892bf84eff, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: c1fd54565668e7d4aaf567892bf84eff, type: 3}
+  contentPhotoId: kupaprensi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Kupa Prensi\" kart\u0131n\u0131 se\xE7tin.\n\nSen birinin
+    g\xF6nl\xFCne h\xFCk\xFCmran olmak, bir yerin ba\u015F sorumlusu olmak, bir \u015Feyin
+    sahibi olmak filan m\u0131 istiyorsun {{isim}}? Se\xE7ti\u011Fin bu kart amac\u0131na
+    ula\u015Faca\u011F\u0131n\u0131 s\xF6yl\xFCyor, \xF6ncelikle onu belirteyim.
+    \u0130kinci olarak, bu amaca ula\u015Fmak i\xE7in yapman gerekenler olaca\u011F\u0131n\u0131
+    da eklemek isterim. \u0130stedi\u011Fin \u015Feyin ger\xE7ekle\u015Fmesi i\xE7in
+    kar\u015F\u0131na bir arac\u0131, el\xE7i ya da yard\u0131mc\u0131 \xE7\u0131kacak.
+    Bu ki\u015Finin sana verece\u011Fi \xF6\u011F\xFCtler var, g\xF6rebiliyorum.
+    \u0130lk anda sana ters gelse de, kart\u0131n onu dinlemen gerekece\u011Fini
+    s\xF6yl\xFCyor. Duygusal davranmamal\u0131 ve gereken neyse onu yapmal\u0131s\u0131n.
+    Bunu sen yapmazsan, senin i\xE7in kimse yapmayacak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kupaprensi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

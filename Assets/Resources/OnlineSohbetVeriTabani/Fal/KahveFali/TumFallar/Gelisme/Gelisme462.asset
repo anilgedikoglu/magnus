@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme462
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA61743356498
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sen hi\xE7 kaleydoskop kulland\u0131n m\u0131 {{isim}}? Fincan\u0131n\u0131n
+    bir b\xF6lgesindeki telveler, adeta bir \"kaleydoskop g\xF6rseli\" gibi \u015Fekillenmi\u015F.
+    Bu yans\u0131malar, ihti\u015Faml\u0131 i\u015Fler yapmaya ve derin bir a\u015Fka
+    i\u015Farettir. Senin g\xFCndeminde son zamanlarda hangisi var?\n\nFincan g\xF6rsellerini
+    saat y\xF6n\xFCnde takip etti\u011Fimde, burada bir \u015Feylerin istiflendi\u011Fi
+    karanl\u0131k bir ma\u011Fara g\xF6r\xFCyorum. \U0001F987Adeta mahzene benziyor.
+    Ba\u015F\u0131nda ise tamamen hareketsiz bir \u015Fekilde duran, senin boylar\u0131nda
+    bir {{kelime, k\u0131z | erkek}} var. Bu ki\u015Fi her kimse, sana {{sayi,3,7}}
+    g\xFCn i\xE7erisinde ula\u015Facak ve \xF6n\xFCne birtak\u0131m \"gizler\" serecek
+    {{isim}}. Biriyle ilgili baz\u0131 s\u0131rlar ya da duygular, o ki\u015Fi taraf\u0131ndan
+    sana if\u015Fa edilecek.\n\nYar\u0131n g\xFCnlerden {{gun_+1}} \xF6yle de\u011Fil
+    mi? Bug\xFCn i\xE7in pek \xF6yle s\xF6ylenemese de, fincan\u0131n yar\u0131n\u0131n
+    {{burc}} bur\xE7lar\u0131 i\xE7in \xE7ok \u015Fansl\u0131 bir g\xFCn olaca\u011F\u0131n\u0131
+    f\u0131s\u0131ld\u0131yor. G\xFCn boyu seni 2 g\xFCzel geli\u015Fme bekliyor
+    olacak. Ba\u015F\u0131n\u0131 yast\u0131\u011Fa \"a\u011Fz\u0131n kulaklar\u0131nda\"
+    koyacaks\u0131n. Demi\u015Fti dersin! \U0001F609"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

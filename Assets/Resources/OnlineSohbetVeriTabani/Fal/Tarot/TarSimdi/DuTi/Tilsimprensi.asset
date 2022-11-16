@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA58732900859
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 8fd64c32f0f19e54eb30096decf0a06c, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 8fd64c32f0f19e54eb30096decf0a06c, type: 3}
+  contentPhotoId: tilsimprensi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"T\u0131ls\u0131m Prensi\" kart\u0131n\u0131 se\xE7tin.\n\nAvu\xE7lar\u0131n\u0131n
+    aras\u0131na getirilip b\u0131rak\u0131lan b\xFCy\xFCk bir f\u0131rsat var. Bu
+    sana ya\u015Fam\u0131n cazip bir teklifi sanki. Kurdu\u011Fun hayallerine kar\u015F\u0131l\u0131k,
+    eme\u011Fini istiyor hayat. Sen de elinden geldi\u011Fince veriyorsun {{isim}}.
+    Krizlerin varl\u0131\u011F\u0131ndan \u015Fikayet etti\u011Fin ve hatta zaman
+    zaman seni sarst\u0131\u011F\u0131n\u0131 d\xFC\u015F\xFCnd\xFC\u011F\xFCn g\xFCnlerden
+    ge\xE7erken, b\xFCy\xFCk imkanlar\u0131n da etraf\u0131n\u0131 sarmakta oldu\u011Funu
+    g\xF6rmezden gelemezsin. Tepende toplanm\u0131\u015F m\xFCjde bulutlar\u0131
+    g\xF6r\xFCyorum. Maddi konularda bir ya\u011Fmur olup \xFCzerine ya\u011Fmak
+    i\xE7in bekliyorlar. Do\u011Fru zaman yakla\u015F\u0131yor. U\u011Fra\u015Flar\u0131n
+    ve i\xE7tenlikle etti\u011Fin t\xFCm dualar kar\u015F\u0131l\u0131ks\u0131z de\u011Fil.
+    Bunu unutma."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi tilsimprensi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

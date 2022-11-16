@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: CheckMagnus
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA65121205700
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\u015Eah!"
+  - "{{data, renksec=beyaz, \xC7ok ya\u015Fa siyah kral! | renksec=siyah, \xC7ok
+    ya\u015Fa beyaz kral!}}} \u015Eimdi ne yapacaks\u0131n bakal\u0131m {{isim}}...
+    \u015Eah!!!"
+  - "Seni yenmeme \xE7ok az kald\u0131. \u015Eah!"
+  - "Yenilmen uzun s\xFCrmeyecek. \u015Eah!"
+  - "Seni mat etmem hi\xE7 de zor olmayacak gibi g\xF6z\xFCk\xFCyor. \u015Eah!"
+  - "Kral\u0131n\u0131 daha iyi korumal\u0131s\u0131n {{isim}}. \u015Eah!"
+  - "\u015Eimdi ay\u0131kla pirincin ta\u015F\u0131n\u0131 bakal\u0131m. \u015Eah!"
+  - "Vee, g\xFCzel bir pozisyon yakalad\u0131m. \u015Eah!"
+  - "Bir \u015Fey s\xF6yleyece\u011Fim ama dar\u0131lmaca yok {{isim}}. \u015Eah!
+    <sprite=5>"
+  - "\u015Eah! Buna oyunun ba\u015F\u0131nda \xF6nlem almal\u0131yd\u0131n..."
+  - "Ve Magnus \u015Fah \xE7eker! Hay\u0131rlara vesile olsun... <sprite=84>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - Pes ediyorum.
+    - Oyunu bitirelim.
+    - "\xC7ekilmek istiyorum."
+    - "Tamam sen kazand\u0131n."
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "satran\xE7 terk etme"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "satran\xE7 terk etme"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "satran\xE7 check magnus"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "satran\xE7 check magnus"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

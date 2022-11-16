@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme528
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA01227618727
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ta\u015F at\u0131l\u0131p tuz buz edilmi\u015F fakat da\u011F\u0131lmam\u0131\u015F
+    bir araba cam\u0131na benzeyen, k\u0131r\u0131k bir kalp var fincan\u0131nda.
+    \U0001F494\"\xD6zlemek, \xF6lmekten sadece iki harf fazla; al\u0131\u015Fmaksa
+    sevmekten daha zor geliyor\" dedi\u011Fini duyar gibiyim. \U0001F914Ayr\u0131ld\u0131\u011F\u0131n
+    sevgilinle aran\u0131zdaki sorun, sevgi azl\u0131\u011F\u0131 ya da \"fazlas\u0131n\u0131n
+    a\xE7l\u0131\u011F\u0131\" de\u011Filmi\u015F {{isim}}. Birbirinizle daha iyi
+    anla\u015Fabilece\u011Finiz uygun ko\u015Fullar\u0131 bir t\xFCrl\xFC sa\u011Flayamam\u0131\u015Fs\u0131n\u0131z.
+    Birinizi radyo vericisi, di\u011Ferinizi de al\u0131c\u0131 gibi d\xFC\u015F\xFCn.
+    \U0001F4FBBazen frekanslar kay\u0131yor ve s\xF6ylenmek istenenler at\u0131l
+    kal\u0131yor. \u0130nsanlar birbirini ya dinlemiyor, ya da dinleyecek sab\u0131rlar\u0131
+    kalm\u0131yor. Fakat hen\xFCz s\xF6z\xFCn bitti\u011Fi yerde de\u011Filsiniz...\n\nOnun
+    \u015Fu s\u0131ralar seni \xE7ok\xE7a konu\u015Ftu\u011Fu, ad\u0131nda {{harf}}
+    harfi olan, {{kelime, a\xE7\u0131k tenli renkli g\xF6zl\xFC | siyah sa\xE7l\u0131
+    renkli g\xF6zl\xFC | beyaz tenli uzunca boylu | a\xE7\u0131k tenli orta boylu
+    | a\xE7\u0131k kumral, uzun boylu | koyu kumral, orta boylu}} birini g\xF6r\xFCyorum
+    {{isim}}. Bu ki\u015Fi sanki para vermi\u015Fsin gibi, hemen her konuda olaylara
+    senin a\xE7\u0131ndan bak\u0131p, ona seni savunuyor. Bu ki\u015Finin y\xF6nlendirmesiyle,
+    ilerleyen g\xFCnlerde ondan bir {{kelime, mesaj | haber | telefon | sinyal}}
+    alacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

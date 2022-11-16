@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimikilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA56160717767
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: cc653b5e4d27df4489c5c37dd55b8ed8, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: cc653b5e4d27df4489c5c37dd55b8ed8, type: 3}
+  contentPhotoId: tilsimikilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"T\u0131ls\u0131m \u0130kilisi\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nDengeni do\u011Fru sa\u011Flaman ve yere s\u0131k\u0131
+    basman gereken zamanlarda ciddiyeti elden b\u0131rakt\u0131\u011F\u0131n olmu\u015F.
+    \"Nas\u0131l olsa yapar\u0131m\" d\xFC\u015F\xFCncesi ve engellerin kendili\u011Finden
+    a\u015F\u0131laca\u011F\u0131na inanmak, seni yava\u015Flatan hatta t\xF6kezleten
+    hatalar\u0131nm\u0131\u015F. Bir noktada i\u015Fler senin i\xE7in hem \xF6zel
+    hayat\u0131nda hem de maddi a\xE7\u0131dan s\u0131ras\u0131yla sarpa sarm\u0131\u015F...
+    Elinde olanlar\u0131 havaya savururcas\u0131na bir bo\u015F vermi\u015Flik i\xE7ine
+    girmi\u015Fsin. Her \u015Feyi masaya yat\u0131r\u0131p, bir de\u011Ferlendirme
+    yap\u0131p, azami titizli\u011Fi g\xF6stermeye ba\u015Flaman gereken nokta ile
+    bulu\u015Fmu\u015F ve kendini biraz olsun toparlamaya niyetlenmi\u015Fsin {{isim}}.
+    Bu konuda ba\u015Far\u0131l\u0131 da olmu\u015Fsun. Enerjini do\u011Fru yere
+    kanalize etti\u011Finde yapamaca\u011F\u0131n \u015Fey olmad\u0131\u011F\u0131n\u0131
+    san\u0131r\u0131m o d\xF6nemlerde iyi anlad\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis tilsimikilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

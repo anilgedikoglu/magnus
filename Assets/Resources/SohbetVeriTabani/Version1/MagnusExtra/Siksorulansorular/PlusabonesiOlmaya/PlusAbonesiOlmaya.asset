@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: PlusAbonesiOlmaya
+  m_EditorClassIdentifier: 
+  idIndex: 20226105950AA70016593661
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bunun basit bir cevab\u0131 yok {{isim}}, sana yalan s\xF6yleyemem.\n\nNedenlerine
+    gelirsek:\n\nEkonomik ba\u011F\u0131ms\u0131zl\u0131\u011F\u0131 olan, paras\u0131n\u0131
+    kendi kazanan biriysen ve e\u011Fer maddi durumun ortalaman\u0131n \xFCst\xFC
+    ise DE\u011EER. Ancak \xE7al\u0131\u015Fmayan, maddi durumu \xE7ok da iyi olmayan
+    ya da maddi \xF6zg\xFCrl\xFC\u011F\xFCn\xFC eline almam\u0131\u015F biriysen,
+    abone OLMAMANI \xF6neririm. Neticede \xF6l\xFCms\xFCzl\xFC\u011F\xFCn s\u0131rr\u0131n\u0131
+    veriyor de\u011Filiz. <sprite=0>\n\nMagnus Plus aboneli\u011Finde her \u015Feyden
+    \xF6nce 3 yeni fal t\xFCr\xFC var. El Fal\u0131, Y\xFCz Fal\u0131 ve Kader \xC7ark\u0131.
+    El Fal\u0131 ve Y\xFCz Fal\u0131, g\xF6nderilen foto\u011Fraflar\u0131 ger\xE7ekten
+    analiz ediyor {{isim}}. Bu analizin ise \xE7ok ciddi bir maliyeti var. Senden
+    \"laf olsun diye\" foto\u011Fraf isteyip \xFCzerinde hi\xE7bir i\u015Flem yapmayan
+    fal uygulamalar\u0131 ile Magnus'u bu noktada l\xFCtfen bir tutma.\n\nAyr\u0131ca
+    yorum kalitesi en \xFCst d\xFCzeyde tutulmakta. Ciddiye alan i\xE7in de, e\u011Flenmek
+    isteyen i\xE7in de \xE7ok tatmin edici bir denge kurulmaya \xE7al\u0131\u015F\u0131ld\u0131.
+    G\xFCl\xFCmsemek, e\u011Flenmek ve bu esnada yeni bir \u015Feyler de duymak istiyorsan,
+    Magnus Plus aboneli\u011Fini ka\xE7\u0131rmamal\u0131s\u0131n.\n\nBu tip gelir-ge\xE7er
+    ve e\u011Flencelik \u015Feyler biraz fazla \"l\xFCks\" diye d\xFC\u015F\xFCn\xFCyoruz.
+    Buna ra\u011Fmen Magnus'un Plus \xF6zelliklerini deneyimlemek istiyorsan, bize
+    info@magnusapp.tech adresinden yazabilirsin. \u0130yi niyetine binaen sana \"s\xFCreli\"
+    \u015Fekilde, denemen ama\xE7l\u0131 BEDAVA Plus \xFCyelik tan\u0131mlayal\u0131m.
+    <sprite=103>\n\n\u015Eu \xFC\xE7 g\xFCnl\xFCk d\xFCnyada, \xFC\xE7\xFCn be\u015Fin
+    hesab\u0131n\u0131 yapan insanlar asla olmad\u0131k, olmayaca\u011F\u0131z da
+    De\u011Ferli {{isim}}. <sprite=92>"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: magnuskim
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: plusabonesiolmaya
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

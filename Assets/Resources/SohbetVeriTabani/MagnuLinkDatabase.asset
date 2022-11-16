@@ -1,0 +1,312 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83061e2387753904fa44215ef1bf471f, type: 3}
+  m_Name: MagnuLinkDatabase
+  m_EditorClassIdentifier: 
+  words:
+  - word: abluka
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: icaz
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: magnus
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: kalender
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: garam
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: mahperi
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: yeis
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: feraset
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: fodul
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: "feri\u015Ftah"
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: zinhar
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: meftun
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: zargana
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: topaz
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: zurna
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: beleng
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: melike
+    tipMods: []
+  - word: oslo
+    tipMods: []
+  - word: mandibula
+    tipMods: []
+  - word: nuyan
+    tipMods: []
+  - word: "m\xFCnzevi"
+    tipMods: []
+  - word: feveran
+    tipMods: []
+  - word: sirayet
+    tipMods: []
+  - word: farazi
+    tipMods: []
+  - word: "m\xFCptela"
+    tipMods: []
+  - word: hezeyan
+    tipMods: []
+  - word: zevahir
+    tipMods: []
+  - word: "ehveni\u015Fer"
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: girift
+    tipMods: []
+  - word: vaveyla
+    tipMods: []
+  - word: payidar
+    tipMods: []
+  - word: mazi
+    tipMods: []
+  - word: tasvip
+    tipMods: []
+  - word: "m\xFCstehzi"
+    tipMods: []
+  - word: tenkit
+    tipMods: []
+  - word: "m\xFCbala\u011Fa"
+    tipMods: []
+  - word: "\u015Fahika"
+    tipMods: []
+  - word: fazilet
+    tipMods: []
+  - word: abdal
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: "an\u0131z"
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: "ba\u015Farmak"
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: caka
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: camia
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: cihangir
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: defne
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: eflatun
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: hiddet
+    tipMods: []
+  - word: "ia\u015Fe"
+    tipMods: []
+  - word: ibare
+    tipMods: []
+  - word: "ink\u0131lap"
+    tipMods: []
+  - word: hacim
+    tipMods: []
+  - word: gazap
+    tipMods: []
+  - word: answer
+    tipMods: []
+  - word: abandon
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: accident
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: absorbe
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: afaki
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: ajite
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: akustik
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: "akt\xFCalite"
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: almanak
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: amorf
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: "arg\xFCman"
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: asparagas
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: avangart
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: beyanat
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: bilhassa
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: dejenere
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: deklare
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: despot
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: detone
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: dikte
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: duayen
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: egoist
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: ekoloji
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: ekseriyet
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: empati
+    tipMods:
+    - kelime oyunu ipucu 1
+  - word: lacivert
+    tipMods: []
+  - word: klima
+    tipMods: []
+  - word: "c\u0131mb\u0131z"
+    tipMods: []
+  - word: "\xFCz\xFCm"
+    tipMods: []
+  - word: tarkan
+    tipMods: []
+  - word: "garant\xF6r"
+    tipMods: []
+  - word: global
+    tipMods: []
+  - word: ironi
+    tipMods: []
+  - word: "z\u0131mni"
+    tipMods: []
+  - word: zapturapt
+    tipMods: []
+  - word: zifos
+    tipMods: []
+  - word: "z\u0131mb\u0131rt\u0131"
+    tipMods: []
+  - word: "z\u0131rva"
+    tipMods: []
+  - word: "y\u0131lmaz"
+    tipMods: []
+  - word: ersoy
+    tipMods: []
+  - word: zeplin
+    tipMods: []
+  - word: "z\u0131rn\u0131k"
+    tipMods: []
+  - word: transit
+    tipMods: []
+  - word: "t\xF6ren"
+    tipMods: []
+  - word: "s\xFCng\xFC"
+    tipMods: []
+  - word: misilleme
+    tipMods: []
+  - word: rugan
+    tipMods: []
+  - word: "r\xF6mork"
+    tipMods: []
+  - word: "k\xFCt\xFCk"
+    tipMods: []
+  - word: teoman
+    tipMods: []
+  - word: "h\xFCrmet"
+    tipMods: []
+  - word: "h\xFCma"
+    tipMods: []
+  - word: farika
+    tipMods: []
+  - word: farfara
+    tipMods: []
+  - word: "fas\u0131la"
+    tipMods: []
+  - word: "f\xFCnye"
+    tipMods: []
+  - word: aramis
+    tipMods: []
+  - word: evcimen
+    tipMods: []
+  - word: evham
+    tipMods: []
+  - word: "bask\u0131n"
+    tipMods: []
+  - word: menenjit
+    tipMods: []
+  - word: "k\u0131saca"
+    tipMods: []
+  - word: abone
+    tipMods: []
+  - word: yamyam
+    tipMods: []
+  - word: "pop\xFClizm"
+    tipMods: []
+  - word: diplomat
+    tipMods: []
+  - word: "\xE7\u0131t\u0131p\u0131t\u0131"
+    tipMods: []
+  - word: esin
+    tipMods: []
+  - word: "babayi\u011Fit"
+    tipMods: []
+  - word: kontenjan
+    tipMods: []
+  - word: "kompres\xF6r"
+    tipMods: []
+  wordGameMod: kelime oyunu
+  wordGameTrueMod: "kelime oyunu do\u011Fru"

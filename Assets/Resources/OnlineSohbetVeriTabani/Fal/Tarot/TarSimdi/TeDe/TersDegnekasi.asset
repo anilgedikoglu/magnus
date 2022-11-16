@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegnekasi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA20881588161
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 4ea76a58831b92e478a640709bb444ae, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 4ea76a58831b92e478a640709bb444ae, type: 3}
+  contentPhotoId: asaasi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"De\u011Fnek As\u0131\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSende
+    \u015Fu s\u0131ra bir \"ama\xE7 eksikli\u011Fi\" var. Ne yapaca\u011F\u0131n\u0131
+    ve nas\u0131l yapaca\u011F\u0131n\u0131 bilmedi\u011Fin i\xE7in muhtemelen s\u0131k\u0131nt\u0131dan
+    patl\u0131yorsun. Yeni bir ama\xE7 edinmek i\xE7in harekete ge\xE7mek ise zor
+    geliyor. Kendine anlaml\u0131 bir hedef belirleyemedi\u011Fin gibi, tembelli\u011Fin
+    de tutsa\u011F\u0131 vaziyettesin. T\xFCm bunlar bir araya geldi\u011Finde, elbette
+    gemi y\xFCr\xFCm\xFCyor. Sen de kendini \u015Fanss\u0131z hissediyorsun {{isim}}.
+    Can\u0131n\u0131 canland\u0131rmal\u0131, cesaretini toplamal\u0131 ve ba\u015F\u0131na
+    gelebilecekleri d\xFC\u015F\xFCnmeksizin aya\u011Fa kalkmal\u0131s\u0131n. Kiremitleri
+    elle k\u0131ran d\xF6v\xFC\u015F ustalar\u0131 ellerinin ac\u0131yaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnselerdi, yeterince s\u0131k\u0131 vuramaz, bir yerlerini k\u0131rarlard\u0131.
+    Ya hep ya hi\xE7; harekete ge\xE7!"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi asaasi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

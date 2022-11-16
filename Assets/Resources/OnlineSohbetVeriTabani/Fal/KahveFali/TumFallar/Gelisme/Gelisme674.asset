@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme674
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA47076213116
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Senin \xF6zel alan\u0131n\u0131 ve kendi g\xFCndemini temsil eden bir \"berjerin\"
+    \xFCzerine geli\u015Fg\xFCzel b\u0131rak\u0131lm\u0131\u015F paltolar g\xF6r\xFCyorum.
+    {{kelime, Birden fazla ki\u015Fiye ait olan | 3 ayr\u0131 ki\u015Fiye ait olan}}
+    bu paltolar, telvelerinin aras\u0131nda bir y\u0131\u011F\u0131n haline gelmi\u015F
+    ve \xF6zel hayat\u0131n\u0131n \"g\u0131yab\u0131nda\" s\xF6zl\xFC \u015Fekilde
+    ihlalini g\xF6steriyor. Hayat\u0131ndaki {{data, cinsiyet=erkek, han\u0131mefendiyle
+    | cinsiyet=kad\u0131n, beyefendiyle | cinsiyet=lgbt, insanla}} aran\u0131zdaki
+    ili\u015Fkinin {{kelime, yak\u0131n arkada\u015F \xE7evrende | ortak arkada\u015Flar\u0131n\u0131z
+    aras\u0131nda | baz\u0131 akrabalar\u0131n\u0131n aras\u0131nda}} s\u0131k s\u0131k
+    mevzubahis oldu\u011Funu, bilinen baz\u0131 tart\u0131\u015Fmalar\u0131n\u0131z\u0131n
+    ise dillere pelesenk oldu\u011Funu seziyorum {{isim}}. Hakk\u0131nda lak\u0131rd\u0131
+    etti\u011Finden haberdar olman neticesinde \xFCz\xFClece\u011Fin \xF6zellikle
+    bir insan var ki, dile getirmekten \xE7ekindiklerini zihninde evirip \xE7eviriyor.
+    \u0130sminde ya da soyisminde {{kelime, Y veya B | B veya \xDC | E veya Z}} harfi
+    ge\xE7ti\u011Fini hissetti\u011Fim bu ki\u015Fi asl\u0131nda sana her bakt\u0131\u011F\u0131nda,
+    kendisinde eksik ve yar\u0131m kalm\u0131\u015F taraflar\u0131 hat\u0131rl\u0131yor.
+    Fark etmeden, senin \xFCst\xFCn y\xF6nlerine oldu\u011Fu kadar sevgilinle arandaki
+    kuvvetli duygusal ve fiziksel \xE7ekime de imreniyor.\n\nFincan\u0131n taban
+    y\xFCzeyine do\u011Fru bak\u0131nca, \"saray \u015Farlatanlar\u0131n\u0131\"
+    and\u0131ran cafcafl\u0131 k\u0131yafetler giyinmi\u015F c\xFCce insanlar g\xF6r\xFCyorum.
+    Telvelerin, bahsetti\u011Fim durumun daha ciddi bir boyut kazanabilece\u011Fini
+    s\xF6yl\xFCyor {{isim}}. G\xF6z\xFCne girmeye ve seni e\u011Flendirmeye \xE7al\u0131\u015F\u0131rken
+    kuyunu kazmak i\xE7in pusuda bekleyen {{kelime, koyu kahverengi g\xF6zl\xFC |
+    soluk ela renk g\xF6zleri olan | burnu hafif kemerli | teni yan\u0131k ve esmer}}
+    bir tan\u0131d\u0131\u011F\u0131n, {{gelecek_ay}} ay\u0131n\u0131n ortas\u0131na
+    do\u011Fru sana hi\xE7 beklenmedik birka\xE7 itirafta bulunacak. Bu itiraflara
+    ekseriyetle itibar etmemen gerekti\u011Fini sen zaten anlam\u0131\u015Fs\u0131nd\u0131r
+    {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

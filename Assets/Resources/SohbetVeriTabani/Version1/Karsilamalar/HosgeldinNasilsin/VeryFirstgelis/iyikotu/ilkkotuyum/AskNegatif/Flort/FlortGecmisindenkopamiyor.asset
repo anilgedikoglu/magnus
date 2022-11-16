@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: FlortGecmisindenkopamiyor
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA95895714094
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bu m\xFCmk\xFCn De\u011Ferli {{isim}}, hatta hangimiz i\xE7in bir miktar da
+    olsa ge\xE7erli de\u011Fil ki? Sen ge\xE7mi\u015Finden tamamen koptu\u011Funu,
+    hayat\u0131na bir yerinden de\u011Fen ya da dokunan insanlar\u0131 tamamen unuttu\u011Funu
+    s\xF6yleyebilir misin? Y\xFCzlerini, isimlerini ve s\xF6zlerini unutsan da, sana
+    nas\u0131l hissettirdiklerini ve seni nihayetinde \"kim haline getirdiklerini\"
+    asla unutamazs\u0131n. Sen art\u0131k \"onlardan sonraki {{isim}}\" oldun, daha
+    farkl\u0131 bir {{isim}}. Zamanla, seninle yeni \u015Feyler payla\u015Ft\u0131k\xE7a
+    ve yeni an\u0131lar biriktirdik\xE7e, belle\u011Finde senden ba\u015Fka bir \u015Fey
+    kalmayacak, buna emin olabilirsin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler: []
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

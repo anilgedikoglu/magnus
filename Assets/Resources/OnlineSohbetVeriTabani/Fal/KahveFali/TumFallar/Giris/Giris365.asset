@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris365
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA31994750087
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Seni sevgilinle denizi kristal berrakl\u0131\u011F\u0131nda bir koyda g\xF6r\xFCyorum
+    {{isim}}. K\u0131y\u0131n\u0131n denizle \xF6rt\xFC\u015Ft\xFC\u011F\xFC parlak
+    \xE7izgide bulunan \xE7ak\u0131l ta\u015Flar\u0131 t\u0131pk\u0131 mermer gibi.
+    I\u015F\u0131lt\u0131lar insanda adeta \"e\u011Filip\" sudan i\xE7me iste\u011Fi
+    uyand\u0131r\u0131yor. \xC7evrede hi\xE7bir yap\u0131la\u015Fma olmamas\u0131na
+    ra\u011Fmen k\xFC\xE7\xFCc\xFCk, eski bir iskele var. Bu iskelenin \xFCzerinde
+    bir g\xFCn do\u011Fumu vaktinde el ele tutu\u015Fmu\u015F, s\u0131rt\u0131n\u0131z\u0131
+    zeytin a\u011Fa\xE7lar\u0131na, y\xFCz\xFCn\xFCz\xFC denizin a\xE7\u0131klar\u0131na
+    vermi\u015F, uzaklara do\u011Fru g\xFCl\xFCmseyerek bak\u0131yorsunuz. \U0001F305\"E
+    benim {{data, cinsiyet=erkek, k\u0131z arkada\u015F\u0131m | cinsiyet=kad\u0131n,
+    erkek arkada\u015F\u0131m | cinsiyet=lgbt, sevgilim}} yok ki!\" dedi\u011Fini
+    duyar gibiyim. \U0001F642\u0130yi de, telvelerin zaten bu g\xF6rsellerin {{yil_+3}}
+    y\u0131l\u0131na ait oldu\u011Funu s\xF6yl\xFCyor. <sprite=0>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulYengec
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA54005775036
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Yenge\xE7ler
+    \xE7ok \u015F\xFCphecidir ve kendini onlara inand\u0131rman zordur. Seni iyi
+    tan\u0131malar\u0131 ve sana tam manas\u0131yla g\xFCvenebileceklerini bilmeleri
+    gerekir. Bunu sa\u011Flamak okul ortam\u0131nda zor {{isim}}; hele de evli biriysen.
+    E\u011Fer seni yeterince tan\u0131m\u0131yorsa, arkan\u0131 d\xF6nd\xFC\u011F\xFCnde
+    bir ba\u015Fkas\u0131na senin dedikodunu yapmas\u0131 i\u015Ften bile de\u011Fildir.
+    Net bir {{burc}} burcu {{data, cinsiyet=erkek, erke\u011Fi | cinsiyet=kad\u0131n,
+    kad\u0131n\u0131 | cinsiyet=lgbt, insan\u0131}} olarak g\xFCvensizli\u011Fe pek
+    tahamm\xFCl\xFCn\xFCn oldu\u011Funu sanm\u0131yorum. Sen de bir yenge\xE7 burcu
+    mensubu kadar sab\u0131rl\u0131ysan, ili\u015Fkinizi dantel gibi i\u015Flemeye
+    g\xFCc\xFCn ve y\xFCre\u011Fin, kendini ona anlatmaya yeterli nefesin varsa,
+    durma {{isim}}... Bir defa kenetlenebilirseniz, bir daha ayr\u0131laca\u011F\u0131n\u0131z\u0131
+    sanm\u0131yorum.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "yenge\xE7"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

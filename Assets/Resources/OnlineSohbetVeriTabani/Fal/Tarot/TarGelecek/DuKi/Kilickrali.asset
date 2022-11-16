@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilickrali
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA55864420681
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: fa50f76b7bc301545a70f3a0d133ee93, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: fa50f76b7bc301545a70f3a0d133ee93, type: 3}
+  contentPhotoId: kilickrali
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"K\u0131l\u0131\xE7 Kral\u0131\" kart\u0131n\u0131 se\xE7tin.\n\nBir
+    zafer elde ettikten sonra taht\u0131na kurulup, emniyet i\xE7erisinde ve gururlu
+    bak\u0131\u015Flarla \xE7evreni selamlayaca\u011F\u0131n g\xFCnler geliyor. Se\xE7mi\u015F
+    oldu\u011Fun bu kart, uzun s\xFCredir istedi\u011Fin bir \u015Feyin olaca\u011F\u0131n\u0131
+    vurguluyor {{isim}}. Nihayet, ya\u015Fanacak son geli\u015Fmelerle de birlikte
+    biti\u015F \xE7izgisine varacaks\u0131n. \u015Ean\u0131n y\xFCcelecek, \xE7evren
+    geni\u015Fleyecek ve insanlar senden bahsedecekler. Maddi olanaklar\u0131nda
+    da art\u0131\u015F g\xF6zlemleyebilirsin. S\xF6z\xFCn\xFCn h\xFCkm\xFC artacak,
+    kontrol ve otoriteyi ele ge\xE7ireceksin. Sonras\u0131nda ise r\u0131zan olmadan
+    al\u0131nabilecek kararlar ya da beklentin d\u0131\u015F\u0131nda ortaya \xE7\u0131kabilecek
+    k\xF6t\xFC s\xFCprizler olmayacak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kilickrali
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

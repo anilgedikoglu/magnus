@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "563636764754",
+    "firebase_url": "https://magnus-338513-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "magnus-338513",
+    "storage_bucket": "magnus-338513.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563636764754:android:32af7b41f8b4bb8ec85f8b",
+        "android_client_info": {
+          "package_name": "com.futurastic.Magnus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563636764754-cjqmeq3jnse690scajc53ckbv13pko02.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.futurastic.Magnus",
+            "certificate_hash": "e67b8a2c9e3362c72b57e21ff49f1642786ad762"
+          }
+        },
+        {
+          "client_id": "563636764754-uk5jma19ks3qmkcamlhlqqua09k9o2tc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.futurastic.Magnus",
+            "certificate_hash": "3142f5383e90e65f979030b75174351d9865cc13"
+          }
+        },
+        {
+          "client_id": "563636764754-i0d4s55b8rnqmo76v0eg5ssnf3o5rva6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhgy1N_3RNPYD_FShnL_U6UjseC9MCl34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563636764754-0p3gr6pjvt4o8m4nm8oevpe205n9namj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "563636764754-69go7jmongscsh1hv8nn3mphg14ko91k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.futurastic.Magnus"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-6470338276121414~6209031577"
+    }
+  ],
+  "configuration_version": "1"
+}

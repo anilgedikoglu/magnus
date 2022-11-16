@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekasi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA02498607027
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 5660e689d926d6849a5a175547612203, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 5660e689d926d6849a5a175547612203, type: 3}
+  contentPhotoId: asaasi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek As\u0131\" kart\u0131n\u0131 se\xE7tin.\n\nHep
+    \"Ahh bir f\u0131rsat\u0131m olsa, ahh bir imkan\u0131m olsa!\" diyordun ya;
+    evren sana o imkanlar\u0131 nihayet sunuyor. Eline m\xFChti\u015F bir g\xFC\xE7
+    verilecek. Bu g\xFC\xE7 yaln\u0131zca manevi de\u011Fil, ayn\u0131 zamanda maddi
+    de olacak. Beklemedi\u011Fin bir para ya da m\xFClk elde edebilir, tahmin etmedi\u011Fin
+    birilerinden yard\u0131m alabilir ve destek g\xF6rebilirsin. Sana uzat\u0131lacak
+    bir bayrak var. Sen o bayra\u011F\u0131 ko\u015Farak \xE7ok daha y\xFCkseklere,
+    \xE7ok daha ilerilere ta\u015F\u0131mak isteyecek, bunu da ba\u015Faracaks\u0131n
+    {{isim}}. Giri\u015Fimlerle dolu bir d\xF6neme giriyorsun. Motivasyonun en \xFCst
+    d\xFCzeye \xE7\u0131kt\u0131\u011F\u0131nda, y\xFCksek enerjinle en do\u011Fru
+    ad\u0131mlar\u0131 atma cesaretini g\xF6stereceksin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asaasi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

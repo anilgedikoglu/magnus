@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimsovalyesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA00859090447
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 2a571a631fcdd6044be611903802dc12, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 2a571a631fcdd6044be611903802dc12, type: 3}
+  contentPhotoId: tilsimsovalyesi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"T\u0131ls\u0131m \u015E\xF6valyesi\" kart\u0131n\u0131 se\xE7tin.\n\nG\xFC\xE7l\xFC
+    bir Arap at\u0131n\u0131n \xFCzerinde g\xF6rselle\u015Ftirilmi\u015F bu \u015F\xF6valye,
+    ilerleyen zamanlarda enerjinin giderek artaca\u011F\u0131na i\u015Faret. K\u0131sa
+    bir duraksaman\u0131n ard\u0131ndan, bekledi\u011Fin haberleri alacak ve d\xF6rt
+    nala ko\u015Facaks\u0131n. Sana \xF6\u011F\xFCt verdikleri baz\u0131 konularda
+    ger\xE7ek bilgenin kim oldu\u011Funu herkese g\xF6stereceksin {{isim}}. Bir noktadan
+    sonra ba\u015Fkala\u015F\u0131m ge\xE7irip ya\u015Fam\u0131ndaki \xF6nemli baz\u0131
+    konularda o kadar ustala\u015Facaks\u0131n ki, hi\xE7 kimse eline su d\xF6kemeyecek.
+    Hi\xE7bir eksi\u011Fin olmad\u0131\u011F\u0131n\u0131 unutma. Kendine g\xFCvenmeye
+    bu \u015Fekilde devam et ve sa\u011Flam ad\u0131mlarla ilerle. B\xFCy\xFCk oynayan
+    ve galip gelen en sonunda sen olacaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek tilsimsovalyesi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

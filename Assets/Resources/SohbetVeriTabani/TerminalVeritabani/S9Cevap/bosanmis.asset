@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: bosanmis
+  m_EditorClassIdentifier: 
+  etiket: S9Cevap
+  aciklama:
+  - "{{kelime, Stresli | Tats\u0131z | S\u0131k\u0131nt\u0131l\u0131}} {{kelime,
+    bir d\xF6nem | d\xF6nemler}} atlatm\u0131\u015Fs\u0131n, \xE7ok ge\xE7mi\u015F
+    olsun {{isim}}. Umar\u0131m bundan sonras\u0131 senin i\xE7in daha hay\u0131rl\u0131
+    olur..."
+  - "Umar\u0131m o zor g\xFCnlerin tekrar\u0131n\u0131 bir daha ya\u015Famazs\u0131n.
+    \xD6zel hayat\u0131nda y\xFCz\xFCn\xFCn g\xFClmesini dilerim {{isim}}."
+  aranacakEtiket: son
+  gerekenDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

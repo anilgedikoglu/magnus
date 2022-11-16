@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: PsikopatSonuc 5
+  m_EditorClassIdentifier: 
+  idIndex: 20221053937AA56880809311
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Psikopatl\u0131k Analizi\n\nSana dair de\u011Ferlendirmem \u015F\xF6yle {{isim}};\n\n{{data,
+    psikopat12=a, G\xF6rd\xFC\u011F\xFCm kadar\u0131yla senin hesaplar\u0131n kendinle
+    ve Allahla aranda. Bu seni bir bak\u0131ma \"daha \xF6zg\xFCr\" k\u0131lar. Ancak
+    faydal\u0131 aktiviteler se\xE7iyorsan... | psikopat12=b, Sorumluluklar\u0131n\u0131
+    bilen birisin sen. Bunu da inkar etmiyorsun. B\xF6yle insanlar birilerine hesap
+    vermekten gocunmaz. \xC7\xFCnk\xFC veremeyecek hesaplar\u0131 yoktur.}} {{data,
+    psikopat13=a, Kendini oyalamay\u0131 \xF6\u011Frenmen laz\u0131m. S\u0131k\u0131lmak,
+    akl\u0131 ve eli me\u015Fgul tutamayan insanlara \xF6zg\xFCd\xFCr. | psikopat13=b,
+    Kendini oyalamay\u0131 bilen ve me\u015Fgalesi olan birisin. Senden kolay kolay
+    k\xF6t\xFCl\xFCk gelmez.}}\n\n{{data, psikopat3=a, Kusursuz insan olmad\u0131\u011F\u0131n\u0131
+    ve senin de bir insan oldu\u011Funu kabul etmelisin. Al\xE7akg\xF6n\xFCll\xFCl\xFCk,
+    insan ili\u015Fkilerinde en ge\xE7erli ak\xE7edir. Kendi fazla b\xFCy\xFCt\xFCrsen,
+    insanlar\u0131n g\xF6z\xFCnde k\xFC\xE7\xFClebilirsin. | psikopat3=b, Al\xE7akg\xF6n\xFCll\xFCl\xFC\u011F\xFCn,
+    \xF6zg\xFCven eksikli\u011Finden kaynaklanm\u0131yorsa b\xFCy\xFCk bir de\u011Fer.
+    Sen yine de egonu bir t\u0131k daha yukar\u0131lara konumland\u0131r. Kendine
+    ne kadar de\u011Fer verirsen, d\u0131\u015Far\u0131ya \xF6yle projekte olursun.
+    Ve insanlar da seni \xF6yle g\xF6r\xFCr.}} {{data, psikopat1=a, Daha \xE7ok \xF6zele\u015Ftiri
+    yapmal\u0131s\u0131n. Kendini yarg\u0131layamad\u0131\u011F\u0131n zaman, su\xE7lu
+    sana g\xF6re her zaman ba\u015Fkalar\u0131 olacakt\u0131r. Sorunun kendinde oldu\u011Funu
+    tespit etti\u011Finde, \xE7\xF6z\xFCm\xFCn de kendi ellerinde oldu\u011Funu fark
+    ederek harekete ge\xE7ebilirsin. | psikopat1=b, Gerekti\u011Fi zaman sorumlulu\u011Fu
+    \xFCzerine alabilen birisin. Neyin do\u011Fru neyin yanl\u0131\u015F oldu\u011Funu
+    yerinde bir d\u0131\u015Fg\xF6r\xFC ile tespit edebiliyorsun. Hatalar\u0131n\u0131
+    d\xFCzeltece\u011Fine ve ruhunla bar\u0131\u015F\u0131 sa\u011Flayaca\u011F\u0131na
+    inan\u0131yorum.}}\n\nAnalize devam edecek olursak {{isim}};\n\n{{data, psikopat6=a,
+    Rasyonel d\xFC\u015F\xFCnebilen, realist biri oldu\u011Funu g\xF6r\xFCyorum.
+    Ak\u0131ll\u0131 insan her zaman ba\u015Farabileceklerini hedefleyendir. Bu hedeflere
+    ula\u015Ft\u0131k\xE7a, ba\u015Farabileceklerinin de artaca\u011F\u0131n\u0131
+    g\xF6receksin. | psikopat6=b, Boy yetmeyen y\xFCksek idealler insan\u0131 yorar.
+    Ka\xE7\u0131n\u0131lmaz ba\u015Far\u0131s\u0131zl\u0131klarla zaman kaybetmek
+    yerine, daha rasyonel hedefler koymal\u0131 ve merdivenleri ad\u0131m ad\u0131m
+    \xE7\u0131kmal\u0131s\u0131n.}} {{data, psikopat10=a, Gelelim yalan konusuna.
+    Yalan bir zorunluluk olmaktan \xE7\u0131k\u0131p al\u0131\u015Fkanl\u0131\u011Fa
+    d\xF6n\xFC\u015Ft\xFCyse, genel toplamda ba\u015Fa b\xFCy\xFCk dertler a\xE7abilir.
+    Karma, d\xFCr\xFCst olanlar\u0131 sever. Kendini hi\xE7 hesap etmedi\u011Fin
+    s\u0131k\u0131nt\u0131lar\u0131n g\xF6be\u011Finde bulmak istemiyorsan do\u011Fruculuktan
+    \u015Fa\u015Fmamal\u0131s\u0131n. | psikopat10=b, \xC7evren taraf\u0131ndan en
+    be\u011Fenilen \xF6zelliklerinden birinin de a\xE7\u0131k s\xF6zl\xFCl\xFC\u011F\xFCn
+    ve d\xFCr\xFCstl\xFC\u011F\xFCn oldu\u011Funa eminim. B\xF6yle olan ve bunu korumay\u0131
+    ba\u015Farabilen insan \xE7ok az.}}\n\n{{data, psikopat14=a, \u0130li\u015Fkilere
+    gelecek olursak; bir ili\u015Fkiyi hem yo\u011Fun ve duygusal ya\u015F\u0131yor
+    hem de s\xFCrd\xFCremiyorsan, o noktada sende bir s\u0131k\u0131nt\u0131 var
+    demektir. \xC7abuk ba\u011Flanan, a\u015Fk hayat\u0131 \xE7alkant\u0131l\u0131
+    biri olmal\u0131s\u0131n. Sevmene ra\u011Fmen de ge\xE7imi s\xFCrd\xFCrmek i\xE7in
+    elinden gelen her \u015Feyi yeterince yapm\u0131yor olabilirsin. | psikopat14=b,
+    \u0130li\u015Fkilere gelecek olursak; sen zor seven ve birliktelik ba\u015Flad\u0131\u011F\u0131nda
+    da s\xFCrs\xFCn diye elinden gelen iyi niyeti g\xF6steren birisin. \u0130yi niyetin
+    \xE7ok belli. \xC7alkant\u0131l\u0131 ve \u015F\u0131psevdi olmad\u0131\u011F\u0131n
+    anla\u015F\u0131l\u0131yor. \u0130deal olan\u0131 da bu.}}"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "psikopatsonu\xE7son"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 2
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

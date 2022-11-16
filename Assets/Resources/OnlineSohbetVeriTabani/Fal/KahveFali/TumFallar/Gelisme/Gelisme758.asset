@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme758
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA83423015749
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n orta k\u0131s\u0131mlar\u0131nda, sana g\xF6re \"kuzeydo\u011Fu\"
+    y\xF6n\xFCnde kalan ve elinde \"dalgalanmakta olan bir bayra\u011F\u0131\" tutan,
+    {{kelime, k\u0131r sa\xE7l\u0131 bir beyefendi | kirli sakall\u0131 bir beyefendi
+    | sinek kayd\u0131 tra\u015Fl\u0131 bir beyefendi | top sakall\u0131 bir beyefendi
+    | geni\u015F y\xFCzl\xFC bir han\u0131mefendi | ela g\xF6zl\xFC bir han\u0131mefendi
+    | uzun boylu bir han\u0131mefendi}} g\xF6r\xFCyorum. Bu ki\u015Fi, hayat\u0131nda
+    esecek olan \"poyraz\" r\xFCzgarlar\u0131n\u0131n hem nedeni hem de temsilcisi.
+    Bu \u015Fiddetli r\xFCzgarlar, sana zarar vermek yerine maddi konularda baz\u0131
+    h\u0131zl\u0131 de\u011Fi\u015Fiklikler ya\u015Famana neden olacak {{isim}}.
+    Uzun s\xFCrede toparlanamayacak bor\xE7lardan ya da i\xE7inde bulundu\u011Fun
+    finansal zay\u0131fl\u0131ktan {{sayi,2,7}} ay sonra bu ki\u015Finin vesilesiyle
+    {{kelime, bir anda | h\u0131zla | g\xFCnler i\xE7inde}} kurtulacaks\u0131n.\n\nGe\xE7ti\u011Fimiz
+    {{kelime, g\xFCnlerde | haftalarda}} tan\u0131d\u0131\u011F\u0131n birinin do\u011Fum
+    g\xFCn\xFCym\xFC\u015F. Telvelerin, mumlara \xFCfleyen, {{ay_-1}} ya da {{ay_0}}
+    ay\u0131 do\u011Fumlu bu ki\u015Fiden de sana k\u0131sa bir s\xFCre i\xE7inde
+    maddi a\xE7\u0131dan {{kelime, olumlu olarak nitelendirece\u011Fin | seni rahatlatacak
+    | seni \xE7ok sevindirecek | elini kuvvetlendirecek}} bir haber gelece\u011Fini
+    s\xF6yl\xFCyor {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

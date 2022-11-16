@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: S5Cevap2010
+  m_EditorClassIdentifier: 
+  etiket: dogc
+  aciklama:
+  - "2010 \xF6yle mi? Vay can\u0131na...\r\nMicrosoft'un geli\u015Ftirdi\u011Fi ve
+    herhangi bir kontrol\xF6r olmadan oyun oynama imkan\u0131 sunan Kinect isimli
+    alet, o y\u0131l \xE7\u0131km\u0131\u015Ft\u0131. Tabii sen hat\u0131rlamazs\u0131n..."
+  - "2010 y\u0131l\u0131 \xF6yle mi?\r\nApple'\u0131n cep telefonu serisinin bir
+    par\xE7as\u0131 olan iPhone 4'\xFCn o y\u0131l duyuruldu\u011Funu biliyor muydun?"
+  - "Vaay, 2010 demek...\r\nD\xFCnyaca \xFCnl\xFC Lost dizisinin final b\xF6l\xFCm\xFCn\xFCn
+    o y\u0131lda yay\u0131nland\u0131\u011F\u0131n\u0131 biliyor muydun?"
+  - "2010 ha?\r\nFacebook'un kurucusu Mark Zucherberk ve arkada\u015Flar\u0131n\u0131n
+    \xF6yk\xFCs\xFCn\xFC anlatan David Fincher imzal\u0131 The Social Network (Sosyal
+    A\u011F) filminin o y\u0131l vizyona girdi\u011Fini biliyor muydun?"
+  - "Demek 2010...\r\nKripto para ile ilk al\u0131\u015Fveri\u015Fin o y\u0131lda
+    yap\u0131ld\u0131\u011F\u0131n\u0131 biliyor muydun? Laszlo Hanyecz isimli ki\u015Fi,
+    bitcoin ile ilk sipari\u015Fi bir pizza i\xE7in o y\u0131l verdi."
+  - "Demek 2010...\r\nO y\u0131l \u0130zlanda'da Eyjafjallaj\xF6kull Yanarda\u011F\u0131
+    patlam\u0131\u015F ve Avrupa'da havac\u0131l\u0131k krizi ya\u015Fanm\u0131\u015Ft\u0131.
+    Sen \"\u0131ngaa\" derken neler olmu\u015F g\xF6rd\xFCn m\xFC... :)"
+  aranacakEtiket: konum izin
+  gerekenDegiskenler:
+  - degiskenAdi: dogum yili
+    degiskenDegeri: 2010
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 0
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

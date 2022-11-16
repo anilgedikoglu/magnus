@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tkaygili
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA67994531754
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\"Kayg\u0131\" insan\u0131n kollar\u0131n\u0131 zincirleyen en sorunlu blokajd\u0131r.
+    Ba\u015Fta ruh geli\u015Fimi olmak \xFCzere, b\xFCt\xFCnle\u015Fme, tamamlanma,
+    kazan\u0131m ve ilerlemenin en b\xFCy\xFCk d\xFC\u015Fman\u0131d\u0131r. Yapt\u0131\u011F\u0131m
+    astrolojik de\u011Ferlendirme ise bug\xFCn {{burc}} bur\xE7lar\u0131n\u0131n
+    bir hayli kayg\u0131l\u0131 oldu\u011Funu ortaya koyuyor. Korkular\u0131n, umutlar\u0131na
+    a\xE7\u0131lan pencerenin \xFCzerinde kara bir leke; bunu unutmamal\u0131s\u0131n.
+    B\xF6yle kayg\u0131l\u0131 oldu\u011Fun zamanlarda oldu\u011Fun yerde kilitlenmek,
+    duraklamak ya da pes etmek yerine harekete ge\xE7meli ve \xF6n\xFCndeki perdelerin
+    ard\u0131n\u0131 g\xF6rebilmek ad\u0131na t\xFCm gayretinle u\u011Fra\u015Fmal\u0131s\u0131n.
+    Bug\xFCn hangi olas\u0131 se\xE7iminin sonucu sende kayg\u0131 yarat\u0131yorsa,
+    o se\xE7ene\u011Fi se\xE7, o yoldan devam et ve o konuyu a\xE7\u0131kl\u0131\u011Fa
+    kavu\u015Ftur. Tavsiyem bunu d\xFC\u015F\xFCnmeden, b\xFCy\xFCk bir cesaretle
+    yapabilmen ve sonu\xE7lar\u0131 erdemli bir \u015Fekilde kucaklayabilmendir De\u011Ferli
+    {{isim}}."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

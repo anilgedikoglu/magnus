@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Farketmez28
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA43626466745
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xD6zellikle senin gibi {{medeni durum}} insanlar\u0131 memnun edecek \u015Fansta
+    ve enerjide bir g\xFCne ba\u015Fl\u0131yorsun. \xC7evrendeki insanlar taraf\u0131ndan
+    sayg\u0131 g\xF6recek, uzaktakiler taraf\u0131ndan sevgiyle an\u0131lacak ve
+    g\xFCzel olan \"c\xFCmle i\xE7lerine\" dahil edileceksin {{isim}}. \u0130smi
+    {{kelime, d\xF6rt | be\u015F}} harften olu\u015Fan ve isminin {{kelime, ikinci
+    | \xFC\xE7\xFCnc\xFC | d\xF6rd\xFCnc\xFC}} harfi {{harf}} olan biri, \xF6\u011Fleden
+    sonra sana bir soru soracak ve cevab\u0131n do\u011Frultusunda senin bir {{kelime,
+    i\u015Fini halledecek | iste\u011Fini yerine getirecek | problemini \xE7\xF6zecek}}.
+    Ak\u015Fam saatlerinde akl\u0131n ge\xE7mi\u015Fe gidebilir {{isim}}. \u0130\xE7ine
+    sinmeyen bir durumu ya da ard\u0131nda b\u0131rakt\u0131\u011F\u0131n bir insan\u0131
+    d\xFC\u015F\xFCneceksin. Hi\xE7 merak etme; o anki auran, yazg\u0131n \xFCzerinde
+    olumlu etkiler yaratarak daha g\xFCzel g\xFCnler g\xF6rmen ad\u0131na kaderinde
+    zemin haz\u0131rlayacak. Ba\u015F\u0131n yast\u0131ktayken g\xF6zlerini kapad\u0131\u011F\u0131nda,
+    uykuya yakla\u015F\u0131k {{sayi,4,13}} dakika i\xE7erisinde dalacaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

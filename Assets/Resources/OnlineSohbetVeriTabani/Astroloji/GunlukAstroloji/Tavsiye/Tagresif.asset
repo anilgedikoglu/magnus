@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tagresif
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA53965119866
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn {{burc}} bur\xE7lar\u0131 zaman zaman agresif \xE7\u0131k\u0131\u015Flar
+    sergileyebilir. Sab\u0131r e\u015Fi\u011Finin d\xFC\u015F\xFCk olmas\u0131, insanlarla
+    kuraca\u011F\u0131n diyaloglar\u0131 negatif etkileyebilir ve sonu\xE7land\u0131rman
+    gereken i\u015Fleri yar\u0131m b\u0131rakmana neden olabilir. Sekteye u\u011Frad\u0131\u011F\u0131nda
+    ya da birileri taraf\u0131ndan yanl\u0131\u015F anla\u015F\u0131ld\u0131\u011F\u0131nda,
+    sahip olduklar\u0131n\u0131 bir h\u0131\u015F\u0131mla kenara atmamal\u0131s\u0131n.
+    \xD6zellikle bug\xFCn, m\xFCmk\xFCn oldu\u011Funca sab\u0131r ku\u015Fanmaya
+    \xE7al\u0131\u015Fmanda fayda g\xF6r\xFCyorum {{isim}}. Sevdi\u011Fin insanlarla
+    kurdu\u011Fun ikili ili\u015Fkilerde, ilk akl\u0131na geleni hi\xE7 d\xFC\u015F\xFCnmeden
+    s\xF6ylemek, bug\xFCn i\xE7ine d\xFC\u015Febilece\u011Fin en b\xFCy\xFCk yanl\u0131\u015Flardan
+    biri olur. Dilinden d\xF6k\xFClecek c\xFCmleleri, ruhundaki agresyondan uzak
+    tutman\u0131 ve itidalli davranman\u0131 tavsiye ediyorum. K\xFC\xE7\xFCk s\xF6zlerle
+    b\xFCy\xFCk yaralar a\xE7mak yerine, b\xFCy\xFCk bir s\xFCkut ile her buldu\u011Fun
+    \"k\xFC\xE7\xFCk huzuru\" toplamal\u0131s\u0131n bug\xFCn."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

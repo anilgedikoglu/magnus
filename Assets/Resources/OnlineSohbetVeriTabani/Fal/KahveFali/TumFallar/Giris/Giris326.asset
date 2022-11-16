@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris326
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA10907231064
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan g\xF6rsellerini derin bir analize tabi tuttu\u011Fumda, ili\u015Fkinde
+    k\u0131rmak istedi\u011Fin bir k\u0131s\u0131r d\xF6ng\xFC oldu\u011Funu hissediyorum.
+    \u27B0Ba\u015F k\u0131s\u0131mdaki telvelerinde g\xF6ze \xE7arpan ve {{data,
+    cinsiyet=erkek, k\u0131z arka\u015F\u0131n\u0131 | cinsiyet=kad\u0131n, erkek
+    arkada\u015F\u0131n\u0131 | cinsiyet=lgbt, sevgilini}} temsil eden \"tav\u015Fan\"
+    fig\xFCr\xFC, birileri taraf\u0131ndan kovaland\u0131\u011F\u0131n\u0131 hissederek
+    can havliyle uzaklara ka\xE7\u0131yor gibi g\xF6r\xFCnm\xFC\u015F. Ard\u0131nda
+    onu kovalayan kimse olmad\u0131\u011F\u0131 gibi, durmadan kendi etraf\u0131nda
+    daireler \xE7izdi\u011Finin fark\u0131nda de\u011Fil. {{isim}}, sevgilinle aran\u0131zdaki
+    anla\u015Fmazl\u0131klar\u0131n temel sebebi, onun kendini kapana k\u0131s\u0131lm\u0131\u015F
+    hissetmesinden. Ona bu konuyla ilgili direkt olarak y\xF6neltemedi\u011Fin sorular\u0131n
+    cevab\u0131n\u0131, {{kelime, haftaya sal\u0131 g\xFCn\xFC | haftaya per\u015Fembe
+    g\xFCn\xFC | haftaya cumartesi g\xFCn\xFC | gelecek hafta per\u015Fembe g\xFCn\xFC
+    | gelecek hafta cuma g\xFCn\xFC | gelecek hafta pazar g\xFCn\xFC | 4-5 g\xFCn
+    i\xE7erisinde | 5-6 g\xFCn i\xE7erisinde | 3-4 g\xFCn i\xE7erisinde | \xF6n\xFCm\xFCzdeki
+    birka\xE7 g\xFCn i\xE7erisinde}} soyisminde {{kelime, C veya T | G veya H | K
+    veya Z | G veya O}} harfi ge\xE7en ve hayat\u0131ndaki insan\u0131n adeta \"s\u0131rda\u015F\u0131\"
+    olan bir yak\u0131n\u0131ndan \xF6\u011Freneceksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

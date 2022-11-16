@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme719
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA02597614743
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan g\xF6rsellerinin orta k\u0131s\u0131mlar\u0131nda kar\u015F\u0131la\u015Ft\u0131\u011F\u0131m
+    ilk yans\u0131malarda, g\xF6zlerini hafif\xE7e yummu\u015F halde belirmi\u015Fsin.
+    Sonraki detay ise bir hayli ilgin\xE7. K\u0131s\u0131lm\u0131\u015F g\xF6z kapaklar\u0131n\u0131n
+    alt\u0131ndan adeta \"g\xFCne\u015F\" g\xF6r\xFCn\xFCyor; kirpiklerinin aras\u0131ndan
+    s\u0131zan alt\u0131n g\xF6r\xFCn\xFCml\xFC \u0131\u015F\u0131k h\xFCzmeleri
+    var. Senin \"olaylar\u0131n ard\u0131n\u0131\" ve \"s\xF6ylenen s\xF6zlerin arkas\u0131ndaki
+    kas\u0131tlar\u0131\" g\xF6rme gibi bir yetene\u011Fin var. Bu nedenle ili\u015Fkine
+    dair baz\u0131 ger\xE7ekleri kendili\u011Finden fark ediyorsun. Telvelerin, ilerleyen
+    g\xFCnlerde sevdi\u011Fin {{data, cinsiyet=erkek, han\u0131mefendiyle | cinsiyet=kad\u0131n,
+    beyefendiyle | cinsiyet=lgbt, insanla}} derin bir konu\u015Fma ger\xE7ekle\u015Ftirece\u011Fini
+    ve akl\u0131ndaki her \u015Feyi t\xFCm a\xE7\u0131kl\u0131\u011F\u0131yla masaya
+    serece\u011Fini s\xF6yl\xFCyor.\n\nFincan\u0131n\u0131n di\u011Fer k\u0131s\u0131mlar\u0131nda
+    ise vagonlar\u0131 devrilmi\u015F bir y\xFCk treni g\xF6r\xFCyorum. \u0130li\u015Fkindeki
+    sorunlar, sevgiline \xE7ok anlam y\xFCkledi\u011Fin bir zamanda ba\u015Flam\u0131\u015F.
+    Gizemini yitiren \u015Feylerin k\u0131ymeti pek bilinmez. Duygular\u0131n\u0131
+    tamamen a\xE7\u0131k etti\u011Finde, kar\u015F\u0131ndaki insan kendisini senin
+    i\xE7in \"vazge\xE7ilmez\" g\xF6rm\xFC\u015F ve istedi\u011Fi gibi hareket etmeyi
+    kendisine hak bilmi\u015F {{isim}}. Gerekti\u011Fi zaman yolunu farkl\u0131 \u015Fekillerde
+    de \xE7izebilece\u011Fine dair bir \xF6zg\xFCven ortaya koydu\u011Funda, onun
+    i\xE7in yeniden k\u0131ymetli olacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

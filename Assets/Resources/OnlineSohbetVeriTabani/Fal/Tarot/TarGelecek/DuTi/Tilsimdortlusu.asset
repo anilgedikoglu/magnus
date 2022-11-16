@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimdortlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA54065860355
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: dc44e765eec70614b9f56939ecbeef5e, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: dc44e765eec70614b9f56939ecbeef5e, type: 3}
+  contentPhotoId: tilsimdortlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"T\u0131ls\u0131m D\xF6rtl\xFCs\xFC\" kart\u0131n\u0131 se\xE7tin.\n\nYeni
+    birtak\u0131m \u015Feylere sahip olabilmek i\xE7in, elinde olan baz\u0131 \u015Feyleri
+    g\xF6zden \xE7\u0131kartman gerekecek. Se\xE7ti\u011Fin kart, var olana s\u0131k\u0131
+    s\u0131k\u0131ya ba\u011Flanmaman gerekti\u011Fini ve yeri geldi\u011Finde onlardan
+    fedakarl\u0131k etmek durumunda oldu\u011Funu f\u0131s\u0131ld\u0131yor {{isim}}.
+    Sende bir de \u015Fu var; fazla garantici gitmeye u\u011Fra\u015F\u0131yorsun.
+    Hi\xE7bir malzeme ziyan olmas\u0131n diye, dolaptan yemeklik malzeme \xE7\u0131kartmamaya
+    benziyor bu tavr\u0131n. Akacak olan akacak, yanacak olan yanacak. Bir emelin
+    varsa, o u\u011Furda yeri geldi\u011Finde sa\xE7acak, yeri geldi\u011Finde savuracaks\u0131n.
+    Dolu dizgin gitmez ve t\xFCm varl\u0131\u011F\u0131nla istemezsen, \"daha fazlas\u0131n\u0131\"
+    elde edemezsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek tilsimdortlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

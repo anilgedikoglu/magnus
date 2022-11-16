@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris331
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA13510164622
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Her iki yan\u0131nda da yanmayan birer \"mum\" bulunan, yuvarlak bir masa saati
+    var fincan\u0131nda. Bu mumlar\u0131n yanm\u0131yor olu\u015Fu, \u015Fu s\u0131ralar
+    ba\u011F\u0131\u015F\u0131kl\u0131k sistemindeki d\xFC\u015F\xFCkl\xFC\u011F\xFC,
+    enerjindeki azl\u0131\u011F\u0131 ve ruhsal yorgunluklar\u0131n\u0131 simgeliyor
+    {{isim}}. Bu saatteki her bir dakika, 3 g\xFCn\xFC temsil ediyor. Saatteki yelkovan
+    \u015Fu anda 12'nin, akrep ise 6'n\u0131n \xFCzerinde. {{kelime, Akrep 7'nin,
+    yelkovan ise 15'in \xFCzerine geldi\u011Finde bu mumlar yanacak. Bu da demek
+    oluyor ki, 7 ay 15 g\xFCn sonra | Akrep 8'in, yelkovan ise 30'un \xFCzerine geldi\u011Finde
+    bu mumlar yanacak. Bu da demek oluyor ki, 1 y\u0131l 3 ay sonra}} hayat\u0131nda
+    ya\u015Fayaca\u011F\u0131n g\xFCzel bir geli\u015Fme sonras\u0131 t\xFCm bunlar\u0131
+    geride b\u0131rakacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

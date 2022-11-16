@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc799
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA75262921950
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n taban\u0131yla yan duvar\u0131n biti\u015Fti\u011Fi yerde,
+    ucuna k\xFC\xE7\xFCc\xFCk nazar boncu\u011Fu ili\u015Ftirilmi\u015F bir \xE7engelli
+    i\u011Fne g\xF6r\xFCyorum. Bunun neye i\u015Faret oldu\u011Funu belki az \xE7ok
+    sen de tahmin edebilirsin {{isim}}? Evet, yak\u0131nda \xE7ok sevdi\u011Fin ve
+    evli bir tan\u0131d\u0131\u011F\u0131ndan \"do\u011Fum\" haberi alacaks\u0131n!
+    \xDCz\xFCc\xFC olan \u015Fu ki, aran\u0131zdaki mesafe ya da ko\u015Fullar dolay\u0131s\u0131yla
+    bu ki\u015Filerin yan\u0131nda bulunamayaca\u011F\u0131n\u0131 hissediyorum.\n\nFincan\u0131n\u0131
+    y\u0131kamad\u0131ysan, l\xFCtfen \"dudak pay\u0131\" b\xF6l\xFCm\xFCnde sa\u011F
+    el i\u015Faret parma\u011F\u0131n\u0131 \u015F\xF6yle bir \xE7epe\xE7evre gezdirip
+    o k\u0131sm\u0131 temizle. \xDCzerindeki negatif enerjiyi birden bire att\u0131\u011F\u0131na
+    \u015Fahit olacaks\u0131n {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

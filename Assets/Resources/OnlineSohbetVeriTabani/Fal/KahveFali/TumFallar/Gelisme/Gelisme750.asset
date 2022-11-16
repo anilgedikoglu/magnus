@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme750
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA08341161257
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan g\xF6rsellerinin tam ortas\u0131nda seni sandalyede otururken, uzun sa\xE7l\u0131
+    ve sa\xE7lar\u0131n \xF6r\xFCl\xFC bir \u015Fekilde g\xF6r\xFCyorum. {{data,
+    cinsiyet=erkek, Garip bulmu\u015F olabilirsin ama fal bu, bir anlam\u0131 var...
+    | cinsiyet=kad\u0131n, Hmm... | cinsiyet=lgbt, Hmm...}} Hemen arkanda ise, {{kelime,
+    40'l\u0131 ya\u015Flarda | 40'l\u0131 ya\u015Flar\u0131n\u0131n sonunda olan
+    | 50'li ya\u015Flar\u0131n\u0131n ba\u015F\u0131nda olan | 50'li ya\u015Flar\u0131n\u0131n
+    ortalar\u0131nda olan | 30'lu ya\u015Flara yakla\u015Fm\u0131\u015F}} {{kelime,
+    uzun boylu bir insan | blazer ceketli bir kad\u0131n | ve kolunda siyah \xE7antas\u0131
+    olan bir kad\u0131n | ve koluna kahverengi \xE7anta takm\u0131\u015F bir kad\u0131n
+    | ve boynuna inci kolye takm\u0131\u015F bir kad\u0131n | ve ba\u015F\u0131nda
+    \u015Fapkas\u0131 olan bir kad\u0131n | ve \xE7er\xE7evesiz g\xF6zl\xFCk takan
+    bir erkek | ve geni\u015F \xE7er\xE7eveli g\xF6zl\xFCk takan bir erkek | ve sark\u0131k
+    k\xFCpeler takan \u015F\u0131k giyimli bir kad\u0131n | ve sinek kayd\u0131 tra\u015F\u0131
+    olmu\u015F bir erkek}}, ayakta duruyor. Belli ki ki sa\xE7lar\u0131n\u0131 \xF6ren
+    ki\u015Fi o. Bu ki\u015Fi, gelecek aylarda bir \u015Fekilde senin hayat\u0131na
+    \xE7ekid\xFCzen verecek {{isim}}. Ya taht\u0131n\u0131 ya da baht\u0131n\u0131
+    yapacak. Onun vesilesiyle \xE7ok mutlu olaca\u011F\u0131n\u0131 ve ona b\xFCy\xFCk
+    minnet duyaca\u011F\u0131n\u0131 hissediyorum.\n\nHemen yan taraf\u0131nda ise,
+    yeni bi\xE7ilmi\u015F firezlerin aras\u0131ndan havalanmakta olan {{sabit_sayi,2,4}}
+    b\u0131ld\u0131rc\u0131n var. \u015Eu anda i\xE7inde bulundu\u011Fun bir h\xFCzn\xFC,
+    bir \xFCz\xFCnt\xFCy\xFC ya da bir sorunu {{sabit_sayi,2,4}} ay sonra tamamen
+    terk edeceksin. {{ay_1}} ay\u0131n\u0131n ortalar\u0131nda ailene gelecek olan
+    bir haberden sonra {{kelime, ba\u015Flanacak bir i\u015F | giri\u015Filecek bir
+    i\u015F | ba\u015Flanacak olan haz\u0131rl\u0131klar | yap\u0131lacak olan bir
+    ba\u015Fvuru}}, {{ay_3}} ay\u0131n\u0131n son \xE7eyre\u011Fi i\xE7inde neticeye
+    varacak ve y\xFCz\xFCn bir hayli g\xFClecek De\u011Ferli {{isim}}. Telvelerin
+    resmen b\xFCy\xFCk umutlar vadediyor..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

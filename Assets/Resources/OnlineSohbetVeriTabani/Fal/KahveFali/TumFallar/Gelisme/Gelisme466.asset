@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme466
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA15792553501
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131ndaki telvelerin bir k\u0131sm\u0131, ayd\u0131nl\u0131k b\xF6lgelerden
+    ka\xE7\u0131p \xFCst \xFCste binerek, adeta anlams\u0131z tortular olu\u015Fturmu\u015F.
+    \U0001F440{{isim}}? Daha {{yas_0}} ya\u015F\u0131ndas\u0131n. Ge\xE7mi\u015F
+    y\u0131llardaki baz\u0131 anlara ait bu yo\u011Fun \xF6zlem de niye? Tutkun ve
+    \xF6zlemin her kime, neye ya da nereyeydi bilmiyorum. O g\xFCnlere yeniden kavu\u015Faca\u011F\u0131n\u0131
+    s\xF6yleyip, sana yalan da diyemem. Fakat ta\xE7 yapraklar\u0131 yeni yeni alta
+    do\u011Fru k\u0131vr\u0131lmaya ba\u015Flam\u0131\u015F zambaklar g\xF6r\xFCyorum
+    telvelerinde. \U0001F338Senin ya\u015Fam\u0131n, kesinlikle daha g\xFCzel \"ba\u015Flang\u0131\xE7lara\"
+    ve daha kal\u0131c\u0131 mutluluklara gebe. Y\xFCre\u011Fini ferah, ruhunu umut
+    ya\u011Fmurlar\u0131yla taze tut.\n\n{{isim}} burada sap\u0131, kulpu ya da k\u0131l\u0131f\u0131
+    olan bir \u015Fey g\xF6r\xFCyorum. Bu \u015Feyi sen bir s\xFCredir sat\u0131n
+    almak istiyorsun, \xE7ok belli. \U0001F642Akl\u0131n\u0131n bir kenar\u0131na
+    nas\u0131l yazd\u0131ysan, telvelerinin de en dip k\xF6\u015Fesine kaz\u0131nm\u0131\u015F.
+    \u015Eu an yeterli imkan\u0131n olmad\u0131\u011F\u0131n\u0131 dillendirmene
+    bile gerek yok, fark\u0131nday\u0131m. \xC7ok isterdim \"hediye gelece\u011Fini\"
+    s\xF6ylemek. Fakat bunu kendin alacaks\u0131n. Sa\u011F cebine ilerleyen g\xFCnlerde
+    ans\u0131z\u0131n giren bir para, bu iste\u011Fin i\xE7in sol cebinden h\u0131zl\u0131ca
+    \xE7\u0131kacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

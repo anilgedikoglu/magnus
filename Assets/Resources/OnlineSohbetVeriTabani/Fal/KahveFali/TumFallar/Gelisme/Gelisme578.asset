@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme578
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA42428041369
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn \u015Fu saate kadar halen {{kelime, afyonunun nedense hen\xFCz tam
+    olarak patlamad\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum | enerjinin ve keyfinin
+    tam olarak istedi\u011Fin d\xFCzeylere gelmedi\u011Fini g\xF6r\xFCyorum | moral
+    ve motivasyonunu tam olarak istedi\u011Fin noktalara \xE7ekemedi\u011Fini ve
+    biraz keyifsiz oldu\u011Funu g\xF6r\xFCyorum | hen\xFCz istedi\u011Fin ne\u015Feyi
+    ve dinanizmi yakalayamad\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum}} {{isim}};
+    do\u011Fru muyum? \u015Eimdi verece\u011Fim haber belki bir nebze de olsa y\xFCz\xFCn\xFC
+    g\xFCld\xFCrecektir. Fincan\u0131n\u0131n orta-alt k\u0131s\u0131mlar\u0131nda
+    bir \"da\u011F ke\xE7isi\" var, o kadar net ki! \u0130li\u015Fkilerde d\xFCzelmeye,
+    h\u0131zl\u0131 ve ciddi ad\u0131mlar atmaya i\u015Faret olan bu ke\xE7i, {{sabit_sayi,2,3}}
+    k\xFC\xE7\xFCk tepenin hemen \xF6n\xFCnde duruyor. {{ay_2}} ay\u0131n\u0131n
+    sonuna kadar g\xF6r\xFC\u015Ft\xFC\u011F\xFCn ki\u015Fiyle ilgili {{sabit_sayi,2,3}}
+    ayr\u0131 geli\u015Fme ya\u015Fayacak ve son geli\u015Fmenin ard\u0131ndan \xE7ok
+    mutlu olacaks\u0131n.\n\nFincan\u0131n\u0131n en \xFCst b\xF6l\xFCmlerindeki
+    bir \xE7izginin \xFCzerinde ise k\xFC\xE7\xFCc\xFCk gelincikler ye\u015Fermi\u015F,
+    g\xF6r\xFCyor musun? Gelincik, a\u011Fr\u0131 kesicidir. \xD6zel hayat\u0131na
+    dair dertlerin k\u0131sa zamanda giderilecek {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

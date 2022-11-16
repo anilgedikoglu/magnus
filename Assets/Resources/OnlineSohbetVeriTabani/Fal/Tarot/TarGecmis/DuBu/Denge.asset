@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Denge
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA68476367847
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 7f98a7190d80f8149bf4930cacffc2c8, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 7f98a7190d80f8149bf4930cacffc2c8, type: 3}
+  contentPhotoId: denge
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Denge\" kart\u0131n\u0131 se\xE7tin.\n\n\u0130\xE7inde
+    biriken tortulardan bahseden bu kart, ge\xE7mi\u015Fte baz\u0131 \u015Feyleri
+    es ge\xE7ti\u011Fini ifade ediyor. Yeri gelmi\u015F susmu\u015F, yeri gelmi\u015F
+    kendini geriye \xE7ekmi\u015F hatta gizlenmi\u015Fsin. S\xF6ylemediklerin, cevaplamad\u0131klar\u0131n,
+    kar\u015F\u0131 kar\u015F\u0131ya gelip hesapla\u015Fmak yerine susup ge\xE7mesine
+    izin verdiklerin olmu\u015F {{isim}}. Bu tercihlerin sayesinde kendi i\xE7 dengeni
+    yaratm\u0131\u015F, kontrols\xFCz aksiyonlar\u0131n sebep olabilece\u011Fi k\xF6t\xFC
+    sonu\xE7lardan uzak kalm\u0131\u015Fs\u0131n. Ge\xE7irdi\u011Fin s\xFCre\xE7,
+    bu karta g\xF6re s\xF6kmek \xFCzere olan \u015Fafa\u011F\u0131n hemen \xF6ncesiymi\u015F."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis denge
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

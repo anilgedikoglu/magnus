@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme701
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA72697232800
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xD6n\xFCnde {{kelime, not ka\u011F\u0131d\u0131 boyutlar\u0131nda baz\u0131
+    ka\u011F\u0131tlar\u0131n | A4 boyutlar\u0131nda bir beyaz ka\u011F\u0131d\u0131n
+    | A5 boyutlar\u0131nda bir beyaz ka\u011F\u0131d\u0131n}} a\xE7\u0131k oldu\u011Funu
+    ve d\xFC\u015F\xFCnceli \u015Fekilde birtak\u0131m notlar ald\u0131\u011F\u0131n\u0131
+    g\xF6r\xFCyorum. \u0130\u015Finle ilgili planl\u0131 bir at\u0131l\u0131m yapmak
+    \xFCzeresin {{isim}}. Yaln\u0131zca \"dikeyde\" y\xFCkselmeyi de\u011Fil, yatayda
+    da \xFCzerinde \xE7al\u0131\u015Ft\u0131\u011F\u0131n i\u015F kalemlerini art\u0131rmay\u0131
+    d\xFC\u015F\xFCn\xFCyor olmal\u0131s\u0131n. Ad\u0131nda \"{{kelime, S | N |
+    T}}\" harfi olan {{data, meslek=\xF6zel sekt\xF6r, bir ki\u015Fiden destek |
+    meslek=kendi i\u015Fini yap\u0131yor, bir kurumdan yat\u0131r\u0131m}} alacaks\u0131n.
+    Telvelerin, bu sayede {{sayi,4,8}} ay i\xE7inde sorumluluklar\u0131n\u0131n fazlala\u015Fmaya
+    ba\u015Flayaca\u011F\u0131n\u0131 ve {{yil_1}} senesinin son \xE7eyre\u011Fine
+    kadar gelirinin \xF6nemli \xF6l\xE7\xFCde artaca\u011F\u0131n\u0131 i\u015Faret
+    ediyor.\n\nSon aylarda d\xF6viz ya da T\xFCrk Liras\u0131 olarak eline hi\xE7
+    toplu para ge\xE7ti mi {{isim}}? Ge\xE7mediyse de k\u0131sa s\xFCre i\xE7inde
+    ge\xE7ecektir. Fal\u0131n, bu paray\u0131 elinde tutmak ya da de\u011Ferlendirmek
+    y\xF6n\xFCnde baz\u0131 zorluklar\u0131n oldu\u011Fundan bahsediyor. Azalmas\u0131n\u0131n
+    ya da de\u011Fer kayb\u0131n\u0131n \xF6n\xFCne ge\xE7mek i\xE7in mutlaka k\xFC\xE7\xFCk
+    ya da b\xFCy\xFCk bir yat\u0131r\u0131ma d\xF6n\xFC\u015Ft\xFCrmen gerekti\u011Fini
+    hissediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

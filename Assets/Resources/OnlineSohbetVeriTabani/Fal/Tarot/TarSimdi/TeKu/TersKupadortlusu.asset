@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKupadortlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11196208646
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: d79c37eff887d004bb44ec35111b972d, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: d79c37eff887d004bb44ec35111b972d, type: 3}
+  contentPhotoId: kupadortlusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kupa D\xF6rtl\xFCs\xFC\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nElde
+    etti\u011Fin onca \u015Feye ra\u011Fmen hayat\u0131n bo\u015F oldu\u011Funu d\xFC\u015F\xFCn\xFCyorsun.
+    Elinden geleni yapm\u0131\u015F, alaca\u011F\u0131n\u0131 alm\u0131\u015F, nefsini
+    k\xF6reltmi\u015F ve zevklerden b\u0131km\u0131\u015F gibisin. Art\u0131k daha
+    fazlas\u0131n\u0131 istemiyor, kenara \xE7ekilip insanlar\u0131n u\u011Fra\u015F
+    ve \xE7al\u0131\u015Fmalar\u0131n\u0131 izlemeyi daha uygun g\xF6r\xFCyorsun.
+    Kart\u0131n, \u015Fovu yapan de\u011Fil, izleyen ve g\xF6zlemleyen olmay\u0131
+    tercih etti\u011Fin bir d\xF6neminden bahsediyor. Belli ki senin biraz molaya
+    ihtiyac\u0131n var {{isim}}. Kendini zorlamana hi\xE7 gerek yok. Vakti geldi\u011Finde,
+    kendini yeniden hevesli ve ba\u015Far\u0131ya a\xE7 hissedeceksin. O g\xFCne
+    kadar e\u011Fer sen kendine bir hedef belirleyemiyorsan, hedeflerin sana gelmesini
+    bekleyebilirsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kupadortlusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

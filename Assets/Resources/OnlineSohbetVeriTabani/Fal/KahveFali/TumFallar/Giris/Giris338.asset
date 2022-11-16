@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris338
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA32413191155
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ho\u015Fland\u0131\u011F\u0131n {{data, cinsiyet=erkek, han\u0131mefendiyi |
+    cinsiyet=kad\u0131n, beyefendiyi | cinsiyet=lgbt, insan\u0131}} temsil etti\u011Fini
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCm bir \"tiran\" fig\xFCr\xFC, zihnini temsil eden
+    geni\u015F kara par\xE7alar\u0131n\u0131n \xFCzerinde belirmi\u015F. \u270AMuhakeme
+    yetini adeta devre d\u0131\u015F\u0131 b\u0131rakt\u0131\u011F\u0131n\u0131 i\u015Faret
+    eden bu fig\xFCr, kalbinin ve zihninin a\xE7\u0131k alanlar\u0131na ak\u0131l
+    g\xFCc\xFCnle kar\u015F\u0131l\u0131k veremedi\u011Fin m\u0131zraklar savuruyor.
+    \U0001F636\xD6zetle ve kaba tabirle; birine abay\u0131 yakm\u0131\u015Fs\u0131n
+    {{isim}} sen! Bu yans\u0131malar\u0131n devam\u0131nda, akrebi {{sabit_sayi,5,7}}
+    y\xF6n\xFCn\xFC g\xF6steren bir saat belirmi\u015F. G\xFC\xE7l\xFC bir ak\u0131nt\u0131
+    misali seni etkisi alt\u0131na alan hislerinin, bundan {{sabit_sayi,5,7}} {{kelime,
+    g\xFCn | hafta}} sonra ya\u015Fayaca\u011F\u0131n olumlu bir geli\u015Fme sonras\u0131
+    durulmaya y\xFCz tuttu\u011Funu g\xF6r\xFCyorum. \u2693Zira o vakte kadar zihnini
+    esir alan \"tiran\" fig\xFCr\xFCyle bulu\u015Fmaya devam edecek ve hislerinden
+    dem vuracaks\u0131n\u0131z."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

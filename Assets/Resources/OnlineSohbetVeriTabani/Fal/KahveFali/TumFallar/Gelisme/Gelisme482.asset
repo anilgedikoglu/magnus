@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme482
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA58953926680
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{isim}} fincan\u0131nda, taban k\u0131sm\u0131na yak\u0131n ve \xE7ok net bir
+    yans\u0131ma g\xF6r\xFCyorum. Karn\u0131 \u015Fi\u015F gibi duran bir kad\u0131n
+    var ve yan\u0131ndaki erkek \u015Fefkatle bu ki\u015Finin karn\u0131na dokunuyor.
+    San\u0131r\u0131m bu han\u0131mefendi hamile! \U0001F47C {{sayi,2,4}} ay i\xE7erisinde
+    aile fertlerinden ya da akrabalar\u0131ndan bir han\u0131mefendinin gebelik haberini
+    alacak, bu duruma \xE7ok sevineceksin. Bu durumun ani geli\u015Fece\u011Fini
+    ve onlara da s\xFCrpriz olaca\u011F\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorum. Fincanda,
+    bebe\u011Fin cinsiyeti hakk\u0131nda da bir ipucu var; {{kelime, san\u0131yorum
+    erkek | tahminimce k\u0131z}} olacak.\n\n\xDCstte bahsetti\u011Fim g\xF6rsellerin
+    hemen yan\u0131nda ise, {{kelime, 50'li ya\u015Flarda | 60'l\u0131 ya\u015Flarda
+    | 70'li ya\u015Flarda}} ve geni\u015F basenlere sahip bir han\u0131mefendinin,
+    b\xFCy\xFCk bir kazan\u0131n ba\u015F\u0131nda, kep\xE7eyle kar\u0131\u015Ft\u0131rarak
+    bir \u015Feyler kaynatt\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum. \U0001F963Bu
+    kaynayan kazan, ba\u015F\u0131ndaki han\u0131mefendinin seninle ilgili bir iste\u011Fini
+    temsil ediyor {{isim}}. Sonuca varmam\u0131\u015F bir i\u015Finle ilgili s\xFCre\xE7
+    devam ediyor gibi. Bu i\u015F hay\u0131rla neticelenecek ve bu han\u0131mefendinin
+    senin i\xE7in etti\u011Fi dualar ger\xE7ek olacak. Ancak bunun bir vakti oldu\u011Funu
+    belirtmek isterim. Telvelerinde g\xF6rd\xFC\u011F\xFCm {{sabit_sayi,2,4}} b\xFCy\xFCk
+    dal\u0131 olan a\u011Fa\xE7, bu i\u015F i\xE7in {{sabit_sayi,2,4}} vakti i\u015Faret
+    ediyor. \U0001F334 {{sabit_sayi,2,4}} ay m\u0131, {{sabit_sayi,2,4}} y\u0131l
+    m\u0131, onu zaman g\xF6sterecek..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

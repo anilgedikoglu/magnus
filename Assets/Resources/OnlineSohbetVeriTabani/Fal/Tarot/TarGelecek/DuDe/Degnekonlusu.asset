@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekonlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA71962852468
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 59ac37f26aaa8c640a19e0639a9db374, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 59ac37f26aaa8c640a19e0639a9db374, type: 3}
+  contentPhotoId: asaonlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek Onlusu\" kart\u0131n\u0131 se\xE7tin.\n\nKap\u0131lar\u0131n\u0131
+    kapatt\u0131\u011F\u0131nda, t\xFCm s\u0131k\u0131nt\u0131lar\u0131n\u0131 kap\u0131n\u0131n
+    ard\u0131nda b\u0131rakacaks\u0131n. Sorunlar\u0131 k\xF6kl\xFC \u015Fekilde
+    \xE7\xF6zmek i\xE7in ciddi giri\u015Fimlerin olaca\u011F\u0131n\u0131 g\xF6r\xFCyorum.
+    Kart\u0131n, t\xFCm sorumluluklar\u0131n\u0131 kucaklayarak zirveye varmak i\xE7in
+    elinden geleni yapaca\u011F\u0131n\u0131 s\xF6yl\xFCyor {{isim}}. \u015Eimdiye
+    kadar ortaya koydu\u011Fun t\xFCm eforun g\xFCzel neticelerini almana ramak kalm\u0131\u015F.
+    Ger\xE7ekten s\u0131n\u0131rlar\u0131n\u0131 zorluyorsun ve kendini a\u015F\u0131yorsun.
+    \xDCzerinde bir miktar bask\u0131 da hissedece\u011Fini g\xF6r\xFCyorum. Buna
+    ald\u0131rmadan ilerleeceksin. Kapasiten her t\xFCrl\xFC stresle ba\u015Fa \xE7\u0131kabilecek
+    kadar geni\u015F. Hayata kar\u015F\u0131 direni\u015Fin zaferle sonu\xE7lanacak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asaonlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

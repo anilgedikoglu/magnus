@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris259
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA87670463007
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n \xFCst \xE7eperlerine telveler sa\xE7\u0131lm\u0131\u015F.
+    Adeta ya\u011F\u0131\u015Fl\u0131 bir g\xFCnde \xE7evreye yay\u0131lan minik
+    dolu tanelerini and\u0131r\u0131yorlar. Yaln\u0131zl\u0131\u011F\u0131n sert
+    ve sars\u0131c\u0131 iklimi, seni huzursuz etmeye ba\u015Flam\u0131\u015F gibi
+    g\xF6r\xFCn\xFCyor {{isim}}. Payla\u015Fmak isteyip de payla\u015Famad\u0131klar\u0131n
+    var. Ailene ve yak\u0131n arkada\u015Flar\u0131na a\xE7amad\u0131\u011F\u0131n
+    gizli d\xFC\u015F\xFCncelerini dahi bilen, her \u015Feye birlikte \u015Fahit
+    olabilece\u011Fin, tabiri yerindeyse bir \"su\xE7 orta\u011F\u0131\" istiyor
+    gibisin. {{burc}} burcu oldu\u011Fun i\xE7in, i\xE7inde bulundu\u011Fumuz {{ay_0}}
+    ay\u0131 do\u011Fru ki\u015Finin burcuyla \"kavu\u015Fum\" ad\u0131na uygun g\xF6z\xFCkm\xFCyor.
+    {{ay_+1}} ay\u0131nda g\xF6k a\xE7\u0131lacak ve o ki\u015Finin \u0131\u015F\u0131\u011F\u0131n\u0131
+    fark etmeye ba\u015Flayacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

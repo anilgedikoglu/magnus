@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme554
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA26020628938
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{isim}} yaa, sen ho\u015Fland\u0131\u011F\u0131n ki\u015Fiyi \xE7ok i\xE7ten,
+    \xE7ok naif diliyorsun san\u0131r\u0131m. Fincan\u0131n\u0131n orta k\u0131sm\u0131nda,
+    i\xE7inde tek bir papatya bulunan geni\u015F\xE7e bir vazo var. Telveler siyah
+    da olsa, analizim papatyan\u0131n sar\u0131 oldu\u011Funu s\xF6yl\xFCyor. \U0001F3F5\uFE0FSevme
+    kabiliyeti \xE7ok y\xFCksek, \xE7ok \"g\xF6nl\xFC geni\u015F\" birisin sen. Ona
+    ra\u011Fmen pek kimseye dillendirmeden, usul usul ho\u015Flan\u0131yorsun bu
+    k\u0131zdan... \u0130\xE7inde kopan f\u0131rt\u0131nalardan dolay\u0131, cereyan
+    yap\u0131p \xE7arpmas\u0131nlar diye g\xF6nl\xFCn\xFCn kap\u0131 ve pencerelerini
+    kapatm\u0131\u015Fs\u0131n sanki.\n\nSenin gibi bir adam\u0131n y\xFCz \xFCst\xFC
+    b\u0131rak\u0131lmayaca\u011F\u0131 belli bro; al i\u015Fte! \U0001F928G\xF6zlerinin
+    \xFCst\xFCnde adeta s\xFCrmeleri olan, k\u0131nal\u0131 bir keklik yakla\u015F\u0131yor
+    hanene do\u011Fru. Bu k\u0131z sana ba\u015Fta \xFCmit vermeyecek ve att\u0131\u011F\u0131n
+    ad\u0131mlara yan\u0131tlar alamayacaks\u0131n. Fakat sonras\u0131nda, birden
+    bire yelkenleri suya indirip, bu keklik gibi h\u0131zla yak\u0131nla\u015Facak
+    sana. \xDCrk\xFCyor, korkuyor ve insanlar\u0131 tan\u0131ma konusunda acele etmiyor.
+    K\u0131nas\u0131 ise onun bir g\xF6n\xFCl yaras\u0131n\u0131 i\u015Faret ediyor.
+    Sen ona \xE7ok iyi geleceksin {{isim}}..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersAzize
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA44540031054
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: dff6a8034c03e4741aba6818e44d27b4, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: dff6a8034c03e4741aba6818e44d27b4, type: 3}
+  contentPhotoId: Azize-Ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Azize\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nBir
+    kad\u0131n\u0131n etkisiyle ya da kad\u0131n\u0131n kar\u015F\u0131s\u0131nda
+    y\xF6n\xFCn\xFC kaybetti\u011Fini g\xF6r\xFCyorum. Bu kad\u0131n hayat\u0131nda
+    pek \xE7ok belirsizlik ve karma\u015Faya neden olmu\u015F. Ne tarafa ilerlemen
+    gerekti\u011Fini uzun bir s\xFCre kestirememi\u015F, nereye s\xFCr\xFCklendi\u011Fini
+    ise hi\xE7 anlamam\u0131\u015Fs\u0131n {{isim}}. Tutunacak bir dal bulamad\u0131\u011F\u0131n
+    gibi, insanlar taraf\u0131ndan da do\u011Fru y\xF6nlendirilmemi\u015Fsin. Seni
+    idare eden ve t\xFCm bu kaosa yol a\xE7an \u015Feyin \"duygular\u0131n\" oldu\u011Funu
+    anlad\u0131\u011F\u0131nda ise biraz ge\xE7 olmu\u015F. Neyse ki b\xFCy\xFCk
+    zarar\u0131n kenar\u0131ndan d\xF6nmeyi ba\u015Farm\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis azize ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

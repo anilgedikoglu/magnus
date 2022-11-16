@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Ay
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA19409957045
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 6b90e1a40f2d6ac409f65a1fc416af16, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 6b90e1a40f2d6ac409f65a1fc416af16, type: 3}
+  contentPhotoId: ay
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Ay\" kart\u0131n\u0131 se\xE7tin.\n\nSenin i\xE7in beklenen
+    an geliyor. Karamsarl\u0131\u011F\u0131n\u0131n ayyuka \xE7\u0131kt\u0131\u011F\u0131
+    bir noktada korkular\u0131nla y\xFCzle\u015Feceksin {{isim}}. Muhakkak gerekli
+    oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu y\xFCzle\u015Fme sayesinde,
+    hayat\u0131nda \xF6nemli de\u011Fi\u015Fimler ba\u015Flayacak. Ben olumlu olaca\u011F\u0131n\u0131
+    ve sende huzursuzluk yaratan karanl\u0131klardan s\u0131yr\u0131lmaya ba\u015Flayaca\u011F\u0131n\u0131
+    g\xF6r\xFCyorum. Mali a\xE7\u0131dan ya da insan ili\u015Fkilerinde kendini g\xFCvensiz
+    hissediyorsan, \xF6n\xFCne kafandakileri garantileyece\u011Fin f\u0131rsatlar\u0131n
+    \xE7\u0131kaca\u011F\u0131n\u0131 da \u015Fimdiden bilmeni isterim. Senin yapman
+    gereken tek bir \u015Fey var: hayalperest davranmaktansa zorluklarla y\xFCz y\xFCze
+    gelmeye cesaret et."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek ay
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

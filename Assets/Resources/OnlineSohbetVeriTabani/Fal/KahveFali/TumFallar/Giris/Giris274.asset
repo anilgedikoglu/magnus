@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris274
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA66512265215
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Kabu\u011Fu k\u0131r\u0131lm\u0131\u015F {{sabit_sayi,2,5}} yumurta var fincan\u0131nda.
+    Yakla\u015F\u0131k {{sabit_sayi,2,5}} {{kelime, ay | y\u0131l}} kadar \xF6nce
+    bir \u015Fey planlam\u0131\u015F ve {{kelime, aksilikler y\xFCz\xFCnden | i\u015Flerin
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCn gibi gitmemesi y\xFCz\xFCnden | aniden ortaya
+    \xE7\u0131kan baz\u0131 maddi s\u0131k\u0131nt\u0131lar y\xFCz\xFCnden | yapmak
+    zorunda oldu\u011Fun baz\u0131 plan de\u011Fi\u015Fiklikleri y\xFCz\xFCnden}}
+    ger\xE7ekle\u015Ftirememi\u015Fsin. Bu yumurtalar, yak\u0131nda senin i\xE7in
+    faydaya d\xF6n\xFC\u015Fecek De\u011Ferli {{isim}}. {{sabit_sayi,2,5}} hafta
+    gibi bir zaman dilimi i\xE7erisinde, {{kelime, 30'lu | 40'l\u0131 | 50'li}} ya\u015Flar\u0131nda,
+    {{kelime, kamu \xE7al\u0131\u015Fan\u0131 olan | \xF6zel sekt\xF6rde \xE7al\u0131\u015Fan}}
+    bir tan\u0131d\u0131\u011F\u0131n vas\u0131tas\u0131yla, bu plan\u0131n\u0131
+    katmerli bir \u015Fekilde hayata ge\xE7irme f\u0131rsat\u0131 yakalayacaks\u0131n.\n                                           
+    \n                                            "
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

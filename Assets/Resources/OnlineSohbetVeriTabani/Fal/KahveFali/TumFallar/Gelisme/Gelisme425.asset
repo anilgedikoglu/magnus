@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme425
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA67474683135
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Hem \xF6n\xFC hem de ard\u0131 kapal\u0131 bir \xE7ukurda, zorluk i\xE7erisinde
+    ve \xE7aresiz kalm\u0131\u015F, senin gibi {{yas_0}}-{{yas_+1}} ya\u015Flar\u0131nda
+    birini g\xF6r\xFCyorum {{isim}}. Bu \u015Fahs\u0131n ba\u015F\u0131n\u0131n \xFCzerinin
+    ayd\u0131nl\u0131k olu\u015Fu, s\u0131k\u0131nt\u0131n\u0131n manevi de\u011Fil,
+    maddi oldu\u011Funu i\u015Faret ediyor. Ad\u0131nda, senin soyisminin ikinci
+    harfi olan {{soyisimiki}} harfini ta\u015F\u0131d\u0131\u011F\u0131n\u0131 g\xF6rd\xFC\u011F\xFCm
+    {{rastgeleburc}} burcu bu ki\u015Fi, \xF6n\xFCm\xFCzdeki {{sayi,1,4}} hafta i\xE7erisinde
+    senden yard\u0131m isteyecek. S\u0131k\u0131nt\u0131s\u0131n\u0131n \xE7\xF6z\xFCm\xFCne
+    arac\u0131l\u0131k ettikten sonra, senin de maddi imkanlar\u0131nda \xE7ok h\u0131zl\u0131
+    ve kayda de\u011Fer bir bolluk zuhur edecek.\n\nFincan\u0131nda, seramik oldu\u011Funu
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCm el i\u015Fi bir vazo g\xF6z\xFCme \xE7arpt\u0131
+    {{isim}}. Bu vazo, pahaca a\u011F\u0131rl\u0131\u011F\u0131, y\xFCk\xE7e hafifli\u011Fi
+    sembolize ediyor. {{sayi,2,3}} ay i\xE7erisinde bir \"ta\u015F\u0131nmaz\" maldan
+    k\xFC\xE7\xFCk, cebe s\u0131\u011Fmayacak kadar da b\xFCy\xFCk ve de\u011Ferli
+    bir \u015Fey sat\u0131n alacaks\u0131n. Bu al\u0131\u015Fveri\u015F i\xE7in bor\xE7
+    alabilir ya da kredi \xE7ekebilirsiniz {{isim}}. En \xF6nemli konu ise, alaca\u011F\u0131n
+    bu \u015Feyin, k\u0131sa bir vade i\xE7erisinde neredeyse iki kat\u0131 kadar
+    de\u011Ferlenece\u011Fi..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 22
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

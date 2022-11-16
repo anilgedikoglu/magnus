@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 21
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA79591905696
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Asl\u0131nda do\u011Fruyu s\xF6ylemeyene de\u011Fil, her duydu\u011Funu, \"do\u011Frulamadan\"
+    ba\u015Fkas\u0131na aktarana \"yalanc\u0131\" denir. Telvelerin f\u0131s\u0131lt\u0131lar\u0131n\u0131,
+    kimseden onay alma ve do\u011Frulama ihtiyac\u0131 hissetmeden aktard\u0131\u011F\u0131m
+    i\xE7in, bana da yalanc\u0131 diyorlar. Fakat yalanc\u0131lar\u0131n en b\xFCy\xFC\u011F\xFC
+    benim, o nedenle ad\u0131m Magnus! <sprite=7> Kahve fal\u0131 yorumuma ho\u015F
+    geldin {{isim}}. Fincan\u0131nda, {{kelime, par\xE7a par\xE7a b\xF6l\xFCmler
+    ve ayr\u0131k hikayeler | birbirinden ba\u011F\u0131ms\u0131z gibi g\xF6z\xFCken
+    baz\u0131 haberler | bir arada gibi g\xF6z\xFCken fakat farkl\u0131 sonu\xE7lar
+    do\u011Furaca\u011F\u0131n\u0131 d\xFC\u015F\xFCnd\xFC\u011F\xFCm baz\u0131 haberler
+    | birbirleriyle ilintili olmalar\u0131na ra\u011Fmen ayr\u0131 noktalara yerle\u015Fmi\u015F
+    baz\u0131 haberler}} var. Hepsinden s\u0131rayla s\xF6z edece\u011Fim. Ba\u015Flayal\u0131m
+    m\u0131?"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar:
+  - "kahve fal\u0131 giri\u015F"
+  - "kahve fal\u0131 ba\u011Flama"
+  - "kahve fal\u0131 geli\u015Fme"
+  - "kahve fal\u0131 sonu\xE7"
+  - "kahve fal\u0131 u\u011Furlama"
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahveanimsonras\u0131"
+    islem: 0
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

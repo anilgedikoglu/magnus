@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekdortlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA17196660007
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 022c4371a26cdb0448af699151d6fc62, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 022c4371a26cdb0448af699151d6fc62, type: 3}
+  contentPhotoId: asadortlusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek D\xF6rtl\xFCs\xFC\" kart\u0131n\u0131 se\xE7tin
+    {{isim}}.\n\nBu kart\u0131 ne zaman g\xF6rsem, k\xFCrs\xFCye \xE7\u0131k\u0131p
+    \xF6d\xFCl\xFCn\xFC alan insanlar gelir akl\u0131ma. Alt\u0131n kelebek gibi.
+    Bir konu\u015Fma yapar, alk\u0131\u015Flan\u0131rs\u0131n. Takdir edilirsin.
+    Bu elbette bir gayretin ya da baz\u0131 se\xE7imlerin sonucuyla ger\xE7ekle\u015Fir.
+    Senin ya\u015Fam\u0131nda da b\xF6yle bir kutlama zaman\u0131 gelecek {{isim}}.
+    Bir ba\u015Far\u0131 ve k\u0131van\xE7 s\xF6z konusu olacak. Seni uzaktan tan\u0131yanlar
+    dahi, \"{{isim}} {{soyisim}} \u015Funu \u015Funu yapm\u0131\u015F, b\xF6yle b\xF6yle
+    bir olay\u0131 var\" diyecekler. Hayat\u0131nda eksik kalan belki de en \xF6nemli
+    konu da b\xF6ylece tamamlanm\u0131\u015F olacak. Art\u0131k kaderinden beklentin
+    karma\u015Fa de\u011Fil istikrar olsun. G\xFCzel g\xFCnler geliyor..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asadortlusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

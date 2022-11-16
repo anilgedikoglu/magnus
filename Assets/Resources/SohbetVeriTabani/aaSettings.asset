@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132453796dd718e41a6d29f544a549e8, type: 3}
+  m_Name: aaSettings
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4113132244403611224, guid: 8c693763fdcc6dd4181408b95bbf69cb, type: 3}
+  mod: aa oyun
+  basariModu: aa basari tutturma
+  basariModuSayisi: 20
+  basariModuMax: aa basari tutturma max
+  basarisizlikModu: aa basarisiz
+  cikisModu: aa cikis
+  oyunSonuModu: aa oyun son

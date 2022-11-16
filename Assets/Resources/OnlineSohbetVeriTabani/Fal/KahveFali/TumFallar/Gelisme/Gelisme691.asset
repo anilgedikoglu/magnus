@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme691
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA80904221189
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Akl\u0131na zaman zaman sa\u011Fl\u0131\u011F\u0131na dair baz\u0131 d\xFC\u015F\xFCnceler
+    geliyor gibi g\xF6z\xFCk\xFCyor. Telvelerin, bu d\xFC\u015F\xFCnceleri bazen
+    birer \"fikre\" d\xF6n\xFC\u015Ft\xFCrerek zihninin bir k\xF6\u015Fesine not
+    etti\u011Fini s\xF6yl\xFCyor. Bu fikirleri yak\u0131nda kendinden \"yeni biri\"
+    in\u015Fa ederken kullanacaks\u0131n {{isim}}. \u015Eu s\u0131ralar bir bekleyi\u015Ftesin.
+    \xC7evrendeki insanlar ve maddiyata dayal\u0131 baz\u0131 sorunlar ruhunu yoruyor.
+    Bedeni harekete ge\xE7irenin ruh oldu\u011Fu ise senin i\xE7in a\u015Fikar. Enerji
+    buldu\u011Fun ilk f\u0131rsatta bu k\u0131s\u0131r d\xF6ng\xFCy\xFC k\u0131racaks\u0131n.\n\nFincan
+    foto\u011Fraflar\u0131ndan birinin orta-alt k\u0131sm\u0131nda, saat {{sayi,11,14}}
+    y\xF6n\xFCnde koza i\xE7erisinde bir t\u0131rt\u0131l belirmi\u015F. Kelebe\u011Fe
+    d\xF6n\xFC\u015Fmek ve daha iyiye \"evrilmek\" i\xE7in zamana ihtiya\xE7 oldu\u011Funu
+    i\u015Faret ediyor. {{sayi,6,11}} {{kelime, ay | hafta}} sonra dinlenmek, rahatlamak,
+    gev\u015Femek ve yeniden yap\u0131lanmak i\xE7in g\xFCzel bir f\u0131rsat bulacaks\u0131n.
+    {{kelime, S\u0131k\u0131nt\u0131lar\u0131n | A\u011Fr\u0131lar\u0131n | Halsizli\u011Fin
+    | Yorgunlu\u011Fun | Bitkinli\u011Fin}} azalacak {{isim}}. Alaca\u011F\u0131n
+    baz\u0131 g\xFCzel haberlerin de ayn\u0131 zaman dilimine denk gelmesiyle, kendini
+    \xE7ok daha iyi hissedece\u011Fini d\xFC\u015F\xFCn\xFCyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

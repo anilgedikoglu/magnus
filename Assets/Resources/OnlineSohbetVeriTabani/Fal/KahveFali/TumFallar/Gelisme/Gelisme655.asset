@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme655
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA96259415347
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n orta k\u0131s\u0131mlar\u0131nda kalan bir k\u0131s\u0131m telveler
+    olduk\xE7a dikkat \xE7ekici. Burada i\xE7 i\xE7e ge\xE7mi\u015F, Arap\xE7a \"elif
+    ve vav\" harflerini g\xF6r\xFCyorum. \"Kainat\u0131n anahtar\u0131\" niteli\u011Findeki
+    bu sembol, ilerleyen g\xFCnlerde \xE7ok \xF6nemli bir i\u015Finde Allah'\u0131n
+    {{kelime, sana Er-Rahman ismiyle merhamet edece\u011Fini ve zor bir y\xFCk\xFCn\xFC
+    omuzlar\u0131ndan kald\u0131raca\u011F\u0131n\u0131 | sana Er-Rahim ismiyle l\xFCtuf
+    ve ihsanda bulunaca\u011F\u0131n\u0131, bu s\u0131k\u0131\u015F\u0131k zamanlarda
+    r\u0131zk\u0131n\u0131 art\u0131raca\u011F\u0131n\u0131 | sana Es-Selam ismiyle
+    g\xF6z kulak olaca\u011F\u0131n\u0131, seni tehlikelerden koruyaca\u011F\u0131n\u0131,
+    u\u011Fursuz insanlar\u0131 hayat\u0131ndan defederek seni huzura \xE7\u0131karaca\u011F\u0131n\u0131
+    | seni El-M\xFCheymin ismiyle g\xF6zetece\u011Fini, haks\u0131zl\u0131k etmeye
+    \xE7al\u0131\u015Fan birilerine kar\u015F\u0131 seni \xFCst\xFCn k\u0131laca\u011F\u0131n\u0131
+    | El-Hal\u0131k ismiyle senin i\xE7in bir \u015Feyi yoktan var edece\u011Fini
+    ve \"imkans\u0131z\" diye d\xFC\u015F\xFCnd\xFC\u011F\xFCn bir dile\u011Fini
+    ger\xE7ekle\u015Ftirece\u011Fini | El-Kahhar ismiyle rekabete giri\u015Fti\u011Fin
+    bir insana kar\u015F\u0131 seni galip k\u0131laca\u011F\u0131n\u0131 | El-Fettah
+    ismiyle bir m\xFC\u015Fk\xFCl\xFCn\xFC giderece\u011Fini, darda oldu\u011Fun
+    bir konuyu h\u0131zla \xE7\xF6zece\u011Fini | El-Bas\u0131t ismiyle seni \xE7ok
+    bunaltan bir i\u015Fini rahatlataca\u011F\u0131n\u0131 ve y\xFCre\u011Fini geni\u015Fletece\u011Fini
+    | Er-Rafi ismiyle insanlar\u0131n g\xF6z\xFCndeki dereceni y\xFCkseltece\u011Fini,
+    rakiplerine kar\u015F\u0131 seni \xFCst\xFCn k\u0131laca\u011F\u0131n\u0131 |
+    Es-Semi ismiyle g\xF6n\xFClden yapaca\u011F\u0131n bir duay\u0131 i\u015Fitece\u011Fini
+    ve bu duaya kar\u015F\u0131l\u0131k verece\u011Fini | El-M\xFCntekim ismiyle
+    kalbini derinden yaralam\u0131\u015F birinden intikam alman\u0131 nasip edece\u011Fini
+    | El-Vekil ismiyle kendisine tevekk\xFCl etti\u011Fin bir i\u015Finde sana mutlaka
+    yard\u0131m edece\u011Fini ve seni en g\xFCzel sonuca ula\u015Ft\u0131raca\u011F\u0131n\u0131}}
+    i\u015Faret ediyor {{isim}}.\n\nFal\u0131nda bir de \"\u015Fakay\u0131k\" bitkisi
+    g\xF6r\xFCyorum. Bu bitki, \xE7ok de\u011Fer verdi\u011Fin fakat seninle ilgili
+    fikirlerini pek bilmedi\u011Fin birinin, ilerleyen g\xFCnlerde sana iltifatlarda
+    bulunaca\u011F\u0131n\u0131n i\u015Fareti. Bunlar\u0131 duydu\u011Funda, ona
+    bir \u015Fey s\xF6ylemeye ya da ondan bir \u015Fey istemeye cesaret edebilecek,
+    olumlu kar\u015F\u0131lanacaks\u0131n {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: EsinlearandaBanahaksizlikediyor
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA42944171839
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Haks\u0131zl\u0131\u011Fa u\u011Frad\u0131\u011F\u0131n\u0131 d\xFC\u015F\xFCnmekte
+    \xE7ok hakl\u0131s\u0131n {{isim}}. Ortaya muazzam bir sevgi ve emek koymu\u015Fsun.
+    Kar\u015F\u0131l\u0131\u011F\u0131n\u0131 en alman gereken d\xF6nemlerde, e\u015Finin
+    sana kar\u015F\u0131 niyet okuyuculu\u011Fu yapt\u0131\u011F\u0131n\u0131 ve
+    suizanda bulundu\u011Funu g\xF6r\xFCyorum. Seni \xE7ok farkl\u0131 alg\u0131l\u0131yor
+    ve ger\xE7ek niyetini bilmiyormu\u015F gibi tepkiler veriyor. Baz\u0131 d\u0131\u015F
+    etmenlerden kurtuldu\u011Funuzda ve birtak\u0131m imkanlar\u0131n\u0131z iyile\u015Fti\u011Finde,
+    bu durum ortadan kalkacak K\u0131ymetli {{isim}}."
+  - "Ekti\u011Fini bi\xE7medi\u011Fini g\xF6r\xFCyorum. Hatta e\u015Finin bir s\xFCredir
+    \"f\u0131rt\u0131na bi\xE7mek istercesine\" r\xFCzgar ekti\u011Fi kanaatindeyim.
+    \xDC\xE7\xFCnc\xFC \u015Fah\u0131slar\u0131n eylem ve s\xF6ylemleri onu \xE7ok
+    etkiliyor. Tetiklendi\u011Fi konular \xFCst \xFCste gelmi\u015F gibi g\xF6z\xFCk\xFCyor.
+    Bu da seni incitmesine sebep oluyor {{isim}}. Kendini savunmak ve onunla sava\u015Fmak
+    yerine onu \"k\xF6t\xFCl\xFCkte de\u011Fil de iyilikte yar\u0131\u015Fmaya\"
+    davet edersen, sorununuz h\u0131zla d\xFCzelecek."
+  - "Su\xE7land\u0131\u011F\u0131n\u0131 ve incindi\u011Fini g\xF6r\xFCyorum {{isim}};
+    hem de \xE7ok fazla. \u015Eu {{saat, sabah saatinde | \xF6\u011Flen \xFCzeri
+    | \xF6\u011Fleden sonra | ak\u015Fam saatinde | gece vakti}} halen i\xE7inde
+    bir huzursuzluk varsa, sebebi ilk ba\u015Fta e\u015Fin. Fakat \u015Funa emin
+    ol, kas\u0131tl\u0131 ve bile isteye yapm\u0131yor. Kafas\u0131nda halletmesi
+    gereken {{sayi, 2, 3}} \xF6nemli problem g\xF6r\xFCyorum. Onlar halloldu\u011Funda,
+    sana kar\u015F\u0131 daha \u0131l\u0131ml\u0131 bir hale gelecek. "
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler: []
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

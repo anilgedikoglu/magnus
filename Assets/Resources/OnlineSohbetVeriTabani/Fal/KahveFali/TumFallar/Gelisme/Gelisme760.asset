@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme760
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA48402633209
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Seni devasa bir g\xF6lde, k\xFC\xE7\xFCk bir sal\u0131n i\xE7erisinde g\xFCvenle
+    ilerlerken g\xF6r\xFCyorum {{isim}}. K\u0131y\u0131da ise seni g\xF6zetleyen,
+    elindeki kep\xE7eyle g\xF6l\xFC kar\u0131\u015Ft\u0131rarak dalga yarat\u0131p
+    huzurunu ka\xE7\u0131rmaya \xE7al\u0131\u015Fan bir {{data, cinsiyet=erkek, adam
+    | cinsiyet=kad\u0131n, kad\u0131n | cinsiyet=lgbt, insan}} var. Bu insan\u0131n
+    arkas\u0131nda ise, ona destek veren ve e\u015Fi oldu\u011Funu hissetti\u011Fim
+    bir {{data, cinsiyet=erkek, kad\u0131n | cinsiyet=kad\u0131n, adam | cinsiyet=lgbt,
+    ki\u015Fi}}, {{kelime, bir | iki}} de {{kelime, \xE7ocuk | yak\u0131n\u0131 |
+    akrabas\u0131 | k\u0131z karde\u015Fi | erkek karde\u015Fi | ablas\u0131 | abisi}}
+    belirmi\u015F. Bu insanlar ya senin varaca\u011F\u0131n rotay\u0131 k\u0131skan\u0131yor,
+    ya da senin sahip olmak \xFCzere oldu\u011Fun bir {{kelime, mala | m\xFClke |
+    konuta | ta\u015F\u0131nmaza}} g\xF6z dikmi\u015F durumdalar. {{ay_3}} ay\u0131nda
+    devreye girecek {{kelime, d\u0131\u015Far\u0131dan birinin | bir akraban\u0131n}}
+    etkisi ve yard\u0131mlar\u0131yla, {{ay_6}} ay\u0131na varmadan tamamen saf d\u0131\u015F\u0131
+    kalacak ve emellerine ula\u015Famayacaklar.\n\n\xD6te yandan, k\xFC\xE7\xFCk
+    bir paket var fincan\u0131nda. Neredeyse avu\xE7 i\xE7ine ya da bir \xE7antaya
+    s\u0131\u011Fabilecek olan bu paketin, e\u015Finin son zamanlarda istedi\u011Fi
+    bir \u015Feyle ba\u011Flant\u0131s\u0131 oldu\u011Funu d\xFC\u015F\xFCn\xFCyorum.
+    Acaba bir \u015Feyin anahtar\u0131 m\u0131?... Bu paket, {{sayi,3,6}} ay i\xE7inde
+    eline ge\xE7ecek {{isim}}. Fakat ilintili oldu\u011Fu as\u0131l \u015Feye {{sayi,7,15}}
+    ay kadar sonra sahip olabileceksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

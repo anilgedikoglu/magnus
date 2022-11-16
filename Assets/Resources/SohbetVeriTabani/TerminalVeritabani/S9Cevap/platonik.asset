@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: platonik
+  m_EditorClassIdentifier: 
+  etiket: S9Cevap
+  aciklama:
+  - "Demek hen\xFCz ho\u015Fland\u0131\u011F\u0131n {{data, cinsiyet=kad\u0131n,
+    beyefendiyle | cinsiyet=erkek, han\u0131mefendiyle | cinsiyet=lgbt, insanla}}
+    hislerinizi masaya a\xE7\u0131k\xE7a d\xF6k\xFCp, birbirinizin elini tutmad\u0131n\u0131z...
+    Bunun \xFCzerinde dural\u0131m seninle {{isim}}."
+  - "Bana u\u011Fray\u0131p \"ili\u015Fkisi var\" se\xE7ece\u011Fin g\xFCnler de
+    gelecek... <sprite=7>"
+  - "Bak \u015Fimdi, merak ettim! Acaba ho\u015Fland\u0131\u011F\u0131n ki\u015Fi
+    de Magnus kullan\u0131yor mudur? Kim acaba... <sprite=10>"
+  aranacakEtiket: son
+  gerekenDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

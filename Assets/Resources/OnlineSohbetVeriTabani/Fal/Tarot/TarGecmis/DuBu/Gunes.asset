@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gunes
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA46653428552
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: cf0afbfbfabfdb645af9d6448620c021, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: cf0afbfbfabfdb645af9d6448620c021, type: 3}
+  contentPhotoId: gunes
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"G\xFCne\u015F\" kart\u0131n\u0131 se\xE7tin.\n\nHarika
+    bir kartla kar\u015F\u0131 kar\u015F\u0131yay\u0131z. Ayd\u0131nl\u0131k yar\u0131nlar\u0131n\u0131n
+    temelini sen ge\xE7mi\u015Fte \xE7oktan atm\u0131\u015Fs\u0131n {{isim}}. Seni
+    karanl\u0131\u011Fa s\xFCr\xFCkleyebilecek t\xFCm k\xF6t\xFCc\xFCl ihtimalleri
+    ortadan kald\u0131rm\u0131\u015F, sana ba\u015Far\u0131, sa\u011Fl\u0131k, huzur
+    ve mutluluk getirecek en do\u011Fru yola daha en ba\u015F\u0131ndan girmi\u015Fsin.
+    Pozitif d\xFC\u015F\xFCnmeyi ve \u015F\xFCkretmeyi asla ihmal etmemi\u015F, insanlar
+    taraf\u0131ndan da bu y\xF6nlerinle hep takdir g\xF6rm\xFC\u015Fs\xFCn. S\u0131cak,
+    i\xE7ten ve samimi y\xF6nlerinle \xE7evrene de her zaman ne\u015Fe sa\xE7t\u0131\u011F\u0131n\u0131
+    g\xF6r\xFCyorum. Hayallerinin ger\xE7ekle\u015Fece\u011Fi g\xFCnlere bu denli
+    yak\u0131n olmay\u0131 sen \xE7oktan hak etmi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis gunes
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

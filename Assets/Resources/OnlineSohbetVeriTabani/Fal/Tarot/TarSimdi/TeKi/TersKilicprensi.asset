@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA33911248769
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a2c01c26cae5b6e43a2908756444c9c4, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a2c01c26cae5b6e43a2908756444c9c4, type: 3}
+  contentPhotoId: kilicprensi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Prensi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nBirileriyle kapanmam\u0131\u015F meselelerin oldu\u011Funu g\xF6r\xFCyorum.
+    Olay ge\xE7ip gitmi\u015F fakat senden yana defter halen a\xE7\u0131k. Hesapla\u015Fmak,
+    hakk\u0131n\u0131 almak istiyor gibisin. \u0130hanete u\u011Frad\u0131\u011F\u0131n\u0131n
+    fark\u0131nda oldu\u011Fun i\xE7in affedip, ge\xE7ip gitmemi\u015Fsin. Sahtekarl\u0131klar
+    yapan bu ki\u015Fi ya da ki\u015Filer i\xE7in art\u0131k haz\u0131rs\u0131n {{isim}}.
+    \u0130ntikam i\xE7in sab\u0131rla bekliyorsun. G\xF6z\xFCn bir defa a\xE7\u0131lm\u0131\u015F...
+    Yava\u015F yava\u015F kar\u015F\u0131na \xE7\u0131kmaya, belirmeye ba\u015Flam\u0131\u015Flar.
+    Kendini art\u0131k ezdirmiyorsun. K\xF6t\xFC niyetleri \xE7ok g\xFCzel seziyorsun
+    ve seni bir defa k\u0131rana, ikinci kez m\xFCsaade etmiyorsun. Ge\xE7mi\u015Ften
+    farkl\u0131 olarak her t\xFCrl\xFC d\xFC\u015Fman sald\u0131r\u0131s\u0131na
+    haz\u0131rs\u0131n. \"Buyursunlar gelsinler\" der gibisin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilicprensi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

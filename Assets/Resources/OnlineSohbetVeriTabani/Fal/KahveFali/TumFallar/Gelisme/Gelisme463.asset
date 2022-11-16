@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme463
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA50701768261
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n derinliklerindeki g\xF6rseller t\xFCylerimi resmen diken
+    diken etti {{isim}}! Seni bo\u015F ve derin bir \xE7ukurun i\xE7inde, ellerin
+    kollar\u0131n ba\u011Fl\u0131 \u015Fekilde g\xF6r\xFCyorum. \U0001F632\xC7ukurun
+    d\u0131\u015F kenar\u0131nda ise, sana eri\u015Femeyecek mesafede bir tan\u0131d\u0131\u011F\u0131n
+    duruyor. \xDCstten koca bir musluk \u015Far\u0131l \u015Far\u0131l ak\u0131p
+    \xE7ukuru doldururken, bu ki\u015Fi elindeki bir tomar ketenle adeta muslu\u011Fu
+    t\u0131kay\u0131p seni bo\u011Fulmaktan kurtarmaya \xE7al\u0131\u015F\u0131yor
+    gibi. \xD6yle bir \xE7aba g\xF6r\xFCyorum ki, inanamazs\u0131n... Bu ki\u015Fi
+    her kimse, ilerleyen haftalarda b\xFCy\xFCk bir m\xFC\u015Fk\xFCl\xFCn\xFC gidermende
+    sana yard\u0131mc\u0131 olacak {{isim}}. Ya bir eksi\u011Fini giderecek, ya bir
+    a\xE7\u0131\u011F\u0131n\u0131 kapatacak, ya da sana \xE7ok \xF6nemli bir konuda
+    yard\u0131m edecek. Bu ki\u015Finin {{rastgeleburc}} burcu oldu\u011Funu tahmin
+    ediyorum.\n\nSende ilerleyen aylarda olumlu y\xF6nde \xE7ok ciddi baz\u0131 fiziksel
+    de\u011Fi\u015Fimler olaca\u011F\u0131n\u0131 s\xF6yl\xFCyor fincan\u0131n. Hay\u0131rd\u0131r
+    {{isim}}, kendinle ilgili baz\u0131 planlar\u0131n m\u0131 var? \U0001F642Telvelerin,
+    {{ay_+3}}-{{ay_+4}} aylar\u0131na do\u011Fru \xE7evrenin sana olan ilgisinin
+    hi\xE7 olmad\u0131\u011F\u0131 kadar y\xFCksek olaca\u011F\u0131n\u0131 i\u015Faret
+    ediyor. Hay\u0131r olsun in\u015Fallah..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: bekar
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme568
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA10673363619
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Yollad\u0131\u011F\u0131n fincan g\xF6rsellerinin birinde, d\xF6vme bir \"\xE7elik
+    k\u0131l\u0131\xE7\" var. \U0001F5E1Telvelerin karart\u0131lar\u0131 aras\u0131ndan
+    nas\u0131l da parl\u0131yor sana anlatamam! Senin, \xE7ok mutlu olmak i\xE7in
+    adeta i\xE7ten i\xE7e ant i\xE7ti\u011Fini seziyorum {{isim}}. Belki akrabalar\u0131n\u0131n,
+    belki de arkada\u015Flar\u0131n\u0131n ya\u015Fad\u0131\u011F\u0131 \"iler tutar
+    yan\u0131 olmayan\" ili\u015Fkileri g\xF6rd\xFCk\xE7e; bunlara, ya\u015Fad\u0131\u011F\u0131n
+    tats\u0131zl\u0131klar\u0131 da ekleyince, sen daha \xE7ok bilenmi\u015Fsin.
+    \"Olsun\" istemiyorsun; \"ya tam olsun, ya hi\xE7 olmas\u0131n\" istiyorsun.
+    Y\xFCre\u011Fin kor gibi! \U0001F525Arad\u0131\u011F\u0131n mutlulu\u011Fu elde
+    edene kadar da bu ate\u015F dinmeyecek; \xE7ok belli. Hakl\u0131 bir \u015Fairin
+    de dedi\u011Fi gibi; \"y\xFCre\u011Fi so\u011Fuyan\u0131n, sava\u015F\u0131 biter...\"\n\nDe\u011Ferli
+    {{isim}}, senin a\u015Fk hayat\u0131nda baz\u0131 \u015Feyler k\xF6kl\xFC \u015Fekilde
+    de\u011Fi\u015Fecek. \"Olabilece\u011Fine\" yeniden inanaca\u011F\u0131n ve inand\u0131r\u0131laca\u011F\u0131n
+    bir zaman var. Bu konuda telvelerin, 4 ay sonras\u0131n\u0131 yani {{ay_+4}}
+    ay\u0131n\u0131 g\xF6steriyor. O zamana dek umutlar\u0131n\u0131 muhafaza et.
+    {{ay_5}} ve {{ay_6}} aylar\u0131ndan sonra her \u015Fey daha g\xFCzel olacak,
+    g\xF6receksin..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

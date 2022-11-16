@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme684
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA21179112349
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131 tepeden izleyen bir \"Medusa\" fig\xFCr\xFC, etraf\u0131n\u0131
+    \xE7evreleyen telveleri adeta ta\u015Fa \xE7evirmi\u015F {{isim}}.  Kafas\u0131nda
+    zehirli y\u0131lanlar olmas\u0131 gerekirken, yaln\u0131zca sa\xE7 olan bu di\u015Fi
+    canavar\u0131n g\xFCl\xFC\u015F\xFC, merhamet \u0131\u015F\u0131lt\u0131s\u0131yla
+    renklenmi\u015F. Kar\u015F\u0131s\u0131nda donakald\u0131\u011F\u0131n k\u0131z\u0131n,
+    sand\u0131\u011F\u0131n kadar {{kelime, kay\u0131ts\u0131z | ac\u0131mas\u0131z|
+    gaddar | ald\u0131r\u0131\u015Fs\u0131z}} biri olmad\u0131\u011F\u0131n\u0131
+    g\xF6receksin {{isim}}. Onun {{kelime, hakk\u0131nda edindi\u011Fin duyumlar
+    | hakk\u0131ndaki \xF6nyarg\u0131lar\u0131n}} ger\xE7e\u011Fi yans\u0131tm\u0131yor.
+    Arad\u0131\u011F\u0131n ger\xE7ek fincan\u0131nda sakl\u0131; telvelerin, duydu\u011Fun
+    beklentisiz sevginin y\xFCre\u011Finden ta\u015Farak adeta onun ruhuna akaca\u011F\u0131n\u0131
+    f\u0131s\u0131ld\u0131yor. Bahsetti\u011Fim duygu ak\u0131\u015F\u0131n\u0131n,
+    \xE7ok yak\u0131n zamanda elle tutulur cinsten bir ili\u015Fkiye evirilece\u011Fini
+    hissediyorum.\n\n\xD6n\xFCm\xFCzdeki {{sayi,5,6}} hafta i\xE7inde onunla ilgili
+    uzun zamand\u0131r bekledi\u011Fin bir f\u0131rsat ge\xE7ecek eline {{isim}}.
+    Bu f\u0131rsat dahilinde, ad\u0131n\u0131n i\xE7inde {{kelime, T | S | G | R
+    | N}} harfi ge\xE7en bir sosyal medya uygulamas\u0131nda, ho\u015Fland\u0131\u011F\u0131n
+    k\u0131z\u0131n yak\u0131n bir arkada\u015F\u0131yla girece\u011Fin diyaloglar,
+    onunla aran\u0131zdaki mesafeleri h\u0131zla a\u015Fman\u0131 sa\u011Flayacak.
+    \u0130sminde {{kelime, G veya A | E veya Y | B veya L | T veya B | C veya D}}
+    harfi bulundu\u011Funu tahmin etti\u011Fim bu arkada\u015F, sonraki g\xFCnlerde
+    ho\u015Fland\u0131\u011F\u0131n k\u0131za senin hakk\u0131nda hi\xE7 bilmedi\u011Fi
+    ve \xF6\u011Frenince \xE7ok etkilenece\u011Fi baz\u0131 \u015Feylerden bahsedecek.
+    Bunun \xFCzerine, ba\u015Fta bahsetti\u011Fim duygu ak\u0131\u015F\u0131 adeta
+    duvarlar\u0131 y\u0131k\u0131lm\u0131\u015F bir barajdan akan sular gibi \u015Fiddetlenmeye
+    ba\u015Flayacak. \U0001F4A6 \xD6n\xFCm\xFCzdeki {{mevsim_1}} mevsiminin tam ortas\u0131nda,
+    bu zamana kadar kar\u015F\u0131l\u0131ks\u0131z oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCn
+    a\u015Fk\u0131n yerini oturakl\u0131 bir ili\u015Fkinin alaca\u011F\u0131n\u0131
+    hissediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

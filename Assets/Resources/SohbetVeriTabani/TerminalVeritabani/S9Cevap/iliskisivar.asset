@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: iliskisivar
+  m_EditorClassIdentifier: 
+  etiket: S9Cevap
+  aciklama:
+  - "Yan\u0131nda sana destek olan bir {{data, cinsiyet=kad\u0131n, erkek | cinsiyet=erkek,
+    kad\u0131n | cinsiyet=lgbt, insan}} varsa hayata kar\u015F\u0131 1-0 \xF6ndesin
+    demektir."
+  - "T\xFC t\xFC t\xFC t\xFC, Allah nazarlardan saklas\u0131n sizi {{isim}}, da\u011Flara
+    ta\u015Flara... Sosyal medyaya \xE7ok \xF6yle foto\u011Fraf koymay\u0131n el
+    ele kol kola."
+  - "Aman {{isim}} kem g\xF6zlerden sak\u0131n\u0131n; pamuklara sar\u0131p saklay\u0131n
+    ili\u015Fkinizi. \u015Eimdilerde \xE7evrenin \xE7ok nazar\u0131 dokunuyor insanlara.
+    Hep bu sosyal medya y\xFCz\xFCnden!"
+  - "\u0130li\u015Fkin mi var? Bundan onun da haberi var m\u0131? :P \u015Eaka yap\u0131yorum
+    {{isim}}. Allah daim etsin. Birbirinizi s\u0131kmadan, s\u0131k\u0131lmadan,
+    dirhem dirhem tad\u0131n g\xFCzellikleri."
+  - "Bir ili\u015Fkide kavga \xE7\u0131kt\u0131\u011F\u0131nda yap\u0131lmas\u0131
+    gereken ilk 3 \u015Fey nedir, biliyor musun {{isim}}? 1) O'nu \"neden sevdi\u011Fini\"
+    hat\u0131rlamak. 2) 1. maddeyi hat\u0131rlamak. 3) 2. maddeyi hat\u0131rlamak.
+    Kula\u011F\u0131na k\xFCpe olsun! <sprite=7>"
+  - "Demek ba\u015F\u0131n ba\u011Fl\u0131 {{isim}}. O halde {{kelime, \"k\u0131smet
+    \xE7\u0131karsa bildir\" modumu | \"k\u0131smet bildirimlerimi\"}} kapat\u0131yorum
+    senin i\xE7in! <sprite=7>"
+  - "Ohoo senin ba\u015F\u0131n ba\u011Fl\u0131ym\u0131\u015F {{isim}}? Fal analizlerimde
+    yeni k\u0131smetlerin \xE7\u0131karsa sana bildirmeyece\u011Fim haberin olsun.
+    Yuva y\u0131k\u0131c\u0131 dedirtmem kendime! <sprite=0>"
+  aranacakEtiket: son
+  gerekenDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

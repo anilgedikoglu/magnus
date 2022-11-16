@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyTanidikBoga
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA61264791359
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Kar\u015F\u0131nda
+    her i\u015Fini garantiye almay\u0131 seven bir bo\u011Fa {{data, cinsiyet=erkek,
+    kad\u0131n\u0131 | cinsiyet=kad\u0131n, erke\u011Fi | cinsiyet=lgbt, insan\u0131}}
+    var {{isim}}. San\u0131r\u0131m uzaktan tan\u0131\u015F\u0131yorsunuz. Senden
+    ve niyetinin temizli\u011Finden iyice emin olmadan, sana \xF6zelini a\xE7aca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnm\xFCyorum. Bu asl\u0131nda g\xFCzel bir meziyet, \xE7\xFCnk\xFC
+    {{burc}} burcu {{data, cinsiyet=erkek, erke\u011Fi | cinsiyet=kad\u0131n, kad\u0131n\u0131
+    | cinsiyet=lgbt, mensubu}} olarak sen de zaten bu tip {{data, cinsiyet=erkek,
+    kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri | cinsiyet=lgbt, ki\u015Fileri}}
+    be\u011Feniyorsun. Sana kolay olan, herkese kolay olur; bunun fark\u0131ndas\u0131n.
+    Onun burcunun y\xF6netici gezegeni Ven\xFCs. Sabit fikirli, d\u0131\u015F etkenlerle
+    kolay kolay de\u011Fi\u015Fmeyen bir bur\xE7. Bu da onu g\xFCvenilir yap\u0131yor.
+    Onunla aran\u0131zdan suyun bile s\u0131zmayaca\u011F\u0131 \xE7ok \xF6zel bir
+    beraberli\u011Fin olabilir. Tek yapman gereken, onun alengirli ve antika y\xF6nlerine
+    ayak uydurabilmek olacak. <sprite=0>\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "bo\u011Fa"
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "tan\u0131d\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 1
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

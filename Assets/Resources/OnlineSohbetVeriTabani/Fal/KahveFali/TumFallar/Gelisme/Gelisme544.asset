@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme544
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA34609500984
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\"F\u0131rsatlar, \xE7oktan piste \xE7\u0131km\u0131\u015F olanlarla dans eder\"
+    gibisinden bir gavur atas\xF6z\xFC vard\u0131r, duymu\u015F muydun hi\xE7? \U0001F604Bunu
+    \u015Funun i\xE7in s\xF6yledim {{isimcigim}}; hem yaln\u0131zl\u0131ktan hay\u0131flan\u0131yor,
+    hem de \xE7evrene \xC7in seddinin minyat\xFCr\xFCn\xFC \xF6r\xFCyorsun. \U0001F6D1\u015Eaka
+    bir yana, \xE7evreni kaplayan kal\u0131n bir z\u0131rh g\xF6r\xFCyorum telvelerinde.
+    Bu haldeyken ne senin sesin d\u0131\u015Far\u0131ya duyuluyor, ne de d\u0131\u015Far\u0131dan
+    birileri bu z\u0131rh\u0131 delip i\xE7eriye girebiliyor. Kaderine sitem ettik\xE7e
+    ya da hevesin k\u0131r\u0131ld\u0131k\xE7a, bir tu\u011Fla daha ekliyorsun; yapma...\n\n{{isim}}
+    sen bir erkekle {{sayi,2,8}} ay i\xE7inde g\xF6r\xFC\u015Fmeye ba\u015Flayacaks\u0131n
+    ba\u015Flamas\u0131na da, benzer ortamlara girip \xE7\u0131kt\u0131\u011F\u0131n\u0131z
+    ve \xE7ok da iyi anla\u015Ft\u0131\u011F\u0131n\u0131z bir k\u0131z arkada\u015F\u0131nla,
+    bu \xE7ocuk i\xE7in ters d\xFC\u015Febilece\u011Finizi i\u015Faret ediyor fincan\u0131n.
+    Benim akl\u0131ma \u015Fu ihtimaller geliyor; bu arkada\u015F\u0131n ya o \xE7ocu\u011Fu
+    sana lay\u0131k g\xF6rmeyecek, ya o \xE7ocukla aralar\u0131nda ya\u015Fanm\u0131\u015F
+    ince bir mazi var, ya da i\xE7ten i\xE7e arkada\u015F\u0131n da o \xE7ocuktan
+    ho\u015Flan\u0131yor. Sence ba\u015Fka ne olabilir ki?"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

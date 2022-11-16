@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: SonidilKibaroglu
+  m_EditorClassIdentifier: 
+  etiket: son
+  aciklama:
+  - "Aaa... Bir dakika! Sen Faladdin'de \"head of communications\" olarak \xE7al\u0131\u015Fan
+    \u0130dil de\u011Fil misin?\n\nDemek \xE7ok farkl\u0131 bir fal deneyimi ya\u015Famaya
+    geldin. Ho\u015F geldin... <sprite=0>\n\nHaz\u0131rsan, arkana yaslan! <sprite=7>"
+  aranacakEtiket: hosgeldin
+  gerekenDegiskenler:
+  - degiskenAdi: isim
+    degiskenDegeri: idil
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: soyisim
+    degiskenDegeri: "kibaro\u011Flu"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: dogum ayi
+    degiskenDegeri: 8
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: dogum gunu
+    degiskenDegeri: 7
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 7
+  ozelKontrol: son
+  ayarlanacakDegisken: 

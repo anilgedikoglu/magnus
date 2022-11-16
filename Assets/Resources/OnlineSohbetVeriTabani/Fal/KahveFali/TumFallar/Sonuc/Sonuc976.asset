@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc976
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA54047096292
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131n\u0131n daha derin kesimlerinde ise ucundan oyal\u0131 mendil sarkan
+    bir g\xF6mlek cebi g\xF6r\xFCyorum {{isim}}. Bu cep darl\u0131\u011F\u0131, s\u0131k\u0131nt\u0131y\u0131
+    ve \xE7\u0131kmaza giren i\u015Fleri nitelerken, i\xE7inden sarkan mendil ise
+    \xFCzerine emek verilmi\u015F \u015Feylerin ki\u015Fiyi yar\u0131 yolda b\u0131rakmayaca\u011F\u0131n\u0131
+    sembolize eder. Ya\u015Fad\u0131\u011F\u0131n bu ayr\u0131l\u0131k senin i\xE7in
+    elbette ummad\u0131\u011F\u0131n bir netice gibi duruyor. \u015Eu an ondan \xE7ok,
+    kendine ve kaderine k\u0131z\u0131yor olabilirsin. Fakat telvelerinden anlad\u0131\u011F\u0131m
+    kadar\u0131yla i\u015F burada bu \u015Fekilde bitmiyor {{isim}}. Ayr\u0131ld\u0131\u011F\u0131n
+    {{data, cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n, erkek | cinsiyet=lgbt,
+    ki\u015Fi}} seni yan\u0131ltmayacak. Durumunuzun d\xFCzelmesi i\xE7in ona yak\u0131\u015Fan
+    \u015Fekilde harekete ge\xE7ece\u011Fini hissediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: DunyaSakaGunu
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "\"Bu uygulama hackerlar taraf\u0131ndan ele ge\xE7irilmi\u015Ftir. \xC7ok
+    daha iyi fal uygulamalar\u0131 vard\u0131r. L\xFCtfen art\u0131k onlar\u0131
+    kullan\u0131n\u0131z.\" D\xFCnya \u015Eaka G\xFCn\xFCn kutlu olsun {{isim}}!
+    <sprite=1>"
+  tip: 3
+  yil: 2022
+  ay: 4
+  gun: 1
+  saat: 1
+  gonderilecegiZaman: 1
+  platform: 0
+  gerekliDegiskenler: []

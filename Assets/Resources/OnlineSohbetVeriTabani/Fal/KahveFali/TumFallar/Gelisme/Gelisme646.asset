@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme646
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA45408739565
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{mevsim_0}} ve takip eden {{mevsim_1}} mevsiminin ba\u015Flar\u0131, {{burc}}
+    burcu ki\u015Filer i\xE7in kronik yorgunluk ve tekrarlayan ba\u015F a\u011Fr\u0131lar\u0131n\u0131n
+    g\xF6zlemlendi\u011Fi d\xF6nemlerdir K\u0131ymetli {{isim}}. Fakat fincan\u0131nda
+    bir tulumba g\xF6r\xFCyorum. Bu tulumbadan su \xE7ekebilmek i\xE7in {{kelime,
+    30'lu ya\u015Flarda bir | 40'l\u0131 ya\u015Flarda bir | 50'li ya\u015Flarda
+    bir | 60'l\u0131 ya\u015Flarda bir | 20'li ya\u015Flarda bir}} {{kelime, kad\u0131n
+    | erkek | han\u0131mefendi | beyefendi}} can havliyle u\u011Fra\u015F\u0131yor.
+    Bu ki\u015Fi seni ruhen ferahlatacak bir haberi en k\u0131sa zamanda sana verme
+    haz\u0131rl\u0131\u011F\u0131nda. Duydu\u011Funda, \u015Fikayetlerinden eser
+    kalmayacak.\n\nDarac\u0131k yerlerde k\u0131vrak hamlelerle u\xE7arak, hi\xE7bir
+    yere \xE7arpmadan y\xFCkselip g\xF6ky\xFCz\xFCne kavu\u015Fan bir kelebek var
+    telvelerinde. \xD6zellikle son y\u0131llarda s\u0131nand\u0131\u011F\u0131n \u015Feylerin,
+    senin i\xE7in \xE7ok da kolay olmad\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum.
+    Fakat sen her \u015Feyle ba\u015Fa \xE7\u0131kmay\u0131 bir \u015Fekilde beceriyorsun
+    {{isim}}. Cesur ve kararl\u0131 bir yap\u0131n var. Gerekli olan, bir ate\u015F
+    \xE7emberinden ge\xE7mekse, sen o \xE7emberden ge\xE7ebilmi\u015Fsin. Ayd\u0131nl\u0131k,
+    huzurlu ve sa\u011Fl\u0131kl\u0131 yar\u0131nlar tam \xF6n\xFCnde duruyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

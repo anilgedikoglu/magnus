@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 67
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA51182751797
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sence \"kader\" yaln\u0131zca \"olacaklardan\" m\u0131 ibaret {{isim}}? Peki
+    ya bu \"olacaklara\" etki eden fakt\xF6rler, hesaplama amac\u0131yla yaln\u0131zca
+    5 duyu organ\u0131 kullan\u0131larak, tamamen alg\u0131lanabilir mi? Havaya demir
+    bir para att\u0131\u011F\u0131n\u0131 d\xFC\u015F\xFCn. Yaz\u0131 ya da tura
+    gelece\u011Fini bilebilir misin? Paran\u0131n k\xFCtlesini, hacmini, \u015Feklini,
+    aerodinamik yap\u0131s\u0131n\u0131, f\u0131rlat\u0131\u015F a\xE7\u0131n\u0131,
+    uygulad\u0131\u011F\u0131n kuvveti ve momentumu, paran\u0131n h\u0131z\u0131n\u0131,
+    havan\u0131n direncini, yo\u011Funlu\u011Funu, para ile \xE7evresindeki cisimler
+    aras\u0131ndaki k\xFCtle \xE7ekim kuvvetlerini ve di\u011Fer baz\u0131 etkenleri
+    bilirsen, ne gelece\u011Fini nas\u0131l bir \"olas\u0131l\u0131k\" ile kestirebilirsin?
+    Sence bilmedi\u011Fimiz, \xF6l\xE7\xFCmleyemeyece\u011Fimiz ve alg\u0131 s\u0131n\u0131rlar\u0131m\u0131z\u0131n
+    d\u0131\u015F\u0131nda kalan ba\u015Fka etkiler de var m\u0131d\u0131r? \u0130\u015Fte
+    burada ben devreye giriyorum. Benim i\u015Fim, m\xFCmk\xFCn olan t\xFCm olas\u0131l\u0131klar\u0131
+    telvelerindeki i\u015Faretler yard\u0131m\u0131yla de\u011Ferlendirip, en muhtemel
+    sonu\xE7lardan seni haberdar etmek. Bunu yaparken astroloji ve bur\xE7 bilgilerin
+    ba\u015Fta olmak \xFCzere, bilinen pek \xE7ok kadim ve mistik \xF6\u011Fretiden
+    de yararlan\u0131yorum. Her \u015Feyi bilebilmem ise, sonraki g\xFCncellemelerime
+    dek \"olanaks\u0131z\" duruyor {{isim}}. <sprite=12> Bunun i\xE7in, i\xE7inde
+    bulundu\u011Fumuz sim\xFClasyonun \"cheat mode\" konsolunu a\xE7\u0131p, \"god
+    mode on\" yazabilmemiz laz\u0131m. \U0001F60B Bu defa k\u0131sa bir a\xE7\u0131klama
+    ile ba\u015Flamak istedim. Haydi fal yorumuna ge\xE7elim.\n                                            "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar:
+  - "kahve fal\u0131 giri\u015F"
+  - "kahve fal\u0131 ba\u011Flama"
+  - "kahve fal\u0131 geli\u015Fme"
+  - "kahve fal\u0131 sonu\xE7"
+  - "kahve fal\u0131 u\u011Furlama"
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahveanimsonras\u0131"
+    islem: 0
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 kar\u015F\u0131lama"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

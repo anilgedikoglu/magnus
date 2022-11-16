@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1059
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA44612766927
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\u0130lerleyen g\xFCnlerde, {{kelime, 30'lu ya\u015Flarda | 40'l\u0131 ya\u015Flarda
+    | 50'li ya\u015Flarda}}, {{kelime, temiz giyimli | iyi giyimli | k\u0131yafetlerinde
+    \xE7ok renklili\u011Fi tercih eden | genellikle koyu tonlarda ve siyah renkte
+    giyinen | genellikle spor k\u0131yafetler giyinmeyi tercih eden | genellikle
+    d\xF6piyes giyinmeyi tercih eden | genellikle tayy\xF6r giyinmeyi tercih eden
+    | genellikle bol k\u0131yafetler giyinmeyi tercih eden}} ve e\u011Fer hislerimde
+    yan\u0131lm\u0131yorsam, ad\u0131 \"{{kelime, \xD6z | Ce | Fi | Ay | Eb | Bu
+    | El | Fa | Ba | Ha | G\xF6 | Se | Ar}}\" ya da \"{{kelime, Em | Sa | Ne | Ad
+    | Re | De | \u015Ee | Me | Nu | \u015E\xFC | G\xFC}}\" ile ba\u015Flayan bir
+    han\u0131mefendi ayr\u0131ld\u0131\u011F\u0131n {{data, cinsiyet=erkek, han\u0131mefendiyle
+    | cinsiyet=kad\u0131n, erkekle | cinsiyet=lgbt, ki\u015Fiyle}} ilgili seninle
+    konu\u015Facak ve sana baz\u0131 bilgiler verecek. Duyacaklar\u0131na kulak verir
+    ve bu ki\u015Finin tavsiyelerine uyarsan, eksikli\u011Fini halen g\xF6ze alamad\u0131\u011F\u0131n
+    i\xE7in kendi g\xF6lgende g\xFCne\u015Fe muhta\xE7 ya\u015Famaya devam etti\u011Fin
+    bu ki\u015Fiyle halledemedi\u011Fin meselelerin iyiye gitmesini sa\u011Flayabileceksin
+    {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersAsilanadam
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA35614670899
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 9ac53d2da19e1794c8df0ff82bc0ae59, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 9ac53d2da19e1794c8df0ff82bc0ae59, type: 3}
+  contentPhotoId: asilanadam-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"As\u0131lan Adam\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSuyun
+    ak\u0131\u015F\u0131n\u0131 engelleyen bir t\u0131kan\u0131kl\u0131k oldu\u011Fu
+    zaman \u015Fi\u015Fme olur, birikme olur. Devinimin engellenmesi, enerji ak\u0131\u015F\u0131n\u0131
+    k\u0131s\u0131tlar ve hatta bloke eder. \u0130\u015Fler yolunda gitmemeye ba\u015Flar.
+    \u0130nsan kendini k\xF6t\xFC hisseder ve s\u0131k\u0131nt\u0131lar g\xF6\u011F\xFCs
+    kafesine h\xFCcum eder. Se\xE7ti\u011Fin kart\u0131n ters a\xE7\u0131lmas\u0131
+    senin i\xE7in bu anlamda b\xFCy\xFCk bir \u015Fans. Ya\u015Fam\u0131ndaki blokajlar
+    nihayet kalk\u0131yor ve t\u0131kan\u0131kl\u0131klar a\xE7\u0131l\u0131yor {{isim}}.
+    \xC7abalar\u0131n \xE7ok \u015F\xFCk\xFCr ki sonu\xE7 vermeye ba\u015Fl\u0131yor.
+    Bunu uzun zamand\u0131r sab\u0131rla bekledi\u011Fini biliyorum. Art\u0131k istedi\u011Fin
+    ko\u015Fullara eri\u015Fimin daha fazla. \u0130stedi\u011Fin insanlarla ili\u015Fki
+    ve ileti\u015Fim anlam\u0131nda daha aktif s\xFCre\xE7lere girebileceksin. Ters
+    giden i\u015Fler nihayet d\xFCzeliyor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi asilanadam ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

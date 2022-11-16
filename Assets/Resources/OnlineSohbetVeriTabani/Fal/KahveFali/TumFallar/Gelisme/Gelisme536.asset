@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme536
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA96346722495
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Heliks \u015Feklini alm\u0131\u015F ilgin\xE7 \xE7izgiler var fincan\u0131n\u0131n
+    i\xE7 y\xFCzeyinde. \U0001F974A\u015Fk hayat\u0131nda tam i\u015Fler yoluna girecekken,
+    \u015Fans enerjine adeta bir \u015Feyler dolan\u0131yor; sanki bir parazit kar\u0131\u015F\u0131yor
+    gibi... \U0001F914Bu yans\u0131malar\u0131n hemen yak\u0131n\u0131nda, ad\u0131nda
+    {{harf}} harfi olan, {{kelime, 170 boylar\u0131nda, k\u0131sa sa\xE7l\u0131,
+    kumral | 1.65 boylar\u0131nda, k\u0131v\u0131rc\u0131k sa\xE7l\u0131, koyu kumral
+    | 1.60 boylar\u0131nda, k\u0131sa d\xFCz sa\xE7l\u0131, kumral | 1.60 boylar\u0131nda,
+    geni\u015F basenli | 1.60 boylar\u0131nda, narin yap\u0131l\u0131, sar\u0131\u015F\u0131n}}
+    bir kad\u0131n g\xF6r\xFCyorum. Bu ki\u015Fi hanenize s\u0131k\xE7a girip \xE7\u0131kan
+    birisi. Aile b\xFCy\xFCklerinden birinin tan\u0131d\u0131\u011F\u0131 oldu\u011Funu
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu han\u0131mefendi, sana \xE7ok g\xF6z de\u011Fiyor
+    {{isim}}. \U0001F9FFSosyal medya \xFCzerinden onun g\xF6z\xFC \xF6n\xFCndeysen
+    uzakla\u015Fmal\u0131, y\xFCz y\xFCze g\xF6r\xFC\u015F\xFCyorsan\u0131z nazara
+    kar\u015F\u0131 kendini sak\u0131nmal\u0131s\u0131n. \xC7\xF6z\xFClmeyi ve olumlu
+    etkileri h\u0131zla g\xF6zlemleyeceksin.\n\n\xDCzerinde bulundu\u011Fu yol sana
+    kadar ula\u015Fan bir ara\xE7 var telvelerinde. \U0001F690Araba desem de\u011Fil,
+    minib\xFCs desem de\u011Fil; bir cip ya da suv gibi. Senin k\u0131smetindeki
+    ki\u015Fi, bu ara\xE7la bir s\xFCre \xF6nce bir yoldan gelmi\u015F ya da yak\u0131nda
+    bir yola gidecek {{isimcigim}}. Bu durumun bir \u015Fekilde senin de g\xF6z\xFCne
+    \xE7arpaca\u011F\u0131n\u0131 f\u0131s\u0131ld\u0131yor telvelerin. E\u011Fer
+    bu emareyi takip edersen, ki\u015Finin kim oldu\u011Funu sen de anlayacaks\u0131n.
+    Ciddi bir ili\u015Fki, senin i\xE7in \xE7ok da uzak g\xF6z\xFCkm\xFCyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

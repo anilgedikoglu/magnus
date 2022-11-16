@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupauclusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA43624571214
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 2944a5724a951b642879d3b7afc1d72f, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 2944a5724a951b642879d3b7afc1d72f, type: 3}
+  contentPhotoId: kupauclusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kupa \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131 se\xE7tin.\n\nSe\xE7mi\u015F
+    oldu\u011Fun bu kart, \u015Fu s\u0131ralar tam bir organizasyon insan\u0131 oldu\u011Funu
+    anlat\u0131yor. D\xFC\u011F\xFCn dernek, parti, kutlama, mezuniyet ve tebrik
+    bulu\u015Fmalar\u0131 hayat\u0131nda \xF6nemli yer tutuyor olabilir. Daha \xE7ok
+    insanla temas kuruyor, yeni ba\u011Flant\u0131lar elde ediyor, b\xFCy\xFCyor,
+    geli\u015Fiyor ve \xE7evre ediniyorsun {{isim}}. Etraf\u0131n\u0131 yo\u011Fun
+    bir kalabal\u0131\u011F\u0131n sard\u0131\u011F\u0131n\u0131 s\xF6ylemek yanl\u0131\u015F
+    olmaz. Bu trafikten \xE7ok kazan\xE7l\u0131 \xE7\u0131kt\u0131\u011F\u0131n\u0131n
+    san\u0131r\u0131m fark\u0131ndas\u0131nd\u0131r. \u015Eans seninle. Neredeyse
+    her g\xFCn\xFCn verimli ge\xE7iyor ve kader sana yepyeni hediyeler sunuyor. Bunu
+    yaparken de insanlar\u0131 vesile ediyor. U\u011Fra\u015Flar\u0131n\u0131n ve
+    \xE7al\u0131\u015Fmalar\u0131n\u0131n kar\u015F\u0131l\u0131\u011F\u0131n\u0131
+    al\u0131yorsun."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kupauclusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

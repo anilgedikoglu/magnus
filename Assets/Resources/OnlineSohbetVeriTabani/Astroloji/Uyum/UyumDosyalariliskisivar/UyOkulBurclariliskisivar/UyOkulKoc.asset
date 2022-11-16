@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulKoc
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA87402929045
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Y\xF6netici
+    gezegeni Mars olan bir {{data, cinsiyet=erkek, kad\u0131nla | cinsiyet=kad\u0131n,
+    erkekle | cinsiyet=lgbt, insanla}} anla\u015Fmak m\u0131? Vay anam vayy... Fena
+    fl\xF6rt\xF6zd\xFCrler ve okul mokul dinlemez, her f\u0131rsat\u0131 kullan\u0131r
+    ortal\u0131\u011F\u0131 ate\u015Fe verirler! :) Zaten elementleri de ate\u015Ftir,
+    s\xF6ylemi\u015F miydim? {{isim}}, e\u011Fer bir ili\u015Fkin olmasa, \\\"hi\xE7
+    durma, e\u011Fer yapabiliyorsan ko\u015Fa ko\u015Fa git ve ona sar\u0131l\\\"
+    derdim. Ba\u015Fkalar\u0131na b\u0131rak\u0131lmayacak kadar \xF6zel ve nadide
+    insanlardan bahsediyoruz. Birlikte olduklar\u0131 ki\u015Filere ger\xE7ekten
+    hayatlar\u0131n\u0131 ya\u015Fat\u0131rlar. Kendilerini b\xFCt\xFCn\xFCyle onlara
+    adarlar. {{burc}} burcu {{data, cinsiyet=erkek, erkeklerine | cinsiyet=kad\u0131n,
+    kad\u0131nlar\u0131na | cinsiyet=lgbt, mensuplar\u0131na}} k\xF6t\xFC gelebilecek
+    tek y\xF6nleri a\u015F\u0131r\u0131 kibirli olu\u015Flar\u0131d\u0131r. Evet
+    iyidirler, ho\u015Fturlar, {{data, cinsiyet=erkek, yak\u0131\u015F\u0131kl\u0131d\u0131rlar
+    | cinsiyet=kad\u0131n, g\xFCzeldirler | cinsiyet=lgbt, g\xFCzeldirler}} ancak
+    bir o kadar da kendini be\u011Fenmi\u015Flerdir. \xD6zg\xFCveni bu kadar y\xFCksek
+    birine sen pek tahamm\xFCl edemez, ona haddini bildirmek istersin gibi geliyor
+    {{isim}} bana. \xDC\xE7 g\xFCnde papaz olmay\u0131n sonra? Son bir notum var;
+    seni be\u011Feniyorsa ili\u015Fkin oldu\u011Funa bakmaz, ne yapar eder seni al\u0131r!
+    :)\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "ko\xE7"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

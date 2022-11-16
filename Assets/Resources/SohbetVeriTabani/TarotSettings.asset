@@ -1,0 +1,1898 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3aba9afe810ed4b86ba4db8a02b8a9, type: 3}
+  m_Name: TarotSettings
+  m_EditorClassIdentifier: 
+  modTarotFaliOku: tarot oku
+  tarotGecmisKartiSecModu: "tarot kart se\xE7 ge\xE7mi\u015F"
+  tarotSimdiKartiSecModu: "tarot kart se\xE7 \u015Fimdi"
+  tarotGelecekKartiSecModu: "tarot kart se\xE7 gelecek"
+  tarotTumuKartSecModu: "tarot kart se\xE7 t\xFCm\xFC"
+  tarotGecmisModlari:
+  - mod: tarot gecmis adalet
+    excludedMods: []
+  - mod: tarot gecmis asiklar
+    excludedMods: []
+  - mod: tarot gecmis asilanadam
+    excludedMods: []
+  - mod: tarot gecmis ay
+    excludedMods: []
+  - mod: tarot gecmis aziz
+    excludedMods: []
+  - mod: tarot gecmis azize
+    excludedMods: []
+  - mod: tarot gecmis buyucu
+    excludedMods: []
+  - mod: tarot gecmis budala deli
+    excludedMods: []
+  - mod: tarot gecmis denge
+    excludedMods: []
+  - mod: tarot gecmis dunya
+    excludedMods: []
+  - mod: tarot gecmis munzevi
+    excludedMods: []
+  - mod: tarot gecmis guc
+    excludedMods: []
+  - mod: tarot gecmis gunes
+    excludedMods: []
+  - mod: tarot gecmis imparator
+    excludedMods: []
+  - mod: tarot gecmis imparatorice
+    excludedMods: []
+  - mod: tarot gecmis kadercarki
+    excludedMods: []
+  - mod: tarot gecmis mahkeme
+    excludedMods: []
+  - mod: tarot gecmis olum
+    excludedMods: []
+  - mod: tarot gecmis araba
+    excludedMods: []
+  - mod: tarot gecmis seytan
+    excludedMods: []
+  - mod: tarot gecmis yikilankule
+    excludedMods: []
+  - mod: tarot gecmis yildiz
+    excludedMods: []
+  - mod: tarot gecmis asaaltilisi
+    excludedMods: []
+  - mod: tarot gecmis asaasi
+    excludedMods: []
+  - mod: tarot gecmis asabeslisi
+    excludedMods: []
+  - mod: tarot gecmis asadokuzlusu
+    excludedMods: []
+  - mod: tarot gecmis asadortlusu
+    excludedMods: []
+  - mod: tarot gecmis asaikilisi
+    excludedMods: []
+  - mod: tarot gecmis asakrali
+    excludedMods: []
+  - mod: tarot gecmis asakralicesi
+    excludedMods: []
+  - mod: tarot gecmis asaonlusu
+    excludedMods: []
+  - mod: tarot gecmis asaprensi
+    excludedMods: []
+  - mod: tarot gecmis asasekizlisi
+    excludedMods: []
+  - mod: tarot gecmis asasovalyesi
+    excludedMods: []
+  - mod: tarot gecmis asauclusu
+    excludedMods: []
+  - mod: tarot gecmis asayedilisi
+    excludedMods: []
+  - mod: tarot gecmis kilicaltilisi
+    excludedMods: []
+  - mod: tarot gecmis kilicasi
+    excludedMods: []
+  - mod: tarot gecmis kilicbeslisi
+    excludedMods: []
+  - mod: tarot gecmis kilicdokuzlusu
+    excludedMods: []
+  - mod: tarot gecmis kilicdortlusu
+    excludedMods: []
+  - mod: tarot gecmis kilicikilisi
+    excludedMods: []
+  - mod: tarot gecmis kilickrali
+    excludedMods: []
+  - mod: tarot gecmis kilickralicesi
+    excludedMods: []
+  - mod: tarot gecmis kiliconlusu
+    excludedMods: []
+  - mod: tarot gecmis kilicprensi
+    excludedMods: []
+  - mod: tarot gecmis kilicsekizlisi
+    excludedMods: []
+  - mod: tarot gecmis kilicsovalyesi
+    excludedMods: []
+  - mod: tarot gecmis kilicuclusu
+    excludedMods: []
+  - mod: tarot gecmis kilicyedilisi
+    excludedMods: []
+  - mod: tarot gecmis kupaaltilisi
+    excludedMods: []
+  - mod: tarot gecmis kupaasi
+    excludedMods: []
+  - mod: tarot gecmis kupabeslisi
+    excludedMods: []
+  - mod: tarot gecmis kupadokuzlusu
+    excludedMods: []
+  - mod: tarot gecmis kupadortlusu
+    excludedMods: []
+  - mod: tarot gecmis kupaikilisi
+    excludedMods: []
+  - mod: tarot gecmis kupakrali
+    excludedMods: []
+  - mod: tarot gecmis kupakralicesi
+    excludedMods: []
+  - mod: tarot gecmis kupaonlusu
+    excludedMods: []
+  - mod: tarot gecmis kupaprensi
+    excludedMods: []
+  - mod: tarot gecmis kupasekizlisi
+    excludedMods: []
+  - mod: tarot gecmis kupasovalyesi
+    excludedMods: []
+  - mod: tarot gecmis kupauclusu
+    excludedMods: []
+  - mod: tarot gecmis kupayedilisi
+    excludedMods: []
+  - mod: tarot gecmis tilsimaltilisi
+    excludedMods: []
+  - mod: tarot gecmis tilsimasi
+    excludedMods: []
+  - mod: tarot gecmis tilsimbeslisi
+    excludedMods: []
+  - mod: tarot gecmis tilsimdokuzlusu
+    excludedMods: []
+  - mod: tarot gecmis tilsimdortlusu
+    excludedMods: []
+  - mod: tarot gecmis tilsimikilisi
+    excludedMods: []
+  - mod: tarot gecmis tilsimkrali
+    excludedMods: []
+  - mod: tarot gecmis tilsimkralicesi
+    excludedMods: []
+  - mod: tarot gecmis tilsimonlusu
+    excludedMods: []
+  - mod: tarot gecmis tilsimprensi
+    excludedMods: []
+  - mod: tarot gecmis tilsimsekizlisi
+    excludedMods: []
+  - mod: tarot gecmis tilsimsovalyesi
+    excludedMods: []
+  - mod: tarot gecmis tilsimuclusu
+    excludedMods: []
+  - mod: tarot gecmis tilsimyedilisi
+    excludedMods: []
+  - mod: tarot gecmis adalet ters
+    excludedMods: []
+  - mod: tarot gecmis asiklar ters
+    excludedMods: []
+  - mod: tarot gecmis asilanadam ters
+    excludedMods: []
+  - mod: tarot gecmis ay ters
+    excludedMods: []
+  - mod: tarot gecmis aziz ters
+    excludedMods: []
+  - mod: tarot gecmis azize ters
+    excludedMods: []
+  - mod: tarot gecmis buyucu ters
+    excludedMods: []
+  - mod: tarot gecmis budala deli ters
+    excludedMods: []
+  - mod: tarot gecmis denge ters
+    excludedMods: []
+  - mod: tarot gecmis dunya ters
+    excludedMods: []
+  - mod: tarot gecmis munzevi ters
+    excludedMods: []
+  - mod: tarot gecmis guc ters
+    excludedMods: []
+  - mod: tarot gecmis gunes ters
+    excludedMods: []
+  - mod: tarot gecmis imparator ters
+    excludedMods: []
+  - mod: tarot gecmis imparatorice ters
+    excludedMods: []
+  - mod: tarot gecmis kadercarki ters
+    excludedMods: []
+  - mod: tarot gecmis mahkeme ters
+    excludedMods: []
+  - mod: tarot gecmis olum ters
+    excludedMods: []
+  - mod: tarot gecmis araba ters
+    excludedMods: []
+  - mod: tarot gecmis seytan ters
+    excludedMods: []
+  - mod: tarot gecmis yikilankule ters
+    excludedMods: []
+  - mod: tarot gecmis yildiz ters
+    excludedMods: []
+  - mod: tarot gecmis asaaltilisi ters
+    excludedMods: []
+  - mod: tarot gecmis asaasi ters
+    excludedMods: []
+  - mod: tarot gecmis asabeslisi ters
+    excludedMods: []
+  - mod: tarot gecmis asadokuzlusu ters
+    excludedMods: []
+  - mod: tarot gecmis asadokuzlusu ters
+    excludedMods: []
+  - mod: tarot gecmis asaikilisi ters
+    excludedMods: []
+  - mod: tarot gecmis asakrali ters
+    excludedMods: []
+  - mod: tarot gecmis asakralicesi ters
+    excludedMods: []
+  - mod: tarot gecmis asaonlusu ters
+    excludedMods: []
+  - mod: tarot gecmis asaprensi ters
+    excludedMods: []
+  - mod: tarot gecmis asasekizlisi ters
+    excludedMods: []
+  - mod: tarot gecmis asasovalyesi ters
+    excludedMods: []
+  - mod: tarot gecmis asauclusu ters
+    excludedMods: []
+  - mod: tarot gecmis asayedilisi ters
+    excludedMods: []
+  - mod: tarot gecmis kilicaltilisi ters
+    excludedMods: []
+  - mod: tarot gecmis kilicasi ters
+    excludedMods: []
+  - mod: tarot gecmis kilicbeslisi ters
+    excludedMods: []
+  - mod: tarot gecmis kilicdokuzlusu ters
+    excludedMods: []
+  - mod: tarot gecmis kilicdortlusu ters
+    excludedMods: []
+  - mod: tarot gecmis kilicikilisi ters
+    excludedMods: []
+  - mod: tarot gecmis kilickrali ters
+    excludedMods: []
+  - mod: tarot gecmis kilickralicesi ters
+    excludedMods: []
+  - mod: tarot gecmis kiliconlusu ters
+    excludedMods: []
+  - mod: tarot gecmis kilicprensi ters
+    excludedMods: []
+  - mod: tarot gecmis kilicsekizlisi ters
+    excludedMods: []
+  - mod: tarot gecmis kilicsovalyesi ters
+    excludedMods: []
+  - mod: tarot gecmis kilicuclusu ters
+    excludedMods: []
+  - mod: tarot gecmis kilicyedilisi ters
+    excludedMods: []
+  - mod: tarot gecmis kupaaltilisi ters
+    excludedMods: []
+  - mod: tarot gecmis kupaasi ters
+    excludedMods: []
+  - mod: tarot gecmis kupabeslisi ters
+    excludedMods: []
+  - mod: tarot gecmis kupadokuzlusu ters
+    excludedMods: []
+  - mod: tarot gecmis kupadortlusu ters
+    excludedMods: []
+  - mod: tarot gecmis kupaikilisi ters
+    excludedMods: []
+  - mod: tarot gecmis kupakrali ters
+    excludedMods: []
+  - mod: tarot gecmis kupakralicesi ters
+    excludedMods: []
+  - mod: tarot gecmis kupaonlusu ters
+    excludedMods: []
+  - mod: tarot gecmis kupaprensi ters
+    excludedMods: []
+  - mod: tarot gecmis kupasekizlisi ters
+    excludedMods: []
+  - mod: tarot gecmis kupasovalyesi ters
+    excludedMods: []
+  - mod: tarot gecmis kupauclusu ters
+    excludedMods: []
+  - mod: tarot gecmis kupayedilisi ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimaltilisi ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimasi ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimbeslisi ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimdokuzlusu ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimdortlusu ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimikilisi ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimkrali ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimkralicesi ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimonlusu ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimprensi ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimsekizlisi ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimsovalyesi ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimuclusu ters
+    excludedMods: []
+  - mod: tarot gecmis tilsimyedilisi ters
+    excludedMods: []
+  tarotSimdiModlari:
+  - mod: tarot simdi adalet
+    excludedMods:
+    - tarot gecmis adalet
+    - tarot gecmis adalet ters
+  - mod: tarot simdi asiklar
+    excludedMods:
+    - tarot gecmis asiklar
+    - tarot gecmis asiklar ters
+  - mod: tarot simdi asilanadam
+    excludedMods:
+    - tarot gecmis asilanadam
+    - tarot gecmis asilanadam ters
+  - mod: tarot simdi ay
+    excludedMods:
+    - tarot gecmis ay
+    - tarot gecmis ay ters
+  - mod: tarot simdi aziz
+    excludedMods:
+    - tarot gecmis aziz
+    - tarot gecmis aziz ters
+  - mod: tarot simdi azize
+    excludedMods:
+    - tarot gecmis azize
+    - tarot gecmis azize ters
+  - mod: tarot simdi buyucu
+    excludedMods:
+    - tarot gecmis buyucu
+    - tarot gecmis buyucu ters
+  - mod: tarot simdi budala deli
+    excludedMods:
+    - tarot gecmis budala deli
+    - tarot gecmis budala deli ters
+  - mod: tarot simdi denge
+    excludedMods:
+    - tarot gecmis denge
+    - tarot gecmis denge ters
+  - mod: tarot simdi dunya
+    excludedMods:
+    - tarot gecmis dunya
+    - tarot gecmis dunya ters
+  - mod: tarot simdi munzevi
+    excludedMods:
+    - tarot gecmis munzevi
+    - tarot gecmis munzevi ters
+  - mod: tarot simdi guc
+    excludedMods:
+    - tarot gecmis guc
+    - tarot gecmis guc ters
+  - mod: tarot simdi gunes
+    excludedMods:
+    - tarot gecmis gunes
+    - tarot gecmis gunes ters
+  - mod: tarot simdi imparator
+    excludedMods:
+    - tarot gecmis imparator
+    - tarot gecmis imparator ters
+  - mod: tarot simdi imparatorice
+    excludedMods:
+    - tarot gecmis imparatorice
+    - tarot gecmis imparatorice ters
+  - mod: tarot simdi kadercarki
+    excludedMods:
+    - tarot gecmis kadercarki
+    - tarot gecmis kadercarki ters
+  - mod: tarot simdi mahkeme
+    excludedMods:
+    - tarot gecmis mahkeme
+    - tarot gecmis mahkeme ters
+  - mod: tarot simdi olum
+    excludedMods:
+    - tarot gecmis olum
+    - tarot gecmis olum ters
+  - mod: tarot simdi araba
+    excludedMods:
+    - tarot gecmis araba
+    - tarot gecmis araba ters
+  - mod: tarot simdi seytan
+    excludedMods:
+    - tarot gecmis seytan
+    - tarot gecmis seytan ters
+  - mod: tarot simdi yikilankule
+    excludedMods:
+    - tarot gecmis yikilankule
+    - tarot gecmis yikilankule ters
+  - mod: tarot simdi yildiz
+    excludedMods:
+    - tarot gecmis yildiz
+    - tarot gecmis yildiz ters
+  - mod: tarot simdi asaaltilisi
+    excludedMods:
+    - tarot gecmis asaaltilisi
+    - tarot gecmis asaaltilisi ters
+  - mod: tarot simdi asaasi
+    excludedMods:
+    - tarot gecmis asaasi
+    - tarot gecmis asaasi ters
+  - mod: tarot simdi asabeslisi
+    excludedMods:
+    - tarot gecmis asabeslisi
+    - tarot gecmis asabeslisi ters
+  - mod: tarot simdi asadokuzlusu
+    excludedMods:
+    - tarot gecmis asadokuzlusu
+    - tarot gecmis asadokuzlusu ters
+  - mod: tarot simdi asadortlusu
+    excludedMods:
+    - tarot gecmis asadortlusu
+    - tarot gecmis asadortlusu ters
+  - mod: tarot simdi asaikilisi
+    excludedMods:
+    - tarot gecmis asaikilisi
+    - tarot gecmis asaikilisi ters
+  - mod: tarot simdi asakrali
+    excludedMods:
+    - tarot gecmis asakrali
+    - tarot gecmis asakrali ters
+  - mod: tarot simdi asakralicesi
+    excludedMods:
+    - tarot gecmis asakralicesi
+    - tarot gecmis asakralicesi ters
+  - mod: tarot simdi asaonlusu
+    excludedMods:
+    - tarot gecmis asaonlusu
+    - tarot gecmis asaonlusu ters
+  - mod: tarot simdi asaprensi
+    excludedMods:
+    - tarot gecmis asaprensi
+    - tarot gecmis asaprensi ters
+  - mod: tarot simdi asasekizlisi
+    excludedMods:
+    - tarot gecmis asasekizlisi
+    - tarot gecmis asasekizlisi ters
+  - mod: tarot simdi asasovalyesi
+    excludedMods:
+    - tarot gecmis asasovalyesi
+    - tarot gecmis asasovalyesi ters
+  - mod: tarot simdi asauclusu
+    excludedMods:
+    - tarot gecmis asauclusu
+    - tarot gecmis asauclusu ters
+  - mod: tarot simdi asayedilisi
+    excludedMods:
+    - tarot gecmis asayedilisi
+    - tarot gecmis asayedilisi ters
+  - mod: tarot simdi kilicaltilisi
+    excludedMods:
+    - tarot gecmis kilicaltilisi
+    - tarot gecmis kilicaltilisi ters
+  - mod: tarot simdi kilicasi
+    excludedMods:
+    - tarot gecmis kilicasi
+    - tarot gecmis kilicasi ters
+  - mod: tarot simdi kilicbeslisi
+    excludedMods:
+    - tarot gecmis kilicbeslisi
+    - tarot gecmis kilicbeslisi ters
+  - mod: tarot simdi kilicdokuzlusu
+    excludedMods:
+    - tarot gecmis kilicdokuzlusu
+    - tarot gecmis kilicdokuzlusu ters
+  - mod: tarot simdi kilicdortlusu
+    excludedMods:
+    - tarot gecmis kilicdortlusu
+    - tarot gecmis kilicdortlusu ters
+  - mod: tarot simdi kilicikilisi
+    excludedMods:
+    - tarot gecmis kilicikilisi
+    - tarot gecmis kilicikilisi ters
+  - mod: tarot simdi kilickrali
+    excludedMods:
+    - tarot gecmis kilickrali
+    - tarot gecmis kilickrali ters
+  - mod: tarot simdi kilickralicesi
+    excludedMods:
+    - tarot gecmis kilickralicesi
+    - tarot gecmis kilickralicesi ters
+  - mod: tarot simdi kiliconlusu
+    excludedMods:
+    - tarot gecmis kiliconlusu
+    - tarot gecmis kiliconlusu ters
+  - mod: tarot simdi kilicprensi
+    excludedMods:
+    - tarot gecmis kilicprensi
+    - tarot gecmis kilicprensi ters
+  - mod: tarot simdi kilicsekizlisi
+    excludedMods:
+    - tarot gecmis kilicsekizlisi
+    - tarot gecmis kilicsekizlisi ters
+  - mod: tarot simdi kilicsovalyesi
+    excludedMods:
+    - tarot gecmis kilicsovalyesi
+    - tarot gecmis kilicsovalyesi ters
+  - mod: tarot simdi kilicuclusu
+    excludedMods:
+    - tarot gecmis kilicuclusu
+    - tarot gecmis kilicuclusu ters
+  - mod: tarot simdi kilicyedilisi
+    excludedMods:
+    - tarot gecmis kilicyedilisi
+    - tarot gecmis kilicyedilisi ters
+  - mod: tarot simdi kupaaltilisi
+    excludedMods:
+    - tarot gecmis kupaaltilisi
+    - tarot gecmis kupaaltilisi ters
+  - mod: tarot simdi kupaasi
+    excludedMods:
+    - tarot gecmis kupaasi
+    - tarot gecmis kupaasi ters
+  - mod: tarot simdi kupabeslisi
+    excludedMods:
+    - tarot gecmis kupabeslisi
+    - tarot gecmis kupabeslisi ters
+  - mod: tarot simdi kupadokuzlusu
+    excludedMods:
+    - tarot gecmis kupadokuzlusu
+    - tarot gecmis kupadokuzlusu ters
+  - mod: tarot simdi kupadortlusu
+    excludedMods:
+    - tarot gecmis kupadortlusu
+    - tarot gecmis kupadortlusu ters
+  - mod: tarot simdi kupaikilisi
+    excludedMods:
+    - tarot gecmis kupaikilisi
+    - tarot gecmis kupaikilisi ters
+  - mod: tarot simdi kupakrali
+    excludedMods:
+    - tarot gecmis kupakrali
+    - tarot gecmis kupakrali ters
+  - mod: tarot simdi kupakralicesi
+    excludedMods:
+    - tarot gecmis kupakralicesi
+    - tarot gecmis kupakralicesi ters
+  - mod: tarot simdi kupaonlusu
+    excludedMods:
+    - tarot gecmis kupaonlusu
+    - tarot gecmis kupaonlusu ters
+  - mod: tarot simdi kupaprensi
+    excludedMods:
+    - tarot gecmis kupaprensi
+    - tarot gecmis kupaprensi ters
+  - mod: tarot simdi kupasekizlisi
+    excludedMods:
+    - tarot gecmis kupasekizlisi
+    - tarot gecmis kupasekizlisi ters
+  - mod: tarot simdi kupasovalyesi
+    excludedMods:
+    - tarot gecmis kupasovalyesi
+    - tarot gecmis kupasovalyesi ters
+  - mod: tarot simdi kupauclusu
+    excludedMods:
+    - tarot gecmis kupauclusu
+    - tarot gecmis kupauclusu ters
+  - mod: tarot simdi kupayedilisi
+    excludedMods:
+    - tarot gecmis kupayedilisi
+    - tarot gecmis kupayedilisi ters
+  - mod: tarot simdi tilsimaltilisi
+    excludedMods:
+    - tarot gecmis tilsimaltilisi
+    - tarot gecmis tilsimaltilisi ters
+  - mod: tarot simdi tilsimasi
+    excludedMods:
+    - tarot gecmis tilsimasi
+    - tarot gecmis tilsimasi ters
+  - mod: tarot simdi tilsimbeslisi
+    excludedMods:
+    - tarot gecmis tilsimbeslisi
+    - tarot gecmis tilsimbeslisi ters
+  - mod: tarot simdi tilsimdokuzlusu
+    excludedMods:
+    - tarot gecmis tilsimdokuzlusu
+    - tarot gecmis tilsimdokuzlusu ters
+  - mod: tarot simdi tilsimdortlusu
+    excludedMods:
+    - tarot gecmis tilsimdortlusu
+    - tarot gecmis tilsimdortlusu ters
+  - mod: tarot simdi tilsimikilisi
+    excludedMods:
+    - tarot gecmis tilsimikilisi
+    - tarot gecmis tilsimikilisi ters
+  - mod: tarot simdi tilsimkrali
+    excludedMods:
+    - tarot gecmis tilsimkrali
+    - tarot gecmis tilsimkrali ters
+  - mod: tarot simdi tilsimkralicesi
+    excludedMods:
+    - tarot gecmis tilsimkralicesi
+    - tarot gecmis tilsimkralicesi ters
+  - mod: tarot simdi tilsimonlusu
+    excludedMods:
+    - tarot gecmis tilsimonlusu
+    - tarot gecmis tilsimonlusu ters
+  - mod: tarot simdi tilsimprensi
+    excludedMods:
+    - tarot gecmis tilsimprensi
+    - tarot gecmis tilsimprensi ters
+  - mod: tarot simdi tilsimsekizlisi
+    excludedMods:
+    - tarot gecmis tilsimsekizlisi
+    - tarot gecmis tilsimsekizlisi ters
+  - mod: tarot simdi tilsimsovalyesi
+    excludedMods:
+    - tarot gecmis tilsimsovalyesi
+    - tarot gecmis tilsimsovalyesi ters
+  - mod: tarot simdi tilsimuclusu
+    excludedMods:
+    - tarot gecmis tilsimuclusu
+    - tarot gecmis tilsimuclusu ters
+  - mod: tarot simdi tilsimyedilisi
+    excludedMods:
+    - tarot gecmis tilsimyedilisi
+    - tarot gecmis tilsimyedilisi ters
+  - mod: tarot simdi adalet ters
+    excludedMods:
+    - tarot gecmis adalet ters
+    - tarot gecmis adalet
+  - mod: tarot simdi asiklar ters
+    excludedMods:
+    - tarot gecmis asiklar ters
+    - tarot gecmis asiklar
+  - mod: tarot simdi asilanadam ters
+    excludedMods:
+    - tarot gecmis asilanadam ters
+    - tarot gecmis asilanadam
+  - mod: tarot simdi ay ters
+    excludedMods:
+    - tarot gecmis ay ters
+    - tarot gecmis ay
+  - mod: tarot simdi aziz ters
+    excludedMods:
+    - tarot gecmis aziz ters
+    - tarot gecmis aziz
+  - mod: tarot simdi azize ters
+    excludedMods:
+    - tarot gecmis azize ters
+    - tarot gecmis azize
+  - mod: tarot simdi buyucu ters
+    excludedMods:
+    - tarot gecmis buyucu ters
+    - tarot gecmis buyucu
+  - mod: tarot simdi budala deli ters
+    excludedMods:
+    - tarot gecmis budala deli ters
+    - tarot gecmis budala deli
+  - mod: tarot simdi denge ters
+    excludedMods:
+    - tarot gecmis denge ters
+    - tarot gecmis denge
+  - mod: tarot simdi dunya ters
+    excludedMods:
+    - tarot gecmis dunya ters
+    - tarot gecmis dunya
+  - mod: tarot simdi munzevi ters
+    excludedMods:
+    - tarot gecmis munzevi ters
+    - tarot gecmis munzevi
+  - mod: tarot simdi guc ters
+    excludedMods:
+    - tarot gecmis guc ters
+    - tarot gecmis guc
+  - mod: tarot simdi gunes ters
+    excludedMods:
+    - tarot gecmis gunes ters
+    - tarot gecmis gunes
+  - mod: tarot simdi imparator ters
+    excludedMods:
+    - tarot gecmis imparator ters
+    - tarot gecmis imparator
+  - mod: tarot simdi imparatorice ters
+    excludedMods:
+    - tarot gecmis imparatorice ters
+    - tarot gecmis imparatorice
+  - mod: tarot simdi kadercarki ters
+    excludedMods:
+    - tarot gecmis kadercarki ters
+    - tarot gecmis kadercarki
+  - mod: tarot simdi mahkeme ters
+    excludedMods:
+    - tarot gecmis mahkeme ters
+    - tarot gecmis mahkeme
+  - mod: tarot simdi olum ters
+    excludedMods:
+    - tarot gecmis olum ters
+    - tarot gecmis olum
+  - mod: tarot simdi araba ters
+    excludedMods:
+    - tarot gecmis araba ters
+    - tarot gecmis araba
+  - mod: tarot simdi seytan ters
+    excludedMods:
+    - tarot gecmis seytan ters
+    - tarot gecmis seytan
+  - mod: tarot simdi yikilankule ters
+    excludedMods:
+    - tarot gecmis yikilankule ters
+    - tarot gecmis yikilankule
+  - mod: tarot simdi yildiz ters
+    excludedMods:
+    - tarot gecmis yildiz ters
+    - tarot gecmis yildiz
+  - mod: tarot simdi asaaltilisi ters
+    excludedMods:
+    - tarot gecmis asaaltilisi ters
+    - tarot gecmis asaaltilisi
+  - mod: tarot simdi asaasi ters
+    excludedMods:
+    - tarot gecmis asaasi ters
+    - tarot gecmis asaasi
+  - mod: tarot simdi asabeslisi ters
+    excludedMods:
+    - tarot gecmis asabeslisi ters
+    - tarot gecmis asabeslisi
+  - mod: tarot simdi asadokuzlusu ters
+    excludedMods:
+    - tarot gecmis asadokuzlusu ters
+    - tarot gecmis asadokuzlusu
+  - mod: tarot simdi asadortlusu ters
+    excludedMods:
+    - tarot gecmis asadortlusu ters
+    - tarot gecmis asadortlusu
+  - mod: tarot simdi asaikilisi ters
+    excludedMods:
+    - tarot gecmis asaikilisi ters
+    - tarot gecmis asaikilisi
+  - mod: tarot simdi asakrali ters
+    excludedMods:
+    - tarot gecmis asakrali ters
+    - tarot gecmis asakrali
+  - mod: tarot simdi asakralicesi ters
+    excludedMods:
+    - tarot gecmis asakralicesi ters
+    - tarot gecmis asakralicesi
+  - mod: tarot simdi asaonlusu ters
+    excludedMods:
+    - tarot gecmis asaonlusu ters
+    - tarot gecmis asaonlusu
+  - mod: tarot simdi asaprensi ters
+    excludedMods:
+    - tarot gecmis asaprensi ters
+    - tarot gecmis asaprensi
+  - mod: tarot simdi asasekizlisi ters
+    excludedMods:
+    - tarot gecmis asasekizlisi ters
+    - tarot gecmis asasekizlisi
+  - mod: tarot simdi asasovalyesi ters
+    excludedMods:
+    - tarot gecmis asasovalyesi ters
+    - tarot gecmis asasovalyesi
+  - mod: tarot simdi asauclusu ters
+    excludedMods:
+    - tarot gecmis asauclusu ters
+    - tarot gecmis asauclusu
+  - mod: tarot simdi asayedilisi ters
+    excludedMods:
+    - tarot gecmis asayedilisi ters
+    - tarot gecmis asayedilisi
+  - mod: tarot simdi kilicaltilisi ters
+    excludedMods:
+    - tarot gecmis kilicaltilisi ters
+    - tarot gecmis kilicaltilisi
+  - mod: tarot simdi kilicasi ters
+    excludedMods:
+    - tarot gecmis kilicasi ters
+    - tarot gecmis kilicasi
+  - mod: tarot simdi kilicbeslisi ters
+    excludedMods:
+    - tarot gecmis kilicbeslisi ters
+    - tarot gecmis kilicbeslisi
+  - mod: tarot simdi kilicdokuzlusu ters
+    excludedMods:
+    - tarot gecmis kilicdokuzlusu ters
+    - tarot gecmis kilicdokuzlusu
+  - mod: tarot simdi kilicdortlusu ters
+    excludedMods:
+    - tarot gecmis kilicdortlusu ters
+    - tarot gecmis kilicdortlusu
+  - mod: tarot simdi kilicikilisi ters
+    excludedMods:
+    - tarot gecmis kilicikilisi ters
+    - tarot gecmis kilicikilisi
+  - mod: tarot simdi kilickrali ters
+    excludedMods:
+    - tarot gecmis kilickrali ters
+    - tarot gecmis kilickrali
+  - mod: tarot simdi kilickralicesi ters
+    excludedMods:
+    - tarot gecmis kilickralicesi ters
+    - tarot gecmis kilickralicesi
+  - mod: tarot simdi kiliconlusu ters
+    excludedMods:
+    - tarot gecmis kiliconlusu ters
+    - tarot gecmis kiliconlusu
+  - mod: tarot simdi kilicprensi ters
+    excludedMods:
+    - tarot gecmis kilicprensi ters
+    - tarot gecmis kilicprensi
+  - mod: tarot simdi kilicsekizlisi ters
+    excludedMods:
+    - tarot gecmis kilicsekizlisi ters
+    - tarot gecmis kilicsekizlisi
+  - mod: tarot simdi kilicsovalyesi ters
+    excludedMods:
+    - tarot gecmis kilicsovalyesi ters
+    - tarot gecmis kilicsovalyesi
+  - mod: tarot simdi kilicuclusu ters
+    excludedMods:
+    - tarot gecmis kilicuclusu ters
+    - tarot gecmis kilicuclusu
+  - mod: tarot simdi kilicyedilisi ters
+    excludedMods:
+    - tarot gecmis kilicyedilisi ters
+    - tarot gecmis kilicyedilisi
+  - mod: tarot simdi kupaaltilisi ters
+    excludedMods:
+    - tarot gecmis kupaaltilisi ters
+    - tarot gecmis kupaaltilisi
+  - mod: tarot simdi kupaasi ters
+    excludedMods:
+    - tarot gecmis kupaasi ters
+    - tarot gecmis kupaasi
+  - mod: tarot simdi kupabeslisi ters
+    excludedMods:
+    - tarot gecmis kupabeslisi ters
+    - tarot gecmis kupabeslisi
+  - mod: tarot simdi kupadokuzlusu ters
+    excludedMods:
+    - tarot gecmis kupadokuzlusu ters
+    - tarot gecmis kupadokuzlusu
+  - mod: tarot simdi kupadortlusu ters
+    excludedMods:
+    - tarot gecmis kupadortlusu ters
+    - tarot gecmis kupadortlusu
+  - mod: tarot simdi kupaikilisi ters
+    excludedMods:
+    - tarot gecmis kupaikilisi ters
+    - tarot gecmis kupaikilisi
+  - mod: tarot simdi kupakrali ters
+    excludedMods:
+    - tarot gecmis kupakrali ters
+    - tarot gecmis kupakrali
+  - mod: tarot simdi kupakralicesi ters
+    excludedMods:
+    - tarot gecmis kupakralicesi ters
+    - tarot gecmis kupakralicesi
+  - mod: tarot simdi kupaonlusu ters
+    excludedMods:
+    - tarot gecmis kupaonlusu ters
+    - tarot gecmis kupaonlusu
+  - mod: tarot simdi kupaprensi ters
+    excludedMods:
+    - tarot gecmis kupaprensi ters
+    - tarot gecmis kupaprensi
+  - mod: tarot simdi kupasekizlisi ters
+    excludedMods:
+    - tarot gecmis kupasekizlisi ters
+    - tarot gecmis kupasekizlisi
+  - mod: tarot simdi kupasovalyesi ters
+    excludedMods:
+    - tarot gecmis kupasovalyesi ters
+    - tarot gecmis kupasovalyesi
+  - mod: tarot simdi kupauclusu ters
+    excludedMods:
+    - tarot gecmis kupauclusu ters
+    - tarot gecmis kupauclusu
+  - mod: tarot simdi kupayedilisi ters
+    excludedMods:
+    - tarot gecmis kupayedilisi ters
+    - tarot gecmis kupayedilisi
+  - mod: tarot simdi tilsimaltilisi ters
+    excludedMods:
+    - tarot gecmis tilsimaltilisi ters
+    - tarot gecmis tilsimaltilisi
+  - mod: tarot simdi tilsimasi ters
+    excludedMods:
+    - tarot gecmis tilsimasi ters
+    - tarot gecmis tilsimasi
+  - mod: tarot simdi tilsimbeslisi ters
+    excludedMods:
+    - tarot gecmis tilsimbeslisi ters
+    - tarot gecmis tilsimbeslisi
+  - mod: tarot simdi tilsimdokuzlusu ters
+    excludedMods:
+    - tarot gecmis tilsimdokuzlusu ters
+    - tarot gecmis tilsimdokuzlusu
+  - mod: tarot simdi tilsimdortlusu ters
+    excludedMods:
+    - tarot gecmis tilsimdortlusu ters
+    - tarot gecmis tilsimdortlusu
+  - mod: tarot simdi tilsimikilisi ters
+    excludedMods:
+    - tarot gecmis tilsimikilisi ters
+    - tarot gecmis tilsimikilisi
+  - mod: tarot simdi tilsimkrali ters
+    excludedMods:
+    - tarot gecmis tilsimkrali ters
+    - tarot gecmis tilsimkrali
+  - mod: tarot simdi tilsimkralicesi ters
+    excludedMods:
+    - tarot gecmis tilsimkralicesi ters
+    - tarot gecmis tilsimkralicesi
+  - mod: tarot simdi tilsimonlusu ters
+    excludedMods:
+    - tarot gecmis tilsimonlusu ters
+    - tarot gecmis tilsimonlusu
+  - mod: tarot simdi tilsimprensi ters
+    excludedMods:
+    - tarot gecmis tilsimprensi ters
+    - tarot gecmis tilsimprensi
+  - mod: tarot simdi tilsimsekizlisi ters
+    excludedMods:
+    - tarot gecmis tilsimsekizlisi ters
+    - tarot gecmis tilsimsekizlisi
+  - mod: tarot simdi tilsimsovalyesi ters
+    excludedMods:
+    - tarot gecmis tilsimsovalyesi ters
+    - tarot gecmis tilsimsovalyesi
+  - mod: tarot simdi tilsimuclusu ters
+    excludedMods:
+    - tarot gecmis tilsimuclusu ters
+    - tarot gecmis tilsimuclusu
+  - mod: tarot simdi tilsimyedilisi ters
+    excludedMods:
+    - tarot gecmis tilsimyedilisi ters
+    - tarot gecmis tilsimyedilisi
+  tarotGelecekModlari:
+  - mod: tarot gelecek adalet
+    excludedMods:
+    - tarot gecmis adalet
+    - tarot simdi adalet
+    - tarot gecmis adalet ters
+    - tarot simdi adalet ters
+  - mod: tarot gelecek asiklar
+    excludedMods:
+    - tarot gecmis asiklar
+    - tarot simdi asiklar
+    - tarot gecmis asiklar ters
+    - tarot simdi asiklar ters
+  - mod: tarot gelecek asilanadam
+    excludedMods:
+    - tarot gecmis asilanadam
+    - tarot simdi asilanadam
+    - tarot gecmis asilanadam ters
+    - tarot simdi asilanadam ters
+  - mod: tarot gelecek ay
+    excludedMods:
+    - tarot gecmis ay
+    - tarot simdi ay
+    - tarot gecmis ay ters
+    - tarot simdi ay ters
+  - mod: tarot gelecek aziz
+    excludedMods:
+    - tarot gecmis aziz
+    - tarot simdi aziz
+    - tarot gecmis aziz ters
+    - tarot simdi aziz ters
+  - mod: tarot gelecek azize
+    excludedMods:
+    - tarot gecmis azize
+    - tarot simdi azize
+    - tarot gecmis azize ters
+    - tarot simdi azize ters
+  - mod: tarot gelecek buyucu
+    excludedMods:
+    - tarot gecmis buyucu
+    - tarot simdi buyucu
+    - tarot gecmis buyucu ters
+    - tarot simdi buyucu ters
+  - mod: tarot gelecek budala deli
+    excludedMods:
+    - tarot gecmis budala deli
+    - tarot simdi budala deli
+    - tarot gecmis budala deli ters
+    - tarot simdi budala deli ters
+  - mod: tarot gelecek denge
+    excludedMods:
+    - tarot gecmis denge
+    - tarot simdi denge
+    - tarot gecmis denge ters
+    - tarot simdi denge ters
+  - mod: tarot gelecek dunya
+    excludedMods:
+    - tarot gecmis dunya
+    - tarot simdi dunya
+    - tarot gecmis dunya ters
+    - tarot simdi dunya ters
+  - mod: tarot gelecek munzevi
+    excludedMods:
+    - tarot gecmis munzevi
+    - tarot simdi munzevi
+    - tarot gecmis munzevi ters
+    - tarot simdi munzevi ters
+  - mod: tarot gelecek guc
+    excludedMods:
+    - tarot gecmis guc
+    - tarot simdi guc
+    - tarot gecmis guc ters
+    - tarot simdi guc ters
+  - mod: tarot gelecek gunes
+    excludedMods:
+    - tarot gecmis gunes
+    - tarot simdi gunes
+    - tarot gecmis gunes ters
+    - tarot simdi gunes ters
+  - mod: tarot gelecek imparator
+    excludedMods:
+    - tarot gecmis imparator
+    - tarot simdi imparator
+    - tarot gecmis imparator ters
+    - tarot simdi imparator ters
+  - mod: tarot gelecek imparatorice
+    excludedMods:
+    - tarot gecmis imparatorice
+    - tarot simdi imparatorice
+    - tarot gecmis imparatorice ters
+    - tarot simdi imparatorice ters
+  - mod: tarot gelecek kadercarki
+    excludedMods:
+    - tarot gecmis kadercarki
+    - tarot simdi kadercarki
+    - tarot gecmis kadercarki ters
+    - tarot simdi kadercarki ters
+  - mod: tarot gelecek mahkeme
+    excludedMods:
+    - tarot gecmis mahkeme
+    - tarot simdi mahkeme
+    - tarot gecmis mahkeme ters
+    - tarot simdi mahkeme ters
+  - mod: tarot gelecek olum
+    excludedMods:
+    - tarot gecmis olum
+    - tarot simdi olum
+    - tarot gecmis olum ters
+    - tarot simdi olum ters
+  - mod: tarot gelecek araba
+    excludedMods:
+    - tarot gecmis araba
+    - tarot simdi araba
+    - tarot gecmis araba ters
+    - tarot simdi araba ters
+  - mod: tarot gelecek seytan
+    excludedMods:
+    - tarot gecmis seytan
+    - tarot simdi seytan
+    - tarot gecmis seytan ters
+    - tarot simdi seytan ters
+  - mod: tarot gelecek yikilankule
+    excludedMods:
+    - tarot gecmis yikilankule
+    - tarot simdi yikilankule
+    - tarot gecmis yikilankule ters
+    - tarot simdi yikilankule ters
+  - mod: tarot gelecek yildiz
+    excludedMods:
+    - tarot gecmis yildiz
+    - tarot simdi yildiz
+    - tarot gecmis yildiz ters
+    - tarot simdi yildiz ters
+  - mod: tarot gelecek asaaltilisi
+    excludedMods:
+    - tarot gecmis asaaltilisi
+    - tarot simdi asaaltilisi
+    - tarot gecmis asaaltilisi ters
+    - tarot simdi asaaltilisi ters
+  - mod: tarot gelecek asaasi
+    excludedMods:
+    - tarot gecmis asaasi
+    - tarot simdi asaasi
+    - tarot gecmis asaasi ters
+    - tarot simdi asaasi ters
+  - mod: tarot gelecek asabeslisi
+    excludedMods:
+    - tarot gecmis asabeslisi
+    - tarot simdi asabeslisi
+    - tarot gecmis asabeslisi ters
+    - tarot simdi asabeslisi ters
+  - mod: tarot gelecek asadokuzlusu
+    excludedMods:
+    - tarot gecmis asadokuzlusu
+    - tarot simdi asadokuzlusu
+    - tarot gecmis asadokuzlusu ters
+    - tarot simdi asadokuzlusu ters
+  - mod: tarot gelecek asadortlusu
+    excludedMods:
+    - tarot gecmis asadortlusu
+    - tarot simdi asadortlusu
+    - tarot gecmis asadortlusu ters
+    - tarot simdi asadortlusu ters
+  - mod: tarot gelecek asaikilisi
+    excludedMods:
+    - tarot gecmis asaikilisi
+    - tarot simdi asaikilisi
+    - tarot gecmis asaikilisi ters
+    - tarot simdi asaikilisi ters
+  - mod: tarot gelecek asakrali
+    excludedMods:
+    - tarot gecmis asakrali
+    - tarot simdi asakrali
+    - tarot gecmis asakrali ters
+    - tarot simdi asakrali ters
+  - mod: tarot gelecek asakralicesi
+    excludedMods:
+    - tarot gecmis asakralicesi
+    - tarot simdi asakralicesi
+    - tarot gecmis asakralicesi ters
+    - tarot simdi asakralicesi ters
+  - mod: tarot gelecek asaonlusu
+    excludedMods:
+    - tarot gecmis asaonlusu
+    - tarot simdi asaonlusu
+    - tarot gecmis asaonlusu ters
+    - tarot simdi asaonlusu ters
+  - mod: tarot gelecek asaprensi
+    excludedMods:
+    - tarot gecmis asaprensi
+    - tarot simdi asaprensi
+    - tarot gecmis asaprensi ters
+    - tarot simdi asaprensi ters
+  - mod: tarot gelecek asasekizlisi
+    excludedMods:
+    - tarot gecmis asasekizlisi
+    - tarot simdi asasekizlisi
+    - tarot gecmis asasekizlisi ters
+    - tarot simdi asasekizlisi ters
+  - mod: tarot gelecek asasovalyesi
+    excludedMods:
+    - tarot gecmis asasovalyesi
+    - tarot simdi asasovalyesi
+    - tarot gecmis asasovalyesi ters
+    - tarot simdi asasovalyesi ters
+  - mod: tarot gelecek asauclusu
+    excludedMods:
+    - tarot gecmis asauclusu
+    - tarot simdi asauclusu
+    - tarot gecmis asauclusu ters
+    - tarot simdi asauclusu ters
+  - mod: tarot gelecek asayedilisi
+    excludedMods:
+    - tarot gecmis asayedilisi
+    - tarot simdi asayedilisi
+    - tarot gecmis asayedilisi ters
+    - tarot simdi asayedilisi ters
+  - mod: tarot gelecek kilicaltilisi
+    excludedMods:
+    - tarot gecmis kilicaltilisi
+    - tarot simdi kilicaltilisi
+    - tarot gecmis kilicaltilisi ters
+    - tarot simdi kilicaltilisi ters
+  - mod: tarot gelecek kilicasi
+    excludedMods:
+    - tarot gecmis kilicasi
+    - tarot simdi kilicasi
+    - tarot gecmis kilicasi ters
+    - tarot simdi kilicasi ters
+  - mod: tarot gelecek kilicbeslisi
+    excludedMods:
+    - tarot gecmis kilicbeslisi
+    - tarot simdi kilicbeslisi
+    - tarot gecmis kilicbeslisi ters
+    - tarot simdi kilicbeslisi ters
+  - mod: tarot gelecek kilicdokuzlusu
+    excludedMods:
+    - tarot gecmis kilicdokuzlusu
+    - tarot simdi kilicdokuzlusu
+    - tarot gecmis kilicdokuzlusu ters
+    - tarot simdi kilicdokuzlusu ters
+  - mod: tarot gelecek kilicdortlusu
+    excludedMods:
+    - tarot gecmis kilicdortlusu
+    - tarot simdi kilicdortlusu
+    - tarot gecmis kilicdortlusu ters
+    - tarot simdi kilicdortlusu ters
+  - mod: tarot gelecek kilicikilisi
+    excludedMods:
+    - tarot gecmis kilicikilisi
+    - tarot simdi kilicikilisi
+    - tarot gecmis kilicikilisi ters
+    - tarot simdi kilicikilisi ters
+  - mod: tarot gelecek kilickrali
+    excludedMods:
+    - tarot gecmis kilickrali
+    - tarot simdi kilickrali
+    - tarot gecmis kilickrali ters
+    - tarot simdi kilickrali ters
+  - mod: tarot gelecek kilickralicesi
+    excludedMods:
+    - tarot gecmis kilickralicesi
+    - tarot simdi kilickralicesi
+    - tarot gecmis kilickralicesi ters
+    - tarot simdi kilickralicesi ters
+  - mod: tarot gelecek kiliconlusu
+    excludedMods:
+    - tarot gecmis kiliconlusu
+    - tarot simdi kiliconlusu
+    - tarot gecmis kiliconlusu ters
+    - tarot simdi kiliconlusu ters
+  - mod: tarot gelecek kilicprensi
+    excludedMods:
+    - tarot gecmis kilicprensi
+    - tarot simdi kilicprensi
+    - tarot gecmis kilicprensi ters
+    - tarot simdi kilicprensi ters
+  - mod: tarot gelecek kilicsekizlisi
+    excludedMods:
+    - tarot gecmis kilicsekizlisi
+    - tarot simdi kilicsekizlisi
+    - tarot gecmis kilicsekizlisi ters
+    - tarot simdi kilicsekizlisi ters
+  - mod: tarot gelecek kilicsovalyesi
+    excludedMods:
+    - tarot gecmis kilicsovalyesi
+    - tarot simdi kilicsovalyesi
+    - tarot gecmis kilicsovalyesi ters
+    - tarot simdi kilicsovalyesi ters
+  - mod: tarot gelecek kilicuclusu
+    excludedMods:
+    - tarot gecmis kilicuclusu
+    - tarot simdi kilicuclusu
+    - tarot gecmis kilicuclusu ters
+    - tarot simdi kilicuclusu ters
+  - mod: tarot gelecek kilicyedilisi
+    excludedMods:
+    - tarot gecmis kilicyedilisi
+    - tarot simdi kilicyedilisi
+    - tarot gecmis kilicyedilisi ters
+    - tarot simdi kilicyedilisi ters
+  - mod: tarot gelecek kupaaltilisi
+    excludedMods:
+    - tarot gecmis kupaaltilisi
+    - tarot simdi kupaaltilisi
+    - tarot gecmis kupaaltilisi ters
+    - tarot simdi kupaaltilisi ters
+  - mod: tarot gelecek kupaasi
+    excludedMods:
+    - tarot gecmis kupaasi
+    - tarot simdi kupaasi
+    - tarot gecmis kupaasi ters
+    - tarot simdi kupaasi ters
+  - mod: tarot gelecek kupabeslisi
+    excludedMods:
+    - tarot gecmis kupabeslisi
+    - tarot simdi kupabeslisi
+    - tarot gecmis kupabeslisi ters
+    - tarot simdi kupabeslisi ters
+  - mod: tarot gelecek kupadokuzlusu
+    excludedMods:
+    - tarot gecmis kupadokuzlusu
+    - tarot simdi kupadokuzlusu
+    - tarot gecmis kupadokuzlusu ters
+    - tarot simdi kupadokuzlusu ters
+  - mod: tarot gelecek kupadortlusu
+    excludedMods:
+    - tarot gecmis kupadortlusu
+    - tarot simdi kupadortlusu
+    - tarot gecmis kupadortlusu ters
+    - tarot simdi kupadortlusu ters
+  - mod: tarot gelecek kupaikilisi
+    excludedMods:
+    - tarot gecmis kupaikilisi
+    - tarot simdi kupaikilisi
+    - tarot gecmis kupaikilisi ters
+    - tarot simdi kupaikilisi ters
+  - mod: tarot gelecek kupakrali
+    excludedMods:
+    - tarot gecmis kupakrali
+    - tarot simdi kupakrali
+    - tarot gecmis kupakrali ters
+    - tarot simdi kupakrali ters
+  - mod: tarot gelecek kupakralicesi
+    excludedMods:
+    - tarot gecmis kupakralicesi
+    - tarot simdi kupakralicesi
+    - tarot gecmis kupakralicesi ters
+    - tarot simdi kupakralicesi ters
+  - mod: tarot gelecek kupaonlusu
+    excludedMods:
+    - tarot gecmis kupaonlusu
+    - tarot simdi kupaonlusu
+    - tarot gecmis kupaonlusu ters
+    - tarot simdi kupaonlusu ters
+  - mod: tarot gelecek kupaprensi
+    excludedMods:
+    - tarot gecmis kupaprensi
+    - tarot simdi kupaprensi
+    - tarot gecmis kupaprensi ters
+    - tarot simdi kupaprensi ters
+  - mod: tarot gelecek kupasekizlisi
+    excludedMods:
+    - tarot gecmis kupasekizlisi
+    - tarot simdi kupasekizlisi
+    - tarot gecmis kupasekizlisi ters
+    - tarot simdi kupasekizlisi ters
+  - mod: tarot gelecek kupasovalyesi
+    excludedMods:
+    - tarot gecmis kupasovalyesi
+    - tarot simdi kupasovalyesi
+    - tarot gecmis kupasovalyesi ters
+    - tarot simdi kupasovalyesi ters
+  - mod: tarot gelecek kupauclusu
+    excludedMods:
+    - tarot gecmis kupauclusu
+    - tarot simdi kupauclusu
+    - tarot gecmis kupauclusu ters
+    - tarot simdi kupauclusu ters
+  - mod: tarot gelecek kupayedilisi
+    excludedMods:
+    - tarot gecmis kupayedilisi
+    - tarot simdi kupayedilisi
+    - tarot gecmis kupayedilisi ters
+    - tarot simdi kupayedilisi ters
+  - mod: tarot gelecek tilsimaltilisi
+    excludedMods:
+    - tarot gecmis tilsimaltilisi
+    - tarot simdi tilsimaltilisi
+    - tarot gecmis tilsimaltilisi ters
+    - tarot simdi tilsimaltilisi ters
+  - mod: tarot gelecek tilsimasi
+    excludedMods:
+    - tarot gecmis tilsimasi
+    - tarot simdi tilsimasi
+    - tarot gecmis tilsimasi ters
+    - tarot simdi tilsimasi ters
+  - mod: tarot gelecek tilsimbeslisi
+    excludedMods:
+    - tarot gecmis tilsimbeslisi
+    - tarot simdi tilsimbeslisi
+    - tarot gecmis tilsimbeslisi ters
+    - tarot simdi tilsimbeslisi ters
+  - mod: tarot gelecek tilsimdokuzlusu
+    excludedMods:
+    - tarot gecmis tilsimdokuzlusu
+    - tarot simdi tilsimdokuzlusu
+    - tarot gecmis tilsimdokuzlusu ters
+    - tarot simdi tilsimdokuzlusu ters
+  - mod: tarot gelecek tilsimdortlusu
+    excludedMods:
+    - tarot gecmis tilsimdortlusu
+    - tarot simdi tilsimdortlusu
+    - tarot gecmis tilsimdortlusu ters
+    - tarot simdi tilsimdortlusu ters
+  - mod: tarot gelecek tilsimikilisi
+    excludedMods:
+    - tarot gecmis tilsimikilisi
+    - tarot simdi tilsimikilisi
+    - tarot gecmis tilsimikilisi ters
+    - tarot simdi tilsimikilisi ters
+  - mod: tarot gelecek tilsimkrali
+    excludedMods:
+    - tarot gecmis tilsimkrali
+    - tarot simdi tilsimkrali
+    - tarot gecmis tilsimkrali ters
+    - tarot simdi tilsimkrali ters
+  - mod: tarot gelecek tilsimkralicesi
+    excludedMods:
+    - tarot gecmis tilsimkralicesi
+    - tarot simdi tilsimkralicesi
+    - tarot gecmis tilsimkralicesi ters
+    - tarot simdi tilsimkralicesi ters
+  - mod: tarot gelecek tilsimonlusu
+    excludedMods:
+    - tarot gecmis tilsimonlusu
+    - tarot simdi tilsimonlusu
+    - tarot gecmis tilsimonlusu ters
+    - tarot simdi tilsimonlusu ters
+  - mod: tarot gelecek tilsimprensi
+    excludedMods:
+    - tarot gecmis tilsimprensi
+    - tarot simdi tilsimprensi
+    - tarot gecmis tilsimprensi ters
+    - tarot simdi tilsimprensi ters
+  - mod: tarot gelecek tilsimsekizlisi
+    excludedMods:
+    - tarot gecmis tilsimsekizlisi
+    - tarot simdi tilsimsekizlisi
+    - tarot gecmis tilsimsekizlisi ters
+    - tarot simdi tilsimsekizlisi ters
+  - mod: tarot gelecek tilsimsovalyesi
+    excludedMods:
+    - tarot gecmis tilsimsovalyesi
+    - tarot simdi tilsimsovalyesi
+    - tarot gecmis tilsimsovalyesi ters
+    - tarot simdi tilsimsovalyesi ters
+  - mod: tarot gelecek tilsimuclusu
+    excludedMods:
+    - tarot gecmis tilsimuclusu
+    - tarot simdi tilsimuclusu
+    - tarot gecmis tilsimuclusu ters
+    - tarot simdi tilsimuclusu ters
+  - mod: tarot gelecek tilsimyedilisi
+    excludedMods:
+    - tarot gecmis tilsimyedilisi
+    - tarot simdi tilsimyedilisi
+    - tarot gecmis tilsimyedilisi ters
+    - tarot simdi tilsimyedilisi ters
+  - mod: tarot gelecek adalet ters
+    excludedMods:
+    - tarot gecmis adalet ters
+    - tarot simdi adalet ters
+    - tarot gecmis adalet
+    - tarot simdi adalet
+  - mod: tarot gelecek asiklar ters
+    excludedMods:
+    - tarot gecmis asiklar ters
+    - tarot simdi asiklar ters
+    - tarot gecmis asiklar
+    - tarot simdi asiklar
+  - mod: tarot gelecek asilanadam ters
+    excludedMods:
+    - tarot gecmis asilanadam ters
+    - tarot simdi asilanadam ters
+    - tarot gecmis asilanadam
+    - tarot simdi asilanadam
+  - mod: tarot gelecek ay ters
+    excludedMods:
+    - tarot gecmis ay ters
+    - tarot simdi ay ters
+    - tarot gecmis ay
+    - tarot simdi ay
+  - mod: tarot gelecek aziz ters
+    excludedMods:
+    - tarot gecmis aziz ters
+    - tarot simdi aziz ters
+    - tarot gecmis aziz
+    - tarot simdi aziz
+  - mod: tarot gelecek azize ters
+    excludedMods:
+    - tarot gecmis azize ters
+    - tarot simdi azize ters
+    - tarot gecmis azize
+    - tarot simdi azize
+  - mod: tarot gelecek buyucu ters
+    excludedMods:
+    - tarot gecmis buyucu ters
+    - tarot simdi buyucu ters
+    - tarot gecmis buyucu
+    - tarot simdi buyucu
+  - mod: tarot gelecek budala deli ters
+    excludedMods:
+    - tarot gecmis budala deli ters
+    - tarot simdi budala deli ters
+    - tarot gecmis budala deli
+    - tarot simdi budala deli
+  - mod: tarot gelecek denge ters
+    excludedMods:
+    - tarot gecmis denge ters
+    - tarot simdi denge ters
+    - tarot gecmis denge
+    - tarot simdi denge
+  - mod: tarot gelecek dunya ters
+    excludedMods:
+    - tarot gecmis dunya ters
+    - tarot simdi dunya ters
+    - tarot gecmis dunya
+    - tarot simdi dunya
+  - mod: tarot gelecek munzevi ters
+    excludedMods:
+    - tarot gecmis munzevi ters
+    - tarot simdi munzevi ters
+    - tarot gecmis munzevi
+    - tarot simdi munzevi
+  - mod: tarot gelecek guc ters
+    excludedMods:
+    - tarot gecmis guc ters
+    - tarot simdi guc ters
+    - tarot gecmis guc
+    - tarot simdi guc
+  - mod: tarot gelecek gunes ters
+    excludedMods:
+    - tarot gecmis gunes ters
+    - tarot simdi gunes ters
+    - tarot gecmis gunes
+    - tarot simdi gunes
+  - mod: tarot gelecek imparator ters
+    excludedMods:
+    - tarot gecmis imparator ters
+    - tarot simdi imparator ters
+    - tarot gecmis imparator
+    - tarot simdi imparator
+  - mod: tarot gelecek imparatorice ters
+    excludedMods:
+    - tarot gecmis imparatorice ters
+    - tarot simdi imparatorice ters
+    - tarot gecmis imparatorice
+    - tarot simdi imparatorice
+  - mod: tarot gelecek kadercarki ters
+    excludedMods:
+    - tarot gecmis kadercarki ters
+    - tarot simdi kadercarki ters
+    - tarot gecmis kadercarki
+    - tarot simdi kadercarki
+  - mod: tarot gelecek mahkeme ters
+    excludedMods:
+    - tarot gecmis mahkeme ters
+    - tarot simdi mahkeme ters
+    - tarot gecmis mahkeme
+    - tarot simdi mahkeme
+  - mod: tarot gelecek olum ters
+    excludedMods:
+    - tarot gecmis olum ters
+    - tarot simdi olum ters
+    - tarot gecmis olum
+    - tarot simdi olum
+  - mod: tarot gelecek araba ters
+    excludedMods:
+    - tarot gecmis araba ters
+    - tarot simdi araba ters
+    - tarot gecmis araba
+    - tarot simdi araba
+  - mod: tarot gelecek seytan ters
+    excludedMods:
+    - tarot gecmis seytan ters
+    - tarot simdi seytan ters
+    - tarot gecmis seytan
+    - tarot simdi seytan
+  - mod: tarot gelecek yikilankule ters
+    excludedMods:
+    - tarot gecmis yikilankule ters
+    - tarot simdi yikilankule ters
+    - tarot gecmis yikilankule
+    - tarot simdi yikilankule
+  - mod: tarot gelecek yildiz ters
+    excludedMods:
+    - tarot gecmis yildiz ters
+    - tarot simdi yildiz ters
+    - tarot gecmis yildiz
+    - tarot simdi yildiz
+  - mod: tarot gelecek asaaltilisi ters
+    excludedMods:
+    - tarot gecmis asaaltilisi ters
+    - tarot simdi asaaltilisi ters
+    - tarot gecmis asaaltilisi
+    - tarot simdi asaaltilisi
+  - mod: tarot gelecek asaasi ters
+    excludedMods:
+    - tarot gecmis asaasi ters
+    - tarot simdi asaasi ters
+    - tarot gecmis asaasi
+    - tarot simdi asaasi
+  - mod: tarot gelecek asabeslisi ters
+    excludedMods:
+    - tarot gecmis asabeslisi ters
+    - tarot simdi asabeslisi ters
+    - tarot gecmis asabeslisi
+    - tarot simdi asabeslisi
+  - mod: tarot gelecek asadokuzlusu ters
+    excludedMods:
+    - tarot gecmis asadokuzlusu ters
+    - tarot simdi asadokuzlusu ters
+    - tarot gecmis asadokuzlusu
+    - tarot simdi asadokuzlusu
+  - mod: tarot gelecek asadortlusu ters
+    excludedMods:
+    - tarot gecmis asadortlusu ters
+    - tarot simdi asadortlusu ters
+    - tarot gecmis asadortlusu
+    - tarot simdi asadortlusu
+  - mod: tarot gelecek asaikilisi ters
+    excludedMods:
+    - tarot gecmis asaikilisi ters
+    - tarot simdi asaikilisi ters
+    - tarot gecmis asaikilisi
+    - tarot simdi asaikilisi
+  - mod: tarot gelecek asakrali ters
+    excludedMods:
+    - tarot gecmis asakrali ters
+    - tarot simdi asakrali ters
+    - tarot gecmis asakrali
+    - tarot simdi asakrali
+  - mod: tarot gelecek asakralicesi ters
+    excludedMods:
+    - tarot gecmis asakralicesi ters
+    - tarot simdi asakralicesi ters
+    - tarot gecmis asakralicesi
+    - tarot simdi asakralicesi
+  - mod: tarot gelecek asaonlusu ters
+    excludedMods:
+    - tarot gecmis asaonlusu ters
+    - tarot simdi asaonlusu ters
+    - tarot gecmis asaonlusu
+    - tarot simdi asaonlusu
+  - mod: tarot gelecek asaprensi ters
+    excludedMods:
+    - tarot gecmis asaprensi ters
+    - tarot simdi asaprensi ters
+    - tarot gecmis asaprensi
+    - tarot simdi asaprensi
+  - mod: tarot gelecek asasekizlisi ters
+    excludedMods:
+    - tarot gecmis asasekizlisi ters
+    - tarot simdi asasekizlisi ters
+    - tarot gecmis asasekizlisi
+    - tarot simdi asasekizlisi
+  - mod: tarot gelecek asasovalyesi ters
+    excludedMods:
+    - tarot gecmis asasovalyesi ters
+    - tarot simdi asasovalyesi ters
+    - tarot gecmis asasovalyesi
+    - tarot simdi asasovalyesi
+  - mod: tarot gelecek asauclusu ters
+    excludedMods:
+    - tarot gecmis asauclusu ters
+    - tarot simdi asauclusu ters
+    - tarot gecmis asauclusu
+    - tarot simdi asauclusu
+  - mod: tarot gelecek asayedilisi ters
+    excludedMods:
+    - tarot gecmis asayedilisi ters
+    - tarot simdi asayedilisi ters
+    - tarot gecmis asayedilisi
+    - tarot simdi asayedilisi
+  - mod: tarot gelecek kilicaltilisi ters
+    excludedMods:
+    - tarot gecmis kilicaltilisi ters
+    - tarot simdi kilicaltilisi ters
+    - tarot gecmis kilicaltilisi
+    - tarot simdi kilicaltilisi
+  - mod: tarot gelecek kilicasi ters
+    excludedMods:
+    - tarot gecmis kilicasi ters
+    - tarot simdi kilicasi ters
+    - tarot gecmis kilicasi
+    - tarot simdi kilicasi
+  - mod: tarot gelecek kilicbeslisi ters
+    excludedMods:
+    - tarot gecmis kilicbeslisi ters
+    - tarot simdi kilicbeslisi ters
+    - tarot gecmis kilicbeslisi
+    - tarot simdi kilicbeslisi
+  - mod: tarot gelecek kilicdokuzlusu ters
+    excludedMods:
+    - tarot gecmis kilicdokuzlusu ters
+    - tarot simdi kilicdokuzlusu ters
+    - tarot gecmis kilicdokuzlusu
+    - tarot simdi kilicdokuzlusu
+  - mod: tarot gelecek kilicdortlusu ters
+    excludedMods:
+    - tarot gecmis kilicdortlusu ters
+    - tarot simdi kilicdortlusu ters
+    - tarot gecmis kilicdortlusu
+    - tarot simdi kilicdortlusu
+  - mod: tarot gelecek kilicikilisi ters
+    excludedMods:
+    - tarot gecmis kilicikilisi ters
+    - tarot simdi kilicikilisi ters
+    - tarot gecmis kilicikilisi
+    - tarot simdi kilicikilisi
+  - mod: tarot gelecek kilickrali ters
+    excludedMods:
+    - tarot gecmis kilickrali ters
+    - tarot simdi kilickrali ters
+    - tarot gecmis kilickrali
+    - tarot simdi kilickrali
+  - mod: tarot gelecek kilickralicesi ters
+    excludedMods:
+    - tarot gecmis kilickralicesi ters
+    - tarot simdi kilickralicesi ters
+    - tarot gecmis kilickralicesi
+    - tarot simdi kilickralicesi
+  - mod: tarot gelecek kiliconlusu ters
+    excludedMods:
+    - tarot gecmis kiliconlusu ters
+    - tarot simdi kiliconlusu ters
+    - tarot gecmis kiliconlusu
+    - tarot simdi kiliconlusu
+  - mod: tarot gelecek kilicprensi ters
+    excludedMods:
+    - tarot gecmis kilicprensi ters
+    - tarot simdi kilicprensi ters
+    - tarot gecmis kilicprensi
+    - tarot simdi kilicprensi
+  - mod: tarot gelecek kilicsekizlisi ters
+    excludedMods:
+    - tarot gecmis kilicsekizlisi ters
+    - tarot simdi kilicsekizlisi ters
+    - tarot gecmis kilicsekizlisi
+    - tarot simdi kilicsekizlisi
+  - mod: tarot gelecek kilicsovalyesi ters
+    excludedMods:
+    - tarot gecmis kilicsovalyesi ters
+    - tarot simdi kilicsovalyesi ters
+    - tarot gecmis kilicsovalyesi
+    - tarot simdi kilicsovalyesi
+  - mod: tarot gelecek kilicuclusu ters
+    excludedMods:
+    - tarot gecmis kilicuclusu ters
+    - tarot simdi kilicuclusu ters
+    - tarot gecmis kilicuclusu
+    - tarot simdi kilicuclusu
+  - mod: tarot gelecek kilicyedilisi ters
+    excludedMods:
+    - tarot gecmis kilicyedilisi ters
+    - tarot simdi kilicyedilisi ters
+    - tarot gecmis kilicyedilisi
+    - tarot simdi kilicyedilisi
+  - mod: tarot gelecek kupaaltilisi ters
+    excludedMods:
+    - tarot gecmis kupaaltilisi ters
+    - tarot simdi kupaaltilisi ters
+    - tarot gecmis kupaaltilisi
+    - tarot simdi kupaaltilisi
+  - mod: tarot gelecek kupaasi ters
+    excludedMods:
+    - tarot gecmis kupaasi ters
+    - tarot simdi kupaasi ters
+    - tarot gecmis kupaasi
+    - tarot simdi kupaasi
+  - mod: tarot gelecek kupabeslisi ters
+    excludedMods:
+    - tarot gecmis kupabeslisi ters
+    - tarot simdi kupabeslisi ters
+    - tarot gecmis kupabeslisi
+    - tarot simdi kupabeslisi
+  - mod: tarot gelecek kupadokuzlusu ters
+    excludedMods:
+    - tarot gecmis kupadokuzlusu ters
+    - tarot simdi kupadokuzlusu ters
+    - tarot gecmis kupadokuzlusu
+    - tarot simdi kupadokuzlusu
+  - mod: tarot gelecek kupadortlusu ters
+    excludedMods:
+    - tarot gecmis kupadortlusu ters
+    - tarot simdi kupadortlusu ters
+    - tarot gecmis kupadortlusu
+    - tarot simdi kupadortlusu
+  - mod: tarot gelecek kupaikilisi ters
+    excludedMods:
+    - tarot gecmis kupaikilisi ters
+    - tarot simdi kupaikilisi ters
+    - tarot gecmis kupaikilisi
+    - tarot simdi kupaikilisi
+  - mod: tarot gelecek kupakrali ters
+    excludedMods:
+    - tarot gecmis kupakrali ters
+    - tarot simdi kupakrali ters
+    - tarot gecmis kupakrali
+    - tarot simdi kupakrali
+  - mod: tarot gelecek kupakralicesi ters
+    excludedMods:
+    - tarot gecmis kupakralicesi ters
+    - tarot simdi kupakralicesi ters
+    - tarot gecmis kupakralicesi
+    - tarot simdi kupakralicesi
+  - mod: tarot gelecek kupaonlusu ters
+    excludedMods:
+    - tarot gecmis kupaonlusu ters
+    - tarot simdi kupaonlusu ters
+    - tarot gecmis kupaonlusu
+    - tarot simdi kupaonlusu
+  - mod: tarot gelecek kupaprensi ters
+    excludedMods:
+    - tarot gecmis kupaprensi ters
+    - tarot simdi kupaprensi ters
+    - tarot gecmis kupaprensi
+    - tarot simdi kupaprensi
+  - mod: tarot gelecek kupasekizlisi ters
+    excludedMods:
+    - tarot gecmis kupasekizlisi ters
+    - tarot simdi kupasekizlisi ters
+    - tarot gecmis kupasekizlisi
+    - tarot simdi kupasekizlisi
+  - mod: tarot gelecek kupasovalyesi ters
+    excludedMods:
+    - tarot gecmis kupasovalyesi ters
+    - tarot simdi kupasovalyesi ters
+    - tarot gecmis kupasovalyesi
+    - tarot simdi kupasovalyesi
+  - mod: tarot gelecek kupauclusu ters
+    excludedMods:
+    - tarot gecmis kupauclusu ters
+    - tarot simdi kupauclusu ters
+    - tarot gecmis kupauclusu
+    - tarot simdi kupauclusu
+  - mod: tarot gelecek kupayedilisi ters
+    excludedMods:
+    - tarot gecmis kupayedilisi ters
+    - tarot simdi kupayedilisi ters
+    - tarot gecmis kupayedilisi
+    - tarot simdi kupayedilisi
+  - mod: tarot gelecek tilsimaltilisi ters
+    excludedMods:
+    - tarot gecmis tilsimaltilisi ters
+    - tarot simdi tilsimaltilisi ters
+    - tarot gecmis tilsimaltilisi
+    - tarot simdi tilsimaltilisi
+  - mod: tarot gelecek tilsimasi ters
+    excludedMods:
+    - tarot gecmis tilsimasi ters
+    - tarot simdi tilsimasi ters
+    - tarot gecmis tilsimasi
+    - tarot simdi tilsimasi
+  - mod: tarot gelecek tilsimbeslisi ters
+    excludedMods:
+    - tarot gecmis tilsimbeslisi ters
+    - tarot simdi tilsimbeslisi ters
+    - tarot gecmis tilsimbeslisi
+    - tarot simdi tilsimbeslisi
+  - mod: tarot gelecek tilsimdokuzlusu ters
+    excludedMods:
+    - tarot gecmis tilsimdokuzlusu ters
+    - tarot simdi tilsimdokuzlusu ters
+    - tarot gecmis tilsimdokuzlusu
+    - tarot simdi tilsimdokuzlusu
+  - mod: tarot gelecek tilsimdortlusu ters
+    excludedMods:
+    - tarot gecmis tilsimdortlusu ters
+    - tarot simdi tilsimdortlusu ters
+    - tarot gecmis tilsimdortlusu
+    - tarot simdi tilsimdortlusu
+  - mod: tarot gelecek tilsimikilisi ters
+    excludedMods:
+    - tarot gecmis tilsimikilisi ters
+    - tarot simdi tilsimikilisi ters
+    - tarot gecmis tilsimikilisi
+    - tarot simdi tilsimikilisi
+  - mod: tarot gelecek tilsimkrali ters
+    excludedMods:
+    - tarot gecmis tilsimkrali ters
+    - tarot simdi tilsimkrali ters
+    - tarot gecmis tilsimkrali
+    - tarot simdi tilsimkrali
+  - mod: tarot gelecek tilsimkralicesi ters
+    excludedMods:
+    - tarot gecmis tilsimkralicesi ters
+    - tarot simdi tilsimkralicesi ters
+    - tarot gecmis tilsimkralicesi
+    - tarot simdi tilsimkralicesi
+  - mod: tarot gelecek tilsimonlusu ters
+    excludedMods:
+    - tarot gecmis tilsimonlusu ters
+    - tarot simdi tilsimonlusu ters
+    - tarot gecmis tilsimonlusu
+    - tarot simdi tilsimonlusu
+  - mod: tarot gelecek tilsimprensi ters
+    excludedMods:
+    - tarot gecmis tilsimprensi ters
+    - tarot simdi tilsimprensi ters
+    - tarot gecmis tilsimprensi
+    - tarot simdi tilsimprensi
+  - mod: tarot gelecek tilsimsekizlisi ters
+    excludedMods:
+    - tarot gecmis tilsimsekizlisi ters
+    - tarot simdi tilsimsekizlisi ters
+    - tarot gecmis tilsimsekizlisi
+    - tarot simdi tilsimsekizlisi
+  - mod: tarot gelecek tilsimsovalyesi ters
+    excludedMods:
+    - tarot gecmis tilsimsovalyesi ters
+    - tarot simdi tilsimsovalyesi ters
+    - tarot gecmis tilsimsovalyesi
+    - tarot simdi tilsimsovalyesi
+  - mod: tarot gelecek tilsimuclusu ters
+    excludedMods:
+    - tarot gecmis tilsimuclusu ters
+    - tarot simdi tilsimuclusu ters
+    - tarot gecmis tilsimuclusu
+    - tarot simdi tilsimuclusu
+  - mod: tarot gelecek tilsimyedilisi ters
+    excludedMods:
+    - tarot gecmis tilsimyedilisi ters
+    - tarot simdi tilsimyedilisi ters
+    - tarot gecmis tilsimyedilisi
+    - tarot simdi tilsimyedilisi
+  sonSecilenGecmisTarotKartiModu: tarot gecmis kupasekizlisi ters
+  sonSecilenSimdiTarotKartiModu: tarot simdi tilsimyedilisi ters
+  creatorWindowVazgecmeTepkisi: "Vazge\xE7tim"
+  creatorWindowSohbetAciklama: "Sohbet a\xE7\u0131klamas\u0131"

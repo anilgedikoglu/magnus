@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupaikilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA39396119489
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 51c1702d9d548c541a457b14ea61f48d, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 51c1702d9d548c541a457b14ea61f48d, type: 3}
+  contentPhotoId: kupaikilisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"Kupa \u0130kilisi\" kart\u0131n\u0131 se\xE7tin.\n\nSana
+    edilen bir tekliften sonra birisiyle yak\u0131n ili\u015Fkiler i\xE7ine girdi\u011Fini
+    anlatan bu kart, zaman i\xE7erisinde uyumunuzun ve ortak m\xFC\u015Ftereklerinizin
+    artt\u0131\u011F\u0131n\u0131 i\u015Faret ediyor {{isim}}. Bu ki\u015Fiyle kar\u015F\u0131l\u0131kl\u0131
+    sevgi, sayg\u0131 ve \xE7\u0131kar ili\u015Fkileri \xE7er\xE7evesinde birbirinize
+    faydan\u0131z dokunmu\u015F. Birtak\u0131m kararlar\u0131 ortak \u015Fekilde
+    alm\u0131\u015Fs\u0131n\u0131z ve her ikiniz de bundan kazan\xE7l\u0131 \xE7\u0131km\u0131\u015Fs\u0131n\u0131z.
+    Sonras\u0131nda aran\u0131za uzun s\xFCrmeyen bir so\u011Fukluk ya da k\xFCsl\xFCk
+    girmi\u015F olabilir. Tam ayr\u0131\u015Fma ve kopu\u015F meydana gelmemi\u015F.
+    Birbiriniz i\xE7in her zaman \"hay\u0131r\" denemeyecek birer cazibe merkezi
+    olmu\u015F, \xF6yle de kalm\u0131\u015Fs\u0131n\u0131z."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kupaikilisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

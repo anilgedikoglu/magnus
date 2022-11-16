@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tersimparator
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA34406933224
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 099e286b93e7fe64cbfb4c080a892c83, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 099e286b93e7fe64cbfb4c080a892c83, type: 3}
+  contentPhotoId: imparator-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"\u0130mparator\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nYa\u015Fam\u0131n\u0131n
+    komutas\u0131n\u0131 ele ge\xE7irmek istiyorsun. Art\u0131k k\xF6t\xFC s\xFCrprizlere
+    hi\xE7 olmad\u0131\u011F\u0131 kadar d\xFC\u015Fmans\u0131n. Kendi d\xFCzenini
+    tam olarak kurmak ve hi\xE7bir karma\u015Faya ge\xE7it vermemek istiyorsun. Se\xE7ti\u011Fin
+    kart ise bu beklentilerinden uzak bir noktada oldu\u011Funu anlat\u0131yor {{isim}}.
+    Neyin eksik oldu\u011Funu ve nerede yanl\u0131\u015F yapt\u0131\u011F\u0131n\u0131
+    \u015Fu s\u0131ralar s\u0131k\xE7a kendine sordu\u011Funu s\xF6yl\xFCyor. Senin
+    b\xFCy\xFCk bir kurumdan ya da \xF6nemli bir ki\u015Fiden kritik bir haber almaya
+    ihtiyac\u0131n var. \xDCzerindeki d\xFC\u011F\xFCm\xFC, ancak b\xFCy\xFCk bir
+    m\xFCjdenin \xE7\xF6zece\u011Fini d\xFC\u015F\xFCn\xFCyorsun. Sorunlar\u0131n
+    telafisi ve ihtiya\xE7lar\u0131n giderilmesi i\xE7in hala ge\xE7 de\u011Fil.
+    Harekete ge\xE7meli ve toparlanmal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi imparator ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

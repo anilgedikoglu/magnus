@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris255
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA86832979186
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\"Olsa da tek umut telvelerim, falda bile ille de ilim, ille de ilim\" diyorsun
+    \xF6yle mi {{isim}}? \U0001F601 Nereden mi \xE7\u0131kt\u0131? Seni {{kelime,
+    ad\u0131nda B harfi olan bir yerin daire \u015Feklinde tasarlanm\u0131\u015F
+    k\xFCt\xFCphanesinde g\xF6r\xFCyorum. Masa ortalar\u0131nda ise \u0131\u015F\u0131kland\u0131rmalar
+    var. | ad\u0131nda S harfi olan bir yerin, \xFCzeri k\u0131smen camla kapl\u0131
+    k\xFCt\xFCphanesinde g\xF6r\xFCyorum. \xC7evrede hem yuvarlak, hem de dikd\xF6rtgen
+    masalar var. | ad\u0131nda Z harfi olan bir yerin, merdivenlerle katlara ayr\u0131lm\u0131\u015F
+    k\xFCt\xFCphanesinde g\xF6r\xFCyorum. Masalarda ise \xFC\xE7 tarafl\u0131 y\xFCksek
+    seperat\xF6rler var. | ad\u0131nda T harfi olan bir yerin, yer yer yuvarlak kolonlarla
+    desteklenmi\u015F, tavan\u0131 oval k\xFCt\xFCphanesinde g\xF6r\xFCyorum. Genellikle
+    d\xF6rder ki\u015Filik, kar\u015F\u0131l\u0131kl\u0131 oturma d\xFCzenine sahip
+    masalar\u0131 var. | ad\u0131nda D harfi olan bir yerin, tavan\u0131na kare \u015Feklinde
+    \u0131\u015F\u0131kland\u0131rmalar yerle\u015Ftirilmi\u015F k\xFCt\xFCphanesinde
+    g\xF6r\xFCyorum. \xC7evrede d\xF6rder ki\u015Filik masalar ve masa ortalar\u0131nda
+    basamaklar var. | ad\u0131nda \xC7 harfi olan bir yerin, U \u015Feklinde yerle\u015Ftirilmi\u015F
+    ferforje demirli basamaklar\u0131 olan geni\u015F k\xFCt\xFCphanesinde g\xF6r\xFCyorum.}}
+    Sen burada daha \xF6nce ya bulundun, ya da {{kelime, 3-4 | 2-3 | 4-5}} y\u0131l
+    i\xE7erisinde bulunacaks\u0131n. Orada seni b\xFCy\xFCk ba\u015Far\u0131 haberleri,
+    bol kazanca giden \u0131\u015F\u0131lt\u0131l\u0131 bir yol, akademik bir kariyer
+    ve belki de yurt d\u0131\u015F\u0131 i\xE7in bir f\u0131rsat bekliyor. Gelecekte
+    e\u015Fin olacak insan\u0131n da benzeri yollardan ge\xE7ti\u011Fini duyacaks\u0131n.
+    Kim bilir, belki de ayn\u0131 meslek ya da ayn\u0131 sekt\xF6rden olursunuz?"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

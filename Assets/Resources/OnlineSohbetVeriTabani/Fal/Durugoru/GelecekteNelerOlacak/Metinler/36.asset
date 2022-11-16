@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 36
+  m_EditorClassIdentifier: 
+  idIndex: 20226105950AA01474300394
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Gelece\u011Fine odakland\u0131\u011F\u0131mda, yere serdi\u011Fin b\xFCy\xFCk\xE7e
+    bir papir\xFCs g\xF6r\xFCyorum. Elindeki tebe\u015Firle, bu papir\xFCs\xFCn \xFCzerine
+    bir hayalini \xE7izmeye \xE7al\u0131\u015F\u0131yorsun. Bu yans\u0131malar, kendini
+    ifade etmeye \xE7al\u0131\u015Ft\u0131\u011F\u0131n ve seni anlamas\u0131n\u0131
+    \xE7ok istedi\u011Fin biriyle aranda duygusal baz\u0131 konu\u015Fmalar ge\xE7ece\u011Fini
+    i\u015Faret ediyor {{isim}}. Bu durum gelecek hafta cumartesi ya da pazar g\xFCn\xFC
+    ger\xE7ekle\u015Fecek. Kar\u015F\u0131ndaki ki\u015Fi sana hak verdi\u011Finde,
+    hayat\u0131na dair \"geri al\" tu\u015Funa basm\u0131\u015Fs\u0131ncas\u0131na
+    baz\u0131 kay\u0131plar\u0131n\u0131 yeniden elde edecek ve seni \xFCzen birtak\u0131m
+    konular\u0131 telafi etmi\u015F olacaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: gno
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: gno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

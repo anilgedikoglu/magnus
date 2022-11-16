@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupakralicesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA34673774751
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: de4b8d0dd687b984aa831f78c011a126, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: de4b8d0dd687b984aa831f78c011a126, type: 3}
+  contentPhotoId: kupakralicesi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kupa Krali\xE7esi\" kart\u0131n\u0131 se\xE7tin.\n\nZaman
+    zaman fazlaca hassasla\u015Ft\u0131\u011F\u0131n\u0131 hissediyorum. Kart\u0131n,
+    baz\u0131 ama\xE7lar\u0131n oldu\u011Funu, onlarla ilgili sekteye u\u011Frama
+    korkusunun seni bazen ince ve k\u0131r\u0131lgan hale getirdi\u011Fini anlat\u0131yor.
+    Di\u011Fer taraftan, \xE7ok k\u0131ymetli bir \u015Feye sahipsin {{isim}}; ne
+    zaman aya\u011F\u0131na ta\u015F de\u011Fse, hemen manevi destek al\u0131yorsun.
+    Ben pozisyon olarak senin do\u011Fru noktada durdu\u011Funu g\xF6zlemliyorum.
+    Endi\u015Felerin \xE7o\u011Funlukla yersiz. Kafanda kurdu\u011Fun felaket senaryolar\u0131n\u0131n
+    ger\xE7ekle\u015Fmeme ihtimali %95'lerde. Bu kadar emin ve g\xFCvenli sulardayken,
+    hi\xE7bir \u015Feyden korkmaman en do\u011Frusu olur. Akl\u0131na gelmeyen ba\u015F\u0131na
+    bazen geliyor; lakin iyi ve hay\u0131rl\u0131 ise."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kupakralicesi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

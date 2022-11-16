@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1087
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA14013946251
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131nda, hemen yan\u0131nda duran {{data, cinsiyet=erkek, 1.80 boylar\u0131nda
+    ve g\xFCr sa\xE7l\u0131 bir erkek | cinsiyet=kad\u0131n, 1.65 boylar\u0131nda
+    ve ince sa\xE7 tellerine sahip bir kad\u0131n | cinsiyet=lgbt, 1.70 boylar\u0131nda
+    ve k\u0131v\u0131rc\u0131k sa\xE7l\u0131 bir insan}} belirmi\u015F. Bu ki\u015Fiyle
+    ya {{kelime ,2-3 | 3-4 | 4-5}} y\u0131l \xF6nce tan\u0131\u015Fm\u0131\u015Fs\u0131n
+    ya da {{kelime, 2-3 | 3-4 | 4-5}} ay i\xE7inde tan\u0131\u015Facaks\u0131n {{isim}}.
+    Bu ki\u015Fi, \xF6n\xFCnde uzanan telveleri eline ald\u0131\u011F\u0131 bir \"t\u0131rpanla\"
+    adeta {{kelime, d\xFCzen | nizam}} i\xE7ine sokmu\u015F. Kariyerinle ilgili radikal
+    bir karar alacaks\u0131n. Bahsini etti\u011Fim ki\u015Fi, bu karar\u0131 hayata
+    ge\xE7irmene \xF6n ayak olacak. \u0130kinizin belirdi\u011Fi telvelerin \xFCst
+    k\u0131sm\u0131nda gerilmi\u015F bir de \"yay\" sembol\xFC var. Bu ki\u015Fi
+    ni\u015Fan ald\u0131\u011F\u0131n y\xF6ne do\u011Fru savrulan \"ok\" gibi, \xF6n\xFCnde
+    uzanan f\u0131rsatlar\u0131n yolunu a\xE7acak. Ortak \xE7\u0131karlar\u0131n\u0131z
+    aran\u0131zdaki birli\u011Fi adeta \xE7imentolam\u0131\u015F. Birbirinizden g\xFC\xE7
+    alarak, hayat\u0131n\u0131zda \xE7\u0131\u011F\u0131r a\xE7acak yeni bir d\xF6neme
+    do\u011Fru ad\u0131m ataca\u011F\u0131n\u0131z\u0131 hissediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

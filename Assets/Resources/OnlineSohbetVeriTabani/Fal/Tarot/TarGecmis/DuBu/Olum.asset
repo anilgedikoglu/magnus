@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Olum
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA75118191379
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 7b4b58c709c5a10418142cbd9374fd52, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 7b4b58c709c5a10418142cbd9374fd52, type: 3}
+  contentPhotoId: olum
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"\xD6l\xFCm\" kart\u0131n\u0131 se\xE7tin.\n\nAd\u0131n\u0131n
+    bu kadar korkutucu oldu\u011Funa bakma {{isim}}. Evet, baz\u0131 kopu\u015Flar
+    ve belki de bir ayr\u0131l\u0131k ya\u015Fam\u0131\u015Fs\u0131n. Ancak bunlar,
+    senin \xFCzerindeki y\xFCkleri hafifletmi\u015F. Senin yenilenmene, de\u011Fi\u015Fmene
+    ve daha iyi bir \"sen\" olmana imkan tan\u0131m\u0131\u015F. Baz\u0131 geli\u015Fimler
+    sanc\u0131l\u0131 olur. Sen de b\xF6yle sanc\u0131l\u0131 bir s\xFCre\xE7ten
+    ge\xE7mi\u015Fsin. Belki de \xF6yle bir \u015Fey atlatt\u0131n ki, sonras\u0131nda
+    senin i\xE7in ikinci hayat ba\u015Flad\u0131. Acaba bu a\u015Fk hayat\u0131na
+    dair miydi? E\u011Fer \xF6yle ise unutma; do\u011Frudur, insan hayatta bir kere
+    a\u015F\u0131k olur ancak do\u011Fum ve \xF6l\xFCm aras\u0131nda birden fazla
+    hayat vard\u0131r..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis olum
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

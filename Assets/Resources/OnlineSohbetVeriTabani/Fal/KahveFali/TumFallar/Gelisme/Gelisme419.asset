@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme419
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA18071365196
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Geni\u015F bir ovada, firezlerin i\xE7inde sevin\xE7le ko\u015Ftururken g\xF6r\xFCyorum
+    seni. Telafisi olmayaca\u011F\u0131n\u0131 d\xFC\u015F\xFCnerek ya\u015Fad\u0131\u011F\u0131n
+    bir \xFCz\xFCnt\xFCn\xFCn, yerini sevince b\u0131rakaca\u011F\u0131n\u0131 hissediyorum.
+    \xD6n\xFCnde farkl\u0131 yollar, yollar\u0131n devam\u0131nda ise sevdiklerin
+    var. Gidebilece\u011Fin, u\u011Frayabilece\u011Fin kap\u0131lar artm\u0131\u015F,
+    seninle g\xF6n\xFCl ba\u011F\u0131 olanlar \xE7o\u011Falm\u0131\u015F gibi sanki...
+    Farkl\u0131 yerlerden ayn\u0131 anda bekleniyor, adeta payla\u015F\u0131lam\u0131yorsun
+    {{isim}}! Dostlar\u0131nla ve akrabalar\u0131nla olan ili\u015Fkilerin a\xE7\u0131s\u0131ndan
+    \xE7ok daha g\xFCzel g\xFCnlerin seni bekledi\u011Fini bilmelisin.\n\nFincan\u0131nda
+    bir \"3\" rakam\u0131 g\xF6r\xFCyorum. 3 g\xFCn sonra, yani {{gun_+3}} g\xFCn\xFC,
+    merkezi \u015Fehir d\u0131\u015F\u0131nda olan bir kurumdan ya da bulundu\u011Fun
+    ilin d\u0131\u015F\u0131nda ya\u015Fayan bir ki\u015Fi taraf\u0131ndan aranacaks\u0131n.
+    Hi\xE7 beklemedi\u011Fin bu telefon, \xE7ok memnun olaca\u011F\u0131n maddi bir
+    imkan sa\u011Flayacak sana. Eline k\u0131sa s\xFCre i\xE7erisinde ihtiyac\u0131ndan
+    daha fazla para ge\xE7ebilir {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

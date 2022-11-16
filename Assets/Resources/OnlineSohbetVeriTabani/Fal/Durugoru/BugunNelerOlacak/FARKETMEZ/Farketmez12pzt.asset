@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Farketmez12pzt
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA36148137270
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Haftan\u0131n ilk g\xFCn\xFC senin i\xE7in sakin ba\u015Fl\u0131yor gibi g\xF6z\xFCkse
+    de, g\xFCn\xFCn ilerleyen saatlerinde ya\u015Fam\u0131ndaki hareketlilik artaracak.
+    Bug\xFCn akl\u0131ndaki bir \u015Fey i\xE7in imkan bulacak, bir f\u0131rsat yakalayacak
+    ve de\u011Ferlendirebilmek ad\u0131na elinden gelen her \u015Feyi yapacaks\u0131n
+    {{isim}}. Bir hobin, u\u011Fra\u015Ft\u0131\u011F\u0131n ya da al\u0131p satmay\u0131
+    sevdi\u011Fin bir \u015Fey mi var? Bug\xFCn o konu ile ilgili olarak, {{kelime,
+    1.65 | 1.64 | 1.67 | 1.70}}  boylar\u0131nda {{kelime, sar\u0131\u015F\u0131n
+    | esmer | kumral}} bir han\u0131mefendiden ilgin\xE7 bir tavsiye alabilirsin.
+    O tavsiye seni bir miktar maddi kayba u\u011Fratabilir. Elde edece\u011Fin \u015Fey
+    ise seni \xE7ok sevindirecek. Ak\u015Fam saat {{kelime, 20:00 | 21:00 | 22:00}}
+    sular\u0131nda da k\xFC\xE7\xFCk ve tatl\u0131 bir teklifle kar\u015F\u0131la\u015Fabilirsin.
+    Bazen k\xFC\xE7\xFCc\xFCk \u015Feyler huzurun ve enerjinin artmas\u0131nda \xE7ok
+    etkili olabiliyor. Bana hak vereceksin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  - degiskenAdi: bugun
+    degiskenDegeri: 1
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

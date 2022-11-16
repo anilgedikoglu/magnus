@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme505
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA79421525391
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Allahallaah, hay\u0131rd\u0131r in\u015Fallah... \U0001F440Seni koskocaman ve
+    bombo\u015F bir caminin i\xE7inde, tam da ortalarda bir yerde, tek ba\u015F\u0131na
+    r\xFCku halinde g\xF6r\xFCyorum {{isim}}. \U0001F4FFBunun olas\u0131 iki i\u015Fareti
+    var; ya bir \u015Feyin ger\xE7ekle\u015Fmesi, dua'n\u0131 bekliyor, ya da yak\u0131nda
+    sana, {{yas_0}} ya\u015Flar\u0131nda \xE7ok da fazla ki\u015Fiye nasip olmayan
+    bir \u015Fey verilecek. Her iki durumda da, sonuca ula\u015Ft\u0131\u011F\u0131nda
+    bol bol \u015F\xFCkretmelisin.\n\nYak\u0131n \xE7evrende ya da akrabalar\u0131n\u0131n
+    aras\u0131nda {{rastgeleburc}} burcu, ba\u015F harfi senin gibi {{isimilk}} olan
+    kim var {{isim}}? Bu ki\u015Fiye \"g\xF6\xE7\" g\xF6r\xFCn\xFCyor. K\u0131sa
+    bir yolculuktan ziyade, bir i\u015F i\xE7in uzun y\u0131llar kalmak \xFCzere
+    farkl\u0131 bir \u015Fehre gidecek. Bu konuyu duydu\u011Funda, bence sana b\xFCy\xFCk
+    s\xFCrpriz olacak. S\xFCrprizin sebebinin, o ki\u015Finin gitmesinden ziyade,
+    gitme sebebi oldu\u011Funu hissediyorum. Son y\u0131llardaki halini ve yapt\u0131klar\u0131n\u0131
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCnde, baya\u011F\u0131 bir \u015Fa\u015F\u0131rabilirsin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 26
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 26
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1045
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA93683697955
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n alt k\u0131s\u0131mlar\u0131ndaki baz\u0131 telveler, dalgal\u0131
+    bir denizi and\u0131r\u0131yor. Bu dalgalar, \xF6zel hayat\u0131ndaki \"bir anda
+    co\u015Fan ve \xE7abuk durulan\" ruh halini yans\u0131t\u0131yor {{isim}}. Son
+    zamanlarda \xE7ok h\u0131zl\u0131 duygu de\u011Fi\u015Fimleri ve sevin\xE7ten
+    h\xFCzne ge\xE7i\u015Fler ya\u015F\u0131yor olmal\u0131s\u0131n. Sorun ise hislerin
+    de\u011Fil, i\xE7indekileri kar\u015F\u0131ndaki insanlara gere\u011Finden fazla
+    aksettirmen. A\u015Fkta galibiyet i\xE7in, stabilite \u015Fartt\u0131r. Usta
+    y\xF6netmen Nuri Bilge Ceylan'\u0131n da dedi\u011Fi gibi; \"baz\u0131 insanlar
+    g\xFCl\xFC\u015F\xFCyle yener sizi. Her \u015Fey s\xF6z de\u011Fil; tav\u0131r.\"
+    Eylemlerini kontrol alt\u0131na ald\u0131\u011F\u0131nda, sonu\xE7lar\u0131 da
+    g\xFCzel olacakt\u0131r."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

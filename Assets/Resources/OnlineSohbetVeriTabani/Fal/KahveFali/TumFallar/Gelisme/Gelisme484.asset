@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme484
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA35561647517
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin seyrek oldu\u011Fu \xFCst kesimlerden, fincan taban\u0131na do\u011Fru
+    geni\u015Fleyen ve yo\u011Funla\u015Fan alt k\u0131s\u0131mlara do\u011Fru stabilize
+    bir yol g\xF6r\xFCyorum {{isim}}. Toz toprak i\xE7inde olan bu uzun yolun \xFCzerinde
+    ise bir \"horoz\" var. \U0001F414Bu horoz, ko\u015Farak senden uzakla\u015F\u0131yor;
+    adeta onu takip etmeni istiyor gibi... \U0001F9D0Seni \xE7etin bir s\xFCre\xE7,
+    bir zorluk bekliyor. Fakat bu zorlu\u011Fun i\xE7inde, senin i\xE7in \xE7ok b\xFCy\xFCk
+    de bir \"kolayl\u0131k\" var. Sana adeta \"y\u0131lma, yorulma, korkma, gel!\"
+    diyor. Y\xFCr\xFCmeye ve ilerlemeye devam et. Endi\u015Fe etti\u011Fin \u015Feyleri
+    akl\u0131ndan \xE7\u0131kar ve yeise kap\u0131lma De\u011Ferli {{isim}}. En sonunda
+    kazanan sen olacaks\u0131n!\n\nYan duvarda ise hen\xFCz \xE7ok b\xFCy\xFCmemi\u015F
+    bir \"hurma a\u011Fac\u0131\" g\xF6r\xFCyorum. Dallar\u0131 salk\u0131m salk\u0131m,
+    k\xFC\xE7\xFCc\xFCk hurmalarla dolu. \U0001F333Seni temsil ediyor. Belli ki ad\u0131nda
+    H, R ya da M harfi olan biriyle aran iyi olsun istiyorsun. Kendini ona sevdirmek,
+    onun taraf\u0131ndan daha \xE7ok fark edilmek ve takdir g\xF6rmek istiyorsun.
+    Onun g\xF6nl\xFCne \xE7oktan k\xF6k salm\u0131\u015Fs\u0131n sen {{isim}}. \u0130lerleyen
+    aylarda ileti\u015Fiminizin olgunla\u015Faca\u011F\u0131n\u0131 ve meyvelerini
+    verece\u011Fini bilmeni isterim. "
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

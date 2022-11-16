@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kupayedilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA52113132052
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: f8f6f11d830e46e44866537b65a4ad25, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: f8f6f11d830e46e44866537b65a4ad25, type: 3}
+  contentPhotoId: kupayedilisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Kupa Yedilisi\" kart\u0131n\u0131 se\xE7tin.\n\n\xC7ok b\xFCy\xFCk
+    bir hayal g\xFCc\xFCn var {{isim}}, bunu takdir etmemek ger\xE7ekten elde de\u011Fil.
+    Fakat kendin i\xE7in belirledi\u011Fin hedefler tamamen rasyonel mi, pratikte
+    m\xFCk\xFCn m\xFC, umutlar\u0131n b\xFCt\xFCn\xFCyle eri\u015Filebilir mi, bu
+    tart\u0131\u015F\u0131l\u0131r. Se\xE7ti\u011Fin bu kart, \xE7\u0131tay\u0131
+    \xE7ok y\xFCkselere koydu\u011Funu ve o noktaya ula\u015Fmak i\xE7in kendini
+    tabiri caizse \"paralayaca\u011F\u0131n\u0131\" i\u015Faret ediyor. Kendi yolunu
+    zorla\u015Ft\u0131rabilir, elinden geleni yapmak ve ak\u0131\u015F\u0131na b\u0131rakmak
+    varken yap\u0131labileceklerin en iyisini yapmaya \xE7al\u0131\u015Farak zihnen
+    de bedenen de yorulabilirsin. Mant\u0131kl\u0131 ve orta vadede \xFCstesinden
+    gelebilece\u011Fin noktalar\u0131 hedeflemelisin. \u0130yi bir planlamayla, bunu
+    ger\xE7ekle\u015Ftirirsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kupayedilisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1104
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11870208258
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Son k\u0131s\u0131mlarda gayet iyi durumda g\xF6r\xFCnen bir \"elma\" var {{isim}}.
+    D\u0131\u015Far\u0131dan bak\u0131ld\u0131\u011F\u0131nda a\u011F\u0131z suland\u0131ran
+    bu elma, kabu\u011Funun alt\u0131nda tamamen \xE7\xFCr\xFCm\xFC\u015F. Shakespeare'in
+    \"Venedik Taciri\" oyununu bir yerlerde izlemi\u015F miydin? Oyunda ge\xE7en
+    bir dize \u015F\xF6yle der: \"A goodly apple rotten at the heart/O what a goodly
+    outside falsehood hath!\"\n\nEtraf\u0131nda, d\u0131\u015F g\xFCzelli\u011Fi
+    i\xE7inin \xE7irkinli\u011Fiyle do\u011Fru orant\u0131l\u0131 olan bir insan
+    var belli ki. Bu ki\u015Finin as\u0131l y\xFCz\xFCn\xFC g\xF6rebilen ise yaln\u0131zca
+    sensin. {{kelime, Yak\u0131n bir arkada\u015F\u0131n\u0131 bu insandan kurtarmak
+    senin elinde... | Bu ki\u015Fiyi hayat\u0131ndan tamamen \xE7\u0131karmak senin
+    elinde... | Bu ki\u015Fiyi sevgilinin etraf\u0131ndan uzakla\u015Ft\u0131rmak
+    senin elinde...}} Bu ki\u015Fiye dair iki de ipucu vermi\u015F telvelerin; genellikle
+    {{kelime, \"Casio\" | \"Swatch\" | \"Citizen\" | \"Diesel\" | \"Armani\" | \"Guess\"
+    | \"Fossil\" | \"Slazenger\" | \"Seiko\" | \"Tissot\" | \"Lacoste\" | \"Calvin
+    Klein\" | \"Nacar\" | \"Omega\" | \"Gucci\" | \"Lorus\" | \"Gant\" | \"Welder\"
+    | \"Michael Kors\" | \"Skagen\" | \"Orient\" | \"Tommy Hilfiger\"}} marka saat
+    tak\u0131yor ve cep telefonu olarak da bir \"{{kelime, Samsung | Apple | Xiaomi
+    | Huawei | Oppo | LG | OnePlus}}\" kullan\u0131yor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gunes
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA84493038872
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: cf0afbfbfabfdb645af9d6448620c021, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: cf0afbfbfabfdb645af9d6448620c021, type: 3}
+  contentPhotoId: gunes
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"G\xFCne\u015F\" kart\u0131n\u0131 se\xE7tin.\n\nKara k\u0131\u015Ftan
+    bahara ge\xE7i\u015Fleri bilirsin. Birden bire ortal\u0131k s\xFCt liman olmaya,
+    \xE7i\xE7ekler a\xE7maya, ekinler ye\u015Fermeye, hayvanlar g\xFCn y\xFCz\xFCne
+    \xE7\u0131kmaya ba\u015Flar. Se\xE7ti\u011Fin bu kart, senin hayat\u0131nda da
+    b\xF6yle bir d\xF6neme girmek \xFCzere oldu\u011Funu anlat\u0131yor. Ge\xE7mi\u015Ften
+    bu yana i\xE7inden ge\xE7meye \xE7al\u0131\u015Ft\u0131\u011F\u0131n yo\u011Fun
+    sis bulutu da\u011F\u0131l\u0131yor. Art\u0131k \xF6n\xFCn\xFC \xE7ok daha net
+    g\xF6recek, hi\xE7bir konuda endi\u015Fe etmeyeceksin. Ya\u015Fam\u0131na sevgi,
+    sa\u011Fl\u0131k ve mutluluk ayn\u0131 anda girecek. Pozitif d\xFC\u015F\xFCncelerle
+    sarmalanaca\u011F\u0131n\u0131, bu d\xFC\u015F\xFCncelerin de duygular\u0131n\u0131
+    olu\u015Fturaca\u011F\u0131n\u0131 g\xF6r\xFCyorum {{isim}}. Can\u0131n\u0131
+    s\u0131kan t\xFCm konular g\xF6nl\xFCnce netlik kazanacak ve g\xFCl\xFCmseyeceksin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek gunes
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

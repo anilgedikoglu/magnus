@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris427
+  m_EditorClassIdentifier: 
+  idIndex: 20228124122AA89062237327
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n \xFCst k\u0131s\u0131mlar\u0131nda olu\u015Fmu\u015F silik ve
+    belirgin telveler aras\u0131ndaki dalga fig\xFCrleri, iyilik halinde devaml\u0131l\u0131k
+    yakalayamad\u0131\u011F\u0131n\u0131 i\u015Faret ediyor {{isim}}. Moral olarak
+    s\u0131k s\u0131k ve istemsizce a\u015Fa\u011F\u0131 \xE7ekildi\u011Fini hissediyorum.
+    Bu ge\xE7ici bir s\xFCre\xE7 ve {{ay_+1}} ay\u0131n\u0131n {{kelime, birinci
+    haftas\u0131 i\xE7inde | ikinci haftas\u0131 i\xE7inde | \xFC\xE7\xFCnc\xFC haftas\u0131
+    i\xE7inde | d\xF6rd\xFCnc\xFC haftas\u0131n\u0131n ilk g\xFCnlerinde}} sona erecek.\n\nEnse
+    k\u0131llar\u0131 ba\u015F\u0131n\u0131n tepesine oranla daha \"g\xFCr\" bir
+    adam g\xF6r\xFCyorum. Bu ki\u015Finin yapacaklar\u0131, senin ilerleyen y\u0131llardaki
+    refah seviyende ve e\u011Fitim hayat\u0131n\u0131n gidi\u015Fat\u0131nda \xE7ok
+    belirleyici olacak. Fincan\u0131ndaki \"el izi\" bu beyefendiden yak\u0131nda
+    seri yard\u0131mlar alaca\u011F\u0131n\u0131 i\u015Faret ediyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimyedilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA59245739255
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 51ff7f9f4c67abf45bbae0d7467f1631, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 51ff7f9f4c67abf45bbae0d7467f1631, type: 3}
+  contentPhotoId: tilsimyedilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"T\u0131ls\u0131m Yedilisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nCepte y\xFCz lira olsa bazen harca harca bitmez, bin lira gibi
+    gelir ya; bu durum senin se\xE7ti\u011Fin bu kart d\xFCz geldi\u011Fi zamanlarda
+    ge\xE7erli. Sen bu \xF6rne\u011Fin tam tersi bir bereketsizlik halindesin. Elinde
+    avucunda olanlar\u0131 birden bire yitiriyor, g\xFCn sonuna neye harcad\u0131\u011F\u0131na
+    anlam bile veremiyorsun. Umut ba\u011Flad\u0131\u011F\u0131n ve u\u011Fruna emekler
+    verdi\u011Fin insanlardan da istedi\u011Fin geri d\xF6n\xFC\u015Fler gelmiyor.
+    Baz\u0131 \u015Feylere en ba\u015F\u0131ndan ba\u015Flamak zorunda kal\u0131yor,
+    sabr\u0131n\u0131n s\u0131n\u0131rlar\u0131n\u0131 zorluyorsun. Daha uzun vadeli
+    ve ak\u0131lc\u0131 d\xFC\u015F\xFCnmelisin {{isim}}. Planl\u0131 ve \xE7ok dikkatli
+    davran\u0131rsan, bu d\xF6nemin \xFCstesinden minimum zararla gelebilirsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi tilsimyedilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

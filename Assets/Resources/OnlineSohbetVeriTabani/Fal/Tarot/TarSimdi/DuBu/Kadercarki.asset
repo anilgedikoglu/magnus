@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kadercarki
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA92663572783
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 609ffd2cc0bf37b4bace239b5002c1ae, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 609ffd2cc0bf37b4bace239b5002c1ae, type: 3}
+  contentPhotoId: kadercarki
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kader \xC7ark\u0131\" kart\u0131n\u0131 se\xE7tin.\n\nBug\xFCnlerin
+    gelece\u011Fini biliyordun, \xF6yle de\u011Fil mi? \u015Eimdi kar\u015F\u0131nda
+    hem b\xFCy\xFCk f\u0131rsatlar duruyor, hem de o f\u0131rsatlardan hangisini
+    de\u011Ferlendirece\u011Fine karar verebilmek, senin i\xE7in b\xFCy\xFCk bir
+    sorumluluk. \u015Eans \u015Fu anda \xF6n\xFCndeki kap\u0131lardan baz\u0131lar\u0131n\u0131
+    \xE7al\u0131yor {{isim}}. Hangisini a\xE7acaks\u0131n? Hepsi i\xE7in vaktin ve
+    g\xFCc\xFCn olmas\u0131 imkans\u0131z. Hangilerini se\xE7eceksin? Yapt\u0131\u011F\u0131n
+    se\xE7imler ve a\xE7aca\u011F\u0131n kap\u0131lar, birtak\u0131m olaylar zincirini
+    tetikleyecek \u015Fekilde haz\u0131rda bekliyorlar. Sana \u015Fu kadar\u0131n\u0131
+    s\xF6yleyebilirim; se\xE7imlerin her ne y\xF6nde olursa olsun g\xFCzel de\u011Fi\u015Fimler
+    ba\u015Flatacak. Daha y\xFCksek imkanlara eri\u015Fece\u011Fin mutlu g\xFCnlere
+    do\u011Fru ilerlemek \xFCzeresin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kadercarki
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

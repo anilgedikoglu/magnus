@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: KonsPlus 15
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "Konsantrasyonum doldu {{isim}}. {{data, cinsiyet=erkek, K\u0131z arkada\u015F\u0131nla
+    | cinsiyet=kad\u0131n, Erkek arkada\u015F\u0131nla | cinsiyet=lgbt, Sevgilinle}}
+    sana hayat\u0131n neler sunaca\u011F\u0131n\u0131 merak ediyorsan, tek dokunu\u015Fla
+    kar\u015F\u0131nday\u0131m, biliyorsun..."
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 1
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0

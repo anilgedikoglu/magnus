@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc932
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA46179335006
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Seni seslerin yank\u0131lanabilece\u011Fi bir d\xF6rt duvar\u0131n i\xE7inde
+    g\xF6r\xFCyorum. D\u0131\u015Far\u0131da ise, yan\u0131nda duran {{yas_3}} ya\u015F\u0131ndaki
+    {{data, cinsiyet=erkek, k\u0131za | cinsiyet=kad\u0131n, erke\u011Fe | cinsiyet=lgbt,
+    ki\u015Fiye}} senden s\xF6z eden, {{yas_0}}-{{yas_1}} ya\u015Flar\u0131nda {{rastgeleburc}}
+    burcu biri var. Konunun i\xE7eri\u011Fini {{ay_1}} ay\u0131 i\xE7inde \xF6\u011Frenecek,
+    biraz garipseyip biraz da sevineceksin {{isim}}. Ancak ilerleyen g\xFCnlerde
+    bu konu\u015Fma dolay\u0131s\u0131yla kulaklar\u0131n tekrar tekrar \xE7\u0131nlayabilir.
+    Hatta \xF6yle bir \xE7\u0131nlama ki, kulaklar\u0131nda bir rahats\u0131zl\u0131k
+    oldu\u011Funu dahi d\xFC\u015F\xFCnebilirsin. Endi\u015Fe etmemen i\xE7in \u015Fimdiden
+    s\xF6yl\xFCyorum; bu durum tamamen enerji meselesi."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

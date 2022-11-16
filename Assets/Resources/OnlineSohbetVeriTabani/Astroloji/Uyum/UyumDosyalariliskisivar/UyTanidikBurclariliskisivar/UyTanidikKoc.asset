@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyTanidikKoc
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA19500708945
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Sen
+    bu ko\xE7 burcu {{data, cinsiyet=erkek, han\u0131mefendiyi | cinsiyet=kad\u0131n,
+    beyefendiyi | cinsiyet=lgbt, ki\u015Fiyi}} sorunca, akl\u0131ma Total Touch'\u0131n
+    \\\"Somebody else's lover\\\" \u015Fark\u0131s\u0131 geldi {{isim}}. Neden mi?
+    Senin hali haz\u0131rda bir {{data, cinsiyet=erkek, k\u0131z arkada\u015F\u0131n
+    | cinsiyet=kad\u0131n, erkek arkada\u015F\u0131n | cinsiyet=lgbt, sevgilin}}
+    varken onu merak ediyorsun, o okey, onda sorun yok. Ancak sordu\u011Fun ki\u015Fi
+    de burcu gere\u011Fi ultra fl\xF6rt\xF6z. E\u011Fer bir ili\u015Fkisinin olmad\u0131\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorsan \u015Funu rahatl\u0131kla s\xF6yleyebilirim; b\xFCy\xFCk
+    ihtimalle fl\xF6rt etti\u011Fi, konu\u015Ftu\u011Fu ya da g\xF6r\xFC\u015Ft\xFC\u011F\xFC
+    birileri vard\u0131r. Ko\xE7 {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n,
+    erkekleri | cinsiyet=lgbt, mensuplar\u0131}} kalplerini pek bo\u015F tutmazlar.
+    Gelelim ger\xE7ekten uyumlu olup olmad\u0131\u011F\u0131n\u0131za; kafa yap\u0131lar\u0131n\u0131z
+    farkl\u0131 {{isim}}. Hayat g\xF6r\xFC\u015Fleriniz ve ama\xE7lar\u0131n\u0131z
+    farkl\u0131. Beklentileriniz farkl\u0131. Tavan yapt\u0131\u011F\u0131n\u0131z
+    tek bir konu var, o da ten uyumunuz. <sprite=9> \\\"Yar\u0131nlarda g\xF6z\xFCm
+    yok, sevgilime de art\u0131k s\xF6yleyecek hi\xE7bir s\xF6z\xFCm yok, hayat\u0131m\u0131
+    ya\u015Famak istiyorum\\\" diyorsan, devam et derim. Kim tutar seni... \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "tan\u0131d\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "ko\xE7"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

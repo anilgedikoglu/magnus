@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme420
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA94328850230
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinde kendili\u011Finden s\u0131k\u0131\u015Fmakta olan bir \"mengene\"
+    g\xF6r\xFCyorum {{isim}}. Son zamanlarda baz\u0131 konularda aniden zorlan\u0131yor,
+    dara d\xFC\u015F\xFCyor ve kendi kendini bir anda yo\u011Fun \u015Fekilde strese
+    sokuyor gibi g\xF6z\xFCk\xFCyorsun. Bu durum {{sayi,2,6}} hafta kadar daha devam
+    edecek. Sonras\u0131nda, g\xFCndelik olaylar\u0131n seni bir daha bu kadar zorlamayaca\u011F\u0131n\u0131
+    bilmeni isterim.\n\nFincan\u0131n\u0131n taban\u0131nda ise, do\u011Fal halde
+    bulunan ve kesimi yap\u0131lmam\u0131\u015F, \"safir\" diye de adland\u0131r\u0131lan
+    harika bir g\xF6k yakut ta\u015F\u0131 var. Bu ta\u015F, fal sahibine huzurun
+    kap\u0131lar\u0131n\u0131n sonuna kadar a\xE7\u0131laca\u011F\u0131n\u0131 f\u0131s\u0131ldar
+    {{isim}}. \xD6zellikle para konusunda, m\xFCtevazi ve sabretmeyi bilen ruhlar\u0131,
+    \xF6nemli derecede bolluk ve b\xFCy\xFCk bir bereketin kar\u015F\u0131layaca\u011F\u0131n\u0131
+    haber verir.\n\nFincan kenar\u0131nda k\xFC\xE7\xFCk, silik bir y\u0131ld\u0131z
+    g\xF6z\xFCme ili\u015Fti. Y\u0131ld\u0131z kayarken dilek dilemeyeli \xE7ok uzun
+    zaman oldu, \xF6yle de\u011Fil mi {{isim}}? Fakat son diledi\u011Fin kabul olmu\u015F
+    ve vakti hen\xFCz gelmi\u015F. {{gelecek_ay}} ay\u0131n\u0131 bekle!..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

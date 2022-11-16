@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: OgrenciNisanli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA68765707859
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "K\u0131ymetli {{isim}}, bug\xFCn g\xFCn\xFCn ilerleyen saatlerinde eline bir
+    foto\u011Fraf ya da belge ge\xE7ebilir. Bunu ya sosyal medya \xFCzerinden, ya
+    whatsapp'dan ya da e-mail yolu ile alaca\u011F\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorum.
+    Yapt\u0131\u011F\u0131m de\u011Ferlendirmeler, i\xE7eri\u011Finin seni \xE7ok
+    memnun edece\u011Fini s\xF6yl\xFCyor. Ad\u0131n\u0131n ya da soyad\u0131n\u0131n
+    ilk hecesinde {{harf}} harfi olan bir okul arkada\u015F\u0131n var m\u0131 {{isim}}?
+    Bu ki\u015Fiden,  maddi anlamda ya da zaman ba\u011Flam\u0131nda seni zora sokacak
+    bir teklif alabilirsin. Yine de mutlu olacaks\u0131n. Ni\u015Fanl\u0131n\u0131n
+    ise ak\u015Fam saatlerine do\u011Fru senden bir ricas\u0131n\u0131n olaca\u011F\u0131n\u0131
+    \xF6ng\xF6r\xFCyorum. Yerine getirmek istemedi\u011Fin takdirde yanl\u0131\u015F
+    anla\u015F\u0131labilirsin; dikkatli olmal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

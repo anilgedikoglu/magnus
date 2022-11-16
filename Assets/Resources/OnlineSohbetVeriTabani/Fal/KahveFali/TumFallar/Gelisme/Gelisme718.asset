@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme718
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA04456093771
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin orta k\u0131s\u0131mlar\u0131 adeta g\xF6ky\xFCz\xFCn\xFC and\u0131r\u0131yor
+    {{isim}}. Burada yan yana duran, k\xFC\xE7\xFCkl\xFC b\xFCy\xFCkl\xFC 3 nokta
+    g\xF6r\xFCyorum. Bu noktalardan sa\u011Fdaki ve soldaki Sat\xFCrn ve Uran\xFCs'\xFC
+    temsil ederken, aralar\u0131ndaki parlak olan ise \u015Eiron (Chiron) kuyruklu
+    y\u0131ld\u0131z\u0131n\u0131 simgeliyor. \U0001F320 G\xF6rseller aras\u0131ndaki
+    mesafeleri orant\u0131lar\u0131yla analiz etti\u011Fimde, senin 2 ay \xF6nce
+    bu y\u0131ld\u0131z\u0131n etkisi alt\u0131na girdi\u011Fini anl\u0131yorum.
+    {{sayi,3,9}}-{{sayi,16,27}} {{ay_-2}} tarihleri aras\u0131nda, \xFCzerinde stres
+    yaratan bir olay\u0131n da etkisiyle ba\u011F\u0131\u015F\u0131kl\u0131k sistemin
+    zay\u0131flam\u0131\u015F. Bunu uyku bozukluklar\u0131 ve d\xFCzensiz beslenme
+    de takip edince, hem fizyolojik hem de psikolojik olarak zay\u0131f d\xFC\u015Fm\xFC\u015Fs\xFCn.
+    \u015Eiron \xF6n\xFCm\xFCzdeki ay\u0131n {{kelime, 8'i | 9'u | 10'u | 11'i |
+    12'si | 13'\xFC | 14'\xFC | 15'i | 16's\u0131 | 17'si | 18'i | 19'u}} itibariyle
+    yeniden hayat\u0131na dokunacak. Bu defa seni mutlu edecek bir haber alacak ve
+    bu haberin etkisiyle uzun s\xFCre \xE7ok sa\u011Fl\u0131kl\u0131 hissedeceksin
+    {{isim}}.\n\nFincan\u0131nda ayr\u0131ca, bir demet kuru ada\xE7ay\u0131 g\xF6r\xFCyorum.
+    \xDCzerinde {{kelime, beyaz \xF6nl\xFCk | siyah elbise | mesleki \xFCniformas\u0131
+    | g\xFCndelik k\u0131yafetleri | y\xF6resel k\u0131yafetleri}} olan bir {{kelime,
+    kad\u0131n | erkek}}, bu ada\xE7ay\u0131n\u0131 t\xFCts\xFC gibi bir u\xE7tan
+    ate\u015Fe vermi\u015F ve t\xFCten dumanla birlikte s\u0131rt \xFCst\xFC uzanm\u0131\u015F
+    olan {{kelime, 10-15 ya\u015Flar\u0131ndaki | 20-25 ya\u015Flar\u0131ndaki |
+    30-35 ya\u015Flar\u0131ndaki | 40-45 ya\u015Flar\u0131ndaki | 50-55 ya\u015Flar\u0131ndaki
+    | 60-65 ya\u015Flar\u0131ndaki | 5-10 ya\u015Flar\u0131ndaki | 70-75 ya\u015Flar\u0131ndaki
+    | 80-85 ya\u015Flar\u0131ndaki}} birinin etraf\u0131nda d\xF6n\xFCyor. Bu ki\u015Fi
+    her kimse, \xE7evresinde d\xF6nen insan her biri 3 g\xFCne tekab\xFCl eden {{sayi,3,15}}
+    tur att\u0131ktan sonra {{kelime, ruhsal bir s\u0131k\u0131nt\u0131s\u0131ndan
+    kurtulacak | s\u0131k\xE7a \u015Fikayet etti\u011Fi eski bir sa\u011Fl\u0131k
+    sorunundan kurtulacak | bir s\xFCredir \u015Fikayet etti\u011Fi \xF6nemli bir
+    sa\u011Fl\u0131k sorunundan kurtulacak | pek kimseye dillendirmedi\u011Fi fakat
+    rahats\u0131z oldu\u011Fu ciddi bir sa\u011Fl\u0131k sorunundan kurtulacak}}.
+    Fal\u0131nda \xE7\u0131kt\u0131\u011F\u0131na g\xF6re de, sen bu ki\u015Fiyi
+    iyi tan\u0131yor olmal\u0131s\u0131n De\u011Ferli {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

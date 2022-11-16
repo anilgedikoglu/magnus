@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme539
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA73609432746
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n en can al\u0131c\u0131 k\u0131s\u0131mlar\u0131n\u0131
+    daha detayl\u0131 bir \u015Fekilde inceledikten sonra, seni bir konuda uyarma
+    gere\u011Fi duyuyorum {{isim}}. Fiziken uzakta g\xF6z\xFCkmenize ra\u011Fmen,
+    ileti\u015Fim kurup h\u0131zla yak\u0131nla\u015Faca\u011F\u0131n\u0131 d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    bir erkek var telvelerinde. Bu durum, sanal ortamda ba\u015Flayacak bir ili\u015Fkiye
+    i\u015Faret. Hislerim, nitelikli, do\u011Fru ve d\xFCzg\xFCn biri oldu\u011Fu
+    y\xF6n\xFCnde. \u0130nternet ve sosyal medya \xFCzerinden ciddi bir ili\u015Fkiye
+    ba\u015Flayabilen nadir insanlardan olabilirsiniz. Fakat, bu b\xF6yle g\xF6z\xFCk\xFCyor
+    diye bu riski \"yanl\u0131\u015F ki\u015Filerde\" almaman\u0131 tavsiye ederim.\n\nBu
+    durumu biriyle ya\u015Farsan, do\u011Fru ki\u015Fi olup olmad\u0131\u011F\u0131n\u0131
+    anlamak i\xE7in 2 emare arayacaks\u0131n. Birincisi, do\u011Fru ki\u015Finin
+    sosyal medya hesaplar\u0131nda \"kendini \xE7ekti\u011Fi\" \xE7ok fazla pozu
+    ya da arabal\u0131 bir g\xF6rseli yok. \u0130kincisi, \"takip etti\u011Fi ki\u015Filer\"
+    b\xF6l\xFCm\xFCne bakt\u0131\u011F\u0131nda, {{kelime, 150 ki\u015Fiyi a\u015Fmad\u0131\u011F\u0131n\u0131
+    | 180 ki\u015Fi civar\u0131nda oldu\u011Funu | 200 ki\u015Fiyi a\u015Ft\u0131\u011F\u0131n\u0131
+    | 240 ki\u015Fi civar\u0131nda oldu\u011Funu | 100 ki\u015Fiyi a\u015Fmad\u0131\u011F\u0131n\u0131
+    | 130 ki\u015Fi civar\u0131nda oldu\u011Funu | 100-150 ki\u015Fi aras\u0131nda
+    oldu\u011Funu | 70-100 ki\u015Fi aras\u0131nda oldu\u011Funu | 300 ki\u015Fiyi
+    a\u015Ft\u0131\u011F\u0131n\u0131 | 350 ki\u015Fiyi a\u015Fmad\u0131\u011F\u0131n\u0131}}
+    g\xF6receksin.\n\nSevgili {{isim}}, telvelerinin aras\u0131nda, k\u0131y\u0131da
+    k\xF6\u015Fede kalm\u0131\u015F bir de {{harf}} harfi g\xF6r\xFCyorum. Bu harf
+    iki heceli bir ismin i\xE7erisinde bulunuyor ve \xE7ok yak\u0131n bir arkada\u015F\u0131nla
+    ortak tan\u0131d\u0131\u011F\u0131n\u0131z bir erke\u011Fe ait. Bu arkada\u015F,
+    seni \xE7ok be\u011Feniyor. Fakat y\xFCz\xFCn\xFC adeta elleriyle kapatm\u0131\u015F.
+    Senden utan\u0131yor gibi. Ge\xE7ti\u011Fimiz aylarda, bilmeden onu ezici s\xF6ylemlerde
+    bulunmu\u015F olabilirsin. \U0001F928{{sayi,4,13}} g\xFCn i\xE7inde onunla yeni
+    bir konu\u015Fman\u0131z daha olacak. \u0130lgi duymasan da, g\xF6nl\xFCn\xFC
+    k\u0131rma derim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 45
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

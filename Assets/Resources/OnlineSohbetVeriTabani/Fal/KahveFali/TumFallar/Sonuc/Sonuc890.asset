@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc890
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA75457041667
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "S\u0131rt\u0131nda bir k\xFCfe ta\u015F\u0131d\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum
+    K\u0131ymetli {{isim}}. E\u015Fin zaman zaman bu k\xFCfenin i\xE7ine k\xFCl\xE7e
+    k\xFCl\xE7e kelimeler, hazm\u0131 a\u011F\u0131r c\xFCmleler b\u0131rak\u0131yor
+    gibi. A\u011F\u0131r bir y\xFCke maruz kal\u0131yorsun. Fakat hissetti\u011Fim
+    kadar\u0131yla onun y\xFCk\xFC de en az senin kadar a\u011F\u0131r. Hayat onu
+    zor \u015Fartlarla yo\u011Furmu\u015F. S\u0131radan bir insan\u0131n kar\u015F\u0131la\u015Fmas\u0131
+    pek m\xFCmk\xFCn olmayacak kadar \"k\xF6t\xFC ve hay\u0131rs\u0131z\" insan tan\u0131m\u0131\u015F.
+    Her birinden ald\u0131\u011F\u0131 farkl\u0131 ka\u011F\u0131t kesikleri var
+    y\xFCre\u011Finde. Onu de\u011Ferlendirirken, mutlaka kendi \u015Fartlar\u0131
+    i\xE7erisinde ele\u015Ftirmeyi ve anlay\u0131\u015Fl\u0131 olmaya \xF6zen g\xF6stermeyi
+    unutma derim..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

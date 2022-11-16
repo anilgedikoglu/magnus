@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Kilicuclusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA60997992790
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: dd566fd1228db57418e35bedf3a66057, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: dd566fd1228db57418e35bedf3a66057, type: 3}
+  contentPhotoId: kilicuclusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131
+    se\xE7tin.\n\nBu kart\u0131n \xFCzerinde biraz a\u015Fk\u0131n, biraz da ikili
+    ili\u015Fkilerin parmak izleri vard\u0131r. Kafan\u0131 kar\u0131\u015Ft\u0131rm\u0131\u015F,
+    seni k\xF6\u015Feye s\u0131k\u0131\u015Ft\u0131rm\u0131\u015F ve ikilemlerde
+    b\u0131rakm\u0131\u015F ac\u0131lar \xE7ekti\u011Fini, incindi\u011Fini i\u015Faret
+    eder. Birisi seni hayal k\u0131r\u0131kl\u0131\u011F\u0131na u\u011Fratm\u0131\u015F
+    {{isim}}. \xC7ok de\u011Fer verdi\u011Fin o ki\u015Fiden hi\xE7 beklemedi\u011Fin
+    ve hak etmedi\u011Fin kar\u015F\u0131l\u0131klar g\xF6rmek, seni derinden yaralam\u0131\u015F.
+    Burada alt\u0131n\u0131n \xE7izilmesi gerek \u015Fey ise \u015Fu; zaman, y\xFCre\u011Findeki
+    elem ve kedere melhem olmu\u015F. Takvim yapraklar\u0131 s\xF6k\xFCld\xFCk\xE7e
+    her \u015Feyin nas\u0131l da iyile\u015Fti\u011Fini g\xF6rm\xFC\u015F, her durumda
+    kendini toparlayabilece\u011Fini anlam\u0131\u015Fs\u0131n. Ya\u015Fananlar\u0131
+    kabullenmenin ve erdemli bir \u015Fekilde sabretmenin \xF6nemi senin g\xF6z\xFCnde
+    yeniden kan\u0131tlanm\u0131\u015F."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kilicuclusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme693
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA32222137544
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n belirli noktalar\u0131nda, kad\u0131nlar taraf\u0131ndan
+    \"pudra f\u0131r\xE7alar\u0131\" dokundurulmu\u015F gibi izler var. \xD6bek \xF6bek
+    bulutsu karart\u0131lar\u0131n aras\u0131nda ise, kendilerine ait iki \xFC\xE7
+    \xE7ift g\xF6z var. Sen \xE7evrendeki han\u0131mefendiler taraf\u0131ndan ola\u011Fand\u0131\u015F\u0131
+    bir \u015Fekilde be\u011Feniliyorsun {{isim}}. \U0001F928Bir ili\u015Fkin olmas\u0131na
+    ra\u011Fmen, senden halen \xFCmidi kesmeyen ve \u015Fans\u0131n\u0131 denemek
+    i\xE7in f\u0131rsat kollayan insanlar g\xF6r\xFCyorum. \xD6rne\u011Fin bir \"{{kelime,
+    C | L | S | G | T | D}}\" ve bir de \"{{kelime, B | Y | N | M | \u0130}}\" harfi
+    g\xF6r\xFCyorum. Bu harflerin her birinin, sana en \xE7ok ilgi duyan 2 ki\u015Finin
+    isiminde oldu\u011Funu d\xFC\u015F\xFCn\xFCyorum. \xD6zellikle verdi\u011Fim
+    ikinci harfin sahibi olan han\u0131mefendiye aman dikkat et {{isim}}; ofansif
+    tav\u0131rlar\u0131 gelecek hafta hududu a\u015Fabilir ve sevgilini huzursuz
+    edebilir.\n\nBirbirlerine uyumlu \u015Fekilde d\xF6\u015Fenmedi\u011Fi i\xE7in
+    ho\u015F bir g\xF6r\xFCnt\xFC vermeyen mozaikler g\xF6r\xFCyorum fal\u0131nda.
+    Sevgilin seni \xE7ok sevmesine ra\u011Fmen, bir \u015Feyler sanki tam olarak
+    i\xE7ine sinmiyor gibi. Telvelerin, onun \xE7ok iyi bir insan oldu\u011Funu s\xF6yl\xFCyor
+    {{isim}}. Bu \"eleyici\" tutumunu daha \xF6nceki ili\u015Fkilerinde oldu\u011Fu
+    gibi ona da sergilersen, bence yaz\u0131k edersin. Senin i\xE7in hay\u0131rl\u0131
+    biriylesin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

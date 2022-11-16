@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris354
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA41744665557
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n tepe k\u0131sm\u0131nda, tek y\xF6nl\xFC bir ge\xE7idin
+    \"ters y\xF6n\xFCne do\u011Fru\" ko\u015Fmakta oldu\u011Funu g\xF6r\xFCyorum
+    {{isim}}. \xC7\u0131kmaz bir y\xF6ne do\u011Fru ko\u015Ftu\u011Funu bilsen dahi,
+    geri d\xF6nmek istemiyor gibi g\xF6z\xFCk\xFCyorsun. \U0001F914Anlad\u0131\u011F\u0131m
+    kadar\u0131yla, {{yil_-4}} ve {{yil_-2}} y\u0131llar\u0131 aras\u0131nda sonu\xE7lar\u0131n\u0131n
+    \xE7ok da fark\u0131nda olmadan birine bir s\xF6z vermi\u015Fsin. Verdi\u011Fin
+    bu s\xF6z\xFCn \"yapt\u0131r\u0131mlar\u0131\" \u015Fu s\u0131ralar sana fazla
+    a\u011F\u0131r gelmeye ba\u015Flam\u0131\u015F ve hissetti\u011Fin esaretten
+    kurtulmak istemene neden olmu\u015F. Bu {{kelime, mesuliyet | sorumluluk | y\xFCk\xFCml\xFCl\xFCk
+    | mecburiyet}} duygusundan, senin yerine \"taahh\xFCt\" alt\u0131na girmeyi kabul
+    edecek {{kelime, 45-50 ya\u015Flar\u0131nda | 55-60 ya\u015Flar\u0131nda | 60-65
+    ya\u015Flar\u0131nda}} bir beyefendi vesilesiyle kurtulaca\u011F\u0131n\u0131
+    s\xF6yl\xFCyor telvelerin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 34
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 34
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

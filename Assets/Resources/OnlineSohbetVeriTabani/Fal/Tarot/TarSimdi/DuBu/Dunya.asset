@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Dunya
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA29664598870
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a21cb8df2ec02624c9ab52eef7e4f9f2, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a21cb8df2ec02624c9ab52eef7e4f9f2, type: 3}
+  contentPhotoId: dunya
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"D\xFCnya\" kart\u0131n\u0131 se\xE7tin.\n\nSeni gelecekte
+    mutlu k\u0131lacak hay\u0131rl\u0131 ve do\u011Fru yollar \xFCzerindesin. Kendine
+    belirledi\u011Fin hedefler, sana her anlamda kazan\xE7 kap\u0131lar\u0131n\u0131
+    bir bir a\xE7\u0131yor. Senin i\xE7in yararl\u0131 olacak insanlar\u0131 hayat\u0131nda
+    tutuyor, fayda sa\u011Flamayacak olanlar\u0131 bir bir hayat\u0131ndan \xE7\u0131kar\u0131yorsun.
+    Hayat yolunda \xF6yle ustal\u0131kla ilerliyorsun ki, sanki bu yollardan daha
+    \xF6nce ge\xE7mi\u015F ve neyin senin i\xE7in daha iyi oldu\u011Funu \xF6nceden
+    biliyor gibisin {{isim}}. Sezgilerine \xE7ok \u015Fey bor\xE7lusun. Onlar sayesinde
+    do\u011Fru yerde do\u011Fru zamanda oldu\u011Funu ve gereken ne ise onlar\u0131
+    yapt\u0131\u011F\u0131n\u0131 ifade ediyor kart\u0131n. Buras\u0131 senin d\xFCnyan
+    ve sistem adeta senin huzurun i\xE7in i\u015Fliyor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi dunya
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKadercarki
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA26691252210
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 701a9d311413d344aa0092e367cc7d29, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 701a9d311413d344aa0092e367cc7d29, type: 3}
+  contentPhotoId: kadercarki-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kader \xC7ark\u0131\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\n\u0130\xE7inde
+    bulundu\u011Fun s\xFCre\xE7, kart\u0131na g\xF6re \"k\xF6t\xFC bir gidi\u015Fat\"
+    olarak de\u011Ferlendirilebilir {{isim}}. Bu i\u015Farete kar\u015F\u0131, bir
+    de soru sormak laz\u0131m; acaba k\xF6t\xFC g\xF6z\xFCken \u015Feyler ayn\u0131
+    zamanda \"hay\u0131rl\u0131\" olabilir mi? Bence \u015Fu g\xFCnlerde, gelecekte
+    senin i\xE7in g\xFCzel sonu\xE7lar do\u011Furacak \u015Feyler ya\u015F\u0131yorsun.
+    Bunu \u015Fu an sezemeyi\u015Fin de yine kart\u0131n\u0131n bize i\u015Faret
+    ettiklerinden. Y\xF6n aray\u0131\u015F\u0131 i\xE7indesin. Ne tarafa y\xF6nelmen
+    gerekti\u011Fini, bir ad\u0131m sonra nereye basman gerekti\u011Fini bilmiyorsun.
+    \xC7evrene bakt\u0131\u011F\u0131nda, \xE7\u0131k\u0131\u015F yollar\u0131n kapanm\u0131\u015F
+    gibi g\xF6z\xFCk\xFCyor. Yine de kaderin, yeni yollar\u0131n a\xE7\u0131lmayaca\u011F\u0131n\u0131
+    s\xF6ylemiyor. \u0130stenmeyen bu gidi\u015Fat\u0131n, verdi\u011Fin kararlarla
+    yava\u015F yava\u015F da olsa tersine d\xF6n\xFCyor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kadercarki ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

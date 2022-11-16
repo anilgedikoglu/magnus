@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme557
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA80250126715
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Off of {{isim}}... Fincan\u0131n\u0131n merkezindeki telveler, adeta b\xFCy\xFCk
+    dalgalar\u0131n k\u0131y\u0131y\u0131 d\xF6vd\xFCkten sonra derine \xE7ekilirken
+    b\u0131rakt\u0131klar\u0131 izler gibi \u015Fekillenmi\u015Fler. \U0001F30AGeride
+    kalan semboller ise, kar\u015F\u0131na ge\xE7ip harp d\xFCzeni alm\u0131\u015F
+    \"g\xFCzel an\u0131lar\" gibi. \U0001F9D0\u0130ki insan\u0131n da birbirini bu
+    denli severken ayr\u0131lmalar\u0131, \xE7ok s\u0131k rastlanan bir durum de\u011Fil
+    ger\xE7ekten. \u015Eu an ikiniz de kendinizi sorguluyorsunuz. Kar\u015F\u0131
+    kar\u015F\u0131ya iken \xE7uvald\u0131zlar birbirinize bat\u0131r\u0131lm\u0131\u015F;
+    fakat \u015Fimdi, anla\u015F\u0131lan \"i\xE7e d\xF6nme\" vakti.\n\nG\xF6z\xFCme
+    k\xFC\xE7\xFCc\xFCk \xE7an \xE7i\xE7ekleri ili\u015Fti. \U0001F337Mor ve beyaz
+    renkleriyle harikulade duran bu \xE7i\xE7ek, \xF6zlemin, tutkunun ve t\u0131ls\u0131ml\u0131
+    bir ba\u011Fl\u0131l\u0131\u011F\u0131n sembol\xFCd\xFCr. \u0130lerleyen g\xFCnlerde
+    ayr\u0131ld\u0131\u011F\u0131n ki\u015Fi ile birbirinizi ayn\u0131 anda akl\u0131n\u0131zdan
+    ge\xE7irebilir, \xF6zellikle \"ak\u015Fam ve yats\u0131\" vakitleri aras\u0131nda
+    g\xFCzel an\u0131lar\u0131 ayn\u0131 anda hat\u0131rlayabilir, ayn\u0131 gece
+    r\xFCyan\u0131zda g\xF6rebilirsiniz. Seni d\xFC\u015F\xFCnd\xFC\u011F\xFC anlarda,
+    ensende ya da kollar\u0131nda bir \xFCrperti, kula\u011F\u0131nda \xE7\u0131nlama
+    ya da hafif g\xF6z kararmalar\u0131 hissedebilirsin {{isim}}. Bu ve benzeri alametler,
+    sizi yeniden birbirinize y\xF6nlendirecek. Bu ka\xE7\u0131n\u0131lmaz g\xF6z\xFCk\xFCyor..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

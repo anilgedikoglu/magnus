@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme675
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA88380020501
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131n, hoyrat bir geceyi perdeleyen bulutlar\u0131n emsali olan telvelerin
+    \xF6nc\xFCl\xFC\u011F\xFCnde devam ediyor. Adeta bir tiyatro sahnesinde kadife
+    perdelerin yana a\xE7\u0131lmas\u0131 gibi, fincan\u0131n, hayat\u0131n\u0131
+    konu alan bir oyun tad\u0131nda. \xD6yle ki, bana tamam\u0131 sahnede ge\xE7en
+    \"Dogville\" filmini an\u0131msatt\u0131. Bu filmde oldu\u011Fu gibi, {{kelime,
+    bir kimseye | bir duruma | bir meseleye | bir insana}} kar\u015F\u0131 g\xF6sterdi\u011Fin
+    \"zaaf\" ba\u015Fkalar\u0131 taraf\u0131ndan kendi menfaatlerince kulland\u0131klar\u0131
+    bir \xE7\u0131kar meselesine d\xF6n\xFC\u015Febiliyor. \u0130nsafl\u0131 do\u011Fan\u0131,
+    sanki ya\u011Fmalanmaya haz\u0131r bir kaynak olarak g\xF6rm\xFC\u015F insanlar.
+    Merhametinin g\xF6lgesinde senden araklad\u0131klar\u0131yla var olmaya \xE7al\u0131\u015Fm\u0131\u015Flar.
+    \xD6zellikle senin gibi {{yas_-5}}-{{yas_+5}} ya\u015Flar\u0131 aras\u0131nda,
+    {{kelime, i\u015F vas\u0131tas\u0131yla | ortak bir i\u015F arkada\u015F\u0131
+    vas\u0131tas\u0131yla | tamamen tesad\xFCf eseri}} tan\u0131\u015Ft\u0131\u011F\u0131n
+    bir insan, seni tabir-i caizse \"me\u015Fru hedef\" olarak bellemi\u015F.\n\nTelvelerin
+    bundan iki ay sonra, yani {{ay_2}} ay\u0131n\u0131n son demlerine do\u011Fru,
+    soyisminde {{kelime, H veya P | R veya C | S veya \xD6}} harflerinin bar\u0131nd\u0131\u011F\u0131
+    birinin senden {{kelime, bir iyilik | nispeten y\xFCkl\xFC miktarda bor\xE7 |
+    makul miktarda bir bor\xE7 | bir iltimas}} rica edece\u011Fini s\xF6yl\xFCyor.
+    Ba\u015Ftaki tepkin ricas\u0131n\u0131 kabul etmek olacak, ancak bu ki\u015Fiyle
+    ortak tan\u0131d\u0131\u011F\u0131n bir hemcinsine dan\u0131\u015Fman, kendisinin
+    bu ki\u015Fiyle ge\xE7mi\u015F hesaplar\u0131 olmas\u0131 itibariyle, do\u011Fru
+    karar\u0131 vermende \xE7ok yard\u0131mc\u0131 olacak {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

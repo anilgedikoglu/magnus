@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme690
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA15770504057
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sana hakikati g\xF6stermeye yetkin bir \"ayna\" yans\u0131m\u0131\u015F telvelerine.
+    Tesad\xFCfe bak ki bu aynadan yans\u0131yan yol, seni kurak g\xF6nl\xFCne \xE7a\u011Flayacak
+    o ki\u015Finin adresine g\xF6t\xFCrecek. Buradaki ayna, bulundu\u011Fun ilde,
+    i\xE7inde {{harf}} ya da {{harf}} harfi ge\xE7en bir semtte, {{kelime, ailesiyle
+    | ev arkada\u015F\u0131yla | e\u015Fiyle | sevgilisiyle | bir aile b\xFCy\xFC\u011F\xFCyle
+    yaln\u0131z}} ya\u015Fayan, {{kelime, tahsilli ve \xE7evresi geni\u015F | iyi
+    okumam\u0131\u015F ancak \xE7evresi geni\u015F | \xE7evresi dar fakat d\xFCzg\xFCn
+    insanlardan olu\u015Fan}} bir {{kelime, arkada\u015F\u0131n\u0131 | tan\u0131d\u0131\u011F\u0131n\u0131}}
+    sembolize ediyor. K\u0131smetindeki {{data, cinsiyet=erkek, han\u0131mefendi
+    | cinsiyet=kad\u0131n, beyefendi | cinsiyet=lgbt, insan}}, bu ki\u015Finin iyi
+    tan\u0131d\u0131\u011F\u0131 biri. Seni {{sayi,2,8}} hafta i\xE7inde bir foto\u011Frafta
+    g\xF6recek ve bu ki\u015Fiye soracak. \u0130lgisini anlad\u0131\u011F\u0131nda,
+    tan\u0131d\u0131\u011F\u0131n onu sana y\xF6nlendirmek yerine, seni ona y\xF6nlendirecek.
+    Fincan\u0131n, bu f\u0131rsat\u0131 kesinlikle ka\xE7\u0131rmaman gerekti\u011Fini
+    f\u0131s\u0131ld\u0131yor {{isim}}!\n\nFal\u0131nda bir de y\xFCz\xFCk belirmi\u015F.
+    Bu y\xFCz\xFCk {{kelime, s\xF6z ya da ni\u015Fan de\u011Fil, bir evlilik y\xFCz\xFC\u011F\xFC
+    | evlilik de\u011Fil, s\xF6z ya da ni\u015Fan y\xFCz\xFC\u011F\xFC}}. Bu y\xFCz\xFC\u011F\xFC
+    {{yil_2}} y\u0131l\u0131nda ya da {{kelime, bir gecikme nedeniyle | bir erteleme
+    nedeniyle | bir plan g\xFCncellemesi nedeniyle}} {{yil_3}} y\u0131l\u0131n\u0131n
+    {{kelime, ikinci | \xFC\xE7\xFCnc\xFC}} \xE7eyre\u011Fi i\xE7inde takacaks\u0131n\u0131z.
+    Bu durum ger\xE7ekle\u015Firken bulundu\u011Funuz yerde ise {{kelime, pek fazla
+    insan olmayacak. | 15-20 ki\u015Filik bir grup olacaks\u0131n\u0131z. | 5-6 ki\u015Filik
+    k\xFC\xE7\xFCk bir grup olacaks\u0131n\u0131z. | olduk\xE7a fazla say\u0131da
+    insan g\xF6r\xFCyorum.}}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

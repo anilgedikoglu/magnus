@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersYildiz
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA97917851085
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: b62393b981f4d2c43a03f4e5d089196e, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: b62393b981f4d2c43a03f4e5d089196e, type: 3}
+  contentPhotoId: yildiz-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Y\u0131ld\u0131z\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\n\u0130yiyi
+    ve g\xFCzeli d\xFC\u015F\xFCnmeyi anlatan, umutlar\u0131 i\u015Faret eden bu
+    g\xFCzel kart, senin i\xE7in ters gelmi\u015F. K\xF6t\xFCmser bir evredesin.
+    G\xF6z\xFCn\xFCn \xF6n\xFCnde iyi bir seyir halinde olan meseleler bile sana
+    endi\u015Fe veriyor. \xC7\u0131kabilecek aksilikler, s\xFCrekli beyninin i\xE7inde
+    adeta d\xF6rt d\xF6n\xFCyor. Fazla d\xFC\u015F\xFCnmek ve detayl\u0131 d\xFC\u015F\xFCnmek,
+    bazen insan\u0131 b\xF6yle zamanlara itiyor {{isim}}. \u0130htimallerin aras\u0131nda
+    hapsolmu\u015F gibisin. Motivasyon ve ilham, senin i\xE7in kitaplarda ge\xE7en
+    iki afilli s\xF6z gibi \u015Fimdi. Nedenini tespit edemedi\u011Fin bir olu\u015Fum
+    i\xE7indesin. Bu karamsarl\u0131\u011F\u0131n kayna\u011F\u0131n\u0131 bulmal\u0131
+    ve onu bir \u015Fekilde ortadan kald\u0131rmal\u0131s\u0131n. Sabit bir bak\u0131\u015F
+    a\xE7\u0131s\u0131n\u0131n esiri olmamal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi yildiz ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

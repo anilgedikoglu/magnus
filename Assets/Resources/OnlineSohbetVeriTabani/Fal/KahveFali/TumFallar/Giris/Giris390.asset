@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris390
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA45868565647
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Birbirinin ard\u0131 s\u0131ra gelen iki kap\u0131 g\xF6r\xFCyorum fincan\u0131nda.
+    \U0001F6AA{{kelime, \u0130lki d\u0131\u015Far\u0131dan kulp ile, ikincisi ise
+    i\xE7eriden, otomatla a\xE7\u0131lan | \u0130lki d\u0131\u015Far\u0131dan otomatla,
+    ikincisi ise yine d\u0131\u015Far\u0131dan, kulp ile a\xE7\u0131lan | \u0130lki
+    d\u0131\u015Far\u0131dan otomatla, ikincisi ise bir topuzla a\xE7\u0131lan |
+    \u0130lki d\u0131\u015Far\u0131dan yuvarlak bir topuzla, ikincisi ise i\xE7eriden,
+    otomatla a\xE7\u0131lan | \u0130lki d\u0131\u015F\u0131ndaki kulptan iterek,
+    ikincisi ise otomatla a\xE7\u0131lan | \u0130lki d\u0131\u015Far\u0131dan otomatla,
+    ikincisi ise d\u0131\u015F\u0131ndaki kulptan iterek a\xE7\u0131lan | \u0130lki
+    d\u0131\u015Far\u0131dan bir anahtarla, ikincisi ise d\u0131\u015F\u0131ndaki
+    kulp ile a\xE7\u0131lan}} bu iki kap\u0131dan {{kelime, gelecek hafta \xE7ar\u015Famba
+    ve cuma g\xFCnleri aras\u0131nda | 2 hafta sonra pazartesi ya da sal\u0131 g\xFCn\xFC
+    | 2 hafta sonra per\u015Fembe ya da cuma g\xFCn\xFC | 3 hafta sonra sal\u0131
+    ve per\u015Fembe g\xFCnleri aras\u0131nda | 3 hafta sonra per\u015Fembe ya da
+    cumartesi g\xFCn\xFC | 4 hafta sonra sal\u0131 ya da \xE7ar\u015Famba g\xFCn\xFC
+    | 4 hafta sonra per\u015Fembe ya da cuma g\xFCn\xFC | 5 hafta sonra sal\u0131
+    ya da \xE7ar\u015Famba g\xFCn\xFC | 5 hafta sonra per\u015Fembe ya da cuma g\xFCn\xFC
+    | 6 hafta i\xE7inde bir sal\u0131 \xF6\u011Fleden sonras\u0131 | 7 hafta i\xE7inde
+    bir \xE7ar\u015Famba \xF6\u011Fleden sonras\u0131}} ge\xE7ecek ve {{kelime, g\xFCler
+    y\xFCzl\xFC | keskin bak\u0131\u015Fl\u0131 | iyi niyeti sesine yans\u0131m\u0131\u015F
+    olan | sana de\u011Fer veren | pek s\u0131k kar\u015F\u0131la\u015Fmad\u0131\u011F\u0131n
+    | ad\u0131n\u0131 daha \xF6nce duydu\u011Fun fakat kendisini ilk kez g\xF6rece\u011Fin
+    | \xE7ok sevmene ra\u011Fmen s\u0131k g\xF6r\xFC\u015Femedi\u011Fin}} birine
+    ula\u015Facaks\u0131n {{isim}}. Bu ki\u015Fi, {{kelime, i\u015F hayat\u0131na
+    dair sana b\xFCy\xFCk bir m\xFCjde verecek. | i\u015F hayat\u0131na dair sana
+    harika bir haber verecek. | maddi s\u0131k\u0131\u015F\u0131kl\u0131klar\u0131ndan
+    kurtulabilmen i\xE7in sana ilave bir kazan\xE7 imkan\u0131 sa\u011Flayacak. |
+    akl\u0131ndaki hedefleri ger\xE7ekle\u015Ftirebilmen i\xE7in sana \xE7al\u0131\u015Ft\u0131\u011F\u0131n
+    sekt\xF6r\xFCn d\u0131\u015F\u0131nda, yeni bir f\u0131rsat sunacak. | \xE7al\u0131\u015Ft\u0131\u011F\u0131n
+    sekt\xF6rle ilgili sana bir y\xFCkseli\u015F imkan\u0131 sunacak. | \xE7al\u0131\u015Ft\u0131\u011F\u0131n
+    sekt\xF6rde y\xFCkselmen i\xE7in sana b\xFCy\xFCk bir kap\u0131 aralayacak. |
+    sana \xE7al\u0131\u015Ft\u0131\u011F\u0131n sekt\xF6r\xFCn d\u0131\u015F\u0131nda
+    bir \"i\u015F birli\u011Fi\" teklifinde bulunacak. | sana \xE7al\u0131\u015Ft\u0131\u011F\u0131n
+    sekt\xF6r\xFCn zirvesine do\u011Fru harekete ge\xE7ebilme olana\u011F\u0131 sa\u011Flayacak
+    bir teklifle gelecek. | i\u015F hayat\u0131na dair uzun zamand\u0131r bekledi\u011Fin
+    bir m\xFCjdeyi nihayet verecek.}} {{kelime, O gece mutluluktan uyuyamayabilirsin.
+    | Oradan hi\xE7 tahmin etmedi\u011Fin kadar memnun ayr\u0131lacaks\u0131n. |
+    O ak\u015Fam mutluluktan, en son ne zaman yemek yedi\u011Fini hat\u0131rlamayabilirsin.}}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

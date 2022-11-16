@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicdortlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA06682973595
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 337e942227190734a95bf20e909e15a0, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 337e942227190734a95bf20e909e15a0, type: 3}
+  contentPhotoId: kilicdortlusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"K\u0131l\u0131\xE7 D\xF6rtl\xFCs\xFC\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\n\u0130steksiz ve uyu\u015Fuk bir d\xF6neme girece\u011Fini g\xF6r\xFCyorum.
+    Severek yapt\u0131\u011F\u0131n \u015Feyler sana bir s\xFCre keyif vermeyecek
+    {{isim}}. D\xFCzenli \u015Fekilde \xFCzerinde \xE7al\u0131\u015Ft\u0131\u011F\u0131n
+    i\u015Fleri ask\u0131ya almak isteyeceksin. Sorumluluklar\u0131n\u0131 erteleyecek,
+    ama\xE7lar\u0131n\u0131 adeta tedav\xFClden kald\u0131racaks\u0131n. Kart\u0131n,
+    tembellik edece\u011Fin bu s\xFCreyi uzatmaman\u0131 tavsiye ediyor. Kendini
+    yeniden ve \xE7abucak aktive edebilmek i\xE7in elinden geleni yapman gerekecek.
+    Bu t\xFCr d\xF6nemlerin ba\u015Fl\u0131ca sorumlusu psikoloji oldu\u011Fu i\xE7in,
+    kendini motive ve telkin edecek yeni yollar bulmak zorunda kalacaks\u0131n. Orta
+    ve uzun vadeli d\xFC\u015F\xFCnerek zaman\u0131n\u0131 bo\u015Fa harcamamal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kilicdortlusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

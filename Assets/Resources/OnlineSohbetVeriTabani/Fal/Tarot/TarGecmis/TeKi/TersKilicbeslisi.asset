@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicbeslisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA08902830173
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 951ea35cdd2ccdb4f85e49df17603ea3, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 951ea35cdd2ccdb4f85e49df17603ea3, type: 3}
+  contentPhotoId: kilicbeslisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"K\u0131l\u0131\xE7 Be\u015Flisi\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nKorkular\u0131n\u0131n ve teredd\xFCtlerinin seni muallakta
+    b\u0131rakt\u0131\u011F\u0131n\u0131 s\xF6yl\xFCyor kart\u0131n. Cesaretle giri\u015Fmeli,
+    s\xF6z\xFCn\xFC korkmadan s\xF6ylemeli ve do\u011Fru bildi\u011Fin konularda
+    \u0131srarc\u0131 olmal\u0131yd\u0131n {{isim}}. Bir tu\u011Flaya korkarak yumruk
+    atarsan, tu\u011Fla k\u0131r\u0131lmad\u0131\u011F\u0131 gibi elin de yaralan\u0131r.
+    Do\u011Fru g\xFCc\xFC uygularsan tu\u011Flan\u0131n direncini h\u0131zla k\u0131rar,
+    vurdu\u011Fun anda par\xE7alara ay\u0131r\u0131rs\u0131n. Dirence kar\u015F\u0131
+    korku ve karars\u0131zl\u0131k zararl\u0131d\u0131r. Neyse ki kafandaki t\xFCm
+    soru i\u015Faretlerini geride b\u0131rakt\u0131racak donan\u0131ma ula\u015Fm\u0131\u015F,
+    d\xFC\u015Fmanlar\u0131ndan daha avantajl\u0131 bir hale gelmi\u015Fsin. Sevdi\u011Fin
+    insanlar senden daha \xE7ok etkilenmi\u015F ve seni daha fazla benimsemi\u015Fler.
+    \xDCst\xFCnl\xFC\u011F\xFCn\xFC nihayet kan\u0131tlam\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis kilicbeslisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

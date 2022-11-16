@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimonlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA86919989914
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 1edf3e8625cebbb4c86dbc994429af6f, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 1edf3e8625cebbb4c86dbc994429af6f, type: 3}
+  contentPhotoId: tilsimonlusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"T\u0131ls\u0131m Onlusu\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nSen ve hayallerin aras\u0131na \"paradan\" bir k\xF6pr\xFC kurdu\u011Funu
+    d\xFC\u015F\xFCn. \xDCstelik de hava, o ka\u011F\u0131t paralar\u0131 eritebilecek
+    kadar ya\u011Fmurluyken. Kendine ba\u015Fka bir \xE7\u0131k\u0131\u015F yolu
+    b\u0131rakmad\u0131\u011F\u0131n\u0131, geriye d\xF6n\xFC\u015F\xFCn de olmad\u0131\u011F\u0131n\u0131
+    farzet. Se\xE7mi\u015F oldu\u011Fun kart, ge\xE7mi\u015Fte aynen bunlar\u0131
+    ya\u015Fad\u0131\u011F\u0131n\u0131 i\u015Faret ediyor De\u011Ferli {{isim}}.
+    Hedeflerine varabilmek ad\u0131na ihtiyac\u0131n olan zemini, maddi kaynaklar\u0131nla
+    yaratmaya \xE7al\u0131\u015Fm\u0131\u015Fs\u0131n. \u0130\u015Fler yaver gitmeyip
+    varl\u0131klar\u0131n erimeye ba\u015Flad\u0131\u011F\u0131nda ise yar\u0131
+    yolda kalm\u0131\u015F, elinde avucunda olanlar\u0131 da kaybetmi\u015Fsin. \u0130\u015Fin
+    i\xE7inden \xE7\u0131k\u0131lamayacak raddeye getirene kadar kendini riske atmaman
+    gerekti\u011Fini san\u0131yorum bu \u015Fekilde anlad\u0131n. Eldeki para, bir
+    anda kar gibi eriyiverir..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis tilsimonlusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

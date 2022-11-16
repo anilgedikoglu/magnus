@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisTerazi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA51620280692
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Terazi
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri
+    | cinsiyet=lgbt, ki\u015Filer}} hem cana yak\u0131n hem de romantikdirler {{isim}}.
+    Fakat romantik olduklar\u0131n\u0131, onlarla fl\xF6rt etmeye ba\u015Flamadan,
+    cana yak\u0131n olduklar\u0131n\u0131 ise i\u015F ortam\u0131 s\u0131n\u0131rlar\u0131
+    i\xE7erisinde pek g\xF6remeyebilirsin. {{burc}} burcu {{data, cinsiyet=erkek,
+    erkekleri | cinsiyet=kad\u0131n, kad\u0131nlar\u0131 | cinsiyet=lgbt, mensuplar\u0131}}
+    \xF6zel olduklar\u0131n\u0131 hissetmek isterler. Sevgilerinin kar\u015F\u0131l\u0131kl\u0131
+    oldu\u011Funu bilmekten ve ya\u015Fad\u0131klar\u0131 a\u015Fk\u0131n s\u0131ra
+    d\u0131\u015F\u0131 oldu\u011Funu d\xFC\u015F\xFCnmekten ho\u015Flan\u0131rlar.
+    Ne burcu oldu\u011Funu bilmesem de, bu ihtiya\xE7lar\u0131n\u0131n {{data, cinsiyet=erkek,
+    k\u0131z arkada\u015F\u0131n | cinsiyet=kad\u0131n, erkek arkada\u015F\u0131n
+    | cinsiyet=lgbt, sevgilin}} taraf\u0131ndan tam olarak kar\u015F\u0131land\u0131\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnm\xFCyorum. \xD6yle olunca, bir yan\u0131n hep \\\"daha iyisi
+    i\xE7in\\\" aray\u0131\u015Fta olmal\u0131. Bence arad\u0131\u011F\u0131n\u0131
+    nihayet bulmu\u015Fsun {{isim}}. \u0130\u015F d\u0131\u015F\u0131nda g\xF6r\xFC\u015Febilirseniz,
+    onu bir konsere g\xF6t\xFCr derim. Teraziler konserlere bay\u0131l\u0131r! Duyarsa
+    sevgilin seni ne yapar, onu bilmem {{isim}}!\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: terazi
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

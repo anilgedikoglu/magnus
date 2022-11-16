@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicprensi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA17150388029
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a2c01c26cae5b6e43a2908756444c9c4, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a2c01c26cae5b6e43a2908756444c9c4, type: 3}
+  contentPhotoId: kilicprensi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"K\u0131l\u0131\xE7 Prensi\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSenin
+    i\xE7inde kin ve nefret \xE7ok uzun s\xFCre ya\u015Famaz {{isim}}, ya\u015Fayamaz.
+    Bir defa {{burc}} burcusun; ikincisi de iyilikle dolu insanc\u0131l bir y\xF6n\xFCn
+    var. Fakat se\xE7ti\u011Fin bu kart, sana eskiden beri d\xFC\u015Fmanca yakla\u015Fan
+    samimiyetsiz birinden bahsediyor. Bu ki\u015Fi {{rastgeleburc}} ya da {{rastgeleburc}}
+    burcu olabilir. Hislerim onun {{fiziki}} oldu\u011Funu s\xF6yl\xFCyor. Tam bir
+    sahtekar bu ki\u015Fi. Onunla kar\u015F\u0131 kar\u015F\u0131ya geleceksin. Ona
+    kar\u015F\u0131 kendini ya da aileni savunmak durumunda kalacak, bu s\xFCre\xE7ten
+    biraz yorgun \xE7\u0131kacaks\u0131n. Ben yine de ona ge\xE7it vermeyece\u011Fini
+    ve adaletin sayesinde ona haddini bildirece\u011Fini g\xF6rd\xFC\u011F\xFCm i\xE7in
+    mutluyum."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kilicprensi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

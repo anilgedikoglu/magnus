@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegneksovalyesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA21341380749
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 2c39bc9f7737a3048a7c876f63ae7e85, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 2c39bc9f7737a3048a7c876f63ae7e85, type: 3}
+  contentPhotoId: asasovalyesi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek \u015E\xF6valyesi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nEvet {{isim}}, acaba sana da \"{{kullanici sehri}} \u015E\xF6valyesi\"
+    mi desek? <sprite=84> Bence orta vadede, ya\u015Fad\u0131\u011F\u0131n \u015Fehirdeki
+    refah seviyesi en y\xFCksek insanlardan biri olacaks\u0131n, buna hi\xE7 ku\u015Fkum
+    yok. Fakat se\xE7ti\u011Fin bu kart \xE7evrendeki insanlar\u0131 zaman zaman
+    k\xFC\xE7\xFCmseyebilece\u011Fini ve \xE7ok garanti oldu\u011Fu halde baz\u0131
+    zaferleri ka\xE7\u0131rabilece\u011Fini i\u015Faret ediyor. A\u011F\u0131rdan
+    almak varken aceleci davranaca\u011F\u0131n\u0131 seziyorum. B\xFCy\xFCk kararlar\u0131
+    olmas\u0131 gerekti\u011Finden daha h\u0131zl\u0131 verece\u011Fini hissediyorum.
+    S\u0131ras\u0131 gelmeden, emeklemeden ko\u015Fmaya ba\u015Flamamal\u0131s\u0131n.
+    Galibiyet uzun vadede gelir. Sen biraz aceleci davranacak gibi duruyorsun..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asasovalyesi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris325
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA87649028725
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "G\xFCne\u015Fle adeta g\xF6z g\xF6ze gelmi\u015F bir \"obelisk\" ta\u015F\u0131,
+    ard\u0131nda b\u0131rakt\u0131\u011F\u0131 telvelerin \xFCzerine uzun ve g\xF6rkemli
+    g\xF6lgesini d\xFC\u015F\xFCrm\xFC\u015F. \U0001F5FFUfukta y\xFCkselen g\xFCne\u015Fe
+    adeta meydan okuyan bu dikili ta\u015F, seni derinden sarsacak bir a\u015Fka
+    hasret oldu\u011Funu g\xF6steriyor {{isim}}. Sana g\xFCzel bir haberim var. Fincan
+    taban\u0131na do\u011Fru uzanan telvelerin, \"i\xE7 d\xFCnyanda olup biten\"
+    ile \"gelece\u011Finin yans\u0131malar\u0131n\u0131\" adeta ayn\u0131 kazanda
+    kaynat\u0131yor gibi g\xF6r\xFCnm\xFC\u015F. \U0001F958 Bu da demek oluyor ki,
+    \"obelisk\" ta\u015F\u0131n\u0131n temsil etti\u011Fi \"cesaret ve yarat\u0131c\u0131
+    g\xFC\xE7\" \xF6zelliklerini ta\u015F\u0131yan bir {{data, cinsiyet=erkek, kad\u0131n\u0131n
+    | cinsiyet=kad\u0131n, erke\u011Fin | cinsiyet=lgbt, insan\u0131n}} hayat\u0131na
+    girmesi an meselesi. Onun yan\u0131nda, adeta dikili ta\u015F\u0131n serin g\xF6lgesinde
+    dinleniyor gibi hissedeceksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

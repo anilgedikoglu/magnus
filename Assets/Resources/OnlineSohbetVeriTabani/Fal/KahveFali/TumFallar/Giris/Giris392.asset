@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris392
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA13538611256
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n \xFCst b\xF6l\xFCm\xFCnde, {{kelime, \xFCzeri ya\u011Fmur
+    bulutlar\u0131yla | \xFCzeri bulutlarla | \xE7evresi ye\u015Fillikle | \xE7evresi
+    a\u011Fa\xE7larla | etekleri a\u011Fa\xE7larla}} kapl\u0131 dev bir da\u011F
+    var. \u26F0\uFE0FBu da\u011F\u0131n alt\u0131ndan uzun bir t\xFCnel ge\xE7iyor.
+    {{kelime, \xD6n\xFCm\xFCzdeki g\xFCnlerde | Gelecek hafta | 2 hafta sonra | Gelecek
+    ay | 3 hafta sonra}} {{kelime, \u0130stanbul'daki \"Harp Akademileri\" t\xFCneline
+    benzer | \u0130stanbul'daki \"Riva\" t\xFCneline benzer | \u0130stanbul'daki
+    \"\xC7aml\u0131k\" t\xFCneline benzer | Kocaeli'deki \"Diliskelesi\" t\xFCneline
+    benzer | Kocaeli'deki \"Hereke\" t\xFCneline benzer | Kocaeli'deki \"\u0130zmit
+    Bat\u0131\" t\xFCneline benzer | Kocaeli'deki \"Korutepe\" t\xFCneline benzer
+    | Kocaeli'deki \"G\xFCltepe\" t\xFCneline benzer | Bolu Da\u011F\u0131 t\xFCneline
+    benzer | Bursa'daki \"Orhangazi\" t\xFCneline benzer | Bursa'daki \"Sel\xE7ukgazi\"
+    t\xFCneline benzer | \u0130zmir'deki \"Bayrakl\u0131\" t\xFCneline benzer | Ni\u011Fde'deki
+    \"K\u0131rkge\xE7it\" t\xFCneline benzer | Adana'daki \"\xC7ak\u0131t\" t\xFCneline
+    benzer | Mersin'deki \"G\xFClek\" t\xFCneline benzer | Hatay'daki \"\u0130skenderun\"
+    t\xFCneline benzer | Osmaniye'deki \"Ta\u015Foluk\" t\xFCneline benzer | Rize'deki
+    \"Ovit Da\u011F\u0131\" t\xFCneline benzer | \xC7ank\u0131r\u0131'daki \"Ilgaz\"
+    t\xFCneline benzer | Artvin'deki \"Cankurtaran\" t\xFCneline benzer | Manisa'daki
+    \"Sabuncubeli\" t\xFCneline benzer | Ordu'daki \"Nefise Ak\xE7elik\" t\xFCneline
+    benzer}} bu t\xFCneli kullanan biri, bulundu\u011Fun b\xF6lgeye gelecek {{isim}}.
+    Bu bir ziyaret mi yoksa d\xF6n\xFC\u015F m\xFC, bilemiyorum. Aile b\xFCy\xFCklerinin
+    tan\u0131d\u0131\u011F\u0131n\u0131 d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu ki\u015Fi,
+    beraberinde bir de {{kelime, belge | insan | anahtar | d\xF6k\xFCman | evrak
+    | haber}} getirecek. Getirdi\u011Fi, {{kelime, maddi a\xE7\u0131dan | manevi
+    a\xE7\u0131dan}} ailecek {{kelime, rahatlaman\u0131za | ferahlaman\u0131za |
+    rahat bir nefes alman\u0131za}} sebep olacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

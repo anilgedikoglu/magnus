@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme651
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA54248981824
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerin, fincan\u0131n merkezi k\u0131s\u0131mlar\u0131nda bir yerde, par\xE7alara
+    ayr\u0131lm\u0131\u015F \"buzullar\u0131\" and\u0131r\u0131yor K\u0131ymetli
+    {{isim}}. Bu buzullar\u0131n aras\u0131nda ise, serin sulara bat\u0131p g\xF6zden
+    kaybolurken belirmi\u015F bir \"kalp\" var. Ayr\u0131ld\u0131\u011F\u0131n {{data,
+    cinsiyet=erkek, k\u0131z arkada\u015F\u0131na | cinsiyet=kad\u0131n, erkek arkada\u015F\u0131na
+    | cinsiyet=lgbt, sevgiline}} besledi\u011Fin hisleri g\xFCnden g\xFCne yitiriyor
+    gibi g\xF6z\xFCk\xFCyorsun. Acaba i\u015Fin ger\xE7e\u011Fi bu mu, yoksa bizi
+    bekleyen farkl\u0131 bir senaryo mu var? \n\nFal\u0131n, bu i\u015Fin bir \"bahar\u0131n\u0131n\"
+    oldu\u011Funu ve seni yak\u0131c\u0131 bir g\xFCne\u015Fin bekledi\u011Fini i\u015Faret
+    ediyor. {{kelime, 6 hafta | 8 hafta | 10 hafta | 12 hafta | 14 hafta}} sonra
+    g\xF6kteki en \"tepe\" noktada yerini alacak olan bu g\xFCne\u015F, t\xFCm bu
+    buzullar\u0131 eritip sular\u0131 buharla\u015Ft\u0131racak. Sevgilinle yeniden
+    bir araya gelece\u011Finize yemin edebilirim, ama ispatlayamam. <sprite=17>\n\n{{isim}}
+    ayr\u0131ld\u0131\u011F\u0131n ki\u015Finin \xF6n\xFCnde bir yol ayr\u0131m\u0131
+    var. {{data, cinsiyet=erkek, Kendi hayat\u0131na | cinsiyet=kad\u0131n, \xC7al\u0131\u015Ft\u0131\u011F\u0131
+    i\u015Fe | cinsiyet=lgbt, Kendi hayat\u0131na}} dair ilerleyen g\xFCnlerde yapmas\u0131
+    gereken bir \"tercih\" g\xF6z\xFCk\xFCyor. Bu konuda s\u0131k\u0131nt\u0131ya
+    d\xFC\u015Ft\xFC\u011F\xFCn\xFC fark edebilir, seninle konu\u015Fmaya ihtiyac\u0131
+    oldu\u011Funu hissedebilirsin. Bunun haberini de, ad\u0131n\u0131n i\xE7inde
+    {{kelime, \"U\" harfi ge\xE7en bir sosyal medya platformundan alacaks\u0131n
+    | \"T\" harfi ge\xE7en bir uygulamadan alacaks\u0131n | \"K\" ya da \"N\" harfi
+    ge\xE7en bir tan\u0131d\u0131\u011F\u0131ndan alacaks\u0131n | \"L\" ya da \"M\"
+    harfi ge\xE7en bir tan\u0131d\u0131\u011F\u0131ndan alacaks\u0131n | \"R\" ya
+    da \"S\" harfi ge\xE7en bir tan\u0131d\u0131\u011F\u0131ndan alacaks\u0131n |
+    \"C\" harfi ge\xE7en bir cafede alacaks\u0131n | \"T\" harfi ge\xE7en bir cafede
+    alacaks\u0131n | \"R\" harfi ge\xE7en bir kurumda alacaks\u0131n | \"R\" ya da
+    \"K\" harfi ge\xE7en bir muhitteyken alacaks\u0131n | \"M\" ya da \"S\" harfi
+    ge\xE7en bir muhitteyken alacaks\u0131n}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

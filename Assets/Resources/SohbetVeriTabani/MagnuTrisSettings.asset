@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df023a25ea4984f47bf3b18cae731f37, type: 3}
+  m_Name: MagnuTrisSettings
+  m_EditorClassIdentifier: 
+  genelMod: magnutris
+  cikisModu: magnutris cikis
+  enYuksekSkorGecildiModu: magnutris en yuksek skor gecildi
+  enYuksekSkorGecilmediModu: magnutris en yuksek skor gecilmedi
+  yokEdilenSatir1: "magnutris 1 sat\u0131r yok olma"
+  yokEdilenSatir2: "magnutris 2 sat\u0131r yok olma"
+  yokEdilenSatir3: "magnutris 3 sat\u0131r yok olma"
+  yokEdilenSatir4: "magnutris 4 sat\u0131r yok olma"
+  yokEdilenSatirFazla: "magnutris fazla sat\u0131r yok olma"
+  bombaYerlestirme: "magnutris bombe yerle\u015Ftirme"
+  oyunSonuMesajiDegiskenAdi: magnutris oyun bitis nedeni
+  oyunSonuMesajiHamleKalmadi: "Hamlen kalmad\u0131\u011F\u0131 i\xE7in oyunu kaybettin"
+  oyunSonuMesajiBombaPatladi: "Bomba patlad\u0131\u011F\u0131 i\xE7in oyunu kaybettin"
+  oyunSonuMesajiSureDoldu: "S\xFCren doldu\u011Fu i\xE7in oyunu kaybettin"
+  sekiller:
+  - "magnutris 1 kutu yerle\u015Ftirme"
+  - "magnutris 2 kutu yan yerle\u015Ftirme"
+  - "magnutris 2 kutu dik yerle\u015Ftirme"
+  - "magnutris l k\xFC\xE7\xFCk yerle\u015Ftirme"
+  - "magnutris l k\xFC\xE7\xFCk yerle\u015Ftirme"
+  - "magnutris l k\xFC\xE7\xFCk yerle\u015Ftirme"
+  - "magnutris l k\xFC\xE7\xFCk yerle\u015Ftirme"
+  - "magnutris k\xFC\xE7\xFCk kutu yerle\u015Ftirme"
+  - "magnutris 3 kutu yan yerle\u015Ftirme"
+  - "magnutris 3 kutu dik yerle\u015Ftirme"
+  - "magnutris 4 kutu yan yerle\u015Ftirme"
+  - "magnutris 4 kutu dik yerle\u015Ftirme"
+  - "magnutris 5 kutu yan yerle\u015Ftirme"
+  - "magnutris 5 kutu dik yerle\u015Ftirme"
+  - "magnutris l b\xFCy\xFCk yerle\u015Ftirme"
+  - "magnutris l b\xFCy\xFCk yerle\u015Ftirme"
+  - "magnutris l b\xFCy\xFCk yerle\u015Ftirme"
+  - "magnutris l b\xFCy\xFCk yerle\u015Ftirme"
+  - "magnutris b\xFCy\xFCk kutu yerle\u015Ftirme"

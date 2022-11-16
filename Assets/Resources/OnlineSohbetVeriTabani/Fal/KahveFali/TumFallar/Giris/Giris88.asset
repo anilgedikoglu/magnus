@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris88
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA09938160838
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n ilk k\u0131s\u0131mlar\u0131nda, dorsesi \"alamayaca\u011F\u0131
+    kadar b\xFCy\xFCk y\xFCkle\" t\u0131ka basa doldurulmu\u015F bir a\u011F\u0131r
+    vas\u0131ta g\xF6r\xFCyorum. Kamyon ya da kamyonet oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    bu vas\u0131ta, farkl\u0131 kat ya da mah\xE7e maliklerinin de oldu\u011Fu bir
+    gayrimenkul\xFCn \xF6n\xFCnde duruyor. Buras\u0131 senin evin ya da ailenin evi
+    olabilir. Bu yans\u0131malar, yapt\u0131\u011F\u0131n i\u015F dolay\u0131s\u0131yla
+    {{yil,+1}} y\u0131l\u0131n\u0131n {{kelime, ikinci | ilk | \xFC\xE7\xFCnc\xFC
+    | d\xF6rd\xFCnc\xFC}} \xE7eyre\u011Fi i\xE7erisinde b\xFCy\xFCk bir kaynak elde
+    edece\u011Fini s\xF6yl\xFCyor {{isim}}. Bu, nakit bir para m\u0131d\u0131r, i\u015Finle
+    ilgili hammadde midir, sana yard\u0131mc\u0131 olacak yeni insan kaynaklar\u0131
+    m\u0131d\u0131r, bilemiyorum. Bildi\u011Fim \u015Fu ki, kazan\xE7 anlam\u0131nda
+    ciddi bir ilerleme kaydedeceksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

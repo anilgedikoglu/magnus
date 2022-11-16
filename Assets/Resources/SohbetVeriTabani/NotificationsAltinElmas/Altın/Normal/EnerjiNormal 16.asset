@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: EnerjiNormal 16
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "Pazar pazar sana yine g\xFCzel bir haberim var {{isim}}. G\xFCnl\xFCk 1
+    hediye alt\u0131n\u0131n y\xFCklendi! <sprite=10>"
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 1
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 1
+  - degiskenAdi: bugun
+    degiskenDegeri: 7
+    kontrol: 0
+  - degiskenAdi: gun fark
+    degiskenDegeri: 1
+    kontrol: 4

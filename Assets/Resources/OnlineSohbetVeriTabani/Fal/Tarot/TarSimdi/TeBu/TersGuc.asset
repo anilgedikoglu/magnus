@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersGuc
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA88434386566
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: d354eab6638f1044db569535e281f5fb, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: d354eab6638f1044db569535e281f5fb, type: 3}
+  contentPhotoId: guc-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"G\xFC\xE7\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSahip
+    oldu\u011Fun g\xFCc\xFCn, sorunlarla ba\u015Fa \xE7\u0131kmana yetmedi\u011Fini
+    g\xF6r\xFCyorum. Zay\u0131f d\xFC\u015Ft\xFC\u011F\xFCn\xFC ve devam etmek i\xE7in
+    ihtiya\xE7 duydu\u011Fun enerjiyi bir t\xFCrl\xFC bulamad\u0131\u011F\u0131n\u0131
+    sen de kabul ediyor olmal\u0131s\u0131n. \xD6zg\xFCvenin azalm\u0131\u015F. Belki
+    bu normal. Peki ya cesaretin? Onu neden yitirdi\u011Fini anlamakta zorlan\u0131yorum
+    {{isim}}. Korkular\u0131n bileklerine adeta birer kelep\xE7e ge\xE7irmi\u015F.
+    Kendi ipini kendin kesmeli, zincirlerini kendin k\u0131rmal\u0131 ve kendin i\xE7in
+    yeniden harekete ge\xE7melisin. Yard\u0131ma ger\xE7ekten ihtiya\xE7 duyulan
+    nokta, kimsenin elinin sana yetmedi\u011Fi noktad\u0131r. Sen o noktadaysan,
+    o noktadan \xE7\u0131kmana yard\u0131m edecek tek ki\u015Fi de yine sensin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi guc ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

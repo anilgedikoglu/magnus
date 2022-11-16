@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Yildiz
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA38560757609
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a2eb08650b2e38e40b156a936024144f, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a2eb08650b2e38e40b156a936024144f, type: 3}
+  contentPhotoId: yildiz
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Y\u0131ld\u0131z\" kart\u0131n\u0131 se\xE7tin.\n\nBana
+    bu kart \xE7\u0131ksa, g\xFCzelce bir demlik \xE7ay yapar, kar\u015F\u0131s\u0131na
+    ge\xE7er, huzurla yudumlard\u0131m {{isim}}! B\xFCy\xFCk umutlar\u0131n oldu\u011Funu
+    ve bu umutlar\u0131n parlak \u0131\u015F\u0131klar\u0131 alt\u0131nda t\xFCm
+    safl\u0131\u011F\u0131nla bulundu\u011Funu g\xF6r\xFCyorum. Tertemiz amellerin,
+    duru ve kat\u0131ks\u0131z niyetlerin var. Beklentilerin kimseye zarar verecek
+    ya da kimsenin aya\u011F\u0131n\u0131 kayd\u0131racak cinsten de\u011Fil. Toprak
+    ve tabiat ana \u015Fu s\u0131ralar sana farkl\u0131 bir enerji bah\u015Fediyor.
+    Hem i\xE7sel hem de zihinsel olarak yenileniyorsun. Eski ac\u0131lar\u0131ndan
+    ve b\xFCnyende biriken elem tortular\u0131ndan kurtuluyor, en ba\u015Ftan ye\u015Feriyorsun.
+    Kabullendi\u011Fin her son, sana yepyeni ba\u015Flang\u0131\xE7lar vaadediyor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi yildiz
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme739
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA11584128906
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin merkezine do\u011Fru indi\u011Fimde, av\u0131n\u0131n \xE7evresinde
+    \xE7emberler \xE7izen ve olduk\xE7a dikkat \xE7ekici bir {{data, cinsiyet=erkek,
+    \"erkek aslan\" | cinsiyet=kad\u0131n, \"di\u015Fi aslan\" | cinsiyet=lgbt, \"aslan\"}}
+    fig\xFCr\xFC yakalad\u0131m. \xD6n\xFCm\xFCzdeki {{gun_3}} ve {{gun_5}} g\xFCnleri
+    aras\u0131nda {{data, cinsiyet=erkek, k\u0131z arkada\u015F\u0131n\u0131 | cinsiyet=kad\u0131n,
+    erkek arkada\u015F\u0131n\u0131 | cinsiyet=lgbt, sevgilini}} bir konuda ikna
+    etmek durumunda kalacaks\u0131n. Kolay fikir de\u011Fi\u015Ftiren bir {{data,
+    cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n, adam | cinsiyet=lgbt,
+    insan}} olmad\u0131\u011F\u0131 a\u015Fikar {{isim}}. O nedenle \xF6n\xFCm\xFCzdeki
+    4-5 g\xFCn\xFCn biraz gergin ge\xE7ebilir. Ancak bu i\u015Fin sonunda senin ad\u0131na
+    \xF6nemli bir menfaat g\xF6r\xFCyorum.\n\nFincan\u0131n\u0131n di\u011Fer bir
+    k\u0131sm\u0131nda, dallar\u0131 ile birlikte \xF6ne do\u011Fru e\u011Filmi\u015F
+    bir \"zeytin a\u011Fac\u0131\" var. Bu a\u011Fa\xE7, seni temsil ediyor. Sevgiline
+    kar\u015F\u0131 her \u015Feyi \xE7ok fazla alttan al\u0131yor, onun i\xE7in gere\u011Finden
+    fazla fedakarl\u0131k ediyorsun {{isim}}. Fal\u0131n, bu durumun onun elini kuvvetlendirdi\u011Fini
+    ve senin \xFCzerindeki h\xFCk\xFCm g\xFCc\xFCn\xFC dengesiz bir \u015Fekilde
+    art\u0131rd\u0131\u011F\u0131n\u0131 s\xF6yl\xFCyor. Bu \u015Fekilde devam edersen,
+    {{ay_1}} ay\u0131nda ad\u0131nda {{harf}} ya da {{harf}} harfi olan ve \xE7ok
+    sevdi\u011Fin bir {{kelime, erkek arkada\u015F\u0131n\u0131 | k\u0131z arkada\u015F\u0131n\u0131
+    | tan\u0131d\u0131\u011F\u0131n\u0131 | akraban\u0131}}, s\u0131rf o \xF6yle
+    istedi diye {{kelime, hayat\u0131ndan \xE7\u0131karmak | kendinden uzakla\u015Ft\u0131rmak}}
+    durumunda kalabilirsin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

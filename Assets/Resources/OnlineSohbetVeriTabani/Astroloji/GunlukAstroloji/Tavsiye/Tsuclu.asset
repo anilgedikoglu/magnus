@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tsuclu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA48605532589
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Eksik oldu\u011Fun, tamamlayamad\u0131\u011F\u0131n ya da istedi\u011Fini alamad\u0131\u011F\u0131n
+    konularda kendini yarg\u0131l\u0131yor musun? Bug\xFCn {{burc}} burcu ad\u0131na
+    su\xE7luluk duygusunun y\xFCksek oldu\u011Fu bir {{gun_0}} g\xFCn\xFCndeyiz.
+    Sahip olmaya ya da ele ge\xE7irmeye \xE7al\u0131\u015Ft\u0131\u011F\u0131n her
+    \u015Fey senin i\xE7in hay\u0131rl\u0131 olamaz, bunu sen de biliyorsun {{isim}}.
+    Fakat kimi zaman h\u0131rs, mant\u0131\u011F\u0131 ma\u011Flup eder. Yine \xF6yle
+    bir g\xFCndesin. Bu duygunun seni daha iyisini yapabilmen ad\u0131na tetiklemesi
+    g\xFCzel bir \u015Fey; lakin bir noktaya kadar. O noktadan sonras\u0131, \"elinden
+    gelenin en iyisini yapabildi\u011Fin\" optimum s\u0131n\u0131r\u0131n \xFCzeridir.
+    Orada gerileme ba\u015Flar. Bug\xFCn bu duygular\u0131n\u0131 ikili ili\u015Fkilerine
+    ve \xF6zel hayat\u0131na yans\u0131tmamal\u0131, i\u015Flerini bu duygu hasebiyle
+    sekteye u\u011Fratmamal\u0131s\u0131n. Zaman, sana daha iyisini yapabilmen i\xE7in
+    f\u0131rsat verecek. \u015Eans da yard\u0131m edecek. Bug\xFCn\xFC es ge\xE7
+    ve kendini \xF6rselemeden g\xFCn\xFCn\xFC bekle... "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

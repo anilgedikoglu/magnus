@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekuclusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA63214927740
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 5cf53224ffe53734485f9cd516c15d53, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 5cf53224ffe53734485f9cd516c15d53, type: 3}
+  contentPhotoId: asauclusu
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"De\u011Fnek \xDC\xE7l\xFCs\xFC\" kart\u0131n\u0131 se\xE7tin.\n\nK\xFC\xE7\xFCk
+    hesaplar pe\u015Finde olan insanlar, yaln\u0131zca \xF6nlerine bakarlar. Y\xFCr\xFCd\xFCkleri
+    yolun ilerisini g\xF6remez, sonu\xE7lar\u0131 \xF6nceden sezemez ve do\u011Fru
+    kararlar veremezler. Se\xE7ti\u011Fin kart\u0131n bize aktard\u0131\u011F\u0131
+    kadar\u0131yla, sen pek \xE7ok insandan \xE7ok daha farkl\u0131 bir pozisyondas\u0131n.
+    Ya\u015Fama kar\u015F\u0131 fark\u0131ndal\u0131\u011F\u0131n \xE7ok y\xFCksek
+    ve b\xFCy\xFCk bir vizyona sahipsin. Sanki hayat\u0131n\u0131n manzaral\u0131
+    bir noktas\u0131nda durmu\u015F, kendi kendine sebep sonu\xE7 ili\u015Fkileri
+    kuruyor ve gelecekte seni b\xFCy\xFCk mutluluklara ta\u015F\u0131yacak kusursuz
+    planlar yap\u0131yorsun {{isim}}. Bu \u015Fekilde dikkatle devam eder ve kararl\u0131
+    ad\u0131mlarla harekete ge\xE7ersen, \xFCmit etti\u011Fin ne varsa ger\xE7ek
+    olacak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi asauclusu
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme406
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA76233243386
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xC7ocuklar\u0131ndan biri uzakta, di\u011Feri yak\u0131nlar\u0131nda olan iki
+    \xE7ocuklu bir aile var fincan\u0131nda. Bu aileden birisi, senin ailenden birine
+    aff\u0131 olduk\xE7a g\xFC\xE7 bir hata yapm\u0131\u015F gibi g\xF6z\xFCk\xFCyor.
+    Bu insanlarla uzunca bir s\xFCre yeniden y\xFCz y\xFCze gelmeyeceksin {{isim}};
+    fakat arkandan \xE7ok konu\u015Fuyorlar. Onlarla ilgili maddi bir hesab\u0131n
+    var ve hen\xFCz kapanmam\u0131\u015F. \u0130yi niyetli davranarak, yapmaya g\xFCc\xFCn
+    yetmesine ra\u011Fmen baz\u0131 \u015Feyleri yapmam\u0131\u015Fs\u0131n. Bu defa
+    senin ad\u0131na bunu birisi ya da birileri yapacak. Onlar\u0131n devri son bulacak
+    ve bayrak tamamen senin eline ge\xE7ecek. \n\nS\u0131rt\u0131 y\xFCkl\xFC bir
+    \"kurba\u011Fa\" g\xF6r\xFCyorum {{isim}}. {{ay_+3}} ay\u0131n\u0131n ilk g\xFCnlerinde,
+    hat\u0131r\u0131 say\u0131l\u0131r miktarda bir para, tek seferde, birinden ya
+    da bir kurumdan sana ge\xE7ecek. Bu paran\u0131n yeri, senin i\xE7in san\u0131r\u0131m
+    \u015Fimdiden haz\u0131r. Beklenmedik bir s\u0131\xE7ray\u0131\u015Fla, sana
+    ila\xE7 gibi gelecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 24
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

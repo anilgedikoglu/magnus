@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme659
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA69147206974
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n orta kesimlerinde trafik daha yo\u011Fun. Seni ayna kar\u015F\u0131s\u0131nda
+    makyaj yaparken g\xF6r\xFCyorum {{isim}}. Ruhunu g\xFCzelle\u015Ftirecek ve enerjini
+    yenileyecek bir geli\u015Fme ile kar\u015F\u0131 kar\u015F\u0131ya kalacaks\u0131n.
+    Olmas\u0131n\u0131 \xE7ok istedi\u011Fin bir \u015Fey i\xE7in uzun s\xFCre beklemi\u015Fsin.
+    \xDCmidini k\u0131sa bir s\xFCre \xF6nce neredeyse tamamen kesti\u011Fini hissediyorum.
+    \u0130stedi\u011Fin bu \u015Fey her ne ise, {{sayi,2,6}} hafta {{kelime, i\xE7inde
+    | sonra}} tam da istedi\u011Fin \u015Fekilde ger\xE7ekle\u015Fecek.\n\nTelvelerinde
+    bir de \"papa\u011Fan\" g\xF6r\xFCyorum. Hanenin i\xE7ine dair edindi\u011Fi
+    bilgileri, hane d\u0131\u015F\u0131ndaki birilerine tekrarlayarak nakleden ve
+    ad\u0131nda {{harf}} harfi olan bu ki\u015Fi, sana bilin\xE7sizce zarar veriyor.
+    Feraset sahibi bir beyefendi yak\u0131nda bu ki\u015Fiyle konu\u015Facak ve olas\u0131
+    tehditleri bertaraf edecek. Fal\u0131nda bir \xE7uval da \"tarhana\" g\xF6r\xFCyorum
+    {{isim}}. Ailenden, yak\u0131n tarihte a\u015F\u0131r\u0131 yorgunlu\u011Fa ba\u011Fl\u0131
+    baz\u0131 rahats\u0131zl\u0131klar\u0131 ba\u015Flam\u0131\u015F olan bir {{kelime,
+    kad\u0131n | erkek}}, \"sebeplerin\" ortadan kalkmas\u0131yla \u015Fifa bulacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

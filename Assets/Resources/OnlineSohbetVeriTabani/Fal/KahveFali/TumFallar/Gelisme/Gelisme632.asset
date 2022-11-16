@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme632
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA50250053349
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n haber de\u011Feri ta\u015F\u0131yan en merkezi k\u0131s\u0131mlar\u0131nda,
+    adeta bir \"sonbahar\" g\xFCn\xFCnde g\xF6r\xFCyorum seni. Yere d\xFC\u015Fen
+    kurumu\u015F yapraklar, serseri bir r\xFCzgarla sa\u011Fa sola savruluyor gibiler.
+    \U0001F342Ortal\u0131kta pek insan g\xF6z\xFCkm\xFCyor. Yaln\u0131zca, hafif
+    bir u\u011Fultu... \U0001F644Sen bu ayr\u0131l\u0131\u011Fa enikonu \xFCz\xFClm\xFC\u015Fs\xFCn
+    {{isim}}. Ya\u015F ald\u0131k\xE7a, ili\u015Fkilere verilen emek de, fark\u0131ndal\u0131k
+    da art\u0131yor. Olumsuz bir neticede, ya\u015Fama dair k\xFCsk\xFCnl\xFCk de
+    tabii bir o kadar a\u011F\u0131r oluyor.\n\n\u015Eu s\u0131ralar, sevdi\u011Fin
+    ki\u015Fiden ayr\u0131 ge\xE7en saniyelerin, \xFCzerine ya\u011Fmur damlalar\u0131
+    gibi ya\u011Fd\u0131\u011F\u0131n\u0131 hissediyorum. \U0001F327\uFE0F\u0130zafi
+    san\u0131lan zaman, g\xF6\u011F\xFCs kafesine i\u015Fleyip ruhunu a\u011F\u0131rla\u015Ft\u0131r\u0131yor.
+    B\xFCsb\xFCt\xFCn karamsar g\xF6z\xFCk\xFCyorsun. \U0001F9D0Fal\u0131n\u0131n,
+    telvelerden olu\u015Fan kutsal yazg\u0131 topra\u011F\u0131ndan s\xF6k\xFCp \xE7\u0131kartarak
+    \xF6n\xFCm\xFCze koydu\u011Fu m\xFCjde ise kor halini alm\u0131\u015F y\xFCre\u011Fine
+    verilecek buz gibi bir su niteli\u011Finde. {{sayi,3,6}} haftay\u0131 a\u015Fk\u0131n
+    bir i\xE7 hesapla\u015Fman\u0131n ard\u0131ndan, ayr\u0131ld\u0131\u011F\u0131n
+    ki\u015Fi sana yeniden ula\u015Facak {{isim}}. Uzaktan da olsa, sana do\u011Fru
+    sanki bir \"fener\" tutuyor gibi g\xF6r\xFCn\xFCyor fal\u0131nda. O'na do\u011Fru
+    yeniden y\xF6nelebilmek i\xE7in bekledi\u011Fin i\u015Fareti alacaks\u0131n..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisBasakEvli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA83804933052
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Ba\u015Fak
+    burcu olan bu arkada\u015F\u0131n, baz\u0131 zamanlarda sana, senin \\\"kahraman\u0131n\\\"
+    olacakm\u0131\u015F gibi geliyor, \xF6yle de\u011Fil mi {{isim}}? Evli dahi olsan,
+    onunla olabilme ihtimallerinizi de\u011Ferlendirmeden edemiyorsun. Bunun b\xFCy\xFCk
+    bir sebebi var; ba\u015Fak bur\xE7lar\u0131, {{burc}} bur\xE7lar\u0131na \\\"\u015Feytan
+    t\xFCy\xFC varm\u0131\u015F gibi\\\" gelir. Ondaki ho\u015Fsohbet ve haz\u0131rcevap
+    y\xF6nleri ba\u015Fkalar\u0131nda bulam\u0131yor olabilirsin. \u0130\u015F yerindeki
+    her \u015Feyden anl\u0131yor gibi g\xF6z\xFCken ve yard\u0131msever tav\u0131rlar\u0131,
+    akl\u0131n\u0131 tam manas\u0131yla ona \xE7iviliyor olmal\u0131. Kar\u015F\u0131nda
+    olduk\xE7a de\u011Ferli bir {{data, cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n,
+    erkek | cinsiyet=lgbt, insan}} var {{isim}}. Gelecekte ne karar verirsen ver,
+    onu da katt\u0131\u011F\u0131n kararlar\u0131ndan kolay kolay pi\u015Fman olaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCnm\xFCyorum.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "ba\u015Fak"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimsekizlisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA52826718489
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a607da43722f3b74bb0090bd89be33a3, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a607da43722f3b74bb0090bd89be33a3, type: 3}
+  contentPhotoId: tilsimsekizlisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"T\u0131ls\u0131m Sekizlisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nO elinden geleni ard\u0131na koymayan {{isimden}} \u015Fu s\u0131ralar
+    eser yok. B\xFCy\xFCk bir bo\u015Flukta ama\xE7s\u0131zca d\xF6n\xFCp durdu\u011Funu
+    s\xF6yl\xFCyor kart\u0131n. Mutlaka yapman gereken ve senin i\xE7in zorunluluk
+    olan konular\u0131 ise ba\u015Ftan sav\u0131yorsun. Bu isteksizli\u011Finin mutlaka
+    bir nedeni olmas\u0131 da gerekmiyor. Bunun tamamen d\xF6nemsel oldu\u011Funu
+    d\xFC\u015F\xFCn\xFCyorum. Ya m\xFCkemmeliyet\xE7i davran\u0131yor ve \xE7ok
+    zaman kaybediyor, ya da eften p\xFCften, yalap\u015Fap bir i\u015F ortaya \xE7\u0131kar\u0131yorsun.
+    Kritik zamanlar i\xE7in yeterince haz\u0131rlanm\u0131yor, durgun ve pasif kal\u0131yorsun.
+    Ba\u015Far\u0131y\u0131 yakalamak i\xE7in yeteneklerini tekrar do\u011Fru noktalara
+    kanalize etmelisin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi tilsimsekizlisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

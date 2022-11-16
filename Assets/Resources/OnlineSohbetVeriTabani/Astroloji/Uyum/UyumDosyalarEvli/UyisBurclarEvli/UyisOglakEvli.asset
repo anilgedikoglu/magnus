@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyisOglakEvli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA70959342154
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"De\u011Ferli
+    {{isim}}; sen asl\u0131nda evli bir {{burc}} burcu {{data, cinsiyet=kad\u0131n,
+    kad\u0131n\u0131 | cinsiyet=erkek, erke\u011Fi | cinsiyet=lgbt, mensubu}} olarak
+    ailesine d\xFC\u015Fk\xFCn, sad\u0131k ve sevdiklerini her daim kollayan birisin.
+    Ancak senin d\u0131\u015F\u0131nda cereyan eden s\u0131k\u0131nt\u0131lar dolay\u0131s\u0131yla
+    i\u015Flerin son d\xF6nemde pek de istedi\u011Fin gibi gitmedi\u011Fini g\xF6r\xFCyorum.
+    Koyu bir bo\u015Flukta kendini arad\u0131\u011F\u0131n\u0131, bo\u011Fuk ve kesif
+    bir atmosferde nefes alamad\u0131\u011F\u0131n\u0131 hissediyorum. \u0130\u015F
+    yerinden merak etti\u011Fin bu o\u011Flak burcu {{data, cinsiyet=kad\u0131n,
+    beyefendi | cinsiyet=erkek, han\u0131mefendi | cinsiyet=lgbt, ki\u015Fi}} ise
+    senin i\xE7in yeni bir renk, \u0131l\u0131k bir nefes ve berrak bir ses olmu\u015F.
+    \u0130\u015Fin harika yan\u0131 \u015Fu; kar\u015F\u0131ndaki insan da senin
+    kadar sevdiklerine d\xFC\u015Fk\xFCn biri. Sevdi\u011Fine sonuna kadar ba\u011Fl\u0131
+    biri. Sorumluluk sahibi ve disiplinli. Sana s\xF6zler verirse, bunlar\u0131 tutacakt\u0131r.
+    Onunla bir yola \xE7\u0131kmak istersen, korkusuzca sana kat\u0131lacakt\u0131r.
+    Ben sizin ola\u011Fan\xFCst\xFC bir uyum sergiledi\u011Finizi g\xF6r\xFCyorum.
+    Ona kar\u015F\u0131 akl\u0131ndan \xE7\u0131karmaman gereken ve sana ters d\xFC\u015Fecek
+    iki nokta var {{isim}}; senin aksine biraz maddiyat\xE7\u0131 olabilir ve hata
+    yaparsan affetmez. Hatas\u0131z ilerlemeye \xE7al\u0131\u015F.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "i\u015F"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "o\u011Flak"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

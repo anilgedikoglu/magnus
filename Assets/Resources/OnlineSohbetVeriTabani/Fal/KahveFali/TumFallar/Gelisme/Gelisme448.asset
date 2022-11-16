@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme448
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA55688128293
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan foto\u011Fraflar\u0131ndan birinin tam merkezinde, ellerini ve kollar\u0131n\u0131
+    tamamen yanlara a\xE7m\u0131\u015F, havada s\xFCz\xFClen birini g\xF6r\xFCyorum.
+    Bu ki\u015Fi b\xFCy\xFCk bir cesaretle adeta \"banzai skydiving\" yap\u0131yor!
+    \U0001F632U\xE7aktan, \xF6nce para\u015F\xFCt\xFCn at\u0131ld\u0131\u011F\u0131,
+    sonra da ki\u015Finin para\u015F\xFCts\xFCz atlayarak havada s\xFCz\xFClen para\u015F\xFCt\xFC
+    yakalad\u0131\u011F\u0131 ve a\xE7arak yere indi\u011Fi (ya da inemedi\u011Fi\U0001F60B)
+    bu serbest d\xFC\u015F\xFC\u015F sporunu duymu\u015F muydun? Bu ki\u015Fi senin
+    bir akraban {{isim}}. Yak\u0131nda b\xFCy\xFCk bir ticari riske girerek, inanmas\u0131
+    zor miktarlarda kar edecek. Bu parada senin de hakk\u0131n olaca\u011F\u0131n\u0131
+    hissediyorum. \U0001F4B0\n\nDaha yan k\u0131s\u0131mlarda bir noktada ise telvelerin,
+    adeta u\xE7mak \xFCzere olan bir \"guguk ku\u015Fu\" simgesi olu\u015Fturmu\u015F
+    {{isim}}. Seni al\u0131\u015Ft\u0131\u011F\u0131n rutinin d\u0131\u015F\u0131na
+    \xE7\u0131kartacak bir geli\u015Fme ya\u015Fayacaks\u0131n. Bunun, istedi\u011Fin
+    ya da ihtimal verdi\u011Fin bir \u015Fey oldu\u011Funu d\xFC\u015F\xFCnm\xFCyorum.
+    Sevdi\u011Fin bir insan\u0131n vesilesiyle, i\xE7inde bulundu\u011Fun bir yeri,
+    ortam\u0131, sosyal \xE7evreyi ve hatta \u015Fehri de\u011Fi\u015Ftirebilirsin.
+    Bildi\u011Fin pek \xE7ok \u015Feyi zaten deniyordun. Fakat hi\xE7 olmad\u0131\u011F\u0131n
+    kadar iyi hissedebilmek i\xE7in, daha \xF6nce hi\xE7 yapmad\u0131\u011F\u0131n
+    bir \u015Fey yapman gerekti\u011Fini nihayet sen de anlam\u0131\u015F olacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 35
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 35
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

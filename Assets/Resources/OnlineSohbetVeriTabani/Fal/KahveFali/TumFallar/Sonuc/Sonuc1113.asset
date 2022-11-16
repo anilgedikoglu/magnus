@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1113
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA55386842080
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Son yans\u0131malarda, muntazam bir ahenk ile d\xF6nmekte olan \"\xE7arklar\"
+    dikkatimi \xE7ekti. Bu di\u015Fli \xE7arklar, fincan\u0131n dip k\u0131sm\u0131n\u0131
+    adeta domine ediyor. Hemen \xFCst k\u0131s\u0131mda ise, elindeki ya\u011F \u015Fi\u015Fesini
+    bu d\xFCzene\u011Fe boca etmekte olan bir beyefendi g\xF6rd\xFCm. Di\u015Flilere
+    ivme kazand\u0131ran ve etkili \xE7al\u0131\u015Fmas\u0131n\u0131 sa\u011Flayan
+    bu beyefendi, san\u0131yorum ki {{kelime, hayat\u0131nda \xF6nemli bir yerde
+    | eski bir tan\u0131d\u0131\u011F\u0131n | g\xFCvendi\u011Fin bir tan\u0131d\u0131\u011F\u0131n
+    | bir akraban | sevdi\u011Fin fakat s\u0131k g\xF6r\xFC\u015Femedi\u011Fin birisi
+    | senden ya\u015F\xE7a b\xFCy\xFCk bir akraban\u0131n arkada\u015F\u0131 | senin
+    ya\u015Flar\u0131nda bir arkada\u015F\u0131n\u0131n akrabas\u0131 | 4-5 y\u0131l
+    kadar \xF6nce, arkada\u015F\u0131n arac\u0131l\u0131\u011F\u0131yla tan\u0131\u015Ft\u0131\u011F\u0131n
+    bir yak\u0131n\u0131n | ge\xE7ti\u011Fimiz y\u0131llarda tan\u0131\u015Ft\u0131\u011F\u0131n,
+    nitelikli birisi}} {{isim}}. {{kelime, Al\xE7akg\xF6n\xFCll\xFC olsa da | \xC7ok
+    belli etmese de | D\u0131\u015Far\u0131dan pek belli olmasa da}}, bu ki\u015Finin
+    eli her yere uzan\u0131yor. {{kelime, Gelecek hafta | \u0130ki hafta sonra |
+    \xDC\xE7 hafta sonra | Haftaya sal\u0131 g\xFCn\xFC | Haftaya \xE7ar\u015Famba
+    g\xFCn\xFC | Haftaya per\u015Fembe g\xFCn\xFC | Haftaya cuma g\xFCn\xFC | Haftaya
+    cuma g\xFCn\xFC, saat 14:00 sular\u0131nda | Haftaya cuma g\xFCn\xFC, saat 15:00
+    sular\u0131nda | Haftaya cuma g\xFCn\xFC, saat 11:00 sular\u0131nda | Haftaya
+    cuma g\xFCn\xFC, saat 16:00 sular\u0131nda | Haftaya per\u015Fembe g\xFCn\xFC,
+    saat 14:00 sular\u0131nda}} tam olarak da imtiyaza ihtiya\xE7 duydu\u011Fun bir
+    meselede, bu ki\u015Finin arac\u0131l\u0131\u011F\u0131 \xE7ok i\u015Fine yarayacak
+    gibi."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

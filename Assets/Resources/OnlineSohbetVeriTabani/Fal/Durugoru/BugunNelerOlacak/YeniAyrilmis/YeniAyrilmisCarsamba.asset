@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: YeniAyrilmisCarsamba
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA78902273238
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{burc}} bur\xE7lar\u0131 \xE7ar\u015Famba g\xFCnlerini genelde pek sevmez derler,
+    sen de onlardan m\u0131s\u0131n {{isim}}? Bug\xFCn ayr\u0131ld\u0131\u011F\u0131n
+    ki\u015Finin sana ula\u015Fma ihtimali bir hayli y\xFCksek g\xF6z\xFCk\xFCyor.
+    Seni telefonla arama ihtimali %{{sayi,55,69}} dolay\u0131ndayken, sana mesaj
+    atma ihtimalini %{{sayi,74,93}} seviyelerinde g\xF6r\xFCyorum. Onun seninle ilgili
+    yanl\u0131\u015F anlad\u0131\u011F\u0131 bir durum var. Bunu da yeterince ifade
+    edememi\u015F. Bu konu bug\xFCn rastlant\u0131sal bir \u015Fekilde a\xE7\u0131kl\u0131\u011Fa
+    kavu\u015Fabilir. \xD6\u011Fleden sonra kapal\u0131 bir ortamdan a\xE7\u0131k
+    bir ortama ge\xE7erken, g\xF6z\xFCne \"d\xFC\u015Fm\xFC\u015F bir yaprak\" ya
+    da \"kondu\u011Fu yerden havalanmakta olan bir ku\u015F\" ili\u015Febilir. Olas\u0131l\u0131ksal
+    hesaplar\u0131mda sapma olmazsa, bu olduktan {{sayi,1,3}} saat kadar sonra kayna\u011F\u0131
+    benim a\xE7\u0131mdan belirsiz bir geli\u015Fmeye \xE7ok sevineceksin. Ak\u015Fam 
+    yatmadan hemen \xF6nce ise, bulundu\u011Fun ortam\u0131n ko\u015Fullar\u0131yla
+    ilgili bir \u015Fey seni rahats\u0131z edebilir De\u011Ferli {{isim}}. Uykuya
+    dalman biraz ge\xE7 olacak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  - degiskenAdi: bugun
+    degiskenDegeri: 3
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

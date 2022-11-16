@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Yildiz
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA30933485177
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a2eb08650b2e38e40b156a936024144f, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a2eb08650b2e38e40b156a936024144f, type: 3}
+  contentPhotoId: yildiz
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in se\xE7mi\u015F oldu\u011Fun kart \"Y\u0131ld\u0131z\"
+    De\u011Ferli {{isim}}.\n\n\xDCz\xFCld\xFC\u011F\xFCn d\xF6nemler mi oldu senin?
+    Can\u0131n yanm\u0131\u015F ya da hayat taraf\u0131ndan biraz zorlanm\u0131\u015Fs\u0131n
+    belli ki... Lakin sonras\u0131nda m\xFCkemmel bir istikamet \xFCzere konumland\u0131r\u0131lm\u0131\u015Fs\u0131n.
+    Sana yepyeni umutlar bah\u015Fedilmi\u015F. Elinden al\u0131nanlar\u0131n yerine
+    h\u0131zla yenileri konulmaya ba\u015Flanm\u0131\u015F. D\xF6kt\xFC\u011F\xFCn
+    g\xF6zya\u015Flar\u0131, uzay\u0131p g\xF6\u011Fe eri\u015Fecek mutluluk fidanlar\u0131n
+    i\xE7in ya\u011Fmur olmu\u015F. \u0130\xE7indeki t\xFCm s\u0131k\u0131nt\u0131lardan
+    ar\u0131nd\u0131r\u0131lmaya ba\u015Flanm\u0131\u015Fs\u0131n. Yanlar\u0131na
+    d\xF6nmemek \xFCzere terk etti\u011Fin s\u0131k\u0131nt\u0131lar, bir daha kar\u015F\u0131na
+    \xE7\u0131kmayacak \u015Fekilde da\u011F\u0131lm\u0131\u015Flar."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis yildiz
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

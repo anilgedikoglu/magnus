@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyTanidikKoc
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA91132874815
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Uyumunuzu
+    sordu\u011Fun bu ko\xE7 burcu {{data, cinsiyet=erkek, han\u0131mefendinin | cinsiyet=kad\u0131n,
+    beyefendinin | cinsiyet=lgbt, ki\u015Finin}} bir tan\u0131d\u0131\u011F\u0131n
+    oldu\u011Funu s\xF6yledin {{isim}}. Peki yak\u0131ndan tan\u0131d\u0131\u011F\u0131n
+    biri mi? \xC7\xFCnk\xFC onu yak\u0131ndan tan\u0131m\u0131\u015F olsan, ya \xE7oktan
+    onunla olmak isterdin ve bu ger\xE7ekle\u015Firdi, ya da reddedildi\u011Fin i\xE7in
+    \xFCmidini kesmi\u015Ftin. S\xFCre\xE7 onlarla neden b\xF6yle net i\u015Fler
+    biliyor musun, onlar genellikle se\xE7ilmez, se\xE7erler. Sen {{burc}} burcu
+    {{data, cinsiyet=erkek, erke\u011Fisin | cinsiyet=kad\u0131n, kad\u0131n\u0131s\u0131n
+    | cinsiyet=lgbt, mensubusun}}. Birilerinin sana kar\u015F\u0131 koymas\u0131
+    pek m\xFCmk\xFCn de\u011Fil. Bu a\xE7\u0131dan bakt\u0131\u011F\u0131m\u0131zda,
+    onunla ya\u015Fayaca\u011F\u0131n s\xFCre\xE7lerin olumlu olaca\u011F\u0131n\u0131
+    d\xFC\u015F\xFCn\xFCyorum. Bir ili\u015Fkiye ba\u015Flarsan\u0131z, tek dikkat
+    etmen gereken \u015Fey onu s\u0131kmamak. Yapt\u0131r\u0131m uygulanmas\u0131n\u0131,
+    s\u0131kbo\u011Faz edilmeyi ve k\u0131s\u0131tlanmay\u0131 hi\xE7 sevmezler.
+    Bunlar\u0131 yapmazsan, her daim yan yana g\xF6r\xFCr\xFCz sizi. \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "tan\u0131d\u0131k"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "ko\xE7"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 1
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

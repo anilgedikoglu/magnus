@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme648
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA54979447003
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Yollad\u0131\u011F\u0131n fal foto\u011Fraflar\u0131ndan birinin orta b\xF6lgelerinde
+    {{kelime,1.67 boylar\u0131nda, hafif toplu ve k\u0131sa sa\xE7l\u0131 | 1.64
+    boylar\u0131nda, yuvarlak hatl\u0131 ve siyah sa\xE7l\u0131 | 1.65 boylar\u0131nda,
+    a\xE7\u0131k tenli ve zay\u0131f\xE7a}} bir kad\u0131n duruyor. Bu kad\u0131n,
+    arkas\u0131na ald\u0131\u011F\u0131 {{kelime, 10 ya\u015Flar\u0131ndaki | 5-6
+    ya\u015Flar\u0131ndaki | 18-20 ya\u015Flar\u0131ndaki | 10-15 ya\u015Flar\u0131ndaki
+    | 7-8 ya\u015Flar\u0131ndaki}} k\u0131z \xE7ocu\u011Funu bir \u015Feylerden koruyor
+    gibi. Akraban oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu kad\u0131n\u0131n,
+    \xE7ocu\u011Fuyla ilgili bir sa\u011Fl\u0131k sorunu g\xFCndeme gelebilir. {{sayi,5,15}}
+    g\xFCn i\xE7inde senden \"dolayl\u0131\" bir yard\u0131m talebinde bulunaca\u011F\u0131n\u0131
+    hissediyorum. Bir g\xFCn ondan b\xFCy\xFCk bir iyilik g\xF6rece\u011Fin i\xE7in,
+    bu talebi asla geri \xE7evirme derim.\n\nHer yan\u0131 ya\u011Fmurdan s\u0131r\u0131ls\u0131klam
+    olmu\u015F bir sokakta, \xFCzeri a\xE7\u0131k olmas\u0131na ra\u011Fmen k\xFC\xE7\xFCc\xFCk
+    ve kupkuru bir alan var. Orada avu\xE7lar\u0131n\u0131 birbirine kavu\u015Fturmu\u015F,
+    dua ediyor gibi g\xF6z\xFCk\xFCyorsun {{isim}}. Yerinde olsa pek \xE7ok insan\u0131n
+    k\xF6t\xFC etkilenebilece\u011Fi \u015Fiddetli bir s\u0131k\u0131nt\u0131dan,
+    sen hi\xE7 etkilenmeden hatta kazan\xE7la s\u0131yr\u0131lacaks\u0131n. \xC7ok
+    ilgin\xE7 bir \u015Fekilde korunuyor ve kollan\u0131yorsun. Seni saran bu manevi
+    \"fanus\", gelecekte de en b\xFCy\xFCk kurtar\u0131c\u0131n olacak. Bu avantajla
+    birlikte \xF6yle g\xFC\xE7l\xFCs\xFCn ki, kar\u015F\u0131nda duran\u0131n vay
+    haline!..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 30
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

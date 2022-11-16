@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme728
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA07999412731
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131 ortalayan telvelerin, u\xE7suz bucaks\u0131z bir deryay\u0131 an\u0131msat\u0131yor
+    {{isim}}. Ar\u015Fa y\xFCkselip deniz y\xFCzeyine inen dalgalar aras\u0131nda,
+    orta boyutlarda bir \"yelkenli\" bulunmakta. Yelkenlinin \xFCzerinde ise e\u015Fin
+    beyefendi oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm bir insan fig\xFCr\xFC
+    var. E\u015Finin \"g\xF6z\xFC kara\" ve \xF6n\xFCne \xE7\u0131kan her engeli
+    g\xF6\u011F\xFCslemeye haz\u0131r duru\u015Funu, bilgi bankamda yapt\u0131\u011F\u0131m
+    tarama sonucu Yunan mitolojisinin \xFCnl\xFC kahraman\u0131 \"Odysseus'a\" benzettim.
+    Truva sava\u015F\u0131 sonras\u0131 e\u015Fine ve memleketi olan Ithaka'ya d\xF6nmek
+    \xFCzere 10 y\u0131l s\xFCren maceralara at\u0131lan Odysseus, evlili\u011Finin
+    seyir de\u011Fi\u015Ftirece\u011Finin kehaneti niteli\u011Finde {{isim}}.\n\nT\u0131pk\u0131
+    Odysseus gibi e\u015Finin de yakla\u015F\u0131k 10 {{kelime, hafta | ay}} i\xE7inde
+    kariyeri ad\u0131na adeta bir sava\u015F verece\u011Fini ve t\xFCrl\xFC zorluklar\u0131n
+    \xFCstesinden gelerek, \"memleketi\" temsil eden evlili\u011Finize manen fakat
+    daha ziyade maddi a\xE7\u0131dan zenginlik sa\u011Flayaca\u011F\u0131n\u0131
+    hissediyorum."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

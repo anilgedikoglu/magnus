@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme513
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA57516158626
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n, korkular\u0131nla \"kazanacaklar\u0131n\" aras\u0131nda \xE7ok
+    ince bir s\u0131n\u0131r oldu\u011Funu i\u015Faret ediyor. Duvar sand\u0131\u011F\u0131n
+    \u015Feyler, \xE7o\u011Funlukla ince bir \"zardan\" ibaret g\xF6z\xFCk\xFCyor
+    {{isim}}. Neredeyse aylard\u0131r ger\xE7ekle\u015Ftirmeyi d\xFC\u015F\xFCnd\xFC\u011F\xFCn
+    fakat bir t\xFCrl\xFC ad\u0131m atamad\u0131\u011F\u0131n, sonucundan \xFCrkt\xFC\u011F\xFCn,
+    kendinde yeterli g\xFCc\xFC bulamad\u0131\u011F\u0131n ve netice itibariyle \xF6teledi\u011Fin
+    2 konu oldu\u011Funu g\xF6r\xFCyorum. Evet; bir tanesi i\xE7in halen uygun zaman
+    de\u011Fil. Onun i\xE7in evren, sana bir i\u015Faret \xE7akacak. Fakat di\u011Feri
+    i\xE7in, elinden geleni ard\u0131na koyma. Sonucu seni \xE7ok mutlu edecek!\n\n\xD6n\xFCm\xFCzdeki
+    {{sayi,2,5}} ay i\xE7erisinde \xE7ok ilgin\xE7 bir g\xFCne uyanacaks\u0131n {{isim}}.
+    Telvelerin, tan yeri a\u011Far\u0131rken, garip bir hisle yata\u011F\u0131ndan
+    kalk\u0131p, sonra tekrar yataca\u011F\u0131n\u0131 s\xF6yl\xFCyor. \U0001F318Bir
+    g\xFCn \xF6ncesinde uyku tutmayan ve sabah\u0131na g\xF6zlerini \xE7ok garip
+    hislerle a\xE7aca\u011F\u0131n o g\xFCn, ad\u0131nda {{harf}} harfi olan birinden
+    \xE7ok b\xFCy\xFCk bir m\xFCjde alacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

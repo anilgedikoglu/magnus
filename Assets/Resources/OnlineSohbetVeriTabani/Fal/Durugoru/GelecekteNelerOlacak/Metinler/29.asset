@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 29
+  m_EditorClassIdentifier: 
+  idIndex: 20226105950AA86100770979
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Gelece\u011Fine odakland\u0131\u011F\u0131mda, beynimde \xE7ok ilgin\xE7 imgeler
+    belirdi {{isim}}. Bundan tam {{ay_+4}} ay sonras\u0131; sar\u0131kl\u0131 ve
+    c\xFCbbeli bir adam kar\u015F\u0131na ge\xE7mi\u015F, sana \xF6n\xFCndeki fermandan
+    bir \u015Feyler okuyor. Ferman, \u015Fer sand\u0131\u011F\u0131n \u015Feydeki
+    hayr\u0131 i\u015Faret eder. \xDCz\xFCld\xFC\u011F\xFCn ve seni kendi i\xE7 d\xFCnyana
+    kapatan bir \u015Feyler olduysa, bunlar\u0131n asl\u0131nda sana b\xFCy\xFCk
+    hay\u0131rlar getirece\u011Fini g\xF6receksin. {{ay_+4}} ay\u0131n\u0131n {{kelime,
+    ilk \xE7eyre\u011Fi | ikinci \xE7eyre\u011Fi | \xFC\xE7\xFCnc\xFC \xE7eyre\u011Fi
+    | son \xE7eyre\u011Fi}} i\xE7inde neyin neden oldu\u011Funu anlayacak, ya\u015Fayaca\u011F\u0131n
+    m\xFCjde kabilinden geli\u015Fmelere \xE7ok sevineceksin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: gno
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: gno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

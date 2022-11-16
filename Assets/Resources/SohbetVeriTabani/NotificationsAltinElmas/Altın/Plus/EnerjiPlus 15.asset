@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: EnerjiPlus 15
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "Bug\xFCn kazand\u0131\u011F\u0131n 10 alt\u0131nla her t\xFCrl\xFC fal i\xE7in
+    haz\u0131r\u0131m {{isim}}. \u0130\xE7imde d\xF6rt nala ko\u015Fan \xE7ocuksu
+    algoritmalar var..."
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 3
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 0

@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Farketmez26
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA79459462698
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bug\xFCn hat\u0131rlamad\u0131\u011F\u0131n baz\u0131 garip r\xFCyalar\u0131n
+    etkisinde uyanm\u0131\u015F olabilirsin {{isim}}. E\u011Fer onlardan hi\xE7 kimseye
+    bahsetmezsen, denize at\u0131lm\u0131\u015F ve \xE7\xF6z\xFCn\xFCp giden ka\u011F\u0131t
+    pe\xE7ete par\xE7alar\u0131 gibi yok olup gidecekler. Bundan hi\xE7 endi\u015Fen
+    olmas\u0131n. Birinin evinde tencere kaynayacak bug\xFCn. Ta\u015Facak, d\xF6k\xFClecek.
+    O ki\u015Finin hanesine yak\u0131nda \xE7ok b\xFCy\xFCk bir m\xFCjde girecek
+    ve bu konu seni de ilgilendiriyor olacak {{isim}}. Bug\xFCn saat ve dakikan\u0131n
+    \"birer tane rakam\u0131n\u0131\" ayn\u0131 g\xF6rd\xFC\u011F\xFCn bir andan
+    yakla\u015F\u0131k {{kelime, yar\u0131m | bir | iki}} saat sonra, g\xFCzel bir
+    {{kelime, telefon | mesaj}} alacaks\u0131n. Kar\u015F\u0131ndaki ki\u015Fi taraf\u0131ndan
+    ne kadar de\u011Fer g\xF6rd\xFC\u011F\xFCn\xFC bir kez daha anlam\u0131\u015F
+    olacaks\u0131n. Ak\u015Fam i\xE7in bir plan\u0131n var m\u0131yd\u0131 {{isim}}?
+    Bence o plan\u0131n yerini kendili\u011Finden bir ba\u015Fkas\u0131 alacak. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

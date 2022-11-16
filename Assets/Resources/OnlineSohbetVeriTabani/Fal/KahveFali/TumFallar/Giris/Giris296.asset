@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris296
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA74697152105
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sararm\u0131\u015F ve kenarlar\u0131 k\u0131r\u0131\u015F\u0131k bir par\u015F\xF6men
+    ka\u011F\u0131d\u0131 belirmi\u015F {{isim}} fincan\u0131nda. Ka\u011F\u0131d\u0131n
+    \xFCzerinde ise, {{kelime, sa\xE7lar\u0131n\u0131n birka\xE7 tutam\u0131 y\xFCz\xFCne
+    d\xFC\u015Fen, kal\u0131n dudakl\u0131, k\u0131s\u0131k g\xF6zlerle bakan | d\xFCz
+    sa\xE7l\u0131, sivri \xE7eneli ve iri g\xF6zl\xFC | aln\u0131nda baz\u0131 k\u0131r\u0131\u015F\u0131kl\u0131klar\u0131
+    bulunan, ince dudakl\u0131 ve a\xE7\u0131k kumral | geni\u015F a\u011F\u0131zl\u0131,
+    sivri burunlu ve aln\u0131 a\xE7\u0131k | ince dudakl\u0131, keskin bak\u0131\u015Fl\u0131
+    ve d\xFCzg\xFCn di\u015Flere sahip | ka\u015Flar\u0131 hafif \xE7at\u0131k, elmac\u0131k
+    kemikleri \xE7\u0131k\u0131k ve sert miza\xE7l\u0131}} bir {{data, cinsiyet=erkek,
+    kad\u0131n\u0131n | cinsiyet=kad\u0131n, erke\u011Fin | cinsiyet=lgbt, ki\u015Finin}}
+    silueti var. Bu ki\u015Finin {{kelime, i\xE7inde | akl\u0131nda | y\xFCre\u011Finde}},
+    vaktiyle fark\u0131nda olmad\u0131\u011F\u0131 fakat ya\u015Fayarak \xF6\u011Frendi\u011Fi,
+    sana ise aktaramad\u0131\u011F\u0131 \u015Feyler birikmi\u015F {{isim}}. Bu ki\u015Fiyle
+    {{sayi,2,8}} hafta i\xE7inde \xE7ok spontan bir yerde kar\u015F\u0131la\u015Facaks\u0131n\u0131z
+    ve sonraki g\xFCnlerde sana mesajla baz\u0131 s\xF6yleyecekleri olacak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: evhanimi
+  m_EditorClassIdentifier: 
+  etiket: S8Cevap
+  aciklama:
+  - "Ev i\u015Flerinden daha zorlu bir i\u015F var m\u0131 bilemiyorum... Allah kolayl\u0131k
+    versin {{isim}}. "
+  - "Ev i\u015Fleri bitmez. \xC7ok zor, \xE7ok..."
+  - "Huzurun yerindeyse \xE7al\u0131\u015F\u0131p \xE7al\u0131\u015Fmad\u0131\u011F\u0131n
+    \xE7ok da \xF6nemli de\u011Fil bence."
+  aranacakEtiket: medeni
+  gerekenDegiskenler:
+  - degiskenAdi: meslek
+    degiskenDegeri: "ev han\u0131m\u0131"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 5
+  ozelKontrol: 
+  ayarlanacakDegisken: 

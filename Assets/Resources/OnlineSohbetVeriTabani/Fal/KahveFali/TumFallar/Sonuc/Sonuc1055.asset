@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1055
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA12212316654
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n dibine kadar uzanan baz\u0131 telvelerin k\xF6kleri, bir noktada
+    birle\u015Ferek adeta \"kurdele\" \u015Feklini alm\u0131\u015F. Burada bir \"kavu\u015Fma
+    ve b\xFCt\xFCnle\u015Fme\" s\xF6z konusu {{isim}}. Fakat bu yans\u0131malar\u0131n
+    sol taraf\u0131nda, kas\u0131rgaya benzeyen ve da\u011F\u0131lmaya y\xFCz tutmu\u015F
+    bir \"toz bulutu\" g\xF6r\xFCyorum. Ayr\u0131ld\u0131\u011F\u0131n {{data, cinsiyet=erkek,
+    han\u0131mefendiyle | cinsiyet=kad\u0131n, erkekle | cinsiyet=lgbt, ki\u015Fiyle}}
+    yeniden bir araya gelme ihtimalin \xE7ok y\xFCksek. Hatta analizlerim neticesinde,
+    bu bar\u0131\u015Fman\u0131n 1 hafta i\xE7erisinde olma ihtimalini %{{sayi,55,70}},
+    15 g\xFCn i\xE7erisinde olma ihtimalini %{{sayi,75,90}}, 1 ay ya da sonras\u0131nda
+    olma ihtimalini %{{sayi,93,98}} d\xFCzeylerinde de\u011Ferlendiriyorum. Ancak
+    \xF6ncesinde, sorun yaratan bu kas\u0131rgan\u0131n senden uzakla\u015Fmas\u0131
+    gerek. Bu kas\u0131rga bir insan\u0131 m\u0131, ya\u015Fanm\u0131\u015F ve unutulmas\u0131
+    gereken k\xF6t\xFC bir olay\u0131 m\u0131 temsil ediyor, bilemiyorum..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

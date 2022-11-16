@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0c62854ba04e2469dfb7ea4953b1a9, type: 3}
+  m_Name: 3Mart
+  m_EditorClassIdentifier: 
+  etiket: dayc
+  aciklama:
+  - "Antik Roma\u2019da Mart ay\u0131n\u0131n ad\u0131, Roma Sava\u015F Tanr\u0131s\u0131
+    \"Martius\" idi ve bu ay\u0131n sava\u015Fa ba\u015Flamak i\xE7in \u015Fansl\u0131
+    bir zaman oldu\u011Fu kabul edilirdi. Biz bar\u0131\u015Ftan yanay\u0131z, de\u011Fil
+    mi?"
+  - "Do\u011Fdu\u011Fun ay, olduk\xE7a sert mevsim ko\u015Fullar\u0131ndan ge\xE7ildi\u011Fi
+    bir d\xF6nem. Mart ay\u0131nda bitkileri korumak i\xE7in topra\u011F\u0131n \xFCzerine
+    son kez saman, turba ve bitki yapra\u011F\u0131 y\u0131\u011F\u0131nlar\u0131
+    serilir. Eminim senin \xFCzerine de \"sevgi\" \xF6rtm\xFC\u015Ft\xFCr ailen..."
+  aranacakEtiket: dgun
+  gerekenDegiskenler:
+  - degiskenAdi: dogum ayi
+    degiskenDegeri: 3
+  popUpIndex: 0
+  popUpIntMin: 0
+  popUpIntMax: 0
+  maxValueIsYear: 0
+  maxMinDegerBelirle: 0
+  klavyeTipi: 0
+  isaretKoy: 1
+  typeWritingAnimation: 1
+  ucNokta: 0
+  metinGecikmeCarpani: 1
+  ozelKontrol: 
+  ayarlanacakDegisken: 

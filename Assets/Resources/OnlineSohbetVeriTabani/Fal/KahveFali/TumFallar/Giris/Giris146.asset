@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris146
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA74901452008
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n beyaz k\u0131s\u0131mlar\u0131n\u0131n aras\u0131nda kalan
+    baz\u0131 telveler, t\u0131pk\u0131 bir ahtapotu an\u0131msat\u0131yor. Bu ahtapot,
+    anne ya da baba taraf\u0131ndan bir aile b\xFCy\xFC\u011F\xFCn\xFC temsil ediyor
+    {{isim}}. Bu insan ge\xE7ti\u011Fimiz y\u0131llarda hep \"aileyi b\xFCt\xFCnleyen\"
+    ki\u015Fi olma rol\xFCn\xFC \xFCstlenmi\u015F. B\xFCy\xFCkl\xFC k\xFC\xE7\xFCkl\xFC
+    herkesi koruyup kollamaya, sar\u0131p sarmalamaya \xE7al\u0131\u015Fm\u0131\u015F.
+    Fakat anlad\u0131\u011F\u0131m kadar\u0131yla \u015Fu s\u0131ralar \xE7ok yorgun.
+    {{kelime, \u015Eeker hastal\u0131\u011F\u0131 | Y\xFCksek kolesterol | Romatizma
+    | Hipertansiyon | G\xF6rme bozukluklar\u0131}} ba\u015Fta olmak \xFCzere baz\u0131
+    rahats\u0131zl\u0131klar\u0131 var gibi g\xF6z\xFCk\xFCyor. \xDCstelik de yaln\u0131z
+    ve ilgisiz b\u0131rak\u0131ld\u0131\u011F\u0131n\u0131 hissediyorum. Onunla ileti\u015Fime
+    ge\xE7meli, hay\u0131r duas\u0131n\u0131 almal\u0131s\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

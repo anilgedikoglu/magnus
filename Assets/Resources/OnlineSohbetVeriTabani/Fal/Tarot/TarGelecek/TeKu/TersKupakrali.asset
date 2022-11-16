@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKupakrali
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA42864523556
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 066f94dc0f35956478e7c81d15a1a8be, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 066f94dc0f35956478e7c81d15a1a8be, type: 3}
+  contentPhotoId: kupakrali-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"Kupa Kral\u0131\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSen
+    \u015Fu an akl\u0131na gelmeyen bir plan yapacaks\u0131n. Bir talebin olacak
+    {{isim}}. Talebini sundu\u011Fun erkek seni geri \xE7evirecek ve beklentilerin
+    kar\u015F\u0131lanmayacak. Ya izin alamayacaks\u0131n, ya da farkl\u0131 bir
+    \u015Feye y\xF6lendirilmek isteneceksin. Bu seni biraz gerebilir. S\xF6z verdi\u011Fin
+    baz\u0131 insanlar\u0131n \xF6n\xFCnde k\xFC\xE7\xFCk d\xFC\u015Febilirsin. Amac\u0131na
+    istedi\u011Fin h\u0131zda ula\u015Famad\u0131\u011F\u0131n i\xE7in o erke\u011Fe
+    de sitemkar davranabilirsin. Kart\u0131n, do\u011Fru ad\u0131mlar\u0131 atarak
+    farkl\u0131 bir yoldan ayn\u0131 hedefe yine de ula\u015Fabilece\u011Fini s\xF6yl\xFCyor.
+    Kimi zaman b\xF6yle olur; uygun olmayan bir \u015Fekil ya da zaman se\xE7ilir
+    ve istenilen ger\xE7ekle\u015Fmez. Yeniden denemeli, farkl\u0131 bir metot kullanmal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kupakrali ters
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kupakrali ters
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kupakrali ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

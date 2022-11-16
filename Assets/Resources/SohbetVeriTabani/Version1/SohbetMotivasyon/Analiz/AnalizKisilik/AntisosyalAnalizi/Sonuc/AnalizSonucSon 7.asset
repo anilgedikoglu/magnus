@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: AnalizSonucSon 7
+  m_EditorClassIdentifier: 
+  idIndex: 20221042134AA16765946825
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Antisosyallik Analizi\n\nDe\u011Ferli {{isim}}, antisosyal olup olmad\u0131\u011F\u0131n\u0131,
+    Star Wars tabiriyle \"karanl\u0131k tarafta\" olup olmad\u0131\u011F\u0131n\u0131
+    \xFC\xE7 a\u015Fa\u011F\u0131 be\u015F yukar\u0131 hesaplad\u0131m. De\u011Ferlendirmelerim
+    \u015F\xF6yle;\n\n{{data, antisosyal2=a, Ak\u0131ll\u0131 birisin. Zekan\u0131,
+    insanlar\u0131 do\u011Fru y\xF6nlendirmek i\xE7in kullanabiliyorsun. Bu yetene\u011Fin
+    \xE7evrendeki herkesi senin i\xE7in gerekti\u011Fi zamanlarda birer \"aparat\"
+    haline getiriyor. Kendini ak\u0131ll\u0131 sananlar\u0131n kendilerini ak\u0131ll\u0131
+    sand\u0131klar\u0131n\u0131 ve asl\u0131nda ne olduklar\u0131n\u0131 \xE7ok iyi
+    fark edebilecek \xFCst\xFCn bir yap\u0131n var. | antisosyal2=b, Ba\u015Fkalar\u0131n\u0131n
+    h\xFCr iradelerine \xE7ok fazla kar\u0131\u015Fan ya da onlar\u0131 kendi se\xE7imlerine
+    ve isteklerine alet eden biri de\u011Filsin. Gerekirse ve zorda kal\u0131rsan,
+    durum ba\u015Fka. Kendini daha avantajl\u0131 bir hale getirebilmek i\xE7in var
+    olan t\xFCm yeteneklerini sergilemekten ka\xE7mayaca\u011F\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorum.
+    | antisosyal2=c, Farkl\u0131 fikirlere sayg\u0131s\u0131 sonsuz olan birisin.
+    Bununla beraber de iyi niyetlisin. Sevdi\u011Fin insanlar\u0131n istekleri, senin
+    beklentilerinin zaman zaman \xF6n\xFCne ge\xE7ebilir. Buna da izin vermekten
+    rahats\u0131zl\u0131k duymazs\u0131n.}}\n\n{{data, antisosyal4=a, Senin i\xE7in
+    planl\u0131 ve programl\u0131 davranmak ay\u0131p de\u011Fil. \u0130nsan ili\u015Fkilerinde
+    bir miktar siyaset g\xF6zetmek ve ge\xE7imli olmak, hi\xE7 de gocunulacak bir
+    hal yaratm\u0131yor. Stratejik d\xFC\u015F\xFCnmekte ustas\u0131n. \u0130nsanlar
+    ise senin piyonlar\u0131n. | antisosyal4=b, Yerine g\xF6re hay\u0131r diyebilen
+    ve yerine g\xF6re de durumu idare edebilen birisin. Ko\u015Fullar ve kar\u015F\u0131ndaki
+    insan\u0131n kim oldu\u011Fu, ona kar\u015F\u0131 davran\u0131\u015F \u015Fekillerinde
+    b\xFCy\xFCk rol oynuyor. Sevdi\u011Fin birinin bazen seni \xFCzmesine izin verebilecekken,
+    sevmedi\u011Fin bir insan\u0131n yan g\xF6zle sana bakmas\u0131na dahi m\xFCsaaden
+    yok. | antisosyal4=c, Kimseye minnet etmeyen g\xFC\xE7l\xFC ve p\u0131r\u0131l
+    p\u0131r\u0131l bir yap\u0131n var. Elmas gibi  sa\u011Flam, sert, dayan\u0131kl\u0131
+    ve keskinsin. Sana kar\u015F\u0131 ak\u0131ll\u0131 olmayan, senin hayat\u0131nda
+    bar\u0131namaz.}}\n\n{{data, antisosyal5=a, Ya\u015Fam sana g\xF6re bir al\u0131\u015Fveri\u015F.
+    Biz karbondioksit veriyoruz, bitkiler bunu al\u0131p bize oksijen veriyor. O
+    y\xFCzden var olmalar\u0131na izin veriyorsun ve senin i\xE7in gerekliler. \u0130nsanlar
+    da \xF6yle. Fayda sa\u011Flamayacak bo\u015F insanlar\u0131 hayat\u0131ndan uzak
+    tutuyorsun. Mutual bir hayat sana g\xF6re mant\u0131kl\u0131 olan\u0131. Vericisin,
+    ancak yaln\u0131zca alabildi\u011Finde... | antisosyal5=b, Seni iyi ya da k\xF6t\xFC
+    diye s\u0131n\u0131fland\u0131rmak \xE7ok zor. Nas\u0131l biri oldu\u011Funu,
+    kar\u015F\u0131ndaki insan belirliyor. Samimi ve a\xE7\u0131k y\xFCrekli yakla\u015Fanlara
+    benzer \u015Fekilde mukabele ediyorsun. Art niyet g\xF6rd\xFC\u011F\xFCnde ise
+    bir bardak su dahi vermezsin. | antisosyal5=c, Y\xFCre\u011Finin sesini akl\u0131ndan
+    fazla dinleyen, vicdan\u0131yla ya\u015Fayan, iyilik nedir, sevap nedir bilen
+    birisin. Davran\u0131\u015Flar\u0131n\u0131n neticesinde eline somut bir \u015Fey
+    ge\xE7mesi senin i\xE7in \u015Fart de\u011Fil. Evrende parlak bir iz b\u0131rakmak
+    bile yerine g\xF6re seni mutlu edebiliyor. \u0130nsano\u011Flunun a\u015Fk ile
+    ve a\u015Fk i\xE7in yarat\u0131ld\u0131\u011F\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorsun.
+    Asla kaybetmeyecek olan iyilerdensin.}}\n\n{{data, antisosyal6=a, \xD6n\xFCn\xFC
+    her zaman k\u0131\u015F tutuyor ve yaz \xE7\u0131karsa memnun oluyorsun. \u0130nsanlar
+    da senin i\xE7in mevsimler gibiler. Onlara hi\xE7 g\xFCvenmiyorsun. \u0130yi
+    kalpli \xE7\u0131karlarsa, o zaman ba\u015Fka. Haklar\u0131n\u0131 i\u015Fte
+    o durumda veriyorsun. Senin i\xE7in g\xFCven 100'den geriye do\u011Fru d\xFC\u015Fen
+    de\u011Fil s\u0131f\u0131rdan ba\u015Flay\u0131p artan bir \u015Fey. | antisosyal6=b,
+    Tedbirli birisin. Safl\u0131k, temizlik ve budalal\u0131k aras\u0131ndaki ince
+    \xE7izginin fark\u0131ndas\u0131n. \u0130nsanlara bu geni\u015F a\xE7\u0131 ile
+    yakla\u015F\u0131yor ve kendini yara almaktan olabildi\u011Fince korumaya gayret
+    ediyorsun. | antisosyal6=c, Sana g\xF6re insanlar\u0131n yapt\u0131\u011F\u0131
+    hatalar\u0131n cezalar\u0131n\u0131 ya evren ya da mevla keser. Kim ya da ne
+    oldu\u011Fundan ba\u011F\u0131ms\u0131z, bir \xFCst mercii oldu\u011Funa ve k\xF6t\xFCl\xFC\u011F\xFCn
+    yap\u0131ld\u0131\u011F\u0131 zaman kimsenin yan\u0131na kalmayaca\u011F\u0131na
+    inan\u0131yorsun. Karmaya g\xFCvenin tam ve kafan rahat.}}\n\n{{data, antisosyal7=a,
+    Ba\u015Far\u0131 odakl\u0131s\u0131n. Kendine bir hedef belirlediysen, seni o
+    hedefe varmaktan hi\xE7bir \u015Fey al\u0131koyamaz. Ba\u015Far\u0131ya giden
+    yolda senin i\xE7in her \u015Fey m\xFCbah ve sana g\xF6re bu d\xFCnyada zay\u0131flara
+    yer yok. | antisosyal7=b, Ne k\xFC\xE7\xFCk bir \xE7ocuk kadar ilkel safl\u0131\u011F\u0131n
+    ve d\xFCr\xFCstl\xFC\u011F\xFCn, ne de vicdan\u0131n\u0131 kaybetmi\u015F insanlar
+    gibi canisin. Yeri gelince beyaz yalanlarla, tatl\u0131 dilinle g\xF6n\xFCl al\u0131yor,
+    yeri geldi\u011Finde ise adalet k\u0131l\u0131c\u0131n\u0131 kar\u015F\u0131ndakine
+    sall\u0131yorsun. | antisosyal7=c, Do\u011Frucu Davut'sun. Seni sevenler \xE7ok
+    seviyor, sevmeyenler ise senden uzak durmak zorunda kal\u0131yor. Senin kitab\u0131nda
+    \"yaranmak\" diye bir tabir yazm\u0131yor. A\xE7\u0131k s\xF6zl\xFCl\xFCk sana
+    g\xF6re bir g\xFC\xE7 ve onur.}}\n\n{{data, antisosyal8=a, Sana ba\u015F\u0131na
+    buyruk denebilir mi bilmiyorum. Bence sen kendi i\xE7 ihtilalini ger\xE7ekle\u015Ftirmi\u015F,
+    \xF6zg\xFCr ve devrimci birisin. Kimse senin ayaklar\u0131na prangalar vuramaz.
+    | antisosyal8=b, Bir hamle yapaca\u011F\u0131n zaman, kime kar\u015F\u0131 yapaca\u011F\u0131n\u0131
+    tam olarak de\u011Ferlendiriyorsun. Vefa senin i\xE7in \xF6nemli. E\u011Fer kokusuyla
+    i\xE7ini ferahlatm\u0131\u015F bir \xE7im ise, o \xE7imlere basmak yerine \xE7evresinden
+    dola\u015Fabilecek kadar erdemlisin. | antisosyal8=c, Sen yap\u0131lan iyilikleri
+    hi\xE7bir zaman unutmayan, buna g\xF6re davranan ve b\xF6yle aksiyon ald\u0131\u011F\u0131
+    i\xE7in de kendisini hi\xE7bir zaman oda\u011Fa koymayan birisin. \u0130nsanlara
+    \xF6nem veriyorsun. Sana g\xF6re evrende bir sevgi d\xF6ng\xFCs\xFC var ve bu
+    d\xF6ng\xFC senin i\xE7in k\u0131ymetli.}}"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "antisosyalsonu\xE7son"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 2
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

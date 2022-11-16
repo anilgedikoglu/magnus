@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 19
+  m_EditorClassIdentifier: 
+  idIndex: 20224103044AA51018741363
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "S\u0131radan olmayan, a\u015F\u0131r\u0131 ba\u015Far\u0131l\u0131 insanlara
+    \xF6zeniyor musun? Onlar senden yetenek\xE7e varkl\u0131lar, kabul et. Peki bunun
+    hangi yetenek oldu\u011Funu biliyor musun? \u0130yi bir i\u015F adam\u0131n\u0131n
+    kafas\u0131 seninkinden daha m\u0131 fazla \xE7al\u0131\u015F\u0131yor san\u0131yorsun
+    {{isim}}? Ya da star olmu\u015F bir \u015Fark\u0131c\u0131, senden \xE7ok daha
+    iyi mi \u015Fark\u0131 s\xF6yl\xFCyor? Hayat mekanizmas\u0131 b\xF6yle \xE7al\u0131\u015Fmaz.
+    Onlar\u0131n yetene\u011Fi, tekrar tekrar, tekrar tekrar deneyecek sabr\u0131
+    g\xF6sterebilmeleri. Di\u015Fleriyle, t\u0131rnaklar\u0131yla kaz\u0131malar\u0131.
+    F\u0131rsat beklemeden, f\u0131rsatlar\u0131 kendileri yaratmalar\u0131.\n\nS\u0131radan
+    i\u015Fler yaparak s\u0131ra d\u0131\u015F\u0131 insanlar gibi olamazs\u0131n.
+    Onlar gibi olman\u0131n tek yolu, s\u0131ra d\u0131\u015F\u0131 \u015Fekilde
+    \xE7al\u0131\u015Fma sabr\u0131 g\xF6stermek ve s\u0131ra d\u0131\u015F\u0131
+    \u015Fekilde \"vazge\xE7memektir.\" Bu sayede \xF6n\xFCnde s\u0131ra d\u0131\u015F\u0131
+    yollar a\xE7\u0131l\u0131r..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: motivasyon
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

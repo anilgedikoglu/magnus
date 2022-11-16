@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degneksekizlisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA98328898503
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: fd54445d6057e5b4eaafaa461c01b97b, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: fd54445d6057e5b4eaafaa461c01b97b, type: 3}
+  contentPhotoId: asasekizlisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek Sekizlisi\" kart\u0131n\u0131 se\xE7tin.\n\nYa\u015Fam\u0131n\u0131n
+    ilerleyen evrelerinde \xF6yle bir d\xF6nem, \xF6yle bir g\xFCn ya da an olacak
+    ki {{isim}}, o zaman \xE7ok h\u0131zl\u0131 ve \xE7ok b\xFCy\xFCk bir de\u011Fi\u015Fim
+    ge\xE7ireceksin. Hatta o zaman ya\u015Fayaca\u011F\u0131n bu ani de\u011Fi\u015Fim,
+    \u015Fimdiden ya\u015Fam\u0131na k\xF6klerini sal\u0131yor. Evren seni o g\xFCn
+    ve o an i\xE7in haz\u0131rl\u0131yor. Bu de\u011Fi\u015Fim m\xFCspet olacak.
+    Yazg\u0131na i\u015Flenmi\u015F bir mukadderat bu. Hi\xE7bir \u015Fart ve ko\u015Ful
+    bunun olmas\u0131n\u0131n \xF6n\xFCne ge\xE7emeyecek. \u015Eartlar \xE7oktan
+    haz\u0131rlanm\u0131\u015F ve detaylar\u0131 kalm\u0131\u015F. O noktaya do\u011Fru
+    belli bir h\u0131zda ilerliyorsun. O zaman geldi\u011Finde, art\u0131k seni hi\xE7
+    kimse engelleyemeyecek. Bamba\u015Fka biri olacak, inan\u0131lmaz imkanlara kavu\u015Facak
+    ve herkese dudak \u0131s\u0131rtacaks\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asasekizlisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

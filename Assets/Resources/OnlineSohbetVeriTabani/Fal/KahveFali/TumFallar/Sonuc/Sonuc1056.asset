@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1056
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA95009522292
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Y\xFCre\u011Finden y\xFCkselmek i\xE7in bir s\xFCredir sab\u0131rs\u0131zl\u0131kla
+    bekleyen sevin\xE7 sesleri, alaca\u011F\u0131n bir haberle nihayet ses tellerinde
+    titre\u015Fip kelimelerindeki dalgalar halinde fezaya kar\u0131\u015Facak. Seni
+    {{ay_1}} ve {{ay_3}} aylar\u0131 aras\u0131ndaki tam tarihi belli olmayan bir
+    {{kelime, pazar | pazartesi | sal\u0131 | \xE7ar\u015Famba | per\u015Fembe |
+    cuma | cumartesi}} {{kelime, sabah\u0131nda | \xF6\u011Fleninde}}, \xE7ok g\xFCzel
+    bir haber bekliyor {{isim}}. Ancak bu haberi ilk a\u011F\u0131zdan de\u011Fil,
+    muhtemelen {{kelime, seni cep telefonundan arayacak olan ikinci bir ki\u015Fiden
+    | dijital bir platformdan | sana mesajla haber verecek olan ikinci bir ki\u015Fiden
+    | konu ile alakas\u0131 olan yak\u0131n bir arkada\u015F\u0131ndan | konu ile
+    alakas\u0131 olmayan bir akrabandan | konu ile alakas\u0131 olmayan bir tan\u0131d\u0131\u011F\u0131ndan
+    | yaz\u0131lar\u0131n\u0131 okudu\u011Fun bir web sitesinden | bir sosyal medya
+    platformundan | \xE7ok sevdi\u011Fin ve aran\u0131zda kan ba\u011F\u0131 olan
+    birinden}} alacaks\u0131n. Gelecek {{mevsim_1}} mevsimi, seni hayallerine bir
+    ad\u0131m daha yakla\u015Ft\u0131racak."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

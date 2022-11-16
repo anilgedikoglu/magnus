@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimikilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA70235566015
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 5b5c34c77db7cb242b84cb4e1f73e4a6, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 5b5c34c77db7cb242b84cb4e1f73e4a6, type: 3}
+  contentPhotoId: tilsimikilisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"T\u0131ls\u0131m \u0130kilisi\" kart\u0131n\u0131
+    se\xE7tin.\n\nBir \u015Feyler i\xE7in \xE7ok \xE7aba harcam\u0131\u015F fakat
+    a\u015Fman gereken her yoku\u015Fta bolca patinaj \xE7ekmi\u015Fsin {{isim}}.
+    Verdi\u011Fin emeklere ra\u011Fmen hayat, d\xF6n\xFCp dola\u015F\u0131p seni
+    hep ayn\u0131 noktaya getirmi\u015F. Maddi a\xE7\u0131dan rahat oldu\u011Fun
+    d\xF6nemlerde tad\u0131n yokmu\u015F, keyfin yerinde oldu\u011Fu zamanlarda ise
+    paran... Kendini hep bir \"dengeleme\" \xE7abas\u0131yla ge\xE7irmi\u015Fsin
+    y\u0131llar\u0131n\u0131. Al\u0131\u015Fveri\u015F yapmakta, uyumakta, d\xFC\u015F\xFCnmekte,
+    k\u0131sa y\xFCr\xFCy\xFC\u015Flerde ya da dizi ve film izlemekte bulmu\u015Fsun
+    teselliyi. Eline ge\xE7en her ne varsa \xE7abucak t\xFCkenmi\u015F. Bereketini
+    g\xF6rememi\u015F, hakk\u0131yla istifade edememi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis tilsimikilisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

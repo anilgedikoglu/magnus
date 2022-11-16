@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme472
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA40871113040
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sen bulundu\u011Fun ortamlarda ve arkada\u015F \xE7evrende insanlar\u0131n g\xF6zlerini
+    kama\u015Ft\u0131r\u0131yorsun {{isim}}. \U0001F387Belki fizi\u011Finle, belki
+    de ki\u015Fili\u011Finle; onu benden daha iyi biliyorsun. Baz\u0131lar\u0131
+    ise bundan \xF6yle rahats\u0131z oluyor ki, k\u0131s\u0131k g\xF6zlerini senden
+    ka\xE7\u0131rmaya \xE7al\u0131\u015F\u0131rken bir yandan da sana do\u011Fru
+    uzan\u0131p senin \u0131\u015F\u0131\u011F\u0131n\u0131 adeta s\xF6ylemleriyle
+    ve ele\u015Ftirileriyle s\xF6nd\xFCrmeye gayret ediyorlar. Bilhassa da arkandan...
+    \U0001F928 Fakat telvelerin, bunu kesinlikle ba\u015Faramayacaklar\u0131n\u0131
+    s\xF6yl\xFCyor.\n\nFincan\u0131na bakt\u0131\u011F\u0131mda, \xE7ok net baz\u0131
+    yans\u0131malar g\xF6r\xFCyorum. Sana birisi \"hayata dair dileklerini s\u0131rala\"
+    dese, senin isteklerin \xF6yle bir elin be\u015F parma\u011F\u0131n\u0131 dahi
+    bulmaz. Telveler, fincan\u0131n\u0131n \xFCst kesimlerinde birbirlerinden ayr\u0131
+    duran {{sabit_sayi,2,4}} adet y\u0131ld\u0131z \u015Feklini alm\u0131\u015Flar.
+    \u2728{{sabit_sayi,2,4}} ayr\u0131 zaman i\xE7in, {{sabit_sayi,2,4}} ayr\u0131
+    konuda {{sabit_sayi,2,4}} ana dile\u011Fin var {{isim}} senin. Bunlardan yaln\u0131zca
+    bir tanesi, kara bulutlar ard\u0131nda. Di\u011Ferleri ise par\u0131l par\u0131l
+    parl\u0131yor. Dileklerin, bir tanesi hari\xE7, orta ve uzun vadede tamamen ger\xE7ek
+    olacak. Fakat o ger\xE7ekle\u015Fmeyen biri, yerini senin i\xE7in \xE7ok daha
+    hay\u0131rl\u0131 ba\u015Fka bir tanesine b\u0131rakacak. O dile\u011Finin ger\xE7ekle\u015Fmeyece\u011Fini
+    anlad\u0131\u011F\u0131nda, ilk zamanlar biraz \xFCz\xFCleceksin. Tam \"al\u0131\u015Fmaya\"
+    ve \"unutmaya\" ba\u015Flad\u0131\u011F\u0131n s\u0131rada, y\xFCre\u011Findeki
+    kabuk ba\u011Flam\u0131\u015F fakat izi duran o yara seni \xE7ok mutlu edecek
+    olan bir olayla birden bire iyile\u015Fecek. \U0001F4AA"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

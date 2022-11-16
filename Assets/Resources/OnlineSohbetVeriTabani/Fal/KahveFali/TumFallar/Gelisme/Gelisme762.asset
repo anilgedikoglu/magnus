@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme762
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA02597476159
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{isim}} uzun zamand\u0131r gidermek istedi\u011Fin baz\u0131 ihtiya\xE7lar\u0131n
+    oldu\u011Funu g\xF6r\xFCyorum. Bu ihtiya\xE7lar\u0131n maddi temelli oldu\u011Fu
+    i\xE7in, giderme y\xF6n\xFCndeki giri\u015Fimlerin ya yar\u0131m kalm\u0131\u015F
+    ya da birtak\u0131m aksiliklerle kar\u015F\u0131la\u015Fm\u0131\u015F, \xF6nceliklerini
+    de\u011Fi\u015Ftirmi\u015Fsin. Fincan\u0131n\u0131zda ise \"\xE7ifti silik \xE7\u0131km\u0131\u015F
+    bir melek kanad\u0131\" belirmi\u015F. Bu kanat, i\xE7i h\xFCz\xFCnle dolu fakat
+    \xE7ok iyi kalpli biri taraf\u0131ndan yard\u0131m g\xF6rece\u011Fini, istedi\u011Fin
+    \u015Feyleri o ki\u015Fi sayesinde elde edece\u011Fini i\u015Faret ediyor. Bu
+    ki\u015Fi muhtemelen senin gibi evli bir han\u0131mefendi, ancak e\u015Fini kaybetmi\u015F
+    olabilir.\n\nFal\u0131nda olduk\xE7a g\xF6steri\u015Fli bir de taht var. Bu taht\u0131n
+    \xFCzerinde, \u015Fu anda {{kelime, 7-8 ayl\u0131k | 1-2 ya\u015Flar\u0131nda
+    | 3-5 ya\u015Flar\u0131nda | 6-7 ya\u015Flar\u0131nda | 8-10 ya\u015Flar\u0131nda
+    | 10-15 ya\u015Flar\u0131nda}} olan bir {{kelime, k\u0131z | erkek}} \xE7ocu\u011Fu
+    oturuyor. Ailenden ya da yak\u0131n akrabalar\u0131ndan oldu\u011Funu hissetti\u011Fim
+    bu \xE7ocuk, b\xFCy\xFCd\xFC\u011F\xFCnde \xE7ok \xF6nemli yerlere gelecek. Belki
+    y\xFCzlerce, belki de binlerce ki\u015Fi \xFCzerinde s\xF6z sahibi olacak. Sahip
+    oldu\u011Fu g\xFC\xE7, ona ayn\u0131 zamanda b\xFCy\xFCk sorumluluklar da y\xFCkleyecek.
+    Bu \xE7ocuk gelecekte hem maddi hem de manevi anlamda hayat\u0131na dokunacak
+    ve standartlar\u0131n\u0131 \xE7ok de\u011Fi\u015Ftirecek {{isim}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "ev han\u0131m\u0131"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "ev han\u0131m\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

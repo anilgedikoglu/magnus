@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegnekonlusu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA63806264284
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: a6792ccb6e7e9684caa75b36ecfda96e, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: a6792ccb6e7e9684caa75b36ecfda96e, type: 3}
+  contentPhotoId: asaonlusu-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek Onlusu\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nArt\u0131k
+    hayalini kurdu\u011Fun g\xFCnlere \xE7ok yak\u0131ns\u0131n {{isim}}. Belki \xFC\xE7
+    be\u015F ad\u0131m, belki de daha az var. Fakat kamburunun \xE7\u0131kt\u0131\u011F\u0131n\u0131
+    g\xF6r\xFCyorum. \xC7ok yorulmu\u015Fsun. Bir ad\u0131m daha atmaya mecalinin
+    kalmad\u0131\u011F\u0131n\u0131 s\xF6yl\xFCyor kart\u0131n. Omuzlar\u0131nda
+    bunca sorumlulukla ve bu manevi y\xFCklerle o son noktaya varman pek m\xFCmk\xFCn
+    g\xF6z\xFCkm\xFCyor. Se\xE7ti\u011Fin kart, a\u011F\u0131rl\u0131klar\u0131n
+    biraz\u0131ndan kurtulman\u0131n ak\u0131ll\u0131ca olaca\u011F\u0131n\u0131
+    s\xF6yl\xFCyor. Baz\u0131 \u015Feyleri orac\u0131kta b\u0131rakmal\u0131, baz\u0131
+    insanlar\u0131 es ge\xE7meli ve ilerlemelisin. Senin i\xE7in \u015Fu an \xF6nemli
+    olan sonu\xE7. E\u011Fer bunu yapmazsan, bu y\xFCk\xFCn alt\u0131nda kal\u0131rs\u0131n.
+    O durumda da tek se\xE7ene\u011Fin \"vazge\xE7mek\" olur. Bence bunu yapma."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asaonlusu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

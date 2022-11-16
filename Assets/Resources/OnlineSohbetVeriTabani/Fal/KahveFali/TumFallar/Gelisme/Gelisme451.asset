@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme451
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA41188623830
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Soka\u011F\u0131ndaki kald\u0131r\u0131mlar\u0131 dikd\xF6rtgen ta\u015Flarla
+    d\xF6\u015Feli ve \xF6n\xFCnde \xE7ift bayrak dire\u011Fi olan bir kuruma \xE7ok
+    yak\u0131nda i\u015Fin d\xFC\u015Fecek {{isim}}. Endi\u015Feyle ve kafandaki
+    soru i\u015Faretleri ile gidecek, rahatlam\u0131\u015F ve y\xFCz\xFCn g\xFClerek
+    \xE7\u0131kacaks\u0131n. {{kelime, Buran\u0131n sana etkisi, kal\u0131c\u0131
+    olacak. | Buran\u0131n ya\u015Fam\u0131n \xFCzerindeki etkisi uzun s\xFCreli
+    olacak. | Buradan edinece\u011Fin kazan\u0131m \xE7ok b\xFCy\xFCk olacak.}}\n\n\xD6te
+    yandan, telvelerinin yo\u011Fun oldu\u011Fu b\xF6lgede bir \"ahtapot\" g\xF6r\xFCyorum.
+    \U0001F419Etraf\u0131nda \xE7ok ana\xE7 biri var {{isim}}. Bu ki\u015Fi ile \xF6n\xFCm\xFCzdeki
+    {{sayi,2,3}} hafta i\xE7erisinde k\xFC\xE7\xFCk bir m\xFCnaka\u015Fa ya\u015Fayabilirsin.
+    Her iki taraf\u0131n da kendi a\xE7\u0131s\u0131ndan hakl\u0131 oldu\u011Fu nadir
+    durumlardan biri ya\u015Fanacak. Fincan\u0131n, kendi fikrinden ya da {{kelime,
+    hakk\u0131ndan | savundu\u011Fun do\u011Frudan}} vazge\xE7men gerekti\u011Fini
+    i\u015Faret ediyor. Konunun b\xFCy\xFCmemesi ve her iki taraf\u0131n da kazan\xE7l\u0131
+    \xE7\u0131kmas\u0131 i\xE7in, o noktada feragat etmenin do\u011Fru olaca\u011F\u0131n\u0131
+    bilmeni isterim. Kar\u015F\u0131ndaki insan seni seviyor; bunu unutma derim."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

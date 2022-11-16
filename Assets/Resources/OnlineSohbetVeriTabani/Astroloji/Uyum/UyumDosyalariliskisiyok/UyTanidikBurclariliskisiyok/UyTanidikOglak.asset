@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyTanidikOglak
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA24061980929
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Bu
+    o\u011Flak burcu {{data, cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n,
+    beyefendi | cinsiyet=lgbt, ki\u015Fi}} ile acaba nerede tan\u0131\u015Ft\u0131n
+    {{isim}}? Bunu \u015Funun i\xE7in sordum; onlar biraz mesafelidir. \u0130nsanlarla
+    ilgili \xE7ok pozitif d\xFC\u015F\xFCnmezler, bu da onlarda bir \xF6nyarg\u0131
+    yarat\u0131r. Sana kar\u015F\u0131 \\\"nas\u0131l olsa biz olamay\u0131z\\\"
+    tarz\u0131nda d\xFC\u015F\xFCn\xFCyor olabilir. Bu fikrini y\u0131kmak senin
+    elinde. Yapabilir misin? Elbette. Sen bir {{burc}} {{data, cinsiyet=erkek, erke\u011Fisin
+    | cinsiyet=kad\u0131n, kad\u0131n\u0131s\u0131n | cinsiyet=lgbt, insan\u0131s\u0131n}}.
+    \u0130kna kabiliyetin ve manip\xFClasyon yetene\u011Fin \xFCst d\xFCzeyde. Peki
+    t\xFCm bunlara de\u011Fer mi? Uyumunuz nas\u0131l? \u0130\u015Fte bu sorunun
+    cevab\u0131 sizin i\xE7in ay\u0131n belli g\xFCnlerine g\xF6re de\u011Fi\u015Fkenlik
+    g\xF6steriyor. Yeniay ve Son d\xF6rd\xFCn zamanlar\u0131nda \xE7ok uyumlusunuz.
+    Dolunay zamanlar\u0131nda ise kavgaya \xE7ok m\xFCsait g\xF6z\xFCk\xFCyorsunuz.
+    \u0130ni\u015F \xE7\u0131k\u0131\u015Flar\u0131n\u0131z olacak. E her ili\u015Fki
+    biraz \xF6yle de\u011Fil midir zaten... A\u015Fk varsa, kazanan o olur. Bence
+    bu yolda y\xFCr\xFC derim. <sprite=7>\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: "tan\u0131d\u0131k"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "o\u011Flak"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
+    kontrol: 1
+  - degiskenAdi: medeni durum
+    degiskenDegeri: dul
+    kontrol: 1
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

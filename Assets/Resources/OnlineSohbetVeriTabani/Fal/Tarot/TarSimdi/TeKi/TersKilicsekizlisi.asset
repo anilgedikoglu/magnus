@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicsekizlisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA88515446751
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 52fd61fc34ab80d4ba9ee2a6dbfa649a, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 52fd61fc34ab80d4ba9ee2a6dbfa649a, type: 3}
+  contentPhotoId: kilicsekizlisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Sekizlisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nEtraf\u0131n\u0131 saran ve bir s\xFCredir can\u0131n\u0131 s\u0131kan
+    sorunlar i\xE7in yepyeni \xE7\xF6z\xFCmler \xFCretmeye ba\u015Flam\u0131\u015Fs\u0131n.
+    Bu s\u0131ralar sana s\u0131k\xE7a ilham geliyor {{isim}}. Buldu\u011Fun \xE7\u0131k\u0131\u015F
+    yollar\u0131 seni s\u0131k\u0131nt\u0131lardan kurtarmaya ba\u015Flam\u0131\u015F.
+    Ya\u015Fam\u0131n\u0131n kontrol\xFCn\xFC yeniden ele al\u0131yor ve buna \xE7ok
+    seviniyor gibi g\xF6z\xFCk\xFCyorsun. \u0130nsan\u0131n ba\u015F\u0131nda baz\u0131
+    derler oldu\u011Fu zaman, yedi\u011Fi yemekten bile bir \u015Fey anlam\u0131yor,
+    \xF6yle de\u011Fil mi? Sanki o dertlerin esiri gibi hissediliyor ve ne kadar
+    \xE7aba sarf edilirse edilsin, yeterince uzakla\u015F\u0131lam\u0131yor. Sen
+    art\u0131k diledi\u011Fin yere gidebilecek \xF6zg\xFCrl\xFC\u011Fe sahipsin.
+    Art\u0131k kendin i\xE7in \xFCz\xFClm\xFCyorsun."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilicsekizlisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

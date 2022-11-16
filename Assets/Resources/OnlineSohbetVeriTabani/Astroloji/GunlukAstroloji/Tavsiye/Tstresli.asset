@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tstresli
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA60879183211
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Stres seviyelerinin \xFCst noktalara \xE7\u0131kabilece\u011Fi bir g\xFCndesin.
+    {{burc}} bur\xE7lar\u0131 stresle iyi ba\u015Fa \xE7\u0131kabilseler de, bu zorlu
+    s\xFCre\xE7ten hi\xE7 ho\u015Flanmazlar. Planlar\u0131n dahilinde olmayan ve
+    aniden \xF6n\xFCne \xE7\u0131kabilecek i\u015F ya da g\xF6revlerle kar\u015F\u0131la\u015F\u0131rsan,
+    onlar\u0131 g\xFCn\xFCn en \"dingin hissetti\u011Fin\" saatlerine kadar ertelemende
+    hi\xE7bir sak\u0131nca g\xF6rm\xFCyorum {{isim}}. Bu gibi zamanlarda d\u0131\u015F
+    d\xFCnyaya kulaklar\u0131n\u0131 t\u0131kamal\u0131, do\u011Fru bildiklerinden
+    ve \"senin i\xE7in en iyi olandan\" \u015Fa\u015Fmamal\u0131s\u0131n. Sa\u011Fl\u0131\u011F\u0131n\u0131n
+    her \u015Feyden daha \xF6nemli oldu\u011Funu ve kar\u015F\u0131la\u015Fabilece\u011Fin
+    t\xFCm zorluklar\u0131n, k\u0131sa bir zaman sonra tamamen geride kalaca\u011F\u0131n\u0131
+    akl\u0131ndan \xE7\u0131karma. Her \u015Feyin zamanla daha iyi olaca\u011F\u0131n\u0131
+    ve sorunlar\u0131n \xFCstesinden \xF6yle ya da b\xF6yle, muhakkak gelece\u011Fini
+    kendine telkin ederek bug\xFCn\xFC g\xFC\xE7l\xFC bir \u015Fekilde atlatman\u0131
+    tavsiye ederim."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

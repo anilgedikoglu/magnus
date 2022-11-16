@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme444
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA66579593518
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin merkezinde, birbirleriyle akraba olduklar\u0131n\u0131 d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    {{sayi,2,4}} insana ait \"g\xF6zler\" g\xF6r\xFCyorum {{isim}}. \U0001F440Her
+    daim dikkatleri senin \xFCzerinde, her daim takipteler. Bu insanlar, sana ve
+    yak\u0131nlar\u0131na fevkalade nazar ediyorlar. \u0130\xE7lerinden ya\u015F\xE7a
+    b\xFCy\xFCk olan bir tanesinin, {{kelime, beyaz | koyu gri | a\xE7\u0131k gri
+    | metalik | siyah}} renkte, {{kelime, B | C | D}} segmentinde, modeli \xE7ok
+    yeni olmayan bir arabas\u0131 oldu\u011Funu g\xF6r\xFCyorum. \U0001F3CE\uFE0FSana
+    {{kelime, \xE7ok yak\u0131n oturmayan | uzak say\u0131lmayacak bir konumda oturan
+    | \xE7ok da uzak oturmayan | 2-3 saatlik bir mesafede ya\u015Fayan}} ve {{kelime,
+    epeydir y\xFCz y\xFCze g\xF6r\xFC\u015Fmedi\u011Fin | bir s\xFCredir g\xF6r\xFC\u015Fmedi\u011Fin
+    | uzun zamand\u0131r hi\xE7 y\xFCz y\xFCze g\xF6r\xFC\u015Fmedi\u011Fin | bir
+    s\xFCredir g\xF6r\xFC\u015Fmedi\u011Fin fakat adlar\u0131n\u0131 s\u0131k\xE7a
+    i\u015Fitti\u011Fin}} bu insanlar, gelecek ay g\xFCndemine oturacak. {{gelecek_ay}}
+    ay\u0131n\u0131n ortalar\u0131nda, {{kelime, bir \"mal m\xFClk\" konusu nedeniyle
+    | ya\u015Fayacaklar\u0131 baz\u0131 sa\u011Fl\u0131k sorunlar\u0131ndan dolay\u0131
+    | ba\u015Flar\u0131na gelebilecek olan k\xF6t\xFC bir hadise vesilesiyle}} seninle
+    ya da ailenden biri ile iki \xFC\xE7 kez \xFCst \xFCste telefonda g\xF6r\xFC\u015Fecekler.
+    Fincan\u0131n, onlarla arandaki mesafeni koruman gerekti\u011Fini tembihliyor.
+    Zamanla onlara kar\u015F\u0131 her y\xF6nden daha avantajl\u0131 duruma ge\xE7ecek,
+    daha fazla k\u0131skan\u0131lacaks\u0131n {{isim}}. \U0001F44ASenden samimiyet
+    bulmad\u0131klar\u0131 m\xFCddet\xE7e, zararlar\u0131 dokunamaz. \n\n\xD6te yandan,
+    bu {{gun_+3}} de\u011Fil bir sonraki {{gun_+3}} g\xFCn\xFC {{kelime, \xF6\u011Fle
+    vakitlerinde | ak\u015Fam saatlerinde | ak\u015Fam\xFCzerine do\u011Fru | sabah\u0131n
+    erken saatlerinde}}, t\xFCm yorgunlu\u011Funu unutturacak harika bir m\xFCjde
+    alacaks\u0131n. Anla\u015F\u0131lan, {{gelecek_ay}} ay\u0131n, i\xE7inde bulundu\u011Fumuz
+    {{simdiki_ay}} ay\u0131ndan \xE7ok daha mutlu ge\xE7ecek {{isim}}!"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 23
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 23
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

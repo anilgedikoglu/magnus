@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicyedilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA09441897189
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 70ab7dc37b7b98a47a2d681b14cf9b96, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 70ab7dc37b7b98a47a2d681b14cf9b96, type: 3}
+  contentPhotoId: kilicyedilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"K\u0131l\u0131\xE7 Yedilisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nBelki ba\u015Fka \u015Fans\u0131n kalmad\u0131\u011F\u0131 i\xE7in,
+    belki de daha a\u011F\u0131rlar\u0131 sana yap\u0131ld\u0131\u011F\u0131 i\xE7in,
+    nedenini bilemiyorum. Fakat bu kart, adil olmayan bir \u015Fekilde d\xF6v\xFC\u015Ft\xFC\u011F\xFCn\xFC,
+    kazanmaya da \xE7ok yak\u0131n oldu\u011Funu i\u015Faret ediyor. Belki de ka\xE7ak
+    g\xFCre\u015Fen gizli d\xFC\u015Fmanlara kar\u015F\u0131 yap\u0131labilecek tek
+    mant\u0131kl\u0131 \u015Fey budur {{isim}}, bilemiyorum. Ayr\u0131ca bu kart,
+    haks\u0131zl\u0131\u011Fa maruz kald\u0131\u011F\u0131n\u0131 ve buna m\xFCsaade
+    etmemek i\xE7in elinden geleni de yapt\u0131\u011F\u0131n\u0131 dile getiriyor.
+    Baz\u0131 insanlara kar\u015F\u0131 fazla iyi davranman\u0131n her zaman bir
+    g\xF6t\xFCr\xFCs\xFC olmu\u015Ftur. Sen de bu s\u0131n\u0131r\u0131 iyi niyetli
+    bir \u015Fekilde a\u015Fm\u0131\u015F, a\u011Fz\u0131n\u0131n pay\u0131n\u0131
+    alm\u0131\u015F ve \u015Fimdilerde \xE7ok daha dikkatli davran\u0131yorsun."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kilicyedilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

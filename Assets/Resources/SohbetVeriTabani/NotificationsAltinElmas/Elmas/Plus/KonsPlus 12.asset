@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02629c0b005fbef40ac32f1eefaaeacd, type: 3}
+  m_Name: KonsPlus 12
+  m_EditorClassIdentifier: 
+  title: Magnus
+  subtitle: 
+  Body: "Konsantrasyonum doldu {{isim}}. \xD6zel hayat\u0131ndaki f\u0131rt\u0131nan\u0131n
+    ne zaman durulaca\u011F\u0131n\u0131 \xF6\u011Frenmek istersen, yaln\u0131zca
+    tek bir t\u0131k uza\u011F\u0131nday\u0131m! <sprite=7>"
+  tip: 1
+  yil: 2022
+  ay: 3
+  gun: 1
+  saat: 1
+  gonderilecegiZaman: 0
+  platform: 0
+  gerekliDegiskenler:
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "karma\u015F\u0131k"
+    kontrol: 0

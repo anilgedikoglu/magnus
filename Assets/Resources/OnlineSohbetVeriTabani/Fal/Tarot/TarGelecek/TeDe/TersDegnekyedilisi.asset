@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersDegnekyedilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA22073327043
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 4898d1416967ea74f9b0ab382c8e77ee, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 4898d1416967ea74f9b0ab382c8e77ee, type: 3}
+  contentPhotoId: asayedilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"De\u011Fnek Yedilisi\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nOoo,
+    bir b\u0131kk\u0131nl\u0131k yakla\u015F\u0131yor \xFCzerine do\u011Fru. \u0130nsanlardan
+    m\u0131, g\xFCndelik hayattan m\u0131, sorumluluklar\u0131ndan m\u0131 b\u0131kacaks\u0131n,
+    bilemiyorum. \"\xD6ff!\" demene \xE7ok az kalm\u0131\u015F gibi g\xF6z\xFCk\xFCyor
+    {{isim}}. Sen bu hale gelirsen, bir \u015Feylerden vazge\xE7men i\xE7in tek bir
+    engel ya da tek bir zorluk yetebilir. Normalde tolerans\u0131 y\xFCksek bir insan
+    oldu\u011Fun, Ay burcunun {{ayburcu}} olu\u015Fundan belli. Bu defa art\u0131k
+    can\u0131na ne kadar tak edecekse, bask\u0131lara dayanamamandan ve direncinin
+    tamamen k\u0131r\u0131lmas\u0131ndan korkuyorum. Hayat bir meydan sava\u015F\u0131
+    haline geldi\u011Finde, o sava\u015F\u0131 asla b\u0131rakmamal\u0131, bayra\u011F\u0131
+    bir an olsun elinden d\xFC\u015F\xFCrmemelisin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek asayedilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

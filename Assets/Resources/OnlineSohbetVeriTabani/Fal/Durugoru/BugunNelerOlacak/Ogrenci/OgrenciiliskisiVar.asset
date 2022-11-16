@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: OgrenciiliskisiVar
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA28714690459
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sevgilin seni mutlu etmek i\xE7in bug\xFCn resmen seferber olacak. Kafas\u0131nda
+    sana dair bir plan var ve bunu ger\xE7ekle\u015Ftirip seni sevindirmek istiyor.
+    K\u0131ymetli {{isim}}, ilerleyen saatlerde ufak bir aksilik ya\u015Fayabilir,
+    i\u015Flerinin g\xFCn boyu pek de yolunda gitmeyece\u011Fi hissine kap\u0131labilirsin.
+    Bu duygu \xE7ok yan\u0131lt\u0131c\u0131 olacakt\u0131r; \xE7\xFCnk\xFC bug\xFCn
+    kaderin, senin \xE7e\u015Fitli vesilelerle hep en do\u011Fru, en hay\u0131rl\u0131
+    noktalara varmana vesile olacak. Ad\u0131nda, senin soyad\u0131nda oldu\u011Fu
+    gibi {{soyisimilk}} ya da {{soyisimiki}} harflerinden biri bulunan, \xFCzerinde
+    ise {{kelime, ye\u015Fil | mavi | siyah | lacivert}} ve {{kelime, bordo | beyaz
+    | k\u0131rm\u0131z\u0131}} tonlar\u0131nda k\u0131yafeti olan bir {{kelime, han\u0131mefendi
+    | beyefendi}} g\xF6r\xFCyorum. Bu ki\u015Fiden duyaca\u011F\u0131n bir \u015Fey,
+    seni g\xFCn sonuna kadar \xE7ok sevindirecek. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

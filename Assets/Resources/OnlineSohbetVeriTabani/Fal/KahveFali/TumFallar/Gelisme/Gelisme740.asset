@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme740
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA86768945947
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan foto\u011Fraflar\u0131n\u0131 {{kelime, Y ekseninde a\u015Fa\u011F\u0131
+    | X ekseninde sa\u011Fa | X ekseninde sola}} do\u011Fru takip etti\u011Fimizde,
+    inek sa\u011Fmaya \xE7al\u0131\u015Fan fakat hi\xE7 s\xFCt elde edememi\u015F
+    bir {{data, cinsiyet=erkek, erkek | cinsiyet=kad\u0131n, k\u0131z | cinsiyet=lgbt,
+    insan}} g\xF6r\xFCyorum. Telvelerin, bu {{data, cinsiyet=erkek, erkekle | cinsiyet=kad\u0131n,
+    k\u0131zla | cinsiyet=lgbt, insanla}} {{data, cinsiyet=erkek, k\u0131z arkada\u015F\u0131n\u0131n
+    | cinsiyet=kad\u0131n, erkek arkada\u015F\u0131n\u0131n | cinsiyet=lgbt, sevgilinin}}
+    eski bir ba\u011F\u0131 oldu\u011Funu f\u0131s\u0131ld\u0131yor {{isim}}. Bu
+    {{data, cinsiyet=erkek, erkek | cinsiyet=kad\u0131n, k\u0131z | cinsiyet=lgbt,
+    ki\u015Fi}}, bir ili\u015Fki ya\u015Fayabilmek i\xE7in {{data, cinsiyet=erkek,
+    k\u0131z arkada\u015F\u0131na | cinsiyet=kad\u0131n, erkek arkada\u015F\u0131na
+    | cinsiyet=lgbt, sevgiline}} \xE7ok emek vermi\u015F; fakat emekleri kar\u015F\u0131l\u0131ks\u0131z
+    kalm\u0131\u015F. Halen {{kelime, telefon numaras\u0131n\u0131n sevgilinin telefonunda
+    ekli kalm\u0131\u015F olabilece\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm | sevgilinin
+    sosyal medya hesaplar\u0131n\u0131n birinde ekli kalm\u0131\u015F olabilece\u011Fini
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCm | sevgilinin ara ara sosyal medyada foto\u011Fraflar\u0131na
+    denk geldi\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm | sevgilinin sosyal medyada
+    zaman zaman baz\u0131 payla\u015F\u0131mlar\u0131na denk geldi\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm}}
+    bu {{data, cinsiyet=erkek, erkek | cinsiyet=kad\u0131n, k\u0131z | cinsiyet=lgbt,
+    ki\u015Fi}}, \xF6n\xFCm\xFCzdeki haftalarda senin i\xE7in bir anda sorun haline
+    gelebilir. So\u011Fukkanl\u0131 olmal\u0131, gerekeni yapmas\u0131 i\xE7in sevgiline
+    {{kelime, izin | zaman | f\u0131rsat}} vermelisin.\n\nYollad\u0131\u011F\u0131n
+    g\xF6rsellerde bir de papatya tarlas\u0131 var {{isim}}. \U0001F33B U\xE7suz
+    bucaks\u0131z bu yans\u0131malar, iki anlam\u0131 birden ta\u015F\u0131yor; hem
+    sana sorunlar\u0131n giderek azald\u0131\u011F\u0131 ve zaman i\xE7erisinde birbirinize
+    daha \xE7ok ba\u011Fland\u0131\u011F\u0131n\u0131z bir ili\u015Fki vadediyor,
+    hem de birlikte \xE7ok fazla yer gezece\u011Finizi i\u015Faret ediyor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

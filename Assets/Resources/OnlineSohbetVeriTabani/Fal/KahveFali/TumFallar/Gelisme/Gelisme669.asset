@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme669
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA12322720334
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fal\u0131nda, ivedi manevralarla etraf\u0131ndakileri hayrete d\xFC\u015F\xFCren
+    bir pandomim sanat\xE7\u0131s\u0131 g\xF6r\xFCyorum {{isim}}. \U0001F921 Surat\u0131ndaki
+    a\u011F\u0131r makyaja ra\u011Fmen, yorgunlu\u011Fu ilk bak\u0131\u015Fta belli
+    olan bu sanat\xE7\u0131 fig\xFCr\xFC, insanlarla arana kal\u0131n bir paravan
+    \xE7ekmi\u015F oldu\u011Funu ima ediyor. Son zamanlarda, sesini duymaya a\u015Fina
+    oldu\u011Fun insanlara kar\u015F\u0131 sa\u011F\u0131rla\u015Fm\u0131\u015F gibi
+    hissetti\u011Fin oluyor mu? \u0130\xE7inden \xE7ekip \xE7\u0131karamad\u0131\u011F\u0131n
+    bir k\u0131ym\u0131k gibi kalbine batan her duygu, ileti\u015Fim yollar\u0131n\u0131
+    fel\xE7 etmi\u015F sanki. Velakin {{isim}}, senin do\u011Fal bir \xE7abuklukla
+    g\xF6r\xFCp idrak etti\u011Fin ger\xE7ekleri, yak\u0131nlar\u0131n\u0131n da
+    ayn\u0131 kolayl\u0131kla g\xF6rmesini beklememelisin...\n\nBilakis, gelece\u011Fini
+    yans\u0131tan telvelerin koyuldu\u011Fu orta k\u0131s\u0131mlarda, bir batakl\u0131k
+    yata\u011F\u0131n\u0131 ar\u015F\u0131nlay\u0131p g\xF6\u011Fs\xFCn\xFC serin
+    havaya germi\u015F bir nil\xFCfer \xE7i\xE7e\u011Fini, nazl\u0131 ve narin ta\xE7
+    yapraklar\u0131n\u0131 sergilerken g\xF6r\xFCyorum. Demek oluyor ki, \xF6n\xFCm\xFCzde
+    uzanan aylarda hassas ve \"a\xE7\u0131k s\xF6zl\xFC\" olman\u0131n bir g\xFC\xE7s\xFCzl\xFCk
+    belirtisi olmad\u0131\u011F\u0131n\u0131 fark edeceksin; bu ke\u015Fif sayesinde
+    ise, g\xF6\xE7ebe ruhunun sonunda vuslata ermi\u015F oldu\u011Funu hissedeceksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

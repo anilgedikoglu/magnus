@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme641
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA14483647188
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin k\xFCmelendi\u011Fi bir b\xF6lgede, e\u011Filmi\u015F kula\u011F\u0131na
+    \"otoskopla\" bakan bir {{data, cinsiyet=erkek, kad\u0131n | cinsiyet=kad\u0131n,
+    erkek | cinsiyet=lgbt, insan}} g\xF6r\xFCyorum {{isim}}. Bu {{data, cinsiyet=erkek,
+    kad\u0131n\u0131n | cinsiyet=kad\u0131n, adam\u0131n | cinsiyet=lgbt, ki\u015Finin}}
+    doktor olmad\u0131\u011F\u0131na ise neredeyse eminim. Fincan\u0131ndan yans\u0131yan
+    g\xF6r\xFCnt\xFCler bir sa\u011Fl\u0131k sorununa i\u015Faret ediyor gibi g\xF6z\xFCkse
+    de, tam tersi g\xFCzel bir duyum alaca\u011F\u0131n ve bunun sana birinci a\u011F\u0131zdan
+    de\u011Fil, ikinci a\u011F\u0131zdan ula\u015Faca\u011F\u0131 anla\u015F\u0131l\u0131yor.
+    {{ay_2}} ay\u0131 ortalar\u0131nda duyaca\u011F\u0131n bu m\xFCjde ile ruhunun
+    pas\u0131 silinecek.\n\nFincan g\xF6rselini biraz \xE7evirdi\u011Fimde ise, \xF6n\xFCme
+    \xE7\u0131k\u0131\u015F\u0131 g\xF6z\xFCkmeyen bir t\xFCnelin a\u011Fz\u0131nda
+    duran, {{kelime, 50'li ya\u015Flarda | 60'l\u0131 ya\u015Flarda | 70'li ya\u015Flarda
+    | 80'li ya\u015Flarda}} ve ad\u0131nda {{harf}} ya da {{harf}} harfi olan bir
+    {{kelime, han\u0131mefendi | beyefendi}} \xE7\u0131kt\u0131. Baz\u0131 sa\u011Fl\u0131k
+    sorunlar\u0131 ile cebelle\u015Fti\u011Fini tahmin etti\u011Fim ve senin \xE7ok
+    sevdi\u011Fini d\xFC\u015F\xFCnd\xFC\u011F\xFCm bu ki\u015Finin \xF6mr\xFCne
+    \xF6m\xFCr eklenmi\u015F {{isim}}. \xC7ok ya\u015Fas\u0131n in\u015Fallah..."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

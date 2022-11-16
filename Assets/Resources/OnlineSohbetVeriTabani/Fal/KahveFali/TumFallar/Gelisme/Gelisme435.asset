@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme435
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA40576493999
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{kelime, 30'lu ya\u015Flar\u0131nda ve evli oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    | 40'l\u0131 ya\u015Flar\u0131nda ve evli oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    | 50'li ya\u015Flar\u0131nda ve evli oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    | 30'lu ya\u015Flar\u0131nda ve bekar oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm
+    | 40'l\u0131 ya\u015Flar\u0131nda ve evlenip ayr\u0131lm\u0131\u015F oldu\u011Funu
+    d\xFC\u015F\xFCnd\xFC\u011F\xFCm | 60'l\u0131 ya\u015Flar\u0131nda ve e\u015Fini
+    kaybetmi\u015F oldu\u011Funu d\xFC\u015F\xFCnd\xFC\u011F\xFCm}} bir han\u0131mefendi
+    var {{isim}} telvelerinde. Bu ki\u015Fi, \xF6zenle d\xF6\u015Fenmi\u015F m\xFCtevaz\u0131
+    bir evde ya\u015F\u0131yor. Hatta evin bir odas\u0131nda, {{kelime, duvardaki
+    bir saks\u0131dan sarkan sarma\u015F\u0131klar | diplerinde az kalmalar\u0131na
+    ra\u011Fmen at\u0131lmay\u0131p biriktirilmi\u015F parf\xFCm \u015Fi\u015Feleri
+    | duvara as\u0131lm\u0131\u015F k\xFC\xE7\xFCk resimler | \xF6zenle d\xF6\u015Fenmi\u015F
+    duvar ka\u011F\u0131tlar\u0131 | eskice ve kullan\u0131lmayan bir televizyon
+    | iki \xFC\xE7 k\xFC\xE7\xFCk saks\u0131n\u0131n i\xE7erisine yerle\u015Ftirilmi\u015F
+    kakt\xFCsler}} g\xF6r\xFCyorum. Bu ki\u015Finin yan\u0131na belki de en son {{kelime,
+    bir sene kadar \xF6nce | birka\xE7 sene kadar \xF6nce | 6 ay kadar \xF6nce |
+    7-8 ay kadar \xF6nce | iki \xFC\xE7 sene kadar \xF6nce}} gitmi\u015Fsin. Yak\u0131nda
+    yine gideceksin. Hem de alaca\u011F\u0131n g\xFCzel bir haberin ard\u0131ndan,
+    hay\u0131rl\u0131 bir gerek\xE7eyle...\n\nFincan foto\u011Fraflar\u0131n\u0131
+    saat y\xF6n\xFCnde \xE7evirdi\u011Fimde ise, baz\u0131 saman balyalar\u0131 g\xF6r\xFCyorum
+    {{isim}}. Bu yans\u0131malar iki \u015Feye i\u015Faret eder; ya belli bir ama\xE7la
+    elindeki bir birikimi satacaks\u0131n, ya da b\xFCy\xFCk bir hedefe giden yolda
+    k\xFC\xE7\xFCk birikimler olu\u015Fturmaya ba\u015Flayacak ve nihayetinde o hedefi
+    elde edeceksin."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

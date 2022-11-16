@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersGuc
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA02860898319
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: d354eab6638f1044db569535e281f5fb, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: d354eab6638f1044db569535e281f5fb, type: 3}
+  contentPhotoId: guc-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"G\xFC\xE7\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nNeticesi
+    \"ba\u015Far\u0131\" olacak konularda bile cesur davranamayabilirsin. E\u011Fer
+    yenilgi ya\u015Farsan, sebebi ba\u015Fkalar\u0131 de\u011Fil risk alma korkun
+    olacak {{isim}}. Temkinli ve korkak olmak aras\u0131nda \xE7ok ince bir s\u0131n\u0131r
+    vard\u0131r. Bu s\u0131n\u0131r\u0131n neresinde durdu\u011Funa dikkat etmeli
+    ve enerjini do\u011Fru odaklamal\u0131s\u0131n. Ayr\u0131ca kart\u0131n, \xF6fkeyle
+    yanl\u0131\u015F kararlar alabilece\u011Finden de bahsediyor. Tam olarak haz\u0131r
+    olmadan hi\xE7bir i\u015Fe ba\u015Flamamal\u0131, kendini iyi donatmal\u0131,
+    mant\u0131kl\u0131 davranmal\u0131 ve pozitif d\xFC\u015F\xFCnmelisin. Bu \u015Fekilde,
+    d\xFC\u015Fmanlar\u0131n\u0131n \xF6n\xFCne ge\xE7eceksin. Senin ba\u015Fka bir
+    galibiyet \u015Fekli de, sava\u015Fmak yerine \"anla\u015Fmak\" olacak."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek guc ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

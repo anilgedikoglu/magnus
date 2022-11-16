@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme553
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA31999777064
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Kanka e\u011Fri otural\u0131m do\u011Fru konu\u015Fal\u0131m; ho\u015Fland\u0131\u011F\u0131n
+    ki\u015Finin \xE7ok g\xFCzel oldu\u011Funu s\xF6yl\xFCyor telvelerin. G\xFCzellik
+    insan\u0131 fena aldat\u0131r! \U0001F928\u0130ki c\xFCmle konu\u015Fsa, sa\xE7mal\u0131k
+    dahi olsa, sana hikmetmi\u015F gibi gelir. Sa\xE7ma bir s\xF6z\xFCne ya da \xE7irkin
+    bir davran\u0131\u015F\u0131na dahi hayran olursun. Yanl\u0131\u015F anlama {{isim}};
+    ho\u015Fland\u0131\u011F\u0131n k\u0131z, bunlar\u0131 yapan biri gibi g\xF6z\xFCkm\xFCyor.
+    \u0130\u015Fte tam da o y\xFCzden, \"hatas\u0131z\" duran g\xFCzeller insan\u0131
+    \xE7ok ahlakl\u0131, \xE7ok zeki ve e\u015Fi bulunmaz biri oldu\u011Funa daha
+    \xE7abuk inand\u0131r\u0131yor.\n\n\u0130nanman k\xF6t\xFC m\xFC? De\u011Fil.
+    Fakat ne kadar \xE7ok inan\u0131r, ne kadar fazla kap\u0131l\u0131rsan, ona kar\u015F\u0131
+    g\xFCc\xFCn\xFC ve kendine g\xFCvenini o kadar \xE7ok kaybedersin. Bu da ili\u015Fki
+    i\xE7in gerekli olan etkileyicili\u011Fini ve onun g\xF6z\xFCndeki \u015Fans\u0131n\u0131
+    azalt\u0131r {{isim}}. Bir kad\u0131n, genellikle erkek i\xE7in vazge\xE7ilmez
+    oldu\u011Funu anlad\u0131\u011F\u0131 anda, yoluna devam edip \"vazge\xE7ebilecek
+    g\xFC\xE7te\" birine do\u011Fru yelken a\xE7ar. \xC7\xFCnk\xFC yaln\u0131zca
+    en g\xFC\xE7l\xFClerde \"vazge\xE7ebilme\" iradesi vard\u0131r. Vazge\xE7ebilen,
+    \"se\xE7ene\u011Fim fazla\" imaj\u0131 verir. Uzun bir denklem oldu ancak, umar\u0131m
+    anlatabilmi\u015Fimdir kar\u015Fim... \U0001F642\U0001F596<sprite=17>\n                                            "
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 25
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

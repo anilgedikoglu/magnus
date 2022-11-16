@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: AnalizSonucSon 4
+  m_EditorClassIdentifier: 
+  idIndex: 20221053725AA24298424069
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Cinsel \xC7ekim Analizi\n\nDe\u011Ferli {{isim}}, verdi\u011Fin yan\u0131tlar\u0131
+    burcunun \xF6zellikleriyle harmanlad\u0131m. Bug\xFCnk\xFC cinsel \xE7ekimin
+    ma\u015Fallah %{{kelime, 70'ler | 75'ler | 85'ler | 80'ler | 90'lar}} d\xFCzeyinde!\n\nCinsel
+    \xE7ekiminle ilgili de\u011Ferlendirmelerim ise \u015F\xF6yle;\n\n{{data, cinsel7=a,
+    Seni hat\u0131rlatacak ve seni yans\u0131tan detaylardan biri de parf\xFCmd\xFCr.
+    Senin kendine \xF6zel bir parf\xFCm be\u011Feninin olmas\u0131 insanlara \xE7ok
+    cazip gelecektir. | cinsel7=b, \u0130nsanlar\u0131 bazen de ki\u015Finin se\xE7imleri
+    etkiler. Parf\xFCm bir detay gibi g\xF6z\xFCkse de, bu tercihlerden biridir.
+    Bir imza kokun olmal\u0131 ve herkese seni hat\u0131rlatmal\u0131.}} {{data,
+    cinsel8=a, \u0130li\u015Fkisel ba\u011Flamda insanlara \xE7ekici gelen ve karizmay\u0131
+    art\u0131ran baz\u0131 unsurlar var. Sen bu unsurlara sahip g\xF6z\xFCk\xFCyorsun.
+    | cinsel8=b, G\xF6rd\xFC\u011F\xFCm kadar\u0131yla karizma y\xFCkseltici baz\u0131
+    \xF6zellikler sende yok. Para, \xFCn, zeka bunlardan yaln\u0131zca birka\xE7\u0131.}}\n\n{{data,
+    cinsel9=a, U\xE7 noktalara daha \xF6nce ad\u0131m atabilmi\u015F biri, yine atabilme
+    potansiyeline sahiptir. Cazibe kan\u0131t\u0131 say\u0131labilecek bu detay\u0131n
+    sende bulunuyor olmas\u0131 sayg\u0131 uyand\u0131r\u0131c\u0131. | cinsel9=b,
+    U\xE7 noktalarda tecr\xFCbeler edinmek ad\u0131na senin i\xE7in hen\xFCz erken
+    olabilir. Belki bunu tercih etmemi\u015F de olabilirsin. F\u0131rsat\u0131n hi\xE7
+    olmad\u0131ysa, o ba\u015Fka...}} {{data, cinsel10=a, Cinsel g\xFCc\xFCn\xFC
+    tan\u0131mlay\u0131\u015F \u015Feklin, umar\u0131m bir bo\u015Flu\u011Fu s\xF6zlerle
+    dolduruyor oldu\u011Fun anlam\u0131 ta\u015F\u0131m\u0131yordur. | cinsel10=b,
+    Konu cinsellik oldu\u011Funda al\xE7akg\xF6n\xFCll\xFC birisin bence. Ger\xE7e\u011Fi
+    yans\u0131tmay\u0131p s\xF6zleriyle \xF6rtenlere \xFCz\xFClmek laz\u0131m, sana
+    de\u011Fil.}}\n\n{{data, cinsel1=a, Fiziksel olarak kendini be\u011Fenmen, sana
+    \xE7ok b\xFCy\xFCk bir art\u0131 kat\u0131yor. | cinsel1=b, Kendini be\u011Fenmen
+    ve kendinle bar\u0131\u015F\u0131k olman cinsel \xE7ekimin ba\u015F \u015Fartlar\u0131ndan
+    biridir. Bu noktada biraz eksikli\u011Fin var.}} {{data, cinsel2=a, \xC7ok ili\u015Fki
+    ya\u015Famak, ki\u015Fiye dair bir \xE7ekim belirtisi say\u0131lmaz. Yine de
+    ufak i\u015Faretler bar\u0131nd\u0131r\u0131r. | cinsel2=b, \xC7ok ili\u015Fki
+    ya\u015Famak y\xFCksek bir \xE7ekimin sonucu olarak de\u011Ferlendirilemese de,
+    bir belirti olarak ele al\u0131nabilir.}} {{data, cinsel3=a, \u0130ltifat al\u0131yor
+    olman be\u011Fenildi\u011Finin a\xE7\u0131k bir g\xF6stergesi. | cinsel3=b, Pek
+    iltifat alm\u0131yor olman, insanlara \xE7ekici gelmedi\u011Fini g\xF6stermez.
+    Belki de senden \xE7ekiniyorlard\u0131r, ne dersin?...}}\n\n{{data, cinsel4=a,
+    Birinin medeni cesaretini toplay\u0131p bir ba\u015Fkas\u0131na teklifte bulunmas\u0131,
+    \xE7ekince s\u0131n\u0131rlar\u0131n\u0131 a\u015Fmas\u0131na neden olan bir
+    \xE7ekime maruz kald\u0131\u011F\u0131n\u0131n a\xE7\u0131k g\xF6stergesidir.
+    | cinsel4=b, Pek teklif almam\u0131\u015F olman senin i\xE7in kay\u0131p say\u0131lmaz.
+    \xD6zg\xFCveni y\xFCksek birine denk gelmemi\u015F olabilirsin ya da  mizac\u0131n
+    gere\u011Fi insanlar buna c\xFCret edememi\u015F de olabilirler.}} {{data, cinsel5=a,
+    Tarz\u0131 olan bir insans\u0131n. Bu \xE7evrendeki herkesin dikkatini \xE7ekiyor
+    olmal\u0131. | cinsel5=b, K\u0131l\u0131k k\u0131yafet, insanlar\u0131n g\xF6z\xFCnde
+    \xF6nemli bir \xF6n izlenim olu\u015Fturur. \xC7ekici olmak isteyen bunu g\xF6z
+    ard\u0131 edemez.}}\n\n{{data, cinsel6=a, \xD6z bak\u0131m, \xE7ekicilik kap\u0131lar\u0131n\u0131
+    a\xE7an en b\xFCy\xFCk anahtard\u0131r. Spor yaln\u0131zca sa\u011Fl\u0131k de\u011Fil,
+    be\u011Feni de getirir. | cinsel6=b, Kendine dikkat etmeyen insan ili\u015Fkide
+    kar\u015F\u0131s\u0131ndakine de \xF6zen g\xF6stermez. Bu alg\u0131y\u0131 olu\u015Fturmaman
+    laz\u0131m.}}"
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "cinsel\xE7ekimsonu\xE7son"
+    kontrol: 0
+  - degiskenAdi: cinsel9
+    degiskenDegeri: a
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 2
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

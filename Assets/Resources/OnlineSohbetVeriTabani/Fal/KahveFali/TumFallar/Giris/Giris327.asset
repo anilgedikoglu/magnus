@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris327
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA57047956968
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinin en ayd\u0131nl\u0131k k\u0131s\u0131mlar\u0131nda, zihnindeki tohumlar\u0131
+    {{data, cinsiyet=erkek, hayat\u0131na girmekte olan han\u0131mefendinin | cinsiyet=kad\u0131n,
+    hayat\u0131na girmekte olan erke\u011Fin | cinsiyet=lgbt, hayat\u0131na girmekte
+    olan insan\u0131n}} \xF6n\xFCnde uzanan bah\xE7eye serpi\u015Ftirdi\u011Fini
+    g\xF6r\xFCyorum {{isim}}. Onun duygular\u0131n\u0131 temsil eden bu bah\xE7enin
+    topra\u011F\u0131, ona hen\xFCz yaln\u0131zca \"ucundan\" g\xF6sterdi\u011Fin
+    hislerin heyecan\u0131yla beslenmi\u015F. \U0001F490 Telvelerin, birbirinize
+    duydu\u011Funuz hisleri a\xE7\u0131k se\xE7ik konu\u015Fmaktan hala \xE7ekindi\u011Finizi
+    s\xF6yl\xFCyor {{isim}}. Anlad\u0131\u011F\u0131m kadar\u0131yla, konu\u015Fmad\u0131\u011F\u0131n\u0131z
+    zamanlar sizi birbirinize \xE7eken, son derece kuvvetli \"telepatik\" temaslar,
+    sen fark etsen de fark etmesen de aran\u0131zdaki g\xF6n\xFCl ba\u011Flar\u0131n\u0131
+    iyice s\u0131k\u0131la\u015Ft\u0131r\u0131yor. \xD6yle ki, {{kelime, birbirinizi
+    ayn\u0131 anda d\xFC\u015F\xFCnd\xFC\u011F\xFCn\xFCz \"o\" anlardan birinde,
+    birbirinize telefon edip hislerinizi t\xFCm \xE7\u0131plakl\u0131\u011F\u0131yla
+    itiraf edece\u011Finizi s\xF6yl\xFCyor fal\u0131n | \"tesad\xFCf\" deyip ge\xE7emeyece\u011Fin
+    bir telepati an\u0131nda, ho\u015Fland\u0131\u011F\u0131n ki\u015Finin sana olan
+    hislerini bir mesajla itiraf edece\u011Fini s\xF6yl\xFCyor fal\u0131n}}."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "fl\xF6rt halinde"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

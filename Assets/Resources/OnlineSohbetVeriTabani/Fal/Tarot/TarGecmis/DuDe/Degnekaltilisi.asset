@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekaltilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA47948466038
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 44e4dfad52ee8fd4cb726c9b09669cfe, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 44e4dfad52ee8fd4cb726c9b09669cfe, type: 3}
+  contentPhotoId: asaaltilisi
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"De\u011Fnek Alt\u0131l\u0131s\u0131\" kart\u0131n\u0131
+    se\xE7tin.\n\nSen ba\u015Fkalar\u0131 gibi olmay\u0131 hi\xE7bir zaman kabul
+    etmemi\u015Fsin {{isim}}. Hayata kar\u015F\u0131 direni\u015Fin de farkl\u0131
+    olmu\u015F, umutlar\u0131n da... Asla kolay yolu tercih etmemi\u015Fsin. Zoru
+    istemi\u015F, zorun pe\u015Finden ko\u015Fmu\u015F, zor olan\u0131 sevmi\u015Fsin.
+    Biliyor musun, sonu\xE7lar\u0131 ne olursa olsun \xF6yle destans\u0131 sava\u015Fm\u0131\u015Fs\u0131n
+    ki, insanlar taraf\u0131ndan hep takdir edilip alk\u0131\u015Flanm\u0131\u015Fs\u0131n!
+    Onurlu duru\u015Fun ve girdi\u011Fin t\xFCm muharebelerden ba\u015F\u0131 dik
+    \xE7\u0131kman, senin de\u011Ferini giderek daha da fazla art\u0131rm\u0131\u015F.
+    Pek \xE7ok konuda rakipsiz bir hale gelmi\u015Fsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis asaaltilisi
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

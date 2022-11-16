@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulBalik
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA24099946431
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Su
+    grubu bal\u0131k burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131yla | cinsiyet=kad\u0131n,
+    erkekleriyle | cinsiyet=lgbt, ki\u015Filerle}} anla\u015Fmak {{burc}} {{data,
+    cinsiyet=erkek, erkekleri | cinsiyet=kad\u0131n, kad\u0131nlar\u0131 | cinsiyet=lgbt,
+    burcu ki\u015Filer}} i\xE7in o kadar keyiflidir ki... Kar\u015F\u0131nda cana
+    yak\u0131n, romantik, sevgi dolu, naif ve duygusal bir insan duruyor. Sana kar\u015F\u0131
+    hi\xE7bir \u015Feyin hesab\u0131n\u0131 kitab\u0131n\u0131 yapaca\u011F\u0131n\u0131
+    sanm\u0131yorum. Art niyet nedir bilmezler. Ba\u011F\u0131ml\u0131 ki\u015Filikleri
+    ise al\u0131\u015Ft\u0131klar\u0131 ki\u015Fiden ayr\u0131lmalar\u0131n\u0131
+    zorla\u015Ft\u0131r\u0131r. E\u011Fer onunla okul ortam\u0131nda ya da d\u0131\u015F\u0131nda
+    bir \u015Feyler payla\u015F\u0131r ve sonra hayat\u0131ndan bir anda \xE7ekip
+    gidersen, d\xFCnyas\u0131 y\u0131k\u0131lacakt\u0131r. E sevgilin oldu\u011Funu
+    da biliyoruz. Onu k\u0131rmak istemiyorsan bence daha hassas ve d\xFC\u015F\xFCnceli
+    davranmal\u0131s\u0131n {{isim}}. \\\"Olmayacak duaya amin deme\\\" demiyorum;
+    fakat olmayaca\u011F\u0131n \u015Fimdiden biliyorsan, bo\u015Fa umut verme bence.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: "bal\u0131k"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ni\u015Fanl\u0131"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

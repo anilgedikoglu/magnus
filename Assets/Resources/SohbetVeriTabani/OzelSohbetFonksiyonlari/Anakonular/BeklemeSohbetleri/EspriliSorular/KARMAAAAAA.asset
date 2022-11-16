@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: KARMAAAAAA
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA05255369956
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Son g\xFClen en ge\xE7 anlayand\u0131r."
+  - "Ge\xE7en g\xFCn taksi \xE7evirdim hala d\xF6n\xFCyor."
+  - "Tebrikler kazand\u0131n\u0131z, \u015Fimdi tencere oldunuz!"
+  - "Kaba kuvvet uygulama, kap k\u0131r\u0131labilir."
+  - "Ayna'n\u0131n kar\u015F\u0131s\u0131nda s\xFCslenme, Manga'n\u0131n kar\u015F\u0131s\u0131nda
+    s\xFCslen."
+  - "Ge\xE7en file \xE7orap ald\u0131m, z\xFCrafaya almad\u0131m."
+  - "Y\u0131lanlardan korkma, y\u0131lmayanlardan kork."
+  - "Ben kahve i\xE7iyorum, Nurg\xFCl Ye\u015Fil\xE7ay."
+  - Seven unutmaz dostum, eight unutur.
+  - "Adam\u0131n biri g\xFCne\u015Fte yanm\u0131\u015F, ay'da d\xFCz."
+  - "Kasiyer; \"Faturay\u0131 kimin ad\u0131na kesece\u011Fiz?\"\nHe-Man; \"G\xF6lgelerin
+    g\xFCc\xFC ad\u0131naaa!\""
+  - "Duydun mu? Yar\u0131n yap\u0131lacak s\u0131navdaki her soruda 4 \u015F\u0131k
+    bir de r\xFCk\xFC\u015F varm\u0131\u015F!"
+  - "-Simge nerde?\n+Durumuna k\xFC\xE7\xFCld\xFC."
+  - "Ge\xE7en g\xFCn \xF6deme noktas\u0131na gittim, \"\xD6\" dedim geldim."
+  - "Sezar, tarihteki ilk e-posta mesaj\u0131n\u0131 yazd\u0131ktan sonra sormu\u015F;\n\"Bunu
+    g\xF6ndermek i\xE7in nereye bas\u0131yorduk, send'e mi br\xFCt\xFCs?\""
+  - "Bir adam bilgisayar\u0131n\u0131 kaybetmi\u015F; \"Gel pc pc\" demi\u015F."
+  - "O\u011Flan day\u0131ya, k\u0131z halaya, Lady Gaga'ya \xE7ekermi\u015F."
+  - "Dalg\u0131\xE7l\u0131k, insan\u0131n kendisine yap\u0131\u015Fan\u0131 giymesidir."
+  - "\u0130bo'nun \xE7ekmedi\u011Fi dertler, ona niye \xE7ilek als\u0131n ki?"
+  - "Kenan Do\u011Fulu'ya \"Ne okuyorsun?\" diye sormu\u015Flar,\n\"\u015Eey kitap
+    \u015Fekerim\" demi\u015F."
+  - "Elma ile elma \u015Fekeri konu\u015Fuyorlarm\u0131\u015F;\n-Vakko'dan giyiniyorsun
+    galiba?\n+Evet, nereden anlad\u0131n?\n-Alt\u0131ndaki kaz\u0131ktan."
+  - "-Ge\xE7en bir lambaya \xE7arpt\u0131m\n+Eee\n-\u0130\xE7inden cin \xE7\u0131kt\u0131,
+    bir \u015Fey dilememi istedi\n+Ne diledin?\n-\xD6z\xFCr diledim. Sonu\xE7ta ben
+    \xE7arpt\u0131m yani."
+  - "-Seni k\xF6pek gibi seviyorum.\n+Kan\u0131tla?\n-Havlove you!"
+  - "Kibariyeye sormu\u015Flar \"Mtv izler misin?\" diye, \"Em tv izlerim em radyo
+    dinlerim\" demi\u015F."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: espri
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: espri
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

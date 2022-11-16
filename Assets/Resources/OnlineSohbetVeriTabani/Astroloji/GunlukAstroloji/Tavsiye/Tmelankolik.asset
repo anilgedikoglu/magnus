@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tmelankolik
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA01408617677
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Rasyonel d\xFC\u015F\xFCnmek ve g\xFCnl\xFCk hayat\u0131n aritmetik i\u015Flemleriyle
+    u\u011Fra\u015Fmak yerine, beynin bug\xFCn ilgin\xE7 hesaplar pe\u015Finde olacak.
+    \"Senle topla beni, \xE7arp uzaklarla, ekle sensizli\u011Fi, b\xF6l saatlere,
+    ne kald\u0131?\" diyen Sevgili Kayahan'\u0131n dizeleri gibi hissedece\u011Fine
+    eminim. {{burc}} bur\xE7lar\u0131 bug\xFCn olduk\xE7a melankolik bir g\xFCnlerindeler.
+    Pencerene iki damla ya\u011Fmur \xE7iselese \u015Fiirler yazabilir, k\xF6t\xFC
+    giden bir i\u015Finden sonra a\u011F\u0131tlar yakabilirsin. Neyse ki ben her
+    \u015Feyin g\xFCzel gidece\u011Fine inan\u0131yorum. \u0130\xE7ini ferah tut,
+    i\u015Flerine yo\u011Funla\u015F ve efkara kesinlikle kap\u0131lma. H\xFCz\xFCnlerle
+    kapl\u0131 arabesk bir gelece\u011Fin olmayacak senin, hi\xE7 bo\u015Fa \xFCmitlenme!
+    :) Bug\xFCn\xFC makul ve mant\u0131kl\u0131 eylemlerle s\xFCrd\xFCr\xFCr, seni
+    duraksatacak duygular\u0131na yenik d\xFC\u015Fmezsen, yar\u0131n seni \xE7ok
+    daha ayd\u0131nl\u0131k bir g\xFCn bekliyor olacak Sevgili {{isim}}."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tavsiye
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

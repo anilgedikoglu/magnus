@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: OgrenciErkek
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA90693896371
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Bir masa g\xF6r\xFCyorum {{isim}}. Masada oturan bir kar\u0131 koca ve bir de
+    \xFC\xE7\xFCnc\xFC ki\u015Fi var. Bu kar\u0131 kocan\u0131n soyisimlerinde \"K\"
+    harfi oldu\u011Funu s\xF6yleyebilirim. Bug\xFCn o masada sen konu\u015Fulacaks\u0131n,
+    bundan haberin var m\u0131? Senin hakk\u0131nda olumlu olumsuz birtak\u0131m
+    s\xF6ylemlerde bulunacaklar. \xDC\xE7\xFCnc\xFC ki\u015Fi ise onlara kar\u015F\u0131
+    seni savunacak. O saatlerde kulaklar\u0131n \xE7\u0131nlayabilir. Sana bug\xFCn
+    negatif bir etkisi olmayacak; fakat bir g\xFCn verece\u011Fin bir kararda onlar\u0131n
+    s\xF6ylemleri de etkili olacak. K\u0131ymetli {{isim}}, \xF6\u011Fleden sonra
+    bir \u015Feyin seni aniden rahatlataca\u011F\u0131n\u0131 hissediyorum; bu bir
+    olay, bir durum ya da alaca\u011F\u0131n bir bilgi olabilir. Ak\u015Fama huzurla
+    ula\u015Facaks\u0131n. "
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 0}

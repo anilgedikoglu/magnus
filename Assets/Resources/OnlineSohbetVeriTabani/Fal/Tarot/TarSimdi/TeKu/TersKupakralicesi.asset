@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKupakralicesi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA44227387663
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 81a4d8b169e2418418e96a3c4aadf5e7, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 81a4d8b169e2418418e96a3c4aadf5e7, type: 3}
+  contentPhotoId: kupakralicesi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"Kupa Krali\xE7esi\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSevdiklerinden
+    bekledi\u011Fin anlay\u0131\u015F\u0131 g\xF6remedi\u011Fin bir d\xF6nemdesin.
+    \u0130stedi\u011Fin gibi hareket etmiyor, senin de g\xF6nl\xFCnce davranmana
+    m\xFCsaade etmiyorlar. Fikir ayr\u0131l\u0131klar\u0131, ya\u015Fam\u0131ndaki
+    yak\u0131nla\u015Fmalar\u0131 engelliyor. Ayr\u0131l\u0131k\xE7\u0131 bir hava
+    var ortada. Kutupla\u015Fmalar g\xF6r\xFCyorum. Destek bekledi\u011Fin ki\u015Filer
+    sana k\xF6stek olmaya ba\u015Flam\u0131\u015Flar {{isim}}. Bu durumu d\xFCzeltmenin
+    elbette baz\u0131 yollar\u0131 var. \xC7evrene kar\u015F\u0131 yakla\u015F\u0131mlar\u0131n\u0131
+    de\u011Fi\u015Ftirmelisin. Onlar sana kar\u015F\u0131 sert ve nezaketten uzaksa,
+    senin onlara kar\u015F\u0131 anlay\u0131\u015Fl\u0131 olman gerekiyor. Onlar
+    duygusuz ve kat\u0131larsa, senin onlara kar\u015F\u0131 duyarl\u0131 ve sevgi
+    dolu olman laz\u0131m. Ancak bu \u015Fekilde mutlu olabilirsin."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi kupakralicesi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

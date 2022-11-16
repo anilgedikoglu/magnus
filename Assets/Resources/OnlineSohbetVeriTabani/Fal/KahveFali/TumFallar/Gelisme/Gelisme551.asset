@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme551
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA37510100968
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sevgi, kalmas\u0131 i\xE7in zorlamak ya da \"incitmek\" de\u011Fil, gitmek isterse,
+    \"onun i\xE7in onsuzlu\u011Fa\" ebediyen katlanabilmektir. \xC7ok sevmenin laneti
+    de herhalde budur. \U0001F612O halen bir yerlerde ba\u015Fkalar\u0131na \u0131\u015F\u0131l
+    \u0131\u015F\u0131l yanarken, yaln\u0131z bir vaziyette, k\xF6hne bir kuytuda
+    s\xF6nmek nas\u0131ld\u0131r, iyi bilirim {{isim}}. \U0001F928Fincan\u0131ndan
+    anlad\u0131\u011F\u0131m kadar\u0131yla, sen bitmesin diye elinden geleni yapm\u0131\u015Fs\u0131n.
+    \"Sevmede ve anlay\u0131\u015Fta\" bir noksanl\u0131\u011F\u0131n\u0131 g\xF6rsem,
+    inan onu da s\xF6ylerdim. Fakat g\xF6rd\xFC\u011F\xFCm \u015Fey, erkek arkada\u015F\u0131n\u0131n
+    bir konuda seni hi\xE7bir \u015Fekilde anlamad\u0131\u011F\u0131...\n\nHi\xE7
+    meraklanma! Burada {{kelime,1.84 boylar\u0131nda | 1.80 boylar\u0131nda | 1.76
+    boylar\u0131nda | 1.73 boylar\u0131nda}}, {{kelime, siyah sa\xE7l\u0131 | sa\xE7lar\u0131
+    a\xE7\u0131k kumral | sa\xE7lar\u0131 koyu kumral}}, ad\u0131nda ise senin gibi
+    {{isimson}} harfi olan bir erkek g\xF6r\xFCyorum {{isim}}. Bu ki\u015Fi ayr\u0131ld\u0131\u011F\u0131n
+    erkek arkada\u015F\u0131na \xE7ok yak\u0131n biri. S\xFCrekli durum de\u011Ferlendirmesi
+    yap\u0131yor, seni konu\u015Fuyorlar. Belki kulaklar\u0131n dahi \xE7\u0131nl\u0131yordur...
+    \U0001F442O ki\u015Fi, erkek arkada\u015F\u0131n\u0131n kendi hatalar\u0131n\u0131
+    g\xF6rmesinde \xE7ok b\xFCy\xFCk bir pay sahibi olacak. {{kelime, Uzun say\u0131labilecek
+    | K\u0131sa say\u0131labilecek | Birka\xE7 haftay\u0131 bulabilecek | Bir haftay\u0131
+    biraz ge\xE7kin | \xDC\xE7 d\xF6rt haftay\u0131 bulabilecek | Bir ay\u0131 \xFC\xE7
+    d\xF6rt g\xFCn ge\xE7ebilecek | \u0130ki ay\u0131 bulabilecek}} bir \"konu\u015Fmama\"
+    d\xF6neminden sonra, b\xF6yle bir {{gun_0}} g\xFCn\xFCnde {{kelime, seni arayacak.
+    | sana mesaj atacak. | sana haber yollayacak. | sana bir i\u015Faret verecek.
+    | senin g\xF6rmeni ama\xE7lad\u0131\u011F\u0131 ve bar\u0131\u015Fma iste\u011Fini
+    dile getiren bir payla\u015F\u0131mda bulunacak.}}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

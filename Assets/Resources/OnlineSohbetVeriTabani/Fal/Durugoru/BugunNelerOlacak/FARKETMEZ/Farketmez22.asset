@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Farketmez22
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA18407548370
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Birisi var {{isim}}; ya sana k\u0131r\u0131lm\u0131\u015F, ya kendi kendine
+    incinmi\u015F, ya da aran\u0131za \"zaman\" girmi\u015F. Kad\u0131n m\u0131 erkek
+    mi emin olamad\u0131\u011F\u0131m bu ki\u015Fi, bug\xFCn kalbinin sesini dinleyerek
+    ya sana ula\u015Facak, ya da senin i\xE7in bir \u015Fey yapacak. Kim oldu\u011Funu
+    g\xFCn\xFCn son saatlerine varmadan anlayaca\u011F\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorum.
+    Net oldu\u011Fum \u015Fey ise, bu ki\u015Finin seni \xE7ok sevdi\u011Fi... Bug\xFCn
+    senin ba\u015Fvurdu\u011Fun bir \u015Fey reddedilebilir ya da sana gelen bir
+    \u015Fey geri d\xF6nebilir. G\xFC\xE7l\xFC bir negatif projeksiyon var \xFCzerinde.
+    Endi\u015Fe etme \xE7\xFCnk\xFC bumerang gibi yine seni bulacak. {{rastgeleburc}}
+    burcu, kamuda \xE7al\u0131\u015Fan bir tan\u0131d\u0131\u011F\u0131n var. Bug\xFCn
+    ak\u015Fam saatlerine do\u011Fru onunla ileti\u015Fim kuraca\u011F\u0131n\u0131
+    hissediyorum. Bug\xFCne yeti\u015Fmese de, onun en k\u0131sa zamanda sana b\xFCy\xFCk
+    bir iyili\u011Fi dokunacak {{isim}}. Ak\u015Fam \xFCzeri kendine vakit ay\u0131racak,
+    belki de fiziken ya da ruhen daha da iyile\u015Fmek ad\u0131na baz\u0131 giri\u015Fimlerde
+    bulunacaks\u0131n. \"G\xFCn\" seni be\u011Feniyle terk edecek..."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: bno
+    kontrol: 0
+  - degiskenAdi: saatmin
+    degiskenDegeri: 0
+    kontrol: 0
+  - degiskenAdi: saatmax
+    degiskenDegeri: 12
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: bno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

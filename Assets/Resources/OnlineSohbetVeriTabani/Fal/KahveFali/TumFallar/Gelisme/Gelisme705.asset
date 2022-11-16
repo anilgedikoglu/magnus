@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme705
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA67233174806
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan g\xF6rsellerini biraz daha yak\u0131nla\u015Ft\u0131rd\u0131\u011F\u0131mda,
+    kar\u015F\u0131 duvar\u0131nda {{kelime, oval | dikd\xF6rtgen | yuvarlak}} ve
+    {{kelime, k\xFC\xE7\xFCk | b\xFCy\xFCk}} bir masa g\xF6r\xFCyorum. Bu masan\u0131n
+    etraf\u0131nda \xE7al\u0131\u015Ft\u0131\u011F\u0131n yerdeki baz\u0131 insanlar
+    oturuyorlar. Onlardan bir tanesi ise, ad\u0131nda {{harf}} harfi olan, {{kelime,
+    30-35 | 35-40 | 45-50}} ya\u015Flar\u0131 aras\u0131nda, {{kelime, esmer | hafif
+    k\u0131z\u0131l | koyu kumral | a\xE7\u0131k kumral ve g\xF6zl\xFCkl\xFC | koyu
+    kumral ve g\xF6zl\xFCkl\xFC | esmer ve g\xF6zl\xFCkl\xFC | hafif k\u0131z\u0131l
+    ve g\xF6zl\xFCkl\xFC}} bir erkek. Sen bu erkekle bir \u015Feyler konu\u015Fuyor,
+    ba\u015F\u0131nla onun s\xF6ylediklerini adeta tasdikliyorsun {{isim}}. \u0130lerleyen
+    haftalarda bu ki\u015Fi ile ortak \xE7al\u0131\u015F\u0131r ya da bir sorumlulu\u011Fun
+    alt\u0131na beraber girerseniz, {{kelime, i\u015Findeki bir zorlu\u011Fu a\u015Facaks\u0131n
+    | i\u015Finle ilgili u\u011Fra\u015Ft\u0131\u011F\u0131n bir konuda mesafe katedeceksin
+    | i\u015Findeki ilerlemen seni kariyer anlam\u0131nda \"bir noktada\" y\xFCkseli\u015Fe
+    ge\xE7irecek}}. Ancak nedense bu duruma kendi erkek arkada\u015F\u0131n\u0131n
+    pek s\u0131cak bakmayaca\u011F\u0131n\u0131 hissediyorum.\n\n\xD6n\xFCm\xFCzdeki
+    ay\u0131n ikinci haftas\u0131n\u0131n {{kelime, ilk g\xFCnleri | son g\xFCnleri}}
+    i\xE7erisinde bir imza ataca\u011F\u0131n\u0131 f\u0131s\u0131ld\u0131yor {{isim}}
+    telvelerin. Bu imza seni bir yandan strese sokarken, di\u011Fer yandan senin
+    i\xE7in zorunlu bir \"birikim\" f\u0131rsat\u0131na d\xF6n\xFC\u015Fecek."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 27
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi var"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 27
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 40
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

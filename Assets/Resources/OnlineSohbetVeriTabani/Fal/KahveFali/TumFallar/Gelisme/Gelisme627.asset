@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme627
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA40760860698
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{kelime, Sevgili | K\u0131ymetli | De\u011Ferli}} {{isim}}, sen inan\u0131lmaz
+    se\xE7ici bir insans\u0131n. Fincan\u0131nda seni, adeta ikiye yar\u0131lm\u0131\u015F
+    bir insan kalabal\u0131\u011F\u0131n\u0131n aras\u0131ndan ge\xE7erken g\xF6r\xFCyorum.
+    \U0001F9D0El uzatanlar, laf atanlar, g\xF6zlerini senden alamayanlar var. Ba\u015F\u0131n
+    \xF6yle dik, \xF6yle \xF6nde ki, hi\xE7birine g\xF6z ucuyla dahi bakm\u0131yorsun.
+    Bir ili\u015Fkiden neler bekledi\u011Fini ve nas\u0131l birini arad\u0131\u011F\u0131n\u0131
+    \xF6yle iyi belirlemi\u015Fsin ki, ger\xE7ekten pes diyorum!\n\nBununla birlikte,
+    tabirimi mazur g\xF6r ama sende biraz \"yalanc\u0131l\u0131k\" da var; bizdensin...\uFE0F
+    <sprite=84> Herkese \"d\u0131\u015F g\xF6r\xFCn\xFC\u015F \xF6nemli de\u011Fil\"
+    desen de, \xE7ok bariz bir \"tipin\" oldu\u011Funu ve y\u0131llard\u0131r hayalindeki
+    o sil\xFCetin \"m\xFCmk\xFCn mertebe en benzerini\" arad\u0131\u011F\u0131n\u0131
+    hissediyorum. Hamam b\xF6ce\u011Finin, u\u011Fur b\xF6ce\u011Fi kadar sevilmedi\u011Fi
+    de a\u015Fikar elbette. \U0001F928Sen, {{sayi,4,9}} ay i\xE7erisinde g\xF6nl\xFCnden
+    ge\xE7en t\xFCm \xF6zelliklere sahip o ki\u015Fiyle el ele olacaks\u0131n. Bir
+    tek \u015Fart\u0131 kabul etmen ve sorun etmemen halinde; hayat\u0131na girecek
+    olan o ki\u015Finin ba\u015F\u0131ndan, \"y\xFCz\xFCk takmak\" gibi yar\u0131
+    ciddi bir durum ge\xE7mi\u015F g\xF6z\xFCk\xFCyor fal\u0131nda. Bu bir s\xF6z
+    ya da ni\u015Fan olabilir, ancak evlilik de\u011Fil."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 28
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 28
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

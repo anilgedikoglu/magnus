@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Degnekkrali
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA49756982154
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 07ce57972b15d9948a4749d00a6b0871, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 07ce57972b15d9948a4749d00a6b0871, type: 3}
+  contentPhotoId: asakrali
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"De\u011Fnek Kral\u0131\" kart\u0131n\u0131 se\xE7tin.\n\nKontrol
+    art\u0131k sende. Ya\u015Fam\u0131n adeta verece\u011Fin emirleri bekliyor {{isim}}.
+    Lehine bir i\u015Fleyi\u015F ve senin de do\u011Fru kararlar\u0131n sayesinde
+    art\u0131k \xF6nemli bir noktadas\u0131n. Sanki harika bir haber verilemek \xFCzere
+    bir davete \xE7a\u011Fr\u0131lm\u0131\u015F da ba\u015F k\xF6\u015Feye oturtulmu\u015F
+    gibisin. M\xFCjdeler yolda. Hem yard\u0131mlar, hem de sevin\xE7le kar\u015F\u0131layaca\u011F\u0131n
+    geli\u015Fmeler sana do\u011Fru ilerliyor. Sen birilerinin g\xF6nl\xFCn\xFC fethediyor,
+    ba\u015Fka birlierini alt ediyor ve h\xFCkm\xFCn\xFC yedi d\xFCvelde s\xFCrmek
+    \xFCzere etraf\u0131n\u0131 kola\xE7an ediyorsun. Kula\u011F\u0131na geleceklerle
+    birlikte sevdiklerine hay\u0131rl\u0131 haberleri aktarmak ve onlar\u0131 da
+    sevindirmek \xFCzere haz\u0131rs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi asakrali
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

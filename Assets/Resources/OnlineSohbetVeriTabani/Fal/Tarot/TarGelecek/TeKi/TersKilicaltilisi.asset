@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersKilicaltilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA44962468740
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 9dae354b9968d0a4aac12e14cab08107, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 9dae354b9968d0a4aac12e14cab08107, type: 3}
+  contentPhotoId: kilicaltilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot gelecek sohbeti ba\u015Flat"
+  aciklama:
+  - "Gelecek i\xE7in \"K\u0131l\u0131\xE7 Alt\u0131l\u0131s\u0131\" kart\u0131n\u0131
+    \"ters\" se\xE7tin.\n\nVazge\xE7emeyece\u011Fin bir \u015Feyler var senin; g\xF6r\xFCyorum...
+    Art\u0131k hayat\u0131nda y\xFCk etmesine, seni yava\u015Flatmas\u0131na ve zarara
+    u\u011Fratmas\u0131na ra\u011Fmen vazge\xE7emeyeceksin. Nedir bu kar\u015F\u0131
+    konulmas\u0131 g\xFC\xE7 ve \u0131srarla yar\u0131nlar\u0131na ta\u015F\u0131d\u0131\u011F\u0131n
+    \u015Fey? Bile bile, g\xF6z g\xF6re g\xF6re, ac\u0131ya ac\u0131ya insan neden
+    devam eder ki? Ya\u015Fam\u0131nda yeni \u015Feylere yer a\xE7man gerek. Bunu
+    yapamad\u0131\u011F\u0131n ve l\xFCzumsuzlar\u0131 ard\u0131nda b\u0131rakamad\u0131\u011F\u0131n
+    i\xE7in yeni f\u0131rsatlar\u0131 da g\xF6remeyebilirsin. Harika teklifler, g\xFCzel
+    fikirler ve ortakl\u0131klar \xE7\u0131kacak kar\u015F\u0131na. Bunlara mecburen
+    hay\u0131r diyecek, yan\u0131nda g\xF6t\xFCrme imkan\u0131 bulamayacaks\u0131n.
+    Daha g\xFCzel g\xFCnler i\xE7in kendini biraz hafifletmelisin {{isim}}."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gelecek kilicaltilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

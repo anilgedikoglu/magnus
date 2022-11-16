@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris163
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA29775056502
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan g\xF6rsellerini a\xE7t\u0131\u011F\u0131mda, tam saat {{sayi,11,13}}
+    y\xF6n\xFCnde seni bir somon bal\u0131\u011F\u0131n\u0131n pe\u015Fine tak\u0131lm\u0131\u015F,
+    y\xFCzerken g\xF6r\xFCyorum. Bu yans\u0131malar sevimli ve hay\u0131rl\u0131
+    gibi g\xF6z\xFCkse de, t\xFCketilmesi en sa\u011Fl\u0131kl\u0131 bal\u0131klardan
+    biri olan somon fallarda y\xFCksek kolesterole i\u015Faret eder {{isim}}. Son
+    zamanlarda hamur i\u015Fi, cips, k\u0131zartma, i\u015Flenmi\u015F et ya da kat\u0131
+    ya\u011F t\xFCketimin bir \u015Fekilde artm\u0131\u015F g\xF6z\xFCk\xFCyor. \U0001F9D0Abur
+    cuburlardan uzak durmal\u0131, kalp sa\u011Fl\u0131\u011F\u0131n\u0131 koruyabilmek
+    ad\u0131na tedbiri elden b\u0131rakmamal\u0131s\u0131n. Bolca y\xFCr\xFCy\xFC\u015F
+    yapmak, ceviz ve su t\xFCketmek de seni yine olas\u0131 kalp ve damar hastal\u0131klar\u0131ndan
+    korur. Kamu spotu gibi ba\u015Flad\u0131k; hadi hay\u0131rl\u0131s\u0131... <sprite=0>"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "sa\u011Fl\u0131k"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

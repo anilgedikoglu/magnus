@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Tilsimkrali
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA05466672162
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 01246ef42f6f16c45ae1351aa03deb50, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 01246ef42f6f16c45ae1351aa03deb50, type: 3}
+  contentPhotoId: tilsimkrali
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"T\u0131ls\u0131m Kral\u0131\" kart\u0131n\u0131 se\xE7tin.\n\nG\xFCc\xFCn\xFCn
+    zirvesindesin, bu \xE7ok a\xE7\u0131k. Daha da iyisini ortaya \xE7\u0131karmak
+    maksad\u0131yla elinden geleni ard\u0131na koymuyorsun. Elini att\u0131\u011F\u0131n
+    her i\u015Fin hakk\u0131n\u0131 veriyor ve \xE7ok daha b\xFCy\xFCk zenginlikleri
+    \u015Fimdiden hak ediyorsun. Ba\u015Far\u0131lar\u0131n\u0131n devam\u0131n\u0131n
+    gelmesi, bug\xFCnlerde yine senin elinde. Para ya da kariyerle ilgili b\xFCy\xFCk
+    bir hayalin oldu\u011Funu d\xFC\u015F\xFCn\xFCyorum {{isim}}. Bu konuda da zirveye
+    g\xF6z dikti\u011Fini s\xF6ylemek yanl\u0131\u015F olmaz. Kendin i\xE7in do\u011Fru
+    bir yol tutturmu\u015Fsun. Bu yolun devam\u0131 seni m\xFCkemmelli\u011Fe ula\u015Ft\u0131rabilecek
+    nitelikte. Hi\xE7bir teredd\xFCte yer vermeden ayn\u0131 \u015Fekilde devam edersen,
+    harikulade g\xFCnler seni bekliyor."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi tilsimkrali
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

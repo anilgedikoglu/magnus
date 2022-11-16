@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris252
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA90888762371
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Yollad\u0131\u011F\u0131n bu fincan g\xF6rselleri, bug\xFCn bana di\u011Fer
+    insanlardan gelen fincan foto\u011Fraflar\u0131na g\xF6re daha ilgin\xE7 \xF6\u011Feler
+    bar\u0131nd\u0131r\u0131yor {{isim}}. Seni karla kapl\u0131 bir yolda y\xFCr\xFCrken
+    g\xF6r\xFCyorum. Fakat ad\u0131mlar\u0131ndan arda kalan izler, sen y\xFCr\xFCmeye
+    devam ettik\xE7e adeta karla yeniden \xF6rt\xFCl\xFCyor ve bir bir kapan\u0131yor.
+    \u0130\xE7inde ge\xE7mi\u015Fe dair e\u015Finin bilmedi\u011Fi, fark etmedi\u011Fi
+    ya da ona hi\xE7 bahsetmedi\u011Fin birtak\u0131m izler oldu\u011Funu hissediyorum.
+    Tats\u0131z baz\u0131 an\u0131lardan ve ya\u015Fad\u0131\u011F\u0131n zorluklardan
+    kalan bu izler, yerlerini dolduracak yeni m\xFCjdeler gelmedi\u011Fi i\xE7in
+    kalbinde \u015Fimdiye dek a\xE7\u0131k kalm\u0131\u015F. 2 farkl\u0131 geli\u015Fme
+    ile hepsini unutacaks\u0131n De\u011Ferli {{isim}}. Bu geli\u015Fmelerden birincisini
+    \xF6n\xFCm\xFCzdeki {{ay_+2}} ay\u0131 i\xE7erisinde, ikincisini ise {{yil_+1}}
+    y\u0131l\u0131nda, do\u011Fdu\u011Fun ay olan {{dogum ayi}} ay\u0131ndan sonraki
+    {{sayi,2,3}} ay i\xE7erisinde ya\u015Fayacaks\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

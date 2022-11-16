@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersAsilanadam
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA41471459422
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: 9ac53d2da19e1794c8df0ff82bc0ae59, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: 9ac53d2da19e1794c8df0ff82bc0ae59, type: 3}
+  contentPhotoId: asilanadam-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot ge\xE7mi\u015F sohbeti ba\u015Flat"
+  aciklama:
+  - "Ge\xE7mi\u015Fin i\xE7in \"As\u0131lan Adam\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nKart
+    d\xFCz a\xE7\u0131ld\u0131\u011F\u0131nda \"ba\u015F a\u015Fa\u011F\u0131\" as\u0131lan
+    bu adam s\xFCre\xE7lerdeki t\u0131kan\u0131kl\u0131\u011F\u0131, bocalamay\u0131
+    ve duraksamay\u0131 i\u015Faret ederken, sendeki gibi ters a\xE7\u0131lmas\u0131
+    sonu\xE7lara do\u011Fru son h\u0131zla var\u0131ld\u0131\u011F\u0131n\u0131 g\xF6steriyor
+    {{isim}}. \xC7abalar\u0131n bo\u015Fa gitmemi\u015F. Emeklerin, t\xFCm belirsizlikleri
+    ve ya\u015Fanmas\u0131 muhtemel t\xFCm ba\u015Far\u0131s\u0131zl\u0131klar\u0131
+    ortadan kald\u0131rm\u0131\u015F. Halinden memnun olmad\u0131\u011F\u0131n i\u015Flerin
+    bile azmin kar\u015F\u0131s\u0131nda d\xFCzelerek yoluna girmi\u015F. \"Neden
+    hep ben?\" sorusunu sitemkar bir \u015Fekilde sormay\u0131 en sonunda nihayet
+    b\u0131rakm\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot gecmis asilanadam ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

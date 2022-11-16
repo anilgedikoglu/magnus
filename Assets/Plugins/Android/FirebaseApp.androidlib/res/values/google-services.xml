@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_android_client_id,@string/default_web_client_id">
+  <string name="firebase_database_url" translatable="false">https://magnus-338513-default-rtdb.europe-west1.firebasedatabase.app</string>
+  <string name="gcm_defaultSenderId" translatable="false">563636764754</string>
+  <string name="google_storage_bucket" translatable="false">magnus-338513.appspot.com</string>
+  <string name="project_id" translatable="false">magnus-338513</string>
+  <string name="google_api_key" translatable="false">AIzaSyDhgy1N_3RNPYD_FShnL_U6UjseC9MCl34</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDhgy1N_3RNPYD_FShnL_U6UjseC9MCl34</string>
+  <string name="google_app_id" translatable="false">1:563636764754:android:32af7b41f8b4bb8ec85f8b</string>
+  <string name="default_android_client_id" translatable="false">563636764754-cjqmeq3jnse690scajc53ckbv13pko02.apps.googleusercontent.com</string>
+  <string name="default_web_client_id" translatable="false">563636764754-i0d4s55b8rnqmo76v0eg5ssnf3o5rva6.apps.googleusercontent.com</string>
+</resources>

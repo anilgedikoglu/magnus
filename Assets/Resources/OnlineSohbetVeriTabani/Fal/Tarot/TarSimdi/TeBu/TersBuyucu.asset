@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersBuyucu
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA00622663610
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: ae40247620806804fbac5d177126c68a, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: ae40247620806804fbac5d177126c68a, type: 3}
+  contentPhotoId: Buyucu-Ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"B\xFCy\xFCc\xFC\" kart\u0131n\u0131 \"ters\" se\xE7tin.\n\nSe\xE7ti\u011Fin
+    kart, enerjinle ilgili kritik bir seviyede oldu\u011Funu i\u015Faret ediyor.
+    Devam edecek maddi g\xFCc\xFC bulmakta zorlan\u0131yor, motivasyonunu kaybediyorsun.
+    Aksilikler bu kadarla da kalm\u0131yor; \u015Fartlar zorla\u015Ft\u0131k\xE7a
+    aksi ve huysuz bir hale geliyor, insanlarla kurdu\u011Fun sa\u011Fl\u0131kl\u0131
+    ileti\u015Fimi yitiriyorsun {{isim}}. Yanl\u0131\u015F anlamalar ve yanl\u0131\u015F
+    anla\u015F\u0131lmalar g\xFCn ge\xE7tik\xE7e art\u0131yor. Kap\u0131lar sana
+    kapanmaya ba\u015Flam\u0131\u015F gibi hissetti\u011Fin i\xE7in negatif d\xFC\u015F\xFCncelere
+    kap\u0131l\u0131yor ve var olan potansiyelini unutuyorsun. D\xFCnya ile aranda
+    ge\xE7ici bir kopukluk s\xF6z konusu. \u0130htiyac\u0131n olan kaynaklara yeniden
+    ula\u015F\u0131p kendini toparlayana kadar kendine zaman tan\u0131mal\u0131s\u0131n."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi buyucu ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

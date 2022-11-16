@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: TersTilsimikilisi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA45815710870
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 21300000, guid: cc653b5e4d27df4489c5c37dd55b8ed8, type: 3}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 21300000, guid: cc653b5e4d27df4489c5c37dd55b8ed8, type: 3}
+  contentPhotoId: tilsimikilisi-ters
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: "tarot \u015Fimdi sohbeti ba\u015Flat"
+  aciklama:
+  - "\u015Eimdi i\xE7in \"T\u0131ls\u0131m \u0130kilisi\" kart\u0131n\u0131 \"ters\"
+    se\xE7tin.\n\nSenin i\xE7in \xF6nemli olan \u015Feyleri art\u0131k eskisi kadar
+    ciddiye almad\u0131\u011F\u0131n\u0131 g\xF6r\xFCyorum. Faydal\u0131 me\u015Fguliyetler
+    pe\u015Finde ko\u015Fup ya\u015Famsal dengelerini korumak yerine, faydas\u0131z
+    i\u015Flerle zaman \xF6ld\xFCr\xFCyorsun. Maddi ve manevi bir kafa kar\u0131\u015F\u0131kl\u0131\u011F\u0131
+    i\xE7indesin. Bir yandan gelece\u011Fe dair planlar kuruyor, di\u011Fer yandan
+    bu planlara ciddiyetle yakla\u015Fm\u0131yorsun. Enerjini do\u011Fru kanalize
+    etmen gereken yerler var {{isim}}. Verdi\u011Fin kararlar\u0131n arkas\u0131nda
+    durmal\u0131 ve planlar\u0131n i\xE7in kararl\u0131l\u0131kla ko\u015Fturmaya
+    devam etmelisin. Kaynaklar\u0131n\u0131 do\u011Fru y\xF6nde kullan\u0131r, kararlar\u0131ndan
+    sapmadan, hi\xE7 durmadan devam edersen, ama\xE7lar\u0131na ula\u015Fmaman i\xE7in
+    bir neden yok."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: tarot simdi tilsimikilisi ters
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

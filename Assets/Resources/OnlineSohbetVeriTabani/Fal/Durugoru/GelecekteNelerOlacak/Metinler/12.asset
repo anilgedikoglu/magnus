@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 12
+  m_EditorClassIdentifier: 
+  idIndex: 20225162150AA54209089850
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Gelece\u011Finle ilgili detaylara hakim olabilmek ad\u0131na Magnuskop'u a\xE7t\u0131\u011F\u0131mda
+    \xE7ok \u015Fa\u015F\u0131rd\u0131m. Farkl\u0131 lokasyonlarda bir belirip bir
+    yok oluyorsun {{isim}}. \xDCzerinde de hep bir {{sabit_sayi,2,9}} rakam\u0131
+    var. Sen {{sabit_sayi,2,9}} y\u0131l sonra birden bire farkl\u0131 \u015Fehirleri
+    ya da farkl\u0131 \xFClkeleri gezmeye ba\u015Flayacaks\u0131n. Bunun ne vesile
+    ile olaca\u011F\u0131n\u0131 \u015Fu an kestiremesem de, hayat\u0131n\u0131n
+    en mutlu d\xF6nemleri olaca\u011F\u0131n\u0131 s\xF6yleyebilirim. Bu geziler
+    esnas\u0131nda yan\u0131nda sevdi\u011Fin ki\u015Fi de var. Buradan da, hayat\u0131na
+    o zamana kadar birinin girmi\u015F olaca\u011F\u0131n\u0131 anl\u0131yoruz."
+  aciklamaBalonuYok: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: gno
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: gno son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

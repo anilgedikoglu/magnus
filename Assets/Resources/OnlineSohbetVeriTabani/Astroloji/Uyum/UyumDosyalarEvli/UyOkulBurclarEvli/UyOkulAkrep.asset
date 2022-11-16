@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UyOkulAkrep
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA05831549786
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Akrep
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri
+    | cinsiyet=lgbt, mensuplar\u0131}} e\u011Fitimlerinde ne kadar disiplinli ve
+    \xF6zenli iseler, ili\u015Fkilerinde de bir o kadar dikkatli ve se\xE7icidirler.
+    Fark yarat\u0131rlar. {{burc}} bur\xE7lar\u0131n\u0131n en b\xFCy\xFCk \xF6zelliklerinden
+    biri ise, farkl\u0131 olan\u0131 fark etmektir. Evlili\u011Finde s\u0131k\u0131nt\u0131lar
+    ya\u015Fad\u0131k\xE7a, e\u015Finin zay\u0131f noktalar\u0131n\u0131 daha net
+    g\xF6rmeye ba\u015Flad\u0131n, \xF6yle de\u011Fil mi? Akrep burcu bu {{data,
+    cinsiyet=erkek, han\u0131mefendi | cinsiyet=kad\u0131n, beyefendi | cinsiyet=lgbt,
+    \u015Fah\u0131s}} ise yap\u0131s\u0131 gere\u011Fi bir hayli g\xFC\xE7l\xFC;
+    hem fiziken, hem de karakter olarak. \xC7o\u011Fu noktada uyumlu oldu\u011Funuz
+    i\xE7in, ona meylin zamanla artacakt\u0131r {{isim}}. Duygular\u0131n seni, uygun
+    olmad\u0131\u011F\u0131n\u0131z yanlar\u0131 g\xF6remeyece\u011Fin kadar k\xF6r
+    edebilir. Kar\u015F\u0131ndaki insan\u0131n en b\xFCy\xFCk s\u0131k\u0131nt\u0131s\u0131
+    \\\"bencillik.\\\" Seni beklentilerine alet edip g\xF6rmezden gelebilme \u015Fans\u0131
+    her zaman var. Onu iyice tan\u0131madan, zehrine ve sessizli\u011Findeki b\xFCy\xFCleyici
+    t\u0131ls\u0131ma kap\u0131lmaman\u0131 \xF6neriyorum.\"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: okul
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: akrep
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

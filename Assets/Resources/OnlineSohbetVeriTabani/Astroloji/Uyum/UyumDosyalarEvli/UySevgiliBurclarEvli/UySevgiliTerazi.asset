@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: UySevgiliTerazi
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA59154744457
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{barmenu}}{\"header\":\"Biyoritim\",\"bars\":[{\"color\":\"red\",\"backgroundColor\":\"standart\",\"animation\":{\"startValue\":\"{{sayi,
+    0, 0}}\",\"startTime\":0.0,\"targetValue\":100.0,\"duration\":0.0},\"header\":{\"content\":\"\"},\"explanations\":[{\"content\":\"Terazi
+    burcu {{data, cinsiyet=erkek, kad\u0131nlar\u0131 | cinsiyet=kad\u0131n, erkekleri
+    | cinsiyet=lgbt, mensuplar\u0131}} kelimelerle tarif edilemeyecek kadar \xE7ekicidirler.
+    E\u011Fer ba\u015Fkas\u0131yla evli olmana ra\u011Fmen onu sevdi\u011Fin i\xE7in
+    kendini su\xE7luyorsan, bunu yapma {{isim}}. Sen bir {{burc}} burcusun ve {{burc}}
+    burcu {{data, cinsiyet=erkek, erkekleri | cisniyet=kad\u0131n, kad\u0131nlar\u0131
+    | cinsiyet=lgbt, mensuplar\u0131}} terazi burcuyla hem fiziksel hem de zihinsel
+    uyumu en y\xFCksek bur\xE7lardan biridir. Birbirinizi bir kez tan\u0131d\u0131ysan\u0131z,
+    birbiriniz olmadan yapman\u0131z zor. \xC7ok k\u0131sa zaman aral\u0131klar\u0131nda
+    dahi araya \xF6zlem girecektir. Aran\u0131zda bilateral kozmik bir ba\u011F oldu\u011Funu
+    da belirtmem gerek. Biriniz di\u011Ferini d\xFC\u015F\xFCnd\xFC\u011F\xFCnde,
+    bu ba\u011F nedeniyle o da muhtemelen di\u011Ferini d\xFC\u015F\xFCn\xFCyor olacakt\u0131r.
+    Hislerinizin e\u015F zamanl\u0131 ve e\u015F g\xFCd\xFCml\xFC oldu\u011Funu bilmelisin
+    {{isim}}. Onunla ilgili sana son bir notum daha var; onunle beraberken, evli
+    kalamazs\u0131n. Bunu sen istesen de, o b\xF6yle bir \u015Feye m\xFCsaade etmeyecektir.
+    Seni ciddi kararlar bekliyor... \"}]}]}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: uyum
+    kontrol: 0
+  - degiskenAdi: uy
+    degiskenDegeri: sevgili
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: "uybur\xE7"
+    degiskenDegeri: terazi
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

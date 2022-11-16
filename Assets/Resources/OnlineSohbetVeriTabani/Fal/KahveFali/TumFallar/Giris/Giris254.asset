@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris254
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA26846992333
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{kelime, Senin ailene ya da e\u015Finin ailesine ait | Hen\xFCz de\u011Ferlendirmedi\u011Fin,
+    senin \xFCzerine ya da e\u015Finin \xFCzerine olan | \u0130lerleyen y\u0131llarda
+    sat\u0131n almay\u0131 planlad\u0131\u011F\u0131n ve deniz kenar\u0131 olmas\u0131n\u0131
+    hayal etti\u011Fin | \u0130lerleyen zamanlarda sat\u0131n almay\u0131 hayal etti\u011Fin
+    ve ye\u015Fillikler i\xE7erisinde olmas\u0131n\u0131 istedi\u011Fin}} bir arsa
+    ya da bir ba\u011F bah\xE7e mi var? Sen burada ya da buna benzer bir yerde {{yil_+2}}
+    y\u0131l\u0131n\u0131n {{kelime, \xFC\xE7\xFCnc\xFC | d\xF6rd\xFCnc\xFC | son}}
+    \xE7eyre\u011Finde bir {{kelime, in\u015Faat yapt\u0131rmaya ba\u015Flayacak
+    ve | in\u015Faata ba\u015Flayacak ya da hali haz\u0131rda var olan yeri revize
+    ettirerek | in\u015Faat giri\u015Fiminde bulunarak hali haz\u0131rda var olan
+    yeri restore ettirecek,}} hayallerini ger\xE7ekle\u015Ftireceksin {{isim}}. Yine
+    ayn\u0131 y\u0131l i\xE7erisinde ailene yeni birinin kat\u0131laca\u011F\u0131n\u0131
+    ya da ailenin bir ferdinin {{kelime, okumak \xFCzere sizden uza\u011Fa gidece\u011Fini
+    | e\u011Fitim ama\xE7l\u0131 uzun bir yola \xE7ok mutlu bir \u015Fekilde gidece\u011Fini}}
+    f\u0131s\u0131ld\u0131yor telvelerin. {{kelime, Fal\u0131n ilk k\u0131s\u0131mlar\u0131
+    i\xE7in bence harika haberler bunlar! | Fal yorumunun daha ilk k\u0131s\u0131mlar\u0131
+    oldu\u011Funu d\xFC\u015F\xFCn\xFCrsek, yolculu\u011Fa \xE7ok g\xFCzel ba\u015Flad\u0131n!
+    | Ne yalan s\xF6yleyeyim; Magnus'dan al\u0131nan di\u011Fer t\xFCm fallara g\xF6re
+    \xF6zendirici haberler bunlar!}}"
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlanacakDegiskenler: []
+  gerekenDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 35
+    kontrolOperatoru: 0
+    ayarlamaOperatoru: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kamu sekt\xF6r\xFC"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 35
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "563636764754",
+    "firebase_url": "https://magnus-338513-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "magnus-338513",
+    "storage_bucket": "magnus-338513.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563636764754:ios:fccab14c67164e15c85f8b",
+        "android_client_info": {
+          "package_name": "com.futurastic.Magnus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563636764754-69go7jmongscsh1hv8nn3mphg14ko91k.apps.googleusercontent.com"
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQBDWBgln0hKEnRmNYgzkzi1ZI4lCGt2M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

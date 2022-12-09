@@ -9,14 +9,17 @@ public class ModSohbetManagerData : ScriptableObject
     [HideInInspector] public Sohbet[] tumOnlineSohbetler;
     [HideInInspector] public bool useOnlineSohbetCacheOnEditor;
 
+    public const string localDatabaseName = "YerelDOSYALAR";
+    public const string onlineDatabaseName = "OnlineDOSYALAR";
+
     public int maxVariableCount = 100;
 
     public void InitializeMods()
     {
 #if UNITY_EDITOR
-        tumSohbetler = Resources.LoadAll<Sohbet>("SohbetVeriTabani");
+        tumSohbetler = Resources.LoadAll<Sohbet>(localDatabaseName);
 
-        tumOnlineSohbetler = Resources.LoadAll<Sohbet>("OnlineSohbetVeriTabani");
+        tumOnlineSohbetler = Resources.LoadAll<Sohbet>(onlineDatabaseName);
 
         OnlineSohbetData[] onlineSohbetDatas = new OnlineSohbetData[tumOnlineSohbetler.Length];
 
@@ -49,6 +52,7 @@ public class ModSohbetManagerData : ScriptableObject
 
             onlineSohbetDatas[i].aciklamalar = tumOnlineSohbetler[i].aciklama;
             onlineSohbetDatas[i].aciklamaBalonuYok = tumOnlineSohbetler[i].aciklamaBalonuYok;
+            onlineSohbetDatas[i].parlamaRengi = tumOnlineSohbetler[i].parlamaRengi;
 
             onlineSohbetDatas[i].birlestirilecekModlar = tumOnlineSohbetler[i].birlestirilecekModlar;
 

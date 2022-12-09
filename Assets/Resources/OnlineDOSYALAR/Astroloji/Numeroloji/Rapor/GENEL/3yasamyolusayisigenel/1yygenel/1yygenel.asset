@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 1yygenel
+  m_EditorClassIdentifier: 
+  idIndex: 20221031056AA32740976691
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "<color=yellow>Genel ya\u015Fam yolu say\u0131n 1.</color> Sen bu d\xFCnyaya
+    adeta damga vurmaya gelmi\u015Fsin {{isim}}. Sende star \u0131\u015F\u0131\u011F\u0131
+    var. \xD6mr\xFCn\xFC, ba\u015Fkalar\u0131n\u0131n boyunu a\u015Fan s\u0131ra
+    d\u0131\u015F\u0131 i\u015Fler yaparak ve ortalaman\u0131n \xE7ok \xFCzerine
+    \xE7\u0131karak ge\xE7irmek istiyorsun. \xD6yle h\u0131rsl\u0131s\u0131n ki,
+    kendi k\xFCp\xFCne zarar veren belki de tek \u015Fey ruhundaki bu \"a\u015F\u0131r\u0131
+    g\xFCd\xFClenme\" sirkesi. \u0130\xE7indeki \xE7ark\u0131n di\u015Flilerini sonuna
+    kadar zorluyorsun ve bu anlamda hatalar\u0131ndan ders \xE7\u0131karmaya da pek
+    niyetin yok gibi. Senin i\xE7in su testisi su yolunda k\u0131r\u0131lacaksa,
+    i\xE7inde en de\u011Ferli ve en nadide s\u0131v\u0131y\u0131 ta\u015F\u0131yor
+    olmal\u0131; hem de en ulvi ama\xE7 u\u011Fruna."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: yasamyolusayisi
+    degiskenDegeri: 1
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: numyasam
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

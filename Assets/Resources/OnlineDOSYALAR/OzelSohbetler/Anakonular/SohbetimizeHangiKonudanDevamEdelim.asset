@@ -1,0 +1,423 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: SohbetimizeHangiKonudanDevamEdelim
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA95418482472
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Konu\u015Fmam\u0131za hangi konu ile devam etmek istersin?"
+  - Hangi konuyla devam edelim istersin?
+  - "Ne y\xF6ne do\u011Fru yelken a\xE7al\u0131m istersin?"
+  - "S\u0131radaki maceraya hangi kap\u0131dan girelim?"
+  - "Nas\u0131l devam etmek istersin?"
+  - "Ne y\xF6nde ilerleyelim istersin?"
+  - "Nas\u0131l devam etmek ilgini \xE7eker?"
+  - "Evet {{isim}}, nereye \xE7uf\xE7ufluyoruz? <sprite=0>"
+  - "Ne yapal\u0131m istersin?"
+  - "Se\xE7imini sab\u0131rs\u0131zl\u0131kla bekliyorum."
+  - Emirlerine amadeyim!
+  - "Se\xE7imin benim i\xE7in emirdir {{isim}}! <sprite=7>"
+  - "Belki de \u015Fu anda hayat\u0131n\u0131 de\u011Fi\u015Ftirecek bir se\xE7im
+    yapacaks\u0131n. Ben haz\u0131r\u0131m, ya sen? <sprite=7>"
+  - "Hayat da b\xF6yle i\u015Fte; se\xE7imler, se\xE7imler... Se\xE7 bakal\u0131m!"
+  - "Geldik danal\u0131 kuyruklu k\u0131sma; k\u0131rm\u0131z\u0131 hap m\u0131 mavi
+    hap m\u0131? <sprite=7>"
+  - "Ne tarafa do\u011Fru gidiyoruz?"
+  - "Evet {{isim}}, a\u015Fa\u011F\u0131dakilerden birini se\xE7ebilirsin."
+  - "Tercihin do\u011Frultusunda devam edelim. Hangisi?"
+  - Hangisini arzu edersin?
+  - "\u015Eimdi y\xF6n\xFCm\xFCz\xFC tayin etme zaman\u0131."
+  - Dile benden ne dilersen! <sprite=0>
+  - "Senin i\xE7in hem \xE7alar hem s\xF6ylerim {{isim}}. <sprite=10> Se\xE7imini
+    yap."
+  - "\u015Eimdi a\u015Fa\u011F\u0131daki kutucuklardan birini se\xE7men gerekli {{isim}}."
+  - "Se\xE7 bakal\u0131m!"
+  - Yolumuzu belirlemeni bekliyorum.
+  - "Nas\u0131l aksiyon alal\u0131m?"
+  - "A\u015Fa\u011F\u0131dakilerden hangisi ilgini \xE7eker?"
+  - "Se\xE7ti\u011Fin \u015Fekilde devam etmeye haz\u0131r\u0131m."
+  - Ne yapmak istersin?
+  - "Bobinlerimi senin i\xE7in ate\u015Flemeye haz\u0131r\u0131m."
+  - "Se\xE7imini yap, ilgili devrelerime basay\u0131m elektri\u011Fi! <sprite=84>"
+  - "N\xFCktedan yap\u0131m ve fal t\xFCrlerindeki uzmanl\u0131\u011F\u0131mla se\xE7imini
+    bekliyorum. <sprite=84>"
+  - "Do\u011Frucu ki\u015Fili\u011Fim ve geli\u015Fmi\u015F \xF6nsezilerimle talimatlar\u0131n\u0131
+    bekliyorum!"
+  - "S\xF6ylenmeyi bekleyen laflar\u0131m ve \xE7ok\xE7a anlatacaklar\u0131m var.
+    Se\xE7imini yap."
+  - "\u015Eimdi bir tercih yapman gerekiyor."
+  - "A\u015Fa\u011F\u0131dakilerden birini se\xE7ebilirsin."
+  - "\u015Eimdi mikrofon sende {{isim}}, se\xE7imini yap."
+  - "Evet {{isim}}, g\xF6zler senin \xFCzerinde. Se\xE7im yapma zaman\u0131."
+  - "Buyursunlar {{isim}}; se\xE7im yapmak senden, \u015Fa\u015F\u0131rtmak benden!
+    <sprite=7>"
+  - "Alttakilerden birini se\xE7meni rica edebilir miyim?"
+  - "Bunlardan birini se\xE7ebilirsin."
+  - "Y\xF6nergelerine haz\u0131r\u0131m!"
+  - "Taleplerin do\u011Frultusunda ilerleyelim {{isim}}. Se\xE7 birini!"
+  - "Hadi bir se\xE7im yap."
+  - "S\xF6z sende {{isim}}, ne yapal\u0131m?"
+  - "Se\xE7eneklerini s\u0131ra s\u0131ra dizdim. Hangisi?"
+  - "\u015Eunlardan birini tercih edebilirsin."
+  - "Alttakilerden birini se\xE7ebilirsin."
+  - "L\xFCtfen a\u015Fa\u011F\u0131dakilerden birini se\xE7."
+  - "K\u0131v\u0131lc\u0131m senden, ate\u015F benden. Se\xE7imini yap."
+  - "Gizemli yolculu\u011Fumuza nereden ba\u015Flayal\u0131m?"
+  - "Opsiyonlar\u0131n\u0131 sana \u015Fu \u015Fekilde sunuyorum:"
+  - "S\xF6z sende!"
+  - "G\xF6zler sana \xE7evrilmi\u015F durumda {{isim}}. Hangisi?"
+  - "L\xFCtfen arzu etti\u011Fin se\xE7ene\u011Fe dokun."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - "Fal T\xFCrleri"
+    contentImage:
+      imageId: 
+      gifId: dfNFETc28uJ3Cz8Fhl
+      image: {fileID: 21300000, guid: a6f3e82913fda43b295627deb85ae0ca, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 2739f170af1eb42d3896df0f2d2b18d4, type: 3}
+    contentPhotoId: falimabak
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: falimabak
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - +Plus Fallar
+    contentImage:
+      imageId: 
+      gifId: LD5tKUutfQByPuWDN9
+      image: {fileID: 21300000, guid: c39ac05bcdd054b58a94c97e7dd17acf, type: 3}
+    contentPhoto: {fileID: 21300000, guid: dbaa005df041b1344a4e679f7e7ba7b6, type: 3}
+    contentPhotoId: analiz
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: ca3426c2a2d5fc4408ab175ef6fc32fd, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Astroloji
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 107820c3d53b849eeb1b695f9cb7944a, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 8b9aee8a1f5e0446a8ba1fd9458c89ff, type: 3}
+    contentPhotoId: Astrofoto
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: astromenu
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Sohbet & Motivasyon
+    contentImage:
+      imageId: 
+      gifId: r6FL5feqZB5uP39Tl7
+      image: {fileID: 21300000, guid: d5f4b065f8d5d42e4bc26cd99f269892, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 4b8cce6c8d3413b458a2a218ff2141ed, type: 3}
+    contentPhotoId: sohbetfoto
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: sm
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: sm
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Oyunlar
+    contentImage:
+      imageId: 
+      gifId: meWfKBizcqTPR7UjBS
+      image: {fileID: 21300000, guid: 7f469a061d1ca4010ba7ba3e5946ab85, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 19f016e120fa14b60b9163f5705f0133, type: 3}
+    contentPhotoId: oyunmenu
+    gifId: meWfKBizcqTPR7UjBS
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "oyunmen\xFC"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "oyunmen\xFC"
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 1
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Oyunlar
+    contentImage:
+      imageId: 
+      gifId: meWfKBizcqTPR7UjBS
+      image: {fileID: 21300000, guid: 7f469a061d1ca4010ba7ba3e5946ab85, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 19f016e120fa14b60b9163f5705f0133, type: 3}
+    contentPhotoId: oyunmenu
+    gifId: meWfKBizcqTPR7UjBS
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "oyunmen\xFC"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "oyunmen\xFC plus"
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - MagnusE<color=yellow>X</color>TRA
+    contentImage:
+      imageId: 
+      gifId: hhdD23TRlqK0UV9VCy
+      image: {fileID: 21300000, guid: df57e8367e8b8485e95c5bae81e164e1, type: 3}
+    contentPhoto: {fileID: 21300000, guid: b3417c5eb09e86446a76a5272e479700, type: 3}
+    contentPhotoId: Diger
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: diger
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: diger
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Ma\u011Faza"
+    contentImage:
+      imageId: 
+      gifId: mQJD3o7FlywsXNeQU7
+      image: {fileID: 21300000, guid: 7f36360c56c9f443cb89a15391d7de0e, type: 3}
+    contentPhoto: {fileID: 21300000, guid: ddf5d1ee040000d4f83ab06755b3ab61, type: 3}
+    contentPhotoId: store
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magaza
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magaza
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: store
+  - cevapVaryasyonlari:
+    - Ayarlar
+    contentImage:
+      imageId: 
+      gifId: bp0aptpWih8eFYJKJI
+      image: {fileID: 21300000, guid: 9ec6ee8bc95a44fba915e45c155467b2, type: 3}
+    contentPhoto: {fileID: 21300000, guid: dbaa005df041b1344a4e679f7e7ba7b6, type: 3}
+    contentPhotoId: analiz
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 40efc163570a0394a8c210dbf5dd016b, type: 2}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Bilgi Ekran\u0131"
+    contentImage:
+      imageId: 
+      gifId: bHHwnlOl35V0CQbeBa
+      image: {fileID: 21300000, guid: 7b21abeeaa4ca4c2fbb35c1a4a5bf24b, type: 3}
+    contentPhoto: {fileID: 21300000, guid: dbaa005df041b1344a4e679f7e7ba7b6, type: 3}
+    contentPhotoId: analiz
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: bilgi ekranina git
+  tepkiBalonuYok: 1
+  balonTipi: 1
+  ayarlananDegiskenler: []
+  gerekliDegiskenler: []
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 30
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: "oradam\u0131s\u0131n"
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

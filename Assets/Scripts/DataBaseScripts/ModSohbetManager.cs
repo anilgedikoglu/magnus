@@ -320,6 +320,7 @@ public class ModSohbetManager : MonoBehaviour
 
             sohbet.aciklama = onlineSohbetler[i].aciklamalar;
             sohbet.aciklamaBalonuYok = onlineSohbetler[i].aciklamaBalonuYok;
+            sohbet.parlamaRengi = onlineSohbetler[i].parlamaRengi;
 
             sohbet.birlestirilecekModlar = onlineSohbetler[i].birlestirilecekModlar;
 

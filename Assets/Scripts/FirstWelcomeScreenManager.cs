@@ -93,7 +93,7 @@ public class FirstWelcomeScreenManager : MonoBehaviour
 
         oncekiSohbetEtiket = new List<string>();
 
-        TerminalSohbet[] terminalSohbetleriArray = Resources.LoadAll<TerminalSohbet>("SohbetVeriTabani/TerminalVeritabani");
+        TerminalSohbet[] terminalSohbetleriArray = Resources.LoadAll<TerminalSohbet>($"{ModSohbetManagerData.localDatabaseName}/TerminalVeritabani");
 
         List<TerminalSohbet> terminalSohbetleriList = new List<TerminalSohbet>();
         foreach (TerminalSohbet element in terminalSohbetleriArray)

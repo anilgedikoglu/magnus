@@ -535,7 +535,7 @@ public class AnswerBubble : MonoBehaviour
         SetTargetPosition(rt.position);
 
         //Bu kisim tamamen keyfi atanmis degerlere dayanir. Objeyi canvasin sagindan disina tasir ve 50 birim daha saga iter.
-        float firstXPos = canvasRt.sizeDelta.x + rt.sizeDelta.x / 2f + 50f;
+        float firstXPos = canvasRt.sizeDelta.x / 2f;
 
         //Bu kisimda ise obje 200 birim asagi otelenir. Bu sekilde ilk olustugunda asagidan yukari gelen bir animasyon mumkun olur.
         rt.position = GameGeneral.MoveRecttransform(rt.position, canvasRt, new Vector2(firstXPos, -500));
@@ -815,6 +815,174 @@ public class AnswerBubble : MonoBehaviour
                             break;
                     }
                     break;
+                case 10:
+                    switch (positionType)
+                    {
+                        case 1:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+
+                        case 2:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+
+                        case 3:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+
+                        case 4:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+
+                        case 5:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+
+                        case 6:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+
+                        case 7:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+
+                        case 8:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+                        case 9:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+                        case 10:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+                    }
+                    break;
+                case 11:
+                    switch (positionType)
+                    {
+                        case 1:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+
+                        case 2:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+
+                        case 3:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+
+                        case 4:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+
+                        case 5:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+
+                        case 6:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+
+                        case 7:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+
+                        case 8:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+                        case 9:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+                        case 10:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+                        case 11:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+                    }
+                    break;
+                case 12:
+                    switch (positionType)
+                    {
+                        case 1:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+
+                        case 2:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+
+                        case 3:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+
+                        case 4:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+
+                        case 5:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+
+                        case 6:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+
+                        case 7:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+
+                        case 8:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+                        case 9:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+                        case 10:
+                            colonIndex = 3;
+                            totalColonCount = 3;
+                            break;
+                        case 11:
+                            colonIndex = 2;
+                            totalColonCount = 3;
+                            break;
+                        case 12:
+                            colonIndex = 1;
+                            totalColonCount = 3;
+                            break;
+                    }
+                    break;
             }
             blankBetweenBubbles = (canvasRt.sizeDelta.x - (sizeX) * (totalColonCount)) / (totalColonCount + 1f);
 
@@ -900,6 +1068,18 @@ public class AnswerBubble : MonoBehaviour
                     maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
                     break;
                 case 9:
+                    maxWidth = canvasRt.sizeDelta.x * (27f / 100f);
+                    maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
+                    break;
+                case 10:
+                    maxWidth = canvasRt.sizeDelta.x * (27f / 100f);
+                    maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
+                    break;
+                case 11:
+                    maxWidth = canvasRt.sizeDelta.x * (27f / 100f);
+                    maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
+                    break;
+                case 12:
                     maxWidth = canvasRt.sizeDelta.x * (27f / 100f);
                     maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
                     break;
@@ -1060,6 +1240,18 @@ public class AnswerBubble : MonoBehaviour
                     maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
                     break;
                 case 9:
+                    maxWidth = canvasRt.sizeDelta.x * (27f / 100f);
+                    maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
+                    break;
+                case 10:
+                    maxWidth = canvasRt.sizeDelta.x * (27f / 100f);
+                    maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
+                    break;
+                case 11:
+                    maxWidth = canvasRt.sizeDelta.x * (27f / 100f);
+                    maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
+                    break;
+                case 12:
                     maxWidth = canvasRt.sizeDelta.x * (27f / 100f);
                     maxHeight = canvasRt.sizeDelta.x * (27f / 100f) * (125f / 100f);
                     break;

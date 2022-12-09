@@ -71,7 +71,7 @@ public class QuizCraetorWindow : EditorWindow
 
     private void OnEnable()
     {
-        Sohbet[] tumSohbetler = Resources.LoadAll<Sohbet>("SohbetVeriTabani");
+        Sohbet[] tumSohbetler = Resources.LoadAll<Sohbet>($"{ModSohbetManagerData.localDatabaseName}");
 
         QuizEditorDataType[] preferencess = Resources.LoadAll<QuizEditorDataType>("");
         preferencesObject = preferencess[0];

@@ -21,6 +21,7 @@ public class OnlineSohbetData
     [TextArea(5, 10)]
     public List<string> aciklamalar = new();
     public bool aciklamaBalonuYok = false;
+    public Sohbet.GlowEffectColor parlamaRengi = Sohbet.GlowEffectColor.yok;
 
     public List<string> birlestirilecekModlar = new List<string>();
 

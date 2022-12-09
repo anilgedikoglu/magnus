@@ -28,6 +28,8 @@ public class Sohbet : ScriptableObject
     [TextArea(10, 20)]
     public List<string> aciklama;
     public bool aciklamaBalonuYok;
+    public enum GlowEffectColor { yok = 0, kirmizi = 1 , yesil = 2, mavi = 3, turuncu = 4, mor = 5}
+    public GlowEffectColor parlamaRengi = new GlowEffectColor();
 
     public List<string> birlestirilecekModlar = new List<string>();
 

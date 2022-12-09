@@ -211,9 +211,6 @@ public class InputFieldSuggestion : MonoBehaviour
 
     public static float GetKeyboardHeightRatio()
     {
-        if (Application.isEditor)
-            return 0.7f;
-
 #if UNITY_ANDROID
         /*
         using (var unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
@@ -243,6 +240,8 @@ public class InputFieldSuggestion : MonoBehaviour
 #elif UNITY_IOS
         return (float) TouchScreenKeyboard.area.height / Screen.height;
 #endif
+
+        return 0.7f;
     }
 
     public async void ValueChanged()

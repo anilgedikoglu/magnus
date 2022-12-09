@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using Firebase.Storage;
 using Firebase.Extensions;
 using UnityEngine.Networking;
+using DG.Tweening;
 
 public class SpeechBubbleLeft : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class SpeechBubbleLeft : MonoBehaviour
     [HideInInspector] public bool sayacAktif;
     [HideInInspector] public string sohbetId;
     [HideInInspector] public RectTransform contentImageRt;
+    
 
     private bool gifSizeSet;
 
@@ -57,6 +59,8 @@ public class SpeechBubbleLeft : MonoBehaviour
     public string continueText;
     public GameObject timerFolder;
     public RectTransform timerImageRect;
+    public Image glowEffect;
+
 
     public void Start()
     {
@@ -105,6 +109,50 @@ public class SpeechBubbleLeft : MonoBehaviour
                 }
             }
         }*/
+    }
+
+    public IEnumerator SetGlowEffect(float firstDelay)
+    {
+        if (sohbet.parlamaRengi == Sohbet.GlowEffectColor.kirmizi)
+        {
+            ColorUtility.TryParseHtmlString("#E02E2E", out Color color);
+            glowEffect.color = color;
+        }
+        else if (sohbet.parlamaRengi == Sohbet.GlowEffectColor.turuncu)
+        {
+            ColorUtility.TryParseHtmlString("#E0692D", out Color color);
+            glowEffect.color = color;
+        }
+        else if (sohbet.parlamaRengi == Sohbet.GlowEffectColor.mor)
+        {
+            ColorUtility.TryParseHtmlString("#BD2DE0", out Color color);
+            glowEffect.color = color;
+        }
+        else if (sohbet.parlamaRengi == Sohbet.GlowEffectColor.yesil)
+        {
+            ColorUtility.TryParseHtmlString("#67E047", out Color color);
+            glowEffect.color = color;
+        }
+        else if (sohbet.parlamaRengi == Sohbet.GlowEffectColor.mavi)
+        {
+            ColorUtility.TryParseHtmlString("#2D75E0", out Color color);
+            glowEffect.color = color;
+        }
+
+        if (sohbet.parlamaRengi != Sohbet.GlowEffectColor.yok)
+        {
+            yield return new WaitForSeconds(firstDelay);
+        }
+
+        if (sohbet.parlamaRengi != Sohbet.GlowEffectColor.yok)
+        {
+            glowEffect.gameObject.SetActive(true);
+            glowEffect.DOFade(0, 0.5f);
+        }
+        else
+        {
+            glowEffect.gameObject.SetActive(false);
+        }
     }
 
     void SayacUpdate()

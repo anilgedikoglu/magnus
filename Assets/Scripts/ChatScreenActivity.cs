@@ -174,4 +174,9 @@ public class ChatScreenActivity : MonoBehaviour
             }
         }
     }
+
+    public void BackToInfotmationScreen()
+    {
+        OzelFonksiyonManager.BilgiEkraninaGit();
+    }
 }

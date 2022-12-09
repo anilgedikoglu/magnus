@@ -53,6 +53,14 @@ public class PreferencesObject : ScriptableObject
 
     public TMPro.TMP_SpriteAsset spriteAsset;
 
+    public static string PreferencesPath
+    {
+        get
+        {
+            return $"{ModSohbetManagerData.localDatabaseName}/Preferences";
+        }
+    }
+
     [System.Serializable]
     public class CounterMod
     {

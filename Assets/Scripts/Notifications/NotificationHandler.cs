@@ -12,9 +12,9 @@ using System;
         Firebase.Messaging.FirebaseMessaging.MessageReceived += OnMessageReceived;
 
         //Local
-        notificationMessages = new List<NotificationMessage>(Resources.LoadAll<NotificationMessage>("SohbetVeriTabani/Notifications"));
-        notificationMessagesEnergy = new List<NotificationMessage>(Resources.LoadAll<NotificationMessage>("SohbetVeriTabani/NotificationsEnerjiKons/Enerji"));
-        notificationMessagesKons = new List<NotificationMessage>(Resources.LoadAll<NotificationMessage>("SohbetVeriTabani/NotificationsEnerjiKons/Kons"));
+        notificationMessages = new List<NotificationMessage>(Resources.LoadAll<NotificationMessage>($"{ModSohbetManagerData.localDatabaseName}/Notifications"));
+        notificationMessagesEnergy = new List<NotificationMessage>(Resources.LoadAll<NotificationMessage>($"{ModSohbetManagerData.localDatabaseName}/NotificationsEnerjiKons/Enerji"));
+        notificationMessagesKons = new List<NotificationMessage>(Resources.LoadAll<NotificationMessage>($"{ModSohbetManagerData.localDatabaseName}/NotificationsEnerjiKons/Kons"));
 
         notificationMessages.Shuffle();
         notificationMessagesEnergy.Shuffle();

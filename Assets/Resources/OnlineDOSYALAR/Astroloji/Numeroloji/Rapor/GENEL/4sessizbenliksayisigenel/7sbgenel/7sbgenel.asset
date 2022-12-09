@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 7sbgenel
+  m_EditorClassIdentifier: 
+  idIndex: 20221031056AA38854494504
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "<color=yellow>Genel sessiz benlik say\u0131n 7.</color> Senin beynin herkesinkinden
+    fazla \xE7al\u0131\u015F\u0131yor {{isim}}, bu \xF6mr\xFCn boyunca da b\xF6yle
+    devam edecek. \xC7evrene ve hayata dair her \u015Feyi s\xFCrekli analiz ediyor,
+    olaylar aras\u0131nda neden sonu\xE7 ili\u015Fkileri kurmaya \xE7al\u0131\u015F\u0131yorsun.
+    \u0130stemsizce ger\xE7ekle\u015Ftirdi\u011Fin bu \"a\u015F\u0131r\u0131 d\xFC\u015F\xFCnme\"
+    s\xFCreci, seni kimi zaman da yoruyor. Zeki ve alg\u0131lar\u0131 y\xFCksek biri
+    oldu\u011Fun i\xE7in herkesi ve her \u015Feyi anl\u0131yor, bazen de fark\u0131nda
+    de\u011Filmi\u015F\xE7esine sessiz kal\u0131yorsun. Ya\u015Famdan en b\xFCy\xFCk
+    beklentin ayd\u0131nlanma ve huzur. \u0130nsanlarla \xE7ok fazla i\u015Fi olan
+    biri de\u011Filsin. Di\u011Fer t\xFCm canl\u0131lar sana oranla daha \"ilkel
+    ve \xE7ekinik\" kal\u0131yor."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: sessizbenliksayisi
+    degiskenDegeri: 7
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: numsessiz
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

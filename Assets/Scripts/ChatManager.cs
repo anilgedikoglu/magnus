@@ -154,6 +154,8 @@ public class ChatManager : MonoBehaviour
 
     public WheelModSelector wheelModSelector;
 
+    private float moveAmount;
+
     void Start()
     {
 #if UNITY_EDITOR
@@ -2260,8 +2262,7 @@ public class ChatManager : MonoBehaviour
         bubbleManager.SetTextObjects();
         bubbleManager.SetFirstSizes();
 
-
-
+        StartCoroutine(bubbleManager.SetGlowEffect(delay + 1.75f));
 
         bool isPercentilePanelMode = false;
         if (bubbleManager.text.text.Contains("{{barmenu}}") && sohbet.otomatikOdak)
@@ -2774,6 +2775,159 @@ public class ChatManager : MonoBehaviour
 
                     }
                     break;
+                case 10:
+                    switch (positionType)
+                    {
+                        case 1:
+                            if (sohbet.sayacTipi == Sohbet.sayacTipiEnum.bar || sohbet.sayacTipi == Sohbet.sayacTipiEnum.barVeEkrandaText)
+                            {
+                                //asagidaki 19.4163 degeri timer barin dusey uzunlugudur. Bu kisim simdilik hard code
+                                StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset + 19.4163f + 5f), delay));
+                            }
+                            else
+                            {
+                                StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            }
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                        case 4:
+                            StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            break;
+
+                        case 5:
+
+                            break;
+
+                        case 6:
+
+                            break;
+
+                        case 7:
+                            StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            break;
+
+                        case 8:
+
+                            break;
+
+                        case 9:
+                            break;
+
+                    }
+                    break;
+                case 11:
+                    switch (positionType)
+                    {
+                        case 1:
+                            if (sohbet.sayacTipi == Sohbet.sayacTipiEnum.bar || sohbet.sayacTipi == Sohbet.sayacTipiEnum.barVeEkrandaText)
+                            {
+                                //asagidaki 19.4163 degeri timer barin dusey uzunlugudur. Bu kisim simdilik hard code
+                                StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset + 19.4163f + 5f), delay));
+                            }
+                            else
+                            {
+                                StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            }
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                        case 4:
+                            StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            break;
+
+                        case 5:
+
+                            break;
+
+                        case 6:
+
+                            break;
+
+                        case 7:
+                            StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            break;
+
+                        case 8:
+
+                            break;
+                        case 9:
+
+                            break;
+
+                        case 10:
+                            StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            break;
+
+                    }
+                    break;
+                case 12:
+                    switch (positionType)
+                    {
+                        case 1:
+                            if (sohbet.sayacTipi == Sohbet.sayacTipiEnum.bar || sohbet.sayacTipi == Sohbet.sayacTipiEnum.barVeEkrandaText)
+                            {
+                                //asagidaki 19.4163 degeri timer barin dusey uzunlugudur. Bu kisim simdilik hard code
+                                StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset + 19.4163f + 5f), delay));
+                            }
+                            else
+                            {
+                                StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            }
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                        case 4:
+                            StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            break;
+
+                        case 5:
+
+                            break;
+
+                        case 6:
+
+                            break;
+
+                        case 7:
+                            StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            break;
+
+                        case 8:
+
+                            break;
+
+                        case 9:
+
+                            break;
+
+                        case 10:
+                            StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
+                            break;
+
+                        case 11:
+                        
+                            break;
+                    }
+                    break;
             }
 
         }
@@ -2822,6 +2976,14 @@ public class ChatManager : MonoBehaviour
             yield return null;
         }
 
+        int answerBubblesCount = answerBubbles.Count;
+        for (int i = 0; i < answerBubblesCount; i++)
+        {
+            RectTransform bubbleRect = answerBubbles[i].GetComponent<RectTransform>();
+            bubbleRect.DOMove(new Vector2(-100, -350), 0.25f);
+        }
+        yield return new WaitForSeconds(0.25f);
+
         AiMessageDelay = 0;
         secimYapildi = new List<bool>();
         secimYapildi.Add(false);
@@ -2848,8 +3010,7 @@ public class ChatManager : MonoBehaviour
             SetCameraActivity(false);
         }
 
-        float moveAmount = 0;
-        int answerBubblesCount = answerBubbles.Count;
+        moveAmount = 0;
         for (int i = 0; i < answerBubblesCount; i++)
         {
             if (!sohbet.IsPhotographMode() && !sohbet.IsFilePickerMode())
@@ -3021,6 +3182,63 @@ public class ChatManager : MonoBehaviour
                                     break;
                             }
                             break;
+                        case 10:
+                            switch (i + 1)
+                            {
+                                case 1:
+                                    moveAmount += offset;
+                                    break;
+
+                                case 2:
+                                    moveAmount += offset;
+                                    break;
+
+                                case 3:
+                                    moveAmount += offset;
+                                    break;
+                                case 4:
+                                    moveAmount += offset;
+                                    break;
+                            }
+                            break;
+                        case 11:
+                            switch (i + 1)
+                            {
+                                case 1:
+                                    moveAmount += offset;
+                                    break;
+
+                                case 2:
+                                    moveAmount += offset;
+                                    break;
+
+                                case 3:
+                                    moveAmount += offset;
+                                    break;
+                                case 4:
+                                    moveAmount += offset;
+                                    break;
+                            }
+                            break;
+                        case 12:
+                            switch (i + 1)
+                            {
+                                case 1:
+                                    moveAmount += offset;
+                                    break;
+
+                                case 2:
+                                    moveAmount += offset;
+                                    break;
+
+                                case 3:
+                                    moveAmount += offset;
+                                    break;
+                                case 4:
+                                    moveAmount += offset;
+                                    break;
+                            }
+                            break;
                     }
                 }
                 else
@@ -3042,8 +3260,6 @@ public class ChatManager : MonoBehaviour
                 answerBubbles.RemoveAt(0);
             }
         }
-
-        MoveAllBubbles(moveAmount);
 
         bool bugunGeldi = false;
         if (sohbet.cevaplar != null && type > 0 && type < sohbet.cevaplar.Count + 1)
@@ -3489,6 +3705,7 @@ public class ChatManager : MonoBehaviour
 
     void MoveAllBubbles(float offset)
     {
+
         //scrollRectContentRt.position = new Vector3(scrollRectContainerRt.position.x, scrollRectContainerRt.position.y + ((scrollRectContentRt.sizeDelta.y) * canvasRect.localScale.y) / 2f, scrollRectContainerRt.position.z);
         allBubbles = GameObject.FindGameObjectsWithTag("ChatBubble");
         GameObject[] newBubbles = GameObject.FindGameObjectsWithTag("newBubble");
@@ -3530,6 +3747,17 @@ public class ChatManager : MonoBehaviour
             }
         }
 
+        if (moveAmount < 0)
+        {
+            moveAmount += offset;
+
+            if (moveAmount > 0)
+            {
+                previousBubbleMoverPos = new Vector3(previousBubbleMoverPos.x, previousBubbleMoverPos.y + moveAmount * canvasRect.localScale.y, previousBubbleMoverPos.z);
+                bubbleMover.DOMove(previousBubbleMoverPos, 0.215f);
+            }
+            return;
+        }
         previousBubbleMoverPos = new Vector3(previousBubbleMoverPos.x, previousBubbleMoverPos.y + offset * canvasRect.localScale.y, previousBubbleMoverPos.z);
         bubbleMover.DOMove(previousBubbleMoverPos, 0.215f);
         //bubbleParentObject.anchoredPosition = new Vector3(bubbleParentObject.anchoredPosition.x, bubbleParentObject.anchoredPosition.y + offset * canvasRect.localScale.y);
@@ -4252,13 +4480,16 @@ public class ChatManager : MonoBehaviour
                     element.realtedBubbles = relatedBubbles;
                 }
 
+                AiMessageDelay += .15f;
+                yield return new WaitForSeconds(Time.deltaTime * 5f);
+
                 int spawnedBubbkleNumber = 0;
                 for (int i = 0; i < sohbet.cevaplar.Count; i++)
                 {
                     if (availableAnswerBubbles.Contains(i))
                     {
                         spawnedBubbkleNumber += 1;
-                        AiMessageDelay += .15f;
+                        AiMessageDelay += .005f;
                         yield return new WaitForSeconds(Time.deltaTime * 5f);
                         CreateAnswerBubble(i + 1, AiMessageDelay, spawnedBubbkleNumber, availableAnswerBubbles.Count);
                     }
@@ -4267,7 +4498,7 @@ public class ChatManager : MonoBehaviour
                 if (sohbet.anaMenuyeGitButonuOlustur && sohbet.balonTipi == Sohbet.typeOfAnswerBubble.altAlta && !sohbet.IsPhotographMode())
                 {
                     spawnedBubbkleNumber += 1;
-                    AiMessageDelay += 0.3f;
+                    AiMessageDelay += 0.01f;
                     yield return new WaitForSeconds(Time.deltaTime * 5f);
                     CreateAnswerBubble(sohbet.cevaplar.Count + 1, AiMessageDelay, spawnedBubbkleNumber, availableAnswerBubbles.Count);
                 }
@@ -4664,7 +4895,15 @@ public class ChatManager : MonoBehaviour
         {
             yield return null;
         }
-        yield return new WaitForSeconds(delay + 0.3f);
+        yield return new WaitForSeconds(delay);
+
+        if (moveAmount < 0)
+        {
+            previousBubbleMoverPos = new Vector3(previousBubbleMoverPos.x, previousBubbleMoverPos.y + moveAmount * canvasRect.localScale.y, previousBubbleMoverPos.z);
+            bubbleMover.DOMove(previousBubbleMoverPos, 0.215f);
+        }
+
+        yield return new WaitForSeconds(0.215f);
 
         var adManager = FindObjectOfType<AdManager>();
 
@@ -4991,7 +5230,10 @@ public class ChatManager : MonoBehaviour
 
             yield return new WaitForSeconds(Time.deltaTime * 3f);
         }
-        
+
+        if (moveAmount < 0)
+            MoveAllBubbles(moveAmount);
+
         scrollRectPivotTartgetPos = new Vector2(scrollRectPivotRt.anchoredPosition.x, scrollRectPivotRt.parent.GetComponent<RectTransform>().sizeDelta.y + scrollOfftet);
 
         scrollRectPivotPreviousPos = scrollRectPivotRt.anchoredPosition;

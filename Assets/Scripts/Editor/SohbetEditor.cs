@@ -106,12 +106,11 @@ public class SohbetEditor : Editor
         }
         //EditorUtility.SetDirty(sohbet);
         //AssetDatabase.SaveAssets();
-        string preferencesPath = "SohbetVeriTabani/Preferences";
-        sohbet.preferencesObject = Resources.Load<PreferencesObject>(preferencesPath);
+        sohbet.preferencesObject = Resources.Load<PreferencesObject>(PreferencesObject.PreferencesPath);
 
         if (sohbet.preferencesObject == null)
         {
-            Debug.LogError($"Preferecens onjesi bulunamadi. Lutfen objenin {preferencesPath} yolunda bulunup bulunmadigini kontrol edin. Eger konumu veya ismi degistiyse Sohbet classi icinde bunu degistirin.");
+            Debug.LogError($"Preferecens onjesi bulunamadi. Lutfen objenin {PreferencesObject.PreferencesPath} yolunda bulunup bulunmadigini kontrol edin. Eger konumu veya ismi degistiyse Sohbet classi icinde bunu degistirin.");
         }
 
         renderlananAciklamalar = new List<string>();

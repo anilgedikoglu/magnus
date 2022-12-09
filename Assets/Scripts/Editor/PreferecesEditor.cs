@@ -419,14 +419,12 @@ public class PreferecesEditor : Editor
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     static void OnBeforeSceneLoadRuntimeMethod()
     {
-        string preferencesPath = "SohbetVeriTabani/Preferences";
-        Debug.Log("Son içerik güncelleme tarihi: <color=cyan><b>" + Resources.Load<PreferencesObject>(preferencesPath).sonIcerikGuncellemeTarihi + "</b></color>");
+        Debug.Log("Son içerik güncelleme tarihi: <color=cyan><b>" + Resources.Load<PreferencesObject>(PreferencesObject.PreferencesPath).sonIcerikGuncellemeTarihi + "</b></color>");
     }
 
     [DidReloadScripts]
     public static void OnCompileScripts()
     {
-        string preferencesPath = "SohbetVeriTabani/Preferences";
-        Debug.LogWarning("Son içerik güncelleme tarihi: <color=cyan><b>" + Resources.Load<PreferencesObject>(preferencesPath).sonIcerikGuncellemeTarihi+ "</b></color>");
+        Debug.LogWarning("Son içerik güncelleme tarihi: <color=cyan><b>" + Resources.Load<PreferencesObject>(PreferencesObject.PreferencesPath).sonIcerikGuncellemeTarihi+ "</b></color>");
     }
 }

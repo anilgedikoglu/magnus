@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 3dggenel
+  m_EditorClassIdentifier: 
+  idIndex: 20221031056AA34757719791
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "<color=yellow>Genel do\u011Fum g\xFCn\xFC say\u0131n 3.</color> Sen bu d\xFCnyaya
+    resmen kendini geli\u015Ftirmeye gelmi\u015Fsin {{isim}} ve bunda herhangi bir
+    s\u0131n\u0131r da tan\u0131m\u0131yorsun. Kendinin her zaman daha iyi bir versiyonunun
+    yarat\u0131labilece\u011Fine inan\u0131yorsun. Senin i\xE7in bu d\xFCnya idealler
+    d\xFCnyas\u0131 ve en iyi \"sen\" belki de hi\xE7bir zaman ula\u015F\u0131lamayacak
+    bir halin. Ya\u015Famay\u0131 seviyorsun ve baz\u0131 \xF6zel zevklerine \xE7ok
+    b\xFCy\xFCk bir co\u015Fku ve tutkuyla ba\u011Fl\u0131s\u0131n. Senin i\xE7in
+    hayat, planl\u0131 olunmas\u0131 gereken bir satran\xE7 oyunu gibi. Ancak bu
+    \u015Fekilde her \u015Feyin hakk\u0131n\u0131n verilebildi\u011Fini \xE7ok iyi
+    anlam\u0131\u015Fs\u0131n."
+  aciklamaBalonuYok: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: dogumgunusayisi
+    degiskenDegeri: 3
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: numdogum
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 0}

@@ -58,7 +58,7 @@ public class PhotoSettingsEditor : Editor
 
         if (GUILayout.Button("Local fotoğrafları güncelle"))
         {
-            Sprite[] sprites = Resources.LoadAll<Sprite>("SohbetVeriTabani/Gorseller");
+            Sprite[] sprites = Resources.LoadAll<Sprite>($"{ModSohbetManagerData.localDatabaseName}/Gorseller");
 
             for (int i = 0; i < sprites.Length; i++)
             {

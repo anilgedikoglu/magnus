@@ -33,6 +33,7 @@ MonoBehaviour:
   - "Bir elementin bir mol\xFCndeki atom say\u0131s\u0131 ya da bir bile\u015Fi\u011Fin
     bir mol\xFCndeki molek\xFCl say\u0131s\u0131na ne denir?"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -51,6 +52,10 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: 8e81dca8454d74e8c844c164887b30da, type: 2}
@@ -71,6 +76,10 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: 8e81dca8454d74e8c844c164887b30da, type: 2}
@@ -91,6 +100,10 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: 8e81dca8454d74e8c844c164887b30da, type: 2}
@@ -111,6 +124,10 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: 8e81dca8454d74e8c844c164887b30da, type: 2}
@@ -131,6 +148,10 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: 0455669cfd86f421fabd6eb0580a584a, type: 2}
@@ -138,12 +159,6 @@ MonoBehaviour:
     ozelFonksiyon: 
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: byb
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -182,4 +197,4 @@ MonoBehaviour:
   kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
-  preferencesObject: {fileID: 0}
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

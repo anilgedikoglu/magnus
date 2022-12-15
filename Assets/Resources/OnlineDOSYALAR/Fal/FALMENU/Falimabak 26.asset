@@ -33,6 +33,7 @@ MonoBehaviour:
   - "Son zamanlarda hi\xE7 r\xFCya g\xF6rm\xFCyor musun? Gel r\xFCyalar\u0131n\u0131
     yorumlayal\u0131m. <sprite=0>"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -40,7 +41,7 @@ MonoBehaviour:
     - "Kahve Fal\u0131"
     contentImage:
       imageId: 
-      gifId: NdX8fgttpAjKfnDxgF
+      gifId: 
       image: {fileID: 21300000, guid: 47c03d59cf3664e579636522603ee8cf, type: 3}
     contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
     contentPhotoId: back
@@ -67,7 +68,7 @@ MonoBehaviour:
     - Tarot
     contentImage:
       imageId: 
-      gifId: bjvEtbHhHgsjo3oNNR
+      gifId: 
       image: {fileID: 21300000, guid: 0ed6b64d945d544aaa6e028bc5ca7186, type: 3}
     contentPhoto: {fileID: 21300000, guid: fc30770fffd05e14cb7fe4699b8832d6, type: 3}
     contentPhotoId: tarot
@@ -94,7 +95,7 @@ MonoBehaviour:
     - "Durug\xF6r\xFC"
     contentImage:
       imageId: 
-      gifId: p8dEzVsI9xzRUx7k6F
+      gifId: 
       image: {fileID: 21300000, guid: c5061bf896aab4aa39fe1eb0050ba168, type: 3}
     contentPhoto: {fileID: 21300000, guid: 6586712b3d4c4704392d558cb18d1651, type: 3}
     contentPhotoId: hno
@@ -121,7 +122,7 @@ MonoBehaviour:
     - Kehanet
     contentImage:
       imageId: 
-      gifId: U1oiia20osAFxWXZCI
+      gifId: 
       image: {fileID: 21300000, guid: 631284b0e4c02470fb854282f282b88b, type: 3}
     contentPhoto: {fileID: 21300000, guid: cd752909e744b544685810520404bf48, type: 3}
     contentPhotoId: Kehanet
@@ -152,7 +153,7 @@ MonoBehaviour:
     - "Tefe'\xFCl"
     contentImage:
       imageId: 
-      gifId: YqTTTXG5ncpYsmsn7v
+      gifId: 
       image: {fileID: 21300000, guid: 1fb4ecc69b8df4b30a1970200ea4718c, type: 3}
     contentPhoto: {fileID: 21300000, guid: 33b1dc564648d044c895eb36bd7f4f59, type: 3}
     contentPhotoId: tefeul
@@ -183,7 +184,7 @@ MonoBehaviour:
     - Niyet
     contentImage:
       imageId: 
-      gifId: R8OA9TIC8pSLbuyLgB
+      gifId: 
       image: {fileID: 21300000, guid: d2b4d8b26428a495b8a69615cd01163a, type: 3}
     contentPhoto: {fileID: 21300000, guid: 5ac6ee86ca84b402dbfed8aee08114fc, type: 3}
     contentPhotoId: Niyet
@@ -241,7 +242,7 @@ MonoBehaviour:
     - "\xD6zel Fal"
     contentImage:
       imageId: 
-      gifId: WxeYCz0X7XAAgQfViz
+      gifId: 
       image: {fileID: 21300000, guid: 1bc055a98d4c246a8965ae916e1ab7cc, type: 3}
     contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
     contentPhotoId: back
@@ -268,7 +269,7 @@ MonoBehaviour:
     - Geri git
     contentImage:
       imageId: 
-      gifId: 5AlDZql0RkRS2uthw2
+      gifId: 
       image: {fileID: 21300000, guid: f1f014b76fee5450190731a8feeabada, type: 3}
     contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
     contentPhotoId: back

@@ -37,6 +37,7 @@ public class OnlineSohbetData
     public int sayac = 0;
     public bool sayaSonuAnaMenuyeGit = false;
     public string sayacModu = "";
+    [HideInInspector] public string sayacSohbetiID;
 
     public Sohbet.sayacTipiEnum sayacTipi = new Sohbet.sayacTipiEnum();
 

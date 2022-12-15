@@ -1,0 +1,486 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: OyunMenuListePlus
+  m_EditorClassIdentifier: 
+  idIndex: 202212124736AA80373035026
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "T\xFCm oyunlar kar\u015F\u0131nda!"
+  - "Ve oyunlar\u0131m kar\u015F\u0131nda!"
+  - "Ve oyun \xE7ark\u0131 a\xE7\u0131lm\u0131\u015F vaziyette!"
+  - "Oyunlar\u0131m bunlar.|1|Zevkle oynayaca\u011F\u0131n\u0131 umar\u0131m! <sprite=0>"
+  - "Birbirinden g\xFCzel oyunlarla kar\u015F\u0131nday\u0131m {{isim}}."
+  - "Deh\u015Fet zevkli oyunlarla kar\u015F\u0131nday\u0131m."
+  - "\u015Eokunu \u015Fa\u015F\u0131rtacak oyunlar kar\u015F\u0131nda!"
+  - Bu oyunlar seni epey oyalar. <sprite=7>
+  - "S\xF6yle bana, kimde var bu kadar oyun? <sprite=7>"
+  - "Harikulade oyunlarla kar\u015F\u0131nday\u0131m {{isim}}."
+  - "Ta taamm. Oyunlar\u0131m kar\u015F\u0131nda!"
+  - "Oyunlar\u0131 senin i\xE7in d\xF6nme dolap gibi dizdim {{isim}}. <sprite=10>"
+  - "Bu oyunlardan s\u0131k\u0131l\u0131rsan sana ne derler?|4|Portakal! <sprite=20>"
+  - "Ne Roblox ne Fortnite, benim oyunlar\u0131m ba\u015Fka! <sprite=84>"
+  - "\xC7atannk! Dev oyun men\xFCs\xFCyle kar\u015F\u0131nday\u0131m. <sprite=0>"
+  - "Sinir k\xFCp\xFC olmak ister misin {{isim}}? MagnuStab oyna! <sprite=5>"
+  - "Say\u0131larla aran iyiyse MagnuMbers'\u0131 tavsiye ederim."
+  - "Stresliysen bence en iyi gelen oyun MagnuDots. \xC7iz \xE7iz fi\u015Fekle."
+  - "Ufuk geni\u015Fletici bir \u015Feyler ar\u0131yorsan \"Bilgi Yar\u0131\u015Fmas\u0131\"
+    emrinde."
+  - "MagnuTris'i hi\xE7 denedin mi? Tam kafas\u0131 \xE7al\u0131\u015Fan insan i\u015Fi.
+    <sprite=0>"
+  - "Magnus Plus \xFCyesi olursan, bu oyunlara bir de \"Satran\xE7\" ekleniyor. <sprite=7>"
+  - "Ka\xE7 oyun var g\xF6r\xFCyor musun? Millet tekini yapam\u0131yor. Bak bunlar
+    hep emek! <sprite=5>"
+  - "MagnuFlow'da 500 puan yapabilen hen\xFCz tek bir ki\u015Fi yok biliyor musun!
+    <sprite=0>"
+  - "Eskiden bir oyun \xFC\xE7 be\u015F disketti. Bak \u015Fimdi hepsi birden Magnus'da!
+    <sprite=5>"
+  - "\"Zen\" tipi rahatlat\u0131c\u0131 oyun seversen MagnuDots'u dene."
+  aciklamaBalonuYok: 0
+  parlamaRengi: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - "Bilgi Yar\u0131\u015Fmas\u0131"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: adbfa341dda3948a5967242f69fc47f1, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: bilgi hangi konu
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Kaz\u0131bil"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 776ca6a12f18b480d94205d09964fd18, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "kaz\u0131bil kar\u015F\u0131lama"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - MagnuDots
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 0d6d85d6216cc4302bda1e51bb51eb4a, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "magnudots kar\u015F\u0131lama"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - MagnuKelam
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 1dcfbc568fd6b1b4f911592c05e808f0, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: kare kelime baslat
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - KelimeLink
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 1dc85329fe576496b88a9c1508cd1a4c, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "kelime oyunu ba\u015Flat"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - MagnuMbers
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: d53e4b050c3134e7e8ac8613a40a8a6a, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "magnumbers kar\u015F\u0131lama"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - MagnuKem
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 8ff1fab0ec0ca442f8c24c03ba026723, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "magnukem kar\u015F\u0131lama"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - MagnuFlow
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 200a4cefbec954d3b9498b4a8aae34b9, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "magnuflow kar\u015F\u0131lama"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - MagnuStab
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 273d15bebb5844972a89274e50e56b5b, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: aa oyun
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - MagnuTris
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 2ecd2ca27d7e448c0bc1742c8a788c3a, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnutris
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Satran\xE7"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 4198e8aff6cdf413b8fcabfc40adb23a, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "satran\xE7 renk se\xE7"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "\xC7\u0131k\u0131\u015F"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: f1f014b76fee5450190731a8feeabada, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 58787d2b6cbeb4c7b9bb8d9d8a244ffc, type: 3}
+    contentPhotoId: Magnuflow
+    gifId: 7F1DA07wI6wex685hw
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuflow
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "oyunmen\xFC \xE7\u0131k\u0131\u015F"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 1
+  balonTipi: 1
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "oyunmen\xFCx"
+    kontrol: 0
+  - degiskenAdi: "oyun men\xFC"
+    degiskenDegeri: liste
+    kontrol: 0
+  - degiskenAdi: plus
+    degiskenDegeri: var
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

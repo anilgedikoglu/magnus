@@ -14,6 +14,8 @@ public class OnlineCevapSohbetData
     public CevapSohbet.EnerjiKonsantrasyon gerekenEnerjiKons;
     public bool reklamGoster = false;
 
+    public string sonrakiSohbetID;
+
     public List<Sohbet.AyarlanacakDegisken> ayarlananDegiskenler;
     public List<Sohbet.GerekenDegisken> gerekliDegiskenler;
 

@@ -34,7 +34,13 @@ MonoBehaviour:
     kaz\u0131mamaya dikkat et. Fazla kaz\u0131rsan kaybedersin. <sprite=0>|1|E\u011Fer
     \xFCst \xFCste 10 do\u011Fru tahmin yaparsan 1 alt\u0131n kazanacaks\u0131n.
     Bol \u015Fans!"
+  - "\xDCst \xFCste 10 do\u011Fru tahmin yap, 1 alt\u0131n\u0131 kap! <sprite=7>"
+  - "10 soru \xFCst \xFCste bilirsen 1 alt\u0131n kazanacaks\u0131n. Dikkatli ol!
+    <sprite=7>"
+  - "Art arda 10 do\u011Fru tahmin yaparsan 1 alt\u0131n hediye edece\u011Fim {{isim}}.
+    Ba\u015Far\u0131lar!"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []

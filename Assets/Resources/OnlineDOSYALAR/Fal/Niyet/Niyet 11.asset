@@ -36,17 +36,12 @@ MonoBehaviour:
     bir g\xFCleceksin ve dostlar\u0131n da g\xF6recek; d\xFC\u015Fmanlar pi\u015Fman
     yesin, hepsi birden hep fail!"
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: niyet
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

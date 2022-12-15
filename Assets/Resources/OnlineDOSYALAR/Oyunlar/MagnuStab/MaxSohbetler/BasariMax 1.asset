@@ -33,6 +33,7 @@ MonoBehaviour:
   - "{{isim}} senin yanaca\u011F\u0131n yok ha, sen bu oyunun ba\u015F\u0131ndan
     kalkmazsan ders mers hak getire... <sprite=0>"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -51,6 +52,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
@@ -62,8 +66,6 @@ MonoBehaviour:
     ozelFonksiyon: 
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler: []
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

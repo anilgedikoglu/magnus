@@ -34,6 +34,7 @@ MonoBehaviour:
     m\u0131 {{isim}}?"
   - "Ba\u015Ftan m\u0131 ba\u015Flayal\u0131m ayr\u0131lmak m\u0131 istiyorsun {{isim}}?"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -54,6 +55,9 @@ MonoBehaviour:
       ayarlamaOperatoru: 0
     secenekDegiskenleri: []
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 1
@@ -80,20 +84,20 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
-    ayarlananDegiskenler: []
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: ana menu
+      islem: 0
     gerekliDegiskenler: []
-    sonrakiSohbetHavuzu: {fileID: 11400000, guid: d50bb91187995664b92efe347e56ce39, type: 2}
+    sonrakiSohbetHavuzu: {fileID: 0}
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: magnudots cikis
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

@@ -32,6 +32,7 @@ MonoBehaviour:
   aciklama:
   - "Tamamd\u0131r haydi ilk foto\u011Fraf\u0131n\u0131 se\xE7 bakal\u0131m."
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -50,25 +51,7 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
-    reklamGoster: 0
-    ayarlananDegiskenler: []
-    gerekliDegiskenler: []
-    sonrakiSohbetHavuzu: {fileID: 0}
-    takipSohbeti: {fileID: 0}
-    ozelFonksiyon: "online foto\u011Fraf se\xE7 kahve"
-  - cevapVaryasyonlari:
-    - "Foto\u011Fraf Se\xE7"
-    contentImage:
-      imageId: 
-      gifId: 
-      image: {fileID: 21300000, guid: 3f723d0c57d2be242b099d75109f59bc, type: 3}
-    contentPhoto: {fileID: 21300000, guid: 3f723d0c57d2be242b099d75109f59bc, type: 3}
-    contentPhotoId: Rounded Outline 512px - 1x
-    gifId: 
-    fotografKonum: 0
-    ayarlanacakDegiskenler: []
-    secenekDegiskenleri: []
-    gerekenEnerjiKons:
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0
@@ -90,6 +73,33 @@ MonoBehaviour:
     ayarlanacakDegiskenler: []
     secenekDegiskenleri: []
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler: []
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: "online foto\u011Fraf se\xE7 kahve"
+  - cevapVaryasyonlari:
+    - "Foto\u011Fraf Se\xE7"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 3f723d0c57d2be242b099d75109f59bc, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 3f723d0c57d2be242b099d75109f59bc, type: 3}
+    contentPhotoId: Rounded Outline 512px - 1x
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0

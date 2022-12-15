@@ -33,6 +33,7 @@ MonoBehaviour:
   - "Alt\u0131n say\u0131n yetersiz. Art\u0131rabilmen i\xE7in sana k\u0131sac\u0131k
     bir izleti sunmam gerekiyor. Kabul ediyor musun?"
   aciklamaBalonuYok: 0
+  parlamaRengi: 5
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -53,6 +54,9 @@ MonoBehaviour:
       kontrolOperatoru: 0
       ayarlamaOperatoru: 0
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0
@@ -83,6 +87,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler: []
     gerekliDegiskenler:
@@ -105,6 +112,9 @@ MonoBehaviour:
     ayarlanacakDegiskenler: []
     secenekDegiskenleri: []
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0

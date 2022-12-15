@@ -82,7 +82,12 @@ public class ModSohbetManagerData : ScriptableObject
 
                 onlineCevapSohbetData.reklamGoster = cevapSohbet.reklamGoster;
 
-                onlineCevapSohbetData.ayarlananDegiskenler = cevapSohbet.ayarlananDegiskenler;
+                if (cevapSohbet.sonrakiSohbetHavuzu != null)
+                    onlineCevapSohbetData.sonrakiSohbetID = cevapSohbet.sonrakiSohbetHavuzu.GetSohbetId();
+                else
+                    onlineCevapSohbetData.sonrakiSohbetID = string.Empty;
+
+       onlineCevapSohbetData.ayarlananDegiskenler = cevapSohbet.ayarlananDegiskenler;
                 onlineCevapSohbetData.gerekliDegiskenler = cevapSohbet.gerekliDegiskenler;
 
                 onlineCevapSohbetData.ozelFonksiyon = cevapSohbet.ozelFonksiyon;
@@ -100,6 +105,11 @@ public class ModSohbetManagerData : ScriptableObject
             onlineSohbetDatas[i].sayac = tumOnlineSohbetler[i].sayac;
             onlineSohbetDatas[i].sayaSonuAnaMenuyeGit = tumOnlineSohbetler[i].sayaSonuAnaMenuyeGit;
             onlineSohbetDatas[i].sayacModu = tumOnlineSohbetler[i].sayacModu;
+
+            if (tumOnlineSohbetler[i].sayacSohbeti != null)
+                onlineSohbetDatas[i].sayacSohbetiID = tumOnlineSohbetler[i].sayacSohbeti.GetSohbetId();
+            else
+                onlineSohbetDatas[i].sayacSohbetiID = string.Empty;
 
             onlineSohbetDatas[i].sayacTipi = tumOnlineSohbetler[i].sayacTipi;
 

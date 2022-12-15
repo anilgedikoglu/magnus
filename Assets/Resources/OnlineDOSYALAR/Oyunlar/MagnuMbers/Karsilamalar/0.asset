@@ -33,17 +33,12 @@ MonoBehaviour:
   - "Daha \xF6nce hi\xE7 magnumbers oynamad\u0131\u011F\u0131n i\xE7in birka\xE7
     t\xFCyo vereyim. Dikkatli ol."
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "kaz\u0131bilhata"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: magnumbers

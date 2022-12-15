@@ -60,6 +60,18 @@ public class Sohbet : ScriptableObject
     public bool sayaSonuAnaMenuyeGit = false;
     public string sayacModu = "";
     public Sohbet sayacSohbeti = null;
+    [HideInInspector] public string sayacSohbetiID;
+
+    [HideInInspector] public Sohbet CurrentSayacSohbeti
+    {
+        get
+        {
+            if (!string.IsNullOrEmpty(sayacSohbetiID))
+                return System.Array.Find(ModSohbetManager.Instance.onlineSohbetCache, x => x.GetSohbetId().Equals(sayacSohbetiID));
+            else return null;
+        }
+    }
+
     public enum sayacTipiEnum { gorunmez = 0, textEkranda = 1, bar = 2, barVeEkrandaText = 4, balonIciGolge = 3}
     public sayacTipiEnum sayacTipi = new sayacTipiEnum();
 

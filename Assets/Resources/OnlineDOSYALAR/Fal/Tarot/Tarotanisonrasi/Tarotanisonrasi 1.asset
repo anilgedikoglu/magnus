@@ -34,13 +34,12 @@ MonoBehaviour:
     De\u011Ferli {{isim}}. Bitti\u011Finde \"Gelen Kutusu\" i\xE7erisinde belirecek.
     <sprite=7>"
   aciklamaBalonuYok: 0
+  parlamaRengi: 2
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler: []
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

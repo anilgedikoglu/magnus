@@ -33,13 +33,12 @@ MonoBehaviour:
   - "Tarot fal\u0131n\u0131 titiz bir \u015Fekilde yorumlamaya ba\u015Flad\u0131m
     {{isim}}. Bitti\u011Finde Gelen Kutusu'ndan okuyabilirsin."
   aciklamaBalonuYok: 0
+  parlamaRengi: 2
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler: []
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

@@ -30,7 +30,12 @@ MonoBehaviour:
   fotografKonum: 2
   ozelFonksiyon: 
   aciklama:
-  - "Tamamd\u0131r. Neleri de\u011Fi\u015Ftiriyoruz?"
+  - "\u015Eu anda {{data, enerji bildirimleri=kapal\u0131, alt\u0131n bildirimleri
+    kapal\u0131 | enerji bildirimleri=a\xE7\u0131k, alt\u0131n bildirimleri a\xE7\u0131k}},
+    {{data, introtipi=ses, a\xE7\u0131l\u0131\u015F sesi aktif | introtipi=sessiz,
+    a\xE7\u0131l\u0131\u015F sesi k\u0131s\u0131k}} ve {{data, oyun men\xFC=tekerlek,
+    oyun men\xFCs\xFC tekerlek \u015Feklinde | oyun men\xFC=liste, oyun men\xFCs\xFC
+    liste \u015Feklinde}} {{isim}}. Neleri de\u011Fi\u015Ftirmek istersin?"
   aciklamaBalonuYok: 0
   parlamaRengi: 0
   birlestirilecekModlar: []
@@ -66,6 +71,9 @@ MonoBehaviour:
     ayarlananDegiskenler:
     - degiskenAdi: introtipi
       degiskenDegeri: sessiz
+      islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: introtipisessiz
       islem: 0
     gerekliDegiskenler:
     - degiskenAdi: introtipi
@@ -105,6 +113,9 @@ MonoBehaviour:
     - degiskenAdi: introtipi
       degiskenDegeri: ses
       islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: introtipisesli
+      islem: 0
     gerekliDegiskenler:
     - degiskenAdi: introtipi
       degiskenDegeri: ses
@@ -143,6 +154,9 @@ MonoBehaviour:
     - degiskenAdi: enerji bildirimleri
       degiskenDegeri: "kapal\u0131"
       islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "alt\u0131nbildirimlerikapal\u0131"
+      islem: 0
     gerekliDegiskenler:
     - degiskenAdi: enerji bildirimleri
       degiskenDegeri: "a\xE7\u0131k"
@@ -151,7 +165,7 @@ MonoBehaviour:
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
-    - "Enerji bildirimlerini a\xE7"
+    - "Alt\u0131n bildirimlerini a\xE7"
     contentImage:
       imageId: 
       gifId: 
@@ -181,9 +195,100 @@ MonoBehaviour:
     - degiskenAdi: enerji bildirimleri
       degiskenDegeri: "a\xE7\u0131k"
       islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "alt\u0131nbildirimleria\xE7\u0131k"
+      islem: 0
     gerekliDegiskenler:
     - degiskenAdi: enerji bildirimleri
       degiskenDegeri: "kapal\u0131"
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Oyun men\xFCs\xFC liste"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: introtipi
+      degiskenDegeri: sessiz
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri:
+    - degiskenAdi: introtipi
+      degiskenDegeri: ses
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: "oyun men\xFC"
+      degiskenDegeri: liste
+      islem: 0
+    - degiskenAdi: listetekerleksohbet
+      degiskenDegeri: liste
+      islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: listetekerleksohbet
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: "oyun men\xFC"
+      degiskenDegeri: tekerlek
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Oyun men\xFCs\xFC tekerlek"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: introtipi
+      degiskenDegeri: sessiz
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri:
+    - degiskenAdi: introtipi
+      degiskenDegeri: ses
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: "oyun men\xFC"
+      degiskenDegeri: tekerlek
+      islem: 0
+    - degiskenAdi: listetekerleksohbet
+      degiskenDegeri: tekerlek
+      islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: listetekerleksohbet
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: "oyun men\xFC"
+      degiskenDegeri: liste
       kontrol: 0
     sonrakiSohbetHavuzu: {fileID: 0}
     takipSohbeti: {fileID: 0}

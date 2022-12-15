@@ -33,13 +33,12 @@ MonoBehaviour:
   - "Tarot fal\u0131n\u0131 hemen yorumlamaya koyuldum. Tamamlad\u0131\u011F\u0131mda
     Gelen Kutusu'ndan okuyabilirsin."
   aciklamaBalonuYok: 0
+  parlamaRengi: 2
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler: []
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

@@ -33,13 +33,12 @@ MonoBehaviour:
   - "B\xFCy\xFCl\xFC kartlar\u0131n d\xFCnyas\u0131na olan yolculul\u011Fumuz ba\u015Flad\u0131
     {{isim}}. Yorumumu tamamlad\u0131\u011F\u0131mda Gelen Kutusu'ndan ula\u015Fabilirsin."
   aciklamaBalonuYok: 0
+  parlamaRengi: 2
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler: []
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

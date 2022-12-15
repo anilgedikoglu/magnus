@@ -36,17 +36,12 @@ MonoBehaviour:
     g\xFCne\u015Fle yar\u0131\u015F\u0131r izler var. Gizli kalm\u0131\u015F m\xFCjdeni
     duyunca, g\xF6r\xFCn\xFCr ol, co\u015F sen de!"
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: niyet
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

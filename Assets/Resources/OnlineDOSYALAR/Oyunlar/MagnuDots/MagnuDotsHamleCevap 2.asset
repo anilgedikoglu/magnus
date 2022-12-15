@@ -53,6 +53,7 @@ MonoBehaviour:
   - "Nokta birle\u015Ftirmekte pek iyi de\u011Fil gibisin. 2 nokta nedir {{isim}}?
     <sprite=8>"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -73,6 +74,9 @@ MonoBehaviour:
       ayarlamaOperatoru: 0
     secenekDegiskenleri: []
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0

@@ -33,6 +33,7 @@ MonoBehaviour:
   - "Her bir soruyu cevaplamak i\xE7in 30 saniye s\xFCren olacak ve soru \xE7\u0131kt\u0131\u011F\u0131nda
     s\xFCren otomatik ba\u015Flayacak.|1|Yar\u0131\u015Fma hangi konuda olsun?"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -53,6 +54,9 @@ MonoBehaviour:
       ayarlamaOperatoru: 0
     secenekDegiskenleri: []
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0
@@ -83,6 +87,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
@@ -111,6 +118,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
@@ -137,6 +147,9 @@ MonoBehaviour:
       ayarlamaOperatoru: 0
     secenekDegiskenleri: []
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0

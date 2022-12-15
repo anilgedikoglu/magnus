@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class ModSohbetManager : MonoBehaviour
 {
+    public static ModSohbetManager Instance { get; private set; }
+
     public ChatManager chatManager;
     public CurrentPlayerData playerData;
 
@@ -14,16 +16,18 @@ public class ModSohbetManager : MonoBehaviour
 
     public List<ModSohbetMods> mods;
 
-    public OnlineSohbetData[] onlineSohbetler;
+    [HideInInspector] public OnlineSohbetData[] onlineSohbetler;
 
     public ModSohbetManagerData modSohbetManagerData;
 
-    private Sohbet[] onlineSohbetCache;
+    [HideInInspector] public Sohbet[] onlineSohbetCache;
 
     internal int onlineCheckPerFrame = 20;
 
     private void Awake()
     {
+        Instance = this;
+
 #if UNITY_EDITOR
         mods = modSohbetManagerData.GetMods();
 #else
@@ -339,6 +343,8 @@ public class ModSohbetManager : MonoBehaviour
                 cevapSohbet.gerekenEnerjiKons = onlineCevapSohbetData.gerekenEnerjiKons;
                 cevapSohbet.reklamGoster = onlineCevapSohbetData.reklamGoster;
 
+                cevapSohbet.sonrakiSohbetID = onlineCevapSohbetData.sonrakiSohbetID;
+
                 cevapSohbet.ayarlananDegiskenler = onlineCevapSohbetData.ayarlananDegiskenler;
                 cevapSohbet.gerekliDegiskenler = onlineCevapSohbetData.gerekliDegiskenler;
 
@@ -356,6 +362,7 @@ public class ModSohbetManager : MonoBehaviour
             sohbet.sayac = onlineSohbetler[i].sayac;
             sohbet.sayaSonuAnaMenuyeGit = onlineSohbetler[i].sayaSonuAnaMenuyeGit;
             sohbet.sayacModu = onlineSohbetler[i].sayacModu;
+            sohbet.sayacSohbetiID = onlineSohbetler[i].sayacSohbetiID;
 
             sohbet.sayacTipi = onlineSohbetler[i].sayacTipi;
 

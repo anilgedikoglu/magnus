@@ -32,6 +32,7 @@ MonoBehaviour:
   aciklama:
   - "Biraz karars\u0131z gibisin? Senin i\xE7in se\xE7enekleri azaltt\u0131m."
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -39,7 +40,7 @@ MonoBehaviour:
     - "Fal T\xFCrleri"
     contentImage:
       imageId: 
-      gifId: dfNFETc28uJ3Cz8Fhl
+      gifId: 
       image: {fileID: 21300000, guid: a6f3e82913fda43b295627deb85ae0ca, type: 3}
     contentPhoto: {fileID: 21300000, guid: 2739f170af1eb42d3896df0f2d2b18d4, type: 3}
     contentPhotoId: falimabak
@@ -66,7 +67,7 @@ MonoBehaviour:
     - Astroloji
     contentImage:
       imageId: 
-      gifId: mJ1nIVXSn24YAn2Mp3
+      gifId: 
       image: {fileID: 21300000, guid: 107820c3d53b849eeb1b695f9cb7944a, type: 3}
     contentPhoto: {fileID: 21300000, guid: 8b9aee8a1f5e0446a8ba1fd9458c89ff, type: 3}
     contentPhotoId: Astrofoto
@@ -81,16 +82,19 @@ MonoBehaviour:
       enerji: 0
       kons: 0
     reklamGoster: 0
-    ayarlananDegiskenler: []
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: astromenu
+      islem: 0
     gerekliDegiskenler: []
-    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 89ffde739771e4c82beec075ba757804, type: 2}
+    sonrakiSohbetHavuzu: {fileID: 0}
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
     - "Bilgi Ekran\u0131"
     contentImage:
       imageId: 
-      gifId: bHHwnlOl35V0CQbeBa
+      gifId: 
       image: {fileID: 21300000, guid: 7b21abeeaa4ca4c2fbb35c1a4a5bf24b, type: 3}
     contentPhoto: {fileID: 21300000, guid: dbaa005df041b1344a4e679f7e7ba7b6, type: 3}
     contentPhotoId: analiz

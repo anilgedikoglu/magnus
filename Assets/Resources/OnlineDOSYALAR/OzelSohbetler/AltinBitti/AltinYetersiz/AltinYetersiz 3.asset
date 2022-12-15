@@ -34,6 +34,7 @@ MonoBehaviour:
     a\u011Fa\xE7 dallar\u0131ndan alt\u0131n toplayabilmem i\xE7in k\u0131sac\u0131k
     bir video izlemen gerekli. Ne dersin, var m\u0131s\u0131n?"
   aciklamaBalonuYok: 0
+  parlamaRengi: 5
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -54,6 +55,9 @@ MonoBehaviour:
       kontrolOperatoru: 0
       ayarlamaOperatoru: 0
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0
@@ -84,6 +88,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler: []
     gerekliDegiskenler:
@@ -106,6 +113,9 @@ MonoBehaviour:
     ayarlanacakDegiskenler: []
     secenekDegiskenleri: []
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0

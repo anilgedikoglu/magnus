@@ -32,6 +32,7 @@ MonoBehaviour:
   aciklama:
   - "Se\xE7imini yap; \xE7als\u0131n davullar, dinlesin d\xFCnya!"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -39,7 +40,7 @@ MonoBehaviour:
     - "Fal T\xFCrleri"
     contentImage:
       imageId: 
-      gifId: dfNFETc28uJ3Cz8Fhl
+      gifId: 
       image: {fileID: 21300000, guid: a6f3e82913fda43b295627deb85ae0ca, type: 3}
     contentPhoto: {fileID: 21300000, guid: 2739f170af1eb42d3896df0f2d2b18d4, type: 3}
     contentPhotoId: falimabak
@@ -66,7 +67,7 @@ MonoBehaviour:
     - +Plus Fallar
     contentImage:
       imageId: 
-      gifId: LD5tKUutfQByPuWDN9
+      gifId: 
       image: {fileID: 21300000, guid: c39ac05bcdd054b58a94c97e7dd17acf, type: 3}
     contentPhoto: {fileID: 21300000, guid: dbaa005df041b1344a4e679f7e7ba7b6, type: 3}
     contentPhotoId: analiz
@@ -81,16 +82,19 @@ MonoBehaviour:
       enerji: 0
       kons: 0
     reklamGoster: 0
-    ayarlananDegiskenler: []
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: plusfallar
+      islem: 0
     gerekliDegiskenler: []
-    sonrakiSohbetHavuzu: {fileID: 11400000, guid: ca3426c2a2d5fc4408ab175ef6fc32fd, type: 2}
+    sonrakiSohbetHavuzu: {fileID: 0}
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
     - Astroloji
     contentImage:
       imageId: 
-      gifId: mJ1nIVXSn24YAn2Mp3
+      gifId: 
       image: {fileID: 21300000, guid: 107820c3d53b849eeb1b695f9cb7944a, type: 3}
     contentPhoto: {fileID: 21300000, guid: 8b9aee8a1f5e0446a8ba1fd9458c89ff, type: 3}
     contentPhotoId: Astrofoto
@@ -117,7 +121,7 @@ MonoBehaviour:
     - Sohbet & Motivasyon
     contentImage:
       imageId: 
-      gifId: r6FL5feqZB5uP39Tl7
+      gifId: 
       image: {fileID: 21300000, guid: d5f4b065f8d5d42e4bc26cd99f269892, type: 3}
     contentPhoto: {fileID: 21300000, guid: 4b8cce6c8d3413b458a2a218ff2141ed, type: 3}
     contentPhotoId: sohbetfoto
@@ -148,7 +152,7 @@ MonoBehaviour:
     - Oyunlar
     contentImage:
       imageId: 
-      gifId: meWfKBizcqTPR7UjBS
+      gifId: 
       image: {fileID: 21300000, guid: 7f469a061d1ca4010ba7ba3e5946ab85, type: 3}
     contentPhoto: {fileID: 21300000, guid: 19f016e120fa14b60b9163f5705f0133, type: 3}
     contentPhotoId: oyunmenu
@@ -182,7 +186,7 @@ MonoBehaviour:
     - Oyunlar
     contentImage:
       imageId: 
-      gifId: meWfKBizcqTPR7UjBS
+      gifId: 
       image: {fileID: 21300000, guid: 7f469a061d1ca4010ba7ba3e5946ab85, type: 3}
     contentPhoto: {fileID: 21300000, guid: 19f016e120fa14b60b9163f5705f0133, type: 3}
     contentPhotoId: oyunmenu
@@ -216,7 +220,7 @@ MonoBehaviour:
     - MagnusE<color=yellow>X</color>TRA
     contentImage:
       imageId: 
-      gifId: hhdD23TRlqK0UV9VCy
+      gifId: 
       image: {fileID: 21300000, guid: df57e8367e8b8485e95c5bae81e164e1, type: 3}
     contentPhoto: {fileID: 21300000, guid: b3417c5eb09e86446a76a5272e479700, type: 3}
     contentPhotoId: Diger
@@ -247,7 +251,7 @@ MonoBehaviour:
     - "Ma\u011Faza"
     contentImage:
       imageId: 
-      gifId: mQJD3o7FlywsXNeQU7
+      gifId: 
       image: {fileID: 21300000, guid: 7f36360c56c9f443cb89a15391d7de0e, type: 3}
     contentPhoto: {fileID: 21300000, guid: ddf5d1ee040000d4f83ab06755b3ab61, type: 3}
     contentPhotoId: store
@@ -278,7 +282,7 @@ MonoBehaviour:
     - Ayarlar
     contentImage:
       imageId: 
-      gifId: bp0aptpWih8eFYJKJI
+      gifId: 
       image: {fileID: 21300000, guid: 9ec6ee8bc95a44fba915e45c155467b2, type: 3}
     contentPhoto: {fileID: 21300000, guid: dbaa005df041b1344a4e679f7e7ba7b6, type: 3}
     contentPhotoId: analiz
@@ -293,16 +297,19 @@ MonoBehaviour:
       enerji: 0
       kons: 0
     reklamGoster: 0
-    ayarlananDegiskenler: []
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: ayarlar
+      islem: 0
     gerekliDegiskenler: []
-    sonrakiSohbetHavuzu: {fileID: 11400000, guid: 40efc163570a0394a8c210dbf5dd016b, type: 2}
+    sonrakiSohbetHavuzu: {fileID: 0}
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
     - "Bilgi Ekran\u0131"
     contentImage:
       imageId: 
-      gifId: bHHwnlOl35V0CQbeBa
+      gifId: 
       image: {fileID: 21300000, guid: 7b21abeeaa4ca4c2fbb35c1a4a5bf24b, type: 3}
     contentPhoto: {fileID: 21300000, guid: dbaa005df041b1344a4e679f7e7ba7b6, type: 3}
     contentPhotoId: analiz

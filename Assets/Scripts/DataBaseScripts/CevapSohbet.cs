@@ -32,6 +32,18 @@ public class CevapSohbet
 
     [Tooltip("Kullanıcı eğer bu cevabı seçerse sohbetin hangi sohbet havuzu ile devam edeceğini gösterir. Boş kalması algoritmanın karar vereceği anlamına gelir. Bu cevaptan sonra hangi sohbete geçmek istiyorsanız onu işaretleyin.")]
     public Sohbet sonrakiSohbetHavuzu;
+    [HideInInspector] public string sonrakiSohbetID;
+
+    [HideInInspector]
+    public Sohbet CurrentSonrakiSohbetHavuzu
+    {
+        get
+        {
+            if (!string.IsNullOrEmpty(sonrakiSohbetID))
+                return System.Array.Find(ModSohbetManager.Instance.onlineSohbetCache, x => x.GetSohbetId().Equals(sonrakiSohbetID));
+            else return null;
+        }
+    }
 
     //KALDIRILDI
     [Tooltip("Kullanıcı eğer bu cevabı seçerse sohbetin hangi sohbet şeması ile devam edeceğini gösteren değişken. Bu cevaptan sonra hangi sohbete geçmek istiyorsanız onu işaretleyin.")]

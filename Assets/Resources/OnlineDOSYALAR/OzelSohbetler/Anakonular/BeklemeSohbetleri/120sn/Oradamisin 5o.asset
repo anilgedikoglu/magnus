@@ -33,6 +33,7 @@ MonoBehaviour:
   - "Biraz s\u0131k\u0131ld\u0131n m\u0131 acaba?|1|Oyunlarla devam edelim ister
     misin?"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -40,7 +41,7 @@ MonoBehaviour:
     - Oyunlar
     contentImage:
       imageId: 
-      gifId: meWfKBizcqTPR7UjBS
+      gifId: 
       image: {fileID: 21300000, guid: 7f469a061d1ca4010ba7ba3e5946ab85, type: 3}
     contentPhoto: {fileID: 21300000, guid: 19f016e120fa14b60b9163f5705f0133, type: 3}
     contentPhotoId: oyunmenu

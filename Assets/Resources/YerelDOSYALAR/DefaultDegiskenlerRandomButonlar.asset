@@ -1,0 +1,842 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40df5b546fd56548a99efa491d5b98d, type: 3}
+  m_Name: DefaultDegiskenlerRandomButonlar
+  m_EditorClassIdentifier: 
+  degiskenler:
+  - degiskenAdi: satranc
+    degiskenDegeri: oynanmadi
+    resetType: 0
+  - degiskenAdi: "kaz\u0131bilbilindimi"
+    degiskenDegeri: "hay\u0131r"
+    resetType: 0
+  - degiskenAdi: "bilgiyar\u0131\u015Fmas\u0131kazan\u0131ld\u0131m\u0131"
+    degiskenDegeri: "hay\u0131r"
+    resetType: 0
+  - degiskenAdi: magnukem en yuksek skor
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: magnudots en yuksek skor
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: magnutris en yuksek skor
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: magnumbers en yuksek skor
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: magnuflow en yuksek skor
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: introtipi
+    degiskenDegeri: ayarlanmadi
+    resetType: 0
+  - degiskenAdi: ay burcu
+    degiskenDegeri: "bur\xE7"
+    resetType: 0
+  - degiskenAdi: tutulantakim
+    degiskenDegeri: "tuttu\u011Fun tak\u0131m"
+    resetType: 0
+  - degiskenAdi: espri
+    degiskenDegeri: "yap\u0131lmad\u0131"
+    resetType: 2
+  - degiskenAdi: "counter kaz\u0131bil"
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: magnutris kazanma
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: magnuflow kazanma
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: magnukem kazanma
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: magnumbers kazanma
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: magnudots kazanma
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: enerji bildirimleri
+    degiskenDegeri: "a\xE7\u0131k"
+    resetType: 0
+  - degiskenAdi: wallpaper tipi
+    degiskenDegeri: gyro
+    resetType: 0
+  - degiskenAdi: 1cicek
+    degiskenDegeri: "hay\u0131r"
+    resetType: 2
+  - degiskenAdi: 2cicek
+    degiskenDegeri: "hay\u0131r"
+    resetType: 2
+  - degiskenAdi: 3cicek
+    degiskenDegeri: "hay\u0131r"
+    resetType: 2
+  - degiskenAdi: 4cicek
+    degiskenDegeri: "hay\u0131r"
+    resetType: 2
+  - degiskenAdi: mood
+    degiskenDegeri: garip
+    resetType: 2
+  - degiskenAdi: "sa\u011Fl\u0131k"
+    degiskenDegeri: "tan\u0131ms\u0131z"
+    resetType: 2
+  - degiskenAdi: "a\u015Fk"
+    degiskenDegeri: "tan\u0131ms\u0131z"
+    resetType: 2
+  - degiskenAdi: kariyer
+    degiskenDegeri: "tan\u0131ms\u0131z"
+    resetType: 2
+  - degiskenAdi: kullanici sehri
+    degiskenDegeri: "d\xFCnya"
+    resetType: 0
+  - degiskenAdi: baba
+    degiskenDegeri: bilinmiyor
+    resetType: 0
+  - degiskenAdi: "oyun men\xFC"
+    degiskenDegeri: liste
+    resetType: 0
+  modaGoreHafizaMetniBulunamadiAciklama:
+  - mod: "y\xFCz fal\u0131"
+    standartAciklama: "Benden hen\xFCz hi\xE7 y\xFCz fal\u0131 almad\u0131n."
+  - mod: "kahve fal\u0131 kar\u015F\u0131lama"
+    standartAciklama: "\u015Eimdiye kadar kahve i\xE7ti\u011Fin fincanlar\u0131 benimle
+      hi\xE7 payla\u015Fmad\u0131n."
+  - mod: "\xF6zl\xFCs\xF6z"
+    standartAciklama: "Hen\xFCz sana g\xFCn\xFCn \xF6zl\xFC s\xF6z\xFCn\xFC aktarmad\u0131m."
+  defaultHafizaMetniBulunamadiAciklama: "Arad\u0131\u011F\u0131n fal\u0131 hat\u0131rlayamad\u0131m."
+  randomButtonlar:
+  - butonAdi: zaman
+    butonIcerigi:
+    - "bir hafta i\xE7inde"
+    - "iki hafta i\xE7inde"
+    - "\xFC\xE7 hafta i\xE7inde"
+    - "d\xF6rt hafta i\xE7inde"
+    - bir aya kalmadan
+    - "bir ay\u0131 biraz ge\xE7kin bir zaman i\xE7inde"
+    - "iki haftay\u0131 birka\xE7 g\xFCn a\u015Fk\u0131n bir s\xFCre i\xE7inde"
+    - "\xFC\xE7 haftay\u0131 birka\xE7 g\xFCn a\u015Fk\u0131n bir s\xFCre i\xE7inde"
+    - "d\xF6rt haftay\u0131 birka\xE7 g\xFCn a\u015Fk\u0131n bir s\xFCre i\xE7inde"
+    - "be\u015F hafta kadar bir s\xFCre i\xE7inde"
+    - "\"1 ay d\xF6n\xFCm\xFC\" gibi k\u0131sa bir s\xFCre i\xE7inde"
+    - "\"2 ay d\xF6n\xFCm\xFC\" gibi bir s\xFCre i\xE7inde"
+    - "bir bu\xE7uk ay i\xE7inde"
+    - "alt\u0131 hafta kadar bir s\xFCre i\xE7erisinde"
+    - "3 ay\u0131 biraz ge\xE7kin bir s\xFCre i\xE7inde"
+    - "2 ay\u0131 biraz ge\xE7kin bir s\xFCre i\xE7erisinde"
+    - "2-3 hafta kadar bir zaman i\xE7erisinde"
+    - "3-4 hafta kadar bir s\xFCre i\xE7erisinde"
+    - "4-5 hafta kadar bir s\xFCre i\xE7erisinde"
+    - "yakla\u015F\u0131k 10-15 g\xFCn i\xE7erisinde"
+    - "4 ay gibi bir zaman i\xE7erisinde"
+    - "5 ay gibi bir zaman i\xE7erisinde"
+    - "6 ay gibi bir zaman i\xE7erisinde"
+    - "2 ay\u0131 birka\xE7 hafta ge\xE7e"
+    - "gelecek ay\u0131n ortalar\u0131na kadar"
+    - "gelecek ay\u0131n son \xE7eyre\u011Fine kadar"
+    - "gelecek ay\u0131n son g\xFCnleri i\xE7erisinde"
+    - "gelecek ay\u0131n son bir haftas\u0131 i\xE7erisinde"
+    - "6 ay 1 sene i\xE7erisinde"
+    - "bir seneden daha k\u0131sa bir s\xFCre i\xE7erisinde"
+    - "bir seneden belki birka\xE7 ay daha fazla bir s\xFCre i\xE7erisinde"
+    - "bir ya da iki sene i\xE7erisinde"
+    - "15-18 g\xFCn gibi bir zaman zarf\u0131nda"
+    - "12-15 g\xFCn gibi bir zaman zarf\u0131nda"
+    - "6-7 hafta sonraki ilk dolunay'dan birka\xE7 g\xFCn \xF6nce"
+    - "5 hafta sonraki ilk dolunay'dan birka\xE7 g\xFCn \xF6nce"
+    - "4 hafta sonraki ilk per\u015Fembe g\xFCn\xFCnde"
+    - "5 hafta sonraki ilk per\u015Fembe g\xFCn\xFCnde"
+    - "6 hafta sonraki ilk cumartesi g\xFCn\xFCnde"
+    - "7 hafta sonraki ilk pazartesi g\xFCn\xFCnde"
+    - "9 hafta sonraki ilk sal\u0131 g\xFCn\xFCnde"
+    - "10 hafta sonraki ilk cuma g\xFCn\xFCnde"
+    - "14 hafta sonraki ilk cuma g\xFCn\xFC \xF6\u011Fleden sonras\u0131"
+    - "2 ay sonraki ilk \xE7ar\u015Famba g\xFCn\xFC"
+    - "3 ay sonraki ilk \xE7ar\u015Famba g\xFCn\xFC"
+    - "3 ay sonra, havan\u0131n g\xFCzel oldu\u011Fu ilk g\xFCnlerin birinde"
+    - "4 ay sonra, havan\u0131n kapal\u0131 oldu\u011Fu ilk g\xFCnlerin birinde"
+    - "yakla\u015F\u0131k 2 ay sonra, takvimler \xF6zel bir g\xFCn\xFC g\xF6sterirken"
+    - "yakla\u015F\u0131k 3 ay sonra, takvimler \xF6zel bir g\xFCn\xFC g\xF6sterirken"
+    - "yakla\u015F\u0131k 4 ay sonra, takvimler \xF6zel bir g\xFCn\xFC g\xF6sterirken"
+    - "yakla\u015F\u0131k 5 hafta sonra, takvimler \xF6zel bir g\xFCne i\u015Faret
+      ederken"
+    - "yakla\u015F\u0131k 8 hafta sonra, takvimler \xF6zel bir g\xFCne i\u015Faret
+      ederken"
+    - "yakla\u015F\u0131k 8 hafta sonra, takvimler \xF6zel bir g\xFCne i\u015Faret
+      ederken"
+    - "3 haftay\u0131 birka\xE7 g\xFCn ge\xE7e"
+    - "4 haftay\u0131 birka\xE7 g\xFCn ge\xE7e"
+    - "5 haftay\u0131 birka\xE7 g\xFCn ge\xE7e"
+    - "6 haftay\u0131 birka\xE7 g\xFCn ge\xE7e"
+    - "7 haftay\u0131 birka\xE7 g\xFCn ge\xE7e"
+    - "8 haftay\u0131 birka\xE7 g\xFCn ge\xE7e"
+    - "9 haftay\u0131 birka\xE7 g\xFCn ge\xE7e"
+    - "10 hafta sonras\u0131na birka\xE7 g\xFCn kala"
+    - "tam 9 hafta sonras\u0131na birka\xE7 g\xFCn kala"
+    - "tam 8 hafta sonras\u0131na birka\xE7 g\xFCn kala"
+    - "tam 7 hafta sonras\u0131na iki \xFC\xE7 g\xFCn kala"
+    - "tam 6 hafta sonras\u0131na iki \xFC\xE7 g\xFCn kala"
+    - "11 g\xFCn sonra"
+    - "tahminen 12-13 g\xFCn sonra"
+    - "tahminen 13-14 g\xFCn sonra"
+    - "tahminen 14-15 g\xFCn sonra"
+    - "tahminen 15-16 g\xFCn sonra"
+    - "2 ay sonra, sevdi\u011Fin birinin do\u011Fum g\xFCn\xFCne g\xFCnler kala"
+    - "3 ay sonra, sevdi\u011Fin birinin do\u011Fum g\xFCn\xFCne g\xFCnler kala"
+    - "4 ay sonra, sevdi\u011Fin birinin do\u011Fum g\xFCn\xFCne g\xFCnler kala"
+    - "5 ay sonra, sevdi\u011Fin birinin do\u011Fum g\xFCn\xFCne g\xFCnler kala"
+    - "6 ay sonra, sevdi\u011Fin birinin do\u011Fum g\xFCn\xFCne g\xFCnler kala"
+    - "2 ay sonra, tan\u0131d\u0131\u011F\u0131n birinin do\u011Fum g\xFCn\xFCne
+      g\xFCnler kala"
+    - "2 ay sonra, tan\u0131d\u0131\u011F\u0131n birinin do\u011Fum g\xFCn\xFCne
+      \xFC\xE7 d\xF6rt g\xFCn kala"
+    - "3 ayl\u0131k bir s\xFCrede, tan\u0131d\u0131\u011F\u0131n birinin do\u011Fum
+      g\xFCn\xFCnden \xFC\xE7 d\xF6rt g\xFCn sonra"
+    - "4 ayl\u0131k bir s\xFCrede, tan\u0131d\u0131\u011F\u0131n birinin do\u011Fum
+      g\xFCn\xFCnden \xFC\xE7 d\xF6rt g\xFCn sonra"
+    - "5 ayl\u0131k bir s\xFCrede, senin i\xE7in \xF6zel olan bir g\xFCn\xFCn hemen
+      akabinde"
+    - "4 ayl\u0131k bir s\xFCrede, senin i\xE7in \xF6zel olan bir g\xFCn\xFCn hemen
+      akabinde"
+    - "3 ayl\u0131k bir s\xFCrede, senin i\xE7in \xF6zel olan bir g\xFCn\xFCn hemen
+      akabinde"
+    - "\xF6n\xFCm\xFCzdeki ilk bayramdan bir hafta kadar sonra"
+    - "\xF6n\xFCm\xFCzdeki ilk milli bayramdan birka\xE7 g\xFCn sonra"
+    - ilerleyen haftalarda
+    - ilerleyen aylarda
+    - "a\u015Fa\u011F\u0131 yukar\u0131 6-7 hafta sonra"
+    - "a\u015Fa\u011F\u0131 yukar\u0131 5-6 hafta sonra"
+    - "a\u015Fa\u011F\u0131 yukar\u0131 8-10 hafta sonra"
+    - "a\u015Fa\u011F\u0131 yukar\u0131 40 g\xFCn sonra"
+    - "a\u015Fa\u011F\u0131 yukar\u0131 iki bu\xE7uk \xFC\xE7 ay sonra"
+    - "a\u015Fa\u011F\u0131 yukar\u0131 \xFC\xE7 bu\xE7uk d\xF6rt ay sonra"
+    - "a\u015Fa\u011F\u0131 yukar\u0131 d\xF6rt bu\xE7uk be\u015F ay sonra"
+    - "a\u015Fa\u011F\u0131 yukar\u0131 40 hafta sonra"
+    - "a\u015Fa\u011F\u0131 yukar\u0131 30 hafta sonra"
+    - "a\u015Fa\u011F\u0131 yukar\u0131 20 hafta sonra"
+  - butonAdi: nereli
+    butonIcerigi:
+    - Karadenizli
+    - "Bulgar g\xF6\xE7meni"
+    - "Yugoslav g\xF6\xE7meni"
+    - "Ankaral\u0131"
+    - Kayserili
+    - "Bursal\u0131"
+    - "Eski\u015Fehirli"
+    - Mersinli
+    - "Adanal\u0131"
+    - "Urfal\u0131"
+    - "Mu\u011Flal\u0131"
+    - "Bal\u0131kesirli"
+    - "\u0130zmirli"
+    - "Konyal\u0131"
+    - Erzurumlu
+    - "Antalyal\u0131"
+    - "\u0130stanbullu"
+    - Gaziantepli
+    - "Malatyal\u0131"
+    - "Diyarbak\u0131rl\u0131"
+    - "Erzincanl\u0131"
+    - "Eski\u015Fehirli"
+    - "Ad\u0131yamanl\u0131"
+    - Bolulu
+    - "K\u0131r\u015Fehirli"
+    - "Hatayl\u0131"
+  - butonAdi: fiziki
+    butonIcerigi:
+    - uzun boylu
+    - "k\u0131sa boylu"
+    - orta boylu
+    - "uzun boylu, g\xF6zl\xFCkl\xFC"
+    - "k\u0131sa boylu, g\xF6zl\xFCkl\xFC"
+    - "senden ya\u015F\xE7a b\xFCy\xFCk, 1.70 boylar\u0131nda"
+    - "senden ya\u015F\xE7a b\xFCy\xFCk, 1.65 boylar\u0131nda"
+    - "senin ya\u015Flar\u0131nda, hafif kilolu"
+    - "senden 10 ya\u015F kadar b\xFCy\xFCk ve hafif kilolu"
+    - "senden 10 ya\u015F kadar b\xFCy\xFCk ve zay\u0131f\xE7a"
+    - "senden 3-5 ya\u015F kadar b\xFCy\xFCk ve esmer"
+    - orta boylu, esmer ve hafif toplu
+    - "uzun boylu, sar\u0131\u015F\u0131n"
+    - "orta boylu, sar\u0131\u015F\u0131n ve zay\u0131f\xE7a"
+    - "1.68 boylar\u0131nda, kumral"
+    - "1.65-1.70 boylar\u0131nda, koyu kumral"
+    - "1.60-1.65 boylar\u0131nda, a\xE7\u0131k kumral"
+    - "1.75-1.80 boylar\u0131nda esmer"
+    - "1.85 boylar\u0131nda, a\xE7\u0131k kumral"
+    - "1.85 boylar\u0131nda, a\xE7\u0131k kumral ve g\xF6zl\xFCkl\xFC"
+    - "1.85 boylar\u0131nda, a\xE7\u0131k kumral ve uzun sa\xE7l\u0131"
+    - "1.85 boylar\u0131nda, a\xE7\u0131k kumral ve k\u0131sa sa\xE7l\u0131"
+    - "1.75 boylar\u0131nda, sen ya\u015Flarda, a\xE7\u0131k kumral, g\xF6zl\xFCkl\xFC"
+    - "1.75 boylar\u0131nda, atletik yap\u0131l\u0131 "
+    - "1.70 boylar\u0131nda, atletik yap\u0131l\u0131 ve g\xF6zl\xFCkl\xFC "
+    - "1.85 boylar\u0131nda, atletik yap\u0131l\u0131, g\xF6zl\xFCkl\xFC"
+    - "1.80 boylar\u0131nda, senden 10-15 ya\u015F daha b\xFCy\xFCk ve hafif toplu"
+    - "1.80 boylar\u0131nda, klasik giyimli ve senden ya\u015F\xE7a b\xFCy\xFCk"
+    - "1.80 boylar\u0131nda, \u015F\u0131k giyimli ve senden ya\u015F\xE7a b\xFCy\xFCk"
+    - "1.80 boylar\u0131nda, sportif giyimli ve senden ya\u015F\xE7a b\xFCy\xFCk"
+    - "1.75 boylar\u0131nda, ye\u015Fil g\xF6zl\xFC"
+    - "1.70 boylar\u0131nda, renkli g\xF6zl\xFC"
+    - "1.65 boylar\u0131nda, mavi g\xF6zl\xFC"
+    - "1.65 boylar\u0131nda, k\u0131z\u0131l sa\xE7l\u0131"
+    - "1.70 boylar\u0131nda, k\u0131z\u0131l sa\xE7l\u0131"
+    - "1.70 boylar\u0131nda, hafif toplu ve ince sesli"
+    - "1.70 boylar\u0131nda, tombul yanakl\u0131 ve g\xF6zl\xFCkl\xFC"
+    - "1.75 boylar\u0131nda, tombul yanakl\u0131 ve g\xF6zl\xFCkl\xFC"
+    - "1.75 boylar\u0131nda, keskin y\xFCz hatlar\u0131na sahip"
+    - "1.65 boylar\u0131nda, keskin y\xFCz hatlar\u0131na sahip"
+    - "keskin bak\u0131\u015Fl\u0131 ve kumral"
+    - "keskin bak\u0131\u015Fl\u0131 ve sar\u0131\u015F\u0131n"
+    - "keskin bak\u0131\u015Fl\u0131 ve esmer"
+    - "bak\u0131\u015Flar\u0131 huzur veren, orta boylu ve hafif toplu"
+    - "burnunda hafif e\u011Frilik olan senden ya\u015F\xE7a b\xFCy\xFCk"
+    - "y\xFCz\xFCnde yara izi olan 1.70 boylar\u0131nda"
+    - "y\xFCz\xFCnde yara izi olan 1.80 boylar\u0131nda"
+    - "y\xFCz\xFCnde yara izi olan 1.85 boylar\u0131nda"
+    - "y\xFCz\xFCnde ben olan yuvarlak hatl\u0131"
+    - "g\xFCzel g\xFClen orta boylu"
+    - "sa\xE7lar\u0131na aklar d\xFC\u015Fm\xFC\u015F senden ya\u015F\xE7a b\xFCy\xFCk"
+    - "1.75 boylar\u0131nda, gamzeli"
+    - "1.85 boylar\u0131nda, gamzeli"
+    - "1.65 boylar\u0131nda, gamzeli"
+    - "gamzeli, g\xF6zl\xFCkl\xFC ve uzun boylu"
+    - "esmer, renkli ve iri g\xF6zlere sahip"
+    - "sar\u0131\u015F\u0131n, renkli ve iri g\xF6zlere sahip"
+    - "kumral, renkli ve iri g\xF6zlere sahip"
+    - "iri kahverengi g\xF6zlere sahip, hafif toplu"
+    - "sert bak\u0131\u015Fl\u0131, koyu kumral"
+  - butonAdi: sessizharf
+    butonIcerigi:
+    - C
+    - "\xC7"
+    - D
+    - F
+    - G
+    - H
+    - K
+    - L
+    - M
+    - N
+    - P
+    - R
+    - S
+    - "\u015E"
+    - T
+    - V
+    - Y
+    - Z
+  - butonAdi: sesliharf
+    butonIcerigi:
+    - A
+    - E
+    - I
+    - "\u0130"
+    - O
+    - "\xD6"
+    - U
+    - "\xDC"
+  - butonAdi: pahalisaat
+    butonIcerigi:
+    - Rolex
+    - Patek Philippe
+    - Hublot
+    - Zenith
+    - IWC
+    - Panerai
+    - Tag Heuer
+    - Cartier
+    - Omega
+    - Tudor
+    - Seiko
+    - Audemars Piguet
+    - Richard Mille
+    - Longines
+    - Vacheron Constantin
+    - Breitling
+  - butonAdi: erkekisim
+    butonIcerigi:
+    - Hasan
+    - Ali
+    - Ahmet
+    - Arda
+    - "B\xFClent"
+    - Berk
+    - Bora
+    - Besim
+    - Bilal
+    - Cem
+    - "C\xFCneyt"
+    - Cemal
+    - Deniz
+    - Doruk
+    - Erhan
+    - Emir
+    - Emin
+    - Fatih
+    - "F\u0131rat"
+    - Fuat
+    - "G\xFCrhan"
+    - Hasan
+    - "H\xFCseyin"
+    - Hikmet
+    - "Ha\u015Fim"
+    - Hayri
+    - Hidayet
+    - "\u0130smail"
+    - Kemal
+    - Karan
+    - Kaan
+    - Kuzey
+    - Kerem
+    - Levent
+    - Mustafa
+    - Murat
+    - Mert
+    - Merih
+    - Musa
+    - Mehmet
+    - Melih
+    - Nihat
+    - Nuri
+    - Osman
+    - Orhan
+    - Orhun
+    - "Or\xE7un"
+    - "\xD6mer"
+    - "\xD6nder"
+    - Pars
+    - Remzi
+    - "R\u0131za"
+    - "R\u0131dvan"
+    - Salih
+    - Saffet
+    - Sinan
+    - Selim
+    - Serkan
+    - Serhat
+    - "Serta\xE7"
+    - Soner
+    - Suat
+    - "\u015Eahin"
+    - Tufan
+    - Tayfun
+    - Timur
+    - Tan
+    - "U\u011Fur"
+    - Umut
+    - Ufuk
+    - "Ula\u015F"
+    - "\xDCmit"
+    - Veysel
+    - Yavuz
+    - Yaman
+    - Yakup
+    - "Yi\u011Fit"
+    - "Y\xFCcel"
+    - Edis
+    - Orkun
+    - Enes
+    - Zeki
+    - Ziya
+    - Eralp
+    - Hamdi
+    - Hakan
+    - Emre
+    - Mahmut
+  - butonAdi: kadinisim
+    butonIcerigi:
+    - Asuman
+    - Aycan
+    - "Ay\u015Fe"
+    - "Ay\u015Fen"
+    - Ayten
+    - "Birg\xFCl"
+    - Berrin
+    - Bilge
+    - Candan
+    - Cansel
+    - Derin
+    - Derya
+    - Ebru
+    - Ela
+    - Eda
+    - Esin
+    - Esra
+    - Emine
+    - "G\xF6k\xE7e"
+    - "G\xF6ksel"
+    - "G\xF6n\xFCl"
+    - "G\xFClsen"
+    - "G\xFClcan"
+    - Gamze
+    - "I\u015F\u0131l"
+    - "Ilg\u0131n"
+    - "\u0130rem"
+    - "\u0130mre"
+    - Leyla
+    - Lara
+    - Leman
+    - Liya
+    - "L\xFCtfiye"
+    - Mehtap
+    - Melda
+    - Melek
+    - Melis
+    - Melisa
+    - Meltem
+    - "Menek\u015Fe"
+    - Meral
+    - Mine
+    - Mina
+    - Miray
+    - "M\xFCge"
+    - Naciye
+    - Nalan
+    - Naz
+    - Nagehan
+    - Nehir
+    - "Nazl\u0131"
+    - Nergis
+    - Neriman
+    - Neslihan
+    - "Nev\u015Fin"
+    - Nevin
+    - Nevra
+    - Nida
+    - Nihan
+    - Nil
+    - Nisa
+    - Nur
+    - Nuray
+    - Nurdan
+    - "Nurg\xFCl"
+    - Nuriye
+    - Nurten
+    - "N\xFCkhet"
+    - Oya
+    - "\xD6yk\xFC"
+    - "\xD6zge"
+    - "\xD6zlem"
+    - "\xD6znur"
+    - Pakize
+    - Pelin
+    - "P\u0131nar"
+    - Pervin
+    - Petek
+    - Remziye
+    - Reyhan
+    - "Ruh\u015Fen"
+    - Rengin
+    - "R\xFCya"
+    - Saliha
+    - Safiye
+    - Sanem
+    - "Se\xE7il"
+    - Selda
+    - Sanem
+    - Senem
+    - Sinem
+    - Selcen
+    - Selcan
+    - Sedef
+    - Selvi
+    - Sema
+    - Semra
+    - Sena
+    - Serpil
+    - Serra
+    - Sevda
+    - Sevgi
+    - "Sevin\xE7"
+    - Seyhan
+    - Sezen
+    - Selda
+    - Sinem
+    - "S\u0131rma"
+    - "S\u0131la"
+    - Sibel
+    - Simge
+    - Sude
+    - Suzan
+    - Suna
+    - "\u015Eebnem"
+    - "\u015Eahsenem"
+    - "\u015Eehnaz"
+    - "\u015Eeng\xFCl"
+    - "\u015Eennur"
+    - "\u015Eeyda"
+    - "\u015Eeyma"
+    - Ceyda
+    - "\u015Eule"
+    - Tilbe
+    - Tuba
+    - "Tu\u011Fba"
+    - Tuna
+    - "T\xFClay"
+    - Tutku
+    - Ergi
+    - "\xDClkem"
+    - "\xDCmran"
+    - Vahide
+    - Vildan
+    - "Ya\u011Fmur"
+    - "Yank\u0131"
+    - Yaprak
+    - Yasemin
+    - "Y\u0131ld\u0131z"
+    - Yelda
+    - Yonca
+    - "Ye\u015Fim"
+    - Yeliz
+    - Yudum
+    - Zehra
+    - Zeliha
+    - Zerrin
+    - Zara
+    - Zambak
+    - Zeynep
+    - "Zi\u015Fan"
+    - Dilan
+    - "Z\xFCmr\xFCt"
+    - Zuhal
+  - butonAdi: fizikierkek
+    butonIcerigi:
+    - "uzun boylu, yak\u0131\u015F\u0131kl\u0131"
+    - "orta boylu, geni\u015F omuzlu"
+    - "1.80 boylar\u0131nda ve koyu kumral"
+    - "1.85 boylar\u0131nda ve a\xE7\u0131k kumral"
+    - "1.80 boylar\u0131nda ve a\xE7\u0131k tenli"
+    - "1.85'den daha uzun, a\xE7\u0131k tenli ve yak\u0131\u015F\u0131kl\u0131"
+    - "uzunca boylu, renkli g\xF6zl\xFC ve bak\u0131ml\u0131"
+    - "uzunca boylu, hafif g\xF6bekli ancak geni\u015F omuzlu"
+    - "g\xF6zl\xFCkl\xFC, a\xE7\u0131k tenli ve \xE7ok yak\u0131\u015F\u0131kl\u0131"
+    - "kumral, g\xF6zl\xFCkl\xFC ve \xE7ok zeki"
+    - "atletik yap\u0131l\u0131, bak\u0131ml\u0131 ve kirli sakall\u0131"
+    - "yak\u0131\u015F\u0131kl\u0131, g\xFCzel y\xFCzl\xFC ve konu\u015Fkan"
+    - "siyah sa\xE7l\u0131, a\xE7\u0131k tenli ve mask\xFClen"
+    - "sar\u0131 sa\xE7l\u0131, renkli g\xF6zl\xFC ve atletik yap\u0131l\u0131"
+    - "boylu poslu, iri yap\u0131l\u0131 ve a\xE7\u0131k kumral"
+    - "a\xE7\u0131k tenli, renkli g\xF6zl\xFC ve karizmatik"
+    - "bu\u011Fday tenli, kahverengi g\xF6zl\xFC ve \xE7ok yak\u0131\u015F\u0131kl\u0131"
+    - "uzun boylu, karizmatik ve diksiyonu \xE7ok d\xFCzg\xFCn"
+    - "orta boylu, renkli g\xF6zl\xFC ve \xE7ok yak\u0131\u015F\u0131kl\u0131"
+    - "siyah sa\xE7l\u0131, g\xF6zleri hafif \xE7ekik ve olduk\xE7a zeki"
+    - "sa\xE7lar\u0131 \u0131\u015F\u0131kta k\u0131z\u0131la \xE7alan, keskin y\xFCz
+      hatlar\u0131na sahip ve \xE7ok al\u0131ml\u0131"
+    - "genellikle resmi giyinen, g\xFCzel y\xFCzl\xFC ve romantik"
+    - "genellikle spor giyim tercih eden, uzun boylu ve ela g\xF6zl\xFC"
+    - "i\u015Fi gere\u011Fi \xFCniforma giyen, a\xE7\u0131k kumral ve yuvarlak hatl\u0131"
+    - "uzunca boylu, k\u0131sa sa\xE7l\u0131, di\u015Fleri ve elleri \xE7ok g\xFCzel"
+    - "dalgal\u0131 sa\xE7lara sahip, g\xF6zl\xFCkl\xFC ve \xE7ok g\xFCzel g\xFClen"
+    - "d\xFCz ve uzunca sa\xE7lara sahip, karizmatik ve g\xFCzel g\xF6zl\xFC"
+    - "sa\xE7lar\u0131n\u0131 k\u0131sac\u0131k kestiren, y\xFCz\xFC \xE7ok g\xFCzel
+      ve kendine g\xFCvenen"
+    - "zeki oldu\u011Fu bak\u0131\u015Flar\u0131ndan dahi belli olan, uzunca boylu
+      ve kumral"
+    - "gereksiz konu\u015Fmay\u0131 \xE7ok sevmeyen, k\u0131sa sa\xE7l\u0131 ve etkileyici
+      bak\u0131\u015Flara sahip"
+    - "yuvarlak hatlara ve bak\u0131ml\u0131 sa\xE7lara sahip, 1.84 boylar\u0131nda"
+    - "i\u015Fi gere\u011Fi \xE7ok seyahat eden, 1.85'den biraz uzun, k\u0131sa sa\xE7l\u0131
+      ve yak\u0131\u015F\u0131kl\u0131"
+    - "mesle\u011Fi gere\u011Fi insanlarla \xE7ok i\xE7li d\u0131\u015Fl\u0131 olan,
+      a\xE7\u0131k kumral ve yak\u0131\u015F\u0131kl\u0131"
+    - "v\xFCcudunda bir ya da birden fazla d\xF6vmesi olan, koyu kumral ve orta boylu"
+    - "sa\xE7lar\u0131 uzunca say\u0131labilecek, geni\u015F al\u0131nl\u0131, iri
+      ve renkli g\xF6zlere sahip"
+    - "1.80-1.85 boylar\u0131nda, g\xFCzel bakan ve di\u015Fleri \xE7ok d\xFCzg\xFCn"
+    - "1.85'den daha uzun, hafif gamzeleri ve kirli sakal\u0131 olan"
+    - "sana yabanc\u0131 gelmeyecek bir simas\u0131 olan, \xE7ok yak\u0131\u015F\u0131kl\u0131
+      ve beyefendi"
+    - "spor yapt\u0131\u011F\u0131 kollar\u0131ndan belli olan, orta-uzun boylu ve
+      karizmatik ses tonuna sahip"
+    - "1.80 civarlar\u0131nda, keskin g\xF6z ve burun yap\u0131s\u0131na sahip, \xE7ok
+      esprit\xFCel"
+    - "marka giyinmeyi tercih eden, teni a\xE7\u0131k bu\u011Fday ve hayli yak\u0131\u015F\u0131kl\u0131"
+    - "dijital saat takmay\u0131 tercih eden, uzunca boylu ve \xE7ok okumu\u015F"
+    - "y\xFCksel tahsilli, iyi kalpli ve uzunca boylu"
+    - "analog saat takmay\u0131 tercih eden, g\xFCl\xFCnce g\xF6zlerinden \u0131\u015F\u0131k
+      sa\xE7an, uzun boylu"
+    - "saat ve aksesuar takmay\u0131 sevmeyen, sade ama yak\u0131\u015F\u0131kl\u0131"
+    - "insanlar taraf\u0131ndan fiziki anlamda \xE7ok be\u011Fenilen, uzun boylu
+      ve geni\u015F omuzlu"
+    - "sol koluna bileklik sa\u011F koluna ise saat takan, renkli g\xF6zl\xFC"
+    - "sa\u011F koluna bileklik ve sol koluna ise saat takan, az konu\u015Fan ve
+      olduk\xE7a zeki"
+    - "saatinin yan\u0131na bileklik takan ve klasik giyinmeyi seven, uzunca boylu,
+      kahverengi g\xF6zl\xFC"
+    - "orta boylu, aksesuar takmay\u0131 seven ve \xE7ok etkileyici y\xFCz hatlar\u0131na
+      sahip"
+    - "boyu 1.78'lerde, k\u0131sa ve dalgal\u0131 sa\xE7lar\u0131 olan, \xE7ok ho\u015F
+      g\xFClen"
+    - "ciddi bir duru\u015Fa ve y\xFCksek bir auraya sahip, insanlar\u0131 etkilemeyi
+      iyi bilen"
+    - "harika \xE7ene hatlar\u0131na sahip, uzunca boylu ve hafif kirli sakall\u0131"
+    - "k\u0131sa sa\xE7l\u0131, iyi giyinen ve top sakall\u0131"
+    - "g\xFCzel bakan, g\xFCzel g\xFClen, kasl\u0131, karizmatik ve g\xF6zl\xFCkl\xFC"
+    - "aksesuar takmay\u0131 seven, iyi giyinen ve kendine \xE7ok bakan"
+    - "1.80'den biraz k\u0131sa, ka\u015F\u0131 g\xF6z\xFC \xE7ok d\xFCzg\xFCn ve
+      her konuda bilgisi olan"
+    - "esmer, g\xF6zleri ye\u015File \xE7alan ve boyu olduk\xE7a uzun"
+    - "uzun sa\xE7l\u0131, esmer ve atletik say\u0131labilecek v\xFCcuda sahip"
+    - "uzunca boylu, k\u0131sa sa\xE7l\u0131 ve kafa \u015Fekli olduk\xE7a d\xFCzg\xFCn"
+    - "y\xFCz\xFCn\xFCn sa\u011F taraf\u0131nda hafif fa\xE7as\u0131 bulunan, g\xFCzel
+      g\xF6zl\xFC ve beyefendi"
+    - "y\xFCz\xFCn\xFCn sol taraf\u0131nda k\xFC\xE7\xFCk bir izi bulunan, karizmatik
+      ve e\u011Fitimli"
+    - "\xFC\xE7gen v\xFCcutlu, g\xFCzel g\xFClen, g\xF6zl\xFCks\xFCz ve \xE7ok az
+      konu\u015Fan"
+    - "aktif olarak spor yapt\u0131\u011F\u0131 i\xE7in fizi\u011Fi bir hayli d\xFCzg\xFCn,
+      uzunca boylu ve cana yak\u0131n"
+    - "sa\xE7lar\u0131 \xE7ok \xE7ok k\u0131sa, temiz y\xFCzl\xFC ve \xF6z\xFC s\xF6z\xFC
+      do\u011Fru"
+    - "k\u0131sa sa\xE7l\u0131, orta boylu, hafif kilolu ve \xE7ok iyi kalpli"
+    - "koyu kumral sa\xE7lara sahip, iri yap\u0131l\u0131 ve masmavi g\xF6zleri olan"
+    - "a\xE7\u0131k kumral sa\xE7lara sahip, atletik ve yemye\u015Fil g\xF6zleri
+      olan"
+    - siyah renkte giyinmeyi seven, uzun boylu ve hafif toplu
+  - butonAdi: fizikikadin
+    butonIcerigi:
+    - "uzun boylu, al\u0131ml\u0131 ve olduk\xE7a da bak\u0131ml\u0131"
+    - "orta boylu, zarif ellere ve g\xFCzel g\xF6zlere sahip"
+    - "1.70 boylar\u0131nda ve koyu kumral"
+    - "1.65 boylar\u0131nda ve a\xE7\u0131k kumral"
+    - "1.80 boylar\u0131nda ve a\xE7\u0131k tenli"
+    - "1.65'den daha uzun, a\xE7\u0131k tenli ve \xE7ok g\xFCzel"
+    - "uzunca boylu, renkli g\xF6zl\xFC ve bak\u0131ml\u0131"
+    - ince ve uzun boylu, kaliteli giyinen
+    - "g\xF6zl\xFCkl\xFC, a\xE7\u0131k tenli ve p\u0131r\u0131l p\u0131r\u0131l parlayan
+      siyah sa\xE7lara sahip"
+    - "kumral, g\xF6zl\xFCkl\xFC ve \xE7ok zeki"
+    - "uzun boylu, geni\u015F a\u011F\u0131zl\u0131 ve manken gibi"
+    - "\xE7ok al\u0131ml\u0131, g\xFCzel y\xFCzl\xFC ve konu\u015Fkan"
+    - "siyah sa\xE7l\u0131, a\xE7\u0131k tenli ve \xE7ok \xE7ekici"
+    - "sar\u0131 sa\xE7l\u0131, renkli g\xF6zl\xFC ve yuvarlak hatlara sahip"
+    - "boylu poslu, zay\u0131f ve a\xE7\u0131k kumral"
+    - "a\xE7\u0131k tenli, renkli g\xF6zl\xFC ve b\xFCy\xFCleyici g\xF6zlere sahip"
+    - "bu\u011Fday tenli, kahverengi g\xF6zl\xFC ve \xE7ok ho\u015F g\xFClen"
+    - "uzun boylu, fizi\u011Fi d\xFCzg\xFCn ve harika ses tonuna sahip"
+    - "orta boylu, renkli g\xF6zl\xFC ve \xE7ok do\u011Fal"
+    - "siyah sa\xE7l\u0131, g\xF6zleri hafif \xE7ekik ve konu\u015Fmas\u0131yla insan\u0131
+      b\xFCy\xFCleyen"
+    - "sa\xE7lar\u0131 \u0131\u015F\u0131kta k\u0131z\u0131la \xE7alan, keskin y\xFCz
+      hatlar\u0131na sahip ve \xE7ok al\u0131ml\u0131"
+    - "genellikle resmi giyinen, g\xFCzel y\xFCzl\xFC ve romantik"
+    - "genellikle spor giyim tercih eden, uzun boylu ve ela g\xF6zl\xFC"
+    - "i\u015Fi gere\u011Fi \xFCniforma giyen, a\xE7\u0131k kumral ve yuvarlak hatl\u0131"
+    - "uzunca boylu, k\u0131sa sa\xE7l\u0131, di\u015Fleri ve elleri \xE7ok g\xFCzel"
+    - "dalgal\u0131 sa\xE7lara sahip, g\xF6zl\xFCkl\xFC ve \xE7ok g\xFCzel g\xFClen"
+    - "d\xFCz ve uzunca sa\xE7lara sahip, iyi kalpli ve g\xFCzel g\xF6zl\xFC"
+    - "sa\xE7lar\u0131n\u0131 k\u0131sac\u0131k kestiren, y\xFCz\xFC \xE7ok g\xFCzel
+      ve kendine g\xFCvenen"
+    - "zeki oldu\u011Fu bak\u0131\u015Flar\u0131ndan dahi belli olan, uzunca boylu
+      ve kumral"
+    - "gereksiz konu\u015Fmay\u0131 \xE7ok sevmeyen, k\u0131v\u0131rc\u0131k sa\xE7lara
+      ve etkileyici bak\u0131\u015Flara sahip"
+    - "yuvarlak hatlara ve bak\u0131ml\u0131 sa\xE7lara sahip, 1.84 boylar\u0131nda"
+    - "i\u015Fi gere\u011Fi \xE7ok seyahat eden, 1.75'den biraz uzun, k\xFCt sa\xE7l\u0131
+      ve k\xFCpe takmayan"
+    - "mesle\u011Fi gere\u011Fi insanlarla \xE7ok i\xE7li d\u0131\u015Fl\u0131 olan,
+      sar\u0131\u015F\u0131n ve yuvarlak y\xFCzl\xFC"
+    - "v\xFCcudunda bir ya da birden fazla d\xF6vmesi olan, koyu kumral ve orta boylu"
+    - "sa\xE7lar\u0131 uzunca say\u0131labilecek, geni\u015F al\u0131nl\u0131, iri
+      ve renkli g\xF6zlere sahip"
+    - "1.80-1.85 boylar\u0131nda, g\xFCzel bakan ve di\u015Fleri \xE7ok d\xFCzg\xFCn"
+    - "1.85'den daha uzun, hafif gamzeleri ve upuzun sa\xE7lar\u0131 olan"
+    - "sana yabanc\u0131 gelmeyecek bir simas\u0131 olan, \xE7ok tatl\u0131 konu\u015Fan
+      ve han\u0131mefendi"
+    - "spor yapt\u0131\u011F\u0131 fizi\u011Finden olan, orta-uzun boylu ve \u0131\u015F\u0131l
+      \u0131\u015F\u0131l g\xF6zlere sahip"
+    - "1.80 civarlar\u0131nda, keskin g\xF6z ve burun yap\u0131s\u0131na sahip, \xE7ok
+      esprit\xFCel"
+    - "marka giyinmeyi tercih eden, bu\u011Fday tenli ve buram buram parf\xFCm kokan"
+    - "dijital saat takmay\u0131 tercih eden, uzunca boylu, p\u0131rlanta k\xFCpeleri
+      olan ve \xE7ok okumu\u015F"
+    - "y\xFCksel tahsilli, iyi kalpli ve uzunca boylu"
+    - "analog saat takmay\u0131 tercih eden, g\xFCl\xFCnce g\xF6zlerinden \u0131\u015F\u0131k
+      sa\xE7an, uzun boylu"
+    - "saat ve aksesuar takmay\u0131 sevmeyen, sade ama g\xFCzelli\u011Fiyle g\xF6zleri
+      kama\u015Ft\u0131ran"
+    - "insanlar taraf\u0131ndan fiziki anlamda \xE7ok be\u011Fenilen, uzun boylu
+      ve sar\u0131 sa\xE7l\u0131"
+    - "sol koluna bileklik sa\u011F koluna ise saat takan, renkli g\xF6zl\xFC"
+    - "sa\u011F koluna bileklik ve sol koluna ise saat takan, az konu\u015Fan ve
+      cam mavisi g\xF6zlere sahip"
+    - "saatinin yan\u0131na bileklik takan ve klasik giyinmeyi seven, uzunca boylu,
+      kahverengi g\xF6zl\xFC"
+    - "orta boylu, aksesuar takmay\u0131 seven ve \xE7ok etkileyici y\xFCz hatlar\u0131na
+      sahip"
+    - "boyu 1.68'lerde, k\u0131sa ve dalgal\u0131 sa\xE7lar\u0131 olan, \xE7ok ho\u015F
+      g\xFClen"
+    - "ciddi bir duru\u015Fa ve y\xFCksek bir auraya sahip, insanlar\u0131 etkilemeyi
+      iyi bilen"
+    - "harika elmac\u0131k kemiklerine sahip, uzunca boylu ve hafif \xE7illeri olan"
+    - "k\u0131sa sa\xE7l\u0131, iyi giyinen ve g\xF6zleri i\xE7in lens kullanan"
+    - "g\xFCzel bakan, g\xFCzel g\xFClen, g\xF6zl\xFCkl\xFC ve \xE7ok iyi kalpli"
+    - "aksesuar takmay\u0131 seven, iyi giyinen ve kendine \xE7ok bakan"
+    - "1.80'den biraz k\u0131sa, ka\u015F\u0131 g\xF6z\xFC \xE7ok d\xFCzg\xFCn ve
+      her konuda bilgisi olan"
+    - "esmer, g\xF6zleri ye\u015File \xE7alan ve boyu olduk\xE7a uzun"
+    - "uzun sa\xE7l\u0131, esmer, tek kula\u011F\u0131na k\xFCpe takan ve atletik
+      say\u0131labilecek v\xFCcuda sahip"
+    - "uzunca boylu, sapsar\u0131 sa\xE7lar\u0131 olan ve boynunda yara izi ta\u015F\u0131yan"
+    - "sa\u011F omuzunda ben bulunan, orta boy sa\xE7lara sahip, renkli g\xF6zl\xFC"
+    - "y\xFCz\xFCn\xFCn sol taraf\u0131nda k\xFC\xE7\xFCk bir izi bulunan, hafif
+      toplu ve iyi e\u011Fitimli"
+    - "bir miktar kilolu, g\xFCzel g\xFClen, g\xF6zl\xFCks\xFCz ve \xE7ok az konu\u015Fan"
+    - "aktif olarak spor yapt\u0131\u011F\u0131 i\xE7in fizi\u011Fi bir hayli d\xFCzg\xFCn,
+      uzunca boylu ve cana yak\u0131n"
+    - "sa\xE7lar\u0131 \xE7ok \xE7ok parlak, makyaj yapmay\u0131 seven ve inci gibi
+      g\xFClen"
+    - "kahk\xFCll\xFC, orta boylu, hafif kilolu ve a\xE7\u0131k ye\u015Fil g\xF6zlere
+      sahip"
+    - "g\xFCne\u015Ften yanm\u0131\u015F bir tene ve masmavi g\xF6zlere sahip olan,
+      orta boylu"
+    - "a\xE7\u0131k kumral sa\xE7lara sahip, atletik ve bal rengi g\xF6zleri olan"
+    - siyah renkte giyinmeyi seven, uzun boylu ve hafif toplu
+  - butonAdi: "g\xFCne\u015Fg\xF6zl\xFC\u011F\xFC"
+    butonIcerigi:
+    - Ray-Ban
+    - Mustang
+    - Prada
+    - Chanel
+    - Fendi
+    - Dolce & Gabanna
+    - Guess
+    - Osse
+    - Daniel Klein
+    - Vogue
+    - Tom Ford
+    - Inesta
+    - Hawk
+  - butonAdi: arabalar
+    butonIcerigi:
+    - BMW
+    - Mercedes
+    - Seat
+    - Audi
+    - Ford
+    - Renault
+    - Mazda
+    - Fiat
+    - Citroen
+    - Suzuki
+    - Volvo
+    - Skoda
+    - Honda
+    - Hyundai
+    - Opel
+    - Peugeot
+    - Kia
+    - Volkswagen
+    - Dacia
+    - Daihatsu
+    - Alfa Romeo

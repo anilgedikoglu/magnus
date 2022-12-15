@@ -211,7 +211,14 @@ public class AnswerBubble : MonoBehaviour
         }
         else
         {
-            sonrakiSohbet = sohbet.cevaplar[bubbleType - 1].sonrakiSohbetHavuzu;
+            var sohbetSonra = sohbet.cevaplar[bubbleType - 1].CurrentSonrakiSohbetHavuzu;
+
+            if (sohbetSonra != null)
+                Debug.Log(sohbetSonra.GetSohbetId());
+            else
+                Debug.Log("Sonraki sohbet yok");
+
+            sonrakiSohbet = sohbetSonra;
             takipSohbet = sohbet.cevaplar[bubbleType - 1].takipSohbeti;
         }
     }
@@ -1375,20 +1382,14 @@ public class AnswerBubble : MonoBehaviour
         }
 
         if (contentImage.sprite != null)
-            Debug.Log(contentImage.sprite.name);
 
         if (contentImage.sprite != null)
         {
-            Debug.Log(contentImage.sprite.name);
-
             var checkedSprite = ContentImageBugunGeldiKontrol(contentImage.sprite);
 
             if (checkedSprite != null)
                 contentImage.sprite = checkedSprite;
         }
-
-        if (contentImage.sprite != null)
-            Debug.Log(contentImage.sprite.name);
 
         contentImage.gameObject.SetActive(true);
     }

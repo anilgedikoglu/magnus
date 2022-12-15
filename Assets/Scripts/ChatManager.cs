@@ -332,6 +332,13 @@ public class ChatManager : MonoBehaviour
                         if (!otomatikOdak)
                             sohbetTimer -= Time.deltaTime;
 
+                        if (sohbetTimer <= 0)
+                        {
+                            InitiazeTimerSohbet();
+                            timerBackground.SetActive(false);
+                            kelebekLogo.SetActive(true);
+                        }
+
                         if (sohbet.sayacTipi == Sohbet.sayacTipiEnum.textEkranda || sohbet.sayacTipi == Sohbet.sayacTipiEnum.barVeEkrandaText)
                         {
                             timerBackground.SetActive(true);
@@ -351,13 +358,6 @@ public class ChatManager : MonoBehaviour
                             kelebekLogo.SetActive(true);
                         }
                     }
-                }
-                else if (sohbetTimer < 0)
-                {
-                    InitiazeTimerSohbet();
-                    sohbetTimer = 0;
-                    timerBackground.SetActive(false);
-                    kelebekLogo.SetActive(true);
                 }
             }
             else
@@ -3347,6 +3347,11 @@ public class ChatManager : MonoBehaviour
         {
             PlayerDataManager.AddElementToChatVariableList("mod", sohbet.sayacModu);
         }
+        else
+        {
+            Debug.Log(sohbet.sayacModu);
+            Debug.Log(sohbetTimer);
+        }
         sohbetTimer = 0;
         timerBackground.SetActive(false);
         kelebekLogo.SetActive(true);
@@ -4804,7 +4809,7 @@ public class ChatManager : MonoBehaviour
 
     void InitiazeTimerSohbet()
     {
-        ClickAnswerBubble(sohbet.sayacSohbeti, 0, 0, false);
+        ClickAnswerBubble(sohbet.CurrentSayacSohbeti, 0, 0, false);
 
     }
 

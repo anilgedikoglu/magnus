@@ -35,6 +35,7 @@ MonoBehaviour:
     delil g\xF6stererek semavi cisimlerin \xFCst\xFCn, hayat ve ak\u0131l sahibi
     varl\u0131klar olduklar\u0131n\u0131 s\xF6yler."
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -42,7 +43,7 @@ MonoBehaviour:
     - "G\xFCnl\xFCk Astroloji"
     contentImage:
       imageId: 
-      gifId: 8YYkdKkbs4tNSuN1WS
+      gifId: 
       image: {fileID: 21300000, guid: 3a256fd70d88d40238df9f7fecbc58da, type: 3}
     contentPhoto: {fileID: 21300000, guid: 2d805a7c2bba77c46a24f87895db6498, type: 3}
     contentPhotoId: burc
@@ -73,7 +74,7 @@ MonoBehaviour:
     - Biyoritim
     contentImage:
       imageId: 
-      gifId: xNNea8v4SHI2piLDK3
+      gifId: 
       image: {fileID: 21300000, guid: 7c0091a6a6f3045ffbb37cd53695623b, type: 3}
     contentPhoto: {fileID: 21300000, guid: 846954eb7374e5440935f51580556186, type: 3}
     contentPhotoId: biyoritim
@@ -104,7 +105,7 @@ MonoBehaviour:
     - "Do\u011Fum Haritas\u0131"
     contentImage:
       imageId: 
-      gifId: tyWjgNg9iibY7k10R5
+      gifId: 
       image: {fileID: 21300000, guid: 2a95969c063f040ac86f13a8b4071134, type: 3}
     contentPhoto: {fileID: 21300000, guid: 945cb18dc88ed47cdbbb76021ea4ecf1, type: 3}
     contentPhotoId: dogumharitasi
@@ -135,7 +136,7 @@ MonoBehaviour:
     - "A\u015Fk Uyumu"
     contentImage:
       imageId: 
-      gifId: 0C1hzp5aR8ExxKkkVU
+      gifId: 
       image: {fileID: 21300000, guid: 5d26c5b2515c44e6d8e1b02c50fe8d32, type: 3}
     contentPhoto: {fileID: 21300000, guid: 593cc4c4e197a814598b9a96ea6e3680, type: 3}
     contentPhotoId: askuyumu
@@ -189,7 +190,7 @@ MonoBehaviour:
     - Geri git
     contentImage:
       imageId: 
-      gifId: 5AlDZql0RkRS2uthw2
+      gifId: 
       image: {fileID: 21300000, guid: f1f014b76fee5450190731a8feeabada, type: 3}
     contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
     contentPhotoId: back

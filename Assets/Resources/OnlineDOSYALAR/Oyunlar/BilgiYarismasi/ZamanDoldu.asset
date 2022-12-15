@@ -32,6 +32,7 @@ MonoBehaviour:
   aciklama:
   - "\xDCzg\xFCn\xFCm, zaman doldu! Yar\u0131\u015Fmay\u0131 kaybettin {{isim}}..."
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -48,6 +49,9 @@ MonoBehaviour:
     ayarlanacakDegiskenler: []
     secenekDegiskenleri: []
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 1
@@ -72,6 +76,9 @@ MonoBehaviour:
     ayarlanacakDegiskenler: []
     secenekDegiskenleri: []
     gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
       enerji: 0
       kons: 0
     reklamGoster: 0

@@ -93,6 +93,7 @@ MonoBehaviour:
   - "G\xF6zler sana \xE7evrilmi\u015F durumda {{isim}}. Hangisi?"
   - "L\xFCtfen arzu etti\u011Fin se\xE7ene\u011Fe dokun."
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -230,46 +231,12 @@ MonoBehaviour:
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
-      degiskenDegeri: "oyunmen\xFC"
+      degiskenDegeri: "oyunmen\xFCx"
       islem: 0
     gerekliDegiskenler:
     - degiskenAdi: plus
       degiskenDegeri: var
       kontrol: 1
-    sonrakiSohbetHavuzu: {fileID: 0}
-    takipSohbeti: {fileID: 0}
-    ozelFonksiyon: 
-  - cevapVaryasyonlari:
-    - Oyunlar
-    contentImage:
-      imageId: 
-      gifId: meWfKBizcqTPR7UjBS
-      image: {fileID: 21300000, guid: 7f469a061d1ca4010ba7ba3e5946ab85, type: 3}
-    contentPhoto: {fileID: 21300000, guid: 19f016e120fa14b60b9163f5705f0133, type: 3}
-    contentPhotoId: oyunmenu
-    gifId: meWfKBizcqTPR7UjBS
-    fotografKonum: 0
-    ayarlanacakDegiskenler:
-    - degiskenAdi: mod
-      degiskenDegeri: "oyunmen\xFC"
-      kontrolOperatoru: 0
-      ayarlamaOperatoru: 0
-    secenekDegiskenleri: []
-    gerekenEnerjiKons:
-      enerji: 0
-      kons: 0
-    uIEnerjiKonsOverwrite:
-      enerji: 0
-      kons: 0
-    reklamGoster: 0
-    ayarlananDegiskenler:
-    - degiskenAdi: mod
-      degiskenDegeri: "oyunmen\xFC plus"
-      islem: 0
-    gerekliDegiskenler:
-    - degiskenAdi: plus
-      degiskenDegeri: var
-      kontrol: 0
     sonrakiSohbetHavuzu: {fileID: 0}
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
@@ -363,7 +330,7 @@ MonoBehaviour:
     - "Bilgi Ekran\u0131"
     contentImage:
       imageId: 
-      gifId: bHHwnlOl35V0CQbeBa
+      gifId: 
       image: {fileID: 21300000, guid: 7b21abeeaa4ca4c2fbb35c1a4a5bf24b, type: 3}
     contentPhoto: {fileID: 21300000, guid: dbaa005df041b1344a4e679f7e7ba7b6, type: 3}
     contentPhotoId: analiz

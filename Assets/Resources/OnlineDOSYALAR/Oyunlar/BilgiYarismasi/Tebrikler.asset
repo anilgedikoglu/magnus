@@ -33,6 +33,7 @@ MonoBehaviour:
   - "Tebrikler!!! 10 sorununun tamam\u0131n\u0131 do\u011Fru bildin ve 1 alt\u0131n
     kazand\u0131n!"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -55,6 +56,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: "bilgiyar\u0131\u015Fmas\u0131kazan\u0131ld\u0131m\u0131"
@@ -62,6 +66,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 0
@@ -79,6 +84,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

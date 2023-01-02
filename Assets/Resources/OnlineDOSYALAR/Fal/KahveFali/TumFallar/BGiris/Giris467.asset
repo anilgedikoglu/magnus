@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris467
+  m_EditorClassIdentifier: 
+  idIndex: 2023122352AA41131910579
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n g\xFCne\u015F \u0131\u015F\u0131\u011F\u0131n\u0131 en
+    \xE7ok alan b\xF6lgesinde, s\u0131rt k\u0131sm\u0131na el fig\xFCrleri oyulmu\u015F
+    bir taht g\xF6r\xFCyorum. Kariyerinin zirve d\xF6nemini ya\u015Fayaca\u011F\u0131na
+    i\u015Faret ediyor bu taht. Bu ilerleyi\u015Fin ba\u015Flang\u0131c\u0131n\u0131n,
+    haz\u0131rlayaca\u011F\u0131n yaz\u0131l\u0131 bir d\xF6k\xFCmanla ger\xE7ekle\u015Fece\u011Fini
+    hissediyorum. Ancak bu ilerleyi\u015F kolay olmayacak. S\u0131rt k\u0131sm\u0131nda
+    yer alan eller, bu yoldan seni al\u0131koymaya \xE7al\u0131\u015Facak ki\u015Filerin
+    izleri. Hislerim bana bu ki\u015Filerin tan\u0131d\u0131\u011F\u0131n insanlar
+    olaca\u011F\u0131n\u0131 s\xF6yl\xFCyor. Bu ki\u015Filerden birinin kehribar
+    rengi g\xF6zlere, di\u011Ferinin ise kolunda bir yara izine sahip oldu\u011Funu
+    duyumsuyorum. \xC7al\u0131\u015Ft\u0131\u011F\u0131n yerde bildi\u011Fin b\xF6yle
+    birileri var m\u0131 sevgili {{isim}}?"
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: akademisyen
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

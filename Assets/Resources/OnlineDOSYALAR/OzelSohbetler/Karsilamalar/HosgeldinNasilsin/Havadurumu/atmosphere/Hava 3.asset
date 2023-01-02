@@ -34,29 +34,12 @@ MonoBehaviour:
     hava biraz sisli mi ne? Ara\xE7 kullananlar\u0131n Allah yard\u0131mc\u0131s\u0131
     olsun vallahi... <sprite=85>"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "ho\u015Fgeldin"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: oturum sayisi
-    degiskenDegeri: 1
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu main
-    degiskenDegeri: mist
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu id
-    degiskenDegeri: 701
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

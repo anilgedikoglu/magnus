@@ -36,29 +36,12 @@ MonoBehaviour:
     volkanik k\xFCller nereden gelmi\u015F olabilir b\xF6yle?...|2|A\u011Fz\u0131m\u0131z\u0131
     burnumuzu kapat\u0131p ya da maske tak\u0131p gezsek yeridir. <sprite=59>"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "ho\u015Fgeldin"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: oturum sayisi
-    degiskenDegeri: 1
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu main
-    degiskenDegeri: ash
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu id
-    degiskenDegeri: 762
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

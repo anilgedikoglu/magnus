@@ -61,6 +61,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -88,6 +89,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -112,6 +114,7 @@ MonoBehaviour:
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: bilgi ekranina git
   tepkiBalonuYok: 1
@@ -129,6 +132,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: "oradam\u0131s\u0131n2"
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

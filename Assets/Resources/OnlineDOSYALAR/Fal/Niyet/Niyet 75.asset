@@ -34,17 +34,12 @@ MonoBehaviour:
     gerek. H\u0131zla ko\u015Fup z\u0131playacaks\u0131n, ba\u015Far\u0131ya tutunacaks\u0131n.
     Endi\u015Feye kap\u0131l\u0131p kaybettim sanma, inanmayanlar\u0131 \xE7ok yan\u0131ltacaks\u0131n!"
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: niyet
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -58,6 +53,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

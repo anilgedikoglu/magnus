@@ -69,6 +69,7 @@ MonoBehaviour:
       degiskenDegeri: var
       kontrol: 0
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -96,13 +97,14 @@ MonoBehaviour:
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
-      degiskenDegeri: plus yok
+      degiskenDegeri: "plus yok y\xFCz"
       islem: 0
     gerekliDegiskenler:
     - degiskenAdi: plus
       degiskenDegeri: var
       kontrol: 1
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -137,6 +139,7 @@ MonoBehaviour:
       degiskenDegeri: var
       kontrol: 0
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -164,13 +167,14 @@ MonoBehaviour:
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
-      degiskenDegeri: plus yok
+      degiskenDegeri: plus yok el
       islem: 0
     gerekliDegiskenler:
     - degiskenAdi: plus
       degiskenDegeri: var
       kontrol: 1
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -209,6 +213,7 @@ MonoBehaviour:
       degiskenDegeri: var
       kontrol: 0
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -240,13 +245,76 @@ MonoBehaviour:
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
-      degiskenDegeri: plus yok
+      degiskenDegeri: plus yok kader
       islem: 0
     gerekliDegiskenler:
     - degiskenAdi: plus
       degiskenDegeri: var
       kontrol: 1
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Numeroloji
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: back
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: numeroloji
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Numeroloji
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: back
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: plus yok numeroloji
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: plus
+      degiskenDegeri: var
+      kontrol: 1
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -270,10 +338,11 @@ MonoBehaviour:
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
-      degiskenDegeri: ana menu
+      degiskenDegeri: plusgeri
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 1
@@ -291,6 +360,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: "oradam\u0131s\u0131n2"
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

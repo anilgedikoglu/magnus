@@ -35,45 +35,12 @@ MonoBehaviour:
     Biti\u015Fleri \xF6nemsiz k\u0131lan emekler ve destans\u0131 sevmelere ne mutlu!
     \"{{isim}} Destan\u0131\" yak\u0131nda yaz\u0131lacak; ne mutlu ki kar\u015F\u0131l\u0131kl\u0131."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: niyet
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "ili\u015Fkisi yok"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: platonik
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "fl\xF6rt halinde"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "bo\u015Fanm\u0131\u015F"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "ni\u015Fanl\u0131"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "karma\u015F\u0131k"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -108,6 +75,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

@@ -35,6 +35,7 @@ MonoBehaviour:
     ah yaln\u0131z bir \"zel.\" O seni bulacak, sana dost olacak, senin ne\u015Fenle
     de, mutluluk bulacak. Ondan nice faydalar g\xF6receksin..."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -53,6 +54,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  idIndex: 202212243051AA14122343513
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n \xFCst b\xF6l\xFCmlerinde saat {{kelime, on | on bir |
+    on iki | bir | iki}} y\xF6n\xFCnde yere \xE7\xF6melmi\u015F, \xF6n\xFCndeki ine\u011Fi
+    sa\u011Fmakta olan bir kad\u0131n g\xF6r\xFCyorum. Yan\u0131na varm\u0131\u015F,
+    ona bir \u015Feyler soruyorsun ancak ald\u0131rm\u0131yor {{isim}}. Bu ki\u015Finin
+    sana kay\u0131ts\u0131z oldu\u011Funu d\xFC\u015F\xFCnsen de, sa\u011Fmakta oldu\u011Fu
+    s\xFCt senin hayat\u0131na girecek olan insan\u0131n kim oldu\u011Fu ile ilgili
+    bir pay sahibi olaca\u011F\u0131n\u0131, bunun i\xE7in emek verece\u011Fini i\u015Faret
+    ediyor. Kayna\u011F\u0131ndan \xE7\u0131kan beyaz renk, safl\u0131k, duruluk
+    ve iyi niyetin i\u015Fareti. Bu insan\u0131n da arac\u0131l\u0131\u011F\u0131
+    ile, bu vas\u0131flara sahip birinin hayat\u0131na girmesi ihtimali \xE7ok y\xFCksek."
+  aciklamaBalonuYok: 0
+  parlamaRengi: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

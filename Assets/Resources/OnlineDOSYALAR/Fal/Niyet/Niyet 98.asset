@@ -35,6 +35,7 @@ MonoBehaviour:
     sana, \u0131\u015F\u0131klar yanacak sana, yar\u0131 yolda kal\u0131r m\u0131
     hi\xE7, iste\u011Fin varacak sana."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -53,6 +54,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

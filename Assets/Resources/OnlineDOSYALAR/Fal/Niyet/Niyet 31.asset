@@ -35,25 +35,12 @@ MonoBehaviour:
     Umuda yolcudur hep yeni bahar. Dalgalar k\xF6p\xFCkle h\xFCzn\xFCn\xFC salar.
     Unutma g\xF6nl\xFCn\xFC kafese koysalar, haks\u0131za dayanmaz, y\u0131kar par\xE7alar."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: niyet
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -73,6 +60,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

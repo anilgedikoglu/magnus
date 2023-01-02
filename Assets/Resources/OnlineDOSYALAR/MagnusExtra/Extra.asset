@@ -37,7 +37,7 @@ MonoBehaviour:
   gostermeSansi: 100
   cevaplar:
   - cevapVaryasyonlari:
-    - "{{isimi}} tan\u0131t"
+    - "{{isimi}} Magnus'a\nDetayl\u0131 Tan\u0131t"
     contentImage:
       imageId: 
       gifId: 
@@ -61,10 +61,11 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
-    - "S\u0131k sorulan sorular"
+    - "S\u0131k Sorulan\nSorular"
     contentImage:
       imageId: 
       gifId: 
@@ -88,6 +89,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -132,6 +134,7 @@ MonoBehaviour:
       degiskenDegeri: var
       kontrol: 1
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -176,6 +179,7 @@ MonoBehaviour:
       degiskenDegeri: var
       kontrol: 1
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -217,6 +221,37 @@ MonoBehaviour:
       degiskenDegeri: var
       kontrol: 0
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - 'Magnus''a
+
+      Jest Yap!'
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 6c5d52a8885dad54ea05aa08ac7af8fa, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
+    contentPhotoId: back
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnusajestkarsilama
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -238,9 +273,13 @@ MonoBehaviour:
       enerji: 0
       kons: 0
     reklamGoster: 0
-    ayarlananDegiskenler: []
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: ana menu
+      islem: 0
     gerekliDegiskenler: []
-    sonrakiSohbetHavuzu: {fileID: 11400000, guid: d50bb91187995664b92efe347e56ce39, type: 2}
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 1
@@ -258,6 +297,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: "oradam\u0131s\u0131n"
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

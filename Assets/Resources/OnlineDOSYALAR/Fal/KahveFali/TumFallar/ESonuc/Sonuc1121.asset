@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1121
+  m_EditorClassIdentifier: 
+  idIndex: 20224201630AA30965537877
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan taban\u0131ndaki ufac\u0131k bir b\xF6l\xFCm nas\u0131l da kabarm\u0131\u015F!
+    Senin \xE7ok naif bir iste\u011Fin var {{isim}}. Pek konusunu da a\xE7m\u0131yorsun,
+    bunu anlayabiliyorum. Yeni uyutulmu\u015F bir bebe\u011Fin yan\u0131ndan sessiz
+    ve \"parmak u\xE7lar\u0131nda ayr\u0131l\u0131rcas\u0131na \xFCrkek\" diliyorsun
+    akl\u0131ndakini. Utana s\u0131k\u0131la, \"fazla m\u0131 olur\" diye d\xFC\u015F\xFCnerek.
+    Tabiri caizse, rabbine kar\u015F\u0131 \u015F\u0131mar\u0131kla\u015Fmamay\u0131
+    umarak... Bu iste\u011Fin, hayat\u0131ndaki 2 de\u011Fi\u015Fim sonras\u0131nda
+    ger\xE7ekle\u015Fecek. Bu de\u011Fi\u015Fimlerden biri mekansal, di\u011Feri
+    ise \xE7evresel olacak. \u0130lk de\u011Fi\u015Fimi {{sayi,3,8}} hafta sonra,
+    ikincisini ise {{sayi,3,5}} ay sonra ya\u015Fayacaks\u0131n."
+  aciklamaBalonuYok: 0
+  parlamaRengi: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

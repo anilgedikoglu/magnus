@@ -35,29 +35,12 @@ MonoBehaviour:
     kap\u0131 ve pencerelerini \xE7ok fazla a\xE7masa iyi olur. Ev hemen le\u015F
     gibi olur... <sprite=35>"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "ho\u015Fgeldin"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: oturum sayisi
-    degiskenDegeri: 1
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu main
-    degiskenDegeri: dust
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu id
-    degiskenDegeri: 761
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

@@ -35,6 +35,7 @@ MonoBehaviour:
     anlayacak, sevineceksin. Heyecan\u0131n ayyuka \xE7\u0131kacak ve duygular\u0131n
     kar\u015F\u0131l\u0131k bulacak."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -59,6 +60,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

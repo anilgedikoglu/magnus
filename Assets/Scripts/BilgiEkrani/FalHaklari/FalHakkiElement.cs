@@ -55,6 +55,18 @@ public class FalHakkiElement : MonoBehaviour
         hizliFalOyunElement = falHakkiManager.bilgiEkraniSettings.hizliFalOyun.fallar.
         Find(x => x.mod.Equals(gunlukMod.mod));
 
+        if(hizliFalOyunElement == null)
+        {
+            hizliFalOyunElement = falHakkiManager.bilgiEkraniSettings.hizliFalOyun.astroloji.
+            Find(x => x.mod.Equals(gunlukMod.mod));
+        }
+
+        if (hizliFalOyunElement == null)
+        {
+            hizliFalOyunElement = falHakkiManager.bilgiEkraniSettings.hizliFalOyun.motivasyon.
+            Find(x => x.mod.Equals(gunlukMod.mod));
+        }
+
         button.SetActive(remaeningCount > 0 && hizliFalOyunElement != null);
     }
 

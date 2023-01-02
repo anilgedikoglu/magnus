@@ -106,6 +106,24 @@ MonoBehaviour:
   - degiskenAdi: "oyun men\xFC"
     degiskenDegeri: liste
     resetType: 0
+  - degiskenAdi: kahveismarlandi
+    degiskenDegeri: "hay\u0131r"
+    resetType: 0
+  - degiskenAdi: yemekismarlandi
+    degiskenDegeri: "hay\u0131r"
+    resetType: 0
+  - degiskenAdi: tatilismarlandi
+    degiskenDegeri: "hay\u0131r"
+    resetType: 0
+  - degiskenAdi: ismarlanantatil
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: ismarlananyemek
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: ismarlanankahve
+    degiskenDegeri: 0
+    resetType: 0
   modaGoreHafizaMetniBulunamadiAciklama:
   - mod: "y\xFCz fal\u0131"
     standartAciklama: "Benden hen\xFCz hi\xE7 y\xFCz fal\u0131 almad\u0131n."

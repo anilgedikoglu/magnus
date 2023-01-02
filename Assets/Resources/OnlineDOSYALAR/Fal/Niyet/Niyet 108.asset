@@ -42,6 +42,7 @@ MonoBehaviour:
     | telefonuna takt\u0131\u011F\u0131 ilgin\xE7 k\u0131l\u0131ftan | yemek yapmaya
     olan merak\u0131ndan}} tan\u0131yacaks\u0131n."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -63,6 +64,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

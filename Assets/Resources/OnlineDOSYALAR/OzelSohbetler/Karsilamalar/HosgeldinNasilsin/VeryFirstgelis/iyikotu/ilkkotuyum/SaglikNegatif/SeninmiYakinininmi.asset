@@ -33,6 +33,7 @@ MonoBehaviour:
   - "Senin mi sa\u011Fl\u0131k sorunlar\u0131n var yoksa bir yak\u0131n\u0131n\u0131n
     m\u0131 {{isim}}?"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -55,6 +56,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: "sa\u011Fl\u0131k"
@@ -62,6 +66,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: 2d5c0cbd8954e40dfa3854c1c934ad71, type: 2}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
   - cevapVaryasyonlari:
@@ -83,6 +88,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: "sa\u011Fl\u0131kyak\u0131n\u0131"
@@ -90,12 +98,11 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: 832b45ba063034ee5834ffd82e0174cc, type: 2}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: "ilk geli\u015F tamamland\u0131"
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler: []
   ayarlananDegiskenler: []
   gerekliDegiskenler: []
   sohbetArkaplani: []
@@ -106,6 +113,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -131,4 +139,4 @@ MonoBehaviour:
   kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
-  preferencesObject: {fileID: 0}
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

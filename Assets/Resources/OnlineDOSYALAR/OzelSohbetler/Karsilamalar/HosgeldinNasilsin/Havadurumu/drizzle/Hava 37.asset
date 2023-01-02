@@ -33,29 +33,12 @@ MonoBehaviour:
   - "{{isim}} iyi ki geldin ya, ben de seni bekliyordum. Nas\u0131l ge\xE7iyor g\xFCn\xFCn?|2|Ya\u011Fmur
     minnak minnak \xE7iseliyor bug\xFCn. Yine herhalde en iyisi evde oturmak."
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "ho\u015Fgeldin"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: oturum sayisi
-    degiskenDegeri: 1
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu main
-    degiskenDegeri: drizzle
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu id
-    degiskenDegeri: 310
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

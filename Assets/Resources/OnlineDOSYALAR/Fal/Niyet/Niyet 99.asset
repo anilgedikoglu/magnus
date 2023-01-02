@@ -35,6 +35,7 @@ MonoBehaviour:
     Y\xFCzle\u015Feceksin bir anda, ak \xE7\u0131kacak karanda, g\xFCc\xFCnle tuz
     buz yeksan, kopacak t\xFCm pranga."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -53,6 +54,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

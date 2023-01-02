@@ -957,8 +957,8 @@ MonoBehaviour:
       mod: "y\xFCz fal\u0131 kimin"
       icon: {fileID: 21300000, guid: e43817fadd6714df789a042005633ec0, type: 3}
       iconDeactive: {fileID: 21300000, guid: 6ffbd2385940b4c47b960847604e8403, type: 3}
-      energy: 1
-      kons: 0
+      energy: 0
+      kons: 1
       showAd: 0
       falDegeri: 10
       plus: 1
@@ -971,6 +971,18 @@ MonoBehaviour:
       iconDeactive: {fileID: 21300000, guid: 999cfab3529b343e6a6ce2ad8adee221, type: 3}
       energy: 1
       kons: 0
+      showAd: 0
+      falDegeri: 8
+      plus: 1
+      indexOffset: 0
+      reklamGoster: 0
+    - title: Numeroloji
+      sanaOzelTitle: 
+      mod: numhizli
+      icon: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
+      iconDeactive: {fileID: 21300000, guid: eeb685964fb0041b6977b9b9b3169d7c, type: 3}
+      energy: 0
+      kons: 1
       showAd: 0
       falDegeri: 8
       plus: 1
@@ -1328,18 +1340,6 @@ MonoBehaviour:
       iconDeactive: {fileID: 21300000, guid: ea62b81717a6d431186d95098da27430, type: 3}
       energy: 1
       kons: 0
-      showAd: 0
-      falDegeri: 8
-      plus: 0
-      indexOffset: 0
-      reklamGoster: 0
-    - title: Numeroloji
-      sanaOzelTitle: 
-      mod: numhizli
-      icon: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
-      iconDeactive: {fileID: 21300000, guid: eeb685964fb0041b6977b9b9b3169d7c, type: 3}
-      energy: 0
-      kons: 5
       showAd: 0
       falDegeri: 8
       plus: 0

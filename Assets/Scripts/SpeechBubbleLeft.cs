@@ -147,7 +147,7 @@ public class SpeechBubbleLeft : MonoBehaviour
         if (sohbet.parlamaRengi != Sohbet.GlowEffectColor.yok)
         {
             glowEffect.gameObject.SetActive(true);
-            glowEffect.DOFade(0, 0.5f);
+            glowEffect.DOFade(0, 0.35f);
         }
         else
         {
@@ -541,7 +541,11 @@ public class SpeechBubbleLeft : MonoBehaviour
     {
         PanelShowWholeTextManager showPanel = FindObjectOfType<PanelShowWholeTextManager>();
 
-        button.onClick.AddListener(() => showPanel.OpenPanel(realtedBubbles, sohbet));
+        button.onClick.AddListener(() =>
+        {
+            showPanel.simplePanelActive = sohbet.yeniFocusPaneliKullan;
+            showPanel.OpenPanel(realtedBubbles, sohbet);
+        });
     }
 
     void CheckIfShouldDestroy()

@@ -94,6 +94,7 @@ MonoBehaviour:
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: b4b4cf64cdd82d54c838127affdfe545, type: 2}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -121,6 +122,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -145,6 +147,7 @@ MonoBehaviour:
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: ca3426c2a2d5fc4408ab175ef6fc32fd, type: 2}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -176,6 +179,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -200,6 +204,7 @@ MonoBehaviour:
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: ccca6561f3b470f4383dffa80f65aaf4, type: 2}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -231,6 +236,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -262,6 +268,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: store
   - cevapVaryasyonlari:
@@ -286,6 +293,7 @@ MonoBehaviour:
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: 40efc163570a0394a8c210dbf5dd016b, type: 2}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -310,6 +318,7 @@ MonoBehaviour:
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: bilgi ekranina git
   tepkiBalonuYok: 1
@@ -324,6 +333,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: "oradam\u0131s\u0131n"
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

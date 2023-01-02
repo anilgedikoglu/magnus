@@ -35,29 +35,12 @@ MonoBehaviour:
     gelecek \xF6ng\xF6r\xFClerinde bulunmam\u0131z\u0131n \xF6n\xFCnde engel de\u011Fil.
     <sprite=7>"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "ho\u015Fgeldin"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: oturum sayisi
-    degiskenDegeri: 1
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu main
-    degiskenDegeri: fog
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: havadurumu id
-    degiskenDegeri: 741
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod

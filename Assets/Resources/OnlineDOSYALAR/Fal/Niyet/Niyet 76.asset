@@ -35,6 +35,7 @@ MonoBehaviour:
     Bu g\xF6r\xFC\u015Fme, sana bir kazan\u0131m sa\u011Flayacak. Pe\u015Fi s\u0131ra
     heyecanlar bekliyor seni, a\u015Fk hayat\u0131nda ilgin\xE7 geli\u015Fmeler olacak."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -77,6 +78,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

@@ -33,6 +33,7 @@ MonoBehaviour:
   - Demek bana bu kadar dayanabildin.
   - Demek oynamak istemiyorsun...
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -59,6 +60,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 1
     ayarlananDegiskenler:
     - degiskenAdi: mod
@@ -69,6 +73,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -94,6 +99,9 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
@@ -104,16 +112,11 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "satran\xE7 terk etme"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -127,6 +130,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

@@ -62,6 +62,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -89,6 +90,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -116,6 +118,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -147,6 +150,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -174,47 +178,14 @@ MonoBehaviour:
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
-      degiskenDegeri: "oyunmen\xFC"
+      degiskenDegeri: "oyunmen\xFCx"
       islem: 0
     gerekliDegiskenler:
     - degiskenAdi: plus
       degiskenDegeri: var
       kontrol: 1
     sonrakiSohbetHavuzu: {fileID: 0}
-    takipSohbeti: {fileID: 0}
-    ozelFonksiyon: 
-  - cevapVaryasyonlari:
-    - Oyunlar
-    contentImage:
-      imageId: 
-      gifId: 
-      image: {fileID: 21300000, guid: 7f469a061d1ca4010ba7ba3e5946ab85, type: 3}
-    contentPhoto: {fileID: 21300000, guid: 19f016e120fa14b60b9163f5705f0133, type: 3}
-    contentPhotoId: oyunmenu
-    gifId: meWfKBizcqTPR7UjBS
-    fotografKonum: 0
-    ayarlanacakDegiskenler:
-    - degiskenAdi: mod
-      degiskenDegeri: "oyunmen\xFC"
-      kontrolOperatoru: 0
-      ayarlamaOperatoru: 0
-    secenekDegiskenleri: []
-    gerekenEnerjiKons:
-      enerji: 0
-      kons: 0
-    uIEnerjiKonsOverwrite:
-      enerji: 0
-      kons: 0
-    reklamGoster: 0
-    ayarlananDegiskenler:
-    - degiskenAdi: mod
-      degiskenDegeri: "oyunmen\xFC plus"
-      islem: 0
-    gerekliDegiskenler:
-    - degiskenAdi: plus
-      degiskenDegeri: var
-      kontrol: 0
-    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -246,6 +217,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -277,6 +249,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: store
   - cevapVaryasyonlari:
@@ -304,6 +277,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -328,6 +302,7 @@ MonoBehaviour:
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: bilgi ekranina git
   tepkiBalonuYok: 1
@@ -346,8 +321,9 @@ MonoBehaviour:
   yokSayilmaSohbeti: {fileID: 0}
   sayac: 120
   sayaSonuAnaMenuyeGit: 0
-  sayacModu: "oradam\u0131s\u0131n3"
+  sayacModu: "oradam\u0131s\u0131n4"
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

@@ -28,8 +28,10 @@ public class Sohbet : ScriptableObject
     [TextArea(10, 20)]
     public List<string> aciklama;
     public bool aciklamaBalonuYok;
+    public bool yeniFocusPaneliKullan;
     public enum GlowEffectColor { yok = 0, kirmizi = 1 , yesil = 2, mavi = 3, turuncu = 4, mor = 5}
     public GlowEffectColor parlamaRengi = new GlowEffectColor();
+    public float parlamaSuresi = 1f;
 
     public List<string> birlestirilecekModlar = new List<string>();
 
@@ -68,7 +70,7 @@ public class Sohbet : ScriptableObject
         {
             if (!string.IsNullOrEmpty(sayacSohbetiID))
                 return System.Array.Find(ModSohbetManager.Instance.onlineSohbetCache, x => x.GetSohbetId().Equals(sayacSohbetiID));
-            else return null;
+            else return sayacSohbeti;
         }
     }
 
@@ -87,14 +89,6 @@ public class Sohbet : ScriptableObject
     public int sohbetKonsantrasyonu = 0;
 
     public Scratch kazima;
-    [HideInInspector] public enum KazimaModuEnum { kapali = 0, panel = 1, quiz = 2 }
-    [HideInInspector] public KazimaModuEnum kazimaTipi = new KazimaModuEnum();
-    [HideInInspector] public Sprite kazimaFotografi;
-    [HideInInspector] public string kazimaFotografiId;
-    [HideInInspector] public int kazimaOrani = 50;
-    [HideInInspector] public int kazimaSonuBekleme = 2;
-    [HideInInspector] public string kazimaModu;
-    [HideInInspector] public Sohbet kazimaSohbeti;
 
     public bool otomatikOdak;
     public bool metniKaydet;
@@ -118,7 +112,6 @@ public class Sohbet : ScriptableObject
         sayacTipi = new sayacTipiEnum();
         tekrarlama = new sohbetTekrarlama();
         kazima = new Scratch();
-        kazimaTipi = new KazimaModuEnum();
     }
 
     private void OnValidate()
@@ -126,7 +119,6 @@ public class Sohbet : ScriptableObject
 #if UNITY_EDITOR
 
         contentImage.gifId = GetGifIdFromUrl(contentImage.gifId);
-        kazimaFotografiId = GetGifIdFromUrl(kazimaFotografiId);
 
         foreach(CevapSohbet cevapSohbet in cevaplar)
         {

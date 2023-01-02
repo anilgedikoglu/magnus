@@ -35,6 +35,7 @@ MonoBehaviour:
     ve sevdi\u011Fin \u015Feylere odaklanmal\u0131s\u0131n. Bunun i\xE7in gelecek
     hafta f\u0131rsat bulacaks\u0131n."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -53,6 +54,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

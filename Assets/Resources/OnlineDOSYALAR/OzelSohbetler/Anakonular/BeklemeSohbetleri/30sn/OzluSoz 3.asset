@@ -33,6 +33,7 @@ MonoBehaviour:
   - "Sen d\xFC\u015F\xFCn\xFCrken sana g\xFCn\xFCn \xF6zl\xFC s\xF6z\xFCn\xFC aktaray\u0131m
     m\u0131?"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -65,6 +66,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -89,6 +91,7 @@ MonoBehaviour:
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 0
@@ -109,6 +112,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 3
   tekrarlama: 0
   sohbetBitimModu: 

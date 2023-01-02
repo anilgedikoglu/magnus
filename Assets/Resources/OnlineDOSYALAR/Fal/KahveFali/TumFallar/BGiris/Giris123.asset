@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris123
+  m_EditorClassIdentifier: 
+  idIndex: 20222121217AA76836602867
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Klasik Bat\u0131 M\xFCzi\u011Fi'ne ilgilin yoksa, oturdu\u011Fu taburede arp
+    \xE7alan ve s\u0131rt\u0131nda iki beyaz kanad\u0131 bulunan telvelerindeki bu
+    g\xF6z al\u0131c\u0131 han\u0131mefendi, bir \"mele\u011Fi\" sembolize ediyor
+    olsa gerek. San\u0131r\u0131m sen, ucu maddiyata dayanan ancak elde etmek i\xE7in
+    paran\u0131n da yetmeyece\u011Fi bir \u015Fey istiyorsun {{isim}}. Evren, duyulan
+    bu arp notalar\u0131n\u0131n rezonans\u0131yla senin her dile\u011Finde tekrar
+    tekrar uyumlanm\u0131\u015F. Son notadan sonra arzu etti\u011Fin bu \u015Feyin,
+    g\xF6revlendirilen mele\u011Fin de yard\u0131m\u0131yla ger\xE7ekle\u015Fece\u011Fini
+    f\u0131s\u0131ld\u0131yor fincan\u0131n. Tam ne zaman biliyor musunuz? Do\u011Fdu\u011Fun
+    y\u0131l olan {{dogum yili}} y\u0131l\u0131n\u0131n rakamlar\u0131 toplam\u0131na
+    beklemen gereken ay say\u0131s\u0131 eklendi\u011Finde, bir \"asal say\u0131\"
+    etmeli. {{kelime, \u0130lk | \u0130kinci | \xDC\xE7\xFCnc\xFC}} edi\u015Finde..."
+  aciklamaBalonuYok: 0
+  parlamaRengi: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

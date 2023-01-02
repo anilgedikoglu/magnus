@@ -39,7 +39,10 @@ MonoBehaviour:
   tepkiBalonuYok: 0
   balonTipi: 0
   ayarlananDegiskenler: []
-  gerekliDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: odullureklamizlealtin
+    kontrol: 0
   sohbetArkaplani: []
   arkaplanDelay: 0
   yokSayDegiskeni: 
@@ -48,6 +51,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

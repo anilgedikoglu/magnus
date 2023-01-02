@@ -62,10 +62,11 @@ MonoBehaviour:
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: mod
-      degiskenDegeri: "oyunmen\xFC"
+      degiskenDegeri: "oyunmen\xFCx"
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -90,6 +91,7 @@ MonoBehaviour:
     ayarlananDegiskenler: []
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: d50bb91187995664b92efe347e56ce39, type: 2}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 1
@@ -105,8 +107,9 @@ MonoBehaviour:
   yokSayilmaSohbeti: {fileID: 0}
   sayac: 120
   sayaSonuAnaMenuyeGit: 0
-  sayacModu: "oradam\u0131s\u0131n3"
+  sayacModu: "oradam\u0131s\u0131n4"
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

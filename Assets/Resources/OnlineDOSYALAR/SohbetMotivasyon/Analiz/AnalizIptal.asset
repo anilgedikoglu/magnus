@@ -32,7 +32,6 @@ MonoBehaviour:
   aciklama:
   - Analizini iptal ettim.
   aciklamaBalonuYok: 0
-  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -51,7 +50,6 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
-  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: sm

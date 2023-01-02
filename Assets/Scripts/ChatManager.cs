@@ -542,7 +542,7 @@ public class ChatManager : MonoBehaviour
         Sohbet secilenSohbet = null;
 
         if (sohbet.sohbetBititmindeAnamenuyeDon && string.IsNullOrEmpty(sohbet.sohbetBitimModu)
-            && string.IsNullOrEmpty(sohbet.kazimaModu) && !modAyarlandi)
+            && string.IsNullOrEmpty(sohbet.kazima.kazimaModu) && !modAyarlandi)
         {
             PlayerDataManager.AddElementToChatVariableList("mod", "ana menu");
         }
@@ -2177,15 +2177,37 @@ public class ChatManager : MonoBehaviour
     {
         writingAnimationDelayTimer = delay + 0.2f;
 
+        Vector3 pos = spawnPoint.position;
+
+        RectTransform lastLeftBubble = null;
+        for(int i = bubbleMover.childCount -1; i>=0; i--)
+        {
+            var lastAnsBubble = bubbleMover.GetChild(i).GetComponent<AnswerBubble>();
+            if (lastAnsBubble == null)
+            {
+                lastLeftBubble = bubbleMover.GetChild(i).GetComponent<RectTransform>();
+                break;
+            }
+        }
+
+        if (lastLeftBubble == null)
+            return null;
+
+        pos = new Vector3(pos.x, lastLeftBubble.GetComponent<RectTransform>().position.y -
+        ((lastLeftBubble.GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+
+        Debug.Log(bubbleMover.GetChild(bubbleMover.childCount - 1).gameObject.name);
+        Debug.Log(pos);
+
         //Objenin oluşturulması
-        GameObject bubble = Instantiate(rightBubble, spawnPoint.position, Quaternion.identity);
+        GameObject bubble = Instantiate(rightBubble, pos, Quaternion.identity);
 
         //gerekli yerel değişkenler
         RectTransform bubbleRect = bubble.GetComponent<RectTransform>();
         SpeechBubbleRight bubbleManager = bubble.GetComponent<SpeechBubbleRight>();
 
         //Objenin parent olarak canvastaki klasöre ayarlanması.
-        bubbleRect.SetParent(bubbleParentObject);
+        bubbleRect.SetParent(bubbleMover);
         //Canvasın scale değeleri ekran boyutuna göre değiştiği için parent atamasından sonra objenin de scale değeleri değişecek. Bunu yeniden 1'e ayarlanıyor.
         //Bunun daha iyi yolları var. İlerde düzeltilecek.
         bubbleRect.localScale = new Vector3(1, 1, 1);
@@ -2216,9 +2238,13 @@ public class ChatManager : MonoBehaviour
         //Ayrılarak belirtilmiş bu kısım çok önemlidir.
         //Bu kısımda önce objenin taggi bir değişkene atanır ardından tagg Untagged şeklinde değiştirilir.
         //Bunun sebebi yeni oluşan obje ile aynı taggde yani chatBubble taginde olan tüm bubbleların yukarı kaymasının istenmesi ama yeni oluşan obje için bunun istenmemesidir.
-        string bubbleRealTag = "newBubble";
-        bubbleRect.tag = "Untagged";
+        string bubbleRealTag = "ChatBubble";
+        bubbleRect.tag = "ChatBubble";
         float moveOffset = bubbleRect.rect.height + bubbleFrameBlank * 2 + spaceBetweenBubbles;
+
+        pos = new Vector3(bubbleRect.position.x, bubbleRect.position.y - moveOffset * canvasRect.localScale.y, bubbleRect.position.z);
+        bubbleRect.position = pos;
+
         StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
         StartCoroutine(BubbleFunctionDelay(() => ResetTags(bubbleRealTag, bubble), delay));
         //*********************************
@@ -2239,12 +2265,44 @@ public class ChatManager : MonoBehaviour
 
     public SpeechBubbleLeft CreateLeftBubble(int type, float delay, int variation, int contentIndex)
     {
-        GameObject bubble = Instantiate(leftBubble, spawnPoint.position, Quaternion.identity);
+        var maxContentIndex = chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]);
+        bool fastBubble = moveAmount < -300 && (sohbet.cevaplar.Count <= 0
+            || maxContentIndex > 1) && bubbleMover.childCount > maxContentIndex - 1;
+
+        Vector3 pos = spawnPoint.position;
+
+        if (fastBubble)
+        {
+            if (maxContentIndex > 1)
+            {
+                pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.y -
+                ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+
+                for (int i = 0; i < contentIndex; i++)
+                {
+                    pos = new Vector3(pos.x, pos.y -
+                    ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex + i).GetComponent<RectTransform>().sizeDelta.y) + spaceBetweenBubbles * 2f) * canvasRect.localScale.y, pos.z);
+                }
+            }
+            else
+            {
+                pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.y -
+     ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+            }
+        }
+
+        GameObject bubble = Instantiate(leftBubble, pos, Quaternion.identity);
 
         RectTransform bubbleRect = bubble.GetComponent<RectTransform>();
         SpeechBubbleLeft bubbleManager = bubble.GetComponent<SpeechBubbleLeft>();
 
         bubbleRect.SetParent(bubbleParentObject);
+
+        if (fastBubble)
+        {
+            bubbleRect.SetParent(bubbleMover);
+        }
+
         bubbleRect.localScale = new Vector3(1, 1, 1);
 
         bubbleManager.bubbleType = type;
@@ -2261,8 +2319,8 @@ public class ChatManager : MonoBehaviour
 
         bubbleManager.SetTextObjects();
         bubbleManager.SetFirstSizes();
-
-        StartCoroutine(bubbleManager.SetGlowEffect(delay + 1.75f));
+        
+        StartCoroutine(bubbleManager.SetGlowEffect(delay + sohbet.parlamaSuresi));
 
         bool isPercentilePanelMode = false;
         if (bubbleManager.text.text.Contains("{{barmenu}}") && sohbet.otomatikOdak)
@@ -2290,26 +2348,43 @@ public class ChatManager : MonoBehaviour
         }
 
 
+        float moveOffset = bubbleRect.rect.height + bubbleFrameBlank * 2 + spaceBetweenBubbles;
+
+        if (fastBubble)
+        {
+            pos = new Vector3(bubbleRect.position.x, bubbleRect.position.y - moveOffset * canvasRect.localScale.y, bubbleRect.position.z);
+            bubbleRect.position = pos;
+        }
+
         string bubbleRealTag = "newBubble";
         bubbleRect.tag = "Untagged";
-        float moveOffset = bubbleRect.rect.height + bubbleFrameBlank * 2 + spaceBetweenBubbles;
+
+        if (fastBubble)
+        {
+            bubbleRealTag = "ChatBubble";
+            bubbleRect.tag = "ChatBubble";
+        }
 
         StartCoroutine(BubbleFunctionDelay(() => {
 
             if (sohbet.contentImage.image != null)
             {
-                if (sohbet.kazimaTipi == Sohbet.KazimaModuEnum.panel && contentIndex == chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]))
+                if (sohbet.kazima.kazimaTipi == Sohbet.Scratch.KazimaModuEnum.panel && contentIndex == chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]))
                 {
                     if (PlayerDataManager.GetChatVariableValue("mod") != "tefeul")
+                    {
                         magnusScratch.OpenPanel(bubbleManager.realtedBubbles);
+                    }
                 }
             }
             else
             {
-                if (sohbet.kazimaTipi == Sohbet.KazimaModuEnum.panel && contentIndex == chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]) - 1)
+                if (sohbet.kazima.kazimaTipi == Sohbet.Scratch.KazimaModuEnum.panel && contentIndex == chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]) - 1)
                 {
                     if (PlayerDataManager.GetChatVariableValue("mod") != "tefeul")
+                    {
                         magnusScratch.OpenPanel(bubbleManager.realtedBubbles);
+                    }
                 }
             }
 
@@ -2353,14 +2428,14 @@ public class ChatManager : MonoBehaviour
 
         if (sohbet.contentImage.image != null)
         {
-            if (sohbet.kazimaTipi == Sohbet.KazimaModuEnum.panel && contentIndex == chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]))
+            if (sohbet.kazima.kazimaTipi == Sohbet.Scratch.KazimaModuEnum.panel && contentIndex == chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]))
             {
                 otomatikOdak = true;
             }
         }
         else
         {
-            if (sohbet.kazimaTipi == Sohbet.KazimaModuEnum.panel && contentIndex == chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]) - 1)
+            if (sohbet.kazima.kazimaTipi == Sohbet.Scratch.KazimaModuEnum.panel && contentIndex == chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]) - 1)
             {
                 otomatikOdak = true;
             }
@@ -2392,6 +2467,7 @@ public class ChatManager : MonoBehaviour
                     {
                         if (tarotSohbetleri.Count<= 0)
                         {
+                            PanelShowWholeTextManager.simplePanelActive = sohbet.yeniFocusPaneliKullan;
                             PanelShowWholeTextManager.OpenPanel(bubbleManager.realtedBubbles, sohbet);
                         }
                         else
@@ -2399,6 +2475,8 @@ public class ChatManager : MonoBehaviour
                             List<Sprite> tarotSprites = new List<Sprite>();
                             foreach (Sohbet tarotSohbeti in tarotSohbetleri)
                                 tarotSprites.Add(tarotSohbeti.contentImage.image);
+
+                            PanelShowWholeTextManager.simplePanelActive = sohbet.yeniFocusPaneliKullan;
                             PanelShowWholeTextManager.OpenPanel(bubbleManager.realtedBubbles, sohbet, tarotSprites);
                             tarotSohbetleri = new List<Sohbet>();
                         }
@@ -2414,6 +2492,7 @@ public class ChatManager : MonoBehaviour
                     {
                         if (tarotSohbetleri.Count <= 0)
                         {
+                            PanelShowWholeTextManager.simplePanelActive = sohbet.yeniFocusPaneliKullan;
                             PanelShowWholeTextManager.OpenPanel(bubbleManager.realtedBubbles, sohbet);
                         }
                         else
@@ -2421,6 +2500,8 @@ public class ChatManager : MonoBehaviour
                             List<Sprite> tarotSprites = new List<Sprite>();
                             foreach (Sohbet tarotSohbeti in tarotSohbetleri)
                                 tarotSprites.Add(tarotSohbeti.contentImage.image);
+
+                            PanelShowWholeTextManager.simplePanelActive = sohbet.yeniFocusPaneliKullan;
                             PanelShowWholeTextManager.OpenPanel(bubbleManager.realtedBubbles, sohbet, tarotSprites);
                             tarotSohbetleri = new List<Sohbet>();
                         }
@@ -2984,6 +3065,10 @@ public class ChatManager : MonoBehaviour
         }
         yield return new WaitForSeconds(0.25f);
 
+        if(sohbet!=null)
+        if (sohbet.cevaplar.Count > 0)
+            moveAmount = 0;
+
         AiMessageDelay = 0;
         secimYapildi = new List<bool>();
         secimYapildi.Add(false);
@@ -2996,13 +3081,15 @@ public class ChatManager : MonoBehaviour
         lastAnswerBubbleType = type;
         lastAnswerVariation = variation;
 
-        AiMessageDelay += AddMessageDelay(0.2f, 0.4f);
+        
+     
 
         if (!sohbet.IsPhotographMode())
         {
             if (createRightBubble)
             {
-                CreateRightBubble(type, AiMessageDelay = 0);
+                AiMessageDelay += 0.5f;
+                CreateRightBubble(type, 0);
             }
         }
         else
@@ -3010,7 +3097,6 @@ public class ChatManager : MonoBehaviour
             SetCameraActivity(false);
         }
 
-        moveAmount = 0;
         for (int i = 0; i < answerBubblesCount; i++)
         {
             if (!sohbet.IsPhotographMode() && !sohbet.IsFilePickerMode())
@@ -3755,16 +3841,26 @@ public class ChatManager : MonoBehaviour
         if (moveAmount < 0)
         {
             moveAmount += offset;
-
             if (moveAmount > 0)
             {
                 previousBubbleMoverPos = new Vector3(previousBubbleMoverPos.x, previousBubbleMoverPos.y + moveAmount * canvasRect.localScale.y, previousBubbleMoverPos.z);
                 bubbleMover.DOMove(previousBubbleMoverPos, 0.215f);
+
+                for (int j = 0; j < bubbleMover.childCount; j++)
+                {
+                    if(DOTween.IsTweening(bubbleMover.GetChild(j)))
+                        DOTween.Complete(bubbleMover.GetChild(j));
+                }
             }
             return;
         }
         previousBubbleMoverPos = new Vector3(previousBubbleMoverPos.x, previousBubbleMoverPos.y + offset * canvasRect.localScale.y, previousBubbleMoverPos.z);
         bubbleMover.DOMove(previousBubbleMoverPos, 0.215f);
+        for (int j = 0; j < bubbleMover.childCount; j++)
+        {
+            if (DOTween.IsTweening(bubbleMover.GetChild(j)))
+                DOTween.Complete(bubbleMover.GetChild(j));
+        }
         //bubbleParentObject.anchoredPosition = new Vector3(bubbleParentObject.anchoredPosition.x, bubbleParentObject.anchoredPosition.y + offset * canvasRect.localScale.y);
     }
 
@@ -3906,6 +4002,8 @@ public class ChatManager : MonoBehaviour
 
     IEnumerator CreateChatElements()
     {
+        yield return new WaitForSeconds(AiMessageDelay);
+
         modAyarlandi = false;
 
         GetSpriteWithContentPhotoId();
@@ -4595,7 +4693,7 @@ public class ChatManager : MonoBehaviour
         SetWritingTimer(AiMessageDelay - 0.5f);
         AiMessageDelay += 0.2f;
 
-        if (sohbet.kazimaTipi != Sohbet.KazimaModuEnum.quiz)
+        if (sohbet.kazima.kazimaTipi != Sohbet.Scratch.KazimaModuEnum.quiz)
         {
             AiMessageDelay += scratchQuiz.kazimaSonuBekleme;
             scratchQuiz.kazimaSonuBekleme = 0;
@@ -4902,7 +5000,7 @@ public class ChatManager : MonoBehaviour
         }
         yield return new WaitForSeconds(delay);
 
-        if (moveAmount < 0)
+        if (moveAmount < 0 && sohbet.cevaplar.Count > 0)
         {
             previousBubbleMoverPos = new Vector3(previousBubbleMoverPos.x, previousBubbleMoverPos.y + moveAmount * canvasRect.localScale.y, previousBubbleMoverPos.z);
             bubbleMover.DOMove(previousBubbleMoverPos, 0.215f);
@@ -5063,7 +5161,7 @@ public class ChatManager : MonoBehaviour
                 cgChessBoardScript.transform.parent.DOLocalMoveY(-16.5f, .3f);
             }
         }
-        else if (sohbet.kazimaTipi == Sohbet.KazimaModuEnum.quiz)
+        else if (sohbet.kazima.kazimaTipi == Sohbet.Scratch.KazimaModuEnum.quiz)
         {
             if (lastScreenShiftedMod != PlayerDataManager.GetChatVariableValue("mod"))
             {
@@ -5236,8 +5334,10 @@ public class ChatManager : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime * 3f);
         }
 
-        if (moveAmount < 0)
+        if (moveAmount < 0 && sohbet.cevaplar.Count > 0)
+        {
             MoveAllBubbles(moveAmount);
+        }
 
         scrollRectPivotTartgetPos = new Vector2(scrollRectPivotRt.anchoredPosition.x, scrollRectPivotRt.parent.GetComponent<RectTransform>().sizeDelta.y + scrollOfftet);
 

@@ -52,7 +52,10 @@ public class ModSohbetManagerData : ScriptableObject
 
             onlineSohbetDatas[i].aciklamalar = tumOnlineSohbetler[i].aciklama;
             onlineSohbetDatas[i].aciklamaBalonuYok = tumOnlineSohbetler[i].aciklamaBalonuYok;
+            onlineSohbetDatas[i].yeniFocusPaneliKullan = tumOnlineSohbetler[i].yeniFocusPaneliKullan;
+
             onlineSohbetDatas[i].parlamaRengi = tumOnlineSohbetler[i].parlamaRengi;
+            onlineSohbetDatas[i].parlamaSuresi = tumOnlineSohbetler[i].parlamaSuresi;
 
             onlineSohbetDatas[i].birlestirilecekModlar = tumOnlineSohbetler[i].birlestirilecekModlar;
 

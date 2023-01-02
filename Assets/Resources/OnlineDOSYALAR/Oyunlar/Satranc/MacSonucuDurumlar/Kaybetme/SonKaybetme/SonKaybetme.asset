@@ -34,6 +34,7 @@ MonoBehaviour:
     at | Kale ve piyon | Vezir ve piyon}} kontrol\xFCnde \xE7ok iyisin. Daha do\u011Fru
     fedalarla, daha iyi sonu\xE7lar elde edece\u011Fine inan\u0131yorum."
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -52,6 +53,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

@@ -1,0 +1,252 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: SohbetMotivasyonMenu 10
+  m_EditorClassIdentifier: 
+  idIndex: 20221220107AA24458200000
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "\xD6zl\xFC s\xF6zleri keyifle okuyaca\u011F\u0131n\u0131 d\xFC\u015F\xFCn\xFCyorum."
+  aciklamaBalonuYok: 0
+  parlamaRengi: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - Sohbet
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 4b240f68b978547cdb201aaeb964fb22, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 15b3fa4298117404887ec701aab479b6, type: 3}
+    contentPhotoId: sohbet
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: smsohbet
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 1
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: smsohbet
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Motivasyon
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 5ba66dbafb745408ebe38014286faf67, type: 3}
+    contentPhoto: {fileID: 21300000, guid: c1f6c6480c6857a45a7b843c598c5c2a, type: 3}
+    contentPhotoId: motivasyon
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 1
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: motivasyon ilk
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Analiz
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 35b86eb66bd2349cc87231c91654ba31, type: 3}
+    contentPhoto: {fileID: 21300000, guid: dbaa005df041b1344a4e679f7e7ba7b6, type: 3}
+    contentPhotoId: analiz
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 1
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: hangi analiz
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "\xD6zl\xFC s\xF6zler"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 4da18aacbf08744c390c977c981bf7a8, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
+    contentPhotoId: back
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "\xF6zl\xFCs\xF6zilk"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Dert Orta\u011F\u0131"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: 52aef2594d2504437980d3c36a855929, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
+    contentPhotoId: back
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "dertorta\u011F\u0131se\xE7im"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Geri git
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 21300000, guid: f1f014b76fee5450190731a8feeabada, type: 3}
+    contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
+    contentPhotoId: back
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: sm iptal
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 1
+  balonTipi: 1
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: sm
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 30
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: "oradam\u0131s\u0131n"
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

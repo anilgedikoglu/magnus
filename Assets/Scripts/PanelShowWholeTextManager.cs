@@ -70,6 +70,14 @@ public class PanelShowWholeTextManager : MonoBehaviour
 
     private RenderedText.Text renderedText;
 
+    [Space(20)]
+    [SerializeField] private GameObject simplePanelParent;
+    [SerializeField] private TMP_Text simpleFocusText;
+    [SerializeField] private Image[] simpleFocusImages;
+    [SerializeField] private GameObject simpleFocusWheelChartMask;
+    [SerializeField] private GameObject simpleFocusAdPanel;
+    [SerializeField] private GameObject[] simpleFocusDeactivateObjects;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -93,8 +101,11 @@ public class PanelShowWholeTextManager : MonoBehaviour
 
     public void OpenPanel(List<SpeechBubbleLeft> allBubbles, Sohbet sohbet)
     {
-        renderedText = null;
+        SetActiveNotSimpleFocusObjects(true);
+
+           renderedText = null;
         lockPanel.SetActive(false);
+        simpleFocusAdPanel.SetActive(false);
 
         bilgiEkraniMagnusLogo.SetActive(false);
 
@@ -246,20 +257,26 @@ public class PanelShowWholeTextManager : MonoBehaviour
         StartCoroutine(StartStopWheelChartVp());
 
         SetInfoTextActive(false);
+
+        SetSimplePanel(new Sprite[] { photo });
     }
 
     public void OpenPanel(List<SpeechBubbleLeft> allBubbles, Sohbet sohbet, RenderedText.Text renderedText)
     {
         OpenPanel(allBubbles, sohbet);
         lockPanel.SetActive(!renderedText.isOpened);
+        simpleFocusAdPanel.SetActive(!renderedText.isOpened);
         this.renderedText = renderedText;
     }
 
 
     public void OpenPanel(List<SpeechBubbleLeft> allBubbles, Sohbet sohbet, List<Sprite> tarotCards)
     {
+        SetActiveNotSimpleFocusObjects(true);
+
         renderedText = null;
         lockPanel.SetActive(false);
+        simpleFocusAdPanel.SetActive(false);
 
         bilgiEkraniMagnusLogo.SetActive(false);
 
@@ -384,12 +401,29 @@ public class PanelShowWholeTextManager : MonoBehaviour
         SetInfoTextActive(false);
 
         chatManager.tarotSohbetleri = new List<Sohbet>();
+
+
+
+        if (tarotCards.Count == 3)
+        {
+            SetSimplePanel(tarotCards.ToArray());
+
+        }
+        else if (tarotCards.Count == 1)
+        {
+            SetSimplePanel(tarotCards.ToArray());
+        }
+        else
+        {
+            SetSimplePanel(null);
+        }
     }
 
     public void OpenPanel(List<SpeechBubbleLeft> allBubbles, Sohbet sohbet, List<Sprite> tarotCards, RenderedText.Text renderedText)
     {
         OpenPanel(allBubbles, sohbet, tarotCards);
         lockPanel.SetActive(!renderedText.isOpened);
+        simpleFocusAdPanel.SetActive(!renderedText.isOpened);
         this.renderedText = renderedText;
     }
 
@@ -425,6 +459,102 @@ public class PanelShowWholeTextManager : MonoBehaviour
             editorPanel.SetActive(false);
         }
         passwordInputField.text = "";
+    }
+
+    internal bool simplePanelActive = false;
+    public enum SimplePanelSizeType { normal = 1, small = 0, large = 2 }
+    private int simplePanelCurrentSize = 1;
+    private void SetSimplePanel(Sprite[] sprites)
+    {
+        //Sohbete baglanacak!
+        if (!simplePanelActive)
+        {
+            simplePanelParent.SetActive(false);
+            return;
+        }
+
+        SetSimplePanelSize(1);
+
+        simplePanelParent.SetActive(true);
+        SetActiveNotSimpleFocusObjects(false);
+
+        simpleFocusText.text = textWithPhoto.text;
+
+        simpleFocusWheelChartMask.gameObject.SetActive(false);
+
+        if (sprites != null)
+        {
+            for (int i = 0; i < simpleFocusImages.Length; i++)
+            {
+                simpleFocusImages[i].gameObject.SetActive(sprites.Length > i);
+
+                if (sprites.Length > i)
+                {
+                    if (sprites[i] == null)
+                    {
+                        simpleFocusImages[i].gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        simpleFocusImages[i].sprite = sprites[i];
+                        simpleFocusImages[i].gameObject.SetActive(true);
+                    }
+                }
+                else
+                {
+                    simpleFocusImages[i].gameObject.SetActive(false);
+                }
+            }
+
+            if (sprites.Length > 0)
+                simpleFocusWheelChartMask.gameObject.SetActive(videoManager.wheelChart.mods.Contains(mod));
+        }
+        else
+        {
+            for (int i = 0; i < simpleFocusImages.Length; i++)
+            {
+                simpleFocusImages[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void SetSimplePanelSize(int sizeTypeInt)
+    {
+        var sizeType = (SimplePanelSizeType)sizeTypeInt;
+        switch (sizeType)
+        {
+            case SimplePanelSizeType.normal:
+                simpleFocusText.fontSize = 21;
+                break;
+
+            case SimplePanelSizeType.large:
+                simpleFocusText.fontSize = 26;//sad
+                break;
+
+            case SimplePanelSizeType.small:
+                simpleFocusText.fontSize = 18;
+                break;
+        }
+    }
+
+    public void IncreaseSimplePanelTextSize()
+    {
+        simplePanelCurrentSize = Mathf.Clamp(simplePanelCurrentSize + 1, 0, 2);
+
+        SetSimplePanelSize(simplePanelCurrentSize);
+    }
+
+    public void DecreaseSimplePanelTextSize()
+    {
+        simplePanelCurrentSize = Mathf.Clamp(simplePanelCurrentSize - 1, 0, 2);
+
+        SetSimplePanelSize(simplePanelCurrentSize);
+    }
+
+    private void SetActiveNotSimpleFocusObjects(bool isActive)
+    {
+        foreach (var element in simpleFocusDeactivateObjects)
+            element.gameObject.SetActive(isActive);
     }
 
     void SetSohbetInfoText()
@@ -538,6 +668,7 @@ public class PanelShowWholeTextManager : MonoBehaviour
         if (renderedText == null)
         {
             lockPanel.SetActive(false);
+            simpleFocusAdPanel.SetActive(false);
         }
         else
         {
@@ -545,6 +676,7 @@ public class PanelShowWholeTextManager : MonoBehaviour
 
             adManager.ShowRewarded(() => {
                 lockPanel.SetActive(false);
+                simpleFocusAdPanel.SetActive(false);
                 renderedText.isOpened = true;
                 var inboxManager = FindObjectOfType<InboxManager>();
                 inboxManager.isUIUpdated = false;

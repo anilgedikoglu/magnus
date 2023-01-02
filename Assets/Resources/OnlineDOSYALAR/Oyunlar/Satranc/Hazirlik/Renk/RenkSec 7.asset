@@ -34,6 +34,7 @@ MonoBehaviour:
     inan\u0131rsan, Vahap \u015Eanal'\u0131n Magnus Carlsen'i yeni\u015Fi gibi sen
     de beni yenebilirsin {{isim}}! <sprite=7> Hangi ta\u015Flar\u0131 al\u0131yorsun?"
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -149,11 +150,14 @@ MonoBehaviour:
       enerji: 0
       kons: 0
     reklamGoster: 0
-    ayarlananDegiskenler: []
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: "oyunmen\xFCx"
+      islem: 0
     gerekliDegiskenler: []
-    sonrakiSohbetHavuzu: {fileID: 11400000, guid: d50bb91187995664b92efe347e56ce39, type: 2}
+    sonrakiSohbetHavuzu: {fileID: 0}
     takipSohbeti: {fileID: 0}
-    ozelFonksiyon: satranc kullanici rengi rastgele
+    ozelFonksiyon: 
   tepkiBalonuYok: 1
   balonTipi: 1
   ayarlananDegiskenler: []

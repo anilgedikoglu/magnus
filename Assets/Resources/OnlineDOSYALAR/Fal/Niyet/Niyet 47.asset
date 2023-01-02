@@ -34,6 +34,7 @@ MonoBehaviour:
     ve bereketin arefesinde, tertemiz k\u0131yafetlerini, p\u0131r\u0131l p\u0131r\u0131l
     niyetlerini haz\u0131rla. Yar\u0131nlar\u0131nda bayram var!"
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -52,6 +53,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

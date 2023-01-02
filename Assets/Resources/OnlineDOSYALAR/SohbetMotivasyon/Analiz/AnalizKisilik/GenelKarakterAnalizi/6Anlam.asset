@@ -32,7 +32,6 @@ MonoBehaviour:
   aciklama:
   - "Senin i\xE7in hayat ne ifade ediyor?"
   aciklamaBalonuYok: 0
-  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -56,9 +55,6 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
-    uIEnerjiKonsOverwrite:
-      enerji: 0
-      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: smanalizanlam
@@ -66,7 +62,6 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: a16de49ae1830804780d61673fb3d0b1, type: 2}
-    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -88,9 +83,6 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
-    uIEnerjiKonsOverwrite:
-      enerji: 0
-      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: smanalizanlam
@@ -98,7 +90,6 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: a16de49ae1830804780d61673fb3d0b1, type: 2}
-    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -122,9 +113,6 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
-    uIEnerjiKonsOverwrite:
-      enerji: 0
-      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: smanalizanlam
@@ -132,7 +120,6 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: a16de49ae1830804780d61673fb3d0b1, type: 2}
-    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 0
@@ -153,7 +140,6 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
-  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

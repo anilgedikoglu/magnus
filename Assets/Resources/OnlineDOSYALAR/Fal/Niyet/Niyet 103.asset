@@ -38,6 +38,7 @@ MonoBehaviour:
     bir a\u011Fr\u0131yla k\u0131vrand\u0131\u011F\u0131n g\xFCn | Adresine kargo
     geldi\u011Fi bir g\xFCn}}, pi\u015Fmanl\u0131klar i\xE7inde arayacak seni."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -59,6 +60,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

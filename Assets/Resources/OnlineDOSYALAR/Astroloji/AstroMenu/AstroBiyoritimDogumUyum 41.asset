@@ -67,6 +67,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -98,6 +99,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -129,6 +131,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -156,33 +159,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
-    takipSohbeti: {fileID: 0}
-    ozelFonksiyon: 
-  - cevapVaryasyonlari:
-    - Numeroloji
-    contentImage:
-      imageId: 
-      gifId: 
-      image: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
-    contentPhoto: {fileID: 21300000, guid: 1e1c4c5352edebc4d915c81ce6883499, type: 3}
-    contentPhotoId: back
-    gifId: 
-    fotografKonum: 0
-    ayarlanacakDegiskenler: []
-    secenekDegiskenleri: []
-    gerekenEnerjiKons:
-      enerji: 0
-      kons: 0
-    uIEnerjiKonsOverwrite:
-      enerji: 0
-      kons: 0
-    reklamGoster: 0
-    ayarlananDegiskenler:
-    - degiskenAdi: mod
-      degiskenDegeri: numeroloji
-      islem: 0
-    gerekliDegiskenler: []
-    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -210,6 +187,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 1
@@ -227,6 +205,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: "oradam\u0131s\u0131n"
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -252,4 +231,4 @@ MonoBehaviour:
   kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
-  preferencesObject: {fileID: 0}
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

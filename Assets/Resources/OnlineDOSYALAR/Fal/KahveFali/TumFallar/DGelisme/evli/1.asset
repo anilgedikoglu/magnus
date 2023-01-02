@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  idIndex: 202212243052AA02388428136
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinde sabah y\u0131ld\u0131z\u0131 ya da tan y\u0131ld\u0131z\u0131 olarak
+    da bilinen \xE7oban y\u0131ld\u0131z\u0131'n\u0131 g\xF6rmekteyim. Parlakl\u0131\u011F\u0131
+    ile bilinen bu y\u0131ld\u0131z asl\u0131nda ven\xFCs gezegenidir ve yak\u0131nla\u015Fmalar\u0131n
+    sinyalini verir. E\u015Fin ve sen birbirinizi ne kadar \xE7ok sevdi\u011Finizi
+    ilerleyen haftalarda hi\xE7 olmad\u0131\u011F\u0131 kadar \xE7ok hissedeceksiniz
+    {{isim}}. E\u015Fin sana olan a\u015Fk\u0131n\u0131n derinli\u011Fini yapaca\u011F\u0131
+    bir \u015Feyle g\xF6sterecek.\n\nFincan\u0131n merkezinde ilerlerken bir \"\xE7engel\"
+    sembol\xFC g\xF6rd\xFCm. Ge\xE7mi\u015F y\u0131llarda bir mutluluk ya\u015Fam\u0131\u015Fs\u0131n
+    fakat k\u0131sa s\xFCrm\xFC\u015F. O g\xFCnde ya da o anda tak\u0131l\u0131p
+    kalm\u0131\u015Fs\u0131n {{isim}}. Kaderin, o nokta ile ba\u011F\u0131n\u0131
+    halen koparmam\u0131\u015F. Gelece\u011Finde o mutlulu\u011Fun daha taze bir
+    \u015Fekilde yinelenece\u011Fini s\xF6yleyebilirim.\n\nG\xF6rselleri takip etti\u011Fimde,
+    bu defa e\u015Fini elinde bir pusula ile g\xF6r\xFCyorum. Y\xF6n\xFCn\xFC tayin
+    etmi\u015F ve o rotada ilerliyor. Zorlu bir yol olmas\u0131na ra\u011Fmen ona
+    destek olmal\u0131s\u0131n De\u011Ferli {{isim}}; zira e\u015Fin o yolun sonunda
+    ba\u015Far\u0131l\u0131 olacak."
+  aciklamaBalonuYok: 0
+  parlamaRengi: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: evli
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

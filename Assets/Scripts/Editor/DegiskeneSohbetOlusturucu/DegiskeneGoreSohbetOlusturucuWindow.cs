@@ -23,7 +23,7 @@ public class DegiskeneGoreSohbetOlusturucuWindow : EditorWindow
 
     private void OnEnable()
     {
-         targetObject = Resources.Load<DegiskeneGoreSohbetOlusturucuData>("SohbetVeritabani/DegiskeneGoreSohbetOlusturucuData");
+         targetObject = Resources.Load<DegiskeneGoreSohbetOlusturucuData>($"{ModSohbetManagerData.localDatabaseName}/DegiskeneGoreSohbetOlusturucuData");
     }
 
     private void OnDisable()

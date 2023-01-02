@@ -41,7 +41,7 @@ public class CevapSohbet
         {
             if (!string.IsNullOrEmpty(sonrakiSohbetID))
                 return System.Array.Find(ModSohbetManager.Instance.onlineSohbetCache, x => x.GetSohbetId().Equals(sonrakiSohbetID));
-            else return null;
+            else return sonrakiSohbetHavuzu;
         }
     }
 

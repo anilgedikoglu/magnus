@@ -36,6 +36,7 @@ MonoBehaviour:
     \xE7\u0131km\u0131\u015F | g\xF6nderimi sa\u011Flam\u0131\u015F | konuyu \xE7\xF6zm\xFC\u015F}},
     anlayacaks\u0131n. Haberi alan e\u015Finin y\xFCz\xFC, g\xFCller a\xE7acak."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -57,6 +58,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

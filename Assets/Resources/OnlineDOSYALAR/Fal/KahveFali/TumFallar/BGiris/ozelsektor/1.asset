@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  idIndex: 202212243051AA30800638736
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n ilk b\xF6l\xFCmlerinde geni\u015F bir salon g\xF6r\xFCyorum; bir\xE7ok
+    ki\u015Finin ayn\u0131 anda \xE7al\u0131\u015Ft\u0131\u011F\u0131 ortak bir alan
+    gibi. Burada, ad\u0131n\u0131n ba\u015F harfi B olan biri var. {{data, cinsiyet=kad\u0131n,
+    Berna, Bet\xFCl, Banu ya da Bahar olabilir. | cinsiyet=erkek, Burak, Bar\u0131\u015F,
+    B\xFClent ya da Berk olabilir. | cinsiyet=lgbt, Bihter, Bilal, Bengi ya da Beste
+    olabilir.}} Tam kar\u015F\u0131s\u0131nda oturan ve ba\u015F\u0131 \xF6n\xFCne
+    e\u011Fik \u015Fekilde \xE7al\u0131\u015Fan bir {{data, cinsiyet=erkek, kad\u0131n\u0131
+    | cinsiyet=kad\u0131n, erke\u011Fi | cinsiyet=lgbt, di\u011Fer insan\u0131}}
+    g\xF6zl\xFCyor. Bence yak\u0131nda \xE7al\u0131\u015Ft\u0131\u011F\u0131n kurumda
+    bir g\xF6n\xFCl i\u015Fi meydana \xE7\u0131kacak ve \u015Fah\u0131slardan biri
+    senin arkada\u015F\u0131n oldu\u011Fu i\xE7in bu durum seni de \xE7ok \u015Fa\u015F\u0131rtacak
+    {{isim}}."
+  aciklamaBalonuYok: 0
+  parlamaRengi: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "\xF6zel sekt\xF6r"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -34,6 +34,7 @@ MonoBehaviour:
     bir konuda sevin\xE7le co\u015Facaks\u0131n. Bir olu\u015Fum bekliyor seni; bir
     kurum, bir yap\u0131, bir d\xFCzen. Sana dere tepe yollar var."
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -58,6 +59,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

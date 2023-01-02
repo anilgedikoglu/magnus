@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  idIndex: 202212243051AA49822492410
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "De\u011Ferli {{isim}}, fincan\u0131ndaki \xFCst b\xF6l\xFCmlerde bir \xE7ift
+    takunya g\xF6r\xFCyorum ve hemen senin \xF6n\xFCnde duruyor. Bir yandan \xE7evrende
+    \xE7\u0131plak ayakla gezen ve ayaklar\u0131na \xE7ak\u0131l ta\u015Flar\u0131
+    batan insanlar seni ele\u015Ftirirken, bir yandan da sen o takunyalar\u0131 aya\u011F\u0131na
+    ge\xE7irmi\u015F, onlardan daha h\u0131zl\u0131 \u015Fekilde ilerliyorsun. \u0130\u015Finle
+    ilgili bug\xFCnlerde baz\u0131 ele\u015Ftiriler alabilirsin. \u0130nsanlara iptidai
+    g\xF6z\xFCkmesine ra\u011Fmen bulaca\u011F\u0131n bir \xE7\xF6z\xFCm ya da ataca\u011F\u0131n
+    bir ad\u0131m, seni rakiplerinin \xF6n\xFCne ge\xE7irecek."
+  aciklamaBalonuYok: 0
+  parlamaRengi: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

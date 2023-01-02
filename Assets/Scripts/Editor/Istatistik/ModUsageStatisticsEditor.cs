@@ -36,7 +36,7 @@ public class ModUsageStatisticsEditor : EditorWindow
         downloadedModStats = new();
         mevcutSohbet = null;
 
-        modUsageStatData = (ModUsageStat)Resources.Load("SohbetVeriTabani/ModUsageStatData");
+        modUsageStatData = (ModUsageStat)Resources.Load($"{ModSohbetManagerData.localDatabaseName}/ModUsageStatData");
     }
 
     private void OnGUI()

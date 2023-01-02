@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  idIndex: 2023122352AA07498871970
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n orta hatt\u0131nda ise topra\u011Fa g\xF6m\xFCl\xFC bir kiraz
+    \xE7ekirde\u011Fi g\xF6r\xFCyorum {{isim}}. Adeta \xF6zenle ekilmi\u015F gibi
+    duran \xE7ekirdek derinden ba\u011Flanaca\u011F\u0131n bir k\u0131smetin m\xFCjdelerini
+    veriyor. Tan\u0131\u015Ft\u0131\u011F\u0131n anda g\xF6n\xFCl ba\u011F\u0131n\u0131
+    hissedece\u011Fin bu k\u0131smet kumral k\u0131sa sa\xE7lara sahip, yakla\u015F\u0131k
+    1.87 boylar\u0131nda, iyi giyimli bir beyefendi. Ba\u015Fta aran\u0131zdaki boy
+    fark\u0131n\u0131 fazla bulabilirsin ancak al\u0131\u015Ft\u0131k\xE7a ho\u015Funa
+    bile gidecek. Bu a\u015Fk\u0131n tohumlar\u0131n\u0131 ekecek ki\u015Finin ise
+    ortak bir arkada\u015F\u0131n\u0131z olaca\u011F\u0131n\u0131 hissediyorum. \xD6te
+    yandan aceleci davranmaman\u0131 tavsiye ederim. Telvelerin bu ki\u015Fiyle tan\u0131\u015Faca\u011F\u0131n
+    tarih i\xE7in gelecek ay\u0131n son haftas\u0131n\u0131 i\u015Faret ediyor.\n\nYine
+    ayn\u0131 seviyelerde 2 g\xF6rsel daha dikkatimi \xE7ekti. Bunlardan bir tanesi
+    \u201C\xE7engelli i\u011Fne\u201D di\u011Feri ise bir \u201Ckupa\u201D. \u0130\u011Fne,
+    uzun zamand\u0131r yakan\u0131 b\u0131rakmayan bir sorunun \xE7\xF6z\xFClece\u011Finin
+    habercisi. \xD6nceden ailene a\xE7mak istemedi\u011Fin bu sorun, ailenden birinin
+    senin haberin olmadan sorununu \xF6\u011Frenmesiyle hallolacak {{isim}}. Kupa
+    ise i\xE7ten ve arkada\u015F\xE7a duygular\u0131 temsil eder. Uzun zaman \xF6nce
+    iyilikte bulundu\u011Fun bir arkada\u015F\u0131n, i\xE7ini \u0131s\u0131tacak
+    bir hediyeyle yak\u0131nda g\xFCndemine gelebilir."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

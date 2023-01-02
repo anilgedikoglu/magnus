@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  idIndex: 2023122352AA27907973304
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Telvelerinde, ya\u011Fmurun alt\u0131nda biri di\u015Fi di\u011Feri erkek iki
+    ser\xE7e g\xF6r\xFCyorum. Erkek kanad\u0131n\u0131 a\xE7m\u0131\u015F, di\u015Finin
+    \xFCst\xFCn\xFC \xF6rt\xFCyor. Ser\xE7elerin olduk\xE7a duygusal ve hassas canl\u0131lar
+    oldu\u011Funu duymu\u015Fsundur {{isim}}. Biz insanlar\u0131n da t\u0131pk\u0131
+    ser\xE7eler gibi hassas oldu\u011Fu d\xF6nemler olabiliyor. Fal\u0131ndaki ya\u011Fmur
+    imgesinden yola \xE7\u0131karak senin i\xE7in de hassas bir d\xF6nemin yakla\u015Ft\u0131\u011F\u0131n\u0131
+    s\xF6yleyebilirim. \xD6nemli bir dostunla ya da aile bireylerinden biriyle ya\u015Fayabilece\u011Fin
+    bir tart\u0131\u015Fma bu d\xF6neme sebep olabilir. \xD6te yandan b\xFCt\xFCn
+    bunlar gelip ge\xE7ici bir s\xFCre\xE7. Ya\u015Fanabilecek olaylar\u0131n tamam\u0131nda,
+    hayat\u0131na yak\u0131n zamanda girecek bir erke\u011Fin sana \xF6nemli derecede
+    destek sa\u011Flayaca\u011F\u0131n\u0131 bilmeni isterim."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

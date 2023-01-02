@@ -116,6 +116,7 @@ public class BilgiEkraniSettings : ScriptableObject
             public int priority;
             public bool deletable = true;
             public bool showAd = true;
+            public bool simpleFocusPanel;
         }
 
         [System.Serializable]

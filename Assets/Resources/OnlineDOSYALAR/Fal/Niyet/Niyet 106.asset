@@ -36,6 +36,7 @@ MonoBehaviour:
     g\xFCne dek onsuz olu\u015Funa yanacaks\u0131n. Sana d\xFCnya d\xFCz dese \u015Fappadanak
     kanacaks\u0131n. Bil ki mutluluk sana pek yak\u0131n!"
   aciklamaBalonuYok: 1
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -57,6 +58,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

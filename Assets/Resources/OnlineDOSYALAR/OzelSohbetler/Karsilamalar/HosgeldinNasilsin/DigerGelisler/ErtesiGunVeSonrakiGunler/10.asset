@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 10
+  m_EditorClassIdentifier: 
+  idIndex: 20223135326AA91780487163
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "{{saat, g\xFCnayd\u0131n | t\xFCnayd\u0131n | iyi g\xFCnler | iyi ak\u015Famlar
+    | iyi geceler}} Sevgili {{isim}}. Nas\u0131ls\u0131n d\xFCnden beri?"
+  aciklamaBalonuYok: 0
+  parlamaRengi: 0
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - "Gayet iyiyim te\u015Fekk\xFCr ederim."
+    - "Olduk\xE7a iyiyim, te\u015Fekk\xFCrler."
+    - "Keyfim beyde yok, sa\u011Folas\u0131n."
+    - "\u0130yiyim, \xE7ok mersi."
+    - "Bug\xFCn\xFCm\xFCze de \u015F\xFCk\xFCr be Magnus..."
+    - "\u0130yiyim, sa\u011Fol. "
+    - "\u0130yiyim."
+    - "\u0130yi diyelim iyi olsun."
+    - "Harikay\u0131m."
+    - "Dert \xFCst\xFC murat \xFCst\xFCy\xFCm, sa\u011Folas\u0131n."
+    - "\xC7ok naziksin, iyiyim, te\u015Fekk\xFCr ederim."
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mood
+      degiskenDegeri: mutlu
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "nas\u0131ls\u0131ncevapiyi"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mood
+      degiskenDegeri: mutlu
+      islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "nas\u0131ls\u0131ncevapiyi"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "K\xFCrek k\xFCrek s\u0131k\u0131nt\u0131lar\u0131m var."
+    - "Dert k\xFCp\xFCy\xFCm."
+    - "Oluk oluk bunal\u0131yorum valla."
+    - "Mevsimim g\xFCz, gel sen de \xFCz."
+    - "\xDCfleseler y\u0131k\u0131l\u0131r\u0131m be Magnus!"
+    - "Derman\u0131m yok, derdim \xE7ok."
+    - "\u0130yi demeye mecalim yok."
+    - "K\xF6t\xFCy\xFCm desem yalan olmaz."
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mood
+      degiskenDegeri: mutsuz
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "nas\u0131ls\u0131ncevapk\xF6t\xFC"
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mood
+      degiskenDegeri: mutsuz
+      islem: 0
+    - degiskenAdi: mod
+      degiskenDegeri: "nas\u0131ls\u0131ncevapk\xF6t\xFC"
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "ho\u015Fgeldin"
+    kontrol: 0
+  - degiskenAdi: oturum sayisi
+    degiskenDegeri: 1
+    kontrol: 0
+  - degiskenAdi: gun fark
+    degiskenDegeri: 1
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  kazimaTipi: 0
+  kazimaFotografi: {fileID: 0}
+  kazimaFotografiId: 
+  kazimaOrani: 50
+  kazimaSonuBekleme: 2
+  kazimaModu: 
+  kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris468
+  m_EditorClassIdentifier: 
+  idIndex: 2023122352AA71576981579
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Dikkatimi fincan\u0131n\u0131n \xFCst k\u0131s\u0131mlar\u0131na yo\u011Funla\u015Ft\u0131rd\u0131\u011F\u0131mda
+    ilgin\xE7 bir mitolojik fig\xFCrle kar\u015F\u0131la\u015Ft\u0131m. \"Titan\"
+    ad\u0131ndaki bu fig\xFCr Yunan mitolojisine g\xF6re efsanevi Alt\u0131n \xC7a\u011F
+    \u2019da d\xFCnyay\u0131 y\xF6netmi\u015F olan g\xFC\xE7l\xFC bir tanr\u0131
+    \u0131rk\u0131yd\u0131. G\xFCc\xFCn ve hakimiyetin sembol\xFC olan titanlar,
+    fallarda da ayn\u0131 \u015Fekilde yorumlanmakta {{isim}}. Buradan yola \xE7\u0131karak
+    yak\u0131n gelecekte hem sosyal hem de maddi bir g\xFC\xE7 elde edece\u011Fini
+    s\xF6yleyebilirim. Bu g\xFC\xE7 hi\xE7bir beklentiye sahip olmad\u0131\u011F\u0131n
+    eski bir i\u015Fin, en ihtiyac\u0131n oldu\u011Fu anda ba\u015Far\u0131ya ula\u015Fmas\u0131yla
+    gelecek. Bu s\xFCrecin ba\u015Flang\u0131c\u0131ndan itibaren ipleri elden b\u0131rakmamanda
+    fayda var \xE7\xFCnk\xFC bir noktadan sonra g\xFCc\xFCn\xFC elinde tutman i\xE7in
+    i\u015Fleri bizzat y\xF6netmen gerekecek."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -34,6 +34,7 @@ MonoBehaviour:
     i\xE7in ka\xE7\u0131r\u0131yorsun {{isim}}. Erkenden rok yapmal\u0131 ve sald\u0131r\u0131ya
     do\u011Fru kanattan, do\u011Fru ta\u015Flarla ba\u015Flamal\u0131s\u0131n."
   aciklamaBalonuYok: 0
+  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -52,6 +53,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

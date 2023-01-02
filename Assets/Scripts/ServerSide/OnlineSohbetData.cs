@@ -21,7 +21,9 @@ public class OnlineSohbetData
     [TextArea(5, 10)]
     public List<string> aciklamalar = new();
     public bool aciklamaBalonuYok = false;
+    public bool yeniFocusPaneliKullan = false;
     public Sohbet.GlowEffectColor parlamaRengi = Sohbet.GlowEffectColor.yok;
+    public float parlamaSuresi = 0;
 
     public List<string> birlestirilecekModlar = new List<string>();
 
@@ -58,6 +60,7 @@ public class OnlineSohbetData
         oncelik = new Sohbet.SohbetOnceligi();
         this.aciklamalar = new List<string>();
         aciklamaBalonuYok = false;
+        yeniFocusPaneliKullan = false;
 
         birlestirilecekModlar = new List<string>();
 
@@ -66,6 +69,8 @@ public class OnlineSohbetData
         tepkiBalonuYok = false;
 
         balonTipi = new Sohbet.typeOfAnswerBubble();
+
+        parlamaSuresi = 0;
 
         gerekliDegiskenler = new List<Sohbet.GerekenDegisken>();
         ayarlananDegiskenler = new List<Sohbet.AyarlanacakDegisken>();

@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  idIndex: 2023122352AA68168422710
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n a\u011F\u0131z k\u0131sm\u0131ndan i\xE7eri sarkan, kapa\u011F\u0131
+    a\xE7\u0131k bir cep saati g\xF6r\xFCyorum. Bu saatin akrep ve yelkovan\u0131
+    \xFCst \xFCste binmi\u015F, hareket etmiyorlar. Falda \"durmu\u015F saat\" g\xF6rmek
+    ge\xE7mi\u015Fe tak\u0131l\u0131 kalmak anlam\u0131na gelir. San\u0131r\u0131m
+    yak\u0131n zamanda ileti\u015Fimi kopard\u0131\u011F\u0131n birini hen\xFCz akl\u0131ndan
+    \xE7\u0131karamad\u0131n {{isim}}. Bu ki\u015Fi bir yanl\u0131\u015F anla\u015F\u0131lma
+    ya da istemeden sebep oldu\u011Fun bir darg\u0131nl\u0131k y\xFCz\xFCnden hayat\u0131ndan
+    \xE7\u0131km\u0131\u015F olabilir. Neyse ki birbiri \xFCst\xFCne binmi\u015F
+    akrep ve yelkovan, d\xFC\u015F\xFCncelerinizin ortak oldu\u011Funa dair g\xFC\xE7l\xFC
+    bir i\u015Farettir. Yani o ki\u015Finin de seni d\xFC\u015F\xFCnd\xFC\u011F\xFCn\xFC
+    s\xF6yleyebilirim. Belki de y\xFCklerinden ar\u0131nmak i\xE7in ona bir \xE7a\u011Fr\u0131
+    atmal\u0131s\u0131n, ne dersin? <sprite=7>"
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "ili\u015Fkisi yok"
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

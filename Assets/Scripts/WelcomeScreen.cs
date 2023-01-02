@@ -675,11 +675,11 @@ public class WelcomeScreen : MonoBehaviour
         {
             if (defaultChatDegiskeni.resetType == DefaultVariables.DefaultChatDegiskeni.ResetType.everyLaunch)
             {
-                playerData.AddElementToChatVariableList(defaultChatDegiskeni.degiskenAdi, defaultChatDegiskeni.degiskenDegeri, false);
+                playerData.AddElementToChatVariableList(defaultChatDegiskeni.degiskenAdi, defaultChatDegiskeni.degiskenDegeri, true);
             }
             else if (defaultChatDegiskeni.resetType == DefaultVariables.DefaultChatDegiskeni.ResetType.daily && dayDifference > 0)
             {
-                playerData.AddElementToChatVariableList(defaultChatDegiskeni.degiskenAdi, defaultChatDegiskeni.degiskenDegeri, false);
+                playerData.AddElementToChatVariableList(defaultChatDegiskeni.degiskenAdi, defaultChatDegiskeni.degiskenDegeri, true);
             }
         }
     }

@@ -213,11 +213,6 @@ public class AnswerBubble : MonoBehaviour
         {
             var sohbetSonra = sohbet.cevaplar[bubbleType - 1].CurrentSonrakiSohbetHavuzu;
 
-            if (sohbetSonra != null)
-                Debug.Log(sohbetSonra.GetSohbetId());
-            else
-                Debug.Log("Sonraki sohbet yok");
-
             sonrakiSohbet = sohbetSonra;
             takipSohbet = sohbet.cevaplar[bubbleType - 1].takipSohbeti;
         }

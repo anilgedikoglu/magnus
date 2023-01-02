@@ -49,6 +49,7 @@ public class InboxElement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     private bool ready = true;
     private bool directionChecked  =false;
     private bool showAd;
+    private bool simpleFocusPanel = false;
 
     private bool canDrag;
 
@@ -215,6 +216,7 @@ public class InboxElement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
                     flareImage.color = inboxElement.flare == null ?
                         new Color(1, 1, 1, 0) : Color.white;
                     showAd = inboxElement.showAd;
+                    simpleFocusPanel = inboxElement.simpleFocusPanel;
                 }
 
                 date.text = renderedText.renderedTexts[index].date;
@@ -390,6 +392,7 @@ public class InboxElement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
                     GetSprite(renderedText.renderedTexts[index].photoId);
 
             sohbet.fotografKonum = Sohbet.contentPhotoLocation.balonIcindeBasta;
+            sohbet.yeniFocusPaneliKullan = simpleFocusPanel;
 
             if (renderedText.renderedTexts[index].mod == "dogumharitasi")
             {
@@ -476,6 +479,7 @@ public class InboxElement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
             if (sprites.Count > 1)
             {
+                inboxManager.panelShowText.simplePanelActive = simpleFocusPanel;
                 inboxManager.panelShowText.OpenPanel(new List<SpeechBubbleLeft>() { speechBubbleLeft }, sohbet, sprites, renderedText.renderedTexts[index]);
             }
             else
@@ -485,6 +489,7 @@ public class InboxElement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
                     speechBubbleLeft.contentImageActive = true;
                     speechBubbleLeft.contentImage.sprite = FindObjectOfType<PhotoManager>().GetSprite(photoIds[0]);
                 }
+                inboxManager.panelShowText.simplePanelActive = simpleFocusPanel;
                 inboxManager.panelShowText.OpenPanel(new List<SpeechBubbleLeft>() { speechBubbleLeft }, sohbet, renderedText.renderedTexts[index]);
             }
         }

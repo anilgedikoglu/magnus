@@ -33,7 +33,6 @@ MonoBehaviour:
   - "Sa\u011Fl\u0131kl\u0131 oldu\u011Funu d\xFC\u015F\xFCn\xFCyor musun?"
   - "Sa\u011Fl\u0131\u011F\u0131na dikkat etti\u011Fini d\xFC\u015F\xFCn\xFCyor musun?"
   aciklamaBalonuYok: 0
-  parlamaRengi: 0
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -56,9 +55,6 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
-    uIEnerjiKonsOverwrite:
-      enerji: 0
-      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: "smanalizsa\u011Fl\u0131k"
@@ -66,7 +62,6 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: cf2cd95bcde411e43a0f1376f2340990, type: 2}
-    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -88,9 +83,6 @@ MonoBehaviour:
     gerekenEnerjiKons:
       enerji: 0
       kons: 0
-    uIEnerjiKonsOverwrite:
-      enerji: 0
-      kons: 0
     reklamGoster: 0
     ayarlananDegiskenler:
     - degiskenAdi: "smanalizsa\u011Fl\u0131k"
@@ -98,7 +90,6 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 11400000, guid: cf2cd95bcde411e43a0f1376f2340990, type: 2}
-    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 0
@@ -119,7 +110,6 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
-  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 

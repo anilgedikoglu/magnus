@@ -116,15 +116,49 @@ public class ModSohbetManagerDataEditor : Editor
         }
     }
 
+    GUIStyle nonbreakingLabelStyle = new GUIStyle();
+    GUIStyle nonbreakingLabelStyle2 = new GUIStyle();
     private void DrawLocalePanel()
     {
         EditorGUILayout.LabelField("Yerel Veritabanı", h1);
+
+        nonbreakingLabelStyle2.alignment = TextAnchor.MiddleLeft;
+        nonbreakingLabelStyle2.normal.textColor = Color.white;
+        nonbreakingLabelStyle2.fontStyle = FontStyle.Bold;
+        nonbreakingLabelStyle2.stretchWidth = false;
+
+        nonbreakingLabelStyle.alignment = TextAnchor.MiddleLeft;
+        nonbreakingLabelStyle.normal.textColor = Color.gray;
+        nonbreakingLabelStyle.stretchWidth = false;
+
         if (sohbetManagerData.tumSohbetler != null)
         {
-            EditorGUILayout.LabelField("Veritabanında bulunan toplam sohbet sayısı: " + sohbetManagerData.tumSohbetler.Length);
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField("Toplam Sohbet Sayısı: ", nonbreakingLabelStyle2);
+            EditorGUILayout.LabelField((sohbetManagerData.tumSohbetler.Length + sohbetManagerData.tumOnlineSohbetler.Length).ToString(), nonbreakingLabelStyle);
+            EditorGUILayout.EndHorizontal();
         }
 
-        EditorGUILayout.LabelField("Veritabanında bulunan toplam ayrı mod sayısı: " + sohbetManagerData.mods.Count);
+        if (sohbetManagerData.tumSohbetler != null)
+        {
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField("Yerel Sohbet Sayısı: ", nonbreakingLabelStyle2);
+            EditorGUILayout.LabelField(sohbetManagerData.tumSohbetler.Length.ToString(), nonbreakingLabelStyle);
+            EditorGUILayout.EndHorizontal();
+        }
+
+        if (sohbetManagerData.tumOnlineSohbetler != null)
+        {
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField("Online Sohbet Sayısı: ", nonbreakingLabelStyle2);
+            EditorGUILayout.LabelField(sohbetManagerData.tumOnlineSohbetler.Length.ToString(), nonbreakingLabelStyle);
+            EditorGUILayout.EndHorizontal();
+        }
+
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("Mod Sayısı: ", nonbreakingLabelStyle2);
+        EditorGUILayout.LabelField(ModSohbetManager.Instance.mods.Count.ToString(), nonbreakingLabelStyle);
+        EditorGUILayout.EndHorizontal();
 
         if (downloadRatio <= 0)
         {

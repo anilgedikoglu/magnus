@@ -30,7 +30,7 @@ MonoBehaviour:
     items:
     - text: "BO\u015E"
       icon: {fileID: 0}
-      chance: 15
+      chance: 22
       color: {r: 0.11764706, g: 0.49411765, b: 1, a: 1}
       isLose: 1
       gidilecekMod:
@@ -38,7 +38,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "1 Alt\u0131n"
       icon: {fileID: 21300000, guid: c33ae49d37081494785fde5dc95be24b, type: 3}
-      chance: 15
+      chance: 13
       color: {r: 0.8666667, g: 0.8901961, b: 0, a: 1}
       isLose: 0
       gidilecekMod:
@@ -46,7 +46,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "BO\u015E"
       icon: {fileID: 0}
-      chance: 15
+      chance: 22
       color: {r: 0.11764706, g: 0.49411765, b: 1, a: 1}
       isLose: 1
       gidilecekMod:
@@ -54,7 +54,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "Y\xFCz fal\u0131"
       icon: {fileID: 21300000, guid: 816394238bb624475a69f77cd8dce985, type: 3}
-      chance: 10
+      chance: 6
       color: {r: 0.101960786, g: 0.5529412, b: 0.2627451, a: 1}
       isLose: 0
       gidilecekMod:
@@ -62,7 +62,7 @@ MonoBehaviour:
         wheeldaKal: 1
     - text: "BO\u015E"
       icon: {fileID: 0}
-      chance: 15
+      chance: 22
       color: {r: 0.11764706, g: 0.49411765, b: 1, a: 1}
       isLose: 1
       gidilecekMod:
@@ -70,7 +70,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "2 Alt\u0131n"
       icon: {fileID: 21300000, guid: c33ae49d37081494785fde5dc95be24b, type: 3}
-      chance: 10
+      chance: 8
       color: {r: 0.8666667, g: 0.8901961, b: 0, a: 1}
       isLose: 0
       gidilecekMod:
@@ -78,7 +78,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "BO\u015E"
       icon: {fileID: 0}
-      chance: 15
+      chance: 22
       color: {r: 0.11764706, g: 0.49411765, b: 1, a: 1}
       isLose: 1
       gidilecekMod:
@@ -94,7 +94,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "BO\u015E"
       icon: {fileID: 0}
-      chance: 15
+      chance: 22
       color: {r: 0.11764706, g: 0.49411765, b: 1, a: 1}
       isLose: 1
       gidilecekMod:
@@ -102,7 +102,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "3 Alt\u0131n"
       icon: {fileID: 21300000, guid: c33ae49d37081494785fde5dc95be24b, type: 3}
-      chance: 10
+      chance: 6
       color: {r: 0.8666667, g: 0.8901961, b: 0, a: 1}
       isLose: 0
       gidilecekMod:
@@ -110,7 +110,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "BO\u015E"
       icon: {fileID: 0}
-      chance: 15
+      chance: 22
       color: {r: 0.11764706, g: 0.49411765, b: 1, a: 1}
       isLose: 1
       gidilecekMod:
@@ -118,7 +118,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "El Fal\u0131"
       icon: {fileID: 21300000, guid: 816394238bb624475a69f77cd8dce985, type: 3}
-      chance: 10
+      chance: 6
       color: {r: 0.101960786, g: 0.5529412, b: 0.2627451, a: 1}
       isLose: 0
       gidilecekMod:
@@ -126,7 +126,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "BO\u015E"
       icon: {fileID: 0}
-      chance: 15
+      chance: 22
       color: {r: 0.11764706, g: 0.49411765, b: 1, a: 1}
       isLose: 1
       gidilecekMod:
@@ -134,7 +134,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "5 Alt\u0131n"
       icon: {fileID: 21300000, guid: c33ae49d37081494785fde5dc95be24b, type: 3}
-      chance: 10
+      chance: 4
       color: {r: 0.8666667, g: 0.8901961, b: 0, a: 1}
       isLose: 0
       gidilecekMod:
@@ -142,7 +142,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: "BO\u015E"
       icon: {fileID: 0}
-      chance: 15
+      chance: 22
       color: {r: 0.11764706, g: 0.49411765, b: 1, a: 1}
       isLose: 1
       gidilecekMod:
@@ -150,7 +150,7 @@ MonoBehaviour:
         wheeldaKal: 0
     - text: 1 Elmas
       icon: {fileID: 21300000, guid: a440299810fbb4a46b6d0de937448e37, type: 3}
-      chance: 5
+      chance: 4
       color: {r: 0.67058825, g: 0, b: 0.72156864, a: 1}
       isLose: 0
       gidilecekMod:

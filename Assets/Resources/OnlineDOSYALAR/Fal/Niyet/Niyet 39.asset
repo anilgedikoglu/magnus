@@ -34,7 +34,9 @@ MonoBehaviour:
     anla\u015Facaks\u0131n, zor i\u015F onunla bitecek. Yard\u0131m edip destekleyecek,
     eli y\xFCkse\u011Fe erecek. Sayesinde nihayet, g\xFCc\xFCn dile\u011Fine yetecek."
   aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -62,7 +64,7 @@ MonoBehaviour:
   sohbetEnerjisi: 0
   sohbetKonsantrasyonu: 0
   kazima:
-    kazimaTipi: 0
+    kazimaTipi: 1
     image: {fileID: 0}
     imageId: 
     gifId: 
@@ -70,13 +72,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 1
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 1
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -36,7 +36,9 @@ MonoBehaviour:
     \xFCst\xFCn ba\u015F\u0131n s\u0131rs\u0131klam sevin\xE7 olacak. {{sayi,2,15}}
     g\xFCn\xFCn kald\u0131."
   aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -64,7 +66,7 @@ MonoBehaviour:
   sohbetEnerjisi: 0
   sohbetKonsantrasyonu: 0
   kazima:
-    kazimaTipi: 0
+    kazimaTipi: 1
     image: {fileID: 0}
     imageId: 
     gifId: 
@@ -72,13 +74,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 1
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 1
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

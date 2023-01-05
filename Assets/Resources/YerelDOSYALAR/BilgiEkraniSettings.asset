@@ -543,6 +543,7 @@ MonoBehaviour:
       priority: 0
       deletable: 0
       showAd: 1
+      simpleFocusPanel: 0
     inboxElements:
     - mod: "kahve fal\u0131 kar\u015F\u0131lama"
       title: "Kahve Fal\u0131"
@@ -553,6 +554,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 1
     - mod: tarot oku
       title: Tarot
       icon: {fileID: 21300000, guid: 0ed6b64d945d544aaa6e028bc5ca7186, type: 3}
@@ -562,6 +564,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 1
     - mod: burcsistem1
       title: "G\xFCnl\xFCk Astroloji"
       icon: {fileID: 21300000, guid: 3a256fd70d88d40238df9f7fecbc58da, type: 3}
@@ -571,6 +574,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: biyoritim
       title: Biyoritim
       icon: {fileID: 21300000, guid: 7c0091a6a6f3045ffbb37cd53695623b, type: 3}
@@ -580,6 +584,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: dogumharitasi
       title: "Do\u011Fum Haritas\u0131"
       icon: {fileID: 21300000, guid: 2a95969c063f040ac86f13a8b4071134, type: 3}
@@ -589,6 +594,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: kehanetbana
       title: Kehanet
       icon: {fileID: 21300000, guid: 631284b0e4c02470fb854282f282b88b, type: 3}
@@ -598,6 +604,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: "kehanetya\u015Fama"
       title: Kehanet
       icon: {fileID: 21300000, guid: 631284b0e4c02470fb854282f282b88b, type: 3}
@@ -607,6 +614,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: tefeul
       title: "Tefe\xFCl"
       icon: {fileID: 21300000, guid: 1fb4ecc69b8df4b30a1970200ea4718c, type: 3}
@@ -616,6 +624,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: niyet
       title: Niyet
       icon: {fileID: 21300000, guid: d2b4d8b26428a495b8a69615cd01163a, type: 3}
@@ -625,6 +634,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: "el fal\u0131"
       title: "El Fal\u0131"
       icon: {fileID: 21300000, guid: f6a3da5104f544425a0a64e0de5e0046, type: 3}
@@ -634,6 +644,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: "y\xFCz fal\u0131"
       title: "Y\xFCz Fal\u0131"
       icon: {fileID: 21300000, guid: e43817fadd6714df789a042005633ec0, type: 3}
@@ -643,6 +654,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: wheelspin fal alev
       title: "Kader \xC7ark\u0131"
       icon: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
@@ -652,6 +664,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: wheelspin fal kure
       title: "Kader \xC7ark\u0131"
       icon: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
@@ -661,6 +674,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: wheelspin fal hayvan
       title: "Kader \xC7ark\u0131"
       icon: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
@@ -670,6 +684,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: wheelspin fal renk
       title: "Kader \xC7ark\u0131"
       icon: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
@@ -679,6 +694,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: wheelspin fal tas
       title: "Kader \xC7ark\u0131"
       icon: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
@@ -688,6 +704,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: wheelspin fal zar
       title: "Kader \xC7ark\u0131"
       icon: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
@@ -697,6 +714,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: bno
       title: "Durug\xF6r\xFC - Bug\xFCn"
       icon: {fileID: 21300000, guid: 7a4851850c57648929d64acd5d321245, type: 3}
@@ -706,6 +724,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: yno
       title: "Durug\xF6r\xFC - Yar\u0131n"
       icon: {fileID: 21300000, guid: c41b3997cbaf240429cfc683f7276729, type: 3}
@@ -715,6 +734,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: gno
       title: "Durug\xF6r\xFC - Gelecek"
       icon: {fileID: 21300000, guid: 74c0ca29ecba3428a93a5b52145ac9f1, type: 3}
@@ -724,6 +744,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: "\xF6zl\xFCs\xF6z"
       title: "\xD6zl\xFC S\xF6z"
       icon: {fileID: 21300000, guid: 4da18aacbf08744c390c977c981bf7a8, type: 3}
@@ -733,6 +754,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: motivasyon
       title: Motivasyon
       icon: {fileID: 21300000, guid: 5ba66dbafb745408ebe38014286faf67, type: 3}
@@ -742,6 +764,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: uyumson
       title: "A\u015Fk Uyumu"
       icon: {fileID: 21300000, guid: 5d26c5b2515c44e6d8e1b02c50fe8d32, type: 3}
@@ -751,6 +774,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: adminCevap
       title: "Yorumun yan\u0131tland\u0131"
       icon: {fileID: 21300000, guid: 2e272432673ae447c9ec5582277fe5f4, type: 3}
@@ -760,6 +784,7 @@ MonoBehaviour:
       priority: 1
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: adminCevapHazirlaniyor
       title: "Yorumun de\u011Ferlendiriliyor"
       icon: {fileID: 21300000, guid: 2592ce8e846464884bfcc5562d347859, type: 3}
@@ -769,6 +794,7 @@ MonoBehaviour:
       priority: 1
       deletable: 0
       showAd: 0
+      simpleFocusPanel: 0
     - mod: onlineFalYanit
       title: Premium Fal
       icon: {fileID: 21300000, guid: 1bc055a98d4c246a8965ae916e1ab7cc, type: 3}
@@ -778,6 +804,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: onlineFalHazirlaniyor
       title: Premium Fal
       icon: {fileID: 21300000, guid: 1bc055a98d4c246a8965ae916e1ab7cc, type: 3}
@@ -787,6 +814,7 @@ MonoBehaviour:
       priority: 2
       deletable: 0
       showAd: 0
+      simpleFocusPanel: 0
     - mod: dertlesYanit
       title: "Dert Orta\u011F\u0131"
       icon: {fileID: 21300000, guid: 52aef2594d2504437980d3c36a855929, type: 3}
@@ -796,6 +824,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: dertlesHazirlaniyor
       title: "Dert Orta\u011F\u0131"
       icon: {fileID: 21300000, guid: 52aef2594d2504437980d3c36a855929, type: 3}
@@ -805,6 +834,7 @@ MonoBehaviour:
       priority: 2
       deletable: 0
       showAd: 0
+      simpleFocusPanel: 0
     - mod: ruyaYanit
       title: "R\xFCya Yorumu"
       icon: {fileID: 21300000, guid: c4777efed836b46c8a7baa55162a5479, type: 3}
@@ -814,6 +844,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
+      simpleFocusPanel: 0
     - mod: ruyaHazirlaniyor
       title: "R\xFCya Yorumu"
       icon: {fileID: 21300000, guid: c4777efed836b46c8a7baa55162a5479, type: 3}
@@ -823,6 +854,7 @@ MonoBehaviour:
       priority: 2
       deletable: 0
       showAd: 0
+      simpleFocusPanel: 0
   hizliFalOyun:
     defaultElement:
       title: 

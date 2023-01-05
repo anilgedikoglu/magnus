@@ -35,7 +35,9 @@ MonoBehaviour:
     bo\u015Flu\u011Funa de\u011Fsin. \u0130\xE7ini ferahlat, ba\u015Faracaks\u0131n.
     D\xF6kt\xFC\u011F\xFCn t\xFCm ya\u015Flara de\u011Fsin."
   aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -63,7 +65,7 @@ MonoBehaviour:
   sohbetEnerjisi: 0
   sohbetKonsantrasyonu: 0
   kazima:
-    kazimaTipi: 0
+    kazimaTipi: 1
     image: {fileID: 0}
     imageId: 
     gifId: 
@@ -71,13 +73,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 1
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 1
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

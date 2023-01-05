@@ -36,7 +36,9 @@ MonoBehaviour:
     h\u0131zla \xE7\xF6z\xFCme kavu\u015Facak. Sevdi\u011Fin ve ac\u0131d\u0131\u011F\u0131n
     kadar merhamet bulacaks\u0131n."
   aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -64,7 +66,7 @@ MonoBehaviour:
   sohbetEnerjisi: 0
   sohbetKonsantrasyonu: 0
   kazima:
-    kazimaTipi: 0
+    kazimaTipi: 1
     image: {fileID: 0}
     imageId: 
     gifId: 
@@ -72,13 +74,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 1
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 1
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

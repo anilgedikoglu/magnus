@@ -1507,328 +1507,6 @@ public class ChatManager : MonoBehaviour
         return secilenSohbet;
     }
 
-    Sohbet SohbetPickerDuzenlenmis()
-    {
-        int herFramedekiKontSayisiIlk = herFramedekiKontSayisi;
-        herFramedekiKontSayisi += 20;
-
-        if (herFramedekiKontSayisi > tumSohbetler.Count)
-            herFramedekiKontSayisi = tumSohbetler.Count;
-
-        List<int> sohbetNumaralari = new List<int>();
-        //int tumSohbetlerFirstCount = modSohbetManager.TotalSohbetElementCount();
-        for (int i = herFramedekiKontSayisiIlk; i < tumSohbetler.Count; i++)
-        {
-            sohbetNumaralari.Add(i);
-
-        }
-        Debug.LogWarning(sohbetNumaralari.Count);
-        Sohbet secilenSohbet = null;
-
-        List<int> ileriAtilacakSohbetNumaralari = new List<int>();
-        for (int u = herFramedekiKontSayisiIlk; u < herFramedekiKontSayisi; u++)
-        {
-            //Eger daha onceki adimda bir sohbet secildiyse.
-            if (secilenSohbet != null)
-                break;
-
-            //Random bir sohbeti kontrol etmek icin rastgele index secimi
-            int index = Random.Range(0, sohbetNumaralari.Count);
-
-            ileriAtilacakSohbetNumaralari.Add(sohbetNumaralari[index]);
-
-            //Saat ve yas degiskenlerinin diger degiskenlerden ayrilmasi ve ozel degiskenlere atanmasi
-            #region yasSaatGunFarkiDegiskenleriAyarlama
-            //max minlerde maxlar dahil değil minler dahil
-            List<Sohbet.GerekenDegisken> secilenSohbetDegiskenleri = new List<Sohbet.GerekenDegisken>();
-
-            Sohbet.GerekenDegisken yasMaxDegiskeni = new Sohbet.GerekenDegisken();
-            Sohbet.GerekenDegisken yasMinDegiskeni = new Sohbet.GerekenDegisken();
-
-            Sohbet.GerekenDegisken saatMaxDegiskeni = new Sohbet.GerekenDegisken();
-            Sohbet.GerekenDegisken saatMinDegiskeni = new Sohbet.GerekenDegisken();
-
-            Sohbet.GerekenDegisken gunFarkiMaxDegiskeni = new Sohbet.GerekenDegisken();
-            Sohbet.GerekenDegisken gunFarkiMinDegiskeni = new Sohbet.GerekenDegisken();
-
-            foreach (Sohbet.GerekenDegisken element in tumSohbetler[sohbetNumaralari[index]].gerekliDegiskenler)
-            {
-                if (element.degiskenAdi != "yasmin")
-                {
-                    if (element.degiskenAdi != "yasmax")
-                    {
-                        if (element.degiskenAdi != "saatmin")
-                        {
-                            if (element.degiskenAdi != "saatmax")
-                            {
-                                if (element.degiskenAdi != "gunmin")
-                                {
-                                    if (element.degiskenAdi != "gunmax")
-                                    {
-                                        secilenSohbetDegiskenleri.Add(element);
-                                    }
-                                    else
-                                    {
-                                        gunFarkiMaxDegiskeni = element;
-                                    }
-                                }
-                                else
-                                {
-                                    gunFarkiMinDegiskeni = element;
-                                }
-                            }
-                            else
-                            {
-                                saatMaxDegiskeni = element;
-                            }
-                        }
-                        else
-                        {
-                            saatMinDegiskeni = element;
-                        }
-                    }
-                    else
-                    {
-                        yasMaxDegiskeni = element;
-                    }
-                }
-                else
-                {
-                    yasMinDegiskeni = element;
-                }
-            }
-
-            int gerekenDegiskenlerLength = secilenSohbetDegiskenleri.Count;
-
-            //Yas
-            int yas = 0;
-            int.TryParse(PlayerDataManager.GetChatVariableValue("yas"), out yas);
-
-            int yasMin = 0;
-            int yasMax = 100;
-            int.TryParse(yasMinDegiskeni.degiskenDegeri, out yasMin);
-            int.TryParse(yasMaxDegiskeni.degiskenDegeri, out yasMax);
-
-            if (yasMax == 0)
-                yasMax = 1000;
-
-            bool yasAraligiCheck = false;
-
-            if (yas >= yasMin && yas < yasMax)
-            {
-                yasAraligiCheck = true;
-            }
-
-            //Gun farki
-            int gunFarki = 0;
-            int.TryParse(PlayerDataManager.GetChatVariableValue("gun farki"), out gunFarki);//Bu degisken welcomeScreen classinda kaydedilir!
-
-            int gunFarkiMin = 0;
-            int gunFarkiMax = 100;
-            int.TryParse(gunFarkiMinDegiskeni.degiskenDegeri, out gunFarkiMin);
-            int.TryParse(gunFarkiMaxDegiskeni.degiskenDegeri, out gunFarkiMax);
-
-            if (gunFarkiMax == 0)
-                gunFarkiMax = int.MaxValue;
-
-            bool gunFarkiAraligiCheck = false;
-
-            if (gunFarki >= gunFarkiMin && gunFarki < gunFarkiMax)
-            {
-                gunFarkiAraligiCheck = true;
-            }
-
-            //Saat
-            int saat = System.DateTime.Now.TimeOfDay.Hours;
-
-            int saatMin = 0;
-            int saatMax = 100;
-            int.TryParse(saatMinDegiskeni.degiskenDegeri, out saatMin);
-            int.TryParse(saatMaxDegiskeni.degiskenDegeri, out saatMax);
-
-            if (saatMax == 0)
-                saatMax = 1000;
-
-            bool saatAraligiCheck = false;
-
-            if (saat >= saatMin && saat < saatMax)
-            {
-                saatAraligiCheck = true;
-            }
-            #endregion
-
-            bool hata = !gunFarkiAraligiCheck || !yasAraligiCheck ||
-                !saatAraligiCheck || gerekenDegiskenlerLength <= 0;
-
-            if (hata)
-            {
-                sohbetNumaralari.RemoveAt(index);
-                secilenSohbet = null;
-            }
-            else
-            {
-                for (int i = 0; i < gerekenDegiskenlerLength; i++)
-                {
-                    string secilenSohbetDegiskenDegeri = PlayerDataManager.GetChatVariableValue(secilenSohbetDegiskenleri[i].degiskenAdi);
-                    if (!string.IsNullOrEmpty(secilenSohbetDegiskenDegeri))
-                    {
-                        if (DegiskenKontrol(secilenSohbetDegiskenleri[i],
-                            secilenSohbetDegiskenDegeri,
-                            tumSohbetler[sohbetNumaralari[index]].GetSohbetId()))
-                        {
-
-                            if (TekrarDegiskenleriKontrol(tumSohbetler[sohbetNumaralari[index]]))
-                            {
-                                if (i == gerekenDegiskenlerLength - 1)
-                                {
-                                    //sohbetSecildi
-                                    secilenSohbet = SohbetiSec(tumSohbetler[sohbetNumaralari[index]]);
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                if (tekrarSohbeti == null)
-                                    tekrarSohbeti = tumSohbetler[sohbetNumaralari[index]];
-
-                                sohbetNumaralari.RemoveAt(index);
-                                secilenSohbet = null;
-
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            for (int a = 0; a < gerekenDegiskenlerLength; a++)
-                            {
-                                if (secilenSohbetDegiskenleri[i].degiskenAdi == secilenSohbetDegiskenleri[a].degiskenAdi)
-                                {
-                                    if (DegiskenKontrol(secilenSohbetDegiskenleri[a],
-                                            secilenSohbetDegiskenDegeri,
-                                            tumSohbetler[sohbetNumaralari[index]].GetSohbetId()))
-                                    {
-                                        if (TekrarDegiskenleriKontrol(tumSohbetler[sohbetNumaralari[index]]))
-                                        {
-                                            if (a == gerekenDegiskenlerLength - 1)
-                                            {
-                                                //sohbetSecildi
-                                                secilenSohbet = SohbetiSec(tumSohbetler[sohbetNumaralari[index]]);
-                                                break;
-                                            }
-                                        }
-                                        else
-                                        {
-                                            if (tekrarSohbeti == null)
-                                                tekrarSohbeti = tumSohbetler[sohbetNumaralari[index]];
-
-                                            sohbetNumaralari.RemoveAt(index);
-                                            secilenSohbet = null;
-                                            i = gerekenDegiskenlerLength;
-                                            break;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        if (a == gerekenDegiskenlerLength - 1)
-                                        {
-                                            sohbetNumaralari.RemoveAt(index);
-                                            secilenSohbet = null;
-                                            i = gerekenDegiskenlerLength;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    if (a == gerekenDegiskenlerLength - 1)
-                                    {
-                                        sohbetNumaralari.RemoveAt(index);
-                                        secilenSohbet = null;
-                                        i = gerekenDegiskenlerLength;
-                                    }
-                                }
-                            }
-                        }
-
-                    }
-                    else
-                    {
-                        //Yazılan kodun bir değişken değil de bir buton olması durumunun kontrolü için butonun değerine erişilir.
-                        string deger = "{{" + secilenSohbetDegiskenleri[i].degiskenAdi + "}}";
-                        deger = chatVariablesManager.OrtakButonlar(deger).ToLower();
-
-                        if (DegiskenKontrol(secilenSohbetDegiskenleri[i],
-                            deger,
-                            tumSohbetler[sohbetNumaralari[index]].GetSohbetId()))
-                        {
-                            //sohbetSecildi
-                            secilenSohbet = SohbetiSec(tumSohbetler[sohbetNumaralari[index]]);
-                            break;
-                        }
-                        else
-                        {
-                            if (i == gerekenDegiskenlerLength - 1)
-                            {
-                                if (tekrarSohbeti == null)
-                                    tekrarSohbeti = tumSohbetler[sohbetNumaralari[index]];
-
-                                sohbetNumaralari.RemoveAt(index);
-                                secilenSohbet = null;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        ileriAtilacakSohbetNumaralari.Sort();
-        for (int i = 0; i < ileriAtilacakSohbetNumaralari.Count; i++)
-        {
-            modSohbetManager.MoveForwardChoosenSohbet(ileriAtilacakSohbetNumaralari[i]);
-
-            for (int u = i + 1; u < ileriAtilacakSohbetNumaralari.Count; u++)
-            {
-                ileriAtilacakSohbetNumaralari[u] -= 1;
-            }
-        }
-
-        if (herFramedekiKontSayisi >= tumSohbetler.Count)
-        {
-            if (secilenSohbet == null)
-            {
-                if (modListSohbetCount > 0)
-                {
-                    tumSohbetler = modSohbetManager.ChooseSohbetList();
-                    herFramedekiKontSayisi = 0;
-                    if (secimYapildi.Count > 0)
-                    {
-                        if (secimYapildi[secimYapildi.Count - 1])
-                        {
-                            secimYapildi[secimYapildi.Count - 1] = false;
-                        }
-                    }
-                }
-                else
-                {
-                    if (tekrarSohbeti != null)
-                    {
-                        Debug.LogError("Tekrar sohbeti secildi!");
-                        modSohbetManager.TekrarDegiskenleriniSifirla();
-                        secilenSohbet = SohbetiSec(tekrarSohbeti);
-
-                        PlayerDataManager.localPlayerDatas.dahaOnceGelenSohbetler.Add(secilenSohbet.GetSohbetId().ToString());
-                        tekrarSohbeti = null;
-                    }
-                    else
-                    {
-                        secilenSohbet = SohbetiSec(sohbetBulunamadiSohbeti);
-                    }
-                }
-            }
-        }
-
-        return secilenSohbet;
-    }
-
     private bool DegiskenKontrol(Sohbet.GerekenDegisken gerekenDegisken, string deger, string sohbetID)
     {
         if (gerekenDegisken.kontrol == Sohbet.GerekenDegisken.Kontrol.esit)
@@ -2265,9 +1943,18 @@ public class ChatManager : MonoBehaviour
 
     public SpeechBubbleLeft CreateLeftBubble(int type, float delay, int variation, int contentIndex)
     {
-        var maxContentIndex = chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]);
-        bool fastBubble = moveAmount < -300 && (sohbet.cevaplar.Count <= 0
+        var ayriBalon = ((sohbet.fotografKonum == Sohbet.contentPhotoLocation.ayriBalondaBasta || sohbet.fotografKonum == Sohbet.contentPhotoLocation.ayriBalondaSonda)
+            && (sohbet.contentImage.image != null || !string.IsNullOrEmpty(sohbet.contentImage.imageId)));
+
+        var maxContentIndex = chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation]) +
+            (ayriBalon ? 1 : 0);
+        bool fastBubble = (sohbet.cevaplar.Count <= 0
             || maxContentIndex > 1) && bubbleMover.childCount > maxContentIndex - 1;
+
+        if (ayriBalon)
+            fastBubble = fastBubble && moveAmount < -50 * (maxContentIndex - 1) - 250;
+        else
+            fastBubble = fastBubble && moveAmount < -50 * maxContentIndex;
 
         Vector3 pos = spawnPoint.position;
 
@@ -2275,8 +1962,34 @@ public class ChatManager : MonoBehaviour
         {
             if (maxContentIndex > 1)
             {
-                pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.y -
-                ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                var right = bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<SpeechBubbleRight>();
+                var left = bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<SpeechBubbleLeft>();
+
+                if (right != null)
+                {
+                    pos = new Vector3(pos.x, right.targetPosition.y -
+       ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                }
+                if (left != null)
+                {
+                    if (left.GetComponent<RectTransform>().position.x < 2000)
+                    {
+                        pos = new Vector3(pos.x, left.targetPosition.y -
+                        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                    }
+                    else
+                    {
+                        pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 2).GetComponent<RectTransform>().position.y -
+                        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 2).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                    }
+                }
+                else
+                {
+                    pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.y -
+       ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                }
+
+       
 
                 for (int i = 0; i < contentIndex; i++)
                 {
@@ -2286,8 +1999,36 @@ public class ChatManager : MonoBehaviour
             }
             else
             {
-                pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.y -
-     ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                var right = bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<SpeechBubbleRight>();
+                var left = bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<SpeechBubbleLeft>();
+
+                if (right != null)
+                {
+                    pos = new Vector3(pos.x, right.targetPosition.y -
+                    ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                }
+                if (left != null)
+                {
+                    if (left.GetComponent<RectTransform>().position.x < 2000)
+                    {
+                        pos = new Vector3(pos.x, left.targetPosition.y -
+                        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                    }
+                    else
+                    {
+                        pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 2).GetComponent<RectTransform>().position.y -
+                        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 2).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                    }
+
+                  
+                }
+                else
+                {
+                    pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.y -
+                     ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                }
+
+
             }
         }
 
@@ -3433,11 +3174,7 @@ public class ChatManager : MonoBehaviour
         {
             PlayerDataManager.AddElementToChatVariableList("mod", sohbet.sayacModu);
         }
-        else
-        {
-            Debug.Log(sohbet.sayacModu);
-            Debug.Log(sohbetTimer);
-        }
+
         sohbetTimer = 0;
         timerBackground.SetActive(false);
         kelebekLogo.SetActive(true);

@@ -34,7 +34,9 @@ MonoBehaviour:
     manevi, al\u0131\u015Fveri\u015Fin olacak. Zifirse de karanl\u0131k, k\u0131v\u0131lc\u0131ms\u0131n
     \xE7ak\u0131yorsun. O ki\u015Fi seni fark etmi\u015F, sana huzur sunacak."
   aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -71,7 +73,7 @@ MonoBehaviour:
   sohbetEnerjisi: 0
   sohbetKonsantrasyonu: 0
   kazima:
-    kazimaTipi: 0
+    kazimaTipi: 1
     image: {fileID: 0}
     imageId: 
     gifId: 
@@ -79,13 +81,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 1
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 1
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -484,6 +484,8 @@ public class PanelShowWholeTextManager : MonoBehaviour
 
         if (sprites != null)
         {
+
+
             for (int i = 0; i < simpleFocusImages.Length; i++)
             {
                 simpleFocusImages[i].gameObject.SetActive(sprites.Length > i);
@@ -507,7 +509,20 @@ public class PanelShowWholeTextManager : MonoBehaviour
             }
 
             if (sprites.Length > 0)
+            {
                 simpleFocusWheelChartMask.gameObject.SetActive(videoManager.wheelChart.mods.Contains(mod));
+
+                simpleFocusImages[0].GetComponent<RectTransform>().parent.gameObject.SetActive(true);
+                foreach (var sprite in sprites)
+                {
+                    if(sprite == null)
+                        simpleFocusImages[0].GetComponent<RectTransform>().parent.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                simpleFocusImages[0].GetComponent<RectTransform>().parent.gameObject.SetActive(false);
+            }
         }
         else
         {
@@ -515,6 +530,9 @@ public class PanelShowWholeTextManager : MonoBehaviour
             {
                 simpleFocusImages[i].gameObject.SetActive(false);
             }
+
+            simpleFocusImages[0].GetComponent<RectTransform>().parent.gameObject.SetActive(false);
+     
         }
     }
 

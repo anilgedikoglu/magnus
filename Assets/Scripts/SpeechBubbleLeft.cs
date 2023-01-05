@@ -348,13 +348,13 @@ public class SpeechBubbleLeft : MonoBehaviour
         {
             yield break;
         }
-        
+
         string sohbetText = string.Empty;
         foreach (SpeechBubbleLeft bubble in realtedBubbles)
         {
             sohbetText += bubble.text.text;
         }
-        
+
         string imageID = sohbet.contentImage.imageId;
         if (sohbet.contentImage.image != null)
         {
@@ -363,7 +363,7 @@ public class SpeechBubbleLeft : MonoBehaviour
                 imageID = FindObjectOfType<PhotoManager>().GetLocalSpriteId(sohbet.contentImage.image);
             }
         }
-        
+
         if (chatManager.PlayerDataManager.localPlayerDatas.renderedTexts == null)
         {
             chatManager.PlayerDataManager.localPlayerDatas.renderedTexts = new List<RenderedText>();
@@ -372,7 +372,7 @@ public class SpeechBubbleLeft : MonoBehaviour
         var welcomScreen = FindObjectOfType<WelcomeScreen>();
         BilgiEkraniSettings.Inbox.InboxElement inboxElement = welcomScreen.bilgiEkraniSettings
             .inbox.inboxElements.Find(x => x.mod.Equals(mod));
-        
+
         if (inboxElement == null)
             inboxElement = welcomScreen.bilgiEkraniSettings
             .inbox.defaultElement;
@@ -385,122 +385,124 @@ public class SpeechBubbleLeft : MonoBehaviour
             showTime = Magnus.Time.DateTimeOperations.DateTimeToUnixTimeStamp(System.DateTime.Now.AddMinutes(Random.Range(inboxElement.delay.x, inboxElement.delay.y)));
         string earlyText = string.Empty;
 
-        if (this == realtedBubbles[0] || mod != "tefeul")
+        if (realtedBubbles.Count > 0)
         {
-            if (son5MetinTexts != null)
+            if (this == realtedBubbles[0] || mod != "tefeul")
             {
-
-                while (son5MetinTexts.renderedTexts.Count >= 10)
+                if (son5MetinTexts != null)
                 {
 
-                    son5MetinTexts.renderedTexts.RemoveAt(0);
-                }
-
-                //son5MetinTexts.renderedTexts.Add(new RenderedText.TextDeneme(textMain.text, sohbet.contentImage.imageId));
-                if (chatManager.tarotSohbetleri.Count != 3)
-                {
-
-                    if (chatManager.tarotSohbetleri.Count != 1)
+                    while (son5MetinTexts.renderedTexts.Count >= 10)
                     {
 
-                        son5MetinTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, imageID, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        son5MetinTexts.renderedTexts.RemoveAt(0);
+                    }
+
+                    //son5MetinTexts.renderedTexts.Add(new RenderedText.TextDeneme(textMain.text, sohbet.contentImage.imageId));
+                    if (chatManager.tarotSohbetleri.Count != 3)
+                    {
+
+                        if (chatManager.tarotSohbetleri.Count != 1)
+                        {
+
+                            son5MetinTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, imageID, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        }
+                        else
+                        {
+
+                            son5MetinTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, chatManager.tarotSohbetleri[0].contentImage.image.name, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        }
                     }
                     else
                     {
-
-                        son5MetinTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, chatManager.tarotSohbetleri[0].contentImage.image.name, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
-                    }
-                }
-                else
-                {
-                    //Tarot icin yapilan kontrol. Daha iyi bir yol bulup kaldirilacak!!!
-                    son5MetinTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, $"{chatManager.tarotSohbetleri[0].contentImage.image.name}," +
-                        $"{chatManager.tarotSohbetleri[1].contentImage.image.name},{chatManager.tarotSohbetleri[2].contentImage.image.name}", sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
-                }
-            }
-            else
-            {
-
-                if (chatManager.tarotSohbetleri.Count != 3)
-                {
-
-                    if (chatManager.tarotSohbetleri.Count != 1)
-                    {
-
-                        chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText("son5Metin", mod, sohbetText, imageID, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
-                    }
-                    else
-                    {
-
-                        chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText("son5Metin", mod, sohbetText, chatManager.tarotSohbetleri[0].contentImage.image.name, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        //Tarot icin yapilan kontrol. Daha iyi bir yol bulup kaldirilacak!!!
+                        son5MetinTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, $"{chatManager.tarotSohbetleri[0].contentImage.image.name}," +
+                            $"{chatManager.tarotSohbetleri[1].contentImage.image.name},{chatManager.tarotSohbetleri[2].contentImage.image.name}", sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
                     }
                 }
                 else
                 {
 
-                    //Tarot icin yapilan kontrol. Daha iyi bir yol bulup kaldirilacak!!!
-                    chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText("son5Metin", mod, sohbetText, $"{chatManager.tarotSohbetleri[0].contentImage.image.name}," +
-                        $"{chatManager.tarotSohbetleri[1].contentImage.image.name},{chatManager.tarotSohbetleri[2].contentImage.image.name}", sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
-                }
-            }
-
-
-            RenderedText modTexts = chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Find(x => x.name == mod);
-            if (modTexts != null)
-            {
-
-                while (modTexts.renderedTexts.Count >= 10)
-                {
-
-                    modTexts.renderedTexts.RemoveAt(0);
-                }
-
-                //son5MetinTexts.renderedTexts.Add(new RenderedText.TextDeneme(textMain.text, sohbet.contentImage.imageId));
-
-                if (chatManager.tarotSohbetleri.Count != 3)
-                {
-
-                    if (chatManager.tarotSohbetleri.Count != 1)
+                    if (chatManager.tarotSohbetleri.Count != 3)
                     {
 
-                        modTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, imageID, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        if (chatManager.tarotSohbetleri.Count != 1)
+                        {
+
+                            chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText("son5Metin", mod, sohbetText, imageID, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        }
+                        else
+                        {
+
+                            chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText("son5Metin", mod, sohbetText, chatManager.tarotSohbetleri[0].contentImage.image.name, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        }
                     }
                     else
                     {
 
-                        modTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, chatManager.tarotSohbetleri[0].contentImage.image.name, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        //Tarot icin yapilan kontrol. Daha iyi bir yol bulup kaldirilacak!!!
+                        chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText("son5Metin", mod, sohbetText, $"{chatManager.tarotSohbetleri[0].contentImage.image.name}," +
+                            $"{chatManager.tarotSohbetleri[1].contentImage.image.name},{chatManager.tarotSohbetleri[2].contentImage.image.name}", sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
                     }
                 }
-                else
-                {
-                    Debug.LogError("ddsadsa");
-                    //Tarot icin yapilan kontrol. Daha iyi bir yol bulup kaldirilacak!!!
-                    modTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, $"{chatManager.tarotSohbetleri[0].contentImage.image.name}," +
-                        $"{chatManager.tarotSohbetleri[1].contentImage.image.name},{chatManager.tarotSohbetleri[2].contentImage.image.name}", sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
-                }
-            }
-            else
-            {
 
-                if (chatManager.tarotSohbetleri.Count != 3)
+
+                RenderedText modTexts = chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Find(x => x.name == mod);
+                if (modTexts != null)
                 {
 
-                    if (chatManager.tarotSohbetleri.Count != 1)
+                    while (modTexts.renderedTexts.Count >= 10)
                     {
 
-                        chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText(mod, mod, sohbetText, imageID, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        modTexts.renderedTexts.RemoveAt(0);
+                    }
+
+                    //son5MetinTexts.renderedTexts.Add(new RenderedText.TextDeneme(textMain.text, sohbet.contentImage.imageId));
+
+                    if (chatManager.tarotSohbetleri.Count != 3)
+                    {
+
+                        if (chatManager.tarotSohbetleri.Count != 1)
+                        {
+
+                            modTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, imageID, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        }
+                        else
+                        {
+
+                            modTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, chatManager.tarotSohbetleri[0].contentImage.image.name, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        }
                     }
                     else
                     {
-
-                        chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText(mod, mod, sohbetText, chatManager.tarotSohbetleri[0].contentImage.image.name, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        //Tarot icin yapilan kontrol. Daha iyi bir yol bulup kaldirilacak!!!
+                        modTexts.renderedTexts.Add(new RenderedText.Text(mod, sohbetText, $"{chatManager.tarotSohbetleri[0].contentImage.image.name}," +
+                            $"{chatManager.tarotSohbetleri[1].contentImage.image.name},{chatManager.tarotSohbetleri[2].contentImage.image.name}", sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
                     }
                 }
                 else
                 {
-                    //Tarot icin yapilan kontrol. Daha iyi bir yol bulup kaldirilacak!!!
-                    chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText(mod, mod, sohbetText, $"{chatManager.tarotSohbetleri[0].contentImage.image.name}," +
-                        $"{chatManager.tarotSohbetleri[1].contentImage.image.name},{chatManager.tarotSohbetleri[2].contentImage.image.name}", sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+
+                    if (chatManager.tarotSohbetleri.Count != 3)
+                    {
+
+                        if (chatManager.tarotSohbetleri.Count != 1)
+                        {
+
+                            chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText(mod, mod, sohbetText, imageID, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        }
+                        else
+                        {
+
+                            chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText(mod, mod, sohbetText, chatManager.tarotSohbetleri[0].contentImage.image.name, sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                        }
+                    }
+                    else
+                    {
+                        //Tarot icin yapilan kontrol. Daha iyi bir yol bulup kaldirilacak!!!
+                        chatManager.PlayerDataManager.localPlayerDatas.renderedTexts.Add(new RenderedText(mod, mod, sohbetText, $"{chatManager.tarotSohbetleri[0].contentImage.image.name}," +
+                            $"{chatManager.tarotSohbetleri[1].contentImage.image.name},{chatManager.tarotSohbetleri[2].contentImage.image.name}", sohbet.GetSohbetId(), true, new RenderedText.Text.UIInformation(inboxElement.title, showTime)));
+                    }
                 }
             }
         }

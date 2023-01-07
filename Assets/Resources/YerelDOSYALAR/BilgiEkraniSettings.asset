@@ -574,7 +574,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
-      simpleFocusPanel: 0
+      simpleFocusPanel: 1
     - mod: biyoritim
       title: Biyoritim
       icon: {fileID: 21300000, guid: 7c0091a6a6f3045ffbb37cd53695623b, type: 3}
@@ -774,7 +774,7 @@ MonoBehaviour:
       priority: 0
       deletable: 1
       showAd: 1
-      simpleFocusPanel: 0
+      simpleFocusPanel: 1
     - mod: adminCevap
       title: "Yorumun yan\u0131tland\u0131"
       icon: {fileID: 21300000, guid: 2e272432673ae447c9ec5582277fe5f4, type: 3}

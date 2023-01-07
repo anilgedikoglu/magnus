@@ -383,30 +383,15 @@ MonoBehaviour:
       title: "Kader \xC7ark\u0131"
       Icon: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
     falHaklariMenusundeGoster: 1
-  - mod: bno ilk
-    count: 1
-    countPlus: 1
-    exceptedMods:
-    - "bnohari\xE7"
-    uIInformation:
-      title: "Durug\xF6r\xFC B."
-      Icon: {fileID: 21300000, guid: 7a4851850c57648929d64acd5d321245, type: 3}
-    falHaklariMenusundeGoster: 1
-  - mod: yno ilk
-    count: 1
-    countPlus: 1
-    exceptedMods: []
-    uIInformation:
-      title: "Durug\xF6r\xFC Y."
-      Icon: {fileID: 21300000, guid: c41b3997cbaf240429cfc683f7276729, type: 3}
-    falHaklariMenusundeGoster: 1
-  - mod: gno ilk
+  - mod: hno
     count: 1
     countPlus: 2
-    exceptedMods: []
+    exceptedMods:
+    - durugoruiptal
+    - "bnohari\xE7"
     uIInformation:
-      title: "Durug\xF6r\xFC G."
-      Icon: {fileID: 21300000, guid: 74c0ca29ecba3428a93a5b52145ac9f1, type: 3}
+      title: "Durug\xF6r\xFC"
+      Icon: {fileID: 21300000, guid: c5061bf896aab4aa39fe1eb0050ba168, type: 3}
     falHaklariMenusundeGoster: 1
   - mod: smsohbet
     count: 1

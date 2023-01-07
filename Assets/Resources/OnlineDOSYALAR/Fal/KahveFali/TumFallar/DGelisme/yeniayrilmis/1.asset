@@ -30,9 +30,28 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - 
+  - "Orta hatlara geldi\u011Fimde ilk dikkatimi \xE7eken \u015Fekil bir adam\u0131n
+    etraf\u0131nda d\xF6nen akbabalar oldu. \u0130\u015Faretlere dayanarak s\xF6yleyebilirim
+    ki yakla\u015F\u0131k 20\u2019li ya\u015Flardaki bu erkek ya\u015Fad\u0131\u011F\u0131
+    ayr\u0131l\u0131ktan bitap d\xFC\u015Fm\xFC\u015F. Sana t\xFCm kalbiyle geri
+    d\xF6nmek i\xE7in k\u0131vran\u0131yor ancak bunu sana s\xF6ylemeye utan\u0131yor.
+    Onu affetmeyece\u011Finden, hatta kar\u015F\u0131na \xE7\u0131kt\u0131\u011F\u0131nda
+    onu k\xFC\xE7\xFCk d\xFC\u015F\xFCrece\u011Finden korkuyor. Eninde sonunda duygular\u0131na
+    yenik d\xFC\u015F\xFCp i\xE7inden ge\xE7enleri sana a\xE7aca\u011F\u0131n\u0131
+    hissediyorum sevgili {{isim}}.\n\nYaln\u0131z fincan\u0131n ayn\u0131 b\xF6lgesinde
+    g\xF6rd\xFC\u011F\xFCm bir erkek fig\xFCr\xFC daha var. Bu ki\u015Finin \xE7evresindeki
+    beyazl\u0131klardan g\xFC\xE7l\xFC bir auras\u0131 oldu\u011Funu hissediyorum.
+    Ba\u015Ftaki erkek fig\xFCr\xFCn\xFCn tam kar\u015F\u0131s\u0131nda yer alan
+    kehribar g\xF6zl\xFC bu adam dimdik ayakta duruyor ve di\u011Feriyle ayn\u0131
+    y\xF6ne bak\u0131yor. Senin i\xE7in bir \xE7eki\u015Fme olacak gibi g\xF6r\xFCn\xFCyor
+    {{isim}}. Bu \xE7eki\u015Fmenin seni arada b\u0131rakaca\u011F\u0131n\u0131 hissediyorum.
+    Telvelerin detaylar\u0131na g\xF6z gezdirdi\u011Fimde karar an\u0131n\u0131n
+    yakla\u015F\u0131k bir sene i\xE7erisinde gelece\u011Fini fark ettim. Kalbinin
+    sesi sana ne s\xF6yleyecek, merakla bekliyorum do\u011Frusu."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -43,8 +62,20 @@ MonoBehaviour:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
     kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
   - degiskenAdi: medeni durum
     degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: "kad\u0131n"
+    kontrol: 0
+  - degiskenAdi: yasmin
+    degiskenDegeri: 16
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 24
     kontrol: 0
   sohbetArkaplani: []
   arkaplanDelay: 0
@@ -71,13 +102,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

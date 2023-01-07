@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme773
+  m_EditorClassIdentifier: 
+  idIndex: 2023174019AA43186246668
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n merkezinde, heybetli bir a\u011Fa\xE7 fig\xFCr\xFC g\xF6r\xFCyorum.
+    Bu a\u011Fa\xE7 t\u0131pk\u0131 \u0130skandinav mitolojisinde \u201Chayat a\u011Fac\u0131\u201D
+    olarak da an\u0131lan Yggdrasill \u2019e benziyor. Pagan inan\u0131\u015F\u0131na
+    g\xF6re hayat a\u011Fac\u0131 9 diyar\u0131 birbirine ba\u011Flamaktayd\u0131.
+    Fal\u0131nda ise, hayat\u0131nda birbirine ba\u011Flanan 9 yol a\xE7\u0131laca\u011F\u0131na
+    i\u015Faret ediyor bu fig\xFCr. 9 haftal\u0131k bir zaman dilimi i\xE7erisinde
+    kat\u0131laca\u011F\u0131n bir etkinlik, bu yollar\u0131n ba\u011Flant\u0131
+    noktas\u0131n\u0131 olu\u015Fturacak. Etkinlik s\u0131ras\u0131nda biri sar\u0131\u015F\u0131n,
+    inci k\xFCpeli bir kad\u0131n ve di\u011Feri kareli g\xF6mlekli esmer bir adam
+    olmak \xFCzere 2 ki\u015Fiyle tan\u0131\u015Facaks\u0131n. Ayr\u0131 yerlerde
+    ger\xE7ekle\u015Ftirece\u011Finiz baz\u0131 eylemler birbirinizi etkileyecek
+    durumlar yaratacak.\n\n\u0130laveten, \"a\u011Fa\xE7\" fig\xFCr\xFCn\xFCn k\xF6k
+    k\u0131sm\u0131na dayanm\u0131\u015F bir boya f\u0131r\xE7as\u0131 dikkatimi
+    \xE7ekti. Bu f\u0131r\xE7an\u0131n ucu a\u011Faca yasl\u0131. Burada telveler,
+    a\xE7\u0131lacak yollar\u0131 \xE7izen ki\u015Finin sen olaca\u011F\u0131n\u0131
+    g\xF6steriyor. Ayn\u0131 \u015Fekilde, ger\xE7ekle\u015Fecek olaylardan en \xE7ok
+    kazanc\u0131 sa\u011Flayacak ki\u015Fi de sen olacaks\u0131n."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

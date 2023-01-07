@@ -44,49 +44,14 @@ MonoBehaviour:
     | inanmayacaks\u0131n}}. \xC7evrenin sana g\u0131ptayla bakaca\u011F\u0131n\u0131
     hissediyorum."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "kahve fal\u0131 giri\u015F"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: fal konusu
-    degiskenDegeri: genel
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "karma\u015F\u0131k"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: platonik
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "fl\xF6rt halinde"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "ili\u015Fkisi var"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "ni\u015Fanl\u0131"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: evli
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: yasmax
-    degiskenDegeri: 44
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -124,6 +89,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -140,13 +106,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
-  preferencesObject: {fileID: 0}
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

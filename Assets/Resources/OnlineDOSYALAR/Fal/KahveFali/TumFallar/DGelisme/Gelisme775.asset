@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme775
+  m_EditorClassIdentifier: 
+  idIndex: 2023174019AA44483468260
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Orta kesimlerinde \xE7i\xE7ek tarlas\u0131nda yatan, i\u011Fnesi kopuk bir bal
+    ar\u0131s\u0131 g\xF6rd\xFCm. Ar\u0131, \xE7al\u0131\u015Fkanl\u0131\u011F\u0131
+    sembolize eder. Ancak kopuk bir i\u011Fne ruh sa\u011Fl\u0131\u011F\u0131 zarar
+    g\xF6rm\xFC\u015F bir insan olarak yorumlanabilir. Hayat\u0131n yaratt\u0131\u011F\u0131
+    bask\u0131 seni k\xF6t\xFC etkiliyor anla\u015F\u0131lan. \xC7evren g\xFCzelliklerle
+    dolu olmas\u0131na ra\u011Fmen ufak olumsuzluklara tak\u0131l\u0131yorsun. \xD6te
+    yandan g\xF6r\xFCyorum ki sevilen birisin ve \xE7evrende sana destek olacak bir\xE7ok
+    insan bulunuyor. Yak\u0131n arkada\u015Flar\u0131n\u0131n ve ailenin yard\u0131m\u0131yla
+    en k\u0131sa s\xFCrede bu ruh halinden kurtulup \xE7evrendeki g\xFCzellikleri
+    tekrardan g\xF6rebilece\u011Fine inan\u0131yorum.\n\nFincan merkezinin \xE7evresinde
+    g\xF6rd\xFC\u011F\xFCm bir di\u011Fer fig\xFCr ise pilleri yere d\xF6k\xFClm\xFC\u015F
+    bir uzaktan kumanda oldu. Kumanda kontrole i\u015Faret eden bir sembold\xFCr.
+    Lakin pillerin yerde olmas\u0131 hayat\u0131n\u0131n kontrol\xFCn\xFC ge\xE7ici
+    bir s\xFCre kaybetti\u011Fini g\xF6steriyor. Bir d\xF6nem baz\u0131 \u015Feyleri
+    istemeyerek yapmak zorunda kalm\u0131\u015Fs\u0131n ve etkilerini halen ya\u015F\u0131yorsun.
+    D\xFCzenini tekrardan sa\u011Flamaya ba\u015Flad\u0131\u011F\u0131n ilk zamanlardas\u0131n
+    De\u011Ferli {{isim}}."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

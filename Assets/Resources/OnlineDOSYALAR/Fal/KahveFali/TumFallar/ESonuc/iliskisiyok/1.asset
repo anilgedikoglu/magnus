@@ -40,7 +40,9 @@ MonoBehaviour:
     sana bir \xF6z\xFCr ve bir telafi talebi gelecek. Bu konu, bana sorarsan i\xE7ine
     bir hayli su serpecek."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -50,6 +52,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: medeni durum
     degiskenDegeri: "ili\u015Fkisi yok"
@@ -79,13 +84,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -42,21 +42,14 @@ MonoBehaviour:
     {{ay_+3}} ve {{ay_+6}} aylar\u0131 aras\u0131ndaki 3 ay i\xE7erisinde senin b\xFCy\xFCk
     bir i\u015Finin \"halli\" bu ki\u015Finin kerametiyle ger\xE7ekle\u015Fecek."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "kahve fal\u0131 giri\u015F"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: fal konusu
-    degiskenDegeri: genel
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -73,6 +66,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -89,13 +83,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
-  preferencesObject: {fileID: 0}
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

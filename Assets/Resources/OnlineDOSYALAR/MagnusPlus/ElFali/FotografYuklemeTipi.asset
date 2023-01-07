@@ -32,6 +32,9 @@ MonoBehaviour:
   aciklama:
   - "Fal\u0131n i\xE7in foto\u011Fraflar\u0131n\u0131 nas\u0131l y\xFCklemek istersin?"
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -64,6 +67,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -95,6 +99,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -129,6 +134,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 1
@@ -146,6 +152,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -162,13 +169,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

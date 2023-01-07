@@ -43,37 +43,14 @@ MonoBehaviour:
     da arkada\u015Flar\u0131na itimat etmen, gerekti\u011Finde yard\u0131m rica etmen
     sana kolayl\u0131k sa\u011Flayacak."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "kahve fal\u0131 giri\u015F"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: fal konusu
-    degiskenDegeri: kariyer
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: meslek
-    degiskenDegeri: "kamu sekt\xF6r\xFC"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: meslek
-    degiskenDegeri: "\xF6zel sekt\xF6r"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: meslek
-    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: meslek
-    degiskenDegeri: akademisyen
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -102,6 +79,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -118,13 +96,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
-  preferencesObject: {fileID: 0}
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

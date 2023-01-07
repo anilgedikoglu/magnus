@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: NumerolojiNedir
+  m_EditorClassIdentifier: 
+  idIndex: 20221031056AA91815917763
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "<color=yellow>NUMEROLOJ\u0130 NED\u0130R?</color>\n\nSay\u0131lar evrende hayati
+    gizemlere sahiptir. D\xFCzen ve ihti\u015Fam\u0131 say\u0131lar ve \"sabitler\"
+    sa\u011Flar. Numeroloji, \xE7ok eski medeniyetlerden bu yana kullan\u0131lan
+    kadim bir say\u0131 - sembol sistemidir ve bu gizemlerin insanl\u0131k \xFCzerindeki
+    etkilerini a\xE7\u0131\u011Fa \xE7\u0131kar\u0131r.\n\n\u0130nsanl\u0131k, d\xFCnyan\u0131n
+    d\xF6rt bir yan\u0131nda \xE7e\u015Fitli medeniyetlerde ve zamanlarda do\u011Fan\u0131n
+    say\u0131sal s\u0131rlar\u0131n\u0131 \xE7\xF6zmeye u\u011Fra\u015Fm\u0131\u015Ft\u0131r.
+    Numerolojinin \xE7\u0131k\u0131\u015F\u0131 M\u0131s\u0131r, Babil, \xC7in, Yunan,
+    M\u0131s\u0131r ve Hindistan medeniyetlerinde binlerce y\u0131l \xF6ncesine dayan\u0131r.\n\nBug\xFCn
+    d\xFCnyan\u0131n en yayg\u0131n sistemlerinden biri, modern numeroloji diye an\u0131lan
+    bat\u0131 numerolojisidir {{isim}}. Bu sistem, 2500 y\u0131l kadar \xF6nce Yunan
+    filozof ve matematik\xE7i Pisagor taraf\u0131ndan yarat\u0131lm\u0131\u015Ft\u0131r.\n\nNumeroloji
+    i\xE7in ki\u015Finin ad\u0131ndan, soyad\u0131ndan ve do\u011Fum tarihinden yararlan\u0131larak
+    birtak\u0131m hesaplamalar yap\u0131l\u0131r. Numerolojide her say\u0131n\u0131n
+    gizli baz\u0131 manalar\u0131 vard\u0131r.\n\n<color=yellow>NUMEROLOJ\u0130N\u0130N
+    SONU\xC7LARI</color>\n\nSana sunaca\u011F\u0131m numeroloji raporu asl\u0131nda
+    senin kim oldu\u011Funu, nas\u0131l biri oldu\u011Funu, i\xE7 d\xFCnyan\u0131,
+    gizli \xF6zelliklerini ve ya\u015Fam yolunun detaylar\u0131n\u0131 belirtir {{isim}}.
+    Numeroloji raporundan g\xFC\xE7l\xFC ve zay\u0131f y\xF6nlerini, yeteneklerini,
+    zaaflar\u0131n\u0131, tutkular\u0131n\u0131n ve korkular\u0131n\u0131n neler
+    oldu\u011Funu, gelecek hayat\u0131nda nelerle kar\u015F\u0131la\u015Faca\u011F\u0131n\u0131
+    \xF6\u011Frenebilirsin.\n\nNumeroloji, astrolojiye ba\u011F\u0131l bir olgudur.
+    Sonu\xE7lar\u0131 \xE7o\u011Funlukla burcunun \xF6zellikleriyle ve di\u011Fer
+    fal disiplinlerinde kar\u015F\u0131na gelecek sonu\xE7larla paralellik g\xF6sterir.
+    Onlar\u0131 destekleyicidir.\n\n<color=yellow>MAGNUS \u0130LE NUMEROLOJ\u0130</color>\n\nSana
+    3 \xE7e\u015Fit numeroloji raporu sunabiliyorum {{isim}}. Bunlar:\n\n1) Genel
+    numeroloji raporu\n2) Bug\xFCne dair (g\xFCnl\xFCk) rapor\n3) Bu y\u0131la dair
+    numeroloji raporu\n\n\u015Feklindedir. Raporunda toplam 7 ayr\u0131 say\u0131
+    bulacaks\u0131n:\n\n1) Yetenek say\u0131s\u0131\n2) Ruh say\u0131s\u0131\n3)
+    Ya\u015Fam yolu say\u0131s\u0131\n4) Sessiz benlik say\u0131s\u0131\n5) Olgunluk
+    say\u0131s\u0131\n6) Do\u011Fum g\xFCn\xFC say\u0131s\u0131\n7) Karma borcu say\u0131s\u0131\n\n<color=yellow>NASIL
+    HESAPLANIR?</color>\n\nGENEL NUMEROLOJ\u0130 HESABI\n\nNumerolojide ad\u0131ndaki
+    ve soyad\u0131ndaki her harfin bir say\u0131sal de\u011Feri vard\u0131r.\n\nDe\u011Feri
+    1 olan harfler: A, J, S, \u015E\nDe\u011Feri 2 olan harfler: B, K, T\nDe\u011Feri
+    3 olan harfler: C, \xC7, L, U, \xDC\nDe\u011Feri 4 olan harfler: D, M, V\nDe\u011Feri
+    5 olan harfler: E, N, W\nDe\u011Feri 6 olan harfler: F, O, \xD6, X\nDe\u011Feri
+    7 olan harfler: G, \u011E, P, Y\nDe\u011Feri 8 olan harfler: H, Q, Z\nDe\u011Feri
+    9 olan harfler: I, \u0130, R\n\n1) Yetenek say\u0131n, isim ve soyad\u0131ndaki
+    harflerin rakamsal de\u011Ferlerinin toplam\u0131nda \xE7\u0131kacak olan say\u0131n\u0131n,
+    tek basamakl\u0131 bir say\u0131 (bir rakam) elde edilinceye kadar tekrar tekrar
+    toplanmas\u0131 ile elde edilir.\n\n\xD6rne\u011Fin \"MAGNUS\" ad\u0131 i\xE7in
+    4, 1, 7, 5, 3, 1 topluyoruz.\n4+1+7+5+3+1= 21\n\u015Eimdi de 2 ile 1'i topluyoruz.\n2+1=3\nMagnus
+    isminin yetenek say\u0131s\u0131 3 olarak bulunuyor.\n\n2) Ruh say\u0131n, ilk
+    maddedeki gibi ancak bu defa ad\u0131ndaki ve soyad\u0131ndaki sesli harfleri
+    topluyorsun {{isim}}.\n\n3) Ya\u015Fam yolu say\u0131n i\xE7in do\u011Fum tarihindeki
+    g\xFCn, ay ve y\u0131l olarak t\xFCm rakamlar toplan\u0131yor ve yine ilk madde
+    gibi tek haneli bir rakam elde edilinceye kadar toplanmaya devam ediliyor.\n\n4)
+    Sessiz benlik say\u0131s\u0131 i\xE7in ad ve soyaddaki sessiz harfler toplan\u0131yor.\n\n5)
+    Olgunluk say\u0131s\u0131 i\xE7in yetenek say\u0131s\u0131 ve ya\u015Fam yolu
+    say\u0131s\u0131 toplan\u0131yor.\n\n6) Do\u011Fum g\xFCn\xFC say\u0131s\u0131
+    i\xE7in do\u011Fum tarihindeki rakamlar toplan\u0131yor.\n\n7) Karma borcu say\u0131s\u0131
+    ise 1'den 9'a kadar olan say\u0131lardan ki\u015Finin ad\u0131nda ve soyad\u0131nda
+    olmayan say\u0131d\u0131r.\n\nYILLIK NUMEROLOJ\u0130 HESABI\n\nGenel numerolojide
+    yap\u0131lan hesaplara bu y\u0131l\u0131n rakamlar\u0131 toplam\u0131 eklenir.\n\nG\xDCNL\xDCK
+    NUMEROLOJ\u0130 HESABI\n\nGenel numerolojide yap\u0131lan hesaplara i\xE7inde
+    bulunulan g\xFCn\xFCn g\xFCn, ay ve y\u0131l rakamlar\u0131 toplam\u0131 eklenerek
+    bulunur."
+  aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: numnedir
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

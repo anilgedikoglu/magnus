@@ -259,235 +259,241 @@ public class ModSohbetManagerData : ScriptableObject
             UnityEditor.EditorUtility.SetDirty(tumSohbetler[i]);*/
             #endregion
 
-#if UNITY_EDITOR
-            for (int u = 0; u < tumSohbetler[i].aciklama.Count; u++)
+            if (tumSohbetler[i] != null)
             {
-                if (tumSohbetler[i].aciklama[u].Contains("\r"))
+#if UNITY_EDITOR
+                for (int u = 0; u < tumSohbetler[i].aciklama.Count; u++)
                 {
-                    tumSohbetler[i].aciklama[u] = tumSohbetler[i].aciklama[u].Replace("\r", string.Empty);
-                    Debug.LogWarning(tumSohbetler[i].name + " sohbeti \\r sembolü içeriyor. Bu sohbet düzeltildi!");
+                    if (tumSohbetler[i].aciklama[u].Contains("\r"))
+                    {
+                        tumSohbetler[i].aciklama[u] = tumSohbetler[i].aciklama[u].Replace("\r", string.Empty);
+                        Debug.LogWarning(tumSohbetler[i].name + " sohbeti \\r sembolü içeriyor. Bu sohbet düzeltildi!");
+                        UnityEditor.EditorUtility.SetDirty(tumSohbetler[i]);
+                    }
+                }
+
+                if (tumSohbetler[i].GetSohbetId().ToCharArray().Length < 24)
+                {
+                    tumSohbetler[i].idIndex = CreateID();
+
                     UnityEditor.EditorUtility.SetDirty(tumSohbetler[i]);
                 }
-            }
-
-            if (tumSohbetler[i].GetSohbetId().ToCharArray().Length < 24)
-            {
-                tumSohbetler[i].idIndex = CreateID();
-
-                UnityEditor.EditorUtility.SetDirty(tumSohbetler[i]);
-            }
-            else
-            {
-                foreach (Sohbet sohbet in tumSohbetler)
+                else
                 {
-                    if (sohbet != tumSohbetler[i])
+                    foreach (Sohbet sohbet in tumSohbetler)
                     {
-                        if (sohbet.GetSohbetId() == tumSohbetler[i].GetSohbetId())
+                        if (sohbet != null)
                         {
-                            Debug.Log("Veritabanında aynı id'ye sahip sohbetler var. Lütfen bu id'ye sahip sohbetleri gözden geçirin. Çakışan Id: " +
-                                sohbet.GetSohbetId() + " Çakışan ilk sohbet: " + sohbet.name + " Çakışan ikinci sohbet: " + tumSohbetler[i].name +
-                                $" {UnityEditor.AssetDatabase.GetAssetPath(sohbet)} \n {UnityEditor.AssetDatabase.GetAssetPath(tumSohbetler[i])}");
+                            if (sohbet != tumSohbetler[i])
+                            {
+                                if (sohbet.GetSohbetId() == tumSohbetler[i].GetSohbetId())
+                                {
+                                    Debug.Log("Veritabanında aynı id'ye sahip sohbetler var. Lütfen bu id'ye sahip sohbetleri gözden geçirin. Çakışan Id: " +
+                                        sohbet.GetSohbetId() + " Çakışan ilk sohbet: " + sohbet.name + " Çakışan ikinci sohbet: " + tumSohbetler[i].name +
+                                        $" {UnityEditor.AssetDatabase.GetAssetPath(sohbet)} \n {UnityEditor.AssetDatabase.GetAssetPath(tumSohbetler[i])}");
+                                }
+                            }
                         }
                     }
                 }
-            }
 #endif
-            if (tumSohbetler[i].gerekliDegiskenler != null)
-            {
-                for (int u = 0; u < tumSohbetler[i].gerekliDegiskenler.Count; u++)
+                if (tumSohbetler[i].gerekliDegiskenler != null)
                 {
-                    if (tumSohbetler[i].gerekliDegiskenler[u].degiskenAdi == "mod")
+                    for (int u = 0; u < tumSohbetler[i].gerekliDegiskenler.Count; u++)
                     {
-                        if (mods.Count > 0)
+                        if (tumSohbetler[i].gerekliDegiskenler[u].degiskenAdi == "mod")
                         {
-                            for (int a = 0; a < mods.Count; a++)
+                            if (mods.Count > 0)
                             {
-                                if (a != mods.Count - 1)
+                                for (int a = 0; a < mods.Count; a++)
                                 {
-                                    if (mods[a].mod == tumSohbetler[i].gerekliDegiskenler[u].degiskenDegeri)
+                                    if (a != mods.Count - 1)
                                     {
-                                        int oncelikIndex = 0;
+                                        if (mods[a].mod == tumSohbetler[i].gerekliDegiskenler[u].degiskenDegeri)
+                                        {
+                                            int oncelikIndex = 0;
 
-                                        if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.normal)
-                                        {
-                                            oncelikIndex = tumSohbetler[i].gerekliDegiskenler.Count;
-                                        }
-                                        else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.son)
-                                        {
-                                            oncelikIndex = 0;
-                                        }
-                                        else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_2)
-                                        {
-                                            oncelikIndex = maxVariableCount + tumSohbetler[i].gerekliDegiskenler.Count;
-                                        }
-                                        else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_1)
-                                        {
-                                            oncelikIndex = maxVariableCount * 2 + tumSohbetler[i].gerekliDegiskenler.Count;
-                                        }
+                                            if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.normal)
+                                            {
+                                                oncelikIndex = tumSohbetler[i].gerekliDegiskenler.Count;
+                                            }
+                                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.son)
+                                            {
+                                                oncelikIndex = 0;
+                                            }
+                                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_2)
+                                            {
+                                                oncelikIndex = maxVariableCount + tumSohbetler[i].gerekliDegiskenler.Count;
+                                            }
+                                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_1)
+                                            {
+                                                oncelikIndex = maxVariableCount * 2 + tumSohbetler[i].gerekliDegiskenler.Count;
+                                            }
 
-                                        for (int b = mods[a].ModSohbetRepetitions[0].modSohbetler.Count; b < oncelikIndex + 1; b++)
-                                        {
+                                            for (int b = mods[a].ModSohbetRepetitions[0].modSohbetler.Count; b < oncelikIndex + 1; b++)
+                                            {
+                                                ModSohbet eklenecekSohbet = new ModSohbet();
+                                                eklenecekSohbet.sohbetler = new List<Sohbet>();
+                                                mods[a].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                            }
+
+                                            /*
                                             ModSohbet eklenecekSohbet = new ModSohbet();
-                                            eklenecekSohbet.sohbetler = new List<Sohbet>();
+                                            eklenecekSohbet.sohbetler[tumSohbetler[i].gerekliDegiskenler.Count - 1].Add(tumSohbetler[i]);
+                                            eklenecekSohbet.repetition = 0;
+
                                             mods[a].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                            */
+
+                                            mods[a].ModSohbetRepetitions[0].modSohbetler[oncelikIndex].sohbetler.Add(tumSohbetler[i]);
+
+                                            break;
                                         }
-
-                                        /*
-                                        ModSohbet eklenecekSohbet = new ModSohbet();
-                                        eklenecekSohbet.sohbetler[tumSohbetler[i].gerekliDegiskenler.Count - 1].Add(tumSohbetler[i]);
-                                        eklenecekSohbet.repetition = 0;
-
-                                        mods[a].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
-                                        */
-
-                                        mods[a].ModSohbetRepetitions[0].modSohbetler[oncelikIndex].sohbetler.Add(tumSohbetler[i]);
-
-                                        break;
-                                    }
-                                }
-                                else
-                                {
-                                    if (mods[a].mod == tumSohbetler[i].gerekliDegiskenler[u].degiskenDegeri)
-                                    {
-                                        int oncelikIndex = 0;
-
-                                        if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.normal)
-                                        {
-                                            oncelikIndex = tumSohbetler[i].gerekliDegiskenler.Count;
-                                        }
-                                        else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.son)
-                                        {
-                                            oncelikIndex = 0;
-                                        }
-                                        else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_2)
-                                        {
-                                            oncelikIndex = maxVariableCount + tumSohbetler[i].gerekliDegiskenler.Count;
-                                        }
-                                        else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_1)
-                                        {
-                                            oncelikIndex = maxVariableCount * 2 + tumSohbetler[i].gerekliDegiskenler.Count;
-                                        }
-
-                                        for (int b = mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Count; b < oncelikIndex + 1; b++)
-                                        {
-                                            ModSohbet eklenecekSohbet = new ModSohbet();
-                                            eklenecekSohbet.sohbetler = new List<Sohbet>();
-                                            mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
-                                        }
-                                        /*
-                                        ModSohbet eklenecekSohbet = new ModSohbet();
-                                        eklenecekSohbet.sohbetler[tumSohbetler[i].gerekliDegiskenler.Count - 1].Add(tumSohbetler[i]);
-                                        eklenecekSohbet.repetition = 0;
-
-                                        mods[a].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
-                                        */
-
-                                        mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler[oncelikIndex].sohbetler.Add(tumSohbetler[i]);
-                                        break;
                                     }
                                     else
                                     {
-                                        ModSohbetMods eklenecekMod = new ModSohbetMods();
-                                        eklenecekMod.mod = tumSohbetler[i].gerekliDegiskenler[u].degiskenDegeri;
-                                        eklenecekMod.ModSohbetRepetitions = new List<ModSohbetRepetitions>();
-                                        eklenecekMod.ModSohbetRepetitions.Add(new ModSohbetRepetitions());
-                                        eklenecekMod.ModSohbetRepetitions[0].modSohbetler = new List<ModSohbet>();
-                                        mods.Add(eklenecekMod);
+                                        if (mods[a].mod == tumSohbetler[i].gerekliDegiskenler[u].degiskenDegeri)
+                                        {
+                                            int oncelikIndex = 0;
 
-                                        int oncelikIndex = 0;
+                                            if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.normal)
+                                            {
+                                                oncelikIndex = tumSohbetler[i].gerekliDegiskenler.Count;
+                                            }
+                                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.son)
+                                            {
+                                                oncelikIndex = 0;
+                                            }
+                                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_2)
+                                            {
+                                                oncelikIndex = maxVariableCount + tumSohbetler[i].gerekliDegiskenler.Count;
+                                            }
+                                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_1)
+                                            {
+                                                oncelikIndex = maxVariableCount * 2 + tumSohbetler[i].gerekliDegiskenler.Count;
+                                            }
 
-                                        if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.normal)
-                                        {
-                                            oncelikIndex = tumSohbetler[i].gerekliDegiskenler.Count;
-                                        }
-                                        else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.son)
-                                        {
-                                            oncelikIndex = 0;
-                                        }
-                                        else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_2)
-                                        {
-                                            oncelikIndex = maxVariableCount + tumSohbetler[i].gerekliDegiskenler.Count;
-                                        }
-                                        else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_1)
-                                        {
-                                            oncelikIndex = maxVariableCount * 2 + tumSohbetler[i].gerekliDegiskenler.Count;
-                                        }
-
-                                        for (int b = mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Count; b < oncelikIndex + 1; b++)
-                                        {
+                                            for (int b = mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Count; b < oncelikIndex + 1; b++)
+                                            {
+                                                ModSohbet eklenecekSohbet = new ModSohbet();
+                                                eklenecekSohbet.sohbetler = new List<Sohbet>();
+                                                mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                            }
+                                            /*
                                             ModSohbet eklenecekSohbet = new ModSohbet();
-                                            eklenecekSohbet.sohbetler = new List<Sohbet>();
-                                            mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                            eklenecekSohbet.sohbetler[tumSohbetler[i].gerekliDegiskenler.Count - 1].Add(tumSohbetler[i]);
+                                            eklenecekSohbet.repetition = 0;
+
+                                            mods[a].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                            */
+
+                                            mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler[oncelikIndex].sohbetler.Add(tumSohbetler[i]);
+                                            break;
                                         }
-                                        /*
-                                        ModSohbet eklenecekSohbet = new ModSohbet();
-                                        eklenecekSohbet.sohbetler[tumSohbetler[i].gerekliDegiskenler.Count - 1].Add(tumSohbetler[i]);
-                                        eklenecekSohbet.repetition = 0;
+                                        else
+                                        {
+                                            ModSohbetMods eklenecekMod = new ModSohbetMods();
+                                            eklenecekMod.mod = tumSohbetler[i].gerekliDegiskenler[u].degiskenDegeri;
+                                            eklenecekMod.ModSohbetRepetitions = new List<ModSohbetRepetitions>();
+                                            eklenecekMod.ModSohbetRepetitions.Add(new ModSohbetRepetitions());
+                                            eklenecekMod.ModSohbetRepetitions[0].modSohbetler = new List<ModSohbet>();
+                                            mods.Add(eklenecekMod);
 
-                                        mods[a].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
-                                        */
+                                            int oncelikIndex = 0;
 
-                                        mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler[oncelikIndex].sohbetler.Add(tumSohbetler[i]);
-                                        break;
+                                            if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.normal)
+                                            {
+                                                oncelikIndex = tumSohbetler[i].gerekliDegiskenler.Count;
+                                            }
+                                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.son)
+                                            {
+                                                oncelikIndex = 0;
+                                            }
+                                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_2)
+                                            {
+                                                oncelikIndex = maxVariableCount + tumSohbetler[i].gerekliDegiskenler.Count;
+                                            }
+                                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_1)
+                                            {
+                                                oncelikIndex = maxVariableCount * 2 + tumSohbetler[i].gerekliDegiskenler.Count;
+                                            }
+
+                                            for (int b = mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Count; b < oncelikIndex + 1; b++)
+                                            {
+                                                ModSohbet eklenecekSohbet = new ModSohbet();
+                                                eklenecekSohbet.sohbetler = new List<Sohbet>();
+                                                mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                            }
+                                            /*
+                                            ModSohbet eklenecekSohbet = new ModSohbet();
+                                            eklenecekSohbet.sohbetler[tumSohbetler[i].gerekliDegiskenler.Count - 1].Add(tumSohbetler[i]);
+                                            eklenecekSohbet.repetition = 0;
+
+                                            mods[a].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                            */
+
+                                            mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler[oncelikIndex].sohbetler.Add(tumSohbetler[i]);
+                                            break;
+                                        }
                                     }
                                 }
                             }
-                        }
-                        else
-                        {
-                            ModSohbetMods eklenecekMod = new ModSohbetMods();
-                            eklenecekMod.mod = tumSohbetler[i].gerekliDegiskenler[u].degiskenDegeri;
-                            eklenecekMod.ModSohbetRepetitions = new List<ModSohbetRepetitions>();
-                            eklenecekMod.ModSohbetRepetitions.Add(new ModSohbetRepetitions());
-                            eklenecekMod.ModSohbetRepetitions[0].modSohbetler = new List<ModSohbet>();
-                            mods.Add(eklenecekMod);
+                            else
+                            {
+                                ModSohbetMods eklenecekMod = new ModSohbetMods();
+                                eklenecekMod.mod = tumSohbetler[i].gerekliDegiskenler[u].degiskenDegeri;
+                                eklenecekMod.ModSohbetRepetitions = new List<ModSohbetRepetitions>();
+                                eklenecekMod.ModSohbetRepetitions.Add(new ModSohbetRepetitions());
+                                eklenecekMod.ModSohbetRepetitions[0].modSohbetler = new List<ModSohbet>();
+                                mods.Add(eklenecekMod);
 
-                            int oncelikIndex = 0;
+                                int oncelikIndex = 0;
 
-                            if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.normal)
-                            {
-                                oncelikIndex = tumSohbetler[i].gerekliDegiskenler.Count;
-                            }
-                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.son)
-                            {
-                                oncelikIndex = 0;
-                            }
-                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_2)
-                            {
-                                oncelikIndex = maxVariableCount + tumSohbetler[i].gerekliDegiskenler.Count;
-                            }
-                            else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_1)
-                            {
-                                oncelikIndex = maxVariableCount * 2 + tumSohbetler[i].gerekliDegiskenler.Count;
-                            }
+                                if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.normal)
+                                {
+                                    oncelikIndex = tumSohbetler[i].gerekliDegiskenler.Count;
+                                }
+                                else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.son)
+                                {
+                                    oncelikIndex = 0;
+                                }
+                                else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_2)
+                                {
+                                    oncelikIndex = maxVariableCount + tumSohbetler[i].gerekliDegiskenler.Count;
+                                }
+                                else if (tumSohbetler[i].oncelik == Sohbet.SohbetOnceligi.ilk_1)
+                                {
+                                    oncelikIndex = maxVariableCount * 2 + tumSohbetler[i].gerekliDegiskenler.Count;
+                                }
 
-                            for (int b = mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Count; b < oncelikIndex + 1; b++)
-                            {
+                                for (int b = mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Count; b < oncelikIndex + 1; b++)
+                                {
+                                    ModSohbet eklenecekSohbet = new ModSohbet();
+                                    eklenecekSohbet.sohbetler = new List<Sohbet>();
+                                    mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                }
+
+                                /*
                                 ModSohbet eklenecekSohbet = new ModSohbet();
-                                eklenecekSohbet.sohbetler = new List<Sohbet>();
-                                mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                eklenecekSohbet.sohbetler[tumSohbetler[i].gerekliDegiskenler.Count - 1].Add(tumSohbetler[i]);
+                                eklenecekSohbet.repetition = 0;
+
+                                mods[a].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
+                                */
+
+                                mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler[oncelikIndex].sohbetler.Add(tumSohbetler[i]);
                             }
-
-                            /*
-                            ModSohbet eklenecekSohbet = new ModSohbet();
-                            eklenecekSohbet.sohbetler[tumSohbetler[i].gerekliDegiskenler.Count - 1].Add(tumSohbetler[i]);
-                            eklenecekSohbet.repetition = 0;
-
-                            mods[a].ModSohbetRepetitions[0].modSohbetler.Add(eklenecekSohbet);
-                            */
-
-                            mods[mods.Count - 1].ModSohbetRepetitions[0].modSohbetler[oncelikIndex].sohbetler.Add(tumSohbetler[i]);
                         }
                     }
                 }
-            }
-            else
-            {
-                tumSohbetler[i].gerekliDegiskenler = new List<Sohbet.GerekenDegisken>();
+                else
+                {
+                    tumSohbetler[i].gerekliDegiskenler = new List<Sohbet.GerekenDegisken>();
 
 
 
-                Debug.Log("Gereken değişkenleri null olan sohbetler düzeltildi. Bu bir sorun değil.");
+                    Debug.Log("Gereken değişkenleri null olan sohbetler düzeltildi. Bu bir sorun değil.");
+                }
             }
         }
 

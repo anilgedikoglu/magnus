@@ -41,41 +41,14 @@ MonoBehaviour:
     g\xF6r\xFCyorum. Bu ki\u015Fi seninle ilgilenen fakat hi\xE7 belli etmemeye \xE7al\u0131\u015Fan
     biri. \u0130lerleyen g\xFCnlerde bir s\xF6z\xFC, y\xFCz\xFCn\xFC g\xFCld\xFCrecek."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "kahve fal\u0131 giri\u015F"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: fal konusu
-    degiskenDegeri: genel
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "ili\u015Fkisi yok"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: cinsiyet
-    degiskenDegeri: "kad\u0131n"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: meslek
-    degiskenDegeri: "kamu sekt\xF6r\xFC"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: meslek
-    degiskenDegeri: "\xF6zel sekt\xF6r"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: meslek
-    degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -107,6 +80,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -123,13 +97,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
-  preferencesObject: {fileID: 0}
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

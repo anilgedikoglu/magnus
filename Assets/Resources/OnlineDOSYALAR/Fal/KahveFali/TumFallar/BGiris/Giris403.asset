@@ -40,25 +40,14 @@ MonoBehaviour:
     g\xF6r\xFCyorum. Bu ki\u015Fiyle ailenden birinin {{sayi,4,9}} g\xFCn sonra \xE7\xF6z\xFCm
     odakl\u0131 bir g\xF6r\xFC\u015Fmesi olacak. Konu ise bir \"izin\" sanki."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "kahve fal\u0131 giri\u015F"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: fal konusu
-    degiskenDegeri: genel
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: medeni durum
-    degiskenDegeri: "ayr\u0131 ya\u015F\u0131yor"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -75,6 +64,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -91,13 +81,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

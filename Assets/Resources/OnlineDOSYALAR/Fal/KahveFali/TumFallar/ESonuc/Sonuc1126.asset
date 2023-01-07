@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Sonuc1126
+  m_EditorClassIdentifier: 
+  idIndex: 2023174019AA56777255413
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Ay ne nostaljik! \xC7ocuklu\u011Fumdaki gibi giysisi yamal\u0131 bir bez bebek
+    g\xF6z\xFCme \xE7arpt\u0131 fincan\u0131n\u0131n taban\u0131nda. Elinde bir de
+    gazete tutuyor bu bebek. Adeta sana ula\u015Fmak istercesine kahve fincan\u0131n\u0131n
+    d\u0131\u015F\u0131na g\xF6zlerini dikmi\u015F. Bebek ge\xE7mi\u015Fe olan \xF6zlemini
+    ve pi\u015Fmanl\u0131klar\u0131n\u0131 temsil ediyor olabilir. Anlad\u0131\u011F\u0131m
+    kadar\u0131yla son zamanlarda s\u0131k\xE7a \"ke\u015Fke \xE7ocuklu\u011Fuma
+    d\xF6nsem\" dedi\u011Fin anlar oluyor. Belki de hayat\u0131n karma\u015Fas\u0131ndan
+    b\u0131kt\u0131n ve her \u015Feyin \xE7ok daha basit oldu\u011Fu o g\xFCzel d\xF6nemlere
+    d\xF6nmek istiyorsun.\n\nSen de hakl\u0131s\u0131n sevgili {{isim}}. Ancak bundan
+    sonra da g\xFCzel g\xFCnler seni bekliyor. Bebe\u011Fin hemen ard\u0131ndaki
+    g\xF6kte kayan y\u0131ld\u0131zdan anl\u0131yorum bunu. Seni \xE7ok etkileyecek
+    bir ak\u015Fam haberinin ard\u0131ndan kendine verece\u011Fin birtak\u0131m s\xF6zlerle
+    birlikte, {{yil_4}} y\u0131l\u0131na kadar hayatta istedi\u011Fin bir\xE7ok ba\u015Far\u0131m\u0131
+    elde edece\u011Fini hissediyorum."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

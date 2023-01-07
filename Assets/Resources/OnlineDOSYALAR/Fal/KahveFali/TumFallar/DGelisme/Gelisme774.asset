@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme774
+  m_EditorClassIdentifier: 
+  idIndex: 2023174019AA00009395038
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n merkez enleminde, x \u015Feklinde birbiri \xFCst\xFCne
+    d\xFC\u015Fm\xFC\u015F 2 t\u0131\u011F g\xF6r\xFCyorum. Hazine haritalar\u0131ndaki
+    i\u015Faretleri and\u0131ran bu imge baz\u0131 b\xFCy\xFCk hedeflere sahip oldu\u011Funu
+    g\xF6steriyor. Telvelerin bana bu hedeflerine ula\u015Fmay\u0131 ba\u015Faraca\u011F\u0131n\u0131
+    s\xF6yl\xFCyor. Fakat hayatta hi\xE7bir \u015Fey emek olmadan ger\xE7ekle\u015Fmiyor
+    maalesef. T\u0131\u011F fig\xFCr\xFCnden anl\u0131yorum ki t\u0131pk\u0131 \xF6rg\xFC
+    \xF6rmek gibi sab\u0131r gerektiren bir s\xFCre\xE7 ile kar\u015F\u0131la\u015Facaks\u0131n.
+    Lakin gereken metaneti g\xF6sterdi\u011Finde hazineleri aratmayacak bir m\xFCkafat
+    seni bekliyor olacak. Ayr\u0131ca, bu yolculukta \xF6d\xFCl\xFCne ula\u015Fmana
+    yard\u0131mc\u0131 olacak iyi niyetli insanlar da olacak. Bu nedenle gelecek
+    yard\u0131mlara olumlu yakla\u015Fman\u0131 tavsiye ederim.\n\nAyn\u0131 b\xF6lgede
+    dikkatimi \xE7eken di\u011Fer bir fig\xFCr ise yeti\u015Fkin bir ipek b\xF6ce\u011Fi
+    oldu. \u0130pek b\xF6ce\u011Fi safl\u0131k ve merhameti temsil eder {{isim}}.
+    Buradan yola \xE7\u0131karak, ilerledi\u011Fin yolda ki\u015Fisel inan\xE7 ve
+    prensiplerinden sapmamaya \xF6zen g\xF6stermen gerekti\u011Fini belirtmek isterim."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: HizliRapor
+  m_EditorClassIdentifier: 
+  idIndex: 20221031056AA94187528780
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Raporu hangisi i\xE7in istersin?"
+  - "Raporun ne zaman i\xE7in olsun?"
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar:
+  - cevapVaryasyonlari:
+    - "Bug\xFCne dair"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: numerogun
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Bu y\u0131la dair"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: numeroyil
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - Genel rapor
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: numero
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "\u0130ptal"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: numerolojiiptal
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: numhizli
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 0
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

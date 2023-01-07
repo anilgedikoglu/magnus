@@ -1874,9 +1874,6 @@ public class ChatManager : MonoBehaviour
         pos = new Vector3(pos.x, lastLeftBubble.GetComponent<RectTransform>().position.y -
         ((lastLeftBubble.GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
 
-        Debug.Log(bubbleMover.GetChild(bubbleMover.childCount - 1).gameObject.name);
-        Debug.Log(pos);
-
         //Objenin oluşturulması
         GameObject bubble = Instantiate(rightBubble, pos, Quaternion.identity);
 
@@ -2802,7 +2799,9 @@ public class ChatManager : MonoBehaviour
         for (int i = 0; i < answerBubblesCount; i++)
         {
             RectTransform bubbleRect = answerBubbles[i].GetComponent<RectTransform>();
-            bubbleRect.DOMove(new Vector2(-100, -350), 0.25f);
+
+            if (answerBubbles[i].GetComponent<AnswerBubble>().button.enabled)
+                bubbleRect.DOMove(new Vector2(-100, -350), 0.25f);
         }
         yield return new WaitForSeconds(0.25f);
 

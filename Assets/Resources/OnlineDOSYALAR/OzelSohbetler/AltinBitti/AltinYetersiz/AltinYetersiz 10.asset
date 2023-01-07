@@ -33,7 +33,9 @@ MonoBehaviour:
   - "Alt\u0131n say\u0131n yetersiz. Art\u0131rabilmen i\xE7in sana k\u0131sac\u0131k
     bir izleti sunmam gerekiyor. Kabul ediyor musun?"
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 5
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -167,13 +169,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

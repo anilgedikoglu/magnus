@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme770
+  m_EditorClassIdentifier: 
+  idIndex: 2023174019AA42480042067
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Sen san\u0131r\u0131m olduk\xE7a karars\u0131z bir ki\u015Filiksin {{isim}}.
+    Zira fincan\u0131na bakt\u0131\u011F\u0131mda neredeyse hi\xE7bir fig\xFCr net
+    olarak se\xE7ilemiyor. Bu da senin pek \xE7ok konuda ikilemde oldu\u011Funu g\xF6steriyor.
+    Bu kadar belirsiz fig\xFCr\xFCn ve karars\u0131zl\u0131\u011F\u0131n i\xE7inde,
+    olduk\xE7a net bir papatya dikkatimi \xE7ekti. T\xFCm bu karma\u015Fan\u0131n
+    i\xE7erisinde g\xFCne\u015F gibi parl\u0131yor ve ne olursa olsun sa\u011Fl\u0131kl\u0131,
+    mutlu bir ya\u015Fam s\xFCrece\u011Fini anlat\u0131yor {{isim}}.\n\nFincan\u0131na
+    daha dikkatli bakt\u0131\u011F\u0131mda sap hizas\u0131nda bir sedir a\u011Fac\u0131
+    g\xF6r\xFCyorum. Sen de a\u011Fac\u0131n g\xF6lgesinde dinleniyorsun. Bu fig\xFCr\xFCn
+    sap k\u0131s\u0131mlar\u0131nda olmas\u0131 ve bu kadar b\xFCy\xFCk olmas\u0131
+    ailenle alakal\u0131 geli\u015Fmeler ya\u015Fayaca\u011F\u0131n\u0131 ifade ediyor.
+    Ailen baz\u0131 s\u0131k\u0131nt\u0131l\u0131 durumlar ya\u015Fam\u0131\u015F
+    ve bunlar \xE7ok yak\u0131nda ge\xE7ecek. Hatta ailen bu durumdan senin kararlar\u0131nla
+    ve dik duru\u015Funla kurtulacak. \xC7ekti\u011Fin s\u0131k\u0131nt\u0131lar\u0131n
+    kar\u015F\u0131l\u0131\u011F\u0131n\u0131, onlardan sayg\u0131 g\xF6rerek alacaks\u0131n.
+    O papatyan\u0131n \u0131\u015F\u0131lt\u0131s\u0131 t\xFCm fal\u0131n\u0131 kapl\u0131yor
+    {{isim}}. Mutlu, huzurlu g\xFCnler pe\u015Fi s\u0131ra gelecekler..."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

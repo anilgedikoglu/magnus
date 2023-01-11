@@ -4388,15 +4388,15 @@ public class ChatManager : MonoBehaviour
                     }
                 }
 
+                foreach (SpeechBubbleLeft element in relatedBubbles)
+                {
+                    element.realtedBubbles = relatedBubbles;
+                }
+
                 if (fastBubble)
                 {
                     yield return new WaitForSeconds(AiMessageDelay + 0.5f);
                     fastBubble = false;
-                }
-
-                foreach (SpeechBubbleLeft element in relatedBubbles)
-                {
-                    element.realtedBubbles = relatedBubbles;
                 }
 
                 AiMessageDelay += .15f;
@@ -4455,15 +4455,15 @@ public class ChatManager : MonoBehaviour
                         }
                     }
 
+                    foreach (SpeechBubbleLeft element in relatedBubbles)
+                    {
+                        element.realtedBubbles = relatedBubbles;
+                    }
+
                     if (fastBubble)
                     {
                         yield return new WaitForSeconds(AiMessageDelay + 0.5f);
                         fastBubble = false;
-                    }
-
-                    foreach (SpeechBubbleLeft element in relatedBubbles)
-                    {
-                        element.realtedBubbles = relatedBubbles;
                     }
                 }
                 takipSohbetNumarasi += 1;
@@ -4502,16 +4502,17 @@ public class ChatManager : MonoBehaviour
                     }
                 }
 
+                foreach (SpeechBubbleLeft element in relatedBubbles)
+                {
+                    element.realtedBubbles = relatedBubbles;
+                }
+
                 if (fastBubble)
                 {
                     yield return new WaitForSeconds(AiMessageDelay + 0.5f);
                     fastBubble = false;
                 }
 
-                foreach (SpeechBubbleLeft element in relatedBubbles)
-                {
-                    element.realtedBubbles = relatedBubbles;
-                }
             }
             takipSohbetNumarasi += 1;
             //StartCoroutine(FunctionDelay(() => ClickAnswerBubble(null, 0, 0, false), AiMessageDelay + sohbet.sayac + 0.5f));

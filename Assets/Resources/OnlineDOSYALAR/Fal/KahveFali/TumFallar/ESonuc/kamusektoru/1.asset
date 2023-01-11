@@ -30,17 +30,19 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - "Son k\u0131s\u0131mlara do\u011Fru ilgin\xE7 bir ambiyansla kar\u015F\u0131la\u015Ft\u0131m
-    {{isim}}. Adeta bir mahkeme salonu kurulmu\u015F. Bir j\xFCri ve bir de hakim
-    var. San\u0131k ise sen de\u011Filsin; fakat konu seninle do\u011Frudan alakal\u0131
-    g\xF6z\xFCk\xFCyor. Ge\xE7ti\u011Fimiz aylarda, tahminimce de {{ay_-4}} ay\u0131nda
-    ya\u015Fam\u0131\u015F oldu\u011Fun bir \xFCz\xFCnt\xFCyle ilgili olarak, bulundu\u011Fun
-    yerden \xE7ok uzakta, isminde {{harf}} harfi olan bir insan, ba\u015Fka baz\u0131
-    insanlar taraf\u0131ndan ciddi \u015Fekilde yarg\u0131lan\u0131yor. Durum neticelendi\u011Finde,
-    sana bir \xF6z\xFCr ve bir telafi talebi gelecek. Bu konu, bana sorarsan i\xE7ine
-    bir hayli su serpecek."
+  - "Fincan\u0131n alt k\u0131s\u0131mlar\u0131nda babacan bir adam g\xF6r\xFCyorum
+    {{isim}}; esmer, hafif kilolu. Bir \xE7ocu\u011Fun ba\u015F\u0131n\u0131 ok\u015Fuyor...
+    Bu ki\u015Finin birden fazla \xE7ocu\u011Fu olmas\u0131na ra\u011Fmen yaln\u0131zca
+    tek bir torunu var. Ba\u015F\u0131n\u0131 ok\u015Fad\u0131\u011F\u0131 ki\u015Fi
+    torunu. Hatta telvelerin, torununun ad\u0131n\u0131n i\xE7inde {{harf}} ya da
+    {{harf}} harfi oldu\u011Funu belirtiyor. Bu ki\u015Fi bir \xF6zel sekt\xF6r \xE7al\u0131\u015Fan\u0131
+    ancak devlet dairelerinde tan\u0131d\u0131klar\u0131 var. {{ay_3}} ay\u0131nda
+    senin kendi i\u015Finle, maa\u015F\u0131nla ya da izin durumlar\u0131nla ilgili
+    bir s\u0131k\u0131nt\u0131n\u0131 bu ki\u015Fi \xE7\xF6zecek."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -50,6 +52,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: meslek
     degiskenDegeri: "kamu sekt\xF6r\xFC"
@@ -79,13 +84,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Baskasorun
+  m_EditorClassIdentifier: 
+  idIndex: 20231114131AA02589462121
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "De\u011Ferli {{isim}},\n\nMagnus'da y\xFCz binlerce sat\u0131r kod ve metin,
+    milyonlarca karakter yaz\u0131 oldu\u011Fu i\xE7in elbette bir yerlerde hata
+    olabilir. Uygulama tutars\u0131z davranabilir ya da \xE7\xF6kebilir. Hepsini
+    tespit ediyor ve tek tek d\xFCzeltmek i\xE7in emin ol gecemizi g\xFCnd\xFCz\xFCm\xFCze
+    kat\u0131yoruz. Hem de b\xFCy\xFCk bir tutkuyla!\n\nProblem durumunda yapaca\u011F\u0131n
+    ilk \u015Fey her zaman, markette Magnus i\xE7in bir g\xFCncelleme olup olmad\u0131\u011F\u0131n\u0131
+    kontrol etmek olsun. E\u011Fer varsa mutlaka uygulaman\u0131 g\xFCncelle.\n\nSorun
+    devam ediyor olursa, uygulama marketlere girip 1 y\u0131ld\u0131z vermek i\xE7in
+    acele etmemeni dilerim. <sprite=10> Bu Magnus'un aleyhine olur. Ve e\u011Fer
+    uygulamay\u0131 sevdiysen, di\u011Fer uygulamalar\u0131n gerisine d\xFC\u015Fmesini
+    san\u0131r\u0131m hi\xE7birimiz istemeyiz. Magnus'da inan\u0131lmaz bir emek
+    var. Senin deste\u011Fin ise bizim i\xE7in \xE7ok \xF6nemli {{isim}}. <sprite=105>\n\nSorun
+    e\u011Fer bir metinde ise ve metin i\xE7in a\xE7\u0131lan pencerenin sol \xFCst
+    k\xF6\u015Fesinde \"kalem i\u015Fareti\" \xE7\u0131kt\u0131ysa, metni puanlayabilir
+    ve sorunu oradan bize yazabilirsin. Yorumunu de\u011Ferlendirip cevaplad\u0131\u011F\u0131m\u0131zda,
+    GELEN KUTUSU'nda verdi\u011Fimiz cevaba ula\u015Fabileceksin. Yaz\u0131lan her
+    \u015Fey tek tek okunuyor, buna emin olabilirsin! <sprite=0>\n\nDaha farkl\u0131
+    bir sorun s\xF6z konusu ise, bunu bize info@magnusapp.tech adresine mail g\xF6ndererek
+    belirtmeni rica ediyoruz. Seninle hemen ileti\u015Fime ge\xE7ilecek ve ne gerekiyorsa
+    h\u0131zla yap\u0131lacakt\u0131r. Hatta seni mutsuz eden o sorundan dolay\u0131
+    sana birtak\u0131m s\xFCrprizlerimiz bile olabilir. Yanl\u0131\u015F giden bir
+    \u015Feylerden dolay\u0131 takip\xE7ilerimizi ve sevenlerimizi asla ma\u011Fdur
+    etmeyiz. <sprite=0>"
+  aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: baskasorun
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 1
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

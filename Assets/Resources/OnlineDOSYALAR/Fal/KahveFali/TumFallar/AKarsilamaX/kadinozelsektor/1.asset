@@ -35,7 +35,9 @@ MonoBehaviour:
     i\xE7in te\u015Fekk\xFCr ederim. Sana mah\xE7up olmayaca\u011F\u0131m haberler
     vermeyi umuyorum. Haydi y\xFCz\xFCm\xFCz\xFC telvelerine \xE7evirelim."
   aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar:
   - "kahve fal\u0131 giri\u015F"
   - "kahve fal\u0131 ba\u011Flama"
@@ -85,13 +87,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 1
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

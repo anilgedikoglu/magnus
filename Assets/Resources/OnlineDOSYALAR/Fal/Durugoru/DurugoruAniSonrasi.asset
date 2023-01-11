@@ -32,10 +32,14 @@ MonoBehaviour:
   aciklama:
   - "Durug\xF6r\xFC yorumunu haz\u0131rlamaya koyuldum {{isim}}. \u0130\u015Flemi
     tamamlad\u0131\u011F\u0131mda Gelen Kutusu'nda bulabilirsin."
+  - "Durug\xF6r\xFCn i\xE7in kollar\u0131 s\u0131vad\u0131m. S\xF6zlerimi toparlad\u0131\u011F\u0131mda
+    Gelen Kutusu'ndan okuyabilirsin."
+  - "Durug\xF6r\xFC fal\u0131n haz\u0131rlan\u0131yor. Bitirdi\u011Fimde Gelen Kutusu'nda
+    bulacaks\u0131n."
   aciklamaBalonuYok: 0
   yeniFocusPaneliKullan: 0
   parlamaRengi: 2
-  parlamaSuresi: 1
+  parlamaSuresi: 4
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []

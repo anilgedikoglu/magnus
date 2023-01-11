@@ -30,17 +30,23 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - "Son k\u0131s\u0131mlara do\u011Fru ilgin\xE7 bir ambiyansla kar\u015F\u0131la\u015Ft\u0131m
-    {{isim}}. Adeta bir mahkeme salonu kurulmu\u015F. Bir j\xFCri ve bir de hakim
-    var. San\u0131k ise sen de\u011Filsin; fakat konu seninle do\u011Frudan alakal\u0131
-    g\xF6z\xFCk\xFCyor. Ge\xE7ti\u011Fimiz aylarda, tahminimce de {{ay_-4}} ay\u0131nda
-    ya\u015Fam\u0131\u015F oldu\u011Fun bir \xFCz\xFCnt\xFCyle ilgili olarak, bulundu\u011Fun
-    yerden \xE7ok uzakta, isminde {{harf}} harfi olan bir insan, ba\u015Fka baz\u0131
-    insanlar taraf\u0131ndan ciddi \u015Fekilde yarg\u0131lan\u0131yor. Durum neticelendi\u011Finde,
-    sana bir \xF6z\xFCr ve bir telafi talebi gelecek. Bu konu, bana sorarsan i\xE7ine
-    bir hayli su serpecek."
+  - "Fincan\u0131n\u0131n son hatt\u0131na bakt\u0131\u011F\u0131mda ilk g\xF6z\xFCme
+    \xE7arpan, beyaz bir sayfan\u0131n \xFCzerine d\xF6k\xFClm\xFC\u015F m\xFCrekkep
+    oldu. Normalde temiz ba\u015Flang\u0131\xE7lar\u0131 sembolize eden sayfa \xFCzerindeki
+    leke ile, bu sayfa k\u0131r\u0131lm\u0131\u015F umutlar\u0131 temsil eden bir
+    i\u015Farete d\xF6nm\xFC\u015F. Telvelerin burada bana yeni giri\u015Fti\u011Fin
+    bir i\u015Fte k\xF6t\xFC bir ba\u015Flang\u0131\xE7 yapt\u0131\u011F\u0131n\u0131
+    s\xF6yl\xFCyor. \xD6te yandan sayfan\u0131n m\xFCrekkeple kaplanan k\u0131sm\u0131
+    sadece k\xF6\u015Fesi {{isim}}. Bu i\u015Faretten yola \xE7\u0131karak k\xF6t\xFC
+    ba\u015Flang\u0131c\u0131n\u0131n yaln\u0131zca bir nazar boncu\u011Fu oldu\u011Funu
+    s\xF6yleyebilirim. Yap\u0131lan ufak hatalar, i\u015Finin gelecekte d\xFC\u015Fmanlar\u0131n\u0131n
+    kem g\xF6zlerinden uzak olmas\u0131n\u0131 sa\u011Flayacak. Ya\u015Fanan p\xFCr\xFCzlerin,
+    kurmakta oldu\u011Fun gelece\u011Fin temellerini sa\u011Flamla\u015Ft\u0131raca\u011F\u0131n\u0131
+    hissediyorum."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -50,6 +56,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: kariyer
     kontrol: 0
   - degiskenAdi: meslek
     degiskenDegeri: "kendi i\u015Fini yap\u0131yor"
@@ -79,13 +88,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

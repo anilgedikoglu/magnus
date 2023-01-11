@@ -10,6 +10,8 @@ using Firebase.Storage;
 using Firebase.Extensions;
 using UnityEngine.Networking;
 using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 
 public class SpeechBubbleLeft : MonoBehaviour
 {
@@ -60,7 +62,9 @@ public class SpeechBubbleLeft : MonoBehaviour
     public GameObject timerFolder;
     public RectTransform timerImageRect;
     public Image glowEffect;
+    //internal Tweener posTweeing;
 
+    internal TweenerCore<Vector3, Vector3, VectorOptions> posTweeing;
 
     public void Start()
     {

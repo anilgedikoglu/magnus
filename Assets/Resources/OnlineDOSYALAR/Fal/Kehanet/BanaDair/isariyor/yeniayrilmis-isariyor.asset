@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: yeniayrilmis-isariyor
+  m_EditorClassIdentifier: 
+  idIndex: 20226105951AA57805125257
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Senin i\xE7in Magnuskop'u 4 sene sonras\u0131na \xE7evirdim {{isim}}. Y\u0131l
+    {{yil_+4}}. Geni\u015F bir \"L\" masan\u0131n ba\u015F\u0131nda oturuyorsun.
+    \xD6n\xFCnde bilgisayar benzeri bir cihaz var. Yan\u0131nda ise, odaya girip
+    \xE7\u0131kan birileri oldu\u011Funu g\xF6r\xFCyorum. Onlardan bir \u015Feyler
+    al\u0131yor, kayda ge\xE7iyor, onlara direktifler veriyorsun. Bir i\u015Fe girmi\u015Fsin
+    ve durumundan \xE7ok memnunsun. Hemen yan\u0131nda, masan\u0131n \xFCzerinde
+    duran cep telefonunda ise okunmam\u0131\u015F iki mesaj var. San\u0131yorum sevgilinden.
+    O ki\u015Finin ayr\u0131ld\u0131\u011F\u0131n sevgilin olma ihtimali ise bana
+    sorarsan %{{sayi,54,79}}."
+  aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: medeni durum
+    degiskenDegeri: "yeni ayr\u0131lm\u0131\u015F"
+    kontrol: 0
+  - degiskenAdi: meslek
+    degiskenDegeri: "i\u015F ar\u0131yor"
+    kontrol: 0
+  - degiskenAdi: mod
+    degiskenDegeri: kehanetbana
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: kehanetbana son
+  sohbetBititmindeAnamenuyeDon: 0
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 1
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

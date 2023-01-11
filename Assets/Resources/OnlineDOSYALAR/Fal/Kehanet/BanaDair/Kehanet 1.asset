@@ -31,8 +31,13 @@ MonoBehaviour:
   ozelFonksiyon: 
   aciklama:
   - "Magnuskopta seni 3 y\u0131l sonra bug\xFCn \xF6\u011Flen saatlerinde, sevdi\u011Fin
-    biriyle ba\u015F ba\u015Fa bir kafede otururken g\xF6r\xFCyorum {{isim}}."
+    biriyle ba\u015F ba\u015Fa bir kafede otururken g\xF6r\xFCyorum {{isim}}. Sana
+    cep telefonundan baz\u0131 foto\u011Fraflar g\xF6steriyor. San\u0131r\u0131m
+    bir geziye \xE7\u0131kacaks\u0131n ve ondan yer tavsiyeleri al\u0131yorsun."
   aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -51,6 +56,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: kehanetbana son
@@ -67,13 +73,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 1
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

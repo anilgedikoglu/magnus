@@ -30,9 +30,14 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - "{{burc}} burcu olu\u015Funu esas ald\u0131\u011F\u0131m\u0131zda bug\xFCn:"
+  - "<color=yellow><size=26>G\xDCNL\xDCK ASTROLOJ\u0130</size></color>\n\n<color=yellow>Bir
+    \"{{burc}}\" burcu {{data, cinsiyet=kad\u0131n, kad\u0131n\u0131 | cinsiyet=erkek,
+    erke\u011Fi | cinsiyet=lgbt, insan\u0131}} olu\u015Funu esas ald\u0131\u011F\u0131m\u0131zda
+    bug\xFCn:</color>"
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -51,6 +56,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -67,13 +73,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

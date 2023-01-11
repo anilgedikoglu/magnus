@@ -35,29 +35,14 @@ MonoBehaviour:
     bir d\xFCnyan\u0131n sana yetmedi\u011Fini d\xFC\u015F\xFCnerek farkl\u0131 aray\u0131\u015Flar
     i\xE7ine girebilirsin."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: burc
-    degiskenDegeri: akrep
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: "y\xFCkselen"
-    degiskenDegeri: akrep
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: ayburcu
-    degiskenDegeri: "yenge\xE7"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: mod
-    degiskenDegeri: "bur\xE7yorumu"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -71,6 +56,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -87,13 +73,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

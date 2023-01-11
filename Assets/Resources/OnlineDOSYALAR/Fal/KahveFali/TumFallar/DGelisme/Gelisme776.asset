@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Gelisme776
+  m_EditorClassIdentifier: 
+  idIndex: 20231105619AA46172439867
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n orta alan\u0131nda \xE7i\xE7ek tarlas\u0131nda yatan, i\u011Fnesi
+    kopuk bir bal ar\u0131s\u0131 g\xF6rd\xFCm. Ar\u0131 \xE7al\u0131\u015Fkanl\u0131\u011F\u0131
+    sembolize eder. \u0130\u011Fnesinin kopuk olmas\u0131 ise ruh sa\u011Fl\u0131\u011F\u0131n\u0131n
+    zarar g\xF6rd\xFC\u011F\xFCn\xFC belirtir. Hayat\u0131n yaratt\u0131\u011F\u0131
+    bask\u0131 seni k\xF6t\xFC etkiliyor anla\u015F\u0131lan. \xC7evren g\xFCzelliklerle
+    dolu olmas\u0131na ra\u011Fmen ufak olumsuzluklara tak\u0131l\u0131yorsun {{isim}}.
+    G\xF6r\xFCyorum ki sevilen birisin ve \xE7evrende sana destek olacak pek \xE7ok
+    insan bulunuyor. Yak\u0131n arkada\u015Flar\u0131n\u0131n ve ailenin yard\u0131m\u0131yla
+    en k\u0131sa s\xFCrede bu ruh halinden kurtulup \xE7evrendeki g\xFCzellikleri
+    tekrardan g\xF6rebilece\u011Fine inan\u0131yorum.\n\nFincan merkezinin \xE7evresinde,
+    seni bir bisikletin \xFCzerinde gidonu b\u0131rakm\u0131\u015F \u015Fekilde giderken
+    g\xF6r\xFCyorum. Bisiklet, hayat\u0131n\u0131 temsil ediyor. Bu kontrol\xFC bir
+    s\xFCre \xF6nce elden b\u0131rakm\u0131\u015Fs\u0131n. San\u0131r\u0131m son
+    zamanlarda \xE7evresel ko\u015Fullar ve baz\u0131 insanlar ki\u015Fisel alan\u0131na
+    biraz m\xFCdahale etmi\u015F. D\xFCzenini {{ay_3}} ay\u0131na kadar tekrar sa\u011Flam\u0131\u015F
+    olacaks\u0131n {{isim}}."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

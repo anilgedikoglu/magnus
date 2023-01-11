@@ -34,29 +34,14 @@ MonoBehaviour:
     iki ayr\u0131 kefeye koyup tartmak isteyebilir, terazinin adaletsiz oldu\u011Funu
     d\xFC\u015F\xFCnebilirsin."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: burc
-    degiskenDegeri: akrep
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: "y\xFCkselen"
-    degiskenDegeri: akrep
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: ayburcu
-    degiskenDegeri: "yenge\xE7"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
-  - degiskenAdi: mod
-    degiskenDegeri: "bur\xE7yorumu"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -70,6 +55,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -86,13 +72,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

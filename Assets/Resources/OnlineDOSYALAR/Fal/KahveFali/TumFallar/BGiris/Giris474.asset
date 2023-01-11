@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris474
+  m_EditorClassIdentifier: 
+  idIndex: 20231105619AA59510534329
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Zincire vurulmu\u015F bir ruh g\xF6r\xFCyorum fincan\u0131n\u0131n \xFCst sath\u0131nda.
+    T\xFCm kalbinle ho\u015Fland\u0131\u011F\u0131n birinin, hayat\u0131n\u0131n
+    merkezinde oldu\u011Funun i\u015Fareti. Fakat s\xFCrreal d\xFC\u015F\xFCncelerindeki
+    fazlal\u0131\u011F\u0131n, bu ki\u015Fiye a\xE7\u0131lmana engel oldu\u011Funu
+    fark ettim. Telvelerin bana, kendine yeterince g\xFCvenmedi\u011Fini s\xF6yl\xFCyor
+    {{isim}}. Kar\u015F\u0131la\u015Faca\u011F\u0131n sonu\xE7lardan korkuyor olabilirsin
+    ve san\u0131r\u0131m bu durum seni i\xE7ten i\xE7e yiyip bitiriyor. A\xE7\u0131ld\u0131\u011F\u0131n
+    anda olacaklar yeterince berrak de\u011Fil fakat kar\u015F\u0131la\u015Faca\u011F\u0131n
+    tav\u0131r ne olursa olsun, olaylar\u0131n iyi sonu\xE7lanaca\u011F\u0131na y\xFCrekten
+    inan\u0131yorum. Bu ki\u015Fiye do\u011Fru ataca\u011F\u0131n bir ad\u0131m,
+    uzun zamand\u0131r seni k\u0131s\u0131tlayan zincirlerden kurtulman\u0131 sa\u011Flayabilir."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
+    kontrol: 0
+  - degiskenAdi: medeni durum
+    degiskenDegeri: platonik
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -124,6 +124,12 @@ MonoBehaviour:
   - degiskenAdi: ismarlanankahve
     degiskenDegeri: 0
     resetType: 0
+  - degiskenAdi: altingitti
+    degiskenDegeri: 0
+    resetType: 0
+  - degiskenAdi: code
+    degiskenDegeri: 0
+    resetType: 0
   modaGoreHafizaMetniBulunamadiAciklama:
   - mod: "y\xFCz fal\u0131"
     standartAciklama: "Benden hen\xFCz hi\xE7 y\xFCz fal\u0131 almad\u0131n."

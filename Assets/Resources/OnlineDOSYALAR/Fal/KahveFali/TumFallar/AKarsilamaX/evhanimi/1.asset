@@ -35,7 +35,9 @@ MonoBehaviour:
     bir ev han\u0131m\u0131na g\xF6re \xE7ok hareketli g\xFCnler yakla\u015Fmakta.
     \u0130stersen hemen haberlerimize ge\xE7elim."
   aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar:
   - "kahve fal\u0131 giri\u015F"
   - "kahve fal\u0131 ba\u011Flama"
@@ -82,13 +84,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 1
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

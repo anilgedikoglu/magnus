@@ -30,9 +30,27 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - 
+  - "Fincan\u0131n g\xF6vdesinde i\xE7i dolu baloncuklar g\xF6r\xFCyorum. \u0130li\u015Fkinde
+    s\u0131k\u0131nt\u0131lar olu\u015Fmadan \xF6nce gelece\u011Fe y\xF6nelik hayallerin
+    varm\u0131\u015F, \xF6yle de\u011Fil mi {{isim}}? Bu baloncuklar, bu hayallerin
+    yo\u011Funlu\u011Funu ve bollu\u011Funu sembolize ediyor. Demek ki ciddi d\xFC\u015F\xFCnd\xFC\u011F\xFCn,
+    farkl\u0131 biri ile oldu\u011Funa t\xFCm kalbinle inanm\u0131\u015Fs\u0131n.
+    Ben yan\u0131ld\u0131\u011F\u0131n\u0131 hala d\xFC\u015F\xFCnm\xFCyorum. Telvelerde
+    olu\u015Fmu\u015F iki yol, bir soru i\u015Faretine \xE7\u0131k\u0131yor. Bir
+    merak\u0131n\u0131z ya da endi\u015Feniz sizi yeniden ayn\u0131 noktaya ula\u015Ft\u0131r\u0131p,
+    ayn\u0131 hayallerde bulu\u015Fturacak. Ben onun y\xFCre\u011Finde seninle ilgili
+    bir duygu eksikli\u011Fi oldu\u011Funu d\xFC\u015F\xFCnm\xFCyorum {{isim}}.\n\nFincan
+    g\xF6rsellerinin bir t\u0131k daha alt sath\u0131nda, kar\u015F\u0131l\u0131kl\u0131
+    dizilmi\u015F sandalyeler var. Bu sandalyelerin aras\u0131ndaki bo\u015Fluktan
+    insanlar ge\xE7erek bir sahneye ula\u015F\u0131yor ve orada birbirlerini tebrik
+    ediyorlar. Gelecek {{ay_4}} ay\u0131nda senin burada bulunaca\u011F\u0131ndan
+    eminim. Bu de\u011Fi\u015Fik g\xFCn\xFCn ya ba\u015F\u0131nda ya da sonunda sevgilinden
+    \xF6nemli baz\u0131 s\xF6zler duyarak ona kar\u015F\u0131 hislerini peki\u015Ftireceksin
+    {{isim}}."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -42,6 +60,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: "a\u015Fk"
     kontrol: 0
   - degiskenAdi: medeni durum
     degiskenDegeri: "karma\u015F\u0131k"
@@ -71,13 +92,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

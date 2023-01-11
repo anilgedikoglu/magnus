@@ -30,9 +30,26 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - 
+  - "Orta b\xF6l\xFCmlerdeki baz\u0131 telveler, bir cep telefonu ekran\u0131ndan
+    yans\u0131yan yaz\u0131lar\u0131 and\u0131r\u0131yor. Siyah arka plan \xFCzerine
+    beyaz yaz\u0131lar, bir SMS gibi. Y\xFCz\xFCnde endi\u015Fe yarataca\u011F\u0131n\u0131
+    tahmin etti\u011Fim bu bulan\u0131k yaz\u0131lar\u0131n i\xE7inde bir kelime
+    dikkatimi \xE7ekti; Y, B ya da \u0130 harflerinden baz\u0131lar\u0131 var. Bu
+    bir kurum mu banka m\u0131 bilemiyorum ancak senin r\u0131zan d\u0131\u015F\u0131nda
+    kredi kart\u0131ndan i\u015Flem yapt\u0131\u011F\u0131n\u0131 g\xF6rebilir, panikleyebilirsin
+    {{isim}}. Bu sorun ivedilikle \xE7\xF6z\xFCme kavu\u015Facak, meraklanma...\n\nG\xF6rselleri
+    incelemeye devam etti\u011Fimde \xF6n\xFCnde bayraklar\u0131n oldu\u011Fu mini
+    bir konut fark ettim. 3-4 katl\u0131 butik bir okul gibi. Bah\xE7esinde k\u0131sa
+    a\u011Fa\xE7lar var. \u0130lerleyen y\u0131llarda bu okula aran\u0131zda kan
+    ba\u011F\u0131 olan bir \xE7ocuk gidecek. O g\xFCn senin olan biteni geriden,
+    memnuniyetle takip edece\u011Fini hissediyorum. Orada olacak m\u0131s\u0131n
+    yoksa gidi\u015Fat hakk\u0131nda uzaktan m\u0131 bilgi alacaks\u0131n, emin de\u011Filim.
+    Sana \xE7ok \u015Fey ifade edece\u011Fini hissetti\u011Fim bu haberdeki g\xFCn,
+    senin i\xE7in \xE7ok mutlu bir g\xFCn olacak {{isim}}."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -42,6 +59,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: meslek
     degiskenDegeri: "kamu sekt\xF6r\xFC"
@@ -71,13 +91,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

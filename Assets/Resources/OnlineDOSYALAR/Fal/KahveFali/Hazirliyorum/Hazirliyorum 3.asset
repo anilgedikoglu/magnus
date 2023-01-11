@@ -33,17 +33,14 @@ MonoBehaviour:
   - "Cezveyi alal\u0131m...|2|Oca\u011F\u0131n alt\u0131n\u0131 yakal\u0131m...|2|Cezveyi
     oca\u011Fa koyal\u0131m...|5|Hmm, miss gibi koktu! Kar\u0131\u015Ft\u0131ral\u0131m..."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
   tepkiBalonuYok: 0
   balonTipi: 0
-  ayarlanacakDegiskenler: []
-  gerekenDegiskenler:
-  - degiskenAdi: mod
-    degiskenDegeri: "kahve fal\u0131 tipi"
-    kontrolOperatoru: 0
-    ayarlamaOperatoru: 0
   ayarlananDegiskenler: []
   gerekliDegiskenler:
   - degiskenAdi: mod
@@ -57,6 +54,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: "kahve fal\u0131 yerime i\xE7 haz\u0131r"
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 2
   tekrarlama: 0
   sohbetBitimModu: 
@@ -73,13 +71,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -33,8 +33,17 @@ MonoBehaviour:
   - "Nas\u0131l bir jest yapmak istersin?\n\n<color=yellow>Dikkat! Se\xE7imini yapt\u0131\u011F\u0131nda,
     kahve \u0131smarlarsan 1 alt\u0131n, yemek \u0131smarlarsan 10 elmas, tatil \u0131smarlarsan
     100 elmas harcam\u0131\u015F olacaks\u0131n.</color>"
+  - "Nas\u0131l bir jest yapmay\u0131 d\xFC\u015F\xFCn\xFCrs\xFCn?\n\n<color=yellow>Dikkat!
+    Se\xE7imini yapt\u0131\u011F\u0131nda, kahve \u0131smarlarsan 1 alt\u0131n, yemek
+    \u0131smarlarsan 10 elmas, tatil \u0131smarlarsan 100 elmas harcam\u0131\u015F
+    olacaks\u0131n.</color>"
+  - "Hangi jesti yapmak istersin {{isim}}?\n\n<color=yellow>Dikkat! Se\xE7imini yapt\u0131\u011F\u0131nda,
+    kahve \u0131smarlarsan 1 alt\u0131n, yemek \u0131smarlarsan 10 elmas, tatil \u0131smarlarsan
+    100 elmas harcam\u0131\u015F olacaks\u0131n.</color>"
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 2
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
@@ -200,13 +209,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

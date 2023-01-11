@@ -30,9 +30,30 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - 
+  - "Merkez b\xF6lgelerde, sen sandalyede otururken \xF6n\xFCnde dikilmi\u015F bir
+    adam g\xF6r\xFCyorum. Elinde bir par\u015F\xF6men var. Bu adam sanki kendi mesle\u011Fi
+    ile ilgili pek \xE7ok bilgiyi oraya aktarm\u0131\u015F. Adeta bir pusula gibi.
+    {{ay_2}} ay\u0131n\u0131n son haftalar\u0131nda ondan alaca\u011F\u0131n bilgilerle
+    bir giri\u015Fimde bulunacaks\u0131n. Belki bir ba\u015Fvuru, belki de bir tan\u0131\u015Fma.
+    Ula\u015Faca\u011F\u0131n ki\u015Fi, yer, konum ya da \u015Firket senin yeni
+    i\u015Fin olacak {{isim}}.\n\nKocaman bir tepsi g\xF6r\xFCyorum. \u0130\xE7indeki
+    pirin\xE7ler bir yana, ta\u015Flar bir yana ay\u0131klanm\u0131\u015F. Sanki
+    kafanda bir \u015Fey var ve \u015Fu s\u0131ralar o d\xFC\u015F\xFCnd\xFC\u011F\xFCn
+    \u015Feyin art\u0131lar\u0131n\u0131 eksilerini de\u011Ferlendiriyorsun. Cesaret
+    de\u011Fil konu, buna eminim. Mant\u0131kl\u0131 davranmaktan yanas\u0131n ve
+    bu defa eski tecr\xFCbelerini de g\xF6z \xF6n\xFCnde bulundurarak acele etmemek
+    istiyorsun. Telvelerin, her ne tercih edersen et sonucun senin i\xE7in hay\u0131rl\u0131s\u0131
+    olaca\u011F\u0131n\u0131 f\u0131s\u0131ld\u0131yor.\n\nFincan g\xF6rsellerini
+    saat y\xF6n\xFCnde biraz \xE7evirdi\u011Fimde ise kar\u015F\u0131ma \xE7ift ki\u015Filik
+    geni\u015F bir sal\u0131ncak \xE7\u0131kt\u0131. Burada, ad\u0131nda {{harf}}
+    harfi olan bir adam uzanarak sallan\u0131yor, uyumak \xFCzere. Bu sal\u0131ncak,
+    onu oyalayan ve ger\xE7ekleri ona anlatmayan baz\u0131 ki\u015Fileri temsil ediyor.
+    Keyfi yerinde ancak i\u015Fin asl\u0131n\u0131 bilmiyor. Sen konuyu anlad\u0131\u011F\u0131nda
+    onu uyarman gerekecek {{isim}}. Bunda senin i\xE7in de nice faydalar var."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -42,6 +63,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: meslek
     degiskenDegeri: "i\u015F ar\u0131yor"
@@ -71,13 +95,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

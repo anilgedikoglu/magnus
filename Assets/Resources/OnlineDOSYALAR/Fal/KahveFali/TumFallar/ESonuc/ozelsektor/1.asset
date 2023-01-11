@@ -30,17 +30,16 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - "Son k\u0131s\u0131mlara do\u011Fru ilgin\xE7 bir ambiyansla kar\u015F\u0131la\u015Ft\u0131m
-    {{isim}}. Adeta bir mahkeme salonu kurulmu\u015F. Bir j\xFCri ve bir de hakim
-    var. San\u0131k ise sen de\u011Filsin; fakat konu seninle do\u011Frudan alakal\u0131
-    g\xF6z\xFCk\xFCyor. Ge\xE7ti\u011Fimiz aylarda, tahminimce de {{ay_-4}} ay\u0131nda
-    ya\u015Fam\u0131\u015F oldu\u011Fun bir \xFCz\xFCnt\xFCyle ilgili olarak, bulundu\u011Fun
-    yerden \xE7ok uzakta, isminde {{harf}} harfi olan bir insan, ba\u015Fka baz\u0131
-    insanlar taraf\u0131ndan ciddi \u015Fekilde yarg\u0131lan\u0131yor. Durum neticelendi\u011Finde,
-    sana bir \xF6z\xFCr ve bir telafi talebi gelecek. Bu konu, bana sorarsan i\xE7ine
-    bir hayli su serpecek."
+  - "Fincan taban\u0131nda, bir noktadan d\u0131\u015Fa do\u011Fru uzanan ve aralar\u0131nda
+    neredeyse 180 derece bulunan \xFC\xE7 \xE7izgi g\xF6r\xFCyorum. Yenge\xE7 tak\u0131my\u0131ld\u0131z\u0131'na
+    benzeyen bu fig\xFCr, bir \"kar\u015F\u0131 duru\u015Fu\" sembolize ediyor. {{ay_1}}
+    ay\u0131n\u0131n \"yeni ay\" haftas\u0131nda hem i\u015Finle ilgili, hem \xF6zel
+    hayat\u0131nla ilgili hem de sa\u011Fl\u0131kla ilgili \xFC\xE7 ayr\u0131 kulvarda
+    diren\xE7 g\xF6sterecek ve \xFC\xE7 ba\u015Far\u0131 elde edeceksin {{isim}}."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -50,6 +49,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: meslek
     degiskenDegeri: "\xF6zel sekt\xF6r"
@@ -79,13 +81,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

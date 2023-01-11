@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris472
+  m_EditorClassIdentifier: 
+  idIndex: 20231105619AA68786016911
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n yukar\u0131 taraflar\u0131nda, etrafa sa\xE7\u0131lm\u0131\u015F
+    iki avu\xE7 ku\u015F yemi g\xF6r\xFCyorum. Etrafta hi\xE7 ku\u015F yok ancak
+    bolca yem bulunuyor. Son zamanlarda i\xE7inde hissetti\u011Fin duygu yo\u011Funlu\u011Funa
+    ve y\xFCksek potansiyele ra\u011Fmen yaln\u0131zl\u0131k \xE7ekti\u011Fini hissediyorum
+    {{isim}}. Hedeflerine do\u011Fru ilerlerken sevdiklerini ihmal ediyor olabilirsin.
+    Bu ihmalden dolay\u0131 zaman zaman ba\u015Far\u0131lar\u0131n\u0131 ve sevin\xE7lerini
+    payla\u015Facak kimseyi de bulam\u0131yor gibisin. Ancak yak\u0131n gelecekte
+    kar\u015F\u0131na bir imkan \xE7\u0131kacak ve i\u015Fleri yoluna koyma f\u0131rsat\u0131
+    elde edeceksin. Hatta bu f\u0131rsatla, yak\u0131n zamanda ihmallerin i\xE7in
+    sana \xE7ok dar\u0131lan bir dostun, ili\u015Fkinize bir \u015Fans daha tan\u0131yabilir."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

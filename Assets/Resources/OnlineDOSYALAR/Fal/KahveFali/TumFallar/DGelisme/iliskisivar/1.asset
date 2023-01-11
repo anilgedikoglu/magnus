@@ -30,9 +30,31 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - 
+  - "Fincan\u0131n\u0131n orta kesimlerinde seni sevgilinle birlikte bir kumsalda
+    g\xF6r\xFCyorum {{isim}}. Sevgilin yerden avu\xE7 avu\xE7 kum al\u0131p havaya
+    savuruyor. \xC7ok ne\u015Feli duruyor ancak kumlar\u0131n senin y\xFCz\xFCne
+    gelece\u011Fini, g\xF6zlerine ka\xE7abilece\u011Fini ve g\xF6r\xFC\u015F\xFCn\xFC
+    engelleyebilece\u011Fini d\xFC\u015F\xFCnemedi\u011Finden eminim. Bu yans\u0131malar,
+    ilerleyen g\xFCnlerde sana fark etmeden bir zarar verebilece\u011Fini i\u015Faret
+    ediyor. Bir s\xFCre ona her konuda fikrini sormamal\u0131, hayati kararlar\u0131
+    ona b\u0131rakmamal\u0131s\u0131n.\n\nBurada bir k\xF6pek g\xF6r\xFCyorum {{isim}};
+    sad\u0131k bir dostunu niteliyor. Sana do\u011Fru seke seke ilerliyor ve y\xFCz\xFCnde
+    bir yorgunluk var. Ayr\u0131ca kalbi de yaral\u0131; {{kelime, ailesinden biri
+    yak\u0131n tarihlerde ciddi bir rahats\u0131zl\u0131k ge\xE7irmi\u015F olabilir
+    mi? | yak\u0131n zamanda ailesinden biri vefat etmi\u015F olabilir mi? | annesi
+    ve babas\u0131 ayr\u0131 olabilir mi?}} Sana bir haber getirecek. Gelecek haftan\u0131n
+    ortalar\u0131nda ondan duyaca\u011F\u0131n \u015Fey seni mutlu ederken, onun
+    \xF6zverili davran\u0131\u015F\u0131 seni duyguland\u0131rabilir.\n\nSaat {{kelime,
+    3 | 9}} y\xF6n\xFCnde \xF6n\xFCnde duran bir bardak g\xF6r\xFCyorum. \u0130\xE7inde
+    renkli bir s\u0131v\u0131 var, iksir gibi. Bu i\xE7ecek \xF6n\xFCne {{ay_1}}
+    ay\u0131n\u0131n {{kelime, 8 ya da 9'unda | 12 ya da 13'\xFCnde | 15 ya da 16's\u0131nda
+    | 19 ya da 20'sinde}} \xE7ok da yak\u0131ndan tan\u0131mad\u0131\u011F\u0131n
+    biri taraf\u0131ndan konacak. Bir \xE7\xF6z\xFCm\xFC sembolize ediyor. Bir i\u015Fin,
+    bu ki\u015Finin sana sunaca\u011F\u0131 \u015Fey sayesinde hallolacak."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -42,6 +64,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: medeni durum
     degiskenDegeri: "ili\u015Fkisi var"
@@ -71,13 +96,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

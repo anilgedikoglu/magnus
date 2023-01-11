@@ -33,7 +33,9 @@ MonoBehaviour:
   - "B\xFCy\xFCl\xFC kartlar\u0131n d\xFCnyas\u0131na olan yolculul\u011Fumuz ba\u015Flad\u0131
     {{isim}}. Yorumumu tamamlad\u0131\u011F\u0131mda Gelen Kutusu'ndan ula\u015Fabilirsin."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 2
+  parlamaSuresi: 4
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -52,6 +54,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -68,13 +71,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

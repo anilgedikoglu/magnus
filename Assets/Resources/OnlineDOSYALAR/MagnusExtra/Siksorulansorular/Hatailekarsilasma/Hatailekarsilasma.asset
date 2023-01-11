@@ -30,34 +30,175 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - "De\u011Ferli {{isim}},\n\n\xF6ncelikle bunu sordu\u011Fun i\xE7in te\u015Fekk\xFCr
-    ederim.\n\nMagnus'da y\xFCz binlerce sat\u0131r kod ve metin, milyonlarca karakter
-    yaz\u0131 oldu\u011Fu i\xE7in elbette bir yerlerde hata olabilir. Uygulama tutars\u0131z
-    davranabilir ya da \xE7\xF6kebilir. Hepsini tespit ediyor ve tek tek d\xFCzeltmek
-    i\xE7in emin ol gecemizi g\xFCnd\xFCz\xFCm\xFCze kat\u0131yoruz. Hem de b\xFCy\xFCk
-    bir tutkuyla!\n\nProblem durumunda yapaca\u011F\u0131n ilk \u015Fey her zaman,
-    markette Magnus i\xE7in bir g\xFCncelleme olup olmad\u0131\u011F\u0131n\u0131
-    kontrol etmek olsun. E\u011Fer varsa mutlaka uygulaman\u0131 g\xFCncelle.\n\nSorun
-    devam ediyor olursa, uygulama marketlere girip 1 y\u0131ld\u0131z vermek i\xE7in
-    acele etmemeni dilerim. <sprite=10> Bu Magnus'un aleyhine olur. Ve e\u011Fer
-    uygulamay\u0131 sevdiysen, di\u011Fer uygulamalar\u0131n gerisine d\xFC\u015Fmesini
-    san\u0131r\u0131m hi\xE7birimiz istemeyiz. Magnus'da inan\u0131lmaz bir emek
-    var. Senin deste\u011Fin ise bizim i\xE7in \xE7ok \xF6nemli {{isim}}. <sprite=105>\n\nSorun
-    e\u011Fer bir metinde ise ve metin i\xE7in a\xE7\u0131lan pencerenin sol \xFCst
-    k\xF6\u015Fesinde \"kalem i\u015Fareti\" \xE7\u0131kt\u0131ysa, metni puanlayabilir
-    ve sorunu oradan bize yazabilirsin. Yorumunu de\u011Ferlendirip cevaplad\u0131\u011F\u0131m\u0131zda,
-    GELEN KUTUSU'nda verdi\u011Fimiz cevaba ula\u015Fabileceksin. Yaz\u0131lan her
-    \u015Fey tek tek okunuyor, buna emin olabilirsin! <sprite=0>\n\nDaha farkl\u0131
-    bir sorun s\xF6z konusu ise, bunu bize info@magnusapp.tech adresine mail g\xF6ndererek
-    belirtmeni rica ediyoruz. Seninle hemen ileti\u015Fime ge\xE7ilecek ve ne gerekiyorsa
-    h\u0131zla yap\u0131lacakt\u0131r. Hatta seni mutsuz eden o sorundan dolay\u0131
-    sana birtak\u0131m s\xFCrprizlerimiz bile olabilir. Yanl\u0131\u015F giden bir
-    \u015Feylerden dolay\u0131 takip\xE7ilerimizi ve sevenlerimizi asla ma\u011Fdur
-    etmeyiz. <sprite=0>"
-  aciklamaBalonuYok: 1
+  - "Nas\u0131l bir sorunun var {{isim}}?"
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
-  cevaplar: []
+  cevaplar:
+  - cevapVaryasyonlari:
+    - "Fal alamadan alt\u0131n\u0131m gitti"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: altingitti0
+      islem: 0
+    - degiskenAdi: altingitti
+      degiskenDegeri: 1
+      islem: 1
+    gerekliDegiskenler:
+    - degiskenAdi: altingitti
+      degiskenDegeri: 0
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Yine alt\u0131n\u0131m gitti"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: altingitti1
+      islem: 0
+    - degiskenAdi: altingitti
+      degiskenDegeri: 1
+      islem: 1
+    gerekliDegiskenler:
+    - degiskenAdi: altingitti
+      degiskenDegeri: 1
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Bir kez daha alt\u0131n\u0131m gitti"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: altingitti2
+      islem: 0
+    - degiskenAdi: altingitti
+      degiskenDegeri: 1
+      islem: 1
+    gerekliDegiskenler:
+    - degiskenAdi: altingitti
+      degiskenDegeri: 2
+      kontrol: 4
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Ba\u015Fka bir problem var"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: baskasorun
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
+  - cevapVaryasyonlari:
+    - "Alt\u0131n & Elmas kodum var"
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 0}
+    contentPhotoId: 
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler: []
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: code
+      islem: 0
+    gerekliDegiskenler:
+    - degiskenAdi: code
+      degiskenDegeri: 0
+      kontrol: 0
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
   tepkiBalonuYok: 0
   balonTipi: 0
   ayarlananDegiskenler: []
@@ -73,10 +214,11 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
-  sohbetBititmindeAnamenuyeDon: 1
+  sohbetBititmindeAnamenuyeDon: 0
   anaMenuyeGitButonuOlustur: 1
   sohbetEnerjisi: 0
   sohbetKonsantrasyonu: 0
@@ -89,13 +231,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
-  otomatikOdak: 1
+  otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

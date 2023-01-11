@@ -32,9 +32,44 @@ MonoBehaviour:
   aciklama:
   - "Hangisini \xF6\u011Frenmek istersin?"
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar:
+  - cevapVaryasyonlari:
+    - Bir sorunum var!
+    contentImage:
+      imageId: 
+      gifId: 
+      image: {fileID: 0}
+    contentPhoto: {fileID: 21300000, guid: 2710e1466a9ed5b408dee341a8c6b43d, type: 3}
+    contentPhotoId: whoami
+    gifId: 
+    fotografKonum: 0
+    ayarlanacakDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: magnuskim
+      kontrolOperatoru: 0
+      ayarlamaOperatoru: 0
+    secenekDegiskenleri: []
+    gerekenEnerjiKons:
+      enerji: 0
+      kons: 0
+    uIEnerjiKonsOverwrite:
+      enerji: 0
+      kons: 0
+    reklamGoster: 0
+    ayarlananDegiskenler:
+    - degiskenAdi: mod
+      degiskenDegeri: hatailekarsilasma
+      islem: 0
+    gerekliDegiskenler: []
+    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
+    takipSohbeti: {fileID: 0}
+    ozelFonksiyon: 
   - cevapVaryasyonlari:
     - Magnus kimdir?
     contentImage:
@@ -64,6 +99,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -95,37 +131,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
-    takipSohbeti: {fileID: 0}
-    ozelFonksiyon: 
-  - cevapVaryasyonlari:
-    - "Uygulamada bir hata ile kar\u015F\u0131la\u015Ft\u0131m. Ne yapabilirim?"
-    contentImage:
-      imageId: 
-      gifId: 
-      image: {fileID: 0}
-    contentPhoto: {fileID: 21300000, guid: 2710e1466a9ed5b408dee341a8c6b43d, type: 3}
-    contentPhotoId: whoami
-    gifId: 
-    fotografKonum: 0
-    ayarlanacakDegiskenler:
-    - degiskenAdi: mod
-      degiskenDegeri: magnuskim
-      kontrolOperatoru: 0
-      ayarlamaOperatoru: 0
-    secenekDegiskenleri: []
-    gerekenEnerjiKons:
-      enerji: 0
-      kons: 0
-    uIEnerjiKonsOverwrite:
-      enerji: 0
-      kons: 0
-    reklamGoster: 0
-    ayarlananDegiskenler:
-    - degiskenAdi: mod
-      degiskenDegeri: hatailekarsilasma
-      islem: 0
-    gerekliDegiskenler: []
-    sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -157,6 +163,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -188,6 +195,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   - cevapVaryasyonlari:
@@ -219,6 +227,7 @@ MonoBehaviour:
       islem: 0
     gerekliDegiskenler: []
     sonrakiSohbetHavuzu: {fileID: 0}
+    sonrakiSohbetID: 
     takipSohbeti: {fileID: 0}
     ozelFonksiyon: 
   tepkiBalonuYok: 1
@@ -236,6 +245,7 @@ MonoBehaviour:
   sayaSonuAnaMenuyeGit: 0
   sayacModu: 
   sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
   sayacTipi: 0
   tekrarlama: 0
   sohbetBitimModu: 
@@ -252,13 +262,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

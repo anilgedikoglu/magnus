@@ -30,17 +30,22 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - "Son k\u0131s\u0131mlara do\u011Fru ilgin\xE7 bir ambiyansla kar\u015F\u0131la\u015Ft\u0131m
-    {{isim}}. Adeta bir mahkeme salonu kurulmu\u015F. Bir j\xFCri ve bir de hakim
-    var. San\u0131k ise sen de\u011Filsin; fakat konu seninle do\u011Frudan alakal\u0131
-    g\xF6z\xFCk\xFCyor. Ge\xE7ti\u011Fimiz aylarda, tahminimce de {{ay_-4}} ay\u0131nda
-    ya\u015Fam\u0131\u015F oldu\u011Fun bir \xFCz\xFCnt\xFCyle ilgili olarak, bulundu\u011Fun
-    yerden \xE7ok uzakta, isminde {{harf}} harfi olan bir insan, ba\u015Fka baz\u0131
-    insanlar taraf\u0131ndan ciddi \u015Fekilde yarg\u0131lan\u0131yor. Durum neticelendi\u011Finde,
-    sana bir \xF6z\xFCr ve bir telafi talebi gelecek. Bu konu, bana sorarsan i\xE7ine
-    bir hayli su serpecek."
+  - "Fincan\u0131n\u0131n taban\u0131na indi\u011Fimde ise dikkatimi \xE7eken, sayfalar\u0131
+    etrafa da\u011F\u0131lm\u0131\u015F bir takvim oldu. Takvim gelece\u011Fe dair
+    plan ve isteklerimizi simgeler. Senin akl\u0131n ise san\u0131r\u0131m biraz
+    kar\u0131\u015Fm\u0131\u015F. Planlar\u0131n\u0131n da\u011F\u0131l\u0131p birbirine
+    girdi\u011Fini okuyorum telvelerinde. Moralini y\xFCksek tut {{isim}} \xE7\xFCnk\xFC
+    bunun gelip ge\xE7ici bir s\xFCre\xE7 oldu\u011Funu s\xF6yl\xFCyor hislerim.
+    Detaylara indi\u011Fimde takvimin \xFCzerinde bir tarihin i\u015Faretli oldu\u011Funu
+    g\xF6rd\xFCm. {{ay_1}} ay\u0131n\u0131n 6. g\xFCn\xFCn\xFC g\xF6steren bu tarih,
+    planlar\u0131n\u0131n tekrar ray\u0131na oturmaya ba\u015Flayaca\u011F\u0131
+    g\xFCn\xFC i\u015Faret ediyor. Biraz bulan\u0131k olmakla birlikte, s\xFCrecin
+    belirtti\u011Fim tarihte bir s\u0131n\u0131f arkada\u015F\u0131nla edece\u011Fin
+    sohbet \xFCzerine geli\u015Fmeye ba\u015Flayaca\u011F\u0131n\u0131 hissediyorum."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -50,6 +55,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: meslek
     degiskenDegeri: "\xF6\u011Frenci"
@@ -79,13 +87,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -1938,6 +1938,7 @@ public class ChatManager : MonoBehaviour
         return bubbleManager;
     }
 
+    private bool fastBubble;
     public SpeechBubbleLeft CreateLeftBubble(int type, float delay, int variation, int contentIndex)
     {
         var ayriBalon = ((sohbet.fotografKonum == Sohbet.contentPhotoLocation.ayriBalondaBasta || sohbet.fotografKonum == Sohbet.contentPhotoLocation.ayriBalondaSonda)
@@ -1952,6 +1953,8 @@ public class ChatManager : MonoBehaviour
             fastBubble = fastBubble && moveAmount < -50 * (maxContentIndex - 1) - 250;
         else
             fastBubble = fastBubble && moveAmount < -50 * maxContentIndex;
+
+        this.fastBubble = fastBubble;
 
         Vector3 pos = spawnPoint.position;
 
@@ -1969,21 +1972,41 @@ public class ChatManager : MonoBehaviour
                 }
                 if (left != null)
                 {
-                    if (left.GetComponent<RectTransform>().position.x < 2000)
+                    Debug.LogError("aaa");
+                    int contentIndexDiff = 0;
+                    while (left.GetComponent<RectTransform>().position.x > 2000)
                     {
-                        pos = new Vector3(pos.x, left.targetPosition.y -
-                        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                        Debug.LogError("aaa");
+                        if (contentIndex - 1 - contentIndexDiff >= bubbleMover.childCount)
+                            break;
+
+                        contentIndexDiff++;
+
+                        if (bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.x <= 2000)
+                            break;
                     }
-                    else
-                    {
-                        pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 2).GetComponent<RectTransform>().position.y -
-                        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 2).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
-                    }
+
+                    pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.y -
+          ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
                 }
                 else
                 {
-                    pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.y -
-       ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                    int contentIndexDiff = 0;
+                    while (bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.x > 2000)
+                    {
+   
+                        if (contentIndex - 1 - contentIndexDiff >= bubbleMover.childCount)
+                            break;
+
+                        contentIndexDiff++;
+
+                        if (bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.x <= 2000)
+                            break;
+                    }
+
+    
+                    pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.y -
+       ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
                 }
 
        
@@ -2021,8 +2044,19 @@ public class ChatManager : MonoBehaviour
                 }
                 else
                 {
-                    pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.y -
-                     ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                    int contentIndexDiff = 0;
+                    while (bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.x > 2000)
+                    {
+                        if (contentIndex - 1 - contentIndexDiff >= bubbleMover.childCount)
+                            break;
+                     
+                        contentIndexDiff++;
+
+                        if (bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.x <= 2000)
+                            break;
+                    }
+                    pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.y -
+                     ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
                 }
 
 
@@ -2179,20 +2213,27 @@ public class ChatManager : MonoBehaviour
             }
         }
 
+        StartCoroutine(BubbleFunctionDelay(() =>
+        {
+            bubbleManager.isActive = true;
+            bubbleManager.movable = true;
+            bubbleManager.startTime = Time.time;
+
+            if (!sohbet.aciklamaBalonuYok)
+            {
+                bubbleManager.posTweeing = bubbleManager.rt.DOMove(bubbleManager.targetPosition, bubbleManager.animationDuration);
+            }
+
+            //bubbleManager.rt.SetParent(bubbleMover);
+        }, delay));
+
         if (!sohbet.aciklamaBalonuYok)
         {
             StartCoroutine(BubbleFunctionDelay(() => MoveAllBubbles(moveOffset), delay));
         }
 
         StartCoroutine(BubbleFunctionDelay(() => ResetTags(bubbleRealTag, bubble), delay));
-        StartCoroutine(BubbleFunctionDelay(() =>
-        {
-            bubbleManager.isActive = true;
-            bubbleManager.movable = true; 
-            bubbleManager.startTime = Time.time;
-            bubbleManager.rt.DOMove(bubbleManager.targetPosition, bubbleManager.animationDuration);
-            //bubbleManager.rt.SetParent(bubbleMover);
-        }, delay));
+
 
         StartCoroutine(BubbleFunctionDelay(() => {
 
@@ -3532,7 +3573,6 @@ public class ChatManager : MonoBehaviour
 
     void MoveAllBubbles(float offset)
     {
-
         //scrollRectContentRt.position = new Vector3(scrollRectContainerRt.position.x, scrollRectContainerRt.position.y + ((scrollRectContentRt.sizeDelta.y) * canvasRect.localScale.y) / 2f, scrollRectContainerRt.position.z);
         allBubbles = GameObject.FindGameObjectsWithTag("ChatBubble");
         GameObject[] newBubbles = GameObject.FindGameObjectsWithTag("newBubble");
@@ -3566,7 +3606,7 @@ public class ChatManager : MonoBehaviour
                         leftBubbleManager.SetTargetPosition(new Vector3(leftBubbleManager.targetPosition.x, leftBubbleManager.targetPosition.y + offset * canvasRect.localScale.y, leftBubbleManager.targetPosition.z));
                         leftBubbleManager.movable = true;
                         leftBubbleManager.startTime = Time.time;
-                        leftBubbleManager.rt.DOMove(leftBubbleManager.targetPosition, leftBubbleManager.animationDuration);
+                        leftBubbleManager.posTweeing = leftBubbleManager.rt.DOMove(leftBubbleManager.targetPosition, leftBubbleManager.animationDuration);
                     }
 
 
@@ -3582,20 +3622,52 @@ public class ChatManager : MonoBehaviour
                 previousBubbleMoverPos = new Vector3(previousBubbleMoverPos.x, previousBubbleMoverPos.y + moveAmount * canvasRect.localScale.y, previousBubbleMoverPos.z);
                 bubbleMover.DOMove(previousBubbleMoverPos, 0.215f);
 
+                var leftBubbles = bubbleMover.GetComponentsInChildren<SpeechBubbleLeft>();
+                /*
+                foreach(var left in leftBubbles)
+                {
+                    Debug.Log(left.name);
+                    if (left.posTweeing != null)
+                    {
+                        Debug.Log("killed" + left.name);
+                        left.posTweeing.Complete();
+                    }
+                }*/
+
                 for (int j = 0; j < bubbleMover.childCount; j++)
                 {
-                    if(DOTween.IsTweening(bubbleMover.GetChild(j)))
-                        DOTween.Complete(bubbleMover.GetChild(j));
+                    if (DOTween.IsTweening(bubbleMover.GetChild(j).GetComponent<RectTransform>(), true))
+                    {
+                        DOTween.Complete(bubbleMover.GetChild(j).GetComponent<RectTransform>());
+                    }
                 }
             }
             return;
         }
         previousBubbleMoverPos = new Vector3(previousBubbleMoverPos.x, previousBubbleMoverPos.y + offset * canvasRect.localScale.y, previousBubbleMoverPos.z);
         bubbleMover.DOMove(previousBubbleMoverPos, 0.215f);
+
+        var leftBubbles2 = bubbleMover.GetComponentsInChildren<SpeechBubbleLeft>();
+        /*
+        foreach (var left in leftBubbles2)
+        {
+            Debug.Log(left.name);
+            if (left.posTweeing != null)
+            {
+                if (left.posTweeing.IsPlaying())
+                {
+                    Debug.Log("killed" + left.name);
+                    left.posTweeing.Complete();
+                }
+            }
+        }*/
+
         for (int j = 0; j < bubbleMover.childCount; j++)
         {
-            if (DOTween.IsTweening(bubbleMover.GetChild(j)))
-                DOTween.Complete(bubbleMover.GetChild(j));
+            if (DOTween.IsTweening(bubbleMover.GetChild(j).GetComponent<RectTransform>(), true))
+            {
+                DOTween.Complete(bubbleMover.GetChild(j).GetComponent<RectTransform>());
+            }
         }
         //bubbleParentObject.anchoredPosition = new Vector3(bubbleParentObject.anchoredPosition.x, bubbleParentObject.anchoredPosition.y + offset * canvasRect.localScale.y);
     }
@@ -3633,6 +3705,7 @@ public class ChatManager : MonoBehaviour
                     leftBubbleManager.SetTargetPosition(new Vector3(leftBubbleManager.targetPosition.x, leftBubbleManager.targetPosition.y + offset * canvasRect.localScale.y, leftBubbleManager.targetPosition.z));
                     leftBubbleManager.movable = movable;
                     leftBubbleManager.startTime = Time.time;
+                    Debug.LogError("killed");
                     DOTween.Kill(leftBubbleManager.gameObject);
                 }
             }
@@ -4314,6 +4387,13 @@ public class ChatManager : MonoBehaviour
                         relatedBubbles.Add(CreateLeftBubble(0, AiMessageDelay, variation, chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation])));
                     }
                 }
+
+                if (fastBubble)
+                {
+                    yield return new WaitForSeconds(AiMessageDelay + 0.5f);
+                    fastBubble = false;
+                }
+
                 foreach (SpeechBubbleLeft element in relatedBubbles)
                 {
                     element.realtedBubbles = relatedBubbles;
@@ -4374,6 +4454,13 @@ public class ChatManager : MonoBehaviour
                             relatedBubbles.Add(CreateLeftBubble(0, AiMessageDelay, variation, chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation])));
                         }
                     }
+
+                    if (fastBubble)
+                    {
+                        yield return new WaitForSeconds(AiMessageDelay + 0.5f);
+                        fastBubble = false;
+                    }
+
                     foreach (SpeechBubbleLeft element in relatedBubbles)
                     {
                         element.realtedBubbles = relatedBubbles;
@@ -4414,6 +4501,13 @@ public class ChatManager : MonoBehaviour
                         relatedBubbles.Add(CreateLeftBubble(0, AiMessageDelay, variation, chatVariablesManager.GetBubbleCount(sohbet.aciklama[variation])));
                     }
                 }
+
+                if (fastBubble)
+                {
+                    yield return new WaitForSeconds(AiMessageDelay + 0.5f);
+                    fastBubble = false;
+                }
+
                 foreach (SpeechBubbleLeft element in relatedBubbles)
                 {
                     element.realtedBubbles = relatedBubbles;

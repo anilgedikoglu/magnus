@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
   m_Name: Durugoruiptal
   m_EditorClassIdentifier: 
-  idIndex: 2023174019AA17088631653
+  idIndex: 20231105618AA55301522460
   oncelik: 0
   contentImage:
     imageId: 
@@ -31,6 +31,8 @@ MonoBehaviour:
   ozelFonksiyon: 
   aciklama:
   - "Durug\xF6r\xFC iptal edildi. Gelece\u011Fine daha sonra tekrar yo\u011Funla\u015Fabiliriz."
+  - "Tamam, durug\xF6r\xFC'den vazge\xE7tik."
+  - "Durug\xF6r\xFC almaktan vazge\xE7ti\u011Fini g\xF6r\xFCyorum."
   aciklamaBalonuYok: 0
   yeniFocusPaneliKullan: 0
   parlamaRengi: 0

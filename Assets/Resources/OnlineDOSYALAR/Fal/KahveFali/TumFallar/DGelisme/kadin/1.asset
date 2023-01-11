@@ -30,9 +30,23 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - 
+  - "Sa\xE7lar\u0131n\u0131n kuyru\u011Funu \xE7evirip, ba\u015F\u0131n\u0131n arkas\u0131na
+    toka ile tutturmu\u015F bir kad\u0131n g\xF6r\xFCyorum. Kendinden olduk\xE7a
+    emin, s\xF6ylemleri mant\u0131kl\u0131 ve karakteri g\xFC\xE7l\xFC. Senden ya\u015F\xE7a
+    b\xFCy\xFCk olan sar\u0131 sa\xE7l\u0131 bu kad\u0131n, ilerleyen g\xFCnlerde
+    \xE7ok kritik bir anda seni yat\u0131\u015Ft\u0131racak {{isim}}. Ondan \xF6yle
+    bir fikir edineceksin ya da bilgi alacaks\u0131n ki, o anda t\xFCm endi\u015Fen
+    ge\xE7ecek ve huzursuz oldu\u011Fun mesele her ne ise bir anda \"emin\" olacaks\u0131n.\n\nFincan\u0131nda
+    bir han\u0131mefendi daha var. Mavi renkte, tiril tiril keten bir g\xF6mlek giymi\u015F.
+    G\xF6mle\u011Fin \xFCzerinde ise beyaz \xE7i\xE7ek desenleri bulunuyor. Bu kad\u0131nla
+    beyaz bir masada kar\u015F\u0131l\u0131kl\u0131 sohbet ediyorsunuz. Senin, onun
+    {{kelime, k\u0131z\u0131 | o\u011Flu}} ile bir i\u015Fin olacak {{isim}}. Konunun
+    detaylar\u0131n\u0131 hi\xE7 bilmiyorum fakat y\xFCzlerin g\xFCl\xFCyor olu\u015Fu
+    ikinizin de konu\u015Ftuklar\u0131n\u0131zdan \xE7ok mutlu oldu\u011Funuzu anlat\u0131yor."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -42,6 +56,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: cinsiyet
     degiskenDegeri: "kad\u0131n"
@@ -71,13 +88,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

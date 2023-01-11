@@ -37,7 +37,9 @@ MonoBehaviour:
     yorgunluklar\u0131n\u0131 almaya gayret ediyorum. <sprite=0> Bakal\u0131m telveler
     yazg\u0131na dair nas\u0131l izler ta\u015F\u0131yor."
   aciklamaBalonuYok: 1
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar:
   - "kahve fal\u0131 giri\u015F"
   - "kahve fal\u0131 ba\u011Flama"
@@ -87,13 +89,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 1
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

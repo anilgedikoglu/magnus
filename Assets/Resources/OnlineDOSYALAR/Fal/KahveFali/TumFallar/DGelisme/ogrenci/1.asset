@@ -30,9 +30,29 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - 
+  - "Orta k\u0131s\u0131mlarda yeni d\xF6k\xFClm\xFC\u015F bir asfalt g\xF6r\xFCyorum.
+    Bu asfalt\u0131n \xFCzerinde 3{{sayi,6,8}} numara bir ayak izi bulunuyor. Bir
+    kad\u0131na ait olmal\u0131. <sprite=85> G\xF6r\xFCyorum ki bir k\u0131smet kap\u0131nda
+    {{isim}}. Bu k\u0131smet sana kal\u0131c\u0131 bir birliktelik getirecek. T\u0131pk\u0131
+    asfaltta oldu\u011Fu gibi, bu g\xFCzel kad\u0131n kalbinde de iz b\u0131rakacak.
+    Sar\u0131 sa\xE7lar\u0131, \xE7ak\u0131r g\xF6zleri ve {{kelime, harika k\u0131yafetleri
+    ile | ka\u015F\u0131n\u0131n \xFCzerindeki piercing ile | asil y\xFCr\xFCy\xFC\u015F\xFC
+    ile}} b\xFCy\xFCk bir kalabal\u0131\u011F\u0131n aras\u0131nda dikkatini \xE7ekecek.
+    Bu kalabal\u0131k, bir konser ya da okuldaki bir s\xF6yle\u015Fi olabilir.\n\nAyn\u0131
+    k\u0131s\u0131mlarda g\xF6rd\xFC\u011F\xFCm bir ba\u015Fka imge ise g\xF6kte
+    s\xFCz\xFClen bir dilek \xE7i\xE7e\u011Fi oldu. Bu g\xFCzel \xE7i\xE7ek fazlas\u0131yla
+    k\u0131r\u0131lgan bir bitkidir. Buradan anl\u0131yorum ki yak\u0131n zamanda
+    inanc\u0131nda sars\u0131nt\u0131lar ya\u015Fam\u0131\u015Fs\u0131n {{isim}}.
+    Dualar\u0131n uzun bir s\xFCredir cevaps\u0131z kalm\u0131\u015F olabilir. \xD6te
+    yandan endi\u015Felenmene gerek yok, dilek \xE7i\xE7e\u011Fi etti\u011Fin dualar\u0131n
+    muhakkak kabul edilece\u011Fine i\u015Farettir. {{sayi,1,3}} mevsimlik bir zaman
+    dilimine kadar kalbinin derinliklerinde arzulad\u0131\u011F\u0131n bir istek
+    ger\xE7ek olacak. Bununla birlikte inand\u0131\u011F\u0131n \u015Feylere tekrar
+    ba\u011Flanacaks\u0131n."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -43,8 +63,17 @@ MonoBehaviour:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
     kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
   - degiskenAdi: meslek
     degiskenDegeri: "\xF6\u011Frenci"
+    kontrol: 0
+  - degiskenAdi: cinsiyet
+    degiskenDegeri: erkek
+    kontrol: 0
+  - degiskenAdi: yasmax
+    degiskenDegeri: 30
     kontrol: 0
   sohbetArkaplani: []
   arkaplanDelay: 0
@@ -71,13 +100,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

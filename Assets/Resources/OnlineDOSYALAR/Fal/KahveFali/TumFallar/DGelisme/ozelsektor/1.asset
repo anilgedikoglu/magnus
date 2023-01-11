@@ -30,9 +30,26 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - 
+  - "Fincan\u0131n en can al\u0131c\u0131 k\u0131s\u0131mlar\u0131nda \xFC\xE7 ba\u015Fl\u0131
+    bir m\u0131zrak g\xF6r\xFCyorum. \"Hindu \xFC\xE7l\xFCs\xFC\" diye de bilinen
+    bu sembol, muazzam bir g\xFCc\xFCn kayna\u011F\u0131ndan elde edilecek olan enerjiyi
+    niteler {{isim}}. Bu kayna\u011F\u0131n, \xE7al\u0131\u015Ft\u0131\u011F\u0131n
+    kurumu ya da o kuruma ba\u011Fl\u0131 olan birini temsil etti\u011Fini hissediyorum.
+    O kaynak vas\u0131tas\u0131yla ilerleyen aylarda elin bolaracak, dinanizm kazanacak
+    ve hareket kabiliyeti elde edeceksin. \"\u0130steklerini ger\xE7ekle\u015Ftirebilme
+    g\xFCc\xFCn\" artacak.\n\nTelvelerinde g\xF6rd\xFC\u011F\xFCm bir di\u011Fer
+    yans\u0131ma ise a\xE7\u0131k denizin ortas\u0131nda alabora olmu\u015F bir gemi.
+    Bu gemiden \xE7evreye pek \xE7ok ziynet sa\xE7\u0131lm\u0131\u015F. \u0130nsanlar
+    bunlar\u0131 ya\u011Fmalamak i\xE7in k\u0131y\u0131dan gemiye do\u011Fru kula\xE7lar
+    at\u0131yorlar. Seni ise k\u0131y\u0131da beklerken g\xF6r\xFCyorum {{isim}}.
+    Olan biteni uzaktan izliyorsun. Senin hi\xE7bir \u015Fey yapmana gerek kalmadan
+    bu gemiden pay\u0131na d\xFC\u015Fenler dalgalar yoluyla s\xFCz\xFClerek {{ay_4}}
+    ve {{ay_5}} aylar\u0131nda ayaklar\u0131na vuracak. Merak etti\u011Fim \u015Fey
+    ise \u015Fu; bu geminin senin hayat\u0131ndaki anlam\u0131 ne? \u0130nan bilmiyorum..."
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -42,6 +59,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 geli\u015Fme"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: meslek
     degiskenDegeri: "\xF6zel sekt\xF6r"
@@ -71,13 +91,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

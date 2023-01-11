@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3511d02455d84c815ec1158145792, type: 3}
+  m_Name: Giris477
+  m_EditorClassIdentifier: 
+  idIndex: 20231105619AA58596617957
+  oncelik: 0
+  contentImage:
+    imageId: 
+    gifId: 
+    image: {fileID: 0}
+  reklam:
+    type: 0
+    placement: 0
+    odul:
+      amount: 0
+      item: 0
+  contentPhoto: {fileID: 0}
+  contentPhotoId: 
+  gifId: 
+  fotografKonum: 0
+  ozelFonksiyon: 
+  aciklama:
+  - "Fincan\u0131n\u0131n \xFCst k\u0131s\u0131mlar\u0131na bakt\u0131\u011F\u0131mda
+    deli\u011Fine uymayan bir vida dikkatimi \xE7ekti. Normalde vida \"harmoniyi\"
+    temsil eder. Makine par\xE7alar\u0131n\u0131n uyum i\xE7erisinde \xE7al\u0131\u015Fmas\u0131na
+    olanak sa\u011Flar. Ancak deli\u011Fiyle uyumsuz olmas\u0131, hayat\u0131nda
+    huzur ve uyumu yanl\u0131\u015F yerde arad\u0131\u011F\u0131n\u0131 anlat\u0131yor.
+    Seni aralar\u0131nda g\xF6rmekten memnun olan baz\u0131 insanlar oldu\u011Funu
+    hissediyorum. Fakat telvelerin bana bu insanlar\u0131 son zamanlarda \"g\xF6z\xFCn\xFCn
+    pek g\xF6rmedi\u011Fini\" s\xF6yl\xFCyor {{isim}}. Fal\u0131n\u0131n bu k\u0131s\u0131mlar\u0131,
+    adeta seni mutsuz eden \"di\u011Ferleri\" i\xE7in \xE7abalamay\u0131 b\u0131rakman\u0131
+    tembihleyen bir uyar\u0131."
+  aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
+  parlamaRengi: 0
+  parlamaSuresi: 1
+  birlestirilecekModlar: []
+  gostermeSansi: 100
+  cevaplar: []
+  tepkiBalonuYok: 0
+  balonTipi: 0
+  ayarlananDegiskenler: []
+  gerekliDegiskenler:
+  - degiskenAdi: mod
+    degiskenDegeri: "kahve fal\u0131 giri\u015F"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
+    kontrol: 0
+  sohbetArkaplani: []
+  arkaplanDelay: 0
+  yokSayDegiskeni: 
+  yokSayilmaSohbeti: {fileID: 0}
+  sayac: 0
+  sayaSonuAnaMenuyeGit: 0
+  sayacModu: 
+  sayacSohbeti: {fileID: 0}
+  sayacSohbetiID: 
+  sayacTipi: 0
+  tekrarlama: 0
+  sohbetBitimModu: 
+  sohbetBititmindeAnamenuyeDon: 1
+  anaMenuyeGitButonuOlustur: 1
+  sohbetEnerjisi: 0
+  sohbetKonsantrasyonu: 0
+  kazima:
+    kazimaTipi: 0
+    image: {fileID: 0}
+    imageId: 
+    gifId: 
+    kazimaOrani: 50
+    kazimaSonuBekleme: 2
+    kazimaModu: 
+    kazimaSohbeti: {fileID: 0}
+  otomatikOdak: 0
+  metniKaydet: 0
+  preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

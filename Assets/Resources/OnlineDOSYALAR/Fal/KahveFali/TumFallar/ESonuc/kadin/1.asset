@@ -30,17 +30,19 @@ MonoBehaviour:
   fotografKonum: 0
   ozelFonksiyon: 
   aciklama:
-  - "Son k\u0131s\u0131mlara do\u011Fru ilgin\xE7 bir ambiyansla kar\u015F\u0131la\u015Ft\u0131m
-    {{isim}}. Adeta bir mahkeme salonu kurulmu\u015F. Bir j\xFCri ve bir de hakim
-    var. San\u0131k ise sen de\u011Filsin; fakat konu seninle do\u011Frudan alakal\u0131
-    g\xF6z\xFCk\xFCyor. Ge\xE7ti\u011Fimiz aylarda, tahminimce de {{ay_-4}} ay\u0131nda
-    ya\u015Fam\u0131\u015F oldu\u011Fun bir \xFCz\xFCnt\xFCyle ilgili olarak, bulundu\u011Fun
-    yerden \xE7ok uzakta, isminde {{harf}} harfi olan bir insan, ba\u015Fka baz\u0131
-    insanlar taraf\u0131ndan ciddi \u015Fekilde yarg\u0131lan\u0131yor. Durum neticelendi\u011Finde,
-    sana bir \xF6z\xFCr ve bir telafi talebi gelecek. Bu konu, bana sorarsan i\xE7ine
-    bir hayli su serpecek."
+  - "Fincan taban\u0131nda g\xF6rd\xFC\u011F\xFCm manzarada ise bir \"k\xFC\xE7\xFCk
+    t\xFCp\" var. \xDCzerindeki tavada bal\u0131klar k\u0131zar\u0131yor ve gelip
+    ge\xE7en kim alsa, eksilmek yerine bo\u015Flu\u011Fu doluyor. Bu k\xFC\xE7\xFCk
+    t\xFCp, senin dar say\u0131labilecek b\xFCt\xE7eni sembolize ediyor {{isim}}.
+    Hakk\u0131nda hissetti\u011Fim \u015Fu ki, sen \xE7ok yard\u0131msever bir kad\u0131ns\u0131n.
+    Fal\u0131n, bu iyi niyetini korudu\u011Fun takdirde r\u0131zk\u0131n\u0131n s\xFCrekli
+    bolla\u015Faca\u011F\u0131n\u0131 haber veriyor. Y\xFCce g\xF6nl\xFCn ve temiz
+    kalbin vesilesiyle ya\u015Fam\u0131ndaki nimetler artacak eksilmeyecek, ta\u015Facak
+    d\xF6k\xFClmeyecek!"
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -50,6 +52,9 @@ MonoBehaviour:
   gerekliDegiskenler:
   - degiskenAdi: mod
     degiskenDegeri: "kahve fal\u0131 sonu\xE7"
+    kontrol: 0
+  - degiskenAdi: fal konusu
+    degiskenDegeri: genel
     kontrol: 0
   - degiskenAdi: cinsiyet
     degiskenDegeri: "kad\u0131n"
@@ -79,13 +84,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

@@ -34,7 +34,9 @@ MonoBehaviour:
     \xF6zel hayat\u0131ndaki tats\u0131zl\u0131klar olmak \xFCzere pek \xE7ok sorunu
     a\u015Fm\u0131\u015F olman\u0131 dilerim.\n\nG\xF6r\xFC\u015Fmek \xFCzere!\n\nMagnus"
   aciklamaBalonuYok: 0
+  yeniFocusPaneliKullan: 0
   parlamaRengi: 0
+  parlamaSuresi: 1
   birlestirilecekModlar: []
   gostermeSansi: 100
   cevaplar: []
@@ -73,13 +75,6 @@ MonoBehaviour:
     kazimaSonuBekleme: 2
     kazimaModu: 
     kazimaSohbeti: {fileID: 0}
-  kazimaTipi: 0
-  kazimaFotografi: {fileID: 0}
-  kazimaFotografiId: 
-  kazimaOrani: 50
-  kazimaSonuBekleme: 2
-  kazimaModu: 
-  kazimaSohbeti: {fileID: 0}
   otomatikOdak: 0
   metniKaydet: 0
   preferencesObject: {fileID: 11400000, guid: d21c0c4a8e9187140a9e2238bb473dc7, type: 2}

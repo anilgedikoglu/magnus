@@ -456,6 +456,15 @@ MonoBehaviour:
       title: "\u015Eans \xC7ark\u0131"
       Icon: {fileID: 21300000, guid: 81327c6dad187426694a352b58281cf2, type: 3}
     falHaklariMenusundeGoster: 0
+  - mod: numal
+    count: 1
+    countPlus: 2
+    exceptedMods:
+    - numerolojiiptal
+    uIInformation:
+      title: Numeroloji
+      Icon: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
+    falHaklariMenusundeGoster: 1
   counterMods:
   - mod: bytc
     yanModlar: []

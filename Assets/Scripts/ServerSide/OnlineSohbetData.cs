@@ -52,6 +52,8 @@ public class OnlineSohbetData
     public int sohbetEnerjisi = 0;
     public int sohbetKonsantrasyonu = 0;
 
+    public Scratch kazima;
+
     public bool otomatikOdak = false;
     public bool metniKaydet = false;
 
@@ -97,7 +99,20 @@ public class OnlineSohbetData
         sohbetEnerjisi = 0;
         sohbetKonsantrasyonu = 0;
 
+        kazima = new();
+
         otomatikOdak = false;
         metniKaydet = false;
+    }
+
+    [System.Serializable]
+    public class Scratch
+    {
+        public Sohbet.Scratch.KazimaModuEnum kazimaTipi = new Sohbet.Scratch.KazimaModuEnum();
+        public string imageId;
+        public string gifId;
+        public int kazimaOrani = 50;
+        public int kazimaSonuBekleme = 2;
+        public string kazimaModu;
     }
 }

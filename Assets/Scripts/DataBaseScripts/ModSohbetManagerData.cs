@@ -125,6 +125,13 @@ public class ModSohbetManagerData : ScriptableObject
             onlineSohbetDatas[i].sohbetEnerjisi = tumOnlineSohbetler[i].sohbetEnerjisi;
             onlineSohbetDatas[i].sohbetKonsantrasyonu = tumOnlineSohbetler[i].sohbetKonsantrasyonu;
 
+            onlineSohbetDatas[i].kazima.imageId = tumOnlineSohbetler[i].kazima.imageId;
+            onlineSohbetDatas[i].kazima.gifId = tumOnlineSohbetler[i].kazima.gifId;
+            onlineSohbetDatas[i].kazima.kazimaTipi = tumOnlineSohbetler[i].kazima.kazimaTipi;
+            onlineSohbetDatas[i].kazima.kazimaOrani = tumOnlineSohbetler[i].kazima.kazimaOrani;
+            onlineSohbetDatas[i].kazima.kazimaSonuBekleme = tumOnlineSohbetler[i].kazima.kazimaSonuBekleme;
+            onlineSohbetDatas[i].kazima.kazimaModu = tumOnlineSohbetler[i].kazima.kazimaModu;
+
             onlineSohbetDatas[i].otomatikOdak = tumOnlineSohbetler[i].otomatikOdak;
             onlineSohbetDatas[i].metniKaydet = tumOnlineSohbetler[i].metniKaydet;
         }

@@ -1962,11 +1962,13 @@ public class ChatManager : MonoBehaviour
         {
             if (maxContentIndex > 1)
             {
+                Debug.LogError("aaa");
                 var right = bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<SpeechBubbleRight>();
                 var left = bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<SpeechBubbleLeft>();
 
                 if (right != null)
                 {
+                    Debug.LogError("aaa");
                     pos = new Vector3(pos.x, right.targetPosition.y -
        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
                 }
@@ -1988,6 +1990,7 @@ public class ChatManager : MonoBehaviour
 
                     pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.y -
           ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                    Debug.Log(bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).gameObject.name);
                 }
                 else
                 {
@@ -2007,6 +2010,7 @@ public class ChatManager : MonoBehaviour
     
                     pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.y -
        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                    Debug.Log(bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).gameObject.name);
                 }
 
        
@@ -2019,6 +2023,7 @@ public class ChatManager : MonoBehaviour
             }
             else
             {
+                Debug.LogError("aaa");
                 var right = bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<SpeechBubbleRight>();
                 var left = bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<SpeechBubbleLeft>();
 
@@ -2029,21 +2034,29 @@ public class ChatManager : MonoBehaviour
                 }
                 if (left != null)
                 {
-                    if (left.GetComponent<RectTransform>().position.x < 2000)
+                    Debug.LogError("aaa");
+                    int contentIndexDiff = 0;
+                    while (left.GetComponent<RectTransform>().position.x > 2000)
                     {
-                        pos = new Vector3(pos.x, left.targetPosition.y -
-                        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
-                    }
-                    else
-                    {
-                        pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 2).GetComponent<RectTransform>().position.y -
-                        ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 2).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                        Debug.LogError("aaa");
+                        if (contentIndex - 1 - contentIndexDiff >= bubbleMover.childCount)
+                            break;
+
+                        contentIndexDiff++;
+
+                        if (bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.x <= 2000)
+                            break;
                     }
 
-                  
+                    pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.y -
+          ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+                    Debug.Log(bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).gameObject.name);
+
+
                 }
                 else
                 {
+                    Debug.LogError("aaa");
                     int contentIndexDiff = 0;
                     while (bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1).GetComponent<RectTransform>().position.x > 2000)
                     {
@@ -2057,6 +2070,8 @@ public class ChatManager : MonoBehaviour
                     }
                     pos = new Vector3(pos.x, bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().position.y -
                      ((bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).GetComponent<RectTransform>().sizeDelta.y / 2f) + spaceBetweenBubbles) * canvasRect.localScale.y, pos.z);
+
+                    Debug.Log(bubbleMover.GetChild(bubbleMover.childCount - contentIndex - 1 - contentIndexDiff).gameObject.name);
                 }
 
 

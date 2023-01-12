@@ -855,6 +855,36 @@ MonoBehaviour:
       deletable: 0
       showAd: 0
       simpleFocusPanel: 0
+    - mod: numeroson
+      title: Numeroloji
+      icon: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
+      flare: {fileID: 21300000, guid: fccede4bf05bbaf428d897fc6fc1f1d7, type: 3}
+      delay: {x: 0, y: 0}
+      notReadyText: 
+      priority: 0
+      deletable: 1
+      showAd: 1
+      simpleFocusPanel: 1
+    - mod: numerosongun
+      title: Numeroloji
+      icon: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
+      flare: {fileID: 21300000, guid: fccede4bf05bbaf428d897fc6fc1f1d7, type: 3}
+      delay: {x: 0, y: 0}
+      notReadyText: 
+      priority: 0
+      deletable: 1
+      showAd: 1
+      simpleFocusPanel: 1
+    - mod: numerosonyil
+      title: Numeroloji
+      icon: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
+      flare: {fileID: 21300000, guid: fccede4bf05bbaf428d897fc6fc1f1d7, type: 3}
+      delay: {x: 0, y: 0}
+      notReadyText: 
+      priority: 0
+      deletable: 1
+      showAd: 1
+      simpleFocusPanel: 1
   hizliFalOyun:
     defaultElement:
       title: 
@@ -989,8 +1019,8 @@ MonoBehaviour:
       mod: "y\xFCz fal\u0131 kimin"
       icon: {fileID: 21300000, guid: e43817fadd6714df789a042005633ec0, type: 3}
       iconDeactive: {fileID: 21300000, guid: 6ffbd2385940b4c47b960847604e8403, type: 3}
-      energy: 0
-      kons: 1
+      energy: 1
+      kons: 0
       showAd: 0
       falDegeri: 10
       plus: 1
@@ -1010,11 +1040,11 @@ MonoBehaviour:
       reklamGoster: 0
     - title: Numeroloji
       sanaOzelTitle: 
-      mod: numhizli
+      mod: numal
       icon: {fileID: 21300000, guid: 8d3e763bc5f7cc74ea08f64729ac8698, type: 3}
       iconDeactive: {fileID: 21300000, guid: eeb685964fb0041b6977b9b9b3169d7c, type: 3}
-      energy: 0
-      kons: 1
+      energy: 1
+      kons: 0
       showAd: 0
       falDegeri: 8
       plus: 1

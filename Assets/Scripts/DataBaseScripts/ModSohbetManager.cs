@@ -378,6 +378,13 @@ public class ModSohbetManager : MonoBehaviour
             sohbet.sohbetEnerjisi = onlineSohbetler[i].sohbetEnerjisi;
             sohbet.sohbetKonsantrasyonu = onlineSohbetler[i].sohbetKonsantrasyonu;
 
+            sohbet.kazima.imageId = onlineSohbetler[i].kazima.imageId;
+            sohbet.kazima.gifId = onlineSohbetler[i].kazima.gifId;
+            sohbet.kazima.kazimaTipi = onlineSohbetler[i].kazima.kazimaTipi;
+            sohbet.kazima.kazimaOrani = onlineSohbetler[i].kazima.kazimaOrani;
+            sohbet.kazima.kazimaSonuBekleme = onlineSohbetler[i].kazima.kazimaSonuBekleme;
+            sohbet.kazima.kazimaModu = onlineSohbetler[i].kazima.kazimaModu;
+
             sohbet.otomatikOdak = onlineSohbetler[i].otomatikOdak;
             sohbet.metniKaydet = onlineSohbetler[i].metniKaydet;
 

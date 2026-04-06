@@ -4,12 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
-import '../../core/utils/variable_replacer.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
+
+// Kaynak: C:\Users\AG\Desktop\cleaned_tarot\OzluSozler\
+// 643 söz, günlük limit: 1. Tüm sözler gösterilince liste sıfırlanır.
+
+class _OzluSozEntry {
+  final int id;
+  final String metin;
+  final String yazar;
+  const _OzluSozEntry({required this.id, required this.metin, required this.yazar});
+}
 
 class OzluSozScreen extends ConsumerStatefulWidget {
   const OzluSozScreen({super.key});
@@ -21,17 +31,19 @@ class OzluSozScreen extends ConsumerStatefulWidget {
 class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
     with SingleTickerProviderStateMixin {
   static const _uuid = Uuid();
+  static const _prefKeyGosterilen = 'ozlusoz_gosterilen_idler';
+  static const _prefKeyBugunTarih = 'ozlusoz_bugun_tarih';
 
-  List<String> _sozler = [];
-  int _currentIndex = 0;
+  final _rng = Random();
+
+  _OzluSozEntry? _bugunEntry;
   bool _loading = true;
   bool _saving = false;
+  bool _hakDoldu = false;
 
   late AnimationController _animCtrl;
   late Animation<double> _fadeAnim;
   late Animation<Offset> _slideAnim;
-
-  final _rng = Random();
 
   @override
   void initState() {
@@ -57,38 +69,74 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
   }
 
   Future<void> _loadData() async {
-    final json = await rootBundle.loadString('assets/data/ozlusoz_motivasyon.json');
-    final data = jsonDecode(json) as Map<String, dynamic>;
-    final all = List<String>.from(data['ozlu_sozler'] as List);
-    all.shuffle(_rng);
+    final prefs = await SharedPreferences.getInstance();
+    final bugunStr = DateTime.now().toIso8601String().substring(0, 10);
+
+    // Bugün zaten gösterildi mi?
+    final kayitliTarih = prefs.getString(_prefKeyBugunTarih);
+    if (kayitliTarih == bugunStr) {
+      if (!mounted) return;
+      setState(() {
+        _hakDoldu = true;
+        _loading = false;
+      });
+      return;
+    }
+
+    // JSON yükle
+    final jsonStr = await rootBundle.loadString('assets/data/ozlusozler.json');
+    final data = jsonDecode(jsonStr) as Map<String, dynamic>;
+    final tumListe = (data['ozlusozler'] as List<dynamic>)
+        .map((e) => _OzluSozEntry(
+              id: (e as Map<String, dynamic>)['id'] as int,
+              metin: e['metin'] as String,
+              yazar: (e['yazar'] as String?) ?? '',
+            ))
+        .toList();
+
+    // Gösterilen ID'leri yükle
+    List<String> gosterilenIdler = prefs.getStringList(_prefKeyGosterilen) ?? [];
+
+    // Gösterilmeyenleri filtrele
+    var kalan = tumListe.where((s) => !gosterilenIdler.contains('${s.id}')).toList();
+
+    // Hepsi gösterildiyse sıfırla
+    if (kalan.isEmpty) {
+      gosterilenIdler = [];
+      await prefs.setStringList(_prefKeyGosterilen, []);
+      kalan = List.from(tumListe);
+    }
+
+    // Karıştır ve ilkini seç
+    kalan.shuffle(_rng);
+    final secilen = kalan.first;
+
+    // Kaydet
+    gosterilenIdler.add('${secilen.id}');
+    await prefs.setStringList(_prefKeyGosterilen, gosterilenIdler);
+    await prefs.setString(_prefKeyBugunTarih, bugunStr);
+
+    if (!mounted) return;
     setState(() {
-      _sozler = all;
+      _bugunEntry = secilen;
       _loading = false;
     });
     _animCtrl.forward();
   }
 
-  Future<void> _next({bool forward = true}) async {
-    await _animCtrl.reverse();
-    setState(() {
-      _currentIndex = (_currentIndex + (forward ? 1 : -1)) % _sozler.length;
-      if (_currentIndex < 0) _currentIndex = _sozler.length - 1;
-    });
-    _animCtrl.forward();
-  }
-
   Future<void> _saveToInbox() async {
+    if (_bugunEntry == null) return;
     setState(() => _saving = true);
     try {
-      final profile = ref.read(userProfileProvider);
-      final vars = profile.toVariableMap();
-      final text = VariableReplacer.replace(_sozler[_currentIndex], vars);
+      final text = _bugunEntry!.yazar.isNotEmpty
+          ? '"${_bugunEntry!.metin}"\n— ${_bugunEntry!.yazar}'
+          : '"${_bugunEntry!.metin}"';
       final item = InboxItem(
         id: _uuid.v4(),
         title: 'Özlü Söz',
         text: text,
         date: DateTime.now().toIso8601String(),
-        fortuneTypeKey: 'motivation',
+        fortuneTypeKey: 'ozlusoz',
       );
       await ref.read(inboxProvider.notifier).addItem(item);
       if (!mounted) return;
@@ -105,8 +153,6 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
 
   @override
   Widget build(BuildContext context) {
-    final profile = ref.watch(userProfileProvider);
-
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -119,199 +165,185 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
       ),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
-          : GestureDetector(
-              onHorizontalDragEnd: (details) {
-                if (details.primaryVelocity == null) return;
-                if (details.primaryVelocity! < -100) {
-                  _next(forward: true);
-                } else if (details.primaryVelocity! > 100) {
-                  _next(forward: false);
-                }
-              },
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(24),
-                      child: FadeTransition(
-                        opacity: _fadeAnim,
-                        child: SlideTransition(
-                          position: _slideAnim,
-                          child: _buildCard(profile),
-                        ),
-                      ),
-                    ),
+          : _hakDoldu
+              ? _buildHakDoldu()
+              : FadeTransition(
+                  opacity: _fadeAnim,
+                  child: SlideTransition(
+                    position: _slideAnim,
+                    child: _buildContent(),
                   ),
-                  _buildBottomBar(),
-                ],
-              ),
-            ),
+                ),
     );
   }
 
-  Widget _buildCard(profile) {
-    final vars = profile.toVariableMap();
-    final rawText = _sozler.isNotEmpty ? _sozler[_currentIndex] : '';
-    final text = VariableReplacer.replace(rawText, vars);
-
-    return Container(
-      width: double.infinity,
-      constraints: const BoxConstraints(minHeight: 200),
-      padding: const EdgeInsets.all(28),
-      decoration: BoxDecoration(
-        image: const DecorationImage(
-          image: AssetImage('assets/images/ozlusoz_bg.jpg'),
-          fit: BoxFit.cover,
-          opacity: 0.25,
-        ),
-        gradient: const LinearGradient(
-          colors: [Color(0xFF1A1040), Color(0xFF0D0A20)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(
-          color: AppColors.bubble1.first.withValues(alpha: 0.35),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.bubble1.first.withValues(alpha: 0.2),
-            blurRadius: 20,
-            offset: const Offset(0, 6),
+  Widget _buildHakDoldu() {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Container(
+          padding: const EdgeInsets.all(28),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [Color(0xFF1A1040), Color(0xFF0D0A20)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(24),
+            border: Border.all(color: const Color(0xFF7B5CE8).withValues(alpha: 0.4)),
           ),
-        ],
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text('📖', style: TextStyle(fontSize: 40)),
+              const SizedBox(height: 16),
+              const Text(
+                'Günlük özlü söz hakkın doldu.',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white, fontSize: 16, height: 1.6),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Yarın yeni bir söz seni bekliyor.',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontSize: 13),
+              ),
+            ],
+          ),
+        ),
       ),
+    );
+  }
+
+  Widget _buildContent() {
+    final entry = _bugunEntry;
+    if (entry == null) return const SizedBox.shrink();
+
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(20, 24, 20, 40),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            '❝',
-            style: TextStyle(
-              fontSize: 36,
-              color: AppColors.bubble1.first.withValues(alpha: 0.7),
-              height: 1,
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(28),
+            decoration: BoxDecoration(
+              image: const DecorationImage(
+                image: AssetImage('assets/images/ozlusoz_bg.png'),
+                fit: BoxFit.cover,
+                opacity: 0.18,
+                onError: _imageError,
+              ),
+              gradient: const LinearGradient(
+                colors: [Color(0xFF1A1040), Color(0xFF0D0A20)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(24),
+              border: Border.all(
+                color: AppColors.bubble1.first.withValues(alpha: 0.35),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.bubble1.first.withValues(alpha: 0.2),
+                  blurRadius: 20,
+                  offset: const Offset(0, 6),
+                ),
+              ],
             ),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            text,
-            textAlign: TextAlign.center,
-            style: AppTextStyles.cardText.copyWith(
-              fontSize: text.length > 200 ? 14 : 16,
-            ),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            '❞',
-            style: TextStyle(
-              fontSize: 36,
-              color: AppColors.bubble1.first.withValues(alpha: 0.7),
-              height: 1,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  '❝',
+                  style: TextStyle(
+                    fontSize: 36,
+                    color: AppColors.bubble1.first.withValues(alpha: 0.7),
+                    height: 1,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  entry.metin,
+                  textAlign: TextAlign.center,
+                  style: AppTextStyles.cardText.copyWith(
+                    fontSize: entry.metin.length > 200 ? 14 : 16,
+                  ),
+                ),
+                Text(
+                  '❞',
+                  style: TextStyle(
+                    fontSize: 36,
+                    color: AppColors.bubble1.first.withValues(alpha: 0.7),
+                    height: 1,
+                  ),
+                ),
+                if (entry.yazar.isNotEmpty) ...[
+                  const SizedBox(height: 20),
+                  Container(
+                    height: 1,
+                    color: AppColors.bubble1.first.withValues(alpha: 0.2),
+                  ),
+                  const SizedBox(height: 14),
+                  Text(
+                    '— ${entry.yazar}',
+                    textAlign: TextAlign.center,
+                    style: AppTextStyles.inboxMeta.copyWith(
+                      fontSize: 12,
+                      color: AppColors.bubble1.first.withValues(alpha: 0.8),
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ],
+              ],
             ),
           ),
           const SizedBox(height: 24),
-          // Counter
-          Text(
-            '${_currentIndex + 1} / ${_sozler.length}',
-            style: AppTextStyles.inboxMeta,
+          // Kaydet butonu
+          GestureDetector(
+            onTap: _saving ? null : _saveToInbox,
+            child: Container(
+              height: 50,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: AppColors.bubble1,
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.circular(25),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.bubble1.first.withValues(alpha: 0.4),
+                    blurRadius: 10,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Center(
+                child: _saving
+                    ? const SizedBox(
+                        width: 20,
+                        height: 20,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                          color: Colors.white,
+                        ),
+                      )
+                    : const Text(
+                        'Kaydet ✦',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+              ),
+            ),
           ),
         ],
       ),
     );
   }
-
-  Widget _buildBottomBar() {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
-      decoration: const BoxDecoration(
-        color: AppColors.navBarBackground,
-        border: Border(top: BorderSide(color: AppColors.divider)),
-      ),
-      child: SafeArea(
-        top: false,
-        child: Row(
-          children: [
-            // Previous
-            _NavButton(
-              icon: Icons.arrow_back_ios_new_rounded,
-              onTap: () => _next(forward: false),
-            ),
-            const SizedBox(width: 12),
-            // Save to inbox
-            Expanded(
-              child: GestureDetector(
-                onTap: _saving ? null : _saveToInbox,
-                child: Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: AppColors.bubble1,
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    borderRadius: BorderRadius.circular(25),
-                    boxShadow: [
-                      BoxShadow(
-                        color: AppColors.bubble1.first.withValues(alpha: 0.4),
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Center(
-                    child: _saving
-                        ? const SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(
-                              strokeWidth: 2,
-                              color: Colors.white,
-                            ),
-                          )
-                        : const Text(
-                            'Kaydet ✦',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            // Next
-            _NavButton(
-              icon: Icons.arrow_forward_ios_rounded,
-              onTap: () => _next(forward: true),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }
 
-class _NavButton extends StatelessWidget {
-  final IconData icon;
-  final VoidCallback onTap;
-  const _NavButton({required this.icon, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: 48,
-        height: 50,
-        decoration: BoxDecoration(
-          color: AppColors.backgroundCard,
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: AppColors.divider),
-        ),
-        child: Icon(icon, color: AppColors.navBarActive, size: 20),
-      ),
-    );
-  }
-}
+void _imageError(Object e, StackTrace? s) {}

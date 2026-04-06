@@ -63,13 +63,15 @@ flutter_launcher_icons:
 # ── Giriş (splash) ekranı ─────────────────────────────────────────────────────
 flutter_native_splash:
   color: "#000000"
-  image: assets/images/magnusappicon.jpg
+  image: assets/images/magnusappicon_splash.png    # %80 küçültülmüş, kare
   color_dark: "#000000"
-  image_dark: assets/images/magnusappicon.jpg
+  image_dark: assets/images/magnusappicon_splash.png
   android_12:
-    image: assets/images/magnusappicon.jpg
+    # Görsel 1024x1024 siyah canvas'a %62 oranında yerleştirilmiş
+    # Köşe uzaklığı (458) < daire yarıçapı (512) → kesilmez
+    image: assets/images/magnusappicon_a12.png
     color: "#000000"
-    image_dark: assets/images/magnusappicon.jpg
+    image_dark: assets/images/magnusappicon_a12.png
     color_dark: "#000000"
   fullscreen: true
 

@@ -78,19 +78,33 @@ class _DonutPainter extends CustomPainter {
       final sweep = fullSweep * segProgress;
 
       if (sweep > gap) {
-        final glow = Paint()
+        // Katman 1: geniş dış parıltı
+        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, Paint()
+          ..color = seg.color.withValues(alpha: 0.12)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = strokeWidth + 28
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 18));
+
+        // Katman 2: orta glow
+        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, Paint()
           ..color = seg.color.withValues(alpha: 0.35)
           ..style = PaintingStyle.stroke
-          ..strokeWidth = strokeWidth + 6
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 5);
-        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, glow);
+          ..strokeWidth = strokeWidth + 10
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 7));
 
-        final fill = Paint()
-          ..color = seg.color
+        // Katman 3: iç parlak çizgi
+        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, Paint()
+          ..color = seg.color.withValues(alpha: 0.7)
           ..style = PaintingStyle.stroke
-          ..strokeWidth = strokeWidth
-          ..strokeCap = StrokeCap.butt;
-        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, fill);
+          ..strokeWidth = strokeWidth - 2
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2));
+
+        // Katman 4: saf beyaz özek
+        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, Paint()
+          ..color = Colors.white.withValues(alpha: 0.55)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = strokeWidth * 0.3
+          ..strokeCap = StrokeCap.butt);
       }
 
       remaining -= seg.fraction;
@@ -155,32 +169,43 @@ class _DonutChartState extends State<_DonutChart>
     final cx = size / 2;
     final cy = size / 2;
 
-    // Etiketler tam pozisyonda (animasyondan bağımsız, hep görünür)
+    // Etiketler çemberin üzerinde, teğet (tangent) döndürülmüş
     final labelWidgets = <Widget>[];
     var startAngle = -pi / 2;
     for (final seg in widget.segments) {
       final sweep = 2 * pi * seg.fraction;
       final mid = startAngle + sweep / 2;
-      final lr = r + sw * 0.6 + 10;
-      final lx = cx + lr * cos(mid);
-      final ly = cy + lr * sin(mid);
+
+      // Etiket merkezi tam çember üzerinde (r mesafesinde)
+      final lx = cx + r * cos(mid);
+      final ly = cy + r * sin(mid);
+
+      // Teğet yön: açıya dik yön = mid + pi/2
+      final rotation = mid + pi / 2;
+
       labelWidgets.add(
         Positioned(
-          left: lx - 28,
+          left: lx - 32,
           top: ly - 9,
-          width: 56,
+          width: 64,
           child: AnimatedBuilder(
             animation: _anim,
             builder: (_, __) => Opacity(
               opacity: _anim.value,
-              child: Text(
-                seg.label,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: seg.color,
-                  fontSize: 8.5,
-                  fontWeight: FontWeight.w700,
-                  shadows: const [Shadow(color: Colors.black, blurRadius: 4)],
+              child: Transform.rotate(
+                angle: rotation,
+                child: Text(
+                  seg.label,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: seg.color,
+                    fontSize: 8.5,
+                    fontWeight: FontWeight.w800,
+                    shadows: [
+                      Shadow(color: seg.color.withValues(alpha: 0.9), blurRadius: 8),
+                      const Shadow(color: Colors.black, blurRadius: 3),
+                    ],
+                  ),
                 ),
               ),
             ),

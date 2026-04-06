@@ -546,10 +546,10 @@ class SettingsScreen extends ConsumerWidget {
   ) {
     return Column(
       children: [
-        // Modalite - büyük, ortalanmış
+        // Modalite
         _DonutChart(
           title: 'Modalite',
-          size: 150,
+          size: 120,
           segments: [
             _Seg(const Color(0xFFFFDD00), mod[0], 'Kardinal'),
             _Seg(const Color(0xFF00EE88), mod[1], 'Değişken'),

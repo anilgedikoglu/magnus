@@ -176,9 +176,10 @@ class _DonutChartState extends State<_DonutChart>
       final sweep = 2 * pi * seg.fraction;
       final mid = startAngle + sweep / 2;
 
-      // Etiket merkezi tam çember üzerinde (r mesafesinde)
-      final lx = cx + r * cos(mid);
-      final ly = cy + r * sin(mid);
+      // Etiket merkezi çemberin dışında (r + strokeWidth + boşluk)
+      final labelR = r + sw + 14;
+      final lx = cx + labelR * cos(mid);
+      final ly = cy + labelR * sin(mid);
 
       // Teğet yön: açıya dik yön = mid + pi/2
       final rotation = mid + pi / 2;
@@ -215,27 +216,52 @@ class _DonutChartState extends State<_DonutChart>
       startAngle += sweep;
     }
 
+    // Dış etiketler için ekstra alan
+    const extra = 36.0;
+    final totalSize = size + extra * 2;
+
     return SizedBox(
-      width: size,
-      height: size,
+      width: totalSize,
+      height: totalSize,
       child: Stack(
         children: [
-          AnimatedBuilder(
-            animation: _anim,
-            builder: (_, __) => CustomPaint(
-              size: Size(size, size),
-              painter: _DonutPainter(widget.segments, sw, _anim.value),
+          // Donut çemberini ortala
+          Positioned(
+            left: extra,
+            top: extra,
+            child: AnimatedBuilder(
+              animation: _anim,
+              builder: (_, __) => CustomPaint(
+                size: Size(size, size),
+                painter: _DonutPainter(widget.segments, sw, _anim.value),
+              ),
             ),
           ),
-          ...labelWidgets,
-          Center(
-            child: Text(
-              widget.title,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
+          // Etiketler (cx/cy zaten extra offset'li hesaplandı)
+          ...labelWidgets.map((w) {
+            final p = w as Positioned;
+            return Positioned(
+              left: (p.left ?? 0) + extra,
+              top: (p.top ?? 0) + extra,
+              width: p.width,
+              child: p.child,
+            );
+          }),
+          // Başlık ortada
+          Positioned(
+            left: extra,
+            top: extra,
+            width: size,
+            height: size,
+            child: Center(
+              child: Text(
+                widget.title,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),

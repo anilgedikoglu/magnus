@@ -166,47 +166,44 @@ class _DonutChartState extends State<_DonutChart>
     final size = widget.size;
     final sw = size * 0.17;
     final r = (size - sw) / 2;
-    final cx = size / 2;
-    final cy = size / 2;
 
-    // Etiketler çemberin üzerinde, teğet (tangent) döndürülmüş
+    // Tüm koordinatlar totalSize canvas'ı üzerinden — etiketler dışarıda
+    const extra = 50.0;
+    final totalSize = size + extra * 2;
+    final cx = totalSize / 2;
+    final cy = totalSize / 2;
+
+    // Etiket çemberin belirgin dışında
+    final labelR = r + sw * 0.5 + extra * 0.7;
+
     final labelWidgets = <Widget>[];
     var startAngle = -pi / 2;
     for (final seg in widget.segments) {
       final sweep = 2 * pi * seg.fraction;
       final mid = startAngle + sweep / 2;
-
-      // Etiket merkezi çemberin dışında (r + strokeWidth + boşluk)
-      final labelR = r + sw + 14;
       final lx = cx + labelR * cos(mid);
       final ly = cy + labelR * sin(mid);
 
-      // Teğet yön: açıya dik yön = mid + pi/2
-      final rotation = mid + pi / 2;
-
       labelWidgets.add(
         Positioned(
-          left: lx - 32,
-          top: ly - 9,
-          width: 64,
+          left: lx - 34,
+          top: ly - 10,
+          width: 68,
           child: AnimatedBuilder(
             animation: _anim,
             builder: (_, __) => Opacity(
               opacity: _anim.value,
-              child: Transform.rotate(
-                angle: rotation,
-                child: Text(
-                  seg.label,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: seg.color,
-                    fontSize: 8.5,
-                    fontWeight: FontWeight.w800,
-                    shadows: [
-                      Shadow(color: seg.color.withValues(alpha: 0.9), blurRadius: 8),
-                      const Shadow(color: Colors.black, blurRadius: 3),
-                    ],
-                  ),
+              child: Text(
+                seg.label,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: seg.color,
+                  fontSize: 9,
+                  fontWeight: FontWeight.w800,
+                  shadows: [
+                    Shadow(color: seg.color.withValues(alpha: 0.9), blurRadius: 10),
+                    const Shadow(color: Colors.black, blurRadius: 4),
+                  ],
                 ),
               ),
             ),
@@ -216,16 +213,13 @@ class _DonutChartState extends State<_DonutChart>
       startAngle += sweep;
     }
 
-    // Dış etiketler için ekstra alan
-    const extra = 36.0;
-    final totalSize = size + extra * 2;
-
     return SizedBox(
       width: totalSize,
       height: totalSize,
       child: Stack(
+        clipBehavior: Clip.none,
         children: [
-          // Donut çemberini ortala
+          // Donut çember — tam ortada
           Positioned(
             left: extra,
             top: extra,
@@ -237,17 +231,9 @@ class _DonutChartState extends State<_DonutChart>
               ),
             ),
           ),
-          // Etiketler (cx/cy zaten extra offset'li hesaplandı)
-          ...labelWidgets.map((w) {
-            final p = w as Positioned;
-            return Positioned(
-              left: (p.left ?? 0) + extra,
-              top: (p.top ?? 0) + extra,
-              width: p.width,
-              child: p.child,
-            );
-          }),
-          // Başlık ortada
+          // Etiketler
+          ...labelWidgets,
+          // Başlık — çember merkezinde
           Positioned(
             left: extra,
             top: extra,

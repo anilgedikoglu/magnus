@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'app.dart';
 import 'data/providers.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  final binding = WidgetsFlutterBinding.ensureInitialized();
+  // Splash ekranını uygulama hazır olana kadar tut
+  FlutterNativeSplash.preserve(widgetsBinding: binding);
 
   // Lock to portrait
   await SystemChrome.setPreferredOrientations([
@@ -32,4 +35,7 @@ void main() async {
       child: const MagnusApp(),
     ),
   );
+
+  // Uygulama yüklendi, splash ekranını kaldır
+  FlutterNativeSplash.remove();
 }

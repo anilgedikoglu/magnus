@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/constants/app_colors.dart';
 import '../../data/providers.dart';
 
@@ -13,12 +15,34 @@ class HomeScreen extends ConsumerStatefulWidget {
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   final PageController _pageController = PageController();
+  final ScrollController _chatScrollCtrl = ScrollController();
   int _currentPage = 0;
   static const _totalPages = 2;
+
+  final List<_ExtraBubble> _extraBubbles = [];
+  int _typingIndex = 0; // hangi balon şu an yazılıyor
+
+  void _onBubbleComplete(int index) {
+    if (!mounted) return;
+    setState(() {
+      if (index == _typingIndex) _typingIndex++;
+    });
+    // Sonraki balon başlayınca scroll'u güncelle
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
 
   @override
   void dispose() {
     _pageController.dispose();
+    _chatScrollCtrl.dispose();
     super.dispose();
   }
 
@@ -42,10 +66,47 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     setState(() => _currentPage = prev);
   }
 
+  // ─── Motivasyon günlük hak kontrolü ──────────────────────────────────────
+  Future<void> _onMotivasyonTap() async {
+    final prefs = await SharedPreferences.getInstance();
+    final bugunStr = DateTime.now().toIso8601String().substring(0, 10);
+    final kayitliTarih = prefs.getString('motivasyon_bugun_tarih');
+
+    if (kayitliTarih == bugunStr) {
+      // Günlük hak doldu → home'da balon göster, ekrana gitme
+      if (!mounted) return;
+      final name = ref.read(userProfileProvider).name;
+      setState(() {
+        _extraBubbles.add(_ExtraBubble(
+          text: 'Günlük motivasyon hakkın doldu${name.isNotEmpty ? ' $name' : ''}.',
+          gradient: const [Color(0xFF5C2508), Color(0xFF7A3510)],
+          borderColor: const Color(0xFFCC6622),
+        ));
+        _extraBubbles.add(_ExtraBubble(
+          text: "Magnus'un ana menüsü karşında!",
+          gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+          borderColor: const Color(0xFF7B5ECC),
+        ));
+      });
+      // Yeni balonlar eklenince scroll'u en alta kaydır
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (_chatScrollCtrl.hasClients) {
+          _chatScrollCtrl.animateTo(
+            _chatScrollCtrl.position.maxScrollExtent,
+            duration: const Duration(milliseconds: 350),
+            curve: Curves.easeOut,
+          );
+        }
+      });
+    } else {
+      if (mounted) context.push('/motivation');
+    }
+  }
+
   // ─── Sayfa 1 ──────────────────────────────────────────────────────────────
   List<_MenuItem> _page1Items(BuildContext context) => [
         _MenuItem('Motivasyon', 'assets/images/motivasyon_yeni.png', 0,
-            () => context.push('/motivation')),
+            () => _onMotivasyonTap()),
         _MenuItem('Dert Ortağı', 'assets/images/menu/dertortagi.png', 1,
             () {}),
         _MenuItem('Olumlama', 'assets/images/olumlama.png', 0,
@@ -126,41 +187,53 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   Widget _buildChatHeader(String name) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 16, 12, 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              _MagnusAvatar(),
-              const SizedBox(width: 8),
-              Expanded(
-                child: _ChatBubble(
-                  text: _anaMenu1SohbetBalonu(name),
-                  gradient: const [Color(0xFF1A6B5A), Color(0xFF1A5E6B)],
-                  borderColor: const Color(0xFF2DAAA0),
-                ),
+    // Tüm balonları tek listede birleştir (sabit 2 + dinamik ekstralar)
+    final bubbles = [
+      _ExtraBubble(
+        text: _anaMenu1SohbetBalonu(name),
+        gradient: const [Color(0xFF1A6B5A), Color(0xFF1A5E6B)],
+        borderColor: const Color(0xFF2DAAA0),
+      ),
+      _ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ),
+      ..._extraBubbles,
+    ];
+
+    return SizedBox(
+      height: 130,
+      child: SingleChildScrollView(
+        controller: _chatScrollCtrl,
+        physics: const NeverScrollableScrollPhysics(),
+        padding: const EdgeInsets.fromLTRB(12, 16, 12, 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            for (int i = 0; i < bubbles.length; i++) ...[
+              if (i > 0) const SizedBox(height: 8),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  _MagnusAvatar(),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: _TypewriterChatBubble(
+                      key: ValueKey(i),
+                      text: bubbles[i].text,
+                      gradient: bubbles[i].gradient,
+                      borderColor: bubbles[i].borderColor,
+                      isActive: i == _typingIndex,
+                      isVisible: i <= _typingIndex,
+                      onComplete: () => _onBubbleComplete(i),
+                    ),
+                  ),
+                ],
               ),
             ],
-          ),
-          const SizedBox(height: 8),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              _MagnusAvatar(),
-              const SizedBox(width: 8),
-              Expanded(
-                child: _ChatBubble(
-                  text: "Magnus'un ana menüsü karşında!",
-                  gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-                  borderColor: const Color(0xFF7B5ECC),
-                ),
-              ),
-            ],
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -270,8 +343,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Veri modeli
+// Veri modelleri
 // ─────────────────────────────────────────────────────────────────────────────
+
+class _ExtraBubble {
+  final String text;
+  final List<Color> gradient;
+  final Color borderColor;
+  const _ExtraBubble({
+    required this.text,
+    required this.gradient,
+    required this.borderColor,
+  });
+}
 
 class _MenuItem {
   final String title;
@@ -448,6 +532,86 @@ class _CreditBadge extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Typewriter balonu
+// ─────────────────────────────────────────────────────────────────────────────
+
+class _TypewriterChatBubble extends StatefulWidget {
+  final String text;
+  final List<Color> gradient;
+  final Color borderColor;
+  final bool isActive;  // şu an yazılıyor
+  final bool isVisible; // gösterilmeli mi (yazılmış ya da yazılıyor)
+  final VoidCallback onComplete;
+
+  const _TypewriterChatBubble({
+    super.key,
+    required this.text,
+    required this.gradient,
+    required this.borderColor,
+    required this.isActive,
+    required this.isVisible,
+    required this.onComplete,
+  });
+
+  @override
+  State<_TypewriterChatBubble> createState() => _TypewriterChatBubbleState();
+}
+
+class _TypewriterChatBubbleState extends State<_TypewriterChatBubble> {
+  int _charCount = 0;
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.isActive) {
+      _startTyping();
+    } else if (widget.isVisible) {
+      _charCount = widget.text.length; // zaten yazılmış, tam göster
+    }
+  }
+
+  @override
+  void didUpdateWidget(_TypewriterChatBubble old) {
+    super.didUpdateWidget(old);
+    // Sıra bu balona geldi
+    if (widget.isActive && !old.isActive) {
+      _charCount = 0;
+      _startTyping();
+    }
+  }
+
+  void _startTyping() {
+    _timer?.cancel();
+    _timer = Timer.periodic(const Duration(milliseconds: 30), (t) {
+      if (!mounted) { t.cancel(); return; }
+      if (_charCount >= widget.text.length) {
+        t.cancel();
+        widget.onComplete();
+        return;
+      }
+      setState(() => _charCount++);
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!widget.isVisible) return const SizedBox.shrink();
+    return _ChatBubble(
+      text: widget.text.substring(0, _charCount),
+      gradient: widget.gradient,
+      borderColor: widget.borderColor,
     );
   }
 }

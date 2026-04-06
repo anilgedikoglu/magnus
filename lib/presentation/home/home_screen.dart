@@ -21,6 +21,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   final List<_ExtraBubble> _extraBubbles = [];
   int _typingIndex = 0; // hangi balon şu an yazılıyor
+  late String _selamlama; // sabit, initState'te bir kez hesaplanır
 
   void _onBubbleComplete(int index) {
     if (!mounted) return;
@@ -37,6 +38,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         );
       }
     });
+  }
+
+  bool _selamlamaHesaplandi = false;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Profil yüklendikten sonra selamlamayı bir kez hesapla
+    if (!_selamlamaHesaplandi) {
+      final name = ref.read(userProfileProvider).name;
+      _selamlama = _hesaplaSelamlama(name);
+      _selamlamaHesaplandi = true;
+    }
   }
 
   @override
@@ -149,7 +168,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final profile = ref.watch(userProfileProvider);
+    ref.watch(userProfileProvider); // profil değişince rebuild tetikle
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -157,7 +176,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         child: Column(
           children: [
             // ─── Chat header (sabit) ────────────────────────────────────────
-            _buildChatHeader(profile.name),
+            _buildChatHeader(),
 
             // ─── Sayfa göstergesi ──────────────────────────────────────────
             _buildPageIndicator(),
@@ -186,11 +205,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget _buildChatHeader(String name) {
+  Widget _buildChatHeader() {
     // Tüm balonları tek listede birleştir (sabit 2 + dinamik ekstralar)
     final bubbles = [
       _ExtraBubble(
-        text: _anaMenu1SohbetBalonu(name),
+        text: _selamlama, // initState/didChangeDependencies'te bir kez hesaplandı
         gradient: const [Color(0xFF1A6B5A), Color(0xFF1A5E6B)],
         borderColor: const Color(0xFF2DAAA0),
       ),
@@ -211,27 +230,27 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            for (int i = 0; i < bubbles.length; i++) ...[
-              if (i > 0) const SizedBox(height: 8),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  _MagnusAvatar(),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: _TypewriterChatBubble(
-                      key: ValueKey(i),
-                      text: bubbles[i].text,
-                      gradient: bubbles[i].gradient,
-                      borderColor: bubbles[i].borderColor,
-                      isActive: i == _typingIndex,
-                      isVisible: i <= _typingIndex,
-                      onComplete: () => _onBubbleComplete(i),
+            for (int i = 0; i < bubbles.length; i++)
+              if (i <= _typingIndex) ...[
+                if (i > 0) const SizedBox(height: 8),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    _MagnusAvatar(),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: _TypewriterChatBubble(
+                        key: ValueKey(i),
+                        text: bubbles[i].text,
+                        gradient: bubbles[i].gradient,
+                        borderColor: bubbles[i].borderColor,
+                        isActive: i == _typingIndex,
+                        onComplete: () => _onBubbleComplete(i),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
           ],
         ),
       ),
@@ -316,9 +335,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   // ── Ana Menü 1. Sohbet Balonu ──────────────────────────────────────────────
-  // Her app açılışında aşağıdaki selamlamalardan biri rastgele gösterilir.
-  // Kullanıcı adı yoksa sade selamlama döner.
-  String _anaMenu1SohbetBalonu(String name) {
+  // App açılışında bir kez hesaplanır (didChangeDependencies).
+  // Her build'de yeniden çağrılmaz — typewriter RangeError'ı önler.
+  String _hesaplaSelamlama(String name) {
     final n = name.isNotEmpty ? name : '';
     final List<String> selamlamalar = name.isNotEmpty
         ? [
@@ -544,8 +563,7 @@ class _TypewriterChatBubble extends StatefulWidget {
   final String text;
   final List<Color> gradient;
   final Color borderColor;
-  final bool isActive;  // şu an yazılıyor
-  final bool isVisible; // gösterilmeli mi (yazılmış ya da yazılıyor)
+  final bool isActive; // şu an yazılıyor (false = tamamlandı, tam göster)
   final VoidCallback onComplete;
 
   const _TypewriterChatBubble({
@@ -554,7 +572,6 @@ class _TypewriterChatBubble extends StatefulWidget {
     required this.gradient,
     required this.borderColor,
     required this.isActive,
-    required this.isVisible,
     required this.onComplete,
   });
 
@@ -571,8 +588,8 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble> {
     super.initState();
     if (widget.isActive) {
       _startTyping();
-    } else if (widget.isVisible) {
-      _charCount = widget.text.length; // zaten yazılmış, tam göster
+    } else {
+      _charCount = widget.text.length; // tamamlanmış balon, tam göster
     }
   }
 
@@ -607,9 +624,9 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble> {
 
   @override
   Widget build(BuildContext context) {
-    if (!widget.isVisible) return const SizedBox.shrink();
+    final safeCount = _charCount.clamp(0, widget.text.length);
     return _ChatBubble(
-      text: widget.text.substring(0, _charCount),
+      text: widget.text.substring(0, safeCount),
       gradient: widget.gradient,
       borderColor: widget.borderColor,
     );

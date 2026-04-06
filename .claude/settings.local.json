@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter devices:*)",
+      "Bash(flutter emulators:*)",
+      "Bash(flutter run:*)",
+      "Bash(__NEW_LINE_0d62338b23f07ab1__ cp:*)",
+      "Bash(__NEW_LINE_0d62338b23f07ab1__ echo:*)",
+      "Bash(flutter packages:*)",
+      "Bash(ls \"C:\\\\src\\\\magnus_app\\\\assets\\\\images\"\" 2>/dev/null || dir \"C:/src/magnus_app/assets/images/ \")",
+      "Read(//c/src/magnus/Assets/Resources/YerelDOSYALAR/Gorseller/FalBG/**)",
+      "Read(//c/Magnus/Assets/Resources/YerelDOSYALAR/Gorseller/Yeniikonlar/**)",
+      "Read(//c/Magnus/Assets/Resources/YerelDOSYALAR/Gorseller/BottomMenu/**)",
+      "Bash(cp \"/c/src/magnus/Assets/Resources/YerelDOSYALAR/Gorseller/FalBG/mistikfallar.png\" \"/c/src/magnus_app/assets/images/menu/mistikfallar.png\")",
+      "Bash(cp \"/c/Magnus/Assets/Resources/YerelDOSYALAR/Gorseller/Yeniikonlar/motivasyon.png\" \"/c/src/magnus_app/assets/images/motivasyon_yeni.png\")",
+      "Bash(cp \"/c/Magnus/Assets/Resources/YerelDOSYALAR/Gorseller/BottomMenu/menuleft.png\" \"/c/src/magnus_app/assets/images/menuleft.png\")",
+      "Bash(cp \"/c/Magnus/Assets/Resources/YerelDOSYALAR/Gorseller/BottomMenu/menuright.png\" \"/c/src/magnus_app/assets/images/menuright.png\")",
+      "Bash(cp \"/c/Magnus/Assets/Resources/YerelDOSYALAR/Gorseller/BottomMenu/inbox.png\" \"/c/src/magnus_app/assets/images/inbox_icon.png\")",
+      "Bash(gh auth:*)",
+      "Bash(git config:*)",
+      "Bash(/dev/null git:*)",
+      "Bash(/dev/null ssh:*)",
+      "Bash(git credential:*)",
+      "Bash(git init:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

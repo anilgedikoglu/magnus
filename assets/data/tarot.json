@@ -1,0 +1,372 @@
+{
+  "cards": [
+    {
+      "id": "budala",
+      "name": "Budala",
+      "nameEn": "The Fool",
+      "number": 0,
+      "normal": {
+        "past": "Geçmişinde büyük bir cesaretle attığın bir adım var. Belki çevrendekiler seni anlamadı, ama sen içinden gelen sese uydun. Bu adım bugünkü sen'in temelini oluşturuyor {{isim}}.",
+        "present": "Şu an hayatında yeni bir başlangıcın tam eşiğindesin {{isim}}. Belirsizlik seni ürkütmesin; Budala kartı cesur adımların ödüllendirildiğini söylüyor. Kalp ve aklın birlikte hareket ettiğinde mucizeler yaşanabilir.",
+        "future": "Yakında beklenmedik bir fırsat kapına gelecek {{isim}}. Bu fırsat belki seni korkutacak, mantıkla açıklayamayacaksın. Ama Budala kartı o fırsatın tam sana göre olduğunu söylüyor."
+      },
+      "reversed": {
+        "past": "Geçmişte dikkatsiz bir adım attın {{isim}}. Yeterince hazırlanmadan giriştiğin bir şey seni yordu. Ama bu deneyim sana çok şey öğretti.",
+        "present": "Dikkatli ol {{isim}}. Şu an aceleci kararlar alma zamanı değil. Bir adım geri at, tüm olasılıkları değerlendir.",
+        "future": "Önünde risk barındıran bir dönem var {{isim}}. Heyecana kapılıp önemli kararları gözardı etme. Planlı ilerlersen bu dönem seni güçlendirecek."
+      }
+    },
+    {
+      "id": "buyucu",
+      "name": "Büyücü",
+      "nameEn": "The Magician",
+      "number": 1,
+      "normal": {
+        "past": "Geçmişinde güçlü bir irade ve kararlılıkla bir şeyler inşa ettin {{isim}}. Elindeki araçları ustalıkla kullandın ve çevrendekileri etkilemeyi başardın.",
+        "present": "Tüm kaynaklar, yetenekler ve fırsatlar şu an senin elinde {{isim}}. Büyücü kartı, başarmak için ihtiyacın olan her şeye sahip olduğunu söylüyor. Harekete geç!",
+        "future": "Yakında güçlü bir etki alanı oluşturacaksın {{isim}}. Liderlik veya yaratıcılık gerektiren bir role adım atacaksın. Bu rol sana biçilmiş kaftan."
+      },
+      "reversed": {
+        "past": "Geçmişte yeteneklerini tam olarak kullanamadın {{isim}}. Kendinden şüphe etmen, fırsatların bir kısmını kaçırmana neden oldu.",
+        "present": "Dikkat et {{isim}}, yanıltıcı bilgiler veya güvensiz kişiler olabilir çevreninde. Aldatılmamak için sezgilerini devreye sok.",
+        "future": "Geleceğe hazırlanırken gerçekçi ol {{isim}}. Aşırı kendine güven veya manipülasyon tuzaklarına düşme. Dürüstlük en güçlü sihrin."
+      }
+    },
+    {
+      "id": "yuksek_rahibe",
+      "name": "Yüksek Rahibe",
+      "nameEn": "The High Priestess",
+      "number": 2,
+      "normal": {
+        "past": "Sezgilerin geçmişte seni korudu {{isim}}. Belki bilinçsizce, ama içinden gelen sese kulak verdin ve doğru kararı aldın.",
+        "present": "Şu an dışarıdan cevap aramana gerek yok {{isim}}. Yüksek Rahibe kartı, cevabın içinde saklı olduğunu söylüyor. Sessizlikte otur, içsese kulak ver.",
+        "future": "Gizli tutulan bir bilgi veya sır yakında gün yüzüne çıkacak {{isim}}. Bu keşif seni şaşırtacak ama aynı zamanda özgürleştirecek."
+      },
+      "reversed": {
+        "past": "Geçmişte sezgilerini yoksaydın {{isim}} ve bunun bedelini ödedin. Dış görünüşlere çok odaklandın, içteki gerçeği göz ardı ettin.",
+        "present": "Sırları gizlemeye ya da yüzleşmekten kaçınmaya devam etmek seni yıpratıyor {{isim}}. Kendine karşı dürüst olmanın zamanı.",
+        "future": "Gizli tutulan bir şeyin ortaya çıkacağı bir dönem geliyor {{isim}}. Buna hazırlıklı olmak seni koruyor olacak."
+      }
+    },
+    {
+      "id": "imparatorcice",
+      "name": "İmparatoriçe",
+      "nameEn": "The Empress",
+      "number": 3,
+      "normal": {
+        "past": "Geçmişte büyük bir bereketi deneyimledin {{isim}}. Sevgi, üretkenlik ve bolluk dolu bir dönemin izleri hâlâ içinde taşınıyor.",
+        "present": "Doğanın anaç enerjisi seninle {{isim}}. Yaratıcılık, verimlilik ve sevgi konusunda olağanüstü bir dönemdesin. Bir şeyler yetiştir, büyüt, paylaş.",
+        "future": "Bolluk ve bereket dolu bir dönem kapıda {{isim}}. İster maddi ister duygusal olsun, hayatına güzel şeyler taşınacak."
+      },
+      "reversed": {
+        "past": "Geçmişte kendini ihmal ettiğin bir dönem oldu {{isim}}. Başkalarına o kadar çok verdin ki kendin için hiçbir şey kalmadı.",
+        "present": "Şu an yaratıcı blokaj yaşıyor olabilirsin {{isim}}. Ya da maddi/duygusal açıdan kıtlık hissediyorsun. Bu geçici; tohumları yeniden ekme zamanı.",
+        "future": "Bolluk gelmeden önce bir temizlenme dönemi geçireceksin {{isim}}. Hayatına girmeyen ne varsa onun için alan açıyorsun."
+      }
+    },
+    {
+      "id": "imparator",
+      "name": "İmparator",
+      "nameEn": "The Emperor",
+      "number": 4,
+      "normal": {
+        "past": "Geçmişinde güçlü bir figür veya yapı seni şekillendirdi {{isim}}. Bu etki bazen kısıtlayıcı gelse de temel değerlerini oluşturdu.",
+        "present": "Otorite ve düzen senin lehine çalışıyor {{isim}}. Sorumluluk al, liderlik et; şu an bu güce sahipsin.",
+        "future": "Kariyer veya aile hayatında güçlü bir konum seni bekliyor {{isim}}. Yapı inşa etmek ve sistematik davranmak başarını getirecek."
+      },
+      "reversed": {
+        "past": "Geçmişte katı bir otorite veya kontrol seni bunalttı {{isim}}. Bu baskı altında kendi sesini bulmakta zorlandın.",
+        "present": "Şu an ya çok kontrol ediyorsun ya da tamamen kontrolü bırakmış durumdasın {{isim}}. Denge bulmak şart.",
+        "future": "Güç mücadelesi ya da bürokratik engeller öne çıkabilir {{isim}}. Esnek kalmak ve iş birliği yapmak bu dönemde seni ilerletir."
+      }
+    },
+    {
+      "id": "aziz",
+      "name": "Aziz",
+      "nameEn": "The Hierophant",
+      "number": 5,
+      "normal": {
+        "past": "Geçmişte geleneklere veya köklü bir sisteme bağlılığın sana güç verdi {{isim}}. Bir usta veya rehber figür hayatında önemli bir yer tuttu.",
+        "present": "Geleneksel değerlere ve kanıtlanmış yöntemlere dönme vakti {{isim}}. Bir öğretmen veya mentor sana rehberlik edebilir.",
+        "future": "Bilgelik veya manevi bir yolculuk seni bekliyor {{isim}}. Belki formal bir eğitim, belki derin bir inanç; ama bu yolculuk seni dönüştürecek."
+      },
+      "reversed": {
+        "past": "Geçmişte toplumsal baskılara boyun eğdin {{isim}} ve bu seni içten içe eritti. Kendi inançlarını bastırmak zorunda kaldın.",
+        "present": "Şu an köhnemiş kuralları sorgulamak için güçlü bir istek var içinde {{isim}}. Bu isyan yapıcı olabilir, yıkıcı değil.",
+        "future": "Gelenekten kopuş ya da alışılmadık bir yol seçimi önünde duruyor {{isim}}. Cesur ol; kendi gerçeğin her zaman dışarıdan dayatılandan üstündür."
+      }
+    },
+    {
+      "id": "asiklar",
+      "name": "Aşıklar",
+      "nameEn": "The Lovers",
+      "number": 6,
+      "normal": {
+        "past": "Kalbinin sesini dinleyerek bugünlere geldin {{isim}}. Kader seni hep bir 'birleşmeye' taşımış. Ayrılıklar bir başka kavuşmanın vesilesi olmuş.",
+        "present": "Önemli bir seçim önünde duruyorsun {{isim}}, muhtemelen kalp ile akıl arasında. Aşıklar kartı, kalbini görmezden geldiğinde pişman olacağını söylüyor.",
+        "future": "Derin bir bağ kurma ihtimalin çok yüksek {{isim}}. Bu bağ romantik olabilir, ama belki de iki düşünce, iki değer arasında güçlü bir ittifak."
+      },
+      "reversed": {
+        "past": "Geçmişte yanlış bir seçim yaptın ve bunun bedelini ödedin {{isim}}. Ama bu deneyim sana en değerli dersi verdi: kendi değerini bilmek.",
+        "present": "İlişkide veya önemli bir seçimde uyumsuzluk var {{isim}}. İki taraf arasında denge kurmak zorlaşmış olabilir.",
+        "future": "Bağlanma ve seçim konularında zorluklar yaşayabilirsin {{isim}}. Ama bu zorluklar seni gerçek isteklerini anlamaya zorlayacak."
+      }
+    },
+    {
+      "id": "savaş_arabasi",
+      "name": "Savaş Arabası",
+      "nameEn": "The Chariot",
+      "number": 7,
+      "normal": {
+        "past": "Büyük bir mücadeleden galip çıktın geçmişte {{isim}}. Zorlu koşullara rağmen pes etmedin; bu zafer karakterini şekillendirdi.",
+        "present": "Şu an zafer için gereken tüm irade ve enerjiye sahipsin {{isim}}. Hedefine odaklan, engelleri birer birer aş. Hiçbir şey seni durduramaz.",
+        "future": "Yakında önemli bir hedefine ulaşacaksın {{isim}}. Bu başarı için savaş arabası gibi kararlı ve odaklı ilerlemeye devam et."
+      },
+      "reversed": {
+        "past": "Geçmişte saldırganlık veya kontrolü kaybetme durumları oldu {{isim}}. Hırs bazen yıkıcı bir hal aldı.",
+        "present": "Şu an yönünü kaybetmiş hissedebilirsin {{isim}}. Farklı istekler seni zıt yönlere çekiyor. Önce içini dinle.",
+        "future": "Hedeflerin için doğru stratejiyi bulman gerekiyor {{isim}}. Kaba kuvvet değil, zeka ve denge bu dönemde işe yarayacak."
+      }
+    },
+    {
+      "id": "guc",
+      "name": "Güç",
+      "nameEn": "Strength",
+      "number": 8,
+      "normal": {
+        "past": "İnandırılmaz bir sabır ve iç güçle zor bir dönemi atlattın {{isim}}. Bu süreçte aslan kalbini keşfettin.",
+        "present": "İçindeki gücü küçümseme {{isim}}. Güç kartı, cesaret ve merhametin bir arada olduğunda en büyük mucizelerin gerçekleştiğini söylüyor.",
+        "future": "Sınandığında parıldayan bir dönem seni bekliyor {{isim}}. Bu sınavı korkuyla değil, iç huzurunla karşılarsan kazanırsın."
+      },
+      "reversed": {
+        "past": "Geçmişte güçsüzlük veya öfke kontrolsüzlüğü seni zorladı {{isim}}. İçindeki aslanla barışmak zaman aldı.",
+        "present": "Şüphe ve endişe şu an içini kemiriyor {{isim}}. Güce olan inancını yeniden inşa etme vakti.",
+        "future": "Zorlu anlarda kendini küçük görmemek için çalışman gerekiyor {{isim}}. İçindeki güce erişmek bir pratik meselesi."
+      }
+    },
+    {
+      "id": "ermis",
+      "name": "Ermiş",
+      "nameEn": "The Hermit",
+      "number": 9,
+      "normal": {
+        "past": "Yalnızlıkta derin bir bilgelik kazandın geçmişte {{isim}}. Kalabalıktan uzaklaşman, kendini bulman için gerekliydi.",
+        "present": "İçe çekilme ve yansıma zamanı {{isim}}. Dışarıdaki gürültüyü kapat; içindeki rehber meşalesini tut.",
+        "future": "Manevi veya zihinsel bir keşif yolculuğu seni bekliyor {{isim}}. Bu yolculuk yalnız ama son derece aydınlatıcı olacak."
+      },
+      "reversed": {
+        "past": "Geçmişte aşırı izolasyon seni yordu {{isim}} ya da tam tersi, yalnızlıktan kaçınıp gerçek sorunlarla yüzleşmedin.",
+        "present": "Yalnızlığın duvarlarını yıkma vakti {{isim}}. Güvendiğin birisiyle konuşmak şu an sana iyi gelebilir.",
+        "future": "Toplumla yeniden bağ kurma dönemi geliyor {{isim}}. Bilgeliğini paylaşmaya hazır olduğunda etrafın aydınlanacak."
+      }
+    },
+    {
+      "id": "kader_carki",
+      "name": "Kader Çarkı",
+      "nameEn": "Wheel of Fortune",
+      "number": 10,
+      "normal": {
+        "past": "Geçmişte hayat sana sürprizler yaptı {{isim}}; bazıları güzel, bazıları zor. Kader Çarkı döndü ve seni bugüne taşıdı.",
+        "present": "Şans ve kader senin lehine döneceğe benziyor {{isim}}. Beklenmedik bir dönüşüm veya şans faktörü devreye girebilir.",
+        "future": "Hayatında büyük bir döngü kapanıp yeni biri başlıyor {{isim}}. Bu değişime direnmek yerine akışa katıl."
+      },
+      "reversed": {
+        "past": "Kötü şans veya kötü zamanlama geçmişte planlarını bozdu {{isim}}. Ama bu döngü de geçici; her dip bir zirvenin habercisidir.",
+        "present": "Şu an kontrolün dışında gelişmeler olabilir {{isim}}. Sabret; çark dönmeye devam ediyor.",
+        "future": "Değişime direnç seni geri tutabilir {{isim}}. Esnek olmayı öğren; hayatın en büyük fırsatları bazen en beklenmedik şekillerde gelir."
+      }
+    },
+    {
+      "id": "adalet",
+      "name": "Adalet",
+      "nameEn": "Justice",
+      "number": 11,
+      "normal": {
+        "past": "Geçmişte bazı önemli kararlar aldın {{isim}}. Bu kararları oldukça bilinçli bir şekilde almış ve karar aldığın konuların gelecekte seni daha iyi günlere taşımasını ummuşsun.",
+        "present": "Doğru ve adil bir karar verme sürecinin tam ortasındasın {{isim}}. Adalet kartı, sonucun hak ettiğin şeyi getireceğini müjdeliyor.",
+        "future": "Hak ettiğini alan bir dönem geliyor {{isim}}. Geçmişte emek verdiğin her şeyin karşılığını göreceksin."
+      },
+      "reversed": {
+        "past": "Geçmişte haksızlığa uğradın ya da haksız bir karar verdin {{isim}}. Bu dengesizlik içinde bir şeyler kırıldı.",
+        "present": "Mevcut bir durumda adalet eksikliği var {{isim}}. Kendi gerçeğinle dürüst ol; haksızlığı sürdürmek seni de yakar.",
+        "future": "Hesaplaşma dönemi yaklaşıyor {{isim}}. Geçmişte doğruları yapmak önemli; çünkü kader defterleri her zaman dengede tutar."
+      }
+    },
+    {
+      "id": "asilan_adam",
+      "name": "Asılan Adam",
+      "nameEn": "The Hanged Man",
+      "number": 12,
+      "normal": {
+        "past": "İşlerin senin için pek de istediğin gibi gitmedi geçmişte {{isim}}. Devam etmeyi düşündüğün noktalarda kalakaldin; ama bu bekleyiş aslında seni olgunlaştırdı.",
+        "present": "Şu an duraklama ve yeniden değerlendirme zamanı {{isim}}. Asılan Adam, farklı bir perspektiften bakıldığında her şeyin değiştiğini söylüyor.",
+        "future": "Önünde bir fedakarlık dönemi var {{isim}}. Bir şeyi bırakmak başka bir şeyin başlamasını mümkün kılacak."
+      },
+      "reversed": {
+        "past": "Geçmişte gereksiz fedakarlıklar yaptın ya da beklemeyi reddedip aceleci davrandın {{isim}}.",
+        "present": "Direniş seni tüketiyor {{isim}}. Bırakmaktan korkmak, hayatın akışını engellemenin en büyük yolu.",
+        "future": "Harekete geçme vakti yaklaşıyor {{isim}}. Çok uzun süre askıda kaldın; şimdi yavaşça yere inme zamanı."
+      }
+    },
+    {
+      "id": "olum",
+      "name": "Ölüm",
+      "nameEn": "Death",
+      "number": 13,
+      "normal": {
+        "past": "Büyük bir dönüşüm geçirdin geçmişte {{isim}}. Eski sen 'öldü' ve yerine çok daha güçlü bir sen doğdu.",
+        "present": "Bir dönem sona eriyor {{isim}}, ve bu seni ürkütebilir. Ama Ölüm kartı aslında diriliş kartıdır. Her son, yeni bir başlangıcın habercisidir.",
+        "future": "Köklü bir değişim kapında {{isim}}. Eskiyi tutmaya çalışmak seni yorar; değişime izin ver."
+      },
+      "reversed": {
+        "past": "Geçmişte değişime direniş büyük enerji harcattı sana {{isim}}. Bırakmak yerine tutunmayı seçtin ve bu seni sarstı.",
+        "present": "Bitmeyen bir döngüde sıkışmış hissediyorsun {{isim}}. Değişime karşı olan bu direnci fark etmek, ilk adım.",
+        "future": "Yeniden doğuş sancılı olacak ama kaçınılmaz {{isim}}. Direnmekten yorulduğunda, değişim kendiliğinden gelecek."
+      }
+    },
+    {
+      "id": "olculuk",
+      "name": "Ölçülülük",
+      "nameEn": "Temperance",
+      "number": 14,
+      "normal": {
+        "past": "Sabır ve denge geçmişinde seni korudu {{isim}}. Aşırılıklardan kaçınman, çevrendeki fırtınaları atlatmana yardım etti.",
+        "present": "Denge ve uyum dönemindesin {{isim}}. Acele etme; şu an akan suya bırak kendini ve süreci güven içinde izle.",
+        "future": "Uyum ve sabırla elde edeceğin bir hedef önünde {{isim}}. Acelesi yok; doğru zaman, doğru yerde, doğru şekilde."
+      },
+      "reversed": {
+        "past": "Geçmişte aşırılıklar veya sabırsızlık seni yordu {{isim}}. Bir ucuzdan öbür uca sallandın.",
+        "present": "Dengesizlik sinyalleri var {{isim}}. İş, ilişki veya sağlık konusunda aşırıya kaçıyor olabilirsin.",
+        "future": "Uyum bulmak bir çalışma gerektirecek {{isim}}. Ama emek verildiğinde, bu denge kalıcı ve güzel olacak."
+      }
+    },
+    {
+      "id": "seytan",
+      "name": "Şeytan",
+      "nameEn": "The Devil",
+      "number": 15,
+      "normal": {
+        "past": "Geçmişte seni bağlayan bir şey vardı {{isim}}; bir alışkanlık, bir ilişki, bir düşünce. Fark ettin mi henüz?",
+        "present": "Bir bağımlılık veya kısıtlayıcı inanç hayatında güç kazanıyor {{isim}}. Ama zincirlerin anahtarı hep elinde olmuştur.",
+        "future": "Kurtulma ve özgürleşme dönemi geliyor {{isim}}. Ama önce neyin seni bağladığını kabullenmek gerekiyor."
+      },
+      "reversed": {
+        "past": "Bağlarından kurtulmaya başladın geçmişte {{isim}}. Bu süreç kolay değildi ama başardın.",
+        "present": "Özgürleşme sürecinin ortasındasın {{isim}}. Eskiye dönme isteğine dikkat; o zincirlerin artık sana ait olmadığını hatırla.",
+        "future": "Tam anlamıyla özgürlük yakın {{isim}}. Son bir çabayla o zincirleri kıracaksın."
+      }
+    },
+    {
+      "id": "yikilan_kule",
+      "name": "Yıkılan Kule",
+      "nameEn": "The Tower",
+      "number": 16,
+      "normal": {
+        "past": "Geçmişte ani ve sarsıcı bir yıkım yaşadın {{isim}}. Güvendiğin bir şey çöktü. Ama bu yıkımın üstüne inşa ettiğin şey çok daha sağlam.",
+        "present": "Beklenmedik bir sarsıntı olabilir {{isim}}. Yıkılan Kule kartı, sağlam olmayan temellerin er ya da geç çökeceğini söylüyor. Buna hazır ol.",
+        "future": "Büyük bir dönüşüm gelecek {{isim}} ve seni şaşırtacak. Ama yıkıntının içinde saklı bir fırsat var; onu gör."
+      },
+      "reversed": {
+        "past": "Geçmişte bir felaketi son anda atlattın {{isim}} ya da yıkımı geciktirdin ama tamamen önleyemedin.",
+        "present": "Şu an önlenebilir bir kriz var önünde {{isim}}. Erken müdahale zarar azaltabilir.",
+        "future": "Yıkım küçük tutulabilir {{isim}}, eğer şimdi harekete geçersen. Proaktif ol."
+      }
+    },
+    {
+      "id": "yildiz",
+      "name": "Yıldız",
+      "nameEn": "The Star",
+      "number": 17,
+      "normal": {
+        "past": "Karanlık bir dönemin ardından ışık geldi geçmişinde {{isim}}. Umudunu kaybetmediğin için bugün buradásın.",
+        "present": "Umut ve ilham dönemini yaşıyorsun {{isim}}. Yıldız kartı, evrenin sana iyi dilekler gönderdiğini müjdeliyor.",
+        "future": "Hayallerinin gerçekleşmeye başladığı bir dönem seni bekliyor {{isim}}. Yıldızlar seninle hizalanıyor."
+      },
+      "reversed": {
+        "past": "Geçmişte umutsuzluk ve hayal kırıklıkları seni sarstı {{isim}}. Yıldızların sönük göründüğü karanlık bir dönem.",
+        "present": "Şu an inancını yeniden bulmakta zorlanıyorsun {{isim}}. Küçük güzellikler içinde ışığı arama vakti.",
+        "future": "Umut yeniden doğacak {{isim}}. Şu an çok zor gözükse de, karanlık gecenin en uzun saatinin şafaktan önce olduğunu unutma."
+      }
+    },
+    {
+      "id": "ay",
+      "name": "Ay",
+      "nameEn": "The Moon",
+      "number": 18,
+      "normal": {
+        "past": "Geçmişinde yaşadığın bazı tatsız olaylar bilinçaltına işlemiş ve seni bugünün korkuları haline gelmiş {{isim}}. Zorlu dönemlerden geçmişsin, karanlıkla baş etmeyi öğrenmişsin.",
+        "present": "Belirsizlik ve yanılsamalar içinden geçiyorsun {{isim}}. Her şey göründüğü gibi olmayabilir. Sezgilerine güven, ama gerçeği bulmak için derin soru.",
+        "future": "Gizlerin ortaya çıkacağı bir dönem geliyor {{isim}}. Ay kartı, gerçeğin zaman zaman acı verse de özgürleştirdiğini söylüyor."
+      },
+      "reversed": {
+        "past": "Geçmişteki korkularını ve yanılsamalarını aşmaya başladın {{isim}}. Bu süreç cesaret istedi.",
+        "present": "Karanlık düşünceler yavaş yavaş dağılıyor {{isim}}. Daha berrak bir zihin ufukta görünüyor.",
+        "future": "Yanılsamalar yerini gerçeğe bırakacak {{isim}}. Bu aydınlanma bazen ani, bazen yavaş gelir; ama kesin gelir."
+      }
+    },
+    {
+      "id": "gunes",
+      "name": "Güneş",
+      "nameEn": "The Sun",
+      "number": 19,
+      "normal": {
+        "past": "Geçmişinde mutluluk ve başarıyla dolu parlak bir dönem oldu {{isim}}. O güneşli günlerin sıcaklığı hâlâ içinde.",
+        "present": "Hayatının en aydınlık dönemlerinden birini yaşıyorsun {{isim}}! Güneş kartı neşe, başarı ve berraklık getiriyor. Kutla!",
+        "future": "Parlak ve mutlu bir dönem seni bekliyor {{isim}}. Hayatındaki karanlık bulutlar dağılacak, güneş açacak."
+      },
+      "reversed": {
+        "past": "Geçmişte mutluluğu kavrayamadan geçirdiğin zamanlar oldu {{isim}}. Umursamazlık veya aşırı iyimserlik bazı şeyleri kaçırdırdı.",
+        "present": "Neşeyi bulmakta zorlanıyorsun {{isim}}. Geçici bir bulut var ama güneş arkasında parlıyor.",
+        "future": "Mutluluk gelmeden önce küçük bir zorluk aşması gerekiyor {{isim}}. Sabırlı ol; Güneş her zaman doğar."
+      }
+    },
+    {
+      "id": "mahkeme",
+      "name": "Mahkeme",
+      "nameEn": "Judgement",
+      "number": 20,
+      "normal": {
+        "past": "Geçmişte önemli bir yargılama veya değerlendirme sürecinden geçtin {{isim}}. Bu süreç seni daha dürüst ve berrak bir zihinle çıkardı.",
+        "present": "Yeniden doğuş zamanı {{isim}}. Eski seni geride bırak, hesaplaşmalar tamamlanıyor. Yeni bir chapter başlıyor.",
+        "future": "Büyük bir uyanış seni bekliyor {{isim}}. Uzun süredir bastırılmış bir şey yüzeye çıkacak ve seni özgür kılacak."
+      },
+      "reversed": {
+        "past": "Geçmişte kendi kendini mahkum ettin {{isim}}. Aşırı öz eleştiri veya pişmanlık uzun süre omzunda kaldı.",
+        "present": "Kendini affetme zamanı {{isim}}. Herkes hata yapar; bu hatalar seni tanımlayamaz.",
+        "future": "Geçmişle hesaplaşmayı erteleme {{isim}}. Ne kadar erken yüzleşirsen, o kadar erken özgür olursun."
+      }
+    },
+    {
+      "id": "dunya",
+      "name": "Dünya",
+      "nameEn": "The World",
+      "number": 21,
+      "normal": {
+        "past": "Büyük bir döngü tamamlandı geçmişinde {{isim}}. Bir hedefin zirvesine ulaştın ve bunun tadını çıkardın.",
+        "present": "Tamamlanma ve başarı anındasın {{isim}}! Dünya kartı, her şeyin yerli yerine oturduğunu müjdeliyor. Alkışı hak ediyorsun.",
+        "future": "Hayatının en büyük başarılarından biri yaklaşıyor {{isim}}. Bu başarı sadece başlangıç; daha büyük döngüler seni bekliyor."
+      },
+      "reversed": {
+        "past": "Bir döngüyü tamamlayamadan geride bıraktın geçmişte {{isim}}. Yarım kalmış bir şey hâlâ içini kemiriyor.",
+        "present": "Tamamlanmamışlık hissi var {{isim}}. Son adımı atmak için neyin eksik olduğunu bul.",
+        "future": "Hedefine ulaşmak için son bir engel aşman gerekiyor {{isim}}. Bunu aştığında dünya gerçekten senin olacak."
+      }
+    }
+  ],
+  "positions": ["past", "present", "future"],
+  "positionLabels": {
+    "past": "Geçmiş",
+    "present": "Şimdiki Zaman",
+    "future": "Gelecek"
+  },
+  "intro": [
+    "{{isim}}, tarot kartları seninle konuşmaya hazır. Zihnini boşalt, gözlerini kapat. Hangi üç kartın senin için çekileceğini hisset.",
+    "Merhaba {{isim}}! Tarot falında üç kart çekeceğim. Geçmişin, bugünün ve geleceğin bir aynası olacak bu kartlar.",
+    "{{isim}}, kartlar hazır. Geçmiş, şimdi ve gelecek için her biri özel seçilmiş. Bakalım ne söylüyorlar."
+  ],
+  "closing": [
+    "Bu üç kart senin için özel bir mesaj taşıyor {{isim}}. Derinlerde yankılanan bir şeyler hissettiysen, bu kartların gerçek mesajı demektir.",
+    "Tarot falın bu kadar {{isim}}. Kartların söylediklerini hayatınla ilişkilendirdiğinde anlam bulacak.",
+    "Umarım bu okuma sana yeni bir perspektif kazandırmıştır {{isim}}. Magnus her zaman yanındadır."
+  ]
+}

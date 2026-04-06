@@ -1,0 +1,200 @@
+{
+  "id": "onboarding",
+  "title": "Onboarding",
+  "startNodeId": "greeting",
+  "nodes": [
+    {
+      "id": "greeting",
+      "bubbleColor": "color1",
+      "messages": [
+        "Merhaba! Ben Magnus. Seninle tanışmak, seni anlamak ve sana özel içerikler sunmak için birkaç soru sormam gerekiyor.",
+        "Selam! Magnus olarak karşındayım. Sana en iyi deneyimi yaşatmak için önce seni biraz tanıyalım.",
+        "Hoş geldin! Birkaç kısa soruyla seni tanıyacağım. Hazır mısın?"
+      ],
+      "answers": [
+        {
+          "labels": ["Hazırım!", "Başlayalım!", "Tabii ki!"],
+          "nextNodeId": "ask_name"
+        }
+      ]
+    },
+    {
+      "id": "ask_name",
+      "bubbleColor": "color1",
+      "messages": [
+        "Harika! Önce adını öğrenebilir miyim?",
+        "Güzel! Sana nasıl hitap edeyim?",
+        "Mükemmel! Önce adını öğrenmek istiyorum."
+      ],
+      "answers": [
+        {
+          "labels": ["__NAME_INPUT__"],
+          "action": "input_name",
+          "nextNodeId": "ask_gender"
+        }
+      ]
+    },
+    {
+      "id": "ask_gender",
+      "bubbleColor": "color1",
+      "messages": [
+        "Güzel bir isim {{isim}}! Cinsiyetini öğrenebilir miyim?",
+        "Çok güzel {{isim}}! Sana daha kişisel yorumlar yapabilmem için cinsiyetini merak ediyorum.",
+        "Harika! {{isim}}, cinsiyetini paylaşır mısın?"
+      ],
+      "answerLayout": "vertical",
+      "answers": [
+        {
+          "labels": ["Erkek"],
+          "setVariables": [{"variable": "cinsiyet", "value": "erkek"}],
+          "nextNodeId": "ask_age"
+        },
+        {
+          "labels": ["Kadın"],
+          "setVariables": [{"variable": "cinsiyet", "value": "kadin"}],
+          "nextNodeId": "ask_age"
+        },
+        {
+          "labels": ["Belirtmek İstemiyorum"],
+          "setVariables": [{"variable": "cinsiyet", "value": "belirtmek_istemiyorum"}],
+          "nextNodeId": "ask_age"
+        }
+      ]
+    },
+    {
+      "id": "ask_age",
+      "bubbleColor": "color1",
+      "messages": [
+        "Peki {{isim}}, kaç yaşındasın?",
+        "Anladım {{isim}}! Yaşını öğrenebilir miyim?",
+        "Teşekkürler {{isim}}! Şimdi yaşını sormak istiyorum."
+      ],
+      "answers": [
+        {
+          "labels": ["__AGE_INPUT__"],
+          "action": "input_age",
+          "nextNodeId": "ask_job"
+        }
+      ]
+    },
+    {
+      "id": "ask_job",
+      "bubbleColor": "color1",
+      "messages": [
+        "{{isim}}, mesleğin nedir?",
+        "Harika {{isim}}! Bir de ne iş yaptığını merak ediyorum.",
+        "Peki {{isim}}, çalışma durumun nedir?"
+      ],
+      "answerLayout": "vertical",
+      "answers": [
+        {
+          "labels": ["Ev Hanımı"],
+          "setVariables": [{"variable": "meslek", "value": "evhanimi"}],
+          "nextNodeId": "ask_marital"
+        },
+        {
+          "labels": ["Öğrenci"],
+          "setVariables": [{"variable": "meslek", "value": "ogrenci"}],
+          "nextNodeId": "ask_marital"
+        },
+        {
+          "labels": ["Kamu Sektörü"],
+          "setVariables": [{"variable": "meslek", "value": "kamusektoru"}],
+          "nextNodeId": "ask_marital"
+        },
+        {
+          "labels": ["Özel Sektör"],
+          "setVariables": [{"variable": "meslek", "value": "ozelsektoru"}],
+          "nextNodeId": "ask_marital"
+        },
+        {
+          "labels": ["Kendi İşini Yapıyor"],
+          "setVariables": [{"variable": "meslek", "value": "kendiisi"}],
+          "nextNodeId": "ask_marital"
+        },
+        {
+          "labels": ["Akademisyen"],
+          "setVariables": [{"variable": "meslek", "value": "akademisyen"}],
+          "nextNodeId": "ask_marital"
+        },
+        {
+          "labels": ["Emekli"],
+          "setVariables": [{"variable": "meslek", "value": "emekli"}],
+          "nextNodeId": "ask_marital"
+        },
+        {
+          "labels": ["İş Arıyorum"],
+          "setVariables": [{"variable": "meslek", "value": "isariyor"}],
+          "nextNodeId": "ask_marital"
+        },
+        {
+          "labels": ["Çalışmıyorum"],
+          "setVariables": [{"variable": "meslek", "value": "calismiyor"}],
+          "nextNodeId": "ask_marital"
+        }
+      ]
+    },
+    {
+      "id": "ask_marital",
+      "bubbleColor": "color1",
+      "messages": [
+        "Son olarak {{isim}}, medeni durumunu öğrenebilir miyim?",
+        "Neredeyse bitti {{isim}}! Medeni durumunu merak ediyorum.",
+        "Bir sorum daha var {{isim}}: İlişki durumun nedir?"
+      ],
+      "answerLayout": "vertical",
+      "answers": [
+        {
+          "labels": ["Bekar"],
+          "setVariables": [{"variable": "medeni_durum", "value": "iliskisi_yok"}],
+          "nextNodeId": "onboarding_complete"
+        },
+        {
+          "labels": ["İlişkisi Var"],
+          "setVariables": [{"variable": "medeni_durum", "value": "iliski_var"}],
+          "nextNodeId": "onboarding_complete"
+        },
+        {
+          "labels": ["Nişanlı"],
+          "setVariables": [{"variable": "medeni_durum", "value": "nisanli"}],
+          "nextNodeId": "onboarding_complete"
+        },
+        {
+          "labels": ["Evli"],
+          "setVariables": [{"variable": "medeni_durum", "value": "evli"}],
+          "nextNodeId": "onboarding_complete"
+        },
+        {
+          "labels": ["Boşanmış"],
+          "setVariables": [{"variable": "medeni_durum", "value": "bosanmis"}],
+          "nextNodeId": "onboarding_complete"
+        },
+        {
+          "labels": ["Dul"],
+          "setVariables": [{"variable": "medeni_durum", "value": "dul"}],
+          "nextNodeId": "onboarding_complete"
+        },
+        {
+          "labels": ["Ayrı Yaşıyorum"],
+          "setVariables": [{"variable": "medeni_durum", "value": "ayri_yasiyor"}],
+          "nextNodeId": "onboarding_complete"
+        }
+      ]
+    },
+    {
+      "id": "onboarding_complete",
+      "bubbleColor": "color1",
+      "isFortuneTrigger": false,
+      "messages": [
+        "Mükemmel {{isim}}! Artık seni daha iyi tanıyorum. Hazırsan başlayabiliriz!"
+      ],
+      "answers": [
+        {
+          "labels": [""],
+          "action": "auto_complete",
+          "nextNodeId": null
+        }
+      ]
+    }
+  ]
+}

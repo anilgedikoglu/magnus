@@ -1,0 +1,131 @@
+{
+  "greetings": {
+    "evhanimi": [
+      "Magnus'un kahve falı yorumuna hoş geldin Değerli {{isim}}. Evhanımlarından gün içerisinde çok fazla fal isteği alıyorum. Umarım seninle de kahve falında çok daha sık karşılaşırız.",
+      "Merhaba {{isim}}! Fincanını büyük bir dikkatle inceledim. Ev sıcaklığın ve sevgin bu telvelerden fışkırıyor."
+    ],
+    "ogrenci": [
+      "Magnus'un en keyifli bölümlerinden birine, kahve falı yorumuna hoş geldin {{isim}}! Bendeniz Magnus, fincanında boylu boyunca sana eşlik edeceğim. Öğrenci arkadaşlarımı asla yalnız bırakmam!",
+      "Merhaba {{isim}}! Genç bir zihnin fincanı her zaman heyecan verici olur. Seninki de tam öyle."
+    ],
+    "kamusektoru": [
+      "Selamlar {{isim}}! O yoğun iş rutininden ve koşuşturmacadan vakit bulup bana kahve falı gönderdiğin için çok teşekkür ederim. Fırtına gibi haberlerin efil efil estiği bir fincan duruyor önümde.",
+      "Merhaba {{isim}}! Kamu hizmetinin ağır sorumluluğunu taşıyan biri olarak, bu molayı hak etmişsin. Fincanın çok şey anlatıyor."
+    ],
+    "ozelsektoru": [
+      "Hoş geldin {{isim}}. Magnus'un deniz manzaralı kahve falı roof'undasın. Çalıştığın sektördeki insanların pek çok değişik zorlukla aynı anda mücadele ettiğinin farkındayım.",
+      "Merhaba {{isim}}! Özel sektörün tempolu dünyasından bir nefes almak için doğru yere geldin. Fincanın ilginç şeyler söylüyor."
+    ],
+    "emekli": [
+      "Kıymetli {{isim}}, Magnus kahve falı yorumuyla karşında. Keyifli bir fincan göndermişsin bana. Emekli dostların kıymetli vakitlerine değer katmak benim için onur verici.",
+      "Merhaba {{isim}}! Yılların deneyimini taşıyan bir zihnin fincanı okumak ayrı bir keyif. Telvelerin çok anlamlı."
+    ],
+    "akademisyen": [
+      "Efendim merhabalar. Kahve falı bölümünde böyle kıymetli akademisyenleri ağırlamak gerçekten büyük şeref. Her zamanki azami titizliğimi sergileyerek falını yorumladım {{isim}}.",
+      "Merhaba Sayın {{isim}}! Akademik dünyada yaptığınız katkıların yanı sıra, bu fincanınız da oldukça değerli bilgiler veriyor."
+    ],
+    "kendiisi": [
+      "İşinle ilgili omuzlarına binen tüm yük ve sorumluluğu üç beş dakika da olsa unutacağını umduğum keyifli bir kahve falından merhaba {{isim}}!",
+      "Selam {{isim}}! Kendi işinin sahibi olmak kolay değil. Ama fincanın, bu zorlu yolda güzel gelişmeler olacağını hissettiriyor."
+    ],
+    "isariyor": [
+      "Tekrar merhaba {{isim}}! Bu fincandan büyük beklentilerin olmasın. Bazı konular biraz muallakta çıkmış. Yine de başta iş arama sürecin olmak üzere hemen her konunun hayırlı akıbetlere varacağını telvelerin genel halinden çıkarmak çok da zor değil.",
+      "Merhaba {{isim}}! İş arayışı sürecinde sabırlı olmak önemli. Fincanın, doğru fırsatın yakında kapına geleceğini söylüyor."
+    ],
+    "calismiyor": [
+      "Fincan görsellerin detaylı değerlendirmesiyle karşındayım! Bazı konularda çok heyecanlandığını görüyorum; bu telvelerine de yansımış {{isim}}. Belli ki ilerleyen zamanlarda meşguliyetlerin artacak.",
+      "Merhaba {{isim}}! Hayatın her döneminin kendine has bir güzelliği var. Fincanın, yakında büyük bir değişimin kapıda olduğunu gösteriyor."
+    ],
+    "default": [
+      "Merhaba {{isim}}! Fincanını büyük bir merakla inceledim. Telvelerin çok şey anlatıyor.",
+      "Hoş geldin {{isim}}! Kahve falın hazır. Fincanında birbirinden ilginç şekiller görüyorum."
+    ]
+  },
+  "bodies": {
+    "love": {
+      "iliskisi_yok": [
+        "Aşk hayatın konusunda fincanın oldukça hareketli bir dönemden söz ediyor. Beklenmedik bir tanışma kapıda olabilir {{isim}}. Kalbini açık tut.",
+        "Yalnızlığın sona ereceğine dair güçlü işaretler var fincanda. Yakın çevrenizde dikkat etmediğin biri aslında seni çoktan fark etmiş.",
+        "Aşk konusunda sabırlı olman gerekiyor {{isim}}. Ama telvelerin anlattığı hikaye, güzel bir son içeriyor."
+      ],
+      "iliski_var": [
+        "İlişkindeki küçük sürtüşmeler geçici {{isim}}. Fincanın büyük bir uyum ve anlayış dönemine işaret ediyor. İletişime önem ver.",
+        "Sevgilinin seni düşündüğünü telvelerde görebiliyorum. Yakında güzel bir sürprizle karşılaşabilirsin.",
+        "İlişkinde önemli bir karar aşamasına yaklaşıyorsunuz {{isim}}. Fincan, bu kararın olumlu sonuçlanacağını söylüyor."
+      ],
+      "evli": [
+        "Eşinle aranızda güzel bir dönem başlıyor {{isim}}. Ufak ayrıntıları birlikte kutlayın, bu sizi birbirinize daha da bağlayacak.",
+        "Fincanın evliliğinde istikrar ve huzur dönemine işaret ediyor. Aile bağlarınız giderek güçleniyor.",
+        "Eşinizle ortak bir hayalinizin gerçekleşmek üzere olduğunu görüyorum. Sabırlı olun, güzel haberler geliyor."
+      ],
+      "nisanli": [
+        "Nişanlılık sürecinde bazı kararlar ön plana çıkacak {{isim}}. Fincan, bu kararları beraber almanın en doğrusu olduğunu söylüyor.",
+        "Evlilik hazırlıklarında beklenmedik bir kolaylık göreceksiniz. Fincanınız mutlu bir yuvanın haberini veriyor."
+      ],
+      "bosanmis": [
+        "Geçmişin izlerini silme vakti {{isim}}. Fincanın yeni bir başlangıcın tam eşiğinde olduğunu gösteriyor. Kalbini kapat değil, doğru zamanda aç.",
+        "Duygusal iyileşmen hız kazanıyor. Fincan, yakında içini açabileceğin, güvenebileceğin biriyle yolunun kesişeceğini söylüyor."
+      ],
+      "default": [
+        "Aşk hayatında ilginç gelişmeler kapıda {{isim}}. Fincanın sana güzel haberler veriyor.",
+        "Duygusal açıdan güçlendiğini hissedeceksin yakında. Fincan, kalbinin doğru yolda olduğunu söylüyor."
+      ]
+    },
+    "career": {
+      "kamusektoru": [
+        "İş hayatında önemli bir fırsat yaklaşıyor {{isim}}. Mesleki gelişim için sunulan bir teklifi gözden kaçırma.",
+        "Kurumda seni fark eden üstleriniz var. Emeklerinin karşılığını almaya başlayacaksın.",
+        "İş yükün artacak ama bu artışla birlikte tanınırlığın da yükselecek {{isim}}."
+      ],
+      "ozelsektoru": [
+        "İş dünyasında yeni bir kapı aralanıyor {{isim}}. Bu fırsatı değerlendirmek için doğru zaman.",
+        "Fincanın kariyer açısından güçlü bir dönemi işaret ediyor. Yeni bir proje veya pozisyon gündemde olabilir.",
+        "Mesleki ağını genişletmen gereken bir dönemdeysin. Doğru bağlantı her şeyi değiştirebilir."
+      ],
+      "ogrenci": [
+        "Akademik açıdan çok güzel bir dönem seni bekliyor {{isim}}. Çalışmaların yakında meyvesini verecek.",
+        "Sınav veya proje konusunda endişelerin var ama fincanın başarının yakın olduğunu söylüyor.",
+        "Yeni bir alan seni çekiyor, değil mi {{isim}}? Fincan o yönde ilerlemenin doğru olduğunu gösteriyor."
+      ],
+      "emekli": [
+        "Emekliliğin verimli geçiyor {{isim}}. Yeni bir hobi veya gönüllü faaliyet hayatına anlam katacak.",
+        "Fincanın aktif ve sağlıklı bir dönemde olduğunu gösteriyor. Sevdiklerinle daha fazla zaman geçireceksin."
+      ],
+      "default": [
+        "İş hayatında yeni bir dönem başlıyor {{isim}}. Çabaların karşılıksız kalmayacak.",
+        "Kariyer konusunda önemli bir adım atacaksın yakında. Fincan, bu adımın doğru olduğunu söylüyor."
+      ]
+    },
+    "money": [
+      "Mali açıdan dikkatli olman gereken bir dönemdesin {{isim}}. Büyük harcamalar için acele etme.",
+      "Beklenmedik bir maddi kazanç kapıda olabilir. Küçük bir şans seni şaşırtabilir {{isim}}.",
+      "Fincanın mali açıdan istikrar dönemini işaret ediyor. Tasarruflarına devam et.",
+      "Para konusunda beklemediğin bir kapı açılabilir {{isim}}. Dikkatli ol ve fırsatı değerlendir.",
+      "Maddi sıkıntıların yakında sona ereceğini fincanında görüyorum. Umudunu kaybetme {{isim}}."
+    ],
+    "health": [
+      "Sağlık konusunda kendinle daha çok ilgilenmeni öneririm {{isim}}. Küçük ihmallar birikerek büyüyebilir.",
+      "Dinlenmeye ihtiyacın var. Fincanın bu mesajı çok net veriyor {{isim}}.",
+      "Enerji seviyenin yükseldiğini görüyorum fincanda. Spor veya aktif bir uğraş sana iyi gelecek.",
+      "Bir sağlık konusunda merak ettiğin şeyin cevabı yakında gelecek {{isim}}. Hekiminizin tavsiyelerine uyun.",
+      "Genel sağlık durumun iyi {{isim}}, ama stres yönetimine dikkat et. Zihinsel dinginlik her şeyin başı."
+    ],
+    "general": [
+      "Hayatında büyük değişimler kapıda {{isim}}. Bu değişimlerden korkmak yerine onları kucakla.",
+      "Fincanında güzel bir yolculuk görüyorum. Hem içsel hem de dışsal açıdan büyüme zamanı.",
+      "Yakın çevrende seni destekleyen insanlar var {{isim}}. Onların desteğini hafife alma.",
+      "Kaybettiğini düşündüğün bir şey aslında seni koruyordu. Bunu ileride anlayacaksın {{isim}}.",
+      "Sabrettiğin şeylerin zamanı yaklaşıyor. Fincanın umut verici bir tablo çiziyor {{isim}}.",
+      "Sezgilerin şu sıralar çok güçlü {{isim}}. İçgüdülerine güven, seni doğru yere götürür.",
+      "Geçmişin bir gölgesi bugünün ışığını karartmasın {{isim}}. Her sabah yeni bir sayfa.",
+      "Hayatında birden fazla fırsat aynı anda kapıya dayanacak. Hangisini seçeceğini iyi düşün {{isim}}."
+    ]
+  },
+  "closings": [
+    "Bu falın önümüzdeki günlerde hayatına nasıl yansıdığını merak ediyorum {{isim}}. Umarım hayırlısı olur.",
+    "Fincanın sana güzel şeyler vaat ediyor {{isim}}. Umarım kaderinle barışık günler yaşarsın.",
+    "Kahve falın bu kadar {{isim}}. Her şeyin gönlünce olmasını diliyorum. Magnus olarak hep yanındayım.",
+    "Falının hayırlara vesile olmasını diliyorum {{isim}}. Güzel günler seni bekliyor.",
+    "Umarım bu yorum sana ilham verir {{isim}}. Magnus olarak her zaman seninle olmaktan mutluluk duyuyorum."
+  ]
+}

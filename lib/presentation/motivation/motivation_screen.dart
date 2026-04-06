@@ -4,12 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:uuid/uuid.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/variable_replacer.dart';
-import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
+
+// ── Motivasyon Metinleri ──────────────────────────────────────────────────────
+// Kaynak: C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\Motivasyon\Motivasyonlar\
+// Her .asset dosyasındaki Türkçe "aciklama" alanından derlendi.
+// gerekliDegiskenler: sadece "mod: motivasyon" içeriyor → kosullar: [] (herkese açık)
+// Günlük limit: 1. Tüm metinler gösterilince liste sıfırlanır.
+
+class _MotivasyonEntry {
+  final int id;
+  final String metin;
+  const _MotivasyonEntry({required this.id, required this.metin});
+}
 
 class MotivationScreen extends ConsumerStatefulWidget {
   const MotivationScreen({super.key});
@@ -20,13 +31,14 @@ class MotivationScreen extends ConsumerStatefulWidget {
 
 class _MotivationScreenState extends ConsumerState<MotivationScreen>
     with SingleTickerProviderStateMixin {
-  static const _uuid = Uuid();
+  static const _prefKeyGosterilen = 'motivasyon_gosterilen_idler';
+  static const _prefKeyBugunTarih = 'motivasyon_bugun_tarih';
+  static const _prefKeyBugunId    = 'motivasyon_bugun_id';
+
   final _rng = Random();
 
-  List<String> _motivasyonlar = [];
-  int _index = 0;
+  _MotivasyonEntry? _bugunEntry;
   bool _loading = true;
-  bool _saving = false;
 
   late AnimationController _animCtrl;
   late Animation<double> _fadeAnim;
@@ -36,7 +48,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
     super.initState();
     _animCtrl = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 350),
+      duration: const Duration(milliseconds: 400),
     );
     _fadeAnim = CurvedAnimation(parent: _animCtrl, curve: Curves.easeOut);
     _loadData();
@@ -49,49 +61,89 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
   }
 
   Future<void> _loadData() async {
-    final json = await rootBundle.loadString('assets/data/ozlusoz_motivasyon.json');
-    final data = jsonDecode(json) as Map<String, dynamic>;
-    final all = List<String>.from(data['motivasyonlar'] as List);
-    all.shuffle(_rng);
+    final prefs = await SharedPreferences.getInstance();
+    final bugunStr = DateTime.now().toIso8601String().substring(0, 10); // YYYY-MM-DD
+
+    // Bugün zaten gösterildiyse pop-up göster ve geri dön
+    final kayitliTarih = prefs.getString(_prefKeyBugunTarih);
+    if (kayitliTarih == bugunStr) {
+      if (!mounted) return;
+      await _gunlukHakDolduDialog();
+      return;
+    }
+
+    // JSON yükle
+    final jsonStr = await rootBundle.loadString('assets/data/motivasyonlar.json');
+    final data = jsonDecode(jsonStr) as Map<String, dynamic>;
+    final tumListe = (data['motivasyonlar'] as List<dynamic>)
+        .map((e) => _MotivasyonEntry(
+              id: (e as Map<String, dynamic>)['id'] as int,
+              metin: e['metin'] as String,
+            ))
+        .toList();
+
+    // Gösterilen ID'leri yükle
+    List<String> gosterilenIdler = prefs.getStringList(_prefKeyGosterilen) ?? [];
+
+    // Gösterilmeyenleri filtrele
+    var kalan = tumListe.where((m) => !gosterilenIdler.contains('${m.id}')).toList();
+
+    // Hepsi gösterildiyse sıfırla
+    if (kalan.isEmpty) {
+      gosterilenIdler = [];
+      await prefs.setStringList(_prefKeyGosterilen, []);
+      kalan = List.from(tumListe);
+    }
+
+    // Karıştır ve ilkini seç
+    kalan.shuffle(_rng);
+    final secilen = kalan.first;
+
+    // Kaydet
+    gosterilenIdler.add('${secilen.id}');
+    await prefs.setStringList(_prefKeyGosterilen, gosterilenIdler);
+    await prefs.setString(_prefKeyBugunTarih, bugunStr);
+    await prefs.setInt(_prefKeyBugunId, secilen.id);
+
+    if (!mounted) return;
     setState(() {
-      _motivasyonlar = all;
+      _bugunEntry = secilen;
       _loading = false;
     });
     _animCtrl.forward();
   }
 
-  Future<void> _next() async {
-    await _animCtrl.reverse();
-    setState(() {
-      _index = (_index + 1) % _motivasyonlar.length;
-    });
-    _animCtrl.forward();
-  }
-
-  Future<void> _saveToInbox() async {
-    setState(() => _saving = true);
-    try {
-      final profile = ref.read(userProfileProvider);
-      final vars = profile.toVariableMap();
-      final text = VariableReplacer.replace(_motivasyonlar[_index], vars);
-      final item = InboxItem(
-        id: _uuid.v4(),
-        title: 'Günlük Motivasyon',
-        text: text,
-        date: DateTime.now().toIso8601String(),
-        fortuneTypeKey: 'motivation',
-      );
-      await ref.read(inboxProvider.notifier).addItem(item);
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Gelen kutusuna kaydedildi'),
-          duration: Duration(seconds: 2),
+  Future<void> _gunlukHakDolduDialog() async {
+    if (!mounted) return;
+    await showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: const Color(0xFF1A1040),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: const Text(
+          '💫 Motivasyon',
+          style: TextStyle(color: Colors.white, fontSize: 17),
+          textAlign: TextAlign.center,
         ),
-      );
-    } finally {
-      if (mounted) setState(() => _saving = false);
-    }
+        content: const Text(
+          'Günlük motivasyon hakkın doldu.',
+          style: TextStyle(color: Colors.white70, fontSize: 15, height: 1.5),
+          textAlign: TextAlign.center,
+        ),
+        actionsAlignment: MainAxisAlignment.center,
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: const Text(
+              'Tamam',
+              style: TextStyle(color: Color(0xFFAA88FF), fontSize: 15),
+            ),
+          ),
+        ],
+      ),
+    );
+    if (mounted) context.pop();
   }
 
   @override
@@ -110,141 +162,59 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
       ),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
-          : GestureDetector(
-              onHorizontalDragEnd: (d) {
-                if ((d.primaryVelocity ?? 0).abs() > 80) _next();
-              },
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: FadeTransition(
-                        opacity: _fadeAnim,
-                        child: _buildCard(profile),
-                      ),
-                    ),
-                  ),
-                  _buildBottomBar(),
-                ],
-              ),
+          : FadeTransition(
+              opacity: _fadeAnim,
+              child: _buildContent(profile),
             ),
     );
   }
 
-  Widget _buildCard(profile) {
+  Widget _buildContent(profile) {
+    final entry = _bugunEntry;
+    if (entry == null) return const SizedBox.shrink();
+
     final vars = profile.toVariableMap();
-    final raw = _motivasyonlar.isNotEmpty ? _motivasyonlar[_index] : '';
-    final text = VariableReplacer.replace(raw, vars);
+    final text = VariableReplacer.replace(entry.metin, vars);
 
-    return Container(
-      width: double.infinity,
-      constraints: const BoxConstraints(minHeight: 240),
-      padding: const EdgeInsets.all(28),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF140D46), Color(0xFF0D0A20)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(
-          color: AppColors.bubble3.first.withValues(alpha: 0.5),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.bubble3.first.withValues(alpha: 0.3),
-            blurRadius: 20,
-            offset: const Offset(0, 6),
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(20, 24, 20, 40),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(28),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF140D46), Color(0xFF0D0A20)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-        ],
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text('💫', style: TextStyle(fontSize: 36)),
-          const SizedBox(height: 20),
-          Text(
-            text,
-            textAlign: TextAlign.center,
-            style: AppTextStyles.cardText.copyWith(
-              fontSize: text.length > 300 ? 13 : (text.length > 150 ? 15 : 17),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(
+            color: AppColors.bubble3.first.withValues(alpha: 0.5),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.bubble3.first.withValues(alpha: 0.3),
+              blurRadius: 20,
+              offset: const Offset(0, 6),
             ),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            '${_index + 1} / ${_motivasyonlar.length}',
-            style: AppTextStyles.inboxMeta,
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildBottomBar() {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
-      decoration: const BoxDecoration(
-        color: AppColors.navBarBackground,
-        border: Border(top: BorderSide(color: AppColors.divider)),
-      ),
-      child: SafeArea(
-        top: false,
-        child: Row(
+          ],
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Expanded(
-              child: GestureDetector(
-                onTap: _next,
-                child: Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: AppColors.backgroundCard,
-                    borderRadius: BorderRadius.circular(25),
-                    border: Border.all(color: AppColors.divider),
-                  ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.refresh_rounded,
-                          color: AppColors.navBarActive, size: 18),
-                      SizedBox(width: 8),
-                      Text('Yeni Metin',
-                          style: TextStyle(
-                              color: AppColors.navBarActive, fontSize: 14)),
-                    ],
-                  ),
-                ),
+            const Text('💫', style: TextStyle(fontSize: 36)),
+            const SizedBox(height: 20),
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: AppTextStyles.cardText.copyWith(
+                fontSize: text.length > 300 ? 13 : (text.length > 150 ? 15 : 17),
               ),
             ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: GestureDetector(
-                onTap: _saving ? null : _saveToInbox,
-                child: Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: AppColors.bubble3,
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    borderRadius: BorderRadius.circular(25),
-                  ),
-                  child: Center(
-                    child: _saving
-                        ? const SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(
-                                strokeWidth: 2, color: Colors.white))
-                        : const Text('Kaydet 💫',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600)),
-                  ),
-                ),
-              ),
+            const SizedBox(height: 16),
+            Text(
+              '#${entry.id}',
+              style: AppTextStyles.inboxMeta,
             ),
           ],
         ),

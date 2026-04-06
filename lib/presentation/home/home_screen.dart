@@ -138,7 +138,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               const SizedBox(width: 8),
               Expanded(
                 child: _ChatBubble(
-                  text: _greeting(name),
+                  text: _anaMenu1SohbetBalonu(name),
                   gradient: const [Color(0xFF1A6B5A), Color(0xFF1A5E6B)],
                   borderColor: const Color(0xFF2DAAA0),
                 ),
@@ -242,14 +242,30 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  String _greeting(String name) {
-    const messages = [
-      "Arş'dan müjdeler sana ulaşsın. Mutluluk büsbütün boyunu aşsın.",
-      'Yıldızlar seninle konuşmak istiyor.',
-      'Kaderinle yüzleşmeye hazır mısın?',
-    ];
-    final n = name.isNotEmpty ? ' Hoş geldin Sevgili $name! 😊' : '';
-    return '${messages[DateTime.now().hour % messages.length]}$n';
+  // ── Ana Menü 1. Sohbet Balonu ──────────────────────────────────────────────
+  // Her app açılışında aşağıdaki selamlamalardan biri rastgele gösterilir.
+  // Kullanıcı adı yoksa sade selamlama döner.
+  String _anaMenu1SohbetBalonu(String name) {
+    final n = name.isNotEmpty ? name : '';
+    final List<String> selamlamalar = name.isNotEmpty
+        ? [
+            'Hoş geldin $n!',
+            'Merhaba, seni görmek güzel $n!',
+            'Ne iyi ettin de geldin $n!',
+            'Hoş geldin, safalar getirdin $n!',
+            'Seni burada görmek güzel $n.',
+            '$n merhaba! Nasılsın? Dilerim iyisindir. 😊',
+          ]
+        : [
+            'Hoş geldin!',
+            'Merhaba, seni görmek güzel!',
+            'Ne iyi ettin de geldin!',
+            'Hoş geldin, safalar getirdin!',
+            'Seni burada görmek güzel.',
+            'Merhaba! Nasılsın? Dilerim iyisindir. 😊',
+          ];
+    final index = DateTime.now().millisecondsSinceEpoch % selamlamalar.length;
+    return selamlamalar[index];
   }
 }
 

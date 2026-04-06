@@ -56,7 +56,8 @@ class _Seg {
 class _DonutPainter extends CustomPainter {
   final List<_Seg> segments;
   final double strokeWidth;
-  const _DonutPainter(this.segments, this.strokeWidth);
+  final double progress; // 0.0 → 1.0 arası animasyon değeri
+  const _DonutPainter(this.segments, this.strokeWidth, this.progress);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -67,53 +68,97 @@ class _DonutPainter extends CustomPainter {
     const gap = 0.07;
     var start = -pi / 2;
 
+    // Toplam açı progress ile ölçeklenir (saat yönünde dolma)
+    double remaining = progress; // 0→1 toplam ilerleme
+
     for (final seg in segments) {
-      final sweep = 2 * pi * seg.fraction;
-      final glow = Paint()
-        ..color = seg.color.withValues(alpha: 0.35)
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = strokeWidth + 6
-        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 5);
-      canvas.drawArc(rect, start + gap / 2, sweep - gap, false, glow);
+      if (remaining <= 0) break;
+      final fullSweep = 2 * pi * seg.fraction;
+      final segProgress = (remaining / seg.fraction).clamp(0.0, 1.0);
+      final sweep = fullSweep * segProgress;
 
-      final fill = Paint()
-        ..color = seg.color
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = strokeWidth
-        ..strokeCap = StrokeCap.butt;
-      canvas.drawArc(rect, start + gap / 2, sweep - gap, false, fill);
+      if (sweep > gap) {
+        final glow = Paint()
+          ..color = seg.color.withValues(alpha: 0.35)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = strokeWidth + 6
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 5);
+        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, glow);
 
-      start += sweep;
+        final fill = Paint()
+          ..color = seg.color
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = strokeWidth
+          ..strokeCap = StrokeCap.butt;
+        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, fill);
+      }
+
+      remaining -= seg.fraction;
+      start += fullSweep;
     }
   }
 
   @override
-  bool shouldRepaint(_DonutPainter old) => false;
+  bool shouldRepaint(_DonutPainter old) => old.progress != progress;
 }
 
 // ─── Donut grafik widget ──────────────────────────────────────────────────────
 
-class _DonutChart extends StatelessWidget {
+class _DonutChart extends StatefulWidget {
   final String title;
   final List<_Seg> segments;
   final double size;
+  final Duration delay;
 
   const _DonutChart({
     required this.title,
     required this.segments,
     this.size = 130,
+    this.delay = Duration.zero,
   });
 
   @override
+  State<_DonutChart> createState() => _DonutChartState();
+}
+
+class _DonutChartState extends State<_DonutChart>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _ctrl;
+  late Animation<double> _anim;
+
+  @override
+  void initState() {
+    super.initState();
+    _ctrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 900),
+    );
+    _anim = CurvedAnimation(parent: _ctrl, curve: Curves.easeOut);
+
+    // Delay sonrası başlat
+    Future.delayed(widget.delay, () {
+      if (mounted) _ctrl.forward();
+    });
+  }
+
+  @override
+  void dispose() {
+    _ctrl.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final size = widget.size;
     final sw = size * 0.17;
     final r = (size - sw) / 2;
     final cx = size / 2;
     final cy = size / 2;
 
+    // Etiketler tam pozisyonda (animasyondan bağımsız, hep görünür)
     final labelWidgets = <Widget>[];
     var startAngle = -pi / 2;
-    for (final seg in segments) {
+    for (final seg in widget.segments) {
       final sweep = 2 * pi * seg.fraction;
       final mid = startAngle + sweep / 2;
       final lr = r + sw * 0.6 + 10;
@@ -124,16 +169,20 @@ class _DonutChart extends StatelessWidget {
           left: lx - 28,
           top: ly - 9,
           width: 56,
-          child: Text(
-            seg.label,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: seg.color,
-              fontSize: 8.5,
-              fontWeight: FontWeight.w700,
-              shadows: [
-                Shadow(color: Colors.black, blurRadius: 4),
-              ],
+          child: AnimatedBuilder(
+            animation: _anim,
+            builder: (_, __) => Opacity(
+              opacity: _anim.value,
+              child: Text(
+                seg.label,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: seg.color,
+                  fontSize: 8.5,
+                  fontWeight: FontWeight.w700,
+                  shadows: const [Shadow(color: Colors.black, blurRadius: 4)],
+                ),
+              ),
             ),
           ),
         ),
@@ -146,14 +195,17 @@ class _DonutChart extends StatelessWidget {
       height: size,
       child: Stack(
         children: [
-          CustomPaint(
-            size: Size(size, size),
-            painter: _DonutPainter(segments, sw),
+          AnimatedBuilder(
+            animation: _anim,
+            builder: (_, __) => CustomPaint(
+              size: Size(size, size),
+              painter: _DonutPainter(widget.segments, sw, _anim.value),
+            ),
           ),
           ...labelWidgets,
           Center(
             child: Text(
-              title,
+              widget.title,
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Colors.white,
@@ -546,10 +598,11 @@ class SettingsScreen extends ConsumerWidget {
   ) {
     return Column(
       children: [
-        // Modalite
+        // Modalite — ilk başlar
         _DonutChart(
           title: 'Modalite',
           size: 120,
+          delay: Duration.zero,
           segments: [
             _Seg(const Color(0xFFFFDD00), mod[0], 'Kardinal'),
             _Seg(const Color(0xFF00EE88), mod[1], 'Değişken'),
@@ -557,13 +610,14 @@ class SettingsScreen extends ConsumerWidget {
           ],
         ),
         const SizedBox(height: 12),
-        // Polarite + Element - yan yana
+        // Polarite + Element — sırayla
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             _DonutChart(
               title: 'Polarite',
               size: 120,
+              delay: const Duration(milliseconds: 950),
               segments: [
                 _Seg(const Color(0xFFAA44FF), pol[0], 'Feminen'),
                 _Seg(const Color(0xFF00CCAA), pol[1], 'Maskülen'),
@@ -572,6 +626,7 @@ class SettingsScreen extends ConsumerWidget {
             _DonutChart(
               title: 'Element',
               size: 120,
+              delay: const Duration(milliseconds: 1900),
               segments: [
                 _Seg(const Color(0xFFFF6622), el[0], 'Ateş'),
                 _Seg(const Color(0xFF88DD00), el[1], 'Toprak'),

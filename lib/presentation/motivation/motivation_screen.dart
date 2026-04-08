@@ -64,14 +64,6 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
     final prefs = await SharedPreferences.getInstance();
     final bugunStr = DateTime.now().toIso8601String().substring(0, 10); // YYYY-MM-DD
 
-    // Bugün zaten gösterildiyse pop-up göster ve geri dön
-    final kayitliTarih = prefs.getString(_prefKeyBugunTarih);
-    if (kayitliTarih == bugunStr) {
-      if (!mounted) return;
-      await _gunlukHakDolduDialog();
-      return;
-    }
-
     // JSON yükle
     final jsonStr = await rootBundle.loadString('assets/data/motivasyonlar.json');
     final data = jsonDecode(jsonStr) as Map<String, dynamic>;
@@ -111,39 +103,6 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
       _loading = false;
     });
     _animCtrl.forward();
-  }
-
-  Future<void> _gunlukHakDolduDialog() async {
-    if (!mounted) return;
-    await showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (ctx) => AlertDialog(
-        backgroundColor: const Color(0xFF1A1040),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: const Text(
-          '💫 Motivasyon',
-          style: TextStyle(color: Colors.white, fontSize: 17),
-          textAlign: TextAlign.center,
-        ),
-        content: const Text(
-          'Günlük motivasyon hakkın doldu.',
-          style: TextStyle(color: Colors.white70, fontSize: 15, height: 1.5),
-          textAlign: TextAlign.center,
-        ),
-        actionsAlignment: MainAxisAlignment.center,
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text(
-              'Tamam',
-              style: TextStyle(color: Color(0xFFAA88FF), fontSize: 15),
-            ),
-          ),
-        ],
-      ),
-    );
-    if (mounted) context.pop();
   }
 
   @override
@@ -210,11 +169,6 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
               style: AppTextStyles.cardText.copyWith(
                 fontSize: text.length > 300 ? 13 : (text.length > 150 ? 15 : 17),
               ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              '#${entry.id}',
-              style: AppTextStyles.inboxMeta,
             ),
           ],
         ),

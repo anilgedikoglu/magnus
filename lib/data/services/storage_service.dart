@@ -58,6 +58,10 @@ class StorageService {
     final items = loadInbox();
     // Newest first
     items.insert(0, item);
+    // Max 20 fal — en eski (son) öğeyi sil
+    if (items.length > 20) {
+      items.removeRange(20, items.length);
+    }
     await saveInbox(items);
   }
 

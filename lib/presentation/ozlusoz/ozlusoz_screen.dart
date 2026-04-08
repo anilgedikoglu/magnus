@@ -8,7 +8,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/utils/variable_replacer.dart';
 import '../../data/models/inbox_item.dart';
+import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
 // Kaynak: C:\Users\AG\Desktop\cleaned_tarot\OzluSozler\
@@ -128,9 +130,13 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
     if (_bugunEntry == null) return;
     setState(() => _saving = true);
     try {
+      final resolvedMetin = VariableReplacer.replace(
+        _bugunEntry!.metin,
+        ref.read(userProfileProvider).toVariableMap(),
+      );
       final text = _bugunEntry!.yazar.isNotEmpty
-          ? '"${_bugunEntry!.metin}"\n— ${_bugunEntry!.yazar}'
-          : '"${_bugunEntry!.metin}"';
+          ? '"$resolvedMetin"\n— ${_bugunEntry!.yazar}'
+          : '"$resolvedMetin"';
       final item = InboxItem(
         id: _uuid.v4(),
         title: 'Özlü Söz',
@@ -219,6 +225,11 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
     final entry = _bugunEntry;
     if (entry == null) return const SizedBox.shrink();
 
+    final resolvedMetin = VariableReplacer.replace(
+      entry.metin,
+      ref.read(userProfileProvider).toVariableMap(),
+    );
+
     return SingleChildScrollView(
       padding: const EdgeInsets.fromLTRB(20, 24, 20, 40),
       child: Column(
@@ -263,10 +274,10 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  entry.metin,
+                  resolvedMetin,
                   textAlign: TextAlign.center,
                   style: AppTextStyles.cardText.copyWith(
-                    fontSize: entry.metin.length > 200 ? 14 : 16,
+                    fontSize: resolvedMetin.length > 200 ? 14 : 16,
                   ),
                 ),
                 Text(

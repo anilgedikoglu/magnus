@@ -18,7 +18,7 @@ class InboxScreen extends ConsumerWidget {
       backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.navBarBackground,
-        title: const Text('Fallarım'),
+        title: const Text('GELEN KUTUSU'),
         actions: [
           if (items.isNotEmpty)
             TextButton(
@@ -52,12 +52,12 @@ class InboxScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 20),
           Text(
-            'Henüz Fal Yok',
+            'BURALAR ÇOK SESSİZ...',
             style: AppTextStyles.title,
           ),
           const SizedBox(height: 8),
           Text(
-            'Kahve falı veya tarot okutmak\niçin sohbet ekranına git.',
+            'Okumaya değer bir şey henüz almadın.',
             style: AppTextStyles.inboxDescription,
             textAlign: TextAlign.center,
           ),
@@ -103,7 +103,7 @@ class InboxScreen extends ConsumerWidget {
         backgroundColor: AppColors.backgroundSurface,
         title: Text('Tüm falları sil?', style: AppTextStyles.inboxTitle),
         content: Text(
-          'Bu işlem geri alınamaz.',
+          'Hazırlanmakta olan fallar korunur, geri kalanlar silinir.',
           style: AppTextStyles.inboxDescription,
         ),
         actions: [
@@ -125,9 +125,12 @@ class InboxScreen extends ConsumerWidget {
       ),
     );
     if (confirmed == true) {
+      // Hazırlanmakta olan (kilitli) falları silme, gerisini sil
       final items = ref.read(inboxProvider);
       for (final item in items) {
-        await ref.read(inboxProvider.notifier).deleteItem(item.id);
+        if (!item.isLocked) {
+          await ref.read(inboxProvider.notifier).deleteItem(item.id);
+        }
       }
     }
   }

@@ -4,6 +4,128 @@ import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../data/models/inbox_item.dart';
 
+// Kart adı → asset yolu eşleştirmesi (tarot_screen._allCards ile birebir)
+const _tarotAssets = <String, String>{
+  'Azize': 'assets/images/tarot/Azize.jpg',
+  'Budala (Deli)': 'assets/images/tarot/Budala-Deli.jpg',
+  'Büyücü': 'assets/images/tarot/Buyucu.jpg',
+  'Adalet': 'assets/images/tarot/adalet.jpg',
+  'Araba': 'assets/images/tarot/araba.jpg',
+  'Asa Altılısı': 'assets/images/tarot/asaaltilisi.jpg',
+  'Asa Ası': 'assets/images/tarot/asaasi.jpg',
+  'Asa Beşlisi': 'assets/images/tarot/asabeslisi.jpg',
+  'Asa Dokuzlusu': 'assets/images/tarot/asadokuzlusu.jpg',
+  'Asa Dörtlüsü': 'assets/images/tarot/asadortlusu.jpg',
+  'Asa İkilisi': 'assets/images/tarot/asaikilisi.jpg',
+  'Asa Kralı': 'assets/images/tarot/asakrali.jpg',
+  'Asa Kraliçesi': 'assets/images/tarot/asakralicesi.jpg',
+  'Asa Onlusu': 'assets/images/tarot/asaonlusu.jpg',
+  'Asa Prensi': 'assets/images/tarot/asaprensi.jpg',
+  'Asa Sekizlisi': 'assets/images/tarot/asasekizlisi.jpg',
+  'Asa Şövalyesi': 'assets/images/tarot/asasovalyesi.jpg',
+  'Asa Üçlüsü': 'assets/images/tarot/asauclusu.jpg',
+  'Asa Yedilisi': 'assets/images/tarot/asayedilisi.jpg',
+  'Aşıklar': 'assets/images/tarot/asiklar.jpg',
+  'Asılan Adam': 'assets/images/tarot/asilanadam.jpg',
+  'Ay': 'assets/images/tarot/ay.jpg',
+  'Aziz': 'assets/images/tarot/aziz.jpg',
+  'Denge': 'assets/images/tarot/denge.jpg',
+  'Dünya': 'assets/images/tarot/dunya.jpg',
+  'Güç': 'assets/images/tarot/guc.jpg',
+  'Güneş': 'assets/images/tarot/gunes.jpg',
+  'İmparator': 'assets/images/tarot/imparator.jpg',
+  'İmparatoriçe': 'assets/images/tarot/imparatorice.jpg',
+  'Kader Çarkı': 'assets/images/tarot/kadercarki.jpg',
+  'Kılıç Altılısı': 'assets/images/tarot/kilicaltilisi.jpg',
+  'Kılıç Ası': 'assets/images/tarot/kilicasi.jpg',
+  'Kılıç Beşlisi': 'assets/images/tarot/kilicbeslisi.jpg',
+  'Kılıç Dokuzlusu': 'assets/images/tarot/kilicdokuzlusu.jpg',
+  'Kılıç Dörtlüsü': 'assets/images/tarot/kilicdortlusu.jpg',
+  'Kılıç İkilisi': 'assets/images/tarot/kilicikilisi.jpg',
+  'Kılıç Kralı': 'assets/images/tarot/kilickrali.jpg',
+  'Kılıç Kraliçesi': 'assets/images/tarot/kilickralicesi.jpg',
+  'Kılıç Onlusu': 'assets/images/tarot/kiliconlusu.jpg',
+  'Kılıç Prensi': 'assets/images/tarot/kilicprensi.jpg',
+  'Kılıç Sekizlisi': 'assets/images/tarot/kilicsekizlisi.jpg',
+  'Kılıç Şövalyesi': 'assets/images/tarot/kilicsovalyesi.jpg',
+  'Kılıç Üçlüsü': 'assets/images/tarot/kilicuclusu.jpg',
+  'Kılıç Yedilisi': 'assets/images/tarot/kilicyedilisi.jpg',
+  'Kupa Altılısı': 'assets/images/tarot/kupaaltilisi.jpg',
+  'Kupa Ası': 'assets/images/tarot/kupaasi.jpg',
+  'Kupa Beşlisi': 'assets/images/tarot/kupabeslisi.jpg',
+  'Kupa Dokuzlusu': 'assets/images/tarot/kupadokuzlusu.jpg',
+  'Kupa Dörtlüsü': 'assets/images/tarot/kupadortlusu.jpg',
+  'Kupa İkilisi': 'assets/images/tarot/kupaikilisi.jpg',
+  'Kupa Kralı': 'assets/images/tarot/kupakrali.jpg',
+  'Kupa Kraliçesi': 'assets/images/tarot/kupakralicesi.jpg',
+  'Kupa Onlusu': 'assets/images/tarot/kupaonlusu.jpg',
+  'Kupa Prensi': 'assets/images/tarot/kupaprensi.jpg',
+  'Kupa Sekizlisi': 'assets/images/tarot/kupasekizlisi.jpg',
+  'Kupa Şövalyesi': 'assets/images/tarot/kupasovalyesi.jpg',
+  'Kupa Üçlüsü': 'assets/images/tarot/kupauclusu.jpg',
+  'Kupa Yedilisi': 'assets/images/tarot/kupayedilisi.jpg',
+  'Mahkeme': 'assets/images/tarot/mahkeme.jpg',
+  'Münzevi': 'assets/images/tarot/munzevi.jpg',
+  'Ölüm': 'assets/images/tarot/olum.jpg',
+  'Şeytan': 'assets/images/tarot/seytan.jpg',
+  'Tılsım Altılısı': 'assets/images/tarot/tilsimaltilisi.jpg',
+  'Tılsım Ası': 'assets/images/tarot/tilsimasi.jpg',
+  'Tılsım Beşlisi': 'assets/images/tarot/tilsimbeslisi.jpg',
+  'Tılsım Dokuzlusu': 'assets/images/tarot/tilsimdokuzlusu.jpg',
+  'Tılsım Dörtlüsü': 'assets/images/tarot/tilsimdortlusu.jpg',
+  'Tılsım İkilisi': 'assets/images/tarot/tilsimikilisi.jpg',
+  'Tılsım Kralı': 'assets/images/tarot/tilsimkrali.jpg',
+  'Tılsım Kraliçesi': 'assets/images/tarot/tilsimkralicesi.jpg',
+  'Tılsım Onlusu': 'assets/images/tarot/tilsimonlusu.jpg',
+  'Tılsım Prensi': 'assets/images/tarot/tilsimprensi.jpg',
+  'Tılsım Sekizlisi': 'assets/images/tarot/tilsimsekizlisi.jpg',
+  'Tılsım Şövalyesi': 'assets/images/tarot/tilsimsovalyesi.jpg',
+  'Tılsım Üçlüsü': 'assets/images/tarot/tilsimuclusu.jpg',
+  'Tılsım Yedilisi': 'assets/images/tarot/tilsimyedilisi.jpg',
+  'Yıkılan Kule': 'assets/images/tarot/yikilankule.jpg',
+  'Yıldız': 'assets/images/tarot/yildiz.jpg',
+};
+
+// Şans kartları (tarot2) jsonName → PNG dosya adı
+const _sans2file = <String, String>{
+  'Adalet': 'Adalet.png', 'Asiklar': 'Asiklar.png', 'AsilanAdam': 'AsilanAdam.png',
+  'Ay': 'Ay.png', 'Aziz': 'Aziz.png', 'Azize': 'Azize.png', 'Buyucu': 'Buyucu.png',
+  'Deli': 'Budala.png', 'Degnekaltilisi': 'DegnekAltilisi.png', 'Degnekasi': 'DegnekAsi.png',
+  'Degnekbeslisi': 'DegnekBeslisi.png', 'Degnekdokuzlusu': 'DegnekDokuzlusu.png',
+  'Degnekdortlusu': 'DegnekDortlusu.png', 'Degnekikilisi': 'Degnekikilisi.png',
+  'Degnekkrali': 'DegnekKrali.png', 'Degnekkralicesi': 'DegnekKralicesi.png',
+  'Degnekonlusu': 'DegnekOnlusu.png', 'Degnekprensi': 'DegnekPrensi.png',
+  'Degneksekizlisi': 'DegnekSekizlisi.png', 'Degneksovalyesi': 'DegnekSovalyesi.png',
+  'Degnekuclusu': 'DegnekUclusu.png', 'Degnekyedilisi': 'DegnekYedilisi.png',
+  'Denge': 'Denge.png', 'Dunya': 'Dunya.png', 'Ermis': 'Ermis.png',
+  'Guc': 'Guc.png', 'Gunes': 'Gunes.png', 'Imparator': 'Imparator.png',
+  'Imparatorice': 'Imparatorice.png', 'KaderCarki': 'KaderCarki.png',
+  'KilicAsi': 'KilicAsi.png', 'Kilicaltilisi': 'KilicAltilisi.png',
+  'Kilicbeslisi': 'Kilicbeslisi.png', 'Kilicdokuzlusu': 'KilicDokuzlusu.png',
+  'Kilicdortlusu': 'Kilicdortlusu.png', 'Kilicikilisi': 'Kilicikilisi.png',
+  'Kilickrali': 'KilicKrali.png', 'Kilickralicesi': 'KilicKralicesi.png',
+  'Kiliconlusu': 'KilicOnlusu.png', 'Kilicprensi': 'KilicPrensi.png',
+  'Kilicsekizlisi': 'KilicSekizlisi.png', 'Kilicsovalyesi': 'KilicSovalyesi.png',
+  'Kilicuclusu': 'Kilicuclusu.png', 'Kilicyedilisi': 'KilicYedilisi.png',
+  'KupaAsi': 'KupaAsi.png', 'Kupaaltilisi': 'KupaAltilisi.png',
+  'Kupabeslisi': 'KupaBeslisi.png', 'Kupadokuzlusu': 'KupaDokuzlusu.png',
+  'Kupadortlusu': 'KupaDortlusu.png', 'Kupaikilisi': 'Kupaikilisi.png',
+  'Kupakrali': 'KupaKrali.png', 'Kupakralicesi': 'KupaKralicesi.png',
+  'Kupaonlusu': 'KupaOnlusu.png', 'Kupaprensi': 'KupaPrensi.png',
+  'Kupasekizlisi': 'KupaSekizlisi.png', 'Kupasovalyesi': 'KupaSovalyesi.png',
+  'Kupauclusu': 'KupaUclusu.png', 'Kupayedilisi': 'KupaYedilisi.png',
+  'Mahkeme': 'Mahkeme.png', 'Olum': 'Olum.png', 'SavasArabasi': 'SavasArabasi.png',
+  'Seytan': 'Seytan.png', 'Tilsimaltilisi': 'Tilsimaltilisi.png',
+  'Tilsimasi': 'TilsimAsi.png', 'Tilsimbeslisi': 'TilsimBeslisi.png',
+  'Tilsimdokuzlusu': 'Tilsimdokuzlusu.png', 'Tilsimdortlusu': 'Tilsimdortlusu.png',
+  'Tilsimikilisi': 'Tilsimikilisi.png', 'Tilsimkrali': 'TilsimKrali.png',
+  'Tilsimkralicesi': 'TilsimKralicesi.png', 'Tilsimonlusu': 'Tilsimonlusu.png',
+  'Tilsimprensi': 'TilsimPrensi.png', 'Tilsimsekizlisi': 'TilsimSekizlisi.png',
+  'Tilsimsovalyesi': 'TilsimSovalyesi.png', 'Tilsimuclusu': 'Tilsimuclusu.png',
+  'Tilsimyedilisi': 'Tilsimyedilisi.png', 'YikilanKule': 'YikilanKule.png',
+  'Yildiz': 'Yildiz.png',
+};
+
 /// Fal metninin tamamını gösteren detay ekranı.
 /// Unity'deki PanelShowWholeTextManager karşılığı.
 class InboxDetailScreen extends StatelessWidget {
@@ -23,27 +145,61 @@ class InboxDetailScreen extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: SingleChildScrollView(
+      body: Stack(
+        children: [
+          // Tarot: arka plan görseli + koyu overlay
+          if (item.fortuneType == FortuneType.tarot) ...[
+            Positioned.fill(
+              child: Image.asset(
+                'assets/images/tarot_bg.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+            Positioned.fill(
+              child: ColoredBox(
+                color: Colors.black.withValues(alpha: 0.60),
+              ),
+            ),
+          ],
+          // Kahve: arka plan görseli + koyu overlay
+          if (item.fortuneType == FortuneType.coffee) ...[
+            Positioned.fill(
+              child: Image.asset(
+                'assets/images/kahvefalibg.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+            Positioned.fill(
+              child: ColoredBox(
+                color: Colors.black.withValues(alpha: 0.55),
+              ),
+            ),
+          ],
+          SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Photos for coffee fortune
             if (_hasPhotos) _buildPhotos(context),
+            // Tarot: özel başlık (kartlar görselli)
+            if (item.fortuneType == FortuneType.tarot)
+              _buildTarotHeader(),
             // Fortune text
             Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Title + date
-                  Text(item.title, style: AppTextStyles.title),
-                  const SizedBox(height: 6),
-                  Text(
-                    _formatDate(item.date),
-                    style: AppTextStyles.inboxMeta,
-                  ),
-                  const SizedBox(height: 24),
-                  // Decorative divider
+                  // Non-tarot: sadece tarih (başlık ve süslü ayraç kaldırıldı)
+                  if (item.fortuneType != FortuneType.tarot) ...[
+                    Text(
+                      _formatDate(item.date),
+                      style: AppTextStyles.inboxMeta,
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                  // Decorative divider — sadece tarot için göster
+                  if (item.fortuneType == FortuneType.tarot)
                   Row(
                     children: [
                       Expanded(
@@ -86,7 +242,8 @@ class InboxDetailScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 24),
+                  if (item.fortuneType == FortuneType.tarot)
+                    const SizedBox(height: 24),
                   // Fortune text
                   SelectableText(
                     item.text,
@@ -109,8 +266,182 @@ class InboxDetailScreen extends StatelessWidget {
             ),
           ],
         ),
+          ), // SingleChildScrollView
+        ],
+      ), // Stack
+    );
+  }
+
+  // ─── Tarot başlığı: başlık + tarih + kart görseli(leri) ─────────────────────
+
+  // Başlık formatı:
+  //   Klasik: "Tarot Falın: Kart1, Ters Kart2, Kart3"
+  //   Tek kart: "Aşk Kartı Falın: JsonKartAdi"
+  //             "Dilek Kartı Falın: JsonKartAdi"
+  //             "Şans Kartı Falın: JsonKartAdi"
+
+  String get _isSingleTarotType {
+    for (final p in ['Aşk Kartı Falın: ', 'Dilek Kartı Falın: ', 'Şans Kartı Falın: ']) {
+      if (item.title.startsWith(p)) return p;
+    }
+    return '';
+  }
+
+  Widget _buildTarotHeader() {
+    final singlePrefix = _isSingleTarotType;
+
+    if (singlePrefix.isNotEmpty) {
+      // ── Tek kart ──
+      final jsonName = item.title.substring(singlePrefix.length).trim();
+      final type = singlePrefix.startsWith('Aşk')
+          ? 'ask'
+          : singlePrefix.startsWith('Dilek')
+              ? 'dilek'
+              : 'sans';
+      final headerLabel = type == 'ask'
+          ? 'AŞK KARTIN'
+          : type == 'dilek'
+              ? 'DİLEK KARTIN'
+              : 'ŞANS KARTIN';
+      return SizedBox(
+        width: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 20, 16, 8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                headerLabel,
+                textAlign: TextAlign.center,
+                style: AppTextStyles.title.copyWith(letterSpacing: 2.0),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                _formatDate(item.date),
+                textAlign: TextAlign.center,
+                style: AppTextStyles.inboxMeta.copyWith(fontSize: 12),
+              ),
+              const SizedBox(height: 20),
+              SizedBox(
+                width: 116,
+                child: _buildCardThumb(jsonName, false, type: type),
+              ),
+              const SizedBox(height: 8),
+            ],
+          ),
+        ),
+      );
+    }
+
+    // ── Klasik 3 kart ──
+    final cards = _parseTarotCards();
+    return SizedBox(
+      width: double.infinity,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 20, 16, 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'TAROT FALIN',
+              textAlign: TextAlign.center,
+              style: AppTextStyles.title.copyWith(letterSpacing: 2.0),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              _formatDate(item.date),
+              textAlign: TextAlign.center,
+              style: AppTextStyles.inboxMeta.copyWith(fontSize: 12),
+            ),
+            const SizedBox(height: 20),
+            if (cards.isNotEmpty)
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: cards.map((c) => Expanded(child: _buildCardThumb(c.$1, c.$2))).toList(),
+              ),
+            const SizedBox(height: 8),
+          ],
+        ),
       ),
     );
+  }
+
+  // Tarot kart görseli oranı: 276 × 480  →  ratio = 276/480 = 0.575
+  static const double _cardRatio = 276 / 480;
+
+  Widget _buildCardThumb(String cardName, bool isReversed, {String? type}) {
+    // type == null → klasik (tarot/ klasör), aksi halde tek kart türü
+    String? asset;
+    if (type == null) {
+      asset = _tarotAssets[cardName];
+    } else {
+      final base = cardName == 'Deli' ? 'budala' : cardName.toLowerCase();
+      asset = switch (type) {
+        'ask'   => 'assets/images/tarot3/${base}a.jpg',
+        'dilek' => 'assets/images/tarot4/${base}b.jpg',
+        'sans'  => 'assets/images/tarot2/${_sans2file[cardName] ?? '$cardName.png'}',
+        _       => null,
+      };
+    }
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: AspectRatio(
+              aspectRatio: _cardRatio,
+              child: Transform.rotate(
+                angle: isReversed ? 3.14159 : 0,
+                child: asset != null
+                    ? Image.asset(
+                        asset,
+                        fit: BoxFit.cover,
+                        errorBuilder: (_, __, ___) => _cardPlaceholder(),
+                      )
+                    : _cardPlaceholder(),
+              ),
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            isReversed ? 'Ters $cardName' : cardName,
+            style: AppTextStyles.inboxMeta.copyWith(fontSize: 10),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _cardPlaceholder() {
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.backgroundCard,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: AppColors.divider),
+      ),
+      child: const Center(
+        child: Text('🃏', style: TextStyle(fontSize: 28)),
+      ),
+    );
+  }
+
+  /// Başlıktan kart isimlerini ve ters bilgisini parse eder.
+  /// Başlık formatı: "Tarot Falın: Kart1, Ters Kart2, Kart3"
+  List<(String, bool)> _parseTarotCards() {
+    const prefix = 'Tarot Falın: ';
+    if (!item.title.startsWith(prefix)) return [];
+    final part = item.title.substring(prefix.length);
+    return part.split(', ').map((s) {
+      final trimmed = s.trim();
+      if (trimmed.startsWith('Ters ')) {
+        return (trimmed.substring(5), true);
+      }
+      return (trimmed, false);
+    }).toList();
   }
 
   bool get _hasPhotos =>

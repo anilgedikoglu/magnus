@@ -1,3 +1,33 @@
+// ── AI NOTU: user_profile.dart ────────────────────────────────────────────────
+// Kullanıcının tüm profil bilgisini tutan Hive modeli.
+// Provider: userProfileProvider (lib/data/providers.dart) — Riverpod StateNotifier.
+// Riverpod ile okuma: ref.read/watch(userProfileProvider)
+// Kaydetme: ref.read(userProfileProvider.notifier).save(UserProfile(...))
+//
+// Alan adları ve değerleri (VariableReplacer ve koşul sistemi için kritik):
+//   name          → string, kullanıcı adı
+//   age           → int
+//   gender        → 'erkek' | 'kadin' | 'lgbt'
+//   job           → 'ogrenci' | 'kamusektoru' | 'ozelsektoru' | 'serbest' | 'emekli' | 'issiz'
+//   maritalStatus → 'evli' | 'bekar' | 'nisanli' | 'iliski_var' | 'yeni_ayrilmis' | 'bosanmis' | 'dul'
+//   birthDate     → 'YYYY-MM-DD'
+//   birthCity     → string
+//   zodiacSign    → 'Koç'|'Boğa'|'İkizler'|'Yengeç'|'Aslan'|'Başak'|'Terazi'|'Akrep'|'Yay'|'Oğlak'|'Kova'|'Balık'
+//   birthTime     → 'HH:MM'
+//   risingSign    → burç adı (yükselen)
+//   moonSign      → burç adı (ay burcu)
+//   planet        → gezegen adı
+//   profilePicIndex  → 0-3 (sprite avatar) veya null
+//   customPhotoPath  → dosya yolu veya null
+//   onboardingComplete → bool
+//
+// toVariableMap() → VariableReplacer için tüm alanları string map'e çevirir.
+// Türkçe çekim ekleri (_dative, _accusative, _ablative, _diminutive) bu dosyada.
+//
+// Admin koşulu (settings_screen.dart'ta):
+//   name≈'Anıl' && maritalStatus='evli' && birthDate='1983-10-14'
+//   && job='kamusektoru' && zodiacSign='Terazi' && birthTime='13:30' && birthCity='Ankara'
+// ─────────────────────────────────────────────────────────────────────────────
 import 'package:hive_flutter/hive_flutter.dart';
 
 part 'user_profile.g.dart';
@@ -31,6 +61,24 @@ class UserProfile extends HiveObject {
   @HiveField(8)
   bool onboardingComplete;
 
+  @HiveField(9)
+  String? birthTime; // 'HH:MM'
+
+  @HiveField(10)
+  String? risingSign; // Yükselen burç
+
+  @HiveField(11)
+  String? moonSign; // Ay burcu
+
+  @HiveField(12)
+  String? planet; // Kullanıcı tarafından seçilen gezegen (override)
+
+  @HiveField(13)
+  int? profilePicIndex; // 0-3: profilepic.jpg sprite sheet köşeleri
+
+  @HiveField(14)
+  String? customPhotoPath; // kamera/galeriden seçilen fotoğraf yolu
+
   UserProfile({
     required this.name,
     required this.age,
@@ -41,11 +89,18 @@ class UserProfile extends HiveObject {
     this.birthCity,
     this.zodiacSign,
     this.onboardingComplete = false,
+    this.birthTime,
+    this.risingSign,
+    this.moonSign,
+    this.planet,
+    this.profilePicIndex,
+    this.customPhotoPath,
   });
 
   // ─── Variable map for {{variable}} replacement ────────────────────────────
   Map<String, String> toVariableMap() {
     return {
+      // ── Temel profil ──────────────────────────────────────────────────────
       'isim': name,
       'ismi': name,
       'yas': age.toString(),
@@ -57,11 +112,77 @@ class UserProfile extends HiveObject {
       'burc': zodiacSign ?? '',
       'dogum_tarihi': birthDate ?? '',
       'dogum_sehri': birthCity ?? '',
+      // ── İsim halleri (Türkçe çekim) ───────────────────────────────────────
+      'isime': _dative(name),       // "Ahmet'e", "Ayşe'ye"
+      'isimi': _accusative(name),   // "Ahmet'i", "Ayşe'yi"
+      'isimden': _ablative(name),   // "Ahmet'ten", "Ayşe'den"
+      'isimcigim': _diminutive(name), // "Ahmetciğim", "Ayşeciğim"
+      'harf': name.isNotEmpty ? name[0].toUpperCase() : '',
+      // ── Lokasyon ─────────────────────────────────────────────────────────
+      'kullanici sehri': birthCity ?? '',
+      // ── Doldurulamayan (veri yok) — boş bırakılır ─────────────────────────
+      'soyisim': '',
+      'fiziki': '',
+      'ayburcu': '',
+      'yukselen': '',
       // Time-based variables (filled at runtime by VariableReplacer)
       'gun': '',
       'ay': '',
       'mevsim': '',
     };
+  }
+
+  // ── Türkçe isim çekim yardımcıları ────────────────────────────────────────
+
+  static const _frontVowels = {'e', 'i', 'ö', 'ü'};
+  static const _backVowels  = {'a', 'ı', 'o', 'u'};
+  static const _allVowels   = {'a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü'};
+  static const _voicelessLast = {'ç', 'f', 'h', 'k', 'p', 's', 'ş', 't'};
+
+  static bool _isFrontVowel(String name) {
+    for (int i = name.length - 1; i >= 0; i--) {
+      final c = name[i].toLowerCase();
+      if (_frontVowels.contains(c)) return true;
+      if (_backVowels.contains(c)) return false;
+    }
+    return true; // varsayılan ince
+  }
+
+  static bool _endsInVowel(String name) =>
+      name.isNotEmpty && _allVowels.contains(name[name.length - 1].toLowerCase());
+
+  static String _dative(String name) {
+    if (name.isEmpty) return name;
+    final front = _isFrontVowel(name);
+    if (_endsInVowel(name)) {
+      return "$name'${front ? 'ye' : 'ya'}";
+    }
+    return "$name'${front ? 'e' : 'a'}";
+  }
+
+  static String _accusative(String name) {
+    if (name.isEmpty) return name;
+    final lastVowel = name.toLowerCase().split('').lastWhere(
+      (c) => _allVowels.contains(c), orElse: () => 'i');
+    final suffix = _frontVowels.contains(lastVowel)
+        ? (lastVowel == 'ö' || lastVowel == 'ü' ? 'ü' : 'i')
+        : (lastVowel == 'o' || lastVowel == 'u' ? 'u' : 'ı');
+    return _endsInVowel(name) ? "$name'y$suffix" : "$name'$suffix";
+  }
+
+  static String _ablative(String name) {
+    if (name.isEmpty) return name;
+    final front = _isFrontVowel(name);
+    final voiceless = _voicelessLast.contains(name[name.length - 1].toLowerCase());
+    final cons = voiceless ? 't' : 'd';
+    return "$name'${cons}${front ? 'en' : 'an'}";
+  }
+
+  static String _diminutive(String name) {
+    if (name.isEmpty) return name;
+    final last = name[name.length - 1].toLowerCase();
+    final voiceless = _voicelessLast.contains(last);
+    return "$name${voiceless ? 'çiğim' : 'ciğim'}";
   }
 
   String get jobLabel {
@@ -103,7 +224,7 @@ class UserProfile extends HiveObject {
       case 'kadin':
         return 'Kadın';
       default:
-        return 'Belirtmek İstemiyorum';
+        return 'Belirtilmiyor';
     }
   }
 
@@ -125,6 +246,12 @@ class UserProfile extends HiveObject {
         'birthCity': birthCity,
         'zodiacSign': zodiacSign,
         'onboardingComplete': onboardingComplete,
+        'birthTime': birthTime,
+        'risingSign': risingSign,
+        'moonSign': moonSign,
+        'planet': planet,
+        'profilePicIndex': profilePicIndex,
+        'customPhotoPath': customPhotoPath,
       };
 
   factory UserProfile.fromJson(Map<String, dynamic> json) => UserProfile(
@@ -137,6 +264,12 @@ class UserProfile extends HiveObject {
         birthCity: json['birthCity'],
         zodiacSign: json['zodiacSign'],
         onboardingComplete: json['onboardingComplete'] ?? false,
+        birthTime: json['birthTime'],
+        risingSign: json['risingSign'],
+        moonSign: json['moonSign'],
+        planet: json['planet'],
+        profilePicIndex: json['profilePicIndex'] as int?,
+        customPhotoPath: json['customPhotoPath'],
       );
 }
 
@@ -182,7 +315,7 @@ const List<MaritalOption> kMaritalOptions = [
 
 // ─── Gender options ────────────────────────────────────────────────────────
 const List<(String, String)> kGenderOptions = [
-  ('erkek', 'Erkek'),
   ('kadin', 'Kadın'),
-  ('belirtmek_istemiyorum', 'Belirtmek İstemiyorum'),
+  ('erkek', 'Erkek'),
+  ('belirtmek_istemiyorum', 'Belirtilmiyor'),
 ];

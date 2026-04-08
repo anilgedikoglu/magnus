@@ -1,3 +1,92 @@
+// ═════════════════════════════════════════════════════════════════════════════
+// AI OTURUMU BAŞLANGIÇ REHBERİ — home_screen.dart
+// Bu dosyayı okuyan bir LLM için: aşağıdaki açıklamalar proje mimarisini ve
+// isimlendirme kurallarını özetler. Yeni bir oturumda bu bloğu oku.
+// ═════════════════════════════════════════════════════════════════════════════
+//
+// ── BALON SİSTEMİ (Chat Header) ───────────────────────────────────────────
+// Ana menünün en üstünde Magnus karakterinin konuşma balonları sıralanır.
+// Balonlar dizi halinde yazılır; her biri tamamlanınca bir sonraki başlar
+// (typewriter animasyonu, 30ms/karakter).
+//
+//   Balon 1 : Selamlama balonu — her uygulama açılışında 6 selamlamadan biri
+//             rastgele seçilir (isim dahil, örn. "Hoş geldin Anıl!").
+//             Renk: yeşil-camgöbeği gradient (#1A6B5A → #1A5E6B).
+//
+//   Balon 2 : Sabit metin — "Magnus'un ana menüsü karşında!"
+//             Renk: mor gradient (#3A1F8C → #4835A6).
+//
+//   Balon 3+ : Dinamik ekstra balonlar (_extraBubbles listesi).
+//             Şu anda tetiklenen durumlar:
+//             • Tarot falı gönderildi → turuncu uyarı balonu + mor balon
+//             • Günlük fal hakkı doldu → kırmızımsı uyarı + mor balon
+//             Uyarı rengi: (#5C2508 → #7A3510), border: #CC6622
+//
+// Chat header yüksekliği: SizedBox(height: 155). Bir balon yaklaşık 45-55px
+// kaplar. Balonlar NonScrollable ScrollView içinde aşağı kayar.
+//
+// ── GÜNLÜK KREDİ SİSTEMİ ─────────────────────────────────────────────────
+// Her aktif fal türü için günde 1 hak vardır. _remainingCredits map'i:
+//   {'motivasyon': 0|1, 'olumlama': 0|1, 'ozlusoz': 0|1,
+//    'tarot': 0|1, 'kahve': 0|1, 'astroloji': 0|1}
+//
+// Hak durumu SharedPreferences'tan okunur:
+//   '{tür}_bugun_tarih' == bugünün ISO tarihi  →  kredi = 0 (kullanıldı)
+//   farklı veya kayıt yok                     →  kredi = 1 (kullanılabilir)
+//
+// İkon rozeti: credits >= 0 → badge göster. credits = 1 → mavi yıldız.
+//              credits = 0  → gri yıldız (kullanıldı).
+//              credits = -1 → badge yok (kullanılmayan özel kod, şu an yok).
+// Kilitli/pasif ikonlar: credits sabit 1 (henüz implemente edilmemiş).
+// Aktif fal ikonuna tıklanınca kredi 0 ise → uyarı balonu göster, gitme.
+// Aktif fal ikonuna tıklanınca kredi 1 ise → ekrana git (context.push),
+//   dönüşte _refreshCredits() → eğer fal tamamlanmamışsa (geri basıldıysa)
+//   date key set edilmemiştir, kredi otomatik 1'e döner.
+//
+// ── SAYFA YAPISI (3×3 Grid) ───────────────────────────────────────────────
+// İki sayfa, her biri 9 ikonluk 3×3 ızgara:
+//   Sayfa 1: Motivasyon, Dert Ortağı, Olumlama, Özlü Sözler, Kader Kitabı,
+//            Acı Gerçekler, Kehanet, Durugörü, Niyet
+//   Sayfa 2: Kahve Falı, Tarot, Astroloji, Numeroloji, Durugörü,
+//            Yüz Falı, Japon Falı, I-Ching, Aşk Uyumu
+//
+// Sayfa geçişi: alt bardaki Önceki/Sonraki butonları VEYA yatay swipe
+//   (Listener ile — GestureDetector değil, jest arenası sorunu olmaz).
+//   Eşik: 50px yatay hareket. Geçiş animasyonu: 380ms easeInOut.
+//
+// Sayfa göstergesi: iki ince dikdörtgen (36×3px), aktif sayfa parlak mor.
+//   Grid'in içine Stack overlay olarak yerleştirilmiştir (alt kenar).
+//
+// ── NAVIGASYON ────────────────────────────────────────────────────────────
+// Router: go_router. Ana rotalar:
+//   /home → HomeScreen   /motivation → MotivationScreen
+//   /olumlama → OlumlamaScreen   /ozlusoz → OzluSozScreen
+//   /tarot → TarotTypeScreen   /coffee → CoffeeScreen
+//   /astrology → AstrologyScreen   /settings → SettingsScreen
+//   /inbox-full → InboxFullScreen
+//
+// Tarot akışı: /tarot → TarotTypeScreen → tip seçimi → TarotScreen (klasik)
+//              veya SingleTarotScreen (aşk/dilek/şans).
+//              Fal gönderilince tarotSentProvider=true, context.go('/home').
+//
+// ── KULLANICI PROFİLİ ─────────────────────────────────────────────────────
+// userProfileProvider (Riverpod) → UserProfile modeli.
+// Alanlar: name, age, gender ('erkek'/'kadin'/'lgbt'), job, maritalStatus,
+//          birthDate (YYYY-MM-DD), birthCity, zodiacSign, birthTime (HH:MM),
+//          risingSign, moonSign, planet, profilePicIndex, customPhotoPath.
+// toVariableMap() → {{isim}}, {{yas}}, {{meslek}}, {{medeni_durum}} vb.
+//   placeholder'larını gerçek veriye çevirir (VariableReplacer.replace()).
+// Türkçe çekim ekleri: {{isime}}, {{isimi}}, {{isimden}}, {{isimcigim}}.
+//
+// ── ADMIN PANELİ ─────────────────────────────────────────────────────────
+// Settings ekranında sol üst köşede sarı dişli çark — sadece şu profil
+// bilgileri eşleşince görünür: name='Anıl', maritalStatus='evli',
+// birthDate='1983-10-14', job='kamusektoru', zodiacSign='Terazi',
+// birthTime='13:30', birthCity='Ankara'. Admin panelinde günlük hakları
+// sıfırlama butonu bulunur.
+//
+// ═════════════════════════════════════════════════════════════════════════════
+
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -23,6 +112,35 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   int _typingIndex = 0; // hangi balon şu an yazılıyor
   late String _selamlama; // sabit, initState'te bir kez hesaplanır
 
+  // Günlük kalan kredi: 1 = hak var, 0 = kullanıldı
+  Map<String, int> _remainingCredits = {};
+
+  // Kilit açılma zamanlayıcısı — en erken unlockAt'e göre kurulur
+  Timer? _unlockTimer;
+
+  // Pref anahtarları — her fal türü için tamamlanma tarihi
+  static const _creditPrefKeys = {
+    'motivasyon': 'motivasyon_bugun_tarih',
+    'olumlama':   'olumlama_bugun_tarih',
+    'ozlusoz':    'ozlusoz_bugun_tarih',
+    'tarot':      'tarot_bugun_tarih',
+    'kahve':      'kahve_bugun_tarih',
+    'astroloji':  'astroloji_bugun_tarih',
+  };
+
+  static const _fortuneDisplayNames = {
+    'motivasyon': 'Motivasyon',
+    'olumlama':   'Olumlama',
+    'ozlusoz':    'Özlü Sözler',
+    'tarot':      'Tarot',
+    'kahve':      'Kahve Falı',
+    'astroloji':  'Astroloji',
+  };
+
+  String get _today => DateTime.now().toIso8601String().substring(0, 10);
+
+  double? _swipeStartX;
+
   void _onBubbleComplete(int index) {
     if (!mounted) return;
     setState(() {
@@ -45,7 +163,81 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _scheduleUnlockTimer();
+      _refreshCredits();
+      _checkTarotSent();
+      _checkKahveSent();
+    });
   }
+
+  void _checkTarotSent() {
+    final sent = ref.read(tarotSentProvider);
+    if (!sent) return;
+    ref.read(tarotSentProvider.notifier).state = false;
+    // Tarot tamamlandı → günlük krediyi işaretle
+    SharedPreferences.getInstance().then((p) {
+      p.setString('tarot_bugun_tarih', _today);
+      _refreshCredits();
+    });
+    final name = ref.read(userProfileProvider).name;
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'Tarot falını yorumlamaya başladım${name.isNotEmpty ? ' $name' : ''}.',
+        gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
+        borderColor: const Color(0xFFE8820C),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
+  void _checkKahveSent() {
+    final sent = ref.read(kahveSentProvider);
+    if (!sent) return;
+    ref.read(kahveSentProvider.notifier).state = false;
+    // Kahve falı tamamlandı → günlük krediyi işaretle
+    SharedPreferences.getInstance().then((p) {
+      p.setString('kahve_bugun_tarih', _today);
+      _refreshCredits();
+    });
+    final name = ref.read(userProfileProvider).name;
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'Kahve falını yorumluyorum${name.isNotEmpty ? ' $name' : ''}.',
+        gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
+        borderColor: const Color(0xFFE8820C),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
+  bool _listenersAttached = false;
 
   @override
   void didChangeDependencies() {
@@ -56,89 +248,146 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       _selamlama = _hesaplaSelamlama(name);
       _selamlamaHesaplandi = true;
     }
+    // tarotSentProvider / kahveSentProvider'ı dinle (sadece bir kez bağla)
+    if (!_listenersAttached) {
+      _listenersAttached = true;
+      ref.listenManual(tarotSentProvider, (_, sent) {
+        if (sent) _checkTarotSent();
+      });
+      ref.listenManual(kahveSentProvider, (_, sent) {
+        if (sent) _checkKahveSent();
+      });
+    }
   }
 
   @override
   void dispose() {
+    _unlockTimer?.cancel();
     _pageController.dispose();
     _chatScrollCtrl.dispose();
     super.dispose();
   }
 
+  /// En erken kilitli tarot öğesine göre timer kur.
+  /// Timer ateşlenince Riverpod state'i rebuild etmek için invalidate et.
+  void _scheduleUnlockTimer() {
+    _unlockTimer?.cancel();
+    final items = ref.read(inboxProvider);
+    DateTime? earliest;
+    for (final item in items) {
+      if (item.unlockAt == null) continue;
+      try {
+        final t = DateTime.parse(item.unlockAt!);
+        if (t.isAfter(DateTime.now())) {
+          if (earliest == null || t.isBefore(earliest)) earliest = t;
+        }
+      } catch (_) {}
+    }
+    if (earliest == null) return;
+    final delay = earliest.difference(DateTime.now());
+    if (delay.isNegative) return;
+    _unlockTimer = Timer(delay, () {
+      if (!mounted) return;
+      // inboxProvider'ı yenile → readyUnreadCountProvider → flare yansır
+      ref.invalidate(inboxProvider);
+      setState(() {});
+      _scheduleUnlockTimer(); // sonraki kilit için tekrar kur
+    });
+  }
+
+  bool get _isLastPage => _currentPage == _totalPages - 1;
+
   void _goNext() {
+    _scheduleUnlockTimer(); // buton basışında kilit kontrolü
     final next = (_currentPage + 1) % _totalPages;
-    _pageController.animateToPage(
-      next,
-      duration: const Duration(milliseconds: 380),
-      curve: Curves.easeInOut,
-    );
+    _pageController.animateToPage(next,
+        duration: const Duration(milliseconds: 380), curve: Curves.easeInOut);
     setState(() => _currentPage = next);
   }
 
   void _goPrev() {
+    _scheduleUnlockTimer();
     final prev = (_currentPage - 1 + _totalPages) % _totalPages;
-    _pageController.animateToPage(
-      prev,
-      duration: const Duration(milliseconds: 380),
-      curve: Curves.easeInOut,
-    );
+    _pageController.animateToPage(prev,
+        duration: const Duration(milliseconds: 380), curve: Curves.easeInOut);
     setState(() => _currentPage = prev);
   }
 
-  // ─── Motivasyon günlük hak kontrolü ──────────────────────────────────────
-  Future<void> _onMotivasyonTap() async {
+  // ─── Günlük kredi yükleme ─────────────────────────────────────────────────
+  Future<void> _refreshCredits() async {
     final prefs = await SharedPreferences.getInstance();
-    final bugunStr = DateTime.now().toIso8601String().substring(0, 10);
-    final kayitliTarih = prefs.getString('motivasyon_bugun_tarih');
+    final today = _today;
+    if (!mounted) return;
+    setState(() {
+      _remainingCredits = {
+        for (final e in _creditPrefKeys.entries)
+          e.key: (prefs.getString(e.value) == today) ? 0 : 1,
+      };
+    });
+  }
 
-    if (kayitliTarih == bugunStr) {
-      // Günlük hak doldu → home'da balon göster, ekrana gitme
-      if (!mounted) return;
-      final name = ref.read(userProfileProvider).name;
-      setState(() {
-        _extraBubbles.add(_ExtraBubble(
-          text: 'Günlük motivasyon hakkın doldu${name.isNotEmpty ? ' $name' : ''}.',
-          gradient: const [Color(0xFF5C2508), Color(0xFF7A3510)],
-          borderColor: const Color(0xFFCC6622),
-        ));
-        _extraBubbles.add(_ExtraBubble(
-          text: "Magnus'un ana menüsü karşında!",
-          gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-          borderColor: const Color(0xFF7B5ECC),
-        ));
-      });
-      // Yeni balonlar eklenince scroll'u en alta kaydır
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (_chatScrollCtrl.hasClients) {
-          _chatScrollCtrl.animateTo(
-            _chatScrollCtrl.position.maxScrollExtent,
-            duration: const Duration(milliseconds: 350),
-            curve: Curves.easeOut,
-          );
-        }
-      });
-    } else {
-      if (mounted) context.push('/motivation');
+  // ─── Birleşik fal tıklama yöneticisi ─────────────────────────────────────
+  Future<void> _onFortuneItemTap(String type, String route) async {
+    final remaining = _remainingCredits[type] ?? 1;
+    if (remaining <= 0) {
+      _showDailyLimitBubble(type);
+      return;
     }
+    if (!mounted) return;
+    await context.push(route);
+    if (!mounted) return;
+    // Ekrandan dönünce kredileri yenile
+    // Eğer fal tamamlanmamışsa (geri basıldıysa) date key set edilmemiştir → kredi 1 kalır
+    await _refreshCredits();
+  }
+
+  void _showDailyLimitBubble(String type) {
+    final name = ref.read(userProfileProvider).name;
+    final fortuneName = _fortuneDisplayNames[type] ?? type;
+    final nameStr = name.isNotEmpty ? ' $name' : '';
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'Günlük $fortuneName hakkın doldu$nameStr.',
+        gradient: const [Color(0xFF5C2508), Color(0xFF7A3510)],
+        borderColor: const Color(0xFFCC6622),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 350),
+          curve: Curves.easeOut,
+        );
+      }
+    });
   }
 
   // ─── Sayfa 1 ──────────────────────────────────────────────────────────────
   List<_MenuItem> _page1Items(BuildContext context) => [
-        _MenuItem('Motivasyon', 'assets/images/motivasyon_yeni.png', 0,
-            () => _onMotivasyonTap()),
+        _MenuItem('Motivasyon', 'assets/images/motivasyon_yeni.png',
+            _remainingCredits['motivasyon'] ?? 1,
+            () => _onFortuneItemTap('motivasyon', '/motivation')),
         _MenuItem('Dert Ortağı', 'assets/images/menu/dertortagi.png', 1,
             () {}),
-        _MenuItem('Olumlama', 'assets/images/olumlama.png', 0,
-            () => context.push('/olumlama')),
-        _MenuItem('Özlü Sözler', 'assets/images/ozlusozler.png', 0,
-            () => context.push('/ozlusoz')),
+        _MenuItem('Olumlama', 'assets/images/olumlama.png',
+            _remainingCredits['olumlama'] ?? 1,
+            () => _onFortuneItemTap('olumlama', '/olumlama')),
+        _MenuItem('Özlü Sözler', 'assets/images/ozlusozler.png',
+            _remainingCredits['ozlusoz'] ?? 1,
+            () => _onFortuneItemTap('ozlusoz', '/ozlusoz')),
         _MenuItem('Kader Kitabı', 'assets/images/kadercarkimenu.png', 1,
             () {}),
         _MenuItem('Acı Gerçekler', 'assets/images/acigercekler.PNG', 1,
             () {}),
-        _MenuItem('Kehanet', 'assets/images/menu/kehanet.png', 0,
+        _MenuItem('Kehanet', 'assets/images/menu/kehanet.png', 1,
             () {}),
-        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 0,
+        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 1,
             () {}),
         _MenuItem('Niyet', 'assets/images/menu/mistikfallar.png', 1,
             () {}),
@@ -146,15 +395,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   // ─── Sayfa 2 ──────────────────────────────────────────────────────────────
   List<_MenuItem> _page2Items(BuildContext context) => [
-        _MenuItem('Kahve Falı', 'assets/images/menu/kahvefali.png', 2,
-            () => context.push('/coffee')),
-        _MenuItem('Tarot', 'assets/images/menu/tarot.png', 2,
-            () => context.push('/tarot')),
-        _MenuItem('Astroloji', 'assets/images/astroloji.png', 0,
-            () => context.push('/astrology')),
+        _MenuItem('Kahve Falı', 'assets/images/menu/kahvefali.png',
+            _remainingCredits['kahve'] ?? 1,
+            () => _onFortuneItemTap('kahve', '/coffee')),
+        _MenuItem('Tarot', 'assets/images/menu/tarot.png',
+            _remainingCredits['tarot'] ?? 1,
+            () => _onFortuneItemTap('tarot', '/tarot')),
+        _MenuItem('Astroloji', 'assets/images/astroloji.png',
+            _remainingCredits['astroloji'] ?? 1,
+            () => _onFortuneItemTap('astroloji', '/astrology')),
         _MenuItem('Numeroloji', 'assets/images/menu/numeroloji.png', 1,
             () {}),
-        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 0,
+        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 1,
             () {}),
         _MenuItem('Yüz Falı', 'assets/images/menu/yuzfali.png', 1,
             () {}),
@@ -178,24 +430,41 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             // ─── Chat header (sabit) ────────────────────────────────────────
             _buildChatHeader(),
 
-            // ─── Sayfa göstergesi ──────────────────────────────────────────
-            _buildPageIndicator(),
-
-            // ─── Animasyonlu 3×3 grid ──────────────────────────────────────
+            // ─── Animasyonlu 3×3 grid + sayfa göstergesi (overlay) ───────────
             Expanded(
-              child: PageView.builder(
-                controller: _pageController,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: _totalPages,
-                onPageChanged: (p) => setState(() => _currentPage = p),
-                itemBuilder: (context, pageIndex) {
-                  final items = pageIndex == 0
-                      ? _page1Items(context)
-                      : _page2Items(context);
-                  return _buildGrid(items);
+              child: Listener(
+                onPointerDown:  (e) => _swipeStartX = e.position.dx,
+                onPointerUp:    (e) {
+                  final dx = e.position.dx - (_swipeStartX ?? e.position.dx);
+                  _swipeStartX = null;
+                  if (dx < -50) _goNext();
+                  else if (dx > 50) _goPrev();
                 },
+                onPointerCancel: (_) => _swipeStartX = null,
+                child: Stack(
+                children: [
+                  PageView.builder(
+                    controller: _pageController,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: _totalPages,
+                    onPageChanged: (p) => setState(() => _currentPage = p),
+                    itemBuilder: (context, pageIndex) {
+                      final items = pageIndex == 0
+                          ? _page1Items(context)
+                          : _page2Items(context);
+                      return _buildGrid(items);
+                    },
+                  ),
+                  // Gösterge — grid'in tam altına yapışık
+                  Positioned(
+                    left: 0, right: 0, bottom: 0,
+                    child: _buildPageIndicator(),
+                  ),
+                ],
+                ),
               ),
             ),
+
 
             // ─── Alt bar ───────────────────────────────────────────────────
             _buildBottomBar(context),
@@ -222,7 +491,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     ];
 
     return SizedBox(
-      height: 130,
+      height: 155,
       child: SingleChildScrollView(
         controller: _chatScrollCtrl,
         physics: const NeverScrollableScrollPhysics(),
@@ -239,13 +508,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     _MagnusAvatar(),
                     const SizedBox(width: 8),
                     Expanded(
-                      child: _TypewriterChatBubble(
-                        key: ValueKey(i),
-                        text: bubbles[i].text,
-                        gradient: bubbles[i].gradient,
-                        borderColor: bubbles[i].borderColor,
-                        isActive: i == _typingIndex,
-                        onComplete: () => _onBubbleComplete(i),
+                      child: RepaintBoundary(
+                        child: _TypewriterChatBubble(
+                          key: ValueKey(i),
+                          text: bubbles[i].text,
+                          gradient: bubbles[i].gradient,
+                          borderColor: bubbles[i].borderColor,
+                          isActive: i == _typingIndex,
+                          onComplete: () => _onBubbleComplete(i),
+                        ),
                       ),
                     ),
                   ],
@@ -259,21 +530,21 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   Widget _buildPageIndicator() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
+      padding: const EdgeInsets.symmetric(vertical: 5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(_totalPages, (i) {
           final active = i == _currentPage;
           return AnimatedContainer(
             duration: const Duration(milliseconds: 250),
-            margin: const EdgeInsets.symmetric(horizontal: 4),
-            width: active ? 18 : 7,
-            height: 7,
+            margin: const EdgeInsets.symmetric(horizontal: 3),
+            width: 36,
+            height: 3,
             decoration: BoxDecoration(
               color: active
                   ? const Color(0xFFAA88FF)
-                  : const Color(0xFFAA88FF).withValues(alpha: 0.3),
-              borderRadius: BorderRadius.circular(4),
+                  : const Color(0xFFAA88FF).withValues(alpha: 0.22),
+              borderRadius: BorderRadius.circular(2),
             ),
           );
         }),
@@ -301,13 +572,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       color: const Color(0xFF0A0718),
       child: Row(
         children: [
-          // Sol düğme: sayfa 2'de "Önceki", sayfa 1'de "Bilgiler"
+          // Sol buton
           Expanded(
             child: _currentPage == 0
                 ? _BottomBtn(
                     imagePath: 'assets/images/bilgiekranilogo.png',
                     label: 'Bilgiler',
-                    onTap: () => context.push('/settings'),
+                    onTap: () async { _scheduleUnlockTimer(); await context.push('/settings'); if (mounted) await _refreshCredits(); },
                   )
                 : _BottomBtn(
                     imagePath: 'assets/images/menuleft.png',
@@ -316,18 +587,56 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   ),
           ),
           const SizedBox(width: 8),
-          _BottomIconBtn(
-            onTap: () => context.push('/inbox'),
-          ),
+          // Ortadaki inbox butonu — kilitli olmayan okunmamış varsa sarı hale
+          Consumer(builder: (_, cref, __) {
+            final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
+            return GestureDetector(
+              onTap: () => context.push('/inbox-full'),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 400),
+                width: 44, height: 40,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                      colors: [Color(0xFFAA00CC), Color(0xFF7700AA)]),
+                  borderRadius: BorderRadius.circular(22),
+                  boxShadow: hasUnread
+                      ? [
+                          BoxShadow(
+                            color: const Color(0xFFFFDD00).withValues(alpha: 0.9),
+                            blurRadius: 14,
+                            spreadRadius: 2,
+                          ),
+                          BoxShadow(
+                            color: const Color(0xFFFFAA00).withValues(alpha: 0.5),
+                            blurRadius: 28,
+                            spreadRadius: 4,
+                          ),
+                        ]
+                      : null,
+                ),
+                child: Center(
+                  child: Image.asset('assets/images/inbox_icon.png',
+                      width: 29, height: 29),
+                ),
+              ),
+            );
+          }),
           const SizedBox(width: 8),
-          // Sağ düğme: her zaman "Sonraki"
+          // Sağ buton: son sayfada "Başa Dön", diğerlerinde "Sonraki"
           Expanded(
-            child: _BottomBtn(
-              imagePath: 'assets/images/menuright.png',
-              label: 'Sonraki',
-              iconTrailing: true,
-              onTap: _goNext,
-            ),
+            child: _isLastPage
+                ? _BottomBtn(
+                    imagePath: 'assets/images/menuright.png',
+                    label: 'Başa Dön',
+                    iconTrailing: true,
+                    onTap: _goNext,
+                  )
+                : _BottomBtn(
+                    imagePath: 'assets/images/menuright.png',
+                    label: 'Sonraki',
+                    iconTrailing: true,
+                    onTap: _goNext,
+                  ),
           ),
         ],
       ),
@@ -505,8 +814,8 @@ class _MenuCardState extends State<_MenuCard>
                     textAlign: TextAlign.center,
                   ),
                 ),
-                // Kredi rozeti
-                if (widget.item.credits > 0)
+                // Kredi rozeti — credits >= 0 ise göster (-1 = badge yok)
+                if (widget.item.credits >= 0)
                   Positioned(
                     bottom: 5, left: 5,
                     child: _CreditBadge(count: widget.item.credits),
@@ -530,21 +839,26 @@ class _CreditBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final used = count <= 0;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
       decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.6),
+        color: Colors.black.withValues(alpha: 0.65),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.stars_rounded, color: Color(0xFF00E5FF), size: 10),
+          Icon(
+            used ? Icons.stars_rounded : Icons.stars_rounded,
+            color: used ? Colors.white30 : const Color(0xFF00E5FF),
+            size: 10,
+          ),
           const SizedBox(width: 2),
           Text(
             '$count',
-            style: const TextStyle(
-              color: Colors.white,
+            style: TextStyle(
+              color: used ? Colors.white30 : Colors.white,
               fontSize: 9,
               fontWeight: FontWeight.bold,
             ),
@@ -719,36 +1033,33 @@ class _BottomBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final img = Image.asset(imagePath, width: 23, height: 23);
+    final txt = Text(label,
+        style: const TextStyle(
+            color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13));
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 10),
+        height: 44,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             colors: [Color(0xFFAA00CC), Color(0xFF7700AA)],
           ),
           borderRadius: BorderRadius.circular(22),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        // Butonu 3 eşit parçaya böl:
+        // Leading: ikon merkezi = 1/3 noktası, yazı merkezi = 2/3 noktası
+        // Trailing: yazı merkezi = 1/3 noktası, ikon merkezi = 2/3 noktası
+        // Alignment(x,0): x=-1 sol kenar, x=0 merkez, x=1 sağ kenar
+        // 1/3 = Alignment(-1/3, 0) | 2/3 = Alignment(1/3, 0)
+        child: Stack(
           children: iconTrailing
               ? [
-                  Text(label,
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13)),
-                  const SizedBox(width: 6),
-                  img,
+                  Align(alignment: const Alignment(-1/3, 0),   child: txt),
+                  Align(alignment: const Alignment(0.52, 0),   child: img),
                 ]
               : [
-                  img,
-                  const SizedBox(width: 6),
-                  Text(label,
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13)),
+                  Align(alignment: const Alignment(-0.52, 0),  child: img),
+                  Align(alignment: const Alignment(1/3, 0),    child: txt),
                 ],
         ),
       ),
@@ -756,32 +1067,3 @@ class _BottomBtn extends StatelessWidget {
   }
 }
 
-class _BottomIconBtn extends StatelessWidget {
-  final VoidCallback onTap;
-
-  const _BottomIconBtn({required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: 44,
-        height: 40,
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [Color(0xFFAA00CC), Color(0xFF7700AA)],
-          ),
-          borderRadius: BorderRadius.circular(22),
-        ),
-        child: Center(
-          child: Image.asset(
-            'assets/images/inbox_icon.png',
-            width: 29,
-            height: 29,
-          ),
-        ),
-      ),
-    );
-  }
-}

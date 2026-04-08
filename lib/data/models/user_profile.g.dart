@@ -26,13 +26,19 @@ class UserProfileAdapter extends TypeAdapter<UserProfile> {
       birthCity: fields[6] as String?,
       zodiacSign: fields[7] as String?,
       onboardingComplete: fields[8] as bool,
+      birthTime: fields[9] as String?,
+      risingSign: fields[10] as String?,
+      moonSign: fields[11] as String?,
+      planet: fields[12] as String?,
+      profilePicIndex: fields[13] as int?,
+      customPhotoPath: fields[14] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, UserProfile obj) {
     writer
-      ..writeByte(9)
+      ..writeByte(15)
       ..writeByte(0)
       ..write(obj.name)
       ..writeByte(1)
@@ -50,7 +56,19 @@ class UserProfileAdapter extends TypeAdapter<UserProfile> {
       ..writeByte(7)
       ..write(obj.zodiacSign)
       ..writeByte(8)
-      ..write(obj.onboardingComplete);
+      ..write(obj.onboardingComplete)
+      ..writeByte(9)
+      ..write(obj.birthTime)
+      ..writeByte(10)
+      ..write(obj.risingSign)
+      ..writeByte(11)
+      ..write(obj.moonSign)
+      ..writeByte(12)
+      ..write(obj.planet)
+      ..writeByte(13)
+      ..write(obj.profilePicIndex)
+      ..writeByte(14)
+      ..write(obj.customPhotoPath);
   }
 
   @override

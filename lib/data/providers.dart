@@ -1,3 +1,21 @@
+// ── AI NOTU: providers.dart ───────────────────────────────────────────────────
+// Uygulamanın tüm Riverpod provider'ları burada tanımlıdır.
+//
+// Temel provider'lar:
+//   userProfileProvider       → UserProfile StateNotifier (Hive kalıcı)
+//                               ref.watch ile profil değişince rebuild tetiklenir
+//   inboxProvider             → List<InboxItem> StateNotifier (fal sonuçları)
+//   readyUnreadCountProvider  → kilitli olmayan okunmamış inbox sayısı
+//   tarotSentProvider         → bool, tarot falı gönderilince true olur
+//                               HomeScreen bunu dinler → Balon 3 eklenir +
+//                               tarot_bugun_tarih set edilir
+//   fortuneServiceProvider    → AI fal servisi (OpenAI/Gemini)
+//   onboardingCompleteProvider → bool, onboarding tamamlandı mı
+//
+// Kullanım örneği:
+//   final profile = ref.read(userProfileProvider);
+//   await ref.read(userProfileProvider.notifier).save(profile.copyWith(...));
+// ─────────────────────────────────────────────────────────────────────────────
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'models/user_profile.dart';
@@ -54,6 +72,12 @@ class UserProfileNotifier extends Notifier<UserProfile> {
       birthCity: profile.birthCity,
       zodiacSign: profile.zodiacSign,
       onboardingComplete: true,
+      birthTime: profile.birthTime,
+      risingSign: profile.risingSign,
+      moonSign: profile.moonSign,
+      planet: profile.planet,
+      profilePicIndex: profile.profilePicIndex,
+      customPhotoPath: profile.customPhotoPath,
     );
     await save(completed);
   }
@@ -98,6 +122,17 @@ final inboxProvider =
 final unreadCountProvider = Provider<int>((ref) {
   return ref.watch(inboxProvider).where((e) => !e.isRead).length;
 });
+
+/// Kilitli olmayan (açılmış) okunmamış öğe sayısı — ana menü flare için
+final readyUnreadCountProvider = Provider<int>((ref) {
+  return ref.watch(inboxProvider).where((e) => !e.isRead && !e.isLocked).length;
+});
+
+/// Tarot falı gönderildiğinde ana menüye bildirim için
+final tarotSentProvider = StateProvider<bool>((ref) => false);
+
+/// Kahve falı gönderildiğinde ana menüye bildirim için
+final kahveSentProvider = StateProvider<bool>((ref) => false);
 
 // ─── Onboarding state ─────────────────────────────────────────────────────────
 

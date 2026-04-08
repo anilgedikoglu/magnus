@@ -36,6 +36,9 @@ class InboxItem extends HiveObject {
   @HiveField(9)
   String? iconAsset; // asset path for icon shown in list
 
+  @HiveField(10)
+  String? unlockAt; // ISO8601 — null = immediately readable; future = locked
+
   InboxItem({
     required this.id,
     required this.title,
@@ -47,7 +50,33 @@ class InboxItem extends HiveObject {
     this.photoPath2,
     this.photoPath3,
     this.iconAsset,
+    this.unlockAt,
   });
+
+  /// true ise kart henüz açılmamış (kilitli)
+  bool get isLocked {
+    if (unlockAt == null) return false;
+    try {
+      return DateTime.now().isBefore(DateTime.parse(unlockAt!));
+    } catch (_) {
+      return false;
+    }
+  }
+
+  /// 0.0 = tam kilitli, 1.0 = açıldı
+  double get unlockProgress {
+    if (unlockAt == null) return 1.0;
+    try {
+      final created = DateTime.parse(date);
+      final unlock = DateTime.parse(unlockAt!);
+      final total = unlock.difference(created).inMilliseconds;
+      if (total <= 0) return 1.0;
+      final elapsed = DateTime.now().difference(created).inMilliseconds;
+      return (elapsed / total).clamp(0.0, 1.0);
+    } catch (_) {
+      return 1.0;
+    }
+  }
 
   FortuneType get fortuneType {
     switch (fortuneTypeKey) {
@@ -69,6 +98,22 @@ class InboxItem extends HiveObject {
   String get previewText {
     final cleaned = text.replaceAll('\n', ' ').trim();
     return cleaned.length > 120 ? '${cleaned.substring(0, 120)}…' : cleaned;
+  }
+
+  /// Gelen kutusunda başlık olarak gösterilen metin.
+  /// Format: "Kahve Falı - 08.04.2026 14:32"
+  String get displayTitle {
+    try {
+      final dt = DateTime.parse(date);
+      final d = dt.day.toString().padLeft(2, '0');
+      final m = dt.month.toString().padLeft(2, '0');
+      final y = dt.year;
+      final h = dt.hour.toString().padLeft(2, '0');
+      final min = dt.minute.toString().padLeft(2, '0');
+      return '$fortuneTypeLabel - $d.$m.$y $h:$min';
+    } catch (_) {
+      return fortuneTypeLabel;
+    }
   }
 
   String get fortuneTypeLabel {
@@ -99,6 +144,7 @@ class InboxItem extends HiveObject {
         'photoPath2': photoPath2,
         'photoPath3': photoPath3,
         'iconAsset': iconAsset,
+        'unlockAt': unlockAt,
       };
 
   factory InboxItem.fromJson(Map<String, dynamic> json) => InboxItem(
@@ -112,5 +158,6 @@ class InboxItem extends HiveObject {
         photoPath2: json['photoPath2'],
         photoPath3: json['photoPath3'],
         iconAsset: json['iconAsset'],
+        unlockAt: json['unlockAt'],
       );
 }

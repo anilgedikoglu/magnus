@@ -1,9 +1,30 @@
+// ── AI NOTU: tarot_screen.dart ────────────────────────────────────────────────
+// KLASİK 3 kartlı tarot ekranı. TarotTypeScreen'den açılır (type: 'klasik').
+//
+// Akış:
+//   3 slot: Geçmiş | Şimdi | Gelecek. Kullanıcı 3 ayrı kartı sürükleyip bırakır.
+//   Her kart yerine oturduğunda o slota ait tepki metni gösterilir.
+//   Tüm 3 slot dolduğunda "Yoruma Gönder" butonu aktif olur.
+//   Buton: AI yorumu üretir → inbox'a kaydeder → context.go('/home').
+//
+// Tepki metni: assets/data/tarot_klasik_tepki.json
+//   Format: {"gecmis": {"adalet": "m", "tersadalet": "m", ...}, "simdi":{...}, "gelecek":{...}}
+//   Anahtar türetme: dosya adı → lowercase, tire kaldır → "adalet", ters ise "ters" prefix.
+//   Örn: "Adalet.jpg" → "adalet" | ters kart → "tersadalet"
+//   VariableReplacer.replace() ile işlenir.
+//
+// Kart görselleri: assets/images/tarot1/{name_lower}.jpg
+// Kart arka yüzü: assets/images/tarot_card_back.jpg
+// ─────────────────────────────────────────────────────────────────────────────
+import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
 
 // ─── Kart veritabanı ──────────────────────────────────────────────────────────
@@ -98,9 +119,10 @@ const _allCards = [
 
 // ─── Düzen sabitleri ──────────────────────────────────────────────────────────
 
+// Deste ve sürükleme overlay'i: tarot_card_back.jpg → 272×400 (oran 0.680)
 const double _cardW = 68.0;
-const double _cardH = 118.0;
-const double _overlap = 32.0;       // her kartın görünen yatay genişliği
+const double _cardH = _cardW * 400 / 272; // ≈ 100.0 — arka görsel oranı
+const double _overlap = 32.0;
 const double _deckAreaH = _cardH + 12;
 
 // ─── Ana ekran ────────────────────────────────────────────────────────────────
@@ -117,8 +139,13 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
 
   // Seçimler: kartIndex → seçim sırası (1,2,3)
   final Map<int, int> _selected = {};
+  final Map<int, bool> _reversed = {}; // kartIndex → ters mi?
   String? _lastSelectedName;
+  String? _tepkiText; // yerleşme anında gösterilen kısa tepki
   bool _isGenerating = false;
+
+  // Tepki veritabanı: {gecmis: {adalet: 'text', ...}, simdi: ..., gelecek: ...}
+  Map<String, dynamic>? _tepkiData;
 
   // Sürükleme durumu
   int? _draggingIndex;
@@ -133,6 +160,26 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
   void initState() {
     super.initState();
     _shuffled = List<_TarotCard>.from(_allCards)..shuffle(Random());
+    _loadTepki();
+  }
+
+  Future<void> _loadTepki() async {
+    final json = await rootBundle.loadString('assets/data/tarot_klasik_tepki.json');
+    if (mounted) setState(() => _tepkiData = jsonDecode(json) as Map<String, dynamic>);
+  }
+
+  // Kart dosya adından tepki anahtarı: 'adalet.jpg' → 'adalet', 'Budala-Deli.jpg' → 'budaladeli'
+  String _tepkiKey(String file, bool isReversed) {
+    final base = file.toLowerCase().replaceAll('.jpg', '').replaceAll('-', '');
+    return isReversed ? 'ters$base' : base;
+  }
+
+  String? _findTepki(int slot, String file, bool isReversed) {
+    if (_tepkiData == null) return null;
+    final positions = ['gecmis', 'simdi', 'gelecek'];
+    final poz = positions[slot - 1];
+    final key = _tepkiKey(file, isReversed);
+    return (_tepkiData![poz] as Map<String, dynamic>?)?[key] as String?;
   }
 
   @override
@@ -201,11 +248,20 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
   void _performSnap(int index) {
     _overlayEntry?.remove();
     _overlayEntry = null;
+    final isReversed = Random().nextBool();
+    final slot = _selectedCount + 1;
+    final card = _shuffled[index];
+    final rawTepki = _findTepki(slot, card.file, isReversed);
+    final tepki = rawTepki != null
+        ? VariableReplacer.replace(rawTepki, ref.read(userProfileProvider).toVariableMap())
+        : null;
     setState(() {
       _draggingIndex = null;
       _nearSlot = false;
-      _selected[index] = _selectedCount + 1;
-      _lastSelectedName = _shuffled[index].name;
+      _selected[index] = slot;
+      _reversed[index] = isReversed;
+      _lastSelectedName = isReversed ? 'Ters ${card.name}' : card.name;
+      _tepkiText = tepki;
     });
   }
 
@@ -228,22 +284,61 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
         backgroundColor: AppColors.navBarBackground,
         title: const Text('Tarot'),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
-          onPressed: () => context.pop(),
+          icon: Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: _selected.isEmpty ? null : Colors.white24,
+          ),
+          onPressed: _selected.isEmpty ? () => context.pop() : null,
         ),
       ),
-      body: Column(
-        children: [
-          _buildInstruction(),
-          _buildCardNameLabel(),
-          _buildSelectedSlots(),
-          const Spacer(),
-          _buildDeck(),
-          const Spacer(),
-          _buildGoButton(),
-          const SizedBox(height: 24),
-        ],
+      body: PopScope(
+        canPop: _selected.isEmpty,
+        child: Column(
+          children: [
+            _buildInstruction(),
+            _buildCardNameLabel(),
+            _buildSelectedSlots(),
+            _buildTepkiLabel(),
+            const Spacer(),
+            _buildDeck(),
+            const Spacer(),
+            _buildGoButton(),
+            const SizedBox(height: 24),
+          ],
+        ), // Column
+      ), // PopScope
+    );
+  }
+
+  Widget _buildTepkiLabel() {
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 400),
+      transitionBuilder: (child, anim) => FadeTransition(
+        opacity: anim,
+        child: SlideTransition(
+          position: Tween<Offset>(
+            begin: const Offset(0, 0.3),
+            end: Offset.zero,
+          ).animate(anim),
+          child: child,
+        ),
       ),
+      child: _tepkiText != null
+          ? Padding(
+              key: ValueKey(_tepkiText),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
+              child: Text(
+                _tepkiText!,
+                textAlign: TextAlign.center,
+                style: AppTextStyles.inboxTitle.copyWith(
+                  fontSize: 13,
+                  color: const Color(0xFFB8E0FF), // açık mavi — instruction'dan farklı
+                  fontWeight: FontWeight.w400,
+                  height: 1.45,
+                ),
+              ),
+            )
+          : const SizedBox(key: ValueKey('tepki_empty'), height: 0),
     );
   }
 
@@ -318,11 +413,14 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
               .where((e) => e.value == slot + 1)
               .firstOrNull;
           final card = entry != null ? _shuffled[entry.key] : null;
+          final isReversed =
+              entry != null ? (_reversed[entry.key] ?? false) : false;
 
           return _SlotCard(
             key: ValueKey(card?.file ?? 'slot_$slot'),
             card: card,
             slotNumber: slot + 1,
+            isReversed: isReversed,
           );
         }),
       ),
@@ -344,13 +442,20 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
           top: 0,
           width: _cardW,
           height: _cardH,
-          child: Opacity(
-            opacity: isDragging ? 0.25 : 1.0,
-            child: GestureDetector(
-              onVerticalDragStart: (d) => _onDragStart(i, d.globalPosition),
-              onVerticalDragUpdate: _onDragUpdate,
-              onVerticalDragEnd: _onDragEnd,
-              child: _CardBack(),
+          // ColorFiltered yerine direkt görünmez yap — saveLayer kullanmaz
+          child: IgnorePointer(
+            ignoring: isDragging,
+            child: Visibility(
+              visible: !isDragging,
+              maintainSize: true,
+              maintainAnimation: true,
+              maintainState: true,
+              child: GestureDetector(
+                onVerticalDragStart: (d) => _onDragStart(i, d.globalPosition),
+                onVerticalDragUpdate: _onDragUpdate,
+                onVerticalDragEnd: _onDragEnd,
+                child: RepaintBoundary(child: _CardBack()),
+              ),
             ),
           ),
         ),
@@ -418,7 +523,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
                           strokeWidth: 2, color: Colors.white),
                     )
                   : Text(
-                      _isDone ? 'Falımı Göster ✨' : '3 Kart Seç',
+                      _isDone ? 'Yoruma Gönder ✨' : '3 Kart Seç',
                       style: AppTextStyles.answerText.copyWith(fontSize: 16),
                     ),
             ),
@@ -434,10 +539,25 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
       final profile = ref.read(userProfileProvider);
       final service = ref.read(fortuneServiceProvider);
       await service.init();
-      final item = await service.generateTarotFortune(profile: profile);
+
+      // Seçilen kartları sırayla (gecmis→simdi→gelecek) listele
+      final cardList = [1, 2, 3].map((slot) {
+        final entry = _selected.entries.firstWhere((e) => e.value == slot);
+        return (
+          name: _shuffled[entry.key].name,
+          isReversed: _reversed[entry.key] ?? false,
+        );
+      }).toList();
+
+      final item = await service.generateTarotFortune(
+        profile: profile,
+        cards: cardList,
+      );
       await ref.read(inboxProvider.notifier).addItem(item);
       if (!mounted) return;
-      context.go('/tarot_result/${item.id}');
+      // Ana menüye dön ve "tarot gönderildi" balon bildirimini tetikle
+      ref.read(tarotSentProvider.notifier).state = true;
+      context.go('/home');
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -503,7 +623,7 @@ class _DragOverlay extends StatelessWidget {
                   'assets/images/tarot_card_back.jpg',
                   fit: BoxFit.cover,
                   errorBuilder: (_, __, ___) =>
-                      Container(color: const Color(0xFF1E1550)),
+                      const ColoredBox(color: Color(0xFF1E1550)),
                 ),
               ),
             ),
@@ -519,10 +639,10 @@ class _DragOverlay extends StatelessWidget {
 class _CardBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    // Shadow dışta, ClipRRect içte — ikisi aynı Container'da olunca GPU artifact çıkar
+    return DecoratedBox(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(7),
-        border: Border.all(color: const Color(0xFF3A2A70)),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.45),
@@ -532,12 +652,12 @@ class _CardBack extends StatelessWidget {
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(7),
         child: Image.asset(
           'assets/images/tarot_card_back.jpg',
           fit: BoxFit.cover,
           errorBuilder: (_, __, ___) =>
-              Container(color: const Color(0xFF1E1550)),
+              const ColoredBox(color: Color(0xFF1E1550)),
         ),
       ),
     );
@@ -549,8 +669,14 @@ class _CardBack extends StatelessWidget {
 class _SlotCard extends StatefulWidget {
   final _TarotCard? card;
   final int slotNumber;
+  final bool isReversed;
 
-  const _SlotCard({super.key, this.card, required this.slotNumber});
+  const _SlotCard({
+    super.key,
+    this.card,
+    required this.slotNumber,
+    this.isReversed = false,
+  });
 
   @override
   State<_SlotCard> createState() => _SlotCardState();
@@ -561,8 +687,9 @@ class _SlotCardState extends State<_SlotCard>
   late final AnimationController _ctrl;
   late final Animation<double> _anim;
 
-  static const double _w = 58.0;
-  static const double _h = 90.0;
+  // Slot kartları: kart yüzü → 276×480 (oran 0.575)
+  static const double _w = 116.0;
+  static const double _h = _w * 480 / 276; // ≈ 201.7 — yüz görsel oranı
 
   @override
   void initState() {
@@ -602,31 +729,33 @@ class _SlotCardState extends State<_SlotCard>
   Widget build(BuildContext context) {
     if (widget.card == null) return _buildEmpty();
 
-    return AnimatedBuilder(
-      animation: _anim,
-      builder: (_, __) {
-        final v = _anim.value;
-        final showFront = v > 0.5;
-        final angle = showFront ? (v - 1.0) * pi : v * pi;
+    return RepaintBoundary(
+      child: AnimatedBuilder(
+        animation: _anim,
+        builder: (_, __) {
+          final v = _anim.value;
+          final showFront = v > 0.5;
+          final angle = showFront ? (v - 1.0) * pi : v * pi;
 
-        return Transform(
-          transform: Matrix4.identity()
-            ..setEntry(3, 2, 0.003)
-            ..rotateY(angle),
-          alignment: Alignment.center,
-          child: showFront ? _buildFront() : _buildBack(),
-        );
-      },
+          return Transform(
+            transform: Matrix4.identity()
+              ..setEntry(3, 2, 0.003)
+              ..rotateY(angle),
+            alignment: Alignment.center,
+            child: showFront ? _buildFront() : _buildBack(),
+          );
+        },
+      ),
     );
   }
 
   Widget _buildEmpty() {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 6),
+      margin: const EdgeInsets.symmetric(horizontal: 4),
       width: _w,
       height: _h,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(10),
         border: Border.all(
           color: AppColors.divider.withValues(alpha: 0.4),
           width: 1.5,
@@ -638,7 +767,7 @@ class _SlotCardState extends State<_SlotCard>
           '${widget.slotNumber}',
           style: TextStyle(
             color: AppColors.divider.withValues(alpha: 0.6),
-            fontSize: 24,
+            fontSize: 32,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -648,42 +777,50 @@ class _SlotCardState extends State<_SlotCard>
 
   Widget _buildBack() {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 6),
+      margin: const EdgeInsets.symmetric(horizontal: 4),
       width: _w,
       height: _h,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(10),
         border: Border.all(color: AppColors.divider),
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(7),
+        borderRadius: BorderRadius.circular(9),
         child: Image.asset(
           'assets/images/tarot_card_back.jpg',
-          fit: BoxFit.cover,
+          fit: BoxFit.fill, // üst/alttan hafifçe gerer, kırpma yok
           errorBuilder: (_, __, ___) =>
-              Container(color: const Color(0xFF1E1550)),
+              const ColoredBox(color: Color(0xFF1E1550)),
         ),
       ),
     );
   }
 
   Widget _buildFront() {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 6),
+    final card = Container(
+      margin: const EdgeInsets.symmetric(horizontal: 4),
       width: _w,
       height: _h,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: AppColors.bubbleFrame1, width: 2),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: widget.isReversed
+              ? const Color(0xFFFF4488)
+              : AppColors.bubbleFrame1,
+          width: 2,
+        ),
         boxShadow: [
           BoxShadow(
-            color: AppColors.bubbleFrame1.withValues(alpha: 0.5),
-            blurRadius: 10,
+            color: (widget.isReversed
+                    ? const Color(0xFFFF4488)
+                    : AppColors.bubbleFrame1)
+                .withValues(alpha: 0.5),
+            blurRadius: 12,
           ),
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(7),
+        borderRadius: BorderRadius.circular(9),
         child: Image.asset(
           widget.card!.assetPath,
           fit: BoxFit.cover,
@@ -692,5 +829,8 @@ class _SlotCardState extends State<_SlotCard>
         ),
       ),
     );
+
+    if (!widget.isReversed) return card;
+    return Transform.rotate(angle: pi, child: card);
   }
 }

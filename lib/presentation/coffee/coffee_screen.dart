@@ -1,10 +1,26 @@
+// ── AI NOTU: coffee_screen.dart ───────────────────────────────────────────────
+// Kahve Falı ekranı. Kullanıcı fotoğraf gönderme yöntemini seçer:
+//   • Foto Çek  → kamera açılır, 3 kare yan yana doldurulur
+//   • Dosyadan  → galeri açılır, 3 kare yan yana doldurulur
+//   • Yerime İç → Fincan1/3/5 arasından rastgele bir fincan görseli
+//
+// Fal gönderme koşulu:
+//   Foto Çek / Dosyadan → 3 fotoğrafın TAMAMI dolu olunca buton aktif
+//   Yerime İç           → seçildiği anda buton aktif
+//
+// "Falımı Gönder" butonuna basılınca:
+//   1. kahveSentProvider = true  (HomeScreen balon + kredi işaretler)
+//   2. context.go('/home')
+//   3. Fal arka planda üretilip inbox'a eklenir
+// ─────────────────────────────────────────────────────────────────────────────
+import 'dart:async';
 import 'dart:io';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
-import '../../core/constants/app_text_styles.dart';
 import '../../data/providers.dart';
 
 class CoffeeScreen extends ConsumerStatefulWidget {
@@ -14,242 +30,320 @@ class CoffeeScreen extends ConsumerStatefulWidget {
   ConsumerState<CoffeeScreen> createState() => _CoffeeScreenState();
 }
 
+enum _InputMode { none, fotoCek, dosyadan, yerimeIc }
+
 class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   final _picker = ImagePicker();
-  final List<String?> _photos = [null, null, null]; // 3 photos
-  bool _isGenerating = false;
+  _InputMode _mode = _InputMode.none;
+  final List<String?> _photos = [null, null, null];
+  String? _fincanImage;
 
-  static const _photoLabels = [
-    'Fincanın İçi',
-    'Fincanın Dışı',
-    'Tabak',
+  static const _fincanImages = [
+    'assets/images/kahve/Fincan1.png',
+    'assets/images/kahve/Fincan3.png',
+    'assets/images/kahve/Fincan5.png',
   ];
 
-  static const _photoHints = [
-    'Fincanı ters çevirin ve kapağa koyun.\nBiraz bekledikten sonra içini fotoğraflayın.',
-    'Fincanın dış yüzeyini fotoğraflayın.',
-    'Tabağın üzerindeki kahve izlerini fotoğraflayın.',
-  ];
+  // Foto Çek / Dosyadan: 3'ü de dolu olunca aktif
+  bool get _canSend {
+    if (_mode == _InputMode.yerimeIc) return true;
+    if (_mode == _InputMode.fotoCek || _mode == _InputMode.dosyadan) {
+      return _photos.every((p) => p != null);
+    }
+    return false;
+  }
+
+  int get _filledCount => _photos.where((p) => p != null).length;
+
+  void _selectMode(_InputMode mode) {
+    if (_mode == mode) return;
+    setState(() {
+      _mode = mode;
+      _photos.fillRange(0, 3, null);
+      _fincanImage = mode == _InputMode.yerimeIc
+          ? _fincanImages[Random().nextInt(_fincanImages.length)]
+          : null;
+    });
+  }
+
+  Future<void> _pickPhoto(int index) async {
+    final source = _mode == _InputMode.fotoCek
+        ? ImageSource.camera
+        : ImageSource.gallery;
+    final image = await _picker.pickImage(
+      source: source,
+      imageQuality: 85,
+      maxWidth: 1200,
+    );
+    if (image == null || !mounted) return;
+    setState(() => _photos[index] = image.path);
+  }
+
+  Future<void> _sendFortune() async {
+    if (!_canSend) return;
+
+    // Fal üretimini hemen arka planda başlat
+    final fortuneService = ref.read(fortuneServiceProvider);
+    final profile = ref.read(userProfileProvider);
+    final inboxNotifier = ref.read(inboxProvider.notifier);
+
+    fortuneService.generateCoffeeFortune(
+      profile: profile,
+      photoPath1: _photos[0],
+      photoPath2: _photos[1],
+      photoPath3: _photos[2],
+    ).then((item) => inboxNotifier.addItem(item)).catchError((_) {});
+
+    // 4 saniye kum saati overlay göster
+    if (!mounted) return;
+    await showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      barrierColor: Colors.black.withValues(alpha: 0.75),
+      builder: (_) => const _SendingOverlay(),
+    );
+
+    if (!mounted) return;
+    ref.read(kahveSentProvider.notifier).state = true;
+    context.go('/home');
+  }
 
   @override
   Widget build(BuildContext context) {
-    final allTaken = _photos.every((p) => p != null);
-
     return Scaffold(
       backgroundColor: AppColors.background,
-      appBar: AppBar(
-        backgroundColor: AppColors.navBarBackground,
-        title: const Text('Kahve Falı'),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
-          onPressed: () => context.go('/chat'),
-        ),
-      ),
       body: SafeArea(
         child: Column(
           children: [
+            _buildTopBar(context),
             Expanded(
               child: SingleChildScrollView(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _buildInstructions(),
-                    const SizedBox(height: 28),
-                    for (int i = 0; i < 3; i++) ...[
-                      _buildPhotoSlot(i),
-                      if (i < 2) const SizedBox(height: 16),
+                    _buildSubtitle(),
+                    const SizedBox(height: 24),
+                    _buildOptionRow(context),
+                    if (_mode == _InputMode.fotoCek ||
+                        _mode == _InputMode.dosyadan) ...[
+                      const SizedBox(height: 28),
+                      _buildPhotoSlots(),
+                    ] else if (_mode == _InputMode.yerimeIc &&
+                        _fincanImage != null) ...[
+                      const SizedBox(height: 28),
+                      _buildFincanImage(),
                     ],
                   ],
                 ),
               ),
             ),
-            _buildSubmitButton(allTaken),
+            _buildSendButton(),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildInstructions() {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            AppColors.bubble2.first.withValues(alpha: 0.7),
-            AppColors.bubble2.last.withValues(alpha: 0.7),
-          ],
-        ),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: AppColors.bubbleFrame2.withValues(alpha: 0.3),
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+  Widget _buildTopBar(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+      child: Row(
         children: [
-          Row(
-            children: [
-              const Text('☕', style: TextStyle(fontSize: 20)),
-              const SizedBox(width: 10),
-              Text(
-                'Fal için 3 fotoğraf gerekli',
-                style: AppTextStyles.inboxTitle,
+          IconButton(
+            icon: const Icon(Icons.arrow_back_ios_new_rounded,
+                color: Colors.white70, size: 20),
+            onPressed: () => context.pop(),
+          ),
+          const Expanded(
+            child: Text(
+              'KAHVE FALI',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2,
               ),
-            ],
+            ),
           ),
-          const SizedBox(height: 8),
-          Text(
-            'Kahvenizi içtikten sonra fincanı ters çevirin,\n'
-            'soğumasını bekleyin ve üç fotoğraf çekin.',
-            style: AppTextStyles.inboxDescription,
-          ),
+          const SizedBox(width: 48),
         ],
       ),
     );
   }
 
-  Widget _buildPhotoSlot(int index) {
-    final photo = _photos[index];
-    final hasPhoto = photo != null;
+  Widget _buildSubtitle() {
+    return const Text(
+      'Fincan görsellerini nasıl iletmek istersin?',
+      textAlign: TextAlign.center,
+      style: TextStyle(color: Colors.white54, fontSize: 14),
+    );
+  }
 
-    return GestureDetector(
-      onTap: () => _pickPhoto(index),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 250),
-        height: 160,
-        decoration: BoxDecoration(
-          color: hasPhoto
-              ? Colors.transparent
-              : AppColors.backgroundCard,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-            color: hasPhoto
-                ? AppColors.glowGreen.withValues(alpha: 0.7)
-                : AppColors.divider,
-            width: hasPhoto ? 2 : 1,
+  Widget _buildOptionRow(BuildContext context) {
+    final screenW = MediaQuery.of(context).size.width;
+    // Her buton ekranın ~%28'i genişliğinde, yüksekliği de aynı
+    final btnSize = (screenW - 40 - 24) / 3; // 40=padding, 24=2 boşluk
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        _OptionButton(
+          imageAsset: 'assets/images/camera.png',
+          label: 'Foto Çek',
+          size: btnSize,
+          selected: _mode == _InputMode.fotoCek,
+          onTap: () => _selectMode(_InputMode.fotoCek),
+        ),
+        _OptionButton(
+          imageAsset: 'assets/images/file.png',
+          label: 'Dosyadan',
+          size: btnSize,
+          selected: _mode == _InputMode.dosyadan,
+          onTap: () => _selectMode(_InputMode.dosyadan),
+        ),
+        _OptionButton(
+          imageAsset: 'assets/images/ozelfal.png',
+          label: 'Yerime İç',
+          size: btnSize,
+          selected: _mode == _InputMode.yerimeIc,
+          onTap: () => _selectMode(_InputMode.yerimeIc),
+        ),
+      ],
+    );
+  }
+
+  // ── 3 fotoğraf yuvası — yan yana kareler, sadece numara ──────────────────────
+  Widget _buildPhotoSlots() {
+    return Row(
+      children: List.generate(3, (i) {
+        final photo = _photos[i];
+        return Expanded(
+          child: Padding(
+            padding: EdgeInsets.only(left: i > 0 ? 10 : 0),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: GestureDetector(
+                onTap: () => _pickPhoto(i),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 220),
+                  decoration: BoxDecoration(
+                    color: photo != null
+                        ? Colors.transparent
+                        : const Color(0xFF13122A),
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: photo != null
+                          ? AppColors.glowGreen.withValues(alpha: 0.8)
+                          : Colors.white24,
+                      width: photo != null ? 2 : 1,
+                    ),
+                  ),
+                  clipBehavior: Clip.antiAlias,
+                  child: photo != null
+                      ? Stack(
+                          fit: StackFit.expand,
+                          children: [
+                            Image.file(File(photo), fit: BoxFit.cover),
+                            // Numara rozeti
+                            Positioned(
+                              top: 6,
+                              left: 6,
+                              child: Container(
+                                width: 22,
+                                height: 22,
+                                decoration: const BoxDecoration(
+                                  color: AppColors.glowGreen,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '${i + 1}',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
+                      : Center(
+                          child: Text(
+                            '${i + 1}',
+                            style: const TextStyle(
+                              color: Colors.white30,
+                              fontSize: 32,
+                              fontWeight: FontWeight.w200,
+                            ),
+                          ),
+                        ),
+                ),
+              ),
+            ),
           ),
+        );
+      }),
+    );
+  }
+
+  Widget _buildFincanImage() {
+    return Center(
+      child: Container(
+        width: 220,
+        height: 220,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: Colors.white12),
         ),
         clipBehavior: Clip.antiAlias,
-        child: hasPhoto
-            ? Stack(
-                fit: StackFit.expand,
-                children: [
-                  Image.file(File(photo), fit: BoxFit.cover),
-                  // Overlay with label
-                  Positioned(
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 8,
-                      ),
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter,
-                          colors: [
-                            Colors.black.withValues(alpha: 0.75),
-                            Colors.transparent,
-                          ],
-                        ),
-                      ),
-                      child: Row(
-                        children: [
-                          const Icon(Icons.check_circle,
-                              color: AppColors.glowGreen, size: 16),
-                          const SizedBox(width: 6),
-                          Text(
-                            _photoLabels[index],
-                            style: AppTextStyles.inboxMeta.copyWith(
-                              color: Colors.white,
-                            ),
-                          ),
-                          const Spacer(),
-                          Text(
-                            'Değiştir',
-                            style: AppTextStyles.inboxMeta.copyWith(
-                              color: AppColors.navBarActive,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              )
-            : Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 52,
-                    height: 52,
-                    decoration: BoxDecoration(
-                      color: AppColors.inputBackground,
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: AppColors.answerBubbleBorder,
-                      ),
-                    ),
-                    child: const Icon(
-                      Icons.add_a_photo_rounded,
-                      color: AppColors.navBarActive,
-                      size: 24,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    '${index + 1}. ${_photoLabels[index]}',
-                    style: AppTextStyles.inboxTitle.copyWith(fontSize: 14),
-                  ),
-                  const SizedBox(height: 4),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
-                    child: Text(
-                      _photoHints[index],
-                      style: AppTextStyles.inboxMeta,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ],
-              ),
+        child: Image.asset(_fincanImage!, fit: BoxFit.contain),
       ),
     );
   }
 
-  Widget _buildSubmitButton(bool allTaken) {
+  Widget _buildSendButton() {
+    final isPhotoMode = _mode == _InputMode.fotoCek ||
+        _mode == _InputMode.dosyadan;
+    final String label;
+    if (_canSend) {
+      label = 'Falımı Gönder ✨';
+    } else if (isPhotoMode) {
+      label = '$_filledCount/3 Fotoğraf';
+    } else {
+      label = 'Yöntem Seç';
+    }
+
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
       decoration: const BoxDecoration(
-        color: AppColors.navBarBackground,
-        border: Border(top: BorderSide(color: AppColors.divider)),
+        color: Color(0xFF0D0D1A),
+        border: Border(top: BorderSide(color: Colors.white12)),
       ),
       child: SizedBox(
         width: double.infinity,
         child: AnimatedOpacity(
           duration: const Duration(milliseconds: 300),
-          opacity: allTaken ? 1.0 : 0.4,
+          opacity: _canSend ? 1.0 : 0.35,
           child: GestureDetector(
-            onTap: allTaken && !_isGenerating ? _generateFortune : null,
+            onTap: _canSend ? _sendFortune : null,
             child: Container(
               height: 54,
               decoration: BoxDecoration(
-                gradient: allTaken
+                gradient: _canSend
                     ? const LinearGradient(
-                        colors: AppColors.bubble1,
+                        colors: [Color(0xFF6B3FA0), Color(0xFF9C6FD6)],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       )
                     : null,
-                color: allTaken ? null : AppColors.backgroundCard,
+                color: _canSend ? null : Colors.white12,
                 borderRadius: BorderRadius.circular(27),
-                boxShadow: allTaken
+                boxShadow: _canSend
                     ? [
                         BoxShadow(
-                          color: AppColors.bubble1.first.withValues(alpha: 0.5),
+                          color: const Color(0xFF7B4FBF).withValues(alpha: 0.5),
                           blurRadius: 16,
                           offset: const Offset(0, 4),
                         ),
@@ -257,21 +351,15 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
                     : null,
               ),
               child: Center(
-                child: _isGenerating
-                    ? const SizedBox(
-                        width: 24,
-                        height: 24,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2,
-                          color: Colors.white,
-                        ),
-                      )
-                    : Text(
-                        allTaken
-                            ? 'Falımı Yorumla ✨'
-                            : '${_photos.where((p) => p != null).length}/3 Fotoğraf Çekildi',
-                        style: AppTextStyles.answerText.copyWith(fontSize: 16),
-                      ),
+                child: Text(
+                  label,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.5,
+                  ),
+                ),
               ),
             ),
           ),
@@ -279,97 +367,198 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       ),
     );
   }
+}
 
-  Future<void> _pickPhoto(int index) async {
-    final source = await _showPhotoSourceDialog();
-    if (source == null) return;
+// ── Gönderiliyor overlay — 4 saniyelik kum saati ─────────────────────────────
+class _SendingOverlay extends StatefulWidget {
+  const _SendingOverlay();
 
-    final image = await _picker.pickImage(
-      source: source,
-      imageQuality: 85,
-      maxWidth: 1200,
-    );
-    if (image == null) return;
+  @override
+  State<_SendingOverlay> createState() => _SendingOverlayState();
+}
 
-    setState(() => _photos[index] = image.path);
+class _SendingOverlayState extends State<_SendingOverlay> {
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer(const Duration(seconds: 4), () {
+      if (mounted) Navigator.of(context).pop();
+    });
   }
 
-  Future<ImageSource?> _showPhotoSourceDialog() async {
-    return showModalBottomSheet<ImageSource>(
-      context: context,
-      backgroundColor: AppColors.backgroundSurface,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _PulsingHourglass(),
+          SizedBox(height: 16),
+          Text(
+            'Falın gönderiliyor...',
+            style: TextStyle(
+              color: Color(0xFFB8E0FF),
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              decoration: TextDecoration.none,
+            ),
+          ),
+        ],
       ),
-      builder: (ctx) => SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
+    );
+  }
+}
+
+// ── Kum saati animasyonu (tarot ekranındakiyle aynı) ──────────────────────────
+class _PulsingHourglass extends StatefulWidget {
+  const _PulsingHourglass();
+
+  @override
+  State<_PulsingHourglass> createState() => _PulsingHourglassState();
+}
+
+class _PulsingHourglassState extends State<_PulsingHourglass>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _ctrl;
+  late final Animation<double> _scale;
+  int _tick = 0;
+  Timer? _flipTimer;
+
+  @override
+  void initState() {
+    super.initState();
+    _ctrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 600),
+    )..repeat(reverse: true);
+    _scale = Tween<double>(begin: 0.85, end: 1.0).animate(
+      CurvedAnimation(parent: _ctrl, curve: Curves.easeInOut),
+    );
+    _flipTimer = Timer.periodic(const Duration(milliseconds: 700), (_) {
+      if (mounted) setState(() => _tick++);
+    });
+  }
+
+  @override
+  void dispose() {
+    _ctrl.dispose();
+    _flipTimer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final icon =
+        _tick.isEven ? Icons.hourglass_top_rounded : Icons.hourglass_bottom_rounded;
+    return ScaleTransition(
+      scale: _scale,
+      child: Icon(icon, color: const Color(0xFFB8E0FF), size: 48),
+    );
+  }
+}
+
+// ── Yöntem seçim butonu ───────────────────────────────────────────────────────
+// Görsel çerçeveyi kenarlarına kadar doldurur; etiket altta gradient overlay içinde.
+class _OptionButton extends StatelessWidget {
+  final String imageAsset;
+  final String label;
+  final double size;
+  final bool selected;
+  final VoidCallback onTap;
+
+  const _OptionButton({
+    required this.imageAsset,
+    required this.label,
+    required this.size,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: selected ? const Color(0xFF9C6FD6) : Colors.white24,
+            width: selected ? 2 : 1,
+          ),
+          boxShadow: selected
+              ? [
+                  BoxShadow(
+                    color: const Color(0xFF7B4FBF).withValues(alpha: 0.45),
+                    blurRadius: 18,
+                    spreadRadius: 2,
+                  ),
+                ]
+              : null,
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            // Görsel — çerçeveyi tam doldurur
+            Image.asset(
+              imageAsset,
+              fit: BoxFit.cover,
+              errorBuilder: (_, __, ___) => const ColoredBox(
+                color: Color(0xFF13122A),
+                child: Icon(Icons.image_not_supported,
+                    color: Colors.white38, size: 40),
+              ),
+            ),
+            // Seçili olunca hafif mor tint
+            if (selected)
               Container(
-                width: 40,
-                height: 4,
+                color: const Color(0xFF6B3FA0).withValues(alpha: 0.25),
+              ),
+            // Etiket: alta yapışık, gradient arka plan
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
                 decoration: BoxDecoration(
-                  color: AppColors.divider,
-                  borderRadius: BorderRadius.circular(2),
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    colors: [
+                      Colors.black.withValues(alpha: 0.82),
+                      Colors.transparent,
+                    ],
+                  ),
+                ),
+                child: Text(
+                  label,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: selected ? Colors.white : Colors.white70,
+                    fontSize: 13,
+                    fontWeight:
+                        selected ? FontWeight.w700 : FontWeight.w500,
+                    letterSpacing: 0.3,
+                  ),
                 ),
               ),
-              const SizedBox(height: 20),
-              ListTile(
-                leading: const Icon(Icons.camera_alt_rounded,
-                    color: AppColors.navBarActive),
-                title: Text('Kamera', style: AppTextStyles.inboxTitle),
-                onTap: () => Navigator.pop(ctx, ImageSource.camera),
-              ),
-              ListTile(
-                leading: const Icon(Icons.photo_library_rounded,
-                    color: AppColors.navBarActive),
-                title: Text('Galeri', style: AppTextStyles.inboxTitle),
-                onTap: () => Navigator.pop(ctx, ImageSource.gallery),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
-  }
-
-  Future<void> _generateFortune() async {
-    setState(() => _isGenerating = true);
-
-    try {
-      final profile = ref.read(userProfileProvider);
-      final fortuneService = ref.read(fortuneServiceProvider);
-
-      await fortuneService.init();
-      final item = await fortuneService.generateCoffeeFortune(
-        profile: profile,
-        photoPath1: _photos[0],
-        photoPath2: _photos[1],
-        photoPath3: _photos[2],
-      );
-
-      await ref.read(inboxProvider.notifier).addItem(item);
-
-      if (!mounted) return;
-      // Show success, navigate to inbox
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(
-            'Kahve falın inbox\'a eklendi! ☕',
-            style: AppTextStyles.inboxDescription,
-          ),
-          backgroundColor: AppColors.backgroundSurface,
-          behavior: SnackBarBehavior.floating,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-        ),
-      );
-      context.go('/inbox');
-    } finally {
-      if (mounted) setState(() => _isGenerating = false);
-    }
   }
 }

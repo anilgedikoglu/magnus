@@ -1,5 +1,41 @@
 # Magnus App — Claude Proje Hafızası
 
+## Google Play Store — Release İmzalama Bilgileri
+
+> AAB oluştururken bu bilgileri kullan. Bir daha sorma, burada yazıyor.
+
+### Keystore Dosyası
+- **Konum:** `C:\src\magnus_app\android\magnus_release.jks`
+- **Alias:** `magnus`
+- **Keystore şifresi:** `magnus2024!`
+- **Key şifresi:** `magnus2024!`
+- **Yapı:** RSA 2048-bit, 10000 gün geçerli, CN=Magnus App, C=TR
+
+### key.properties (android/key.properties)
+```
+storePassword=magnus2024!
+keyPassword=magnus2024!
+keyAlias=magnus
+storeFile=../magnus_release.jks
+```
+
+### Sertifika Parmak İzleri (Google Play onaylı upload key)
+- **MD5:** `3C:34:77:E4:9A:0F:38:53:A3:C7:86:11:91:9E:51:DD`
+- **SHA1:** `DA:88:8B:FE:35:22:B8:F9:4F:34:32:79:0D:11:F3:46:91:F8:BC:7E`
+
+### AAB Oluşturma Komutu
+```bash
+cd C:\src\magnus_app
+flutter build appbundle --release
+```
+Çıktı: `build\app\outputs\bundle\release\app-release.aab`
+
+### Uygulama Bilgileri
+- **Package:** `com.futurastic.Magnus`
+- **Play Console:** com.futurastic.Magnus
+
+---
+
 ## Unity .asset Dosyalarından İçerik Dönüştürme İş Akışı
 
 Kullanıcı bir Unity `.asset` klasörü gösterip **"bu türün metinlerini dönüştür"** dediğinde aşağıdaki adımları eksiksiz uygula. Her seferinde anlatmasına gerek yok.

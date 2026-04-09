@@ -128,20 +128,28 @@ class _TabConfig {
   });
 }
 
+// Sıra: Transit · Maneviyat (ay) · Güzellik · Sağlık · Aktivite
 const _tabs = [
   _TabConfig(
     label: 'TRANSİT',
-    icon: Icons.nightlight_round,
+    icon: Icons.public,           // gezegen/dünya ikonu
     color: Color(0xFF00E5FF),
     dataKey: 'transit',
     extraKey: 'transit_tarihli',
     bgImage: 'assets/images/astrotakvim/astrotakvim_bg1.png',
   ),
   _TabConfig(
-    label: 'AKTİVİTE',
+    label: 'MANEVİYAT',
+    icon: Icons.nightlight_round, // ay — maneviyat
+    color: Color(0xFFBB44FF),
+    dataKey: 'maneviyat',
+    bgImage: 'assets/images/astrotakvim/astrotakvim_bg2.png',
+  ),
+  _TabConfig(
+    label: 'GÜZELLİK',
     icon: Icons.content_cut,
     color: Color(0xFFFFCC00),
-    dataKey: 'aktivite',
+    dataKey: 'guzellik',
     bgImage: 'assets/images/astrotakvim/astrotakvim_bg3.png',
   ),
   _TabConfig(
@@ -152,18 +160,11 @@ const _tabs = [
     bgImage: 'assets/images/astrotakvim/astrotakvim_bg4.png',
   ),
   _TabConfig(
-    label: 'GÜZELLİK',
-    icon: Icons.auto_awesome,
-    color: Color(0xFFFF66CC),
-    dataKey: 'guzellik',
-    bgImage: 'assets/images/astrotakvim/astrotakvim_bg2.png',
-  ),
-  _TabConfig(
-    label: 'MANEVİYAT',
-    icon: Icons.blur_circular,
-    color: Color(0xFFBB44FF),
-    dataKey: 'maneviyat',
-    bgImage: 'assets/images/astrotakvim/astrotakvim_bg2.png',
+    label: 'AKTİVİTE',
+    icon: Icons.directions_run,
+    color: Color(0xFFFF9900),
+    dataKey: 'aktivite',
+    bgImage: 'assets/images/astrotakvim/astrotakvim_bg3.png',
   ),
 ];
 

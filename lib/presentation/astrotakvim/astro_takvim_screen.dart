@@ -129,42 +129,48 @@ class _TabConfig {
 }
 
 // Sıra: Transit · Maneviyat (ay) · Güzellik · Sağlık · Aktivite
+// Arka planlar:
+//   bg1 = Ay fotoğrafı      → Maneviyat
+//   bg2 = Gece koşucu       → Aktivite
+//   bg3 = Yılan             → Sağlık
+//   bg4 = Güneş sistemi     → Transit
+//   guzellik_bg = Falcı kadın → Güzellik
 const _tabs = [
   _TabConfig(
     label: 'TRANSİT',
-    icon: Icons.public,           // gezegen/dünya ikonu
+    icon: Icons.public,
     color: Color(0xFF00E5FF),
     dataKey: 'transit',
     extraKey: 'transit_tarihli',
-    bgImage: 'assets/images/astrotakvim/astrotakvim_bg1.png',
+    bgImage: 'assets/images/astrotakvim/astrotakvim_bg4.png', // güneş sistemi
   ),
   _TabConfig(
     label: 'MANEVİYAT',
-    icon: Icons.nightlight_round, // ay — maneviyat
+    icon: Icons.nightlight_round, // ay
     color: Color(0xFFBB44FF),
     dataKey: 'maneviyat',
-    bgImage: 'assets/images/astrotakvim/astrotakvim_bg2.png',
+    bgImage: 'assets/images/astrotakvim/astrotakvim_bg1.png', // ay fotoğrafı
   ),
   _TabConfig(
     label: 'GÜZELLİK',
     icon: Icons.content_cut,
     color: Color(0xFFFFCC00),
     dataKey: 'guzellik',
-    bgImage: 'assets/images/astrotakvim/astrotakvim_bg3.png',
+    bgImage: 'assets/images/astrotakvim/guzellik_bg.png', // falcı kadın
   ),
   _TabConfig(
     label: 'SAĞLIK',
     icon: Icons.favorite,
     color: Color(0xFFFF4444),
     dataKey: 'saglik',
-    bgImage: 'assets/images/astrotakvim/astrotakvim_bg4.png',
+    bgImage: 'assets/images/astrotakvim/astrotakvim_bg3.png', // yılan
   ),
   _TabConfig(
     label: 'AKTİVİTE',
     icon: Icons.directions_run,
     color: Color(0xFFFF9900),
     dataKey: 'aktivite',
-    bgImage: 'assets/images/astrotakvim/astrotakvim_bg3.png',
+    bgImage: 'assets/images/astrotakvim/astrotakvim_bg2.png', // gece koşucu
   ),
 ];
 
@@ -432,15 +438,21 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
               children: [
                 _buildTabBar(accent),
                 const SizedBox(height: 4),
-                // Takvim paneli
+                // Takvim paneli — AnimatedContainer YOK (titreme önleme)
+                // Sadece border rengi TweenAnimationBuilder ile değişir
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: AnimatedContainer(
+                  child: TweenAnimationBuilder<Color?>(
+                    tween: ColorTween(end: accent),
                     duration: const Duration(milliseconds: 300),
-                    decoration: BoxDecoration(
-                      border: Border.all(color: accent, width: 1.5),
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.black.withValues(alpha: 0.3),
+                    builder: (context, color, child) => Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: color ?? accent, width: 1.5),
+                        borderRadius: BorderRadius.circular(8),
+                        color: Colors.black.withValues(alpha: 0.3),
+                      ),
+                      child: child,
                     ),
                     child: Column(
                       children: [
@@ -450,7 +462,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                     ),
                   ),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 18),
                 // İçerik alanı
                 Expanded(
                   child: Padding(
@@ -460,24 +472,23 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                       children: [
                         // Sekme başlığı
                         Center(
-                          child: AnimatedDefaultTextStyle(
-                            duration: const Duration(milliseconds: 300),
+                          child: Text(
+                            tab.label,
                             style: TextStyle(
-                              fontFamily: 'ChixaDemiBold',
-                              fontSize: 17,
+                              fontFamily: 'SHPinscher',
+                              fontSize: 19,
                               color: accent,
-                              letterSpacing: 3,
+                              letterSpacing: 4,
                               shadows: [
                                 Shadow(
-                                  color: accent.withValues(alpha: 0.8),
-                                  blurRadius: 12,
+                                  color: accent.withValues(alpha: 0.85),
+                                  blurRadius: 14,
                                 )
                               ],
                             ),
-                            child: Text(tab.label),
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 16),
                         // Metin (typewriter + renkli)
                         Expanded(
                           child: SingleChildScrollView(
@@ -515,33 +526,21 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
   }
 
   // ─────────────────────────────────────────────────────────────────────────
-  // Sekme bar
+  // Sekme bar  (ev tuşu YOK — geri dön altta)
   // ─────────────────────────────────────────────────────────────────────────
 
   Widget _buildTabBar(Color accent) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       child: Row(
-        children: [
-          _iconBtn(
-            icon: Icons.home_rounded,
-            bg: const Color(0xFF00BCD4),
-            active: false,
-            onTap: () => context.pop(),
-          ),
-          const SizedBox(width: 4),
-          ...List.generate(_tabs.length, (i) => Padding(
-                padding: const EdgeInsets.only(left: 4),
-                child: _iconBtn(
-                  icon: _tabs[i].icon,
-                  bg: _tabs[i].color.withValues(
-                      alpha: _activeTab == i ? 1.0 : 0.45),
-                  active: _activeTab == i,
-                  activeColor: _tabs[i].color,
-                  onTap: () => _switchTab(i),
-                ),
-              )),
-        ],
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: List.generate(_tabs.length, (i) => _iconBtn(
+          icon: _tabs[i].icon,
+          bg: _tabs[i].color.withValues(alpha: _activeTab == i ? 1.0 : 0.45),
+          active: _activeTab == i,
+          activeColor: _tabs[i].color,
+          onTap: () => _switchTab(i),
+        )),
       ),
     );
   }

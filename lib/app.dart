@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'core/constants/app_theme.dart';
 import 'data/providers.dart';
 import 'presentation/astrology/astrology_screen.dart';
+import 'presentation/astrotakvim/astro_takvim_screen.dart';
 import 'presentation/olumlama/olumlama_screen.dart';
 import 'presentation/ozlusoz/ozlusoz_screen.dart';
 import 'presentation/chat/chat_screen.dart';
@@ -108,6 +109,17 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/astrology',
         parentNavigatorKey: _rootKey,
         builder: (_, __) => const AstrologyScreen(),
+      ),
+      GoRoute(
+        path: '/astrotakvim',
+        parentNavigatorKey: _rootKey,
+        pageBuilder: (_, __) => CustomTransitionPage(
+          child: const AstroTakvimScreen(),
+          transitionsBuilder: (_, anim, __, child) => FadeTransition(
+            opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
+            child: child,
+          ),
+        ),
       ),
       GoRoute(
         path: '/motivation',

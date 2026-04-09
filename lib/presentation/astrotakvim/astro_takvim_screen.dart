@@ -10,6 +10,95 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../data/providers.dart';
 
+// ─── Sprite → Emoji eşlemesi ──────────────────────────────────────────────────
+
+const _spriteMap = <int, String>{
+  0: '🙂', 5: '😄', 7: '😉', 10: '☺️', 23: '😎', 73: '👊', 79: '🙏',
+  // AstroTakvim kategorileri
+  40: '🪙', 86: '🌊', 93: '🔥', 100: '⭐',
+};
+
+String _spriteToEmoji(int n) => _spriteMap[n] ?? '✦';
+
+// ─── Rich-text segmenti ───────────────────────────────────────────────────────
+
+class _Seg {
+  final String text;
+  final Color? color;
+  const _Seg(this.text, [this.color]);
+}
+
+// ─── Rich-text parser ─────────────────────────────────────────────────────────
+// Girdi: Unity metin formatı — <sprite=N>, <color=#RRGGBB>...</color>, \n
+// Çıktı: Render edilebilir segment listesi
+
+List<_Seg> _parseText(String raw) {
+  // 1) <sprite=N> → emoji
+  final spriteSub = raw.replaceAllMapped(
+    RegExp(r'<sprite=(\d+)>'),
+    (m) => _spriteToEmoji(int.tryParse(m.group(1)!) ?? -1),
+  );
+
+  final segs = <_Seg>[];
+  final colorRe = RegExp(r'<color=(#[0-9A-Fa-f]{6,8})>(.*?)</color>',
+      dotAll: true);
+
+  int cursor = 0;
+  for (final m in colorRe.allMatches(spriteSub)) {
+    // Öncesindeki düz metin
+    if (m.start > cursor) {
+      segs.add(_Seg(spriteSub.substring(cursor, m.start)));
+    }
+    // Renkli metin
+    final hexStr = m.group(1)!.replaceFirst('#', '');
+    final colorVal = int.tryParse(
+          hexStr.length == 6 ? 'FF$hexStr' : hexStr,
+          radix: 16,
+        ) ??
+        0xFFFFFFFF;
+    segs.add(_Seg(m.group(2)!, Color(colorVal)));
+    cursor = m.end;
+  }
+  if (cursor < spriteSub.length) {
+    segs.add(_Seg(spriteSub.substring(cursor)));
+  }
+
+  return segs;
+}
+
+// ─── Typewriter: kaç karakter gösterilecek (tag'ler hariç gerçek karakter) ───
+
+int _totalChars(List<_Seg> segs) =>
+    segs.fold(0, (s, seg) => s + seg.text.length);
+
+// ─── RichText widget (partial render — typewriter için) ───────────────────────
+
+Widget _buildRichText(
+    List<_Seg> segs, int shownChars, TextStyle baseStyle) {
+  final spans = <InlineSpan>[];
+  int remaining = shownChars;
+
+  for (final seg in segs) {
+    if (remaining <= 0) break;
+    final visible = seg.text.length <= remaining
+        ? seg.text
+        : seg.text.substring(0, remaining);
+    remaining -= visible.length;
+
+    spans.add(TextSpan(
+      text: visible,
+      style: seg.color != null
+          ? baseStyle.copyWith(
+              color: seg.color,
+              fontWeight: FontWeight.w600,
+            )
+          : baseStyle,
+    ));
+  }
+
+  return RichText(text: TextSpan(children: spans));
+}
+
 // ─── Veri modeli ──────────────────────────────────────────────────────────────
 
 class _AstroEntry {
@@ -26,13 +115,15 @@ class _TabConfig {
   final String label;
   final IconData icon;
   final Color color;
-  final String dataKey;
+  final String dataKey;   // JSON anahtarı (genel havuz)
+  final String? extraKey; // transit_tarihli gibi ek anahtar
   final String bgImage;
   const _TabConfig({
     required this.label,
     required this.icon,
     required this.color,
     required this.dataKey,
+    this.extraKey,
     required this.bgImage,
   });
 }
@@ -43,6 +134,7 @@ const _tabs = [
     icon: Icons.nightlight_round,
     color: Color(0xFF00E5FF),
     dataKey: 'transit',
+    extraKey: 'transit_tarihli',
     bgImage: 'assets/images/astrotakvim/astrotakvim_bg1.png',
   ),
   _TabConfig(
@@ -55,7 +147,7 @@ const _tabs = [
   _TabConfig(
     label: 'SAĞLIK',
     icon: Icons.favorite,
-    color: Color(0xFFFF3333),
+    color: Color(0xFFFF4444),
     dataKey: 'saglik',
     bgImage: 'assets/images/astrotakvim/astrotakvim_bg4.png',
   ),
@@ -75,7 +167,6 @@ const _tabs = [
   ),
 ];
 
-// ─── Türkçe gün kısaltmaları (Pazartesi başlangıçlı) ─────────────────────────
 const _gunKisaltmalari = ['PT', 'SA', 'ÇR', 'PE', 'CU', 'CT', 'PA'];
 
 // ─── Ana ekran ────────────────────────────────────────────────────────────────
@@ -94,17 +185,17 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
   bool _dataLoaded = false;
 
   // ── Durum ─────────────────────────────────────────────────────────────────
-  int _activeTab = 0; // 0=transit, 1=aktivite, 2=saglik, 3=guzellik, 4=maneviyat
+  int _activeTab = 0;
   late int _selectedDay;
   late int _currentMonth;
   late int _currentYear;
 
   // ── Typewriter ────────────────────────────────────────────────────────────
-  String _fullText = '';
-  String _shownText = '';
+  List<_Seg> _segs = [];
+  int _shownChars = 0;
   Timer? _typeTimer;
 
-  // ── Animasyon (tab geçişi) ─────────────────────────────────────────────────
+  // ── Tab geçiş animasyonu ──────────────────────────────────────────────────
   late AnimationController _fadeCtrl;
   late Animation<double> _fadeAnim;
 
@@ -112,13 +203,13 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
   void initState() {
     super.initState();
     final now = DateTime.now();
-    _selectedDay = now.day;
+    _selectedDay  = now.day;
     _currentMonth = now.month;
-    _currentYear = now.year;
+    _currentYear  = now.year;
 
     _fadeCtrl = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 280),
     );
     _fadeAnim = CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeInOut);
     _fadeCtrl.value = 1.0;
@@ -133,7 +224,9 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
     super.dispose();
   }
 
-  // ── Veri yükleme ──────────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // Veri yükleme
+  // ─────────────────────────────────────────────────────────────────────────
 
   Future<void> _loadData() async {
     final raw = await rootBundle.loadString('assets/data/astrotakvim.json');
@@ -144,9 +237,9 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
       final list = (json[key] as List).map((e) {
         final m = e as Map<String, dynamic>;
         return _AstroEntry(
-          gun: m['gun'] as int?,
-          ay: m['ay'] as int?,
-          yil: m['yil'] as int?,
+          gun:   m['gun']  as int?,
+          ay:    m['ay']   as int?,
+          yil:   m['yil']  as int?,
           metin: m['metin'] as String,
         );
       }).toList();
@@ -162,85 +255,80 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
     }
   }
 
-  // ── İçerik bulma ──────────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // İçerik seçimi
+  // ─────────────────────────────────────────────────────────────────────────
 
-  /// Seçili gün + aktif sekme için en uygun metni bul.
-  /// Önce gün+ay eşleşmesi arar, bulamazsa önceki en yakın gün+ay'ı döner.
-  String _findContent() {
+  String _findRawText() {
     if (!_dataLoaded) return '';
-    final entries = _data[_tabs[_activeTab].dataKey] ?? [];
-    if (entries.isEmpty) return 'Bu kategori için içerik yakında ekleniyor.';
+    final tab = _tabs[_activeTab];
 
-    // Tam eşleşme: aynı gün ve ay
-    for (final e in entries) {
-      if (e.gun == _selectedDay && e.ay == _currentMonth) {
-        return _applyVars(e.metin);
+    // Transit: önce tarihli havuza bak
+    if (tab.extraKey != null) {
+      final dated = _data[tab.extraKey] ?? [];
+      for (final e in dated) {
+        if (e.gun == _selectedDay && e.ay == _currentMonth) {
+          return _applyVars(e.metin);
+        }
       }
     }
 
-    // En yakın önceki gün+ay (yılı görmezden gel)
-    // Seçili günü sayısal sırayla bul: ay*100 + gun
-    final selVal = _currentMonth * 100 + _selectedDay;
-    _AstroEntry? best;
-    int bestDiff = 99999;
-    for (final e in entries) {
-      if (e.gun == null || e.ay == null) continue;
-      final eVal = e.ay! * 100 + e.gun!;
-      // Dairesel mesafe: önceki en yakın
-      int diff = selVal - eVal;
-      if (diff < 0) diff += 1200; // 12 ay döngüsü
-      if (diff < bestDiff) {
-        bestDiff = diff;
-        best = e;
-      }
-    }
-    if (best != null) return _applyVars(best.metin);
-
-    return 'Bu tarih için içerik bulunmuyor.';
+    // Genel havuz: (day-1) % count ile deterministik seçim
+    final pool = _data[tab.dataKey] ?? [];
+    if (pool.isEmpty) return 'Bu kategori için içerik yakında ekleniyor.';
+    final idx = (_selectedDay - 1) % pool.length;
+    return _applyVars(pool[idx].metin);
   }
 
   String _applyVars(String text) {
     final profile = ref.read(userProfileProvider);
-    final name = profile.name.isNotEmpty ? profile.name : 'Sevgili';
-    return text.replaceAll('{{isim}}', name).replaceAll('{{burc}}', profile.zodiacSign ?? 'Koç');
+    final name    = profile.name.isNotEmpty ? profile.name : 'Sevgili';
+    final burc    = profile.zodiacSign ?? 'Koç';
+    return text
+        .replaceAll('{{isim}}', name)
+        .replaceAll('{{burc}}', burc);
   }
 
-  // ── Typewriter ────────────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // Typewriter
+  // ─────────────────────────────────────────────────────────────────────────
 
   void _updateContent({bool animate = true}) {
     _typeTimer?.cancel();
-    final newText = _findContent();
+    final rawText = _findRawText();
+    final newSegs = _parseText(rawText);
+    final total   = _totalChars(newSegs);
+
     if (!mounted) return;
 
     if (!animate) {
       setState(() {
-        _fullText = newText;
-        _shownText = newText;
+        _segs       = newSegs;
+        _shownChars = total;
       });
       return;
     }
 
     setState(() {
-      _fullText = newText;
-      _shownText = '';
+      _segs       = newSegs;
+      _shownChars = 0;
     });
 
-    int idx = 0;
-    _typeTimer = Timer.periodic(const Duration(milliseconds: 25), (timer) {
-      if (!mounted) {
-        timer.cancel();
-        return;
+    int shown = 0;
+    _typeTimer = Timer.periodic(const Duration(milliseconds: 18), (t) {
+      if (!mounted) { t.cancel(); return; }
+      shown += 2; // 2 karakter/tick → daha akıcı
+      if (shown >= total) {
+        t.cancel();
+        shown = total;
       }
-      if (idx >= _fullText.length) {
-        timer.cancel();
-        return;
-      }
-      setState(() => _shownText = _fullText.substring(0, idx + 1));
-      idx++;
+      setState(() => _shownChars = shown);
     });
   }
 
-  // ── Sekme değiştirme ──────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // Sekme & gün değiştirme
+  // ─────────────────────────────────────────────────────────────────────────
 
   void _switchTab(int tab) {
     if (tab == _activeTab) return;
@@ -252,53 +340,47 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
     });
   }
 
-  // ── Gün seçme ─────────────────────────────────────────────────────────────
-
   void _selectDay(int day) {
     if (day == _selectedDay) return;
     setState(() => _selectedDay = day);
     _updateContent();
   }
 
-  // ── Takvim günleri hesapla ────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // Takvim günleri
+  // ─────────────────────────────────────────────────────────────────────────
 
-  /// Geçerli ayın tüm günlerini (önceki aydan dolgu dahil) döndür.
-  /// Her eleman: (gün numarası, geçerli ay mı)
-  List<({int day, bool currentMonth})> _buildCalendarDays() {
-    final firstDay = DateTime(_currentYear, _currentMonth, 1);
-    // Pazartesi = 1 → offset = weekday - 1
+  List<({int day, bool cur})> _buildCalendarDays() {
+    final firstDay    = DateTime(_currentYear, _currentMonth, 1);
     final startOffset = (firstDay.weekday - 1) % 7;
     final daysInMonth = DateUtils.getDaysInMonth(_currentYear, _currentMonth);
-    final prevMonth = _currentMonth == 1
+    final prevMonth   = _currentMonth == 1
         ? DateTime(_currentYear - 1, 12, 1)
         : DateTime(_currentYear, _currentMonth - 1, 1);
-    final daysInPrev = DateUtils.getDaysInMonth(prevMonth.year, prevMonth.month);
+    final daysInPrev  =
+        DateUtils.getDaysInMonth(prevMonth.year, prevMonth.month);
 
-    final cells = <({int day, bool currentMonth})>[];
-
-    // Önceki aydan doldur
+    final cells = <({int day, bool cur})>[];
     for (int i = startOffset - 1; i >= 0; i--) {
-      cells.add((day: daysInPrev - i, currentMonth: false));
+      cells.add((day: daysInPrev - i, cur: false));
     }
-    // Mevcut ay
     for (int d = 1; d <= daysInMonth; d++) {
-      cells.add((day: d, currentMonth: true));
+      cells.add((day: d, cur: true));
     }
-    // Sonraki aydan dolgu (satırı tamamla)
     final remaining = (7 - cells.length % 7) % 7;
     for (int d = 1; d <= remaining; d++) {
-      cells.add((day: d, currentMonth: false));
+      cells.add((day: d, cur: false));
     }
-
     return cells;
   }
 
-  // ─── Takvim günü rengi (veri olan günler) ─────────────────────────────────
-
-  bool _hasData(int day) {
+  // Transit tarihli havuzda bu gün+ay var mı?
+  bool _hasDateEntry(int day) {
     if (!_dataLoaded) return false;
-    final entries = _data[_tabs[_activeTab].dataKey] ?? [];
-    return entries.any((e) => e.gun == day && e.ay == _currentMonth);
+    final tab = _tabs[_activeTab];
+    if (tab.extraKey == null) return false;
+    final dated = _data[tab.extraKey] ?? [];
+    return dated.any((e) => e.gun == day && e.ay == _currentMonth);
   }
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -307,68 +389,68 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
 
   @override
   Widget build(BuildContext context) {
-    final tab = _tabs[_activeTab];
+    final tab    = _tabs[_activeTab];
     final accent = tab.color;
-    final today = DateTime.now();
-    final isCurrentMonth =
+    final today  = DateTime.now();
+    final isCurMonth =
         today.month == _currentMonth && today.year == _currentYear;
 
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-          // ── Arka plan görseli ──────────────────────────────────────────────
+          // ── Arka plan ─────────────────────────────────────────────────────
           FadeTransition(
             opacity: _fadeAnim,
             child: SizedBox.expand(
               child: Image.asset(
                 tab.bgImage,
                 fit: BoxFit.cover,
-                errorBuilder: (_, __, ___) => Container(color: Colors.black),
+                errorBuilder: (_, __, ___) =>
+                    Container(color: const Color(0xFF0A0A1A)),
               ),
             ),
           ),
-          // ── Üst siyah sis overlay ─────────────────────────────────────────
+          // ── Karartma katmanı ──────────────────────────────────────────────
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.black.withOpacity(0.55),
-                  Colors.black.withOpacity(0.35),
-                  Colors.black.withOpacity(0.55),
+                  Colors.black.withValues(alpha: 0.6),
+                  Colors.black.withValues(alpha: 0.35),
+                  Colors.black.withValues(alpha: 0.6),
                 ],
               ),
             ),
           ),
-          // ── Ana içerik ────────────────────────────────────────────────────
+          // ── Sayfa içeriği ─────────────────────────────────────────────────
           SafeArea(
             child: Column(
               children: [
-                // ── Üst sekme butonları ──────────────────────────────────────
                 _buildTabBar(accent),
-                const SizedBox(height: 6),
-                // ── Takvim paneli (kenarlıklı) ───────────────────────────────
+                const SizedBox(height: 4),
+                // Takvim paneli
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: AnimatedContainer(
                     duration: const Duration(milliseconds: 300),
                     decoration: BoxDecoration(
                       border: Border.all(color: accent, width: 1.5),
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.black.withOpacity(0.3),
+                      color: Colors.black.withValues(alpha: 0.3),
                     ),
                     child: Column(
                       children: [
                         _buildDayHeaders(accent),
-                        _buildCalendarGrid(accent, isCurrentMonth, today),
+                        _buildCalendarGrid(accent, isCurMonth, today),
                       ],
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
-                // ── İçerik alanı ─────────────────────────────────────────────
+                const SizedBox(height: 8),
+                // İçerik alanı
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -381,44 +463,46 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                             duration: const Duration(milliseconds: 300),
                             style: TextStyle(
                               fontFamily: 'ChixaDemiBold',
-                              fontSize: 18,
+                              fontSize: 17,
                               color: accent,
                               letterSpacing: 3,
                               shadows: [
                                 Shadow(
-                                    color: accent.withOpacity(0.8),
-                                    blurRadius: 10)
+                                  color: accent.withValues(alpha: 0.8),
+                                  blurRadius: 12,
+                                )
                               ],
                             ),
                             child: Text(tab.label),
                           ),
                         ),
-                        const SizedBox(height: 12),
-                        // Metin (typewriter)
+                        const SizedBox(height: 10),
+                        // Metin (typewriter + renkli)
                         Expanded(
                           child: SingleChildScrollView(
-                            child: FadeTransition(
-                              opacity: _fadeAnim,
-                              child: Text(
-                                _shownText,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14.5,
-                                  height: 1.6,
-                                  shadows: [
-                                    Shadow(
-                                        color: Colors.black87, blurRadius: 4)
-                                  ],
-                                ),
-                              ),
-                            ),
+                            child: _dataLoaded
+                                ? _buildRichText(
+                                    _segs,
+                                    _shownChars,
+                                    const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14.5,
+                                      height: 1.65,
+                                      shadows: [
+                                        Shadow(
+                                            color: Colors.black87,
+                                            blurRadius: 4)
+                                      ],
+                                    ),
+                                  )
+                                : const SizedBox.shrink(),
                           ),
                         ),
                       ],
                     ),
                   ),
                 ),
-                // ── Geri Dön butonu ──────────────────────────────────────────
+                // Geri Dön
                 _buildBackButton(accent),
                 const SizedBox(height: 8),
               ],
@@ -429,212 +513,210 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
     );
   }
 
-  // ── Sekme bar ─────────────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // Sekme bar
+  // ─────────────────────────────────────────────────────────────────────────
 
   Widget _buildTabBar(Color accent) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       child: Row(
         children: [
-          // Ev butonu (geri dön)
-          _buildIconBtn(
+          _iconBtn(
             icon: Icons.home_rounded,
-            bgColor: const Color(0xFF00BCD4),
-            isActive: false,
+            bg: const Color(0xFF00BCD4),
+            active: false,
             onTap: () => context.pop(),
           ),
           const SizedBox(width: 4),
-          // Kategori sekmeleri
-          ...List.generate(_tabs.length, (i) {
-            final t = _tabs[i];
-            return Padding(
-              padding: const EdgeInsets.only(left: 4),
-              child: _buildIconBtn(
-                icon: t.icon,
-                bgColor: t.color.withOpacity(_activeTab == i ? 1.0 : 0.5),
-                isActive: _activeTab == i,
-                activeColor: t.color,
-                onTap: () => _switchTab(i),
-              ),
-            );
-          }),
+          ...List.generate(_tabs.length, (i) => Padding(
+                padding: const EdgeInsets.only(left: 4),
+                child: _iconBtn(
+                  icon: _tabs[i].icon,
+                  bg: _tabs[i].color.withValues(
+                      alpha: _activeTab == i ? 1.0 : 0.45),
+                  active: _activeTab == i,
+                  activeColor: _tabs[i].color,
+                  onTap: () => _switchTab(i),
+                ),
+              )),
         ],
       ),
     );
   }
 
-  Widget _buildIconBtn({
+  Widget _iconBtn({
     required IconData icon,
-    required Color bgColor,
-    required bool isActive,
+    required Color bg,
+    required bool active,
     Color? activeColor,
     required VoidCallback onTap,
   }) {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        width: isActive ? 52 : 46,
-        height: isActive ? 42 : 38,
+        duration: const Duration(milliseconds: 180),
+        width: active ? 50 : 44,
+        height: active ? 40 : 36,
         decoration: BoxDecoration(
-          color: bgColor,
+          color: bg,
           borderRadius: BorderRadius.circular(8),
-          border: isActive && activeColor != null
-              ? Border.all(color: Colors.white.withOpacity(0.7), width: 1.5)
+          border: active && activeColor != null
+              ? Border.all(
+                  color: Colors.white.withValues(alpha: 0.65), width: 1.5)
               : null,
-          boxShadow: isActive && activeColor != null
-              ? [BoxShadow(color: activeColor.withOpacity(0.6), blurRadius: 8)]
+          boxShadow: active && activeColor != null
+              ? [BoxShadow(
+                  color: activeColor.withValues(alpha: 0.55), blurRadius: 8)]
               : null,
         ),
-        child: Icon(
-          icon,
-          color: Colors.white,
-          size: isActive ? 22 : 20,
-        ),
+        child: Icon(icon, color: Colors.white, size: active ? 21 : 19),
       ),
     );
   }
 
-  // ── Gün başlıkları ────────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // Gün başlıkları
+  // ─────────────────────────────────────────────────────────────────────────
 
   Widget _buildDayHeaders(Color accent) {
     return Padding(
       padding: const EdgeInsets.only(top: 6, bottom: 2),
       child: Row(
-        children: _gunKisaltmalari.map((g) {
-          return Expanded(
-            child: Center(
-              child: Text(
-                g,
-                style: TextStyle(
-                  color: accent.withOpacity(0.85),
-                  fontSize: 11,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 1,
+        children: _gunKisaltmalari.map((g) => Expanded(
+              child: Center(
+                child: Text(
+                  g,
+                  style: TextStyle(
+                    color: accent.withValues(alpha: 0.85),
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1,
+                  ),
                 ),
               ),
-            ),
-          );
-        }).toList(),
+            )).toList(),
       ),
     );
   }
 
-  // ── Takvim grid ───────────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // Takvim grid
+  // ─────────────────────────────────────────────────────────────────────────
 
   Widget _buildCalendarGrid(
-      Color accent, bool isCurrentMonth, DateTime today) {
+      Color accent, bool isCurMonth, DateTime today) {
     final cells = _buildCalendarDays();
-    final rows = <Widget>[];
+    final rows  = <Widget>[];
 
-    for (int row = 0; row < cells.length / 7; row++) {
-      final rowCells = cells.sublist(row * 7, row * 7 + 7);
-      rows.add(
-        Row(
-          children: rowCells.map((cell) {
-            if (!cell.currentMonth) {
-              return Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(2),
-                  child: SizedBox(
-                    height: 36,
-                    child: Center(
-                      child: Text(
-                        '${cell.day}',
-                        style: TextStyle(
-                          color: Colors.white.withOpacity(0.25),
-                          fontSize: 14,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              );
-            }
-
-            final day = cell.day;
-            final isToday = isCurrentMonth && day == today.day;
-            final isSelected = day == _selectedDay;
-            final hasData = _hasData(day);
-
+    for (int r = 0; r < cells.length ~/ 7; r++) {
+      rows.add(Row(
+        children: cells.sublist(r * 7, r * 7 + 7).map((cell) {
+          if (!cell.cur) {
             return Expanded(
-              child: GestureDetector(
-                onTap: () => _selectDay(day),
-                child: Padding(
-                  padding: const EdgeInsets.all(2),
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 150),
-                    height: 36,
-                    decoration: BoxDecoration(
-                      color: isSelected
-                          ? accent.withOpacity(0.25)
-                          : Colors.transparent,
-                      borderRadius: BorderRadius.circular(6),
-                      border: isToday
-                          ? Border.all(color: accent, width: 2)
-                          : isSelected
-                              ? Border.all(
-                                  color: accent.withOpacity(0.7), width: 1.5)
-                              : Border.all(
-                                  color: Colors.white.withOpacity(0.15),
-                                  width: 0.5),
-                      boxShadow: isToday
-                          ? [
-                              BoxShadow(
-                                  color: accent.withOpacity(0.5),
-                                  blurRadius: 6)
-                            ]
-                          : null,
-                    ),
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Text(
-                          '$day',
-                          style: TextStyle(
-                            color: isToday
-                                ? accent
-                                : isSelected
-                                    ? Colors.white
-                                    : Colors.white.withOpacity(0.85),
-                            fontSize: 15,
-                            fontWeight: isToday || isSelected
-                                ? FontWeight.bold
-                                : FontWeight.normal,
-                          ),
-                        ),
-                        // Veri noktası (sağ alt)
-                        if (hasData)
-                          Positioned(
-                            bottom: 3,
-                            right: 4,
-                            child: Container(
-                              width: 4,
-                              height: 4,
-                              decoration: BoxDecoration(
-                                color: accent,
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                          ),
-                      ],
+              child: SizedBox(
+                height: 34,
+                child: Center(
+                  child: Text(
+                    '${cell.day}',
+                    style: TextStyle(
+                      color: Colors.white.withValues(alpha: 0.22),
+                      fontSize: 13,
                     ),
                   ),
                 ),
               ),
             );
-          }).toList(),
-        ),
-      );
+          }
+
+          final day        = cell.day;
+          final isToday    = isCurMonth && day == today.day;
+          final isSelected = day == _selectedDay;
+          final hasDated   = _hasDateEntry(day);
+
+          return Expanded(
+            child: GestureDetector(
+              onTap: () => _selectDay(day),
+              child: Padding(
+                padding: const EdgeInsets.all(2),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 130),
+                  height: 34,
+                  decoration: BoxDecoration(
+                    color: isSelected
+                        ? accent.withValues(alpha: 0.22)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.circular(6),
+                    border: isToday
+                        ? Border.all(color: accent, width: 2)
+                        : isSelected
+                            ? Border.all(
+                                color: accent.withValues(alpha: 0.65),
+                                width: 1.5)
+                            : Border.all(
+                                color: Colors.white.withValues(alpha: 0.14),
+                                width: 0.5),
+                    boxShadow: isToday
+                        ? [BoxShadow(
+                            color: accent.withValues(alpha: 0.45),
+                            blurRadius: 6)]
+                        : null,
+                  ),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Text(
+                        '$day',
+                        style: TextStyle(
+                          color: isToday
+                              ? accent
+                              : isSelected
+                                  ? Colors.white
+                                  : Colors.white.withValues(alpha: 0.85),
+                          fontSize: 14,
+                          fontWeight: (isToday || isSelected)
+                              ? FontWeight.bold
+                              : FontWeight.normal,
+                        ),
+                      ),
+                      // Transit tarihli içeriği olan günlerde parlayan nokta
+                      if (hasDated)
+                        Positioned(
+                          bottom: 3,
+                          right: 4,
+                          child: Container(
+                            width: 4,
+                            height: 4,
+                            decoration: BoxDecoration(
+                              color: accent,
+                              shape: BoxShape.circle,
+                              boxShadow: [
+                                BoxShadow(
+                                    color: accent.withValues(alpha: 0.7),
+                                    blurRadius: 4)
+                              ],
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          );
+        }).toList(),
+      ));
     }
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 6, left: 2, right: 2),
+      padding: const EdgeInsets.only(bottom: 4, left: 2, right: 2),
       child: Column(children: rows),
     );
   }
 
-  // ── Geri Dön butonu ───────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // Geri Dön butonu
+  // ─────────────────────────────────────────────────────────────────────────
 
   Widget _buildBackButton(Color accent) {
     return Padding(
@@ -646,8 +728,9 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
           width: double.infinity,
           height: 44,
           decoration: BoxDecoration(
-            color: accent.withOpacity(0.18),
-            border: Border.all(color: accent.withOpacity(0.7), width: 1.2),
+            color: accent.withValues(alpha: 0.15),
+            border: Border.all(
+                color: accent.withValues(alpha: 0.65), width: 1.2),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Center(

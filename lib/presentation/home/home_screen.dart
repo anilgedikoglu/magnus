@@ -401,7 +401,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         _MenuItem('Tarot', 'assets/images/menu/tarot.png',
             _remainingCredits['tarot'] ?? 1,
             () => _onFortuneItemTap('tarot', '/tarot')),
-        _MenuItem('AstroTakvim', 'assets/images/astroloji.png',
+        _MenuItem('AstroTakvim', 'assets/images/aytakvimi.png',
             1,
             () => context.push('/astrotakvim')),
         _MenuItem('Numeroloji', 'assets/images/menu/numeroloji.png', 1,

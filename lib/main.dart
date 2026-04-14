@@ -14,12 +14,16 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  // Status bar styling — dark app, light icons
+  // Edge-to-edge mod: sistem UI (status bar + nav bar) şeffaf, uygulama tam ekran.
+  // SafeArea widget'ları içerikleri doğru konumlandırır.
+  // Her ekranda icon rengi için SystemUiOverlayStyle kullanılabilir.
+  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.light,
-    systemNavigationBarColor: Color(0xFF100B35),
+    systemNavigationBarColor: Colors.transparent,
     systemNavigationBarIconBrightness: Brightness.light,
+    systemNavigationBarDividerColor: Colors.transparent,
   ));
 
   final prefs = await SharedPreferences.getInstance();

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'core/constants/app_theme.dart';
 import 'data/providers.dart';
 import 'presentation/astrology/astrology_screen.dart';
+import 'presentation/astroloji/astroloji_screen.dart';
 import 'presentation/astrotakvim/astro_takvim_screen.dart';
 import 'presentation/olumlama/olumlama_screen.dart';
 import 'presentation/ozlusoz/ozlusoz_screen.dart';
@@ -12,12 +13,26 @@ import 'presentation/coffee/coffee_screen.dart';
 import 'presentation/home/home_screen.dart';
 import 'presentation/inbox/inbox_screen.dart';
 import 'presentation/motivation/motivation_screen.dart';
+import 'presentation/biyoritim/biyoritim_screen.dart';
+import 'presentation/dogumharitasi/dogumharitasi_screen.dart';
+import 'presentation/kaderkitabi/kaderkitabi_screen.dart';
+import 'presentation/numeroloji/numeroloji_screen.dart';
 import 'presentation/settings/settings_screen.dart';
 import 'presentation/shell/app_shell.dart';
 import 'presentation/tarot/tarot_screen.dart';
 import 'presentation/tarot/tarot_result_screen.dart';
 import 'presentation/tarot/tarot_type_screen.dart';
 import 'presentation/tarot/single_tarot_screen.dart';
+import 'presentation/dertortagi/dertortagi_screen.dart';
+import 'presentation/acigercekler/acigercekler_screen.dart';
+import 'presentation/kehanet/kehanet_menu_screen.dart';
+import 'presentation/kehanet/kahinler_menu_screen.dart';
+import 'presentation/kehanet/parmak_surtme_screen.dart';
+import 'presentation/kehanet/kahin_metin_screen.dart';
+import 'presentation/kehanet/faloya_screen.dart';
+import 'presentation/kehanet/maganda_screen.dart';
+import 'presentation/kehanet/tamua_screen.dart';
+import 'presentation/kehanet/yana_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 final _homeKey = GlobalKey<NavigatorState>(debugLabel: 'home');
@@ -111,6 +126,61 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (_, __) => const AstrologyScreen(),
       ),
       GoRoute(
+        path: '/astroloji',
+        parentNavigatorKey: _rootKey,
+        pageBuilder: (_, __) => CustomTransitionPage(
+          child: const AstrolojiScreen(),
+          transitionsBuilder: (_, anim, __, child) => FadeTransition(
+            opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
+            child: child,
+          ),
+        ),
+      ),
+      GoRoute(
+        path: '/biyoritim',
+        parentNavigatorKey: _rootKey,
+        pageBuilder: (_, __) => CustomTransitionPage(
+          child: const BiyoritimScreen(),
+          transitionsBuilder: (_, anim, __, child) => FadeTransition(
+            opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
+            child: child,
+          ),
+        ),
+      ),
+      GoRoute(
+        path: '/dogumharitasi',
+        parentNavigatorKey: _rootKey,
+        pageBuilder: (_, __) => CustomTransitionPage(
+          child: const DogumHaritasiScreen(),
+          transitionsBuilder: (_, anim, __, child) => FadeTransition(
+            opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
+            child: child,
+          ),
+        ),
+      ),
+      GoRoute(
+        path: '/kaderkitabi',
+        parentNavigatorKey: _rootKey,
+        pageBuilder: (_, __) => CustomTransitionPage(
+          child: const KaderKitabiScreen(),
+          transitionsBuilder: (_, anim, __, child) => FadeTransition(
+            opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
+            child: child,
+          ),
+        ),
+      ),
+      GoRoute(
+        path: '/numeroloji',
+        parentNavigatorKey: _rootKey,
+        pageBuilder: (_, __) => CustomTransitionPage(
+          child: const NumerologiScreen(),
+          transitionsBuilder: (_, anim, __, child) => FadeTransition(
+            opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
+            child: child,
+          ),
+        ),
+      ),
+      GoRoute(
         path: '/astrotakvim',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
@@ -127,6 +197,16 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (_, __) => const MotivationScreen(),
       ),
       GoRoute(
+        path: '/dertortagi',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const DertOrtagiScreen(),
+      ),
+      GoRoute(
+        path: '/acigercekler',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const AciGerceklerScreen(),
+      ),
+      GoRoute(
         path: '/ozlusoz',
         parentNavigatorKey: _rootKey,
         builder: (_, __) => const OzluSozScreen(),
@@ -135,6 +215,52 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/olumlama',
         parentNavigatorKey: _rootKey,
         builder: (_, __) => const OlumlamaScreen(),
+      ),
+      GoRoute(
+        path: '/kehanet',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const KehanetMenuScreen(),
+      ),
+      GoRoute(
+        path: '/kahinler',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const KahinlerMenuScreen(),
+      ),
+      GoRoute(
+        path: '/parmak_surtme',
+        parentNavigatorKey: _rootKey,
+        builder: (context, state) {
+          final kahinId = state.extra as String? ?? 'derun';
+          return ParmakSurtmeScreen(kahinId: kahinId);
+        },
+      ),
+      GoRoute(
+        path: '/kahin_metin',
+        parentNavigatorKey: _rootKey,
+        builder: (context, state) {
+          final kahinId = state.extra as String? ?? 'derun';
+          return KahinMetinScreen(kahinId: kahinId);
+        },
+      ),
+      GoRoute(
+        path: '/faloya',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const FaloyaScreen(),
+      ),
+      GoRoute(
+        path: '/maganda',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const MagandaScreen(),
+      ),
+      GoRoute(
+        path: '/tamua',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const TamuaScreen(),
+      ),
+      GoRoute(
+        path: '/yana',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const YanaScreen(),
       ),
       GoRoute(
         path: '/inbox-full',

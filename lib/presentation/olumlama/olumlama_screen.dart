@@ -1,32 +1,45 @@
+// Kaynak: C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\Olumlama\
+// JSON:   assets/data/olumlamalar.json
+// Arka plan: assets/images/olumlamaIntrobg.jpg
+//
+// ⚠️ METIN MOTORU NOTU: Unity .asset dosyalarında `aciklama:` bir YAML listesidir.
+// Tek dosyada birden fazla `- "..."` maddesi olabilir → her biri ayrı JSON girdisi!
+// JSON yeniden üretilirken extract_all_aciklama() tipi bir parser kullan.
+// Bkz. CLAUDE.md → "Kaynak Yapısı" bölümü.
+//
+// EKRAN YAPISI:
+//   - Tam ekran arka plan (olumlamaIntrobg.jpg) + koyu overlay
+//   - Başlık: "OLUMLAMA" (üst orta)
+//   - Metin: tam ortalı, sol/sağ geçiş animasyonuyla
+//   - Altta: ← (önceki) ve → (sonraki) iki ok butonu
+//   - Günlük limit yok; tüm uygun olumlamalar gezinebilir
+
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:uuid/uuid.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/variable_replacer.dart';
-import '../../data/models/inbox_item.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
-// Kaynak: C:\Users\AG\Desktop\cleaned_tarot\Olumlamalar\
-// 134 olumlama, günlük limit: 1. Tüm uygun olumlalar gösterilince liste sıfırlanır.
+// ─── Veri modeli ──────────────────────────────────────────────────────────────
 
 class _OlumlamaEntry {
   final int id;
   final String metin;
   final List<Map<String, String>> kosullar;
-
   const _OlumlamaEntry({
     required this.id,
     required this.metin,
     required this.kosullar,
   });
 }
+
+// ─── Ana ekran ────────────────────────────────────────────────────────────────
 
 class OlumlamaScreen extends ConsumerStatefulWidget {
   const OlumlamaScreen({super.key});
@@ -37,337 +50,466 @@ class OlumlamaScreen extends ConsumerStatefulWidget {
 
 class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
     with SingleTickerProviderStateMixin {
-  static const _uuid = Uuid();
-  static const _prefKeyGosterilen = 'olumlama_gosterilen_idler';
-  static const _prefKeyBugunTarih = 'olumlama_bugun_tarih';
 
-  final _rng = Random();
-
-  _OlumlamaEntry? _bugunEntry;
+  List<_OlumlamaEntry> _entries = [];
+  int _index = 0;
+  int _direction = 1; // +1 = ileri (sağ), -1 = geri (sol)
   bool _loading = true;
-  bool _saving = false;
-  bool _hakDoldu = false;
 
-  late AnimationController _animCtrl;
-  late Animation<double> _fadeAnim;
-  late Animation<Offset> _slideAnim;
+  // Arka plan görselleri (38 adet, olumlama_bgs/ klasöründe)
+  static const List<String> _bgFiles = [
+    '1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','8.jpg','9.jpg',
+    '10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg',
+    '17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','23.jpg','24.jpg',
+    '25.jpg','26.jpg','27.jpg','28.jpg','29.jpg','31.jpg','32.jpg',
+    '33.jpg','34.jpg','35.jpg','36.jpg','37.jpg','38.jpg','39.jpg',
+    '40.jpg','41.jpg',
+  ];
+  // Her entry'nin hangi bg'yi göstereceği (shuffle ile atanır, geri gidince aynı bg)
+  List<int> _bgMap = []; // index → _bgFiles index
 
   @override
   void initState() {
     super.initState();
-    _animCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 350),
-    );
-    _fadeAnim = Tween<double>(begin: 0, end: 1).animate(
-      CurvedAnimation(parent: _animCtrl, curve: Curves.easeOut),
-    );
-    _slideAnim = Tween<Offset>(
-      begin: const Offset(0, 0.12),
-      end: Offset.zero,
-    ).animate(CurvedAnimation(parent: _animCtrl, curve: Curves.easeOut));
     _loadData();
   }
 
-  @override
-  void dispose() {
-    _animCtrl.dispose();
-    super.dispose();
-  }
+  // ─── Koşul eşleştirme ─────────────────────────────────────────────────────
 
-  /// Koşul listesini kullanıcı profiliyle karşılaştır.
-  /// Tüm koşullar sağlanıyorsa true döner. Koşulsuz metinler herkese açık.
   bool _kosullarUygun(List<Map<String, String>> kosullar, UserProfile profile) {
     if (kosullar.isEmpty) return true;
     for (final k in kosullar) {
       final degisken = k['degisken'] ?? '';
       final beklenen = k['deger'] ?? '';
-      final gercek = _profilDegeri(degisken, profile);
+      final gercek   = _profilDegeri(degisken, profile);
       if (gercek != beklenen) return false;
     }
     return true;
   }
 
-  /// Profil alanını koşul değişken adına göre döndür.
   String _profilDegeri(String degisken, UserProfile profile) {
     switch (degisken) {
-      case 'cinsiyet':
-        return profile.gender; // 'erkek' | 'kadin'
-      case 'medeni_durum':
-        return profile.maritalStatus; // 'evli', 'yeni_ayrilmis', ...
-      case 'meslek':
-        return profile.job; // 'ogrenci', 'kamusektoru', ...
+      case 'cinsiyet':      return profile.gender;
+      case 'medeni_durum':  return profile.maritalStatus;
+      case 'meslek':        return profile.job;
       case 'iliski_durumu':
-        // var → iliski_var, evli, nisanli, flort, karisik, ayri_yasiyor
-        // yok → iliskisi_yok, platonik, yeni_ayrilmis, bosanmis, dul
         const varOlanlar = {
           'iliski_var', 'evli', 'nisanli', 'flort', 'karisik', 'ayri_yasiyor'
         };
         return varOlanlar.contains(profile.maritalStatus) ? 'var' : 'yok';
-      default:
-        return '';
+      default: return '';
     }
   }
 
+  // ─── Veri yükleme ─────────────────────────────────────────────────────────
+
   Future<void> _loadData() async {
-    final prefs = await SharedPreferences.getInstance();
-    final bugunStr = DateTime.now().toIso8601String().substring(0, 10);
-
-    // Bugün zaten gösterildi mi?
-    final kayitliTarih = prefs.getString(_prefKeyBugunTarih);
-    if (kayitliTarih == bugunStr) {
-      if (!mounted) return;
-      setState(() {
-        _hakDoldu = true;
-        _loading = false;
-      });
-      return;
-    }
-
-    // JSON yükle
     final jsonStr = await rootBundle.loadString('assets/data/olumlamalar.json');
-    final data = jsonDecode(jsonStr) as Map<String, dynamic>;
-    final tumListe = (data['olumlamalar'] as List<dynamic>)
-        .map((e) => _OlumlamaEntry(
-              id: (e as Map<String, dynamic>)['id'] as int,
-              metin: e['metin'] as String,
-              kosullar: (e['kosullar'] as List<dynamic>)
-                  .map((k) => Map<String, String>.from(k as Map))
-                  .toList(),
-            ))
+    final data    = jsonDecode(jsonStr) as Map<String, dynamic>;
+
+    final tumListe = (data['olumlamalar'] as List<dynamic>).map((e) {
+      final m = e as Map<String, dynamic>;
+      return _OlumlamaEntry(
+        id: m['id'] as int,
+        metin: m['metin'] as String,
+        kosullar: (m['kosullar'] as List<dynamic>)
+            .map((k) => Map<String, String>.from(k as Map))
+            .toList(),
+      );
+    }).toList();
+
+    final profile    = ref.read(userProfileProvider);
+    final uygunListe = tumListe
+        .where((e) => _kosullarUygun(e.kosullar, profile))
         .toList();
 
-    // Profil al ve uygun metinleri filtrele
-    final profile = ref.read(userProfileProvider);
-    final uygunListe = tumListe.where((s) => _kosullarUygun(s.kosullar, profile)).toList();
+    final prefs   = await SharedPreferences.getInstance();
+    final rng     = Random();
+    final uygunIds = uygunListe.map((e) => e.id).toSet();
 
-    // Gösterilen ID'leri yükle
-    List<String> gosterilenIdler = prefs.getStringList(_prefKeyGosterilen) ?? [];
+    // ── Karıştırılmış sıralamayı yükle ya da oluştur ─────────────────────────
+    final savedOrder = prefs.getStringList('olumlama_siralama');
+    List<int> orderedIds;
+    int cursor;
 
-    // Gösterilmeyenleri filtrele
-    var kalan = uygunListe.where((s) => !gosterilenIdler.contains('${s.id}')).toList();
+    final orderValid = savedOrder != null &&
+        savedOrder.length == uygunIds.length &&
+        savedOrder.map(int.parse).toSet().containsAll(uygunIds);
 
-    // Hepsi gösterildiyse sıfırla
-    if (kalan.isEmpty) {
-      gosterilenIdler = [];
-      await prefs.setStringList(_prefKeyGosterilen, []);
-      kalan = List.from(uygunListe);
+    if (orderValid) {
+      orderedIds = savedOrder.map(int.parse).toList();
+      cursor = prefs.getInt('olumlama_cursor') ?? 0;
+      if (cursor >= orderedIds.length) {
+        // Tüm metinler gösterildi → yeniden karıştır
+        orderedIds.shuffle(rng);
+        cursor = 0;
+        await prefs.setStringList(
+            'olumlama_siralama', orderedIds.map((e) => '$e').toList());
+      }
+    } else {
+      // İlk çalıştırma ya da uygun liste değişti → sıfırdan karıştır
+      orderedIds = uygunIds.toList()..shuffle(rng);
+      cursor = 0;
+      await prefs.setStringList(
+          'olumlama_siralama', orderedIds.map((e) => '$e').toList());
     }
 
-    // Karıştır ve ilkini seç
-    kalan.shuffle(_rng);
-    final secilen = kalan.first;
+    // Bir sonraki açılışta farklı metinden başlaması için cursor'ı ilerlet
+    await prefs.setInt('olumlama_cursor', cursor + 1);
 
-    // Kaydet
-    gosterilenIdler.add('${secilen.id}');
-    await prefs.setStringList(_prefKeyGosterilen, gosterilenIdler);
-    await prefs.setString(_prefKeyBugunTarih, bugunStr);
+    // Entry listesini karıştırılmış sıraya göre oluştur
+    final idToEntry = {for (final e in uygunListe) e.id: e};
+    final orderedEntries = orderedIds
+        .map((id) => idToEntry[id])
+        .whereType<_OlumlamaEntry>()
+        .toList();
+
+    // ── Arka plan haritası: her entry ID'sine sabit bir bg ata ───────────────
+    // Kaydedilmişse yükle, yoksa yeni ata
+    final bgSaved = prefs.getString('olumlama_bg_json');
+    Map<int, int> bgById = {};
+    if (bgSaved != null) {
+      try {
+        final decoded = jsonDecode(bgSaved) as Map<String, dynamic>;
+        bgById = decoded.map((k, v) => MapEntry(int.parse(k), v as int));
+      } catch (_) {}
+    }
+    // Eksik ID'lere bg ata
+    final bgBase = List<int>.generate(_bgFiles.length, (i) => i)..shuffle(rng);
+    int bgCursor = 0;
+    bool bgChanged = false;
+    for (final id in orderedIds) {
+      if (!bgById.containsKey(id)) {
+        bgById[id] = bgBase[bgCursor % bgBase.length];
+        bgCursor++;
+        bgChanged = true;
+      }
+    }
+    if (bgChanged) {
+      await prefs.setString('olumlama_bg_json',
+          jsonEncode(bgById.map((k, v) => MapEntry('$k', v))));
+    }
+
+    // _bgMap: orderedEntries sırasına göre bg index listesi
+    final bgMap = orderedEntries.map((e) => bgById[e.id] ?? 0).toList();
 
     if (!mounted) return;
     setState(() {
-      _bugunEntry = secilen;
+      _entries = orderedEntries;
+      _bgMap   = bgMap;
+      _index   = cursor % orderedEntries.length; // bu açılışın başlangıç metni
       _loading = false;
     });
-    _animCtrl.forward();
   }
 
-  Future<void> _saveToInbox() async {
-    if (_bugunEntry == null) return;
-    setState(() => _saving = true);
-    try {
-      final resolvedMetin = VariableReplacer.replace(
-        _bugunEntry!.metin,
-        ref.read(userProfileProvider).toVariableMap(),
-      );
-      final item = InboxItem(
-        id: _uuid.v4(),
-        title: 'Günlük Olumlama',
-        text: resolvedMetin,
-        date: DateTime.now().toIso8601String(),
-        fortuneTypeKey: 'olumlama',
-      );
-      await ref.read(inboxProvider.notifier).addItem(item);
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Gelen kutusuna kaydedildi'),
-          duration: Duration(seconds: 2),
-        ),
-      );
-    } finally {
-      if (mounted) setState(() => _saving = false);
-    }
+  // Mevcut entry için arka plan yolu (null = henüz yüklenmedi, siyah kal)
+  String? get _currentBg {
+    if (_bgMap.isEmpty || _entries.isEmpty) return null;
+    final bgIdx = _bgMap[_index % _bgMap.length];
+    return 'assets/images/olumlama_bgs/${_bgFiles[bgIdx % _bgFiles.length]}';
   }
+
+  // ─── Navigasyon ───────────────────────────────────────────────────────────
+
+  void _next() {
+    if (_entries.isEmpty) return;
+    setState(() {
+      _direction = 1;
+      _index = (_index + 1) % _entries.length;
+    });
+  }
+
+  void _prev() {
+    if (_entries.isEmpty) return;
+    setState(() {
+      _direction = -1;
+      _index = (_index - 1 + _entries.length) % _entries.length;
+    });
+  }
+
+  // ─── BUILD ────────────────────────────────────────────────────────────────
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: AppBar(
-        backgroundColor: AppColors.navBarBackground,
-        title: const Text('Günlük Olumlama'),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
-          onPressed: () => context.pop(),
-        ),
-      ),
-      body: _loading
-          ? const Center(child: CircularProgressIndicator())
-          : _hakDoldu
-              ? _buildHakDoldu()
-              : FadeTransition(
-                  opacity: _fadeAnim,
-                  child: SlideTransition(
-                    position: _slideAnim,
-                    child: _buildContent(),
-                  ),
-                ),
-    );
-  }
-
-  Widget _buildHakDoldu() {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Container(
-          padding: const EdgeInsets.all(28),
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFF1A1040), Color(0xFF0D0A20)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
+      backgroundColor: Colors.black,
+      extendBody: true,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // ── Tam ekran arka plan — yalnızca data hazırsa göster ───────────
+          if (_currentBg != null)
+            AnimatedSwitcher(
+              duration: const Duration(milliseconds: 600),
+              child: Image.asset(
+                _currentBg!,
+                key: ValueKey(_currentBg),
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: double.infinity,
+                alignment: Alignment.center,
+                filterQuality: FilterQuality.high,
+                errorBuilder: (_, __, ___) =>
+                    Container(color: const Color(0xFF0D0A20)),
+              ),
             ),
-            borderRadius: BorderRadius.circular(24),
-            border: Border.all(color: const Color(0xFF7B5CE8).withValues(alpha: 0.4)),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text('✨', style: TextStyle(fontSize: 40)),
-              const SizedBox(height: 16),
-              const Text(
-                'Günlük olumlamanı aldın.',
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: 16, height: 1.6),
+          // ── Koyu overlay — hafif tutuldu (görseli bozmamak için) ──────────
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0x99000000), // üst: %60
+                  Color(0x44000000), // orta: %27 — görsel görünsün
+                  Color(0x99000000), // alt: %60
+                ],
               ),
-              const SizedBox(height: 8),
-              Text(
-                'Yarın yeni bir olumlama seni bekliyor.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white.withValues(alpha: 0.5),
-                  fontSize: 13,
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
+          // ── İçerik ────────────────────────────────────────────────────────
+          SafeArea(
+            child: _loading
+                ? const Center(
+                    child: CircularProgressIndicator(
+                      color: Color(0xFFBB88FF),
+                      strokeWidth: 2,
+                    ),
+                  )
+                : Column(
+                    children: [
+                      _buildHeader(context),
+                      Expanded(child: _buildTextArea()),
+                      _buildNavButtons(),
+                      const SizedBox(height: 12),
+                    ],
+                  ),
+          ),
+        ],
       ),
     );
   }
 
-  Widget _buildContent() {
-    final entry = _bugunEntry;
-    if (entry == null) return const SizedBox.shrink();
+  // ─── Başlık ───────────────────────────────────────────────────────────────
 
-    final resolvedMetin = VariableReplacer.replace(
+  Widget _buildHeader(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 10, 12, 0),
+      child: Row(
+        children: [
+          // Geri butonu
+          GestureDetector(
+            onTap: () => context.pop(),
+            child: Container(
+              width: 38, height: 38,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  color: Colors.white.withValues(alpha: 0.25), width: 1),
+              ),
+              child: const Icon(
+                Icons.arrow_back_ios_new_rounded,
+                color: Colors.white,
+                size: 18,
+              ),
+            ),
+          ),
+          // Başlık
+          Expanded(
+            child: Center(
+              child: Text(
+                'OLUMLAMA',
+                style: GoogleFonts.cinzel(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: 5,
+                  shadows: const [
+                    Shadow(color: Color(0xAABB88FF), blurRadius: 14),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          // Simetri için boşluk
+          const SizedBox(width: 38),
+        ],
+      ),
+    );
+  }
+
+  // ─── Metin alanı — yönlü eş zamanlı slide geçişi ────────────────────────
+  //
+  // Sağa gidince: eskisi SOLA çıkar, yenisi SAĞDAN girer (aynı anda).
+  // Sola gidince: eskisi SAĞA çıkar, yenisi SOLDAN girer (aynı anda).
+  //
+  // AnimatedSwitcher'da transitionBuilder hem gelen hem giden çocuğu sarar.
+  // Gelen: animation 0→1, giden: animation 1→0.
+  // child.key == ValueKey(_index) ise gelen, değilse giden.
+
+  Widget _buildTextArea() {
+    if (_entries.isEmpty) {
+      return const Center(
+        child: Text(
+          'Olumlama bulunamadı.',
+          style: TextStyle(color: Colors.white54, fontSize: 15),
+        ),
+      );
+    }
+
+    final entry = _entries[_index];
+    final metin = VariableReplacer.replace(
       entry.metin,
       ref.read(userProfileProvider).toVariableMap(),
     );
 
-    return SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(20, 24, 20, 40),
-      child: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(28),
-            decoration: BoxDecoration(
-              image: const DecorationImage(
-                image: AssetImage('assets/images/olumlama_bg.jpg'),
-                fit: BoxFit.cover,
-                opacity: 0.18,
-                onError: _imageError,
+    // Build anındaki yönü kapat — closure'da _direction mutasyonu yakalanmasın
+    final dir    = _direction;
+    final curKey = ValueKey(_index);
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 28),
+      child: ClipRect( // taşan widget'ları kes
+        child: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 360),
+          // switchInCurve / switchOutCurve yerine transitionBuilder içinde yönetiyoruz
+          transitionBuilder: (child, animation) {
+            final isIncoming = child.key == curKey;
+
+            // Gelen: Offset(±1,0) → Offset(0,0)   (animation 0→1)
+            // Giden: Offset(0,0) → Offset(∓1,0)   (animation 1→0)
+            //   ama Tween her zaman begin→end × t hesaplar.
+            //   Giden için animation=1 merkez, animation=0 dışarı olmalı:
+            //     begin = Offset(∓1,0), end = Offset(0,0)  ← doğru yön
+
+            final Offset begin;
+            if (isIncoming) {
+              begin = Offset(dir > 0 ? 1.0 : -1.0, 0); // sağdan veya soldan girer
+            } else {
+              begin = Offset(dir > 0 ? -1.0 : 1.0, 0); // sola veya sağa çıkar
+            }
+
+            return SlideTransition(
+              position: Tween<Offset>(begin: begin, end: Offset.zero).animate(
+                CurvedAnimation(parent: animation, curve: Curves.easeInOutCubic),
               ),
-              gradient: const LinearGradient(
-                colors: [Color(0xFF2A1F5E), Color(0xFF0D0A20)],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
-              borderRadius: BorderRadius.circular(24),
-              border: Border.all(
-                color: AppColors.bubbleFrame1.withValues(alpha: 0.3),
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: AppColors.bubble1.first.withValues(alpha: 0.25),
-                  blurRadius: 20,
-                  offset: const Offset(0, 6),
-                ),
-              ],
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Text('✨', style: TextStyle(fontSize: 32)),
-                const SizedBox(height: 20),
-                Text(
-                  resolvedMetin,
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.cardText.copyWith(
-                    fontSize: resolvedMetin.length > 200 ? 14 : 16,
-                  ),
-                ),
-              ],
-            ),
+              child: child,
+            );
+          },
+          // Her iki çocuğu üst üste yığ, yenisi üstte
+          layoutBuilder: (currentChild, previousChildren) => Stack(
+            alignment: Alignment.center,
+            children: [
+              ...previousChildren,
+              if (currentChild != null) currentChild,
+            ],
           ),
-          const SizedBox(height: 24),
-          // Kaydet butonu
-          GestureDetector(
-            onTap: _saving ? null : _saveToInbox,
+          child: Center(
+            key: curKey,
             child: Container(
-              height: 50,
-              width: double.infinity,
+              margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+              padding: const EdgeInsets.fromLTRB(24, 22, 24, 22),
               decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: AppColors.bubble1,
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
+                color: Colors.black.withValues(alpha: 0.45),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: Colors.white.withValues(alpha: 0.18),
+                  width: 1.2,
                 ),
-                borderRadius: BorderRadius.circular(25),
                 boxShadow: [
                   BoxShadow(
-                    color: AppColors.bubble1.first.withValues(alpha: 0.4),
-                    blurRadius: 10,
-                    offset: const Offset(0, 3),
+                    color: Colors.black.withValues(alpha: 0.35),
+                    blurRadius: 24,
+                    spreadRadius: 2,
                   ),
                 ],
               ),
-              child: Center(
-                child: _saving
-                    ? const SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2,
-                          color: Colors.white,
-                        ),
-                      )
-                    : const Text(
-                        'Kaydet ✦',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
+              child: Text(
+                metin,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 19,
+                  height: 1.75,
+                  fontWeight: FontWeight.w300,
+                  letterSpacing: 0.4,
+                ),
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  // ─── Sol / Sağ navigasyon butonları ──────────────────────────────────────
+
+  Widget _buildNavButtons() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          _NavBtn(icon: Icons.chevron_left_rounded,  onTap: _prev),
+          _NavBtn(icon: Icons.chevron_right_rounded, onTap: _next),
         ],
       ),
     );
   }
 }
 
-void _imageError(Object e, StackTrace? s) {}
+// ─── Ok butonu ────────────────────────────────────────────────────────────────
+
+class _NavBtn extends StatefulWidget {
+  final IconData icon;
+  final VoidCallback onTap;
+  const _NavBtn({required this.icon, required this.onTap});
+
+  @override
+  State<_NavBtn> createState() => _NavBtnState();
+}
+
+class _NavBtnState extends State<_NavBtn> {
+  bool _pressed = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTapDown: (_) => setState(() => _pressed = true),
+      onTapUp: (_) {
+        setState(() => _pressed = false);
+        widget.onTap();
+      },
+      onTapCancel: () => setState(() => _pressed = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 100),
+        width: 56,
+        height: 56,
+        decoration: BoxDecoration(
+          color: _pressed
+              ? Colors.white.withValues(alpha: 0.25)
+              : Colors.white.withValues(alpha: 0.12),
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: Colors.white.withValues(alpha: _pressed ? 0.7 : 0.35),
+            width: 1.5,
+          ),
+          boxShadow: _pressed
+              ? [
+                  BoxShadow(
+                    color: const Color(0xFFBB88FF).withValues(alpha: 0.4),
+                    blurRadius: 12,
+                  )
+                ]
+              : null,
+        ),
+        child: Icon(
+          widget.icon,
+          color: Colors.white,
+          size: 30,
+        ),
+      ),
+    );
+  }
+}

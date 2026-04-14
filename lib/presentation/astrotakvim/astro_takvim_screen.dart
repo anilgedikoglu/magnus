@@ -1,6 +1,10 @@
 // Kaynak: C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\AstroTakvim
 // JSON:   assets/data/astrotakvim.json
 // Görseller: assets/images/astrotakvim/
+//
+// ⚠️ METIN MOTORU NOTU: Bu klasörde birden fazla madde içeren .asset dosyası tespit edildi.
+// Unity `aciklama:` alanı YAML listesidir; her `- "..."` maddesi ayrı JSON girdisi olmalı.
+// JSON yeniden üretilirken extract_all_aciklama() tipi parser kullan. Bkz. CLAUDE.md.
 
 import 'dart:async';
 import 'dart:convert';
@@ -8,6 +12,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
 
 // ─── Sprite → Emoji eşlemesi ──────────────────────────────────────────────────
@@ -289,11 +295,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
 
   String _applyVars(String text) {
     final profile = ref.read(userProfileProvider);
-    final name    = profile.name.isNotEmpty ? profile.name : 'Sevgili';
-    final burc    = profile.zodiacSign ?? 'Koç';
-    return text
-        .replaceAll('{{isim}}', name)
-        .replaceAll('{{burc}}', burc);
+    return VariableReplacer.replace(text, profile.toVariableMap());
   }
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -404,6 +406,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
 
     return Scaffold(
       backgroundColor: Colors.black,
+      extendBody: true,
       body: Stack(
         children: [
           // ── Arka plan ─────────────────────────────────────────────────────
@@ -413,12 +416,17 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
               child: Image.asset(
                 tab.bgImage,
                 fit: BoxFit.cover,
+                // Transit: sol kenara hizala — sağ taraf kırpılır, ekranı doldurur
+                alignment: tab.dataKey == 'transit'
+                    ? Alignment.centerLeft
+                    : Alignment.center,
+                filterQuality: FilterQuality.high,
                 errorBuilder: (_, __, ___) =>
                     Container(color: const Color(0xFF0A0A1A)),
               ),
             ),
           ),
-          // ── Karartma katmanı ──────────────────────────────────────────────
+          // ── Temel karartma katmanı (tüm sekmeler) ─────────────────────────
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -432,6 +440,9 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
               ),
             ),
           ),
+          // ── Ekstra karartma — transit ve maneviyat (yazı okunurluğu) ──────
+          if (tab.dataKey == 'transit' || tab.dataKey == 'maneviyat')
+            Container(color: Colors.black.withValues(alpha: 0.28)),
           // ── Sayfa içeriği ─────────────────────────────────────────────────
           SafeArea(
             child: Column(
@@ -474,11 +485,11 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                         Center(
                           child: Text(
                             tab.label,
-                            style: TextStyle(
-                              fontFamily: 'SHPinscher',
-                              fontSize: 19,
+                            style: GoogleFonts.cinzel(
+                              fontSize: 21,
+                              fontWeight: FontWeight.bold,
                               color: accent,
-                              letterSpacing: 4,
+                              letterSpacing: 5,
                               shadows: [
                                 Shadow(
                                   color: accent.withValues(alpha: 0.85),

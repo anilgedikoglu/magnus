@@ -1,7 +1,7 @@
 name: magnus_app
 description: Magnus — Fal, Tarot ve Astroloji
 publish_to: 'none'
-version: 1.0.0+1
+version: 10.4.0+200
 
 environment:
   sdk: ^3.7.2
@@ -48,9 +48,9 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/images/magnusappicon_new.jpg"
-  # Adaptive icon foreground/background KULLANMA — iki katman ayrımı
-  # renkli halka artefaktı yaratıyor. Tek katman yeterli.
+  image_path: "assets/images/launcher_check.png"
+  adaptive_icon_background: "#000000"
+  adaptive_icon_foreground: "assets/images/launcher_check.png"
   min_sdk_android: 21
   web:
     generate: false
@@ -88,7 +88,12 @@ flutter:
     - assets/images/kahve/
     - assets/images/inbox_icons/
     - assets/images/astrotakvim/
+    - assets/images/falbg/
+    - assets/images/olumlama_bgs/
+    - assets/images/kahinler/
+    - assets/images/kehanet/
     - assets/videos/
+    - assets/videos/kahinler/
 
   fonts:
     - family: ChixaDemiBold

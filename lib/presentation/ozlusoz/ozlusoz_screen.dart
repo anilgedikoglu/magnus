@@ -1,20 +1,22 @@
+// Kaynak: C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\Ozlusoz\
+// JSON:   assets/data/ozlusozler.json
+//
+// ⚠️ METIN MOTORU NOTU: Unity .asset dosyalarında `aciklama:` bir YAML listesidir.
+// Tek dosyada birden fazla `- "..."` maddesi olabilir → her biri ayrı JSON girdisi!
+// Bu klasörde birden fazla madde içeren dosyalar tespit edildi.
+// JSON yeniden üretilirken extract_all_aciklama() tipi bir parser kullan.
+// Bkz. CLAUDE.md → "Kaynak Yapısı" bölümü.
+
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:uuid/uuid.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/variable_replacer.dart';
-import '../../data/models/inbox_item.dart';
-import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
-
-// Kaynak: C:\Users\AG\Desktop\cleaned_tarot\OzluSozler\
-// 643 söz, günlük limit: 1. Tüm sözler gösterilince liste sıfırlanır.
 
 class _OzluSozEntry {
   final int id;
@@ -32,7 +34,6 @@ class OzluSozScreen extends ConsumerStatefulWidget {
 
 class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
     with SingleTickerProviderStateMixin {
-  static const _uuid = Uuid();
   static const _prefKeyGosterilen = 'ozlusoz_gosterilen_idler';
   static const _prefKeyBugunTarih = 'ozlusoz_bugun_tarih';
 
@@ -40,7 +41,6 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
 
   _OzluSozEntry? _bugunEntry;
   bool _loading = true;
-  bool _saving = false;
   bool _hakDoldu = false;
 
   late AnimationController _animCtrl;
@@ -52,13 +52,13 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
     super.initState();
     _animCtrl = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 350),
+      duration: const Duration(milliseconds: 400),
     );
     _fadeAnim = Tween<double>(begin: 0, end: 1).animate(
       CurvedAnimation(parent: _animCtrl, curve: Curves.easeOut),
     );
     _slideAnim = Tween<Offset>(
-      begin: const Offset(0, 0.12),
+      begin: const Offset(0, 0.10),
       end: Offset.zero,
     ).animate(CurvedAnimation(parent: _animCtrl, curve: Curves.easeOut));
     _loadData();
@@ -102,11 +102,13 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
     // Gösterilmeyenleri filtrele
     var kalan = tumListe.where((s) => !gosterilenIdler.contains('${s.id}')).toList();
 
-    // Hepsi gösterildiyse sıfırla
+    // Hepsi gösterildiyse sıfırla (üst üste aynı metin yasağı dahil)
     if (kalan.isEmpty) {
-      gosterilenIdler = [];
-      await prefs.setStringList(_prefKeyGosterilen, []);
-      kalan = List.from(tumListe);
+      final lastId = gosterilenIdler.isNotEmpty ? gosterilenIdler.last : null;
+      gosterilenIdler = lastId != null ? [lastId] : [];
+      await prefs.setStringList(_prefKeyGosterilen, gosterilenIdler);
+      kalan = tumListe.where((s) => '${s.id}' != lastId).toList();
+      if (kalan.isEmpty) kalan = List.from(tumListe);
     }
 
     // Karıştır ve ilkini seç
@@ -126,62 +128,111 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
     _animCtrl.forward();
   }
 
-  Future<void> _saveToInbox() async {
-    if (_bugunEntry == null) return;
-    setState(() => _saving = true);
-    try {
-      final resolvedMetin = VariableReplacer.replace(
-        _bugunEntry!.metin,
-        ref.read(userProfileProvider).toVariableMap(),
-      );
-      final text = _bugunEntry!.yazar.isNotEmpty
-          ? '"$resolvedMetin"\n— ${_bugunEntry!.yazar}'
-          : '"$resolvedMetin"';
-      final item = InboxItem(
-        id: _uuid.v4(),
-        title: 'Özlü Söz',
-        text: text,
-        date: DateTime.now().toIso8601String(),
-        fortuneTypeKey: 'ozlusoz',
-      );
-      await ref.read(inboxProvider.notifier).addItem(item);
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Gelen kutusuna kaydedildi'),
-          duration: Duration(seconds: 2),
-        ),
-      );
-    } finally {
-      if (mounted) setState(() => _saving = false);
-    }
-  }
+  // ─── BUILD ────────────────────────────────────────────────────────────────────
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: AppBar(
-        backgroundColor: AppColors.navBarBackground,
-        title: const Text('Özlü Sözler'),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
-          onPressed: () => context.pop(),
-        ),
-      ),
-      body: _loading
-          ? const Center(child: CircularProgressIndicator())
-          : _hakDoldu
-              ? _buildHakDoldu()
-              : FadeTransition(
-                  opacity: _fadeAnim,
-                  child: SlideTransition(
-                    position: _slideAnim,
-                    child: _buildContent(),
-                  ),
+      backgroundColor: Colors.black,
+      extendBody: true,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // ── Tam ekran arka plan ────────────────────────────────────────────
+          Image.asset(
+            'assets/images/ozluSozIntroBg.jpg',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+            filterQuality: FilterQuality.high,
+            errorBuilder: (_, __, ___) =>
+                Container(color: const Color(0xFF0D0A20)),
+          ),
+          // ── Koyu overlay — %50 ─────────────────────────────────────────
+          Container(color: Colors.black.withValues(alpha: 0.50)),
+          // ── İçerik ────────────────────────────────────────────────────────
+          SafeArea(
+            child: Column(
+              children: [
+                _buildHeader(context),
+                Expanded(
+                  child: _loading
+                      ? const Center(
+                          child: CircularProgressIndicator(
+                            color: Color(0xFFBB88FF),
+                            strokeWidth: 2,
+                          ),
+                        )
+                      : _hakDoldu
+                          ? _buildHakDoldu()
+                          : FadeTransition(
+                              opacity: _fadeAnim,
+                              child: SlideTransition(
+                                position: _slideAnim,
+                                child: _buildContent(),
+                              ),
+                            ),
                 ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
+
+  // ─── Başlık ───────────────────────────────────────────────────────────────────
+
+  Widget _buildHeader(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 10, 12, 0),
+      child: Row(
+        children: [
+          // Geri butonu
+          GestureDetector(
+            onTap: () => context.pop(),
+            child: Container(
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  color: Colors.white.withValues(alpha: 0.25),
+                  width: 1,
+                ),
+              ),
+              child: const Icon(
+                Icons.arrow_back_ios_new_rounded,
+                color: Colors.white,
+                size: 18,
+              ),
+            ),
+          ),
+          // Başlık
+          Expanded(
+            child: Center(
+              child: Text(
+                'ÖZLÜ SÖZLER',
+                style: GoogleFonts.cinzel(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: 5,
+                  shadows: const [
+                    Shadow(color: Color(0xAABB88FF), blurRadius: 14),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          // Simetri
+          const SizedBox(width: 38),
+        ],
+      ),
+    );
+  }
+
+  // ─── Hak doldu ────────────────────────────────────────────────────────────────
 
   Widget _buildHakDoldu() {
     return Center(
@@ -190,13 +241,11 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
         child: Container(
           padding: const EdgeInsets.all(28),
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFF1A1040), Color(0xFF0D0A20)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
+            color: Colors.black.withValues(alpha: 0.55),
             borderRadius: BorderRadius.circular(24),
-            border: Border.all(color: const Color(0xFF7B5CE8).withValues(alpha: 0.4)),
+            border: Border.all(
+              color: const Color(0xFF7B5CE8).withValues(alpha: 0.45),
+            ),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -206,13 +255,20 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
               const Text(
                 'Günlük özlü söz hakkın doldu.',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: 16, height: 1.6),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  height: 1.6,
+                ),
               ),
               const SizedBox(height: 8),
               Text(
                 'Yarın yeni bir söz seni bekliyor.',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontSize: 13),
+                style: TextStyle(
+                  color: Colors.white.withValues(alpha: 0.5),
+                  fontSize: 13,
+                ),
               ),
             ],
           ),
@@ -220,6 +276,8 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
       ),
     );
   }
+
+  // ─── İçerik ───────────────────────────────────────────────────────────────────
 
   Widget _buildContent() {
     final entry = _bugunEntry;
@@ -230,131 +288,89 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen>
       ref.read(userProfileProvider).toVariableMap(),
     );
 
-    return SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(20, 24, 20, 40),
+    const accent = Color(0xFFBB88FF);
+
+    return Center(
+      child: Padding(
+      padding: const EdgeInsets.fromLTRB(24, 24, 24, 24),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
+          // ── Alıntı kartı ────────────────────────────────────────────────
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(28),
+            padding: const EdgeInsets.fromLTRB(24, 20, 24, 24),
             decoration: BoxDecoration(
-              image: const DecorationImage(
-                image: AssetImage('assets/images/ozlusoz_bg.png'),
-                fit: BoxFit.cover,
-                opacity: 0.18,
-                onError: _imageError,
-              ),
-              gradient: const LinearGradient(
-                colors: [Color(0xFF1A1040), Color(0xFF0D0A20)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(24),
+              color: Colors.black.withValues(alpha: 0.45),
+              borderRadius: BorderRadius.circular(20),
               border: Border.all(
-                color: AppColors.bubble1.first.withValues(alpha: 0.35),
+                color: accent.withValues(alpha: 0.35),
+                width: 1,
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: AppColors.bubble1.first.withValues(alpha: 0.2),
-                  blurRadius: 20,
-                  offset: const Offset(0, 6),
-                ),
-              ],
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
+                // Açılış tırnağı
                 Text(
                   '❝',
                   style: TextStyle(
-                    fontSize: 36,
-                    color: AppColors.bubble1.first.withValues(alpha: 0.7),
+                    fontSize: 38,
+                    color: accent.withValues(alpha: 0.75),
                     height: 1,
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 14),
+                // Metin
                 Text(
                   resolvedMetin,
                   textAlign: TextAlign.center,
-                  style: AppTextStyles.cardText.copyWith(
-                    fontSize: resolvedMetin.length > 200 ? 14 : 16,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: resolvedMetin.length > 200 ? 15 : 17,
+                    height: 1.75,
+                    fontWeight: FontWeight.w300,
+                    letterSpacing: 0.3,
+                    shadows: const [
+                      Shadow(color: Colors.black87, blurRadius: 6),
+                    ],
                   ),
                 ),
+                // Kapanış tırnağı
                 Text(
                   '❞',
                   style: TextStyle(
-                    fontSize: 36,
-                    color: AppColors.bubble1.first.withValues(alpha: 0.7),
+                    fontSize: 38,
+                    color: accent.withValues(alpha: 0.75),
                     height: 1,
                   ),
                 ),
+                // Yazar
                 if (entry.yazar.isNotEmpty) ...[
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 16),
                   Container(
                     height: 1,
-                    color: AppColors.bubble1.first.withValues(alpha: 0.2),
+                    color: accent.withValues(alpha: 0.2),
                   ),
-                  const SizedBox(height: 14),
+                  const SizedBox(height: 12),
                   Text(
                     '— ${entry.yazar}',
                     textAlign: TextAlign.center,
-                    style: AppTextStyles.inboxMeta.copyWith(
-                      fontSize: 12,
-                      color: AppColors.bubble1.first.withValues(alpha: 0.8),
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: accent.withValues(alpha: 0.85),
                       fontStyle: FontStyle.italic,
+                      letterSpacing: 0.5,
                     ),
                   ),
                 ],
               ],
             ),
           ),
-          const SizedBox(height: 24),
-          // Kaydet butonu
-          GestureDetector(
-            onTap: _saving ? null : _saveToInbox,
-            child: Container(
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: AppColors.bubble1,
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.circular(25),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.bubble1.first.withValues(alpha: 0.4),
-                    blurRadius: 10,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: Center(
-                child: _saving
-                    ? const SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2,
-                          color: Colors.white,
-                        ),
-                      )
-                    : const Text(
-                        'Kaydet ✦',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-              ),
-            ),
-          ),
         ],
       ),
+    ),
     );
   }
 }
-
-void _imageError(Object e, StackTrace? s) {}

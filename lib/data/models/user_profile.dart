@@ -110,8 +110,16 @@ class UserProfile extends HiveObject {
       'meslek': jobLabel,
       'medeni_durum': maritalStatusLabel,
       'burc': zodiacSign ?? '',
+      // burc varyantları — ilk harf büyük (zaten büyük ama alias olarak tutulur)
+      'burc_ilkHarfBuyuk': (zodiacSign != null && zodiacSign!.isNotEmpty)
+          ? zodiacSign![0].toUpperCase() + zodiacSign!.substring(1)
+          : '',
       'dogum_tarihi': birthDate ?? '',
       'dogum_sehri': birthCity ?? '',
+      // ── Doğum tarihi parçaları ─────────────────────────────────────────────
+      'dogum gunu':  _birthPart(birthDate, 2), // {{dogum gunu}} → gün sayısı
+      'dogum ayi':   _birthPart(birthDate, 1), // {{dogum ayi}}  → ay sayısı
+      'dogum yili':  _birthPart(birthDate, 0), // {{dogum yili}} → yıl sayısı
       // ── İsim halleri (Türkçe çekim) ───────────────────────────────────────
       'isime': _dative(name),       // "Ahmet'e", "Ayşe'ye"
       'isimi': _accusative(name),   // "Ahmet'i", "Ayşe'yi"
@@ -151,6 +159,15 @@ class UserProfile extends HiveObject {
   static bool _endsInVowel(String name) =>
       name.isNotEmpty && _allVowels.contains(name[name.length - 1].toLowerCase());
 
+  /// birthDate: 'YYYY-MM-DD', partIndex: 0=yıl, 1=ay, 2=gün
+  static String _birthPart(String? birthDate, int partIndex) {
+    if (birthDate == null || birthDate.isEmpty) return '';
+    final parts = birthDate.split('-');
+    if (parts.length != 3) return '';
+    final val = int.tryParse(parts[partIndex]);
+    return val != null ? val.toString() : '';
+  }
+
   static String _dative(String name) {
     if (name.isEmpty) return name;
     final front = _isFrontVowel(name);
@@ -175,7 +192,7 @@ class UserProfile extends HiveObject {
     final front = _isFrontVowel(name);
     final voiceless = _voicelessLast.contains(name[name.length - 1].toLowerCase());
     final cons = voiceless ? 't' : 'd';
-    return "$name'${cons}${front ? 'en' : 'an'}";
+    return "$name'$cons${front ? 'en' : 'an'}";
   }
 
   static String _diminutive(String name) {

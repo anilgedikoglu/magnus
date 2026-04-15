@@ -345,15 +345,19 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                         constraints: BoxConstraints(
                           minHeight: constraints.maxHeight - 24,
                         ),
-                        child: Center(
-                          child: Text(
-                            _displayed,
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              height: 1.7,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Text(
+                              _displayed,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                height: 1.7,
+                              ),
                             ),
-                          ),
+                          ],
                         ),
                       ),
                     );

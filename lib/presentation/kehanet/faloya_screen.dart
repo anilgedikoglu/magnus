@@ -1,5 +1,5 @@
 // C:/src/magnus_app/lib/presentation/kehanet/faloya_screen.dart
-// Faloya fal ekranı - kategoriye göre metin gösterimi
+// Faloya fal ekranı - üstte görsel, 5s yükleme animasyonu, ardından typewriter metin
 
 import 'dart:async';
 import 'dart:convert';
@@ -31,6 +31,10 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
   late AnimationController _hourglassCtrl;
   bool _flipped = false;
 
+  // İkisi de hazır olduğunda geçiş yapılır
+  bool _dataReady = false;
+  bool _timerDone = false;
+
   @override
   void initState() {
     super.initState();
@@ -40,6 +44,13 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
     );
     _startHourglass();
     _loadData();
+
+    // 5 saniyelik minimum bekleme — veri daha önce hazır olsa bile bekle
+    Future.delayed(const Duration(seconds: 5), () {
+      if (!mounted) return;
+      _timerDone = true;
+      _tryTransition();
+    });
   }
 
   void _startHourglass() {
@@ -83,6 +94,14 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
     await prefs.setStringList(key, shown);
 
     if (mounted) {
+      _dataReady = true;
+      _tryTransition();
+    }
+  }
+
+  /// Her iki koşul da sağlandığında icerik adımına geç
+  void _tryTransition() {
+    if (_dataReady && _timerDone && _adim == _FaloyaAdim.yukleniyor) {
       setState(() => _adim = _FaloyaAdim.icerik);
       _startTypewriter();
     }
@@ -115,6 +134,7 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            // ── Başlık çubuğu ──────────────────────────────────────────────
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: Row(
@@ -139,27 +159,47 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
                 ],
               ),
             ),
+
+            // ── Faloya görseli — her zaman görünür ─────────────────────────
+            ClipRRect(
+              borderRadius: const BorderRadius.vertical(
+                bottom: Radius.circular(20),
+              ),
+              child: Image.asset(
+                'assets/images/kehanet/faloya.png',
+                height: 220,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
+            ),
+
+            // ── Yükleniyor: orta alan ──────────────────────────────────────
             if (_adim == _FaloyaAdim.yukleniyor) ...[
               const Spacer(),
-              AnimatedRotation(
-                turns: _flipped ? 0.5 : 0.0,
-                duration: const Duration(milliseconds: 700),
-                child: const Text('⏳', style: TextStyle(fontSize: 60)),
+              const Text(
+                'Faloya geleceğine odaklanıyor...',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: 16,
+                  letterSpacing: 0.3,
+                ),
               ),
               const SizedBox(height: 24),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40),
-                child: Text(
-                  'Faloya senin için bakıyor...',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white70, fontSize: 16),
+              Center(
+                child: AnimatedRotation(
+                  turns: _flipped ? 0.5 : 0.0,
+                  duration: const Duration(milliseconds: 700),
+                  child: const Text('⏳', style: TextStyle(fontSize: 52)),
                 ),
               ),
               const Spacer(),
+
+            // ── İçerik: typewriter + kapat ─────────────────────────────────
             ] else ...[
               Expanded(
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.all(24),
+                  padding: const EdgeInsets.fromLTRB(24, 20, 24, 12),
                   child: Text(
                     _displayed,
                     style: const TextStyle(
@@ -175,7 +215,6 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
                 child: GestureDetector(
                   onTap: () => context.pop(),
                   child: Container(
-                    width: double.infinity,
                     height: 48,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),

@@ -1,5 +1,5 @@
 // C:/src/magnus_app/lib/presentation/kehanet/maganda_screen.dart
-// Maganda - soru seç, cevap al; cevap ekranında öfkeli renk kaymalı hale animasyonu
+// Maganda - soru seç, cevap al; her iki adımda da hale animasyonlu görsel
 
 import 'dart:async';
 import 'dart:convert';
@@ -31,11 +31,11 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
   int _charIndex = 0;
   bool _loading = true;
 
-  // Nefes (parlaklık) — hızlı: 1200ms
+  // Parlaklık titremesi — 1200ms, hızlı
   late AnimationController _glowCtrl;
   late Animation<double> _glowAnim;
 
-  // Renk kayması (öfke döngüsü) — kırmızı→turuncu→sarı→pembe→kırmızı: 2200ms
+  // Renk döngüsü — kırmızı→turuncu→sarı→pembe→kırmızı, 2200ms
   late AnimationController _colorCtrl;
   late Animation<Color?> _colorAnim;
 
@@ -43,45 +43,31 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
   void initState() {
     super.initState();
 
-    // Parlaklık — Faloya'dan daha hızlı (1200ms vs 2800ms)
     _glowCtrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1200),
     )..repeat(reverse: true);
     _glowAnim = CurvedAnimation(parent: _glowCtrl, curve: Curves.easeInOut);
 
-    // Renk döngüsü — sürekli forward, 4 aşamalı ateş spektrumu
     _colorCtrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 2200),
     )..repeat();
     _colorAnim = TweenSequence<Color?>([
       TweenSequenceItem(
-        tween: ColorTween(
-          begin: const Color(0xFFFF2200), // kırmızı
-          end:   const Color(0xFFFF7700), // turuncu
-        ),
+        tween: ColorTween(begin: const Color(0xFFFF2200), end: const Color(0xFFFF7700)),
         weight: 25,
       ),
       TweenSequenceItem(
-        tween: ColorTween(
-          begin: const Color(0xFFFF7700), // turuncu
-          end:   const Color(0xFFFFDD00), // sarı-turuncu
-        ),
+        tween: ColorTween(begin: const Color(0xFFFF7700), end: const Color(0xFFFFDD00)),
         weight: 25,
       ),
       TweenSequenceItem(
-        tween: ColorTween(
-          begin: const Color(0xFFFFDD00), // sarı-turuncu
-          end:   const Color(0xFFFF0077), // kızgın pembe
-        ),
+        tween: ColorTween(begin: const Color(0xFFFFDD00), end: const Color(0xFFFF0077)),
         weight: 25,
       ),
       TweenSequenceItem(
-        tween: ColorTween(
-          begin: const Color(0xFFFF0077), // kızgın pembe
-          end:   const Color(0xFFFF2200), // kırmızıya dön
-        ),
+        tween: ColorTween(begin: const Color(0xFFFF0077), end: const Color(0xFFFF2200)),
         weight: 25,
       ),
     ]).animate(_colorCtrl);
@@ -96,10 +82,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
     final shuffled = List.from(all)..shuffle(Random());
     if (mounted) {
       setState(() {
-        _sorular = shuffled
-            .take(3)
-            .map((e) => Map<String, dynamic>.from(e))
-            .toList();
+        _sorular = shuffled.take(3).map((e) => Map<String, dynamic>.from(e)).toList();
         _loading = false;
       });
     }
@@ -114,8 +97,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
     const key = 'maganda_gosterilen';
     var shown = prefs.getStringList(key) ?? [];
 
-    var eligible =
-        cevaplar.where((e) => !shown.contains(e['id'].toString())).toList();
+    var eligible = cevaplar.where((e) => !shown.contains(e['id'].toString())).toList();
     if (eligible.isEmpty) {
       await prefs.remove(key);
       shown = [];
@@ -174,24 +156,21 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
       child: AnimatedBuilder(
         animation: Listenable.merge([_glowAnim, _colorAnim]),
         builder: (context, child) {
-          final t     = _glowAnim.value;                          // 0→1 parlaklık
+          final t     = _glowAnim.value;
           final color = _colorAnim.value ?? const Color(0xFFFF2200);
           return Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
-              // Çerçeve — renk kayarken opaklık da nefes alır
               border: Border.all(
                 color: color.withValues(alpha: 0.30 + t * 0.60),
                 width: 1.5,
               ),
               boxShadow: [
-                // İç halka — dar, yoğun
                 BoxShadow(
                   color: color.withValues(alpha: 0.25 + t * 0.50),
                   blurRadius: 5 + t * 16,
                   spreadRadius: 1 + t * 4,
                 ),
-                // Dış halo — geniş, yumuşak
                 BoxShadow(
                   color: color.withValues(alpha: 0.08 + t * 0.28),
                   blurRadius: 14 + t * 26,
@@ -248,6 +227,14 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
               ),
             ),
 
+            // ── Görsel — yükleme bitmeden gizli, sonra her adımda görünür ─
+            if (!_loading) ...[
+              Padding(
+                padding: const EdgeInsets.only(top: 4, bottom: 10),
+                child: _buildAngryGlowImage(),
+              ),
+            ],
+
             // ── İçerik ─────────────────────────────────────────────────────
             if (_loading)
               const Expanded(
@@ -255,49 +242,54 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                   child: CircularProgressIndicator(color: Color(0xFFFF55FF)),
                 ),
               )
-            else if (_adim == _MagandaAdim.sorular) ...[
-              const Padding(
-                padding: EdgeInsets.all(20),
-                child: Text(
-                  'Bir soru seç:',
-                  style: TextStyle(color: Colors.white70, fontSize: 16),
-                ),
-              ),
+
+            // ── Soru seçimi — dikeyde ortalanmış ──────────────────────────
+            else if (_adim == _MagandaAdim.sorular)
               Expanded(
-                child: ListView.separated(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  separatorBuilder: (_, __) => const SizedBox(height: 12),
-                  itemCount: _sorular.length,
-                  itemBuilder: (ctx, i) => GestureDetector(
-                    onTap: () => _onSoruSecildi(i),
-                    child: Container(
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.05),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(
-                          color:
-                              const Color(0xFFFF55FF).withValues(alpha: 0.40),
-                          width: 1,
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        const Text(
+                          'Bir soru seç:',
+                          style: TextStyle(color: Colors.white70, fontSize: 16),
                         ),
-                      ),
-                      child: Text(
-                        _sorular[i]['metin'] ?? '',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                        ),
-                      ),
+                        const SizedBox(height: 14),
+                        for (int i = 0; i < _sorular.length; i++) ...[
+                          GestureDetector(
+                            onTap: () => _onSoruSecildi(i),
+                            child: Container(
+                              padding: const EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                color: Colors.white.withValues(alpha: 0.05),
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: const Color(0xFFFF55FF).withValues(alpha: 0.40),
+                                  width: 1,
+                                ),
+                              ),
+                              child: Text(
+                                _sorular[i]['metin'] ?? '',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                ),
+                              ),
+                            ),
+                          ),
+                          if (i < _sorular.length - 1) const SizedBox(height: 12),
+                        ],
+                      ],
                     ),
                   ),
                 ),
-              ),
-            ] else ...[
-              // ── Cevap ekranı: görsel + hale + typewriter ────────────────
-              Padding(
-                padding: const EdgeInsets.only(top: 4, bottom: 8),
-                child: _buildAngryGlowImage(),
-              ),
+              )
+
+            // ── Cevap — typewriter + kapat ─────────────────────────────────
+            else ...[
               Expanded(
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.fromLTRB(24, 12, 24, 12),

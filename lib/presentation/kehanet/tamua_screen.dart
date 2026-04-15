@@ -58,7 +58,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   // ── Boyutlar ─────────────────────────────────────────────────────────────────
   static const double _traySize  = 280.0;
   static const double _innerSize =  56.0;
-  static const double _charH     = 200.0; // karakter görseli yüksekliği
+  static const double _charH     = 150.0; // karakter görseli yüksekliği
   static const double _bounceR   = _traySize / 2 - _innerSize / 2 - 6; // ≈ 102 px
 
   // ── Animasyon ────────────────────────────────────────────────────────────────
@@ -494,70 +494,59 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
               ),
             ]
 
-            // ── icerik: karakter sabit, altında nefes alan kızıl çerçeveli metin ──
+            // ── icerik: tray yine Expanded+Center (konum sabit), altında metin ──
             else ...[
-              Padding(
-                padding: const EdgeInsets.only(top: _charH + 8),
+              Expanded(
                 child: Center(child: _buildTrayStack()),
               ),
-              Expanded(
-                child: LayoutBuilder(
-                  builder: (context, constraints) {
-                    return SingleChildScrollView(
-                      padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
-                      child: ConstrainedBox(
-                        constraints: BoxConstraints(minHeight: constraints.maxHeight - 28),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            // Nefes alan kızıl glow dikdörtgen
-                            AnimatedBuilder(
-                              animation: _glowAnim,
-                              builder: (ctx, child) {
-                                final t = _glowAnim.value;
-                                return Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(14),
-                                    border: Border.all(
-                                      color: const Color(0xFFFF2200).withValues(alpha: 0.30 + t * 0.55),
-                                      width: 1.5,
-                                    ),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: const Color(0xFFFF2200).withValues(alpha: 0.15 + t * 0.35),
-                                        blurRadius: 8 + t * 16,
-                                        spreadRadius: t * 4,
-                                      ),
-                                      BoxShadow(
-                                        color: const Color(0xFF990000).withValues(alpha: 0.08 + t * 0.22),
-                                        blurRadius: 20 + t * 28,
-                                        spreadRadius: t * 7,
-                                      ),
-                                    ],
-                                  ),
-                                  child: child,
-                                );
-                              },
-                              child: Text(
-                                _displayed,
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  height: 1.7,
-                                ),
-                              ),
+              // Alt bölüm: soru/butonu ile aynı yükseklikte (Visibility ile rezerve
+              // edilen alan kadar) → tray pozisyonu değişmez.
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+                child: SizedBox(
+                  height: 120, // soru metni + buton yüksekliğiyle eşit
+                  child: SingleChildScrollView(
+                    child: AnimatedBuilder(
+                      animation: _glowAnim,
+                      builder: (ctx, child) {
+                        final t = _glowAnim.value;
+                        return Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(14),
+                            border: Border.all(
+                              color: const Color(0xFFFF2200).withValues(alpha: 0.30 + t * 0.55),
+                              width: 1.5,
                             ),
-                          ],
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0xFFFF2200).withValues(alpha: 0.15 + t * 0.35),
+                                blurRadius: 8 + t * 16,
+                                spreadRadius: t * 4,
+                              ),
+                              BoxShadow(
+                                color: const Color(0xFF990000).withValues(alpha: 0.08 + t * 0.22),
+                                blurRadius: 20 + t * 28,
+                                spreadRadius: t * 7,
+                              ),
+                            ],
+                          ),
+                          child: child,
+                        );
+                      },
+                      child: Text(
+                        _displayed,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Colors.white, fontSize: 16, height: 1.7,
                         ),
                       ),
-                    );
-                  },
+                    ),
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
                 child: GestureDetector(
                   onTap: () => context.pop(),
                   child: Container(

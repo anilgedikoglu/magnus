@@ -4,6 +4,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -32,6 +33,30 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   String _displayed = '';
   Timer? _typeTimer;
   int _charIndex = 0;
+
+  // ── Ses ──────────────────────────────────────────────────────────────────────
+  final AudioPlayer _audioPlayer = AudioPlayer();
+
+  // Her sektörün kaç MP3'ü var (ilki numarasız, sonrakiler 2'den başlar)
+  static const Map<String, int> _soundCounts = {
+    'olacak':     7,
+    'olacakh':    5,
+    'olacakl':    5,
+    'olmayacak':  6,
+    'olmayacakh': 4,
+    'olmayacakl': 4,
+  };
+
+  Future<void> _playSound(String sector) async {
+    final count = _soundCounts[sector] ?? 0;
+    if (count == 0) return;
+    final idx  = Random().nextInt(count); // 0..count-1
+    // idx=0 → "olacak.mp3", idx=1 → "olacak2.mp3", idx=2 → "olacak3.mp3" …
+    final suffix = idx == 0 ? '' : '${idx + 1}';
+    final path   = 'sounds/kehanet/tamua/$sector$suffix.mp3';
+    await _audioPlayer.stop();
+    await _audioPlayer.play(AssetSource(path));
+  }
 
   // ── Boyutlar ─────────────────────────────────────────────────────────────────
   static const double _traySize  = 280.0;
@@ -270,6 +295,8 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   }
 
   void _startTypewriter() {
+    // Metin yazılmaya başlarken sektöre ait random ses çal
+    _playSound(_sektor);
     _typeTimer = Timer.periodic(const Duration(milliseconds: 30), (t) {
       if (_charIndex >= _metin.length) { t.cancel(); return; }
       setState(() => _displayed = _metin.substring(0, ++_charIndex));
@@ -280,6 +307,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   void dispose() {
     _typeTimer?.cancel();
     _bounceCtrl.dispose();
+    _audioPlayer.dispose();
     super.dispose();
   }
 

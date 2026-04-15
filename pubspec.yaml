@@ -29,6 +29,9 @@ dependencies:
   # Video
   video_player: ^2.9.2
 
+  # Audio
+  audioplayers: ^6.6.0
+
   # Utilities
   intl: ^0.19.0
   uuid: ^4.4.0
@@ -94,6 +97,7 @@ flutter:
     - assets/images/kehanet/
     - assets/videos/
     - assets/videos/kahinler/
+    - assets/sounds/kehanet/tamua/
 
   fonts:
     - family: ChixaDemiBold

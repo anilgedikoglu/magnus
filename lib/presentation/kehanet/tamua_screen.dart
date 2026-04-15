@@ -66,6 +66,9 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   // Karakter slide: tepsi arkasından tepsinin üstüne kayma
   late AnimationController _slideCtrl;
   late Animation<double>   _slideAnim; // dy: 0 → -(tray/2 + char/2)
+  // Metin kutusu nefes alıp veren kızıl ışıma
+  late AnimationController _glowCtrl;
+  late Animation<double>   _glowAnim;
   // Yol noktaları: P0(merkez), P1, P2, P3, P4 — 4 segment
   List<Offset> _waypoints = [];
   // Kümülatif duraklama noktaları: [0, d01/T, (d01+d12)/T, ..., 1]
@@ -85,8 +88,13 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     );
     _slideAnim = Tween<double>(
       begin: 0.0,
-      end: -(_traySize / 2 + _charH / 2), // -240: karakter alt kenarı = tepsi üst kenarı
+      end: -(_traySize / 2 + _charH / 2),
     ).animate(CurvedAnimation(parent: _slideCtrl, curve: Curves.easeOut));
+    _glowCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2800),
+    );
+    _glowAnim = CurvedAnimation(parent: _glowCtrl, curve: Curves.easeInOut);
     _loadData();
   }
 
@@ -251,26 +259,26 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
       _bgPlayer.setVolume(1.0);
       _bgPlayer.play();
     });
+    // Artık buton bekleniyor — _startAnimation() ile devam edilir
+  }
 
-    Future.delayed(const Duration(seconds: 3), () {
+  // Buton basıldığında çağrılır; soruyu gizler, taşı başlatır.
+  void _startAnimation() {
+    if (_adim != _TamuaAdim.hazir) return;
+    setState(() => _adim = _TamuaAdim.animasyon);
+    _bounceCtrl.forward().then((_) async {
       if (!mounted) return;
-      setState(() => _adim = _TamuaAdim.animasyon);
-      _bounceCtrl.forward().then((_) async {
-        if (!mounted) return;
-        // Taş durdu: arka plan sesini durdur, metni hazırla
-        await _bgPlayer.stop();
-        await _bgPlayer.seek(Duration.zero);
-        _sektor = _sectorForPos(_waypoints.last);
-        await _loadTextForSector(_sektor);
-        if (!mounted) return;
-        // Karakter tepsinin arkasından yukarı kayıyor
-        setState(() => _adim = _TamuaAdim.karakterGiriyor);
-        await _slideCtrl.forward();
-        if (!mounted) return;
-        // Slide bitti → karakter alt kenarı tepsi üst kenarında, metni başlat
-        setState(() => _adim = _TamuaAdim.icerik);
-        _startTypewriter();
-      });
+      await _bgPlayer.stop();
+      await _bgPlayer.seek(Duration.zero);
+      _sektor = _sectorForPos(_waypoints.last);
+      await _loadTextForSector(_sektor);
+      if (!mounted) return;
+      setState(() => _adim = _TamuaAdim.karakterGiriyor);
+      await _slideCtrl.forward();
+      if (!mounted) return;
+      setState(() => _adim = _TamuaAdim.icerik);
+      _glowCtrl.repeat(reverse: true);
+      _startTypewriter();
     });
   }
 
@@ -332,6 +340,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     _typeTimer?.cancel();
     _bounceCtrl.dispose();
     _slideCtrl.dispose();
+    _glowCtrl.dispose();
     _bgPlayer.dispose();
     _audioPlayer.dispose();
     super.dispose();
@@ -426,81 +435,149 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
             // ── İçerik ──────────────────────────────────────────────────────
             if (_adim == _TamuaAdim.yukleniyor)
               const Expanded(
-                child: Center(
-                  child: CircularProgressIndicator(color: Color(0xFFFF55FF)),
-                ),
+                child: Center(child: CircularProgressIndicator(color: Color(0xFFFF55FF))),
               )
-            else ...[
-              // Tepsi + karakter: hazir/animasyon/karakterGiriyor → dikeyde
-              // ortalanmış (Expanded). icerik → sabit, metin altında.
-              if (_adim != _TamuaAdim.icerik)
-                Expanded(
-                  child: Center(child: _buildTrayStack()),
-                )
-              else ...[
-                // icerik: karakter artık tepsinin üstünde sabit, metin aşağıda
+
+            // ── hazir/animasyon/karakterGiriyor: tepsi dikeyde ortalanmış ──
+            else if (_adim != _TamuaAdim.icerik) ...[
+              Expanded(child: Center(child: _buildTrayStack())),
+
+              // hazir: soru metni + buton
+              if (_adim == _TamuaAdim.hazir)
                 Padding(
-                  padding: const EdgeInsets.only(top: _charH + 8),
-                  child: Center(child: _buildTrayStack()),
-                ),
-                // ── Fal metni ─────────────────────────────────────────────
-                Expanded(
-                  child: LayoutBuilder(
-                    builder: (context, constraints) {
-                      return SingleChildScrollView(
-                        padding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
-                        child: ConstrainedBox(
-                          constraints: BoxConstraints(
-                            minHeight: constraints.maxHeight - 24,
+                  padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Text(
+                        'Aklından bir soru geçir...',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white70, fontSize: 16, height: 1.6,
+                          letterSpacing: 0.3,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      GestureDetector(
+                        onTap: _startAnimation,
+                        child: Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            gradient: const LinearGradient(
+                              colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
+                            ),
+                            border: Border.all(
+                              color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
+                              width: 1.5,
+                            ),
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Text(
+                          child: const Center(
+                            child: Text(
+                              'Geçirdim, hazırım...',
+                              style: TextStyle(
+                                color: Colors.white, fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+            ]
+
+            // ── icerik: karakter sabit, altında nefes alan kızıl çerçeveli metin ──
+            else ...[
+              Padding(
+                padding: const EdgeInsets.only(top: _charH + 8),
+                child: Center(child: _buildTrayStack()),
+              ),
+              Expanded(
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    return SingleChildScrollView(
+                      padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(minHeight: constraints.maxHeight - 28),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            // Nefes alan kızıl glow dikdörtgen
+                            AnimatedBuilder(
+                              animation: _glowAnim,
+                              builder: (ctx, child) {
+                                final t = _glowAnim.value;
+                                return Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(14),
+                                    border: Border.all(
+                                      color: const Color(0xFFFF2200).withValues(alpha: 0.30 + t * 0.55),
+                                      width: 1.5,
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: const Color(0xFFFF2200).withValues(alpha: 0.15 + t * 0.35),
+                                        blurRadius: 8 + t * 16,
+                                        spreadRadius: t * 4,
+                                      ),
+                                      BoxShadow(
+                                        color: const Color(0xFF990000).withValues(alpha: 0.08 + t * 0.22),
+                                        blurRadius: 20 + t * 28,
+                                        spreadRadius: t * 7,
+                                      ),
+                                    ],
+                                  ),
+                                  child: child,
+                                );
+                              },
+                              child: Text(
                                 _displayed,
+                                textAlign: TextAlign.center,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,
                                   height: 1.7,
                                 ),
                               ),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: GestureDetector(
-                    onTap: () => context.pop(),
-                    child: Container(
-                      height: 48,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        gradient: const LinearGradient(
-                          colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-                        ),
-                        border: Border.all(
-                          color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                          width: 1.5,
+                            ),
+                          ],
                         ),
                       ),
-                      child: const Center(
-                        child: Text(
-                          'Kapat',
-                          style: TextStyle(
-                            color: Colors.white, fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
+                    );
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: GestureDetector(
+                  onTap: () => context.pop(),
+                  child: Container(
+                    height: 48,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
+                      ),
+                      border: Border.all(
+                        color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
+                        width: 1.5,
+                      ),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Kapat',
+                        style: TextStyle(
+                          color: Colors.white, fontSize: 16,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
                   ),
                 ),
-              ],
+              ),
             ],
           ],
         ),

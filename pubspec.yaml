@@ -29,8 +29,8 @@ dependencies:
   # Video
   video_player: ^2.9.2
 
-  # Audio
-  audioplayers: ^6.6.0
+  # Audio (just_audio: ExoPlayer tabanlı, Android'de çok daha kaliteli)
+  just_audio: ^0.9.46
 
   # Utilities
   intl: ^0.19.0

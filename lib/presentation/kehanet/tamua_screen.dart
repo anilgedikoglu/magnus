@@ -4,7 +4,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
-import 'package:audioplayers/audioplayers.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -39,28 +39,15 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   final AudioPlayer _audioPlayer = AudioPlayer(); // sektör sesi
   final AudioPlayer _bgPlayer    = AudioPlayer(); // arka plan loop
 
-  // Android audio focus + tam kalite ses bağlamı
-  static final _audioCtx = AudioContext(
-    android: const AudioContextAndroid(
-      isSpeakerphoneOn: false,
-      stayAwake: false,
-      contentType: AndroidContentType.music,
-      usageType: AndroidUsageType.media,
-      audioFocus: AndroidAudioFocus.gain,
-    ),
-    iOS: AudioContextIOS(
-      category: AVAudioSessionCategory.playback,
-      options: const {},
-    ),
-  );
-
   // sesIndex: seçilen metnin klasör içindeki sırası (1-based)
   // 1 → "olacak.mp3", 2 → "olacak2.mp3", …
   Future<void> _playSound(String sector, int sesIndex) async {
     final suffix = sesIndex == 1 ? '' : '$sesIndex';
-    final path   = 'sounds/kehanet/tamua/$sector$suffix.mp3';
+    final path   = 'assets/sounds/kehanet/tamua/$sector$suffix.mp3';
     await _audioPlayer.stop();
-    await _audioPlayer.play(AssetSource(path), volume: 1.0, ctx: _audioCtx);
+    await _audioPlayer.setVolume(1.0);
+    await _audioPlayer.setAsset(path);
+    await _audioPlayer.play();
   }
 
   // ── Boyutlar ─────────────────────────────────────────────────────────────────
@@ -242,12 +229,10 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     setState(() => _adim = _TamuaAdim.hazir);
 
     // Tepsi göründüğü anda arka plan sesi loop başlasın
-    _bgPlayer.setReleaseMode(ReleaseMode.loop);
-    _bgPlayer.play(
-      AssetSource('sounds/kehanet/tamua/tamuabackgroundsound.mp3'),
-      volume: 1.0,
-      ctx: _audioCtx,
-    );
+    _bgPlayer.setVolume(1.0);
+    _bgPlayer.setLoopMode(LoopMode.one);
+    _bgPlayer.setAsset('assets/sounds/kehanet/tamua/tamuabackgroundsound.mp3')
+        .then((_) => _bgPlayer.play());
 
     Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
@@ -256,6 +241,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
         if (!mounted) return;
         // Taş durdu: arka plan sesini önce durdur, sonra sektör sesini çal
         await _bgPlayer.stop();
+        await _bgPlayer.seek(Duration.zero); // buffer'ı sıfırla
         _sektor = _sectorForPos(_waypoints.last);
         await _loadTextForSector(_sektor);
         if (!mounted) return;
@@ -322,7 +308,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   void dispose() {
     _typeTimer?.cancel();
     _bounceCtrl.dispose();
-    _bgPlayer.dispose();
+    _bgPlayer.dispose();    // just_audio dispose — async değil
     _audioPlayer.dispose();
     super.dispose();
   }

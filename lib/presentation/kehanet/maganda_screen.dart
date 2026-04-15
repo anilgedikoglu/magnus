@@ -1,5 +1,5 @@
 // C:/src/magnus_app/lib/presentation/kehanet/maganda_screen.dart
-// Maganda - soru seç, cevap al; her iki adımda da hale animasyonlu görsel
+// Maganda - soru seç → 5s odaklanıyor animasyonu → cevap typewriter
 
 import 'dart:async';
 import 'dart:convert';
@@ -19,7 +19,7 @@ class MagandaScreen extends ConsumerStatefulWidget {
   ConsumerState<MagandaScreen> createState() => _MagandaScreenState();
 }
 
-enum _MagandaAdim { sorular, cevap }
+enum _MagandaAdim { sorular, odaklaniyor, cevap }
 
 class _MagandaScreenState extends ConsumerState<MagandaScreen>
     with TickerProviderStateMixin {
@@ -31,11 +31,14 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
   int _charIndex = 0;
   bool _loading = true;
 
-  // Parlaklık titremesi — 1200ms, hızlı
+  // Kum saati flip
+  bool _flipped = false;
+
+  // Parlaklık titremesi — 1200ms hızlı
   late AnimationController _glowCtrl;
   late Animation<double> _glowAnim;
 
-  // Renk döngüsü — kırmızı→turuncu→sarı→pembe→kırmızı, 2200ms
+  // Renk döngüsü — kırmızı→turuncu→sarı→pembe→kırmızı
   late AnimationController _colorCtrl;
   late Animation<Color?> _colorAnim;
 
@@ -73,6 +76,15 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
     ]).animate(_colorCtrl);
 
     _loadData();
+  }
+
+  // ── Kum saati animasyonu (sadece odaklaniyor adımında çalışır) ───────────────
+  void _startHourglass() {
+    Future.delayed(const Duration(milliseconds: 1200), () {
+      if (!mounted || _adim != _MagandaAdim.odaklaniyor) return;
+      setState(() => _flipped = !_flipped);
+      _startHourglass();
+    });
   }
 
   Future<void> _loadData() async {
@@ -119,14 +131,22 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
     shown.add(selected['id'].toString());
     await prefs.setStringList(key, shown);
 
-    if (mounted) {
-      setState(() {
-        _adim = _MagandaAdim.cevap;
-        _charIndex = 0;
-        _displayed = '';
-      });
+    if (!mounted) return;
+
+    // Odaklanıyor adımına geç, kum saatini başlat, 5s sonra metni göster
+    setState(() {
+      _adim = _MagandaAdim.odaklaniyor;
+      _charIndex = 0;
+      _displayed = '';
+      _flipped = false;
+    });
+    _startHourglass();
+
+    Future.delayed(const Duration(seconds: 5), () {
+      if (!mounted) return;
+      setState(() => _adim = _MagandaAdim.cevap);
       _startTypewriter();
-    }
+    });
   }
 
   void _startTypewriter() {
@@ -228,12 +248,11 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
             ),
 
             // ── Görsel — yükleme bitmeden gizli, sonra her adımda görünür ─
-            if (!_loading) ...[
+            if (!_loading)
               Padding(
                 padding: const EdgeInsets.only(top: 4, bottom: 10),
                 child: _buildAngryGlowImage(),
               ),
-            ],
 
             // ── İçerik ─────────────────────────────────────────────────────
             if (_loading)
@@ -284,6 +303,33 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                         ],
                       ],
                     ),
+                  ),
+                ),
+              )
+
+            // ── Odaklanıyor — kum saati + yazı dikeyde ortalanmış ──────────
+            else if (_adim == _MagandaAdim.odaklaniyor)
+              Expanded(
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Text(
+                        'Maganda odaklanıyor...',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 16,
+                          letterSpacing: 0.3,
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                      AnimatedRotation(
+                        turns: _flipped ? 0.5 : 0.0,
+                        duration: const Duration(milliseconds: 700),
+                        child: const Text('⏳', style: TextStyle(fontSize: 52)),
+                      ),
+                    ],
                   ),
                 ),
               )

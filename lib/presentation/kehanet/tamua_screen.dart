@@ -20,10 +20,10 @@ class TamuaScreen extends ConsumerStatefulWidget {
   ConsumerState<TamuaScreen> createState() => _TamuaScreenState();
 }
 
-enum _TamuaAdim { yukleniyor, hazir, animasyon, icerik }
+enum _TamuaAdim { yukleniyor, hazir, animasyon, karakterGiriyor, icerik }
 
 class _TamuaScreenState extends ConsumerState<TamuaScreen>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   _TamuaAdim _adim = _TamuaAdim.yukleniyor;
   // Tüm JSON verisi — sektör adı → metinler listesi
   Map<String, List<dynamic>> _tamuaData = {};
@@ -74,11 +74,14 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   // ── Boyutlar ─────────────────────────────────────────────────────────────────
   static const double _traySize  = 280.0;
   static const double _innerSize =  56.0;
-  // Efektif sekme yarıçapı: tepsi iç kenarından taşın merkezi ne kadar uzak?
+  static const double _charH     = 200.0; // karakter görseli yüksekliği
   static const double _bounceR   = _traySize / 2 - _innerSize / 2 - 6; // ≈ 102 px
 
   // ── Animasyon ────────────────────────────────────────────────────────────────
   late AnimationController _bounceCtrl;
+  // Karakter slide: tepsi arkasından tepsinin üstüne kayma
+  late AnimationController _slideCtrl;
+  late Animation<double>   _slideAnim; // dy: 0 → -(tray/2 + char/2)
   // Yol noktaları: P0(merkez), P1, P2, P3, P4 — 4 segment
   List<Offset> _waypoints = [];
   // Kümülatif duraklama noktaları: [0, d01/T, (d01+d12)/T, ..., 1]
@@ -92,6 +95,14 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
       vsync: this,
       duration: const Duration(milliseconds: 5600), // varsayılan; _calculateBounce'da güncellenir
     );
+    _slideCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    );
+    _slideAnim = Tween<double>(
+      begin: 0.0,
+      end: -(_traySize / 2 + _charH / 2), // -240: karakter alt kenarı = tepsi üst kenarı
+    ).animate(CurvedAnimation(parent: _slideCtrl, curve: Curves.easeOut));
     _loadData();
   }
 
@@ -262,12 +273,17 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
       setState(() => _adim = _TamuaAdim.animasyon);
       _bounceCtrl.forward().then((_) async {
         if (!mounted) return;
-        // Taş durdu: arka plan sesini önce durdur, sonra sektör sesini çal
+        // Taş durdu: arka plan sesini durdur, metni hazırla
         await _bgPlayer.stop();
-        await _bgPlayer.seek(Duration.zero); // buffer'ı sıfırla
+        await _bgPlayer.seek(Duration.zero);
         _sektor = _sectorForPos(_waypoints.last);
         await _loadTextForSector(_sektor);
         if (!mounted) return;
+        // Karakter tepsinin arkasından yukarı kayıyor
+        setState(() => _adim = _TamuaAdim.karakterGiriyor);
+        await _slideCtrl.forward();
+        if (!mounted) return;
+        // Slide bitti → karakter alt kenarı tepsi üst kenarında, metni başlat
         setState(() => _adim = _TamuaAdim.icerik);
         _startTypewriter();
       });
@@ -331,38 +347,63 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   void dispose() {
     _typeTimer?.cancel();
     _bounceCtrl.dispose();
-    _bgPlayer.dispose();    // just_audio dispose — async değil
+    _slideCtrl.dispose();
+    _bgPlayer.dispose();
     _audioPlayer.dispose();
     super.dispose();
   }
 
-  // ── Tepsi widget'ı ────────────────────────────────────────────────────────────
-  Widget _buildTray() {
-    return SizedBox(
-      width:  _traySize,
-      height: _traySize,
-      child: AnimatedBuilder(
-        animation: _bounceCtrl,
-        builder: (context, _) {
-          final pos = _lerpPos(_bounceCtrl.value);
-          return Stack(
-            alignment: Alignment.center,
-            children: [
-              Image.asset(
-                'assets/images/kehanet/tauma_tray.png',
-                width: _traySize, height: _traySize, fit: BoxFit.contain,
-              ),
-              Transform.translate(
-                offset: pos,
-                child: Image.asset(
-                  'assets/images/kehanet/tauma_inner.png',
-                  width: _innerSize, height: _innerSize, fit: BoxFit.contain,
-                ),
-              ),
-            ],
-          );
-        },
-      ),
+  // ── Tepsi + karakter stack ────────────────────────────────────────────────────
+  // karakterGiriyor / icerik adımlarında Tamua karakteri tepsinin arkasından
+  // yukarı kayar (Clip.none ile tepsi sınırının dışına çıkabilir).
+  Widget _buildTrayStack() {
+    final showChar = _adim == _TamuaAdim.karakterGiriyor ||
+                     _adim == _TamuaAdim.icerik;
+    return Stack(
+      clipBehavior: Clip.none,
+      alignment: Alignment.center,
+      children: [
+        // Karakter — en arkada, tepsi tarafından örtülür; yukarı kayarak ortaya çıkar
+        if (showChar)
+          AnimatedBuilder(
+            animation: _slideAnim,
+            builder: (ctx, child) => Transform.translate(
+              offset: Offset(0, _slideAnim.value),
+              child: child,
+            ),
+            child: Image.asset(
+              'assets/images/kehanet/tamuacharacter.png',
+              width: _charH, height: _charH, fit: BoxFit.contain,
+            ),
+          ),
+        // Tepsi + taş — karakterin önünde
+        SizedBox(
+          width:  _traySize,
+          height: _traySize,
+          child: AnimatedBuilder(
+            animation: _bounceCtrl,
+            builder: (context, _) {
+              final pos = _lerpPos(_bounceCtrl.value);
+              return Stack(
+                alignment: Alignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/kehanet/tauma_tray.png',
+                    width: _traySize, height: _traySize, fit: BoxFit.contain,
+                  ),
+                  Transform.translate(
+                    offset: pos,
+                    child: Image.asset(
+                      'assets/images/kehanet/tauma_inner.png',
+                      width: _innerSize, height: _innerSize, fit: BoxFit.contain,
+                    ),
+                  ),
+                ],
+              );
+            },
+          ),
+        ),
+      ],
     );
   }
 
@@ -406,18 +447,18 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
                 ),
               )
             else ...[
-              // Tepsi — hazir/animasyon/icerik adımlarında görünür
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 4, bottom: 8),
-                  child: _buildTray(),
-                ),
-              ),
-
-              if (_adim == _TamuaAdim.hazir || _adim == _TamuaAdim.animasyon)
-                // Animasyon beklerken / oynarken alt boşluk
-                const Expanded(child: SizedBox.shrink())
+              // Tepsi + karakter: hazir/animasyon/karakterGiriyor → dikeyde
+              // ortalanmış (Expanded). icerik → sabit, metin altında.
+              if (_adim != _TamuaAdim.icerik)
+                Expanded(
+                  child: Center(child: _buildTrayStack()),
+                )
               else ...[
+                // icerik: karakter artık tepsinin üstünde sabit, metin aşağıda
+                Padding(
+                  padding: const EdgeInsets.only(top: _charH + 8),
+                  child: Center(child: _buildTrayStack()),
+                ),
                 // ── Fal metni ─────────────────────────────────────────────
                 Expanded(
                   child: LayoutBuilder(

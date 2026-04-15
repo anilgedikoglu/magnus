@@ -116,6 +116,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
       backgroundColor: const Color(0xFF0A0718),
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),

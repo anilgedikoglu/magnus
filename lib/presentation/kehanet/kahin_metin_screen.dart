@@ -119,6 +119,7 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
       backgroundColor: const Color(0xFF0A0718),
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             if (_videoCtrl != null && _videoCtrl!.value.isInitialized)
               AspectRatio(

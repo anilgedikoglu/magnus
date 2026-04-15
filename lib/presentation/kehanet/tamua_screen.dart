@@ -36,28 +36,12 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   int _charIndex = 0;
 
   // ── Ses ──────────────────────────────────────────────────────────────────────
-  // AndroidLoudnessEnhancer: +10 dB boost (1000 mB = maksimum)
-  final _bgEnhancer = AndroidLoudnessEnhancer();
-  final _fxEnhancer = AndroidLoudnessEnhancer();
-
   late final AudioPlayer _audioPlayer;
   late final AudioPlayer _bgPlayer;
 
   void _initAudio() {
-    _bgPlayer = AudioPlayer(
-      audioPipeline: AudioPipeline(
-        androidAudioEffects: [_bgEnhancer],
-      ),
-    );
-    _audioPlayer = AudioPlayer(
-      audioPipeline: AudioPipeline(
-        androidAudioEffects: [_fxEnhancer],
-      ),
-    );
-    _bgEnhancer.setTargetGain(1000); // +10 dB
-    _bgEnhancer.setEnabled(true);
-    _fxEnhancer.setTargetGain(1000);
-    _fxEnhancer.setEnabled(true);
+    _bgPlayer    = AudioPlayer();
+    _audioPlayer = AudioPlayer();
   }
 
   // sesIndex: seçilen metnin klasör içindeki sırası (1-based)

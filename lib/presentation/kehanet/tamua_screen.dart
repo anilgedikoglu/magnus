@@ -442,9 +442,14 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
             else if (_adim != _TamuaAdim.icerik) ...[
               Expanded(child: Center(child: _buildTrayStack())),
 
-              // hazir: soru metni + buton
-              if (_adim == _TamuaAdim.hazir)
-                Padding(
+              // Soru + buton — hazir'da görünür, diğer adımlarda gizli ama
+              // yer kaplamaya devam eder (tepsi konumu kaymasın).
+              Visibility(
+                visible: _adim == _TamuaAdim.hazir,
+                maintainSize: true,
+                maintainAnimation: true,
+                maintainState: true,
+                child: Padding(
                   padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -486,6 +491,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
                     ],
                   ),
                 ),
+              ),
             ]
 
             // ── icerik: karakter sabit, altında nefes alan kızıl çerçeveli metin ──

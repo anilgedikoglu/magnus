@@ -1,5 +1,5 @@
 // C:/src/magnus_app/lib/presentation/kehanet/tamua_screen.dart
-// Tamua — tepsi + taş bilardo animasyonu (4 sekme, 3s gecikme, ardından fal metni)
+// Tamua — tepsi + taş bilardo animasyonu; son konum sektörüne göre fal metni
 
 import 'dart:async';
 import 'dart:convert';
@@ -24,6 +24,10 @@ enum _TamuaAdim { yukleniyor, hazir, animasyon, icerik }
 class _TamuaScreenState extends ConsumerState<TamuaScreen>
     with SingleTickerProviderStateMixin {
   _TamuaAdim _adim = _TamuaAdim.yukleniyor;
+  // Tüm JSON verisi — sektör adı → metinler listesi
+  Map<String, List<dynamic>> _tamuaData = {};
+  // Animasyon bittikten sonra belirlenen sektör
+  String _sektor = '';
   String _metin = '';
   String _displayed = '';
   Timer? _typeTimer;
@@ -195,13 +199,57 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   }
 
   // ── Veri Yükleme ─────────────────────────────────────────────────────────────
+  // JSON'u belleğe al, yolu hesapla, 3s bekle → animasyonu başlat.
+  // Metin seçimi animasyon bittikten sonra (son konum sektörü belli olunca) yapılır.
   Future<void> _loadData() async {
-    final str  = await rootBundle.loadString('assets/data/tamua.json');
-    final data = jsonDecode(str);
-    final List all = data['tamua'] ?? [];
+    final str     = await rootBundle.loadString('assets/data/tamua.json');
+    final decoded = jsonDecode(str) as Map<String, dynamic>;
+    final raw     = decoded['tamua'] as Map<String, dynamic>;
+    _tamuaData    = raw.map((k, v) => MapEntry(k, v as List<dynamic>));
+    if (!mounted) return;
+
+    _calculateBounce();
+    setState(() => _adim = _TamuaAdim.hazir);
+
+    Future.delayed(const Duration(seconds: 3), () {
+      if (!mounted) return;
+      setState(() => _adim = _TamuaAdim.animasyon);
+      _bounceCtrl.forward().then((_) async {
+        if (!mounted) return;
+        // Son konumun açısına göre sektörü belirle, ilgili metni seç
+        _sektor = _sectorForPos(_waypoints.last);
+        await _loadTextForSector(_sektor);
+        if (!mounted) return;
+        setState(() => _adim = _TamuaAdim.icerik);
+        _startTypewriter();
+      });
+    });
+  }
+
+  // ── Sektör Belirleme ─────────────────────────────────────────────────────────
+  // Tepsi 6 eşit dilime ayrılmış:
+  //   Sağ: olacak (orta), olacakh (üst), olacakl (alt)
+  //   Sol: olmayacak (orta), olmayacakh (üst), olmayacakl (alt)
+  // Flutter koordinatları: +x sağ, +y aşağı → atan2(dy,dx) -π..π
+  static String _sectorForPos(Offset p) {
+    final deg = atan2(p.dy, p.dx) * 180 / pi; // -180..180
+    if (deg >= -30  && deg <  30)   return 'olacak';     // sağ orta
+    if (deg >=  30  && deg <  90)   return 'olacakl';    // sağ alt
+    if (deg >=  90  && deg < 150)   return 'olmayacakl'; // sol alt
+    if (deg >= 150  || deg < -150)  return 'olmayacak';  // sol orta
+    if (deg >= -150 && deg <  -90)  return 'olmayacakh'; // sol üst
+    return 'olacakh';                                     // sağ üst: -90..-30
+  }
+
+  // ── Sektöre Göre Metin Seçimi ────────────────────────────────────────────────
+  // Her sektörün gösterilen ID'leri ayrı SharedPreferences anahtarında saklanır.
+  // Havuz bitince sıfırlanır.
+  Future<void> _loadTextForSector(String sector) async {
+    final all   = _tamuaData[sector] ?? [];
+    if (all.isEmpty) return;
 
     final prefs = await SharedPreferences.getInstance();
-    const key   = 'tamua_gosterilen';
+    final key   = 'tamua_${sector}_gosterilen';
     var shown   = prefs.getStringList(key) ?? [];
 
     var eligible = all.where((e) => !shown.contains(e['id'].toString())).toList();
@@ -212,27 +260,13 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     }
 
     eligible.shuffle(Random());
-    final selected = eligible.first;
-    _metin = selected['metin'] ?? '';
+    final selected = eligible.first as Map<String, dynamic>;
+    _metin = selected['metin'] as String? ?? '';
     final profile = ref.read(userProfileProvider);
     _metin = VariableReplacer.replace(_metin, profile.toVariableMap());
+
     shown.add(selected['id'].toString());
     await prefs.setStringList(key, shown);
-    if (!mounted) return;
-
-    _calculateBounce();
-
-    // Görseller çıktı, 3 saniye bekle sonra hareket başlasın
-    setState(() => _adim = _TamuaAdim.hazir);
-    Future.delayed(const Duration(seconds: 3), () {
-      if (!mounted) return;
-      setState(() => _adim = _TamuaAdim.animasyon);
-      _bounceCtrl.forward().then((_) {
-        if (!mounted) return;
-        setState(() => _adim = _TamuaAdim.icerik);
-        _startTypewriter();
-      });
-    });
   }
 
   void _startTypewriter() {

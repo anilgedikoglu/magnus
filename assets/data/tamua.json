@@ -1,159 +1,171 @@
 {
-  "tamua": [
-    {
-      "id": "t001",
-      "metin": "Senin bu beklentinin karşılanacağını görmekteyim. Muvaffak olacaksın!",
-      "kategori": "olacak"
-    },
-    {
-      "id": "t002",
-      "metin": "Gördüğüm o ki; bu, gerçekleşecek!",
-      "kategori": "olacak"
-    },
-    {
-      "id": "t003",
-      "metin": "Söylediğinin olacağına kesin gözüyle bakıyorum!",
-      "kategori": "olacak"
-    },
-    {
-      "id": "t004",
-      "metin": "Sana \"evet\" cevabı vermem gerekiyor!",
-      "kategori": "olacak"
-    },
-    {
-      "id": "t005",
-      "metin": "Bana söylediğin şeyin gerçekleşmesi an meselesi!",
-      "kategori": "olacak"
-    },
-    {
-      "id": "t006",
-      "metin": "Sorduğun şey gerçekleşecek!",
-      "kategori": "olacak"
-    },
-    {
-      "id": "t007",
-      "metin": "Merak ettiğin şey muhakkak olacak!",
-      "kategori": "olacak"
-    },
-    {
-      "id": "t008",
-      "metin": "İstediğin büyük bir ihtimalle gerçekleşecek!",
-      "kategori": "olacak_h"
-    },
-    {
-      "id": "t009",
-      "metin": "Merak ettiğin şeyin cevabı güçlü bir ihtimalle \"evet!\"",
-      "kategori": "olacak_h"
-    },
-    {
-      "id": "t010",
-      "metin": "Merak ettiğin şeyin cevabı kesin bir evet'e yakın!",
-      "kategori": "olacak_h"
-    },
-    {
-      "id": "t011",
-      "metin": "Cevabının anlık enerjisi olumlu. Fakat uzun vadede sıkıntılar olabilir!",
-      "kategori": "olacak_h"
-    },
-    {
-      "id": "t012",
-      "metin": "Sorduğun sorunun cevabı olumlu. Gerçekleşmesi için az bir vakit var.",
-      "kategori": "olacak_h"
-    },
-    {
-      "id": "t013",
-      "metin": "İstediğin şey az miktarda da olsa olumlu gözüküyor. Ancak zamanı var.",
-      "kategori": "olacak_l"
-    },
-    {
-      "id": "t014",
-      "metin": "Bilemiyorum... Olacak gibi duruyor!...",
-      "kategori": "olacak_l"
-    },
-    {
-      "id": "t015",
-      "metin": "Sorduğun şeyin cevabı kıl payı \"evet!\"",
-      "kategori": "olacak_l"
-    },
-    {
-      "id": "t016",
-      "metin": "Sorduğun şey bir müddet sonra olacak! Önünde bazı ufak engeller var.",
-      "kategori": "olacak_l"
-    },
-    {
-      "id": "t017",
-      "metin": "Bu konu hakkında az da olsa olumlu yanıt aldık.",
-      "kategori": "olacak_l"
-    },
-    {
-      "id": "t018",
-      "metin": "Düşündüğün şey kesinlikle olmayacak!",
-      "kategori": "olmayacak"
-    },
-    {
-      "id": "t019",
-      "metin": "Sorduğun şeyin gerçekleşmesi bu noktada imkansız!",
-      "kategori": "olmayacak"
-    },
-    {
-      "id": "t020",
-      "metin": "Sana \"hayır\" cevabı vermekten üzüntü duyuyorum!",
-      "kategori": "olmayacak"
-    },
-    {
-      "id": "t021",
-      "metin": "Bu iş olacak gibi gözükecek, ama olmayacak!",
-      "kategori": "olmayacak"
-    },
-    {
-      "id": "t022",
-      "metin": "Bu sorduğun şey hiçbir zaman gerçekleşmeyecek!",
-      "kategori": "olmayacak"
-    },
-    {
-      "id": "t023",
-      "metin": "Bunun olacağını düşünmek büyük bir yanılgı olur. Bence düşünme...",
-      "kategori": "olmayacak"
-    },
-    {
-      "id": "t024",
-      "metin": "Bu meseleyi senin için pek hayırlı görmüyorum. İhtimaller pek zayıf...",
-      "kategori": "olmayacak_h"
-    },
-    {
-      "id": "t025",
-      "metin": "Sorduğun şeye \"kuvvetle muhtemel hayır\" cevabı vermek doğru olur.",
-      "kategori": "olmayacak_h"
-    },
-    {
-      "id": "t026",
-      "metin": "Büyük bir ihtimalle \"hayır!\"",
-      "kategori": "olmayacak_h"
-    },
-    {
-      "id": "t027",
-      "metin": "Sorduğun şeyin olması mümkün! Ancak engel olan bir güç var. Çok zor gözüküyor...",
-      "kategori": "olmayacak_h"
-    },
-    {
-      "id": "t028",
-      "metin": "Gelinen nokta, düşündüğün şeyin gerçekleşme ihtimalinin zayıflığını gösteriyor.",
-      "kategori": "olmayacak_l"
-    },
-    {
-      "id": "t029",
-      "metin": "Sorunun cevabı \"hayır\" ancak küçücük bir olasılık da var!...",
-      "kategori": "olmayacak_l"
-    },
-    {
-      "id": "t030",
-      "metin": "Baktığımda, sorduğun şeyin cevabının zayıf bir \"hayır\" olduğunu görüyorum.",
-      "kategori": "olmayacak_l"
-    },
-    {
-      "id": "t031",
-      "metin": "Bu sorun için ufukta bir ışık var, ancak çok zayıf bir ışık. Üzgünüm!",
-      "kategori": "olmayacak_l"
-    }
-  ]
+  "tamua": {
+    "olacak": [
+      {
+        "id": 1,
+        "metin": "Senin bu beklentinin karşılanacağını görmekteyim. Muvaffak olacaksın!",
+        "kosullar": []
+      },
+      {
+        "id": 2,
+        "metin": "Gördüğüm o ki; bu, gerçekleşecek!",
+        "kosullar": []
+      },
+      {
+        "id": 3,
+        "metin": "Söylediğinin olacağına kesin gözüyle bakıyorum!",
+        "kosullar": []
+      },
+      {
+        "id": 4,
+        "metin": "Sana \"evet\" cevabı vermem gerekiyor!",
+        "kosullar": []
+      },
+      {
+        "id": 5,
+        "metin": "Bana söylediğin şeyin gerçekleşmesi an meselesi!",
+        "kosullar": []
+      },
+      {
+        "id": 6,
+        "metin": "Sorduğun şey gerçekleşecek!",
+        "kosullar": []
+      },
+      {
+        "id": 7,
+        "metin": "Merak ettiğin şey muhakkak olacak!",
+        "kosullar": []
+      }
+    ],
+    "olacakh": [
+      {
+        "id": 8,
+        "metin": "İstediğin büyük bir ihtimalle gerçekleşecek!",
+        "kosullar": []
+      },
+      {
+        "id": 9,
+        "metin": "Merak ettiğin şeyin cevabı güçlü bir ihtimalle \"evet!\"",
+        "kosullar": []
+      },
+      {
+        "id": 10,
+        "metin": "Merak ettiğin şeyin cevabı kesin bir evet'e yakın!",
+        "kosullar": []
+      },
+      {
+        "id": 11,
+        "metin": "Cevabının anlık enerjisi olumlu. Fakat uzun vadede sıkıntılar olabilir!",
+        "kosullar": []
+      },
+      {
+        "id": 12,
+        "metin": "Sorduğun sorunun cevabı olumlu. Gerçekleşmesi için az bir vakit var.",
+        "kosullar": []
+      }
+    ],
+    "olacakl": [
+      {
+        "id": 13,
+        "metin": "İstediğin şey az miktarda da olsa olumlu gözüküyor. Ancak zamanı var.",
+        "kosullar": []
+      },
+      {
+        "id": 14,
+        "metin": "Bilemiyorum... Olacak gibi duruyor!...",
+        "kosullar": []
+      },
+      {
+        "id": 15,
+        "metin": "Sorduğun şeyin cevabı kıl payı \"evet!\"",
+        "kosullar": []
+      },
+      {
+        "id": 16,
+        "metin": "Sorduğun şey bir müddet sonra olacak! Önünde bazı ufak engeller var.",
+        "kosullar": []
+      },
+      {
+        "id": 17,
+        "metin": "Bu konu hakkında az da olsa olumlu yanıt aldık.",
+        "kosullar": []
+      }
+    ],
+    "olmayacak": [
+      {
+        "id": 18,
+        "metin": "Düşündüğün şey kesinlikle olmayacak!",
+        "kosullar": []
+      },
+      {
+        "id": 19,
+        "metin": "Sorduğun şeyin gerçekleşmesi bu noktada imkansız!",
+        "kosullar": []
+      },
+      {
+        "id": 20,
+        "metin": "Sana \"hayır\" cevabı vermekten üzüntü duyuyorum!",
+        "kosullar": []
+      },
+      {
+        "id": 21,
+        "metin": "Bu iş olacak gibi gözükecek, ama olmayacak!",
+        "kosullar": []
+      },
+      {
+        "id": 22,
+        "metin": "Bu sorduğun şey hiçbir zaman gerçekleşmeyecek!",
+        "kosullar": []
+      },
+      {
+        "id": 23,
+        "metin": "Bunun olacağını düşünmek büyük bir yanılgı olur. Bence düşünme...",
+        "kosullar": []
+      }
+    ],
+    "olmayacakh": [
+      {
+        "id": 24,
+        "metin": "Bu meseleyi senin için pek hayırlı görmüyorum. İhtimaller pek zayıf...",
+        "kosullar": []
+      },
+      {
+        "id": 25,
+        "metin": "Sorduğun şeye \"kuvvetle muhtemel hayır\" cevabı vermek doğru olur.",
+        "kosullar": []
+      },
+      {
+        "id": 26,
+        "metin": "Büyük bir ihtimalle \"hayır!\"",
+        "kosullar": []
+      },
+      {
+        "id": 27,
+        "metin": "Sorduğun şeyin olması mümkün! Ancak engel olan bir güç var. Çok zor gözüküyor...",
+        "kosullar": []
+      }
+    ],
+    "olmayacakl": [
+      {
+        "id": 28,
+        "metin": "Gelinen nokta, düşündüğün şeyin gerçekleşme ihtimalinin zayıflığını gösteriyor.",
+        "kosullar": []
+      },
+      {
+        "id": 29,
+        "metin": "Sorunun cevabı \"hayır\" ancak küçücük bir olasılık da var!...",
+        "kosullar": []
+      },
+      {
+        "id": 30,
+        "metin": "Baktığımda, sorduğun şeyin cevabının zayıf bir \"hayır\" olduğunu görüyorum.",
+        "kosullar": []
+      },
+      {
+        "id": 31,
+        "metin": "Bu sorun için ufukta bir ışık var, ancak çok zayıf bir ışık. Üzgünüm!",
+        "kosullar": []
+      }
+    ]
+  }
 }

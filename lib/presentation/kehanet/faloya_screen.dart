@@ -1,5 +1,5 @@
 // C:/src/magnus_app/lib/presentation/kehanet/faloya_screen.dart
-// Faloya fal ekranı - üstte görsel, 5s yükleme animasyonu, ardından typewriter metin
+// Faloya fal ekranı - üstte nefes alan ışık çerçeveli görsel, 5s yükleme, typewriter metin
 
 import 'dart:async';
 import 'dart:convert';
@@ -22,14 +22,20 @@ class FaloyaScreen extends ConsumerStatefulWidget {
 enum _FaloyaAdim { yukleniyor, icerik }
 
 class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {          // iki controller için TickerProvider
   _FaloyaAdim _adim = _FaloyaAdim.yukleniyor;
   String _metin = '';
   String _displayed = '';
   Timer? _typeTimer;
   int _charIndex = 0;
+
+  // Kum saati (flip animasyonu)
   late AnimationController _hourglassCtrl;
   bool _flipped = false;
+
+  // Nefes alan ışık çerçevesi
+  late AnimationController _glowCtrl;
+  late Animation<double> _glowAnim;
 
   // İkisi de hazır olduğunda geçiş yapılır
   bool _dataReady = false;
@@ -38,14 +44,24 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
   @override
   void initState() {
     super.initState();
+
+    // Kum saati controller
     _hourglassCtrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 700),
     );
+
+    // Nefes çerçeve controller — 2.8s, easeInOut eğrisiyle yavaşça parlar/söner
+    _glowCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2800),
+    )..repeat(reverse: true);
+    _glowAnim = CurvedAnimation(parent: _glowCtrl, curve: Curves.easeInOut);
+
     _startHourglass();
     _loadData();
 
-    // 5 saniyelik minimum bekleme — veri daha önce hazır olsa bile bekle
+    // 5 saniyelik minimum bekleme
     Future.delayed(const Duration(seconds: 5), () {
       if (!mounted) return;
       _timerDone = true;
@@ -99,7 +115,6 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
     }
   }
 
-  /// Her iki koşul da sağlandığında icerik adımına geç
   void _tryTransition() {
     if (_dataReady && _timerDone && _adim == _FaloyaAdim.yukleniyor) {
       setState(() => _adim = _FaloyaAdim.icerik);
@@ -123,7 +138,53 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
   void dispose() {
     _typeTimer?.cancel();
     _hourglassCtrl.dispose();
+    _glowCtrl.dispose();
     super.dispose();
+  }
+
+  // ── Nefes alan çerçeveli görsel ──────────────────────────────────────────────
+  Widget _buildGlowImage() {
+    return Center(
+      child: AnimatedBuilder(
+        animation: _glowAnim,
+        builder: (context, child) {
+          final t = _glowAnim.value; // 0.0 (sönük) → 1.0 (parlak)
+          return Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              // İnce ışık çerçevesi — nefesle parlar/söner
+              border: Border.all(
+                color: const Color(0xFFFF55FF).withValues(alpha: 0.25 + t * 0.55),
+                width: 1.5,
+              ),
+              boxShadow: [
+                // İç halka — yoğun, dar
+                BoxShadow(
+                  color: const Color(0xFFFF55FF).withValues(alpha: 0.20 + t * 0.45),
+                  blurRadius: 6 + t * 14,
+                  spreadRadius: t * 3,
+                ),
+                // Dış halo — geniş, yumuşak
+                BoxShadow(
+                  color: const Color(0xFF9B00D3).withValues(alpha: 0.10 + t * 0.30),
+                  blurRadius: 18 + t * 28,
+                  spreadRadius: t * 6,
+                ),
+              ],
+            ),
+            child: child,
+          );
+        },
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(18),
+          child: Image.asset(
+            'assets/images/kehanet/faloya.png',
+            height: 200,
+            fit: BoxFit.contain,
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -160,13 +221,10 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
               ),
             ),
 
-            // ── Faloya görseli — ortalanmış, tam görünür ──────────────────
-            Center(
-              child: Image.asset(
-                'assets/images/kehanet/faloya.png',
-                height: 200,
-                fit: BoxFit.contain,
-              ),
+            // ── Nefes alan çerçeveli görsel — her zaman görünür ───────────
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: _buildGlowImage(),
             ),
 
             // ── Yükleniyor: orta alan ──────────────────────────────────────

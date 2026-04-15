@@ -1,5 +1,5 @@
 // C:/src/magnus_app/lib/presentation/kehanet/maganda_screen.dart
-// Maganda - soru seç, cevap al
+// Maganda - soru seç, cevap al; cevap ekranında öfkeli renk kaymalı hale animasyonu
 
 import 'dart:async';
 import 'dart:convert';
@@ -21,7 +21,8 @@ class MagandaScreen extends ConsumerStatefulWidget {
 
 enum _MagandaAdim { sorular, cevap }
 
-class _MagandaScreenState extends ConsumerState<MagandaScreen> {
+class _MagandaScreenState extends ConsumerState<MagandaScreen>
+    with TickerProviderStateMixin {
   _MagandaAdim _adim = _MagandaAdim.sorular;
   List<Map<String, dynamic>> _sorular = [];
   String _cevap = '';
@@ -30,9 +31,61 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
   int _charIndex = 0;
   bool _loading = true;
 
+  // Nefes (parlaklık) — hızlı: 1200ms
+  late AnimationController _glowCtrl;
+  late Animation<double> _glowAnim;
+
+  // Renk kayması (öfke döngüsü) — kırmızı→turuncu→sarı→pembe→kırmızı: 2200ms
+  late AnimationController _colorCtrl;
+  late Animation<Color?> _colorAnim;
+
   @override
   void initState() {
     super.initState();
+
+    // Parlaklık — Faloya'dan daha hızlı (1200ms vs 2800ms)
+    _glowCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    )..repeat(reverse: true);
+    _glowAnim = CurvedAnimation(parent: _glowCtrl, curve: Curves.easeInOut);
+
+    // Renk döngüsü — sürekli forward, 4 aşamalı ateş spektrumu
+    _colorCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2200),
+    )..repeat();
+    _colorAnim = TweenSequence<Color?>([
+      TweenSequenceItem(
+        tween: ColorTween(
+          begin: const Color(0xFFFF2200), // kırmızı
+          end:   const Color(0xFFFF7700), // turuncu
+        ),
+        weight: 25,
+      ),
+      TweenSequenceItem(
+        tween: ColorTween(
+          begin: const Color(0xFFFF7700), // turuncu
+          end:   const Color(0xFFFFDD00), // sarı-turuncu
+        ),
+        weight: 25,
+      ),
+      TweenSequenceItem(
+        tween: ColorTween(
+          begin: const Color(0xFFFFDD00), // sarı-turuncu
+          end:   const Color(0xFFFF0077), // kızgın pembe
+        ),
+        weight: 25,
+      ),
+      TweenSequenceItem(
+        tween: ColorTween(
+          begin: const Color(0xFFFF0077), // kızgın pembe
+          end:   const Color(0xFFFF2200), // kırmızıya dön
+        ),
+        weight: 25,
+      ),
+    ]).animate(_colorCtrl);
+
     _loadData();
   }
 
@@ -71,8 +124,6 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
 
     eligible.shuffle(Random());
     final selected = eligible.first;
-    // Her cevap dosyasında \n\n ile ayrılmış birden fazla varyasyon var;
-    // sadece bir tanesini random seç.
     final rawMetin = selected['metin'] as String? ?? '';
     final varyasyonlar = rawMetin
         .split('\n\n')
@@ -87,12 +138,17 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
     await prefs.setStringList(key, shown);
 
     if (mounted) {
-      setState(() => _adim = _MagandaAdim.cevap);
+      setState(() {
+        _adim = _MagandaAdim.cevap;
+        _charIndex = 0;
+        _displayed = '';
+      });
       _startTypewriter();
     }
   }
 
   void _startTypewriter() {
+    _typeTimer?.cancel();
     _typeTimer = Timer.periodic(const Duration(milliseconds: 30), (t) {
       if (_charIndex >= _cevap.length) {
         t.cancel();
@@ -107,7 +163,55 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
   @override
   void dispose() {
     _typeTimer?.cancel();
+    _glowCtrl.dispose();
+    _colorCtrl.dispose();
     super.dispose();
+  }
+
+  // ── Öfkeli renk kaymalı hale + görsel ───────────────────────────────────────
+  Widget _buildAngryGlowImage() {
+    return Center(
+      child: AnimatedBuilder(
+        animation: Listenable.merge([_glowAnim, _colorAnim]),
+        builder: (context, child) {
+          final t     = _glowAnim.value;                          // 0→1 parlaklık
+          final color = _colorAnim.value ?? const Color(0xFFFF2200);
+          return Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              // Çerçeve — renk kayarken opaklık da nefes alır
+              border: Border.all(
+                color: color.withValues(alpha: 0.30 + t * 0.60),
+                width: 1.5,
+              ),
+              boxShadow: [
+                // İç halka — dar, yoğun
+                BoxShadow(
+                  color: color.withValues(alpha: 0.25 + t * 0.50),
+                  blurRadius: 5 + t * 16,
+                  spreadRadius: 1 + t * 4,
+                ),
+                // Dış halo — geniş, yumuşak
+                BoxShadow(
+                  color: color.withValues(alpha: 0.08 + t * 0.28),
+                  blurRadius: 14 + t * 26,
+                  spreadRadius: t * 7,
+                ),
+              ],
+            ),
+            child: child,
+          );
+        },
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(18),
+          child: Image.asset(
+            'assets/images/kehanet/maganda.png',
+            height: 180,
+            fit: BoxFit.contain,
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -118,6 +222,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            // ── Başlık ─────────────────────────────────────────────────────
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: Row(
@@ -142,6 +247,8 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
                 ],
               ),
             ),
+
+            // ── İçerik ─────────────────────────────────────────────────────
             if (_loading)
               const Expanded(
                 child: Center(
@@ -169,7 +276,8 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
                         color: Colors.white.withValues(alpha: 0.05),
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
-                          color: const Color(0xFFFF55FF).withValues(alpha: 0.40),
+                          color:
+                              const Color(0xFFFF55FF).withValues(alpha: 0.40),
                           width: 1,
                         ),
                       ),
@@ -185,9 +293,14 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
                 ),
               ),
             ] else ...[
+              // ── Cevap ekranı: görsel + hale + typewriter ────────────────
+              Padding(
+                padding: const EdgeInsets.only(top: 4, bottom: 8),
+                child: _buildAngryGlowImage(),
+              ),
               Expanded(
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.all(24),
+                  padding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
                   child: Text(
                     _displayed,
                     style: const TextStyle(
@@ -203,7 +316,6 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen> {
                 child: GestureDetector(
                   onTap: () => context.pop(),
                   child: Container(
-                    width: double.infinity,
                     height: 48,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),

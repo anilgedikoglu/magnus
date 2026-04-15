@@ -35,7 +35,8 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   int _charIndex = 0;
 
   // ── Ses ──────────────────────────────────────────────────────────────────────
-  final AudioPlayer _audioPlayer = AudioPlayer();
+  final AudioPlayer _audioPlayer = AudioPlayer(); // sektör sesi
+  final AudioPlayer _bgPlayer    = AudioPlayer(); // arka plan loop
 
   // Her sektörün kaç MP3'ü var (ilki numarasız, sonrakiler 2'den başlar)
   static const Map<String, int> _soundCounts = {
@@ -236,12 +237,17 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     _calculateBounce();
     setState(() => _adim = _TamuaAdim.hazir);
 
+    // Tepsi göründüğü anda arka plan sesi loop başlasın
+    _bgPlayer.setReleaseMode(ReleaseMode.loop);
+    _bgPlayer.play(AssetSource('sounds/kehanet/tamua/tamuabackgroundsound.mp3'));
+
     Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
       setState(() => _adim = _TamuaAdim.animasyon);
       _bounceCtrl.forward().then((_) async {
         if (!mounted) return;
-        // Son konumun açısına göre sektörü belirle, ilgili metni seç
+        // Taş durdu: arka plan sesini önce durdur, sonra sektör sesini çal
+        await _bgPlayer.stop();
         _sektor = _sectorForPos(_waypoints.last);
         await _loadTextForSector(_sektor);
         if (!mounted) return;
@@ -307,6 +313,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   void dispose() {
     _typeTimer?.cancel();
     _bounceCtrl.dispose();
+    _bgPlayer.dispose();
     _audioPlayer.dispose();
     super.dispose();
   }

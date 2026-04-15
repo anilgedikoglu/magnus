@@ -334,19 +334,30 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                 ),
               )
 
-            // ── Cevap — typewriter + kapat ─────────────────────────────────
+            // ── Cevap — typewriter dikeyde ortalanmış + kapat ─────────────
             else ...[
               Expanded(
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
-                  child: Text(
-                    _displayed,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      height: 1.7,
-                    ),
-                  ),
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    return SingleChildScrollView(
+                      padding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          minHeight: constraints.maxHeight - 24,
+                        ),
+                        child: Center(
+                          child: Text(
+                            _displayed,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              height: 1.7,
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
               Padding(

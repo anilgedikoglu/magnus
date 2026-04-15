@@ -28,7 +28,8 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   // Tüm JSON verisi — sektör adı → metinler listesi
   Map<String, List<dynamic>> _tamuaData = {};
   // Animasyon bittikten sonra belirlenen sektör
-  String _sektor = '';
+  String _sektor   = '';
+  int    _sesIndex = 1; // seçilen metnin ses dosyası sırası
   String _metin = '';
   String _displayed = '';
   Timer? _typeTimer;
@@ -38,24 +39,13 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   final AudioPlayer _audioPlayer = AudioPlayer(); // sektör sesi
   final AudioPlayer _bgPlayer    = AudioPlayer(); // arka plan loop
 
-  // Her sektörün kaç MP3'ü var (ilki numarasız, sonrakiler 2'den başlar)
-  static const Map<String, int> _soundCounts = {
-    'olacak':     7,
-    'olacakh':    5,
-    'olacakl':    5,
-    'olmayacak':  6,
-    'olmayacakh': 4,
-    'olmayacakl': 4,
-  };
-
-  Future<void> _playSound(String sector) async {
-    final count = _soundCounts[sector] ?? 0;
-    if (count == 0) return;
-    final idx  = Random().nextInt(count); // 0..count-1
-    // idx=0 → "olacak.mp3", idx=1 → "olacak2.mp3", idx=2 → "olacak3.mp3" …
-    final suffix = idx == 0 ? '' : '${idx + 1}';
+  // sesIndex: seçilen metnin klasör içindeki sırası (1-based)
+  // 1 → "olacak.mp3", 2 → "olacak2.mp3", …
+  Future<void> _playSound(String sector, int sesIndex) async {
+    final suffix = sesIndex == 1 ? '' : '$sesIndex';
     final path   = 'sounds/kehanet/tamua/$sector$suffix.mp3';
     await _audioPlayer.stop();
+    await _audioPlayer.setVolume(1.0);
     await _audioPlayer.play(AssetSource(path));
   }
 
@@ -239,6 +229,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
 
     // Tepsi göründüğü anda arka plan sesi loop başlasın
     _bgPlayer.setReleaseMode(ReleaseMode.loop);
+    _bgPlayer.setVolume(1.0);
     _bgPlayer.play(AssetSource('sounds/kehanet/tamua/tamuabackgroundsound.mp3'));
 
     Future.delayed(const Duration(seconds: 3), () {
@@ -292,7 +283,8 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
 
     eligible.shuffle(Random());
     final selected = eligible.first as Map<String, dynamic>;
-    _metin = selected['metin'] as String? ?? '';
+    _metin    = selected['metin']     as String? ?? '';
+    _sesIndex = selected['ses_index'] as int?    ?? 1;
     final profile = ref.read(userProfileProvider);
     _metin = VariableReplacer.replace(_metin, profile.toVariableMap());
 
@@ -301,8 +293,8 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   }
 
   void _startTypewriter() {
-    // Metin yazılmaya başlarken sektöre ait random ses çal
-    _playSound(_sektor);
+    // Metin yazılmaya başlarken sektöre ait eşleşen ses çal
+    _playSound(_sektor, _sesIndex);
     _typeTimer = Timer.periodic(const Duration(milliseconds: 30), (t) {
       if (_charIndex >= _metin.length) { t.cancel(); return; }
       setState(() => _displayed = _metin.substring(0, ++_charIndex));

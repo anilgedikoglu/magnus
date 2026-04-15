@@ -88,6 +88,7 @@ for anahtar, klasor_adi in KLASORLER.items():
     klasor_yolu = os.path.join(BASE, klasor_adi)
     dosyalar = sorted([f for f in os.listdir(klasor_yolu) if f.endswith('.asset')])
     metinler = []
+    ses_index = 1  # klasör içindeki sıra → ses dosyası numarası
     for dosya in dosyalar:
         yol = os.path.join(klasor_yolu, dosya)
         with open(yol, encoding='utf-8', errors='replace') as f:
@@ -96,8 +97,14 @@ for anahtar, klasor_adi in KLASORLER.items():
             if line.strip() == 'aciklama:':
                 metin = parse_aciklama(lines, idx)
                 if metin:
-                    metinler.append({"id": global_id, "metin": metin, "kosullar": []})
+                    metinler.append({
+                        "id": global_id,
+                        "ses_index": ses_index,   # 1 → sektör.mp3, 2 → sektör2.mp3 …
+                        "metin": metin,
+                        "kosullar": []
+                    })
                     global_id += 1
+                    ses_index  += 1
                 break
     result[anahtar] = metinler
     print(f"{anahtar}: {len(metinler)} metin")

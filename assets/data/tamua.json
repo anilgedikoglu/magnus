@@ -3,36 +3,43 @@
     "olacak": [
       {
         "id": 1,
+        "ses_index": 1,
         "metin": "Senin bu beklentinin karşılanacağını görmekteyim. Muvaffak olacaksın!",
         "kosullar": []
       },
       {
         "id": 2,
+        "ses_index": 2,
         "metin": "Gördüğüm o ki; bu, gerçekleşecek!",
         "kosullar": []
       },
       {
         "id": 3,
+        "ses_index": 3,
         "metin": "Söylediğinin olacağına kesin gözüyle bakıyorum!",
         "kosullar": []
       },
       {
         "id": 4,
+        "ses_index": 4,
         "metin": "Sana \"evet\" cevabı vermem gerekiyor!",
         "kosullar": []
       },
       {
         "id": 5,
+        "ses_index": 5,
         "metin": "Bana söylediğin şeyin gerçekleşmesi an meselesi!",
         "kosullar": []
       },
       {
         "id": 6,
+        "ses_index": 6,
         "metin": "Sorduğun şey gerçekleşecek!",
         "kosullar": []
       },
       {
         "id": 7,
+        "ses_index": 7,
         "metin": "Merak ettiğin şey muhakkak olacak!",
         "kosullar": []
       }
@@ -40,26 +47,31 @@
     "olacakh": [
       {
         "id": 8,
+        "ses_index": 1,
         "metin": "İstediğin büyük bir ihtimalle gerçekleşecek!",
         "kosullar": []
       },
       {
         "id": 9,
+        "ses_index": 2,
         "metin": "Merak ettiğin şeyin cevabı güçlü bir ihtimalle \"evet!\"",
         "kosullar": []
       },
       {
         "id": 10,
+        "ses_index": 3,
         "metin": "Merak ettiğin şeyin cevabı kesin bir evet'e yakın!",
         "kosullar": []
       },
       {
         "id": 11,
+        "ses_index": 4,
         "metin": "Cevabının anlık enerjisi olumlu. Fakat uzun vadede sıkıntılar olabilir!",
         "kosullar": []
       },
       {
         "id": 12,
+        "ses_index": 5,
         "metin": "Sorduğun sorunun cevabı olumlu. Gerçekleşmesi için az bir vakit var.",
         "kosullar": []
       }
@@ -67,26 +79,31 @@
     "olacakl": [
       {
         "id": 13,
+        "ses_index": 1,
         "metin": "İstediğin şey az miktarda da olsa olumlu gözüküyor. Ancak zamanı var.",
         "kosullar": []
       },
       {
         "id": 14,
+        "ses_index": 2,
         "metin": "Bilemiyorum... Olacak gibi duruyor!...",
         "kosullar": []
       },
       {
         "id": 15,
+        "ses_index": 3,
         "metin": "Sorduğun şeyin cevabı kıl payı \"evet!\"",
         "kosullar": []
       },
       {
         "id": 16,
+        "ses_index": 4,
         "metin": "Sorduğun şey bir müddet sonra olacak! Önünde bazı ufak engeller var.",
         "kosullar": []
       },
       {
         "id": 17,
+        "ses_index": 5,
         "metin": "Bu konu hakkında az da olsa olumlu yanıt aldık.",
         "kosullar": []
       }
@@ -94,31 +111,37 @@
     "olmayacak": [
       {
         "id": 18,
+        "ses_index": 1,
         "metin": "Düşündüğün şey kesinlikle olmayacak!",
         "kosullar": []
       },
       {
         "id": 19,
+        "ses_index": 2,
         "metin": "Sorduğun şeyin gerçekleşmesi bu noktada imkansız!",
         "kosullar": []
       },
       {
         "id": 20,
+        "ses_index": 3,
         "metin": "Sana \"hayır\" cevabı vermekten üzüntü duyuyorum!",
         "kosullar": []
       },
       {
         "id": 21,
+        "ses_index": 4,
         "metin": "Bu iş olacak gibi gözükecek, ama olmayacak!",
         "kosullar": []
       },
       {
         "id": 22,
+        "ses_index": 5,
         "metin": "Bu sorduğun şey hiçbir zaman gerçekleşmeyecek!",
         "kosullar": []
       },
       {
         "id": 23,
+        "ses_index": 6,
         "metin": "Bunun olacağını düşünmek büyük bir yanılgı olur. Bence düşünme...",
         "kosullar": []
       }
@@ -126,21 +149,25 @@
     "olmayacakh": [
       {
         "id": 24,
+        "ses_index": 1,
         "metin": "Bu meseleyi senin için pek hayırlı görmüyorum. İhtimaller pek zayıf...",
         "kosullar": []
       },
       {
         "id": 25,
+        "ses_index": 2,
         "metin": "Sorduğun şeye \"kuvvetle muhtemel hayır\" cevabı vermek doğru olur.",
         "kosullar": []
       },
       {
         "id": 26,
+        "ses_index": 3,
         "metin": "Büyük bir ihtimalle \"hayır!\"",
         "kosullar": []
       },
       {
         "id": 27,
+        "ses_index": 4,
         "metin": "Sorduğun şeyin olması mümkün! Ancak engel olan bir güç var. Çok zor gözüküyor...",
         "kosullar": []
       }
@@ -148,21 +175,25 @@
     "olmayacakl": [
       {
         "id": 28,
+        "ses_index": 1,
         "metin": "Gelinen nokta, düşündüğün şeyin gerçekleşme ihtimalinin zayıflığını gösteriyor.",
         "kosullar": []
       },
       {
         "id": 29,
+        "ses_index": 2,
         "metin": "Sorunun cevabı \"hayır\" ancak küçücük bir olasılık da var!...",
         "kosullar": []
       },
       {
         "id": 30,
+        "ses_index": 3,
         "metin": "Baktığımda, sorduğun şeyin cevabının zayıf bir \"hayır\" olduğunu görüyorum.",
         "kosullar": []
       },
       {
         "id": 31,
+        "ses_index": 4,
         "metin": "Bu sorun için ufukta bir ışık var, ancak çok zayıf bir ışık. Üzgünüm!",
         "kosullar": []
       }

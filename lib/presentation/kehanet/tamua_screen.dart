@@ -39,14 +39,28 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   final AudioPlayer _audioPlayer = AudioPlayer(); // sektör sesi
   final AudioPlayer _bgPlayer    = AudioPlayer(); // arka plan loop
 
+  // Android audio focus + tam kalite ses bağlamı
+  static final _audioCtx = AudioContext(
+    android: const AudioContextAndroid(
+      isSpeakerphoneOn: false,
+      stayAwake: false,
+      contentType: AndroidContentType.music,
+      usageType: AndroidUsageType.media,
+      audioFocus: AndroidAudioFocus.gain,
+    ),
+    iOS: AudioContextIOS(
+      category: AVAudioSessionCategory.playback,
+      options: const {},
+    ),
+  );
+
   // sesIndex: seçilen metnin klasör içindeki sırası (1-based)
   // 1 → "olacak.mp3", 2 → "olacak2.mp3", …
   Future<void> _playSound(String sector, int sesIndex) async {
     final suffix = sesIndex == 1 ? '' : '$sesIndex';
     final path   = 'sounds/kehanet/tamua/$sector$suffix.mp3';
     await _audioPlayer.stop();
-    await _audioPlayer.setVolume(1.0);
-    await _audioPlayer.play(AssetSource(path));
+    await _audioPlayer.play(AssetSource(path), volume: 1.0, ctx: _audioCtx);
   }
 
   // ── Boyutlar ─────────────────────────────────────────────────────────────────
@@ -229,8 +243,11 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
 
     // Tepsi göründüğü anda arka plan sesi loop başlasın
     _bgPlayer.setReleaseMode(ReleaseMode.loop);
-    _bgPlayer.setVolume(1.0);
-    _bgPlayer.play(AssetSource('sounds/kehanet/tamua/tamuabackgroundsound.mp3'));
+    _bgPlayer.play(
+      AssetSource('sounds/kehanet/tamua/tamuabackgroundsound.mp3'),
+      volume: 1.0,
+      ctx: _audioCtx,
+    );
 
     Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;

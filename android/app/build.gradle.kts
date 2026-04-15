@@ -39,11 +39,16 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.magnus.magnus_app"
+        applicationId = "com.futurastic.Magnus"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+    }
+
+    // Ses dosyalarının APK'da sıkıştırılmasını engelle (cızırtı önleme)
+    androidResources {
+        noCompress += listOf("mp3", "wav", "ogg", "aac")
     }
 
     buildTypes {

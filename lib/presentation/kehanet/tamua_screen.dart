@@ -47,60 +47,67 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     super.initState();
     _bounceCtrl = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 2800),
+      duration: const Duration(milliseconds: 5600), // varsayılan; _calculateBounce'da güncellenir
     );
     _loadData();
   }
 
   // ── Yol Hesaplama ─────────────────────────────────────────────────────────────
-  // Her sekme noktasında: önce saf bilardo yansıması hesaplanır,
-  // sonra yön ±φ derece döndürülür (1. sekme: 30°, 2-3. sekme: 30-60° random).
+  // Segment sayısı 4-6 arası rastgele.
+  // Her kenar noktasında saf bilardo yansıması + ±φ sapma uygulanır
+  // (ilk kenar 30°, sonraki kenarlar 30-60° random).
+  // P0: tepsi merkezinden 8px aşağıda başlar.
   void _calculateBounce() {
-    final rng = Random();
-    const R   = _bounceR;
+    final rng      = Random();
+    const R        = _bounceR;
+    final segCount = 4 + rng.nextInt(3); // 4, 5 veya 6 segment
 
-    // P0 → P1: merkez → rastgele açıyla ilk kenar
+    // P0: başlangıç — tepsi merkezinin 8px altı
+    const p0 = Offset(0, 8);
+
+    // P0 → P1: rastgele açıyla ilk kenar noktası
     final theta0 = rng.nextDouble() * 2 * pi;
-    final p0 = Offset.zero;
     final p1 = Offset(R * cos(theta0), R * sin(theta0));
 
-    // P1'deki saf yansıma: merkez→P1 tam radyal → geri dönüş = (-cos θ, -sin θ)
-    // Bunun yerine 30° sap (hem sol hem sağ eşit ihtimalle)
-    final dir1 = _deviateReflection(
-      pureReflect: Offset(-cos(theta0), -sin(theta0)),
-      inwardNormal: Offset(-cos(theta0), -sin(theta0)),
+    _waypoints = [p0, p1];
+
+    // P0→P1 normalize yönü (P0 merkez değil, hafif aşağıda)
+    final dp01 = p1 - p0;
+    final len01 = dp01.distance;
+    var curDir = Offset(dp01.dx / len01, dp01.dy / len01);
+
+    // İlk kenar: 30° sabit sapma
+    curDir = _deviateReflection(
+      pureReflect: _billiardReflect(curDir, p1),
+      inwardNormal: _inward(p1),
       deviationDeg: 30.0,
       rng: rng,
     );
-    final p2 = _circleHit(p1, dir1, R);
+    var curPoint = p1;
 
-    // P2'deki saf bilardo yansıması + 30-60° sapma
-    final dir2 = _deviateReflection(
-      pureReflect: _billiardReflect(dir1, p2),
-      inwardNormal: _inward(p2),
-      deviationDeg: 30 + rng.nextDouble() * 30, // 30-60°
-      rng: rng,
-    );
-    final p3 = _circleHit(p2, dir2, R);
+    // 2. kenardan son kenara: 30-60° random sapma
+    for (int i = 2; i <= segCount; i++) {
+      final p = _circleHit(curPoint, curDir, R);
+      _waypoints.add(p);
+      if (i < segCount) {
+        curDir = _deviateReflection(
+          pureReflect: _billiardReflect(curDir, p),
+          inwardNormal: _inward(p),
+          deviationDeg: 30 + rng.nextDouble() * 30, // 30-60°
+          rng: rng,
+        );
+        curPoint = p;
+      }
+    }
 
-    // P3'teki saf bilardo yansıması + 30-60° sapma
-    final dir3 = _deviateReflection(
-      pureReflect: _billiardReflect(dir2, p3),
-      inwardNormal: _inward(p3),
-      deviationDeg: 30 + rng.nextDouble() * 30,
-      rng: rng,
-    );
-    final p4 = _circleHit(p3, dir3, R);
-
-    _waypoints = [p0, p1, p2, p3, p4];
+    // Animasyon süresi: segment başına 1400ms (orijinalin yarı hızı)
+    _bounceCtrl.duration = Duration(milliseconds: segCount * 1400);
 
     // Segment ağırlıkları: mesafe orantılı → sabit hız
-    final dists = [
-      (p1 - p0).distance,
-      (p2 - p1).distance,
-      (p3 - p2).distance,
-      (p4 - p3).distance,
-    ];
+    final dists = <double>[];
+    for (int i = 0; i < _waypoints.length - 1; i++) {
+      dists.add((_waypoints[i + 1] - _waypoints[i]).distance);
+    }
     final total = dists.fold(0.0, (a, b) => a + b);
     double acc  = 0.0;
     _segStops   = [0.0];

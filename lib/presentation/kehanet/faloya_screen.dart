@@ -160,16 +160,12 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
               ),
             ),
 
-            // ── Faloya görseli — her zaman görünür ─────────────────────────
-            ClipRRect(
-              borderRadius: const BorderRadius.vertical(
-                bottom: Radius.circular(20),
-              ),
+            // ── Faloya görseli — ortalanmış, tam görünür ──────────────────
+            Center(
               child: Image.asset(
                 'assets/images/kehanet/faloya.png',
-                height: 220,
-                width: double.infinity,
-                fit: BoxFit.cover,
+                height: 200,
+                fit: BoxFit.contain,
               ),
             ),
 

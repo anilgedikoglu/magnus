@@ -36,8 +36,29 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   int _charIndex = 0;
 
   // ── Ses ──────────────────────────────────────────────────────────────────────
-  final AudioPlayer _audioPlayer = AudioPlayer(); // sektör sesi
-  final AudioPlayer _bgPlayer    = AudioPlayer(); // arka plan loop
+  // AndroidLoudnessEnhancer: +10 dB boost (1000 mB = maksimum)
+  final _bgEnhancer = AndroidLoudnessEnhancer();
+  final _fxEnhancer = AndroidLoudnessEnhancer();
+
+  late final AudioPlayer _audioPlayer;
+  late final AudioPlayer _bgPlayer;
+
+  void _initAudio() {
+    _bgPlayer = AudioPlayer(
+      audioPipeline: AudioPipeline(
+        androidAudioEffects: [_bgEnhancer],
+      ),
+    );
+    _audioPlayer = AudioPlayer(
+      audioPipeline: AudioPipeline(
+        androidAudioEffects: [_fxEnhancer],
+      ),
+    );
+    _bgEnhancer.setTargetGain(1000); // +10 dB
+    _bgEnhancer.setEnabled(true);
+    _fxEnhancer.setTargetGain(1000);
+    _fxEnhancer.setEnabled(true);
+  }
 
   // sesIndex: seçilen metnin klasör içindeki sırası (1-based)
   // 1 → "olacak.mp3", 2 → "olacak2.mp3", …
@@ -45,8 +66,8 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     final suffix = sesIndex == 1 ? '' : '$sesIndex';
     final path   = 'assets/sounds/kehanet/tamua/$sector$suffix.mp3';
     await _audioPlayer.stop();
-    await _audioPlayer.setVolume(1.0);
     await _audioPlayer.setAsset(path);
+    await _audioPlayer.setVolume(1.0);
     await _audioPlayer.play();
   }
 
@@ -66,6 +87,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   @override
   void initState() {
     super.initState();
+    _initAudio();
     _bounceCtrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 5600), // varsayılan; _calculateBounce'da güncellenir
@@ -229,10 +251,11 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     setState(() => _adim = _TamuaAdim.hazir);
 
     // Tepsi göründüğü anda arka plan sesi loop başlasın
-    _bgPlayer.setVolume(1.0);
     _bgPlayer.setLoopMode(LoopMode.one);
-    _bgPlayer.setAsset('assets/sounds/kehanet/tamua/tamuabackgroundsound.mp3')
-        .then((_) => _bgPlayer.play());
+    _bgPlayer.setAsset('assets/sounds/kehanet/tamua/tamuabackgroundsound.mp3').then((_) {
+      _bgPlayer.setVolume(1.0);
+      _bgPlayer.play();
+    });
 
     Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;

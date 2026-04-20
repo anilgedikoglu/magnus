@@ -35,15 +35,23 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     if (_initialized) return;
     _initialized = true;
 
-    final profile = ref.read(userProfileProvider);
-    final loader = ref.read(conversationLoaderProvider);
-    final flow = await loader.loadOnboarding();
+    try {
+      final profile = ref.read(userProfileProvider);
+      final loader = ref.read(conversationLoaderProvider);
+      final flow = await loader.loadOnboarding();
 
-    if (!mounted) return;
-    await ref.read(chatProvider.notifier).startConversation(
-          flow: flow,
-          profile: profile,
-        );
+      if (!mounted) return;
+      await ref.read(chatProvider.notifier).startConversation(
+            flow: flow,
+            profile: profile,
+          );
+    } catch (e) {
+      // Asset yüklenemezse onboarding'i tamamlanmış say, ana ekrana yönlendir
+      if (!mounted) return;
+      final profile = ref.read(userProfileProvider);
+      await ref.read(userProfileProvider.notifier).completeOnboarding(profile);
+      if (mounted) context.go('/home');
+    }
   }
 
   @override

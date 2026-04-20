@@ -261,6 +261,10 @@ class _FortuneIconState extends State<_FortuneIcon>
         return locked ? '${base}ruya2.png' : '${base}ruya.png';
       case FortuneType.general:
         return locked ? '${base}cark2.png' : '${base}cark.png';
+      case FortuneType.birthChart:
+        return locked ? '${base}dogum2.png' : '${base}dogum.png';
+      case FortuneType.numeroloji:
+        return locked ? '${base}numeroloji2.png' : '${base}numeroloji.png';
     }
   }
 }
@@ -280,6 +284,8 @@ class _FallbackIcon extends StatelessWidget {
       FortuneType.dream      => '🌙',
       FortuneType.motivation => '💫',
       FortuneType.general    => '🔮',
+      FortuneType.birthChart  => '🌟',
+      FortuneType.numeroloji  => '🔢',
     };
     return Container(
       width: 50,

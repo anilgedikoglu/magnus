@@ -2,7 +2,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 part 'inbox_item.g.dart';
 
-enum FortuneType { coffee, tarot, astrology, dream, motivation, general }
+enum FortuneType { coffee, tarot, astrology, dream, motivation, general, birthChart, numeroloji }
 
 @HiveType(typeId: 1)
 class InboxItem extends HiveObject {
@@ -90,13 +90,19 @@ class InboxItem extends HiveObject {
         return FortuneType.dream;
       case 'motivation':
         return FortuneType.motivation;
+      case 'birthChart':
+        return FortuneType.birthChart;
+      case 'numeroloji':
+        return FortuneType.numeroloji;
       default:
         return FortuneType.general;
     }
   }
 
   String get previewText {
-    final cleaned = text.replaceAll('\n', ' ').trim();
+    // Unity <color=...>...</color> tag'larını kaldır, aralarındaki yazıyı koru
+    final stripped = text.replaceAll(RegExp(r'<color=[^>]+>|<\/color>', caseSensitive: false), '');
+    final cleaned = stripped.replaceAll('\n', ' ').trim();
     return cleaned.length > 120 ? '${cleaned.substring(0, 120)}…' : cleaned;
   }
 
@@ -130,6 +136,10 @@ class InboxItem extends HiveObject {
         return 'Motivasyon';
       case FortuneType.general:
         return 'Magnus';
+      case FortuneType.birthChart:
+        return 'Doğum Haritası';
+      case FortuneType.numeroloji:
+        return 'Numeroloji';
     }
   }
 

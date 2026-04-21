@@ -158,6 +158,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   // Ekrandan 'hazirlanıyor' sinyali gelince gösterilecek mesajlar
   static const _hazirlaniyorMessages = {
     'numeroloji': 'Numeroloji raporun hazırlanıyor...',
+    'durugoru':   'Durugörün hazırlanıyor...',
   };
 
   // Günlük limit dolarken özel balon mesajları (varsayılan yerine)
@@ -1468,6 +1469,7 @@ class _FortuneCircleBadge extends StatelessWidget {
       case FortuneType.general:    return locked ? '${base}cark2.png'      : '${base}cark.png';
       case FortuneType.birthChart:  return locked ? '${base}dogum2.png'      : '${base}dogum.png';
       case FortuneType.numeroloji:  return locked ? '${base}numeroloji2.png' : '${base}numeroloji.png';
+      case FortuneType.durugoru:    return locked ? '${base}durugoru2.png'    : '${base}durugoru.png';
     }
   }
 }

@@ -2,7 +2,9 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 part 'inbox_item.g.dart';
 
-enum FortuneType { coffee, tarot, astrology, dream, motivation, general, birthChart, numeroloji }
+// Mini ikon kavramı: hem gelen kutusu ikonu hem hazırlanıyor ikonu olarak kullanılır.
+// Her FortuneType için assets/images/inbox_icons/<key>.png (renkli) ve <key>2.png (hazırlanıyor) bulunur.
+enum FortuneType { coffee, tarot, astrology, dream, motivation, general, birthChart, numeroloji, durugoru }
 
 @HiveType(typeId: 1)
 class InboxItem extends HiveObject {
@@ -94,6 +96,8 @@ class InboxItem extends HiveObject {
         return FortuneType.birthChart;
       case 'numeroloji':
         return FortuneType.numeroloji;
+      case 'durugoru':
+        return FortuneType.durugoru;
       default:
         return FortuneType.general;
     }
@@ -140,6 +144,8 @@ class InboxItem extends HiveObject {
         return 'Doğum Haritası';
       case FortuneType.numeroloji:
         return 'Numeroloji';
+      case FortuneType.durugoru:
+        return 'Durugörü';
     }
   }
 

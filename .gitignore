@@ -45,3 +45,4 @@ app.*.map.json
 /android/app/release
 .claude/worktrees/
 .claude/settings.local.json
+app_secrets.dart

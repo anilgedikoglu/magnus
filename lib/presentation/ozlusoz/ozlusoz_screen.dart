@@ -1,9 +1,6 @@
 // Kaynak: C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\Ozlusoz\
 // JSON:   assets/data/ozlusozler.json
-// Arka plan: assets/images/ozlusoz_bgs/ (20 seçilmiş görsel, başlangıçta tümü bellekte)
-//
-// BG GEÇİŞİ: Alt katman daima %100 opak. Yeni görsel üstüne AnimatedOpacity ile
-// fade-in yapar (0→1). Geçiş boyunca siyah zemin hiç görünmez → kararma yok.
+// Arka plan: assets/images/ozlusoz_bgs/
 
 import 'dart:async';
 import 'dart:convert';
@@ -39,10 +36,8 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
   static const _gunlukLimit      = 10;
 
   static const List<String> _bgFiles = [
-    '01.jpeg',  '05.jpeg',  '09.jpeg',  '011.jpeg', '015.jpeg',
-    '019.jpeg', '022.jpeg', '030.jpeg', '035.jpeg', '042.jpeg',
-    '048.jpeg', '054.jpeg', '060.jpeg', '066.jpeg', '072.jpeg',
-    '079.jpeg', '082.jpeg', '089.jpeg', '095.jpeg', '099.jpeg',
+    '08.jpeg', '010.jpeg', '011.jpeg', '013.jpeg', '015.jpeg',
+    '016.jpeg', '017.jpeg', '018.jpeg', '041.jpeg', '042.jpeg',
   ];
 
   final _rng = Random();
@@ -55,12 +50,6 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
   bool _limitVisible = false;
   Timer? _limitTimer;
 
-  // ── BG geçiş katmanları ──────────────────────────────────────────────────────
-  String? _bgBottom;      // alt katman — daima %100 opak
-  String? _bgTop;         // üst katman — fade-in olan yeni görsel
-  bool    _bgTopVisible = false;
-  Timer?  _bgTransTimer;
-
   @override
   void initState() {
     super.initState();
@@ -70,38 +59,12 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
   @override
   void dispose() {
     _limitTimer?.cancel();
-    _bgTransTimer?.cancel();
     super.dispose();
   }
 
-  // ── Yeni bg'yi alt katman üzerine fade-in ile getir ───────────────────────────
-  void _changeBg(String? newBg) {
-    if (newBg == null || newBg == _bgBottom) return;
-    _bgTransTimer?.cancel();
-    setState(() {
-      if (_bgTop != null) _bgBottom = _bgTop; // önceki geçiş yarıdaysa snap
-      _bgTop       = newBg;
-      _bgTopVisible = false;                  // önce 0 opacity ile ağaca ekle
-    });
-    // Bir kare sonra opacity 1'e çek → AnimatedOpacity animasyonu başlar
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!mounted) return;
-      setState(() => _bgTopVisible = true);
-      // Animasyon bitince alt katmana taşı
-      _bgTransTimer = Timer(const Duration(milliseconds: 650), () {
-        if (!mounted) return;
-        setState(() {
-          _bgBottom    = _bgTop;
-          _bgTop       = null;
-          _bgTopVisible = false;
-        });
-      });
-    });
-  }
-
-  String? _bgForIndex(int idx, List<int> bgs) {
-    if (bgs.isEmpty) return null;
-    final bgIdx = bgs[idx % bgs.length];
+  String? get _currentBg {
+    if (_sessionBgs.isEmpty || _sessionEntries.isEmpty) return null;
+    final bgIdx = _sessionBgs[_index % _sessionBgs.length];
     return 'assets/images/ozlusoz_bgs/${_bgFiles[bgIdx % _bgFiles.length]}';
   }
 
@@ -134,11 +97,8 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
       setState(() {
         _sessionEntries = entries;
         _sessionBgs     = bgs;
-        _bgBottom       = _bgForIndex(0, bgs);
-        _bgTop          = null;
         _loading        = false;
       });
-      _precacheAll();
       return;
     }
 
@@ -171,19 +131,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
     setState(() {
       _sessionEntries = session;
       _sessionBgs     = sessionBgs;
-      _bgBottom       = _bgForIndex(0, sessionBgs);
-      _bgTop          = null;
       _loading        = false;
-    });
-    _precacheAll();
-  }
-
-  void _precacheAll() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!mounted) return;
-      for (final file in _bgFiles) {
-        precacheImage(AssetImage('assets/images/ozlusoz_bgs/$file'), context);
-      }
     });
   }
 
@@ -195,18 +143,15 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
       _limitTimer = Timer(const Duration(seconds: 3), () {
         if (!mounted) return;
         setState(() { _limitVisible = false; _direction = 1; _index = 0; });
-        _changeBg(_bgForIndex(0, _sessionBgs));
       });
       return;
     }
     setState(() { _direction = 1; _index++; });
-    _changeBg(_bgForIndex(_index, _sessionBgs));
   }
 
   void _prev() {
     if (_index <= 0) return;
     setState(() { _direction = -1; _index--; });
-    _changeBg(_bgForIndex(_index, _sessionBgs));
   }
 
   @override
@@ -223,32 +168,21 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            // ── Alt katman: daima %100 opak ────────────────────────────────────
-            if (_bgBottom != null)
-              Image.asset(_bgBottom!,
-                fit: BoxFit.cover, width: double.infinity,
-                height: double.infinity, alignment: Alignment.center,
+            // ── Arka plan — yükleme öncesi de ilk görsel anında çıkar ──────────
+            AnimatedSwitcher(
+              duration: const Duration(milliseconds: 600),
+              child: Image.asset(
+                _currentBg ?? 'assets/images/ozlusoz_bgs/${_bgFiles[0]}',
+                key: ValueKey(_currentBg ?? '__default__'),
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: double.infinity,
+                alignment: Alignment.center,
                 filterQuality: FilterQuality.high,
                 errorBuilder: (_, __, ___) =>
                     const ColoredBox(color: Color(0xFF0D0A20)),
-              )
-            else
-              const ColoredBox(color: Color(0xFF0D0A20)),
-
-            // ── Üst katman: yeni görsel fade-in ────────────────────────────────
-            if (_bgTop != null)
-              AnimatedOpacity(
-                opacity: _bgTopVisible ? 1.0 : 0.0,
-                duration: const Duration(milliseconds: 600),
-                curve: Curves.easeInOut,
-                child: Image.asset(_bgTop!,
-                  fit: BoxFit.cover, width: double.infinity,
-                  height: double.infinity, alignment: Alignment.center,
-                  filterQuality: FilterQuality.high,
-                  errorBuilder: (_, __, ___) =>
-                      const ColoredBox(color: Color(0xFF0D0A20)),
-                ),
               ),
+            ),
 
             // ── Overlay ────────────────────────────────────────────────────────
             Container(
@@ -369,7 +303,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
                 ))
               : Center(key: curKey, child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
-                  padding: const EdgeInsets.fromLTRB(24, 20, 24, 24),
+                  padding: const EdgeInsets.fromLTRB(24, 20, 24, 20),
                   decoration: BoxDecoration(
                     color: Colors.black.withValues(alpha: 0.80),
                     borderRadius: BorderRadius.circular(20),
@@ -379,12 +313,13 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
                     Text('❝', style: TextStyle(fontSize: 38,
                         color: accent.withValues(alpha: 0.75), height: 1)),
-                    const SizedBox(height: 14),
+                    const SizedBox(height: 8),
                     Text(metin, textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white,
                           fontSize: metin.length > 200 ? 15 : 17,
                           height: 1.75, fontWeight: FontWeight.w300,
                           letterSpacing: 0.3)),
+                    const SizedBox(height: 8),
                     Text('❞', style: TextStyle(fontSize: 38,
                         color: accent.withValues(alpha: 0.75), height: 1)),
                     if (entry.yazar.isNotEmpty) ...[

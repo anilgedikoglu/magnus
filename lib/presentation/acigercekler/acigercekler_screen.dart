@@ -1,6 +1,6 @@
 // Kaynak: assets/data/acigercekler.json
-// Akış: Kum saati (5sn hazırlık) → Acı gerçek (typewriter animasyonu)
-// Günlük limit: günde 1 kez (acigercekler_bugun_tarih)
+// Akış: Kum saati (5sn hazırlık) → Acı gerçek (typewriter animasyonu, soldan sağa)
+// Günlük limit: günde 1 kez (acigercekler_bugun_tarih); 2. ziyarette son içerik tekrar gösterilir
 // Tekrar gösterilmeme: acigercekler_gosterilen (tüm ID'ler görülünce sıfırla)
 // Koşul filtrelemesi: kosullar listesi (cinsiyet, medeni_durum, meslek vb.)
 
@@ -20,7 +20,7 @@ import '../../data/providers.dart';
 
 // ─────────────────────────────────────────────────────────────────────────────
 
-enum _Adim { yukleniyor, icerik, limit }
+enum _Adim { yukleniyor, icerik }
 
 class AciGerceklerScreen extends ConsumerStatefulWidget {
   const AciGerceklerScreen({super.key});
@@ -33,27 +33,29 @@ class AciGerceklerScreen extends ConsumerStatefulWidget {
 class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
     with TickerProviderStateMixin {
 
-  // ── Pref anahtarları ────────────────────────────────────────────────────────
   static const _prefGosterilen = 'acigercekler_gosterilen';
   static const _prefBugun      = 'acigercekler_bugun_tarih';
+  static const _prefSonMetin   = 'acigercekler_son_metin';
 
-  // ── Durum ───────────────────────────────────────────────────────────────────
-  _Adim   _adim        = _Adim.yukleniyor;
-  String  _metin       = '';
+  static const _scrollThreshold = 280;
+
+  _Adim   _adim         = _Adim.yukleniyor;
+  String  _metin        = '';
   bool    _veriYuklendi = false;
+  bool    _textAtBottom = false;
 
-  // ── Kum saati animasyonu ─────────────────────────────────────────────────
-  bool   _saatUst       = true;
+  bool   _saatUst   = true;
   Timer? _saatToggle;
   Timer? _gecisTimer;
 
-  String get _bugun => DateTime.now().toIso8601String().substring(0, 10);
+  final _textScrollCtrl = ScrollController();
 
-  // ─────────────────────────────────────────────────────────────────────────────
+  String get _bugun => DateTime.now().toIso8601String().substring(0, 10);
 
   @override
   void initState() {
     super.initState();
+    _textScrollCtrl.addListener(_onTextScroll);
     _loadData();
   }
 
@@ -61,88 +63,86 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   void dispose() {
     _saatToggle?.cancel();
     _gecisTimer?.cancel();
+    _textScrollCtrl.removeListener(_onTextScroll);
+    _textScrollCtrl.dispose();
     super.dispose();
   }
 
-  // ── Veri yükleme ─────────────────────────────────────────────────────────────
+  void _onTextScroll() {
+    if (!_textScrollCtrl.hasClients) return;
+    final atBottom = _textScrollCtrl.position.pixels >=
+        _textScrollCtrl.position.maxScrollExtent - 4;
+    if (atBottom != _textAtBottom) setState(() => _textAtBottom = atBottom);
+  }
 
   Future<void> _loadData() async {
     final prefs = await SharedPreferences.getInstance();
 
-    // Günlük limit kontrolü
+    // Aynı gün ikinci ziyaret: son içeriği direkt göster
     if (prefs.getString(_prefBugun) == _bugun) {
-      if (mounted) setState(() { _adim = _Adim.limit; _veriYuklendi = true; });
+      final sonMetin = prefs.getString(_prefSonMetin) ?? '';
+      if (mounted) {
+        setState(() {
+          _metin        = sonMetin;
+          _adim         = _Adim.icerik;
+          _veriYuklendi = true;
+        });
+      }
       return;
     }
 
-    // JSON yükle
-    final jsonStr = await rootBundle.loadString('assets/data/acigercekler.json');
-    final raw     = jsonDecode(jsonStr) as Map<String, dynamic>;
+    final jsonStr  = await rootBundle.loadString('assets/data/acigercekler.json');
+    final raw      = jsonDecode(jsonStr) as Map<String, dynamic>;
     final tumListe = (raw['acigercekler'] as List)
         .map((e) => Map<String, dynamic>.from(e as Map))
         .toList();
 
-    // Koşul filtresi
-    final profile = ref.read(userProfileProvider);
+    final profile  = ref.read(userProfileProvider);
     final uygunlar = tumListe.where((e) {
       final kosullar = e['kosullar'] as List<dynamic>? ?? [];
       return _kosullarUygun(kosullar, profile);
     }).toList();
 
-    // Gösterilen ID'leri yükle
     List<String> gosterilenIds = prefs.getStringList(_prefGosterilen) ?? [];
-
-    // Gösterilmeyenleri filtrele
     var kalan = uygunlar
         .where((e) => !gosterilenIds.contains(e['id'] as String))
         .toList();
 
-    // Hepsi bittiyse sıfırla
     if (kalan.isEmpty) {
       final lastId = gosterilenIds.isNotEmpty ? gosterilenIds.last : null;
       gosterilenIds = lastId != null ? [lastId] : [];
       await prefs.setStringList(_prefGosterilen, gosterilenIds);
-      kalan = uygunlar
-          .where((e) => e['id'] != lastId)
-          .toList();
+      kalan = uygunlar.where((e) => e['id'] != lastId).toList();
       if (kalan.isEmpty) kalan = List.from(uygunlar);
     }
 
-    // Karıştır ve seç
     kalan.shuffle(Random());
     final secilen = kalan.first;
-
-    // {{isim}} vb. değiştir
-    final metin = VariableReplacer.replace(
+    final metin   = VariableReplacer.replace(
       secilen['metin'] as String,
       profile.toVariableMap(),
     );
 
-    // Kaydet
     gosterilenIds.add(secilen['id'] as String);
     await prefs.setStringList(_prefGosterilen, gosterilenIds);
     await prefs.setString(_prefBugun, _bugun);
+    await prefs.setString(_prefSonMetin, metin);
 
     if (!mounted) return;
     setState(() {
-      _metin       = metin;
+      _metin        = metin;
       _veriYuklendi = true;
     });
 
-    // Kum saati animasyonunu başlat
     _baslatKumSaati();
   }
-
-  // ── Koşul filtresi ───────────────────────────────────────────────────────────
 
   bool _kosullarUygun(List<dynamic> kosullar, UserProfile profile) {
     if (kosullar.isEmpty) return true;
     for (final k in kosullar) {
       final m = k as Map;
       if (_profilDegeri(m['degisken'] as String? ?? '', profile)
-          != (m['deger'] as String? ?? '')) {
-        return false;
-      }
+          != (m['deger'] as String? ?? '')) { return false; }
     }
     return true;
   }
@@ -156,175 +156,190 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
     }
   }
 
-  // ── Kum saati ────────────────────────────────────────────────────────────────
-
   void _baslatKumSaati() {
-    // Kum saatini 1.2sn aralıkla döndür
     _saatToggle = Timer.periodic(const Duration(milliseconds: 1200), (_) {
       if (mounted) setState(() => _saatUst = !_saatUst);
     });
-
-    // 5 saniye sonra içerik ekranına geç
     _gecisTimer = Timer(const Duration(seconds: 5), () {
       _saatToggle?.cancel();
       if (mounted) setState(() => _adim = _Adim.icerik);
     });
   }
 
-  // ── BUILD ─────────────────────────────────────────────────────────────────────
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0A0718),
-      body: SafeArea(
-        child: !_veriYuklendi
-            ? const Center(child: CircularProgressIndicator(
-                color: Color(0xFFAA88FF), strokeWidth: 2))
-            : switch (_adim) {
-                _Adim.yukleniyor => _buildYukleniyor(),
-                _Adim.icerik     => _buildIcerik(),
-                _Adim.limit      => _buildLimit(),
-              },
-      ),
-    );
-  }
-
-  // ── Üst bar ───────────────────────────────────────────────────────────────────
-
-  Widget _buildBaslikBar() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(8, 8, 16, 4),
-      child: Row(
+      backgroundColor: Colors.black,
+      extendBody: true,
+      body: Stack(
+        fit: StackFit.expand,
         children: [
-          IconButton(
-            onPressed: () => context.pop(),
-            icon: const Icon(
-              Icons.arrow_back_ios_new_rounded,
-              color: Colors.white70,
-              size: 20,
-            ),
+          // Arka plan görseli
+          Image.asset(
+            'assets/images/acigercekler_bg.jpeg',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+            filterQuality: FilterQuality.high,
+            errorBuilder: (_, __, ___) =>
+                const ColoredBox(color: Color(0xFF0A0718)),
           ),
-          const Expanded(
-            child: Text(
-              'ACI GERÇEKLER',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 1.2,
+          // Koyu overlay
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Color(0xAA000000), Color(0x55000000), Color(0xAA000000)],
               ),
-              textAlign: TextAlign.center,
             ),
           ),
-          // Sağ tarafta geri buton ile dengeli boşluk
-          const SizedBox(width: 48),
+          // İçerik
+          SafeArea(
+            child: !_veriYuklendi
+                ? const Center(child: CircularProgressIndicator(
+                    color: Color(0xFFAA88FF), strokeWidth: 2))
+                : switch (_adim) {
+                    _Adim.yukleniyor => _buildYukleniyor(),
+                    _Adim.icerik     => _buildIcerik(),
+                  },
+          ),
         ],
       ),
     );
   }
 
-  // ── Yükleniyor (kum saati) ────────────────────────────────────────────────────
-
-  Widget _buildYukleniyor() {
-    return Column(
-      children: [
-        _buildBaslikBar(),
-        Expanded(
-          child: Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // Kum saati — ShaderMask gradient + AnimatedRotation
-                ShaderMask(
-                  shaderCallback: (bounds) => const LinearGradient(
-                    colors: [Color(0xFFAA00FF), Color(0xFFFF44AA)],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  ).createShader(bounds),
-                  blendMode: BlendMode.srcIn,
-                  child: AnimatedRotation(
-                    turns: _saatUst ? 0.0 : 0.5,
-                    duration: const Duration(milliseconds: 700),
-                    curve: Curves.easeInOut,
-                    child: const Icon(
-                      Icons.hourglass_bottom_rounded,
-                      size: 72,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 28),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 32),
-                  child: Text(
-                    'Sana acı ama gerçek bir şeyler anlatmaya hazırlanıyorum...',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 15,
-                      fontStyle: FontStyle.italic,
-                      height: 1.5,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ],
-            ),
-          ),
+  Widget _buildBaslikBar() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 8, 16, 4),
+      child: Row(children: [
+        IconButton(
+          onPressed: () => context.pop(),
+          icon: const Icon(Icons.arrow_back_ios_new_rounded,
+              color: Colors.white70, size: 20),
         ),
-      ],
+        const Expanded(
+          child: Text('ACI GERÇEKLER',
+            style: TextStyle(color: Colors.white, fontSize: 16,
+                fontWeight: FontWeight.bold, letterSpacing: 1.2),
+            textAlign: TextAlign.center),
+        ),
+        const SizedBox(width: 48),
+      ]),
     );
   }
 
-  // ── İçerik ekranı ─────────────────────────────────────────────────────────────
+  Widget _buildYukleniyor() {
+    return Column(children: [
+      _buildBaslikBar(),
+      Expanded(
+        child: Center(
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            ShaderMask(
+              shaderCallback: (bounds) => const LinearGradient(
+                colors: [Color(0xFFAA00FF), Color(0xFFFF44AA)],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ).createShader(bounds),
+              blendMode: BlendMode.srcIn,
+              child: AnimatedRotation(
+                turns: _saatUst ? 0.0 : 0.5,
+                duration: const Duration(milliseconds: 700),
+                curve: Curves.easeInOut,
+                child: const Icon(Icons.hourglass_bottom_rounded,
+                    size: 72, color: Colors.white),
+              ),
+            ),
+            const SizedBox(height: 28),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 32),
+              child: Text(
+                'Sana acı ama gerçek bir şeyler anlatmaya hazırlanıyorum...',
+                style: TextStyle(color: Colors.white70, fontSize: 15,
+                    fontStyle: FontStyle.italic, height: 1.5),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ]),
+        ),
+      ),
+    ]);
+  }
 
   Widget _buildIcerik() {
-    return Column(
-      children: [
-        _buildBaslikBar(),
-        Expanded(
-          child: Center(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  // Dekoratif alev ikonu
-                  const Text(
-                    '🔥',
-                    style: TextStyle(fontSize: 28),
-                  ),
-                  const SizedBox(height: 16),
-                  // Typewriter metin
-                  _TypewriterText(
-                    text: _metin,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 17,
-                      height: 1.65,
-                    ),
-                    textAlign: TextAlign.center,
-                    msPerChar: 30,
-                  ),
-                  const SizedBox(height: 24),
-                  // İnce ayırıcı
-                  Container(
-                    height: 1,
-                    width: 60,
-                    color: Colors.white.withValues(alpha: 0.15),
-                  ),
-                ],
+    const accent = Color(0xFFAA44FF);
+    return Column(children: [
+      _buildBaslikBar(),
+      Expanded(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Container(
+              constraints: BoxConstraints(
+                maxHeight: MediaQuery.of(context).size.height * 0.65,
               ),
+              padding: const EdgeInsets.fromLTRB(20, 20, 20, 12),
+              decoration: BoxDecoration(
+                color: Colors.black.withValues(alpha: 0.50),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                    color: accent.withValues(alpha: 0.30), width: 1),
+              ),
+              child: Column(mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                const Text('🔥', style: TextStyle(fontSize: 26)),
+                const SizedBox(height: 14),
+                // Kaydırılabilir typewriter metni
+                Flexible(
+                  child: ScrollbarTheme(
+                    data: ScrollbarThemeData(
+                      thumbColor: WidgetStatePropertyAll(
+                          const Color(0xFFFF88CC).withValues(alpha: 0.75)),
+                      thickness: const WidgetStatePropertyAll(3),
+                      radius: const Radius.circular(4),
+                      minThumbLength: 28,
+                      thumbVisibility: const WidgetStatePropertyAll(true),
+                      crossAxisMargin: -5,
+                      mainAxisMargin: 24,
+                    ),
+                    child: Scrollbar(
+                      controller: _textScrollCtrl,
+                      thumbVisibility: true,
+                      child: SingleChildScrollView(
+                        controller: _textScrollCtrl,
+                        padding: const EdgeInsets.only(right: 14),
+                        child: _TypewriterText(
+                          text: _metin,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                            height: 1.65,
+                          ),
+                          textAlign: TextAlign.start,
+                          msPerChar: 30,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 6),
+                // Uzun metinde aşağı ok
+                Center(
+                  child: _metin.length > _scrollThreshold && !_textAtBottom
+                      ? Icon(Icons.keyboard_arrow_down_rounded,
+                          color: accent.withValues(alpha: 0.75), size: 36)
+                      : const SizedBox(height: 36),
+                ),
+              ]),
             ),
           ),
         ),
-        // Kapat butonu
-        Padding(
-          padding: const EdgeInsets.fromLTRB(24, 8, 24, 20),
-          child: _buildKapatButonu(),
-        ),
-      ],
-    );
+      ),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(24, 8, 24, 20),
+        child: _buildKapatButonu(),
+      ),
+    ]);
   }
 
   Widget _buildKapatButonu() {
@@ -341,73 +356,20 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
           ),
           borderRadius: BorderRadius.circular(24),
           border: Border.all(
-            color: const Color(0xFFFF55FF).withValues(alpha: 0.8),
-            width: 1.5,
-          ),
+              color: const Color(0xFFFF55FF).withValues(alpha: 0.8), width: 1.5),
         ),
         child: const Center(
-          child: Text(
-            'Kapat',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 15,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 0.5,
-            ),
-          ),
+          child: Text('Kapat',
+            style: TextStyle(color: Colors.white, fontSize: 15,
+                fontWeight: FontWeight.w600, letterSpacing: 0.5)),
         ),
       ),
-    );
-  }
-
-  // ── Limit ekranı ──────────────────────────────────────────────────────────────
-
-  Widget _buildLimit() {
-    return Column(
-      children: [
-        _buildBaslikBar(),
-        Expanded(
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 36),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text('⚠️', style: TextStyle(fontSize: 56)),
-                  const SizedBox(height: 20),
-                  const Text(
-                    'Bugün gerçeklerle yüzleştin.',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      height: 1.4,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 12),
-                  Text(
-                    'Yarın daha fazlası için tekrar gel.',
-                    style: TextStyle(
-                      color: Colors.white.withValues(alpha: 0.5),
-                      fontSize: 14,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 32),
-                  _buildKapatButonu(),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Typewriter widget
+// Typewriter widget — soldan sağa yazar
 // ─────────────────────────────────────────────────────────────────────────────
 
 class _TypewriterText extends StatefulWidget {
@@ -430,7 +392,7 @@ class _TypewriterText extends StatefulWidget {
 class _TypewriterTextState extends State<_TypewriterText> {
   String _displayed = '';
   Timer? _timer;
-  int _index = 0;
+  int    _index     = 0;
 
   @override
   void initState() {
@@ -444,7 +406,7 @@ class _TypewriterTextState extends State<_TypewriterText> {
     if (old.text != widget.text) {
       _timer?.cancel();
       _displayed = '';
-      _index = 0;
+      _index     = 0;
       _startTyping();
     }
   }
@@ -461,10 +423,7 @@ class _TypewriterTextState extends State<_TypewriterText> {
       Duration(milliseconds: widget.msPerChar),
       (t) {
         if (!mounted) { t.cancel(); return; }
-        if (_index >= chars.length) {
-          t.cancel();
-          return;
-        }
+        if (_index >= chars.length) { t.cancel(); return; }
         setState(() {
           _displayed += chars[_index];
           _index++;

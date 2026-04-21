@@ -134,6 +134,9 @@ final tarotSentProvider = StateProvider<bool>((ref) => false);
 /// Kahve falı gönderildiğinde ana menüye bildirim için
 final kahveSentProvider = StateProvider<bool>((ref) => false);
 
+/// Durugörü seçimi yapıldığında ana menüye bildirim için
+final durugoruSentProvider = StateProvider<bool>((ref) => false);
+
 // ─── Onboarding state ─────────────────────────────────────────────────────────
 
 final onboardingCompleteProvider = Provider<bool>((ref) {

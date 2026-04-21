@@ -136,9 +136,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'tarot':       'tarot_bugun_tarih',
     'kahve':       'kahve_bugun_tarih',
     'astroloji':   'astroloji_bugun_tarih',
-    'kaderkitabi': 'kaderkitabi_bugun_tarih',
     'dertortagi':   'dertortagi_bugun_tarih',
-    'acigercekler': 'acigercekler_bugun_tarih',
+    // 'kaderkitabi', 'acigercekler' — limit ekran içinden yönetilir, balon çıkmaz
     // 'numeroloji' burada yok — limit ekran içinden yönetilir
   };
 

@@ -227,7 +227,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
   Widget _buildContent(BuildContext context) {
     final metin = _metin ?? '';
     return Column(children: [
-      // Kitap kutusu — uzunsa scroll, kısaysa doğal yükseklik
+      // Kitap kutusu — uzunsa scroll
       Flexible(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
@@ -291,12 +291,11 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
           ),
         ),
       ),
-      // Kapat butonu — kutu altı ile ekran altının tam ortasında
-      Expanded(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: GestureDetector(
+      // Kapat butonu — alt kısımda, kutu ile ekran altı arası
+      const SizedBox(height: 20),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
+        child: GestureDetector(
               onTap: () => context.pop(),
               child: Container(
                 width: double.infinity,
@@ -319,8 +318,6 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
               ),
             ),
           ),
-        ),
-      ),
     ]);
   }
 }

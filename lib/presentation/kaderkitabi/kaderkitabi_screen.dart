@@ -226,12 +226,12 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
 
   Widget _buildContent(BuildContext context) {
     final metin = _metin ?? '';
-    return Center(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
-        child: Column(mainAxisSize: MainAxisSize.min, children: [
-          // Kitap kutusu — dikeyde ortalı
-          Container(
+    return Column(children: [
+      // Kitap kutusu — uzunsa scroll, kısaysa doğal yükseklik
+      Flexible(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
+          child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
@@ -252,7 +252,6 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
                 color: const Color(0xFFB8960C).withValues(alpha: 0.6), width: 1.5),
             ),
             child: Stack(children: [
-              // Sol cilt gölgesi
               Positioned(
                 left: 0, top: 0, bottom: 0,
                 child: Container(
@@ -270,7 +269,6 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
                   ),
                 ),
               ),
-              // Metin
               Padding(
                 padding: const EdgeInsets.fromLTRB(26, 28, 26, 36),
                 child: Text(metin,
@@ -280,7 +278,6 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
                     height: 1.85, fontWeight: FontWeight.w400, letterSpacing: 0.2,
                   )),
               ),
-              // Alt süsleme
               Positioned(
                 bottom: 10, left: 0, right: 0,
                 child: Center(
@@ -292,32 +289,38 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
               ),
             ]),
           ),
-          const SizedBox(height: 20),
-          // Kapat butonu
-          GestureDetector(
-            onTap: () => context.pop(),
-            child: Container(
-              width: double.infinity,
-              height: 48,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [Color(0xFFB8960C), Color(0xFF8B6914)],
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
+        ),
+      ),
+      // Kapat butonu — kutu altı ile ekran altının tam ortasında
+      Expanded(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: GestureDetector(
+              onTap: () => context.pop(),
+              child: Container(
+                width: double.infinity,
+                height: 48,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFFB8960C), Color(0xFF8B6914)],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(
+                      color: const Color(0xFFD4AF37).withValues(alpha: 0.8), width: 1.5),
                 ),
-                borderRadius: BorderRadius.circular(24),
-                border: Border.all(
-                    color: const Color(0xFFD4AF37).withValues(alpha: 0.8), width: 1.5),
-              ),
-              child: const Center(
-                child: Text('Kapat',
-                  style: TextStyle(color: Colors.white, fontSize: 15,
-                      fontWeight: FontWeight.w600, letterSpacing: 0.5)),
+                child: const Center(
+                  child: Text('Kapat',
+                    style: TextStyle(color: Colors.white, fontSize: 15,
+                        fontWeight: FontWeight.w600, letterSpacing: 0.5)),
+                ),
               ),
             ),
           ),
-        ]),
+        ),
       ),
-    );
+    ]);
   }
 }

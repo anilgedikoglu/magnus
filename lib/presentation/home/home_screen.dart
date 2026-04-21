@@ -198,7 +198,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       _refreshCredits();
       _checkTarotSent();
       _checkKahveSent();
+      _precacheOzluSozBgs();
     });
+  }
+
+  void _precacheOzluSozBgs() {
+    const bgs = [
+      '08.jpeg','010.jpeg','011.jpeg','013.jpeg','015.jpeg',
+      '016.jpeg','017.jpeg','018.jpeg','041.jpeg','042.jpeg',
+    ];
+    for (final f in bgs) {
+      precacheImage(AssetImage('assets/images/ozlusoz_bgs/$f'), context);
+    }
   }
 
   void _checkTarotSent() {

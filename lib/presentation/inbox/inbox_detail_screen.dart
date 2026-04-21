@@ -134,8 +134,18 @@ class InboxDetailScreen extends StatelessWidget {
 
   const InboxDetailScreen({super.key, required this.item});
 
+  /// Durugörü alt başlığı: item.title'dan ("Durugörü — Bugün") çıkarılır.
+  String? get _durugoruSubtitle {
+    if (item.fortuneType != FortuneType.durugoru) return null;
+    if (item.title.contains('Bugün'))   return 'Bugün Neler Olacak?';
+    if (item.title.contains('Yarın'))   return 'Yarın Neler Olacak?';
+    if (item.title.contains('Gelecek')) return 'Gelecekte Neler Olacak?';
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
+    final isDurugoru = item.fortuneType == FortuneType.durugoru;
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -146,6 +156,29 @@ class InboxDetailScreen extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
+      bottomNavigationBar: isDurugoru
+          ? SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(24, 8, 24, 12),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.white.withValues(alpha: 0.10),
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14),
+                        side: BorderSide(color: Colors.white.withValues(alpha: 0.25)),
+                      ),
+                    ),
+                    child: const Text('Kapat', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                  ),
+                ),
+              ),
+            )
+          : null,
       body: Stack(
         children: [
           // Tarot: arka plan görseli + koyu overlay
@@ -191,6 +224,23 @@ class InboxDetailScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Durugörü: alt başlık (hangi tür olduğu)
+                  if (_durugoruSubtitle != null) ...[
+                    const SizedBox(height: 4),
+                    Center(
+                      child: Text(
+                        _durugoruSubtitle!,
+                        textAlign: TextAlign.center,
+                        style: AppTextStyles.title.copyWith(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white.withValues(alpha: 0.85),
+                          letterSpacing: 0.5,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                  ],
                   // Non-tarot: sadece tarih (başlık ve süslü ayraç kaldırıldı)
                   if (item.fortuneType != FortuneType.tarot) ...[
                     Text(
@@ -254,14 +304,16 @@ class InboxDetailScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 40),
-                  // Footer
-                  Center(
-                    child: Text(
-                      '✦ Magnus ✦',
-                      style: AppTextStyles.magnusLabel,
+                  // Footer — durugörü için gösterilmez
+                  if (item.fortuneType != FortuneType.durugoru) ...[
+                    Center(
+                      child: Text(
+                        '✦ Magnus ✦',
+                        style: AppTextStyles.magnusLabel,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 20),
+                    const SizedBox(height: 20),
+                  ],
                 ],
               ),
             ),

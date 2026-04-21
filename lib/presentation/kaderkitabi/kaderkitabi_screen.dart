@@ -227,97 +227,98 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
   Widget _buildContent(BuildContext context) {
     final metin = _metin ?? '';
     return Column(children: [
-      // Kitap kutusu — uzunsa scroll
-      Flexible(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              gradient: const LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFF5ECD7), Color(0xFFEDD9A3)],
+      // Kitap kutusu — dikey orta
+      Expanded(
+        child: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Color(0xFFF5ECD7), Color(0xFFEDD9A3)],
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFFD4AF37).withValues(alpha: 0.25),
+                    blurRadius: 30, spreadRadius: 4, offset: const Offset(0, 6)),
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.5),
+                    blurRadius: 20, offset: const Offset(0, 10)),
+                ],
+                border: Border.all(
+                  color: const Color(0xFFB8960C).withValues(alpha: 0.6), width: 1.5),
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0xFFD4AF37).withValues(alpha: 0.25),
-                  blurRadius: 30, spreadRadius: 4, offset: const Offset(0, 6)),
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.5),
-                  blurRadius: 20, offset: const Offset(0, 10)),
-              ],
-              border: Border.all(
-                color: const Color(0xFFB8960C).withValues(alpha: 0.6), width: 1.5),
-            ),
-            child: Stack(children: [
-              Positioned(
-                left: 0, top: 0, bottom: 0,
-                child: Container(
-                  width: 18,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.horizontal(left: Radius.circular(14)),
-                    gradient: LinearGradient(
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      colors: [
-                        Colors.black.withValues(alpha: 0.18),
-                        Colors.transparent,
-                      ],
+              child: Stack(children: [
+                Positioned(
+                  left: 0, top: 0, bottom: 0,
+                  child: Container(
+                    width: 18,
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.horizontal(left: Radius.circular(14)),
+                      gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: [
+                          Colors.black.withValues(alpha: 0.18),
+                          Colors.transparent,
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(26, 28, 26, 36),
-                child: Text(metin,
-                  textAlign: TextAlign.justify,
-                  style: const TextStyle(
-                    color: Color(0xFF2C1A0A), fontSize: 15,
-                    height: 1.85, fontWeight: FontWeight.w400, letterSpacing: 0.2,
-                  )),
-              ),
-              Positioned(
-                bottom: 10, left: 0, right: 0,
-                child: Center(
-                  child: Text('✦',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: const Color(0xFF8B6914).withValues(alpha: 0.7))),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(26, 28, 26, 36),
+                  child: Text(metin,
+                    textAlign: TextAlign.justify,
+                    style: const TextStyle(
+                      color: Color(0xFF2C1A0A), fontSize: 15,
+                      height: 1.85, fontWeight: FontWeight.w400, letterSpacing: 0.2,
+                    )),
                 ),
-              ),
-            ]),
+                Positioned(
+                  bottom: 10, left: 0, right: 0,
+                  child: Center(
+                    child: Text('✦',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: const Color(0xFF8B6914).withValues(alpha: 0.7))),
+                  ),
+                ),
+              ]),
+            ),
           ),
         ),
       ),
-      // Kapat butonu — alt kısımda, kutu ile ekran altı arası
-      const SizedBox(height: 20),
+      // Kapat butonu — ekranın altında sabit
       Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
+        padding: const EdgeInsets.fromLTRB(20, 8, 20, 28),
         child: GestureDetector(
-              onTap: () => context.pop(),
-              child: Container(
-                width: double.infinity,
-                height: 48,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFFB8960C), Color(0xFF8B6914)],
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                  ),
-                  borderRadius: BorderRadius.circular(24),
-                  border: Border.all(
-                      color: const Color(0xFFD4AF37).withValues(alpha: 0.8), width: 1.5),
-                ),
-                child: const Center(
-                  child: Text('Kapat',
-                    style: TextStyle(color: Colors.white, fontSize: 15,
-                        fontWeight: FontWeight.w600, letterSpacing: 0.5)),
-                ),
+          onTap: () => context.pop(),
+          child: Container(
+            width: double.infinity,
+            height: 48,
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [Color(0xFFB8960C), Color(0xFF8B6914)],
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
               ),
+              borderRadius: BorderRadius.circular(24),
+              border: Border.all(
+                color: const Color(0xFFD4AF37).withValues(alpha: 0.8), width: 1.5),
+            ),
+            child: const Center(
+              child: Text('Kapat',
+                style: TextStyle(color: Colors.white, fontSize: 15,
+                    fontWeight: FontWeight.w600, letterSpacing: 0.5)),
             ),
           ),
+        ),
+      ),
     ]);
   }
 }

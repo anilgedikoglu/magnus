@@ -33,6 +33,9 @@ import 'presentation/kehanet/faloya_screen.dart';
 import 'presentation/kehanet/maganda_screen.dart';
 import 'presentation/kehanet/tamua_screen.dart';
 import 'presentation/kehanet/yana_screen.dart';
+import 'presentation/kehanet/niyet_screen.dart';
+import 'presentation/kehanet/yuz_fali_kimin_screen.dart';
+import 'presentation/kehanet/yuz_fali_foto_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 final _homeKey = GlobalKey<NavigatorState>(debugLabel: 'home');
@@ -261,6 +264,22 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/yana',
         parentNavigatorKey: _rootKey,
         builder: (_, __) => const YanaScreen(),
+      ),
+      GoRoute(
+        path: '/niyet',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const NiyetScreen(),
+      ),
+      GoRoute(
+        path: '/yuz_fali_kimin',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const YuzFaliKiminScreen(),
+      ),
+      GoRoute(
+        path: '/yuz_fali_foto',
+        parentNavigatorKey: _rootKey,
+        builder: (_, state) =>
+            YuzFaliFotoScreen(kimin: state.extra as String? ?? 'kullanici'),
       ),
       GoRoute(
         path: '/inbox-full',

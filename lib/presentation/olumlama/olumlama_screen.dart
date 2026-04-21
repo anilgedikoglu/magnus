@@ -68,10 +68,45 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
   // Her entry'nin hangi bg'yi göstereceği (shuffle ile atanır, geri gidince aynı bg)
   List<int> _bgMap = []; // index → _bgFiles index
 
+  // BG geçiş: alt katman daima %100, üst katman yeni görsel (0→1 fade)
+  late AnimationController _bgCtrl;
+  String? _bgBottom;
+  String? _bgTop;
+
   @override
   void initState() {
     super.initState();
+    _bgCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 600),
+    );
+    _bgCtrl.addStatusListener((status) {
+      if (status == AnimationStatus.completed && mounted) {
+        setState(() {
+          _bgBottom = _bgTop;
+          _bgTop    = null;
+          _bgCtrl.reset();
+        });
+      }
+    });
     _loadData();
+  }
+
+  @override
+  void dispose() {
+    _bgCtrl.dispose();
+    super.dispose();
+  }
+
+  void _startBgTransition(String? newBg) {
+    if (newBg == null || newBg == _bgBottom) return;
+    _bgCtrl.stop();
+    setState(() {
+      if (_bgTop != null) _bgBottom = _bgTop;
+      _bgTop = newBg;
+      _bgCtrl.value = 0;
+    });
+    _bgCtrl.forward();
   }
 
   // ─── Koşul eşleştirme ─────────────────────────────────────────────────────
@@ -194,18 +229,25 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
     final bgMap = orderedEntries.map((e) => bgById[e.id] ?? 0).toList();
 
     if (!mounted) return;
+    final startIdx = cursor % orderedEntries.length;
+    String? initialBg;
+    if (bgMap.isNotEmpty) {
+      final bgIdx = bgMap[startIdx % bgMap.length];
+      initialBg = 'assets/images/olumlama_bgs/${_bgFiles[bgIdx % _bgFiles.length]}';
+    }
     setState(() {
-      _entries = orderedEntries;
-      _bgMap   = bgMap;
-      _index   = cursor % orderedEntries.length; // bu açılışın başlangıç metni
-      _loading = false;
+      _entries  = orderedEntries;
+      _bgMap    = bgMap;
+      _index    = startIdx;
+      _bgBottom = initialBg;
+      _bgTop    = null;
+      _loading  = false;
     });
   }
 
-  // Mevcut entry için arka plan yolu (null = henüz yüklenmedi, siyah kal)
-  String? get _currentBg {
+  String? _bgPath(int idx) {
     if (_bgMap.isEmpty || _entries.isEmpty) return null;
-    final bgIdx = _bgMap[_index % _bgMap.length];
+    final bgIdx = _bgMap[idx % _bgMap.length];
     return 'assets/images/olumlama_bgs/${_bgFiles[bgIdx % _bgFiles.length]}';
   }
 
@@ -217,6 +259,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
       _direction = 1;
       _index = (_index + 1) % _entries.length;
     });
+    _startBgTransition(_bgPath(_index));
   }
 
   void _prev() {
@@ -225,6 +268,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
       _direction = -1;
       _index = (_index - 1 + _entries.length) % _entries.length;
     });
+    _startBgTransition(_bgPath(_index));
   }
 
   // ─── BUILD ────────────────────────────────────────────────────────────────
@@ -234,23 +278,41 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
-      body: Stack(
+      body: GestureDetector(
+        onHorizontalDragEnd: (details) {
+          if (details.primaryVelocity == null) return;
+          if (details.primaryVelocity! < -200) _next();
+          if (details.primaryVelocity! >  200) _prev();
+        },
+        child: Stack(
         fit: StackFit.expand,
         children: [
-          // ── Tam ekran arka plan — yalnızca data hazırsa göster ───────────
-          if (_currentBg != null)
-            AnimatedSwitcher(
-              duration: const Duration(milliseconds: 600),
-              child: Image.asset(
-                _currentBg!,
-                key: ValueKey(_currentBg),
+          // ── Arka plan: alt %100 opak, üst yeni görsel fade-in ────────────
+          if (_bgBottom != null)
+            Image.asset(_bgBottom!,
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: double.infinity,
+              alignment: Alignment.center,
+              filterQuality: FilterQuality.high,
+              errorBuilder: (_, __, ___) =>
+                  const ColoredBox(color: Color(0xFF0D0A20)),
+            )
+          else
+            const ColoredBox(color: Color(0xFF0D0A20)),
+          if (_bgTop != null)
+            AnimatedBuilder(
+              animation: _bgCtrl,
+              builder: (_, child) =>
+                  Opacity(opacity: _bgCtrl.value, child: child!),
+              child: Image.asset(_bgTop!,
                 fit: BoxFit.cover,
                 width: double.infinity,
                 height: double.infinity,
                 alignment: Alignment.center,
                 filterQuality: FilterQuality.high,
                 errorBuilder: (_, __, ___) =>
-                    Container(color: const Color(0xFF0D0A20)),
+                    const ColoredBox(color: Color(0xFF0D0A20)),
               ),
             ),
           // ── Koyu overlay — hafif tutuldu (görseli bozmamak için) ──────────
@@ -286,6 +348,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
                   ),
           ),
         ],
+        ),
       ),
     );
   }
@@ -452,6 +515,31 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           _NavBtn(icon: Icons.chevron_left_rounded,  onTap: _prev),
+          // Çıkış butonu — ortada, ikon yok
+          GestureDetector(
+            onTap: () => context.pop(),
+            child: Container(
+              height: 56,
+              padding: const EdgeInsets.symmetric(horizontal: 22),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.10),
+                borderRadius: BorderRadius.circular(28),
+                border: Border.all(
+                  color: Colors.white.withValues(alpha: 0.25), width: 1,
+                ),
+              ),
+              child: const Center(
+                child: Text(
+                  'Çıkış',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+          ),
           _NavBtn(icon: Icons.chevron_right_rounded, onTap: _next),
         ],
       ),

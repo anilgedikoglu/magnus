@@ -1,7 +1,7 @@
 name: magnus_app
 description: Magnus — Fal, Tarot ve Astroloji
 publish_to: 'none'
-version: 10.4.0+200
+version: 10.5.0+201
 
 environment:
   sdk: ^3.7.2
@@ -22,6 +22,9 @@ dependencies:
 
   # Camera / image picker
   image_picker: ^1.1.2
+
+  # HTTP client (Claude Vision API için)
+  http: ^1.2.2
 
   # Fonts
   google_fonts: ^6.2.1
@@ -93,6 +96,7 @@ flutter:
     - assets/images/astrotakvim/
     - assets/images/falbg/
     - assets/images/olumlama_bgs/
+    - assets/images/ozlusoz_bgs/
     - assets/images/kahinler/
     - assets/images/kehanet/
     - assets/videos/

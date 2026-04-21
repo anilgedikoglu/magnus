@@ -22,6 +22,7 @@ import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
 import '../../data/providers.dart';
+import '../../data/services/claude_vision_service.dart';
 
 class CoffeeScreen extends ConsumerStatefulWidget {
   const CoffeeScreen({super.key});
@@ -37,6 +38,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   _InputMode _mode = _InputMode.none;
   final List<String?> _photos = [null, null, null];
   String? _fincanImage;
+  bool _kontrolEdiliyor = false;
 
   static const _fincanImages = [
     'assets/images/kahve/Fincan1.png',
@@ -80,7 +82,42 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   }
 
   Future<void> _sendFortune() async {
-    if (!_canSend) return;
+    if (!_canSend || _kontrolEdiliyor) return;
+
+    // ── Fotoğraf modunda fincan kontrolü ──────────────────────────────────
+    if (_mode == _InputMode.fotoCek || _mode == _InputMode.dosyadan) {
+      final firstPhoto = _photos.firstWhere((p) => p != null)!;
+
+      setState(() => _kontrolEdiliyor = true);
+      final isFincan = await ClaudeVisionService.isTurkishCoffeeCup(firstPhoto);
+      if (!mounted) return;
+      setState(() => _kontrolEdiliyor = false);
+
+      if (!isFincan) {
+        showDialog<void>(
+          context: context,
+          builder: (_) => AlertDialog(
+            backgroundColor: const Color(0xFF1A0A2E),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16)),
+            title: const Text('⚠️ Fincan Bulunamadı',
+                style: TextStyle(color: Colors.white, fontSize: 17)),
+            content: const Text(
+              'Bu bir fincan görseli değildir.',
+              style: TextStyle(color: Colors.white70, fontSize: 15),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('Tamam',
+                    style: TextStyle(color: Color(0xFFFF55FF))),
+              ),
+            ],
+          ),
+        );
+        return;
+      }
+    }
 
     // Fal üretimini hemen arka planda başlat
     final fortuneService = ref.read(fortuneServiceProvider);
@@ -307,13 +344,16 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     final isPhotoMode = _mode == _InputMode.fotoCek ||
         _mode == _InputMode.dosyadan;
     final String label;
-    if (_canSend) {
+    if (_kontrolEdiliyor) {
+      label = 'Kontrol ediliyor...';
+    } else if (_canSend) {
       label = 'Falımı Gönder ✨';
     } else if (isPhotoMode) {
       label = '$_filledCount/3 Fotoğraf';
     } else {
       label = 'Yöntem Seç';
     }
+    final bool active = _canSend && !_kontrolEdiliyor;
 
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
@@ -325,20 +365,20 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
         width: double.infinity,
         child: AnimatedOpacity(
           duration: const Duration(milliseconds: 300),
-          opacity: _canSend ? 1.0 : 0.35,
+          opacity: active ? 1.0 : 0.35,
           child: GestureDetector(
-            onTap: _canSend ? _sendFortune : null,
+            onTap: active ? _sendFortune : null,
             child: Container(
               height: 54,
               decoration: BoxDecoration(
-                gradient: _canSend
+                gradient: active
                     ? const LinearGradient(
                         colors: [Color(0xFF6B3FA0), Color(0xFF9C6FD6)],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       )
                     : null,
-                color: _canSend ? null : Colors.white12,
+                color: active ? null : Colors.white12,
                 borderRadius: BorderRadius.circular(27),
                 boxShadow: _canSend
                     ? [

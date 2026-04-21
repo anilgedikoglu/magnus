@@ -44,18 +44,28 @@
 //   date key set edilmemiştir, kredi otomatik 1'e döner.
 //
 // ── SAYFA YAPISI (3×3 Grid) ───────────────────────────────────────────────
-// İki sayfa, her biri 9 ikonluk 3×3 ızgara:
+// Üç sayfa, her biri 9 ikonluk 3×3 ızgara:
 //   Sayfa 1: Motivasyon, Dert Ortağı, Olumlama, Özlü Sözler, Kader Kitabı,
 //            Acı Gerçekler, Kehanet, Durugörü, Niyet
-//   Sayfa 2: Kahve Falı, Tarot, Astroloji, Numeroloji, Durugörü,
+//   Sayfa 2: Kahve Falı, Tarot, AstroTakvim, Numeroloji, Durugörü,
 //            Yüz Falı, Japon Falı, I-Ching, Aşk Uyumu
+//   Sayfa 3: Astroloji (Günlük Astroloji), + 8 yer tutucu (yakında)
 //
 // Sayfa geçişi: alt bardaki Önceki/Sonraki butonları VEYA yatay swipe
 //   (Listener ile — GestureDetector değil, jest arenası sorunu olmaz).
 //   Eşik: 50px yatay hareket. Geçiş animasyonu: 380ms easeInOut.
 //
-// Sayfa göstergesi: iki ince dikdörtgen (36×3px), aktif sayfa parlak mor.
+// Sayfa göstergesi: üç ince dikdörtgen (36×3px), aktif sayfa parlak mor.
 //   Grid'in içine Stack overlay olarak yerleştirilmiştir (alt kenar).
+//
+// ── UNITY .ASSET DÖNÜŞÜM NOTU (metin motoru) ─────────────────────────────
+// Unity .asset dosyalarında `aciklama:` ve `element:` alanları YAML LİSTESİDİR.
+// Tek bir .asset dosyasında birden fazla `- "..."` maddesi olabilir.
+// Her madde AYRI bir JSON girdisi olmalı — sadece ilk maddeyi almak veri kaybı!
+// Etkilenen klasörler: Motivasyon, Ozlusoz, AstroTakvim, GunlukAstroloji,
+//   Biyoritim, CanliSohbet, JaponFali, KaderKitabi (ve muhtemelen diğerleri).
+// Parse kodu: her `- "..."` başlangıcında yeni entry aç, devam satırlarını
+//   (4+ boşluklu) önceki entry'ye birleştir. Bkz. CLAUDE.md → "Kaynak Yapısı".
 //
 // ── NAVIGASYON ────────────────────────────────────────────────────────────
 // Router: go_router. Ana rotalar:
@@ -92,7 +102,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/constants/app_colors.dart';
+import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -106,7 +116,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   final PageController _pageController = PageController();
   final ScrollController _chatScrollCtrl = ScrollController();
   int _currentPage = 0;
-  static const _totalPages = 2;
+  static const _totalPages = 3;
 
   final List<_ExtraBubble> _extraBubbles = [];
   int _typingIndex = 0; // hangi balon şu an yazılıyor
@@ -120,21 +130,41 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   // Pref anahtarları — her fal türü için tamamlanma tarihi
   static const _creditPrefKeys = {
-    'motivasyon': 'motivasyon_bugun_tarih',
-    'olumlama':   'olumlama_bugun_tarih',
-    'ozlusoz':    'ozlusoz_bugun_tarih',
-    'tarot':      'tarot_bugun_tarih',
-    'kahve':      'kahve_bugun_tarih',
-    'astroloji':  'astroloji_bugun_tarih',
+    'motivasyon':  'motivasyon_bugun_tarih',
+    // 'olumlama' günlük limit yok — badge gösterilmez
+    'ozlusoz':     'ozlusoz_bugun_tarih',
+    'tarot':       'tarot_bugun_tarih',
+    'kahve':       'kahve_bugun_tarih',
+    'astroloji':   'astroloji_bugun_tarih',
+    'kaderkitabi': 'kaderkitabi_bugun_tarih',
+    'dertortagi':   'dertortagi_bugun_tarih',
+    'acigercekler': 'acigercekler_bugun_tarih',
+    // 'numeroloji' burada yok — limit ekran içinden yönetilir
   };
 
   static const _fortuneDisplayNames = {
-    'motivasyon': 'Motivasyon',
-    'olumlama':   'Olumlama',
-    'ozlusoz':    'Özlü Sözler',
-    'tarot':      'Tarot',
-    'kahve':      'Kahve Falı',
-    'astroloji':  'Astroloji',
+    'motivasyon':  'Motivasyon',
+    'olumlama':    'Olumlama',
+    'ozlusoz':     'Özlü Sözler',
+    'tarot':       'Tarot',
+    'kahve':       'Kahve Falı',
+    'astroloji':   'Astroloji',
+    'kaderkitabi': 'Kader Kitabı',
+    'dertortagi':   'Dert Ortağı',
+    'acigercekler': 'Acı Gerçekler',
+    'numeroloji':   'Numeroloji',
+  };
+
+  // Ekrandan 'hazirlanıyor' sinyali gelince gösterilecek mesajlar
+  static const _hazirlaniyorMessages = {
+    'numeroloji': 'Numeroloji raporun hazırlanıyor...',
+  };
+
+  // Günlük limit dolarken özel balon mesajları (varsayılan yerine)
+  static const _fortuneLimitMessages = {
+    'kaderkitabi': 'Kader kitabının bugünkü sayfasını okudun.',
+    'dertortagi':   'Bugün yeterince dertleştik.',
+    'acigercekler': 'Bugün gerçeklerle yüzleştin.',
   };
 
   String get _today => DateTime.now().toIso8601String().substring(0, 10);
@@ -334,20 +364,49 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       return;
     }
     if (!mounted) return;
-    await context.push(route);
+    final result = await context.push<String?>(route);
     if (!mounted) return;
-    // Ekrandan dönünce kredileri yenile
-    // Eğer fal tamamlanmamışsa (geri basıldıysa) date key set edilmemiştir → kredi 1 kalır
+    // Ekran 'hazirlanıyor' sinyali döndürdüyse balon göster
+    if (result == 'hazirlanıyor') {
+      _showHazirlaniyorBubble(type);
+    }
     await _refreshCredits();
   }
 
-  void _showDailyLimitBubble(String type) {
-    final name = ref.read(userProfileProvider).name;
-    final fortuneName = _fortuneDisplayNames[type] ?? type;
-    final nameStr = name.isNotEmpty ? ' $name' : '';
+  void _showHazirlaniyorBubble(String type) {
+    final msg = _hazirlaniyorMessages[type] ?? 'Raporun hazırlanıyor...';
     setState(() {
       _extraBubbles.add(_ExtraBubble(
-        text: 'Günlük $fortuneName hakkın doldu$nameStr.',
+        text: msg,
+        gradient: const [Color(0xFF2A1060), Color(0xFF3D1F88)],
+        borderColor: const Color(0xFF7755CC),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 350),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
+  void _showDailyLimitBubble(String type) {
+    final name        = ref.read(userProfileProvider).name;
+    final fortuneName = _fortuneDisplayNames[type] ?? type;
+    final nameStr     = name.isNotEmpty ? ' $name' : '';
+    final customMsg   = _fortuneLimitMessages[type];
+    final limitText   = customMsg ?? 'Günlük $fortuneName hakkın doldu$nameStr.';
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: limitText,
         gradient: const [Color(0xFF5C2508), Color(0xFF7A3510)],
         borderColor: const Color(0xFFCC6622),
       ));
@@ -371,26 +430,51 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   // ─── Sayfa 1 ──────────────────────────────────────────────────────────────
   List<_MenuItem> _page1Items(BuildContext context) => [
         _MenuItem('Motivasyon', 'assets/images/motivasyon_yeni.png',
-            _remainingCredits['motivasyon'] ?? 1,
-            () => _onFortuneItemTap('motivasyon', '/motivation')),
-        _MenuItem('Dert Ortağı', 'assets/images/menu/dertortagi.png', 1,
-            () {}),
+            -1, // badge yok — motivasyon her zaman açılabilir
+            () async {
+              // Günlük hak bitse de aynı metin gösterilir — navigasyonu engelleme
+              if (!mounted) return;
+              await context.push('/motivation');
+              if (!mounted) return;
+              await _refreshCredits();
+            }),
+        _MenuItem('Dert Ortağı', 'assets/images/menu/dertortagi.png',
+            _remainingCredits['dertortagi'] ?? 1,
+            () => _onFortuneItemTap('dertortagi', '/dertortagi')),
         _MenuItem('Olumlama', 'assets/images/olumlama.png',
-            _remainingCredits['olumlama'] ?? 1,
+            -1, // günlük limit yok → badge gösterilmez
             () => _onFortuneItemTap('olumlama', '/olumlama')),
         _MenuItem('Özlü Sözler', 'assets/images/ozlusozler.png',
-            _remainingCredits['ozlusoz'] ?? 1,
+            -1, // badge yok — limit ekran içinden yönetilir
             () => _onFortuneItemTap('ozlusoz', '/ozlusoz')),
-        _MenuItem('Kader Kitabı', 'assets/images/kadercarkimenu.png', 1,
-            () {}),
-        _MenuItem('Acı Gerçekler', 'assets/images/acigercekler.PNG', 1,
-            () {}),
+        _MenuItem('Acı Gerçekler', 'assets/images/acigercekler.PNG',
+            _remainingCredits['acigercekler'] ?? 1,
+            () => _onFortuneItemTap('acigercekler', '/acigercekler')),
+        _MenuItem('Kader Kitabı', 'assets/images/tefeulyeni.png',
+            _remainingCredits['kaderkitabi'] ?? 1,
+            () => _onFortuneItemTap('kaderkitabi', '/kaderkitabi')),
         _MenuItem('Kehanet', 'assets/images/menu/kehanet.png', 1,
-            () {}),
+            () => _onFortuneItemTap('kehanet', '/kehanet')),
         _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 1,
             () {}),
         _MenuItem('Niyet', 'assets/images/menu/mistikfallar.png', 1,
-            () {}),
+            () => context.push('/niyet')),
+      ];
+
+  // ─── Sayfa 3 ──────────────────────────────────────────────────────────────
+  // Henüz 9 ikon tanımsız → boş yer tutucu. Astroloji ilk ikondur.
+  List<_MenuItem> _page3Items(BuildContext context) => [
+        _MenuItem('Astroloji', 'assets/images/astroloji.png',
+            1, () => context.push('/astroloji')),
+        _MenuItem('Biyoritim', 'assets/images/falbg/biyoritim.png',
+            1, () => context.push('/biyoritim')),
+        _MenuItem('Doğum Haritası', 'assets/images/dogum.png',
+            1, () => context.push('/dogumharitasi')),
+        _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',
+            1, () {}),
+        // 5 yer tutucu — ikon eklendikçe buralar dolacak
+        ...List.generate(5, (_) =>
+            _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {})),
       ];
 
   // ─── Sayfa 2 ──────────────────────────────────────────────────────────────
@@ -404,12 +488,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         _MenuItem('AstroTakvim', 'assets/images/aytakvimi.png',
             1,
             () => context.push('/astrotakvim')),
-        _MenuItem('Numeroloji', 'assets/images/menu/numeroloji.png', 1,
-            () {}),
+        _MenuItem('Numeroloji', 'assets/images/menu/numeroloji.png',
+            -1, // badge yok — limit ekran içinden yönetilir
+            () => _onFortuneItemTap('numeroloji', '/numeroloji')),
         _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 1,
             () {}),
         _MenuItem('Yüz Falı', 'assets/images/menu/yuzfali.png', 1,
-            () {}),
+            () => context.push('/yuz_fali_kimin')),
         _MenuItem('Japon Falı', 'assets/images/japonfali.png', 1,
             () {}),
         _MenuItem('I-Ching', 'assets/images/ichingikon.png', 1,
@@ -423,53 +508,74 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     ref.watch(userProfileProvider); // profil değişince rebuild tetikle
 
     return Scaffold(
-      backgroundColor: AppColors.background,
-      body: SafeArea(
-        child: Column(
-          children: [
-            // ─── Chat header (sabit) ────────────────────────────────────────
-            _buildChatHeader(),
-
-            // ─── Animasyonlu 3×3 grid + sayfa göstergesi (overlay) ───────────
-            Expanded(
-              child: Listener(
-                onPointerDown:  (e) => _swipeStartX = e.position.dx,
-                onPointerUp:    (e) {
-                  final dx = e.position.dx - (_swipeStartX ?? e.position.dx);
-                  _swipeStartX = null;
-                  if (dx < -50) _goNext();
-                  else if (dx > 50) _goPrev();
-                },
-                onPointerCancel: (_) => _swipeStartX = null,
-                child: Stack(
-                children: [
-                  PageView.builder(
-                    controller: _pageController,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: _totalPages,
-                    onPageChanged: (p) => setState(() => _currentPage = p),
-                    itemBuilder: (context, pageIndex) {
-                      final items = pageIndex == 0
-                          ? _page1Items(context)
-                          : _page2Items(context);
-                      return _buildGrid(items);
-                    },
-                  ),
-                  // Gösterge — grid'in tam altına yapışık
-                  Positioned(
-                    left: 0, right: 0, bottom: 0,
-                    child: _buildPageIndicator(),
-                  ),
-                ],
-                ),
-              ),
+      backgroundColor: Colors.black,
+      extendBody: true,
+      body: Stack(
+        children: [
+          // ── Ana menü arka planı ───────────────────────────────────────────
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/welcomscreenbackground.jpg',
+              fit: BoxFit.cover,
+              alignment: Alignment.center,
+              filterQuality: FilterQuality.high,
+              errorBuilder: (_, __, ___) => const SizedBox.shrink(),
             ),
+          ),
+          // ── Hafif karartma katmanı (görsel işlem yok — sadece layer) ─────
+          Positioned.fill(
+            child: Container(color: Colors.black.withValues(alpha: 0.42)),
+          ),
+          // ── İçerik ───────────────────────────────────────────────────────
+          SafeArea(
+            child: Column(
+              children: [
+                // ─── Chat header (sabit) ──────────────────────────────────
+                _buildChatHeader(),
 
+                // ─── Animasyonlu 3×3 grid + sayfa göstergesi (overlay) ────
+                Expanded(
+                  child: Listener(
+                    onPointerDown:  (e) => _swipeStartX = e.position.dx,
+                    onPointerUp:    (e) {
+                      final dx = e.position.dx - (_swipeStartX ?? e.position.dx);
+                      _swipeStartX = null;
+                      if (dx < -50) _goNext();
+                      else if (dx > 50) _goPrev();
+                    },
+                    onPointerCancel: (_) => _swipeStartX = null,
+                    child: Stack(
+                      children: [
+                        PageView.builder(
+                          controller: _pageController,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: _totalPages,
+                          onPageChanged: (p) => setState(() => _currentPage = p),
+                          itemBuilder: (context, pageIndex) {
+                            final items = pageIndex == 0
+                                ? _page1Items(context)
+                                : pageIndex == 1
+                                    ? _page2Items(context)
+                                    : _page3Items(context);
+                            return _buildGrid(items);
+                          },
+                        ),
+                        // Gösterge — grid'in tam altına yapışık
+                        Positioned(
+                          left: 0, right: 0, bottom: 0,
+                          child: _buildPageIndicator(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
 
-            // ─── Alt bar ───────────────────────────────────────────────────
-            _buildBottomBar(context),
-          ],
-        ),
+                // ─── Alt bar ─────────────────────────────────────────────
+                _buildBottomBar(context),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -490,6 +596,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ..._extraBubbles,
     ];
 
+    // Şu an ekranda görünen balon sayısı
+    // (_typingIndex balon tamamlandıkça artar; bubbles.length ile sınırla)
+    final visibleCount = (_typingIndex + 1).clamp(0, bubbles.length);
+
     return SizedBox(
       height: 155,
       child: SingleChildScrollView(
@@ -502,24 +612,32 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             for (int i = 0; i < bubbles.length; i++)
               if (i <= _typingIndex) ...[
                 if (i > 0) const SizedBox(height: 8),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    _MagnusAvatar(),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: RepaintBoundary(
-                        child: _TypewriterChatBubble(
-                          key: ValueKey(i),
-                          text: bubbles[i].text,
-                          gradient: bubbles[i].gradient,
-                          borderColor: bubbles[i].borderColor,
-                          isActive: i == _typingIndex,
-                          onComplete: () => _onBubbleComplete(i),
+                // Görünen balon sayısına göre eskilere doğru opasite düşür
+                Opacity(
+                  opacity: visibleCount >= 3
+                      ? (i == visibleCount - 1 ? 1.0 : (i == visibleCount - 2 ? 0.60 : 0.30))
+                      : visibleCount == 2
+                          ? (i == 0 ? 0.60 : 1.0)
+                          : 1.0,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      _MagnusAvatar(),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: RepaintBoundary(
+                          child: _TypewriterChatBubble(
+                            key: ValueKey(i),
+                            text: bubbles[i].text,
+                            gradient: bubbles[i].gradient,
+                            borderColor: bubbles[i].borderColor,
+                            isActive: i == _typingIndex,
+                            onComplete: () => _onBubbleComplete(i),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
           ],
@@ -567,76 +685,107 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   Widget _buildBottomBar(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-      color: const Color(0xFF0A0718),
-      child: Row(
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 4, 12, 10),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          // Sol buton
-          Expanded(
-            child: _currentPage == 0
-                ? _BottomBtn(
-                    imagePath: 'assets/images/bilgiekranilogo.png',
-                    label: 'Bilgiler',
-                    onTap: () async { _scheduleUnlockTimer(); await context.push('/settings'); if (mounted) await _refreshCredits(); },
-                  )
-                : _BottomBtn(
-                    imagePath: 'assets/images/menuleft.png',
-                    label: 'Önceki',
-                    onTap: _goPrev,
-                  ),
-          ),
-          const SizedBox(width: 8),
-          // Ortadaki inbox butonu — kilitli olmayan okunmamış varsa sarı hale
+          // ── Hazırlanan fallar progress satırı ─────────────────────────────
           Consumer(builder: (_, cref, __) {
-            final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
-            return GestureDetector(
-              onTap: () => context.push('/inbox-full'),
-              child: AnimatedContainer(
-                duration: const Duration(milliseconds: 400),
-                width: 44, height: 40,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                      colors: [Color(0xFFAA00CC), Color(0xFF7700AA)]),
-                  borderRadius: BorderRadius.circular(22),
-                  boxShadow: hasUnread
-                      ? [
-                          BoxShadow(
-                            color: const Color(0xFFFFDD00).withValues(alpha: 0.9),
-                            blurRadius: 14,
-                            spreadRadius: 2,
-                          ),
-                          BoxShadow(
-                            color: const Color(0xFFFFAA00).withValues(alpha: 0.5),
-                            blurRadius: 28,
-                            spreadRadius: 4,
-                          ),
-                        ]
-                      : null,
-                ),
-                child: Center(
-                  child: Image.asset('assets/images/inbox_icon.png',
-                      width: 29, height: 29),
-                ),
-              ),
+            final items = cref.watch(inboxProvider);
+            // Hazırlanıyor (isLocked) VEYA hazır ama henüz okunmamış (!isLocked && !isRead)
+            // → kullanıcı okuyunca (isRead=true) kaybolur
+            final cooking = items
+                .where((e) => e.unlockAt != null && (e.isLocked || !e.isRead))
+                .toList()
+              ..sort((a, b) => (a.unlockAt!).compareTo(b.unlockAt!));
+            if (cooking.isEmpty) return const SizedBox(height: 4);
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: _FortuneProgressRow(items: cooking),
             );
           }),
-          const SizedBox(width: 8),
-          // Sağ buton: son sayfada "Başa Dön", diğerlerinde "Sonraki"
-          Expanded(
-            child: _isLastPage
-                ? _BottomBtn(
-                    imagePath: 'assets/images/menuright.png',
-                    label: 'Başa Dön',
-                    iconTrailing: true,
-                    onTap: _goNext,
-                  )
-                : _BottomBtn(
-                    imagePath: 'assets/images/menuright.png',
-                    label: 'Sonraki',
-                    iconTrailing: true,
-                    onTap: _goNext,
+          // ── Butonlar ──────────────────────────────────────────────────────
+          Row(
+            children: [
+              Expanded(
+                child: _currentPage == 0
+                    ? _BottomBtn(
+                        imagePath: 'assets/images/bilgiekranilogo.png',
+                        label: 'Bilgiler',
+                        onTap: () async {
+                          _scheduleUnlockTimer();
+                          await context.push('/settings');
+                          if (mounted) await _refreshCredits();
+                        },
+                      )
+                    : _BottomBtn(
+                        imagePath: 'assets/images/menuleft.png',
+                        label: 'Önceki',
+                        onTap: _goPrev,
+                      ),
+              ),
+              const SizedBox(width: 8),
+              // Ortadaki inbox butonu
+              Consumer(builder: (_, cref, __) {
+                final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
+                return GestureDetector(
+                  onTap: () => context.push('/inbox-full'),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 400),
+                    width: 48, height: 44,
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                          colors: [Color(0xFFDD00EE), Color(0xFF9900CC)]),
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(
+                        color: const Color(0xFFFF44FF).withValues(alpha: 0.7),
+                        width: 1.5,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xFFCC00EE).withValues(alpha: 0.55),
+                          blurRadius: hasUnread ? 18 : 8,
+                          spreadRadius: 0,
+                        ),
+                        if (hasUnread) ...[
+                          BoxShadow(
+                            color: const Color(0xFFFFAA22).withValues(alpha: 0.45),
+                            blurRadius: 22,
+                            spreadRadius: 0,
+                          ),
+                          BoxShadow(
+                            color: const Color(0xFFFFCC66).withValues(alpha: 0.18),
+                            blurRadius: 38,
+                            spreadRadius: 0,
+                          ),
+                        ],
+                      ],
+                    ),
+                    child: Center(
+                      child: Image.asset('assets/images/inbox_icon.png',
+                          width: 26, height: 26),
+                    ),
                   ),
+                );
+              }),
+              const SizedBox(width: 8),
+              Expanded(
+                child: _isLastPage
+                    ? _BottomBtn(
+                        imagePath: 'assets/images/menuright.png',
+                        label: 'Başa Dön',
+                        iconTrailing: true,
+                        onTap: _goNext,
+                      )
+                    : _BottomBtn(
+                        imagePath: 'assets/images/menuright.png',
+                        label: 'Sonraki',
+                        iconTrailing: true,
+                        onTap: _goNext,
+                      ),
+              ),
+            ],
           ),
         ],
       ),
@@ -757,6 +906,7 @@ class _MenuCardState extends State<_MenuCard>
                 Image.asset(
                   widget.item.imagePath,
                   fit: BoxFit.cover,
+                  filterQuality: FilterQuality.high,
                   errorBuilder: (_, __, ___) =>
                       Container(color: const Color(0xFF1A1040)),
                 ),
@@ -1032,38 +1182,292 @@ class _BottomBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final img = Image.asset(imagePath, width: 23, height: 23);
+    final img = Image.asset(imagePath, width: 22, height: 22,
+        filterQuality: FilterQuality.high,
+        errorBuilder: (_, __, ___) => const SizedBox(width: 22, height: 22));
     final txt = Text(label,
         style: const TextStyle(
-            color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13));
+            color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13,
+            shadows: [Shadow(color: Colors.black54, blurRadius: 4)]));
     return GestureDetector(
       onTap: onTap,
       child: Container(
         height: 44,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [Color(0xFFAA00CC), Color(0xFF7700AA)],
+            colors: [Color(0xFFCC00DD), Color(0xFF8800BB)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
           borderRadius: BorderRadius.circular(22),
+          border: Border.all(
+            color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
+            width: 1.5,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFFCC00EE).withValues(alpha: 0.50),
+              blurRadius: 10,
+              spreadRadius: 0,
+            ),
+            BoxShadow(
+              color: const Color(0xFFFF44FF).withValues(alpha: 0.20),
+              blurRadius: 20,
+              spreadRadius: 0,
+            ),
+          ],
         ),
-        // Butonu 3 eşit parçaya böl:
-        // Leading: ikon merkezi = 1/3 noktası, yazı merkezi = 2/3 noktası
-        // Trailing: yazı merkezi = 1/3 noktası, ikon merkezi = 2/3 noktası
-        // Alignment(x,0): x=-1 sol kenar, x=0 merkez, x=1 sağ kenar
-        // 1/3 = Alignment(-1/3, 0) | 2/3 = Alignment(1/3, 0)
         child: Stack(
           children: iconTrailing
               ? [
-                  Align(alignment: const Alignment(-1/3, 0),   child: txt),
-                  Align(alignment: const Alignment(0.52, 0),   child: img),
+                  Align(alignment: const Alignment(-1/3, 0),  child: txt),
+                  Align(alignment: const Alignment(0.52, 0),  child: img),
                 ]
               : [
-                  Align(alignment: const Alignment(-0.52, 0),  child: img),
-                  Align(alignment: const Alignment(1/3, 0),    child: txt),
+                  Align(alignment: const Alignment(-0.52, 0), child: img),
+                  Align(alignment: const Alignment(1/3, 0),   child: txt),
                 ],
         ),
       ),
     );
   }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Hazırlanan fallar progress satırı — tüm kilitli öğeler yatay scroll
+// ─────────────────────────────────────────────────────────────────────────────
+
+class _FortuneProgressRow extends StatefulWidget {
+  final List<InboxItem> items;
+  const _FortuneProgressRow({required this.items});
+
+  @override
+  State<_FortuneProgressRow> createState() => _FortuneProgressRowState();
+}
+
+class _FortuneProgressRowState extends State<_FortuneProgressRow> {
+  Timer? _ticker;
+
+  @override
+  void initState() {
+    super.initState();
+    _ticker = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (mounted) setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    _ticker?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    const accent  = Color(0xFFFF44FF);
+    const size    = 44.0;
+
+    // Ortalama yüzde — tüm hazırlanmakta olanlar
+    final avgProgress = widget.items.isEmpty
+        ? 0.0
+        : widget.items.map((e) => e.unlockProgress).reduce((a, b) => a + b) /
+            widget.items.length;
+    final avgPct = (avgProgress * 100).round();
+
+    return Row(
+      children: [
+        // ── Yatay scroll: her fal için bir daire ──────────────────────────
+        Expanded(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                for (int i = 0; i < widget.items.length; i++) ...[
+                  _FortuneCircleBadge(item: widget.items[i], size: size),
+                  if (i < widget.items.length - 1)
+                    const SizedBox(width: 8),
+                ],
+              ],
+            ),
+          ),
+        ),
+        if (avgProgress < 1.0) ...[
+          const SizedBox(width: 10),
+          // ── Sağ: ortalama yüzde dairesi ───────────────────────────────────
+          SizedBox(
+            width: size, height: size,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                CustomPaint(
+                  size: const Size(size, size),
+                  painter: _ArcProgressPainter(
+                    progress: avgProgress,
+                    color: accent,
+                    trackColor: Colors.white.withValues(alpha: 0.15),
+                    strokeWidth: 3.0,
+                  ),
+                ),
+                Text(
+                  '$avgPct%',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    shadows: [Shadow(color: Colors.black87, blurRadius: 4)],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ],
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Tek fal daire rozeti
+// ─────────────────────────────────────────────────────────────────────────────
+
+class _FortuneCircleBadge extends StatelessWidget {
+  final InboxItem item;
+  final double size;
+  const _FortuneCircleBadge({required this.item, required this.size});
+
+  @override
+  Widget build(BuildContext context) {
+    final progress  = item.unlockProgress; // 0.0 → 1.0
+    final isLocked  = item.isLocked;       // hazırlanıyor mu?
+    final isReady   = !isLocked;           // tamamlandı mı?
+    const accent    = Color(0xFFFF44FF);
+
+    // İkon: hazırlanıyorsa grayscale (2 suffix), tamam ise renkli
+    final iconPath  = _iconAsset(item.fortuneType, locked: isLocked);
+    final innerSize = size - 10;
+
+    return GestureDetector(
+      // Sadece hazır (tamamlanmış) fallar tıklanabilir → gelen kutusunu aç
+      onTap: isReady ? () => context.push('/inbox-full') : null,
+      child: SizedBox(
+      width: size, height: size,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          // Arc progress ring
+          CustomPaint(
+            size: Size(size, size),
+            painter: _ArcProgressPainter(
+              progress: progress,
+              color: isReady ? const Color(0xFF44FF88) : accent,
+              trackColor: Colors.white.withValues(alpha: 0.15),
+              strokeWidth: 3.0,
+            ),
+          ),
+          // İkon — grayscale veya renkli
+          ClipOval(
+            child: SizedBox(
+              width: innerSize, height: innerSize,
+              child: iconPath != null
+                  ? Image.asset(
+                      iconPath,
+                      fit: BoxFit.cover,
+                      filterQuality: FilterQuality.high,
+                      errorBuilder: (_, __, ___) => _fallbackIcon(),
+                    )
+                  : _fallbackIcon(),
+            ),
+          ),
+          // Badge — SADECE hazırlık tamamlanınca (kırmızı nokta)
+          if (isReady)
+            Positioned(
+              top: 1, right: 1,
+              child: Container(
+                width: 12, height: 12,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFF2222),
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.black, width: 1),
+                ),
+              ),
+            ),
+        ],
+      ),
+    ),   // SizedBox
+    );   // GestureDetector
+  }
+
+  Widget _fallbackIcon() => Container(
+    color: const Color(0xFF220033),
+    child: const Icon(Icons.auto_awesome, color: Colors.white54, size: 16),
+  );
+
+  /// Hazır → renkli ikon, hazırlanıyor → grayscale (2-suffix)
+  static String? _iconAsset(FortuneType type, {required bool locked}) {
+    const base = 'assets/images/inbox_icons/';
+    switch (type) {
+      case FortuneType.coffee:     return locked ? '${base}kahve2.png'     : '${base}kahve.png';
+      case FortuneType.tarot:      return locked ? '${base}tarot2.png'     : '${base}tarot.png';
+      case FortuneType.astrology:  return locked ? '${base}astroloji2.png' : '${base}astroloji.png';
+      case FortuneType.motivation: return locked ? '${base}motivasyon2.png': '${base}motivasyon.png';
+      case FortuneType.dream:      return locked ? '${base}ruya2.png'      : '${base}ruya.png';
+      case FortuneType.general:    return locked ? '${base}cark2.png'      : '${base}cark.png';
+      case FortuneType.birthChart:  return locked ? '${base}dogum2.png'      : '${base}dogum.png';
+      case FortuneType.numeroloji:  return locked ? '${base}numeroloji2.png' : '${base}numeroloji.png';
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Arc progress CustomPainter
+// ─────────────────────────────────────────────────────────────────────────────
+
+class _ArcProgressPainter extends CustomPainter {
+  final double progress;   // 0.0 → 1.0
+  final Color color;
+  final Color trackColor;
+  final double strokeWidth;
+
+  const _ArcProgressPainter({
+    required this.progress,
+    required this.color,
+    required this.trackColor,
+    required this.strokeWidth,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = Offset(size.width / 2, size.height / 2);
+    final radius = (size.width - strokeWidth) / 2;
+    final rect   = Rect.fromCircle(center: center, radius: radius);
+
+    // Arkaplan halkası
+    final trackPaint = Paint()
+      ..color   = trackColor
+      ..style   = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth
+      ..strokeCap   = StrokeCap.round;
+    canvas.drawCircle(center, radius, trackPaint);
+
+    // İlerleme yayı — saatyönünde, tepeden başlar (-π/2)
+    if (progress > 0) {
+      final arcPaint = Paint()
+        ..color   = color
+        ..style   = PaintingStyle.stroke
+        ..strokeWidth = strokeWidth
+        ..strokeCap   = StrokeCap.round;
+      canvas.drawArc(
+        rect,
+        -1.5707963, // -π/2 (saat 12)
+        2 * 3.1415926 * progress,
+        false,
+        arcPaint,
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(_ArcProgressPainter old) =>
+      old.progress != progress || old.color != color;
 }
 

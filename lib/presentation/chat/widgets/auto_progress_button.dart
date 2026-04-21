@@ -65,18 +65,32 @@ class _AutoProgressButtonState extends State<AutoProgressButton>
           ),
           clipBehavior: Clip.antiAlias,
           child: Stack(
+            alignment: Alignment.center,
             children: [
               // Dolan kısım
-              FractionallySizedBox(
-                widthFactor: _progress.value,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: AppColors.bubble1,
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
+              Positioned.fill(
+                child: FractionallySizedBox(
+                  widthFactor: _progress.value,
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: AppColors.bubble1,
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
                     ),
                   ),
+                ),
+              ),
+              // Ortadaki yazı
+              const Text(
+                'Magnus canlanıyor...',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 0.5,
                 ),
               ),
             ],

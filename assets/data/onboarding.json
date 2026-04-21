@@ -47,32 +47,16 @@
         {
           "labels": ["Erkek"],
           "setVariables": [{"variable": "cinsiyet", "value": "erkek"}],
-          "nextNodeId": "ask_age"
+          "nextNodeId": "ask_job"
         },
         {
           "labels": ["Kadın"],
           "setVariables": [{"variable": "cinsiyet", "value": "kadin"}],
-          "nextNodeId": "ask_age"
+          "nextNodeId": "ask_job"
         },
         {
           "labels": ["Belirtmek İstemiyorum"],
           "setVariables": [{"variable": "cinsiyet", "value": "belirtmek_istemiyorum"}],
-          "nextNodeId": "ask_age"
-        }
-      ]
-    },
-    {
-      "id": "ask_age",
-      "bubbleColor": "color1",
-      "messages": [
-        "Peki {{isim}}, kaç yaşındasın?",
-        "Anladım {{isim}}! Yaşını öğrenebilir miyim?",
-        "Teşekkürler {{isim}}! Şimdi yaşını sormak istiyorum."
-      ],
-      "answers": [
-        {
-          "labels": ["__AGE_INPUT__"],
-          "action": "input_age",
           "nextNodeId": "ask_job"
         }
       ]

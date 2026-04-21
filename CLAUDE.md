@@ -25,6 +25,33 @@ Unity metinleri `<color=yellow>metin</color>` veya `<color=#RRGGBB>metin</color>
 
 ---
 
+## UI Standartları
+
+### "Geri Git" Butonu
+
+Uygulamada nerede "Geri Git" butonu varsa aşağıdaki standart uygulanır:
+
+- **İkon:** `Icons.chevron_left_rounded`, `color: Colors.white`, `size: 20`
+- **İkon ile metin arası boşluk:** `SizedBox(width: 2)`
+- **Metin rengi:** `Colors.white`
+- **Arka plan:** `Colors.white.withValues(alpha: 0.10)`
+- **Border:** `Colors.white.withValues(alpha: 0.25)`
+- **Border radius:** `BorderRadius.circular(14)` (tam genişlik buton için 23 de olabilir)
+
+```dart
+// Standart Geri Git butonu örneği (motivasyon ekranındaki)
+Row(
+  mainAxisSize: MainAxisSize.min,
+  children: [
+    Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+    SizedBox(width: 2),
+    Text('Geri Git', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
+  ],
+)
+```
+
+---
+
 ## Google Play Store — Release İmzalama Bilgileri
 
 > AAB oluştururken bu bilgileri kullan. Bir daha sorma, burada yazıyor.

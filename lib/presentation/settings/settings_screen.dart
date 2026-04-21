@@ -221,6 +221,7 @@ class _DonutChart extends StatefulWidget {
   final double size;
   final double extra;
   final double labelInset;
+  final double labelDy;   // label grubunu dikey kaydır (piksel)
   final Duration delay;
 
   const _DonutChart({
@@ -229,6 +230,7 @@ class _DonutChart extends StatefulWidget {
     this.size = 130,
     this.extra = 35,
     this.labelInset = 0,
+    this.labelDy = 0,
     this.delay = Duration.zero,
   });
 
@@ -331,12 +333,12 @@ class _DonutChartState extends State<_DonutChart>
             return Stack(
               clipBehavior: Clip.none,
               children: [
-                // ── Donut yayları
+                // ── Donut yayları — her zaman görünür (tap'te kaybolmaz)
                 Positioned(
                   left: extra,
                   top: extra,
                   child: Opacity(
-                    opacity: arcOpacity * _arcAnim.value,
+                    opacity: _arcAnim.value,
                     child: CustomPaint(
                       size: Size(size, size),
                       painter: _DonutPainter(widget.segments, sw, _arcAnim.value),
@@ -369,7 +371,7 @@ class _DonutChartState extends State<_DonutChart>
                 // ── İsimler — donut yerine gösterilir
                 Positioned(
                   left: extra,
-                  top: extra,
+                  top: extra + widget.labelDy,
                   width: size,
                   height: size,
                   child: Opacity(
@@ -1412,13 +1414,17 @@ class SettingsScreen extends ConsumerWidget {
     );
 
     return Scaffold(
+      backgroundColor: Colors.black,
+      extendBody: true,
       body: Stack(
         children: [
-          // ── Uzay arkaplanı
+          // ── Arka plan görseli
           Positioned.fill(
             child: Image.asset(
-              'assets/images/space_bg.png',
+              'assets/images/signinbackground.png',
               fit: BoxFit.cover,
+              alignment: Alignment.center,
+              filterQuality: FilterQuality.high,
               errorBuilder: (_, __, ___) =>
                   Container(color: const Color(0xFF1A0A3C)),
             ),
@@ -2029,6 +2035,7 @@ class SettingsScreen extends ConsumerWidget {
               title: 'Element',
               size: 120,
               labelInset: 1,
+              labelDy: 1,
               delay: const Duration(milliseconds: 1900),
               segments: [
                 _Seg(const Color(0xFFFF6622), s['Ateş']!,   'Ateş'),
@@ -2202,68 +2209,138 @@ class SettingsScreen extends ConsumerWidget {
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
         side: BorderSide(color: Color(0xFFFFCC00), width: 1.5),
       ),
-      builder: (ctx) => Padding(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: 40, height: 4,
-              decoration: BoxDecoration(
-                color: const Color(0xFFFFCC00).withValues(alpha: 0.5),
-                borderRadius: BorderRadius.circular(2),
-              ),
-            ),
-            const SizedBox(height: 14),
-            const Row(
+      builder: (ctx) {
+        bool resetDone = false;
+        return StatefulBuilder(
+        builder: (ctx, setPanelState) {
+          Future<void> doReset() async {
+            final prefs = await SharedPreferences.getInstance();
+            // ⚠️ YENİ GÜNLÜK FAL EKLENİNCE BURAYA DA EKLE
+            // Format: '<tur>_bugun_tarih'
+            await prefs.remove('motivasyon_bugun_tarih');
+            await prefs.remove('olumlama_bugun_tarih');   // limitsiz ama temizlik için
+            await prefs.remove('ozlusoz_bugun_tarih');
+            await prefs.remove('tarot_bugun_tarih');
+            await prefs.remove('kahve_bugun_tarih');
+            await prefs.remove('astroloji_bugun_tarih');
+            await prefs.remove('kaderkitabi_bugun_tarih');
+            await prefs.remove('dertortagi_bugun_tarih');
+            await prefs.remove('acigercekler_bugun_tarih');
+            // Numeroloji: tüm cache sıfırla (genel + yıl + bugün)
+            await prefs.remove('num_bugun_tarih');
+            await prefs.remove('num_bugun_metin');
+            await prefs.remove('num_bugun_unlock');
+            await prefs.remove('num_genel_done');
+            await prefs.remove('num_genel_metin');
+            await prefs.remove('num_genel_unlock');
+            final numYil = DateTime.now().year.toString();
+            await prefs.remove('num_yil_done');
+            await prefs.remove('num_yil_metin_$numYil');
+            await prefs.remove('num_yil_unlock_$numYil');
+            setPanelState(() => resetDone = true);
+          }
+
+          return Padding(
+            padding: const EdgeInsets.fromLTRB(20, 16, 20, 40),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(Icons.settings_rounded, color: Color(0xFFFFCC00), size: 18),
-                SizedBox(width: 8),
-                Text(
-                  'Admin Panel',
-                  style: TextStyle(
-                    color: Color(0xFFFFCC00),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+                // Tutma çubuğu
+                Center(
+                  child: Container(
+                    width: 40, height: 4,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFCC00).withValues(alpha: 0.5),
+                      borderRadius: BorderRadius.circular(2),
+                    ),
                   ),
                 ),
+                const SizedBox(height: 18),
+                // Başlık
+                const Row(
+                  children: [
+                    Icon(Icons.settings_rounded, color: Color(0xFFFFCC00), size: 18),
+                    SizedBox(width: 8),
+                    Text(
+                      'Admin Panel',
+                      style: TextStyle(
+                        color: Color(0xFFFFCC00),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                // Günlük Hakları Sıfırla butonu
+                GestureDetector(
+                  onTap: resetDone ? null : doReset,
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+                    decoration: BoxDecoration(
+                      color: resetDone
+                          ? const Color(0xFF003322)
+                          : const Color(0xFF00CCFF).withValues(alpha: 0.08),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: resetDone
+                            ? const Color(0xFF00FF88).withValues(alpha: 0.6)
+                            : const Color(0xFF00CCFF).withValues(alpha: 0.5),
+                        width: 1.2,
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(
+                          resetDone
+                              ? Icons.check_circle_outline_rounded
+                              : Icons.hourglass_empty_rounded,
+                          color: resetDone
+                              ? const Color(0xFF00FF88)
+                              : const Color(0xFF00CCFF),
+                          size: 20,
+                        ),
+                        const SizedBox(width: 12),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              resetDone
+                                  ? 'Günlük haklar sıfırlandı ✓'
+                                  : 'Günlük Hakları Sıfırla',
+                              style: TextStyle(
+                                color: resetDone
+                                    ? const Color(0xFF00FF88)
+                                    : Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            if (!resetDone)
+                              const Text(
+                                'Motivasyon, olumlama, özlü söz, tarot, kahve, astroloji',
+                                style: TextStyle(
+                                  color: Colors.white38,
+                                  fontSize: 11,
+                                ),
+                              ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
               ],
             ),
-            const SizedBox(height: 8),
-            ListTile(
-              leading: const Icon(Icons.hourglass_empty_rounded,
-                  color: Color(0xFF00CCFF)),
-              title: const Text('Günlük Hakları Sıfırla',
-                  style: TextStyle(color: Colors.white)),
-              subtitle: const Text('Motivasyon, olumlama, özlü söz',
-                  style: TextStyle(color: Colors.white38, fontSize: 12)),
-              onTap: () {
-                Navigator.pop(ctx);
-                _resetDailyLimits(context);
-              },
-            ),
-          ],
-        ),
-      ),
+          );
+        },
+        );
+      },
     );
-  }
-
-  Future<void> _resetDailyLimits(BuildContext context) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove('motivasyon_bugun_tarih');
-    await prefs.remove('olumlama_bugun_tarih');
-    await prefs.remove('ozlusoz_bugun_tarih');
-    await prefs.remove('tarot_bugun_tarih');
-    await prefs.remove('kahve_bugun_tarih');
-    await prefs.remove('astroloji_bugun_tarih');
-    if (context.mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Günlük haklar sıfırlandı ✓'),
-          duration: Duration(seconds: 2),
-        ),
-      );
-    }
   }
 
   Future<void> _confirmReset(BuildContext context, WidgetRef ref) async {

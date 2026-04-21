@@ -16,7 +16,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:uuid/uuid.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 
 // ── Motivasyon Metinleri ──────────────────────────────────────────────────────
@@ -40,10 +42,11 @@ class MotivationScreen extends ConsumerStatefulWidget {
 
 class _MotivationScreenState extends ConsumerState<MotivationScreen>
     with SingleTickerProviderStateMixin {
-  static const _prefKeyGosterilen = 'motivasyon_gosterilen_idler';
-  static const _prefKeyBugunTarih = 'motivasyon_bugun_tarih';
-  static const _prefKeyBugunId    = 'motivasyon_bugun_id';
-  static const _prefKeyBgIndex    = 'motivasyon_bg_index'; // 0 veya 1, sırayla değişir
+  static const _prefKeyGosterilen   = 'motivasyon_gosterilen_idler';
+  static const _prefKeyBugunTarih  = 'motivasyon_bugun_tarih';
+  static const _prefKeyBugunId     = 'motivasyon_bugun_id';
+  static const _prefKeyBgIndex     = 'motivasyon_bg_index'; // 0 veya 1, sırayla değişir
+  static const _prefKeyKaydedildi  = 'motivasyon_kaydedildi_tarih'; // bugün kaydedildi mi?
 
   static const List<String> _bgFiles = [
     'assets/images/bgkazan1.jpeg',
@@ -55,6 +58,8 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
   _MotivasyonEntry? _bugunEntry;
   String? _bgPath;
   bool _loading = true;
+  bool _kaydedildi = false;      // "kaydedildi" onay mesajı gösteriliyor mu?
+  bool _zatenKaydedildi = false; // bugün zaten kaydedildiyse buton pasif
 
   late AnimationController _animCtrl;
   late Animation<double> _fadeAnim;
@@ -126,11 +131,16 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
     final bgIndex = (lastBg + 1) % _bgFiles.length;
     await prefs.setInt(_prefKeyBgIndex, bgIndex);
 
+    // ── Bugün kaydet butonu kullanılmış mı? ──────────────────────────────
+    final kaydedildiTarih = prefs.getString(_prefKeyKaydedildi) ?? '';
+    final bugunZatenKaydedildi = kaydedildiTarih == bugunStr;
+
     if (!mounted) return;
     setState(() {
-      _bugunEntry = secilen;
-      _bgPath     = _bgFiles[bgIndex];
-      _loading    = false;
+      _bugunEntry       = secilen;
+      _bgPath           = _bgFiles[bgIndex];
+      _loading          = false;
+      _zatenKaydedildi  = bugunZatenKaydedildi;
     });
     _animCtrl.forward();
   }
@@ -187,6 +197,35 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
     );
   }
 
+  Future<void> _kaydet(String text) async {
+    if (_kaydedildi || _zatenKaydedildi) return;
+
+    final item = InboxItem(
+      id: const Uuid().v4(),
+      title: 'Motivasyon',
+      text: text,
+      date: DateTime.now().toIso8601String(),
+      fortuneTypeKey: 'motivation',
+    );
+    await ref.read(inboxProvider.notifier).addItem(item);
+
+    // Bugünün tarihini kaydet — bu günde bir daha kaydedilemez
+    final prefs = await SharedPreferences.getInstance();
+    final bugunStr = DateTime.now().toIso8601String().substring(0, 10);
+    await prefs.setString(_prefKeyKaydedildi, bugunStr);
+
+    if (!mounted) return;
+    setState(() {
+      _kaydedildi      = true;
+      _zatenKaydedildi = true;
+    });
+
+    await Future.delayed(const Duration(seconds: 5));
+    if (!mounted) return;
+    setState(() => _kaydedildi = false);
+    // _zatenKaydedildi = true olarak kalır — buton pasif
+  }
+
   Widget _buildContent(double topPad, double bottomPad) {
     final entry = _bugunEntry;
     if (entry == null) return const SizedBox.shrink();
@@ -241,7 +280,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
         // ── Metin ──────────────────────────────────────────────────────
         Expanded(
           child: SingleChildScrollView(
-            padding: EdgeInsets.fromLTRB(20, 24, 20, bottomPad + 24),
+            padding: const EdgeInsets.fromLTRB(20, 24, 20, 12),
             child: Container(
               width: double.infinity,
               padding: const EdgeInsets.fromLTRB(24, 22, 24, 22),
@@ -278,6 +317,114 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                 ],
               ),
             ),
+          ),
+        ),
+        // ── Alt alan: butonlar / onay mesajı ───────────────────────────
+        Padding(
+          padding: EdgeInsets.fromLTRB(20, 4, 20, bottomPad + 16),
+          child: AnimatedSwitcher(
+            duration: const Duration(milliseconds: 300),
+            child: _kaydedildi
+                ? SizedBox(
+                    key: const ValueKey('msg'),
+                    height: 52,
+                    child: Center(
+                      child: Text(
+                        'Gelen Kutusu\'na kaydedildi...',
+                        style: TextStyle(
+                          color: const Color(0xFFBB88FF).withValues(alpha: 0.9),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 0.3,
+                          shadows: [
+                            Shadow(
+                              color: const Color(0xFFBB88FF).withValues(alpha: 0.6),
+                              blurRadius: 10,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  )
+                : SizedBox(
+                    key: const ValueKey('btns'),
+                    height: 52,
+                    child: Row(
+                      children: [
+                        // Geri Git
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () => context.pop(),
+                            child: Container(
+                              height: 52,
+                              decoration: BoxDecoration(
+                                color: Colors.white.withValues(alpha: 0.08),
+                                borderRadius: BorderRadius.circular(14),
+                                border: Border.all(
+                                  color: Colors.white.withValues(alpha: 0.2),
+                                  width: 1,
+                                ),
+                              ),
+                              child: const Center(
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(Icons.chevron_left_rounded,
+                                        color: Colors.white, size: 20),
+                                    SizedBox(width: 2),
+                                    Text(
+                                      'Geri Git',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        // Kaydet
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: _zatenKaydedildi ? null : () => _kaydet(text),
+                            child: Opacity(
+                              opacity: _zatenKaydedildi ? 0.35 : 1.0,
+                              child: Container(
+                              height: 52,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                  colors: [Color(0xFF8B44FF), Color(0xFFBB66FF)],
+                                ),
+                                borderRadius: BorderRadius.circular(14),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color(0xFF8B44FF).withValues(alpha: 0.4),
+                                    blurRadius: 12,
+                                    spreadRadius: 1,
+                                  ),
+                                ],
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  'Kaydet',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            ),  // Opacity
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
           ),
         ),
       ],

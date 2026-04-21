@@ -58,14 +58,22 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   // ── Boyutlar ─────────────────────────────────────────────────────────────────
   static const double _traySize  = 280.0;
   static const double _innerSize =  56.0;
-  static const double _charH     = 150.0; // karakter görseli yüksekliği
+  static const double _charH     = 200.0; // karakter görseli yüksekliği
   static const double _bounceR   = _traySize / 2 - _innerSize / 2 - 6; // ≈ 102 px
 
   // ── Animasyon ────────────────────────────────────────────────────────────────
   late AnimationController _bounceCtrl;
-  // Karakter slide: tepsi arkasından tepsinin üstüne kayma
+  // Karakter slide: 0 → 1 (eased). Gerçek mesafe = _slideCtrl.value * _maxSlide
   late AnimationController _slideCtrl;
-  late Animation<double>   _slideAnim; // dy: 0 → -(tray/2 + char/2)
+  late Animation<double>   _slideAnim; // CurvedAnimation: 0.0 → 1.0
+  // _expandedH: LayoutBuilder'dan ölçülen Expanded yüksekliği.
+  // Hem _maxSlide hem _icericTopPad buradan türetilir.
+  double _expandedH = 400.0;
+
+  // Karakterin kayabileceği maksimum mesafe.
+  // +12 → karakter Expanded üst sınırını 12 px geçebilir (başlık alanına hafifçe girer).
+  double get _maxSlide =>
+      (_expandedH / 2 - _charH / 2 + 12).clamp(40.0, 300.0);
   // Metin kutusu nefes alıp veren kızıl ışıma
   late AnimationController _glowCtrl;
   late Animation<double>   _glowAnim;
@@ -86,10 +94,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
       vsync: this,
       duration: const Duration(milliseconds: 800),
     );
-    _slideAnim = Tween<double>(
-      begin: 0.0,
-      end: -(_traySize / 2 + _charH / 2),
-    ).animate(CurvedAnimation(parent: _slideCtrl, curve: Curves.easeOut));
+    _slideAnim = CurvedAnimation(parent: _slideCtrl, curve: Curves.easeOut);
     _glowCtrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 2800),
@@ -99,14 +104,14 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   }
 
   // ── Yol Hesaplama ─────────────────────────────────────────────────────────────
-  // Segment sayısı 4-6 arası rastgele.
+  // Segment sayısı 8-12 arası rastgele.
   // Her kenar noktasında saf bilardo yansıması + ±φ sapma uygulanır
   // (ilk kenar 30°, sonraki kenarlar 30-60° random).
   // P0: tepsi merkezinden 8px aşağıda başlar.
   void _calculateBounce() {
     final rng      = Random();
     const R        = _bounceR;
-    final segCount = 4 + rng.nextInt(3); // 4, 5 veya 6 segment
+    final segCount = 8 + rng.nextInt(5); // 8, 9, 10, 11 veya 12 segment
 
     // P0: başlangıç — tepsi merkezinin 8px altı
     const p0 = Offset(0, 8);
@@ -361,7 +366,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
           AnimatedBuilder(
             animation: _slideAnim,
             builder: (ctx, child) => Transform.translate(
-              offset: Offset(0, _slideAnim.value),
+              offset: Offset(0, -_slideAnim.value * _maxSlide),
               child: child,
             ),
             child: Image.asset(
@@ -398,6 +403,141 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
         ),
       ],
     );
+  }
+
+  // ── Kırmızı nefes alan çerçeveli metin kutusu (icerik adımı) ────────────────
+  Widget _buildGlowFrame() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: SingleChildScrollView(
+        child: AnimatedBuilder(
+          animation: _glowAnim,
+          builder: (ctx, child) {
+            final t = _glowAnim.value;
+            return Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(
+                  color: const Color(0xFFFF2200).withValues(alpha: 0.30 + t * 0.55),
+                  width: 1.5,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFFFF2200).withValues(alpha: 0.15 + t * 0.35),
+                    blurRadius: 8 + t * 16,
+                    spreadRadius: t * 4,
+                  ),
+                  BoxShadow(
+                    color: const Color(0xFF990000).withValues(alpha: 0.08 + t * 0.22),
+                    blurRadius: 20 + t * 28,
+                    spreadRadius: t * 7,
+                  ),
+                ],
+              ),
+              child: child,
+            );
+          },
+          child: Transform.translate(
+            offset: const Offset(0, -3),
+            child: Text(
+              _displayed,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: Colors.white, fontSize: 15, height: 1.65,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  // ── Kapat butonu ─────────────────────────────────────────────────────────────
+  Widget _buildCloseButton() {
+    return GestureDetector(
+      onTap: () => context.pop(),
+      child: Container(
+        height: 44,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          gradient: const LinearGradient(
+            colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
+          ),
+          border: Border.all(
+            color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
+            width: 1.5,
+          ),
+        ),
+        child: const Center(
+          child: Text(
+            'Kapat',
+            style: TextStyle(
+              color: Colors.white, fontSize: 15,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  // ── Alt bölüm: her adımda sabit 160 px → tray konumu hiç kayamaz ──────────
+  // hazir        → soru metni + "Geçirdim" butonu
+  // animasyon /
+  // karakterGiriyor → boş (alan rezerve edilmiş, içerik yok)
+  // icerik        → scroll metin kutusu + Kapat butonu
+  Widget _buildBottomSection() {
+    switch (_adim) {
+      case _TamuaAdim.hazir:
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(32, 16, 32, 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Aklından bir soru geçir...',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white70, fontSize: 16, height: 1.6,
+                  letterSpacing: 0.3,
+                ),
+              ),
+              const SizedBox(height: 16),
+              GestureDetector(
+                onTap: _startAnimation,
+                child: Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
+                    ),
+                    border: Border.all(
+                      color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
+                      width: 1.5,
+                    ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Geçirdim, hazırım...',
+                      style: TextStyle(
+                        color: Colors.white, fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+
+      default:
+        // animasyon / karakterGiriyor — boş ama 160 px yer rezerve edilmiş
+        return const SizedBox.expand();
+    }
   }
 
   @override
@@ -438,141 +578,38 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
                 child: Center(child: CircularProgressIndicator(color: Color(0xFFFF55FF))),
               )
 
-            // ── hazir/animasyon/karakterGiriyor: tepsi dikeyde ortalanmış ──
-            else if (_adim != _TamuaAdim.icerik) ...[
-              Expanded(child: Center(child: _buildTrayStack())),
-
-              // Soru + buton — hazir'da görünür, diğer adımlarda gizli ama
-              // yer kaplamaya devam eder (tepsi konumu kaymasın).
-              Visibility(
-                visible: _adim == _TamuaAdim.hazir,
-                maintainSize: true,
-                maintainAnimation: true,
-                maintainState: true,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Text(
-                        'Aklından bir soru geçir...',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white70, fontSize: 16, height: 1.6,
-                          letterSpacing: 0.3,
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      GestureDetector(
-                        onTap: _startAnimation,
-                        child: Container(
-                          height: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            gradient: const LinearGradient(
-                              colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-                            ),
-                            border: Border.all(
-                              color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                              width: 1.5,
-                            ),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              'Geçirdim, hazırım...',
-                              style: TextStyle(
-                                color: Colors.white, fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+            // ── icerik adımı ────────────────────────────────────────────────
+            // Tray kesin aynı koordinatta:
+            //   üstündeki boşluk = (_expandedH - _traySize) / 2  (Expanded+Center ile özdeş)
+            // Tray'den sonra kalan tüm alan Expanded'a verilir → metin kutusu
+            // tray alt kenarı ile kapat butonu arasında gerçek anlamda ortalalanır.
+            else if (_adim == _TamuaAdim.icerik) ...[
+              if (_expandedH > _traySize)
+                SizedBox(height: (_expandedH - _traySize) / 2),
+              Center(child: _buildTrayStack()),
+              Expanded(child: Center(child: _buildGlowFrame())),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+                child: _buildCloseButton(),
               ),
             ]
 
-            // ── icerik: tray yine Expanded+Center (konum sabit), altında metin ──
+            // ── hazir / animasyon / karakterGiriyor ─────────────────────────
+            // Tray her zaman Expanded+Center, alt bölüm sabit 160 px → konum sabit.
             else ...[
               Expanded(
-                child: Center(child: _buildTrayStack()),
-              ),
-              // Alt bölüm: soru/butonu ile aynı yükseklikte (Visibility ile rezerve
-              // edilen alan kadar) → tray pozisyonu değişmez.
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
-                child: SizedBox(
-                  height: 120, // soru metni + buton yüksekliğiyle eşit
-                  child: SingleChildScrollView(
-                    child: AnimatedBuilder(
-                      animation: _glowAnim,
-                      builder: (ctx, child) {
-                        final t = _glowAnim.value;
-                        return Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(14),
-                            border: Border.all(
-                              color: const Color(0xFFFF2200).withValues(alpha: 0.30 + t * 0.55),
-                              width: 1.5,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: const Color(0xFFFF2200).withValues(alpha: 0.15 + t * 0.35),
-                                blurRadius: 8 + t * 16,
-                                spreadRadius: t * 4,
-                              ),
-                              BoxShadow(
-                                color: const Color(0xFF990000).withValues(alpha: 0.08 + t * 0.22),
-                                blurRadius: 20 + t * 28,
-                                spreadRadius: t * 7,
-                              ),
-                            ],
-                          ),
-                          child: child,
-                        );
-                      },
-                      child: Text(
-                        _displayed,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          color: Colors.white, fontSize: 16, height: 1.7,
-                        ),
-                      ),
-                    ),
-                  ),
+                child: LayoutBuilder(
+                  builder: (ctx, bc) {
+                    if (_expandedH != bc.maxHeight) {
+                      WidgetsBinding.instance.addPostFrameCallback((_) {
+                        if (mounted) setState(() => _expandedH = bc.maxHeight);
+                      });
+                    }
+                    return Center(child: _buildTrayStack());
+                  },
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
-                child: GestureDetector(
-                  onTap: () => context.pop(),
-                  child: Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-                      ),
-                      border: Border.all(
-                        color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                        width: 1.5,
-                      ),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Kapat',
-                        style: TextStyle(
-                          color: Colors.white, fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              SizedBox(height: 160, child: _buildBottomSection()),
             ],
           ],
         ),

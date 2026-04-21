@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/utils/rich_text_parser.dart';
 import '../../data/models/inbox_item.dart';
 
 // Kart adı → asset yolu eşleştirmesi (tarot_screen._allCards ile birebir)
@@ -244,8 +245,8 @@ class InboxDetailScreen extends StatelessWidget {
                   ),
                   if (item.fortuneType == FortuneType.tarot)
                     const SizedBox(height: 24),
-                  // Fortune text
-                  SelectableText(
+                  // Fortune text — <color=X>...</color> tag'larını renklendir
+                  RichTextParser.build(
                     item.text,
                     style: AppTextStyles.bubbleText.copyWith(
                       height: 1.8,

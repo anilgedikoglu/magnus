@@ -31,6 +31,9 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+    <!-- Internet access (Claude Vision API + any HTTP call) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <!-- Camera and photo library permissions for coffee fortune -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

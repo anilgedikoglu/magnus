@@ -2237,6 +2237,13 @@ class SettingsScreen extends ConsumerWidget {
             await prefs.remove('kaderkitabi_bugun_tarih');
             await prefs.remove('dertortagi_bugun_tarih');
             await prefs.remove('acigercekler_bugun_tarih');
+            // Durugörü: 3 soru tipi (günlük tarih + gösterilen ID listesi)
+            await prefs.remove('durugoru_bno_tarih');
+            await prefs.remove('durugoru_yno_tarih');
+            await prefs.remove('durugoru_gno_tarih');
+            await prefs.remove('durugoru_bno_gosterilen');
+            await prefs.remove('durugoru_yno_gosterilen');
+            await prefs.remove('durugoru_gno_gosterilen');
             // Numeroloji: tüm cache sıfırla (genel + yıl + bugün)
             await prefs.remove('num_bugun_tarih');
             await prefs.remove('num_bugun_metin');

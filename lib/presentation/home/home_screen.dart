@@ -136,10 +136,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'tarot':       'tarot_bugun_tarih',
     'kahve':       'kahve_bugun_tarih',
     'astroloji':   'astroloji_bugun_tarih',
-    'kaderkitabi': 'kaderkitabi_bugun_tarih',
     'dertortagi':   'dertortagi_bugun_tarih',
-    'acigercekler': 'acigercekler_bugun_tarih',
+    // 'kaderkitabi', 'acigercekler' — limit ekran içinden yönetilir, balon çıkmaz
     // 'numeroloji' burada yok — limit ekran içinden yönetilir
+    // 'durugoru' — özel hesaplama (_refreshCredits içinde 3 alt tür kontrolü)
   };
 
   static const _fortuneDisplayNames = {
@@ -165,6 +165,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'kaderkitabi': 'Kader kitabının bugünkü sayfasını okudun.',
     'dertortagi':   'Bugün yeterince dertleştik.',
     'acigercekler': 'Bugün gerçeklerle yüzleştin.',
+    'durugoru':     'Bugünkü durugörü hakkın doldu.',
   };
 
   String get _today => DateTime.now().toIso8601String().substring(0, 10);
@@ -198,7 +199,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       _refreshCredits();
       _checkTarotSent();
       _checkKahveSent();
+      _checkDurugoruSent();
+      _precacheOzluSozBgs();
     });
+  }
+
+  void _precacheOzluSozBgs() {
+    const bgs = [
+      '08.jpeg','010.jpeg','011.jpeg','013.jpeg','015.jpeg',
+      '016.jpeg','017.jpeg','018.jpeg','041.jpeg','042.jpeg',
+    ];
+    for (final f in bgs) {
+      precacheImage(AssetImage('assets/images/ozlusoz_bgs/$f'), context);
+    }
   }
 
   void _checkTarotSent() {
@@ -216,6 +229,35 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         text: 'Tarot falını yorumlamaya başladım${name.isNotEmpty ? ' $name' : ''}.',
         gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
         borderColor: const Color(0xFFE8820C),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
+  void _checkDurugoruSent() {
+    final sent = ref.read(durugoruSentProvider);
+    if (!sent) return;
+    ref.read(durugoruSentProvider.notifier).state = false;
+    _refreshCredits();
+    final name = ref.read(userProfileProvider).name;
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'Durugörünü sürdürüyorum${name.isNotEmpty ? ' $name' : ''}...',
+        gradient: const [Color(0xFF063D3A), Color(0xFF0A5C57)],
+        borderColor: const Color(0xFF2ECCB8),
       ));
       _extraBubbles.add(_ExtraBubble(
         text: "Magnus'un ana menüsü karşında!",
@@ -287,6 +329,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ref.listenManual(kahveSentProvider, (_, sent) {
         if (sent) _checkKahveSent();
       });
+      ref.listenManual(durugoruSentProvider, (_, sent) {
+        if (sent) _checkDurugoruSent();
+      });
     }
   }
 
@@ -348,10 +393,17 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final prefs = await SharedPreferences.getInstance();
     final today = _today;
     if (!mounted) return;
+    // Durugörü: 3 alt tür — tümü kullanıldıysa 0, aksi 1
+    final bnoDate = prefs.getString('durugoru_bno_tarih') ?? '';
+    final ynoDate = prefs.getString('durugoru_yno_tarih') ?? '';
+    final gnoDate = prefs.getString('durugoru_gno_tarih') ?? '';
+    final durugoruKalan =
+        (bnoDate == today ? 0 : 1) + (ynoDate == today ? 0 : 1) + (gnoDate == today ? 0 : 1);
     setState(() {
       _remainingCredits = {
         for (final e in _creditPrefKeys.entries)
           e.key: (prefs.getString(e.value) == today) ? 0 : 1,
+        'durugoru': durugoruKalan > 0 ? 1 : 0,
       };
     });
   }
@@ -448,15 +500,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             -1, // badge yok — limit ekran içinden yönetilir
             () => _onFortuneItemTap('ozlusoz', '/ozlusoz')),
         _MenuItem('Acı Gerçekler', 'assets/images/acigercekler.PNG',
-            _remainingCredits['acigercekler'] ?? 1,
+            -1, // badge yok — limit ekran içinden yönetilir
             () => _onFortuneItemTap('acigercekler', '/acigercekler')),
         _MenuItem('Kader Kitabı', 'assets/images/tefeulyeni.png',
-            _remainingCredits['kaderkitabi'] ?? 1,
+            -1, // badge yok — limit ekran içinden yönetilir
             () => _onFortuneItemTap('kaderkitabi', '/kaderkitabi')),
         _MenuItem('Kehanet', 'assets/images/menu/kehanet.png', 1,
             () => _onFortuneItemTap('kehanet', '/kehanet')),
-        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 1,
-            () {}),
+        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png',
+            _remainingCredits['durugoru'] ?? 1,
+            () => _onFortuneItemTap('durugoru', '/durugoru')),
         _MenuItem('Niyet', 'assets/images/menu/mistikfallar.png', 1,
             () => context.push('/niyet')),
       ];
@@ -491,8 +544,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         _MenuItem('Numeroloji', 'assets/images/menu/numeroloji.png',
             -1, // badge yok — limit ekran içinden yönetilir
             () => _onFortuneItemTap('numeroloji', '/numeroloji')),
-        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 1,
-            () {}),
+        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png',
+            _remainingCredits['durugoru'] ?? 1,
+            () => _onFortuneItemTap('durugoru', '/durugoru')),
         _MenuItem('Yüz Falı', 'assets/images/menu/yuzfali.png', 1,
             () => context.push('/yuz_fali_kimin')),
         _MenuItem('Japon Falı', 'assets/images/japonfali.png', 1,

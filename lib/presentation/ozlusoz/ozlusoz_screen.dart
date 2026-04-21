@@ -48,18 +48,54 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
   int  _direction    = 1;
   bool _loading      = true;
   bool _limitVisible = false;
+  bool _textAtBottom = false;
   Timer? _limitTimer;
+  final _textScrollCtrl = ScrollController();
+
+  // Metin bu uzunluğu geçince scroll gerekiyor (ekranın %65'i dolduruyor)
+  static const _scrollThreshold = 280;
 
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _precacheAll());
+    _textScrollCtrl.addListener(_onTextScroll);
     _loadData();
+  }
+
+  void _onTextScroll() {
+    if (!_textScrollCtrl.hasClients) return;
+    final atBottom = _textScrollCtrl.position.pixels >=
+        _textScrollCtrl.position.maxScrollExtent - 4;
+    if (atBottom != _textAtBottom) setState(() => _textAtBottom = atBottom);
+  }
+
+  void _resetTextScroll() {
+    if (_textScrollCtrl.hasClients) _textScrollCtrl.jumpTo(0);
+    setState(() => _textAtBottom = false);
   }
 
   @override
   void dispose() {
     _limitTimer?.cancel();
+    _textScrollCtrl.removeListener(_onTextScroll);
+    _textScrollCtrl.dispose();
     super.dispose();
+  }
+
+  void _precacheAll() {
+    for (final file in _bgFiles) {
+      precacheImage(
+          AssetImage('assets/images/ozlusoz_bgs/$file'), context);
+    }
+  }
+
+  // Sonraki görseli önceden yükle
+  void _precacheNext(int nextIndex) {
+    if (_sessionBgs.isEmpty) return;
+    final bgIdx = _sessionBgs[nextIndex % _sessionBgs.length];
+    final path = 'assets/images/ozlusoz_bgs/${_bgFiles[bgIdx % _bgFiles.length]}';
+    precacheImage(AssetImage(path), context);
   }
 
   String? get _currentBg {
@@ -98,7 +134,9 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
         _sessionEntries = entries;
         _sessionBgs     = bgs;
         _loading        = false;
+        _textAtBottom   = false;
       });
+      _resetTextScroll();
       return;
     }
 
@@ -132,7 +170,9 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
       _sessionEntries = session;
       _sessionBgs     = sessionBgs;
       _loading        = false;
+      _textAtBottom   = false;
     });
+    _resetTextScroll();
   }
 
   void _next() {
@@ -143,15 +183,20 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
       _limitTimer = Timer(const Duration(seconds: 3), () {
         if (!mounted) return;
         setState(() { _limitVisible = false; _direction = 1; _index = 0; });
+        _precacheNext(1);
       });
       return;
     }
     setState(() { _direction = 1; _index++; });
+    _precacheNext(_index + 1);
+    _resetTextScroll();
   }
 
   void _prev() {
     if (_index <= 0) return;
     setState(() { _direction = -1; _index--; });
+    if (_index > 0) _precacheNext(_index - 1);
+    _resetTextScroll();
   }
 
   @override
@@ -168,21 +213,22 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            // ── Arka plan — yükleme öncesi de ilk görsel anında çıkar ──────────
-            AnimatedSwitcher(
-              duration: const Duration(milliseconds: 600),
-              child: Image.asset(
-                _currentBg ?? 'assets/images/ozlusoz_bgs/${_bgFiles[0]}',
-                key: ValueKey(_currentBg ?? '__default__'),
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: double.infinity,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) =>
-                    const ColoredBox(color: Color(0xFF0D0A20)),
+            // ── Arka plan — precache tamamlanınca şak gelir, crossfade ile geçer
+            if (_currentBg != null)
+              AnimatedSwitcher(
+                duration: const Duration(milliseconds: 600),
+                child: Image.asset(
+                  _currentBg!,
+                  key: ValueKey(_currentBg),
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity,
+                  alignment: Alignment.center,
+                  filterQuality: FilterQuality.high,
+                  errorBuilder: (_, __, ___) =>
+                      const ColoredBox(color: Color(0xFF0D0A20)),
+                ),
               ),
-            ),
 
             // ── Overlay ────────────────────────────────────────────────────────
             Container(
@@ -303,6 +349,10 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
                 ))
               : Center(key: curKey, child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+                  // Kart ekranı aşmasın; içerik fazlaysa text scroll olur
+                  constraints: BoxConstraints(
+                    maxHeight: MediaQuery.of(context).size.height * 0.65,
+                  ),
                   padding: const EdgeInsets.fromLTRB(24, 20, 24, 20),
                   decoration: BoxDecoration(
                     color: Colors.black.withValues(alpha: 0.80),
@@ -314,14 +364,42 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
                     Text('❝', style: TextStyle(fontSize: 38,
                         color: accent.withValues(alpha: 0.75), height: 1)),
                     const SizedBox(height: 8),
-                    Text(metin, textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white,
-                          fontSize: metin.length > 200 ? 15 : 17,
-                          height: 1.75, fontWeight: FontWeight.w300,
-                          letterSpacing: 0.3)),
+                    // Metin uzunsa kart içinde scroll — ince scrollbar ile
+                    Flexible(
+                      child: ScrollbarTheme(
+                        data: ScrollbarThemeData(
+                          thumbColor: WidgetStatePropertyAll(
+                              const Color(0xFFFF88CC).withValues(alpha: 0.75)),
+                          thickness: WidgetStatePropertyAll(3),
+                          radius: const Radius.circular(4),
+                          minThumbLength: 28,
+                          thumbVisibility: const WidgetStatePropertyAll(true),
+                          crossAxisMargin: -5, // 5px sağa kaydır
+                          mainAxisMargin: 24,  // üst/alttan kısalt → kısa thumb
+                        ),
+                        child: Scrollbar(
+                          controller: _textScrollCtrl,
+                          thumbVisibility: true,
+                          child: SingleChildScrollView(
+                            controller: _textScrollCtrl,
+                            padding: const EdgeInsets.only(right: 14),
+                            child: Text(metin, textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.white,
+                                  fontSize: metin.length > 200 ? 15 : 17,
+                                  height: 1.75, fontWeight: FontWeight.w300,
+                                  letterSpacing: 0.3)),
+                          ),
+                        ),
+                      ),
+                    ),
                     const SizedBox(height: 8),
-                    Text('❞', style: TextStyle(fontSize: 38,
-                        color: accent.withValues(alpha: 0.75), height: 1)),
+                    // Scroll gerekiyorsa ve hâlâ alta inmemişse aşağı ok göster
+                    if (metin.length > _scrollThreshold && !_textAtBottom)
+                      Icon(Icons.keyboard_arrow_down_rounded,
+                          color: accent.withValues(alpha: 0.75), size: 38)
+                    else
+                      Text('❞', style: TextStyle(fontSize: 38,
+                          color: accent.withValues(alpha: 0.75), height: 1)),
                     if (entry.yazar.isNotEmpty) ...[
                       const SizedBox(height: 12),
                       Container(height: 1, color: accent.withValues(alpha: 0.2)),

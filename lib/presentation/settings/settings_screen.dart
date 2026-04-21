@@ -2220,6 +2220,10 @@ class SettingsScreen extends ConsumerWidget {
             await prefs.remove('motivasyon_bugun_tarih');
             await prefs.remove('olumlama_bugun_tarih');   // limitsiz ama temizlik için
             await prefs.remove('ozlusoz_bugun_tarih');
+            await prefs.remove('ozlusoz_session_tarih');
+            await prefs.remove('ozlusoz_session_ids');
+            await prefs.remove('ozlusoz_session_bgs');
+            await prefs.remove('ozlusoz_gosterilen_idler');
             await prefs.remove('tarot_bugun_tarih');
             await prefs.remove('kahve_bugun_tarih');
             await prefs.remove('astroloji_bugun_tarih');

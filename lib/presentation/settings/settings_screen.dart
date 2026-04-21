@@ -2101,6 +2101,13 @@ class SettingsScreen extends ConsumerWidget {
               blurRadius: 14,
               offset: const Offset(0, 4),
             ),
+            // Çapraz ışık etkisi — sağ ve alt kenara yumuşak karartı
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.32),
+              blurRadius: 12,
+              spreadRadius: -2,
+              offset: const Offset(5, 6),
+            ),
           ],
         ),
         child: const Center(

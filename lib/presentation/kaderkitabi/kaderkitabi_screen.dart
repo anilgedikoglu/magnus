@@ -5,7 +5,7 @@
 // Metin motoru kuralları:
 //   • Koşullu filtreleme (cinsiyet, medeni_durum, meslek, iliski_durumu, yasmin/yasmax)
 //   • No-repeat + üst üste aynı metin yasağı
-//   • Günlük 1 hak: aynı gün aynı metin
+//   • Günlük 1 hak: aynı gün aynı metin; 2. ziyarette son metin tekrar gösterilir
 //   • VariableReplacer ile render
 
 import 'dart:convert';
@@ -43,10 +43,10 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
   static const _prefKeyGosterilen = 'kaderkitabi_gosterilen';
   static const _prefKeyBugunTarih = 'kaderkitabi_bugun_tarih';
   static const _prefKeyBugunId    = 'kaderkitabi_bugun_id';
+  static const _prefKeySonMetin   = 'kaderkitabi_son_metin';
 
   String? _metin;
-  bool    _loading  = true;
-  bool    _hakDoldu = false;
+  bool    _loading = true;
 
   @override
   void initState() {
@@ -94,6 +94,14 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
     final bugunStr = DateTime.now().toIso8601String().substring(0, 10);
     final profile  = ref.read(userProfileProvider);
 
+    // Aynı gün ve daha önce içerik gösterildiyse tekrar göster
+    final sonMetin = prefs.getString(_prefKeySonMetin) ?? '';
+    if ((prefs.getString(_prefKeyBugunTarih) ?? '') == bugunStr && sonMetin.isNotEmpty) {
+      if (!mounted) return;
+      setState(() { _metin = sonMetin; _loading = false; });
+      return;
+    }
+
     final raw      = await rootBundle.loadString('assets/data/kaderkitabi.json');
     final data     = jsonDecode(raw) as Map<String, dynamic>;
     final tumListe = (data['kaderkitabi'] as List).map((e) {
@@ -107,16 +115,11 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
       );
     }).toList();
 
-    final uygunListe = tumListe.where((e) => _tumKosullarUygun(e.kosullar, profile)).toList();
+    final uygunListe = tumListe
+        .where((e) => _tumKosullarUygun(e.kosullar, profile))
+        .toList();
 
-    // Aynı gün → hak doldu
-    if ((prefs.getString(_prefKeyBugunTarih) ?? '') == bugunStr) {
-      if (!mounted) return;
-      setState(() { _hakDoldu = true; _loading = false; });
-      return;
-    }
-
-    // No-repeat seçim (üst üste aynı metin yasağı)
+    // No-repeat seçim
     List<String> gosterilen = prefs.getStringList(_prefKeyGosterilen) ?? [];
     var kalan = uygunListe.where((e) => !gosterilen.contains('${e.id}')).toList();
 
@@ -136,6 +139,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
     await prefs.setInt(_prefKeyBugunId, secilen.id);
 
     final rendered = VariableReplacer.replace(secilen.metin, profile.toVariableMap());
+    await prefs.setString(_prefKeySonMetin, rendered);
 
     if (!mounted) return;
     setState(() { _metin = rendered; _loading = false; });
@@ -145,15 +149,12 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final bottomPad = MediaQuery.of(context).padding.bottom;
-
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Arka plan
           Image.asset(
             'assets/images/ozlusoz_bg.png',
             fit: BoxFit.cover,
@@ -161,36 +162,25 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
             filterQuality: FilterQuality.high,
             errorBuilder: (_, __, ___) => Container(color: const Color(0xFF0D0A1A)),
           ),
-          // Koyu overlay
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xAA000000),
-                  Color(0x55000000),
-                  Color(0xAA000000),
-                ],
+                colors: [Color(0xAA000000), Color(0x55000000), Color(0xAA000000)],
               ),
             ),
           ),
-          // İçerik
           SafeArea(
-            bottom: false,
-            child: Column(
-              children: [
-                _buildHeader(context),
-                Expanded(
-                  child: _loading
-                      ? const Center(child: CircularProgressIndicator(
-                          color: Color(0xFFD4AF37), strokeWidth: 2))
-                      : _hakDoldu
-                          ? _buildHakDoldu()
-                          : _buildContent(bottomPad),
-                ),
-              ],
-            ),
+            child: Column(children: [
+              _buildHeader(context),
+              Expanded(
+                child: _loading
+                    ? const Center(child: CircularProgressIndicator(
+                        color: Color(0xFFD4AF37), strokeWidth: 2))
+                    : _buildContent(context),
+              ),
+            ]),
           ),
         ],
       ),
@@ -202,127 +192,66 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
   Widget _buildHeader(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(12, 10, 12, 0),
-      child: Row(
-        children: [
-          GestureDetector(
-            onTap: () => context.pop(),
-            child: Container(
-              width: 38, height: 38,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.08),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  color: const Color(0xFFD4AF37).withValues(alpha: 0.4), width: 1),
-              ),
-              child: const Icon(
-                Icons.arrow_back_ios_new_rounded,
-                color: Color(0xFFD4AF37),
-                size: 18,
-              ),
+      child: Row(children: [
+        GestureDetector(
+          onTap: () => context.pop(),
+          child: Container(
+            width: 38, height: 38,
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.08),
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(
+                color: const Color(0xFFD4AF37).withValues(alpha: 0.4), width: 1),
             ),
-          ),
-          Expanded(
-            child: Center(
-              child: Text(
-                'KADER KİTABI',
-                style: GoogleFonts.cinzel(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xFFD4AF37),
-                  letterSpacing: 4,
-                  shadows: const [
-                    Shadow(color: Color(0xAAD4AF37), blurRadius: 16),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(width: 38),
-        ],
-      ),
-    );
-  }
-
-  // ─── Hak Doldu ───────────────────────────────────────────────────────────
-
-  Widget _buildHakDoldu() {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Container(
-          padding: const EdgeInsets.all(28),
-          decoration: BoxDecoration(
-            color: const Color(0xFF1A0E2E).withValues(alpha: 0.9),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: const Color(0xFFD4AF37).withValues(alpha: 0.4), width: 1.2),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text('📖', style: TextStyle(fontSize: 44)),
-              const SizedBox(height: 16),
-              Text(
-                'Kader kitabının bugünkü\nsayfasını okudun.',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.cinzel(
-                  fontSize: 15,
-                  color: const Color(0xFFD4AF37),
-                  height: 1.6,
-                ),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                'Yarın yeni bir sayfa açılacak.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white.withValues(alpha: 0.4),
-                  fontSize: 13,
-                ),
-              ),
-            ],
+            child: const Icon(Icons.arrow_back_ios_new_rounded,
+                color: Color(0xFFD4AF37), size: 18),
           ),
         ),
-      ),
+        Expanded(
+          child: Center(
+            child: Text('KADER KİTABI',
+              style: GoogleFonts.cinzel(
+                fontSize: 18, fontWeight: FontWeight.bold,
+                color: const Color(0xFFD4AF37), letterSpacing: 4,
+                shadows: const [Shadow(color: Color(0xAAD4AF37), blurRadius: 16)],
+              )),
+          ),
+        ),
+        const SizedBox(width: 38),
+      ]),
     );
   }
 
   // ─── Metin içeriği ────────────────────────────────────────────────────────
 
-  Widget _buildContent(double bottomPad) {
+  Widget _buildContent(BuildContext context) {
     final metin = _metin ?? '';
-    return ListView(
-      padding: EdgeInsets.fromLTRB(20, 16, 20, bottomPad + 24),
-      children: [
-        Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            gradient: const LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [Color(0xFFF5ECD7), Color(0xFFEDD9A3)],
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFFD4AF37).withValues(alpha: 0.25),
-                blurRadius: 30,
-                spreadRadius: 4,
-                offset: const Offset(0, 6),
+    return Center(
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          // Kitap kutusu — dikeyde ortalı
+          Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              gradient: const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Color(0xFFF5ECD7), Color(0xFFEDD9A3)],
               ),
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.5),
-                blurRadius: 20,
-                offset: const Offset(0, 10),
-              ),
-            ],
-            border: Border.all(
-              color: const Color(0xFFB8960C).withValues(alpha: 0.6),
-              width: 1.5,
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xFFD4AF37).withValues(alpha: 0.25),
+                  blurRadius: 30, spreadRadius: 4, offset: const Offset(0, 6)),
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.5),
+                  blurRadius: 20, offset: const Offset(0, 10)),
+              ],
+              border: Border.all(
+                color: const Color(0xFFB8960C).withValues(alpha: 0.6), width: 1.5),
             ),
-          ),
-          child: Stack(
-            children: [
+            child: Stack(children: [
               // Sol cilt gölgesi
               Positioned(
                 left: 0, top: 0, bottom: 0,
@@ -343,36 +272,52 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
               ),
               // Metin
               Padding(
-                padding: const EdgeInsets.fromLTRB(26, 28, 26, 28),
-                child: Text(
-                  metin,
+                padding: const EdgeInsets.fromLTRB(26, 28, 26, 36),
+                child: Text(metin,
                   textAlign: TextAlign.justify,
                   style: const TextStyle(
-                    color: Color(0xFF2C1A0A),
-                    fontSize: 15,
-                    height: 1.85,
-                    fontWeight: FontWeight.w400,
-                    letterSpacing: 0.2,
-                  ),
-                ),
+                    color: Color(0xFF2C1A0A), fontSize: 15,
+                    height: 1.85, fontWeight: FontWeight.w400, letterSpacing: 0.2,
+                  )),
               ),
               // Alt süsleme
               Positioned(
                 bottom: 10, left: 0, right: 0,
                 child: Center(
-                  child: Text(
-                    '✦',
+                  child: Text('✦',
                     style: TextStyle(
                       fontSize: 12,
-                      color: const Color(0xFF8B6914).withValues(alpha: 0.7),
-                    ),
-                  ),
+                      color: const Color(0xFF8B6914).withValues(alpha: 0.7))),
                 ),
               ),
-            ],
+            ]),
           ),
-        ),
-      ],
+          const SizedBox(height: 20),
+          // Kapat butonu
+          GestureDetector(
+            onTap: () => context.pop(),
+            child: Container(
+              width: double.infinity,
+              height: 48,
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [Color(0xFFB8960C), Color(0xFF8B6914)],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                ),
+                borderRadius: BorderRadius.circular(24),
+                border: Border.all(
+                    color: const Color(0xFFD4AF37).withValues(alpha: 0.8), width: 1.5),
+              ),
+              child: const Center(
+                child: Text('Kapat',
+                  style: TextStyle(color: Colors.white, fontSize: 15,
+                      fontWeight: FontWeight.w600, letterSpacing: 0.5)),
+              ),
+            ),
+          ),
+        ]),
+      ),
     );
   }
 }

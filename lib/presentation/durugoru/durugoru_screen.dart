@@ -242,7 +242,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
             ] else ...[
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32),
-                child: Text('Geleceğe hangi pencereden bakmak istiyorsun?',
+                child: Text('Nasıl ilerleyelim?',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white70, fontSize: 15,
                       height: 1.55, fontStyle: FontStyle.italic)),
@@ -258,11 +258,39 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
                   ],
                 ),
               ),
+              const SizedBox(height: 32),
+              _buildGeriButon(),
             ],
           ],
         ),
       ),
     ]);
+  }
+
+  Widget _buildGeriButon() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32),
+      child: GestureDetector(
+        onTap: () => context.pop(),
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          decoration: BoxDecoration(
+            color: Colors.white.withValues(alpha: 0.10),
+            borderRadius: BorderRadius.circular(23),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
+          ),
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+              SizedBox(width: 2),
+              Text('Geri Git', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   Widget _buildSoruButon(_SoruTipi tip) {
@@ -277,7 +305,6 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
             opacity: kullanildi ? 0.38 : 1.0,
             duration: const Duration(milliseconds: 300),
             child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
               decoration: BoxDecoration(
                 color: kullanildi
                     ? Colors.white.withValues(alpha: 0.05)
@@ -299,32 +326,39 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Image.asset(
-                    tip.ikonAsset,
-                    width: 72,
-                    height: 72,
-                    fit: BoxFit.contain,
-                    errorBuilder: (_, __, ___) => const Icon(
-                      Icons.remove_red_eye_outlined,
-                      color: Color(0xFF4DBBCC),
-                      size: 52,
+                  ClipRRect(
+                    borderRadius: const BorderRadius.vertical(top: Radius.circular(17)),
+                    child: Image.asset(
+                      tip.ikonAsset,
+                      width: double.infinity,
+                      fit: BoxFit.fitWidth,
+                      errorBuilder: (_, __, ___) => const SizedBox(
+                        height: 80,
+                        child: Icon(Icons.remove_red_eye_outlined,
+                            color: Color(0xFF4DBBCC), size: 52),
+                      ),
                     ),
                   ),
-                  const SizedBox(height: 12),
-                  Text(
-                    tip.soru,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: kullanildi ? Colors.white38 : Colors.white,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w400,
-                      height: 1.4,
+                  const SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(6, 0, 6, 12),
+                    child: Text(
+                      tip.soru,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: kullanildi ? Colors.white38 : Colors.white,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w400,
+                        height: 1.4,
+                      ),
                     ),
                   ),
                   if (kullanildi) ...[
-                    const SizedBox(height: 8),
-                    const Icon(Icons.check_circle_outline_rounded,
-                        color: Colors.white30, size: 18),
+                    const Padding(
+                      padding: EdgeInsets.only(bottom: 10),
+                      child: Icon(Icons.check_circle_outline_rounded,
+                          color: Colors.white30, size: 16),
+                    ),
                   ],
                 ],
               ),

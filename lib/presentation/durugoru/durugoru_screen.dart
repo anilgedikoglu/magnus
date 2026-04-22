@@ -256,25 +256,26 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
           ],
         ),
       ),
-      // Geri Git — ekranın en altında küçük
+      // Geri Git — dert ortağı standardı
       SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(48, 8, 48, 12),
+          padding: const EdgeInsets.fromLTRB(20, 8, 20, 18),
           child: GestureDetector(
             onTap: () => context.pop(),
             child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 9),
+              width: double.infinity,
+              height: 46,
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.08),
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: Colors.white.withValues(alpha: 0.18)),
+                color: Colors.white.withValues(alpha: 0.10),
+                borderRadius: BorderRadius.circular(23),
+                border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
               ),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.chevron_left_rounded, color: Colors.white70, size: 18),
+                  Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
                   SizedBox(width: 2),
-                  Text('Geri Git', style: TextStyle(color: Colors.white70, fontSize: 13, fontWeight: FontWeight.w400)),
+                  Text('Geri Git', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500)),
                 ],
               ),
             ),

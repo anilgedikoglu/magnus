@@ -38,8 +38,36 @@ Uygulamada nerede "Geri Git" butonu varsa aşağıdaki standart uygulanır:
 - **Border:** `Colors.white.withValues(alpha: 0.25)`
 - **Border radius:** `BorderRadius.circular(14)` (tam genişlik buton için 23 de olabilir)
 
+**Alt kısma tam genişlik Geri Git butonu (dert ortağı standardı):**
 ```dart
-// Standart Geri Git butonu örneği (motivasyon ekranındaki)
+// Referans: dertortagi_screen.dart → _buildAltGeriButonu()
+Padding(
+  padding: const EdgeInsets.fromLTRB(20, 8, 20, 18),
+  child: GestureDetector(
+    onTap: () => context.pop(),
+    child: Container(
+      width: double.infinity,
+      height: 46,
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.10),
+        borderRadius: BorderRadius.circular(23),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
+      ),
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+          SizedBox(width: 2),
+          Text('Geri Git', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500)),
+        ],
+      ),
+    ),
+  ),
+)
+```
+
+**Küçük satır içi Geri Git (başlık bölgesinde):**
+```dart
 Row(
   mainAxisSize: MainAxisSize.min,
   children: [

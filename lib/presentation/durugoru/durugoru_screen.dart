@@ -22,18 +22,19 @@ import '../../data/providers.dart';
 // ─── Soru türleri ─────────────────────────────────────────────────────────────
 
 enum _SoruTipi {
-  bugun('bno', 'Bugün neler olacak?',    'Durugörü — Bugün',   'assets/data/durugoru_bno.json', 'durugoru_bno'),
-  yarin('yno', 'Yarın neler olacak?',    'Durugörü — Yarın',   'assets/data/durugoru_yno.json', 'durugoru_yno'),
-  gelecek('gno','Gelecekte neler olacak?','Durugörü — Gelecek','assets/data/durugoru_gno.json', 'durugoru_gno');
+  bugun('bno', 'Bugün neler olacak?',    'Durugörü — Bugün',   'assets/data/durugoru_bno.json', 'durugoru_bno', 'assets/images/Yeniikonlar/bugun.png'),
+  yarin('yno', 'Yarın neler olacak?',    'Durugörü — Yarın',   'assets/data/durugoru_yno.json', 'durugoru_yno', 'assets/images/Yeniikonlar/yarin.png'),
+  gelecek('gno','Gelecekte neler olacak?','Durugörü — Gelecek','assets/data/durugoru_gno.json', 'durugoru_gno', 'assets/images/Yeniikonlar/gelecek.png');
 
-  const _SoruTipi(this.key, this.soru, this.inboxBaslik, this.jsonAsset, this.prefPrefix);
+  const _SoruTipi(this.key, this.soru, this.inboxBaslik, this.jsonAsset, this.prefPrefix, this.ikonAsset);
   final String key;
   final String soru;
   final String inboxBaslik;
   final String jsonAsset;
   final String prefPrefix;
+  final String ikonAsset;
 
-  String get tarihKey     => '${prefPrefix}_tarih';
+  String get tarihKey      => '${prefPrefix}_tarih';
   String get gosterilenKey => '${prefPrefix}_gosterilen';
 }
 
@@ -241,16 +242,22 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
             ] else ...[
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32),
-                child: Text('Geleceğe hangi penceresinden bakmak istiyorsun?',
+                child: Text('Geleceğe hangi pencereden bakmak istiyorsun?',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white70, fontSize: 15,
                       height: 1.55, fontStyle: FontStyle.italic)),
               ),
-              const SizedBox(height: 32),
-              for (final tip in _SoruTipi.values) ...[
-                _buildSoruButon(tip),
-                const SizedBox(height: 14),
-              ],
+              const SizedBox(height: 28),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    for (final tip in _SoruTipi.values)
+                      _buildSoruButon(tip),
+                  ],
+                ),
+              ),
             ],
           ],
         ),
@@ -261,52 +268,67 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
   Widget _buildSoruButon(_SoruTipi tip) {
     final kullanildi = _kullanildi[tip] == true;
     const accent = Color(0xFF4DBBCC);
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
-      child: GestureDetector(
-        onTap: kullanildi ? null : () => _soruyuSec(tip),
-        child: AnimatedOpacity(
-          opacity: kullanildi ? 0.38 : 1.0,
-          duration: const Duration(milliseconds: 300),
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-            decoration: BoxDecoration(
-              color: kullanildi
-                  ? Colors.white.withValues(alpha: 0.05)
-                  : Colors.black.withValues(alpha: 0.45),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: GestureDetector(
+          onTap: kullanildi ? null : () => _soruyuSec(tip),
+          child: AnimatedOpacity(
+            opacity: kullanildi ? 0.38 : 1.0,
+            duration: const Duration(milliseconds: 300),
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+              decoration: BoxDecoration(
                 color: kullanildi
-                    ? Colors.white.withValues(alpha: 0.10)
-                    : accent.withValues(alpha: 0.50),
-                width: 1.2,
-              ),
-              boxShadow: kullanildi ? null : [
-                BoxShadow(
-                  color: accent.withValues(alpha: 0.15),
-                  blurRadius: 16, spreadRadius: 2,
+                    ? Colors.white.withValues(alpha: 0.05)
+                    : Colors.black.withValues(alpha: 0.45),
+                borderRadius: BorderRadius.circular(18),
+                border: Border.all(
+                  color: kullanildi
+                      ? Colors.white.withValues(alpha: 0.10)
+                      : accent.withValues(alpha: 0.45),
+                  width: 1.2,
                 ),
-              ],
+                boxShadow: kullanildi ? null : [
+                  BoxShadow(
+                    color: accent.withValues(alpha: 0.15),
+                    blurRadius: 16, spreadRadius: 2,
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset(
+                    tip.ikonAsset,
+                    width: 72,
+                    height: 72,
+                    fit: BoxFit.contain,
+                    errorBuilder: (_, __, ___) => const Icon(
+                      Icons.remove_red_eye_outlined,
+                      color: Color(0xFF4DBBCC),
+                      size: 52,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    tip.soru,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: kullanildi ? Colors.white38 : Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w400,
+                      height: 1.4,
+                    ),
+                  ),
+                  if (kullanildi) ...[
+                    const SizedBox(height: 8),
+                    const Icon(Icons.check_circle_outline_rounded,
+                        color: Colors.white30, size: 18),
+                  ],
+                ],
+              ),
             ),
-            child: Row(children: [
-              Icon(
-                kullanildi ? Icons.check_circle_outline_rounded : Icons.remove_red_eye_outlined,
-                color: kullanildi ? Colors.white30 : accent,
-                size: 22,
-              ),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Text(tip.soru,
-                  style: TextStyle(
-                    color: kullanildi ? Colors.white38 : Colors.white,
-                    fontSize: 15, fontWeight: FontWeight.w400, height: 1.3,
-                  )),
-              ),
-              if (!kullanildi)
-                Icon(Icons.arrow_forward_ios_rounded,
-                    color: accent.withValues(alpha: 0.6), size: 14),
-            ]),
           ),
         ),
       ),

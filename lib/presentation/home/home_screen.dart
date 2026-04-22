@@ -524,10 +524,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             1, () => context.push('/biyoritim')),
         _MenuItem('Doğum Haritası', 'assets/images/dogum.png',
             1, () => context.push('/dogumharitasi')),
-        _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',
-            1, () {}),
-        // 5 yer tutucu — ikon eklendikçe buralar dolacak
-        ...List.generate(5, (_) =>
+        // 6 yer tutucu — ikon eklendikçe buralar dolacak
+        ...List.generate(6, (_) =>
             _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {})),
       ];
 

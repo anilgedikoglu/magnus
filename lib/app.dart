@@ -37,6 +37,7 @@ import 'presentation/kehanet/niyet_screen.dart';
 import 'presentation/kehanet/yuz_fali_kimin_screen.dart';
 import 'presentation/kehanet/yuz_fali_foto_screen.dart';
 import 'presentation/durugoru/durugoru_screen.dart';
+import 'presentation/kadercarki/kadercarki_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 final _homeKey = GlobalKey<NavigatorState>(debugLabel: 'home');
@@ -160,6 +161,18 @@ final routerProvider = Provider<GoRouter>((ref) {
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
             child: child,
           ),
+        ),
+      ),
+      GoRoute(
+        path: '/kadercarki',
+        parentNavigatorKey: _rootKey,
+        pageBuilder: (_, __) => CustomTransitionPage(
+          child: const KaderCarkiScreen(),
+          transitionsBuilder: (_, anim, __, child) => FadeTransition(
+            opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
+            child: child,
+          ),
+          transitionDuration: const Duration(milliseconds: 350),
         ),
       ),
       GoRoute(

@@ -544,7 +544,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             -1, // badge yok — limit ekran içinden yönetilir
             () => _onFortuneItemTap('numeroloji', '/numeroloji')),
         _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',
-            1, () {}),
+            1, () => context.push('/kadercarki')),
         _MenuItem('Yüz Falı', 'assets/images/menu/yuzfali.png', 1,
             () => context.push('/yuz_fali_kimin')),
         _MenuItem('Japon Falı', 'assets/images/japonfali.png', 1,

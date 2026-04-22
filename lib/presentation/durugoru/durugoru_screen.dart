@@ -240,14 +240,8 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
                 style: TextStyle(color: Colors.white.withValues(alpha: 0.35),
                     fontSize: 13)),
             ] else ...[
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 32),
-                child: Text('Nasıl ilerleyelim?',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white70, fontSize: 15,
-                      height: 1.55, fontStyle: FontStyle.italic)),
-              ),
-              const SizedBox(height: 28),
+              _buildMagnusBalon('Nasıl ilerleyelim?'),
+              const SizedBox(height: 24),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -258,37 +252,90 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
                   ],
                 ),
               ),
-              const SizedBox(height: 32),
-              _buildGeriButon(),
             ],
           ],
+        ),
+      ),
+      // Geri Git — ekranın en altında küçük
+      SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(48, 8, 48, 12),
+          child: GestureDetector(
+            onTap: () => context.pop(),
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 9),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.08),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: Colors.white.withValues(alpha: 0.18)),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.chevron_left_rounded, color: Colors.white70, size: 18),
+                  SizedBox(width: 2),
+                  Text('Geri Git', style: TextStyle(color: Colors.white70, fontSize: 13, fontWeight: FontWeight.w400)),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     ]);
   }
 
-  Widget _buildGeriButon() {
+  Widget _buildMagnusBalon(String metin) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
-      child: GestureDetector(
-        onTap: () => context.pop(),
-        child: Container(
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(vertical: 14),
-          decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(23),
-            border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          // Magnus yuvarlağı
+          Container(
+            width: 36,
+            height: 36,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: const Color(0xFFAA88FF), width: 1.5),
+            ),
+            child: ClipOval(
+              child: Image.asset(
+                'assets/images/magnusicon.png',
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) => Container(
+                  color: const Color(0xFF4835A6),
+                  child: const Center(child: Text('M', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16))),
+                ),
+              ),
+            ),
           ),
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              SizedBox(width: 2),
-              Text('Geri Git', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
-            ],
+          const SizedBox(width: 10),
+          // Konuşma balonu
+          Flexible(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    const Color(0xFF6633CC).withValues(alpha: 0.85),
+                    const Color(0xFF4422AA).withValues(alpha: 0.85),
+                  ],
+                ),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  topRight: Radius.circular(16),
+                  bottomRight: Radius.circular(16),
+                  bottomLeft: Radius.circular(4),
+                ),
+                border: Border.all(color: const Color(0xFFAA88FF).withValues(alpha: 0.40), width: 1),
+              ),
+              child: Text(
+                metin,
+                style: const TextStyle(color: Colors.white, fontSize: 14, height: 1.45),
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

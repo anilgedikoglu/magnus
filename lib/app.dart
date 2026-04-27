@@ -36,6 +36,7 @@ import 'presentation/kehanet/yana_screen.dart';
 import 'presentation/kehanet/niyet_screen.dart';
 import 'presentation/kehanet/yuz_fali_kimin_screen.dart';
 import 'presentation/kehanet/yuz_fali_foto_screen.dart';
+import 'presentation/durugoru/durugoru_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 final _homeKey = GlobalKey<NavigatorState>(debugLabel: 'home');
@@ -280,6 +281,17 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         builder: (_, state) =>
             YuzFaliFotoScreen(kimin: state.extra as String? ?? 'kullanici'),
+      ),
+      GoRoute(
+        path: '/durugoru',
+        parentNavigatorKey: _rootKey,
+        pageBuilder: (_, __) => CustomTransitionPage(
+          child: const DurugoruScreen(),
+          transitionsBuilder: (_, anim, __, child) => FadeTransition(
+            opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
+            child: child,
+          ),
+        ),
       ),
       GoRoute(
         path: '/inbox-full',

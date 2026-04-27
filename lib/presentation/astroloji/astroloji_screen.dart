@@ -350,32 +350,29 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
     );
   }
 
-  // ─── Geri Dön butonu ──────────────────────────────────────────────────────────
-
   Widget _buildBackButton() {
-    const accent = Color(0xFFBB88FF);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: GestureDetector(
         onTap: () => context.pop(),
         child: Container(
           width: double.infinity,
-          height: 44,
+          height: 48,
           decoration: BoxDecoration(
-            color: accent.withValues(alpha: 0.12),
-            border: Border.all(color: accent.withValues(alpha: 0.6), width: 1.2),
-            borderRadius: BorderRadius.circular(10),
+            color: Colors.white.withValues(alpha: 0.10),
+            borderRadius: BorderRadius.circular(23),
+            border: Border.all(
+              color: Colors.white.withValues(alpha: 0.25), width: 1.2),
           ),
-          child: const Center(
-            child: Text(
-              'Geri Dön',
-              style: TextStyle(
-                color: accent,
-                fontSize: 15,
-                fontWeight: FontWeight.w600,
-                letterSpacing: 1,
-              ),
-            ),
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+              SizedBox(width: 2),
+              Text('Geri Git',
+                style: TextStyle(color: Colors.white, fontSize: 15,
+                    fontWeight: FontWeight.w500)),
+            ],
           ),
         ),
       ),

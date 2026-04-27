@@ -1,0 +1,327 @@
+{
+  "durugoru_gno": [
+    {
+      "id": 1,
+      "metin": "Geleceğine odaklandığımda, seni {{ay_5}} ayında tabelaları yeni değişmiş bir dükkanın önünde görüyorum {{isim}}. Dükkan yeni açılmış ya da eski yerinden oraya taşınmış gibi. Kapının önünde bir sandalyede oturuyorsun. Karşında ise {{fiziki}} biri var. Bu kişi sana bazı haberler veriyor. Gülümseyişin, duyduklarına sevindiğin anlamına geliyor. Senin için bir fırsatın doğduğunu öğreniyorsun. Bu fırsatı değerlendirecek ve hayatında güzel bir değişiklik yapacaksın. Seni çok sevdiğini düşündüğüm bu kişinin, mutluluğunda önemli bir payı olacak.",
+      "kosullar": []
+    },
+    {
+      "id": 2,
+      "metin": "Geleceğine odaklandığımda, senin için yakın tarihli bir dönüm noktası görüyorum {{isim}}. Elindeki çalı süpürgesiyle evinin önüne dökülen yaprakları süpüren biri var. Bu sensin. {{ay_+2}} ayının sonlarına doğru geçmişine dair bir temizlik yapacak, hayatından bazı insanları uzaklaştırırken, birini de yeniden hayatının merkezine alacaksın. Küslük olmamasına rağmen aranızın açık olduğu ve adında {{harf}} ya da {{harf}} harfi bulunduran bu kişi ile yeniden görüşmeye başladıktan sonra, 2 ayrı konuda işlerin yolunda gitmeye başlayacak.",
+      "kosullar": []
+    },
+    {
+      "id": 3,
+      "metin": "Senin hayatında, ayak numarası büyük biri var. Bu bir erkek. Geleceğine odaklandığımda, bu erkekle yan yana yürüdüğünüzü görüyorum. Senden habersiz sana doğru dönüp dönüp bakıyor. Sana karşı büyük ve derin bir sevgi beslediğine eminim. Ona pek çok yardımın olmuş ve sana bu anlamda çok minnettar. {{kelime, Açık | Koyu}} kumral ve renkli gözlü olduğunu tahmin ettiğim bu erkek bizzat hiçbir şey yapmamasına rağmen senin için güzel bir şeye vesile olacak. \"İyi ki onu seviyorum ve onun bugüne dek yanında oldum\" diyeceksin {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 4,
+      "metin": "Geleceğinle ilgili detaylara hakim olabilmek adına Magnuskop'u açtığımda çok şaşırdım. Farklı lokasyonlarda bir belirip bir yok oluyorsun {{isim}}. Üzerinde de hep bir {{sabit_sayi,2,9}} rakamı var. Sen {{sabit_sayi,2,9}} yıl sonra birden bire farklı şehirleri ya da farklı ülkeleri gezmeye başlayacaksın. Bunun ne vesile ile olacağını şu an kestiremesem de, hayatının en mutlu dönemleri olacağını söyleyebilirim. Bu geziler esnasında yanında sevdiğin kişi de var. Buradan da, hayatına o zamana kadar birinin girmiş olacağını anlıyoruz.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "metin": "Hayat bazen insanı köşeye sıkıştırır ve bir şeye zorlar. Bir şeyleri yapmak zorunda olmak ise genellikle insanlar açısından negatif algılanır. Oysa A noktasından D noktasına gitmek isteyen için, yol her zaman B noktasından geçmez. Kimi zaman kader insanı C noktasından, daha kısa bir şekilde D'ye ulaştırır. Senin için {{yil_+1}} yılının ikinci çeyreğinde böyle bir durum olacak {{isim}}. Önce karşılaşacağın mecburiyet için hayıflanacak, sonra da önünün nasıl açıldığını göreceksin.",
+      "kosullar": []
+    },
+    {
+      "id": 6,
+      "metin": "Geleceğine odaklandığımda, {{sayi,5,8}} ay sonra hanenizde ani bir kalabalıklaşma görüyorum. Genç birinin hayırlı bir işi için yakın akrabalar ve bazı arkadaşlarla beraber toplanacaksınız {{isim}}. Bu olaydan hemen 2-3 hafta sonra ise, eşinin işle ilgili güzel bir haberi gelecek. Sizin için mutluluk verici pek çok olayın peşi sıra yaşanacağını söyleyebilirim. Bununla birlikte, aynı dönemde uzak bir akraban geçmişinle ilgili bir konuda kafanı karıştıracak bazı bazı söylemlerde bulunup biraz canını sıkabilir Sevgili {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "yasmax",
+          "deger": "55"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "metin": "Geleceğine odaklandığımda, bir kurumdan diğer bir kuruma aktarılan bir evrak görüyorum. Bu evrak 1.5-2 sene gibi bir süre zarfında {{fiziki}} birinin aracılığı ile eline geçecek {{isim}}. Çok memnun olacağın bu hadise, içinde o güne kadar taşıdığın pek çok endişeye de son verecek. Bu gelişme ile, soyadında {{harf}} harfi olan bir insanı da susturmuş olacaksın. Bu konu hakkında yaptığı spekülasyonlar o kişinin yanına kalmamış olacak.",
+      "kosullar": []
+    },
+    {
+      "id": 8,
+      "metin": "Geleceğine odaklandığımda, {{sayi,2,4}} yıl içinde kendine ait bir oluşum kuracağını ya da var olan bir girişimini geliştireceğini görüyorum. Magnuskop'u senin için açıp oluşan görselleri değerlendirdiğimde, senin yanında yürüyecek olan {{harf}} harfli ve {{harf}} harfli iki farklı insan olacağını söyleyebilirim {{isim}}. Bu kişilerle birbirinizi dış etkilere karşı koruyup kollayacak, elinizdekini büyüterek şu an hayal bile etmediğiniz yerlere geleceksiniz.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "25"
+        },
+        {
+          "degisken": "yasmax",
+          "deger": "55"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kendi işini yapıyor"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "metin": "Geleceğini senin için değerlendirdiğimde, yakın vadede bir ev değişimi görüyorum. Bulunduğun yerden çok uzak bir yer olmasa da, zorunlu olarak farklı bir noktaya hareket etmek durumunda kalacaksın. Keyif kaçıran bir haberin ardından yaşanacak bu gelişme, senin için orta vadede bir fırsata dönüşecek {{isim}}. Taşınma ya da yer değişikliği sonrası mali durumunda yapacağın ayarlamalar ve birtakım kurumlara olan başvurular, seni ilerleyen senelerde daha huzurlu ve mutlu bir konuma yerleştirecek.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "metin": "Hislerim, yakında adında {{harf}} ya da {{harf}} harfi olan bir insanın etkisinde kalacağını ve sevdiğin birinden zor bir şey talep edeceğini söylüyor {{isim}}. Senin için bunu yapmak başlarda zor olacak fakat sonunda yüzün gülecek. Belki bazen kendin için de bu tarz şeyler yapman gerekiyordur, kim bilir... Geleceğinde bir de bozulacak ortaklık yahut birliktelik görüyorum. {{kelime, Uzunca boylu | Esmer, beyaz tenli | Koyu kumral, orta boylu}} birinin yanından ayrılan, gelip seninle el sıkışacak {{isim}}. Bu ortaklık işle mi ilgili yoksa duygusal yönleri mi var, emin değilim.",
+      "kosullar": []
+    },
+    {
+      "id": 11,
+      "metin": "Son aylarda içinde birine karşı bir korku var gibi. Bir şeyleri yapmasından ya da yapmamasından endişe ettiğini hissediyorum. Endişelerin boşa çıkacak {{isim}}. Ne zaman mı? Hesaplarıma göre {{ay_+2}} ayının ilk haftasında. {{sayi,9,15}} saat sapma ile, perşembe ya da cuma günü. Geleceğine odaklandığımda bir haber daha aldım. İlerleyen aylarda, adının içinde {{harf}} harfi olan, çok sevdiğin bir yere gideceksin. Seni mutlu eden bir telefon görüşmesinden hemen sonra. Orada seni yine güzel gelişmeler bekliyor olacak.",
+      "kosullar": []
+    },
+    {
+      "id": 12,
+      "metin": "Geleceğine odaklandığımda, önümüzdeki {{mevsim_1}} mevsiminde bir arkadaşınla seni yolda yürürken görüyorum. Adımlarınız oldukça hızlı; bir yere varmanın telaşı içinde gibisiniz. {{rastgeleburc}} burcu olan ve soyadında {{harf}} harfi bulunan yanındaki bu kişi, sana hayırlı bir işinde eşlik edecek. Onunla vardığın yerde sana ait olan bir evrağı gösterip, çok sevineceğin bir şey elde edeceksin Değerli {{isim}}. {{mevsim_1}} mevsiminin özellikle üçüncü ve dördüncü çeyreği, senin için büyük sevinç içerisinde geçecek.",
+      "kosullar": []
+    },
+    {
+      "id": 13,
+      "metin": "Geleceğine odaklandığımda, işinle ilgili senden planda olmayan ve beklemediğin bir şeyin isteneceğini görüyorum. Adı iki heceli ya da iki isimden oluşan bir {{kelime, beyefendinin | hanımefendinin}} imzalayacağı kağıt sonrası omuzlarına bir sorumluluk binecek. O dönem senin için bunaltıcı geçse de, hemen sonrasında özel hayatına dair hoş sürprizlerle karşılaşacağın günlere kavuşacaksın {{isim}}. Magnuskop, senin için bir paketin de yolda olduğunu söylüyor. İlerleyen günlerde eline geçecek bir şey, sana hayır kapıları açacak.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "metin": "Geleceğine odaklandığımda, seni eşinle birlikte bir kafede görüyorum. Sanıyorum aylardan {{ay_+3}} ya da {{ay_+4}}. O, kupayla bir içecek içiyor. Senin önünde ise cam bardakta, açık kırmızı renkte bir içecek var ancak çay değil. O gün o masada biri hakkında konuşacaksınız. Konuştuğunuz kişi sizi birkaç gün sonra arayıp, söyleyecekleri ile ters köşe yapacak. Ondan, hiç beklemediğiniz bir fayda göreceksiniz {{isim}}. Ya bir işiniz için aracı olacak, ya da işinizi bizzat kendisi çözecek. O günden sonra adında {{harf}} harfi olan bu insanla ilgili fikirleriniz az da olsa değişmiş olacak.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "metin": "Tam {{sayi,4,8}} ay sonraya odakladığımda, seni bir {{data, cinsiyet=erkek, kızla | cinsiyet=kadın, erkekle | cinsiyet=lgbt, kişiyle}} mesajlaşırken görüyorum. Senin bir sıkıntın var {{isim}} belli, o anda yüzünden düşen bin parça. Sorunun derslerinle ilgili olduğunu hissediyorum. Güzel haber ise şu, konuştuğun insan çok büyük bir ihtimalle sevgilin, en kötü ihtimalle de flörtün ileri aşamalarındasınız. Nispeten tatsız sayılabilecek bir günde dahi böyleyseniz, demek ki normalde çok daha mutlusunuz...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "metin": "Geleceğine odaklandığımda, gözümün önünde bir köprü imgesi belirdi. Sen {{sayi,3,7}} ay içinde bir durumdan başka bir duruma geçiş yapacaksın {{isim}}. Bu geçiş, seni şu an sıkıntıya sokan bazı koşulların ortadan kalkmasını sağlayacak. Muhatap olmak zorunda kaldığın bazı insanlardan tamamen kurtuluyor, kendi yağınla kavrulmayı başarıyorsun. Rüzgar artık bu defa senin arkandan esecek. Hızına hız katacak, öne geçecek, özgürleşeceksin!",
+      "kosullar": []
+    },
+    {
+      "id": 17,
+      "metin": "İnsanlar genellikle bulundukları yerden, insandan ve koşullardan ayrılmak istemez. Alışıldık olan güvenlidir. Senin geleceğine odaklandığımda ise, seni sevindirecek bir hareketlenme, bir yer değişikli, bir ayrılış ve \"yeniden varış\" görüyorum {{isim}}. Gelecek sene bu zamanlarda, yani {{ay_0}} ayının sonlarında daha mutlu yaşayacağın bir göç seni bekliyor. Bu göç, adının içinde {{harf}} harfi olan bir yerden, {{harf}} harfi olan başka bir yere doğru tecelli edecek gibi.",
+      "kosullar": []
+    },
+    {
+      "id": 18,
+      "metin": "Geleceğine odaklandığımda, seni başının üzerinde bir yıldızla görüyorum. Bu yıldız bir pentagram {{isim}}. Dişil bir sembol olan bu yıldız, kişinin korunduğunu ifade eder. Senin için dua eden bir kadın var belli ki. Bu kişinin adında ya da soyadında {{harf}} harfinin baskın bir hecede olduğunu düşünüyorum. Bu kişinin duası, senin \"bir şeyin üstesinden kazasız belasız, yara almadan, kayıp yaşamadan ve manevi hasarsız\" gelmeni sağlayacak. Tam etkisini ise önümüzdeki {{ay_+3}} ayında gösteriyor olacak. O ay çok rahatlayacaksın {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 19,
+      "metin": "Değerli {{isim}}, seni düşünerek gözlerimi kapatıp geleceğine odaklandığımda, önümde bir cımbız figürü belirdi. İmge kaybolduktan sonra ise arkasından sen çıktın. Olduğun yerde dönerek adeta bir çıkış arıyorsun. Bu cımbız, senin son günlerde doğruyu yanlıştan ayırmaya başladığını, elem ve kederi bu sayede hayatından çıkaracağını işaret ediyor. Sana gam ve tasa veren ve geçmişten bugüne taşıdığın her ne ise, gelecekte senden ayrılmış olacak.",
+      "kosullar": []
+    },
+    {
+      "id": 20,
+      "metin": "Geleceğine odaklandığımda, seni bir atın yanında dururken görüyorum. O atı eyerliyor ve adeta üzerine atlayıp bir yolculuğa çıkmaya hazırlanıyorsun. Bu eyer, sana hedeflerin doğrultusunda birilerinin yardımcı olacağını ya da arabuluculuk yapacağını işaret ediyor. Gelecek hafta salı ya da çarşamba günü öğleden sonra, adında {{harf}} harfi olan bir {{kelime, hanımefendiden | beyefendiden}} destek göreceksin {{isim}}. Bu destek sayesinde önümüzdeki aylarda seni sıkıntıya sokacağını düşündüğün bir müşkülün hallolmuş olacak.",
+      "kosullar": []
+    },
+    {
+      "id": 21,
+      "metin": "Geleceğine odaklandığımda, seni ailenden bazı insanlarla sohbet ederken görüyorum. Gülümsüyorsun ve keyfin aşırı derecede yerinde. Boynundaki kolye dikkatimi çekti. Kolyenin ucunda iki adet kuvars taşı var. Bu taşlar, sevgide, başarıda ve kazançta artışı işaret etmekte. Girdiğin son yoldan ve varacağın noktadan çok memnun olacaksın. Doğru zamanda, doğru şeyler yapacak, doğru insanlarla iletişim kuracak, hatta doğru kişileri ardından bırakarak kendini en yüksek mertebelere taşıyacaksın. {{mevsim_+1}} mevsimi senin için uğurlu geliyor {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 22,
+      "metin": "Geleceğine odaklandığımda, beynimde çok ilginç imgeler belirdi {{isim}}. Bundan tam 4 ay sonrası; sarıklı ve cübbeli bir adam karşına geçmiş, sana önündeki fermandan bir şeyler okuyor. Ferman, şer sandığın şeydeki hayrı işaret eder. Üzüldüğün ve seni kendi iç dünyana kapatan bir şeyler olduysa, bunların aslında sana büyük hayırlar getireceğini göreceksin. {{ay_+4}} ayının {{kelime, ilk çeyreği | ikinci çeyreği | üçüncü çeyreği | son çeyreği}} içinde neyin neden olduğunu anlayacak, yaşayacağın müjde kabilinden gelişmelere çok sevineceksin.",
+      "kosullar": []
+    },
+    {
+      "id": 23,
+      "metin": "Geleceğine odaklandığımda, {{sayi,2,7}} hafta sonra bir akşam üzeri karşımda belirdin {{isim}}. Dirseklerini önünde duran {{kelime, çalışma masasına | yemek masasına | mutfak masasına}} dayamış, başını da ellerinin arasına almış düşünüyor gibisin. Canın bir şeylere sıkkın, belli. Ertelenen bir şeyler var hayatında. İstediğin gibi gitmeyen detayları kontrol edebilecek kaynaklara da o an sahip değilsin anlaşılan. O günden tam {{sayi,2,4}} gün sonra kritik bir gelişme yaşayacaksın. Aklındaki mesele bir anda tamamen çözüme kavuşacak {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 24,
+      "metin": "Geleceğine odaklandığımda, seni bir masada oturmuş kupon doldururken görüyorum. Zahiri ve temsili olduğunu düşündüğüm bu imgeler, senin bir işini mecburen şansa bıraktığını işaret ediyor. Elinden geleni yapmışsın ancak gücün bir yere kadar yetmiş. Olayların devamında hükmün yok, akışı elde tutacak kudretin yok. Kupon doldurmak, beklenmedik fırsatlarla, toplu para ve büyük bir haberle tabir olunur {{isim}}. Akışına bıraktığın şey her ne ise, sana olumlu dönecek. Şansın çok açık bir şekilde yaver gidecek.",
+      "kosullar": []
+    },
+    {
+      "id": 25,
+      "metin": "Geleceğine odaklandığımda, seni adeta bir kaleydoskop'un tam ortasına yerleştirilmiş gibi görüyorum {{isim}}. Etrafında ışıltılı desenler var. Bu yansımalar aşka ve ihtişama kapılmayı, kendini kaybedecek kadar sevmeyi, varlığı ve gösterişi işaret eder. Sen bunların hangisi ile hemhal olacaksın bilmiyorum. Fakat tahminlerime göre {{ay_+3}} ve {{ay_+6}} ayları arasında hayatında kritik değişiklikler olacak. Bu değişiklikler ise senin gelecek yıllarını çok olumlu etkileyecek.",
+      "kosullar": []
+    },
+    {
+      "id": 26,
+      "metin": "Geleceğine odaklandığımda, sana servis yapan bir adam görüyorum. Bu adam önüne sürekli yiyecekler getirip götürüyor. Son olarak da bir çaydanlık bırakıp, oradan ayrılıyor. Sen bir şeylere üzülmüş, özellikle de son {{sayi,2,8}} hafta içinde olan bazı şeyleri çok dert etmişsin {{isim}}. Önüne türlü nimetler gelmesine ve sana hayat tarafından değişik alternatifler sunulmasına rağmen tam tatmin olamamışsın. Önüne konan bu son çaydanlık, şifa işareti. Eğer bir depresyondaysan, kurtulacaksın. Araftaki işin çözülecek. Gelişmeler, beklentilerin ölçüsünde tam istediğin \"dem\" ve kıvama gelerek seni mutlu edecek. Bu adamın kim olduğunu ve rolünü ise inan hiç bilmiyorum...",
+      "kosullar": []
+    },
+    {
+      "id": 27,
+      "metin": "Haydaa... {{isim}} geleceğine odaklandığımda seni çok ilginç bir vaziyette görüyorum. Üzerinde uzun bir pelerin var. Basbayağı bir süperkahraman pelerini gibi. Bu yansımanın büyük anlamları var. Etkinlik, bilinirlik artışı, bazı insanların gözüne girmek, bazı insanları geçmek ve ekarte etmek, onlara galip gelmek hatta birtakım doğaüstü güçlere sahip olmak bunlardan birkaçı. Bu yansımalar, {{yil_+1}} yılının ikinci çeyreği ile ilgili gizli bazı mahiyetler taşıyor. O gün geldiğinde gerçek anlamları ortaya çıkacak.",
+      "kosullar": []
+    },
+    {
+      "id": 28,
+      "metin": "Gelecek ayın ikinci haftasına odaklandığımda, seni elinde cüzdanınla oradan oraya koşuştururken görüyorum {{isim}}. Birtakım olumlu ve olumsuz olasılıklar içeriyor bu yansımalar. İlk olarak, {{ay_+1}} ayının senin için biraz hareketli geçeceği aşikar. Hesapta olmayan giderlerin olabilir. Bununla beraber, bazı kaynaklardan gelir de söz konusu. İlaveten, yatırım yaptığın ya da emek verdiğin bir şeyle ilgili karşılık alacaksın. Bu şey bir işin de olabilir, bir insan da. Cüzdanın ve kalbin dolup dolup boşalacak, yorulacaksın fakat güzel ilerleyeceksin... <sprite=7>",
+      "kosullar": []
+    },
+    {
+      "id": 29,
+      "metin": "Geleceğine odaklandığımda, seni kilitli bir sandığın başında görüyorum {{isim}}. Büyükçe bir sandık bu. Çok uğraşıyor ve nihayet açıyorsun. Sandık, uzaktaki bir kısmetin ayağına gelmesi, veraset paylaşımı ve gizli duyguların açığa çıkması anlamları taşır. Bu 3 olasılığın her biri, belirli aralıklarla gelecek aylarda senin ya da ailenin başına gelecek. Sana karşı tamamen \"kapalı kutu\" birinin seni ne kadar sevdiğini anlayacaksın. Ulaşılması zor gelen bir şeye erişme fırsatın olacak ve seni de olumlu etkileyecek olan bir mal bölüşümü gerçekleşecek.",
+      "kosullar": []
+    },
+    {
+      "id": 30,
+      "metin": "Geleceğine odaklandığımda, yere serdiğin büyükçe bir papirüs görüyorum. Elindeki tebeşirle, bu papirüsün üzerine bir hayalini çizmeye çalışıyorsun. Bu yansımalar, kendini ifade etmeye çalıştığın ve seni anlamasını çok istediğin biriyle aranda duygusal bazı konuşmalar geçeceğini işaret ediyor {{isim}}. Bu durum gelecek hafta cumartesi ya da pazar günü gerçekleşecek. Karşındaki kişi sana hak verdiğinde, hayatına dair \"geri al\" tuşuna basmışsıncasına bazı kayıplarını yeniden elde edecek ve seni üzen birtakım konuları telafi etmiş olacaksın.",
+      "kosullar": []
+    },
+    {
+      "id": 31,
+      "metin": "Geleceğine odaklandığımda, seni tek boynuzlu bir atın üzerinde görüyorum. Bu zahiri imgelem çok kıymetli {{isim}}. Büyük ve beklenmedik bir mucizenin gerçekleşeceğini işaret ediyor. Önümüzdeki {{mevsim_+1}} mevsiminin ikinci ayında, aklına dahi gelmeyecek bir kısmetle karşılaşacaksın. Bu unicorn, bu kısmetin seni kısa yoldan mutluluğa ulaştıracağını işaret ediyor. Senin önünde çok büyük bir sevinç var.",
+      "kosullar": []
+    },
+    {
+      "id": 32,
+      "metin": "Geleceğine odaklandığımda, seni dev bir kraliçe arı ile karşı karşıya görüyorum. Nutkun tutulmuş gibi, donup kalmışsın {{isim}}. Arının ağzından çıkacak sözleri bekliyorsun sanki. Kraliçe arı, güneşte alacalı şekilde parlayan dev kanatlarını yanlara doğru açarak sana bir mesel fırlatıyor. Söylediği söz, senin geleceğini ilgilendiren ve önünü açacak bir tavsiye niteliğinde. Aynı zamanda da sana önemli bir sorumluluk yüklüyor. Gelecek hafta, bu kraliçe arıyı temsil eden ve adı iki heceden oluşan dominant hanımefendiyle yapacağın konuşma sonrası harekete geçmen gerekecek. Söylediklerine harfiyen uyarsan, sen kazanacaksın.",
+      "kosullar": []
+    },
+    {
+      "id": 33,
+      "metin": "Seni iki dev ağacın arasında görüyorum {{isim}}. Ağaçların birinden inen sincap, hızlı adımlarla senin önünden geçerek diğer ağaca çıkıyor. Çıktığı ağacın üzerinde ise oyma şeklinde {{sabit_sayi,10,27}} sayısı var. Gelecek ay, takvimde {{sabit_sayi,10,27}} sayısını gördüğün gün büyük bir kısmet ayağına gelecek. Bir telefon alacak ve bir teklifle karşılaşacaksın. Memnuniyetle kabul edeceğini ve sevincini en kısa zamanda en yakınlarındaki insanlarla paylaşacağını düşünüyorum.",
+      "kosullar": []
+    },
+    {
+      "id": 34,
+      "metin": "Geleceğine odaklandığımda, lambalarından biri temassızlıktan dolayı yanıp yanıp sönmekte olan yarı karanlık bir sokak görüyorum. Tam {{sayi,3,6}} ay {{sayi,2,14}} gün sonrası... Bu sokağa park edilmiş {{kelime, beyaz | siyah | metalik gri | vişne rengi}} bir arabanın içinden 2 başka kişi ile birlikte iniyorsun {{isim}}. {{saat, Böyle bir günün akşamı. | Böyle bir günün akşamı. | Böyle bir gün; belki 2-3 saat sonrası. | Böyle bir akşam vakti. | Böyle bir günün daha erken saatleri gibi bir gün.}} Gireceğiniz bir hane kapısı var. O kapıdan girdikten dakikalar sonra, ismi {{kelime, iki | üç | dört}} heceli birinden büyük bir müjde duyacaksın.",
+      "kosullar": []
+    },
+    {
+      "id": 35,
+      "metin": "Geleceğine odaklandığımda, seni tependen, çok yükseklerden izleyen bir martı görüyorum. Birisi bariz bir şekilde seni izliyor, seni takip ediyor ve seni düşünüyor {{isim}}. Soyadında 3 ya da 4 sessiz haft bulunan, adında ise {{harf}} ya da {{harf}} harfi olan birini temsil eden bu martıdan, ilerleyen haftalarda bir tüy kopacak ve önüne düşecek. Bu tüy, onun kim olduğunu anlamanı sağlayacak bir ipucu olacak Değerli {{isim}}. Sen kim olduğunu anladıktan {{sayi,3,20}} gün sonra ise ona dair bir gelişme yaşayacaksın. Nihayetinde ya çok heyecanlanacak ya da duygu dolu anlar yaşayacaksın. Bu işte geçmişle bir bağlantı ve bu işin içinde yoğun sevgi var...",
+      "kosullar": []
+    },
+    {
+      "id": 36,
+      "metin": "Senin için gelecek haftaya odaklandığımda, seni dev bir yusufçuğun sırtında görüyorum {{isim}}. Bu yusufçuk, zahiren Allah'a yakın ve mübarek birini temsil ediyor. Bu kişi sana bir konuda yardımcı olacak. Karşına aniden çıkacak olan engeli bu kişinin desteği ve çevresindeki güç sayesinde halledeceksin. Adı ya da soyadı {{harf}} harfiyle başlayan bu kişi, haftaya {{kelime, salı | çarşamba | perşembe | cuma}} günü yaşamına feyz ve bereket getirecek!",
+      "kosullar": []
+    },
+    {
+      "id": 37,
+      "metin": "Senin için ilerleyen haftalara odaklandığımda, seni bir deniz kenarında yanında duran bir düzine midyeyi açmaya çalışırken buldum. Zorlanıyorsun fakat her açtığın midyenin içinden bir inci çıkıyor {{isim}}. Bu temsili imgelem, elde etmesi zor bir şeyi arzuladığını ve buna en sonunda kavuşma zamanının geldiğini anlatıyor. Yaklaşık 2-3 hafta sonra bir hafta sonu, hayatındaki en güzel gelişmelerden birini yaşayacaksın. Alacağın haberle sende oluşacak coşku, adeta deryalar kadar olacak Değerli {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 38,
+      "metin": "Tüm konsantrasyonumu geleceğine yoğunlaştırdığımda, seni her iki yanına kadife çiçekleri ekilmiş uzun bir yolda yürürken görüyorum. Birine doğru ilerliyorsun. Karşında duran kişi {{fiziki}} birisi. Son aylarda bir anlaşmazlık yaşadığını fakat çok sevdiğini düşündüğüm bu kişiyle ilerleyen günlerde aniden tekrar yakınlaşacaksınız {{isim}}. Kadife çiçekleri karşılıklı anlayışı ve onun tarafından kabul göreceğini işaret ediyor.",
+      "kosullar": []
+    },
+    {
+      "id": 39,
+      "metin": "Geleceğine odaklandığımda, seni üzüm salkımlarının altında, serin bir gölgelikte otururken görüyorum {{isim}}. Sen {{ay_-2}} ayında bir sıkıntı yaşamışsın. Ya şans yanında olmamış ya da bir şey gönlünün razı gelmediği şekilde cereyan etmiş. Gördüğüm üzüm salkımları, olumsuz gibi gözüken bu işten {{ay_+1}} ayı ve sonraki aylarda pek çok fayda sağlayacağını, sevinç ve keyfinin buna mukabil artacağını işaret etmekte.",
+      "kosullar": []
+    },
+    {
+      "id": 40,
+      "metin": "Magnuskop'u geleceğe çevirdiğimde, {{ay_2}} ayının ortalarında beklenmedik bir yerden haber veya duyum alacağını görüyorum {{isim}}. Beklenmedik diyorum çünkü epeydir görüşmediğin birinden gelecek bir telefonla bu habere ulaşacaksın. Bu kişi ailenin de tanıdığı, {{harf}} harfli ve yaşça senden büyük bir erkek. Sonrasında hemen harekete geçeceğini ve hazırlık yapacağını da eklemem gerek. Bu hazırlık, hayatına dair bir değişimle ilgili olacak ve sonucu çok olumlu.",
+      "kosullar": []
+    },
+    {
+      "id": 41,
+      "metin": "Magnuskop ile geleceğine yoğunlaştığımda, {{ay_3}} ayına dair epey şaşırtıcı bir şey gördüm {{isim}}. Bunu yaşayınca sen de şaşıracaksın. Yakın bir arkadaşına beklemediği yerden yüklü miktarda para geleceğini görüyorum. Belki bir miras ya da bir ikramiye, emin değilim ancak epey yüklü bir para. Hatta belki birkaç taşınmaz da olacak. Bu kişiyle çok eski arkadaş değilsiniz fakat tanıştıktan kısa süre sonra ilişkiniz iyi oturmuş. Bu kişinin, eline geçenleri sevk veya idaresi konusunda sana çok özel bir teklifi olacak. Buradan senin büyük çıkarlar elde edeceğini görüyorum.",
+      "kosullar": []
+    },
+    {
+      "id": 42,
+      "metin": "Geleceğine odaklandığımda, seni baharat satan dükkanların olduğu bir köyde görüyorum. Yanındaki insanlar bir hayli mutlu gözüküyorlar, ancak senin suratın beş karış. Bir işin henüz neticelenmediği için huzursuz gibisin. Yediğinden içtiğinden pek tad alamadığını anlıyorum. Yaklaşık {{sayi,3,6}} ay sonrasına ait olduğunu düşündüğüm bu imgeler, beni pek rahatsız etmedi {{isim}}, çünkü sonrasını da biliyorum. Söz konusu o günden birkaç hafta kadar sonra yaşayacağın bazı gelişmelerin içini ferahlatacağına eminim.",
+      "kosullar": []
+    },
+    {
+      "id": 43,
+      "metin": "Geleceğine odaklandığımda spesifik bir zamana takıldım {{isim}}. Bundan belki bir belki bir buçuk sene sonra, eğitiminle ilgili bir sıkıntıyla karşılaşacaksın. Karşına geçmiş iki kişi var, onlarla konuşuyorsun. Sohbetiniz biraz hararetli sanki. Çevredekiler ise size kulak kabartmışlar. Attığın bazı yanlış adımları telafi etmek için yeni bir tercih yapman ya da farklı bir başlangıç için kolları sıvaman gerekecek. O anda tepki göstereceğin o insanların sana yardımlarının dokunacağını söyleyebilirim. İşin sonunda, geç de olsa doğru olanı yaptığını anlayacak ve rahatlayacaksın.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "metin": "Geleceğine odaklandığım anda tüylerim diken diken oldu. Geçmişten gelen biri, sana adeta bir \"sancak\" uzatıyor. Hayatından gelip geçmiş ve senden yaşça büyük bir insanın, vaktiyle yapmanı ya da sahip olmanı istediği bir şey varmış. Bunun için bir fırsat yakalayacak ve adında {{harf}} harfi olan bir erkeğin yardımıyla harekete geçeceksin {{isim}}. {{fiziki}} bu insan, daha önce sana uzak gelen bir hedefe varmana yardımcı olacak. Bu hedef ya işinle ilgili, ya da maddi.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "metin": "Geleceğine odaklandığımda, seni yüksek bir duvarın önünde görüyorum. Sırtın duvara dönük. Senin üzerinde ise, duvara işlenmiş altı köşeli bir yıldız var. Davut yıldızı olduğunu tahmin ettiğim bu sembol, tanrının koruyuculuğunu ifade ediyor. Senden başka pek çok kişiyi doğrudan ya da dolaylı olarak etkileyecek bir meselede, sen korunacak ve gözetileceksin {{isim}}. Bu sayede mevcut düzenin bozulmayacak hatta daha da ileriye taşınacak.",
+      "kosullar": []
+    },
+    {
+      "id": 46,
+      "metin": "Geleceğine odaklandığımda, bir gelincik tarlasının içinden koşarak geçtiğini görüyorum. {{sayi,4,9}} ay içinde şifalı bir döneme gireceksin. Sana ya da çevrendeki sevdiğin birilerine ait sağlık problemleri hızla ortadan kalkacak. Ben bu durumun altında yatan en büyük sebebin \"iyileşen psikolojiler\" olacağını tahmin ediyorum {{isim}}. Maddi konularda senin ya da ailenin işleri yaver gidecek ve bu rahatlama, sağlıkla ilgili olarak herkese pozitif yansıyacak.",
+      "kosullar": []
+    }
+  ]
+}

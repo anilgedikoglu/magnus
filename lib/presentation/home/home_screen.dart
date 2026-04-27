@@ -45,11 +45,13 @@
 //
 // ── SAYFA YAPISI (3×3 Grid) ───────────────────────────────────────────────
 // Üç sayfa, her biri 9 ikonluk 3×3 ızgara:
-//   Sayfa 1: Motivasyon, Dert Ortağı, Olumlama, Özlü Sözler, Kader Kitabı,
-//            Acı Gerçekler, Kehanet, Durugörü, Niyet
-//   Sayfa 2: Kahve Falı, Tarot, AstroTakvim, Numeroloji, Durugörü,
-//            Yüz Falı, Japon Falı, I-Ching, Aşk Uyumu
-//   Sayfa 3: Astroloji (Günlük Astroloji), + 8 yer tutucu (yakında)
+//   Sayfa 1: Kahve Falı, Tarot, Astroloji,
+//            Numeroloji, Durugörü, Yüz Falı,
+//            AstroTakvim, Biyoritim, Doğum Haritası
+//   Sayfa 2: Motivasyon, Dert Ortağı, Olumlama,
+//            Özlü Sözler, Acı Gerçekler, Kader Kitabı,
+//            Kehanet, Niyet, Japon Falı
+//   Sayfa 3: I-Ching, Aşk Uyumu, Kader Çarkı, Rüya Yorumu, + 5 yer tutucu (yakında)
 //
 // Sayfa geçişi: alt bardaki Önceki/Sonraki butonları VEYA yatay swipe
 //   (Listener ile — GestureDetector değil, jest arenası sorunu olmaz).
@@ -102,6 +104,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/ad_service.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 
@@ -117,6 +120,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   final ScrollController _chatScrollCtrl = ScrollController();
   int _currentPage = 0;
   static const _totalPages = 3;
+  static const _pageColors = [
+    Color(0xFFDD00CC), // Sayfa 1 — pembe
+    Color(0xFF0099FF), // Sayfa 2 — mavi
+    Color(0xFF00CC77), // Sayfa 3 — yeşil
+  ];
 
   final List<_ExtraBubble> _extraBubbles = [];
   int _typingIndex = 0; // hangi balon şu an yazılıyor
@@ -139,6 +147,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'kaderkitabi': 'kaderkitabi_bugun_tarih',
     'dertortagi':   'dertortagi_bugun_tarih',
     'acigercekler': 'acigercekler_bugun_tarih',
+    'durugoru':     'durugoru_bugun_tarih',
     // 'numeroloji' burada yok — limit ekran içinden yönetilir
   };
 
@@ -198,6 +207,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       _refreshCredits();
       _checkTarotSent();
       _checkKahveSent();
+      _checkDurugoruSent();
     });
   }
 
@@ -267,18 +277,45 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     });
   }
 
+  void _checkDurugoruSent() {
+    final sent = ref.read(durugoruSentProvider);
+    if (!sent) return;
+    ref.read(durugoruSentProvider.notifier).state = false;
+    _refreshCredits();
+    final name = ref.read(userProfileProvider).name;
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'Durugörün hazırlanıyor${name.isNotEmpty ? ' $name' : ''}.',
+        gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
+        borderColor: const Color(0xFFE8820C),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
   bool _listenersAttached = false;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    // Profil yüklendikten sonra selamlamayı bir kez hesapla
     if (!_selamlamaHesaplandi) {
       final name = ref.read(userProfileProvider).name;
       _selamlama = _hesaplaSelamlama(name);
       _selamlamaHesaplandi = true;
     }
-    // tarotSentProvider / kahveSentProvider'ı dinle (sadece bir kez bağla)
     if (!_listenersAttached) {
       _listenersAttached = true;
       ref.listenManual(tarotSentProvider, (_, sent) {
@@ -286,6 +323,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       });
       ref.listenManual(kahveSentProvider, (_, sent) {
         if (sent) _checkKahveSent();
+      });
+      ref.listenManual(durugoruSentProvider, (_, sent) {
+        if (sent) _checkDurugoruSent();
       });
     }
   }
@@ -366,11 +406,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     if (!mounted) return;
     final result = await context.push<String?>(route);
     if (!mounted) return;
-    // Ekran 'hazirlanıyor' sinyali döndürdüyse balon göster
     if (result == 'hazirlanıyor') {
       _showHazirlaniyorBubble(type);
     }
     await _refreshCredits();
+    // Fal ekranından dönünce geçiş reklamı göster
+    await AdService.instance.showInterstitial();
+  }
+
+  // ─── Geçiş reklamlı navigasyon yardımcısı ────────────────────────────────
+  Future<void> _pushWithAd(String route) async {
+    if (!mounted) return;
+    await context.push(route);
+    if (!mounted) return;
+    await AdService.instance.showInterstitial();
   }
 
   void _showHazirlaniyorBubble(String type) {
@@ -429,23 +478,49 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   // ─── Sayfa 1 ──────────────────────────────────────────────────────────────
   List<_MenuItem> _page1Items(BuildContext context) => [
+        _MenuItem('Kahve Falı', 'assets/images/menu/ozelfal.png',
+            _remainingCredits['kahve'] ?? 1,
+            () => _onFortuneItemTap('kahve', '/coffee')),
+        _MenuItem('Tarot', 'assets/images/menu/tarot.png',
+            _remainingCredits['tarot'] ?? 1,
+            () => _onFortuneItemTap('tarot', '/tarot')),
+        _MenuItem('Astroloji', 'assets/images/astroloji.png',
+            -1, () => _pushWithAd('/astroloji')),
+        _MenuItem('Numeroloji', 'assets/images/menu/numeroloji.png',
+            -1,
+            () => _onFortuneItemTap('numeroloji', '/numeroloji')),
+        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png',
+            _remainingCredits['durugoru'] ?? 1,
+            () => _onFortuneItemTap('durugoru', '/durugoru')),
+        _MenuItem('Yüz Falı', 'assets/images/menu/yuzfali.png', 1,
+            () => _pushWithAd('/yuz_fali_kimin')),
+        _MenuItem('AstroTakvim', 'assets/images/aytakvimi.png',
+            1, () => _pushWithAd('/astrotakvim')),
+        _MenuItem('Biyoritim', 'assets/images/falbg/biyoritim.png',
+            1, () => _pushWithAd('/biyoritim')),
+        _MenuItem('Doğum Haritası', 'assets/images/dogum.png',
+            1, () => _pushWithAd('/dogumharitasi')),
+      ];
+
+  // ─── Sayfa 2 ──────────────────────────────────────────────────────────────
+  List<_MenuItem> _page2Items(BuildContext context) => [
         _MenuItem('Motivasyon', 'assets/images/motivasyon_yeni.png',
-            -1, // badge yok — motivasyon her zaman açılabilir
+            -1,
             () async {
-              // Günlük hak bitse de aynı metin gösterilir — navigasyonu engelleme
               if (!mounted) return;
               await context.push('/motivation');
               if (!mounted) return;
               await _refreshCredits();
+              await AdService.instance.showInterstitial();
             }),
         _MenuItem('Dert Ortağı', 'assets/images/menu/dertortagi.png',
             _remainingCredits['dertortagi'] ?? 1,
             () => _onFortuneItemTap('dertortagi', '/dertortagi')),
         _MenuItem('Olumlama', 'assets/images/olumlama.png',
-            -1, // günlük limit yok → badge gösterilmez
+            -1,
             () => _onFortuneItemTap('olumlama', '/olumlama')),
         _MenuItem('Özlü Sözler', 'assets/images/ozlusozler.png',
-            -1, // badge yok — limit ekran içinden yönetilir
+            -1,
             () => _onFortuneItemTap('ozlusoz', '/ozlusoz')),
         _MenuItem('Acı Gerçekler', 'assets/images/acigercekler.PNG',
             _remainingCredits['acigercekler'] ?? 1,
@@ -455,52 +530,25 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             () => _onFortuneItemTap('kaderkitabi', '/kaderkitabi')),
         _MenuItem('Kehanet', 'assets/images/menu/kehanet.png', 1,
             () => _onFortuneItemTap('kehanet', '/kehanet')),
-        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 1,
-            () {}),
         _MenuItem('Niyet', 'assets/images/menu/mistikfallar.png', 1,
-            () => context.push('/niyet')),
+            () => _pushWithAd('/niyet')),
+        _MenuItem('Japon Falı', 'assets/images/japonfali.png', 1,
+            () {}),
       ];
 
   // ─── Sayfa 3 ──────────────────────────────────────────────────────────────
-  // Henüz 9 ikon tanımsız → boş yer tutucu. Astroloji ilk ikondur.
   List<_MenuItem> _page3Items(BuildContext context) => [
-        _MenuItem('Astroloji', 'assets/images/astroloji.png',
-            1, () => context.push('/astroloji')),
-        _MenuItem('Biyoritim', 'assets/images/falbg/biyoritim.png',
-            1, () => context.push('/biyoritim')),
-        _MenuItem('Doğum Haritası', 'assets/images/dogum.png',
-            1, () => context.push('/dogumharitasi')),
-        _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',
-            1, () {}),
-        // 5 yer tutucu — ikon eklendikçe buralar dolacak
-        ...List.generate(5, (_) =>
-            _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {})),
-      ];
-
-  // ─── Sayfa 2 ──────────────────────────────────────────────────────────────
-  List<_MenuItem> _page2Items(BuildContext context) => [
-        _MenuItem('Kahve Falı', 'assets/images/menu/kahvefali.png',
-            _remainingCredits['kahve'] ?? 1,
-            () => _onFortuneItemTap('kahve', '/coffee')),
-        _MenuItem('Tarot', 'assets/images/menu/tarot.png',
-            _remainingCredits['tarot'] ?? 1,
-            () => _onFortuneItemTap('tarot', '/tarot')),
-        _MenuItem('AstroTakvim', 'assets/images/aytakvimi.png',
-            1,
-            () => context.push('/astrotakvim')),
-        _MenuItem('Numeroloji', 'assets/images/menu/numeroloji.png',
-            -1, // badge yok — limit ekran içinden yönetilir
-            () => _onFortuneItemTap('numeroloji', '/numeroloji')),
-        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png', 1,
-            () {}),
-        _MenuItem('Yüz Falı', 'assets/images/menu/yuzfali.png', 1,
-            () => context.push('/yuz_fali_kimin')),
-        _MenuItem('Japon Falı', 'assets/images/japonfali.png', 1,
-            () {}),
         _MenuItem('I-Ching', 'assets/images/ichingikon.png', 1,
             () {}),
         _MenuItem('Aşk Uyumu', 'assets/images/askuyumu.png', 1,
             () {}),
+        _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',
+            1, () {}),
+        _MenuItem('Rüya Yorumu', 'assets/images/menu/ruyaozel.png', 1,
+            () {}),
+        // 5 yer tutucu — ikon eklendikçe buralar dolacak
+        ...List.generate(5, (_) =>
+            _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {})),
       ];
 
   @override
@@ -533,7 +581,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 // ─── Chat header (sabit) ──────────────────────────────────
                 _buildChatHeader(),
 
-                // ─── Animasyonlu 3×3 grid + sayfa göstergesi (overlay) ────
+                // ─── Animasyonlu 3×3 grid ─────────────────────────────────
                 Expanded(
                   child: Listener(
                     onPointerDown:  (e) => _swipeStartX = e.position.dx,
@@ -544,31 +592,25 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       else if (dx > 50) _goPrev();
                     },
                     onPointerCancel: (_) => _swipeStartX = null,
-                    child: Stack(
-                      children: [
-                        PageView.builder(
-                          controller: _pageController,
-                          physics: const NeverScrollableScrollPhysics(),
-                          itemCount: _totalPages,
-                          onPageChanged: (p) => setState(() => _currentPage = p),
-                          itemBuilder: (context, pageIndex) {
-                            final items = pageIndex == 0
-                                ? _page1Items(context)
-                                : pageIndex == 1
-                                    ? _page2Items(context)
-                                    : _page3Items(context);
-                            return _buildGrid(items);
-                          },
-                        ),
-                        // Gösterge — grid'in tam altına yapışık
-                        Positioned(
-                          left: 0, right: 0, bottom: 0,
-                          child: _buildPageIndicator(),
-                        ),
-                      ],
+                    child: PageView.builder(
+                      controller: _pageController,
+                      physics: const NeverScrollableScrollPhysics(),
+                      clipBehavior: Clip.none,
+                      itemCount: _totalPages,
+                      onPageChanged: (p) => setState(() => _currentPage = p),
+                      itemBuilder: (context, pageIndex) {
+                        final items = pageIndex == 0
+                            ? _page1Items(context)
+                            : pageIndex == 1
+                                ? _page2Items(context)
+                                : _page3Items(context);
+                        return _buildGrid(items, _pageColors[pageIndex]);
+                      },
                     ),
                   ),
                 ),
+                // ─── Sayfa göstergesi — grid'e yapışık, sabit pozisyon ────
+                _buildPageIndicator(),
 
                 // ─── Alt bar ─────────────────────────────────────────────
                 _buildBottomBar(context),
@@ -653,15 +695,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(_totalPages, (i) {
           final active = i == _currentPage;
+          final color = _pageColors[i];
           return AnimatedContainer(
             duration: const Duration(milliseconds: 250),
             margin: const EdgeInsets.symmetric(horizontal: 3),
             width: 36,
             height: 3,
             decoration: BoxDecoration(
-              color: active
-                  ? const Color(0xFFAA88FF)
-                  : const Color(0xFFAA88FF).withValues(alpha: 0.22),
+              color: active ? color : color.withValues(alpha: 0.22),
               borderRadius: BorderRadius.circular(2),
             ),
           );
@@ -670,123 +711,187 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget _buildGrid(List<_MenuItem> items) {
+  Widget _buildGrid(List<_MenuItem> items, Color pageColor) {
+    final coloredItems = items
+        .map((item) => _MenuItem(item.title, item.imagePath, item.credits, item.onTap,
+            borderColor: pageColor))
+        .toList();
     return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 4, 10, 8),
+      padding: const EdgeInsets.fromLTRB(10, 4, 10, 0),
       child: GridView.count(
         physics: const NeverScrollableScrollPhysics(),
+        clipBehavior: Clip.none,
         crossAxisCount: 3,
         crossAxisSpacing: 8,
         mainAxisSpacing: 8,
         childAspectRatio: 0.75,
-        children: items.map((item) => _MenuCard(item: item)).toList(),
+        children: coloredItems.map((item) => _MenuCard(item: item)).toList(),
       ),
     );
   }
 
   Widget _buildBottomBar(BuildContext context) {
+    // Sayfa 0'da önceki yok (sol ikon pasif), son sayfada sonraki yok (sağ ikon pasif).
+    final showPrev = _currentPage > 0;
+    final showNext = !_isLastPage;
+    // AnimatedSize kullanıyoruz — width 0'ın altına düşmez, güvenli.
+    const dur = Duration(milliseconds: 420);
+    const curve = Curves.easeInOutCubic;
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(12, 4, 12, 10),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // ── Hazırlanan fallar progress satırı ─────────────────────────────
+          // ── Hazırlanan fallar progress satırı — sabit 50px, içerik yoksa şeffaf ──
           Consumer(builder: (_, cref, __) {
             final items = cref.watch(inboxProvider);
-            // Hazırlanıyor (isLocked) VEYA hazır ama henüz okunmamış (!isLocked && !isRead)
-            // → kullanıcı okuyunca (isRead=true) kaybolur
             final cooking = items
                 .where((e) => e.unlockAt != null && (e.isLocked || !e.isRead))
                 .toList()
               ..sort((a, b) => (a.unlockAt!).compareTo(b.unlockAt!));
-            if (cooking.isEmpty) return const SizedBox(height: 4);
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 6),
-              child: _FortuneProgressRow(items: cooking),
+            return SizedBox(
+              height: 50,
+              child: cooking.isEmpty
+                  ? const SizedBox()
+                  : Padding(
+                      padding: const EdgeInsets.only(bottom: 6),
+                      child: _FortuneProgressRow(items: cooking),
+                    ),
             );
           }),
           // ── Butonlar ──────────────────────────────────────────────────────
-          Row(
-            children: [
-              Expanded(
-                child: _currentPage == 0
-                    ? _BottomBtn(
-                        imagePath: 'assets/images/bilgiekranilogo.png',
-                        label: 'Bilgiler',
-                        onTap: () async {
-                          _scheduleUnlockTimer();
-                          await context.push('/settings');
-                          if (mounted) await _refreshCredits();
-                        },
-                      )
-                    : _BottomBtn(
-                        imagePath: 'assets/images/menuleft.png',
-                        label: 'Önceki',
-                        onTap: _goPrev,
-                      ),
-              ),
-              const SizedBox(width: 8),
-              // Ortadaki inbox butonu
-              Consumer(builder: (_, cref, __) {
-                final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
-                return GestureDetector(
-                  onTap: () => context.push('/inbox-full'),
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 400),
-                    width: 48, height: 44,
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                          colors: [Color(0xFFDD00EE), Color(0xFF9900CC)]),
-                      borderRadius: BorderRadius.circular(24),
-                      border: Border.all(
-                        color: const Color(0xFFFF44FF).withValues(alpha: 0.7),
-                        width: 1.5,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFFCC00EE).withValues(alpha: 0.55),
-                          blurRadius: hasUnread ? 18 : 8,
-                          spreadRadius: 0,
+          // Layout: [önceki?] [bilgi(Expanded)] [inbox] [sonraki?]
+          // 4 eşit slot, hiçbirinde yazı yok — sadece ikon.
+          LayoutBuilder(builder: (ctx, constraints) {
+            // 4 eşit slot + 3 gap → her slot navW genişliğinde
+            final navW = (constraints.maxWidth - 3 * 8.0) / 4.0;
+            return SizedBox(
+              height: 44,
+              child: Row(
+                children: [
+                  // [1] Önceki (ikon sadece) — OverflowBox butonu tree'de tutar,
+                  // ClipRect kırpar; böylece çıkış animasyonu da çalışır.
+                  ClipRect(
+                    child: AnimatedSize(
+                      duration: dur,
+                      curve: curve,
+                      alignment: Alignment.centerRight,
+                      child: SizedBox(
+                        width: showPrev ? navW : 0,
+                        height: 44,
+                        child: OverflowBox(
+                          maxWidth: navW, minWidth: navW,
+                          maxHeight: 44, minHeight: 44,
+                          alignment: Alignment.centerRight,
+                          child: _BottomBtn(
+                            imagePath: 'assets/images/menuleft.png',
+                            label: 'Önceki',
+                            onTap: _goPrev,
+                            showLabel: false,
+                          ),
                         ),
-                        if (hasUnread) ...[
-                          BoxShadow(
-                            color: const Color(0xFFFFAA22).withValues(alpha: 0.45),
-                            blurRadius: 22,
-                            spreadRadius: 0,
-                          ),
-                          BoxShadow(
-                            color: const Color(0xFFFFCC66).withValues(alpha: 0.18),
-                            blurRadius: 38,
-                            spreadRadius: 0,
-                          ),
-                        ],
-                      ],
-                    ),
-                    child: Center(
-                      child: Image.asset('assets/images/inbox_icon.png',
-                          width: 26, height: 26),
+                      ),
                     ),
                   ),
-                );
-              }),
-              const SizedBox(width: 8),
-              Expanded(
-                child: _isLastPage
-                    ? _BottomBtn(
-                        imagePath: 'assets/images/menuright.png',
-                        label: 'Başa Dön',
-                        iconTrailing: true,
-                        onTap: _goNext,
-                      )
-                    : _BottomBtn(
-                        imagePath: 'assets/images/menuright.png',
-                        label: 'Sonraki',
-                        iconTrailing: true,
-                        onTap: _goNext,
+                  // Gap — önceki ile birlikte kaybolur
+                  AnimatedSize(
+                    duration: dur,
+                    curve: curve,
+                    child: SizedBox(width: showPrev ? 8.0 : 0.0),
+                  ),
+                  // [2] Bilgi Ekranı (ikon sadece) — her zaman görünür, Expanded
+                  Expanded(
+                    child: _BottomBtn(
+                      imagePath: 'assets/images/bilgiekranilogo.png',
+                      label: 'Bilgiler',
+                      onTap: () async {
+                        _scheduleUnlockTimer();
+                        await context.push('/settings');
+                        if (mounted) await _refreshCredits();
+                      },
+                      showLabel: false,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  // [3] Gelen Kutusu — sağ ikon pasifken navW + gap kadar genişler
+                  Consumer(builder: (_, cref, __) {
+                    final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
+                    return GestureDetector(
+                      onTap: () => context.push('/inbox-full'),
+                      child: AnimatedContainer(
+                        duration: dur,
+                        curve: curve,
+                        width: showNext ? navW : navW + 8.0 + navW,
+                        height: 44,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                              colors: [Color(0xFFDD00EE), Color(0xFF9900CC)]),
+                          borderRadius: BorderRadius.circular(22),
+                          border: Border.all(
+                            color: const Color(0xFFFF44FF).withValues(alpha: 0.7),
+                            width: 1.5,
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0xFFCC00EE).withValues(alpha: 0.55),
+                              blurRadius: hasUnread ? 18 : 8,
+                              spreadRadius: 0,
+                            ),
+                            if (hasUnread) ...[
+                              BoxShadow(
+                                color: const Color(0xFFFFAA22).withValues(alpha: 0.45),
+                                blurRadius: 22,
+                                spreadRadius: 0,
+                              ),
+                              BoxShadow(
+                                color: const Color(0xFFFFCC66).withValues(alpha: 0.18),
+                                blurRadius: 38,
+                                spreadRadius: 0,
+                              ),
+                            ],
+                          ],
+                        ),
+                        child: Center(
+                          child: Image.asset('assets/images/inbox_icon.png',
+                              width: 26, height: 26),
+                        ),
                       ),
+                    );
+                  }),
+                  // Gap — sonraki ile birlikte kaybolur
+                  AnimatedSize(
+                    duration: dur,
+                    curve: curve,
+                    child: SizedBox(width: showNext ? 8.0 : 0.0),
+                  ),
+                  // [4] Sonraki (ikon sadece) — OverflowBox butonu tree'de tutar
+                  ClipRect(
+                    child: AnimatedSize(
+                      duration: dur,
+                      curve: curve,
+                      alignment: Alignment.centerLeft,
+                      child: SizedBox(
+                        width: showNext ? navW : 0,
+                        height: 44,
+                        child: OverflowBox(
+                          maxWidth: navW, minWidth: navW,
+                          maxHeight: 44, minHeight: 44,
+                          alignment: Alignment.centerLeft,
+                          child: _BottomBtn(
+                            imagePath: 'assets/images/menuright.png',
+                            label: 'Sonraki',
+                            onTap: _goNext,
+                            showLabel: false,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            );
+          }),
         ],
       ),
     );
@@ -839,7 +944,9 @@ class _MenuItem {
   final String imagePath;
   final int credits;
   final VoidCallback onTap;
-  const _MenuItem(this.title, this.imagePath, this.credits, this.onTap);
+  final Color borderColor;
+  const _MenuItem(this.title, this.imagePath, this.credits, this.onTap,
+      {this.borderColor = const Color(0xFFDD00CC)});
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -890,10 +997,10 @@ class _MenuCardState extends State<_MenuCard>
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFFCC00BB), width: 1.5),
+            border: Border.all(color: widget.item.borderColor, width: 1.5),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFFCC00BB).withValues(alpha: 0.4),
+                color: widget.item.borderColor.withValues(alpha: 0.4),
                 blurRadius: 6,
               ),
             ],
@@ -1172,12 +1279,14 @@ class _BottomBtn extends StatelessWidget {
   final String label;
   final VoidCallback onTap;
   final bool iconTrailing;
+  final bool showLabel;
 
   const _BottomBtn({
     required this.imagePath,
     required this.label,
     required this.onTap,
     this.iconTrailing = false,
+    this.showLabel = true,
   });
 
   @override
@@ -1217,17 +1326,19 @@ class _BottomBtn extends StatelessWidget {
             ),
           ],
         ),
-        child: Stack(
-          children: iconTrailing
-              ? [
-                  Align(alignment: const Alignment(-1/3, 0),  child: txt),
-                  Align(alignment: const Alignment(0.52, 0),  child: img),
-                ]
-              : [
-                  Align(alignment: const Alignment(-0.52, 0), child: img),
-                  Align(alignment: const Alignment(1/3, 0),   child: txt),
-                ],
-        ),
+        child: showLabel
+            ? Stack(
+                children: iconTrailing
+                    ? [
+                        Align(alignment: const Alignment(-1/3, 0), child: txt),
+                        Align(alignment: const Alignment(0.52, 0), child: img),
+                      ]
+                    : [
+                        Align(alignment: const Alignment(-0.52, 0), child: img),
+                        Align(alignment: const Alignment(1/3, 0),   child: txt),
+                      ],
+              )
+            : Center(child: img),
       ),
     );
   }
@@ -1264,64 +1375,19 @@ class _FortuneProgressRowState extends State<_FortuneProgressRow> {
 
   @override
   Widget build(BuildContext context) {
-    const accent  = Color(0xFFFF44FF);
-    const size    = 44.0;
+    const size = 44.0;
 
-    // Ortalama yüzde — tüm hazırlanmakta olanlar
-    final avgProgress = widget.items.isEmpty
-        ? 0.0
-        : widget.items.map((e) => e.unlockProgress).reduce((a, b) => a + b) /
-            widget.items.length;
-    final avgPct = (avgProgress * 100).round();
-
-    return Row(
-      children: [
-        // ── Yatay scroll: her fal için bir daire ──────────────────────────
-        Expanded(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                for (int i = 0; i < widget.items.length; i++) ...[
-                  _FortuneCircleBadge(item: widget.items[i], size: size),
-                  if (i < widget.items.length - 1)
-                    const SizedBox(width: 8),
-                ],
-              ],
-            ),
-          ),
-        ),
-        if (avgProgress < 1.0) ...[
-          const SizedBox(width: 10),
-          // ── Sağ: ortalama yüzde dairesi ───────────────────────────────────
-          SizedBox(
-            width: size, height: size,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                CustomPaint(
-                  size: const Size(size, size),
-                  painter: _ArcProgressPainter(
-                    progress: avgProgress,
-                    color: accent,
-                    trackColor: Colors.white.withValues(alpha: 0.15),
-                    strokeWidth: 3.0,
-                  ),
-                ),
-                Text(
-                  '$avgPct%',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 11,
-                    fontWeight: FontWeight.bold,
-                    shadows: [Shadow(color: Colors.black87, blurRadius: 4)],
-                  ),
-                ),
-              ],
-            ),
-          ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          for (int i = 0; i < widget.items.length; i++) ...[
+            _FortuneCircleBadge(item: widget.items[i], size: size),
+            if (i < widget.items.length - 1)
+              const SizedBox(width: 8),
+          ],
         ],
-      ],
+      ),
     );
   }
 }
@@ -1378,16 +1444,27 @@ class _FortuneCircleBadge extends StatelessWidget {
                   : _fallbackIcon(),
             ),
           ),
-          // Badge — SADECE hazırlık tamamlanınca (kırmızı nokta)
+          // Badge — SADECE hazırlık tamamlanınca (kırmızı "1")
           if (isReady)
             Positioned(
               top: 1, right: 1,
               child: Container(
-                width: 12, height: 12,
+                width: 14, height: 14,
                 decoration: BoxDecoration(
                   color: const Color(0xFFFF2222),
                   shape: BoxShape.circle,
                   border: Border.all(color: Colors.black, width: 1),
+                ),
+                child: const Center(
+                  child: Text(
+                    '1',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 9,
+                      fontWeight: FontWeight.bold,
+                      height: 1,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -1414,6 +1491,7 @@ class _FortuneCircleBadge extends StatelessWidget {
       case FortuneType.general:    return locked ? '${base}cark2.png'      : '${base}cark.png';
       case FortuneType.birthChart:  return locked ? '${base}dogum2.png'      : '${base}dogum.png';
       case FortuneType.numeroloji:  return locked ? '${base}numeroloji2.png' : '${base}numeroloji.png';
+      case FortuneType.durugoru:    return locked ? '${base}durugoru2.png'   : '${base}durugoru.png';
     }
   }
 }

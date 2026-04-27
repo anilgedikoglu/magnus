@@ -43,6 +43,45 @@ class FortuneService {
     _loaded = true;
   }
 
+  // ─── Koşul filtresi ─────────────────────────────────────────────────────────
+  // Aynı değişken adına ait koşullar → OR (herhangi biri eşleşirse yeter)
+  // Farklı değişken adları → AND (hepsinin kendi grubunda eşleşme olmalı)
+  // yasmax / yasmin → sayısal karşılaştırma
+  static bool _matchesKosullar(List kosullar, Map<String, String> vars) {
+    if (kosullar.isEmpty) return true;
+
+    // Değişken adına göre grupla
+    final Map<String, List<String>> groups = {};
+    for (final k in kosullar) {
+      final degisken = (k as Map)['degisken'] as String;
+      final deger = k['deger'] as String;
+      groups.putIfAbsent(degisken, () => []).add(deger);
+    }
+
+    for (final entry in groups.entries) {
+      final degisken = entry.key;
+      final degerler = entry.value;
+
+      // yasmax / yasmin → sayısal karşılaştırma
+      if (degisken == 'yasmax' || degisken == 'yasmin') {
+        final userAge = int.tryParse(vars['yas'] ?? '') ?? 0;
+        final matched = degerler.any((d) {
+          final limit = int.tryParse(d) ?? 0;
+          return degisken == 'yasmax' ? userAge <= limit : userAge >= limit;
+        });
+        if (!matched) return false;
+        continue;
+      }
+
+      // Diğer değişkenler → string eşleştirme (OR within group)
+      final userVal = (vars[degisken] ?? '').toLowerCase();
+      if (userVal.isEmpty) return false; // bilinmeyen değişken → metni gösterme
+      final matched = degerler.any((d) => userVal == d.toLowerCase());
+      if (!matched) return false;
+    }
+    return true;
+  }
+
   Future<void> _initKahve() async {
     if (_kahveLoaded) return;
     for (final bolum in _kahveBolumler) {
@@ -81,18 +120,10 @@ class FortuneService {
       if (allTexts.isEmpty) continue;
 
       // Demografik filtre
-      final eligible = allTexts.where((t) {
-        final kosullar = (t as Map<String, dynamic>)['kosullar'] as List;
-        if (kosullar.isEmpty) return true;
-        return kosullar.every((k) {
-          final degisken = (k as Map)['degisken'] as String;
-          final deger = k['deger'] as String;
-          final userVal = (vars[degisken] ?? '').toLowerCase();
-          return userVal == deger.toLowerCase() ||
-              userVal.contains(deger.toLowerCase()) ||
-              deger.toLowerCase().contains(userVal);
-        });
-      }).toList();
+      final eligible = allTexts
+          .where((t) => _matchesKosullar(
+              (t as Map<String, dynamic>)['kosullar'] as List, vars))
+          .toList();
 
       if (eligible.isEmpty) continue;
 
@@ -187,18 +218,10 @@ class FortuneService {
       }
 
       // Demografik filtre
-      final eligible = matching.where((t) {
-        final kosullar = (t as Map<String, dynamic>)['kosullar'] as List;
-        if (kosullar.isEmpty) return true;
-        return kosullar.every((k) {
-          final degisken = (k as Map)['degisken'] as String;
-          final deger = k['deger'] as String;
-          final userVal = (vars[degisken] ?? '').toLowerCase();
-          return userVal == deger.toLowerCase() ||
-              userVal.contains(deger.toLowerCase()) ||
-              deger.toLowerCase().contains(userVal);
-        });
-      }).toList();
+      final eligible = matching
+          .where((t) => _matchesKosullar(
+              (t as Map<String, dynamic>)['kosullar'] as List, vars))
+          .toList();
 
       if (eligible.isEmpty) continue;
 
@@ -271,18 +294,10 @@ class FortuneService {
     }
 
     // Demografik filtre
-    final eligible = matching.where((t) {
-      final kosullar = (t as Map<String, dynamic>)['kosullar'] as List;
-      if (kosullar.isEmpty) return true;
-      return kosullar.every((k) {
-        final degisken = (k as Map)['degisken'] as String;
-        final deger = k['deger'] as String;
-        final userVal = (vars[degisken] ?? '').toLowerCase();
-        return userVal == deger.toLowerCase() ||
-            userVal.contains(deger.toLowerCase()) ||
-            deger.toLowerCase().contains(userVal);
-      });
-    }).toList();
+    final eligible = matching
+        .where((t) => _matchesKosullar(
+            (t as Map<String, dynamic>)['kosullar'] as List, vars))
+        .toList();
 
     String metin;
     if (eligible.isEmpty) {

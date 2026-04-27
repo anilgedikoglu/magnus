@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/services/ad_service.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 import 'widgets/inbox_item_card.dart';
@@ -32,37 +33,98 @@ class InboxScreen extends ConsumerWidget {
             ),
         ],
       ),
-      body: items.isEmpty ? _buildEmpty() : _buildList(context, ref, items),
+      body: Column(
+        children: [
+          Expanded(
+            child: items.isEmpty
+                ? _buildEmpty()
+                : _buildList(context, ref, items),
+          ),
+          _buildBackButton(context),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBackButton(BuildContext context) {
+    return SafeArea(
+      top: false,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+        child: GestureDetector(
+          onTap: () => Navigator.of(context).pop(),
+          child: Container(
+            width: double.infinity,
+            height: 48,
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.10),
+              borderRadius: BorderRadius.circular(23),
+              border: Border.all(
+                color: Colors.white.withValues(alpha: 0.25),
+                width: 1.2,
+              ),
+            ),
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.chevron_left_rounded,
+                    color: Colors.white, size: 20),
+                SizedBox(width: 2),
+                Text(
+                  'Geri Git',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 
   Widget _buildEmpty() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ShaderMask(
-            shaderCallback: (bounds) => const LinearGradient(
-              colors: AppColors.bubble1,
-            ).createShader(bounds),
-            child: const Text(
-              '✦',
-              style: TextStyle(fontSize: 64, color: Colors.white),
-            ),
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        Image.asset(
+          'assets/images/welcomscreenbackground.jpg',
+          fit: BoxFit.cover,
+          alignment: Alignment.center,
+          filterQuality: FilterQuality.high,
+        ),
+        Container(color: const Color(0xFF100B35).withValues(alpha: 0.50)),
+        Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ShaderMask(
+                shaderCallback: (bounds) => const LinearGradient(
+                  colors: AppColors.bubble1,
+                ).createShader(bounds),
+                child: const Text(
+                  '✦',
+                  style: TextStyle(fontSize: 64, color: Colors.white),
+                ),
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'BURALAR ÇOK SESSİZ...',
+                style: AppTextStyles.title,
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Okumaya değer bir şey henüz almadın.',
+                style: AppTextStyles.inboxDescription,
+                textAlign: TextAlign.center,
+              ),
+            ],
           ),
-          const SizedBox(height: 20),
-          Text(
-            'BURALAR ÇOK SESSİZ...',
-            style: AppTextStyles.title,
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Okumaya değer bir şey henüz almadın.',
-            style: AppTextStyles.inboxDescription,
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
@@ -88,6 +150,14 @@ class InboxScreen extends ConsumerWidget {
   }
 
   void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
+    // Rewarded reklam izlenince fal açılır; reklam yüklü değilse direkt açılır.
+    AdService.instance.showRewarded(
+      onRewarded: () => _navigateToDetail(context, ref, item),
+      onFailed:   () => _navigateToDetail(context, ref, item),
+    );
+  }
+
+  void _navigateToDetail(BuildContext context, WidgetRef ref, InboxItem item) {
     if (!item.isRead) {
       ref.read(inboxProvider.notifier).markRead(item.id);
     }

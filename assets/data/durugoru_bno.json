@@ -1,0 +1,1676 @@
+{
+  "durugoru_bno": [
+    {
+      "id": 1,
+      "metin": "Uzak mesafelerdeki iki kadının, bugün saat 13:00-14:00 sularında konuşacaklarını hissediyorum. Bunlardan bir tanesi eşin, diğeri ise senin de tanıdığın ve kısa süre önce eşin hanımefendiyle hakkında konuştuğunuz birisi. Konuşmadan seninde haberin olacak {{isim}}. Konuşulanlar pek hoşuna gitmese de, eşinin doğru şeyleri söylediğine ve yapılması gerekeni yaptığına inanıyorum. Öğleden sonra, memleketi güney illerinden biri olan fakat yıllardır seninle aynı şehirde yaşayan bir arkadaşından, şaşırtıcı bir yardım görebilirsin. Bu yardımın konusunu saptayamamakla birlikte, mahiyetinin senin için büyük olacağını düşünüyorum {{isim}}. Bugün şans seninle birlikte, onu söyleyeyim. Fakat sağlık durumunun gün boyu en üst düzeyde olacağını söylersem yalan olur. Akşam saatlerine doğru ne kadar bitkin düştüğünü anlayacaksın. Kendine bu anlamda biraz \"hor\" davranıyorsun. Keyifli bir gün geçirmeni dilerim.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "metin": "Tanıdığın bir kadın, bugün biraz endişeli. Sanıyorum çocuğu ile ilgili kafasında soru işaretleri var. Yanıtlar bulabilmek için günün ilk saatlerinde sana danışabilir. Bir yerden beklediğin bir şey var, öyle değil mi {{isim}}? Öğleden sonra ya o şey eline geçecek, ya da ona ulaşacağına dair olumlu bir haber alacaksın. Yaklaşık {{sayi 2,8}} haftadır gerçekleşmesini istediğin bir şey olduğunu görüyorum. Eşin bunun farkında. Söylenenleri unutan ya da boşveren bir erkek değil. Bu isteğini gerçekleştirmek için, onun bugün bir adım attığını kendisinden duyabilirsin. Genellikle tam tersi olur ancak bugün akşam saatlerine doğru senin stres düzeyinde artış olacağını gözlemliyorum. Bunun bir nedeni olmayabileceği gibi, yalnızca yorgunluktan kaynaklı da olabilir. Kendini çok fazla yormadan günü tamamlamanı dilerim.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "metin": "Bir televizyon programında ya da sosyal medya üzerinde bugün öğlen saatlerinde alacağın bir haber, seni hayata dair derin düşüncelere sevk edebilir. Daha önce de defalarca yaptığın gibi, bugün bazı şeyleri yeniden sorgulayacaksın {{isim}}. Çıkarımların ve {{kelime, buna bağlı girişimlerin | alacağın tedbirler}} ise seni en hayırlı yollara açılan kapı önlerine getirecek. Öğleden sonra saat 1{{sayi,7,9}} civarlarında, söyleyeceği bir sözden dolayı eşine bir konuda gücenebilirsin. Bunun tamamen bir yanlış anlaşılma olduğunu ise günün son saatlerine doğru anlayacaksın. Eşin beyefendinin sözünü ettiği o konudan, senin de hayrına olan güzel bir \"gerçek\" çıkacak. İlerleyen günlerde gerçekleştireceğin bir alışverişi de yine günün son saatlerine doğru kafanda planlayacağını hissediyorum.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "metin": "Güne normal başladığını hissetsen de, bugün senin için sıradışı bir gün olacak. Çalıştığın yerle bağlantılı bir devlet kurumundan, yüzünü güldürecek bir haber alacaksın {{isim}}. Sağlığınla ilgili birtakım ufak tefek endişelerin mi var? Bunların yersiz olduğunu bilmelisin. Kendini diğer günlere göre çok daha iyi hissedeceksin. Eşinden, aranızdaki bağın ne kadar güçlü olduğunu bir kez daha anlayacağın çok hoş sözler duyman da olası.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "metin": "Sakin başlayan güne hızlı devam edeceksin {{isim}}. Hem işinle alakalı sorumluluklar hem de eşin hanımefendinin beklentileri, bugün vitesini 5'e takmanı gerektirebilir. Seninle aynı ortamda çalışan birinin eşi, bugün senin kulaklarını çınlatacak. Hem iş arkadaşın hem de eşi beyefendi tarafından çok sevildiğin belli Sevgili {{isim}}. Öğleden sonra saat 15:00 - 17:00 sularında hem hayırlı hem de seni maddi açıdan bunaltacak iki telefonu peşi sıra alabilirsin. Biri içini ferahlatırken, diğeri seni yapılması gereken bir ödemeyle ilgili sıkıştıracak gibi gözüküyor. Akşamı yorgun ancak rahatlamış bir şekilde edeceksin.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "metin": "Güne normal başladığını hissetsen de, bugün senin için sıradışı bir gün olacak. Çalıştığın yerle bağlantılı bir devlet kurumundan, yüzünü güldürecek bir haber alacaksın {{isim}}. Sağlığınla ilgili birtakım ufak tefek endişelerin mi var? Bunların yersiz olduğunu bilmelisin. Kendini diğer günlere göre çok daha iyi hissedeceksin. Eşinden, aranızdaki bağın ne kadar güçlü olduğunu bir kez daha anlayacağın çok hoş sözler duyman da olası.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "metin": "Gün sonuna dek bir miktar dalgın hissedebilirsin. Sabah uyandığında üzerinde olan sersemlik hali, gün ilerledikçe yaşayacağın güzel gelişmelerle yerini mutluluğa bırakacak {{isim}}. Bugün senin için {{simdiki_ay}} ayının en güzel günlerinden biri olacak, şüphesiz. Bir işin, beklentilerini aşan bir şekilde sonuçlanabilir. Ayrıca bir dostunun ya da tanıdığının başarısının, bugün seni de sevindireceğini hissediyorum.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "metin": "Senin bugün çok büyük bir sevincin var. Bana iyi olduğunu söylemiştin ya, çok daha iyi olacaksın. {{kelime, Bekar | Evli | Bir oğlu | Bir kızı | Bir oğlu bir kızı | İki oğlu}} olan bir {{kelime, hanımefendiden | beyefendiden}} harika bir haber alacaksın {{isim}}. Sağlığına ise dikkat etmen gereken bir gündesin. Üst solunum yolu enfeksiyonlarına açıksın. Kendini fazlaca yorman, bağışıklık sisteminin düşmesine neden olabilir. Günü ekseriyetle istirahat ederek geçirmen, mutlu ve sağlıklı bir şekilde akşamı etmeni sağlayacak. Sana yardım etmek isteyen ya da önüne seçenekler sunan insanları reddetmezsen, günü bir hayli kazançlı kapatacaksın. Hümanizmini bugün sonuna kadar korumalısın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "metin": "Yoğun değişimlerin yaşanacağı bir güne başlıyorsun. Gün içerisinde meydana gelebilecek hava değişimleri gibi, ruh halinde de hızlı değişimler gözlemleyebilirsin. Özellikle öğlen sularından itibaren, zorluklar, problemler ve çözümleri önüne ardı sıra gelecek {{isim}}. Sahip olduğun enerji ve yapman gerekenler arasındaki dengeyi yine de iyi sağlayacağını düşünüyorum. Adında {{harf}} harfi bulunan ve bir süre önce senin biraz daha {{kelime, uzağına | yakınına}} taşınmış bir arkadaşın var mı? O bugün seni bir konuda yardım almak için arayabilir. Özetle, elinden gelen her şeyi doğru şekilde yaparak günü umutlu ve stabil kapatacaksın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "metin": "Pazartesi günleri zaten hareketli olur. Magnuskop, bugünün senin için iki misli hareketli geçeceğini söylüyor. Fakat güzel haber de şu, göstereceğin performans neredeyse tam 4 katı olacak. Bitirmen gereken bir işi öğleden sonraya varan ilk saatlerde aradan başarıyla çıkaracaksın. Bugün adında {{harf}} ya da {{harf}} harfi olan bir insanla yüz yüze buluşman olabilir. O sana seni memnun edecek bir şey verecek {{isim}}, nedir bilmem. Gün içinde bir duruma çok güleceksin ve \"zamanında iyi ki böyle olmuş\" diyeceksin. Ee, hayat bu, bazen böyle dedirtir ve sonradan mutlu eder. Akşam saatlerinde ise aranda kan bağı bulunmayan fakat yine de çok yakın olduğun bir insanla geleceğe dair bir plan yapacaksın. Bu planın başarıya ulaşacağı şimdiden belli {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "metin": "Kalbi ya da fikirleri \"katı\" bir beyefendinin yüreğini yumuşatacak bir hamle yapayacağını görüyorum. Bugün senin için başta o erkek olmak üzere bazı kişilerin zihninde boş kalan yerlere gerekli taşları oturtma günün herhalde {{isim}}. Olağan bir pazartesi gününe oranla bugün senin için neşeli bir gün olacak. Özellikle öğleden sonraki saatlerde telefonuna çok dikkat et, seni memnun edecek bir çağrı alabilirsin. Kaçırmanı istemem. Senin \"{{burc}}\" burcu olduğunu ya da doğumgününü bilen bir hanımefendi görüyorum Magnuskop'da {{isim}}. Bu kişinin sana bir sözü varmış. O sözü bugün tutabilir. Ya da en azından çok yakın bir vadede tutacağına dair çok önemli bir işaret görebilirsin. Akşam saatlerinde abur cuburu fazla kaçırma, çünkü öyle olacak. <sprite=7>",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "metin": "Haftanın ilk günü senin için sakin başlıyor gibi gözükse de, günün ilerleyen saatlerinde yaşamındaki hareketlilik artaracak. Bugün aklındaki bir şey için imkan bulacak, bir fırsat yakalayacak ve değerlendirebilmek adına elinden gelen her şeyi yapacaksın {{isim}}. Bir hobin, uğraştığın ya da alıp satmayı sevdiğin bir şey mi var? Bugün o konu ile ilgili olarak, {{kelime, 1.65 | 1.64 | 1.67 | 1.70}}  boylarında {{kelime, sarışın | esmer | kumral}} bir hanımefendiden ilginç bir tavsiye alabilirsin. O tavsiye seni bir miktar maddi kayba uğratabilir. Elde edeceğin şey ise seni çok sevindirecek. Akşam saat {{kelime, 20:00 | 21:00 | 22:00}} sularında da küçük ve tatlı bir teklifle karşılaşabilirsin. Bazen küçücük şeyler huzurun ve enerjinin artmasında çok etkili olabiliyor. Bana hak vereceksin.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "metin": "Şu an pek keyfin yerinde olmadığı için, canını bir de ben sıkmak istemiyorum {{isim}}. Ancak bir konuda seni uyarmam gerek. İlerleyen saatlerde bazı gelişmeleri hızlı şekilde, peş peşe yaşayabilirsin. Bu gelişmeler karşısındaki aksiyonlarının da aynı hızda olması gerek. Karşına çıkan meselelerin üstesinden gelmek istiyorsan, ağırkanlı olmamaya ve ikilemde kalmamaya dikkat etmelisin. Olaylara dar çerçeveden bakan, {{harf}} harfi bir insan görüyorum. Bu insan galiba senin yakın bir tanıdığın. Öğleden sonraki saatlerde bu insanla hafif bir münakaşa içine çekilebilirsin. Uzak kal, yörüngenden kopma ve akşamı sağlıklı şekilde et. Akşam karşılaşacakların, keyfini yerine getirecek. Unutmadan; bugün alerjik bir günündesin...",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "metin": "Bir de \"salı sallanır\" derler ama o herkes için gerçerli değil işte {{isim}}. Sen bugün çok günündesin. Akşamın geç saatlerine kadar iki ayrı güzel haber alacaksın. Bir tanesi bir yakınından, diğeri ise tanımadığın birinden. Senin son bir hafta on gündür yoğun şekilde hayalini kurduğun bir şey var mı? Maddi bir şey gibi, bir şeyi satın almak, bir şeye sahip olmak gibi... Bunu bugün elde edebilir ya da elde etmeni sağlayacak o son basamağa adım atabilirsin. \"Hiç mi tatsızlık yok?\" dersen, bir şey var, evet. Magnuskop, bugün bir şeyini kaybedebileceğini işaret ediyor. Belki bir belge, bir kredi kartı, ya da bir eşyanın ucu, fişi, kablosu. İki mahiyeti birbirine bağlayan bir unsur bu. Her neyse, bulunacak neticede. Akşamın geç saatlerinde birinin tembelliği, uyuşukluğu ya da unutkanlığı seni çok kızdırabilir. Gül geç, boşver...",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "metin": "Salı günlerinin istatistiksel olarak en az sağlık problemi yaratan günlerden biri olduğunu biliyorum. Fakat Magnuskop'un söylediğine göre bugün ailenden biri hafif sağlık problemleri yaşayabilir. Deri döküntüleri, kaşıntı, hazımsızlık ya da baş ağrısı konularından şüpheleniyorum. O kişiyi dinlendir derim {{isim}}. Senin bugün önemli bir işin yok, genellikle yatışla geçecek. O kadar sulh ve sükut içinde bir gün ki, ne olumlu ne de olumsuz hiçbir dalgalanma yaşamayacaksın. Hatta alışık olmadığın bu huzur seni ziyadesiyle memnun ederek iştahını açacak. Aşk, para gibi dış etkenlere ve şansa bağlı konularda senin adına bir kıpırtı görmüyorum. Çarşamba ola hayrola...",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "metin": "Böyle keyifli bir salı gününü bu tarz bir havadisle açmayı hiç istemezdim isim. Gel gör ki, yaptığım analizler bugünkü harcamalarının normalin çok üzerine çıkabileceği yönünde işaretler barındırıyor. Konu para olduğunda, geleceğe yönelik birtakım tedbirler alman gerekebilir {{isim}}, hem de hemen. Bir amacın, bir hayalin var gibi. Bunu fark eden, seni izleyen bir erkek görüyorum. Bu erkek senin, sorumluluklarının üzerine nasıl gittiğini ve ne kadar disiplinli olduğunu biliyor. O bugün senin için bir şey yapacak. Senin bundan hemen haberin olmayabilir, ancak faydasını mutlaka bir şekilde göreceksin. Herkes gün sonuna doğru yorulurken, senin tam tersi enerji toplayarak günü kapatacağını düşünüyorum Sevgili {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "metin": "Hafta ortasına kadar sorunsuz sıkıntısız geldik derken bugün seni biraz aksiyonlu bir gün bekliyor {{isim}}. Adı ya da soyadı 3 heceli biriyle aranda sürtüşme yaşanacağını görüyorum. Hem bir yandan kendi çıkarların için iletişimi devam ettirmen ve işleyişi koruman gerekiyor, hem de rest çekmenin sınırlarında geziniyorsun. Bugün akşam üzerine doğru sana bir de görsel atılacağını görüyorum {{isim}}. Bir fotoğraf ya da döküman görseli olsa gerek bu. Baktığında senin için çok şey ifade edeceğini ve az da olsa bir \"oh\" çekeceğini söyleyebilirim. Gereksiz bir detay olabilir ancak yatmadan birkaç saat önce birinden meyve ikramı alacaksın. <sprite=0>",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "metin": "Birinin mesaj atıp atmayacağını çok merak ediyor gibisin bugün. Aslında bu merakının pazartesi gününden beri sürdüğünü hissediyorum {{isim}}. Mesaj beklediğin kişiye karşı radikal hislerin var. Öfke mi sevgi mi bilemedim. Belki de hakkını yediğini ya da sana yeterince önem vermediğini düşünüyorsun. Ondan bugün mesaj gelecek. Çarşambaları, senin şansının döndüğü gün bence. Güneş batmaya yakın duyulacak bir gelişmeden bahsediyor Magnuskop. Maddiyata bakan bir yönü olduğu için bu gelişme seni biraz rahatlatabilir. Akşamın son saatleri, yaşadığın yerdeki bir eksiği gidermekle geçecek gibi hissediyorum.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "metin": "Hafta ortası stresinden midir nedir, bugün burnundan adeta dumanlar çıkmak üzereymiş gibi gözüküyorsun {{isim}}. Hayırdır inşallah, neden böylesin ki? Bak \"iyisin\" ya da \"kötüsün\" demiyorum ama bir gerginlik var sende. Çok yakınlarından bir {{kelime, hanımefendi | beyefendi}}, bugün sana fevkalade toleranslı davranacak. Eğer öyle olmasa, farklı tatsızlıklar yaşayabilirdiniz. Yetersizlik hissettiğin bir konu ile ilgili, öğleden sonra durumun değişecek. Ya eline geçecek şeyler olacak ya da yardım alacağın biri olacak. Bu akşamı dün geceden biraz daha farklı geçirebilirsin {{isim}}. Farkı ise olumlu bir gelişmenin ya da seni seven bir insanın yaratacağını düşünüyorum. Güzel bir çarşamba akşamı seni bekliyor...",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "metin": "Böyle huzurlu bir cumartesi gününde bunu neden yaparsın bilmiyorum {{isim}} fakat yaşama dair birtakım şeyleri çok fazla irdeleyip zihnini yoracağını hissediyorum. Neyse ki sana güzel de bir haberim var. Bugünün ilerleyen saatlerinde, tahminim 14:00-17:00 suları arası, kontrolcü olduğun ve ilerisinden endişe ettiğin bir konu ile ilgili seni havalara uçuracak hoş bir haber alacaksın. Bu haberi sana bir {{kelime, arkadaşın | akraban | tanıdığın}} verecek. Öte yandan, bu akşam planın dışında bazı gelişmeler yaşayabilirsin. Aniden telefonun çalabilir, bir yere çağırılabilirsin, ansızın bir misafir çıkıp gelebilir ya da bir online oluşuma katılabilirsin. Bu ihtimallerin her biri geceni renklendirecektir, emin ol {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "metin": "Perşembe perişanlıktır derler, fakat bugün senin için biraz daha ilginç bir gün olacak {{isim}}. Geçmişindeki gerçekler ve geleceğe bakan hayallerin arasında kendi iç aleminde bir çatışma yaşayabilirsin. Elindeki imkanların isteklerine yetmediğini düşünmen, seni biraz aşağı çekebilir. Ruhsal stabilizasyonunu sağlayabilmek adına, bugün insanlarla iletişimini ertelemende fayda görüyorum. Günün büyük çoğunluğunu içe kapanık geçirsen de, akşam saatlerine doğru seni seven bir insanın güzel söylemleriyle mutlu olacaksın. Akşam ise hayat sana harika bir ipucu verecek {{isim}}. O ipin ucunu çektiğinde, hedeflerinle ilgili yeniden heyecanlanabilirsin.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "metin": "Cuma günlerinin rahmeti ve bereketi bugün resmen üzerinde gözüküyor {{isim}}. Öğlen saatlerini terk etmeye başladığında, 3 saat arayla art arda iki güzel haber alacaksın. Bu haberlerden {{kelime, bir tanesinin telefonla, diğerinin ise mesaj yoluyla | her ikisinin de telefonla | bir tanesinin telefonla, diğerinin ise sosyal medya aracılığıyla}} geleceğini görüyorum. Saati {{kelime, 19:00 | 20.00 | 21.00}} ettiğinde, içinde büyük bir sevinç olacak. Bu sevincini, yaşayabileceğin {{kelime, bir miktar boğaz ağrısı | bir miktar baş ağrısı | bir miktar sırt ya da bel ağrısı | bir miktar halsizlik}} hafiften gölgeleyebilir. Sağlığına dikkat etmen gereken bir gündesin. Ayrıca gün içerisinde, adının içerisinde {{harf}} harfi olan bir {{kelime, kurumda | insanın evinde}} senin için güzel gelişmeler meydana geliyor olacak fakat haberini bugün alamayacaksın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "metin": "Sevdiğin uğraşları zaman zaman ikinci plana atarak yapman gerekenlere odaklanacağın, verimli bir gün olacak {{isim}} bugün. Adında ya da soyadında {{harf}} harfi olan birisi, ihtiyaç duyduğun bir şeyi senin beklediğinden daha kısa sürede gerçekleştirerek seni mutlu edecek. Çok ilginç, belki bir detay ama; bugün bir yiyeceği ya da içeceği ilk kez deneyebilirsin. Bugün akşam üzerine doğru, seninle ilgili bir şey {{kelime, anneni | babanı}} ya da onun kadar yakın gördüğün, yaşı senden oldukça büyük birini çok mutlu edecek. Alacağı bir haber sonrasında seni arayıp bunu sana bildirebilir. Gece günü tamamen kapladığında, kendini başarılı ve gururlu hissedeceksin {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "annebaba",
+          "deger": "sağ"
+        },
+        {
+          "degisken": "yasmax",
+          "deger": "50"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "metin": "Dün'ü aklındaki bazı meselelerle kapattığını ve çok da huzurlu uyumadığını biliyorum. Bugün aklını kurcalayan bu konular, seni mutlu edecek yönde neticelenmeye başlayacak {{isim}}. Kulaklarını çınlatan bir insan var bugün senin. Sana ulaştırmak istediği bir haber olduğunu görüyorum. Alacağın bu haber sayesinde, yapmak istediğin bir seçimi de netleştirmiş olacaksın. Harcamalarına dikkat etmen gereken bir gündesin. Bugün alacağın bir şey, yarın başka bir şeyi elinden çıkarmak durumunda kalmana neden olabilir.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "metin": "\"İşler sıkışınca, sıkılar işe başlar\" diye boşuna dememişler. Bugünün ilk saatlerinde, planlama yeteneğini ve kıvrak zekanı kullanarak bazı işlerin üstesinden çabucak gelmen gerekecek {{isim}}. Hafta içleri senin için eminim her zaman böyle olmuyordur. Bugün ekstra bir yoğun olacaksın. Ayrıca analizlerim şunu gösteriyor; hayat bugün sana daha önce değerlendiremediğin bir fırsatın tekrarını sunacak. Bu defa işin olgunlaşmaya başlaması ya da gerçekleşmesi bir hamlene, bir kararına, bir imzana ya da bir sözüne bakıyor olacak. Elinden kaçıracağını düşünmüyorum. Günün son saatlerinde karşı cinsten biriyle aranda, son sözü kimin söyleyeceğine dair ufak bir gerginlik yaşanabilir. Sükut altındır {{isim}}. ;)",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kendi işini yapıyor"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "metin": "Bugün senin için dolu dolu bir {{gun_0}} günü olacak {{isim}}. Aklındaki bir iş için ekstra efor sarf edeceksin. Sen hayatına dair bir konuda büyük bir sıçrama hedefliyorsun. O konuda çok mutlu olmak ve şartlarını çok daha iyi hale getirmek istediğini hissediyorum. Bunun için sana ya bir insan, ya bir fırsat ya da anahtar niteliğinde bir bilgi lazım. Bunlardan birini bugün öğleni takip eden saatlerde bulabilirsin. Bugün karşına çıkacak harikulade bir sürpriz yok. Stabil bir gündesin. Ancak öğleden sonra, {{kelime, kolunda ya da el bileğinde dövmesi olan | kirli sakallı, gözlüklü | sarı saçlı, renkli gözlü}} birinden alacağın güzel haberlerle dolu mesaj, içine resmen su serpecek {{isim}}. Akşamın son saatlerinde ise dün ya da evelsi gün endişe ettiğin bir meseleyle ilgili kendini güvende hissedecek, günü huzurla noktalayacaksın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "yasmin",
+          "deger": "20"
+        },
+        {
+          "degisken": "yasmax",
+          "deger": "50"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "metin": "Birisi var {{isim}}; ya sana kırılmış, ya kendi kendine incinmiş, ya da aranıza \"zaman\" girmiş. Kadın mı erkek mi emin olamadığım bu kişi, bugün kalbinin sesini dinleyerek ya sana ulaşacak, ya da senin için bir şey yapacak. Kim olduğunu günün son saatlerine varmadan anlayacağını düşünüyorum. Net olduğum şey ise, bu kişinin seni çok sevdiği... Bugün senin başvurduğun bir şey reddedilebilir ya da sana gelen bir şey geri dönebilir. Güçlü bir negatif projeksiyon var üzerinde. Endişe etme çünkü bumerang gibi yine seni bulacak. {{rastgeleburc}} burcu, kamuda çalışan bir tanıdığın var. Bugün akşam saatlerine doğru onunla iletişim kuracağını hissediyorum. Bugüne yetişmese de, onun en kısa zamanda sana büyük bir iyiliği dokunacak {{isim}}. Akşam üzeri kendine vakit ayıracak, belki de fiziken ya da ruhen daha da iyileşmek adına bazı girişimlerde bulunacaksın. \"Gün\" seni beğeniyle terk edecek...",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "metin": "Adında {{harf}} ya da {{harf}} harfi olan ve soyadı {{sayi 3,4}} heceli bir {{kelime, hanımefendi | beyefendi}} görüyorum. Bu kişi bugün senin bir yakınınla konuşacak. Kendi doğrularını karşısındaki insana empoze etmeye çalışan ve seninle zıt fikirlere sahip olduğunu düşündüğüm bu kişi, söyleyeceklerini duyduğunda seni biraz kızdırabilir {{isim}}. Yapacağın en akıllıca şey, onu umursamamak olacak. Bugün günün tam bir tahterevalli üzerine kurulu gibi. Özel hayatına dair olumlu şeyler hissettiğinde, ekonomik sıkıntıların aklına gelecek. Parasal anlamda ufacık bir umutla dolsan, sağlığına dair bazı ufak tefek sıkıntıların peydah olacak. Dengeyi sağlamaya çalışarak günü tamamlayacağını düşünüyorum. İlaveten; bugün göreceğin ve özeneceğin bir şeye gelecekte sahip olacaksın. Akşam üzeri ise sabah uyandığından daha keyifli olacağın kesin Değerli {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "metin": "İkili ilişkilerde alıngan ve hassas davranmamak için bugün ekstra özen göstermen gerekebilir {{isim}}. Çevrendeki insanların enerjilerinin büyük ölçüde negatif oluşuna ve özellikle de bazılarıyla anlaşmanın ne kadar zor olduğuna şahit olacaksın. Saat {{sayi, 14,18}} sularında içini anlamsız bir heyecan kaplayabilir. Bu his sana mesaj atacak olan birinin habercisi. Hatta kimin mesaj atabileceğini şu anda da tahmin edebildiğini hissediyorum. O kişiden olumlu şeyler duyacaksın. Bazı bitişler kurtuluştur ve güzel olurlar. Sen de bugün akşama kadar bir süredir içini kemirip duran bir şeyden kurtulmuş olacaksın {{isim}}. Bugün şanslı günündesin, onu söyleyeyim! Aslında rekabeti seviyorsun, öyle değil mi? Bugün adı ve soyadı toplam {{sayi, 4,6}} heceden oluşan o kişide göreceğin şeyin daha iyisi, böyle bir {{simdiki_ay}} ayında sende de olacak. ;)",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "metin": "Bugün güne pozitif başlayacaksın {{isim}}. Bu sayede karşına çıkabilecek güçlüklerin üstesinden kolaylıkla gelmen mümkün olacak. Gün içerisinde bir tanıdığına iletilecek \"geçmiş olsun\" dileklerine şahit olabilirsin. Yakın çevrendeki insanların küçük sakarlıklar yaşayabileceği bir gündesin. Onları teskin etmek ve onlara moral vermek sana düşebilir. Akşam saatlerine doğru, karşına {{sabit_sayi,2,9}} gün sonrasını ilgilendirecek bir fırsat çıkacak. Bu fırsatı değerlendirirsen, {{sabit_sayi,2,9}} gün sonra {{kelime, eline bir miktar para geçecek. | çok istediğin bir şeye sahip olacaksın. | birinden istediğin geri dönüşü alacaksın}}",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "metin": "Bugün hatırlamadığın bazı garip rüyaların etkisinde uyanmış olabilirsin {{isim}}. Eğer onlardan hiç kimseye bahsetmezsen, denize atılmış ve çözünüp giden kağıt peçete parçaları gibi yok olup gidecekler. Bundan hiç endişen olmasın. Birinin evinde tencere kaynayacak bugün. Taşacak, dökülecek. O kişinin hanesine yakında çok büyük bir müjde girecek ve bu konu seni de ilgilendiriyor olacak {{isim}}. Bugün saat ve dakikanın \"birer tane rakamını\" aynı gördüğün bir andan yaklaşık {{kelime, yarım | bir | iki}} saat sonra, güzel bir {{kelime, telefon | mesaj}} alacaksın. Karşındaki kişi tarafından ne kadar değer gördüğünü bir kez daha anlamış olacaksın. Akşam için bir planın var mıydı {{isim}}? Bence o planın yerini kendiliğinden bir başkası alacak.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "metin": "Bugün \"dıt\", \"bip\" ya da \"ding dong\" seslerinden bir ya da birkaçını birden fazla kez duyabilirsin. Belki yapman gereken işler, belki de birileri veya bir şeyler gün içerisinde hep seni çağırıyor olacak. Biliyor musun, dün gece adında {{harf}} harfi olan birinin rüyasındaydın {{isim}}. Bu kişi {{gun_-2}} günü ve dün, gün boyu seni düşündü. Gece bilinç altının seni ortaya çıkarması gayet normal. Bu kişi sana dair güzel günler hatırlıyor... Öğleden sonra seni memnun edecek bir tesadüf yaşayacaksın. Aklından geçen, karşına gelecek. Belki karşına, belki önüne, belki de telefonuna... Akşam üzerine doğru ise baş ya da diş ağrısı çekme ihtimalinle ilgili seni uyarmak isterim. Bu ihtimal az da değil; hesaplamalarım %{{sayi,60,90}} dolaylarında olduğunu söylüyor. Zihinsel olarak yorulduğun bir günün sonunda, oturduğun ya da uzandığın yerde uyuyakalabilirsin.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "metin": "Özellikle senin gibi {{medeni durum}} insanları memnun edecek şansta ve enerjide bir güne başlıyorsun. Çevrendeki insanlar tarafından saygı görecek, uzaktakiler tarafından sevgiyle anılacak ve güzel olan \"cümle içlerine\" dahil edileceksin {{isim}}. İsmi {{kelime, dört | beş}} harften oluşan ve isminin {{kelime, ikinci | üçüncü | dördüncü}} harfi {{harf}} olan biri, öğleden sonra sana bir soru soracak ve cevabın doğrultusunda senin bir {{kelime, işini halledecek | isteğini yerine getirecek | problemini çözecek}}. Akşam saatlerinde aklın geçmişe gidebilir {{isim}}. İçine sinmeyen bir durumu ya da ardında bıraktığın bir insanı düşüneceksin. Hiç merak etme; o anki auran, yazgın üzerinde olumlu etkiler yaratarak daha güzel günler görmen adına kaderinde zemin hazırlayacak. Başın yastıktayken gözlerini kapadığında, uykuya yaklaşık {{sayi,4,13}} dakika içerisinde dalacaksın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "metin": "Bugün seni yoğun ve koşuşturmacalı bir gün bekliyor {{isim}}. Gün ortasına doğru işlerini yoluna sokmak için sarf etmen gereken efor giderek artacak. Bugüne dair işin güzel yanı şu; hemen her konuda alacakların ve vereceklerin denk düşecek, işlerin rast gidecek. Mali konularda önüne çıkacak olan fırsatları, üzerlerine çok fazla düşünmeden değerlendirmemelisin. Hesaplamalarım, gereksiz harcamalar yapabileceğine işaret ediyor. Akşam saatlerine doğru, {{kelime, birçok konuda benzer fikirlere sahip olduğunuzu düşündüğün | iki ayrı kutup kadar zıt olduğunuzu düşündüğün}} ve adında B harfi olan bir insanla önemli bir konuda konuşacaksın. Birlikte alacağınız bir karar, seni çok memnun edecek. Bugünü şanslı ve başarılı hissederek kapatacağını düşünüyorum {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "metin": "Günün biraz baş ağrılı ve gergin başlamış olabilir {{isim}}. Bu gerginliğinin yerini gün içerisinde bir zindelik ve öfori alacak. İçinde nedensiz bir mutluluk hissedebilir, bunu çevrendeki insanlara da yansıtabilirsin. Bugün senin için {{ay_0}} ayının bana sorarsan en anlamlı günlerinden biri olacak. Çok değer verdiğin birine ya da bir şeye dair memnuniyet verici bir gelişme yaşayacaksın. Kafanda yakın vadeye dair birtakım maddi endişeler mi var senin? Bugün bu endişelerin bazı anlarda alevlenebilir Kıymetli {{isim}}. Ben yine de üstesinden gelemeyeceğin bir durumla karşılaşacağını düşünmüyorum.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "metin": "Bugün üzerinde anlam veremediğin bir yorgunluk olabilir {{isim}}. Sabah saatlerinden başlayan bel ya da mide ağrılarının baş gösterebileceğini seziyorum. Enerjin ancak öğlenin ilerleyen saatlerinde tam olarak yerine gelecek. Uzun zamandır görüşmediğin ve birden bire yeniden samimi olduğunuz {{harf}} harfli bir insandan güzel haberler alabilirsin. Bugün {{burc}} burçlarının aşk hayatları biraz çalkantılı geçecek fakat senin yükselenin {{yukselen}} olduğu için pek de negatif etkileneceğin söylenemez. Sen günü keyifli kapatacaksın {{isim}}. Hatta akşam saatlerinde, bir konuda yarını iple çekebilirsin.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "metin": "Bugün Magnuskop'ta, başının üzerine konumlanmış bir yıldız görüyorum {{isim}}. Sana öğleden sonra biri ulaşacak. \"Benimle ne işi olur ki\" dediğin, aramaz zannettiğin, enerjisi yüksek biri. Bu yıldız, o kişiyi temsil ediyor ve ondan sana muhtemelen bir teklif gelecek. Çok onöre olacaksın. Keyifsiz başladığın güne keyif dolu devam edeceğin için zamanın nasıl akıp geçtiğini bilemeyebilirsin. Pek bir iş yapmadan hızla akşamın geldiğine tanıklık edeceksin. Nedense akşamın geç saatlerinde içine bir kuşku düşecek. Gerçekleşmesine ihtimal verdiğin bir şey için endişe edebilirsin. Sandığın gibi olmayacağını hissediyorum. Lakin bu farklı bir falın konusu. Bana sorarsan kalbini serin tut. Bazı meseleler günü zamanı geldiğinde kendiliğinden hallolur, içine dert etme. Gece uykun birkaç kez bölünebilir ya da uykuya dalmakta güçlük çekebilirsin. Öyle bir an geldiğinde, gün içinde",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "metin": "Magnuskop'ta seni yoğun enerji akışlarının olduğu bir yerde görüyorum. AVM ya da benzeri, kalabalık bir yerde bulunma ihtimalin var bugün. Öncesinde ya da sonrasında, yarına dair kritik bir işini halledeceksin. Öğleden sonra içinse bir el sıkışma belirmiş {{isim}}. Fikir ayrılığı yaşadığın bir aile ferdinle nihayet mutabık kalacağınızı söyleyebilirim. Bugün senin için uzun ve yorucu bir gün olacak sanırım. Hareket halinde olman ve her şeyi olması gerektiği hale getirmek için emek vermen gerekebilir. Geçen hafta bugün, yani tam {{gun,-7}} günü bir başvurun oldu mu Değerli {{isim}}? Neyle ilgili olduğunu bilmemekle birlikte, akşam saatlerine doğru bu başvurunun olumlu sonuçlandığının haberini alabilirsin. Son olarak, gece geç saatler için bir elektrik ya da su kesintisi yaşanması olası. İşlerini erken bitirmende fayda var.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "metin": "Hayatın boyunca tecrübe edebileceğin en harikulade günlerden birindesin {{isim}}! Bugünün kesinlikle kıymetini bilmen gerekiyor. Magnuskop, üzerine yağacak rahmet yağmurlarından ve seni saracak olan beyaz enerjiden söz ediyor. Öğlene doğru içine öyle bir his doğacak ki, \"her şeye rağmen yaşamayı çok seviyorum!\" diyeceksin. Bu hislerinin elbette bir sebebi var. Sen de algıları açık birisin. Öğleden sonra saat 16-17 sularında çok güzel bir haberin var. Bu haberi aldığında kuvvetle muhtemel ayakta olacaksın ve haberi duyduğunda istemsiz bir \"zıplama\" hareketi yapabilirsin. Akşam kısa bir süreliğine dışarı çıkıp geri dönmen gerekebilir. O noktada bir uyarım var: Eğer varsa kredi kartını, yoksa da telefonunu ya da anahtarlarını yanına almayı unutma. Unutursan, bunun sana bir bedeli olabilir. Gece geç saatlerde telefonuna bir tanıtım sms'i düşebilir. O geldiği sırada sen kediler gibi mışıl mışıl uyuyor olacaksın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "metin": "{{isim}} bugün senin için sözlerin ve düşüncelerin havada uçuşacağı bir gün olacak. Saçını son birkaç hafta içinde uzunken çok kısa kestirmiş bir hanımefendi, sana biriyle ilgili bilgi taşıyacak. Öğleden sonra ondan duyacakların, seni biraz şaşırtabilir. Neden sana söylediğini garipseyebilir, iyi niyetinden kuşku duyabilirsin. Bilmen gereken şey şu; duyduklarınla başka bir insanı yargıla, ama asma. Söyleyeceklerinin büyük bir kısmı doğru da olsa, bir kısmı tamamen farklı bir amaç güdüyor olacak. Bu arada, bu kişi bugün kendi arabasıyla bir yere gidiyor... Magnuskop'ta sana bir kalp belirmiş. Bugün çevrenden ya da senin için özel olan birinden yoğun sevgi göreceksin; özellikle de akşam saatlerinde. İnsanlar seni önemsiyorlar. Bunu bir kez daha anlayabilirsin. Gün sona ermeden ve sen başını yastığa koymadan önce sana bugüne dair bir de tüyom var: Eğer bugün herhangi bir konuda iki seçenek arasında kalırsan, ihtimal vermediğini ve zayıf olanı seç.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "metin": "Bugün çok ilginç bir güne uyanmışsın fakat henüz farkında değilsin {{isim}}. Önümüzdeki 2-3 saat içinde alacağın bir telefon sonrasında, tüm gün için yaptığın planların hepsini iptal etmek durumunda kalabilirsin. Bunun sebebini tam bilmemekle birlikte, Magnuskop'ta önüne örülmüş bir duvar, çekilmiş bir set görüyorum. Kader silsilesinin sebepler dairesi, seni senin için daha hayırlı olan olaylar akışına doğru yönlendirecek. Akşam saatleri için enerjin dramatik bir düşüş sergileyebilir, bunu hissediyorum... Mide yanması, diz, bel, boyun ve eklem ağrıları ya da halsizlik hissedebilirsin. Dinlenmekten başka bir çaresi olacağını düşünmüyorum. Kendine zaman ayıramadığın bir gün olacağı için, en azından bunu akşam yapmalı ve istirahat etmelisin. Gece için de bir sezgim var. Sen bu gece tatsız bir rüya göreceksin {{isim}}. Gördüğünü sabah hatırlarsan, tabir ettirme. İyiye yor ki hayra çıksın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "metin": "{{isim}} bugün için Magnuskop'a odaklandığımda, silüeti belli belirsiz, gözlüklü bir adam gördüm. Bu adam ya bugün sana bir konuda yardımcı olacak, ya da yarın yardımcı olabilmek için hazırlıklarını bugünden yapacak. Senin için çok neşeli geçecek bir gündeyiz. Gündeme dair sosyal medyada garip haberler duyacaksın fakat hiç biri seni etkilemeyecek. Senin bugün iki ayrı yere zorunlu olarak para harcaman söz konusu olabilir {{isim}}. Bana sorarsan bunlardan bir tanesini sonraya ertele ki seni maddi açıdan sıkıntıya sokmasın. Akşam saatlerine doğru konuşacağın {{harf}} harfli biri, sana olan güzel hislerini net bir şekilde aktaracak. Sevilmek ve sayılmak güzel şey.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "metin": "Bugünün senin için diğerlerinden biraz daha farklı bir gün olacağını görüyorum {{isim}}. Birkaç gündür kendine dert ettiğin bir işinin halli için başı kapalı bir hanımefendiden doğrudan ya da dolaylı bir yardım alacaksın. Böylelikle önündeki engel kaldırılacak. Güne çok enerjik başlamasan da, Magnuskop'tan gördüğüm kadarıyla öğleden sonra moralini bir hayli düzeltiyorsun. Birkaç telefon konuşman var, kısa kısa. Görüştüğün kişilerden biri sana bir mesuliyetini hatırlatabilir. Ona çok takılmamalısın. Akşama doğru ise senden yaşça küçük biri seni memnun edecek bir şey yapacak. Onu takdir edebilir veya onunla gurur duyabilirsin. Akşam seni huzur, sükunet ve tatlı da bir yorgunluk bekliyor. Çok sevildiğini görerek güne gözlerini kapatacaksın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "metin": "Kararlı uyanacağını ve karşına çıkan güçlükleri hızla egale edeceğini hissettiğim bir gündesin. Bugünde senin için pek çok kazanç saklı {{isim}}. Senin için bugün günün konusu resmi bir iş olacak. Bir evrak ya da bir izin belgesi alacaksın. Bu işi halledebilmek öğleden sonra seni bir hayli rahatlatacak. Magnuskop'ta bir erkekle konuştuğunu görüyorum; kısa saçlı, saçlarında kırlar var, sanıyorum 60'lı yaşlarında. Bu kişi sana bir yerle ilgili bilgi verecek; satış mı, kira mı, bilemiyorum. Oradan senin de bir hissen, bir kârın olacak ve bunu ilerleyen haftalarda elde ederek maddi açıdan ferahlayacağını öğreneceksin. Seni akşam saatlerine doğru beklemediğin bir teklif karşılayacak. Bir hanımefendiden gelecek olan bu teklif seni ilk anda paniğe sevk etse de, yapmak zorunda kalıp gerçekleştirmen durumunda \"iyi ki\" diyeceksin. {{isim}} bugün sana yüksek bir huzur vadediyor. Başını yastığa koyduğunda uyuman çok uzun sürmeyecek.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "yasmin",
+          "deger": "22"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "metin": "Magnuskop bugün seninle ilgili ışıl ışıl {{isim}}! Tek bir güne bu kadar mutluluk her zaman sığmaz, buna emin ol. Daha öğlenin ilk saatlerinde yüzünü güldüren haberler başlayacak. Çalacak bir kapı görüyorum, açtığında rahatlayacaksın. Kapını gerçekten mi biri çalacak yoksa mahiyeten biri sana ulaşıp içini mi rahatlatacak, emin değilim. Bildiğim şu ki, derin bir \"oh\" çekeceksin. Öğleden sonra kısa yollar görüyorum senin için. Hareket halinde olabilirsin. Gittiğin lokasyonlarda aşırı harcama yapmamaya özen göstermelisin. Bugün sağlığın çok yerinde. Maddi durumun için de aynı şeyi söylemeyi çok isterdim, fakat yapmak istediğin bazı şeyler için imkanların eksik kalabilir. Yine de buna takılacağını sanmıyorum. Adında F ya da R harfi olan birinden bugün bir mesaj alacaksın. Bu mesaj seni yüreklendirecek ve aklındaki ufak tefek tortular su gibi akıp gidecek. Akşam saatlerinde ise, seni geçmişte bir sebeple üzmüş bir kadının hüsrana uğradığını duyarak ona karşı yeniden vaziyet almak isteyebilirsin. Gece rahat bir uyku çekeceğini umuyorum.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "metin": "Bugün için sana yoğunlaştığımda siyah bir enerji alanı içerisinde olduğunu görüyorum {{isim}}. Geçtiğimiz günlerde adını anan ya da bir yerde fotoğrafını gören bir insan, sana negatif tesir etmiş. Bu insanın birkaç gündür soğurucu etkisindesin ve bu durum sende bugün de birtakım eklem ağrılarına ve halsizliğe yol açabilir. Bu durumdan çıkmak için bugün bolca su ile temas etmeli ve güneşe çıkmalısın. Öğleden sonra senin için ciddi bir yoğunluk söz konusu olacak {{isim}}. Bitirmen gereken işlerin olduğunu fark edecek ve hızlı davranmak isteyeceksin. Bugün hız senin düşmanın, bunu unutma. Gecikmelerden korkma ve ağırdan al. Hedeflerine varacaksın. Akşam için bir misafir bekliyor musun? Ben Magnuskop'ta plansızca ortaya çıkan iki kişi görüyorum. Sevgili ya da karı koca olabilirler. Onlarla bir temasın olacak. Onlarla ilgili de aynı şeyi söyleyeceğim; bugünlerde nazara dikkat et. Bu siyah enerji alanından tam olarak çıkana kadar insanların gözlerine çok fazla gözükme ve onlara planlarından bahsetme. Dilerim günü mutlu ve memnun tamamlarsın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "metin": "{{isim}} bugün çevrende sana negatif enerji verebilecek insanların konumlanabileceğini görüyorum. Magnuskop'ta bir göz var. Bu insanlar sana samimi davranıyor gibi gözükebilir, ancak senin pek de fazla iyiliğini istemiyorlar. Sen fıtratın gereği içten ve samimi bir insansın, ancak bu tarz kişilerle paylaşımlarını kısıtlı tutmanda yarar var. Gün içerisinde birkaç aksilikle karşılaşman mümkün. Bunlar seni yıldırmasın. Akşam saatlerine kadar düşündüğün ve üzerine kafa yorduğun meselelerde çok ciddi yollar katetmiş olacaksın. {{isim}} hassasiyetlerini bilen ve bunları bazen sana karşı kullanan bir insan görüyorum. Bu insan akşam saatlerinde seni manipüle etmeye çalışabilir. Ona fırsat vermemeli, güçlü durmalısın. \"Hayır\" demeyi çok iyi öğrendiğini gösterebileceğin bir gündesin. Yastığa başını koymadan önce ise yarın için umutvar olacaksın. İşlerin nihayet rayına girmeye başladığı hissi tüm ruhunu kaplayacak ve rahat bir uyku çekmene vesile olacak.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "metin": "Bugün senin için zorlu bir gün olacak {{isim}}. Bazı acil ihtiyaçların için maddi kaynaklar bulmak durumunda kalabilirsin. Kendini bu anlamda bir cendereye sıkışmış ve çaresiz gibi hissetmen olası. Bir taşma noktası yaşayacaksın, öğleden sonra. Buna şahit olacak birini görüyorum, adında {{harf}} harfi var. Bu kişi sana bir yol gösterecek ya da senin için bir yol açacak. Bu kişiye bugün çok dua edeceksin. Öğleden sonra sana telefonla, uzaklardan gelecek bir haber var. Ana binası bulunduğun şehirden çok ötede bir kurum ya da evi sana en az 6-7 saat uzaklıkta bir kişi olabilir bu haberi verecek olan. Bu haberle birlikte geleceğe dair bir plan değişikliğine gideceğini söylüyor Magnuskop. Senin için bence de böylesi daha hayırlı olacak. Akşam seni bir koltuğa yığılmış vaziyette görüyorum. Zihinsel yükler bazen fiziksel ağırlıklar taşımışsın gibi hissettirebilir. Bu akşam da öyle zamanlardan biri olacak belli ki. Her şey bir kenara, yastığa başını koyduğunda kendinle gün içinde başardıklarından dolayı gurur duyacaksın {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "metin": "Magnuskop'ta seni, sana kalben yakın olan bir arkadaşınla ağız ağıza vermiş, konuşurken görüyorum. Bu kişi senden uzakte oturuyor {{isim}}, o nedenle anladığım kadarıyla ya yazışacaksınız, ya da telefonla konuşacaksınız. Bu kişinin bir müşkülü var, ya geçmişte aldatılmış, ya da şu sıralar hayatında olan insan tarafından, ki bu eşi ya da sevgilisi olabilir, kalbi kırılmış. Sana dert yanacak. Onun için yapabileceğin çok fazla bir şey yok; hatta yapmaya da çalışma derim, çünkü sonra \"kötü\" sen olursun. Senin için bugün temiz ve duru bir öğlen görüyorum. Kafanı yoracak çok fazla mesele olmayacak. Başkalarının sıkıntılarını içselleştirmemeyi başardığın bir gün olmalı. Aksini her zaman yaptığını iyi biliyorum ne yazık ki. Öğleden sonra senin bir şekilde şans yüzüne gülüyor. Çarklar senin için işleyecek ve zor bir isteğinin gerçekleştiğine tanıklık edeceksin. Akşamın sakin ve durgun geçecek. Aç bir film izle bence. Bir yere odaklanamıyorsun değil mi pek? Bu akşam bunu yap ve rahatlamış şekilde uyu.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "metin": "Kafanda dünden kalma soru işaretlerinin tek tek yanıtlanacağı bir gündesin {{isim}}. İlk cevabı öğlen saatlerinin sonlarında alacak, hem tatmin olacak hem de içini rahatlatacaksın. Saat 1{{sayi,5,8}} dolaylarında kalbinde anlam veremediğin bir çarpıntı hissedebilirsin. Bu tecrübenin hemen ardından yaşayacağın küçük bir gelişme, yüreğini \"fırtına sonrası sessizliğin\" kaplamasına neden olacak ve keyifli bir dinginliğe bürüneceksin. Akşam saatlerinde ise, senden yaklaşık {{kelime, yarım saatlik mesafede | 20 km uzaklıkta | 10 km uzaklıkta | 30 km uzaklıkta}} oturan eski bir {{kelime, arkadaşınla | tanıdığınla}} ilgili öğreneceğin bir bilgi, seni bir hayli mutlu edecek. Günü yorgun fakat pozitif noktalayacaksın.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "metin": "Sana pek öyle gelmese de, güzel bir gündesin. Çok sevdiğin biri, gün içerisinde öyle bir şey yapacak, önüne öyle bir işaret bırakacak ki, onun tarafından ne kadar çok değer gördüğünü bir kez daha anlayacaksın. Fiziken kendinde beğenmediğin bazı özellikler mi var {{isim}}? Bunları geliştirmek ya da iyileştirmek adına bir adım atabilirsin. Adında {{harf}} ya da {{harf}} harfi olan bir {{kelime, kadın | erkek}} sana bu konuda yol gösterecek ve bazı tavsiyelerde bulunacak.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "metin": "Bir süredir görüşmediğin fakat çok sevdiğin bir dostunun bugün bir hüznü var. Birkaç damla gözyaşı görüyorum. Kendisiyle konuşmasan da, nedenini sosyal medya üzerindeki bir paylaşımından anlayabilirsin {{isim}}. Senin için kolay başlayan gün, ilerleyen saatlerde zorlaşabilir. Çabuk yorulabileceğin ve sevdiğin uğraşlara karşı dahi isteksizlik hissedebileceğin bir gündesin. Bir {{kelime, adam | kadın}} görüyorum; yaşça senden {{kelime, büyük | küçük}} ve {{kelime, beyaz | siyah | gri}} bir {{kelime, arabaya biniyor | arabadan iniyor | kıyafet var üzerinde}}. Bu kişinin seni de ilgilendiren olumlu bir girişimi olacak. Sonucunu bugün öğrenemeyeceksin fakat kim olduğunu gün içinde anlayabilirsin.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "metin": "Bugün, aranın açık olduğu ya da çok yakın olmadığın biriyle samimiyetinin artacağını söyleyebilirim. Adında ya da soyadında {{harf}} harfi bulunan bu kişiden seni şaşırtacak bir iyilik göreceksin. Yeni bir hobi edinebileceğin ya da yeni şeyler deneyebileceğin bir gündesin {{isim}}. Yeniliklere açık olacaksın. Bugün zihnin çok berrak ve şansın da oldukça yüksek. Gün sonuna dek \"vay be, iyi denk geldi\" diyeceğin birçok tesadüfle karşılaşabilirsin. İki şık arasında kalırsan muhakkak ikinciyi seç. \"Magnus demişti!\" diyeceksin. ;)",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "metin": "Gün içinde yapıp bitirmen gereken işler üst üste gelebilir. Bedenen yorulmasan da, sorumluluklarını yerine getirmek bugün zihnini bir hayli yoracak {{isim}}. Ailenden birinin sana bazı konularda desteği olacağını görüyorum. Bu seni beklemediğin bir anda memnun edecek. Eline geçecek olan bir para var senin. Bu paranın yeri bugünden hazır olacak. Belli ki gün içinde bir şeyler satın alacaksın. Gün sonuna kadar seni üzecek hiçbir olumsuz gelişme gözükmüyor.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "metin": "Bugün senden uzakta olan bir akrabanın sağlık durumu ile ilgili güzel haberler alacaksın. Güneşin tepende olduğu ve olumlu haberleri çekeceğin bir gün seni bekliyor {{isim}}. Seni kıskanan ya da çekemeyen biri var. Kendisini samimiyet maskesi ardına gizlemeye çalışıyor. Adında, senin adında olduğu gibi {{isimiki}} harfi ya da bir {{harf}} harfi olan bu kişi ile bir yerden iletişim kuracaksın. Bu konuşmadan çıkacak olan sonuçlar, senin yararına olacak. Günü gönül rahatlığı içerisinde sonlandıracağını söyleyebilirim.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "metin": "Bugün çok mutlu olmadığını dile getirmiştin {{isim}}. Oysa günü çok sevinçli kapatacağına adımın Magnus olduğu kadar eminim. Akşam saatlerine doğru resmi bir kanaldan ya da tanışıklığın olmayan birinden harika bir müjde duyacaksın. Son haftalarda adında {{harf}} harfi olan birini aklına getiriyor ya da kafana bir nedenle takıyor musun? Bu kişi bugün seni düşünüyor. Ona dair de seni mutlu edecek bir detay yakalayacaksın; nereden, bilinmez... Bugün kafanı yastığa huzurla koyacaksın Değerli {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "metin": "Bugün işinle ilgili bazı meseleler kafanda ön plandayken, gündeminin ilk sırasını aniden, görüştüğün hanımefendi alabilir {{isim}}. Bir soru ile seni bir anda sınayacağını hissediyorum. Merak ettiği şeyin alt metninde güvensizlik yattığını düşünebilir, buna üzülebilirsin. Neyse ki akşamı bulmadan iş tatlıya bağlanacak. Maddi konularda bugün kafanda oluşabilecek belirsizlikleri yersiz buluyorum. Gelecekte daha konforlu günlere ulaşabileceğin bir pozisyonda duruyor, gerekeni de yapıyorsun. Bugün de yapacaksın {{isim}}. Adının içinde {{harf}} harfi bulunan biri bugün sıkça seni düşünüyor olacak. Hemcinsin de olabilir. Kim olduğunun kokusu gün sonuna dek çıkar...",
+      "kosullar": [
+        {
+          "degisken": "'saatmin '",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "flört halinde"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kendi işini yapıyor"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "metin": "Hayatının arka planında bugün adeta slow ve enstrümantal bir şarkı çalıyormuş gibi hissedebilirsin {{isim}}. Sana her şey ağır gelecek. Sonunu beklediğin süreçlerin ağır işlediğini düşünebilir, motivasyonunu bir miktar kaybedebilirsin. Hoşlandığın hanımefendi mesajlarına geç dönebilir, aradığında açmayabilir ya da sana ilgisiz davranıyormuş gibi gelebilir. \"Üf be\" ya da \"Aman ya\" sözlerinin dilinden pek düşmediği keyifsiz görünen bugünü, geç saatlerde harika bir haber ya da güzel bir gelişme ile kapatacaksın {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "'saatmin '",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "flört halinde"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "metin": "Görüştüğün erkek bugün sana her zaman olduğundan daha yakın davranacak. Bazı gerekçeler göstererek sana çeşitli sorular sorabilir ve aklının dibini öğrenmeye çalışabilir. Bu yolla senin için birtakım planlar oluşturacağını düşünüyorum {{isim}}. Sıkıntıları dünde bıraktığın, rahat nefes alabildiğin ve enerjik bir gün geçireceksin. Pozitif enerjin öyle bir düzeye ulaşacak ki, iyi haberleri sana doğru çekecek. Adında {{harf}} harfi bulunan birinden, bir dileğinin gerçekleşmesinin an meselesi olduğunu telefonda duyabilirsin. {{kelime, Saçları hafif seyrek | Genellikle gözlük kullanan | Kısa süre önce yüzünü gördüğün}} bir erkekten de akşam saatlerinde sana bir kutu gelebilir.",
+      "kosullar": [
+        {
+          "degisken": "'saatmin '",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "flört halinde"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "metin": "Bugün çeşitli konularda ilerlemeler kaydedeceksin {{isim}}. Adı da soyadı da iki heceli olan bir beyefendi ile bugün bir alışverişin olacak. Sevdiğin kişiden, bugün seni memnun edecek net bazı söylemler duyabilirsin. Çekincelerini ve beklentilerini anlayacak, yaklaşımını ona göre belirleyeceksin. Akşam saatlerine doğru pek hoşlanmadığın uzak bir akraban ile ilgili  bir haber edinebilir, durumuna da açıkçası memnun olabilirsin. Akşam saatlerinde ise, çok iyi bildiğin ve beğendiğin güzel bir sözün senin hayatın için de ne kadar geçerli olduğunu fark edebilir ve gülümseyebilirsin...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "karmaşık"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "metin": "Bugün günün biraz çalkantılı başlayacak gibi gözüküyor {{isim}}. Çalıştığın yerle ilgili tedirgin edici bir haber alabilir, bazı planlarını bu doğrultuda erteleyebilirsin. Bu haberin bir noktada \"asılsız\" olduğu anlaşılacak ya da habere konu olan şey gerçekleşmeyecek. O bakımdan için rahat olsun. Akşam saatlerine doğru sevdiğin kişinin sana söyleyeceği bazı şeyler, onun hakkındaki fikirlerini olumlu yönde etkileyebilir. Tutarlı davranmasını ve seni anlamasını istediğini biliyorum. Söyleyecekleri, belki de bunun ilk adımlarını oluşturuyordur. Akşam başını yastığa koyduğunda, bir şeyi merak ediyor olacaksın. Bu sanırım işinle ilgili olacak. Sözüme itimat ediyorsan, o konuda da için rahat olsun. Senin için herhangi bir sorun olmayacak Değerli {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "karmaşık"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "metin": "Nişanlınla öğleden sonra küçücük bir konuda fikir çatışması yaşayabilirsin. Konu önemsiz gibi gözükse de, mesele büyüme potansiyeli taşıyor {{isim}}, dikkat etmelisin. Karşı karşıya kalacağın bir olay, seni istemediğin bir seçimi yapmaya itebilir. Bu seçimin sonucunu yine bugün görecek ve yaptığın seçim için memnun olacaksın. Gelecekte karşına çıkacağını hissettiğin ve oluşmasından endişe duyduğun bir problemin kaynağı, bugün adında {{harf}} harfi olan ve aranızda kan bağı bulunan bir beyefendi tarafından tamamen ortadan kaldırılacak.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "metin": "Değişik bir gündesin {{isim}}. Eğitiminle ilgili bazı bilinmezlikler olduğunu hissediyorum. Bunlardan bir tanesi bugün belli olacak. Çok zinde hissedeceğin ferah bir gün bugün. Kafandaki bir işi kolaylıkla halledebilecek, seçim yapmak zorunda kaldığında kararını hızla ve doğru bir şekilde vereceksin. {{burc}} burçları bugün talihli günlerindeler. Şans oyunlarında başarılı olma ihtimalin neredeyse %{{sayi 70, 90}} dolaylarında.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "metin": "Çevrende kınadığın bazı şeyleri bugün sen yapabilirsin {{isim}}. Gününü analiz ettiğimde, kendi çıkarların doğrultusunda bazı kararlar vereceğini gördüm. Aklıma ise hemen şu söz geldi: \"Bir uçurumun içine uzun süre bakarsan, uçurum da senin içine bakar.\" Öğleden sonra, aklına bir arkadaşına yazmak ya da onu aramak gelebilir. Bu senin için isabetli de olacak. Onunla iletişim kurarsan, ondan çok faydalı ve seni memnun edecek bir şey öğreneceksin. Senin kedi ya da köpek sahiplenmek gibi bir fikrin mi var? Bu fikrin bugün olgunlaşabilir, hatta belki bir şekilde gerçekleşebilir. Özel hayatınla ilgili ne istediğini bugün her zamankinden daha iyi biliyor olacaksın {{isim}}. Hayat ise akşam saatlerine doğru bu anlamda beklentilerini karşılamaya başlayacak gibi gözüküyor.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "metin": "Dünden beri yemeyi canının istediği bir şey mi var {{isim}}? Onu sanırım bugün de yiyemeyeceksin. :) Fakat almayı istediğin bir şey için harekete geçmeyi düşündüğünü biliyorum. İmkan kolluyorsun. Bugün o imkanı bulabilirsin. Öğleden sonra beklemediğin bir yerden eline para geçebilir. Saçları uzun olduğu halde toplama şeklinden ya da bakımsızlığından dolayı kısa gibi gözüken bir hanımefendi var. Bu hanımefendi ilerleyen saatlerde ailenden biri ile temasa geçecek {{isim}}. Önümüzdeki haftalara dair bazı plan ve programlarınızı, bu hanımefendinin vereceği birtakım bilgilere göre yapacaksınız. \"Bundan memnun olacak mıyım?\" dersen, ne evet ne de hayır diyebilirim. Senin için artı ve eksisi olacak. Spor yapıyor musun? Akşam saatlerine doğru bir nedenden yapmaya, yapıyorsan da artırmaya karar verebilirsin. Sevinçten havalara uçmasan da büyük bir sorun yaşamadan noktalayacağın bir günün içindesin.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "metin": "Bir masa görüyorum {{isim}}. Masada oturan bir karı koca ve bir de üçüncü kişi var. Bu karı kocanın soyisimlerinde \"K\" harfi olduğunu söyleyebilirim. Bugün o masada sen konuşulacaksın, bundan haberin var mı? Senin hakkında olumlu olumsuz birtakım söylemlerde bulunacaklar. Üçüncü kişi ise onlara karşı seni savunacak. O saatlerde kulakların çınlayabilir. Sana bugün negatif bir etkisi olmayacak; fakat bir gün vereceğin bir kararda onların söylemleri de etkili olacak. Kıymetli {{isim}}, öğleden sonra bir şeyin seni aniden rahatlatacağını hissediyorum; bu bir olay, bir durum ya da alacağın bir bilgi olabilir. Akşama huzurla ulaşacaksın.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "metin": "Of off, bu ne kıskançlık! Son {{sayi,2,5}} gün içerisinde alıp sattığın bir şeye tanık olduğu için ya da sosyal medyada paylaştığın bir fotoğrafı gördüğü için sana nazarı değen, adında da {{harf}} ya da {{harf}} harfi olan birini görüyorum. Okuldan arkadaşın olduğunu tahmin ettiğim bu kişinin gözü sürekli senin üzerinde. Bugün bu insanın negatif enerjisinden dolayı ya sana ait bir şey çizilecek, ya bir şey kopacak ya da bir şey kırılacak {{isim}}. Bu yine de moralini bozmasın çünkü yine bugün gün içerisinde {{kelime, esmer bir erkekten | kumral ve orta yaşlarda bir erkekten | renkli gözlü bir hanımefendiden | gözlük takan bir beyefendiden}} çok güzel bir haber alacaksın. Sen başaramadığın şeylerin üzerine gitmeyi ya da başkalarının yaptığı birtakım şeylerin daha iyisini yapabiliyor olmayı seviyorsun. Bugün, geçmişte yaptığın bir şeyle ya da verdiğin bir kararla, bazı insanların önüne geçtiğini fark edeceksin. Senin her günün bugün gibi geçerse, gelecekte seni çok büyük başarılar bekler {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "metin": "Geçmişte iletişim sorunları yaşadığın bir erkekle bugün bir konuşman olacak. Seni ılımlı bir şekilde dinlediğinde hak vereceğini ve aranızdaki sıkıntının giderileceğini düşünüyorum {{isim}}. Bugün sosyal medyada ya da televizyonda, eğitiminle ilgili bir gelişme duyabilirsin. Bu ilk etapta pek hoşuna gitmese de, uzun vadede yararına olacağını bilmeni isterim. Karma bugün fevkalade lehine çalışıyor. Adında ya da soyadında {{harf}} harfi bulunan bir kız arkadaşın, yakın geçmişte aslında senin sahip olman gereken bir şeyi ya da senin hak ettiğin bir konumu elde etmiş. Bugün bunu geri alabilmek ya da aynısını elde edebilmek adına önemli bir gelişme kaydedeceksin.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "metin": "Bugün gün içerisinde yaşanabilecek olumlu ve olumsuz her türlü gelişmeyi göğüslemeye hazır bir şekilde uyanmışsın {{isim}}. Lakin daha iyimser olabilirsin çünkü önünde parlak bir gün var. Sevdiğin kişiyle aranızdaki belirsizliklerin dışında, kafanda yeni soru işareti yaratabilecek bir olumsuzluk görmüyorum. Yaşayabileceğin tek sıkıntı, günün belli bir anında maddi bir konuda olabilir gibi gözüküyor. Onu da hızla çözüme kavuşturabileceksin. Akşam saatlerine doğru, soyadında {{soyisimiki}} harfi olan birinin olumlu bir gelişme yaşadığını duyman mümkün Değerli {{isim}}. Bu gelişme seni de ilgilendirdiği için, çok mutlu olacaksın. Günü müthiş bir moralle kapatacağını söyleyebilirim.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "karmaşık"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "metin": "Bugün evrendeki enerjilerin aşk, sağlık ve para ile ilgili olumlu kanallarının tam kesişim noktasında duruyorsun {{isim}}. Gün içerisinde başta sevdiğin kişiyle ve eğitiminle ilgili olmak üzere, kafandaki pekçok belirsizlik yok olmaya başlayacak. Korkularının üzerine sabırlı bir bekleyişle gitmiş ve bugün alacağın güzel haberleri fevkalade hak etmişsin. Öğleden sonra, adında {{harf}} ya da {{harf}} harfi olan bir beyefendi, {{kelime, resmi | kalabalık | yüksek binası olan | geniş kapısı olan | telefon konuşan insanların çokça olduğu | insanların çokça girip çıktığı}} bir kurumdan ayrılırken seni arayabilir. Ondan da bir süredir beklediğin, gecikmiş bir müjdeyi alacaksın. Seni harika bir akşam bekliyor. Günü tamamlayıp başını yastığa koyduğunda, geçmişte kaybolan umutlarının yerine yenileri eklenmiş olacak.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "karmaşık"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "metin": "Kıymetli {{isim}}, bugün günün ilerleyen saatlerinde eline bir fotoğraf ya da belge geçebilir. Bunu ya sosyal medya üzerinden, ya whatsapp'dan ya da e-mail yolu ile alacağını düşünüyorum. Yaptığım değerlendirmeler, içeriğinin seni çok memnun edeceğini söylüyor. Adının ya da soyadının ilk hecesinde {{harf}} harfi olan bir okul arkadaşın var mı {{isim}}? Bu kişiden,  maddi anlamda ya da zaman bağlamında seni zora sokacak bir teklif alabilirsin. Yine de mutlu olacaksın. Nişanlının ise akşam saatlerine doğru senden bir ricasının olacağını öngörüyorum. Yerine getirmek istemediğin takdirde yanlış anlaşılabilirsin; dikkatli olmalısın.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "metin": "Hoşlandığın kişiyi tanıyan ve soyadında {{harf}} harfi olan birini görüyorum. Bu kişi sanırım bir {{kelime, kız | kadın | erkek}}. Bugün onun vasıtasıyla, hoşlandığın kişiye dair önemli bir bilgi edineceksin. İlerleyen günlerde bu bilgiyi kullanarak ona kendini kanıtlayacak, seni beğenmesini ve belki de sevmesini sağlayacaksın {{isim}}. Bugün eğitimine dair yeni bir zorlukla ya da yerine getirmesi zor bir sorumlulukla karşılaşabilirsin. Bu tadını biraz kaçırabilir fakat seni yıldırmasın. Akşam saatlerine doğru da sevdiğin bir arkadaşının sitemini duyacaksın. Ve bana soracak olursan, haklı da {{isim}}...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "platonik"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "metin": "Sevgili {{isim}}, {{kelime, yakın zamanlarda doğum günü kutlanmış | kısa bir süre sonra doğum günü kutlanacak olan}} bir {{kelime, yakınının | akrabanın | tanıdığının | arkadaşının}}, sana bugün muhteşem bir haber vereceğini hissediyorum. Bu haber, sevgilinden ayrıldığın için düşük olan enerjini en yukarılara çekecek. Okulunla ilgili bugün bir duyum alacaksın. Sana önemsiz gelse de, alacağın bu bilgi bir noktada işini kolaylaştırabilir. Aile büyüklerinden biri bugün bir şeylerle çok meşgul {{isim}}. O kişinin yardımına ya da desteğine ihtiyacı olabileceğini düşünüyorum. Akşamın ise oldukça keyifli geçecek.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "metin": "Sevgilin seni mutlu etmek için bugün resmen seferber olacak. Kafasında sana dair bir plan var ve bunu gerçekleştirip seni sevindirmek istiyor. Kıymetli {{isim}}, ilerleyen saatlerde ufak bir aksilik yaşayabilir, işlerinin gün boyu pek de yolunda gitmeyeceği hissine kapılabilirsin. Bu duygu çok yanıltıcı olacaktır; çünkü bugün kaderin, senin çeşitli vesilelerle hep en doğru, en hayırlı noktalara varmana vesile olacak. Adında, senin soyadında olduğu gibi {{soyisimilk}} ya da {{soyisimiki}} harflerinden biri bulunan, üzerinde ise {{kelime, yeşil | mavi | siyah | lacivert}} ve {{kelime, bordo | beyaz | kırmızı}} tonlarında kıyafeti olan bir {{kelime, hanımefendi | beyefendi}} görüyorum. Bu kişiden duyacağın bir şey, seni gün sonuna kadar çok sevindirecek.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "metin": "{{gelecek_ay}} ayında özel hayatında yaşayacağın bir mutluluğun bugün temellerini atacaksın {{isim}}. Hislerin bugün sana bir şey yaptıracak. Ya bir yere gidecek, ya birine bir mesaj atacak, ya da bir yerde bir fırsat görecek ve onu değerlendirmeye yönelik bir adım atacaksın. Yapacağın bu şey, kader silsilesinin sebepler dairesini tamamlayacak ve seni aşık olacağın kişiye doğru bir adım daha yaklaştıracak. Bugün günün ilerleyen saatlerinde sana verilecek ya da üzerine yüklenecek bir sorumluluk olacak {{isim}}. Bu sorumluluk seni biraz zorlayabilir. {{rastgeleburc}} burcu olan ve adı {{kelime, A | E | M | H | Y | B}} harfiyle başlayan bir tanıdığın var mı? Bu kişi akşam üzeri seni gülümsetebilir.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "metin": "Bugün günün ilk saatlerinde, hayatın daha önce hiç tecrübe etmediğin bir olumsuzluğu ile karşılaşabilirsin. Bu seni eğitim hayatına ve  sonrasındaki kariyerine yönelik daha da hırslandıracak {{isim}}. Adında {{harf}} ya da {{harf}} harfi olan, açık kumral ve aksesuar kullanmayı seven biri, öğleden sonra senin hayatına girmek istediğini belirtir tarzda bir davranışta bulunarak kafanı karıştırabilir. İlk anda amacından emin olamayacak ve onu gözlemlemeye karar vereceksin. Yine aynı saatlerde, ailenden senden yaşça büyük birinin senin bir konuda gönlünü almak istediğine şahit olacaksın. Pek belli etmesen de, bu seni içten içe çok mutlu edecek {{isim}}. Bugün sosyal medya uygulamalarının birinde, üzerinde bir parça {{kelime, mavi | yeşil | beyaz | siyah}} kıyafet olan \"sen yaşlarda\" birini görecek ve o kişiye dair merak ettiğin bir gerçeği nihayet öğreneceksin.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "yasmin",
+          "deger": "18"
+        },
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "metin": "Hoşlandığın kişiyle aranızda zaman zaman bazı {{kelime, uçurumlar | farklılıklar | dünya görüşü farklılıkları | tarz ve yaşam standardı farklılıkları}} olduğunu düşünüyorsun, öyle değil mi {{isim}}? Bugün tam tersi olacak. Ona hiç olmadığın kadar yakın ve benzer olduğunu göreceksin. Bunu fark ettiğinde, kendini ona daha iyi tanıtabilmek adıne ne yapman gerektiğini de çözmüş olacaksın. Baban bugün sana bir haber verebilir {{isim}}. Daha önce başladığı ve yeni sonuçlandırdığı, seni de yakından ilgilendiren bir şey bu. Duyduğunda gerçekten çok sevineceğini düşünüyorum. Gün içindeki yorgunluğun, akşam ayaklarını uzattığında çıkacak. Huzurlu bir gece seni bekliyor.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "platonik"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "baba",
+          "deger": "sağ"
+        },
+        {
+          "degisken": "yaşmax",
+          "deger": "45"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "metin": "Değerli {{isim}}, yaptığım analiz şunu gösteriyor; yaklaşık {{kelime, iki | üç | dört}} saat içerisinde, çok samimi olmadığın bir kişi ya da resmi bir kurumdan, seni ilgilendiren önemli bir bilgi güncellemesi alabilirsin. Bu durum ilk etapta seni bir parça endişeye sevk edebilir. Herhangi bir sıkıntı yaratmayacağını anlamak, biraz vaktini alacak. Hoşlandığın kişi çalıştığın kurumdan mıydı {{isim}}?",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "platonik"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "metin": "Bu konuda kafanda soru işaretleri mi vardı bilmiyorum ama bugün hoşlandığın kişinin, senin mesleğine ne kadar saygı duyduğunu çok açık bir şekilde anlayabilirsin {{isim}}. Gün senin için zorlu ve koşuşturmacalı geçecek gibi gözüküyor. Açık söylemek gerekirse bugün çok büyük bir müjde beklemen de doğru olmaz. Analizlerim sadece şunu işaret ediyor; gün sonuna doğru edineceğin bir bilgi ya da alacağın bir haber sonrası akşamını huzurla noktalayacaksın. Gün içinde yemeği fazla kaçırmazsan, gastointestinal açıdan da rahat bir şekilde noktalarsın. ;)",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "platonik"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kendi işini yapıyor"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "metin": "Günün bugün garipliklerle başlıyor {{isim}}. {{sayi,2,4}} saat içinde {{kelime, tanıdığın | ailenden | arkadaşlarından}} birinin değişik bir hareketine \"Allahallah, niye böyle yaptı ki?\" diyerek yaklaşabilirsin. Gün sonunda, o hareketin altında bir kasıt olmadığını ya da senin de bir menfaatin olduğunu fark edeceksin. Daha sonraki saatler, okulunla ilgili birtakım meselelerle nasıl başa çıkacağını düşünerek geçecek. Akşama doğru ise hoşlandığın kişinin bir paylaşımına ya da hareketine şahit olacaksın. Yaptığını garip karşılayabilir, yapış sebebini kendisine sorma ihtiyacı hissedebilirsin. Ne var ki, bunun da altından korktuğun gibi bir şey çıkmayacak Sevgili {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "platonik"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "metin": "{{burc}} burçları çarşamba günlerini genelde pek sevmez derler, sen de onlardan mısın {{isim}}? Bugün ayrıldığın kişinin sana ulaşma ihtimali bir hayli yüksek gözüküyor. Seni telefonla arama ihtimali %{{sayi,55,69}} dolayındayken, sana mesaj atma ihtimalini %{{sayi,74,93}} seviyelerinde görüyorum. Onun seninle ilgili yanlış anladığı bir durum var. Bunu da yeterince ifade edememiş. Bu konu bugün rastlantısal bir şekilde açıklığa kavuşabilir. Öğleden sonra kapalı bir ortamdan açık bir ortama geçerken, gözüne \"düşmüş bir yaprak\" ya da \"konduğu yerden havalanmakta olan bir kuş\" ilişebilir. Olasılıksal hesaplarımda sapma olmazsa, bu olduktan {{sayi,1,3}} saat kadar sonra kaynağı benim açımdan belirsiz bir gelişmeye çok sevineceksin. Akşam  yatmadan hemen önce ise, bulunduğun ortamın koşullarıyla ilgili bir şey seni rahatsız edebilir Değerli {{isim}}. Uykuya dalman biraz geç olacak.",
+      "kosullar": [
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "metin": "Senin seçimlerin dışında gerçekleşen birtakım olaylar, bugün yüzünü güldürecek. Bir telefon alabilir, sana uzak fakat kıymet verdiğin bir yer ile ilgili sevdiklerinden güzel bir gelişme duyabilirsin {{isim}}. Belki bir yapılaşma, belki bir inşaat, bir restorasyon, belki de bir el değiştirme durumu... Sevgilin, sana söyleyeceği bazı şeylerle içinin bir anda umut dolmasını sağlayacak. Ona bugün nazik davranmalısın, çünkü hakediyor. Yükte hafif ancak pahada ağır elektronik cihazlardan bugün biraz uzak olsan iyi edersin {{isim}}. Aksilik rüzgarları başında esiyor; sakarlıkla birini düşürebilir, çizebilir, kırabilir ve kendini maddi zarara sokabilirsin.",
+      "kosullar": [
+        {
+          "degisken": "'saatmin '",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "metin": "Bugün, soyadında seninki gibi {{soyisimilk}} harfi bulunan eski bir arkadaşından, dolaylı yollarla haber alabilirsin. Bir yandan memnun olacak, bir yandan da onu özlediğini hissedeceksin {{isim}}. Gerçekten çok düşünceli bir kız arkadaşın var. Bugün senin adına ya da senin menfaatine yapacağı bir şeyle bunu daha iyi anlayacaksın. Sırt ve bel ağrıların akşam üzerine doğru tadını biraz kaçırabilir. Gün içinde kendini fiziken çok yormamanı dilerim. Son olarak; aklında bir şey satın almak mı var {{isim}}? {{kelime, Bence bugün bunun için iyi bir fırsatın olacak. | Bence paran bugün cebinde kalsın.}}",
+      "kosullar": [
+        {
+          "degisken": "'saatmin '",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "metin": "Bazı günler zayıf düşebilir, tökezleyebilir ya da hayallerinle arana giren engellerden birine toslayabilirsin. Fakat o gün bugün değil {{isim}}! Sabahın ilk saatlerinden akşamın geç saatlerine kadar sürecek hızlı ve kesintisiz bir akış içinde olacağını görüyorum. Önünde durabilecek neredeyse hiçbir güç bulunmuyor. İstediğin adımları doğru şekilde atma fırsatı yakalayacak, evrenin \"tesadüf adı altında\" sana yapacağı yardımlardan da destek alacaksın. Erkek arkadaşın tarafından bugün ekstra bir takdir görebilirsin.",
+      "kosullar": [
+        {
+          "degisken": "'saatmin '",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "metin": "Bugün içinde genel ve menşei belli olmayan bir heyecan olabilir. Mide asidinin artacağını ve soluk alıp verirken bazen kendi nabzını göğsünde hissedeceğini görüyorum Değerli {{isim}}. Tüm bunlar, bazı güzel rastlantıların öncülü. Evren sana, bugün yaşayacağın bu rastlantıların adeta ön sinyallerini veriyor. Hayatına girecek hanımefendiyi bugün bir vesileyle bir yerde görebilir ya da onun silüetiyle bir sosyal medya ortamında karşılaşabilirsin.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "metin": "Yakın bir arkadaşın bugün seni bir yerlere çekiştire çekiştire götürebilir {{isim}}. Seni, adında ya da soyadında {{harf}} harfi olan, nispeten kısa saçlı ve koyu kumral bir arkadaşınla görüyorum. Bu kişi, kendin için yapmayı uzun süredir ihmal ettiğin bir şeyi yapmana ya da kendine dair bir şey için para harcamana vesile olabilir. Bu bir kuaför mü, bir mağaza mı, bir muayenehane mi bilemiyorum. Öğleden sonra bir aile ferdinden aniden mesaj alacaksın. Senin olmayan bir görev üzerine yüklenebilir ve buna biraz bozulabilirsin {{isim}}. Akşam için olağandışı bir yansıma görmesem de, ev işlerinde aşırıya kaçmamaya ya da ağır kaldırmamaya dikkat et. Günün son saatlerinde bir yerini incitmeni ya da kaslarını zorlayarak yarın güne ağrı ile uyanmanı istemem şahsen.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "metin": "Çok yüz vermemen gerektiğini kendine belki kırk kere telkin ettiğin bir kız arkadaşınla bugün yine karşı karşıya gelebilirsin {{isim}}. Bu defa iyi niyetinden yararlanarak senden bir ricası da olacak. Yapılması gereken bir şey varsa amenna; ancak senden bir şey ödünç isterse, bence asla ve kat-a verme derim. Bu arkadaşa ben pek güvenmiyorum. Senin bugün hazırlaman ya da \"hazırlanman\" gereken bir şey var mı? Bir düşün; unutmuş olabilirsin... Bu öğleden sonra aklına gelecek ve bana sorarsan bir şeyler yapabilmek için çok geç olacak. Boşver; bugünün işini yarına bırak. Yeter ki kafan rahat olsun. <sprite=0> Bazı akşamlar, yalnız insanlar hayatlarına doğru kişinin girebileceğine dair umutlarını daha bir yitirirler ya, senin için öyle olmayacak. Akşam sessiz sedasız otururken yaşayacağın bir şey, içinin birden umutla kaplanmasını sağlayacak. Tatlı bir uyku çekeceksin...",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "metin": "Magnuskop'ta bugün gri enerjiyle kaplanmış gözüküyorsun {{isim}}. Bir şey, bir şekliyle olsun istemişsin. Olmuş, fakat bu defa da bir şeyler içine tam sinmemiş senin. Bence geri adım atacak, bugün o şey her ne ise başa saracak ve yeniden, en baştan başlayacaksın. İkincide turnayı gözünden vuracağını düşünüyorum. Öğleden sonra sosyal medya'dan bir takip isteği alabilirsin. Bir erkek sana doğru adeta adım adım yaklaşmaya çalışıyor gibi. İlginç olan şu; bu kişi senin hayatında biri olup olmadığını da bilmiyor. Cahil cesareti vallahi... Senin bugün akşamın da olaylı. Hafif sözlü atışma yaşayabileceğin bir aile büyüğün, konuşma sonrası senin için bir şey yapmaya karar verebilir. Sanki bir meseleye ikna olacakmış gibi. E iyi, neyden kötü. Senin istediğin olsun da. <sprite=0> Yatmadan önce yarın için kısa bir hazırlık yapman gerekebilir. Günü böyle noktalayacaksın.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "metin": "Anlaşılan bugün senin tamirat, tadilat ve değişim günün {{isim}}. Magnuskop'ta seni, birine bir şeyi geri verirken, değiştirirken ya da iade ederken görüyorum. Hayırdır, aldığın bir şeyden memnun mu değilsin? Öğleden sonra böyle bir iş için harekete geçebilirsin. Bulunduğun haneye son on günde kim girdi? Öyle bir elektrik yayıp çıkmış ki, sürekli kapılar pencereler çarpıyor, içeriye sinek böcek doluyor, elinde avucunda olanlar yere düşüyor gibi. Camlara dikkat et. Yere düşen bir bardak, bir cam tencere kapağı ya da cep telefonu ekranın kırılabilir. Buradan da bir fırsat yaratıp bir şeyleri yenilemek isteyebilirsin. Akşam oturduğun yerden kalkmak bile isteyeceğini düşünmüyorum. Rehavet çökecek üzerine. İyi tarafından bak; bir sevgilin olsa, belki de huzur vermezdi. Sen kendi kendine yetebilen bir kadınsın. Bu akşam da kendi iç dengelerin yerinde olacak. Tek bir uyarım var; yatmadan önce duş alırsan, ıslak saçla uyuma.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "metin": "Bugün öğleden sonra biriyle buluşacak ya da birileriyle görüşecek misin {{isim}}? Magnuskop'ta çok garip bir sahne görüyorum. Sen birine bir şeyler anlatırken, yakınlarındaki açık kumral erkek gözlerini senden alamıyor! Adı iki heceden oluşan bu erkeğin sende net bir şekilde gönlü var. Anlarsın, anlamazsın, orasını bilemem. Biz güne devam edelim. Bugün bir tanıdığının doğumgünü olabilir. Eğer öyle ise, unutacaksın. Gönül koyduğunu anlaman uzun sürmez. Akşam için iki seçenek fısıldanıyor kulağıma. Dışarı çıkma imkanın olursa çık. Senin için bu çıkışın ciddi bir kazanımı olacak. Nasıl mı? Görüşeceğin insanlarla konuşabileceklerin vasıtasıyla... Çıkmayı tercih etmezsen, bu kazanımı daha sonra, daha geç bir şekilde ve farklı bir kanaldan elde edeceksin. Bu gece sıradan bir uyku çeksen de, buna ne kadar ihtiyacın olduğunu fark ederek, derin derin uyuyacaksın.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "metin": "Hayatında henüz birinin olmaması, bugün ilk defa, yaşayacağın bir olay sonrası canını sıkabilir. Diğer taraftan, aşk'a hiç olmadığın kadar yakınsın. Analizlerim, hayatının erkeğiyle karşılaşma ihtimalinin %{{sayi, 60, 80}} düzeylerinde olduğunu söylüyor. Adında {{harf}} harfi olan bir hanımefendiyle kısa bir konuşma yapacak, ondan hayırlı bir haber alacaksın. Bu arada; şu an seni düşünen ve çok seven {{rastgeleburc}} burcu biri var. Kim olduğunu bir vesileyle anlayacaksın.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "metin": "Bugün çevrende mutlu birliktelikler olduğunu gözlemleyip, kendini biraz yalnız hissedebilirsin. Hayatında kimsenin olmadığı buna benzer günlerin sayılı olduğunu bilmeni isterim {{isim}}. Bugün için sana iki iyi, bir de kötü haberim var. Kötü haberi önden ister misin? Sudan bazı nedenlerle, cebinden para çıkabilir. Ekonomik yönün bugün eksilere doğru seyir halinde. İyi haberlere gelince; birincisi, geçen {{gun_0}} gününden beri bir haftadır kafanı kurcalayan bir soruya, tatmin edici bir yanıt bulacaksın. İkincisi, bugün yaşayacağın bir şey, yarın daha neşeli uyanmana neden olacak.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "saatmin",
+          "deger": "0"
+        },
+        {
+          "degisken": "saatmax",
+          "deger": "12"
+        }
+      ]
+    }
+  ]
+}

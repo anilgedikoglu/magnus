@@ -596,30 +596,27 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
     );
   }
 
-  // ─── Geri Dön butonu — ListView içinde, scroll sonunda görünür ───────────
-
   Widget _buildBackButton() {
-    const accent = Color(0xFF00E5FF);
     return GestureDetector(
       onTap: () => context.pop(),
       child: Container(
         width: double.infinity,
         height: 48,
         decoration: BoxDecoration(
-          color: accent.withValues(alpha: 0.10),
-          border: Border.all(color: accent.withValues(alpha: 0.55), width: 1.2),
-          borderRadius: BorderRadius.circular(12),
+          color: Colors.white.withValues(alpha: 0.10),
+          borderRadius: BorderRadius.circular(23),
+          border: Border.all(
+              color: Colors.white.withValues(alpha: 0.25), width: 1.2),
         ),
-        child: const Center(
-          child: Text(
-            'Geri Dön',
-            style: TextStyle(
-              color: accent,
-              fontSize: 15,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 1,
-            ),
-          ),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+            SizedBox(width: 2),
+            Text('Geri Git',
+              style: TextStyle(color: Colors.white, fontSize: 15,
+                  fontWeight: FontWeight.w500)),
+          ],
         ),
       ),
     );

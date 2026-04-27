@@ -390,28 +390,27 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
           ),
         ),
         const SizedBox(height: 24),
-        // Geri Dön — scroll sonunda görünür
+        // Geri Git — scroll sonunda görünür
         GestureDetector(
           onTap: () => context.pop(),
           child: Container(
             width: double.infinity,
             height: 48,
             decoration: BoxDecoration(
-              color: const Color(0xFF9988FF).withValues(alpha: 0.12),
+              color: Colors.white.withValues(alpha: 0.10),
+              borderRadius: BorderRadius.circular(23),
               border: Border.all(
-                  color: const Color(0xFF9988FF).withValues(alpha: 0.55), width: 1.2),
-              borderRadius: BorderRadius.circular(12),
+                  color: Colors.white.withValues(alpha: 0.25), width: 1.2),
             ),
-            child: const Center(
-              child: Text(
-                'Geri Dön',
-                style: TextStyle(
-                  color: Color(0xFF9988FF),
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: 1,
-                ),
-              ),
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                SizedBox(width: 2),
+                Text('Geri Git',
+                  style: TextStyle(color: Colors.white, fontSize: 15,
+                      fontWeight: FontWeight.w500)),
+              ],
             ),
           ),
         ),

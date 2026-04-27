@@ -341,6 +341,53 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   }
 
   Widget _buildSendButton() {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
+      decoration: const BoxDecoration(
+        color: Color(0xFF0D0D1A),
+        border: Border(top: BorderSide(color: Colors.white12)),
+      ),
+      child: SizedBox(
+        width: double.infinity,
+        child: _mode == _InputMode.none
+            ? _buildGeriGitButton()
+            : _buildFalGonderButton(),
+      ),
+    );
+  }
+
+  Widget _buildGeriGitButton() {
+    return GestureDetector(
+      onTap: () => context.pop(),
+      child: Container(
+        height: 54,
+        decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.10),
+          borderRadius: BorderRadius.circular(27),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
+        ),
+        child: const Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+              SizedBox(width: 2),
+              Text(
+                'Geri Git',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildFalGonderButton() {
     final isPhotoMode = _mode == _InputMode.fotoCek ||
         _mode == _InputMode.dosyadan;
     final String label;
@@ -351,55 +398,45 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     } else if (isPhotoMode) {
       label = '$_filledCount/3 Fotoğraf';
     } else {
-      label = 'Yöntem Seç';
+      label = 'Falımı Gönder ✨';
     }
     final bool active = _canSend && !_kontrolEdiliyor;
 
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
-      decoration: const BoxDecoration(
-        color: Color(0xFF0D0D1A),
-        border: Border(top: BorderSide(color: Colors.white12)),
-      ),
-      child: SizedBox(
-        width: double.infinity,
-        child: AnimatedOpacity(
-          duration: const Duration(milliseconds: 300),
-          opacity: active ? 1.0 : 0.35,
-          child: GestureDetector(
-            onTap: active ? _sendFortune : null,
-            child: Container(
-              height: 54,
-              decoration: BoxDecoration(
-                gradient: active
-                    ? const LinearGradient(
-                        colors: [Color(0xFF6B3FA0), Color(0xFF9C6FD6)],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      )
-                    : null,
-                color: active ? null : Colors.white12,
-                borderRadius: BorderRadius.circular(27),
-                boxShadow: _canSend
-                    ? [
-                        BoxShadow(
-                          color: const Color(0xFF7B4FBF).withValues(alpha: 0.5),
-                          blurRadius: 16,
-                          offset: const Offset(0, 4),
-                        ),
-                      ]
-                    : null,
-              ),
-              child: Center(
-                child: Text(
-                  label,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.5,
-                  ),
-                ),
+    return AnimatedOpacity(
+      duration: const Duration(milliseconds: 300),
+      opacity: active ? 1.0 : 0.35,
+      child: GestureDetector(
+        onTap: active ? _sendFortune : null,
+        child: Container(
+          height: 54,
+          decoration: BoxDecoration(
+            gradient: active
+                ? const LinearGradient(
+                    colors: [Color(0xFF6B3FA0), Color(0xFF9C6FD6)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  )
+                : null,
+            color: active ? null : Colors.white12,
+            borderRadius: BorderRadius.circular(27),
+            boxShadow: _canSend
+                ? [
+                    BoxShadow(
+                      color: const Color(0xFF7B4FBF).withValues(alpha: 0.5),
+                      blurRadius: 16,
+                      offset: const Offset(0, 4),
+                    ),
+                  ]
+                : null,
+          ),
+          child: Center(
+            child: Text(
+              label,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 0.5,
               ),
             ),
           ),

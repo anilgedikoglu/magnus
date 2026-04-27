@@ -291,10 +291,10 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
 
   Widget _buildContent(double bottomPad) {
     final metin = _metin ?? '';
-    return ListView(
-      padding: EdgeInsets.fromLTRB(20, 16, 20, bottomPad + 24),
-      children: [
-        Container(
+    return Center(
+      child: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(20, 16, 20, bottomPad + 24),
+        child: Container(
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
@@ -372,7 +372,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
             ],
           ),
         ),
-      ],
+      ),
     );
   }
 }

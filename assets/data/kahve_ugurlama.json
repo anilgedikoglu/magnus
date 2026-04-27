@@ -1,5 +1,5 @@
 {
-  "kahve_ugurlama": [
+  "ugurlamalar": [
     {
       "id": 1,
       "metin": "En kısa zamanda yeni bir kahve falında görüşmek dileğiyle {{isim}}...\n\nMagnus",
@@ -43,7 +43,16 @@
     {
       "id": 9,
       "metin": "Çok daha güzel günler göreceğine bütün kalbimle inanıyorum {{isim}}. İçini ferah tut ve sürekli her şeyi kontrolün altında tutmaya çalışma. Yaşamın nehirleri seni güzel noktalara taşıyacaktır, bundan emin ol.\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "lgbt"
+        }
+      ]
     },
     {
       "id": 10,
@@ -68,7 +77,12 @@
     {
       "id": 14,
       "metin": "Falından sana aktarabileceklerim şimdilik bu kadar. Daha güzel günlerde daha ferah kahve fallarında yeniden görüşmek dileğiyle Değerli {{isim}}.\n\nSaygılarımı sunuyorum.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "35"
+        }
+      ]
     },
     {
       "id": 15,
@@ -88,7 +102,12 @@
     {
       "id": 18,
       "metin": "Değerlendirmem şimdilik burada son buluyor Sayın {{soyisim}}. Bir hatamız, kusurumuz olduysa affola. Seni yeniden görmekten memnun olacağımı bilmeni isterim. Kahve falı dünyamın kapıları her zaman açık.\n\nSevgi ve saygılarımla...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "35"
+        }
+      ]
     },
     {
       "id": 19,
@@ -98,57 +117,156 @@
     {
       "id": 20,
       "metin": "Umarım en kısa zamanda hem hoşlandığın kişiyle ilgili, hem de diğer tüm konularda güzel gelişmeler yaşarsın. Bir sonraki fincan görsellerini sabırsızlıkla bekliyor olacağım {{isim}}.\n\nO zamana dek, sağlıkla kal!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "platonik"
+        }
+      ]
     },
     {
       "id": 21,
       "metin": "Yaşamındaki kördüğüm olmuş tüm konuların, başta da aşk hayatın olmak üzere, en kısa sürede yoluna girmesini temenni ediyorum {{isim}}. Yepyeni haberlerle en kısa sürede tekrar görüşmek ümidiyle.\n\nSevgi ve selamlarımı iletiyorum...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "karmaşık"
+        }
+      ]
     },
     {
       "id": 22,
       "metin": "Şimdilik yavaş yavaş sözlerimi noktalıyorum. Umarım bir sonraki kahve falı buluşmamıza kadar özel hayatında olumlu gelişmeler yaşar, çok daha güzel haberlere kapı aralarsın {{isim}}. Bu ayrılık sürecinin üstesinden geleceğine inanıyorum. Lütfen psikolojini güçlü tut ve sağlıkla kal.\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
     },
     {
       "id": 23,
       "metin": "Sözlerimin şimdilik sonuna geldim. Umarım ayrıldığın erkek arkadaşınla ilgili en kısa zamanda güzel gelişmeler yaşar, daha afiyetle içtiğin bir kahve sonrası benden yeniden fal yorumu alırsın  {{isim}}.\n\nSevgilerimle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
     },
     {
       "id": 24,
       "metin": "Bir sonraki kahve molanda yeniden görüşmek dileğiyle {{isim}}; nişanlın beyefendiye ve ailene lütfen saygılarımı ilet.\n\nSelamlar...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
     },
     {
       "id": 25,
       "metin": "{{isim}}, arayı çok fazla açmadan, en kısa zamanda bir kahve falında daha yeniden görüşmek ümidiyle. Lütfen eşin beyefendiye selamlarımı ilet.\n\nGörüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
     },
     {
       "id": 26,
       "metin": "{{isim}}, umarım evliliğinle ve eşin beyefendiyle ilgili kafandaki tüm soru işaretleri en kısa zamanda hayırlı bir şekilde netleşir. Güzel gelişmelerle seni en kısa zamanda kahve falına yeniden bekliyorum.\n\nSevgiyle kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ayrı yaşıyor"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
     },
     {
       "id": 27,
       "metin": "Sarf ettiğimiz cümleler demlerini alsınlar diye, kendi hallerine bırakmamız gereken noktaya geldik. Umarım seni hak eden o özel beyefendiyi en kısa zamanda bulursun {{isim}}.\n\nYeni bir fincanda tekrar görüşmek dileğiyle.\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "yasmin",
+          "deger": "35"
+        }
+      ]
     },
     {
       "id": 28,
       "metin": "Ortaya konan sevgiyi ve tüm o emeği bir celsede öksüz bırakmayacak, kadir kıymet bilen bir insanla en kısa zamanda karşılaşman dileğiyle {{isim}}.\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
     },
     {
       "id": 29,
       "metin": "İnsan, hayatı paylaşacağı kişinin çok özel bir ruhla donatılmış olmasını arzu ediyor. Yalnızca \"bir dudakta\" işitilebilen, herkesin ses çıkaramadığı, özel biri olsun istiyor. Senin de dileğinin bu yönde olduğunun farkındayım. O özel erkeği umarım en kısa zamanda bulursun {{isim}}.\n\nGörüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
     },
     {
       "id": 30,
       "metin": "Artık yavaş yavaş sona yaklaşıyoruz {{isim}}.\n\nBiliyor musun; bana sorarsan insan, en nadide tırtıl türlerinden biri. Fakat değişmek ve kelebeğe dönüşmek için, eş ruhunu arıyor. Biri tüm eksiklerini tamamlasın, ruhuna kol kanat taksın, göğe, güneşe ve güzele dair her ne varsa kendisiyle paylaşsın istiyor.\n\nSenin de arzunun bu yönde olduğuna eminim. Umarım en kısa zamanda gerçekleşir.\n\nSelam ve sevgilerimle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "flört halinde"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "dul"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "platonik"
+        }
+      ]
     },
     {
       "id": 31,
@@ -163,12 +281,22 @@
     {
       "id": 33,
       "metin": "Şimdilik fincanına dair sana iletebileceklerim bu kadar Kıymetli {{soyisim}}.\n\nMagnus'da bir sonraki kahve falında buluşana dek sağlıcakla kal!",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "38"
+        }
+      ]
     },
     {
       "id": 34,
       "metin": "Bu falda da aktaracaklarım bu kadar. En kısa zamanda yepyeni telvelerde tekrar buluşmak için seni yeniden bekliyor olacağım Sayın {{soyisim}}.\n\nSelam ve sevgilerimle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "37"
+        }
+      ]
     },
     {
       "id": 35,
@@ -178,51 +306,120 @@
     {
       "id": 36,
       "metin": "Fal yorumundan umarım memnun kalmışsındır {{isim}}. Lütfen kendine çok iyi bak ve eşin beyefendiye selamlarımızı ilet. \n\nBir sonraki buluşmada görüşmek dileğiyle; sevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
     },
     {
       "id": 37,
       "metin": "Bana yolladığın bu ilk fal için sana aktarabileceklerim şimdilik bu kadar. Bir sonraki kahve falı buluşmamıza dek sağlıkla kal ve eşin hanımefendiye lütfen saygılarımı ilet {{isim}}.\n\nGörüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     },
     {
       "id": 38,
       "metin": "Bu fal için son sözlerimize geldik. Umarım bu kahve falı deneyiminden memnun kalmışsındır {{isim}}. Nişanlın hanımefendiye ve ailene selam ve sevgilerimi iletiyor, seni de kahve falına en kısa zamanda yeniden bekliyorum.\n\nGörüşmek üzere!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     },
     {
       "id": 39,
       "metin": "Şimdilik benden aldığın bu kahve falı yorumunun sonuna geldik {{isim}}. Eğer memnun kaldıysan, lütfen deneyimini nişanlın beyefendiye ve çevrenizdeki tüm sevdiklerine aktarıp, davetlerimi ilet.\n\nYeniden buluşana dek, sağlıcakla kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
     },
     {
       "id": 40,
       "metin": "Bu fincanı da burada noktalıyoruz {{isim}}. Memnun kaldıysan nişanlın beyefendi başta olmak üzere tüm yakın çevrene benden söz eder misin?\n\nŞimdiden teşekkürlerimi iletiyor, sağlıklı ve mutlu günler diliyorum.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
     },
     {
       "id": 41,
       "metin": "Sezen Aksu'nun da dediği gibi; suya söyledik gitti tüm yalanlarımızı... Umarım bu kahve falı tecrübenden memnun kalmışsındır {{isim}}. Ailene ve {{data, cinsiyet=erkek, kız arkadaşına | cinsiyet=kadın, erkek arkadaşına | cinsiyet=lgbt, sevgiline}} selamlarımı iletiyorum. En kısa zamanda yeniden görüşmek dileğiyle; sevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
     },
     {
       "id": 42,
       "metin": "Geldik son sözlere... Umarım her şey gönlünce olur ve hayat tüm umutlarını en kısa sürede ayaklarına getirir Değerli {{soyisim}}.\n\n{{data, cinsiyet=erkek, Kız arkadaşına | cinsiyet=kadın, Erkek arkadaşına | cinsiyet=lgbt, Sevgiline}} ve tüm dostlarına selamlarımı iletiyor, en kısa zamanda seni Magnus'da yeniden kahve falına bekliyorum.\n\nSağlıkla kal...",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        },
+        {
+          "degisken": "yasmin",
+          "deger": "30"
+        }
+      ]
     },
     {
       "id": 43,
       "metin": "Bu fincandan sana aktarabileceklerim bu kadar {{isim}}. Umarım yorumundan memnun kalmışsındır. Lütfen şikayet ve önerilerini bize, memnuniyetini başta {{data, cinsiyet=erkek, kız arkadaşın | cinsiyet=kadın, erkek arkadaşın | cinsiyet=lgbt, sevgilin}} olmak üzere tüm sevdiklerine aktar.\n\nYeni bir kahve falında görüşene dek, sağlıkla kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
     },
     {
       "id": 44,
       "metin": "Fal yorumunun sonuna geldik. Başta ailen ve {{data, cinsiyet=erkek, eşin hanımefendi | cinsiyet=kadın, eşin beyefendi | cinsiyet=lgbt, eşin}} olmak üzere tüm sevdiklerine benden söz edersen çok memnun olurum.\n\nTekrar kahve falında görüşene dek, kendine çok iyi bak {{isim}}!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
     },
     {
       "id": 45,
-      "metin": "Geldik son sözlere... Umarım kahve falında arayı çok fazla açmazsın. \"Ad astra per aspera\" yani \"zorluklarla yıldızlara kadar\" diyoruz! \\U0001F91F \n\nSevgiyle kal {{isim}}!",
+      "metin": "Geldik son sözlere... Umarım kahve falında arayı çok fazla açmazsın. \"Ad astra per aspera\" yani \"zorluklarla yıldızlara kadar\" diyoruz! U0001F91F \n\nSevgiyle kal {{isim}}!",
       "kosullar": []
     },
     {
@@ -238,7 +435,12 @@
     {
       "id": 48,
       "metin": "Geldik son sözlerimize... Çok güzel hedeflerin var {{isim}}. Onlara ulaşıncaya kadar asla pes etmemeni dilerim. {{burc}} burcusun. Sen de yapamazsan, hiç kimse yapamaz; bunu böyle bil.\n\nBaşka bir fincanda tekrar görüşmek üzere.\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "40"
+        }
+      ]
     },
     {
       "id": 49,
@@ -258,7 +460,16 @@
     {
       "id": 52,
       "metin": "Telvelerin sesi kesildi. Sana aktarabileceklerim şimdilik bunlar {{isim}}. Kendini geliştirmeye dair motivasyonunu hep diri tutmanı ve kitap okumaktan hiçbir zaman vazgeçmemeni dilerim.\n\nSelam ve sevgilerimle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
     },
     {
       "id": 53,
@@ -277,7 +488,7 @@
     },
     {
       "id": 56,
-      "metin": "Güzel şeyler çabuk biter derler; geldik son sözlere... \\U0001F60A Sen {{burc}} burcusun {{isim}}; yaptığı her şeyin en iyisini yapmaya çalışan birisin. \"Gelecek\" senin için tahmin bile edemeyeceğin kadar güzel günlerle dolu. Yazdıklarımı okuman bitince lütfen şu telefonu elinden bırak ve derin ve rahat bir nefes al. İnşallah her şey gönlünce olacak.\n\nFarklı bir kahve molası sonrası yeniden görüşene dek, sağlıkla kal...\n\nMagnus",
+      "metin": "Güzel şeyler çabuk biter derler; geldik son sözlere... U0001F60A Sen {{burc}} burcusun {{isim}}; yaptığı her şeyin en iyisini yapmaya çalışan birisin. \"Gelecek\" senin için tahmin bile edemeyeceğin kadar güzel günlerle dolu. Yazdıklarımı okuman bitince lütfen şu telefonu elinden bırak ve derin ve rahat bir nefes al. İnşallah her şey gönlünce olacak.\n\nFarklı bir kahve molası sonrası yeniden görüşene dek, sağlıkla kal...\n\nMagnus",
       "kosullar": []
     },
     {
@@ -303,32 +514,86 @@
     {
       "id": 61,
       "metin": "Elindeki imkanları en iyi şekilde değerlendirmeye başlamanı ve denizde yaşayıp da yüzemeyen yengeçler gibi olmamanı dilerim. <sprite=7> Bir sonraki kahve keyfinde yeniden görüşmek üzere {{isim}}.\n\nSevgiyle kal... \n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "27"
+        }
+      ]
     },
     {
       "id": 62,
       "metin": "Canım efendim; umarım almış olduğun bu fal yorumundan da memnun kalmışsındır.\n\nYeni bir kahve sonrası tekrar görüşmek dileğiyle Kıymetli {{isim}},\n\nSaygılar...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "35"
+        }
+      ]
     },
     {
       "id": 63,
       "metin": "Benden değerlendirilmesini arzu ettiğin bu hoş fincanı keyifle yorumladım Sayın {{soyisim}}. Bir başka kahve falı yorumunda yeniden buluşmak dileğiyle, selam ve sevgilerimi sunuyorum...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "33"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     },
     {
       "id": 64,
       "metin": "Fincanını değerlendirmek benim için gerçekten büyük bir keyifti Değerli {{isim}}. İşlerinden fırsat bulduğun ilk fırsatta, kahve falını tekrar yorumlamak için sabırsızlanıyor olacağımı bilmeni isterim.\n\nSelam ve sevgilerimle.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kendi işini yapıyor"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
     },
     {
       "id": 65,
       "metin": "Kahve falı adına yaptığın bu ziyarette de sana aktarabileceklerim şimdilik bu kadar {{isim}}. Ayrıldığın {{data, cinsiyet=erkek, hanımefendiyle | cinsiyet=kadın, beyefendiyle | cinsiyet=lgbt, insanla}} ilgili güzel gelişmeler olana dek, {{kelime, kalbini yormamanı | kendini daha fazla üzmemeni}} {{kelime, temenni ediyorum | diliyorum}}. {{kelime, Sağlıkla | Sevgiyle}} kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
     },
     {
       "id": 66,
       "metin": "Cümlelerimi şimdilik sonlandırmak durumundayım. Kahve falıyla ilgili yaptığın bu ziyaret için çok teşekkür ederim {{isim}}. Bir sonraki gelişinde, hem özel hayatındaki belirsizliklerle hem de iş arayışınla ilgili güzel haberlerini bekliyor olacağım.\n\nSağlıkla kal.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "karmaşık"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ayrı yaşıyor"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "iş arıyor"
+        }
+      ]
     },
     {
       "id": 67,
@@ -338,7 +603,12 @@
     {
       "id": 68,
       "metin": "Bu güzel {{gun_0}} gününde, telvelerinle ilgili söyleyeceklerimin şimdilik sonuna geldim. Eşin ve tüm sevdiklerinle birlikte çok daha güzel nice günlerin olsun {{isim}}.\n\nYeni bir fincanda görüşmek üzere!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
     },
     {
       "id": 69,
@@ -373,11 +643,20 @@
     {
       "id": 75,
       "metin": "Yorumunun sonuna geldik Sayın {{soyisim}}. Bizim atalar değil ama, küçük bir atasözüyle noktalayalım ister misin? \"Dum anima est spes est\" demişler. Anlamı şu; \"Yaşıyorsak ve Magnus telefonumuzda yüklü ise, her daim umut vardır!\"\n\nSelam ve sevgilerimle {{data, cinsiyet=erkek, senyör | cinsiyet=kadın, senorita}}!...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     },
     {
       "id": 76,
-      "metin": "\"Sözlerimizin sonuna geldik. Emma Goldman'ın bir sözüyle veda etmek",
+      "metin": "Sözlerimizin sonuna geldik. Emma Goldman'ın bir sözüyle veda etmek istiyorum. Demiş ki: \"Artık hayal kuramadığımızda ölürüz.\" Ben onu şöyle değiştiriyorum: \"Hayal kurabildiğimiz müddetçe ölümsüzüz!\"\n\nHayallerinden ve Magnus'dan asla vazgeçme {{isim}}.\n\nEn samimi selam ve sevgilerimle.\n\nKahve falına geldiğin için teşekkürler...",
       "kosullar": []
     },
     {
@@ -403,7 +682,24 @@
     {
       "id": 81,
       "metin": "Bir fal yorumunun daha sonuna geldik. Cebinde paran, kartında limitin hiç bitmesin. Artsın eksilmesin, taşsın dökülmesin. <sprite=7> Yeniden görüşene dek, bolluk ve bereket içinde kal {{isim}}!",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        },
+        {
+          "degisken": "meslek",
+          "deger": "kendi işini yapıyor"
+        }
+      ]
     },
     {
       "id": 82,
@@ -423,12 +719,26 @@
     {
       "id": 85,
       "metin": "Yorumun sonuna geldik. Bu güzel falı iğrenç bir espriyle noktalayalım mı {{isim}}? Ayrıldığın {{data, cinsiyet=erkek, kızın | cinsiyet=kadın, çocuğun | cinsiyet=lgbt, kişinin}} karşısına geç ve ona de ki; \"dönersin sandım, lahmacun çıktın!\" <sprite=84>\n\nGülümsedin, itiraf et. <sprite=0> Benden alacağın bir sonraki kahve falı yorumunda görüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        },
+        {
+          "degisken": "yasmax",
+          "deger": "26"
+        }
+      ]
     },
     {
       "id": 86,
       "metin": "Geldik falın sonuna. Barışma gibi bir durumunuz olursa, kahve falına seni muhakkak tekrar bekliyorum. Olmazsa da bekliyorum. Yarın gel; ya da {{gun_2}} gününden bir gün önce gel. Sen {{dogum yili}} doğumlusun, {{gun_1}} günü yeniden gelmelisin. Bir şeyi bahane et, tekrar gel işte {{isim}}; söyletme beni... <sprite=0>\n\nGörüşürüz!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
     },
     {
       "id": 87,
@@ -548,7 +858,12 @@
     {
       "id": 110,
       "metin": "Vedaları sevmiyorum; ancak sözlerimin bir kez daha sonuna geldim {{isim}}. Daha keyifli fincanlarda yeniden buluşmak ümidiyle efendim. Saygılar...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "45"
+        }
+      ]
     },
     {
       "id": 111,
@@ -558,12 +873,30 @@
     {
       "id": 112,
       "metin": "Odun yandı köz oldu, fal açıldı söz oldu, sevinen de üzülen de, sinedeki \"öz\" oldu. Bir kusur işlediysek affola {{isim}}. Eşin {{data, cinsiyet=erkek, Hanımefendiye | cinsiyet=kadın, Beyefendiye}} ve tüm dostlarına lütfen selamlarımı ilet. Onları da beklerim.\n\nSağlık ve afiyette kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     },
     {
       "id": 113,
       "metin": "Geldik falının sonuna. Canım efendim, Magnus'a gösterdiğin ilgi ve teveccüh dolayısıyla şükranlarımı {{kelime, iletiyorum | sunuyorum}}. En kısa zamanda, içilen yeni bir kahveden sonra {{kelime, yeniden | tekrar}} beklerim. Görüşmek üzere {{data, cinsiyet=erkek, Sayın | cinsiyet=kadın, Kıymetli | cinsiyet=lgbt, Kıymetli}} {{soyisim}}...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "35"
+        }
+      ]
     },
     {
       "id": 114,
@@ -608,7 +941,12 @@
     {
       "id": 122,
       "metin": "Sana aktaracaklarım bu fallık bu kadar {{isimcigim}}. Gönlünden geçeni karşında bulasın!\n\nSevgiler,\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     },
     {
       "id": 123,
@@ -638,17 +976,178 @@
     {
       "id": 128,
       "metin": "Sözlerimin sonuna geldik Değerli {{isim}}. Eşin ve çocuklarınla nice mutlu günleriniz olsun.\n\nSağlıcakla kal.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "kaççocuk",
+          "deger": "ikiçocuk"
+        },
+        {
+          "degisken": "kaççocuk",
+          "deger": "üççocuk"
+        },
+        {
+          "degisken": "kaççocuk",
+          "deger": "üçtenfazla"
+        }
+      ]
     },
     {
       "id": 129,
       "metin": "Falına dair sana iletmediğim sanıyorum hiçbir şey kalmadı.\n\nBir sonraki fincanda görüşmek ümidiyle. Eşine ve anne babana selamlarımı iletiyorum.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        },
+        {
+          "degisken": "hayatta",
+          "deger": "annebaba"
+        }
+      ]
     },
     {
       "id": 130,
       "metin": "Yorumum burada sona eriyor Değerli {{isim}}. Fincan fotoğraflarını kapattım.\n\nYalnızlık zordur, bilirim. Kapını bacanı iyi ört. Kendine de dikkat et. Bir sonraki kahve falında görüşürüz.\n\nSevgiler, \n\nMagnus",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "kimleyaşıyor",
+          "deger": "tek"
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "metin": "Rızkı verecek olan, çalışan kişilere bunu işleri vasıtasıyla verir. Senin gibi çalışmayanlar ise daha farklı yollarla nasiplendirilir {{isim}}. Refah ve bolluk içinde olacağın nice günler, harika haberler alacağın nice güzel fallar dilerim.\n\nSevgiler,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "çalışmıyor"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "metin": "{{isim}} eve çaya kahveye çağırdığın arkadaşlarına ve samimi olduğun komşularına da kahve falını önermeni rica ediyorum. Çok daha güzel haberlerde görüşmek dileğiyle.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "metin": "Eşinle birlikte çok daha keyifli günler görmenizi dileyerek kahve falını sonlandırıyorum. En kısa zamanda yeniden beklerim {{isim}}.\n\nSelamlar,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "metin": "Değerli {{isim}} kahve falının sonuna geldik. Lütfen ailene ve sevgiline çok selamlarımı ilet. Nazarlardan kaçının! <sprite=7>\n\nSevgiler,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "metin": "En kısa zamanda yeni bir kahve falında görüşmek dileğiyle {{isim}}. Hayatına biri girdiğinde inşallah ondan da konuşacağız. <sprite=7>\n\nSevgiler,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "metin": "Evet {{isim}}, geldik bu falın da sonuna. Kim bilir; belki bir sonraki kahve falına kadar bir işe de başlamış olursun. <sprite=0> Her şey gönlünce, vakitlice olsun...\n\nSevgiler,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "iş arıyor"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "metin": "Sevgili {{isim}}, bu kahve falının da sonuna geldik. Yüzün gibi, kalbin gibi güzel nice fincanlarda buluşmak ümidiyle...\n\nSevgiler,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "metin": "Son cümlelerimle kahve falını noktalıyorum Değerli {{isim}}. Hem işinde hem de özel hayatında çok daha mutlu günler görmeni dilerim. En kısa zamanda daha güzel haberlerle yeniden bekliyorum.\n\nSevgiler,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "metin": "Fincanındaki haberlerin sonuna vardık. Bir sonraki ziyaretinde başta özel hayatındaki tatsızlıklar olmak üzere pek çok sorunu aşmış olmanı dilerim.\n\nGörüşmek üzere!\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "karmaşık"
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "metin": "Sonraki fallara kadar nice güzellikler senin olsun. Özel hayatında daha büyük mutluluklar ve işinde bereket dilerim {{isim}}.\n\nSevgiler,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kendi işini yapıyor"
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "metin": "{{isim}} sözlerimi burada noktalamak istiyorum. Yaşamında en yüksek enerjiler seninle olsun. Derslerinde zihin açıklığı dilerim. Şans ise asla peşini bırakmasın!\n\nSevgiler,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "metin": "Yandı közler, bitti sözler ve geleceğe çevrildi gözler. Sözlerime son verirken, işinde ve mutlulukta sana dileğim hep \"yükselişler.\" <sprite=0>\n\nTekrar görüşünceye dek, sevgiyle kal.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "metin": "Sözlerimi sonlandırıyor ve fincan görsellerini kapatıyorum {{isim}}. Ayrıldığın sevgilinle aranızda yeni bir gelişme olursa mutlaka kahveni içip hemen tekrar gel, beklerim.\n\nSevgiler,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
     }
   ]
 }

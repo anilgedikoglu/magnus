@@ -109,6 +109,7 @@ class UserProfile extends HiveObject {
       'cinsiyetim': gender,
       'meslek': jobLabel,
       'medeni_durum': maritalStatusLabel,
+      'medeni durum': _maritalStatusAssetValue, // asset gerekliDegiskenler değerleriyle eşleşen form
       'burc': zodiacSign ?? '',
       // burc varyantları — ilk harf büyük (zaten büyük ama alias olarak tutulur)
       'burc_ilkHarfBuyuk': (zodiacSign != null && zodiacSign!.isNotEmpty)
@@ -215,6 +216,24 @@ class UserProfile extends HiveObject {
       'emekli': 'Emekli',
     };
     return labels[job] ?? job;
+  }
+
+  // Asset gerekliDegiskenler'deki tam değerler (filtreler bununla eşleştirilir)
+  String get _maritalStatusAssetValue {
+    const map = {
+      'iliskisi_yok':  'ilişkisi yok',
+      'iliski_var':    'ilişkisi var',
+      'platonik':      'platonik',
+      'flort':         'flört halinde',
+      'karisik':       'karmaşık',
+      'yeni_ayrilmis': 'yeni ayrılmış',
+      'nisanli':       'nişanlı',
+      'evli':          'evli',
+      'ayri_yasiyor':  'ayrı yaşıyor',
+      'bosanmis':      'boşanmış',
+      'dul':           'dul',
+    };
+    return map[maritalStatus] ?? maritalStatus;
   }
 
   String get maritalStatusLabel {

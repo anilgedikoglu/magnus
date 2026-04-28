@@ -1,11 +1,12 @@
 // Kaynak metinler: C:/Magnus/Assets/Resources/Editor/OnlineDOSYALAR/AnaMenu2/AskUyumu/
 // JSON: assets/data/askuyumu.json
-// Arka plan: assets/images/askuyumu.png (üst 52% görsel, alta siyah fade)
-// Akış: Dokunma (3s basma) → Kum saati yükleme (5s) → 7 bar sonuç
+// Arka plan: assets/images/askuyumu.png
+// Akış: Burç seçimi (döner çark) → Basma (3s) → Kum saati (5s) → 7 bar sonuç
 
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -13,6 +14,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
+
+// ─── Burç listesi (index 0=Koç … 11=Balık) ───────────────────────────────────
+const _kBurclar = [
+  'Koç', 'Boğa', 'İkizler', 'Yengeç', 'Aslan', 'Başak',
+  'Terazi', 'Akrep', 'Yay', 'Oğlak', 'Kova', 'Balık',
+];
 
 // ─── Veri modeli ──────────────────────────────────────────────────────────────
 
@@ -42,8 +49,21 @@ class AskUyumuScreen extends ConsumerStatefulWidget {
 
 class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     with TickerProviderStateMixin {
-  // Faz: 1=dokunma, 2=yükleme, 3=sonuç
+  // Faz: 1=seçim+dokunma, 2=yükleme, 3=sonuç
   int _phase = 1;
+
+  // ── Çark durumu ──────────────────────────────────────────────────────────
+  // θ=π → indeks 0 (Koç) altta; her π/6 ilerleyince bir sonraki burç gelir
+  double _wheelAngle = pi;
+  double _velocity = 0; // rad/frame
+  bool _snapping = false;
+  double _snapTarget = pi;
+  late Ticker _spinTicker;
+
+  // Pan geçici durumu
+  double? _panStartAngle;
+  double _lastPanAngle = 0;
+  int _prevPanMs = 0;
 
   // Faz 1 — basma doldurma animasyonu
   late AnimationController _fillCtrl;
@@ -55,17 +75,22 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   final _rng = Random();
   List<_BarResult>? _results;
 
+  String get _selectedBurc {
+    final idx = ((6 + _wheelAngle / (pi / 6)).round() % 12 + 12) % 12;
+    return _kBurclar[idx];
+  }
+
   @override
   void initState() {
     super.initState();
+
+    _spinTicker = createTicker(_onSpinTick);
 
     _fillCtrl = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 3),
     )..addStatusListener((status) {
-        if (status == AnimationStatus.completed) {
-          _gotoPhase2();
-        }
+        if (status == AnimationStatus.completed) _gotoPhase2();
       });
 
     _barCtrl = AnimationController(
@@ -77,24 +102,92 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
 
   @override
   void dispose() {
+    _spinTicker.dispose();
     _fillCtrl.dispose();
     _barCtrl.dispose();
     super.dispose();
   }
 
+  // ── Çark spin ticker ──────────────────────────────────────────────────────
+
+  void _onSpinTick(Duration _) {
+    if (!mounted) return;
+    if (_snapping) {
+      _wheelAngle += (_snapTarget - _wheelAngle) * 0.15;
+      if ((_wheelAngle - _snapTarget).abs() < 0.005) {
+        _wheelAngle = _snapTarget;
+        _snapping = false;
+        _spinTicker.stop();
+      }
+    } else {
+      _velocity *= 0.93;
+      _wheelAngle += _velocity;
+      if (_velocity.abs() < 0.004) {
+        _velocity = 0;
+        _snapping = true;
+        _snapTarget = (_wheelAngle / (pi / 6)).round() * (pi / 6);
+      }
+    }
+    setState(() {});
+  }
+
+  // ── Pan işleyicileri ──────────────────────────────────────────────────────
+
+  void _onWheelPanStart(DragStartDetails details) {
+    _spinTicker.stop();
+    _snapping = false;
+    _velocity = 0;
+    const center = Offset(140, 140); // 280/2
+    final d = details.localPosition - center;
+    _panStartAngle = atan2(d.dy, d.dx);
+    _lastPanAngle = _panStartAngle!;
+    _prevPanMs = DateTime.now().millisecondsSinceEpoch;
+  }
+
+  void _onWheelPanUpdate(DragUpdateDetails details) {
+    if (_panStartAngle == null) return;
+    const center = Offset(140, 140);
+    final d = details.localPosition - center;
+    final currentAngle = atan2(d.dy, d.dx);
+    final delta = _wrapAngle(currentAngle - _lastPanAngle);
+    _wheelAngle += delta;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    final dt = (now - _prevPanMs).clamp(1, 50);
+    _velocity = delta / dt * 16.0;
+    _prevPanMs = now;
+    _lastPanAngle = currentAngle;
+    setState(() {});
+  }
+
+  void _onWheelPanEnd(DragEndDetails _) {
+    _panStartAngle = null;
+    _snapping = _velocity.abs() <= 0.002;
+    if (_snapping) {
+      _snapTarget = (_wheelAngle / (pi / 6)).round() * (pi / 6);
+    }
+    _spinTicker.start();
+  }
+
+  double _wrapAngle(double a) {
+    while (a > pi) a -= 2 * pi;
+    while (a < -pi) a += 2 * pi;
+    return a;
+  }
+
   // ── Faz 2 başlatıcı ───────────────────────────────────────────────────────
 
   Future<void> _gotoPhase2() async {
+    final burc = _selectedBurc;
+    _spinTicker.stop();
     if (!mounted) return;
     setState(() => _phase = 2);
 
     await Future.wait<void>([
-      _metinleriHazirla(),
+      _metinleriHazirla(burc),
       Future.delayed(const Duration(seconds: 5)),
     ]);
     if (!mounted) return;
 
-    // Günlük kullanım tarihi kaydet
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('askuyumu_bugun_tarih',
         DateTime.now().toIso8601String().substring(0, 10));
@@ -108,17 +201,15 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
 
   // ── Veri yükleme ──────────────────────────────────────────────────────────
 
-  Future<void> _metinleriHazirla() async {
+  Future<void> _metinleriHazirla(String selectedBurc) async {
     try {
       final profile = ref.read(userProfileProvider);
       final raw = await rootBundle.loadString('assets/data/askuyumu.json');
       final data = json.decode(raw) as Map<String, dynamic>;
       final barsData = data['bars'] as Map<String, dynamic>;
       final uyumData = data['uyum'] as Map<String, dynamic>;
-
       final prefs = await SharedPreferences.getInstance();
 
-      // 6 bar kategorisi
       final barDefs = [
         ('ask', 'Aşk', const Color(0xFFFF4466)),
         ('aile', 'Aile', const Color(0xFFFF8844)),
@@ -129,52 +220,48 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       ];
 
       final results = <_BarResult>[];
-
       for (final (key, label, color) in barDefs) {
         final catData = barsData[key] as Map<String, dynamic>;
-        // Rastgele aralık seç
         const ranges = ['0-25', '25-50', '50-75', '75-100'];
         final pickedRange = ranges[_rng.nextInt(ranges.length)];
         final rangeEntries = (catData[pickedRange] as List)
             .map((e) => e as Map<String, dynamic>)
             .toList();
-
-        final metin = _pickEntry(prefs, 'askuyumu_${key}_gosterilen', rangeEntries, profile.toVariableMap());
-
-        // Bar değeri: aralık içinde rastgele
-        final pct = _rangeValue(pickedRange);
-
+        final metin = _pickEntry(prefs, 'askuyumu_${key}_gosterilen',
+            rangeEntries, profile.toVariableMap());
         results.add(_BarResult(
           key: key,
           label: label,
           color: color,
-          pct: pct,
+          pct: _rangeValue(pickedRange),
           metin: metin,
         ));
       }
 
-      // 7. bar: uyum
+      // 7. bar: genel uyum — seçili burca göre filtrele
       final uyumKey = _uyumKey(profile.maritalStatus);
-      final uyumEntries = (uyumData[uyumKey] as List)
+      final uyumAll = (uyumData[uyumKey] as List)
           .map((e) => e as Map<String, dynamic>)
           .toList();
-      final uyumMetin = _pickEntry(prefs, 'askuyumu_uyum_gosterilen', uyumEntries, profile.toVariableMap());
-      final uyumPct = _rng.nextInt(101);
+      final uyumPool = uyumAll.where((e) => e['burc'] == selectedBurc).toList();
+      final uyumPrefsKey = 'askuyumu_uyum_${selectedBurc}_gosterilen';
+      final uyumMetin = _pickEntry(
+          prefs, uyumPrefsKey, uyumPool.isNotEmpty ? uyumPool : uyumAll,
+          profile.toVariableMap());
+      final uyumPct =
+          (results.map((r) => r.pct).reduce((a, b) => a + b) / results.length)
+              .round();
 
       results.add(_BarResult(
         key: 'uyum',
-        label: 'Uyum',
+        label: 'Genel Uyum',
         color: const Color(0xFF44DD66),
         pct: uyumPct,
         metin: uyumMetin,
       ));
 
-      if (mounted) {
-        setState(() => _results = results);
-      }
-    } catch (_) {
-      // sessizce geç, sonuçlar null kalırsa fallback gösterilir
-    }
+      if (mounted) setState(() => _results = results);
+    } catch (_) {}
   }
 
   String _uyumKey(String maritalStatus) {
@@ -195,13 +282,13 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   int _rangeValue(String range) {
     switch (range) {
       case '0-25':
-        return _rng.nextInt(26); // 0..25
+        return _rng.nextInt(26);
       case '25-50':
-        return 25 + _rng.nextInt(26); // 25..50
+        return 25 + _rng.nextInt(26);
       case '50-75':
-        return 50 + _rng.nextInt(26); // 50..75
+        return 50 + _rng.nextInt(26);
       case '75-100':
-        return 75 + _rng.nextInt(26); // 75..100
+        return 75 + _rng.nextInt(26);
       default:
         return _rng.nextInt(101);
     }
@@ -214,7 +301,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     Map<String, String> varMap,
   ) {
     if (entries.isEmpty) return '';
-
     var shown = prefs.getStringList(prefsKey) ?? [];
     var unseen = entries.where((e) => !shown.contains('${e['id']}')).toList();
     if (unseen.isEmpty) {
@@ -226,7 +312,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     final pick = unseen.first;
     shown.add('${pick['id']}');
     prefs.setStringList(prefsKey, shown);
-
     return VariableReplacer.replace(pick['metin'] as String, varMap);
   }
 
@@ -252,8 +337,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       ),
     );
   }
-
-  // ── Arka plan ─────────────────────────────────────────────────────────────
 
   Widget _buildBackground() {
     return Stack(
@@ -294,8 +377,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     );
   }
 
-  // ── Header ────────────────────────────────────────────────────────────────
-
   Widget _buildHeader() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
@@ -310,8 +391,8 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
             ),
-            child: const Icon(
-                Icons.chevron_left_rounded, color: Colors.white, size: 22),
+            child: const Icon(Icons.chevron_left_rounded,
+                color: Colors.white, size: 22),
           ),
         ),
         const Spacer(),
@@ -326,7 +407,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     );
   }
 
-  // ── Faz 1: dokunma ekranı ─────────────────────────────────────────────────
+  // ── Faz 1: burç seçimi + dokunma ─────────────────────────────────────────
 
   Widget _buildPhase1() {
     return Column(children: [
@@ -335,12 +416,12 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 32),
               child: Text(
-                'Uyumunu merak ettiğin kişiyi zihninden geçir ve alttaki yuvarlağa dokun!',
+                'Uyumunu merak ettiğin kişinin burcunu seç!',
                 textAlign: TextAlign.center,
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                   height: 1.6,
@@ -348,13 +429,66 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                 ),
               ),
             ),
-            const SizedBox(height: 60),
+            const SizedBox(height: 20),
+            _buildWheelWithPointer(),
+            const SizedBox(height: 8),
+            Text(
+              _selectedBurc,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 0.5,
+              ),
+            ),
+            const SizedBox(height: 24),
             _buildHoldButton(),
-            const SizedBox(height: 40),
+            const SizedBox(height: 10),
+            const Text(
+              'Basılı tut',
+              style: TextStyle(color: Colors.white38, fontSize: 12),
+            ),
+            const SizedBox(height: 16),
           ],
         ),
       ),
     ]);
+  }
+
+  Widget _buildWheelWithPointer() {
+    const wheelSize = 280.0;
+    const pointerSize = 28.0;
+    return SizedBox(
+      width: wheelSize,
+      height: wheelSize + pointerSize * 0.5,
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          GestureDetector(
+            onPanStart: _onWheelPanStart,
+            onPanUpdate: _onWheelPanUpdate,
+            onPanEnd: _onWheelPanEnd,
+            child: Transform.rotate(
+              angle: _wheelAngle,
+              child: Image.asset(
+                'assets/images/burclar_wheel.png',
+                width: wheelSize,
+                height: wheelSize,
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+          const Positioned(
+            bottom: 0,
+            child: Icon(
+              Icons.arrow_drop_up_rounded,
+              color: Colors.white,
+              size: pointerSize,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildHoldButton() {
@@ -372,7 +506,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             child: Stack(
               alignment: Alignment.center,
               children: [
-                // Arka plan daire
                 Container(
                   width: buttonRadius * 2,
                   height: buttonRadius * 2,
@@ -385,7 +518,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                     ),
                   ),
                 ),
-                // Dolum dairesi
                 CustomPaint(
                   size: const Size(buttonRadius * 2, buttonRadius * 2),
                   painter: _FillCirclePainter(
@@ -394,12 +526,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                     color: const Color(0xFFFF4466),
                   ),
                 ),
-                // Kalp ikonu
-                const Icon(
-                  Icons.favorite_rounded,
-                  color: Colors.white,
-                  size: 28,
-                ),
+                const Icon(Icons.favorite_rounded, color: Colors.white, size: 28),
               ],
             ),
           );
@@ -408,7 +535,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     );
   }
 
-  // ── Faz 2: yükleme ekranı ─────────────────────────────────────────────────
+  // ── Faz 2: yükleme ────────────────────────────────────────────────────────
 
   Widget _buildPhase2() {
     return Column(children: [
@@ -434,7 +561,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     ]);
   }
 
-  // ── Faz 3: sonuç ekranı ───────────────────────────────────────────────────
+  // ── Faz 3: sonuç ─────────────────────────────────────────────────────────
 
   Widget _buildPhase3() {
     final results = _results;
@@ -443,10 +570,8 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         _buildHeader(),
         const Expanded(
           child: Center(
-            child: Text(
-              'Sonuçlar yüklenemedi.',
-              style: TextStyle(color: Colors.white70, fontSize: 14),
-            ),
+            child: Text('Sonuçlar yüklenemedi.',
+                style: TextStyle(color: Colors.white70, fontSize: 14)),
           ),
         ),
       ]);
@@ -476,70 +601,55 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         decoration: BoxDecoration(
           color: Colors.black.withValues(alpha: 0.55),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: bar.color.withValues(alpha: 0.30),
-            width: 1,
-          ),
+          border: Border.all(color: bar.color.withValues(alpha: 0.30), width: 1),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Başlık + yüzde
             Text(
               '${bar.label}  %${bar.pct}',
               style: TextStyle(
-                color: bar.color,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+                  color: bar.color, fontSize: 16, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            // Animasyonlu bar
             AnimatedBuilder(
               animation: _barAnim,
               builder: (_, __) {
                 final widthFactor = (bar.pct / 100.0) * _barAnim.value;
                 return ClipRRect(
                   borderRadius: BorderRadius.circular(4),
-                  child: Stack(
-                    children: [
-                      Container(
+                  child: Stack(children: [
+                    Container(
                         height: 10,
                         width: double.infinity,
-                        color: Colors.white.withValues(alpha: 0.12),
-                      ),
-                      FractionallySizedBox(
-                        widthFactor: widthFactor,
-                        child: Container(
-                          height: 10,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            gradient: LinearGradient(
-                              colors: [
-                                bar.color.withValues(alpha: 0.7),
-                                bar.color,
-                              ],
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
-                            ),
+                        color: Colors.white.withValues(alpha: 0.12)),
+                    FractionallySizedBox(
+                      widthFactor: widthFactor,
+                      child: Container(
+                        height: 10,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          gradient: LinearGradient(
+                            colors: [
+                              bar.color.withValues(alpha: 0.7),
+                              bar.color,
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ]),
                 );
               },
             ),
             const SizedBox(height: 10),
-            // Açıklama metni
             bar.metin.isNotEmpty
                 ? RichTextParser.build(
                     bar.metin,
                     style: const TextStyle(
-                      color: Color(0xEEFFFFFF),
-                      fontSize: 13,
-                      height: 1.6,
-                    ),
+                        color: Color(0xEEFFFFFF), fontSize: 13, height: 1.6),
                   )
                 : const SizedBox.shrink(),
           ],
@@ -566,13 +676,11 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             children: [
               Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
               SizedBox(width: 2),
-              Text(
-                'Çıkış',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500),
-              ),
+              Text('Çıkış',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500)),
             ],
           ),
         ),
@@ -601,13 +709,11 @@ class _FillCirclePainter extends CustomPainter {
     final paint = Paint()
       ..color = color.withValues(alpha: 0.45)
       ..style = PaintingStyle.fill;
-    canvas.drawCircle(
-        Offset(size.width / 2, size.height / 2), radius, paint);
+    canvas.drawCircle(Offset(size.width / 2, size.height / 2), radius, paint);
   }
 
   @override
-  bool shouldRepaint(_FillCirclePainter old) =>
-      old.progress != progress;
+  bool shouldRepaint(_FillCirclePainter old) => old.progress != progress;
 }
 
 // ─── Kum saati animasyonu ─────────────────────────────────────────────────────

@@ -53,11 +53,12 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   int _phase = 1;
 
   // ── Çark durumu ──────────────────────────────────────────────────────────
-  // θ=π → indeks 0 (Koç) altta; her π/6 ilerleyince bir sonraki burç gelir
-  double _wheelAngle = pi;
+  // Görsel snap offset: burç merkezleri π/6*n değil π/6*n+π/12 konumunda
+  static const _kSnapOffset = pi / 12;
+  double _wheelAngle = pi + pi / 12;
   double _velocity = 0; // rad/frame
   bool _snapping = false;
-  double _snapTarget = pi;
+  double _snapTarget = pi + pi / 12;
   late Ticker _spinTicker;
 
   // Pan geçici durumu
@@ -76,7 +77,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   List<_BarResult>? _results;
 
   String get _selectedBurc {
-    final idx = ((6 + _wheelAngle / (pi / 6)).round() % 12 + 12) % 12;
+    final idx = ((((_wheelAngle - _kSnapOffset) / (pi / 6)).round() % 12) + 12) % 12;
     return _kBurclar[idx];
   }
 
@@ -125,7 +126,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       if (_velocity.abs() < 0.004) {
         _velocity = 0;
         _snapping = true;
-        _snapTarget = (_wheelAngle / (pi / 6)).round() * (pi / 6);
+        _snapTarget = ((_wheelAngle - _kSnapOffset) / (pi / 6)).round() * (pi / 6) + _kSnapOffset;
       }
     }
     setState(() {});
@@ -163,7 +164,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     _panStartAngle = null;
     _snapping = _velocity.abs() <= 0.002;
     if (_snapping) {
-      _snapTarget = (_wheelAngle / (pi / 6)).round() * (pi / 6);
+      _snapTarget = ((_wheelAngle - _kSnapOffset) / (pi / 6)).round() * (pi / 6) + _kSnapOffset;
     }
     _spinTicker.start();
   }

@@ -306,6 +306,34 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     });
   }
 
+  void _checkRuyaSent() {
+    final sent = ref.read(ruyaSentProvider);
+    if (!sent) return;
+    ref.read(ruyaSentProvider.notifier).state = false;
+    final name = ref.read(userProfileProvider).name;
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'Rüyanı değerlendirmeye başladım${name.isNotEmpty ? ' $name' : ''}.',
+        gradient: const [Color(0xFF1A0A4C), Color(0xFF2D1580)],
+        borderColor: const Color(0xFF7B5CF6),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
   bool _listenersAttached = false;
 
   @override
@@ -326,6 +354,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       });
       ref.listenManual(durugoruSentProvider, (_, sent) {
         if (sent) _checkDurugoruSent();
+      });
+      ref.listenManual(ruyaSentProvider, (_, sent) {
+        if (sent) _checkRuyaSent();
       });
     }
   }

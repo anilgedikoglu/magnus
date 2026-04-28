@@ -137,6 +137,9 @@ final kahveSentProvider = StateProvider<bool>((ref) => false);
 /// Durugörü gönderildiğinde ana menüye bildirim için
 final durugoruSentProvider = StateProvider<bool>((ref) => false);
 
+/// Rüya yorumu gönderildiğinde ana menüye bildirim için
+final ruyaSentProvider = StateProvider<bool>((ref) => false);
+
 // ─── Onboarding state ─────────────────────────────────────────────────────────
 
 final onboardingCompleteProvider = Provider<bool>((ref) {

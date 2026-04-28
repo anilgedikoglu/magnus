@@ -288,22 +288,8 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen>
     await Future.delayed(const Duration(milliseconds: 1500));
     if (!mounted) return;
 
-    // Snackbar'ı göster, ekrandan çık
-    final messenger = ScaffoldMessenger.of(context);
+    ref.read(ruyaSentProvider.notifier).state = true;
     context.pop();
-    messenger.showSnackBar(
-      SnackBar(
-        content: const Text(
-          'Rüyanı değerlendirmeye başladım.',
-          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-        ),
-        backgroundColor: const Color(0xFF4C1D95),
-        behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-        margin: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-        duration: const Duration(seconds: 4),
-      ),
-    );
   }
 
   // ── Build ─────────────────────────────────────────────────────────────────

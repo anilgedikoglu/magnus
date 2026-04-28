@@ -479,6 +479,11 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               ),
             ),
           ),
+          // Seçili dilim sarı ışık — fixed (çarkla dönmez), pointer konumunda
+          CustomPaint(
+            size: const Size(wheelSize, wheelSize),
+            painter: _SegmentGlowPainter(),
+          ),
           const Positioned(
             bottom: 0,
             child: Icon(
@@ -688,6 +693,43 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       ),
     );
   }
+}
+
+// ─── Seçili dilim sarı ışık (fixed, pointer konumunda = alt merkez) ──────────
+
+class _SegmentGlowPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final cx = size.width / 2;
+    final cy = size.height / 2;
+    final r = size.width / 2;
+    // Alt merkez = π/2, yarım dilim = π/12 (30° dilimin yarısı)
+    const startAngle = pi / 2 - pi / 12;
+    const sweepAngle = pi / 6;
+
+    // İç dolgu — yarı saydam sarı
+    canvas.drawArc(
+      Rect.fromCircle(center: Offset(cx, cy), radius: r * 0.92),
+      startAngle, sweepAngle, true,
+      Paint()
+        ..color = const Color(0xFFFFD700).withValues(alpha: 0.18)
+        ..style = PaintingStyle.fill,
+    );
+
+    // Kenar çizgisi — daha belirgin sarı
+    canvas.drawArc(
+      Rect.fromCircle(center: Offset(cx, cy), radius: r * 0.92),
+      startAngle, sweepAngle, false,
+      Paint()
+        ..color = const Color(0xFFFFD700).withValues(alpha: 0.70)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2.0
+        ..maskFilter = const MaskFilter.blur(BlurStyle.outer, 6),
+    );
+  }
+
+  @override
+  bool shouldRepaint(_SegmentGlowPainter _) => false;
 }
 
 // ─── Dolum dairesi painter ───────────────────────────────────────────────────

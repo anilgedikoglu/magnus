@@ -543,11 +543,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         _MenuItem('I-Ching', 'assets/images/ichingikon.png', 1,
             () {}),
         _MenuItem('Aşk Uyumu', 'assets/images/askuyumu.png', 1,
-            () {}),
+            () => _pushWithAd('/ask_uyumu')),
         _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',
-            1, () {}),
+            1, () => _pushWithAd('/kadercarki')),
         _MenuItem('Rüya Yorumu', 'assets/images/menu/ruyaozel.png', 1,
-            () {}),
+            () => _pushWithAd('/ruya_yorumu')),
         // 5 yer tutucu — ikon eklendikçe buralar dolacak
         ...List.generate(5, (_) =>
             _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {})),

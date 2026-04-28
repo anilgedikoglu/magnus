@@ -38,6 +38,9 @@ import 'presentation/kehanet/yuz_fali_kimin_screen.dart';
 import 'presentation/kehanet/el_fali_screen.dart';
 import 'presentation/kehanet/yuz_fali_foto_screen.dart';
 import 'presentation/durugoru/durugoru_screen.dart';
+import 'presentation/ruya/ruya_yorumu_screen.dart';
+import 'presentation/kadercarki/kadercarki_screen.dart';
+import 'presentation/askuyumu/askuyumu_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 final _homeKey = GlobalKey<NavigatorState>(debugLabel: 'home');
@@ -287,6 +290,21 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/el_fali',
         parentNavigatorKey: _rootKey,
         builder: (_, __) => const ElFaliScreen(),
+      ),
+      GoRoute(
+        path: '/ruya_yorumu',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const RuyaYorumuScreen(),
+      ),
+      GoRoute(
+        path: '/kadercarki',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const KaderCarkiScreen(),
+      ),
+      GoRoute(
+        path: '/ask_uyumu',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const AskUyumuScreen(),
       ),
       GoRoute(
         path: '/durugoru',

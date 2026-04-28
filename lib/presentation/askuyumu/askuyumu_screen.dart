@@ -77,7 +77,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   List<_BarResult>? _results;
 
   String get _selectedBurc {
-    final idx = ((6 + ((_wheelAngle - _kSnapOffset) / (pi / 6)).round()) % 12 + 12) % 12;
+    final idx = ((6 - ((_wheelAngle - _kSnapOffset) / (pi / 6)).round()) % 12 + 12) % 12;
     return _kBurclar[idx];
   }
 

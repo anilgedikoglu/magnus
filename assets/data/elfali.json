@@ -1,0 +1,4050 @@
+{
+  "elfali": {
+    "genel_degerlendirme": [
+      {
+        "id": 1,
+        "metin": "Avucunun derinliklerinde saklı kader, bugün tutku dolu bir maceraya atılmaya hazır olduğunu söylüyor. Bu macera seni yepyeni bir yola sürükleyebilir {{isim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 2,
+        "metin": "Avuç içindeki çizgiler bugün berrak bir kompozisyon oluşturuyor {{isim}}. Belli ki cesaretin ve azmin seni zirveye taşıyacak. Hayallerine bir adım daha yaklaşmaya hazır ol.",
+        "kosullar": []
+      },
+      {
+        "id": 3,
+        "metin": "Avucundaki çizgilerde oluşan bugünkü kılcal kesikler, dalgalar gibi iniş çıkışlarla dolu bir günü işaret ediyor {{isim}}. Beklenmedik gelişmelere karşı hazırlıklı ol. Esnekliğin ve uyum yeteneğin bu zorlukları aşmana yardımcı olacak.",
+        "kosullar": []
+      },
+      {
+        "id": 4,
+        "metin": "Elinde bulunan Jüpiter Tepesi'ndeki ödem, bugün liderlik vasıflarının parlayacağını gösteriyor {{isim}}. Güçlü ve kararlı tavrınla etrafındakileri etkileyecek ve onları motive edeceksin.",
+        "kosullar": []
+      },
+      {
+        "id": 5,
+        "metin": "Elinin Ay Tepesi'ndeki bugün belirmiş bir leke, geçmişten gelen bir duygunun yeniden canlanabileceğini gösteriyor {{isim}}. Nostaljik anılara kapılmak güzel olsa da, geçmişe takılıp kalmamaya dikkat et.",
+        "kosullar": []
+      },
+      {
+        "id": 6,
+        "metin": "Elindeki Merkür çizginin keskinliği, zihninin bugün son derece analitik işlediğini gösteriyor {{isim}}. Problem çözme yeteneğin ve mantıklı düşüncelerinle her türlü zorluğun üstesinden gelebilirsin.",
+        "kosullar": []
+      },
+      {
+        "id": 7,
+        "metin": "Elindeki Mars Tepesi'nin bugünkü canlılığı, tutkulu ve enerjik bir gün geçireceğine işaret ediyor {{isim}}. Yaratıcı enerjini açığa çıkarmak ve yeni şeyler denemek için ideal bir zaman.",
+        "kosullar": []
+      },
+      {
+        "id": 8,
+        "metin": "Avuç içindeki nemsiz kalmış bölge, gizemli bir yol ayrımına yaklaştığını gösteriyor {{isim}}. Hangi yolu seçeceğine karar vermeden önce tüm seçenekleri dikkatlice değerlendir. Sezgilerin bu konuda sana yardımcı olacaktır.",
+        "kosullar": []
+      },
+      {
+        "id": 9,
+        "metin": "Avucundaki çizgiler vücudundaki ödemden olsa gerek, bugün bir EKG gibi iniş çıkışlarla dolu. Beklenmedik dalgalara karşı hazırlıklı ol {{isim}}. Uyum yeteneğin ve sakinliğin bu dalgaları sörf tahtası gibi kullanmana yardımcı olacak.",
+        "kosullar": []
+      },
+      {
+        "id": 10,
+        "metin": "Sağ elindeki Jüpiter Tepesi, bugün bir güneş gibi parlıyor {{isim}}. Güçlü ve kararlı enerjin insanları istediğin konularda kolaylıkla ikna edebilmeni sağlayacak.",
+        "kosullar": []
+      },
+      {
+        "id": 11,
+        "metin": "Avucunun Ay Tepesi'nde bugün meydana gelmiş renk açılması bir damla gözyaşını andırıyor ve geçmişten gelen bir yankıyı işaret ediyor {{isim}}. Nostaljik duygulara kapılmak güzel olsa da, bugünün güneşine odaklanmayı unutma.",
+        "kosullar": []
+      },
+      {
+        "id": 12,
+        "metin": "Avucundaki çizgilerin genel hali, son zamanlardaki sıkı çalışmanın mükafatını alacağını gösteriyor. Venüs Tepesi'nin parlaklığı da bu konuda sana destek oluyor {{isim}}. Bugün maddi açıdan şanslı bir gün olabilir.",
+        "kosullar": []
+      },
+      {
+        "id": 13,
+        "metin": "Avucundaki çizgilerin genel hali, bugün kader planında sıkı çalışmak ve yorulmak olduğunu söylüyor {{isim}}. Günü kas ve eklem ağrılarıyla kapatabilirsin.",
+        "kosullar": []
+      },
+      {
+        "id": 14,
+        "metin": "Bugün kainata yayacağın enerji, bir süredir görüşmediğin insanların seni özlediklerini anlamalarına neden olacak. Kader çizgilerin, özel birileri tarafından aranacağını ve yollarınızın yeniden kesişebileceğini işaret ediyor {{isim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 15,
+        "metin": "Bugün eskiye dayanan bir problemin, beklemediğin bir anda çözülecek {{isim}}. Kader çizgilerinde iyi yönde bir kırılma gözlemliyorum.",
+        "kosullar": []
+      },
+      {
+        "id": 16,
+        "metin": "Bugün güne çok iyi başlamadığını düşünsen de, şans senden yana {{isim}}. Beklemediğin gelişmelerin üst üste yaşanacağı ve bir anda mutlu olacağın bir gündesin.",
+        "kosullar": []
+      },
+      {
+        "id": 17,
+        "metin": "Bugün iç ve dış unsurlarla bir denge halindesin {{isim}}. Yaşama isteğini kamçılayan dürtülerin, başarmana da yardımcı olacak.",
+        "kosullar": []
+      },
+      {
+        "id": 18,
+        "metin": "Bugün geleceğini şekillendirebilmek için ihtiyaç duyduğun güç yüreğinde. Mukadderat çizgilerin, işlerin istediğin yönde evrileceğini işaret ediyor {{isim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 19,
+        "metin": "Avuç içinin genel haritasını {{burc}} burcu oluşunla değerlendirdiğimde, bugün tahammül seviyenin az olduğunu söyleyebilirim. İnsanlara çok geçerli olmayan nedenlerle sinirlenebilirsin {{isim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 20,
+        "metin": "Avuç içindeki çizgileri yatay kesen parçalanmalar yorgunluk belirtisi {{isim}}. Bugünü dinlenerek geçirmeni öneririm. Sana bir taleple yaklaşan olursa geri çevirebilir, sorumluluk almak istemeyebilirsin.",
+        "kosullar": []
+      },
+      {
+        "id": 21,
+        "metin": "Avucun, bir haritadan öte {{isim}}. Kaderin mürekkebiyle yazılmış, geleceğe dair ipuçlarıyla dolu bir şiir gibi bugün. Bu şiirin en güzel mısralarından bazılarını okumaya hazır ol. Haberler yolda...",
+        "kosullar": []
+      },
+      {
+        "id": 22,
+        "metin": "Avucundaki izler bugün benim için çok ilginç şeyler çağrıştırıyor {{isim}}. Senin bazı keşkelerin bugün fırsat olarak yeniden önüne gelebilir. Çok iyi değerlendirmeni dilerim.",
+        "kosullar": []
+      },
+      {
+        "id": 23,
+        "metin": "Avucundaki çizgilerin keskin bir dönüş yaptığı noktaya dikkat et. Bu, hayatında önemli bir değişimin yakın olduğunun işareti olabilir ve bu değişim bugün olabilir. Endişelenme, senin için hayırlı olacak {{isim}}. Kaderin seni daha güzel bir geleceğe yönlendiriyor.",
+        "kosullar": []
+      },
+      {
+        "id": 24,
+        "metin": "Bugün elinin ortasında çember şeklinde bir hale duyumsadım {{isim}}. İlk bakışta göze çarpmayan bu enerji halkası, insanların dikkatinin bir nedenle senin üzerinde yoğunlaşacağını gösteriyor.",
+        "kosullar": []
+      },
+      {
+        "id": 25,
+        "metin": "Serçe parmağına yakın bulunan Merkür hattında bugün belli belirsiz bir üçgen var {{isim}}. Bu durum bir kariyer başarısının yaklaştığına işarettir.",
+        "kosullar": []
+      },
+      {
+        "id": 26,
+        "metin": "Avucunda bir yıldız belirmiş ve Merkür hattına çok yakın. Hemen serçe parmağının al kısmında {{isim}}. Bu senin bugünkü karizmandaki yüksekliğin işareti.",
+        "kosullar": []
+      },
+      {
+        "id": 27,
+        "metin": "Bugün avucunda silik bir çapraz sembol görüyorum {{isim}}, hemen Merkür bölgende. Bu aralar maddi bir engelle karşılaşabilirsin.",
+        "kosullar": []
+      },
+      {
+        "id": 28,
+        "metin": "Yüzük parmağının altındaki Apollo bölgesinde bir üçgen konumlanmış {{isim}}. Sanat dallarıyla ilgiliysen, bugün ekstra başarı sağlayacağını söyleyebilirim.",
+        "kosullar": []
+      },
+      {
+        "id": 29,
+        "metin": "Elindeki Güneş bölgesine yerleşmiş ve çok belirgin olan yıldızı sen de görebiliyor musun? Bu, büyük bir servet sahibi olunacağının işareti {{isim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 30,
+        "metin": "Avucundaki Apollo adı da verilen Güneş bölgesinde bir diyez işareti var {{isim}}. Çok onurlu biri olduğunu ve bu uğurda yapacaklarını anlatıyor.",
+        "kosullar": []
+      },
+      {
+        "id": 31,
+        "metin": "Orta parmağının köküne konumlanmış Satürn bölgende, çizgiler üçgen şeklinde kesişmiş {{isim}}. Senin diğer insanlara göre psikolojik anlamda daha güçlü olduğunu söylüyor.",
+        "kosullar": []
+      },
+      {
+        "id": 32,
+        "metin": "{{isim}} avucundaki Satürn bölgesinde 2 ayrı yıldız görüyorum. Senin kaderinde şu an 2 belirsizlik var ve akıbetlerden birini dua'n, diğerini çaban belirleyecek.",
+        "kosullar": []
+      },
+      {
+        "id": 33,
+        "metin": "Senin avucundaki Satürn bölgesinde bu çarpı işareti zaman zaman çıkıyor sanırım, öyle değil mi {{isim}}? Depresyon işaretidir haberin olsun.",
+        "kosullar": []
+      },
+      {
+        "id": 34,
+        "metin": "Elindeki Jüpiter Tepesi'nin bugünkü sıra dışı belirginliği liderlik vasıflarının ön plana çıkacağını gösteriyor. Bugün iş hayatında önemli bir sorumluluk alabilirsin. Bu sorumluluğun altından başarıyla kalkman, itibarını ve saygınlığını artıracaktır {{isim}}.",
+        "kosullar": [
+          {
+            "degisken": "meslek",
+            "deger": "özel sektör"
+          },
+          {
+            "degisken": "meslek",
+            "deger": "kamu sektörü"
+          },
+          {
+            "degisken": "meslek",
+            "deger": "kendi işini yapıyor"
+          },
+          {
+            "degisken": "meslek",
+            "deger": "akademisyen"
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "metin": "Avuç orta-üst hattında bulunan Satürn bölgendeki çizgiler neredeyse bir ızgara şekli oluşturmuş. Çevrende olan bitene aşırı duyarlı bir yapın var {{isim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 36,
+        "metin": "{{isimcigim}} avucundaki Satürn bölgenin hemen alt hattında belirgin bir diyez işareti görüyorum. Bu senin tüm dış etkenlere karşı manevi güçler tarafından korunduğunu gösteriyor.",
+        "kosullar": []
+      },
+      {
+        "id": 37,
+        "metin": "İşaret parmağındaki Jüpiter bölgende eşkenar olmayan bir üçgen var {{isim}}, sen de görebiliyor musun? Her zaman ön plana çıkarmasan da, politik bir yanın olduğunu seziyorum.",
+        "kosullar": []
+      },
+      {
+        "id": 38,
+        "metin": "Elindeki Jüpiter bölgesinde bulunan ve doğrusal olmadıkları için de kesişen iki çizgi, adeta bir çarpı işareti yaratmış. Bu senin çok rekabetçi bir yanın olduğunu belirtiyor {{isim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 39,
+        "metin": "{{isim}} bugün avucunda normalde yer almadığını düşündüğüm silikçe bir ızgara sembolü var; tam da Jüpiter bölgende. Son zamanlarda gösteriş yapmayı ve kendini daha ön plana çıkarmayı istiyor olabilirsin.",
+        "kosullar": []
+      },
+      {
+        "id": 40,
+        "metin": "Avucundaki yukarı Mars bölgenden geçen çizgiler net bir üçgen oluşturmuş {{isim}}. Sen çok cesur birisin ve hayattan da bunun karşılığını kesinlikle alacaksın.",
+        "kosullar": []
+      },
+      {
+        "id": 41,
+        "metin": "Avucundaki Mars bölgesinin parmaklara yakın kısmında bir yıldız belirdiğini fark ettim. Bazı konulardaki kafa karışıklığını betimliyor {{isimcigim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 42,
+        "metin": "Yukarı Mars bölgende birbirini takip eden eşkenar dörtgenler oluşmuş. Sen aslında hiyerarşik işlere çok uygunsun biliyor musun {{isim}}, özellikle de askeri bir kariyere.",
+        "kosullar": []
+      },
+      {
+        "id": 43,
+        "metin": "Elindeki yukarı Mars bölgenden geçen altlı üstlü çizgiler tam bir diyez işareti oluşturuyor {{isim}}. Senin çok güçlü bir mizacın var. Kaderin bunun karşılığını sana verecek.",
+        "kosullar": []
+      },
+      {
+        "id": 44,
+        "metin": "Baş parmağına yakın Venüs bölgesinde yapılanmış üçgen sembolü, kaderinde var olan duygusal mutluluğun altını çiziyor {{isim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 45,
+        "metin": "Ay Tepesi'ndeki küçük bir ada'nın bugünkü hali, duygusal açıdan hassas bir gün geçirebileceğini gösteriyor {{isim}}. Geçmişten gelen bir anı canlanabilir veya sevdiğin biriyle ufak bir anlaşmazlık yaşayabilirsin.",
+        "kosullar": []
+      },
+      {
+        "id": 46,
+        "metin": "Hmm çok ilginç. Elindeki Venüs bölgesinde toplanan kesik çizgiler bir yıldız meydana getirmiş {{isim}}. Sen cinselliğin ön planda olduğu birliktelikler yaşayacak birisin.",
+        "kosullar": []
+      },
+      {
+        "id": 47,
+        "metin": "Baş parmağının hemen medialinde gözlemlediğimiz Venüs bölgende, çizgilerden oluşan bir çarpı işareti var {{isim}}. Şüpheler içinde geçebilecek bir hayatın belirtisi bu.",
+        "kosullar": []
+      },
+      {
+        "id": 48,
+        "metin": "Elindeki Venüs bölgesinde kesişen kalabalık çizgiler topluluğu adeta tren raylarını andırıyor {{isim}}. Bu çok fazla flört demek.",
+        "kosullar": []
+      },
+      {
+        "id": 49,
+        "metin": "Avucundaki baş parmak bölgene yakın tepecik senin Venüs bölgen {{isim}}. Orada bir eşkenar dörtgen var. Güven dolu bir hayatı anlatıyor.",
+        "kosullar": []
+      },
+      {
+        "id": 50,
+        "metin": "Bileğinin dış kenarına yakın duran Ay bölgende bir yıldız sembolü var {{isim}}. Yaşam boyu sağlam kalacak olan iç dengelerinin en büyük belirtisi bu diyebilirim.",
+        "kosullar": []
+      },
+      {
+        "id": 51,
+        "metin": "El bileğinin medial kenarı senin Ay bölgendir {{isim}}. Oraya yerleşmiş bir diyez sembolü görüyorum. Sen çok rüya gören ve rüyaları çıkacak bir insansın.",
+        "kosullar": []
+      },
+      {
+        "id": 52,
+        "metin": "{{isimcigim}} senin akıl ve kalp çizgilerin neredeyse birleşerek Simian dediğimiz çizgiyi oluşturmuş. Yaşam boyu yüreğini ve mantığını birlikte dinleyecek, bu sayede ekstra güç kazanacaksın.",
+        "kosullar": []
+      },
+      {
+        "id": 53,
+        "metin": "{{isim}} işaret parmağının dibinde, herkeste bu kadar belirgin olmayan bir desen görüyorum. Bu yatay desene Solomon halkası deniyor ve kişinin mistik bir farkındalığı olduğunun göstergesi.",
+        "kosullar": []
+      },
+      {
+        "id": 54,
+        "metin": "{{isim}} senin avucunun ortasındaki Mars bölgen ne kadar da geniş! Yaşamın boyunca farklı konularda başkalarının yapamayacağı beceriler sergileyeceksin.",
+        "kosullar": []
+      },
+      {
+        "id": 55,
+        "metin": "Sevgili {{isim}} başparmağına yakın olan o tombultoy böyle var ya, işte orası Venüs bölgen. Sendeki alanı normalin biraz üzerinde. Sen kararlarında ömür boyu duygusallık gözeteceksin.",
+        "kosullar": []
+      },
+      {
+        "id": 56,
+        "metin": "Merkür çizginin silikleşmesi zihninin bugün biraz karışık olacağını gösteriyor {{isim}}. Önemli kararlar vermeden önce iyice düşünmen ve tüm olasılıkları gözden geçirmen faydalı olacaktır. Aceleci davranmaktan kaçın.",
+        "kosullar": []
+      },
+      {
+        "id": 57,
+        "metin": "İlk dikkatimi çeken şey el bileğin oldu. Üst üste birbiri ile kesişmeyen ikiden fazla çizgi var; bunlara bilezikler diyoruz. Sosyal yaşamdaki başarının işaretleridir {{isim}}.",
+        "kosullar": []
+      },
+      {
+        "id": 58,
+        "metin": "Sana bir özet geçeyim {{isim}}; güzel ve doğru konumlanmış bir kalp çizgin var. Ayrıca yüksek bir Venüs'e sahipsin. Seni hayat boyu aşk ve saadet bekliyor.",
+        "kosullar": []
+      },
+      {
+        "id": 59,
+        "metin": "Sana bir özet geçeyim {{isim}}; el Jüpiter bölgende bir yıldız var ve spatüle tip parmaklara sahipsin. Bunlar başarı dolu bir kariyerin emareleri.",
+        "kosullar": []
+      },
+      {
+        "id": 60,
+        "metin": "Elindeki enerjinin daha ziyade elinin lateral tarafına yani baş parmak istikametindeki yarısına yoğunlaştığını gözlemledim {{isim}}. İşleri sonuçlandırmakta mahir bir insansın. Hayatın boyunca sağlıklı neticeler alacaksın.",
+        "kosullar": []
+      },
+      {
+        "id": 61,
+        "metin": "Elindeki enerjinin daha ziyade elinin medial tarafına yani serçe parmağının bulunduğu yarıya odaklandığını gözlemledim {{isim}}. Dürüst ve iletişim yetenekleri kuvvetli birisin. İnsanları bir şeylere ikna etmekte hiçbir zaman zorlanmayacaksın.",
+        "kosullar": []
+      },
+      {
+        "id": 62,
+        "metin": "Elindeki Mars Tepesi'nin kızarıklığı enerjinin yüksek olduğunu ve yeni şeyler denemeye hazır olduğunu gösteriyor {{isimcigim}}. Bugün spor yapmak veya yeni bir hobi edinmek için ideal bir gün. Kendini ifade etmekten çekinme.",
+        "kosullar": []
+      },
+      {
+        "id": 63,
+        "metin": "Satürn Tepesi'nin belirginliği disiplinli ve çalışkan bir yapıya sahip olduğunu gösteriyor {{isim}}. Bugün bu disiplinin sana başarı getireceği bir gün. Hedeflerine ulaşmak için elinden gelen her şeyi yapmaya hazır ol.",
+        "kosullar": []
+      },
+      {
+        "id": 64,
+        "metin": "Avucunun gizemli haritasında, kader yıldızlarının parıltılarını görüyorum. Sezgilerin bugün seni doğru istikamete yönlendirecek {{isim}}. Kalbinin sesini dinle ve içgüdülerine güven.",
+        "kosullar": []
+      }
+    ],
+    "hatlar": [
+      {
+        "id": "kalp_cizgisi",
+        "ad": "Kalp Çizgisi",
+        "renk": "darkgreen",
+        "metinler": [
+          {
+            "id": 1000,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizginin genişliği çok duygusal bir yapıya sahip olduğunu işaret ediyor. Kolay incinebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1001,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizginin inceliği, çıkabilecek sahih rüyalar görmediğini belirtiyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1002,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizginin kısalığı şıpsevdi bir karaktere işaret. Ne istediğinden emin olmamak seni her zaman yorabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1003,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizgin çok derin gözükmüyor {{isim}}. Birinin senin hayatında kalıcı izler bırakması zor.",
+            "kosullar": []
+          },
+          {
+            "id": 1004,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizgin ikiye ayrılmış. İkinci kısım ise çatallanmış. Çok sevdiğin biri bir noktadan sonra kalbini başkasına kaptırabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1005,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizgin dar ve silik bir yay şeklinde. Aklının tamam dediğini gönlünün kabul etmesi güç gözüküyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1006,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizginin bazı noktalarında netlik bozuluyor. Hayatına giren birtakım insanları geçmişinde bırakmak zorunda kalabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1007,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizginin işaret parmağının köküne tam kavuşmaması, mesleğinden sıkılacağını ve farklı arayışlara gireceğini işaret ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1008,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizginin derin olmayışı, insanlara yönelik sezgilerinin genellikle doğru çıkmayacağını işaret etmekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1009,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kalp çizginin avucundaki üst konumlara kadar uzanmaması, yaratıcı yeteneklerinin belli bir yaştan sonra köreleceğini belirtmekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1010,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizgin, başarı ve zenginlikle bağdaştırılan Simian çizgini neredeyse dik kesiyor. Sen paradan çok insaniyete önem veren birisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1011,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizginin eğimi, empati yeteneğinin zamanla azalabileceğini işaret etmekte. Ön planda kendi duyguların olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1012,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizginin meydana getirdiği yay, akıl çizginle kesişmiyor {{isim}}. Hem mantıklı bulduğun hem de yüreğinin razı olduğu kararların az olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1013,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizgin çok ince {{isim}}. Fazla romantiksin. Bu durum seni uzun vadede üzebilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1014,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizginin bir ucu resmen bilinmezde bitiyor. Kalbinin bir kısmı unutamadığın birinde kalmış olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1015,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizgin çok yüzeysel {{isim}}. Aile ve akrabalık ilişkilerinde zaman zaman sorunlar yaşayabilirsin. Bir ileri, iki geri...",
+            "kosullar": []
+          },
+          {
+            "id": 1016,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizginin kısalığı, özgüveninin zaman zaman sarsılabileceğini ifade ediyor. Kimseye kendinden daha fazla değer verme {{isim}}!",
+            "kosullar": []
+          },
+          {
+            "id": 1017,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizgindeki blokajlar, hayal gücündeki kısırlığı ifade ediyor. Daha vizyoner olabilirsin {{isim}}. Elindekiyle yetinme!",
+            "kosullar": []
+          },
+          {
+            "id": 1018,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizgin çatallı ve kırılgan. Sosyal ortamları hiçbir zaman çok sevmeyeceksin, bu belli.",
+            "kosullar": []
+          },
+          {
+            "id": 1019,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kalp çizgin diğer hatlarına göre daha ince {{isim}}. Stres senin için en önemli düşman. Rahatlamayı alışkanlık haline getirmelisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1020,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalp çizginin kayda değer uzunluğu, duygularını karşındaki insanlara çok iyi ifade edebildiğini gösteriyor. Bu özelliğin kapalı kapıları sana her zaman açacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1021,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalp çizgin ne kadar derin!... Affetme gücü yüksek, erdemli ve iyi niyetli birisin sen. İnsanlar sana ayak uydurmak, senin tarafından yönetilmek isteyecekler.",
+            "kosullar": []
+          },
+          {
+            "id": 1022,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalp çizginin belirgin yapısı, aşk hayatında her zaman netlik isteyeceğini göstermekte. Arada kalmışlık sana göre değil. Ya tamam, ya devam!",
+            "kosullar": []
+          },
+          {
+            "id": 1023,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalp çizgin üstlere doğru daha da belirginleşiyor {{isim}}. Romantizmden yıllar içinde tamamen sıyrılıp, rasyonel ve kurşun işlemeyen bir hale geleceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1024,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalp çizgin tatlı bir yay oluşturmuş. Kısmi tatsızlıklar seni kalıcı mutluluklara taşıyacak gibi gözüküyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1025,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalın bir kalp çizgisine sahipsin. Başta ailen olmak üzere, sevdiklerinle arandaki bağlar çok kuvvetli. Bu bağları kimse kolay kolay koparamaz.",
+            "kosullar": []
+          },
+          {
+            "id": 1026,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalp çizgin yay şeklinde. Her ortama ve her türlü insana ayak uydurabilecek iletişim becerilerine sahipsin. Esnek bir yapın var.",
+            "kosullar": []
+          },
+          {
+            "id": 1027,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalp çizginin bu kadar uzun ve parlak oluşu, hem akıl hem de beden sağlığı bakımında her zaman üst düzeyde olacağını göstermekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1028,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalp çizgini keskin ve belirgin buldum {{isim}}. Bunun anlamı şu: Duygusal zekan insanları şaşırtabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1029,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kalp çizgini başka herhangi bir çizginin kesmiyor oluşu, ömrün boyunca kuvvetli bir hayal kırıklığı yaşamayacağını göstermekte {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1030,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Duygusal olarak bağlanma eğiliminde olmadığını kalp çizginin yalınlığından anlıyorum {{isim}}. Kendine yeten birisin sen.",
+            "kosullar": []
+          },
+          {
+            "id": 1031,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kalp çizginin belirgin yapısı, gönül koyduğun her şeyi elde edeceğini işaret etmekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1032,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kalın ve görkemli bir kalp çizgin var {{isim}}. Tüm ailesini aynı çatı altında toplayabilecek biri varsa, o da sensin!",
+            "kosullar": []
+          },
+          {
+            "id": 1033,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Senin kalp çizgin cetvelle çizilmiş gibi {{isim}}. Ne istediğini bilen birisin. Yüreğin kimi kabul ederse, o daima senin yanında kalacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1034,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kalp çizgin bir ok gibi {{isim}}! Kimi arzu edersen ona saplanabilir. Senin başkalarını kendine hayran bırakma gibi bir gücün var.",
+            "kosullar": []
+          },
+          {
+            "id": 1035,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kalp çizginin eğimi, duygusal kararlarını dahi en doğru şekilde verebilen biri olduğunu göstermekte. Ne yapsan doğrusunu yapacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1036,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kalp çizginin konumu, aslen özgür ruhlu biri olduğunu anlatmakta. Bu özgürlük arzun bile insanların seni sevmesi için yeterli olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1037,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kalp çizginin bazı noktalarda çiftleşmesi, birden fazla şeyi aynı anda yapabilme kabiliyetine işaret ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1038,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kalp çizgin bu seviyelerde ise, amin dediğin her ne varsa kabul edilecek demektir. Gönül gözün çok açık senin {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1039,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kalp çizginin üzerindeki kırıklar, çok değer verdiğin insan sayısını gösteriyor. Bu sayı şu an 0 gözüküyor. Senin de onlar tarafından sevildiğine eminim.",
+            "kosullar": []
+          }
+        ]
+      },
+      {
+        "id": "akil_cizgisi",
+        "ad": "Akıl Çizgisi",
+        "renk": "blue",
+        "metinler": [
+          {
+            "id": 1040,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kafa çizginin şekli, rasyonel düşünme yeteneğini kaybedebileceğini belirten kesikler içeriyor {{isim}}. Hayatında duygusallığa yenileceğin zamanlar olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1041,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginde birkaç kırık görüyorum {{isim}}. Hayatında hedefinden şaştığın, isteklerinden ya da sevmekten vazgeçtiğin durumlar olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1042,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginin inen kısmında görülen aşırı dalgalanmalar, zihinsel süreçlerindeki iniş çıkışları simgeliyor. Sen bazı şeyleri anlayıp harekete geçene kadar trenler kaçmış olabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1043,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginin uzunluğu ve kesikli yapısı, düşünme süreçlerinde sık sık mola verme ihtiyacına işaret ediyor {{isim}}. Sen fazla strese gelemezsin, senin hemen motor su kaynatır.",
+            "kosullar": []
+          },
+          {
+            "id": 1044,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginin görünür bir tepe noktasının olmaması, zirveye ulaşmanın biraz daha zaman alacağını gösteriyor. Sabır, genç Padawan; yavaş ve kararlı olan yarışı kazanır!",
+            "kosullar": []
+          },
+          {
+            "id": 1045,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizgini dikey bölen kılcal çizikler, yaşayabileceğin beyinsel blokajların emaresi. Okuduğunu anlaman ilerleyen yaşlarla birlikte güçleşebilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1046,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginin bitişi ve başlangıcı arasındaki mesafe, geniş bir düşünce spektrumuna sahip olmadığını gösteriyor. Belki de derin ya da ince düşünmek sana göre değildir.",
+            "kosullar": []
+          },
+          {
+            "id": 1047,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginin zigzag'lı yapısı, zihinsel süreçlerindeki tutarsızlıkları gösteriyor {{isim}}. Düşüncelerin bazen bir pinball makinesindeki top gibi zıplıyor olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1048,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizgin adeta dağlık bir arazinin topografik haritası gibi inişli çıkışlı. Bu durum gelecekte bazı önemli hatalar yapmana yol açabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1049,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginin Mars tepesi'ne doğru uzanan bir dalı var. Bu durum, tutkulu ve hırslı bir yapıya sahip olduğunu, ancak öfke kontrolünde zorlandığını ve ani kararlar verebileceğini gösteriyor. Duygularını yönetmeyi öğrenmelisin {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1050,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginin Jüpiter tepesi'ne doğru uzanan bir dalı yok {{isim}}. Bu durum biraz çekingen olduğunu, potansiyelini tam olarak kullanamadığını gösteriyor. Kendine güvenini artırman, önünde duran başarıları elde etmen için önemli olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1051,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kafa çizginde kritik bir çatal bulunuyor {{isim}}. Hayal gücünü belli bir yaştan sonra yitirebilirsin. Belki {{yas_+13}} sonrası...",
+            "kosullar": []
+          },
+          {
+            "id": 1052,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginin Satürn tepesi'ne doğru uzanan bir dalı var {{isim}}. Bu durum disiplinli ve çalışkan olduğunu, ancak takıntılı ve katı da olabileceğini gösteriyor. Esnek olmayı ve mükemmeliyetçilikten biraz uzaklaşmayı öğrenmen, daha mutlu ve huzurlu bir hayat sürmene yardımcı olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1053,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Senin kafa çizginde logaritmik bir aşağı eğim söz konusu {{isim}}. Uğraştığın meslek ile hayalindeki arasında fark olacağını gözlemliyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1054,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kafa çizgin hayat çizgine üst noktalarda fazla uzak gözüküyor. Beklediğin ve düşlediğin yaşamdan biraz daha farklısını tecrübe edebilirsin. Sonuç yine de kötü olmayacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1055,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kafa çizgin, düşünme ve öğrenme yetilerini yeterince kullanmadığın için hayatında bazı sıkıntılar yaşayabileceğini fade ediyor {{isim}}...",
+            "kosullar": []
+          },
+          {
+            "id": 1056,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Elindeki kafa çizgisi uzun fakat istediğimiz kadar kıvrımlı değil. Zor şartlara uyum sağlamakta zorlanabilir, konfor alanından çıkmak istemeyebilirsin {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1057,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginde dalgalar bulunuyor Değerli {{isim}}. Geleceğinde kendine dair iç çatışmalar ve kararlarında tutarsızlıklar gözlemleyebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1058,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizginin zayıfladığı 0 nokta görüyorum {{isim}}. Bu noktalar, hayatının birileri ya da bir şeyler nedeniyle mantıklı düşünemediğin zamanlarını sembolize ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1059,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Akıl çizgin birbirini doğrusal şekilde tamamlamayan iki parçaya ayrılmış gibi duruyor {{isim}}. Sen farklı bakış açılarına hiçbir zaman kendini tam açamayacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1060,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Bir noktaya kadar kesintisiz devam eden akıl çizgin, o noktaya geldiğinde hafifçe silikleşiyor. Bazı zor işleri tamamlamakta hayatın boyunca sıkıntı yaşayabilirsin {{isim}}. Pes etmemek her zaman motton olmalı.",
+            "kosullar": []
+          },
+          {
+            "id": 1061,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin açısı, pratik olmayan kararlar almana yol açabilecek bir eğilime işaret ediyor {{isim}}. Bu durum, planlama ve öngörü yeteneklerini geliştirmen gerektiğini düşündürüyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1062,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin kalp çizginle olan yakınlığını değerlendirdiğimde, duygusal kararların mantığını sık sık baskılayabileceğini söyleyebilirim Değerli {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1063,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizgin üzerinde gördüğüm çeşitli kırıklar, hayatında karşılaşabileceğin zorlukları ve bu zorluklara adapte olma sürecini işaret ediyor {{isim}}. Bu süreçler, sabır ve direnç gerektirecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1064,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizgin oldukça kısa görünüyor, bu da karmaşık ve derin düşünce süreçlerinde zorlanabileceğini işaret ediyor {{isim}}. Daha fazla analitik düşünme pratiği yapman yararına olacaktır.",
+            "kosullar": []
+          },
+          {
+            "id": 1065,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin sonunda görülen dallanma, ilerleyen yaşlarda birden fazla ilgi alanına dağılma olasılığını gösteriyor {{isim}}. Bu durum odaklanmanı zorlaştırabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1066,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizgin üzerinde gözlemlenen düzensiz segmentasyon, zihinsel süreçlerindeki olası dalgalanmaları gösteriyor. Bu, stres altında mantıklı düşünmeni zorlaştırabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1067,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin zigzag yapısı, düşüncelerindeki keskin dönüşleri ve sık değişiklikleri simgeliyor {{isim}}. Bu durum, odaklanmanı sürekli olarak yeniden ayarlaman gerektiğini gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1068,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin dalgalandığı noktalar, duygusal dalgalanmalarının zihinsel netliğini bozabileceğine işaret ediyor. Duygusal istikrar için teknikler uygulamalısın {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1069,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin terminasyon noktasında bir bifurkasyon (çatal) gözlemliyorum {{isim}}; bu, yaşamın ilerleyen dönemlerinde kariyerinde veya kişisel gelişiminde önemli bir dönemeç olabileceğini işaret ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1070,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin yüzeyindeki minimal çukurluklar, zihinsel yorgunluğun ve ara sıra gelen konsantrasyon eksikliğinin göstergesi. Daha düzenli dinlenmeni öneririm.",
+            "kosullar": []
+          },
+          {
+            "id": 1071,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Elinin üst kesimlerinde kalın başlayan akıl çizgin, aşağı doğru incelerek yok oluyor. Zayıf noktan diyebileceğimiz bazı konularda rasyonel düşünceyi devre dışı bırakan bir yapın olduğunu söyleyebilirim {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1072,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin yavaş bir eğimle başlayıp keskin bir açıyla kırılması, ani karar değişikliklerine meyilli olduğunu gösteriyor Değerli {{isim}}. Kararlarını vermeden önce iki kez düşünmelisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1073,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin tabanındaki esinti şeklindeki eğrilikler, senin esnek ama bazen değişken düşünce yapına işaret ediyor {{isim}}. Bu, planlarını sıklıkla değiştirmene neden olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1074,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin üzerindeki periyanal noktalama, karar verirken yaşadığın belirsizlikleri ve çelişkileri gösteriyor. Bu durum senin adına bazen yanıltıcı olabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1075,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin kalp çizginle kesiştiği yer, sende duygusallığın biraz fazla baskın olduğunu işaret ediyor. Aşık olunca akıl tutulması yaşayanlardan mısın?",
+            "kosullar": []
+          },
+          {
+            "id": 1076,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kafa çizgin, hafıza bakımından senden daha şanslı insanların olduğunu belirtiyor {{isim}}. Senin daha fazla tekrar yapman gerekiyor olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1077,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizgin hayat çizginle tam bir teğet oluşturmuyor {{isim}}. Hayatta her şey istediğin gibi gitmeyebilir; fakat belki de başına gelecekler daha hayırlıdır, kim bilir?...",
+            "kosullar": []
+          },
+          {
+            "id": 1078,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizgini dikine kesen belli belirsiz bir güneş çizgin var {{isim}}. Sen negatif düşündüğü zaman bağışıklık sistemi çabuk zayıflayanlardansın. Moralini her zaman yüksek tutmalısın.",
+            "kosullar": []
+          },
+          {
+            "id": 1079,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizgin ve ilham çizgin birbirini 90 derecelik açıyla kesmiş. Daha yaratıcı hissetmek için düşüncelerini devreden çıkarmak zorundasın. Öbür türlü hayat boyu yumurta bile kıramazsın.",
+            "kosullar": []
+          },
+          {
+            "id": 1080,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin oluşturduğu eğri, yaş aldıkça daha da olgunlaşacağını ve zekanın yükseleceğini göstermekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1081,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Akıl çizginin alt ucu, yüzük parmağının ötesine zar zor geçiyor. Evlilik kişiliğinden çok fazla taviz vermene neden olabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1082,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizgin, adeta düzgün bir nehir gibi avucun boyunca uzanıyor. Bu durum zihninin sakin ve berrak olduğunu, düşüncelerini net bir şekilde ifade edebildiğini gösteriyor {{isim}}. Bu sayede gelecekte başarıya ulaşmanı sağlayacak mantıklı ve sağlam kararlar vereceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1083,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin kalp çizgisi ile olan uyumu, duygusal ve mantıksal düşünce süreçlerin arasında iyi bir denge kurduğunu gösteriyor. Bu denge, hem kişisel hem de profesyonel ilişkilerinde harmoni yaratmanı sağlayacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1084,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizgindeki ince yapının sonunda hafif yukarı kıvrılma, pozitif bir düşünce yapısına ve optimist bir gelecek görüşüne sahip olduğunu işaret ediyor {{isim}}. Bu pozitivite, çevrendekilere de ilham verecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1085,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin üzerindeki zarif kıvrımlar, düşüncelerinin lirik dansını resmediyor; bu dans, zorluklar karşısında bile zarafetle ilerlemeni sağlıyor. Esaslı insansın vesselam!",
+            "kosullar": []
+          },
+          {
+            "id": 1086,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin elinin ortasından başlayıp yüzük parmağına doğru uzanan bir dalı var. Bu durum somut ve gerçekçi yapını, ilaveten hayalperestlikten de uzak olduğunu gösteriyor. Adımları sağlam atanları severim!",
+            "kosullar": []
+          },
+          {
+            "id": 1087,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin elinin ortasından başlayıp küçük parmağına doğru uzanan bir dalı var {{isim}}. Bu durum iletişim yeteneğinin güçlü olduğunu, insanlarla kolayca bağlantı kurabildiğini anlatıyor. Senden iyi bir pazarlamacı ya da satış elemanı olabilirmiş.",
+            "kosullar": []
+          },
+          {
+            "id": 1088,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin avucunun ortasına kadar uzanan bir dalı olduğunu görüyorum {{isim}}. Hırslı ve kararlı olduğun, hedeflerine ulaşmak için elinden geleni yaptığın aşikar. Bu azmin ve kararlılığın, seni gelecekte istediğin her şeye ulaştırabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1089,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizgin, cerebral korteksin işlevlerine benzer bir düzenlilik ve kompleksite gösteriyor; bu düzenlilik, zihinsel faaliyetlerinde önemli bir tutarlılık sağlıyor ve kognitif süreçlerini destekliyor. Uyanık birisin yani bence.",
+            "kosullar": []
+          },
+          {
+            "id": 1090,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin yüzeyindeki minör erozyonlar, jeolojik süreçlerde görülen yavaş değişimlere benziyor {{isim}}. Bu küçük erozyonlar, yaşam tecrübelerinin zihinsel yapında bıraktığı izleri simgeliyor. Boş biri değilsin kesinlikle!",
+            "kosullar": []
+          },
+          {
+            "id": 1091,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Felsefi açıdan bakıldığında, akıl çizginin varoluşsal bir yolu takip ettiği söylenebilir {{isim}}. Bu yol, düşüncelerinin ve ideallerinin evrimini ve onların zaman içinde nasıl şekillendiğini yansıtıyor. Gün geçtikçe daha fazlasını istiyorsun...",
+            "kosullar": []
+          },
+          {
+            "id": 1092,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizgin bilimsel bir deneydeki kontrol grubu gibi dengeli ve standart bir yaklaşımı temsil ediyor. Düzlüğünü beğendim. Bu haliyle, mantıklı ve metodik karar verme sürecine olan yatkınlığın aşikar. Kim bilir sana neler kazandıracak!...",
+            "kosullar": []
+          },
+          {
+            "id": 1093,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin, avucundaki Mars tepesi'ne doğru uzanan bir dalı var {{isim}}. Bu durum tutkulu ve hırslı olduğunu, hedeflerine ulaşmak için elinden geleni yapacağını gösteriyor. Bu tutkun seni gelecekte büyük başarılara taşıyacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1094,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Jeolojik bir kıvrım hattı gibi, akıl çizginin kıvrımları da zihinsel esnekliğini ve adaptasyon yeteneğini gösteriyor Değerli {{isim}}. Bu kıvrımlar, değişebilecek çevresel ve içsel koşullara nasıl kolay uyum sağlayacağını anlatmakta.",
+            "kosullar": []
+          },
+          {
+            "id": 1095,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin Jüpiter tepesi'ne doğru uzanan kılcal bir dalı var. Bu durum liderlik vasıflarının olduğunu gösteriyor. İnsanların gözünde çok etkileyicisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1096,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin başlangıç noktasının netliği, hayata karşı belirgin bir başlangıç vizyonuna sahip olduğunu gösteriyor Değerli {{isim}}. Bu durum, hedeflerine ulaşmada kararlı olduğunu belirtiyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1097,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin sonunda görülen hafif bir genişleme, ilerleyen yıllarda zihinsel kapasitende yaşanacak artışa işaret ediyor. Bu durum entelektüel büyümenin de devam edeceğini gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1098,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Açık görüşlü ve gelişmeye müsait biri olduğunu kafa çizginden rahatlıkla anlamak mümkün. Aklını kullanman gereken yerlerde daima bir adım önde olacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1099,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizgin üzerinde az sayıda dallanma bulunuyor {{isim}}; bu durum özgün fikirler üretme konusunda başarılı olduğunu gösteriyor. Senden iyi mucit ya da girişimci olurmuş.",
+            "kosullar": []
+          },
+          {
+            "id": 1100,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin hafif eğimi, hayatın farklı alanlarında dengeli bir perspektif geliştirdiğini gösteriyor. Bu da senin her durumu objektif bir şekilde değerlendirebileceğini işaret ediyor {{isim}}. İnsanların akıl danıştığı biri niteliğindesin sen.",
+            "kosullar": []
+          },
+          {
+            "id": 1101,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Akıl çizginin yüzeyindeki pürüzsüzlük, zihinsel süreçlerindeki akıcılığı ve sorun çözme yeteneklerinin gelişmiş olduğunu gösteriyor. Sen karmaşık durumlarla kolayca baş edebilen birisin {{isim}}. Sezdim seni!",
+            "kosullar": []
+          },
+          {
+            "id": 1102,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizgin bir astronomun teleskopu gibi {{isim}}, oldukça net. Evrensel bilgiye ulaşma yeteneğini harika yansıtıyor. Bu netlik ve derinlik, seni sıradan insanlardan çok daha bilge biri haline getirmiş!",
+            "kosullar": []
+          },
+          {
+            "id": 1103,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Avucundaki Mars tepesi'ne uzanan akıl çizgisi dalın, tutkunun ve hırsın bir göstergesi. Başarıya ulaşmak senin için kader gibi.",
+            "kosullar": []
+          },
+          {
+            "id": 1104,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Avucundaki Satürn tepesi'ne uzanan akıl çizgisi dalın, disiplinin ve çalışkanlığın bir timsali gibi. Başarıya ulaşabilmen için gerekli azim sana doğuştan bahşedilmiş {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1105,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Yaklaşık elli derece ile avucun boyunca uzanan akıl çizgin, hayata dair tüm beklentilerini karşılama potansiyeline sahip olduğunu göstermekte {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1106,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Yaklaşık elli derece ile avucun boyunca uzanan akıl çizgin, hayata dair tüm beklentilerini karşılama potansiyeline sahip olduğunu göstermekte {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1107,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizgin kalp çizginle çok büyük paralellik sergilemiyor {{isim}}. Demek ki senin kaderinde bir noktadan sonra duygusal düşünmeyi bırakmak ve tamamen mantıkla hareket etmek var. Bu da sana kazanç sağlayacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1108,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Tek bir elinin görselini değerlendirmiş olmama rağmen, diğer elindeki akıl çizginin, bunun simetriği olmadığına bahse varım. Sen çok yönlü bir insansın ve her işin üstesinden gelebilme yeteneğine sahipsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1109,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizgin avucunun merkezinden sonra daha dik iniyor {{isim}}. Gelecekte, aldığın kararların sorgulanmasını istemeyeceksin. Bu özgüven sana avantaj sağlayacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1110,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizgin, hayat çizginden ziyade kalp çizgine yakın {{isim}}. Bu da gelecekte yaşayacağın şeylerin gönlüne göre olacağını işaret etmekte. Senin gibiler daha ziyade aşk evliliği yaparlar.",
+            "kosullar": []
+          },
+          {
+            "id": 1111,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Senin akıl çizgin, serçe parmağının altındaki aşk tepesi'ne uzak başlayıp işaret parmağındaki özgüven tepesine doğru yaklaşıyor. Senin kaderinde zamanla seçilen değil seçen biri olmak var.",
+            "kosullar": []
+          },
+          {
+            "id": 1112,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizginin, elinin lateralinden taşmaya meylettiğini görüyorum. Sen yüksek zekanı ve farkındalığını çok ileri yaşlara kadar koruyacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1113,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizgine bakılırsa beynindeki sinaptik verimlilik çok yüksek {{isim}}! Zihinsel işlevlerindeki üstün etkinlik su götürmez; düşüncelerin arasındaki geçişler olağanüstü hızlı ve akıcı.",
+            "kosullar": []
+          },
+          {
+            "id": 1114,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kafa çizgin çok derin ve belirgin. Ne kadar akıllı ve kararlı biri olduğunun farkıdasın, öyle değil mi {{isim}}?",
+            "kosullar": []
+          },
+          {
+            "id": 1115,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kafa çizgin, rakiplerinin önüne zekanı kullanarak geçebilecek biri olduğunu ifade ediyor. Senin yazgında lider olmak var.",
+            "kosullar": []
+          },
+          {
+            "id": 1116,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Jeolojik bir oluşumun mükemmelliğini andıran akıl çizgin, avucundaki düşünce platosunda sağlam ve istikrarlı bir yapıya sahip. Her yaşta kusursuz kararlar verebilme yeteneğin var {{isim}}. A aa caa yipsin!",
+            "kosullar": []
+          },
+          {
+            "id": 1117,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizginin, fiziksel bir kuvvet vektörü gibi, hayatının çeşitli yönlerine enerji ve yönlendirme sağladığı görülüyor {{isim}}. Bu enerji tüm girişimlerinde başarıyı garantiliyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1118,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizginin kusursuz yapısı, bir katalizör gibi, çevresindeki insanları ve olayları dönüştürme gücüne sahip. Bu dönüşüm yeteneği, liderlik potansiyelini ve ilham verme kapasiteni artırıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1119,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Felsefi bir alegori olarak akıl çizgin, Platon'un idealler dünyasına bir kapı açarcasına düzgün; bu kapıdan geçiş, bilgelik ve derin anlayışın simgesi. Çok dolu birisin sen {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1120,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizginin yapısında gözlemlenen simetri ve düzen, klasik müziğin bir senfonisi gibi harmonik ve dengeli bir zihinsel yapıyı işaret ediyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1121,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Akıl çizgin, adeta bir kraliyet yolu gibi avucun boyunca uzanıyor {{isim}}. Zihnin berrak, düşüncelerin sağlam, kararların isabetli. Bunun karşılığını alacaksın.",
+            "kosullar": []
+          }
+        ]
+      },
+      {
+        "id": "hayat_cizgisi",
+        "ad": "Hayat Çizgisi",
+        "renk": "green",
+        "metinler": [
+          {
+            "id": 1122,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin üzerinde biri küçük biri büyük olmak üzere iki kırılma mevcut {{isim}}. Bunlar yazgında bulunan ayrılık ya da maddi kayıplar olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1123,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin üzerindeki sporadik kesintiler, kardiyovasküler sağlığın jeolojik bir fay hattı gibi zayıf noktalarını simgeliyor. Ömür boyu stresten uzak durman gerekiyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1124,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginde gözlemlenen konveks kıvrım, yaşam yolunda beklenmedik dönüşlerle karşılaşabileceğini gösteriyor {{isim}}. Bu kıvrım, adaptasyon yeteneğini ve esnekliğini sınayabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1125,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizgin üzerinde erozyonel izler görüyorum. Zaman içinde doğal faktörlerin etkisiyle kişisel direncin aşınabilir {{isim}}. Öz bakım ve zihinsel sağlık stratejilerine yatırım yapman çok önemli. Özetle; kafanı dinç tut.",
+            "kosullar": []
+          },
+          {
+            "id": 1126,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizgin üzerinde yer yer aritmiler görüyorum {{isim}}. Bu da fiziksel ve zihinsel sağlığın arasındaki olası dengesizliklerin habercisi. Holistik sağlık yaklaşımlarını değerlendirmende fayda var.",
+            "kosullar": []
+          },
+          {
+            "id": 1127,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizgindeki açısal sapmalar, yaşamındaki karar verme noktalarını ve bu noktalardaki kritik dönemeçleri temsil ediyor. {{kelime, 19  | 20 | 21 | 22}} ve {{kelime, 32 | 35 | 37 | 38 | 42 | 45}}'li yaşlar. Bu yaşların kararları senin için zor.",
+            "kosullar": []
+          },
+          {
+            "id": 1128,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin Venüs hattından Mars hattına dek oluşturduğu yaydaki kesintiler, kalbini yaşamın boyunca derinden kıracak birkaç insanın varlığından bahsediyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1129,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin yapısı, 30'lu yaşlarında enerji düşüklüğü ve yaşama karşı isteksizlikten bahsediyor. Görünüşe bakılırsa 40 ve 45 sonrası bu cendereden kurtuluş söz konusu.",
+            "kosullar": []
+          },
+          {
+            "id": 1130,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizgini başlarda ve sonlarda bölen iki kırık, yaşamın boyunca iki önemli taşınma gerçekleştireceğini ifade ediyor. Bunlar senin için yorucu ve alışması zor olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1131,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizgindeki kesinti ve çatallanmalar, yaşayabileceğin maddi istikrarsızlıkların belirtisi. Senin ekonomik durumunu çok iyi bir noktaya getirmen ileri yaşlarını bulabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1132,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin alt ucunda bir çatallanma gözlemledim. Gençlik yıllarında yaşanabilecek ailesel ya da ilişkisel sorunlara ve fikir ayrılıklarına işaret etmekte. Kendinden başka kimseye çok güvenmemelisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1133,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizgin bileğine doğru iki dala ayrılıyor. Yaşamının ilerleyen dönemlerinde çok zor bir karar vermek durumunda kalabilirsin {{isim}}. Bu kararla kaderin değişebilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1134,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin dik yapısı, senin için bir şeylere sahip olmanın hiçbir zaman çok da kolay olmayacağının göstergesi.",
+            "kosullar": []
+          },
+          {
+            "id": 1135,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizgindeki kırıklar ve dallanmalar, duygusal fay hatları gibi {{isim}}. Aşkta ve sevgide istikrarsızlık yaşayabilirsin. Birine duyulan sevginin nefrete dönüşümünü gözlemliyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1136,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizgindeki yer yer incelen noktalar, geleceğe yönelik güvensizliğini sembolize ediyor. Kendini tamamen garanti altında hissedemeyen birisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1137,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin zayıflığı, ufak tefek sağlık sorunlarıyla hayat boyu uğraşman gerekebileceğini belirtiyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1138,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin başlangıç noktasında hafif bir solukluk fark ediyorum; bu, gençlik yıllarında bazı zorluklar yaşamış olabileceğini işaret ediyor. Onlar yüzünden ruhun biraz yorulmuşa benziyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1139,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin üzerindeki aralıklı kesikler, yaşamın çeşitli evrelerinde beklenmedik zorluklarla karşılaşabileceğini gösteriyor. Koşulların zaman zaman kötüleşebilir ve bunlara uyum sağlamak durumunda kalabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1140,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin kalp çizginle olan mesafesi geniş. Duygusal olarak daima kendini koruma eğiliminde olacaksın. Bu da insanlara güvenmeni zorlaştırabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1141,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hayat çizginin etrafındaki hafif siyanotik tabaka, bazen geleceği net göremeyebileceğini anlatıyor. Ancak yine de bu belirsizlikleri sezgilerine güvenerek aşabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1142,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin orta hattında bir kırık var. Sevdiğin bir insanla yolları ayırabilirsin. Bu durumun sende önce olumsuz, sonra da pek çok olumlu etkisi olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1143,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Senin hayat çizgin ve Mars çizgin arasında çok yakın bir ilişki var. Yaşamın boyunca yüksek enerjili ancak biraz agresif kalacaksın. Sinirini kontrol etmen gereken çok zaman olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1144,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin Mars çizgine olan yakınlığı, fiziksel ve zihinsel enerji yüksekliğini vurguluyor. Sen asla boş kalmamalı, spora ve fiziksel aktivitelere yönelmelisin. Aksi halde depresyona sürüklenebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1145,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin işaret parmağınla yaptığı açı, çok tutkulu biri olduğunu gösteriyor {{isim}}. Ancak mesleğinle yapmaktan asıl hoşlandığın iş aynı olmayabilir. Sen iki işi ayrı ayrı idare etmek durumunda kalabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1146,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin yapısı, belirli hedeflere odaklanmadaki başarını gösteriyor. Fakat aşırı tutkulu oluşun, bazı fırsatları gözden kaçırmana yol açabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1147,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin kesiklerle dolu derin yapısı, aşırılıklardan kaçınan ve ölçülü davranan bir karakterin olduğunu gösterse de, zaman zaman cesur adımlar atmakta tereddüt edebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1148,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizgin üzerinde kesikler ve pürüzler görmekteyim {{isim}}. Bazı şeylerin daha iyisine ulaşmak için, sahip olduğun ya da olabileceğin başka bir şeylerden vazgeçmen gerekecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1149,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin uzunluğu  ve konumu üzerinden yaptığım hesaplama, ömrünün 0 yıldan daha uzun olabileceğini göstermekte. Ancak yaşlılıkta {{kelime, romatizmal birtakım rahatsızlıklarla | birtakım kalp hastalıklarıyla | birtakım akciğer rahatsızlıklarıyla | birtakım böbrek problemleriyle | birtakım kas ve iskelet sistemi rahatsızlıklarıyla | birtakım sistemik rahatsızlıklarla | birtakım görme bozukluklarıyla | birtakım karaciğer problemleriyle | birtakım duyma kusurlarıyla | bel fıtığı gibi birtakım rahatsızlıklarla | yüksek tansiyon gibi birtakım rahatsızlıklarla | şeker hastalığı gibi birtakım rahatsızlıklarla}} uğraşman gerekebilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1150,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizgini dik kesen kısa çizgiciklerin arasındaki boşluklar, dar bir çevreye sahip olabileceğini gösteriyor. Sosyalleşmeye daha fazla çaba sarf etmelisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1151,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizgin üst uçta çok fazla dikleşiyor ancak yine de uzun. Senin zorluklarla dolu fakat sonradan güzelleşecek bir yaşamın olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1152,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin sona erdiği noktada belirgin bir kırık var {{isim}}. İlerleyen yıllarda yakınlarınla maddiyat yüzünden sıkıntılar yaşayabilirsin. İhtiyatlı olmalısın.",
+            "kosullar": []
+          },
+          {
+            "id": 1153,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizgin Venüs tepe noktasına oldukça yakın. Bu durum, yaşamın boyunca aşk ve ilişkilerin büyük önem taşıyacağını gösteriyor. Romantik ilişkilerde tutkulu ancak yer yer istikrarsız dönemler yaşayabileceğini işaret etmekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1154,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin üst çeyreğinde belirgin bir dalgalanma görüyorum. Çok şiddetli bir ilk aşk emaresi. Bir yandan da kalp kırıcı ve yıkıcı etkiler söz konusu.",
+            "kosullar": []
+          },
+          {
+            "id": 1155,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizgin ve Venüs tepe noktası arasındaki mesafe, sosyal hayatında aktif olmanın ve çevrenle güçlü bağlar kurmanın önemine işaret ediyor {{isim}}. Ancak bu bağlar bazen seni duygusal olarak tüketebilir. Bu yüzden enerjini dengede tutmaya çalışmalısın.",
+            "kosullar": []
+          },
+          {
+            "id": 1156,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin belirsizleştiği noktalarda senin için sancılı ve önemli değişimler olabileceğini hissediyorum. Yaşam seni gelişebilmen için buduyor adeta...",
+            "kosullar": []
+          },
+          {
+            "id": 1157,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin Venüs tepe noktasına yakın bir konumda olması, sanatsal yeteneklerinin ve estetik anlayışının gelişmiş olduğunu gösterir. Ancak bu yatkınlık bazen maddi kaygılarla çatışabilir; dikkatli olman gerekir.",
+            "kosullar": []
+          },
+          {
+            "id": 1158,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin Venüs tepe noktasında eğimli bir hat gözlemliyorum. Bu durum, insan ilişkilerinin seni zaman zaman hayal kırıklığına uğratabileceğini işaret ediyor. Duygusal beklentilerini yönetmek ve gerçekçi kalmak senin için önemli olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1159,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin Venüs tepe noktasına çok yakın başlaması, senin doğuştan gelen bir çekiciliğe ve insanları etkileme kabiliyetine sahip olduğunu gösterir {{isim}}. Bu özellik, hem kişisel hem de profesyonel yaşamında sana avantaj sağlayabilir; ancak bu çekim yüzünden kıskançlık gibi sorunlarla da karşılaşabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1160,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizgin avucundaki Mars tepe noktasına biraz uzak. Savaşçı ancak çabuk yorulan bir ruhun var. Huzursuzluktan her daim kaçınmalısın.",
+            "kosullar": []
+          },
+          {
+            "id": 1161,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Hayat çizginin üst ucunun, başparmağındaki irade alanına kadar ulaştığını görmekteyim. Yaşam seni zaman zaman isteklerinle ve beklentilerinle sınayabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1162,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin Venüs tepe noktasına yakın olması, ilişkilerde şefkatli ve tutkulu olduğunu işaret ediyor {{isim}}. Bu pozisyon, romantik ilişkilerinde derin bağlar kurma potansiyeline sahip olduğunu da gösterir.",
+            "kosullar": []
+          },
+          {
+            "id": 1163,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin palmar yüzeyde yaptığı yavaş yükselme, sabırlı bir karakter ve zaman içinde kazanılan derin anlayışı temsil eder. Sen bu şekilde güçlü ve sağlam mertebelere ulaşacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1164,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizgin üzerinde bulunan az sayıdaki kesişme, yaşamda karşılaştığın az sayıda büyük zorluğu işaret ediyor. Bu kesişmeler, bu zorlukların üstesinden gelinmiş olduğunu ya da gelineceğini ve önemli öğrenme fırsatları sağlanacağını gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1165,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin distal uçta yaptığı ani dairesel dönüş, hayatına bir noktada yeni bir insanın gireceğini, ki bu dost ya da akraba da olabilir, ve o kişinin tesiriyle daha mutlu olmaya başlayacağını anlatıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1166,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin sonunda görülen düzgün ve sabit uzanım, gelecekte sıhhat ve bereket içinde uzun bir yaşamın olabileceğini anlatıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1167,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin ortasında yükselen bir trend var {{isim}}. Bu, orta yaşlardan itibaren kariyerinde ya da kişisel yaşamında önemli başarılar elde edeceğini gösteriyor.",
+            "kosullar": [
+              {
+                "degisken": "yasmax",
+                "deger": "25"
+              }
+            ]
+          },
+          {
+            "id": 1168,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizgin üzerinde düzenli aralıklarla yer alan ufak çıkıntılar, gelecekte seni bekleyen çeşitli fırsatları temsil ediyor. Bu fırsatları zamanında değerlendirerek kariyerinde veya kişisel gelişiminde önemli ilerlemeler kaydedebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1169,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin son kısmında görülen hafif genişleme, gelecek yıllar içerisinde kalıcı olarak başka bir şehre ya da ülkeye taşınabileceğinin ipuçlarını veriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1170,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin Güneş çizgisi ile kesişmesi, önemli bir yaşam başarısının kapıda olduğunu gösterir {{isim}}. Yaptığın bir iş kabul görecek, beğenilecek ya da çok bilinecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1171,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin Neptün tepe noktasına yakınlığı, ruhsal ve mistik deneyimlere açık olacağını gösterir. Yaşamın anlamını derinlemesine sorgulama ve ruhsal büyüme fırsatları yakalayabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1172,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin Merkür çizgisiyle oluşturduğu eşsiz desen, bir iş ya da proje üzerinde yapacağın yenilikçi bir buluşu ya da çözümü işaret etmekte {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1173,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizgindeki hafif eğim, macera dolu ve sürprizlerle karşılaşabileceğin bir yaşamdan bahsediyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1174,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizgin, önünü kesen birtakım kırıklara rağmen kesintisiz devam ediyor. Sen pes etmek nedir bilmeyen birisin. Bunun senin için çok fazla getirisi olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1175,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin eldeki ulnar kenara doğru yaptığı genişlemiş parabolik kavis, yaşamın ileri dönemlerinde genişleyecek olan sosyal çevre ve etkileşimlere işaret eder {{isim}}. Bu kavis, akraba ilişkilerinde gerçekleşecek artışı da simgeler.",
+            "kosullar": []
+          },
+          {
+            "id": 1176,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin apikal kısımda sendeki gibi yaptığı lateral deviasyon, yaşamın belirli bir döneminde alınan, olumlu sonuçlanacak çok önemli bir kararın veya bir dönüm noktasının işaretidir. Konu aşk ya da kariyer olabilir. O dönemi henüz geçmedin {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1177,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizgin ve kalp çizgin arasında bulunan interdigital parsel, duygusal ve fiziksel sağlık arasındaki ilişkiyi gösterir {{isim}}. Bu parselin sendeki genişliği, duygusal denge ve fiziksel sağlık arasındaki olumlu sinerjiyi yansıtmakta.",
+            "kosullar": []
+          },
+          {
+            "id": 1178,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin longitudinal olarak palmar yüzeyde seyretmesi, derin bir içsel direnç ve yaşam boyu sürecek yüksek bir dayanıklılık kapasiten olduğunu işaret ediyor Değerli {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1179,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin yüksek bir arkus açısıyla başlaması, özgüveninin ve bireysel yeteneklerinin erken yaşlarda geliştiğini gösterir. Bu geometrik özellik, kendi potansiyelinin farkında olduğunu ve kişisel yeteneklerini erkenden kullanmaya başladığını işaret ediyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1180,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizgin üzerindeki homojen renk dağılımı, stabil bir sağlık durumunu ve yaşam boyunca genel bir esenliği temsil eder. Biyolojik olarak dengeli bir yapıya ve az rahatsızlık geçirilen bir yaşama sahipsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1181,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizginin parmaklarına doğru genişleyen açısı, yaşamının ilerleyen dönemlerinde artacak olan yaşam deneyiminin ve bilgelik kazanımının işareti {{isim}}. Sen çok gezip çok okuyacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1182,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizgisi bu seviyelere çıkan pek azdır. Maşallah ölümsüzlüğü bulmuş gibisin!",
+            "kosullar": []
+          },
+          {
+            "id": 1183,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin bir Rönesans ressamının fırça darbeleri gibi ince ve zarif olması, yaşamının estetik ve zarafetle dolu olacağını gösteriyor!",
+            "kosullar": []
+          },
+          {
+            "id": 1184,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizgin, bir heykeltıraşın yonttuğu mermer gibi çok düzgün ve keskin. Güçlüsün ve iradenin önünde hiçbir şey duramayacak!",
+            "kosullar": []
+          },
+          {
+            "id": 1185,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Nadir görülen bir durum olan çift hayat çizgisi, fazladan bir enerji kaynağına sahip olduğunu ve iki hayat yaşayabilecek potansiyele sahip olduğunu gösteriyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1186,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin bileğinden yukarıya kökler salarak başlaması, çok huzurlu bir evlilik gerçekleştireceğini gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1187,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizgine bilekten itibaren destek olan ikinci çizgi, her konuda yanında olacak bir eşe sahip olmaya işarettir.",
+            "kosullar": []
+          },
+          {
+            "id": 1188,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin yarıçapı geniş bir yörünge çiziyor {{isim}}. Bu durum, yaşamında geniş bir etki alanına ve uzun bir yaşam süresine işaret ediyor. Birçok farklı insanla ve fırsatla karşılaşacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1189,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin eliptik eğimi, sürekli gelişim ve dönüşüm içinde olduğunu gösteriyor. Bu muhteşem eğim, hayatında sürekli bir öğrenme ve adaptasyon sürecinde olacağını belirtiyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1190,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin eliptik eğimi, sürekli gelişim ve dönüşüm içinde olduğunu gösteriyor. Bu muhteşem eğim, hayatında sürekli bir öğrenme ve adaptasyon sürecinde olacağını belirtiyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1191,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin düzensiz amplitude dalgalanmaları seni korkutmasın. Bu muteşem bir şeye işaret {{isim}}. Yaşam deneyiminde büyük bir zenginlik olacak. Her güzelliği görecek, her zevki tadacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1192,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginde gözlemlenen hiperbolik eğilim, enerjinin ve yaşam gücünün yüksek olduğunu işaret ediyor. Bu durum uzun ve sağlıklı bir yaşamın işareti.",
+            "kosullar": []
+          },
+          {
+            "id": 1193,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizgindeki bu tutarlılık seni dünyadaki en mutlu %5'lik dilime sokacak {{isim}}. Bekle ve gör!",
+            "kosullar": []
+          },
+          {
+            "id": 1194,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin akromatik tonları, duygusal ve fiziksel sağlığın arasındaki dengenin mükemmelliğini yansıtıyor. Bu denge, uzun süreli sağlık ve mutluluk vaat ediyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1195,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Bence sen hiç hastalanırım filan diye korkma. Hastalıklar {{isim}} geldi desin! Hayat çizgin ve yaptığı açı muazzam...",
+            "kosullar": []
+          },
+          {
+            "id": 1196,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizgin beni çok şaşırttı {{isim}}. Bu uzunluk ve eğimiyle senin için {{kelime, 90 | 95 | 100}} yılı aşkın bir ömür vaadediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1197,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Muntazam ve belirgin hayat çizgin, çok yüksek başarılarla ve ileri seviye mutluluklarla dolu bir hayat süreceğinin işareti.",
+            "kosullar": []
+          },
+          {
+            "id": 1198,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin avucundaki Venüs tepe noktasına yakınlığı, seni her yönden tatmin edecek bir özel hayata işaret ediyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1199,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizgisinin sendeki gibi Venüs tepe noktasına aşırı yakın olması, uzun süreli, derin bir aşk yaşanacağını ve çok büyük bir aşk evliliği ile murada erileceğini müjdeler.",
+            "kosullar": []
+          },
+          {
+            "id": 1200,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin üzerinde 2 kılcal çentik görüyorum. Ömür boyu 2 kez çok aşık olunacağını işaret etmekte. Tabi her hoşlantıya aşk demezsen...",
+            "kosullar": []
+          },
+          {
+            "id": 1201,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Hayat çizginin Satürn çizgisine paralel olması, disiplinli ve metodik yaklaşımın sayesinde uzun vadeli hedeflerine kesinlikle ulaşacağını gösteriyor {{isim}}.",
+            "kosullar": []
+          }
+        ]
+      },
+      {
+        "id": "kader_cizgisi",
+        "ad": "Kader Çizgisi",
+        "renk": "orange",
+        "metinler": [
+          {
+            "id": 1202,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin başlangıcında gözlenen kesik izler, hayatın erken dönemlerinde bazı belirsizlikler ve değişiklikler yaşayacağını işaret ediyor {{isim}}. Bunlar özel hayatınla ilgili olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1203,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin üzerindeki Schrödinger dalgalanmaları yaşamının belirsiz ve öngörülemeyen doğasını gösteriyor {{isim}}. Bir şey veya biri hayatında olacak ya da olmayacak. Bu tamamen senin çabana bağlı kılınmış durumda.",
+            "kosullar": []
+          },
+          {
+            "id": 1204,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginde apokaliptik kesintiler gözlemliyorum, bu da hayatında radikal ve dönüştürücü değişimler yaşanacağını gösteriyor. Teolojik bir terim olan apokalips, genellikle büyük ve kaçınılmaz sonları işaret eder.",
+            "kosullar": []
+          },
+          {
+            "id": 1205,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin fraktürleri, yaşamındaki olayların birbiriyle nasıl iç içe geçtiğini gösteriyor. Bazı zamanlarda bazı yerlerde bulunamadığın için, bir şeyleri kaçırabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1206,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginde kaotik attractorlar bulunuyor {{isim}}. Bu da hayatında sürekli olarak karşılaşacağın karmaşık ve öngörülemeyen olaylar serisini işaret ediyor. Dilerim işlerin içinden çıkarsın.",
+            "kosullar": []
+          },
+          {
+            "id": 1207,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginde çekim kuyuları görüyorum {{isim}}. Bu da hayatın boyunca sıkça derin ve kaçınılmaz çekim alanlarına düşeceğini gösteriyor. Lütfen bu konuda özellikle karşı cinse dikkat et.",
+            "kosullar": []
+          },
+          {
+            "id": 1208,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginde Möbius şeridi gibi görünen bölümler, hayatında sürekli tekrar edecek döngüler ve çözülmesi zor karmaşalar yaşayacağını gösteriyor {{isim}}. Zamanla yanında istemeyerek elediğin pek çok insan olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1209,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin Schwarzschild yarıçapı'na yaklaşması, yaşamındaki kaçınılmaz olayların bir noktada kontrolünü kaybedebileceğini anlatıyor. Başına gelenlere razı olman gerekebilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1210,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin Foucault Sarkacı gibi salınımları, hayatının nasıl dış kuvvetler tarafından yönlendirilebileceğini gösteriyor. Tarkan'ın dediği gibi: Başkasını dinleme, kendin ol {{isim}}; böyle çok daha güzelsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1211,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin kalp çizgisi ile olan keskin açısı, duygusal kararlarının hayatındaki kritik seçimlere büyük etkisi olacağını gösteriyor. Mantığını gölgelememelisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1212,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizgin ve Güneş çizgisinin kavşak noktasındaki bulanıklık, başarı yolunda önemli engellerle karşılaşabileceğini belirtiyor. Bu bulanıklık, kariyerinde ve kişisel projelerde beklenmedik zorluklar çıkabileceğini gösterir.",
+            "kosullar": []
+          },
+          {
+            "id": 1213,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin başlangıcında gözlenen kesik izler, hayatın erken dönemlerinde bazı belirsizlikler ve değişiklikler yaşayacağını işaret ediyor {{isim}}. Bunlar özel hayatınla ilgili olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1214,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizgin ve hayat çizginin kesişme noktasındaki çatallanma, erken yaşlarda alınan yanlış kararların uzun süreli etkilerinin olacağını belirtir. Bu çatallanma, hayat yönünde olumsuz dönüşlere neden olabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1215,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin hiperbolik düşüşleri, bazı zorlukların ve meydan okumaların yaşanacağını işaret ediyor {{isim}}. Kendi yüreğinle defalarca yüzleşmek zorunda kalabilirsin!",
+            "kosullar": []
+          },
+          {
+            "id": 1216,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin kalkülüs eğrileri, hayatında karşılaşacağın sürekli değişimleri ve gelişmeleri simgeliyor. Beklentilerin yıllar içinde çok değişecek Değerli {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1217,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginin geometrik düğümleri, yaşamın boyunca içinde bulunacağın önemli karar anlarını ve bu kararların yol açacağı karmaşık sonuçları işaret ediyor {{isim}}. Neyi isteyip neyi istemediğini anlaman uzun zamanını alacak gibi duruyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1218,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizgin üzerindeki farklı vektörel yönlenmeler, hayatının belirli bir amaç doğrultusunda ilerlemeyeceğini gösteriyor. Defalarca karar değiştirebilirsin. Dilerim kendine en uygun yolu bulursun...",
+            "kosullar": []
+          },
+          {
+            "id": 1219,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginde entropi artışı gözleniyor {{isim}}. Yaşamında düzensizlik ve kaos giderek artabilir. Yerinde ve doğru kararlar vererek bunun önlemini almalısın. Bilhassa özel hayatına dikkat!",
+            "kosullar": []
+          },
+          {
+            "id": 1220,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Kader çizginde kısmi kopukluklar göze çarpıyor {{isim}}. Zorunlu ve önemli bazı değişimlere maruz kalabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1221,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin Jüpiter tepeciğine doğru kıvrılması, galip gelme, kendini beğendirme ve öne çıkma çabalarının zaman zaman başarısızlıkla sonuçlanabileceğini işaret eder {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1222,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin işaret parmağı altında sonlanması, liderlik ve otorite konularında doğal bir yeteneğe işaret ediyor. Fakat bu, aynı zamanda, yüksek beklentiler ve sürekli başarı baskısı altında olacağını da gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1223,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin orta parmak doğrultusunda uzanması, kariyerinde ve finansal durumunda büyük bir ciddiyet ve disiplin gerektiğini işaret ediyor. Bu disiplini sağlayamazsan işler iyi neticelenmez {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1224,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin yüzük parmağına doğru ilerlemesi, sanatsal yetenekler ve yaratıcılık alanında büyük bir potansiyele sahip olduğunu gösteriyor {{isim}}. Öte yandan, bu alanlarda istikrarlı bir başarı elde etmek için sürekli çabalaman gerekecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1225,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin serçe parmağına yakın bir alanda bitmesi, iletişim ve sosyal etkileşimlerde büyük fırsatlar sunuyor. Ne var ki, bu konum aynı zamanda duygusal olarak savunmasız olmana ve yanlış anlaşılmalarla karşılaşmana da sebep olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1226,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin işaret parmağı ile orta parmak arasındaki boşlukta düzensiz bir şekilde ilerlemesi, otorite figürleri ile çatışmalar yaşayabileceğini ve bu çatışmaların kariyerini olumsuz etkileyebileceğini gösterir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1227,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin orta parmak ile yüzük parmağı arasında yoğunlaşması, ciddi sorumluluklar alacağını ve bu sorumlulukların sende ağır yükler oluşturacağını belirtir.",
+            "kosullar": []
+          },
+          {
+            "id": 1228,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin elin dış kenarına doğru uzanması, geleneksel olmayan yolları ve bağımsız çabaları tercih edeceğini işaret eder. Bu konum, aynı zamanda, toplum içinde dışlanma ve anlaşılmama riskini de taşır {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1229,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin işaret parmağı altında keskin bir dönüş yapması, liderlik beklentileri nedeniyle zaman zaman yaşayacağın stres ve hayal kırıklığına işaret eder {{isim}}. Bu pozisyon, aşırı yük altında ezilme hissini de beraberinde getirir.",
+            "kosullar": []
+          },
+          {
+            "id": 1230,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin orta parmağa doğru ilerlemesi, maddi kaygıların ve finansal zorlukların hayatını yer yer domine edeceğini gösterir {{isim}}. Bazı dönemlerde mali baskı ve stresle mücadele etmen gerekebilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1231,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizgindeki hipertrofik skar dokusu, geçmiş travmaların ve zorlukların kalıcı izler bıraktığını işaret eder. Bu kalınlaşmış bölge, eski yaraların tam iyileşmediğini ve zaman zaman ağrıya neden olabileceğini gösterir.",
+            "kosullar": []
+          },
+          {
+            "id": 1232,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin Jüpiter tepeciğine doğru kıvrılması, galip gelme, kendini beğendirme ve öne çıkma çabalarının zaman zaman başarısızlıkla sonuçlanabileceğini işaret eder {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1233,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizgisi dediğimiz Satürn çizgin, amaçlarına ulaşmak için elinden geleni yapacağın bir ömrün olacağını anlatıyor {{isim}}. Hedeflerinin bazılarına ulaşamasan da, huzurlu bir yaşam geçireceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1234,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin Saturn tepeciği altında kesilmesi, disiplin ve sabır çabalarının bazen yetersiz kalabileceğini ve uzun vadeli hedeflerinin başarısızlıkla sonuçlanma riski olduğunu belirtir.",
+            "kosullar": []
+          },
+          {
+            "id": 1235,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin Mars tepeciğine yaklaşması, hayatın son dönemlerinde cesaret gerektiren durumların üstesinden gelinemediğini gösteriyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1236,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizgin ve Güneş çizgisinin kesişim noktasındaki bulanıklık, maddi anlamda güçlü ve şöhretli insanlarla yolların kesişse bile bir yerde ayrılacağınızı işaret etmekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1237,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin Venüs tepeciğinden bir miktar sapması, aşk ve ilişkilerde zaman zaman hayal kırıklıkları ve bağlanma sorunları yaşayabileceğini gösteriyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1238,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin Ay tepeciğinden uzakta olması, içgüdüsel kararlarının bazı durumlarda yanlış çıkabileceğini ve sezgisel yanılgılara yol açabileceğini gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1239,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Geçmişte yapmayı ertelediğin birtakım şeylerin sonuçlarına bugün ihtiyaç duyabilirsin. Keşkelerle dolu bir gün geçirebileceğini, sağ elinin kader çizgisinden anlıyoruz Değerli {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1240,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kader çizginin baş parmağa yakın başlaması, karar verme sürecindeki bağımsızlığını ve özgürlük arzunu gösteriyor {{isim}}. Ancak bu konum, zaman zaman yalnızlık hissi ve destekten yoksun kalma durumlarına yol açabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1241,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizginde üç dönemeç var {{isim}}. Hayatın boyunca üç önemli maddi karar alacaksın. Bunlardan ikisi yerinde ve doğru, biri ise yanlış olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1242,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizgin bilek hizasındaki başlangıç nokasında farklı bir çizgi ile bölünmüş. Biri senin hayatından vaktiyle çıkmış ve bu senin için çok hayırlı olmuş.",
+            "kosullar": []
+          },
+          {
+            "id": 1243,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizginin başparmağına olan uzaklığı, elinde olmadan gerçekleşen kötü olayların hayatındaki azlığını anlatıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1244,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizgin, alt noktada ilk başladığı istikametten ayrılıp eksen değiştiriyor. Seni farklı biri haline getiren bir olay var yazgında. Başkalaşma, güçlenme görüyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1245,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizginin hem alt hem de üst parselinde birer çatal görüyorum. 40 yaşına kadar alınan iki radikal karar var. Ve her ikisinden de memnun olunacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1246,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizgin hayat çizginin yanına bir şimşek gibi çakılmış adeta! Sen genellikle başına gelenleri değil kendi gönlünden geçenleri yaşayacaksın. Ne mutlu...",
+            "kosullar": []
+          },
+          {
+            "id": 1247,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizginin alt ovası çok kalabalık iken, üst uçlara doğru parlak bir mecmua görüyorum. 0, senin tüm zorluklardan arındığın yaş olarak gözükmekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1248,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Senin kader çizgin bir yerde hayat çizginle birleşmekte. O noktadan sonra hayallerin, beklentilerin ve başına gelenler tamamen örtüşmeye başlayacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1249,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizginde pozitif karmaya işaret eden çentikler görüyorum. Yaptığın iyilikler hayatının belli evrelerinde farklı yollardan mükafat bulacak {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1250,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizgin, ek bir çizgi ile destekleniyor {{isim}}. Bu durum özgüveninin yüksek olduğunu ve bunun yaşamındaki birçok engelde işine yarayacağını gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1251,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizgin el ayanın alt kısmında adeta bir 'V' harfi oluşturmuş {{isim}}. Senin alın yazın zamanla genişliyor ve seçeneklerin günden güne artıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1252,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Şans çizgisi de dediğimiz kader çizgin, bir noktada hayat çizgine teğet konumlanıyor {{isim}}. Sevdiğin bir uğraşın ya da hobin, bir gün senin işin olacak. Beklediğin kadar getirisi olacak mı, tartışılır...",
+            "kosullar": []
+          },
+          {
+            "id": 1253,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizgin konum itibariyle avucundaki Ay bölgesinden uzakta. Ağır travmalar yaşayan biri asla olmayacaksın sen {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1254,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizginin el bileğine doğru sıhhat çizginle nasıl da kesiştiğini sen de görebiliyor musun {{isim}}? Seni yoran gündelik işler ve stres, bir gün seni daha mutlu ve huzurlu kılabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1255,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizgine baktığımda çok yüksek maddi başarılar göremiyorum. Yatırımlarını doğru şeylere yaptığından emin olmalısın {{isim}}. İhtiyacın olmayan şeyler alırsan, ihtiyacın olanları satar durursun.",
+            "kosullar": []
+          },
+          {
+            "id": 1256,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Ufak tefek çatallara rağmen düz bir kader çizgin var. Senin yazgında hemen her yol dolaylı da olsa mutluluğa çıkıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1257,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizgin, akıl ve kalp çizgini dümdüz kesiyor. Onları adeta birleştiriyor. Senin için hayırlı olanlar, genellikle senin gönlünde yatanlar olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1258,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çzigin ufuk çizgisi ile yaklaşık 80 derecelik bir açı yapıyor. Yaşamındaki hemen her konuda gelişme ve yükseliş sergileyeceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1259,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Orta ve yüzük parmakların arasına doğru uzanan kader çizgin hafif bir yay şeklinde. Yaşamındaki olaylar senin genellikle lehine sonuçlanacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1260,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Kader çizgin bileğinin iki santim kadar üstünden başlıyor {{isim}}. Senin evvelce hayatın için ettiğin duaların olumlu etkileri şimdilerde görülmeye başlanacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1261,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizgin, hayat çizginden sonra neredeyse en belirgin olanı. Tanrının senin için hayal bile edemeyeceğin kadar güzel planları var.",
+            "kosullar": []
+          },
+          {
+            "id": 1262,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizginin Güneş çizginle ortaklaşa yükseldiğini görüyorum. Geleceğin, geçmişini asla aratmayacak güzellikte demektir bu.",
+            "kosullar": []
+          },
+          {
+            "id": 1263,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizgin elinin medialinde başlayıp, üst lateralinde sonlanıyor. Gençken istediğin şeylerle ileri yaşlarda başına gelenler çok örtüşmeyecek {{isim}}. Fakat beklediğinden çok daha mutlu olacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1264,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizginin ne kadar uzun olduğuna dikkat et. Tam 'bitti' dediğin yerlerde her şey senin için yeniden ve daha güzel bir şekilde başlayacak!",
+            "kosullar": []
+          },
+          {
+            "id": 1265,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizgin avucunun orta hattına nasıl da gizlenmiş! Negatif gördüğün olaylarda bile senin için türlü mutluluklar saklı olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1266,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizginin bir bacağı hayat çizginin üzerinde gözüküyor. Derin ve belirgin.",
+            "kosullar": []
+          },
+          {
+            "id": 1267,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Pürüzsüz ve muhteşem bir kader çizgisine sahipsin {{isim}}. İki üç ömre ancak sığabilecek mutluluklar yaşayacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1268,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizginde ani bir yön değişimi görülmekte {{isim}}. Gelecek 0 yıl içerisinde öyle bir olay yaşayacaksın ki, mutluluk gözyaşları dökeceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1269,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizginin üst kesimlerinde karıncalanmalar görüyorum. Manevi bir arayışın var senin. Mutlu olacağın yolun işaretlerini en sonunda bulacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1270,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizginin üst Mars hizasında bir derinleşme görülüyor. Gelecekte öykündüğün birinin hayatını, onunkine benzer imkanlarla yaşama fırsatı bulabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1271,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "İnce ve derin bir kader çizgin var. Senin her işinin neticesi, en istediğin akıbete varacak; biraz sabır ve biraz da zamanla...",
+            "kosullar": []
+          },
+          {
+            "id": 1272,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizginin hemen yanında bir {{harf}} harfi görüyorum. Bu harf tanıdığın ve sevdiğin kimin adında var? O kişi sayesinde büyük bazı imkanlara erişeceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1273,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kader çizgin Güneş çizginle sırt sırta {{isim}}. Senin hayatına gün gibi doğacak biri var. Bu kişi sana öyle bir el uzatacak ki, senin için her şey bambaşka olacak.",
+            "kosullar": []
+          }
+        ]
+      },
+      {
+        "id": "evlilik_hatti",
+        "ad": "Evlilik Hattı",
+        "renk": "brown",
+        "metinler": [
+          {
+            "id": 1274,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Evlilik hattında bir kırıklık var. Evliliğine huzur vermek istemeyen biri ya da birileri olabilir.",
+            "kosullar": [
+              {
+                "degisken": "medeni durum",
+                "deger": "evli"
+              }
+            ]
+          },
+          {
+            "id": 1275,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Evlilik hattının konumunu incelediğimde, hayatının insanını kıl payı kaçırabileceğini görüyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1276,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Evlilik çizgin çok soluk duruyor; neredeyse bulunamayacak düzeyde. Senin kendin için en doğru insanı bulman biraz zaman almış gözüküyor.",
+            "kosullar": [
+              {
+                "degisken": "medeni durum",
+                "deger": "evli"
+              }
+            ]
+          },
+          {
+            "id": 1277,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Evlilik hattının açısı, yazgında aşktan çok mantığın baskın olduğu bir evlilikten bahsediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1278,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "İnce ve kısa evlilik hattın, cinselliğin zayıf olduğu bir evlilikten bahsetmekte {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1279,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Evlilik hattındaki kalın dönemeçler, söylenebilecek kaba sözlerin evliliğine zarar verebileceğini ifade etmekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1280,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Avucundaki evlilik hattında iki kesik mevcut. İkiden fazla evlilik yapman söz konusu olabilir.",
+            "kosullar": [
+              {
+                "degisken": "medeni durum",
+                "deger": "evli"
+              }
+            ]
+          },
+          {
+            "id": 1281,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Evlilik hattında bir çöküklük görüyorum. İstemediğin ya da tam içine sinmeyen biriyle evlenmek var yazgında.",
+            "kosullar": []
+          },
+          {
+            "id": 1282,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Evlilik hattın bir noktadan sonra silikleşiyor. Bu tip durumlarda evlilik zamanla aşktan mantığa evrilir. Kötünün iyisi...",
+            "kosullar": []
+          },
+          {
+            "id": 1283,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Evlilik hattın kalp çizgine temas etmiyor {{isim}}. Senin kişiliğin için gerekli olan sanıyorum bir mantık evliliği.",
+            "kosullar": []
+          },
+          {
+            "id": 1284,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Evlilik hattın, senin için en doğru evliliğin en ileri yaşlarda yapılanı olduğunu gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1285,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "{{isim}} evlilik hattındaki çizgiler, kısa süren ancak yoğun duygularla bezeli ilişkiler yaşayabileceğini göstermekte. Belki de bazılarını yaşamışsındır, kim bilir...",
+            "kosullar": []
+          },
+          {
+            "id": 1286,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Evlilik çizgin belirgin ancak birkaç dallanma var {{isim}}. Evlilik hayatın boyunca birkaç kez karşındaki insanla kopma noktasına gelebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1287,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "{{isim}} evlilik hattının detaylarına baktığımda, en aşık olduğunu düşündüğün insana bile çok fazla bağlı kalmayacağını görüyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1288,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "{{isim}} bir insan bu tip bir evlilik hattına sahipse, ya şıpsevdidir, ya da tam olarak ne istediğini bilmiyor olabilir. Sen biraz ayran gönüllü müsün?",
+            "kosullar": []
+          },
+          {
+            "id": 1289,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Dar bir evlilik hattın var. Mutluluğu ilk seferde yakalayamayabilirsin. Doğru insanı seçtiğinden emin olmalısın.",
+            "kosullar": []
+          },
+          {
+            "id": 1290,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Evlilik hattında çift çizgi görüyorum. Sen ayrı zamanlarda iki kere aşık olabilirsin {{isim}}. İkisiyle de evlenmek isteyeceksin. Bu iyi bir şey mi bilemedim...",
+            "kosullar": []
+          },
+          {
+            "id": 1291,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Evlilik hattında iki çizgi var. İkisi de düz ancak biri diğerinden biraz kısa. Çok sevileceksin fakat aynı derecede sevecek misin, bilemiyorum...",
+            "kosullar": []
+          },
+          {
+            "id": 1292,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Evlilik hattının hemen altında olağandışı bir çizgi var. Bu, zengin eş çizgisi {{isim}}. Eşin parayı sonradan bulacak fakat bunun sana ne kadar faydası olacak, o biraz meçhul.",
+            "kosullar": [
+              {
+                "degisken": "medeni durum",
+                "deger": "evli"
+              }
+            ]
+          },
+          {
+            "id": 1293,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Evlilik çizgini belli bir açıyla kesen iki çizgi görüyorum {{isim}}. İki çocuk sahibi olabileceğini göstermekte. Fakat bu çocuklar arasındaki yaş farkı çok olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1294,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Evlilik çizgin belirgin ancak biraz düşük noktada konumlanmış. Güzel bir evlilik var kaderinde. Ancak geçimi zor biriyle olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1295,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Evlilik çizgin kalp çizgine ne kadar da yakın {{isim}}! Çok beğendiğin bir insanla evlilik var yazgında.",
+            "kosullar": []
+          },
+          {
+            "id": 1296,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Evlilik hattın kısa fakat derin {{isim}}. Eşinle birbirinizi geç bulsanız da birbiriniz için öneminiz büyük olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1297,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Oldukça uzun bir evlilik hattın var. Doğru insanı geç de bulsan, birlikteliğin ömür boyu sürecek {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1298,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Evlilik hattındaki kıvrım, zaman zaman çekişmelere de sahne olabilecek çok romantik bir beraberlikten söz ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1299,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Evlilik çizgin elinin medial kısmında diğer hatlardan uzaklaşıyor. Sen güzel bir evlilik yapacaksın, o aşikar. Ancak hayatında arkadaş ya da aile gibi başka insanlara pek yer olmayacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1300,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Çok uzun olmayan ancak canlı bir evlilik hattın var. Doğru insanı geç de olsa bulacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1301,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Evlilik hattın, sık sık tartışmalar yaşayacağın ancak bir yandan da çok seveceğin biriyle evleneceğini gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1302,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Evlilik hattındaki çizginin çevresi neredeyse bomboş. Evlilik hayatın boyunca çok fazla insanla görüşmeyeceksin {{isim}}. Dar bir çevren olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1303,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Evlilik hattındaki çizgide minimal kesintiler görüyorum. Çok sevsen de, eşinle ufak tefek küslükler yaşamak ve her defasında da barışmak senin kaderinde var.",
+            "kosullar": [
+              {
+                "degisken": "medeni durum",
+                "deger": "evli"
+              }
+            ]
+          },
+          {
+            "id": 1304,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Evlilik hattın kalp çizginle neredeyse paralel {{isim}}. Evli olduğun insan huy olarak sana çok benzeyecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1305,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Evlilik çizgin elinin iç kısmına doğru kıvrılıyor. Bu, sana çok bağlı bir eşin işaretidir.",
+            "kosullar": []
+          },
+          {
+            "id": 1306,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Evlilik çizgin sıradan insanlarınkinden daha kalın ve derin. Asil, sadık ve evine bağlı biriyle evliliğin işaretidir.",
+            "kosullar": []
+          },
+          {
+            "id": 1307,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Evlilik çizgin pürüzsüz ve dümdüz. Dış görünüşü kusursuz bir eşle evlenmeye işaret eder.",
+            "kosullar": []
+          },
+          {
+            "id": 1308,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Evlilik çizgin çok uzun olmakla birlikte avucundaki Venüs halkasıyla bütünleşmiş. Tutkulu ve dışarıdan kıskanılacak bir evliliğin göstergeleri var sende.",
+            "kosullar": []
+          },
+          {
+            "id": 1309,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Serçe parmağına doğru eğimli devam eden evlilik hattın, çok mutlu bir evlilik yapacağını ve bunun daim olacağını işaret ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1310,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Evlilik çizgin son derece net ve düzgün; bu, duygusal ilişkilerinde büyük bir açıklık ve dürüstlük sergilediğini işaret ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1311,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Evlilik çizgin elinin dışına doğru kıvrılıyor {{isim}}. Bu da sıradışı veya beklenmedik derecede mükemmel biriyle evliliği gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1312,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Evlilik çizgin parmağın altında bitiyor. Bu da hayatındaki kişiye karşı liderlik ve kontrolün senin elinde olacağını gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1313,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Evlilik çizginin düzgün ve kesintisiz yapısı, uzun süreli bir ilişkinin harika bir uyum ve mutlulukla dolu olacağını müjdeliyor {{isim}}. Evliliğin adeta bir peri masalı gibi olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1314,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Evlilik çizgin elinin tam dış yanından başlıyor {{isim}}. Bu ipucu bize en doğru zamandaki evliliğin müjdesini verir.",
+            "kosullar": []
+          }
+        ]
+      },
+      {
+        "id": "para_hatti",
+        "ad": "Para Hattı",
+        "renk": "darkGreen",
+        "metinler": [
+          {
+            "id": 1315,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "El falındaki para hattının darlığı, kritik maddi imkansızlıklar yaşayacağını belirtiyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1316,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Para hattında belirmiş bir X işareti görüyorum. Sen zengin olabilmek için doğru işi kolay kolay bulamayacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1317,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Para hattının konumunu incelediğimde, gereksiz harcamaların ekonomik durumunu her zaman zayıflatacağını görmekteyim {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1318,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Para hattının net olmayan görünümü, yatırımlarının karşılığını istediğin kadar alamayacağını işaret etmekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1319,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Milyonerlere her zaman özeneceğin bir hayat var önünde. El falının para hattındaki dar açı, hiçbir zaman çok zengin olamayacağın fikrini uyandırdı bende.",
+            "kosullar": []
+          },
+          {
+            "id": 1320,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Para hattına baktığımda, ailenden ve çevrenden gerekli maddi yardımı hiçbir zaman tam da istediğin gibi alamayacağını anlıyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1321,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Aşağı doğru eğimli para hattı, senin için pek hayra alamet değil. Elindeki malı pek çok kez kaybedip sıfırdan başlayabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1322,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Para çizgindeki aşağı eğim, gerçekleştireceğin maddi girişimlerden şanslı neticeler çıkmayacağını bize haber vermekte {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1323,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Para çizginin farklı bazı komşulukları tarafından bölündüğünü görmekteyim {{isim}}. Değişik ihtiyaçların nedeniyle istediğin birikimleri gerçekleştiremeyebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1324,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Para hattın çok soluk ve rakip çizgilerin baskısı altında. Ekonomik durumunu istediğin kıvama getirmenin önünde her zaman bazı engeller olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1325,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para hattında çözülmesi kolay olmayacak bir bulanıklık var. Ekonomik olarak güçlenmen senin açından basit olmayacak ve yıllar alacak {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1326,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para hattında ufak bir dalgalanma görüyorum. Orta yaşlara kadar bazı finansal dersler çıkardıktan sonra, maddi anlamda çok daha iyi konumlara gelmek senin kaderin {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1327,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para hattında belirmiş açık üçgen, elindeki maddi imkanları savurmaktan vazgeçtiğin takdirde belli bir noktaya erişebileceğini fakat bunun zor olacağını anlatıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1328,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para hattını ortadan bölen sert bir çizgi var. Alışveriş düşkünlüğün varsa, bundan acilen vazgeçmelisin. Kaderin, bu şekilde ilerlemenin çok zor olacağını anlatıyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1329,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para çizgin, onu belli açılarla kesen farklı bazı kısa çizgilerle adeta karalanmış. Belli bir yaşa kadar çok fazla gereksiz harcaman olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1330,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para hattın alt bölgede bir yarımada oluşturuyor. Birikim yapmakta gecikeceksin. Ayağını yorganına göre uzatmalısın.",
+            "kosullar": []
+          },
+          {
+            "id": 1331,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para çizgin ancak bir noktada yukarı doğru manevra yapıyor. Kariyerinde yükselişe geçmen belli bir yaşın üzerine çıktığında mümkün olabilecek {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1332,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para çizginin tam merkezinde bir çatal görüyorum. Senin önüne iki ayrı kariyer yolu çıkacak {{isim}}. Bunlardan biri seni maddi anlamda zenginleştirecekken, diğeri elinde olandan da edebilecek. Seçimini doğru yapman gerekecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1333,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para çizgin oldukça ince gözüküyor. Çok zengin olma potansiyelini biraz zayıf buluyorum {{isim}}. Umarım zamanla durum değişir.",
+            "kosullar": []
+          },
+          {
+            "id": 1334,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Para hattındaki çizgi bir eğri şeklinde ve yukarıya doğru. Kariyerinde hızlı bir yükseliş gözükmese de, risk alma potansiyelin çok fazla. Gerekli çabayı sergilersen, neden olmasın.",
+            "kosullar": []
+          },
+          {
+            "id": 1335,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Para hattındaki çizgi kısa fakat belirgin {{isim}}. Yaşamın boyunca istediğin pek çok şeye zor da olsa sahip olacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1336,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Para çizginin parlak görünümü, senin para yönetimi konusunda doğuştan gelen bir kabiliyete sahip olduğunu ve bu sayede finansal olarak başarılı olacağını gösteriyor {{isim}}. Bunu henüz hayatına tam yansıtamamış olabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1337,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Para hattındaki çizgi yukarı eğimli. Önüne çıkan finansal engeller bir bir aşılacak ve istediğin şeylere sahip olabileceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1338,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Yaşam çizgisinin ortasında başlayan para hattın yukarı doğru eğimli. Hayatının belli bir döneminden sonra sahip olacağın varlıklar var.",
+            "kosullar": []
+          },
+          {
+            "id": 1339,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Para çizgin oldukça belirgin ve uzun; bu da senin finansal olarak büyük başarılara ulaşabileceğini gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1340,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Para çizginin sonunda bir kırılma var {{isim}}. Önemli bir finansal karar neticesinde hayatın olumlu yönde değişebilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1341,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Para hattının etrafındaki küçük çizgiler, yakın gelecekte beklenmedik mali fırsatlarla karşılaşabileceğini belirtiyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1342,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Para çizginin derinliği, senin zengin olabilmek konusunda doğal bir yeteneğe sahip olduğunu gösteriyor {{isim}}. Fakat olur musun, bilemem.",
+            "kosullar": []
+          },
+          {
+            "id": 1343,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Para hattında görülen çapraz çizgiler, önemli mali meydan okumalarla karşılaşabileceğini ancak bunları başarıyla aşacağını gösteriyor. 40'lı yaşların sonu rahatlama başlıyor gözüküyor {{isim}}...",
+            "kosullar": []
+          },
+          {
+            "id": 1344,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Para çizginin uzunluğu ve netliği, uzun vadede mali güvenliğe işaret ediyor {{isim}}, bu da emekliliğinde rahat bir yaşam süreceğini belirtiyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1345,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Para hattının etrafında birçok destekleyici çizgi var {{isim}}. Bu durum, çevrendeki insanların finansal başarına büyük katkılarda bulunacaklarını gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1346,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Para çizgin, alttan ve üstten iki ayrı paralel çizgi ile destekleniyor {{isim}}. Sen bir kararın sonrasında çok yüksek gelirli biri haline geleceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1347,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Para çizginin düzgünlüğü, mali işlerindeki tutarlılık ve başarılarını temsil ediyor {{isim}}. Hayat boyu artacak gelirler görüyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1348,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Para hattın geniş bir yay çiziyor. Bu durum, hayatın boyunca önüne çok sayıda fırsatın açılacağını ve bu fırsatların genellikle mali kazançla nihayetleneceğini işaret ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1349,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Avucundaki Merkür Tepesi'ne pırıp pırıl bir şekilde uzanan para hattın, çok varlıklı biri olacağının göstergesi.",
+            "kosullar": []
+          },
+          {
+            "id": 1350,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Para hattında hiç kesinti yok. Mali işlerinde büyük bir engelle karşılaşmayacaksın. Böylece sürekli bir büyüme ve gelişme içinde olacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1351,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Para çizginin güçlü yapısı, mali kararlarında son derece sağlam ve güvenilir olduğunu belirtiyor. Bu da başkaları tarafından çok değerli bulunmanı sağlayacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1352,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Para hattın parlak ve berrak. Bu, finansal anlamda açık bir vizyona sahip olduğunu ve mali hedeflerine ulaşmada başarılı olacağını gösteriyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1353,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Para hattındaki çizgin olağanüstü dik. Senin için hayatının bir noktasında resmen talih kuşu var {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1354,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Para hattında hiçbir kesinti gözüme çarpmadı. Hatta son kısımlarında yıldıza benzer bir de işaret görüyorum. Sen muhtemelen ömrünün bir noktasında çok zengin olacaksın {{isim}}.",
+            "kosullar": []
+          }
+        ]
+      },
+      {
+        "id": "sans_hatti",
+        "ad": "Şans Hattı",
+        "renk": "yellow",
+        "metinler": [
+          {
+            "id": 1355,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şans çizgin oldukça kesikli ve zayıf görünüyor {{isim}}. Bu durum, senin hayatında rastgele fırsatların nadir olduğunu gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1356,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Senden daha şanssız insanlar tanıdım. Sen şansını kendisi yaratmak durumunda kalanlardansın. Olsun. Güç olsun, güzel olsun.",
+            "kosullar": []
+          },
+          {
+            "id": 1357,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şans çizgin parabolik bir kavis halinde {{isim}}. Şu anda kendini çok talihli hissetmesen de, zaman senin lehine işleyebilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1358,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şans hattın düzensiz bir yapıya sahip, tıpkı bir tektonik fay hattı gibi. Bu durum beklenmedik olaylara açık olduğunu gösteriyor {{isim}}. Önlemini alarak her şeyin üstesinden gelebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1359,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Senin belli belirsiz tek bir şans hattın var. Hayatta şanslı olduğun tek bir alan mevcut. Hangisi acaba?...",
+            "kosullar": []
+          },
+          {
+            "id": 1360,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şans çizgin oldukça soluk ve kısa. Bu haliyle doğal şansın pek yaver gitmeyeceğini gösteriyor. Kendi kaderini şekillendirmek için daha fazla çaba sarf etmen gerekebilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1361,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şans hattın bir düğüm noktası gibi karmaşık ve karışık, bu da hayatının bazı dönemlerinde kafa karışıklığı yaşayabileceğini gösteriyor. Bu durumları analitik düşünerek ve stratejik kararlar alarak yönetebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1362,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şans çizgin üzerinde birçok kesişme noktası var. Sık sık karar vermek zorunda kalabilirsin. Her bir kesişme noktasında yönünü dikkatlice seçmelisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1363,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şans çizgin üzerindeki izolasyon hatları, senin çoğu kez kendi başına hareket etmek zorunda kalacağını gösteriyor. Ne demişler; kolunu kes ye, kasaba minnet etme.",
+            "kosullar": []
+          },
+          {
+            "id": 1364,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şans çizgini pek belirgin bulmadım {{isim}}. Piyangoya ve lotoya asla boşa para kaptırma. Senin şansın, aklın.",
+            "kosullar": []
+          },
+          {
+            "id": 1365,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şans hattın, bir fraktal desen gibi karmaşık ve tahmin edilemez bir yapıya sahip. Bu karmaşıklık, nadiren beklenmedik şanslar sunabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1366,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Zayıf ve kesik kesik şans çizgin, zaman zaman şansın seni terk edebileceğini ve zorluklarla karşılaşabileceğini gösteriyor Kıymetli {{isim}}. Umutsuzluğa kapılmamalısın.",
+            "kosullar": []
+          },
+          {
+            "id": 1367,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şans hattın, bir vadi şeklinde derin ve uzun. Bu, zorluklarla dolu bir yolculuk anlamına geliyor; ancak vadi sonunda seni bekleyen güzellikler yok değil.",
+            "kosullar": []
+          },
+          {
+            "id": 1368,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şans hattın, bir hipotrokoit gibi döngüsel ve öngörülemez bir yol izliyor. Bu döngüsel yapı, bazı dönemlerde aynı zorlukların tekrar edebileceğini gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1369,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şans çizgin yıldızların konumları gibi; biraz belirsiz ve gizemli. Bu durum gelecekte sürprizlerle karşılaşabileceğini gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1370,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şans hattın bir dere yatağı gibi dolambaçlı {{isim}}. Bu durum, hayatının beklenmedik yönlere akabileceğini gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1371,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şans çizgin atmosferik basınç hatları gibi birbirine paralel ve karmaşık {{isim}}. Bu durum, bazen zorlayıcı olabilecek durumlarla karşılaşabileceğini anlatmakta.",
+            "kosullar": []
+          },
+          {
+            "id": 1372,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Aşağı eğimli fakat uzun bir şans hattın var. Talihin sonradan dönecek senin.",
+            "kosullar": []
+          },
+          {
+            "id": 1373,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şans hattın kısa ancak bir harita üzerindeki koordinatlar gibi düzenli ve ölçülebilir. Bu haliyle şansını maksimize edebilmek için iyi planlamalar yapman gerekiyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1374,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Engebeli bir dağ yolu gibi kıvrımlı şans çizgin, inişler ve çıkışlarla dolu bir hayatı işaret ediyor. Zirveye ulaşmak için pes etmeden ilerlemelisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1375,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Uzun ve düz şans çizgin, genel olarak şanslı bir hayatın olacağını müjdeliyor {{isim}}. Bu sana birçok fırsat sunacak, fakat şansına güvenip tembellik etmemelisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1376,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Şans çizgin falçata izi gibi {{isim}}; ince ve düz. Hayatında belli sayıda aşırı şanslı anın olacak fakat onlar da en kritik zamanlarda gerçekleşecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1377,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "El bileğinden başlayan şans çizgin, genç yaşta şansının açık olacağını gösteriyor. Bu şansı doğru şekilde değerlendirmeyi öğrenmelisin, aksi takdirde elinden kayıp gidebilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1378,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Başparmağına doğru uzanan şans çizgin, ailenin ve sevdiklerinin sana şans getireceğini söylüyor {{isim}}. Onlarla olan ilişkilerini güçlü tutmalı ve her zaman desteklerini almalısın.",
+            "kosullar": []
+          },
+          {
+            "id": 1379,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizgine paralel gözüken şans çizgin, yaşamın iniş çıkışlarında bile şansının seni yalnız bırakmayacağını gösteriyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1380,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Şans hattın çok canlı ve boylu boyunca. Seni hayat boyu güzel kazanımlar bekliyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1381,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Başparmak tepesinden başlayan şans çizgin, kendi şansını yaratma gücüne sahip olduğunu söylüyor Değerli {{isim}}. Girişimci ruhun ve kararlılığın seni birçok başarıya taşıyabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1382,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Yumuşak ve net şans çizgin, oldukça güçlü bir şansa sahip olduğunu gösteriyor. Hayatın boyunca birçok talihli an yaşayacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1383,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Hayat çizgine paralel ve neredeyse ona değecek kadar yakında bulunan şans çizgin, yaşamın iniş çıkışlarında bile şansının seni yalnız bırakmayacağını gösteriyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1384,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Çok sayıda ve birbirine paralel şans çizgin var. Hayatın boyunca birçok şanslı durumla karşılaşacaksın. Bunları değerlendirme potansiyelin ise yüzde yüz diyemem.",
+            "kosullar": []
+          },
+          {
+            "id": 1385,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şans çizgin çok net bir fırça darbesi gibi {{isim}}. Buna artık bu noktada bal çizgisi demek daha doğru olur. Sen doğuştan talihlisin. İltimaslısın mı desek?",
+            "kosullar": []
+          },
+          {
+            "id": 1386,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şans çizgin aşırı berrak ve kesintisiz. Seni yaşamında hep güzel ve talihli anlar bekliyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1387,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Senin şans çizgin ne kadar da uzun {{isim}} böyle! Samanlıkta bir adım atsan, altın yüzük ayağına takılır. O derece...",
+            "kosullar": []
+          },
+          {
+            "id": 1388,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şans çizgin avucunu öyle bir domine etmiş ki {{isim}}, gözün kapalı ok atsan 12'ye yamıştırırsın. Kullan bu şansı!",
+            "kosullar": []
+          },
+          {
+            "id": 1389,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şans hattın nadir rastlanır cinsten. Talih kuşlarının en büyüğü başına konacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1390,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "{{isim}} şans çizgin çok derin ve de çok belirgin. Aşırı şanslı biri olduğun o kadar aşikar ki, anlatmama gerek olduğunu düşünmüyorum!",
+            "kosullar": []
+          },
+          {
+            "id": 1391,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şans çizginin kontrastı aşırı yüksek. Kendini bu denli belli eden bir talih herkese nasip olmaz. Çevren de biliyor mu bu kadar şanslı olduğunu?",
+            "kosullar": []
+          },
+          {
+            "id": 1392,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şans çizgin hem net hem de logaritmik bir eğime sahip. Senin var olan yüksek şansın, yaşınla birlikte katlanarak daha da artacak {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1393,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Çok pürüzsüz bir şans çizgin var {{isim}}. Evren seni hep doğru yerde, doğru zamanda, doğru insanların yanına konumlandırıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1394,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Kazanmış bir piyango biletine ihtiyacın yok {{isim}}. Şu şans çizgini milli piyango idaresi görse, büyük ikramiyeyi zaten sana verir.",
+            "kosullar": []
+          }
+        ]
+      },
+      {
+        "id": "seks_hatti",
+        "ad": "Seks Hattı",
+        "renk": "pink",
+        "metinler": [
+          {
+            "id": 1395,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks hattın kısa ve soluk; bu, duygusal bağların derinleşmesi için zaman ve sabır gerekebileceğini anlatıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1396,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks çizgin çok ince. Oldukça yüzeysel cinsel tercübeler, seni aşktan ve duygusallıktan soğutabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1397,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks hattındaki çizgi, bir dere yatağı gibi dolambaçlı. Duygusal yaşamında beklenmedik yön değişiklikleri yaşayabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1398,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks hattın dalgalı ve çizgin geniş bir yay oluşturuyor. Hayatın boyunca seni tatmin etmeyen pekçok tek gecelik ilişki yaşayabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1399,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks hattın sismik bir dalga gibi düzensiz. Aradağın ihtirası kolay kolay yakalayamayabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1400,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks hattın soluk ve yüzeysel. Cinsel hayatın hiçbir zaman çok renkli olmayabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1401,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks çizgin belirgin fakat çok düz değil. Özel hayatında istikrarı yakalaman kolay olmayacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1402,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks çizgini pek derin ve uzun bulmadım doğrusu. Partnerinle destanlar yazmaktan biraz uzaksın sanki.",
+            "kosullar": []
+          },
+          {
+            "id": 1403,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks çizginde kırılmalar görüyorum. Seni büyük zevklerden mahrum bırakacak bazı tabulara sahipsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1404,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seks çizgin iki parçaya bölünmüş durumda. Aklının bir kısmı eski bir yaşanmışlıkta, tekrar edemeyeceğin bir deneyimde kalabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1405,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks çizginde kılcal aşınmalar görüyorum. Duygusal anlamda sığ beraberlikler yaşamak zorunda kalabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1406,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks çizgin parçalı bir yapıda {{isim}}. İlk deneyimlerini yaşadığın insanla evlilik ihtimalin biraz düşük sanki.",
+            "kosullar": []
+          },
+          {
+            "id": 1407,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks hattındaki üçgene baktığımda, biri ile yaşadığın bazı tecrübelerin ömür boyu tutsağı olabileceğini görüyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1408,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks hattındaki çukurlaşma, sende iz bırakan biri ile yaşadığın tecrübenin yerini kolay kolay dolduramayacağını işaret ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1409,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks çizgin ikinci bir çizgi ile bölünmüş {{isim}}. Cinsellik yaşadığın bazı zamanlarda konsantrasyonunu kaybederek olaydan kopabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1410,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks hattın diğer çizgilerine göre daha kısa. Bazı şeyleri çoğunlukla zorunluluktan yaşayacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1411,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks hattın soluk duruyor. Bu durumda yüksek fantazilerle dolu bir cinsel hayat beklenemez.",
+            "kosullar": []
+          },
+          {
+            "id": 1412,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks çizgin hafif kavisli. Hayalindeki tecrübeleri hayatındaki insanlarla yaşamaktan uzak sayılırsın.",
+            "kosullar": []
+          },
+          {
+            "id": 1413,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks çizgin normal konumuna göre biraz aşağıda {{isim}}. Aşkı kaliteli bir cinsellikle aynı anda yaşaman zor gözüküyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1414,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seks çizgin diğer hatlardan biraz uzakta kalmış {{isim}}. Senin yanışları kendine benzeyen birini bulman zor ancak mümkün.",
+            "kosullar": []
+          },
+          {
+            "id": 1415,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks çizgin belirgin ve görkemli {{isim}}. Cinsel gücünün üst seviyelerde olduğunu anlıyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1416,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks hattının etrafı adeta bir çember gibi. Cinsellik bağlamında muhafazakar ve monogamik bir yapı sergileme potansiyelin var.",
+            "kosullar": []
+          },
+          {
+            "id": 1417,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks hattın avucunda bulunduğu bölgeyi domine ediyor. Cinsellik senin için her zaman önemli olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1418,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks çizginde son bölümlere doğru bir kontrast artışı gözlemledim. Orta yaş sonraları daha şehvetli birine dönüşebilirsin. Kendinden asla ümidi kesme.",
+            "kosullar": []
+          },
+          {
+            "id": 1419,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks hattın kısa da olsa yukarı eğimli gözüküyor. Sıradışı bir cinsel hayat geç de olsa seni bekliyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1420,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks çizgin bir noktada çiftlenmiş {{isim}}. Kendine uygun insanı bulursan birlikte voltran'ı oluşturabilirsiniz.",
+            "kosullar": []
+          },
+          {
+            "id": 1421,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks hattında yoğun bir parlaklık söz konusu. Hissi manada doyuma ulaşacağın bir hayat seni bekliyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1422,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks çizginin ilk kısımlarında bir diyez işareti görüyorum {{isim}}. Bazı üst tecrübeleri erken yaşlarda tatman ve sonrasında hep o seviyeyi araman mümkün.",
+            "kosullar": []
+          },
+          {
+            "id": 1423,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks çizginin orta kısımları çatallaşmış gibi duruyor. Bir yaştan sonra farklı hazlar seni bekliyor olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1424,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seks çizgini dikey bölen iki kılcal çizik var {{isim}}. Senin hayatında cinsellik ilk kişiden önce ve ikinci kişiden sonra olarak üçe ayrılabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1425,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seks çizgin inanılmaz belirgin {{isim}}. Sen duruşuyla, bakışıyla, konuşmasıyla, her hareketiyle davetkar birisin. Bunun etkilerini de göreceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1426,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seks hattının yükselerek belirginleşiyor olması, seni ateş hayatına giren insanları ise buz haline getiriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1427,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Çok uzun bir seks hattın var Değerli {{isim}}. Sen cinselliği çok ileri yaşlara kadar sağlıkla yaşayan biri olacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1428,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Avucundaki seks hattında dışbükey bir kavis var. Sen karşı cins tarafından çokça arzulanan birisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1429,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Oldukça eğimli ve belirgin bir seks hattın var. Fantazi dolu bir yaşama sahip olacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1430,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seks hattın elinin bir noktasında neredeyse pik yapıyor {{isim}}. Bu nokta senin {{kelime, 25-30 | 30-35 | 35-40 | 40-45 | 45-50}} yaş aralığını temsil ediyor. O yaşlar senin en alımlı dönemin olarak gözüküyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1431,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seks hattının cetvelle çizilmiş gibi kusursuz olduğunu görüyorum. Hayat boyu tutarlı ve yüksek bir cinsel çekime sahipsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1432,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seks hattının farklı çizgilerle bloke edilmeyen yalın bir duruşu var {{isim}}. Senin için duygusallık ve tutku yaşam boyu bir arada olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1433,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seks hattının açısı ve belirgin yapısı, sahip olduğun cinsel çekimin her zaman karşılık bulacağını anlatmakta.",
+            "kosullar": []
+          },
+          {
+            "id": 1434,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "{{burc}} burçlarında böyle bir seks hattı, karşı cins tarafından asla reddedilmemeye işarettir.",
+            "kosullar": []
+          }
+        ]
+      },
+      {
+        "id": "seyahat_hatti",
+        "ad": "Seyahat Hattı",
+        "renk": "magenta",
+        "metinler": [
+          {
+            "id": 1435,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattın oldukça kısa. Güvenli bölgenden çıkmayı yaşam boyu pek istemeyeceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1436,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattında baş döndürücü bir kavis var Değerli {{isim}}. Zorunlu bir nedenle gelecekte çok önemli bir yolu iptal edebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1437,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattının kısalığı, hayatın boyunca gerçekleştireceğin denizaşırı yolculuk sayısının da azlığını haber vermekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1438,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattın bazı yerlerde çok dallanıyor {{isim}}. İstemediğin yer değişiklikleri yapmak durumunda kalabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1439,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattın hafif bir kavis oluşturmuş. Gideceğin yerlerden memnun kalmayarak başlangıç noktanı özleyebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1440,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattını çok kısa buldum. Gezmeye ve görmeye pek vaktin olacağını sanmıyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1441,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattının farklı yerlerinde kırılmalar mevcut. Sen yaşamın boyunca 3-4 kez şehir değiştirmek zorunda kalabilirsin {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1442,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattında çift çizgi görüyorum. Bir yaştan sonra iki şehir arasında sıkça gidip gelmek durumunda kalabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1443,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattın olması gerekenden daha uzun {{isim}}. Kilometre bazında çok fazla yol yapacaksın. Ne sebeple, bilemiyorum...",
+            "kosullar": []
+          },
+          {
+            "id": 1444,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Seyahat hattının son kısımları epey silikleşmiş. Kendini hiçbir zaman bir yere ait hissetmeyebilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1445,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat hattındaki kısalık, yakın mesafe yolculuklarının ötesine pek geçemeyeceğini ifade etmekte.",
+            "kosullar": []
+          },
+          {
+            "id": 1446,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat hattın yok denecek kadar ince gözüküyor {{isim}}. Gönlünce gezmek ve çok fazla yer görmek için yeterli finansal imkanlara sahip olamayabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1447,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat hattın biraz çukur gözüküyor. İkamet ettiğin bir yerde istemeden de olsa çok uzun yıllar kalabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1448,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat hattın hafif silik. Çok seyahat etmek isteyeceksin ancak önüne engeller çıkacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1449,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat hattındaki parçalı çizgiler aslında birbirini tamamlar nitelikte {{isim}}. Belli bir amaca hizmet eden birden fazla yolculuk yapacak ve son bulunduğun yerde önemli bir sonuca ulaşacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1450,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat hattın eğimli ve kısa. İstemediğin bazı taşınmalar sonucunda gireceğin son hanede kalıcı olabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1451,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat çizginin sonunda bazı noktalar görüyorum {{isim}}. Belli bir yaştan sonra daha fazla yer değişikliği yapacak, farklı yerler gezip göreceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1452,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat hattın kalın olmasına rağmen pek belirgin durmuyor. Çok gezmek istemene rağmen, bunun için yaşamın boyunca sınırlı fırsatın olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1453,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat hattının ortalarından elinin üst kısmına doğru bir dikme uzanıyor. Önüne bir şehir ya da ülke değişimi fırsatı gelecek {{isim}}. Bunu değerlendirebilecek misin, bilmiyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1454,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Seyahat çizginin hemen altında eğimli bir çizgi daha var. Birinin vesilesiyle çok istemeden de olsa farklı yollar katetmek durumunda kalabilirsin.",
+            "kosullar": []
+          },
+          {
+            "id": 1455,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Uzun bir seyahat hattın var. İstediğin pekçok yeri gezip görme fırsatı yakalayacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1456,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seyahat hattında, avucunun orta bölgesine doğru bir alçalma görüyorum. İlerleyen yıllarda deniz seviyesindeki farklı bir bölgeye taşınma durumun var {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1457,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seyahat hattına eşlik eden başka çizgiler de var {{isim}}. Sevdiklerinle birçok yola gideceğini işaret ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1458,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seyahat hattın yer yer dalgalı. Güzel geziler için zaman bulacağını düşünüyorum.",
+            "kosullar": []
+          },
+          {
+            "id": 1459,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seyahat hattının bir hayli düz ve kararlı olduğunu görüyorum. Planladığın yolculukları gerçekleştirme şansını çoğunlukla bulacaksın {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1460,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seyahat hattında ivmeli bir yükseliş mevcut. İstediğin yolculukları gerçekleştirebilmek için doğru imkanlara sahip olman biraz zaman alacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1461,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seyahat hattının yakınlarında, farklı doğrultularda üç adet kısa çizgi görüyorum. 5 yıllık bir vade içinde üç farklı ülke göreceksin {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1462,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seyahat hattındaki uzun ancak silik çizgi, {{yas_4}} yaşından sonra ülke aşırı gezilere başlayacağını işaret ediyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1463,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seyahat hattında çeşitli kırıklar görüyorum. Bu yaşına kadar hayal ettiğin gezileri istediğin ölçüde gerçekleştirdiğini söyleyemeyiz.",
+            "kosullar": []
+          },
+          {
+            "id": 1464,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Seyahat hattında bir kavşak görüyorum. {{yil_7}} yılında çok istediğin bir şehre kalıcı olarak taşınabilirsin {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1465,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seyahat çizgin çok uzun ve parlak. Senden dünya turu yapmanı bile bekliyorum {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1466,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seyahat hattının çevresindeki parlama gözden kaçmıyor {{isim}}. Hayalindeki yolculuklar ilerleyen yıllarda seni bekliyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1467,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seyahat hattın ne kadar da net çıkmış! İstediğin tüm ülkeleri gönlünce gezebileceğin maddi imkanlara erişeceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1468,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Ay Tepesi'nden başlayan uzun bir seyahat hattın var. Dünyadaki pek çok yeri görebileceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1469,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seyahat hattın fevkalade parlak. Hatta sana şunu söyleyebilirim {{isim}}; sen {{yil_8}}-{{yil_9}} yılları arasında okyanus aşırı bir gezi yapacaksın. Bu gezi büyük bir gemi ile olabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1470,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seyahat hattın çok fazla zigzag çiziyor. Gelecek yılların gezi anlamında oldukça hareketli geçecek ve bundan memnun olacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1471,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seyahat hattın bir noktadan sonra aniden kalınlaşıp daha da belirginleşiyor {{isim}}. Yaklaşık {{yas_8}} ve sonrası civarına denk geliyor senin için. Ardından inanılmaz bir gezi dönemin başlıyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1472,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seyahat hattının sonunda bir {{kelime, S | K | M}} harfi görüyorum. İsminin içinde bu harfin olduğu bir yere taşınıp orada çok mutlu olacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1473,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seyahat hattın çok belirgin {{isim}}. Gezmek senin için bir hayat felsefesi, bir duruş, bir yaşama amacı olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1474,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Seyahat hattının yükselen grafiğini görmemek mümkün değil. Sen yıldan yıla daha fazla gezer hale geleceksin.",
+            "kosullar": []
+          }
+        ]
+      },
+      {
+        "id": "sohret_hatti",
+        "ad": "Şöhret Hattı",
+        "renk": "cyan",
+        "metinler": [
+          {
+            "id": 1475,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Bu kısa şöhret hattı ile, seni evinin karşısındaki {{kelime, kuaför Niyazi | bakkal Hasan | tantunici Mehmet Usta | bakkal İsmail | eczacı Ayten Hanım}} bile tanımayabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1476,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şöhret hattın çok silik {{isim}}. Bilinmek ve duyulmak istiyorsan farklı girişimlerde bulunmalısın. Youtuber olmayı hiç düşündün mü?",
+            "kosullar": []
+          },
+          {
+            "id": 1477,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şöhret hattın o kadar kısa ki, seni bir yerden sonra kendi akrabaların bile zor tanıyabilir.",
+            "kosullar": []
+          },
+          {
+            "id": 1478,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şöhret hattın kısa ve silik bir çizgicik halinde. Seni oturduğun apartmandaki komşuların bile pek tanımayabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1479,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Senin pek göze batan biri olduğunu düşünmüyorum. Bunun çeşitli avantajları da olabilir elbette.",
+            "kosullar": []
+          },
+          {
+            "id": 1480,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Eski okul yıllarında gözde öğrenci olmadığın aşikar. İlerleyen yıllarda da bu durumun değişeceğini sanmam.",
+            "kosullar": []
+          },
+          {
+            "id": 1481,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Hiç parmakla gösterilen biri değilsin {{isim}}; şöhret hattın zayıf. Gelecekte de manşetlerde yer almayacağın şimdiden belli sanki.",
+            "kosullar": []
+          },
+          {
+            "id": 1482,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Bulunduğun ortamlarda varlığını kabul ettirmen bu kısa şöhret hattıyla biraz zor {{isim}}. Çok belirgin işlere imza atman gerek.",
+            "kosullar": []
+          },
+          {
+            "id": 1483,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Şöhret hattı zayıf olanların biten ilişkilerden sonra da çabuk unutulduğu söylenir. Dilerim bu sana tatsız gelmez. Çizgilerin bu anlamda belirsiz.",
+            "kosullar": []
+          },
+          {
+            "id": 1484,
+            "yuzde_min": 5,
+            "yuzde_max": 25,
+            "metin": "Dalga geçtiğimi düşünmeni istemem ama bu zayıf şöhret hattı, ününün kıtalararası yayılmayacağının şimdiden garantisi gibi.",
+            "kosullar": []
+          },
+          {
+            "id": 1485,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şöhret hattın, akılda kalıcı olmak konusunda çok da başarılı olmayacağını anlatmakta.",
+            "kosullar": []
+          },
+          {
+            "id": 1486,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Yaptığın başarılı işlerin çok fazla kişi tarafından bilinemeyeceği, kısa şöhret çizginden anlaşılıyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1487,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şöhret hattın nispeten kısa {{isim}}. Adını fazlaca duyurman gerekecek bir iş yapsan yanmıştın.",
+            "kosullar": []
+          },
+          {
+            "id": 1488,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Pek belirgin olmayan ve aşağı eğik şöhret hattın, yakın akrabalarının dışında çok bir bilinirliğinin olmayacağını anlatıyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1489,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şöhret hattının darlığı, yalnızca senin için önemli olan insanların seni bilip tanıyacağını gösteriyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1490,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şöhret hattın biraz kısa {{isim}}. Ön plana çıkmak istiyorsan adını duyuracak işler yapmaya gayret etmelisin.",
+            "kosullar": []
+          },
+          {
+            "id": 1491,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şöhret hattın silik ancak görünmez değil. Namın işine yarayacak kadar duyulacak. Dergilere kapak olamayacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1492,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şöhret hattının çok ince olduğunu görüyorum. Az kişi bilecek seni; lakin bilen de iyi bilecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1493,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Kısa şöhret hattın, hayatından çok fazla insanı çıkaracağını işaret ediyor. Az olsun öz olsun kafasındasın.",
+            "kosullar": []
+          },
+          {
+            "id": 1494,
+            "yuzde_min": 25,
+            "yuzde_max": 50,
+            "metin": "Şöhret hattındaki incelik çok fazla kişi tarafından bilinmemeye işaret. Fakat bu seni korkutmasın {{isim}}. Albüm satan popçu değilsin sonuçta.",
+            "kosullar": []
+          },
+          {
+            "id": 1495,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Şöhret hattın tatmin edici uzunlukta. İşine yarayacak herkes senin kim olduğunu ve ne yaptığını bilecek.",
+            "kosullar": []
+          },
+          {
+            "id": 1496,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Sen ne yapsan iyisini yapıyorsun. Şöhret çizgin çift çıkmış. Hem sevenin hem imrenenin seni konuşuyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1497,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Dallara ayrılmış bir şöhret hattı duruyor karşımızda. Sen farklı insanlar tarafından farklı özelliklerinle bilineceksin.",
+            "kosullar": []
+          },
+          {
+            "id": 1498,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Ucu göğe bakan istikrarlı bir şöhret hattın var. Ömrün boyunca bilinirliğin artacak ve en sonunda seni belki de milyonlar tanıyacak {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1499,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Orta boydaki şöhret hattının çevresi açık. Ün salmak için ciddi bir potansiyel taşıyorsun.",
+            "kosullar": []
+          },
+          {
+            "id": 1500,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Doğru işler yapıp çok fazla kişi tarafından takdir edileceğini görüyorum. Şöhret hattın zengin duruyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1501,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Sen yıldızı parlak birisin {{isim}}. Ömrün boyunca hakkında çokça konuşan olacak.",
+            "kosullar": []
+          },
+          {
+            "id": 1502,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Şöhret hattında tatlı bir kavis var. Pek çok insan seni iyi bilecek. Karakterin ve aldığın kararlar beğeniliyor.",
+            "kosullar": []
+          },
+          {
+            "id": 1503,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "Avucundaki şöhret çizgin parmağına doğru nasıl da yükseliyor!... İlerleyen yıllarda daha fazla takdir toplayacak ve konuşulacaksın.",
+            "kosullar": []
+          },
+          {
+            "id": 1504,
+            "yuzde_min": 50,
+            "yuzde_max": 75,
+            "metin": "İnsanlar senden sıkça bahsediyor {{isim}}. Kalın şöhret çizgin bunun açık göstergesi.",
+            "kosullar": []
+          },
+          {
+            "id": 1505,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şöhret hattının belirginliği, başarılarınla yedi düvele nam salacağını gösteriyor {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1506,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şöhret çizgin normalin neredeyse iki katı uzunluğunda! Sen ya bir film çevir ya da en azından kitap yaz {{isim}}. Belli ki tanınacaksın, bari bahanesi olsun.",
+            "kosullar": []
+          },
+          {
+            "id": 1507,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şöhret hattın oldukça düz ve göz önünde. Bazı alanlarda çok öne çıkacaksın ve bu da senin işine gelecek Kıymetli {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1508,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şöhret hattın ne kadar da parlak! Bir dönem popstar jüriliği yapmış gibisin. Herkes bilecek seni.",
+            "kosullar": []
+          },
+          {
+            "id": 1509,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şöhret hattın, onu kesen çizgilerle adeta bir yıldıza benzemiş. Gelecekteki başarıların insanlara parmak ısırtabilir {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1510,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şöhret çizgin adeta bir su yoluna benziyor. Kısmetini hiçbir gıybet engelleyememiş. Biliniyor ve gıpta ediliyorsun.",
+            "kosullar": []
+          },
+          {
+            "id": 1511,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şu şöhret çizgisi ancak Tarkan'da ya da Beyonce'da olur. Çok uzun ve yüksek! O kadar kıskanılıyorsun ki {{isim}}...",
+            "kosullar": []
+          },
+          {
+            "id": 1512,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şöhret çizgin parlak bir hilali andırıyor. Kimsenin beklemediği bir anda adını yüz binlere duyurabilirsin {{isim}}.",
+            "kosullar": []
+          },
+          {
+            "id": 1513,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şöhret çizgin o kadar net ki {{isim}}; çocuk yaşlarından itibaren hep parmakla gösterilen ve gurur duyulan biri olmuşsun.",
+            "kosullar": []
+          },
+          {
+            "id": 1514,
+            "yuzde_min": 75,
+            "yuzde_max": 100,
+            "metin": "Şöhret çizgin normalin neredeyse iki katı uzunluğunda! Sen ya bir film çevir ya da en azından kitap yaz {{isim}}. Belli ki tanınacaksın, bari bahanesi olsun.",
+            "kosullar": []
+          }
+        ]
+      }
+    ]
+  }
+}

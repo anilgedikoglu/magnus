@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
@@ -185,6 +186,10 @@ class InboxDetailScreen extends StatelessWidget {
             // Tarot: özel başlık (kartlar görselli)
             if (item.fortuneType == FortuneType.tarot)
               _buildTarotHeader(),
+            // El Falı: özel bar görünümü (metin alanı yerine geçer)
+            if (item.fortuneType == FortuneType.elfali)
+              _buildElFaliContent()
+            else
             // Fortune text
             Padding(
               padding: const EdgeInsets.all(20),
@@ -271,6 +276,125 @@ class InboxDetailScreen extends StatelessWidget {
         ],
       ), // Stack
     );
+  }
+
+  // ─── El Falı: bar görünümü ────────────────────────────────────────────────────
+  Widget _buildElFaliContent() {
+    try {
+      final data      = jsonDecode(item.text) as Map<String, dynamic>;
+      final genel     = data['genel'] as String? ?? '';
+      final hatlarRaw = data['hatlar'] as List? ?? [];
+      final hatlar    = hatlarRaw.map((h) => h as Map<String, dynamic>).toList();
+
+      return Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(_formatDate(item.date), style: AppTextStyles.inboxMeta),
+            const SizedBox(height: 20),
+            // Genel değerlendirme
+            if (genel.isNotEmpty) ...[
+              const Text(
+                'Genel Değerlendirme',
+                style: TextStyle(
+                  color: Color(0xFFD8B4FE),
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.8,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                genel,
+                style: AppTextStyles.bubbleText.copyWith(height: 1.75),
+              ),
+              const SizedBox(height: 20),
+              const Divider(color: Colors.white12),
+              const SizedBox(height: 16),
+            ],
+            // Hatlar
+            ...hatlar.map((hat) {
+              final ad    = hat['ad'] as String;
+              final renk  = hat['renk'] as String;
+              final yuzde = hat['yuzde'] as int;
+              final metin = hat['metin'] as String;
+              final color = _elfaliHatRengi(renk);
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          ad,
+                          style: TextStyle(
+                            color: color,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        Text(
+                          '%$yuzde',
+                          style: TextStyle(
+                            color: color,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 6),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(4),
+                      child: LinearProgressIndicator(
+                        value: yuzde / 100,
+                        backgroundColor: color.withValues(alpha: 0.15),
+                        valueColor: AlwaysStoppedAnimation<Color>(color),
+                        minHeight: 6,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      metin,
+                      style: AppTextStyles.bubbleText.copyWith(height: 1.65),
+                    ),
+                  ],
+                ),
+              );
+            }),
+            const SizedBox(height: 24),
+            Center(
+              child: Text('✦ Magnus ✦', style: AppTextStyles.magnusLabel),
+            ),
+            const SizedBox(height: 20),
+          ],
+        ),
+      );
+    } catch (_) {
+      return Padding(
+        padding: const EdgeInsets.all(20),
+        child: Text(item.text, style: AppTextStyles.bubbleText),
+      );
+    }
+  }
+
+  static Color _elfaliHatRengi(String renk) {
+    switch (renk.toLowerCase()) {
+      case 'red':       return const Color(0xFFEF4444);
+      case 'darkgreen': return const Color(0xFF22C55E);
+      case 'green':     return const Color(0xFF4ADE80);
+      case 'blue':      return const Color(0xFF60A5FA);
+      case 'orange':    return const Color(0xFFFB923C);
+      case 'brown':     return const Color(0xFFD97706);
+      case 'yellow':    return const Color(0xFFFBBF24);
+      case 'pink':      return const Color(0xFFF472B6);
+      case 'magenta':   return const Color(0xFFA855F7);
+      case 'cyan':      return const Color(0xFF22D3EE);
+      default:          return const Color(0xFF818CF8);
+    }
   }
 
   // ─── Tarot başlığı: başlık + tarih + kart görseli(leri) ─────────────────────

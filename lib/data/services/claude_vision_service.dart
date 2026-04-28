@@ -257,3 +257,69 @@ Kurallar:
 - sapka: bereli=bere, kapali=başörtü, sapkali=şapka, sapkasiz=başı açık
 - Bere ile başörtü farkını iyi ayırt et. Şeffaf değil, cinsiyetsiz bere → bereli.''';
 }
+
+// ── El Falı: el fotoğrafı doğrulama ──────────────────────────────────────────
+class ElAnalizi {
+  final bool isHand;
+  const ElAnalizi({required this.isHand});
+  static const ElAnalizi elDegil = ElAnalizi(isHand: false);
+}
+
+extension ClaudeVisionServiceElFali on ClaudeVisionService {
+  static Future<ElAnalizi> elFaliAnaliz(String imagePath) async {
+    final bytes = await File(imagePath).readAsBytes();
+    final base64Image = base64Encode(bytes);
+
+    final body = jsonEncode({
+      'model': 'claude-3-5-haiku-20241022',
+      'max_tokens': 50,
+      'system': 'Sen bir el fotoğrafı doğrulayıcısısın. Sadece JSON döndür.',
+      'messages': [
+        {
+          'role': 'user',
+          'content': [
+            {
+              'type': 'image',
+              'source': {
+                'type': 'base64',
+                'media_type': 'image/jpeg',
+                'data': base64Image,
+              },
+            },
+            {
+              'type': 'text',
+              'text': 'Bu fotoğrafta bir insan eli var mı? Sadece JSON döndür: {"el": true} veya {"el": false}',
+            },
+          ],
+        },
+      ],
+    });
+
+    try {
+      final response = await http.post(
+        Uri.parse('https://api.anthropic.com/v1/messages'),
+        headers: {
+          'x-api-key': kAnthropicApiKey,
+          'anthropic-version': '2023-06-01',
+          'content-type': 'application/json',
+        },
+        body: body,
+      );
+
+      if (response.statusCode != 200) return ElAnalizi.elDegil;
+
+      final decoded = jsonDecode(utf8.decode(response.bodyBytes)) as Map<String, dynamic>;
+      final content = (decoded['content'] as List).first as Map<String, dynamic>;
+      final text    = (content['text'] as String).trim();
+
+      final jsonMatch = RegExp(r'\{[^}]+\}').firstMatch(text);
+      if (jsonMatch == null) return ElAnalizi.elDegil;
+
+      final result = jsonDecode(jsonMatch.group(0)!) as Map<String, dynamic>;
+      final isHand = result['el'] == true;
+      return ElAnalizi(isHand: isHand);
+    } catch (_) {
+      return ElAnalizi.elDegil;
+    }
+  }
+}

@@ -521,4 +521,96 @@ class FortuneService {
       'Empatin bugün hem gücün hem de zayıflığın {{isim}}. Sınırlarını koru ama kalbini açık tut.',
     ],
   };
+
+  // ─── El Falı ─────────────────────────────────────────────────────────────
+  //
+  // SEÇİM MOTORU (assets/data/elfali.json)
+  // ──────────────────────────────────────
+  // 1. Genel Değerlendirme: profile koşullarına uyan metinlerden biri
+  // 2. Her hat için: koşula uyan metinlerden rastgele yüzde aralığı seç,
+  //    o aralıktaki metinlerden biri seç, aralık içinde rastgele yüzde üret
+  // Sonuç InboxItem.text'e JSON olarak kaydedilir.
+
+  Map<String, dynamic>? _elfaliData;
+
+  Future<void> _initElfali() async {
+    if (_elfaliData != null) return;
+    final raw = await rootBundle.loadString('assets/data/elfali.json');
+    _elfaliData = (jsonDecode(raw) as Map<String, dynamic>)['elfali'] as Map<String, dynamic>;
+  }
+
+  Future<InboxItem> generateElFali({required UserProfile profile}) async {
+    await _initElfali();
+    final vars = profile.toVariableMap();
+    final data = _elfaliData!;
+
+    // ── Genel Değerlendirme ──
+    final genelList = (data['genel_degerlendirme'] as List)
+        .where((t) => _matchesKosullar((t as Map)['kosullar'] as List, vars))
+        .toList();
+    genelList.shuffle(_rng);
+    final genelMetin = genelList.isNotEmpty
+        ? VariableReplacer.replace((genelList.first as Map)['metin'] as String, vars)
+        : '';
+
+    // ── Hatlar ──
+    final hatlarJson = <Map<String, dynamic>>[];
+    for (final hat in (data['hatlar'] as List)) {
+      final hatMap = hat as Map<String, dynamic>;
+      final hatId  = hatMap['id'] as String;
+      final hatAd  = hatMap['ad'] as String;
+      final renk   = hatMap['renk'] as String;
+      final metinler = (hatMap['metinler'] as List)
+          .where((t) => _matchesKosullar((t as Map)['kosullar'] as List, vars))
+          .toList();
+
+      if (metinler.isEmpty) continue;
+
+      // Rastgele yüzde aralığı seç
+      final ranges = <String>{};
+      for (final m in metinler) {
+        ranges.add('${(m as Map)['yuzde_min']}-${m['yuzde_max']}');
+      }
+      final seciliAralik = (ranges.toList())[_rng.nextInt(ranges.length)];
+      final parts = seciliAralik.split('-');
+      final yuzdeMin = int.parse(parts[0]);
+      final yuzdeMax = int.parse(parts[1]);
+      final aralikMetinler = metinler
+          .where((m) => (m as Map)['yuzde_min'] == yuzdeMin)
+          .toList();
+      aralikMetinler.shuffle(_rng);
+      final secilen = aralikMetinler.isNotEmpty ? aralikMetinler.first : metinler.first;
+
+      final metin = VariableReplacer.replace(
+          (secilen as Map)['metin'] as String, vars);
+      // Rastgele yüzde: aralık içinde
+      final yuzde = yuzdeMin + _rng.nextInt(yuzdeMax - yuzdeMin + 1);
+
+      hatlarJson.add({
+        'id': hatId,
+        'ad': hatAd,
+        'renk': renk,
+        'yuzde': yuzde,
+        'metin': metin,
+      });
+    }
+
+    final payload = jsonEncode({
+      'tip': 'elfali',
+      'genel': genelMetin,
+      'hatlar': hatlarJson,
+    });
+
+    final now = DateTime.now();
+    final unlockAt = now.add(Duration(minutes: 3 + _rng.nextInt(4))).toIso8601String();
+
+    return InboxItem(
+      id: _uuid.v4(),
+      title: 'El Falın Hazır',
+      text: payload,
+      date: now.toIso8601String(),
+      fortuneTypeKey: 'elfali',
+      unlockAt: unlockAt,
+    );
+  }
 }

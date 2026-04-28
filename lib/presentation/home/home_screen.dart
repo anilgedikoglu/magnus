@@ -494,6 +494,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             () => _onFortuneItemTap('durugoru', '/durugoru')),
         _MenuItem('Yüz Falı', 'assets/images/menu/yuzfali.png', 1,
             () => _pushWithAd('/yuz_fali_kimin')),
+        _MenuItem('El Falı', 'assets/images/menu/elfali.png', 1,
+            () => _pushWithAd('/el_fali')),
         _MenuItem('AstroTakvim', 'assets/images/aytakvimi.png',
             1, () => _pushWithAd('/astrotakvim')),
         _MenuItem('Biyoritim', 'assets/images/falbg/biyoritim.png',
@@ -1492,6 +1494,7 @@ class _FortuneCircleBadge extends StatelessWidget {
       case FortuneType.birthChart:  return locked ? '${base}dogum2.png'      : '${base}dogum.png';
       case FortuneType.numeroloji:  return locked ? '${base}numeroloji2.png' : '${base}numeroloji.png';
       case FortuneType.durugoru:    return locked ? '${base}durugoru2.png'   : '${base}durugoru.png';
+      case FortuneType.elfali:      return locked ? '${base}elfali2.png'      : '${base}elfali.png';
     }
   }
 }

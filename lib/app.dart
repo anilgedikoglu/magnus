@@ -35,6 +35,7 @@ import 'presentation/kehanet/tamua_screen.dart';
 import 'presentation/kehanet/yana_screen.dart';
 import 'presentation/kehanet/niyet_screen.dart';
 import 'presentation/kehanet/yuz_fali_kimin_screen.dart';
+import 'presentation/kehanet/el_fali_screen.dart';
 import 'presentation/kehanet/yuz_fali_foto_screen.dart';
 import 'presentation/durugoru/durugoru_screen.dart';
 
@@ -281,6 +282,11 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         builder: (_, state) =>
             YuzFaliFotoScreen(kimin: state.extra as String? ?? 'kullanici'),
+      ),
+      GoRoute(
+        path: '/el_fali',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const ElFaliScreen(),
       ),
       GoRoute(
         path: '/durugoru',

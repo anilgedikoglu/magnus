@@ -1,8 +1,9 @@
+import 'dart:convert';
 import 'package:hive_flutter/hive_flutter.dart';
 
 part 'inbox_item.g.dart';
 
-enum FortuneType { coffee, tarot, astrology, dream, motivation, general, birthChart, numeroloji, durugoru }
+enum FortuneType { coffee, tarot, astrology, dream, motivation, general, birthChart, numeroloji, durugoru, elfali }
 
 @HiveType(typeId: 1)
 class InboxItem extends HiveObject {
@@ -96,12 +97,23 @@ class InboxItem extends HiveObject {
         return FortuneType.numeroloji;
       case 'durugoru':
         return FortuneType.durugoru;
+      case 'elfali':
+        return FortuneType.elfali;
       default:
         return FortuneType.general;
     }
   }
 
   String get previewText {
+    // El Falı: JSON formatında saklanır, genel_degerlendirme metnini çıkar
+    if (fortuneType == FortuneType.elfali) {
+      try {
+        final data = (jsonDecode(text) as Map<String, dynamic>);
+        final genel = data['genel'] as String? ?? '';
+        final cleaned = genel.replaceAll('\n', ' ').trim();
+        return cleaned.length > 120 ? '${cleaned.substring(0, 120)}…' : cleaned;
+      } catch (_) {}
+    }
     // Unity <color=...>...</color> tag'larını kaldır, aralarındaki yazıyı koru
     final stripped = text.replaceAll(RegExp(r'<color=[^>]+>|<\/color>', caseSensitive: false), '');
     final cleaned = stripped.replaceAll('\n', ' ').trim();
@@ -144,6 +156,8 @@ class InboxItem extends HiveObject {
         return 'Numeroloji';
       case FortuneType.durugoru:
         return 'Durugörü';
+      case FortuneType.elfali:
+        return 'El Falı';
     }
   }
 

@@ -479,10 +479,12 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               ),
             ),
           ),
-          // Seçili dilim sarı ışık — fixed (çarkla dönmez), pointer konumunda
-          CustomPaint(
-            size: const Size(wheelSize, wheelSize),
-            painter: _SegmentGlowPainter(),
+          // Seçili dilim sarı ışık — fixed, touch geçirgen
+          IgnorePointer(
+            child: CustomPaint(
+              size: const Size(wheelSize, wheelSize),
+              painter: _SegmentGlowPainter(),
+            ),
           ),
           const Positioned(
             bottom: 0,

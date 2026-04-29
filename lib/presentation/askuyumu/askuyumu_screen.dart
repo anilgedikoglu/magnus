@@ -453,6 +453,41 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
           ],
         ),
       ),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+        child: GestureDetector(
+          onTap: () => context.pop(),
+          child: Container(
+            height: 44,
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.10),
+              borderRadius: BorderRadius.circular(23),
+              border: Border.all(
+                color: Colors.white.withValues(alpha: 0.25),
+                width: 1,
+              ),
+            ),
+            child: const Center(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.chevron_left_rounded,
+                      color: Colors.white, size: 20),
+                  SizedBox(width: 2),
+                  Text(
+                    'Geri Git',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
     ]);
   }
 

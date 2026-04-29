@@ -1568,32 +1568,28 @@ class _ArcProgressPainter extends CustomPainter {
     required this.strokeWidth,
   });
 
+  // Saat yönünde: Koyu Mavi → Camgöbeği → Mor → Pembe → Kırmızı → Sarımsı Beyaz → Camgöbeği
   static const _rainbow = [
-    Color(0xFF0055FF), // mavi
-    Color(0xFF0099FF),
-    Color(0xFF00CCFF), // cyan
-    Color(0xFF00FFCC),
-    Color(0xFF00FF66), // yeşil
-    Color(0xFF66FF00),
-    Color(0xFFCCFF00), // sarı
-    Color(0xFFFFDD00),
-    Color(0xFFFF9900), // turuncu
-    Color(0xFFFF5500),
-    Color(0xFFFF0000), // kırmızı
-    Color(0xFFCC0066),
-    Color(0xFF9900CC), // mor
-    Color(0xFFCC0066),
-    Color(0xFFFF0000), // kırmızı
-    Color(0xFFFF5500),
-    Color(0xFFFF9900), // turuncu
-    Color(0xFFFFDD00),
-    Color(0xFFCCFF00), // sarı
-    Color(0xFF66FF00),
-    Color(0xFF00FF66), // yeşil
-    Color(0xFF00FFCC),
-    Color(0xFF00CCFF), // cyan
-    Color(0xFF0099FF),
-    Color(0xFF0055FF), // mavi (kapanış)
+    Color(0xFF1A47FF), // koyu mavi
+    Color(0xFF0F6AFF),
+    Color(0xFF00AAFF),
+    Color(0xFF00E5FF), // camgöbeği/açık mavi
+    Color(0xFF3A88FF),
+    Color(0xFF6655FF),
+    Color(0xFF8A2EFF), // mor
+    Color(0xFFAA28E8),
+    Color(0xFFCC24D0),
+    Color(0xFFFF2EC7), // pembe
+    Color(0xFFFF2E90),
+    Color(0xFFFF3260),
+    Color(0xFFFF3B30), // kırmızı
+    Color(0xFFFF6020),
+    Color(0xFFFF9A10),
+    Color(0xFFFFD060),
+    Color(0xFFFFF2A6), // sarımsı beyaz
+    Color(0xFFD0F0B0),
+    Color(0xFF80EED8),
+    Color(0xFF00E5FF), // camgöbeği (kapanış)
   ];
 
   @override

@@ -660,18 +660,18 @@ class _WheelPainter extends CustomPainter {
         start, segAngle, true, borderPaint,
       );
 
-      // Görsel — sektörün ağırlık merkezine yerleştir (d = 2r/π ≈ 0.637r)
+      // Görsel — ağırlık merkezinden biraz daha dışa, 90° sola döndürülmüş
       final ikon = ikonler[bolme.key];
       final midAngle = start + segAngle / 2;
-      final imgDist  = r * 0.637;
+      final imgDist  = r * 0.72;
       final imgX     = imgDist * cos(midAngle);
       final imgY     = imgDist * sin(midAngle);
-      final imgSize  = r * 0.15; // %50 küçültüldü
+      final imgSize  = r * 0.15;
 
       if (ikon != null) {
         canvas.save();
         canvas.translate(imgX, imgY);
-        canvas.rotate(midAngle + pi / 2);
+        canvas.rotate(midAngle - pi / 2);
         final src = Rect.fromLTWH(0, 0, ikon.width.toDouble(), ikon.height.toDouble());
         final dst = Rect.fromCenter(center: Offset.zero, width: imgSize * 2, height: imgSize * 2);
         canvas.drawImageRect(ikon, src, dst, Paint());

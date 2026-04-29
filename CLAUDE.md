@@ -696,3 +696,109 @@ Kullanıcı "renkli magnus yazı görseli koy" dediğinde bu asset kullanılır.
 
 `assets/images/astrotakvim/transit_bg.jpg` (kaynak: `C:\Users\AG\Desktop\ASMdesktop\bg\Galaxy Papers\gp.jpg`)
 `_TabConfig` transit için `bgImage: 'assets/images/astrotakvim/transit_bg.jpg'`, alignment center.
+
+---
+
+## ElegantHourglass — Özel Kum Saati Widget'ı
+
+**Dosya:** `lib/core/widgets/elegant_hourglass.dart`
+
+Tüm `⏳`/`⌛` emoji'ler ve `Icons.hourglass_*` ikonları bu widget'larla değiştirildi.
+
+### Widget Sınıfları
+
+| Sınıf | Kullanım Yeri | Parametreler |
+|---|---|---|
+| `ElegantHourglass` | Genel — kum akış animasyonu | `size`, `color`, `animate` |
+| `PulsingHourglass` | coffee_screen, single_tarot_screen | `size`, `color` |
+| `SpinningHourglass` | numeroloji_screen | `size`, `color` |
+| `FlipHourglass` | Yedek (şu an kullanılmıyor) | `size`, `color`, `flipInterval` |
+
+### Hangi Ekranlarda Kullanılıyor
+
+- `ruya_yorumu_screen.dart` → `ElegantHourglass(size: 56, color: Colors.white)`
+- `iching_screen.dart` → `ElegantHourglass(size: 56, color: Color(0xFFD4AF37))`
+- `yuz_fali_foto_screen.dart` → `ElegantHourglass(size: 56, color: Colors.white)`
+- `parmak_surtme_screen.dart` → `ElegantHourglass(size: 36, color: Color(0xFFFF55FF))`
+- `faloya_screen.dart` → `ElegantHourglass(size: 52, color: Colors.white)`
+- `maganda_screen.dart` → `ElegantHourglass(size: 52, color: Colors.white)`
+- `acigercekler_screen.dart` → `ElegantHourglass(size: 72, color: Color(0xFFCC44FF))`
+- `dertortagi_screen.dart` → `ElegantHourglass(size: 72, color: Color(0xFFBB88FF))`
+- `durugoru_screen.dart` → `ElegantHourglass(size: 72, color: Colors.white)`
+- `askuyumu_screen.dart` → `ElegantHourglass(size: 56, color: Color(0xFFFF4466))`
+- `kadercarki_screen.dart` → `ElegantHourglass(size: 52, color: Color(0xFF4DBBCC))`
+- `coffee_screen.dart` → `PulsingHourglass(size: 48, color: Color(0xFFB8E0FF))`
+- `single_tarot_screen.dart` → `PulsingHourglass(size: 34, color: Color(0xFFB8E0FF))`
+- `numeroloji_screen.dart` → `SpinningHourglass(size: 64, color: Color(0xFFBBAAFF))`
+- `settings_screen.dart` → `ElegantHourglass(size: 20, color: Color(0xFF00CCFF))` (reset butonu)
+
+**Not:** `yana_screen.dart`'taki `⏳` kasıtlı bırakıldı — matrix rain efektinin karakter setinin parçası.
+
+---
+
+## I-Ching — Inbox Akışı (iching_screen.dart)
+
+**Ekran akışı:** I-Ching menü butonu → `iching_screen.dart` → 5s bekleme + `ElegantHourglass` → inbox'a item eklenir → `ichingSentProvider = true` → `context.go('/home')`
+
+**Inbox item:**
+- `fortuneTypeKey: 'iching'`
+- `unlockAt: now + 2 dakika`
+- No-repeat key: `iching_gosterilen`
+- JSON: `assets/data/iching.json`
+
+**Provider:** `ichingSentProvider` (StateProvider<bool>) → home_screen `_checkIchingSent()` metodunu tetikler.
+
+**Inbox detay:** `inbox_detail_screen.dart` → `_buildIChingContent()` → koyu kutu, altın border, ☯ dekorasyon.
+
+---
+
+## Inbox İkon Eşlemesi
+
+Tüm inbox ikonları `assets/images/inbox_icons/` altında:
+
+| FortuneType | Hazır (renkli) | Kilitli (siyahbeyaz) |
+|---|---|---|
+| coffee | kahve.png | kahve2.png |
+| tarot | tarot.png | tarot2.png |
+| astrology | astroloji.png | astroloji2.png |
+| motivation | motivasyon.png | motivasyon2.png |
+| dream | ruya.png | ruya2.png |
+| general | cark.png | cark2.png |
+| birthChart | dogum.png | dogum2.png |
+| numeroloji | numeroloji.png | numeroloji2.png |
+| durugoru | durugoru.png | durugoru2.png |
+| elfali | elfali.png | elfali2.png |
+| iching | iching.png (= niyet.png) | iching2.png (= ichingikon2.png) |
+
+Kaynak: `C:\src\magnus_app\assets\images\Yeniikonlar\` (renkli) ve `Yeniikonlar\siyahbeyaz\` (siyahbeyaz).
+
+---
+
+## Kader Kitabı Mistik Animasyon (kaderkitabi_screen.dart)
+
+- **Arka plan zoom:** `Transform.scale(scale: 1.2)` ile ortalı zoom
+- **Mistik animasyon:** `_mistikCtrl` 10s loop, `TweenSequence` ile `_darkOverlay`:
+  - 0-3s: kapkara (opacity 1.0)
+  - 3-6s: logaritmik açılış (`_SlowRevealCurve`) → opacity 0.0
+  - 6-7s: tam görünür
+  - 7-10s: logaritmik kapanış (`_FastCoverCurve`) → opacity 1.0
+- **`|| ` temizleme:** `.replaceAll(RegExp(r'\s*\|\|\s*'), ' ').trim()`
+- **Geri Git butonu** altta
+
+---
+
+## Rüya Yorumu Inbox Detayı (inbox_detail_screen.dart)
+
+`FortuneType.dream` → `_buildDreamContent(context)`:
+- Üstte `assets/images/ruyaozel.png` logosu (ortalı)
+- Metni mor çerçeveli kutu içinde `RichTextParser.build()`
+- Alt footer: `magnusYaziLogoRenkli.PNG` (height: 110)
+- En altta `_buildBackButton(context)` ("< Geri Git")
+
+---
+
+## Hazırlanma Çemberi Gradyan (home_screen.dart)
+
+`_ArcProgressPainter._rainbow` — 20 renk durağı, neon paleti:
+`Koyu Mavi(#1A47FF) → Camgöbeği(#00E5FF) → Mor(#8A2EFF) → Pembe(#FF2EC7) → Kırmızı(#FF3B30) → Sarımsı Beyaz(#FFF2A6) → Camgöbeği(#00E5FF)` ve devamı.
+`isReady` ise solid yeşil `0xFF44FF88`.

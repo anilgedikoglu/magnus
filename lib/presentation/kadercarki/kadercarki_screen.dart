@@ -353,11 +353,14 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       _buildHeader(),
       Expanded(child: Center(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          Image.asset(
-            bolme.ikonAsset,
-            width: 90,
-            height: 90,
-            errorBuilder: (_, __, ___) => const SizedBox(),
+          Transform.rotate(
+            angle: -pi / 2,
+            child: Image.asset(
+              bolme.ikonAsset,
+              width: 90,
+              height: 90,
+              errorBuilder: (_, __, ___) => const SizedBox(),
+            ),
           ),
           const SizedBox(height: 28),
           Text(
@@ -510,8 +513,11 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       _buildHeader(),
       Expanded(child: Center(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          Image.asset(bolme.ikonAsset, width: 80, height: 80,
-              errorBuilder: (_, __, ___) => const SizedBox()),
+          Transform.rotate(
+            angle: -pi / 2,
+            child: Image.asset(bolme.ikonAsset, width: 80, height: 80,
+                errorBuilder: (_, __, ___) => const SizedBox()),
+          ),
           const SizedBox(height: 24),
           _HourglassWidget(),
           const SizedBox(height: 20),
@@ -533,10 +539,13 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       const SizedBox(height: 20),
 
       // İkon — üst orta
-      Image.asset(
-        bolme.ikonAsset,
-        width: 72, height: 72,
-        errorBuilder: (_, __, ___) => const SizedBox(height: 72),
+      Transform.rotate(
+        angle: -pi / 2,
+        child: Image.asset(
+          bolme.ikonAsset,
+          width: 72, height: 72,
+          errorBuilder: (_, __, ___) => const SizedBox(height: 72),
+        ),
       ),
       const SizedBox(height: 10),
 

@@ -10,6 +10,15 @@ import 'package:flutter/material.dart';
 class RichTextParser {
   static final _tag = RegExp(r'<color=(#?[0-9a-zA-Z]+)>(.*?)<\/color>', dotAll: true);
 
+  /// <b>...</b> ve <i>...</i> gibi bilinmeyen Unity etiketlerini siler.
+  static String _stripUnknownTags(String text) {
+    return text
+        .replaceAll(RegExp(r'<b>', caseSensitive: false), '')
+        .replaceAll(RegExp(r'<\/b>', caseSensitive: false), '')
+        .replaceAll(RegExp(r'<i>', caseSensitive: false), '')
+        .replaceAll(RegExp(r'<\/i>', caseSensitive: false), '');
+  }
+
   static Color _parseColor(String name) {
     final n = name.toLowerCase().trim();
     if (n.startsWith('#')) {
@@ -35,13 +44,15 @@ class RichTextParser {
   }
 
   /// Metinde color etiketi varsa RichText, yoksa sade Text döner.
+  /// <b>, <i> gibi bilinmeyen Unity etiketleri otomatik temizlenir.
   static Widget build(String text, {required TextStyle style, TextAlign textAlign = TextAlign.start}) {
-    if (!text.contains('<color=')) {
-      return Text(text, style: style, textAlign: textAlign);
+    final cleaned = _stripUnknownTags(text);
+    if (!cleaned.contains('<color=')) {
+      return Text(cleaned, style: style, textAlign: textAlign);
     }
     return RichText(
       textAlign: textAlign,
-      text: TextSpan(children: _parse(text, style)),
+      text: TextSpan(children: _parse(cleaned, style)),
     );
   }
 

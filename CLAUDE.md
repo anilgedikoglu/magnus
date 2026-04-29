@@ -10,6 +10,116 @@ Yeni bir session açıldığında, kullanıcı herhangi bir şey demeden önce:
 
 Bunu yapmadan hiçbir işe başlama.
 
+## 📋 FAL TÜRLERİ — DAVRANIŞ KURALLARI (DEĞİŞTİRME)
+
+Her fal türünün metin seçim davranışı aşağıdaki tabloda tanımlıdır.
+**Yeni geliştirme yaparken bu tabloyu kontrol et. Kural değişmedikçe dokunma.**
+
+| Fal Türü | Günlük Tutarlılık | No-Repeat | Günlük Limit |
+|---|---|---|---|
+| **Günlük Astroloji** | ✅ Evet — gün boyunca aynı 10 metin (bölüm başına 1) | ✅ Evet | ❌ Yok |
+| **Biyoritim** | ✅ Evet — aynı gün aynı metin | ✅ Evet | ❌ Yok |
+| **Doğum Haritası** | ✅ Evet — aynı gün aynı metin | ✅ Evet | ❌ Yok |
+| **AstroTakvim** | ✅ Evet — seçilen gün + sekmeye göre deterministik (index mod) | ❌ Yok | ❌ Yok |
+| **Motivasyon** | ❌ Yok — her açılışta bir sonraki metin | ✅ Evet | ❌ Yok |
+| **Olumlama** | ❌ Yok — her açılışta bir sonraki metin | ✅ Evet | ❌ Yok |
+| **Özlü Sözler** | ❌ Yok — her açılışta bir sonraki metin | ✅ Evet | ❌ Yok |
+| **Acı Gerçekler** | ❌ Yok — her açılışta bir sonraki metin | ✅ Evet | ❌ Yok |
+| **Kader Kitabı** | ❌ Yok — her açılışta bir sonraki metin | ✅ Evet | ❌ Yok |
+| **Kahve Falı** | — (AI üretimi) | — | ✅ Günde 1 |
+| **Tarot** | — (AI üretimi) | — | ✅ Günde 1 |
+| **Durugörü** | — (AI üretimi) | — | ✅ Günde 1 |
+| **Dert Ortağı** | — (AI üretimi) | — | ✅ Günde 1 |
+
+---
+
+## ⚠️⚠️⚠️ NO-REPEAT KURALI — TÜM FAL TÜRLERİ İÇİN ZORUNLU ⚠️⚠️⚠️
+
+> Bu kural istisnasız her fal türüne uygulanır. "Shuffle + first" yöntemi YASAKTIR.
+
+### Kural
+
+Bir metin kullanıcıya **bir kez gösterildikten sonra**, o kullanıcıya **gösterilebilecek tüm diğer uygun metinler bitene kadar** bir daha gösterilemez.
+
+**"Uygun metin" tanımı:** Kullanıcının `kosullar` filtresinden geçen metinler.
+- Kullanıcı evliyse → sadece `medeni_durum=evli` veya koşulsuz metinler havuza girer.
+- Kamu sektörüyse → sadece `meslek=kamusektoru` veya koşulsuz metinler havuza girer.
+- Tüm koşulları karşılayan metinler tükenmeden, önceden gösterilmiş bir metin tekrar seçilemez.
+
+### Yasak Yöntem ❌
+
+```dart
+// BU YANLIŞ — her açılışta aynı metin gelebilir:
+list.shuffle();
+return list.first;
+```
+
+### Doğru Yöntem ✅
+
+```dart
+final shownKey = '<tur>_gosterilen';
+final shown = prefs.getStringList(shownKey) ?? [];
+
+// Gösterilmemiş uygun metinleri filtrele
+var available = pool.where((e) => !shown.contains('${e.id}')).toList();
+
+// Hepsi bitti → üst üste yasağını koruyarak sıfırla
+if (available.isEmpty) {
+  final lastId = shown.isNotEmpty ? shown.last : null;
+  final resetShown = lastId != null ? [lastId] : <String>[];
+  await prefs.setStringList(shownKey, resetShown);
+  available = pool.where((e) => e.id.toString() != lastId).toList();
+  if (available.isEmpty) available = List.from(pool); // tek metin varsa zorunlu tekrar
+}
+
+available.shuffle();
+final pick = available.first;
+
+// Seçimi kaydet
+final updatedShown = prefs.getStringList(shownKey) ?? [];
+updatedShown.add('${pick.id}');
+await prefs.setStringList(shownKey, updatedShown);
+```
+
+### Günlük Tutarlılık İstisnası
+
+Günlük tutarlılık gereken türlerde (Astroloji, Biyoritim, Doğum Haritası) **aynı gün no-repeat seçimi yapılmaz** — o gün için kaydedilmiş metin doğrudan gösterilir. No-repeat seçimi sadece **yeni bir gün** açıldığında tetiklenir.
+
+```dart
+final todayStr = '${now.year}-${now.month.toString().padLeft(2,'0')}-${now.day.toString().padLeft(2,'0')}';
+final savedDate = prefs.getString('<tur>_tarih');
+final savedId   = prefs.getInt('<tur>_bugun_id');
+
+if (savedDate == todayStr && savedId != null) {
+  // Aynı gün → cache'ten yükle, no-repeat çalıştırma
+  pick = pool.firstWhere((e) => e.id == savedId, orElse: () => pool.first);
+} else {
+  // Yeni gün → yukarıdaki no-repeat mantığını çalıştır, sonra tarih+id kaydet
+  await prefs.setString('<tur>_tarih', todayStr);
+  await prefs.setInt('<tur>_bugun_id', pick.id);
+}
+```
+
+---
+
+### Günlük Tutarlılık Uygulama Şablonu (özet)
+
+```dart
+final todayStr = '${now.year}-${now.month.toString().padLeft(2,'0')}-${now.day.toString().padLeft(2,'0')}';
+final savedDate = prefs.getString('<tur>_tarih');
+final savedId   = prefs.getInt('<tur>_bugun_id');
+
+if (savedDate == todayStr && savedId != null) {
+  pick = pool.firstWhere((e) => e.id == savedId, orElse: () => pool.first);
+} else {
+  // no-repeat mantığıyla seç...
+  await prefs.setString('<tur>_tarih', todayStr);
+  await prefs.setInt('<tur>_bugun_id', pick.id);
+}
+```
+
+---
+
 ## ⚠️⚠️⚠️ COLOR TAG RENDER KURALI — DEĞİŞMEZ ⚠️⚠️⚠️
 
 Unity metinleri `<color=yellow>metin</color>` veya `<color=#RRGGBB>metin</color>` şeklinde renk tag'ları içerebilir.
@@ -486,3 +596,103 @@ JSON yapısı **bölüm anahtarlıdır** — her klasör bir bölüm anahtarı o
 - İndeks (CCW burç yönü): `((6 - ((_wheelAngle - _kSnapOffset) / (pi/6)).round()) % 12 + 12) % 12`
 - Sarı segment glow: `_SegmentGlowPainter` → `IgnorePointer` ile sarılı (dokunuşu engellemez)
 - Alt Geri Git butonu: `Column` içinde `Expanded` dışında, `padding: fromLTRB(20,0,20,20)`
+- **Highlight çark:** `assets/images/burclar_wheel_highlight.png` (kaynak: `C:\Magnus\Assets\Images\burclarWheelHiglight512.png`)
+  - Normal çarkın üstüne, aynı `_wheelAngle` ile döner
+  - `_TopSegmentClipper` (dosya sonunda) sabit `pi/2 - pi/12 … pi/2 + pi/12` aralığını (alt imleç konumu) açık bırakır
+  - Seçili burcun sembolü ışık yanıyor efekti verir — index hesabı gerekmez
+
+---
+
+## Kahve Falı — JSON Anahtar Eşlemesi (fortune_service.dart)
+
+`_initKahve()` metodu JSON'u yüklerken `decoded[_kahveJsonKeys[bolum]!]` kullanır.
+`_kahveJsonKeys` map'i:
+```dart
+static const _kahveJsonKeys = {
+  'kahve_akarsilama': 'karsilamalar',
+  'kahve_giris':      'girisler',
+  'kahve_baglama':    'baglamalar',
+  'kahve_gelisme':    'gelismeler',
+  'kahve_sonuc':      'sonuclar',
+  'kahve_ugurlama':   'ugurlamalar',
+};
+```
+**Kritik:** `decoded[bolum]` değil `decoded[_kahveJsonKeys[bolum]!]` — aksi hâlde null cast hatası `.catchError` tarafından yutulur ve inbox'a hiçbir şey düşmez.
+
+---
+
+## Kahve Falı — Gönderiliyor Ekranı (coffee_screen.dart)
+
+`_sendFortune()` artık `showDialog` (tam ekran overlay) kullanmıyor.
+`_sending` bool state ile fincanın **altında** inline gösterim:
+- `setState(() => _sending = true)` → 4s bekle → `context.go('/home')`
+- `_buildSendingIndicator()` metodu: kum saati + "Falın gönderiliyor..." fincan/foto altına render edilir
+- `_SendingOverlay` sınıfı dosyada kalmaya devam ediyor ama artık çağrılmıyor (silinebilir)
+
+---
+
+## Admin Bypass — Onboarding (chat_screen.dart)
+
+İsim alanına `godag` yazılınca onboarding atlanır, admin profili otomatik doldurulur:
+- İsim: Anıl, Soyisim: Gedikoğlu, Doğum: 1983-10-14, Şehir: Ankara, Burç: Terazi
+- Meslek: kamusektoru, Medeni: evli, Saat: 13:30
+- `_adminBypass()` → `userProfileProvider.notifier.save(adminProfile)` → `context.go('/home')`
+
+---
+
+## UserProfile — lastName Alanı (user_profile.dart + user_profile.g.dart)
+
+`@HiveField(15) String? lastName` eklendi.
+`toVariableMap()` → `'soyisim': lastName ?? ''`
+`user_profile.g.dart` elle güncellendi: `read` + `write` metodlarında field 15 mevcut.
+**Not:** `.g.dart` kod üretimi çalıştırılmadı, manuel güncellendi — build_runner çalıştırılırsa field sayısı kontrol edilmeli.
+
+---
+
+## Chat Ekranı AppBar — Kelebek Logo (chat_screen.dart)
+
+AppBar'da "MAGNUS" yazısı kaldırıldı, yerine:
+```dart
+title: ClipOval(child: Image.asset('assets/images/magnusappicon_splash.png', height: 40, width: 40, fit: BoxFit.cover))
+centerTitle: true
+```
+Kaynak görsel: `C:\Magnus\Assets\Images\magnusappicon_splash.png` (renkli kelebek, siyah arka plan)
+
+---
+
+## Renkli Magnus Yazı Logosu
+
+Kaynak: `C:\Magnus\Assets\Images\magnusYaziLogorenkli.png`
+Flutter asset: `assets/images/magnusYaziLogoRenkli.PNG`
+Kullanıcı "renkli magnus yazı görseli koy" dediğinde bu asset kullanılır.
+
+---
+
+## Hazırlanma Baloncukları — Rainbow Gradient (home_screen.dart)
+
+`_ArcProgressPainter` → `gradientColors` parametresi eklendi.
+`_FortuneCircleBadge`'de `isLocked` ise `_ArcProgressPainter._rainbow` geçilir:
+- Renk sırası: mavi→cyan→yeşil→sarı→turuncu→kırmızı→mor→kırmızı→turuncu→sarı→yeşil→cyan→mavi (palindrom)
+- `SweepGradient` başlangıç: `pi/2 - segAngle/2` (alt)
+- `isReady` ise solid yeşil (`0xFF44FF88`)
+
+---
+
+## Durugörü Arka Planı (durugoru_screen.dart)
+
+`assets/images/durugoru_bg.png` (kaynak: `C:\Magnus\Assets\Images\splashbackground.png`)
+Önceki: `assets/images/falbg/durugoru.png`
+
+---
+
+## Olumlama — RichTextParser (olumlama_screen.dart)
+
+`Text(metin)` yerine `RichTextParser.build(metin, style: ...)` kullanılıyor.
+`RichTextParser` artık `<b>`, `</b>`, `<i>`, `</i>` tag'larını da temizliyor (`_stripUnknownTags`).
+
+---
+
+## AstroTakvim Transit Sekmesi Arka Planı
+
+`assets/images/astrotakvim/transit_bg.jpg` (kaynak: `C:\Users\AG\Desktop\ASMdesktop\bg\Galaxy Papers\gp.jpg`)
+`_TabConfig` transit için `bgImage: 'assets/images/astrotakvim/transit_bg.jpg'`, alignment center.

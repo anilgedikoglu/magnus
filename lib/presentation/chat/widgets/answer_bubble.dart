@@ -257,8 +257,9 @@ class _LegalButton extends StatelessWidget {
       child: Container(
         width: double.infinity,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 13),
+        margin: const EdgeInsets.only(bottom: 2),
         decoration: BoxDecoration(
-          color: Colors.transparent,
+          color: AppColors.answerBubbleFill,
           borderRadius: BorderRadius.circular(24),
           border: Border.all(
             color: AppColors.answerBubbleBorder,

@@ -148,7 +148,7 @@ const _tabs = [
     color: Color(0xFF00E5FF),
     dataKey: 'transit',
     extraKey: 'transit_tarihli',
-    bgImage: 'assets/images/astrotakvim/astrotakvim_bg4.png', // güneş sistemi
+    bgImage: 'assets/images/astrotakvim/transit_bg.jpg',
   ),
   _TabConfig(
     label: 'MANEVİYAT',
@@ -417,9 +417,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                 tab.bgImage,
                 fit: BoxFit.cover,
                 // Transit: sol kenara hizala — sağ taraf kırpılır, ekranı doldurur
-                alignment: tab.dataKey == 'transit'
-                    ? Alignment.centerLeft
-                    : Alignment.center,
+                alignment: Alignment.center,
                 filterQuality: FilterQuality.high,
                 errorBuilder: (_, __, ___) =>
                     Container(color: const Color(0xFF0A0A1A)),

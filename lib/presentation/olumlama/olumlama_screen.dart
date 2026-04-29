@@ -22,6 +22,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -488,7 +489,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
                   ),
                 ],
               ),
-              child: Text(
+              child: RichTextParser.build(
                 metin,
                 textAlign: TextAlign.center,
                 style: const TextStyle(

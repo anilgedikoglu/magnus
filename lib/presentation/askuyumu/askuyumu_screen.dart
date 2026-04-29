@@ -514,6 +514,21 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               ),
             ),
           ),
+          // Highlight çarkı — çarkla aynı dönüşte, sadece üstteki dilim kliplenir
+          IgnorePointer(
+            child: ClipPath(
+              clipper: const _TopSegmentClipper(wheelSize: wheelSize),
+              child: Transform.rotate(
+                angle: _wheelAngle,
+                child: Image.asset(
+                  'assets/images/burclar_wheel_highlight.png',
+                  width: wheelSize,
+                  height: wheelSize,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ),
           // Seçili dilim sarı ışık — fixed, touch geçirgen
           IgnorePointer(
             child: CustomPaint(
@@ -841,3 +856,31 @@ class _HourglassWidgetState extends State<_HourglassWidget>
     );
   }
 }
+
+// ─── Seçili dilim kliplayıcısı — sabit, üstteki 1/12 dilimi açar ─────────────
+
+class _TopSegmentClipper extends CustomClipper<Path> {
+  final double wheelSize;
+  const _TopSegmentClipper({required this.wheelSize});
+
+  @override
+  Path getClip(Size size) {
+    final center = Offset(wheelSize / 2, wheelSize / 2);
+    final radius = wheelSize / 2;
+    const segAngle = pi / 6; // 30° = 1/12 çark
+    const startAngle = pi / 2 - segAngle / 2; // alt merkez (imleç konumu)
+    return Path()
+      ..moveTo(center.dx, center.dy)
+      ..arcTo(
+        Rect.fromCircle(center: center, radius: radius),
+        startAngle,
+        segAngle,
+        false,
+      )
+      ..close();
+  }
+
+  @override
+  bool shouldReclip(_TopSegmentClipper old) => old.wheelSize != wheelSize;
+}
+

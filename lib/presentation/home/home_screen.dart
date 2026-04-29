@@ -1444,7 +1444,8 @@ class _FortuneCircleBadge extends StatelessWidget {
             size: Size(size, size),
             painter: _ArcProgressPainter(
               progress: progress,
-              color: isReady ? const Color(0xFF44FF88) : accent,
+              color: const Color(0xFF44FF88),
+              gradientColors: isLocked ? _ArcProgressPainter._rainbow : null,
               trackColor: Colors.white.withValues(alpha: 0.15),
               strokeWidth: 3.0,
             ),
@@ -1521,17 +1522,47 @@ class _FortuneCircleBadge extends StatelessWidget {
 // ─────────────────────────────────────────────────────────────────────────────
 
 class _ArcProgressPainter extends CustomPainter {
-  final double progress;   // 0.0 → 1.0
+  final double progress;
   final Color color;
+  final List<Color>? gradientColors;
   final Color trackColor;
   final double strokeWidth;
 
   const _ArcProgressPainter({
     required this.progress,
     required this.color,
+    this.gradientColors,
     required this.trackColor,
     required this.strokeWidth,
   });
+
+  static const _rainbow = [
+    Color(0xFF0055FF), // mavi
+    Color(0xFF0099FF),
+    Color(0xFF00CCFF), // cyan
+    Color(0xFF00FFCC),
+    Color(0xFF00FF66), // yeşil
+    Color(0xFF66FF00),
+    Color(0xFFCCFF00), // sarı
+    Color(0xFFFFDD00),
+    Color(0xFFFF9900), // turuncu
+    Color(0xFFFF5500),
+    Color(0xFFFF0000), // kırmızı
+    Color(0xFFCC0066),
+    Color(0xFF9900CC), // mor
+    Color(0xFFCC0066),
+    Color(0xFFFF0000), // kırmızı
+    Color(0xFFFF5500),
+    Color(0xFFFF9900), // turuncu
+    Color(0xFFFFDD00),
+    Color(0xFFCCFF00), // sarı
+    Color(0xFF66FF00),
+    Color(0xFF00FF66), // yeşil
+    Color(0xFF00FFCC),
+    Color(0xFF00CCFF), // cyan
+    Color(0xFF0099FF),
+    Color(0xFF0055FF), // mavi (kapanış)
+  ];
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -1539,24 +1570,34 @@ class _ArcProgressPainter extends CustomPainter {
     final radius = (size.width - strokeWidth) / 2;
     final rect   = Rect.fromCircle(center: center, radius: radius);
 
-    // Arkaplan halkası
     final trackPaint = Paint()
-      ..color   = trackColor
-      ..style   = PaintingStyle.stroke
+      ..color       = trackColor
+      ..style       = PaintingStyle.stroke
       ..strokeWidth = strokeWidth
       ..strokeCap   = StrokeCap.round;
     canvas.drawCircle(center, radius, trackPaint);
 
-    // İlerleme yayı — saatyönünde, tepeden başlar (-π/2)
     if (progress > 0) {
+      const startAngle = -1.5707963;
       final arcPaint = Paint()
-        ..color   = color
-        ..style   = PaintingStyle.stroke
+        ..style       = PaintingStyle.stroke
         ..strokeWidth = strokeWidth
         ..strokeCap   = StrokeCap.round;
+
+      if (gradientColors == null) {
+        arcPaint.color = color;
+      } else {
+        arcPaint.shader = SweepGradient(
+          center: Alignment.center,
+          startAngle: startAngle,
+          endAngle: startAngle + 2 * 3.1415926,
+          colors: gradientColors!,
+        ).createShader(rect);
+      }
+      // shader zaten set edildiyse renk ayarına gerek yok
       canvas.drawArc(
         rect,
-        -1.5707963, // -π/2 (saat 12)
+        startAngle,
         2 * 3.1415926 * progress,
         false,
         arcPaint,

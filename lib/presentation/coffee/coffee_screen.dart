@@ -39,6 +39,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   final List<String?> _photos = [null, null, null];
   String? _fincanImage;
   bool _kontrolEdiliyor = false;
+  bool _sending = false;
 
   static const _fincanImages = [
     'assets/images/kahve/Fincan1.png',
@@ -131,14 +132,10 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       photoPath3: _photos[2],
     ).then((item) => inboxNotifier.addItem(item)).catchError((_) {});
 
-    // 4 saniye kum saati overlay göster
+    // 4 saniye fincanın altında kum saati göster
     if (!mounted) return;
-    await showDialog<void>(
-      context: context,
-      barrierDismissible: false,
-      barrierColor: Colors.black.withValues(alpha: 0.75),
-      builder: (_) => const _SendingOverlay(),
-    );
+    setState(() => _sending = true);
+    await Future.delayed(const Duration(seconds: 4));
 
     if (!mounted) return;
     ref.read(kahveSentProvider.notifier).state = true;
@@ -165,10 +162,18 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
                         _mode == _InputMode.dosyadan) ...[
                       const SizedBox(height: 28),
                       _buildPhotoSlots(),
+                      if (_sending) ...[
+                        const SizedBox(height: 28),
+                        _buildSendingIndicator(),
+                      ],
                     ] else if (_mode == _InputMode.yerimeIc &&
                         _fincanImage != null) ...[
                       const SizedBox(height: 28),
                       _buildFincanImage(),
+                      if (_sending) ...[
+                        const SizedBox(height: 28),
+                        _buildSendingIndicator(),
+                      ],
                     ],
                   ],
                 ),
@@ -337,6 +342,24 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
         clipBehavior: Clip.antiAlias,
         child: Image.asset(_fincanImage!, fit: BoxFit.contain),
       ),
+    );
+  }
+
+  Widget _buildSendingIndicator() {
+    return const Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        _PulsingHourglass(),
+        SizedBox(height: 12),
+        Text(
+          'Falın gönderiliyor...',
+          style: TextStyle(
+            color: Color(0xFFB8E0FF),
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ],
     );
   }
 

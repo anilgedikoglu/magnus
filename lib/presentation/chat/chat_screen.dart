@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
@@ -116,15 +115,16 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   AppBar _buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.navBarBackground,
-      title: Text(
-        'MAGNUS',
-        style: GoogleFonts.cinzel(
-          fontSize: 20,
-          fontWeight: FontWeight.w700,
-          color: AppColors.navBarActive,
-          letterSpacing: 4,
+      title: ClipOval(
+        child: Image.asset(
+          'assets/images/magnusappicon_splash.png',
+          height: 40,
+          width: 40,
+          fit: BoxFit.cover,
+          filterQuality: FilterQuality.high,
         ),
       ),
+      centerTitle: true,
       actions: const [],
     );
   }
@@ -235,13 +235,37 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     );
   }
 
+  Future<void> _adminBypass() async {
+    final adminProfile = UserProfile(
+      name: 'Anıl',
+      lastName: 'Gedikoğlu',
+      age: 42,
+      gender: 'erkek',
+      job: 'kamusektoru',
+      maritalStatus: 'evli',
+      birthDate: '1983-10-14',
+      birthCity: 'Ankara',
+      zodiacSign: 'Terazi',
+      birthTime: '13:30',
+      onboardingComplete: true,
+    );
+    await ref.read(userProfileProvider.notifier).save(adminProfile);
+    if (mounted) context.go('/home');
+  }
+
   void _submitText(String value) {
     final trimmed = value.trim();
     if (trimmed.isEmpty) return;
     _textController.clear();
 
-    // Save to profile if it's the name or age
+    // Admin bypass
     final action = ref.read(chatProvider).pendingAction;
+    if (action == 'input_name' && trimmed.toLowerCase() == 'godag') {
+      _adminBypass();
+      return;
+    }
+
+    // Save to profile if it's the name or age
     if (action == 'input_name') {
       ref.read(userProfileProvider.notifier).update(
             (p) => UserProfile(

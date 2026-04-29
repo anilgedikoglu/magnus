@@ -32,13 +32,14 @@ class UserProfileAdapter extends TypeAdapter<UserProfile> {
       planet: fields[12] as String?,
       profilePicIndex: fields[13] as int?,
       customPhotoPath: fields[14] as String?,
+      lastName: fields[15] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, UserProfile obj) {
     writer
-      ..writeByte(15)
+      ..writeByte(16)
       ..writeByte(0)
       ..write(obj.name)
       ..writeByte(1)
@@ -68,7 +69,9 @@ class UserProfileAdapter extends TypeAdapter<UserProfile> {
       ..writeByte(13)
       ..write(obj.profilePicIndex)
       ..writeByte(14)
-      ..write(obj.customPhotoPath);
+      ..write(obj.customPhotoPath)
+      ..writeByte(15)
+      ..write(obj.lastName);
   }
 
   @override

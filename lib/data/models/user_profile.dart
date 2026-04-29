@@ -80,6 +80,9 @@ class UserProfile extends HiveObject {
   @HiveField(14)
   String? customPhotoPath; // kamera/galeriden seçilen fotoğraf yolu
 
+  @HiveField(15)
+  String? lastName;
+
   UserProfile({
     required this.name,
     required this.age,
@@ -96,6 +99,7 @@ class UserProfile extends HiveObject {
     this.planet,
     this.profilePicIndex,
     this.customPhotoPath,
+    this.lastName,
   });
 
   // ─── Variable map for {{variable}} replacement ────────────────────────────
@@ -136,7 +140,7 @@ class UserProfile extends HiveObject {
       // ── Lokasyon ─────────────────────────────────────────────────────────
       'kullanici sehri': birthCity ?? '',
       // ── Doldurulamayan (veri yok) — boş bırakılır ─────────────────────────
-      'soyisim': '',
+      'soyisim': lastName ?? '',
       'fiziki': '',
       'ayburcu': '',
       'yukselen': '',

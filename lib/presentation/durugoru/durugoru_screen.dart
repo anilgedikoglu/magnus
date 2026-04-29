@@ -207,7 +207,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
         fit: StackFit.expand,
         children: [
           Image.asset(
-            'assets/images/falbg/durugoru.png',
+            'assets/images/durugoru_bg.png',
             fit: BoxFit.cover,
             alignment: Alignment.center,
             filterQuality: FilterQuality.high,

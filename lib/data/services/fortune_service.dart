@@ -29,6 +29,15 @@ class FortuneService {
     'kahve_sonuc',
     'kahve_ugurlama',
   ];
+  // JSON dosyasındaki kök anahtar adları (dosya adıyla eşleşmiyor)
+  static const _kahveJsonKeys = {
+    'kahve_akarsilama': 'karsilamalar',
+    'kahve_giris':      'girisler',
+    'kahve_baglama':    'baglamalar',
+    'kahve_gelisme':    'gelismeler',
+    'kahve_sonuc':      'sonuclar',
+    'kahve_ugurlama':   'ugurlamalar',
+  };
   final Map<String, List<dynamic>> _kahveData = {};
   bool _kahveLoaded = false;
 
@@ -87,7 +96,7 @@ class FortuneService {
     for (final bolum in _kahveBolumler) {
       final json = await rootBundle.loadString('assets/data/$bolum.json');
       final decoded = jsonDecode(json) as Map<String, dynamic>;
-      _kahveData[bolum] = decoded[bolum] as List;
+      _kahveData[bolum] = decoded[_kahveJsonKeys[bolum]!] as List;
     }
     _kahveLoaded = true;
   }

@@ -97,26 +97,47 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
       data[key] = list;
     }
 
-    final prefs   = await SharedPreferences.getInstance();
+    final prefs    = await SharedPreferences.getInstance();
+    final now      = DateTime.now();
+    final todayStr = '${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
     final selected = <_SelectedText>[];
 
     for (final sec in _sections) {
       final pool = data[sec.key] ?? [];
       if (pool.isEmpty) continue;
 
-      final prefKey = 'astroloji_${sec.key}_gosterilen';
-      final shown   = prefs.getStringList(prefKey) ?? [];
+      final dateKey  = 'astroloji_${sec.key}_tarih';
+      final idKey    = 'astroloji_${sec.key}_bugun_id';
+      final shownKey = 'astroloji_${sec.key}_gosterilen';
 
-      var available = pool.where((e) => !shown.contains('${e.id}')).toList();
-      if (available.isEmpty) {
-        await prefs.remove(prefKey);
-        available = List.from(pool);
+      final savedDate = prefs.getString(dateKey);
+      final savedId   = prefs.getInt(idKey);
+
+      _AstroEntry pick;
+
+      if (savedDate == todayStr && savedId != null) {
+        // Aynı gün → bugün seçilen metni göster
+        pick = pool.firstWhere((e) => e.id == savedId, orElse: () => pool.first);
+      } else {
+        // Farklı gün → no-repeat mantığıyla yeni metin seç
+        final shown = prefs.getStringList(shownKey) ?? [];
+        var available = pool.where((e) => !shown.contains('${e.id}')).toList();
+        if (available.isEmpty) {
+          // Tüm metinler gösterildi; üst üste yasağını koru
+          final lastId = shown.isNotEmpty ? shown.last : null;
+          final resetShown = lastId != null ? [lastId] : <String>[];
+          await prefs.setStringList(shownKey, resetShown);
+          available = pool.where((e) => e.id.toString() != lastId).toList();
+          if (available.isEmpty) available = List.from(pool);
+        }
+        available.shuffle(_rng);
+        pick = available.first;
+        final updatedShown = prefs.getStringList(shownKey) ?? [];
+        updatedShown.add('${pick.id}');
+        await prefs.setStringList(shownKey, updatedShown);
+        await prefs.setString(dateKey, todayStr);
+        await prefs.setInt(idKey, pick.id);
       }
-
-      available.shuffle(_rng);
-      final pick = available.first;
-      shown.add('${pick.id}');
-      await prefs.setStringList(prefKey, shown);
 
       selected.add(_SelectedText(sec, _applyVars(pick.metin)));
     }

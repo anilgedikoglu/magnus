@@ -87,34 +87,39 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
     final raw  = await rootBundle.loadString('assets/data/gunlukastroloji.json');
     final json = jsonDecode(raw) as Map<String, dynamic>;
 
-    // JSON düz liste: {"gunlukastroloji": [...]}
-    final rawList = (json['gunlukastroloji'] as List?) ?? [];
-    final pool = rawList.map((e) {
-      final m = e as Map<String, dynamic>;
-      return _AstroEntry(id: m['id'] as int, metin: m['metin'] as String);
-    }).toList();
+    // JSON artık bölüm anahtarlı: {"giris": [...], "astroyorum": [...], ...}
+    final data = <String, List<_AstroEntry>>{};
+    for (final key in json.keys) {
+      final list = (json[key] as List).map((e) {
+        final m = e as Map<String, dynamic>;
+        return _AstroEntry(id: m['id'] as int, metin: m['metin'] as String);
+      }).toList();
+      data[key] = list;
+    }
 
     final prefs   = await SharedPreferences.getInstance();
-    const prefKey = 'astroloji_gosterilen';
-    final shown   = prefs.getStringList(prefKey) ?? [];
-
-    // Her bölüm için havuzdan farklı bir girdi seç
-    var available = pool.where((e) => !shown.contains('${e.id}')).toList();
-    if (available.length < _sections.length) {
-      await prefs.remove(prefKey);
-      available = List.from(pool);
-      shown.clear();
-    }
-    available.shuffle(_rng);
-
     final selected = <_SelectedText>[];
-    final newShown = List<String>.from(shown);
-    for (int i = 0; i < _sections.length && i < available.length; i++) {
-      final pick = available[i];
-      newShown.add('${pick.id}');
-      selected.add(_SelectedText(_sections[i], _applyVars(pick.metin)));
+
+    for (final sec in _sections) {
+      final pool = data[sec.key] ?? [];
+      if (pool.isEmpty) continue;
+
+      final prefKey = 'astroloji_${sec.key}_gosterilen';
+      final shown   = prefs.getStringList(prefKey) ?? [];
+
+      var available = pool.where((e) => !shown.contains('${e.id}')).toList();
+      if (available.isEmpty) {
+        await prefs.remove(prefKey);
+        available = List.from(pool);
+      }
+
+      available.shuffle(_rng);
+      final pick = available.first;
+      shown.add('${pick.id}');
+      await prefs.setStringList(prefKey, shown);
+
+      selected.add(_SelectedText(sec, _applyVars(pick.metin)));
     }
-    await prefs.setStringList(prefKey, newShown);
 
     if (mounted) {
       setState(() {

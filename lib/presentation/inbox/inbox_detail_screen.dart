@@ -189,6 +189,9 @@ class InboxDetailScreen extends StatelessWidget {
             // El Falı: özel bar görünümü (metin alanı yerine geçer)
             if (item.fortuneType == FortuneType.elfali)
               _buildElFaliContent()
+            // Rüya Yorumu: özel logo + çerçeveli metin
+            else if (item.fortuneType == FortuneType.dream)
+              _buildDreamContent()
             else
             // Fortune text
             Padding(
@@ -260,12 +263,7 @@ class InboxDetailScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 40),
                   // Footer
-                  Center(
-                    child: Text(
-                      '✦ Magnus ✦',
-                      style: AppTextStyles.magnusLabel,
-                    ),
-                  ),
+                  _buildMagnusFooter(),
                   const SizedBox(height: 20),
                 ],
               ),
@@ -275,6 +273,132 @@ class InboxDetailScreen extends StatelessWidget {
           ), // SingleChildScrollView
         ],
       ), // Stack
+    );
+  }
+
+  // ─── Magnus footer (renkli logo) ────────────────────────────────────────────
+
+  Widget _buildMagnusFooter() {
+    return Center(
+      child: Image.asset(
+        'assets/images/magnusYaziLogoRenkli.PNG',
+        height: 32,
+        errorBuilder: (_, __, ___) => Text(
+          '✦ Magnus ✦',
+          style: AppTextStyles.magnusLabel,
+        ),
+      ),
+    );
+  }
+
+  // ─── Rüya Yorumu: logo + çerçeveli metin ─────────────────────────────────────
+
+  Widget _buildDreamContent() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 24, 16, 28),
+      child: Column(
+        children: [
+          // Logo
+          Image.asset(
+            'assets/images/ruyaozel.png',
+            height: 80,
+            width: 80,
+            errorBuilder: (_, __, ___) => const Icon(
+              Icons.bedtime_rounded,
+              color: Color(0xFFA78BFA),
+              size: 64,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'RÜYA YORUMU',
+            style: TextStyle(
+              color: const Color(0xFFA78BFA).withValues(alpha: 0.9),
+              fontSize: 13,
+              fontWeight: FontWeight.w600,
+              letterSpacing: 3,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            _formatDate(item.date),
+            style: AppTextStyles.inboxMeta.copyWith(fontSize: 12),
+          ),
+          const SizedBox(height: 20),
+          // Çerçeveli metin kutusu
+          Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  const Color(0xFF1A0E2E).withValues(alpha: 0.92),
+                  const Color(0xFF0D0820).withValues(alpha: 0.92),
+                ],
+              ),
+              border: Border.all(
+                color: const Color(0xFF7C3AED).withValues(alpha: 0.45),
+                width: 1.2,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xFF7C3AED).withValues(alpha: 0.18),
+                  blurRadius: 24,
+                  spreadRadius: 2,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                // Üst ayraç çizgisi
+                Container(
+                  height: 1,
+                  margin: const EdgeInsets.fromLTRB(20, 16, 20, 0),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.transparent,
+                        const Color(0xFF9D6EF5).withValues(alpha: 0.6),
+                        Colors.transparent,
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
+                  child: RichTextParser.build(
+                    item.text,
+                    style: AppTextStyles.bubbleText.copyWith(
+                      height: 1.85,
+                      color: const Color(0xFFEDE9FE),
+                      fontSize: 14.5,
+                    ),
+                  ),
+                ),
+                // Alt ayraç çizgisi
+                Container(
+                  height: 1,
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.transparent,
+                        const Color(0xFF9D6EF5).withValues(alpha: 0.6),
+                        Colors.transparent,
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 28),
+          _buildMagnusFooter(),
+        ],
+      ),
     );
   }
 
@@ -366,9 +490,7 @@ class InboxDetailScreen extends StatelessWidget {
               );
             }),
             const SizedBox(height: 24),
-            Center(
-              child: Text('✦ Magnus ✦', style: AppTextStyles.magnusLabel),
-            ),
+            _buildMagnusFooter(),
             const SizedBox(height: 20),
           ],
         ),

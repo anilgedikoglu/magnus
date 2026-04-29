@@ -20,6 +20,22 @@ import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
 import '../../data/models/user_profile.dart';
 
+// ─── Logaritmik eğriler ──────────────────────────────────────────────────────
+
+// Yavaş başlar, hızlanır — metin yavaşça açılır
+class _SlowRevealCurve extends Curve {
+  const _SlowRevealCurve();
+  @override
+  double transformInternal(double t) => (exp(t) - 1) / (exp(1) - 1);
+}
+
+// Hızlı başlar, yavaşlar — karanlık hızla örtüp sakinleşir
+class _FastCoverCurve extends Curve {
+  const _FastCoverCurve();
+  @override
+  double transformInternal(double t) => log(1 + t * (exp(1) - 1));
+}
+
 // ─── Model ───────────────────────────────────────────────────────────────────
 
 class _KitapEntry {
@@ -38,7 +54,8 @@ class KaderKitabiScreen extends ConsumerStatefulWidget {
   ConsumerState<KaderKitabiScreen> createState() => _KaderKitabiScreenState();
 }
 
-class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
+class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
+    with SingleTickerProviderStateMixin {
 
   static const _prefKeyGosterilen = 'kaderkitabi_gosterilen';
   static const _prefKeyBugunTarih = 'kaderkitabi_bugun_tarih';
@@ -48,10 +65,46 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
   bool    _loading  = true;
   bool    _hakDoldu = false;
 
+  late final AnimationController _mistikCtrl;
+  // 0.0 = metin tam görünür, 1.0 = kapkara
+  late final Animation<double> _darkOverlay;
+
   @override
   void initState() {
     super.initState();
+    // Toplam döngü: 3s karanlık + 3s açılış + 1s görünür + 3s kapanış = 10s
+    _mistikCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 10),
+    );
+    _darkOverlay = TweenSequence<double>([
+      TweenSequenceItem(
+        tween: Tween(begin: 1.0, end: 1.0), // 3s kapkara
+        weight: 30,
+      ),
+      TweenSequenceItem(
+        tween: Tween(begin: 1.0, end: 0.0)
+            .chain(CurveTween(curve: const _SlowRevealCurve())),
+        weight: 30, // 3s yavaş açılış
+      ),
+      TweenSequenceItem(
+        tween: Tween(begin: 0.0, end: 0.0), // 1s tam görünür
+        weight: 10,
+      ),
+      TweenSequenceItem(
+        tween: Tween(begin: 0.0, end: 1.0)
+            .chain(CurveTween(curve: const _FastCoverCurve())),
+        weight: 30, // 3s kapanış
+      ),
+    ]).animate(_mistikCtrl);
+
     _loadData();
+  }
+
+  @override
+  void dispose() {
+    _mistikCtrl.dispose();
+    super.dispose();
   }
 
   // ─── Koşul eşleştirme ────────────────────────────────────────────────────
@@ -135,10 +188,18 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
     await prefs.setString(_prefKeyBugunTarih, bugunStr);
     await prefs.setInt(_prefKeyBugunId, secilen.id);
 
-    final rendered = VariableReplacer.replace(secilen.metin, profile.toVariableMap());
+    // || işaretlerini temizle, değişken değiştir
+    final rendered = VariableReplacer
+        .replace(secilen.metin, profile.toVariableMap())
+        .replaceAll(RegExp(r'\s*\|\|\s*'), ' ')
+        .trim();
 
     if (!mounted) return;
-    setState(() { _metin = rendered; _loading = false; });
+    setState(() {
+      _metin = rendered;
+      _loading = false;
+    });
+    _mistikCtrl.repeat(); // animasyon sadece metin hazır olunca başlar
   }
 
   // ─── BUILD ───────────────────────────────────────────────────────────────
@@ -153,13 +214,16 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Arka plan
-          Image.asset(
-            'assets/images/ozlusoz_bg.png',
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
-            filterQuality: FilterQuality.high,
-            errorBuilder: (_, __, ___) => Container(color: const Color(0xFF0D0A1A)),
+          // Arka plan — %20 zoom (1.2 scale, ortalı)
+          Transform.scale(
+            scale: 1.2,
+            child: Image.asset(
+              'assets/images/ozlusoz_bg.png',
+              fit: BoxFit.cover,
+              alignment: Alignment.center,
+              filterQuality: FilterQuality.high,
+              errorBuilder: (_, __, ___) => Container(color: const Color(0xFF0D0A1A)),
+            ),
           ),
           // Koyu overlay
           Container(
@@ -187,7 +251,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
                           color: Color(0xFFD4AF37), strokeWidth: 2))
                       : _hakDoldu
                           ? _buildHakDoldu()
-                          : _buildContent(bottomPad),
+                          : _buildContent(context, bottomPad),
                 ),
               ],
             ),
@@ -289,89 +353,147 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
 
   // ─── Metin içeriği ────────────────────────────────────────────────────────
 
-  Widget _buildContent(double bottomPad) {
+  Widget _buildContent(BuildContext context, double bottomPad) {
     final metin = _metin ?? '';
-    return Center(
-      child: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(20, 16, 20, bottomPad + 24),
-        child: Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            gradient: const LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [Color(0xFFF5ECD7), Color(0xFFEDD9A3)],
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFFD4AF37).withValues(alpha: 0.25),
-                blurRadius: 30,
-                spreadRadius: 4,
-                offset: const Offset(0, 6),
-              ),
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.5),
-                blurRadius: 20,
-                offset: const Offset(0, 10),
-              ),
-            ],
-            border: Border.all(
-              color: const Color(0xFFB8960C).withValues(alpha: 0.6),
-              width: 1.5,
-            ),
-          ),
-          child: Stack(
-            children: [
-              // Sol cilt gölgesi
-              Positioned(
-                left: 0, top: 0, bottom: 0,
-                child: Container(
-                  width: 18,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.horizontal(left: Radius.circular(14)),
-                    gradient: LinearGradient(
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      colors: [
-                        Colors.black.withValues(alpha: 0.18),
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              // Metin
-              Padding(
-                padding: const EdgeInsets.fromLTRB(26, 28, 26, 28),
-                child: Text(
-                  metin,
-                  textAlign: TextAlign.justify,
-                  style: const TextStyle(
-                    color: Color(0xFF2C1A0A),
-                    fontSize: 15,
-                    height: 1.85,
-                    fontWeight: FontWeight.w400,
-                    letterSpacing: 0.2,
-                  ),
-                ),
-              ),
-              // Alt süsleme
-              Positioned(
-                bottom: 10, left: 0, right: 0,
-                child: Center(
-                  child: Text(
-                    '✦',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: const Color(0xFF8B6914).withValues(alpha: 0.7),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+
+    final bookCard = Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFFF5ECD7), Color(0xFFEDD9A3)],
         ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFD4AF37).withValues(alpha: 0.25),
+            blurRadius: 30,
+            spreadRadius: 4,
+            offset: const Offset(0, 6),
+          ),
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.5),
+            blurRadius: 20,
+            offset: const Offset(0, 10),
+          ),
+        ],
+        border: Border.all(
+          color: const Color(0xFFB8960C).withValues(alpha: 0.6),
+          width: 1.5,
+        ),
+      ),
+      child: Stack(
+        children: [
+          // Sol cilt gölgesi
+          Positioned(
+            left: 0, top: 0, bottom: 0,
+            child: Container(
+              width: 18,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.horizontal(left: Radius.circular(14)),
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    Colors.black.withValues(alpha: 0.18),
+                    Colors.transparent,
+                  ],
+                ),
+              ),
+            ),
+          ),
+          // Metin
+          Padding(
+            padding: const EdgeInsets.fromLTRB(26, 28, 26, 40),
+            child: Text(
+              metin,
+              textAlign: TextAlign.justify,
+              style: const TextStyle(
+                color: Color(0xFF2C1A0A),
+                fontSize: 15,
+                height: 1.85,
+                fontWeight: FontWeight.w400,
+                letterSpacing: 0.2,
+              ),
+            ),
+          ),
+          // Alt süsleme
+          Positioned(
+            bottom: 10, left: 0, right: 0,
+            child: Center(
+              child: Text(
+                '✦',
+                style: TextStyle(
+                  fontSize: 12,
+                  color: const Color(0xFF8B6914).withValues(alpha: 0.7),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+
+    return SingleChildScrollView(
+      padding: EdgeInsets.fromLTRB(20, 16, 20, bottomPad + 16),
+      child: Column(
+        children: [
+          // Kitap kartı + mistik karanlık overlay
+          AnimatedBuilder(
+            animation: _darkOverlay,
+            builder: (_, child) {
+              return Stack(
+                children: [
+                  child!,
+                  if (_darkOverlay.value > 0.001)
+                    Positioned.fill(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Container(
+                          color: Colors.black.withValues(alpha: _darkOverlay.value),
+                        ),
+                      ),
+                    ),
+                ],
+              );
+            },
+            child: bookCard,
+          ),
+          const SizedBox(height: 24),
+          // Geri Git butonu
+          GestureDetector(
+            onTap: () => context.pop(),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 14),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.08),
+                borderRadius: BorderRadius.circular(23),
+                border: Border.all(
+                  color: Colors.white.withValues(alpha: 0.20),
+                  width: 1,
+                ),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                  SizedBox(width: 2),
+                  Text(
+                    'Geri Git',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+        ],
       ),
     );
   }

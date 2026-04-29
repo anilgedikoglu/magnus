@@ -191,7 +191,7 @@ class InboxDetailScreen extends StatelessWidget {
               _buildElFaliContent()
             // Rüya Yorumu: özel logo + çerçeveli metin
             else if (item.fortuneType == FortuneType.dream)
-              _buildDreamContent()
+              _buildDreamContent(context)
             else
             // Fortune text
             Padding(
@@ -282,7 +282,7 @@ class InboxDetailScreen extends StatelessWidget {
     return Center(
       child: Image.asset(
         'assets/images/magnusYaziLogoRenkli.PNG',
-        height: 32,
+        height: 110,
         errorBuilder: (_, __, ___) => Text(
           '✦ Magnus ✦',
           style: AppTextStyles.magnusLabel,
@@ -291,9 +291,44 @@ class InboxDetailScreen extends StatelessWidget {
     );
   }
 
+  // ─── Geri Git butonu ─────────────────────────────────────────────────────────
+
+  Widget _buildBackButton(BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.of(context).pop(),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.08),
+          borderRadius: BorderRadius.circular(23),
+          border: Border.all(
+            color: Colors.white.withValues(alpha: 0.20),
+            width: 1,
+          ),
+        ),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+            SizedBox(width: 2),
+            Text(
+              'Geri Git',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   // ─── Rüya Yorumu: logo + çerçeveli metin ─────────────────────────────────────
 
-  Widget _buildDreamContent() {
+  Widget _buildDreamContent(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 28),
       child: Column(
@@ -397,6 +432,9 @@ class InboxDetailScreen extends StatelessWidget {
           ),
           const SizedBox(height: 28),
           _buildMagnusFooter(),
+          const SizedBox(height: 24),
+          _buildBackButton(context),
+          const SizedBox(height: 8),
         ],
       ),
     );

@@ -87,7 +87,7 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
     final raw  = await rootBundle.loadString('assets/data/gunlukastroloji.json');
     final json = jsonDecode(raw) as Map<String, dynamic>;
 
-    // JSON düz liste: {"gunlukastroloji": [...]} → tüm girdiler tek havuz
+    // JSON düz liste: {"gunlukastroloji": [...]}
     final rawList = (json['gunlukastroloji'] as List?) ?? [];
     final pool = rawList.map((e) {
       final m = e as Map<String, dynamic>;
@@ -98,20 +98,23 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
     const prefKey = 'astroloji_gosterilen';
     final shown   = prefs.getStringList(prefKey) ?? [];
 
+    // Her bölüm için havuzdan farklı bir girdi seç
     var available = pool.where((e) => !shown.contains('${e.id}')).toList();
-    if (available.isEmpty) {
+    if (available.length < _sections.length) {
       await prefs.remove(prefKey);
       available = List.from(pool);
+      shown.clear();
     }
-
     available.shuffle(_rng);
-    final pick  = available.first;
-    shown.add('${pick.id}');
-    await prefs.setStringList(prefKey, shown);
 
-    final metin = _applyVars(pick.metin);
-    // Tek bölüm olarak göster — _sections[0] (Giriş) renk/etiketini kullan
-    final selected = [_SelectedText(_sections[0], metin)];
+    final selected = <_SelectedText>[];
+    final newShown = List<String>.from(shown);
+    for (int i = 0; i < _sections.length && i < available.length; i++) {
+      final pick = available[i];
+      newShown.add('${pick.id}');
+      selected.add(_SelectedText(_sections[i], _applyVars(pick.metin)));
+    }
+    await prefs.setStringList(prefKey, newShown);
 
     if (mounted) {
       setState(() {

@@ -284,6 +284,16 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     }
   }
 
+  // Anlık pointer'ın altındaki bölmenin adı
+  String get _pointerBolmeLabel {
+    const segAngle = 2 * pi / _bolmeSayisi;
+    var local = (pi / 2 - _currentAngle) % (2 * pi);
+    if (local < 0) local += 2 * pi;
+    final off = (local + pi / 2) % (2 * pi);
+    final idx = (off / segAngle).floor().clamp(0, _bolmeSayisi - 1);
+    return _bolmeler[idx].label;
+  }
+
   // ── Sıfırla ──────────────────────────────────────────────────────────────────
 
   void _sifirla() {
@@ -387,15 +397,32 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _buildCarkWidget(size),
-                const SizedBox(height: 16),
+                const SizedBox(height: 14),
+                // Anlık bölme adı
                 Text(
-                  _doniyor ? '' : 'Çarkı parmağınla çevir',
-                  style: const TextStyle(color: Colors.white54, fontSize: 13,
-                      fontStyle: FontStyle.italic),
+                  _pointerBolmeLabel,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.6,
+                  ),
                 ),
               ],
             );
           }),
+        ),
+      ),
+      // "Çarkı parmağınla çevir" — çark altı ile Geri Git arasında ortalanmış
+      Padding(
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        child: Text(
+          _doniyor ? '' : 'Çarkı parmağınla çevir',
+          style: const TextStyle(
+            color: Colors.white54,
+            fontSize: 15,
+            fontStyle: FontStyle.italic,
+          ),
         ),
       ),
       // Geri Git — dert ortağı standardı

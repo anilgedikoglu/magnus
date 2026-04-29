@@ -84,48 +84,34 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
   // ─── Veri yükle + her bölümden 1 metin seç ──────────────────────────────────
 
   Future<void> _loadAndPick() async {
-    // JSON yükle
-    final raw = await rootBundle.loadString('assets/data/gunlukastroloji.json');
+    final raw  = await rootBundle.loadString('assets/data/gunlukastroloji.json');
     final json = jsonDecode(raw) as Map<String, dynamic>;
 
-    final data = <String, List<_AstroEntry>>{};
-    for (final key in json.keys) {
-      final list = (json[key] as List).map((e) {
-        final m = e as Map<String, dynamic>;
-        return _AstroEntry(id: m['id'] as int, metin: m['metin'] as String);
-      }).toList();
-      data[key] = list;
+    // JSON düz liste: {"gunlukastroloji": [...]} → tüm girdiler tek havuz
+    final rawList = (json['gunlukastroloji'] as List?) ?? [];
+    final pool = rawList.map((e) {
+      final m = e as Map<String, dynamic>;
+      return _AstroEntry(id: m['id'] as int, metin: m['metin'] as String);
+    }).toList();
+
+    final prefs   = await SharedPreferences.getInstance();
+    const prefKey = 'astroloji_gosterilen';
+    final shown   = prefs.getStringList(prefKey) ?? [];
+
+    var available = pool.where((e) => !shown.contains('${e.id}')).toList();
+    if (available.isEmpty) {
+      await prefs.remove(prefKey);
+      available = List.from(pool);
     }
 
-    // SharedPreferences'tan gösterilen ID'leri oku
-    final prefs = await SharedPreferences.getInstance();
+    available.shuffle(_rng);
+    final pick  = available.first;
+    shown.add('${pick.id}');
+    await prefs.setStringList(prefKey, shown);
 
-    final selected = <_SelectedText>[];
-    for (final sec in _sections) {
-      final pool = data[sec.key] ?? [];
-      if (pool.isEmpty) continue;
-
-      final prefKey = 'astroloji_${sec.key}_gosterilen';
-      final shown   = prefs.getStringList(prefKey) ?? [];
-
-      // Gösterilmeyenlerden seç
-      var available = pool.where((e) => !shown.contains('${e.id}')).toList();
-      if (available.isEmpty) {
-        // Tümü bitti → sıfırla
-        await prefs.remove(prefKey);
-        available = List.from(pool);
-      }
-
-      available.shuffle(_rng);
-      final pick = available.first;
-
-      // ID'yi kaydet
-      shown.add('${pick.id}');
-      await prefs.setStringList(prefKey, shown);
-
-      final metin = _applyVars(pick.metin);
-      selected.add(_SelectedText(sec, metin));
-    }
+    final metin = _applyVars(pick.metin);
+    // Tek bölüm olarak göster — _sections[0] (Giriş) renk/etiketini kullan
+    final selected = [_SelectedText(_sections[0], metin)];
 
     if (mounted) {
       setState(() {

@@ -803,27 +803,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               height: 44,
               child: Row(
                 children: [
-                  // [1] Önceki (ikon sadece) — OverflowBox butonu tree'de tutar,
-                  // ClipRect kırpar; böylece çıkış animasyonu da çalışır.
+                  // [1] Önceki — 3. sayfada büyür (2×navW+8), diğer sayfalarda navW,
+                  // 1. sayfada gizlenir (width=0).
                   ClipRect(
-                    child: AnimatedSize(
+                    child: AnimatedContainer(
                       duration: dur,
                       curve: curve,
-                      alignment: Alignment.centerRight,
-                      child: SizedBox(
-                        width: showPrev ? navW : 0,
-                        height: 44,
-                        child: OverflowBox(
-                          maxWidth: navW, minWidth: navW,
-                          maxHeight: 44, minHeight: 44,
-                          alignment: Alignment.centerRight,
-                          child: _BottomBtn(
-                            imagePath: 'assets/images/menuleft.png',
-                            label: 'Önceki',
-                            onTap: _goPrev,
-                            showLabel: false,
-                          ),
-                        ),
+                      width: showPrev ? (!showNext ? navW + 8.0 + navW : navW) : 0,
+                      height: 44,
+                      child: _BottomBtn(
+                        imagePath: 'assets/images/menuleft.png',
+                        label: 'Önceki',
+                        onTap: _goPrev,
+                        showLabel: false,
                       ),
                     ),
                   ),
@@ -833,8 +825,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     curve: curve,
                     child: SizedBox(width: showPrev ? 8.0 : 0.0),
                   ),
-                  // [2] Bilgi Ekranı (ikon sadece) — her zaman görünür, Expanded
-                  Expanded(
+                  // [2] Bilgi Ekranı (ikon sadece) — her zaman görünür, sabit navW
+                  SizedBox(
+                    width: navW,
                     child: _BottomBtn(
                       imagePath: 'assets/images/bilgiekranilogo.png',
                       label: 'Bilgiler',
@@ -847,7 +840,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     ),
                   ),
                   const SizedBox(width: 8),
-                  // [3] Gelen Kutusu — sağ ikon pasifken navW + gap kadar genişler
+                  // [3] Gelen Kutusu — 1. sayfada (sol ikon yokken) navW + gap kadar genişler
                   Consumer(builder: (_, cref, __) {
                     final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
                     return GestureDetector(
@@ -855,7 +848,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       child: AnimatedContainer(
                         duration: dur,
                         curve: curve,
-                        width: showNext ? navW : navW + 8.0 + navW,
+                        width: !showPrev ? navW + 8.0 + navW : navW,
                         height: 44,
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(

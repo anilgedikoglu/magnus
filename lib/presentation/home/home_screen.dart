@@ -572,7 +572,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   // ─── Sayfa 3 ──────────────────────────────────────────────────────────────
   List<_MenuItem> _page3Items(BuildContext context) => [
         _MenuItem('I-Ching', 'assets/images/ichingikon.png', 1,
-            () {}),
+            () => _pushWithAd('/iching')),
         _MenuItem('Aşk Uyumu', 'assets/images/askuyumu.png', 1,
             () => _pushWithAd('/ask_uyumu')),
         _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',

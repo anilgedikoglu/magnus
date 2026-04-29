@@ -41,6 +41,7 @@ import 'presentation/durugoru/durugoru_screen.dart';
 import 'presentation/ruya/ruya_yorumu_screen.dart';
 import 'presentation/kadercarki/kadercarki_screen.dart';
 import 'presentation/askuyumu/askuyumu_screen.dart';
+import 'presentation/iching/iching_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 final _homeKey = GlobalKey<NavigatorState>(debugLabel: 'home');
@@ -305,6 +306,11 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/ask_uyumu',
         parentNavigatorKey: _rootKey,
         builder: (_, __) => const AskUyumuScreen(),
+      ),
+      GoRoute(
+        path: '/iching',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const IChingScreen(),
       ),
       GoRoute(
         path: '/durugoru',

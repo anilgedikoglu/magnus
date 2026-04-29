@@ -13,7 +13,6 @@
 // Cache'ten gösterme akışı: doğrudan ekranda açılır, inbox/bekleme yok.
 
 import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -24,6 +23,7 @@ import 'package:uuid/uuid.dart';
 import '../../core/utils/numeroloji_hesap.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 
@@ -55,8 +55,7 @@ class NumerologiScreen extends ConsumerStatefulWidget {
   ConsumerState<NumerologiScreen> createState() => _NumerologiScreenState();
 }
 
-class _NumerologiScreenState extends ConsumerState<NumerologiScreen>
-    with SingleTickerProviderStateMixin {
+class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
 
   // ── JSON ──────────────────────────────────────────────────────────────────
   Map<String, dynamic>? _json;
@@ -80,49 +79,12 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen>
   String? _yilMetin;
   String? _bugunMetin;
 
-  // ── Kum saati animasyonu ─────────────────────────────────────────────────
-  late AnimationController _hgCtrl;
-  late Animation<double> _flipAnim;
-  late Animation<double> _scaleAnim;
-
   static const _uuid = Uuid();
 
   @override
   void initState() {
     super.initState();
-    _hgCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 1800),
-    )..repeat();
-
-    // 0→0.35 flip 0→π, 0.35→0.55 duraklama, 0.55→0.90 flip π→2π, 0.90→1.0 duraklama
-    _flipAnim = TweenSequence<double>([
-      TweenSequenceItem(
-        tween: Tween(begin: 0.0, end: pi).chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 35,
-      ),
-      TweenSequenceItem(tween: ConstantTween(pi), weight: 20),
-      TweenSequenceItem(
-        tween: Tween(begin: pi, end: 2 * pi).chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 35,
-      ),
-      TweenSequenceItem(tween: ConstantTween(2 * pi), weight: 10),
-    ]).animate(_hgCtrl);
-
-    // Hafif nabız efekti
-    _scaleAnim = TweenSequence<double>([
-      TweenSequenceItem(tween: Tween(begin: 1.0, end: 1.12).chain(CurveTween(curve: Curves.easeOut)), weight: 35),
-      TweenSequenceItem(tween: Tween(begin: 1.12, end: 1.0).chain(CurveTween(curve: Curves.easeIn)), weight: 20),
-      TweenSequenceItem(tween: ConstantTween(1.0), weight: 45),
-    ]).animate(_hgCtrl);
-
     _init();
-  }
-
-  @override
-  void dispose() {
-    _hgCtrl.dispose();
-    super.dispose();
   }
 
   // ─── Başlangıç yükleme ────────────────────────────────────────────────────
@@ -366,23 +328,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen>
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          AnimatedBuilder(
-            animation: _hgCtrl,
-            builder: (_, __) {
-              final angle = _flipAnim.value;
-              // π'yi geçince alt ikon göster
-              final icon = (angle % (2 * pi)) > pi * 0.5 && (angle % (2 * pi)) < pi * 1.5
-                  ? Icons.hourglass_bottom_rounded
-                  : Icons.hourglass_top_rounded;
-              return Transform.scale(
-                scale: _scaleAnim.value,
-                child: Transform.rotate(
-                  angle: angle,
-                  child: Icon(icon, color: const Color(0xFFBBAAFF), size: 64),
-                ),
-              );
-            },
-          ),
+          const SpinningHourglass(size: 64, color: Color(0xFFBBAAFF)),
           const SizedBox(height: 24),
           Text(
             'Hesaplamalar başladı, lütfen bekle...',

@@ -16,6 +16,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
@@ -52,9 +53,6 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
   late final AnimationController _fadeCtrl;
   late final Animation<double>   _fadeAnim;
 
-  // Kum saati
-  bool   _saatUst          = true;
-  Timer? _saatToggleTimer;
   Timer? _gecisTimer;
 
   String get _bugun => DateTime.now().toIso8601String().substring(0, 10);
@@ -72,7 +70,6 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
   @override
   void dispose() {
     _fadeCtrl.dispose();
-    _saatToggleTimer?.cancel();
     _gecisTimer?.cancel();
     super.dispose();
   }
@@ -203,20 +200,12 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
     setState(() {
       _seciliDert = dert;
       _adim       = _DertAdim.yukleniyor;
-      _saatUst    = true;
     });
     _fadeCtrl.forward(from: 0);
-
-    // Kum saati animasyonu — her 1.2 saniyede çevir
-    _saatToggleTimer?.cancel();
-    _saatToggleTimer = Timer.periodic(const Duration(milliseconds: 1200), (_) {
-      if (mounted) setState(() => _saatUst = !_saatUst);
-    });
 
     // 5 saniye sonra tavsiyelere geç
     _gecisTimer?.cancel();
     _gecisTimer = Timer(const Duration(seconds: 5), () {
-      _saatToggleTimer?.cancel();
       if (mounted) {
         setState(() => _adim = _DertAdim.derman);
         _fadeCtrl.forward(from: 0);
@@ -233,7 +222,6 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
         _fadeCtrl.forward(from: 0);
       case _DertAdim.yukleniyor:
         _gecisTimer?.cancel();
-        _saatToggleTimer?.cancel();
         setState(() { _adim = _DertAdim.dert; });
         _fadeCtrl.forward(from: 0);
       case _DertAdim.derman:
@@ -452,23 +440,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   // Kum saati animasyonu
-                  AnimatedRotation(
-                    turns: _saatUst ? 0.0 : 0.5,
-                    duration: const Duration(milliseconds: 700),
-                    curve: Curves.easeInOut,
-                    child: ShaderMask(
-                      shaderCallback: (bounds) => const LinearGradient(
-                        colors: [Color(0xFFAA88FF), Color(0xFFDD44FF)],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      ).createShader(bounds),
-                      child: const Icon(
-                        Icons.hourglass_empty_rounded,
-                        size: 72,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                  const ElegantHourglass(size: 72, color: Color(0xFFBB88FF)),
                   const SizedBox(height: 28),
                   const Text(
                     'Dertlerini çözümlüyorum...',

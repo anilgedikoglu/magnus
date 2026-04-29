@@ -4,6 +4,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 
 class ParmakSurtmeScreen extends StatefulWidget {
   final String kahinId;
@@ -13,34 +14,23 @@ class ParmakSurtmeScreen extends StatefulWidget {
   State<ParmakSurtmeScreen> createState() => _ParmakSurtmeScreenState();
 }
 
-class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen>
-    with SingleTickerProviderStateMixin {
+class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
   final List<_TailPoint> _tail = [];
   double _progress = 0.0;
   bool _done = false;
   Offset? _lastPos;
-  // Daha fazla mesafe → daha az yüzde
   static const double _threshold = 900.0;
 
-  // Kuyruk decay timer'ı (~60fps)
   Timer? _decayTimer;
-
-  // Tamamlanınca kum saati animasyonu
-  late AnimationController _hourglassCtrl;
-  bool _hourglassFlipped = false;
 
   @override
   void initState() {
     super.initState();
-    _hourglassCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 700),
-    );
     _decayTimer = Timer.periodic(const Duration(milliseconds: 16), (_) {
       if (_tail.isEmpty || !mounted) return;
       setState(() {
         for (final p in _tail) {
-          p.life -= 0.016; // yavaş sönme → daha uzun kuyruk (~1.5sn)
+          p.life -= 0.016;
         }
         _tail.removeWhere((p) => p.life <= 0);
       });
@@ -50,17 +40,7 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen>
   @override
   void dispose() {
     _decayTimer?.cancel();
-    _hourglassCtrl.dispose();
     super.dispose();
-  }
-
-  void _startHourglass() {
-    Future.delayed(const Duration(milliseconds: 1200), () {
-      if (!mounted || !_done) return;
-      setState(() => _hourglassFlipped = !_hourglassFlipped);
-      _hourglassCtrl.forward(from: 0);
-      _startHourglass();
-    });
   }
 
   void _onPanUpdate(DragUpdateDetails details) {
@@ -75,7 +55,6 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen>
       });
       if (_progress >= 1.0 && !_done) {
         _done = true;
-        _startHourglass();
         // 5 saniye sonra geçiş
         Future.delayed(const Duration(seconds: 5), () {
           if (mounted) context.pushReplacement('/kahin_metin', extra: widget.kahinId);
@@ -147,11 +126,10 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen>
             AnimatedSwitcher(
               duration: const Duration(milliseconds: 400),
               child: _done
-                  ? AnimatedRotation(
-                      key: const ValueKey('hourglass'),
-                      turns: _hourglassFlipped ? 0.5 : 0.0,
-                      duration: const Duration(milliseconds: 700),
-                      child: const Text('⏳', style: TextStyle(fontSize: 36)),
+                  ? const ElegantHourglass(
+                      key: ValueKey('hourglass'),
+                      size: 36,
+                      color: Color(0xFFFF55FF),
                     )
                   : const Icon(
                       Icons.fingerprint,

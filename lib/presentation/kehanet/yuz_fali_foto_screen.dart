@@ -10,6 +10,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 import '../../data/services/claude_vision_service.dart';
 
@@ -25,34 +26,13 @@ class YuzFaliFotoScreen extends ConsumerStatefulWidget {
   ConsumerState<YuzFaliFotoScreen> createState() => _YuzFaliFotoScreenState();
 }
 
-class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
-    with SingleTickerProviderStateMixin {
+class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen> {
   _YFAdim _adim = _YFAdim.secim;
   File?   _foto;
   String  _falMetni  = '';
   String  _hataMetni = '';
 
-  // Kum saati animasyonu
-  late AnimationController _hourCtrl;
-  late Animation<double>   _hourAnim;
-
   final _rng = Random();
-
-  @override
-  void initState() {
-    super.initState();
-    _hourCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 900),
-    )..repeat(reverse: true);
-    _hourAnim = CurvedAnimation(parent: _hourCtrl, curve: Curves.easeInOut);
-  }
-
-  @override
-  void dispose() {
-    _hourCtrl.dispose();
-    super.dispose();
-  }
 
   // ── Fotoğraf seç / çek ────────────────────────────────────────────────────
   Future<void> _secimlYap(ImageSource source) async {
@@ -327,16 +307,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         const SizedBox(height: 20),
 
         // Animasyonlu kum saati
-        AnimatedBuilder(
-          animation: _hourAnim,
-          builder: (ctx, _) => Transform.scale(
-            scale: 0.88 + 0.12 * _hourAnim.value,
-            child: Opacity(
-              opacity: 0.65 + 0.35 * _hourAnim.value,
-              child: const Text('⏳', style: TextStyle(fontSize: 56)),
-            ),
-          ),
-        ),
+        const ElegantHourglass(size: 56, color: Colors.white),
         const Spacer(),
       ],
     );

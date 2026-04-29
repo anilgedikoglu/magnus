@@ -15,6 +15,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
@@ -42,9 +43,6 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   String  _metin       = '';
   bool    _veriYuklendi = false;
 
-  // ── Kum saati animasyonu ─────────────────────────────────────────────────
-  bool   _saatUst       = true;
-  Timer? _saatToggle;
   Timer? _gecisTimer;
 
   String get _bugun => DateTime.now().toIso8601String().substring(0, 10);
@@ -59,7 +57,6 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
 
   @override
   void dispose() {
-    _saatToggle?.cancel();
     _gecisTimer?.cancel();
     super.dispose();
   }
@@ -160,13 +157,8 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
 
   void _baslatKumSaati() {
     // Kum saatini 1.2sn aralıkla döndür
-    _saatToggle = Timer.periodic(const Duration(milliseconds: 1200), (_) {
-      if (mounted) setState(() => _saatUst = !_saatUst);
-    });
-
     // 5 saniye sonra içerik ekranına geç
     _gecisTimer = Timer(const Duration(seconds: 5), () {
-      _saatToggle?.cancel();
       if (mounted) setState(() => _adim = _Adim.icerik);
     });
   }
@@ -235,25 +227,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Kum saati — ShaderMask gradient + AnimatedRotation
-                ShaderMask(
-                  shaderCallback: (bounds) => const LinearGradient(
-                    colors: [Color(0xFFAA00FF), Color(0xFFFF44AA)],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  ).createShader(bounds),
-                  blendMode: BlendMode.srcIn,
-                  child: AnimatedRotation(
-                    turns: _saatUst ? 0.0 : 0.5,
-                    duration: const Duration(milliseconds: 700),
-                    curve: Curves.easeInOut,
-                    child: const Icon(
-                      Icons.hourglass_bottom_rounded,
-                      size: 72,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
+                const ElegantHourglass(size: 72, color: Color(0xFFCC44FF)),
                 const SizedBox(height: 28),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 32),

@@ -10,6 +10,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 
 class MagandaScreen extends ConsumerStatefulWidget {
@@ -30,9 +31,6 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
   Timer? _typeTimer;
   int _charIndex = 0;
   bool _loading = true;
-
-  // Kum saati flip
-  bool _flipped = false;
 
   // Parlaklık titremesi — 1200ms hızlı
   late AnimationController _glowCtrl;
@@ -78,14 +76,6 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
     _loadData();
   }
 
-  // ── Kum saati animasyonu (sadece odaklaniyor adımında çalışır) ───────────────
-  void _startHourglass() {
-    Future.delayed(const Duration(milliseconds: 1200), () {
-      if (!mounted || _adim != _MagandaAdim.odaklaniyor) return;
-      setState(() => _flipped = !_flipped);
-      _startHourglass();
-    });
-  }
 
   Future<void> _loadData() async {
     final str = await rootBundle.loadString('assets/data/maganda.json');
@@ -138,9 +128,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
       _adim = _MagandaAdim.odaklaniyor;
       _charIndex = 0;
       _displayed = '';
-      _flipped = false;
     });
-    _startHourglass();
 
     Future.delayed(const Duration(seconds: 5), () {
       if (!mounted) return;
@@ -324,11 +312,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                         ),
                       ),
                       const SizedBox(height: 24),
-                      AnimatedRotation(
-                        turns: _flipped ? 0.5 : 0.0,
-                        duration: const Duration(milliseconds: 700),
-                        child: const Text('⏳', style: TextStyle(fontSize: 52)),
-                      ),
+                      const ElegantHourglass(size: 52, color: Colors.white),
                     ],
                   ),
                 ),

@@ -10,6 +10,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 
 class FaloyaScreen extends ConsumerStatefulWidget {
@@ -22,16 +23,12 @@ class FaloyaScreen extends ConsumerStatefulWidget {
 enum _FaloyaAdim { yukleniyor, icerik }
 
 class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
-    with TickerProviderStateMixin {          // iki controller için TickerProvider
+    with SingleTickerProviderStateMixin {
   _FaloyaAdim _adim = _FaloyaAdim.yukleniyor;
   String _metin = '';
   String _displayed = '';
   Timer? _typeTimer;
   int _charIndex = 0;
-
-  // Kum saati (flip animasyonu)
-  late AnimationController _hourglassCtrl;
-  bool _flipped = false;
 
   // Nefes alan ışık çerçevesi
   late AnimationController _glowCtrl;
@@ -45,12 +42,6 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
   void initState() {
     super.initState();
 
-    // Kum saati controller
-    _hourglassCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 700),
-    );
-
     // Nefes çerçeve controller — 2.8s, easeInOut eğrisiyle yavaşça parlar/söner
     _glowCtrl = AnimationController(
       vsync: this,
@@ -58,7 +49,6 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
     )..repeat(reverse: true);
     _glowAnim = CurvedAnimation(parent: _glowCtrl, curve: Curves.easeInOut);
 
-    _startHourglass();
     _loadData();
 
     // 5 saniyelik minimum bekleme
@@ -66,15 +56,6 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
       if (!mounted) return;
       _timerDone = true;
       _tryTransition();
-    });
-  }
-
-  void _startHourglass() {
-    Future.delayed(const Duration(milliseconds: 1200), () {
-      if (!mounted) return;
-      setState(() => _flipped = !_flipped);
-      _hourglassCtrl.forward(from: 0);
-      _startHourglass();
     });
   }
 
@@ -137,7 +118,6 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
   @override
   void dispose() {
     _typeTimer?.cancel();
-    _hourglassCtrl.dispose();
     _glowCtrl.dispose();
     super.dispose();
   }
@@ -240,12 +220,8 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
                 ),
               ),
               const SizedBox(height: 24),
-              Center(
-                child: AnimatedRotation(
-                  turns: _flipped ? 0.5 : 0.0,
-                  duration: const Duration(milliseconds: 700),
-                  child: const Text('⏳', style: TextStyle(fontSize: 52)),
-                ),
+              const Center(
+                child: ElegantHourglass(size: 52, color: Colors.white),
               ),
               const Spacer(),
 

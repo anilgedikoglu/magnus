@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 
@@ -227,16 +228,12 @@ class RuyaYorumuScreen extends ConsumerStatefulWidget {
   ConsumerState<RuyaYorumuScreen> createState() => _RuyaYorumuScreenState();
 }
 
-class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen>
-    with SingleTickerProviderStateMixin {
+class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
   _RYAdim  _adim        = _RYAdim.secim;
   _Sembol? _secili;
   String   _arama       = '';
 
   final _aramaCtrl = TextEditingController();
-
-  late AnimationController _hourCtrl;
-  late Animation<double>   _hourAnim;
 
   static const _uuid = Uuid();
 
@@ -247,18 +244,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen>
   }
 
   @override
-  void initState() {
-    super.initState();
-    _hourCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 900),
-    )..repeat(reverse: true);
-    _hourAnim = CurvedAnimation(parent: _hourCtrl, curve: Curves.easeInOut);
-  }
-
-  @override
   void dispose() {
-    _hourCtrl.dispose();
     _aramaCtrl.dispose();
     super.dispose();
   }
@@ -564,16 +550,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen>
           ),
         ),
         const SizedBox(height: 32),
-        AnimatedBuilder(
-          animation: _hourAnim,
-          builder: (_, __) => Transform.scale(
-            scale: 0.88 + 0.12 * _hourAnim.value,
-            child: Opacity(
-              opacity: 0.65 + 0.35 * _hourAnim.value,
-              child: const Text('⏳', style: TextStyle(fontSize: 56)),
-            ),
-          ),
-        ),
+        const ElegantHourglass(size: 56, color: Colors.white),
       ],
     );
   }

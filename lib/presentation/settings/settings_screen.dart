@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
@@ -2294,15 +2295,10 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     child: Row(
                       children: [
-                        Icon(
-                          resetDone
-                              ? Icons.check_circle_outline_rounded
-                              : Icons.hourglass_empty_rounded,
-                          color: resetDone
-                              ? const Color(0xFF00FF88)
-                              : const Color(0xFF00CCFF),
-                          size: 20,
-                        ),
+                        resetDone
+                            ? const Icon(Icons.check_circle_outline_rounded,
+                                color: Color(0xFF00FF88), size: 20)
+                            : const ElegantHourglass(size: 20, color: Color(0xFF00CCFF)),
                         const SizedBox(width: 12),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

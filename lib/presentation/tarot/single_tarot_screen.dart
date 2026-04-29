@@ -32,6 +32,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 
 // ─── Kart verisi ──────────────────────────────────────────────────────────────
@@ -632,44 +633,10 @@ class _PulsingHourglass extends StatefulWidget {
   State<_PulsingHourglass> createState() => _PulsingHourglassState();
 }
 
-class _PulsingHourglassState extends State<_PulsingHourglass>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _ctrl;
-  late final Animation<double> _scale;
-  int _tick = 0;
-  Timer? _flipTimer;
-
-  @override
-  void initState() {
-    super.initState();
-    _ctrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 600),
-    )..repeat(reverse: true);
-    _scale = Tween<double>(begin: 0.85, end: 1.0).animate(
-      CurvedAnimation(parent: _ctrl, curve: Curves.easeInOut),
-    );
-    _flipTimer = Timer.periodic(const Duration(milliseconds: 700), (_) {
-      if (mounted) setState(() => _tick++);
-    });
-  }
-
-  @override
-  void dispose() {
-    _ctrl.dispose();
-    _flipTimer?.cancel();
-    super.dispose();
-  }
-
+class _PulsingHourglassState extends State<_PulsingHourglass> {
   @override
   Widget build(BuildContext context) {
-    final icon = _tick.isEven
-        ? Icons.hourglass_top_rounded
-        : Icons.hourglass_bottom_rounded;
-    return ScaleTransition(
-      scale: _scale,
-      child: Icon(icon, color: const Color(0xFFB8E0FF), size: 34),
-    );
+    return const PulsingHourglass(size: 34, color: Color(0xFFB8E0FF));
   }
 }
 

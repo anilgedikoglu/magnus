@@ -17,6 +17,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 import '../../data/models/inbox_item.dart';
 
@@ -27,29 +28,16 @@ class IChingScreen extends ConsumerStatefulWidget {
   ConsumerState<IChingScreen> createState() => _IChingScreenState();
 }
 
-class _IChingScreenState extends ConsumerState<IChingScreen>
-    with SingleTickerProviderStateMixin {
+class _IChingScreenState extends ConsumerState<IChingScreen> {
 
   static const _prefKeyGosterilen = 'iching_gosterilen';
 
-  late final AnimationController _hourglassCtrl;
   bool _done = false;
 
   @override
   void initState() {
     super.initState();
-    _hourglassCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 900),
-    )..repeat(reverse: true);
-
     _start();
-  }
-
-  @override
-  void dispose() {
-    _hourglassCtrl.dispose();
-    super.dispose();
   }
 
   Future<void> _start() async {
@@ -208,13 +196,7 @@ class _IChingScreenState extends ConsumerState<IChingScreen>
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    AnimatedBuilder(
-                      animation: _hourglassCtrl,
-                      builder: (_, __) {
-                        final emoji = _hourglassCtrl.value < 0.5 ? '⏳' : '⌛';
-                        return Text(emoji, style: const TextStyle(fontSize: 56));
-                      },
-                    ),
+                    const ElegantHourglass(size: 56, color: Color(0xFFD4AF37)),
                     const SizedBox(height: 28),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 32),

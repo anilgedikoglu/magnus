@@ -13,6 +13,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 
 // ─── Burç listesi (index 0=Koç … 11=Balık) ───────────────────────────────────
@@ -601,7 +602,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       Expanded(
         child: Center(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            _HourglassWidget(),
+            const ElegantHourglass(size: 56, color: Color(0xFFFF4466)),
             const SizedBox(height: 20),
             const Text(
               'Uyumun hesaplanıyor...',
@@ -809,52 +810,6 @@ class _FillCirclePainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_FillCirclePainter old) => old.progress != progress;
-}
-
-// ─── Kum saati animasyonu ─────────────────────────────────────────────────────
-
-class _HourglassWidget extends StatefulWidget {
-  @override
-  State<_HourglassWidget> createState() => _HourglassWidgetState();
-}
-
-class _HourglassWidgetState extends State<_HourglassWidget>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _ctrl;
-  bool _top = true;
-
-  @override
-  void initState() {
-    super.initState();
-    _ctrl = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 700))
-      ..addStatusListener((s) {
-        if (s == AnimationStatus.completed) {
-          setState(() => _top = !_top);
-          _ctrl.forward(from: 0);
-        }
-      })
-      ..forward();
-  }
-
-  @override
-  void dispose() {
-    _ctrl.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedSwitcher(
-      duration: const Duration(milliseconds: 300),
-      child: Icon(
-        _top ? Icons.hourglass_top_rounded : Icons.hourglass_bottom_rounded,
-        key: ValueKey(_top),
-        color: const Color(0xFFFF4466),
-        size: 56,
-      ),
-    );
-  }
 }
 
 // ─── Seçili dilim kliplayıcısı — sabit, üstteki 1/12 dilimi açar ─────────────

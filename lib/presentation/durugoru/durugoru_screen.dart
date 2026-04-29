@@ -15,6 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -57,8 +58,6 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
   };
 
   bool   _odaklaniyor = false;
-  bool   _saatUst     = true;
-  Timer? _saatToggle;
 
   String get _bugun => DateTime.now().toIso8601String().substring(0, 10);
 
@@ -66,12 +65,6 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
   void initState() {
     super.initState();
     _loadUsage();
-  }
-
-  @override
-  void dispose() {
-    _saatToggle?.cancel();
-    super.dispose();
   }
 
   Future<void> _loadUsage() async {
@@ -128,11 +121,6 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
 
     setState(() => _odaklaniyor = true);
 
-    // Kum saati animasyonu
-    _saatToggle = Timer.periodic(const Duration(milliseconds: 1200), (_) {
-      if (mounted) setState(() => _saatUst = !_saatUst);
-    });
-
     final prefs   = await SharedPreferences.getInstance();
     final profile = ref.read(userProfileProvider);
 
@@ -147,8 +135,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
     // Koşul filtresi
     final uygunlar = tumListe.where((e) => _uygun(e, profile)).toList();
     if (uygunlar.isEmpty) {
-      _saatToggle?.cancel();
-      if (mounted) setState(() => _odaklaniyor = false);
+        if (mounted) setState(() => _odaklaniyor = false);
       return;
     }
 
@@ -189,7 +176,6 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
 
     // 2 saniye animasyon sonra ana menüye dön
     await Future.delayed(const Duration(seconds: 2));
-    _saatToggle?.cancel();
 
     if (!mounted) return;
     ref.read(durugoruSentProvider.notifier).state = true;
@@ -440,13 +426,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
               end: Alignment.bottomCenter,
             ).createShader(bounds),
             blendMode: BlendMode.srcIn,
-            child: AnimatedRotation(
-              turns: _saatUst ? 0.0 : 0.5,
-              duration: const Duration(milliseconds: 700),
-              curve: Curves.easeInOut,
-              child: const Icon(Icons.hourglass_bottom_rounded,
-                  size: 72, color: Colors.white),
-            ),
+            child: const ElegantHourglass(size: 72, color: Colors.white),
           ),
           const SizedBox(height: 28),
           const Padding(

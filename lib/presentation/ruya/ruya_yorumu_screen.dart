@@ -406,7 +406,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen>
                     )
                   : null,
               filled: true,
-              fillColor: const Color(0xFF0D0A1E),
+              fillColor: const Color(0x800D0A1E),
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               border: OutlineInputBorder(
@@ -457,7 +457,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen>
                           borderRadius: BorderRadius.circular(12),
                           color: secili
                               ? const Color(0xFF6D28D9).withValues(alpha: 0.35)
-                              : const Color(0xFF0D0A1E),
+                              : const Color(0x800D0A1E),
                           border: Border.all(
                             color: secili
                                 ? const Color(0xFF8B5CF6)

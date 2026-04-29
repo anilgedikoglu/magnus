@@ -491,35 +491,56 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen>
                   },
                 ),
         ),
-        // ── Tamam butonu ───────────────────────────────────────────────────
+        // ── Geri Git / Yorumla butonu ──────────────────────────────────────
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
           child: GestureDetector(
-            onTap: _secili != null ? _tamam : null,
+            onTap: _secili != null ? _tamam : () => context.pop(),
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 200),
               height: 50,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(23),
                 gradient: _secili != null
                     ? const LinearGradient(
                         colors: [Color(0xFF6D28D9), Color(0xFF8B5CF6)])
                     : null,
                 color: _secili == null
-                    ? Colors.white.withValues(alpha: 0.08)
+                    ? Colors.white.withValues(alpha: 0.10)
                     : null,
+                border: Border.all(
+                  color: _secili == null
+                      ? Colors.white.withValues(alpha: 0.25)
+                      : Colors.transparent,
+                  width: 1,
+                ),
               ),
               child: Center(
-                child: Text(
-                  'Tamam',
-                  style: TextStyle(
-                    color: _secili != null
-                        ? Colors.white
-                        : Colors.white.withValues(alpha: 0.30),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                child: _secili != null
+                    ? const Text(
+                        'Yorumla',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
+                    : Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: const [
+                          Icon(Icons.chevron_left_rounded,
+                              color: Colors.white, size: 20),
+                          SizedBox(width: 2),
+                          Text(
+                            'Geri Git',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
               ),
             ),
           ),

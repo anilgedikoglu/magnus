@@ -29,6 +29,7 @@
 //   && job='kamusektoru' && zodiacSign='Terazi' && birthTime='13:30' && birthCity='Ankara'
 // ─────────────────────────────────────────────────────────────────────────────
 import 'package:hive_flutter/hive_flutter.dart';
+import '../../core/utils/zodiac_calculator.dart';
 
 part 'user_profile.g.dart';
 
@@ -110,11 +111,16 @@ class UserProfile extends HiveObject {
       'meslek': jobLabel,
       'medeni_durum': maritalStatusLabel,
       'medeni durum': _maritalStatusAssetValue, // asset gerekliDegiskenler değerleriyle eşleşen form
-      'burc': zodiacSign ?? '',
+      'burc': zodiacSign?.isNotEmpty == true
+          ? zodiacSign!
+          : ZodiacCalculator.fromBirthDateString(birthDate),
       // burc varyantları — ilk harf büyük (zaten büyük ama alias olarak tutulur)
-      'burc_ilkHarfBuyuk': (zodiacSign != null && zodiacSign!.isNotEmpty)
-          ? zodiacSign![0].toUpperCase() + zodiacSign!.substring(1)
-          : '',
+      'burc_ilkHarfBuyuk': () {
+          final b = zodiacSign?.isNotEmpty == true
+              ? zodiacSign!
+              : ZodiacCalculator.fromBirthDateString(birthDate);
+          return b.isNotEmpty ? b[0].toUpperCase() + b.substring(1) : '';
+        }(),
       'dogum_tarihi': birthDate ?? '',
       'dogum_sehri': birthCity ?? '',
       // ── Doğum tarihi parçaları ─────────────────────────────────────────────

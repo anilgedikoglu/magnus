@@ -840,7 +840,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     ),
                   ),
                   const SizedBox(width: 8),
-                  // [3] Gelen Kutusu — 1. sayfada (sol ikon yokken) navW + gap kadar genişler
+                  // [3] Gelen Kutusu — her zaman navW
                   Consumer(builder: (_, cref, __) {
                     final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
                     return GestureDetector(
@@ -848,7 +848,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       child: AnimatedContainer(
                         duration: dur,
                         curve: curve,
-                        width: !showPrev ? navW + 8.0 + navW : navW,
+                        width: navW,
                         height: 44,
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(
@@ -891,26 +891,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     curve: curve,
                     child: SizedBox(width: showNext ? 8.0 : 0.0),
                   ),
-                  // [4] Sonraki (ikon sadece) — OverflowBox butonu tree'de tutar
+                  // [4] Sonraki — 1. sayfada büyür (2×navW+8), diğer sayfalarda navW,
+                  // 3. sayfada gizlenir (width=0).
                   ClipRect(
-                    child: AnimatedSize(
+                    child: AnimatedContainer(
                       duration: dur,
                       curve: curve,
-                      alignment: Alignment.centerLeft,
-                      child: SizedBox(
-                        width: showNext ? navW : 0,
-                        height: 44,
-                        child: OverflowBox(
-                          maxWidth: navW, minWidth: navW,
-                          maxHeight: 44, minHeight: 44,
-                          alignment: Alignment.centerLeft,
-                          child: _BottomBtn(
-                            imagePath: 'assets/images/menuright.png',
-                            label: 'Sonraki',
-                            onTap: _goNext,
-                            showLabel: false,
-                          ),
-                        ),
+                      width: showNext ? (!showPrev ? navW + 8.0 + navW : navW) : 0,
+                      height: 44,
+                      child: _BottomBtn(
+                        imagePath: 'assets/images/menuright.png',
+                        label: 'Sonraki',
+                        onTap: _goNext,
+                        showLabel: false,
                       ),
                     ),
                   ),

@@ -281,7 +281,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen>
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/images/falbg/biyoritim.png',
+              'assets/images/numeroloji_bg.png',
               fit: BoxFit.cover,
               filterQuality: FilterQuality.high,
               errorBuilder: (_, __, ___) => Container(color: const Color(0xFF050020)),

@@ -296,10 +296,34 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF060912),
-      body: SafeArea(
-        child: Column(
-          children: [
+      backgroundColor: Colors.black,
+      extendBody: true,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/images/dream_bg.png',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+            filterQuality: FilterQuality.high,
+            errorBuilder: (_, __, ___) => Container(color: const Color(0xFF060912)),
+          ),
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0x99000000),
+                  Color(0x44000000),
+                  Color(0x99000000),
+                ],
+              ),
+            ),
+          ),
+          SafeArea(
+            child: Column(
+              children: [
             // Başlık
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -329,8 +353,10 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen>
                 _RYAdim.analiz => _buildAnaliz(),
               },
             ),
-          ],
-        ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

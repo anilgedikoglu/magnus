@@ -403,3 +403,76 @@ AnimatedBuilder(
 `home_screen.dart` → `_anaMenu1SohbetBalonu()` metodu.
 Her app açılışında 6 selamlama arasından biri random gelir.
 Selamlamalar: "Hoş geldin X!", "Merhaba, seni görmek güzel X!", "Ne iyi ettin de geldin X!", "Hoş geldin, safalar getirdin X!", "Seni burada görmek güzel X.", "X merhaba! Nasılsın? Dilerim iyisindir. 😊"
+
+---
+
+## Alt Nav Buton Boyutları (home_screen.dart `_buildBottomBar`)
+
+**Kural:** Sayfa konumuna göre büyüyen buton:
+- **1. sayfa** (showPrev=false, showNext=true): Sonraki = `2×navW+8` (büyük), diğerleri `navW`
+- **2. sayfa** (showPrev=true, showNext=true): hepsi `navW`
+- **3. sayfa** (showPrev=true, showNext=false): Önceki = `2×navW+8` (büyük), diğerleri `navW`
+
+`navW = (constraints.maxWidth - 3×8) / 4`
+
+Önceki ve Sonraki için `ClipRect + AnimatedContainer` pattern (width 0→navW→2×navW+8 animasyonu).
+Bilgi butonu: `SizedBox(width: navW)` — sabit.
+Inbox: `AnimatedContainer(width: navW)` — sabit genişlik.
+
+---
+
+## GunlukAstroloji JSON Yapısı
+
+**Kaynak:** `C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\GunlukAstroloji\GunlukAstro\`
+**Çıktı:** `assets/data/gunlukastroloji.json`
+**Script:** `scripts/convert_gunlukastroloji.py`
+
+JSON yapısı **bölüm anahtarlıdır** — her klasör bir bölüm anahtarı olur:
+```json
+{
+  "giris": [...],
+  "astroyorum": [...],
+  "astrogununsozu": [...],
+  "astrogununayeti": [...],
+  "astrogununhadisi": [...],
+  "astroeglencelibilgi": [...],
+  "astrokesif": [...],
+  "astrogununismi": [...],
+  "astrogununyemegi": [...],
+  "astroveda": [...]
+}
+```
+
+`astroloji_screen.dart` → `_sections` listesi bu anahtarlarla eşleşir. Her bölüm için `SharedPreferences`'ta ayrı tekrar-gösterilmeme takibi (`astroloji_<key>_gosterilen`).
+
+**Kritik:** `decode_escapes` sonrası `re.sub(r'\n', ' ', t)` — YAML satır kırıkları boşluğa çevrilmeli, aksi hâlde Flutter'da metinler yanlış satır sonlarıyla render edilir.
+
+---
+
+## Rüya Yorumu Ekranı (ruya_yorumu_screen.dart)
+
+**Arka plan:** `assets/images/dream_bg.png` (Stack içinde full-screen Image + overlay)
+- `build()` → Stack[Image, Container(gradient overlay), SafeArea(Column(...))]
+- `_buildSecim()` ayrı metot — Column döner, Scaffold değil
+- Alttaki buton: kelime seçilmemişse "< Geri Git" (`context.pop()`), seçilince "Yorumla" (`_tamam`)
+- Arama kutusu `fillColor: 0x800D0A1E` (%50 transparan), kelime listesi item `color: 0x800D0A1E`
+
+**Kritik:** `build()` kapanışı `],),),],),);` şeklinde Stack+SafeArea+Column'u kapatır.
+`_buildSecim()` kendi `],);` ile biter — karıştırma!
+
+---
+
+## Numeroloji Ekranı (numeroloji_screen.dart)
+
+**Arka plan:** `assets/images/numeroloji_bg.png` (Positioned.fill Image)
+
+---
+
+## Aşk Uyumu Çark Ekranı (askuyumu_screen.dart)
+
+**Çark bölümü** (`build()` metodu içi, `_AskUyumuWheelState`):
+- Snap offset: `_kSnapOffset = pi/12`, başlangıç: `_wheelAngle = pi + pi/12`
+- Snap formülü: `((_wheelAngle - _kSnapOffset) / (pi/6)).round() * (pi/6) + _kSnapOffset`
+- İndeks (CCW burç yönü): `((6 - ((_wheelAngle - _kSnapOffset) / (pi/6)).round()) % 12 + 12) % 12`
+- Sarı segment glow: `_SegmentGlowPainter` → `IgnorePointer` ile sarılı (dokunuşu engellemez)
+- Alt Geri Git butonu: `Column` içinde `Expanded` dışında, `padding: fromLTRB(20,0,20,20)`

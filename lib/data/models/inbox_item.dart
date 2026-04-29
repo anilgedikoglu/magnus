@@ -3,7 +3,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 part 'inbox_item.g.dart';
 
-enum FortuneType { coffee, tarot, astrology, dream, motivation, general, birthChart, numeroloji, durugoru, elfali }
+enum FortuneType { coffee, tarot, astrology, dream, motivation, general, birthChart, numeroloji, durugoru, elfali, iching }
 
 @HiveType(typeId: 1)
 class InboxItem extends HiveObject {
@@ -99,6 +99,8 @@ class InboxItem extends HiveObject {
         return FortuneType.durugoru;
       case 'elfali':
         return FortuneType.elfali;
+      case 'iching':
+        return FortuneType.iching;
       default:
         return FortuneType.general;
     }
@@ -158,6 +160,8 @@ class InboxItem extends HiveObject {
         return 'Durugörü';
       case FortuneType.elfali:
         return 'El Falı';
+      case FortuneType.iching:
+        return 'I-Ching';
     }
   }
 

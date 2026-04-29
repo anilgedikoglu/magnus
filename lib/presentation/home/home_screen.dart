@@ -334,6 +334,34 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     });
   }
 
+  void _checkIchingSent() {
+    final sent = ref.read(ichingSentProvider);
+    if (!sent) return;
+    ref.read(ichingSentProvider.notifier).state = false;
+    final name = ref.read(userProfileProvider).name;
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'I-Ching falın hazırlanıyor${name.isNotEmpty ? ' $name' : ''}.',
+        gradient: const [Color(0xFF0A1A10), Color(0xFF0F2D1A)],
+        borderColor: const Color(0xFFB8941F),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
   bool _listenersAttached = false;
 
   @override
@@ -357,6 +385,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       });
       ref.listenManual(ruyaSentProvider, (_, sent) {
         if (sent) _checkRuyaSent();
+      });
+      ref.listenManual(ichingSentProvider, (_, sent) {
+        if (sent) _checkIchingSent();
       });
     }
   }
@@ -1513,6 +1544,7 @@ class _FortuneCircleBadge extends StatelessWidget {
       case FortuneType.numeroloji:  return locked ? '${base}numeroloji2.png' : '${base}numeroloji.png';
       case FortuneType.durugoru:    return locked ? '${base}durugoru2.png'   : '${base}durugoru.png';
       case FortuneType.elfali:      return locked ? '${base}elfali2.png'      : '${base}elfali.png';
+      case FortuneType.iching:      return locked ? '${base}iching2.png'      : '${base}iching.png';
     }
   }
 }

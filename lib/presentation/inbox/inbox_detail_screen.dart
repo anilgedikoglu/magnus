@@ -192,6 +192,9 @@ class InboxDetailScreen extends StatelessWidget {
             // Rüya Yorumu: özel logo + çerçeveli metin
             else if (item.fortuneType == FortuneType.dream)
               _buildDreamContent(context)
+            // I-Ching: koyu altın temalı metin kutusu
+            else if (item.fortuneType == FortuneType.iching)
+              _buildIChingContent(context)
             else
             // Fortune text
             Padding(
@@ -322,6 +325,112 @@ class InboxDetailScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  // ─── I-Ching: koyu altın temalı kutu ────────────────────────────────────────
+
+  Widget _buildIChingContent(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 24, 16, 28),
+      child: Column(
+        children: [
+          // Logo
+          Image.asset(
+            'assets/images/ichingikonlogo.png',
+            height: 72,
+            width: 72,
+            errorBuilder: (_, __, ___) => const Text('☯', style: TextStyle(fontSize: 56, color: Color(0xFFD4AF37))),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'I-CHING',
+            style: TextStyle(
+              color: const Color(0xFFD4AF37).withValues(alpha: 0.9),
+              fontSize: 13,
+              fontWeight: FontWeight.w600,
+              letterSpacing: 4,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            _formatDate(item.date),
+            style: AppTextStyles.inboxMeta.copyWith(fontSize: 12),
+          ),
+          const SizedBox(height: 20),
+          // Metin kutusu — koyu, altın border
+          Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              color: const Color(0xFF080E18).withValues(alpha: 0.90),
+              border: Border.all(
+                color: const Color(0xFFD4AF37).withValues(alpha: 0.40),
+                width: 1.2,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xFFD4AF37).withValues(alpha: 0.14),
+                  blurRadius: 24,
+                  spreadRadius: 2,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                Container(
+                  height: 1,
+                  margin: const EdgeInsets.fromLTRB(20, 16, 20, 0),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.transparent,
+                        const Color(0xFFD4AF37).withValues(alpha: 0.55),
+                        Colors.transparent,
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
+                  child: RichTextParser.build(
+                    item.text,
+                    style: AppTextStyles.bubbleText.copyWith(
+                      height: 1.88,
+                      color: const Color(0xFFE8E0CC),
+                      fontSize: 14.5,
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 1,
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.transparent,
+                        const Color(0xFFD4AF37).withValues(alpha: 0.55),
+                        Colors.transparent,
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: Text('☯',
+                    style: TextStyle(fontSize: 14, color: const Color(0xFFD4AF37).withValues(alpha: 0.5))),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 28),
+          _buildMagnusFooter(),
+          const SizedBox(height: 24),
+          _buildBackButton(context),
+          const SizedBox(height: 8),
+        ],
       ),
     );
   }

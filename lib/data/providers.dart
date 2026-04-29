@@ -140,6 +140,9 @@ final durugoruSentProvider = StateProvider<bool>((ref) => false);
 /// Rüya yorumu gönderildiğinde ana menüye bildirim için
 final ruyaSentProvider = StateProvider<bool>((ref) => false);
 
+/// I-Ching falı gönderildiğinde ana menüye bildirim için
+final ichingSentProvider = StateProvider<bool>((ref) => false);
+
 // ─── Onboarding state ─────────────────────────────────────────────────────────
 
 final onboardingCompleteProvider = Provider<bool>((ref) {

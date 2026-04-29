@@ -1,5 +1,15 @@
 # Magnus App — Claude Proje Hafızası
 
+## 🚀 YENİ SESSION BAŞLARKEN — İLK İŞ
+
+Yeni bir session açıldığında, kullanıcı herhangi bir şey demeden önce:
+
+1. `git log --oneline -20` ile son 20 commit'i gör
+2. `git status` ile bekleyen değişiklik var mı kontrol et
+3. Bu CLAUDE.md'yi baştan sona oku
+
+Bunu yapmadan hiçbir işe başlama.
+
 ## ⚠️⚠️⚠️ COLOR TAG RENDER KURALI — DEĞİŞMEZ ⚠️⚠️⚠️
 
 Unity metinleri `<color=yellow>metin</color>` veya `<color=#RRGGBB>metin</color>` şeklinde renk tag'ları içerebilir.

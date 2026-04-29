@@ -698,7 +698,7 @@ class _WheelPainter extends CustomPainter {
       if (ikon != null) {
         canvas.save();
         canvas.translate(imgX, imgY);
-        canvas.rotate(midAngle + pi / 2);
+        canvas.rotate(midAngle);
         final src = Rect.fromLTWH(0, 0, ikon.width.toDouble(), ikon.height.toDouble());
         final dst = Rect.fromCenter(center: Offset.zero, width: imgSize * 2.4, height: imgSize * 2.4);
         canvas.drawImageRect(ikon, src, dst, Paint());

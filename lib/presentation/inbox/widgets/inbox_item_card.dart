@@ -271,6 +271,8 @@ class _FortuneIconState extends State<_FortuneIcon>
         return locked ? '${base}elfali2.png' : '${base}elfali.png';
       case FortuneType.iching:
         return locked ? '${base}iching2.png' : '${base}iching.png';
+      case FortuneType.japonfali:
+        return locked ? '${base}japonfali2.png' : '${base}japonfali.png';
     }
   }
 }
@@ -295,6 +297,7 @@ class _FallbackIcon extends StatelessWidget {
       FortuneType.durugoru    => '👁️',
       FortuneType.elfali      => '🖐️',
       FortuneType.iching      => '☯',
+      FortuneType.japonfali   => '⛩',
     };
     return Container(
       width: 50,

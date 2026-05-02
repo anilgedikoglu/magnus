@@ -14,7 +14,7 @@ class KehanetMenuScreen extends StatelessWidget {
       _KehanetItem('Maganda', 'assets/images/kehanet/maganda.png', '/maganda'),
       _KehanetItem('Tamua', 'assets/images/kehanet/tamua.png', '/tamua'),
       _KehanetItem('Yana', 'assets/images/kehanet/yana.png', '/yana'),
-      _KehanetItem('Kahinlere Sor', 'assets/images/menu/kehanet.png', '/kahinler'),
+      _KehanetItem('Kahinlere Sor', 'assets/images/menu/digerfalcilar.png', '/kahinler'),
     ];
     return Scaffold(
       backgroundColor: const Color(0xFF0A0718),

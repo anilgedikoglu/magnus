@@ -143,6 +143,9 @@ final ruyaSentProvider = StateProvider<bool>((ref) => false);
 /// I-Ching falı gönderildiğinde ana menüye bildirim için
 final ichingSentProvider = StateProvider<bool>((ref) => false);
 
+/// Japon Falı gönderildiğinde ana menüye bildirim için
+final japonFaliSentProvider = StateProvider<bool>((ref) => false);
+
 // ─── Onboarding state ─────────────────────────────────────────────────────────
 
 final onboardingCompleteProvider = Provider<bool>((ref) {

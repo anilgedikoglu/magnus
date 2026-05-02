@@ -30,6 +30,8 @@ Her fal türünün metin seçim davranışı aşağıdaki tabloda tanımlıdır.
 | **Tarot** | — (AI üretimi) | — | ✅ Günde 1 |
 | **Durugörü** | — (AI üretimi) | — | ✅ Günde 1 |
 | **Dert Ortağı** | — (AI üretimi) | — | ✅ Günde 1 |
+| **I-Ching** | ❌ Yok | ✅ Evet | ✅ Günde 1 |
+| **Japon Falı** | ❌ Yok | ✅ Evet | ✅ Günde 1 |
 
 ---
 
@@ -802,3 +804,47 @@ Kaynak: `C:\src\magnus_app\assets\images\Yeniikonlar\` (renkli) ve `Yeniikonlar\
 `_ArcProgressPainter._rainbow` — 20 renk durağı, neon paleti:
 `Koyu Mavi(#1A47FF) → Camgöbeği(#00E5FF) → Mor(#8A2EFF) → Pembe(#FF2EC7) → Kırmızı(#FF3B30) → Sarımsı Beyaz(#FFF2A6) → Camgöbeği(#00E5FF)` ve devamı.
 `isReady` ise solid yeşil `0xFF44FF88`.
+
+---
+
+## Japon Falı (japonfali_screen.dart)
+
+**Kaynak:** `C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\JaponFali\Metinler` — 27 .asset dosyası
+**JSON:** `assets/data/japonfali.json` → `{"japonfali": [{"id": 1, "metin": "...", "kosullar": []}, ...]}`
+**Arka plan:** `assets/images/falbg/omikujibg.png`
+**Ekran akışı:** 5s kum saati + "Japon Falı çalışılıyor..." → inbox (unlockAt +2 dak) → `japonFaliSentProvider = true` → `context.go('/home')`
+**Home balon:** "Japon Falın değerlendiriliyor..." (kırmızı #CC2244 tema)
+**Günlük limit pref anahtarı:** `japonfali_bugun_tarih`
+**No-repeat pref anahtarı:** `japonfali_gosterilen`
+**Provider:** `japonFaliSentProvider` (StateProvider<bool>) — `providers.dart`
+**Route:** `/japonfali` — `app.dart`
+**Inbox ikon:** `assets/images/inbox_icons/japonfali.png` / `japonfali2.png`
+**Logo:** `assets/images/japonfalilogo.png`
+**Renk paleti:** `Color(0xFFFF4466)` (kırmızı/pembe)
+**Günlük limit:** `_onDailyFalTap('japonfali', '/japonfali')` — home_screen'de `_remainingCredits['japonfali']`
+**Inbox detay:** `_buildJaponFaliContent(context)` — kırmızı border kutu, `⛩` dekorasyon
+
+---
+
+## I-Ching — Günlük Limit Sistemi (home_screen.dart)
+
+I-Ching de Japon Falı gibi günde 1 haktır. `_onDailyFalTap('iching', '/iching')` ile tetiklenir.
+Günlük limit pref anahtarı: `iching_bugun_tarih` (eskiden yoktu, bu session eklendi).
+`_checkIchingSent()` artık `iching_bugun_tarih` de set ediyor.
+Badge: `_remainingCredits['iching'] ?? 1` — 0 ise tıklamada uyarı balonu gösterir.
+
+---
+
+## Kehanet Menüsü — Kahinlere Sor İkonu (kehanet_menu_screen.dart)
+
+`Kahinlere Sor` menü öğesi ikonu: `assets/images/menu/digerfalcilar.png`
+Kaynak: `C:\src\magnus_app\assets\images\Yeniikonlar\digerfalcilar.png`
+
+---
+
+## Inbox İkon Eşlemesi (güncellenmiş)
+
+| FortuneType | Hazır (renkli) | Kilitli (siyahbeyaz) |
+|---|---|---|
+| japonfali | japonfali.png | japonfali2.png |
+| iching | iching.png (= niyet.png) | iching2.png (= ichingikon2.png) |

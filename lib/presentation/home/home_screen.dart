@@ -148,6 +148,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'dertortagi':   'dertortagi_bugun_tarih',
     'acigercekler': 'acigercekler_bugun_tarih',
     'durugoru':     'durugoru_bugun_tarih',
+    'iching':       'iching_bugun_tarih',
+    'japonfali':    'japonfali_bugun_tarih',
     // 'numeroloji' burada yok — limit ekran içinden yönetilir
   };
 
@@ -162,6 +164,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'dertortagi':   'Dert Ortağı',
     'acigercekler': 'Acı Gerçekler',
     'numeroloji':   'Numeroloji',
+    'iching':       'I-Ching',
+    'japonfali':    'Japon Falı',
   };
 
   // Ekrandan 'hazirlanıyor' sinyali gelince gösterilecek mesajlar
@@ -208,6 +212,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       _checkTarotSent();
       _checkKahveSent();
       _checkDurugoruSent();
+      _checkRuyaSent();
+      _checkIchingSent();
+      _checkJaponFaliSent();
     });
   }
 
@@ -338,12 +345,50 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final sent = ref.read(ichingSentProvider);
     if (!sent) return;
     ref.read(ichingSentProvider.notifier).state = false;
+    // I-Ching günlük krediyi işaretle
+    SharedPreferences.getInstance().then((p) {
+      p.setString('iching_bugun_tarih', _today);
+      _refreshCredits();
+    });
     final name = ref.read(userProfileProvider).name;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
         text: 'I-Ching falın hazırlanıyor${name.isNotEmpty ? ' $name' : ''}.',
         gradient: const [Color(0xFF0A1A10), Color(0xFF0F2D1A)],
         borderColor: const Color(0xFFB8941F),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
+  void _checkJaponFaliSent() {
+    final sent = ref.read(japonFaliSentProvider);
+    if (!sent) return;
+    ref.read(japonFaliSentProvider.notifier).state = false;
+    // Japon Falı günlük krediyi işaretle
+    SharedPreferences.getInstance().then((p) {
+      p.setString('japonfali_bugun_tarih', _today);
+      _refreshCredits();
+    });
+    final name = ref.read(userProfileProvider).name;
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'Japon Falın değerlendiriliyor${name.isNotEmpty ? ' $name' : ''}.',
+        gradient: const [Color(0xFF2A0008), Color(0xFF4A0012)],
+        borderColor: const Color(0xFFCC2244),
       ));
       _extraBubbles.add(_ExtraBubble(
         text: "Magnus'un ana menüsü karşında!",
@@ -388,6 +433,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       });
       ref.listenManual(ichingSentProvider, (_, sent) {
         if (sent) _checkIchingSent();
+      });
+      ref.listenManual(japonFaliSentProvider, (_, sent) {
+        if (sent) _checkJaponFaliSent();
       });
     }
   }
@@ -474,6 +522,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     await _refreshCredits();
     // Fal ekranından dönünce geçiş reklamı göster
     await AdService.instance.showInterstitial();
+  }
+
+  // ─── Günlük limitli fallar (I-Ching, Japon Falı) — reklam yok, git/gel yok (go) ──
+  void _onDailyFalTap(String type, String route) {
+    final remaining = _remainingCredits[type] ?? 1;
+    if (remaining <= 0) {
+      _showDailyLimitBubble(type);
+      return;
+    }
+    context.push(route);
   }
 
   // ─── Geçiş reklamlı navigasyon yardımcısı ────────────────────────────────
@@ -596,14 +654,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             () => _onFortuneItemTap('kehanet', '/kehanet')),
         _MenuItem('Niyet', 'assets/images/menu/mistikfallar.png', 1,
             () => _pushWithAd('/niyet')),
-        _MenuItem('Japon Falı', 'assets/images/japonfali.png', 1,
-            () {}),
+        _MenuItem('Japon Falı', 'assets/images/japonfali.png',
+            _remainingCredits['japonfali'] ?? 1,
+            () => _onDailyFalTap('japonfali', '/japonfali')),
       ];
 
   // ─── Sayfa 3 ──────────────────────────────────────────────────────────────
   List<_MenuItem> _page3Items(BuildContext context) => [
-        _MenuItem('I-Ching', 'assets/images/ichingikon.png', 1,
-            () => _pushWithAd('/iching')),
+        _MenuItem('I-Ching', 'assets/images/ichingikon.png',
+            _remainingCredits['iching'] ?? 1,
+            () => _onDailyFalTap('iching', '/iching')),
         _MenuItem('Aşk Uyumu', 'assets/images/askuyumu.png', 1,
             () => _pushWithAd('/ask_uyumu')),
         _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',
@@ -1545,6 +1605,7 @@ class _FortuneCircleBadge extends StatelessWidget {
       case FortuneType.durugoru:    return locked ? '${base}durugoru2.png'   : '${base}durugoru.png';
       case FortuneType.elfali:      return locked ? '${base}elfali2.png'      : '${base}elfali.png';
       case FortuneType.iching:      return locked ? '${base}iching2.png'      : '${base}iching.png';
+      case FortuneType.japonfali:   return locked ? '${base}japonfali2.png'   : '${base}japonfali.png';
     }
   }
 }

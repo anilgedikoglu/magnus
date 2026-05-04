@@ -150,6 +150,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'durugoru':     'durugoru_bugun_tarih',
     'iching':       'iching_bugun_tarih',
     'japonfali':    'japonfali_bugun_tarih',
+    'kadercarki':   'kadercarki_bugun_tarih',
+    'askuyumu':     'askuyumu_bugun_tarih',
     // 'numeroloji' burada yok — limit ekran içinden yönetilir
   };
 
@@ -166,6 +168,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'numeroloji':   'Numeroloji',
     'iching':       'I-Ching',
     'japonfali':    'Japon Falı',
+    'kadercarki':   'Kader Çarkı',
+    'askuyumu':     'Aşk Uyumu',
   };
 
   // Ekrandan 'hazirlanıyor' sinyali gelince gösterilecek mesajlar
@@ -178,6 +182,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'kaderkitabi': 'Kader kitabının bugünkü sayfasını okudun.',
     'dertortagi':   'Bugün yeterince dertleştik.',
     'acigercekler': 'Bugün gerçeklerle yüzleştin.',
+    'kadercarki':   'Günlük Kader Çarkı hakkın doldu.',
+    'askuyumu':     'Günlük Aşk Uyumu hakkın doldu.',
   };
 
   String get _today => DateTime.now().toIso8601String().substring(0, 10);
@@ -664,10 +670,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         _MenuItem('I-Ching', 'assets/images/ichingikon.png',
             _remainingCredits['iching'] ?? 1,
             () => _onDailyFalTap('iching', '/iching')),
-        _MenuItem('Aşk Uyumu', 'assets/images/askuyumu.png', 1,
-            () => _pushWithAd('/ask_uyumu')),
+        _MenuItem('Aşk Uyumu', 'assets/images/askuyumu.png',
+            _remainingCredits['askuyumu'] ?? 1,
+            () => _onFortuneItemTap('askuyumu', '/ask_uyumu')),
         _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',
-            1, () => _pushWithAd('/kadercarki')),
+            _remainingCredits['kadercarki'] ?? 1,
+            () => _onFortuneItemTap('kadercarki', '/kadercarki')),
         _MenuItem('Rüya Yorumu', 'assets/images/menu/ruyaozel.png', 1,
             () => _pushWithAd('/ruya_yorumu')),
         // 5 yer tutucu — ikon eklendikçe buralar dolacak

@@ -2227,6 +2227,10 @@ class SettingsScreen extends ConsumerWidget {
             await prefs.remove('kaderkitabi_bugun_tarih');
             await prefs.remove('dertortagi_bugun_tarih');
             await prefs.remove('acigercekler_bugun_tarih');
+            await prefs.remove('iching_bugun_tarih');
+            await prefs.remove('japonfali_bugun_tarih');
+            await prefs.remove('kadercarki_bugun_tarih');
+            await prefs.remove('askuyumu_bugun_tarih');
             // Numeroloji: tüm cache sıfırla (genel + yıl + bugün)
             await prefs.remove('num_bugun_tarih');
             await prefs.remove('num_bugun_metin');
@@ -2317,7 +2321,7 @@ class SettingsScreen extends ConsumerWidget {
                             ),
                             if (!resetDone)
                               const Text(
-                                'Motivasyon, olumlama, özlü söz, tarot, kahve, astroloji',
+                                'Tarot, kahve, I-Ching, Japon Falı, Kader Çarkı, Aşk Uyumu ve diğerleri',
                                 style: TextStyle(
                                   color: Colors.white38,
                                   fontSize: 11,

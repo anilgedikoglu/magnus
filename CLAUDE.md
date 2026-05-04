@@ -520,11 +520,24 @@ AnimatedBuilder(
 
 ---
 
-## Ana Menü 1. Sohbet Balonu
+## Ana Menü 1. Sohbet Balonu — Karşılama Sistemi
 
-`home_screen.dart` → `_anaMenu1SohbetBalonu()` metodu.
-Her app açılışında 6 selamlama arasından biri random gelir.
-Selamlamalar: "Hoş geldin X!", "Merhaba, seni görmek güzel X!", "Ne iyi ettin de geldin X!", "Hoş geldin, safalar getirdin X!", "Seni burada görmek güzel X.", "X merhaba! Nasılsın? Dilerim iyisindir. 😊"
+`home_screen.dart` → `_loadSelamlama()` async metodu (didChangeDependencies içinden çağrılır).
+
+**JSON:** `assets/data/karsilamalar.json`
+- `ozel_gunler` (29 giriş): ay/gün eşleşince o gün boyunca aynı metin. `ay=0,gun=0` = kullanıcı doğum günü.
+- `karsilamalar` (459 giriş): her app açılışında rastgele 1 metin (%90 ihtimalle).
+- `biliyormuydun` (33 giriş): her app açılışında rastgele 1 metin (%10 ihtimalle).
+
+**Öncelik:** özel gün > random (karsilamalar/biliyormuydun)
+**No-repeat uygulanmaz** — tamamen random, her açılışta yeni.
+**VariableReplacer.replace()** ile `{{isim}}` gibi placeholder'lar doldurulur.
+
+**Marquee animasyonu:** `_TypewriterChatBubble(enableMarquee: true)` — ilk balona uygulanır.
+- Typewriter tamamlanınca `TextPainter` ile overflow ölçülür.
+- Overflow varsa `AnimationController` + `Transform.translate` ile sağdan sola kaydırma loop'u başlar.
+- Hız: overflow px / 55 px/s (min 3 saniye).
+- Döngü sonu: 700ms bekleme → başa dön.
 
 ---
 

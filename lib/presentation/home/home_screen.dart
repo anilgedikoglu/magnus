@@ -1476,7 +1476,8 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
   void _maybeStartMarquee() {
     if (!mounted || _marqueeCtrl == null || _bubbleInnerWidth <= 0) return;
     final textW = _measureText(widget.text);
-    if (textW <= _bubbleInnerWidth) return; // sığıyor, marquee gerekmez
+    // 8px buffer: TextPainter ölçümü ile gerçek render arasındaki farkı telafi eder
+    if (textW < _bubbleInnerWidth - 8) return; // kesin sığıyor, marquee gerekmez
 
     // Bir döngü = text + gap genişliği — bu kadar kaydırınca seamless sıfırlanır
     final gapW = _measureText(_marqueeGap);
@@ -1547,8 +1548,9 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
               )
             : Builder(builder: (_) {
                 // Typewriter aşaması: yazılan kısmı göster, sona kaydır
+                // +4px buffer → son karakter kliplenmesini önler
                 final typedW = _measureText(displayText);
-                final offset = max(0.0, typedW - _bubbleInnerWidth);
+                final offset = max(0.0, typedW - _bubbleInnerWidth + 4);
                 return Transform.translate(
                   offset: Offset(-offset, 0),
                   child: Text(displayText, style: _textStyle, maxLines: 1,

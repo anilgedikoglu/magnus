@@ -1105,7 +1105,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           .where((e) => (e['ziyaret'] as int? ?? 1) == ziyaretKey)
           .toList();
       if (havuz.isEmpty) {
-        // Fallback: ziyaret=6 havuzu
         havuz = karsilamalar
             .where((e) => (e['ziyaret'] as int? ?? 1) == 6)
             .toList();
@@ -1113,19 +1112,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
       // %10 Biliyor muydun? (yalnızca 1. ziyarette)
       List<Map<String, dynamic>> secimHavuzu = havuz;
+      String noRepeatKey = 'karsilama_gosterilen_$ziyaretKey';
       if (visitCount == 1 && biliyormuydun.isNotEmpty &&
           Random().nextDouble() < 0.10) {
         secimHavuzu = biliyormuydun;
+        noRepeatKey = 'karsilama_gosterilen_biliyormuydun';
       }
 
-      if (secimHavuzu.isEmpty) {
-        metin = profile.name.isNotEmpty
-            ? 'Hoş geldin ${profile.name}!'
-            : 'Hoş geldin!';
-      } else {
-        secimHavuzu.shuffle(Random());
-        metin = secimHavuzu.first['metin'] as String;
-      }
+      metin = secimHavuzu.isNotEmpty
+          ? _noRepeatSec(prefs, noRepeatKey, secimHavuzu)
+          : (profile.name.isNotEmpty ? 'Hoş geldin ${profile.name}!' : 'Hoş geldin!');
 
       metin = VariableReplacer.replace(metin, vars);
       if (!mounted) return;
@@ -1135,6 +1131,38 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       if (!mounted) return;
       setState(() => _selamlama = name.isNotEmpty ? 'Hoş geldin $name!' : 'Hoş geldin!');
     }
+  }
+
+  /// No-repeat seçim: havuzdaki tüm metinler gösterilmeden aynısı tekrar gelmez.
+  String _noRepeatSec(SharedPreferences prefs, String key,
+      List<Map<String, dynamic>> havuz) {
+    final shown = prefs.getStringList(key) ?? [];
+    final allIds = havuz.map((e) => '${e['id']}').toList();
+
+    // Gösterilmemiş olanlar
+    var available = havuz.where((e) => !shown.contains('${e['id']}')).toList();
+
+    // Hepsi bitti → son gösterileni koruyarak sıfırla
+    if (available.isEmpty) {
+      final lastId = shown.isNotEmpty ? shown.last : null;
+      final resetShown = lastId != null ? [lastId] : <String>[];
+      prefs.setStringList(key, resetShown);
+      available = havuz.where((e) => e['id'].toString() != lastId).toList();
+      if (available.isEmpty) available = List.from(havuz);
+    }
+
+    available.shuffle(Random());
+    final pick = available.first;
+
+    // Seçimi kaydet (listeyi gereksiz şişirmemek için sadece son N ID tut)
+    final updated = [...shown, '${pick['id']}'];
+    // Havuzdan fazla ID biriktirme — en fazla havuz.length kadar tut
+    final trimmed = updated.length > allIds.length
+        ? updated.sublist(updated.length - allIds.length)
+        : updated;
+    prefs.setStringList(key, trimmed);
+
+    return pick['metin'] as String;
   }
 }
 

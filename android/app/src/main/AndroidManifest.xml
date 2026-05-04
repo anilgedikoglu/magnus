@@ -38,6 +38,9 @@
     <!-- Internet access (Claude Vision API + any HTTP call) -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Required for AdMob on Android 13+ (API 33+) to access Advertising ID -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
     <!-- Camera and photo library permissions for coffee fortune -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

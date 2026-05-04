@@ -861,3 +861,71 @@ Kaynak: `C:\src\magnus_app\assets\images\Yeniikonlar\digerfalcilar.png`
 |---|---|---|
 | japonfali | japonfali.png | japonfali2.png |
 | iching | iching.png (= niyet.png) | iching2.png (= ichingikon2.png) |
+
+---
+
+## Ana Menü Karşılama Balonu — Yeni Sistem (home_screen.dart)
+
+`_loadSelamlama()` tam yeniden yazıldı. Öncelik sırası:
+1. **İlk kez açılış** → `ilk_giris_yapildi` prefs anahtarı `false` ise → `karsilamalar.json` → `ilk_giris` sabit metni: `"Ve işte karşındayım! Hoş geldin {{isim}}."`
+2. **Özel gün** → `ozel_gunler` listesinden ay/gün eşleşmesi (sadece günün ilk açılışında)
+3. **Gün içi ziyaret sayısına göre havuz** → `karsilama_tarih` + `karsilama_sayi` prefs ile o gün kaçıncı açılış olduğu hesaplanır; `ziyaret` alanı (1–6) JSON'da her metinde var
+
+**JSON yapısı** (`assets/data/karsilamalar.json`):
+- `ilk_giris`: string — ilk açılış metni
+- `ozel_gunler`: list — `{ay, gun, metin}` nesneleri (ay=0,gun=0 = doğum günü)
+- `karsilamalar`: list — `{id, metin, ziyaret}` nesneleri
+  - ziyaret=1: ID 1–152 (genel/ilk geliş)
+  - ziyaret=2: ID 153–216 ("bugün ikinci kez" üslubu)
+  - ziyaret=3: ID 217–254 ("üçüncü kez" üslubu)
+  - ziyaret=4: ID 255–286 ("dördüncü kez")
+  - ziyaret=5: ID 287–308 ("beşinci kez")
+  - ziyaret=6: ID 309–459 (genel tekrar + 6/7/8/9. kez)
+- `biliyormuydun`: list — `{id, metin}` nesneleri (%10 ihtimalle, sadece ilk ziyarette)
+
+**No-repeat:** Her havuz için ayrı prefs anahtarı `karsilama_gosterilen_<ziyaretKey>` — `_noRepeatSec()` helper metodu.
+
+**Pref anahtarları:**
+- `ilk_giris_yapildi` (bool)
+- `karsilama_tarih` (string YYYY-MM-DD)
+- `karsilama_sayi` (int — günlük açılış sayısı)
+- `karsilama_gosterilen_1..6` (List<String> — ID'ler)
+- `karsilama_gosterilen_biliyormuydun` (List<String>)
+
+---
+
+## Marquee Animasyonu — Seamless Loop (_TypewriterChatBubble)
+
+`_maybeStartMarquee()` artık seamless loop kullanıyor:
+- `loopContent = text + gap(10 boşluk) + text`
+- `_marqueeCtrl!.repeat()` ile 0→1→0→1 sürekli loop
+- `cycleW = textW + gapW` kadar offset — tam bir döngü sonunda metin başa döner, "tak" efekti yok
+- Tetikleme koşulu: `textW >= _bubbleInnerWidth - 8` (8px TextPainter/render farkı toleransı)
+- Typewriter offset: `max(0.0, typedW - _bubbleInnerWidth + 4)` (+4px buffer)
+- `didUpdateWidget`: `old.text.isEmpty` ise typewriter yeniden başlatılır (JSON yüklenmeden önce boş string gelince typewriter erken tamamlanmasın diye)
+
+---
+
+## Asset Optimizasyonu — AAB 248 MB → 109 MB (v10.6.0+202)
+
+**Tarih:** 2026-05-04  
+**Yedek klasör:** `asset_optimization_backup/` (proje kökünde, git'te, 226 MB)
+
+**Yapılanlar:**
+- 430 kullanılmayan dosya `asset_optimization_backup/`'a taşındı (Yeniikonlar Unity mirror klasörü dahil)
+- 76 görsel optimize edildi: arka planlar max 1920px, UI görseller max 1440px, JPG/JPEG kalite 92
+- EXIF metadata temizlendi
+- Launcher icon, splash, adaptive icon dokunulmadı
+
+**Kritik dosyalar (dokunulmaması gerekenler):**
+- `android/app/src/main/res/` — launcher ikonlar
+- `assets/images/magnusappicon_splash.png`
+- `assets/images/magnusYaziLogoRenkli.PNG`
+- `assets/images/inbox_icons/` — tüm dosyalar (dinamik yükleme)
+
+**Sonuç:**
+| | Önce | Sonra |
+|---|---|---|
+| Toplam asset | 341 MB | 165 MB |
+| Sadece görseller | 227 MB | 51 MB |
+| AAB boyutu | 248 MB | 109 MB |

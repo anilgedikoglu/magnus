@@ -623,9 +623,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         _MenuItem('El Falı', 'assets/images/menu/elfali.png', 1,
             () => _pushWithAd('/el_fali')),
         _MenuItem('AstroTakvim', 'assets/images/aytakvimi.png',
-            1, () => _pushWithAd('/astrotakvim')),
+            -1, () => _pushWithAd('/astrotakvim')),
         _MenuItem('Biyoritim', 'assets/images/falbg/biyoritim.png',
-            1, () => _pushWithAd('/biyoritim')),
+            -1, () => _pushWithAd('/biyoritim')),
         _MenuItem('Doğum Haritası', 'assets/images/dogum.png',
             1, () => _pushWithAd('/dogumharitasi')),
       ];

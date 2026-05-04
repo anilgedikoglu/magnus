@@ -1461,6 +1461,9 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
     });
   }
 
+  // Marquee ayraç boşluğu — metin bittikten sonra kaç karakter boşluk
+  static const _marqueeGap = '          '; // 10 boşluk
+
   double _measureText(String text) {
     final tp = TextPainter(
       text: TextSpan(text: text, style: _textStyle),
@@ -1472,26 +1475,21 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
 
   void _maybeStartMarquee() {
     if (!mounted || _marqueeCtrl == null || _bubbleInnerWidth <= 0) return;
-    final fullW = _measureText(widget.text);
-    final overflow = fullW - _bubbleInnerWidth;
-    if (overflow <= 0) return; // balon yeterince geniş — marquee yok
+    final textW = _measureText(widget.text);
+    if (textW <= _bubbleInnerWidth) return; // sığıyor, marquee gerekmez
 
-    _marqueeCtrl!.duration = Duration(milliseconds: max(3000, (overflow / 55 * 1000).round()));
+    // Bir döngü = text + gap genişliği — bu kadar kaydırınca seamless sıfırlanır
+    final gapW = _measureText(_marqueeGap);
+    final cycleW = textW + gapW;
+
+    // Hız: ~55 px/saniye
+    final durationMs = max(3000, (cycleW / 55 * 1000).round());
+    _marqueeCtrl!.duration = Duration(milliseconds: durationMs);
     _marqueeRunning = true;
 
-    void runCycle() {
-      if (!mounted) return;
-      _marqueeCtrl!.reset();
-      _marqueeCtrl!.forward().whenCompleteOrCancel(() {
-        if (!mounted || !_marqueeRunning) return;
-        // Kısa duraklama, sonra başa dön
-        Future.delayed(const Duration(milliseconds: 700), () {
-          if (!mounted || !_marqueeRunning) return;
-          runCycle();
-        });
-      });
-    }
-    runCycle();
+    // repeat(reverse:false) → 0→1, anında 0→1... sürekli döngü
+    _marqueeCtrl!.repeat();
+    if (mounted) setState(() {});
   }
 
   @override
@@ -1515,6 +1513,10 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
     return LayoutBuilder(builder: (ctx, constraints) {
       _bubbleInnerWidth = (constraints.maxWidth - _hPad).clamp(1.0, double.infinity);
 
+      // Seamless loop için içerik: "metin<boşluk>metin"
+      // cycleW kadar kaydırınca ilk metin ile ikinci metin aynı konuma gelir → seamless
+      final loopContent = '${widget.text}$_marqueeGap${widget.text}';
+
       return Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: widget.gradient,
@@ -1531,18 +1533,20 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
             ? AnimatedBuilder(
                 animation: _marqueeCtrl!,
                 builder: (_, __) {
-                  final fullW = _measureText(widget.text);
-                  final maxOffset = max(0.0, fullW - _bubbleInnerWidth);
-                  final offset = _marqueeCtrl!.value * maxOffset;
+                  final textW = _measureText(widget.text);
+                  final gapW  = _measureText(_marqueeGap);
+                  final cycleW = textW + gapW;
+                  // value 0→1 → offset 0→cycleW (seamless loop)
+                  final offset = _marqueeCtrl!.value * cycleW;
                   return Transform.translate(
                     offset: Offset(-offset, 0),
-                    child: Text(widget.text, style: _textStyle, maxLines: 1,
+                    child: Text(loopContent, style: _textStyle, maxLines: 1,
                         overflow: TextOverflow.visible, softWrap: false),
                   );
                 },
               )
             : Builder(builder: (_) {
-                // Typewriter: her zaman son karakteri göster
+                // Typewriter aşaması: yazılan kısmı göster, sona kaydır
                 final typedW = _measureText(displayText);
                 final offset = max(0.0, typedW - _bubbleInnerWidth);
                 return Transform.translate(

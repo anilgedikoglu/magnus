@@ -1,110 +1,86 @@
-"""
-JaponFali asset dosyalarını JSON'a dönüştürür.
-Kaynak: C:/Magnus/Assets/Resources/Editor/OnlineDOSYALAR/AnaMenu2/JaponFali/Metinler/
-Çıktı:  C:/src/magnus_app/assets/data/japonfali.json
-"""
+import os, re, json, sys
 
-import os, re, json
+src = r"C:\src\magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\JaponFali\Metinler"
+out = r"C:\src\magnus_app\.claude\worktrees\exciting-swanson-a016eb\assets\data\japonfali.json"
 
-BASE = r"C:/Magnus/Assets/Resources/Editor/OnlineDOSYALAR/AnaMenu2/JaponFali/Metinler"
-OUT  = r"C:/src/magnus_app/assets/data/japonfali.json"
-
-BITIS = {'.', '!', '?', '...', '\u2026', '"', "'", ')'}
+BS = chr(92)
 
 def decode_escapes(s):
     result = []
     i = 0
     while i < len(s):
-        if s[i] == '\\' and i + 1 < len(s):
-            nxt = s[i+1]
-            if nxt == 'u' and i + 5 <= len(s):
-                try:
-                    result.append(chr(int(s[i+2:i+6], 16))); i += 6; continue
-                except ValueError: pass
-            elif nxt == 'x' and i + 3 <= len(s):
-                try:
-                    result.append(chr(int(s[i+2:i+4], 16))); i += 4; continue
-                except ValueError: pass
-            elif nxt == 'n':
-                result.append('\n'); i += 2; continue
-            elif nxt == '"':
-                result.append('"'); i += 2; continue
-            elif nxt == '\\':
-                result.append('\\'); i += 2; continue
-        result.append(s[i]); i += 1
+        c = s[i]
+        if c == BS and i+1 < len(s):
+            nx = s[i+1]
+            if nx == 'n':   result.append('\n'); i += 2
+            elif nx == 't': result.append('\t'); i += 2
+            elif nx == '"': result.append('"'); i += 2
+            elif nx == BS:  result.append(BS); i += 2
+            elif nx == 'x' and i+3 < len(s):
+                try:    result.append(chr(int(s[i+2:i+4], 16))); i += 4
+                except: result.append(c); i += 1
+            elif nx == 'u' and i+5 < len(s):
+                try:    result.append(chr(int(s[i+2:i+6], 16))); i += 6
+                except: result.append(c); i += 1
+            else: result.append(c); i += 1
+        else: result.append(c); i += 1
     return ''.join(result)
 
-def parse_aciklama(content):
-    m = re.search(r'aciklama:(.*?)(?:aciklamaEng:|aciklamaBalonuYok:|gerekliDegisken|sohbetArkaplani)', content, re.DOTALL)
-    if not m:
-        return []
-    block = m.group(1)
-    items = re.findall(r'-\s+"((?:[^"\\\r\n]|\\[^\r\n]|[\r\n])*?)"', block)
-    if items:
-        return items
-    raw_lines = block.split('\n')
-    current = None
-    results = []
-    for line in raw_lines:
-        s = line.strip()
-        if s.startswith('- "'):
-            if current is not None:
-                results.append(current)
-            current = s[3:]
-            if current.endswith('"'):
-                current = current[:-1]
-                results.append(current); current = None
-        elif current is not None and s:
-            current += ' ' + s
-    if current is not None:
-        results.append(current)
-    return results
+files = sorted([f for f in os.listdir(src) if f.endswith('.asset') and not f.endswith('.meta')])
+print(f"Toplam dosya: {len(files)}")
 
-def temizle(raw):
-    t = decode_escapes(raw)
-    t = re.sub(r'\n[ \t]+', ' ', t)
-    t = t.replace('\r', '')
-    t = t.strip().strip('"')
-    t = re.sub(r'<sprite=\d+>', '', t).strip()
-    # Japon falı imzasını kırp: "\n\nKeigu\n\nXxx Magnus" veya benzeri
-    t = re.sub(r'\n\nKeigu\n\n.+Magnus$', '', t).strip()
-    t = re.sub(r'\n{3,}', '\n\n', t).strip()
-    return t
-
-dosyalar = sorted([f for f in os.listdir(BASE) if f.endswith('.asset')])
 metinler = []
-id_sayac = 1
-sorunlu  = []
+idx = 1
 
-for dosya in dosyalar:
-    fp = os.path.join(BASE, dosya)
-    try:
-        with open(fp, 'rb') as fh:
-            raw = fh.read().decode('utf-8', errors='replace')
-    except Exception as e:
-        print(f"  HATA {dosya}: {e}"); continue
+for fname in files:
+    fpath = os.path.join(src, fname)
+    with open(fpath, 'r', encoding='utf-8', errors='replace') as fh:
+        content = fh.read()
 
-    items = parse_aciklama(raw)
-    for item in items:
-        metin = temizle(item)
-        if len(metin) < 20:
-            continue
-        son = metin.rstrip()[-1] if metin.rstrip() else ''
-        if son not in BITIS:
-            sorunlu.append((id_sayac, metin[-80:]))
-            continue
-        metinler.append({'id': id_sayac, 'metin': metin, 'kosullar': []})
-        id_sayac += 1
+    # aciklama: ile aciklamaEng: arasındaki bloğu al
+    ac_match = re.search(r'aciklama:\s*\n([\s\S]*?)aciklamaEng:', content)
+    if not ac_match:
+        # aciklamaEng yoksa, aciklama: den sonraki YAML key'e kadar al
+        ac_match = re.search(r'aciklama:\s*\n([\s\S]*?)\n  \w+:', content)
+    if not ac_match:
+        print(f"  ATLANDI: {fname}")
+        continue
 
-if sorunlu:
-    print(f"UYARI: {len(sorunlu)} kesik metin atlandi:")
-    for sid, parca in sorunlu[:5]:
-        try:
-            print(f"  [{sid}] ...{repr(parca)}")
-        except UnicodeEncodeError:
-            print(f"  [{sid}] ...(unicode encode error in preview)")
+    block = ac_match.group(1)
 
-with open(OUT, 'w', encoding='utf-8') as f:
-    json.dump({'japonfali': metinler}, f, ensure_ascii=False, indent=2)
+    # Büyük string içindeki tüm içeriği al: ilk " ve son " arasını bul
+    # YAML multiline string: - "......."
+    m = re.search(r'-\s*"([\s\S]+?)"\s*$', block, re.MULTILINE)
+    if not m:
+        # Son satıra kadar dene
+        m = re.search(r'-\s*"([\s\S]+)"', block)
+    if not m:
+        print(f"  STR bulunamadi: {fname}")
+        continue
 
-print(f"Tamamlandi: {len(metinler)} metin -> {OUT}")
+    raw = m.group(1)
+    # YAML satır devamlılığı birleştir
+    raw = re.sub(r'\n[ \t]+', ' ', raw)
+    metin = decode_escapes(raw)
+    metin = re.sub(r'\n{3,}', '\n\n', metin)
+    metin = metin.strip()
+
+    if len(metin) < 40:
+        print(f"  KISA ({idx}): {metin[:60]}")
+        continue
+
+    son = metin.rstrip()[-1] if metin.rstrip() else ''
+    if son not in {'.', '!', '?', chr(8230), '"', "'", ')'}:
+        sys.stdout.buffer.write(f"  UYARI [{idx}] son={repr(son)}: ...{metin[-60:]}\n".encode('utf-8', errors='replace'))
+
+    metinler.append({"id": idx, "metin": metin, "kosullar": []})
+    idx += 1
+
+print(f"\nToplam metin: {len(metinler)}")
+if metinler:
+    sys.stdout.buffer.write(f"Ilk metin: {metinler[0]['metin'][:120]}\n".encode('utf-8', errors='replace'))
+    sys.stdout.buffer.write(f"Son metin: {metinler[-1]['metin'][-80:]}\n".encode('utf-8', errors='replace'))
+
+with open(out, 'w', encoding='utf-8') as fh:
+    json.dump({"japonfali": metinler}, fh, ensure_ascii=False, indent=2)
+print(f"\nKaydedildi: {out}")

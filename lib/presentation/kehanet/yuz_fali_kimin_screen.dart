@@ -45,25 +45,33 @@ class YuzFaliKiminScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Yüz ikonu
+                    // Göz bebeği ikonu
                     Container(
-                      width: 88,
-                      height: 88,
+                      width: 110,
+                      height: 110,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        gradient: const RadialGradient(
-                          colors: [Color(0xFF6A0DAD), Color(0xFF2D0060)],
-                        ),
                         boxShadow: [
                           BoxShadow(
-                            color: const Color(0xFFFF55FF).withValues(alpha: 0.3),
-                            blurRadius: 20,
-                            spreadRadius: 2,
+                            color: const Color(0xFFFF55FF).withValues(alpha: 0.30),
+                            blurRadius: 24,
+                            spreadRadius: 4,
+                          ),
+                          BoxShadow(
+                            color: const Color(0xFF9B00D3).withValues(alpha: 0.20),
+                            blurRadius: 40,
+                            spreadRadius: 8,
                           ),
                         ],
                       ),
-                      child: const Center(
-                        child: Text('🔮', style: TextStyle(fontSize: 40)),
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/images/gozbebegi.png',
+                          fit: BoxFit.cover,
+                          errorBuilder: (_, __, ___) => const Center(
+                            child: Text('👁', style: TextStyle(fontSize: 44)),
+                          ),
+                        ),
                       ),
                     ),
 

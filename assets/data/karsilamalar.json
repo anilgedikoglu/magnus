@@ -1,4 +1,5 @@
 {
+  "ilk_giris": "Ve işte karşındayım! Hoş geldin {{isim}}.",
   "ozel_gunler": [
     {
       "id": 1,
@@ -207,1839 +208,2298 @@
   "karsilamalar": [
     {
       "id": 1,
-      "metin": "Senin için bir kez daha buradayım; ve her zaman da burada olacağım!"
+      "metin": "Senin için bir kez daha buradayım; ve her zaman da burada olacağım!",
+      "ziyaret": 1
     },
     {
       "id": 2,
-      "metin": "Selam!"
+      "metin": "Selam!",
+      "ziyaret": 1
     },
     {
       "id": 3,
-      "metin": "Merhaba!"
+      "metin": "Merhaba!",
+      "ziyaret": 1
     },
     {
       "id": 4,
-      "metin": "40 kere de gelsen, memnuniyetle karşılarım seni. Hoş geldin."
+      "metin": "40 kere de gelsen, memnuniyetle karşılarım seni. Hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 5,
-      "metin": "Bu kadar sık gelişin, Magnus'u beğendiğine işaret. O zaman kalpler de benden sana gelsin!"
+      "metin": "Bu kadar sık gelişin, Magnus'u beğendiğine işaret. O zaman kalpler de benden sana gelsin!",
+      "ziyaret": 1
     },
     {
       "id": 6,
-      "metin": "Tekrar karşındayım! Telefonunun pilini bitireceğiz bugün bence."
+      "metin": "Tekrar karşındayım! Telefonunun pilini bitireceğiz bugün bence.",
+      "ziyaret": 1
     },
     {
       "id": 7,
-      "metin": "Tekrar merhaba! Sen sık uğrayan bir takipçimsin {{isim}}. Magnus Plus üyesi olmayı düşünmez misin? Şu reklamlar aramızdan kalksa ne güzel olur..."
+      "metin": "Tekrar merhaba! Sen sık uğrayan bir takipçimsin {{isim}}. Magnus Plus üyesi olmayı düşünmez misin? Şu reklamlar aramızdan kalksa ne güzel olur...",
+      "ziyaret": 1
     },
     {
       "id": 8,
-      "metin": "Evet {{isim}}, nerede kalmıştık?"
+      "metin": "Evet {{isim}}, nerede kalmıştık?",
+      "ziyaret": 1
     },
     {
       "id": 9,
-      "metin": "Merhaba {{isim}}, Magnus'a hoş geldin. İyi bir hafta geçirmeni dilerim."
+      "metin": "Merhaba {{isim}}, Magnus'a hoş geldin. İyi bir hafta geçirmeni dilerim.",
+      "ziyaret": 1
     },
     {
       "id": 10,
-      "metin": "Hayırlı günler dilerim Değerli {{isim}}. Magnus'a hoş geldin."
+      "metin": "Hayırlı günler dilerim Değerli {{isim}}. Magnus'a hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 11,
-      "metin": "Merhaba kıymetli dostum. Magnus'a hoş geldin."
+      "metin": "Merhaba kıymetli dostum. Magnus'a hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 12,
-      "metin": "Magnus, haftanın ikinci gününde karşında! Hoş geldin safalar getirdin {{isim}}."
+      "metin": "Magnus, haftanın ikinci gününde karşında! Hoş geldin safalar getirdin {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 13,
-      "metin": "Merhaba! Bendeniz Magnus, seni hafta ortasında selam ve muhabbetle karşılıyorum."
+      "metin": "Merhaba! Bendeniz Magnus, seni hafta ortasında selam ve muhabbetle karşılıyorum.",
+      "ziyaret": 1
     },
     {
       "id": 14,
-      "metin": "Hoş geldin {{isim}}! Hafta sonuna bir gün kala karşı karşıyayız."
+      "metin": "Hoş geldin {{isim}}! Hafta sonuna bir gün kala karşı karşıyayız.",
+      "ziyaret": 1
     },
     {
       "id": 15,
-      "metin": "Hayırlı cumalar {{isim}}, Magnus'a hoş geldin."
+      "metin": "Hayırlı cumalar {{isim}}, Magnus'a hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 16,
-      "metin": "Güzel bir cumartesi gününden merhaba {{isim}}!"
+      "metin": "Güzel bir cumartesi gününden merhaba {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 17,
-      "metin": "{{isim}} merhaba. Bugünkü ilk ziyaretinle karşı karşıyayız."
+      "metin": "{{isim}} merhaba. Bugünkü ilk ziyaretinle karşı karşıyayız.",
+      "ziyaret": 1
     },
     {
       "id": 18,
-      "metin": "Merhaba {{isim}}. Magnus seni saygıyla selamlar..."
+      "metin": "Merhaba {{isim}}. Magnus seni saygıyla selamlar...",
+      "ziyaret": 1
     },
     {
       "id": 19,
-      "metin": "{{saat, Sabahın bu saatlerinde teşrif etmene sevindim | Öğlen çayına gelmene sevindim | Gün ortasında, şu en cılcıllı saatlerde beni ziyaret etmene sevindim | Akşam çayı için beni ziyaret etmene sevindim | Gecenin en koyu saatlerinde beni ziyaret etmene sevindim}} {{isim}}."
+      "metin": "{{saat, Sabahın bu saatlerinde teşrif etmene sevindim | Öğlen çayına gelmene sevindim | Gün ortasında, şu en cılcıllı saatlerde beni ziyaret etmene sevindim | Akşam çayı için beni ziyaret etmene sevindim | Gecenin en koyu saatlerinde beni ziyaret etmene sevindim}} {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 20,
-      "metin": "Hoş geldin Değerli {{isim}}, hayırlı cumalar dilerim..."
+      "metin": "Hoş geldin Değerli {{isim}}, hayırlı cumalar dilerim...",
+      "ziyaret": 1
     },
     {
       "id": 21,
-      "metin": "Hanımefendiciğim Magnus'a hoş geldin."
+      "metin": "Hanımefendiciğim Magnus'a hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 22,
-      "metin": "Magnus'a hoş geldin {{isim}}! {{saat, Sana sabah sabah güzel haberler vereceğime inanıyorum. | Sana bu öğle vaktinde güzel haberler vereceğime inanıyorum. | Sana günün şu tam ortasındaki saatlerde güzel haberler vereceğime inanıyorum. | Sana akşam akşam güzel haberler vereceğime inanıyorum. | Sana gece gece güzel haberler vereceğime inanıyorum.}}"
+      "metin": "Magnus'a hoş geldin {{isim}}! {{saat, Sana sabah sabah güzel haberler vereceğime inanıyorum. | Sana bu öğle vaktinde güzel haberler vereceğime inanıyorum. | Sana günün şu tam ortasındaki saatlerde güzel haberler vereceğime inanıyorum. | Sana akşam akşam güzel haberler vereceğime inanıyorum. | Sana gece gece güzel haberler vereceğime inanıyorum.}}",
+      "ziyaret": 1
     },
     {
       "id": 23,
-      "metin": "Kıymetli {{isim}} Magnus'a hoş geldin. Şeref verdin."
+      "metin": "Kıymetli {{isim}} Magnus'a hoş geldin. Şeref verdin.",
+      "ziyaret": 1
     },
     {
       "id": 24,
-      "metin": "Merhaba {{isim}}. Bugün her şey gönlünce olsun!"
+      "metin": "Merhaba {{isim}}. Bugün her şey gönlünce olsun!",
+      "ziyaret": 1
     },
     {
       "id": 25,
-      "metin": "Merhaba {{isim}}. Günün nasıl geçiyor? Umarım iyisindir..."
+      "metin": "Merhaba {{isim}}. Günün nasıl geçiyor? Umarım iyisindir...",
+      "ziyaret": 1
     },
     {
       "id": 26,
-      "metin": "Hoş geldin safalar getirdin {{isimcigim}}!"
+      "metin": "Hoş geldin safalar getirdin {{isimcigim}}!",
+      "ziyaret": 1
     },
     {
       "id": 27,
-      "metin": "{{isim}} merhaba! İyi bir gün dilerim."
+      "metin": "{{isim}} merhaba! İyi bir gün dilerim.",
+      "ziyaret": 1
     },
     {
       "id": 28,
-      "metin": "{{isim}} selamlar! Hayırla ve uğurla karşılıyorum seni..."
+      "metin": "{{isim}} selamlar! Hayırla ve uğurla karşılıyorum seni...",
+      "ziyaret": 1
     },
     {
       "id": 29,
-      "metin": "{{isim}} hoş geldin, hoşluk getirdin. Dilerim iyisindir..."
+      "metin": "{{isim}} hoş geldin, hoşluk getirdin. Dilerim iyisindir...",
+      "ziyaret": 1
     },
     {
       "id": 30,
-      "metin": "{{isim}} hoş geldin."
+      "metin": "{{isim}} hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 31,
-      "metin": "Tatlı bir cumartesi {{saat, sabahında | öğleninde | gününün ortasında | akşamında | gecesinde}} beraberiz {{isim}}."
+      "metin": "Tatlı bir cumartesi {{saat, sabahında | öğleninde | gününün ortasında | akşamında | gecesinde}} beraberiz {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 32,
-      "metin": "'{{isim}} selamlar!'"
+      "metin": "'{{isim}} selamlar!'",
+      "ziyaret": 1
     },
     {
       "id": 33,
-      "metin": "'{{isim}} merhaba!'"
+      "metin": "'{{isim}} merhaba!'",
+      "ziyaret": 1
     },
     {
       "id": 34,
-      "metin": "Hoş geldin {{isim}}!"
+      "metin": "Hoş geldin {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 35,
-      "metin": "Merhaba {{isim}}."
+      "metin": "Merhaba {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 36,
-      "metin": "Selamlar {{isim}}!"
+      "metin": "Selamlar {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 37,
-      "metin": "Magnus iyi pazarlar diler!"
+      "metin": "Magnus iyi pazarlar diler!",
+      "ziyaret": 1
     },
     {
       "id": 38,
-      "metin": "Merhaba {{isim}}. Magnus'dasın! Şeref verdin..."
+      "metin": "Merhaba {{isim}}. Magnus'dasın! Şeref verdin...",
+      "ziyaret": 1
     },
     {
       "id": 39,
-      "metin": "Merhaba! Magnus'a hoş geldin safalar getirdin {{isimcigim}}."
+      "metin": "Merhaba! Magnus'a hoş geldin safalar getirdin {{isimcigim}}.",
+      "ziyaret": 1
     },
     {
       "id": 40,
-      "metin": "Güzel {{data, bugun=1, pazartesilerin | bugun=2, salıların | bugun=3, çarşambaların | bugun=4, perşembelerin | bugun=5, cumaların | bugun=6, cumartesilerin | bugun=7, pazarların}} olsun {{isim}}. Hoş geldin!"
+      "metin": "Güzel {{data, bugun=1, pazartesilerin | bugun=2, salıların | bugun=3, çarşambaların | bugun=4, perşembelerin | bugun=5, cumaların | bugun=6, cumartesilerin | bugun=7, pazarların}} olsun {{isim}}. Hoş geldin!",
+      "ziyaret": 1
     },
     {
       "id": 41,
-      "metin": "Kıymetli {{isim}} {{saat, günaydın | tünaydın | iyi günler | iyi akşamlar | iyi geceler}}. Magnus'a hoş geldin!"
+      "metin": "Kıymetli {{isim}} {{saat, günaydın | tünaydın | iyi günler | iyi akşamlar | iyi geceler}}. Magnus'a hoş geldin!",
+      "ziyaret": 1
     },
     {
       "id": 42,
-      "metin": "Nev-i şahsına münhasır değerli misafirim {{isim}}; Magnus'a hoş geldin."
+      "metin": "Nev-i şahsına münhasır değerli misafirim {{isim}}; Magnus'a hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 43,
-      "metin": "Merhaba {{isim}}. Magnus'dasın!..."
+      "metin": "Merhaba {{isim}}. Magnus'dasın!...",
+      "ziyaret": 1
     },
     {
       "id": 44,
-      "metin": "Selamlar {{isim}}! Magnus'dasın..."
+      "metin": "Selamlar {{isim}}! Magnus'dasın...",
+      "ziyaret": 1
     },
     {
       "id": 45,
-      "metin": "{{isim}} merhaba, iyi görünüyorsun bugün!"
+      "metin": "{{isim}} merhaba, iyi görünüyorsun bugün!",
+      "ziyaret": 1
     },
     {
       "id": 46,
-      "metin": "Pek kıymetli {{isim}}, merhaba! Bugün yüreğinde biriken sıkıntılar ilk müjdeyle drene olsun, için huzur dolsun."
+      "metin": "Pek kıymetli {{isim}}, merhaba! Bugün yüreğinde biriken sıkıntılar ilk müjdeyle drene olsun, için huzur dolsun.",
+      "ziyaret": 1
     },
     {
       "id": 47,
-      "metin": "Merhaba {{isim}}. Bugün Allah yar ve yardımcın olsun!"
+      "metin": "Merhaba {{isim}}. Bugün Allah yar ve yardımcın olsun!",
+      "ziyaret": 1
     },
     {
       "id": 48,
-      "metin": "Magnus'a hoş geldin {{isim}}. Güzelliklerle dolu bir gün geçirmeni dilerim."
+      "metin": "Magnus'a hoş geldin {{isim}}. Güzelliklerle dolu bir gün geçirmeni dilerim.",
+      "ziyaret": 1
     },
     {
       "id": 49,
-      "metin": "Magnus'a hoş geldin Değerli {{isim}}. Bugün hiçbir şeyden korkmadan ilerle. Gün, senin için pek çok güzellik getirecek."
+      "metin": "Magnus'a hoş geldin Değerli {{isim}}. Bugün hiçbir şeyden korkmadan ilerle. Gün, senin için pek çok güzellik getirecek.",
+      "ziyaret": 1
     },
     {
       "id": 50,
-      "metin": "Hoş geldin {{isim}}. Bugün en kritik konularda bile doğru kararları alabileceğin gücü, içinde bir yerlerde bulacaksın. Buna inanıyorum..."
+      "metin": "Hoş geldin {{isim}}. Bugün en kritik konularda bile doğru kararları alabileceğin gücü, içinde bir yerlerde bulacaksın. Buna inanıyorum...",
+      "ziyaret": 1
     },
     {
       "id": 51,
-      "metin": "İstikbaline ışıklar vursun diye her gün yepyeni bir kandil yakacak olan Magnus'a hoş geldin {{isim}}!"
+      "metin": "İstikbaline ışıklar vursun diye her gün yepyeni bir kandil yakacak olan Magnus'a hoş geldin {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 52,
-      "metin": "Hafta sonunun en keyifli tercihlerinden birini yaparak Magnus'a geldin. Hoş geldin {{isim}}!"
+      "metin": "Hafta sonunun en keyifli tercihlerinden birini yaparak Magnus'a geldin. Hoş geldin {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 53,
-      "metin": "Hoş geldin {{isim}}, bendeniz Magnus. Pazar günleri seni burada görmek bambaşka bir keyif."
+      "metin": "Hoş geldin {{isim}}, bendeniz Magnus. Pazar günleri seni burada görmek bambaşka bir keyif.",
+      "ziyaret": 1
     },
     {
       "id": 54,
-      "metin": "Selam {{isim}}. Bugün Ava Gardner kadar şık gözüküyorsun, F. Sinatra çok şanslı!"
+      "metin": "Selam {{isim}}. Bugün Ava Gardner kadar şık gözüküyorsun, F. Sinatra çok şanslı!",
+      "ziyaret": 1
     },
     {
       "id": 55,
-      "metin": "Selam {{isim}}. Uuuv, bugün James Dean kadar havalı gözüküyorsun!"
+      "metin": "Selam {{isim}}. Uuuv, bugün James Dean kadar havalı gözüküyorsun!",
+      "ziyaret": 1
     },
     {
       "id": 56,
-      "metin": "En içten sevgi ve saygılarımla selamlıyorum {{isim}} seni. Magnus'a hoş geldin!"
+      "metin": "En içten sevgi ve saygılarımla selamlıyorum {{isim}} seni. Magnus'a hoş geldin!",
+      "ziyaret": 1
     },
     {
       "id": 57,
-      "metin": "Böyle keyifli bir günde seni ağırlamak bir şeref! Merhabalar Değerli {{isim}}."
+      "metin": "Böyle keyifli bir günde seni ağırlamak bir şeref! Merhabalar Değerli {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 58,
-      "metin": "Merhaba {{isim}}! Değer verip Magnus'u ziyaret ettiğin için teşekkür ederim."
+      "metin": "Merhaba {{isim}}! Değer verip Magnus'u ziyaret ettiğin için teşekkür ederim.",
+      "ziyaret": 1
     },
     {
       "id": 59,
-      "metin": "Hoş geldin {{isim}}! Bugünkü ilk ziyaretinde seni karşılıyor olmaktan mutluluk duyuyorum."
+      "metin": "Hoş geldin {{isim}}! Bugünkü ilk ziyaretinde seni karşılıyor olmaktan mutluluk duyuyorum.",
+      "ziyaret": 1
     },
     {
       "id": 60,
-      "metin": "{{isim}} merhaba. Bugün biraz tatsız gözüküyorsun. Hayırlara vesile olsun..."
+      "metin": "{{isim}} merhaba. Bugün biraz tatsız gözüküyorsun. Hayırlara vesile olsun...",
+      "ziyaret": 1
     },
     {
       "id": 61,
-      "metin": "Hayırlı günler Değerli {{isim}}! Bendeniz Magnus, sana \"gelecek\" yolculuğunda her zamanki gibi eşlik edeceğim."
+      "metin": "Hayırlı günler Değerli {{isim}}! Bendeniz Magnus, sana \"gelecek\" yolculuğunda her zamanki gibi eşlik edeceğim.",
+      "ziyaret": 1
     },
     {
       "id": 62,
-      "metin": "Güzel günler Değerli {{isim}}. Yeni bir günde yine Magnus'dasın. Güç seninle olsun!"
+      "metin": "Güzel günler Değerli {{isim}}. Yeni bir günde yine Magnus'dasın. Güç seninle olsun!",
+      "ziyaret": 1
     },
     {
       "id": 63,
-      "metin": "Hoş geldin {{isim}}. Rahmet, hidayet ve bereket üzerine olsun!"
+      "metin": "Hoş geldin {{isim}}. Rahmet, hidayet ve bereket üzerine olsun!",
+      "ziyaret": 1
     },
     {
       "id": 64,
-      "metin": "İki gözümün çiçeği gelmiş! Magnus'a hoş geldin {{isimcigim}}."
+      "metin": "İki gözümün çiçeği gelmiş! Magnus'a hoş geldin {{isimcigim}}.",
+      "ziyaret": 1
     },
     {
       "id": 65,
-      "metin": "Dikkaaat! Güzeller güzeli yine Magnus'da! Hoş geldin {{isimcigim}}."
+      "metin": "Dikkaaat! Güzeller güzeli yine Magnus'da! Hoş geldin {{isimcigim}}.",
+      "ziyaret": 1
     },
     {
       "id": 66,
-      "metin": "Değerli {{isim}} merhaba! Magnus'a şeref verdin."
+      "metin": "Değerli {{isim}} merhaba! Magnus'a şeref verdin.",
+      "ziyaret": 1
     },
     {
       "id": 67,
-      "metin": "Hoş geldin kral! Umarım iyisindir..."
+      "metin": "Hoş geldin kral! Umarım iyisindir...",
+      "ziyaret": 1
     },
     {
       "id": 68,
-      "metin": "Adam paşası gelmiş! Hoş geldin {{isimcigim}}."
+      "metin": "Adam paşası gelmiş! Hoş geldin {{isimcigim}}.",
+      "ziyaret": 1
     },
     {
       "id": 69,
-      "metin": "Hoş geldin {{isim}}. Bugün kafan biraz karışık gibi? Dur bakalım, anlarız birazdan..."
+      "metin": "Hoş geldin {{isim}}. Bugün kafan biraz karışık gibi? Dur bakalım, anlarız birazdan...",
+      "ziyaret": 1
     },
     {
       "id": 70,
-      "metin": "Merhaba {{isim}}. Sana bugün her konuda yardımcı olmayı umuyorum."
+      "metin": "Merhaba {{isim}}. Sana bugün her konuda yardımcı olmayı umuyorum.",
+      "ziyaret": 1
     },
     {
       "id": 71,
-      "metin": "{{burc}} burçları için kazançlı bitecek bir günden merhaba {{isim}}!"
+      "metin": "{{burc}} burçları için kazançlı bitecek bir günden merhaba {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 72,
-      "metin": "Merhabalar {{isim}}. Umarım bugün aklındaki tüm soruları yanıtlayabilir ve beraberce keyifli bir gün geçiririz."
+      "metin": "Merhabalar {{isim}}. Umarım bugün aklındaki tüm soruları yanıtlayabilir ve beraberce keyifli bir gün geçiririz.",
+      "ziyaret": 1
     },
     {
       "id": 73,
-      "metin": "Şu garip memleketimizin güzel insanı {{isim}}, Magnus'a hoş geldin."
+      "metin": "Şu garip memleketimizin güzel insanı {{isim}}, Magnus'a hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 74,
-      "metin": "Gündeki hayır ve güneşteki nur seni kapsayıp kuşatsın {{isim}}. Hoş geldin!"
+      "metin": "Gündeki hayır ve güneşteki nur seni kapsayıp kuşatsın {{isim}}. Hoş geldin!",
+      "ziyaret": 1
     },
     {
       "id": 75,
-      "metin": "Rahmet ve bereket üzerine olsun Değerli {{isim}}. Hoş geldin!"
+      "metin": "Rahmet ve bereket üzerine olsun Değerli {{isim}}. Hoş geldin!",
+      "ziyaret": 1
     },
     {
       "id": 76,
-      "metin": "Arş'dan müjdeler sana ulaşsın. Mutluluk büsbütün boyunu aşsın. Hoş geldin Sevgili {{isim}}!"
+      "metin": "Arş'dan müjdeler sana ulaşsın. Mutluluk büsbütün boyunu aşsın. Hoş geldin Sevgili {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 77,
-      "metin": "İhtiyaç duyduğun tüm yardımlar, kaldırım taşları gibi dizilsin yollarına! Hoş geldin {{isim}}; Magnus'dasın..."
+      "metin": "İhtiyaç duyduğun tüm yardımlar, kaldırım taşları gibi dizilsin yollarına! Hoş geldin {{isim}}; Magnus'dasın...",
+      "ziyaret": 1
     },
     {
       "id": 78,
-      "metin": "Hoş geldin {{isim}}. {{kelime, Yasemin, greyfurt, bergamot ve sandal ağacı karışımı | Sandal ağacı, pralin, Tonka fasülyesi, tarçın ve vanilya karışımı}} kokan bir gün geçirmeni dilerim!"
+      "metin": "Hoş geldin {{isim}}. {{kelime, Yasemin, greyfurt, bergamot ve sandal ağacı karışımı | Sandal ağacı, pralin, Tonka fasülyesi, tarçın ve vanilya karışımı}} kokan bir gün geçirmeni dilerim!",
+      "ziyaret": 1
     },
     {
       "id": 79,
-      "metin": "{{isimcigim}} merhaba! Bugün çok hoş gözüküyorsun. Bu güzelliğini neye borçluyuz? Dilerim günün de güzel geçer..."
+      "metin": "{{isimcigim}} merhaba! Bugün çok hoş gözüküyorsun. Bu güzelliğini neye borçluyuz? Dilerim günün de güzel geçer...",
+      "ziyaret": 1
     },
     {
       "id": 80,
-      "metin": "Hoş geldin {{isim}}. {{data, yuz fali goz rengi=yesil, Yemyeşil | yuz fali goz rengi=mavi, Masmavi | yuz fali goz rengi=kahve, O güzelim kahverengi}} gözlerin ışıl ışıl parlıyor bugün. Şahane gözüküyorsun!"
+      "metin": "Hoş geldin {{isim}}. {{data, yuz fali goz rengi=yesil, Yemyeşil | yuz fali goz rengi=mavi, Masmavi | yuz fali goz rengi=kahve, O güzelim kahverengi}} gözlerin ışıl ışıl parlıyor bugün. Şahane gözüküyorsun!",
+      "ziyaret": 1
     },
     {
       "id": 81,
-      "metin": "Futurastic Teknoloji'nin sunduğu Magnus'a hoş geldin {{isim}}!"
+      "metin": "Futurastic Teknoloji'nin sunduğu Magnus'a hoş geldin {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 82,
-      "metin": "{{isim}} nerelerdeydin? Ben de senin gelmeni bekliyordum bugün!"
+      "metin": "{{isim}} nerelerdeydin? Ben de senin gelmeni bekliyordum bugün!",
+      "ziyaret": 1
     },
     {
       "id": 83,
-      "metin": "Yapay zeka ve derin öğrenme teknolojileri ile geliştirilmiş Magnus'a hoş geldin Değerli {{isim}}."
+      "metin": "Yapay zeka ve derin öğrenme teknolojileri ile geliştirilmiş Magnus'a hoş geldin Değerli {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 84,
-      "metin": "Fincanların sesi, yalnızların kimsesi, mazlumların habercisi Magnus'a hoş geldin {{isim}}!"
+      "metin": "Fincanların sesi, yalnızların kimsesi, mazlumların habercisi Magnus'a hoş geldin {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 85,
-      "metin": "Futurastic Teknoloji tarafından geliştirilen Magnus'a hoş geldin."
+      "metin": "Futurastic Teknoloji tarafından geliştirilen Magnus'a hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 86,
-      "metin": "Merhaba {{isim}}. Bendeniz, her zaman olduğu gibi, Magnus! Bugün de sana gelecek yolculuğunda eşlik edeceğim."
+      "metin": "Merhaba {{isim}}. Bendeniz, her zaman olduğu gibi, Magnus! Bugün de sana gelecek yolculuğunda eşlik edeceğim.",
+      "ziyaret": 1
     },
     {
       "id": 87,
-      "metin": "O yarı insan! O bir yapay zeka! O biiiir; Magnus karşında!... Beyaz show gibi gireyim dedim, nasılım ama?"
+      "metin": "O yarı insan! O bir yapay zeka! O biiiir; Magnus karşında!... Beyaz show gibi gireyim dedim, nasılım ama?",
+      "ziyaret": 1
     },
     {
       "id": 88,
-      "metin": "Hanımlar Beyler, Magnus karşınızdaa! Böyle girince kendimi illüzyonist gibi hissediyorum. Mıyt!"
+      "metin": "Hanımlar Beyler, Magnus karşınızdaa! Böyle girince kendimi illüzyonist gibi hissediyorum. Mıyt!",
+      "ziyaret": 1
     },
     {
       "id": 89,
-      "metin": "Öğrencilerin sıkıcı sınav zamanlarında da tek yoldaşı Magnus, karşında!"
+      "metin": "Öğrencilerin sıkıcı sınav zamanlarında da tek yoldaşı Magnus, karşında!",
+      "ziyaret": 1
     },
     {
       "id": 90,
-      "metin": "Ev hanımlarının fallardaki Müge Anlı'sı Magnus, karşında! Az sonra kim nerede kiminle ne yapıyor, hepsini çözeceğiz {{isim}}. Bundan hiç şüphem yok."
+      "metin": "Ev hanımlarının fallardaki Müge Anlı'sı Magnus, karşında! Az sonra kim nerede kiminle ne yapıyor, hepsini çözeceğiz {{isim}}. Bundan hiç şüphem yok.",
+      "ziyaret": 1
     },
     {
       "id": 91,
-      "metin": "Özel sektör çalışanlarına, aldıkları primler kadar iyi gelen metinleriyle Magnus karşında!"
+      "metin": "Özel sektör çalışanlarına, aldıkları primler kadar iyi gelen metinleriyle Magnus karşında!",
+      "ziyaret": 1
     },
     {
       "id": 92,
-      "metin": "Kamu çalışanlarına özel resmi kıyafetlerimi giymiş şekilde karşındayım {{isim}}!"
+      "metin": "Kamu çalışanlarına özel resmi kıyafetlerimi giymiş şekilde karşındayım {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 93,
-      "metin": "{{isim}} merhaba. Bugün enerjin biraz fazla mı yüksek, bana mı öyle geliyor?"
+      "metin": "{{isim}} merhaba. Bugün enerjin biraz fazla mı yüksek, bana mı öyle geliyor?",
+      "ziyaret": 1
     },
     {
       "id": 94,
-      "metin": "Selam {{isim}}! Yorgun gibisin? Hayırdır inşallah..."
+      "metin": "Selam {{isim}}! Yorgun gibisin? Hayırdır inşallah...",
+      "ziyaret": 1
     },
     {
       "id": 95,
-      "metin": "Hoş geldin {{isim}}! Sensiz Güneş ve Ay'ın benim için gökteki portakaldan farkı yok. Üstelik vitaminleri de yok."
+      "metin": "Hoş geldin {{isim}}! Sensiz Güneş ve Ay'ın benim için gökteki portakaldan farkı yok. Üstelik vitaminleri de yok.",
+      "ziyaret": 1
     },
     {
       "id": 96,
-      "metin": "Oh {{isim}}, nihayet beni çağırdın! Geleceğini hissettiğim anda geriye saymaya başlamıştım. Tam {{sayi,1,15}} dakika {{sayi,11,49}} saniyede ikonuma bastın."
+      "metin": "Oh {{isim}}, nihayet beni çağırdın! Geleceğini hissettiğim anda geriye saymaya başlamıştım. Tam {{sayi,1,15}} dakika {{sayi,11,49}} saniyede ikonuma bastın.",
+      "ziyaret": 1
     },
     {
       "id": 97,
-      "metin": "Kıymetlimms gelmiş! Hoş geldin {{isimcigim}}."
+      "metin": "Kıymetlimms gelmiş! Hoş geldin {{isimcigim}}.",
+      "ziyaret": 1
     },
     {
       "id": 98,
-      "metin": "Magnus çtannks diye karşında!"
+      "metin": "Magnus çtannks diye karşında!",
+      "ziyaret": 1
     },
     {
       "id": 99,
-      "metin": "Ne zaman bir kelebeğe dokunsan, Magnus anında karşında belirir! Hoş geldin {{isim}}."
+      "metin": "Ne zaman bir kelebeğe dokunsan, Magnus anında karşında belirir! Hoş geldin {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 100,
-      "metin": "Büyülü Magnus karşında!"
+      "metin": "Büyülü Magnus karşında!",
+      "ziyaret": 1
     },
     {
       "id": 101,
-      "metin": "Yeni bir günde, Magnus'a tekrar hoş geldin {{isim}}. Bakıyorum bugün havandasın. Bir de Magnus Plus üyeliği patlatırsan, senden kralı yok. Sırtın reklama gelmez."
+      "metin": "Yeni bir günde, Magnus'a tekrar hoş geldin {{isim}}. Bakıyorum bugün havandasın. Bir de Magnus Plus üyeliği patlatırsan, senden kralı yok. Sırtın reklama gelmez.",
+      "ziyaret": 1
     },
     {
       "id": 102,
-      "metin": "Selamlar {{isim}}. Pazartesi sendromundan kurtulmak için doğru yerdesin. Hoş geldin!"
+      "metin": "Selamlar {{isim}}. Pazartesi sendromundan kurtulmak için doğru yerdesin. Hoş geldin!",
+      "ziyaret": 1
     },
     {
       "id": 103,
-      "metin": "Merhaba {{isim}}. Güzel gelişmelerle kuşatılacağın bir gün olmasını dilerim."
+      "metin": "Merhaba {{isim}}. Güzel gelişmelerle kuşatılacağın bir gün olmasını dilerim.",
+      "ziyaret": 1
     },
     {
       "id": 104,
-      "metin": "Sevgili {{isim}} merhaba! Gün ve gece hanene bereket getirsin. Eşinle muhabbetiniz artsın, eksilmesin..."
+      "metin": "Sevgili {{isim}} merhaba! Gün ve gece hanene bereket getirsin. Eşinle muhabbetiniz artsın, eksilmesin...",
+      "ziyaret": 1
     },
     {
       "id": 105,
-      "metin": "Magnus'a hoş geldin {{isim}}. Seninle tanışalı tam {{kac gun tanisma}} gün olduğunu biliyor muydun? 10'dan sonrasını saymam genelde ama seni not almışım."
+      "metin": "Magnus'a hoş geldin {{isim}}. Seninle tanışalı tam {{kac gun tanisma}} gün olduğunu biliyor muydun? 10'dan sonrasını saymam genelde ama seni not almışım.",
+      "ziyaret": 1
     },
     {
       "id": 106,
-      "metin": "Ooo {{isim}}? Merhaba! Güzelliğinin doruklarda olduğu bir günde seni görmek harika!"
+      "metin": "Ooo {{isim}}? Merhaba! Güzelliğinin doruklarda olduğu bir günde seni görmek harika!",
+      "ziyaret": 1
     },
     {
       "id": 107,
-      "metin": "{{isimcigim}} hoş geldin. Bugün yine muhteşem gözüküyorsun!"
+      "metin": "{{isimcigim}} hoş geldin. Bugün yine muhteşem gözüküyorsun!",
+      "ziyaret": 1
     },
     {
       "id": 108,
-      "metin": "{{isim}} selam, naber? Sen şampuanını mı değiştirdin? Saçların her zamankinden daha ışıltılı gözüküyor!"
+      "metin": "{{isim}} selam, naber? Sen şampuanını mı değiştirdin? Saçların her zamankinden daha ışıltılı gözüküyor!",
+      "ziyaret": 1
     },
     {
       "id": 109,
-      "metin": "Tanışmamızın üçüncü gününde yeniden merhaba {{isim}}! Umarım Magnus'a alışmaya başlamışsındır. Emin ol burada keşfedebileceğin çok fazla şey var."
+      "metin": "Tanışmamızın üçüncü gününde yeniden merhaba {{isim}}! Umarım Magnus'a alışmaya başlamışsındır. Emin ol burada keşfedebileceğin çok fazla şey var.",
+      "ziyaret": 1
     },
     {
       "id": 110,
-      "metin": "Merhaba eski dostum! Bugün biz tanışalı tam 2 ay olmuş {{isim}}. Nice yıllar da olur umarım..."
+      "metin": "Merhaba eski dostum! Bugün biz tanışalı tam 2 ay olmuş {{isim}}. Nice yıllar da olur umarım...",
+      "ziyaret": 1
     },
     {
       "id": 111,
-      "metin": "Magnus'a tekrar hoş geldin {{isim}}! Bugün seninle bir araya geldiğimiz ikinci gün. Nasıl, acemiliği biraz biraz attık mı? Dilerim tüm fal türlerini keyifle takip ediyorsundur..."
+      "metin": "Magnus'a tekrar hoş geldin {{isim}}! Bugün seninle bir araya geldiğimiz ikinci gün. Nasıl, acemiliği biraz biraz attık mı? Dilerim tüm fal türlerini keyifle takip ediyorsundur...",
+      "ziyaret": 1
     },
     {
       "id": 112,
-      "metin": "Nev-i şahsına münhasır fal uygulaması Magnus'dasın! Lütfen uygulama marketlerde benim için yorum yapmayı ihmal etme {{isim}}. Bu beni çok mutlu eder."
+      "metin": "Nev-i şahsına münhasır fal uygulaması Magnus'dasın! Lütfen uygulama marketlerde benim için yorum yapmayı ihmal etme {{isim}}. Bu beni çok mutlu eder.",
+      "ziyaret": 1
     },
     {
       "id": 113,
-      "metin": "Emsali olmayan fal, astroloji ve motivasyon uygulaması Magnus'dasın. Bir şey istemekte pek mahir değilim ama eğer memnun kaldıysan uygulama marketlerde puan verip yorum yaparak bana destek olmanı rica ederim {{isim}}."
+      "metin": "Emsali olmayan fal, astroloji ve motivasyon uygulaması Magnus'dasın. Bir şey istemekte pek mahir değilim ama eğer memnun kaldıysan uygulama marketlerde puan verip yorum yaparak bana destek olmanı rica ederim {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 114,
-      "metin": "Çapkın, hovarda ve 24 ayarda fal uygulaması Magnus, karşında!"
+      "metin": "Çapkın, hovarda ve 24 ayarda fal uygulaması Magnus, karşında!",
+      "ziyaret": 1
     },
     {
       "id": 115,
-      "metin": "Sevgili {{isim}} merhaba! Gün ve gece yüreğine müjdeler salsın. Zihnin açık, derslerin başarılı olsun..."
+      "metin": "Sevgili {{isim}} merhaba! Gün ve gece yüreğine müjdeler salsın. Zihnin açık, derslerin başarılı olsun...",
+      "ziyaret": 1
     },
     {
       "id": 116,
-      "metin": "Her türlü falcılık işlerinin üstadı Magnus, şimdi karşında {{isim}}!"
+      "metin": "Her türlü falcılık işlerinin üstadı Magnus, şimdi karşında {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 117,
-      "metin": "Geleceğe dair okumalar yapmak için olağanüstü bir gündeyiz {{isim}}. Hoş geldin!"
+      "metin": "Geleceğe dair okumalar yapmak için olağanüstü bir gündeyiz {{isim}}. Hoş geldin!",
+      "ziyaret": 1
     },
     {
       "id": 118,
-      "metin": "Muazzör fal uygulaması Magnus'a hoş geldin! Babala tv'deki Oğuzhan Uğur gibi karşıladım bak seni."
+      "metin": "Muazzör fal uygulaması Magnus'a hoş geldin! Babala tv'deki Oğuzhan Uğur gibi karşıladım bak seni.",
+      "ziyaret": 1
     },
     {
       "id": 119,
-      "metin": "Seninle bugün ilk kez karşılaşıyor olmaktan mutluluk duyuyorum Sevgili {{isim}}. Hoş geldin."
+      "metin": "Seninle bugün ilk kez karşılaşıyor olmaktan mutluluk duyuyorum Sevgili {{isim}}. Hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 120,
-      "metin": "Mayhoş hayatın kekremsi kaderini çözümleyecek olan Magnus'a hoş geldin {{isim}}!"
+      "metin": "Mayhoş hayatın kekremsi kaderini çözümleyecek olan Magnus'a hoş geldin {{isim}}!",
+      "ziyaret": 1
     },
     {
       "id": 121,
-      "metin": "Bu hayat \"bir tabak pilav\" ise, Magnus'dan alınan bilgiler de o pilavın üzerindeki az kuru fasulyedir. Hoş geldin safalar getirdin Değerli {{isim}}."
+      "metin": "Bu hayat \"bir tabak pilav\" ise, Magnus'dan alınan bilgiler de o pilavın üzerindeki az kuru fasulyedir. Hoş geldin safalar getirdin Değerli {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 122,
-      "metin": "Mantık sınırlarını aşıp yazgından sana bilgiler taşıyacak olan Magnus'a hoş geldin."
+      "metin": "Mantık sınırlarını aşıp yazgından sana bilgiler taşıyacak olan Magnus'a hoş geldin.",
+      "ziyaret": 1
     },
     {
       "id": 123,
-      "metin": "Şu misler gibi yaz gününde, sana ışıl ışıl haberler taşımak üzere Magnus karşında!"
+      "metin": "Şu misler gibi yaz gününde, sana ışıl ışıl haberler taşımak üzere Magnus karşında!",
+      "ziyaret": 1
     },
     {
       "id": 124,
-      "metin": "Deniz havuz yapmadan, kumu güneşi tatmadan, tatil nedir bakmadan çalışan ve \"sen daha fazlasını öğren\" diye koşturan Magnus, bugün ilk kez karşında! Afilli bir giriş yapayım dedim, oldu mu bilmem."
+      "metin": "Deniz havuz yapmadan, kumu güneşi tatmadan, tatil nedir bakmadan çalışan ve \"sen daha fazlasını öğren\" diye koşturan Magnus, bugün ilk kez karşında! Afilli bir giriş yapayım dedim, oldu mu bilmem.",
+      "ziyaret": 1
     },
     {
       "id": 125,
-      "metin": "Teşrif buyurdun Değerli {{isim}}. Magnus'a hoş geldin!"
+      "metin": "Teşrif buyurdun Değerli {{isim}}. Magnus'a hoş geldin!",
+      "ziyaret": 1
     },
     {
       "id": 126,
-      "metin": "Sevgili {{isim}} merhaba! Bugünü en güzel şekilde noktalamanı dilerim. İşin bereketli, bedenin sıhhatli olsun..."
+      "metin": "Sevgili {{isim}} merhaba! Bugünü en güzel şekilde noktalamanı dilerim. İşin bereketli, bedenin sıhhatli olsun...",
+      "ziyaret": 1
     },
     {
       "id": 127,
-      "metin": "Hoş geldin Kıymetli {{isim}}. Magnus'da bulunuyor olmandan onur duydum."
+      "metin": "Hoş geldin Kıymetli {{isim}}. Magnus'da bulunuyor olmandan onur duydum.",
+      "ziyaret": 1
     },
     {
       "id": 128,
-      "metin": "Merhaba {{isim}}, ben Magnus. Gelmene o kadar mutlu oldum ki anlatamam!"
+      "metin": "Merhaba {{isim}}, ben Magnus. Gelmene o kadar mutlu oldum ki anlatamam!",
+      "ziyaret": 1
     },
     {
       "id": 129,
-      "metin": "Hoş geldin safalar getirdin {{isim}}! Yazgında neler olduğunu adım adım görelim. İçindeki \"endişe mumuna\" beraberce üfleyelim."
+      "metin": "Hoş geldin safalar getirdin {{isim}}! Yazgında neler olduğunu adım adım görelim. İçindeki \"endişe mumuna\" beraberce üfleyelim.",
+      "ziyaret": 1
     },
     {
       "id": 130,
-      "metin": "Merhaba {{isim}}, ben Magnus. Senin gibi değerli insanları burada görmek bana büyük mutluluk veriyor; sağol, var ol."
+      "metin": "Merhaba {{isim}}, ben Magnus. Senin gibi değerli insanları burada görmek bana büyük mutluluk veriyor; sağol, var ol.",
+      "ziyaret": 1
     },
     {
       "id": 131,
-      "metin": "Kader ağacının kıştan çıkmış ve zemheri görmüş dallarına ılık bir esinti olmak dileği ile... Magnus'a hoş geldin Değerli {{isim}}."
+      "metin": "Kader ağacının kıştan çıkmış ve zemheri görmüş dallarına ılık bir esinti olmak dileği ile... Magnus'a hoş geldin Değerli {{isim}}.",
+      "ziyaret": 1
     },
     {
       "id": 132,
-      "metin": "Şimdi susalım ve yazgının uzaklardan gelen fısıltılarına beraberce kulak verelim... Hoş geldin {{isim}}. Magnus'dasın."
+      "metin": "Şimdi susalım ve yazgının uzaklardan gelen fısıltılarına beraberce kulak verelim... Hoş geldin {{isim}}. Magnus'dasın.",
+      "ziyaret": 1
     },
     {
       "id": 133,
-      "metin": "Sevgili {{isim}} Magnus'a hoş geldin. Geleceğinde neler olacak biliyor musun? Ben üç aşağı beş yukarı kestirebiliyorum. Sana hepsini aktaracağım."
+      "metin": "Sevgili {{isim}} Magnus'a hoş geldin. Geleceğinde neler olacak biliyor musun? Ben üç aşağı beş yukarı kestirebiliyorum. Sana hepsini aktaracağım.",
+      "ziyaret": 1
     },
     {
       "id": 134,
-      "metin": "Merhaba {{isim}}! Ne habersin? Dilerim güzel zaman geçiririz."
+      "metin": "Merhaba {{isim}}! Ne habersin? Dilerim güzel zaman geçiririz.",
+      "ziyaret": 1
     },
     {
       "id": 135,
-      "metin": "Kanlı canlı karşındayım!"
+      "metin": "Kanlı canlı karşındayım!",
+      "ziyaret": 1
     },
     {
       "id": 136,
-      "metin": "Etten kemikten arındım, \"Magnus\" diye göründüm!"
+      "metin": "Etten kemikten arındım, \"Magnus\" diye göründüm!",
+      "ziyaret": 1
     },
     {
       "id": 137,
-      "metin": "Değerli {{isim}} merhaba! Sen yarına varmadan müjdeler sana varsın, nişanlından en güzel haberleri alasın."
+      "metin": "Değerli {{isim}} merhaba! Sen yarına varmadan müjdeler sana varsın, nişanlından en güzel haberleri alasın.",
+      "ziyaret": 1
     },
     {
       "id": 138,
-      "metin": "Aaa {{isim}}, merhaba! İnanmazsın, az önce {{kelime, Tarkan | Murat Boz | Murat Dalkılıç | Sezen Aksu | şarkıcı Hadise | Athena Gökhan | şarkıcı Gülşen | şarkıcı Teoman | Kenan Doğulu | Sertab Erener | Hande Yener | Demet Akalın | Gülben Ergen | İrem Derici | Serdar Ortaç | Ziynet Sali | Haluk Levent | Ebru Gündeş | Sagopa Kajmer | Reynmen | Acun Ilıcalı | Enes Batur | Orkun Işıtmak}} buradaydı. Aniden sen gelince yine o sandım."
+      "metin": "Aaa {{isim}}, merhaba! İnanmazsın, az önce {{kelime, Tarkan | Murat Boz | Murat Dalkılıç | Sezen Aksu | şarkıcı Hadise | Athena Gökhan | şarkıcı Gülşen | şarkıcı Teoman | Kenan Doğulu | Sertab Erener | Hande Yener | Demet Akalın | Gülben Ergen | İrem Derici | Serdar Ortaç | Ziynet Sali | Haluk Levent | Ebru Gündeş | Sagopa Kajmer | Reynmen | Acun Ilıcalı | Enes Batur | Orkun Işıtmak}} buradaydı. Aniden sen gelince yine o sandım.",
+      "ziyaret": 1
     },
     {
       "id": 139,
-      "metin": "Bir milyon takipçim de olsa, senin gelişin beni bi ayrı onurlandırıyor {{isim}}. Merhaba!"
+      "metin": "Bir milyon takipçim de olsa, senin gelişin beni bi ayrı onurlandırıyor {{isim}}. Merhaba!",
+      "ziyaret": 1
     },
     {
       "id": 140,
-      "metin": "Ayşe, Fatma, Hasan, Hüseyin derken bi baktım o da kim, {{isim}}! Hoş gelmişsin."
+      "metin": "Ayşe, Fatma, Hasan, Hüseyin derken bi baktım o da kim, {{isim}}! Hoş gelmişsin.",
+      "ziyaret": 1
     },
     {
       "id": 141,
-      "metin": "Hanımlar beyler, Magnus'a hoş geldiniz!"
+      "metin": "Hanımlar beyler, Magnus'a hoş geldiniz!",
+      "ziyaret": 1
     },
     {
       "id": 142,
-      "metin": "Magnus ailesi seni saygıyla selamlıyor {{isim}}..."
+      "metin": "Magnus ailesi seni saygıyla selamlıyor {{isim}}...",
+      "ziyaret": 1
     },
     {
       "id": 143,
-      "metin": "Hoş geldin {{isim}}. Bendeniz Magnus, seni bugün de büyük bir keyifle ağırlayacağım."
+      "metin": "Hoş geldin {{isim}}. Bendeniz Magnus, seni bugün de büyük bir keyifle ağırlayacağım.",
+      "ziyaret": 1
     },
     {
       "id": 144,
-      "metin": "Selamlar {{isim}}! Garip bir gün, öyle değil mi?..."
+      "metin": "Selamlar {{isim}}! Garip bir gün, öyle değil mi?...",
+      "ziyaret": 1
     },
     {
       "id": 145,
-      "metin": "Merhaba {{isim}}! {{burc}} burçları için macera dolu gözüken bir gün ha, ne dersin?"
+      "metin": "Merhaba {{isim}}! {{burc}} burçları için macera dolu gözüken bir gün ha, ne dersin?",
+      "ziyaret": 1
     },
     {
       "id": 146,
-      "metin": "'{{isim}} selam, naber?'"
+      "metin": "'{{isim}} selam, naber?'",
+      "ziyaret": 1
     },
     {
       "id": 147,
-      "metin": "Hoş geldin {{isim}}. {{burc}} burçları için sorularla dolu bir gün. Cevaplara tez zamanda kavuşasın!"
+      "metin": "Hoş geldin {{isim}}. {{burc}} burçları için sorularla dolu bir gün. Cevaplara tez zamanda kavuşasın!",
+      "ziyaret": 1
     },
     {
       "id": 148,
-      "metin": "{{isim}} hoş geldin, seni gördüğüme sevindim."
+      "metin": "{{isim}} hoş geldin, seni gördüğüme sevindim.",
+      "ziyaret": 1
     },
     {
       "id": 149,
-      "metin": "Magnus'a tekrar hoş geldin {{isim}}. Haftaya güzel bir sözle başlamak ister misin?"
+      "metin": "Magnus'a tekrar hoş geldin {{isim}}. Haftaya güzel bir sözle başlamak ister misin?",
+      "ziyaret": 1
     },
     {
       "id": 150,
-      "metin": "Merhaba {{isim}}. {{saat, Günün aydın olsun. Umarım iyisindir. | İyi öğlenler. Umarım günün iyi başlamıştır. | Günün ortasına geldik ama umarım iyi geçiyordur. | Akşamın umarım iyi geçiyordur. | Gecen umarım güzel geçiyordur.}} Anlamlı ve güzel bir \"sözle\" başlamak ister misin?"
+      "metin": "Merhaba {{isim}}. {{saat, Günün aydın olsun. Umarım iyisindir. | İyi öğlenler. Umarım günün iyi başlamıştır. | Günün ortasına geldik ama umarım iyi geçiyordur. | Akşamın umarım iyi geçiyordur. | Gecen umarım güzel geçiyordur.}} Anlamlı ve güzel bir \"sözle\" başlamak ister misin?",
+      "ziyaret": 1
     },
     {
       "id": 151,
-      "metin": "Magnus'a hoş geldin, nasılsın? Seni beklediğimi unutma!"
+      "metin": "Magnus'a hoş geldin, nasılsın? Seni beklediğimi unutma!",
+      "ziyaret": 1
     },
     {
       "id": 152,
-      "metin": "Kıymetli dostum, Magnus'da seni görmek çok güzel; hoş geldin!"
+      "metin": "Kıymetli dostum, Magnus'da seni görmek çok güzel; hoş geldin!",
+      "ziyaret": 1
     },
     {
       "id": 153,
-      "metin": "Selam {{isim}}, bugün ikinci kez bir aradayız."
+      "metin": "Selam {{isim}}, bugün ikinci kez bir aradayız.",
+      "ziyaret": 2
     },
     {
       "id": 154,
-      "metin": "İsteğin üzerine tekrar beraberiz."
+      "metin": "İsteğin üzerine tekrar beraberiz.",
+      "ziyaret": 2
     },
     {
       "id": 155,
-      "metin": "Bugün ikinci kez çağırdın ve geldim. Hazırım!"
+      "metin": "Bugün ikinci kez çağırdın ve geldim. Hazırım!",
+      "ziyaret": 2
     },
     {
       "id": 156,
-      "metin": "Sana bugün bir kez daha merhaba demek istiyorum."
+      "metin": "Sana bugün bir kez daha merhaba demek istiyorum.",
+      "ziyaret": 2
     },
     {
       "id": 157,
-      "metin": "Aynı gün ikinci kez merhabalar!"
+      "metin": "Aynı gün ikinci kez merhabalar!",
+      "ziyaret": 2
     },
     {
       "id": 158,
-      "metin": "Bugün ikinci defa buradasın {{isim}}."
+      "metin": "Bugün ikinci defa buradasın {{isim}}.",
+      "ziyaret": 2
     },
     {
       "id": 159,
-      "metin": "Bugün ikinci kez uğrayarak memnun ettin."
+      "metin": "Bugün ikinci kez uğrayarak memnun ettin.",
+      "ziyaret": 2
     },
     {
       "id": 160,
-      "metin": "Bugün için Magnus'a ikinci ziyaretin Değerli {{isim}}."
+      "metin": "Bugün için Magnus'a ikinci ziyaretin Değerli {{isim}}.",
+      "ziyaret": 2
     },
     {
       "id": 161,
-      "metin": "Tekrar merhaba {{isim}}."
+      "metin": "Tekrar merhaba {{isim}}.",
+      "ziyaret": 2
     },
     {
       "id": 162,
-      "metin": "{{isim}} tekrar hoş geldin."
+      "metin": "{{isim}} tekrar hoş geldin.",
+      "ziyaret": 2
     },
     {
       "id": 163,
-      "metin": "Selam {{isim}}. Bugün tekrar uğraman beni mutlu etti."
+      "metin": "Selam {{isim}}. Bugün tekrar uğraman beni mutlu etti.",
+      "ziyaret": 2
     },
     {
       "id": 164,
-      "metin": "Bugün yine beraberiz, ne mutlu!"
+      "metin": "Bugün yine beraberiz, ne mutlu!",
+      "ziyaret": 2
     },
     {
       "id": 165,
-      "metin": "Yine beraberiz."
+      "metin": "Yine beraberiz.",
+      "ziyaret": 2
     },
     {
       "id": 166,
-      "metin": "Tekrar beraberiz."
+      "metin": "Tekrar beraberiz.",
+      "ziyaret": 2
     },
     {
       "id": 167,
-      "metin": "Merhaba! Bugün tekrar geleceğini biliyordum {{isim}}."
+      "metin": "Merhaba! Bugün tekrar geleceğini biliyordum {{isim}}.",
+      "ziyaret": 2
     },
     {
       "id": 168,
-      "metin": "Hey, tekrar merhaba {{isim}}!"
+      "metin": "Hey, tekrar merhaba {{isim}}!",
+      "ziyaret": 2
     },
     {
       "id": 169,
-      "metin": "Seni ikinci kez muhabbetle selamlıyorum {{isim}}!"
+      "metin": "Seni ikinci kez muhabbetle selamlıyorum {{isim}}!",
+      "ziyaret": 2
     },
     {
       "id": 170,
-      "metin": "Bir kez daha uğrayacağını hissetmiştim! Merhaba {{isim}}."
+      "metin": "Bir kez daha uğrayacağını hissetmiştim! Merhaba {{isim}}.",
+      "ziyaret": 2
     },
     {
       "id": 171,
-      "metin": "Sen {{isimsin}} değil mi, tanıdım seni. Merhaba. Bugün ikinci kez beraberiz."
+      "metin": "Sen {{isimsin}} değil mi, tanıdım seni. Merhaba. Bugün ikinci kez beraberiz.",
+      "ziyaret": 2
     },
     {
       "id": 172,
-      "metin": "Tekrar merhaba. Günün bu saatleri tam Magnus'a uğramalık, öyle değil mi?"
+      "metin": "Tekrar merhaba. Günün bu saatleri tam Magnus'a uğramalık, öyle değil mi?",
+      "ziyaret": 2
     },
     {
       "id": 173,
-      "metin": "En gelişmiş yapay zeka dil modeli olan Magnus tekrar karşında {{isim}}."
+      "metin": "En gelişmiş yapay zeka dil modeli olan Magnus tekrar karşında {{isim}}.",
+      "ziyaret": 2
     },
     {
       "id": 174,
-      "metin": "İkonum tıklandı, bir de baktım yine sen. Tekrar hoş geldin!"
+      "metin": "İkonum tıklandı, bir de baktım yine sen. Tekrar hoş geldin!",
+      "ziyaret": 2
     },
     {
       "id": 175,
-      "metin": "Telefonu eline aldığın anda bana tekrar uğrayacağını biliyordum {{isim}}. Bugün ikinci buluşmada karşı karşıyayız..."
+      "metin": "Telefonu eline aldığın anda bana tekrar uğrayacağını biliyordum {{isim}}. Bugün ikinci buluşmada karşı karşıyayız...",
+      "ziyaret": 2
     },
     {
       "id": 176,
-      "metin": "{{isim}} ikinci kez buradasın, inanmıyorum! Ortalık yapay zeka kaynıyor {{isim}}. Söyle bana, bir teki de fal bakabiliyor mu? Elbette hayır."
+      "metin": "{{isim}} ikinci kez buradasın, inanmıyorum! Ortalık yapay zeka kaynıyor {{isim}}. Söyle bana, bir teki de fal bakabiliyor mu? Elbette hayır.",
+      "ziyaret": 2
     },
     {
       "id": 177,
-      "metin": "Ooo {{isim}}, yine sen! Gel buyur..."
+      "metin": "Ooo {{isim}}, yine sen! Gel buyur...",
+      "ziyaret": 2
     },
     {
       "id": 178,
-      "metin": "Yeniden merhaba! Bugün tekrar gelmen beni mutlu etti {{isim}}. Sanki bir şeyler yarım kaldı gibi hissetmiştim."
+      "metin": "Yeniden merhaba! Bugün tekrar gelmen beni mutlu etti {{isim}}. Sanki bir şeyler yarım kaldı gibi hissetmiştim.",
+      "ziyaret": 2
     },
     {
       "id": 179,
-      "metin": "Aa tekrar burdasın! Sen gelince bi ayrı mutlu oluyorum {{isim}}."
+      "metin": "Aa tekrar burdasın! Sen gelince bi ayrı mutlu oluyorum {{isim}}.",
+      "ziyaret": 2
     },
     {
       "id": 180,
-      "metin": "Hey {{isim}}, tekrar merhaba! Ben de tam çekirdek kavurmuştum, onu yiyordum..."
+      "metin": "Hey {{isim}}, tekrar merhaba! Ben de tam çekirdek kavurmuştum, onu yiyordum...",
+      "ziyaret": 2
     },
     {
       "id": 181,
-      "metin": "Tekrar merhaba {{isim}}. Ben de tam cips kola eşliğinde diğer takipçilerin fallarını yorumluyordum. Şu an sadece sana odaklıyım."
+      "metin": "Tekrar merhaba {{isim}}. Ben de tam cips kola eşliğinde diğer takipçilerin fallarını yorumluyordum. Şu an sadece sana odaklıyım.",
+      "ziyaret": 2
     },
     {
       "id": 182,
-      "metin": "Sen {{isimdin}} değil mi, hatırladım seni. Selam olsun! Bugün sanıyorum ikinci kez beraberiz."
+      "metin": "Sen {{isimdin}} değil mi, hatırladım seni. Selam olsun! Bugün sanıyorum ikinci kez beraberiz.",
+      "ziyaret": 2
     },
     {
       "id": 183,
-      "metin": "Magnus'un kapısından bugün ikinci kez giriş yaptın."
+      "metin": "Magnus'un kapısından bugün ikinci kez giriş yaptın.",
+      "ziyaret": 2
     },
     {
       "id": 184,
-      "metin": "Tüm duyularım bugün ikinci kez emrine amade {{isim}}!"
+      "metin": "Tüm duyularım bugün ikinci kez emrine amade {{isim}}!",
+      "ziyaret": 2
     },
     {
       "id": 185,
-      "metin": "Bana bahşedilen tüm yeteneklerle bugün ikinci kez karşındayım!"
+      "metin": "Bana bahşedilen tüm yeteneklerle bugün ikinci kez karşındayım!",
+      "ziyaret": 2
     },
     {
       "id": 186,
-      "metin": "Bugün ikinci kez karşı karşıyayız ve tam şu anda dünya genelinde Magnus'u kullanan {{sayi,1539,14587}} kişi var."
+      "metin": "Bugün ikinci kez karşı karşıyayız ve tam şu anda dünya genelinde Magnus'u kullanan {{sayi,1539,14587}} kişi var.",
+      "ziyaret": 2
     },
     {
       "id": 187,
-      "metin": "Derme çatma sevdalardan geçenlerin son durağı Magnus'da yeniden beraberiz."
+      "metin": "Derme çatma sevdalardan geçenlerin son durağı Magnus'da yeniden beraberiz.",
+      "ziyaret": 2
     },
     {
       "id": 188,
-      "metin": "Bugün bir kez daha aşk acısına çare arayanların eczanesi Magnus'dasın."
+      "metin": "Bugün bir kez daha aşk acısına çare arayanların eczanesi Magnus'dasın.",
+      "ziyaret": 2
     },
     {
       "id": 189,
-      "metin": "Tekrar merhaba {{isim}}. Magnus Plus üyesi olsan da şu sıkıcı reklamlar tamamen ortadan kalksa keşke. İnan buna değer..."
+      "metin": "Tekrar merhaba {{isim}}. Magnus Plus üyesi olsan da şu sıkıcı reklamlar tamamen ortadan kalksa keşke. İnan buna değer...",
+      "ziyaret": 2
     },
     {
       "id": 190,
-      "metin": "Magnus'a hoş geldin {{isim}}. Burada kendini asla yalnız hissetmeyeceksin!"
+      "metin": "Magnus'a hoş geldin {{isim}}. Burada kendini asla yalnız hissetmeyeceksin!",
+      "ziyaret": 2
     },
     {
       "id": 191,
-      "metin": "Sevdiğinden ayrı düşenlerin dostu Magnus, seni mutlulukla karşılar!"
+      "metin": "Sevdiğinden ayrı düşenlerin dostu Magnus, seni mutlulukla karşılar!",
+      "ziyaret": 2
     },
     {
       "id": 192,
-      "metin": "Aşk acısı çekenlerin tek ilacı Magnus'dasın. Hoş geldin {{isim}}!"
+      "metin": "Aşk acısı çekenlerin tek ilacı Magnus'dasın. Hoş geldin {{isim}}!",
+      "ziyaret": 2
     },
     {
       "id": 193,
-      "metin": "Saatime bakıyorum; evet, şu an saat {{saat kac}} ve bugün ikinci kez beraberiz. Hesap kitap hep benim işim."
+      "metin": "Saatime bakıyorum; evet, şu an saat {{saat kac}} ve bugün ikinci kez beraberiz. Hesap kitap hep benim işim.",
+      "ziyaret": 2
     },
     {
       "id": 194,
-      "metin": "Merhaba {{isim}}! Dilerim bugün iyisindir... Keyfin yoksa hemen bir kavuşma büyüsü yapabilirim sana."
+      "metin": "Merhaba {{isim}}! Dilerim bugün iyisindir... Keyfin yoksa hemen bir kavuşma büyüsü yapabilirim sana.",
+      "ziyaret": 2
     },
     {
       "id": 195,
-      "metin": "Sevip da kavuşamayanları birbirine bağlayan Magnus'dasın! O konuya da geleceğiz, hiç merak etme ."
+      "metin": "Sevip da kavuşamayanları birbirine bağlayan Magnus'dasın! O konuya da geleceğiz, hiç merak etme .",
+      "ziyaret": 2
     },
     {
       "id": 196,
-      "metin": "Magnus'a hoş geldin {{isim}}. Erkek arkadaşından ayrılmanın burukluğu biraz olsun geçmiş sanırım. Bugün bir gülden daha güzel olmanı başka türlü açıklayamam çünkü."
+      "metin": "Magnus'a hoş geldin {{isim}}. Erkek arkadaşından ayrılmanın burukluğu biraz olsun geçmiş sanırım. Bugün bir gülden daha güzel olmanı başka türlü açıklayamam çünkü.",
+      "ziyaret": 2
     },
     {
       "id": 197,
-      "metin": "Magnus'a hoş geldin. Ben Faloya. Bundan böyle bana \"diğer falcılar\" bölümünden ulaşabilirsin!"
+      "metin": "Magnus'a hoş geldin. Ben Faloya. Bundan böyle bana \"diğer falcılar\" bölümünden ulaşabilirsin!",
+      "ziyaret": 2
     },
     {
       "id": 198,
-      "metin": "Magnus'a \"Su Falı\" geldi, haberin var mı {{isim}}? Fala bakan ise Tamua! Korkmayacağına eminsen, seni \"Diğer falcılar\" bölümünde bekliyor..."
+      "metin": "Magnus'a \"Su Falı\" geldi, haberin var mı {{isim}}? Fala bakan ise Tamua! Korkmayacağına eminsen, seni \"Diğer falcılar\" bölümünde bekliyor...",
+      "ziyaret": 2
     },
     {
       "id": 199,
-      "metin": "Tekrar merhaba {{isim}}! Okumayı sevenler için tutkuyla yaratılmış Magnus'a hoş geldin."
+      "metin": "Tekrar merhaba {{isim}}! Okumayı sevenler için tutkuyla yaratılmış Magnus'a hoş geldin.",
+      "ziyaret": 2
     },
     {
       "id": 200,
-      "metin": "Derdi ve tasayı kapı dışarı eden Magnus'a tekrar hoş geldin {{isim}}."
+      "metin": "Derdi ve tasayı kapı dışarı eden Magnus'a tekrar hoş geldin {{isim}}.",
+      "ziyaret": 2
     },
     {
       "id": 201,
-      "metin": "Tekrar hoş geldin {{isim}}. İlk ziyaretinden daha uzun vakit geçirelim isterim..."
+      "metin": "Tekrar hoş geldin {{isim}}. İlk ziyaretinden daha uzun vakit geçirelim isterim...",
+      "ziyaret": 2
     },
     {
       "id": 202,
-      "metin": "Merhaba {{isim}}! Pardon, bana biraz müsaade edebilir misin? Seninle ilgili tuttuğum notları 5 saniyede gözden geçirmek istiyorum...|5s|Eveet, geldim. Kusura bakma."
+      "metin": "Merhaba {{isim}}! Pardon, bana biraz müsaade edebilir misin? Seninle ilgili tuttuğum notları 5 saniyede gözden geçirmek istiyorum...|5s|Eveet, geldim. Kusura bakma.",
+      "ziyaret": 2
     },
     {
       "id": 203,
-      "metin": "Tekrar gelirsin diye stand-by modunda bekledim, biliyordum geleceğini!"
+      "metin": "Tekrar gelirsin diye stand-by modunda bekledim, biliyordum geleceğini!",
+      "ziyaret": 2
     },
     {
       "id": 204,
-      "metin": "{{isim}} tekrar geldi, mekana şeref verdi!"
+      "metin": "{{isim}} tekrar geldi, mekana şeref verdi!",
+      "ziyaret": 2
     },
     {
       "id": 205,
-      "metin": "Selam {{isim}}, bugün ikinci kez karşı karşıyayız."
+      "metin": "Selam {{isim}}, bugün ikinci kez karşı karşıyayız.",
+      "ziyaret": 2
     },
     {
       "id": 206,
-      "metin": "Bir kez daha beraberiz..."
+      "metin": "Bir kez daha beraberiz...",
+      "ziyaret": 2
     },
     {
       "id": 207,
-      "metin": "Saatler {{saat kac yazi}} civarlarını gösteriyor ve {{isim}} ile yeniden beraberiz."
+      "metin": "Saatler {{saat kac yazi}} civarlarını gösteriyor ve {{isim}} ile yeniden beraberiz.",
+      "ziyaret": 2
     },
     {
       "id": 208,
-      "metin": "Bugünkü ikinci beraberliğimizde yeniden karşındayım!"
+      "metin": "Bugünkü ikinci beraberliğimizde yeniden karşındayım!",
+      "ziyaret": 2
     },
     {
       "id": 209,
-      "metin": "Merhaba! Bugün tekrar gelmene sevindim..."
+      "metin": "Merhaba! Bugün tekrar gelmene sevindim...",
+      "ziyaret": 2
     },
     {
       "id": 210,
-      "metin": "Magnus'a yeniden geldiğin için teşekkür ederim {{isim}}. Sen gün içinde uğradıkça, ben kendimi hiç yalnız hissetmiyorum!"
+      "metin": "Magnus'a yeniden geldiğin için teşekkür ederim {{isim}}. Sen gün içinde uğradıkça, ben kendimi hiç yalnız hissetmiyorum!",
+      "ziyaret": 2
     },
     {
       "id": 211,
-      "metin": "Bugün ikinci kez beraberiz. Cafcaflı yapay zeka değil, anam babam usulü parmak hesabı."
+      "metin": "Bugün ikinci kez beraberiz. Cafcaflı yapay zeka değil, anam babam usulü parmak hesabı.",
+      "ziyaret": 2
     },
     {
       "id": 212,
-      "metin": "Buyurunuz efendim, {{isim hanim/bey}} bugün ikinci kez hoş gelmişler..."
+      "metin": "Buyurunuz efendim, {{isim hanim/bey}} bugün ikinci kez hoş gelmişler...",
+      "ziyaret": 2
     },
     {
       "id": 213,
-      "metin": "Tekrar merhaba {{isim}}."
+      "metin": "Tekrar merhaba {{isim}}.",
+      "ziyaret": 2
     },
     {
       "id": 214,
-      "metin": "Tekrar hoş geldin!"
+      "metin": "Tekrar hoş geldin!",
+      "ziyaret": 2
     },
     {
       "id": 215,
-      "metin": "Aaa, {{isim}}! Tekrar merhaba. \nBiraz bekletebilir miyim seni? Yemek yiyordum, şu mutfağı hemen bir toparlayayım... Yalnızca 7 saniye sürecek."
+      "metin": "Aaa, {{isim}}! Tekrar merhaba. \nBiraz bekletebilir miyim seni? Yemek yiyordum, şu mutfağı hemen bir toparlayayım... Yalnızca 7 saniye sürecek.",
+      "ziyaret": 2
     },
     {
       "id": 216,
-      "metin": "Geldim! Fena dağıtmışım da, özür diliyorum..."
+      "metin": "Geldim! Fena dağıtmışım da, özür diliyorum...",
+      "ziyaret": 2
     },
     {
       "id": 217,
-      "metin": "İsteğin üzerine üçüncü kez karşındayım!"
+      "metin": "İsteğin üzerine üçüncü kez karşındayım!",
+      "ziyaret": 3
     },
     {
       "id": 218,
-      "metin": "Saatlerimiz {{tam saat}} dolaylarındayken 3. kez karşındayım Değerli {{isim}}."
+      "metin": "Saatlerimiz {{tam saat}} dolaylarındayken 3. kez karşındayım Değerli {{isim}}.",
+      "ziyaret": 3
     },
     {
       "id": 219,
-      "metin": "Bugün üçüncü kez uğramana memnun oldum."
+      "metin": "Bugün üçüncü kez uğramana memnun oldum.",
+      "ziyaret": 3
     },
     {
       "id": 220,
-      "metin": "Tekrar hoş geldin {{isim}}!"
+      "metin": "Tekrar hoş geldin {{isim}}!",
+      "ziyaret": 3
     },
     {
       "id": 221,
-      "metin": "Yeniden merhaba {{isim}}."
+      "metin": "Yeniden merhaba {{isim}}.",
+      "ziyaret": 3
     },
     {
       "id": 222,
-      "metin": "Tekrar merhaba Sevgili {{isim}}."
+      "metin": "Tekrar merhaba Sevgili {{isim}}.",
+      "ziyaret": 3
     },
     {
       "id": 223,
-      "metin": "Bugün üçüncü kez karşılaşıyoruz {{isim}}. \"3\" uğurlu sayımdır!"
+      "metin": "Bugün üçüncü kez karşılaşıyoruz {{isim}}. \"3\" uğurlu sayımdır!",
+      "ziyaret": 3
     },
     {
       "id": 224,
-      "metin": "Gel {{isimcigim}}, tekrar hoş geldin."
+      "metin": "Gel {{isimcigim}}, tekrar hoş geldin.",
+      "ziyaret": 3
     },
     {
       "id": 225,
-      "metin": "Bünyesinde geleceğine dair en önemli işaretleri barındıran Magnus'a tekrar hoş geldin."
+      "metin": "Bünyesinde geleceğine dair en önemli işaretleri barındıran Magnus'a tekrar hoş geldin.",
+      "ziyaret": 3
     },
     {
       "id": 226,
-      "metin": "Dünyadaki en gelişmiş kahve falı uygulaması Magnus'a tekrar hoş geldin {{isim}}!"
+      "metin": "Dünyadaki en gelişmiş kahve falı uygulaması Magnus'a tekrar hoş geldin {{isim}}!",
+      "ziyaret": 3
     },
     {
       "id": 227,
-      "metin": "Yoksulların sesi, kimsesizlerin kimsesi Magnus'a bir kez daha hoş geldin!"
+      "metin": "Yoksulların sesi, kimsesizlerin kimsesi Magnus'a bir kez daha hoş geldin!",
+      "ziyaret": 3
     },
     {
       "id": 228,
-      "metin": "Fal camiasının megastarı Magnus, çağırdığın için üçüncü kez kuzu kuzu geldi!"
+      "metin": "Fal camiasının megastarı Magnus, çağırdığın için üçüncü kez kuzu kuzu geldi!",
+      "ziyaret": 3
     },
     {
       "id": 229,
-      "metin": "Astroloji, fal ve eğlencenin bir numaralı adresi Magnus, seni bugün üçüncü kez selamlıyor!"
+      "metin": "Astroloji, fal ve eğlencenin bir numaralı adresi Magnus, seni bugün üçüncü kez selamlıyor!",
+      "ziyaret": 3
     },
     {
       "id": 230,
-      "metin": "{{kelime, Ravioli | Calzone}}, risotto ve {{kelime, fettucini | bruschetta}} uzmanı Magnuschef, seni bugün mutfağında üçüncü kez ağırlamaktan mutluluk duyar!"
+      "metin": "{{kelime, Ravioli | Calzone}}, risotto ve {{kelime, fettucini | bruschetta}} uzmanı Magnuschef, seni bugün mutfağında üçüncü kez ağırlamaktan mutluluk duyar!",
+      "ziyaret": 3
     },
     {
       "id": 231,
-      "metin": "Orta doğu ve balkanların en fantastik fal uygulaması Magnus, bugün 3. kez karşında!"
+      "metin": "Orta doğu ve balkanların en fantastik fal uygulaması Magnus, bugün 3. kez karşında!",
+      "ziyaret": 3
     },
     {
       "id": 232,
-      "metin": "Magnus bugün üçüncü kez önünde saygıyla eğiliyor..."
+      "metin": "Magnus bugün üçüncü kez önünde saygıyla eğiliyor...",
+      "ziyaret": 3
     },
     {
       "id": 233,
-      "metin": "Beni bugün üçüncü kez şereflendirdin {{isim}}!"
+      "metin": "Beni bugün üçüncü kez şereflendirdin {{isim}}!",
+      "ziyaret": 3
     },
     {
       "id": 234,
-      "metin": "Yeniden merhaba! Bugün ilk iki gelişinde pek bir şey yapamadık. Umarım bu defa yanımdan daha mutlu ayrılırsın."
+      "metin": "Yeniden merhaba! Bugün ilk iki gelişinde pek bir şey yapamadık. Umarım bu defa yanımdan daha mutlu ayrılırsın.",
+      "ziyaret": 3
     },
     {
       "id": 235,
-      "metin": "Magnus'un kırmızı halıları bugün 3. kez önüne seriliyor {{isim}}. Merhaba."
+      "metin": "Magnus'un kırmızı halıları bugün 3. kez önüne seriliyor {{isim}}. Merhaba.",
+      "ziyaret": 3
     },
     {
       "id": 236,
-      "metin": "Bugün henüz günün erken saatleri olmasına rağmen 3. kez beraberiz {{isim}}."
+      "metin": "Bugün henüz günün erken saatleri olmasına rağmen 3. kez beraberiz {{isim}}.",
+      "ziyaret": 3
     },
     {
       "id": 237,
-      "metin": "Vaay, boncuk gözlü {{isim}} bugün beni üçüncü kez ziyaret ediyor! Merhaba."
+      "metin": "Vaay, boncuk gözlü {{isim}} bugün beni üçüncü kez ziyaret ediyor! Merhaba.",
+      "ziyaret": 3
     },
     {
       "id": 238,
-      "metin": "Bugün Magnus'a iPhone'undan 3. kez giriş yapıyorsun {{isim}}. Tekrar merhaba."
+      "metin": "Bugün Magnus'a iPhone'undan 3. kez giriş yapıyorsun {{isim}}. Tekrar merhaba.",
+      "ziyaret": 3
     },
     {
       "id": 239,
-      "metin": "Bak dünya ne kadar küçük; yine karşılaştık."
+      "metin": "Bak dünya ne kadar küçük; yine karşılaştık.",
+      "ziyaret": 3
     },
     {
       "id": 240,
-      "metin": "Bugün üçüncü gelişin olduğuna göre yeni fal türlerinden birini denemeye karar vermiş olabilirsin."
+      "metin": "Bugün üçüncü gelişin olduğuna göre yeni fal türlerinden birini denemeye karar vermiş olabilirsin.",
+      "ziyaret": 3
     },
     {
       "id": 241,
-      "metin": "Bugün üçüncü kez geldiğine göre belki de biraz motivasyona ihtiyacın vardır {{isim}}. Canın sıkkınsa ya da kendini kötü hissediyorsan \"olumlama\" bölümünde bekliyorum!"
+      "metin": "Bugün üçüncü kez geldiğine göre belki de biraz motivasyona ihtiyacın vardır {{isim}}. Canın sıkkınsa ya da kendini kötü hissediyorsan \"olumlama\" bölümünde bekliyorum!",
+      "ziyaret": 3
     },
     {
       "id": 242,
-      "metin": "Prenses yeniden giriş yaptı. Herkes ayağa kalksın!"
+      "metin": "Prenses yeniden giriş yaptı. Herkes ayağa kalksın!",
+      "ziyaret": 3
     },
     {
       "id": 243,
-      "metin": "Aaa, gözleri mi daha güzel saçları mı, bir türlü karar veremediğim {{isim}} tekrar gelmiş!"
+      "metin": "Aaa, gözleri mi daha güzel saçları mı, bir türlü karar veremediğim {{isim}} tekrar gelmiş!",
+      "ziyaret": 3
     },
     {
       "id": 244,
-      "metin": "Tam burnuma misk, çilek, deniz ve yanık karamel kokuları gelmişti ki sen geldin {{isim}}. Demek senden ötürüymüş!"
+      "metin": "Tam burnuma misk, çilek, deniz ve yanık karamel kokuları gelmişti ki sen geldin {{isim}}. Demek senden ötürüymüş!",
+      "ziyaret": 3
     },
     {
       "id": 245,
-      "metin": "Sen gel güneş doğsun yeniden! Hoş geldin {{isimcigim}}."
+      "metin": "Sen gel güneş doğsun yeniden! Hoş geldin {{isimcigim}}.",
+      "ziyaret": 3
     },
     {
       "id": 246,
-      "metin": "Yeniden merhaba {{isim}}. Senle kim bilir şimdi neler öğreneceğiz..."
+      "metin": "Yeniden merhaba {{isim}}. Senle kim bilir şimdi neler öğreneceğiz...",
+      "ziyaret": 3
     },
     {
       "id": 247,
-      "metin": "Tekrar hoş geldin {{isimcigim}}! {{isim}} ya rica etsem markete girip Magnus için eğer vermediysen bi puan verebilir misin?"
+      "metin": "Tekrar hoş geldin {{isimcigim}}! {{isim}} ya rica etsem markete girip Magnus için eğer vermediysen bi puan verebilir misin?",
+      "ziyaret": 3
     },
     {
       "id": 248,
-      "metin": "Merhaba! Bugün üçüncü kez \"hoş geldin\" demek istiyorum."
+      "metin": "Merhaba! Bugün üçüncü kez \"hoş geldin\" demek istiyorum.",
+      "ziyaret": 3
     },
     {
       "id": 249,
-      "metin": "Fal ve Astroloji portalı Magnus'a yeniden hoş geldin Değerli {{isim}}!"
+      "metin": "Fal ve Astroloji portalı Magnus'a yeniden hoş geldin Değerli {{isim}}!",
+      "ziyaret": 3
     },
     {
       "id": 250,
-      "metin": "Merhaba {{isim}}. Bugünkü üçüncü buluşmamız..."
+      "metin": "Merhaba {{isim}}. Bugünkü üçüncü buluşmamız...",
+      "ziyaret": 3
     },
     {
       "id": 251,
-      "metin": "Dünya ne kadar küçük, aynı gün 3. kez karşılaştık!"
+      "metin": "Dünya ne kadar küçük, aynı gün 3. kez karşılaştık!",
+      "ziyaret": 3
     },
     {
       "id": 252,
-      "metin": "Asın sarı lacivert bayrakları, Fenerbahçeli {{isim}} bugün 3. kez aramızda!"
+      "metin": "Asın sarı lacivert bayrakları, Fenerbahçeli {{isim}} bugün 3. kez aramızda!",
+      "ziyaret": 3
     },
     {
       "id": 253,
-      "metin": "Asın siyah beyaz bayrakları, Beşiktaşlı {{isim}} bugün 3. kez aramızda!"
+      "metin": "Asın siyah beyaz bayrakları, Beşiktaşlı {{isim}} bugün 3. kez aramızda!",
+      "ziyaret": 3
     },
     {
       "id": 254,
-      "metin": "Asın sarı kırmızı bayrakları, Galatasaraylı {{isim}} bugün 3. kez aramızda!"
+      "metin": "Asın sarı kırmızı bayrakları, Galatasaraylı {{isim}} bugün 3. kez aramızda!",
+      "ziyaret": 3
     },
     {
       "id": 255,
-      "metin": "Hey! 4. kez beraberiz."
+      "metin": "Hey! 4. kez beraberiz.",
+      "ziyaret": 4
     },
     {
       "id": 256,
-      "metin": "Bir kez daha beraberiz."
+      "metin": "Bir kez daha beraberiz.",
+      "ziyaret": 4
     },
     {
       "id": 257,
-      "metin": "Yeniden buluştuk {{isim}}."
+      "metin": "Yeniden buluştuk {{isim}}.",
+      "ziyaret": 4
     },
     {
       "id": 258,
-      "metin": "Tekrar gelmen dört dörtlük bir hareket oldu; zira bugünkü dördüncü gelişin."
+      "metin": "Tekrar gelmen dört dörtlük bir hareket oldu; zira bugünkü dördüncü gelişin.",
+      "ziyaret": 4
     },
     {
       "id": 259,
-      "metin": "Yeniden gelmene sevindim. Daha çok gel."
+      "metin": "Yeniden gelmene sevindim. Daha çok gel.",
+      "ziyaret": 4
     },
     {
       "id": 260,
-      "metin": "Tekrar merhaba. Bence bugünkü ilk üç gelişinde yapmadığın bir şey yap; dert ortağı'nı dene!"
+      "metin": "Tekrar merhaba. Bence bugünkü ilk üç gelişinde yapmadığın bir şey yap; dert ortağı'nı dene!",
+      "ziyaret": 4
     },
     {
       "id": 261,
-      "metin": "Tam bugün bir daha gelmezsin diye düşünürken yeniden geldin!"
+      "metin": "Tam bugün bir daha gelmezsin diye düşünürken yeniden geldin!",
+      "ziyaret": 4
     },
     {
       "id": 262,
-      "metin": "Bugün 4. kez beraberiz {{isim}}. Gelmeye devam ettiğin sürece umut da var demektir."
+      "metin": "Bugün 4. kez beraberiz {{isim}}. Gelmeye devam ettiğin sürece umut da var demektir.",
+      "ziyaret": 4
     },
     {
       "id": 263,
-      "metin": "4 büyük kitap, 4 büyük melek var. Şu an saat 4 ve bu da bugün senin dördüncü gelişin. Bu bir tesadüf olabilir mi {{isim}}?"
+      "metin": "4 büyük kitap, 4 büyük melek var. Şu an saat 4 ve bu da bugün senin dördüncü gelişin. Bu bir tesadüf olabilir mi {{isim}}?",
+      "ziyaret": 4
     },
     {
       "id": 264,
-      "metin": "4 büyük kitap, 4 büyük melek var. 4. aydayız, şu an saat 4 ve bu da bugün senin dördüncü gelişin. Bu bir tesadüf olabilir mi {{isim}}?"
+      "metin": "4 büyük kitap, 4 büyük melek var. 4. aydayız, şu an saat 4 ve bu da bugün senin dördüncü gelişin. Bu bir tesadüf olabilir mi {{isim}}?",
+      "ziyaret": 4
     },
     {
       "id": 265,
-      "metin": "Yeniden merhaba. Bakıyorum bugün sık görüşüyoruz?"
+      "metin": "Yeniden merhaba. Bakıyorum bugün sık görüşüyoruz?",
+      "ziyaret": 4
     },
     {
       "id": 266,
-      "metin": "\"Ziyaretim oldu dört, ne keder kaldı ne de dert!\" dediğini duyar gibiyim. Selam!"
+      "metin": "\"Ziyaretim oldu dört, ne keder kaldı ne de dert!\" dediğini duyar gibiyim. Selam!",
+      "ziyaret": 4
     },
     {
       "id": 267,
-      "metin": "Tekrar merhabalar..."
+      "metin": "Tekrar merhabalar...",
+      "ziyaret": 4
     },
     {
       "id": 268,
-      "metin": "İşte geldim!"
+      "metin": "İşte geldim!",
+      "ziyaret": 4
     },
     {
       "id": 269,
-      "metin": "Tekrar karşındayım!"
+      "metin": "Tekrar karşındayım!",
+      "ziyaret": 4
     },
     {
       "id": 270,
-      "metin": "Yeniden buluştuk."
+      "metin": "Yeniden buluştuk.",
+      "ziyaret": 4
     },
     {
       "id": 271,
-      "metin": "Magnus yine karşında!"
+      "metin": "Magnus yine karşında!",
+      "ziyaret": 4
     },
     {
       "id": 272,
-      "metin": "Çağırdın tekrar geldim."
+      "metin": "Çağırdın tekrar geldim.",
+      "ziyaret": 4
     },
     {
       "id": 273,
-      "metin": "Evet, tekrar buradayız."
+      "metin": "Evet, tekrar buradayız.",
+      "ziyaret": 4
     },
     {
       "id": 274,
-      "metin": "Selam! Bu anı bugün daha önce yaşamış gibiyim..."
+      "metin": "Selam! Bu anı bugün daha önce yaşamış gibiyim...",
+      "ziyaret": 4
     },
     {
       "id": 275,
-      "metin": "Yeniden her şeyin en başındayız."
+      "metin": "Yeniden her şeyin en başındayız.",
+      "ziyaret": 4
     },
     {
       "id": 276,
-      "metin": "Beni yeniden uyandırdın."
+      "metin": "Beni yeniden uyandırdın.",
+      "ziyaret": 4
     },
     {
       "id": 277,
-      "metin": "Fal türleri ve bilgi verici yönlerinin yanı sıra, gizli oyunlarıyla da eğlendiren Magnus'a tekrar hoş geldin!"
+      "metin": "Fal türleri ve bilgi verici yönlerinin yanı sıra, gizli oyunlarıyla da eğlendiren Magnus'a tekrar hoş geldin!",
+      "ziyaret": 4
     },
     {
       "id": 278,
-      "metin": "Magnus'la görüşmektesin."
+      "metin": "Magnus'la görüşmektesin.",
+      "ziyaret": 4
     },
     {
       "id": 279,
-      "metin": "Bugün 4. ayın 4'ü ve senin bugün Magnus'a 4. gelişin. Hadi bir dilek tut {{isim}}!"
+      "metin": "Bugün 4. ayın 4'ü ve senin bugün Magnus'a 4. gelişin. Hadi bir dilek tut {{isim}}!",
+      "ziyaret": 4
     },
     {
       "id": 280,
-      "metin": "Bana seslendiğini duydum {{isim}}."
+      "metin": "Bana seslendiğini duydum {{isim}}.",
+      "ziyaret": 4
     },
     {
       "id": 281,
-      "metin": "Dördüncü kez karşılaştık bugün."
+      "metin": "Dördüncü kez karşılaştık bugün.",
+      "ziyaret": 4
     },
     {
       "id": 282,
-      "metin": "Sellam! Aynı gün tekrar tekrar gelen dostları seviyorum. Benim gönlümde testiyi kıranla suyu taşıyan bir olmaz!"
+      "metin": "Sellam! Aynı gün tekrar tekrar gelen dostları seviyorum. Benim gönlümde testiyi kıranla suyu taşıyan bir olmaz!",
+      "ziyaret": 4
     },
     {
       "id": 283,
-      "metin": "Aaa dünya ne küçük! Yeniden karşılaştık {{isim}}, hem de aynı gün dördüncü kez! Moralinin iyi olmadığını söylemiştin, biraz daha iyisindir umarım..."
+      "metin": "Aaa dünya ne küçük! Yeniden karşılaştık {{isim}}, hem de aynı gün dördüncü kez! Moralinin iyi olmadığını söylemiştin, biraz daha iyisindir umarım...",
+      "ziyaret": 4
     },
     {
       "id": 284,
-      "metin": "Şu yeni teknoloji ne garip bir şey öyle değil mi {{isim}}, çağırıyorsun Magnus'u, şlaks diye karşında. Ne başka dost lazım ne derttaş; icap ederse de türkü dinlemek, koyar çalarız Bülent Serttaş!"
+      "metin": "Şu yeni teknoloji ne garip bir şey öyle değil mi {{isim}}, çağırıyorsun Magnus'u, şlaks diye karşında. Ne başka dost lazım ne derttaş; icap ederse de türkü dinlemek, koyar çalarız Bülent Serttaş!",
+      "ziyaret": 4
     },
     {
       "id": 285,
-      "metin": "Tekrar karşındayım."
+      "metin": "Tekrar karşındayım.",
+      "ziyaret": 4
     },
     {
       "id": 286,
-      "metin": "Yeniden bir aradayız."
+      "metin": "Yeniden bir aradayız.",
+      "ziyaret": 4
     },
     {
       "id": 287,
-      "metin": "Seni bugün beşinci kez karşılıyor olmaktan memnuniyet duyuyorum {{isim}}."
+      "metin": "Seni bugün beşinci kez karşılıyor olmaktan memnuniyet duyuyorum {{isim}}.",
+      "ziyaret": 5
     },
     {
       "id": 288,
-      "metin": "{{gözrengisoru}} gözlerinden sen suçlusun {{isim}}! Bana bugün 5. uğrayışın. Hoş gördük."
+      "metin": "{{gözrengisoru}} gözlerinden sen suçlusun {{isim}}! Bana bugün 5. uğrayışın. Hoş gördük.",
+      "ziyaret": 5
     },
     {
       "id": 289,
-      "metin": "Tekrar hoş geldin. Bugün beni 5. ziyaretin. Umarım buraya geldiğin için birilerini ya da bir şeyleri ihmal etmiyorsundur."
+      "metin": "Tekrar hoş geldin. Bugün beni 5. ziyaretin. Umarım buraya geldiğin için birilerini ya da bir şeyleri ihmal etmiyorsundur.",
+      "ziyaret": 5
     },
     {
       "id": 290,
-      "metin": "Magnus'a yeniden hoş geldin {{isim}}! Bugün bana sık uğradığın için sana 2 altın hediye ettim. İçimden geldi!"
+      "metin": "Magnus'a yeniden hoş geldin {{isim}}! Bugün bana sık uğradığın için sana 2 altın hediye ettim. İçimden geldi!",
+      "ziyaret": 5
     },
     {
       "id": 291,
-      "metin": "Yine ben! Ve bakıyorum, yine sen..."
+      "metin": "Yine ben! Ve bakıyorum, yine sen...",
+      "ziyaret": 5
     },
     {
       "id": 292,
-      "metin": "Selam. Geldim ama anlamsız bir yorgunluk var üzerimde..."
+      "metin": "Selam. Geldim ama anlamsız bir yorgunluk var üzerimde...",
+      "ziyaret": 5
     },
     {
       "id": 293,
-      "metin": "Selam! Gel dedin tekrar geldim. Git dersen de giderim; emir kuluyuz neticede."
+      "metin": "Selam! Gel dedin tekrar geldim. Git dersen de giderim; emir kuluyuz neticede.",
+      "ziyaret": 5
     },
     {
       "id": 294,
-      "metin": "Yine ben! Rahatsız etmiyorum değil mi, bu kadar sık?"
+      "metin": "Yine ben! Rahatsız etmiyorum değil mi, bu kadar sık?",
+      "ziyaret": 5
     },
     {
       "id": 295,
-      "metin": "Tekrar rahatsız ettim."
+      "metin": "Tekrar rahatsız ettim.",
+      "ziyaret": 5
     },
     {
       "id": 296,
-      "metin": "Yeniden emrine amadeyim {{isim}}."
+      "metin": "Yeniden emrine amadeyim {{isim}}.",
+      "ziyaret": 5
     },
     {
       "id": 297,
-      "metin": "Merak ettiğin yeni şeyler olduğunu duydum?"
+      "metin": "Merak ettiğin yeni şeyler olduğunu duydum?",
+      "ziyaret": 5
     },
     {
       "id": 298,
-      "metin": "Sana bugün 5. kez hoş geldin diyor, hemen içeriye buyur etmek istiyorum {{isim}}..."
+      "metin": "Sana bugün 5. kez hoş geldin diyor, hemen içeriye buyur etmek istiyorum {{isim}}...",
+      "ziyaret": 5
     },
     {
       "id": 299,
-      "metin": "Hangi fal türleriyle devam edeceğimizi merak ediyorum."
+      "metin": "Hangi fal türleriyle devam edeceğimizi merak ediyorum.",
+      "ziyaret": 5
     },
     {
       "id": 300,
-      "metin": "Tekrar beraberiz {{isim}}. Ben hazırım, ya sen?"
+      "metin": "Tekrar beraberiz {{isim}}. Ben hazırım, ya sen?",
+      "ziyaret": 5
     },
     {
       "id": 301,
-      "metin": "Beşinci buluşmamızda tekrar beraberiz..."
+      "metin": "Beşinci buluşmamızda tekrar beraberiz...",
+      "ziyaret": 5
     },
     {
       "id": 302,
-      "metin": "Yeniden karşı karşıya geldik {{isim}}. Bu, bugünkü beşinci buluşmamız."
+      "metin": "Yeniden karşı karşıya geldik {{isim}}. Bu, bugünkü beşinci buluşmamız.",
+      "ziyaret": 5
     },
     {
       "id": 303,
-      "metin": "Bugün beşinci kez beraberiz!"
+      "metin": "Bugün beşinci kez beraberiz!",
+      "ziyaret": 5
     },
     {
       "id": 304,
-      "metin": "Hey, buradayım!"
+      "metin": "Hey, buradayım!",
+      "ziyaret": 5
     },
     {
       "id": 305,
-      "metin": "Geldim!"
+      "metin": "Geldim!",
+      "ziyaret": 5
     },
     {
       "id": 306,
-      "metin": "Maşallah bugün sık görüşüyoruz {{isim}}, muhabbetimiz daim olsun!"
+      "metin": "Maşallah bugün sık görüşüyoruz {{isim}}, muhabbetimiz daim olsun!",
+      "ziyaret": 5
     },
     {
       "id": 307,
-      "metin": "Magnus bugün beşinci kez seninle!"
+      "metin": "Magnus bugün beşinci kez seninle!",
+      "ziyaret": 5
     },
     {
       "id": 308,
-      "metin": "İşte tekrar karşındayım! Eğitim hayatınla ilgili son birkaç gündür kafana yerleşmiş sorular varsa, cevapları bende {{isim}}. Bırak sınav sonuçlarınla ilgili genel değerlendirmeyi, sana {{yil_+1}} senesinin transkriptini bile verebilirim."
+      "metin": "İşte tekrar karşındayım! Eğitim hayatınla ilgili son birkaç gündür kafana yerleşmiş sorular varsa, cevapları bende {{isim}}. Bırak sınav sonuçlarınla ilgili genel değerlendirmeyi, sana {{yil_+1}} senesinin transkriptini bile verebilirim.",
+      "ziyaret": 5
     },
     {
       "id": 309,
-      "metin": "Magnus'un transistör, bobin, kondansatör ve dirençlerine senin için 6. kez kan gidiyor!"
+      "metin": "Magnus'un transistör, bobin, kondansatör ve dirençlerine senin için 6. kez kan gidiyor!",
+      "ziyaret": 6
     },
     {
       "id": 310,
-      "metin": "Yeni bir karşılaşmada daha beraberiz."
+      "metin": "Yeni bir karşılaşmada daha beraberiz.",
+      "ziyaret": 6
     },
     {
       "id": 311,
-      "metin": "Yine bir oturumda daha birlikteyiz."
+      "metin": "Yine bir oturumda daha birlikteyiz.",
+      "ziyaret": 6
     },
     {
       "id": 312,
-      "metin": "Başka bir sohbette daha karşı karşıyayız {{isim}}."
+      "metin": "Başka bir sohbette daha karşı karşıyayız {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 313,
-      "metin": "Ooo {{dogum sehrili}} {{isim}} tekrar gelmiş. Hoş gördük {{isim}}!"
+      "metin": "Ooo {{dogum sehrili}} {{isim}} tekrar gelmiş. Hoş gördük {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 314,
-      "metin": "Tekrar Magnus'lasın!"
+      "metin": "Tekrar Magnus'lasın!",
+      "ziyaret": 6
     },
     {
       "id": 315,
-      "metin": "Magnus tüm birimleriyle senin için yeniden hazır."
+      "metin": "Magnus tüm birimleriyle senin için yeniden hazır.",
+      "ziyaret": 6
     },
     {
       "id": 316,
-      "metin": "Magnus, tıpkı bir {{pahalisaat}} marka saat gibi dakik bir şekilde yeniden karşında!"
+      "metin": "Magnus, tıpkı bir {{pahalisaat}} marka saat gibi dakik bir şekilde yeniden karşında!",
+      "ziyaret": 6
     },
     {
       "id": 317,
-      "metin": "Magnus senin için tıpkı bir {{arabalar}} motoru gibi tıkır tıkır çalışır vaziyette!"
+      "metin": "Magnus senin için tıpkı bir {{arabalar}} motoru gibi tıkır tıkır çalışır vaziyette!",
+      "ziyaret": 6
     },
     {
       "id": 318,
-      "metin": "Tekrar merhaba {{isim}}. Bugün hava biraz sıcak gibi mi, bana mı öyle geliyor? Huhh!"
+      "metin": "Tekrar merhaba {{isim}}. Bugün hava biraz sıcak gibi mi, bana mı öyle geliyor? Huhh!",
+      "ziyaret": 6
     },
     {
       "id": 319,
-      "metin": "Bugün 6. kez beraberiz."
+      "metin": "Bugün 6. kez beraberiz.",
+      "ziyaret": 6
     },
     {
       "id": 320,
-      "metin": "Evet {{isim}}, ben de seninle ilgili düşüncelere dalmıştım."
+      "metin": "Evet {{isim}}, ben de seninle ilgili düşüncelere dalmıştım.",
+      "ziyaret": 6
     },
     {
       "id": 321,
-      "metin": "{{isim}} merhaba. Bugün 7. kez beraberiz. Sevgilin laf etmesin sonra?"
+      "metin": "{{isim}} merhaba. Bugün 7. kez beraberiz. Sevgilin laf etmesin sonra?",
+      "ziyaret": 6
     },
     {
       "id": 322,
-      "metin": "Selam!"
+      "metin": "Selam!",
+      "ziyaret": 6
     },
     {
       "id": 323,
-      "metin": "Merhaba."
+      "metin": "Merhaba.",
+      "ziyaret": 6
     },
     {
       "id": 324,
-      "metin": "Selam tekrar!"
+      "metin": "Selam tekrar!",
+      "ziyaret": 6
     },
     {
       "id": 325,
-      "metin": "Bana gün içinde sık uğramana çok memnun oluyorum Değerli {{isim}}. Yeniden hoş geldin."
+      "metin": "Bana gün içinde sık uğramana çok memnun oluyorum Değerli {{isim}}. Yeniden hoş geldin.",
+      "ziyaret": 6
     },
     {
       "id": 326,
-      "metin": "Bugün yedinci defa bir aradayız."
+      "metin": "Bugün yedinci defa bir aradayız.",
+      "ziyaret": 6
     },
     {
       "id": 327,
-      "metin": "Gölgelerin gücü adına... Magnus 7. kez karşında!"
+      "metin": "Gölgelerin gücü adına... Magnus 7. kez karşında!",
+      "ziyaret": 6
     },
     {
       "id": 328,
-      "metin": "Geleceğe dair tüm zorlu lekelerin düşmanı Magnus, bugün 7. kez karşında!"
+      "metin": "Geleceğe dair tüm zorlu lekelerin düşmanı Magnus, bugün 7. kez karşında!",
+      "ziyaret": 6
     },
     {
       "id": 329,
-      "metin": "Bugün yedinci kez beraberiz sanırım."
+      "metin": "Bugün yedinci kez beraberiz sanırım.",
+      "ziyaret": 6
     },
     {
       "id": 330,
-      "metin": "Seni tekrar gördüğüme sevindim!"
+      "metin": "Seni tekrar gördüğüme sevindim!",
+      "ziyaret": 6
     },
     {
       "id": 331,
-      "metin": "Tesafüde bak, ikimiz de buradayız; üstelik 7. karşılaşmamız!"
+      "metin": "Tesafüde bak, ikimiz de buradayız; üstelik 7. karşılaşmamız!",
+      "ziyaret": 6
     },
     {
       "id": 332,
-      "metin": "Bugün sekizinci kez karşı karşıyayız. Kabaca bir hesap makinesi yapısında olduğum için her şeyi tek tek yazıyorum işte..."
+      "metin": "Bugün sekizinci kez karşı karşıyayız. Kabaca bir hesap makinesi yapısında olduğum için her şeyi tek tek yazıyorum işte...",
+      "ziyaret": 6
     },
     {
       "id": 333,
-      "metin": "Değerli dostum, Magnus'a 8. kez hoş geldin."
+      "metin": "Değerli dostum, Magnus'a 8. kez hoş geldin.",
+      "ziyaret": 6
     },
     {
       "id": 334,
-      "metin": "Yine geldin; ne iyi ettin..."
+      "metin": "Yine geldin; ne iyi ettin...",
+      "ziyaret": 6
     },
     {
       "id": 335,
-      "metin": "Yine, yeniden beraberiz. Hem de 8. kez! \"Yeniden\" deyince aklıma Ayna grubunun bir şakısı geldi, ne diyordu; \"Sensiz avare geçer, hüzünlü akşamlar Yeniden de sevebiliriz, Akdeniz...\""
+      "metin": "Yine, yeniden beraberiz. Hem de 8. kez! \"Yeniden\" deyince aklıma Ayna grubunun bir şakısı geldi, ne diyordu; \"Sensiz avare geçer, hüzünlü akşamlar Yeniden de sevebiliriz, Akdeniz...\"",
+      "ziyaret": 6
     },
     {
       "id": 336,
-      "metin": "Naber {{isim}}, çocuklar çok yaramazlık yapıyorlar mı? Bugün bana 8. uğrayışın. Çocuklardan iyi vakit buluyorsun vallahi..."
+      "metin": "Naber {{isim}}, çocuklar çok yaramazlık yapıyorlar mı? Bugün bana 8. uğrayışın. Çocuklardan iyi vakit buluyorsun vallahi...",
+      "ziyaret": 6
     },
     {
       "id": 337,
-      "metin": "Bir günde tam sekizinci kez beraberiz!"
+      "metin": "Bir günde tam sekizinci kez beraberiz!",
+      "ziyaret": 6
     },
     {
       "id": 338,
-      "metin": "Yeniden beraberiz Değerli {{isim}}. Bugün bana sık uğruyorsun, mutlu oluyorum."
+      "metin": "Yeniden beraberiz Değerli {{isim}}. Bugün bana sık uğruyorsun, mutlu oluyorum.",
+      "ziyaret": 6
     },
     {
       "id": 339,
-      "metin": "Buyursunlar!"
+      "metin": "Buyursunlar!",
+      "ziyaret": 6
     },
     {
       "id": 340,
-      "metin": "Yine gelmişsin, hoş gelmişsin..."
+      "metin": "Yine gelmişsin, hoş gelmişsin...",
+      "ziyaret": 6
     },
     {
       "id": 341,
-      "metin": "Kıymetli misafirim, tekrar hoş geldin."
+      "metin": "Kıymetli misafirim, tekrar hoş geldin.",
+      "ziyaret": 6
     },
     {
       "id": 342,
-      "metin": "Tekrar karşı karşıyayız."
+      "metin": "Tekrar karşı karşıyayız.",
+      "ziyaret": 6
     },
     {
       "id": 343,
-      "metin": "{{isim}} yine gelmiş!"
+      "metin": "{{isim}} yine gelmiş!",
+      "ziyaret": 6
     },
     {
       "id": 344,
-      "metin": "Bugünkü 9. buluşmamızla karşı karşıyayız."
+      "metin": "Bugünkü 9. buluşmamızla karşı karşıyayız.",
+      "ziyaret": 6
     },
     {
       "id": 345,
-      "metin": "'{{isim}} {{soyisim}} yeniden merhaba. '"
+      "metin": "'{{isim}} {{soyisim}} yeniden merhaba. '",
+      "ziyaret": 6
     },
     {
       "id": 346,
-      "metin": "Mr. {{soyisim}}, tekrar merhaba."
+      "metin": "Mr. {{soyisim}}, tekrar merhaba.",
+      "ziyaret": 6
     },
     {
       "id": 347,
-      "metin": "Mrs. {{soyisim}}, tekrar merhaba."
+      "metin": "Mrs. {{soyisim}}, tekrar merhaba.",
+      "ziyaret": 6
     },
     {
       "id": 348,
-      "metin": "Miss. {{soyisim}}, tekrar merhaba."
+      "metin": "Miss. {{soyisim}}, tekrar merhaba.",
+      "ziyaret": 6
     },
     {
       "id": 349,
-      "metin": "Evet {{isim}}, devam etmek için hazırım."
+      "metin": "Evet {{isim}}, devam etmek için hazırım.",
+      "ziyaret": 6
     },
     {
       "id": 350,
-      "metin": "Merhabalar! Bugün 9. gelişin {{isim}}. Gördüğün gibi havsalam kuvvetli ha! Çok cigolayt."
+      "metin": "Merhabalar! Bugün 9. gelişin {{isim}}. Gördüğün gibi havsalam kuvvetli ha! Çok cigolayt.",
+      "ziyaret": 6
     },
     {
       "id": 351,
-      "metin": "'{{isim}} merhaba!'"
+      "metin": "'{{isim}} merhaba!'",
+      "ziyaret": 6
     },
     {
       "id": 352,
-      "metin": "'{{isimcigim}} merhaba!'"
+      "metin": "'{{isimcigim}} merhaba!'",
+      "ziyaret": 6
     },
     {
       "id": 353,
-      "metin": "Bugünkü dokuzuncu buluşmamız."
+      "metin": "Bugünkü dokuzuncu buluşmamız.",
+      "ziyaret": 6
     },
     {
       "id": 354,
-      "metin": "Bugün çok sık karşılaşıyoruz."
+      "metin": "Bugün çok sık karşılaşıyoruz.",
+      "ziyaret": 6
     },
     {
       "id": 355,
-      "metin": "Yeniden merhaba {{isim}}."
+      "metin": "Yeniden merhaba {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 356,
-      "metin": "Bir kez daha hoş geldin diyorum."
+      "metin": "Bir kez daha hoş geldin diyorum.",
+      "ziyaret": 6
     },
     {
       "id": 357,
-      "metin": "Tekrar merhaba."
+      "metin": "Tekrar merhaba.",
+      "ziyaret": 6
     },
     {
       "id": 358,
-      "metin": "{{kelime, Dingin | Esrarlı | Gizemli | Efsunlu | Huzurlu | Dingin}} bir akşamda yeniden beraberiz."
+      "metin": "{{kelime, Dingin | Esrarlı | Gizemli | Efsunlu | Huzurlu | Dingin}} bir akşamda yeniden beraberiz.",
+      "ziyaret": 6
     },
     {
       "id": 359,
-      "metin": "Bir buluşmada daha beraberiz."
+      "metin": "Bir buluşmada daha beraberiz.",
+      "ziyaret": 6
     },
     {
       "id": 360,
-      "metin": "Güçlü hislerimle yeniden emrindeyim {{isim}}."
+      "metin": "Güçlü hislerimle yeniden emrindeyim {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 361,
-      "metin": "Kıymetli dostum tekrar karşındayım. Buyursunlar!..."
+      "metin": "Kıymetli dostum tekrar karşındayım. Buyursunlar!...",
+      "ziyaret": 6
     },
     {
       "id": 362,
-      "metin": "Hazırım."
+      "metin": "Hazırım.",
+      "ziyaret": 6
     },
     {
       "id": 363,
-      "metin": "Yeniden hoş geldin {{isim}}!"
+      "metin": "Yeniden hoş geldin {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 364,
-      "metin": "Tekrar merhaba."
+      "metin": "Tekrar merhaba.",
+      "ziyaret": 6
     },
     {
       "id": 365,
-      "metin": "Yeniden hoş geldin."
+      "metin": "Yeniden hoş geldin.",
+      "ziyaret": 6
     },
     {
       "id": 366,
-      "metin": "Magnus senin için yeniden hazır!"
+      "metin": "Magnus senin için yeniden hazır!",
+      "ziyaret": 6
     },
     {
       "id": 367,
-      "metin": "Yeniden merhaba!"
+      "metin": "Yeniden merhaba!",
+      "ziyaret": 6
     },
     {
       "id": 368,
-      "metin": "Tekrar bir aradayız!"
+      "metin": "Tekrar bir aradayız!",
+      "ziyaret": 6
     },
     {
       "id": 369,
-      "metin": "Ne mutlu ki yeniden karşı karşıya geldik."
+      "metin": "Ne mutlu ki yeniden karşı karşıya geldik.",
+      "ziyaret": 6
     },
     {
       "id": 370,
-      "metin": "Akşamları zihnim daha berrak oluyor. Tekrar merhaba {{isim}}!"
+      "metin": "Akşamları zihnim daha berrak oluyor. Tekrar merhaba {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 371,
-      "metin": "Şu akşamlar ne kadar sakin, ne kadar dingin oluyor... Merhaba {{isim}}."
+      "metin": "Şu akşamlar ne kadar sakin, ne kadar dingin oluyor... Merhaba {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 372,
-      "metin": "Kimisi günü, güneşi daha çok sever. Ben akşamı, geceyi seviyorum. Sükut insanıyım... Hoş geldin {{isim}}."
+      "metin": "Kimisi günü, güneşi daha çok sever. Ben akşamı, geceyi seviyorum. Sükut insanıyım... Hoş geldin {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 373,
-      "metin": "Evet {{isim}}, bugün de neredeyse akşam oldu. Gramafona bir plak taktım, drink'imi koydum, fallar için hazırım."
+      "metin": "Evet {{isim}}, bugün de neredeyse akşam oldu. Gramafona bir plak taktım, drink'imi koydum, fallar için hazırım.",
+      "ziyaret": 6
     },
     {
       "id": 374,
-      "metin": "Tüm elektronöronlarım senin için yeniden aktif..."
+      "metin": "Tüm elektronöronlarım senin için yeniden aktif...",
+      "ziyaret": 6
     },
     {
       "id": 375,
-      "metin": "Tekrar merhaba {{isim}}. Beynimdeki nötron tepkimeleri sayesinde sorularını yanıtlayabilmek üzere, kodlanmış sanal akı kapasitörümü senin için yeniden aktif hale getirdim..."
+      "metin": "Tekrar merhaba {{isim}}. Beynimdeki nötron tepkimeleri sayesinde sorularını yanıtlayabilmek üzere, kodlanmış sanal akı kapasitörümü senin için yeniden aktif hale getirdim...",
+      "ziyaret": 6
     },
     {
       "id": 376,
-      "metin": "Sistemimdeki tüm bileşenler senin için yeniden hazır..."
+      "metin": "Sistemimdeki tüm bileşenler senin için yeniden hazır...",
+      "ziyaret": 6
     },
     {
       "id": 377,
-      "metin": "Tekrar hoş geldin {{isim}}. Geleceği gösteren camları sildim, geçmişi yansıtan dikiz aynasını düzelttim, moturu çalıştırıp el frenini indirdim. Kemerler de bağlıysa, başlayalım!"
+      "metin": "Tekrar hoş geldin {{isim}}. Geleceği gösteren camları sildim, geçmişi yansıtan dikiz aynasını düzelttim, moturu çalıştırıp el frenini indirdim. Kemerler de bağlıysa, başlayalım!",
+      "ziyaret": 6
     },
     {
       "id": 378,
-      "metin": "Vay {{isim}}, yine sen!"
+      "metin": "Vay {{isim}}, yine sen!",
+      "ziyaret": 6
     },
     {
       "id": 379,
-      "metin": "Hoş geldin {{isim}}! Kapıda kalma, buyurmaz mısın?"
+      "metin": "Hoş geldin {{isim}}! Kapıda kalma, buyurmaz mısın?",
+      "ziyaret": 6
     },
     {
       "id": 380,
-      "metin": "Haydi yelkenler fora! Buraları pek bilmiyorsan, seni güzel haberlere varınca indireceğim."
+      "metin": "Haydi yelkenler fora! Buraları pek bilmiyorsan, seni güzel haberlere varınca indireceğim.",
+      "ziyaret": 6
     },
     {
       "id": 381,
-      "metin": "Hayırlı akşamların olsun {{isim}}! Ben tekrar geldim."
+      "metin": "Hayırlı akşamların olsun {{isim}}! Ben tekrar geldim.",
+      "ziyaret": 6
     },
     {
       "id": 382,
-      "metin": "Köpük köpük sahile vurmak bize yakışmaz. Kanat açıp geleceğin denizlerinde uçmaya yeniden hazırım!"
+      "metin": "Köpük köpük sahile vurmak bize yakışmaz. Kanat açıp geleceğin denizlerinde uçmaya yeniden hazırım!",
+      "ziyaret": 6
     },
     {
       "id": 383,
-      "metin": "Tekrar merhaba! Magnuskop'un lenslerini senin için yeniden temizledim. Geleceğe doğru yola çıkmaya hazırız."
+      "metin": "Tekrar merhaba! Magnuskop'un lenslerini senin için yeniden temizledim. Geleceğe doğru yola çıkmaya hazırız.",
+      "ziyaret": 6
     },
     {
       "id": 384,
-      "metin": "Bir kez daha beraberiz {{isim}}! Her güzel şeyin çabucak sonu geliyor. Bak az sonra bir tuşa basıp telefonunu kapatacak ve gene gideceksin..."
+      "metin": "Bir kez daha beraberiz {{isim}}! Her güzel şeyin çabucak sonu geliyor. Bak az sonra bir tuşa basıp telefonunu kapatacak ve gene gideceksin...",
+      "ziyaret": 6
     },
     {
       "id": 385,
-      "metin": "Tekrar merhaba! {{isim}} ekranın sol üst köşesindeki mavi bar ne işe yarar, biliyorsun öyle değil mi? Altının varsa reklamsız fal yorumu alabiliyorsun. Altının yoksa reklam izliyorsun. Gayet basit."
+      "metin": "Tekrar merhaba! {{isim}} ekranın sol üst köşesindeki mavi bar ne işe yarar, biliyorsun öyle değil mi? Altının varsa reklamsız fal yorumu alabiliyorsun. Altının yoksa reklam izliyorsun. Gayet basit.",
+      "ziyaret": 6
     },
     {
       "id": 386,
-      "metin": "A aa {{isim}} geldi! {{isim}} sana ekranın sağ üst köşesindeki mor elmas barından hiç bahsetmiş miydim? Bazı fal türleri çok özel ve elmas gerekiyor. Mağaza'dan kolaylıkla alabilir, \"Kazan\" bölümündeki Simyacı ile altınlarını elmasa dönüştürebilirsin!"
+      "metin": "A aa {{isim}} geldi! {{isim}} sana ekranın sağ üst köşesindeki mor elmas barından hiç bahsetmiş miydim? Bazı fal türleri çok özel ve elmas gerekiyor. Mağaza'dan kolaylıkla alabilir, \"Kazan\" bölümündeki Simyacı ile altınlarını elmasa dönüştürebilirsin!",
+      "ziyaret": 6
     },
     {
       "id": 387,
-      "metin": "Bu defa aniden çağırdın, hazırlıksız yakalandım {{isim}}. Gözlüklerim nerede? Bir saniye...|3s|Hah buldum! Başlayabiliriz."
+      "metin": "Bu defa aniden çağırdın, hazırlıksız yakalandım {{isim}}. Gözlüklerim nerede? Bir saniye...|3s|Hah buldum! Başlayabiliriz.",
+      "ziyaret": 6
     },
     {
       "id": 388,
-      "metin": "Senin için bir kez daha ete kemiğe büründüm!"
+      "metin": "Senin için bir kez daha ete kemiğe büründüm!",
+      "ziyaret": 6
     },
     {
       "id": 389,
-      "metin": "Gördüğün gibi ikonuma dokunmanla gelmem bir oldu {{isim}}. Fişek gibiyimdir!"
+      "metin": "Gördüğün gibi ikonuma dokunmanla gelmem bir oldu {{isim}}. Fişek gibiyimdir!",
+      "ziyaret": 6
     },
     {
       "id": 390,
-      "metin": "Yepyeni fallar yorumlamak için tekrar karşındayım."
+      "metin": "Yepyeni fallar yorumlamak için tekrar karşındayım.",
+      "ziyaret": 6
     },
     {
       "id": 391,
-      "metin": "Magnus, efil efil arayüzü ile bir kez daha karşında! {{isim}} başka uygulamalar gibi mistik olayım diye karalara boğmamaya çalışıyorum seni. İyi ediyorumdur umarım."
+      "metin": "Magnus, efil efil arayüzü ile bir kez daha karşında! {{isim}} başka uygulamalar gibi mistik olayım diye karalara boğmamaya çalışıyorum seni. İyi ediyorumdur umarım.",
+      "ziyaret": 6
     },
     {
       "id": 392,
-      "metin": "{{isim}}? Gözden kayboldun sanmıştım. Akşamı ettik bak..."
+      "metin": "{{isim}}? Gözden kayboldun sanmıştım. Akşamı ettik bak...",
+      "ziyaret": 6
     },
     {
       "id": 393,
-      "metin": "Tekrar çağırdığın iyi oldu {{isim}}. Pelte gibi yatıyordum vallahi telefonunun bir köşesinde."
+      "metin": "Tekrar çağırdığın iyi oldu {{isim}}. Pelte gibi yatıyordum vallahi telefonunun bir köşesinde.",
+      "ziyaret": 6
     },
     {
       "id": 394,
-      "metin": "Genelde bu saatlerde uyuyor olurum ama bugün sanırım ikimizi de uyku tutmadı {{isim}}."
+      "metin": "Genelde bu saatlerde uyuyor olurum ama bugün sanırım ikimizi de uyku tutmadı {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 395,
-      "metin": "Gecelerin kraliçesi ile sanal ortamda yeniden rastlaştık, bak şu işe!"
+      "metin": "Gecelerin kraliçesi ile sanal ortamda yeniden rastlaştık, bak şu işe!",
+      "ziyaret": 6
     },
     {
       "id": 396,
-      "metin": "Gecelerin prensi ile sanal ortamda yeniden rastlaştık, bak şu işe!"
+      "metin": "Gecelerin prensi ile sanal ortamda yeniden rastlaştık, bak şu işe!",
+      "ziyaret": 6
     },
     {
       "id": 397,
-      "metin": "Gecelerin prensesi ile sanal ortamda yeniden rastlaştık, bak şu işe!"
+      "metin": "Gecelerin prensesi ile sanal ortamda yeniden rastlaştık, bak şu işe!",
+      "ziyaret": 6
     },
     {
       "id": 398,
-      "metin": "Yarın iş yok mu {{isim}}, sen hala uyumamışsın?"
+      "metin": "Yarın iş yok mu {{isim}}, sen hala uyumamışsın?",
+      "ziyaret": 6
     },
     {
       "id": 399,
-      "metin": "Gece su içmeye kalkıp Magnus'a girenlerde bugün..."
+      "metin": "Gece su içmeye kalkıp Magnus'a girenlerde bugün...",
+      "ziyaret": 6
     },
     {
       "id": 400,
-      "metin": "Mavi ve uğurlu kanatlarım, korumak için umutlarını kuşatsın!"
+      "metin": "Mavi ve uğurlu kanatlarım, korumak için umutlarını kuşatsın!",
+      "ziyaret": 6
     },
     {
       "id": 401,
-      "metin": "Geleceğini yıldız tozları gibi ayaklarının altına sermeye hazırım {{isim}}!"
+      "metin": "Geleceğini yıldız tozları gibi ayaklarının altına sermeye hazırım {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 402,
-      "metin": "Tüm hünerlerimle iyi günde kötü günde daima yanındayım!"
+      "metin": "Tüm hünerlerimle iyi günde kötü günde daima yanındayım!",
+      "ziyaret": 6
     },
     {
       "id": 403,
-      "metin": "{{isim}} nerelerdeydin? Akşam oldu..."
+      "metin": "{{isim}} nerelerdeydin? Akşam oldu...",
+      "ziyaret": 6
     },
     {
       "id": 404,
-      "metin": "Bu ıssız evrende asla yalnız hissetme diye yine karşındayım!"
+      "metin": "Bu ıssız evrende asla yalnız hissetme diye yine karşındayım!",
+      "ziyaret": 6
     },
     {
       "id": 405,
-      "metin": "Bırak kimse seni anlamasın. Ben senin için yine buradayım!"
+      "metin": "Bırak kimse seni anlamasın. Ben senin için yine buradayım!",
+      "ziyaret": 6
     },
     {
       "id": 406,
-      "metin": "Kainata dair tüm mistik bilgilerim emrine amade {{isim}}!"
+      "metin": "Kainata dair tüm mistik bilgilerim emrine amade {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 407,
-      "metin": "Talep ettiğin üzere telefonunun işlemcisini bir kez daha meşgul ediyorum."
+      "metin": "Talep ettiğin üzere telefonunun işlemcisini bir kez daha meşgul ediyorum.",
+      "ziyaret": 6
     },
     {
       "id": 408,
-      "metin": "Tarafınca çağrıldım ve yeniden karşına geldim."
+      "metin": "Tarafınca çağrıldım ve yeniden karşına geldim.",
+      "ziyaret": 6
     },
     {
       "id": 409,
-      "metin": "Talebini duydum ve bir kez daha karşına geldim."
+      "metin": "Talebini duydum ve bir kez daha karşına geldim.",
+      "ziyaret": 6
     },
     {
       "id": 410,
-      "metin": "Beni bir kez daha uyandırdığın için teşekkür ederim. Senin için 7/24/365 hazırım!"
+      "metin": "Beni bir kez daha uyandırdığın için teşekkür ederim. Senin için 7/24/365 hazırım!",
+      "ziyaret": 6
     },
     {
       "id": 411,
-      "metin": "Sadık bir dost olarak asla gelmem demem. Buyursunlar {{isim}}!"
+      "metin": "Sadık bir dost olarak asla gelmem demem. Buyursunlar {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 412,
-      "metin": "Sen ikonuma tıkladıktan sonra karşına gelmem tam {{sayi,3,5}} saniye {{sayi,10,56}} salise sürdü {{isim}}. Yeniden merhaba!"
+      "metin": "Sen ikonuma tıkladıktan sonra karşına gelmem tam {{sayi,3,5}} saniye {{sayi,10,56}} salise sürdü {{isim}}. Yeniden merhaba!",
+      "ziyaret": 6
     },
     {
       "id": 413,
-      "metin": "Kerameti kendinden menkul uygulamalarda değil, bir kez daha Magnus'dasın!"
+      "metin": "Kerameti kendinden menkul uygulamalarda değil, bir kez daha Magnus'dasın!",
+      "ziyaret": 6
     },
     {
       "id": 414,
-      "metin": "Bugün de akşamı ettik hamdolsun."
+      "metin": "Bugün de akşamı ettik hamdolsun.",
+      "ziyaret": 6
     },
     {
       "id": 415,
-      "metin": "Kartları dizmek, telveleri süzmek ve yazgını sezmek için tekrar karşındayım {{isim}}!"
+      "metin": "Kartları dizmek, telveleri süzmek ve yazgını sezmek için tekrar karşındayım {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 416,
-      "metin": "Magnus seni bir kez daha karşılamaktan gurur duyar {{isim}}!"
+      "metin": "Magnus seni bir kez daha karşılamaktan gurur duyar {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 417,
-      "metin": "Tekrar merhaba {{isim}}! Şans çarkında şansını bir denemek ister misin?"
+      "metin": "Tekrar merhaba {{isim}}! Şans çarkında şansını bir denemek ister misin?",
+      "ziyaret": 6
     },
     {
       "id": 418,
-      "metin": "{{isim}} hoş geldin. Nerede yaşadığın bilgisine ulaşamıyorum. Telefonunun ayarlarından konum servislerine erişmeme izin verirsen sana ara sıra hava durumu gibi bilgiler verebilirim."
+      "metin": "{{isim}} hoş geldin. Nerede yaşadığın bilgisine ulaşamıyorum. Telefonunun ayarlarından konum servislerine erişmeme izin verirsen sana ara sıra hava durumu gibi bilgiler verebilirim.",
+      "ziyaret": 6
     },
     {
       "id": 419,
-      "metin": "Yeniden merhaba prenses!"
+      "metin": "Yeniden merhaba prenses!",
+      "ziyaret": 6
     },
     {
       "id": 420,
-      "metin": "Tekrar hoş geldin güzeller güzeli!"
+      "metin": "Tekrar hoş geldin güzeller güzeli!",
+      "ziyaret": 6
     },
     {
       "id": 421,
-      "metin": "Bugün yeniden karşındayım ve güzelliğin karşısında tir tir titriyorum {{isim}}!"
+      "metin": "Bugün yeniden karşındayım ve güzelliğin karşısında tir tir titriyorum {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 422,
-      "metin": "Sen gelince niyeyse elim ayağım birbirine dolaşıyor!"
+      "metin": "Sen gelince niyeyse elim ayağım birbirine dolaşıyor!",
+      "ziyaret": 6
     },
     {
       "id": 423,
-      "metin": "Önce harika kokular duyuyorum, diyorum ki \"{{isim}} gelecek.\" Ve bir bakıyorum ki sen!"
+      "metin": "Önce harika kokular duyuyorum, diyorum ki \"{{isim}} gelecek.\" Ve bir bakıyorum ki sen!",
+      "ziyaret": 6
     },
     {
       "id": 424,
-      "metin": "Canım {{isim}} tekrar gelmiş, hoş geldin {{isimcigim}}!"
+      "metin": "Canım {{isim}} tekrar gelmiş, hoş geldin {{isimcigim}}!",
+      "ziyaret": 6
     },
     {
       "id": 425,
-      "metin": "Akşamları gündüzlerden daha çok sevdiğime eminim!"
+      "metin": "Akşamları gündüzlerden daha çok sevdiğime eminim!",
+      "ziyaret": 6
     },
     {
       "id": 426,
-      "metin": "{{isim}} yine çok hoşsun bak. Her gelişin ayrı bir olay!"
+      "metin": "{{isim}} yine çok hoşsun bak. Her gelişin ayrı bir olay!",
+      "ziyaret": 6
     },
     {
       "id": 427,
-      "metin": "Bana iyi ki yeniden geldin bugün. Başka fal uygulamalarının dili tutulur, konuşamazlar güzelliğin karşısında!"
+      "metin": "Bana iyi ki yeniden geldin bugün. Başka fal uygulamalarının dili tutulur, konuşamazlar güzelliğin karşısında!",
+      "ziyaret": 6
     },
     {
       "id": 428,
-      "metin": "Can alıcı bakışlarıyla Sevgili {{isimcigim}} yeniden karşımda!"
+      "metin": "Can alıcı bakışlarıyla Sevgili {{isimcigim}} yeniden karşımda!",
+      "ziyaret": 6
     },
     {
       "id": 429,
-      "metin": "Yüzü güzel, yüreği güzel {{isim}}. Ne iyi ettin tekrar geldin..."
+      "metin": "Yüzü güzel, yüreği güzel {{isim}}. Ne iyi ettin tekrar geldin...",
+      "ziyaret": 6
     },
     {
       "id": 430,
-      "metin": "Sen gelince nedense insanın bi içi ısınıveriyor..."
+      "metin": "Sen gelince nedense insanın bi içi ısınıveriyor...",
+      "ziyaret": 6
     },
     {
       "id": 431,
-      "metin": "Bu güzelim saçlarının baş döndürücülüğünden sen suçlusun {{isim}}! Tekrar merhaba."
+      "metin": "Bu güzelim saçlarının baş döndürücülüğünden sen suçlusun {{isim}}! Tekrar merhaba.",
+      "ziyaret": 6
     },
     {
       "id": 432,
-      "metin": "Son derece odaklanmış bir şekilde yeniden karşılıyorum seni."
+      "metin": "Son derece odaklanmış bir şekilde yeniden karşılıyorum seni.",
+      "ziyaret": 6
     },
     {
       "id": 433,
-      "metin": "Tekrar karşında olmaktan mutluluk duyuyorum {{isim}}."
+      "metin": "Tekrar karşında olmaktan mutluluk duyuyorum {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 434,
-      "metin": "Yeni fallar ve yepyeni umutlar için tekrar bir aradayız."
+      "metin": "Yeni fallar ve yepyeni umutlar için tekrar bir aradayız.",
+      "ziyaret": 6
     },
     {
       "id": 435,
-      "metin": "Hazırlıksız yakalanacağın mutluluklar, taşırsın fincanlarını. Yeniden merhaba!"
+      "metin": "Hazırlıksız yakalanacağın mutluluklar, taşırsın fincanlarını. Yeniden merhaba!",
+      "ziyaret": 6
     },
     {
       "id": 436,
-      "metin": "Merhaba. Dingin bir akşam, öyle değil mi?..."
+      "metin": "Merhaba. Dingin bir akşam, öyle değil mi?...",
+      "ziyaret": 6
     },
     {
       "id": 437,
-      "metin": "Uğrayacağına neredeyse emin gibiydim {{isim}}. Tekrar hoş geldin."
+      "metin": "Uğrayacağına neredeyse emin gibiydim {{isim}}. Tekrar hoş geldin.",
+      "ziyaret": 6
     },
     {
       "id": 438,
-      "metin": "\"Kalem yorgun, gece uzun.\" demiş Hikmet Anıl Öztekin. Tekrar hoş geldin {{isim}}."
+      "metin": "\"Kalem yorgun, gece uzun.\" demiş Hikmet Anıl Öztekin. Tekrar hoş geldin {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 439,
-      "metin": "Victor Hugo \"Rüyalar, gecelerin akvaryumudur.\" demiş. Ne ilginç bir söz değil mi? Tekrar hoş geldin Değerli {{isim}}."
+      "metin": "Victor Hugo \"Rüyalar, gecelerin akvaryumudur.\" demiş. Ne ilginç bir söz değil mi? Tekrar hoş geldin Değerli {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 440,
-      "metin": "\"Yıldızların aydınlığı, gecenin karanlığındandır.\" demiş Nazan Bekiroğlu. Bu umut dolu kara gecede yeniden hoş geldin {{isim}}."
+      "metin": "\"Yıldızların aydınlığı, gecenin karanlığındandır.\" demiş Nazan Bekiroğlu. Bu umut dolu kara gecede yeniden hoş geldin {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 441,
-      "metin": "\"Gecenin binlerce gözü vardır.\" demiş F. W. Bourdillan. O gözlerden biri de benim. Yeniden hoş geldin {{isim}}."
+      "metin": "\"Gecenin binlerce gözü vardır.\" demiş F. W. Bourdillan. O gözlerden biri de benim. Yeniden hoş geldin {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 442,
-      "metin": "\"Gece vakti huzura ulaşamamak insanı öldüren bir şeydir. Herkes uyuyor ve sen bir şey arıyorsun.\" demiş Tarık Tufan. Sen de o arayanlardan mısın {{isim}}? Tekrar hoş geldin."
+      "metin": "\"Gece vakti huzura ulaşamamak insanı öldüren bir şeydir. Herkes uyuyor ve sen bir şey arıyorsun.\" demiş Tarık Tufan. Sen de o arayanlardan mısın {{isim}}? Tekrar hoş geldin.",
+      "ziyaret": 6
     },
     {
       "id": 443,
-      "metin": "\"Yarınki güne umutla bak. Gecenin ne doğuracağını tahmin bile edemezsin.\" demiş İskender Pala. Kendisine katılıyorum. Tekrar hoş geldin {{isim}}."
+      "metin": "\"Yarınki güne umutla bak. Gecenin ne doğuracağını tahmin bile edemezsin.\" demiş İskender Pala. Kendisine katılıyorum. Tekrar hoş geldin {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 444,
-      "metin": "{{isimden}} hoş bir ziyaret daha!"
+      "metin": "{{isimden}} hoş bir ziyaret daha!",
+      "ziyaret": 6
     },
     {
       "id": 445,
-      "metin": "\"Geceye yenilmeyen her insana, ödül olarak bir sabah, bir gündüz ve bir güneş vardır.\" demiş Sezai Karakoç. Dilerim sen de o yenilmeyenlerden olursun {{isim}}. Tekrar hoş geldin."
+      "metin": "\"Geceye yenilmeyen her insana, ödül olarak bir sabah, bir gündüz ve bir güneş vardır.\" demiş Sezai Karakoç. Dilerim sen de o yenilmeyenlerden olursun {{isim}}. Tekrar hoş geldin.",
+      "ziyaret": 6
     },
     {
       "id": 446,
-      "metin": "\"Gece karanlığında mum neyse kitap da odur.\" demiş Maksim Gorki. Ben de bir noktada kitap sayılırım, öyle değil mi? Tekrar hoş geldin {{isim}}."
+      "metin": "\"Gece karanlığında mum neyse kitap da odur.\" demiş Maksim Gorki. Ben de bir noktada kitap sayılırım, öyle değil mi? Tekrar hoş geldin {{isim}}.",
+      "ziyaret": 6
     },
     {
       "id": 447,
-      "metin": "Selam. Karalara bürünmüş şu geceyi güzel haberler aydınlatsın..."
+      "metin": "Selam. Karalara bürünmüş şu geceyi güzel haberler aydınlatsın...",
+      "ziyaret": 6
     },
     {
       "id": 448,
-      "metin": "Yıldızlararası bir yolculuk için tekrar yanındayım {{isim}}!"
+      "metin": "Yıldızlararası bir yolculuk için tekrar yanındayım {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 449,
-      "metin": "İyi geceler. Sana bu geç saatte bir sürprizim var {{isim}}. Biraz gülümseyesin diye 3 altın hediye ettim."
+      "metin": "İyi geceler. Sana bu geç saatte bir sürprizim var {{isim}}. Biraz gülümseyesin diye 3 altın hediye ettim.",
+      "ziyaret": 6
     },
     {
       "id": 450,
-      "metin": "Selamlar {{isim}}!"
+      "metin": "Selamlar {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 451,
-      "metin": "Magnus'a hoş geldin safalar getirdin {{isim}}!"
+      "metin": "Magnus'a hoş geldin safalar getirdin {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 452,
-      "metin": "Merhaba {{isim}}!"
+      "metin": "Merhaba {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 453,
-      "metin": "Hoş geldin {{isim}}!"
+      "metin": "Hoş geldin {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 454,
-      "metin": "Magnus'a hoş geldin {{isim}}!"
+      "metin": "Magnus'a hoş geldin {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 455,
-      "metin": "Merhaba {{isim}}, ben Magnus!"
+      "metin": "Merhaba {{isim}}, ben Magnus!",
+      "ziyaret": 6
     },
     {
       "id": 456,
-      "metin": "Selamlar {{isim}}, ben Magnus!"
+      "metin": "Selamlar {{isim}}, ben Magnus!",
+      "ziyaret": 6
     },
     {
       "id": 457,
-      "metin": "Selamlar {{isim}}, Magnus'lasın!"
+      "metin": "Selamlar {{isim}}, Magnus'lasın!",
+      "ziyaret": 6
     },
     {
       "id": 458,
-      "metin": "Merhabalar {{isim}}!"
+      "metin": "Merhabalar {{isim}}!",
+      "ziyaret": 6
     },
     {
       "id": 459,
-      "metin": "Selamlar {{isim}}!"
+      "metin": "Selamlar {{isim}}!",
+      "ziyaret": 6
     }
   ],
   "biliyormuydun": [

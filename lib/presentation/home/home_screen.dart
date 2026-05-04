@@ -1026,12 +1026,39 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     try {
       final profile = ref.read(userProfileProvider);
       final vars = profile.toVariableMap();
+      final prefs = await SharedPreferences.getInstance();
       final raw = await rootBundle.loadString('assets/data/karsilamalar.json');
       final data = jsonDecode(raw) as Map<String, dynamic>;
 
-      final ozelGunler = (data['ozel_gunler'] as List)
-          .map((e) => e as Map<String, dynamic>)
-          .toList();
+      final now = DateTime.now();
+      final todayStr = '${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
+
+      String metin;
+
+      // ─── 1. İLK KEZ GELİŞ ───────────────────────────────────────
+      final ilkGirisDone = prefs.getBool('ilk_giris_yapildi') ?? false;
+      if (!ilkGirisDone) {
+        await prefs.setBool('ilk_giris_yapildi', true);
+        metin = data['ilk_giris'] as String? ??
+            'Ve işte karşındayım! Hoş geldin {{isim}}.';
+        metin = VariableReplacer.replace(metin, vars);
+        if (!mounted) return;
+        setState(() => _selamlama = metin);
+        return;
+      }
+
+      // ─── Günlük ziyaret sayacı ───────────────────────────────────
+      final visitDate = prefs.getString('karsilama_tarih') ?? '';
+      int visitCount;
+      if (visitDate != todayStr) {
+        visitCount = 1;
+        await prefs.setString('karsilama_tarih', todayStr);
+        await prefs.setInt('karsilama_sayi', 1);
+      } else {
+        visitCount = (prefs.getInt('karsilama_sayi') ?? 0) + 1;
+        await prefs.setInt('karsilama_sayi', visitCount);
+      }
+
       final karsilamalar = (data['karsilamalar'] as List)
           .map((e) => e as Map<String, dynamic>)
           .toList();
@@ -1039,55 +1066,71 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           .map((e) => e as Map<String, dynamic>)
           .toList();
 
-      final now = DateTime.now();
-
-      // ─── Özel gün kontrolü ──────────────────────────────────────
-      // kullanicidogumgunu: ay=0,gun=0 → doğum tarihiyle karşılaştır
-      Map<String, dynamic>? ozelEslesme;
-      for (final og in ozelGunler) {
-        final ay  = og['ay'] as int;
-        final gun = og['gun'] as int;
-        if (ay == 0 && gun == 0) {
-          // Kullanıcı doğum günü
-          if (profile.birthDate != null && profile.birthDate!.isNotEmpty) {
-            try {
-              final bd = DateTime.parse(profile.birthDate!);
-              if (bd.month == now.month && bd.day == now.day) {
-                ozelEslesme = og;
-                break;
-              }
-            } catch (_) {}
+      // ─── 2. ÖZEL GÜN (sadece günün ilk ziyaretinde) ─────────────
+      if (visitCount == 1) {
+        final ozelGunler = (data['ozel_gunler'] as List)
+            .map((e) => e as Map<String, dynamic>)
+            .toList();
+        Map<String, dynamic>? ozelEslesme;
+        for (final og in ozelGunler) {
+          final ay  = og['ay'] as int;
+          final gun = og['gun'] as int;
+          if (ay == 0 && gun == 0) {
+            if (profile.birthDate != null && profile.birthDate!.isNotEmpty) {
+              try {
+                final bd = DateTime.parse(profile.birthDate!);
+                if (bd.month == now.month && bd.day == now.day) {
+                  ozelEslesme = og;
+                  break;
+                }
+              } catch (_) {}
+            }
+          } else if (ay == now.month && gun == now.day) {
+            ozelEslesme = og;
+            break;
           }
-        } else if (ay == now.month && gun == now.day) {
-          ozelEslesme = og;
-          break;
+        }
+        if (ozelEslesme != null) {
+          metin = VariableReplacer.replace(ozelEslesme['metin'] as String, vars);
+          if (!mounted) return;
+          setState(() => _selamlama = metin);
+          return;
         }
       }
 
-      String metin;
-      if (ozelEslesme != null) {
-        metin = ozelEslesme['metin'] as String;
+      // ─── 3. ZİYARET SAYISINA GÖRE METİN SEÇİMİ ─────────────────
+      // ziyaret=1..5 spesifik, ziyaret=6 → 6+ için catch-all
+      final ziyaretKey = visitCount.clamp(1, 6);
+      var havuz = karsilamalar
+          .where((e) => (e['ziyaret'] as int? ?? 1) == ziyaretKey)
+          .toList();
+      if (havuz.isEmpty) {
+        // Fallback: ziyaret=6 havuzu
+        havuz = karsilamalar
+            .where((e) => (e['ziyaret'] as int? ?? 1) == 6)
+            .toList();
+      }
+
+      // %10 Biliyor muydun? (yalnızca 1. ziyarette)
+      List<Map<String, dynamic>> secimHavuzu = havuz;
+      if (visitCount == 1 && biliyormuydun.isNotEmpty &&
+          Random().nextDouble() < 0.10) {
+        secimHavuzu = biliyormuydun;
+      }
+
+      if (secimHavuzu.isEmpty) {
+        metin = profile.name.isNotEmpty
+            ? 'Hoş geldin ${profile.name}!'
+            : 'Hoş geldin!';
       } else {
-        // %90 karsilamalar, %10 biliyormuydun
-        final List<Map<String, dynamic>> havuz;
-        if (biliyormuydun.isNotEmpty && Random().nextDouble() < 0.10) {
-          havuz = biliyormuydun;
-        } else {
-          havuz = karsilamalar;
-        }
-        if (havuz.isEmpty) {
-          metin = 'Hoş geldin${profile.name.isNotEmpty ? " ${profile.name}" : ""}!';
-        } else {
-          metin = (havuz..shuffle(Random())).first['metin'] as String;
-        }
+        secimHavuzu.shuffle(Random());
+        metin = secimHavuzu.first['metin'] as String;
       }
 
       metin = VariableReplacer.replace(metin, vars);
-
       if (!mounted) return;
       setState(() => _selamlama = metin);
-    } catch (_) {
-      // JSON yüklenemezse basit selamlama göster
+    } catch (e) {
       final name = ref.read(userProfileProvider).name;
       if (!mounted) return;
       setState(() => _selamlama = name.isNotEmpty ? 'Hoş geldin $name!' : 'Hoş geldin!');
@@ -1361,12 +1404,15 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
       _marqueeCtrl?.stop();
       _startTyping();
     }
-    // Metin değişti (selamlama async yüklendi) → yeniden başlat
-    if (widget.text != old.text && widget.isActive) {
+    // Metin değişti (selamlama async yüklendi)
+    if (widget.text != old.text) {
       _charCount = 0;
       _marqueeRunning = false;
       _marqueeCtrl?.stop();
-      _startTyping();
+      // Boş metinden dolu metne geçiş: isActive olmasa bile (typingIndex geçmiş olabilir) yeniden başlat
+      if (widget.isActive || old.text.isEmpty) {
+        _startTyping();
+      }
     }
   }
 
@@ -1376,8 +1422,11 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
       if (!mounted) { t.cancel(); return; }
       if (_charCount >= widget.text.length) {
         t.cancel();
-        widget.onComplete();
-        if (widget.enableMarquee) _maybeStartMarquee();
+        // Boş metinde onComplete çağırma — JSON yüklenince metin gelecek
+        if (widget.text.isNotEmpty) {
+          widget.onComplete();
+          if (widget.enableMarquee) _maybeStartMarquee();
+        }
         return;
       }
       setState(() => _charCount++);

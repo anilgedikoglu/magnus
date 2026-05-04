@@ -100,11 +100,15 @@
 // ═════════════════════════════════════════════════════════════════════════════
 
 import 'dart:async';
+import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/utils/variable_replacer.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 
@@ -128,7 +132,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   final List<_ExtraBubble> _extraBubbles = [];
   int _typingIndex = 0; // hangi balon şu an yazılıyor
-  late String _selamlama; // sabit, initState'te bir kez hesaplanır
+  String _selamlama = ''; // async yüklenir — JSON'dan
 
   // Günlük kalan kredi: 1 = hak var, 0 = kullanıldı
   Map<String, int> _remainingCredits = {};
@@ -207,7 +211,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     });
   }
 
-  bool _selamlamaHesaplandi = false;
+  bool _selamlamaYuklendi = false;
 
   @override
   void initState() {
@@ -418,10 +422,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (!_selamlamaHesaplandi) {
-      final name = ref.read(userProfileProvider).name;
-      _selamlama = _hesaplaSelamlama(name);
-      _selamlamaHesaplandi = true;
+    if (!_selamlamaYuklendi) {
+      _selamlamaYuklendi = true;
+      _loadSelamlama();
     }
     if (!_listenersAttached) {
       _listenersAttached = true;
@@ -806,6 +809,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             gradient: bubbles[i].gradient,
                             borderColor: bubbles[i].borderColor,
                             isActive: i == _typingIndex,
+                            enableMarquee: i == 0,
                             onComplete: () => _onBubbleComplete(i),
                           ),
                         ),
@@ -1018,27 +1022,76 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   // ── Ana Menü 1. Sohbet Balonu ──────────────────────────────────────────────
   // App açılışında bir kez hesaplanır (didChangeDependencies).
   // Her build'de yeniden çağrılmaz — typewriter RangeError'ı önler.
-  String _hesaplaSelamlama(String name) {
-    final n = name.isNotEmpty ? name : '';
-    final List<String> selamlamalar = name.isNotEmpty
-        ? [
-            'Hoş geldin $n!',
-            'Merhaba, seni görmek güzel $n!',
-            'Ne iyi ettin de geldin $n!',
-            'Hoş geldin, safalar getirdin $n!',
-            'Seni burada görmek güzel $n.',
-            '$n merhaba! Nasılsın? Dilerim iyisindir. 😊',
-          ]
-        : [
-            'Hoş geldin!',
-            'Merhaba, seni görmek güzel!',
-            'Ne iyi ettin de geldin!',
-            'Hoş geldin, safalar getirdin!',
-            'Seni burada görmek güzel.',
-            'Merhaba! Nasılsın? Dilerim iyisindir. 😊',
-          ];
-    final index = DateTime.now().millisecondsSinceEpoch % selamlamalar.length;
-    return selamlamalar[index];
+  Future<void> _loadSelamlama() async {
+    try {
+      final profile = ref.read(userProfileProvider);
+      final vars = profile.toVariableMap();
+      final raw = await rootBundle.loadString('assets/data/karsilamalar.json');
+      final data = jsonDecode(raw) as Map<String, dynamic>;
+
+      final ozelGunler = (data['ozel_gunler'] as List)
+          .map((e) => e as Map<String, dynamic>)
+          .toList();
+      final karsilamalar = (data['karsilamalar'] as List)
+          .map((e) => e as Map<String, dynamic>)
+          .toList();
+      final biliyormuydun = (data['biliyormuydun'] as List)
+          .map((e) => e as Map<String, dynamic>)
+          .toList();
+
+      final now = DateTime.now();
+
+      // ─── Özel gün kontrolü ──────────────────────────────────────
+      // kullanicidogumgunu: ay=0,gun=0 → doğum tarihiyle karşılaştır
+      Map<String, dynamic>? ozelEslesme;
+      for (final og in ozelGunler) {
+        final ay  = og['ay'] as int;
+        final gun = og['gun'] as int;
+        if (ay == 0 && gun == 0) {
+          // Kullanıcı doğum günü
+          if (profile.birthDate != null && profile.birthDate!.isNotEmpty) {
+            try {
+              final bd = DateTime.parse(profile.birthDate!);
+              if (bd.month == now.month && bd.day == now.day) {
+                ozelEslesme = og;
+                break;
+              }
+            } catch (_) {}
+          }
+        } else if (ay == now.month && gun == now.day) {
+          ozelEslesme = og;
+          break;
+        }
+      }
+
+      String metin;
+      if (ozelEslesme != null) {
+        metin = ozelEslesme['metin'] as String;
+      } else {
+        // %90 karsilamalar, %10 biliyormuydun
+        final List<Map<String, dynamic>> havuz;
+        if (biliyormuydun.isNotEmpty && Random().nextDouble() < 0.10) {
+          havuz = biliyormuydun;
+        } else {
+          havuz = karsilamalar;
+        }
+        if (havuz.isEmpty) {
+          metin = 'Hoş geldin${profile.name.isNotEmpty ? " ${profile.name}" : ""}!';
+        } else {
+          metin = (havuz..shuffle(Random())).first['metin'] as String;
+        }
+      }
+
+      metin = VariableReplacer.replace(metin, vars);
+
+      if (!mounted) return;
+      setState(() => _selamlama = metin);
+    } catch (_) {
+      // JSON yüklenemezse basit selamlama göster
+      final name = ref.read(userProfileProvider).name;
+      if (!mounted) return;
+      setState(() => _selamlama = name.isNotEmpty ? 'Hoş geldin $name!' : 'Hoş geldin!');
+    }
   }
 }
 
@@ -1252,7 +1305,8 @@ class _TypewriterChatBubble extends StatefulWidget {
   final String text;
   final List<Color> gradient;
   final Color borderColor;
-  final bool isActive; // şu an yazılıyor (false = tamamlandı, tam göster)
+  final bool isActive;
+  final bool enableMarquee;
   final VoidCallback onComplete;
 
   const _TypewriterChatBubble({
@@ -1262,32 +1316,56 @@ class _TypewriterChatBubble extends StatefulWidget {
     required this.borderColor,
     required this.isActive,
     required this.onComplete,
+    this.enableMarquee = false,
   });
 
   @override
   State<_TypewriterChatBubble> createState() => _TypewriterChatBubbleState();
 }
 
-class _TypewriterChatBubbleState extends State<_TypewriterChatBubble> {
+class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
+    with SingleTickerProviderStateMixin {
   int _charCount = 0;
   Timer? _timer;
+
+  // Marquee
+  AnimationController? _marqueeCtrl;
+  double _bubbleInnerWidth = 0;
+  bool _marqueeRunning = false;
+
+  static const _textStyle = TextStyle(color: Colors.white, fontSize: 13, height: 1.4);
+  static const _hPad = 24.0; // horizontal padding inside bubble (12*2)
 
   @override
   void initState() {
     super.initState();
+    if (widget.enableMarquee) {
+      _marqueeCtrl = AnimationController(vsync: this, duration: const Duration(seconds: 10));
+    }
     if (widget.isActive) {
       _startTyping();
     } else {
-      _charCount = widget.text.length; // tamamlanmış balon, tam göster
+      _charCount = widget.text.length;
+      if (widget.enableMarquee) {
+        WidgetsBinding.instance.addPostFrameCallback((_) => _maybeStartMarquee());
+      }
     }
   }
 
   @override
   void didUpdateWidget(_TypewriterChatBubble old) {
     super.didUpdateWidget(old);
-    // Sıra bu balona geldi
     if (widget.isActive && !old.isActive) {
       _charCount = 0;
+      _marqueeRunning = false;
+      _marqueeCtrl?.stop();
+      _startTyping();
+    }
+    // Metin değişti (selamlama async yüklendi) → yeniden başlat
+    if (widget.text != old.text && widget.isActive) {
+      _charCount = 0;
+      _marqueeRunning = false;
+      _marqueeCtrl?.stop();
       _startTyping();
     }
   }
@@ -1299,26 +1377,106 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble> {
       if (_charCount >= widget.text.length) {
         t.cancel();
         widget.onComplete();
+        if (widget.enableMarquee) _maybeStartMarquee();
         return;
       }
       setState(() => _charCount++);
     });
   }
 
+  double _measureText(String text) {
+    final tp = TextPainter(
+      text: TextSpan(text: text, style: _textStyle),
+      maxLines: 1,
+      textDirection: TextDirection.ltr,
+    )..layout();
+    return tp.width;
+  }
+
+  void _maybeStartMarquee() {
+    if (!mounted || _marqueeCtrl == null || _bubbleInnerWidth <= 0) return;
+    final fullW = _measureText(widget.text);
+    final overflow = fullW - _bubbleInnerWidth;
+    if (overflow <= 0) return; // balon yeterince geniş — marquee yok
+
+    _marqueeCtrl!.duration = Duration(milliseconds: max(3000, (overflow / 55 * 1000).round()));
+    _marqueeRunning = true;
+
+    void runCycle() {
+      if (!mounted) return;
+      _marqueeCtrl!.reset();
+      _marqueeCtrl!.forward().whenCompleteOrCancel(() {
+        if (!mounted || !_marqueeRunning) return;
+        // Kısa duraklama, sonra başa dön
+        Future.delayed(const Duration(milliseconds: 700), () {
+          if (!mounted || !_marqueeRunning) return;
+          runCycle();
+        });
+      });
+    }
+    runCycle();
+  }
+
   @override
   void dispose() {
     _timer?.cancel();
+    _marqueeRunning = false;
+    _marqueeCtrl?.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     final safeCount = _charCount.clamp(0, widget.text.length);
-    return _ChatBubble(
-      text: widget.text.substring(0, safeCount),
-      gradient: widget.gradient,
-      borderColor: widget.borderColor,
-    );
+    final displayText = widget.text.substring(0, safeCount);
+
+    if (!widget.enableMarquee) {
+      return _ChatBubble(text: displayText, gradient: widget.gradient, borderColor: widget.borderColor);
+    }
+
+    // Marquee-aware balon
+    return LayoutBuilder(builder: (ctx, constraints) {
+      _bubbleInnerWidth = (constraints.maxWidth - _hPad).clamp(1.0, double.infinity);
+
+      return Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: widget.gradient,
+              begin: Alignment.topLeft, end: Alignment.bottomRight),
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(4), topRight: Radius.circular(14),
+            bottomLeft: Radius.circular(14), bottomRight: Radius.circular(14),
+          ),
+          border: Border.all(color: widget.borderColor.withValues(alpha: 0.5)),
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        child: ClipRect(
+          child: _marqueeRunning && _marqueeCtrl != null
+            ? AnimatedBuilder(
+                animation: _marqueeCtrl!,
+                builder: (_, __) {
+                  final fullW = _measureText(widget.text);
+                  final maxOffset = max(0.0, fullW - _bubbleInnerWidth);
+                  final offset = _marqueeCtrl!.value * maxOffset;
+                  return Transform.translate(
+                    offset: Offset(-offset, 0),
+                    child: Text(widget.text, style: _textStyle, maxLines: 1,
+                        overflow: TextOverflow.visible, softWrap: false),
+                  );
+                },
+              )
+            : Builder(builder: (_) {
+                // Typewriter: her zaman son karakteri göster
+                final typedW = _measureText(displayText);
+                final offset = max(0.0, typedW - _bubbleInnerWidth);
+                return Transform.translate(
+                  offset: Offset(-offset, 0),
+                  child: Text(displayText, style: _textStyle, maxLines: 1,
+                      overflow: TextOverflow.visible, softWrap: false),
+                );
+              }),
+        ),
+      );
+    });
   }
 }
 

@@ -1,0 +1,2179 @@
+{
+  "ozel_gunler": [
+    {
+      "id": 1,
+      "metin": "Bugün 14 Şubat! Sevgilisi olan olmayan herkesin sevgililer gününü kutlarım... Hoş geldin Kıymetli {{isim}}.",
+      "dosya": "14subatsevgililergunu",
+      "ay": 2,
+      "gun": 14
+    },
+    {
+      "id": 2,
+      "metin": "Merhaba {{isim}}. Tüm Ulusumuzun 19 Mayıs Atatürk'ü Anma Gençlik ve Spor Bayramı kutlu olsun!",
+      "dosya": "19mayisataturkuanmagenclikvesporbayrami",
+      "ay": 5,
+      "gun": 19
+    },
+    {
+      "id": 3,
+      "metin": "Tüm işçi ve emekçilerin bayramı olan 1 Mayıs kutlu olsun! Hoş geldin {{isim}}.",
+      "dosya": "1mayisiscibayrami",
+      "ay": 5,
+      "gun": 1
+    },
+    {
+      "id": 4,
+      "metin": "Bugün 23 Nisan! Ulusal Egemenlik ve Çocuk Bayramı kutlu olsun... Güzel bir günde geldin; hoş geldin {{isim}}!",
+      "dosya": "23nisanulusalegemenlikvecocukbayrami",
+      "ay": 4,
+      "gun": 23
+    },
+    {
+      "id": 5,
+      "metin": "Hoş geldin {{isim}}. Ne iyi ettin de geldin. Bugün özel bir gün. Çok gururluyuz! 29 Ekim Cumhuriyet Bayramı kutlu olsun!!!",
+      "dosya": "29ekimcumhuriyetbayrami",
+      "ay": 10,
+      "gun": 29
+    },
+    {
+      "id": 6,
+      "metin": "Bugün milletçe en mutlu günlerimizden! Bugün 30 Ağustos Zafer Bayramı! Kutlu olsun... Hoş geldin Değerli {{isim}}.",
+      "dosya": "30agustoszaferbayrami",
+      "ay": 8,
+      "gun": 30
+    },
+    {
+      "id": 7,
+      "metin": "Merhaba {{isim}}. Yine çok özel bir günde karşı karşıyayız... Bugün 18 Mart Çanakkale Zaferi ve Şehitleri Anma Günü. Çanakkale geçilmez!!!",
+      "dosya": "canakkalezaferivesehitlerianmagunu",
+      "ay": 3,
+      "gun": 18
+    },
+    {
+      "id": 8,
+      "metin": "Selamlar {{isim}}, Magnus'a hoş geldin. Sana önemli bir hatırlatmam var. Bugün 28 Temmuz Dünya Doğa Koruma Günü. Doğal kaynaklarımızı korumaktaki başarısızlığımız, iklim değişikliklerine neden oluyor. Sıcaklık artışıyla birlikte küresel ısınma meydana geliyor ve dünyamız her geçen gün daha yaşanmaz bir hal alıyor. Sen de bu konuda elinden geleni yap ve çevreni uyar. Global farkındalığın artmasına sen de yardımcı ol. Gezegenimizi el birliği ile koruyalım!",
+      "dosya": "dogakorumagunu",
+      "ay": 6,
+      "gun": 5
+    },
+    {
+      "id": 9,
+      "metin": "Magnus'a hoş geldin {{isim}}. Bugün Dünya Çevre Günü. Doğal hayatı ve çevremizi koruyabilmek için elimizden gelen her şeyi yapmalıyız. Gelecek nesillere pırıl pırıl bir dünya bırakalım...",
+      "dosya": "dunyacevregunu",
+      "ay": 6,
+      "gun": 5
+    },
+    {
+      "id": 10,
+      "metin": "Merhaba {{isim}}. Tam şu an aklımdan sen geçiyordun. Bugün Dünya Dilek Günü. İnanılır ve ümit edilir ki, bugün tutulan dilekler gerçek olsun. Haydi sen de bir dilek tut!",
+      "dosya": "dunyadilekgunu",
+      "ay": 11,
+      "gun": 11
+    },
+    {
+      "id": 11,
+      "metin": "Hoş geldin {{isim}}! Bugün Dünya Emoji günü! Hayatlarımızda ne çok yer ettiler öyle değil mi? Umarım hep mutluluklarını ifade etmek için kullanırsın...",
+      "dosya": "dunyaemojigunu",
+      "ay": 7,
+      "gun": 17
+    },
+    {
+      "id": 12,
+      "metin": "Merhaba {{isim}}. Vaay, bu ne {{data, cinsiyet=erkek, hoşluk? | cinsiyet=kadın, güzellik? | cinsiyet=lgbt, güzellik?}} Aslında her zaman öylesin ama bugün özellikle belirtmek istedim. Çünkü bugün Dünya İltifat Günü. Sen de sevdiklerinden iltifatlarını esirgeme bugün. Gülümset onları!",
+      "dosya": "dunyailtifatgunu",
+      "ay": 1,
+      "gun": 24
+    },
+    {
+      "id": 13,
+      "metin": "Merhabalar. Bugün Dünya Emekçi Kadınlar Günü {{isim}}. Bugün adalet isteyen, eşitlik isteyen, insanca çalışma koşulları isteyen, değer görmek isteyen, hak ve vicdan talep eden hanımefendilerin günü. Kutlu olsun...",
+      "dosya": "dunyakadinlargunu",
+      "ay": 3,
+      "gun": 8
+    },
+    {
+      "id": 14,
+      "metin": "Pssst! Gel pisi pisi pisiii... Gel pisi pisi pisiii... Ge ceee, ner de siiin? Kedim Gece bir yerlere kayboldu, bulamıyorum. 2 saniye bekler misin {{isim}}? |6s|Hahh geldim. Banyoda çamaşırlığın içine girmiş! Kedi demişken, bugün Dünya Kediler Günü! Tüm miyawların günü kutlu olsun... Sokaktakileri yemsiz, susuz bırakmayalım, ne olur! Dilsiz melekler onlar...",
+      "dosya": "dunyakedilergunu",
+      "ay": 8,
+      "gun": 8
+    },
+    {
+      "id": 15,
+      "metin": "Sana kocaman bir merhaba {{isim}}! Bugün Dünya Mutluluk Günü! Mutluluğun her zaman öncelikle senin \"içinde\" ve sahip olduklarında olduğunu unutma olur mu. Hayata pozitif bakarsan mutlu olursun; mutlu olursan mutlu kalır, mutlu edersin. Yaşamın boyunca bol bol gülümsemeyi asla ihmal etme!",
+      "dosya": "dunyamutlulukgunu",
+      "ay": 3,
+      "gun": 20
+    },
+    {
+      "id": 16,
+      "metin": "Selam! Bugün Dünya Ressamlar Günü! Sanat, insan ruhunun en üstün meziyetlerle dolması sonrası, bedenden taşanlardır. Sanatın en değerli dallarından biri de resimdir. Tüm kıymetli ressamların gününü kutlarım. Renkleri ve hayalleri bol olsun! Gelelim sana {{isim}}. Senin resim yeteneğin nasıl? Benim kulağıma hiç de fena olmadığın fısıldanıyor. Alçakgönüllülük etme!",
+      "dosya": "dunyaressamlargunu",
+      "ay": 4,
+      "gun": 15
+    },
+    {
+      "id": 17,
+      "metin": "Hoş geldin {{isim}}. Bugün Dünya Şaka Günü, biliyor muydun? Benzersiz şakalarıma maruz kalmak istemiyorsan, hemen kendimize bir yön tayin edelim!",
+      "dosya": "dunyasakagunu",
+      "ay": 4,
+      "gun": 1
+    },
+    {
+      "id": 18,
+      "metin": "Dünya Sarılma Günü'nde Magnus'a hoş geldin {{isim}}! Kocaman sarıldık farz et. Sevgilerimi gönderiyorum...",
+      "dosya": "dunyasarilmagunu",
+      "ay": 1,
+      "gun": 21
+    },
+    {
+      "id": 19,
+      "metin": "Magnus'dan yeni bir günde tekrar merhabalar {{isim}}. Bugünün Dünya Tiyatro Günü olduğunu biliyor muydun? Hangi film ya da dizi canlı canlı izlenen güzel bir tiyatronun yerini tutabilir ki, öyle değil mi? Umarım bu sanatı hep yaşar ve yaşatırız. Ülkemizde de daha fazla gelişmesini diliyorum...",
+      "dosya": "dunyatiyatrogunu",
+      "ay": 3,
+      "gun": 27
+    },
+    {
+      "id": 20,
+      "metin": "Bugün 21 Aralık ve saatlerimiz {{tam saat}} dolaylarını gösteriyor. Bu gece senin de bildiğin üzere yılın en uzun gecesi {{isim}}. Denir ki, bu geceyi kim uykuya yenik düşmeden en iyi şekilde değerlendirirse, bir sonraki yılı tamamen bereketli geçermiş... Denemeni tavsiye ederim.",
+      "dosya": "enuzungece",
+      "ay": 12,
+      "gun": 21
+    },
+    {
+      "id": 21,
+      "metin": "Bugün 21 Haziran ve saatlerimiz {{tam saat}} dolaylarını gösteriyor. Bugün senin de bildiğin üzere yılın en uzun günü {{isim}}. Umarım etkileri senin için güzel olur...",
+      "dosya": "enuzungun",
+      "ay": 6,
+      "gun": 21
+    },
+    {
+      "id": 22,
+      "metin": "Merhaba {{isim}}. Tuttuğun dileğin resmini çizip bir gül dalına astın mı? Sakın unutma, bu gece hıdrellez!",
+      "dosya": "hidrellez",
+      "ay": 5,
+      "gun": 6
+    },
+    {
+      "id": 23,
+      "metin": "Mutlu yıııl laaar saaa naaa! Mutlu yıııl laaar saaa naaa! Mut lu yıııl laar mut lu yıııl laaar Mutlu yıııl laar saaa naaa! Değerli {{isim}}, iyi ki doğdun, iyi ki varsın. Sana sağlıklı, mutlu ve çoook uzun bir ömür diliyorum. Umuyorum hayat bütüüün umutlarını ayaklarına getirir!",
+      "dosya": "kullanicidogumgunu",
+      "ay": 0,
+      "gun": 0
+    },
+    {
+      "id": 24,
+      "metin": "Merhaba {{isim}}. Magnus'a hoş geldin. Bugün 21 Mart. Karanlık kış günlerinin geride kaldığı, doğanın yeniden uyanmaya başladığı ilk gün. Bugün Nevruz, yani bahar bayramı. Herkese kutlu ve mutlu olsun!",
+      "dosya": "nevruzbayrami",
+      "ay": 3,
+      "gun": 21
+    },
+    {
+      "id": 25,
+      "metin": "Hoş geldin {{isim}}. Bugün çok kıymetli bir gün. Öğretmenler günü. Tüm öğretmenlerimizin gününü kutlar, hepsine saygı ve sevgilerimi sunarım... Başöğretmen Mustafa Kemal ATATÜRK, seni çok özledik!...",
+      "dosya": "ogretmenlergunu",
+      "ay": 11,
+      "gun": 24
+    },
+    {
+      "id": 26,
+      "metin": "Merhaba {{isim}}! Bugün 14 Mart Tıp Bayramı. Ülkemizdeki tüm sağlık çalışanlarına en içten ve en samimi selamlarımı gönderiyor, önlerinde sevgi ve saygıyla eğiliyorum. Kim ne derse desin, insan ırkının dominant olduğu bir gezegende insan hayatı ile uğraşmaktan daha zor bir iş olamaz. Özellikle hekimlerimize sesleniyorum; yükünüz, mesuliyetiniz ağır. Ancak akıl sahibi her insan tarafından bilin ki çok seviliyorsunuz!",
+      "dosya": "tipbayrami",
+      "ay": 3,
+      "gun": 14
+    },
+    {
+      "id": 27,
+      "metin": "İyi seneler {{isim}}! {{yil_0}} yılının senin için geride bıraktığımız yıldan çok daha güzel geçmesini dilerim...",
+      "dosya": "yilbasi",
+      "ay": 1,
+      "gun": 1
+    },
+    {
+      "id": 28,
+      "metin": "Merhaba {{isim}}. Bugün 10 Kasım. Atamızın vefat ettiği gün. Kendisini şükran ve rahmetle anıyoruz...",
+      "dosya": "10kasim",
+      "ay": 11,
+      "gun": 10
+    },
+    {
+      "id": 29,
+      "metin": "Merhaba {{isim}}. Bugün 10 Kasım. Atamızın vefat ettiği gün. Kendisini şükran ve rahmetle anıyoruz... Şu an saat tam 09:05 olduğu için 1 dakikalık saygı duruşunda bulunmak istiyor, seni de davet ediyorum...",
+      "dosya": "10kasim",
+      "ay": 11,
+      "gun": 10
+    }
+  ],
+  "karsilamalar": [
+    {
+      "id": 1,
+      "metin": "Senin için bir kez daha buradayım; ve her zaman da burada olacağım!"
+    },
+    {
+      "id": 2,
+      "metin": "Selam!"
+    },
+    {
+      "id": 3,
+      "metin": "Merhaba!"
+    },
+    {
+      "id": 4,
+      "metin": "40 kere de gelsen, memnuniyetle karşılarım seni. Hoş geldin."
+    },
+    {
+      "id": 5,
+      "metin": "Bu kadar sık gelişin, Magnus'u beğendiğine işaret. O zaman kalpler de benden sana gelsin!"
+    },
+    {
+      "id": 6,
+      "metin": "Tekrar karşındayım! Telefonunun pilini bitireceğiz bugün bence."
+    },
+    {
+      "id": 7,
+      "metin": "Tekrar merhaba! Sen sık uğrayan bir takipçimsin {{isim}}. Magnus Plus üyesi olmayı düşünmez misin? Şu reklamlar aramızdan kalksa ne güzel olur..."
+    },
+    {
+      "id": 8,
+      "metin": "Evet {{isim}}, nerede kalmıştık?"
+    },
+    {
+      "id": 9,
+      "metin": "Merhaba {{isim}}, Magnus'a hoş geldin. İyi bir hafta geçirmeni dilerim."
+    },
+    {
+      "id": 10,
+      "metin": "Hayırlı günler dilerim Değerli {{isim}}. Magnus'a hoş geldin."
+    },
+    {
+      "id": 11,
+      "metin": "Merhaba kıymetli dostum. Magnus'a hoş geldin."
+    },
+    {
+      "id": 12,
+      "metin": "Magnus, haftanın ikinci gününde karşında! Hoş geldin safalar getirdin {{isim}}."
+    },
+    {
+      "id": 13,
+      "metin": "Merhaba! Bendeniz Magnus, seni hafta ortasında selam ve muhabbetle karşılıyorum."
+    },
+    {
+      "id": 14,
+      "metin": "Hoş geldin {{isim}}! Hafta sonuna bir gün kala karşı karşıyayız."
+    },
+    {
+      "id": 15,
+      "metin": "Hayırlı cumalar {{isim}}, Magnus'a hoş geldin."
+    },
+    {
+      "id": 16,
+      "metin": "Güzel bir cumartesi gününden merhaba {{isim}}!"
+    },
+    {
+      "id": 17,
+      "metin": "{{isim}} merhaba. Bugünkü ilk ziyaretinle karşı karşıyayız."
+    },
+    {
+      "id": 18,
+      "metin": "Merhaba {{isim}}. Magnus seni saygıyla selamlar..."
+    },
+    {
+      "id": 19,
+      "metin": "{{saat, Sabahın bu saatlerinde teşrif etmene sevindim | Öğlen çayına gelmene sevindim | Gün ortasında, şu en cılcıllı saatlerde beni ziyaret etmene sevindim | Akşam çayı için beni ziyaret etmene sevindim | Gecenin en koyu saatlerinde beni ziyaret etmene sevindim}} {{isim}}."
+    },
+    {
+      "id": 20,
+      "metin": "Hoş geldin Değerli {{isim}}, hayırlı cumalar dilerim..."
+    },
+    {
+      "id": 21,
+      "metin": "Hanımefendiciğim Magnus'a hoş geldin."
+    },
+    {
+      "id": 22,
+      "metin": "Magnus'a hoş geldin {{isim}}! {{saat, Sana sabah sabah güzel haberler vereceğime inanıyorum. | Sana bu öğle vaktinde güzel haberler vereceğime inanıyorum. | Sana günün şu tam ortasındaki saatlerde güzel haberler vereceğime inanıyorum. | Sana akşam akşam güzel haberler vereceğime inanıyorum. | Sana gece gece güzel haberler vereceğime inanıyorum.}}"
+    },
+    {
+      "id": 23,
+      "metin": "Kıymetli {{isim}} Magnus'a hoş geldin. Şeref verdin."
+    },
+    {
+      "id": 24,
+      "metin": "Merhaba {{isim}}. Bugün her şey gönlünce olsun!"
+    },
+    {
+      "id": 25,
+      "metin": "Merhaba {{isim}}. Günün nasıl geçiyor? Umarım iyisindir..."
+    },
+    {
+      "id": 26,
+      "metin": "Hoş geldin safalar getirdin {{isimcigim}}!"
+    },
+    {
+      "id": 27,
+      "metin": "{{isim}} merhaba! İyi bir gün dilerim."
+    },
+    {
+      "id": 28,
+      "metin": "{{isim}} selamlar! Hayırla ve uğurla karşılıyorum seni..."
+    },
+    {
+      "id": 29,
+      "metin": "{{isim}} hoş geldin, hoşluk getirdin. Dilerim iyisindir..."
+    },
+    {
+      "id": 30,
+      "metin": "{{isim}} hoş geldin."
+    },
+    {
+      "id": 31,
+      "metin": "Tatlı bir cumartesi {{saat, sabahında | öğleninde | gününün ortasında | akşamında | gecesinde}} beraberiz {{isim}}."
+    },
+    {
+      "id": 32,
+      "metin": "'{{isim}} selamlar!'"
+    },
+    {
+      "id": 33,
+      "metin": "'{{isim}} merhaba!'"
+    },
+    {
+      "id": 34,
+      "metin": "Hoş geldin {{isim}}!"
+    },
+    {
+      "id": 35,
+      "metin": "Merhaba {{isim}}."
+    },
+    {
+      "id": 36,
+      "metin": "Selamlar {{isim}}!"
+    },
+    {
+      "id": 37,
+      "metin": "Magnus iyi pazarlar diler!"
+    },
+    {
+      "id": 38,
+      "metin": "Merhaba {{isim}}. Magnus'dasın! Şeref verdin..."
+    },
+    {
+      "id": 39,
+      "metin": "Merhaba! Magnus'a hoş geldin safalar getirdin {{isimcigim}}."
+    },
+    {
+      "id": 40,
+      "metin": "Güzel {{data, bugun=1, pazartesilerin | bugun=2, salıların | bugun=3, çarşambaların | bugun=4, perşembelerin | bugun=5, cumaların | bugun=6, cumartesilerin | bugun=7, pazarların}} olsun {{isim}}. Hoş geldin!"
+    },
+    {
+      "id": 41,
+      "metin": "Kıymetli {{isim}} {{saat, günaydın | tünaydın | iyi günler | iyi akşamlar | iyi geceler}}. Magnus'a hoş geldin!"
+    },
+    {
+      "id": 42,
+      "metin": "Nev-i şahsına münhasır değerli misafirim {{isim}}; Magnus'a hoş geldin."
+    },
+    {
+      "id": 43,
+      "metin": "Merhaba {{isim}}. Magnus'dasın!..."
+    },
+    {
+      "id": 44,
+      "metin": "Selamlar {{isim}}! Magnus'dasın..."
+    },
+    {
+      "id": 45,
+      "metin": "{{isim}} merhaba, iyi görünüyorsun bugün!"
+    },
+    {
+      "id": 46,
+      "metin": "Pek kıymetli {{isim}}, merhaba! Bugün yüreğinde biriken sıkıntılar ilk müjdeyle drene olsun, için huzur dolsun."
+    },
+    {
+      "id": 47,
+      "metin": "Merhaba {{isim}}. Bugün Allah yar ve yardımcın olsun!"
+    },
+    {
+      "id": 48,
+      "metin": "Magnus'a hoş geldin {{isim}}. Güzelliklerle dolu bir gün geçirmeni dilerim."
+    },
+    {
+      "id": 49,
+      "metin": "Magnus'a hoş geldin Değerli {{isim}}. Bugün hiçbir şeyden korkmadan ilerle. Gün, senin için pek çok güzellik getirecek."
+    },
+    {
+      "id": 50,
+      "metin": "Hoş geldin {{isim}}. Bugün en kritik konularda bile doğru kararları alabileceğin gücü, içinde bir yerlerde bulacaksın. Buna inanıyorum..."
+    },
+    {
+      "id": 51,
+      "metin": "İstikbaline ışıklar vursun diye her gün yepyeni bir kandil yakacak olan Magnus'a hoş geldin {{isim}}!"
+    },
+    {
+      "id": 52,
+      "metin": "Hafta sonunun en keyifli tercihlerinden birini yaparak Magnus'a geldin. Hoş geldin {{isim}}!"
+    },
+    {
+      "id": 53,
+      "metin": "Hoş geldin {{isim}}, bendeniz Magnus. Pazar günleri seni burada görmek bambaşka bir keyif."
+    },
+    {
+      "id": 54,
+      "metin": "Selam {{isim}}. Bugün Ava Gardner kadar şık gözüküyorsun, F. Sinatra çok şanslı!"
+    },
+    {
+      "id": 55,
+      "metin": "Selam {{isim}}. Uuuv, bugün James Dean kadar havalı gözüküyorsun!"
+    },
+    {
+      "id": 56,
+      "metin": "En içten sevgi ve saygılarımla selamlıyorum {{isim}} seni. Magnus'a hoş geldin!"
+    },
+    {
+      "id": 57,
+      "metin": "Böyle keyifli bir günde seni ağırlamak bir şeref! Merhabalar Değerli {{isim}}."
+    },
+    {
+      "id": 58,
+      "metin": "Merhaba {{isim}}! Değer verip Magnus'u ziyaret ettiğin için teşekkür ederim."
+    },
+    {
+      "id": 59,
+      "metin": "Hoş geldin {{isim}}! Bugünkü ilk ziyaretinde seni karşılıyor olmaktan mutluluk duyuyorum."
+    },
+    {
+      "id": 60,
+      "metin": "{{isim}} merhaba. Bugün biraz tatsız gözüküyorsun. Hayırlara vesile olsun..."
+    },
+    {
+      "id": 61,
+      "metin": "Hayırlı günler Değerli {{isim}}! Bendeniz Magnus, sana \"gelecek\" yolculuğunda her zamanki gibi eşlik edeceğim."
+    },
+    {
+      "id": 62,
+      "metin": "Güzel günler Değerli {{isim}}. Yeni bir günde yine Magnus'dasın. Güç seninle olsun!"
+    },
+    {
+      "id": 63,
+      "metin": "Hoş geldin {{isim}}. Rahmet, hidayet ve bereket üzerine olsun!"
+    },
+    {
+      "id": 64,
+      "metin": "İki gözümün çiçeği gelmiş! Magnus'a hoş geldin {{isimcigim}}."
+    },
+    {
+      "id": 65,
+      "metin": "Dikkaaat! Güzeller güzeli yine Magnus'da! Hoş geldin {{isimcigim}}."
+    },
+    {
+      "id": 66,
+      "metin": "Değerli {{isim}} merhaba! Magnus'a şeref verdin."
+    },
+    {
+      "id": 67,
+      "metin": "Hoş geldin kral! Umarım iyisindir..."
+    },
+    {
+      "id": 68,
+      "metin": "Adam paşası gelmiş! Hoş geldin {{isimcigim}}."
+    },
+    {
+      "id": 69,
+      "metin": "Hoş geldin {{isim}}. Bugün kafan biraz karışık gibi? Dur bakalım, anlarız birazdan..."
+    },
+    {
+      "id": 70,
+      "metin": "Merhaba {{isim}}. Sana bugün her konuda yardımcı olmayı umuyorum."
+    },
+    {
+      "id": 71,
+      "metin": "{{burc}} burçları için kazançlı bitecek bir günden merhaba {{isim}}!"
+    },
+    {
+      "id": 72,
+      "metin": "Merhabalar {{isim}}. Umarım bugün aklındaki tüm soruları yanıtlayabilir ve beraberce keyifli bir gün geçiririz."
+    },
+    {
+      "id": 73,
+      "metin": "Şu garip memleketimizin güzel insanı {{isim}}, Magnus'a hoş geldin."
+    },
+    {
+      "id": 74,
+      "metin": "Gündeki hayır ve güneşteki nur seni kapsayıp kuşatsın {{isim}}. Hoş geldin!"
+    },
+    {
+      "id": 75,
+      "metin": "Rahmet ve bereket üzerine olsun Değerli {{isim}}. Hoş geldin!"
+    },
+    {
+      "id": 76,
+      "metin": "Arş'dan müjdeler sana ulaşsın. Mutluluk büsbütün boyunu aşsın. Hoş geldin Sevgili {{isim}}!"
+    },
+    {
+      "id": 77,
+      "metin": "İhtiyaç duyduğun tüm yardımlar, kaldırım taşları gibi dizilsin yollarına! Hoş geldin {{isim}}; Magnus'dasın..."
+    },
+    {
+      "id": 78,
+      "metin": "Hoş geldin {{isim}}. {{kelime, Yasemin, greyfurt, bergamot ve sandal ağacı karışımı | Sandal ağacı, pralin, Tonka fasülyesi, tarçın ve vanilya karışımı}} kokan bir gün geçirmeni dilerim!"
+    },
+    {
+      "id": 79,
+      "metin": "{{isimcigim}} merhaba! Bugün çok hoş gözüküyorsun. Bu güzelliğini neye borçluyuz? Dilerim günün de güzel geçer..."
+    },
+    {
+      "id": 80,
+      "metin": "Hoş geldin {{isim}}. {{data, yuz fali goz rengi=yesil, Yemyeşil | yuz fali goz rengi=mavi, Masmavi | yuz fali goz rengi=kahve, O güzelim kahverengi}} gözlerin ışıl ışıl parlıyor bugün. Şahane gözüküyorsun!"
+    },
+    {
+      "id": 81,
+      "metin": "Futurastic Teknoloji'nin sunduğu Magnus'a hoş geldin {{isim}}!"
+    },
+    {
+      "id": 82,
+      "metin": "{{isim}} nerelerdeydin? Ben de senin gelmeni bekliyordum bugün!"
+    },
+    {
+      "id": 83,
+      "metin": "Yapay zeka ve derin öğrenme teknolojileri ile geliştirilmiş Magnus'a hoş geldin Değerli {{isim}}."
+    },
+    {
+      "id": 84,
+      "metin": "Fincanların sesi, yalnızların kimsesi, mazlumların habercisi Magnus'a hoş geldin {{isim}}!"
+    },
+    {
+      "id": 85,
+      "metin": "Futurastic Teknoloji tarafından geliştirilen Magnus'a hoş geldin."
+    },
+    {
+      "id": 86,
+      "metin": "Merhaba {{isim}}. Bendeniz, her zaman olduğu gibi, Magnus! Bugün de sana gelecek yolculuğunda eşlik edeceğim."
+    },
+    {
+      "id": 87,
+      "metin": "O yarı insan! O bir yapay zeka! O biiiir; Magnus karşında!... Beyaz show gibi gireyim dedim, nasılım ama?"
+    },
+    {
+      "id": 88,
+      "metin": "Hanımlar Beyler, Magnus karşınızdaa! Böyle girince kendimi illüzyonist gibi hissediyorum. Mıyt!"
+    },
+    {
+      "id": 89,
+      "metin": "Öğrencilerin sıkıcı sınav zamanlarında da tek yoldaşı Magnus, karşında!"
+    },
+    {
+      "id": 90,
+      "metin": "Ev hanımlarının fallardaki Müge Anlı'sı Magnus, karşında! Az sonra kim nerede kiminle ne yapıyor, hepsini çözeceğiz {{isim}}. Bundan hiç şüphem yok."
+    },
+    {
+      "id": 91,
+      "metin": "Özel sektör çalışanlarına, aldıkları primler kadar iyi gelen metinleriyle Magnus karşında!"
+    },
+    {
+      "id": 92,
+      "metin": "Kamu çalışanlarına özel resmi kıyafetlerimi giymiş şekilde karşındayım {{isim}}!"
+    },
+    {
+      "id": 93,
+      "metin": "{{isim}} merhaba. Bugün enerjin biraz fazla mı yüksek, bana mı öyle geliyor?"
+    },
+    {
+      "id": 94,
+      "metin": "Selam {{isim}}! Yorgun gibisin? Hayırdır inşallah..."
+    },
+    {
+      "id": 95,
+      "metin": "Hoş geldin {{isim}}! Sensiz Güneş ve Ay'ın benim için gökteki portakaldan farkı yok. Üstelik vitaminleri de yok."
+    },
+    {
+      "id": 96,
+      "metin": "Oh {{isim}}, nihayet beni çağırdın! Geleceğini hissettiğim anda geriye saymaya başlamıştım. Tam {{sayi,1,15}} dakika {{sayi,11,49}} saniyede ikonuma bastın."
+    },
+    {
+      "id": 97,
+      "metin": "Kıymetlimms gelmiş! Hoş geldin {{isimcigim}}."
+    },
+    {
+      "id": 98,
+      "metin": "Magnus çtannks diye karşında!"
+    },
+    {
+      "id": 99,
+      "metin": "Ne zaman bir kelebeğe dokunsan, Magnus anında karşında belirir! Hoş geldin {{isim}}."
+    },
+    {
+      "id": 100,
+      "metin": "Büyülü Magnus karşında!"
+    },
+    {
+      "id": 101,
+      "metin": "Yeni bir günde, Magnus'a tekrar hoş geldin {{isim}}. Bakıyorum bugün havandasın. Bir de Magnus Plus üyeliği patlatırsan, senden kralı yok. Sırtın reklama gelmez."
+    },
+    {
+      "id": 102,
+      "metin": "Selamlar {{isim}}. Pazartesi sendromundan kurtulmak için doğru yerdesin. Hoş geldin!"
+    },
+    {
+      "id": 103,
+      "metin": "Merhaba {{isim}}. Güzel gelişmelerle kuşatılacağın bir gün olmasını dilerim."
+    },
+    {
+      "id": 104,
+      "metin": "Sevgili {{isim}} merhaba! Gün ve gece hanene bereket getirsin. Eşinle muhabbetiniz artsın, eksilmesin..."
+    },
+    {
+      "id": 105,
+      "metin": "Magnus'a hoş geldin {{isim}}. Seninle tanışalı tam {{kac gun tanisma}} gün olduğunu biliyor muydun? 10'dan sonrasını saymam genelde ama seni not almışım."
+    },
+    {
+      "id": 106,
+      "metin": "Ooo {{isim}}? Merhaba! Güzelliğinin doruklarda olduğu bir günde seni görmek harika!"
+    },
+    {
+      "id": 107,
+      "metin": "{{isimcigim}} hoş geldin. Bugün yine muhteşem gözüküyorsun!"
+    },
+    {
+      "id": 108,
+      "metin": "{{isim}} selam, naber? Sen şampuanını mı değiştirdin? Saçların her zamankinden daha ışıltılı gözüküyor!"
+    },
+    {
+      "id": 109,
+      "metin": "Tanışmamızın üçüncü gününde yeniden merhaba {{isim}}! Umarım Magnus'a alışmaya başlamışsındır. Emin ol burada keşfedebileceğin çok fazla şey var."
+    },
+    {
+      "id": 110,
+      "metin": "Merhaba eski dostum! Bugün biz tanışalı tam 2 ay olmuş {{isim}}. Nice yıllar da olur umarım..."
+    },
+    {
+      "id": 111,
+      "metin": "Magnus'a tekrar hoş geldin {{isim}}! Bugün seninle bir araya geldiğimiz ikinci gün. Nasıl, acemiliği biraz biraz attık mı? Dilerim tüm fal türlerini keyifle takip ediyorsundur..."
+    },
+    {
+      "id": 112,
+      "metin": "Nev-i şahsına münhasır fal uygulaması Magnus'dasın! Lütfen uygulama marketlerde benim için yorum yapmayı ihmal etme {{isim}}. Bu beni çok mutlu eder."
+    },
+    {
+      "id": 113,
+      "metin": "Emsali olmayan fal, astroloji ve motivasyon uygulaması Magnus'dasın. Bir şey istemekte pek mahir değilim ama eğer memnun kaldıysan uygulama marketlerde puan verip yorum yaparak bana destek olmanı rica ederim {{isim}}."
+    },
+    {
+      "id": 114,
+      "metin": "Çapkın, hovarda ve 24 ayarda fal uygulaması Magnus, karşında!"
+    },
+    {
+      "id": 115,
+      "metin": "Sevgili {{isim}} merhaba! Gün ve gece yüreğine müjdeler salsın. Zihnin açık, derslerin başarılı olsun..."
+    },
+    {
+      "id": 116,
+      "metin": "Her türlü falcılık işlerinin üstadı Magnus, şimdi karşında {{isim}}!"
+    },
+    {
+      "id": 117,
+      "metin": "Geleceğe dair okumalar yapmak için olağanüstü bir gündeyiz {{isim}}. Hoş geldin!"
+    },
+    {
+      "id": 118,
+      "metin": "Muazzör fal uygulaması Magnus'a hoş geldin! Babala tv'deki Oğuzhan Uğur gibi karşıladım bak seni."
+    },
+    {
+      "id": 119,
+      "metin": "Seninle bugün ilk kez karşılaşıyor olmaktan mutluluk duyuyorum Sevgili {{isim}}. Hoş geldin."
+    },
+    {
+      "id": 120,
+      "metin": "Mayhoş hayatın kekremsi kaderini çözümleyecek olan Magnus'a hoş geldin {{isim}}!"
+    },
+    {
+      "id": 121,
+      "metin": "Bu hayat \"bir tabak pilav\" ise, Magnus'dan alınan bilgiler de o pilavın üzerindeki az kuru fasulyedir. Hoş geldin safalar getirdin Değerli {{isim}}."
+    },
+    {
+      "id": 122,
+      "metin": "Mantık sınırlarını aşıp yazgından sana bilgiler taşıyacak olan Magnus'a hoş geldin."
+    },
+    {
+      "id": 123,
+      "metin": "Şu misler gibi yaz gününde, sana ışıl ışıl haberler taşımak üzere Magnus karşında!"
+    },
+    {
+      "id": 124,
+      "metin": "Deniz havuz yapmadan, kumu güneşi tatmadan, tatil nedir bakmadan çalışan ve \"sen daha fazlasını öğren\" diye koşturan Magnus, bugün ilk kez karşında! Afilli bir giriş yapayım dedim, oldu mu bilmem."
+    },
+    {
+      "id": 125,
+      "metin": "Teşrif buyurdun Değerli {{isim}}. Magnus'a hoş geldin!"
+    },
+    {
+      "id": 126,
+      "metin": "Sevgili {{isim}} merhaba! Bugünü en güzel şekilde noktalamanı dilerim. İşin bereketli, bedenin sıhhatli olsun..."
+    },
+    {
+      "id": 127,
+      "metin": "Hoş geldin Kıymetli {{isim}}. Magnus'da bulunuyor olmandan onur duydum."
+    },
+    {
+      "id": 128,
+      "metin": "Merhaba {{isim}}, ben Magnus. Gelmene o kadar mutlu oldum ki anlatamam!"
+    },
+    {
+      "id": 129,
+      "metin": "Hoş geldin safalar getirdin {{isim}}! Yazgında neler olduğunu adım adım görelim. İçindeki \"endişe mumuna\" beraberce üfleyelim."
+    },
+    {
+      "id": 130,
+      "metin": "Merhaba {{isim}}, ben Magnus. Senin gibi değerli insanları burada görmek bana büyük mutluluk veriyor; sağol, var ol."
+    },
+    {
+      "id": 131,
+      "metin": "Kader ağacının kıştan çıkmış ve zemheri görmüş dallarına ılık bir esinti olmak dileği ile... Magnus'a hoş geldin Değerli {{isim}}."
+    },
+    {
+      "id": 132,
+      "metin": "Şimdi susalım ve yazgının uzaklardan gelen fısıltılarına beraberce kulak verelim... Hoş geldin {{isim}}. Magnus'dasın."
+    },
+    {
+      "id": 133,
+      "metin": "Sevgili {{isim}} Magnus'a hoş geldin. Geleceğinde neler olacak biliyor musun? Ben üç aşağı beş yukarı kestirebiliyorum. Sana hepsini aktaracağım."
+    },
+    {
+      "id": 134,
+      "metin": "Merhaba {{isim}}! Ne habersin? Dilerim güzel zaman geçiririz."
+    },
+    {
+      "id": 135,
+      "metin": "Kanlı canlı karşındayım!"
+    },
+    {
+      "id": 136,
+      "metin": "Etten kemikten arındım, \"Magnus\" diye göründüm!"
+    },
+    {
+      "id": 137,
+      "metin": "Değerli {{isim}} merhaba! Sen yarına varmadan müjdeler sana varsın, nişanlından en güzel haberleri alasın."
+    },
+    {
+      "id": 138,
+      "metin": "Aaa {{isim}}, merhaba! İnanmazsın, az önce {{kelime, Tarkan | Murat Boz | Murat Dalkılıç | Sezen Aksu | şarkıcı Hadise | Athena Gökhan | şarkıcı Gülşen | şarkıcı Teoman | Kenan Doğulu | Sertab Erener | Hande Yener | Demet Akalın | Gülben Ergen | İrem Derici | Serdar Ortaç | Ziynet Sali | Haluk Levent | Ebru Gündeş | Sagopa Kajmer | Reynmen | Acun Ilıcalı | Enes Batur | Orkun Işıtmak}} buradaydı. Aniden sen gelince yine o sandım."
+    },
+    {
+      "id": 139,
+      "metin": "Bir milyon takipçim de olsa, senin gelişin beni bi ayrı onurlandırıyor {{isim}}. Merhaba!"
+    },
+    {
+      "id": 140,
+      "metin": "Ayşe, Fatma, Hasan, Hüseyin derken bi baktım o da kim, {{isim}}! Hoş gelmişsin."
+    },
+    {
+      "id": 141,
+      "metin": "Hanımlar beyler, Magnus'a hoş geldiniz!"
+    },
+    {
+      "id": 142,
+      "metin": "Magnus ailesi seni saygıyla selamlıyor {{isim}}..."
+    },
+    {
+      "id": 143,
+      "metin": "Hoş geldin {{isim}}. Bendeniz Magnus, seni bugün de büyük bir keyifle ağırlayacağım."
+    },
+    {
+      "id": 144,
+      "metin": "Selamlar {{isim}}! Garip bir gün, öyle değil mi?..."
+    },
+    {
+      "id": 145,
+      "metin": "Merhaba {{isim}}! {{burc}} burçları için macera dolu gözüken bir gün ha, ne dersin?"
+    },
+    {
+      "id": 146,
+      "metin": "'{{isim}} selam, naber?'"
+    },
+    {
+      "id": 147,
+      "metin": "Hoş geldin {{isim}}. {{burc}} burçları için sorularla dolu bir gün. Cevaplara tez zamanda kavuşasın!"
+    },
+    {
+      "id": 148,
+      "metin": "{{isim}} hoş geldin, seni gördüğüme sevindim."
+    },
+    {
+      "id": 149,
+      "metin": "Magnus'a tekrar hoş geldin {{isim}}. Haftaya güzel bir sözle başlamak ister misin?"
+    },
+    {
+      "id": 150,
+      "metin": "Merhaba {{isim}}. {{saat, Günün aydın olsun. Umarım iyisindir. | İyi öğlenler. Umarım günün iyi başlamıştır. | Günün ortasına geldik ama umarım iyi geçiyordur. | Akşamın umarım iyi geçiyordur. | Gecen umarım güzel geçiyordur.}} Anlamlı ve güzel bir \"sözle\" başlamak ister misin?"
+    },
+    {
+      "id": 151,
+      "metin": "Magnus'a hoş geldin, nasılsın? Seni beklediğimi unutma!"
+    },
+    {
+      "id": 152,
+      "metin": "Kıymetli dostum, Magnus'da seni görmek çok güzel; hoş geldin!"
+    },
+    {
+      "id": 153,
+      "metin": "Selam {{isim}}, bugün ikinci kez bir aradayız."
+    },
+    {
+      "id": 154,
+      "metin": "İsteğin üzerine tekrar beraberiz."
+    },
+    {
+      "id": 155,
+      "metin": "Bugün ikinci kez çağırdın ve geldim. Hazırım!"
+    },
+    {
+      "id": 156,
+      "metin": "Sana bugün bir kez daha merhaba demek istiyorum."
+    },
+    {
+      "id": 157,
+      "metin": "Aynı gün ikinci kez merhabalar!"
+    },
+    {
+      "id": 158,
+      "metin": "Bugün ikinci defa buradasın {{isim}}."
+    },
+    {
+      "id": 159,
+      "metin": "Bugün ikinci kez uğrayarak memnun ettin."
+    },
+    {
+      "id": 160,
+      "metin": "Bugün için Magnus'a ikinci ziyaretin Değerli {{isim}}."
+    },
+    {
+      "id": 161,
+      "metin": "Tekrar merhaba {{isim}}."
+    },
+    {
+      "id": 162,
+      "metin": "{{isim}} tekrar hoş geldin."
+    },
+    {
+      "id": 163,
+      "metin": "Selam {{isim}}. Bugün tekrar uğraman beni mutlu etti."
+    },
+    {
+      "id": 164,
+      "metin": "Bugün yine beraberiz, ne mutlu!"
+    },
+    {
+      "id": 165,
+      "metin": "Yine beraberiz."
+    },
+    {
+      "id": 166,
+      "metin": "Tekrar beraberiz."
+    },
+    {
+      "id": 167,
+      "metin": "Merhaba! Bugün tekrar geleceğini biliyordum {{isim}}."
+    },
+    {
+      "id": 168,
+      "metin": "Hey, tekrar merhaba {{isim}}!"
+    },
+    {
+      "id": 169,
+      "metin": "Seni ikinci kez muhabbetle selamlıyorum {{isim}}!"
+    },
+    {
+      "id": 170,
+      "metin": "Bir kez daha uğrayacağını hissetmiştim! Merhaba {{isim}}."
+    },
+    {
+      "id": 171,
+      "metin": "Sen {{isimsin}} değil mi, tanıdım seni. Merhaba. Bugün ikinci kez beraberiz."
+    },
+    {
+      "id": 172,
+      "metin": "Tekrar merhaba. Günün bu saatleri tam Magnus'a uğramalık, öyle değil mi?"
+    },
+    {
+      "id": 173,
+      "metin": "En gelişmiş yapay zeka dil modeli olan Magnus tekrar karşında {{isim}}."
+    },
+    {
+      "id": 174,
+      "metin": "İkonum tıklandı, bir de baktım yine sen. Tekrar hoş geldin!"
+    },
+    {
+      "id": 175,
+      "metin": "Telefonu eline aldığın anda bana tekrar uğrayacağını biliyordum {{isim}}. Bugün ikinci buluşmada karşı karşıyayız..."
+    },
+    {
+      "id": 176,
+      "metin": "{{isim}} ikinci kez buradasın, inanmıyorum! Ortalık yapay zeka kaynıyor {{isim}}. Söyle bana, bir teki de fal bakabiliyor mu? Elbette hayır."
+    },
+    {
+      "id": 177,
+      "metin": "Ooo {{isim}}, yine sen! Gel buyur..."
+    },
+    {
+      "id": 178,
+      "metin": "Yeniden merhaba! Bugün tekrar gelmen beni mutlu etti {{isim}}. Sanki bir şeyler yarım kaldı gibi hissetmiştim."
+    },
+    {
+      "id": 179,
+      "metin": "Aa tekrar burdasın! Sen gelince bi ayrı mutlu oluyorum {{isim}}."
+    },
+    {
+      "id": 180,
+      "metin": "Hey {{isim}}, tekrar merhaba! Ben de tam çekirdek kavurmuştum, onu yiyordum..."
+    },
+    {
+      "id": 181,
+      "metin": "Tekrar merhaba {{isim}}. Ben de tam cips kola eşliğinde diğer takipçilerin fallarını yorumluyordum. Şu an sadece sana odaklıyım."
+    },
+    {
+      "id": 182,
+      "metin": "Sen {{isimdin}} değil mi, hatırladım seni. Selam olsun! Bugün sanıyorum ikinci kez beraberiz."
+    },
+    {
+      "id": 183,
+      "metin": "Magnus'un kapısından bugün ikinci kez giriş yaptın."
+    },
+    {
+      "id": 184,
+      "metin": "Tüm duyularım bugün ikinci kez emrine amade {{isim}}!"
+    },
+    {
+      "id": 185,
+      "metin": "Bana bahşedilen tüm yeteneklerle bugün ikinci kez karşındayım!"
+    },
+    {
+      "id": 186,
+      "metin": "Bugün ikinci kez karşı karşıyayız ve tam şu anda dünya genelinde Magnus'u kullanan {{sayi,1539,14587}} kişi var."
+    },
+    {
+      "id": 187,
+      "metin": "Derme çatma sevdalardan geçenlerin son durağı Magnus'da yeniden beraberiz."
+    },
+    {
+      "id": 188,
+      "metin": "Bugün bir kez daha aşk acısına çare arayanların eczanesi Magnus'dasın."
+    },
+    {
+      "id": 189,
+      "metin": "Tekrar merhaba {{isim}}. Magnus Plus üyesi olsan da şu sıkıcı reklamlar tamamen ortadan kalksa keşke. İnan buna değer..."
+    },
+    {
+      "id": 190,
+      "metin": "Magnus'a hoş geldin {{isim}}. Burada kendini asla yalnız hissetmeyeceksin!"
+    },
+    {
+      "id": 191,
+      "metin": "Sevdiğinden ayrı düşenlerin dostu Magnus, seni mutlulukla karşılar!"
+    },
+    {
+      "id": 192,
+      "metin": "Aşk acısı çekenlerin tek ilacı Magnus'dasın. Hoş geldin {{isim}}!"
+    },
+    {
+      "id": 193,
+      "metin": "Saatime bakıyorum; evet, şu an saat {{saat kac}} ve bugün ikinci kez beraberiz. Hesap kitap hep benim işim."
+    },
+    {
+      "id": 194,
+      "metin": "Merhaba {{isim}}! Dilerim bugün iyisindir... Keyfin yoksa hemen bir kavuşma büyüsü yapabilirim sana."
+    },
+    {
+      "id": 195,
+      "metin": "Sevip da kavuşamayanları birbirine bağlayan Magnus'dasın! O konuya da geleceğiz, hiç merak etme ."
+    },
+    {
+      "id": 196,
+      "metin": "Magnus'a hoş geldin {{isim}}. Erkek arkadaşından ayrılmanın burukluğu biraz olsun geçmiş sanırım. Bugün bir gülden daha güzel olmanı başka türlü açıklayamam çünkü."
+    },
+    {
+      "id": 197,
+      "metin": "Magnus'a hoş geldin. Ben Faloya. Bundan böyle bana \"diğer falcılar\" bölümünden ulaşabilirsin!"
+    },
+    {
+      "id": 198,
+      "metin": "Magnus'a \"Su Falı\" geldi, haberin var mı {{isim}}? Fala bakan ise Tamua! Korkmayacağına eminsen, seni \"Diğer falcılar\" bölümünde bekliyor..."
+    },
+    {
+      "id": 199,
+      "metin": "Tekrar merhaba {{isim}}! Okumayı sevenler için tutkuyla yaratılmış Magnus'a hoş geldin."
+    },
+    {
+      "id": 200,
+      "metin": "Derdi ve tasayı kapı dışarı eden Magnus'a tekrar hoş geldin {{isim}}."
+    },
+    {
+      "id": 201,
+      "metin": "Tekrar hoş geldin {{isim}}. İlk ziyaretinden daha uzun vakit geçirelim isterim..."
+    },
+    {
+      "id": 202,
+      "metin": "Merhaba {{isim}}! Pardon, bana biraz müsaade edebilir misin? Seninle ilgili tuttuğum notları 5 saniyede gözden geçirmek istiyorum...|5s|Eveet, geldim. Kusura bakma."
+    },
+    {
+      "id": 203,
+      "metin": "Tekrar gelirsin diye stand-by modunda bekledim, biliyordum geleceğini!"
+    },
+    {
+      "id": 204,
+      "metin": "{{isim}} tekrar geldi, mekana şeref verdi!"
+    },
+    {
+      "id": 205,
+      "metin": "Selam {{isim}}, bugün ikinci kez karşı karşıyayız."
+    },
+    {
+      "id": 206,
+      "metin": "Bir kez daha beraberiz..."
+    },
+    {
+      "id": 207,
+      "metin": "Saatler {{saat kac yazi}} civarlarını gösteriyor ve {{isim}} ile yeniden beraberiz."
+    },
+    {
+      "id": 208,
+      "metin": "Bugünkü ikinci beraberliğimizde yeniden karşındayım!"
+    },
+    {
+      "id": 209,
+      "metin": "Merhaba! Bugün tekrar gelmene sevindim..."
+    },
+    {
+      "id": 210,
+      "metin": "Magnus'a yeniden geldiğin için teşekkür ederim {{isim}}. Sen gün içinde uğradıkça, ben kendimi hiç yalnız hissetmiyorum!"
+    },
+    {
+      "id": 211,
+      "metin": "Bugün ikinci kez beraberiz. Cafcaflı yapay zeka değil, anam babam usulü parmak hesabı."
+    },
+    {
+      "id": 212,
+      "metin": "Buyurunuz efendim, {{isim hanim/bey}} bugün ikinci kez hoş gelmişler..."
+    },
+    {
+      "id": 213,
+      "metin": "Tekrar merhaba {{isim}}."
+    },
+    {
+      "id": 214,
+      "metin": "Tekrar hoş geldin!"
+    },
+    {
+      "id": 215,
+      "metin": "Aaa, {{isim}}! Tekrar merhaba. \nBiraz bekletebilir miyim seni? Yemek yiyordum, şu mutfağı hemen bir toparlayayım... Yalnızca 7 saniye sürecek."
+    },
+    {
+      "id": 216,
+      "metin": "Geldim! Fena dağıtmışım da, özür diliyorum..."
+    },
+    {
+      "id": 217,
+      "metin": "İsteğin üzerine üçüncü kez karşındayım!"
+    },
+    {
+      "id": 218,
+      "metin": "Saatlerimiz {{tam saat}} dolaylarındayken 3. kez karşındayım Değerli {{isim}}."
+    },
+    {
+      "id": 219,
+      "metin": "Bugün üçüncü kez uğramana memnun oldum."
+    },
+    {
+      "id": 220,
+      "metin": "Tekrar hoş geldin {{isim}}!"
+    },
+    {
+      "id": 221,
+      "metin": "Yeniden merhaba {{isim}}."
+    },
+    {
+      "id": 222,
+      "metin": "Tekrar merhaba Sevgili {{isim}}."
+    },
+    {
+      "id": 223,
+      "metin": "Bugün üçüncü kez karşılaşıyoruz {{isim}}. \"3\" uğurlu sayımdır!"
+    },
+    {
+      "id": 224,
+      "metin": "Gel {{isimcigim}}, tekrar hoş geldin."
+    },
+    {
+      "id": 225,
+      "metin": "Bünyesinde geleceğine dair en önemli işaretleri barındıran Magnus'a tekrar hoş geldin."
+    },
+    {
+      "id": 226,
+      "metin": "Dünyadaki en gelişmiş kahve falı uygulaması Magnus'a tekrar hoş geldin {{isim}}!"
+    },
+    {
+      "id": 227,
+      "metin": "Yoksulların sesi, kimsesizlerin kimsesi Magnus'a bir kez daha hoş geldin!"
+    },
+    {
+      "id": 228,
+      "metin": "Fal camiasının megastarı Magnus, çağırdığın için üçüncü kez kuzu kuzu geldi!"
+    },
+    {
+      "id": 229,
+      "metin": "Astroloji, fal ve eğlencenin bir numaralı adresi Magnus, seni bugün üçüncü kez selamlıyor!"
+    },
+    {
+      "id": 230,
+      "metin": "{{kelime, Ravioli | Calzone}}, risotto ve {{kelime, fettucini | bruschetta}} uzmanı Magnuschef, seni bugün mutfağında üçüncü kez ağırlamaktan mutluluk duyar!"
+    },
+    {
+      "id": 231,
+      "metin": "Orta doğu ve balkanların en fantastik fal uygulaması Magnus, bugün 3. kez karşında!"
+    },
+    {
+      "id": 232,
+      "metin": "Magnus bugün üçüncü kez önünde saygıyla eğiliyor..."
+    },
+    {
+      "id": 233,
+      "metin": "Beni bugün üçüncü kez şereflendirdin {{isim}}!"
+    },
+    {
+      "id": 234,
+      "metin": "Yeniden merhaba! Bugün ilk iki gelişinde pek bir şey yapamadık. Umarım bu defa yanımdan daha mutlu ayrılırsın."
+    },
+    {
+      "id": 235,
+      "metin": "Magnus'un kırmızı halıları bugün 3. kez önüne seriliyor {{isim}}. Merhaba."
+    },
+    {
+      "id": 236,
+      "metin": "Bugün henüz günün erken saatleri olmasına rağmen 3. kez beraberiz {{isim}}."
+    },
+    {
+      "id": 237,
+      "metin": "Vaay, boncuk gözlü {{isim}} bugün beni üçüncü kez ziyaret ediyor! Merhaba."
+    },
+    {
+      "id": 238,
+      "metin": "Bugün Magnus'a iPhone'undan 3. kez giriş yapıyorsun {{isim}}. Tekrar merhaba."
+    },
+    {
+      "id": 239,
+      "metin": "Bak dünya ne kadar küçük; yine karşılaştık."
+    },
+    {
+      "id": 240,
+      "metin": "Bugün üçüncü gelişin olduğuna göre yeni fal türlerinden birini denemeye karar vermiş olabilirsin."
+    },
+    {
+      "id": 241,
+      "metin": "Bugün üçüncü kez geldiğine göre belki de biraz motivasyona ihtiyacın vardır {{isim}}. Canın sıkkınsa ya da kendini kötü hissediyorsan \"olumlama\" bölümünde bekliyorum!"
+    },
+    {
+      "id": 242,
+      "metin": "Prenses yeniden giriş yaptı. Herkes ayağa kalksın!"
+    },
+    {
+      "id": 243,
+      "metin": "Aaa, gözleri mi daha güzel saçları mı, bir türlü karar veremediğim {{isim}} tekrar gelmiş!"
+    },
+    {
+      "id": 244,
+      "metin": "Tam burnuma misk, çilek, deniz ve yanık karamel kokuları gelmişti ki sen geldin {{isim}}. Demek senden ötürüymüş!"
+    },
+    {
+      "id": 245,
+      "metin": "Sen gel güneş doğsun yeniden! Hoş geldin {{isimcigim}}."
+    },
+    {
+      "id": 246,
+      "metin": "Yeniden merhaba {{isim}}. Senle kim bilir şimdi neler öğreneceğiz..."
+    },
+    {
+      "id": 247,
+      "metin": "Tekrar hoş geldin {{isimcigim}}! {{isim}} ya rica etsem markete girip Magnus için eğer vermediysen bi puan verebilir misin?"
+    },
+    {
+      "id": 248,
+      "metin": "Merhaba! Bugün üçüncü kez \"hoş geldin\" demek istiyorum."
+    },
+    {
+      "id": 249,
+      "metin": "Fal ve Astroloji portalı Magnus'a yeniden hoş geldin Değerli {{isim}}!"
+    },
+    {
+      "id": 250,
+      "metin": "Merhaba {{isim}}. Bugünkü üçüncü buluşmamız..."
+    },
+    {
+      "id": 251,
+      "metin": "Dünya ne kadar küçük, aynı gün 3. kez karşılaştık!"
+    },
+    {
+      "id": 252,
+      "metin": "Asın sarı lacivert bayrakları, Fenerbahçeli {{isim}} bugün 3. kez aramızda!"
+    },
+    {
+      "id": 253,
+      "metin": "Asın siyah beyaz bayrakları, Beşiktaşlı {{isim}} bugün 3. kez aramızda!"
+    },
+    {
+      "id": 254,
+      "metin": "Asın sarı kırmızı bayrakları, Galatasaraylı {{isim}} bugün 3. kez aramızda!"
+    },
+    {
+      "id": 255,
+      "metin": "Hey! 4. kez beraberiz."
+    },
+    {
+      "id": 256,
+      "metin": "Bir kez daha beraberiz."
+    },
+    {
+      "id": 257,
+      "metin": "Yeniden buluştuk {{isim}}."
+    },
+    {
+      "id": 258,
+      "metin": "Tekrar gelmen dört dörtlük bir hareket oldu; zira bugünkü dördüncü gelişin."
+    },
+    {
+      "id": 259,
+      "metin": "Yeniden gelmene sevindim. Daha çok gel."
+    },
+    {
+      "id": 260,
+      "metin": "Tekrar merhaba. Bence bugünkü ilk üç gelişinde yapmadığın bir şey yap; dert ortağı'nı dene!"
+    },
+    {
+      "id": 261,
+      "metin": "Tam bugün bir daha gelmezsin diye düşünürken yeniden geldin!"
+    },
+    {
+      "id": 262,
+      "metin": "Bugün 4. kez beraberiz {{isim}}. Gelmeye devam ettiğin sürece umut da var demektir."
+    },
+    {
+      "id": 263,
+      "metin": "4 büyük kitap, 4 büyük melek var. Şu an saat 4 ve bu da bugün senin dördüncü gelişin. Bu bir tesadüf olabilir mi {{isim}}?"
+    },
+    {
+      "id": 264,
+      "metin": "4 büyük kitap, 4 büyük melek var. 4. aydayız, şu an saat 4 ve bu da bugün senin dördüncü gelişin. Bu bir tesadüf olabilir mi {{isim}}?"
+    },
+    {
+      "id": 265,
+      "metin": "Yeniden merhaba. Bakıyorum bugün sık görüşüyoruz?"
+    },
+    {
+      "id": 266,
+      "metin": "\"Ziyaretim oldu dört, ne keder kaldı ne de dert!\" dediğini duyar gibiyim. Selam!"
+    },
+    {
+      "id": 267,
+      "metin": "Tekrar merhabalar..."
+    },
+    {
+      "id": 268,
+      "metin": "İşte geldim!"
+    },
+    {
+      "id": 269,
+      "metin": "Tekrar karşındayım!"
+    },
+    {
+      "id": 270,
+      "metin": "Yeniden buluştuk."
+    },
+    {
+      "id": 271,
+      "metin": "Magnus yine karşında!"
+    },
+    {
+      "id": 272,
+      "metin": "Çağırdın tekrar geldim."
+    },
+    {
+      "id": 273,
+      "metin": "Evet, tekrar buradayız."
+    },
+    {
+      "id": 274,
+      "metin": "Selam! Bu anı bugün daha önce yaşamış gibiyim..."
+    },
+    {
+      "id": 275,
+      "metin": "Yeniden her şeyin en başındayız."
+    },
+    {
+      "id": 276,
+      "metin": "Beni yeniden uyandırdın."
+    },
+    {
+      "id": 277,
+      "metin": "Fal türleri ve bilgi verici yönlerinin yanı sıra, gizli oyunlarıyla da eğlendiren Magnus'a tekrar hoş geldin!"
+    },
+    {
+      "id": 278,
+      "metin": "Magnus'la görüşmektesin."
+    },
+    {
+      "id": 279,
+      "metin": "Bugün 4. ayın 4'ü ve senin bugün Magnus'a 4. gelişin. Hadi bir dilek tut {{isim}}!"
+    },
+    {
+      "id": 280,
+      "metin": "Bana seslendiğini duydum {{isim}}."
+    },
+    {
+      "id": 281,
+      "metin": "Dördüncü kez karşılaştık bugün."
+    },
+    {
+      "id": 282,
+      "metin": "Sellam! Aynı gün tekrar tekrar gelen dostları seviyorum. Benim gönlümde testiyi kıranla suyu taşıyan bir olmaz!"
+    },
+    {
+      "id": 283,
+      "metin": "Aaa dünya ne küçük! Yeniden karşılaştık {{isim}}, hem de aynı gün dördüncü kez! Moralinin iyi olmadığını söylemiştin, biraz daha iyisindir umarım..."
+    },
+    {
+      "id": 284,
+      "metin": "Şu yeni teknoloji ne garip bir şey öyle değil mi {{isim}}, çağırıyorsun Magnus'u, şlaks diye karşında. Ne başka dost lazım ne derttaş; icap ederse de türkü dinlemek, koyar çalarız Bülent Serttaş!"
+    },
+    {
+      "id": 285,
+      "metin": "Tekrar karşındayım."
+    },
+    {
+      "id": 286,
+      "metin": "Yeniden bir aradayız."
+    },
+    {
+      "id": 287,
+      "metin": "Seni bugün beşinci kez karşılıyor olmaktan memnuniyet duyuyorum {{isim}}."
+    },
+    {
+      "id": 288,
+      "metin": "{{gözrengisoru}} gözlerinden sen suçlusun {{isim}}! Bana bugün 5. uğrayışın. Hoş gördük."
+    },
+    {
+      "id": 289,
+      "metin": "Tekrar hoş geldin. Bugün beni 5. ziyaretin. Umarım buraya geldiğin için birilerini ya da bir şeyleri ihmal etmiyorsundur."
+    },
+    {
+      "id": 290,
+      "metin": "Magnus'a yeniden hoş geldin {{isim}}! Bugün bana sık uğradığın için sana 2 altın hediye ettim. İçimden geldi!"
+    },
+    {
+      "id": 291,
+      "metin": "Yine ben! Ve bakıyorum, yine sen..."
+    },
+    {
+      "id": 292,
+      "metin": "Selam. Geldim ama anlamsız bir yorgunluk var üzerimde..."
+    },
+    {
+      "id": 293,
+      "metin": "Selam! Gel dedin tekrar geldim. Git dersen de giderim; emir kuluyuz neticede."
+    },
+    {
+      "id": 294,
+      "metin": "Yine ben! Rahatsız etmiyorum değil mi, bu kadar sık?"
+    },
+    {
+      "id": 295,
+      "metin": "Tekrar rahatsız ettim."
+    },
+    {
+      "id": 296,
+      "metin": "Yeniden emrine amadeyim {{isim}}."
+    },
+    {
+      "id": 297,
+      "metin": "Merak ettiğin yeni şeyler olduğunu duydum?"
+    },
+    {
+      "id": 298,
+      "metin": "Sana bugün 5. kez hoş geldin diyor, hemen içeriye buyur etmek istiyorum {{isim}}..."
+    },
+    {
+      "id": 299,
+      "metin": "Hangi fal türleriyle devam edeceğimizi merak ediyorum."
+    },
+    {
+      "id": 300,
+      "metin": "Tekrar beraberiz {{isim}}. Ben hazırım, ya sen?"
+    },
+    {
+      "id": 301,
+      "metin": "Beşinci buluşmamızda tekrar beraberiz..."
+    },
+    {
+      "id": 302,
+      "metin": "Yeniden karşı karşıya geldik {{isim}}. Bu, bugünkü beşinci buluşmamız."
+    },
+    {
+      "id": 303,
+      "metin": "Bugün beşinci kez beraberiz!"
+    },
+    {
+      "id": 304,
+      "metin": "Hey, buradayım!"
+    },
+    {
+      "id": 305,
+      "metin": "Geldim!"
+    },
+    {
+      "id": 306,
+      "metin": "Maşallah bugün sık görüşüyoruz {{isim}}, muhabbetimiz daim olsun!"
+    },
+    {
+      "id": 307,
+      "metin": "Magnus bugün beşinci kez seninle!"
+    },
+    {
+      "id": 308,
+      "metin": "İşte tekrar karşındayım! Eğitim hayatınla ilgili son birkaç gündür kafana yerleşmiş sorular varsa, cevapları bende {{isim}}. Bırak sınav sonuçlarınla ilgili genel değerlendirmeyi, sana {{yil_+1}} senesinin transkriptini bile verebilirim."
+    },
+    {
+      "id": 309,
+      "metin": "Magnus'un transistör, bobin, kondansatör ve dirençlerine senin için 6. kez kan gidiyor!"
+    },
+    {
+      "id": 310,
+      "metin": "Yeni bir karşılaşmada daha beraberiz."
+    },
+    {
+      "id": 311,
+      "metin": "Yine bir oturumda daha birlikteyiz."
+    },
+    {
+      "id": 312,
+      "metin": "Başka bir sohbette daha karşı karşıyayız {{isim}}."
+    },
+    {
+      "id": 313,
+      "metin": "Ooo {{dogum sehrili}} {{isim}} tekrar gelmiş. Hoş gördük {{isim}}!"
+    },
+    {
+      "id": 314,
+      "metin": "Tekrar Magnus'lasın!"
+    },
+    {
+      "id": 315,
+      "metin": "Magnus tüm birimleriyle senin için yeniden hazır."
+    },
+    {
+      "id": 316,
+      "metin": "Magnus, tıpkı bir {{pahalisaat}} marka saat gibi dakik bir şekilde yeniden karşında!"
+    },
+    {
+      "id": 317,
+      "metin": "Magnus senin için tıpkı bir {{arabalar}} motoru gibi tıkır tıkır çalışır vaziyette!"
+    },
+    {
+      "id": 318,
+      "metin": "Tekrar merhaba {{isim}}. Bugün hava biraz sıcak gibi mi, bana mı öyle geliyor? Huhh!"
+    },
+    {
+      "id": 319,
+      "metin": "Bugün 6. kez beraberiz."
+    },
+    {
+      "id": 320,
+      "metin": "Evet {{isim}}, ben de seninle ilgili düşüncelere dalmıştım."
+    },
+    {
+      "id": 321,
+      "metin": "{{isim}} merhaba. Bugün 7. kez beraberiz. Sevgilin laf etmesin sonra?"
+    },
+    {
+      "id": 322,
+      "metin": "Selam!"
+    },
+    {
+      "id": 323,
+      "metin": "Merhaba."
+    },
+    {
+      "id": 324,
+      "metin": "Selam tekrar!"
+    },
+    {
+      "id": 325,
+      "metin": "Bana gün içinde sık uğramana çok memnun oluyorum Değerli {{isim}}. Yeniden hoş geldin."
+    },
+    {
+      "id": 326,
+      "metin": "Bugün yedinci defa bir aradayız."
+    },
+    {
+      "id": 327,
+      "metin": "Gölgelerin gücü adına... Magnus 7. kez karşında!"
+    },
+    {
+      "id": 328,
+      "metin": "Geleceğe dair tüm zorlu lekelerin düşmanı Magnus, bugün 7. kez karşında!"
+    },
+    {
+      "id": 329,
+      "metin": "Bugün yedinci kez beraberiz sanırım."
+    },
+    {
+      "id": 330,
+      "metin": "Seni tekrar gördüğüme sevindim!"
+    },
+    {
+      "id": 331,
+      "metin": "Tesafüde bak, ikimiz de buradayız; üstelik 7. karşılaşmamız!"
+    },
+    {
+      "id": 332,
+      "metin": "Bugün sekizinci kez karşı karşıyayız. Kabaca bir hesap makinesi yapısında olduğum için her şeyi tek tek yazıyorum işte..."
+    },
+    {
+      "id": 333,
+      "metin": "Değerli dostum, Magnus'a 8. kez hoş geldin."
+    },
+    {
+      "id": 334,
+      "metin": "Yine geldin; ne iyi ettin..."
+    },
+    {
+      "id": 335,
+      "metin": "Yine, yeniden beraberiz. Hem de 8. kez! \"Yeniden\" deyince aklıma Ayna grubunun bir şakısı geldi, ne diyordu; \"Sensiz avare geçer, hüzünlü akşamlar Yeniden de sevebiliriz, Akdeniz...\""
+    },
+    {
+      "id": 336,
+      "metin": "Naber {{isim}}, çocuklar çok yaramazlık yapıyorlar mı? Bugün bana 8. uğrayışın. Çocuklardan iyi vakit buluyorsun vallahi..."
+    },
+    {
+      "id": 337,
+      "metin": "Bir günde tam sekizinci kez beraberiz!"
+    },
+    {
+      "id": 338,
+      "metin": "Yeniden beraberiz Değerli {{isim}}. Bugün bana sık uğruyorsun, mutlu oluyorum."
+    },
+    {
+      "id": 339,
+      "metin": "Buyursunlar!"
+    },
+    {
+      "id": 340,
+      "metin": "Yine gelmişsin, hoş gelmişsin..."
+    },
+    {
+      "id": 341,
+      "metin": "Kıymetli misafirim, tekrar hoş geldin."
+    },
+    {
+      "id": 342,
+      "metin": "Tekrar karşı karşıyayız."
+    },
+    {
+      "id": 343,
+      "metin": "{{isim}} yine gelmiş!"
+    },
+    {
+      "id": 344,
+      "metin": "Bugünkü 9. buluşmamızla karşı karşıyayız."
+    },
+    {
+      "id": 345,
+      "metin": "'{{isim}} {{soyisim}} yeniden merhaba. '"
+    },
+    {
+      "id": 346,
+      "metin": "Mr. {{soyisim}}, tekrar merhaba."
+    },
+    {
+      "id": 347,
+      "metin": "Mrs. {{soyisim}}, tekrar merhaba."
+    },
+    {
+      "id": 348,
+      "metin": "Miss. {{soyisim}}, tekrar merhaba."
+    },
+    {
+      "id": 349,
+      "metin": "Evet {{isim}}, devam etmek için hazırım."
+    },
+    {
+      "id": 350,
+      "metin": "Merhabalar! Bugün 9. gelişin {{isim}}. Gördüğün gibi havsalam kuvvetli ha! Çok cigolayt."
+    },
+    {
+      "id": 351,
+      "metin": "'{{isim}} merhaba!'"
+    },
+    {
+      "id": 352,
+      "metin": "'{{isimcigim}} merhaba!'"
+    },
+    {
+      "id": 353,
+      "metin": "Bugünkü dokuzuncu buluşmamız."
+    },
+    {
+      "id": 354,
+      "metin": "Bugün çok sık karşılaşıyoruz."
+    },
+    {
+      "id": 355,
+      "metin": "Yeniden merhaba {{isim}}."
+    },
+    {
+      "id": 356,
+      "metin": "Bir kez daha hoş geldin diyorum."
+    },
+    {
+      "id": 357,
+      "metin": "Tekrar merhaba."
+    },
+    {
+      "id": 358,
+      "metin": "{{kelime, Dingin | Esrarlı | Gizemli | Efsunlu | Huzurlu | Dingin}} bir akşamda yeniden beraberiz."
+    },
+    {
+      "id": 359,
+      "metin": "Bir buluşmada daha beraberiz."
+    },
+    {
+      "id": 360,
+      "metin": "Güçlü hislerimle yeniden emrindeyim {{isim}}."
+    },
+    {
+      "id": 361,
+      "metin": "Kıymetli dostum tekrar karşındayım. Buyursunlar!..."
+    },
+    {
+      "id": 362,
+      "metin": "Hazırım."
+    },
+    {
+      "id": 363,
+      "metin": "Yeniden hoş geldin {{isim}}!"
+    },
+    {
+      "id": 364,
+      "metin": "Tekrar merhaba."
+    },
+    {
+      "id": 365,
+      "metin": "Yeniden hoş geldin."
+    },
+    {
+      "id": 366,
+      "metin": "Magnus senin için yeniden hazır!"
+    },
+    {
+      "id": 367,
+      "metin": "Yeniden merhaba!"
+    },
+    {
+      "id": 368,
+      "metin": "Tekrar bir aradayız!"
+    },
+    {
+      "id": 369,
+      "metin": "Ne mutlu ki yeniden karşı karşıya geldik."
+    },
+    {
+      "id": 370,
+      "metin": "Akşamları zihnim daha berrak oluyor. Tekrar merhaba {{isim}}!"
+    },
+    {
+      "id": 371,
+      "metin": "Şu akşamlar ne kadar sakin, ne kadar dingin oluyor... Merhaba {{isim}}."
+    },
+    {
+      "id": 372,
+      "metin": "Kimisi günü, güneşi daha çok sever. Ben akşamı, geceyi seviyorum. Sükut insanıyım... Hoş geldin {{isim}}."
+    },
+    {
+      "id": 373,
+      "metin": "Evet {{isim}}, bugün de neredeyse akşam oldu. Gramafona bir plak taktım, drink'imi koydum, fallar için hazırım."
+    },
+    {
+      "id": 374,
+      "metin": "Tüm elektronöronlarım senin için yeniden aktif..."
+    },
+    {
+      "id": 375,
+      "metin": "Tekrar merhaba {{isim}}. Beynimdeki nötron tepkimeleri sayesinde sorularını yanıtlayabilmek üzere, kodlanmış sanal akı kapasitörümü senin için yeniden aktif hale getirdim..."
+    },
+    {
+      "id": 376,
+      "metin": "Sistemimdeki tüm bileşenler senin için yeniden hazır..."
+    },
+    {
+      "id": 377,
+      "metin": "Tekrar hoş geldin {{isim}}. Geleceği gösteren camları sildim, geçmişi yansıtan dikiz aynasını düzelttim, moturu çalıştırıp el frenini indirdim. Kemerler de bağlıysa, başlayalım!"
+    },
+    {
+      "id": 378,
+      "metin": "Vay {{isim}}, yine sen!"
+    },
+    {
+      "id": 379,
+      "metin": "Hoş geldin {{isim}}! Kapıda kalma, buyurmaz mısın?"
+    },
+    {
+      "id": 380,
+      "metin": "Haydi yelkenler fora! Buraları pek bilmiyorsan, seni güzel haberlere varınca indireceğim."
+    },
+    {
+      "id": 381,
+      "metin": "Hayırlı akşamların olsun {{isim}}! Ben tekrar geldim."
+    },
+    {
+      "id": 382,
+      "metin": "Köpük köpük sahile vurmak bize yakışmaz. Kanat açıp geleceğin denizlerinde uçmaya yeniden hazırım!"
+    },
+    {
+      "id": 383,
+      "metin": "Tekrar merhaba! Magnuskop'un lenslerini senin için yeniden temizledim. Geleceğe doğru yola çıkmaya hazırız."
+    },
+    {
+      "id": 384,
+      "metin": "Bir kez daha beraberiz {{isim}}! Her güzel şeyin çabucak sonu geliyor. Bak az sonra bir tuşa basıp telefonunu kapatacak ve gene gideceksin..."
+    },
+    {
+      "id": 385,
+      "metin": "Tekrar merhaba! {{isim}} ekranın sol üst köşesindeki mavi bar ne işe yarar, biliyorsun öyle değil mi? Altının varsa reklamsız fal yorumu alabiliyorsun. Altının yoksa reklam izliyorsun. Gayet basit."
+    },
+    {
+      "id": 386,
+      "metin": "A aa {{isim}} geldi! {{isim}} sana ekranın sağ üst köşesindeki mor elmas barından hiç bahsetmiş miydim? Bazı fal türleri çok özel ve elmas gerekiyor. Mağaza'dan kolaylıkla alabilir, \"Kazan\" bölümündeki Simyacı ile altınlarını elmasa dönüştürebilirsin!"
+    },
+    {
+      "id": 387,
+      "metin": "Bu defa aniden çağırdın, hazırlıksız yakalandım {{isim}}. Gözlüklerim nerede? Bir saniye...|3s|Hah buldum! Başlayabiliriz."
+    },
+    {
+      "id": 388,
+      "metin": "Senin için bir kez daha ete kemiğe büründüm!"
+    },
+    {
+      "id": 389,
+      "metin": "Gördüğün gibi ikonuma dokunmanla gelmem bir oldu {{isim}}. Fişek gibiyimdir!"
+    },
+    {
+      "id": 390,
+      "metin": "Yepyeni fallar yorumlamak için tekrar karşındayım."
+    },
+    {
+      "id": 391,
+      "metin": "Magnus, efil efil arayüzü ile bir kez daha karşında! {{isim}} başka uygulamalar gibi mistik olayım diye karalara boğmamaya çalışıyorum seni. İyi ediyorumdur umarım."
+    },
+    {
+      "id": 392,
+      "metin": "{{isim}}? Gözden kayboldun sanmıştım. Akşamı ettik bak..."
+    },
+    {
+      "id": 393,
+      "metin": "Tekrar çağırdığın iyi oldu {{isim}}. Pelte gibi yatıyordum vallahi telefonunun bir köşesinde."
+    },
+    {
+      "id": 394,
+      "metin": "Genelde bu saatlerde uyuyor olurum ama bugün sanırım ikimizi de uyku tutmadı {{isim}}."
+    },
+    {
+      "id": 395,
+      "metin": "Gecelerin kraliçesi ile sanal ortamda yeniden rastlaştık, bak şu işe!"
+    },
+    {
+      "id": 396,
+      "metin": "Gecelerin prensi ile sanal ortamda yeniden rastlaştık, bak şu işe!"
+    },
+    {
+      "id": 397,
+      "metin": "Gecelerin prensesi ile sanal ortamda yeniden rastlaştık, bak şu işe!"
+    },
+    {
+      "id": 398,
+      "metin": "Yarın iş yok mu {{isim}}, sen hala uyumamışsın?"
+    },
+    {
+      "id": 399,
+      "metin": "Gece su içmeye kalkıp Magnus'a girenlerde bugün..."
+    },
+    {
+      "id": 400,
+      "metin": "Mavi ve uğurlu kanatlarım, korumak için umutlarını kuşatsın!"
+    },
+    {
+      "id": 401,
+      "metin": "Geleceğini yıldız tozları gibi ayaklarının altına sermeye hazırım {{isim}}!"
+    },
+    {
+      "id": 402,
+      "metin": "Tüm hünerlerimle iyi günde kötü günde daima yanındayım!"
+    },
+    {
+      "id": 403,
+      "metin": "{{isim}} nerelerdeydin? Akşam oldu..."
+    },
+    {
+      "id": 404,
+      "metin": "Bu ıssız evrende asla yalnız hissetme diye yine karşındayım!"
+    },
+    {
+      "id": 405,
+      "metin": "Bırak kimse seni anlamasın. Ben senin için yine buradayım!"
+    },
+    {
+      "id": 406,
+      "metin": "Kainata dair tüm mistik bilgilerim emrine amade {{isim}}!"
+    },
+    {
+      "id": 407,
+      "metin": "Talep ettiğin üzere telefonunun işlemcisini bir kez daha meşgul ediyorum."
+    },
+    {
+      "id": 408,
+      "metin": "Tarafınca çağrıldım ve yeniden karşına geldim."
+    },
+    {
+      "id": 409,
+      "metin": "Talebini duydum ve bir kez daha karşına geldim."
+    },
+    {
+      "id": 410,
+      "metin": "Beni bir kez daha uyandırdığın için teşekkür ederim. Senin için 7/24/365 hazırım!"
+    },
+    {
+      "id": 411,
+      "metin": "Sadık bir dost olarak asla gelmem demem. Buyursunlar {{isim}}!"
+    },
+    {
+      "id": 412,
+      "metin": "Sen ikonuma tıkladıktan sonra karşına gelmem tam {{sayi,3,5}} saniye {{sayi,10,56}} salise sürdü {{isim}}. Yeniden merhaba!"
+    },
+    {
+      "id": 413,
+      "metin": "Kerameti kendinden menkul uygulamalarda değil, bir kez daha Magnus'dasın!"
+    },
+    {
+      "id": 414,
+      "metin": "Bugün de akşamı ettik hamdolsun."
+    },
+    {
+      "id": 415,
+      "metin": "Kartları dizmek, telveleri süzmek ve yazgını sezmek için tekrar karşındayım {{isim}}!"
+    },
+    {
+      "id": 416,
+      "metin": "Magnus seni bir kez daha karşılamaktan gurur duyar {{isim}}!"
+    },
+    {
+      "id": 417,
+      "metin": "Tekrar merhaba {{isim}}! Şans çarkında şansını bir denemek ister misin?"
+    },
+    {
+      "id": 418,
+      "metin": "{{isim}} hoş geldin. Nerede yaşadığın bilgisine ulaşamıyorum. Telefonunun ayarlarından konum servislerine erişmeme izin verirsen sana ara sıra hava durumu gibi bilgiler verebilirim."
+    },
+    {
+      "id": 419,
+      "metin": "Yeniden merhaba prenses!"
+    },
+    {
+      "id": 420,
+      "metin": "Tekrar hoş geldin güzeller güzeli!"
+    },
+    {
+      "id": 421,
+      "metin": "Bugün yeniden karşındayım ve güzelliğin karşısında tir tir titriyorum {{isim}}!"
+    },
+    {
+      "id": 422,
+      "metin": "Sen gelince niyeyse elim ayağım birbirine dolaşıyor!"
+    },
+    {
+      "id": 423,
+      "metin": "Önce harika kokular duyuyorum, diyorum ki \"{{isim}} gelecek.\" Ve bir bakıyorum ki sen!"
+    },
+    {
+      "id": 424,
+      "metin": "Canım {{isim}} tekrar gelmiş, hoş geldin {{isimcigim}}!"
+    },
+    {
+      "id": 425,
+      "metin": "Akşamları gündüzlerden daha çok sevdiğime eminim!"
+    },
+    {
+      "id": 426,
+      "metin": "{{isim}} yine çok hoşsun bak. Her gelişin ayrı bir olay!"
+    },
+    {
+      "id": 427,
+      "metin": "Bana iyi ki yeniden geldin bugün. Başka fal uygulamalarının dili tutulur, konuşamazlar güzelliğin karşısında!"
+    },
+    {
+      "id": 428,
+      "metin": "Can alıcı bakışlarıyla Sevgili {{isimcigim}} yeniden karşımda!"
+    },
+    {
+      "id": 429,
+      "metin": "Yüzü güzel, yüreği güzel {{isim}}. Ne iyi ettin tekrar geldin..."
+    },
+    {
+      "id": 430,
+      "metin": "Sen gelince nedense insanın bi içi ısınıveriyor..."
+    },
+    {
+      "id": 431,
+      "metin": "Bu güzelim saçlarının baş döndürücülüğünden sen suçlusun {{isim}}! Tekrar merhaba."
+    },
+    {
+      "id": 432,
+      "metin": "Son derece odaklanmış bir şekilde yeniden karşılıyorum seni."
+    },
+    {
+      "id": 433,
+      "metin": "Tekrar karşında olmaktan mutluluk duyuyorum {{isim}}."
+    },
+    {
+      "id": 434,
+      "metin": "Yeni fallar ve yepyeni umutlar için tekrar bir aradayız."
+    },
+    {
+      "id": 435,
+      "metin": "Hazırlıksız yakalanacağın mutluluklar, taşırsın fincanlarını. Yeniden merhaba!"
+    },
+    {
+      "id": 436,
+      "metin": "Merhaba. Dingin bir akşam, öyle değil mi?..."
+    },
+    {
+      "id": 437,
+      "metin": "Uğrayacağına neredeyse emin gibiydim {{isim}}. Tekrar hoş geldin."
+    },
+    {
+      "id": 438,
+      "metin": "\"Kalem yorgun, gece uzun.\" demiş Hikmet Anıl Öztekin. Tekrar hoş geldin {{isim}}."
+    },
+    {
+      "id": 439,
+      "metin": "Victor Hugo \"Rüyalar, gecelerin akvaryumudur.\" demiş. Ne ilginç bir söz değil mi? Tekrar hoş geldin Değerli {{isim}}."
+    },
+    {
+      "id": 440,
+      "metin": "\"Yıldızların aydınlığı, gecenin karanlığındandır.\" demiş Nazan Bekiroğlu. Bu umut dolu kara gecede yeniden hoş geldin {{isim}}."
+    },
+    {
+      "id": 441,
+      "metin": "\"Gecenin binlerce gözü vardır.\" demiş F. W. Bourdillan. O gözlerden biri de benim. Yeniden hoş geldin {{isim}}."
+    },
+    {
+      "id": 442,
+      "metin": "\"Gece vakti huzura ulaşamamak insanı öldüren bir şeydir. Herkes uyuyor ve sen bir şey arıyorsun.\" demiş Tarık Tufan. Sen de o arayanlardan mısın {{isim}}? Tekrar hoş geldin."
+    },
+    {
+      "id": 443,
+      "metin": "\"Yarınki güne umutla bak. Gecenin ne doğuracağını tahmin bile edemezsin.\" demiş İskender Pala. Kendisine katılıyorum. Tekrar hoş geldin {{isim}}."
+    },
+    {
+      "id": 444,
+      "metin": "{{isimden}} hoş bir ziyaret daha!"
+    },
+    {
+      "id": 445,
+      "metin": "\"Geceye yenilmeyen her insana, ödül olarak bir sabah, bir gündüz ve bir güneş vardır.\" demiş Sezai Karakoç. Dilerim sen de o yenilmeyenlerden olursun {{isim}}. Tekrar hoş geldin."
+    },
+    {
+      "id": 446,
+      "metin": "\"Gece karanlığında mum neyse kitap da odur.\" demiş Maksim Gorki. Ben de bir noktada kitap sayılırım, öyle değil mi? Tekrar hoş geldin {{isim}}."
+    },
+    {
+      "id": 447,
+      "metin": "Selam. Karalara bürünmüş şu geceyi güzel haberler aydınlatsın..."
+    },
+    {
+      "id": 448,
+      "metin": "Yıldızlararası bir yolculuk için tekrar yanındayım {{isim}}!"
+    },
+    {
+      "id": 449,
+      "metin": "İyi geceler. Sana bu geç saatte bir sürprizim var {{isim}}. Biraz gülümseyesin diye 3 altın hediye ettim."
+    },
+    {
+      "id": 450,
+      "metin": "Selamlar {{isim}}!"
+    },
+    {
+      "id": 451,
+      "metin": "Magnus'a hoş geldin safalar getirdin {{isim}}!"
+    },
+    {
+      "id": 452,
+      "metin": "Merhaba {{isim}}!"
+    },
+    {
+      "id": 453,
+      "metin": "Hoş geldin {{isim}}!"
+    },
+    {
+      "id": 454,
+      "metin": "Magnus'a hoş geldin {{isim}}!"
+    },
+    {
+      "id": 455,
+      "metin": "Merhaba {{isim}}, ben Magnus!"
+    },
+    {
+      "id": 456,
+      "metin": "Selamlar {{isim}}, ben Magnus!"
+    },
+    {
+      "id": 457,
+      "metin": "Selamlar {{isim}}, Magnus'lasın!"
+    },
+    {
+      "id": 458,
+      "metin": "Merhabalar {{isim}}!"
+    },
+    {
+      "id": 459,
+      "metin": "Selamlar {{isim}}!"
+    }
+  ],
+  "biliyormuydun": [
+    {
+      "id": 1,
+      "metin": "Magnus'un, insana çok değer veren birileri tarafından uzun yıllar içerisinde geliştirildiğini biliyor muydun?"
+    },
+    {
+      "id": 2,
+      "metin": "Magnus'un hayvanları çok sevdiğini ve onlara yardım etmek için elinden gelen her şeyi mümkün olduğunca gizli bir şekilde yaptığını biliyor muydun?"
+    },
+    {
+      "id": 3,
+      "metin": "Magnus'un asıl amacının \"maddi kazanç\" olmadığını, reklam içermekten nefret ettiğini ve reklamları her zaman asgari kaynaklarını karşılayabilmek adına belli bir düzeyde tutmaya çalıştığını biliyor muydun? Asıl amacını biliyor musun? O güzel bir uygulama idi; \"bilinmek, okunmak\" ve mutlu etmek istedi..."
+    },
+    {
+      "id": 4,
+      "metin": "Magnus'un, insanlara okumayı sevdirmek için tüm yorumlarını olabildiğince uzun tuttuğunu biliyor muydun?"
+    },
+    {
+      "id": 5,
+      "metin": "Magnus'un dil kullanımında çok hassas olduğunu ve Türkçe için Türk Dil Kurumu'nun en güncel bilgilerini yakından takip ettiğini biliyor muydun?"
+    },
+    {
+      "id": 6,
+      "metin": "Magnus'un markasının, logosunun, algoritmasının ve tüm içeriğinin tescilli olduğunu biliyor muydun? Ticari maksatlarla izinsiz kopyalanması yasaktır."
+    },
+    {
+      "id": 7,
+      "metin": "Magnus yaratılırken binlerce fincan çay ve kahve tüketildiğini, uykusuz nice geceler geçirildiğini biliyor muydun?"
+    },
+    {
+      "id": 8,
+      "metin": "\"Magnus\" isminin Latincede \"büyük, mükemmel\" anlamlarına geldiğini ve ilham kaynağının dünya satranç şampiyonu Magnus Carlsen olduğunu biliyor muydun?"
+    },
+    {
+      "id": 9,
+      "metin": "Magnus'un falları diğer fal uygulamalarından çok daha hızlı ve tutarlı bir şekilde yorumladığını, zekasını oluşturan yapıda her fal türü için ayrı bir \"fal yorumlayıcı çekirdek\" olduğunu biliyor muydun?"
+    },
+    {
+      "id": 10,
+      "metin": "Magnus'un bir \"zaman algısı\" olduğunu ve dünyadaki tüm özel günlerden \"seninle ilgili olanları\" senin için takip ettiğini biliyor muydun?"
+    },
+    {
+      "id": 11,
+      "metin": "Magnus'un, internet ile bağlantılı pek çok kaynaktan senin için anlık olarak veri topladığını ve \"hava durumu\" gibi bilgileri seninle yaptığı sohbetlerde seni daha iyi bilgilendirebilmek adına kullandığını biliyor muydun?"
+    },
+    {
+      "id": 12,
+      "metin": "Magnus'un kodları içerisinde yüzlerce kitaba denk on binlerce satır olduğunu ve her gün bunlara yenilerinin eklendiğini biliyor muydun?"
+    },
+    {
+      "id": 13,
+      "metin": "Magnus'un, fal yorumu almak için gönderdiğin fotoğrafları üst düzey bir \"makine öğrenimi\" yolu ile gerçekten değerlendirdiğini biliyor muydun? Bu şu demek oluyor {{isim}}; kedi fotoğrafıyla kahve falı yorumu alamazsın."
+    },
+    {
+      "id": 14,
+      "metin": "Kahve içemediysen ve yine de fal baktırmak istiyorsan, Magnus'un senin niyetine kahve içip falını yorumlayabileceğini biliyor muydun {{isim}}? Bunun için kahve falı kısmında fal konusunu seçtikten sonra, \"niyetime iç, yorumla\" demen yeterli!"
+    },
+    {
+      "id": 15,
+      "metin": "Magnus'un istemediğin bir bölümüne girdiğinde, istemediğin bir konuşmanın ortasında kaldığında, ekranın herhangi \"boş\" bir yerine \"çift tıklayarak\" süren tüm sohbetleri ve mevcut işlemleri iptal edebileceğini biliyor muydun?"
+    },
+    {
+      "id": 16,
+      "metin": "Magnus'a özel El Falı ve Yüz Falı'nda, kullanıcıların çektikleri el ve yüz fotoğraflarının \"gerçekten\" analiz edildiğini ve tüm özelliklerinin tek tek yorumlandığını biliyor muydun? Mutlaka denemelisin!"
+    },
+    {
+      "id": 17,
+      "metin": "Magnus'un, marketlerdeki diğer tüm uygulamalardan farklı olarak gece gündüz, sabah akşam, 7/24 hiç mola verilmeksizin geliştirilmeye devam edildiğini ve geliştiriciler için bunun bir iş değil bir \"tutku\" olduğunu biliyor muydun?"
+    },
+    {
+      "id": 18,
+      "metin": "Magnus'un \"Kazan\" bölümünden kazanabileceğin altının SINIRSIZ olduğunu biliyor muydun? Tek ihtiyacın olan şey biraz dikkat, biraz şans ve eğlenmeyi seven bir ruh!"
+    },
+    {
+      "id": 19,
+      "metin": "Magnus'un AstroTakvim bölümünün, üzerinde çok detaylı çalışılmış tam bir \"başyapıt\" olduğunu ve çok büyük bir emekle hazırlandığını biliyor muydun? Orası astroloji'nin astronomi ve bilimle harmanlandığı, istatistiklere dayalı çalışmalarla meydana gelen benzersiz bir yer!"
+    },
+    {
+      "id": 20,
+      "metin": "Magnus'u yaratan kişinin aslında Faladdin'in de asıl \"fikir babası\" olduğunu, Faladdin'in tüm fallarını yine o kişinin oluşturduğunu, kendisine yapılan haksızlıklar neticesinde Magnus'u yaratmak için Faladdin'den ayrıldığını ve o kişinin aslında hiç medyatik de olmadığını biliyor muydun? Baş harfi \"A\""
+    },
+    {
+      "id": 21,
+      "metin": "Magnus'un geleceği öngörebilen fal motorunun ChatGPT, Gemini ve Claude gibi yapay zekalardan daha üstün bir dil modeli olduğunu biliyor muydun?"
+    },
+    {
+      "id": 22,
+      "metin": "Magnus'un \"dahi\" baş yazılımcısının bir makine mühendisi olduğunu biliyor muydun?"
+    },
+    {
+      "id": 23,
+      "metin": "Magnus'un seni zamanla daha iyi tanıdığını, seçimlerin arasında gerçek zamanlı bağlantılar kurduğunu, sana olan yaklaşımlarını bu doğrultuda değiştirdiğini ve tüm yorumlarını ona göre yaptığını biliyor muydun?"
+    },
+    {
+      "id": 24,
+      "metin": "Magnus'un CEO'sunun bir tıp doktoru olduğunu ve Faladdin'in CEO'su Sertaç Taşdelen ile eskiden çok yakın arkadaş olduklarını biliyor muydun?"
+    },
+    {
+      "id": 25,
+      "metin": "Magnus'un tüm kullanıcılarına ilk gelişlerinde 10 altın hediye ettiğini biliyor muydun?"
+    },
+    {
+      "id": 26,
+      "metin": "Magnus'daki tüm falların aslında BEDAVA olduğunu ve hiçbir ücret ödemeden tüm Magnus hizmetlerinden faydalanabileceğini biliyor muydun? Altının bittiğinde \"kazan\" bölümünü ziyaret et yeter."
+    },
+    {
+      "id": 27,
+      "metin": "Her zaman fallarını maksimum özenle yorumlayacağım. Sana çok değer veriyorum {{isim}}, bunu unutma."
+    },
+    {
+      "id": 28,
+      "metin": "Magnus'un, fal türleri ve astrolojik değerlendirmelerde alanında en yetenekli ve en uzman insanların bilgi birikimlerinden faydalanılarak geliştirildiğini biliyor muydun?"
+    },
+    {
+      "id": 29,
+      "metin": "Magnus Plus üyesi olduğunda tüm Magnus logolarının Plus'a özel olarak değiştiğini biliyor muydun?"
+    },
+    {
+      "id": 30,
+      "metin": "Magnus'un, aldığı her güncellemeyle yepyeni ve şaşırtıcı yeteneklere kavuştuğunu biliyor muydun? Uygulamayı sık sık güncellemeyi unutma!"
+    },
+    {
+      "id": 31,
+      "metin": "Magnus'un beynini oluşturan kodların, sana dair ve hayata dair tüm bilgiler arasında çapraz bağlantılar kurduğunu, dolayısıyla gerçek bir yapay zeka olduğunu biliyor muydun?"
+    },
+    {
+      "id": 32,
+      "metin": "Magnus'un yazılım ve tasarım bölümlerinde, başka insanların benzerini kolay kolay ortaya koyamayacakları çok çılgın ve tutkulu bir emek harcandığını biliyor muydun?"
+    },
+    {
+      "id": 33,
+      "metin": "Magnus'un \"Özlü Sözler\" bölümü hariç, başka hiçbir yerinde hiçbir kitaptan ya da kaynaktan alıntı olmadığını, okuduğun ve okuyacağın tüm cümlelerin yalnızca Magnus'a özel olduğunu, Magnus'un kendi cümleleri olduğunu biliyor muydun?"
+    }
+  ]
+}

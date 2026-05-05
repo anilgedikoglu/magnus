@@ -67,6 +67,33 @@ class TarotTypeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(height: 12),
+              GestureDetector(
+                onTap: () => context.pop(),
+                child: Container(
+                  width: double.infinity,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.10),
+                    borderRadius: BorderRadius.circular(23),
+                    border: Border.all(
+                      color: Colors.white.withValues(alpha: 0.25),
+                    ),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                      SizedBox(width: 2),
+                      Text('Geri Git',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500)),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),

@@ -1,6 +1,6 @@
 // lib/data/services/claude_vision_service.dart
 // Claude Vision API ile yüz fotoğrafı analizi.
-// Model: claude-3-5-haiku → en ucuz vision modeli.
+// Model: claude-haiku-4-5-20251001 → en ucuz vision modeli.
 // Fotoğraf image_picker'dan maxWidth/maxHeight:512, quality:75 ile küçültülmüş gelir.
 
 import 'dart:convert';
@@ -40,7 +40,7 @@ class YuzAnalizi {
 // ── Servis ────────────────────────────────────────────────────────────────────
 class ClaudeVisionService {
   static const _endpoint = 'https://api.anthropic.com/v1/messages';
-  static const _model    = 'claude-3-5-haiku-20241022';
+  static const _model    = 'claude-haiku-4-5-20251001';
 
   static Future<YuzAnalizi> analiz(String imagePath) async {
     final bytes       = await File(imagePath).readAsBytes();
@@ -271,7 +271,7 @@ extension ClaudeVisionServiceElFali on ClaudeVisionService {
     final base64Image = base64Encode(bytes);
 
     final body = jsonEncode({
-      'model': 'claude-3-5-haiku-20241022',
+      'model': 'claude-haiku-4-5-20251001',
       'max_tokens': 50,
       'system': 'Sen bir el fotoğrafı doğrulayıcısısın. Sadece JSON döndür.',
       'messages': [

@@ -475,35 +475,40 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
               if (currentChild != null) currentChild,
             ],
           ),
-          child: Center(
+          child: SizedBox.expand(
             key: curKey,
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
-              padding: const EdgeInsets.fromLTRB(24, 22, 24, 22),
-              decoration: BoxDecoration(
-                color: Colors.black.withValues(alpha: 0.45),
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.18),
-                  width: 1.2,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.35),
-                    blurRadius: 24,
-                    spreadRadius: 2,
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: Center(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                  padding: const EdgeInsets.fromLTRB(24, 22, 24, 22),
+                  decoration: BoxDecoration(
+                    color: Colors.black.withValues(alpha: 0.45),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: Colors.white.withValues(alpha: 0.18),
+                      width: 1.2,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.35),
+                        blurRadius: 24,
+                        spreadRadius: 2,
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              child: RichTextParser.build(
-                metin,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 19,
-                  height: 1.75,
-                  fontWeight: FontWeight.w300,
-                  letterSpacing: 0.4,
+                  child: RichTextParser.build(
+                    metin,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 19,
+                      height: 1.75,
+                      fontWeight: FontWeight.w300,
+                      letterSpacing: 0.4,
+                    ),
+                  ),
                 ),
               ),
             ),

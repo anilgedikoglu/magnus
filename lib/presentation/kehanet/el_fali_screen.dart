@@ -4,10 +4,13 @@
 
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:path_provider/path_provider.dart';
 import '../../data/providers.dart';
 import '../../data/services/claude_vision_service.dart';
 
@@ -48,6 +51,29 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
   void dispose() {
     _hourCtrl.dispose();
     super.dispose();
+  }
+
+  // ── [DEBUG] Test görseli yükle ───────────────────────────────────────────
+  Future<void> _testGorseliYukle() async {
+    try {
+      final bytes = await rootBundle.load('assets/images/test/elfali_test.jpg');
+      final dir   = await getTemporaryDirectory();
+      final file  = File('${dir.path}/elfali_test.jpg');
+      await file.writeAsBytes(bytes.buffer.asUint8List());
+      if (!mounted) return;
+      setState(() {
+        _foto = file;
+        _adim = _EFAdim.analiz;
+      });
+      await _analizEt();
+    } catch (e) {
+      if (mounted) {
+        setState(() {
+          _hataMetni = 'Test görseli yüklenemedi: $e';
+          _adim      = _EFAdim.hatali;
+        });
+      }
+    }
   }
 
   // ── Fotoğraf seç / çek ────────────────────────────────────────────────────
@@ -243,7 +269,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+          padding: EdgeInsets.fromLTRB(20, 16, 20, kDebugMode ? 8 : 24),
           child: Row(
             children: [
               Expanded(
@@ -264,6 +290,33 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
             ],
           ),
         ),
+        // [DEBUG] Test butonu — sadece debug modunda görünür
+        if (kDebugMode)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+            child: GestureDetector(
+              onTap: _testGorseliYukle,
+              child: Container(
+                height: 32,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.orange.withValues(alpha: 0.15),
+                  border: Border.all(color: Colors.orange.withValues(alpha: 0.40)),
+                ),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('🧪', style: TextStyle(fontSize: 13)),
+                    SizedBox(width: 5),
+                    Text(
+                      'TEST — Örnek El Görseli',
+                      style: TextStyle(color: Colors.orange, fontSize: 12, fontWeight: FontWeight.w600),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
       ],
     );
   }

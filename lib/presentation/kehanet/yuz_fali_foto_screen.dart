@@ -4,11 +4,13 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:path_provider/path_provider.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
@@ -53,6 +55,31 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
   void dispose() {
     _scanCtrl.dispose();
     super.dispose();
+  }
+
+  // ── [DEBUG] Test görseli yükle ───────────────────────────────────────────
+  Future<void> _testGorseliYukle() async {
+    try {
+      final bytes = await rootBundle.load('assets/images/test/yuzfali_test.jpg');
+      final dir   = await getTemporaryDirectory();
+      final file  = File('${dir.path}/yuzfali_test.jpg');
+      await file.writeAsBytes(bytes.buffer.asUint8List());
+      if (!mounted) return;
+      setState(() {
+        _foto = file;
+        _adim = _YFAdim.analiz;
+      });
+      _scanCtrl.repeat(reverse: true);
+      await _analizEt();
+      _scanCtrl.stop();
+    } catch (e) {
+      if (mounted) {
+        setState(() {
+          _hataMetni = 'Test görseli yüklenemedi: $e';
+          _adim      = _YFAdim.hatali;
+        });
+      }
+    }
   }
 
   // ── Fotoğraf seç / çek ────────────────────────────────────────────────────
@@ -278,7 +305,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         ),
         // Butonlar
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+          padding: EdgeInsets.fromLTRB(20, 16, 20, kDebugMode ? 8 : 24),
           child: Row(
             children: [
               Expanded(
@@ -299,6 +326,33 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
             ],
           ),
         ),
+        // [DEBUG] Test butonu — sadece debug modunda görünür
+        if (kDebugMode)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+            child: GestureDetector(
+              onTap: _testGorseliYukle,
+              child: Container(
+                height: 32,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.orange.withValues(alpha: 0.15),
+                  border: Border.all(color: Colors.orange.withValues(alpha: 0.40)),
+                ),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('🧪', style: TextStyle(fontSize: 13)),
+                    SizedBox(width: 5),
+                    Text(
+                      'TEST — Örnek Yüz Görseli',
+                      style: TextStyle(color: Colors.orange, fontSize: 12, fontWeight: FontWeight.w600),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
       ],
     );
   }

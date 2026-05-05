@@ -111,6 +111,7 @@ import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
+import '../inbox/inbox_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -502,6 +503,44 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     setState(() => _currentPage = prev);
   }
 
+  // ─── Inbox açma — animasyon kaynağa göre ──────────────────────────────────
+
+  /// Sağdan sola kayarak açar (3. sayfadan swipe geldiğinde).
+  void _openInboxFromSwipe(BuildContext ctx) {
+    Navigator.of(ctx).push(
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const InboxScreen(),
+        transitionDuration: const Duration(milliseconds: 350),
+        reverseTransitionDuration: const Duration(milliseconds: 300),
+        transitionsBuilder: (_, anim, __, child) {
+          final tween = Tween<Offset>(
+            begin: const Offset(1.0, 0.0),
+            end: Offset.zero,
+          ).chain(CurveTween(curve: Curves.easeInOut));
+          return SlideTransition(position: anim.drive(tween), child: child);
+        },
+      ),
+    );
+  }
+
+  /// Aşağıdan yukarıya kayarak açar (buton tıklamasında).
+  void _openInboxFromTap(BuildContext ctx) {
+    Navigator.of(ctx).push(
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const InboxScreen(),
+        transitionDuration: const Duration(milliseconds: 350),
+        reverseTransitionDuration: const Duration(milliseconds: 300),
+        transitionsBuilder: (_, anim, __, child) {
+          final tween = Tween<Offset>(
+            begin: const Offset(0.0, 1.0),
+            end: Offset.zero,
+          ).chain(CurveTween(curve: Curves.easeInOut));
+          return SlideTransition(position: anim.drive(tween), child: child);
+        },
+      ),
+    );
+  }
+
   // ─── Günlük kredi yükleme ─────────────────────────────────────────────────
   Future<void> _refreshCredits() async {
     final prefs = await SharedPreferences.getInstance();
@@ -733,8 +772,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       if (dx < -50) {
                         // Sola swipe
                         if (_currentPage == _totalPages - 1) {
-                          // Son sayfadan sola → gelen kutusu
-                          context.push('/inbox-full');
+                          // Son sayfadan sola → gelen kutusu (sağdan sola animasyon)
+                          _openInboxFromSwipe(context);
                         } else {
                           _goNext();
                         }
@@ -970,7 +1009,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   Consumer(builder: (_, cref, __) {
                     final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
                     return GestureDetector(
-                      onTap: () => context.push('/inbox-full'),
+                      onTap: () => _openInboxFromTap(context),
                       child: AnimatedContainer(
                         duration: dur,
                         curve: curve,
@@ -1816,7 +1855,19 @@ class _FortuneCircleBadge extends StatelessWidget {
 
     return GestureDetector(
       // Sadece hazır (tamamlanmış) fallar tıklanabilir → gelen kutusunu aç
-      onTap: isReady ? () => context.push('/inbox-full') : null,
+      onTap: isReady ? () => Navigator.of(context).push(
+        PageRouteBuilder(
+          pageBuilder: (_, __, ___) => const InboxScreen(),
+          transitionDuration: const Duration(milliseconds: 350),
+          reverseTransitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, anim, __, child) => SlideTransition(
+            position: Tween<Offset>(begin: const Offset(0.0, 1.0), end: Offset.zero)
+                .chain(CurveTween(curve: Curves.easeInOut))
+                .animate(anim),
+            child: child,
+          ),
+        ),
+      ) : null,
       child: SizedBox(
       width: size, height: size,
       child: Stack(

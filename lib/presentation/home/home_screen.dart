@@ -1923,22 +1923,23 @@ class _ArcProgressPainter extends CustomPainter {
 
   // Saat yönünde: Koyu Mavi → Camgöbeği → Mor → Pembe → Kırmızı → Sarımsı Beyaz → Camgöbeği
   static const _rainbow = [
-    Color(0xFF3A88FF), // başlangıç: mavi-mor
-    Color(0xFF6655FF),
-    Color(0xFF8A2EFF), // mor
-    Color(0xFFAA28E8),
-    Color(0xFFCC24D0),
+    Color(0xFF8A2EFF), // mor (12)
+    Color(0xFFBB28E8), // mor→pembe
     Color(0xFFFF2EC7), // pembe
-    Color(0xFFFF2E90),
-    Color(0xFFFF3260),
+    Color(0xFFFF3260), // pembe→kırmızı
     Color(0xFFFF3B30), // kırmızı
-    Color(0xFFFF6020),
-    Color(0xFFFF9A10),
-    Color(0xFFFFD060),
-    Color(0xFFFFF2A6), // sarımsı beyaz
-    Color(0xFFD0F0B0),
-    Color(0xFF80EED8),
-    Color(0xFF3A88FF), // kapanış — seamless loop
+    Color(0xFFFF6820), // kırmızı→turuncu
+    Color(0xFFFF9A10), // turuncu
+    Color(0xFFFFCC00), // turuncu→sarı
+    Color(0xFFFFE800), // sarı (6)
+    Color(0xFFFFCC00), // sarı→turuncu
+    Color(0xFFFF9A10), // turuncu
+    Color(0xFFFF6820), // turuncu→kırmızı
+    Color(0xFFFF3B30), // kırmızı
+    Color(0xFFFF3260), // kırmızı→pembe
+    Color(0xFFFF2EC7), // pembe
+    Color(0xFFBB28E8), // pembe→mor
+    Color(0xFF8A2EFF), // mor (12 — seamless kapanış)
   ];
 
   @override

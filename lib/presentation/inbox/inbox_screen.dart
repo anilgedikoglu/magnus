@@ -33,15 +33,23 @@ class InboxScreen extends ConsumerWidget {
             ),
         ],
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: items.isEmpty
-                ? _buildEmpty()
-                : _buildList(context, ref, items),
-          ),
-          _buildBackButton(context),
-        ],
+      body: GestureDetector(
+        // Soldan sağa swipe → geri (ana menüye dön)
+        onHorizontalDragEnd: (details) {
+          if ((details.primaryVelocity ?? 0) > 200) {
+            if (Navigator.canPop(context)) Navigator.pop(context);
+          }
+        },
+        child: Column(
+          children: [
+            Expanded(
+              child: items.isEmpty
+                  ? _buildEmpty()
+                  : _buildList(context, ref, items),
+            ),
+            _buildBackButton(context),
+          ],
+        ),
       ),
     );
   }

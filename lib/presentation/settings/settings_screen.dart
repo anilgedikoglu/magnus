@@ -1414,54 +1414,65 @@ class SettingsScreen extends ConsumerWidget {
       moonSign: profile.moonSign,
     );
 
+    double? swipeStartX;
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
-      body: Stack(
-        children: [
-          // ── Arka plan görseli
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/signinbackground.png',
-              fit: BoxFit.cover,
-              alignment: Alignment.center,
-              filterQuality: FilterQuality.high,
-              errorBuilder: (_, __, ___) =>
-                  Container(color: const Color(0xFF1A0A3C)),
+      body: Listener(
+        onPointerDown:  (e) => swipeStartX = e.position.dx,
+        onPointerUp:    (e) {
+          final dx = e.position.dx - (swipeStartX ?? e.position.dx);
+          swipeStartX = null;
+          // Sağdan sola swipe → ana menüye dön
+          if (dx < -60 && Navigator.canPop(context)) Navigator.pop(context);
+        },
+        onPointerCancel: (_) => swipeStartX = null,
+        child: Stack(
+          children: [
+            // ── Arka plan görseli
+            Positioned.fill(
+              child: Image.asset(
+                'assets/images/signinbackground.png',
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+                filterQuality: FilterQuality.high,
+                errorBuilder: (_, __, ___) =>
+                    Container(color: const Color(0xFF1A0A3C)),
+              ),
             ),
-          ),
-          Positioned.fill(
-            child: Container(color: Colors.black.withValues(alpha: 0.38)),
-          ),
+            Positioned.fill(
+              child: Container(color: Colors.black.withValues(alpha: 0.38)),
+            ),
 
-          // ── İçerik
-          SafeArea(
-            child: Column(
-              children: [
-                _buildTopBar(context, ref, profile),
-                Expanded(
-                  child: SingleChildScrollView(
-                    physics: const NeverScrollableScrollPhysics(),
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Column(
-                      children: [
-                        const SizedBox(height: 6),
-                        _buildTitle(),
-                        const SizedBox(height: 14),
-                        _buildGridSection(context, ref, profile),
-                        const SizedBox(height: 4),
-                        _buildDonutRow(scores),
-                        const SizedBox(height: 12),
-                        _buildMenuButton(context),
-                        const SizedBox(height: 10),
-                      ],
+            // ── İçerik
+            SafeArea(
+              child: Column(
+                children: [
+                  _buildTopBar(context, ref, profile),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Column(
+                        children: [
+                          const SizedBox(height: 6),
+                          _buildTitle(),
+                          const SizedBox(height: 14),
+                          _buildGridSection(context, ref, profile),
+                          const SizedBox(height: 4),
+                          _buildDonutRow(scores),
+                          const SizedBox(height: 12),
+                          _buildMenuButton(context),
+                          const SizedBox(height: 10),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

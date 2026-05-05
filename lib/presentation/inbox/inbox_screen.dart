@@ -158,11 +158,15 @@ class InboxScreen extends ConsumerWidget {
   }
 
   void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
-    // Rewarded reklam izlenince fal açılır; reklam yüklü değilse direkt açılır.
-    AdService.instance.showRewarded(
-      onRewarded: () => _navigateToDetail(context, ref, item),
-      onFailed:   () => _navigateToDetail(context, ref, item),
-    );
+    // Rewarded reklam yalnızca yeni (okunmamış) fallarda gösterilir.
+    if (!item.isRead) {
+      AdService.instance.showRewarded(
+        onRewarded: () => _navigateToDetail(context, ref, item),
+        onFailed:   () => _navigateToDetail(context, ref, item),
+      );
+    } else {
+      _navigateToDetail(context, ref, item);
+    }
   }
 
   void _navigateToDetail(BuildContext context, WidgetRef ref, InboxItem item) {

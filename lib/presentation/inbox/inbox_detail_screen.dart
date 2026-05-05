@@ -211,6 +211,23 @@ class InboxDetailScreen extends StatelessWidget {
               ),
             ),
           ],
+          // Yüz Falı: arka plan görseli + koyu overlay
+          if (item.fortuneType == FortuneType.yuzfali) ...[
+            Positioned.fill(
+              child: Image.asset(
+                'assets/images/falbg/yuzfalibg.png',
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+                filterQuality: FilterQuality.high,
+                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+              ),
+            ),
+            Positioned.fill(
+              child: ColoredBox(
+                color: Colors.black.withValues(alpha: 0.60),
+              ),
+            ),
+          ],
           SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

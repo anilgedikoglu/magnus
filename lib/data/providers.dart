@@ -146,6 +146,12 @@ final ichingSentProvider = StateProvider<bool>((ref) => false);
 /// Japon Falı gönderildiğinde ana menüye bildirim için
 final japonFaliSentProvider = StateProvider<bool>((ref) => false);
 
+/// El Falı analiz sonucu inbox'a düşünce ana menüye bildirim için
+final elFaliSentProvider = StateProvider<bool>((ref) => false);
+
+/// Yüz Falı analiz sonucu inbox'a düşünce ana menüye bildirim için
+final yuzFaliSentProvider = StateProvider<bool>((ref) => false);
+
 // ─── Onboarding state ─────────────────────────────────────────────────────────
 
 final onboardingCompleteProvider = Provider<bool>((ref) {

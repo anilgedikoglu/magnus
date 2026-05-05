@@ -553,10 +553,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   void _showHazirlaniyorBubble(String type) {
     final msg = _hazirlaniyorMessages[type] ?? 'Raporun hazırlanıyor...';
-    // Kahve falı balonunda ikon göster
-    final String? bubbleIcon = type == 'kahve'
-        ? 'assets/images/inbox_icons/kahve.png'
-        : null;
+    // Fal türüne göre balonda ikon göster
+    final String? bubbleIcon = switch (type) {
+      'kahve'     => 'assets/images/inbox_icons/kahve.png',
+      'japonfali' => 'assets/images/inbox_icons/japonfali.png',
+      _           => null,
+    };
     setState(() {
       _extraBubbles.add(_ExtraBubble(
         text: msg,

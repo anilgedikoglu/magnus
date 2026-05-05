@@ -23,6 +23,10 @@ class AdService {
   bool _interstitialLoading = false;
   bool _rewardedLoading     = false;
 
+  /// Geçiş reklamı çağrı sayacı.
+  /// Her 3 çağrıdan 1'inde reklam gösterilir (1 göster, 2 atla).
+  int _interstitialCallCount = 0;
+
   // ── Başlatma ────────────────────────────────────────────────────────────────
 
   Future<void> initialize() async {
@@ -55,7 +59,15 @@ class AdService {
   }
 
   /// Geçiş reklamını gösterir. Kapanınca (veya yüklü değilse hemen) döner.
+  /// Her 3 çağrıdan 1'inde gösterilir — peş peşe 2 çağrı atlanır.
   Future<void> showInterstitial({VoidCallback? onClosed}) async {
+    _interstitialCallCount++;
+    // 1. çağrı → göster, 2. ve 3. çağrı → atla, 4. çağrı → göster, ...
+    if (_interstitialCallCount % 3 != 1) {
+      onClosed?.call();
+      return;
+    }
+
     final ad = _interstitialAd;
     _interstitialAd = null;
     if (ad == null) {

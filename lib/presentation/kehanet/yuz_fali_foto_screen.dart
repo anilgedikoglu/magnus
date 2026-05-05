@@ -270,7 +270,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
       child: ClipRRect(
         borderRadius: BorderRadius.circular(17),
         child: _foto != null
-            ? Image.file(_foto!, fit: BoxFit.cover)
+            ? SizedBox.expand(child: Image.file(_foto!, fit: BoxFit.cover))
             : Center(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,

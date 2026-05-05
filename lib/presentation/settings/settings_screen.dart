@@ -2091,7 +2091,7 @@ class SettingsScreen extends ConsumerWidget {
       onTap: () => context.pop(),
       child: Container(
         width: double.infinity,
-        height: 50,
+        height: 44,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             colors: [Color(0xFFCC00AA), Color(0xFF8800CC)],

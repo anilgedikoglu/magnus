@@ -952,7 +952,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   Widget _buildPageIndicator() {
     return Padding(
-      padding: const EdgeInsets.only(top: 10, bottom: 5),
+      padding: const EdgeInsets.only(top: 15, bottom: 5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(_totalPages, (i) {
@@ -961,7 +961,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           return AnimatedContainer(
             duration: const Duration(milliseconds: 250),
             margin: const EdgeInsets.symmetric(horizontal: 3),
-            width: 36,
+            width: 34,
             height: 3,
             decoration: BoxDecoration(
               color: active ? color : color.withValues(alpha: 0.22),

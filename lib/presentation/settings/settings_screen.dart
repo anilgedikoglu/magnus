@@ -1441,6 +1441,7 @@ class SettingsScreen extends ConsumerWidget {
                 _buildTopBar(context, ref, profile),
                 Expanded(
                   child: SingleChildScrollView(
+                    physics: const NeverScrollableScrollPhysics(),
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: Column(
                       children: [
@@ -1452,7 +1453,7 @@ class SettingsScreen extends ConsumerWidget {
                         _buildDonutRow(scores),
                         const SizedBox(height: 12),
                         _buildMenuButton(context),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 10),
                       ],
                     ),
                   ),

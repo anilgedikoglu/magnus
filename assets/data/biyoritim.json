@@ -84,7 +84,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -219,7 +219,7 @@
         "kosullar": [
           {
             "degisken": "maddidurum",
-            "deger": "\"\\xE7okk\\xF6t\\xFC\""
+            "deger": "çokkötü"
           }
         ]
       },
@@ -228,8 +228,8 @@
         "metin": "Karadenizdeki tüm gemilerin batmış gibisin. Çok yeni ayrılmış olmanın moral bozukluğunda bir etkisi var mı dersin?",
         "kosullar": [
           {
-            "degisken": "\"ayr\\u0131lal\\u0131nekadar\"",
-            "deger": "\"g\\xFCnleroldu\""
+            "degisken": "ayrılalınekadar",
+            "deger": "günleroldu"
           }
         ]
       },
@@ -254,7 +254,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           },
           {
             "degisken": "cinsiyet",
@@ -308,7 +308,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -545,7 +545,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -771,8 +771,8 @@
         "metin": "Çocuklarının varlıklarına şükredip onları ne kadar sevdiğini düşünsen, bu moralin bence tavan yapar. <sprite=10>",
         "kosullar": [
           {
-            "degisken": "\"ka\\xE7\\xE7ocuk\"",
-            "deger": "\"birden\\xE7ok\""
+            "degisken": "kaççocuk",
+            "deger": "birdençok"
           }
         ]
       },
@@ -781,12 +781,12 @@
         "metin": "Aşk hayatın çok iyi, eğitiminde başarılısın. Bana sorarsan moral anlamında %80'leri rahatlıkla görmen gerekiyor.",
         "kosullar": [
           {
-            "degisken": "\"a\\u015Fkhayat\\u0131\"",
-            "deger": "\"\\xE7okiyi\""
+            "degisken": "aşkhayatı",
+            "deger": "çokiyi"
           },
           {
-            "degisken": "\"e\\u011Fitimde\"",
-            "deger": "\"ba\\u015Far\\u0131l\\u0131\""
+            "degisken": "eğitimde",
+            "deger": "başarılı"
           }
         ]
       },
@@ -795,8 +795,8 @@
         "metin": "Yeni evlisin {{isim}}, daha enerjik ve daha moralli olman gerekiyor! <sprite=0>",
         "kosullar": [
           {
-            "degisken": "\"evliliks\\xFCresi\"",
-            "deger": "\"biry\\u0131ldanaz\""
+            "degisken": "evliliksüresi",
+            "deger": "biryıldanaz"
           }
         ]
       },
@@ -810,8 +810,8 @@
         "metin": "Çok yeni ayrılmış birine göre duygusal değerlerin oldukça iyi. Şaşırdım doğrusu! <sprite=7>",
         "kosullar": [
           {
-            "degisken": "\"ayr\\u0131lal\\u0131nekadar\"",
-            "deger": "\"g\\xFCnleroldu\""
+            "degisken": "ayrılalınekadar",
+            "deger": "günleroldu"
           }
         ]
       },
@@ -830,8 +830,8 @@
         "metin": "O zümrüt gözlerinde bugün her zamanki ışıltıyı yakalayamadım {{isim}}. Umarım yarına keyfin çok daha iyi olur.",
         "kosullar": [
           {
-            "degisken": "\"g\\xF6zrengisoru\"",
-            "deger": "\"ye\\u015Fil\""
+            "degisken": "gözrengisoru",
+            "deger": "yeşil"
           }
         ]
       },
@@ -1088,7 +1088,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -1420,16 +1420,16 @@
         "metin": "Çocuklar seni çok mu yoruyor {{isim}}? Bugün bildiğin \"bitik\" gözüküyorsun... <sprite=32>",
         "kosullar": [
           {
-            "degisken": "\"ka\\xE7\\xE7ocuk\"",
-            "deger": "\"iki\\xE7ocuk\""
+            "degisken": "kaççocuk",
+            "deger": "ikiçocuk"
           },
           {
-            "degisken": "\"ka\\xE7\\xE7ocuk\"",
-            "deger": "\"\\xFC\\xE7\\xE7ocuk\""
+            "degisken": "kaççocuk",
+            "deger": "üççocuk"
           },
           {
-            "degisken": "\"ka\\xE7\\xE7ocuk\"",
-            "deger": "\"\\xFC\\xE7tenfazla\""
+            "degisken": "kaççocuk",
+            "deger": "üçtenfazla"
           }
         ]
       },
@@ -1651,7 +1651,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -1873,7 +1873,7 @@
         "kosullar": [
           {
             "degisken": "meslek",
-            "deger": "\"\\xF6\\u011Frenci\""
+            "deger": "öğrenci"
           }
         ]
       },
@@ -1883,7 +1883,7 @@
         "kosullar": [
           {
             "degisken": "meslek",
-            "deger": "\"ev"
+            "deger": "ev"
           }
         ]
       },
@@ -1893,15 +1893,15 @@
         "kosullar": [
           {
             "degisken": "meslek",
-            "deger": "\"kamu"
+            "deger": "kamu"
           },
           {
             "degisken": "meslek",
-            "deger": "\"\\xF6zel"
+            "deger": "özel"
           },
           {
             "degisken": "meslek",
-            "deger": "\"kendi"
+            "deger": "kendi"
           }
         ]
       },
@@ -2153,7 +2153,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           },
           {
             "degisken": "cinsiyet",
@@ -2182,7 +2182,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           },
           {
             "degisken": "cinsiyet",
@@ -2226,7 +2226,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -2261,7 +2261,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -3201,7 +3201,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           },
           {
             "degisken": "cinsiyet",
@@ -3469,7 +3469,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -3494,7 +3494,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"fl\\xF6rt"
+            "deger": "flört"
           }
         ]
       },
@@ -3504,7 +3504,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"fl\\xF6rt"
+            "deger": "flört"
           }
         ]
       },
@@ -3519,7 +3519,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -3544,7 +3544,7 @@
         "kosullar": [
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -3559,7 +3559,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -3569,7 +3569,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -3579,11 +3579,11 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           },
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -3593,11 +3593,11 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           },
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -3774,23 +3774,23 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           },
           {
             "degisken": "medeni",
-            "deger": "\"yeni"
+            "deger": "yeni"
           },
           {
             "degisken": "medeni",
-            "deger": "\"karma\\u015F\\u0131k\""
+            "deger": "karmaşık"
           },
           {
             "degisken": "medeni",
-            "deger": "\"ayr\\u0131"
+            "deger": "ayrı"
           },
           {
             "degisken": "medeni",
-            "deger": "\"bo\\u015Fanm\\u0131\\u015F\""
+            "deger": "boşanmış"
           },
           {
             "degisken": "medeni",
@@ -3809,7 +3809,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ni\\u015Fanl\\u0131\""
+            "deger": "nişanlı"
           }
         ]
       },
@@ -3839,7 +3839,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -3849,7 +3849,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"yeni"
+            "deger": "yeni"
           }
         ]
       },
@@ -4026,7 +4026,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -4076,7 +4076,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           },
           {
             "degisken": "cinsiyet",
@@ -4120,11 +4120,11 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           },
           {
             "degisken": "cinsiyet",
-            "deger": "\"kad\\u0131n\""
+            "deger": "kadın"
           }
         ]
       },
@@ -4266,7 +4266,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -4286,7 +4286,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -4301,7 +4301,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"yeni"
+            "deger": "yeni"
           }
         ]
       },
@@ -4401,11 +4401,11 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           },
           {
             "degisken": "medeni",
-            "deger": "\"ni\\u015Fanl\\u0131\""
+            "deger": "nişanlı"
           }
         ]
       },
@@ -4435,7 +4435,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -4455,7 +4455,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"karma\\u015F\\u0131k\""
+            "deger": "karmaşık"
           }
         ]
       },
@@ -4465,7 +4465,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"fl\\xF6rt"
+            "deger": "flört"
           }
         ]
       },
@@ -4475,7 +4475,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ili\\u015Fkisi"
+            "deger": "ilişkisi"
           }
         ]
       },
@@ -4485,7 +4485,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"yeni"
+            "deger": "yeni"
           }
         ]
       },
@@ -4495,7 +4495,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"yeni"
+            "deger": "yeni"
           }
         ]
       },
@@ -4505,7 +4505,7 @@
         "kosullar": [
           {
             "degisken": "medeni",
-            "deger": "\"ni\\u015Fanl\\u0131\""
+            "deger": "nişanlı"
           }
         ]
       },
@@ -4966,7 +4966,7 @@
         "kosullar": [
           {
             "degisken": "meslek",
-            "deger": "\"kendi"
+            "deger": "kendi"
           }
         ]
       },
@@ -5465,7 +5465,7 @@
         "kosullar": [
           {
             "degisken": "meslek",
-            "deger": "\"\\xF6\\u011Frenci\""
+            "deger": "öğrenci"
           }
         ]
       },
@@ -5475,7 +5475,7 @@
         "kosullar": [
           {
             "degisken": "meslek",
-            "deger": "\"i\\u015F"
+            "deger": "iş"
           }
         ]
       },
@@ -5485,7 +5485,7 @@
         "kosullar": [
           {
             "degisken": "meslek",
-            "deger": "\"\\xF6zel"
+            "deger": "özel"
           }
         ]
       },
@@ -6090,7 +6090,7 @@
       "kosullar": [
         {
           "degisken": "medeni",
-          "deger": "\"ili\\u015Fkisi"
+          "deger": "ilişkisi"
         }
       ]
     },
@@ -6125,15 +6125,15 @@
       "kosullar": [
         {
           "degisken": "meslek",
-          "deger": "\"kamu"
+          "deger": "kamu"
         },
         {
           "degisken": "meslek",
-          "deger": "\"\\xF6zel"
+          "deger": "özel"
         },
         {
           "degisken": "meslek",
-          "deger": "\"kendi"
+          "deger": "kendi"
         },
         {
           "degisken": "meslek",
@@ -6207,7 +6207,7 @@
       "kosullar": [
         {
           "degisken": "medeni",
-          "deger": "\"ili\\u015Fkisi"
+          "deger": "ilişkisi"
         }
       ]
     },

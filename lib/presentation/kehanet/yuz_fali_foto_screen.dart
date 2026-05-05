@@ -11,6 +11,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
@@ -69,6 +70,10 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         _foto = file;
         _adim = _YFAdim.analiz;
       });
+      final prefs    = await SharedPreferences.getInstance();
+      final today    = DateTime.now();
+      final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
+      await prefs.setString('yuzfali_bugun_tarih', todayStr);
       _scanCtrl.repeat(reverse: true);
       await _analizEt();
       _scanCtrl.stop();
@@ -97,6 +102,12 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         _foto = File(xFile.path);
         _adim = _YFAdim.analiz;
       });
+
+      // Günlük hakkı işaretle
+      final prefs    = await SharedPreferences.getInstance();
+      final today    = DateTime.now();
+      final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
+      await prefs.setString('yuzfali_bugun_tarih', todayStr);
 
       _scanCtrl.repeat(reverse: true);
       await _analizEt();

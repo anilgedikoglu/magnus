@@ -11,6 +11,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/providers.dart';
 import '../../data/services/claude_vision_service.dart';
 
@@ -28,6 +29,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
   _EFAdim _adim = _EFAdim.secim;
   File?   _foto;
   String  _hataMetni = '';
+  bool    _gunlukDoldu = false;
 
   // Parsed result
   String _genelMetin = '';
@@ -45,6 +47,17 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
       duration: const Duration(milliseconds: 900),
     )..repeat(reverse: true);
     _hourAnim = CurvedAnimation(parent: _hourCtrl, curve: Curves.easeInOut);
+    _kontrolEt();
+  }
+
+  Future<void> _kontrolEt() async {
+    final prefs    = await SharedPreferences.getInstance();
+    final today    = DateTime.now();
+    final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
+    final saved    = prefs.getString('elfali_bugun_tarih') ?? '';
+    if (mounted && saved == todayStr) {
+      setState(() => _gunlukDoldu = true);
+    }
   }
 
   @override
@@ -65,6 +78,10 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
         _foto = file;
         _adim = _EFAdim.analiz;
       });
+      final prefs    = await SharedPreferences.getInstance();
+      final today    = DateTime.now();
+      final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
+      await prefs.setString('elfali_bugun_tarih', todayStr);
       await _analizEt();
     } catch (e) {
       if (mounted) {
@@ -91,6 +108,12 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
         _foto = File(xFile.path);
         _adim = _EFAdim.analiz;
       });
+
+      // Günlük hakkı işaretle
+      final prefs    = await SharedPreferences.getInstance();
+      final today    = DateTime.now();
+      final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
+      await prefs.setString('elfali_bugun_tarih', todayStr);
 
       await _analizEt();
     } catch (e) {
@@ -247,6 +270,60 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
 
   // ── Durum: secim ─────────────────────────────────────────────────────────
   Widget _buildSecim() {
+    if (_gunlukDoldu) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 28),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 90,
+              height: 90,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white.withValues(alpha: 0.07),
+                border: Border.all(color: const Color(0xFF8B5CF6).withValues(alpha: 0.35), width: 1.5),
+              ),
+              child: const Center(child: Text('🔒', style: TextStyle(fontSize: 38))),
+            ),
+            const SizedBox(height: 28),
+            const Text(
+              'Günlük hakkın doldu',
+              style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'El falı günde 1 kez bakılabilir.\nYarın tekrar gel.',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 15, height: 1.6),
+            ),
+            const SizedBox(height: 36),
+            GestureDetector(
+              onTap: () => context.pop(),
+              child: Container(
+                width: double.infinity,
+                height: 44,
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.10),
+                  borderRadius: BorderRadius.circular(23),
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
+                ),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                    SizedBox(width: 2),
+                    Text('Geri Git', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
     return Column(
       children: [
         const Padding(

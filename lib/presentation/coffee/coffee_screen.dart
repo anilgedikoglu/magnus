@@ -152,33 +152,45 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
           children: [
             _buildTopBar(context),
             Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: Column(
-                  children: [
-                    _buildSubtitle(),
-                    const SizedBox(height: 24),
-                    _buildOptionRow(context),
-                    if (_mode == _InputMode.fotoCek ||
-                        _mode == _InputMode.dosyadan) ...[
-                      const SizedBox(height: 28),
-                      _buildPhotoSlots(),
-                      if (_sending) ...[
-                        const SizedBox(height: 28),
-                        _buildSendingIndicator(),
+              child: _mode == _InputMode.none
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        _buildSubtitle(),
+                        const SizedBox(height: 24),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: _buildOptionRow(context),
+                        ),
                       ],
-                    ] else if (_mode == _InputMode.yerimeIc &&
-                        _fincanImage != null) ...[
-                      const SizedBox(height: 28),
-                      _buildFincanImage(),
-                      if (_sending) ...[
-                        const SizedBox(height: 28),
-                        _buildSendingIndicator(),
-                      ],
-                    ],
-                  ],
-                ),
-              ),
+                    )
+                  : SingleChildScrollView(
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      child: Column(
+                        children: [
+                          _buildSubtitle(),
+                          const SizedBox(height: 24),
+                          _buildOptionRow(context),
+                          if (_mode == _InputMode.fotoCek ||
+                              _mode == _InputMode.dosyadan) ...[
+                            const SizedBox(height: 28),
+                            _buildPhotoSlots(),
+                            if (_sending) ...[
+                              const SizedBox(height: 28),
+                              _buildSendingIndicator(),
+                            ],
+                          ] else if (_mode == _InputMode.yerimeIc &&
+                              _fincanImage != null) ...[
+                            const SizedBox(height: 28),
+                            _buildFincanImage(),
+                            if (_sending) ...[
+                              const SizedBox(height: 28),
+                              _buildSendingIndicator(),
+                            ],
+                          ],
+                        ],
+                      ),
+                    ),
             ),
             _buildSendButton(),
           ],

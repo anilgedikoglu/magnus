@@ -59,13 +59,18 @@ class AdService {
   }
 
   /// Geçiş reklamını gösterir. Kapanınca (veya yüklü değilse hemen) döner.
-  /// Her 3 çağrıdan 1'inde gösterilir — peş peşe 2 çağrı atlanır.
-  Future<void> showInterstitial({VoidCallback? onClosed}) async {
-    _interstitialCallCount++;
-    // 1. çağrı → göster, 2. ve 3. çağrı → atla, 4. çağrı → göster, ...
-    if (_interstitialCallCount % 3 != 1) {
-      onClosed?.call();
-      return;
+  ///
+  /// [throttle] true (varsayılan) → her 3 çağrıdan 1'inde gösterilir.
+  /// [throttle] false → her çağrıda gösterilir (olumlama/özlü sözler gibi
+  ///   kendi sıklık mantığını ekranda yöneten yerler bunu kullanır).
+  Future<void> showInterstitial({VoidCallback? onClosed, bool throttle = true}) async {
+    if (throttle) {
+      _interstitialCallCount++;
+      // 1. çağrı → göster, 2. ve 3. çağrı → atla, 4. çağrı → göster, ...
+      if (_interstitialCallCount % 3 != 1) {
+        onClosed?.call();
+        return;
+      }
     }
 
     final ad = _interstitialAd;

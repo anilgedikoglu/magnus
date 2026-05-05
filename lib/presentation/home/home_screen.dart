@@ -2013,6 +2013,7 @@ class _FortuneCircleBadge extends StatelessWidget {
       case FortuneType.elfali:      return locked ? '${base}elfali2.png'      : '${base}elfali.png';
       case FortuneType.iching:      return locked ? '${base}iching2.png'      : '${base}iching.png';
       case FortuneType.japonfali:   return locked ? '${base}japonfali2.png'   : '${base}japonfali.png';
+      case FortuneType.yuzfali:     return locked ? '${base}elfali2.png'      : '${base}elfali.png';
     }
   }
 }

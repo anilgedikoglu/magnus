@@ -2156,43 +2156,362 @@ class SettingsScreen extends ConsumerWidget {
   // ── Ayarlar dialog ────────────────────────────────────────────────────────
 
   void _showOptions(BuildContext context, WidgetRef ref) {
-    showModalBottomSheet(
+    showDialog(
       context: context,
-      backgroundColor: const Color(0xFF1A0A3C),
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-        side: BorderSide(color: Color(0xFFDD00BB), width: 1),
-      ),
-      builder: (_) => Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              leading: const Icon(Icons.refresh_rounded,
-                  color: Color(0xFFFF8800)),
-              title: const Text('Profili Sıfırla',
-                  style: TextStyle(color: Colors.white)),
-              onTap: () {
-                Navigator.pop(context);
-                _confirmReset(context, ref);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.delete_outline_rounded,
-                  color: Color(0xFFFF3333)),
-              title: const Text('Tüm Falları Sil',
-                  style: TextStyle(color: Colors.white)),
-              onTap: () {
-                Navigator.pop(context);
-                _confirmDeleteInbox(context, ref);
-              },
-            ),
-          ],
+      builder: (_) => Dialog(
+        backgroundColor: Colors.transparent,
+        insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
+        child: Container(
+          decoration: BoxDecoration(
+            color: const Color(0xFF1A0A3C),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: const Color(0xFFDD00BB), width: 1),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              // Başlık
+              Container(
+                padding: const EdgeInsets.fromLTRB(20, 18, 20, 14),
+                decoration: const BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(color: Color(0x33DD00BB), width: 1),
+                  ),
+                ),
+                child: const Text(
+                  'Ayarlar',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5,
+                  ),
+                ),
+              ),
+
+              // ── Uyarılar bölümü ──────────────────────────────────────────
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 14, 20, 4),
+                child: Text(
+                  'UYARILAR',
+                  style: TextStyle(
+                    color: const Color(0xFFDD00BB).withValues(alpha: 0.85),
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2,
+                  ),
+                ),
+              ),
+              _OptionsItem(
+                icon: Icons.gavel_rounded,
+                iconColor: const Color(0xFFBB88FF),
+                label: 'Kullanım Koşulları',
+                onTap: () {
+                  Navigator.pop(context);
+                  _showLegalText(
+                    context,
+                    title: 'Kullanım Koşulları',
+                    icon: Icons.gavel_rounded,
+                    iconColor: const Color(0xFFBB88FF),
+                    text: _kKullanimKosullari,
+                  );
+                },
+              ),
+              _OptionsItem(
+                icon: Icons.privacy_tip_outlined,
+                iconColor: const Color(0xFF44CCFF),
+                label: 'Gizlilik Politikası',
+                onTap: () {
+                  Navigator.pop(context);
+                  _showLegalText(
+                    context,
+                    title: 'Gizlilik Politikası',
+                    icon: Icons.privacy_tip_outlined,
+                    iconColor: const Color(0xFF44CCFF),
+                    text: _kGizlilikPolitikasi,
+                  );
+                },
+              ),
+              _OptionsItem(
+                icon: Icons.assignment_outlined,
+                iconColor: const Color(0xFF88FFCC),
+                label: 'Açık Rıza Metni',
+                onTap: () {
+                  Navigator.pop(context);
+                  _showLegalText(
+                    context,
+                    title: 'Açık Rıza Metni',
+                    icon: Icons.assignment_outlined,
+                    iconColor: const Color(0xFF88FFCC),
+                    text: _kAcikRizaMetni,
+                  );
+                },
+              ),
+
+              // ── Ayırıcı ─────────────────────────────────────────────────
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                height: 1,
+                color: const Color(0x33DD00BB),
+              ),
+
+              // ── Tehlikeli İşlemler ───────────────────────────────────────
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 4),
+                child: Text(
+                  'TEHLİKELİ İŞLEMLER',
+                  style: TextStyle(
+                    color: Colors.red.withValues(alpha: 0.70),
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2,
+                  ),
+                ),
+              ),
+              _OptionsItem(
+                icon: Icons.refresh_rounded,
+                iconColor: const Color(0xFFFF8800),
+                label: 'Profili Sıfırla',
+                onTap: () {
+                  Navigator.pop(context);
+                  _confirmReset(context, ref);
+                },
+              ),
+              _OptionsItem(
+                icon: Icons.delete_outline_rounded,
+                iconColor: const Color(0xFFFF3333),
+                label: 'Tüm Falları Sil',
+                onTap: () {
+                  Navigator.pop(context);
+                  _confirmDeleteInbox(context, ref);
+                },
+              ),
+
+              const SizedBox(height: 12),
+
+              // Kapat butonu
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                child: GestureDetector(
+                  onTap: () => Navigator.pop(context),
+                  child: Container(
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.07),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                          color: Colors.white.withValues(alpha: 0.15), width: 1),
+                    ),
+                    child: const Center(
+                      child: Text('Kapat',
+                          style: TextStyle(
+                              color: Colors.white70, fontSize: 14)),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
+
+  // ── Yasal Metin Popup ──────────────────────────────────────────────────────
+
+  void _showLegalText(
+    BuildContext context, {
+    required String title,
+    required IconData icon,
+    required Color iconColor,
+    required String text,
+  }) {
+    showDialog(
+      context: context,
+      builder: (_) => Dialog(
+        backgroundColor: Colors.transparent,
+        insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 48),
+        child: Container(
+          decoration: BoxDecoration(
+            color: const Color(0xFF12082A),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: const Color(0xFFDD00BB).withValues(alpha: 0.5), width: 1),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Başlık çubuğu
+              Container(
+                padding: const EdgeInsets.fromLTRB(20, 18, 20, 14),
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: const Color(0xFFDD00BB).withValues(alpha: 0.25),
+                      width: 1,
+                    ),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Icon(icon, color: iconColor, size: 20),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        title,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // İçerik
+              ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxHeight: MediaQuery.of(context).size.height * 0.55,
+                ),
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.fromLTRB(20, 16, 20, 16),
+                  child: Text(
+                    text,
+                    style: const TextStyle(
+                      color: Color(0xCCFFFFFF),
+                      fontSize: 13.5,
+                      height: 1.75,
+                    ),
+                  ),
+                ),
+              ),
+              // Anladım butonu
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                child: GestureDetector(
+                  onTap: () => Navigator.pop(context),
+                  child: Container(
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFDD00BB).withValues(alpha: 0.15),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: const Color(0xFFDD00BB).withValues(alpha: 0.40),
+                        width: 1,
+                      ),
+                    ),
+                    child: const Center(
+                      child: Text('Anladım',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  // ── Yasal Metinler ─────────────────────────────────────────────────────────
+
+  static const _kKullanimKosullari = '''
+Magnus ("Uygulama"), kullanıcılara yıldız falı, tarot, kahve falı, el falı, yüz falı, astroloji ve benzeri içerikler sunan bir eğlence ve kişisel gelişim uygulamasıdır. Uygulamayı kullanmadan önce aşağıdaki koşulları dikkatlice okuyunuz.
+
+🔮 Eğlence Amaçlı Kullanım
+
+Magnus, yalnızca eğlence, motivasyon ve kişisel ilham amacıyla tasarlanmıştır. Uygulama içeriğindeki fal yorumları, astroloji analizleri, tarot yorumları ve diğer tüm içerikler tamamen kurgusal ve sembolik niteliktedir. Bu içerikler;
+
+• Gerçek hayattaki olayları öngöremez ve öngörmez.
+• Tıbbi, hukuki, finansal veya psikolojik tavsiye niteliği taşımaz.
+• Geçmiş ya da gelecekteki herhangi bir olay hakkında güvenilir bilgi sunmaz.
+• Herhangi bir karar vermenizde esas alınmamalıdır.
+
+⚠️ Sorumluluk Sınırlaması
+
+Uygulama içeriğine dayanarak verilen kararlardan, yaşanan maddi veya manevi zararlardan Magnus geliştiricileri hiçbir şekilde sorumlu tutulamaz. Kullanıcılar, içeriklerin gerçek hayatla bağdaşmadığını bilerek uygulamayı kullanmayı kabul eder.
+
+👤 Kullanım Yaşı
+
+Magnus, 16 yaş ve üzeri kullanıcılara yöneliktir. Bu yaşın altındaki kullanıcıların uygulamayı ebeveyn gözetiminde kullanması önerilir.
+
+📋 Değişiklikler
+
+Magnus geliştiricileri, bu koşulları önceden haber vermeksizin güncelleme hakkını saklı tutar. Uygulamayı kullanmaya devam etmek, güncel koşulları kabul ettiğiniz anlamına gelir.
+''';
+
+  static const _kGizlilikPolitikasi = '''
+Magnus uygulaması kullanıcı gizliliğini en üst düzeyde önemsemektedir. Bu politika, kişisel verilerinizin nasıl işlendiğini açıklar.
+
+📦 Toplanan Veriler
+
+Magnus, yalnızca uygulamanın işlevselliği için zorunlu olan verileri cihazınızda yerel olarak saklar:
+
+• Ad, soyad, doğum tarihi ve şehir bilgisi
+• Burç ve astroloji tercihleri
+• Meslek, medeni durum ve cinsiyet bilgisi
+• Fal geçmişi ve uygulama kullanım tercihleri
+
+🔒 Veri Güvenliği ve Paylaşım
+
+• Tüm veriler yalnızca cihazınızda yerel olarak saklanır.
+• Hiçbir kişisel veri Magnus sunucularına aktarılmaz.
+• Kişisel verileriniz hiçbir koşulda üçüncü taraflarla paylaşılmaz, satılmaz veya kiralanmaz.
+• Reklam ağlarına (Google AdMob) yalnızca anonim, kişiselleştirilmemiş reklam hizmeti için bağlanılır; bu süreçte kimlik bilgileriniz iletilmez.
+• Yapay zeka destekli fal hizmetlerinde (fotoğraf analizi vb.) görüntüler yalnızca anlık analiz için işlenir, depolanmaz.
+
+🗑️ Verilerinizi Silme
+
+Ayarlar ekranından "Profili Sıfırla" seçeneğini kullanarak tüm kişisel verilerinizi kalıcı olarak silebilirsiniz. Uygulamayı cihazınızdan kaldırmanız durumunda tüm yerel veriler otomatik olarak silinir.
+
+📬 İletişim
+
+Gizlilikle ilgili sorularınız için: futuristicapps1@gmail.com
+''';
+
+  static const _kAcikRizaMetni = '''
+Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında aşağıdaki hususları okuduğunuzu ve anladığınızı beyan edersiniz.
+
+📌 Veri Sorumlusu
+
+Magnus uygulaması (Futuristic Apps) — futuristicapps1@gmail.com
+
+📋 İşlenen Kişisel Veriler
+
+• Ad-soyad, doğum tarihi, doğum saati ve şehir
+• Burç, meslek, medeni durum, cinsiyet
+• Uygulama içi fal ve içerik tercihleriniz
+
+🎯 İşleme Amaçları
+
+Toplanan veriler yalnızca aşağıdaki amaçlarla kullanılır:
+
+• Size özel fal metinleri ve astroloji içerikleri oluşturmak
+• Uygulama içi kişiselleştirme sağlamak
+• Tekrar eden içeriklerin önüne geçmek
+
+📍 Verilerin Saklanması
+
+Tüm veriler cihazınızda yerel olarak (SharedPreferences) saklanır. Sunucuya aktarım yapılmaz. Üçüncü taraflarla paylaşılmaz.
+
+✅ Rıza
+
+Magnus uygulamasını kullanarak, yukarıda belirtilen kişisel verilerinizin yalnızca açıklanan amaçlar doğrultusunda ve yalnızca cihazınızda yerel olarak işlenmesine açık rıza göstermiş sayılırsınız.
+
+🔄 Geri Alma Hakkı
+
+Bu rızanızı istediğiniz zaman Ayarlar → Profili Sıfırla seçeneği ile geri alabilir, tüm verilerinizi kalıcı olarak silebilirsiniz.
+
+⚠️ Eğlence Uygulaması Beyanı
+
+Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji analizleri ve diğer tüm içerikler kurgusal ve sembolik niteliktedir; gerçek hayatla, bilimsel gerçeklerle veya herhangi bir kehaneteyle bağdaşmaz. Kişisel kararlarınızda bu içerikleri esas almanız önerilmez.
+''';
 
   // ── Helpers ───────────────────────────────────────────────────────────────
 
@@ -2402,5 +2721,46 @@ class SettingsScreen extends ConsumerWidget {
         await ref.read(inboxProvider.notifier).deleteItem(item.id);
       }
     }
+  }
+}
+
+// ── Options Dialog Liste Öğesi ─────────────────────────────────────────────────
+
+class _OptionsItem extends StatelessWidget {
+  final IconData icon;
+  final Color iconColor;
+  final String label;
+  final VoidCallback onTap;
+
+  const _OptionsItem({
+    required this.icon,
+    required this.iconColor,
+    required this.label,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(10),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        child: Row(
+          children: [
+            Icon(icon, color: iconColor, size: 22),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Text(
+                label,
+                style: const TextStyle(color: Colors.white, fontSize: 15),
+              ),
+            ),
+            Icon(Icons.chevron_right_rounded,
+                color: Colors.white.withValues(alpha: 0.30), size: 20),
+          ],
+        ),
+      ),
+    );
   }
 }

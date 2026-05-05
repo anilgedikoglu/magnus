@@ -826,7 +826,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   Widget _buildPageIndicator() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5),
+      padding: const EdgeInsets.only(top: 10, bottom: 5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(_totalPages, (i) {
@@ -983,7 +983,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         ),
                         child: Center(
                           child: Image.asset('assets/images/inbox_icon.png',
-                              width: 26, height: 26),
+                              width: 36, height: 36),
                         ),
                       ),
                     );
@@ -1650,9 +1650,9 @@ class _BottomBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final img = Image.asset(imagePath, width: 22, height: 22,
+    final img = Image.asset(imagePath, width: 31, height: 31,
         filterQuality: FilterQuality.high,
-        errorBuilder: (_, __, ___) => const SizedBox(width: 22, height: 22));
+        errorBuilder: (_, __, ___) => const SizedBox(width: 31, height: 31));
     final txt = Text(label,
         style: const TextStyle(
             color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13,

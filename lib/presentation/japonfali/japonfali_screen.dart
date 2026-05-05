@@ -192,14 +192,6 @@ class _JaponFaliScreenState extends ConsumerState<JaponFaliScreen> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Japon Falı logosu
-                    Image.asset(
-                      'assets/images/japonfalilogo.png',
-                      height: 72,
-                      width: 72,
-                      errorBuilder: (_, __, ___) => const Text('⛩', style: TextStyle(fontSize: 52)),
-                    ),
-                    const SizedBox(height: 20),
                     const ElegantHourglass(size: 52, color: Color(0xFFFF4466)),
                     const SizedBox(height: 24),
                     Container(

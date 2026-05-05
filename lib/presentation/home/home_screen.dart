@@ -226,6 +226,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       _checkRuyaSent();
       _checkIchingSent();
       _checkJaponFaliSent();
+      _checkElFaliSent();
+      _checkYuzFaliSent();
     });
   }
 
@@ -418,6 +420,62 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     });
   }
 
+  void _checkElFaliSent() {
+    final sent = ref.read(elFaliSentProvider);
+    if (!sent) return;
+    ref.read(elFaliSentProvider.notifier).state = false;
+    final name = ref.read(userProfileProvider).name;
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'El falın analiz ediliyor${name.isNotEmpty ? ' $name' : ''}.',
+        gradient: const [Color(0xFF1A0A2E), Color(0xFF2D1255)],
+        borderColor: const Color(0xFF9B3FCC),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
+  void _checkYuzFaliSent() {
+    final sent = ref.read(yuzFaliSentProvider);
+    if (!sent) return;
+    ref.read(yuzFaliSentProvider.notifier).state = false;
+    final name = ref.read(userProfileProvider).name;
+    setState(() {
+      _extraBubbles.add(_ExtraBubble(
+        text: 'Yüz falın analiz ediliyor${name.isNotEmpty ? ' $name' : ''}.',
+        gradient: const [Color(0xFF1A0A2E), Color(0xFF2D1255)],
+        borderColor: const Color(0xFF9B3FCC),
+      ));
+      _extraBubbles.add(_ExtraBubble(
+        text: "Magnus'un ana menüsü karşında!",
+        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
+        borderColor: const Color(0xFF7B5ECC),
+      ));
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.animateTo(
+          _chatScrollCtrl.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
   bool _listenersAttached = false;
 
   @override
@@ -446,6 +504,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       });
       ref.listenManual(japonFaliSentProvider, (_, sent) {
         if (sent) _checkJaponFaliSent();
+      });
+      ref.listenManual(elFaliSentProvider, (_, sent) {
+        if (sent) _checkElFaliSent();
+      });
+      ref.listenManual(yuzFaliSentProvider, (_, sent) {
+        if (sent) _checkYuzFaliSent();
       });
     }
   }

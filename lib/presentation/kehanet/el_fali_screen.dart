@@ -154,14 +154,10 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
       // Inbox'a kaydet
       await ref.read(inboxProvider.notifier).addItem(item);
 
-      // Sonucu parse et (gösterim için)
-      final data    = jsonDecode(item.text) as Map<String, dynamic>;
-      _genelMetin   = data['genel'] as String? ?? '';
-      _hatlar       = (data['hatlar'] as List)
-          .map((h) => h as Map<String, dynamic>)
-          .toList();
-
-      if (mounted) setState(() => _adim = _EFAdim.sonuc);
+      // Ana menüye dön, balon göster
+      if (!mounted) return;
+      ref.read(elFaliSentProvider.notifier).state = true;
+      context.go('/home');
     } catch (e) {
       if (mounted) {
         setState(() {

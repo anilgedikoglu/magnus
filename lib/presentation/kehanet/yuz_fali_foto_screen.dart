@@ -14,8 +14,10 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 import '../../data/services/claude_vision_service.dart';
+import 'package:uuid/uuid.dart';
 
 enum _YFAdim { secim, analiz, hatali, sonuc }
 
@@ -197,7 +199,25 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
           .map((p) => VariableReplacer.replace(p, varMap))
           .join('\n\n');
 
-      if (mounted) setState(() => _adim = _YFAdim.sonuc);
+      // Inbox'a kaydet — 6 dakika sonra açılır
+      if (!mounted) return;
+      final now      = DateTime.now();
+      final unlockAt = now.add(const Duration(minutes: 6)).toIso8601String();
+      final inboxItem = InboxItem(
+        id:             const Uuid().v4(),
+        title:          'Yüz Falın Hazır',
+        text:           _falMetni,
+        date:           now.toIso8601String(),
+        fortuneTypeKey: 'yuzfali',
+        iconAsset:      'assets/images/inbox_icons/elfali.png',
+        unlockAt:       unlockAt,
+      );
+      await ref.read(inboxProvider.notifier).addItem(inboxItem);
+
+      // Ana menüye dön, balon göster
+      if (!mounted) return;
+      ref.read(yuzFaliSentProvider.notifier).state = true;
+      context.go('/home');
     } catch (e) {
       if (mounted) {
         setState(() {

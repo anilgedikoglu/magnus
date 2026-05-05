@@ -611,7 +611,7 @@ class FortuneService {
     });
 
     final now = DateTime.now();
-    final unlockAt = now.add(Duration(minutes: 3 + _rng.nextInt(4))).toIso8601String();
+    final unlockAt = now.add(const Duration(minutes: 6)).toIso8601String();
 
     return InboxItem(
       id: _uuid.v4(),

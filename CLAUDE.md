@@ -122,6 +122,46 @@ if (savedDate == todayStr && savedId != null) {
 
 ---
 
+## ⚠️⚠️⚠️ JSON VERİ TEMİZLİĞİ — DÖNÜŞÜM VE RENDER KURALLARI ⚠️⚠️⚠️
+
+Unity `.asset` dosyalarından JSON'a dönüştürme ve Flutter render sürecinde aşağıdaki temizlik kuralları **istisnasız** uygulanır.
+
+### Dönüşüm Sırasında Temizle
+
+| Sorun | Belirti | Çözüm |
+|---|---|---|
+| Emoji Unicode escape | `U0001F642`, `U0001F60B` gibi literal metin | `chr(int('1' + son4hex, 16))` ile gerçek karaktere çevir |
+| ETX kontrol karakteri | Görünmez `\x03` gömülü metin | Strip et (`metin.replace('\x03', '')`) |
+| Çift-escape Türkçe | `\\xE7`, `\\xF6` gibi (kadın→kad\xEFn) | Decode et (`bytes.fromhex(xx).decode('latin-1')`) |
+| YAML satır kırıkları | Satır sonu + 4 boşluk = devam satırı | Birleştir: `\n + spaces → ' '` |
+| Başlangıç/bitiş tırnak | `"metin"` → tırnakları soy | Strip et |
+
+### Her Dönüşüm Sonrası Zorunlu Doğrulama
+
+```python
+# 1) Kesilmiş metin kontrolü
+BITIS = {'.', '!', '?', '…', '"', "'", ')'}
+for id_, metin in entries:
+    if metin.rstrip()[-1] not in BITIS:
+        print(f'UYARI [{id_}] kesilmiş: ...{metin[-80:]!r}')
+
+# 2) Kalan ham escape kontrolü
+import re
+ham = re.compile(r'U0001[0-9A-Fa-f]{4}')
+if ham.search(metin):
+    print(f'UYARI [{id_}] ham emoji kodu kaldı')
+```
+
+### Flutter Render Sırasında Temizle
+
+Metinler ekrana gelirken uygulanacak kurallar için bkz. → COLOR TAG RENDER KURALI bölümü.
+
+`RichTextParser.build()` aynı zamanda şunları da temizler:
+- `<sprite=N>` tag'ları (Unity sprite referansları — Flutter'da anlamsız)
+- `<b>`, `</b>`, `<i>`, `</i>` bilinmeyen tag'lar
+
+---
+
 ## ⚠️⚠️⚠️ COLOR TAG RENDER KURALI — DEĞİŞMEZ ⚠️⚠️⚠️
 
 Unity metinleri `<color=yellow>metin</color>` veya `<color=#RRGGBB>metin</color>` şeklinde renk tag'ları içerebilir.
@@ -929,3 +969,51 @@ Kaynak: `C:\src\magnus_app\assets\images\Yeniikonlar\digerfalcilar.png`
 | Toplam asset | 341 MB | 165 MB |
 | Sadece görseller | 227 MB | 51 MB |
 | AAB boyutu | 248 MB | 109 MB |
+
+---
+
+## Yana Kehanet Ekranı (yana_screen.dart)
+
+**Kaynak:**
+- `C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu1\Kehanet\Yana\Kehanetler\BanaDair\` — 68 entry
+- `C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu1\Kehanet\Yana\Kehanetler\YasamaDair\` — 110 entry
+- **Dönüşüm scripti:** `C:\temp\convert_yana.py`
+
+**JSON:** `assets/data/yana.json`
+```json
+{
+  "bana_dair": [{"id": 1, "tur": "bana", "metin": "...", "kosullar": []}, ...],
+  "yasama_dair": [{"id": 1, "tur": "yasama", "metin": "...", "kosullar": []}, ...]
+}
+```
+
+**Koşul sistemi:**
+- `mod: kehanetbana` / `mod: kehanetyas̈ama` — kategori tanımlayıcı, **kosullar'a eklenmez** (JSON'da atlanır)
+- `cinsiyet` → profile.gender eşleşmesi ('kadın'→'kadin', 'erkek'→'erkek')
+- `medeni_durum` → profile.maritalStatus eşleşmesi (normalize edilmiş)
+- `yasmax: N` → profile.age <= N
+- `yasmin: N` → profile.age >= N
+- `meslek` → profile.job eşleşmesi
+
+**OR/AND mantığı:** Aynı `degisken` için birden fazla `deger` varsa **OR** (biri eşleşse yeter). Farklı `degisken` grupları arasında **AND** (hepsi geçmeli).
+
+**Akış:** secim → gorselKayiyor (görsel tepeye kayar) → odaklanma (5.5s + ElegantHourglass) → yagmur (karakterler düşer) → icerik (üst yarı görsel / alt yarı metin)
+
+**Pref anahtarları:** `yana_bana_gosterilen`, `yana_yasama_gosterilen`
+
+**Renk paleti:** `Color(0xFF9B00D3)` / `Color(0xFFFF55FF)` (mor/pembe)
+
+---
+
+## JSON Veri Temizliği — Geçmişte Yapılan Düzeltmeler
+
+**2026-05-05 session'unda keşfedilen ve düzeltilen sorunlar:**
+
+| Dosya | Sorun | Adet |
+|---|---|---|
+| `kahve_akarsilama/baglama/gelisme/giris/sonuc/ugurlama.json` | `U0001FXXX` ham emoji kodu | 643 |
+| `tarot_texts.json` | `\x03` ETX kontrol karakteri | 3 metinde |
+| `kadercarki_renk.json` | `\x03` ETX kontrol karakteri | 2 karakter |
+| `biyoritim.json` | Çift-escape Türkçe (`\xE7` vb.) | 76 değer |
+
+**Bu tür hatalar yeni dönüşüm yapılırken de kontrol edilmeli** — bkz. → JSON VERİ TEMİZLİĞİ bölümü.

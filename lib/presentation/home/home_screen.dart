@@ -730,8 +730,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     onPointerUp:    (e) {
                       final dx = e.position.dx - (_swipeStartX ?? e.position.dx);
                       _swipeStartX = null;
-                      if (dx < -50) _goNext();
-                      else if (dx > 50) _goPrev();
+                      if (dx < -50) {
+                        // Sola swipe
+                        if (_currentPage == _totalPages - 1) {
+                          // Son sayfadan sola → gelen kutusu
+                          context.push('/inbox-full');
+                        } else {
+                          _goNext();
+                        }
+                      } else if (dx > 50) {
+                        // Sağa swipe
+                        if (_currentPage == 0) {
+                          // İlk sayfadan sağa → kullanıcı bilgileri
+                          context.push('/settings');
+                        } else {
+                          _goPrev();
+                        }
+                      }
                     },
                     onPointerCancel: (_) => _swipeStartX = null,
                     child: PageView.builder(

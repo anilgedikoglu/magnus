@@ -26,13 +26,34 @@ class YuzFaliFotoScreen extends ConsumerStatefulWidget {
   ConsumerState<YuzFaliFotoScreen> createState() => _YuzFaliFotoScreenState();
 }
 
-class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen> {
+class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
+    with SingleTickerProviderStateMixin {
   _YFAdim _adim = _YFAdim.secim;
   File?   _foto;
   String  _falMetni  = '';
   String  _hataMetni = '';
 
   final _rng = Random();
+
+  // ── Tarama çizgisi animasyonu ─────────────────────────────────────────────
+  late final AnimationController _scanCtrl;
+  late final Animation<double>   _scanAnim;
+
+  @override
+  void initState() {
+    super.initState();
+    _scanCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2000),
+    );
+    _scanAnim = CurvedAnimation(parent: _scanCtrl, curve: Curves.easeInOut);
+  }
+
+  @override
+  void dispose() {
+    _scanCtrl.dispose();
+    super.dispose();
+  }
 
   // ── Fotoğraf seç / çek ────────────────────────────────────────────────────
   Future<void> _secimlYap(ImageSource source) async {
@@ -50,7 +71,9 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen> {
         _adim = _YFAdim.analiz;
       });
 
+      _scanCtrl.repeat(reverse: true);
       await _analizEt();
+      _scanCtrl.stop();
     } catch (e) {
       if (mounted) {
         setState(() {
@@ -64,10 +87,10 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen> {
   // ── Claude Vision API + metin oluşturma ───────────────────────────────────
   Future<void> _analizEt() async {
     try {
-      // API çağrısı ve minimum 6 saniyelik bekleme eş zamanlı
+      // API çağrısı ve minimum 12 saniyelik bekleme eş zamanlı
       final sonuclar = await Future.wait<dynamic>([
         ClaudeVisionService.analiz(_foto!.path),
-        Future.delayed(const Duration(seconds: 6)),
+        Future.delayed(const Duration(seconds: 12)),
       ]);
 
       if (!mounted) return;
@@ -284,12 +307,79 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen> {
   Widget _buildAnaliz() {
     return Column(
       children: [
-        // Fotoğraf (küçük)
+        // Fotoğraf + tarama animasyonu
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
           child: AspectRatio(
             aspectRatio: 3 / 4,
-            child: _buildFotoAlan(),
+            child: Stack(
+              children: [
+                // Fotoğraf
+                _buildFotoAlan(),
+                // Tarama çizgisi
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(17),
+                  child: AnimatedBuilder(
+                    animation: _scanAnim,
+                    builder: (context, _) {
+                      return LayoutBuilder(
+                        builder: (context, constraints) {
+                          final h    = constraints.maxHeight;
+                          const lineH = 60.0;
+                          final top  = _scanAnim.value * (h - lineH);
+                          return Stack(
+                            children: [
+                              Positioned(
+                                top:   top,
+                                left:  0,
+                                right: 0,
+                                height: lineH,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end:   Alignment.bottomCenter,
+                                      colors: [
+                                        Colors.transparent,
+                                        const Color(0xFF00CCFF).withValues(alpha: 0.10),
+                                        const Color(0xFF00EEFF).withValues(alpha: 0.75),
+                                        const Color(0xFFFFFFFF).withValues(alpha: 0.90),
+                                        const Color(0xFF00EEFF).withValues(alpha: 0.75),
+                                        const Color(0xFF00CCFF).withValues(alpha: 0.10),
+                                        Colors.transparent,
+                                      ],
+                                      stops: const [0, 0.30, 0.46, 0.50, 0.54, 0.70, 1],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              // Yatay parlak ışık sızıntısı (kenarlarda solar)
+                              Positioned(
+                                top:   top + lineH * 0.45,
+                                left:  0,
+                                right: 0,
+                                height: 3,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: const Color(0xFF00EEFF).withValues(alpha: 0.70),
+                                        blurRadius: 12,
+                                        spreadRadius: 2,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         const Spacer(),

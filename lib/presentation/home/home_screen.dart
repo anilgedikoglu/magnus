@@ -1964,10 +1964,13 @@ class _ArcProgressPainter extends CustomPainter {
       if (gradientColors == null) {
         arcPaint.color = color;
       } else {
+        // Gradient 12'den başlasın: SweepGradient 3 o'clock = 0, bu yüzden
+        // startAngle'ı -π/2 geri alıyoruz → -π/2 - π/2 = -π → 12 o'clock
+        const gradStart = startAngle - 1.5707963; // -π
         arcPaint.shader = SweepGradient(
           center: Alignment.center,
-          startAngle: startAngle,
-          endAngle: startAngle + 2 * 3.1415926,
+          startAngle: gradStart,
+          endAngle: gradStart + 2 * 3.1415926,
           colors: gradientColors!,
         ).createShader(rect);
       }

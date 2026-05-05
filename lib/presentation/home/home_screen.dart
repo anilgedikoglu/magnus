@@ -1473,14 +1473,19 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
 
   void _startTyping() {
     _timer?.cancel();
-    _timer = Timer.periodic(const Duration(milliseconds: 30), (t) {
+    _timer = Timer.periodic(const Duration(milliseconds: 60), (t) {
       if (!mounted) { t.cancel(); return; }
       if (_charCount >= widget.text.length) {
         t.cancel();
         // Boş metinde onComplete çağırma — JSON yüklenince metin gelecek
         if (widget.text.isNotEmpty) {
           widget.onComplete();
-          if (widget.enableMarquee) _maybeStartMarquee();
+          if (widget.enableMarquee) {
+            // Yazım bitince 3 saniye bekleyip marquee başlat
+            Future.delayed(const Duration(seconds: 3), () {
+              if (mounted) _maybeStartMarquee();
+            });
+          }
         }
         return;
       }
@@ -1489,7 +1494,7 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
   }
 
   // Marquee ayraç boşluğu — metin bittikten sonra kaç karakter boşluk
-  static const _marqueeGap = '          '; // 10 boşluk
+  static const _marqueeGap = '                              '; // 30 boşluk
 
   double _measureText(String text) {
     final tp = TextPainter(

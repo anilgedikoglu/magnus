@@ -177,6 +177,40 @@ class InboxDetailScreen extends StatelessWidget {
               ),
             ),
           ],
+          // I-Ching: arka plan görseli + koyu overlay
+          if (item.fortuneType == FortuneType.iching) ...[
+            Positioned.fill(
+              child: Image.asset(
+                'assets/images/falbg/ichingbg.png',
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+                filterQuality: FilterQuality.high,
+                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+              ),
+            ),
+            Positioned.fill(
+              child: ColoredBox(
+                color: Colors.black.withValues(alpha: 0.60),
+              ),
+            ),
+          ],
+          // Japon Falı: arka plan görseli + koyu overlay
+          if (item.fortuneType == FortuneType.japonfali) ...[
+            Positioned.fill(
+              child: Image.asset(
+                'assets/images/falbg/omikujibg.png',
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+                filterQuality: FilterQuality.high,
+                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+              ),
+            ),
+            Positioned.fill(
+              child: ColoredBox(
+                color: Colors.black.withValues(alpha: 0.60),
+              ),
+            ),
+          ],
           SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

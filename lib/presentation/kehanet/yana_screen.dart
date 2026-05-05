@@ -1,5 +1,10 @@
 // C:/src/magnus_app/lib/presentation/kehanet/yana_screen.dart
 // Yana kehanet ekranı - Bana Dair / Yaşama Dair seçimi
+//
+// JSON kaynağı: assets/data/yana.json
+//   Üst anahtarlar: "bana_dair" ve "yasama_dair"
+//   Her entry: { "id", "tur", "metin", "kosullar": [...] }
+//   Koşul eşleşme mantığı → _matchesProfile() fonksiyonu
 
 import 'dart:async';
 import 'dart:convert';
@@ -9,8 +14,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
+import '../../data/models/user_profile.dart';
 
 class YanaScreen extends ConsumerStatefulWidget {
   const YanaScreen({super.key});
@@ -22,9 +30,9 @@ class YanaScreen extends ConsumerStatefulWidget {
 // Adımlar:
 //  secim         → seçim ekranı (görsel + iki buton)
 //  gorselKayiyor → görsel merkeze'den tepeye kayıyor (700 ms)
-//  odaklanma     → "Kehanetine odaklanıyorum..." + ⏳ (5.5 s)
+//  odaklanma     → "Kehanetine odaklanıyorum..." + ElegantHourglass (5.5 s)
 //  yagmur        → karakterler aşağı dökülüp kayboluyor (4.5 s)
-//  icerik        → kehanet yazısı fade-in
+//  icerik        → üst yarı görsel, alt yarı kehanet yazısı
 enum _YanaAdim { secim, gorselKayiyor, odaklanma, yagmur, icerik }
 
 class _YanaScreenState extends ConsumerState<YanaScreen>
@@ -35,7 +43,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
 
   // ── Animasyon controller'ları ─────────────────────────────────────────────
   late AnimationController _glowCtrl;   // aurora çerçeve (4 s, tekrar)
-  late AnimationController _slideCtrl;  // görsel yukarı kayma (700 ms)
+  late AnimationController _slideCtrl;  // görsel yukarı kayma (2100 ms)
   late Animation<double>   _slideAnim;  // 0 → 1, easeOutCubic
   late AnimationController _rainCtrl;   // harf yağmuru (4500 ms)
   late AnimationController _fadeCtrl;   // kehanet yazısı belirme (1400 ms)
@@ -43,10 +51,9 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
 
   // ── Yağmur verisi ─────────────────────────────────────────────────────────
   final List<String> _rainChars  = [];
-  final List<double> _rainDelays = [];  // her karakter için 0.0-0.70 gecikme
-  final List<double> _rainDrifts = [];  // yatay sürüklenme (px)
+  final List<double> _rainDelays = [];
+  final List<double> _rainDrifts = [];
 
-  // Görsel boyutu (build'de sabit)
   static const double _imgSize = 180.0;
 
   @override
@@ -57,7 +64,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
       vsync: this, duration: const Duration(milliseconds: 4000))..repeat();
 
     _slideCtrl = AnimationController(
-      vsync: this, duration: const Duration(milliseconds: 2100)); // 3× yavaş
+      vsync: this, duration: const Duration(milliseconds: 2100));
     _slideAnim = CurvedAnimation(
       parent: _slideCtrl, curve: Curves.easeOutCubic);
 
@@ -79,7 +86,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
     super.dispose();
   }
 
-  // ── Yağmur karakter listesini hazırla ─────────────────────────────────────
+  // ── Yağmur: sadece metin karakterleri (kum saati artık ayrı widget) ───────
   void _prepareRainChars() {
     final rng = Random();
     _rainChars.clear(); _rainDelays.clear(); _rainDrifts.clear();
@@ -89,20 +96,14 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
       _rainDelays.add(rng.nextDouble() * 0.68);
       _rainDrifts.add((rng.nextDouble() - 0.5) * 80.0);
     }
-    // Kum saati ayrı eleman
-    _rainChars.add('⏳');
-    _rainDelays.add(rng.nextDouble() * 0.50);
-    _rainDrifts.add((rng.nextDouble() - 0.5) * 40.0);
   }
 
   // ── Seçim yapıldı ─────────────────────────────────────────────────────────
   Future<void> _onSecim(String tur) async {
-    // 1. Görseli yukarı kaydır
     setState(() => _adim = _YanaAdim.gorselKayiyor);
     await _slideCtrl.forward();
     if (!mounted) return;
 
-    // 2. "Odaklanıyorum" ekranı — veri yüklemesi arka planda başlıyor
     _prepareRainChars();
     setState(() => _adim = _YanaAdim.odaklanma);
     final dataFuture = _loadData(tur);
@@ -110,45 +111,164 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
     _odakTimer = Timer(const Duration(milliseconds: 5500), () async {
       await dataFuture;
       if (!mounted) return;
-      // 3. Yağmur animasyonu
       setState(() => _adim = _YanaAdim.yagmur);
       await _rainCtrl.forward();
       if (!mounted) return;
-      // 4. Kehanet yazısı
       setState(() => _adim = _YanaAdim.icerik);
       _fadeCtrl.forward();
     });
   }
 
+  // ── Veri yükleme — bana_dair veya yasama_dair, koşul filtreli ────────────
   Future<void> _loadData(String tur) async {
     final str  = await rootBundle.loadString('assets/data/yana.json');
-    final data = jsonDecode(str);
-    final List all = data['yana'] ?? [];
+    final data = jsonDecode(str) as Map<String, dynamic>;
 
-    final prefs = await SharedPreferences.getInstance();
-    final key   = 'yana_${tur}_gosterilen';
-    var shown   = prefs.getStringList(key) ?? [];
+    final String jsonKey = tur == 'bana' ? 'bana_dair' : 'yasama_dair';
+    final List all = data[jsonKey] ?? [];
 
-    var eligible = all.where((e) =>
-        e['tur'] == tur &&
-        (e['kosullar'] as List? ?? []).isEmpty &&
-        !shown.contains(e['id'].toString())).toList();
+    final profile = ref.read(userProfileProvider);
+    final prefs   = await SharedPreferences.getInstance();
+    final key     = 'yana_${tur}_gosterilen';
+    var shown     = prefs.getStringList(key) ?? [];
+
+    // Kullanıcı profiline uygun metinleri filtrele
+    var eligible = all
+        .where((e) =>
+            _matchesProfile(e as Map<String, dynamic>, profile) &&
+            !shown.contains(e['id'].toString()))
+        .toList();
+
+    // Tümü gösterildi → sıfırla (son gösterilen tekrar gelmesin)
+    if (eligible.isEmpty) {
+      final lastId = shown.isNotEmpty ? shown.last : null;
+      final resetShown = lastId != null ? [lastId] : <String>[];
+      await prefs.setStringList(key, resetShown);
+      shown = resetShown;
+      eligible = all
+          .where((e) =>
+              _matchesProfile(e as Map<String, dynamic>, profile) &&
+              e['id'].toString() != lastId)
+          .toList();
+      if (eligible.isEmpty) {
+        eligible = all.where((e) => _matchesProfile(e as Map<String, dynamic>, profile)).toList();
+      }
+    }
 
     if (eligible.isEmpty) {
-      await prefs.remove(key);
-      shown    = [];
-      eligible = all.where((e) =>
-          e['tur'] == tur &&
-          (e['kosullar'] as List? ?? []).isEmpty).toList();
+      _metin = 'Kehanet hazırlanıyor...';
+      return;
     }
 
     eligible.shuffle(Random());
-    final selected = eligible.first;
-    _metin = selected['metin'] ?? '';
-    final profile = ref.read(userProfileProvider);
+    final selected = eligible.first as Map<String, dynamic>;
+    _metin = selected['metin'] as String? ?? '';
     _metin = VariableReplacer.replace(_metin, profile.toVariableMap());
+
     shown.add(selected['id'].toString());
     await prefs.setStringList(key, shown);
+  }
+
+  // ── Profil koşul eşleşmesi ────────────────────────────────────────────────
+  // kosullar listesi: AND semantiği farklı degisken'ler arasında,
+  //                   OR semantiği aynı degisken'in birden fazla değeri arasında.
+  bool _matchesProfile(Map<String, dynamic> item, UserProfile profile) {
+    final kosullar = (item['kosullar'] as List?) ?? [];
+    if (kosullar.isEmpty) return true;
+
+    // Aynı degisken için değerleri grupla
+    final groups = <String, List<dynamic>>{};
+    for (final k in kosullar) {
+      final kMap = k as Map<String, dynamic>;
+      final dg = kMap['degisken'] as String;
+      groups.putIfAbsent(dg, () => []).add(kMap['deger']);
+    }
+
+    // Her grup AND; grup içi OR
+    for (final entry in groups.entries) {
+      bool groupPass = false;
+      for (final deger in entry.value) {
+        if (_checkCondition(entry.key, deger, profile)) {
+          groupPass = true;
+          break;
+        }
+      }
+      if (!groupPass) return false;
+    }
+    return true;
+  }
+
+  bool _checkCondition(String degisken, dynamic deger, UserProfile profile) {
+    final val = deger.toString().toLowerCase().replaceAll('_', ' ');
+    switch (degisken) {
+      case 'cinsiyet':
+        // Profile: 'erkek' | 'kadin' | 'lgbt'
+        // Asset:   'erkek' | 'kadın' | 'lgbt'
+        final pg = profile.gender.toLowerCase();
+        if (val == 'kadın' || val == 'kadin') return pg == 'kadin';
+        if (val == 'erkek') return pg == 'erkek';
+        return pg == val;
+
+      case 'medeni_durum':
+        // Profile internal keys (with underscores) vs asset Turkish values
+        return _medeniBool(val, profile.maritalStatus);
+
+      case 'yasmax':
+        final maxAge = deger is int ? deger : int.tryParse(deger.toString()) ?? 999;
+        return profile.age <= maxAge;
+
+      case 'yasmin':
+        final minAge = deger is int ? deger : int.tryParse(deger.toString()) ?? 0;
+        return profile.age >= minAge;
+
+      case 'meslek':
+        return _meslekBool(val, profile.job);
+
+      default:
+        return true; // bilinmeyen koşul → göster
+    }
+  }
+
+  bool _medeniBool(String kondisyon, String profileKey) {
+    // kondisyon: asset'ten gelen Turkish string (lowercase)
+    // profileKey: dahili key (örn. 'iliskisi_yok', 'evli', ...)
+    switch (kondisyon) {
+      case 'evli':            return profileKey == 'evli';
+      case 'nişanlı':
+      case 'nisanli':         return profileKey == 'nisanli';
+      case 'ilişkisi var':
+      case 'iliski var':
+      case 'flört halinde':   return profileKey == 'iliski_var';
+      case 'ilişkisi yok':
+      case 'iliski yok':
+      case 'platonik':        return profileKey == 'iliskisi_yok';
+      case 'yeni ayrılmış':
+      case 'yeni ayrilmis':   return profileKey == 'yeni_ayrilmis';
+      case 'boşanmış':
+      case 'bosanmis':        return profileKey == 'bosanmis';
+      case 'dul':             return profileKey == 'dul';
+      case 'karmaşık':        return profileKey == 'iliski_var' || profileKey == 'yeni_ayrilmis';
+      default:                return profileKey.replaceAll('_', ' ') == kondisyon;
+    }
+  }
+
+  bool _meslekBool(String kondisyon, String profileJob) {
+    switch (kondisyon) {
+      case 'öğrenci':
+      case 'ogrenci':                 return profileJob == 'ogrenci';
+      case 'kamu sektörü':
+      case 'kamu sektoru':            return profileJob == 'kamusektoru';
+      case 'özel sektör':
+      case 'ozel sektor':             return profileJob == 'ozelsektoru';
+      case 'serbest':
+      case 'kendi işini yapıyor':
+      case 'kendi isini yapiyor':     return profileJob == 'serbest';
+      case 'emekli':                  return profileJob == 'emekli';
+      case 'ev hanımı':
+      case 'ev hanimi':               return profileJob == 'evhanimi';
+      case 'akademisyen':             return profileJob == 'kamusektoru' || profileJob == 'ozelsektoru';
+      default:                        return profileJob.replaceAll('_', ' ') == kondisyon;
+    }
   }
 
   // ── Geri tuşu ─────────────────────────────────────────────────────────────
@@ -163,10 +283,9 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
   }
 
   // ─────────────────────────────────────────────────────────────────────────
-  // Widget'lar
+  // Widget builders
   // ─────────────────────────────────────────────────────────────────────────
 
-  // Aurora prizmatik çerçeveli görsel
   Widget _buildGlowImage() {
     return AnimatedBuilder(
       animation: _glowCtrl,
@@ -203,14 +322,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
     );
   }
 
-  // Tek yağmur karakteri: kendi gecikmesiyle düşüp Solar out.
-  // ⏳ (son eleman) odaklanma adımındaki görünümüyle eşleşsin diye büyük font.
   Widget _buildRainChar(int i) {
-    final isHourglass = i == _rainChars.length - 1;
-    final style = isHourglass
-        ? const TextStyle(fontSize: 48)
-        : const TextStyle(color: Colors.white70, fontSize: 16, height: 1.6);
-
     return AnimatedBuilder(
       animation: _rainCtrl,
       builder: (ctx, child) {
@@ -224,7 +336,8 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
           child: Opacity(opacity: (1.0 - eased).clamp(0.0, 1.0), child: child),
         );
       },
-      child: Text(_rainChars[i], style: style),
+      child: Text(_rainChars[i],
+          style: const TextStyle(color: Colors.white70, fontSize: 16, height: 1.6)),
     );
   }
 
@@ -234,20 +347,26 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
       child: Container(
         width: double.infinity, height: 48,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          gradient: const LinearGradient(
-            colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)]),
+          color: Colors.white.withValues(alpha: 0.10),
+          borderRadius: BorderRadius.circular(23),
           border: Border.all(
-            color: const Color(0xFFFF55FF).withValues(alpha: 0.80), width: 1.5),
+            color: Colors.white.withValues(alpha: 0.25), width: 1.2),
         ),
-        child: const Center(child: Text('Kapat',
-          style: TextStyle(color: Colors.white, fontSize: 16,
-              fontWeight: FontWeight.bold))),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+            SizedBox(width: 2),
+            Text('Geri Git',
+              style: TextStyle(color: Colors.white, fontSize: 15,
+                  fontWeight: FontWeight.w500)),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _secimBtn(BuildContext context, String label, String tur) {
+  Widget _secimBtn(String label, String tur) {
     return GestureDetector(
       onTap: () => _onSecim(tur),
       child: Container(
@@ -281,15 +400,33 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: Row(children: [
-                IconButton(
-                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-                  onPressed: _goBack,
+                GestureDetector(
+                  onTap: _goBack,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.10),
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(
+                        color: Colors.white.withValues(alpha: 0.25)),
+                    ),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                        SizedBox(width: 2),
+                        Text('Geri Git',
+                          style: TextStyle(color: Colors.white, fontSize: 15,
+                              fontWeight: FontWeight.w500)),
+                      ],
+                    ),
+                  ),
                 ),
                 const Expanded(child: Text('YANA',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white, fontSize: 20,
                       fontWeight: FontWeight.bold, letterSpacing: 1.2))),
-                const SizedBox(width: 48),
+                const SizedBox(width: 80), // dengeleyici
               ]),
             ),
 
@@ -311,31 +448,84 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: Column(children: [
-                        _secimBtn(context, 'Bana Dair', 'bana'),
+                        _secimBtn('Bana Dair', 'bana'),
                         const SizedBox(height: 16),
-                        _secimBtn(context, 'Yaşama Dair', 'yasama'),
+                        _secimBtn('Yaşama Dair', 'yasama'),
                       ]),
                     ),
                   ],
                 ),
               )
 
-            // ── animasyon adımları (gorselKayiyor / odaklanma / yagmur / icerik) ──
+            // ── animasyon adımları ────────────────────────────────────────
+            else if (_adim == _YanaAdim.icerik)
+              // ── icerik: üst yarı görsel, alt yarı kehanet metni ──────────
+              Expanded(
+                child: Column(
+                  children: [
+                    // Üst: Yana görseli glow ile
+                    Expanded(
+                      flex: 1,
+                      child: Center(child: _buildGlowImage()),
+                    ),
+                    // Alt: Kehanet metni
+                    Expanded(
+                      flex: 1,
+                      child: AnimatedBuilder(
+                        animation: _fadeAnim,
+                        builder: (ctx, child) =>
+                            Opacity(opacity: _fadeAnim.value, child: child),
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                margin: const EdgeInsets.fromLTRB(20, 0, 20, 12),
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withValues(alpha: 0.07),
+                                  borderRadius: BorderRadius.circular(18),
+                                  border: Border.all(
+                                    color: const Color(0xFFFF55FF).withValues(alpha: 0.30),
+                                    width: 1.2,
+                                  ),
+                                ),
+                                child: SingleChildScrollView(
+                                  child: RichTextParser.build(
+                                    _metin,
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      height: 1.7,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                              child: _buildCloseButton(),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+
+            // ── gorselKayiyor / odaklanma / yagmur ───────────────────────
             else
               Expanded(
                 child: LayoutBuilder(builder: (ctx, bc) {
                   final h = bc.maxHeight;
-                  // Görsel Alignment(0, -0.82) ile Stack içinde nerede biter:
-                  //   top  = ((-0.82+1)/2) * (h - _imgSize)  = 0.09 * (h - 180)
-                  //   bottom = top + _imgSize
                   final imgTop    = 0.09 * (h - _imgSize);
                   final imgBottom = imgTop + _imgSize;
-                  // Alt içerik (odaklanma/yağmur) dikey ortası: görsel altı ile ekran altı arası
                   final lowerMid  = imgBottom + (h - imgBottom) / 2;
 
                   return Stack(children: [
 
-                    // ── Görsel: merkez → tepe animasyonu ─────────────────
+                    // Görsel: merkez → tepe animasyonu
                     AnimatedBuilder(
                       animation: _slideAnim,
                       builder: (ctx, child) => Align(
@@ -349,69 +539,42 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                       child: _buildGlowImage(),
                     ),
 
-                    // ── odaklanma + yagmur: AYNI widget ağacı ────────────
-                    // _rainCtrl.value = 0 iken _buildRainChar statik görünür
-                    // → geçişte hiç görsel değişim olmaz, yağmur doğal başlar.
-                    if (_adim == _YanaAdim.odaklanma ||
-                        _adim == _YanaAdim.yagmur)
+                    // odaklanma: metin + ElegantHourglass (yagmur adımında gizle)
+                    if (_adim == _YanaAdim.odaklanma)
                       Positioned(
-                        top: lowerMid - 60,
+                        top: lowerMid - 70,
                         left: 0, right: 0,
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            // Metin — bireysel karakterler olarak
-                            Wrap(
-                              alignment: WrapAlignment.center,
-                              children: [
-                                for (int i = 0; i < _rainChars.length - 1; i++)
-                                  _buildRainChar(i),
-                              ],
+                            const Text(
+                              'Kehanetine odaklanıyorum...',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white70,
+                                fontSize: 16,
+                                height: 1.6,
+                              ),
                             ),
                             const SizedBox(height: 20),
-                            // Kum saati — ayrı satırda, büyük font
-                            _buildRainChar(_rainChars.length - 1),
+                            const ElegantHourglass(size: 56, color: Colors.white),
                           ],
                         ),
                       ),
 
-                    // ── icerik: kehanet yazısı + kapat butonu ─────────────
-                    if (_adim == _YanaAdim.icerik) ...[
+                    // yagmur: karakterler + kum saati emoji birlikte düşüyor
+                    if (_adim == _YanaAdim.yagmur)
                       Positioned(
-                        top:    imgBottom + 24,
-                        bottom: 72,
-                        left:   24, right: 24,
-                        child: AnimatedBuilder(
-                          animation: _fadeAnim,
-                          builder: (ctx, child) =>
-                              Opacity(opacity: _fadeAnim.value, child: child),
-                          // ConstrainedBox + Center: metin kısa ise dikeyde ortalanır,
-                          // uzunsa scroll edilebilir
-                          child: LayoutBuilder(
-                            builder: (ctx, bc) => SingleChildScrollView(
-                              child: ConstrainedBox(
-                                constraints:
-                                    BoxConstraints(minHeight: bc.maxHeight),
-                                child: Center(
-                                  child: Text(_metin,
-                                    textAlign: TextAlign.center,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16,
-                                      height: 1.7,
-                                    ),   // TextStyle
-                                  ),     // Text
-                                ),       // Center
-                              ),         // ConstrainedBox
-                            ),           // SingleChildScrollView / builder
-                          ),             // LayoutBuilder
-                        ),               // AnimatedBuilder
-                      ),                 // Positioned (icerik metin)
-                      Positioned(
-                        bottom: 16, left: 20, right: 20,
-                        child: _buildCloseButton(),
+                        top: lowerMid - 60,
+                        left: 0, right: 0,
+                        child: Wrap(
+                          alignment: WrapAlignment.center,
+                          children: [
+                            for (int i = 0; i < _rainChars.length; i++)
+                              _buildRainChar(i),
+                          ],
+                        ),
                       ),
-                    ],
 
                   ]);
                 }),

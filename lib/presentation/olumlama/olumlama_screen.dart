@@ -22,6 +22,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/ad_service.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/models/user_profile.dart';
@@ -56,6 +57,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
   int _index = 0;
   int _direction = 1; // +1 = ileri (sağ), -1 = geri (sol)
   bool _loading = true;
+  int _nextCount = 0; // ileri basma sayacı — her 5'te reklam
 
   // Arka plan görselleri (38 adet, olumlama_bgs/ klasöründe)
   static const List<String> _bgFiles = [
@@ -261,6 +263,10 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
       _index = (_index + 1) % _entries.length;
     });
     _startBgTransition(_bgPath(_index));
+    _nextCount++;
+    if (_nextCount % 5 == 0) {
+      AdService.instance.showInterstitial(throttle: false);
+    }
   }
 
   void _prev() {

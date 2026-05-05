@@ -11,6 +11,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
 
@@ -48,6 +49,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
   int  _direction    = 1;
   bool _loading      = true;
   bool _limitVisible = false;
+  int  _nextCount    = 0; // ileri basma sayacı — her 5'te reklam
   Timer? _limitTimer;
 
   @override
@@ -147,6 +149,10 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
       return;
     }
     setState(() { _direction = 1; _index++; });
+    _nextCount++;
+    if (_nextCount % 5 == 0) {
+      AdService.instance.showInterstitial(throttle: false);
+    }
   }
 
   void _prev() {

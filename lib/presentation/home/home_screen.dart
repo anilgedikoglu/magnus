@@ -553,11 +553,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   void _showHazirlaniyorBubble(String type) {
     final msg = _hazirlaniyorMessages[type] ?? 'Raporun hazırlanıyor...';
+    // Kahve falı balonunda ikon göster
+    final String? bubbleIcon = type == 'kahve'
+        ? 'assets/images/inbox_icons/kahve.png'
+        : null;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
         text: msg,
         gradient: const [Color(0xFF2A1060), Color(0xFF3D1F88)],
         borderColor: const Color(0xFF7755CC),
+        iconPath: bubbleIcon,
       ));
       _extraBubbles.add(_ExtraBubble(
         text: "Magnus'un ana menüsü karşında!",
@@ -811,6 +816,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             isActive: i == _typingIndex,
                             enableMarquee: i == 0,
                             onComplete: () => _onBubbleComplete(i),
+                            iconPath: bubbles[i].iconPath,
                           ),
                         ),
                       ),
@@ -1174,10 +1180,12 @@ class _ExtraBubble {
   final String text;
   final List<Color> gradient;
   final Color borderColor;
+  final String? iconPath; // opsiyonel — balon içinde sol tarafta küçük ikon
   const _ExtraBubble({
     required this.text,
     required this.gradient,
     required this.borderColor,
+    this.iconPath,
   });
 }
 
@@ -1379,6 +1387,7 @@ class _TypewriterChatBubble extends StatefulWidget {
   final bool isActive;
   final bool enableMarquee;
   final VoidCallback onComplete;
+  final String? iconPath;
 
   const _TypewriterChatBubble({
     super.key,
@@ -1388,6 +1397,7 @@ class _TypewriterChatBubble extends StatefulWidget {
     required this.isActive,
     required this.onComplete,
     this.enableMarquee = false,
+    this.iconPath,
   });
 
   @override
@@ -1507,7 +1517,7 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
     final displayText = widget.text.substring(0, safeCount);
 
     if (!widget.enableMarquee) {
-      return _ChatBubble(text: displayText, gradient: widget.gradient, borderColor: widget.borderColor);
+      return _ChatBubble(text: displayText, gradient: widget.gradient, borderColor: widget.borderColor, iconPath: widget.iconPath);
     }
 
     // Marquee-aware balon
@@ -1567,11 +1577,13 @@ class _ChatBubble extends StatelessWidget {
   final String text;
   final List<Color> gradient;
   final Color borderColor;
+  final String? iconPath;
 
   const _ChatBubble({
     required this.text,
     required this.gradient,
     required this.borderColor,
+    this.iconPath,
   });
 
   @override
@@ -1592,10 +1604,19 @@ class _ChatBubble extends StatelessWidget {
         ),
         border: Border.all(color: borderColor.withValues(alpha: 0.5)),
       ),
-      child: Text(
-        text,
-        style: const TextStyle(color: Colors.white, fontSize: 13, height: 1.4),
-      ),
+      child: iconPath != null
+          ? Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset(iconPath!, width: 22, height: 22,
+                    errorBuilder: (_, __, ___) => const SizedBox.shrink()),
+                const SizedBox(width: 8),
+                Flexible(child: Text(text,
+                    style: const TextStyle(color: Colors.white, fontSize: 13, height: 1.4))),
+              ],
+            )
+          : Text(text,
+              style: const TextStyle(color: Colors.white, fontSize: 13, height: 1.4)),
     );
   }
 }

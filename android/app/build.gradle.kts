@@ -16,7 +16,8 @@ if (keyPropertiesFile.exists()) {
 }
 
 android {
-    namespace = "com.magnus.magnus_app"
+    // namespace = R/BuildConfig package — applicationId'den bağımsız, değiştirilmedi
+    namespace = "com.futurastic.magnus"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
 
@@ -42,7 +43,9 @@ android {
 
     defaultConfig {
         applicationId = "com.futurastic.Magnus"
-        minSdk = flutter.minSdkVersion
+        // minSdk sabit 21 — Flutter'ın minimum değeri; flutter.minSdkVersion ile aynı
+        // ama açık olması Play Store uyumluluğu açısından daha güvenli
+        minSdk = 21
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName

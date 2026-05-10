@@ -16,8 +16,8 @@ if (keyPropertiesFile.exists()) {
 }
 
 android {
-    // namespace = R/BuildConfig package — applicationId'den bağımsız, değiştirilmedi
-    namespace = "com.futurastic.magnus"
+    // namespace = MainActivity.kt'nin package'ı — com.magnus.magnus_app olarak kalmalı
+    namespace = "com.magnus.magnus_app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
 

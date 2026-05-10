@@ -43,6 +43,11 @@
 
     <!-- Camera permission for coffee / palm / face fortune photo capture -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Camera PERMISSION implies android.hardware.camera required=true by default.
+         Override explicitly to false so devices without camera (tablets, Chromebooks)
+         that had the old Unity version can still receive this update. -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
     <!-- READ_EXTERNAL_STORAGE / READ_MEDIA_IMAGES kaldırıldı:
          image_picker Android 13+'ta sistem Photo Picker kullandığı için
          bu izinler gerekmez; Google Play politikasıyla çakışıyordu. -->

@@ -32,6 +32,8 @@ Her fal türünün metin seçim davranışı aşağıdaki tabloda tanımlıdır.
 | **Dert Ortağı** | — (AI üretimi) | — | ✅ Günde 1 |
 | **I-Ching** | ❌ Yok | ✅ Evet | ✅ Günde 1 |
 | **Japon Falı** | ❌ Yok | ✅ Evet | ✅ Günde 1 |
+| **El Falı** | — (AI üretimi) | — | ✅ Günde 1 |
+| **Yüz Falı** | — (AI üretimi) | — | ✅ Günde 1 |
 
 ---
 
@@ -1017,3 +1019,102 @@ Kaynak: `C:\src\magnus_app\assets\images\Yeniikonlar\digerfalcilar.png`
 | `biyoritim.json` | Çift-escape Türkçe (`\xE7` vb.) | 76 değer |
 
 **Bu tür hatalar yeni dönüşüm yapılırken de kontrol edilmeli** — bkz. → JSON VERİ TEMİZLİĞİ bölümü.
+
+---
+
+## ⚠️⚠️⚠️ Android — namespace vs applicationId KURALI (KRİTİK) ⚠️⚠️⚠️
+
+Bu iki alan **farklı şeylerdir** ve farklı olmak **zorundadır**. Karıştırma, uygulama Play Store'da çöker.
+
+| Alan | Değer | Değiştirme |
+|---|---|---|
+| `namespace` | `com.magnus.magnus_app` | **ASLA değiştirme** |
+| `applicationId` | `com.futurastic.Magnus` | **ASLA değiştirme** |
+
+### Neden Farklılar?
+
+- **`namespace`** → `MainActivity.kt`'nin `package` satırıyla eşleşmeli (`com.magnus.magnus_app`). Bu, `R.java` ve `BuildConfig`'in üretildiği pakettir. Değiştirirsen `ClassNotFoundException: com.futurastic.magnus.MainActivity` hatası alırsın.
+- **`applicationId`** → Play Store'daki paket adı. Google Play'de bu ID altında yayınlanıyor (`com.futurastic.Magnus`).
+
+### Geçmişte Yapılan Hata (2026-05-10)
+
+`namespace = "com.futurastic.magnus"` yazıldı → Play Store'da `ClassNotFoundException` crash → anında revert edildi.
+**Bir daha ASLA `namespace` değiştirme.**
+
+---
+
+## Google Play — Upgrade Compatibility (Kamera Sorunu)
+
+**Sorun:** Play Console'da "Bu sürüm, mevcut kullanıcıların yeni eklenen uygulama paketlerine geçmelerine izin vermediği için kullanıma sunulamaz" hatası.
+
+**Kök neden:** `CAMERA` iznini manifest'e eklemek, Android'in örtük `uses-feature` kuralını tetikler: `CAMERA` izni → `android.hardware.camera required=true` → kamerasız cihazlar (bazı tabletler, Chromebook'lar) bu APK'yı alamaz → upgrade engellenir.
+
+**Çözüm:** `AndroidManifest.xml`'e explicit `required="false"` override eklendi:
+```xml
+<uses-feature android:name="android.hardware.camera" android:required="false" />
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+```
+Bu satırlar **silinmemeli** — kamerasız cihazlara güncelleme gidebilmesi için zorunlu.
+
+---
+
+## El Falı / Yüz Falı — Inbox Akışı (2026-05-10)
+
+Her iki fal da analiz sonucunu **direkt ekranda göstermez**; inbox'a düşürür ve ana menüye döner.
+
+**El Falı (`el_fali_screen.dart`):**
+- Analiz tamamlanınca → `InboxItem` oluştur (unlockAt: +6 dakika) → inbox'a ekle
+- `ref.read(elFaliSentProvider.notifier).state = true` → `context.go('/home')`
+- Home'da `_checkElFaliSent()` tetiklenir → "El falın analiz ediliyor..." balonu gösterilir
+
+**Yüz Falı (`yuz_fali_foto_screen.dart`):**
+- Analiz tamamlanınca → `InboxItem` oluştur (`fortuneTypeKey: 'yuzfali'`, unlockAt: +6 dakika) → inbox'a ekle
+- `ref.read(yuzFaliSentProvider.notifier).state = true` → `context.go('/home')`
+- Home'da `_checkYuzFaliSent()` tetiklenir → "Yüz falın analiz ediliyor..." balonu gösterilir
+
+**FortuneType.yuzfali:**
+- `inbox_item.dart`'a `yuzfali` enum değeri eklendi
+- `home_screen.dart` `_iconAsset()`: elfali ikonlarını paylaşır
+- `inbox_item_card.dart` `_iconAsset()` + `_FallbackIcon`: yuzfali case eklendi
+- `inbox_detail_screen.dart`: `falbg/yuzfalibg.png` arka planı
+
+**Provider'lar (`providers.dart`):**
+```dart
+final elFaliSentProvider = StateProvider<bool>((ref) => false);
+final yuzFaliSentProvider = StateProvider<bool>((ref) => false);
+```
+
+---
+
+## Rewarded Reklam — Sadece Okunmamış İtemler (inbox_screen.dart)
+
+**Kural (2026-05-10'dan itibaren):** Rewarded reklam sadece **yeni ve okunmamış** inbox itemleri açılırken gösterilir. Zaten okunmuş iteme tıklanırsa reklam atlanır, direkt detay ekranı açılır.
+
+```dart
+void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
+  if (!item.isRead) {
+    AdService.instance.showRewarded(
+      onRewarded: () => _navigateToDetail(context, ref, item),
+      onFailed:   () => _navigateToDetail(context, ref, item),
+    );
+  } else {
+    _navigateToDetail(context, ref, item);
+  }
+}
+```
+
+---
+
+## Sürüm Geçmişi (Play Store)
+
+| versionCode | versionName | Tarih | Notlar |
+|---|---|---|---|
+| 200 | 10.4.0 | — | Son kabul edilen sürüm (Play Console'da) |
+| 201–211 | 10.5.x | 2026-05-03–04 | Asset optimizasyon, çeşitli düzeltmeler |
+| 212 | 10.6.0 | 2026-05-04 | Japon Falı eklendi |
+| 213 | 10.6.0 | — | Play Console'da reddedildi (upgrade compat.) |
+| 214 | 10.6.0 | — | Atlandı |
+| 215 | 10.6.0 | 2026-05-10 | Kamera fix, namespace revert |
+| 216 | 10.6.0 | 2026-05-10 | Mevcut sürüm — CLAUDE.md notları, son commit |
+
+**Bir sonraki build: versionCode 217**

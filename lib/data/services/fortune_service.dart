@@ -164,6 +164,8 @@ class FortuneService {
       final konuFiltered = _eligibleByKonu(eligible, falKonusu);
 
       // Tekrar gösterilmeme (konu bazında ayrı key)
+      // Kural: tüm uygun metinler gösterilene kadar aynı metin tekrar seçilemez.
+      // Sıfırlamada son gösterilen ID korunur → üst üste aynı metin gelmez.
       final shownKey = 'kahve_${bolum}_${falKonusu}_shown_ids';
       var shownIds = prefs.getStringList(shownKey) ?? [];
       var available = konuFiltered
@@ -171,9 +173,15 @@ class FortuneService {
           .toList();
 
       if (available.isEmpty) {
-        await prefs.remove(shownKey);
-        shownIds = [];
-        available = List.from(konuFiltered);
+        // Hepsi gösterildi → son ID'yi koruyarak sıfırla
+        final lastId = shownIds.isNotEmpty ? shownIds.last : null;
+        final resetShown = lastId != null ? [lastId] : <String>[];
+        await prefs.setStringList(shownKey, resetShown);
+        shownIds = resetShown;
+        available = konuFiltered
+            .where((t) => '${(t as Map)['id']}' != lastId)
+            .toList();
+        if (available.isEmpty) available = List.from(konuFiltered); // tek metin zorunlu tekrar
       }
 
       available.shuffle(_rng);

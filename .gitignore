@@ -46,3 +46,11 @@ app.*.map.json
 .claude/worktrees/
 .claude/settings.local.json
 app_secrets.dart
+
+# iOS signing — never commit certificates or keys
+*.key
+*.csr
+*.p12
+*.cer
+*.mobileprovision
+ios_certs/

@@ -739,8 +739,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             -1, () => _pushWithAd('/astrotakvim')),
         _MenuItem('Biyoritim', 'assets/images/falbg/biyoritim.png',
             -1, () => _pushWithAd('/biyoritim')),
-        _MenuItem('Doğum Haritası', 'assets/images/dogum.png',
-            1, () => _pushWithAd('/dogumharitasi')),
       ];
 
   // ─── Sayfa 2 ──────────────────────────────────────────────────────────────
@@ -791,8 +789,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             () => _onFortuneItemTap('kadercarki', '/kadercarki')),
         _MenuItem('Rüya Yorumu', 'assets/images/menu/ruyaozel.png', 1,
             () => _pushWithAd('/ruya_yorumu')),
-        // 5 yer tutucu — ikon eklendikçe buralar dolacak
-        ...List.generate(5, (_) =>
+        _MenuItem('Doğum Haritası', 'assets/images/dogum.png',
+            1, () => _pushWithAd('/dogumharitasi')),
+        // 4 yer tutucu — ikon eklendikçe buralar dolacak
+        ...List.generate(4, (_) =>
             _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {})),
       ];
 

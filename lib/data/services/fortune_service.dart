@@ -112,27 +112,59 @@ class FortuneService {
   //   3. Uygun metinler bitince sıfırlanır ve baştan başlanır
   // Bölümler arasına boş satır eklenir.
 
-  /// fal_konusu eşleşmesi — tek bölüm için
-  /// konu: 'ask' | 'kariyer' | 'saglik' | 'genel'
+  /// fal_konusu eşleşmesi — tek bölüm, tek konu
   static bool _matchesFalKonusu(Map t, String konu) {
     final konular = (t['fal_konusu'] as List?)
         ?.map((e) => e.toString().toLowerCase())
         .toList() ?? [];
-    if (konular.isEmpty) return true; // tag yoksa herkese açık
+    if (konular.isEmpty) return true;
     return konular.contains(konu.toLowerCase());
   }
 
-  /// Bir bölüm için konu filtreli seçim:
-  /// Level 1: konu eşleşmesi  →  Level 2: 'genel'  →  Level 3: konu yok sayılır
+  /// fal_konusu eşleşmesi — birden fazla konudan herhangi biri
+  static bool _matchesAnyKonu(Map t, List<String> konular) {
+    final tags = (t['fal_konusu'] as List?)
+        ?.map((e) => e.toString().toLowerCase())
+        .toList() ?? [];
+    if (tags.isEmpty) return true;
+    return konular.any((k) => tags.contains(k));
+  }
+
+  /// Genel dışı konular için konu filtreli havuz:
+  /// L1: konu eşleşmesi → L2: genel → L3: filtresiz
   List _eligibleByKonu(List eligible, String konu) {
-    // L1: tam eşleşme
     var filtered = eligible.where((t) => _matchesFalKonusu(t as Map, konu)).toList();
     if (filtered.isNotEmpty) return filtered;
-    // L2: genel
     filtered = eligible.where((t) => _matchesFalKonusu(t as Map, 'genel')).toList();
     if (filtered.isNotEmpty) return filtered;
-    // L3: konu filtresini kaldır
     return eligible;
+  }
+
+  /// Genel konu için kademeli genişleme basamakları.
+  /// Her basamak bir öncekinden daha geniş bir konu kümesi.
+  static const _genelExpansions = [
+    ['genel'],
+    ['genel', 'ask'],
+    ['genel', 'saglik'],
+    ['genel', 'kariyer'],
+    ['genel', 'ask', 'saglik'],
+    ['genel', 'ask', 'kariyer'],
+    ['genel', 'saglik', 'kariyer'],
+    ['ask', 'saglik', 'kariyer'],
+    ['genel', 'ask', 'saglik', 'kariyer'], // tam mix
+  ];
+
+  /// "genel" seçildiğinde kademeli genişleme ile no-repeat havuz döner.
+  /// Gösterilmemiş metin olan ilk basamak kullanılır.
+  List _availableForGenel(List eligible, List<String> shownIds) {
+    for (final topics in _genelExpansions) {
+      final pool = eligible
+          .where((t) => _matchesAnyKonu(t as Map, topics))
+          .where((t) => !shownIds.contains('${(t as Map)['id']}'))
+          .toList();
+      if (pool.isNotEmpty) return pool;
+    }
+    return []; // tüm basamaklar tükendi → sıfırlama gerekli
   }
 
   Future<InboxItem> generateCoffeeFortune({
@@ -163,42 +195,33 @@ class FortuneService {
       // Konu filtresi (kademeleli)
       final konuFiltered = _eligibleByKonu(eligible, falKonusu);
 
-      // Tekrar gösterilmeme (konu bazında ayrı key)
+      // Tekrar gösterilmeme (konu + bölüm bazında ayrı key)
       // Kural: tüm uygun metinler gösterilene kadar aynı metin tekrar seçilemez.
       // Sıfırlamada son gösterilen ID korunur → üst üste aynı metin gelmez.
-      //
-      // "genel" seçildiğinde fallback kademeleri:
-      //   L1) Genel-taglli metinlerden no-repeat seç
-      //   L2) Genel bitti → TÜM konuların karışımından (eligible) no-repeat seç
-      //   L3) Tüm mix de bitti → son ID koruyarak sıfırla, tüm mix'ten başa dön
       final shownKey = 'kahve_${bolum}_${falKonusu}_shown_ids';
       var shownIds = prefs.getStringList(shownKey) ?? [];
-      var available = konuFiltered
-          .where((t) => !shownIds.contains('${(t as Map)['id']}'))
-          .toList();
+      List available;
 
-      if (available.isEmpty) {
-        if (falKonusu == 'genel') {
-          // Genel metinler bitti → tam mix'e genişle (diğer konular dahil)
-          final mixAvailable = eligible
-              .where((t) => !shownIds.contains('${(t as Map)['id']}'))
+      if (falKonusu == 'genel') {
+        // Genel: kademeli genişleme — genel → genel+1 → genel+2 → tam mix
+        available = _availableForGenel(eligible, shownIds);
+        if (available.isEmpty) {
+          // Tüm basamaklar tükendi → son ID koruyarak sıfırla
+          final lastId = shownIds.isNotEmpty ? shownIds.last : null;
+          final resetShown = lastId != null ? [lastId] : <String>[];
+          await prefs.setStringList(shownKey, resetShown);
+          shownIds = resetShown;
+          available = eligible
+              .where((t) => '${(t as Map)['id']}' != lastId)
               .toList();
-          if (mixAvailable.isNotEmpty) {
-            // Mix'te hâlâ gösterilmemiş metin var → no-repeat korumalı, sıfırlamadan devam
-            available = mixAvailable;
-          } else {
-            // Mix de bitti → son ID koruyarak sıfırla, eligible'dan başa dön
-            final lastId = shownIds.isNotEmpty ? shownIds.last : null;
-            final resetShown = lastId != null ? [lastId] : <String>[];
-            await prefs.setStringList(shownKey, resetShown);
-            shownIds = resetShown;
-            available = eligible
-                .where((t) => '${(t as Map)['id']}' != lastId)
-                .toList();
-            if (available.isEmpty) available = List.from(eligible);
-          }
-        } else {
-          // Diğer konular: konu havuzunda son ID koruyarak sıfırla
+          if (available.isEmpty) available = List.from(eligible);
+        }
+      } else {
+        // Diğer konular (ask/kariyer/saglik): konu havuzunda no-repeat
+        available = konuFiltered
+            .where((t) => !shownIds.contains('${(t as Map)['id']}'))
+            .toList();
+        if (available.isEmpty) {
           final lastId = shownIds.isNotEmpty ? shownIds.last : null;
           final resetShown = lastId != null ? [lastId] : <String>[];
           await prefs.setStringList(shownKey, resetShown);

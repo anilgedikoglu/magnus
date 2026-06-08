@@ -1,28 +1,43 @@
 workflows:
 
-  # ── iOS App Store Release ────────────────────────────────────────────────────
+  # ── iOS App Store Release (Manuel Signing) ──────────────────────────────────
   ios-release:
     name: Magnus iOS — App Store Release
     max_build_duration: 60
     instance_type: mac_mini_m2
 
-    integrations:
-      app_store_connect: Magnus App Store Connect  # Codemagic panelinde bu isimle tanımla
-
     environment:
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.futurastic.Magnus
-      vars:
-        BUNDLE_ID: com.futurastic.Magnus
-        APP_STORE_APPLE_ID: "6738625684"   # App Store Connect > App > App Information > Apple ID
       flutter: stable
       xcode: latest
       cocoapods: default
+      vars:
+        BUNDLE_ID: com.futurastic.Magnus
+        TEAM_ID: SN5Y726ZKF
+        # IOS_CERTIFICATE            → Codemagic UI'da "File" türünde ekle (.p12 base64)
+        # IOS_CERTIFICATE_PASSWORD   → Codemagic UI'da "Secure" string ekle
+        # IOS_PROVISIONING_PROFILE   → Codemagic UI'da "File" türünde ekle (.mobileprovision base64)
 
     scripts:
       - name: Flutter pub get
         script: flutter pub get
+
+      - name: Set up keychain
+        script: keychain initialize
+
+      - name: Import distribution certificate
+        script: |
+          echo "$IOS_CERTIFICATE" | base64 --decode > /tmp/ios_distribution.p12
+          keychain add-certificates \
+            --certificate /tmp/ios_distribution.p12 \
+            --certificate-password "$IOS_CERTIFICATE_PASSWORD"
+
+      - name: Install provisioning profile
+        script: |
+          PROFILES_HOME="$HOME/Library/MobileDevice/Provisioning Profiles"
+          mkdir -p "$PROFILES_HOME"
+          echo "$IOS_PROVISIONING_PROFILE" | base64 --decode \
+            > "$PROFILES_HOME/Magnus_App_Store_Profile.mobileprovision"
+          echo "Installed: Magnus_App_Store_Profile.mobileprovision"
 
       - name: Flutter build IPA
         script: |
@@ -33,11 +48,9 @@ workflows:
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
-      - flutter_drive.log
 
     publishing:
       app_store_connect:
-        auth: integration
+        auth: integration          # Codemagic UI → Integrations → App Store Connect
         submit_to_testflight: true
-        submit_to_app_store: false   # true yapınca doğrudan production'a gider
-
+        submit_to_app_store: false

@@ -812,7 +812,7 @@
     },
     {
       "id": 59,
-      "metin": "Diyeceklerim bu defa da bunlardı. Şimdi lütfen rahat bir nefes al, duygularını izle ve nefesini verirken negatif düşüncelerinden arın {{isim}}. Gelecekte senin için her şeyin harika olacağına yemin edebilirim ama ispatlayamam; bekleyip kendin görmelisin. <sprite=7>\n\nBir sonraki kahve falında görüşmek üzere...\n\nMagnus",
+      "metin": "Diyeceklerim bu defa da bunlardı. Şimdi lütfen rahat bir nefes al, duygularını izle ve nefesini verirken negatif düşüncelerinden arın {{isim}}. Gelecekte senin için her şeyin harika olacağına yemin edebilirim ama ispatlayamam; bekleyip kendin görmelisin. \n\nBir sonraki kahve falında görüşmek üzere...\n\nMagnus",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -834,7 +834,7 @@
     },
     {
       "id": 61,
-      "metin": "Elindeki imkanları en iyi şekilde değerlendirmeye başlamanı ve denizde yaşayıp da yüzemeyen yengeçler gibi olmamanı dilerim. <sprite=7> Bir sonraki kahve keyfinde yeniden görüşmek üzere {{isim}}.\n\nSevgiyle kal... \n\nMagnus",
+      "metin": "Elindeki imkanları en iyi şekilde değerlendirmeye başlamanı ve denizde yaşayıp da yüzemeyen yengeçler gibi olmamanı dilerim.  Bir sonraki kahve keyfinde yeniden görüşmek üzere {{isim}}.\n\nSevgiyle kal... \n\nMagnus",
       "kosullar": [
         {
           "degisken": "yasmax",
@@ -1008,7 +1008,7 @@
     },
     {
       "id": 72,
-      "metin": "Bu fincanın yorumuyla ilgili benden şimdilik bu kadar {{isim}}. Gel bir özlü sözle noktalayalım, ne demişler; \"dum vita est spes est\" yani \"yaşam devam ettiği sürece umut vardır.\" Sen yeter ki bir kahve iç! <sprite=7>\n\nGörüşürüz...\n\nMagnus",
+      "metin": "Bu fincanın yorumuyla ilgili benden şimdilik bu kadar {{isim}}. Gel bir özlü sözle noktalayalım, ne demişler; \"dum vita est spes est\" yani \"yaşam devam ettiği sürece umut vardır.\" Sen yeter ki bir kahve iç! \n\nGörüşürüz...\n\nMagnus",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -1104,7 +1104,7 @@
     },
     {
       "id": 81,
-      "metin": "Bir fal yorumunun daha sonuna geldik. Cebinde paran, kartında limitin hiç bitmesin. Artsın eksilmesin, taşsın dökülmesin. <sprite=7> Yeniden görüşene dek, bolluk ve bereket içinde kal {{isim}}!",
+      "metin": "Bir fal yorumunun daha sonuna geldik. Cebinde paran, kartında limitin hiç bitmesin. Artsın eksilmesin, taşsın dökülmesin.  Yeniden görüşene dek, bolluk ve bereket içinde kal {{isim}}!",
       "kosullar": [
         {
           "degisken": "meslek",
@@ -1148,7 +1148,7 @@
     },
     {
       "id": 84,
-      "metin": "Süremin ve sözlerimin sonundayız. Sonraki kahve falı ziyaretinde tekrar görüşmek üzere {{isim}}; biletler yandı, geçmiş olsun! <sprite=84>\n\nMagnus",
+      "metin": "Süremin ve sözlerimin sonundayız. Sonraki kahve falı ziyaretinde tekrar görüşmek üzere {{isim}}; biletler yandı, geçmiş olsun! \n\nMagnus",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -1159,7 +1159,7 @@
     },
     {
       "id": 85,
-      "metin": "Yorumun sonuna geldik. Bu güzel falı iğrenç bir espriyle noktalayalım mı {{isim}}? Ayrıldığın {{data, cinsiyet=erkek, kızın | cinsiyet=kadın, çocuğun | cinsiyet=lgbt, kişinin}} karşısına geç ve ona de ki; \"dönersin sandım, lahmacun çıktın!\" <sprite=84>\n\nGülümsedin, itiraf et. <sprite=0> Benden alacağın bir sonraki kahve falı yorumunda görüşmek üzere...\n\nMagnus",
+      "metin": "Yorumun sonuna geldik. Bu güzel falı iğrenç bir espriyle noktalayalım mı {{isim}}? Ayrıldığın {{data, cinsiyet=erkek, kızın | cinsiyet=kadın, çocuğun | cinsiyet=lgbt, kişinin}} karşısına geç ve ona de ki; \"dönersin sandım, lahmacun çıktın!\" \n\nGülümsedin, itiraf et.  Benden alacağın bir sonraki kahve falı yorumunda görüşmek üzere...\n\nMagnus",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -1176,7 +1176,7 @@
     },
     {
       "id": 86,
-      "metin": "Geldik falın sonuna. Barışma gibi bir durumunuz olursa, kahve falına seni muhakkak tekrar bekliyorum. Olmazsa da bekliyorum. Yarın gel; ya da {{gun_2}} gününden bir gün önce gel. Sen {{dogum yili}} doğumlusun, {{gun_1}} günü yeniden gelmelisin. Bir şeyi bahane et, tekrar gel işte {{isim}}; söyletme beni... <sprite=0>\n\nGörüşürüz!\n\nMagnus",
+      "metin": "Geldik falın sonuna. Barışma gibi bir durumunuz olursa, kahve falına seni muhakkak tekrar bekliyorum. Olmazsa da bekliyorum. Yarın gel; ya da {{gun_2}} gününden bir gün önce gel. Sen {{dogum yili}} doğumlusun, {{gun_1}} günü yeniden gelmelisin. Bir şeyi bahane et, tekrar gel işte {{isim}}; söyletme beni... \n\nGörüşürüz!\n\nMagnus",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -1544,7 +1544,7 @@
     },
     {
       "id": 121,
-      "metin": "Sanırım diyeceklerimin sonuna geldik. En güzel düşlerinin fincanlara ayan beyan yansıdığı yepyeni fallarda buluşalım Değerli {{isim}}.\n\nGörüşürüz! <sprite=7>\n\nMagnus",
+      "metin": "Sanırım diyeceklerimin sonuna geldik. En güzel düşlerinin fincanlara ayan beyan yansıdığı yepyeni fallarda buluşalım Değerli {{isim}}.\n\nGörüşürüz! \n\nMagnus",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -1571,7 +1571,7 @@
     },
     {
       "id": 123,
-      "metin": "Geldik yolun sonuna. Hoşuna gitmeyen şeyler söylediysem, duymadın farzet. Kırdıysam affet. Sen mutluluğun izlerini takip et!... <sprite=10>\n\nSevgiler, \n\nMagnus",
+      "metin": "Geldik yolun sonuna. Hoşuna gitmeyen şeyler söylediysem, duymadın farzet. Kırdıysam affet. Sen mutluluğun izlerini takip et!... \n\nSevgiler, \n\nMagnus",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -1582,7 +1582,7 @@
     },
     {
       "id": 124,
-      "metin": "Yorumun sonuna geldik {{isim}}. Fincan duvarları suyun altında boşalırken gönlün huzurla dolsun! <sprite=7>\n\nBir sonraki kahve falında buluşmak dileğiyle,\n\nSevgiler.\n\nMagnus",
+      "metin": "Yorumun sonuna geldik {{isim}}. Fincan duvarları suyun altında boşalırken gönlün huzurla dolsun! \n\nBir sonraki kahve falında buluşmak dileğiyle,\n\nSevgiler.\n\nMagnus",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -1593,7 +1593,7 @@
     },
     {
       "id": 125,
-      "metin": "Değerli {{isim}}, sana aktaracaklarım şimdilik bu kadar.\n\nBana telefonunda yer ayırdığın ve fincanını değerlendirme fırsatı verdiğin için teşekkür ederim. <sprite=10>\n\nYeni fallar için her zaman yanındayım.\n\nGörüşmek üzere...\n\nMagnus",
+      "metin": "Değerli {{isim}}, sana aktaracaklarım şimdilik bu kadar.\n\nBana telefonunda yer ayırdığın ve fincanını değerlendirme fırsatı verdiğin için teşekkür ederim. \n\nYeni fallar için her zaman yanındayım.\n\nGörüşmek üzere...\n\nMagnus",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -1738,7 +1738,7 @@
     },
     {
       "id": 134,
-      "metin": "Değerli {{isim}} kahve falının sonuna geldik. Lütfen ailene ve sevgiline çok selamlarımı ilet. Nazarlardan kaçının! <sprite=7>\n\nSevgiler,\n\nMagnus",
+      "metin": "Değerli {{isim}} kahve falının sonuna geldik. Lütfen ailene ve sevgiline çok selamlarımı ilet. Nazarlardan kaçının! \n\nSevgiler,\n\nMagnus",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -1754,7 +1754,7 @@
     },
     {
       "id": 135,
-      "metin": "En kısa zamanda yeni bir kahve falında görüşmek dileğiyle {{isim}}. Hayatına biri girdiğinde inşallah ondan da konuşacağız. <sprite=7>\n\nSevgiler,\n\nMagnus",
+      "metin": "En kısa zamanda yeni bir kahve falında görüşmek dileğiyle {{isim}}. Hayatına biri girdiğinde inşallah ondan da konuşacağız. \n\nSevgiler,\n\nMagnus",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -1770,7 +1770,7 @@
     },
     {
       "id": 136,
-      "metin": "Evet {{isim}}, geldik bu falın da sonuna. Kim bilir; belki bir sonraki kahve falına kadar bir işe de başlamış olursun. <sprite=0> Her şey gönlünce, vakitlice olsun...\n\nSevgiler,\n\nMagnus",
+      "metin": "Evet {{isim}}, geldik bu falın da sonuna. Kim bilir; belki bir sonraki kahve falına kadar bir işe de başlamış olursun.  Her şey gönlünce, vakitlice olsun...\n\nSevgiler,\n\nMagnus",
       "kosullar": [
         {
           "degisken": "meslek",
@@ -1866,7 +1866,7 @@
     },
     {
       "id": 142,
-      "metin": "Yandı közler, bitti sözler ve geleceğe çevrildi gözler. Sözlerime son verirken, işinde ve mutlulukta sana dileğim hep \"yükselişler.\" <sprite=0>\n\nTekrar görüşünceye dek, sevgiyle kal.\n\nMagnus",
+      "metin": "Yandı közler, bitti sözler ve geleceğe çevrildi gözler. Sözlerime son verirken, işinde ve mutlulukta sana dileğim hep \"yükselişler.\" \n\nTekrar görüşünceye dek, sevgiyle kal.\n\nMagnus",
       "kosullar": [
         {
           "degisken": "meslek",

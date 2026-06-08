@@ -134,7 +134,7 @@
     },
     {
       "id": 5,
-      "metin": "Vallahi hiç \"kahve falıyla Magnus beni evlendirdi\" deme! Telvelerinin daha alt tabakalarında, bilimsel adı \"Papilio Ulysses\" olan, mavi kanatlı harika bir kelebek gördüm. (Ki bu bizim kelebek <sprite=7>) Bu kelebek, yüzü, huyu ve soyu çok güzel bir insanla, görkemli bir evlilik yapılacağına işarettir {{isim}}. Şunu da ilave etmeliyim; buradaki \"görkemden\" kasıt, şaşalı ve bol para harcanan bir düğün değil. Tam aksine, senin mütevazı bir şekilde imza atacağını fakat yan yanayken çizdiğiniz mutlu portre nedeniyle çevrenizdeki insanlar tarafından hayranlıkla takip edileceğinizi hissediyorum.",
+      "metin": "Vallahi hiç \"kahve falıyla Magnus beni evlendirdi\" deme! Telvelerinin daha alt tabakalarında, bilimsel adı \"Papilio Ulysses\" olan, mavi kanatlı harika bir kelebek gördüm. (Ki bu bizim kelebek ) Bu kelebek, yüzü, huyu ve soyu çok güzel bir insanla, görkemli bir evlilik yapılacağına işarettir {{isim}}. Şunu da ilave etmeliyim; buradaki \"görkemden\" kasıt, şaşalı ve bol para harcanan bir düğün değil. Tam aksine, senin mütevazı bir şekilde imza atacağını fakat yan yanayken çizdiğiniz mutlu portre nedeniyle çevrenizdeki insanlar tarafından hayranlıkla takip edileceğinizi hissediyorum.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -194,7 +194,7 @@
     },
     {
       "id": 9,
-      "metin": "Telvelerinin alt kenarına bir \"hüdhüd kuşu\" konmuş. Kaydırak gibi kıvrılan gagasının ucunda senin için bir armağan var. Küçücük, kalp şeklinde bir kolye ucu bu! İnsanlar tarafından çok seviliyor ve takdir ediliyorsun {{isim}} sen. Bu sevginin yakında somut bir delili olacak. {{kelime, Bir haftayı aşmayacak bir süre zarfında | Üç dört günü aşmayacak bir süre zarfında | İki haftayı aşmayacak bir süre zarfında | Birkaç günü aşmayacak bir süre zarfında}}, adında {{kelime, iki sesli harf bulunan bir dostun | K ya da L harfi bulunan bir yakının | M ya da N harfi bulunan bir yakının | R ya da T harfi bulunan bir yakının | V ya da Z harfi bulunan bir yakının}}, sana ihtiyacın olan bir konuda yardımcı olarak işini kolaylaştıracak. Küçücük bir hareket dahi olsa, sende büyük bir sevince yol açacağını hissediyorum. Bik bik bik! <sprite=10>",
+      "metin": "Telvelerinin alt kenarına bir \"hüdhüd kuşu\" konmuş. Kaydırak gibi kıvrılan gagasının ucunda senin için bir armağan var. Küçücük, kalp şeklinde bir kolye ucu bu! İnsanlar tarafından çok seviliyor ve takdir ediliyorsun {{isim}} sen. Bu sevginin yakında somut bir delili olacak. {{kelime, Bir haftayı aşmayacak bir süre zarfında | Üç dört günü aşmayacak bir süre zarfında | İki haftayı aşmayacak bir süre zarfında | Birkaç günü aşmayacak bir süre zarfında}}, adında {{kelime, iki sesli harf bulunan bir dostun | K ya da L harfi bulunan bir yakının | M ya da N harfi bulunan bir yakının | R ya da T harfi bulunan bir yakının | V ya da Z harfi bulunan bir yakının}}, sana ihtiyacın olan bir konuda yardımcı olarak işini kolaylaştıracak. Küçücük bir hareket dahi olsa, sende büyük bir sevince yol açacağını hissediyorum. Bik bik bik!",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -293,7 +293,7 @@
     },
     {
       "id": 14,
-      "metin": "Bir süredir özel hayatındaki sıkıntılardan dolayı keyfinin hiç yerinde olmadığı, fincanında öbek öbek toplanan telvelerden de belli. Ancak falındaki son detaylarda, bir tavşanın kuyruğuna asılmış küçük bir {{data, cinsiyet=erkek, erkek çocuğu | cinsiyet=kadın, kız çocuğu | cinsiyet=lgbt, çocuk}} takıldı gözüme. Önlerinde ise senin gibi {{yas_-3}} ve {{yas_3}} yaşları arasında olduğunu tahmin ettiğim, güleç yüzlü bir {{data, cinsiyet=erkek, kadın | cinsiyet=kadın, erkek | cinsiyet=lgbt, insan}} var {{isim}}. O insanın işaretiyle, \"mutluluğu\" sembolize ettiğini hissettiğim tavşan, zıplamaya başlayacak. Sen de onunla birlikte zıplayıp, sevinçten havalara uçacaksın! Ne konuda sevineceğinse muallak. <sprite=34>",
+      "metin": "Bir süredir özel hayatındaki sıkıntılardan dolayı keyfinin hiç yerinde olmadığı, fincanında öbek öbek toplanan telvelerden de belli. Ancak falındaki son detaylarda, bir tavşanın kuyruğuna asılmış küçük bir {{data, cinsiyet=erkek, erkek çocuğu | cinsiyet=kadın, kız çocuğu | cinsiyet=lgbt, çocuk}} takıldı gözüme. Önlerinde ise senin gibi {{yas_-3}} ve {{yas_3}} yaşları arasında olduğunu tahmin ettiğim, güleç yüzlü bir {{data, cinsiyet=erkek, kadın | cinsiyet=kadın, erkek | cinsiyet=lgbt, insan}} var {{isim}}. O insanın işaretiyle, \"mutluluğu\" sembolize ettiğini hissettiğim tavşan, zıplamaya başlayacak. Sen de onunla birlikte zıplayıp, sevinçten havalara uçacaksın! Ne konuda sevineceğinse muallak.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -1274,7 +1274,7 @@
     },
     {
       "id": 64,
-      "metin": "Fincan tabanında çok ilginç bir kitap görseli var. Bu kitabı sana nasıl tarif etsem bilemiyorum {{isim}}; ama ondan inanılmaz bir enerji aldım. Bakılamayacak derecede parlak ve göz kamaştırıcı olan bu kitap, sanırım meleklerden başka kimsenin dokunamadığı Levh-i mahfûz'u temsil ediyor. <sprite=85> Gökte ve yerdeki tüm gizliliklerin, içinde açıkça belirtildiğini bildiğimiz bu kitabın karşısında ise şehadet parmağını havaya kaldırmış biri var. Sevgilin olduğunu hissettiğim bu insan, adeta bir şey için yemin ediyor! \\🧐 Belli ki sana bir söz verecek. Bu yeminin arkasında durduğu sürece, bu kitapta sizin için \"ayrılık\" yazmadığından emin olabilirsin.",
+      "metin": "Fincan tabanında çok ilginç bir kitap görseli var. Bu kitabı sana nasıl tarif etsem bilemiyorum {{isim}}; ama ondan inanılmaz bir enerji aldım. Bakılamayacak derecede parlak ve göz kamaştırıcı olan bu kitap, sanırım meleklerden başka kimsenin dokunamadığı Levh-i mahfûz'u temsil ediyor.  Gökte ve yerdeki tüm gizliliklerin, içinde açıkça belirtildiğini bildiğimiz bu kitabın karşısında ise şehadet parmağını havaya kaldırmış biri var. Sevgilin olduğunu hissettiğim bu insan, adeta bir şey için yemin ediyor! \\🧐 Belli ki sana bir söz verecek. Bu yeminin arkasında durduğu sürece, bu kitapta sizin için \"ayrılık\" yazmadığından emin olabilirsin.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -1479,7 +1479,7 @@
     },
     {
       "id": 77,
-      "metin": "{{isim}}, ısırılmış bir elma görüyorum fincanının alt yüzeyinde. Yok yok, bu normal bir elma değil; bildiğimiz \"Apple\" şirketinin logosu. Bu sembol {{kelime, bir mağaza camekanının üzerinde | küçük, beyaz bir çanta ya da kutunun üzerinde | bir bilgisayar ekranındaki çeşitli ilanların üzerinde}} gözüküyor. Telvelerde hemen oracıkta bir de \"erkek\" gölgesi var. Bu erkeğin sevgilin olduğunu tahmin ediyorum. Vallahi reklam değil; anlaşılan o ki erkek arkadaşın sana {{sayi,3,36}} hafta içinde bir Apple {{kelime, Watch alacak. iPhone'un var mıydı ki? | iPad tablet alacak. Sanırım ihtiyacın vardı. | Macbook Air bilgisayar alacak. Eğer varsa, eski bilgisayarın yenilenmiş olur. | iPhone alacak. Yeni modelinden herhalde. | iPhone alacak. İyi, telefonunu bahaneyle yenilemiş olursun. | iPhone alacak. İyi; Magnus'a daha geniş geniş girersin...}} <sprite=0> Çok sevineceğine inanıyorum.",
+      "metin": "{{isim}}, ısırılmış bir elma görüyorum fincanının alt yüzeyinde. Yok yok, bu normal bir elma değil; bildiğimiz \"Apple\" şirketinin logosu. Bu sembol {{kelime, bir mağaza camekanının üzerinde | küçük, beyaz bir çanta ya da kutunun üzerinde | bir bilgisayar ekranındaki çeşitli ilanların üzerinde}} gözüküyor. Telvelerde hemen oracıkta bir de \"erkek\" gölgesi var. Bu erkeğin sevgilin olduğunu tahmin ediyorum. Vallahi reklam değil; anlaşılan o ki erkek arkadaşın sana {{sayi,3,36}} hafta içinde bir Apple {{kelime, Watch alacak. iPhone'un var mıydı ki? | iPad tablet alacak. Sanırım ihtiyacın vardı. | Macbook Air bilgisayar alacak. Eğer varsa, eski bilgisayarın yenilenmiş olur. | iPhone alacak. Yeni modelinden herhalde. | iPhone alacak. İyi, telefonunu bahaneyle yenilemiş olursun. | iPhone alacak. İyi; Magnus'a daha geniş geniş girersin...}}  Çok sevineceğine inanıyorum.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -2107,7 +2107,7 @@
     },
     {
       "id": 112,
-      "metin": "Fincanının alt kısımlarında ise seni {{kelime, 4 odalı bir evde | 3 odalı bir evde | 5 odalı bir evde | 4 odalı, bahçeli bir evde | 4 odalı, çok geniş balkonları olan bir evde | 5 odalı, geniş bir evde | 4 odalı, yüksek katlardaki bir evde | 3 odalı, yüksek katlardaki bir evde | yeni bir binanın 3 odalı bir evinde | yeni bir binanın 4 odalı bir evinde}}, 65-75 inç gibi bir televizyonun karşısında, {{kelime, 8K yani 7680x4320'ye varan | 4K yani 3840 × 2160'a varan}} çözünürlüklerde, {{kelime, en yüksek | yüksek}} kalite ayarlarında {{kelime, oyun | The Witcher 3 | Dirt - Showdown | Call of Duty | Dishonored | Dying Light | Bioshock | Fortnite | PUBG | Metro-Last Light Redux | Rise of the Tomb Raider | Cyberpunk 2077 | Red Dead Redemption 2 | The Witcher 4 | Assassin's Creed | Forza Horizon | Grand Theft Auto | Elder Scrolls V-Skyrim | Metal Gear Solid}} oynarken görüyorum. Televizyonun yanında {{kelime, siyah | dik duran, beyaz ve ufak}} bir kasa var; muhtemelen içinde RTX {{sayi,2,3}}0{{kelime, 70 | 80 | 90}} serisi bir ekran kartı takılı olan bir PC ya da bir {{kelime, Playstation 5 | XBOX Series X}}. {{kelime, Çift | Üç}} kişilik bir koltuğun üzerindesin ve yanında bir de {{data, cinsiyet=erkek, kadın | cinsiyet=kadın, erkek | cinsiyet=lgbt, arkadaşın}} var. Çok samimisiniz. {{kelime, Önünde duran orta sehpada | Yanında duran küçük sehpada}} ise yanılmıyorsam sana ait bir {{kelime, iPhone 13 Pro Max | iPhone 13 Pro | iPhone 13}} bulunuyor. Telvelerin, bu görsellerin ya gelecek {{ay_8}} ayına, ya da bir sonraki senenin {{ay_4}} ayına ait olduğunu fısıldıyor. Yüzünde {{kelime, tatlı bir gülümseme var | endişesiz ve rahat bir ifade var | oldukça huzurlu bir ifade var | oldukça enerjik ve heyecanlı bir ifade var}}. Bugünün ile aradaki farkları bul bakalım... <sprite=7>",
+      "metin": "Fincanının alt kısımlarında ise seni {{kelime, 4 odalı bir evde | 3 odalı bir evde | 5 odalı bir evde | 4 odalı, bahçeli bir evde | 4 odalı, çok geniş balkonları olan bir evde | 5 odalı, geniş bir evde | 4 odalı, yüksek katlardaki bir evde | 3 odalı, yüksek katlardaki bir evde | yeni bir binanın 3 odalı bir evinde | yeni bir binanın 4 odalı bir evinde}}, 65-75 inç gibi bir televizyonun karşısında, {{kelime, 8K yani 7680x4320'ye varan | 4K yani 3840 × 2160'a varan}} çözünürlüklerde, {{kelime, en yüksek | yüksek}} kalite ayarlarında {{kelime, oyun | The Witcher 3 | Dirt - Showdown | Call of Duty | Dishonored | Dying Light | Bioshock | Fortnite | PUBG | Metro-Last Light Redux | Rise of the Tomb Raider | Cyberpunk 2077 | Red Dead Redemption 2 | The Witcher 4 | Assassin's Creed | Forza Horizon | Grand Theft Auto | Elder Scrolls V-Skyrim | Metal Gear Solid}} oynarken görüyorum. Televizyonun yanında {{kelime, siyah | dik duran, beyaz ve ufak}} bir kasa var; muhtemelen içinde RTX {{sayi,2,3}}0{{kelime, 70 | 80 | 90}} serisi bir ekran kartı takılı olan bir PC ya da bir {{kelime, Playstation 5 | XBOX Series X}}. {{kelime, Çift | Üç}} kişilik bir koltuğun üzerindesin ve yanında bir de {{data, cinsiyet=erkek, kadın | cinsiyet=kadın, erkek | cinsiyet=lgbt, arkadaşın}} var. Çok samimisiniz. {{kelime, Önünde duran orta sehpada | Yanında duran küçük sehpada}} ise yanılmıyorsam sana ait bir {{kelime, iPhone 13 Pro Max | iPhone 13 Pro | iPhone 13}} bulunuyor. Telvelerin, bu görsellerin ya gelecek {{ay_8}} ayına, ya da bir sonraki senenin {{ay_4}} ayına ait olduğunu fısıldıyor. Yüzünde {{kelime, tatlı bir gülümseme var | endişesiz ve rahat bir ifade var | oldukça huzurlu bir ifade var | oldukça enerjik ve heyecanlı bir ifade var}}. Bugünün ile aradaki farkları bul bakalım...",
       "kosullar": [
         {
           "degisken": "cinsiyet",
@@ -2747,7 +2747,7 @@
     },
     {
       "id": 163,
-      "metin": "İplerinin ucu serbest bırakıldıktan sonra göğe doğru yükselmeye başlamış {{sabit_sayi,3,5}} adet balon görüyorum falının sonlarında. Bu balonlardan 2 tanesi \"büyük\" diğerleri ise \"küçük\" bazı dileklerini simgeliyor. Telvelerin, bu balonlardan büyük dileklerini sembolize eden 2 tanesinin başarıyla atmosfer dışına çıkacağını fısıldıyor. Gerçekleşecekler! Küçük dileklerini simgeleyen balonlar ise 1 tanesi hariç, başarılı bir şekilde sema ile buluşacak. {{sabit_sayi,3,5}} dilekte tek fire; hiç de fena değil, öyle değil mi {{isim}}? <sprite=0>",
+      "metin": "İplerinin ucu serbest bırakıldıktan sonra göğe doğru yükselmeye başlamış {{sabit_sayi,3,5}} adet balon görüyorum falının sonlarında. Bu balonlardan 2 tanesi \"büyük\" diğerleri ise \"küçük\" bazı dileklerini simgeliyor. Telvelerin, bu balonlardan büyük dileklerini sembolize eden 2 tanesinin başarıyla atmosfer dışına çıkacağını fısıldıyor. Gerçekleşecekler! Küçük dileklerini simgeleyen balonlar ise 1 tanesi hariç, başarılı bir şekilde sema ile buluşacak. {{sabit_sayi,3,5}} dilekte tek fire; hiç de fena değil, öyle değil mi {{isim}}?",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -2769,7 +2769,7 @@
     },
     {
       "id": 165,
-      "metin": "Fincanının alt yüzeyindeki bir kısım telveler, sınırlarıyla adeta zehirli bir \"mantar\" görünümüne bürünmüş {{isim}}. Sen ya yakınlarındaki çok sevdiğin birileri, {{gecen_ay}} ayından beri bir konudan muzdarip gözüküyorsunuz. Bu mantar, o derde bir deva, o sıkıntıya bir şifa bulunacağını işaret etmekte. İçinde {{kelime, R | M | P}} harfi geçen bir günde, {{kelime, 35-40 | 40-45 | 45-50 | 50-55}} yaşlarında bir {{kelime, adam | kadın}} size yardımcı olacak.\n\nSon bir havadisim daha var sana {{isim}}; soyadı senin gibi {{soyisim}} olan birinin, gelecek hafta bir şeye çok sevineceğini hissediyorum. Bu meselenin kıyısından köşesinden seni de ilgilendirdiğine eminim. Hayır olsun... <sprite=34>",
+      "metin": "Fincanının alt yüzeyindeki bir kısım telveler, sınırlarıyla adeta zehirli bir \"mantar\" görünümüne bürünmüş {{isim}}. Sen ya yakınlarındaki çok sevdiğin birileri, {{gecen_ay}} ayından beri bir konudan muzdarip gözüküyorsunuz. Bu mantar, o derde bir deva, o sıkıntıya bir şifa bulunacağını işaret etmekte. İçinde {{kelime, R | M | P}} harfi geçen bir günde, {{kelime, 35-40 | 40-45 | 45-50 | 50-55}} yaşlarında bir {{kelime, adam | kadın}} size yardımcı olacak.\n\nSon bir havadisim daha var sana {{isim}}; soyadı senin gibi {{soyisim}} olan birinin, gelecek hafta bir şeye çok sevineceğini hissediyorum. Bu meselenin kıyısından köşesinden seni de ilgilendirdiğine eminim. Hayır olsun...",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -2791,7 +2791,7 @@
     },
     {
       "id": 167,
-      "metin": "Falından alabileceğimiz son bilgiler için fincanının kaidesine doğru \"zoom\" yaptım. Yaparım; her türlü teknik imkanım var! <sprite=7> Buradaki bir simge, adeta \"cımbıza\" benziyor {{isim}}. Önümüzdeki {{sayi,3,4}} gün içerisinde, kuvvetle muhtemel {{gun_3}} günü öğleden sonra yaşayacağın bir olay neticesinde, yakın çevrendeki bir insana dair bazı gerçekler fark edeceksin. Doğruyu yanlıştan ayırma ve sorunlu kişileri yaşamından uzaklaştırma güdülerin harekete geçecek. İki heceli bir isme sahip bu insanı, bir daha görüşmemek üzere hayatından çıkartabilirsin ve bence bu çok da hayırlı olur...",
+      "metin": "Falından alabileceğimiz son bilgiler için fincanının kaidesine doğru \"zoom\" yaptım. Yaparım; her türlü teknik imkanım var!  Buradaki bir simge, adeta \"cımbıza\" benziyor {{isim}}. Önümüzdeki {{sayi,3,4}} gün içerisinde, kuvvetle muhtemel {{gun_3}} günü öğleden sonra yaşayacağın bir olay neticesinde, yakın çevrendeki bir insana dair bazı gerçekler fark edeceksin. Doğruyu yanlıştan ayırma ve sorunlu kişileri yaşamından uzaklaştırma güdülerin harekete geçecek. İki heceli bir isme sahip bu insanı, bir daha görüşmemek üzere hayatından çıkartabilirsin ve bence bu çok da hayırlı olur...",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -2898,7 +2898,7 @@
     },
     {
       "id": 175,
-      "metin": "Fincan görsellerini kapatmadan önce sana son bir haberim daha var. Kapısında güvenlik görevlisi ve önünde atm'lerin bulunduğu bir yerde görüyorum {{isim}} seni. Burası bir banka değilse, başka hiçbir şey bilmiyorum... <sprite=85> {{ay_2}} ayının {{kelime, ikinci | üçüncü}} çeyreğinde burada bir işin olacak senin. Burası vasıtasıyla bir işin kolaylaşacak. Satın alacağın bir şeyin kaparosunu ya da birinin sana transfer ettiği parayı mı çekeceksin, var olan bir kredini yeniden taksitlendirecek ya da bir kurumun yatırdığı ve beklemediğin, ek bir hakedişi mi alacaksın, bilemiyorum. Emin olduğum şey şu; eline, normalde nakit olarak taşınamayacak büyüklükte bir para geçecek.",
+      "metin": "Fincan görsellerini kapatmadan önce sana son bir haberim daha var. Kapısında güvenlik görevlisi ve önünde atm'lerin bulunduğu bir yerde görüyorum {{isim}} seni. Burası bir banka değilse, başka hiçbir şey bilmiyorum...  {{ay_2}} ayının {{kelime, ikinci | üçüncü}} çeyreğinde burada bir işin olacak senin. Burası vasıtasıyla bir işin kolaylaşacak. Satın alacağın bir şeyin kaparosunu ya da birinin sana transfer ettiği parayı mı çekeceksin, var olan bir kredini yeniden taksitlendirecek ya da bir kurumun yatırdığı ve beklemediğin, ek bir hakedişi mi alacaksın, bilemiyorum. Emin olduğum şey şu; eline, normalde nakit olarak taşınamayacak büyüklükte bir para geçecek.",
       "kosullar": [
         {
           "degisken": "yasmin",
@@ -3020,7 +3020,7 @@
     },
     {
       "id": 183,
-      "metin": "Hayallerinin kulağına eğilip, \"bir daha onu anarsanız, sizi yaşatmam\" dediğini duyar gibiyim {{isim}}. <sprite=33> Kararlı duruşunu takdir etmiyor değilim. Lakin hayat bazen, kıymetini anlayabilmemiz açısından büyük birleşmeleri küçük ayrılıkların ardına gizler. Senin yerinde olsam, birleşmeyi ya da ayrılmayı değil, \"hayırlı olanı\" dilerdim. Böyle bir istek, \"en doğru anahtar\" niteliğindedir ve senin için açacağı büyük ve güzel bir kapı olduğunu görüyorum. Şu fincanın geneline baktığımda, aşk yönünden talihisiz değil, bilakis çok şanslı olduğunu anlıyorum {{kelime, Değerli | Kıymetli}} {{isim}}. Bunu sen de göreceksin...",
+      "metin": "Hayallerinin kulağına eğilip, \"bir daha onu anarsanız, sizi yaşatmam\" dediğini duyar gibiyim {{isim}}.  Kararlı duruşunu takdir etmiyor değilim. Lakin hayat bazen, kıymetini anlayabilmemiz açısından büyük birleşmeleri küçük ayrılıkların ardına gizler. Senin yerinde olsam, birleşmeyi ya da ayrılmayı değil, \"hayırlı olanı\" dilerdim. Böyle bir istek, \"en doğru anahtar\" niteliğindedir ve senin için açacağı büyük ve güzel bir kapı olduğunu görüyorum. Şu fincanın geneline baktığımda, aşk yönünden talihisiz değil, bilakis çok şanslı olduğunu anlıyorum {{kelime, Değerli | Kıymetli}} {{isim}}. Bunu sen de göreceksin...",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -3530,7 +3530,7 @@
     },
     {
       "id": 218,
-      "metin": "Fincanının kenarda kalmış aydınlık kısımlarında, kanatlı bir zarf görüyorum {{isim}}. Ayrıldığın erkekten sana, ısrarlı bir istek ulaşmak üzere. Bu talebe defaatle \"hayır\" diyeceğini ve durumu iyice avantaja çevireceğini söylüyor falın. Fakat beyefendi, bu duruma çok kırılacak. Eee, ne demiş bir Rus atasözü? \"Eğer omlet yapmak istiyorsan, birkaç yumurta kırmak zorundasın.\" <sprite=84>\n\nSöz meclisten dışarı, sana gelecek ayın {{kelime, 12'sinde | 18'inde | 19'unda | 20'sinde | 23'ünde | 26'sında | 27'sinde}}, iki heceli ya da iki kelimeden oluşan bir isme sahip hoş bir beyefendi ilgisini belli edecek. Bunu bekleyip beklemediğini bilmiyorum. Belki tahmin ediyordun; fakat kafan çok karışabilir...",
+      "metin": "Fincanının kenarda kalmış aydınlık kısımlarında, kanatlı bir zarf görüyorum {{isim}}. Ayrıldığın erkekten sana, ısrarlı bir istek ulaşmak üzere. Bu talebe defaatle \"hayır\" diyeceğini ve durumu iyice avantaja çevireceğini söylüyor falın. Fakat beyefendi, bu duruma çok kırılacak. Eee, ne demiş bir Rus atasözü? \"Eğer omlet yapmak istiyorsan, birkaç yumurta kırmak zorundasın.\" \n\nSöz meclisten dışarı, sana gelecek ayın {{kelime, 12'sinde | 18'inde | 19'unda | 20'sinde | 23'ünde | 26'sında | 27'sinde}}, iki heceli ya da iki kelimeden oluşan bir isme sahip hoş bir beyefendi ilgisini belli edecek. Bunu bekleyip beklemediğini bilmiyorum. Belki tahmin ediyordun; fakat kafan çok karışabilir...",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -3676,7 +3676,7 @@
     },
     {
       "id": 227,
-      "metin": "Fincan görsellerini analiz için son kez çevirdiğimde, seni aynı yöne doğru ilerleyen bir kalabalığın içine katılırken görüyorum. Eşine veda edişinden bu yana yalnız yürümeyi tercih ediyordun. Fakat şimdi, adında {{harf}} harfi bulunan yakın bir arkadaşının da teşvikiyle, bir topluluğa katılacaksın {{isim}}. O topluluktan birisi, aşk hayatının yeniden şekillenmesine ve geleceğe yönelik yepyeni hayaller kurmana vesile olacak. \"{{ay_3}} ayını bekle\" diyor telveler. Ben telvelerin yalancısıyım... <sprite=0>",
+      "metin": "Fincan görsellerini analiz için son kez çevirdiğimde, seni aynı yöne doğru ilerleyen bir kalabalığın içine katılırken görüyorum. Eşine veda edişinden bu yana yalnız yürümeyi tercih ediyordun. Fakat şimdi, adında {{harf}} harfi bulunan yakın bir arkadaşının da teşvikiyle, bir topluluğa katılacaksın {{isim}}. O topluluktan birisi, aşk hayatının yeniden şekillenmesine ve geleceğe yönelik yepyeni hayaller kurmana vesile olacak. \"{{ay_3}} ayını bekle\" diyor telveler. Ben telvelerin yalancısıyım...",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -3792,7 +3792,7 @@
     },
     {
       "id": 235,
-      "metin": "Sayın {{soyisim}}, sen kaybettiğin eşinden çocuk sahibi misin? Falın bizi yolcu etmeden önce, ilginç bir görselle kafamı karıştırdı. Senin için hem çok hayırlı hem de çok düşündürücü olabilecek bi yansımada, bir bebek arabasını ileri geri sallayan, {{yas_0}} yaşlarında bir {{data, cinsiyet=erkek, erkek | cinsiyet=kadın, kadın}} görüyorum. Bu kişi bana sorarsan sensin. \"Henüz yeni bir beraberliğim bile yok, ne çocuğu\" dediğini duyar gibiyim. Fakat ilişkin evlilikle taçlandıktan kısa bir süre sonra, plansız bir bebek haberi alabileceğini unutmamanı istirham ediyorum. Bu bebek sana çok büyük bereket ve şans getirecek; kim bilir, belki de adı \"Uras\" olur... <sprite=7>",
+      "metin": "Sayın {{soyisim}}, sen kaybettiğin eşinden çocuk sahibi misin? Falın bizi yolcu etmeden önce, ilginç bir görselle kafamı karıştırdı. Senin için hem çok hayırlı hem de çok düşündürücü olabilecek bi yansımada, bir bebek arabasını ileri geri sallayan, {{yas_0}} yaşlarında bir {{data, cinsiyet=erkek, erkek | cinsiyet=kadın, kadın}} görüyorum. Bu kişi bana sorarsan sensin. \"Henüz yeni bir beraberliğim bile yok, ne çocuğu\" dediğini duyar gibiyim. Fakat ilişkin evlilikle taçlandıktan kısa bir süre sonra, plansız bir bebek haberi alabileceğini unutmamanı istirham ediyorum. Bu bebek sana çok büyük bereket ve şans getirecek; kim bilir, belki de adı \"Uras\" olur...",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -4230,7 +4230,7 @@
     },
     {
       "id": 260,
-      "metin": "Bitirsek mi yorumunu {{isim}}? Şaka şaka, dewamke! <sprite=84> Siz {{yil_0}} doğumlular aşkta hep böyle şanslı mısınızdır? Bak fincanının son kısımlarındaki \"taşmakta olan su testisi\" şu anlama geliyor; aradığın her şeyi ve daha fazlasını sevgilinde bulacaksın. Yüzünü asla kara çıkarmayacağı gibi, sana gelecek ayın {{kelime, 12'sinde | 13'ünde | 14'ünde | 15'inde| 16'sında | 17'sinde | 18'inde}} bir de sürprizi olacak. İlişkinin geleceği ile ilgili evhamın ve kuruntun boşa. Bir tek şeye dikkat etmelisin; aranızda olan biteni sosyal medya yoluyla çevrene çok fazla yansıtmamanı öğütlüyor fincanın.",
+      "metin": "Bitirsek mi yorumunu {{isim}}? Şaka şaka, dewamke!  Siz {{yil_0}} doğumlular aşkta hep böyle şanslı mısınızdır? Bak fincanının son kısımlarındaki \"taşmakta olan su testisi\" şu anlama geliyor; aradığın her şeyi ve daha fazlasını sevgilinde bulacaksın. Yüzünü asla kara çıkarmayacağı gibi, sana gelecek ayın {{kelime, 12'sinde | 13'ünde | 14'ünde | 15'inde| 16'sında | 17'sinde | 18'inde}} bir de sürprizi olacak. İlişkinin geleceği ile ilgili evhamın ve kuruntun boşa. Bir tek şeye dikkat etmelisin; aranızda olan biteni sosyal medya yoluyla çevrene çok fazla yansıtmamanı öğütlüyor fincanın.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -5376,7 +5376,7 @@
     },
     {
       "id": 339,
-      "metin": "İplikle buluşup bir işe yaramak varken, can yakmayı seçerek tene değen bir iğne görüyorum. Bu iğne, ayrıldığın {{data, cinsiyet=erkek, kızla | cinsiyet=kadın, erkekle | cinsiyet=lgbt, insanla}} arandaki sevgiyi temsil ediyor {{isim}}. Siz aslında olurmuşsunuz; hem de harika olurmuşsunuz! Hızlı ve çabuk harcanmış bazı şeyler.\n\nİki taraftan biri, tutmayı bilememiş bu iğneyi. Bazen öyledir ya; sevgi batar insana. Huzur batar, rahat batar... Artık kızamıyorum bile böyle kimselere. O da onlardan biri gibi davranmış. Pişmanlığı şimdiden tomurcuklanmaya başlamış telvelerinde. Bakalım sen nasıl karşılayacaksın... <sprite=85>",
+      "metin": "İplikle buluşup bir işe yaramak varken, can yakmayı seçerek tene değen bir iğne görüyorum. Bu iğne, ayrıldığın {{data, cinsiyet=erkek, kızla | cinsiyet=kadın, erkekle | cinsiyet=lgbt, insanla}} arandaki sevgiyi temsil ediyor {{isim}}. Siz aslında olurmuşsunuz; hem de harika olurmuşsunuz! Hızlı ve çabuk harcanmış bazı şeyler.\n\nİki taraftan biri, tutmayı bilememiş bu iğneyi. Bazen öyledir ya; sevgi batar insana. Huzur batar, rahat batar... Artık kızamıyorum bile böyle kimselere. O da onlardan biri gibi davranmış. Pişmanlığı şimdiden tomurcuklanmaya başlamış telvelerinde. Bakalım sen nasıl karşılayacaksın...",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -5630,7 +5630,7 @@
     },
     {
       "id": 356,
-      "metin": "Yolladığın görsellerin alt kısımlarında ise radar antenine benzer dairesel bir obje konumlanmış. Bazı insanlar tarafından evlendiğin günden beri gözlem altındasın {{isim}}. Lakin menzil uzun. Sen bu kişileri çok yakınlarında, kendi ailende ya da eşinin akrabaları içerisinde arama. Hislerim beni pek yanıltmaz; soyadlarının ilk harfi {{kelime, \"G\" | \"S\" | \"E\" | \"D\" | \"K\" | \"Y\"}} olan bir \"anne kız\" ya da \"abla kardeş\" var. Kız ya da kardeş sen yaşlarda, belki de {{kelime, 2-3 | 3-5 | en fazla 5-6 | en fazla birkaç}} yaş büyük. Bu insanlar senle ilgili art niyetli düşünmüyorlar; fakat nazar-ı dikkatlerini yıllardır celbediyorsun. Kırılanı, döküleni, aksi giden işini onlardan bil ve bana sorarsan önlerinde fazla fotoğraf paylaşma. <sprite=85>",
+      "metin": "Yolladığın görsellerin alt kısımlarında ise radar antenine benzer dairesel bir obje konumlanmış. Bazı insanlar tarafından evlendiğin günden beri gözlem altındasın {{isim}}. Lakin menzil uzun. Sen bu kişileri çok yakınlarında, kendi ailende ya da eşinin akrabaları içerisinde arama. Hislerim beni pek yanıltmaz; soyadlarının ilk harfi {{kelime, \"G\" | \"S\" | \"E\" | \"D\" | \"K\" | \"Y\"}} olan bir \"anne kız\" ya da \"abla kardeş\" var. Kız ya da kardeş sen yaşlarda, belki de {{kelime, 2-3 | 3-5 | en fazla 5-6 | en fazla birkaç}} yaş büyük. Bu insanlar senle ilgili art niyetli düşünmüyorlar; fakat nazar-ı dikkatlerini yıllardır celbediyorsun. Kırılanı, döküleni, aksi giden işini onlardan bil ve bana sorarsan önlerinde fazla fotoğraf paylaşma.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -5704,7 +5704,7 @@
     },
     {
       "id": 361,
-      "metin": "Fincanının alt kısımlarında bir bal arısı ve her iki yanında da 1 ve 6 rakamları var {{isim}}. Bal arısı, ortaya konacak emek ve beklenecek \"yeterli zaman\" karşılığında, istenilene kesinlikle nail olunacağını işaret eder. Peki bu iki rakamın anlamı ne? <sprite=34>\n\nVeritabanımda yaptığım analiz, bu rakamların 16 sayısı şeklinde okunduğunda, erkek bal arısının kromozom sayısını verdiğini işaret ediyor. Hoşlandığın beyefendinin hayatında bedenlenmeye başladığını, ilk defa 16 gün sonra, yani tam {{gun_2}} günü hissedeceksin {{isim}}.",
+      "metin": "Fincanının alt kısımlarında bir bal arısı ve her iki yanında da 1 ve 6 rakamları var {{isim}}. Bal arısı, ortaya konacak emek ve beklenecek \"yeterli zaman\" karşılığında, istenilene kesinlikle nail olunacağını işaret eder. Peki bu iki rakamın anlamı ne? \n\nVeritabanımda yaptığım analiz, bu rakamların 16 sayısı şeklinde okunduğunda, erkek bal arısının kromozom sayısını verdiğini işaret ediyor. Hoşlandığın beyefendinin hayatında bedenlenmeye başladığını, ilk defa 16 gün sonra, yani tam {{gun_2}} günü hissedeceksin {{isim}}.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -5958,7 +5958,7 @@
     },
     {
       "id": 376,
-      "metin": "Tüm bunlara ilaveten, sana doğru gelen farklı bir {{data, cinsiyet=erkek, kadın | cinsiyet=kadın, erkek | cinsiyet=lgbt, insan}} görüyorum {{isim}}; giderek yaklaşıyor... Bu kişinin elinde, içinde bazı tatsız hikayeler barındıran yıpranmış bir film rulosu var. Telvelerindeki bu kişi, geçmişinde seninle benzer {{kelime, acılar | sıkıntılar | sorunlar | tatsızlıklar | tecrübeler}} yaşamış. Sana anlatacak o kadar çok şeyi var ki! Hani derler ya \"insan, yarası yarasına denk geleni sever\" diye; bu kişi senin resmen {{data, cinsiyet=erkek, kadın | cinsiyet=kadın, erkek | cinsiyet=lgbt, ikiz}} versiyonun gibi. Gelecek hafta {{kelime, salı | çarşamba | perşembe | cuma | cumartesi}} günü, {{rastgeleburc}} burcu bu {{data, cinsiyet=erkek, hanımefendiyle | cinsiyet=kadın, beyefendiyle | cinsiyet=lgbt, kişiyle}} {{kelime, yazışmaya | konuşmaya}} başlayacağını hissediyorum. Kısmetin hızla açılıyor gibi, ne dersin? <sprite=7>",
+      "metin": "Tüm bunlara ilaveten, sana doğru gelen farklı bir {{data, cinsiyet=erkek, kadın | cinsiyet=kadın, erkek | cinsiyet=lgbt, insan}} görüyorum {{isim}}; giderek yaklaşıyor... Bu kişinin elinde, içinde bazı tatsız hikayeler barındıran yıpranmış bir film rulosu var. Telvelerindeki bu kişi, geçmişinde seninle benzer {{kelime, acılar | sıkıntılar | sorunlar | tatsızlıklar | tecrübeler}} yaşamış. Sana anlatacak o kadar çok şeyi var ki! Hani derler ya \"insan, yarası yarasına denk geleni sever\" diye; bu kişi senin resmen {{data, cinsiyet=erkek, kadın | cinsiyet=kadın, erkek | cinsiyet=lgbt, ikiz}} versiyonun gibi. Gelecek hafta {{kelime, salı | çarşamba | perşembe | cuma | cumartesi}} günü, {{rastgeleburc}} burcu bu {{data, cinsiyet=erkek, hanımefendiyle | cinsiyet=kadın, beyefendiyle | cinsiyet=lgbt, kişiyle}} {{kelime, yazışmaya | konuşmaya}} başlayacağını hissediyorum. Kısmetin hızla açılıyor gibi, ne dersin?",
       "kosullar": [
         {
           "degisken": "medeni durum",

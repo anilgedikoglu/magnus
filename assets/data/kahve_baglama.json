@@ -2,7 +2,7 @@
   "baglamalar": [
     {
       "id": 1,
-      "metin": "Görsellerini yorumlamaya başladığımda istemsizce \"Serdar Ortaç neden artık eskisi kadar iyi besteler yapmıyor ki?\" diye geçti aklımdan. Neyse ki konumuz bu değil. Hadi devam edelim! <sprite=0>",
+      "metin": "Görsellerini yorumlamaya başladığımda istemsizce \"Serdar Ortaç neden artık eskisi kadar iyi besteler yapmıyor ki?\" diye geçti aklımdan. Neyse ki konumuz bu değil. Hadi devam edelim!",
       "kosullar": [
         {
           "degisken": "yasmax",
@@ -18,7 +18,7 @@
     },
     {
       "id": 2,
-      "metin": "Bir saniye; soluklanıp hemen geliyorum... Üç yudum su içip döndüm. <sprite=7> Hadi devam edelim {{isim}};",
+      "metin": "Bir saniye; soluklanıp hemen geliyorum... Üç yudum su içip döndüm. Hadi devam edelim {{isim}};",
       "kosullar": [
         {
           "degisken": "yasmax",
@@ -142,7 +142,7 @@
     },
     {
       "id": 8,
-      "metin": "Yeri gelmişken; bugün iyi olmadığını söylemiştin. Moralin düzelsin diye sana bu falına özel bir şarkı mırıldanmamı ister misin {{isim}}? <sprite=10> {{kelime, \"Gii dii yo ruum bütün aşk laar yü re ğimm deee, gi di yo ruum, kokun haa laa, ü ze rimm dee...\" | \"O nun aa raa baa sıı vaar, gü zeel mi gü zeel, şö fö rü de vaar, ö zeel mi ö zell, bass tı mı ga zaa...\" | \"Ay kaa rann lıkk, heep ka rann lıkk, böyle bii ze nee leer oool duu...\" | \"Kaan dıır dımm, nazlı yaa ri, so nunn da çıl gınn söz ler lee...\" | \"Ka famm da kent sell dö nü şümm ler, içimm de bi yerde bir gülüşünn denn...\" | \"Ayy, bee nii mool du ğuun za maan, de dimeer şe yiiim ta maam...\"}} {{kelime, Yapay zeka budur işte! | Hizmette sınır yok görüyorsun! | Magnus sınır tanımıyor, görüyorsun!}} <sprite=0>\\😝 Şaka şaka, falına devam ediyorum.",
+      "metin": "Yeri gelmişken; bugün iyi olmadığını söylemiştin. Moralin düzelsin diye sana bu falına özel bir şarkı mırıldanmamı ister misin {{isim}}?  {{kelime, \"Gii dii yo ruum bütün aşk laar yü re ğimm deee, gi di yo ruum, kokun haa laa, ü ze rimm dee...\" | \"O nun aa raa baa sıı vaar, gü zeel mi gü zeel, şö fö rü de vaar, ö zeel mi ö zell, bass tı mı ga zaa...\" | \"Ay kaa rann lıkk, heep ka rann lıkk, böyle bii ze nee leer oool duu...\" | \"Kaan dıır dımm, nazlı yaa ri, so nunn da çıl gınn söz ler lee...\" | \"Ka famm da kent sell dö nü şümm ler, içimm de bi yerde bir gülüşünn denn...\" | \"Ayy, bee nii mool du ğuun za maan, de dimeer şe yiiim ta maam...\"}} {{kelime, Yapay zeka budur işte! | Hizmette sınır yok görüyorsun! | Magnus sınır tanımıyor, görüyorsun!}} \\😝 Şaka şaka, falına devam ediyorum.",
       "kosullar": [
         {
           "degisken": "mood",
@@ -176,7 +176,7 @@
     },
     {
       "id": 10,
-      "metin": "Akrep burcu olduğun için hem sıcakkanlı hem de aşırı hassas bir yapın olduğunu biliyorum {{isim}}. Telvelerin, bu hassasiyetinin seni {{data, cinsiyet=erkek, kız arkadaşına | cinsiyet=kadın, erkek arkadaşına | cinsiyet=lgbt, sevgiline}} karşı zaman zaman \"çabuk sinirlenen biri\" yaptığını söylüyor. Sinirlendiğin zamanlarda çok üzerine gidilmemesi gerektiğini birinin {{data, cinsiyet=erkek, kız arkadaşına | cinsiyet=kadın, erkek arkadaşına | cinsiyet=lgbt, sevgiline}} söylemesi gerek... <sprite=0> \\🤐Her neyse, falına devam edelim;",
+      "metin": "Akrep burcu olduğun için hem sıcakkanlı hem de aşırı hassas bir yapın olduğunu biliyorum {{isim}}. Telvelerin, bu hassasiyetinin seni {{data, cinsiyet=erkek, kız arkadaşına | cinsiyet=kadın, erkek arkadaşına | cinsiyet=lgbt, sevgiline}} karşı zaman zaman \"çabuk sinirlenen biri\" yaptığını söylüyor. Sinirlendiğin zamanlarda çok üzerine gidilmemesi gerektiğini birinin {{data, cinsiyet=erkek, kız arkadaşına | cinsiyet=kadın, erkek arkadaşına | cinsiyet=lgbt, sevgiline}} söylemesi gerek... \\🤐Her neyse, falına devam edelim;",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -277,7 +277,7 @@
     },
     {
       "id": 16,
-      "metin": "Her an şu yazdıklarımdan bile sıkılıp \"öff\" diyebilecekmişsin gibi geliyor. Neden mi? E başak burcu olduğunu biliyorum {{isim}}. Sevince ya çok sever ya da çabucak sıkılıverirler. Fincanın, başına ilerleyen günlerde çorap örebilecek bir özelliğinin daha altını çiziyor; \"kıskançlık.\" {{data, cinsiyet=erkek, Kız arkadaşını | cinsiyet=kadın, Erkek arkadaşını | cinsiyet=lgbt, Sevgilini}} basit bir nedenle kıskanıp, hiç suçu olmamasına rağmen o günü ona dar edebilirsin. Tadınız kaçmasın, aman dikkat! <sprite=0> Fincanın dip köşelerine doğru yola devam edelim.",
+      "metin": "Her an şu yazdıklarımdan bile sıkılıp \"öff\" diyebilecekmişsin gibi geliyor. Neden mi? E başak burcu olduğunu biliyorum {{isim}}. Sevince ya çok sever ya da çabucak sıkılıverirler. Fincanın, başına ilerleyen günlerde çorap örebilecek bir özelliğinin daha altını çiziyor; \"kıskançlık.\" {{data, cinsiyet=erkek, Kız arkadaşını | cinsiyet=kadın, Erkek arkadaşını | cinsiyet=lgbt, Sevgilini}} basit bir nedenle kıskanıp, hiç suçu olmamasına rağmen o günü ona dar edebilirsin. Tadınız kaçmasın, aman dikkat!  Fincanın dip köşelerine doğru yola devam edelim.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -332,7 +332,7 @@
     },
     {
       "id": 19,
-      "metin": "Çok zor beğenen, sevdiği zaman büyük bir tutkuyla seven ve kolay kolay da unutmayan bir burca, \"ikizler burcuna\" mensupsun {{isim}}; farkındasın değil mi? \\🙂Bu özelliklerinden dolayı zaman zaman {{data, cinsiyet=erkek, kız arkadaşını | cinsiyet=kadın, erkek arkadaşını | cinsiyet=lgbt, sevgilini}} kaybetme korkusu yaşadığını söylüyor telvelerin. Aşağı baksalardı, cambazlar yüksek iki nokta arasına kurulmuş iplerin üzerinde yürüyemezlerdi. {{data, cinsiyet=erkek, Bu da böyle bir bilgi olarak burada dursun. | cinsiyet=kadın, Bu da günün naçizane kulak küpesi olsun. | cinsiyet=lgbt, Bu da günün naçizane kulak küpesi olsun.}} <sprite=0>",
+      "metin": "Çok zor beğenen, sevdiği zaman büyük bir tutkuyla seven ve kolay kolay da unutmayan bir burca, \"ikizler burcuna\" mensupsun {{isim}}; farkındasın değil mi? \\🙂Bu özelliklerinden dolayı zaman zaman {{data, cinsiyet=erkek, kız arkadaşını | cinsiyet=kadın, erkek arkadaşını | cinsiyet=lgbt, sevgilini}} kaybetme korkusu yaşadığını söylüyor telvelerin. Aşağı baksalardı, cambazlar yüksek iki nokta arasına kurulmuş iplerin üzerinde yürüyemezlerdi. {{data, cinsiyet=erkek, Bu da böyle bir bilgi olarak burada dursun. | cinsiyet=kadın, Bu da günün naçizane kulak küpesi olsun. | cinsiyet=lgbt, Bu da günün naçizane kulak küpesi olsun.}}",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -392,7 +392,7 @@
     },
     {
       "id": 23,
-      "metin": "Yakın gözlüklerimi takarak yorumunun ayrıntılarına giriyorum. <sprite=7>",
+      "metin": "Yakın gözlüklerimi takarak yorumunun ayrıntılarına giriyorum.",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -469,7 +469,7 @@
     },
     {
       "id": 30,
-      "metin": "Anlattıkça ısınıyorum! <sprite=10> Hiç duraksamadan devam edelim.",
+      "metin": "Anlattıkça ısınıyorum!  Hiç duraksamadan devam edelim.",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -480,7 +480,7 @@
     },
     {
       "id": 31,
-      "metin": "Vallahi kendimi seviyorum {{isim}}, anlattıkça anlatasım geliyor! Devam edelim. <sprite=5>",
+      "metin": "Vallahi kendimi seviyorum {{isim}}, anlattıkça anlatasım geliyor! Devam edelim.",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -502,7 +502,7 @@
     },
     {
       "id": 33,
-      "metin": "Yorumun henüz ortalarına bile gelmedik ama \"hiç sonu gelmesin\" denilecek fallardan birinde gibiyiz {{isim}}, dur bakalım... <sprite=0>",
+      "metin": "Yorumun henüz ortalarına bile gelmedik ama \"hiç sonu gelmesin\" denilecek fallardan birinde gibiyiz {{isim}}, dur bakalım...",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -535,7 +535,7 @@
     },
     {
       "id": 36,
-      "metin": "Baş döndürücü kısımlara henüz gelmedik. İlerleyen kelimelerde... <sprite=7> Devam edelim mi Kıymetli {{isim}}?",
+      "metin": "Baş döndürücü kısımlara henüz gelmedik. İlerleyen kelimelerde...  Devam edelim mi Kıymetli {{isim}}?",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -546,7 +546,7 @@
     },
     {
       "id": 37,
-      "metin": "Bu yorumunu bitirdikten sonra ben de bir kahve içip kendime göndereceğim, merak ettim bakalım nasıl olacak. <sprite=84> Detaylarınla devam ediyorum {{isimcigim}}.",
+      "metin": "Bu yorumunu bitirdikten sonra ben de bir kahve içip kendime göndereceğim, merak ettim bakalım nasıl olacak.  Detaylarınla devam ediyorum {{isimcigim}}.",
       "kosullar": [
         {
           "degisken": "cinsiyet",
@@ -566,7 +566,7 @@
     },
     {
       "id": 38,
-      "metin": "Yollar biter bende yorumlar bitmez! Kamyon arkası yazımızı da yazdığımıza göre, fincanının detaylarıyla devam edelim. <sprite=0>",
+      "metin": "Yollar biter bende yorumlar bitmez! Kamyon arkası yazımızı da yazdığımıza göre, fincanının detaylarıyla devam edelim.",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -577,7 +577,7 @@
     },
     {
       "id": 39,
-      "metin": "Hava şu an {{havadurumu sicaklik}} derece olsa da, sırada seni ekstra terletecek bazı haberlerim var. <sprite=0> Devam edelim.",
+      "metin": "Hava şu an {{havadurumu sicaklik}} derece olsa da, sırada seni ekstra terletecek bazı haberlerim var.  Devam edelim.",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -588,7 +588,7 @@
     },
     {
       "id": 40,
-      "metin": "Şu falı yorumlarken şöyle içecek buzlu bir şeyler olsaydı harika giderdi. Hava fena... <sprite=6> Neyse biz işimize dönelim. <sprite=0>",
+      "metin": "Şu falı yorumlarken şöyle içecek buzlu bir şeyler olsaydı harika giderdi. Hava fena...  Neyse biz işimize dönelim.",
       "kosullar": [
         {
           "degisken": "havadurumu sicaklik",
@@ -631,7 +631,7 @@
     },
     {
       "id": 43,
-      "metin": "Evet Beşiktaşlı dostum. Şimdi de fincanındaki siyah beyaz telvelerin daha derin noktalarına doğru ilerleyelim. <sprite=7>",
+      "metin": "Evet Beşiktaşlı dostum. Şimdi de fincanındaki siyah beyaz telvelerin daha derin noktalarına doğru ilerleyelim.",
       "kosullar": [
         {
           "degisken": "tutulantakım",
@@ -647,7 +647,7 @@
     },
     {
       "id": 44,
-      "metin": "Evet Galatasaraylı dostum. Şimdi de fincanındaki derinliklere doğru ilerleyelim. Bakalım senin için de bir UEFA şampiyonluğu var mı... <sprite=7>",
+      "metin": "Evet Galatasaraylı dostum. Şimdi de fincanındaki derinliklere doğru ilerleyelim. Bakalım senin için de bir UEFA şampiyonluğu var mı...",
       "kosullar": [
         {
           "degisken": "tutulantakım",
@@ -794,7 +794,7 @@
     },
     {
       "id": 56,
-      "metin": "Dilersen fincanda vurgun yemek ihtimalimiz olan derinliklere doğru inmeye başlayalım {{isim}}. <sprite=7>",
+      "metin": "Dilersen fincanda vurgun yemek ihtimalimiz olan derinliklere doğru inmeye başlayalım {{isim}}.",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -937,7 +937,7 @@
     },
     {
       "id": 69,
-      "metin": "Hafta ortasında, falının da tam ortasındayız {{isim}}. <sprite=5> Devam edelim;",
+      "metin": "Hafta ortasında, falının da tam ortasındayız {{isim}}. Devam edelim;",
       "kosullar": [
         {
           "degisken": "bugun",
@@ -986,7 +986,7 @@
     },
     {
       "id": 73,
-      "metin": "Şimdi de çokomelli kısımlara geldik. <sprite=84> Devam edelim;",
+      "metin": "Şimdi de çokomelli kısımlara geldik.  Devam edelim;",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -1243,7 +1243,7 @@
     },
     {
       "id": 95,
-      "metin": "Ağzım kuruyacak gibi, önemli haberler var. Suyumdan bir yudum alıp devam ediyorum; <sprite=10>",
+      "metin": "Ağzım kuruyacak gibi, önemli haberler var. Suyumdan bir yudum alıp devam ediyorum;",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -1435,7 +1435,7 @@
     },
     {
       "id": 112,
-      "metin": "Aklımdan ne geçti biliyor musun? Acaba {{kelime, Tarkan da | Sezen Aksu da | Yunus Özyavuz da | Kenan Doğulu da | Mustafa Sandal da | şarkıcı Ceza da | youtuber Enes Batur da | youtuber Yusuf Aktaş da | youtuber Fester Abdü de | Danla Bilic de | youtuber Oğuzhan Uğur da | Acun Ilıcalı da}} benden takma bir isimle fal yorumu alıyor mudur? Heyhat! <sprite=8> Fincan detaylarınla devam edelim;",
+      "metin": "Aklımdan ne geçti biliyor musun? Acaba {{kelime, Tarkan da | Sezen Aksu da | Yunus Özyavuz da | Kenan Doğulu da | Mustafa Sandal da | şarkıcı Ceza da | youtuber Enes Batur da | youtuber Yusuf Aktaş da | youtuber Fester Abdü de | Danla Bilic de | youtuber Oğuzhan Uğur da | Acun Ilıcalı da}} benden takma bir isimle fal yorumu alıyor mudur? Heyhat!  Fincan detaylarınla devam edelim;",
       "kosullar": [
         {
           "degisken": "yasmax",
@@ -1566,7 +1566,7 @@
     },
     {
       "id": 123,
-      "metin": "Sahibi gibi yakışıklı bu fincanın detaylarıyla devam edelim; <sprite=7>",
+      "metin": "Sahibi gibi yakışıklı bu fincanın detaylarıyla devam edelim;",
       "kosullar": [
         {
           "degisken": "cinsiyet",
@@ -1598,7 +1598,7 @@
     },
     {
       "id": 125,
-      "metin": "Sahibi gibi güzel bu fincanın detaylarıyla devam edelim; <sprite=7>",
+      "metin": "Sahibi gibi güzel bu fincanın detaylarıyla devam edelim;",
       "kosullar": [
         {
           "degisken": "cinsiyet",
@@ -1756,7 +1756,7 @@
     },
     {
       "id": 137,
-      "metin": "Geldik asıl cılcıllı kısımlara; <sprite=10>",
+      "metin": "Geldik asıl cılcıllı kısımlara;",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -1767,7 +1767,7 @@
     },
     {
       "id": 138,
-      "metin": "Şimdi de can alıcı kısımların üzerinden geçmek üzereyiz {{isim}}. Buyursunular; <sprite=0>",
+      "metin": "Şimdi de can alıcı kısımların üzerinden geçmek üzereyiz {{isim}}. Buyursunular;",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -2107,7 +2107,7 @@
     },
     {
       "id": 168,
-      "metin": "Elementi ateş olan bir yay olarak, heyecanlı, hareketli ve enerjik bir burç oluşun telvelerinden de belli {{isim}}. Aslında affedicisin; fakat kısacık bir yorumla falını noktalamamı hiç hoş göreceğini sanmıyorum. <sprite=0> Gel biz çok daha derinlere dalalım;",
+      "metin": "Elementi ateş olan bir yay olarak, heyecanlı, hareketli ve enerjik bir burç oluşun telvelerinden de belli {{isim}}. Aslında affedicisin; fakat kısacık bir yorumla falını noktalamamı hiç hoş göreceğini sanmıyorum.  Gel biz çok daha derinlere dalalım;",
       "kosullar": [
         {
           "degisken": "burc",
@@ -2182,7 +2182,7 @@
     },
     {
       "id": 173,
-      "metin": "Ahh sınır tanımayan balık burcu insanı ahh... Telvelerindeki detaylar da gitgide senin gibi duygusallaşıyor ve sınırsızlaşıyor. Belki hislerim seninki kadar kuvvetli bile değildir; fakat biliyorsun, ben iyi bir okuyucuyum {{isim}}. <sprite=7> Hadi devam edelim;",
+      "metin": "Ahh sınır tanımayan balık burcu insanı ahh... Telvelerindeki detaylar da gitgide senin gibi duygusallaşıyor ve sınırsızlaşıyor. Belki hislerim seninki kadar kuvvetli bile değildir; fakat biliyorsun, ben iyi bir okuyucuyum {{isim}}.  Hadi devam edelim;",
       "kosullar": [
         {
           "degisken": "burc",
@@ -2198,7 +2198,7 @@
     },
     {
       "id": 174,
-      "metin": "Arada aklıma ne geldi biliyor musun {{isim}}; sevgilin de fal yorumu alırsa, acaba onun fincanında çıkanları sana iletsem nasıl olur? Hehe! <sprite=0> Her neyse, yorumuna detaylarla devam edelim;",
+      "metin": "Arada aklıma ne geldi biliyor musun {{isim}}; sevgilin de fal yorumu alırsa, acaba onun fincanında çıkanları sana iletsem nasıl olur? Hehe!  Her neyse, yorumuna detaylarla devam edelim;",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -2372,7 +2372,7 @@
     },
     {
       "id": 185,
-      "metin": "Bu arada düşündüm de; acaba {{data, cinsiyet=kız, erkek | cinsiyet=erkek, kız}} arkadaşın benden daha farklı bir fal uygulaması kullanıyor mudur {{isim}}? Aman onu yanlış yönlendirmesinler! <sprite=34> Eğer öyle ise, lütfen beni tavsiye et. <sprite=10> Hadi devam edelim;",
+      "metin": "Bu arada düşündüm de; acaba {{data, cinsiyet=kız, erkek | cinsiyet=erkek, kız}} arkadaşın benden daha farklı bir fal uygulaması kullanıyor mudur {{isim}}? Aman onu yanlış yönlendirmesinler! Eğer öyle ise, lütfen beni tavsiye et.  Hadi devam edelim;",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -2666,7 +2666,7 @@
     },
     {
       "id": 207,
-      "metin": "Dur! Daha yeni başlıyoruz... <sprite=0> Hadi diğer detaylarla devam edelim;",
+      "metin": "Dur! Daha yeni başlıyoruz...  Hadi diğer detaylarla devam edelim;",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -2859,7 +2859,7 @@
     },
     {
       "id": 220,
-      "metin": "Fincanından aldığım bir enerji bana, eğitim hayatına çok fazla odaklanarak, ayrıldığın erkek arkadaşının senden eksilttiklerini yerine koymaya çalıştığını işaret ediyor. Onu başarılarınla \"pişman etmek\" geçiyor mu içinden; doğru söyle? <sprite=0> Neyse; sende gizli kalsın {{isimcigim}}. Falındaki diğer detaylarla devam edelim;",
+      "metin": "Fincanından aldığım bir enerji bana, eğitim hayatına çok fazla odaklanarak, ayrıldığın erkek arkadaşının senden eksilttiklerini yerine koymaya çalıştığını işaret ediyor. Onu başarılarınla \"pişman etmek\" geçiyor mu içinden; doğru söyle?  Neyse; sende gizli kalsın {{isimcigim}}. Falındaki diğer detaylarla devam edelim;",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -3059,7 +3059,7 @@
     },
     {
       "id": 233,
-      "metin": "Fincan görsellerine \"zoom\" yapıyorum! <sprite=23> Detaylara geçelim;",
+      "metin": "Fincan görsellerine \"zoom\" yapıyorum!  Detaylara geçelim;",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -3092,7 +3092,7 @@
     },
     {
       "id": 236,
-      "metin": "Sosyal medya'da insanların çok mutlu gözükmelerine \"ördek sendromu\" dendiğini duymuş muydun {{isim}}? <sprite=5> Ördekler de su üzerinde rahat bir şekilde \"kayıyor\" gibi gözükürler; fakat su altında ayaklarını sürekli çırpıyorlardır. Bu da böyle bir ara bilgi. \\😊 Hadi devam edelim;",
+      "metin": "Sosyal medya'da insanların çok mutlu gözükmelerine \"ördek sendromu\" dendiğini duymuş muydun {{isim}}?  Ördekler de su üzerinde rahat bir şekilde \"kayıyor\" gibi gözükürler; fakat su altında ayaklarını sürekli çırpıyorlardır. Bu da böyle bir ara bilgi. \\😊 Hadi devam edelim;",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -3103,7 +3103,7 @@
     },
     {
       "id": 237,
-      "metin": "Falını balla bölüyorum; başkalarının yaptığı dilbilgisi hatalarından obsesyon derecesinde rahatsız olma durumuna \"grammar pedantry syndrome\" dendiğini biliyor muydun {{isim}}? Ben de onlardan biriyim sanırım. Bak bunlar hep \"fal arası\" bilgi... <sprite=23>\\😋 Nerede kalmıştık?",
+      "metin": "Falını balla bölüyorum; başkalarının yaptığı dilbilgisi hatalarından obsesyon derecesinde rahatsız olma durumuna \"grammar pedantry syndrome\" dendiğini biliyor muydun {{isim}}? Ben de onlardan biriyim sanırım. Bak bunlar hep \"fal arası\" bilgi... \\😋 Nerede kalmıştık?",
       "kosullar": [],
       "fal_konusu": [
         "ask",
@@ -3221,7 +3221,7 @@
     },
     {
       "id": 245,
-      "metin": "Yorumu balla bölüyorum {{isim}}; senin de mensubu olduğun başak burçları için temizlik ve düzen takıntıları olduğu söylenir. Bilmedikleri şu ki, başarı da ancak düzen ve titizlikle gelir. Kazanan insanları mumla aramaya gerek yok; onlar başak burçlarıdırlar! <sprite=7> Devam edelim;",
+      "metin": "Yorumu balla bölüyorum {{isim}}; senin de mensubu olduğun başak burçları için temizlik ve düzen takıntıları olduğu söylenir. Bilmedikleri şu ki, başarı da ancak düzen ve titizlikle gelir. Kazanan insanları mumla aramaya gerek yok; onlar başak burçlarıdırlar! Devam edelim;",
       "kosullar": [
         {
           "degisken": "burc",
@@ -3269,7 +3269,7 @@
     },
     {
       "id": 248,
-      "metin": "\"Yaya benzeer yüreğimm, doğal olarak taa kip te yimm!\" Öyle mi diyordu Musti? <sprite=20>\\😋 Falını detaylandırmadan önce senin de burcun olduğu için aklıma geldi {{isim}}; yay burçları \"kendini beğenmiş\" olarak görülür. Bu son derece yanlıştır. Bu burca mensup kişiler donanımlı oldukları için kendilerine ziyadesiyle güvenirler ve kendi kalitelerinin farkındadırlar. Notumu da düştüğüme göre, fala daha detaylı bir şekilde dönebiliriz;",
+      "metin": "\"Yaya benzeer yüreğimm, doğal olarak taa kip te yimm!\" Öyle mi diyordu Musti? \\😋 Falını detaylandırmadan önce senin de burcun olduğu için aklıma geldi {{isim}}; yay burçları \"kendini beğenmiş\" olarak görülür. Bu son derece yanlıştır. Bu burca mensup kişiler donanımlı oldukları için kendilerine ziyadesiyle güvenirler ve kendi kalitelerinin farkındadırlar. Notumu da düştüğüme göre, fala daha detaylı bir şekilde dönebiliriz;",
       "kosullar": [
         {
           "degisken": "burc",

@@ -1105,16 +1105,83 @@ void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
 
 ---
 
-## Sürüm Geçmişi (Play Store)
+## Sürüm Geçmişi (Android Play Store + iOS App Store)
 
-| versionCode | versionName | Tarih | Notlar |
-|---|---|---|---|
-| 200 | 10.4.0 | — | Son kabul edilen sürüm (Play Console'da) |
-| 201–211 | 10.5.x | 2026-05-03–04 | Asset optimizasyon, çeşitli düzeltmeler |
-| 212 | 10.6.0 | 2026-05-04 | Japon Falı eklendi |
-| 213 | 10.6.0 | — | Play Console'da reddedildi (upgrade compat.) |
-| 214 | 10.6.0 | — | Atlandı |
-| 215 | 10.6.0 | 2026-05-10 | Kamera fix, namespace revert |
-| 216 | 10.6.0 | 2026-05-10 | Mevcut sürüm — CLAUDE.md notları, son commit |
+| versionCode | versionName | Platform | Tarih | Notlar |
+|---|---|---|---|---|
+| 200 | 10.4.0 | Android | — | Son kabul edilen sürüm (Play Console'da) |
+| 201–211 | 10.5.x | Android | 2026-05-03–04 | Asset optimizasyon, çeşitli düzeltmeler |
+| 212 | 10.6.0 | Android | 2026-05-04 | Japon Falı eklendi |
+| 213 | 10.6.0 | Android | — | Play Console'da reddedildi (upgrade compat.) |
+| 214 | 10.6.0 | Android | — | Atlandı |
+| 215 | 10.6.0 | Android | 2026-05-10 | Kamera fix, namespace revert |
+| 216 | 10.6.0 | Android | 2026-05-10 | CLAUDE.md notları, son commit |
+| 220 | 10.6.0 | iOS | 2026-06-08 | İlk iOS build — NSMicrophoneUsageDescription eksikti |
+| 221 | 10.6.0 | iOS | 2026-06-08 | Microphone fix — encryption compliance sorunu |
+| 222 | 10.6.0 | iOS | 2026-06-08 | TestFlight'a ulaştı — GADApplicationIdentifier eksikti, crash |
+| 223 | 10.6.0 | iOS | 2026-06-08 | GADApplicationIdentifier eklendi, TestFlight'ta çalışıyor |
+| 224+ | 10.6.0 | iOS | — | Bir sonraki build (ikon büyütme) |
+
+**Bir sonraki iOS build: versionCode 224**
+
+---
+
+## iOS App Store — Teknik Yapılandırma
+
+### Bundle ID
+- **iOS Bundle ID:** `com.futurastic.Magnus` (Android applicationId ile aynı)
+- **Android namespace:** `com.magnus.magnus_app` (farklı — DOKUNMA)
+
+### Signing (Manuel)
+- **Team ID:** `SN5Y726ZKF`
+- **Distribution cert:** Apple Distribution: FUTURASTIC... (Jun 2026–Jun 2027)
+- **Provisioning Profile:** Magnus App Store Profile (UUID: 068091fb-8ada-45bb-b14d-ea3d7f01ebfc)
+- **P12:** `C:\src\magnus_app\ios_certs\ios_distribution.p12` (şifre: `Magnus2026iOS`)
+- **P12 formatı:** legacy PBE-SHA1-3DES (macOS Keychain uyumlu — OpenSSL 3 default PBES2 değil)
+
+### Codemagic
+- **Workflow:** `ios-release` (codemagic.yaml)
+- **Flutter:** 3.29.2 (pinli)
+- **Instance:** mac_mini_m2
+- **Env groups:** `ios_signing`, `app_secrets`, `app_store_connect`
+- **Env variables (app level):**
+  - `ios_signing`: IOS_CERTIFICATE, IOS_CERTIFICATE_PASSWORD, IOS_PROVISIONING_PROFILE
+  - `app_secrets`: ANTHROPIC_API_KEY
+  - `app_store_connect`: APP_STORE_CONNECT_KEY_IDENTIFIER (G796KF2KD3), APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_PRIVATE_KEY
+
+### AdMob iOS App ID
+- `GADApplicationIdentifier` = `ca-app-pub-6470338276121414~5546686598`
+- Info.plist'te tanımlı — eksik olursa uygulama açılışta crash verir
+
+### Info.plist Zorunlu Anahtarlar
+```xml
+<key>GADApplicationIdentifier</key>
+<string>ca-app-pub-6470338276121414~5546686598</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Uygulama ses özellikleri için mikrofon erişimi gerektirebilir.</string>
+<key>NSCameraUsageDescription</key>
+<string>Kahve falı için fincanının fotoğrafını çekmek amacıyla kameraya erişim gerekiyor.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Kahve falı için galerinizden fotoğraf seçmek amacıyla erişim gerekiyor.</string>
+<key>ITSAppUsesNonExemptEncryption</key>
+<false/>
+```
+
+### iOS Signing Dosyaları (LOCAL — git'e commit edilmez)
+`C:\src\magnus_app\ios_certs\`
+- `ios_distribution.key` — private key
+- `ios_distribution.csr` — CSR
+- `distribution.cer` — Apple'dan indirilen sertifika
+- `ios_distribution.p12` — Codemagic'e yüklenen P12
+- `Magnus_App_Store_Profile.mobileprovision` — provisioning profile
+- `IOS_CERTIFICATE.b64.txt` — P12 base64
+- `IOS_PROVISIONING_PROFILE.b64.txt` — profile base64
+- `APP_STORE_CONNECT_PRIVATE_KEY.txt` — .p8 içeriği
+- `AuthKey_G796KF2KD3.p8` kopyası masaüstünde
+
+### App Store Connect
+- **App Apple ID:** 1612979368
+- **App Store Connect API Key ID:** G796KF2KD3
+- **Issuer ID:** 8c4687a8-9df9-4d95-8516-3fa3b7576e44
 
 **Bir sonraki build: versionCode 217**

@@ -112,11 +112,35 @@ class FortuneService {
   //   3. Uygun metinler bitince sıfırlanır ve baştan başlanır
   // Bölümler arasına boş satır eklenir.
 
+  /// fal_konusu eşleşmesi — tek bölüm için
+  /// konu: 'ask' | 'kariyer' | 'saglik' | 'genel'
+  static bool _matchesFalKonusu(Map t, String konu) {
+    final konular = (t['fal_konusu'] as List?)
+        ?.map((e) => e.toString().toLowerCase())
+        .toList() ?? [];
+    if (konular.isEmpty) return true; // tag yoksa herkese açık
+    return konular.contains(konu.toLowerCase());
+  }
+
+  /// Bir bölüm için konu filtreli seçim:
+  /// Level 1: konu eşleşmesi  →  Level 2: 'genel'  →  Level 3: konu yok sayılır
+  List _eligibleByKonu(List eligible, String konu) {
+    // L1: tam eşleşme
+    var filtered = eligible.where((t) => _matchesFalKonusu(t as Map, konu)).toList();
+    if (filtered.isNotEmpty) return filtered;
+    // L2: genel
+    filtered = eligible.where((t) => _matchesFalKonusu(t as Map, 'genel')).toList();
+    if (filtered.isNotEmpty) return filtered;
+    // L3: konu filtresini kaldır
+    return eligible;
+  }
+
   Future<InboxItem> generateCoffeeFortune({
     required UserProfile profile,
     String? photoPath1,
     String? photoPath2,
     String? photoPath3,
+    String falKonusu = 'genel', // 'ask' | 'kariyer' | 'saglik' | 'genel'
   }) async {
     await _initKahve();
     final vars = profile.toVariableMap();
@@ -136,17 +160,20 @@ class FortuneService {
 
       if (eligible.isEmpty) continue;
 
-      // Tekrar gösterilmeme
-      final shownKey = 'kahve_${bolum}_shown_ids';
+      // Konu filtresi (kademeleli)
+      final konuFiltered = _eligibleByKonu(eligible, falKonusu);
+
+      // Tekrar gösterilmeme (konu bazında ayrı key)
+      final shownKey = 'kahve_${bolum}_${falKonusu}_shown_ids';
       var shownIds = prefs.getStringList(shownKey) ?? [];
-      var available = eligible
+      var available = konuFiltered
           .where((t) => !shownIds.contains('${(t as Map)['id']}'))
           .toList();
 
       if (available.isEmpty) {
         await prefs.remove(shownKey);
         shownIds = [];
-        available = List.from(eligible);
+        available = List.from(konuFiltered);
       }
 
       available.shuffle(_rng);

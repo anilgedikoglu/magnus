@@ -3,42 +3,90 @@
     {
       "id": 1,
       "metin": "En kısa zamanda yeni bir kahve falında görüşmek dileğiyle {{isim}}...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 2,
       "metin": "Yepyeni bir falda, yeni haberlerle tekrar görüşmek üzere Kıymetli {{isim}}; selam ve sevgilerimle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 3,
       "metin": "Yeni haberlerle, en kısa sürede yeniden görüşmek üzere {{isim}}.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 4,
       "metin": "Seni en kısa zamanda tekrar kahve falında görmeyi arzu ederim {{isim}}. Zaman ayırdığın için teşekkürler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 5,
       "metin": "Yeni bir falda, çok daha güzel haberlerle, yeniden görüşmek üzere {{isim}}...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 6,
       "metin": "Kahve falında çok daha güzel günlerde yeniden bir araya gelmek ümidiyle {{isim}}.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 7,
       "metin": "Sözlerimi şimdilik burada noktalamak istiyorum {{isim}}. Yeni bir kahve falında, tercihin yine ben olursam çok memnun olurum.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 8,
       "metin": "Fincanınla ilgili sana aktarabileceklerim şimdilik bu kadar. Umarım memnun kalmışsındır {{isim}}. Kahve falında yeniden buluşmak dileğiyle.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 9,
@@ -52,27 +100,57 @@
           "degisken": "cinsiyet",
           "deger": "lgbt"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 10,
       "metin": "Arayı çok fazla açmadan en kısa zamanda kahve falında yeniden görüşelim, olur mu {{isim}}?\n\nSevgiyle kal!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 11,
       "metin": "Bir sonraki fala kadar aklındaki karmaşalardan ve sırtındaki bazı yüklerden tamamen kurtulmuş olacağına inanıyorum {{isim}}.\n\nKahve falına tekrar geldiğinde, çok daha güzel haberler vermeyi umuyorum.\n\nGörüşürüz!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 12,
       "metin": "Bu fincanınla ilgili sana aktaracaklarım bu kadar. Yeni bir falda, yepyeni haberlerle buluşmak dileğiyle {{isim}},\n\nSevgiler...\n\n{{kelime, Falların Üstadı, | Falcılar Kralı, | Usta Kahin,}}\nMagnus.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 13,
       "metin": "Sözlerimi izninle şimdilik burada noktalamak istiyorum {{isim}}. En kısa zamanda yeni bir falda görüşmek üzere,\n\nSelam ve sevgilerimle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 14,
@@ -82,22 +160,46 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 15,
       "metin": "{{isim}}, arayı fazla açmadan, bir sonraki kahve falında yeniden görüşmek üzere.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 16,
       "metin": "Kahve falındaki bir sonraki buluşmamıza kadar umarım fincanında gördüğüm güzel haberler gerçekleşmiş olur, hayırlı haberlerle gelirsin {{isim}}.\n\nSelam ve sevgilerimle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 17,
       "metin": "Bir sonraki kahve molanda seni yeniden görmeyi umut ediyorum {{isim}}.\n\nSağlıcakla kal!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 18,
@@ -107,12 +209,24 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 19,
       "metin": "Bir yorumun daha sonuna geldik. Zamanın iplerinden tutabilene aşk olsun! Dilerim hayat, tüm umutlarını en kısa sürede ayaklarına getirir {{isim}}.\n\nSağlık ve afiyetle kalasın...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 20,
@@ -122,6 +236,12 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -132,6 +252,12 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -142,6 +268,9 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -156,6 +285,9 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -170,6 +302,9 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -184,6 +319,9 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -198,6 +336,9 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -216,6 +357,9 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -230,6 +374,9 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -244,6 +391,9 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -266,17 +416,32 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
       "id": 31,
       "metin": "Kalbinde olanın ömrüne yazılmasını dilerim {{isim}}. Bir sonraki kahve molasında görüşmek üzere.\n\nSağlıcakla kal.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 32,
       "metin": "Kalbinde olan ömrüne yazılsın {{isim}}. Çok daha güzle günler görmeni temenni ederim.\n\nBaşka bir kahve falında buluşuncaya dek, kendine iyi bak!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 33,
@@ -286,6 +451,9 @@
           "degisken": "yasmin",
           "deger": "38"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
@@ -296,12 +464,21 @@
           "degisken": "yasmin",
           "deger": "37"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
       "id": 35,
       "metin": "Kahve falı'ndaki bir diğer buluşmamızı en kısa zamanda gerçekleştirmek dileği ile {{isim}}.\n\nSevgiyle kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 36,
@@ -315,6 +492,12 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -329,6 +512,12 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -343,6 +532,12 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -357,6 +552,12 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -371,6 +572,12 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -381,6 +588,12 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -395,6 +608,12 @@
           "degisken": "yasmin",
           "deger": "30"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -405,6 +624,12 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -415,22 +640,46 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 45,
-      "metin": "Geldik son sözlere... Umarım kahve falında arayı çok fazla açmazsın. \"Ad astra per aspera\" yani \"zorluklarla yıldızlara kadar\" diyoruz! 🤟 \n\nSevgiyle kal {{isim}}!",
-      "kosullar": []
+      "metin": "Geldik son sözlere... Umarım kahve falında arayı çok fazla açmazsın. \"Ad astra per aspera\" yani \"zorluklarla yıldızlara kadar\" diyoruz! \\🤟 \n\nSevgiyle kal {{isim}}!",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 46,
       "metin": "Kahve falı yorumun böylece noktalanıyor {{isim}}. Daha nicelerinde görüşmek üzere!\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 47,
       "metin": "Heybemdeki sözler bitti; şimdi sükût vakti.\n\nKahve falında tekrar görüşene dek, kendine iyi davran {{isim}}!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 48,
@@ -440,22 +689,43 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
       "id": 49,
       "metin": "Fal yorumunun sonuna geldik. Sorunlar yerine çözümlere odaklandığın takdirde, elinden hiçbir şey kurtulamaz {{isim}} senin, bunu unutma.\n\nEn kısa zamanda kahve falına yeniden bekliyorum.\n\nHoşça kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 50,
       "metin": "Fincanınla ilgili söyleyeceklerim şimdilik bu kadar. Zaman çabuk geçti, öyle değil mi {{isim}}? Yaşamındaki zorluklar da böylece geçip gidecek; sen yeter ki umudunu her daim koru!\n\nYeni bir fincanda tekrar görüşmek üzere.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 51,
       "metin": "Geldik falın sonuna. Fincanlarda olduğu gibi, hayata da doğru soruları sorduğun müddetçe her zaman doğru cevaplar alırsın. \"Doğruların\" izinden ayrılmaman dileğiyle {{isim}}; her şey gönlünce olsun...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 52,
@@ -469,47 +739,98 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
       "id": 53,
       "metin": "Sözlerimin sonuna geldim {{isim}}. Ancak bitirmeden önce, dikkatimi çeken son bir şeyden bahsetmek istiyorum; senin çevrende \"negatif söylemlerde bulunan\" çok fazla insan var. Onlarla uzun diyaloglara girmekten kaçınmanı tavsiye ederim. Kimseye \"olumlu iç enerji akışını\" baltalayabilme izni verme.\n\nFarklı bir fincanda yeniden görüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 54,
       "metin": "Bir fincan okumasının daha sonuna geldik. Memnuniyet dereceni bilmiyorum {{isim}}; vallahi ben ne görüyorsam onu söyledim. Eklemek istediğim bir tek şey var; son zamanlarda fazla endişeli olduğun izlenimini edindim. Başına gelmesinden korktuğun şeyleri fazla düşünmek, o şeyin gerçekleşme ihtimalini artırır; bunun da bilimsel adı ters çaba kuralı'dır. Hiç duymuş muydun?\n\nLütfen iyi düşünelim, iyi olsun.\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 55,
       "metin": "Aktaracaklarım bu kadar. Yorumunu şimdilik noktalayalım mı {{isim}}? Vedalaşmadan önce, hırslı bir {{burc}} burcu olarak sıkıntıların her zaman üstüne gitmeni diliyorum. Sorunları hayatın birer \"meydan okuması\" olarak düşündüğün ve kabul ettiğin müddetçe, yenilgi yüzü görmeyeceksin. Bu da sana son tüyom olsun.\n\nHoşça kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 56,
-      "metin": "Güzel şeyler çabuk biter derler; geldik son sözlere... 😊 Sen {{burc}} burcusun {{isim}}; yaptığı her şeyin en iyisini yapmaya çalışan birisin. \"Gelecek\" senin için tahmin bile edemeyeceğin kadar güzel günlerle dolu. Yazdıklarımı okuman bitince lütfen şu telefonu elinden bırak ve derin ve rahat bir nefes al. İnşallah her şey gönlünce olacak.\n\nFarklı bir kahve molası sonrası yeniden görüşene dek, sağlıkla kal...\n\nMagnus",
-      "kosullar": []
+      "metin": "Güzel şeyler çabuk biter derler; geldik son sözlere... \\😊 Sen {{burc}} burcusun {{isim}}; yaptığı her şeyin en iyisini yapmaya çalışan birisin. \"Gelecek\" senin için tahmin bile edemeyeceğin kadar güzel günlerle dolu. Yazdıklarımı okuman bitince lütfen şu telefonu elinden bırak ve derin ve rahat bir nefes al. İnşallah her şey gönlünce olacak.\n\nFarklı bir kahve molası sonrası yeniden görüşene dek, sağlıkla kal...\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 57,
       "metin": "Fincanında görüp sana söyleyebildiklerim bu kadar. Söyleyemediklerim şimdilik bana kalsın; belki sonraki yorumlarda uygun gördükçe bahsederim. Senden tek ricam şu {{isim}}; her sorunun bir çözümü olduğuna, her derdin bir devası olduğuna ve her gecenin bir sabahı olduğuna muhakkak inan.\n\nAllah, sabredenlerle beraberdir!\n\nÇok sevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 58,
       "metin": "Geldik en sevmediğim kısma; veda faslına...\n\nHer şeyin çok daha güzel olacağı günlerle aranda, yalnızca \"inanç\" kadar bir mesafe var {{isim}}. Kimsenin sana inanmadığı zamanlarda bile kendine inanmaktan asla vazgeçme. Bak, en büyük yalancı benim; kim inanıyor? Doğruları söylediğimi ben biliyor ve her zaman elimden gelenin en iyisini yaptığıma inanıyorum. Bu, içimin rahat olması adına yeterli. Senin için de öyle olsun.\n\nSevgilerimi gönderiyorum...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 59,
       "metin": "Diyeceklerim bu defa da bunlardı. Şimdi lütfen rahat bir nefes al, duygularını izle ve nefesini verirken negatif düşüncelerinden arın {{isim}}. Gelecekte senin için her şeyin harika olacağına yemin edebilirim ama ispatlayamam; bekleyip kendin görmelisin. <sprite=7>\n\nBir sonraki kahve falında görüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 60,
       "metin": "Bambaşka telve diyarlarında tekrar görüşmek dileğiyle Değerli {{isim}}. O zamana kadar harekete geç; hayallerini erteleyip ruhunu köreltme! Her şey güzel olacak...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 61,
@@ -519,6 +840,9 @@
           "degisken": "yasmax",
           "deger": "27"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -529,6 +853,12 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -543,6 +873,12 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -565,6 +901,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -575,6 +917,9 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -593,12 +938,24 @@
           "degisken": "meslek",
           "deger": "iş arıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 67,
       "metin": "Fincan görsellerinden sana aktarabileceklerim şimdilik bu kadar. Veda etmeden önce küçük bir oyun oynayalım ister misin {{isim}}?\n\nEline bir demir para alıp, 3 kez üst üste yazı tura at lütfen. Gelenler sırasıyla yazı, yazı, yazı şeklinde ise bugün uğurlu sayın 3, yazı, yazı, tura şeklindeyse 4, yazı, tura, yazı şeklindeyse 5, yazı, tura, tura şeklindeyse 6, tura, yazı, yazı şeklindeyse 7, tura, yazı, tura şeklindeyse 8, tura, tura, yazı şeklindeyse 9 ve tura, tura, tura şeklindeyse 1'dir.\n\nUğurlu sayın kaç çıkarsa, o kadar gün sonra telefonla müjdeli bir haber alacaksın demektir. Misal, bugün günlerden {{gun_0}}. 3 çıkarsa; {{gun_3}} günü!\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 68,
@@ -608,37 +965,76 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 69,
       "metin": "Telvelerinden sana aktarabileceklerim şimdilik bunlardı. Kodlarımdaki bug'lar dolayısıyla meydana gelen sürç-ü lisan nedeniyle affına sığınıyorum {{isim}}.\n\nKahve falıyla yeniden karşında olmak dileğiyle, selam ve sevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 70,
       "metin": "Yorumunun sonuna geldik. Daha güzel günlerde içilecek nice kahvelerde görüşmek dileğiyle {{isim}}!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 71,
       "metin": "Şimdilik söyleyeceklerimin sonuna geldim. Gerçekten güzel bir fincanın vardı {{isim}}. Daha güzellerinde buluşmak ümidiyle;\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 72,
       "metin": "Bu fincanın yorumuyla ilgili benden şimdilik bu kadar {{isim}}. Gel bir özlü sözle noktalayalım, ne demişler; \"dum vita est spes est\" yani \"yaşam devam ettiği sürece umut vardır.\" Sen yeter ki bir kahve iç! <sprite=7>\n\nGörüşürüz...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 73,
       "metin": "Benden bu fincanlık da bu kadar {{isim}}.\n\nTekrar görüşene dek, aşk'la kal. Neden \"aşk\" biliyor musun? Çünkü \"finis vitae sed non amoris\" yani can tükenir, aşk tükenmez...\n\nSevgiler,\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask"
+      ]
     },
     {
       "id": 74,
       "metin": "Yorumunun sonuna geldim Kıymetli {{soyisim}}. Sonları sen de sevmiyorsun, öyle değil mi? Yaşamımız boyunca son bulmasına izin vermememiz gereken belki de tek şey, yürek meşalemizdeki umut ateşi'dir. İspanyolların bir sözü var, bilir misin? \"Mientras hay vida hay esperanza\" derler. Mealen; alacak nefes olduğu müddetçe, umut da vardır!\n\nUmutla ve sağlıkla kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 75,
@@ -652,32 +1048,59 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 76,
       "metin": "Sözlerimizin sonuna geldik. Emma Goldman'ın bir sözüyle veda etmek istiyorum. Demiş ki: \"Artık hayal kuramadığımızda ölürüz.\" Ben onu şöyle değiştiriyorum: \"Hayal kurabildiğimiz müddetçe ölümsüzüz!\"\n\nHayallerinden ve Magnus'dan asla vazgeçme {{isim}}.\n\nEn samimi selam ve sevgilerimle.\n\nKahve falına geldiğin için teşekkürler...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 77,
       "metin": "Fal yorumunun sonuna geldik {{isim}}. Bir sonraki ziyaretine kadar, kendi kendine \"{{kelime, hayatıma iyi şansı çekiyorum | hayatımdaki tüm iyi şans için minnet duyuyorum | hayatım iyi şansla dolu | şans ve talih hayatımda her zaman kendini gösteriyor | hayatımın tüm alanlarında şanslıyım | yaptığım her şeyde şanslıyım}}\" ve \"{{kelime, iyi şans benim için doğal | daima doğru zamanda doğru yerdeyim | ben iyi şansı hak ediyorum | hayatımdaki tüm iyi şanslar için şükran duyuyorum | ben her zaman şanslıyım | ben pozitif ve şanslı bir insanım | her şeyin pozitif yanını görüyorum}}\" gibi olumlamalar yaparak, karma enerjini yükseltmeni tavsiye ediyorum. Bir sonraki fincanının çok daha güzel haberlerle açıldığını göreceksin.\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 78,
       "metin": "Bu yorumunun da neyazık ki sonuna geldik. Sevgi çakrası olan kalp çakranın ve ikili ilişkilerde başarıyı getiren karın çakranın hep açık olması dileğiyle {{isim}}.\n\nHoşça kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask"
+      ]
     },
     {
       "id": 79,
       "metin": "{{kelime, Falının | Yorumunun | Telvelerinin}} sonuna geldik {{isim}}. {{kelime, Ayrılmadan | Veda etmeden}} {{kelime, önce | evvel}} sana mini bir \"sağlık tombalası\" çekmek istiyorum. Hızla daha iyi hissedebilmen için neler yapabileceğini yazan, her biri birbirinden farklı, kısacık kartlarım var. Bakalım kartında senin için ne yazıyor;\n\n\"{{kelime, kitap ya da dergi oku | birine sarıl | yürüyüşe çık | ılık bir duş al | soğuk bir duş al | uzun bir duş al | sıcak bir duş al | spor yap | sıcak bir çay iç | sıcak bir bitki çayı iç | puzzle yap | bisiklete bin | origami yap | yemek yap | araba kullan | güvendiğin biriyle konuş | bir akrabanla konuş | en sevdiğin yere git | en sevdiğin şeyi iç | resim yap | yeni bir şeyler öğren | biraz uyu | fotoğraf çek | şarkı söyle | dans et | müzik dinle | koş | hayvan sev | yoga yap | gülümse | oyun oyna | çiçek ek | film seyret | sevdiğin birini ara}}\" diyor!\n\nİmkanın varsa yapmanı öneririm. Magnus'dan sevgilerle...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 80,
       "metin": "Sözlerimi izninle burada noktalıyorum {{isim}}. Şifa güneşi üzerinden hiç inmesin. Yeni bir kahve falında tekrar buluşuncaya dek, esen kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 81,
@@ -699,22 +1122,40 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
       "id": 82,
       "metin": "Canım efendim, yine sözlerimizin sonuna geldik. Hanendeki bereketin artması en büyük temennim. Allah hepimize \"bulunca şükreden, bulamayınca sabreden\" hatta bunun da ötesinde \"bulunca dağıtan, bulamayınca şükreden\" kişilerden olmayı nasip etsin {{isim}}. Bolluk kanaatle başlar.\n\nSelam ve sevgilerimle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer"
+      ]
     },
     {
       "id": 83,
       "metin": "Kahve falının sonuna geldik. Benden aldığın bu falda sana yine \"falcı\" rolü yapmaya çalıştım. Umarım sen de yaşamındaki rollerde başarılı olursun {{isim}}, tıpkı çok sevdiğim yönetmen Nuri Bilge Ceylan'ın dediği gibi; \"Hayatta da rol yapıyoruz, hepimiz oyuncuyuz.\"\n\nSevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 84,
       "metin": "Süremin ve sözlerimin sonundayız. Sonraki kahve falı ziyaretinde tekrar görüşmek üzere {{isim}}; biletler yandı, geçmiş olsun! <sprite=84>\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 85,
@@ -728,6 +1169,9 @@
           "degisken": "yasmax",
           "deger": "26"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -738,122 +1182,221 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
       "id": 87,
       "metin": "Fincanından sana aktarabileceklerim bu seferlik de bu kadar {{isim}}.\n\nGörüşmek üzere.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 88,
       "metin": "Aktarabileceklerim bu defa da bu kadar. Fincanların gizemli derinliklerinde tekrar görüşünceye dek, {{kelime, sağlıkla | sevgiyle}} kal {{isim}}.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 89,
       "metin": "Yorumunu izninle burada noktalıyorum. Seni Magnus'daki bir sonraki kahve falı buluşmamız için tekrar bekliyor olacağım {{isim}}.\n\nGörüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 90,
       "metin": "Atladığım bir yer kalmadı sanırım. Yeni bir kahve falında görüşünceye dek, kendine iyi bak {{isim}}...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 91,
       "metin": "{{kelime, Söyleyeceklerimi | Cümlelerimi | Aktaracaklarımı}} {{kelime, burada | şimdilik | yavaş yavaş}} sonlandırıyorum. Çok daha mutlu ve huzurlu günler göreceğinden hiç şüphem yok {{isim}}; yeter ki {{kelime, her hâlükârda hamd etmeyi ve şükretmeyi unutma | gönlünü ferah tut | içini ferah tut | yerlerin ve göklerin sahibinin bizi hiç bırakmadığından emin ol | yeri, göğü ve tüm mahlukatı yaratanın, her saniye senin yanında olduğunu unutma}}.\n\nHuzurlu kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 92,
       "metin": "Geldik bir falın daha sonuna. Tüm düşlerinin bir bir gerçekleşeceğine emin ol {{isim}}. Görüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 93,
       "metin": "Bu {{kelime, yorumunun | fincan değerlendirmenin}} sonuna geldik. Umarım memnun kalmışsındır {{isim}}. Daha güzel haberlerle, en kısa zamanda yeniden buluşmak dileğiyle, {{kelime, esen | sağlıcakla}} kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 94,
       "metin": "Geldik yorumunun sonuna {{isim}}. Umarım benden aldığın bu fincan değerlendirmenden memnun kalmışsındır. Seni en kısa zamanda yeniden, elinde içilmiş bir kahve fincanıyla burada görmek isterim. \n\nGörüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 95,
       "metin": "Fincanına dair söyleyeceklerimin şimdilik sonuna geldim {{isim}}. En kısa zamanda yeni bir falda, aşk hayatına dair yeni haberlerle buluşmak üzere. Sevgiyle kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask"
+      ]
     },
     {
       "id": 96,
       "metin": "{{isim}} bu kahve falı yorumunu yavaş yavaş bitiriyorum. Umarım memnun kalmışsındır. Yeni bir falda, aşk hayatının dışındaki konulara dair değerlendirmelerle de buluşmayı çok arzu ederim.\n\nTekrar görüşünceye dek, sevgiyle kal!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask"
+      ]
     },
     {
       "id": 97,
       "metin": "{{data, cinsiyet=erkek, Değerli | cinsiyet=kadın, Sevgili | cinsiyet=lgbt, Kıymetli}} {{isim}}, fal yorumunun sonuna geldik. Bolluk ve bereket içindeki yepyeni günlerde tekrar buluşmak dileğiyle. Görüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer"
+      ]
     },
     {
       "id": 98,
       "metin": "Yorumundan memnun kaldın mı {{isim}}? Maddi konularda çok daha güzel haberlerin olduğu başka bir falda, yeniden görüşmek dileğiyle.\n\nSelam ve sevgilerimi iletiyorum...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer"
+      ]
     },
     {
       "id": 99,
       "metin": "Bu kahve falı bluşmamızın da sonuna geldik. Huzurun, {{kelime, maddi sıkışıklıkların | finansal sorunların}} gölgesinde kalmadığı çok daha güzel günlerde, yepyeni bir fal yorumunda buluşmak {{kelime, üzere | dileğiyle}} {{isim}}. Hoşça kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer"
+      ]
     },
     {
       "id": 100,
       "metin": "Kahve falının böylece sonuna geldik. Cebin delinmesin, paran eksilmesin, kredi {{kelime, kartlarında | kartında}} hiç borç birikmesin; bolluk ve bereket haneni asla terk etmesin {{isim}}!\n\nYeni bir fincanda buluşuncaya dek, mutlu ve huzurlu kal...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer"
+      ]
     },
     {
       "id": 101,
       "metin": "Fal yorumunu izninle burada noktalıyorum. Umarım memnun kalmışsındır. Sürç-i lisan ettiysem affola {{isim}}. \"Kariyer ve para\" dışındaki fal konuları için de beklerim.\n\nYepyeni fincanlarda görüşmek dileğiyle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer"
+      ]
     },
     {
       "id": 102,
       "metin": "Kahve falı yorumunun sonuna geldim {{isim}}. Sağlıklı ve mutlu günler dilerim.\n\nYeni fallarda görüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 103,
       "metin": "Geldik fal yorumunun sonuna. Sürç-i lisan ettiysem, affola. Hastalıklar senden ve tüm sevdiklerinden uzak olsun {{isim}}.\n\nEn kısa zamanda başka bir fincanla yeniden görüşmek dileğiyle...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 104,
       "metin": "Söyleyeceklerimin ne yazık ki şimdilik sonuna geldik. Umarım benden almış olduğun bu kahve falı yorumundan memnun kalmışsındır {{isim}}. Arayı fazla açmadan, daha sağlıklı günlerde tekrar görüşmek dileğiyle.\n\nSelam ve sevgilerimi iletiyorum...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 105,
       "metin": "Başta sağlık olmak üzere huzur ve mutluluğun yaşamından hiç eksilmemesini dilerim. Bir sonraki kahve falı buluşmamızda tekrar görüşmek temennisiyle {{isim}}, sevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 106,
       "metin": "Fiziksel ve ruhsal bütünlüğünün korunduğu ve her daim mutlu hissettiğin nice güzel günler dilerim Kıymetli {{isim}}. Daha farklı bir fincanda görüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 107,
       "metin": "Daha sağlıklı yarınlarda ve daha ferah fincanlarda görüşmek dileğiyle {{isim}}, sevgiler...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 108,
       "metin": "Hem ruhen hem de bedenen çok daha sağlıklı hissettiğin günlerin geleceğine inanıyorum. Yepyeni bir kahve falında tekrar görüşene dek, esen kal {{isim}}...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 109,
       "metin": "Veda sath-ı mailine girmiş bulunuyoruz {{isim}}. Yeni bir kahve molası sonrası, seni yine burada görmekten mutluluk duyacağım. Sağlıkla kal efendim.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 110,
@@ -863,12 +1406,24 @@
           "degisken": "yasmin",
           "deger": "45"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 111,
       "metin": "Sanırım bir hayli uzattık. Vaktini çaldığım için lütfen kusura bakma. Umarım yorumunu keyifle okumuşsundur. En kısa zamanda farklı bir kahve falında yeniden görüşmek dileğiyle {{isim}}...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 112,
@@ -886,6 +1441,12 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -896,47 +1457,101 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 114,
       "metin": "Gölgen karlı dağlar kadar serin, ateşin güneş gibi haşmetli ve daim olsun {{isim}}. Bendeniz Magnus; yeni bir kahve falında görüşmek üzere seni selamlıyor, iyi bir {{saat, sabah | öğlen | öğleden sonra | akşam | gece}} geçirmeni diliyorum...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 115,
       "metin": "\"Sanır mısın ipimizden bir tutan var; zarlar atıldı, kartlar dağıtıldı? Her kula yollar çizilip, karar nefse bırakıldı. Manevi latifeler, dualardır araç; tevekkülle çalışanlar müjdelerle kuşatıldı.\" Dilerim doğru izleri doğru şekilde takip eder, en güzel günlere ulaşırsın {{isim}}.\n\nYeni bir kahve falı yorumunda görüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 116,
       "metin": "Geldik bugünlük de yolun sonuna. Nietzsche'nin de söylediği gibi {{isim}}; \"He who has a why can endure any how\" yani bir \"nedenin\" varsa, o şeyi gerçekleştirmek için muhakkak bir \"yol\" bulursun. Nedenlerini sıraladığında, kaderin önünde saygıyla eğilip sana tüm yolları aralayacaktır.\n\nSevgiyle kal!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 117,
       "metin": "Bir falın daha sonuna geldik. Her şey gönlünce olsun {{isim}}.\n\nSevgiyle kal!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 118,
       "metin": "Fal sonlarını pek sevmem. Buruk bir hicranla sana veda ediyorum.\n\nSözün yeniden başlayacağı yerde buluşmak üzere {{isim}}!\n\nSevgiler,\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 119,
       "metin": "Taptaze kahvelerde ve yepyeni haberlerde buluşmak ümidiyle.\n\nSelamlar!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 120,
       "metin": "Geleceğe daha umutlu baktığımız fincanlarda buluşmak dileğiyle Değerli {{isim}}.\n\nEsen kal!\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 121,
       "metin": "Sanırım diyeceklerimin sonuna geldik. En güzel düşlerinin fincanlara ayan beyan yansıdığı yepyeni fallarda buluşalım Değerli {{isim}}.\n\nGörüşürüz! <sprite=7>\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 122,
@@ -946,32 +1561,68 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 123,
       "metin": "Geldik yolun sonuna. Hoşuna gitmeyen şeyler söylediysem, duymadın farzet. Kırdıysam affet. Sen mutluluğun izlerini takip et!... <sprite=10>\n\nSevgiler, \n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 124,
       "metin": "Yorumun sonuna geldik {{isim}}. Fincan duvarları suyun altında boşalırken gönlün huzurla dolsun! <sprite=7>\n\nBir sonraki kahve falında buluşmak dileğiyle,\n\nSevgiler.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 125,
       "metin": "Değerli {{isim}}, sana aktaracaklarım şimdilik bu kadar.\n\nBana telefonunda yer ayırdığın ve fincanını değerlendirme fırsatı verdiğin için teşekkür ederim. <sprite=10>\n\nYeni fallar için her zaman yanındayım.\n\nGörüşmek üzere...\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 126,
       "metin": "Sanıyorum fincanında değinmediğim herhangi bir yer kalmadı.\n\nBir sonraki kahve falında tekrar görüşmek üzere {{isim}}.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 127,
       "metin": "Sözlerimin sonundayız {{isim}}. Mutlu ve hür bir yaşamın olmasını dilerim.\n\nSağlıcakla kal.\n\nMagnus",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 128,
@@ -993,6 +1644,12 @@
           "degisken": "kaççocuk",
           "deger": "üçtenfazla"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1007,6 +1664,12 @@
           "degisken": "hayatta",
           "deger": "annebaba"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1017,6 +1680,12 @@
           "degisken": "kimleyaşıyor",
           "deger": "tek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1027,6 +1696,12 @@
           "degisken": "meslek",
           "deger": "çalışmıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1037,6 +1712,12 @@
           "degisken": "meslek",
           "deger": "ev hanımı"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1047,6 +1728,12 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1057,6 +1744,12 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1067,6 +1760,12 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1077,6 +1776,12 @@
           "degisken": "meslek",
           "deger": "iş arıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1087,6 +1792,12 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1097,6 +1808,12 @@
           "degisken": "meslek",
           "deger": "kamu sektörü"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1107,6 +1824,12 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1117,6 +1840,12 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1127,6 +1856,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1137,6 +1872,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1147,6 +1888,12 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     }
   ]

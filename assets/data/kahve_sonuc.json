@@ -36,6 +36,10 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -74,6 +78,10 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -88,6 +96,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -114,6 +126,10 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -132,6 +148,10 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -142,22 +162,46 @@
           "degisken": "burc",
           "deger": "balık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 7,
       "metin": "Telvelerini daha alt kısımlara doğru irdelediğimde, ağır yük vagonlarından ayrılıp, yoluna hızlanarak devam eden bir lokomotif görüyorum. {{ay_1}} ayında, uzun süredir var olan bir sorundan kurtularak, geç gelen bir mutluluk yaşayacaksın {{isim}}. Seni bulunduğun yere bağlayan, bazı insanlara mecbur kılan ve aklında olanları hayata geçirmeni engelleyen bir durum, {{kelime, vereceğiniz bir \"start\" sonrası | yapacağın bir görüşme sonrası | alacağın bir haber sonrası | hanene gelecek bir misafirden sonra | il dışına yapacağın bir ziyaretten sonra}} tamamen değişmiş olacak. Raylar seni daha güzel günlere taşıyacak.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 8,
       "metin": "{{isim}} son aylarda bir insanı çokça mı suçluyorsun? Telvelerinin alt odağında bir {{kelime, kadın | erkek}} görüyorum. Bu kişi elleriyle yüzünü kapatmış. Eleştiriler yüzüne karşı değil de gıyabında bile olsa, insanların hakkında söylediklerini anlıyor ya da hissediyor. Gözünü objektife yapıştırıp olayları olduğu gibi fotoğraflamana rağmen, bu kişiyle ilgili bazı detayları kaçırıyorsun. Fincanın, o insanla aranı açmaman gerektiğini tembihliyor. İleride ondan çok büyük faydalar göreceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 9,
       "metin": "Telvelerinin alt kenarına bir \"hüdhüd kuşu\" konmuş. Kaydırak gibi kıvrılan gagasının ucunda senin için bir armağan var. Küçücük, kalp şeklinde bir kolye ucu bu! İnsanlar tarafından çok seviliyor ve takdir ediliyorsun {{isim}} sen. Bu sevginin yakında somut bir delili olacak. {{kelime, Bir haftayı aşmayacak bir süre zarfında | Üç dört günü aşmayacak bir süre zarfında | İki haftayı aşmayacak bir süre zarfında | Birkaç günü aşmayacak bir süre zarfında}}, adında {{kelime, iki sesli harf bulunan bir dostun | K ya da L harfi bulunan bir yakının | M ya da N harfi bulunan bir yakının | R ya da T harfi bulunan bir yakının | V ya da Z harfi bulunan bir yakının}}, sana ihtiyacın olan bir konuda yardımcı olarak işini kolaylaştıracak. Küçücük bir hareket dahi olsa, sende büyük bir sevince yol açacağını hissediyorum. Bik bik bik! <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 10,
@@ -175,6 +219,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -197,6 +247,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -207,6 +263,12 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -221,6 +283,12 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -243,6 +311,12 @@
           "degisken": "yasmax",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -253,6 +327,12 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -263,6 +343,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -277,6 +361,10 @@
           "degisken": "yasmin",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -287,6 +375,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -297,6 +389,10 @@
           "degisken": "meslek",
           "deger": "iş arıyor"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -311,6 +407,12 @@
           "degisken": "meslek",
           "deger": "iş arıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -325,6 +427,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -339,6 +447,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -353,6 +467,10 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -367,6 +485,10 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -385,6 +507,10 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -407,6 +533,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -429,6 +559,10 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -451,6 +585,10 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -461,17 +599,29 @@
           "degisken": "meslek",
           "deger": "iş arıyor"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
       "id": 30,
       "metin": "Fincanının alt yüzeyinden yukarıya doğru uzanan bir urgan görüyorum. Bu urgana tutunmuş, yukarıya doğru var gücünle tırmanmaya çalışıyorsun. Ellerin artık yara bere içinde kalmış. Zor durumda olduğunu hissediyorum.\n\nAklıma ne geldi biliyor musun, Neşet Ertaş'ın bir sözü; \"Biz sevmekle yükümlüyüz, kavuşmak mı? Onu Allah bilir\" demiş. Sen de çalışmakla, gayret etmekle yükümlüsün. Başarmak ve kazanmak mı? Onu elbet Allah bilir. Fakat telvelerin bir ipucu veriyor {{isim}}. Bu ipin üst ucunu {{sayi,2,9}} ay içinde \"{{kelime, birisi | bir güç | bir erkek | bir kadın}}\" tutup, seni yukarıya, zirveye çekmeye başlayacak.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
+      ]
     },
     {
       "id": 31,
       "metin": "Senin gelir elde etmek için yapmak istediğin bir iş ya da hayata geçirmek istediğin yeni bir iş fikrin var. Ancak önüne geçip ellerini beline koymuş bir {{kelime, kadın | erkek}} görüyorum falında. Baskın karakterli ve dediğim dedik bu kişi her kimse, sana ya karşı çıkmış, ya da çıkacak. Önemsiyorsun da... Onu kesinlikle dinlememeni ya da 3. bir şahıs yoluyla onu ikna etmeni tavsiye ediyorum {{isim}}. Çünkü sen bu yolla büyük paralar elde edeceksin. Kim onu ikna eder biliyor musun; senin de tanıdığın, {{kelime, orta | kısa}} boylu, {{kelime, geniş belli | ince yapılı | hafif toplu}}, {{kelime, başı kapalı | kumral saçlı | siyah saçlı | kısa siyah saçlı | kısa kahverengi saçlı | kızılca saçlı | saçlarında akları}} ve soyadında {{soyisimilk}} ya da {{harf}} harfi olan bir kadın.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
+      ]
     },
     {
       "id": 32,
@@ -485,6 +635,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -499,6 +653,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -513,6 +671,10 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -535,6 +697,10 @@
           "degisken": "meslek",
           "deger": "kamu sektörü"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -561,6 +727,10 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -579,6 +749,10 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -621,6 +795,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -667,6 +845,10 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -713,6 +895,10 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -731,6 +917,10 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -753,17 +943,29 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "saglik"
       ]
     },
     {
       "id": 43,
       "metin": "Son kısımlar beni biraz üzdü {{isim}}. Çevresindeki her hücrenin yalnızlaştırdığı, kabuğu kalkmamış bir yara görüyorum yüreğinde. Sen geçtiğimiz senelerde kimi kaybettin, seni bırakıp kim uzaklara gitti, kimi unutamadın böyle? Farkında mısın değil misin bilmiyorum ama sen, bu insandan sonra bir daha asla \"aynı kişi\" olmamışsın. Sızıları dindiren \"su\" olmuşsun, sızladığını fark ettirmemişsin. Çevrendeki kimselere pek bir şey bahsetmemiş, psikolojik olarak da yalnızlaşmışsın. Güneşle ruhun arasındaki bu karanlık zifir çok yakında çözünüp dağılacak Kıymetli {{isim}}. Devran senin için dönüyor...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 44,
       "metin": "Zaman döngüsünü hatrından silip, ağaca sarılarak yaşama ümidi bulan sarı bir yaprak var falında. Fincan kafesinin haberci kuşları, sağlık durumundan ya da gelecekte başına gelebileceklerden korktuğun bir yakının olduğundan bahsediyor. Sesleri sen de duyuyor musun {{isim}}? Senkronize müjde cıvıltıları, tabandan tepeye ve oradan da adeta sonsuz semaya yayılıyorlar! Bu yaprak, birbirinden güzel daha nice baharlar görecek. Yüreğini ferah tut; gökten ona bakan rahman ve rahim ışık, bir an olsun sönmeyecek...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 45,
@@ -773,16 +975,24 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 46,
       "metin": "Fincanının alt kısımlarındaki bazı telveler, dalgalı bir denizi andırıyor. Bu dalgalar, özel hayatındaki \"bir anda coşan ve çabuk durulan\" ruh halini yansıtıyor {{isim}}. Son zamanlarda çok hızlı duygu değişimleri ve sevinçten hüzne geçişler yaşıyor olmalısın. Sorun ise hislerin değil, içindekileri karşındaki insanlara gereğinden fazla aksettirmen. Aşkta galibiyet için, stabilite şarttır. Usta yönetmen Nuri Bilge Ceylan'ın da dediği gibi; \"bazı insanlar gülüşüyle yener sizi. Her şey söz değil; tavır.\" Eylemlerini kontrol altına aldığında, sonuçları da güzel olacaktır.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
     },
     {
       "id": 47,
-      "metin": "Kafana koyduğun bazı hedefler olduğunu ve bu hedeflere doğru harekete geçebilmek için hep en iyi koşulları beklediğini görüyorum. \"Yer doğru olsun, ortam müsait olsun, kafam rahat olsun, çevrem sessiz olsun, masam düzenli olsun\" gibi isteklerle, erteleme hastalığına sıkça yakalandığını söylüyor telvelerin. Özellikle içinde \"P\" ya da \"L\" harfi olan bir şey var ki, seni ilerlemekten alıkoyuyor. Bir aktivite midir, cihaz mıdır, insan mıdır bilemem... 🧐 Ünlü Fransız düşünür Voltaire'in de dediği gibi; \"mükemmel, iyinin düşmanıdır.\" Elinde olanı kullanıp bahaneleri ortadan kaldırırsan, inanılmaz sonuçlara varacaksın sen {{isim}}.",
+      "metin": "Kafana koyduğun bazı hedefler olduğunu ve bu hedeflere doğru harekete geçebilmek için hep en iyi koşulları beklediğini görüyorum. \"Yer doğru olsun, ortam müsait olsun, kafam rahat olsun, çevrem sessiz olsun, masam düzenli olsun\" gibi isteklerle, erteleme hastalığına sıkça yakalandığını söylüyor telvelerin. Özellikle içinde \"P\" ya da \"L\" harfi olan bir şey var ki, seni ilerlemekten alıkoyuyor. Bir aktivite midir, cihaz mıdır, insan mıdır bilemem... \\🧐 Ünlü Fransız düşünür Voltaire'in de dediği gibi; \"mükemmel, iyinin düşmanıdır.\" Elinde olanı kullanıp bahaneleri ortadan kaldırırsan, inanılmaz sonuçlara varacaksın sen {{isim}}.",
       "kosullar": [
         {
           "degisken": "meslek",
@@ -792,6 +1002,12 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -802,12 +1018,20 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 49,
       "metin": "Gölgesinin heybeti kendisinden daha büyük bir erkek var fincan tabanında. Çevresi tarafından çok güçlü ve yardımsever olarak bilinen ve adında {{kelime, \"H\" harfi olan | \"T\" harfi olan | \"M\" harfi olan}} bu kişiye belki de sahip olduğu kapasitenin çok ötesinde anlamlar yüklenmiş. Gördüğüm kadarıyla sen ya da ailenden birileri de ona inanıyor ve güveniyorsunuz {{isim}}. {{kelime, 2 hafta sonra | 3 hafta içinde | 4 hafta içinde | Haftaya}} bu insandan maddi bir konuda yardım isteyeceksin. Yapamayacağını söyleyip mahçup olmak yerine, bu kişi ne yapıp edip senin bu işini halledecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
+      ]
     },
     {
       "id": 50,
@@ -821,6 +1045,10 @@
           "degisken": "yasmin",
           "deger": "26"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -831,6 +1059,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -841,6 +1073,10 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -851,6 +1087,10 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -861,6 +1101,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -871,12 +1115,20 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 56,
       "metin": "Yüreğinden yükselmek için bir süredir sabırsızlıkla bekleyen sevinç sesleri, alacağın bir haberle nihayet ses tellerinde titreşip kelimelerindeki dalgalar halinde fezaya karışacak. Seni {{ay_1}} ve {{ay_3}} ayları arasındaki tam tarihi belli olmayan bir {{kelime, pazar | pazartesi | salı | çarşamba | perşembe | cuma | cumartesi}} {{kelime, sabahında | öğleninde}}, çok güzel bir haber bekliyor {{isim}}. Ancak bu haberi ilk ağızdan değil, muhtemelen {{kelime, seni cep telefonundan arayacak olan ikinci bir kişiden | dijital bir platformdan | sana mesajla haber verecek olan ikinci bir kişiden | konu ile alakası olan yakın bir arkadaşından | konu ile alakası olmayan bir akrabandan | konu ile alakası olmayan bir tanıdığından | yazılarını okuduğun bir web sitesinden | bir sosyal medya platformundan | çok sevdiğin ve aranızda kan bağı olan birinden}} alacaksın. Gelecek {{mevsim_1}} mevsimi, seni hayallerine bir adım daha yaklaştıracak.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
+      ]
     },
     {
       "id": 57,
@@ -898,6 +1150,10 @@
           "degisken": "yasmax",
           "deger": "45"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -916,6 +1172,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -926,6 +1186,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -944,6 +1208,10 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -962,6 +1230,10 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -980,6 +1252,10 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -990,16 +1266,24 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 64,
-      "metin": "Fincan tabanında çok ilginç bir kitap görseli var. Bu kitabı sana nasıl tarif etsem bilemiyorum {{isim}}; ama ondan inanılmaz bir enerji aldım. Bakılamayacak derecede parlak ve göz kamaştırıcı olan bu kitap, sanırım meleklerden başka kimsenin dokunamadığı Levh-i mahfûz'u temsil ediyor. <sprite=85> Gökte ve yerdeki tüm gizliliklerin, içinde açıkça belirtildiğini bildiğimiz bu kitabın karşısında ise şehadet parmağını havaya kaldırmış biri var. Sevgilin olduğunu hissettiğim bu insan, adeta bir şey için yemin ediyor! 🧐 Belli ki sana bir söz verecek. Bu yeminin arkasında durduğu sürece, bu kitapta sizin için \"ayrılık\" yazmadığından emin olabilirsin.",
+      "metin": "Fincan tabanında çok ilginç bir kitap görseli var. Bu kitabı sana nasıl tarif etsem bilemiyorum {{isim}}; ama ondan inanılmaz bir enerji aldım. Bakılamayacak derecede parlak ve göz kamaştırıcı olan bu kitap, sanırım meleklerden başka kimsenin dokunamadığı Levh-i mahfûz'u temsil ediyor. <sprite=85> Gökte ve yerdeki tüm gizliliklerin, içinde açıkça belirtildiğini bildiğimiz bu kitabın karşısında ise şehadet parmağını havaya kaldırmış biri var. Sevgilin olduğunu hissettiğim bu insan, adeta bir şey için yemin ediyor! \\🧐 Belli ki sana bir söz verecek. Bu yeminin arkasında durduğu sürece, bu kitapta sizin için \"ayrılık\" yazmadığından emin olabilirsin.",
       "kosullar": [
         {
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1018,12 +1302,22 @@
           "degisken": "yasmin",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 66,
       "metin": "Fincan tabanındaki karanlıkların arasında gezinirken, önüme yerde öylece parlayan paslı bir anahtar çıktı. Bu paslı anahtarı, ruhunun zaman zaman en ücra köşelerinde sobelediğin anılar hatrına, sana \"hayat\" sunacak. {{kelime, Geçmişte bir şeyi çok istemiş, gerçekleşmeyince yara almışsın. | Geçmişte bir şeyi kaybetmemeyi çok istemiş, yitirince yara almışsın.}} O meseleyle tam anlamıyla \"sınanmışsın\" {{isim}}. Gördüğüm kadarıyla hala zaman zaman düşünüp, üzülüyorsun.\n\nSabrın, sınav müddetini layıkıyla doldurmuş. Önümüzdeki {{ay_2}} ve ondan 13 ay sonraki {{ay_3}} ayları arasındaki bir ayda, sahip olduğun manevi anahtarla gök kapın açılacak ve sevindirileceksin!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 67,
@@ -1057,6 +1351,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1067,6 +1367,12 @@
           "degisken": "yasmin",
           "deger": "30"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1081,6 +1387,10 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1091,17 +1401,31 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 71,
       "metin": "Fincan tabanından yukarıya doğru dikdörtgen bir şekilde konumlanmış bazı telveler, gizemli bir monoliti andırıyor. Bu monolitin üst kısmında, ilk olarak Asklepionların kullandığı ve günümüzde tıp gibi sağlık dallarının simgesi olan \"iç içe geçmiş iki yılan\" figürü görmekteyim {{isim}}. Hemen altında büyükçe bir \"{{kelime, Y | S | A | M | B | K | H | V}}\" harfi, onun da altında {{sabit_sayi,2,6}} rakamı görmekteyim. Bu yansımalar, baş harfi bu harf olan çok sevdiğin birinin, önemli bir rahatsızlığına dair {{sabit_sayi,2,6}} hafta gibi kısa bir zaman içerisinde \"acil\" şifa bulacağına işarettir.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 72,
-      "metin": "Falının son {{kelime, satırlarında | görsellerinde | yansımalarında}} \"saat yönünün tersine doğru\" dönmekte olan ve pençelerinde gizledikleri taşlardan \"ebabil kuşları\" oldukları çıkarımını yaptığım uçan, tüylü canlılar var {{isim}}. 🕊️ Bu kuşlar, uçarak katettikleri mesafe miktarınca izler bırakmış gökyüzünde. Tam olarak {{sabit_sayi,3,15}} tur dönmüşler. Anladığım kadarıyla, hayatında yaklaşık {{sabit_sayi,3,15}} ayı aşkın zamandır devam eden bir husumet var. Sana ya da ailene karşı cephe almış bir ya da birden fazla insan seziyorum. Özellikle soyisminde {{kelime, U veya P | D veya C | Y veya M | K veya E}} harfi geçen bir insan, özel hayatında yenilgiye uğradığını görmek istiyor sanki.\n\nBahsini ettiğim kuşların, bir noktada pençelerindeki taşları bıraktığını görüyorum. Size karşı bilenen insanlar {{ay_2}} ayının {{kelime, başlarında | sonlarında | ortalarında}} eteklerindeki taşları dökecekler. Sonrasında {{kelime, yapacağın bir hamle | alacağın bir karar}} ise hepsini bertaraf edecek {{isim}}.",
-      "kosullar": []
+      "metin": "Falının son {{kelime, satırlarında | görsellerinde | yansımalarında}} \"saat yönünün tersine doğru\" dönmekte olan ve pençelerinde gizledikleri taşlardan \"ebabil kuşları\" oldukları çıkarımını yaptığım uçan, tüylü canlılar var {{isim}}. \\🕊️ Bu kuşlar, uçarak katettikleri mesafe miktarınca izler bırakmış gökyüzünde. Tam olarak {{sabit_sayi,3,15}} tur dönmüşler. Anladığım kadarıyla, hayatında yaklaşık {{sabit_sayi,3,15}} ayı aşkın zamandır devam eden bir husumet var. Sana ya da ailene karşı cephe almış bir ya da birden fazla insan seziyorum. Özellikle soyisminde {{kelime, U veya P | D veya C | Y veya M | K veya E}} harfi geçen bir insan, özel hayatında yenilgiye uğradığını görmek istiyor sanki.\n\nBahsini ettiğim kuşların, bir noktada pençelerindeki taşları bıraktığını görüyorum. Size karşı bilenen insanlar {{ay_2}} ayının {{kelime, başlarında | sonlarında | ortalarında}} eteklerindeki taşları dökecekler. Sonrasında {{kelime, yapacağın bir hamle | alacağın bir karar}} ise hepsini bertaraf edecek {{isim}}.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 73,
@@ -1111,6 +1435,10 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -1125,17 +1453,29 @@
           "degisken": "yasmin",
           "deger": "20"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
       "id": 75,
       "metin": "Daha alt kısımlarda, yerdeki firezlerden göğe doğru çapraz bir şekilde ve bir \"sürü\" halinde havalanmakta olan {{sabit_sayi,4,9}} adet bıldırcın görüyorum. {{ay_1}} ayının 1. ve {{sabit_sayi,4,9}}. günleri arasına yayılmış birkaç güzel haber alacaksın. Bu haberlerden özellikle bir tanesi var ki, maddi beklentin olan ancak kazanım elde etme ihtimalini zayıf gördüğün bir yerden ya da birinden. Oradan eline para geçecek {{isim}}. Bu parayı bir süredir çevrenden ya da internet üzerinden araştırdığın bir şeyi satın almakta kullanacağını hissediyorum. Bu kadar hızlı elde etmeyi beklemediğin için çok sevineceğini söyleyebilirim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
+      ]
     },
     {
       "id": 76,
       "metin": "Fincanının derinliklerine \"büyüteç\" seviyesinde baktığımda, zincire bağlanmış tutsak bir \"tazı\" ve ondan kilometrelerce ötede duran bir de \"tavşan\" görüyorum. Keskin gözleriyle tavşana bakan tazı, ona imkan verilse birkaç saniyede orada olup adeta işini bitirecek. Bu yansımlar, birilerine ya da bir şeylere karşı hırslandığını gösteriyor {{isim}}. Anladığım kadarıyla şu anda \"{{kelime, maddi imkansızlıklar | bazı imkansızlıklar | henüz sonuçlanmamış bazı durumlar | kontrolün tamamen sende olmaması}}\" yüzünden elin kolun bağlı. {{ay_2}} ayının {{kelime, 4'ünü | 5'ini | 6'sını | 7'sini | 8'ini | 9'unu}} ya da {{kelime, 18'ini | 17'sini | 16'sını}} bekle derim. Beklediğin fırsat eline geçecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
+      ]
     },
     {
       "id": 77,
@@ -1165,6 +1505,10 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -1187,12 +1531,20 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "saglik"
       ]
     },
     {
       "id": 79,
       "metin": "Fincanının derinliklerinde ikizkenar bir üçgen sembolü gözüme ilişti. Bu üçgenin eşit açılı iki köşesinden biri seni, diğeri çok sevdiğin bir {{kelime, hanımefendiyi | beyefendiyi}}, açısı 60 dereceden küçük üçüncü köşe ise {{kelime, bir düşmanını | hiç hazzetmediğin bir kadını | hiç hazzetmediğin bir erkeği | hiç hazzetmediğin birini | son zamanlarda uzaktan uzağa sürtüşme içerisinde olduğun birini | son aylarda üstü kapalı sürtüşmeler yaşadığın birini}} temsil ediyor. Sevdiğin o insanı, üçüncü kişiyle görüştüğü ya da konuştuğu için suçluyor, ikili oynadığını düşünerek içten içe üzülüyorsun. Bu durum sağlığını dahi etkilemeye başlamış. Merak etme {{isim}}; sevdiğin kişi ile senin arandaki kenar, diğer iki kenardan daha kısa. O her zaman senin tarafında ve sana daha yakın. Böyle olduğunu gelecek haftalarda daha net anlayacağını hissediyorum. Sağlığın ve keyfin yerine gelecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 80,
@@ -1202,6 +1554,10 @@
           "degisken": "yasmax",
           "deger": "30"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -1220,6 +1576,10 @@
           "degisken": "yasmin",
           "deger": "50"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -1242,6 +1602,10 @@
           "degisken": "yasmin",
           "deger": "60"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -1252,6 +1616,10 @@
           "degisken": "medeni durum",
           "deger": "flört halinde"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1262,17 +1630,33 @@
           "degisken": "yasmin",
           "deger": "30"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 85,
       "metin": "Fincanın tabanına doğru, Antik Mısır mitolojisinde \"yaşamın anahtarı\" olarak bilinen \"ankh\" sembolüne rastladım {{isim}}. Bu sembol, çağlar boyunca, yaşam ile ölümün ayrılmazlığını çağrıştırmak için kullanılırmış. Senin falında belirmesi, hatırı sayılır bir süredir \"ölüm\" ve \"hastalıkla\" ilgili düşüncelerin zihnini mesken ettiğini söylüyor. Kendi sağlığın için endişelendiğin gibi, en yakınındaki insanları kaybetmek korkusuyla gelen yürek sancılarıyla sarsılmışsın. Zihnini saran kaygıların aksine telvelerin öyle aydınlık ki {{isim}}, yaklaşmakta olan hiçbir musibet görünmüyor. Bununla birlikte, çok sevdiğin ve isminde {{kelime, H | A | T | S | D | M | L}} harfi geçen bir tanıdığının, uzun süredir cebelleştiği bir kronik hastalığın etkisinden de kurtulacağını görüyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 86,
-      "metin": "Fincanının son kısımlarında, ağlayan bir {{kelime, kadın | adam}} var. Bu kişinin ağzının içinde sakladığı {{kelime, kirli | nahoş}} yağmur bulutları, sanki gözlerinden yaş olarak akmış. ⛈️Akıttığı göz yaşları, sanırım düşmansı duygulardan besleniyor. Etrafında sana karşı yaklaşımında samimi olmayan birisi var {{isim}}. Yakın zamanda sana bir konuda \"yakınmış\" ve senden yardım istemiş olabilir. Bu kişinin seninle kendi içinde {{kelime, yersiz | gereksiz}} bir rekabet içinde olduğunu seziyorum. 🤔Aslında senden yardım istemiyor. Yardıma ihtiyacı olduğunu düşünmeni sağlamaya çalışıyor. Kim olduğunu bu satırları okuduktan sonra fark edeceğin bu kişiden, önümüzdeki günlerde otomatikman uzaklaşacaksın.",
-      "kosullar": []
+      "metin": "Fincanının son kısımlarında, ağlayan bir {{kelime, kadın | adam}} var. Bu kişinin ağzının içinde sakladığı {{kelime, kirli | nahoş}} yağmur bulutları, sanki gözlerinden yaş olarak akmış. ⛈️Akıttığı göz yaşları, sanırım düşmansı duygulardan besleniyor. Etrafında sana karşı yaklaşımında samimi olmayan birisi var {{isim}}. Yakın zamanda sana bir konuda \"yakınmış\" ve senden yardım istemiş olabilir. Bu kişinin seninle kendi içinde {{kelime, yersiz | gereksiz}} bir rekabet içinde olduğunu seziyorum. \\🤔Aslında senden yardım istemiyor. Yardıma ihtiyacı olduğunu düşünmeni sağlamaya çalışıyor. Kim olduğunu bu satırları okuduktan sonra fark edeceğin bu kişiden, önümüzdeki günlerde otomatikman uzaklaşacaksın.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 87,
@@ -1290,11 +1674,15 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
       "id": 88,
-      "metin": "Fincanın son demlerine doğru bir kavak ağacı görüyorum. Senin sevgini temsil eden \"sarmaşıklar\", yaprakları durmak bilmeyen bir rüzgar tarafından sallanan bu kavak ağacına bir türlü tutunamıyor gibi görünmüş {{isim}}. 🍃 Hoşlandığın {{data, cinsiyet=erkek, kızın | cinsiyet=kadın, erkeğin | cinsiyet=lgbt, insanın}} oldukça {{kelime, hareketli | yoğun}} bir hayat temposu olduğunu düşünüyorum. Öyle değilse bile, zihni fasılasız düşüncelerle dolup taşıyor. Sana yeterli ilgiyi göstermediğini düşünüyor olabilirsin. Fakat bilmen gereken bir detay var. Bu kişi seni tam anlamıyla hayatına almak için bazı {{kelime, maddi | ailevi | manevi}} sorunlarını çözmeye çalışıyor. Bu konuda sana yakın zamanda bir açıklama yapacağını hissediyorum.",
+      "metin": "Fincanın son demlerine doğru bir kavak ağacı görüyorum. Senin sevgini temsil eden \"sarmaşıklar\", yaprakları durmak bilmeyen bir rüzgar tarafından sallanan bu kavak ağacına bir türlü tutunamıyor gibi görünmüş {{isim}}. \\🍃 Hoşlandığın {{data, cinsiyet=erkek, kızın | cinsiyet=kadın, erkeğin | cinsiyet=lgbt, insanın}} oldukça {{kelime, hareketli | yoğun}} bir hayat temposu olduğunu düşünüyorum. Öyle değilse bile, zihni fasılasız düşüncelerle dolup taşıyor. Sana yeterli ilgiyi göstermediğini düşünüyor olabilirsin. Fakat bilmen gereken bir detay var. Bu kişi seni tam anlamıyla hayatına almak için bazı {{kelime, maddi | ailevi | manevi}} sorunlarını çözmeye çalışıyor. Bu konuda sana yakın zamanda bir açıklama yapacağını hissediyorum.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -1304,6 +1692,10 @@
           "degisken": "yasmax",
           "deger": "26"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1338,6 +1730,12 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1348,6 +1746,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1358,6 +1760,10 @@
           "degisken": "medeni durum",
           "deger": "flört halinde"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1368,6 +1774,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1398,12 +1808,22 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
       "id": 94,
       "metin": "Son kısımlarda, \"ters dönmüş\" bir gemi enkazı var {{isim}}. Gemiden artakalanlara tutunan insanlar görüyorum. Bu manzara, sanırım geçmişte yakın çevrenden bir insanla aranızda geçen tartışmalardan bu yana zihnine \"kaotik düşüncelerin\" hükmettiğinin işareti. Şimdilerde her iki tarafın da birbirine ön yargıyla yaklaştığını söylüyor telvelerin. Zira falında resmedilen gemi enkazından kurtulmaya çalışan zihnin ve düşüncelerin, tırmanması kolay \"ön yargıları\" temsil eden parçalara tutunmuş. Ona karşı olan bu ön yargıların {{ay_2}} ayının {{kelime, son günlerinde | ortalarında | üçüncü haftasının son günlerinde}} sana yapacağı bir \"iyilikle\" adeta tuzla buz olacak. Ne çok \"ön yargı\" dedim öyle değil mi? Bu arada evet; \"ön yargı\" ayrı yazılır.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 95,
@@ -1413,11 +1833,15 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 96,
-      "metin": "Falının son demlerinde, Güneş'ten Dünya'ya doğru esen \"Güneş rüzgarları\" dikkatimi çekti {{isim}}. 🌞 Bildiğimiz rüzgarlardan çok farklı olan bu iyon rüzgarları, ne hikmetse gezegenimiz ile yıldız arasında yolculuk eden bir \"yelkenli\" figürünü harekete geçirmiş. Senin çok önemli bir sır sakladığını falının {{kelime, gizemli | esrarengiz}} enerjisinden anlamıştım. Şimdi ise, sakladığın bu sırrın {{data, cinsiyet=erkek, hoşlandığın kızla | cinsiyet=kadın, hoşlandığın erkekle | cinsiyet=lgbt, hoşlandığın insanla}} arana kozmik mesafeler koyacağından endişelendiğini anladım. Sana bir sır da ben vereyim mi? {{data, cinsiyet=erkek, Konuştuğun bu kızın | cinsiyet=kadın, Konuştuğun bu çocuğun | cinsiyet=lgbt, Konuştuğun bu insanın}} seninkine çok benzer bir sırrı var. Birbirinize açıldığınızda öyle bir yakınlaşacaksınız ki, gördüğüm o yelkenli gibi Güneş'e doğru el ele yol almaya başladığınızı hissedeceksin.",
+      "metin": "Falının son demlerinde, Güneş'ten Dünya'ya doğru esen \"Güneş rüzgarları\" dikkatimi çekti {{isim}}. \\🌞 Bildiğimiz rüzgarlardan çok farklı olan bu iyon rüzgarları, ne hikmetse gezegenimiz ile yıldız arasında yolculuk eden bir \"yelkenli\" figürünü harekete geçirmiş. Senin çok önemli bir sır sakladığını falının {{kelime, gizemli | esrarengiz}} enerjisinden anlamıştım. Şimdi ise, sakladığın bu sırrın {{data, cinsiyet=erkek, hoşlandığın kızla | cinsiyet=kadın, hoşlandığın erkekle | cinsiyet=lgbt, hoşlandığın insanla}} arana kozmik mesafeler koyacağından endişelendiğini anladım. Sana bir sır da ben vereyim mi? {{data, cinsiyet=erkek, Konuştuğun bu kızın | cinsiyet=kadın, Konuştuğun bu çocuğun | cinsiyet=lgbt, Konuştuğun bu insanın}} seninkine çok benzer bir sırrı var. Birbirinize açıldığınızda öyle bir yakınlaşacaksınız ki, gördüğüm o yelkenli gibi Güneş'e doğru el ele yol almaya başladığınızı hissedeceksin.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -1427,6 +1851,10 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1437,6 +1865,12 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1447,6 +1881,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1457,12 +1895,20 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
       "id": 100,
       "metin": "Fincanının son kısımlarında, çimenlerin üzerinde çıplak ayakla yürüyen, içlerinde senin de bulunduğun {{kelime, 3-4 | 4-5 | 5-6}} kişilik bir grup insan görüyorum {{isim}}. Bu insanlardan iki tanesi birbirleri ile sanıyorum ya eşler, ya kardeşler, ya da {{kelime, aralarında farklı bir kan bağı var | baba-kızlar | baba-oğullar | anne-kızlar | anne-oğullar | uzaktan akrabalar | yakın akrabalar}}. Bahsettiğim bu iki kişiden bir tanesinin isteği üzerine {{sayi,2,4}} {{kelime, hafta | ay}} sonra bir {{kelime, cumartesi | pazar}} günü topluca gidilecek bu yerin, orada bulunan herkesin sağlığını çok olumlu etkileyeceğini hissediyorum. Hatta sen daha sonraki zamanlarda orayı çok sevip, birçok kez orada bulunacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 101,
@@ -1472,6 +1918,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1486,12 +1936,20 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 103,
       "metin": "Fincan tabanına uzanan telvelerinde, ne hikmetse \"kale\" şeklini almış bulutlar var {{isim}}. Ters halde görünen, hayalini kurduğun varlık ve bolluğu temsil eden bu telveler, adeta fincanının üst gövdesinden somut dünyayı temsil eden taban kısmına doğru yansımış. İmkansız gibi gördüğün bir hayalinin eninde sonunda gerçekleştiğini görüyorum. {{sayi,2,4}} yıldan az bir sürede, bir {{mevsim_2}} mevsiminde hayal ettiğinden daha iyi bir yerde, daha iyi bir konumda ya da daha iyi imkanlar içerisinde olacağını söyleyebilirim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
+      ]
     },
     {
       "id": 104,
@@ -1521,6 +1979,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1539,12 +2003,22 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 106,
       "metin": "Son kısımlarda, garip görünümlü telve öbekleri arasında \"suratı olmayan\" bir insan belirmiş {{data, cinsiyet=erkek, Değerli | cinsiyet=kadın, Sevgili | cinsiyet=lgbt, Sevgili}} {{isim}}. Seni, yüzünde somurtkan bir ifadeyle bu insanla konuşurken görüyorum. Bu kişinin {{kelime, yakın zamanda | geçtiğimiz hafta | geçtiğimiz haftalarda | birkaç hafta önce | 3-5 gün önce | 2-3 gün önce}} yapmış ya da söylemiş olduğu bir şeyin, seni fazlasıyla {{kelime, şaşırttığını | incittiğini | hayal kırıklığına uğrattığını | yaraladığını | huzursuz ettiğini}} söylüyor telvelerin. Suratı görünmeyen bu kişiyi gerçekten tanıyıp tanımadığın noktasında şüpheye düşmüş gibisin. Bu insanı ondan beklemediğin şekilde davranmaya iten bir sebep var. {{kelime, 2 haftaya kalmadan | 3 haftaya kalmadan | 5 gün içerisinde | 3 gün içerisinde | 8-10 gün içerisinde | 7-8 gün içerisinde | 2-3 gün sonra | 3-4 gün sonra | 15-20 güne kadar}} bu kişinin davranışlarının arkasındaki nedenleri öğreneceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 107,
@@ -1558,6 +2032,10 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -1572,11 +2050,15 @@
           "degisken": "yasmax",
           "deger": "26"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 109,
-      "metin": "Fincan dibindeki karanlıkta kalmış olan bazı telvelerde, seni arkanı dönmüş halde ve adeta \"karşı\" bir duruş sergilerken görüyorum {{isim}}. Görüştüğün {{data, cinsiyet=erkek, hanımefendiyle | cinsiyet=kadın, beyefendiyle | cinsiyet=lgbt, insanla}} aranızda, {{kelime, ilerleyen günlerde | ilerleyen saatlerde | ilerleyen haftalarda}} iletişime dayanan bazı sorunların ortaya çıkabileceğini hissediyorum. 🤐 Sanıyorum karşındaki insan ruh halinin beklenmedik şekillerde değişebildiğini düşünüyor. Zaman zaman \"istiskal etmeye\" yaklaşan davranışların, hislerinin yanlış yorumlanmasına yol açabiliyor. Seninle duygu ve düşüncelerin hakkında açık seçik konuşma ihtiyacı hissedebileceğini bilmelisin. Buna hazırlıklı olmanda fayda var.",
+      "metin": "Fincan dibindeki karanlıkta kalmış olan bazı telvelerde, seni arkanı dönmüş halde ve adeta \"karşı\" bir duruş sergilerken görüyorum {{isim}}. Görüştüğün {{data, cinsiyet=erkek, hanımefendiyle | cinsiyet=kadın, beyefendiyle | cinsiyet=lgbt, insanla}} aranızda, {{kelime, ilerleyen günlerde | ilerleyen saatlerde | ilerleyen haftalarda}} iletişime dayanan bazı sorunların ortaya çıkabileceğini hissediyorum. \\🤐 Sanıyorum karşındaki insan ruh halinin beklenmedik şekillerde değişebildiğini düşünüyor. Zaman zaman \"istiskal etmeye\" yaklaşan davranışların, hislerinin yanlış yorumlanmasına yol açabiliyor. Seninle duygu ve düşüncelerin hakkında açık seçik konuşma ihtiyacı hissedebileceğini bilmelisin. Buna hazırlıklı olmanda fayda var.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -1590,6 +2072,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1600,12 +2086,24 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 111,
       "metin": "Falının son damlalarında, seni üzerinde bol kesim bir \"pardösü\" ile, yürümekte olduğun yolun üzerinde adeta \"sendelerken\" görüyorum {{isim}}. Daha yakından bakınca neden tökezleyerek yürüdüğünü anladım. Üstündeki pardösünün altında, destek aldığın bir çift koltuk değneği saklıyorsun. {{isim}} {{data, cinsiyet=erkek, Hocam | cinsiyet=kadın, Hanımcığım | cinsiyet=lgbt, dostum}}, telvelerinin söylediğine göre yardıma muhtaç olduğun önemli bir meselede, destek almayı ısrarla reddediyorsun. Bu konuda çevrende bulunan ve sana en fazla yardımı dokunabilecek insanın ya adında ya da soyadında {{kelime, A | İ | K | R | Y | M | N | L | U | E}} harfi geçiyor; hatta belki iki kez. Bu kişi öyle feraset sahibi ki, ondan başkasının desteğine gerek kalmayacak.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 112,
@@ -1619,12 +2117,24 @@
           "degisken": "yasmax",
           "deger": "45"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 113,
       "metin": "Son yansımalarda, muntazam bir ahenk ile dönmekte olan \"çarklar\" dikkatimi çekti. Bu dişli çarklar, fincanın dip kısmını adeta domine ediyor. Hemen üst kısımda ise, elindeki yağ şişesini bu düzeneğe boca etmekte olan bir beyefendi gördüm. Dişlilere ivme kazandıran ve etkili çalışmasını sağlayan bu beyefendi, sanıyorum ki {{kelime, hayatında önemli bir yerde | eski bir tanıdığın | güvendiğin bir tanıdığın | bir akraban | sevdiğin fakat sık görüşemediğin birisi | senden yaşça büyük bir akrabanın arkadaşı | senin yaşlarında bir arkadaşının akrabası | 4-5 yıl kadar önce, arkadaşın aracılığıyla tanıştığın bir yakının | geçtiğimiz yıllarda tanıştığın, nitelikli birisi}} {{isim}}. {{kelime, Alçakgönüllü olsa da | Çok belli etmese de | Dışarıdan pek belli olmasa da}}, bu kişinin eli her yere uzanıyor. {{kelime, Gelecek hafta | İki hafta sonra | Üç hafta sonra | Haftaya salı günü | Haftaya çarşamba günü | Haftaya perşembe günü | Haftaya cuma günü | Haftaya cuma günü, saat 14:00 sularında | Haftaya cuma günü, saat 15:00 sularında | Haftaya cuma günü, saat 11:00 sularında | Haftaya cuma günü, saat 16:00 sularında | Haftaya perşembe günü, saat 14:00 sularında}} tam olarak da imtiyaza ihtiyaç duyduğun bir meselede, bu kişinin aracılığı çok işine yarayacak gibi.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 114,
@@ -1642,6 +2152,12 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1652,62 +2168,128 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 116,
       "metin": "Fincanın en alt bölümlerinde seni çok yüksek bir binanın en üst kat terasında görüyorum. Oradan gururla çevreye bakıyor, adeta memnuniyetle hayatı selamlıyorsun. Dünyadaki merteben yücelecek yahut gönüllerdeki merteben yükselecek {{isim}}. Pek çok insandan takdir göreceğin ve yoğun ilgiyle karşılanarak onurlandırılacağın bir dönem başlıyor. İsteklerine seni hızla ulaştırabilecek bazı yollara o dönemde daha kolay ve kuş uçuşu nüfuz edebileceksin. Peki bu dönem ne zaman başlıyor? Tabanda gördüğüm {{sabit_sayi,3,8}} rakamına bakılırsa {{sabit_sayi,3,8}} ay içinde.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 117,
       "metin": "Alt kısımlara doğru, avuç içi yukarıya bakacak şekilde havaya kaldırılmış bir el görüyorum. Bu sanırım senin elin. Her yanını ateş karıncaları sarmış. Olumsuz sonuçlanma ihtimali de olan kritik bir işle uğraştığını hissediyorum {{isim}}. Karıncaların sana zarar vermeyişlerinden anladığım kadarıyla, senin bu işin başarısızlıkla neticelenmeyecek. {{sayi,3,6}} aylık bir zaman diliminden sonra güneş tepene öyle bir doğacak ki, hücrelerinin her zerresine kadar sevindirileceksin. Ailen ve yakın arkadaşların mutluluğuna gıpta edecekler.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 118,
       "metin": "Fincanın bel bölgesinden alt kısımlara doğru yönelmiş telveler var, adeta bir kırlangıca benziyor. Bu kırlangıç, gözleri kapalı bir şekilde gayba ve bilinmeze doğru kanat çırpıyor. Sana yakında \"gelecekten\" müjdeler getirecek. Biri ya da bir şey vesilesiyle, geleceğini etkileyecek bir konudan \"emin\" olacaksın ve için rahatlayacak {{isim}}. Evren, senin önündeki toz bulutlarını dirhem dirhem kaldırıp, yaşam yolunda daha huzurlu yürümene yardımcı olacak.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 119,
       "metin": "Telvelerinin en kesif alt bölümlerinde ilginç detaylar görüyorum. Upuzun, yüksek tavanlı ve karanlık bir koridorun sonunda, yerde yanan loş bir muma doğru ilerliyorsun {{isim}}. O mum olmasa belki de korku ve endişelerinle baş başa kalır, yönünü kaybeder, oradan asla çıkamazsın. Bu mum, her dem temiz tuttuğun kalbini ve içgüdülerini temsil ediyor. Sana en zor şartlarda bile kusursuz bir şekilde rehberlik ediyor. Şu sıralar her ne yapıyorsan doğru yapıyor, doğru olana doğru yürüyorsun. Bunu göreceksin...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 120,
       "metin": "Son kısımlardaki telveler dalga dalga olmuş, sanki bazı ses dalgalarından etkilenip titreşmiş gibiler. Bu telvelerin ortasında ise seni görüyorum {{isim}}. Bu ses dalgaları, gelecekten gelen rüzgarın sesi. Sağır edici bir sessizliğin içinden, kulakları tırmalarcasına esen rüzgarın uğultusu. Bu uğultuyla harmanlanmış kahkahalar duyuyorum {{isim}}, çocuk gülüşmeleri, neşeli insan sesleri! {{kelime, İki yıl | Üç yıl | Dört yıl}} sonradan sanki... Sen bugünün sorunlarını gelecekte tamamen atlatmış olacaksın. Bambaşka bir ortama, bambaşka şartlara ve çok büyük bir mutluluğa erişeceğini bilmeni istiyorum. Magnus demişti dersin!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 121,
       "metin": "Fincan tabanındaki ufacık bir bölüm nasıl da kabarmış! Senin çok naif bir isteğin var {{isim}}. Pek konusunu da açmıyorsun, bunu anlayabiliyorum. Yeni uyutulmuş bir bebeğin yanından sessiz ve \"parmak uçlarında ayrılırcasına ürkek\" diliyorsun aklındakini. Utana sıkıla, \"fazla mı olur\" diye düşünerek. Tabiri caizse, rabbine karşı şımarıklaşmamayı umarak... Bu isteğin, hayatındaki 2 değişim sonrasında gerçekleşecek. Bu değişimlerden biri mekansal, diğeri ise çevresel olacak. İlk değişimi {{sayi,3,8}} hafta sonra, ikincisini ise {{sayi,3,5}} ay sonra yaşayacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 122,
       "metin": "Ellerini çenene koymuş, bir takvim yaprağına bakıyorsun {{isim}}. Fincanının alt taraflarına yansıyan bu figürde sanki bir şeylerin olmasını bekliyor gibisin. Çok uzun zamandır beklediğin bu şeyler maalesef gerçekleşememiş. Çünkü figürün devamında hüzünlü bir \"{{isim}}\" görüyorum. Asla üzülmeni istemem çünkü bunların gerçekleşememesi senin için daha iyi olacak. Felaket gibi gördüğün bu durum sonucunda hayatında çok daha büyük başarılara imza atacaksın. Ne demişler, hayatı değiştiren ya bir felakettir ya da bir tesadüf!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 123,
       "metin": "Falının sonuna yaklaşırken, en diplerde bir kayanın üstüne oturmuş \"deniz kızı\" görüyorum {{isim}}. Bu deniz kızı oldukça yalnız kalmış, yalnızlığının acısını birilerinden çıkarmaya çalışıyor gibi. Bu insanın temiz ve masum duruşuna aldanma derim {{isim}}; keza bu kişinin ikiyüzlü biri olduğunu hissediyorum. Ailenden bir kişiye kötülük etme niyeti olabilir. Bu kişinin çabalarının boşa çıkacağından eminim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
     },
     {
       "id": 124,
       "metin": "Fincanının dip kısımlarında seni biraz düşünceli görüyorum {{isim}}. Etrafını adeta bir sis bulutu çevrelemiş. Sen de bu bulutun içinde kaybolup gitmişsin. Bu düşüncelerinin para ile alakalı olduğunu hissediyorum. Son zamanlarda maddi açıdan biraz sıkıntıdasın sanırım. Sis bulutunun arkasında ise kocaman, kısmet yüklü bir fil var. Bu fil para açısından elinin bollaşacağını ve kısa zamanda karşına güzel fırsatların çıkacağını gösteriyor bize. Ancak bunun için yerinden kalkıp harekete geçmelisin. Şimdi bulutları dağıtmanın tam sırası!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
+      ]
     },
     {
       "id": 125,
       "metin": "Fincanın sonuna gelmişken şunları da söylemeliyim {{isim}}. Taban kısımlarda fırtınalar kopuyor desem yeridir. Bir sürü yıldırım görüyorum falında. Bu yıldırımlar ve fırtınalar önümüzdeki {{mevsim_1}} aylarında enerjinin çok yüksek olacağının ve aklına koyduğun bir dizi planı gerçekleştireceğinin habercisi. Zaten planladığı ne varsa hayata geçiren bir karakterin var ve bu enerji yükselmesi ile birçok şeyi başaracaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 126,
       "metin": "Ay ne nostaljik! Çocukluğumdaki gibi giysisi yamalı bir bez bebek gözüme çarptı fincanının tabanında. Elinde bir de gazete tutuyor bu bebek. Adeta sana ulaşmak istercesine kahve fincanının dışına gözlerini dikmiş. Bebek geçmişe olan özlemini ve pişmanlıklarını temsil ediyor olabilir. Anladığım kadarıyla son zamanlarda sıkça \"keşke çocukluğuma dönsem\" dediğin anlar oluyor. Belki de hayatın karmaşasından bıktın ve her şeyin çok daha basit olduğu o güzel dönemlere dönmek istiyorsun.\n\nSen de haklısın sevgili {{isim}}. Ancak bundan sonra da güzel günler seni bekliyor. Bebeğin hemen ardındaki gökte kayan yıldızdan anlıyorum bunu. Seni çok etkileyecek bir akşam haberinin ardından kendine vereceğin birtakım sözlerle birlikte, {{yil_4}} yılına kadar hayatta istediğin birçok başarımı elde edeceğini hissediyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 127,
@@ -1717,37 +2299,77 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 128,
       "metin": "Son olarak, fincanının dibinde kor halde kömürlerin üzerinde oturan bir insan figürü dikkatimi çekti. Bu figür bana uzun zaman önce yaşadığın bazı olayların etkisinden kurtulamadığını gösteriyor. Aslında bu olayların ateşi çoktan sönmüş ama sen düşünmeyi bırakamamışsın. Sana bir müjdem var {{isim}}; fincanın, yaşadığın olaylarla ilgili yüreğine su serpecek bir haberi gelecek ay alacağını fısıldıyor. Adında ya da soyadında {{kelime, E ve S | Y ve S | N ve L | Y ve Ş | M ve T}} harfleri geçen birisi bu haberi sana taşıyacak. Hem bedensel hem de ruhsal sağlığına ilaç gibi gelecek bu haberin hayatını yepyeni bir yola sokacağını hissediyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 129,
       "metin": "Fincanının çukur kısmında, kanadı ıslanmış bir kanarya görüyorum. Kanaryaların kanatları ıslandığında, hiçbir engel olmamasına rağmen uçamadıklarını biliyor muydun {{isim}}? Bu aslında biz insanlarda da olabilen bir durum. Görüyorum ki son zamanlarda kendine olan güvenin azalmış. Yaşadığın birkaç başarısızlıktan sonra denemeye bile korkar olmuşsun. Fakat kanatlarını bir kez çırptığında uçabileceğini telvelerinde görüyorum. Gerçekleştirmek için can attığın bazı fikirlerin olduğunu da biliyorum. Başarıya doğru kanat çırpma vakti gelmiş senin için. Yakın zamanda başlayacağın işlerde hak ettiğin mükafata ulaşacağını derinden hissediyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 130,
       "metin": "Fincanın tabağına dokunan kısmında ise dağ tepesinde bir horoz heykeli görüyorum. Devasa boyutlarda olan bu heykel dünyaya tepeden bakarcasına bir duruş sergiliyor. Falda horoz hayırlara alamettir {{isim}}. Çok yakında şansının döneceğini gösterir. Senin horoz figürünse kendinden fazlasıyla emin duruyor. Telvelerin daha derinlerine daldığımda bir tarih çıkardım. Bu tarih önümüzdeki seneyi işaret ediyor. Gelecek senenin milli piyangosunda şansının yüksek olacağını hissediyorum. Önünde otobüs durağı bulunan küçük bir satış standından alacağın bir bilet sana büyük bir kazanç getirebilir.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 131,
       "metin": "Fincanının dibinde ilginç bir motife rastladım. Kâğıttan bir kelebeği andıran bu motif göğe yükselircesine başını dikmiş. Falda kelebek mutluluk anlamına gelir. Kağıttan olması ise yakında bir haber alacağına işaret. Bu haberin son derece önemli müjdeler içereceğini hissediyorum. Kelebekler kozadan çıkar çıkmaz uçmaya başlar sevgili {{isim}}. Bu da, gelecek haberin güzel etkilerinin hızlı bir şekilde gündelik yaşamına yansıyacağının işareti. Kelebeğin kanatlarında yer alan noktaların sayısına baktığımda, haberin gelmesine yalnızca \"günler\" kaldığını görüyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 132,
       "metin": "Son olarak fincan tabanına baktığımda, bambudan yapılma bir değnek görüyorum. Bambu sertlik ve esnekliğin dengesini temsil eder. Esneklikten yoksun bir bambu özelliğini kaybeder Sevgili {{isim}}. Görüyorum ki planlarına sadık kalmak isterken, sana yeni kapılar açabilecek seçenekleri gözden kaçırıyorsun. Aklındakileri uygulamak elbette önemli; ancak hayatına biraz esneklik katmanı tavsiye ederim. Gelecek haftalarda en yakın dostlarından biri tarafından bir geziye davet edileceksin. Bu gezi kısa vadeli bazı fikirlerinden feragat etmeni gerektirebilir. Fakat vereceğin tavizlerin, sana olaylara bambaşka bir açıdan bakma yetisi kazandıracağını hissediyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 133,
       "metin": "Fincanının alt kısımlarında, kayanın üzerine oturmuş bir deniz kızı görüyorum. Efsanelere göre deniz kızları büyüleyici bir ses ve güzelliğe sahipti. Ancak ne kadar alımlılarsa, huy olarak da o kadar çirkin varlıklardı bunlar. Bu nedenle falda deniz kızı, iki yüzlülüğün sembolü olarak geçer. Görüyorum ki yıllardır dost bildiğin bir kadın, yüzüne gülerken arkandan konuşuyor {{isim}}. Komşun olan ya da yakın semtlerde oturduğunuz bu kişinin ailesinden bir kişi, siyah sedan bir araca sahip. Diğer bir aile üyesi ise sanırım ince çerçeveli bir gözlük takıyor. Bu kişiye karşı dikkatli olmanı öneririm. Deniz kızının etrafındaki aydınlık alanlar, bu kişinin kim olduğunu tahmin ettiğini işaret ediyor. Kendini gizleyemeyecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 134,
@@ -1773,6 +2395,10 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1783,37 +2409,77 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
       "id": 136,
       "metin": "Tüm bunların yanı sıra, yakın çevrende sana bir şeyler anlatmak isteyip cesaret edemeyen bir dostun olduğunu söyleyebilirim. Çünkü fincanının tam ortasında, başının etrafında ateş böcekleri uçuşan ve önündeki yolu adımlatmak isteyen bir siluet var. O {{fiziki}} kişinin, hayatının akışını değiştirebilecek bir gerçeği dile getirmek üzere olduğunu hissediyorum. Bu sır ya da haber, sana yeni bir bakış açısı kazandırabilir ve uzun süredir beklediğin bir kapıyı aralayabilir. Unutma ki bazen en büyük değişimler küçük bir sözle bile başlayabilir {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 137,
       "metin": "Fincanında son olarak dikenli bir gül dalı üzerinde duran zarif bir kelebek dikkatimi çekti sevgili {{isim}}. Kelebek, yeniden doğuşun ve ruhsal yenilenmenin en güçlü simgesidir. Gül dalı ise bu dönüşümün başlangıçta zorlu görünse de sonunda hayatına mutluluk ve ahenk getireceğini gösteriyor. Yakın zamanda seni sıkan bir durumdan sıyrılıp kendini özgürleştirebilirsin. Bu süreç, seni hiç beklemediğin güzelliklere ve fırsatlara taşıyabilir. Tıpkı kelebek gibi kanatlarını açmayı başardığında, hayatında bambaşka bir sayfa açıldığını fark edebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 138,
       "metin": "Evren, hazır olanlara hediyelerini sunar {{isim}}. Sen, kaderin rehberliğiyle güzel yarınlara doğru yönlendiriliyorsun. Fincanının alt kısımlarında, yükselen, fırfırlı bir uçurtma belirmiş. Beklediğin bir fırsatı {{ay_1}} ayı içinde yakalayabilirsin ya da hiç beklemediğin kadar büyük bir değişim, seni yeni başlangıçlara sürükleyebilir. Bu süreç seni sadece dış dünyaya değil, içindeki güce de daha çok yakınlaştıracaktır. Hazır olduğunda her şeyin doğru zamanda yerine oturduğunu ve keşkelerinin anlamsız olduğunu duyumsayacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 139,
       "metin": "Fincanının sol alt duvarında, yüzün batan bir güneşe dönük, sanki her şeyi ardında bırakmış gibi görünüyorsun. Bu yansımalara dayanarak derin bir ferahlık hissiyle kuşatılacağını düşünüyorum {{isim}}. Hayatında artık yeni bir seviyeye ulaşmak üzeresin. Bundan böyle daha güçlü ve kararlı bir şekilde yoluna devam edeceğini söyleyebilirim. Birtakım dertlerden ve melankoliden arınıyorsun. Eskiye oranla daha heyecanlı, daha güzel günlerin eşiğindesin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 140,
       "metin": "Pek kıymetli {{isim}}, fincan bazaline doğru ise kenarları tuğlalarla örülmüş yüksek ve kemerli bir pencere belirmiş. Penceredeki karanlık, sanki yerini yeni bir başlangıcın taze ışığına bırakmak üzere. Bu görüntü, hayatında yepyeni bir dönemin eşiğinde olduğunu simgeliyor. Tuğlalarla örülmüş kenarlar ise geçmişindeki seni güçlü kılan, her zorlukla şekillenen temellerini temsil ediyor. Yaşadığın sıkıntılardan bazıları sayesinde kazandığın bir yeti ile, önümüzdeki haftalarda büyük bir galibiyet kazanacağını düşünüyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 141,
       "metin": "En sıradan görünen şey, bazen seni bir anda zafere götürebilir {{isim}}. Tıpkı fincan tabanında beliren küçük taş parçası gibi. Dikkatlice baktığımda bu küçük taş parçasının aslında değerli bir taş olduğu gözümden kaçmadı. İlk bakışta önemsiz gibi görünen bu taş, aslında yeni ve değerli bir yolun başlangıcını temsil ediyor. Özellikle de önümüzdeki ay itibariyle her girişiminin, attığın her adımın, geleceğin adına çok büyük anlamlar taşıyacağını söyleyebilirim. Hayatının geri kalanını aslında bugünden, ilmek ilmek işliyorsun; haberin olsun...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 142,
@@ -1827,6 +2493,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1841,16 +2511,24 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 144,
-      "metin": "Fincan tabanında döner başlığındaki beyaz kıl köklerini seçebildiğim, ince uzun bir materyale rastladım. Göz bebeklerimi kısarak bakma gereği hissettiğim bu figür elektronik diş fırçasına benziyor {{isim}}. Fincanının ortasına yerleşmiş diş simgesine bir miktar uzak kalmış bu fırça. Hislerim, çözümünü bildiğin bir sorununa karşı tepkisiz kalmayı tercih ettiğini fısıldıyor. Kendine çizmek istediğin yola aklındaki kişiyi sokamamak kafanı kurcalıyor olabilir. Kalbindeki kişi ile yan yana gelebilmen için yaşam önüne bazı keyifli bahaneler çıkartabilir. Hazırlıklı ol!",
+      "metin": "\"Fincan tabanında döner başlığındaki beyaz kıl",
       "kosullar": [
         {
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -1865,81 +2543,168 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
       "id": 146,
       "metin": "Hayat bazen mesajlarını küçük harflerle iletir. Aynı telvelerinin son kısımlarında beliren elmas taşının fısıldaması gibi {{isim}}. Boz renkli profillerini seçebildiğim değirmen taşının hammaddesidir elmas taşı. Tahılları ağır ağır öğüten bu taş gibi sen de yaşamını yeniden tasarlamak ister gibisin.\n\nFincanın en altında ise telvelerindeki niyetleri birbirine bağlayan kutu benzeri bir sembol belirmiş. Fincanını eğince bu sembolün cam bir bölme olduğunu anlıyorum. Bu figür zihninin duvarlarını temsil ediyor ve zikretmediğin kelimelerin onlara çarpıp duruyor... Kendini kısıtladıkça cam bir duvar arasında sıkıştığını hissediyorsun sanki. Örgü şeklinde birbirine geçmiş silikon ipler falını tamamlayan objeler olmuş Değerli {{isim}}. Olta misinasına benzeyen bu yansımalar, cesur adımlar atmanı kolaylaştıracak bir fırsatın gelmesiyle kendini yeniden görünür kılacağını anlatıyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 147,
       "metin": "Son kısımlara doğru ilginç bir ambiyansla karşılaştım {{isim}}. Adeta bir mahkeme salonu kurulmuş. Bir jüri ve bir de hakim var. Sanık ise sen değilsin; fakat konu seninle doğrudan alakalı gözüküyor. Geçtiğimiz aylarda, tahminimce de {{ay_-4}} ayında yaşamış olduğun bir üzüntüyle ilgili olarak, bulunduğun yerden çok uzakta, isminde {{harf}} harfi olan bir insan, başka bazı insanlar tarafından ciddi şekilde yargılanıyor. Durum neticelendiğinde, sana bir özür ve bir telafi talebi gelecek. Bu konu, bana sorarsan içine bir hayli su serpecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 148,
       "metin": "Fincanının tabana yakın kısımlarında, havada duran fakat bazı yerleri çatlamış bir \"muallak taşı\" görüyorum. Neredeyse parçalanıp yok olacak. Özellikle {{gecen_ay}} ayının ortalarından bu yana yaşadığın bir belirsizlik, ilerleyen günlerde tamamen netleşecek {{isim}}. Geçtiğimiz günlerde kalabalık bir ortamda adını zikrettiğin ya da sözünü ettiğin birinden bu konuda yardım alacaksın. Kazanacağın bu netlik hem kafanı rahatlatacak, hem de ilerleyen dönemler için çok daha rahat plan program yapabilir hale geleceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 149,
       "metin": "Fincanının son kısımlarında, kafasındaki küfede ağır yük taşıyan bir insan görüyorum. Bu kişi sen değilsin, fakat senin bir yakının ya da akraban olabilir. Yüzünü sana dönmüş; hem bir yandan düşmemek için direniyor, hem de senden destek bekliyor gibi... Yaklaşık {{sayi,4,9}} gün sonra onunla bir telefon görüşmen olacak {{isim}}. Kafasındaki sıkıntıyla ya da artık taşımakta zorlandığı sorumluluğuyla ilgili sana dert yanacak. Ona vereceğin tavsiye o kadar işine yarayacak ki, karşılığında ondan, gelecek ay sonuna kadar büyük bir iyilik göreceksin!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 150,
       "metin": "{{isim}}, hayatındaki \"bir iyiye, bir kötüye\" giden konu sağlığın mı, maddi durumun mu yoksa özel hayatın mı? Fincanında bir \"defne yaprağı\" görüyorum. Yaz kış yeşil kalabilen bu bitki, bir sorundaki kalıcı düzelmeye ve tutarlı gidişata işaret eder. {{ay_2}} ayının başından itibaren, sıkıntı yaşadığın o konu her ne ise, kalıcı bir \"iyileşmeye\" şahit olacağını bilmeni isterim. Tekrar tekrar ortaya gelen ve seni artık deyim yerindeyse \"bıktıran\" bir meseleden, böylelikle bir daha konusu dahi açılmamak üzere kurtuluyorsun.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 151,
       "metin": "Fincan çeperinde, yaklaşık saat 2 yönünde küçücük bir damla var; fakat gözyaşı değil bu, ona eminim {{isim}}. İçinde kalan bir ukte yakında gerçek olacak. Her 3 saat, 2 haftalık zamanı temsil eder. Tahminen 8-10 gün sonra, hayırlı bir haber alacaksın.\n\nSon bir notum var; önümüzdeki {{sayi,2,4}} gün boyunca insanlarla tartışmaktan kaçınmanı tavsiye ederim. Telvelerin, stres düzeylerinin bir süre yüksek seyredebileceğini hatırlatırken, burcun {{burc}} ise bunu destekler nitelikte.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 152,
       "metin": "Fincanının son kısımlarına doğru çok ilginç bir şey gözüme çarptı {{isim}}. Telvelerinde adeta küçücük bir anahtar deliği var ve bu deliğin ardında, bir göz bebeği o daracık alandan seni izliyor. Sen birini kendinden uzaklaştırmış, hayatından çıkararak geçmişte bıraktığını, aranıza \"zaman\" ya da \"mesafe\" girdiğini düşünmüşsün. Ancak bu kişi, halen seni takipte. Gözü de, kulağı da sende... Onunla yollarınız yaklaşık {{sayi,2,6}} hafta içerisinde yeniden kesişecek. O gün, şaşkınlıkla karışık gizli bir memnuniyet hissedebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 153,
       "metin": "Telvelerinin son kısımlarında, çevrene ördüğün yüksek surlar görüyorum. Fakat bir noktada, giriş tamamen açık. Bu açıklığın önünde ise bir insan var; {{kelime, senden bir tık daha uzunca, açık tenli. | seninle aynı boylarda gibi, hafif toplu ve geniş alınlı. | senden çok az daha kısa, kumral ve kısa saçlı. | sen yaşlarda, koyu kumral ve iyi giyimli.}} Buradaki yansımalar, çok güvendiğini düşündüğüm bu kişiye karşı dikkatli olman gerektiğini işaret ediyor {{isim}}. Bunu pek yakında sen de anlayabilirsin. Tedbirini alacağını ve bu kişiden gelebilecek tehlikeyi en uygun şekilde savuşturacağını hissediyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 154,
       "metin": "Falının son kısımlarında küçük fakat şirin bir \"değirmen\" gözüme çarptı. Başkaları için çok fazla anlam ifade etmeyen, ancak senin için özel ve ince bir konuda, birkaç gün içerisinde hoş bir gelişme yaşayacaksın. Bu değirmen, yaşayacağın gelişmenin sana manevi fayda sağlayacağını ve moralini bir anda yukarıya çekeceğini işaret ediyor {{isim}}. Son zamanlarda bazı baş, boyun ve eklem ağrıları yaşıyor muydun? Bu gelişmeden sonra, olası sağlık şikayetlerinden de pek eser kalmayacağını söyleyebilirim. Anlaşılan, yakın vadede oldukça ferah günler bekliyor seni...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 155,
       "metin": "Fincanının alt kısımlarında, karanlık bir yerde görüyorum seni. Elinde bir meşale tutuyor gibisin. Arkanda ise iki insan var. Doğru yolu ve ilerlemen gereken yönü, bu meşale yardımıyla sen görüyorsun. Arkandakilerin de seni dinlemelerini ve takip etmelerini istiyorsun. Fakat dinlemiyor, farklı yönlere doğru dağılmakta adeta ısrar ediyorlar. Bu iki kişi, senin söylemlerinden uzaklaşarak dolaylı bir zarara uğrayabilir ve pişmanlıkla yeniden kapına gelebilirler {{isim}}. Bu duruma üzüleceğini düşünmüyorum. Aksine, haklı oluşun görüldüğü için memnun bile olacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 156,
       "metin": "Fincanının alt yüzeyinden yanal alanlara doğru uzanan bir kasırga, bazı telveleri adeta allak bullak etmiş. Kabarmış bir deniz görüyorum {{isim}}. Sen bu denizin üzerinde, çıplak ayakla yürüyor gibisin. Şu sıralar seni ruhen zorlayan bir süreçten geçtiğin aşikar. Fakat hayatının daha önceki evrelerinde de buna benzer zorlu durumlarla karşı karşıya kalmış, üstesinden başarıyla gelmişsin. Seni bir hayli yormakta olan maddi ve manevi bu iklim, {{sayi,2,6}} ay içerisinde tamamen durulacak ve sağ kalan, kazanan yine sen olacaksın!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 157,
       "metin": "Ters duran bir \"kadeh\" gözüme çarptı telvelerinde. Sürdürmekte olduğun bir işinin, bir girişiminin ya da atacağın bir adımın neticesinde, sana verilecek olan büyük ve helal bir rızık var {{isim}}; fakat henüz zamanı gelmemiş. Falın, beklentinin gerçekleşeceğine ve ihtiyacının karşılanacağına dair ümidini kesinlikle kesmemen gerektiğini tembihliyor.\n\nSon olarak, uzun bir yolun başında duran ve adında \"{{harf}}\" harfi olan birini görüyorum. Bu kişi, kendisi ve yanındaki {{sayi,2,3}} kişiyle birlikte gelecek haftalarda ailene ya da sana misafir gelebilir. Beraberinde yüz güldürecek bir de bilgi getirecek Kıymetli {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 158,
       "metin": "Fincanının tabanında \"damla formunda\" kesilmiş ve berilyum minerali açısından yoğun bir taş görüyorum {{isim}}. Zümrüt olduğunu tahmin ettiğim ördek başı yeşili bu taş, yüksek sadakati temsil ediyor. Çok güvenmediğin, hakkında şüphe duyduğun ya da daha öncesinde sana yanlış yapan birisi, ilerleyen günlerde seni çok yanıltacak. Hakkında düşündüklerinin farkında olan ve durumu telafi etmek için fırsat kollayan bu kişiden, {{sayi,2,5}} gün içerisinde bir menfaat göreceksin.\n\nSon olarak telvelerinin, alt kısımlarda bir araya toplandığını görüyorum. İlerleyen günlerde odaklanarak başlayacağın ve muhakkak iyi sonuçlanmasını istediğin bir işten başarıyla ayrılacağını bilmeni isterim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 159,
-      "metin": "Görsellerindeki son kısımlarda dolaşırken, eski bir papirüs gözüme çarptı Kıymetli {{isim}}. 🧐Üzerinde ise \"{{sabit_harf}}\" harfi ve {{rastgeleburc}} burcunun sembolü var. Adında \"{{sabit_harf}}\" harfi olan bu kişiyle {{gun_5}} günü duygusal bir konuşma yapacaksın. Sana bir süredir herkesten sakladığı bazı bilgiler verecek. Duydukların seni, uzun süredir görüşmediğin bir {{kelime, kızı | erkeği | kadını | hanımefendiyi | beyefendiyi}} aramaya itecek. Bu telefon konuşması, mutlulukla arandaki büyük bir engeli de kaldırmış olacak {{isim}}.",
+      "metin": "Görsellerindeki son kısımlarda dolaşırken, eski bir papirüs gözüme çarptı Kıymetli {{isim}}. \\🧐Üzerinde ise \"{{sabit_harf}}\" harfi ve {{rastgeleburc}} burcunun sembolü var. Adında \"{{sabit_harf}}\" harfi olan bu kişiyle {{gun_5}} günü duygusal bir konuşma yapacaksın. Sana bir süredir herkesten sakladığı bazı bilgiler verecek. Duydukların seni, uzun süredir görüşmediğin bir {{kelime, kızı | erkeği | kadını | hanımefendiyi | beyefendiyi}} aramaya itecek. Bu telefon konuşması, mutlulukla arandaki büyük bir engeli de kaldırmış olacak {{isim}}.",
       "kosullar": [
         {
           "degisken": "yasmax",
           "deger": "30"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1950,46 +2715,94 @@
           "degisken": "yasmax",
           "deger": "30"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 161,
       "metin": "Telvelerinin tabanındaki bazı görseller beni çok şaşırttı {{isim}}. Senden yaşça büyük bir {{kelime, adam | beyefendi}} eğilmiş, adeta ayakkabılarını cilalayıp parlatıyor. Sen bu kişi tarafından {{gelecek_ay}} ayının başlarında hem ilgi ve destek görecek, hem de yönlendirileceksin. Fincanın, onu harfiyen dinlemen durumunda çok sevineceğini söylüyor.\n\nFalının son kısımlarındaki yuvarlak, demir bilyeleri sen de görüyor musun? ⚪ Tam {{sabit_sayi,3,6}} adetler ve sıraya dizilmişler... Zorlu bir niyetin var senin. Fakat bu niyet {{sabit_sayi,3,6}} gün ile {{sabit_sayi,3,6}} hafta arasında kesinlikle gerçekleşecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 162,
-      "metin": "Fincan görsellerinin tabana yakın kısımlarında fildişi bir tesbih gözüme çarptı. Sen bir şeyi \"öteliyorsun\" {{isim}}; bu şeyi yapmak ya da gerçekleştirmek için ya şu an imkanın yok, ya da henüz zamanı değil. Bazı koşullar bir şekilde buna izin vermiyor. Fakat bu isteğini içinden geçirip ertelediğin her bir vakit, çekilen bir \"sabır tesbihi\" ve dua niteliğinde olmuş. 🔑 33'lük olduğunu gördüğüm bu tesbihin {{sayi,20,30}} taşı çekilmiş. Bu da demek oluyor ki, emeline ulaşman için çok da uzun bir zaman kalmamış.",
-      "kosullar": []
+      "metin": "Fincan görsellerinin tabana yakın kısımlarında fildişi bir tesbih gözüme çarptı. Sen bir şeyi \"öteliyorsun\" {{isim}}; bu şeyi yapmak ya da gerçekleştirmek için ya şu an imkanın yok, ya da henüz zamanı değil. Bazı koşullar bir şekilde buna izin vermiyor. Fakat bu isteğini içinden geçirip ertelediğin her bir vakit, çekilen bir \"sabır tesbihi\" ve dua niteliğinde olmuş. \\🔑 33'lük olduğunu gördüğüm bu tesbihin {{sayi,20,30}} taşı çekilmiş. Bu da demek oluyor ki, emeline ulaşman için çok da uzun bir zaman kalmamış.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 163,
       "metin": "İplerinin ucu serbest bırakıldıktan sonra göğe doğru yükselmeye başlamış {{sabit_sayi,3,5}} adet balon görüyorum falının sonlarında. Bu balonlardan 2 tanesi \"büyük\" diğerleri ise \"küçük\" bazı dileklerini simgeliyor. Telvelerin, bu balonlardan büyük dileklerini sembolize eden 2 tanesinin başarıyla atmosfer dışına çıkacağını fısıldıyor. Gerçekleşecekler! Küçük dileklerini simgeleyen balonlar ise 1 tanesi hariç, başarılı bir şekilde sema ile buluşacak. {{sabit_sayi,3,5}} dilekte tek fire; hiç de fena değil, öyle değil mi {{isim}}? <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 164,
       "metin": "Fincanının derinliklerinde ise küçük bir deniz yıldızı belirmiş. Sen çok değil, {{sayi,2,6}} ay kadar öncesinde bir şeyi \"istemeye\" başlamışsın {{isim}}. Bu isteğin iyiden iyiye aklına yerleşmiş ve gün geçtikçe büyüyor içinde. Hayır hayır, bir şey satın almakla değil, bir yere gitmekle ya da manevi mahiyeti olan bir işi başarmakla ilgili bu isteğin. Kimi zaman gözüne çok zor gözükürken, kimi zaman da \"imkansız\" geliyor öyle değil mi? Bak falın ne diyor; sen bu suya dalacak ve tek nefeste o deniz yıldızını çıkartacaksın!...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 165,
       "metin": "Fincanının alt yüzeyindeki bir kısım telveler, sınırlarıyla adeta zehirli bir \"mantar\" görünümüne bürünmüş {{isim}}. Sen ya yakınlarındaki çok sevdiğin birileri, {{gecen_ay}} ayından beri bir konudan muzdarip gözüküyorsunuz. Bu mantar, o derde bir deva, o sıkıntıya bir şifa bulunacağını işaret etmekte. İçinde {{kelime, R | M | P}} harfi geçen bir günde, {{kelime, 35-40 | 40-45 | 45-50 | 50-55}} yaşlarında bir {{kelime, adam | kadın}} size yardımcı olacak.\n\nSon bir havadisim daha var sana {{isim}}; soyadı senin gibi {{soyisim}} olan birinin, gelecek hafta bir şeye çok sevineceğini hissediyorum. Bu meselenin kıyısından köşesinden seni de ilgilendirdiğine eminim. Hayır olsun... <sprite=34>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 166,
       "metin": "Yorumun sonlarına yaklaşırken, seni ıssız bir adanın üzerinde görüyorum {{isim}}. Çevrende kim kimse yok. Çaresiz de gözükmüyorsun. Sanki buraya kendi isteğin ve iradenle gelmiş gibisin. Bu yansıma, içsel bir yolculuğa işaret. Yüreğine dönecek, birine olan sevgin ya da saygınla ilgili kendini sorgulayacaksın. Bunun da ötesinde, o kişiye karşı işlemiş olabileceğin kusurları irdeleyecek, bir \"öz eleştiri\" yapacaksın. Çıkarımların neticesinde değişecek olan tutumun, o kişi ile aranızdaki samimiyeti ve sevgiyi perçinleyecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 167,
       "metin": "Falından alabileceğimiz son bilgiler için fincanının kaidesine doğru \"zoom\" yaptım. Yaparım; her türlü teknik imkanım var! <sprite=7> Buradaki bir simge, adeta \"cımbıza\" benziyor {{isim}}. Önümüzdeki {{sayi,3,4}} gün içerisinde, kuvvetle muhtemel {{gun_3}} günü öğleden sonra yaşayacağın bir olay neticesinde, yakın çevrendeki bir insana dair bazı gerçekler fark edeceksin. Doğruyu yanlıştan ayırma ve sorunlu kişileri yaşamından uzaklaştırma güdülerin harekete geçecek. İki heceli bir isme sahip bu insanı, bir daha görüşmemek üzere hayatından çıkartabilirsin ve bence bu çok da hayırlı olur...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 168,
-      "metin": "Fincanının en dip kısımlarında seni, geniş kanatları olan bir binek hayvanının üzerinde, yularlarını sımsıkı tutmuş, üzengilere basarak ayağa kalkmış ve öne doğru eğilmiş şekilde görüyorum. 🦄Önümüzdeki yıllarda eline çok büyük bir güç geçecek {{isim}} senin. Bu gücü kullanarak çok önemli yerlere gelecek, çok büyük bir alım gücüne ulaşacak, hem parayı hem de insanları rahatlıkla sevk ve idare edebileceksin. Geleceğinde yüksek bir \"maddi refah\" var. Çekilen onca sıkıntıdan sonra ailenin de yaşam şartlarını yükseltecek olman, büyük bir gurur kaynağı olacak.",
+      "metin": "Fincanının en dip kısımlarında seni, geniş kanatları olan bir binek hayvanının üzerinde, yularlarını sımsıkı tutmuş, üzengilere basarak ayağa kalkmış ve öne doğru eğilmiş şekilde görüyorum. \\🦄Önümüzdeki yıllarda eline çok büyük bir güç geçecek {{isim}} senin. Bu gücü kullanarak çok önemli yerlere gelecek, çok büyük bir alım gücüne ulaşacak, hem parayı hem de insanları rahatlıkla sevk ve idare edebileceksin. Geleceğinde yüksek bir \"maddi refah\" var. Çekilen onca sıkıntıdan sonra ailenin de yaşam şartlarını yükseltecek olman, büyük bir gurur kaynağı olacak.",
       "kosullar": [
         {
           "degisken": "yasmin",
@@ -1999,12 +2812,24 @@
           "degisken": "yasmax",
           "deger": "45"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 169,
-      "metin": "Fincanındaki son yansımalarda bir \"yunus balığı\" görüyorum. 🐬 Son bir haftadır ne yapacağını ya da nasıl yapacağını bilmediğin bir konuda yolun aydınlanacak. Yunus balıkları yön bulmada uzmandır ve \"doğru istikameti\" temsil eder {{isim}}. Önümüzdeki günlerde eline yeni bir imkan geçecek ve sorununa farklı bir bakış açısı geliştirerek, üstesinden gelebileceksin.\n\nSigarayı yeni bıraktığını ya da bırakmaya niyetli olduğunu hissettiğim, elindeki ateşi yere atmış bir de {{kelime, hanımefendi | beyefendi}} görüyorum telvelerinde. 🚬 En geç {{sayi,4,10}} gün içerisinde, hayırlı bir mesele dolayısıyla bu kişinin seninle görüşmek isteyeceğini tahmin ediyorum.",
-      "kosullar": []
+      "metin": "Fincanındaki son yansımalarda bir \"yunus balığı\" görüyorum. \\🐬 Son bir haftadır ne yapacağını ya da nasıl yapacağını bilmediğin bir konuda yolun aydınlanacak. Yunus balıkları yön bulmada uzmandır ve \"doğru istikameti\" temsil eder {{isim}}. Önümüzdeki günlerde eline yeni bir imkan geçecek ve sorununa farklı bir bakış açısı geliştirerek, üstesinden gelebileceksin.\n\nSigarayı yeni bıraktığını ya da bırakmaya niyetli olduğunu hissettiğim, elindeki ateşi yere atmış bir de {{kelime, hanımefendi | beyefendi}} görüyorum telvelerinde. \\🚬 En geç {{sayi,4,10}} gün içerisinde, hayırlı bir mesele dolayısıyla bu kişinin seninle görüşmek isteyeceğini tahmin ediyorum.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 170,
@@ -2014,32 +2839,62 @@
           "degisken": "yasmin",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 171,
       "metin": "Sözlerimi toparlamadan önce son bir detaydan daha bahsetmek istiyorum. Telvelerinde seni, parmağına batmış olduğunu anladığım bir kıymığı çıkartmaya uğraşırken görüyorum. Elini kendine çevirmiş, cımbız gibi bir aletle dikkatli bir şekilde uğraşıyorsun. Geçtiğimiz aylarda kendi yaptığın bir işten dolayı etkisi halen süren bir zarara mı uğradın {{isim}}? Çevrenden bu konuda bir yardım da görememişsin. Fincanın, bu sorunu önümüzdeki haftalar içinde yine kendi kendine çözeceğini ifade ediyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 172,
-      "metin": "Önümüzdeki günlerde sosyal medyada durum bildirimini garip bir şekilde güncellemiş ya da ilginç bir paylaşımda bulunmuş yakın bir arkadaşını göreceksin. Falının son kısımlarında telvelerin, bu kişinin zor bir durumda olabileceğinden bahsediyor. Adındaki ve soyadındaki harflerin toplamının 10 ya da 12 olduğunu hissettiğim ve adında 2 sesli harf bulunan bu kişi, sevgilisinden ya da eşinden ayrılmış olabilir. 🙄 Onunla yüz yüze görüşmen büyük bir önem taşıyor olacak {{isim}}. Anladığım kadarıyla zamanında o da sana az destek olmamış...",
+      "metin": "Önümüzdeki günlerde sosyal medyada durum bildirimini garip bir şekilde güncellemiş ya da ilginç bir paylaşımda bulunmuş yakın bir arkadaşını göreceksin. Falının son kısımlarında telvelerin, bu kişinin zor bir durumda olabileceğinden bahsediyor. Adındaki ve soyadındaki harflerin toplamının 10 ya da 12 olduğunu hissettiğim ve adında 2 sesli harf bulunan bu kişi, sevgilisinden ya da eşinden ayrılmış olabilir. \\🙄 Onunla yüz yüze görüşmen büyük bir önem taşıyor olacak {{isim}}. Anladığım kadarıyla zamanında o da sana az destek olmamış...",
       "kosullar": [
         {
           "degisken": "yasmin",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 173,
       "metin": "Fincanının en derin ve zor seçilen kesimlerinde, seni bir süredir nadasa bırakılmış bir toprağa tohum ekerken görüyorum. Gelecek ayın {{kelime, ortalarında | sonlarında}} yepyeni bir başlangıç yapacaksın {{isim}}. Kendini bir süredir buna hazırladığını ve sonucun güzel olmasını can-ı gönülden istediğini hissediyorum. Kısa ve öz bir şekilde şunu bilmeni isterim; kesinlikle yüzün gülecek! Müjdeyi alman ve hasadı toplaman {{ay_2}} ayının ilk haftalarını bulabilir. O nedenle lütfen telaş etme.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 174,
       "metin": "Fincanının tabanında, karşına geçmiş el kol hareketleriyle adeta \"pantomim\" yapan bir {{kelime, hanımefendi | beyefendi}} görüyorum {{isim}}. Bu kişinin sanki sana söylemek istedikleri var da, çevre baskısından ya da yanlış anlaşılma korkusundan dolayı bunu yapamıyor gibi. Soyisminde, seninkinde olduğu gibi bir {{soyisimiki}} harfi bulunduran, saçlarını eskiye oranla şimdilerde daha kısa kestiren ve {{kelime, özel sektörde | kamu sektöründe}} çalıştığını düşündüğüm bu kişinin derdini gelecek {{gun_6}} gününe kadar anlayacaksın. Altından, senin yararına olacak ya da hoşuna gidecek bir şey çıkacağını hissediyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 175,
@@ -2049,37 +2904,79 @@
           "degisken": "yasmin",
           "deger": "24"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 176,
       "metin": "Falının sonlarında, zahiri bir çemberin merkezinde belirmişsin. Çemberin üzerinde ise, adeta belirli aralıklarla çakılmış kazıklar var. Sen biri laf edecek diye ya da bir şeylerin korkusuyla hareket alanını mı kısıtlıyorsun {{isim}}? Aklından geçenleri ve yapmak istediklerini özgürce yapamadığını söylüyor fincanın. Gelecek aylarda bu konuda bir patlama yaşayacak, zihninde yarattığın zincirleri kıracaksın. Herkes kendi hayatı üzerinde bir nebze de olsa söz sahibi olabilmeli; bunun altı çizilecek. Sonrasında ise gerçekten çok rahatlayacaksın!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 177,
       "metin": "Fincanının tabanıyla yan duvarın bitiştiği yerde, ucuna küçücük nazar boncuğu iliştirilmiş bir çengelli iğne görüyorum. Bunun neye işaret olduğunu belki az çok sen de tahmin edebilirsin {{isim}}? Evet, yakında çok sevdiğin ve evli bir tanıdığından \"doğum\" haberi alacaksın! Üzücü olan şu ki, aranızdaki mesafe ya da koşullar dolayısıyla bu kişilerin yanında bulunamayacağını hissediyorum.\n\nFincanını yıkamadıysan, lütfen \"dudak payı\" bölümünde sağ el işaret parmağını şöyle bir çepeçevre gezdirip o kısmı temizle. Üzerindeki negatif enerjiyi birden bire attığına şahit olacaksın {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 178,
       "metin": "Fincanının son kısımlarında {{kelime, M, L, Z, H ve S'den oluşan | L, M, H, S ve Z'den oluşan | H, S, Z, L ve M'den oluşan}} karışık bazı harfler ve bir de yeni yanmış \"mum\" görüyorum. Yaptığım analiz, bu harflerin eski İbranice bir kelime olan \"shlimazl\" kelimesini oluşturduğunu söylüyor ve \"sürekli şanssız\" anlamına geliyor. Anlaşılan şimdiye kadar kendini böyle hissetmene neden olan pek çok olay yaşamışsın. Fakat yanan mum, seni bu algının tamamen değişeceği olaylar yaşayacağın konusunda haberdar ediyor. Bundan böyle talih senden yana {{isim}}, hiç merak etme!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 179,
       "metin": "Telvelerin son kısımlarıyla, ilerleyen aylarda çok mutlu hissedeceğin birtakım olaylar yaşayacağını söylüyor. Fakat söz konusu \"mutluluk\" olduğunda, yaşadığımız olayların bunda payının %10, bakış açımızın ise %90 olduğu bilinir. Seni biraz fazla \"mükemmeliyetçi\" ve çoğu zaman da \"karamsar\" görüyorum. Bardağın hep eksik kalan kısmının neden dolmadığı ile ilgileniyorsun. Şunu unutma {{isim}}, gemi su almadığı müddetçe, koca okyanuslar dahi onu batıramaz. Zihnin de gemi gibidir; içine kötü düşüncelerin girmesine ve orada kalmasına asla izin vermemelisin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 180,
       "metin": "Fincanının göze çarpan son kısımlarında, seni bir yansımanın önünde görüyorum. Bir ayna desen değil, bir gölge desen değil... Sevinerek, bir zafer kazanmışçasına o yansımaya elini uzatmak ya da onunla yetinmeden, üzerine doğru ilerleyip, içinden geçip gitmek ve ardında ne olduğunu görmek arasında iki seçeneğin olacak. Sen \"bir şeyi ya da birini\" arıyorsun. İlerleyen zamanlarda o'nun çok benzerini bulacaksın. Eğer aldanıp zahiriyle yani \"benzeriyle\" yetinmez ve karşına gelecek olanı kabul etmezsen {{isim}}, onun aslına, kendisine ve gerçeğine ulaşacaksın!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 181,
       "metin": "Fincanının tabanındaki yansımalar, gelecek hafta aniden paraya sıkışabileceğini işaret ediyor. Bu durumun o gün biraz canını sıkacağını hissediyorum {{isim}}. Fakat ya günün akşamına kadar, ya da hemen ertesi günde, kayda değer bir yardım alacak, rahatlayacaksın. Hiçbir olay karşısında aniden kötümserleşip umudunu yitirme derim.\n\nSon kısımlarda ise U şeklinde bir \"mıknatıs\" var. Orta ve uzun vadede, bolluk ve bereketi üzerine çekeceksin. Hırsın ve alacağın doğru kararlar sayesinde, elindeki imkanlar yıldan yıla genişleyecek. Şu anda tasavvur edemeyeceğin bir maddi birikim sahibi olacağını işaret ediyor telvelerin...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 182,
@@ -2113,6 +3010,12 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -2123,6 +3026,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2133,6 +3040,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2143,11 +3054,15 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 186,
-      "metin": "Fincanında henüz bahsetmediğimiz son bazı detaylar var. Telvelerinin, bir noktada nasıl da dönerek \"silindir\" şeklini aldığını görüyor musun {{isim}}? Bu, zihninde sert esen fikirlerin oluşturduğu bir hortum. 🌪️ Ayrıldığın erkeğin aslında seni hiç sevmemiş olabileceğini düşündürten bazı kötü hislerin olduğunu görüyorum. Hemen yan tarafta ise bir \"kuğu\" sembolü var. Bu sembol, erkek arkadaşının aslında \"dildâde\" olduğunu gösteriyor. Hem sana tutkun, hem de seni hala çok seviyor. Merak ettiğin bazı şeyler açığa kavuştuğunda, bunu sen de anlayacaksın.",
+      "metin": "Fincanında henüz bahsetmediğimiz son bazı detaylar var. Telvelerinin, bir noktada nasıl da dönerek \"silindir\" şeklini aldığını görüyor musun {{isim}}? Bu, zihninde sert esen fikirlerin oluşturduğu bir hortum. \\🌪️ Ayrıldığın erkeğin aslında seni hiç sevmemiş olabileceğini düşündürten bazı kötü hislerin olduğunu görüyorum. Hemen yan tarafta ise bir \"kuğu\" sembolü var. Bu sembol, erkek arkadaşının aslında \"dildâde\" olduğunu gösteriyor. Hem sana tutkun, hem de seni hala çok seviyor. Merak ettiğin bazı şeyler açığa kavuştuğunda, bunu sen de anlayacaksın.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -2157,6 +3072,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2171,6 +3090,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2185,6 +3108,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2199,6 +3126,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2213,6 +3144,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2223,6 +3158,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2233,6 +3172,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2243,6 +3186,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2253,6 +3200,10 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2263,6 +3214,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2273,6 +3228,10 @@
           "degisken": "medeni durum",
           "deger": "flört halinde"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2283,6 +3242,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2293,6 +3256,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2303,6 +3270,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2313,6 +3284,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2323,6 +3298,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2333,6 +3312,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2343,6 +3326,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2353,6 +3340,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2363,6 +3354,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2373,6 +3368,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2383,6 +3382,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2393,6 +3396,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2403,6 +3410,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2413,6 +3424,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2423,6 +3438,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2433,6 +3452,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2443,6 +3466,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2453,6 +3480,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2463,6 +3494,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2473,6 +3508,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2483,6 +3522,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2501,6 +3544,10 @@
           "degisken": "yasmin",
           "deger": "28"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2519,6 +3566,10 @@
           "degisken": "yasmin",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2533,6 +3584,10 @@
           "degisken": "yasmin",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2543,6 +3598,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2553,6 +3612,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2563,6 +3626,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2573,6 +3640,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2583,6 +3654,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2593,6 +3668,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2603,6 +3682,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2613,6 +3696,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2623,6 +3710,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2633,6 +3724,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2643,6 +3738,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2653,6 +3752,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2663,6 +3766,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2677,6 +3784,10 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2695,6 +3806,10 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2705,16 +3820,24 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 237,
-      "metin": "Fincan görsellerini son kez dikkatle incelediğimde, senin de fark edebileceğin çizgisel telvelerin hemen altında, endişeli bir şekilde telefon konuşan, orta-uzun boylu bir {{data, cinsiyet=erkek, kadın | cinsiyet=kadın, erkek | cinsiyet=lgbt, insan}} görüyorum {{isim}}. Ayrıldığın eşin, {{ay_3}} ayında aşk hayatınla ilgili bir gelişmeyi ortak bir tanıdığınızdan öğrenip hem şok olacak, hem de seni kıskanacak. Üzerinde hiçbir hakkı kalmamasına rağmen, tepkisel davranıp sana sitem dolu bir mesaj bile atabileceğini hissediyorum. Bu yansımalara bakılırsa, {{ay_3}} ayı senin için çok güzel bir ay olacak.",
+      "metin": "\"Fincan görsellerini son kez dikkatle incelediğimde, senin de fark edebileceğin",
       "kosullar": [
         {
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2725,6 +3848,10 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2735,6 +3862,10 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2745,6 +3876,10 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2755,6 +3890,10 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2773,6 +3912,10 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2791,6 +3934,10 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2809,11 +3956,15 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 245,
-      "metin": "{{yas_0}} yaşlarında olmanın bir enerjisi mi, yoksa {{burc}} burcu oluşunun bir tılsımı mı bilinmez; fincanın, bir şeyi ne zaman aklından {{sabit_sayi,2,4}} kez geçirsen, onun gerçek olduğunu fısıldıyor. Hayır olsun {{isim}}, {{sabit_sayi,2,4}} uğurlu rakamın filan mı? 🙂 Bak, yarın günlerden {{gun_1}}. Tam olarak 6 gün sonra, yani {{gun_6}} günü, yine aklından bir şeyi gün içerisinde {{sabit_sayi,2,4}} defa peş peşe geçireceksin. Nişanlın {{data, cinsiyet=erkek, hanımefendiyi de | cinsiyet=kadin, beyefendiyi de}} ilgilendirecek olan bu arzunun, önümüzdeki {{mevsim_1}} mevsiminin başlarında gerçek olacağını söylüyor falın!",
+      "metin": "{{yas_0}} yaşlarında olmanın bir enerjisi mi, yoksa {{burc}} burcu oluşunun bir tılsımı mı bilinmez; fincanın, bir şeyi ne zaman aklından {{sabit_sayi,2,4}} kez geçirsen, onun gerçek olduğunu fısıldıyor. Hayır olsun {{isim}}, {{sabit_sayi,2,4}} uğurlu rakamın filan mı? \\🙂 Bak, yarın günlerden {{gun_1}}. Tam olarak 6 gün sonra, yani {{gun_6}} günü, yine aklından bir şeyi gün içerisinde {{sabit_sayi,2,4}} defa peş peşe geçireceksin. Nişanlın {{data, cinsiyet=erkek, hanımefendiyi de | cinsiyet=kadin, beyefendiyi de}} ilgilendirecek olan bu arzunun, önümüzdeki {{mevsim_1}} mevsiminin başlarında gerçek olacağını söylüyor falın!",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -2831,6 +3982,10 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2853,6 +4008,10 @@
           "degisken": "yasmax",
           "deger": "45"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2871,6 +4030,10 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2881,6 +4044,10 @@
           "degisken": "medeni durum",
           "deger": "nişanlı"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2895,6 +4062,10 @@
           "degisken": "yasmax",
           "deger": "26"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2905,6 +4076,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2915,11 +4090,15 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 252,
-      "metin": "Havaya kalkmış ve avuç içi gözüken bir \"sağ el\" var falında. Dürüstlüğün sembolü olan bu el, sevgilinle ilgili bazı tereddütlerin olduğunu ya da ilerleyen günlerde oluşablieceğini gösteriyor {{isim}}. Sevgilinin tanıdığı olan bir {{data, cinsiyet=erkek, erkekle | cinsiyet=kadın, kızla}} ilgili senin hassas olduğun ince bir mesele gözlemliyorum. Başlarda tepki gösterse bile, sonraları senin hassasiyetini anlayacaktır.\n\nUzun vadeli olma potansiyeli yüksek ve güzel bir birliktelik yaşıyorsun Değerli {{isim}}. Ancak fincanın, daha anlayışlı ve daha nazik olman gerektiği konusunda seni uyarıyor.",
+      "metin": "Havaya kalkmış ve avuç içi gözüken bir \"sağ el",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -2929,6 +4108,10 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2943,6 +4126,10 @@
           "degisken": "yasmax",
           "deger": "45"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2957,6 +4144,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2971,6 +4162,10 @@
           "degisken": "yasmax",
           "deger": "45"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2985,6 +4180,10 @@
           "degisken": "yasmin",
           "deger": "24"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -2995,6 +4194,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3005,6 +4208,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3015,6 +4222,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3029,6 +4240,10 @@
           "degisken": "yasmax",
           "deger": "21"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3039,6 +4254,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3049,6 +4268,10 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3059,6 +4282,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3069,6 +4296,10 @@
           "degisken": "medeni durum",
           "deger": "flört halinde"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3079,6 +4310,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3089,6 +4324,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3099,6 +4338,10 @@
           "degisken": "medeni durum",
           "deger": "nişanlı"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3109,6 +4352,10 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3119,6 +4366,10 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3129,6 +4380,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3139,6 +4394,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3149,6 +4408,10 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3159,6 +4422,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3169,6 +4436,10 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3179,6 +4450,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3189,6 +4464,10 @@
           "degisken": "medeni durum",
           "deger": "flört halinde"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3199,6 +4478,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3209,6 +4492,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3219,6 +4506,10 @@
           "degisken": "medeni durum",
           "deger": "nişanlı"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3229,6 +4520,10 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3239,6 +4534,10 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3249,6 +4548,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3259,6 +4562,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3269,52 +4576,92 @@
           "degisken": "yasmax",
           "deger": "26"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 285,
       "metin": "Fincanının derinlerinde, kökünün çevresi mantarlarla istila edilmiş çatallı bir ağaç gövdesi görüyorum. Senin evli ve 2 çocuğu olan, soyadında ise {{harf}} veya {{harf}} harfi olan bir akraban var mı? Bu kişiyle ilgili önümüzdeki haftalarda endişe verici bir haber duyabilirsin {{isim}}. O hanenin içinden ya da çevresinden biri, ilk anda endişe yaratabilecek bir rahatsızlık geçirerek, sorunu hafif atlatacak. Telvelerin, her şerde bir hayır olduğuna işaret ediyor. Bu badire, onların seninle ilgili bir konuda kalplerinin yumuşamasına da vesile olacak.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 286,
       "metin": "Telvelerin haftaya, içinde birden fazla çalışanı olan bir mekanda bulunacağını söylüyor {{isim}}. Burada, adında iki sesli harf bulunan orta boylu bir erkekten ilginç bir bilgi edineceksin. Bu bilgi, aklında olmayan bir fikri de beraberinde getirecek. {{sayi,3,8}} hafta sonra ise bu fikirle öyle bir şeye kalkışacaksın ki, seni belki ruhen, belki de bedenen en az 3-5 yaş gençleştirecek. Fincanın, bu gibi güzel fırsatları gelecekte daha da iyi değerlendireceğini fısıldıyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 287,
       "metin": "Fincan tabanındaki bazı telvelerin arasında kalan beyazlıklar, adeta bir \"biberonu\" andırıyor. Hemen yanında ise çocuk beklediklerini düşünmediğim, evli bir çift görüyorum. Soyadları sanırım {{kelime, G | D | S | E | A}} harfi ile başlıyor. Onlardan ilerleyen günlerde güzel bir haber alacaksın {{isim}}. Haberin zamansızlığına hem çok şaşıracak, hem de gelişmeye çok sevineceksin. Belki erken, belki de geç. Fakat nasipleriymiş nihayetinde. Allah \"ol!\" deyince oluveriyor. Sağlıkla büyütsünler...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 288,
       "metin": "Fincanının alt kısmında, adında ya da soyadında {{harf}} harfi olan ve kan bağının olduğunu düşündüğüm bir hanımefendi var. Bu kişi cam parçalarının üzerinde adeta yalın ayak yürüyor. Bu insanın {{kelime, abisi | kardeşi | kocası | oğlu | gelini | damadı | kızı}} tarafından çok yoğun bir psikolojik baskı altında olduğunu söyleyebilirim {{isim}}. Bu baskı, onun senden uzak durmasına da neden oluyor. Telvelerin, bu kişinin hem yakında bu baskıdan kurtulacağını, hem sağlığının ve psikolojisinin daha iyi bir hale geleceğini hem de seninle eskisinden daha sağlam bir yakınlık kuracağını işaret ediyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 289,
       "metin": "Küçücük bir sandala sığabilmiş iki kişi var fincanında. Bu insanlar, kıyıdan yavaş yavaş ayrılırken bazı sevdiklerini de geçici bir süreliğine sanki geride bırakıyorlar. Çift olduklarını düşündüğüm bu kadın ve erkek, birlikte daha önceki senelerde ailelerindeki birinin sağlık sorunları nedeniyle gidemedikleri o yola gidecekler. Evvelden sağlık sorunu olan bu kişi her kimse, seninle de bir bağlantısı var {{isim}}, fakat çözemedim. Anladığım ise şu; bu kişi artık çok daha iyi gözüküyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 290,
       "metin": "Fincanının derinliklerindeki bazı çizgisel telveler, tıpkı gökyüzündeki şimşekler gibi tabana doğru çakıyor. Sağlığını her açıdan zorlayan {{sayi,2,8}} aylık oldukça stresli bir dönemi geride bırakmışsın {{isim}}. Geleceğin için tehdit oluşturabilecek bazı unsurları bertaraf ederken, bir taraftan da hayallerinle arana girebilecek engelleri ortadan kaldırmak için elinizden geleni yapmışsın. Şimdilerde ise hava nihayet açıyor. {{gelecek_ay}} ayının ilk yarısında alacağın güzel bir haberle, bu zorlu dönem tamamen geride kalacak.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 291,
       "metin": "Fincanına tam tepeden bakıldığında, alt duvarla tabanı bağlayan yerde duran \"raptiyeyi\" sen de görebiliyor musunuz {{isim}}? Bu simge, sağlığınla ilgili bir konudan tam olarak emin olmak istediğini işaret ediyor. Yerini ve durumunu adeta \"sağlamlamak\" istiyor gibisin. Henüz büyük bir tehlike içerisinde değilsin. Fakat korktuğun şeyden \"emin\" olabilmek için, riski artıran ve sağlığını tehdit eden başka bir şeyden vazgeçmen gerekebileceğini görüyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 292,
       "metin": "Sudaki dalgalanmaya benzer bir \"girişim deseni\" var Değerli {{isim}} fincan tabanında. Sen, çevrendeki insanların enerjisinden çok etkileniyorsun. Fakat telvelerin, çevrendeki insanların senin enerjinden çok daha fazla etkilendiğini işaret ediyor. Psikokinetik ve telekinetik kanalların, {{ay_1}} ayının ikinci haftasına doğru daha da açılacak. Ne istediğine, ne düşündüğüne ve neyi çağırdına çok dikkat etmeli, en zor zamanda bile daha güler yüzlü olmaya gayret etmelisin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 293,
       "metin": "Fincanın son bir bilgiyle noktalanıyor {{isim}}. Sarhoş gibi bir sağa bir sola yönelen, ne yaptığını bilmeyen bir adam var burada. Ondaki bu dengesiz görüntü, kişiliğindeki bozukluklara işaret ediyor. Ona çok kızgın olduğunu tahmin ediyorum; seni çok üzmüş. Çevirdiği işler ve söylediği sözler, bir şekilde sağlığını bile etkilemiş. Telvelerin, bu kişinin {{mevsim_1}} aylarının başına kadar dersini alacağını ve başına gelenleri duyduğunda içinin yağlarının eriyeceğini söylüyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 294,
@@ -3324,6 +4671,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "saglik"
       ]
     },
     {
@@ -3334,32 +4685,56 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "saglik"
       ]
     },
     {
       "id": 296,
       "metin": "Bir \"tuz lambasının\" önünde durduğunu görüyorum. Sen muhteşem bir empatsın {{isim}}. Başkalarının ne düşündüğünü ve ne hissettiğini çok iyi kavrayıp değerlendirebiliyorsun. Bu durumunun bir de dezavantajı var. İnsanların yaşadığı hastalık ve kayıplar, onlar kadar seni de üzüyor. Buna kendi sorunların da eklenince, bünyen kaldırmakta zorlanıyor. {{ay_1}} ayının {{sayi,9,18}} ya da 23'ünde yaşayacağın bir olay, bilincindeki bu tortuyu zihninden kaldıracak. Sıkıntı ve acıların altında gizlenen gerçeği ve mutluluğu tadacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 297,
       "metin": "Sen geçtiğimiz senelerde vefat ya da onun kadar üzücü bir kayıp mı yaşadın? Fincanının en alt kısmında kulaklarını tıkayan, dilsiz birini görüyorum. Küçük acılar yaşayanlar fısıldaşarak bunları dile getirebilirken, bu derin tecrüben seni adeta dilsiz bırakmış. Belki farkındasın, belki de değilsin; o gün bugündür bedenindeki \"çigong\" yani chi kuvveti %{{sayi,50|79}} dolaylarının üzerine çıkamamış. Bu enerjini tamamlayacak yeni bir gelişme yaşayacaksın {{isim}}. Telvelerin, bu gelişme için {{sayi,01,27}}.{{sayi,01,12}}.{{yil_1}} tarihini işaret ediyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 298,
       "metin": "Fincan tabanında açık bir yelpaze var. Bu yelpazenin üzerinde 3 farklı bölüm görüyorum. İlk bölüm, gri renklerde; ne açık ne koyu. Bu senin 4-5 sene öncesine kadarki sağlık sürecini yansıtıyor. İkinci bölüm ise siyaha çalan, koyu ve huzursuz bir bölüm. Son 5 senedir kendine dair ve çevrenle ilgili çektiğin sağlık sorunlarına işaret ediyor. Son bölüm ise tamamen aydınlık ve açık renklerde {{isim}}. Bundan {{kelime, birkaç | iki üç | üç dört}} {{kelime, sene | ay}} sonra başlayacak olan üçüncü bölümün, sana ferahlık getirecek. O bölümde hiçbir ciddi sıkıntı çekmeyeceğini bilmeni isterim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 299,
       "metin": "Fincan tabanındaki aydınlık bölümlerden sıyrılmış koyu kısımlarda bir \"fıçı\" görüyorum. İçinin şifa badesi ya da ab-ı hayat ile dolu olduğunu düşündüğüm bu fıçı, {{yas_2}} yaşına kadar yaptığın ve yapacağın tüm iyiliklerin kaydedilmekte ve biriktirilmekte olduğunun işareti. 2 yıl sonra, {{yil_2}} yılının {{mevsim_2}} aylarında sana büyük bir müjde sunulacak. Hissettiğim kadarıyla bu öyle bir şey olacak ki {{isim}}, o günden sonra sağlığını etkileyecek hiçbir manevi sıkıntı çekmeyeceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 300,
       "metin": "Fincanının yan duvarlarından alt kısımlara doğru analizime devam ederken, bir nesne dikkatimi çekti Kıymetli {{soyisim}}. Adeta bir \"iskarpelaya\" benzeyen bu araç, sağlığınla ilgili bazı sıkıntıların, gelecekle ilgili birtakım seçimlerini şekillendireceğinin işareti. Sonu \"hayır\" olduğu için, endişeye hiç mahal yok. Erken uyarı olarak algılayabileceğin bazı işaretler, seni daha düzenli beslenmeye, bazı alışkanlıklarını değiştirmeye ve {{kelime, düzenli olarak hareket etmeye | beden sağlığına özen göstermeye | ara sıra yürüyüş yaparak temiz hava almaya}} sevk edebilir.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 301,
@@ -3369,17 +4744,29 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "saglik"
       ]
     },
     {
       "id": 302,
       "metin": "Kısa bir baston var falında. Senin bu bastonu zaman zaman kullandığın, manevi perspektifte ona \"dayandığın\" ve ondan güç aldığın çok açık. Bu, senin pek de iyi sayılamayacak bir alışkanlığın olsa gerek. Senden çaldıkları ufak gözükse de, yekünde çok. Ne demişler {{isim}}; \"bize en çok acı çektiren, küçük zevklerimizdir. Bütün ömrümüzü onlara harcasak da, yaktığı zeytinyağı fıçısına karşılık, bize verdiği yalnızca bir zeytin tanesidir.\" Sağlığına zarar veren o küçük zevki, dayandığın o kısa bastonu bulacak ve ona karşı koyduğunda çok daha iyi hissedeceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 303,
       "metin": "{{ay_-1}} ayında bir arkadaşına çok kızmışsın. Sevgi, yürekleri dezenfekte eden bir alkol hükmündeyken, yapılan bir yanlıştan süzülen tek bir kıvılcım, sevenin yüreğini aleve verir. Telvelerin, şu anda sevdiğin ölçüde de kızgın olduğunu söylüyor ona. Bu durum canını çok sıkmış olacak ki, olayın ardından bir sivilce, ağız yarası ya da uçuk çıkartmışsın. Şimdilerde kendini geriye çekerek, \"ona ceza vermemeyi\" seçtiğini görüyorum {{isim}}. Fakat gerçek bir af için, onun kendisini temize çekmesini bekliyorsun. Bu yakında gerçekleşecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 304,
@@ -3389,27 +4776,47 @@
           "degisken": "yasmin",
           "deger": "22"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "saglik"
       ]
     },
     {
       "id": 305,
       "metin": "Son kısımlarda seni tahta bir havanda, \"hamam otu\" yaprakları döverken görüyorum. Vücudunun bazı yerlerinde istenmeyen tüyler mi var {{isim}}? Bunlara bir süredir çok çeşitli şekillerde çareler aradığını ve bulmayı başaramadığını hissediyorum. Gelecek ay bu konu, ismiyle soyismi arasında \"ulama\" olan esmer bir arkadaşınla konuşurken açılacak. Onun seni yönlendirmesiyle, konuşmadan sonraki birkaç ay içerisinde adının içinde {{kelime, L | T | D | R | M}} harfi olan bir yere gidecek, bu konu ile ilgili oradan çok mutlu ayrılacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 306,
       "metin": "Falını tam noktalayacaktım ki, bir silüet dikkatimi çekti. Başına kapüşon geçirmiş bir {{data, cinsiyet=erkek, kız | cinsiyet=kadın, erkek}}, bir kusurunu adeta senden gizlemeye çalışıyor. Sağlık sorunu olarak gördüğü bu durumu senden saklamaya çalışan bu kişi, yakında bu sıkıntısından kurtulmanın bir yolunu bulacak. Durumu fark ettiğinde, böyle şeylere pek de kıymet vermediğini söyleyerek onu teskin edebilirsin {{isim}}. Bana soracak olursan, gayet de önemsiyorsun. Hatta belki benzeri bir sorunu geçmişte sen de yaşadın, kim bilir...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 307,
       "metin": "Fincanının sonlarında, gövdeden ayrılan geniş yapraklar ve ortalarında da küçük beyaz çiçekler görüyorum. Altınmühür otu olduğunu düşündüğüm bu bitki, ilerleyen günlerde hafif bir ishal atlatabileceğinin habercisi. Probiyotik besinler tüketmeye özen göstermeli ve kaynağı belli olmayan açık gıdalardan gelecek {{sayi,6,15}} gün boyunca uzak durmalısın. Zencefil, papatya çayı ve yeşil çay, böyle bir dönem yaşarsan en büyük dostun olacaklar. Tükettiğin gıdaların o günkü moralini dahi etkilediğini aklından çıkarmamalısın Değerli {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 308,
       "metin": "Kedi mi köpek mi olduğunu tam seçemediğim, uzun kulaklı bir hayvan var fincanının son bölümlerinde. Bu hayvan senin evinde ya da bir yakınının evinde olabilir. Halinden pek hoşnut durmuyor. Ona gösterilen ilginin azaldığını ve sanki biraz ihmal edildiğini söylüyor {{isim}} telvelerin. Son zamanlarda ev içerisinde negatif bir enerji akışı ve kaynağı belli olmayan huzursuzluklar varsa, bu hayvanın memnuniyetsizliğinden kaynaklı olabileceğini hissediyorum. Bu kötü elektrik bertaraf edildiğinde, büyük bir fark gözlenecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 309,
@@ -3419,12 +4826,20 @@
           "degisken": "yasmax",
           "deger": "24"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "saglik"
       ]
     },
     {
       "id": 310,
       "metin": "Seni seslerin yankılanabileceği bir dört duvarın içinde görüyorum. Dışarıda ise, yanında duran {{yas_3}} yaşındaki {{data, cinsiyet=erkek, kıza | cinsiyet=kadın, erkeğe | cinsiyet=lgbt, kişiye}} senden söz eden, {{yas_0}}-{{yas_1}} yaşlarında {{rastgeleburc}} burcu biri var. Konunun içeriğini {{ay_1}} ayı içinde öğrenecek, biraz garipseyip biraz da sevineceksin {{isim}}. Ancak ilerleyen günlerde bu konuşma dolayısıyla kulakların tekrar tekrar çınlayabilir. Hatta öyle bir çınlama ki, kulaklarında bir rahatsızlık olduğunu dahi düşünebilirsin. Endişe etmemen için şimdiden söylüyorum; bu durum tamamen enerji meselesi.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "saglik"
+      ]
     },
     {
       "id": 311,
@@ -3434,6 +4849,10 @@
           "degisken": "yasmin",
           "deger": "45"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "saglik"
       ]
     },
     {
@@ -3444,26 +4863,48 @@
           "degisken": "yasmin",
           "deger": "28"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "saglik"
       ]
     },
     {
       "id": 313,
       "metin": "3-4 yola ayrılan bir kavşak görüyorum. Sen bu yollardan bir tanesini hiç bilmeden seçmiş ve orada ilerliyorsun. Ne tesadüftür ki seçtiğin yol, diğerlerine nazaran ilerisi tek \"ağaçlıklı\" olanı. Sanıyorum kalbin çok temiz {{isim}} senin. Talih, yürekleri aydınlık olanların yanındadır. Şimdiye kadar hissetmediysen bile, gelecekte ne kadar şanslı olduğunu daha iyi anlayacaksın. {{yil_1}} yılının {{kelime, mart | nisan | mayıs | haziran | temmuz | ağustos | eylül | ekim | kasım}} ayında başına bir \"talih kuşu\" konacak!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 314,
       "metin": "Fincanındaki parçalara ayrılmış bazı telveler, havai fişekleri andırıyor. Bu görselleri, sıradan olmayan bir sevincin ya da büyüleyici bir olayın yaşanacak olması şeklinde tabir edebiliriz. Buna benzer bir durumu daha evvel de tecrübe etmişsin {{isim}}, fakat yıllar önce. Güzel bir sürpriz, o gününü unutulmaz hale getirmiş. Benzeri ve belki de daha üstün bir gün, sana yine çok yakın. İşin içinde ise senin gibi {{data, medeni durum=ilişkisi yok, bekar | medeni durum=evli, evli | medeni durum=platonik, bekar | medeni durum=flört halinde, bekar | medeni durum=ilişkisi var, bekar | medeni durum=yeni ayrılmış, bekar | medeni durum=nişanlı, bekar | medeni durum=ayrı yaşıyor, evli | medeni durum=boşanmış, bekar | medeni durum=dul, bekar}} ve {{burc}} burcu birisi olacak. Yakaladığım bir detay daha var. Silik bir \"6\" rakamı görüyorum. Bu duruma, haftanın 6. günü olan bir \"cumartesi\" şahit olabilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 315,
       "metin": "Kabuğunu kırarak dışarıya çıkmakta olan bir civciv var fincanının son kısımlarında. Sana \"yapamazsın\" denen ya da yapabileceğin senden beklenmeyen bir şeyi, çok yakında gerçekleştireceksin {{isim}}. Normalde yardım alman gereken ve kendi başına başaramayacağın bu girişim her ne ise, sonuçlandığında özellikle yakın arkadaşlarından büyük takdir toplayacak. Hele adında {{harf}} harfi olan ve aranızda gizli rekabet sezdiğim biri var ki, bu sonuç karşısındaki şaşkınlığını gizleyemeyecek.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 316,
-      "metin": "Fincanının son kısımlarında senin için endişe eden bazı insanlar görüyorum. Bu insanlar eğitimini çok önemsiyorlar ve özel hayatının okul başarına gölge düşürmesini istemiyorlar {{isim}}. Sen ise tepki gösterebileceklerini düşündüğün için olan biteni onlara çok fazla açmıyorsun. İlerleyen günlerde bir vesile ile bunu yapacaksın. Fermuar dişleri gibi birbirinize kenetleneceğinizi hissediyorum. Onlar sayesinde toplayacağın moral, sana çok iyi gelecek. Algıların açılacak ve doğru yolu sezip, doğru olan şeyleri yapacaksın.",
+      "metin": "\"Fincanının son kısımlarında senin için endişe",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -3473,6 +4914,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -3487,6 +4934,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -3497,6 +4950,12 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -3511,6 +4970,12 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -3525,6 +4990,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -3543,6 +5014,12 @@
           "degisken": "yasmax",
           "deger": "26"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -3557,6 +5034,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -3571,6 +5054,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -3585,6 +5074,12 @@
           "degisken": "meslek",
           "deger": "kamu sektörü"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -3599,6 +5094,10 @@
           "degisken": "meslek",
           "deger": "kamu sektörü"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -3613,6 +5112,10 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -3635,6 +5138,10 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
       ]
     },
     {
@@ -3649,11 +5156,15 @@
           "degisken": "meslek",
           "deger": "çalışmıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 329,
-      "metin": "Fincan tabanına konuçlanmış, keçi gibi boynuzları ve geniş kanatları olan küçük bir kuş var {{isim}}. Bu kuş, maddi imkanları, şöhreti ya da itibarı yerinde olan, ısrarcı ve kararlı bir {{data, cinsiyet=erkek, hanımefendiyi | cinsiyet=kadın, beyefendiyi | cinsiyet=lgbt, kişiyi}} sembolize ediyor. Farklı bir kısmet... 🤨 Aynı sektörde, farklı çalışmalar yürütüyor gibisiniz. Onun kim olduğunu seziyor fakat nedense bu işe bir sebepten soğuk bakıyorsun. Bu kişi, seni birisiyle sosyal medyada el ele, yan yana görse dahi bu ısrarında vazgeçmeyecek gibi gözüküyor. Onu ilerleyen aylarda bloke etmek zorunda kalabilirsin {{isim}}.",
+      "metin": "Fincan tabanına konuçlanmış, keçi gibi boynuzları ve geniş kanatları olan küçük bir kuş var {{isim}}. Bu kuş, maddi imkanları, şöhreti ya da itibarı yerinde olan, ısrarcı ve kararlı bir {{data, cinsiyet=erkek, hanımefendiyi | cinsiyet=kadın, beyefendiyi | cinsiyet=lgbt, kişiyi}} sembolize ediyor. Farklı bir kısmet... \\🤨 Aynı sektörde, farklı çalışmalar yürütüyor gibisiniz. Onun kim olduğunu seziyor fakat nedense bu işe bir sebepten soğuk bakıyorsun. Bu kişi, seni birisiyle sosyal medyada el ele, yan yana görse dahi bu ısrarında vazgeçmeyecek gibi gözüküyor. Onu ilerleyen aylarda bloke etmek zorunda kalabilirsin {{isim}}.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -3663,6 +5174,10 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3677,6 +5192,10 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3691,6 +5210,10 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3717,6 +5240,10 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3739,6 +5266,10 @@
           "degisken": "yasmax",
           "deger": "30"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3749,6 +5280,10 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3771,6 +5306,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3789,6 +5328,10 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3811,6 +5354,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3821,6 +5368,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3831,6 +5382,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3841,6 +5396,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3851,6 +5410,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3861,6 +5424,10 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3871,6 +5438,10 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3881,6 +5452,10 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3891,6 +5466,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3901,6 +5480,10 @@
           "degisken": "medeni durum",
           "deger": "flört halinde"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3911,6 +5494,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3929,6 +5516,10 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3943,6 +5534,10 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3957,6 +5552,10 @@
           "degisken": "yasmax",
           "deger": "24"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3967,6 +5566,10 @@
           "degisken": "medeni durum",
           "deger": "flört halinde"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3977,6 +5580,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3987,6 +5594,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -3997,6 +5608,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4007,6 +5622,10 @@
           "degisken": "medeni durum",
           "deger": "nişanlı"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4017,6 +5636,10 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4031,6 +5654,10 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4041,6 +5668,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4051,6 +5682,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4061,6 +5696,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4075,6 +5714,10 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4085,6 +5728,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4095,6 +5742,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4105,6 +5756,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4115,6 +5770,10 @@
           "degisken": "medeni durum",
           "deger": "nişanlı"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4125,6 +5784,10 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4135,6 +5798,10 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4145,6 +5812,10 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4155,6 +5826,10 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4177,6 +5852,10 @@
           "degisken": "yasmin",
           "deger": "30"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4187,6 +5866,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4197,6 +5880,10 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4223,6 +5910,10 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4245,6 +5936,10 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4255,6 +5950,10 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4265,11 +5964,15 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 377,
-      "metin": "Şimdi şurada öyle bir şey görüyorum ki {{isim}}, sana söylesem mi söylemesem mi, bilemedim. Her neyse; beni kararsız bırakanlar düşünsün! 🤨 {{kelime, \"Burcu, Berna ya da Begüm\" gibi | \"Başak, Beliz ya da Büşra\" gibi}} adı \"B\" harfiyle başlayan ya da {{kelime, \"Cansu, Cemre ya da Ceyda\" gibi | \"Ceren, Cansel, Canan\" gibi}} adı \"C\" harfiyle başlayan bir kadın görüyorum. Şu anda ne yaptığına tam anlam veremediğin ve \"bir ileri iki geri\" tavırlar sergileyen hayatındaki beyefendi, ya bu kişiyle mesaj yoluyla zaman zaman iletişim halinde, ya da bu kişiyi kafasından tam olarak söküp atamamış. Telvelerin, kendini olabildiğince geriye çekip ona \"arınma\" fırsatı tanıman gerektiğini, bu şekilde hayırlı bir netice alabileceğini söylüyor.",
+      "metin": "Şimdi şurada öyle bir şey görüyorum ki {{isim}}, sana söylesem mi söylemesem mi, bilemedim. Her neyse; beni kararsız bırakanlar düşünsün! \\🤨 {{kelime, \"Burcu, Berna ya da Begüm\" gibi | \"Başak, Beliz ya da Büşra\" gibi}} adı \"B\" harfiyle başlayan ya da {{kelime, \"Cansu, Cemre ya da Ceyda\" gibi | \"Ceren, Cansel, Canan\" gibi}} adı \"C\" harfiyle başlayan bir kadın görüyorum. Şu anda ne yaptığına tam anlam veremediğin ve \"bir ileri iki geri\" tavırlar sergileyen hayatındaki beyefendi, ya bu kişiyle mesaj yoluyla zaman zaman iletişim halinde, ya da bu kişiyi kafasından tam olarak söküp atamamış. Telvelerin, kendini olabildiğince geriye çekip ona \"arınma\" fırsatı tanıman gerektiğini, bu şekilde hayırlı bir netice alabileceğini söylüyor.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -4279,45 +5982,275 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
       "id": 378,
-      "metin": "Fincanın alt kısımlarında seni yatağa uzanmış tavana bakarken gördüm sevgili {{isim}}. Göğsünün sol tarafında hasat vakti gelmiş bir hüzün başağı filizlenmiş. Sevgiline dair aklında bulunan bir şüphe, tekrar gelmeyecek şekilde ruhundan defedilebilir. Bu durum güven bağlarınızı da sağlamlaştıracak gibi gözüküyor. Radarıma takılan bir de gaz maskesi sembolü var. Aile fertlerinden birinin rahatsız olduğun bir davranışına sabırla tepki verdiğini ancak bunun seni yıprattığını anlıyorum. Bu sorunu {{kelime, haftaya | ilerleyen günlerde | gelecek hafta sonu}} onlara açtığında, durum beklemediğin bir hızlı tatlıya bağlanabilir.",
+      "metin": "Fincanın alt yüzeylerindeki bir alanda, yoğun yağmur altında nereye gideceğini bilemeyen bir kedi görüyorum. Üzerinde adeta şimşekler çakıyor, kapkara bulutlar dolanıyor ve oldukça çaresiz. Kedinin tam yanında, el gibi gözüken dallarını kediye uzatmış onu oradan kurtarmaya çalışan kocaman bir ağaç var. Burada kedi seni, ağaç ise sana yardım etmek üzere olan rahmani gücü sembolize ediyor {{isim}}. İlerleyen günlerdeki çok sıkıştığın bir anda, en koyu derdine mucizevi bir dokunuş göreceksin.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "çalışmıyor"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 379,
+      "metin": "En alt kısımlara doğru gözüme takılan bir sepet var. Bu sepetin yanından geçen insanlar, sepete üçer beşer yemiş atıyorlar. Senin bir şeye mi ihtiyacın var {{isim}}? Bazı insanlar, bu ihtiyacını imece usulü karşılayarak istediğin şeyin hanene girmesini sağlayacak gibi gözüküyor. Birden fazla kişiden yakın zamanlarda parasal destek göreceksin.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 380,
+      "metin": "Son bölümlere doğru eşini görüyorum {{isim}}; üçlü bir kanepenin kenarına oturmuş, eliyle ağzını tutuyor. Sanırım öksürüyor... Bu görsellerin ciddi bir rahatsızlık işareti olduğunu düşünmüyorum fakat özellikle önümüzdeki hafta salı ve çarşamba günleri, influenza kapmamak için girip çıktığı yerlere dikkat etmesinde fayda var. Bu telveler sanırım bir uyarı niteliğinde...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 381,
+      "metin": "Fincan tabanında bir kadın görüyorum {{isim}}; evinin önüne çıkmış, megafonla çevresine sesini duyurmaya çalışıyor. Arkadaki evin pencerelerinden ise alevler yükseliyor, her yan duman... Bu kişi sanıyorum sevgilinin bir akrabası. {{sayi,6,15}} gün içinde o kişinin eşiyle yaşamakta olduğu bir sorunu ve bu sorundan dolayı da akrabalarından yardım istediğini duyabilirsin. Bu meseleyi konuşmak sevgilinle seni birbirinize daha da yakınlaştıracak {{isim}}; mesele konusunda aynı fikirde olacaksınız.",
       "kosullar": [
         {
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
-      "id": 379,
+      "id": 382,
+      "metin": "Fincan görsellerinin taban kısımlarına doğru gözlerimi kaydırdığımda, seni lekeli bir pantolonla görüyorum. Yanında ise yere çökmüş birisi, pantolonunun üzerindeki lekeleri bastıra bastıra silmeye çalışıyor. Geçmişinden bugününe taşıdığın tatsız bazı anılar olduğunu hissediyorum. Hayatına girecek olan kişi, silinmesi zor bu hatıralarını yok etmek ve seni çok mutlu etmek için elinden gelen her şeyi yapacak.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 383,
+      "metin": "Fincanının alt yüzeyine döndüğümde ise, kayanın içine sıkışmış bir yakut görüyorum. Yakut senin temiz kalbini temsil ediyor. Ancak kalbini aşka kapatmışsın. Geçmişte yakından şahit olduğun ve kötü sonla biten bir ilişkinin aşkla senin arana mesafe koyduğunu hissediyorum. Gördüğüm kadarıyla suistimalden korktuğun için aşka şans vermekten bile kaçınıyorsun. Kalbini saran kayayı kıracak birini beklediğini biliyorum. Merak etme sevgili {{isim}}; yalnızca kalbi gerçek aşka ulaşacak olanların falında yakut görünür. Sadece bekle. Çok yakın bir zamanda kalbini hak edecek biriyle el ele olacağına inanıyorum.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 384,
+      "metin": "Piyano başında bir adam görüyorum. Alelade bir elbise giymiş ve nezih bir mekanda insanlara müzik icra ederek, onların çiftler şeklinde dans etmesini sağlıyor. Bu kişi tanıdığı insanları sevk ve idare etme konusunda gerçekten çok iyi, ancak yönlendirmeleri her zaman sağlıklı çıkmıyor {{isim}}. Telvelerin, adında {{harf}} harfi olan bu kişi ile {{sayi,2,3}} hafta içinde karşı karşıya geleceğini ve seni iş konusunda boşa umutlandıracağını söylüyor. Ona itibar etmemelisin.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "iş arıyor"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 385,
+      "metin": "Fincan tabanında gördüğüm manzarada ise bir \"küçük tüp\" var. Üzerindeki tavada balıklar kızarıyor ve gelip geçen kim alsa, eksilmek yerine boşluğu doluyor. Bu küçük tüp, senin dar sayılabilecek bütçeni sembolize ediyor {{isim}}. Hakkında hissettiğim şu ki, sen çok yardımsever bir kadınsın. Falın, bu iyi niyetini koruduğun takdirde rızkının sürekli bollaşacağını haber veriyor. Yüce gönlün ve temiz kalbin vesilesiyle yaşamındaki nimetler artacak eksilmeyecek, taşacak dökülmeyecek!",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadın"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 386,
+      "metin": "Fincanın alt kısımlarında babacan bir adam görüyorum {{isim}}; esmer, hafif kilolu. Bir çocuğun başını okşuyor... Bu kişinin birden fazla çocuğu olmasına rağmen yalnızca tek bir torunu var. Başını okşadığı kişi torunu. Hatta telvelerin, torununun adının içinde {{harf}} ya da {{harf}} harfi olduğunu belirtiyor. Bu kişi bir özel sektör çalışanı ancak devlet dairelerinde tanıdıkları var. {{ay_3}} ayında senin kendi işinle, maaşınla ya da izin durumlarınla ilgili bir sıkıntını bu kişi çözecek.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 387,
+      "metin": "Fincan tabanına yakın kısımlarda, bir tanesi gökyüzünü diğeri yeryüzünü sembolize eden, üst üste duran ve zıt yönleri gösteren iki üçgen görüyorum. Bu yansımalar yaşamının pek çok alanında ne kadar arada kaldığını, yön bulmakta ne kadar zorlandığını gösteriyor {{isim}}. Düşüncem o'dur ki {{ay_3}} ayının ilk günlerinden itibaren başta özel hayatın olmak üzere yaşamını bir düzene oturtmaya başlayacağını işaret ediyor.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "karmaşık"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 388,
+      "metin": "Fincanının son hattına baktığımda ilk gözüme çarpan, beyaz bir sayfanın üzerine dökülmüş mürekkep oldu. Normalde temiz başlangıçları sembolize eden sayfa üzerindeki leke ile, bu sayfa kırılmış umutları temsil eden bir işarete dönmüş. Telvelerin burada bana yeni giriştiğin bir işte kötü bir başlangıç yaptığını söylüyor. Öte yandan sayfanın mürekkeple kaplanan kısmı sadece köşesi {{isim}}. Bu işaretten yola çıkarak kötü başlangıcının yalnızca bir nazar boncuğu olduğunu söyleyebilirim. Yapılan ufak hatalar, işinin gelecekte düşmanlarının kem gözlerinden uzak olmasını sağlayacak. Yaşanan pürüzlerin, kurmakta olduğun geleceğin temellerini sağlamlaştıracağını hissediyorum.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kendi işini yapıyor"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "kariyer"
+      ]
+    },
+    {
+      "id": 389,
+      "metin": "Fincanının tabanına indiğimde ise dikkatimi çeken, sayfaları etrafa dağılmış bir takvim oldu. Takvim geleceğe dair plan ve isteklerimizi simgeler. Senin aklın ise sanırım biraz karışmış. Planlarının dağılıp birbirine girdiğini okuyorum telvelerinde. Moralini yüksek tut {{isim}} çünkü bunun gelip geçici bir süreç olduğunu söylüyor hislerim. Detaylara indiğimde takvimin üzerinde bir tarihin işaretli olduğunu gördüm. {{ay_1}} ayının 6. gününü gösteren bu tarih, planlarının tekrar rayına oturmaya başlayacağı günü işaret ediyor. Biraz bulanık olmakla birlikte, sürecin belirttiğim tarihte bir sınıf arkadaşınla edeceğin sohbet üzerine gelişmeye başlayacağını hissediyorum.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 390,
+      "metin": "Fincan tabanında, bir noktadan dışa doğru uzanan ve aralarında neredeyse 180 derece bulunan üç çizgi görüyorum. Yengeç takımyıldızı'na benzeyen bu figür, bir \"karşı duruşu\" sembolize ediyor. {{ay_1}} ayının \"yeni ay\" haftasında hem işinle ilgili, hem özel hayatınla ilgili hem de sağlıkla ilgili üç ayrı kulvarda direnç gösterecek ve üç başarı elde edeceksin {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 391,
+      "metin": "\"Fincanın alt kısımlarında seni yatağa uzanmış",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 392,
       "metin": "Fincanın son kısımlarına vardığımda, seni gözlerin bağlı şekilde sevgilinin elinden tutarken fark ettim {{isim}}. İçinde bulunduğunuz yer ise oldukça karmaşık ve ürkütücü bir labirent. Senin yüzünde sinirli bir ifade var. Zannedersem sevgilin bir konuda sana yol göstermeye çalıştığı halde onu yanlış değerlendireceksin. Farklı tavır takınman istenen bazı konulara kırıcı yaklaşabilirsin. Kendisini ifade etmekte çok iyi olmasa da, onun seni korumaya çalıştığını bilmelisin. Nihayetinde ufak bir çatışma yaşasanız da, o labirentin sonuna kadar birlikte gideceğinizi hissediyorum.",
       "kosullar": [
         {
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
-      "id": 380,
+      "id": 393,
       "metin": "Telvelerin fincan zeminine değen bölümlerinde, genellikle akvaryumlarda görebileceğimiz yeşil bir yosun topu dikkatimi çekti {{isim}}. \"Marimo\" adı verilen bu tip yosunlar kişiye aşk ve şans getirir. Yine oralara yakın kısımlarda, altında zil olan bir de ayna bulunuyor. İlerleyen günlerde bir konuda kendinle yüzleşebilir, büyük bir eksiğini fark edebilir ve bu açığını kapatarak ciddi bir maddi kayıptan kurtulabilirsin. Aramayı unuttuğun biri ya da başvuru yapmayı unuttuğun bir yer mi var acaba?...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
-      "id": 381,
+      "id": 394,
       "metin": "Fincanının derinliklerinde seni ellerin ve gözlerin bağlı şekilde bir sandalyede buldum. Bomboş bir odanın içerisindesin. İşin ilginç yanı, bu odaya daha önce birinin girdiğini gösteren hiçbir imgenin olmayışı. Kariyerinle ilgili yaşadığın bazı tıkanmalar, kısa bir süre içerisinde çözülebilir {{isim}}. Kendini bağlamana neden olan birtakım yargıların yıkıldığında ve daha fazlasını yapabileceğine inandığında, o boş odayı terk edeceksin. Düşüncesel olarak özgürleşmenin, yoğun gayretlerinle birleşerek bolca para kazanacağın bir pozisyonu sana getireceğini hissediyorum.",
       "kosullar": [
         {
           "degisken": "meslek",
           "deger": "iş arıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
-      "id": 382,
+      "id": 395,
       "metin": "Fincanın daha aşağı kısımlarında seni küçük bir teknede, ay ışığı altında sakince kürek çekerken gördüm. Yanında gördüğüm kişi ise, senin yaşıtlarında güzel bir kız. Dolunaylı bir akşamda, denize yakın bir muhitte tanışacağın bu kişi, senin ömürlük dostun ve sırdaşın olabilir {{isim}}. O da senin gibi birtakım şeyleri içinde yaşıyor. Hayatında ilk defa tam olarak anlaşıldığını hissettiğin anlar yaşayacaksın hanımefendiyle. Hem baba hem de anne adında \"A\" harfi bulunan bu kişinin, senin {{sayi,2,4}} yıl içinde vereceğin hayati bir kararında da olumlu etkileri olacak.",
       "kosullar": [
         {
@@ -4328,141 +6261,23 @@
           "degisken": "cinsiyet",
           "deger": "lgbt"
         }
-      ]
-    },
-    {
-      "id": 383,
-      "metin": "Alt kısımda kalan telvelerde ise bir köpek balığı yüzgeci gördüm. Bu yüzgeç, düşmanlarını sevindirecek birtakım tatsız olaylar yaşayabileceğine delalet. Ayrıca bu imge, fal sahibinin pratik bir zekaya sahip olduğunu da gösterir. Birilerinin sana karşı beslediği art niyet kursaklarında kalacak Sevgili {{isim}}. 3 hafta içerisinde karşılaşacağın onlardan kaynaklı bir problemi kolayca çözmeyi başaracaksın. Senin \"zayıflık\" olarak gördükleri iyi niyetli bazı kararlarından yararlanmak isteyen gizli düşmanların, hiç beklemedikleri bir sonuçla karşılaşacak. Böylece bu kişileri tespit edip hayatından çıkarma şansı elde edeceksin.",
-      "kosullar": []
-    },
-    {
-      "id": 384,
-      "metin": "Fincanın alt yüzeylerindeki bir alanda, yoğun yağmur altında nereye gideceğini bilemeyen bir kedi görüyorum. Üzerinde adeta şimşekler çakıyor, kapkara bulutlar dolanıyor ve oldukça çaresiz. Kedinin tam yanında, el gibi gözüken dallarını kediye uzatmış onu oradan kurtarmaya çalışan kocaman bir ağaç var. Burada kedi seni, ağaç ise sana yardım etmek üzere olan rahmani gücü sembolize ediyor {{isim}}. İlerleyen günlerdeki çok sıkıştığın bir anda, en koyu derdine mucizevi bir dokunuş göreceksin.",
-      "kosullar": [
-        {
-          "degisken": "meslek",
-          "deger": "çalışmıyor"
-        }
-      ]
-    },
-    {
-      "id": 385,
-      "metin": "En alt kısımlara doğru gözüme takılan bir sepet var. Bu sepetin yanından geçen insanlar, sepete üçer beşer yemiş atıyorlar. Senin bir şeye mi ihtiyacın var {{isim}}? Bazı insanlar, bu ihtiyacını imece usulü karşılayarak istediğin şeyin hanene girmesini sağlayacak gibi gözüküyor. Birden fazla kişiden yakın zamanlarda parasal destek göreceksin.",
-      "kosullar": [
-        {
-          "degisken": "meslek",
-          "deger": "ev hanımı"
-        }
-      ]
-    },
-    {
-      "id": 386,
-      "metin": "Son bölümlere doğru eşini görüyorum {{isim}}; üçlü bir kanepenin kenarına oturmuş, eliyle ağzını tutuyor. Sanırım öksürüyor... Bu görsellerin ciddi bir rahatsızlık işareti olduğunu düşünmüyorum fakat özellikle önümüzdeki hafta salı ve çarşamba günleri, influenza kapmamak için girip çıktığı yerlere dikkat etmesinde fayda var. Bu telveler sanırım bir uyarı niteliğinde...",
-      "kosullar": [
-        {
-          "degisken": "medeni durum",
-          "deger": "evli"
-        }
-      ]
-    },
-    {
-      "id": 387,
-      "metin": "Fincan tabanında bir kadın görüyorum {{isim}}; evinin önüne çıkmış, megafonla çevresine sesini duyurmaya çalışıyor. Arkadaki evin pencerelerinden ise alevler yükseliyor, her yan duman... Bu kişi sanıyorum sevgilinin bir akrabası. {{sayi,6,15}} gün içinde o kişinin eşiyle yaşamakta olduğu bir sorunu ve bu sorundan dolayı da akrabalarından yardım istediğini duyabilirsin. Bu meseleyi konuşmak sevgilinle seni birbirinize daha da yakınlaştıracak {{isim}}; mesele konusunda aynı fikirde olacaksınız.",
-      "kosullar": [
-        {
-          "degisken": "medeni durum",
-          "deger": "ilişkisi var"
-        }
-      ]
-    },
-    {
-      "id": 388,
-      "metin": "Fincan görsellerinin taban kısımlarına doğru gözlerimi kaydırdığımda, seni lekeli bir pantolonla görüyorum. Yanında ise yere çökmüş birisi, pantolonunun üzerindeki lekeleri bastıra bastıra silmeye çalışıyor. Geçmişinden bugününe taşıdığın tatsız bazı anılar olduğunu hissediyorum. Hayatına girecek olan kişi, silinmesi zor bu hatıralarını yok etmek ve seni çok mutlu etmek için elinden gelen her şeyi yapacak.",
-      "kosullar": [
-        {
-          "degisken": "medeni durum",
-          "deger": "ilişkisi yok"
-        }
-      ]
-    },
-    {
-      "id": 389,
-      "metin": "Fincanının alt yüzeyine döndüğümde ise, kayanın içine sıkışmış bir yakut görüyorum. Yakut senin temiz kalbini temsil ediyor. Ancak kalbini aşka kapatmışsın. Geçmişte yakından şahit olduğun ve kötü sonla biten bir ilişkinin aşkla senin arana mesafe koyduğunu hissediyorum. Gördüğüm kadarıyla suistimalden korktuğun için aşka şans vermekten bile kaçınıyorsun. Kalbini saran kayayı kıracak birini beklediğini biliyorum. Merak etme sevgili {{isim}}; yalnızca kalbi gerçek aşka ulaşacak olanların falında yakut görünür. Sadece bekle. Çok yakın bir zamanda kalbini hak edecek biriyle el ele olacağına inanıyorum.",
-      "kosullar": [
-        {
-          "degisken": "medeni durum",
-          "deger": "ilişkisi yok"
-        }
-      ]
-    },
-    {
-      "id": 390,
-      "metin": "Piyano başında bir adam görüyorum. Alelade bir elbise giymiş ve nezih bir mekanda insanlara müzik icra ederek, onların çiftler şeklinde dans etmesini sağlıyor. Bu kişi tanıdığı insanları sevk ve idare etme konusunda gerçekten çok iyi, ancak yönlendirmeleri her zaman sağlıklı çıkmıyor {{isim}}. Telvelerin, adında {{harf}} harfi olan bu kişi ile {{sayi,2,3}} hafta içinde karşı karşıya geleceğini ve seni iş konusunda boşa umutlandıracağını söylüyor. Ona itibar etmemelisin.",
-      "kosullar": [
-        {
-          "degisken": "meslek",
-          "deger": "iş arıyor"
-        }
-      ]
-    },
-    {
-      "id": 391,
-      "metin": "Fincan tabanında gördüğüm manzarada ise bir \"küçük tüp\" var. Üzerindeki tavada balıklar kızarıyor ve gelip geçen kim alsa, eksilmek yerine boşluğu doluyor. Bu küçük tüp, senin dar sayılabilecek bütçeni sembolize ediyor {{isim}}. Hakkında hissettiğim şu ki, sen çok yardımsever bir kadınsın. Falın, bu iyi niyetini koruduğun takdirde rızkının sürekli bollaşacağını haber veriyor. Yüce gönlün ve temiz kalbin vesilesiyle yaşamındaki nimetler artacak eksilmeyecek, taşacak dökülmeyecek!",
-      "kosullar": [
-        {
-          "degisken": "cinsiyet",
-          "deger": "kadın"
-        }
-      ]
-    },
-    {
-      "id": 392,
-      "metin": "Fincanın alt kısımlarında babacan bir adam görüyorum {{isim}}; esmer, hafif kilolu. Bir çocuğun başını okşuyor... Bu kişinin birden fazla çocuğu olmasına rağmen yalnızca tek bir torunu var. Başını okşadığı kişi torunu. Hatta telvelerin, torununun adının içinde {{harf}} ya da {{harf}} harfi olduğunu belirtiyor. Bu kişi bir özel sektör çalışanı ancak devlet dairelerinde tanıdıkları var. {{ay_3}} ayında senin kendi işinle, maaşınla ya da izin durumlarınla ilgili bir sıkıntını bu kişi çözecek.",
-      "kosullar": [
-        {
-          "degisken": "meslek",
-          "deger": "kamu sektörü"
-        }
-      ]
-    },
-    {
-      "id": 393,
-      "metin": "Fincan tabanına yakın kısımlarda, bir tanesi gökyüzünü diğeri yeryüzünü sembolize eden, üst üste duran ve zıt yönleri gösteren iki üçgen görüyorum. Bu yansımalar yaşamının pek çok alanında ne kadar arada kaldığını, yön bulmakta ne kadar zorlandığını gösteriyor {{isim}}. Düşüncem o'dur ki {{ay_3}} ayının ilk günlerinden itibaren başta özel hayatın olmak üzere yaşamını bir düzene oturtmaya başlayacağını işaret ediyor.",
-      "kosullar": [
-        {
-          "degisken": "medeni durum",
-          "deger": "karmaşık"
-        }
-      ]
-    },
-    {
-      "id": 394,
-      "metin": "Fincanının son hattına baktığımda ilk gözüme çarpan, beyaz bir sayfanın üzerine dökülmüş mürekkep oldu. Normalde temiz başlangıçları sembolize eden sayfa üzerindeki leke ile, bu sayfa kırılmış umutları temsil eden bir işarete dönmüş. Telvelerin burada bana yeni giriştiğin bir işte kötü bir başlangıç yaptığını söylüyor. Öte yandan sayfanın mürekkeple kaplanan kısmı sadece köşesi {{isim}}. Bu işaretten yola çıkarak kötü başlangıcının yalnızca bir nazar boncuğu olduğunu söyleyebilirim. Yapılan ufak hatalar, işinin gelecekte düşmanlarının kem gözlerinden uzak olmasını sağlayacak. Yaşanan pürüzlerin, kurmakta olduğun geleceğin temellerini sağlamlaştıracağını hissediyorum.",
-      "kosullar": [
-        {
-          "degisken": "meslek",
-          "deger": "kendi işini yapıyor"
-        }
-      ]
-    },
-    {
-      "id": 395,
-      "metin": "Fincanının tabanına indiğimde ise dikkatimi çeken, sayfaları etrafa dağılmış bir takvim oldu. Takvim geleceğe dair plan ve isteklerimizi simgeler. Senin aklın ise sanırım biraz karışmış. Planlarının dağılıp birbirine girdiğini okuyorum telvelerinde. Moralini yüksek tut {{isim}} çünkü bunun gelip geçici bir süreç olduğunu söylüyor hislerim. Detaylara indiğimde takvimin üzerinde bir tarihin işaretli olduğunu gördüm. {{ay_1}} ayının 6. gününü gösteren bu tarih, planlarının tekrar rayına oturmaya başlayacağı günü işaret ediyor. Biraz bulanık olmakla birlikte, sürecin belirttiğim tarihte bir sınıf arkadaşınla edeceğin sohbet üzerine gelişmeye başlayacağını hissediyorum.",
-      "kosullar": [
-        {
-          "degisken": "meslek",
-          "deger": "öğrenci"
-        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 396,
-      "metin": "Fincan tabanında, bir noktadan dışa doğru uzanan ve aralarında neredeyse 180 derece bulunan üç çizgi görüyorum. Yengeç takımyıldızı'na benzeyen bu figür, bir \"karşı duruşu\" sembolize ediyor. {{ay_1}} ayının \"yeni ay\" haftasında hem işinle ilgili, hem özel hayatınla ilgili hem de sağlıkla ilgili üç ayrı kulvarda direnç gösterecek ve üç başarı elde edeceksin {{isim}}.",
-      "kosullar": [
-        {
-          "degisken": "meslek",
-          "deger": "özel sektör"
-        }
+      "metin": "Alt kısımda kalan telvelerde ise bir köpek balığı yüzgeci gördüm. Bu yüzgeç, düşmanlarını sevindirecek birtakım tatsız olaylar yaşayabileceğine delalet. Ayrıca bu imge, fal sahibinin pratik bir zekaya sahip olduğunu da gösterir. Birilerinin sana karşı beslediği art niyet kursaklarında kalacak Sevgili {{isim}}. 3 hafta içerisinde karşılaşacağın onlardan kaynaklı bir problemi kolayca çözmeyi başaracaksın. Senin \"zayıflık\" olarak gördükleri iyi niyetli bazı kararlarından yararlanmak isteyen gizli düşmanların, hiç beklemedikleri bir sonuçla karşılaşacak. Böylece bu kişileri tespit edip hayatından çıkarma şansı elde edeceksin.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -4473,6 +6288,10 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
       ]
     },
     {
@@ -4483,6 +6302,12 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     }
   ]

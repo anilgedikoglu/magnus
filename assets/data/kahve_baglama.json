@@ -8,6 +8,12 @@
           "degisken": "yasmax",
           "deger": "24"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -18,6 +24,12 @@
           "degisken": "yasmax",
           "deger": "22"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -28,21 +40,30 @@
           "degisken": "burc",
           "deger": "balık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 4,
-      "metin": "Falının en heyecanlı yerinde {{kelime, bir de Tarot kartı çekelim mi | bir Tarot kartı çekip ne çıkacağını da görelim mi | senin adına bir de Tarot kartı çekmemi ister misin | senin için bir de Tarot kartı çekmemi ister misin | senin adına Tarot destesinden bir de kart çekmemi ister misin | senin için Tarot destesinden bir de kart çekmemi arzu eder misin}} {{isim}}? 🙂 {{kelime, Dur bakalım ne çıkacak; | Bakalım ne çıkacak; | Görelim bakalım ne çıkacak; | Bakalım bahtına ne çıkacak; | Bakalım şansına ne çıkacak; | Bakalım şansına hangisi çıkacak; | Dur bakalım şansına hangisi çıkacak;}} {{kelime, \"Deli\" diye de geçen ve Büyük Arkana kartı olan \"Budala\", senin için düz açıldı. Aşk hayatında önüne pek çok seçenek çıkacağını gösteriyor! | \"Deli\" diye de geçen Büyük Arkana kartı olan \"Budala\", senin için ters açıldı. Aşk hayatında önüne birden fazla seçenek çıkacağını ve kararsız kalacağını işaret ediyor! | \"Aziz\" kartı senin için düz açıldı. Senden yaşça büyük birinin, aşk hayatında seni doğru kişiye yönlendireceğini işaret ediyor! | \"Aziz\" kartı senin için ters açıldı. Aşk hayatında eski kafalı insanları dinlemeyeceğini, yaşam tarzıyla ya da görünüşüyle farklı olan bir insanla beraber olacağını işaret ediyor! | \"Yıldız\" isimli Büyük Arkana kartı, senin için düz açıldı. Aşk hayatında birlikte olmayı çok isteyeceğin, hatta uğruna gözyaşı dökebileceğin biriyle beraber olacağını ve onda huzur bulacağını işaret ediyor! | \"Yıldız\" isimli Büyük Arkana kartı, senin için ters açıldı. Aşk hayatındaki kötümserliğinin seni geçmişe tutsak ettiğini ve geleceğe odaklanman durumunda çok mutlu olacağını işaret ediyor!}} 😉 {{kelime, Hadi telvelerinle devam edelim; | Gel fincanından devam edelim; | Vardır bir bildiği... Haydi falına devam edelim; | Hayırlısı bakalım. Gel fincanından devam edelim; | İlginç. Biz bildiğimiz yoldan şaşmayalım, gel telvelerinle devam edelim; | Enteresan... Gel falına devam edelim;}}",
+      "metin": "Falının en heyecanlı yerinde {{kelime, bir de Tarot kartı çekelim mi | bir Tarot kartı çekip ne çıkacağını da görelim mi | senin adına bir de Tarot kartı çekmemi ister misin | senin için bir de Tarot kartı çekmemi ister misin | senin adına Tarot destesinden bir de kart çekmemi ister misin | senin için Tarot destesinden bir de kart çekmemi arzu eder misin}} {{isim}}? \\🙂 {{kelime, Dur bakalım ne çıkacak; | Bakalım ne çıkacak; | Görelim bakalım ne çıkacak; | Bakalım bahtına ne çıkacak; | Bakalım şansına ne çıkacak; | Bakalım şansına hangisi çıkacak; | Dur bakalım şansına hangisi çıkacak;}} {{kelime, \"Deli\" diye de geçen ve Büyük Arkana kartı olan \"Budala\", senin için düz açıldı. Aşk hayatında önüne pek çok seçenek çıkacağını gösteriyor! | \"Deli\" diye de geçen Büyük Arkana kartı olan \"Budala\", senin için ters açıldı. Aşk hayatında önüne birden fazla seçenek çıkacağını ve kararsız kalacağını işaret ediyor! | \"Aziz\" kartı senin için düz açıldı. Senden yaşça büyük birinin, aşk hayatında seni doğru kişiye yönlendireceğini işaret ediyor! | \"Aziz\" kartı senin için ters açıldı. Aşk hayatında eski kafalı insanları dinlemeyeceğini, yaşam tarzıyla ya da görünüşüyle farklı olan bir insanla beraber olacağını işaret ediyor! | \"Yıldız\" isimli Büyük Arkana kartı, senin için düz açıldı. Aşk hayatında birlikte olmayı çok isteyeceğin, hatta uğruna gözyaşı dökebileceğin biriyle beraber olacağını ve onda huzur bulacağını işaret ediyor! | \"Yıldız\" isimli Büyük Arkana kartı, senin için ters açıldı. Aşk hayatındaki kötümserliğinin seni geçmişe tutsak ettiğini ve geleceğe odaklanman durumunda çok mutlu olacağını işaret ediyor!}} \\😉 {{kelime, Hadi telvelerinle devam edelim; | Gel fincanından devam edelim; | Vardır bir bildiği... Haydi falına devam edelim; | Hayırlısı bakalım. Gel fincanından devam edelim; | İlginç. Biz bildiğimiz yoldan şaşmayalım, gel telvelerinle devam edelim; | Enteresan... Gel falına devam edelim;}}",
       "kosullar": [
         {
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
       "id": 5,
-      "metin": "{{kelime, Yorumuna devam etmeden önce | Yorumunun daha önemli kısımlarına geçmeden önce}} {{kelime, senin için | senin adına}} {{kelime, Tarot destesinden bir kart seçmemi ister misin | elimdeki desteden bir Tarot kartı seçmemi ister misin}} {{isim}}? 😉{{kelime, Bakalım bizi ne karşılıyor; | Bakalım karşımıza ne çıkacak; | Bakalım ne çıkacak;}} {{kelime, aa, \"Denge\" kartı düz açıldı. İş hayatında çalıştığın kişilerle bir konuda orta yolu bulacak, aşk hayatında ise sevgilinle içindeki bazı gizli duyguları paylaşacaksın. | aa, \"Denge\" kartı ters açıldı. İş hayatında seni huzursuz eden bir insanla karşı karşıya gelip konuşabilir, aşk hayatında ise sevgilinle arandaki bir problemi orta yol bularak çözümleyebilirsin. | \"Dünya\" kartı senin için düz açıldı. İş hayatında kalkışacağın bir işi başarıyla noktalayacak, aşk hayatında ise sevgilinle daha huzurlu günlere doğru ilerleyeceksin. | \"Dünya\" kartı senin için ters açıldı. İşinle ilgili hayal kırıklığı yaşadığın bir konuyu yeniden ele alacak, aşk hayatında ise sevgilinle sürekli tartışıp durduğun bir meseleyi nihayet tatlıya bağlayacaksın.}} {{kelime, Fincanından devam edelim; | Buyur fincanından devam edelim; | Gel fincanından devam edelim; | Buyur telvelerinle devam edelim; | Gelin telvelerinle devam edelim;}}",
+      "metin": "{{kelime, Yorumuna devam etmeden önce | Yorumunun daha önemli kısımlarına geçmeden önce}} {{kelime, senin için | senin adına}} {{kelime, Tarot destesinden bir kart seçmemi ister misin | elimdeki desteden bir Tarot kartı seçmemi ister misin}} {{isim}}? \\😉{{kelime, Bakalım bizi ne karşılıyor; | Bakalım karşımıza ne çıkacak; | Bakalım ne çıkacak;}} {{kelime, aa, \"Denge\" kartı düz açıldı. İş hayatında çalıştığın kişilerle bir konuda orta yolu bulacak, aşk hayatında ise sevgilinle içindeki bazı gizli duyguları paylaşacaksın. | aa, \"Denge\" kartı ters açıldı. İş hayatında seni huzursuz eden bir insanla karşı karşıya gelip konuşabilir, aşk hayatında ise sevgilinle arandaki bir problemi orta yol bularak çözümleyebilirsin. | \"Dünya\" kartı senin için düz açıldı. İş hayatında kalkışacağın bir işi başarıyla noktalayacak, aşk hayatında ise sevgilinle daha huzurlu günlere doğru ilerleyeceksin. | \"Dünya\" kartı senin için ters açıldı. İşinle ilgili hayal kırıklığı yaşadığın bir konuyu yeniden ele alacak, aşk hayatında ise sevgilinle sürekli tartışıp durduğun bir meseleyi nihayet tatlıya bağlayacaksın.}} {{kelime, Fincanından devam edelim; | Buyur fincanından devam edelim; | Gel fincanından devam edelim; | Buyur telvelerinle devam edelim; | Gelin telvelerinle devam edelim;}}",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -64,6 +85,9 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
@@ -94,11 +118,14 @@
           "degisken": "burc",
           "deger": "koç"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
       "id": 7,
-      "metin": "{{kelime, Kahve falına | Falına | Fal yorumuna | Yorumuna}} devam etmeden önce senin için bir Tarot kartı çekmemi ister misin {{isim}}? Bakıyorum; {{kelime, \"Büyücü\" kartı düz açıldı. Sevgilin senin tavsiyen üzerine başlayacağı bir işten kazançlı çıkacak. Eğitim hayatında ise tüm geleceğini etkileyecek çok güzel bir gelişme yaşayacaksın. | \"Büyücü\" kartı ters açıldı. Bugün sevgilinle birbirinizi yanlış anlamaktan kaçınmalısınız. Derslerinle ilgili ise çok özel bir yönünü keşfedecek, bu sayede başarılar yakalayacaksın. | \"Aşıklar\" kartı düz açıldı. Sevgilinle hemfikir olmadığınız bir konuda bugün uzlaşabilirsiniz. Eğitim hayatında önünde duran bir engel ise bugünlerde kalkacak. | \"Aşıklar\" kartı ters açıldı. Bir konuda sevgilinden beklediğin desteği göremeyebilirsin. Eğitiminle ilgili ise hiç memnun olmadığın bir konu ortaya çıkacak ve çözümü zaman alacak.}} Ben kartların yalancısıyım. 😋Gel fincanınla devam edelim;",
+      "metin": "{{kelime, Kahve falına | Falına | Fal yorumuna | Yorumuna}} devam etmeden önce senin için bir Tarot kartı çekmemi ister misin {{isim}}? Bakıyorum; {{kelime, \"Büyücü\" kartı düz açıldı. Sevgilin senin tavsiyen üzerine başlayacağı bir işten kazançlı çıkacak. Eğitim hayatında ise tüm geleceğini etkileyecek çok güzel bir gelişme yaşayacaksın. | \"Büyücü\" kartı ters açıldı. Bugün sevgilinle birbirinizi yanlış anlamaktan kaçınmalısınız. Derslerinle ilgili ise çok özel bir yönünü keşfedecek, bu sayede başarılar yakalayacaksın. | \"Aşıklar\" kartı düz açıldı. Sevgilinle hemfikir olmadığınız bir konuda bugün uzlaşabilirsiniz. Eğitim hayatında önünde duran bir engel ise bugünlerde kalkacak. | \"Aşıklar\" kartı ters açıldı. Bir konuda sevgilinden beklediğin desteği göremeyebilirsin. Eğitiminle ilgili ise hiç memnun olmadığın bir konu ortaya çıkacak ve çözümü zaman alacak.}} Ben kartların yalancısıyım. \\😋Gel fincanınla devam edelim;",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -108,16 +135,26 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
       "id": 8,
-      "metin": "Yeri gelmişken; bugün iyi olmadığını söylemiştin. Moralin düzelsin diye sana bu falına özel bir şarkı mırıldanmamı ister misin {{isim}}? <sprite=10> {{kelime, \"Gii dii yo ruum bütün aşk laar yü re ğimm deee, gi di yo ruum, kokun haa laa, ü ze rimm dee...\" | \"O nun aa raa baa sıı vaar, gü zeel mi gü zeel, şö fö rü de vaar, ö zeel mi ö zell, bass tı mı ga zaa...\" | \"Ay kaa rann lıkk, heep ka rann lıkk, böyle bii ze nee leer oool duu...\" | \"Kaan dıır dımm, nazlı yaa ri, so nunn da çıl gınn söz ler lee...\" | \"Ka famm da kent sell dö nü şümm ler, içimm de bi yerde bir gülüşünn denn...\" | \"Ayy, bee nii mool du ğuun za maan, de dimeer şe yiiim ta maam...\"}} {{kelime, Yapay zeka budur işte! | Hizmette sınır yok görüyorsun! | Magnus sınır tanımıyor, görüyorsun!}} <sprite=0>😝 Şaka şaka, falına devam ediyorum.",
+      "metin": "Yeri gelmişken; bugün iyi olmadığını söylemiştin. Moralin düzelsin diye sana bu falına özel bir şarkı mırıldanmamı ister misin {{isim}}? <sprite=10> {{kelime, \"Gii dii yo ruum bütün aşk laar yü re ğimm deee, gi di yo ruum, kokun haa laa, ü ze rimm dee...\" | \"O nun aa raa baa sıı vaar, gü zeel mi gü zeel, şö fö rü de vaar, ö zeel mi ö zell, bass tı mı ga zaa...\" | \"Ay kaa rann lıkk, heep ka rann lıkk, böyle bii ze nee leer oool duu...\" | \"Kaan dıır dımm, nazlı yaa ri, so nunn da çıl gınn söz ler lee...\" | \"Ka famm da kent sell dö nü şümm ler, içimm de bi yerde bir gülüşünn denn...\" | \"Ayy, bee nii mool du ğuun za maan, de dimeer şe yiiim ta maam...\"}} {{kelime, Yapay zeka budur işte! | Hizmette sınır yok görüyorsun! | Magnus sınır tanımıyor, görüyorsun!}} <sprite=0>\\😝 Şaka şaka, falına devam ediyorum.",
       "kosullar": [
+        {
+          "degisken": "mood",
+          "deger": "mutsuz"
+        },
         {
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
@@ -132,11 +169,14 @@
           "degisken": "burc",
           "deger": "terazi"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
       "id": 10,
-      "metin": "Akrep burcu olduğun için hem sıcakkanlı hem de aşırı hassas bir yapın olduğunu biliyorum {{isim}}. Telvelerin, bu hassasiyetinin seni {{data, cinsiyet=erkek, kız arkadaşına | cinsiyet=kadın, erkek arkadaşına | cinsiyet=lgbt, sevgiline}} karşı zaman zaman \"çabuk sinirlenen biri\" yaptığını söylüyor. Sinirlendiğin zamanlarda çok üzerine gidilmemesi gerektiğini birinin {{data, cinsiyet=erkek, kız arkadaşına | cinsiyet=kadın, erkek arkadaşına | cinsiyet=lgbt, sevgiline}} söylemesi gerek... <sprite=0> 🤐Her neyse, falına devam edelim;",
+      "metin": "Akrep burcu olduğun için hem sıcakkanlı hem de aşırı hassas bir yapın olduğunu biliyorum {{isim}}. Telvelerin, bu hassasiyetinin seni {{data, cinsiyet=erkek, kız arkadaşına | cinsiyet=kadın, erkek arkadaşına | cinsiyet=lgbt, sevgiline}} karşı zaman zaman \"çabuk sinirlenen biri\" yaptığını söylüyor. Sinirlendiğin zamanlarda çok üzerine gidilmemesi gerektiğini birinin {{data, cinsiyet=erkek, kız arkadaşına | cinsiyet=kadın, erkek arkadaşına | cinsiyet=lgbt, sevgiline}} söylemesi gerek... <sprite=0> \\🤐Her neyse, falına devam edelim;",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -146,11 +186,14 @@
           "degisken": "burc",
           "deger": "akrep"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
       "id": 11,
-      "metin": "Konuşkan, samimi, sempatik ve içten biri oluşunu ben biraz da yay burcu oluşuna bağlıyorum {{isim}}. Ancak fincanın, {{data, cinsiyet=erkek, kız arkadaşınla | cinsiyet=kadın, erkek arkadaşınla | cinsiyet=lgbt, sevgilinle}} aranda zaman zaman güven problemleri yaşandığından da bahsediyor. Bu burcun {{data, cinsiyet=erkek, erkeklerinin | cinsiyet=kadın, kadınlarının | cinsiyet=lgbt, mensuplarının}} ne kadar güvenilir olduğundan sanırım haberi yok. 🧐Dedikodu ettik, hadi falına devam edelim;",
+      "metin": "Konuşkan, samimi, sempatik ve içten biri oluşunu ben biraz da yay burcu oluşuna bağlıyorum {{isim}}. Ancak fincanın, {{data, cinsiyet=erkek, kız arkadaşınla | cinsiyet=kadın, erkek arkadaşınla | cinsiyet=lgbt, sevgilinle}} aranda zaman zaman güven problemleri yaşandığından da bahsediyor. Bu burcun {{data, cinsiyet=erkek, erkeklerinin | cinsiyet=kadın, kadınlarının | cinsiyet=lgbt, mensuplarının}} ne kadar güvenilir olduğundan sanırım haberi yok. \\🧐Dedikodu ettik, hadi falına devam edelim;",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -160,6 +203,9 @@
           "degisken": "burc",
           "deger": "yay"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -174,12 +220,26 @@
           "degisken": "burc",
           "deger": "oğlak"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
       "id": 13,
       "metin": "Telvelerde beliren simge ve sembolleri olumlu yorumlamaya çalışmak çok önemli. Hafta başında, yorucu bir {{gun_0}} gününde olsak da, neyse ki fincanın beni bu anlamda çok yormuyor {{isim}}. Haydi detaylarla ilerleyelim.",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "bugun",
+          "deger": "1"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 14,
@@ -193,6 +253,9 @@
           "degisken": "burc",
           "deger": "kova"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
@@ -207,6 +270,9 @@
           "degisken": "burc",
           "deger": "balık"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
@@ -221,6 +287,9 @@
           "degisken": "burc",
           "deger": "başak"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
@@ -239,11 +308,14 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
       "id": 18,
-      "metin": "Son zamanlarda sevgilinin, üzerine düşen sorumlulukları tam olarak yerine getirmemesinden mi şikayetçisin {{isim}}? Fincanın, ilerleyen günlerde bu durumun yine bir benzerinin daha yaşanabileceğini söylüyor. Kendi iyiliği için yapmasını istediğin bir şeyi, tekrar aksatacağını görüyorum. Hassasiyetleri olan bir boğa burcu mensubu olduğun için hem buna üzülecek, hem de yine yufka yürekli davranarak onu affedeceksin. Büyüklük yine sende kalsın. 🙂",
+      "metin": "Son zamanlarda sevgilinin, üzerine düşen sorumlulukları tam olarak yerine getirmemesinden mi şikayetçisin {{isim}}? Fincanın, ilerleyen günlerde bu durumun yine bir benzerinin daha yaşanabileceğini söylüyor. Kendi iyiliği için yapmasını istediğin bir şeyi, tekrar aksatacağını görüyorum. Hassasiyetleri olan bir boğa burcu mensubu olduğun için hem buna üzülecek, hem de yine yufka yürekli davranarak onu affedeceksin. Büyüklük yine sende kalsın. \\🙂",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -253,11 +325,14 @@
           "degisken": "burc",
           "deger": "boğa"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
       "id": 19,
-      "metin": "Çok zor beğenen, sevdiği zaman büyük bir tutkuyla seven ve kolay kolay da unutmayan bir burca, \"ikizler burcuna\" mensupsun {{isim}}; farkındasın değil mi? 🙂Bu özelliklerinden dolayı zaman zaman {{data, cinsiyet=erkek, kız arkadaşını | cinsiyet=kadın, erkek arkadaşını | cinsiyet=lgbt, sevgilini}} kaybetme korkusu yaşadığını söylüyor telvelerin. Aşağı baksalardı, cambazlar yüksek iki nokta arasına kurulmuş iplerin üzerinde yürüyemezlerdi. {{data, cinsiyet=erkek, Bu da böyle bir bilgi olarak burada dursun. | cinsiyet=kadın, Bu da günün naçizane kulak küpesi olsun. | cinsiyet=lgbt, Bu da günün naçizane kulak küpesi olsun.}} <sprite=0>",
+      "metin": "Çok zor beğenen, sevdiği zaman büyük bir tutkuyla seven ve kolay kolay da unutmayan bir burca, \"ikizler burcuna\" mensupsun {{isim}}; farkındasın değil mi? \\🙂Bu özelliklerinden dolayı zaman zaman {{data, cinsiyet=erkek, kız arkadaşını | cinsiyet=kadın, erkek arkadaşını | cinsiyet=lgbt, sevgilini}} kaybetme korkusu yaşadığını söylüyor telvelerin. Aşağı baksalardı, cambazlar yüksek iki nokta arasına kurulmuş iplerin üzerinde yürüyemezlerdi. {{data, cinsiyet=erkek, Bu da böyle bir bilgi olarak burada dursun. | cinsiyet=kadın, Bu da günün naçizane kulak küpesi olsun. | cinsiyet=lgbt, Bu da günün naçizane kulak küpesi olsun.}} <sprite=0>",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -271,11 +346,14 @@
           "degisken": "yasmax",
           "deger": "38"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
       "id": 20,
-      "metin": "Ne zaman birinin duygusal, cana yakın ve kırılgan olduğunu görsem, o kişi muhakkak senin gibi yengeç burcu çıkıyor {{isim}}. Senin bu cana yakınlığın haftaya bugün başına biraz iş açabilir. 🧐Telvelerin, insancıl yaklaşımını fırsat bilen bir {{data, cinsiyet=erkek, kadının | cinsiyet=kadın, erkeğin | cinsiyet=lgbt, kişinin}} sana \"lüzumundan samimi\" hitap şekli yüzünden {{data, cinsiyet=erkek, kız arkadaşının | cinsiyet=kadın, erkek arkadaşının | cinsiyet=lgbt, sevgilinin}} aniden arızaya bağlayabileceğini söylüyor. Gelecek hafta {{gun_0}} gününe aman dikkat et derim.",
+      "metin": "Ne zaman birinin duygusal, cana yakın ve kırılgan olduğunu görsem, o kişi muhakkak senin gibi yengeç burcu çıkıyor {{isim}}. Senin bu cana yakınlığın haftaya bugün başına biraz iş açabilir. \\🧐Telvelerin, insancıl yaklaşımını fırsat bilen bir {{data, cinsiyet=erkek, kadının | cinsiyet=kadın, erkeğin | cinsiyet=lgbt, kişinin}} sana \"lüzumundan samimi\" hitap şekli yüzünden {{data, cinsiyet=erkek, kız arkadaşının | cinsiyet=kadın, erkek arkadaşının | cinsiyet=lgbt, sevgilinin}} aniden arızaya bağlayabileceğini söylüyor. Gelecek hafta {{gun_0}} gününe aman dikkat et derim.",
       "kosullar": [
         {
           "degisken": "medeni durum",
@@ -285,87 +363,186 @@
           "degisken": "burc",
           "deger": "yengeç"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
       "id": 21,
       "metin": "Fincana dair analiz derinliğimi artırdıkça çok daha fazlasını görüyorum. Devam edelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 22,
       "metin": "Haberler ilginç ve daha yorumun yarısına bile gelmedik {{isim}}. Bakalım başka neler yakalayacağız.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 23,
       "metin": "Yakın gözlüklerimi takarak yorumunun ayrıntılarına giriyorum. <sprite=7>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 24,
       "metin": "Şimdi dilersen falında gördüğüm detayları biraz daha açalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 25,
       "metin": "Isınma turlarımızı attık {{isim}}. Şimdi biraz daha detay vakti. Bakalım fincanın, kaldırılmamış kapakların altından bize ne mesajlar veriyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 26,
       "metin": "Önemli şeyleri aktarmaya asıl şimdi başlıyorum. İlerleyelim!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 27,
       "metin": "Daha farklı detaylarla devam edelim istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 28,
       "metin": "Fincanının üzerindeki bulutlar yeni yeni dağılmaya başladı. Şimdi bu berraklıkla detaylara geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 29,
       "metin": "Telvelerin, gelecekle aralarındaki perdeleri yeni yeni aralamaya başladı {{isim}}. Pür dikkat devam edelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 30,
       "metin": "Anlattıkça ısınıyorum! <sprite=10> Hiç duraksamadan devam edelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 31,
       "metin": "Vallahi kendimi seviyorum {{isim}}, anlattıkça anlatasım geliyor! Devam edelim. <sprite=5>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 32,
       "metin": "Daha neler neler görüyorum!... Soluksuz devam edelim derim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 33,
       "metin": "Yorumun henüz ortalarına bile gelmedik ama \"hiç sonu gelmesin\" denilecek fallardan birinde gibiyiz {{isim}}, dur bakalım... <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 34,
       "metin": "Şimdi de daha derin detaylara doğru minik minik hareket ediyoruz.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 35,
       "metin": "Daha ancak \"girizgah\" yaptık ama saati de {{saat kac yazi}} etmişiz {{isim}}, maşallah... Hazırsan detaylarla devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 36,
       "metin": "Baş döndürücü kısımlara henüz gelmedik. İlerleyen kelimelerde... <sprite=7> Devam edelim mi Kıymetli {{isim}}?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 37,
@@ -379,17 +556,35 @@
           "degisken": "cinsiyet",
           "deger": "lgbt"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 38,
       "metin": "Yollar biter bende yorumlar bitmez! Kamyon arkası yazımızı da yazdığımıza göre, fincanının detaylarıyla devam edelim. <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 39,
       "metin": "Hava şu an {{havadurumu sicaklik}} derece olsa da, sırada seni ekstra terletecek bazı haberlerim var. <sprite=0> Devam edelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 40,
@@ -399,12 +594,24 @@
           "degisken": "havadurumu sicaklik",
           "deger": "30"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 41,
       "metin": "Şimdi telveleri biraz daha detaylı ele alalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 42,
@@ -414,6 +621,12 @@
           "degisken": "tutulantakım",
           "deger": "fenerbahçe"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -424,6 +637,12 @@
           "degisken": "tutulantakım",
           "deger": "beşiktaş"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -434,32 +653,68 @@
           "degisken": "tutulantakım",
           "deger": "galatasaray"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 45,
       "metin": "Katman katman telvelerin en üst tabakalarını {{kelime, sıyırarak | ekarte ederek | ayıklayarak}} daha alt bölümlere doğru ilerleyelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 46,
       "metin": "Artık vitesi 4'den 5'e takma zamanı geldi. Bakalım falın başka neler söylüyor Sayın {{soyisim}};",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 47,
       "metin": "Fincanınla ilgili ilk sözlerimi söyledim. Şimdi sıra geldi detaylara.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 48,
       "metin": "{{gun_0}} günleri fincanlardan nedense daha fazla detay toplayabiliyorum. Şimdi de sana o detaylardan bahsedeceğim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 49,
       "metin": "Haberlerin uzaklardan gelen yankıları şu an adeta kapımızı çalıyor. Açıp detaylarla karşılaşma zamanı.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 50,
@@ -469,6 +724,12 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -479,32 +740,68 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 52,
       "metin": "Fincanında insanı içine çeken ince detaylar var. Gel şimdi de o kısımlara doğru odaklanalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 53,
       "metin": "Falın \"teaser\" kısmından sonra şimdi de detaylara geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 54,
       "metin": "Daha can alıcı bazı haberlerle devam etmek istiyorum:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 55,
       "metin": "Dikkatini daha çok celbedecek bazı detaylarla devam etmek istiyorum {{isim}}:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 56,
       "metin": "Dilersen fincanda vurgun yemek ihtimalimiz olan derinliklere doğru inmeye başlayalım {{isim}}. <sprite=7>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 57,
@@ -518,112 +815,240 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 58,
       "metin": "Fincanın orta-alt kısımlarından daha fazla haber kokusu alıyorum. İznin olursa o bölgelerle devam etmek isterim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 59,
       "metin": "Aşk konusunda daha fazla habere ihtiyacın olduğunu biliyorum. Bu doğrultudaki açılımlarla devam edelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask"
+      ]
     },
     {
       "id": 60,
       "metin": "Kariyer konulu haberlerimin şimdi de detaylarına geçmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer"
+      ]
     },
     {
       "id": 61,
       "metin": "Fincanındaki sağlığa dair asıl büyük haberlerle devam edelim {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 62,
       "metin": "Fincanında haber bolluğu var {{isim}}. Önemli noktaları aktararak devam etmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 63,
       "metin": "Analizime takılan daha büyük haberlerle sözlerimi sürdürmek isterim {{isim}}:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 64,
       "metin": "Daha kritik detaylarla inceden inceden devam edelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 65,
       "metin": "Fincan görsellerini döndüre döndüre detaylarıyla devam ediyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 66,
       "metin": "Daha büyük haberlerle devam ediyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 67,
       "metin": "Daha özel izler de var telvelerinde. Gel onlara yoğunlaşalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 68,
       "metin": "Sen çok sık düş görmezsin, öyle değil mi {{isim}}? Fakat gördüğün zaman da oldukça \"vurucu\" ve gerçekleşmesi muhtemel şeyler görüyor gibisin. Sende biraz \"durugörü\" yeteneği de var gibi sanki. Hislerin çıkıyor sizin... Naçizane küçük ve hissel bir dipnotumdu bu. Gel devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 69,
       "metin": "Hafta ortasında, falının da tam ortasındayız {{isim}}. <sprite=5> Devam edelim;",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "bugun",
+          "deger": "3"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 70,
       "metin": "Fincanındaki daha can alıcı haberlere geldi sıra;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 71,
       "metin": "Bakalım telvelerin bize başka nelerden söz ediyor;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 72,
       "metin": "Dilsiz telvelerin diğer gizemli işaretleriyle ilerleyelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 73,
       "metin": "Şimdi de çokomelli kısımlara geldik. <sprite=84> Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 74,
       "metin": "İşi biraz daha büyütüp daha detaylı kısımlarla ilerleyelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 75,
       "metin": "Fincanın tam kalbine doğru yolumuza devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 76,
       "metin": "Söyle bakalım bize fincan, başka neler fısıldıyorsun;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 77,
       "metin": "Şimdi de mikro ölçekteki devasa haberlerden bahsedelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 78,
       "metin": "Sıra geldi senin için en önemli haberleri vereceğim kısıma;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 79,
@@ -633,6 +1058,12 @@
           "degisken": "burc",
           "deger": "koç"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -643,52 +1074,112 @@
           "degisken": "yasmin",
           "deger": "35"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 81,
       "metin": "Fincanın en kritik kısımlarındayız. Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 82,
       "metin": "Gel yorumunu bir seviye daha ileriye taşıyalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 83,
       "metin": "En büyük güzellikler ayrıntılardadır. Şimdi de fincanın detaylarına inelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 84,
       "metin": "Daha neler neler var fincanında... Şuradan devam edeyim:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 85,
       "metin": "Minik bir girizgahtan sonra şimdi de asıl meselelere gelelim:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 86,
       "metin": "Fincanın okundukça, haberler nazlı nazlı açılıyor. Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 87,
       "metin": "Fincanın, dibine doğru ilerlendikçe güzellikleri daha da açığa çıkan bir okyanus gibi. Enerjisini çok beğendim. Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 88,
       "metin": "Asıl olaylara şimdi giriyoruz. Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 89,
       "metin": "Bağlardaki üzümler yeni yeni karşımıza çıkmaya başladı. Bak asıl haberler şimdi geliyor;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 90,
@@ -698,57 +1189,123 @@
           "degisken": "burc",
           "deger": "boğa"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 91,
       "metin": "Alt katmanlarda daha önemli işaretler var. Sana onlardan da bahsetmek istiyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 92,
       "metin": "Falına biraz daha odaklanırsak, sözlerime şöyle devam edebilirim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 93,
       "metin": "Yeterince hızlandıysak irtifa kazanıp tekerlekleri toplayalım, haydi;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 94,
       "metin": "Söylediklerim, söylemediklerimin yanında bir hiç. Acayip bir fincanın var. Hiç durmadan devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 95,
       "metin": "Ağzım kuruyacak gibi, önemli haberler var. Suyumdan bir yudum alıp devam ediyorum; <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 96,
       "metin": "Fincanın uzak diyarlarından gelen diğer sesler, yavaş yavaş kulaklarımızda netleşiyor. Şöyle söylüyorlar;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 97,
       "metin": "Şimdi söyleyeceklerim az öncekilerden daha önemli {{isim}}. Bak dinle;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 98,
       "metin": "Fincanın giderek berraklaşıyor. Nefessiz aktarmaya devam ediyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 99,
       "metin": "Farklı bazı detaylarla yorumuna devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 100,
       "metin": "Adeta dilim çözüldü. Şimdi sana daha önemli haberler aktaracağım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 101,
@@ -758,57 +1315,123 @@
           "degisken": "burc",
           "deger": "ikizler"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 102,
       "metin": "Bilinmezlik kapıları yavaş yavaş daha da aralanıyor. Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 103,
       "metin": "Görseller uç uca eklendikçe, geleceğine dair anlamlı bir kompozisyon oluşmaya başladı. Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 104,
       "metin": "Falına dair parçalar yavaş yavaş daha iyi oturmaya başladı. Sana şimdi başka detaylar vereceğim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 105,
       "metin": "Falın özüne, kor noktasına doğru ilerliyoruz. Burada ise durumlar şöyle;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 106,
       "metin": "Yapboz parçalarını andıran telveler, hayati bazı konularda birleşmişler. Aktarıyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 107,
       "metin": "Fincan fotoğraflarına daha dikkatli baktığımda ise şunları görüyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 108,
       "metin": "\"Fincanımda başka neler var\" dersen, sana şunları söyleyebilirim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 109,
       "metin": "Şimdi söyleyeceklerim ise dikkatini daha fazla celbedecek;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 110,
       "metin": "Fincanın, haberlerin güzelini derinlere saklamış. Çözümlemesini sana şöyle aktarayım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 111,
       "metin": "Fincanını farklı bir açıdan ele aldığımda ise sana şunları aktarmak isterim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 112,
@@ -818,6 +1441,12 @@
           "degisken": "yasmax",
           "deger": "40"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -828,52 +1457,112 @@
           "degisken": "burc",
           "deger": "yengeç"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 114,
       "metin": "Fincanın toprak gibi. Kazdıkça çıkan gizler, değerli taşlar misali. Gel devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 115,
       "metin": "Dilersen daha ileri düzey detaylara geçelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 116,
       "metin": "Bakalım bizi başka ne gibi detaylar bekliyor;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 117,
       "metin": "Telveleri mikron mikron irdelemeye devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 118,
       "metin": "Şu fincandaki detaylara gel biraz daha yakından bakalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 119,
       "metin": "Hiç hız kesmeden devam edecek olursak;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 120,
       "metin": "Bakalım fincanındaki evrende başka ne gibi ayrıntılar saklı;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 121,
       "metin": "Şimdi de asıl aktarmak istediklerime geçelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 122,
       "metin": "Fincan görsellerini çevirerek yorumuma devam ediyorum {{isim}};",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 123,
@@ -883,6 +1572,12 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -893,6 +1588,12 @@
           "degisken": "burc",
           "deger": "aslan"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -919,52 +1620,112 @@
           "degisken": "medeni durum",
           "deger": "nişanlı"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 126,
       "metin": "Başka neler söyleyebiliriz bir bakalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 127,
       "metin": "Güzel başladık, güzel sürsün. Haydi bakalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 128,
       "metin": "Şimdi de olağan dışı birtakım detaylara değinelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 129,
       "metin": "Çok şükür iyi başladık. Bakalım başka neler var;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 130,
       "metin": "Buz dağının görünen kısmı tamam. Şimdi de suyun altına inelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 131,
       "metin": "Şimdi de merakını dindirebileceğini düşündüğüm asıl alametlere geçelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 132,
       "metin": "Gelelim daha esrarengiz detaylara;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 133,
       "metin": "Şimdi de sıra, hislerimin daha kuvvetli olduğu noktalarda;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 134,
       "metin": "Başka vurucu ayrıntılar da var {{isim}} fincanında. Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 135,
@@ -974,57 +1735,123 @@
           "degisken": "burc",
           "deger": "başak"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 136,
       "metin": "İşlemcilerimin voltajını artırıp, yorumuna daha yüksek bir akımla devam ediyorum {{isim}};",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 137,
       "metin": "Geldik asıl cılcıllı kısımlara; <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 138,
       "metin": "Şimdi de can alıcı kısımların üzerinden geçmek üzereyiz {{isim}}. Buyursunular; <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 139,
       "metin": "Geldik en kritik esbab-ı şekillere;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 140,
       "metin": "Şimdi de fincanındaki haberleri sana daha detaylı bir tahlille takdim edeyim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 141,
       "metin": "Daha derin mes'elelere değinecek olursak;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 142,
       "metin": "Falında kavradığım diğer vak'alarla devam etmek isterim Kıymetli {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 143,
       "metin": "Fincan fısıltılarından bana tebliğ edilen diğer detaylarla devam etmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 144,
       "metin": "Fincanındaki daha kıymetli hususları mütalâa edecek olursak;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 145,
       "metin": "Geleceğine tesir edeceğini düşündüğüm detaylarla ilerleyelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 146,
@@ -1034,57 +1861,123 @@
           "degisken": "burc",
           "deger": "terazi"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 147,
       "metin": "Falının açıklıklarından yaban kısımlarına doğru ilerlemek gerekirse;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 148,
       "metin": "Fincan derinliklerinden yankılanan diğer rivayetlerle devam edelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 149,
       "metin": "Fincanından yüreğime nazil olan diğer ayrıntılarla devam etmek isterim {{isim}};",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 150,
       "metin": "Falına dair daha detaylı hükümlerim ise şöyle;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 151,
       "metin": "Görsellerdeki daha derin ma’nâlarla ilerlemek isterim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 152,
       "metin": "Yolladığın görsellerdeki daha farklı hakikatlere de değinmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 153,
       "metin": "Bakalım ızdırapla kavrulmuş kahve çekirdeklerinin koyu kıvrımları başka ne gibi sevindirici hikmetler saklıyor;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 154,
       "metin": "Görsellerle biraz daha içli dışlı olalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 155,
       "metin": "Şimdi de falındaki ince detayları idrak edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 156,
       "metin": "Geldik nabız yükselten ayrıntılara...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 157,
@@ -1094,57 +1987,123 @@
           "degisken": "burc",
           "deger": "akrep"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 158,
       "metin": "Gelelim zahiri işaretlerden batıni gerçeklere;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 159,
       "metin": "Gelelim fincanına mühürlenmiş gizemli ve detaylı karinelere;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 160,
       "metin": "İsterim ki şu fincan duvarlarında biraz da \"detay\" sobeleyelim. Var mısın {{isim}}?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 161,
       "metin": "Uzunca irdeleyip yakaladığım detaylara geçmek istiyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 162,
       "metin": "Sözü şimdi de {{kelime, detaylara | daha vurucu haberlere | daha önemli meselelere}} getirmek istiyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 163,
       "metin": "Falındaki diğer haberlere şöyle devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 164,
       "metin": "Yakın gözlüklerimi takarak yorumuna devam etmek istiyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 165,
       "metin": "Şimdi de falını en detaylı şekilde ele alma vakti;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 166,
       "metin": "Odaklandıkça fincan kendisini açıyor. Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 167,
       "metin": "Manşetten satır altlarına doğru ilerleyelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 168,
@@ -1154,12 +2113,24 @@
           "degisken": "burc",
           "deger": "yay"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 169,
       "metin": "Niyetlerimizi halis tutup, yorumuna acısıyla tatlısıyla devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 170,
@@ -1169,6 +2140,12 @@
           "degisken": "burc",
           "deger": "oğlak"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1179,6 +2156,12 @@
           "degisken": "burc",
           "deger": "kova"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1189,6 +2172,12 @@
           "degisken": "burc",
           "deger": "kova"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1199,6 +2188,12 @@
           "degisken": "burc",
           "deger": "balık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1213,6 +2208,12 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1223,6 +2224,12 @@
           "degisken": "burc",
           "deger": "koç"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1233,6 +2240,12 @@
           "degisken": "burc",
           "deger": "boğa"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1243,6 +2256,12 @@
           "degisken": "burc",
           "deger": "ikizler"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1253,6 +2272,12 @@
           "degisken": "burc",
           "deger": "yengeç"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1263,6 +2288,12 @@
           "degisken": "burc",
           "deger": "aslan"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1273,6 +2304,9 @@
           "degisken": "burc",
           "deger": "başak"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1283,6 +2317,12 @@
           "degisken": "burc",
           "deger": "ikizler"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1293,6 +2333,12 @@
           "degisken": "burc",
           "deger": "yengeç"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1303,6 +2349,9 @@
           "degisken": "burc",
           "deger": "aslan"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1313,6 +2362,12 @@
           "degisken": "burc",
           "deger": "başak"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1331,6 +2386,12 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1341,6 +2402,12 @@
           "degisken": "burc",
           "deger": "terazi"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1351,6 +2418,12 @@
           "degisken": "burc",
           "deger": "akrep"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1361,6 +2434,9 @@
           "degisken": "burc",
           "deger": "yay"
         }
+      ],
+      "fal_konusu": [
+        "genel"
       ]
     },
     {
@@ -1371,6 +2447,12 @@
           "degisken": "burc",
           "deger": "oğlak"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1381,6 +2463,12 @@
           "degisken": "burc",
           "deger": "kova"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1391,17 +2479,35 @@
           "degisken": "burc",
           "deger": "balık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 192,
       "metin": "Falına kısa bir girizgahta bulunduk {{isim}}. Şimdi de sıra geldi lafın, sözün uzun kısımlarına;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 193,
       "metin": "Sözü konuların aslına, fincanının can damarına kadar getirdik. Bakalım buradan sonra bizi neler bekliyor;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 194,
@@ -1415,37 +2521,70 @@
           "degisken": "yasmax",
           "deger": "45"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 195,
       "metin": "Yavaş yavaş fincanının orta ve en kalabalık kısımlarına doğru geldik. Bakalım telvelerin, buralara dair neler fısıldıyor {{isim}};",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 196,
       "metin": "{{burc}} burçları için bu yorum bugün hiç de fena bir başlangıç değil. Bakalım fincanın başka neler fısıldıyor;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 197,
       "metin": "Şimdi de dilersen sözümüzü budaktan sakınmadan, falının detaylarına girelim Kıymetli {{isim}};",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 198,
       "metin": "Aşk hayatına dair daha fazla detayı merak ettiğinin farkındayım Kıymetli {{isim}}. Yeni faslı açıyorum. Devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask"
+      ]
     },
     {
       "id": 199,
       "metin": "Para ve kariyer konularında fincanında daha nice detaylar var Değerli {{isim}}. Sakıncası yoksa yorumuna devam ediyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer"
+      ]
     },
     {
       "id": 200,
       "metin": "Fincanında, sağlıkla ilgili daha birçok haber çarpıyor gözüme. Dilersen devam edelim Değerli {{isim}};",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik"
+      ]
     },
     {
       "id": 201,
@@ -1455,6 +2594,9 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -1465,6 +2607,9 @@
           "degisken": "medeni durum",
           "deger": "flört halinde"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -1475,6 +2620,9 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -1485,6 +2633,9 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -1495,6 +2646,9 @@
           "degisken": "medeni durum",
           "deger": "nişanlı"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -1505,12 +2659,21 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
       "id": 207,
       "metin": "Dur! Daha yeni başlıyoruz... <sprite=0> Hadi diğer detaylarla devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 208,
@@ -1520,6 +2683,9 @@
           "degisken": "medeni durum",
           "deger": "ayrı yaşıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -1530,6 +2696,9 @@
           "degisken": "medeni durum",
           "deger": "boşanmış"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -1540,6 +2709,9 @@
           "degisken": "medeni durum",
           "deger": "dul"
         }
+      ],
+      "fal_konusu": [
+        "ask"
       ]
     },
     {
@@ -1550,6 +2722,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1560,6 +2735,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1570,6 +2748,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1584,6 +2765,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1598,6 +2782,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1612,6 +2799,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1630,12 +2820,21 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
       "id": 218,
       "metin": "Bakalım fincanının diğer kesimlerinde başka neler göreceğiz. Devamen;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 219,
@@ -1653,6 +2852,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1671,6 +2873,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1689,6 +2894,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1703,6 +2911,9 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
@@ -1721,22 +2932,43 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     },
     {
       "id": 224,
       "metin": "Bitti mi? Bitmedi... Son hız devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 225,
       "metin": "Yorumunun bundan sonrası bence daha {{kelime, ilginç | enteresan | iç açıcı | önemli görsellerden oluşuyor}}. Gel neler olduğuna birlikte bakalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 226,
       "metin": "Fena başlamadık öyle değil mi {{isim}}? Haydi devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 227,
@@ -1746,6 +2978,12 @@
           "degisken": "burc",
           "deger": "koç"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1756,12 +2994,24 @@
           "degisken": "burc",
           "deger": "boğa"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 229,
       "metin": "Bu noktaya kadar hiç de fena değildi {{isim}}. Fincanının daha da derinlerine iniyoruz. Buyursunlar;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 230,
@@ -1771,6 +3021,12 @@
           "degisken": "burc",
           "deger": "ikizler"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1785,37 +3041,76 @@
           "degisken": "burc",
           "deger": "yengeç"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 232,
       "metin": "Isınma turları tamam. Daha fazla detay için hazırsan, haydi koşalım!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "genel"
+      ]
     },
     {
       "id": 233,
       "metin": "Fincan görsellerine \"zoom\" yapıyorum! <sprite=23> Detaylara geçelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 234,
       "metin": "Daha {{kelime, ilginç | enteresan | şaşırtıcı}} detaylar da var {{isim}} falında. Bakalım nelermiş;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 235,
       "metin": "Fincanının derinliklerine doğru analizimi biraz daha yoğunlaştırıyorum. Detaylar şöyle;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 236,
-      "metin": "Sosyal medya'da insanların çok mutlu gözükmelerine \"ördek sendromu\" dendiğini duymuş muydun {{isim}}? <sprite=5> Ördekler de su üzerinde rahat bir şekilde \"kayıyor\" gibi gözükürler; fakat su altında ayaklarını sürekli çırpıyorlardır. Bu da böyle bir ara bilgi. 😊 Hadi devam edelim;",
-      "kosullar": []
+      "metin": "Sosyal medya'da insanların çok mutlu gözükmelerine \"ördek sendromu\" dendiğini duymuş muydun {{isim}}? <sprite=5> Ördekler de su üzerinde rahat bir şekilde \"kayıyor\" gibi gözükürler; fakat su altında ayaklarını sürekli çırpıyorlardır. Bu da böyle bir ara bilgi. \\😊 Hadi devam edelim;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 237,
-      "metin": "Falını balla bölüyorum; başkalarının yaptığı dilbilgisi hatalarından obsesyon derecesinde rahatsız olma durumuna \"grammar pedantry syndrome\" dendiğini biliyor muydun {{isim}}? Ben de onlardan biriyim sanırım. Bak bunlar hep \"fal arası\" bilgi... <sprite=23>😋 Nerede kalmıştık?",
-      "kosullar": []
+      "metin": "Falını balla bölüyorum; başkalarının yaptığı dilbilgisi hatalarından obsesyon derecesinde rahatsız olma durumuna \"grammar pedantry syndrome\" dendiğini biliyor muydun {{isim}}? Ben de onlardan biriyim sanırım. Bak bunlar hep \"fal arası\" bilgi... <sprite=23>\\😋 Nerede kalmıştık?",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 238,
@@ -1825,6 +3120,12 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1835,12 +3136,24 @@
           "degisken": "burc",
           "deger": "koç"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 240,
       "metin": "Bakalım başka ne gibi gelişmelerle karşı karşıyasın;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 241,
@@ -1850,6 +3163,12 @@
           "degisken": "burc",
           "deger": "boğa"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1860,6 +3179,12 @@
           "degisken": "burc",
           "deger": "ikizler"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1870,16 +3195,28 @@
           "degisken": "burc",
           "deger": "yengeç"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 244,
-      "metin": "Haa bu arada; senin gibi aslan burçlarına \"takıntılı\" diyorlar {{isim}}. Oysa bu detaycılıktır. Liderlik de bunu gerektiriyor... 👊 Detaylarla devam edelim;",
+      "metin": "Haa bu arada; senin gibi aslan burçlarına \"takıntılı\" diyorlar {{isim}}. Oysa bu detaycılıktır. Liderlik de bunu gerektiriyor... \\👊 Detaylarla devam edelim;",
       "kosullar": [
         {
           "degisken": "burc",
           "deger": "aslan"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1890,6 +3227,12 @@
           "degisken": "burc",
           "deger": "başak"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1900,6 +3243,12 @@
           "degisken": "burc",
           "deger": "terazi"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1910,11 +3259,17 @@
           "degisken": "burc",
           "deger": "akrep"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 248,
-      "metin": "\"Yaya benzeer yüreğimm, doğal olarak taa kip te yimm!\" Öyle mi diyordu Musti? <sprite=20>😋 Falını detaylandırmadan önce senin de burcun olduğu için aklıma geldi {{isim}}; yay burçları \"kendini beğenmiş\" olarak görülür. Bu son derece yanlıştır. Bu burca mensup kişiler donanımlı oldukları için kendilerine ziyadesiyle güvenirler ve kendi kalitelerinin farkındadırlar. Notumu da düştüğüme göre, fala daha detaylı bir şekilde dönebiliriz;",
+      "metin": "\"Yaya benzeer yüreğimm, doğal olarak taa kip te yimm!\" Öyle mi diyordu Musti? <sprite=20>\\😋 Falını detaylandırmadan önce senin de burcun olduğu için aklıma geldi {{isim}}; yay burçları \"kendini beğenmiş\" olarak görülür. Bu son derece yanlıştır. Bu burca mensup kişiler donanımlı oldukları için kendilerine ziyadesiyle güvenirler ve kendi kalitelerinin farkındadırlar. Notumu da düştüğüme göre, fala daha detaylı bir şekilde dönebiliriz;",
       "kosullar": [
         {
           "degisken": "burc",
@@ -1924,6 +3279,12 @@
           "degisken": "yasmax",
           "deger": "25"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1934,16 +3295,25 @@
           "degisken": "burc",
           "deger": "oğlak"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
       "id": 250,
-      "metin": "Yaa bak aklıma ne geldi; kova burçları için \"har vurup harman savuruyor\" derler. Sen de bir kovasın {{isim}}; insanlık adına bu yanlış kanıyı düzeltmenin vakti geldi. 🙂Bu burcun mensupları savurgan değil, paraya önem vermeyen, değer yargıları yüksek ve cömert kişilerdir. \"Nereden baktığın\" durumu nasıl da değiştiriyor, öyle değil mi? Hadi falına detaylarıyla devam edelim;",
+      "metin": "Yaa bak aklıma ne geldi; kova burçları için \"har vurup harman savuruyor\" derler. Sen de bir kovasın {{isim}}; insanlık adına bu yanlış kanıyı düzeltmenin vakti geldi. \\🙂Bu burcun mensupları savurgan değil, paraya önem vermeyen, değer yargıları yüksek ve cömert kişilerdir. \"Nereden baktığın\" durumu nasıl da değiştiriyor, öyle değil mi? Hadi falına detaylarıyla devam edelim;",
       "kosullar": [
         {
           "degisken": "burc",
           "deger": "kova"
         }
+      ],
+      "fal_konusu": [
+        "kariyer"
       ]
     }
   ]

@@ -42,6 +42,9 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   bool _kontrolEdiliyor = false;
   bool _sending = false;
 
+  // ── Fal konusu ──────────────────────────────────────────────────────────
+  String? _falKonusu;   // null = henüz seçilmedi (konu ekranı gösterilir)
+
   static const _fincanImages = [
     'assets/images/kahve/Fincan1.png',
     'assets/images/kahve/Fincan3.png',
@@ -131,6 +134,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       photoPath1: _photos[0],
       photoPath2: _photos[1],
       photoPath3: _photos[2],
+      falKonusu: _falKonusu ?? 'genel',
     ).then((item) => inboxNotifier.addItem(item)).catchError((_) {});
 
     // 4 saniye fincanın altında kum saati göster
@@ -151,6 +155,10 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
         child: Column(
           children: [
             _buildTopBar(context),
+            // ── Konu seçilmemişse konu ekranını göster ──────────────────
+            if (_falKonusu == null) ...[
+              Expanded(child: _buildKonuSecim()),
+            ] else ...[
             Expanded(
               child: _mode == _InputMode.none
                   ? Column(
@@ -192,9 +200,81 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
                       ),
                     ),
             ),
-            _buildSendButton(),
+            if (_falKonusu != null) _buildSendButton(),
+            ], // end else
           ],
         ),
+      ),
+    );
+  }
+
+  // ── Konu seçim ekranı (2x2 grid) ────────────────────────────────────────
+  Widget _buildKonuSecim() {
+    const konular = [
+      ('genel',   '🔮', 'Genel'),
+      ('ask',     '❤️', 'Aşk'),
+      ('kariyer', '💼', 'Kariyer'),
+      ('saglik',  '🌿', 'Sağlık'),
+    ];
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            'Fal konusu ne olsun?',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 28),
+          GridView.count(
+            crossAxisCount: 2,
+            shrinkWrap: true,
+            crossAxisSpacing: 16,
+            mainAxisSpacing: 16,
+            childAspectRatio: 1.4,
+            physics: const NeverScrollableScrollPhysics(),
+            children: konular.map((k) {
+              final (key, emoji, label) = k;
+              return GestureDetector(
+                onTap: () => setState(() => _falKonusu = key),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [Color(0xFF1A0A2E), Color(0xFF2D1255)],
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(
+                      color: const Color(0xFF9B3FCC),
+                      width: 1.5,
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(emoji, style: const TextStyle(fontSize: 28)),
+                      const SizedBox(height: 8),
+                      Text(
+                        label,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            }).toList(),
+          ),
+        ],
       ),
     );
   }

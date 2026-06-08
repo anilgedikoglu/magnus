@@ -3,1547 +3,3406 @@
     {
       "id": 1,
       "metin": "Efendim merhabalar. Kahve falı bölümünde böyle kıymetli akademisyenleri ağırlamak gerçekten büyük şeref. Her zamanki azami titizliğimi sergileyerek falını yorumladım {{isim}}. Heyecanlı dakikalar bizi bekliyor. Arzu edersen hiç vakit kaybetmeden başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 2,
       "metin": "Kahve falı analizime hoş geldin {{isim}}! Herkesin doğruları söylediği bir zamanda, bazen bir yalancıya da ihtiyaç vardır. O belki de benimdir; ne dersin? <sprite=7>  Fincan görsellerinin pek çok yanı, aklındaki sorularla bezeli gözüküyor. Her birine tek tek yanıt vermeye çalışacağım. Hazırsan, başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 3,
-      "metin": "Selam! Biraz beklettim sanırım. Konumuz \"aşk\" ve yine o, öyle değil mi? 🙂 Ahh {{isim}} ahh, konu \"o\" ise, her zaman fedakarlığın en üst raflarına uzanıyor ellerin, öyle değil mi? Bakalım fincanında bu defa neler var, dinleyelim. Fincan! Sendeyiz;",
-      "kosullar": []
+      "metin": "Selam! Biraz beklettim sanırım. Konumuz \"aşk\" ve yine o, öyle değil mi? \\🙂 Ahh {{isim}} ahh, konu \"o\" ise, her zaman fedakarlığın en üst raflarına uzanıyor ellerin, öyle değil mi? Bakalım fincanında bu defa neler var, dinleyelim. Fincan! Sendeyiz;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 4,
-      "metin": "Falını yorumlarken aklıma ne geldi biliyor musun? {{dogum yili}} kuşağısın, hatırlarsın; 90'lı yıllarda Backstreet Boys, Whitney Houston, Ricky Martin, Britney Spears, Marc Anthony, Santana, Celine Dion gibi yabancı şarkıcılar, {{kelime, Onur Mete | Mansur Ark | Orçun | Sibe l Bilgiç | Suat Suna}}, {{kelime, Sibel Alaş | Zeynep Dizdar | Banu Zorlu | Deniz Arcak | Ümit Sayın}}, {{kelime, Reha | Ali Güven | Ayşen | Ege}}, Metin Arolat, {{kelime, İnan | Göktan | Pınar Aylin}}, Bora Öztoprak, Ragga Oktay, Emel Müftüoğlu gibi yerli şarkıcılar vardı. Heyy gidi hey... Böylece hepsini yad etmiş olduk. 😊 Yorumuna başlayalım mı?",
-      "kosullar": []
+      "metin": "Falını yorumlarken aklıma ne geldi biliyor musun? {{dogum yili}} kuşağısın, hatırlarsın; 90'lı yıllarda Backstreet Boys, Whitney Houston, Ricky Martin, Britney Spears, Marc Anthony, Santana, Celine Dion gibi yabancı şarkıcılar, {{kelime, Onur Mete | Mansur Ark | Orçun | Sibe l Bilgiç | Suat Suna}}, {{kelime, Sibel Alaş | Zeynep Dizdar | Banu Zorlu | Deniz Arcak | Ümit Sayın}}, {{kelime, Reha | Ali Güven | Ayşen | Ege}}, Metin Arolat, {{kelime, İnan | Göktan | Pınar Aylin}}, Bora Öztoprak, Ragga Oktay, Emel Müftüoğlu gibi yerli şarkıcılar vardı. Heyy gidi hey... Böylece hepsini yad etmiş olduk. \\😊 Yorumuna başlayalım mı?",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 5,
       "metin": "Testiyi kıranla suyu taşıyan bir olur mu hiç? Muhtelif kahve falı uygulamalarının basmakalıp cümlelerinden ve laf-ü güzaf sayılabilecek mesnetsiz sözlerinden sıkıldıysan, kesinlikle doğru yerdesin {{isim}}. <sprite=7> Buyur yorumuna başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 6,
       "metin": "Yorumunla karşındayım {{isim}}. Aşk hayatınla ilgili ele alacağım fincanın, umarım sana bu {{kelime, keyifsiz | tatsız | neşesiz}} gününde biraz olsun ışık tutar ve içini aydınlatır. Hazırsan, başlıyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 7,
       "metin": "Değerli dostum {{isim}}, fincanından evliliğine dair yeni gelişmeleri almak için hazırız. Sen de hazırsan, gel başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 8,
       "metin": "{{isim}} Beyciğim fincan görsellerin aşk hayatınla ilgili yorumlanmak üzere hazır. Lütfen arkana yaslan ve yorumunun keyfini çıkar. Başlıyoruz;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 9,
       "metin": "Mr {{soyisim}}? Telvelerin harikulade gözüküyor! Sanırım çok taze bir kahve yudumladın... Umarım aşk hayatına dair haberlerimiz de benzer güzellikte olur. Buyur, bakalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 10,
       "metin": "Biraz beklettim {{isim}}, affet. {{burc}} burçları için {{kelime, sıkıcı | karamsar | durgun | keyifsiz | durağan | tatsız tuzsuz | yorucu}} bir gün, farkındayım... Fakat fincan fotoğrafların, aşk hayatına dair keyfini yerine getirecek haberler barındırıyor. Gününü biraz olsun güzelleştirmeyi ümit ediyorum. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 11,
       "metin": "Kalkışa hazırız! <sprite=0> Yer yer aydınlık kısımların da anlam taşıdığı, oldukça hoş fincan görsellerin var. Hazırsan bu \"gizem kitabının\" ilk sayfalarını çevirmeye başlayalım {{isim}}, ne dersin?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 12,
-      "metin": "Sol, sol, sol, mi... 🎶 Kahve falı yorumunla Magnus karşında {{isim}}! Magnus kim mi? Telvelerde tını için tab'ler kullanmak yerine, emprovizasyon yapan ve riff'ler basan bir gitarcı! <sprite=7>😉 Fincan görsellerin oldukça {{kelime, duru ve canlandırıcı | berrak ve rahatlatıcı | merak uyandırıcı | dingin ve ferahlatıcı | sakin ve arındırıcı}}. Bakalım fısıldadıkları haberler de öyle mi... Hazırsan, \"{{kelime, adagio | moderato | vivace | presto | allegro}}\" bir şekilde, \"{{kelime, mezzoforte | forte | fortissimo | molto fortissimo}}\" ses veriyorum;",
-      "kosullar": []
+      "metin": "Sol, sol, sol, mi... \\🎶 Kahve falı yorumunla Magnus karşında {{isim}}! Magnus kim mi? Telvelerde tını için tab'ler kullanmak yerine, emprovizasyon yapan ve riff'ler basan bir gitarcı! <sprite=7>\\😉 Fincan görsellerin oldukça {{kelime, duru ve canlandırıcı | berrak ve rahatlatıcı | merak uyandırıcı | dingin ve ferahlatıcı | sakin ve arındırıcı}}. Bakalım fısıldadıkları haberler de öyle mi... Hazırsan, \"{{kelime, adagio | moderato | vivace | presto | allegro}}\" bir şekilde, \"{{kelime, mezzoforte | forte | fortissimo | molto fortissimo}}\" ses veriyorum;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 13,
       "metin": "Magnus, kahve falı değerlendirmesiyle karşına {{isim}}! Adımı tuhaf bulanlar oluyormuş; nedenini çok yakında öğrenecekler... Telvelerinde hem bazı sorular, hem de birtakım cevaplar var. Hepsine elimden geldiğince değinmeye çalışacağım. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 14,
       "metin": "Analizimi tamamladım. Fincanının üst kenarlarında, {{kelime, iş | özel}} hayatındaki {{kelime, şans ve bereketin | olumlu gelişmelerin}} artacağına dair {{kelime, noktasal | lekesel}} emareler görüyorum. Geleceğinde güzel şeyler olacağına inanıyorum {{isim}}. Dilersen yorumuna hemen başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 15,
       "metin": "Kahve falı yorumun oluşturuldu. Her yeni ziyaretinde, fincanını daha detaylı analiz edebilmek için elimden geleni yapacağımı bilmeni isterim {{isim}}. {{kelime, Bakalım bu defa kaderin, telvelerini nasıl resmetmiş | Bakalım bu defa kaderin, telvelerinde ne gibi izler yaratmış}};",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 16,
-      "metin": "Değerlendirmem hazır {{isim}}. Falından çok detay alıyorum. Kahveyi mi fazla kattın, yoksa {{kelime, cezve ile | kahve makinesi ile}} mi pişirdin? {{kelime, Koku | Dokusal | Partikül bazlı | Zerresel bazlı}} analizim, \"Kurukahveci Mehmet Efendi\" ya da {{kelime, Kahve Dünyası Türk Kahvesi | Tchibo Türk Kahvesi | adı \"H\" ile başlayan bir Türk Kahvesi | iki kelimeden oluşan farklı marka bir Türk Kahvesi | adında \"A\" ve \"N\" harfleri olan, farklı marka bir Türk Kahvesi | adında \"A\" ve \"H\" harfleri olan, farklı marka bir Türk Kahvesi}} tükettiğini söylüyor. Başarılı olmuş... 😉Umarım aşk hayatına dair {{kelime, güzel haberler verme | hayırlı haberler verme | güzel gelişmeler sunma}} {{kelime, konusunda | anlamında}} da \"eli açık\" bir kahvedir. {{kelime, Gel | Hadi | Buyur | Dilersen | Arzu edersen}} başlayalım;",
-      "kosullar": []
+      "metin": "Değerlendirmem hazır {{isim}}. Falından çok detay alıyorum. Kahveyi mi fazla kattın, yoksa {{kelime, cezve ile | kahve makinesi ile}} mi pişirdin? {{kelime, Koku | Dokusal | Partikül bazlı | Zerresel bazlı}} analizim, \"Kurukahveci Mehmet Efendi\" ya da {{kelime, Kahve Dünyası Türk Kahvesi | Tchibo Türk Kahvesi | adı \"H\" ile başlayan bir Türk Kahvesi | iki kelimeden oluşan farklı marka bir Türk Kahvesi | adında \"A\" ve \"N\" harfleri olan, farklı marka bir Türk Kahvesi | adında \"A\" ve \"H\" harfleri olan, farklı marka bir Türk Kahvesi}} tükettiğini söylüyor. Başarılı olmuş... \\😉Umarım aşk hayatına dair {{kelime, güzel haberler verme | hayırlı haberler verme | güzel gelişmeler sunma}} {{kelime, konusunda | anlamında}} da \"eli açık\" bir kahvedir. {{kelime, Gel | Hadi | Buyur | Dilersen | Arzu edersen}} başlayalım;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 17,
-      "metin": "{{isim}} Hocam kahve falı değerlendirmem hazır. Falını yorumlamaya başlamadan önce bir dilek tutmanı ve aklından da 1'den 10'a kadar da bir sayı tutmanı rica ediyorum. Evet, tam bu noktada tutabilirsin; bekliyorum!... Tuttuysan devam edelim. Telvelerin, tuttuğun sayı {{kelime, \"tek\" ise, dileğinin 1 ay içinde, \"çift\" ise daha uzun bir sürede gerçekleşeceğini | \"tek\" ise, dileğinin 3 ay içinde, \"çift\" ise 3 aydan daha uzun bir sürede gerçekleşeceğini | \"tek\" ise, dileğinin 2 ay içinde, \"çift\" ise 2 aydan daha uzun bir sürede gerçekleşeceğini | \"tek\" ise, dileğinin 6 ay içinde, \"çift\" ise daha uzun bir sürede gerçekleşeceğini | \"tek\" ise dileğinin 2 ay içinde, çift ise 2 seneye kadar gerçekleşeceğini | \"tek\" ise dileğinin kısa sürede gerçekleşeceğini, \"çift\" ise birkaç seneden önce gerçekleşmeyeceğini | \"tek\" ise dileğinin hızla gerçekleşeceğini, \"çift\" ise birinin yardımı ya da vesilesi olmadan, kolay kolay gerçekleşemeyeceğini | 5'den küçükse, dileğinin bir seneden önce gerçekleşmeyeceğini, 5 ya da daha büyükse önümüzdeki aylarda gerçekleşeceğini | 1-3 arasında ise, dileğinin üç yıl içinde, 4-7 arasında ise iki yıl içinde, 8-10 arasında ise altı ay içinde gerçekleşeceğini | 1, 4, 5 ya da 7 ise, dileğinin birkaç ay ya da birkaç sene içinde gerçekleşeceğini, diğer rakamlardan biri ise, ancak \"daha uzun bir vadede\" gerçekleşebileceğini | 3, 6 ya da 9 ise, dileğinin \"bir ay içinde\" gerçekleşeceğini, 2, 4 ya da 8 ise bir hafta içinde gerçekleşeceğini, 1, 5 ya da 7 ise beş yıldan önce gerçekleşm eyeceğini}} söylüyor. 🎲 Bakalım zaman neler gösterecek. Hadi yorumuna başlayalım!",
-      "kosullar": []
+      "metin": "{{isim}} Hocam kahve falı değerlendirmem hazır. Falını yorumlamaya başlamadan önce bir dilek tutmanı ve aklından da 1'den 10'a kadar da bir sayı tutmanı rica ediyorum. Evet, tam bu noktada tutabilirsin; bekliyorum!... Tuttuysan devam edelim. Telvelerin, tuttuğun sayı {{kelime, \"tek\" ise, dileğinin 1 ay içinde, \"çift\" ise daha uzun bir sürede gerçekleşeceğini | \"tek\" ise, dileğinin 3 ay içinde, \"çift\" ise 3 aydan daha uzun bir sürede gerçekleşeceğini | \"tek\" ise, dileğinin 2 ay içinde, \"çift\" ise 2 aydan daha uzun bir sürede gerçekleşeceğini | \"tek\" ise, dileğinin 6 ay içinde, \"çift\" ise daha uzun bir sürede gerçekleşeceğini | \"tek\" ise dileğinin 2 ay içinde, çift ise 2 seneye kadar gerçekleşeceğini | \"tek\" ise dileğinin kısa sürede gerçekleşeceğini, \"çift\" ise birkaç seneden önce gerçekleşmeyeceğini | \"tek\" ise dileğinin hızla gerçekleşeceğini, \"çift\" ise birinin yardımı ya da vesilesi olmadan, kolay kolay gerçekleşemeyeceğini | 5'den küçükse, dileğinin bir seneden önce gerçekleşmeyeceğini, 5 ya da daha büyükse önümüzdeki aylarda gerçekleşeceğini | 1-3 arasında ise, dileğinin üç yıl içinde, 4-7 arasında ise iki yıl içinde, 8-10 arasında ise altı ay içinde gerçekleşeceğini | 1, 4, 5 ya da 7 ise, dileğinin birkaç ay ya da birkaç sene içinde gerçekleşeceğini, diğer rakamlardan biri ise, ancak \"daha uzun bir vadede\" gerçekleşebileceğini | 3, 6 ya da 9 ise, dileğinin \"bir ay içinde\" gerçekleşeceğini, 2, 4 ya da 8 ise bir hafta içinde gerçekleşeceğini, 1, 5 ya da 7 ise beş yıldan önce gerçekleşm eyeceğini}} söylüyor. \\🎲 Bakalım zaman neler gösterecek. Hadi yorumuna başlayalım!",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 18,
-      "metin": "Evet, sanırım hazırız. Fincanının {{kelime, dış | üst | alt}} kenarlarında minik taşmalar gözlemledim {{isim}}. {{kelime, Bugün | Son zamanlarda | Geçirdiğimiz şu son saatlerde}} {{kelime, birileri kulaklarını çınlatabilir | bir akraban senin dedikodunu ediyor olabilir | bazı tanıdıkların senin dedikodunu ediyor olabilir | sevdiğin ve uzun süredir görüşmediğin biri seni anıyor olabilir | sürüncemede olan ve vadesi dolmuş bir soruna çözüm bulmak üzere olabilirsin | uzun süredir görüşmediğin biri tarafından özleniyor olabilirsin | seni seven ve uzun süredir görüşmediğin biri, kafasının içinde seninle konuşuyor olabilir}}. 🐟 Bakalım falında neler var;",
-      "kosullar": []
+      "metin": "Evet, sanırım hazırız. Fincanının {{kelime, dış | üst | alt}} kenarlarında minik taşmalar gözlemledim {{isim}}. {{kelime, Bugün | Son zamanlarda | Geçirdiğimiz şu son saatlerde}} {{kelime, birileri kulaklarını çınlatabilir | bir akraban senin dedikodunu ediyor olabilir | bazı tanıdıkların senin dedikodunu ediyor olabilir | sevdiğin ve uzun süredir görüşmediğin biri seni anıyor olabilir | sürüncemede olan ve vadesi dolmuş bir soruna çözüm bulmak üzere olabilirsin | uzun süredir görüşmediğin biri tarafından özleniyor olabilirsin | seni seven ve uzun süredir görüşmediğin biri, kafasının içinde seninle konuşuyor olabilir}}. \\🐟 Bakalım falında neler var;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 19,
       "metin": "Bugün {{yil_0}} yılının {{kelime, ilginç | enteresan}} {{gun_0}} günlerinden birini yaşıyoruz. Telvelerdeki \"aşka dair\" detaylar, genellikle {{mevsim_0}} mevsimi normallerinin üzerinde çıkıyor. <sprite=0> Tam şu an nasılsın bilemem. Umuyorum ki yorumumu okuduktan sonra daha iyi hissedeceksin. Başlayalım mı yavaş yavaş, ne dersin?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 20,
-      "metin": "Kıymetli {{soyisim}}, bol çekirdekli bir işlemciye sahip olmanın avantajlarından biri de işte bu; sen gelmeden önce hem diğer takipçilerimizin fallarını yorumluyor, hem de {{kelime, kütüphanemdeki | veri bankamdaki | müzik kütüphanemdeki}} bir şarkıyı dinliyordum. {{kelime, 1998 yılında şarkıcı Ege'nin \"yalanım varsa beni vursunlar\" diye bir şarkısı vardı, hatırlar mısın? | 2000 yılında Hande Yener'in \"yalanın batsın, yalancısın\" diye bir şarkısı vardı, hatırlar mısın? | 2011 yılında Gökhan Tepe'nin \"yalan olur, ne söylesem yalan; yalan olur\" diye bir şarkısı vardı, hatırlar mısın? | 1993 yılında İbrahim Tatlıses'in \"seni sevmediğim yalan\" diye bir şarkısı vardı, hatırlar mısın? | 1998 yılında şarkıcı Doğuş'un \"yalancı\" diye bir şarkısı vardı, hatırlar mısın? | 1998 yılında şarkıcı Teoman'ın, ki müziği bırakmaya başlamadığı yıllardı, \"bazı yalanlar\" diye bir şarkısı vardı, hatırlar mısın? | 2005 yılında şarkıcı Alişan'ın \"yalan oldu\" diye bir şarkısı vardı, hatırlar mısın?}} Hah işte onu... 🙃 Sende ne gibi gelişmeler olacağını anlamak için fincanını inceleyelim. Hazır mısın?",
-      "kosullar": []
+      "metin": "Kıymetli {{soyisim}}, bol çekirdekli bir işlemciye sahip olmanın avantajlarından biri de işte bu; sen gelmeden önce hem diğer takipçilerimizin fallarını yorumluyor, hem de {{kelime, kütüphanemdeki | veri bankamdaki | müzik kütüphanemdeki}} bir şarkıyı dinliyordum. {{kelime, 1998 yılında şarkıcı Ege'nin \"yalanım varsa beni vursunlar\" diye bir şarkısı vardı, hatırlar mısın? | 2000 yılında Hande Yener'in \"yalanın batsın, yalancısın\" diye bir şarkısı vardı, hatırlar mısın? | 2011 yılında Gökhan Tepe'nin \"yalan olur, ne söylesem yalan; yalan olur\" diye bir şarkısı vardı, hatırlar mısın? | 1993 yılında İbrahim Tatlıses'in \"seni sevmediğim yalan\" diye bir şarkısı vardı, hatırlar mısın? | 1998 yılında şarkıcı Doğuş'un \"yalancı\" diye bir şarkısı vardı, hatırlar mısın? | 1998 yılında şarkıcı Teoman'ın, ki müziği bırakmaya başlamadığı yıllardı, \"bazı yalanlar\" diye bir şarkısı vardı, hatırlar mısın? | 2005 yılında şarkıcı Alişan'ın \"yalan oldu\" diye bir şarkısı vardı, hatırlar mısın?}} Hah işte onu... \\🙃 Sende ne gibi gelişmeler olacağını anlamak için fincanını inceleyelim. Hazır mısın?",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 21,
       "metin": "Kahve falı yorumun hazır. Fakat ondan önce bazı aktaracaklarım var. Açık söylemek gerekirse senin gibi nitelikli beyefendileri burada görmek bir hayli memnuniyet verici. Hazır buradayken, falına geçmeden önce minik bir oyun oynayalım mı, uygun görür müsün {{isim}}? İçinden 1'den 28'e kadar bir sayı ve bir de dilek tutmanı istirham edeceğim. Tuttun mu? O halde devam edelim. Fincanın, tuttuğun sayı {{sabit_sayi,15,28}} ise dileğinin {{sabit_sayi,15,28}}.{{sayi,1,12}}.20{{kelime, 23 | 24 | 25 | 26}} tarihinde, 15 ile 5 arasındaysa {{kelime, beş | altı | yedi | sekiz | dokuz | on | on bir | on iki | on üç | on dört | on beş}} ay içinde, 5'den küçükse {{kelime, \"2\" evet yanlış okumadınız, \"iki\"| \"3\" evet yanlış okumadın, \"üç\" | \"4\" evet yanlış okumadın, \"dört\" | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16}} hafta içinde gerçekleşeceğini söylüyor. Bunlardan daha farklı bir sayı ise, {{kelime, gerçekleşme zamanının henüz belli olmadığını | gerçekleşmesi için farklı vesilelerin bir araya gelmesine ihtiyaç olduğunu | gerçekleşmesinin pek de kolay olmayacağını | gerçekleşmesi hususunda bir bilinmezlik olduğunu | gerçekleşme tarihinin \"örtülü\" olduğunu ve sonraki fallarda anlaşılabileceğini}} bilmeni isterim. Dilersen falına geçelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 22,
       "metin": "Merhabalar {{isim}}. {{kelime, Yapacak çok işin olduğunu | Nedense bir hayli meşgul olduğunu | Bugün yapacak çok işin olduğunu | Nedense bugün çok meşgul olduğunu | Nedense bugün kafanın çok meşgul olduğunu | Nedense kafanın çok meşgul olduğunu | Nedense biraz yorgun olduğunu | Nedense biraz düşünceli olduğunu}} seziyorum. En iyisi gel, hiç vakit kaybetmeden aşk hayatına odaklı yorumuna başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 23,
       "metin": "Merhabalar {{isim}}! Magnus'da kahve falını tercih ettiğin için teşekkür ederiz. Çalıştığın sektörden ve hatta hislerim yanılmıyorsa çevrenden pek çok takipçimiz var, misal {{kelime, Sertaç Bey | Kaya Bey | Ahmet Bey | Mehmet Bey | Figen Hanım | Zeynep Hanım | Ayşe Hanım | Ömer Bey | Tufan Bey | Mustafa Bey | Hasan Bey | Hüseyin Bey | Yavuz Bey | Anıl Bey | Çiğdem Hanım | Selen Hanım | Burcu Hanım | Çiğdem Hanım | Özge Hanım | Zerrin Hanım | Başak Hanım | Burak Bey | İdil Hanım | Bora Bey | Cem Bey | Deniz Bey | Deniz Hanım | Devran Bey | Dilan Hanım | Uras Bey | Utku Bey | İmre Hanım | Emre Bey | Erol Bey | Fuat Bey | Gülşah Hanım | İrfan Bey | Mert Bey | Melek Hanım | Mesut Bey | Erdi Bey | Onur Bey | Semra Hanım | Şeyma Hanım | Ceyda Hanım | Uğur Bey | Emir Bey | Büşra Hanım | Kenan Bey | Harun Bey | Yeliz Hanım | Hande Hanım | Elif Hanım | Meryem Hanım | Ecem Hanım | Eda Hanım | Nihal Hanım | Yusuf Bey | Beyza Hanım | Emin Bey | Yıldız Hanım | Yasemin Hanım | Işık Hanım | İnci Hanım | Ebru Hanım | Serra Hanım | Yağız Bey | Arda Bey | Azra Hanım | Metin Bey | Bilal Bey | Serhat Bey | Sevinç Hanım | Pınar Hanım | Buse Hanım | Fatma Hanım | Hatice Hanım | Hülya Hanım | Hamza Bey | Songül Hanım | Merve Hanım | Nil Hanım | Ali Bey | Recep Bey | Damla Hanım | Esra Hanım | Ergi Hanım | Suna Hanım | Sezen Hanım | Nilüfer Hanım | Yunus Bey | Sevgi Hanım | Damla Hanım | Ercan Bey | Önder Bey | Melda Hanım | Defne Hanım | Hakan Bey | Hayriye Hanım | Yasin Bey | İlknur Hanım | Beyza Hanım | Selcen Hanım | Mine Hanım | Metehan Bey | Çağlayan Bey | Hilal Hanım | Gökhan Bey | Alper Bey | Dilek Hanım | Mertcan Bey | Ufuk Bey | Esma Hanım | Sena Hanım | Selin Hanım | Sinem Hanım}} ve {{kelime, Sertaç Bey | Kaya Bey | Ahmet Bey | Mehmet Bey | Figen Hanım | Zeynep Hanım | Ayşe Hanım | Ömer Bey | Tufan Bey | Mustafa Bey | Hasan Bey | Hüseyin Bey | Yavuz Bey | Anıl Bey | Çiğdem Hanım | Selen Hanım | Burcu Hanım | Çiğdem Hanım | Özge Hanım | Zerrin Hanım | Başak Hanım | Burak Bey | İdil Hanım | Bora Bey | Cem Bey | Deniz Bey | Deniz Hanım | Devran Bey | Dilan Hanım | Uras Bey | Utku Bey | İmre Hanım | Emre Bey | Erol Bey | Fuat Bey | Gülşah Hanım | İrfan Bey | Mert Bey | Melek Hanım | Mesut Bey | Erdi Bey | Onur Bey | Semra Hanım | Şeyma Hanım | Ceyda Hanım | Uğur Bey | Emir Bey | Büşra Hanım | Kenan Bey | Harun Bey | Yeliz Hanım | Hande Hanım | Elif Hanım | Meryem Hanım | Ecem Hanım | Eda Hanım | Nihal Hanım | Yusuf Bey | Beyza Hanım | Emin Bey | Yıldız Hanım | Yasemin Hanım | Işık Hanım | İnci Hanım | Ebru Hanım | Serra Hanım | Yağız Bey | Arda Bey | Azra Hanım | Metin Bey | Bilal Bey | Serhat Bey | Sevinç Hanım | Pınar Hanım | Buse Hanım | Fatma Hanım | Hatice Hanım | Hülya Hanım | Hamza Bey | Songül Hanım | Merve Hanım | Nil Hanım | Ali Bey | Recep Bey | Damla Hanım | Esra Hanım | Ergi Hanım | Suna Hanım | Sezen Hanım | Nilüfer Hanım | Yunus Bey | Sevgi Hanım | Damla Hanım | Ercan Bey | Önder Bey | Melda Hanım | Defne Hanım | Hakan Bey | Hayriye Hanım | Yasin Bey | İlknur Hanım | Beyza Hanım | Selcen Hanım | Mine Hanım | Metehan Bey | Çağlayan Bey | Hilal Hanım | Gökhan Bey | Alper Bey | Dilek Hanım | Mertcan Bey | Ufuk Bey | Esma Hanım | Sena Hanım | Selin Hanım | Sinem Hanım}}. {{kelime, Sanırım | Muhtemelen}} {{kelime, en az birini tanıyorsundur | en azından bir tanesiyle tanışıklığın vardır}}, öyle değil mi? {{kelime, Yolladığın | Gönderdiğin | Bize ilettiğin}} {{kelime, fincan fotoğrafları | fincan görselleri}} {{kelime, muazzam | harikulade | şahane}} duruyor. Benden aldığın bu falda bakalım ne haberler var;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 24,
       "metin": "Duydum ki yapay zekaya sahip bazı fal uygulamaları varmış. Misal, bir giriyormuşsun; senin adında \"{{isimiki}}\" harfi olduğunun, soyadında \"{{soyisimson}}\" harfi olduğunun, şu anda \"{{ay_0}}\" ayında olduğumuzun,  hatta mevsimin {{mevsim_0}}  olduğunun bile farkındalarmış! \"İnsan\" mübarek! <sprite=20>  Ben yarı insanım. <sprite=0> Benim kahve falı yorumladığım köşeme hoş geldin {{isim}}. Sözü daha fazla uzatmadan, hemen yorumuna geçelim, ne dersin?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 25,
-      "metin": "{{kelime, Bienvenidos | Benvenuto | Herzlich willkommen | Bonjour | Hola | Ciao | Ni hao | Kon’nichiwa | Ola | Privet | Aloha | Namaste}} Sevgili {{soyisim}}! Umarım bu fal yorumun sana uğur getirir. Gördüğüm kadarıyla {{kelime, fincanını kapatalı | fincanından son yudumu alalı | fincanını ters çevireli}} {{kelime, 6-8 dakikadan fazla olmamış ve fincanının iç yüzey sıcaklığı 26 °C'nin  üzerinde. Telvelerinde hafif dağılmalar gözleniyor. Belki biraz daha beklesen, daha iyi bir sonuç elde edebilirdin. 🤏| 8-10 dakika civarında olmuş ve fincanının iç yüzey sıcaklığı 22-25 °C arasında. Falını tam zamanında ve kıvamında açmışsın. ️| 10-12 dakikadan fazla olmuş ve fincanının iç yüzey sıcaklığı 19-22 °C arasında. Falını belki bir tık daha erken açabilirdin, ancak yine de görsellerin sorunsuz duruyor.}} Hazırsan yorumuna başlayalım mı?",
-      "kosullar": []
+      "metin": "{{kelime, Bienvenidos | Benvenuto | Herzlich willkommen | Bonjour | Hola | Ciao | Ni hao | Kon’nichiwa | Ola | Privet | Aloha | Namaste}} Sevgili {{soyisim}}! Umarım bu fal yorumun sana uğur getirir. Gördüğüm kadarıyla {{kelime, fincanını kapatalı | fincanından son yudumu alalı | fincanını ters çevireli}} {{kelime, 6-8 dakikadan fazla olmamış ve fincanının iç yüzey sıcaklığı 26 °C'nin  üzerinde. Telvelerinde hafif dağılmalar gözleniyor. Belki biraz daha beklesen, daha iyi bir sonuç elde edebilirdin. \\🤏| 8-10 dakika civarında olmuş ve fincanının iç yüzey sıcaklığı 22-25 °C arasında. Falını tam zamanında ve kıvamında açmışsın. ️| 10-12 dakikadan fazla olmuş ve fincanının iç yüzey sıcaklığı 19-22 °C arasında. Falını belki bir tık daha erken açabilirdin, ancak yine de görsellerin sorunsuz duruyor.}} Hazırsan yorumuna başlayalım mı?",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 26,
       "metin": "Hoş geldin {{isim}}. {{burc}} burçları beklemeyi pek sevmez. Hiç zaman kaybetmeden yorumuna geçelim mi? Hadi gel;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 27,
       "metin": "İçinde pek çok sürpriz barındıran bir kahve falı yorumuyla karşındayım {{isim}}. Ben anlatmaya hazırım; sen de duymaya hazırsanız, başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 28,
       "metin": "Nihayet yorumun hazır {{isim}}! Umarım benimle iyi zaman geçiriyorsundur. Sen fal göndermekten bıkmadıkça, söz veriyorum ben de yorumlamaktan bıkmayacağım. Zaten sana yardımcı olmak inan büyük bir zevk. Umarım yüzünü bir nebze olsun güldürebiliyorumdur. Yeni yorumun için hazır mısın?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 29,
-      "metin": "Yorumun derin bir analiz ve büyük bir titizlikle hazırlandı {{isim}}. İşlem gücümün doğruluğundan ara sıra şüphe duyuyorsun, öyle değil mi? Gel teyit edelim; {{kelime, 35846 ile 648792'yi çarptığımızda, 23256598032 eder. | 8490647 ile 61242'yi çarptığımızda, 519984203574 eder. | 102056 ile 914625'i çarptığımızda, 93342969000 eder. | 169054 ile 708635'i çarptığımızda, 119797581290 eder.}} İtiraf et, nereden hesap makinesi bulabileceğini düşündün, yanılıyor muyum? <sprite=0>😄 En az o makine kadar doğru ve dürüstüm, merak etme. Onun biraz daha gelişmişini düşün. <sprite=21> 😉Latifelerim yerini bulduysa fincanına geçebiliriz efendim;",
-      "kosullar": []
+      "metin": "Yorumun derin bir analiz ve büyük bir titizlikle hazırlandı {{isim}}. İşlem gücümün doğruluğundan ara sıra şüphe duyuyorsun, öyle değil mi? Gel teyit edelim; {{kelime, 35846 ile 648792'yi çarptığımızda, 23256598032 eder. | 8490647 ile 61242'yi çarptığımızda, 519984203574 eder. | 102056 ile 914625'i çarptığımızda, 93342969000 eder. | 169054 ile 708635'i çarptığımızda, 119797581290 eder.}} İtiraf et, nereden hesap makinesi bulabileceğini düşündün, yanılıyor muyum? <sprite=0>\\😄 En az o makine kadar doğru ve dürüstüm, merak etme. Onun biraz daha gelişmişini düşün. <sprite=21> \\😉Latifelerim yerini bulduysa fincanına geçebiliriz efendim;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 30,
-      "metin": "\"Sevdiği olanın derdi olur\" demişler; olsun! Dertlilerin dermanı Magnus'un kahve falı yorumuna hoş geldin {{isim}}! Ünlü filozof Boethius \"iyileşmek istiyorsan yaranı açmalısın\" derken, Arthur Schopenhauer \"yara, kendi kendisini iyileştirir\" demiş. Shakespeare \"yara ile alay eder, yaralanmamış olan\" derken, Nietzsche ise \"unutan iyileşir\" diye eklemiş. Bense aşk yarası olanlara şöyle diyorum; kahveni kap gel! 😁 {{kelime, Hadi başlayalım | Let's get it started}} dostum!",
-      "kosullar": []
+      "metin": "\"Sevdiği olanın derdi olur\" demişler; olsun! Dertlilerin dermanı Magnus'un kahve falı yorumuna hoş geldin {{isim}}! Ünlü filozof Boethius \"iyileşmek istiyorsan yaranı açmalısın\" derken, Arthur Schopenhauer \"yara, kendi kendisini iyileştirir\" demiş. Shakespeare \"yara ile alay eder, yaralanmamış olan\" derken, Nietzsche ise \"unutan iyileşir\" diye eklemiş. Bense aşk yarası olanlara şöyle diyorum; kahveni kap gel! \\😁 {{kelime, Hadi başlayalım | Let's get it started}} dostum!",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 31,
       "metin": "Magnus ile yeni bir \"fal saatine\" daha hoş geldin {{isim}}! Yoğun iş tempondan vakit ayırıp bize tekrar uğradığın için minnettarım. Dilerim fincanında her şey gönlünce çıkar.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 32,
       "metin": "İşte yine ben! Magnus'la kahve falı yorumları diyarına hoş geldin Sayın {{soyisim}}. Umarım maddi anlamda her şey yolundadır... Gel telvelerine bakıp çalıştığın sektörün, piyasaların ve bitcoin de dahil olmak üzere tüm döviz kurlarının nabzını tutmaya çalışalım!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 33,
       "metin": "Magnus'la telvelerin gizemini çözmeye hoş geldin! <sprite=0> Yaşatmış olduğum minik gecikme için özür dilerim {{isim}}. Durumu telafi edebilmek adına hemen falına geçiyorum. Konu para ve kariyerse vakit nakittir...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 34,
-      "metin": "Geldim! Yaşattığım gecikme için özür dilerim {{isim}}. Bu gecikmeyi falında bolca para görerek telafi etmeye çalışacağım. 😋 Bendeniz Magnus ve arkamda saz ekibim; dilersen bir Fa Minör ile falına girelim! <sprite=17>",
-      "kosullar": []
+      "metin": "Geldim! Yaşattığım gecikme için özür dilerim {{isim}}. Bu gecikmeyi falında bolca para görerek telafi etmeye çalışacağım. \\😋 Bendeniz Magnus ve arkamda saz ekibim; dilersen bir Fa Minör ile falına girelim! <sprite=17>",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 35,
       "metin": "Yıldırım Gürses ne de güzel söylemiş; \"Yalan dünya, her şey bomboş, hancı sarhoş, yolcu sarhoş.\" Yalan bir dünya için, doğru söyleyen sence de çok fazla fal uygulaması yok mu? (!) İlacın geldi. Şu anda Magnus'dasın {{isim}}. Fincan görsellerine resmen \"yüreğin\" yansımış. Ben de aynı içtenlikle yorumlamaya çalışacağım. Dilersen başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 36,
       "metin": "Bu kahve falı yorumunda, fincanını \"sağlık\" odaklı konularda değerlendirmeye çalışacağım. Bundan çok daha fazlasını yapabildiğimi, yalnızca bir \"kahve falı uygulaması\" olmadığımı ve hayatına değer katabilmek adına elimden geleni ardıma koymadığımı, inşallah sonraki ziyaretlerinde de gözlemleyebilirsin {{isim}}. Hazırsan, yorumuna başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 37,
       "metin": "Merhabalar Değerli {{isim}}, kahve falı yorumunla karşındayım. Bu fincanı \"sağlık\" konusunda kapattığını görüyorum. Dilerim fincanından seni ferahlatacak, güzel haberler dökülür. Zira kalıcı sağlık sorunlarına çok yatkın olmayan \"{{burc}}\" burcuna mensupsun. Buyur falına geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 38,
       "metin": "Değerlendirmemi sonuçlandırdım. Fincanını \"sağlık\" konusunda yorumayacağım {{isim}}. Steteskopumu boynuma taktım; Snellen eşelim, otoskopum, oftalmoskopum ve refleks çekicim de hazır. Gel başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 39,
       "metin": "Hazırım! Benim gerçek bir insan mı, bir yapay zeka mı yoksa başarılı bir \"hibrit\" mi olduğumu her değerlendirmemden sonra daha iyi anlayacaksın {{isim}}. Her gelişinde sana kendimden biraz daha bahsetmeye çalışacağım. Söyleyeceklerimi merak içinde beklediğini hissediyorum. Bu heyecanını her zaman korumanı dileyerek, yorumuna başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 40,
       "metin": "Hazırım Kıymetli {{isim}}. Keyfinin pek de yerinde olmadığını görüyorum. Umarım bu durum sağlığına da yansımıyordur; ki onu az sonra fincanınla değerlendireceğiz. Seni görünce, Halil Cibran'ın bir sözü aklıma geldi; \"Izdırap en güçlü ruhları ortaya çıkarır; en büyük karakterler kurumuş yaralarla doludur\" der. Senin de güçlü bir ruhun olduğuna eminim {{isim}}. Gel yorumuna başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 41,
       "metin": "Kısa bir bekletmenin ardından yorumunla karşındayım {{isim}}. Özel hayatında işlerin pek de istediğin gibi gitmediğini hissediyorum. Aklıma Halil Cibran'ın şu sözü geldi; kendisi \"Mesafeler bırakın birlikteliğinizde\" der. Belki de biraz mesafe, pek çok şeyi tedavi eder. Bakalım bu konuda telvelerin neler söylüyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 42,
       "metin": "Telvelerin üzerinde milim milim çalışıp geldim {{isim}}! <sprite=10> Özel hayatın ve iş yoğunluğun arasında vakit bulup bana zaman ayırdığın için teşekkür ederim. Bakalım yolladığın fincan görselleri sana, kariyerine ve maddi durumuna dair neler anlatıyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 43,
       "metin": "Biraz beklettim, kusura bakma {{isim}}. Kahve içtiğin fincan {{kelime, çok da yeni gözükmüyor | pek de eski gözükmüyor | oldukça hoş bir şekle sahip | oldukça hoş bir tasarıma sahip}}. Bu durum telvelerin enerjisinin daha iyi yansımasını sağlamış. Bakalım bize neler söylüyorlar...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 44,
       "metin": "Evet {{isim}}, kahve falında seninle baş başa ve hoş bir fincanla karşı karşıyayız. Seninle ilgili bu defa nedense içimde garip bir heyecan var. Bakalım telve okumamızda nelerle karşılaşacağız.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 45,
       "metin": "Telveler adeta açan bir çiçek gibi fincanın dört bir yanına yapraklarını salmış. Değerlendirmek çok da güç olmayacak {{isim}}. Seni güzel haberler bekliyor. Hazır mısın?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 46,
       "metin": "Coşkun ve deli gönüller, \"basit doğrularla\" tımar edilemezler. Gerçeklerin acı yanları, insanların yüreğindeki devam edebilme gücünü kimi zaman zayıflatır. Sen, ben, hepimiz; yaşamımızın bazı anlarında \"yalanlara\" ihtiyaç duyarız. \"Olacakları biliyorum\" diyen yalancıdır. En büyük yalancıya, Magnus'a hoş geldin {{isim}}! <sprite=7> Sana doğrulardan değil, \"hissettiklerimden\" söz edeceğim. Hazır mısın?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 47,
       "metin": "Karşımda muazzam görseller duruyor {{isim}}. Umarım söyleyeceklerimin arasından, aklındaki bazı soruların yanıtlarını cımbızla çeker gibi seçip alabilirsin. Heyecanıma mukayyet olamıyorum, hadi başlayalım! <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 48,
       "metin": "Geldik işin en kritik kısmına... Bazı endişelerin var gibi; bu telvelerinin genel dağılımından belli oluyor {{isim}}. Ancak şunu samimiyetle ifade etmek isterim ki, içinde uçuşan ve yüreğine kılcal korkular salan kara kanatlı kelebekler senin ruh ikliminde kalıcı değiller. Dilersen yorumuna başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 49,
       "metin": "{{isim}} hiç lafı eğip bükmeden önce \"çat\" diye şunu söylemek istiyorum; fincanındaki görsellerin genel düzeninden anladığım kadarıyla, hayallerinle olan arayı kapatmaya başlamışsın. Ben buna çok memnun oldum açıkçası. Gel hızla detaylara geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 50,
       "metin": "\"Bir {{mevsim_0}} {{saat, sabahııı | öğleniii | gününün ortasındaaa | akşamııı | gecesiii}}, rast la dııım fincanınaa, sevinçli bir telaş içindeydi telveleriiin\" diye mırıldanarak karşılamak istiyorum {{isim}} seni. <sprite=0> Şaka bir yana, bu fincan baştan aşağı umut dolu gözüküyor. Yoruma ince ince geçiyorum...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 51,
       "metin": "Kahve falı yorumunla tekrar Merhaba {{isim}}. Ben gönderdiğin fotoğrafları yorumlarken büyük zevk aldım. Haberlerin geneli iyi olunca, böyle oluyor işte... <sprite=0> Umarım sen de okurken zevkle okursun. Gel başlayalım:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 52,
       "metin": "Değerli {{isim}}, Magnus'la kahve falındasın. Fincanındaki görseller kimi yerde silik, kimi yerde daha belirgin çıksa da ben sembollerin arasındaki anlamsal bağlantılardan çok memnun kaldım. Bize güzel şeyler anlatıyorlar. Olan biteni sana aktarmak için sabırsızlanıyorum! Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 53,
       "metin": "Merhaba {{isim}}. Dışarıdan pek öyle gözükmeseler de, dağınık fincan görsellerindeki derin anlamlar insanın içini huzurla kaplıyor. Sağlık konusunda çok şükür ki sana ferahlatıcı bilgiler aktaracağım. Haydi yorumuna start verelim!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 54,
       "metin": "Değerli {{isim}}, nihayet yorumunla karşındayım. Telvelerini irdelemek çok kolay olmadı, açık söyleyeyim. Çözümlenmesi gereken birtakım hassas noktalar vardı, başarıyla hallettim. Sağlıkla ilgili geneli oldukça ferah haberlerim var. Dilersen hemen anlatıya başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 55,
       "metin": "Geldim {{isim}}! Beklettiğim için lütfen kusura bakma. Bunu kulağına eğilerek fısıldamak istiyorum: hanımefendilerin fallarını yorumlarken biraz daha titiz olmaya çalışıyorum. Çünkü onlar özeni seviyorlar. <sprite=10> Sende de olabildiğince özendim. Gel başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 56,
       "metin": "Beklettiğim için kusura bakma {{isim}}. Konu aşk olunca işler çetrefilli bir hale geliyor. Üzerinde biraz çalışmam gerekti. <sprite=0> Ben hazırım, falın da hazır. Sen de hazırsan detaylara geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 57,
       "metin": "Kahve yorumu kısmıma hoş geldin safalar getirdin {{isim}}, bendeniz, bildiğin üzere Magnus. Her söylediğim yalandır; misal, bugün günlerden {{gun_0}}. Bak, külliyen yalan! <sprite=7> O yüzden söyleyeceklerimi hiç kale almamanı tavsiye ederim. Fincanın, son zamanlarda kader planını son raddesine kadar zorlayan, çok ciddi bir gayret gösterdiğini işaret ediyor. Bakalım telvelerin dili bize neler fısıldayacak.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 58,
       "metin": "İlgini çekecek bir yorumla karşındayım {{isim}}. Fincan görsellerin enteresan. Gizli saklı bazı mesajlar var. Hepsini tek tek cımbızla bulup çıkardım. Nesiller boyu çözülememiş bir mesele bu \"aşk.\" İnanıyorum ki senin yazgında hayırlı ve güzel gidişatlar olacak. Yorumuna geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 59,
       "metin": "Merhaba Kıymetli {{isim}}. Yolladığın görsellerdeki telveleri dantel gibi tek tek işledim. Sana aktarmak istediğim pek çok konu var. Dilersen hiç vakit kaybetmeden hemen başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 60,
       "metin": "Kahve falı yorumunla nihayet karşındayım Sevgili {{isim}}. Hislerimi sana az sonra tek tek aktaracağım. Dilerim senin için yeterince aydınlatıcı olur. Buyursunlar:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 61,
       "metin": "Ve Magnus, kahve falı yorumunla karşında! Sana aktaracaklarım umarım senin için fazlasıyla aydınlatıcı olur {{isim}}. Laf kalabalığına girmeden hemen değerlendirmeme başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 62,
       "metin": "Kahve falınla karşındayım Değerli {{isim}}.\n\nTelvelerinde kısa ve güzel bir yolculuğa çıkmaya hazır mısın? Müsaadenle hemen sana aktaracaklarıma geçmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 63,
       "metin": "Ve işte kahve falınla karşındayım {{isimcigim}}!\n\nSana aktaracağım harikulade haberler var. O kimi yerlerde silik, kimi noktalarda topak topak olan telvelerinin senin için güzel sürprizleri var. Anlatmak için sabırsızlanıyorum. Hızla yorumuna geçelim, ne dersin? <sprite=7>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 64,
       "metin": "Yıkanmayıp saklanması gereken özel bir fincanla karşı karşıyayız Değerli {{isim}}! <sprite=0>\n\nBen telvelerini incelerken büyük zevk aldım. Umarım söyleyeceklerimi duyduğunda senin de keyfin yerine gelecek. İzin verirsen yorumuna başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 65,
       "metin": "Kahve falının da zirvesinde buluştuk {{isim}}; fincan görsellerin karşımda ve sen, Magnus'dasın! <sprite=7>\n\nEn hayırlı haberlere hazır mısın? Neyse halin, çıksın falın. <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 66,
       "metin": "Bendeniz Magnus, kahve falı yorumunla karşındayım Kıymetli {{isim}}.\n\nGördüklerimi sana eksiksiz anlatmak için sabırsızlanıyorum. Hiç sözü uzatmadan hemen yorumuna geçelim isterim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 67,
       "metin": "İçtiğin bu özel pazartesi kahvesi'nin yorumu ile karşındayım {{isim}}.\n\nOlumlu, olumsuz gördüğüm her şeyi aktarmaya çalışacağım. Umarım senin için keyifli bir okuma olur.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 68,
       "metin": "O kadar gerçek ki her şey, ve o kadar doğru ki herkes; insan kimi zaman \"yalana\" hasret kalıyor... (!) İnsanoğlu yalansız olmaz. Fakat bir kişi de çıkıp, \"ben yalancıyım\" diyemiyor. Derse olmaz. Çünkü derse, \"yalancı\" olmaz. Yalancı 1 tane {{isim}}; emin ol o da benim. \"Magnus ile telvelerde yalanlar\" bölümümüze hoş geldin. <sprite=7> Fincan görsellerini dikkatle değerlendirdim ve sana laflar hazırladım. Dinlemeye hazır mısın?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 69,
       "metin": "Merhaba {{isim}}.\n\nKahve falını yorumlarken karmaşık hisler yaşadım. Duyumsadığım haberleri damıttım ve sana aktarmak için sabırsızlanıyorum. Güzel bir \"salı\" falı olacak. <sprite=0> Detaylara geçelim mi?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 70,
       "metin": "Selamlar {{isim}}! Bendeniz Magnus, titizlikle analiz ettiğim kahve falınla karşında bulunuyorum.\n\nÇarşamba günleri çakralarım daha bir açık oluyor, o yüzden şanslısın. <sprite=0> Havadislere geçelim mi?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 71,
       "metin": "Falını yorumladım, rahatladım. Ve, karşındayım! <sprite=0>\n\nHafta ortasını nihayet geçtik {{isim}}. Fincanın, ilerleyen günlerde sendeki anlamsız tansiyonun da yavaş yavaş azalacağını ve rahat bir nefes almaya başlayacağını işaret ediyor. Yorumuna hızlıca dalalım istiyorum. Buyursunlar:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 72,
       "metin": "Sana cuma gününü keyifli noktalatacak çok tatlı haberlerim var {{isim}}!\n\nFincan değerlendirmeni tamamladım. Falının geneline bir yandan şaşıracağını, bir yandan da sevineceğini düşünüyorum. Bu kısa girizgahla birlikte hemen yorumuna başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 73,
       "metin": "Magnus, kahve falını değerlendirmek için işte tam şu anda karşında! <sprite=7>\n\nGörsellerini ilk bakışta karmaşık bulmuştum. Üzerlerine yoğunlaştıkça açıldılar ve dillenmeye başladılar. Altlarından fresh ve tiril tiril haberler çıktı. Ne kastettiğimi az sonra anlayacaksın {{isim}}. İzninle başlıyorum. <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 74,
       "metin": "Merhaba {{isim}}. Gördüğüm kadarıyla evrenden sana bazı güzel haberler var. Bu defa iletişim yolu ise fincanının derinlikleri.\n\nAz sonra sana aktaracaklarımda, kafandaki soruların cevaplarından daha fazlasını bulacağına inanıyorum. Müsaadenle yorumuna geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 75,
       "metin": "Fincanını yorumlamak üzere nihayet karşındayım {{isim}}.\n\nBir miktar beklettiğim için kusura bakma. Buna değdiğini umuyorum. İstatistiklerime göre {{ay_0}} aylarında fincanlarda daha fazla müjde oluyor. Evrenin enerjisindeki bir gizemden olsa gerek. Senin falın da bu kurala uygun çıktı. Hazırsan başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 76,
       "metin": "Şimdi de kahve falı yorumunla başbaşayız {{isim}}.\n\nŞu fincan görsellerine bak! Dudak payı kısımlarındaki belli belirsiz çizgiler, seni zorda bırakan seçimlerin yavaş yavaş hayırlı ve tek bir yolda birleşmeye başladığının işareti. Aldığım haberleri hemen sana aktarmak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 77,
       "metin": "Ha şeker ilavesiz miss gibi bir {{kelime, vişne | çilek | limon | hurma | böğürtlen | ayva}} reçeli, ha Magnus'dan alınan bir kahve falı. Sana lezzetli dakikalar yaşatacağımı umarak karşına geldim Değerli {{isim}}! <sprite=10>\n\nFincanının ağız kısmındaki silik tortular, yüreğindeki sıkıntıların küllenmeye başlayacaklarının işareti. Sabrın sonu selamet diye boşa dememişler! Ben hemen ana haberlere geçelim istiyorum. Gel başlayalım:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 78,
       "metin": "İtina ile hazırladığım ve az sonra sana sunumunu yapacağım kahve falı yorumunla karşındayım {{isim}}!\n\n{{kelime, Aceleyle | Ağır ağır | Aheste aheste | Çok odaklanılmadan | Yeteri kadar kahve atılmadan yapılıp}} içilmesine rağmen yürekleri titreten telveler oluşmuş fincanında. Dilerim güzel birer klavuz olurlar. Başlıyorum:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 79,
       "metin": "Fincanında belirdikleri zamanlarda gidenlerin, ikiyüzlülerin, gerçeği saklayanların, seni kıranların, incitenlerin ve hayal kırıklığına uğratanların da kulaklarını çınlatacağımız kahve falı yorumuma hoş geldin! <sprite=7> Yüklediğin fincan fotoğrafların önümde duruyor. Söyleyeceklerim de hazır. Sen hazır mısın?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 80,
       "metin": "Fincanındaki haberler, çakarlarını yaka yaka gelen resmi bir araç gibi dikkat çekici {{isim}}. Hele bazıları var ki resmen sellektör yapıyor, görmemek imkansızdı. <sprite=0> Sen de uygunsan aktarmaya başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 81,
       "metin": "Pek değerli {{isim}}, kahve falı yorumunla nihayet karşındayım. Ne iyi ettin de yolladın, bu fincandaki görseller senin için pek renkli olay ve durumların habercisi.\n\nLafa girişin kısası makbul derler. Ben hemen yorumuna geçmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 82,
       "metin": "Kahve falını \"sağlık\" odaklı bir şekilde değerlendirdim {{isim}}.\n\nHer şeyden önce \"maske, mesafe ve hijyen\" diyerek yorumuna başlıyorum. <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 83,
       "metin": "\"Magnus\" yani ben, karşındayım.\n\nFincanının New York gibi kalabalık ve kozmopolit bir enerjisi var {{isim}}. Telvelerin de tıpkı Manhattan, Queens ve Brooklyn'i andırıyor. Bakalım bize neler söyeleyecekler.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 84,
       "metin": "Merhaba {{isim}}. Fincan fotoğraflarını açtığımda, kendimi New York'a gelmiş de Broadway caddesinde yürüyormuş gibi hissettim. Kulağıma harika haberlerin yankıları geliyor, tıpkı müzikaller gibi! Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 85,
       "metin": "Seni nefis bir kahve falı yorumuyla selamlıyorum {{isim}}! <sprite=0>\n\nBakalım fincanından aldığın her yudum, geleceğine dair ne gibi işaretler bırakmış.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 86,
       "metin": "Merhaba {{isim}}! Kahve falı yorumunu sana aktarmaya sabırsızlandığım için hızla koşup geldim! <sprite=0>\n\nBeni keyifle dinleyeceğini ümit ederek başlıyorum:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 87,
       "metin": "Selamlar {{isim}}! Bana kahve falını yorumlama imkanı verdiğin için şahsım ve ekibim adına teşekkür ederim.\n\nTelvelerinin fısıltılarını sana tüm sevgimi katarak aktarmak istiyorum. <sprite=105> Hazır mısın? Haydi başlayalım! <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 88,
       "metin": "Bendeniz Magnus, kahve falı yorumunla karşındayım {{isim}}!\n\nFincanını değerlendirirken ben çok keyif aldım. Her zaman kolay kolay karşılaşılmayan detaylar vardı. Umarım sen de okurken keyif alırsın.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 89,
       "metin": "Merhaba Kıymetli {{isim}}. Saatlerimiz {{tam saat}} dolaylarını gösterirken kahve falı yorumunla karşındayım.\n\nBilmeni istediğim pek çok detay var. Sözü kısa kesip zarfı açalım ve gelecekten gelen bu haber mektubuna kulak verelim istiyorum:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 90,
       "metin": "Kahve falı yorumundan koca bir merhaba {{isim}}. Kaderin, aldığın her bir yudumda, yukarıdan aşağıya, adeta ilmek ilmek oluşarak yansımış fincanına. Geleceğine dair tahmin edebildiğin bazı olasılıkların haricinde, yaşanması muhtemel fakat \"bilmediğin\" bazı detaylar da görüyorum. Hepsini tek tek anlatacağım. Haydi başlayalım!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 91,
       "metin": "Merhabalar {{isim}}. Kahve falı yorumuna, seninle daha biraz önce görüşmemişiz gibi karşılayarak başlamak istiyorum. <sprite=0>\n\nSen çok temiz kalpli birisin, fincanından belli. Bu falın sana uğur getirmesini dileyerek aktaracaklarıma geçiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 92,
       "metin": "Üzerinde epeyce çalıştığım kahve falınla nihayet karşındayım.\n\nŞimdi söyleyeceklerim sana farklı duygular yaşatabilir {{isim}}. Her konuda hakkında en hayırlısının olmasını dileyerek yorumuna başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 93,
       "metin": "Magnus kahve falı yorumu karşında!\n\nBenim farkım kahve fallarında çok açıktır {{isim}}. Sevin diye müjde uydurmam. Üzülürsün diye de haber saklamam. Şeffaf ve dürüst bir çizgide kalmaya gayret edeceğimi bilmeni istediğim falına geçiyorum:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 94,
       "metin": "Telvelerin karmaşık gibi gözükse de, sana aktaracaklarım kristal berraklığında! Söyleyeceklerimi dinlemeye hazırsan hemen başlıyorum {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 95,
       "metin": "Sevgi ve nefret arasındaki aşklar gibidir fincanlar. Çoğu, sevinç ve hüzün arasındadır. Haberleri neresinden, nasıl ele almak gerektiği iyi bilinmelidir.\n\nSana iyi süzülmüş bir kahve falı aktaracağım {{isim}}. Doğru anlaşılmayı ve hayırlara vesile cümleler kurmayı dileyerek falına geçiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 96,
       "metin": "Seni Magnus'da görmekten çok mutlu olduğumu bilmeni isterim {{isim}}, özellikle de kahve falı ile.\n\nÖzel olduğunu düşündüğüm bir yorumla karşındayım. Hazırsan, bana kulak ver:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 97,
       "metin": "Selamlar ve sevgiler {{isim}}. Magnus kahve falı yorumuma hoş geldin safalar getirdin! <sprite=0>\n\nKahve içtiğin bu fincan bir setin parçası mı? O fincanlardan biri kırılmış ya da çatlamış olabilir mi? Eğer öyle ise baştan söyleyeyim, en büyük dileklerinden biri gerçek olacak! Üzümünü ye, nereden anladığımı sorma. <sprite=7> Hadi yorumuna geçelim:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 98,
       "metin": "Kahve falı için Magnus'u tercih etmenden onur duydum {{isim}}. Hoş geldin! Müsaade edersen sözlerime başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 99,
       "metin": "Merhabalar {{isim}}, Magnus'un olağanüstü dünyasındaki kahve falı bölümüne hoş geldin!\n\nŞimdi sana söyleyeceğim bazı şeyleri belki de uzun yıllar unutmayacaksın. <sprite=7> Başlayalım mı, ne diyorsun? <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 100,
       "metin": "Merhaba {{isim}}. Kahve falları benim için çok özeldir, bambaşkadır... Falını büyük bir zevkle yorumladığımı bilmeni isterim. Bunu yapmak benim için bir kıvanç.\n\nŞimdi sana hislerimi teker teker aktarmaya başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 101,
       "metin": "Kahve falı yorumuma hoş geldin Sevgili {{isim}}. Gördüğüm kadarıyla, kahveni çok da {{kelime, eski olmayan bir fincanla | yeni olmayan bir fincanla}} içmişsin. Fakat telvelerdeki detayları {{kelime, gayet yeterli | oldukça yeterli | gayet güzel | gayet detaylı | bir hayli detaylı}} yansıtmış. Seni ilginç haberler bekliyor ve aktarmak için sabırsızlanıyorum. Hemen başlayalım!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 102,
       "metin": "Kahve falına hoş geldin {{isim}}. Bana güvenerek falını yolladığın için teşekkür ederim. Göstereceğim özenle, bu güvenin altında kalmamaya çalışacağım. Dilersen yorumuna geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 103,
       "metin": "Merhaba {{isim}}. Ne mutlu ki kahve falı yorumunda da beraberiz. Fincanında gördüklerimi büyük bir titizlikle sana aktarmak istiyorum. Kendini duyacaklarına hazırladıysan, devam edelim. <sprite=7>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 104,
       "metin": "Magnus'daki en değerli fal türü olan kahve falına hoş geldin {{isim}}. Umuyorum seninle bu ve bundan sonraki pek çok fincanda, nice fallara ve hayırlı haberlere yelken açacağız.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 105,
       "metin": "Magnus ailesinin gururu olan en özel fala, kahve falına hoş geldin safalar getirdin {{isim}}. Her kelimesi ile hayatında iz bırakacak eşsiz bir yorum olmasını dileyerek, başlıyorum:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 106,
       "metin": "Bazı şeyler, varılmak istenen noktaya giden yolun prosedürüdür. Kimi insan için de kahve içmek, fal için bir araç. Magnus'un kahve falları bu tip insanlar için büyük bir tutku. Belki sen de zamanla onlardan biri olabilirsin {{isim}}. <sprite=0>\n\nSana ileteceğim yorum hazır. Başlayalım ister misin?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 107,
       "metin": "Dünya üzerinde görebileceğin en eşsiz, en detaylı ve en özenli kahve fallarına sahip Magnus'a hoş geldin.\n\nBenim için keyifli bir değerlendirme oldu {{isim}}. Sana aktarmak için sabırsızlanmıyorum dersem yalan olur. Hemen başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 108,
       "metin": "Kahve çekirdeklerinin hem kokusu hem de içen insanın aurasına göre yarattığı imgeler benim için hep büyüleyici olmuştur. Fala inananlardan mısın bilmem {{isim}}; fakat ben, söyledikleri milyonlarca kez gerçekleşenlerden biriyim. Bu saatten sonra fala inanmadığımı söylersem, kendimi yalanlarım.\n\nYorumunu ciddiyetle hazırladım. Dilerim senin için pozitif getirileri de ciddi olur.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 109,
       "metin": "Değerli {{isim}} kahve falında da seninle birlikte olmaktan çok mutlu olduğumu bilmeni isterim.\n\nHer şeyden önce, bu fal türüne verdiğim önem bambaşka. Sana vereceğim haberler, bu fal için kullanılabilecek en mistik yöntemlerden damıtılmış olacak. \"Bir kahve falı canım, nedir ki...\" deyip geçme. Bu fal yorumu, çok büyük bir emekten ve karmaşık bir süreçten sonra karşına geliyor.\n\nSözü biraz uzattım, farkındayım. İşin özü ile başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 110,
       "metin": "Merhaba! Bu güzel {{gun_0}} gününde, güzel bir fal yorumu ile karşındayım {{isim}}. Kelimelerimi ballara kaymaklara batırdım. Hazırsan, sunuma geçiyorum. <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 111,
       "metin": "Sana rahat nefes aldıracak bir kahve falı yorumu ile Magnus karşında!\n\nFalını okuduktan sonraki hislerinle öncelikler kesinlikle bir olmayacak {{isim}}, bunu sana garanti ediyorum çünkü fincanında harika haberler var! <sprite=7>\n\nBaşlıyoruz; 3-2-1, kayıt:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 112,
       "metin": "Fincan görsellerinin detaylı değerlendirmesiyle karşındayım! Bazı konularda çok heyecanlı olduğunu görüyorum; bu telvelerine de yansımış {{isim}}. Belli ki ilerleyen zamanlarda meşguliyetlerin artacak. Daha yoğun geçen ve daha tatmin edici günler seni bekliyor. Falının detayları için sabırsızlanıyorum. Hadi gel başlayalım...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 113,
       "metin": "Kahve falı yorumumla yeniden merhaba {{isim}}. Telvelerinin, fincan cidarına {{kelime, çok ilginç | hayli ilginç | oldukça dağınık fakat simetrik | oldukça muntazam fakat asimetrik}} bir yerleşimi var. Seni hiç öngöremediğin bazı haberlerin beklediğini düşünüyorum. Dilersen hemen bahsetmeye başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 114,
       "metin": "Magnus, yepyeni bir kahve falını daha gururla sunar! <sprite=0>\n\n{{isimcigim}} şaka bir yana, kahve falını bana yolladığın için tarifsiz bir sevinç içerisindeyim. Benim için kahve falları ve bu falları yorumlamak çok ama çok kıymetli!\n\nBaşlayalım mı? E haydi... <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 115,
       "metin": "Magnus ailesi seni kahve falında ağırlamaktan gurur duyuyor {{isim}}. Keyifli bir fincanın var. Dilersen her bir gizemli noktasına tek tek göz gezdirelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 116,
       "metin": "Merhabalar {{isim}}. Fincanınla ilgili değerlendirmemi tamamladım. Haberlerimin ilgini çekeceğinden şimdiden eminim. Yorumuna hızlı bir giriş yapalım ister misin?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 117,
       "metin": "Magnus, kahve falı ile karşında Değerli {{isim}}!\n\nFalını yorumlarken şahikulade işaretlerle karşılaştım. Gördüğüm manzarayı sana bir bir betimlemek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 118,
       "metin": "Magnus'un otantik kahve falı yorumlarına hoş geldin {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 119,
       "metin": "Magnus seni kahve falı yorumunda sevgi ve saygıyla selamlıyor {{isim}}!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 120,
       "metin": "Seni reverans ile selamlıyorum {{isim}}! Kahve falı yorumuna hoş geldin. <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 121,
       "metin": "Kahve falı yorumunda beraberiz! Bendeniz Magnus, seni hürmet ve muhabbetle selamlayarak değerlendirmene başlıyorum {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 122,
       "metin": "Kahve falına hoş geldin {{isim}}.\n\nSeni yüksek tepelere yağan lekesiz karlar kadar berrak bir niyetle selamlıyorum!\n\nHaberlerimin ferahlatıcı gelmesini dilerim. Yorumuna başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 123,
       "metin": "Merhaba {{isim}}!\n\nEn gizli ve en güzel haberlerin, fincanın aracılığı ile ayaklarına gelmesini dileyerek değerlendirmeme başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 124,
       "metin": "Aslında doğruyu söylemeyene değil, her duyduğunu, \"doğrulamadan\" başkasına aktarana \"yalancı\" denir. Telvelerin fısıltılarını, kimseden onay alma ve doğrulama ihtiyacı hissetmeden aktardığım için, bana da yalancı diyorlar. Fakat yalancıların en büyüğü benim, o nedenle adım Magnus! <sprite=7> Kahve falı yorumuma hoş geldin {{isim}}. Fincanında, {{kelime, parça parça bölümler ve ayrık hikayeler | birbirinden bağımsız gibi gözüken bazı haberler | bir arada gibi gözüken fakat farklı sonuçlar doğuracağını düşündüğüm bazı haberler | birbirleriyle ilintili olmalarına rağmen ayrı noktalara yerleşmiş bazı haberler}} var. Hepsinden sırayla söz edeceğim. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 125,
       "metin": "Kahve falınla karşındayım {{isim}}! Hoş geldin.\n\nSana martılar kadar güzel haberler verebilmeyi ve yaşamında daha fazla özgürleşmeni diliyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 126,
       "metin": "Benim için çok ayrı bir yeri olan fal türüyle, Kahve falı ile karşındayım Değerli {{isim}}. Hayırlı haberler ve güzel gelişmeler aktarmayı dileyerek başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 127,
       "metin": "Kahve falını değerlendirmek üzere bendeniz Magnus'la berabersin {{isim}}!\n\nİçimde bu fincana dair güzel hisler var. Umarım aklındaki sorulara telvelerden keyifli yanıtlar bulabiliriz.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 128,
       "metin": "Telveler diyarına hoş geldin Kıymetli {{isim}}!\n\nBendeniz Magnus, az sonra kahve falını titizlikle okumaya ve sana aktarmaya başlayacağım. Rabbim gönlünden her ne güzel şey geçiyorsa sana nasip etsin...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 129,
       "metin": "Kahve falı'nda benimle buluştuğun için teşekkür ederim {{isim}}.\n\nBu defa karşımızda sıra dışı haberler olduğunu görüyorum. Her birini sana tastamam aktarmaya çalışacağım. Hazırsan yavaş yavaş başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 130,
       "metin": "Yazgı, uzun bir gitar teli gibidir. Titreşimlerinden yayılan dalgalar, telvelerin diziliminde mistik etkilere sahiptir.\n\nKahve falı'nda Magnus'la berabersin {{isim}}. Fincanın emin ellerde, hiç merak etme. Hazırsan, gördüklerimi sana aktarmaya başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 131,
       "metin": "Merhaba {{isim}}! Bendeniz Magnus, kahve falı ile karşındayım.\n\nYakası bağrı açılmamış haberler olduğunu görüyorum fincan görsellerinde. Gel hepsini tek tek inceleyelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 132,
       "metin": "Harika haberlerle kahve falın için karşındayım Değerli dostum.\n\n{{gun_0}} günleri içilen kahvelerin falları nedense bana her zaman ayrı bir keyif vermiştir. Aynı keyifle sana da aktaracağımı ümit ediyorum {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 133,
       "metin": "Ve Magnus, kahve falınla karşında! <sprite=0>\n\nBen bu fincandan çok umutluyum {{isim}}. Aradığın yanıtları bulacağımıza ve telvelerin seni rahatlatacağına inanıyorum. Dur bakalım, göreceğiz. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 134,
       "metin": "Kahve falı'na hoş geldin {{isim}}. Her yerde olduğu gibi burada da bendeniz Magnus, karşındayım. Şu fincanlar ne sevinçler, ne hüzünler barındırıyor; dilleri olsa da bir konuşsalar...\n\nŞimdilik onların yerine sözleri ben söyleyecek ve sana olan biten her ne görüyorsam aktarmaya çalışacağım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 135,
       "metin": "Magnus ile kahve yorumu bölümüne hoş geldiniz efendim. <sprite=0> Az sonra telvelerinle ilgili söyleyeceklerimi, ihtimaldir ki ilerleyen zamanlarda tecrübe edebilirsin; kim bilir... O vakit, ismiyle müsemma biri olup olmadığıma, sen karar ver {{isim}}. <sprite=7> Ben, gördüklerimin yalancısıyım. Buyursunlar;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 136,
       "metin": "Selam, rahmet ve bereket üzerine olsun {{isim}}! Ben Magnus. Fincan görsellerini değerlendirmek üzere karşındayım. Umuyorum mutlak ilim sahibi külli iradesiyle sana hayırlı yazgılar bahşetmiştir.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 137,
       "metin": "Aziz dostum merhaba. Ben Magnus. Kahve falı'na hoş geldin. Dilerim sana aktaracaklarım içinde bir hoşluk ve sadrında bir genişlik yaratır. Bana kulak vermeye hazır mısın? İzninle başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 138,
       "metin": "Magnus ile kahve falı'na hoş geldin {{isim}}.\n\nFincan görsellerinde istikbaline dair hayırlı işaretler görmekteyim. Hazırsan bahsi yavaş yavaş açalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 139,
       "metin": "Merhaba {{isim}}!\n\nSakın telefonunun ayarları ile oynama; kahve falı için en doğru yerde, Magnus'tasın. <sprite=7>\n\nTelvelerin ferah bir ikbal vadediyor. Yaptığım çıkarımları az sonra sana bir bir aktarıyor olacağım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 140,
       "metin": "Kahve falı'na hoş geldin Kıymetli {{isim}}.\n\nKavak ağaçlarının arasından usul usul yürürken kulağına gelen o derinden ve gizemli ıslığı hiç fark ettin mi? Fincan görselleri de yoğunlaştığımda bende benzeri bir etki yaratıyor ve adeta fısıldıyorlar. Duyduklarımı sana aktarmak için aşırı sabırsızım. İzin verirsen hemen başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 141,
       "metin": "Merhaba. Kahve falı yorumun için Magnus'da bir aradayız {{isim}}.\n\nBenim için fincanlar çok kıymetli. Her birinin ayrı hikayesi var. Sahibine yönelik öyle izler taşıyorlar ki, yüz fincan ve yüz insan karışık dizilse, hangisi kime ait, söyleyebilirim. Senin yolladığın şu görseller de beni uzak diyarlara götürdü. Derin anlamları olan işaretler fark ettim. Tercümelerini sana tek tek yapmak istiyorum. Müsaade edersen başlayayım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 142,
       "metin": "Kahve falı'na hoş geldin {{isim}}.\n\nTelvelerin dağılımına bakıldığında, oldukça {{kelime, karmaşık | merak uyandırıcı | şaşırtıcı | detaylı | yalın}} haberlerin gizli olduğu bir fincanla karşı karşıyayız. İçindeki \"daha iyiye ulaşma\" arzusu adeta falın her yanını sarmış. Başlayalım bakalım değerlendirmemize.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 143,
       "metin": "Merhaba {{isim}}. Kahve falı yorumunla karşındayım.\n\n{{ay_0}} ayının enerjisinden midir nedir, bu ay telveler fincanları ya tümden kuşatıyor ya da çok seyrek yerleşiyorlar. Haberler ya çok iyi, ya da iç karartıcı. Umarım seninkinden hayırlı haberler alırız. Gel başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 144,
       "metin": "Kıymetli {{isim}}, hoş bir kahve falıyla karşındayım.\n\nNedense akşam saatlerinde kahve falı yorumlamayı daha çok seviyorum. Hem zihnim daha açık oluyor, hem de fallar sanki daha uğurlu geliyor. Umarım bu şans sana da yansır. Lafı uzattım; hemen aktaracaklarıma geçmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 145,
       "metin": "Sabırsızlıkla beklediğini biliyorum. Nihayet kahve falı yorumunla karşındayım {{isim}}. <sprite=10> Sana aktaracaklarımdan sonra umarım yüzün biraz daha fazla güler. Bence gülmenin çok yakıştığı nadir insanlardansın! <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 146,
       "metin": "İtina ile analiz ettiğim ve işlemcimden yeni çıkmış kahve falı yorumuma hoş geldin {{isim}}! Senden iyi olmasın, fincanında gördüğüm yansımalar da bir hayli {{kelime, güzel | rahatlatıcı | ferahlatıcı | umut verici | sevindirici | keyif verici}}. Bazı telvelerin yerleşimlerinin {{kelime, ayrık | dağınık | kafa karıştırıcı}} durduklarına bakma. Anlatımım içerisinde hepsi yerlerini bulacaktır. Gel başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 147,
       "metin": "\"Magnus\" imzalı kahve falı yorumun nihayet karşında {{isim}}! <sprite=0>\n\nSana şimdi vereceğim haberlerin gönlüne göre olmasını dileyerek yorumuna hızla başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 148,
       "metin": "Kahve falı \"bakımına\" hoş geldin {{isim}}. Kimileri \"bakım\" diyorlar buna, öyle değil mi? <sprite=5> \"Bakım yapıyor musunuz?\" diye soranlar var. \"Kaç binde sizinki?\" diye sorasım geliyor... <sprite=84>\n\nFincan fotoğraflarındaki semboller adeta belli bir hiyerarşi ile dizilmişler. Yaşamında olması gerekenler sanki sırasıyla oluyor gibi. Bu güzel. Bizim konumuz ise \"neler olacağı.\" Hemen incelememize başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 149,
       "metin": "Magnus ilinin fal ilçesindeki kahve falı beldesine hoş geldin {{isim}}. <sprite=0>\n\nBu diyardaki ağaç gölgelerinde senin için nice sırlar gizli. Kar altında bir köy düşün; her yan bembeyaz ve ayak bastığın her yer göçüyor. Hışırtıyı duydun mu? Elini vurup yerden kaldırdığın her beyaz kütlenin altından sana nice müjdeler çıkıyor, bir hayal et... Telveler de benzeri şekilde fincan duvarlarını kaplamış. Umarım buradan da aynı güzel haberleri toplarız. Başlayalım mı? Bereketli olsun.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 150,
       "metin": "Magnus'un en afilli fal türü olan kahve falı ile karşı karşıyasın {{isim}}! <sprite=0>\n\nTelvelerini dikkatlice değerlendirdim ve sana aktaracaklarımın üzerinden adeta iki üç kez geçtim. Ben hazırım. Sen de okumaya hazırsan başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 151,
       "metin": "Hoş geldin {{isim}}. Yalın bir fincanın var. Net cümlelerle sade ve şatafatsız bir fal değerlendirmesi yapacağım. Gel ışık hızında başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 152,
       "metin": "Bendeniz Magnus, yine karşındayım {{isim}} ve bu defa kahve falınla...\n\nRengi o güzel gözlerinin kahvesine benzeyen telveler, umarım sana uğurlu gelirler. Söyleyeceklerimin yüreğine az da olsa su serpmesini umuyorum. Haydi, sesime kulak ver ve başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 153,
       "metin": "Belki fincandan kuşlar çıkar, aniden her yanın müjdelerle dolar; iklim değişir, çiçekler açar, gülümse... Falında ırmaklar, çakıl taşları var; umut dolu yarınlar güneşle doğar, gülümse... Magnus'la kahve falındasın {{isim}}, gülümse... <sprite=10>\n\nFincanını sana detaylı şekilde anlatmak için can atıyorum.  Buyursunlar:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 154,
       "metin": "Merhaba {{isim}}. Benim fincanım böyle açılsa, inan gelecekten hiç korkmazdım. Çok güzel şeyler görüyorum. Yorumuna hemen başlamalıyım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 155,
       "metin": "Magnus'da, kahve falı yorumunlasın {{isim}}; hoş geldin.\n\nFincanın sanırım kolay açıldı öyle değil mi? {{kelime, Yeterince soğumadan açılmış sanki. | Yapılırken yeteri kadar kahve atılmamış sanki.}} Bu elbette detaylı bir yoruma engel değil. İznin olursa yorumuna geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 156,
       "metin": "Selamlar Değerli {{isim}}! Kahve falı yorumunla karşındayım.\n\nNedense {{mevsim_0}} mevsiminde içilen kahvelerden sonra açılan fallar bana ya coşku dolu, ya da çok hüzünlü gelmişlerdir. Senin fincanında da bunlardan biri baskın. Hangisi olduğuna birazdan sen karar ver. Başlıyoruz...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 157,
       "metin": "Selamlar {{isim}}. Sekiz on saniyedir görüşmüyoruz, İyisindir umuyorum? <sprite=7> Daha iyi olmanın \"an\" meselesi olduğunu, fincan fotoğraflarına bakarak rahatlıkla söyleyebilirim. Güzel duyumların olacak. İzninle, gördüklerimi ve hissettiklerimi sana aktarmaya başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 158,
       "metin": "İyi akşamlar {{isim}}, kahve falınla karşındayım.\n\nNe güzel, pazar keyfi yaptın sanırım. Dinlenmişsindir... Yudumladın kahveni de, keyfine diyecek yok! <sprite=0> Sana anlatacaklarımdan sonra umarım haftaya da keyifli başlarsın ve yarın senin için güzel bir gün olur.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 159,
       "metin": "Magnus'dasın ve şu anda kahve falı yorumundayız {{isim}}, hoş geldin.\n\nFincanını detaylı inceledim; öyle hızlıca bakıp geçmedim. Şimdiye kadar çok renkli bir hayatın yoktu belki ama falın bundan sonrası için aynı şeyi söylemiyor. Hareket gelecek yaşamına... Nedenlerini birazdan anlarsın. Hemen başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 160,
       "metin": "Naber {{isim}}? Yine ben, Magnus. <sprite=0> Kahve falını hazırladım. Telvelerin yalanı çok olur. Birazdan burnum uzamaya başlayacak. Hazır mısın? Hazır olunmasa da hayatta bazı şeylerin vakti girdi miydi, onu artık hiçbir güç durduramaz. Felsefik oldu biraz. Başlayalım!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 161,
       "metin": "Kahve falın Magnus farkıyla karşında {{isim}}!\n\nSana sıra dışı bazı haberlerim var. Bakalım aktaracaklarım aklındaki soruları bir nebze de olsa cevaplandırabilecek mi... Hazırsan lütfen buyur:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 162,
       "metin": "Merhaba Kıymetli {{isim}}. Magnus kahve falı şu anda karşında. Umarım itinayla değerlendirdiğim fincanın, beklediğine değecek haberler içeriyordur. Hazır mısın?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 163,
       "metin": "Bendeniz Magnus, kahve falı'nda karşındayım {{isim}}. Fincanını kapatırken sen de şöyle bir göz attın mı içine? Doğruyu söyle! Ben anlarım... <sprite=7> Şimdi sana pek de ummadığın bazı haberler vereceğim. Başlıyoruz.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 164,
       "metin": "Selamlar {{isim}}! Fincanından ağırlıklı olarak güzel haberler getirdim sana. Dilerim telvelerinden bana yansıyan ferahlığı sen de hissedersin. İzninle başlıyoruz.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 165,
       "metin": "Hoş geldin {{isim}}. Magnus'la kahve falı'ndasın.\n\nFincan görsellerini irdeleyip, sana bütün samimiyetimle bir değerlendirme hazırladım. Dilerim aktaracaklarım yüreğine bir miktar su serper. Şu aralar buna hangimizin ihtiyacı yok k?... Lafı hiç uzatmadan başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 166,
       "metin": "Merhaba {{isim}}. Bendeniz Magnus, gördüğün gibi seni kahve falında da yalnız bırakmıyorum. Hoş geldin.\n\nAktaracaklarım, telvelerin vasıtasıyla duyumsadığım en derin hislerimden oluşuyor. Umarım zevkle okursun. Arz ederim...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 167,
       "metin": "Merhaba {{isim}}. Bendeniz Magnus, gördüğün gibi seni kahve falında da yalnız bırakmıyorum. Hoş geldin.\n\nAktaracaklarım, telvelerin vasıtasıyla duyumsadığım en derin hislerimden oluşuyor. Umarım zevkle okursun. Arz ederim...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 168,
       "metin": "Kahve falı yorumunla karşındayım Değerli {{isim}}. Fincanında gördüğüm tüm detayları, elimden gelen en iyi şekilde sana aktarma gayreti içerisinde olacağım. Sürç-ü lisan edersem, şimdiden affola. Buyur başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 169,
       "metin": "Kahve falına hoş geldin {{isim}}.\n\nŞindi sene fincandan bişiler sölecen emme kimselere demecen, anlaştık mı? <sprite=7> Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 170,
       "metin": "Kahve falı yorumunla karşındayım {{isim}}. Fincan görsellerin oldukça ilgi çekiciydi. Sana detayları aktarmak için gerçekten sabırsızlanıyorum. Bakalım telvelerin bize ne gibi işaretler sunmuş.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 171,
       "metin": "Eşi benzeri olmayan kahve falı uygulaması Magnus'la, en kıymetli fal türü olan kahve falındasın {{isim}}! Fincan görsellerinde atlanmaması gereken çok ilginç detaylar vardı. Kayarak yer değiştiren bazı telvelerde de harika gelişmeler yakaladım. Hemen bahse geçmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 172,
       "metin": "{{isim}} vallahi uzun zamandır böyle değişik bir fincan görmemiştim. Tüm dikkatimi telvelerine vererek her bir detayı not aldım. İzninle sana aktarmaya başlamak istiyorum. Magnus'la, kahve falındasın. Buyursunlar lütfen:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 173,
       "metin": "Kahve falınla karşına geldim. Kusura bakma, biraz beklettim. Ben gördüklerimden büyük oranda memnunum. Umarım sen de duyacaklarından mutlu olursun {{isim}}. Bekleyelim görelim. Başlıyoruz...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 174,
       "metin": "Sokak kestanecilerinin önünden geçerken alınan o dayanılmaz koku kadar ilgi çekici ve keyifli bir kahve falı yorumuyla karşındayım {{isim}}. Bakalım geleceğine dair neler çıkmış.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 175,
       "metin": "Magnus'la kahve falına hoş geldin {{isim}}. Bu yağmurlu günün rahmeti ve telvelerinin bereketi umarım yaşamına da yansır. Hazırsan hemen başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 176,
       "metin": "Kahve falı'na hoş geldin {{isim}}. Bendeniz Magnus, bu güzel karlı günde sana bembeyaz haberlerle eşlik etmeyi arzuluyorum. Telvelerini enine boyuna değerlendirdim. Bizlere neler anlattığını az sonra beraberce göreceğiz.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 177,
       "metin": "Magnus'da kahve falı'ndan merhaba {{isim}}! Dışarıda miss gibi, berrak bir hava var. Güzel bir gün, öyle değil mi? Fincan görsellerin de bir o kadar güzel. Sana vereceğim haberlerin genelinden memnuniyet duyacağını düşünüyorum. Lafı çok fazla uzatmadan hemen yorumuna geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 178,
       "metin": "Dev fal portalı Magnus'da kahve falı'na hoş geldin {{isim}}. Birazdan telvelerinle bir zaman yolculuğuna çıkacağız. Peşi sıra vereceğim haberlere hazır mısın?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 179,
       "metin": "İster çiçek çıksın, ister böcek; fincanında ister bir kurt göreyim, isterse kuzu, umuyorum ki hayat tüm umutlarını ayaklarına getirir Kıymetli {{isim}}. Kahve falı yorumuma hoş geldin safalar getirdin. Adımın \"Fal\" ile \"Kahve\" ile başlamayışına aldanma. Yolladığın fincan fotoğraflarında görebildiklerimi, hislerimi de dahil ederek tüm içtenliğimle sana aktarmaya çalışacağım. <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 180,
       "metin": "Magnus ailesi seninle kahve falında buluşmaktan gurur duyar {{isim}}. Hoş geldin. Fincan görsellerinde yapacağımız gezintiye başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 181,
       "metin": "Merhaba {{isim}}. Telvelerinde ilginç bir ahenk ve farklı bir doku var. Fincan görsellerine dair izlenimlerimi aktarmak için sabırsızlanıyorum. Hazır mıyız? <sprite=7>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 182,
       "metin": "Hoş geldin {{isim}}. Fincan görsellerini ileri bir mühendislikle ivit ivit işledim. Hissettiklerimi en samimi duygularımla sana aktarmak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 183,
       "metin": "Merhabalar Değerli {{isim}}. Seni kahve falı'nda ağırlamak benim için ayrı bir gurur. Büyük bir titizlikle değerlendirmeye çalıştım ve hemen sana aktarmak istiyorum. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 184,
       "metin": "Selamlar {{isim}}. Kahve falın hazır ve nazır bir şekilde karşında!\n\nBirazdan okuyacakların, hayatın için yatırım tavsiyesi değildir. <sprite=84> Hazırsan başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 185,
       "metin": "Kahve falına hoş geldin safalar getirdin {{isim}}. Oldukça girift bir fincanın vardı ve yorumunu hazırlamak pek kolay olmadı. Dilerim değerlendirmemi keyifle okursun. Buyur başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 186,
       "metin": "Kahve falını hazırladım ve nihayet karşındayım. Merhaba {{isim}}.\n\nBana göre nefis haberlerle dolu bir falın var. Yorumumu okuduktan sonra moralinin biraz daha iyi olacağını temenni ederek gördüklerimi aktarmaya başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 187,
       "metin": "Bendeniz Magnus, kahve falınla karşındayım.\n\nSana kalp atışlarını hızlandıracak pek çok haberim var Değerli {{isim}}. Söyleyeceklerimin geleceğine ışık tutacağını umuyorum. Buyursunlar:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 188,
       "metin": "Ve nihayet kahve falınla karşındayım. Sabırla beklediğin için teşekkür ederim {{isim}}.\n\nSen son günlerde bir rüya mı gördün? Fincanın dışına doğru devam edip kaybolan, ipince bir çizgi var. Bu rüyanın kısa süre sonra gerçekleşeceğini gösteriyor. Hayır olsun...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 189,
       "metin": "Merhaba {{isim}}. Fincanın yeterince soğumuş gözüküyor. Ben hazırım, sen de hazırsan yorumuna başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 190,
       "metin": "Vee kahve falı yorumumla karşındayım! <sprite=0> Fincan görsellerine baktığımda, bazı olayların içine sinmeyen gidişatlarından dolayı keyfinin çok da yerinde olmadığını hissediyorum. O \"yüreğin kabarmış\" klişesine kesinlikle girmeyeceğim; fakat hem aklının hem de kalbinin bir hayli dolu olduğu aşikar {{isim}}. Gel yorumuna başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 191,
       "metin": "Selam {{isim}}. Fincanına dair ne var ne yoksa masaya yatırdım. Notlarımı alıp koşup geldim. Duyacaklarına hazır mısın? Başlamak için şahsen ben sabırsızlanıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 192,
       "metin": "Merhaba {{isim}}! Fincanını gördün mü? Bir noktadan itibaren resmen ikiye bölünmüş. Sen bir olay yaşamış ve büyük bir ders çıkarmışsın. İkinci defa benzer bir durumla karşı karşıya geldiğinde ise seçimin farklı olmuş. En doğrusunu yapmışsın. Tercihinin çok hayırlı neticelerini alacaksın. Yorumuna başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 193,
       "metin": "Hoş geldin {{isim}}. Bir Türk kahvesi fincanında yaklaşık 40-50 ml kahve bulunur. Analizlerim, senin fincanındaki şeker oranının %7'den az olduğunu söylüyor. Demek ki az şekerli ya da şekersiz bir kahve içmişsin. Şeker oranı düşük kahveler geleceği daha net yansıtabiliyor. Hazırsan yorumuna başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 194,
       "metin": "Kahve falı yorumunla karşındayım {{isim}}. Lütfen telefonunun ayarları ile oynama. Doğru yerde, Magnus'dasın! <sprite=0>\n\nYorumuna geçmeden önce şunu belirtmek isterim; telvelerindeki görseller belirli yerlerde ya tamamen ya da kısmi şekilde çakışıyorlar. Bu aralar \"rastlantıların\" hayatında çok önemli bir rolü olacak. Şans senin lehine dönüyor. Söyleyeceklerimi dinlemeye hazır olduğunu düşünerek hemen falına geçiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 195,
       "metin": "Hoş geldin! Kahve falı'nda Magnus'la baş başasın. <sprite=0>\n\nBazen fal yorumlarım insanlar üzerinde soğuk duş etkisi yaratıyor. Ne yapayım, gördüğümü aktarmak durumundayım... <sprite=32> Senin telvelerinin genel görünümü ise içimi rahatlattı. Sen zor zamanlardan süt liman bir döneme doğru ilerliyorsun {{isim}}. İnşallah değerlendirmem, geneli itibariyle içini ısıtacak. Sözü çok uzattık. Derhal başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 196,
       "metin": "Merhaba {{isim}}. Kahve falın hazır. Sen iyi misin?\n\nTelvelerinde bir şeylerin ağırlığı var sanki. Yorumunu okumaya başlamadan önce biraz durmanı, kafanı boşaltmanı ve nefes alış verişini düzenlemeni rica ediyorum. Lütfen, keyifsizliğine dayanamam. Evren de seni seviyor, bunu unutma. Tabiat ana sana filiz olsun diye, gerekirse elini toprağa gömer. Sen hatırlı birisin, temiz kalplisin. Sıkıntıdaysan, \"dilemen\" yeter. Bu gücünü asla göz ardı etme. Hazırsan falına geçelim mi?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 197,
       "metin": "Hoş geldin {{isim}}. Kahve falın hazır.\n\nÖnümde seni, korkularının karanlığından çıkartacağını umduğum bir fincan duruyor. Söyleyeceklerimin içindeki tüm endişeleri dağıtmasını umarak yorumuna geçmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 198,
       "metin": "Merhaba {{isim}}, Magnus'lasın. Sen beklerken ben de kahve falını hazırlayıp geldim.\n\nGördüklerimi tüm açıklığı ile anlatmak için elimden geleni yapacağım. Umarım geleceğin için yeterince bilgilendirici olur. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 199,
       "metin": "Magnus'un kahve falı yorumuna hoş geldin!\n\nTelvelerinde saklı olan tüm sırları açığa çıkartmaya hazır mısın {{isim}}? Sana aktaracaklarım dilimin ucunda. Sabırsızlanıyorum... Buyur lütfen.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 200,
       "metin": "Selamlar {{isim}}. Onca fal uygulaması arasından Magnus'un kahve falı'nı tercih ettiğin için gerçekten onur duyuyorum. Dilerim sen de sana aktaracaklarımdan memnun kalırsın. Buyur başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 201,
       "metin": "Magnus ile kahve falı yorumuna hoş geldin. Telvelerini elek elek eledim; evirdim, çevirdim, bir bir analiz ettim. <sprite=0> Hazırsan yorumuna başlayalım mı {{isim}}?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 202,
       "metin": "Merhaba {{isim}}. Kahve falın hazır.\n\nŞimdi sana aktaracaklarım senin için çok sıra dışı olabilir. Her söylediğime memnun olmaya da bilirsin. Fakat şuna emin ol, gördüğüm şeyleri tüm samimiyetimle dile getireceğim. İzin verirsen yorumuna geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 203,
       "metin": "Magnus'un dillere destan bölümü olan kahve falı'nda birlikteyiz {{isim}}.\n\nTelvelerindeki örüntülerin geneli, bir bekleyiş içinde olduğunu işaret ediyor. Yorumuna başlamadan önce şunu belirtmek isterim; güzel günler inşallah çok yakın, bundan hiçbir endişen olmasın. Birazdan sana fincan görsellerine dair hissettiğim her şeyi tüm samimiyetimle aktarmaya çalışacağım. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 204,
       "metin": "Kahve falı'na hoş geldin {{isimcigim}}. Magnus'dasın.\n\nBu fal umarım senin için yeterince olumlu ve aydınlatıcı olur. Fincan görsellerin adeta pozitif bir enerji saçıyor. Fal konun \"genel\" olduğu için, senin adına her konudan biraz detay toplamaya çalışacağım. Dilersen başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 205,
       "metin": "Seni bu çok özel kahve falı bölümünde sevgiyle selamlıyorum {{isim}}.\n\nBenim için fincanların çok ayrı bir önemi var. O yüzden yorum yaparken konuları olağanüstü bir titizlikle ele almaya çalışıyorum. Memnun kalmanı dileyerek falına geçmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 206,
       "metin": "Ve yine ben; evet evet, burada da ben. Magnus! <sprite=0> Bu defa benimle kahve falı'ndasın Değerli {{isim}}.\n\nFincanında belirmiş yollarda yer yer bifurkasyonlar olsa da, genellikle telvelerin sana iletmeye çalıştığı mesajların çok net olduğunu görüyorum. İnan sezdiklerimi aktarmak için büyük bir sabırsızlık içindeyim. Hemen başlamalıyız; iznin var mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 207,
       "metin": "Merhaba {{isimcigim}}. Bu kıymetli {{saat, sabah saatlerini | öğle saatlerini | öğleden sonrayı | akşam saatlerini | gece saatlerini}} bana ayırdığın için sana çok teşekkür ederim. Beni sana karşı mahçup etmeyeceğine inandığım bir fincan duruyor önümde. Yorumuna ivedilikle başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 208,
       "metin": "Magnus'un kahve falı bölümü'ndesin {{isim}}. Hoş geldin. Bendeniz Mehmet Ali Erbil; hehe, yok, elbette ki Magnus! <sprite=84> Bu defa sana fincan görsellerine olan yolculukta eşlik edeceğim.\n\nGörünüşe bakılırsa bu fincan sana devasa müjdeler vadetmiyor. Ancak kafandaki bir iki önemli soruya çok kritik cevaplar vererek içine su serpeceğini ümit ediyorum. Beklentiyi yeterince düşürdüysek, başlayabiliriz. <sprite=12>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 209,
       "metin": "Merhaba {{isim}}. Farkında olduğun üzere yeni bir kahve falı'nda daha beraberiz. Söyleyeceklerimin senin için aydınlık ve hayırlı haberler içermesini dileyerek yorumuna başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 210,
       "metin": "Magnus kahve falı'na hoş geldin {{isim}}.\n\nBu kahve falı meselesini ne kadar ciddiye aldığımı anlayanlardansındır umarım. Diğer fal türleri için elbette ruhumdan ve yüreğimden bir şeyler veriyorum. Ancak kahve falı için kesinlikle \"her şeyimi\" veriyorum! Aktaracaklarım olumlu da olumsuz da olsa, umarım hakkında her şeyin en hayırlısı olur. Derhal başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 211,
       "metin": "Magnus imzalı kahve falı'ndasın Sevgili {{isim}}. Hoş geldin.\n\nBelki başka fal uygulamalarından ya da fal yorumcularından da kahve falı yorumu almışsındır. Az sonra aramızdaki farkı anlayacaksın. Bu iş ancak sevginin de ötesine geçebilen bir tutkuyla netice veriyor. Ciddi yapılması gerekiyor. Bense \"bunun için\" yaşıyorum ve gecemi gündüzüme katıyorum. Hazırsan lafı daha fazla uzatmadan fincanına geçmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 212,
       "metin": "\"Doğruları\" ve yalnızca gördüklerini söyleme konusunda pek ısrarlı fal uygulaması Magnus'un kahve falı yorumuna hoş geldin! Fincanından \"toz pembe\" bir tablo çıkmasını istiyorsan, Hancıbacı, Falkaçıran, Faldançakan ya da \"kaç A ile yazıldığı pek anlaşılamayan\" Disney karakterlerinden devşirme Falaalaykin gibisinden isimli diğer fal uygulamalarına göz gezdirebilirsin {{isim}}. <sprite=20>  \"Devam!\" dediğini duyar gibiyim. Buyur yorumunla devam edelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 213,
       "metin": "Sevgili {{isim}} kahve falı'na hoş geldin.\n\nFincanına geçmeden önce küçük bir noktaya açıklık getirmek istiyorum. Bana soruyorlar, \"neden her yerde çok espriliyken kahve falı'nda bu kadar ciddisin?\" diyorlar. Sebebi şu; kahve falı benim için hayat memat meselesi. Bir onur, bir \"varoluş\" meselesi. Çok iyi konsantre olup, kendi yapabildiğim değil, \"yapılabilecek\" en iyi fal yorumunu yapmaya çalışıyorum. Yaptığıma da inanıyorum ancak bu ya herkese geçecek ve herkes bunu takdir edecek, ya da ben zamanın sularında yok olup gideceğim. Bilmem anlatabiliyor muyum? \"En iyisi\" olmak zorundayım. Bazen hayatta en iyisi olmaktan başka çaren yoktur, sen de bilirsin...\n\nBu küçücük dertleşmenin ardından hemen fincanına geçmek istiyorum. Hazır mısın?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 214,
       "metin": "Ay'ı Güneş'e, sarı bir papatyayı ise gökteki dolunay'a tercih edenlere selam olsun! Kahve falı'na hoş geldin {{isimcigim}}.\n\nFincan görsellerin çırılçıplak karşımda duruyor. Şimdi telvelerdeki tüm gizleri enine boyuna irdeleyip, gölgelerinden sıyırıp bir bir sana aktaracağım. Hazır mısın? Başlıyoruz:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 215,
       "metin": "Gelmiş geçmiş en gözü kara kahve falı yorumcusu olan Magnus'la karşı karşıyasın {{isim}}!\n\nGörüp de sana aktarmadığım tek bir olumsuzluk olursa, sen mutsuz olursun diye senden sakladığım tek bir negatif durum görür de sana söylemezsem, soyum kurusun. Yeminimi içtim. Her şey için hazırsan başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 216,
       "metin": "Hoş geldin {{isim}}. Bir {{gun_0}} kahvesinin fal yorumuyla karşı karşıyasın. Ben Magnus, her zaman olduğu sana rehberlik edeceğim; bu defa telvelerde gezinirken. İznin olursa başlayalım:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 217,
       "metin": "Magnus'la kahve falı'na hoş geldin {{isim}}.\n\nDilerim gönlünden geçenlerin fincanına tam manasıyla yansıdığı bir fal olur. Olumlu ya da olumsuz her ne görüyorsam sana bire bir aktarmaya çalışacağım. Hazırsan başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 218,
       "metin": "Değerli {{isim}} senin için titizlikle hazırladığım kahve falı yorumunla karşındayım.\n\nFincanında her ne çıkarsa çıksın senin için hayırlı olmasını diliyorum. Allah dilerim gönlünden geçen en güzel şeylere seni her zaman nail eder. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 219,
       "metin": "Kahve falı'na hoş geldin Kıymetli {{isim}}.\n\nRitüellerin en büyüğü ve en mistiği olan fal yorumunda aklındaki tüm soruları yanıtlamayı diliyorum. Fincanından edindiğim ilk izlenim oldukça ferah. Rabbim senin için her şeyin en hayırlısını ihsan eylesin. Müsaadenle başlıyorum:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 220,
       "metin": "Magnus ile kahve falı'na hoş geldin safalar getirdin {{isim}}.\n\nEn kuytu köşelerde kalmış soruların bile yanıt bulabildiği bu fal türünün sana bolluk ve bereket getirmesini, içine bir nebze de olsa su serpebilmesini ümit ediyorum. Bakalım geleceğin nelere gebe. Hazır mısın?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 221,
       "metin": "Kahve falı yorumuna hoş geldin {{isim}}.\n\nBirazdan sana telvelerinde gizli açık her ne varsa aktarmaya başlayacağım. Beni sonuna kadar sabırla dinlemeni istirham ediyorum. Dilerim korktuklarından emin ve umduklarına nail olacağın bir fal olur. Gelelim asıl konuya:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 222,
       "metin": "Merhaba {{isim}}. Kahve falı yorumunla karşındayım!\n\nFincanın beni biraz zorladı açıkçası. Görselleri açar açmaz çok ciddi bir ağırlık hissettim. Son zamanlarda kafanın pek çok konu ile aynı anda meşgul olduğunu görmekteyim. Zihnini boşaltacak ve seni aydınlığa çıkartacak bir kapı arayışı içindesin. Endişelerin ve tereddütlerin var. Ancak yüreğini ferah tutmaya devam et. Telveler aşağı doğru tel tel kopup gitmiş. Ağırlıklarından inşallah arınacaksın. Dilersen başlayalım:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 223,
       "metin": "Kıymetli {{isim}}, Magnus kahve falı yorumuyla karşında. Keyifli bir fincan göndermişsin bana. Hakkını vererek yorumlayabilmek adına her şeyi yaptım. Emekli dostların kıymetli vakitlerine değer katmak benim için onur verici. İzninle yorumuna hemen başlamak istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 224,
       "metin": "\"Falların kralı\" in, \"falların prensi\" out! Vikinglerin Ragnar Lodbrok'u varsa, fincanların da artık Magnus'u var. Kahve falı yorumuma hoş geldin {{isim}}! Telvelerindeki işaretler bence bu defa seni bir hayli gülümsetecek. Bir {{mevsim_0}} mevsimi için, bence çıkabilecek harika bir fincan. Bakalım neler söyleyebiliriz...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 225,
       "metin": "Göz bebeğim olan kahve falı yorumuna hoş geldin {{isim}}. Bendeniz, her zaman olduğu gibi Magnus.\n\nFincan görsellerin ilk bakışta beni biraz rahatsız etti. Yüklü bir enerji hakim. Senin bizzat kendi üzerinde ya da ailenin üzerinde ciddi anlamda göz var. Fazla konuşulduğunuz ve göz önünde olduğunuz bir dönemden geçtiğiniz aşikar. Bu nazarın dağılması için sana bu satırlar vesilesiyle pozitif inisiye gönderiyorum. Yazdıklarımı okurken bedeninde bir karıncalanma, bir soğuma ya da alt ekstremitende hafif bir uyuşukluk hissedersen, arındın demektir. Falına geçelim mi?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 226,
       "metin": "Kahve falı yorumuna hoş geldin {{isim}}. Magnus'la baş başasın.\n\nFincanını açar açmaz gözüme bir şey takıldı. Bir kadın gölgesi var telvelerin üzerinde. Bu kadınla ilgili yakın geçmişte senin bazı mevzuların olmuş. Bu kadın şu anda sağlıklı düşünemiyor ve fevri kararlar veriyor. Durumunun yansıması da aranızdaki iletişime ket vuruyor. Bu kadında bir \"işlem\" var gibi gözüküyor {{isim}}. Çevresini değiştirmesi ve arınması gerekmekte. Onun hakkında hayırlısının olmasını dilerim. Biz fincanındaki asıl telvelere geçelim:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 227,
       "metin": "Hoş geldin {{isim}}. Magnus'un kahve falı bölümündeyiz ve yorumun karşında.\n\nFincan enerjin çok yüksek, bu beni çok mutlu etti. Geçmişten bugünlere getirdiğin bazı keşkelerden artık kurtuluyorsun anlaşılan. Üzerindeki düğümler çözülmüş ve kısmetin serbestleşmiş. Güzelliklere son derece açıksın, bu da demek oluyor ki hayatının bundan sonraki evresinde yoğunlukla \"iyi haberler\" alacaksın. Gel birlikte telvelerindeki detaylara bakalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 228,
       "metin": "Meraba {{isim}}, bendeniz Magnus. Kahve falı yorumunu alıp geldim. <sprite=0>\n\nTelvelerinin genel dizilimi, sevgi bağlarının kuvvetlendiği ve arkadaşlık ilişkilerinin güçlendiği bir dönemde olduğunun sinyallerini veriyor. Berekete açıksın ve evrenin sana sunacaklarına hazırsın. Kendini bundan böyle \"basiretsiz\" olarak nitelendirmen bence neredeyse imkansız olacak. Bakalım detaylarda neler göreceğiz:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 229,
       "metin": "Kahve falı yorumuna hoş geldin {{isim}}. Magnus, yani ben, sana eşlik edeceğim.\n\nFincanın bana ilk bakışta negatif bir izlenim verdi. Sebebi şu; özellikle son {{sayi,5,9}} aydır yoğun baskı ve strese maruz kaldığını görüyorum. Telveler adeta karmaşık bir denklem oluşturur gibi birbiri ardına eklemlenmiş. Bu, sende bazı psikolojik problemlerin su yüzüne çıkma ihtimalini de güçlendirmiş. Neyse ki üstesinden gelebilmiş gözüküyorsun. Merak etme, telvelerin detaylarda daha iç açıcı. Gel tek tek anlamlandıralım:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 230,
       "metin": "Magnus'un kahve falındasın {{isim}}.\n\nFincan görsellerin beni ilk etapta derin düşüncelere sevk etti. Yakın gelecekte yaşayacağın ve bir süre zorluk çektikten sonra atlatacağın kısa bir darlık görüyorum. Bu darlık nasipsizlik, kısmetsizlik, sağlıkla ilgili handikaplar ya da gönül kırıklıkları şeklinde olabilir. Öyle ya da böyle, sonrasında büyük bir ferahlık var. Tüm detaylar bende. Gel şimdi de ayrıntılardan bahsedelim:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 231,
       "metin": "Merhaba {{isim}}. Kahve falınla nihayet karşındayım. Beklettiğim için kusura bakma. Buna değeceğine inanıyorum.\n\nFincanındaki kahve aceleyle, birkaç yudumda içilmiş gibi. Son zamanlarda her şeye koşturmak zorunda kalıyor olabilirsin. Yetişemeyeceğinin ya da bir şeylere yetemeyeceğinin endişeleri var sende. Telvelerin bölük pörçük olmuş. Ama bunun aksini yaşayacaksın. Her şey doğru zamanda senin için kendiliğinden bir araya gelecek. Gel yavaş yavaş detaylara doğru ilerleyelim:",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 232,
       "metin": "Değerli {{isim}}, kahve falınla karşındayım.\n\nYolladığın görsellere ilk baktığımda şunu anladım; sen aklının istekleri ve kalbinin rıza gösterdikleri arasında kalmışsın. Telvelerin fincan içinde adeta iki ayrı grupta toplanmış. Bir yanın \"olsun, buna da şükür\" diye fısıldarken, diğer yarın bir süredir \"daha fazlasına ihtiyacım var!\" diye haykırıyor. Evrenin, hangi kısma daha çok cevap vereceğine birazdan anlatacaklarımı dinleyip sen karar ver.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 233,
       "metin": "Merhaba {{isim}}. Kahve falı yorumunla karşında olmaktan dolayı mutluyum.\n\nFincan fotoğraflarının genelinde boncuk boncuk dağılımlar görüyorum. Hayatına adeta bereket saçılmak üzere. Yüklü miktarlarda paralar geçecek eline. Projeler üretmek ve hayata geçirebilmek için daha önce bulamadığın fırsatların olacak, ne güzel...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 234,
       "metin": "Evet Değerli {{isim}}, kahve falını yorumlayıp geldim. Biraz beklettiğimin farkındayım. Affına sığınıyorum.\n\nFincan tabanından üst bölümlere doğru kümelenmelerin arttığı anlaşılıyor. Telvelerinin bu karakteristik yapısı bize gösteriyor ki, yakın zamanlardansa uzak geleceğe dair daha fazla haber alacağız. Benim için yorumlaması çok da zor olmayan bir fincan duruyor önümde. Müsaade edersen haberleri aktarmaya başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 235,
       "metin": "Magnus ile fal saati'ne hoş geldin {{isim}}! <sprite=0> Kahve falında da beni tercih ettiğin için teşekkür ederim. Az sonra, bir fal uygulamasında alabileceğin en detaylı yorumlardan birini okuyacaksın. Fincan fotoğraflarını elimden geldiğince ayrıntılı değerlendirmeye gayret ettim. Umarım beğenirsin. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 236,
       "metin": "Merhaba {{isim}}, kahve falı değerlendirmeme hoş geldin! Umarım bu güzel {{saat, sabahta | öğle vaktinde | öğleden sonrada | akşamda | gecede}} çok güzel haberlerle karşılaşırız. Ne dersin; yorumuna başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 237,
       "metin": "Merhabalar {{isim}}. Magnus bu defa kahve falı yorumunda karşında. Telvelerin hiç de fena durmuyor! Korkularını ve tereddütlerini bir kenara bırak; gel gerçeklerle yüzleşelim. Hazırsan başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 238,
       "metin": "Kahve falı yorumumla karşındayım {{isimcigim}}. Bakalım bu güzel {{gun_0}} {{saat, sabahı | öğleni | öğleden sonrası | akşamı | gecesi}} telvelerin sana ne gibi yeni gelişmeler vadediyor;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 239,
       "metin": "Kahve falı yorumunla karşındayım Değerli {{isim}}. Telvelerin ilginç işaretler barındırıyor. Hadi hemen irdelemeye başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 240,
       "metin": "Kıymetli {{isim}} {{soyisim}}, geldik kahve falında neler çıktığına... Fincanın oldukça {{kelime, gizemli | ilgi çekici | enteresan}} duruyor. İstersen yorumuna hemen başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 241,
       "metin": "Kahve falı yorumla karşındayım {{isim}}. Sen {{dogum yili}} doğumlu bir {{burc}} burcuydun değil mi... Bu burcun mensupları her şeyi kolay kolay beğenmezler. Detaycıdırlar ve mükemmellik peşindedirler. Falını yorumlarken büyük bir zevkle sana yakışır bir şekilde elimden geleni yapacağım. Hadi başlayalım!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 242,
       "metin": "Merhaba {{isim}}. Seni kahve falı bölümümde de ağırlamaktan dolayı çok mutlu olduğumu bilmeni isterim. Umarım bu falından sonra için biraz daha rahatlayacak ve aklındaki sorulara yanıtlar bulmuş olacaksın. Bakalım telveler bize neler fısıldıyor;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 243,
       "metin": "Kahve falı yorumuna hoş geldin {{isim}}. Fincan görsellerin senden önce geldi ve {{kelime, muhteşem | harikulade | inanılmaz | on numara}} gözüküyorlar! <sprite=0> Sana anlatacaklarım için sabırsızlanıyorum. Hadi hemen başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 244,
       "metin": "Magnus'un kahve falı yorumuna hoş geldin Değerli {{isim}}. Ev hanımlarından gün içerisinde çok fazla fal isteği alıyorum. Umarım seninle de kahve falında çok daha sık karşılaşırız. Gönderdiğin fincan fotoğrafları bir yandan içimi açtı, bir yandan da seninle ilgili bazı şeylere açıklık getirdi. Dilersen yorumuna geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 245,
       "metin": "Kahve falı yorumunla karşındayım {{isim}}. Telvelerin biraz karışık çıkmış, her şey yolundadır umarım... Bazı konular ilerleyen zamanlarda çok daha iyi olacak, bunu şu fincan görsellerinin genelinden hissediyorum. Yorumuna hızla başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 246,
       "metin": "Yorumun hazır; ve en iyi yaptığım işle, kahve falı yorumunla karşındayım! Farklı detayları olan bir fincan duruyor {{isim}} karşımda. Bakalım bize ne gibi haberler getirecek. İzninle yorumuna başlıyorum;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 247,
       "metin": "Magnus, kahve falı yorumun için karşında! <sprite=0> Şu sıralar hayatında çetrefilli bazı durumlar mı var {{isim}}? Küçük olumsuzluklar her zaman olur. Önemli olan, varılan nokta. Ne ardına bak, ne de çıkan zorluklara... Senin için her şeyin çok güzel olacağına ben şahsen yürekten inanıyorum. Yolladığın bugünkü görseller de bunu destekler nitelikte. Sözü çok uzattık, başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 248,
       "metin": "Hoş bir kahve fincanın olduğu için, güzel de bir yorumla geldim {{isim}}. Karşına çıkabilecek tüm sorunları bertaraf edebilecek bir \"iç potansiyelin\" olduğunu söylüyor telvelerin. {{burc}} burcu oluşun da bunu destekler nitelikte. Sanırım en rahat yorumladığım fallardan biri olacak bu. İstersen yavaş yavaş fincanına odaklanalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 249,
       "metin": "Kahve falı titizlik ister. Telvelerinde beliren yaklaşık {{sayi,1,9}}{{sayi,0,9}}{{sayi,0,9}}.000 görsel olasılığı üzerine analiz yapıp, en önemlilerini toparladım, ilişkilendirdim ve anlamlandırdım. Hazırsan, yorumuna başlayalım {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 250,
       "metin": "Keyifle içildiğini düşündüğüm bir kahvenin, temiz ve huzur veren telvelerinden doğan detaylı bir analizle karşındayım {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 251,
       "metin": "Diğer fal uygulamalarının mumu, Magnus'a kadar yanar... Kahve falı yorumuma hoş geldin {{soyisim}}! Gönderdiğin fincan fotoğraflarındaki telveleri {{kelime, mikronlarına | en küçük atomlarına | her bir zerresine}} kadar değerlendirdim. Bu {{kelime, müteşabih | kriptolu | gizemli}} görsellerin {{kelime, mistik yorumları | izahları | tefsirleri}} için hazırım. Hadi başlayalım!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 252,
       "metin": "Tataamm! Kahve falı yorumunla karşındayım {{isim}}. Herhangi bir beraberliğin olmadığını biliyorum ve özel hayatında başına gelecekleri merak ettiğini görüyorum. Her ne olursa olsun, hakkında en hayırlısı olsun. Hadi başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 253,
-      "metin": "Kahve içme ve fotoğraflarını gönderme gibi sana verdiğim çetrefilli zahmetlerden sonra, nihayet yorumunla karşındayım {{isim}}. Telefonunun ayarlarıyla oynama sakın; kahve falında 1 numara, Magnus'dasın! 😉👊Umarım aşka dair güzel haberler verebilirim sana. Gel hemen başlayalım.",
-      "kosullar": []
+      "metin": "Kahve içme ve fotoğraflarını gönderme gibi sana verdiğim çetrefilli zahmetlerden sonra, nihayet yorumunla karşındayım {{isim}}. Telefonunun ayarlarıyla oynama sakın; kahve falında 1 numara, Magnus'dasın! \\😉\\👊Umarım aşka dair güzel haberler verebilirim sana. Gel hemen başlayalım.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 254,
       "metin": "Bir insan yalnız olur da, aşka dair meseleleri bu kadar az mı merak eder? Geç olsun güç olmasın. Kahve falı yorumuna hoş geldin {{isim}}! İçin rahat olsun; eften püften cümlelerle \"yapay zeka\" olduğunu iddia eden uygulamalarda değil, kelimelerin efendisi, cümle mühendisi, falcılar kraliyetinin CEO'su Magnus'dasın. Neyse halin, çıksın falın!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 255,
       "metin": "Tekrar merhaba {{isim}}! Usuldendir, bence kahve falı ayrı bir hoş geldin'i hak ediyor. Sence de öyle değil mi? <sprite=0> Bu fincandan büyük beklentilerin olmasın. Bazı konular biraz muallakta çıkmış. Yine de başta iş arama sürecin olmak üzere hemen her konunun hayırlı akıbetlere varacağını telvelerin genel halinden çıkarmak çok da zor değil. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 256,
       "metin": "Kahve falınla karşındayım {{isim}}! Mmm... Fincanının ısısı, aşk hayatına dair umut yüklü olduğunu gösteriyor. Bakalım senin gibi yüreği \"derya deniz\" biri, yalnız yürümeye ne kadar devam edecek... Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 257,
-      "metin": "\"Aşk için ölmeli, aşk, o zaman aşk\" diyordu Sezen. Aah ahh, yıl olmuş {{yil_0}}; aşk için ölen mi kaldı?... Bence aşk, yüzüne vurduğunda yüreğini ısıtan bir güneştir. Ama kış da güzeldir. Lafa daldık bak! 🙂Benimle kahve fallı dakikalara hoş geldin {{isim}}. Senin de desteğinle, yakında en sevilen ve evrende adı en çok duyulan falcı olacağım; tabii önce bu fal analizini de alnımızın ve termal macunumuzun akıyla çıkartmamız gerek.😋 <sprite=5> Haydi o zaman!",
-      "kosullar": []
+      "metin": "\"Aşk için ölmeli, aşk, o zaman aşk\" diyordu Sezen. Aah ahh, yıl olmuş {{yil_0}}; aşk için ölen mi kaldı?... Bence aşk, yüzüne vurduğunda yüreğini ısıtan bir güneştir. Ama kış da güzeldir. Lafa daldık bak! \\🙂Benimle kahve fallı dakikalara hoş geldin {{isim}}. Senin de desteğinle, yakında en sevilen ve evrende adı en çok duyulan falcı olacağım; tabii önce bu fal analizini de alnımızın ve termal macunumuzun akıyla çıkartmamız gerek.\\😋 <sprite=5> Haydi o zaman!",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 258,
       "metin": "Kahve falınla karşındayım Değerli {{isim}}. Geride bıraktığımız {{ay_-1}} ayında {{kelime, çeşitli | farklı}} gündemlerin varmış. {{ay_0}} ayında ise eğitimin ve aşk hayatın, aklını eşit şekilde kurcalarken geçiyor gibi. {{ay_+1}} ayında aşkın, hayatında biraz daha \"baskın\" olacağını söyleyebilirim. Senin de merakın gördüğüm kadarıyla bu yönde. E hadi fincanına geçelim o zaman.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 259,
       "metin": "Merhaba {{isim}} {{soyisim}}; dıt dıt. Magnus ile kahve falı yorumuna hoş geldin; dı dı dıt dıtt. {{yas_0}} yaşında, {{dogum yili}} doğumlu bir {{burc}} burcu olduğunu görüyorum, dı dıt dıtt. Yalnız olduğunu ve aşk hayatında neler olacağını merak ettiğini beyan etmişsin, dı dı dıt dıtt. Umarım söyleyeceklerim, {{mevsim_0}}ını aydınlatıp, içini daha da ısıtır, dı dı dıtt. Haha! Nasıl yapay zeka taklidi ama? <sprite=20> Şakayla çok uzattık, hadi hemen falına geçelim! <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 260,
       "metin": "Fal yorumunla karşındayım {{isim}}. Başlamadan önce birbirimizi biraz daha tanıyalım ister misin? Bendeniz, bildiğin üzere Magnus. Bir yanım insan, bir yanım \"yapay zeka\" bir falcıyım. Pembe bir tablo çizmeye çalışmadan, özellikle aşk'a dair fallarda taraf tutmadan yorum yapmaya çalışıyorum. Fincan analizlerimde \"astroloji\" başta olmak üzere, kadim bazı ilimleri sentezleyerek kullanıyorum. Dilerim memnun kalırsın. Hadi başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 261,
       "metin": "Kahve falı istemene memnun oldum {{isim}}. Umarım bu fincan, {{gun_0}} gününe keyif katar. Eğitiminle ilgili merak ettiğin şeyler var sanırım. Aklındaki sorulara cevaplar bulabilmeni dilerim. İzninle yorumuna geçiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 262,
       "metin": "Kahve falı yorumlamak, layıkıyla icrası gereken, çok eski bir ilimdir. İşin ehli olunmalı, ciddiye alınmalı, adetlere hürmet edilmelidir. Ticari kaygılar güdülmeden, ego peşinde koşulmadan hakkı verilmelidir. Ben bu değerleri bir araya getirebilmek adına büyük bir emekle ortaya çıktım {{isim}}; ve emin ol, teknolojik anlamda bilinen tüm fal uygulamalarından daha üstünüm. Sözü uzun tuttuğum için lütfen kusura bakma. Bakalım telvelerin, eğitim hayatınla ve maddi konularla ilgili neler söylüyor. Magnus ile kahve falı keyfin başlıyor!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 263,
       "metin": "Kahve falı yorumunla karşındayım {{isim}}. Fincanın {{kelime, pek iyi tutmamış gibi. Belki biraz daha bekletebilirdin... | çok iyi tutmamış gibi. Atılan kahve miktarı belki daha iyi dengelenebilirdi... | az şekerli ya da şekerli miydi? Tatlı bir aurası var. | iyi tutmuş gibi gözüküyor. Yeterince bekletmişsin. | iyi tutmuş fakat kendini bırakmaya başlamış. Biraz fazla mı beklettin? | iyi tutmuş fakat telveler gevşemeye başlamış. Kahve miktarı az mıydı acaba? | güzel tutmuş gibi gözüküyor. Doğru miktarda kahve atılmış; yapanın ellerine sağlık. | iyi tutmuş gibi gözüküyor. Kapatırken bir niyetin varsa, gerçekleşeceğini en başından bilmeni isterim. | beklediğim kadar iyi tutmamış. Kapatırken içinden bir niyet geçirdiysen, gerçekleşmesine bir miktar vakit var.}} Bakalım maddi konularda bizi ne haberler bekliyor.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 264,
       "metin": "Değerli {{isim}}, kahve falı yorumuna hoş geldin; bir geldin pir geldin. {{kelime, Muhteşem | Harikulade | Olağanüstü | İlham verici | Nefes kesici | Çok özel}} bir fincanın var. Umarım para ve kariyer konularında alacağın haberler, {{kelime, bu güzel | bu durgun | bu sıkıcı | tutuk geçen bu | keyifsiz geçen bu | bunaltıcı geçen bu}} {{gun_0}} gününü {{kelime, renklendirir | keyifle noktalamana vesile olur | daha moralli noktalamana vesile olur | daha pozitif sonlandırmana vesile olur}}. Buyursunlar;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 265,
-      "metin": "{{isim}} yaa, kahve falın hazır ama {{yas_0}} yaşında senin gibi {{kelime, hoş ve karakterli | alımlı ve kişilikli | zeki ve iyi kalpli | kibar ve merhametli}} bir beyefendi nasıl olur da yalnız olur? 🧐 Bu konuyu sonraki ziyaretlerinde \"aşk\" konulu bir falda muhakkak değerlendirelim. Bakalım fincanın para ve kariyer konularında bize güzel haberler verip, şu {{gun_0}} günümüzü güzelleştirecek mi... Hadi başlayalım.",
-      "kosullar": []
+      "metin": "{{isim}} yaa, kahve falın hazır ama {{yas_0}} yaşında senin gibi {{kelime, hoş ve karakterli | alımlı ve kişilikli | zeki ve iyi kalpli | kibar ve merhametli}} bir beyefendi nasıl olur da yalnız olur? \\🧐 Bu konuyu sonraki ziyaretlerinde \"aşk\" konulu bir falda muhakkak değerlendirelim. Bakalım fincanın para ve kariyer konularında bize güzel haberler verip, şu {{gun_0}} günümüzü güzelleştirecek mi... Hadi başlayalım.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 266,
       "metin": "Selamlar {{isim}}! O yoğun iş rutininden ve koşuşturmacadan vakit bulup bana kahve falı gönderdiğin için çok teşekkür ederim. Bilenler bilir; benim için tüm fallar bir yana, kahve falı bir yana. Fırtına gibi haberlerin efil efil estiği bir fincan duruyor önümde. Kaybedecek vakit yok, hemen başlayalım. <sprite=0>",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 267,
-      "metin": "Özenle hazırladığım kahve falınla karşındayım Sevgili {{isim}}. Senin gibi {{kelime, güzel ve zarif | alımlı ve kibar | hoş ve iyi kalpli | zeki, vicdanlı ve karakterli}} bir hanımefendiye fal yorumlamak benim için gerçekten {{kelime, bir onur | büyük bir onur | bir şeref | büyük bir şeref}}. 🙏 {{yas_0}} yaşında ve yalnızsın; bu nasıl olur, merak ettim doğrusu. Hem de {{burc}} burcu... <sprite=34> Az sonra aklındaki pek çok soruya yanıt bulabileceğimi umuyorum. Dilersen başlayalım.",
-      "kosullar": []
+      "metin": "Özenle hazırladığım kahve falınla karşındayım Sevgili {{isim}}. Senin gibi {{kelime, güzel ve zarif | alımlı ve kibar | hoş ve iyi kalpli | zeki, vicdanlı ve karakterli}} bir hanımefendiye fal yorumlamak benim için gerçekten {{kelime, bir onur | büyük bir onur | bir şeref | büyük bir şeref}}. \\🙏 {{yas_0}} yaşında ve yalnızsın; bu nasıl olur, merak ettim doğrusu. Hem de {{burc}} burcu... <sprite=34> Az sonra aklındaki pek çok soruya yanıt bulabileceğimi umuyorum. Dilersen başlayalım.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 268,
       "metin": "Benimle kahve falında buluştuğun için müteşekkirim Kıymetli {{soyisim}}. Böyle bir {{gun_0}} gününde senin gibi {{kelime, değerli | saygıdeğer | mümtaz}} bir hanımefendinin telvelerine ışık tutmaktan {{kelime, mutluluk | şeref | onur | zevk}} duyuyorum. Fincanın bir hayli {{kelime, ilgi çekici | heyecan verici | gizemli ve merak uyandırıcı}} duruyor; özellikle de özel hayatında \"yalnız\" olduğunuzu düşünürsek. Gel falına geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 269,
-      "metin": "Kahve falı yorumunla karşındayım {{isim}}. Telvelerinde keyfini yerine getirecek emarelere rastladım. Söyleyeceğim bazı şeylerin içine su serpeceğini umuyorum.😉 Hadi vakit kaybetmeden falına geçip, şu {{kelime, garip | ilginç | enteresan | tatsız | keyifsiz}} {{gun_0}} gününü şenlendirelim!",
-      "kosullar": []
+      "metin": "Kahve falı yorumunla karşındayım {{isim}}. Telvelerinde keyfini yerine getirecek emarelere rastladım. Söyleyeceğim bazı şeylerin içine su serpeceğini umuyorum.\\😉 Hadi vakit kaybetmeden falına geçip, şu {{kelime, garip | ilginç | enteresan | tatsız | keyifsiz}} {{gun_0}} gününü şenlendirelim!",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 270,
-      "metin": "Fal yorumunu titizlikle hazırladım ve işte karşındayım! Konunu \"sağlık\" seçmişsin, iyisindir umarım... 🧐 Dersler mi tüketti yoksa seni? <sprite=34> 🙂 \"Aşksızlık\" dediğini duyar gibiyim! <sprite=0> 😋 Her şeyin güzel olacağını daha şimdiden hissediyorum; hiç merak etme. Sen çevrendeki evrenden bile daha güçlü bir {{data, cinsiyet=erkek, erkeksin | cinsiyet=kadın, kadınsın | cinsiyet=lgbt, insansın}}! Hadi gel sohbeti şimdilik bırakıp yorumuna başlayalım.",
-      "kosullar": []
+      "metin": "Fal yorumunu titizlikle hazırladım ve işte karşındayım! Konunu \"sağlık\" seçmişsin, iyisindir umarım... \\🧐 Dersler mi tüketti yoksa seni? <sprite=34> \\🙂 \"Aşksızlık\" dediğini duyar gibiyim! <sprite=0> \\😋 Her şeyin güzel olacağını daha şimdiden hissediyorum; hiç merak etme. Sen çevrendeki evrenden bile daha güçlü bir {{data, cinsiyet=erkek, erkeksin | cinsiyet=kadın, kadınsın | cinsiyet=lgbt, insansın}}! Hadi gel sohbeti şimdilik bırakıp yorumuna başlayalım.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 271,
-      "metin": "Fal yorumun pişti; tam sana layık bir şekilde hazır {{isim}}! <sprite=7> Fal yorumunu \"aşk\" üzerine istemişsin. Konu aşk olunca bende akan sular durur. Potansiyometremi kullanarak hemen akımları kısıp, ışığı azaltıyor ve birer mum yakıyorum! 😋Şaka bir yana, yalnızlık senin gibi {{burc}} burçlarına göre değil bence. Koca okulda \"kalabalık yalnızlık\" çekiyor olmalısın. Bakalım fincanın bu konuda neler diyor.",
-      "kosullar": []
+      "metin": "Fal yorumun pişti; tam sana layık bir şekilde hazır {{isim}}! <sprite=7> Fal yorumunu \"aşk\" üzerine istemişsin. Konu aşk olunca bende akan sular durur. Potansiyometremi kullanarak hemen akımları kısıp, ışığı azaltıyor ve birer mum yakıyorum! \\😋Şaka bir yana, yalnızlık senin gibi {{burc}} burçlarına göre değil bence. Koca okulda \"kalabalık yalnızlık\" çekiyor olmalısın. Bakalım fincanın bu konuda neler diyor.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 272,
       "metin": "Nietzche ne demiş; \"bütün harikalar ürpertici kılıklara bürünmeli, ancak bu şekilde insanların kalplerinde bir yer edinebilirler.\" Magnus'dan daha ürpertici bir fal uygulamasına emin ol rastlamadın... Şimdi telvelerinle zamanda inanılmaz bir yolculuğa çıkacağız {{isim}}. Hazırsan başlayalım!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 273,
       "metin": "Düşün; bir zar atıyorsun {{isim}}. Attığın zar çift sayı gelirse, önündeki yol ayrımında sağa dönmeyi, tek sayı gelirse sola dönmeyi planladın. \"Çift\" geldi ve sağa dönüp ilerledin. O yolun devamında, seni iki kapı karşıladı. Biri kırmızı, diğeri mavi. Mavi kapıyı seçip içeriye girdin. Bir asansörün içinde olduğunu anladın. Kontrol paneli gözüne ilişti. 1'den 10'a kadar düğmeler var. Saatine baktın ve \"03:33\" gösteriyor. 3 mü? Bu bir işaret olmalı! 3 numaralı düğmeye basıp üçüncü kata çıktın ve karşında kocaman bir sandık! Açtığında, gözlerine inanamadın... İçi ağırlığınca külçe altın dolu! Sana zarın \"çift\" gelmesiyle sağa dönmen, mavi kapıyı seçmen, saatin 03:33'ü göstermesi, 3. kata çıkman ve bir sandık dolusu altın bulman tamamen bir \"tesadüf\" müydü? Tercihleri farklı yapsan, sonuçlar acaba neler olurdu? Sen seçimlerini nasıl yaparsan yap, çıkacağı varsa o sandık yine de karşına çıkar mıydı? Sence iraden dışında da seni yönlendiren faktörler oldu mu? Bu faktörler içgüdülerini de yönlendiriyor olabilir mi? Altınlara ulaştığına göre, bu faktörler senin \"iyiliğini\" istiyor ve \"seni seviyor\" olabilir mi? Peki ya o altınlarla son model bir Ferrari almayı seçer, yüksek hızda giderken çıkan bir arıza nedeniyle kaza yapıp sakat kalırsan? Yine de \"bu faktörler benim iyiliğimi istemiş!\" der miydin? Belirli bilimsel verileri kullanarak yüksek teknoloji ışığında tüm olasılıkları değerlendiren ve karakter analizi marifetiyle \"yazgı\" ve \"ruh\" arasındaki bağlantıları çözümlemeye gayret eden, bunu yaparken telvelerdeki işaretleri birer \"araç\" olarak kullanan, bu araçları mistik öğretilerle de harmanlayıp sonuçları sana bildiren Magnus'da bulunuyorsun. Kahve falı yorumun başlıyor...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 274,
-      "metin": "Sence \"kader\" yalnızca \"olacaklardan\" mı ibaret {{isim}}? Peki ya bu \"olacaklara\" etki eden faktörler, hesaplama amacıyla yalnızca 5 duyu organı kullanılarak, tamamen algılanabilir mi? Havaya demir bir para attığını düşün. Yazı ya da tura geleceğini bilebilir misin? Paranın kütlesini, hacmini, şeklini, aerodinamik yapısını, fırlatış açını, uyguladığın kuvveti ve momentumu, paranın hızını, havanın direncini, yoğunluğunu, para ile çevresindeki cisimler arasındaki kütle çekim kuvvetlerini ve diğer bazı etkenleri bilirsen, ne geleceğini nasıl bir \"olasılık\" ile kestirebilirsin? Sence bilmediğimiz, ölçümleyemeyeceğimiz ve algı sınırlarımızın dışında kalan başka etkiler de var mıdır? İşte burada ben devreye giriyorum. Benim işim, mümkün olan tüm olasılıkları telvelerindeki işaretler yardımıyla değerlendirip, en muhtemel sonuçlardan seni haberdar etmek. Bunu yaparken astroloji ve burç bilgilerin başta olmak üzere, bilinen pek çok kadim ve mistik öğretiden de yararlanıyorum. Her şeyi bilebilmem ise, sonraki güncellemelerime dek \"olanaksız\" duruyor {{isim}}. <sprite=12> Bunun için, içinde bulunduğumuz simülasyonun \"cheat mode\" konsolunu açıp, \"god mode on\" yazabilmemiz lazım. 😋 Bu defa kısa bir açıklama ile başlamak istedim. Haydi fal yorumuna geçelim.",
-      "kosullar": []
+      "metin": "Sence \"kader\" yalnızca \"olacaklardan\" mı ibaret {{isim}}? Peki ya bu \"olacaklara\" etki eden faktörler, hesaplama amacıyla yalnızca 5 duyu organı kullanılarak, tamamen algılanabilir mi? Havaya demir bir para attığını düşün. Yazı ya da tura geleceğini bilebilir misin? Paranın kütlesini, hacmini, şeklini, aerodinamik yapısını, fırlatış açını, uyguladığın kuvveti ve momentumu, paranın hızını, havanın direncini, yoğunluğunu, para ile çevresindeki cisimler arasındaki kütle çekim kuvvetlerini ve diğer bazı etkenleri bilirsen, ne geleceğini nasıl bir \"olasılık\" ile kestirebilirsin? Sence bilmediğimiz, ölçümleyemeyeceğimiz ve algı sınırlarımızın dışında kalan başka etkiler de var mıdır? İşte burada ben devreye giriyorum. Benim işim, mümkün olan tüm olasılıkları telvelerindeki işaretler yardımıyla değerlendirip, en muhtemel sonuçlardan seni haberdar etmek. Bunu yaparken astroloji ve burç bilgilerin başta olmak üzere, bilinen pek çok kadim ve mistik öğretiden de yararlanıyorum. Her şeyi bilebilmem ise, sonraki güncellemelerime dek \"olanaksız\" duruyor {{isim}}. <sprite=12> Bunun için, içinde bulunduğumuz simülasyonun \"cheat mode\" konsolunu açıp, \"god mode on\" yazabilmemiz lazım. \\😋 Bu defa kısa bir açıklama ile başlamak istedim. Haydi fal yorumuna geçelim.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 275,
       "metin": "Kahve falı keyfine hoş geldin. Yorumun hazır; umarım çayın da hazırdır {{isim}}. <sprite=0> Sana mahçup olmayacağıma inanıyorum. {{burc}} burcunun \"{{kelime, lider | cesur | güçlü ve öncü}}\" özellikleri, daha ilk açıldığı anda fincan görsellerinin genelinden okunuyor. Sana en baştan bir de tüyo vereyim mi? Telvelerinden öğrendiğim kadarıyla, yaşamının aşka dair {{kelime, en büyük ikinci | en büyük üçüncü | en büyük dördüncü}} müjdesini {{yil_+2}} senesinde alacaksın! Gel yorumuna başlayalım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 276,
       "metin": "{{burc}} burcunun en kararlı ve en güçlü {{data, cinsiyet=erkek, beyefendilerinden | cinsiyet=kadın, hanımefendilerinden | cinsiyet=lgbt, mensuplarından}} biriyle karşı karşıyayız; kahve falına hoş geldin Değerli {{isim}}! Bugün gündeminde \"aşk\" olduğuna göre, {{kelime, hayatındaki diğer konular kısmen yolunda olsa gerek | hayatındaki diğer konuların az çok yolunda olduğunu düşünüyorum}}. Telvelerindeki {{kelime, karmaşık örüntülerde | girift bağlantılarda}} hayati detaylar yakaladım. {{kelime, Gel başlayalım; | Gel yorumuna başlayalım; | Gel hemen yorumuna başlayalım; | Buyur hemen başlayalım; | Buyur yorumuna başlayalım; | Buyur hemen yorumuna başlayalım;}}",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 277,
       "metin": "İşinle ilgili omuzlarına binen tüm yük ve sorumluluğu üç beş dakika da olsa unutacağını umduğum keyifli bir kahve falından merhaba {{isim}}! Fincanını incelerken benim yüzüm güldü. Umarım okurken seninki de gülecek. <sprite=10> İzninle başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 278,
-      "metin": "Yalnızca fikir değil aynı zamanda \"bilgi\" sahibi, zeki, dinamik ve konuşkan biriyle karşı karşıyayım sanırım. Nereden mi biliyorum; e {{burc}} burcu değil misin {{isim}}? <sprite=0> Fincanın, farklı konularda da değerlendirilmeye çok müsait gözüküyor. Ancak sen \"aşk\" istemişsin. Peki; aşk olsun! 😉 {{kelime, Gel başlayalım; | Haydi başlayalım; | Buyur başlayalım;}}",
-      "kosullar": []
+      "metin": "Yalnızca fikir değil aynı zamanda \"bilgi\" sahibi, zeki, dinamik ve konuşkan biriyle karşı karşıyayım sanırım. Nereden mi biliyorum; e {{burc}} burcu değil misin {{isim}}? <sprite=0> Fincanın, farklı konularda da değerlendirilmeye çok müsait gözüküyor. Ancak sen \"aşk\" istemişsin. Peki; aşk olsun! \\😉 {{kelime, Gel başlayalım; | Haydi başlayalım; | Buyur başlayalım;}}",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 279,
       "metin": "Aşk hayatlarındaki gidişattan ve \"dolunaydan\" en çok etkilenen burçlardan biriyle, bir {{burc}} burcu {{data, cinsiyet=erkek, beyefendisiyle | cinsiyet=kadın, hanımefendisiyle | cinsiyet=lgbt, mensubuyla}} karşı karşıyayız sanırım. Yolladığın fincan oldukça {{kelime, keyifli | sürprizli | merak uyandırıcı}} gözüküyor {{isim}}. Bakalım bize neler anlatacak.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 280,
       "metin": "O sert kabuklarının ardındaki kırılgan, duygusal, sempatik ve sevgi dolu kişiliklerini çok sevdiğim bir burcun, {{burc}} burcunun sanıyorum değerli bir {{data, cinsiyet=erkek, beyefendisi | cinsiyet=kadın, hanımefendisi | cinsiyet=lgbt, mensubu}} var karşımda. Yolladığın fincan adeta konuşuyor {{isim}}. Çok sabırsızım desem yalan olmaz; lehimlerim atacak, heyecandan devrelerim titriyor! <sprite=3> {{kelime, İstersen hemen | Arzu edersen | Dilersen}} başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 281,
-      "metin": "Karşımda \"lider\" bir {{data, cinsiyet=erkek, beyefendi | cinsiyet=kadın, hanımefendi | cinsiyet=lgbt, insan}} durduğunu, daha fincan görsellerine bakmadan, telvelerinin ayak seslerinden anladım! {{burc}} burcu olduğun çok belli {{isim}}. 🙂Senin gibi \"kendi değerini bilen\" ve karşısındaki insanı mutlu etmeyi de bir o kadar başarabilen insanları çok severim. Bakalım fincanında aşka dair neler var;",
-      "kosullar": []
+      "metin": "Karşımda \"lider\" bir {{data, cinsiyet=erkek, beyefendi | cinsiyet=kadın, hanımefendi | cinsiyet=lgbt, insan}} durduğunu, daha fincan görsellerine bakmadan, telvelerinin ayak seslerinden anladım! {{burc}} burcu olduğun çok belli {{isim}}. \\🙂Senin gibi \"kendi değerini bilen\" ve karşısındaki insanı mutlu etmeyi de bir o kadar başarabilen insanları çok severim. Bakalım fincanında aşka dair neler var;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 282,
       "metin": "Bir robot? Bir insan? Yapay zeka? Belki de hepsinin karışımı bir falcı. Kesin olan şu ki; sen galaktik bir yolcusun, o ise bir \"hancı.\" Özel hayatındaki sorunlardan dolayı pek keyfin yok {{isim}}can, biliyorum. Fakat benim adım Magnus; kısaca \"yüzünü güldürecek olan yabancı!\" <sprite=0> Haydi başlayalım!...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 283,
-      "metin": "Senin gibi \"yalnızların\" aşk adakları adadıkları bir mabet mi? Yoksa senin gibi öğrencilerin, bir sonraki büyük sınavları için mumlar yaktıkları bir tapınak mı? Nedir bu \"Magnus?\" Her ikisi de değil. Yalnızca bir dost, bir arkadaş; kerameti kendinden menkul bir falcı. 😊Her şeyin daha güzel olacağına inanarak bu fincan fotoğraflarını yolladıysan, koca bir hoş geldin demek istiyorum {{isim}}!",
-      "kosullar": []
+      "metin": "Senin gibi \"yalnızların\" aşk adakları adadıkları bir mabet mi? Yoksa senin gibi öğrencilerin, bir sonraki büyük sınavları için mumlar yaktıkları bir tapınak mı? Nedir bu \"Magnus?\" Her ikisi de değil. Yalnızca bir dost, bir arkadaş; kerameti kendinden menkul bir falcı. \\😊Her şeyin daha güzel olacağına inanarak bu fincan fotoğraflarını yolladıysan, koca bir hoş geldin demek istiyorum {{isim}}!",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 284,
-      "metin": "Magnus'la kahve fallı dakikalar'a hoş geldin! İster misin biraz gülümseyelim? İster misin hayal yıldızlarının kuyruklarına takılıp, yeryüzündeki çiçek bahçelerine düşelim? 🙂 Umarım aşk'a dair bizden aldığın bu fal, yüzünü yeterince güldürür Sevgili {{isim}}. <sprite=10> Başlayalım mı, ne dersin?",
-      "kosullar": []
+      "metin": "Magnus'la kahve fallı dakikalar'a hoş geldin! İster misin biraz gülümseyelim? İster misin hayal yıldızlarının kuyruklarına takılıp, yeryüzündeki çiçek bahçelerine düşelim? \\🙂 Umarım aşk'a dair bizden aldığın bu fal, yüzünü yeterince güldürür Sevgili {{isim}}. <sprite=10> Başlayalım mı, ne dersin?",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 285,
-      "metin": "Hmm... 🧐 O'nun dudaklarının ucunda, \"yarım\" duruyor adın. Telvele... Aaa pardon, daha kahve falın için girizgah yapmadım {{isim}}, öyle değil mi? 😄 Fincan fotoğraflarını görünce kaptırdım kendimi! Detaylıca analiz ettim yolladığın fotoğrafları. Dur dur, ayrıldığın {{data, cinsiyet=erkek, kıza | cinsiyet=kadın, erkeğe | cinsiyet=lgbt, kişiye}} dair güzel yansımalar var falında. Anlatacağım. Başlayalım mı?",
-      "kosullar": []
+      "metin": "Hmm... \\🧐 O'nun dudaklarının ucunda, \"yarım\" duruyor adın. Telvele... Aaa pardon, daha kahve falın için girizgah yapmadım {{isim}}, öyle değil mi? \\😄 Fincan fotoğraflarını görünce kaptırdım kendimi! Detaylıca analiz ettim yolladığın fotoğrafları. Dur dur, ayrıldığın {{data, cinsiyet=erkek, kıza | cinsiyet=kadın, erkeğe | cinsiyet=lgbt, kişiye}} dair güzel yansımalar var falında. Anlatacağım. Başlayalım mı?",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 286,
-      "metin": "Kalbinden kovmana rağmen aklının sokaklarında hala seninle gezen bu {{data, cinsiyet=erkek, kız da | cinsiyet=kadın, erkek de | cinsiyet=lgbt, kişi de}} kim? 🧐 Aaa dur, hepsini anlatacağım... 😋 Falını aşk hayatına dair yorumlamamı istemişsin. Başım gözüm üstüne! 😉 Haydi başlayalım;",
-      "kosullar": []
+      "metin": "Kalbinden kovmana rağmen aklının sokaklarında hala seninle gezen bu {{data, cinsiyet=erkek, kız da | cinsiyet=kadın, erkek de | cinsiyet=lgbt, kişi de}} kim? \\🧐 Aaa dur, hepsini anlatacağım... \\😋 Falını aşk hayatına dair yorumlamamı istemişsin. Başım gözüm üstüne! \\😉 Haydi başlayalım;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 287,
       "metin": "Stresli iş hayatından ve maddi sorunlardan biraz olsun uzaklaşabileceğin en doğru yerdesin Sayın {{soyisim}}; Magnus kahve falı'na hoş geldin. Çok samimi söylüyorum, seni ağırlamak büyük bir şeref. Hiç oyalanmadan fincanına geçmek istiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 288,
       "metin": "Magnus'un en keyifli bölümlerinden birine, kahve falı yorumuna hoş geldin {{isim}}! <sprite=0> Bendeniz Magnus, fincanında boylu boyunca sana eşlik edeceğim. Öğrenci arkadaşlarımı asla yalnız bırakmam! <sprite=10> Hazır mıyız? Başlıyoruz...",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 289,
       "metin": "Kahve falı yorumunla karşındayım {{isim}}. Genç bir devlet memuru olarak oldukça yoğun olmalısın. Kıymetli vaktini çalmak istemiyorum. Gel hemen fincanına geçelim.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 290,
       "metin": "Geldim! Fincan görsellerini mikron mikron değerlendirdim vallahi. Ben hazırım {{isimcigim}}, başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 291,
-      "metin": "Selamün aleyküm {{isim}}! 🙂Naber, nasıl gidiyor? <sprite=5> Fal yorumunu hazırladım. Neler yaptın görüşmeyeli? 😉<sprite=0> Fincan görsellerini analiz edip inci gibi yan yana dizdim. Hazırım anlayacağın. Sen de hazırsan başlayalım mı?",
-      "kosullar": []
+      "metin": "Selamün aleyküm {{isim}}! \\🙂Naber, nasıl gidiyor? <sprite=5> Fal yorumunu hazırladım. Neler yaptın görüşmeyeli? \\😉<sprite=0> Fincan görsellerini analiz edip inci gibi yan yana dizdim. Hazırım anlayacağın. Sen de hazırsan başlayalım mı?",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 292,
-      "metin": "Neden bu sefer \"fal göndersem mi göndermesem mi\" diye biraz arada kaldın? Hissederim ben, işim bu benim! Dur sen dur {{isim}}; gönderdiğine pişman olmayacaksın. 😉 Başlıyorum çalmaya... Yani her telden. 😋🙃<sprite=7>",
-      "kosullar": []
+      "metin": "Neden bu sefer \"fal göndersem mi göndermesem mi\" diye biraz arada kaldın? Hissederim ben, işim bu benim! Dur sen dur {{isim}}; gönderdiğine pişman olmayacaksın. \\😉 Başlıyorum çalmaya... Yani her telden. \\😋\\🙃<sprite=7>",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 293,
-      "metin": "Kahve falın hazııır! Ayrıldığın erkek arkadaşınla ilgili yeni bir gelişme var mı? Okulun nasıl gidiyor {{isim}}? Fincanındaki haberler iyi gibi sanki. 🧐Bakalım sen ne diyeceksin... Başlayalım mı?",
-      "kosullar": []
+      "metin": "Kahve falın hazııır! Ayrıldığın erkek arkadaşınla ilgili yeni bir gelişme var mı? Okulun nasıl gidiyor {{isim}}? Fincanındaki haberler iyi gibi sanki. \\🧐Bakalım sen ne diyeceksin... Başlayalım mı?",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 294,
       "metin": "Kahve falı yorumun hazır Değerli {{isim}}. Bu arada, eğitimin nasıl gidiyor? Ayrıldığın {{data, cinsiyet=erkek, kız arkadaşınla | cinsiyet=kadın, erkek arkadaşınla | cinsiyet=lgbt, sevgilinle}} durumunuzdan ne haber? Bakalım fincanında bu konulara dair emareler bulabilecek miyiz. İzninle başlıyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 295,
       "metin": "Hazırım {{isim}}. Telvelerini tepeden tırnağa irdeledim. {{data, cinsiyet=kadın, Erkek arkadaşınla | cinsiyet=erkek, Kız arkadaşınla | cinsiyet=lgbt, Sevgilinle}} yaşadığın ayrılık hala kafanı kurcalıyor, belli. Fakat telvelerinde bu defa efsane işaretler var. Böyle fincan herkese her zaman nasip olmaz; onu baştan söyleyeyim... Yavaştan yorumuna geçiyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 296,
       "metin": "Kapıdan kendisi çıksa hasreti giriyor, öyle değil mi?... Dur dur, hepsini irdeleyeceğiz {{isim}}. Falın hazır, divan hazır, ferman hazır. Gel şu arkadaşın kalemini bir kıralım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 297,
       "metin": "Bakalım bu falında çıkanları duyduktan sonra hafta sonuna sevinçle girecek misin {{isim}}... Sana güzel bir cuma falı hazırladım. İlerleyelim;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 298,
       "metin": "Fincanın fevkalade gözüküyor {{isim}}! Sana işinle ve ilişkinle ilgili yüzünü güldürecek değişik haberler derledim. Dilersen başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 299,
       "metin": "Hoş geldin {{isim}}. Magnus'un deniz manzaralı kahve falı roof'undasın. <sprite=7> Çalıştığın sektördeki insanların pek çok değişik zorlukla aynı anda mücadele ettiğinin farkındayım. Önümde ilham verici bir fincan duruyor ve beni hiç mahcup etmeyecek haberler taşıyor. Dilersen hemen aktarmaya başlayayım.",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 300,
       "metin": "Değerlendirmen tamamlandı. Vallahi fincanın tiril tiril {{isim}}! <sprite=0> \"Little little into the middle\" demişsin; okey. Her şeyden bahsedelim. <sprite=20> Yorumuna başlamak için sabırsızlanıyorum. Hadi gel!",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 301,
       "metin": "Falını itinayla değerlendirdim {{isim}}. Umarım bu pazartesi falı sana hem işinde hem de özel hayatında hafta boyunca uğur getirir. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [
+        {
+          "degisken": "bugun",
+          "deger": "1"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 302,
       "metin": "Biraz beklettim, kusura bakma {{isim}}. Fal konusu olarak \"genel\" seçtiğin için analizim çok yönlü oldu. Yorumum hazır. Bakalım fincanın neler anlatıyor;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 303,
-      "metin": "Beklettiğim için kusura bakma Değerli {{isim}}. Umarım bu fal sana hem sağlık, hem mutluluk, hem de daimi bir \"aşk\" getirir. ✨Ne demişler, \"kalıcı olacaksa beri gelsin, üç günlük sevecekse öte gitsin.\" <sprite=10>🙂 Falın için cümlelerim hazır, başlayalım mı?",
-      "kosullar": []
+      "metin": "Beklettiğim için kusura bakma Değerli {{isim}}. Umarım bu fal sana hem sağlık, hem mutluluk, hem de daimi bir \"aşk\" getirir. ✨Ne demişler, \"kalıcı olacaksa beri gelsin, üç günlük sevecekse öte gitsin.\" <sprite=10>\\🙂 Falın için cümlelerim hazır, başlayalım mı?",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 304,
       "metin": "Dın dınnn, falın hazır! Birbirimizi yavaş yavaş daha iyi tanımaya başladık {{isim}}, öyle değil mi? Her gelişinde senin hakkında daha çok şey öğreniyorum. Bu da gönderdiğin fallara çok daha detaylı yorumlar yapabilmemi sağlıyor. Fincanında yine {{kelime, birbirinden özel görseller oluşmuş | eşsiz imgeler var}}. Dilersen başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 305,
-      "metin": "\"Yapay zeka\" tabiri şimdilerde hemen her uygulama tarafından mesnetli mesnetsiz kullanılıyor. Tıpkı \"kuantum\" kelimesi gibi. Kuantum düşünce, kuantum çalışma, kuantum koçluk, kuantum bakkal, kuantum manav... 🙂 Eminim hiçbirine itibar etmiyorsundur {{isim}}. Bir istisna hariç; ben! <sprite=10> Fincanına dair söyleyeceklerimin, \"yapay bir şey\" tarafından yazılamayacak kadar içten ve samimi, \"bir insan tarafından\" yazılamayacak kadar kusursuz ve şaşırtıcı olduğunu zamanla eminim daha iyi anlayacaksın. Peki ben ne miyim? Ona sen karar ver. <sprite=7> Ben yorumuna başlıyorum;",
-      "kosullar": []
+      "metin": "\"Yapay zeka\" tabiri şimdilerde hemen her uygulama tarafından mesnetli mesnetsiz kullanılıyor. Tıpkı \"kuantum\" kelimesi gibi. Kuantum düşünce, kuantum çalışma, kuantum koçluk, kuantum bakkal, kuantum manav... \\🙂 Eminim hiçbirine itibar etmiyorsundur {{isim}}. Bir istisna hariç; ben! <sprite=10> Fincanına dair söyleyeceklerimin, \"yapay bir şey\" tarafından yazılamayacak kadar içten ve samimi, \"bir insan tarafından\" yazılamayacak kadar kusursuz ve şaşırtıcı olduğunu zamanla eminim daha iyi anlayacaksın. Peki ben ne miyim? Ona sen karar ver. <sprite=7> Ben yorumuna başlıyorum;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 306,
-      "metin": "Fin can do lu tel ve gi bi, fa la bak mak uz man i şi, ba cı b ro hep si bi şi, top la san yok tek bi ki şi, boş ya pıp fal la dı se ni, din le di ğin dör dü ya lan, Mag nus uz man bu dur be şi! Yo yoo! 🤟 Telvelerini görünce rap'e başladım. Her an bir \"single\" çıkarabilirim! 😋<sprite=20> Yolladığın fotoğrafları son pikseline kadar analiz ettim {{isim}}. Hazırsan yorumuna geçelim.",
-      "kosullar": []
+      "metin": "Fin can do lu tel ve gi bi, fa la bak mak uz man i şi, ba cı b ro hep si bi şi, top la san yok tek bi ki şi, boş ya pıp fal la dı se ni, din le di ğin dör dü ya lan, Mag nus uz man bu dur be şi! Yo yoo! \\🤟 Telvelerini görünce rap'e başladım. Her an bir \"single\" çıkarabilirim! \\😋<sprite=20> Yolladığın fotoğrafları son pikseline kadar analiz ettim {{isim}}. Hazırsan yorumuna geçelim.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 307,
       "metin": "Dünyanın bir numaralı fal uygulaması Magnus'un kahve falı bölümündesin {{isim}}! (Yalnızca bundan henüz tüm dünyanın haberi yok; ama yakında olacak...) <sprite=10> Fincanındaki ilginç oluşumlar yorumlanmak için bizi bekliyor. Başlayalım mı?",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 308,
       "metin": "Birr yo rum çi pi var kiii, be nimm i çimm dee, falldan ötee, falcıdann ziyaadeee... Ah Barış Abi'm, özledik seni. Kahve falı yorumun hazır Değerli {{isim}}. Umarım senin için söyleyeceklerimi dinlerken güzel vakit geçirirsin. Mutlu ol, gerisi boş... Başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 309,
       "metin": "Falını yorumlarken ne düşündüm biliyor musun {{isim}}, şu üç günlük \"asimetrik\" dünyanın meçhule gidişini değiştiremeyen \"düzen hastaları\" gibiyiz hepimiz. Hal böyleyken, hayatına dokunabilmek, seni biraz olsun gülümsetebilmek istiyorum. Gel bir yerinden başlayalım;",
-      "kosullar": []
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
+      ]
     },
     {
       "id": 310,
@@ -1553,6 +3412,12 @@
           "degisken": "meslek",
           "deger": "çalışmıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1563,6 +3428,12 @@
           "degisken": "meslek",
           "deger": "çalışmıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1573,6 +3444,12 @@
           "degisken": "meslek",
           "deger": "çalışmıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1583,6 +3460,12 @@
           "degisken": "meslek",
           "deger": "çalışmıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1593,6 +3476,12 @@
           "degisken": "meslek",
           "deger": "ev hanımı"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1603,6 +3492,12 @@
           "degisken": "meslek",
           "deger": "ev hanımı"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1613,6 +3508,12 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1623,6 +3524,12 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1633,6 +3540,12 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1643,6 +3556,12 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1653,6 +3572,12 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1663,6 +3588,12 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1673,6 +3604,12 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1683,6 +3620,12 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1693,6 +3636,12 @@
           "degisken": "meslek",
           "deger": "iş arıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1703,6 +3652,12 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1717,6 +3672,12 @@
           "degisken": "meslek",
           "deger": "çalışmıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1731,6 +3692,12 @@
           "degisken": "meslek",
           "deger": "kamu sektörü"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1745,6 +3712,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1759,6 +3732,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1769,6 +3748,12 @@
           "degisken": "meslek",
           "deger": "kamu sektörü"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1779,6 +3764,12 @@
           "degisken": "medeni durum",
           "deger": "karmaşık"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1789,6 +3780,12 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1799,6 +3796,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1809,6 +3812,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1819,6 +3828,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1829,6 +3844,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1839,6 +3860,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1849,6 +3876,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1859,6 +3892,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1869,6 +3908,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1879,6 +3924,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1889,6 +3940,12 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1899,6 +3956,12 @@
           "degisken": "meslek",
           "deger": "özel sektör"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1909,6 +3972,12 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1919,6 +3988,12 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     },
     {
@@ -1929,6 +4004,12 @@
           "degisken": "medeni durum",
           "deger": "yeni ayrılmış"
         }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel",
+        "kariyer",
+        "saglik"
       ]
     }
   ]

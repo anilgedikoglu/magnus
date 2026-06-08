@@ -59,4 +59,8 @@ workflows:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
 
-    # publishing: (devre dışı — şimdilik sadece IPA build)
+    publishing:
+      app_store_connect:
+        auth: integration          # Codemagic → Team Settings → Integrations → App Store Connect
+        submit_to_testflight: true
+        submit_to_app_store: false # true yapınca Production'a gider — şimdilik TestFlight

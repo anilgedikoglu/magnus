@@ -17,6 +17,9 @@ workflows:
         TEAM_ID: SN5Y726ZKF
 
     scripts:
+      - name: Disable Swift Package Manager (google_mobile_ads uyumluluğu)
+        script: flutter config --no-enable-swift-package-manager
+
       - name: Flutter pub get
         script: flutter pub get
 

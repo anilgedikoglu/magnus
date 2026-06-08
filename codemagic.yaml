@@ -12,9 +12,9 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.magnus.magnusApp
+        bundle_identifier: com.futurastic.Magnus
       vars:
-        BUNDLE_ID: com.magnus.magnusApp
+        BUNDLE_ID: com.futurastic.Magnus
         APP_STORE_APPLE_ID: "6738625684"   # App Store Connect > App > App Information > Apple ID
       flutter: stable
       xcode: latest

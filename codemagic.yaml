@@ -10,12 +10,11 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
+      groups:
+        - ios_signing        # IOS_CERTIFICATE, IOS_CERTIFICATE_PASSWORD, IOS_PROVISIONING_PROFILE
       vars:
         BUNDLE_ID: com.futurastic.Magnus
         TEAM_ID: SN5Y726ZKF
-        # IOS_CERTIFICATE            → Codemagic UI'da "File" türünde ekle (.p12 base64)
-        # IOS_CERTIFICATE_PASSWORD   → Codemagic UI'da "Secure" string ekle
-        # IOS_PROVISIONING_PROFILE   → Codemagic UI'da "File" türünde ekle (.mobileprovision base64)
 
     scripts:
       - name: Flutter pub get

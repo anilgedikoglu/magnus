@@ -166,6 +166,11 @@ class FortuneService {
       // Tekrar gösterilmeme (konu bazında ayrı key)
       // Kural: tüm uygun metinler gösterilene kadar aynı metin tekrar seçilemez.
       // Sıfırlamada son gösterilen ID korunur → üst üste aynı metin gelmez.
+      //
+      // "genel" seçildiğinde fallback kademeleri:
+      //   L1) Genel-taglli metinlerden no-repeat seç
+      //   L2) Genel bitti → TÜM konuların karışımından (eligible) no-repeat seç
+      //   L3) Tüm mix de bitti → son ID koruyarak sıfırla, tüm mix'ten başa dön
       final shownKey = 'kahve_${bolum}_${falKonusu}_shown_ids';
       var shownIds = prefs.getStringList(shownKey) ?? [];
       var available = konuFiltered
@@ -173,15 +178,36 @@ class FortuneService {
           .toList();
 
       if (available.isEmpty) {
-        // Hepsi gösterildi → son ID'yi koruyarak sıfırla
-        final lastId = shownIds.isNotEmpty ? shownIds.last : null;
-        final resetShown = lastId != null ? [lastId] : <String>[];
-        await prefs.setStringList(shownKey, resetShown);
-        shownIds = resetShown;
-        available = konuFiltered
-            .where((t) => '${(t as Map)['id']}' != lastId)
-            .toList();
-        if (available.isEmpty) available = List.from(konuFiltered); // tek metin zorunlu tekrar
+        if (falKonusu == 'genel') {
+          // Genel metinler bitti → tam mix'e genişle (diğer konular dahil)
+          final mixAvailable = eligible
+              .where((t) => !shownIds.contains('${(t as Map)['id']}'))
+              .toList();
+          if (mixAvailable.isNotEmpty) {
+            // Mix'te hâlâ gösterilmemiş metin var → no-repeat korumalı, sıfırlamadan devam
+            available = mixAvailable;
+          } else {
+            // Mix de bitti → son ID koruyarak sıfırla, eligible'dan başa dön
+            final lastId = shownIds.isNotEmpty ? shownIds.last : null;
+            final resetShown = lastId != null ? [lastId] : <String>[];
+            await prefs.setStringList(shownKey, resetShown);
+            shownIds = resetShown;
+            available = eligible
+                .where((t) => '${(t as Map)['id']}' != lastId)
+                .toList();
+            if (available.isEmpty) available = List.from(eligible);
+          }
+        } else {
+          // Diğer konular: konu havuzunda son ID koruyarak sıfırla
+          final lastId = shownIds.isNotEmpty ? shownIds.last : null;
+          final resetShown = lastId != null ? [lastId] : <String>[];
+          await prefs.setStringList(shownKey, resetShown);
+          shownIds = resetShown;
+          available = konuFiltered
+              .where((t) => '${(t as Map)['id']}' != lastId)
+              .toList();
+          if (available.isEmpty) available = List.from(konuFiltered);
+        }
       }
 
       available.shuffle(_rng);

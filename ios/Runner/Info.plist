@@ -41,6 +41,8 @@
 			<string>UIInterfaceOrientationLandscapeLeft</string>
 			<string>UIInterfaceOrientationLandscapeRight</string>
 		</array>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>Uygulama ses özellikleri için mikrofon erişimi gerektirebilir.</string>
 		<key>NSCameraUsageDescription</key>
 		<string>Kahve falı için fincanının fotoğrafını çekmek amacıyla kameraya erişim gerekiyor.</string>
 		<key>NSPhotoLibraryUsageDescription</key>

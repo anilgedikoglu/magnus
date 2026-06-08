@@ -41,6 +41,8 @@
 			<string>UIInterfaceOrientationLandscapeLeft</string>
 			<string>UIInterfaceOrientationLandscapeRight</string>
 		</array>
+		<key>GADApplicationIdentifier</key>
+		<string>ca-app-pub-6470338276121414~5546686598</string>
 		<key>NSMicrophoneUsageDescription</key>
 		<string>Uygulama ses özellikleri için mikrofon erişimi gerektirebilir.</string>
 		<key>NSCameraUsageDescription</key>

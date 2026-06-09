@@ -140,18 +140,31 @@ class FortuneService {
     return eligible;
   }
 
-  /// Genel konu için kademeli genişleme basamakları.
-  /// Her basamak bir öncekinden daha geniş bir konu kümesi.
+  /// Genel konu için kademeli genişleme — tüm 15 alt küme.
+  /// Sıralama: en dar (tek konu) → en geniş (tam mix).
+  /// Aynı boyutta genel-içerenler önce gelir.
+  /// Her bölüm bağımsız ilerler → cross-section varyasyonlar doğal oluşur:
+  ///   (genel genel ask), (saglik ask genel), (ask ask saglik) vb.
   static const _genelExpansions = [
+    // Boyut 1
     ['genel'],
+    ['ask'],
+    ['saglik'],
+    ['kariyer'],
+    // Boyut 2 — genel içerenler önce
     ['genel', 'ask'],
     ['genel', 'saglik'],
     ['genel', 'kariyer'],
+    ['ask', 'saglik'],
+    ['ask', 'kariyer'],
+    ['saglik', 'kariyer'],
+    // Boyut 3 — genel içerenler önce
     ['genel', 'ask', 'saglik'],
     ['genel', 'ask', 'kariyer'],
     ['genel', 'saglik', 'kariyer'],
     ['ask', 'saglik', 'kariyer'],
-    ['genel', 'ask', 'saglik', 'kariyer'], // tam mix
+    // Boyut 4 — tam mix
+    ['genel', 'ask', 'saglik', 'kariyer'],
   ];
 
   /// "genel" seçildiğinde kademeli genişleme ile no-repeat havuz döner.
@@ -318,16 +331,21 @@ class FortuneService {
 
       if (eligible.isEmpty) continue;
 
-      // Tekrar gösterilmeme
+      // Tekrar gösterilmeme — tüm uygun metinler gösterilene kadar aynı metin gelmez.
+      // Sıfırlamada son gösterilen ID korunur → üst üste aynı metin çıkmaz.
       final shownKey = 'tarot_shown_${pozisyon}_${jsonKart}_${card.isReversed}';
       var shownIds = prefs.getStringList(shownKey) ?? [];
       var available = eligible.where((t) => !shownIds.contains('${(t as Map)['id']}')).toList();
 
       if (available.isEmpty) {
-        // Tüm metinler gösterildi → sıfırla
-        await prefs.remove(shownKey);
-        shownIds = [];
-        available = eligible;
+        final lastId = shownIds.isNotEmpty ? shownIds.last : null;
+        final resetShown = lastId != null ? [lastId] : <String>[];
+        await prefs.setStringList(shownKey, resetShown);
+        shownIds = resetShown;
+        available = eligible
+            .where((t) => '${(t as Map)['id']}' != lastId)
+            .toList();
+        if (available.isEmpty) available = List.from(eligible);
       }
 
       available.shuffle(_rng);

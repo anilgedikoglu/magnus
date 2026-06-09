@@ -474,10 +474,13 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
           ),
           child: SizedBox.expand(
             key: curKey,
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              child: Center(
-                child: Container(
+            child: LayoutBuilder(
+              builder: (context, constraints) => SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minHeight: constraints.maxHeight - 16),
+                  child: Center(
+                    child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 4),
                   padding: const EdgeInsets.fromLTRB(24, 22, 24, 22),
                   decoration: BoxDecoration(
@@ -505,14 +508,16 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
                       fontWeight: FontWeight.w300,
                       letterSpacing: 0.4,
                     ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
+                  ),  // Container
+                  ),  // Center
+                ),  // ConstrainedBox
+              ),  // SingleChildScrollView
+            ),  // LayoutBuilder
+          ),  // SizedBox.expand
+        ),  // AnimatedSwitcher
+      ),  // ClipRect
+    ),  // Padding child
+  );
   }
 
   // ─── Sol / Sağ navigasyon butonları ──────────────────────────────────────

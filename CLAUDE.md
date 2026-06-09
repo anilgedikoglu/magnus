@@ -1126,6 +1126,17 @@ void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
 
 ---
 
+## iOS / Google Play — Yasal URL'ler
+
+| Sayfa | URL |
+|---|---|
+| Privacy Policy | `https://anilgedikoglu.github.io/magnus/privacy-policy.html` |
+| Delete Account | `https://anilgedikoglu.github.io/magnus/delete-account.html` |
+
+Kaynak repo: `https://github.com/anilgedikoglu/magnus` → `docs/` klasörü
+
+---
+
 ## iOS App Store — Teknik Yapılandırma
 
 ### Bundle ID

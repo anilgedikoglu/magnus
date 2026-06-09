@@ -2305,7 +2305,32 @@ class SettingsScreen extends ConsumerWidget {
                 },
               ),
 
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
+
+              // ── Eğlence beyanı ───────────────────────────────────────────
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.04),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: Colors.white.withValues(alpha: 0.10),
+                      width: 1,
+                    ),
+                  ),
+                  child: const Text(
+                    '⚠️ Magnus yalnızca eğlence amaçlıdır. İçerikler kurgusal ve sembolik niteliktedir; gerçek kehanet ya da tavsiye sunmaz.',
+                    style: TextStyle(
+                      color: Color(0x99FFFFFF),
+                      fontSize: 10.5,
+                      height: 1.5,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
 
               // Kapat butonu
               Padding(

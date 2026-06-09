@@ -1120,9 +1120,13 @@ void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
 | 221 | 10.6.0 | iOS | 2026-06-08 | Microphone fix — encryption compliance sorunu |
 | 222 | 10.6.0 | iOS | 2026-06-08 | TestFlight'a ulaştı — GADApplicationIdentifier eksikti, crash |
 | 223 | 10.6.0 | iOS | 2026-06-08 | GADApplicationIdentifier eklendi, TestFlight'ta çalışıyor |
-| 224+ | 10.6.0 | iOS | — | Bir sonraki build (ikon büyütme) |
+| 224–227 | 10.6.0 | iOS+Android | 2026-06-09 | Rewarded ads (6 ekran), Yana screen fix, Doğum Haritası fix, Niyet Geri Git |
+| 228 | 10.6.0 | iOS | 2026-06-09 | ATT + PrivacyInfo.xcprivacy + eğlence beyanı — App Store'a yüklendi (229 için atlandı) |
+| 229 | 10.6.0 | iOS | 2026-06-09 | Version bump (228 zaten yüklüydü) |
+| 230 | 10.6.0 | iOS | 2026-06-09 | NSUserTrackingUsageDescription + ATT kaldırıldı → App Review'a gönderildi ✅ |
 
-**Bir sonraki iOS build: versionCode 224**
+**Bir sonraki iOS build: versionCode 231**
+**Bir sonraki Android build: versionCode 231**
 
 ---
 
@@ -1132,8 +1136,11 @@ void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
 |---|---|
 | Privacy Policy | `https://anilgedikoglu.github.io/magnus/privacy-policy.html` |
 | Delete Account | `https://anilgedikoglu.github.io/magnus/delete-account.html` |
+| Support URL | `https://anilgedikoglu.github.io/magnus/support.html` |
+| Marketing URL | `https://anilgedikoglu.github.io/magnus/` |
 
 Kaynak repo: `https://github.com/anilgedikoglu/magnus` → `docs/` klasörü
+Tüm sayfalar TR/EN dil seçimi içeriyor (tarayıcı diline göre otomatik).
 
 ---
 
@@ -1174,9 +1181,14 @@ Kaynak repo: `https://github.com/anilgedikoglu/magnus` → `docs/` klasörü
 <string>Kahve falı için fincanının fotoğrafını çekmek amacıyla kameraya erişim gerekiyor.</string>
 <key>NSPhotoLibraryUsageDescription</key>
 <string>Kahve falı için galerinizden fotoğraf seçmek amacıyla erişim gerekiyor.</string>
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>Fal fotoğraflarınızı kaydetmek için galerinize erişim gerekiyor.</string>
 <key>ITSAppUsesNonExemptEncryption</key>
 <false/>
 ```
+
+> ⚠️ `NSUserTrackingUsageDescription` **EKLEME** — App Store App Privacy uyumsuzluğu yaratır.
+> ATT (App Tracking Transparency) paketi de kullanılmıyor. AdMob non-personalized reklamlarla çalışır.
 
 ### iOS Signing Dosyaları (LOCAL — git'e commit edilmez)
 `C:\src\magnus_app\ios_certs\`
@@ -1195,4 +1207,75 @@ Kaynak repo: `https://github.com/anilgedikoglu/magnus` → `docs/` klasörü
 - **App Store Connect API Key ID:** G796KF2KD3
 - **Issuer ID:** 8c4687a8-9df9-4d95-8516-3fa3b7576e44
 
-**Bir sonraki build: versionCode 217**
+**Bir sonraki build: versionCode 231**
+
+### PrivacyInfo.xcprivacy
+`ios/Runner/PrivacyInfo.xcprivacy` mevcut — Apple'ın zorunlu kıldığı privacy manifest.
+- `NSPrivacyTracking: false`
+- API'lar: UserDefaults (CA92.1), FileTimestamp (C617.1), SystemBootTime (35F9.1), DiskSpace (E174.1)
+- `project.pbxproj`'ta Resources build fazına ekli (UUID: `B0A1C0DE0000000000000001`)
+
+---
+
+## 2026-06-09 Session — Rewarded Ads + iOS App Store Yayın
+
+### Rewarded Ad Entegrasyonu (6 ekran)
+
+`AdService.instance.showRewarded(onRewarded: fn, onFailed: fn)` — her iki callback da içeriğe devam eder.
+
+| Ekran | Tetikleyici |
+|---|---|
+| `faloya_screen.dart` | 3s beklemeden sonra, metin gelmeden önce |
+| `maganda_screen.dart` | 3s beklemeden sonra, cevap gelmeden önce |
+| `tamua_screen.dart` | "Geçirdim Hazırım" butonuna basınca |
+| `yana_screen.dart` | Bana Dair / Yaşama Dair seçimine basınca |
+| `kahinler_menu_screen.dart` | Kahin (Derun/Uraz/Likia/Khallesi/Yousuf) seçimine basınca |
+| `niyet_screen.dart` | İlk kazıma hareketi başladığında (sadece bir kez) |
+| `kadercarki_screen.dart` | Çark dönüp durduktan sonra |
+
+### Yana Screen Düzeltmeleri (yana_screen.dart)
+
+- `icerik` state'ine geçişte görsel kayması düzeltildi → tüm state'ler tek Stack/LayoutBuilder altında
+- Görsel `Alignment(0, -0.82)` konumunda tüm state'lerde sabit
+- Metin kutusu görsel ve Geri Git butonu arasında dikey ortalandı
+- **Yukarıdan aşağı akan yazı → aşağıdan yukarı yerleşen yazı** animasyonuna çevrildi
+  - Her kelime `easeOutCubic` + staggered delay (maxDelay=0.65)
+  - `Transform.translate(offset: Offset(0, (1.0 - eased) * 38))` ile yukarı yükselir
+
+### Niyet Ekranı (niyet_screen.dart)
+
+- Pembe "Kapat" butonu → standart "< Geri Git" butonuyla değiştirildi
+- İlk parmak hareketi rewarded ad tetikler; dönüşte kazıma devam eder
+
+### Doğum Haritası Fix (dogumharitasi_screen.dart)
+
+- JSON yapısı: tek `dogumharitasi` flat listesi (198 giriş) — bölüm bazlı yapı değil
+- `_loading` spinner'ı hiç kapanmıyordu → `_loadData()` yeniden yazıldı
+- Pref anahtarları: `dh_gosterilen`, `dh_last_date`, `dh_bugun_id`
+
+### Ana Menü 3. Sayfa Boş Kutucuklar (home_screen.dart)
+
+- `credits < 0` olan menü kartlarının ortasına `'Yakında...'` metni eklendi
+- fontSize: 10, color: white54
+
+### Variable Replacer Fix (variable_replacer.dart)
+
+- `{{ay_N}}` ve `{{gun_N}}` regex: `[+-]` → `[+-]?` (opsiyonel işaret)
+- 402 metin, 21 JSON dosyasını etkiliyor
+
+### iOS App Store — ATT Kaldırma (2026-06-09)
+
+App Store "App Privacy" uyumsuzluğu: `NSUserTrackingUsageDescription` var ama privacy labels'ta tracking işaretli değildi.
+**Çözüm:** ATT tamamen kaldırıldı.
+- `NSUserTrackingUsageDescription` Info.plist'ten silindi
+- `app_tracking_transparency` paketi pubspec.yaml'dan kaldırıldı  
+- `main.dart`'tan ATT kod bloğu temizlendi
+- AdMob non-personalized reklamlarla çalışmaya devam eder
+- **BİR DAHA EKLEME** — her seferinde App Privacy uyumsuzluğu çıkar
+
+### iOS App Store — İlk Yayın Süreci (2026-06-09)
+
+- Build 230 → App Review'a gönderildi ✅
+- App Store Connect URL: `https://appstoreconnect.apple.com/apps/1612979368`
+- Mevcut yayında: **10.3**
+- Review'daki: **10.6.0 (230)**

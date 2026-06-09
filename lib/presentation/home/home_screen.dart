@@ -1442,6 +1442,20 @@ class _MenuCardState extends State<_MenuCard>
                     bottom: 5, left: 5,
                     child: _CreditBadge(count: widget.item.credits),
                   ),
+                // Yer tutucu — dikey ortada "Yakında..." yazısı
+                if (widget.item.credits < 0)
+                  const Center(
+                    child: Text(
+                      'Yakında...',
+                      style: TextStyle(
+                        color: Colors.white54,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.3,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
               ],
             ),
           ),

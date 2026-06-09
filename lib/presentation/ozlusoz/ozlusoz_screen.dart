@@ -150,9 +150,6 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
     }
     setState(() { _direction = 1; _index++; });
     _nextCount++;
-    if (_nextCount % 5 == 0) {
-      AdService.instance.showInterstitial(throttle: false);
-    }
   }
 
   void _prev() {

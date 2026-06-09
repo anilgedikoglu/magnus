@@ -632,8 +632,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       _showHazirlaniyorBubble(type);
     }
     await _refreshCredits();
-    // Fal ekranından dönünce geçiş reklamı göster
-    await AdService.instance.showInterstitial();
   }
 
   // ─── Günlük limitli fallar (I-Ching, Japon Falı) — reklam yok, git/gel yok (go) ──
@@ -646,12 +644,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     context.push(route);
   }
 
-  // ─── Geçiş reklamlı navigasyon yardımcısı ────────────────────────────────
+  // ─── Navigasyon yardımcısı ────────────────────────────────────────────────
   Future<void> _pushWithAd(String route) async {
     if (!mounted) return;
     await context.push(route);
-    if (!mounted) return;
-    await AdService.instance.showInterstitial();
   }
 
   void _showHazirlaniyorBubble(String type) {
@@ -750,7 +746,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               await context.push('/motivation');
               if (!mounted) return;
               await _refreshCredits();
-              await AdService.instance.showInterstitial();
             }),
         _MenuItem('Dert Ortağı', 'assets/images/menu/dertortagi.png',
             _remainingCredits['dertortagi'] ?? 1,

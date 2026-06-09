@@ -10,6 +10,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
 
@@ -267,7 +268,16 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     // Artık buton bekleniyor — _startAnimation() ile devam edilir
   }
 
-  // Buton basıldığında çağrılır; soruyu gizler, taşı başlatır.
+  // "Geçirdim, hazırım" butonu → rewarded reklam → animasyon başlar
+  void _onHazirTap() {
+    if (_adim != _TamuaAdim.hazir) return;
+    AdService.instance.showRewarded(
+      onRewarded: _startAnimation,
+      onFailed:   _startAnimation,
+    );
+  }
+
+  // Reklam sonrası çağrılır; soruyu gizler, taşı başlatır.
   void _startAnimation() {
     if (_adim != _TamuaAdim.hazir) return;
     setState(() => _adim = _TamuaAdim.animasyon);
@@ -506,7 +516,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
               ),
               const SizedBox(height: 16),
               GestureDetector(
-                onTap: _startAnimation,
+                onTap: _onHazirTap,
                 child: Container(
                   height: 50,
                   decoration: BoxDecoration(

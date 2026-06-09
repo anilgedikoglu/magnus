@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../core/services/ad_service.dart';
 
 class KahinlerMenuScreen extends StatelessWidget {
   const KahinlerMenuScreen({super.key});
@@ -66,7 +67,16 @@ class KahinlerMenuScreen extends StatelessWidget {
 
   Widget _buildKahin(BuildContext context, _Kahin kahin) {
     return GestureDetector(
-      onTap: () => context.push('/parmak_surtme', extra: kahin.id),
+      onTap: () {
+        AdService.instance.showRewarded(
+          onRewarded: () {
+            if (context.mounted) context.push('/parmak_surtme', extra: kahin.id);
+          },
+          onFailed: () {
+            if (context.mounted) context.push('/parmak_surtme', extra: kahin.id);
+          },
+        );
+      },
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white.withValues(alpha: 0.05),

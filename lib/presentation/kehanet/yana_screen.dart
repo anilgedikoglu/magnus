@@ -14,7 +14,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
@@ -46,8 +45,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
   late AnimationController _slideCtrl;  // görsel yukarı kayma (2100 ms)
   late Animation<double>   _slideAnim;  // 0 → 1, easeOutCubic
   late AnimationController _rainCtrl;   // harf yağmuru (4500 ms)
-  late AnimationController _fadeCtrl;   // kehanet yazısı belirme (1400 ms)
-  late Animation<double>   _fadeAnim;   // 0 → 1, easeIn
+  late AnimationController _fadeCtrl;   // kehanet yazısı — kelimeler yukarı çıkış
 
   // ── Yağmur verisi ─────────────────────────────────────────────────────────
   final List<String> _rainChars  = [];
@@ -72,8 +70,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
       vsync: this, duration: const Duration(milliseconds: 4500));
 
     _fadeCtrl = AnimationController(
-      vsync: this, duration: const Duration(milliseconds: 1400));
-    _fadeAnim = CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeIn);
+      vsync: this, duration: const Duration(milliseconds: 2400));
   }
 
   @override
@@ -341,6 +338,68 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
     );
   }
 
+  // ── Kehanet metni: kelimeler aşağıdan yerlerine çıkar ────────────────────
+  Widget _buildRisingText(double t) {
+    // Renk taglarını soy — animasyon düz text üzerinde çalışır
+    final cleanText = _metin.replaceAll(
+        RegExp(r'<color=[^>]+>|</color>', caseSensitive: false), '');
+
+    final widgetList = <Widget>[];
+    final lines = cleanText.split('\n');
+
+    // Toplam kelime sayısını hesapla (stagger için)
+    int totalWords = 0;
+    for (final line in lines) {
+      totalWords += line.split(' ').where((w) => w.isNotEmpty).length;
+    }
+
+    int wordIndex = 0;
+    for (int li = 0; li < lines.length; li++) {
+      if (li > 0) {
+        // Wrap içinde satır sonu — tam genişlik boşluk
+        widgetList.add(const SizedBox(width: double.infinity, height: 2));
+      }
+      final words =
+          lines[li].split(' ').where((w) => w.isNotEmpty).toList();
+      for (final word in words) {
+        widgetList.add(
+            _buildRisingWord(word, wordIndex++, totalWords, t));
+      }
+    }
+
+    return Wrap(
+      alignment: WrapAlignment.center,
+      spacing: 0,
+      children: widgetList,
+    );
+  }
+
+  Widget _buildRisingWord(
+      String word, int index, int total, double t) {
+    // Stagger: ilk kelime hemen çıkar, son kelime 0.65'te başlar
+    const maxDelay = 0.65;
+    final delay =
+        total > 1 ? (index / (total - 1)) * maxDelay : 0.0;
+    final local =
+        ((t - delay) / (1.0 - delay)).clamp(0.0, 1.0);
+    final eased = Curves.easeOutCubic.transform(local);
+
+    return Opacity(
+      opacity: eased,
+      child: Transform.translate(
+        offset: Offset(0, (1.0 - eased) * 38),
+        child: Text(
+          '$word ',
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 15,
+            height: 1.7,
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildCloseButton() {
     return GestureDetector(
       onTap: () => context.pop(),
@@ -524,43 +583,50 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                       Positioned(
                         top: imgBottom + 12,
                         left: 0, right: 0, bottom: 0,
-                        child: AnimatedBuilder(
-                          animation: _fadeAnim,
-                          builder: (ctx, child) =>
-                              Opacity(opacity: _fadeAnim.value, child: child),
-                          child: Column(
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 12),
-                                  padding: const EdgeInsets.all(20),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white.withValues(alpha: 0.07),
-                                    borderRadius: BorderRadius.circular(18),
-                                    border: Border.all(
-                                      color: const Color(0xFFFF55FF).withValues(alpha: 0.30),
-                                      width: 1.2,
-                                    ),
-                                  ),
-                                  child: SingleChildScrollView(
-                                    child: RichTextParser.build(
-                                      _metin,
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        height: 1.7,
+                        child: Column(
+                          children: [
+                            // Metin kutusu — görsel ile buton arasında dikey ortalı
+                            Expanded(
+                              child: LayoutBuilder(
+                                builder: (ctx, constraints) => SingleChildScrollView(
+                                  child: ConstrainedBox(
+                                    constraints: BoxConstraints(
+                                        minHeight: constraints.maxHeight),
+                                    child: Center(
+                                      child: Container(
+                                        margin: const EdgeInsets.fromLTRB(
+                                            20, 0, 20, 0),
+                                        padding: const EdgeInsets.all(20),
+                                        decoration: BoxDecoration(
+                                          color: Colors.white
+                                              .withValues(alpha: 0.07),
+                                          borderRadius:
+                                              BorderRadius.circular(18),
+                                          border: Border.all(
+                                            color: const Color(0xFFFF55FF)
+                                                .withValues(alpha: 0.30),
+                                            width: 1.2,
+                                          ),
+                                        ),
+                                        // Kelimeler aşağıdan yerlerine çıkar
+                                        child: AnimatedBuilder(
+                                          animation: _fadeCtrl,
+                                          builder: (ctx, _) =>
+                                              _buildRisingText(
+                                                  _fadeCtrl.value),
+                                        ),
                                       ),
-                                      textAlign: TextAlign.center,
                                     ),
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                                child: _buildCloseButton(),
-                              ),
-                            ],
-                          ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.fromLTRB(20, 8, 20, 16),
+                              child: _buildCloseButton(),
+                            ),
+                          ],
                         ),
                       ),
 

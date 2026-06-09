@@ -264,7 +264,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
         _data = parsed;
         _dataLoaded = true;
       });
-      _updateContent(animate: false);
+      _updateContent();
     }
   }
 

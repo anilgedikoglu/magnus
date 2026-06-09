@@ -2,7 +2,6 @@
 // El Falı — fotoğraf çekme/seçme, el analizi ve fal ekranı.
 // Kaynak metinler: assets/data/elfali.json
 
-import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -13,9 +12,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/providers.dart';
-import '../../data/services/claude_vision_service.dart';
-
-enum _EFAdim { secim, analiz, hatali, sonuc }
+enum _EFAdim { secim, analiz, sonuc }
 
 class ElFaliScreen extends ConsumerStatefulWidget {
   const ElFaliScreen({super.key});
@@ -28,7 +25,6 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
     with SingleTickerProviderStateMixin {
   _EFAdim _adim = _EFAdim.secim;
   File?   _foto;
-  String  _hataMetni = '';
   bool    _gunlukDoldu = false;
 
   // Parsed result
@@ -84,12 +80,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
       await prefs.setString('elfali_bugun_tarih', todayStr);
       await _analizEt();
     } catch (e) {
-      if (mounted) {
-        setState(() {
-          _hataMetni = 'Test görseli yüklenemedi: $e';
-          _adim      = _EFAdim.hatali;
-        });
-      }
+      if (mounted) setState(() => _adim = _EFAdim.secim);
     }
   }
 
@@ -117,34 +108,17 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
 
       await _analizEt();
     } catch (e) {
-      if (mounted) {
-        setState(() {
-          _hataMetni = 'Fotoğraf alınamadı. Lütfen tekrar dene.';
-          _adim      = _EFAdim.hatali;
-        });
-      }
+      if (mounted) setState(() => _adim = _EFAdim.secim);
     }
   }
 
-  // ── Analiz + fal üretimi ──────────────────────────────────────────────────
+  // ── Fal üretimi ───────────────────────────────────────────────────────────
   Future<void> _analizEt() async {
     try {
-      final sonuclar = await Future.wait<dynamic>([
-        ClaudeVisionServiceElFali.elFaliAnaliz(_foto!.path),
-        Future.delayed(const Duration(seconds: 5)),
-      ]);
+      // API kontrolü yok — fotoğraf alındıktan sonra direkt fal üretilir
+      await Future.delayed(const Duration(seconds: 5));
 
       if (!mounted) return;
-
-      final analiz = sonuclar[0] as ElAnalizi;
-
-      if (!analiz.isHand) {
-        setState(() {
-          _hataMetni = 'Lütfen avucunu kameraya göster ve tekrar dene.';
-          _adim      = _EFAdim.hatali;
-        });
-        return;
-      }
 
       // Fal üret
       final fortuneService = ref.read(fortuneServiceProvider);
@@ -160,10 +134,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
       context.go('/home');
     } catch (e) {
       if (mounted) {
-        setState(() {
-          _hataMetni = 'Analiz sırasında bir hata oluştu. İnternet bağlantını kontrol et.';
-          _adim      = _EFAdim.hatali;
-        });
+        setState(() => _adim = _EFAdim.secim);
       }
     }
   }
@@ -206,7 +177,6 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               child: switch (_adim) {
                 _EFAdim.secim  => _buildSecim(),
                 _EFAdim.analiz => _buildAnaliz(),
-                _EFAdim.hatali => _buildHatali(),
                 _EFAdim.sonuc  => _buildSonuc(),
               },
             ),
@@ -428,38 +398,6 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
         ),
         const Spacer(),
       ],
-    );
-  }
-
-  // ── Durum: hatali ─────────────────────────────────────────────────────────
-  Widget _buildHatali() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 28),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text('⚠️', style: TextStyle(fontSize: 56)),
-          const SizedBox(height: 24),
-          Text(
-            _hataMetni,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 17,
-              height: 1.6,
-            ),
-          ),
-          const SizedBox(height: 36),
-          _buildGradientButton(
-            label: 'Tekrar Dene',
-            onTap: () => setState(() {
-              _foto      = null;
-              _hataMetni = '';
-              _adim      = _EFAdim.secim;
-            }),
-          ),
-        ],
-      ),
     );
   }
 

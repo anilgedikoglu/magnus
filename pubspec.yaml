@@ -1,7 +1,7 @@
 name: magnus_app
 description: Magnus — Fal, Tarot ve Astroloji
 publish_to: 'none'
-version: 10.6.0+229
+version: 10.6.0+230
 
 environment:
   sdk: ^3.7.2
@@ -37,7 +37,6 @@ dependencies:
 
   # Ads
   google_mobile_ads: ^5.1.0
-  app_tracking_transparency: ^2.0.4
 
   # Utilities
   intl: ^0.19.0

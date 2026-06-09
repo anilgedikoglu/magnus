@@ -1,9 +1,7 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'app.dart';
 import 'core/services/ad_service.dart';
 import 'data/providers.dart';
@@ -29,17 +27,7 @@ void main() async {
     systemNavigationBarDividerColor: Colors.transparent,
   ));
 
-  // ATT (App Tracking Transparency) — iOS 14+ zorunlu, AdMob'dan önce sor
-  if (Platform.isIOS) {
-    final status = await AppTrackingTransparency.trackingAuthorizationStatus;
-    if (status == TrackingStatus.notDetermined) {
-      // Kısa gecikme: Apple, UI tamamen yüklenmeden dialog gösterilmesini öneriyor
-      await Future.delayed(const Duration(milliseconds: 300));
-      await AppTrackingTransparency.requestTrackingAuthorization();
-    }
-  }
-
-  // AdMob başlat (ATT sonrası — izin durumuna göre kişiselleştirilmiş/genel reklam)
+  // AdMob başlat
   await AdService.instance.initialize();
 
   final prefs = await SharedPreferences.getInstance();

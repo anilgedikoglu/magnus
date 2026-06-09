@@ -23,7 +23,6 @@ import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
-import '../../data/services/claude_vision_service.dart';
 
 class CoffeeScreen extends ConsumerStatefulWidget {
   const CoffeeScreen({super.key});
@@ -88,41 +87,6 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
 
   Future<void> _sendFortune() async {
     if (!_canSend || _kontrolEdiliyor) return;
-
-    // ── Fotoğraf modunda fincan kontrolü ──────────────────────────────────
-    if (_mode == _InputMode.fotoCek || _mode == _InputMode.dosyadan) {
-      final firstPhoto = _photos.firstWhere((p) => p != null)!;
-
-      setState(() => _kontrolEdiliyor = true);
-      final isFincan = await ClaudeVisionService.isTurkishCoffeeCup(firstPhoto);
-      if (!mounted) return;
-      setState(() => _kontrolEdiliyor = false);
-
-      if (!isFincan) {
-        showDialog<void>(
-          context: context,
-          builder: (_) => AlertDialog(
-            backgroundColor: const Color(0xFF1A0A2E),
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16)),
-            title: const Text('⚠️ Fincan Bulunamadı',
-                style: TextStyle(color: Colors.white, fontSize: 17)),
-            content: const Text(
-              'Bu bir fincan görseli değildir.',
-              style: TextStyle(color: Colors.white70, fontSize: 15),
-            ),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: const Text('Tamam',
-                    style: TextStyle(color: Color(0xFFFF55FF))),
-              ),
-            ],
-          ),
-        );
-        return;
-      }
-    }
 
     // Fal üretimini hemen arka planda başlat
     final fortuneService = ref.read(fortuneServiceProvider);

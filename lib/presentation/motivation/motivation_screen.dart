@@ -279,11 +279,15 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
         ),
         // ── Metin ──────────────────────────────────────────────────────
         Expanded(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(20, 24, 20, 12),
-            child: Container(
-              width: double.infinity,
-              padding: const EdgeInsets.fromLTRB(24, 22, 24, 22),
+          child: LayoutBuilder(
+            builder: (context, constraints) => SingleChildScrollView(
+              padding: const EdgeInsets.fromLTRB(20, 24, 20, 12),
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight - 36),
+                child: Center(
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.fromLTRB(24, 22, 24, 22),
               decoration: BoxDecoration(
                 color: Colors.black.withValues(alpha: 0.45),
                 borderRadius: BorderRadius.circular(20),
@@ -315,10 +319,13 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                     ),
                   ),
                 ],
-              ),
-            ),
-          ),
-        ),
+              ),  // Column
+                    ),  // Container
+                  ),  // Center
+                ),  // ConstrainedBox
+              ),  // SingleChildScrollView → builder sonucu
+            ),  // LayoutBuilder
+          ),  // Expanded
         // ── Alt alan: butonlar / onay mesajı ───────────────────────────
         Padding(
           padding: EdgeInsets.fromLTRB(20, 4, 20, bottomPad + 16),

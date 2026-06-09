@@ -304,9 +304,12 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
                             fontSize: 12)),
                     ]),
                 ))
-              : SizedBox.expand(key: curKey, child: SingleChildScrollView(
+              : SizedBox.expand(key: curKey, child: LayoutBuilder(
+                  builder: (context, constraints) => SingleChildScrollView(
                   padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: Center(child: Container(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(minHeight: constraints.maxHeight - 16),
+                    child: Center(child: Container(
                     margin: const EdgeInsets.symmetric(horizontal: 4),
                     padding: const EdgeInsets.fromLTRB(24, 20, 24, 20),
                     decoration: BoxDecoration(
@@ -337,8 +340,10 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
                               fontStyle: FontStyle.italic, letterSpacing: 0.5)),
                       ],
                     ]),
-                  )),
-                )),
+                  )),  // Container + Center
+                ),     // ConstrainedBox
+              ),       // SingleChildScrollView
+            )),        // LayoutBuilder + SizedBox.expand
         ),
       ),
     );

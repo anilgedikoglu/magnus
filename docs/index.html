@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magnus – Rehber &amp; Yaşam Koçu</title>
+  <title>Magnus – Rehber &amp; Yaşam Koçu / Guide &amp; Life Coach</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -14,13 +14,13 @@
     }
     .hero {
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 60px 20px 50px;
       background: linear-gradient(180deg, #1a0035 0%, #0a0015 100%);
     }
     .logo { font-size: 4rem; margin-bottom: 16px; }
     h1 { font-size: 2.2rem; color: #cc88ff; margin-bottom: 10px; letter-spacing: 0.02em; }
-    .tagline { font-size: 1.1rem; color: #9977cc; margin-bottom: 32px; }
-    .badges { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+    .tagline { font-size: 1.1rem; color: #9977cc; margin-bottom: 28px; }
+    .badges { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .badge {
       display: inline-block;
       background: #220044;
@@ -55,68 +55,171 @@
     footer { color: #6655aa; font-size: 0.82rem; text-align: center; padding: 20px; }
     footer a { color: #9977cc; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+
+    /* Language selector */
+    .lang-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 24px 20px 0;
+    }
+    .lang-btn {
+      padding: 8px 24px;
+      border-radius: 20px;
+      border: 1.5px solid #5a2a9a;
+      background: transparent;
+      color: #9977cc;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #4a1a8a;
+      color: #fff;
+      border-color: #cc88ff;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
   </style>
 </head>
 <body>
 
-<div class="hero">
-  <div class="logo">🔮</div>
-  <h1>Magnus</h1>
-  <p class="tagline">Rehber &amp; Yaşam Koçu</p>
-  <div class="badges">
-    <span class="badge">📱 iOS &amp; Android</span>
-    <span class="badge">🇹🇷 Türkçe</span>
-    <span class="badge">✨ Ücretsiz</span>
-  </div>
-</div>
-
-<div class="container">
-
-  <h2>✨ Özellikler</h2>
-  <div class="features">
-    <div class="feature">
-      <div class="feature-icon">☕</div>
-      <div class="feature-title">Kahve Falı</div>
-      <div class="feature-desc">Fincanının fotoğrafını çek, yapay zeka ile yorumla</div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">🃏</div>
-      <div class="feature-title">Tarot</div>
-      <div class="feature-desc">Günlük tarot kartı çekimi ve yorumu</div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">⭐</div>
-      <div class="feature-title">Günlük Astroloji</div>
-      <div class="feature-desc">Burcuna özel günlük yorum ve rehberlik</div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">🌙</div>
-      <div class="feature-title">Doğum Haritası</div>
-      <div class="feature-desc">Doğum tarihine göre kişisel analiz</div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">🔢</div>
-      <div class="feature-title">Numeroloji</div>
-      <div class="feature-desc">İsim ve tarih bazlı sayı yorumları</div>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">💬</div>
-      <div class="feature-title">Motivasyon &amp; Olumlama</div>
-      <div class="feature-desc">Günlük ilham verici mesajlar</div>
-    </div>
+  <div class="lang-bar">
+    <button class="lang-btn active" onclick="setLang('tr')">🇹🇷 Türkçe</button>
+    <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
   </div>
 
-  <div class="disclaimer">
-    ⚠️ <strong>Önemli Not:</strong> Magnus yalnızca eğlence amaçlıdır. İçerikler kurgusal ve sembolik niteliktedir; gerçek kehanet, tıbbi, hukuki veya finansal tavsiye sunmaz.
+  <!-- TURKISH -->
+  <div class="lang-section active" id="lang-tr">
+    <div class="hero">
+      <div class="logo">🔮</div>
+      <h1>Magnus</h1>
+      <p class="tagline">Rehber &amp; Yaşam Koçu</p>
+      <div class="badges">
+        <span class="badge">📱 iOS &amp; Android</span>
+        <span class="badge">🇹🇷 Türkçe</span>
+        <span class="badge">✨ Ücretsiz</span>
+      </div>
+    </div>
+    <div class="container">
+      <h2>✨ Özellikler</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">☕</div>
+          <div class="feature-title">Kahve Falı</div>
+          <div class="feature-desc">Fincanının fotoğrafını çek, yapay zeka ile yorumla</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🃏</div>
+          <div class="feature-title">Tarot</div>
+          <div class="feature-desc">Günlük tarot kartı çekimi ve yorumu</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⭐</div>
+          <div class="feature-title">Günlük Astroloji</div>
+          <div class="feature-desc">Burcuna özel günlük yorum ve rehberlik</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🌙</div>
+          <div class="feature-title">Doğum Haritası</div>
+          <div class="feature-desc">Doğum tarihine göre kişisel analiz</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔢</div>
+          <div class="feature-title">Numeroloji</div>
+          <div class="feature-desc">İsim ve tarih bazlı sayı yorumları</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💬</div>
+          <div class="feature-title">Motivasyon &amp; Olumlama</div>
+          <div class="feature-desc">Günlük ilham verici mesajlar</div>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        ⚠️ <strong>Önemli Not:</strong> Magnus yalnızca eğlence amaçlıdır. İçerikler kurgusal ve sembolik niteliktedir; gerçek kehanet, tıbbi, hukuki veya finansal tavsiye sunmaz.
+      </div>
+
+      <footer>
+        &copy; 2024 Futuristic Apps &nbsp;·&nbsp;
+        <a href="privacy-policy.html">Gizlilik Politikası</a> &nbsp;·&nbsp;
+        <a href="support.html">Destek</a> &nbsp;·&nbsp;
+        <a href="delete-account.html">Hesap Silme</a>
+      </footer>
+    </div>
   </div>
 
-  <footer>
-    &copy; 2024 Futuristic Apps &nbsp;·&nbsp;
-    <a href="privacy-policy.html">Gizlilik Politikası</a> &nbsp;·&nbsp;
-    <a href="support.html">Destek</a> &nbsp;·&nbsp;
-    <a href="delete-account.html">Hesap Silme</a>
-  </footer>
+  <!-- ENGLISH -->
+  <div class="lang-section" id="lang-en">
+    <div class="hero">
+      <div class="logo">🔮</div>
+      <h1>Magnus</h1>
+      <p class="tagline">Guide &amp; Life Coach</p>
+      <div class="badges">
+        <span class="badge">📱 iOS &amp; Android</span>
+        <span class="badge">🇹🇷 Turkish</span>
+        <span class="badge">✨ Free</span>
+      </div>
+    </div>
+    <div class="container">
+      <h2>✨ Features</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">☕</div>
+          <div class="feature-title">Coffee Reading</div>
+          <div class="feature-desc">Take a photo of your cup and get an AI-powered reading</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🃏</div>
+          <div class="feature-title">Tarot</div>
+          <div class="feature-desc">Daily tarot card draws and interpretations</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⭐</div>
+          <div class="feature-title">Daily Astrology</div>
+          <div class="feature-desc">Personalized daily horoscope and guidance</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🌙</div>
+          <div class="feature-title">Birth Chart</div>
+          <div class="feature-desc">Personal analysis based on your birth date</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔢</div>
+          <div class="feature-title">Numerology</div>
+          <div class="feature-desc">Name and date-based number interpretations</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💬</div>
+          <div class="feature-title">Motivation &amp; Affirmations</div>
+          <div class="feature-desc">Daily inspiring messages</div>
+        </div>
+      </div>
 
-</div>
+      <div class="disclaimer">
+        ⚠️ <strong>Important Notice:</strong> Magnus is for entertainment purposes only. All content is fictional and symbolic in nature and does not constitute genuine predictions or medical, legal, or financial advice.
+      </div>
+
+      <footer>
+        &copy; 2024 Futuristic Apps &nbsp;·&nbsp;
+        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+        <a href="support.html">Support</a> &nbsp;·&nbsp;
+        <a href="delete-account.html">Delete Account</a>
+      </footer>
+    </div>
+  </div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelector('[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+  }
+
+  // Auto-detect browser language
+  const browserLang = navigator.language || navigator.userLanguage || 'tr';
+  if (!browserLang.startsWith('tr')) setLang('en');
+</script>
 </body>
 </html>

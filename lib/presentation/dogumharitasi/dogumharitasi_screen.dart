@@ -67,39 +67,6 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
     return '${n.year}-${n.month.toString().padLeft(2,'0')}-${n.day.toString().padLeft(2,'0')}';
   }
 
-  // ─── JSON parse ────────────────────────────────────────────────────────────
-
-  List<_Entry> _parseSection(List raw) => raw.map((e) {
-    final m = e as Map<String, dynamic>;
-    return _Entry(id: m['id'] as int, metin: m['metin'] as String);
-  }).toList();
-
-  // ─── No-repeat: havuzdan bir metin seç, ID kaydet ──────────────────────────
-
-  String _pick(SharedPreferences prefs, String key, List<_Entry> pool) {
-    if (pool.isEmpty) return '';
-    var shown = prefs.getStringList(key) ?? [];
-    var unseen = pool.where((e) => !shown.contains('${e.id}')).toList();
-    if (unseen.isEmpty) {
-      shown = [];
-      prefs.setStringList(key, []);
-      unseen = List.from(pool);
-    }
-    unseen.shuffle(_rng);
-    final pick = unseen.first;
-    shown.add('${pick.id}');
-    prefs.setStringList(key, shown);
-    prefs.setInt('dh_id_$key', pick.id);
-    return pick.metin;
-  }
-
-  // ─── Entry'yi ID'ye göre bul (aynı gün yeniden yükleme) ──────────────────
-
-  String _findById(List<_Entry> pool, int id) {
-    return pool.firstWhere((e) => e.id == id,
-        orElse: () => pool.isNotEmpty ? pool.first : const _Entry(id: -1, metin: '')).metin;
-  }
-
   // ─── Veri yükle ────────────────────────────────────────────────────────────
 
   Future<void> _loadData() async {
@@ -107,44 +74,55 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
     final data  = jsonDecode(raw) as Map<String, dynamic>;
     final prefs = await SharedPreferences.getInstance();
     final today = _todayKey();
+
+    // JSON düz liste: {"dogumharitasi": [{id, metin, kosullar}, ...]}
+    final pool = (data['dogumharitasi'] as List).map((e) {
+      final m = e as Map<String, dynamic>;
+      return _Entry(id: m['id'] as int, metin: m['metin'] as String);
+    }).toList();
+
     final lastDate = prefs.getString('dh_last_date') ?? '';
+    final lastId   = prefs.getInt('dh_bugun_id');
 
-    final giris   = _parseSection(data['giris']   as List);
-    final hisler  = _parseSection(data['hisler']  as List);
-    final olaylar = _parseSection(data['olaylar'] as List);
-    final fizik   = _parseSection(data['fizik']   as List);
-    final veda    = _parseSection(data['veda']    as List);
+    String metin;
 
-    String gMetin, hMetin, oMetin, fMetin, vMetin;
-
-    if (lastDate == today) {
+    if (lastDate == today && lastId != null) {
       // Aynı gün — cache'ten yükle
-      gMetin = _findById(giris,   prefs.getInt('dh_id_dh_giris')   ?? -1);
-      hMetin = _findById(hisler,  prefs.getInt('dh_id_dh_hisler')  ?? -1);
-      oMetin = _findById(olaylar, prefs.getInt('dh_id_dh_olaylar') ?? -1);
-      fMetin = _findById(fizik,   prefs.getInt('dh_id_dh_fizik')   ?? -1);
-      vMetin = _findById(veda,    prefs.getInt('dh_id_dh_veda')    ?? -1);
+      final entry = pool.firstWhere(
+          (e) => e.id == lastId, orElse: () => pool.first);
+      metin = entry.metin;
     } else {
-      // Yeni gün — taze seç
-      gMetin = _pick(prefs, 'dh_giris',   giris);
-      hMetin = _pick(prefs, 'dh_hisler',  hisler);
-      oMetin = _pick(prefs, 'dh_olaylar', olaylar);
-      fMetin = _pick(prefs, 'dh_fizik',   fizik);
-      vMetin = _pick(prefs, 'dh_veda',    veda);
+      // Yeni gün — no-repeat seç
+      const shownKey = 'dh_gosterilen';
+      var shown = prefs.getStringList(shownKey) ?? [];
+      var available =
+          pool.where((e) => !shown.contains('${e.id}')).toList();
+
+      if (available.isEmpty) {
+        // Hepsi gösterildi → son gösterilen hariç sıfırla
+        final lastShownId = shown.isNotEmpty ? shown.last : null;
+        shown = lastShownId != null ? [lastShownId] : [];
+        await prefs.setStringList(shownKey, shown);
+        available =
+            pool.where((e) => e.id.toString() != lastShownId).toList();
+        if (available.isEmpty) available = List.from(pool);
+      }
+
+      available.shuffle(_rng);
+      final pick = available.first;
+      shown.add('${pick.id}');
+      await prefs.setStringList(shownKey, shown);
       await prefs.setString('dh_last_date', today);
+      await prefs.setInt('dh_bugun_id', pick.id);
+      metin = pick.metin;
     }
 
-    // 5 bölümü tek metin olarak birleştir
-    final combined = [gMetin, hMetin, oMetin, fMetin, vMetin]
-        .where((t) => t.isNotEmpty)
-        .join('\n\n');
-
     final profile = ref.read(userProfileProvider);
-    final metin   = VariableReplacer.replace(combined, profile.toVariableMap());
+    final replaced = VariableReplacer.replace(metin, profile.toVariableMap());
 
     if (!mounted) return;
     setState(() {
-      _metin   = metin;
+      _metin   = replaced;
       _loading = false;
     });
   }

@@ -435,34 +435,45 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
       ),
     );
 
-    return SingleChildScrollView(
-      padding: EdgeInsets.fromLTRB(20, 16, 20, bottomPad + 16),
-      child: Column(
-        children: [
-          // Kitap kartı + mistik karanlık overlay
-          AnimatedBuilder(
-            animation: _darkOverlay,
-            builder: (_, child) {
-              return Stack(
-                children: [
-                  child!,
-                  if (_darkOverlay.value > 0.001)
-                    Positioned.fill(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(16),
-                        child: Container(
-                          color: Colors.black.withValues(alpha: _darkOverlay.value),
-                        ),
-                      ),
-                    ),
-                ],
-              );
-            },
-            child: bookCard,
+    final animatedCard = AnimatedBuilder(
+      animation: _darkOverlay,
+      builder: (_, child) {
+        return Stack(
+          children: [
+            child!,
+            if (_darkOverlay.value > 0.001)
+              Positioned.fill(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Container(
+                    color: Colors.black.withValues(alpha: _darkOverlay.value),
+                  ),
+                ),
+              ),
+          ],
+        );
+      },
+      child: bookCard,
+    );
+
+    return Column(
+      children: [
+        // Kitap kartı — dikeyde ortalı, uzunsa kaydırılabilir
+        Expanded(
+          child: LayoutBuilder(
+            builder: (context, constraints) => SingleChildScrollView(
+              padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight - 28),
+                child: Center(child: animatedCard),
+              ),
+            ),
           ),
-          const SizedBox(height: 24),
-          // Geri Git butonu
-          GestureDetector(
+        ),
+        // Geri Git — her zaman altta sabit
+        Padding(
+          padding: EdgeInsets.fromLTRB(20, 4, 20, bottomPad + 16),
+          child: GestureDetector(
             onTap: () => context.pop(),
             child: Container(
               width: double.infinity,
@@ -492,9 +503,8 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
               ),
             ),
           ),
-          const SizedBox(height: 8),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

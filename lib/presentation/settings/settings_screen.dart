@@ -1449,24 +1449,29 @@ class SettingsScreen extends ConsumerWidget {
               child: Column(
                 children: [
                   _buildTopBar(context, ref, profile),
-                  Expanded(
-                    child: SingleChildScrollView(
-                      physics: const NeverScrollableScrollPhysics(),
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: Column(
-                        children: [
-                          const SizedBox(height: 6),
-                          _buildTitle(),
-                          const SizedBox(height: 14),
-                          _buildGridSection(context, ref, profile),
-                          const SizedBox(height: 4),
-                          _buildDonutRow(scores),
-                          const SizedBox(height: 12),
-                          _buildMenuButton(context),
-                          const SizedBox(height: 10),
-                        ],
-                      ),
+                  // Üst sabit blok: başlık + kutucuklar
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const SizedBox(height: 6),
+                        _buildTitle(),
+                        const SizedBox(height: 14),
+                        _buildGridSection(context, ref, profile),
+                      ],
                     ),
+                  ),
+                  // Orta: donut yuvarlakları dikeyde ortalanmış
+                  Expanded(
+                    child: Center(
+                      child: _buildDonutRow(scores),
+                    ),
+                  ),
+                  // Alt sabit: Ana Menü butonu
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 0, 12, 20),
+                    child: _buildMenuButton(context),
                   ),
                 ],
               ),

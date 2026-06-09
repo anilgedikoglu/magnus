@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
@@ -130,11 +131,20 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
       _displayed = '';
     });
 
-    Future.delayed(const Duration(seconds: 5), () {
+    // 3s bekle → rewarded reklam → cevap animasyonu
+    Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
-      setState(() => _adim = _MagandaAdim.cevap);
-      _startTypewriter();
+      AdService.instance.showRewarded(
+        onRewarded: _goCevap,
+        onFailed:   _goCevap,
+      );
     });
+  }
+
+  void _goCevap() {
+    if (!mounted) return;
+    setState(() => _adim = _MagandaAdim.cevap);
+    _startTypewriter();
   }
 
   void _startTypewriter() {

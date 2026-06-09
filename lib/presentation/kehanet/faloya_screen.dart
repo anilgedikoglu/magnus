@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
@@ -51,8 +52,8 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
 
     _loadData();
 
-    // 5 saniyelik minimum bekleme
-    Future.delayed(const Duration(seconds: 5), () {
+    // 3 saniyelik minimum bekleme, sonra rewarded reklam
+    Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
       _timerDone = true;
       _tryTransition();
@@ -98,9 +99,18 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
 
   void _tryTransition() {
     if (_dataReady && _timerDone && _adim == _FaloyaAdim.yukleniyor) {
-      setState(() => _adim = _FaloyaAdim.icerik);
-      _startTypewriter();
+      // İkisi de hazır → rewarded reklam, sonra metne geç
+      AdService.instance.showRewarded(
+        onRewarded: _goIcerik,
+        onFailed:   _goIcerik,
+      );
     }
+  }
+
+  void _goIcerik() {
+    if (!mounted || _adim != _FaloyaAdim.yukleniyor) return;
+    setState(() => _adim = _FaloyaAdim.icerik);
+    _startTypewriter();
   }
 
   void _startTypewriter() {

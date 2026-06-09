@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magnus – Destek</title>
+  <title>Magnus – Support / Destek</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -32,61 +32,152 @@
     .faq-q { font-weight: 600; color: #cc88ff; margin-bottom: 6px; }
     .logo { font-size: 2rem; margin-bottom: 6px; }
     footer { margin-top: 60px; color: #6655aa; font-size: 0.82rem; text-align: center; }
+
+    /* Language selector */
+    .lang-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .lang-btn {
+      padding: 8px 24px;
+      border-radius: 20px;
+      border: 1.5px solid #5a2a9a;
+      background: transparent;
+      color: #9977cc;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #4a1a8a;
+      color: #fff;
+      border-color: #cc88ff;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
   </style>
 </head>
 <body>
 <div class="container">
 
   <div class="logo">🔮</div>
-  <h1>Magnus Destek</h1>
-  <p class="subtitle">Magnus: Rehber &amp; Yaşam Koçu</p>
-  <p class="intro">Uygulama ile ilgili sorun yaşıyor veya bir sorunuz mu var? Aşağıdaki bilgilerden yardım alabilirsiniz.</p>
 
-  <h2>📬 İletişim</h2>
-  <div class="card">
-    <p>Destek talepleriniz ve geri bildirimleriniz için bize e-posta gönderin:</p>
-    <p><strong><a href="mailto:futuristicapps1@gmail.com">futuristicapps1@gmail.com</a></strong></p>
-    <p>Mesajınıza cihaz modelinizi ve iOS sürümünüzü eklemeniz daha hızlı yardım almanızı sağlar.</p>
+  <div class="lang-bar">
+    <button class="lang-btn active" onclick="setLang('tr')">🇹🇷 Türkçe</button>
+    <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
   </div>
 
-  <h2>❓ Sık Sorulan Sorular</h2>
+  <!-- TURKISH -->
+  <div class="lang-section active" id="lang-tr">
+    <h1>Magnus Destek</h1>
+    <p class="subtitle">Magnus: Rehber &amp; Yaşam Koçu</p>
+    <p class="intro">Uygulama ile ilgili sorun yaşıyor veya bir sorunuz mu var? Aşağıdaki bilgilerden yardım alabilirsiniz.</p>
 
-  <div class="faq-item">
-    <p class="faq-q">Fallarım neden gelmiyor?</p>
-    <p>Fal içerikleri belirli bir süre sonra gelen kutunuza düşer. Günlük limitinizi kullandıysanız ertesi gün yenilenir. Ana menüdeki gelen kutusu ikonunu kontrol edin.</p>
+    <h2>📬 İletişim</h2>
+    <div class="card">
+      <p>Destek talepleriniz ve geri bildirimleriniz için bize e-posta gönderin:</p>
+      <p><strong><a href="mailto:futuristicapps1@gmail.com">futuristicapps1@gmail.com</a></strong></p>
+      <p>Mesajınıza cihaz modelinizi ve iOS sürümünüzü eklemeniz daha hızlı yardım almanızı sağlar.</p>
+    </div>
+
+    <h2>❓ Sık Sorulan Sorular</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">Fallarım neden gelmiyor?</p>
+      <p>Fal içerikleri belirli bir süre sonra gelen kutunuza düşer. Günlük limitinizi kullandıysanız ertesi gün yenilenir. Ana menüdeki gelen kutusu ikonunu kontrol edin.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Profilimi nasıl güncellerim?</p>
+      <p>Ana ekranda sağ üst köşedeki ayarlar ikonuna dokunun. Profil bilgilerinizi (isim, doğum tarihi, meslek vb.) buradan düzenleyebilirsiniz.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Verilerimi nasıl silerim?</p>
+      <p>Ayarlar ekranından <strong>Profili Sıfırla</strong> veya <strong>Tüm Falları Sil</strong> seçeneklerini kullanabilirsiniz. Tüm veriler yalnızca cihazınızda saklanır.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Uygulama çöküyor, ne yapmalıyım?</p>
+      <p>Uygulamayı tamamen kapatıp yeniden açın. Sorun devam ederse kaldırıp yeniden yükleyin. Bu adımlardan sonra da sorun yaşıyorsanız lütfen bizimle iletişime geçin.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Magnus ücretsiz mi?</p>
+      <p>Magnus temel özellikleriyle ücretsiz kullanılabilir. Bazı içerikler kısa bir reklam izlendikten sonra açılır.</p>
+    </div>
+
+    <h2>⚠️ Önemli Not</h2>
+    <div class="card">
+      <p>Magnus yalnızca <strong>eğlence amaçlıdır</strong>. Fal yorumları, astroloji analizleri ve tüm içerikler kurgusal ve sembolik niteliktedir; gerçek kehanet, tıbbi, hukuki veya finansal tavsiye sunmaz.</p>
+    </div>
+
+    <footer>
+      &copy; 2024 Futuristic Apps &nbsp;·&nbsp;
+      <a href="privacy-policy.html">Gizlilik Politikası</a> &nbsp;·&nbsp;
+      <a href="delete-account.html">Hesap Silme</a>
+    </footer>
   </div>
 
-  <div class="faq-item">
-    <p class="faq-q">Profilimi nasıl güncellerim?</p>
-    <p>Ana ekranda sağ üst köşedeki ayarlar ikonuna dokunun. Profil bilgilerinizi (isim, doğum tarihi, meslek vb.) buradan düzenleyebilirsiniz.</p>
-  </div>
+  <!-- ENGLISH -->
+  <div class="lang-section" id="lang-en">
+    <h1>Magnus Support</h1>
+    <p class="subtitle">Magnus: Guide &amp; Life Coach</p>
+    <p class="intro">Having trouble with the app or have a question? Find help below.</p>
 
-  <div class="faq-item">
-    <p class="faq-q">Verilerimi nasıl silerim?</p>
-    <p>Ayarlar ekranından <strong>Profili Sıfırla</strong> veya <strong>Tüm Falları Sil</strong> seçeneklerini kullanabilirsiniz. Tüm veriler yalnızca cihazınızda saklanır, sunucumuzda kayıt tutulmaz.</p>
-  </div>
+    <h2>📬 Contact</h2>
+    <div class="card">
+      <p>Send us an email for support requests and feedback:</p>
+      <p><strong><a href="mailto:futuristicapps1@gmail.com">futuristicapps1@gmail.com</a></strong></p>
+      <p>Including your device model and iOS version helps us assist you faster.</p>
+    </div>
 
-  <div class="faq-item">
-    <p class="faq-q">Uygulama çöküyor, ne yapmalıyım?</p>
-    <p>Uygulamayı tamamen kapatıp yeniden açmayı deneyin. Sorun devam ederse uygulamayı kaldırıp yeniden yükleyin. Bu adımlardan sonra da sorun yaşıyorsanız lütfen bizimle iletişime geçin.</p>
-  </div>
+    <h2>❓ Frequently Asked Questions</h2>
 
-  <div class="faq-item">
-    <p class="faq-q">Magnus ücretsiz mi?</p>
-    <p>Magnus temel özellikleriyle ücretsiz kullanılabilir. Bazı içerikler kısa bir reklam izlendikten sonra açılır.</p>
-  </div>
+    <div class="faq-item">
+      <p class="faq-q">Why aren't my readings arriving?</p>
+      <p>Fortune content is delivered to your inbox after a short processing period. If you've reached your daily limit, it resets the next day. Check the inbox icon on the main menu.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I update my profile?</p>
+      <p>Tap the settings icon in the top right corner of the main screen. You can edit your profile information (name, birth date, occupation, etc.) from there.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I delete my data?</p>
+      <p>Use <strong>Reset Profile</strong> or <strong>Delete All Readings</strong> in the Settings screen. All data is stored locally on your device only — nothing is saved on our servers.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">The app is crashing — what should I do?</p>
+      <p>Try fully closing and reopening the app. If the issue persists, uninstall and reinstall it. If you still experience problems, please contact us.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Is Magnus free?</p>
+      <p>Magnus is free to use for core features. Some content is unlocked after watching a short advertisement.</p>
+    </div>
 
-  <h2>⚠️ Önemli Not</h2>
-  <div class="card">
-    <p>Magnus yalnızca <strong>eğlence amaçlıdır</strong>. Fal yorumları, astroloji analizleri ve tüm içerikler kurgusal ve sembolik niteliktedir; gerçek kehanet, tıbbi, hukuki veya finansal tavsiye sunmaz.</p>
-  </div>
+    <h2>⚠️ Important Notice</h2>
+    <div class="card">
+      <p>Magnus is for <strong>entertainment purposes only</strong>. Fortune readings, astrology analyses, and all content are fictional and symbolic in nature; they do not constitute genuine predictions or medical, legal, or financial advice.</p>
+    </div>
 
-  <footer>
-    &copy; 2024 Futuristic Apps &nbsp;·&nbsp;
-    <a href="privacy-policy.html">Gizlilik Politikası</a> &nbsp;·&nbsp;
-    <a href="delete-account.html">Hesap Silme</a>
-  </footer>
+    <footer>
+      &copy; 2024 Futuristic Apps &nbsp;·&nbsp;
+      <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="delete-account.html">Delete Account</a>
+    </footer>
+  </div>
 
 </div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelector('[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+  }
+
+  // Auto-detect browser language
+  const browserLang = navigator.language || navigator.userLanguage || 'tr';
+  if (!browserLang.startsWith('tr')) setLang('en');
+</script>
 </body>
 </html>

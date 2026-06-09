@@ -12,6 +12,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../core/services/ad_service.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
@@ -188,6 +189,15 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
 
   void _onSpinComplete() {
     setState(() { _doniyor = false; _speedFraction = 0.0; });
+    // Çark durdu → rewarded reklam → sonra fal akışı devam eder
+    AdService.instance.showRewarded(
+      onRewarded: _devamEt,
+      onFailed:   _devamEt,
+    );
+  }
+
+  void _devamEt() {
+    if (!mounted) return;
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
       setState(() => _falAdiGoster = true);

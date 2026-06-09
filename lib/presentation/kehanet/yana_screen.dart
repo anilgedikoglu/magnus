@@ -457,64 +457,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                 ),
               )
 
-            // ── animasyon adımları ────────────────────────────────────────
-            else if (_adim == _YanaAdim.icerik)
-              // ── icerik: üst yarı görsel, alt yarı kehanet metni ──────────
-              Expanded(
-                child: Column(
-                  children: [
-                    // Üst: Yana görseli glow ile
-                    Expanded(
-                      flex: 1,
-                      child: Center(child: _buildGlowImage()),
-                    ),
-                    // Alt: Kehanet metni
-                    Expanded(
-                      flex: 1,
-                      child: AnimatedBuilder(
-                        animation: _fadeAnim,
-                        builder: (ctx, child) =>
-                            Opacity(opacity: _fadeAnim.value, child: child),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                margin: const EdgeInsets.fromLTRB(20, 0, 20, 12),
-                                padding: const EdgeInsets.all(20),
-                                decoration: BoxDecoration(
-                                  color: Colors.white.withValues(alpha: 0.07),
-                                  borderRadius: BorderRadius.circular(18),
-                                  border: Border.all(
-                                    color: const Color(0xFFFF55FF).withValues(alpha: 0.30),
-                                    width: 1.2,
-                                  ),
-                                ),
-                                child: SingleChildScrollView(
-                                  child: RichTextParser.build(
-                                    _metin,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      height: 1.7,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                              child: _buildCloseButton(),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              )
-
-            // ── gorselKayiyor / odaklanma / yagmur ───────────────────────
+            // ── gorselKayiyor / odaklanma / yagmur / icerik ─────────────
             else
               Expanded(
                 child: LayoutBuilder(builder: (ctx, bc) {
@@ -525,7 +468,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
 
                   return Stack(children: [
 
-                    // Görsel: merkez → tepe animasyonu
+                    // Görsel: merkez → tepe animasyonu — tüm adımlarda sabit
                     AnimatedBuilder(
                       animation: _slideAnim,
                       builder: (ctx, child) => Align(
@@ -539,7 +482,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                       child: _buildGlowImage(),
                     ),
 
-                    // odaklanma: metin + ElegantHourglass (yagmur adımında gizle)
+                    // odaklanma: metin + ElegantHourglass
                     if (_adim == _YanaAdim.odaklanma)
                       Positioned(
                         top: lowerMid - 70,
@@ -562,7 +505,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                         ),
                       ),
 
-                    // yagmur: karakterler + kum saati emoji birlikte düşüyor
+                    // yagmur: karakterler düşüyor
                     if (_adim == _YanaAdim.yagmur)
                       Positioned(
                         top: lowerMid - 60,
@@ -573,6 +516,51 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                             for (int i = 0; i < _rainChars.length; i++)
                               _buildRainChar(i),
                           ],
+                        ),
+                      ),
+
+                    // icerik: görsel yerinde sabit kalır, altında kehanet metni belirir
+                    if (_adim == _YanaAdim.icerik)
+                      Positioned(
+                        top: imgBottom + 12,
+                        left: 0, right: 0, bottom: 0,
+                        child: AnimatedBuilder(
+                          animation: _fadeAnim,
+                          builder: (ctx, child) =>
+                              Opacity(opacity: _fadeAnim.value, child: child),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: Container(
+                                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 12),
+                                  padding: const EdgeInsets.all(20),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withValues(alpha: 0.07),
+                                    borderRadius: BorderRadius.circular(18),
+                                    border: Border.all(
+                                      color: const Color(0xFFFF55FF).withValues(alpha: 0.30),
+                                      width: 1.2,
+                                    ),
+                                  ),
+                                  child: SingleChildScrollView(
+                                    child: RichTextParser.build(
+                                      _metin,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        height: 1.7,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                                child: _buildCloseButton(),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
 

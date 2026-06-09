@@ -869,14 +869,14 @@ class VariableReplacer {
   // ── {{ay_+N}} / {{gun_+N}} — kaydırmalı ay/gün adı ─────────────────────────
 
   static String _replaceOffsetTime(String text, DateTime now) {
-    // {{ay_+N}} veya {{ay_-N}}
-    text = text.replaceAllMapped(RegExp(r'\{\{ay_([+-]\d+)\}\}'), (m) {
+    // {{ay_+N}} veya {{ay_-N}} veya {{ay_N}} (işaretsiz = pozitif offset)
+    text = text.replaceAllMapped(RegExp(r'\{\{ay_([+-]?\d+)\}\}'), (m) {
       final offset = int.tryParse(m.group(1)!) ?? 0;
       final month = ((now.month - 1 + offset) % 12 + 12) % 12 + 1;
       return _monthTr(month);
     });
-    // {{gun_+N}} veya {{gun_-N}}
-    text = text.replaceAllMapped(RegExp(r'\{\{gun_([+-]\d+)\}\}'), (m) {
+    // {{gun_+N}} veya {{gun_-N}} veya {{gun_N}} (işaretsiz = pozitif offset)
+    text = text.replaceAllMapped(RegExp(r'\{\{gun_([+-]?\d+)\}\}'), (m) {
       final offset = int.tryParse(m.group(1)!) ?? 0;
       // weekday: 1=Pzt … 7=Pazar
       final day = ((now.weekday - 1 + offset) % 7 + 7) % 7 + 1;

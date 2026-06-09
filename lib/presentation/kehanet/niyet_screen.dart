@@ -212,19 +212,30 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
                           child: GestureDetector(
                             onTap: () => context.pop(),
                             child: Container(
+                              width: double.infinity,
                               height: 50,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                gradient: const LinearGradient(
-                                  colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)]),
+                                color: Colors.white.withValues(alpha: 0.10),
+                                borderRadius: BorderRadius.circular(23),
                                 border: Border.all(
-                                  color: const Color(0xFFFF55FF)
-                                      .withValues(alpha: 0.80),
-                                  width: 1.5),
+                                  color: Colors.white.withValues(alpha: 0.25),
+                                  width: 1,
+                                ),
                               ),
-                              child: const Center(child: Text('Kapat',
-                                style: TextStyle(color: Colors.white,
-                                    fontSize: 16, fontWeight: FontWeight.bold))),
+                              child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.chevron_left_rounded,
+                                      color: Colors.white, size: 20),
+                                  SizedBox(width: 2),
+                                  Text('Geri Git',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500,
+                                      )),
+                                ],
+                              ),
                             ),
                           ),
                         )

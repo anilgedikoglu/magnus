@@ -45,7 +45,7 @@ android {
         applicationId = "com.futurastic.Magnus"
         // minSdk sabit 21 — Flutter'ın minimum değeri; flutter.minSdkVersion ile aynı
         // ama açık olması Play Store uyumluluğu açısından daha güvenli
-        minSdk = 21
+        minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName

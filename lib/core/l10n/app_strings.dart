@@ -323,4 +323,8 @@ class AppStrings {
   String get yesterdayLabel    => _s('Dün', 'Yesterday');
   String get daysAgo           => _s('gün önce', 'days ago');
   String get deleteSwipe       => _s('Sil', 'Delete');
+
+  // ── Chat Widgets ───────────────────────────────────────────────────────
+  String get legalDisclosure   => _s('Yasal Bilgilendirme', 'Legal Disclosure');
+  String get magnusWakingUp    => _s('Magnus canlanıyor...', 'Magnus is waking up...');
 }

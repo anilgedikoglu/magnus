@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../core/l10n/app_strings.dart';
+import '../../../core/providers/providers.dart';
 import '../../../data/models/chat_node.dart';
 import 'legal_disclosure_screen.dart';
 
 /// Kullanıcıya sunulan cevap seçeneklerini gösterir.
 /// Unity'deki AnswerBubble.cs karşılığı.
 /// Layout: vertical (altAlta) veya horizontal (yanYana).
-class AnswerBubbleRow extends StatefulWidget {
+class AnswerBubbleRow extends ConsumerStatefulWidget {
   final List<String> answers;
   final AnswerLayout layout;
   final void Function(int index) onSelected;
@@ -22,10 +25,10 @@ class AnswerBubbleRow extends StatefulWidget {
   });
 
   @override
-  State<AnswerBubbleRow> createState() => _AnswerBubbleRowState();
+  ConsumerState<AnswerBubbleRow> createState() => _AnswerBubbleRowState();
 }
 
-class _AnswerBubbleRowState extends State<AnswerBubbleRow>
+class _AnswerBubbleRowState extends ConsumerState<AnswerBubbleRow>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _fadeAnim;
@@ -276,7 +279,7 @@ class _LegalButton extends StatelessWidget {
             ),
             const SizedBox(width: 8),
             Text(
-              'Yasal Bilgilendirme',
+              ref.watch(l10nProvider).legalDisclosure,
               style: AppTextStyles.answerText.copyWith(
                 color: AppColors.navBarActive.withValues(alpha: 0.8),
                 fontSize: 13,

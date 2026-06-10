@@ -1,20 +1,23 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
+import '../../../core/l10n/app_strings.dart';
+import '../../../core/providers/providers.dart';
 
 /// Soldan sağa dolarak otomatik tamamlanan buton.
 /// [duration] 3–6 saniye arası rastgele seçilir.
 /// Dolum tamamlanınca [onComplete] çağrılır.
-class AutoProgressButton extends StatefulWidget {
+class AutoProgressButton extends ConsumerStatefulWidget {
   final VoidCallback onComplete;
 
   const AutoProgressButton({super.key, required this.onComplete});
 
   @override
-  State<AutoProgressButton> createState() => _AutoProgressButtonState();
+  ConsumerState<AutoProgressButton> createState() => _AutoProgressButtonState();
 }
 
-class _AutoProgressButtonState extends State<AutoProgressButton>
+class _AutoProgressButtonState extends ConsumerState<AutoProgressButton>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _progress;
@@ -84,9 +87,9 @@ class _AutoProgressButtonState extends State<AutoProgressButton>
                 ),
               ),
               // Ortadaki yazı
-              const Text(
-                'Magnus canlanıyor...',
-                style: TextStyle(
+              Text(
+                ref.watch(l10nProvider).magnusWakingUp,
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 14,
                   fontWeight: FontWeight.w500,

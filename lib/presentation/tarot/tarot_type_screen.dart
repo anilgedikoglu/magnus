@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../data/providers.dart';
 
 // ─── Tarot türü seçim ekranı ──────────────────────────────────────────────────
 
-class TarotTypeScreen extends StatelessWidget {
+class TarotTypeScreen extends ConsumerWidget {
   const TarotTypeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.navBarBackground,
-        title: const Text('Tarot'),
+        title: Text(s.tarot),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
           onPressed: () => context.pop(),
@@ -27,7 +30,7 @@ class TarotTypeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Tarot Türünü Seç',
+                s.tarotType,
                 style: AppTextStyles.title.copyWith(fontSize: 20, letterSpacing: 1.5),
                 textAlign: TextAlign.center,
               ),
@@ -42,25 +45,25 @@ class TarotTypeScreen extends StatelessWidget {
                   children: [
                     _TypeCard(
                       imagePath: 'assets/images/tarotbir.png',
-                      label: 'Klasik Tarot',
+                      label: s.classicTarot,
                       gradient: AppColors.bubble1,
                       onTap: () => context.push('/tarot/klasik'),
                     ),
                     _TypeCard(
                       imagePath: 'assets/images/tarotiki.png',
-                      label: 'Aşk Kartı',
+                      label: s.loveTarot,
                       gradient: const [Color(0xFFCC1177), Color(0xFFFF44AA)],
                       onTap: () => context.push('/tarot/ask'),
                     ),
                     _TypeCard(
                       imagePath: 'assets/images/tarotuc.png',
-                      label: 'Dilek Kartı',
+                      label: s.wishTarot,
                       gradient: AppColors.bubble5,
                       onTap: () => context.push('/tarot/dilek'),
                     ),
                     _TypeCard(
                       imagePath: 'assets/images/tarotdort.png',
-                      label: 'Şans Kartı',
+                      label: s.luckTarot,
                       gradient: AppColors.bubble2,
                       onTap: () => context.push('/tarot/sans'),
                     ),
@@ -80,13 +83,13 @@ class TarotTypeScreen extends StatelessWidget {
                       color: Colors.white.withValues(alpha: 0.25),
                     ),
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                      SizedBox(width: 2),
-                      Text('Geri Git',
-                          style: TextStyle(
+                      const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                      const SizedBox(width: 2),
+                      Text(s.backButton,
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 15,
                               fontWeight: FontWeight.w500)),

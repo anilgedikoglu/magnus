@@ -2,19 +2,22 @@
 // Kehanet ana menüsü - Faloya, Maganda, Tamua, Yana, Kahinlere Sor
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../../data/providers.dart';
 
-class KehanetMenuScreen extends StatelessWidget {
+class KehanetMenuScreen extends ConsumerWidget {
   const KehanetMenuScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
     final items = [
       _KehanetItem('Faloya', 'assets/images/kehanet/faloya.png', '/faloya'),
       _KehanetItem('Maganda', 'assets/images/kehanet/maganda.png', '/maganda'),
       _KehanetItem('Tamua', 'assets/images/kehanet/tamua.png', '/tamua'),
       _KehanetItem('Yana', 'assets/images/kehanet/yana.png', '/yana'),
-      _KehanetItem('Kahinlere Sor', 'assets/images/menu/digerfalcilar.png', '/kahinler'),
+      _KehanetItem(s.askOracles, 'assets/images/menu/digerfalcilar.png', '/kahinler'),
     ];
     return Scaffold(
       backgroundColor: const Color(0xFF0A0718),
@@ -29,11 +32,11 @@ class KehanetMenuScreen extends StatelessWidget {
                     icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                     onPressed: () => context.pop(),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'KEHANET',
+                      s.prophecyTitle,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

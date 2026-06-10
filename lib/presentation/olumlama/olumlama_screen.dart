@@ -386,7 +386,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
           Expanded(
             child: Center(
               child: Text(
-                'OLUMLAMA',
+                ref.watch(l10nProvider).affirmationTitle,
                 style: GoogleFonts.cinzel(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

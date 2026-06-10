@@ -1,9 +1,8 @@
-// Kaynak: C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\DogumHaritasi\Metinler\
+// Kaynak: C:\Users\AG\Desktop\Magnus\Assets\Resources\OnlineSohbetVeriTabani\Astroloji\DogumHaritasi\
 // JSON:   assets/data/dogumharitasi.json
-// Arka plan: assets/images/dogum.png (falbg)
 //
-// Her açılışta 5 bölümden birer metin seçilir ve tek metin olarak birleştirilir:
-//   Giris → 1Hisler → 2Olaylar → 3FizikSaglik → Veda
+// Her açılışta 3 bölümden birer metin seçilir ve ana giriş + son ile birleştirilir:
+//   Ana (sabit) → Bölüm1 (31 metin) → Bölüm2 (30 metin) → Bölüm3 (33 metin) → Son1 (sabit)
 // Günlük tutarlılık: aynı gün aynı içerik gösterilir.
 // Tekrar gösterilmeme: her bölüm kendi havuzunu tüketmeden tekrar etmez.
 
@@ -16,6 +15,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/utils/rich_text_parser.dart';
 import '../../data/providers.dart';
 
 // ─── Model ───────────────────────────────────────────────────────────────────
@@ -23,7 +23,8 @@ import '../../data/providers.dart';
 class _Entry {
   final int id;
   final String metin;
-  const _Entry({required this.id, required this.metin});
+  final String metinEn;
+  const _Entry({required this.id, required this.metin, required this.metinEn});
 }
 
 // ─── Ekran ───────────────────────────────────────────────────────────────────
@@ -39,6 +40,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
     with SingleTickerProviderStateMixin {
   final _rng = Random();
 
+  // Full assembled text (3 sections combined + intro + closing)
   String? _metin;
   bool _loading = true;
 
@@ -67,6 +69,32 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
     return '${n.year}-${n.month.toString().padLeft(2,'0')}-${n.day.toString().padLeft(2,'0')}';
   }
 
+  // ─── No-repeat per section ────────────────────────────────────────────────
+
+  Future<_Entry> _noRepeatPick(
+    List<_Entry> pool,
+    String prefsKey,
+    SharedPreferences prefs,
+  ) async {
+    var shown = prefs.getStringList(prefsKey) ?? [];
+    var available = pool.where((e) => !shown.contains('${e.id}')).toList();
+
+    if (available.isEmpty) {
+      final lastId = shown.isNotEmpty ? shown.last : null;
+      shown = lastId != null ? [lastId] : [];
+      await prefs.setStringList(prefsKey, shown);
+      available = pool.where((e) => e.id.toString() != lastId).toList();
+      if (available.isEmpty) available = List.from(pool);
+    }
+
+    available.shuffle(_rng);
+    final pick = available.first;
+    final updated = prefs.getStringList(prefsKey) ?? [];
+    updated.add('${pick.id}');
+    await prefs.setStringList(prefsKey, updated);
+    return pick;
+  }
+
   // ─── Veri yükle ────────────────────────────────────────────────────────────
 
   Future<void> _loadData() async {
@@ -74,51 +102,66 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
     final data  = jsonDecode(raw) as Map<String, dynamic>;
     final prefs = await SharedPreferences.getInstance();
     final today = _todayKey();
+    final isEn  = ref.read(localeProvider) == 'en';
 
-    // JSON düz liste: {"dogumharitasi": [{id, metin, kosullar}, ...]}
-    final pool = (data['dogumharitasi'] as List).map((e) {
-      final m = e as Map<String, dynamic>;
-      return _Entry(id: m['id'] as int, metin: m['metin'] as String);
-    }).toList();
-
-    final lastDate = prefs.getString('dh_last_date') ?? '';
-    final lastId   = prefs.getInt('dh_bugun_id');
-
-    String metin;
-
-    if (lastDate == today && lastId != null) {
-      // Aynı gün — cache'ten yükle
-      final entry = pool.firstWhere(
-          (e) => e.id == lastId, orElse: () => pool.first);
-      metin = entry.metin;
-    } else {
-      // Yeni gün — no-repeat seç
-      const shownKey = 'dh_gosterilen';
-      var shown = prefs.getStringList(shownKey) ?? [];
-      var available =
-          pool.where((e) => !shown.contains('${e.id}')).toList();
-
-      if (available.isEmpty) {
-        // Hepsi gösterildi → son gösterilen hariç sıfırla
-        final lastShownId = shown.isNotEmpty ? shown.last : null;
-        shown = lastShownId != null ? [lastShownId] : [];
-        await prefs.setStringList(shownKey, shown);
-        available =
-            pool.where((e) => e.id.toString() != lastShownId).toList();
-        if (available.isEmpty) available = List.from(pool);
-      }
-
-      available.shuffle(_rng);
-      final pick = available.first;
-      shown.add('${pick.id}');
-      await prefs.setStringList(shownKey, shown);
-      await prefs.setString('dh_last_date', today);
-      await prefs.setInt('dh_bugun_id', pick.id);
-      metin = pick.metin;
+    // Helper to get metin from a fixed node (ana/ilk/son/son1)
+    String fixedText(String key) {
+      final node = data[key] as Map<String, dynamic>;
+      return isEn ? (node['metin_en'] as String) : (node['metin'] as String);
     }
 
-    final profile = ref.read(userProfileProvider);
-    final replaced = VariableReplacer.replace(metin, profile.toVariableMap());
+    // Helper to build pool from section array
+    List<_Entry> buildPool(String key) {
+      return (data[key] as List).map((e) {
+        final m = e as Map<String, dynamic>;
+        return _Entry(
+          id: m['id'] as int,
+          metin: m['metin'] as String,
+          metinEn: m['metin_en'] as String? ?? m['metin'] as String,
+        );
+      }).toList();
+    }
+
+    final bolum1 = buildPool('bolum1');
+    final bolum2 = buildPool('bolum2');
+    final bolum3 = buildPool('bolum3');
+
+    // Cached daily IDs
+    final lastDate = prefs.getString('dh_last_date') ?? '';
+    final id1 = prefs.getInt('dh_bugun_id1');
+    final id2 = prefs.getInt('dh_bugun_id2');
+    final id3 = prefs.getInt('dh_bugun_id3');
+
+    _Entry pick1, pick2, pick3;
+
+    if (lastDate == today && id1 != null && id2 != null && id3 != null) {
+      // Same day — use cached
+      pick1 = bolum1.firstWhere((e) => e.id == id1, orElse: () => bolum1.first);
+      pick2 = bolum2.firstWhere((e) => e.id == id2, orElse: () => bolum2.first);
+      pick3 = bolum3.firstWhere((e) => e.id == id3, orElse: () => bolum3.first);
+    } else {
+      // New day — no-repeat pick for each section
+      pick1 = await _noRepeatPick(bolum1, 'dh_gosterilen_1', prefs);
+      pick2 = await _noRepeatPick(bolum2, 'dh_gosterilen_2', prefs);
+      pick3 = await _noRepeatPick(bolum3, 'dh_gosterilen_3', prefs);
+      await prefs.setString('dh_last_date', today);
+      await prefs.setInt('dh_bugun_id1', pick1.id);
+      await prefs.setInt('dh_bugun_id2', pick2.id);
+      await prefs.setInt('dh_bugun_id3', pick3.id);
+    }
+
+    // Assemble full text: Ana → Bölüm1 → Bölüm2 → Bölüm3 → Son1
+    final anaText  = fixedText('ana');
+    final son1Text = fixedText('son1');
+
+    final t1 = isEn ? pick1.metinEn : pick1.metin;
+    final t2 = isEn ? pick2.metinEn : pick2.metin;
+    final t3 = isEn ? pick3.metinEn : pick3.metin;
+
+    final assembled = '$anaText\n\n$t1\n\n$t2\n\n$t3\n\n$son1Text';
+
+    final profile  = ref.read(userProfileProvider);
+    final replaced = VariableReplacer.replace(assembled, profile.toVariableMap());
 
     if (!mounted) return;
     setState(() {
@@ -187,7 +230,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
                     Expanded(
                       child: Center(
                         child: Text(
-                          'DOĞUM HARİTASI',
+                          ref.watch(l10nProvider).birthChartTitle,
                           style: GoogleFonts.cinzel(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -220,7 +263,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
   // ─── Wheel chart + animated edge lights ──────────────────────────────────
 
   Widget _buildWheelChart() {
-    const flareThick = 88.0; // en: 2x (44*2) — kenara dik yön
+    const flareThick = 88.0;
 
     Widget breathWrap(Widget child) => AnimatedBuilder(
       animation: _breathAnim,
@@ -235,8 +278,8 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
       child: LayoutBuilder(
         builder: (_, constraints) {
           final size      = constraints.maxWidth * 0.60;
-          final flareLen  = size * 5.0; // boy: 5x — kenar boyunca uzanır
-          final sideOffset = (flareLen - size) / 2; // her yöne taşma miktarı
+          final flareLen  = size * 5.0;
+          final sideOffset = (flareLen - size) / 2;
 
           Widget flareImg() => Image.asset(
             'assets/images/red-light-line-png-2.png',
@@ -244,14 +287,12 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
             errorBuilder: (_, __, ___) => const SizedBox.shrink(),
           );
 
-          // Yatay flare (üst/alt kenar)
           Widget hFlare() => breathWrap(SizedBox(
             width: flareLen,
             height: flareThick,
             child: flareImg(),
           ));
 
-          // Dikey flare (sol/sağ kenar) — RotatedBox layout boyutunu da döndürür
           Widget vFlare() => breathWrap(SizedBox(
             width: flareThick,
             height: flareLen,
@@ -268,33 +309,10 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  // ── Flare'ler ALTTA (görsel arkasında) ──────────────────
-                  // Üst kenar
-                  Positioned(
-                    top: -flareThick / 2,
-                    left: -sideOffset,
-                    child: hFlare(),
-                  ),
-                  // Alt kenar
-                  Positioned(
-                    bottom: -flareThick / 2,
-                    left: -sideOffset,
-                    child: hFlare(),
-                  ),
-                  // Sol kenar
-                  Positioned(
-                    left: -flareThick / 2,
-                    top: -sideOffset,
-                    child: vFlare(),
-                  ),
-                  // Sağ kenar
-                  Positioned(
-                    right: -flareThick / 2,
-                    top: -sideOffset,
-                    child: vFlare(),
-                  ),
-
-                  // ── Kare görsel ÜSTTE ────────────────────────────────────
+                  Positioned(top: -flareThick / 2, left: -sideOffset, child: hFlare()),
+                  Positioned(bottom: -flareThick / 2, left: -sideOffset, child: hFlare()),
+                  Positioned(left: -flareThick / 2, top: -sideOffset, child: vFlare()),
+                  Positioned(right: -flareThick / 2, top: -sideOffset, child: vFlare()),
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -358,7 +376,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
               width: 1,
             ),
           ),
-          child: Text(
+          child: RichTextParser.build(
             _metin ?? '',
             style: const TextStyle(
               color: Colors.white,
@@ -368,7 +386,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
           ),
         ),
         const SizedBox(height: 24),
-        // Geri Git — scroll sonunda görünür
+        // Geri Git
         GestureDetector(
           onTap: () => context.pop(),
           child: Container(
@@ -380,13 +398,13 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
               border: Border.all(
                   color: Colors.white.withValues(alpha: 0.25), width: 1.2),
             ),
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                SizedBox(width: 2),
-                Text('Geri Git',
-                  style: TextStyle(color: Colors.white, fontSize: 15,
+                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                const SizedBox(width: 2),
+                Text(ref.read(l10nProvider).backButton,
+                  style: const TextStyle(color: Colors.white, fontSize: 15,
                       fontWeight: FontWeight.w500)),
               ],
             ),

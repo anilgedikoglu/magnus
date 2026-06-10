@@ -2,14 +2,17 @@
 // Kahinlere Sor menüsü - 5 kahin seçimi
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/services/ad_service.dart';
+import '../../data/providers.dart';
 
-class KahinlerMenuScreen extends StatelessWidget {
+class KahinlerMenuScreen extends ConsumerWidget {
   const KahinlerMenuScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
     final kahinler = [
       _Kahin('Derun', 'assets/images/kahinler/derun.png', 'derun'),
       _Kahin('Uraz', 'assets/images/kahinler/uraz.png', 'uraz'),
@@ -30,11 +33,11 @@ class KahinlerMenuScreen extends StatelessWidget {
                     icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                     onPressed: () => context.pop(),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'KAHİNLERE SOR',
+                      s.askOracles.toUpperCase(),
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

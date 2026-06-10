@@ -288,7 +288,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
           Expanded(
             child: Center(
               child: Text(
-                'KADER KİTABI',
+                ref.watch(l10nProvider).fatebookTitle,
                 style: GoogleFonts.cinzel(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -486,14 +486,14 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
                   width: 1,
                 ),
               ),
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                  SizedBox(width: 2),
+                  const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                  const SizedBox(width: 2),
                   Text(
-                    'Geri Git',
-                    style: TextStyle(
+                    ref.read(l10nProvider).backButton,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,

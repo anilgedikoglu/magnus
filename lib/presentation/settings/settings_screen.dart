@@ -688,7 +688,7 @@ Future<void> _showEditPopup(
                         Expanded(
                           child: TextButton(
                             onPressed: () { rollerCtrl?.dispose(); Navigator.pop(ctx); },
-                            child: const Text('İptal', style: TextStyle(color: Colors.white38)),
+                            child: Text(ref.read(l10nProvider).cancel, style: const TextStyle(color: Colors.white38)),
                           ),
                         ),
                         const SizedBox(width: 8),
@@ -715,7 +715,7 @@ Future<void> _showEditPopup(
                               rollerCtrl?.dispose();
                               if (onSave != null) await onSave(val);
                             },
-                            child: const Text('Kaydet', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text(ref.read(l10nProvider).save, style: const TextStyle(fontWeight: FontWeight.bold)),
                           ),
                         ),
                       ],
@@ -778,16 +778,16 @@ class _SpriteAvatar extends StatelessWidget {
 
 // ─── Profil düzenleme bottom sheet ───────────────────────────────────────────
 
-class _ProfileEditSheet extends StatefulWidget {
+class _ProfileEditSheet extends ConsumerStatefulWidget {
   final UserProfile profile;
   final Future<void> Function(String name, int? picIndex, String? photoPath) onSave;
   const _ProfileEditSheet({required this.profile, required this.onSave});
 
   @override
-  State<_ProfileEditSheet> createState() => _ProfileEditSheetState();
+  ConsumerState<_ProfileEditSheet> createState() => _ProfileEditSheetState();
 }
 
-class _ProfileEditSheetState extends State<_ProfileEditSheet> {
+class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
   late TextEditingController _nameCtrl;
   int? _selectedIndex;
   String? _customPath;
@@ -855,6 +855,7 @@ class _ProfileEditSheetState extends State<_ProfileEditSheet> {
 
   @override
   Widget build(BuildContext context) {
+    final s = ref.watch(l10nProvider);
     return Padding(
       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       child: Container(
@@ -873,8 +874,8 @@ class _ProfileEditSheetState extends State<_ProfileEditSheet> {
                   decoration: BoxDecoration(color: Colors.white24,
                       borderRadius: BorderRadius.circular(2))),
               const SizedBox(height: 16),
-              const Text('Profili Düzenle',
-                  style: TextStyle(color: Colors.white, fontSize: 18,
+              Text(s.editProfile,
+                  style: const TextStyle(color: Colors.white, fontSize: 18,
                       fontWeight: FontWeight.bold)),
               const SizedBox(height: 20),
 
@@ -883,10 +884,10 @@ class _ProfileEditSheetState extends State<_ProfileEditSheet> {
               const SizedBox(height: 20),
 
               // 4 hazır avatar
-              const Align(
+              Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Avatar Seç',
-                    style: TextStyle(color: Color(0xFFDD88CC), fontSize: 12,
+                child: Text(s.chooseAvatar,
+                    style: const TextStyle(color: Color(0xFFDD88CC), fontSize: 12,
                         fontWeight: FontWeight.w500)),
               ),
               const SizedBox(height: 10),
@@ -924,21 +925,21 @@ class _ProfileEditSheetState extends State<_ProfileEditSheet> {
               Row(
                 children: [
                   Expanded(child: _srcButton(
-                      Icons.camera_alt_rounded, 'Kamera',
+                      Icons.camera_alt_rounded, s.camera,
                       () => _pickImage(ImageSource.camera))),
                   const SizedBox(width: 10),
                   Expanded(child: _srcButton(
-                      Icons.photo_library_rounded, 'Galeri',
+                      Icons.photo_library_rounded, s.gallery,
                       () => _pickImage(ImageSource.gallery))),
                 ],
               ),
               const SizedBox(height: 16),
 
               // İsim
-              const Align(
+              Align(
                 alignment: Alignment.centerLeft,
-                child: Text('İsim',
-                    style: TextStyle(color: Color(0xFFDD88CC), fontSize: 12,
+                child: Text(s.nameLabel,
+                    style: const TextStyle(color: Color(0xFFDD88CC), fontSize: 12,
                         fontWeight: FontWeight.w500)),
               ),
               const SizedBox(height: 8),
@@ -946,7 +947,7 @@ class _ProfileEditSheetState extends State<_ProfileEditSheet> {
                 controller: _nameCtrl,
                 style: const TextStyle(color: Colors.white, fontSize: 16),
                 decoration: InputDecoration(
-                  hintText: 'Adınız',
+                  hintText: s.nameHint,
                   hintStyle: const TextStyle(color: Colors.white38),
                   contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16, vertical: 12),
@@ -988,8 +989,8 @@ class _ProfileEditSheetState extends State<_ProfileEditSheet> {
                         ? const SizedBox(width: 20, height: 20,
                         child: CircularProgressIndicator(
                             color: Colors.white, strokeWidth: 2))
-                        : const Text('Kaydet',
-                        style: TextStyle(color: Colors.white,
+                        : Text(s.saveProfile,
+                        style: const TextStyle(color: Colors.white,
                             fontSize: 16, fontWeight: FontWeight.bold)),
                   ),
                 ),
@@ -1250,10 +1251,10 @@ class _TimeRollerPickerState extends State<_TimeRollerPicker> {
       mainAxisSize: MainAxisSize.min,
       children: [
         // Format ipucu
-        const Text(
-          'SS  :  DD   (örn. 13 : 30)',
-          style: TextStyle(color: Color(0xFFDD88CC), fontSize: 11),
-        ),
+        Consumer(builder: (ctx, ref, _) => Text(
+          ref.watch(l10nProvider).timeHint,
+          style: const TextStyle(color: Color(0xFFDD88CC), fontSize: 11),
+        )),
         const SizedBox(height: 8),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -1456,7 +1457,7 @@ class SettingsScreen extends ConsumerWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         const SizedBox(height: 6),
-                        _buildTitle(),
+                        _buildTitle(ref),
                         const SizedBox(height: 14),
                         _buildGridSection(context, ref, profile),
                       ],
@@ -1465,13 +1466,13 @@ class SettingsScreen extends ConsumerWidget {
                   // Orta: donut yuvarlakları dikeyde ortalanmış
                   Expanded(
                     child: Center(
-                      child: _buildDonutRow(scores),
+                      child: _buildDonutRow(scores, ref),
                     ),
                   ),
                   // Alt sabit: Ana Menü butonu
                   Padding(
                     padding: const EdgeInsets.fromLTRB(12, 0, 12, 20),
-                    child: _buildMenuButton(context),
+                    child: _buildMenuButton(context, ref),
                   ),
                 ],
               ),
@@ -1527,12 +1528,13 @@ class SettingsScreen extends ConsumerWidget {
 
   // ── Başlık ───────────────────────────────────────────────────────────────
 
-  Widget _buildTitle() {
+  Widget _buildTitle(WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
     return Column(
       children: [
-        const Text(
-          'Kullanıcı Bilgileri',
-          style: TextStyle(
+        Text(
+          s.settingsTitle,
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -1557,6 +1559,7 @@ class SettingsScreen extends ConsumerWidget {
   // ── Bilgi grid'i ─────────────────────────────────────────────────────────
 
   Widget _buildGridSection(BuildContext context, WidgetRef ref, UserProfile profile) {
+    final s = ref.watch(l10nProvider);
     final birth = _formatDate(profile.birthDate);
     final planet = profile.planet?.isNotEmpty == true
         ? profile.planet!
@@ -1576,10 +1579,10 @@ class SettingsScreen extends ConsumerWidget {
                     Expanded(
                       child: _InfoCard(
                         icon: Icons.calendar_month_rounded,
-                        label: 'Doğum Tarihi',
+                        label: s.birthDate,
                         value: birth,
                         onTap: () => _showEditPopup(context, ref,
-                          title: 'Doğum Tarihi',
+                          title: s.birthDate,
                           icon: Icons.calendar_month_rounded,
                           fieldType: 'date',
                           currentValue: profile.birthDate ?? '',
@@ -1613,12 +1616,12 @@ class SettingsScreen extends ConsumerWidget {
                     Expanded(
                       child: _InfoCard(
                         icon: Icons.favorite_rounded,
-                        label: 'Medeni Hal',
+                        label: s.maritalStatus,
                         value: profile.maritalStatusLabel.isNotEmpty
                             ? profile.maritalStatusLabel
                             : '—',
                         onTap: () => _showEditPopup(context, ref,
-                          title: 'Medeni Hal',
+                          title: s.maritalStatus,
                           icon: Icons.favorite_rounded,
                           fieldType: 'roller',
                           currentValue: profile.maritalStatus,
@@ -1657,10 +1660,10 @@ class SettingsScreen extends ConsumerWidget {
                     Expanded(
                       child: _InfoCard(
                         icon: Icons.person_rounded,
-                        label: 'Cinsiyet',
+                        label: s.gender,
                         value: profile.genderLabel.isNotEmpty ? profile.genderLabel : '—',
                         onTap: () => _showEditPopup(context, ref,
-                          title: 'Cinsiyet',
+                          title: s.gender,
                           icon: Icons.person_rounded,
                           fieldType: 'roller',
                           currentValue: profile.gender,
@@ -1684,10 +1687,10 @@ class SettingsScreen extends ConsumerWidget {
                     Expanded(
                       child: _InfoCard(
                         icon: Icons.work_rounded,
-                        label: 'Meslek',
+                        label: s.occupation,
                         value: profile.jobLabel.isNotEmpty ? profile.jobLabel : '—',
                         onTap: () => _showEditPopup(context, ref,
-                          title: 'Meslek',
+                          title: s.occupation,
                           icon: Icons.work_rounded,
                           fieldType: 'roller',
                           currentValue: profile.job,
@@ -1722,10 +1725,10 @@ class SettingsScreen extends ConsumerWidget {
             Expanded(
               child: _InfoCard(
                 icon: Icons.access_time_rounded,
-                label: 'Doğum Saati',
+                label: s.birthTime,
                 value: profile.birthTime?.isNotEmpty == true ? profile.birthTime! : '—',
                 onTap: () => _showEditPopup(context, ref,
-                  title: 'Doğum Saati',
+                  title: s.birthTime,
                   icon: Icons.access_time_rounded,
                   fieldType: 'time',
                   currentValue: profile.birthTime ?? '',
@@ -1750,10 +1753,10 @@ class SettingsScreen extends ConsumerWidget {
             Expanded(
               child: _InfoCard(
                 icon: Icons.location_on_rounded,
-                label: 'Doğum Yeri',
+                label: s.birthPlace,
                 value: profile.birthCity?.isNotEmpty == true ? profile.birthCity! : '—',
                 onTap: () => _showEditPopup(context, ref,
-                  title: 'Doğum Yeri',
+                  title: s.birthPlace,
                   icon: Icons.location_on_rounded,
                   fieldType: 'text',
                   currentValue: profile.birthCity ?? '',
@@ -1776,10 +1779,10 @@ class SettingsScreen extends ConsumerWidget {
             Expanded(
               child: _InfoCard(
                 icon: Icons.auto_awesome_rounded,
-                label: 'Burç',
+                label: s.zodiac,
                 value: profile.zodiacSign?.isNotEmpty == true ? profile.zodiacSign! : '—',
                 onTap: () => _showEditPopup(context, ref,
-                  title: 'Burç',
+                  title: s.zodiac,
                   icon: Icons.auto_awesome_rounded,
                   fieldType: 'roller',
                   currentValue: profile.zodiacSign ?? '',
@@ -1814,10 +1817,10 @@ class SettingsScreen extends ConsumerWidget {
             Expanded(
               child: _InfoCard(
                 icon: Icons.public_rounded,
-                label: 'Gezegen',
+                label: s.planet,
                 value: planet,
                 onTap: () => _showEditPopup(context, ref,
-                  title: 'Gezegen',
+                  title: s.planet,
                   icon: Icons.public_rounded,
                   fieldType: 'roller',
                   currentValue: planet,
@@ -1854,15 +1857,15 @@ class SettingsScreen extends ConsumerWidget {
             Expanded(
               child: _InfoCard(
                 icon: Icons.trending_up_rounded,
-                label: 'Yükselen',
+                label: s.rising,
                 value: profile.risingSign?.isNotEmpty == true ? profile.risingSign! : '—',
                 onTap: () => _showEditPopup(context, ref,
-                  title: 'Yükselen Burç',
+                  title: s.rising,
                   icon: Icons.trending_up_rounded,
                   fieldType: 'roller',
                   currentValue: profile.risingSign ?? '',
-                  options: const [
-                    ('__auto__','✦ Otomatik Hesapla'),
+                  options: [
+                    ('__auto__', s.autoCalc),
                     ('Koç','Koç ♈'), ('Boğa','Boğa ♉'), ('İkizler','İkizler ♊'),
                     ('Yengeç','Yengeç ♋'), ('Aslan','Aslan ♌'), ('Başak','Başak ♍'),
                     ('Terazi','Terazi ♎'), ('Akrep','Akrep ♏'), ('Yay','Yay ♐'),
@@ -1888,15 +1891,15 @@ class SettingsScreen extends ConsumerWidget {
             Expanded(
               child: _InfoCard(
                 icon: Icons.nightlight_rounded,
-                label: 'Ay Burcu',
+                label: s.moonSign,
                 value: profile.moonSign?.isNotEmpty == true ? profile.moonSign! : '—',
                 onTap: () => _showEditPopup(context, ref,
-                  title: 'Ay Burcu',
+                  title: s.moonSign,
                   icon: Icons.nightlight_rounded,
                   fieldType: 'roller',
                   currentValue: profile.moonSign ?? '',
-                  options: const [
-                    ('__auto__','✦ Otomatik Hesapla'),
+                  options: [
+                    ('__auto__', s.autoCalc),
                     ('Koç','Koç ♈'), ('Boğa','Boğa ♉'), ('İkizler','İkizler ♊'),
                     ('Yengeç','Yengeç ♋'), ('Aslan','Aslan ♌'), ('Başak','Başak ♍'),
                     ('Terazi','Terazi ♎'), ('Akrep','Akrep ♏'), ('Yay','Yay ♐'),
@@ -1995,7 +1998,7 @@ class SettingsScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            profile.name.isNotEmpty ? profile.name : 'Kullanıcı',
+            profile.name.isNotEmpty ? profile.name : ref.read(l10nProvider).userFallback,
             textAlign: TextAlign.center,
             style: const TextStyle(
               color: Colors.white,
@@ -2010,7 +2013,8 @@ class SettingsScreen extends ConsumerWidget {
 
   // ── Donut grafikler ───────────────────────────────────────────────────────
 
-  Widget _buildDonutRow(Map<String, double> s) {
+  Widget _buildDonutRow(Map<String, double> s, WidgetRef ref) {
+    final loc = ref.watch(l10nProvider);
     // Modalite: size=120, extra=50 → totalHeight=220. Yukarı kaydır: yarıçap=60
     // Polarite/Element: size=120, extra=20 → totalHeight=160. Yukarı kaydır: çap=120
     const modTotal = 120.0 + 35 * 2; // 190
@@ -2019,7 +2023,7 @@ class SettingsScreen extends ConsumerWidget {
     const rowShift = 120.0;          // çap
 
     final modalite = _DonutChart(
-      title: 'Modalite',
+      title: loc.modality,
       size: 120,
       labelInset: 1,
       delay: Duration.zero,
@@ -2035,7 +2039,7 @@ class SettingsScreen extends ConsumerWidget {
         Expanded(
           child: Center(
             child: _DonutChart(
-              title: 'Polarite',
+              title: loc.polarity,
               size: 120,
               labelInset: 1,
               delay: const Duration(milliseconds: 950),
@@ -2050,7 +2054,7 @@ class SettingsScreen extends ConsumerWidget {
         Expanded(
           child: Center(
             child: _DonutChart(
-              title: 'Element',
+              title: loc.element,
               size: 120,
               labelInset: 1,
               labelDy: 1,
@@ -2102,7 +2106,7 @@ class SettingsScreen extends ConsumerWidget {
 
   // ── Ana Menü butonu ───────────────────────────────────────────────────────
 
-  Widget _buildMenuButton(BuildContext context) {
+  Widget _buildMenuButton(BuildContext context, WidgetRef ref) {
     return GestureDetector(
       onTap: () => context.pop(),
       child: Container(
@@ -2121,10 +2125,10 @@ class SettingsScreen extends ConsumerWidget {
             ),
           ],
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            'Ana Menü',
-            style: TextStyle(
+            ref.read(l10nProvider).mainMenuBtn,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.bold,
@@ -2196,7 +2200,7 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                 ),
                 child: const Text(
-                  'Ayarlar',
+                  'Ayarlar / Settings',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
@@ -2207,11 +2211,109 @@ class SettingsScreen extends ConsumerWidget {
                 ),
               ),
 
+              // ── Dil / Language bölümü ────────────────────────────────────
+              Consumer(
+                builder: (ctx, cRef, _) {
+                  final currentLocale = cRef.watch(localeProvider);
+                  return Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 14, 20, 4),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'DİL / LANGUAGE',
+                          style: TextStyle(
+                            color: const Color(0xFF00CCFF).withValues(alpha: 0.85),
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 2,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () => cRef.read(localeProvider.notifier).setLocale('tr'),
+                                child: AnimatedContainer(
+                                  duration: const Duration(milliseconds: 200),
+                                  padding: const EdgeInsets.symmetric(vertical: 10),
+                                  decoration: BoxDecoration(
+                                    color: currentLocale == 'tr'
+                                        ? const Color(0xFF00CCFF).withValues(alpha: 0.20)
+                                        : Colors.white.withValues(alpha: 0.05),
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(
+                                      color: currentLocale == 'tr'
+                                          ? const Color(0xFF00CCFF)
+                                          : Colors.white24,
+                                      width: currentLocale == 'tr' ? 1.5 : 1,
+                                    ),
+                                  ),
+                                  child: Text(
+                                    '🇹🇷 Türkçe',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: currentLocale == 'tr' ? Colors.white : Colors.white54,
+                                      fontSize: 14,
+                                      fontWeight: currentLocale == 'tr' ? FontWeight.w600 : FontWeight.w400,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () => cRef.read(localeProvider.notifier).setLocale('en'),
+                                child: AnimatedContainer(
+                                  duration: const Duration(milliseconds: 200),
+                                  padding: const EdgeInsets.symmetric(vertical: 10),
+                                  decoration: BoxDecoration(
+                                    color: currentLocale == 'en'
+                                        ? const Color(0xFF00CCFF).withValues(alpha: 0.20)
+                                        : Colors.white.withValues(alpha: 0.05),
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(
+                                      color: currentLocale == 'en'
+                                          ? const Color(0xFF00CCFF)
+                                          : Colors.white24,
+                                      width: currentLocale == 'en' ? 1.5 : 1,
+                                    ),
+                                  ),
+                                  child: Text(
+                                    '🇬🇧 English',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: currentLocale == 'en' ? Colors.white : Colors.white54,
+                                      fontSize: 14,
+                                      fontWeight: currentLocale == 'en' ? FontWeight.w600 : FontWeight.w400,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                      ],
+                    ),
+                  );
+                },
+              ),
+
+              // Ayırıcı
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+                height: 1,
+                color: const Color(0x33DD00BB),
+              ),
+
               // ── Uyarılar bölümü ──────────────────────────────────────────
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 14, 20, 4),
                 child: Text(
-                  'UYARILAR',
+                  ref.read(l10nProvider).warnings,
                   style: TextStyle(
                     color: const Color(0xFFDD00BB).withValues(alpha: 0.85),
                     fontSize: 11,
@@ -2223,12 +2325,12 @@ class SettingsScreen extends ConsumerWidget {
               _OptionsItem(
                 icon: Icons.gavel_rounded,
                 iconColor: const Color(0xFFBB88FF),
-                label: 'Kullanım Koşulları',
+                label: ref.read(l10nProvider).termsOfUse,
                 onTap: () {
                   Navigator.pop(context);
                   _showLegalText(
                     context,
-                    title: 'Kullanım Koşulları',
+                    title: ref.read(l10nProvider).termsOfUse,
                     icon: Icons.gavel_rounded,
                     iconColor: const Color(0xFFBB88FF),
                     text: _kKullanimKosullari,
@@ -2238,12 +2340,12 @@ class SettingsScreen extends ConsumerWidget {
               _OptionsItem(
                 icon: Icons.privacy_tip_outlined,
                 iconColor: const Color(0xFF44CCFF),
-                label: 'Gizlilik Politikası',
+                label: ref.read(l10nProvider).privacyPolicy,
                 onTap: () {
                   Navigator.pop(context);
                   _showLegalText(
                     context,
-                    title: 'Gizlilik Politikası',
+                    title: ref.read(l10nProvider).privacyPolicy,
                     icon: Icons.privacy_tip_outlined,
                     iconColor: const Color(0xFF44CCFF),
                     text: _kGizlilikPolitikasi,
@@ -2253,12 +2355,12 @@ class SettingsScreen extends ConsumerWidget {
               _OptionsItem(
                 icon: Icons.assignment_outlined,
                 iconColor: const Color(0xFF88FFCC),
-                label: 'Açık Rıza Metni',
+                label: ref.read(l10nProvider).explicitConsent,
                 onTap: () {
                   Navigator.pop(context);
                   _showLegalText(
                     context,
-                    title: 'Açık Rıza Metni',
+                    title: ref.read(l10nProvider).explicitConsent,
                     icon: Icons.assignment_outlined,
                     iconColor: const Color(0xFF88FFCC),
                     text: _kAcikRizaMetni,
@@ -2277,7 +2379,7 @@ class SettingsScreen extends ConsumerWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 4),
                 child: Text(
-                  'TEHLİKELİ İŞLEMLER',
+                  ref.read(l10nProvider).dangerousActions,
                   style: TextStyle(
                     color: Colors.red.withValues(alpha: 0.70),
                     fontSize: 11,
@@ -2289,7 +2391,7 @@ class SettingsScreen extends ConsumerWidget {
               _OptionsItem(
                 icon: Icons.refresh_rounded,
                 iconColor: const Color(0xFFFF8800),
-                label: 'Profili Sıfırla',
+                label: ref.read(l10nProvider).resetProfile,
                 onTap: () {
                   Navigator.pop(context);
                   _confirmReset(context, ref);
@@ -2298,7 +2400,7 @@ class SettingsScreen extends ConsumerWidget {
               _OptionsItem(
                 icon: Icons.delete_outline_rounded,
                 iconColor: const Color(0xFFFF3333),
-                label: 'Tüm Falları Sil',
+                label: ref.read(l10nProvider).deleteAllReadings,
                 onTap: () {
                   Navigator.pop(context);
                   _confirmDeleteInbox(context, ref);
@@ -2320,9 +2422,9 @@ class SettingsScreen extends ConsumerWidget {
                       width: 1,
                     ),
                   ),
-                  child: const Text(
-                    '⚠️ Magnus yalnızca eğlence amaçlıdır. İçerikler kurgusal ve sembolik niteliktedir; gerçek kehanet ya da tavsiye sunmaz.',
-                    style: TextStyle(
+                  child: Text(
+                    ref.read(l10nProvider).entertainmentOnly,
+                    style: const TextStyle(
                       color: Color(0x99FFFFFF),
                       fontSize: 10.5,
                       height: 1.5,
@@ -2345,9 +2447,9 @@ class SettingsScreen extends ConsumerWidget {
                       border: Border.all(
                           color: Colors.white.withValues(alpha: 0.15), width: 1),
                     ),
-                    child: const Center(
-                      child: Text('Kapat',
-                          style: TextStyle(
+                    child: Center(
+                      child: Text(ref.read(l10nProvider).close,
+                          style: const TextStyle(
                               color: Colors.white70, fontSize: 14)),
                     ),
                   ),
@@ -2709,21 +2811,21 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: const Color(0xFF1A0A3C),
-        title: const Text('Profili sıfırla?',
-            style: TextStyle(color: Colors.white)),
-        content: const Text(
-          'Tüm bilgilerin silinir ve yeniden tanışma ekranına gidersin.',
-          style: TextStyle(color: Colors.white70),
+        title: Text(ref.read(l10nProvider).resetProfileConfirm,
+            style: const TextStyle(color: Colors.white)),
+        content: Text(
+          ref.read(l10nProvider).resetProfileDesc,
+          style: const TextStyle(color: Colors.white70),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: const Text('İptal', style: TextStyle(color: Colors.white54)),
+            child: Text(ref.read(l10nProvider).cancel, style: const TextStyle(color: Colors.white54)),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Sıfırla',
-                style: TextStyle(color: Color(0xFFFF3333))),
+            child: Text(ref.read(l10nProvider).resetAction,
+                style: const TextStyle(color: Color(0xFFFF3333))),
           ),
         ],
       ),
@@ -2739,19 +2841,19 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: const Color(0xFF1A0A3C),
-        title: const Text('Tüm falları sil?',
-            style: TextStyle(color: Colors.white)),
-        content: const Text('Bu işlem geri alınamaz.',
-            style: TextStyle(color: Colors.white70)),
+        title: Text(ref.read(l10nProvider).deleteAllConfirm,
+            style: const TextStyle(color: Colors.white)),
+        content: Text(ref.read(l10nProvider).deleteForever,
+            style: const TextStyle(color: Colors.white70)),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: const Text('İptal', style: TextStyle(color: Colors.white54)),
+            child: Text(ref.read(l10nProvider).cancel, style: const TextStyle(color: Colors.white54)),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Sil',
-                style: TextStyle(color: Color(0xFFFF3333))),
+            child: Text(ref.read(l10nProvider).delete,
+                style: const TextStyle(color: Color(0xFFFF3333))),
           ),
         ],
       ),

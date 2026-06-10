@@ -174,9 +174,9 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
                   icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                   onPressed: () => context.pop(),
                 ),
-                const Expanded(child: Text('NİYET',
+                Expanded(child: Text(ref.watch(l10nProvider).intentionTitle,
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontSize: 20,
+                  style: const TextStyle(color: Colors.white, fontSize: 20,
                       fontWeight: FontWeight.bold, letterSpacing: 1.2))),
                 const SizedBox(width: 48),
               ]),
@@ -222,14 +222,14 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
                                   width: 1,
                                 ),
                               ),
-                              child: const Row(
+                              child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(Icons.chevron_left_rounded,
+                                  const Icon(Icons.chevron_left_rounded,
                                       color: Colors.white, size: 20),
-                                  SizedBox(width: 2),
-                                  Text('Geri Git',
-                                      style: TextStyle(
+                                  const SizedBox(width: 2),
+                                  Text(ref.read(l10nProvider).backButton,
+                                      style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,

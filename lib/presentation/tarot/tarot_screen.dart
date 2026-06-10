@@ -24,6 +24,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/l10n/app_strings.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
 
@@ -136,6 +137,7 @@ class TarotScreen extends ConsumerStatefulWidget {
 
 class _TarotScreenState extends ConsumerState<TarotScreen> {
   late final List<_TarotCard> _shuffled;
+  late AppStrings _s;
 
   // Seçimler: kartIndex → seçim sırası (1,2,3)
   final Map<int, int> _selected = {};
@@ -179,7 +181,14 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
     final positions = ['gecmis', 'simdi', 'gelecek'];
     final poz = positions[slot - 1];
     final key = _tepkiKey(file, isReversed);
-    return (_tepkiData![poz] as Map<String, dynamic>?)?[key] as String?;
+    final posMap = _tepkiData![poz] as Map<String, dynamic>?;
+    if (posMap == null) return null;
+    // EN modunda _en suffix'li versiyonu dene, yoksa TR'ye fall back
+    if (_s.isEn) {
+      final enVal = posMap['${key}_en'] as String?;
+      if (enVal != null) return enVal;
+    }
+    return posMap[key] as String?;
   }
 
   @override
@@ -278,11 +287,12 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
 
   @override
   Widget build(BuildContext context) {
+    _s = ref.watch(l10nProvider);
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.navBarBackground,
-        title: const Text('Tarot'),
+        title: Text(_s.tarotTitle),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new_rounded,
@@ -363,8 +373,8 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
       ),
       child: Text(
         isDone
-            ? 'Harika! Kartların seçildi ✦'
-            : 'Kartı yukarı sürükleyerek seç  (${_selectedCount}/3)',
+            ? _s.tarotAllSelected
+            : '${_s.tarotSelectCards}  ($_selectedCount/3)',
         textAlign: TextAlign.center,
         style: AppTextStyles.inboxTitle.copyWith(fontSize: 13),
       ),
@@ -523,7 +533,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
                           strokeWidth: 2, color: Colors.white),
                     )
                   : Text(
-                      _isDone ? 'Yoruma Gönder ✨' : '3 Kart Seç',
+                      _isDone ? _s.tarotSendReading : _s.tarotPickCards,
                       style: AppTextStyles.answerText.copyWith(fontSize: 16),
                     ),
             ),
@@ -552,6 +562,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
       final item = await service.generateTarotFortune(
         profile: profile,
         cards: cardList,
+        locale: ref.read(localeProvider),
       );
       await ref.read(inboxProvider.notifier).addItem(item);
       if (!mounted) return;
@@ -561,7 +572,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Hata: $e'), backgroundColor: Colors.red),
+          SnackBar(content: Text('${_s.errorLabel}: $e'), backgroundColor: Colors.red),
         );
       }
     } finally {

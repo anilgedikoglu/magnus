@@ -407,7 +407,19 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
-      body: Stack(
+      body: GestureDetector(
+        // Yatay swipe → sekme geçişi
+        // dy < 60 koşulu: dikey kaydırma (takvim, içerik scroll) ile çakışmaz
+        onHorizontalDragEnd: (details) {
+          final vx = details.primaryVelocity ?? 0;
+          if (vx.abs() < 300) return; // çok yavaş swipe'ı yoksay
+          if (vx < 0 && _activeTab < _tabs.length - 1) {
+            _switchTab(_activeTab + 1); // sola → sonraki sekme
+          } else if (vx > 0 && _activeTab > 0) {
+            _switchTab(_activeTab - 1); // sağa → önceki sekme
+          }
+        },
+        child: Stack(
         children: [
           // ── Arka plan ─────────────────────────────────────────────────────
           FadeTransition(
@@ -530,7 +542,8 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
             ),
           ),
         ],
-      ),
+      ),      // Stack
+      ),      // GestureDetector
     );
   }
 
@@ -741,13 +754,13 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
             border: Border.all(
                 color: Colors.white.withValues(alpha: 0.25), width: 1.2),
           ),
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              SizedBox(width: 2),
-              Text('Geri Git',
-                style: TextStyle(color: Colors.white, fontSize: 15,
+              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+              const SizedBox(width: 2),
+              Text(ref.read(l10nProvider).backButton,
+                style: const TextStyle(color: Colors.white, fontSize: 15,
                     fontWeight: FontWeight.w500)),
             ],
           ),

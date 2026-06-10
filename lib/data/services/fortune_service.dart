@@ -292,8 +292,10 @@ class FortuneService {
   Future<InboxItem> generateTarotFortune({
     required UserProfile profile,
     required List<({String name, bool isReversed})> cards,
+    String locale = 'tr',
   }) async {
     await init();
+    final isEn = locale == 'en';
     final vars = profile.toVariableMap();
     final prefs = await SharedPreferences.getInstance();
     final allTexts = _tarotTexts!;
@@ -352,11 +354,18 @@ class FortuneService {
       final chosen = available.first as Map<String, dynamic>;
       await prefs.setStringList(shownKey, [...shownIds, '${chosen['id']}']);
 
-      final metin = VariableReplacer.replace(chosen['metin'] as String, vars);
+      // metin_en varsa ve EN modundaysa İngilizce metni kullan
+      final metinKey = isEn && chosen.containsKey('metin_en') ? 'metin_en' : 'metin';
+      final metin = VariableReplacer.replace(chosen[metinKey] as String, vars);
       if (buffer.isNotEmpty) buffer.write('\n\n');
       buffer.write(metin);
 
-      titleParts.add(card.isReversed ? 'Ters ${card.name}' : card.name);
+      if (isEn) {
+        final enName = _jsonKartToEnName[jsonKart] ?? card.name;
+        titleParts.add(card.isReversed ? 'Reversed $enName' : enName);
+      } else {
+        titleParts.add(card.isReversed ? 'Ters ${card.name}' : card.name);
+      }
     }
 
     // 3-6 dakika arasında rastgele kilit süresi
@@ -366,7 +375,9 @@ class FortuneService {
 
     return InboxItem(
       id: _uuid.v4(),
-      title: 'Tarot Falın: ${titleParts.join(', ')}',
+      title: isEn
+          ? 'Your Tarot Reading: ${titleParts.join(', ')}'
+          : 'Tarot Falın: ${titleParts.join(', ')}',
       text: buffer.toString().trim(),
       date: now.toIso8601String(),
       fortuneTypeKey: 'tarot',
@@ -384,8 +395,10 @@ class FortuneService {
     required String type,          // 'ask' | 'dilek' | 'sans'
     required String cardJsonName,  // Örn: 'Adalet', 'Kilicaltilisi'
     required String cardDisplayName,
+    String locale = 'tr',
   }) async {
     await init();
+    final isEn = locale == 'en';
     final vars = profile.toVariableMap();
     final prefs = await SharedPreferences.getInstance();
     final allTexts = _singleTarotTexts!;
@@ -412,7 +425,9 @@ class FortuneService {
 
     String metin;
     if (eligible.isEmpty) {
-      metin = '$cardDisplayName kartın seçildi. Magnus yakında yorumlayacak...';
+      metin = isEn
+          ? 'The $cardDisplayName card was selected. Magnus will interpret it soon...'
+          : '$cardDisplayName kartın seçildi. Magnus yakında yorumlayacak...';
     } else {
       // Tekrar gösterilmeme
       final shownKey = 'single_tarot_shown_${type}_$cardJsonName';
@@ -428,15 +443,23 @@ class FortuneService {
       available.shuffle(_rng);
       final chosen = available.first as Map<String, dynamic>;
       await prefs.setStringList(shownKey, [...shownIds, '${chosen['id']}']);
-      metin = VariableReplacer.replace(chosen['metin'] as String, vars);
+      final metinKey = isEn && chosen.containsKey('metin_en') ? 'metin_en' : 'metin';
+      metin = VariableReplacer.replace(chosen[metinKey] as String, vars);
     }
 
-    final typeLabel = switch (type) {
-      'ask' => 'Aşk Kartı',
-      'dilek' => 'Dilek Kartı',
-      'sans' => 'Şans Kartı',
-      _ => 'Tarot',
-    };
+    final typeLabel = isEn
+        ? switch (type) {
+            'ask' => 'Love Card',
+            'dilek' => 'Wish Card',
+            'sans' => 'Luck Card',
+            _ => 'Tarot',
+          }
+        : switch (type) {
+            'ask' => 'Aşk Kartı',
+            'dilek' => 'Dilek Kartı',
+            'sans' => 'Şans Kartı',
+            _ => 'Tarot',
+          };
 
     final unlockMinutes = 3 + _rng.nextInt(4);
     final now = DateTime.now();
@@ -445,7 +468,7 @@ class FortuneService {
     return InboxItem(
       id: _uuid.v4(),
       // Başlık formatı: "<TypeLabel> Falın: <jsonName>" — detail screen'de image yolu türetmek için jsonName kullanılır
-      title: '$typeLabel Falın: $cardJsonName',
+      title: isEn ? '$typeLabel Reading: $cardJsonName' : '$typeLabel Falın: $cardJsonName',
       text: metin,
       date: now.toIso8601String(),
       fortuneTypeKey: 'tarot',
@@ -533,6 +556,88 @@ class FortuneService {
     'Tılsım Yedilisi': 'Tilsimyedilisi',
     'Yıkılan Kule': 'Yikilankule',
     'Yıldız': 'Yildiz',
+  };
+
+  // JSON kart adı → İngilizce kart adı (InboxItem başlığı için)
+  static const _jsonKartToEnName = <String, String>{
+    'Adalet': 'Justice',
+    'Asiklar': 'The Lovers',
+    'Asilanadam': 'The Hanged Man',
+    'Ay': 'The Moon',
+    'Aziz': 'The Hierophant',
+    'Azize': 'The High Priestess',
+    'Buyucu': 'The Magician',
+    'Deli': 'The Fool',
+    'Denge': 'Temperance',
+    'Dunya': 'The World',
+    'Ermis': 'The Hermit',
+    'Guc': 'Strength',
+    'Gunes': 'The Sun',
+    'imparator': 'The Emperor',
+    'imparatorice': 'The Empress',
+    'Kadercarki': 'Wheel of Fortune',
+    'Mahkeme': 'Judgement',
+    'Olum': 'Death',
+    'Savasarabasi': 'The Chariot',
+    'Seytan': 'The Devil',
+    'Yikilankule': 'The Tower',
+    'Yildiz': 'The Star',
+    'Degnekasi': 'Ace of Wands',
+    'Degnekikilisi': 'Two of Wands',
+    'Degnekuclusu': 'Three of Wands',
+    'Degnekdortlusu': 'Four of Wands',
+    'Degnekbeslisi': 'Five of Wands',
+    'Degnekaltilisi': 'Six of Wands',
+    'Degnekyedilisi': 'Seven of Wands',
+    'Degneksekizlisi': 'Eight of Wands',
+    'Degnekdokuzlusu': 'Nine of Wands',
+    'Degnekonlusu': 'Ten of Wands',
+    'Degnekprensi': 'Page of Wands',
+    'Degneksovalyesi': 'Knight of Wands',
+    'Degnekkralicesi': 'Queen of Wands',
+    'Degnekkrali': 'King of Wands',
+    'Kilicasi': 'Ace of Swords',
+    'Kilicikilisi': 'Two of Swords',
+    'Kilicuclusu': 'Three of Swords',
+    'Kilicdortlusu': 'Four of Swords',
+    'Kilicbeslisi': 'Five of Swords',
+    'Kilicaltilisi': 'Six of Swords',
+    'Kilicyedilisi': 'Seven of Swords',
+    'Kilicsekizlisi': 'Eight of Swords',
+    'Kilicdokuzlusu': 'Nine of Swords',
+    'Kiliconlusu': 'Ten of Swords',
+    'Kilicprensi': 'Page of Swords',
+    'Kilicsovalyesi': 'Knight of Swords',
+    'Kilickralicesi': 'Queen of Swords',
+    'Kilickrali': 'King of Swords',
+    'Kupaasi': 'Ace of Cups',
+    'Kupaikilisi': 'Two of Cups',
+    'Kupauclusu': 'Three of Cups',
+    'Kupadortlusu': 'Four of Cups',
+    'Kupabeslisi': 'Five of Cups',
+    'Kupaaltilisi': 'Six of Cups',
+    'Kupayedilisi': 'Seven of Cups',
+    'Kupasekizlisi': 'Eight of Cups',
+    'Kupadokuzlusu': 'Nine of Cups',
+    'Kupaonlusu': 'Ten of Cups',
+    'Kupaprensi': 'Page of Cups',
+    'Kupasovalyesi': 'Knight of Cups',
+    'Kupakralicesi': 'Queen of Cups',
+    'Kupakrali': 'King of Cups',
+    'Tilsimasi': 'Ace of Pentacles',
+    'Tilsimikilisi': 'Two of Pentacles',
+    'Tilsimuclusu': 'Three of Pentacles',
+    'Tilsimdortlusu': 'Four of Pentacles',
+    'Tilsimbeslisi': 'Five of Pentacles',
+    'Tilsimaltilisi': 'Six of Pentacles',
+    'Tilsimyedilisi': 'Seven of Pentacles',
+    'Tilsimsekizlisi': 'Eight of Pentacles',
+    'Tilsimdokuzlusu': 'Nine of Pentacles',
+    'Tilsimonlusu': 'Ten of Pentacles',
+    'Tilsimprensi': 'Page of Pentacles',
+    'Tilsimsovalyesi': 'Knight of Pentacles',
+    'Tilsimkralicesi': 'Queen of Pentacles',
+    'Tilsimkrali': 'King of Pentacles',
   };
 
   // ─── Daily astrology (simple, based on zodiac) ────────────────────────────

@@ -3,7 +3,9 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../../data/providers.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 
 class ParmakSurtmeScreen extends StatefulWidget {
@@ -104,12 +106,12 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
             const Spacer(),
 
             // ── Yazı ────────────────────────────────────────────
-            AnimatedSwitcher(
+            Consumer(builder: (ctx, ref, _) {
+              final s = ref.watch(l10nProvider);
+              return AnimatedSwitcher(
               duration: const Duration(milliseconds: 500),
               child: Text(
-                _done
-                    ? 'Tamamlandı. Başlıyoruz!...'
-                    : 'Parmağını dokundur, kaderini okuyacağım',
+                _done ? s.done : s.touchFinger,
                 key: ValueKey(_done),
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -118,7 +120,8 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
                   height: 1.5,
                 ),
               ),
-            ),
+            );
+            }),
 
             const SizedBox(height: 18),
 

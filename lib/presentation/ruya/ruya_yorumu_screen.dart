@@ -318,9 +318,9 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                   icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                   onPressed: () => context.pop(),
                 ),
-                const Expanded(
+                Expanded(
                   child: Text(
-                    'RÜYA YORUMU',
+                    ref.watch(l10nProvider).dreamTitle,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
@@ -503,9 +503,9 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
               ),
               child: Center(
                 child: _secili != null
-                    ? const Text(
-                        'Yorumla',
-                        style: TextStyle(
+                    ? Text(
+                        ref.read(l10nProvider).interpret,
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -513,13 +513,13 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                       )
                     : Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: const [
-                          Icon(Icons.chevron_left_rounded,
+                        children: [
+                          const Icon(Icons.chevron_left_rounded,
                               color: Colors.white, size: 20),
-                          SizedBox(width: 2),
+                          const SizedBox(width: 2),
                           Text(
-                            'Geri Git',
-                            style: TextStyle(
+                            ref.read(l10nProvider).backButton,
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 15,
                               fontWeight: FontWeight.w500,

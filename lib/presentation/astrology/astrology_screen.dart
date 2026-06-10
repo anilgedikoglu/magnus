@@ -18,13 +18,14 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
   @override
   Widget build(BuildContext context) {
     final profile = ref.watch(userProfileProvider);
+    final s = ref.watch(l10nProvider);
     final zodiac = profile.zodiacSign ?? '—';
 
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.navBarBackground,
-        title: const Text('Astroloji'),
+        title: Text(s.astrologyTitle),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
           onPressed: () => context.pop(),
@@ -59,12 +60,12 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
                   const Text('✨', style: TextStyle(fontSize: 48)),
                   const SizedBox(height: 12),
                   Text(
-                    zodiac.isNotEmpty && zodiac != '—' ? zodiac : 'Burç Yorumu',
+                    zodiac.isNotEmpty && zodiac != '—' ? zodiac : s.zodiacReading,
                     style: AppTextStyles.title.copyWith(fontSize: 22),
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    'Günlük Astroloji Yorumu',
+                    s.dailyAstrologyReading,
                     style: AppTextStyles.inboxMeta.copyWith(
                       color: Colors.white.withValues(alpha: 0.75),
                     ),
@@ -89,7 +90,7 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
                     const SizedBox(width: 12),
                     Expanded(
                       child: Text(
-                        'Burç yorumu için profilinde doğum tarihin olmalı.',
+                        s.needBirthDateInfo,
                         style: AppTextStyles.inboxDescription,
                       ),
                     ),
@@ -98,7 +99,7 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
               ),
             if (zodiac != '—' && zodiac.isNotEmpty) ...[
               Text(
-                'NASIL ÇALIŞIR?',
+                s.howItWorks,
                 style: AppTextStyles.inboxMeta.copyWith(
                   color: AppColors.navBarActive,
                   letterSpacing: 1.2,
@@ -116,20 +117,17 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
                   children: [
                     _InfoRow(
                       icon: '🌟',
-                      text:
-                          'Burç enerjine göre kişiselleştirilmiş günlük yorum alırsın.',
+                      text: s.astroInfo1,
                     ),
                     const SizedBox(height: 10),
                     _InfoRow(
                       icon: '📬',
-                      text:
-                          'Yorum gelen kutuna düşer, istediğin zaman okuyabilirsin.',
+                      text: s.astroInfo2,
                     ),
                     const SizedBox(height: 10),
                     _InfoRow(
                       icon: '🔄',
-                      text:
-                          'Her yorumun farklı: aşk, kariyer, enerji ve daha fazlası.',
+                      text: s.astroInfo3,
                     ),
                   ],
                 ),
@@ -175,7 +173,7 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
                               ),
                             )
                           : Text(
-                              'Yorumumu Al ✨',
+                              s.getMyReading,
                               style: AppTextStyles.answerText.copyWith(
                                 fontSize: 16,
                               ),

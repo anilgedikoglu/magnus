@@ -289,7 +289,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
                     Expanded(
                       child: Center(
                         child: Text(
-                          'NUMEROLOJİ',
+                          ref.watch(l10nProvider).numerologyTitle,
                           style: GoogleFonts.cinzel(
                             fontSize: 18, fontWeight: FontWeight.bold,
                             color: Colors.white, letterSpacing: 4,
@@ -387,15 +387,15 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
                   width: 1.2,
                 ),
               ),
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.chevron_left_rounded,
+                  const Icon(Icons.chevron_left_rounded,
                       color: Colors.white, size: 20),
-                  SizedBox(width: 2),
+                  const SizedBox(width: 2),
                   Text(
-                    'Geri Git',
-                    style: TextStyle(
+                    ref.read(l10nProvider).backButton,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -552,13 +552,13 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
               border: Border.all(
                 color: Colors.white.withValues(alpha: 0.25), width: 1.2),
             ),
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                SizedBox(width: 2),
-                Text('Geri Git',
-                  style: TextStyle(color: Colors.white, fontSize: 15,
+                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                const SizedBox(width: 2),
+                Text(ref.read(l10nProvider).backButton,
+                  style: const TextStyle(color: Colors.white, fontSize: 15,
                       fontWeight: FontWeight.w500)),
               ],
             ),

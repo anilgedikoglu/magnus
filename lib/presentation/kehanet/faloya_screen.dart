@@ -179,6 +179,7 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
 
   @override
   Widget build(BuildContext context) {
+    final s = ref.watch(l10nProvider);
     return Scaffold(
       backgroundColor: const Color(0xFF0A0718),
       body: SafeArea(
@@ -220,10 +221,10 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
             // ── Yükleniyor: orta alan ──────────────────────────────────────
             if (_adim == _FaloyaAdim.yukleniyor) ...[
               const Spacer(),
-              const Text(
-                'Faloya geleceğine odaklanıyor...',
+              Text(
+                s.faloyaFocusing,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white70,
                   fontSize: 16,
                   letterSpacing: 0.3,
@@ -266,10 +267,10 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
                         width: 1.5,
                       ),
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
-                        'Kapat',
-                        style: TextStyle(
+                        s.close,
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,

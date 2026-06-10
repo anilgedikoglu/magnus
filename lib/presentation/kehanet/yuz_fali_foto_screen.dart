@@ -249,7 +249,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
                 ),
                 Expanded(
                   child: Text(
-                    widget.kimin == 'kullanici' ? 'YÜZ FALIM' : 'YÜZ FALI',
+                    widget.kimin == 'kullanici' ? ref.watch(l10nProvider).faceFortuneTilte : ref.watch(l10nProvider).faceFortuneTilte,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       color: Colors.white,

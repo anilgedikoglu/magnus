@@ -31,6 +31,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/l10n/app_strings.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
@@ -250,6 +251,7 @@ class SingleTarotScreen extends ConsumerStatefulWidget {
 
 class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
   late final List<_SingleCard> _shuffled;
+  late AppStrings _s;
 
   int? _selectedIndex;   // seçilen kartın index'i
   String? _selectedName; // gösterilen kart adı (displayName)
@@ -268,19 +270,33 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
 
   final _slotKey = GlobalKey();
 
-  String get _title => switch (widget.type) {
-    'ask' => 'Aşk Kartı',
-    'dilek' => 'Dilek Kartı',
-    'sans' => 'Şans Kartı',
-    _ => 'Tarot',
-  };
+  String get _title => _s.isEn
+      ? switch (widget.type) {
+          'ask' => 'Love Card',
+          'dilek' => 'Wish Card',
+          'sans' => 'Luck Card',
+          _ => 'Tarot',
+        }
+      : switch (widget.type) {
+          'ask' => 'Aşk Kartı',
+          'dilek' => 'Dilek Kartı',
+          'sans' => 'Şans Kartı',
+          _ => 'Tarot',
+        };
 
-  String get _instruction => switch (widget.type) {
-    'ask' => 'Aşk kartını seç  (0/1)',
-    'dilek' => 'Dilek kartını seç  (0/1)',
-    'sans' => 'Şans kartını seç  (0/1)',
-    _ => 'Kartı yukarı sürükle  (0/1)',
-  };
+  String get _instruction => _s.isEn
+      ? switch (widget.type) {
+          'ask' => 'Select your love card  (0/1)',
+          'dilek' => 'Select your wish card  (0/1)',
+          'sans' => 'Select your luck card  (0/1)',
+          _ => 'Drag card up  (0/1)',
+        }
+      : switch (widget.type) {
+          'ask' => 'Aşk kartını seç  (0/1)',
+          'dilek' => 'Dilek kartını seç  (0/1)',
+          'sans' => 'Şans kartını seç  (0/1)',
+          _ => 'Kartı yukarı sürükle  (0/1)',
+        };
 
   @override
   void initState() {
@@ -354,7 +370,12 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
     _overlayEntry?.remove();
     _overlayEntry = null;
     final card = _shuffled[index];
-    final rawTepki = _tepkiData?[card.jsonName] as String?;
+    // EN modunda _en suffix'li versiyonu dene, yoksa TR'ye fall back
+    String? rawTepki;
+    if (_s.isEn) {
+      rawTepki = _tepkiData?['${card.jsonName}_en'] as String?;
+    }
+    rawTepki ??= _tepkiData?[card.jsonName] as String?;
     final tepki = rawTepki != null
         ? VariableReplacer.replace(rawTepki, ref.read(userProfileProvider).toVariableMap())
         : null;
@@ -383,6 +404,7 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
 
   @override
   Widget build(BuildContext context) {
+    _s = ref.watch(l10nProvider);
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -583,7 +605,7 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
                 const _PulsingHourglass(),
                 const SizedBox(height: 6),
                 Text(
-                  'Yoruma gönderiliyor...',
+                  ref.read(l10nProvider).fortuneSending,
                   style: TextStyle(
                     color: const Color(0xFFB8E0FF).withValues(alpha: 0.7),
                     fontSize: 12,
@@ -607,6 +629,7 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
         type: widget.type,
         cardJsonName: card.jsonName,
         cardDisplayName: card.displayName,
+        locale: ref.read(localeProvider),
       );
       await ref.read(inboxProvider.notifier).addItem(item);
       if (!mounted) return;

@@ -181,7 +181,14 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
     final positions = ['gecmis', 'simdi', 'gelecek'];
     final poz = positions[slot - 1];
     final key = _tepkiKey(file, isReversed);
-    return (_tepkiData![poz] as Map<String, dynamic>?)?[key] as String?;
+    final posMap = _tepkiData![poz] as Map<String, dynamic>?;
+    if (posMap == null) return null;
+    // EN modunda _en suffix'li versiyonu dene, yoksa TR'ye fall back
+    if (_s.isEn) {
+      final enVal = posMap['${key}_en'] as String?;
+      if (enVal != null) return enVal;
+    }
+    return posMap[key] as String?;
   }
 
   @override
@@ -555,6 +562,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
       final item = await service.generateTarotFortune(
         profile: profile,
         cards: cardList,
+        locale: ref.read(localeProvider),
       );
       await ref.read(inboxProvider.notifier).addItem(item);
       if (!mounted) return;

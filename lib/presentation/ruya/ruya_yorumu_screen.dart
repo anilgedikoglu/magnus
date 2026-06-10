@@ -13,39 +13,71 @@ import '../../data/providers.dart';
 // ── Sembol verisi ──────────────────────────────────────────────────────────────
 class _Sembol {
   final String kelime;
+  final String kelimeEn;
   final String yorum;
-  const _Sembol(this.kelime, this.yorum);
+  final String yorumEn;
+  const _Sembol(this.kelime, this.yorum, [this.kelimeEn = '', this.yorumEn = '']);
+  String kelimeFor(bool isEn) => (isEn && kelimeEn.isNotEmpty) ? kelimeEn : kelime;
+  String yorumFor(bool isEn) => (isEn && yorumEn.isNotEmpty) ? yorumEn : yorum;
 }
 
 const List<_Sembol> _semboller = [
   _Sembol('Altın',
-      'Altın rüyada değer, başarı ve içsel zenginliği simgeler. Altın buluyorsan, çabanın karşılığını görmek ve takdir edilmek üzere olduğunun müjdesini taşır. Altınını kaybediyorsan, maddi ya da duygusal bir kayıp endişesi seni meşgul ediyor. Bu rüya, gerçek değerin maddi şeylerde değil, sende olduğunu hatırlatıyor.'),
+      'Altın rüyada değer, başarı ve içsel zenginliği simgeler. Altın buluyorsan, çabanın karşılığını görmek ve takdir edilmek üzere olduğunun müjdesini taşır. Altınını kaybediyorsan, maddi ya da duygusal bir kayıp endişesi seni meşgul ediyor. Bu rüya, gerçek değerin maddi şeylerde değil, sende olduğunu hatırlatıyor.',
+      'Gold',
+      'Gold in a dream symbolizes value, success and inner wealth. If you find gold, it heralds that you are about to see the reward of your effort and be appreciated. If you lose your gold, a worry of material or emotional loss occupies you. This dream reminds you that true worth lies not in material things, but within you.'),
   _Sembol('Araba',
-      'Rüyanda araba görmek, hayatında kontrolü ele almak istediğinin işareti. Direksiyonda sen mi yoksa başkası mı oturuyordu, bu sorunun yanıtı sana çok şey söyler. Arabanın hızı ve yönü, hedeflerine ne kadar emin adımlarla yürüdüğünü yansıtıyor. Yakın zamanda önemli bir karar seni bekliyor.'),
+      'Rüyanda araba görmek, hayatında kontrolü ele almak istediğinin işareti. Direksiyonda sen mi yoksa başkası mı oturuyordu, bu sorunun yanıtı sana çok şey söyler. Arabanın hızı ve yönü, hedeflerine ne kadar emin adımlarla yürüdüğünü yansıtıyor. Yakın zamanda önemli bir karar seni bekliyor.',
+      'Car',
+      'Seeing a car in your dream is a sign that you want to take control of your life. Who was behind the wheel — you or someone else — the answer to that question tells you a lot. The speed and direction of the car reflect how confidently you walk toward your goals. An important decision awaits you soon.'),
   _Sembol('Arı',
-      'Arılar rüyada çalışkanlığın ve toplumla uyumun habercisidir. Eğer arı seni sokuyorsa, çevrendekilerin sözlerinin sana beklediğinden fazla dokunduğunu gösterir. Kovan gördüysen, bir ekiple büyük bir başarıya imza atacaksın. Arılar uçuşuyorsa, enerjin ve motivasyonun zirvede.'),
+      'Arılar rüyada çalışkanlığın ve toplumla uyumun habercisidir. Eğer arı seni sokuyorsa, çevrendekilerin sözlerinin sana beklediğinden fazla dokunduğunu gösterir. Kovan gördüysen, bir ekiple büyük bir başarıya imza atacaksın. Arılar uçuşuyorsa, enerjin ve motivasyonun zirvede.',
+      'Bee',
+      'Bees in a dream are heralds of diligence and harmony with society. If a bee stings you, it shows that the words of those around you affect you more than you expected. If you saw a hive, you will achieve great success with a team. If the bees are flying about, your energy and motivation are at their peak.'),
   _Sembol('Aslan',
-      'Aslan, içindeki güç ve liderlik isteğinin simgesidir. Rüyanda sana saldırıyorsa, hayatında seni tehdit eden bir güçten çekiniyor olabilirsin. Ama aslanı evcilleştirdiğini gördüysen, büyük engellerin üstesinden gelme vakti gelmiş demektir. Bu rüya, cesaretini toplamanı söylüyor.'),
+      'Aslan, içindeki güç ve liderlik isteğinin simgesidir. Rüyanda sana saldırıyorsa, hayatında seni tehdit eden bir güçten çekiniyor olabilirsin. Ama aslanı evcilleştirdiğini gördüysen, büyük engellerin üstesinden gelme vakti gelmiş demektir. Bu rüya, cesaretini toplamanı söylüyor.',
+      'Lion',
+      'The lion is the symbol of the strength and desire for leadership within you. If it attacks you in your dream, you may be wary of a force threatening you in your life. But if you saw yourself taming the lion, it means the time has come to overcome great obstacles. This dream tells you to gather your courage.'),
   _Sembol('At',
-      'At rüyada güç, özgürlük ve hayatının hızını simgeler. Hızla koşan bir ata biniyorsan, hedeflerine doğru büyük bir enerji ve kararlılıkla ilerliyorsun. Atı zapt etmekte zorlanıyorsan, hayatındaki bazı güçlü enerjileri ya da içgüdüleri kontrol etmekte güçlük çekiyorsun. Özgürce koşan bir at ise kısıtlamalardan kurtulma ve özgürlüğe kavuşma arzusunu yansıtır.'),
+      'At rüyada güç, özgürlük ve hayatının hızını simgeler. Hızla koşan bir ata biniyorsan, hedeflerine doğru büyük bir enerji ve kararlılıkla ilerliyorsun. Atı zapt etmekte zorlanıyorsan, hayatındaki bazı güçlü enerjileri ya da içgüdüleri kontrol etmekte güçlük çekiyorsun. Özgürce koşan bir at ise kısıtlamalardan kurtulma ve özgürlüğe kavuşma arzusunu yansıtır.',
+      'Horse',
+      'A horse in a dream symbolizes power, freedom and the pace of your life. If you ride a galloping horse, you advance toward your goals with great energy and determination. If you struggle to rein it in, you are having difficulty controlling some powerful energies or instincts in your life. A freely running horse reflects the desire to break free of restrictions and attain freedom.'),
   _Sembol('Ateş',
-      'Ateş rüyada iki yüzü olan güçlü bir semboldür — hem yıkımı hem de yenilenmeyi temsil eder. Eğer ateş kontrolsüzce yayılıyorsa, içindeki bastırılmış öfke ya da tutku serbest kalmak istiyor. Nazikçe yanan bir ateş gördüysen, ilham ve yaratıcılık dönemine giriyorsun. Ateşin başında ısınmak ise sıcaklık ve güvenlik arayışını simgeler.'),
+      'Ateş rüyada iki yüzü olan güçlü bir semboldür — hem yıkımı hem de yenilenmeyi temsil eder. Eğer ateş kontrolsüzce yayılıyorsa, içindeki bastırılmış öfke ya da tutku serbest kalmak istiyor. Nazikçe yanan bir ateş gördüysen, ilham ve yaratıcılık dönemine giriyorsun. Ateşin başında ısınmak ise sıcaklık ve güvenlik arayışını simgeler.',
+      'Fire',
+      'Fire is a powerful two-faced symbol in a dream — it represents both destruction and renewal. If the fire spreads uncontrollably, suppressed anger or passion within you wants to be released. If you saw a gently burning fire, you are entering a period of inspiration and creativity. Warming yourself by a fire symbolizes a search for warmth and security.'),
   _Sembol('Ay',
-      'Ay, rüyada bilinçaltı ve sezginin yansımasıdır. Dolunay görmek, duygusal yoğunluğun doruk noktasında olduğunu; hilal ise yeni bir başlangıcın eşiğinde durduğunu gösterir. Ayın denize ya da göle yansıması, iç dünyanın dış dünyayla bütünleşmesinin işaretidir. Sezgilerine kulak ver, sana doğru yolu gösterecekler.'),
+      'Ay, rüyada bilinçaltı ve sezginin yansımasıdır. Dolunay görmek, duygusal yoğunluğun doruk noktasında olduğunu; hilal ise yeni bir başlangıcın eşiğinde durduğunu gösterir. Ayın denize ya da göle yansıması, iç dünyanın dış dünyayla bütünleşmesinin işaretidir. Sezgilerine kulak ver, sana doğru yolu gösterecekler.',
+      'Moon',
+      'The Moon is the reflection of the subconscious and intuition in a dream. Seeing a full moon shows that your emotional intensity is at its peak; a crescent shows you stand at the threshold of a new beginning. The moon reflected on a sea or lake is a sign of your inner world merging with the outer world. Listen to your intuition — it will show you the right path.'),
   _Sembol('Ayna',
-      'Rüyada ayna, gerçek benliğinle yüzleşmenin zamanı geldiğini söyler. Yansımanın senden farklı göründüğünü fark ettiysen, kendini olduğundan farklı gösterdiğini ya da birinin seni yanlış tanımladığını hissediyorsun. Kırık ayna, kimlik konusundaki belirsizliklerin işareti. Aynada gülümsediğini gördüysen, öz sevgin ve kabul gelişiyor.'),
+      'Rüyada ayna, gerçek benliğinle yüzleşmenin zamanı geldiğini söyler. Yansımanın senden farklı göründüğünü fark ettiysen, kendini olduğundan farklı gösterdiğini ya da birinin seni yanlış tanımladığını hissediyorsun. Kırık ayna, kimlik konusundaki belirsizliklerin işareti. Aynada gülümsediğini gördüysen, öz sevgin ve kabul gelişiyor.',
+      'Mirror',
+      'A mirror in a dream says it is time to face your true self. If you noticed your reflection looking different from you, you feel that you present yourself differently than you are, or that someone has misjudged you. A broken mirror is a sign of uncertainty about identity. If you saw yourself smiling in the mirror, your self-love and acceptance are growing.'),
   _Sembol('Bahçe',
-      'Bahçe rüyada beslenme, büyüme ve özenle yetiştirilen şeyleri simgeler. Çiçekli ve verimli bir bahçe, ilişkilerinin ve projelerinin güzel meyveler verdiğinin işaretidir. Bakımsız ve solmuş bir bahçe, ihmal ettiğin ilişkiler ya da hayallerin sana hatırlatılmasıdır. Bahçede ekip biçiyorsan, sabırla emek verdiğin şeylerin zamanı gelince büyüyeceğine dair güçlü bir inanç var içinde.'),
+      'Bahçe rüyada beslenme, büyüme ve özenle yetiştirilen şeyleri simgeler. Çiçekli ve verimli bir bahçe, ilişkilerinin ve projelerinin güzel meyveler verdiğinin işaretidir. Bakımsız ve solmuş bir bahçe, ihmal ettiğin ilişkiler ya da hayallerin sana hatırlatılmasıdır. Bahçede ekip biçiyorsan, sabırla emek verdiğin şeylerin zamanı gelince büyüyeceğine dair güçlü bir inanç var içinde.',
+      'Garden',
+      'A garden in a dream symbolizes nourishment, growth and the things you cultivate with care. A flowering, fertile garden is a sign that your relationships and projects are bearing beautiful fruit. A neglected, withered garden is a reminder of relationships or dreams you have neglected. If you are sowing and tending in the garden, there is a strong belief within you that the things you patiently work for will grow when their time comes.'),
   _Sembol('Balık',
-      'Balık rüyada bereket, şans ve bilinçaltının derinliklerini temsil eder. Berrak suda yüzen balıklar, maddi ve duygusal refahın kapıda olduğunu müjdeler. Ölü ya da hasta balıklar, bir projenin ya da ilişkinin enerji kaybettiğini gösterir. Balık tutmak ise sabırsızlıkla beklediğin bir haberin yakında geleceğini işaret eder.'),
+      'Balık rüyada bereket, şans ve bilinçaltının derinliklerini temsil eder. Berrak suda yüzen balıklar, maddi ve duygusal refahın kapıda olduğunu müjdeler. Ölü ya da hasta balıklar, bir projenin ya da ilişkinin enerji kaybettiğini gösterir. Balık tutmak ise sabırsızlıkla beklediğin bir haberin yakında geleceğini işaret eder.',
+      'Fish',
+      'A fish in a dream represents abundance, luck and the depths of the subconscious. Fish swimming in clear water herald that material and emotional prosperity is at the door. Dead or sick fish show that a project or relationship is losing energy. Catching fish signals that news you have been impatiently awaiting will arrive soon.'),
   _Sembol('Bebek',
-      'Bebek rüyada yeni başlangıçların ve saf umutların simgesidir. Ağlayan bir bebek gördüysen, içinde karşılanmayı bekleyen duygusal ihtiyaçlar var. Gülen bir bebek ise hayatına girecek neşe ve yenilenmeyi müjdeler. Bir bebeğe baktığını gördüysen, sorumluluk almaya hazır olduğunu bilinçaltın sana söylüyor.'),
+      'Bebek rüyada yeni başlangıçların ve saf umutların simgesidir. Ağlayan bir bebek gördüysen, içinde karşılanmayı bekleyen duygusal ihtiyaçlar var. Gülen bir bebek ise hayatına girecek neşe ve yenilenmeyi müjdeler. Bir bebeğe baktığını gördüysen, sorumluluk almaya hazır olduğunu bilinçaltın sana söylüyor.',
+      'Baby',
+      'A baby in a dream is the symbol of new beginnings and pure hopes. If you saw a crying baby, there are emotional needs within you waiting to be met. A laughing baby heralds the joy and renewal about to enter your life. If you saw yourself caring for a baby, your subconscious is telling you that you are ready to take on responsibility.'),
   _Sembol('Bıçak',
-      'Bıçak rüyada keskin kararlar, ayrılıklar ya da gizli korkuların sembolüdür. Bıçak taşıyorsan, kendini korumak için sınırlar çizmek istiyorsun. Bıçakla yaralanırsan, birinin sözleri ya da eylemleri seni derinden etkiliyor demektir. Bıçağı bileyliyorsan, bir sorunu çözmeye kararlı olduğunun işareti.'),
+      'Bıçak rüyada keskin kararlar, ayrılıklar ya da gizli korkuların sembolüdür. Bıçak taşıyorsan, kendini korumak için sınırlar çizmek istiyorsun. Bıçakla yaralanırsan, birinin sözleri ya da eylemleri seni derinden etkiliyor demektir. Bıçağı bileyliyorsan, bir sorunu çözmeye kararlı olduğunun işareti.',
+      'Knife',
+      'A knife in a dream is the symbol of sharp decisions, separations or hidden fears. If you are carrying a knife, you want to draw boundaries to protect yourself. If you are wounded by a knife, it means someone\'s words or actions are affecting you deeply. If you are sharpening the knife, it is a sign that you are determined to solve a problem.'),
   _Sembol('Böcek',
-      'Böcekler rüyada genellikle küçük ama rahatsız edici kaygıları simgeler. Üstüne böcek üşüşüyorsa, hayatında seni kemiren ufak sorunlar birikerek büyüyor. Tek bir böcek görüyorsan, dikkatini gerektiren önemsiz sandığın bir detay var. Böcekleri eziyorsan, bu endişelerin üstesinden gelme gücüne sahipsin.'),
+      'Böcekler rüyada genellikle küçük ama rahatsız edici kaygıları simgeler. Üstüne böcek üşüşüyorsa, hayatında seni kemiren ufak sorunlar birikerek büyüyor. Tek bir böcek görüyorsan, dikkatini gerektiren önemsiz sandığın bir detay var. Böcekleri eziyorsan, bu endişelerin üstesinden gelme gücüne sahipsin.',
+      'Insect',
+      'Insects in a dream usually symbolize small but irritating worries. If insects are swarming over you, the little problems gnawing at you in life are accumulating and growing. If you see a single insect, there is a detail you thought trivial that requires your attention. If you are crushing the insects, you have the power to overcome these worries.'),
   _Sembol('Bulut',
-      'Bulutlar rüyada zihnindeki belirsizliğin yansımasıdır. Koyu ve fırtınalı bulutlar, yaklaşan zorlukları haber verir; ama her fırtınanın ardından güneş çıktığını unutma. Beyaz ve pamuk gibi bulutlar, huzur ve özgürlük hissini simgeler. Bulutların arasından parlayan ışık, karanlık bir dönemin sona erdiğine işaret eder.'),
+      'Bulutlar rüyada zihnindeki belirsizliğin yansımasıdır. Koyu ve fırtınalı bulutlar, yaklaşan zorlukları haber verir; ama her fırtınanın ardından güneş çıktığını unutma. Beyaz ve pamuk gibi bulutlar, huzur ve özgürlük hissini simgeler. Bulutların arasından parlayan ışık, karanlık bir dönemin sona erdiğine işaret eder.',
+      'Cloud',
+      'Clouds in a dream are the reflection of the uncertainty in your mind. Dark and stormy clouds foretell approaching difficulties; but remember that the sun comes out after every storm. White, cotton-like clouds symbolize a feeling of peace and freedom. Light shining through the clouds signals that a dark period is coming to an end.'),
   _Sembol('Cenaze',
       'Cenaze rüyada ölümü değil, bir dönemin kapandığını ve yenisinin başladığını simgeler. Kimin cenazesini gördüğün önemli — eğer kendi cenazendeysen, büyük bir dönüşüm geçiriyorsun. Ağlayanların çokluğu, bıraktığın iz hakkında düşündüğünü gösterir. Bu rüya seni geçmişi bırakmaya ve yeni bir sayfa açmaya davet ediyor.'),
   _Sembol('Cin',
@@ -240,7 +272,11 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
   List<_Sembol> get _filtrelenmis {
     if (_arama.isEmpty) return _semboller;
     final q = _arama.toLowerCase();
-    return _semboller.where((s) => s.kelime.toLowerCase().contains(q)).toList();
+    return _semboller
+        .where((s) =>
+            s.kelime.toLowerCase().contains(q) ||
+            s.kelimeEn.toLowerCase().contains(q))
+        .toList();
   }
 
   @override
@@ -254,16 +290,17 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
     setState(() => _adim = _RYAdim.analiz);
 
     final sembol  = _secili!;
+    final isEn    = ref.read(localeProvider) == 'en';
     final profile = ref.read(userProfileProvider);
     final vars    = profile.toVariableMap();
-    final metin   = VariableReplacer.replace(sembol.yorum, vars);
+    final metin   = VariableReplacer.replace(sembol.yorumFor(isEn), vars);
 
     // Inbox'a 4 dakika kilitli kaydet
     final now     = DateTime.now();
     final unlock  = now.add(const Duration(minutes: 4));
     final item = InboxItem(
       id: _uuid.v4(),
-      title: ref.read(l10nProvider).dreamInboxTitle(sembol.kelime),
+      title: ref.read(l10nProvider).dreamInboxTitle(sembol.kelimeFor(isEn)),
       text: metin,
       date: now.toIso8601String(),
       fortuneTypeKey: 'dream',
@@ -456,7 +493,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                           children: [
                             Expanded(
                               child: Text(
-                                sembol.kelime,
+                                sembol.kelimeFor(s.isEn),
                                 style: TextStyle(
                                   color: secili
                                       ? const Color(0xFFDDD6FE)

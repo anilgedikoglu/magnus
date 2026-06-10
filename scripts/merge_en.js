@@ -198,6 +198,7 @@ const MAPPINGS = {
   kahve_gelisme:    { json: 'kahve_gelisme.json',    arrayKey: 'gelismeler',   folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
   kahve_sonuc:      { json: 'kahve_sonuc.json',      arrayKey: 'sonuclar',     folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
   kahve_ugurlama:   { json: 'kahve_ugurlama.json',   arrayKey: 'ugurlamalar',  folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
+  astrotakvim:   { json: 'astrotakvim.json',    arrayKeys: ['transit_tarihli','transit','aktivite','saglik','guzellik','maneviyat'], folder: ODB + '/AnaMenu2/AstroTakvim', recursive: true },
 };
 
 function main() {

@@ -112,7 +112,9 @@ class _AstroEntry {
   final int? ay;
   final int? yil;
   final String metin;
-  const _AstroEntry({this.gun, this.ay, this.yil, required this.metin});
+  final String metinEn;
+  const _AstroEntry({this.gun, this.ay, this.yil, required this.metin, this.metinEn = ''});
+  String metinFor(bool isEn) => (isEn && metinEn.isNotEmpty) ? metinEn : metin;
 }
 
 // ─── Sekme konfigürasyonu ─────────────────────────────────────────────────────
@@ -254,6 +256,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
           ay:    m['ay']   as int?,
           yil:   m['yil']  as int?,
           metin: m['metin'] as String,
+          metinEn: (m['metin_en'] as String?) ?? '',
         );
       }).toList();
       parsed[key] = list;
@@ -276,21 +279,25 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
     if (!_dataLoaded) return '';
     final tab = _tabs[_activeTab];
 
+    final isEn = ref.read(localeProvider) == 'en';
+
     // Transit: önce tarihli havuza bak
     if (tab.extraKey != null) {
       final dated = _data[tab.extraKey] ?? [];
       for (final e in dated) {
         if (e.gun == _selectedDay && e.ay == _currentMonth) {
-          return _applyVars(e.metin);
+          return _applyVars(e.metinFor(isEn));
         }
       }
     }
 
     // Genel havuz: (day-1) % count ile deterministik seçim
     final pool = _data[tab.dataKey] ?? [];
-    if (pool.isEmpty) return 'Bu kategori için içerik yakında ekleniyor.';
+    if (pool.isEmpty) {
+      return isEn ? 'Content for this category is coming soon.' : 'Bu kategori için içerik yakında ekleniyor.';
+    }
     final idx = (_selectedDay - 1) % pool.length;
-    return _applyVars(pool[idx].metin);
+    return _applyVars(pool[idx].metinFor(isEn));
   }
 
   String _applyVars(String text) {

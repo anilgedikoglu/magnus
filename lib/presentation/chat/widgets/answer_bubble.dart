@@ -248,13 +248,13 @@ class _AnswerButtonState extends State<_AnswerButton>
   }
 }
 
-class _LegalButton extends StatelessWidget {
+class _LegalButton extends ConsumerWidget {
   final VoidCallback onTap;
 
   const _LegalButton({required this.onTap});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return GestureDetector(
       onTap: onTap,
       child: Container(

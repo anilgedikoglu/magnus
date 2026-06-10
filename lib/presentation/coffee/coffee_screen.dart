@@ -176,11 +176,12 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
 
   // ── Konu seçim ekranı (2x2 grid) ────────────────────────────────────────
   Widget _buildKonuSecim(AppStrings s) {
+    // (key, ikonDosya, etiket)
     final konular = [
-      ('genel',   '🔮', s.general),
-      ('ask',     '❤️', s.love),
-      ('kariyer', '💼', s.career),
-      ('saglik',  '🌿', s.health),
+      ('genel',   'assets/images/fal_konu/fgenel.png',   s.general),
+      ('ask',     'assets/images/fal_konu/fask.png',     s.love),
+      ('kariyer', 'assets/images/fal_konu/fkariyer.png', s.career),
+      ('saglik',  'assets/images/fal_konu/fsaglik.png',  s.health),
     ];
 
     return Padding(
@@ -190,7 +191,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
         children: [
           Text(
             s.fortuneSubject,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 20,
               fontWeight: FontWeight.w600,
@@ -201,41 +202,55 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
             crossAxisCount: 2,
             shrinkWrap: true,
             crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            childAspectRatio: 1.4,
+            mainAxisSpacing: 8,
+            // Kare kutu + alt etiket (~22px) için oran
+            childAspectRatio: 0.85,
             physics: const NeverScrollableScrollPhysics(),
             children: konular.map((k) {
-              final (key, emoji, label) = k;
+              final (key, iconPath, label) = k;
               return GestureDetector(
                 onTap: () => setState(() => _falKonusu = key),
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Color(0xFF1A0A2E), Color(0xFF2D1255)],
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: const Color(0xFF9B3FCC),
-                      width: 1.5,
-                    ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(emoji, style: const TextStyle(fontSize: 28)),
-                      const SizedBox(height: 8),
-                      Text(
-                        label,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
+                child: Column(
+                  children: [
+                    // Kare kutu
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [Color(0xFF1A0A2E), Color(0xFF2D1255)],
+                          ),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: const Color(0xFF9B3FCC),
+                            width: 1.5,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(14),
+                          child: Image.asset(
+                            iconPath,
+                            fit: BoxFit.contain,
+                            filterQuality: FilterQuality.high,
+                          ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    // Etiket — kutunun altında
+                    const SizedBox(height: 8),
+                    Text(
+                      label,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        shadows: [
+                          Shadow(color: Colors.black54, blurRadius: 4),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               );
             }).toList(),

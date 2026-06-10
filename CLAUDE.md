@@ -1134,13 +1134,14 @@ void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
 
 | Sayfa | URL |
 |---|---|
-| Privacy Policy | `https://anilgedikoglu.github.io/magnus/privacy-policy.html` |
-| Delete Account | `https://anilgedikoglu.github.io/magnus/delete-account.html` |
-| Support URL | `https://anilgedikoglu.github.io/magnus/support.html` |
-| Marketing URL | `https://anilgedikoglu.github.io/magnus/` |
+| Privacy Policy | `https://futurastictech.github.io/magnus/privacy-policy.html` |
+| Delete Account | `https://futurastictech.github.io/magnus/delete-account.html` |
+| Support URL | `https://futurastictech.github.io/magnus/support.html` |
+| Marketing URL | `https://futurastictech.github.io/magnus/` |
 
-Kaynak repo: `https://github.com/anilgedikoglu/magnus` → `docs/` klasörü
+Kaynak repo: `https://github.com/futurastictech/futurastictech.github.io` → `magnus/` klasörü
 Tüm sayfalar TR/EN dil seçimi içeriyor (tarayıcı diline göre otomatik).
+**NOT:** `anilgedikoglu.github.io/magnus/` adresindeki eski sayfalar artık kullanılmıyor.
 
 ---
 

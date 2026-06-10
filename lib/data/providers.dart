@@ -60,6 +60,26 @@ final l10nProvider = Provider<AppStrings>((ref) {
   return AppStrings(locale);
 });
 
+// ─── Language Picked (dil seçim ekranı gösterildi mi) ────────────────────────
+
+class _LanguagePickedNotifier extends StateNotifier<bool> {
+  final SharedPreferences _prefs;
+  static const _key = 'language_picked';
+
+  _LanguagePickedNotifier(this._prefs) : super(_prefs.getBool(_key) ?? false);
+
+  Future<void> markPicked() async {
+    await _prefs.setBool(_key, true);
+    state = true;
+  }
+}
+
+final languagePickedProvider =
+    StateNotifierProvider<_LanguagePickedNotifier, bool>((ref) {
+  final prefs = ref.watch(sharedPrefsProvider);
+  return _LanguagePickedNotifier(prefs);
+});
+
 final storageServiceProvider = Provider<StorageService>((ref) {
   return StorageService(ref.watch(sharedPrefsProvider));
 });

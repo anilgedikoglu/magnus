@@ -43,6 +43,7 @@ import 'presentation/kadercarki/kadercarki_screen.dart';
 import 'presentation/askuyumu/askuyumu_screen.dart';
 import 'presentation/iching/iching_screen.dart';
 import 'presentation/japonfali/japonfali_screen.dart';
+import 'presentation/language/language_pick_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 final _homeKey = GlobalKey<NavigatorState>(debugLabel: 'home');
@@ -50,23 +51,46 @@ final _inboxKey = GlobalKey<NavigatorState>(debugLabel: 'inbox');
 
 final routerProvider = Provider<GoRouter>((ref) {
   final isOnboarded = ref.watch(onboardingCompleteProvider);
+  final languagePicked = ref.watch(languagePickedProvider);
+
+  String initialLocation;
+  if (!languagePicked) {
+    initialLocation = '/language';
+  } else if (!isOnboarded) {
+    initialLocation = '/onboarding';
+  } else {
+    initialLocation = '/home';
+  }
 
   return GoRouter(
     navigatorKey: _rootKey,
-    initialLocation: isOnboarded ? '/home' : '/onboarding',
+    initialLocation: initialLocation,
     redirect: (context, state) {
       final onboarded = ref.read(onboardingCompleteProvider);
+      final picked = ref.read(languagePickedProvider);
       final path = state.uri.path;
 
-      // If not onboarded, only allow /onboarding
-      if (!onboarded && path != '/onboarding') return '/onboarding';
+      // Language not picked yet → only allow /language
+      if (!picked && path != '/language') return '/language';
 
-      // If already onboarded, redirect away from onboarding
-      if (onboarded && path == '/onboarding') return '/home';
+      // Language picked but not onboarded → only allow /onboarding
+      if (picked && !onboarded && path != '/onboarding') return '/onboarding';
+
+      // Already onboarded → redirect away from onboarding/language
+      if (onboarded && (path == '/onboarding' || path == '/language')) {
+        return '/home';
+      }
 
       return null;
     },
     routes: [
+      // ── Language selection (first launch only) ───────────────────────────
+      GoRoute(
+        path: '/language',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const LanguagePickScreen(),
+      ),
+
       // ── Onboarding (standalone, no bottom nav) ───────────────────────────
       GoRoute(
         path: '/onboarding',

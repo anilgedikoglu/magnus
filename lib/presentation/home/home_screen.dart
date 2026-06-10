@@ -712,34 +712,39 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   // ─── Sayfa 1 ──────────────────────────────────────────────────────────────
-  List<_MenuItem> _page1Items(BuildContext context) => [
-        _MenuItem('Kahve Falı', 'assets/images/menu/ozelfal.png',
+  List<_MenuItem> _page1Items(BuildContext context) {
+    final s = ref.read(l10nProvider);
+    return [
+        _MenuItem(s.coffeeFortune, 'assets/images/menu/ozelfal.png',
             _remainingCredits['kahve'] ?? 1,
             () => _onFortuneItemTap('kahve', '/coffee')),
-        _MenuItem('Tarot', 'assets/images/menu/tarot.png',
+        _MenuItem(s.tarot, 'assets/images/menu/tarot.png',
             _remainingCredits['tarot'] ?? 1,
             () => _onFortuneItemTap('tarot', '/tarot')),
-        _MenuItem('Astroloji', 'assets/images/astroloji.png',
+        _MenuItem(s.astrology, 'assets/images/astroloji.png',
             -1, () => _pushWithAd('/astroloji')),
-        _MenuItem('Numeroloji', 'assets/images/menu/numeroloji.png',
+        _MenuItem(s.numerology, 'assets/images/menu/numeroloji.png',
             -1,
             () => _onFortuneItemTap('numeroloji', '/numeroloji')),
-        _MenuItem('Durugörü', 'assets/images/menu/durugoru.png',
+        _MenuItem(s.durugoru, 'assets/images/menu/durugoru.png',
             _remainingCredits['durugoru'] ?? 1,
             () => _onFortuneItemTap('durugoru', '/durugoru')),
-        _MenuItem('Yüz Falı', 'assets/images/menu/yuzfali.png', 1,
+        _MenuItem(s.faceFortune, 'assets/images/menu/yuzfali.png', 1,
             () => _pushWithAd('/yuz_fali_kimin')),
-        _MenuItem('El Falı', 'assets/images/menu/elfali.png', 1,
+        _MenuItem(s.palmReading, 'assets/images/menu/elfali.png', 1,
             () => _pushWithAd('/el_fali')),
-        _MenuItem('AstroTakvim', 'assets/images/aytakvimi.png',
+        _MenuItem(s.astroCalendar, 'assets/images/aytakvimi.png',
             -1, () => _pushWithAd('/astrotakvim')),
-        _MenuItem('Biyoritim', 'assets/images/falbg/biyoritim.png',
+        _MenuItem(s.biorhythm, 'assets/images/falbg/biyoritim.png',
             -1, () => _pushWithAd('/biyoritim')),
       ];
+  }
 
   // ─── Sayfa 2 ──────────────────────────────────────────────────────────────
-  List<_MenuItem> _page2Items(BuildContext context) => [
-        _MenuItem('Motivasyon', 'assets/images/motivasyon_yeni.png',
+  List<_MenuItem> _page2Items(BuildContext context) {
+    final s = ref.read(l10nProvider);
+    return [
+        _MenuItem(s.motivation, 'assets/images/motivasyon_yeni.png',
             -1,
             () async {
               if (!mounted) return;
@@ -747,49 +752,53 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               if (!mounted) return;
               await _refreshCredits();
             }),
-        _MenuItem('Dert Ortağı', 'assets/images/menu/dertortagi.png',
+        _MenuItem(s.companion, 'assets/images/menu/dertortagi.png',
             _remainingCredits['dertortagi'] ?? 1,
             () => _onFortuneItemTap('dertortagi', '/dertortagi')),
-        _MenuItem('Olumlama', 'assets/images/olumlama.png',
+        _MenuItem(s.affirmation, 'assets/images/olumlama.png',
             -1,
             () => _onFortuneItemTap('olumlama', '/olumlama')),
-        _MenuItem('Özlü Sözler', 'assets/images/ozlusozler.png',
+        _MenuItem(s.quotes, 'assets/images/ozlusozler.png',
             -1,
             () => _onFortuneItemTap('ozlusoz', '/ozlusoz')),
-        _MenuItem('Acı Gerçekler', 'assets/images/acigercekler.PNG',
+        _MenuItem(s.bitterTruths, 'assets/images/acigercekler.PNG',
             _remainingCredits['acigercekler'] ?? 1,
             () => _onFortuneItemTap('acigercekler', '/acigercekler')),
-        _MenuItem('Kader Kitabı', 'assets/images/tefeulyeni.png',
+        _MenuItem(s.fatebook, 'assets/images/tefeulyeni.png',
             _remainingCredits['kaderkitabi'] ?? 1,
             () => _onFortuneItemTap('kaderkitabi', '/kaderkitabi')),
-        _MenuItem('Kehanet', 'assets/images/menu/kehanet.png', 1,
+        _MenuItem(s.prophecy, 'assets/images/menu/kehanet.png', 1,
             () => _onFortuneItemTap('kehanet', '/kehanet')),
-        _MenuItem('Niyet', 'assets/images/menu/mistikfallar.png', 1,
+        _MenuItem(s.intention, 'assets/images/menu/mistikfallar.png', 1,
             () => _pushWithAd('/niyet')),
-        _MenuItem('Japon Falı', 'assets/images/japonfali.png',
+        _MenuItem(s.japaneseFortune, 'assets/images/japonfali.png',
             _remainingCredits['japonfali'] ?? 1,
             () => _onDailyFalTap('japonfali', '/japonfali')),
       ];
+  }
 
   // ─── Sayfa 3 ──────────────────────────────────────────────────────────────
-  List<_MenuItem> _page3Items(BuildContext context) => [
-        _MenuItem('I-Ching', 'assets/images/ichingikon.png',
+  List<_MenuItem> _page3Items(BuildContext context) {
+    final s = ref.read(l10nProvider);
+    return [
+        _MenuItem(s.iching, 'assets/images/ichingikon.png',
             _remainingCredits['iching'] ?? 1,
             () => _onDailyFalTap('iching', '/iching')),
-        _MenuItem('Aşk Uyumu', 'assets/images/askuyumu.png',
+        _MenuItem(s.loveCompatibility, 'assets/images/askuyumu.png',
             _remainingCredits['askuyumu'] ?? 1,
             () => _onFortuneItemTap('askuyumu', '/ask_uyumu')),
-        _MenuItem('Kader Çarkı', 'assets/images/kadercarkimenu.png',
+        _MenuItem(s.wheelOfFate, 'assets/images/kadercarkimenu.png',
             _remainingCredits['kadercarki'] ?? 1,
             () => _onFortuneItemTap('kadercarki', '/kadercarki')),
-        _MenuItem('Rüya Yorumu', 'assets/images/menu/ruyaozel.png', 1,
+        _MenuItem(s.dreamReading, 'assets/images/menu/ruyaozel.png', 1,
             () => _pushWithAd('/ruya_yorumu')),
-        _MenuItem('Doğum Haritası', 'assets/images/dogum.png',
+        _MenuItem(s.birthChart, 'assets/images/dogum.png',
             1, () => _pushWithAd('/dogumharitasi')),
         // 4 yer tutucu — ikon eklendikçe buralar dolacak
         ...List.generate(4, (_) =>
             _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {})),
       ];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -1037,7 +1046,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       height: 44,
                       child: _BottomBtn(
                         imagePath: 'assets/images/menuleft.png',
-                        label: 'Önceki',
+                        label: ref.read(l10nProvider).prev,
                         onTap: _goPrev,
                         showLabel: false,
                       ),
@@ -1125,7 +1134,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       height: 44,
                       child: _BottomBtn(
                         imagePath: 'assets/images/menuright.png',
-                        label: 'Sonraki',
+                        label: ref.read(l10nProvider).next,
                         onTap: _goNext,
                         showLabel: false,
                       ),
@@ -1444,17 +1453,17 @@ class _MenuCardState extends State<_MenuCard>
                   ),
                 // Yer tutucu — dikey ortada "Yakında..." yazısı
                 if (widget.item.credits < 0)
-                  const Center(
-                    child: Text(
-                      'Yakında...',
-                      style: TextStyle(
+                  Center(
+                    child: Consumer(builder: (ctx, ref, _) => Text(
+                      ref.watch(l10nProvider).soon,
+                      style: const TextStyle(
                         color: Colors.white54,
                         fontSize: 10,
                         fontWeight: FontWeight.w500,
                         letterSpacing: 0.3,
                       ),
                       textAlign: TextAlign.center,
-                    ),
+                    )),
                   ),
               ],
             ),

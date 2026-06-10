@@ -1,10 +1,12 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../data/models/inbox_item.dart';
+import '../../data/providers.dart';
 
 // Kart adı → asset yolu eşleştirmesi (tarot_screen._allCards ile birebir)
 const _tarotAssets = <String, String>{
@@ -351,35 +353,40 @@ class InboxDetailScreen extends StatelessWidget {
   // ─── Geri Git butonu ─────────────────────────────────────────────────────────
 
   Widget _buildBackButton(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.of(context).pop(),
-      child: Container(
-        width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 14),
-        decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.08),
-          borderRadius: BorderRadius.circular(23),
-          border: Border.all(
-            color: Colors.white.withValues(alpha: 0.20),
-            width: 1,
-          ),
-        ),
-        child: const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-            SizedBox(width: 2),
-            Text(
-              'Geri Git',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 15,
-                fontWeight: FontWeight.w500,
+    return Consumer(
+      builder: (ctx, ref, _) {
+        final s = ref.watch(l10nProvider);
+        return GestureDetector(
+          onTap: () => Navigator.of(context).pop(),
+          child: Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 14),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.08),
+              borderRadius: BorderRadius.circular(23),
+              border: Border.all(
+                color: Colors.white.withValues(alpha: 0.20),
+                width: 1,
               ),
             ),
-          ],
-        ),
-      ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                const SizedBox(width: 2),
+                Text(
+                  s.backButton,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 
@@ -398,15 +405,15 @@ class InboxDetailScreen extends StatelessWidget {
             errorBuilder: (_, __, ___) => const Text('☯', style: TextStyle(fontSize: 56, color: Color(0xFFD4AF37))),
           ),
           const SizedBox(height: 8),
-          Text(
-            'I-CHING',
+          Consumer(builder: (ctx, ref, _) => Text(
+            ref.watch(l10nProvider).ichingTitle,
             style: TextStyle(
               color: const Color(0xFFD4AF37).withValues(alpha: 0.9),
               fontSize: 13,
               fontWeight: FontWeight.w600,
               letterSpacing: 4,
             ),
-          ),
+          )),
           const SizedBox(height: 6),
           Text(
             _formatDate(item.date),
@@ -504,15 +511,15 @@ class InboxDetailScreen extends StatelessWidget {
             errorBuilder: (_, __, ___) => const Text('⛩', style: TextStyle(fontSize: 52, color: Color(0xFFFF4466))),
           ),
           const SizedBox(height: 8),
-          Text(
-            'JAPON FALI',
+          Consumer(builder: (ctx, ref, _) => Text(
+            ref.watch(l10nProvider).japonFaliTitle,
             style: TextStyle(
               color: const Color(0xFFFF4466).withValues(alpha: 0.9),
               fontSize: 13,
               fontWeight: FontWeight.w600,
               letterSpacing: 4,
             ),
-          ),
+          )),
           const SizedBox(height: 6),
           Text(
             _formatDate(item.date),
@@ -614,15 +621,15 @@ class InboxDetailScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            'RÜYA YORUMU',
+          Consumer(builder: (ctx, ref, _) => Text(
+            ref.watch(l10nProvider).dreamTitle,
             style: TextStyle(
               color: const Color(0xFFA78BFA).withValues(alpha: 0.9),
               fontSize: 13,
               fontWeight: FontWeight.w600,
               letterSpacing: 3,
             ),
-          ),
+          )),
           const SizedBox(height: 6),
           Text(
             _formatDate(item.date),

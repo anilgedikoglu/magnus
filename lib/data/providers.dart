@@ -11,10 +11,13 @@
 //                               tarot_bugun_tarih set edilir
 //   fortuneServiceProvider    → AI fal servisi (OpenAI/Gemini)
 //   onboardingCompleteProvider → bool, onboarding tamamlandı mı
+//   localeProvider            → String ('tr' veya 'en'), dil tercihi
+//   l10nProvider              → AppStrings, localize edilmiş string'ler
 //
 // Kullanım örneği:
 //   final profile = ref.read(userProfileProvider);
 //   await ref.read(userProfileProvider.notifier).save(profile.copyWith(...));
+//   final s = ref.watch(l10nProvider);  // localization
 // ─────────────────────────────────────────────────────────────────────────────
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,11 +26,38 @@ import 'models/inbox_item.dart';
 import 'services/storage_service.dart';
 import 'services/fortune_service.dart';
 import 'services/conversation_loader.dart';
+import '../core/l10n/app_strings.dart';
 
 // ─── Infrastructure ───────────────────────────────────────────────────────────
 
 final sharedPrefsProvider = Provider<SharedPreferences>((ref) {
   throw UnimplementedError('Override in ProviderScope');
+});
+
+// ─── Locale / L10n ───────────────────────────────────────────────────────────
+
+class _LocaleNotifier extends StateNotifier<String> {
+  final SharedPreferences _prefs;
+  static const _key = 'app_locale';
+
+  _LocaleNotifier(this._prefs) : super(_prefs.getString(_key) ?? 'tr');
+
+  Future<void> setLocale(String locale) async {
+    await _prefs.setString(_key, locale);
+    state = locale;
+  }
+
+  bool get isEn => state == 'en';
+}
+
+final localeProvider = StateNotifierProvider<_LocaleNotifier, String>((ref) {
+  final prefs = ref.watch(sharedPrefsProvider);
+  return _LocaleNotifier(prefs);
+});
+
+final l10nProvider = Provider<AppStrings>((ref) {
+  final locale = ref.watch(localeProvider);
+  return AppStrings(locale);
 });
 
 final storageServiceProvider = Provider<StorageService>((ref) {

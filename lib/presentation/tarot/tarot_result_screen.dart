@@ -12,6 +12,7 @@ class TarotResultScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
     final items = ref.watch(inboxProvider);
     final item = items.where((i) => i.id == inboxItemId).firstOrNull;
 
@@ -26,7 +27,7 @@ class TarotResultScreen extends ConsumerWidget {
       backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.navBarBackground,
-        title: const Text('Tarot Yorumun'),
+        title: Text(s.cardMeaning),
         leading: IconButton(
           icon: const Icon(Icons.close_rounded),
           onPressed: () => context.go('/home'),
@@ -35,7 +36,7 @@ class TarotResultScreen extends ConsumerWidget {
           TextButton(
             onPressed: () => context.go('/inbox'),
             child: Text(
-              'Gelen Kutusu',
+              s.inbox,
               style: AppTextStyles.inboxMeta.copyWith(
                 color: AppColors.navBarActive,
               ),
@@ -108,7 +109,7 @@ class TarotResultScreen extends ConsumerWidget {
                   ),
                   child: Center(
                     child: Text(
-                      'Ana Menüye Dön',
+                      s.mainMenuBtn,
                       style: AppTextStyles.answerText.copyWith(
                         color: AppColors.textSecondary,
                         fontSize: 15,

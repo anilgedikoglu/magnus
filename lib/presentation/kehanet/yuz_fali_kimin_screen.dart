@@ -3,8 +3,10 @@
 // Günde 1 hak — SharedPreferences ile kontrol edilir.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../data/providers.dart';
 
 class YuzFaliKiminScreen extends StatefulWidget {
   const YuzFaliKiminScreen({super.key});
@@ -51,15 +53,17 @@ class _YuzFaliKiminScreenState extends State<YuzFaliKiminScreen> {
                   icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                   onPressed: () => context.pop(),
                 ),
-                const Expanded(
-                  child: Text(
-                    'YÜZ FALI',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.2,
+                Expanded(
+                  child: Consumer(
+                    builder: (ctx, ref, _) => Text(
+                      ref.watch(l10nProvider).faceFortuneTilte,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2,
+                      ),
                     ),
                   ),
                 ),
@@ -91,16 +95,18 @@ class _YuzFaliKiminScreenState extends State<YuzFaliKiminScreen> {
                       color: Colors.white.withValues(alpha: 0.25),
                     ),
                   ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                      SizedBox(width: 2),
-                      Text(
-                        'Geri Git',
-                        style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500),
-                      ),
-                    ],
+                  child: Consumer(
+                    builder: (ctx, ref, _) => Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                        const SizedBox(width: 2),
+                        Text(
+                          ref.watch(l10nProvider).backButton,
+                          style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

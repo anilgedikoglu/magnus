@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../core/l10n/app_strings.dart';
+import '../../../data/providers.dart';
 
 const _legalText = '''MAGNUS UYGULAMASI – YASAL BİLGİLENDİRME VE SORUMLULUK REDDİ
 
@@ -76,11 +79,12 @@ Uygulamayı kullanmaya devam edilmesi, bu şartların tamamının kesin olarak k
 
 © Magnus – Tüm hakları saklıdır.''';
 
-class LegalDisclosureScreen extends StatelessWidget {
+class LegalDisclosureScreen extends ConsumerWidget {
   const LegalDisclosureScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -90,7 +94,7 @@ class LegalDisclosureScreen extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(false),
         ),
         title: Text(
-          'Yasal Bilgilendirme',
+          s.legalDisclosure,
           style: GoogleFonts.cinzel(
             fontSize: 16,
             fontWeight: FontWeight.w600,
@@ -114,13 +118,13 @@ class LegalDisclosureScreen extends StatelessWidget {
               ),
             ),
           ),
-          _buildApproveButton(context),
+          _buildApproveButton(context, s),
         ],
       ),
     );
   }
 
-  Widget _buildApproveButton(BuildContext context) {
+  Widget _buildApproveButton(BuildContext context, AppStrings s) {
     return Container(
       color: AppColors.navBarBackground,
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
@@ -140,7 +144,7 @@ class LegalDisclosureScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(28),
             ),
             child: Text(
-              'Okudum, onaylıyorum',
+              s.readAndApprove,
               textAlign: TextAlign.center,
               style: AppTextStyles.answerText.copyWith(
                 fontWeight: FontWeight.w700,

@@ -170,7 +170,7 @@ class _JaponFaliScreenState extends ConsumerState<JaponFaliScreen> {
                       Expanded(
                         child: Center(
                           child: Text(
-                            'JAPON FALI',
+                            ref.watch(l10nProvider).japonFaliTitle,
                             style: GoogleFonts.cinzel(
                               fontSize: 17,
                               fontWeight: FontWeight.bold,

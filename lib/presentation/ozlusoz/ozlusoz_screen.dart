@@ -233,7 +233,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
                 color: Colors.white, size: 18),
           ),
         ),
-        Expanded(child: Center(child: Text('ÖZLÜ SÖZLER',
+        Expanded(child: Center(child: Text(ref.watch(l10nProvider).quotesTitle,
           style: GoogleFonts.cinzel(fontSize: 20, fontWeight: FontWeight.bold,
             color: Colors.white, letterSpacing: 5,
             shadows: const [Shadow(color: Color(0xAABB88FF), blurRadius: 14)])))),

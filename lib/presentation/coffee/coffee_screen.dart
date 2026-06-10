@@ -21,6 +21,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
+import '../../core/l10n/app_strings.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 
@@ -113,26 +114,27 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final s = ref.watch(l10nProvider);
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: Column(
           children: [
-            _buildTopBar(context),
+            _buildTopBar(context, s),
             // ── Konu seçilmemişse konu ekranını göster ──────────────────
             if (_falKonusu == null) ...[
-              Expanded(child: _buildKonuSecim()),
+              Expanded(child: _buildKonuSecim(s)),
             ] else ...[
             Expanded(
               child: _mode == _InputMode.none
                   ? Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        _buildSubtitle(),
+                        _buildSubtitle(s),
                         const SizedBox(height: 24),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: _buildOptionRow(context),
+                          child: _buildOptionRow(context, s),
                         ),
                       ],
                     )
@@ -140,9 +142,9 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                       child: Column(
                         children: [
-                          _buildSubtitle(),
+                          _buildSubtitle(s),
                           const SizedBox(height: 24),
-                          _buildOptionRow(context),
+                          _buildOptionRow(context, s),
                           if (_mode == _InputMode.fotoCek ||
                               _mode == _InputMode.dosyadan) ...[
                             const SizedBox(height: 28),
@@ -173,12 +175,12 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   }
 
   // ── Konu seçim ekranı (2x2 grid) ────────────────────────────────────────
-  Widget _buildKonuSecim() {
-    const konular = [
-      ('genel',   '🔮', 'Genel'),
-      ('ask',     '❤️', 'Aşk'),
-      ('kariyer', '💼', 'Kariyer'),
-      ('saglik',  '🌿', 'Sağlık'),
+  Widget _buildKonuSecim(AppStrings s) {
+    final konular = [
+      ('genel',   '🔮', s.general),
+      ('ask',     '❤️', s.love),
+      ('kariyer', '💼', s.career),
+      ('saglik',  '🌿', s.health),
     ];
 
     return Padding(
@@ -186,8 +188,8 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'Fal konusu ne olsun?',
+          Text(
+            s.fortuneSubject,
             style: TextStyle(
               color: Colors.white,
               fontSize: 20,
@@ -243,7 +245,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     );
   }
 
-  Widget _buildTopBar(BuildContext context) {
+  Widget _buildTopBar(BuildContext context, AppStrings s) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
       child: Row(
@@ -253,9 +255,9 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
                 color: Colors.white70, size: 20),
             onPressed: () => context.pop(),
           ),
-          const Expanded(
+          Expanded(
             child: Text(
-              'KAHVE FALI',
+              s.coffeeTitle,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
@@ -271,15 +273,15 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     );
   }
 
-  Widget _buildSubtitle() {
-    return const Text(
-      'Fincan görsellerini nasıl iletmek istersin?',
+  Widget _buildSubtitle(AppStrings s) {
+    return Text(
+      s.howToSend,
       textAlign: TextAlign.center,
       style: TextStyle(color: Colors.white54, fontSize: 14),
     );
   }
 
-  Widget _buildOptionRow(BuildContext context) {
+  Widget _buildOptionRow(BuildContext context, AppStrings s) {
     final screenW = MediaQuery.of(context).size.width;
     // Her buton ekranın ~%28'i genişliğinde, yüksekliği de aynı
     final btnSize = (screenW - 40 - 24) / 3; // 40=padding, 24=2 boşluk
@@ -288,21 +290,21 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       children: [
         _OptionButton(
           imageAsset: 'assets/images/camera.png',
-          label: 'Foto Çek',
+          label: s.takePhoto,
           size: btnSize,
           selected: _mode == _InputMode.fotoCek,
           onTap: () => _selectMode(_InputMode.fotoCek),
         ),
         _OptionButton(
           imageAsset: 'assets/images/file.png',
-          label: 'Dosyadan',
+          label: s.fromFile,
           size: btnSize,
           selected: _mode == _InputMode.dosyadan,
           onTap: () => _selectMode(_InputMode.dosyadan),
         ),
         _OptionButton(
           imageAsset: 'assets/images/ozelfal.png',
-          label: 'Yerime İç',
+          label: s.drinkForMe,
           size: btnSize,
           selected: _mode == _InputMode.yerimeIc,
           onTap: () => _selectMode(_InputMode.yerimeIc),
@@ -403,14 +405,15 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   }
 
   Widget _buildSendingIndicator() {
-    return const Column(
+    final s = ref.read(l10nProvider);
+    return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        _PulsingHourglass(),
-        SizedBox(height: 12),
+        const _PulsingHourglass(),
+        const SizedBox(height: 12),
         Text(
-          'Falın gönderiliyor...',
-          style: TextStyle(
+          s.sending,
+          style: const TextStyle(
             color: Color(0xFFB8E0FF),
             fontSize: 15,
             fontWeight: FontWeight.w500,
@@ -437,6 +440,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   }
 
   Widget _buildGeriGitButton() {
+    final s = ref.read(l10nProvider);
     return GestureDetector(
       onTap: () => context.pop(),
       child: Container(
@@ -446,15 +450,15 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
           borderRadius: BorderRadius.circular(27),
           border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
         ),
-        child: const Center(
+        child: Center(
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              SizedBox(width: 2),
+              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+              const SizedBox(width: 2),
               Text(
-                'Geri Git',
-                style: TextStyle(
+                s.backButton,
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
@@ -468,17 +472,18 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   }
 
   Widget _buildFalGonderButton() {
+    final s = ref.read(l10nProvider);
     final isPhotoMode = _mode == _InputMode.fotoCek ||
         _mode == _InputMode.dosyadan;
     final String label;
     if (_kontrolEdiliyor) {
-      label = 'Kontrol ediliyor...';
+      label = s.checkingPhotos;
     } else if (_canSend) {
-      label = 'Falımı Gönder ✨';
+      label = s.sendFortune;
     } else if (isPhotoMode) {
       label = '$_filledCount/3 Fotoğraf';
     } else {
-      label = 'Falımı Gönder ✨';
+      label = s.sendFortune;
     }
     final bool active = _canSend && !_kontrolEdiliyor;
 
@@ -559,8 +564,8 @@ class _SendingOverlayState extends State<_SendingOverlay> {
         children: [
           _PulsingHourglass(),
           SizedBox(height: 16),
-          Text(
-            'Falın gönderiliyor...',
+          const Text(
+            'Your reading is being sent...',
             style: TextStyle(
               color: Color(0xFFB8E0FF),
               fontSize: 16,

@@ -230,6 +230,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
     final entry = _bugunEntry;
     if (entry == null) return const SizedBox.shrink();
 
+    final s       = ref.watch(l10nProvider);
     final profile = ref.read(userProfileProvider);
     final text    = VariableReplacer.replace(entry.metin, profile.toVariableMap());
 
@@ -260,7 +261,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
               Expanded(
                 child: Center(
                   child: Text(
-                    'MOTİVASYON',
+                    s.motivationTitle,
                     style: GoogleFonts.cinzel(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -337,7 +338,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                     height: 52,
                     child: Center(
                       child: Text(
-                        'Gelen Kutusu\'na kaydedildi...',
+                        s.savedToInbox,
                         style: TextStyle(
                           color: const Color(0xFFBB88FF).withValues(alpha: 0.9),
                           fontSize: 14,
@@ -372,15 +373,15 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                                   width: 1,
                                 ),
                               ),
-                              child: const Center(
+                              child: Center(
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(Icons.chevron_left_rounded,
+                                    const Icon(Icons.chevron_left_rounded,
                                         color: Colors.white, size: 20),
-                                    SizedBox(width: 2),
+                                    const SizedBox(width: 2),
                                     Text(
-                                      'Geri Git',
+                                      s.backButton,
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 15,
@@ -415,10 +416,10 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                                   ),
                                 ],
                               ),
-                              child: const Center(
+                              child: Center(
                                 child: Text(
-                                  'Kaydet',
-                                  style: TextStyle(
+                                  s.save,
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.w600,

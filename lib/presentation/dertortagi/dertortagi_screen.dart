@@ -564,11 +564,11 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
               child: Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white70, size: 20),
             ),
           ),
-          const Expanded(
+          Expanded(
             child: Text(
-              'DERT ORTAĞI',
+              ref.watch(l10nProvider).companionTitle,
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16, letterSpacing: 1.2),
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16, letterSpacing: 1.2),
             ),
           ),
           const SizedBox(width: 44),
@@ -590,14 +590,14 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
             borderRadius: BorderRadius.circular(23),
             border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
           ),
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              SizedBox(width: 2),
+              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+              const SizedBox(width: 2),
               Text(
-                'Geri Git',
-                style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500),
+                ref.read(l10nProvider).backButton,
+                style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500),
               ),
             ],
           ),

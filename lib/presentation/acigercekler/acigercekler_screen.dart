@@ -197,10 +197,10 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
               size: 20,
             ),
           ),
-          const Expanded(
+          Expanded(
             child: Text(
-              'ACI GERÇEKLER',
-              style: TextStyle(
+              ref.watch(l10nProvider).bitterTruthsTitle,
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 16,
                 fontWeight: FontWeight.bold,

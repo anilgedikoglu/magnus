@@ -373,12 +373,15 @@ class MagnusApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
+    final locale = ref.watch(localeProvider);
 
     return MaterialApp.router(
       title: 'Magnus',
       theme: AppTheme.dark,
       routerConfig: router,
       debugShowCheckedModeBanner: false,
+      locale: Locale(locale),
+      supportedLocales: const [Locale('tr'), Locale('en')],
     );
   }
 }

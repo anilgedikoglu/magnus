@@ -529,10 +529,10 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
                       width: 1.5,
                     ),
                   ),
-                  child: const Center(
+                  child: Center(
                     child: Text(
-                      'Geçirdim, hazırım...',
-                      style: TextStyle(
+                      ref.read(l10nProvider).tamuaReady,
+                      style: const TextStyle(
                         color: Colors.white, fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),

@@ -174,7 +174,7 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
                       Expanded(
                         child: Center(
                           child: Text(
-                            'I-CHING',
+                            ref.watch(l10nProvider).ichingTitle,
                             style: GoogleFonts.cinzel(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,

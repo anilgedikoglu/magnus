@@ -468,16 +468,16 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                 width: 1,
               ),
             ),
-            child: const Center(
+            child: Center(
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.chevron_left_rounded,
+                  const Icon(Icons.chevron_left_rounded,
                       color: Colors.white, size: 20),
-                  SizedBox(width: 2),
+                  const SizedBox(width: 2),
                   Text(
-                    'Geri Git',
-                    style: TextStyle(
+                    ref.read(l10nProvider).backButton,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,

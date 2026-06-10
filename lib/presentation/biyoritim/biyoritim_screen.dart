@@ -380,7 +380,7 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
           Expanded(
             child: Center(
               child: Text(
-                'BİYORİTİM',
+                ref.watch(l10nProvider).biyoritimTitle,
                 style: GoogleFonts.cinzel(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -413,9 +413,9 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
         const SizedBox(height: 10),
 
         // B2 — Biyoritim çubukları
-        _buildBarCard('Duygusal',    r.duygusalPct,    r.duygusalMetin,    const Color(0xFFFF4444)),
-        _buildBarCard('Fiziksel',    r.fizikselPct,    r.fizikselMetin,    const Color(0xFF4488FF)),
-        _buildBarCard('Entelektüel', r.entelektuelPct, r.entelektuelMetin, const Color(0xFF44DD66)),
+        _buildBarCard(ref.read(l10nProvider).emotional,     r.duygusalPct,    r.duygusalMetin,    const Color(0xFFFF4444)),
+        _buildBarCard(ref.read(l10nProvider).physical,      r.fizikselPct,    r.fizikselMetin,    const Color(0xFF4488FF)),
+        _buildBarCard(ref.read(l10nProvider).intellectual,  r.entelektuelPct, r.entelektuelMetin, const Color(0xFF44DD66)),
 
         // B3 — Şans
         _buildSectionLabel('ŞANS'),
@@ -608,13 +608,13 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
           border: Border.all(
               color: Colors.white.withValues(alpha: 0.25), width: 1.2),
         ),
-        child: const Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-            SizedBox(width: 2),
-            Text('Geri Git',
-              style: TextStyle(color: Colors.white, fontSize: 15,
+            const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+            const SizedBox(width: 2),
+            Text(ref.read(l10nProvider).backButton,
+              style: const TextStyle(color: Colors.white, fontSize: 15,
                   fontWeight: FontWeight.w500)),
           ],
         ),

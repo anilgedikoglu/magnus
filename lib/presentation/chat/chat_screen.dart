@@ -155,7 +155,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   }
 
   Widget _buildTextInput(String action) {
-    final hint = action == 'input_name' ? 'Adını yaz...' : 'Yaşını yaz...';
+    final s = ref.read(l10nProvider);
+    final hint = action == 'input_name' ? s.typeYourName : s.typeYourAge;
     final keyboardType = action == 'input_age'
         ? TextInputType.number
         : TextInputType.name;

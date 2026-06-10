@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/l10n/app_strings.dart';
 import '../../core/services/ad_service.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
@@ -14,18 +15,19 @@ class InboxScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final items = ref.watch(inboxProvider);
+    final s = ref.watch(l10nProvider);
 
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.navBarBackground,
-        title: const Text('GELEN KUTUSU'),
+        title: Text(s.inboxTitle),
         actions: [
           if (items.isNotEmpty)
             TextButton(
               onPressed: () => _confirmClearAll(context, ref),
               child: Text(
-                'Temizle',
+                s.clearAll,
                 style: AppTextStyles.inboxMeta.copyWith(
                   color: AppColors.glowRed.withValues(alpha: 0.8),
                 ),
@@ -44,17 +46,17 @@ class InboxScreen extends ConsumerWidget {
           children: [
             Expanded(
               child: items.isEmpty
-                  ? _buildEmpty()
+                  ? _buildEmpty(s)
                   : _buildList(context, ref, items),
             ),
-            _buildBackButton(context),
+            _buildBackButton(context, s),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildBackButton(BuildContext context) {
+  Widget _buildBackButton(BuildContext context, AppStrings s) {
     return SafeArea(
       top: false,
       child: Padding(
@@ -72,15 +74,15 @@ class InboxScreen extends ConsumerWidget {
                 width: 1.2,
               ),
             ),
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.chevron_left_rounded,
+                const Icon(Icons.chevron_left_rounded,
                     color: Colors.white, size: 20),
-                SizedBox(width: 2),
+                const SizedBox(width: 2),
                 Text(
-                  'Geri Git',
-                  style: TextStyle(
+                  s.backButton,
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 15,
                     fontWeight: FontWeight.w500,
@@ -94,7 +96,7 @@ class InboxScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildEmpty() {
+  Widget _buildEmpty(AppStrings s) {
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -120,12 +122,12 @@ class InboxScreen extends ConsumerWidget {
               ),
               const SizedBox(height: 20),
               Text(
-                'BURALAR ÇOK SESSİZ...',
+                s.inboxEmpty,
                 style: AppTextStyles.title,
               ),
               const SizedBox(height: 8),
               Text(
-                'Okumaya değer bir şey henüz almadın.',
+                s.inboxEmptyDesc,
                 style: AppTextStyles.inboxDescription,
                 textAlign: TextAlign.center,
               ),
@@ -179,26 +181,27 @@ class InboxScreen extends ConsumerWidget {
   }
 
   Future<void> _confirmClearAll(BuildContext context, WidgetRef ref) async {
+    final s = ref.read(l10nProvider);
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: AppColors.backgroundSurface,
-        title: Text('Tüm falları sil?', style: AppTextStyles.inboxTitle),
+        title: Text(s.deleteAllConfirm, style: AppTextStyles.inboxTitle),
         content: Text(
-          'Hazırlanmakta olan fallar korunur, geri kalanlar silinir.',
+          s.deleteAllSubtitle,
           style: AppTextStyles.inboxDescription,
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: Text('İptal',
+            child: Text(s.cancel,
                 style: AppTextStyles.answerText.copyWith(
                   color: AppColors.textMuted,
                 )),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text('Sil',
+            child: Text(s.delete,
                 style: AppTextStyles.answerText.copyWith(
                   color: AppColors.glowRed,
                 )),

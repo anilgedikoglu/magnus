@@ -583,7 +583,7 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
                 const _PulsingHourglass(),
                 const SizedBox(height: 6),
                 Text(
-                  'Yoruma gönderiliyor...',
+                  ref.read(l10nProvider).fortuneSending,
                   style: TextStyle(
                     color: const Color(0xFFB8E0FF).withValues(alpha: 0.7),
                     fontSize: 12,

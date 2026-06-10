@@ -174,10 +174,10 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
                       width: 1.5,
                     ),
                   ),
-                  child: const Center(
+                  child: Center(
                     child: Text(
-                      'Tamam',
-                      style: TextStyle(
+                      ref.read(l10nProvider).ok,
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,

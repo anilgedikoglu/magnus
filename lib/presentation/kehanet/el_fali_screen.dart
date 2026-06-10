@@ -157,11 +157,11 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
                   icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                   onPressed: () => context.pop(),
                 ),
-                const Expanded(
+                Expanded(
                   child: Text(
-                    'EL FALI',
+                    ref.watch(l10nProvider).palmReadingTitle,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -275,12 +275,12 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
                   borderRadius: BorderRadius.circular(23),
                   border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
                 ),
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                    SizedBox(width: 2),
-                    Text('Geri Git', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
+                    const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                    const SizedBox(width: 2),
+                    Text(ref.read(l10nProvider).backButton, style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
                   ],
                 ),
               ),

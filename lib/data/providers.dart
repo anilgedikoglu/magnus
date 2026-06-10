@@ -114,6 +114,7 @@ class UserProfileNotifier extends Notifier<UserProfile> {
   Future<void> completeOnboarding(UserProfile profile) async {
     final completed = UserProfile(
       name: profile.name,
+      lastName: profile.lastName,
       age: profile.age,
       gender: profile.gender,
       job: profile.job,

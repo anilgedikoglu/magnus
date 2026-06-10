@@ -298,6 +298,7 @@ class UserProfile extends HiveObject {
         'planet': planet,
         'profilePicIndex': profilePicIndex,
         'customPhotoPath': customPhotoPath,
+        'lastName': lastName,
       };
 
   factory UserProfile.fromJson(Map<String, dynamic> json) => UserProfile(
@@ -316,6 +317,7 @@ class UserProfile extends HiveObject {
         planet: json['planet'],
         profilePicIndex: json['profilePicIndex'] as int?,
         customPhotoPath: json['customPhotoPath'],
+        lastName: json['lastName'],
       );
 }
 

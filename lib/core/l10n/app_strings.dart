@@ -181,6 +181,11 @@ class AppStrings {
   String get dreamHint         => _s('Rüyanda ne gördün?', 'What did you dream?');
   String get interpret         => _s('Yorumla',            'Interpret');
   String get dreamSending      => _s('Rüyan yorumlanıyor...', 'Your dream is being interpreted...');
+  String dreamWhatDidYouSee(String name) => _s('Rüyanda ne gördün, $name?', 'What did you see in your dream, $name?');
+  String get searchHint        => _s('Ara…',               'Search…');
+  String get noResults         => _s('Sonuç bulunamadı.',  'No results found.');
+  String get dreamEvaluating   => _s('Rüyanı değerlendiriyorum...', 'I am evaluating your dream...');
+  String dreamInboxTitle(String word) => _s('Rüya: $word', 'Dream: $word');
 
   // ── Kehanet Menu ─────────────────────────────────────────────────────────
   String get prophecyTitle     => _s('KEHANET',            'PROPHECY');
@@ -326,4 +331,155 @@ class AppStrings {
 
   // ── Chat Widgets ───────────────────────────────────────────────────────
   String get magnusWakingUp    => _s('Magnus canlanıyor...', 'Magnus is waking up...');
+
+  // ── Ana Menü bildirim balonları (fal gönderildi) ────────────────────────
+  String _withName(String trBody, String enBody, String name) {
+    final n = name.isNotEmpty ? ' $name' : '';
+    return _s('$trBody$n.', '$enBody$n.');
+  }
+  String tarotSentBubble(String name)    => _withName('Tarot falını yorumlamaya başladım', 'I have started interpreting your tarot reading', name);
+  String kahveSentBubble(String name)    => _withName('Kahve falını yorumluyorum', 'I am interpreting your coffee reading', name);
+  String durugoruSentBubble(String name) => _withName('Durugörün hazırlanıyor', 'Your clairvoyance is being prepared', name);
+  String ruyaSentBubble(String name)     => _withName('Rüyanı değerlendirmeye başladım', 'I have started evaluating your dream', name);
+  String ichingSentBubble(String name)   => _withName('I-Ching falın hazırlanıyor', 'Your I-Ching reading is being prepared', name);
+  String japonSentBubble(String name)    => _withName('Japon Falın değerlendiriliyor', 'Your Japanese Fortune is being evaluated', name);
+  String elFaliSentBubble(String name)   => _withName('El falın analiz ediliyor', 'Your palm reading is being analyzed', name);
+  String yuzFaliSentBubble(String name)  => _withName('Yüz falın analiz ediliyor', 'Your face reading is being analyzed', name);
+  String dailyLimitBubble(String fortuneName, String name) {
+    final n = name.isNotEmpty ? ' $name' : '';
+    return _s('Günlük $fortuneName hakkın doldu$n.', 'Your daily $fortuneName limit is used$n.');
+  }
+
+  /// Fal türü anahtarına göre ekran dilinde görünen ad.
+  String fortuneDisplayName(String type) {
+    switch (type) {
+      case 'motivasyon':  return motivation;
+      case 'olumlama':    return affirmation;
+      case 'ozlusoz':     return quotes;
+      case 'tarot':       return tarot;
+      case 'kahve':       return coffeeFortune;
+      case 'astroloji':   return astrology;
+      case 'kaderkitabi': return fatebook;
+      case 'dertortagi':  return companion;
+      case 'acigercekler':return bitterTruths;
+      case 'numeroloji':  return numerology;
+      case 'iching':      return iching;
+      case 'japonfali':   return japaneseFortune;
+      case 'kadercarki':  return wheelOfFate;
+      case 'askuyumu':    return loveCompatibility;
+      default:            return type;
+    }
+  }
+
+  /// Ekrandan 'hazırlanıyor' sinyali gelince gösterilecek mesaj.
+  String hazirlaniyorMessage(String type) {
+    switch (type) {
+      case 'numeroloji': return _s('Numeroloji raporun hazırlanıyor...', 'Your numerology report is being prepared...');
+      default:           return _s('Raporun hazırlanıyor...', 'Your report is being prepared...');
+    }
+  }
+
+  /// Bazı fal türleri için özel günlük-limit mesajı (yoksa null → genel mesaj).
+  String? fortuneLimitMessage(String type) {
+    switch (type) {
+      case 'kaderkitabi': return _s('Kader kitabının bugünkü sayfasını okudun.', "You've read today's page of the book of fate.");
+      case 'dertortagi':  return _s('Bugün yeterince dertleştik.', "We've shared enough troubles today.");
+      case 'acigercekler':return _s('Bugün gerçeklerle yüzleştin.', "You've faced the truths today.");
+      case 'kadercarki':  return _s('Günlük Kader Çarkı hakkın doldu.', 'Your daily Wheel of Fate limit is used.');
+      case 'askuyumu':    return _s('Günlük Aşk Uyumu hakkın doldu.', 'Your daily Love Compatibility limit is used.');
+      default:            return null;
+    }
+  }
+
+  // ── Astroloji terim çevirileri (kayıtlı Türkçe değer → ekran dili) ───────
+  // Profilde burç/gezegen/element vb. Türkçe saklanır; ekranda dile göre çevrilir.
+  static const Map<String, String> _zodiacEn = {
+    'Koç': 'Aries', 'Boğa': 'Taurus', 'İkizler': 'Gemini',
+    'Yengeç': 'Cancer', 'Aslan': 'Leo', 'Başak': 'Virgo',
+    'Terazi': 'Libra', 'Akrep': 'Scorpio', 'Yay': 'Sagittarius',
+    'Oğlak': 'Capricorn', 'Kova': 'Aquarius', 'Balık': 'Pisces',
+  };
+  static const Map<String, String> _planetEn = {
+    'Güneş': 'Sun', 'Ay': 'Moon', 'Merkür': 'Mercury', 'Venüs': 'Venus',
+    'Mars': 'Mars', 'Jüpiter': 'Jupiter', 'Satürn': 'Saturn',
+    'Uranüs': 'Uranus', 'Neptün': 'Neptune', 'Plüton': 'Pluto',
+  };
+  static const Map<String, String> _elementEn = {
+    'Ateş': 'Fire', 'Toprak': 'Earth', 'Hava': 'Air', 'Su': 'Water',
+  };
+  static const Map<String, String> _modalityEn = {
+    'Kardinal': 'Cardinal', 'Sabit': 'Fixed', 'Değişken': 'Mutable',
+  };
+  static const Map<String, String> _polarityEn = {
+    'Maskülen': 'Masculine', 'Feminen': 'Feminine',
+  };
+
+  /// Türkçe burç adını ekran diline çevirir (örn. 'Terazi' → 'Libra').
+  String zodiacName(String? tr) {
+    if (tr == null || tr.isEmpty) return '—';
+    final clean = tr.replaceAll(RegExp(r'[\s♈♉♊♋♌♍♎♏♐♑♒♓]'), '').trim();
+    if (!isEn) return tr;
+    return _zodiacEn[clean] ?? _zodiacEn[tr] ?? tr;
+  }
+
+  String planetName(String? tr) {
+    if (tr == null || tr.isEmpty) return '—';
+    if (!isEn) return tr;
+    return _planetEn[tr.trim()] ?? tr;
+  }
+
+  String elementName(String tr)  => isEn ? (_elementEn[tr]  ?? tr) : tr;
+  String modalityName(String tr) => isEn ? (_modalityEn[tr] ?? tr) : tr;
+  String polarityName(String tr) => isEn ? (_polarityEn[tr] ?? tr) : tr;
+
+  // ── Profil alan etiketleri (anahtar → ekran dili) ───────────────────────
+  // Not: UserProfile.*Label getter'ları Türkçe döner ve VariableReplacer'da
+  // kullanıldığı için değiştirilemez. Ekran gösterimi için bu metotları kullan.
+  String jobLabelOf(String key) {
+    if (!isEn) return _jobTr[key] ?? key;
+    return _jobEn[key] ?? key;
+  }
+
+  String maritalLabelOf(String key) {
+    if (!isEn) return _maritalTr[key] ?? key;
+    return _maritalEn[key] ?? key;
+  }
+
+  String genderLabelOf(String key) {
+    if (!isEn) return _genderTr[key] ?? key;
+    return _genderEn[key] ?? key;
+  }
+
+  static const Map<String, String> _jobTr = {
+    'evhanimi': 'Ev Hanımı', 'calismiyor': 'Çalışmıyor', 'isariyor': 'İş Arıyor',
+    'ogrenci': 'Öğrenci', 'akademisyen': 'Akademisyen', 'kendiisi': 'Kendi İşini Yapıyor',
+    'kamusektoru': 'Kamu Sektörü', 'ozelsektoru': 'Özel Sektör', 'emekli': 'Emekli',
+    'serbest': 'Serbest Meslek', 'issiz': 'İşsiz',
+  };
+  static const Map<String, String> _jobEn = {
+    'evhanimi': 'Homemaker', 'calismiyor': 'Not Working', 'isariyor': 'Job Seeking',
+    'ogrenci': 'Student', 'akademisyen': 'Academic', 'kendiisi': 'Self-Employed',
+    'kamusektoru': 'Public Sector', 'ozelsektoru': 'Private Sector', 'emekli': 'Retired',
+    'serbest': 'Freelance', 'issiz': 'Unemployed',
+  };
+  static const Map<String, String> _maritalTr = {
+    'iliskisi_yok': 'Bekar', 'platonik': 'Platonik', 'iliski_var': 'İlişkisi Var',
+    'flort': 'Flört', 'karisik': 'Karmaşık', 'yeni_ayrilmis': 'Yeni Ayrılmış',
+    'nisanli': 'Nişanlı', 'evli': 'Evli', 'ayri_yasiyor': 'Ayrı Yaşıyor',
+    'bosanmis': 'Boşanmış', 'dul': 'Dul', 'bekar': 'Bekar',
+  };
+  static const Map<String, String> _maritalEn = {
+    'iliskisi_yok': 'Single', 'platonik': 'Platonic', 'iliski_var': 'In a Relationship',
+    'flort': 'Dating', 'karisik': 'Complicated', 'yeni_ayrilmis': 'Recently Separated',
+    'nisanli': 'Engaged', 'evli': 'Married', 'ayri_yasiyor': 'Living Apart',
+    'bosanmis': 'Divorced', 'dul': 'Widowed', 'bekar': 'Single',
+  };
+  static const Map<String, String> _genderTr = {
+    'kadin': 'Kadın', 'erkek': 'Erkek', 'belirtmek_istemiyorum': 'Belirtilmiyor',
+    'lgbt': 'LGBT+',
+  };
+  static const Map<String, String> _genderEn = {
+    'kadin': 'Female', 'erkek': 'Male', 'belirtmek_istemiyorum': 'Not Specified',
+    'lgbt': 'LGBTQ+',
+  };
 }

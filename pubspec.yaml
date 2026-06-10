@@ -10,6 +10,10 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Localization delegates (Material/Cupertino/Widgets — tr & en)
+  flutter_localizations:
+    sdk: flutter
+
   # State management
   flutter_riverpod: ^2.5.1
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'core/constants/app_theme.dart';
@@ -166,7 +167,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const AstrolojiScreen(),
-          backgroundColor: Colors.black,
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
@@ -179,7 +179,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const BiyoritimScreen(),
-          backgroundColor: Colors.black,
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
@@ -192,7 +191,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const DogumHaritasiScreen(),
-          backgroundColor: Colors.black,
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
@@ -205,7 +203,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const KaderKitabiScreen(),
-          backgroundColor: Colors.black,
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
@@ -218,7 +215,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const NumerologiScreen(),
-          backgroundColor: Colors.black,
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
@@ -231,7 +227,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const AstroTakvimScreen(),
-          backgroundColor: Colors.black,
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
@@ -361,7 +356,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const DurugoruScreen(),
-          backgroundColor: Colors.black,
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
@@ -374,7 +368,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const InboxScreen(),
-          backgroundColor: Colors.black,
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => SlideTransition(
             position: Tween<Offset>(
@@ -390,7 +383,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const SettingsScreen(),
-          backgroundColor: Colors.black,
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => SlideTransition(
             position: Tween<Offset>(
@@ -426,6 +418,14 @@ class MagnusApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       locale: Locale(locale),
       supportedLocales: const [Locale('tr'), Locale('en')],
+      // Material/Cupertino/Widgets yerel delegeleri — bunlar olmadan
+      // locale 'tr' iken MaterialLocalizations.of(context) null döner ve
+      // showDialog / TextField / route barrier'ları çöker (beyaz boşluk).
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
     );
   }
 }

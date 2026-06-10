@@ -1636,15 +1636,15 @@ class SettingsScreen extends ConsumerWidget {
                       child: _InfoCard(
                         icon: Icons.favorite_rounded,
                         label: s.maritalStatus,
-                        value: profile.maritalStatusLabel.isNotEmpty
-                            ? profile.maritalStatusLabel
+                        value: profile.maritalStatus.isNotEmpty
+                            ? s.maritalLabelOf(profile.maritalStatus)
                             : '—',
                         onTap: () => _showEditPopup(context, ref,
                           title: s.maritalStatus,
                           icon: Icons.favorite_rounded,
                           fieldType: 'roller',
                           currentValue: profile.maritalStatus,
-                          options: kMaritalOptions.map((o) => (o.key, o.label)).toList(),
+                          options: kMaritalOptions.map((o) => (o.key, s.maritalLabelOf(o.key))).toList(),
                           onSave: (v) async {
                             final p = ref.read(userProfileProvider);
                             await ref.read(userProfileProvider.notifier).save(
@@ -1680,13 +1680,13 @@ class SettingsScreen extends ConsumerWidget {
                       child: _InfoCard(
                         icon: Icons.person_rounded,
                         label: s.gender,
-                        value: profile.genderLabel.isNotEmpty ? profile.genderLabel : '—',
+                        value: profile.gender.isNotEmpty ? s.genderLabelOf(profile.gender) : '—',
                         onTap: () => _showEditPopup(context, ref,
                           title: s.gender,
                           icon: Icons.person_rounded,
                           fieldType: 'roller',
                           currentValue: profile.gender,
-                          options: kGenderOptions.map((o) => (o.$1, o.$2)).toList(),
+                          options: kGenderOptions.map((o) => (o.$1, s.genderLabelOf(o.$1))).toList(),
                           onSave: (v) async {
                             final p = ref.read(userProfileProvider);
                             await ref.read(userProfileProvider.notifier).save(
@@ -1707,13 +1707,13 @@ class SettingsScreen extends ConsumerWidget {
                       child: _InfoCard(
                         icon: Icons.work_rounded,
                         label: s.occupation,
-                        value: profile.jobLabel.isNotEmpty ? profile.jobLabel : '—',
+                        value: profile.job.isNotEmpty ? s.jobLabelOf(profile.job) : '—',
                         onTap: () => _showEditPopup(context, ref,
                           title: s.occupation,
                           icon: Icons.work_rounded,
                           fieldType: 'roller',
                           currentValue: profile.job,
-                          options: kJobOptions.map((o) => (o.key, o.label)).toList(),
+                          options: kJobOptions.map((o) => (o.key, s.jobLabelOf(o.key))).toList(),
                           onSave: (v) async {
                             final p = ref.read(userProfileProvider);
                             await ref.read(userProfileProvider.notifier).save(
@@ -1799,7 +1799,7 @@ class SettingsScreen extends ConsumerWidget {
               child: _InfoCard(
                 icon: Icons.auto_awesome_rounded,
                 label: s.zodiac,
-                value: profile.zodiacSign?.isNotEmpty == true ? profile.zodiacSign! : '—',
+                value: s.zodiacName(profile.zodiacSign),
                 onTap: () => _showEditPopup(context, ref,
                   title: s.zodiac,
                   icon: Icons.auto_awesome_rounded,
@@ -1837,7 +1837,7 @@ class SettingsScreen extends ConsumerWidget {
               child: _InfoCard(
                 icon: Icons.public_rounded,
                 label: s.planet,
-                value: planet,
+                value: s.planetName(planet),
                 onTap: () => _showEditPopup(context, ref,
                   title: s.planet,
                   icon: Icons.public_rounded,
@@ -1877,7 +1877,7 @@ class SettingsScreen extends ConsumerWidget {
               child: _InfoCard(
                 icon: Icons.trending_up_rounded,
                 label: s.rising,
-                value: profile.risingSign?.isNotEmpty == true ? profile.risingSign! : '—',
+                value: s.zodiacName(profile.risingSign),
                 onTap: () => _showEditPopup(context, ref,
                   title: s.rising,
                   icon: Icons.trending_up_rounded,
@@ -1911,7 +1911,7 @@ class SettingsScreen extends ConsumerWidget {
               child: _InfoCard(
                 icon: Icons.nightlight_rounded,
                 label: s.moonSign,
-                value: profile.moonSign?.isNotEmpty == true ? profile.moonSign! : '—',
+                value: s.zodiacName(profile.moonSign),
                 onTap: () => _showEditPopup(context, ref,
                   title: s.moonSign,
                   icon: Icons.nightlight_rounded,
@@ -2047,9 +2047,9 @@ class SettingsScreen extends ConsumerWidget {
       labelInset: 1,
       delay: Duration.zero,
       segments: [
-        _Seg(const Color(0xFFFFDD00), s['Kardinal']!, 'Kardinal'),
-        _Seg(const Color(0xFF00EE88), s['Değişken']!, 'Değişken'),
-        _Seg(const Color(0xFF00CCFF), s['Sabit']!,    'Sabit'),
+        _Seg(const Color(0xFFFFDD00), s['Kardinal']!, loc.modalityName('Kardinal')),
+        _Seg(const Color(0xFF00EE88), s['Değişken']!, loc.modalityName('Değişken')),
+        _Seg(const Color(0xFF00CCFF), s['Sabit']!,    loc.modalityName('Sabit')),
       ],
     );
 
@@ -2063,8 +2063,8 @@ class SettingsScreen extends ConsumerWidget {
               labelInset: 1,
               delay: const Duration(milliseconds: 950),
               segments: [
-                _Seg(const Color(0xFFAA44FF), s['Feminen']!,  'Feminen'),
-                _Seg(const Color(0xFF00CCAA), s['Maskülen']!, 'Maskülen'),
+                _Seg(const Color(0xFFAA44FF), s['Feminen']!,  loc.polarityName('Feminen')),
+                _Seg(const Color(0xFF00CCAA), s['Maskülen']!, loc.polarityName('Maskülen')),
               ],
             ),
           ),
@@ -2079,10 +2079,10 @@ class SettingsScreen extends ConsumerWidget {
               labelDy: 1,
               delay: const Duration(milliseconds: 1900),
               segments: [
-                _Seg(const Color(0xFFFF6622), s['Ateş']!,   'Ateş'),
-                _Seg(const Color(0xFF88DD00), s['Toprak']!, 'Toprak'),
-                _Seg(const Color(0xFF00AAFF), s['Hava']!,   'Hava'),
-                _Seg(const Color(0xFF0066FF), s['Su']!,     'Su'),
+                _Seg(const Color(0xFFFF6622), s['Ateş']!,   loc.elementName('Ateş')),
+                _Seg(const Color(0xFF88DD00), s['Toprak']!, loc.elementName('Toprak')),
+                _Seg(const Color(0xFF00AAFF), s['Hava']!,   loc.elementName('Hava')),
+                _Seg(const Color(0xFF0066FF), s['Su']!,     loc.elementName('Su')),
               ],
             ),
           ),

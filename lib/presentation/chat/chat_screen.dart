@@ -42,9 +42,11 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       final flow = await loader.loadOnboarding();
 
       if (!mounted) return;
+      final isEn = ref.read(localeProvider) == 'en';
       await ref.read(chatProvider.notifier).startConversation(
             flow: flow,
             profile: profile,
+            isEn: isEn,
           );
     } catch (e) {
       // Asset yüklenemezse onboarding'i tamamlanmış say, ana ekrana yönlendir

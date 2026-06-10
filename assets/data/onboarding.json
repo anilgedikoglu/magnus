@@ -11,9 +11,15 @@
         "Selam! Magnus olarak karşındayım. Sana en iyi deneyimi yaşatmak için önce seni biraz tanıyalım.",
         "Hoş geldin! Birkaç kısa soruyla seni tanıyacağım. Hazır mısın?"
       ],
+      "messages_en": [
+        "Hello! I'm Magnus. To get to know you, understand you and offer you personalized content, I need to ask a few questions.",
+        "Hi! I'm Magnus, here with you. To give you the best experience, let's get to know you a little first.",
+        "Welcome! I'll get to know you with a few short questions. Are you ready?"
+      ],
       "answers": [
         {
           "labels": ["Hazırım!", "Başlayalım!", "Tabii ki!"],
+          "labels_en": ["I'm ready!", "Let's begin!", "Of course!"],
           "nextNodeId": "ask_name"
         }
       ]
@@ -25,6 +31,11 @@
         "Harika! Önce adını öğrenebilir miyim?",
         "Güzel! Sana nasıl hitap edeyim?",
         "Mükemmel! Önce adını öğrenmek istiyorum."
+      ],
+      "messages_en": [
+        "Great! First, may I know your name?",
+        "Lovely! How should I address you?",
+        "Perfect! First, I'd like to know your name."
       ],
       "answers": [
         {
@@ -42,20 +53,28 @@
         "Çok güzel {{isim}}! Sana daha kişisel yorumlar yapabilmem için cinsiyetini merak ediyorum.",
         "Harika! {{isim}}, cinsiyetini paylaşır mısın?"
       ],
+      "messages_en": [
+        "What a nice name, {{isim}}! May I know your gender?",
+        "Very nice, {{isim}}! To give you more personal readings, I'm curious about your gender.",
+        "Great! {{isim}}, would you share your gender?"
+      ],
       "answerLayout": "vertical",
       "answers": [
         {
           "labels": ["Erkek"],
+          "labels_en": ["Male"],
           "setVariables": [{"variable": "cinsiyet", "value": "erkek"}],
           "nextNodeId": "ask_job"
         },
         {
           "labels": ["Kadın"],
+          "labels_en": ["Female"],
           "setVariables": [{"variable": "cinsiyet", "value": "kadin"}],
           "nextNodeId": "ask_job"
         },
         {
           "labels": ["Belirtmek İstemiyorum"],
+          "labels_en": ["Prefer Not to Say"],
           "setVariables": [{"variable": "cinsiyet", "value": "belirtmek_istemiyorum"}],
           "nextNodeId": "ask_job"
         }
@@ -69,50 +88,64 @@
         "Harika {{isim}}! Bir de ne iş yaptığını merak ediyorum.",
         "Peki {{isim}}, çalışma durumun nedir?"
       ],
+      "messages_en": [
+        "{{isim}}, what is your occupation?",
+        "Great, {{isim}}! I'm also curious about what you do for work.",
+        "So {{isim}}, what is your employment status?"
+      ],
       "answerLayout": "vertical",
       "answers": [
         {
           "labels": ["Ev Hanımı"],
+          "labels_en": ["Homemaker"],
           "setVariables": [{"variable": "meslek", "value": "evhanimi"}],
           "nextNodeId": "ask_marital"
         },
         {
           "labels": ["Öğrenci"],
+          "labels_en": ["Student"],
           "setVariables": [{"variable": "meslek", "value": "ogrenci"}],
           "nextNodeId": "ask_marital"
         },
         {
           "labels": ["Kamu Sektörü"],
+          "labels_en": ["Public Sector"],
           "setVariables": [{"variable": "meslek", "value": "kamusektoru"}],
           "nextNodeId": "ask_marital"
         },
         {
           "labels": ["Özel Sektör"],
+          "labels_en": ["Private Sector"],
           "setVariables": [{"variable": "meslek", "value": "ozelsektoru"}],
           "nextNodeId": "ask_marital"
         },
         {
           "labels": ["Kendi İşini Yapıyor"],
+          "labels_en": ["Self-Employed"],
           "setVariables": [{"variable": "meslek", "value": "kendiisi"}],
           "nextNodeId": "ask_marital"
         },
         {
           "labels": ["Akademisyen"],
+          "labels_en": ["Academic"],
           "setVariables": [{"variable": "meslek", "value": "akademisyen"}],
           "nextNodeId": "ask_marital"
         },
         {
           "labels": ["Emekli"],
+          "labels_en": ["Retired"],
           "setVariables": [{"variable": "meslek", "value": "emekli"}],
           "nextNodeId": "ask_marital"
         },
         {
           "labels": ["İş Arıyorum"],
+          "labels_en": ["Job Seeking"],
           "setVariables": [{"variable": "meslek", "value": "isariyor"}],
           "nextNodeId": "ask_marital"
         },
         {
           "labels": ["Çalışmıyorum"],
+          "labels_en": ["Not Working"],
           "setVariables": [{"variable": "meslek", "value": "calismiyor"}],
           "nextNodeId": "ask_marital"
         }
@@ -126,40 +159,52 @@
         "Neredeyse bitti {{isim}}! Medeni durumunu merak ediyorum.",
         "Bir sorum daha var {{isim}}: İlişki durumun nedir?"
       ],
+      "messages_en": [
+        "Finally, {{isim}}, may I know your marital status?",
+        "Almost done, {{isim}}! I'm curious about your marital status.",
+        "One more question, {{isim}}: What is your relationship status?"
+      ],
       "answerLayout": "vertical",
       "answers": [
         {
           "labels": ["Bekar"],
+          "labels_en": ["Single"],
           "setVariables": [{"variable": "medeni_durum", "value": "iliskisi_yok"}],
           "nextNodeId": "onboarding_complete"
         },
         {
           "labels": ["İlişkisi Var"],
+          "labels_en": ["In a Relationship"],
           "setVariables": [{"variable": "medeni_durum", "value": "iliski_var"}],
           "nextNodeId": "onboarding_complete"
         },
         {
           "labels": ["Nişanlı"],
+          "labels_en": ["Engaged"],
           "setVariables": [{"variable": "medeni_durum", "value": "nisanli"}],
           "nextNodeId": "onboarding_complete"
         },
         {
           "labels": ["Evli"],
+          "labels_en": ["Married"],
           "setVariables": [{"variable": "medeni_durum", "value": "evli"}],
           "nextNodeId": "onboarding_complete"
         },
         {
           "labels": ["Boşanmış"],
+          "labels_en": ["Divorced"],
           "setVariables": [{"variable": "medeni_durum", "value": "bosanmis"}],
           "nextNodeId": "onboarding_complete"
         },
         {
           "labels": ["Dul"],
+          "labels_en": ["Widowed"],
           "setVariables": [{"variable": "medeni_durum", "value": "dul"}],
           "nextNodeId": "onboarding_complete"
         },
         {
           "labels": ["Ayrı Yaşıyorum"],
+          "labels_en": ["Living Apart"],
           "setVariables": [{"variable": "medeni_durum", "value": "ayri_yasiyor"}],
           "nextNodeId": "onboarding_complete"
         }
@@ -172,9 +217,13 @@
       "messages": [
         "Mükemmel {{isim}}! Artık seni daha iyi tanıyorum. Hazırsan başlayabiliriz!"
       ],
+      "messages_en": [
+        "Perfect, {{isim}}! Now I know you better. If you're ready, we can begin!"
+      ],
       "answers": [
         {
           "labels": [""],
+          "labels_en": [""],
           "action": "auto_complete",
           "nextNodeId": null
         }

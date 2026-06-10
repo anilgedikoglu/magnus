@@ -263,7 +263,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
     final unlock  = now.add(const Duration(minutes: 4));
     final item = InboxItem(
       id: _uuid.v4(),
-      title: 'Rüya: ${sembol.kelime}',
+      title: ref.read(l10nProvider).dreamInboxTitle(sembol.kelime),
       text: metin,
       date: now.toIso8601String(),
       fortuneTypeKey: 'dream',
@@ -349,8 +349,9 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
 
   // ── Durum: secim ─────────────────────────────────────────────────────────
   Widget _buildSecim() {
+    final s = ref.watch(l10nProvider);
     final profile = ref.read(userProfileProvider);
-    final isim = profile.name.isNotEmpty ? profile.name : 'sen';
+    final isim = profile.name.isNotEmpty ? profile.name : (s.isEn ? 'you' : 'sen');
     final liste = _filtrelenmis;
 
     return Column(
@@ -358,7 +359,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
         Padding(
           padding: const EdgeInsets.fromLTRB(24, 4, 24, 12),
           child: Text(
-            'Rüyanda ne gördün, $isim?',
+            s.dreamWhatDidYouSee(isim),
             textAlign: TextAlign.center,
             style: const TextStyle(
               color: Color(0xFFD8C4FF),
@@ -377,7 +378,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
             style: const TextStyle(color: Colors.white, fontSize: 14),
             cursorColor: const Color(0xFF8B5CF6),
             decoration: InputDecoration(
-              hintText: 'Ara…',
+              hintText: s.searchHint,
               hintStyle: TextStyle(color: Colors.white.withValues(alpha: 0.35)),
               prefixIcon: Icon(Icons.search_rounded,
                   color: Colors.white.withValues(alpha: 0.45), size: 20),
@@ -419,7 +420,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
           child: liste.isEmpty
               ? Center(
                   child: Text(
-                    'Sonuç bulunamadı.',
+                    s.noResults,
                     style: TextStyle(
                         color: Colors.white.withValues(alpha: 0.35),
                         fontSize: 14),
@@ -540,9 +541,9 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
-          'Rüyanı değerlendiriyorum...',
-          style: TextStyle(
+        Text(
+          ref.read(l10nProvider).dreamEvaluating,
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 18,
             fontWeight: FontWeight.w500,

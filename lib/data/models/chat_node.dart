@@ -12,6 +12,9 @@ class ChatNode {
   /// Multiple variations — one is picked randomly at runtime.
   final List<String> messages;
 
+  /// İngilizce mesaj varyasyonları (messages_en). Boşsa Türkçe'ye düşer.
+  final List<String> messagesEn;
+
   /// Answer options shown to the user.
   final List<ChatAnswer> answers;
 
@@ -36,6 +39,7 @@ class ChatNode {
   const ChatNode({
     required this.id,
     required this.messages,
+    this.messagesEn = const [],
     this.answers = const [],
     this.bubbleColor = BubbleColorTheme.color1,
     this.answerLayout = AnswerLayout.vertical,
@@ -45,10 +49,15 @@ class ChatNode {
     this.imageAsset,
   });
 
+  /// Dile göre mesaj listesini döndürür (en yoksa Türkçe'ye düşer).
+  List<String> messagesFor(bool isEn) =>
+      (isEn && messagesEn.isNotEmpty) ? messagesEn : messages;
+
   factory ChatNode.fromJson(Map<String, dynamic> json) {
     return ChatNode(
       id: json['id'] as String,
       messages: List<String>.from(json['messages'] as List),
+      messagesEn: List<String>.from(json['messages_en'] as List? ?? const []),
       answers: (json['answers'] as List? ?? [])
           .map((a) => ChatAnswer.fromJson(a as Map<String, dynamic>))
           .toList(),
@@ -77,6 +86,9 @@ class ChatAnswer {
   /// Button label variations — one is picked randomly.
   final List<String> labels;
 
+  /// İngilizce etiket varyasyonları (labels_en). Boşsa Türkçe'ye düşer.
+  final List<String> labelsEn;
+
   /// ID of the next ChatNode to navigate to.
   final String? nextNodeId;
 
@@ -88,14 +100,20 @@ class ChatAnswer {
 
   const ChatAnswer({
     required this.labels,
+    this.labelsEn = const [],
     this.nextNodeId,
     this.setVariables = const [],
     this.action,
   });
 
+  /// Dile göre etiket listesini döndürür (en yoksa Türkçe'ye düşer).
+  List<String> labelsFor(bool isEn) =>
+      (isEn && labelsEn.isNotEmpty) ? labelsEn : labels;
+
   factory ChatAnswer.fromJson(Map<String, dynamic> json) {
     return ChatAnswer(
       labels: List<String>.from(json['labels'] as List),
+      labelsEn: List<String>.from(json['labels_en'] as List? ?? const []),
       nextNodeId: json['nextNodeId'] as String?,
       setVariables: (json['setVariables'] as List? ?? [])
           .map((v) => VariableAssignment.fromJson(v as Map<String, dynamic>))

@@ -160,37 +160,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     // 'numeroloji' burada yok — limit ekran içinden yönetilir
   };
 
-  static const _fortuneDisplayNames = {
-    'motivasyon':  'Motivasyon',
-    'olumlama':    'Olumlama',
-    'ozlusoz':     'Özlü Sözler',
-    'tarot':       'Tarot',
-    'kahve':       'Kahve Falı',
-    'astroloji':   'Astroloji',
-    'kaderkitabi': 'Kader Kitabı',
-    'dertortagi':   'Dert Ortağı',
-    'acigercekler': 'Acı Gerçekler',
-    'numeroloji':   'Numeroloji',
-    'iching':       'I-Ching',
-    'japonfali':    'Japon Falı',
-    'kadercarki':   'Kader Çarkı',
-    'askuyumu':     'Aşk Uyumu',
-  };
-
-  // Ekrandan 'hazirlanıyor' sinyali gelince gösterilecek mesajlar
-  static const _hazirlaniyorMessages = {
-    'numeroloji': 'Numeroloji raporun hazırlanıyor...',
-  };
-
-  // Günlük limit dolarken özel balon mesajları (varsayılan yerine)
-  static const _fortuneLimitMessages = {
-    'kaderkitabi': 'Kader kitabının bugünkü sayfasını okudun.',
-    'dertortagi':   'Bugün yeterince dertleştik.',
-    'acigercekler': 'Bugün gerçeklerle yüzleştin.',
-    'kadercarki':   'Günlük Kader Çarkı hakkın doldu.',
-    'askuyumu':     'Günlük Aşk Uyumu hakkın doldu.',
-  };
-
   String get _today => DateTime.now().toIso8601String().substring(0, 10);
 
   double? _swipeStartX;
@@ -243,12 +212,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final name = ref.read(userProfileProvider).name;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
-        text: 'Tarot falını yorumlamaya başladım${name.isNotEmpty ? ' $name' : ''}.',
+        text: ref.read(l10nProvider).tarotSentBubble(name),
         gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
         borderColor: const Color(0xFFE8820C),
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -276,12 +245,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final name = ref.read(userProfileProvider).name;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
-        text: 'Kahve falını yorumluyorum${name.isNotEmpty ? ' $name' : ''}.',
+        text: ref.read(l10nProvider).kahveSentBubble(name),
         gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
         borderColor: const Color(0xFFE8820C),
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -305,12 +274,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final name = ref.read(userProfileProvider).name;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
-        text: 'Durugörün hazırlanıyor${name.isNotEmpty ? ' $name' : ''}.',
+        text: ref.read(l10nProvider).durugoruSentBubble(name),
         gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
         borderColor: const Color(0xFFE8820C),
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -333,12 +302,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final name = ref.read(userProfileProvider).name;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
-        text: 'Rüyanı değerlendirmeye başladım${name.isNotEmpty ? ' $name' : ''}.',
+        text: ref.read(l10nProvider).ruyaSentBubble(name),
         gradient: const [Color(0xFF1A0A4C), Color(0xFF2D1580)],
         borderColor: const Color(0xFF7B5CF6),
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -366,12 +335,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final name = ref.read(userProfileProvider).name;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
-        text: 'I-Ching falın hazırlanıyor${name.isNotEmpty ? ' $name' : ''}.',
+        text: ref.read(l10nProvider).ichingSentBubble(name),
         gradient: const [Color(0xFF0A1A10), Color(0xFF0F2D1A)],
         borderColor: const Color(0xFFB8941F),
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -399,12 +368,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final name = ref.read(userProfileProvider).name;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
-        text: 'Japon Falın değerlendiriliyor${name.isNotEmpty ? ' $name' : ''}.',
+        text: ref.read(l10nProvider).japonSentBubble(name),
         gradient: const [Color(0xFF2A0008), Color(0xFF4A0012)],
         borderColor: const Color(0xFFCC2244),
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -427,12 +396,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final name = ref.read(userProfileProvider).name;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
-        text: 'El falın analiz ediliyor${name.isNotEmpty ? ' $name' : ''}.',
+        text: ref.read(l10nProvider).elFaliSentBubble(name),
         gradient: const [Color(0xFF1A0A2E), Color(0xFF2D1255)],
         borderColor: const Color(0xFF9B3FCC),
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -455,12 +424,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final name = ref.read(userProfileProvider).name;
     setState(() {
       _extraBubbles.add(_ExtraBubble(
-        text: 'Yüz falın analiz ediliyor${name.isNotEmpty ? ' $name' : ''}.',
+        text: ref.read(l10nProvider).yuzFaliSentBubble(name),
         gradient: const [Color(0xFF1A0A2E), Color(0xFF2D1255)],
         borderColor: const Color(0xFF9B3FCC),
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -651,7 +620,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   void _showHazirlaniyorBubble(String type) {
-    final msg = _hazirlaniyorMessages[type] ?? 'Raporun hazırlanıyor...';
+    final msg = ref.read(l10nProvider).hazirlaniyorMessage(type);
     // Fal türüne göre balonda ikon göster
     final String? bubbleIcon = switch (type) {
       'kahve'     => 'assets/images/inbox_icons/kahve.png',
@@ -666,7 +635,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         iconPath: bubbleIcon,
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -683,11 +652,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   void _showDailyLimitBubble(String type) {
+    final s           = ref.read(l10nProvider);
     final name        = ref.read(userProfileProvider).name;
-    final fortuneName = _fortuneDisplayNames[type] ?? type;
-    final nameStr     = name.isNotEmpty ? ' $name' : '';
-    final customMsg   = _fortuneLimitMessages[type];
-    final limitText   = customMsg ?? 'Günlük $fortuneName hakkın doldu$nameStr.';
+    final fortuneName = s.fortuneDisplayName(type);
+    final customMsg   = s.fortuneLimitMessage(type);
+    final limitText   = customMsg ?? s.dailyLimitBubble(fortuneName, name);
     setState(() {
       _extraBubbles.add(_ExtraBubble(
         text: limitText,
@@ -695,7 +664,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         borderColor: const Color(0xFFCC6622),
       ));
       _extraBubbles.add(_ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ));
@@ -805,6 +774,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     ref.watch(userProfileProvider); // profil değişince rebuild tetikle
+    ref.watch(localeProvider);      // dil değişince menü etiketleri + balonlar yenilensin
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -897,7 +867,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         borderColor: const Color(0xFF2DAAA0),
       ),
       _ExtraBubble(
-        text: "Magnus'un ana menüsü karşında!",
+        text: ref.read(l10nProvider).magnusMainMenu,
         gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
         borderColor: const Color(0xFF7B5ECC),
       ),

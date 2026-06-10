@@ -8,6 +8,9 @@ class ConversationEngine {
   final ConversationFlow flow;
   final UserProfile profile;
 
+  /// Ekran dili İngilizce mi? → messages_en / labels_en seçimi için.
+  final bool isEn;
+
   /// Runtime variable map — starts from user profile, grows as conversation progresses.
   final Map<String, String> _variables = {};
 
@@ -17,7 +20,7 @@ class ConversationEngine {
   ChatNode? _currentNode;
   bool _isComplete = false;
 
-  ConversationEngine({required this.flow, required this.profile}) {
+  ConversationEngine({required this.flow, required this.profile, this.isEn = false}) {
     _variables.addAll(profile.toVariableMap());
   }
 
@@ -171,7 +174,7 @@ class ConversationEngine {
 
   String _resolveMessage(ChatNode node) {
     final variation = VariableReplacer.pickVariation(
-      node.messages,
+      node.messagesFor(isEn),
       seed: profile.name,
     );
     return VariableReplacer.replace(variation, _variables);
@@ -179,7 +182,7 @@ class ConversationEngine {
 
   String _resolveAnswer(ChatAnswer answer) {
     final variation = VariableReplacer.pickVariation(
-      answer.labels,
+      answer.labelsFor(isEn),
       seed: profile.name,
     );
     return VariableReplacer.replace(variation, _variables);

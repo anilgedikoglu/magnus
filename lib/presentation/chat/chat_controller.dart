@@ -82,8 +82,9 @@ class ChatNotifier extends Notifier<ChatState> {
   Future<void> startConversation({
     required ConversationFlow flow,
     required UserProfile profile,
+    bool isEn = false,
   }) async {
-    _engine = ConversationEngine(flow: flow, profile: profile);
+    _engine = ConversationEngine(flow: flow, profile: profile, isEn: isEn);
     state = const ChatState();
     final resolved = _engine!.start();
     await _showMagnusMessage(resolved);

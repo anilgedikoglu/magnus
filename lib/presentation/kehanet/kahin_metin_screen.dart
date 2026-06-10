@@ -65,7 +65,10 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
 
     eligible.shuffle(Random());
     final selected = eligible.first;
-    _metin = selected['metin'] ?? '';
+    final isEn = ref.read(localeProvider) == 'en';
+    _metin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
+        ? selected['metin_en']
+        : (selected['metin'] ?? '');
     final profile = ref.read(userProfileProvider);
     _metin = VariableReplacer.replace(_metin, profile.toVariableMap());
 

@@ -264,6 +264,10 @@ const MAPPINGS = {
   kadercarki_hayvan: { json: 'kadercarki_hayvan.json', arrayKey: 'kadercarki_hayvan', folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
   maganda:       { json: 'maganda.json',        arrayKey: 'sorular', folder: ODB + '/AnaMenu1/Kehanet/Maganda', recursive: true, mode: 'cevap' },
   maganda_cevaplar: { json: 'maganda.json',     arrayKey: 'cevaplar', folder: ODB + '/AnaMenu1/Kehanet/Maganda/Cevaplar', recursive: true, mode: 'joined' },
+  tamua:         { json: 'tamua.json',          deep: true, folder: ODB + '/AnaMenu1/Kehanet/Tamua', recursive: true },
+  kahinler:      { json: 'kahinler.json',       deep: true, folder: ODB + '/AnaMenu1/Kehanet/KahineSor', recursive: true },
+  askuyumu:      { json: 'askuyumu.json',       deep: true, folder: ODB + '/AnaMenu2/AskUyumu', recursive: true },
+  biyoritim:     { json: 'biyoritim.json',      deep: true, folder: ODB + '/AnaMenu2/Biyoritim', recursive: true },
 };
 
 function main() {
@@ -280,8 +284,33 @@ function main() {
   const map = buildTrToEnMap(cfg.folders || cfg.folder, cfg.recursive, cfg.mode);
   console.log('Kaynak TR->EN harita boyutu:', map.size);
 
-  const arrayKeys = cfg.arrayKeys || [cfg.arrayKey];
   const metinField = cfg.metinField || 'metin';
+
+  // ── Deep mod: tum agaci dolas, metin alanli her objeye metin_en ekle ──
+  if (cfg.deep) {
+    let matched = 0, missing = 0, count = 0;
+    const walk = (node) => {
+      if (Array.isArray(node)) { for (const x of node) walk(x); return; }
+      if (node && typeof node === 'object') {
+        if (typeof node[metinField] === 'string') {
+          count++;
+          const en = map.get(normKey(node[metinField]));
+          if (en && en.length > 1) { node[metinField + '_en'] = en; matched++; }
+          else { node[metinField + '_en'] = node[metinField]; missing++; }
+        }
+        for (const k of Object.keys(node)) {
+          if (k === metinField || k === metinField + '_en') continue;
+          walk(node[k]);
+        }
+      }
+    };
+    walk(data);
+    fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), 'utf8');
+    console.log(`${cfg.json}: deep ${count} | EN eslesen: ${matched} | eksik(TR fallback): ${missing}`);
+    return;
+  }
+
+  const arrayKeys = cfg.arrayKeys || [cfg.arrayKey];
   let totalMatched = 0, totalMissing = 0, totalCount = 0;
 
   for (const ak of arrayKeys) {

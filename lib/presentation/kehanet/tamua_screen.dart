@@ -332,7 +332,10 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
 
     eligible.shuffle(Random());
     final selected = eligible.first as Map<String, dynamic>;
-    _metin    = selected['metin']     as String? ?? '';
+    final isEn = ref.read(localeProvider) == 'en';
+    _metin    = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
+        ? selected['metin_en'] as String
+        : (selected['metin'] as String? ?? '');
     _sesIndex = selected['ses_index'] as int?    ?? 1;
     final profile = ref.read(userProfileProvider);
     _metin = VariableReplacer.replace(_metin, profile.toVariableMap());

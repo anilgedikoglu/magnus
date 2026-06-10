@@ -5,43 +5,50 @@
         "id": 1,
         "ses_index": 1,
         "metin": "Senin bu beklentinin karşılanacağını görmekteyim. Muvaffak olacaksın!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see that your expectation will be met. You will succeed!"
       },
       {
         "id": 2,
         "ses_index": 2,
         "metin": "Gördüğüm o ki; bu, gerçekleşecek!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It seems to me that; this, is gonna happen!"
       },
       {
         "id": 3,
         "ses_index": 3,
         "metin": "Söylediğinin olacağına kesin gözüyle bakıyorum!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I am absolutely sure that what you say will definitely happen!"
       },
       {
         "id": 4,
         "ses_index": 4,
         "metin": "Sana \"evet\" cevabı vermem gerekiyor!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I have to give you a \"yes\" answer!"
       },
       {
         "id": 5,
         "ses_index": 5,
         "metin": "Bana söylediğin şeyin gerçekleşmesi an meselesi!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It's just a matter of time before what you told me happens!"
       },
       {
         "id": 6,
         "ses_index": 6,
         "metin": "Sorduğun şey gerçekleşecek!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your answer is yes!"
       },
       {
         "id": 7,
         "ses_index": 7,
         "metin": "Merak ettiğin şey muhakkak olacak!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The thing you're curious about will be happen for sure!"
       }
     ],
     "olacakh": [
@@ -49,31 +56,36 @@
         "id": 8,
         "ses_index": 1,
         "metin": "İstediğin büyük bir ihtimalle gerçekleşecek!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're most likely gonna get what you want!"
       },
       {
         "id": 9,
         "ses_index": 2,
         "metin": "Merak ettiğin şeyin cevabı güçlü bir ihtimalle \"evet!\"",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The answer to what you're wondering is most likely a strong \"yes!\""
       },
       {
         "id": 10,
         "ses_index": 3,
         "metin": "Merak ettiğin şeyin cevabı kesin bir evet'e yakın!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The answer to what you're wondering about is definitely leaning towards a solid yes!"
       },
       {
         "id": 11,
         "ses_index": 4,
         "metin": "Cevabının anlık enerjisi olumlu. Fakat uzun vadede sıkıntılar olabilir!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The instant energy of the answer is positive. However, there may be troubles in the long run!"
       },
       {
         "id": 12,
         "ses_index": 5,
         "metin": "Sorduğun sorunun cevabı olumlu. Gerçekleşmesi için az bir vakit var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You asked a question and the answer is positive. There's a short time left for it to happen."
       }
     ],
     "olacakl": [
@@ -81,31 +93,36 @@
         "id": 13,
         "ses_index": 1,
         "metin": "İstediğin şey az miktarda da olsa olumlu gözüküyor. Ancak zamanı var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What you want seems to be somewhat positive. But it's not the right time yet."
       },
       {
         "id": 14,
         "ses_index": 2,
         "metin": "Bilemiyorum... Olacak gibi duruyor!...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I don't know... Seems like it's gonna happen!..."
       },
       {
         "id": 15,
         "ses_index": 3,
         "metin": "Sorduğun şeyin cevabı kıl payı \"evet!\"",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The answer to your question is just a hair away from being \"yes!\""
       },
       {
         "id": 16,
         "ses_index": 4,
         "metin": "Sorduğun şey bir müddet sonra olacak! Önünde bazı ufak engeller var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What you're asking for will happen in a while! There are some small obstacles ahead of you."
       },
       {
         "id": 17,
         "ses_index": 5,
         "metin": "Bu konu hakkında az da olsa olumlu yanıt aldık.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "We've received some positive feedback on this issue."
       }
     ],
     "olmayacak": [
@@ -113,37 +130,43 @@
         "id": 18,
         "ses_index": 1,
         "metin": "Düşündüğün şey kesinlikle olmayacak!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What you're thinking about definitely won't happen!"
       },
       {
         "id": 19,
         "ses_index": 2,
         "metin": "Sorduğun şeyin gerçekleşmesi bu noktada imkansız!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What you're asking for is impossible at this point!"
       },
       {
         "id": 20,
         "ses_index": 3,
         "metin": "Sana \"hayır\" cevabı vermekten üzüntü duyuyorum!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I'm sorry to say \"no\" to you!"
       },
       {
         "id": 21,
         "ses_index": 4,
         "metin": "Bu iş olacak gibi gözükecek, ama olmayacak!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "This job looks like it's gonna work, but it ain't gonna happen!"
       },
       {
         "id": 22,
         "ses_index": 5,
         "metin": "Bu sorduğun şey hiçbir zaman gerçekleşmeyecek!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "This thing you're asking about will never happen!"
       },
       {
         "id": 23,
         "ses_index": 6,
         "metin": "Bunun olacağını düşünmek büyük bir yanılgı olur. Bence düşünme...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Thinking that this will happen would be a big misconception. In my opinion, don't think about it..."
       }
     ],
     "olmayacakh": [
@@ -151,25 +174,29 @@
         "id": 24,
         "ses_index": 1,
         "metin": "Bu meseleyi senin için pek hayırlı görmüyorum. İhtimaller pek zayıf...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I don't see this matter very auspicious for you. The possibilities are quite slim..."
       },
       {
         "id": 25,
         "ses_index": 2,
         "metin": "Sorduğun şeye \"kuvvetle muhtemel hayır\" cevabı vermek doğru olur.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It would be appropriate to give a \"very likely no\" answer to the question you asked."
       },
       {
         "id": 26,
         "ses_index": 3,
         "metin": "Büyük bir ihtimalle \"hayır!\"",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Most likely \"no!\""
       },
       {
         "id": 27,
         "ses_index": 4,
         "metin": "Sorduğun şeyin olması mümkün! Ancak engel olan bir güç var. Çok zor gözüküyor...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Is it possible for what you're asking for? There is a force preventing it. It looks very difficult..."
       }
     ],
     "olmayacakl": [
@@ -177,25 +204,29 @@
         "id": 28,
         "ses_index": 1,
         "metin": "Gelinen nokta, düşündüğün şeyin gerçekleşme ihtimalinin zayıflığını gösteriyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The current situation indicates a low probability of what you're thinking coming true."
       },
       {
         "id": 29,
         "ses_index": 2,
         "metin": "Sorunun cevabı \"hayır\" ancak küçücük bir olasılık da var!...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Is the answer to the question \"no\", with just a tiny possibility of \"yes\"..."
       },
       {
         "id": 30,
         "ses_index": 3,
         "metin": "Baktığımda, sorduğun şeyin cevabının zayıf bir \"hayır\" olduğunu görüyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "When I look, I see the answer to your question is a weak \"no.\""
       },
       {
         "id": 31,
         "ses_index": 4,
         "metin": "Bu sorun için ufukta bir ışık var, ancak çok zayıf bir ışık. Üzgünüm!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There is a faint light on the horizon for this issue, but it is a very weak light. Sorry!"
       }
     ]
   }

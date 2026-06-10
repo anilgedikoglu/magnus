@@ -123,7 +123,11 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
 
   String _buildMetin(_RaporTur tur) {
     final profile  = ref.read(userProfileProvider);
-    final turData  = _json![tur.jsonKey] as Map<String, dynamic>;
+    final isEn     = ref.read(localeProvider) == 'en';
+    final dataKey  = isEn && _json!.containsKey('${tur.jsonKey}_en')
+        ? '${tur.jsonKey}_en'
+        : tur.jsonKey;
+    final turData  = _json![dataKey] as Map<String, dynamic>;
 
     List<(String, int)> bolumler;
 

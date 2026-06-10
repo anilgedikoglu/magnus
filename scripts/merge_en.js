@@ -268,6 +268,7 @@ const MAPPINGS = {
   kahinler:      { json: 'kahinler.json',       deep: true, folder: ODB + '/AnaMenu1/Kehanet/KahineSor', recursive: true },
   askuyumu:      { json: 'askuyumu.json',       deep: true, folder: ODB + '/AnaMenu2/AskUyumu', recursive: true },
   biyoritim:     { json: 'biyoritim.json',      deep: true, folder: ODB + '/AnaMenu2/Biyoritim', recursive: true },
+  numeroloji:    { json: 'numeroloji.json',     deepStrings: ['genel','bugun','yil'], folder: ODB + '/AnaMenu1/Numeroloji', recursive: true },
 };
 
 function main() {
@@ -307,6 +308,33 @@ function main() {
     walk(data);
     fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), 'utf8');
     console.log(`${cfg.json}: deep ${count} | EN eslesen: ${matched} | eksik(TR fallback): ${missing}`);
+    return;
+  }
+
+  // ── deepStrings: belirtilen ust anahtarlarin paralel _en yapisini olustur ──
+  if (cfg.deepStrings) {
+    let matched = 0, missing = 0, count = 0;
+    const tx = (node) => {
+      if (typeof node === 'string') {
+        if (node.trim().length === 0) return node;
+        count++;
+        const en = map.get(normKey(node));
+        if (en && en.length > 1) { matched++; return en; }
+        missing++; return node;
+      }
+      if (Array.isArray(node)) return node.map(tx);
+      if (node && typeof node === 'object') {
+        const o = {};
+        for (const k of Object.keys(node)) o[k] = tx(node[k]);
+        return o;
+      }
+      return node;
+    };
+    for (const tk of cfg.deepStrings) {
+      if (data[tk] !== undefined) data[tk + '_en'] = tx(data[tk]);
+    }
+    fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), 'utf8');
+    console.log(`${cfg.json}: deepStrings ${count} | EN eslesen: ${matched} | eksik(TR fallback): ${missing}`);
     return;
   }
 

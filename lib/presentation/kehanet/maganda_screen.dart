@@ -109,7 +109,10 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
 
     eligible.shuffle(Random());
     final selected = eligible.first;
-    final rawMetin = selected['metin'] as String? ?? '';
+    final isEn = ref.read(localeProvider) == 'en';
+    final rawMetin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
+        ? selected['metin_en'] as String
+        : (selected['metin'] as String? ?? '');
     final varyasyonlar = rawMetin
         .split('\n\n')
         .map((s) => s.trim())
@@ -290,7 +293,9 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                                 ),
                               ),
                               child: Text(
-                                _sorular[i]['metin'] ?? '',
+                                (s.isEn && (_sorular[i]['metin_en'] as String?)?.isNotEmpty == true
+                                    ? _sorular[i]['metin_en']
+                                    : _sorular[i]['metin']) ?? '',
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 15,

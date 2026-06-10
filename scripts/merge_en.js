@@ -120,6 +120,47 @@ function extractListBlock(txt, key) {
     .filter(s => s.length > 0);
 }
 
+// Belirli bir alt-anahtarin (4 girintili) liste maddelerini, verilen satir
+// indeksinden itibaren topla. Devam satirlari daha derin girintilidir.
+function collectSubList(lines, startIdx) {
+  const items = [];
+  let cur = null;
+  let i = startIdx;
+  for (; i < lines.length; i++) {
+    const line = lines[i];
+    if (/^    - /.test(line)) { if (cur !== null) items.push(cur); cur = line.substring(6); }
+    else if (cur !== null && /^      /.test(line)) { cur += '\n' + line; }
+    else if (/^    [A-Za-z]/.test(line) || /^  [A-Za-z-]/.test(line)) break; // yeni anahtar
+    else if (cur !== null && line.trim() === '') { /* bos satir, scalar icinde olabilir */ cur += '\n'; }
+  }
+  if (cur !== null) items.push(cur);
+  return { items: items.map(parseScalar).map(s => s.replace(/<sprite=\d+>/g, '').trim()), nextIdx: i };
+}
+
+// cevapVaryasyonlari (TR) + cevapVaryasyonlariEng (EN) ciftlerini cikar.
+function readCevapPairs(fp) {
+  if (!fs.existsSync(fp)) return [];
+  const lines = fs.readFileSync(fp, 'utf8').split('\n');
+  const pairs = [];
+  let pendingTr = null;
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(/cevapVaryasyonlari(Eng)?:\s*$/);
+    if (!m) continue;
+    const isEng = !!m[1];
+    const { items } = collectSubList(lines, i + 1);
+    if (!isEng) pendingTr = items;
+    else {
+      if (pendingTr) {
+        for (let j = 0; j < pendingTr.length; j++) {
+          if (pendingTr[j] && items[j]) pairs.push({ tr: pendingTr[j], en: items[j] });
+        }
+      }
+      pendingTr = null;
+    }
+  }
+  return pairs;
+}
+
 // Bir asset'ten TR+EN parali listelerini cikar.
 function readPairsFromAsset(fp) {
   if (!fs.existsSync(fp)) return [];
@@ -131,6 +172,16 @@ function readPairsFromAsset(fp) {
     pairs.push({ tr: tr[i], en: en[i] || '' });
   }
   return pairs;
+}
+
+// Tum aciklama maddelerini \n\n ile birlestirip TEK cift dondur.
+function readJoinedPair(fp) {
+  if (!fs.existsSync(fp)) return [];
+  const txt = fs.readFileSync(fp, 'utf8');
+  const tr = extractListBlock(txt, 'aciklama') || [];
+  const en = extractListBlock(txt, 'aciklamaEng') || [];
+  if (tr.length === 0) return [];
+  return [{ tr: tr.join('\n\n'), en: en.join('\n\n') }];
 }
 
 // Eslestime anahtari: TAM metin normalize (cakisma yok → yanlis eslesme yok).
@@ -155,13 +206,16 @@ function listAssets(folder, recursive) {
 }
 
 // Klasor(ler)deki TUM asset'lerden TR->EN haritasi olustur.
-function buildTrToEnMap(folders, recursive) {
+// mode: 'aciklama' (varsayilan) | 'cevap' (cevapVaryasyonlari)
+function buildTrToEnMap(folders, recursive, mode) {
   const list = Array.isArray(folders) ? folders : [folders];
   const map = new Map();
   for (const folder of list) {
     if (!fs.existsSync(folder)) { console.log('UYARI klasor yok:', folder); continue; }
     for (const fp of listAssets(folder, recursive)) {
-      const pairs = readPairsFromAsset(fp);
+      const pairs = mode === 'cevap' ? readCevapPairs(fp)
+        : mode === 'joined' ? readJoinedPair(fp)
+        : readPairsFromAsset(fp);
       for (const p of pairs) {
         if (!p.tr) continue;
         const k = normKey(p.tr);
@@ -208,6 +262,8 @@ const MAPPINGS = {
   kadercarki_tas:    { json: 'kadercarki_tas.json',    arrayKey: 'kadercarki_tas',    folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
   kadercarki_kure:   { json: 'kadercarki_kure.json',   arrayKey: 'kadercarki_kure',   folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
   kadercarki_hayvan: { json: 'kadercarki_hayvan.json', arrayKey: 'kadercarki_hayvan', folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
+  maganda:       { json: 'maganda.json',        arrayKey: 'sorular', folder: ODB + '/AnaMenu1/Kehanet/Maganda', recursive: true, mode: 'cevap' },
+  maganda_cevaplar: { json: 'maganda.json',     arrayKey: 'cevaplar', folder: ODB + '/AnaMenu1/Kehanet/Maganda/Cevaplar', recursive: true, mode: 'joined' },
 };
 
 function main() {
@@ -221,7 +277,7 @@ function main() {
   const jsonPath = DATA + '/' + cfg.json;
   const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
 
-  const map = buildTrToEnMap(cfg.folders || cfg.folder, cfg.recursive);
+  const map = buildTrToEnMap(cfg.folders || cfg.folder, cfg.recursive, cfg.mode);
   console.log('Kaynak TR->EN harita boyutu:', map.size);
 
   const arrayKeys = cfg.arrayKeys || [cfg.arrayKey];

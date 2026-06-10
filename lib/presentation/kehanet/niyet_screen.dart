@@ -102,8 +102,11 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
 
     eligible.shuffle(Random());
     final selected = eligible.first as Map<String, dynamic>;
-    _metin = VariableReplacer.replace(
-        selected['metin'] as String? ?? '', profile.toVariableMap());
+    final isEn = ref.read(localeProvider) == 'en';
+    final selMetin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
+        ? selected['metin_en'] as String
+        : (selected['metin'] as String? ?? '');
+    _metin = VariableReplacer.replace(selMetin, profile.toVariableMap());
     shown.add(selected['id'].toString());
     await prefs.setStringList(key, shown);
 

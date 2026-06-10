@@ -199,6 +199,15 @@ const MAPPINGS = {
   kahve_sonuc:      { json: 'kahve_sonuc.json',      arrayKey: 'sonuclar',     folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
   kahve_ugurlama:   { json: 'kahve_ugurlama.json',   arrayKey: 'ugurlamalar',  folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
   astrotakvim:   { json: 'astrotakvim.json',    arrayKeys: ['transit_tarihli','transit','aktivite','saglik','guzellik','maneviyat'], folder: ODB + '/AnaMenu2/AstroTakvim', recursive: true },
+  faloya:        { json: 'faloya.json',         arrayKey: 'faloya',  folder: ODB + '/AnaMenu1/Kehanet/Faloya', recursive: true },
+  maganda:       { json: 'maganda.json',        arrayKey: 'sorular', folder: ODB + '/AnaMenu1/Kehanet/Maganda', recursive: true },
+  niyet:         { json: 'niyet.json',          arrayKey: 'niyet',   folder: ODB + '/AnaMenu1/Niyet', recursive: true },
+  kadercarki_alev:   { json: 'kadercarki_alev.json',   arrayKey: 'kadercarki_alev',   folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
+  kadercarki_zar:    { json: 'kadercarki_zar.json',    arrayKey: 'kadercarki_zar',    folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
+  kadercarki_renk:   { json: 'kadercarki_renk.json',   arrayKey: 'kadercarki_renk',   folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
+  kadercarki_tas:    { json: 'kadercarki_tas.json',    arrayKey: 'kadercarki_tas',    folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
+  kadercarki_kure:   { json: 'kadercarki_kure.json',   arrayKey: 'kadercarki_kure',   folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
+  kadercarki_hayvan: { json: 'kadercarki_hayvan.json', arrayKey: 'kadercarki_hayvan', folder: ODB + '/AnaMenu1/KaderCarki', recursive: true },
 };
 
 function main() {

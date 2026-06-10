@@ -282,7 +282,11 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       'medeni_durum': profile.maritalStatus ?? '',
       'meslek':      profile.job ?? '',
     };
-    return VariableReplacer.replace(secilen['metin'] as String, vars);
+    final isEn = ref.read(localeProvider) == 'en';
+    final secMetin = (isEn && (secilen['metin_en'] as String?)?.isNotEmpty == true)
+        ? secilen['metin_en'] as String
+        : secilen['metin'] as String;
+    return VariableReplacer.replace(secMetin, vars);
   }
 
   String _profilDeger(String deg, UserProfile p) {

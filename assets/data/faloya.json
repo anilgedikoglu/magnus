@@ -8,7 +8,8 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{day_3}} in the upcoming {{sayi,1,28}} months, your spouse or father-in-law has a business deal. A large sum of money will enter your household. You will learn that you can use a portion of this money to carry out something you have been planning for a long time.\n\nCome back again."
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
           "degisken": "cinsiyet",
           "deger": "erkek"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nI see that on the date of {{randomtarih, 10, 100}}, your lady companion will have a phone conversation with a woman she knows. The intention of this woman is not to stir up trouble; she will guide you for something. With the information you receive, you will not be late for something you desire.\n\nCome back again."
     },
     {
       "id": 3,
@@ -36,7 +38,8 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a glimpse of your future.\n\nOn {{randomtarih, 100, 1200}}, your significant other will have an incredible surprise for you. I see that it's a car brand or even model that you love and have always wanted. On that day, you will receive the key to that car from a boutique establishment that you will visit with your partner.\n\nCome back again."
     },
     {
       "id": 4,
@@ -46,7 +49,8 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 100, 300}}, you will receive news that a close married friend of yours is being cheated on by their spouse. After this incident, both you and your spouse will provide important support to this person.\n\nCome back again."
     },
     {
       "id": 5,
@@ -60,7 +64,8 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a premonition about your future.\n\nYour partner will come home with a big item on {{randomtarih, 40, 100}}. You will be very happy when you see it and realize what it is for. I see that the reason for buying this item is a decision between you two.\n\nCome back again."
     },
     {
       "id": 6,
@@ -74,7 +79,8 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{randomtarih, 90, 300}}, you will undergo a significant and costly procedure on your face. You will be very pleased with the outcome of this procedure, which will be financed by your partner. You will even be surprised at how easily you got their approval for this.\n\nCome back again."
     },
     {
       "id": 7,
@@ -88,7 +94,8 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the morning of {{randomtarih, 90, 900}}, there will be an excitement. While this feeling continues, your dear partner will come to you unexpectedly with a mischievous smile on their face. They will tell you that there is a surprise for you holding passports and tickets for a trip to another continent. Although your journey will be by plane and in a comfortable way, it may last for 12-13 hours, just letting you know!\n\nCome back again."
     },
     {
       "id": 8,
@@ -102,7 +109,8 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a glimpse of your future.\n\nThink of all the wishes you desire, all the desires you manifest into the universe. One of them is significant! On {{randomtarih, 300, 1200}} date, your soulmate will take a step towards fulfilling that biggest wish that adorns your dreams. On that day, they will take you out and show you a newly decorated modern house in a calm neighborhood on the 3rd floor. This little palace will be bought for you and bring great happiness to both of you!\n\nCome again."
     },
     {
       "id": 9,
@@ -120,192 +128,230 @@
           "degisken": "kaçkardeş",
           "deger": "yok"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nYou will receive very important news on {{randomtarih, 200, 1300}} in the afternoon. A woman around you is crying tears of joy! This person could be your sister or someone as close as a sister... Pregnant! This baby will be a long-awaited miracle in your life. You and your gentleman partner will share in this happiness.\n\nCome back again."
     },
     {
       "id": 10,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, sen sokakta yürürken, sarışın, mavi gözlü bir genç kadın sana yaklaşacak. Bu kişi, uzun zamandır görüşmediğin birinin yakın arkadaşı ve sana çok önemli bir şey söyleyecek.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a vision about your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}}, coming up in the next {{ay_2}}, while you're walking down the street, a blonde, blue-eyed young woman will approach you. This person is a close friend of someone you haven't seen in a long time, and she will tell you something very important.\n\nCome back again."
     },
     {
       "id": 11,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, maddi açıdan sevimsiz bir durumla karşılaşacaksın. Elindeki, cebindeki ya da hesabındaki maddi bir kaynağın sen istemeden, aniden azaldığını hatta tükenmek üzere olduğunu görüp, bir planından vazgeçeceksin.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{sayi,1,28}} {{ay_2}}, you will encounter an unpleasant financial situation. You will see a sudden decrease or depletion of a financial resource in your possession, pocket, or account, leading you to abandon a plan unintentionally.\n\nCome back again."
     },
     {
       "id": 12,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, alt ya da üst karın bölgende ciddi olmayan bir ağrı yaşayacaksın. Bu problem ertesi güne yansıyacak cinsten olmasa da, o günkü bazı işlerine tam odaklanamamana neden olabilir.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future. \n\nOn the date of {{sayi,1,28}}th of {{ay_2}}, you will experience a minor ache in your lower or upper abdominal region. Although this problem will not be of a serious nature, it may distract you from fully focusing on your tasks of that day.\n\nCome back again."
     },
     {
       "id": 13,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, yaşadığın haneye paketi açılmamış bir elektronik cihaz girecek. Bunu uzunca bir süredir, hatta belki de yıllardır istediğini biliyorum. Nihayet sahip olduğun için çok sevinecek, buna vesile olan insana da sonsuz teşekkürler edeceksin.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the {{sayi,1,28}}th of the next {{ay_2}}, an unopened electronic device will enter your living space. I know that you have been wanting this for a long time, maybe even for years. You will be very happy to finally have it and you will thank the person who made it possible endlessly.\n\nCome back again."
     },
     {
       "id": 14,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_4}} tarihinde, yaşadığın yerde bir \"gider\" problemi görülüyor. Bir akıntı, bir su basması ya da bir tıkanıklık hadisesi meydana gelebilir. Bu sorun seni tatsız bir şekilde uğraştırıp gününü ziyan edecek.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_4}} {{sayi,1,28}}, in the next {{sayi,1,28}} days, a \"drainage\" issue is foreseen in your location. There might be a leakage, flooding, or a clogging incident. This problem will bother you unpleasantly and waste your day.\n\nCome back again."
     },
     {
       "id": 15,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, pek sevmediğin çok süslü bir hanımefendiden bazı tavsiyeler alacaksın. O kişinin söylediklerini önce sorgulayacak, daha sonra uymaya karar vererek kendin için en güzelini yapmış olacaksın.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}}, in the next {{sayi,1,28}} months, you will receive some advice from a very flamboyant lady whom you don't particularly like. You will first question what she says, then decide to follow it, thus doing what is best for yourself.\n\nCome again."
     },
     {
       "id": 16,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, daha önce canlı olarak gördüğün bir hayvanın rahatsızlık haberini alacaksın. Duyduğun bu durum senden ziyade o hayvanın sahiplerini üzecek ve bu durumun onlara maddi bazı külfetleri olacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{ay_2}}, {{sayi,1,28}}, coming up next month, you will receive news of illness concerning an animal you have seen alive before. This situation will be more distressing for the owners of the animal than for you, and it will bring some financial burdens to them.\n\nCome back again."
     },
     {
       "id": 17,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde, çok yakın bir akraban sana direkt ulaşarak senden bir konuda özür dileyecek. Bu özrü kabul etmeyecek ve meseleyi derinleştireceksin. Bu tavrının o kişi ve yanındakilere iyi bir ders olacağını görüyorum.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_1}}, in the next {{sayi,1,28}} days, a very close relative will directly reach out to you to apologize for something. You will not accept this apology and will deepen the issue. I see that this attitude will be a good lesson for that person and those around them.\n\nCome back again."
     },
     {
       "id": 18,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, çok sevdiğin ancak bir süredir haber almadığın orta yaşlardaki bir insanın şehir ya da ülke dışına taşınma kararı aldığını sosyal medya vesilesiyle öğreneceksin. Böylelikle o kişi ile aranızda olan ya da yaşanma potansiyeli olan her şey son bulacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{sayi,1,28}} {{ay_2}} next, you will learn through social media that a middle-aged person whom you love very much but haven't heard from in a while has decided to move out of the city or country. As a result, everything between you and that person, or any potential relationship, will come to an end.\n\nCome back again."
     },
     {
       "id": 19,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, biriyle ya da birileriyle birlikte pek tanımadığın bazı insanlar tarafından yemeğe davet edileceksin. Gideceğin bu yemekte yepyeni dostluklar oluşacak ve bu iletişimler gelecekte çok işine yarayacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}}, you will be invited to a meal by some people you don't know well or haven't met before. You will make new friendships at this dinner and these connections will be very beneficial for you in the future.\n\nCome back again."
     },
     {
       "id": 20,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_5}} tarihinde, aranda mesafe olan ve çok da iyi tanımadığın birinin aslında senden ne kadar hoşlandığını ya da seni ne kadar sevdiğini anlayacaksın. O kişinin yapacağı bir şey, bunun böyle olduğunu açıkça gösterecek. Şaşıracaksın!\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_5}} {{sayi,1,28}}, in the upcoming months, you will realize how much someone who you are not very close to actually likes you or loves you. Something they will do will clearly show this. You will be surprised!\n\nCome back again."
     },
     {
       "id": 21,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_3}} tarihinde, gözlüklü, kıvırcık, kısa saçlı bir beyefendi seninle maddi bir konu üzerine konuşacak. O kişinin senden bazı beklentileri var. Ancak karşılığında ondan önemli bir şey alacaksın.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a premonition about your future.\n\nOn the date of {{ay_3}}, {{sayi,1,28}} upcoming {{ay_3}}, a bespectacled, curly-haired, short-haired gentleman will talk to you about a financial matter. He has some expectations from you. However, you will receive something important from him in return.\n\nCome back again."
     },
     {
       "id": 22,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, senden normalde beklenmeyen bir cesaretle büyük bir adım atacaksın. Bu adım, bir kişiye edeceğin bir teklif ya da bir kuruma yapacağın başvuru şeklinde olabilir. Sonrasında \"iyi ki\" diyeceksin.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{sayi,1,28}} {{ay_2}} ahead, you will take a big step with an unexpected courage. This step could be in the form of a proposal to someone or an application to an institution. Afterwards, you will say \"thank goodness\".\n\nCome back again."
     },
     {
       "id": 23,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_3}} tarihinde, bir kafe veya restoranın önünden geçerken, uzun saçlı, siyah gözlü bir adam seni durduracak. Bu kişi, eskiden tanıdığın birinin kuzeni ve seninle unutulmuş bir anıyı paylaşacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a vision for your future.\n\nOn the date of {{ay_3}}, which is in the next {{sayi,1,28}} months, as you pass by a cafe or a restaurant, a long-haired, black-eyed man will stop you. This person is the cousin of someone you used to know, and will share a forgotten memory with you.\n\nCome back again."
     },
     {
       "id": 24,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, eski bir arkadaşının sürpriz bir ziyaretine tanık olacaksın. Bu kişi sana, hayatındaki önemli bir değişikliği anlatacak ve birlikte bu değişikliği kutlayacaksınız.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{sayi,1,28}} {{ay_2}} next month, you will witness a surprise visit from an old friend. This person will tell you about a significant change in your life, and you will celebrate this change together.\n\nCome back again."
     },
     {
       "id": 25,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, bir sosyal medya platformunda seni beklenmedik bir kişi takip edecek. Bu kişi, senin geçmişte yardım ettiğin biri ve şimdi sana bir teşekkür mesajı yollayacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_2}}, in the next {{sayi,1,28}} days, an unexpected person will follow you on a social media platform. This person is someone you helped in the past and now they will send you a thank you message.\n\nCome back again."
     },
     {
       "id": 26,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde, bir alışveriş merkezinde eski bir öğretmeninle karşılaşacaksın. Bu karşılaşma, senin için nostaljik bir anı olacak ve sana geçmişte öğrendiğin bir şeyi hatırlatacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_1}}, in the coming {{sayi,1,28}} days, you will encounter an old teacher in a shopping mall. This encounter will be a nostalgic memory for you and will remind you of something you learned in the past.\n\nCome back again."
     },
     {
       "id": 27,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, bir kitapçıda alışveriş yaparken, sana yardım eden genç bir çalışanla sohbet edeceksin. Sonrasında bu kişinin senin hayatında çok önemli bir yeri ya da bazı rolleri olacak. Kişinin adında {{harf}} harfi mevcut.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a glimpse of your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}} in the coming months, while shopping at a bookstore, you will have a conversation with a young employee who will assist you. Later on, this person will play a significant role or have certain impacts in your life. The person's name will contain the letter \"{{harf}}\".\n\nCome back again."
     },
     {
       "id": 28,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde, bir taksi ya da toplu taşımada seyahat ederken seninle aynı araçta bulunan kişi sana ilginç bazı şeyler anlatacak. O kişinin anlatacakları, senin şu anki durumuna ışık tutacak ve önüne yeni yollar açacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a vision about your future.\n\nOn the date of {{ay_1}} {{sayi,1,28}}, in the next {{ay_1}}, while traveling in a taxi or public transport, the person sitting next to you will tell you some interesting things. What that person shares will shed light on your current situation and open up new paths for you.\n\nCome back again."
     },
     {
       "id": 29,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, adı üç harften uzun olan bir markette, tanıdığın bir erkekle karşılaşacaksın. Sana geçmişte verdiğin bir sözü hatırlatacak ve bu sözü tutmanın zamanı geldiğini anlayacaksın. Bu durum seni zora sokacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a vision for your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}}, in a market with a name longer than three letters, you will encounter a man you know. He will remind you of a promise you made in the past, and you will realize that it's time to keep that promise. This situation will put you in a difficult position.\n\nCome back again."
     },
     {
       "id": 30,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_6}} tarihinde, bulunduğun hanede yalnızken kapın çalacak ve uzun zamandır görmediğin bir insan karşında belirecek. Bu şahıs seninle önemli bir haberi paylaşacak ve bu haber senin gelecekteki planlarını etkileyecek.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_6}}, {{sayi,1,28}} ahead, while you are alone at home, someone you haven't seen in a long time will knock on your door. This person will share an important news with you, which will affect your future plans.\n\nCome back again."
     },
     {
       "id": 31,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_4}} tarihinde, bir aile yemeğinde, ailenle birlikte önemli bir karar alacaksınız. Bu karar, aile içi ilişkilerinizi güçlendirecek ve seni duygusal olarak rahatlatacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a vision about your future.\n\nOn the date of {{ay_4}}, in the next {{sayi,1,28}} days, you will make an important decision during a family dinner with your family. This decision will strengthen your family relationships and bring you emotional relief.\n\nCome back again."
     },
     {
       "id": 32,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, yanında 7-8 yaşlarında kız çocuğu olan başı kapalı bir hanımefendi senden bir konuda yardım isteyecek. Bu yardımın o kişinin ya da kızının sağlık durumu ile alakalı olacağını hissediyorum.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a premonition about your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}}, a veiled lady accompanied by a 7-8 year old girl will seek your help. I sense that the help will be related to either the lady's or the girl's health condition.\n\nCome back again."
     },
     {
       "id": 33,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde, bir akrabanın evine davetli olarak gittiğinde, orada tanışacağın uzun boylu biri sana bir hediye verecek. Bu hediye, senin için beklenmedik bir anlam taşıyacak ve seni geçmişe götürecek. O kişi hakkında daha fazlasını öğrenmek isteyeceksin.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a vision about your future.\n\nOn the date of {{gun_1}} {{ay_1}} in the upcoming {{sayi,1,28}} months, when you are invited to a relative's house, you will meet a tall person who will give you a gift. This gift will hold an unexpected significance for you and take you back to the past. You will want to learn more about that person.\n\nCome back again."
     },
     {
       "id": 34,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_3}} tarihinde, okuduğun bir makale ya da hikaye seni derinden etkileyecek. Bu yazı, hayatında yeni bir başlangıç yapma konusunda seni motive edecek ve yeni bir yol çizmeni sağlayacak. Çizeceğin o yol yeni bir şehre, yeni bir \"uğraşa\" ya da yeni insanlara çıkıyor olabilir.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_3}} {{sayi,1,28}}, in the next {{ay_3}}, an article or story you read will deeply impact you. This writing will motivate you to make a new beginning in your life and pave the way for you to draw a new path. The path you will draw may lead you to a new city, a new \"endeavor\", or new people.\n\nCome back again."
     },
     {
       "id": 35,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nHaftaya bugünü {{gun_1}} gününe bağlayan akşam, sosyal medya üzerinden uzun zamandır görüşmediğin biri sana bir mesaj atacak. Bu mesaj, geçmişte kalan bir konuyu aydınlatacak ve seni rahatlatacak. Bu konuşma, eski bir dostluğun yeniden başlamasına yol açacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nNext week, on the evening connecting {{gun_1}} day, someone you haven't spoken to in a long time will send you a message on social media. This message will shed light on a past issue and bring you comfort. This conversation will lead to a rekindling of an old friendship.\n\nCome back again."
     },
     {
       "id": 36,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nHaftaya salı akşamı internette gezinirken, uzun zamandır aradığın bir ürün ya da bilgiye rastlayacaksın. Bu keşfettiğin şeyin senin için önemli bir etkisi olacak ve seni uzun süredir arzuladığın bir hedefe ulaştığını hissedeceksin.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a premonition about your future.\n\nNext Tuesday evening, while browsing the internet, you will come across a product or information that you have been searching for a long time. What you discover will have a significant impact on you, and you will feel like you have achieved a goal that you have been longing for.\n\nCome back again."
     },
     {
       "id": 37,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde evinde bir şey tamir ederken, yıllardır kayıp olan bir eşyanı bulacaksın. Bu eşya, geçmişte senin için çok değerli olan bir hatıraya ait ve bu buluş seni derinden etkileyecek, geçmişle ilgili bazı konuları yeniden değerlendirmeni sağlayacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{ay_1}} {{sayi,1,28}}, while fixing something at home, you will find an item that has been missing for years. This item belongs to a precious memory from the past and this discovery will deeply affect you, prompting you to reassess some issues related to the past.\n\nCome back again."
     },
     {
       "id": 38,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde, çok sevdiğin birinin sana önemli bazı konularda bir süredir yalan söylediğini fark edeceksin. Onu affetmek ve bir meseleyi o olmadan çözmeye devam etmek arasında kalabilirsin.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a premonition about your future.\n\nOn the date of {{ay_1}}, {{sayi,1,28}} ahead, you will realize that someone you deeply care about has been lying to you about some important matters for a while. You may find yourself torn between forgiving them and continuing to resolve an issue without them.\n\nCome back again."
     },
     {
       "id": 39,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde, çok sık gördüğün bir tanıdığınla, ismi iki heceden oluşan bir erkek hakkında konuşacaksın. Konuşma bittikten kısa bir süre sonra o erkek bu konuşmadan haberdar olacak ve sana ulaşarak sitem edecek.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a premonition about your future.\n\nOn the date of {{gun_1}} of the upcoming {{sayi,1,28}} months, you will have a conversation about a male acquaintance with a two-syllable name whom you frequently see. Shortly after the conversation ends, this man will find out about it and reach out to you expressing discontent.\n\nCome back again."
     },
     {
       "id": 40,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, senden yaşça büyük ve aranda kan bağı olan birinin, senden habersiz, sağlık kontrolü için bir hastaneye gittiğini duyacaksın. Bu habersizliğe iyi niyetle tepki göstermene rağmen, o kişi ile aranda kırgınlık oluşacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a premonition about your future.\n\nOn the date of {{sayi,1,28}} {{ay_2}}, you will hear that someone older than you and with a blood relation to you went to the hospital for a health check-up without informing you. Despite reacting with good intentions to this lack of communication, there will be a rift between you and that person.\n\nCome back again."
     },
     {
       "id": 41,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 15, 100}} tarihinde, ailevi ve hayırlı bir sebeple bir ya da iki geceliğine şehir dışına gitmen gerekecek. Gittiğin yerde, aranda kan bağı olan birilerini görüyorum. Onlarla birlikte ekonomik hayatının geleceğini belirleyecek bir karar alacaksınız ve bu senin menfaatine olacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 15, 100}} date, you will need to go out of town for one or two nights for a family-related and auspicious reason. I see some people with blood relations there. You will make a decision with them that will determine the future of your financial life, and it will be in your favor.\n\nCome back again."
     },
     {
       "id": 42,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 15, 200}} tarihinde birine güvenerek insan ilişkilerine dair önemli bir kumar oynayacaksın. Adında \"{{harf}}\" harfi olan kişi senin güvenini sarsacak ve seni birine karşı mahçup edecek. Sevgi, tedbire mani değil. Aklında her zaman bir \"acaba\" olsun derim.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a foresight about your future.\n\nOn {{randomtarih, 15, 200}}, you will take a significant gamble on human relationships by trusting someone. A person with the letter \"{{harf}}\" in their name will shake your trust and embarrass you in front of someone. Love does not hinder caution. I suggest keeping a \"what if\" in your mind at all times.\n\nCome back again."
     },
     {
       "id": 43,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, sevdiğin biriyle telefon üzerinden görüntülü görüşme yapacaksın. Görüşmenin görüntülü olmasının bir de gerekçesi var; görüştüğün kişi sana kamerada bir şeyi ya da bir yeri gösterecek. Görünce çok sevineceksin.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{day,1,28}} of the next {{ay_2}}, you will have a video call with someone you love over the phone. The reason for the video call is that the person you're talking to will show you something on camera. You will be very happy when you see it.\n\nCome back soon."
     },
     {
       "id": 44,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 15, 200}} tarihi, yakın çevrenden birinin doğum günü. Aynı gün öğleden sonra telefonla alacağın bir haber, o günü adeta senin doğum günün haline getirecek. Son aylarda kilitli olan bir işin çözülecek ve bir müşkülün giderilecek. Bu durumu bazı sevdiklerinle de paylaşmak isteyeceksin.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 15, 200}}, it's someone's birthday in your close circle. In the afternoon, you will receive a phone call that will make that day feel like your own birthday. A long-standing issue will be resolved in the coming months and a problem will be alleviated. You'll want to share this news with some loved ones.\n\nCome back again."
     },
     {
       "id": 45,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 15, 50}} tarihinde tatsız bir sms alacaksın. Birisi ya da bir kurum, sana ödeme yapman için baskı kuracak. Cebindeki paranın tamamı o gün o iş için gidecek ve paranla kurduğun bazı planları iptal etmek durumunda kaldığın için anlık olarak üzüleceksin. Bir sonraki gün ise yoğun bir para girişin gözüküyor. Elin yeniden bolaracak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a forecast about your future.\n\nYou will receive an unpleasant text message on {{randomtarih, 15, 50}}. Someone or some institution will pressure you to make a payment. All the money in your pocket will go towards that business that day, and you will feel sad momentarily because you have to cancel some plans you made with that money. However, the next day, a significant amount of money is expected to come in. Your hand will be filled with wealth again.\n\nCome back again."
     },
     {
       "id": 46,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 15, 70}} tarihinde, yoğun çıkar ilişkilerin olan biriyle fikirsel bir çatışma yaşayacaksın. Her iki taraf da kaybetme korkusu gütmeden restler çekecek. Konuşmanın sonunda sinirle de olsa ortaklaşa alınacak bir karar, ilerleyen zamanlar için senin daha \"lehine\" olacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a vision about your future.\n\nOn the date of {{randomtarih, 15, 70}}, you will experience an intellectual conflict with someone you have intense business relationships with. Both sides will stand their ground without fear of losing. At the end of the conversation, a decision made together, despite the tension, will be more \"in your favor\" for the future.\n\nCome back again."
     },
     {
       "id": 47,
@@ -319,12 +365,14 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nWhispers of beings...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 15, 70}}, someone at your workplace will complain about you to a third party. They will realize they can't stand you and have a \"problem\" with you for a reason, leading you to keep your distance from them. Within a year of this incident, that person will leave the institution. Looks like your luck will prevail.\n\nCome back again."
     },
     {
       "id": 48,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 10, 30}} tarihinde, aylardır görüşmediğin bir tanıdığının nazik bir davranışı, seni duygulandıracak. O kişinin sana uzaktan da olsa bir iyilik yapacağını ve kendi vazifeni yerine getirmemenden kaynaklanan bir yükü senin üzerinden alacağını görmekteyim.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a glimpse of your future.\n\nOn the {{randomtarih, 10, 30}}th, a kind gesture from an acquaintance you haven't seen in months will touch your heart. I see that this person will do you a favor from afar and relieve you of a burden caused by not fulfilling your duty.\n\nCome back again."
     },
     {
       "id": 49,
@@ -358,7 +406,8 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a foresight about your future.\n\nOn {{randomtarih, 10, 50}}, you will find yourself in the middle of a love triangle. Someone who has feelings for you will show attitude towards you, feeling jealous because you did something to the person you love. When faced with meaningless tantrums and reactions, you will realize for the first time what the reason behind it is.\n\nCome back again."
     },
     {
       "id": 50,
@@ -376,7 +425,8 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nWhispers of entities...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 20, 100}} date, a female colleague at work will develop a serious illness. After that day, she will have ongoing issues related to work. Her absence will create an opportunity for you in a certain matter. You will somehow benefit financially or spiritually from this problem.\n\nCome back again."
     },
     {
       "id": 51,
@@ -390,7 +440,8 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{randomtarih, 90, 600}}, I see your husband in a title deed office. There is no doubt that what was purchased is an apartment. It's not hard to predict that this is something you have been desiring for quite some time. On that day, your face will be beaming with joy.\n\nCome back again."
     },
     {
       "id": 52,
@@ -400,7 +451,8 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a glimpse of your future.\n\nOn {{randomtarih, 90, 600}} date, you will be by a waterfall in the greenery at the foot of a mountain. The surroundings will be quite crowded. Your partner and some of their family members will be there too. On that day, you will share in the happiness that will arise due to a major development. Some important news that concerns everyone will be received.\n\nCome back again."
     },
     {
       "id": 53,
@@ -418,17 +470,20 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a premonition about your future.\n\nThere is a pregnancy announcement to be discussed on {{randomtarih, 100, 900}}. This news will bring both a great surprise and a wonderful joy within the household it originates from. This household will either be yours or that of a close relative.\n\nCome back again."
     },
     {
       "id": 54,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, 50'li yaşların üzerindeki bir hanımefendi ile karşı karşıya kahve içeceksiniz. Bu hanımefendinin, başka biriyle ilgili bazı anlatacakları olacak. Sana, senin lehine yaptığı bir seçimden bahsedecek.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{sayi,1,28}} in the upcoming {{ay_2}}, you will have a coffee meeting with a lady in her 50s. She will have some stories to tell about someone else. She will mention a choice she made in your favor.\n\nCome back again."
     },
     {
       "id": 55,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 40, 100}} tarihinde hava ya da trafik muhalefeti, gün içinde gerçekleştirmek istediğin bir planını aksatacak. Bu aksaklık bir de önemli tesadüfe neden olacak. Görmeyi beklemediğin biriyle, şaşıracağın bir yerde karşılaşacaksın.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a foresight about your future.\n\nOn the date {{randomtarih, 40, 100}}, weather or traffic opposition will disrupt a plan you want to carry out during the day. This disruption will also lead to a significant coincidence. You will unexpectedly encounter someone you didn't expect to see, in a place that will surprise you.\n\nCome back again."
     },
     {
       "id": 56,
@@ -438,7 +493,8 @@
           "degisken": "medeni durum",
           "deger": "platonik"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a vision about your future.\n\nOn {{randomtarih, 20, 40}}, you will encounter the person you like in a bookstore. The way they greet you and the advice they casually give will show their interest in you. You will leave there very happy.\n\nCome back again."
     },
     {
       "id": 57,
@@ -456,12 +512,14 @@
           "degisken": "yasmin",
           "deger": "38"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 20, 50}}, a colleague from the company you work for will ask for a favor for their son or daughter. Fulfilling this request will put you at risk in a certain matter. Avoiding doing good deeds at times might be better for you.\n\nCome back again."
     },
     {
       "id": 58,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 20, 50}} tarihinde çok sevdiğin ve yakın olduğun bir kız arkadaşının sana aşırı bozulacağını görüyorum. Sana başkası ile ilgili aktardığı bilgiyi, sen bunda mahsur görmeyerek o kişiye iletecek ve dikkatli olmasını isteyeceksin. Fakat iyilikten maraz doğacak, kabak senin başına patlayacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nWhispers from the spirits...\n\nI have a prediction about your future.\n\nI see that on {{randomtarih, 20, 50}}, a very dear and close girlfriend of yours will be extremely upset with you. She will share information about someone else with you, and you will pass it on to that person without seeing any harm in it, asking them to be careful. However, good intentions will lead to trouble, and things will backfire on you.\n\nCome back again."
     },
     {
       "id": 59,
@@ -471,7 +529,8 @@
           "degisken": "yasmin",
           "deger": "30"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a premonition about your future.\n\nYou will need to confront a relative with an open line on {{randomtarih, 20, 50}}. Although the conversation may be harsh and threatening, after that talk, you won't tolerate certain things again. Despite the tension, you will have clearly set your boundaries.\n\nCome back again."
     },
     {
       "id": 60,
@@ -485,7 +544,8 @@
           "degisken": "yasmin",
           "deger": "35"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 50, 300}}, you will be contacted by someone you used to work for and parted ways with in the past. They will make you one of the biggest offers of your life, wanting to reunite with you under the same institution.\n\nCome back again."
     },
     {
       "id": 61,
@@ -511,7 +571,8 @@
           "degisken": "yasmin",
           "deger": "27"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a premonition about your future.\n\nOn {{randomtarih, 30, 90}} date, you will see a certain amount deducted from your credit card without you realizing it. Although this situation may dampen your spirits during the evening, you will find great joy in the gathering you will attend that night.\n\nCome again."
     },
     {
       "id": 62,
@@ -521,7 +582,8 @@
           "degisken": "kaççocuk",
           "deger": "ikiçocuk"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a foresight about your future.\n\nOne of your children will achieve great success on {{randomtarih, 160, 740}}. Their success will be recognized by different authorities, and this achievement will become one of the greatest sources of pride in your life.\n\nCome again."
     },
     {
       "id": 63,
@@ -531,22 +593,26 @@
           "degisken": "hayatta",
           "deger": "annebaba"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nWhispers of entities...\n\nI have a premonition about your future.\n\nOn the date of {{randomtarih, 90, 660}}, your father will guide you towards a man. The man will give you a key. This key will unlock either a safe or an opportunity for you.\n\nCome back again."
     },
     {
       "id": 64,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 100, 760}} tarihinde kapısından gireceğin büyük bir binada, kurra yolu ile bir şeyin kazananları belirlenecek. O kazananlardan biri sen olacaksın ve yükte de pahada da ağır bir şey elde edeceksin.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a vision about your future.\n\nOn the date {{randomtarih, 100, 760}}, you will enter a large building where winners of something will be determined by drawing lots. You will be one of those winners and you will obtain something heavy in both weight and value.\n\nCome back again."
     },
     {
       "id": 65,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_3}} tarihinde, taksiyle tek başına bir yere gideceksin. Gittiğin yerden alman gereken bir belge ya da orada bulunan birine veremen gereken bir evrak var. Böylelikle bir işin tamamlanacak.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{ay_3}}, in the next {{sayi,1,28}} days, you will take a taxi to go somewhere alone. There will be a document you need to pick up from where you're going or a paper you need to give to someone there. This way, a task will be completed.\n\nCome back again."
     },
     {
       "id": 66,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 720, 1500}} tarihinde, yaklaşık 11-12 saatlik bir yolculuk için uçağın içinde bulunacaksın. Yanında biri daha olacak. Gezi amaçlı, içinde iki \"A\" harfi olan bir ülkeye gidiyor olacaksın. Hayallerinin de ötesinde bir yolculuk bu, fevkalade...\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a premonition about your future.\n\nOn {{randomtarih, 720, 1500}}, you will be inside an airplane for approximately 11-12 hours. There will be someone with you. You will be traveling to a country with two \"A\" letters in its name for sightseeing. This journey will be beyond your dreams, extraordinary...\n\nCome back again."
     },
     {
       "id": 67,
@@ -564,7 +630,8 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a premonition about your future.\n\nOn {{randomtarih, 220, 500}} date, around noon, something big is going to happen. You will be delighted to hear that a project you have been working on for a long time is taking off or that a project is finally approved. On the same day, you will have an important meeting related to your work with someone whose name contains the letter {{harf}}, and you will be approved and accepted by them.\n\nCome back again."
     },
     {
       "id": 68,
@@ -578,7 +645,8 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nWhispers of entities...\n\nI have a vision for your future.\n\nYou will be at the peak of your creativity on {{randomtarih, 120, 500}}. You will come up with a business idea, and the person who will provide financial support for it will call you in the evening. You will experience a day full of miracles. The opportunity of your life will appear out of the blue when you least expect it.\n\nCome back again."
     },
     {
       "id": 69,
@@ -592,7 +660,8 @@
           "degisken": "meslek",
           "deger": "kendi işini yapıyor"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a premonition about your future.\n\n{{randomtarih, 120, 1400}} is pointing to a major breakthrough in your career. A project or collaboration will introduce you to a completely new environment. Although you may feel financially uneasy at first, you will soon discover your leadership abilities and continue on your path in a new and powerful position.\n\nCome back again."
     },
     {
       "id": 70,
@@ -614,22 +683,26 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a premonition about your future.\n\n{{randomtarih, 90, 600}} is pointing to a major breakthrough in your career. A project or collaboration will introduce you to a completely new environment. Although you may feel financially uneasy at first, you will soon discover your leadership abilities and continue on your path in a new and powerful position.\n\nCome back again."
     },
     {
       "id": 71,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, uzak bir akrabanla gittiğin bir yerde karşı karşıya geleceksin. Bu kişinin sana evvelden verdiği bir söz varmış sanırım. O sözü kısa zaman içinde tutacağını öğrenip, durumdan memnun olacaksın.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{sayi,1,28}} {{ay_2}}, in the place you will visit with a distant relative, you will come face to face with them. I believe this person had made a promise to you beforehand. You will soon learn that they have kept their promise and you will be pleased with the situation.\n\nCome back again."
     },
     {
       "id": 72,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, saçlarını arkadan toplamış bir hanımefendinin sana yaptığı bir sürprizle karşılaşacaksın. Bir yandan bunu yapmasına şaşıracak, bir yandan da yaptığı şeyden dolayı maziye gidip duygulanacaksın.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{sayi,1,28}} in the next {{ay_2}}, you will encounter a surprise from a lady with her hair tied up at the back. You will be surprised by this gesture on one hand, and on the other hand, you will be moved to the past by what she does.\n\nCome back again."
     },
     {
       "id": 73,
       "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var. \n\nÖnümüzdeki {{sayi,1,28}} {{ay_3}} tarihinde, online bir bilet alacaksın. Bu bilet, o tarihin birkaç ay sonrasında gideceğin kalabalık bir yer ile ilgili olacak. O gün sanırım senin için ya da birlikte gideceğin kişi için özel bir gün.\n\nTekrar gel.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nYou will purchase an online ticket on the date of {{ay_3}}, {{sayi,1,28}} days from now. This ticket will be related to a crowded place you will visit a few months after that date. I believe that day will be a special day for you or the person you will go with.\n\nCome back again."
     },
     {
       "id": 74,
@@ -639,7 +712,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}}, which is coming up in the next month, you will be talking to a teacher who doesn't work at your school about your education. This gentleman knows one of the female teachers at your school. The lady will have a favor to ask you about an important matter related to you.\n\nCome back again."
     },
     {
       "id": 75,
@@ -649,7 +723,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{sayi,1,28}}th of {{ay_2}}, in the evening, you will receive a gift from a man who is about 30 years older than you that will make you very happy. I believe this person is an elder in your family, and he must have finally bought you something you have been wanting since the year {{yil_-2}}.\n\nCome back again."
     },
     {
       "id": 76,
@@ -659,7 +734,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_1}}, in the next {{sayi,1,28}} days, after leaving the house, you will receive an SMS 2-3 hours later. It will be from someone from your school, a {{data, cinsiyet=erkek, girl | cinsiyet=kadın, boy | cinsiyet=lgbt, boy}}, and they will be very {{kelime, lovely | sweet}}. They will ask you a question that will surprise you.\n\nCome back again."
     },
     {
       "id": 77,
@@ -669,7 +745,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a premonition about your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}}, next month, you will hear about a dark-haired, medium-height school friend who narrowly escapes a minor motorcycle or bicycle accident. When your family hears this news, they will be a little worried and will want to take some precautions to prevent you from getting into a similar situation.\n\nCome back again."
     },
     {
       "id": 78,
@@ -679,7 +756,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_2}}, {{sayi,1,28}} days from now, you will hear about two school friends who have been dating for a couple of years having a very serious fight and breaking up. They are not bad people, both relatively popular, but they don't really interact with you. Strangely, you will be happy to hear this news.\n\nCome back again."
     },
     {
       "id": 79,
@@ -689,7 +767,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_6}}, in the next {{sayi,1,28}} days, it will be understood that a significant inheritance has been left to someone in your family. This situation will lead you to reconsider some of your plans regarding your education and future career, opening up new possibilities for you.\n\nCome back again."
     },
     {
       "id": 80,
@@ -699,7 +778,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_2}}, {{sayi,1,28}} days from now, you will lose an item that you use at school and love very much. You may feel very sad about this loss and blame someone you know for it. This item holds a high material or spiritual value.\n\nCome back again."
     },
     {
       "id": 81,
@@ -709,7 +789,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_4}}, the next {{sayi,1,28}} months, your day will be spent searching to buy the same outfit you saw on a friend. You'll really want to get it but won't find it at first. Then someone with a tattoo on their left arm will help you and you will acquire it.\n\nCome back again."
     },
     {
       "id": 82,
@@ -719,7 +800,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a premonition about your future.\n\nOn the {{sayi,1,28}}th of {{ay_5}}, you will encounter someone on social media. Seeing this person, whom you thought belonged to the past, will make your heart race. You will learn some new things about them that day and feel hopeful.\n\nCome back again."
     },
     {
       "id": 83,
@@ -729,7 +811,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the {{gun_7}} of the next {{sayi,1,28}} months, you will embark on a journey. The destination is by the seaside, and you will be accompanied by your loved ones. When you arrive there, you will encounter a surprise. As a result of this surprise that will materialize in your hand, you may consider extending your stay.\n\nCome back again."
     },
     {
       "id": 84,
@@ -739,7 +822,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nOn the date of the next {{sayi, 1, 28}}th {{ay_4}}, a friend of yours will call you for a very important matter. However, they won't be able to reach you because your phone will run out of charge and shut down. When you finally talk to them, you'll be very happy that you didn't miss out on what they have to say and what you need to do next.\n\nCome back soon."
     },
     {
       "id": 85,
@@ -749,7 +833,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_3}}, {{sayi,1,28}} days from now, you will go out to eat with a friend from school. While you are out, your friend will receive a call from someone unexpected, which will surprise them greatly. This situation will change some things for you.\n\nCome back again."
     },
     {
       "id": 86,
@@ -759,7 +844,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_7}} {{sayi,1,28}}, in the next {{ay_7}}, you will hear about problems starting between the parents of a close school friend whom you love and trust. They will share their situation with you, and this sharing will take the intimacy between you to a different level.\n\nCome back again."
     },
     {
       "id": 87,
@@ -769,7 +855,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_3}}, in the next {{sayi,1,28}} days, you will receive a DM from someone on social media who is added as a friend but whom you haven't talked much before. After a short conversation, they will have a bold request from you. Get ready to be excited...\n\nCome back again."
     },
     {
       "id": 88,
@@ -779,7 +866,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 30, 200}} date, I see you at the home of a bespectacled schoolmate. This person's last name is {{kelime, two | three | four}} syllables. They spill cologne on your hand. There is a freshness and relief on you. You seem to have successfully crossed a very important threshold in your school. Your friend, however, is not in as good condition as you.\n\nCome back again."
     },
     {
       "id": 89,
@@ -789,7 +877,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{randomtarih, 140, 900}}, you will reap the rewards of the long hours you have put into your education. After the events of that day, the school or new work environment you will be in the future will become clear. I see great happiness ahead.\n\nCome back again."
     },
     {
       "id": 90,
@@ -799,7 +888,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a premonition about your future.\n\nOn the date of {{ay_3}}, {{sayi,1,28}} next month, one of your elders will give you very important news regarding the future of your education. When you hear this news, you will initially feel hopeless but that elder will have a very good offer for you on the same matter.\n\nCome back again."
     },
     {
       "id": 91,
@@ -809,7 +899,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{sayi, 1, 28}}rd of {{ay_3}} {{yil_+3}}, you will have an overseas trip related to your education. You will go on this journey alone, but when you arrive in the country with the letter \"N\" or \"M\", someone from your family will be there to greet you. This fortunate journey will change your destiny.\n\nCome back again."
     },
     {
       "id": 92,
@@ -819,7 +910,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{ay_5}}, in the next {{sayi,1,28}} days, you will experience a very serious issue related to an important exam. This issue will not motivate you, but sometimes good comes from bad. A magnificent and new door will open for you spontaneously.\n\nCome back again."
     },
     {
       "id": 93,
@@ -829,7 +921,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nWhispers of beings...\n\nI have a premonition about your future.\n\nOn the date of {{ay_4}},  coming up in the next {{sayi,1,28}} days, you will have a falling out with a close friend at school. Not speaking to them will lead you to start talking to someone else whose name contains the letter \"{{harf}}.\" This new person will draw you towards their own shining star.\n\nCome back again."
     },
     {
       "id": 94,
@@ -839,7 +932,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a premonition about your future.\n\nOn the date of {{ay_6}} {{sayi,1,28}}, in the upcoming month, you will meet a friend who has just gotten their phone repaired outside of school. Together, you will make a critical plan for the summer of {{yil_1}}. Although this plan may seem like a dream, it will come true when the time is right and it will bring you great happiness.\n\nCome back again."
     },
     {
       "id": 95,
@@ -849,7 +943,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nWhispers of beings...\n\nI have a foresight about your future.\n\nIn the year {{yil_5}}, on the {{sayi,1,28}}th of {{ay_6}}, you will be at a makeshift restaurant on a mountainside, with some friends from your school or a course you attend. It's not a vacation, it feels more like part of your education. You are there for a purpose.\n\nCome back again."
     },
     {
       "id": 96,
@@ -859,7 +954,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a glimpse of your future.\n\nIn the year {{yil_3}}, on the {{sayi,1,28}}th of October, you will walk side by side with someone in a vast garden. It's a school garden, but more like a campus. You will feel very happy to be there. Could you have been accepted to a new and highly desired school?\n\nCome back again."
     },
     {
       "id": 97,
@@ -869,7 +965,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_5}} {{sayi,1,28}}, your partner will meet with someone you never wanted them to see. Although this situation may cause a temporary crisis between you, it will lead you to make some important decisions. These decisions will pave the way for a new and beautiful direction in your relationship after that date.\n\nCome back again."
     },
     {
       "id": 98,
@@ -879,7 +976,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}}, ahead of us, someone from your family elders will see something new that your partner has bought for you. This situation will raise some questions in their minds. For everything to be clear, your partner will need to do something new, take a step.\n\nCome back again."
     },
     {
       "id": 99,
@@ -889,7 +987,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi var"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a vision about your future.\n\nOn the date of {{ay_1}}, next {{sayi,1,28}} you will learn that your partner has a connection, a history with someone you have known for years but haven't seen. This situation will make you a bit anxious and a bit jealous. However, the new information you will receive will make you trust them even more.\n\nCome back again."
     },
     {
       "id": 100,
@@ -903,7 +1002,8 @@
           "degisken": "cinsiyet",
           "deger": "kadın"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a glimpse of your future.\n\nOn {{randomtarih, 10, 90}}, your boyfriend will come across a \"trace\" of another man on your cell phone. This trace could be a photo, a message, or a friend request on social media. This discovery will lead to a sudden conflict between you two, and repairing the trust will take some time.\n\nCome back again."
     },
     {
       "id": 101,
@@ -921,7 +1021,8 @@
           "degisken": "yasmin",
           "deger": "26"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nI see a ring that you will be wearing with your partner on {{randomtarih, 100, 450}}. It could be a promise or engagement, but not a written contract. It will take place in a not very crowded setting. There will be some unfamiliar people around. I predict you will experience one of the happiest days of your life.\n\nCome back again."
     },
     {
       "id": 102,
@@ -931,7 +1032,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a hunch about your future.\n\nOn the date of {{ay_2}} {{sayi,1,28}}, you will encounter someone you've never seen before. You will immediately like them and start looking for ways to communicate. On the same day, you will discover that you have a mutual acquaintance.\n\nCome back again."
     },
     {
       "id": 103,
@@ -941,7 +1043,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nEntities are whispering...\n\nI have a premonition about your future.\n\nYou will confront yourself emotionally on {{randomtarih, 120, 400}}. There will be a profound change, especially in your love life. You will have a conversation with a close friend in the morning and experience an enlightenment. You will give a chance to someone you've been hesitant about letting into your life for a while, and ultimately, you will be very happy with them.\n\nCome back again."
     },
     {
       "id": 104,
@@ -951,7 +1054,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nOn the date {{sayi,1,28}} of {{ay_2}}, you will receive a call from someone you had an emotional closeness with in the past years. Getting a call out of the blue might surprise you. When you find out the reason for the call, you might be a bit disappointed.\n\nCome back again."
     },
     {
       "id": 105,
@@ -961,7 +1065,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{ay_6}} {{sayi,1,28}}, someone who has recently broken up with their partner will send you a friend request. This person is apparently dating a close friend of yours. Their attempt to reach out to you out of the blue will raise a lot of question marks in your mind.\n\nCome back again."
     },
     {
       "id": 106,
@@ -971,7 +1076,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{ay_2}}, {{sayi,1,28}}, coming up, someone who you consider as a \"friend\" and who is feeling lonely like you, will invite you somewhere. You will turn them down for a different reason, which will lead them to speak against you.\n\nCome back again."
     },
     {
       "id": 107,
@@ -981,7 +1087,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe beings are whispering...\n\nI have a prediction about your future.\n\nOn the date of {{ay_6}} {{sayi,1,28}}, a petite, slightly chubby lady will cast a magical glance at you. Whatever crosses her mind will have a \"jinx-breaking\" effect on you and on that same day, you will receive a message from a potential love interest.\n\nCome back again."
     },
     {
       "id": 108,
@@ -991,7 +1098,8 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a premonition about your future.\n\nOn the date of {{ay_8}} {{sayi,1,28}}, in the next {{sayi,1,28}} days, you will encounter someone a few years older than you in a shopping mall. They will pass by you closely. This person knows you. Your glances will convey something to each other for a second, but you won't be able to express it. Were you perhaps an ex-lover with this person?\n\nCome back again."
     },
     {
       "id": 109,
@@ -1005,7 +1113,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a vision about your future.\n\nOn {{randomtarih, 30, 75}} date, you will receive a marriage proposal from someone with the letter \"{{harf}}\" that you went to the same school with. Even though you may not accept it for some reasons, the popularity of the person proposing to you will cause a lot of talk among your friends at school, and you will be surprised by this.\n\nCome back again."
     },
     {
       "id": 110,
@@ -1019,7 +1128,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction for your future.\n\nYou will receive some exciting news on {{randomtarih, 30, 120}}. Cupid has aimed his love arrows right at you two. There's a scent of love in the air! Your first date with that special someone will take place in the afternoon, marking the beginning of a loving and trusting relationship. A romantic journey awaits you, butterflies will flutter in your heart.\n\nCome back again."
     },
     {
       "id": 111,
@@ -1041,7 +1151,8 @@
           "degisken": "yasmax",
           "deger": "27"
         }
-      ]
+      ],
+      "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{randomtarih, 400, 1200}}, starting from the morning hours, an inexplicable rush will engulf you. And with a message coming from afar, you will receive a new job offer. Transforming your career plans into different dimensions in just one day, you will elevate your hopes to the peak once again. In a distant country, you will meet new people and encounter a different culture.\n\nCome back again."
     }
   ]
 }

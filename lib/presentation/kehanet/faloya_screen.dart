@@ -85,7 +85,10 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
 
     eligible.shuffle(Random());
     final selected = eligible.first;
-    _metin = selected['metin'] ?? '';
+    final isEn = ref.read(localeProvider) == 'en';
+    _metin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
+        ? selected['metin_en'] as String
+        : (selected['metin'] as String? ?? '');
     final profile = ref.read(userProfileProvider);
     _metin = VariableReplacer.replace(_metin, profile.toVariableMap());
     shown.add(selected['id'].toString());

@@ -325,6 +325,5 @@ class AppStrings {
   String get deleteSwipe       => _s('Sil', 'Delete');
 
   // ── Chat Widgets ───────────────────────────────────────────────────────
-  String get legalDisclosure   => _s('Yasal Bilgilendirme', 'Legal Disclosure');
   String get magnusWakingUp    => _s('Magnus canlanıyor...', 'Magnus is waking up...');
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/services/ad_service.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 import 'chat_controller.dart';
@@ -251,6 +253,10 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       onboardingComplete: true,
     );
     await ref.read(userProfileProvider.notifier).save(adminProfile);
+    // Admin modunda reklamlar kapalı
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('admin_ads_disabled', true);
+    AdService.instance.setAdsDisabled(true);
     if (mounted) context.go('/home');
   }
 

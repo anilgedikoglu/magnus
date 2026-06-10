@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
+import '../../core/services/ad_service.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -2675,132 +2676,182 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
       ),
       builder: (ctx) {
         bool resetDone = false;
-        return StatefulBuilder(
-        builder: (ctx, setPanelState) {
-          Future<void> doReset() async {
-            final prefs = await SharedPreferences.getInstance();
-            // ⚠️ YENİ GÜNLÜK FAL EKLENİNCE BURAYA DA EKLE
-            // Format: '<tur>_bugun_tarih'
-            await prefs.remove('motivasyon_bugun_tarih');
-            await prefs.remove('olumlama_bugun_tarih');   // limitsiz ama temizlik için
-            await prefs.remove('ozlusoz_bugun_tarih');
-            await prefs.remove('tarot_bugun_tarih');
-            await prefs.remove('kahve_bugun_tarih');
-            await prefs.remove('astroloji_bugun_tarih');
-            await prefs.remove('kaderkitabi_bugun_tarih');
-            await prefs.remove('dertortagi_bugun_tarih');
-            await prefs.remove('acigercekler_bugun_tarih');
-            await prefs.remove('iching_bugun_tarih');
-            await prefs.remove('japonfali_bugun_tarih');
-            await prefs.remove('kadercarki_bugun_tarih');
-            await prefs.remove('askuyumu_bugun_tarih');
-            // Numeroloji: tüm cache sıfırla (genel + yıl + bugün)
-            await prefs.remove('num_bugun_tarih');
-            await prefs.remove('num_bugun_metin');
-            await prefs.remove('num_bugun_unlock');
-            await prefs.remove('num_genel_done');
-            await prefs.remove('num_genel_metin');
-            await prefs.remove('num_genel_unlock');
-            final numYil = DateTime.now().year.toString();
-            await prefs.remove('num_yil_done');
-            await prefs.remove('num_yil_metin_$numYil');
-            await prefs.remove('num_yil_unlock_$numYil');
-            setPanelState(() => resetDone = true);
-          }
+        bool adsDisabled = AdService.instance.adsDisabled;
 
-          return Padding(
-            padding: const EdgeInsets.fromLTRB(20, 16, 20, 40),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Tutma çubuğu
-                Center(
-                  child: Container(
-                    width: 40, height: 4,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFFFCC00).withValues(alpha: 0.5),
-                      borderRadius: BorderRadius.circular(2),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 18),
-                // Başlık
-                const Row(
-                  children: [
-                    Icon(Icons.settings_rounded, color: Color(0xFFFFCC00), size: 18),
-                    SizedBox(width: 8),
-                    Text(
-                      'Admin Panel',
-                      style: TextStyle(
-                        color: Color(0xFFFFCC00),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1,
+        return StatefulBuilder(
+          builder: (ctx, setPanelState) {
+
+            // ── Günlük hakları sıfırla ─────────────────────────────────────
+            Future<void> doReset() async {
+              final prefs = await SharedPreferences.getInstance();
+              // ⚠️ YENİ GÜNLÜK FAL EKLENİNCE BURAYA DA EKLE
+              for (final key in const [
+                'motivasyon_bugun_tarih',
+                'olumlama_bugun_tarih',
+                'ozlusoz_bugun_tarih',
+                'tarot_bugun_tarih',
+                'kahve_bugun_tarih',
+                'astroloji_bugun_tarih',
+                'kaderkitabi_bugun_tarih',
+                'dertortagi_bugun_tarih',
+                'acigercekler_bugun_tarih',
+                'durugoru_bugun_tarih',
+                'iching_bugun_tarih',
+                'japonfali_bugun_tarih',
+                'kadercarki_bugun_tarih',
+                'askuyumu_bugun_tarih',
+              ]) {
+                await prefs.remove(key);
+              }
+              // Numeroloji: tüm cache sıfırla
+              for (final key in const [
+                'num_bugun_tarih', 'num_bugun_metin', 'num_bugun_unlock',
+                'num_genel_done',  'num_genel_metin', 'num_genel_unlock',
+                'num_yil_done',
+              ]) {
+                await prefs.remove(key);
+              }
+              final yr = DateTime.now().year.toString();
+              await prefs.remove('num_yil_metin_$yr');
+              await prefs.remove('num_yil_unlock_$yr');
+              setPanelState(() => resetDone = true);
+            }
+
+            // ── Reklam toggle ──────────────────────────────────────────────
+            Future<void> toggleAds(bool value) async {
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.setBool('admin_ads_disabled', value);
+              AdService.instance.setAdsDisabled(value);
+              setPanelState(() => adsDisabled = value);
+            }
+
+            return Padding(
+              padding: const EdgeInsets.fromLTRB(20, 16, 20, 40),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Tutma çubuğu
+                  Center(
+                    child: Container(
+                      width: 40, height: 4,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFCC00).withValues(alpha: 0.5),
+                        borderRadius: BorderRadius.circular(2),
                       ),
                     ),
-                  ],
-                ),
-                const SizedBox(height: 20),
-                // Günlük Hakları Sıfırla butonu
-                GestureDetector(
-                  onTap: resetDone ? null : doReset,
-                  child: Container(
+                  ),
+                  const SizedBox(height: 18),
+                  // Başlık
+                  const Row(
+                    children: [
+                      Icon(Icons.settings_rounded, color: Color(0xFFFFCC00), size: 18),
+                      SizedBox(width: 8),
+                      Text(
+                        'Admin Panel',
+                        style: TextStyle(
+                          color: Color(0xFFFFCC00),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+
+                  // ── Günlük Hakları Sıfırla ─────────────────────────────
+                  GestureDetector(
+                    onTap: resetDone ? null : doReset,
+                    child: Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+                      decoration: BoxDecoration(
+                        color: resetDone
+                            ? const Color(0xFF003322)
+                            : const Color(0xFF00CCFF).withValues(alpha: 0.08),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                          color: resetDone
+                              ? const Color(0xFF00FF88).withValues(alpha: 0.6)
+                              : const Color(0xFF00CCFF).withValues(alpha: 0.5),
+                          width: 1.2,
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          resetDone
+                              ? const Icon(Icons.check_circle_outline_rounded,
+                                  color: Color(0xFF00FF88), size: 20)
+                              : const ElegantHourglass(size: 20, color: Color(0xFF00CCFF)),
+                          const SizedBox(width: 12),
+                          Text(
+                            resetDone ? 'Günlük haklar sıfırlandı ✓' : 'Günlük Hakları Sıfırla',
+                            style: TextStyle(
+                              color: resetDone ? const Color(0xFF00FF88) : Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+
+                  // ── Reklamlar toggle ───────────────────────────────────
+                  Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                     decoration: BoxDecoration(
-                      color: resetDone
-                          ? const Color(0xFF003322)
-                          : const Color(0xFF00CCFF).withValues(alpha: 0.08),
+                      color: const Color(0xFFFFCC00).withValues(alpha: 0.06),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: resetDone
-                            ? const Color(0xFF00FF88).withValues(alpha: 0.6)
-                            : const Color(0xFF00CCFF).withValues(alpha: 0.5),
+                        color: const Color(0xFFFFCC00).withValues(alpha: 0.35),
                         width: 1.2,
                       ),
                     ),
                     child: Row(
                       children: [
-                        resetDone
-                            ? const Icon(Icons.check_circle_outline_rounded,
-                                color: Color(0xFF00FF88), size: 20)
-                            : const ElegantHourglass(size: 20, color: Color(0xFF00CCFF)),
+                        const Icon(Icons.ads_click_rounded,
+                            color: Color(0xFFFFCC00), size: 18),
                         const SizedBox(width: 12),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              resetDone
-                                  ? 'Günlük haklar sıfırlandı ✓'
-                                  : 'Günlük Hakları Sıfırla',
-                              style: TextStyle(
-                                color: resetDone
-                                    ? const Color(0xFF00FF88)
-                                    : Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                              ),
+                        const Expanded(
+                          child: Text(
+                            'Reklamlar',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
                             ),
-                            if (!resetDone)
-                              const Text(
-                                'Tarot, kahve, I-Ching, Japon Falı, Kader Çarkı, Aşk Uyumu ve diğerleri',
-                                style: TextStyle(
-                                  color: Colors.white38,
-                                  fontSize: 11,
-                                ),
-                              ),
-                          ],
+                          ),
+                        ),
+                        Transform.scale(
+                          scale: 0.85,
+                          child: Switch(
+                            value: !adsDisabled,
+                            onChanged: (v) => toggleAds(!v),
+                            activeColor: const Color(0xFFFFCC00),
+                            inactiveThumbColor: Colors.white38,
+                            inactiveTrackColor: Colors.white12,
+                          ),
+                        ),
+                        Text(
+                          adsDisabled ? 'Kapalı' : 'Açık',
+                          style: TextStyle(
+                            color: adsDisabled ? Colors.white38 : const Color(0xFFFFCC00),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ],
                     ),
                   ),
-                ),
-                const SizedBox(height: 12),
-              ],
-            ),
-          );
-        },
+                  const SizedBox(height: 8),
+                ],
+              ),
+            );
+          },
         );
       },
     );

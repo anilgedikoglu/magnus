@@ -2614,9 +2614,6 @@ Magnus, yalnızca uygulamanın işlevselliği için zorunlu olan verileri cihaz�
 
 Ayarlar ekranından "Profili Sıfırla" seçeneğini kullanarak tüm kişisel verilerinizi kalıcı olarak silebilirsiniz. Uygulamayı cihazınızdan kaldırmanız durumunda tüm yerel veriler otomatik olarak silinir.
 
-📬 İletişim
-
-Gizlilikle ilgili sorularınız için: futuristicapps1@gmail.com
 ''';
 
   static const _kAcikRizaMetni = '''
@@ -2624,7 +2621,7 @@ Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında aşağıdaki hususları 
 
 📌 Veri Sorumlusu
 
-Magnus uygulaması (Futuristic Apps) — futuristicapps1@gmail.com
+Magnus uygulaması (Futuristic Apps)
 
 📋 İşlenen Kişisel Veriler
 

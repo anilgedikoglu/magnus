@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -816,11 +817,28 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
 
   Future<void> _pickImage(ImageSource source) async {
     final photo = await ImagePicker().pickImage(source: source, imageQuality: 85);
-    if (photo != null && mounted) {
-      setState(() {
-        _customPath = photo.path;
-        _selectedIndex = null;
-      });
+    if (photo == null || !mounted) return;
+
+    // Fotoğrafı kalıcı uygulama klasörüne kopyala
+    // (geçici cache yolu uygulama restart sonrası silinebilir)
+    try {
+      final appDir = await getApplicationDocumentsDirectory();
+      final fileName = 'profile_${DateTime.now().millisecondsSinceEpoch}.jpg';
+      final savedFile = await File(photo.path).copy('${appDir.path}/$fileName');
+      if (mounted) {
+        setState(() {
+          _customPath = savedFile.path;
+          _selectedIndex = null;
+        });
+      }
+    } catch (_) {
+      // Kopyalama başarısız olursa orijinal yolu kullan
+      if (mounted) {
+        setState(() {
+          _customPath = photo.path;
+          _selectedIndex = null;
+        });
+      }
     }
   }
 
@@ -2154,6 +2172,7 @@ class SettingsScreen extends ConsumerWidget {
           final p = ref.read(userProfileProvider);
           await ref.read(userProfileProvider.notifier).save(UserProfile(
             name: name.isEmpty ? p.name : name,
+            lastName: p.lastName,
             age: p.age,
             gender: p.gender,
             job: p.job,

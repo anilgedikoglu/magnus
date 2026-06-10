@@ -1128,6 +1128,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     try {
       final profile = ref.read(userProfileProvider);
       final vars = profile.toVariableMap();
+      final isEn = ref.read(localeProvider) == 'en';
       final prefs = await SharedPreferences.getInstance();
       final raw = await rootBundle.loadString('assets/data/karsilamalar.json');
       final data = jsonDecode(raw) as Map<String, dynamic>;
@@ -1141,8 +1142,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       final ilkGirisDone = prefs.getBool('ilk_giris_yapildi') ?? false;
       if (!ilkGirisDone) {
         await prefs.setBool('ilk_giris_yapildi', true);
-        metin = data['ilk_giris'] as String? ??
-            'Ve işte karşındayım! Hoş geldin {{isim}}.';
+        metin = (isEn ? data['ilk_giris_en'] as String? : null) ??
+            data['ilk_giris'] as String? ??
+            (isEn ? 'And here I am! Welcome {{isim}}.' : 'Ve işte karşındayım! Hoş geldin {{isim}}.');
         metin = VariableReplacer.replace(metin, vars);
         if (!mounted) return;
         setState(() => _selamlama = metin);
@@ -1193,7 +1195,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           }
         }
         if (ozelEslesme != null) {
-          metin = VariableReplacer.replace(ozelEslesme['metin'] as String, vars);
+          final ozMetin = (isEn ? ozelEslesme['metin_en'] as String? : null) ??
+              ozelEslesme['metin'] as String;
+          metin = VariableReplacer.replace(ozMetin, vars);
           if (!mounted) return;
           setState(() => _selamlama = metin);
           return;
@@ -1222,8 +1226,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       }
 
       metin = secimHavuzu.isNotEmpty
-          ? _noRepeatSec(prefs, noRepeatKey, secimHavuzu)
-          : (profile.name.isNotEmpty ? 'Hoş geldin ${profile.name}!' : 'Hoş geldin!');
+          ? _noRepeatSec(prefs, noRepeatKey, secimHavuzu, isEn)
+          : (profile.name.isNotEmpty
+              ? (isEn ? 'Welcome ${profile.name}!' : 'Hoş geldin ${profile.name}!')
+              : (isEn ? 'Welcome!' : 'Hoş geldin!'));
 
       metin = VariableReplacer.replace(metin, vars);
       if (!mounted) return;
@@ -1237,7 +1243,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   /// No-repeat seçim: havuzdaki tüm metinler gösterilmeden aynısı tekrar gelmez.
   String _noRepeatSec(SharedPreferences prefs, String key,
-      List<Map<String, dynamic>> havuz) {
+      List<Map<String, dynamic>> havuz, [bool isEn = false]) {
     final shown = prefs.getStringList(key) ?? [];
     final allIds = havuz.map((e) => '${e['id']}').toList();
 
@@ -1264,7 +1270,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         : updated;
     prefs.setStringList(key, trimmed);
 
-    return pick['metin'] as String;
+    return (isEn ? pick['metin_en'] as String? : null) ?? pick['metin'] as String;
   }
 }
 

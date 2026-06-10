@@ -142,15 +142,26 @@ function normKey(s) {
     .toLowerCase();
 }
 
+// Bir klasordeki tum .asset dosyalarini (opsiyonel recursive) topla.
+function listAssets(folder, recursive) {
+  const out = [];
+  if (!fs.existsSync(folder)) return out;
+  for (const e of fs.readdirSync(folder, { withFileTypes: true })) {
+    const fp = folder + '/' + e.name;
+    if (e.isDirectory()) { if (recursive) out.push(...listAssets(fp, true)); }
+    else if (e.name.endsWith('.asset')) out.push(fp);
+  }
+  return out;
+}
+
 // Klasor(ler)deki TUM asset'lerden TR->EN haritasi olustur.
-function buildTrToEnMap(folders) {
+function buildTrToEnMap(folders, recursive) {
   const list = Array.isArray(folders) ? folders : [folders];
   const map = new Map();
   for (const folder of list) {
     if (!fs.existsSync(folder)) { console.log('UYARI klasor yok:', folder); continue; }
-    const files = fs.readdirSync(folder).filter(f => f.endsWith('.asset'));
-    for (const f of files) {
-      const pairs = readPairsFromAsset(folder + '/' + f);
+    for (const fp of listAssets(folder, recursive)) {
+      const pairs = readPairsFromAsset(fp);
       for (const p of pairs) {
         if (!p.tr) continue;
         const k = normKey(p.tr);
@@ -174,6 +185,7 @@ const MAPPINGS = {
   iching:        { json: 'iching.json',        arrayKey: 'iching',        folder: ODB + '/AnaMenu2/IChing/Metinler' },
   kaderkitabi:   { json: 'kaderkitabi.json',   arrayKey: 'kaderkitabi',   folder: ODB + '/AnaMenu2/KaderKitabı/Tefeul' },
   acigercekler:  { json: 'acigercekler.json',  arrayKey: 'acigercekler',  folders: [ODB + '/AnaMenu3/AciGercekler/AciGecrekler', ODB + '/AnaMenu3/AciGercekler/AciGercekCikis'] },
+  karsilamalar:  { json: 'karsilamalar.json',  arrayKeys: ['karsilamalar', 'biliyormuydun', 'ozel_gunler'], singleKeys: ['ilk_giris'], folder: ODB + '/OzelSohbetler/Karsilamalar', recursive: true },
 };
 
 function main() {
@@ -186,30 +198,41 @@ function main() {
   const cfg = MAPPINGS[key];
   const jsonPath = DATA + '/' + cfg.json;
   const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
-  const arr = data[cfg.arrayKey];
-  if (!Array.isArray(arr)) { console.log('Dizi bulunamadi:', cfg.arrayKey); process.exit(1); }
 
-  const map = buildTrToEnMap(cfg.folders || cfg.folder);
+  const map = buildTrToEnMap(cfg.folders || cfg.folder, cfg.recursive);
   console.log('Kaynak TR->EN harita boyutu:', map.size);
 
-  let matched = 0, missing = 0;
-  const missingIds = [];
-  for (const entry of arr) {
-    const k = normKey(entry.metin);
-    const en = map.get(k);
-    if (en && en.length > 1) {
-      entry.metin_en = en;
-      matched++;
-    } else {
-      entry.metin_en = entry.metin; // fallback TR
-      missing++;
-      missingIds.push(entry.id);
+  const arrayKeys = cfg.arrayKeys || [cfg.arrayKey];
+  const metinField = cfg.metinField || 'metin';
+  let totalMatched = 0, totalMissing = 0, totalCount = 0;
+
+  for (const ak of arrayKeys) {
+    const arr = data[ak];
+    if (!Array.isArray(arr)) { console.log('  Dizi yok, atlandi:', ak); continue; }
+    let matched = 0, missing = 0;
+    for (const entry of arr) {
+      const tr = entry[metinField];
+      if (typeof tr !== 'string') continue;
+      const en = map.get(normKey(tr));
+      if (en && en.length > 1) { entry[metinField + '_en'] = en; matched++; }
+      else { entry[metinField + '_en'] = tr; missing++; }
+    }
+    console.log(`  [${ak}] ${arr.length} | EN: ${matched} | eksik: ${missing}`);
+    totalMatched += matched; totalMissing += missing; totalCount += arr.length;
+  }
+
+  // Tek string alanlar (orn. ilk_giris)
+  if (cfg.singleKeys) {
+    for (const sk of cfg.singleKeys) {
+      if (typeof data[sk] === 'string') {
+        const en = map.get(normKey(data[sk]));
+        data[sk + '_en'] = en && en.length > 1 ? en : data[sk];
+      }
     }
   }
 
   fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), 'utf8');
-  console.log(`${cfg.json}: ${arr.length} girdi | EN eslesen: ${matched} | eksik(TR fallback): ${missing}`);
-  if (missingIds.length > 0 && missingIds.length <= 40) console.log('Eksik id:', missingIds.join(','));
+  console.log(`${cfg.json}: toplam ${totalCount} | EN eslesen: ${totalMatched} | eksik(TR fallback): ${totalMissing}`);
 }
 
 main();

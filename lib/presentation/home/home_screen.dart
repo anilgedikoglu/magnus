@@ -2055,17 +2055,10 @@ class _ArcProgressPainter extends CustomPainter {
     required this.strokeWidth,
   });
 
-  // Saat yönünde: Koyu Mavi → Camgöbeği → Mor → Pembe → Kırmızı → Sarımsı Beyaz → Camgöbeği
+  // Saat yönünde: Sarı → Turuncu → Kırmızı → Pembe → Mor  (12'den başlar, 12'de biter)
+  // 12→3 arası eski renkler kaldırıldı; sarı artık arc'ın ilk noktasında çıkar.
   static const _rainbow = [
-    Color(0xFF8A2EFF), // mor (12)
-    Color(0xFFBB28E8), // mor→pembe
-    Color(0xFFFF2EC7), // pembe
-    Color(0xFFFF3260), // pembe→kırmızı
-    Color(0xFFFF3B30), // kırmızı
-    Color(0xFFFF6820), // kırmızı→turuncu
-    Color(0xFFFF9A10), // turuncu
-    Color(0xFFFFCC00), // turuncu→sarı
-    Color(0xFFFFE800), // sarı (6)
+    Color(0xFFFFE800), // sarı       — arc başlangıcı (12)
     Color(0xFFFFCC00), // sarı→turuncu
     Color(0xFFFF9A10), // turuncu
     Color(0xFFFF6820), // turuncu→kırmızı
@@ -2073,7 +2066,7 @@ class _ArcProgressPainter extends CustomPainter {
     Color(0xFFFF3260), // kırmızı→pembe
     Color(0xFFFF2EC7), // pembe
     Color(0xFFBB28E8), // pembe→mor
-    Color(0xFF8A2EFF), // mor (12 — seamless kapanış)
+    Color(0xFF8A2EFF), // mor        — seamless kapanış (12)
   ];
 
   @override
@@ -2099,9 +2092,9 @@ class _ArcProgressPainter extends CustomPainter {
       if (gradientColors == null) {
         arcPaint.color = color;
       } else {
-        // Gradient 12'den başlasın: SweepGradient 3 o'clock = 0, bu yüzden
-        // startAngle'ı -π/2 geri alıyoruz → -π/2 - π/2 = -π → 12 o'clock
-        const gradStart = startAngle - 1.5707963; // -π
+        // Gradient arc ile aynı noktadan başlar: 12 o'clock = -π/2
+        // SweepGradient 3 o'clock = 0; -π/2 → 12 o'clock
+        const gradStart = startAngle; // -π/2 = 12 o'clock
         arcPaint.shader = SweepGradient(
           center: Alignment.center,
           startAngle: gradStart,

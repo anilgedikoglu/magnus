@@ -213,6 +213,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
 
   @override
   Widget build(BuildContext context) {
+    final s = ref.watch(l10nProvider);
     return Scaffold(
       backgroundColor: const Color(0xFF0A0718),
       body: SafeArea(
@@ -270,9 +271,9 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        const Text(
-                          'Bir soru seç:',
-                          style: TextStyle(color: Colors.white70, fontSize: 16),
+                        Text(
+                          s.selectQuestion,
+                          style: const TextStyle(color: Colors.white70, fontSize: 16),
                         ),
                         const SizedBox(height: 14),
                         for (int i = 0; i < _sorular.length; i++) ...[
@@ -312,10 +313,10 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Text(
-                        'Maganda odaklanıyor...',
+                      Text(
+                        s.magandaFocusing,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white70,
                           fontSize: 16,
                           letterSpacing: 0.3,
@@ -374,10 +375,10 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                         width: 1.5,
                       ),
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
-                        'Kapat',
-                        style: TextStyle(
+                        s.close,
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,

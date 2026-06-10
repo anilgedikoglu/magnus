@@ -291,4 +291,36 @@ class AppStrings {
   String get adminPanel        => _s('Yönetici Paneli', 'Admin Panel');
   String get resetDailyLimits  => _s('Günlük Hakları Sıfırla', 'Reset Daily Limits');
   String get resetDone         => _s('Sıfırlandı!', 'Reset!');
+
+  // ── Tarot Screen ─────────────────────────────────────────────────────
+  String get tarotSelectCards  => _s('Kartı yukarı sürükleyerek seç', 'Drag a card up to select');
+  String get tarotAllSelected  => _s('Harika! Kartların seçildi ✦', 'Great! Your cards are selected ✦');
+  String get tarotSendReading  => _s('Yoruma Gönder ✨', 'Send for Reading ✨');
+  String get tarotPickCards    => _s('3 Kart Seç', 'Pick 3 Cards');
+  String get tarotSlotPast     => _s('Geçmiş', 'Past');
+  String get tarotSlotPresent  => _s('Şimdi', 'Present');
+  String get tarotSlotFuture   => _s('Gelecek', 'Future');
+  String get errorLabel        => _s('Hata', 'Error');
+
+  // ── Faloya / Maganda / Character Screens ──────────────────────────────
+  String get faloyaFocusing    => _s('Faloya geleceğine odaklanıyor...', 'Faloya is focusing on your future...');
+  String get magandaFocusing   => _s('Maganda odaklanıyor...', 'Maganda is focusing...');
+  String get selectQuestion    => _s('Bir soru seç:', 'Choose a question:');
+
+  // ── Astrology Legacy Screen ──────────────────────────────────────────
+  String get zodiacReading     => _s('Burç Yorumu', 'Zodiac Reading');
+  String get dailyAstrologyReading => _s('Günlük Astroloji Yorumu', 'Daily Astrology Reading');
+  String get howItWorks        => _s('NASIL ÇALIŞIR?', 'HOW IT WORKS');
+  String get getMyReading      => _s('Yorumumu Al ✨', 'Get My Reading ✨');
+  String get needBirthDateInfo => _s('Burç yorumu için profilinde doğum tarihin olmalı.', 'You need a birth date in your profile for a zodiac reading.');
+  String get astroInfo1        => _s('Burç enerjine göre kişiselleştirilmiş günlük yorum alırsın.', 'Get a personalized daily reading based on your zodiac energy.');
+  String get astroInfo2        => _s('Yorum gelen kutuna düşer, istediğin zaman okuyabilirsin.', 'Your reading goes to your inbox, read it whenever you want.');
+  String get astroInfo3        => _s('Her yorumun farklı: aşk, kariyer, enerji ve daha fazlası.', 'Every reading is different: love, career, energy and more.');
+
+  // ── Inbox Item Card ────────────────────────────────────────────────────
+  String get beingInterpreted  => _s('Falın yorumlanıyor…', 'Your reading is being interpreted…');
+  String get todayLabel        => _s('Bugün', 'Today');
+  String get yesterdayLabel    => _s('Dün', 'Yesterday');
+  String get daysAgo           => _s('gün önce', 'days ago');
+  String get deleteSwipe       => _s('Sil', 'Delete');
 }

@@ -1,11 +1,14 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../data/models/inbox_item.dart';
+import '../../../core/l10n/app_strings.dart';
+import '../../../data/providers.dart';
 
-class InboxItemCard extends StatelessWidget {
+class InboxItemCard extends ConsumerWidget {
   final InboxItem item;
   final VoidCallback onTap;
   final VoidCallback onDismissed;
@@ -18,7 +21,8 @@ class InboxItemCard extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
     final locked = item.isLocked;
     return Dismissible(
       key: Key(item.id),
@@ -28,13 +32,13 @@ class InboxItemCard extends StatelessWidget {
         alignment: Alignment.centerRight,
         padding: const EdgeInsets.only(right: 24),
         color: AppColors.inboxDeleteBackground,
-        child: const Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.delete_outline_rounded, color: Colors.white, size: 24),
-            SizedBox(height: 4),
-            Text('Sil',
-                style: TextStyle(
+            const Icon(Icons.delete_outline_rounded, color: Colors.white, size: 24),
+            const SizedBox(height: 4),
+            Text(s.deleteSwipe,
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 11,
                   fontFamily: 'ChixaDemiBold',
@@ -94,7 +98,7 @@ class InboxItemCard extends StatelessWidget {
                     const SizedBox(height: 4),
                     Text(
                       locked
-                          ? 'Falın yorumlanıyor…'
+                          ? s.beingInterpreted
                           : item.previewText,
                       style: AppTextStyles.inboxDescription.copyWith(
                         color: locked
@@ -110,7 +114,7 @@ class InboxItemCard extends StatelessWidget {
                     if (locked) ...[
                       const SizedBox(height: 4),
                       Text(
-                        _formatDate(item.date),
+                        _formatDate(item.date, s),
                         style: AppTextStyles.inboxMeta,
                       ),
                     ],
@@ -134,14 +138,14 @@ class InboxItemCard extends StatelessWidget {
     );
   }
 
-  String _formatDate(String isoDate) {
+  String _formatDate(String isoDate, AppStrings s) {
     try {
       final dt = DateTime.parse(isoDate);
       final now = DateTime.now();
       final diff = now.difference(dt);
-      if (diff.inDays == 0) return 'Bugün';
-      if (diff.inDays == 1) return 'Dün';
-      if (diff.inDays < 7) return '${diff.inDays} gün önce';
+      if (diff.inDays == 0) return s.todayLabel;
+      if (diff.inDays == 1) return s.yesterdayLabel;
+      if (diff.inDays < 7) return '${diff.inDays} ${s.daysAgo}';
       return '${dt.day}.${dt.month}.${dt.year}';
     } catch (_) {
       return '';

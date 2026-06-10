@@ -100,6 +100,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       photoPath2: _photos[1],
       photoPath3: _photos[2],
       falKonusu: _falKonusu ?? 'genel',
+      locale: ref.read(localeProvider),
     ).then((item) => inboxNotifier.addItem(item)).catchError((_) {});
 
     // 4 saniye fincanın altında kum saati göster

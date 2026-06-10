@@ -192,6 +192,12 @@ const MAPPINGS = {
   durugoru_bno:  { json: 'durugoru_bno.json',   arrayKey: 'durugoru_bno', folder: ODB + '/AnaMenu1/Kehanet/Durugoru', recursive: true },
   durugoru_gno:  { json: 'durugoru_gno.json',   arrayKey: 'durugoru_gno', folder: ODB + '/AnaMenu1/Kehanet/Durugoru', recursive: true },
   durugoru_yno:  { json: 'durugoru_yno.json',   arrayKey: 'durugoru_yno', folder: ODB + '/AnaMenu1/Kehanet/Durugoru', recursive: true },
+  kahve_giris:      { json: 'kahve_giris.json',      arrayKey: 'girisler',     folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
+  kahve_akarsilama: { json: 'kahve_akarsilama.json', arrayKey: 'karsilamalar', folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
+  kahve_baglama:    { json: 'kahve_baglama.json',    arrayKey: 'baglamalar',   folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
+  kahve_gelisme:    { json: 'kahve_gelisme.json',    arrayKey: 'gelismeler',   folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
+  kahve_sonuc:      { json: 'kahve_sonuc.json',      arrayKey: 'sonuclar',     folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
+  kahve_ugurlama:   { json: 'kahve_ugurlama.json',   arrayKey: 'ugurlamalar',  folder: ODB + '/AnaMenu1/KahveFali', recursive: true },
 };
 
 function main() {

@@ -186,8 +186,10 @@ class FortuneService {
     String? photoPath2,
     String? photoPath3,
     String falKonusu = 'genel', // 'ask' | 'kariyer' | 'saglik' | 'genel'
+    String locale = 'tr',
   }) async {
     await _initKahve();
+    final isEn = locale == 'en';
     final vars = profile.toVariableMap();
     final prefs = await SharedPreferences.getInstance();
 
@@ -250,7 +252,10 @@ class FortuneService {
       final chosen = available.first as Map<String, dynamic>;
       await prefs.setStringList(shownKey, [...shownIds, '${chosen['id']}']);
 
-      final metin = VariableReplacer.replace(chosen['metin'] as String, vars);
+      final chosenMetin = (isEn && (chosen['metin_en'] as String?)?.isNotEmpty == true)
+          ? chosen['metin_en'] as String
+          : chosen['metin'] as String;
+      final metin = VariableReplacer.replace(chosenMetin, vars);
       if (buffer.isNotEmpty) buffer.write('\n\n');
       buffer.write(metin);
     }
@@ -262,7 +267,7 @@ class FortuneService {
 
     return InboxItem(
       id: _uuid.v4(),
-      title: 'Kahve Falın Hazır',
+      title: isEn ? 'Your Coffee Reading is Ready' : 'Kahve Falın Hazır',
       text: buffer.toString().trim(),
       date: now.toIso8601String(),
       fortuneTypeKey: 'coffee',

@@ -1386,12 +1386,15 @@ class _MenuCardState extends State<_MenuCard>
             child: Stack(
               fit: StackFit.expand,
               children: [
-                Image.asset(
-                  widget.item.imagePath,
-                  fit: BoxFit.cover,
-                  filterQuality: FilterQuality.high,
-                  errorBuilder: (_, __, ___) =>
-                      Container(color: const Color(0xFF1A1040)),
+                Opacity(
+                  opacity: widget.item.credits < 0 ? 0.15 : 1.0,
+                  child: Image.asset(
+                    widget.item.imagePath,
+                    fit: BoxFit.cover,
+                    filterQuality: FilterQuality.high,
+                    errorBuilder: (_, __, ___) =>
+                        Container(color: const Color(0xFF1A1040)),
+                  ),
                 ),
                 // Üst karartma
                 Positioned(

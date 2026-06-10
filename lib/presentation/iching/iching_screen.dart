@@ -96,7 +96,11 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
     gosterilen.add('${secilen['id']}');
     await prefs.setStringList(_prefKeyGosterilen, gosterilen);
 
-    final metin = VariableReplacer.replace(secilen['metin'] as String, vars);
+    final isEn = ref.read(localeProvider) == 'en';
+    final secilenMetin = (isEn && (secilen['metin_en'] as String?)?.isNotEmpty == true)
+        ? secilen['metin_en'] as String
+        : secilen['metin'] as String;
+    final metin = VariableReplacer.replace(secilenMetin, vars);
 
     // 2 dakika sonra açılır
     final now      = DateTime.now();

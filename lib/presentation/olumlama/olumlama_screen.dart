@@ -33,12 +33,15 @@ import '../../data/providers.dart';
 class _OlumlamaEntry {
   final int id;
   final String metin;
+  final String metinEn;
   final List<Map<String, String>> kosullar;
   const _OlumlamaEntry({
     required this.id,
     required this.metin,
+    this.metinEn = '',
     required this.kosullar,
   });
+  String metinFor(bool isEn) => (isEn && metinEn.isNotEmpty) ? metinEn : metin;
 }
 
 // ─── Ana ekran ────────────────────────────────────────────────────────────────
@@ -150,6 +153,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
       return _OlumlamaEntry(
         id: m['id'] as int,
         metin: m['metin'] as String,
+        metinEn: (m['metin_en'] as String?) ?? '',
         kosullar: (m['kosullar'] as List<dynamic>)
             .map((k) => Map<String, String>.from(k as Map))
             .toList(),
@@ -427,7 +431,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
 
     final entry = _entries[_index];
     final metin = VariableReplacer.replace(
-      entry.metin,
+      entry.metinFor(ref.watch(localeProvider) == 'en'),
       ref.read(userProfileProvider).toVariableMap(),
     );
 

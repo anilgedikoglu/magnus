@@ -109,9 +109,13 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
     kalan.shuffle(Random());
     final secilen = kalan.first;
 
-    // {{isim}} vb. değiştir
+    // {{isim}} vb. değiştir (dile göre metin_en / metin)
+    final isEn = ref.read(localeProvider) == 'en';
+    final secilenMetin = (isEn && (secilen['metin_en'] as String?)?.isNotEmpty == true)
+        ? secilen['metin_en'] as String
+        : secilen['metin'] as String;
     final metin = VariableReplacer.replace(
-      secilen['metin'] as String,
+      secilenMetin,
       profile.toVariableMap(),
     );
 

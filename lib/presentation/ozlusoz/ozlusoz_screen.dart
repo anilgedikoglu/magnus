@@ -18,8 +18,10 @@ import '../../data/providers.dart';
 class _OzluSozEntry {
   final int id;
   final String metin;
+  final String metinEn;
   final String yazar;
-  const _OzluSozEntry({required this.id, required this.metin, required this.yazar});
+  const _OzluSozEntry({required this.id, required this.metin, this.metinEn = '', required this.yazar});
+  String metinFor(bool isEn) => (isEn && metinEn.isNotEmpty) ? metinEn : metin;
 }
 
 class OzluSozScreen extends ConsumerStatefulWidget {
@@ -81,6 +83,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
       return _OzluSozEntry(
         id:    m['id'] as int,
         metin: m['metin'] as String,
+        metinEn: (m['metin_en'] as String?) ?? '',
         yazar: (m['yazar'] as String?) ?? '',
       );
     }).toList();
@@ -250,7 +253,8 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
 
     final entry  = _sessionEntries[_index];
     final metin  = VariableReplacer.replace(
-        entry.metin, ref.read(userProfileProvider).toVariableMap());
+        entry.metinFor(ref.watch(localeProvider) == 'en'),
+        ref.read(userProfileProvider).toVariableMap());
     final dir    = _direction;
     final curKey = _limitVisible ? const ValueKey('limit') : ValueKey(_index);
     const accent = Color(0xFFBB88FF);

@@ -30,7 +30,9 @@ import '../../data/providers.dart';
 class _MotivasyonEntry {
   final int id;
   final String metin;
-  const _MotivasyonEntry({required this.id, required this.metin});
+  final String metinEn;
+  const _MotivasyonEntry({required this.id, required this.metin, this.metinEn = ''});
+  String metinFor(bool isEn) => (isEn && metinEn.isNotEmpty) ? metinEn : metin;
 }
 
 class MotivationScreen extends ConsumerStatefulWidget {
@@ -92,6 +94,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
         .map((e) => _MotivasyonEntry(
               id: (e as Map<String, dynamic>)['id'] as int,
               metin: e['metin'] as String,
+              metinEn: (e['metin_en'] as String?) ?? '',
             ))
         .toList();
 
@@ -202,7 +205,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
 
     final item = InboxItem(
       id: const Uuid().v4(),
-      title: 'Motivasyon',
+      title: ref.read(l10nProvider).motivation,
       text: text,
       date: DateTime.now().toIso8601String(),
       fortuneTypeKey: 'motivation',
@@ -232,7 +235,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
 
     final s       = ref.watch(l10nProvider);
     final profile = ref.read(userProfileProvider);
-    final text    = VariableReplacer.replace(entry.metin, profile.toVariableMap());
+    final text    = VariableReplacer.replace(entry.metinFor(s.isEn), profile.toVariableMap());
 
     return Column(
       children: [

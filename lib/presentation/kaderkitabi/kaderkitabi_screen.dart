@@ -41,8 +41,10 @@ class _FastCoverCurve extends Curve {
 class _KitapEntry {
   final int id;
   final String metin;
+  final String metinEn;
   final List<Map<String, String>> kosullar;
-  const _KitapEntry({required this.id, required this.metin, required this.kosullar});
+  const _KitapEntry({required this.id, required this.metin, this.metinEn = '', required this.kosullar});
+  String metinFor(bool isEn) => (isEn && metinEn.isNotEmpty) ? metinEn : metin;
 }
 
 // ─── Ana ekran ───────────────────────────────────────────────────────────────
@@ -154,6 +156,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
       return _KitapEntry(
         id: m['id'] as int,
         metin: m['metin'] as String,
+        metinEn: (m['metin_en'] as String?) ?? '',
         kosullar: (m['kosullar'] as List)
             .map((k) => Map<String, String>.from(k as Map))
             .toList(),
@@ -188,9 +191,10 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
     await prefs.setString(_prefKeyBugunTarih, bugunStr);
     await prefs.setInt(_prefKeyBugunId, secilen.id);
 
-    // || işaretlerini temizle, değişken değiştir
+    // || işaretlerini temizle, değişken değiştir (dile göre)
+    final isEn = ref.read(localeProvider) == 'en';
     final rendered = VariableReplacer
-        .replace(secilen.metin, profile.toVariableMap())
+        .replace(secilen.metinFor(isEn), profile.toVariableMap())
         .replaceAll(RegExp(r'\s*\|\|\s*'), ' ')
         .trim();
 

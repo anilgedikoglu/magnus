@@ -1387,7 +1387,8 @@ class _MenuCardState extends State<_MenuCard>
               fit: StackFit.expand,
               children: [
                 Opacity(
-                  opacity: widget.item.credits < 0 ? 0.15 : 1.0,
+                  // Sadece gerçek boş slotlar (title boş) soluk gösterilir
+                  opacity: widget.item.title.isEmpty ? 0.15 : 1.0,
                   child: Image.asset(
                     widget.item.imagePath,
                     fit: BoxFit.cover,
@@ -1456,8 +1457,8 @@ class _MenuCardState extends State<_MenuCard>
                     bottom: 5, left: 5,
                     child: _CreditBadge(count: widget.item.credits),
                   ),
-                // Yer tutucu — dikey ortada "Yakında..." yazısı
-                if (widget.item.credits < 0)
+                // Yer tutucu — dikey ortada "Yakında..." yazısı (sadece boş slotlar)
+                if (widget.item.title.isEmpty)
                   Center(
                     child: Consumer(builder: (ctx, ref, _) => Text(
                       ref.watch(l10nProvider).soon,

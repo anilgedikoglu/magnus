@@ -1933,7 +1933,7 @@ class _FortuneCircleBadge extends StatelessWidget {
 
     // İkon: hazırlanıyorsa grayscale (2 suffix), tamam ise renkli
     final iconPath  = _iconAsset(item.fortuneType, locked: isLocked);
-    final innerSize = size - 10;
+    final innerSize = size - 6; // arc strokeWidth=3 → her yanda 1.5px, iç alan = size-3; -6 ile ikon tam sığar
 
     return GestureDetector(
       // Sadece hazır (tamamlanmış) fallar tıklanabilir → gelen kutusunu aç

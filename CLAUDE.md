@@ -1157,9 +1157,10 @@ void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
 | 228 | 10.6.0 | iOS | 2026-06-09 | ATT + PrivacyInfo.xcprivacy + eğlence beyanı — App Store'a yüklendi (229 için atlandı) |
 | 229 | 10.6.0 | iOS | 2026-06-09 | Version bump (228 zaten yüklüydü) |
 | 230 | 10.6.0 | iOS | 2026-06-09 | NSUserTrackingUsageDescription + ATT kaldırıldı → App Review'a gönderildi ✅ |
-| 233 | 10.6.0 | iOS+Android | 2026-06-10 | Doğum Haritası (4 bölüm), Admin panel, Arc gradient 12'den başlıyor, Placeholder %15 opacity, Fal konu ikonları |
+| 233 | 10.7.0 | iOS+Android | 2026-06-10 | Doğum Haritası (4 bölüm), Admin panel, Arc gradient 12'den başlıyor, Placeholder %15 opacity, Fal konu ikonları |
 
 **⚠️ Versiyon artışı kuralı: Her build'de +3 artır (çakışma önlemek için)**
+**⚠️ iOS version name: 10.6.0 train'i kapalı — 10.7.0'dan başlıyor**
 **Bir sonraki iOS build: versionCode 236**
 **Bir sonraki Android build: versionCode 236**
 
@@ -1243,7 +1244,7 @@ Tüm sayfalar TR/EN dil seçimi içeriyor (tarayıcı diline göre otomatik).
 - **App Store Connect API Key ID:** G796KF2KD3
 - **Issuer ID:** 8c4687a8-9df9-4d95-8516-3fa3b7576e44
 
-**Bir sonraki build: versionCode 236**
+**Bir sonraki build: versionCode 236** (version name: 10.7.0)
 
 ### PrivacyInfo.xcprivacy
 `ios/Runner/PrivacyInfo.xcprivacy` mevcut — Apple'ın zorunlu kıldığı privacy manifest.

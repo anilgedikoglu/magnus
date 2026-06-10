@@ -54,7 +54,8 @@ final routerProvider = Provider<GoRouter>((ref) {
   final languagePicked = ref.watch(languagePickedProvider);
 
   String initialLocation;
-  if (!languagePicked) {
+  // Eski kullanıcılar: onboarded=true ama language_picked pref'i yok → /home'a gönder
+  if (!languagePicked && !isOnboarded) {
     initialLocation = '/language';
   } else if (!isOnboarded) {
     initialLocation = '/onboarding';
@@ -71,7 +72,8 @@ final routerProvider = Provider<GoRouter>((ref) {
       final path = state.uri.path;
 
       // Language not picked yet → only allow /language
-      if (!picked && path != '/language') return '/language';
+      // İstisna: onboarding tamamlanmış eski kullanıcılar language ekranını geçer
+      if (!picked && !onboarded && path != '/language') return '/language';
 
       // Language picked but not onboarded → only allow /onboarding
       if (picked && !onboarded && path != '/onboarding') return '/onboarding';

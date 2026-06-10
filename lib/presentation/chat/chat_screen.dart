@@ -253,6 +253,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       onboardingComplete: true,
     );
     await ref.read(userProfileProvider.notifier).save(adminProfile);
+    // Dil seçimini de işaretle (yoksa router /language'a yönlendirebilir)
+    await ref.read(languagePickedProvider.notifier).markPicked();
     // Admin modunda reklamlar kapalı
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('admin_ads_disabled', true);

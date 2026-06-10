@@ -3,17 +3,20 @@
     {
       "id": 1,
       "metin": "Geleceğine odaklandığımda, seni {{ay_5}} ayında tabelaları yeni değişmiş bir dükkanın önünde görüyorum {{isim}}. Dükkan yeni açılmış ya da eski yerinden oraya taşınmış gibi. Kapının önünde bir sandalyede oturuyorsun. Karşında ise {{fiziki}} biri var. Bu kişi sana bazı haberler veriyor. Gülümseyişin, duyduklarına sevindiğin anlamına geliyor. Senin için bir fırsatın doğduğunu öğreniyorsun. Bu fırsatı değerlendirecek ve hayatında güzel bir değişiklik yapacaksın. Seni çok sevdiğini düşündüğüm bu kişinin, mutluluğunda önemli bir payı olacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you in front of a newly renovated store in {{ay_5}}, {{isim}}. The store seems to have just opened or relocated from its old place. You are sitting on a chair in front of the door. In front of you, there is a {{fiziki}} person. This person is giving you some news. Your smile indicates that you are happy with what you hear. You learn that an opportunity has arisen for you. You will seize this opportunity and make a positive change in your life. I believe this person, whom I think you love very much, will have a significant role in your happiness."
     },
     {
       "id": 2,
       "metin": "Geleceğine odaklandığımda, senin için yakın tarihli bir dönüm noktası görüyorum {{isim}}. Elindeki çalı süpürgesiyle evinin önüne dökülen yaprakları süpüren biri var. Bu sensin. {{ay_+2}} ayının sonlarına doğru geçmişine dair bir temizlik yapacak, hayatından bazı insanları uzaklaştırırken, birini de yeniden hayatının merkezine alacaksın. Küslük olmamasına rağmen aranızın açık olduğu ve adında {{harf}} ya da {{harf}} harfi bulunduran bu kişi ile yeniden görüşmeye başladıktan sonra, 2 ayrı konuda işlerin yolunda gitmeye başlayacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, {{isim}}, I see a recent turning point for you. There is someone sweeping the fallen leaves in front of their house with a twig broom. That's you. Towards the end of the next {{ay_+2}} months, you will do a cleanse of your past, distancing yourself from some people in your life while bringing one person back into the center of it. Despite not being estranged, you will start reconnecting with this person who has the letter {{harf}} or {{harf}} in their name. After that, things will start falling into place in two different areas."
     },
     {
       "id": 3,
       "metin": "Senin hayatında, ayak numarası büyük biri var. Bu bir erkek. Geleceğine odaklandığımda, bu erkekle yan yana yürüdüğünüzü görüyorum. Senden habersiz sana doğru dönüp dönüp bakıyor. Sana karşı büyük ve derin bir sevgi beslediğine eminim. Ona pek çok yardımın olmuş ve sana bu anlamda çok minnettar. {{kelime, Açık | Koyu}} kumral ve renkli gözlü olduğunu tahmin ettiğim bu erkek bizzat hiçbir şey yapmamasına rağmen senin için güzel bir şeye vesile olacak. \"İyi ki onu seviyorum ve onun bugüne dek yanında oldum\" diyeceksin {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "In your life, there is someone with a large shoe size. He is a man. When I focus on your future, I see you walking side by side with this man. He turns back to look at you without you knowing. I am sure he has deep and profound love for you. He must have helped you a lot, and he is very grateful to you in this sense. I guess he is a {{kelime, light | dark}} brown with colorful eyes. Although he doesn't do anything directly, this man, whom I guess is dark brown with colorful eyes, will be the cause of something beautiful for you. You will say, \"I'm so glad I love him and have been by his side all this time\" {{isim}}."
     },
     {
       "id": 4,
@@ -23,12 +26,14 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
-      ]
+      ],
+      "metin_en": "When I opened up the Magnuscope to get insights about your future, I was really surprised. You're appearing and disappearing in different locations, {{isim}}. And there's always a number {{sabit_sayi,2,9}} on you. In {{sabit_sayi,2,9}} years, you'll suddenly start traveling to different cities or countries. Although I can't tell what will cause this, I can say that it will be the happiest period of your life. During these trips, you'll have your loved one by your side. From this, we can understand that someone will enter your life by that time."
     },
     {
       "id": 5,
       "metin": "Hayat bazen insanı köşeye sıkıştırır ve bir şeye zorlar. Bir şeyleri yapmak zorunda olmak ise genellikle insanlar açısından negatif algılanır. Oysa A noktasından D noktasına gitmek isteyen için, yol her zaman B noktasından geçmez. Kimi zaman kader insanı C noktasından, daha kısa bir şekilde D'ye ulaştırır. Senin için {{yil_+1}} yılının ikinci çeyreğinde böyle bir durum olacak {{isim}}. Önce karşılaşacağın mecburiyet için hayıflanacak, sonra da önünün nasıl açıldığını göreceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Life sometimes corners a person and pushes them towards something. Having to do certain things is usually perceived negatively by people. However, for someone who wants to go from point A to point D, the road doesn't always pass through point B. Sometimes fate leads a person from point C to point D in a shorter way. For you, {{isim}}, such a situation will occur in the second quarter of {{yil_+1}}. You will first regret the obligation you will encounter, and then you will see how your path opens up."
     },
     {
       "id": 6,
@@ -46,12 +51,14 @@
           "degisken": "yasmax",
           "deger": "55"
         }
-      ]
+      ],
+      "metin_en": "When I focus on your future, I see a sudden gathering in your home after {{sayi,5,8}} months. You will gather with close relatives and some friends for a young person's auspicious work, {{isim}}. Just 2-3 weeks after this event, your spouse will receive some good news related to their work. I can say that many joyful events will happen in succession for you. However, during the same period, a distant relative may confuse you with some comments about your past and may bother you a bit, Dear {{isim}}."
     },
     {
       "id": 7,
       "metin": "Geleceğine odaklandığımda, bir kurumdan diğer bir kuruma aktarılan bir evrak görüyorum. Bu evrak 1.5-2 sene gibi bir süre zarfında {{fiziki}} birinin aracılığı ile eline geçecek {{isim}}. Çok memnun olacağın bu hadise, içinde o güne kadar taşıdığın pek çok endişeye de son verecek. Bu gelişme ile, soyadında {{harf}} harfi olan bir insanı da susturmuş olacaksın. Bu konu hakkında yaptığı spekülasyonlar o kişinin yanına kalmamış olacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see a document being transferred from one institution to another. This document will reach {{isim}} through the hands of a physical person in about 1.5-2 years. You will be very pleased with this event, which will also put an end to many concerns you have been carrying until that day. With this development, you will also silence a person whose surname contains the letter {{harf}}. The speculations made about this matter will not stay around that person."
     },
     {
       "id": 8,
@@ -81,7 +88,8 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
-      ]
+      ],
+      "metin_en": "When I focus on your future, I see that within {{sayi,2,4}} years you will establish your own initiative or develop an existing venture. Looking at the images revealed by the Magnoscope, I can say that there will be two different individuals with {{harf}} and {{harf}} letters who will walk beside you, {{isim}}. You will protect and support each other against external influences with these individuals, and by expanding what you have, you will reach places you haven't even imagined yet."
     },
     {
       "id": 9,
@@ -91,22 +99,26 @@
           "degisken": "yasmin",
           "deger": "25"
         }
-      ]
+      ],
+      "metin_en": "When I assess your future, I see a home change in the near future for you. Although it won't be very far from where you are currently, you will need to move to a different place involuntarily. This development, following a piece of bad news, will turn into an opportunity for you in the medium term, {{isim}}. Adjustments to your financial situation and applications to certain institutions after the relocation or change of place will place you in a more peaceful and happy position in the coming years."
     },
     {
       "id": 10,
       "metin": "Hislerim, yakında adında {{harf}} ya da {{harf}} harfi olan bir insanın etkisinde kalacağını ve sevdiğin birinden zor bir şey talep edeceğini söylüyor {{isim}}. Senin için bunu yapmak başlarda zor olacak fakat sonunda yüzün gülecek. Belki bazen kendin için de bu tarz şeyler yapman gerekiyordur, kim bilir... Geleceğinde bir de bozulacak ortaklık yahut birliktelik görüyorum. {{kelime, Uzunca boylu | Esmer, beyaz tenli | Koyu kumral, orta boylu}} birinin yanından ayrılan, gelip seninle el sıkışacak {{isim}}. Bu ortaklık işle mi ilgili yoksa duygusal yönleri mi var, emin değilim.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "My vibes are telling me that soon you'll be influenced by someone whose name contains the letter \"{{harf}}\" or \"{{harf}}\" and they will ask you for something challenging from someone you love, {{isim}}. Doing this for you will be tough at first, but it will all end with a smile on your face. Perhaps sometimes you also need to do such things for yourself, who knows... I also see a partnership or relationship in your future that will turn sour. A {{kelime, tall and slim | brunette with fair skin | dark brown hair and medium height}} person will walk away from someone and come shake hands with you, {{isim}}. I'm not sure if this partnership is work-related or has emotional aspects."
     },
     {
       "id": 11,
       "metin": "Son aylarda içinde birine karşı bir korku var gibi. Bir şeyleri yapmasından ya da yapmamasından endişe ettiğini hissediyorum. Endişelerin boşa çıkacak {{isim}}. Ne zaman mı? Hesaplarıma göre {{ay_+2}} ayının ilk haftasında. {{sayi,9,15}} saat sapma ile, perşembe ya da cuma günü. Geleceğine odaklandığımda bir haber daha aldım. İlerleyen aylarda, adının içinde {{harf}} harfi olan, çok sevdiğin bir yere gideceksin. Seni mutlu eden bir telefon görüşmesinden hemen sonra. Orada seni yine güzel gelişmeler bekliyor olacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Lately, it seems like there's a fear inside you towards someone. I feel like you're worried about something they might do or not do. Your fears will be in vain {{isim}}. When? According to my calculations, in the first week of {{ay_+2}}. With a deviation of {{sayi,9,15}} hours, on a Thursday or Friday. When I focus on your future, I received another piece of news. In the coming months, you will go to a place you love, with a letter {{harf}} in the name. Right after a phone call that makes you happy. There, more good news will be waiting for you."
     },
     {
       "id": 12,
       "metin": "Geleceğine odaklandığımda, önümüzdeki {{mevsim_1}} mevsiminde bir arkadaşınla seni yolda yürürken görüyorum. Adımlarınız oldukça hızlı; bir yere varmanın telaşı içinde gibisiniz. {{rastgeleburc}} burcu olan ve soyadında {{harf}} harfi bulunan yanındaki bu kişi, sana hayırlı bir işinde eşlik edecek. Onunla vardığın yerde sana ait olan bir evrağı gösterip, çok sevineceğin bir şey elde edeceksin Değerli {{isim}}. {{mevsim_1}} mevsiminin özellikle üçüncü ve dördüncü çeyreği, senin için büyük sevinç içerisinde geçecek.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you walking on the street with a friend in the upcoming {{mevsim_1}} season. Your steps are quite fast; you seem to be in a rush to get somewhere. The person next to you, who is a {{rastgeleburc}} and has the letter \"{{harf}}\" in their last name, will accompany you in an auspicious task. When you reach your destination with them, you will receive something that will make you very happy. Dear {{isim}}, the third and fourth quarters of the {{mevsim_1}} season will be filled with great joy for you."
     },
     {
       "id": 13,
@@ -124,7 +136,8 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
-      ]
+      ],
+      "metin_en": "When I focus on your future, I see that something unexpected and not part of your plan will be asked of you in relation to your job. After signing a document with two syllables or consisting of two names, a responsibility will be placed on your shoulders, {{kelime, sir's | madam's}}. Although that period may feel overwhelming for you, you will soon enter days where you will encounter pleasant surprises in your personal life, {{isim}}. Magnuskop says a package is also on the way for you. Something coming into your hands in the coming days will open doors of blessings for you."
     },
     {
       "id": 14,
@@ -134,7 +147,8 @@
           "degisken": "medeni durum",
           "deger": "evli"
         }
-      ]
+      ],
+      "metin_en": "When I focus on your future, I see you in a cafe with your partner. I believe it's {{ay_+3}} or {{ay_+4}}. They are drinking a beverage with a cup. In front of you, there is a drink in a glass, it's not tea, but a light red color. That day, you will be talking about someone at that table. The person you talk about will surprise you with what they will say when they call you a few days later. From them, you will receive a benefit that you never expected, {{isim}}. They will either help you with a job or solve it themselves. Your opinions about this person with the letter {{harf}} in their name will change slightly after that day."
     },
     {
       "id": 15,
@@ -148,142 +162,170 @@
           "degisken": "medeni durum",
           "deger": "ilişkisi yok"
         }
-      ]
+      ],
+      "metin_en": "When I focus on {{sayi,4,8}} months ahead, I see you messaging with a {{data, cinsiyet=erkek, girl | cinsiyet=kadın, guy | cinsiyet=lgbt, person}}. You seem to have some trouble {{isim}}, it's written all over your face. I sense that the issue is related to your classes. The good news is, the person you're talking to is most likely your lover, or at worst, in the advanced stages of flirting. If you're like this even on a relatively unpleasant day, then you must be much happier on normal days..."
     },
     {
       "id": 16,
       "metin": "Geleceğine odaklandığımda, gözümün önünde bir köprü imgesi belirdi. Sen {{sayi,3,7}} ay içinde bir durumdan başka bir duruma geçiş yapacaksın {{isim}}. Bu geçiş, seni şu an sıkıntıya sokan bazı koşulların ortadan kalkmasını sağlayacak. Muhatap olmak zorunda kaldığın bazı insanlardan tamamen kurtuluyor, kendi yağınla kavrulmayı başarıyorsun. Rüzgar artık bu defa senin arkandan esecek. Hızına hız katacak, öne geçecek, özgürleşeceksin!",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, an image of a bridge appears in front of my eyes. You will transition from one situation to another within {{sayi,3,7}} months, {{isim}}. This transition will help eliminate some of the conditions that are causing you distress right now. You will completely get rid of some people you have to deal with and successfully handle things on your own. The wind will now blow behind you, accelerating your pace, moving you forward, setting you free!"
     },
     {
       "id": 17,
       "metin": "İnsanlar genellikle bulundukları yerden, insandan ve koşullardan ayrılmak istemez. Alışıldık olan güvenlidir. Senin geleceğine odaklandığımda ise, seni sevindirecek bir hareketlenme, bir yer değişikli, bir ayrılış ve \"yeniden varış\" görüyorum {{isim}}. Gelecek sene bu zamanlarda, yani {{ay_0}} ayının sonlarında daha mutlu yaşayacağın bir göç seni bekliyor. Bu göç, adının içinde {{harf}} harfi olan bir yerden, {{harf}} harfi olan başka bir yere doğru tecelli edecek gibi.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "People usually don't want to leave the place, the person, and the conditions they are familiar with. The familiar is safe. But when I focus on your future, I see a movement that will delight you, a change of place, a departure, and a \"renewed arrival\" {{isim}}. Around this time next year, at the end of {{ay_0}}, a migration that will make you happier is waiting for you. This migration seems to manifest from a place with the letter {{harf}} in its name, towards another place with the letter {{harf}}."
     },
     {
       "id": 18,
       "metin": "Geleceğine odaklandığımda, seni başının üzerinde bir yıldızla görüyorum. Bu yıldız bir pentagram {{isim}}. Dişil bir sembol olan bu yıldız, kişinin korunduğunu ifade eder. Senin için dua eden bir kadın var belli ki. Bu kişinin adında ya da soyadında {{harf}} harfinin baskın bir hecede olduğunu düşünüyorum. Bu kişinin duası, senin \"bir şeyin üstesinden kazasız belasız, yara almadan, kayıp yaşamadan ve manevi hasarsız\" gelmeni sağlayacak. Tam etkisini ise önümüzdeki {{ay_+3}} ayında gösteriyor olacak. O ay çok rahatlayacaksın {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you with a star above your head. This star is a pentagram, {{isim}}. As a feminine symbol, this star signifies being protected. It seems there is a woman praying for you. I believe the dominant letter in this person's first or last name is the letter {{harf}}. Her prayer will ensure you overcome something smoothly, without harm, loss, or spiritual damage. The full effect will be evident in the next {{ay_+3}} months. You will relax a lot in that month, {{isim}}."
     },
     {
       "id": 19,
       "metin": "Değerli {{isim}}, seni düşünerek gözlerimi kapatıp geleceğine odaklandığımda, önümde bir cımbız figürü belirdi. İmge kaybolduktan sonra ise arkasından sen çıktın. Olduğun yerde dönerek adeta bir çıkış arıyorsun. Bu cımbız, senin son günlerde doğruyu yanlıştan ayırmaya başladığını, elem ve kederi bu sayede hayatından çıkaracağını işaret ediyor. Sana gam ve tasa veren ve geçmişten bugüne taşıdığın her ne ise, gelecekte senden ayrılmış olacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Dear {{isim}}, when I close my eyes and focus on your future, a tweezer figure appeared in front of me. After the image disappeared, you emerged. You're standing in place, looking for a way out as if you're searching for an exit. This tweezer symbolizes that you have started to distinguish right from wrong in the past few days, and through this, you will eliminate grief and sorrow from your life. Whatever has been causing you pain and sorrow, whatever you have carried from the past to the present, will be left behind in the future."
     },
     {
       "id": 20,
       "metin": "Geleceğine odaklandığımda, seni bir atın yanında dururken görüyorum. O atı eyerliyor ve adeta üzerine atlayıp bir yolculuğa çıkmaya hazırlanıyorsun. Bu eyer, sana hedeflerin doğrultusunda birilerinin yardımcı olacağını ya da arabuluculuk yapacağını işaret ediyor. Gelecek hafta salı ya da çarşamba günü öğleden sonra, adında {{harf}} harfi olan bir {{kelime, hanımefendiden | beyefendiden}} destek göreceksin {{isim}}. Bu destek sayesinde önümüzdeki aylarda seni sıkıntıya sokacağını düşündüğün bir müşkülün hallolmuş olacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you standing next to a horse. You are saddling that horse and getting ready to jump on it for a journey. This saddle indicates that someone will assist you or mediate in line with your goals. Next week on Tuesday or Wednesday afternoon, you will receive support from a {{kelime, lady | gentleman}} whose name contains the letter \"{{harf}}\" , {{isim}}. Thanks to this support, a problem that you thought would cause you trouble in the coming months will be resolved."
     },
     {
       "id": 21,
       "metin": "Geleceğine odaklandığımda, seni ailenden bazı insanlarla sohbet ederken görüyorum. Gülümsüyorsun ve keyfin aşırı derecede yerinde. Boynundaki kolye dikkatimi çekti. Kolyenin ucunda iki adet kuvars taşı var. Bu taşlar, sevgide, başarıda ve kazançta artışı işaret etmekte. Girdiğin son yoldan ve varacağın noktadan çok memnun olacaksın. Doğru zamanda, doğru şeyler yapacak, doğru insanlarla iletişim kuracak, hatta doğru kişileri ardından bırakarak kendini en yüksek mertebelere taşıyacaksın. {{mevsim_+1}} mevsimi senin için uğurlu geliyor {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you chatting with some people from your family. You are smiling and in a great mood. I noticed the necklace around your neck. There are two quartz stones at the end of the necklace. These stones signify an increase in love, success, and prosperity. You will be very pleased with the path you have taken and the destination you will reach. You will do the right things at the right time, communicate with the right people, and even leave behind the right individuals to elevate yourself to the highest levels. The {{mevsim_+1}} season looks lucky for you, {{isim}}."
     },
     {
       "id": 22,
       "metin": "Geleceğine odaklandığımda, beynimde çok ilginç imgeler belirdi {{isim}}. Bundan tam 4 ay sonrası; sarıklı ve cübbeli bir adam karşına geçmiş, sana önündeki fermandan bir şeyler okuyor. Ferman, şer sandığın şeydeki hayrı işaret eder. Üzüldüğün ve seni kendi iç dünyana kapatan bir şeyler olduysa, bunların aslında sana büyük hayırlar getireceğini göreceksin. {{ay_+4}} ayının {{kelime, ilk çeyreği | ikinci çeyreği | üçüncü çeyreği | son çeyreği}} içinde neyin neden olduğunu anlayacak, yaşayacağın müjde kabilinden gelişmelere çok sevineceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, some really interesting images come to mind {{isim}}. Exactly 4 months from now; a man in a turban and robes will stand in front of you, reading something from a decree. The decree signifies good in what seems like evil. If there have been things that saddened you and closed you off to your inner world, you will soon realize that they will bring you great blessings. During the {{ay_+4}} month's {{kelime, first quarter | second quarter | third quarter | last quarter}}, you will understand what caused it and rejoice in developments akin to good news."
     },
     {
       "id": 23,
       "metin": "Geleceğine odaklandığımda, {{sayi,2,7}} hafta sonra bir akşam üzeri karşımda belirdin {{isim}}. Dirseklerini önünde duran {{kelime, çalışma masasına | yemek masasına | mutfak masasına}} dayamış, başını da ellerinin arasına almış düşünüyor gibisin. Canın bir şeylere sıkkın, belli. Ertelenen bir şeyler var hayatında. İstediğin gibi gitmeyen detayları kontrol edebilecek kaynaklara da o an sahip değilsin anlaşılan. O günden tam {{sayi,2,4}} gün sonra kritik bir gelişme yaşayacaksın. Aklındaki mesele bir anda tamamen çözüme kavuşacak {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, {{sayi,2,7}} weeks later one evening you appeared in front of me, {{isim}}. You are leaning your elbows on the {{kelime, desk | dining table | kitchen table}}, with your head resting in your hands, lost in thought. You seem to be feeling down about something, it's obvious. There are things being postponed in your life. And it seems like you don't have access to the resources to check the details that are not going as you wish at that moment. Exactly {{sayi,2,4}} days after that day, you will experience a critical development. The issue on your mind will suddenly be completely resolved {{isim}}."
     },
     {
       "id": 24,
       "metin": "Geleceğine odaklandığımda, seni bir masada oturmuş kupon doldururken görüyorum. Zahiri ve temsili olduğunu düşündüğüm bu imgeler, senin bir işini mecburen şansa bıraktığını işaret ediyor. Elinden geleni yapmışsın ancak gücün bir yere kadar yetmiş. Olayların devamında hükmün yok, akışı elde tutacak kudretin yok. Kupon doldurmak, beklenmedik fırsatlarla, toplu para ve büyük bir haberle tabir olunur {{isim}}. Akışına bıraktığın şey her ne ise, sana olumlu dönecek. Şansın çok açık bir şekilde yaver gidecek.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you sitting at a table filling out a coupon. I consider these images to be superficial and symbolic, indicating that you are leaving one of your tasks to chance out of necessity. You've done your best, but your power has only gotten you so far. You have no control over the events that follow, no authority to control the flow. Filling out a coupon is interpreted as unexpected opportunities, a lump sum of money, and some big news, {{isim}}. Whatever it is that you are leaving to chance, it will turn out positively for you. Your luck will clearly be on your side."
     },
     {
       "id": 25,
       "metin": "Geleceğine odaklandığımda, seni adeta bir kaleydoskop'un tam ortasına yerleştirilmiş gibi görüyorum {{isim}}. Etrafında ışıltılı desenler var. Bu yansımalar aşka ve ihtişama kapılmayı, kendini kaybedecek kadar sevmeyi, varlığı ve gösterişi işaret eder. Sen bunların hangisi ile hemhal olacaksın bilmiyorum. Fakat tahminlerime göre {{ay_+3}} ve {{ay_+6}} ayları arasında hayatında kritik değişiklikler olacak. Bu değişiklikler ise senin gelecek yıllarını çok olumlu etkileyecek.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you like placed right in the center of a kaleidoscope, {{isim}}. There are shimmering patterns around you. These reflections signify falling in love with love and grandeur, loving yourself to the point of losing, signaling existence and showiness. I don't know which one of these you will embrace. But according to my estimations, there will be significant changes in your life between {{ay_+3}} and {{ay_+6}}. These changes will positively influence your upcoming years."
     },
     {
       "id": 26,
       "metin": "Geleceğine odaklandığımda, sana servis yapan bir adam görüyorum. Bu adam önüne sürekli yiyecekler getirip götürüyor. Son olarak da bir çaydanlık bırakıp, oradan ayrılıyor. Sen bir şeylere üzülmüş, özellikle de son {{sayi,2,8}} hafta içinde olan bazı şeyleri çok dert etmişsin {{isim}}. Önüne türlü nimetler gelmesine ve sana hayat tarafından değişik alternatifler sunulmasına rağmen tam tatmin olamamışsın. Önüne konan bu son çaydanlık, şifa işareti. Eğer bir depresyondaysan, kurtulacaksın. Araftaki işin çözülecek. Gelişmeler, beklentilerin ölçüsünde tam istediğin \"dem\" ve kıvama gelerek seni mutlu edecek. Bu adamın kim olduğunu ve rolünü ise inan hiç bilmiyorum...",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see a man serving you. This man keeps bringing and taking away food in front of you. Finally, he leaves after placing a teapot there. You seem to be upset about something, especially some events that have occurred in the last {{sayi, 2, 8}} weeks, {{isim}}. Despite various blessings coming your way and different alternatives being presented to you by life, you have not been able to feel completely satisfied. This last teapot placed in front of you is a sign of healing. If you are in a depression, you will get rid of it. The unresolved matters will be settled. The developments will reach the exact \"brew\" and consistency you desire, making you happy as per your expectations. As for who this man is and what his role is, I really have no idea..."
     },
     {
       "id": 27,
       "metin": "Haydaa... {{isim}} geleceğine odaklandığımda seni çok ilginç bir vaziyette görüyorum. Üzerinde uzun bir pelerin var. Basbayağı bir süperkahraman pelerini gibi. Bu yansımanın büyük anlamları var. Etkinlik, bilinirlik artışı, bazı insanların gözüne girmek, bazı insanları geçmek ve ekarte etmek, onlara galip gelmek hatta birtakım doğaüstü güçlere sahip olmak bunlardan birkaçı. Bu yansımalar, {{yil_+1}} yılının ikinci çeyreği ile ilgili gizli bazı mahiyetler taşıyor. O gün geldiğinde gerçek anlamları ortaya çıkacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Wow... When I focus on the future, I see you in a very interesting situation, {{isim}}. You are wearing a long cloak, just like a superhero cape. This reflection carries some deep meanings. Events, increase in visibility, impressing some people, surpassing and eliminating some individuals, prevailing over them, and even having some supernatural powers are just a few of them. These reflections hold hidden truths about the second quarter of {{yil_+1}}. When that day comes, the real meanings will be revealed."
     },
     {
       "id": 28,
       "metin": "Gelecek ayın ikinci haftasına odaklandığımda, seni elinde cüzdanınla oradan oraya koşuştururken görüyorum {{isim}}. Birtakım olumlu ve olumsuz olasılıklar içeriyor bu yansımalar. İlk olarak, {{ay_+1}} ayının senin için biraz hareketli geçeceği aşikar. Hesapta olmayan giderlerin olabilir. Bununla beraber, bazı kaynaklardan gelir de söz konusu. İlaveten, yatırım yaptığın ya da emek verdiğin bir şeyle ilgili karşılık alacaksın. Bu şey bir işin de olabilir, bir insan da. Cüzdanın ve kalbin dolup dolup boşalacak, yorulacaksın fakat güzel ilerleyeceksin... <sprite=7>",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on the second week of next month, I see you running around with your wallet in hand, {{isim}}. These reflections contain some positive and negative possibilities. First of all, it is clear that {{month_+1}} will be a bit hectic for you. There may be unexpected expenses. However, some income may also come from different sources. Additionally, you will receive a return on something you have invested in or worked hard on. This could be a project, or a person. Your wallet and heart will be full and empty, you'll get tired but you'll progress nicely..."
     },
     {
       "id": 29,
       "metin": "Geleceğine odaklandığımda, seni kilitli bir sandığın başında görüyorum {{isim}}. Büyükçe bir sandık bu. Çok uğraşıyor ve nihayet açıyorsun. Sandık, uzaktaki bir kısmetin ayağına gelmesi, veraset paylaşımı ve gizli duyguların açığa çıkması anlamları taşır. Bu 3 olasılığın her biri, belirli aralıklarla gelecek aylarda senin ya da ailenin başına gelecek. Sana karşı tamamen \"kapalı kutu\" birinin seni ne kadar sevdiğini anlayacaksın. Ulaşılması zor gelen bir şeye erişme fırsatın olacak ve seni de olumlu etkileyecek olan bir mal bölüşümü gerçekleşecek.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you {{isim}} sitting in front of a locked chest. It's quite a big chest. You struggle for a while and finally open it. The chest symbolizes the arrival of a distant fortune, inheritance distribution, and the revelation of hidden emotions. Each of these 3 possibilities will occur in the coming months for you or your family at certain intervals. You will understand how much someone who is completely a \"closed box\" loves you. You will have the opportunity to achieve something that seems difficult to reach, and there will be a distribution of property that will positively impact you as well."
     },
     {
       "id": 30,
       "metin": "Geleceğine odaklandığımda, yere serdiğin büyükçe bir papirüs görüyorum. Elindeki tebeşirle, bu papirüsün üzerine bir hayalini çizmeye çalışıyorsun. Bu yansımalar, kendini ifade etmeye çalıştığın ve seni anlamasını çok istediğin biriyle aranda duygusal bazı konuşmalar geçeceğini işaret ediyor {{isim}}. Bu durum gelecek hafta cumartesi ya da pazar günü gerçekleşecek. Karşındaki kişi sana hak verdiğinde, hayatına dair \"geri al\" tuşuna basmışsıncasına bazı kayıplarını yeniden elde edecek ve seni üzen birtakım konuları telafi etmiş olacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see a large piece of parchment spread on the ground. With chalk in your hand, you are trying to draw a dream on this parchment. These reflections indicate that there will be some emotional conversations between you and someone you are trying to express yourself to and desperately want them to understand you, {{isim}}. This situation will occur next week on either Saturday or Sunday. When the other person agrees with you, it will be like pressing the \"undo\" button on your life, regaining some of your losses and making up for some issues that have upset you."
     },
     {
       "id": 31,
       "metin": "Geleceğine odaklandığımda, seni tek boynuzlu bir atın üzerinde görüyorum. Bu zahiri imgelem çok kıymetli {{isim}}. Büyük ve beklenmedik bir mucizenin gerçekleşeceğini işaret ediyor. Önümüzdeki {{mevsim_+1}} mevsiminin ikinci ayında, aklına dahi gelmeyecek bir kısmetle karşılaşacaksın. Bu unicorn, bu kısmetin seni kısa yoldan mutluluğa ulaştıracağını işaret ediyor. Senin önünde çok büyük bir sevinç var.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you on the back of a unicorn. This mystical image is very precious, {{isim}}. It signifies that a great and unexpected miracle is about to happen. In the second month of the upcoming {{mevsim_+1}} season, you will encounter an opportunity beyond your wildest dreams. This unicorn indicates that this opportunity will lead you to happiness in a shortcut. There is a lot of joy ahead of you."
     },
     {
       "id": 32,
       "metin": "Geleceğine odaklandığımda, seni dev bir kraliçe arı ile karşı karşıya görüyorum. Nutkun tutulmuş gibi, donup kalmışsın {{isim}}. Arının ağzından çıkacak sözleri bekliyorsun sanki. Kraliçe arı, güneşte alacalı şekilde parlayan dev kanatlarını yanlara doğru açarak sana bir mesel fırlatıyor. Söylediği söz, senin geleceğini ilgilendiren ve önünü açacak bir tavsiye niteliğinde. Aynı zamanda da sana önemli bir sorumluluk yüklüyor. Gelecek hafta, bu kraliçe arıyı temsil eden ve adı iki heceden oluşan dominant hanımefendiyle yapacağın konuşma sonrası harekete geçmen gerekecek. Söylediklerine harfiyen uyarsan, sen kazanacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you face to face with a giant queen bee. You seem stunned, speechless {{isim}}. It's as if you are waiting for the words to come out of the bee's mouth. The queen bee spreads her shimmering wings under the sun and throws a riddle at you. The words she speaks are a piece of advice that concerns your future and will open the way for you. At the same time, it burdens you with an important responsibility. Next week, after your conversation with the dominant lady representing this queen bee, whose name consists of two syllables, you will need to take action. If you follow her words to the letter, you will succeed."
     },
     {
       "id": 33,
       "metin": "Seni iki dev ağacın arasında görüyorum {{isim}}. Ağaçların birinden inen sincap, hızlı adımlarla senin önünden geçerek diğer ağaca çıkıyor. Çıktığı ağacın üzerinde ise oyma şeklinde {{sabit_sayi,10,27}} sayısı var. Gelecek ay, takvimde {{sabit_sayi,10,27}} sayısını gördüğün gün büyük bir kısmet ayağına gelecek. Bir telefon alacak ve bir teklifle karşılaşacaksın. Memnuniyetle kabul edeceğini ve sevincini en kısa zamanda en yakınlarındaki insanlarla paylaşacağını düşünüyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "I see you between two giant trees, {{isim}}. A squirrel coming down from one of the trees quickly passes in front of you and climbs up the other tree. On the tree it climbed, there is a carved number {{sabit_sayi,10,27}}. On the day you see the number {{sabit_sayi,10,27}} on the calendar next month, a great opportunity will come to you. You will receive a phone call and face an offer. I believe you will accept it gladly and share your joy with your loved ones as soon as possible."
     },
     {
       "id": 34,
       "metin": "Geleceğine odaklandığımda, lambalarından biri temassızlıktan dolayı yanıp yanıp sönmekte olan yarı karanlık bir sokak görüyorum. Tam {{sayi,3,6}} ay {{sayi,2,14}} gün sonrası... Bu sokağa park edilmiş {{kelime, beyaz | siyah | metalik gri | vişne rengi}} bir arabanın içinden 2 başka kişi ile birlikte iniyorsun {{isim}}. {{saat, Böyle bir günün akşamı. | Böyle bir günün akşamı. | Böyle bir gün; belki 2-3 saat sonrası. | Böyle bir akşam vakti. | Böyle bir günün daha erken saatleri gibi bir gün.}} Gireceğiniz bir hane kapısı var. O kapıdan girdikten dakikalar sonra, ismi {{kelime, iki | üç | dört}} heceli birinden büyük bir müjde duyacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see a dimly lit street with one of its lamps flickering due to a contactless error. Exactly {{sayi,3,6}} months and {{sayi,2,14}} days later... You are stepping out of a parked {{kelime, white | black | metallic grey | burgundy}} car on this street with 2 other people, {{isim}}. It's the evening of such a day. After a few minutes of entering a house door, you will hear great news from someone with a name that has {{kelime, two | three | four}} syllables."
     },
     {
       "id": 35,
       "metin": "Geleceğine odaklandığımda, seni tependen, çok yükseklerden izleyen bir martı görüyorum. Birisi bariz bir şekilde seni izliyor, seni takip ediyor ve seni düşünüyor {{isim}}. Soyadında 3 ya da 4 sessiz haft bulunan, adında ise {{harf}} ya da {{harf}} harfi olan birini temsil eden bu martıdan, ilerleyen haftalarda bir tüy kopacak ve önüne düşecek. Bu tüy, onun kim olduğunu anlamanı sağlayacak bir ipucu olacak Değerli {{isim}}. Sen kim olduğunu anladıktan {{sayi,3,20}} gün sonra ise ona dair bir gelişme yaşayacaksın. Nihayetinde ya çok heyecanlanacak ya da duygu dolu anlar yaşayacaksın. Bu işte geçmişle bir bağlantı ve bu işin içinde yoğun sevgi var...",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see a seagull watching you from the top, from very high above. Someone is clearly watching you, following you, and thinking about you, {{isim}}. Representing someone with 3 or 4 silent letters in their last name, and the letter {{harf}} or {{harf}} in their first name, this seagull will lose a feather in the coming weeks and it will fall in front of you. This feather will be a clue for you to understand who they are, Dear {{isim}}. About {{sayi, 3, 20}} days after you realize who they are, you will experience a development regarding them. Eventually, you will either get very excited or experience emotional moments. There is a connection to the past in this matter, and there is intense love involved in this..."
     },
     {
       "id": 36,
       "metin": "Senin için gelecek haftaya odaklandığımda, seni dev bir yusufçuğun sırtında görüyorum {{isim}}. Bu yusufçuk, zahiren Allah'a yakın ve mübarek birini temsil ediyor. Bu kişi sana bir konuda yardımcı olacak. Karşına aniden çıkacak olan engeli bu kişinin desteği ve çevresindeki güç sayesinde halledeceksin. Adı ya da soyadı {{harf}} harfiyle başlayan bu kişi, haftaya {{kelime, salı | çarşamba | perşembe | cuma}} günü yaşamına feyz ve bereket getirecek!",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on the upcoming week for you, I see you on the back of a giant grasshopper, {{isim}}. This grasshopper symbolizes someone who is visibly close to God and blessed. This person will help you with a matter. You will overcome the obstacle that suddenly appears before you with the support of this person and the power around them. Starting with the letter {{harf}}, this person, whose name or surname begins with {{harf}}, will bring inspiration and abundance to your life on {{kelime, Tuesday | Wednesday | Thursday | Friday}} next week!"
     },
     {
       "id": 37,
       "metin": "Senin için ilerleyen haftalara odaklandığımda, seni bir deniz kenarında yanında duran bir düzine midyeyi açmaya çalışırken buldum. Zorlanıyorsun fakat her açtığın midyenin içinden bir inci çıkıyor {{isim}}. Bu temsili imgelem, elde etmesi zor bir şeyi arzuladığını ve buna en sonunda kavuşma zamanının geldiğini anlatıyor. Yaklaşık 2-3 hafta sonra bir hafta sonu, hayatındaki en güzel gelişmelerden birini yaşayacaksın. Alacağın haberle sende oluşacak coşku, adeta deryalar kadar olacak Değerli {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focused on the upcoming weeks for you, I found you trying to open a dozen mussels by the seaside. You're struggling, but each mussel you open reveals a pearl, {{isim}}. This symbolic imagery signifies your desire for something difficult to obtain and that the time has come for you to finally achieve it. In about 2-3 weeks, you will experience one of the most beautiful developments in your life during a weekend. The excitement you will feel upon receiving the news will be as vast as the seas, Dear {{isim}}."
     },
     {
       "id": 38,
       "metin": "Tüm konsantrasyonumu geleceğine yoğunlaştırdığımda, seni her iki yanına kadife çiçekleri ekilmiş uzun bir yolda yürürken görüyorum. Birine doğru ilerliyorsun. Karşında duran kişi {{fiziki}} birisi. Son aylarda bir anlaşmazlık yaşadığını fakat çok sevdiğini düşündüğüm bu kişiyle ilerleyen günlerde aniden tekrar yakınlaşacaksınız {{isim}}. Kadife çiçekleri karşılıklı anlayışı ve onun tarafından kabul göreceğini işaret ediyor.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus all my concentration on the future, I see you walking on a long road with velvet flowers planted on both sides. You are moving towards someone. The person standing in front of you is a {{fiziki}}. You had a disagreement with this person in recent months, but I believe that you will suddenly get closer again in the coming days, {{isim}}. The velvet flowers signify mutual understanding and acceptance by him."
     },
     {
       "id": 39,
       "metin": "Geleceğine odaklandığımda, seni üzüm salkımlarının altında, serin bir gölgelikte otururken görüyorum {{isim}}. Sen {{ay_-2}} ayında bir sıkıntı yaşamışsın. Ya şans yanında olmamış ya da bir şey gönlünün razı gelmediği şekilde cereyan etmiş. Gördüğüm üzüm salkımları, olumsuz gibi gözüken bu işten {{ay_+1}} ayı ve sonraki aylarda pek çok fayda sağlayacağını, sevinç ve keyfinin buna mukabil artacağını işaret etmekte.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you sitting under the grapevines in a cool shade, {{isim}}. You've been through a trouble in the past {{ay_-2}} month. Either luck was not on your side, or something happened not the way your heart desired. The grapevines I see indicate that despite this negative situation, {{ay_+1}} month and the following months will bring many benefits, and your joy and happiness will increase accordingly."
     },
     {
       "id": 40,
       "metin": "Magnuskop'u geleceğe çevirdiğimde, {{ay_2}} ayının ortalarında beklenmedik bir yerden haber veya duyum alacağını görüyorum {{isim}}. Beklenmedik diyorum çünkü epeydir görüşmediğin birinden gelecek bir telefonla bu habere ulaşacaksın. Bu kişi ailenin de tanıdığı, {{harf}} harfli ve yaşça senden büyük bir erkek. Sonrasında hemen harekete geçeceğini ve hazırlık yapacağını da eklemem gerek. Bu hazırlık, hayatına dair bir değişimle ilgili olacak ve sonucu çok olumlu.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I look into the future with MagnuScope, I see that around the middle of {{ay_2}}, you will receive unexpected news or information from an unexpected place, {{isim}}. I say unexpected because you will receive this news from someone you haven't seen in a long time via a phone call. This person is known to your family, has {{harf}} letters in their name, and is older than you. I also need to add that you will act immediately and make preparations. This preparation will be related to a change in your life, and the outcome will be very positive."
     },
     {
       "id": 41,
       "metin": "Magnuskop ile geleceğine yoğunlaştığımda, {{ay_3}} ayına dair epey şaşırtıcı bir şey gördüm {{isim}}. Bunu yaşayınca sen de şaşıracaksın. Yakın bir arkadaşına beklemediği yerden yüklü miktarda para geleceğini görüyorum. Belki bir miras ya da bir ikramiye, emin değilim ancak epey yüklü bir para. Hatta belki birkaç taşınmaz da olacak. Bu kişiyle çok eski arkadaş değilsiniz fakat tanıştıktan kısa süre sonra ilişkiniz iyi oturmuş. Bu kişinin, eline geçenleri sevk veya idaresi konusunda sana çok özel bir teklifi olacak. Buradan senin büyük çıkarlar elde edeceğini görüyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focused on your future with MagnuScope, I saw something quite surprising about the month of March, {{isim}}. You will be amazed when you experience this. I see a significant amount of money coming from an unexpected source to a close friend of yours. It might be an inheritance or a bonus, I'm not sure, but it's a substantial amount of money. There may even be a few properties involved. You haven't known this person for very long, but your relationship clicked shortly after meeting. This person will have a very special offer for you in terms of managing what comes into their hands. I see you gaining great benefits from this."
     },
     {
       "id": 42,
       "metin": "Geleceğine odaklandığımda, seni baharat satan dükkanların olduğu bir köyde görüyorum. Yanındaki insanlar bir hayli mutlu gözüküyorlar, ancak senin suratın beş karış. Bir işin henüz neticelenmediği için huzursuz gibisin. Yediğinden içtiğinden pek tad alamadığını anlıyorum. Yaklaşık {{sayi,3,6}} ay sonrasına ait olduğunu düşündüğüm bu imgeler, beni pek rahatsız etmedi {{isim}}, çünkü sonrasını da biliyorum. Söz konusu o günden birkaç hafta kadar sonra yaşayacağın bazı gelişmelerin içini ferahlatacağına eminim.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you in a village where they sell spices. The people around you seem quite happy, but your face is as long as a fiddle. You seem restless because something hasn't been resolved yet. I understand that you can't really enjoy your food and drinks. These images, which I think belong to about {{sayi,3,6}} months from now, don't really bother me, {{isim}}, because I also know what comes next. I'm sure that some developments you will experience a few weeks after that day will cheer you up."
     },
     {
       "id": 43,
@@ -293,7 +335,8 @@
           "degisken": "meslek",
           "deger": "öğrenci"
         }
-      ]
+      ],
+      "metin_en": "When I focus on your future, {{isim}}, I got stuck on a specific time. Maybe a year, maybe a year and a half from now, you will encounter a problem related to your education. There are two people from the past in front of you, and you are having a somewhat heated conversation with them. It seems like the people around are eavesdropping on you. You will need to make a new choice to rectify some wrong steps you've taken or roll up your sleeves for a fresh start. I can say that the support of those people you will react to at that moment will touch you. In the end, you will realize that you did the right thing, albeit a bit late, and you will relax."
     },
     {
       "id": 44,
@@ -311,17 +354,20 @@
           "degisken": "meslek",
           "deger": "akademisyen"
         }
-      ]
+      ],
+      "metin_en": "When I focus on your future, my hair stands on end. Someone from the past is handing you a \"standard\" as if. There is something that a person who comes from your past and is older than you, once wanted you to do or have. You will seize an opportunity for this and take action with the help of a man whose name starts with the letter \"{{harf}}\", {{isim}}. This individual, {{fiziki}}, will help you reach a goal that has previously seemed distant to you. This goal is either related to your work or financial matters."
     },
     {
       "id": 45,
       "metin": "Geleceğine odaklandığımda, seni yüksek bir duvarın önünde görüyorum. Sırtın duvara dönük. Senin üzerinde ise, duvara işlenmiş altı köşeli bir yıldız var. Davut yıldızı olduğunu tahmin ettiğim bu sembol, tanrının koruyuculuğunu ifade ediyor. Senden başka pek çok kişiyi doğrudan ya da dolaylı olarak etkileyecek bir meselede, sen korunacak ve gözetileceksin {{isim}}. Bu sayede mevcut düzenin bozulmayacak hatta daha da ileriye taşınacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see you in front of a high wall. Your back is turned to the wall. And on you, there is an engraved hexagonal star. This symbol, which I guess is the Star of David, symbolizes divine protection. In a matter that will affect many people directly or indirectly, you will be protected and watched over {{isim}}. This way, the current order will not be disrupted, but will be taken even further."
     },
     {
       "id": 46,
       "metin": "Geleceğine odaklandığımda, bir gelincik tarlasının içinden koşarak geçtiğini görüyorum. {{sayi,4,9}} ay içinde şifalı bir döneme gireceksin. Sana ya da çevrendeki sevdiğin birilerine ait sağlık problemleri hızla ortadan kalkacak. Ben bu durumun altında yatan en büyük sebebin \"iyileşen psikolojiler\" olacağını tahmin ediyorum {{isim}}. Maddi konularda senin ya da ailenin işleri yaver gidecek ve bu rahatlama, sağlıkla ilgili olarak herkese pozitif yansıyacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "When I focus on your future, I see a hare running through a daisy field. You will enter a healing period within {{sayi,4,9}} months. Health issues concerning you or your loved ones will quickly disappear. I predict that the main reason behind this will be \"improving mental health\" {{isim}}. Financial matters for you or your family will go smoothly, and this relief will have a positive impact on everyone's health."
     }
   ]
 }

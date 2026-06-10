@@ -49,7 +49,9 @@ const _sections = [
 class _AstroEntry {
   final int id;
   final String metin;
-  const _AstroEntry({required this.id, required this.metin});
+  final String metinEn;
+  const _AstroEntry({required this.id, required this.metin, this.metinEn = ''});
+  String metinFor(bool isEn) => (isEn && metinEn.isNotEmpty) ? metinEn : metin;
 }
 
 // ─── Seçilen metin (bölüm + içerik) ──────────────────────────────────────────
@@ -92,7 +94,7 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
     for (final key in json.keys) {
       final list = (json[key] as List).map((e) {
         final m = e as Map<String, dynamic>;
-        return _AstroEntry(id: m['id'] as int, metin: m['metin'] as String);
+        return _AstroEntry(id: m['id'] as int, metin: m['metin'] as String, metinEn: (m['metin_en'] as String?) ?? '');
       }).toList();
       data[key] = list;
     }
@@ -139,7 +141,7 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
         await prefs.setInt(idKey, pick.id);
       }
 
-      selected.add(_SelectedText(sec, _applyVars(pick.metin)));
+      selected.add(_SelectedText(sec, _applyVars(pick.metinFor(ref.read(localeProvider) == 'en'))));
     }
 
     if (mounted) {

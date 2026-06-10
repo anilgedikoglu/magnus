@@ -186,6 +186,12 @@ const MAPPINGS = {
   kaderkitabi:   { json: 'kaderkitabi.json',   arrayKey: 'kaderkitabi',   folder: ODB + '/AnaMenu2/KaderKitabı/Tefeul' },
   acigercekler:  { json: 'acigercekler.json',  arrayKey: 'acigercekler',  folders: [ODB + '/AnaMenu3/AciGercekler/AciGecrekler', ODB + '/AnaMenu3/AciGercekler/AciGercekCikis'] },
   karsilamalar:  { json: 'karsilamalar.json',  arrayKeys: ['karsilamalar', 'biliyormuydun', 'ozel_gunler'], singleKeys: ['ilk_giris'], folder: ODB + '/OzelSohbetler/Karsilamalar', recursive: true },
+  biyoritim:     { json: 'biyoritim.json',      arrayKeys: ['b1','b2a','b2b','b2c','b3a','b3b','b4','b5'], folder: ODB + '/AnaMenu2/Biyoritim', recursive: true },
+  gunlukastroloji: { json: 'gunlukastroloji.json', arrayKeys: ['giris','astroyorum','astrogununsozu','astrogununayeti','astrogununhadisi','astroeglencelibilgi','astrokesif','astrogununismi','astrogununyemegi','astroveda'], folder: ODB + '/AnaMenu2/GunlukAstroloji', recursive: true },
+  yana:          { json: 'yana.json',           arrayKeys: ['bana_dair','yasama_dair'], folder: ODB + '/AnaMenu1/Kehanet/Yana', recursive: true },
+  durugoru_bno:  { json: 'durugoru_bno.json',   arrayKey: 'durugoru_bno', folder: ODB + '/AnaMenu1/Kehanet/Durugoru', recursive: true },
+  durugoru_gno:  { json: 'durugoru_gno.json',   arrayKey: 'durugoru_gno', folder: ODB + '/AnaMenu1/Kehanet/Durugoru', recursive: true },
+  durugoru_yno:  { json: 'durugoru_yno.json',   arrayKey: 'durugoru_yno', folder: ODB + '/AnaMenu1/Kehanet/Durugoru', recursive: true },
 };
 
 function main() {

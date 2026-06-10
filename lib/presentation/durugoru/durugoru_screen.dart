@@ -153,8 +153,12 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
 
     kalan.shuffle(Random());
     final secilen = kalan.first;
+    final isEn = ref.read(localeProvider) == 'en';
+    final secilenMetin = (isEn && (secilen['metin_en'] as String?)?.isNotEmpty == true)
+        ? secilen['metin_en'] as String
+        : secilen['metin'] as String;
     final metin   = VariableReplacer.replace(
-        secilen['metin'] as String, profile.toVariableMap());
+        secilenMetin, profile.toVariableMap());
 
     // Gösterilen kaydet
     gosterilen.add('${secilen['id']}');

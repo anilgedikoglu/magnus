@@ -168,7 +168,10 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
 
     eligible.shuffle(Random());
     final selected = eligible.first as Map<String, dynamic>;
-    _metin = selected['metin'] as String? ?? '';
+    final isEn = ref.read(localeProvider) == 'en';
+    _metin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
+        ? selected['metin_en'] as String
+        : (selected['metin'] as String? ?? '');
     _metin = VariableReplacer.replace(_metin, profile.toVariableMap());
 
     shown.add(selected['id'].toString());

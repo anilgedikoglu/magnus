@@ -1,5 +1,11 @@
 # Magnus App — Claude Proje Hafızası
 
+## ⚠️⚠️⚠️ PARALEL İNGİLİZCE KURALI — İSTİSNASIZ ⚠️⚠️⚠️
+
+Herhangi bir metin, ekran veya içerik düzeltildiğinde / güncellendiğinde / eklendiğinde, **İngilizcesi de her zaman paralel olarak düzeltilir / güncellenir / eklenir.** Bu kural hiçbir istisna kabul etmez. Türkçe güncelleme → İngilizce güncelleme zorunludur.
+
+---
+
 ## 🚀 YENİ SESSION BAŞLARKEN — İLK İŞ
 
 Yeni bir session açıldığında, kullanıcı herhangi bir şey demeden önce:
@@ -636,6 +642,31 @@ JSON yapısı **bölüm anahtarlıdır** — her klasör bir bölüm anahtarı o
 
 **Kritik:** `build()` kapanışı `],),),],),);` şeklinde Stack+SafeArea+Column'u kapatır.
 `_buildSecim()` kendi `],);` ile biter — karıştırma!
+
+---
+
+## Doğum Haritası — JSON Yapısı (dogumharitasi_screen.dart)
+
+**Kaynak:** `C:\Users\AG\Desktop\Magnus\Assets\Resources\OnlineSohbetVeriTabani\Astroloji\DogumHaritasi`
+**JSON:** `assets/data/dogumharitasi.json`
+**Script:** `C:\temp\convert_dogumharitasi_final.js`
+
+JSON yapısı bölüm tabanlıdır:
+```json
+{
+  "ana":   {"metin": "...", "metin_en": "..."},
+  "ilk":   {"metin": "...", "metin_en": "..."},
+  "son":   {"metin": "...", "metin_en": "..."},
+  "son1":  {"metin": "...", "metin_en": "..."},
+  "bolum1": [{"id": 1, "metin": "...", "metin_en": "...", "kosullar": []}, ...],  // 31 metin
+  "bolum2": [...],  // 30 metin
+  "bolum3": [...],  // 33 metin
+}
+```
+
+Her açılışta `ana` + bolum1'den 1 + bolum2'den 1 + bolum3'ten 1 + `son1` birleştirilerek gösterilir.
+Günlük tutarlılık: `dh_last_date` + `dh_bugun_id1/2/3` ile sağlanır.
+No-repeat: `dh_gosterilen_1/2/3` ayrı prefs anahtarları.
 
 ---
 

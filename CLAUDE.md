@@ -651,7 +651,7 @@ JSON yapısı **bölüm anahtarlıdır** — her klasör bir bölüm anahtarı o
 **JSON:** `assets/data/dogumharitasi.json`
 **Script:** `C:\temp\convert_dogumharitasi_final.js`
 
-JSON yapısı bölüm tabanlıdır:
+JSON yapısı bölüm tabanlıdır (2026-06-10 tam yeniden yazıldı):
 ```json
 {
   "ana":   {"metin": "...", "metin_en": "..."},
@@ -667,6 +667,8 @@ JSON yapısı bölüm tabanlıdır:
 Her açılışta `ana` + bolum1'den 1 + bolum2'den 1 + bolum3'ten 1 + `son1` birleştirilerek gösterilir.
 Günlük tutarlılık: `dh_last_date` + `dh_bugun_id1/2/3` ile sağlanır.
 No-repeat: `dh_gosterilen_1/2/3` ayrı prefs anahtarları.
+
+**Layout:** `Column` — üst (wheel chart, sabit) + `Expanded(SingleChildScrollView(metin kutusu))` + Geri Git (altta sabit, tüm partisyonlarda aynı yerde)
 
 ---
 
@@ -1155,9 +1157,11 @@ void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
 | 228 | 10.6.0 | iOS | 2026-06-09 | ATT + PrivacyInfo.xcprivacy + eğlence beyanı — App Store'a yüklendi (229 için atlandı) |
 | 229 | 10.6.0 | iOS | 2026-06-09 | Version bump (228 zaten yüklüydü) |
 | 230 | 10.6.0 | iOS | 2026-06-09 | NSUserTrackingUsageDescription + ATT kaldırıldı → App Review'a gönderildi ✅ |
+| 233 | 10.6.0 | iOS+Android | 2026-06-10 | Doğum Haritası (4 bölüm), Admin panel, Arc gradient 12'den başlıyor, Placeholder %15 opacity, Fal konu ikonları |
 
-**Bir sonraki iOS build: versionCode 231**
-**Bir sonraki Android build: versionCode 231**
+**⚠️ Versiyon artışı kuralı: Her build'de +3 artır (çakışma önlemek için)**
+**Bir sonraki iOS build: versionCode 236**
+**Bir sonraki Android build: versionCode 236**
 
 ---
 
@@ -1239,7 +1243,7 @@ Tüm sayfalar TR/EN dil seçimi içeriyor (tarayıcı diline göre otomatik).
 - **App Store Connect API Key ID:** G796KF2KD3
 - **Issuer ID:** 8c4687a8-9df9-4d95-8516-3fa3b7576e44
 
-**Bir sonraki build: versionCode 231**
+**Bir sonraki build: versionCode 236**
 
 ### PrivacyInfo.xcprivacy
 `ios/Runner/PrivacyInfo.xcprivacy` mevcut — Apple'ın zorunlu kıldığı privacy manifest.
@@ -1311,3 +1315,60 @@ App Store "App Privacy" uyumsuzluğu: `NSUserTrackingUsageDescription` var ama p
 - App Store Connect URL: `https://appstoreconnect.apple.com/apps/1612979368`
 - Mevcut yayında: **10.3**
 - Review'daki: **10.6.0 (230)**
+
+---
+
+## 2026-06-10 Session — Doğum Haritası, Admin Panel, UI Düzeltmeleri
+
+### Doğum Haritası Tam Yeniden Yazım (dogumharitasi_screen.dart)
+
+- Eski: tek flat liste (198 giriş), 1 rastgele metin
+- Yeni: 4 bölüm (ana + bolum1 + bolum2 + bolum3 + son1) birleştirilerek gösterilir
+- JSON: bölüm tabanlı yapı — bkz. "Doğum Haritası — JSON Yapısı" bölümü
+- Layout: üst görsel sabit + `Expanded(SingleChildScrollView)` + Geri Git altta sabit
+
+### Admin Panel (settings_screen.dart → `_showAdminPanel()`)
+
+- Reset butonu: tek "Günlük Hakları Sıfırla" butonu (önceden fal adları tek tek yazıyordu)
+- Reset edilen key'ler: motivasyon, olumlama, ozlusoz, tarot, kahve, astroloji, kaderkitabi, dertortagi, acigercekler, durugoru, iching, japonfali, kadercarki, askuyumu + numeroloji cache
+- **Reklamlar switch'i:** `AdService.instance.adsDisabled` toggle — `admin_ads_disabled` prefs'e kaydedilir
+- **godag girişinde:** reklamlar otomatik kapatılır (`AdService.instance.setAdsDisabled(true)`)
+- **main.dart'ta:** uygulama açılışında `admin_ads_disabled` prefs okunur, `AdService` güncellenir
+
+### Açık Rıza Metni (settings_screen.dart)
+
+- `futuristicapps1@gmail.com` adresi hem Türkçe hem İngilizce metinden kaldırıldı
+
+### Arc Gradient 12'den Başlıyor (home_screen.dart `_ArcProgressPainter`)
+
+- **Eski:** sarı renk saat 3 yönünde başlıyordu (`gradStart = startAngle - π`)
+- **Yeni:** sarı renk saat 12 yönünde başlar (`gradStart = startAngle = -π/2`)
+- **Renk paleti (9 durak):** Sarı(#FFE800) → Sarı-Turuncu → Turuncu → Turuncu-Kırmızı → Kırmızı → Kırmızı-Pembe → Pembe → Pembe-Mor → Mor(#8A2EFF)
+- `innerSize`: `size - 10` → `size - 6` (ikon çember içini tam doldurur)
+
+### Placeholder (Yakında) Menü İkonları (home_screen.dart)
+
+- `credits == -1` olan yer tutucu kartlar: `Opacity(opacity: 0.15)` ile sarıldı
+- Arkaplan hafifçe gözükür, aktif ikonlardan belirgin biçimde ayrışır
+
+### 3. Sayfa Menü Düzeni (home_screen.dart `_page3Items()`)
+
+- Doğum Haritası sağdaki boş slota taşındı
+- Rüya Yorumu ile Doğum Haritası arasına boş slot eklendi
+- Sıra: I-Ching | Aşk Uyumu | Kader Çarkı / Rüya Yorumu | [boş] | Doğum Haritası / [boş] | [boş] | [boş]
+
+### Fal Konu Seçimi İkonları (coffee_screen.dart `_buildKonuSecim()`)
+
+- Emoji yerine PNG ikonlar: `assets/images/fal_konu/` klasörü
+  - `fgenel.png` → Genel
+  - `fask.png` → Aşk
+  - `fkariyer.png` → Kariyer
+  - `fsaglik.png` → Sağlık
+- Kutular kare (`childAspectRatio: 0.85`, `Expanded` ile)
+- İkon kutu **içinde**, etiket kutu **altında** (14px beyaz)
+- pubspec.yaml: `assets/images/fal_konu/` eklendi
+
+### Versiyon Artış Kuralı (YENİ)
+
+**Her build'de versionCode +3 artır** (çakışma önlemek için).
+Eski kural: +1 artırıyordu — kaldırıldı.

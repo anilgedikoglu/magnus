@@ -71,9 +71,13 @@ class _AnswerBubbleRowState extends ConsumerState<AnswerBubbleRow>
 
   Future<void> _openLegal() async {
     final approved = await Navigator.of(context).push<bool>(
-      MaterialPageRoute(
+      PageRouteBuilder<bool>(
         fullscreenDialog: true,
-        builder: (_) => const LegalDisclosureScreen(),
+        opaque: true,
+        barrierColor: Colors.black,
+        pageBuilder: (_, __, ___) => const LegalDisclosureScreen(),
+        transitionsBuilder: (_, anim, __, child) =>
+            FadeTransition(opacity: anim, child: child),
       ),
     );
     if (approved == true) {

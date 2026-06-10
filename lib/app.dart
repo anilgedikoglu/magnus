@@ -166,6 +166,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const AstrolojiScreen(),
+          backgroundColor: Colors.black,
+          opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
             child: child,
@@ -177,6 +179,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const BiyoritimScreen(),
+          backgroundColor: Colors.black,
+          opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
             child: child,
@@ -188,6 +192,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const DogumHaritasiScreen(),
+          backgroundColor: Colors.black,
+          opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
             child: child,
@@ -199,6 +205,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const KaderKitabiScreen(),
+          backgroundColor: Colors.black,
+          opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
             child: child,
@@ -210,6 +218,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const NumerologiScreen(),
+          backgroundColor: Colors.black,
+          opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
             child: child,
@@ -221,6 +231,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const AstroTakvimScreen(),
+          backgroundColor: Colors.black,
+          opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
             child: child,
@@ -349,6 +361,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const DurugoruScreen(),
+          backgroundColor: Colors.black,
+          opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
             opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
             child: child,
@@ -360,6 +374,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const InboxScreen(),
+          backgroundColor: Colors.black,
+          opaque: true,
           transitionsBuilder: (_, anim, __, child) => SlideTransition(
             position: Tween<Offset>(
               begin: const Offset(0.0, 1.0),
@@ -374,6 +390,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
           child: const SettingsScreen(),
+          backgroundColor: Colors.black,
+          opaque: true,
           transitionsBuilder: (_, anim, __, child) => SlideTransition(
             position: Tween<Offset>(
               begin: const Offset(-1.0, 0.0),

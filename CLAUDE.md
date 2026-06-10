@@ -1161,9 +1161,8 @@ void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
 
 **⚠️ Versiyon artışı kuralı: Her build'de +3 artır (çakışma önlemek için)**
 **⚠️ iOS version name: 10.6.0 train'i kapalı — 10.7.0'dan başlıyor**
-**🔴 BİR SONRAKİ SESSION: Her iki platform da 10.8.0+242 olacak — eşitleme için. UNUTMA.**
-**Bir sonraki iOS build: versionCode 242, version name: 10.8.0**
-**Bir sonraki Android build: versionCode 242, version name: 10.8.0**
+**✅ 10.8.0+242 HER İKİ PLATFORM İÇİN BUILD ALINDI. Android AAB hazır, iOS Codemagic'e gönderilecek.**
+**Bir sonraki build: versionCode 245, version name: 10.8.1 (veya 10.9.0)**
 
 ---
 
@@ -1374,3 +1373,31 @@ App Store "App Privacy" uyumsuzluğu: `NSUserTrackingUsageDescription` var ama p
 
 **Her build'de versionCode +3 artır** (çakışma önlemek için).
 Eski kural: +1 artırıyordu — kaldırıldı.
+
+---
+
+## 2026-06-10 Session (Devam) — Redirect Loop Fix, Ayarlar Düzeltmeleri, 10.8.0+242
+
+### Redirect Loop Fix (app.dart)
+
+- **Sorun:** Yeni dil seçim ekranı (LanguagePickScreen) eklendikten sonra, eski kullanıcılarda (onboarded=true, language_picked=false) `/settings` veya başka bir yöne git komutu redirect döngüsüne giriyordu.
+- **Eski kural:** `if (!picked && path != '/language') return '/language';` → eski kullanıcıları da yakalıyordu
+- **Yeni kural:** `if (!picked && !onboarded && path != '/language') return '/language';` → sadece onboarding tamamlanmamış yeni kullanıcılar /language'a yönlendirilir
+
+### godag Bypass — language_picked Eksikliği Düzeltildi (chat_screen.dart)
+
+- `_adminBypass()` artık `await ref.read(languagePickedProvider.notifier).markPicked()` da çağırıyor
+- Daha önce çağrılmıyordu → bypass sonrası `languagePickedProvider = false` kalıyordu → router tutarsızlığa girebilirdi
+- Zaten onboarding bypass yapıldığı için dil de "seçilmiş" sayılmalı
+
+### Placeholder Menü İkonları (home_screen.dart)
+
+- **Hata:** `credits < 0` kontrolü hem aktif ikonlar (Astroloji, Motivasyon vs.) hem placeholder'lar için true veriyordu
+- **Düzeltme:** `title.isEmpty` kontrolü kullanılıyor — sadece gerçekten boş slotlar (başlığı olmayan) placeholder sayılır
+- Aktif ikonlar (`credits = -1`, günlük limit yok) bundan etkilenmez
+
+### 10.8.0+242 — İki Market Eşitleme
+
+- Android + iOS aynı anda **10.8.0+242** olarak build alındı
+- Android AAB: `build\app\outputs\bundle\release\app-release.aab` (108.3 MB)
+- iOS: Codemagic `ios-release` workflow'una gönderilecek

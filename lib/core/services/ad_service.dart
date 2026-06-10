@@ -23,6 +23,13 @@ class AdService {
   bool _interstitialLoading = false;
   bool _rewardedLoading     = false;
 
+  /// Admin modunda reklamlar tamamen devre dışı bırakılır.
+  bool _adsDisabled = false;
+
+  /// Admin mod toggle — settings admin panelinden veya godag bypass'tan çağrılır.
+  void setAdsDisabled(bool value) => _adsDisabled = value;
+  bool get adsDisabled => _adsDisabled;
+
   /// Geçiş reklamı çağrı sayacı.
   /// Her 3 çağrıdan 1'inde reklam gösterilir (1 göster, 2 atla).
   int _interstitialCallCount = 0;
@@ -64,6 +71,7 @@ class AdService {
   /// [throttle] false → her çağrıda gösterilir (olumlama/özlü sözler gibi
   ///   kendi sıklık mantığını ekranda yöneten yerler bunu kullanır).
   Future<void> showInterstitial({VoidCallback? onClosed, bool throttle = true}) async {
+    if (_adsDisabled) { onClosed?.call(); return; }
     if (throttle) {
       _interstitialCallCount++;
       // 1. çağrı → göster, 2. ve 3. çağrı → atla, 4. çağrı → göster, ...
@@ -130,6 +138,7 @@ class AdService {
     required VoidCallback onRewarded,
     required VoidCallback onFailed,
   }) async {
+    if (_adsDisabled) { onRewarded(); return; }
     final ad = _rewardedAd;
     _rewardedAd = null;
     if (ad == null) {

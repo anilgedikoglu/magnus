@@ -32,6 +32,10 @@ void main() async {
 
   final prefs = await SharedPreferences.getInstance();
 
+  // Admin modu: godag bypass ile girildiyse reklamlar kapalıdır
+  final adsDisabled = prefs.getBool('admin_ads_disabled') ?? false;
+  AdService.instance.setAdsDisabled(adsDisabled);
+
   runApp(
     ProviderScope(
       overrides: [

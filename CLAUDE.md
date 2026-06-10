@@ -1161,8 +1161,9 @@ void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
 
 **⚠️ Versiyon artışı kuralı: Her build'de +3 artır (çakışma önlemek için)**
 **⚠️ iOS version name: 10.6.0 train'i kapalı — 10.7.0'dan başlıyor**
-**Bir sonraki iOS build: versionCode 236**
-**Bir sonraki Android build: versionCode 236**
+**🔴 BİR SONRAKİ SESSION: Her iki platform da 10.8.0+236 olacak — eşitleme için. UNUTMA.**
+**Bir sonraki iOS build: versionCode 236, version name: 10.8.0**
+**Bir sonraki Android build: versionCode 236, version name: 10.8.0**
 
 ---
 
@@ -1244,7 +1245,7 @@ Tüm sayfalar TR/EN dil seçimi içeriyor (tarayıcı diline göre otomatik).
 - **App Store Connect API Key ID:** G796KF2KD3
 - **Issuer ID:** 8c4687a8-9df9-4d95-8516-3fa3b7576e44
 
-**Bir sonraki build: versionCode 236** (version name: 10.7.0)
+**Bir sonraki build: versionCode 236, version name: 10.8.0** (her iki platform eşitlenir)
 
 ### PrivacyInfo.xcprivacy
 `ios/Runner/PrivacyInfo.xcprivacy` mevcut — Apple'ın zorunlu kıldığı privacy manifest.

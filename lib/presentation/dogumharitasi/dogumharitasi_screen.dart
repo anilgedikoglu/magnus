@@ -361,56 +361,72 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
   }
 
   Widget _buildContent(double bottomPad) {
-    return ListView(
-      padding: EdgeInsets.fromLTRB(16, 8, 16, bottomPad + 24),
+    return Column(
       children: [
-        _buildWheelChart(),
-        // Metin kartı
-        Container(
-          padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
-          decoration: BoxDecoration(
-            color: Colors.black.withValues(alpha: 0.55),
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(
-              color: const Color(0xFF9988FF).withValues(alpha: 0.35),
-              width: 1,
-            ),
-          ),
-          child: RichTextParser.build(
-            _metin ?? '',
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 14,
-              height: 1.75,
+        // Wheel chart — sabit üstte
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: _buildWheelChart(),
+        ),
+
+        // Metin kutusu — görsel ve buton arasında kalan tüm alanı doldurur,
+        // içerik uzunsa kendi içinde scroll eder
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.only(top: 4, bottom: 16),
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
+                decoration: BoxDecoration(
+                  color: Colors.black.withValues(alpha: 0.55),
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(
+                    color: const Color(0xFF9988FF).withValues(alpha: 0.35),
+                    width: 1,
+                  ),
+                ),
+                child: RichTextParser.build(
+                  _metin ?? '',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    height: 1.75,
+                  ),
+                ),
+              ),
             ),
           ),
         ),
-        const SizedBox(height: 24),
-        // Geri Git
-        GestureDetector(
-          onTap: () => context.pop(),
-          child: Container(
-            width: double.infinity,
-            height: 48,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.10),
-              borderRadius: BorderRadius.circular(23),
-              border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.25), width: 1.2),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                const SizedBox(width: 2),
-                Text(ref.read(l10nProvider).backButton,
-                  style: const TextStyle(color: Colors.white, fontSize: 15,
-                      fontWeight: FontWeight.w500)),
-              ],
+
+        // Geri Git — her zaman ekran altında sabit
+        Padding(
+          padding: EdgeInsets.fromLTRB(16, 8, 16, bottomPad + 16),
+          child: GestureDetector(
+            onTap: () => context.pop(),
+            child: Container(
+              width: double.infinity,
+              height: 48,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.10),
+                borderRadius: BorderRadius.circular(23),
+                border: Border.all(
+                    color: Colors.white.withValues(alpha: 0.25), width: 1.2),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                  const SizedBox(width: 2),
+                  Text(ref.read(l10nProvider).backButton,
+                    style: const TextStyle(color: Colors.white, fontSize: 15,
+                        fontWeight: FontWeight.w500)),
+                ],
+              ),
             ),
           ),
         ),
-        const SizedBox(height: 8),
       ],
     );
   }

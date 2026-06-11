@@ -984,13 +984,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           // ── Hazırlanan fallar progress satırı — sabit 50px, içerik yoksa şeffaf ──
           Consumer(builder: (_, cref, __) {
             final items = cref.watch(inboxProvider);
+            // Yeşil halka durumu: (1) hazırlanan (kilitli) fal kalmadı +
+            // (2) okunmamış (hazır) en az 1 fal var → küçük ikonları gizle,
+            // bunun yerine inbox butonu yeşil çemberle uyarı verir.
+            final hasLocked   = items.any((e) => e.isLocked);
+            final readyUnread = items.where((e) => !e.isRead && !e.isLocked).length;
+            final greenRing   = !hasLocked && readyUnread > 0;
             final cooking = items
                 .where((e) => e.unlockAt != null && (e.isLocked || !e.isRead))
                 .toList()
               ..sort((a, b) => (a.unlockAt!).compareTo(b.unlockAt!));
             return SizedBox(
               height: 50,
-              child: cooking.isEmpty
+              child: (cooking.isEmpty || greenRing)
                   ? const SizedBox()
                   : Padding(
                       padding: const EdgeInsets.only(bottom: 6),
@@ -1047,7 +1053,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   const SizedBox(width: 8),
                   // [3] Gelen Kutusu — her zaman navW
                   Consumer(builder: (_, cref, __) {
-                    final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
+                    final inboxItems = cref.watch(inboxProvider);
+                    final hasUnread  = cref.watch(readyUnreadCountProvider) > 0;
+                    // Yeşil çember: (1) hazırlanan (kilitli) fal kalmadı +
+                    // (2) okunmamış (hazır) en az 1 fal var. 2 şarttan biri
+                    // bozulursa yeşil kalkar, pembe dış çember geri gelir.
+                    final hasLocked  = inboxItems.any((e) => e.isLocked);
+                    final greenRing  = !hasLocked && hasUnread;
                     return GestureDetector(
                       onTap: () => _openInboxFromTap(context),
                       child: AnimatedContainer(
@@ -1056,32 +1068,50 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         width: navW,
                         height: 44,
                         decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              colors: [Color(0xFFDD00EE), Color(0xFF9900CC)]),
+                          // ~%15 şeffaflık (alpha 0.85)
+                          gradient: LinearGradient(colors: [
+                            const Color(0xFFDD00EE).withValues(alpha: 0.85),
+                            const Color(0xFF9900CC).withValues(alpha: 0.85),
+                          ]),
                           borderRadius: BorderRadius.circular(22),
                           border: Border.all(
-                            color: const Color(0xFFFF44FF).withValues(alpha: 0.7),
-                            width: 1.5,
+                            color: greenRing
+                                ? const Color(0xFF44FF88)
+                                : const Color(0xFFFF44FF).withValues(alpha: 0.7),
+                            width: greenRing ? 2.2 : 1.5,
                           ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0xFFCC00EE).withValues(alpha: 0.55),
-                              blurRadius: hasUnread ? 18 : 8,
-                              spreadRadius: 0,
-                            ),
-                            if (hasUnread) ...[
-                              BoxShadow(
-                                color: const Color(0xFFFFAA22).withValues(alpha: 0.45),
-                                blurRadius: 22,
-                                spreadRadius: 0,
-                              ),
-                              BoxShadow(
-                                color: const Color(0xFFFFCC66).withValues(alpha: 0.18),
-                                blurRadius: 38,
-                                spreadRadius: 0,
-                              ),
-                            ],
-                          ],
+                          boxShadow: greenRing
+                              ? [
+                                  BoxShadow(
+                                    color: const Color(0xFF44FF88).withValues(alpha: 0.55),
+                                    blurRadius: 18,
+                                    spreadRadius: 0,
+                                  ),
+                                  BoxShadow(
+                                    color: const Color(0xFF44FF88).withValues(alpha: 0.22),
+                                    blurRadius: 34,
+                                    spreadRadius: 0,
+                                  ),
+                                ]
+                              : [
+                                  BoxShadow(
+                                    color: const Color(0xFFCC00EE).withValues(alpha: 0.55),
+                                    blurRadius: hasUnread ? 18 : 8,
+                                    spreadRadius: 0,
+                                  ),
+                                  if (hasUnread) ...[
+                                    BoxShadow(
+                                      color: const Color(0xFFFFAA22).withValues(alpha: 0.45),
+                                      blurRadius: 22,
+                                      spreadRadius: 0,
+                                    ),
+                                    BoxShadow(
+                                      color: const Color(0xFFFFCC66).withValues(alpha: 0.18),
+                                      blurRadius: 38,
+                                      spreadRadius: 0,
+                                    ),
+                                  ],
+                                ],
                         ),
                         child: Center(
                           child: Image.asset('assets/images/inbox_icon.png',
@@ -1808,8 +1838,12 @@ class _BottomBtn extends StatelessWidget {
       child: Container(
         height: 44,
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [Color(0xFFCC00DD), Color(0xFF8800BB)],
+          // ~%15 şeffaflık (alpha 0.85) → arka plan hafifçe gözükür
+          gradient: LinearGradient(
+            colors: [
+              const Color(0xFFCC00DD).withValues(alpha: 0.85),
+              const Color(0xFF8800BB).withValues(alpha: 0.85),
+            ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),

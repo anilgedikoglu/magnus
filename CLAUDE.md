@@ -1462,11 +1462,27 @@ durugoru, kahve(1921/2303), tarot(zaten vardı), astrotakvim, faloya, niyet,
 kadercarki x6, maganda, tamua, kahinler(119/131), numeroloji(189/189),
 **rüya sembolleri (100/100 ELLE)**, ayarlar UI, ana menü balonları.
 
+### ELLE ÇEVİRİ PİPELINE — `scripts/apply_ordered_en.js`
+Kaynakta İngilizcesi olmayan (Flutter için üretilmiş) içerikler ELLE çevrilir.
+Verimli yöntem: ben sadece İngilizceyi SIRALI dizi olarak yazarım, script pozisyona göre eşleştirir.
+```
+node scripts/apply_ordered_en.js dump <file.json> <dotPath>   # numarali TR listesi
+# scripts/tmp_en.json'a sirali EN dizisi yaz (ayni sayida)
+node scripts/apply_ordered_en.js apply <file.json> <dotPath> tmp_en.json
+```
+Gezinme sırası: insertion order + array index. `{{data, cinsiyet=..., X | ...}}`,
+`{{burc}}`, `{{isim}}`, `{{burc_ilkHarfBuyuk}}` placeholder'ları AYNEN korunmalı.
+
+### askuyumu DURUM (`assets/data/askuyumu.json` — ekran wire EDİLDİ ✅)
+- ✅ bars.{ask,aile,maddi,ten,vizyon,iletisim} → 743/743 (kısa aforizmalar)
+- ✅ uyum.evli → 60/60 (uzun burç-çifti, placeholder'lı)
+- ⏳ uyum.iliskisivar (48) + uyum.iliskisiyok (36) → KALDI (uzun, placeholder'lı)
+
 ### ⏳ KALAN — Kaynakta İngilizce YOK, ELLE çevrilecek
-- **askuyumu** (`assets/data/askuyumu.json`): 886 benzersiz paragraf, yapı
-  `bars.{ask,aile,maddi,ten,vizyon,iletisim}.{0-25,26-50,...}` → [{id,metin}].
-  Ekran: `askuyumu_screen.dart`. metin_en ekleyip ekranı locale-aware yap.
+- **askuyumu uyum.iliskisivar (48) + uyum.iliskisiyok (36)**: uzun burç-çifti
+  yorumları, `{{data, cinsiyet=...}}` placeholder'lı. apply_ordered_en pipeline ile.
 - **biyoritim** (`assets/data/biyoritim.json`): ~1127 paragraf, iç içe
-  (`b2a.{0-25}` gibi). Ekran: `biyoritim_screen.dart`.
-- Bu ikisi Flutter için yeniden üretilmiş; Unity kaynağında karşılığı yok.
+  (`b2a.{0-25}` gibi). Ekran wire edildi (`biyoritim_screen.dart`). deepWalk yapısı —
+  apply_ordered_en `dump biyoritim.json b2a` gibi her bölümü ayrı işle.
+- Bu içerikler Flutter için yeniden üretilmiş; Unity kaynağında karşılığı yok.
 - el fali/yüz fali/dert ortağı/durugörü AI: runtime'da AI üretimi (API'ye locale geç).

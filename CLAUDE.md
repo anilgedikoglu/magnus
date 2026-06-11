@@ -5,13 +5,16 @@
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **Mevcut build: `10.8.3+251`** (pubspec.yaml). Yeni AAB alınacak (swipe-back + arc gradient değişiklikleri).
-- iOS: tüm kod `main`'e push edildi → Codemagic `ios-release` workflow'undan **manuel** başlatılacak (otomatik webhook yok).
-- **Bir sonraki build: `10.8.4+254`** (versionCode +3 kuralı).
+- **Mevcut build: `10.8.4+254`** (pubspec.yaml). Android AAB ALINDI:
+  `build\app\outputs\bundle\release\app-release.aab` — Play Console'a yüklenecek.
+- iOS: tüm kod push edildi → Codemagic `ios-release` workflow'undan **manuel** başlatılacak (kullanıcı tetikler).
+- **Bir sonraki build: `10.8.5+257`** (versionCode +3 kuralı).
 
-### En son session'da tamamlananlar (2026-06-11 — swipe + gradient)
+### En son session'da tamamlananlar (2026-06-11 — swipe + gradient + alt menü)
 1. **SOLDAN SAĞA SWIPE = GERİ (10 ekran):** `lib/core/widgets/swipe_back.dart` oluşturuldu (raw `Listener` — gesture arena'ya girmez, ScrollView/PageView ile çakışmaz). Soldan sağa kaydırma "geri" tuşu gibi çalışır. Uygulanan ekranlar: coffee (fal konusu seçim), tarot_type, numeroloji (step-aware: seçim→geri), durugoru (odaklanmıyorsa pop), yuz_fali_kimin, motivation, acigercekler, kaderkitabi, dertortagi (step-aware: `_geriDon()` kullanır), kehanet_menu. Eşik: `threshold=60px` + yatay > dikey×1.5.
 2. **ARC GRADIENT 360° SEAMLESS:** `home_screen.dart` `_ArcProgressPainter._rainbow` palindrom yapıldı (turuncu→kırmızı→pembe→mor→pembe→kırmızı→turuncu). İlk renk == son renk → 12 noktasındaki ani geçiş (jump) kayboldu. 12 yönünde turuncu ile başlar, 360° boyunca dikişsiz gradyan.
+3. **ALT MENÜ PEMBE BUTON ŞEFFAFLIK:** `_BottomBtn` + inbox butonu gradient renklerine `alpha: 0.85` (~%15 şeffaflık) verildi → arka plan hafif gözükür.
+4. **KOŞULLU YEŞİL INBOX ÇEMBERİ:** `_buildBottomBar` → `greenRing = !hasLocked && hasUnread` (hazırlanan/kilitli fal kalmadı + hazır okunmamış ≥1). True ise: alttaki küçük "hazırlanan fal" ikoncukları (`_FortuneProgressRow`) gizlenir + inbox butonu dış pembe çemberi yeşile (#44FF88, border 2.2px) + yeşil halo döner. İki şarttan biri bozulursa pembe çember geri gelir. `AnimatedContainer` ile yumuşak geçiş.
 
 ### Önceki büyük session'da tamamlananlar (i18n)
 1. **KRİTİK HATA DÜZELTMESİ:** `MaterialApp.router`'a `localizationsDelegates` (Global Material/Widgets/Cupertino) eklendi + `flutter_localizations` paketi. Türkçe'de admin paneli/ayarlar düğmesi/rüya arama kutusu beyaz boşluk + tepkisizlik çöküyordu → ÇÖZÜLDÜ. (bkz. i18n bölümü)

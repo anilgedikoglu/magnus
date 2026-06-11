@@ -5,9 +5,12 @@
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **Mevcut build: `10.8.4+254`** (pubspec.yaml). Android AAB ALINDI:
-  `build\app\outputs\bundle\release\app-release.aab` — Play Console'a yüklenecek.
-- iOS: tüm kod push edildi → Codemagic `ios-release` workflow'undan **manuel** başlatılacak (kullanıcı tetikler).
+- **Mevcut build: `10.8.4+254`** (pubspec.yaml). `main` branch'i de **254**'te (fast-forward push edildi).
+- **Android AAB ALINDI (110 MB):**
+  `C:\src\magnus_app\.claude\worktrees\exciting-swanson-a016eb\build\app\outputs\bundle\release\app-release.aab`
+  → Play Console'a yüklenecek.
+- iOS: `main` 254'te → Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
+  ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
 - **Bir sonraki build: `10.8.5+257`** (versionCode +3 kuralı).
 
 ### En son session'da tamamlananlar (2026-06-11 — swipe + gradient + alt menü)
@@ -1233,6 +1236,34 @@ Tüm sayfalar TR/EN dil seçimi içeriyor (tarayıcı diline göre otomatik).
   - `ios_signing`: IOS_CERTIFICATE, IOS_CERTIFICATE_PASSWORD, IOS_PROVISIONING_PROFILE
   - `app_secrets`: ANTHROPIC_API_KEY
   - `app_store_connect`: APP_STORE_CONNECT_KEY_IDENTIFIER (G796KF2KD3), APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_PRIVATE_KEY
+
+### ⚠️⚠️⚠️ KRİTİK: Codemagic `main`'den build alır — versiyon `main`'de OLMALI ⚠️⚠️⚠️
+
+**Codemagic `ios-release`, `main` branch'inden build alır.** Geliştirme bir feature/worktree
+branch'inde yapıldıysa (ör. `claude/...`), versiyon yükseltmesi + tüm değişiklikler Codemagic
+tetiklenmeden ÖNCE `main`'e taşınmalıdır. Yoksa Codemagic eski `main` sürümünü build eder.
+
+**Yaşanan hata (2026-06-11):** Çalışma `claude/exciting-swanson-a016eb` worktree branch'inde
+yapıldı, pubspec `10.8.4+254`'e çıkarıldı ama `main` hâlâ `10.8.2+248`'deydi. Codemagic `main`'i
+build edip **248**'i App Store Connect'e yüklemeye çalıştı → daha önce 248 yüklendiği için **409
+duplicate** hatası:
+> `ENTITY_ERROR.ATTRIBUTE.INVALID.DUPLICATE — The bundle version must be higher than the
+> previously uploaded version: '248'. (previousBundleVersion = 248)`
+
+**Çözüm (her seferinde uygula):** Build + commit sonrası, Codemagic'e gitmeden önce çalışma
+branch'ini `main`'e fast-forward push et:
+```bash
+cd <worktree>
+git fetch origin main
+# main bizim HEAD'in atası mı? (fast-forward güvenli mi?)
+git merge-base --is-ancestor origin/main HEAD && echo "FF guvenli"
+# force YOK — temiz fast-forward:
+git push origin HEAD:main
+# doğrula:
+git show origin/main:pubspec.yaml | grep "^version:"
+```
+Sonra kullanıcı Codemagic `ios-release` workflow'unu `main`'den tetikler.
+**Kural: Yeni iOS build talebinde → önce `main`'in pubspec sürümü güncel mi kontrol et.**
 
 ### AdMob iOS App ID
 - `GADApplicationIdentifier` = `ca-app-pub-6470338276121414~5546686598`

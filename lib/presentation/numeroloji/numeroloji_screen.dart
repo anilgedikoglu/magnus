@@ -24,6 +24,7 @@ import '../../core/utils/numeroloji_hesap.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 
@@ -240,7 +241,15 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
     final topPad    = MediaQuery.of(context).padding.top;
     final bottomPad = MediaQuery.of(context).padding.bottom;
 
-    return Scaffold(
+    return SwipeBack(
+      onSwipeBack: () {
+        if (_secilen != null && _cachedMetin != null) {
+          setState(() { _secilen = null; _cachedMetin = null; });
+        } else if (!_loading) {
+          context.pop();
+        }
+      },
+      child: Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
       body: Stack(
@@ -311,6 +320,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
             ],
           ),
         ],
+      ),
       ),
     );
   }

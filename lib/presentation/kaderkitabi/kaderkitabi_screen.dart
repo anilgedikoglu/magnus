@@ -17,6 +17,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
 import '../../data/models/user_profile.dart';
 
@@ -212,7 +213,9 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
   Widget build(BuildContext context) {
     final bottomPad = MediaQuery.of(context).padding.bottom;
 
-    return Scaffold(
+    return SwipeBack(
+      onSwipeBack: () => context.pop(),
+      child: Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
       body: Stack(
@@ -261,6 +264,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
             ),
           ),
         ],
+      ),
       ),
     );
   }

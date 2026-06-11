@@ -17,6 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
@@ -237,13 +238,16 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SwipeBack(
+      onSwipeBack: _geriDon,
+      child: Scaffold(
       backgroundColor: const Color(0xFF0A0718),
       body: _ilkYukleme
           ? const Center(child: CircularProgressIndicator(color: Color(0xFFAA88FF)))
           : _limitDoldu
               ? _buildLimitSayfasi()
               : FadeTransition(opacity: _fadeAnim, child: _buildAdim()),
+      ),
     );
   }
 

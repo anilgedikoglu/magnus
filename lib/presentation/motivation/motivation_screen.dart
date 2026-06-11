@@ -18,6 +18,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 
@@ -153,7 +154,9 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
     final topPad    = MediaQuery.of(context).padding.top;
     final bottomPad = MediaQuery.of(context).padding.bottom;
 
-    return Scaffold(
+    return SwipeBack(
+      onSwipeBack: () => context.pop(),
+      child: Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
       body: Stack(
@@ -196,6 +199,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                   child: _buildContent(topPad, bottomPad),
                 ),
         ],
+      ),
       ),
     );
   }

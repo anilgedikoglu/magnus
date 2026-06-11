@@ -23,6 +23,7 @@ import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
 
 class CoffeeScreen extends ConsumerStatefulWidget {
@@ -116,7 +117,10 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   @override
   Widget build(BuildContext context) {
     final s = ref.watch(l10nProvider);
-    return Scaffold(
+    return SwipeBack(
+      // Konu seçim ekranında soldan sağa swipe → ana menü
+      onSwipeBack: () { if (_falKonusu == null) context.pop(); },
+      child: Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: Column(
@@ -171,6 +175,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
             ], // end else
           ],
         ),
+      ),
       ),
     );
   }

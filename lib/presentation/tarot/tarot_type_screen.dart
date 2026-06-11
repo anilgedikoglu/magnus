@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
 
 // ─── Tarot türü seçim ekranı ──────────────────────────────────────────────────
@@ -13,7 +14,9 @@ class TarotTypeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(l10nProvider);
-    return Scaffold(
+    return SwipeBack(
+      onSwipeBack: () => context.pop(),
+      child: Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.navBarBackground,
@@ -100,6 +103,7 @@ class TarotTypeScreen extends ConsumerWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }

@@ -5,18 +5,25 @@
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **Mevcut build: `10.8.2+248`** (pubspec.yaml). Android AAB ALINDI:
-  `build\app\outputs\bundle\release\app-release.aab` (110 MB) — Play Console'a yüklenecek.
+- **Mevcut build: `10.8.3+251`** (pubspec.yaml). Yeni AAB alınacak (swipe-back + arc gradient değişiklikleri).
 - iOS: tüm kod `main`'e push edildi → Codemagic `ios-release` workflow'undan **manuel** başlatılacak (otomatik webhook yok).
-- **Bir sonraki build: `10.8.3+251`** (versionCode +3 kuralı).
+- **Bir sonraki build: `10.8.4+254`** (versionCode +3 kuralı).
 
-### Bu büyük session'da tamamlananlar
+### En son session'da tamamlananlar (2026-06-11 — swipe + gradient)
+1. **SOLDAN SAĞA SWIPE = GERİ (10 ekran):** `lib/core/widgets/swipe_back.dart` oluşturuldu (raw `Listener` — gesture arena'ya girmez, ScrollView/PageView ile çakışmaz). Soldan sağa kaydırma "geri" tuşu gibi çalışır. Uygulanan ekranlar: coffee (fal konusu seçim), tarot_type, numeroloji (step-aware: seçim→geri), durugoru (odaklanmıyorsa pop), yuz_fali_kimin, motivation, acigercekler, kaderkitabi, dertortagi (step-aware: `_geriDon()` kullanır), kehanet_menu. Eşik: `threshold=60px` + yatay > dikey×1.5.
+2. **ARC GRADIENT 360° SEAMLESS:** `home_screen.dart` `_ArcProgressPainter._rainbow` palindrom yapıldı (turuncu→kırmızı→pembe→mor→pembe→kırmızı→turuncu). İlk renk == son renk → 12 noktasındaki ani geçiş (jump) kayboldu. 12 yönünde turuncu ile başlar, 360° boyunca dikişsiz gradyan.
+
+### Önceki büyük session'da tamamlananlar (i18n)
 1. **KRİTİK HATA DÜZELTMESİ:** `MaterialApp.router`'a `localizationsDelegates` (Global Material/Widgets/Cupertino) eklendi + `flutter_localizations` paketi. Türkçe'de admin paneli/ayarlar düğmesi/rüya arama kutusu beyaz boşluk + tepkisizlik çöküyordu → ÇÖZÜLDÜ. (bkz. i18n bölümü)
 2. **TAM İNGİLİZCE LOKALİZASYON:** ~9.550 `metin_en` (JSON) + 100 rüya sembolü (Dart) + onboarding + tüm UI. **askuyumu 887/887, biyoritim 1127/1127 ELLE çevrildi.** Tüm ~25 fal türü + ekranları locale-aware. (bkz. i18n bölümü)
 3. **Pipeline'lar:** `scripts/merge_en.js` (Unity aciklamaEng → metin_en, içerik eşleştirme) + `scripts/apply_ordered_en.js` (elle çeviri, sıralı dizi uygulama).
 
 ### Geriye kalan (statik çeviri GEREKMEZ)
 - Runtime AI üretimi: el/yüz falı, dert ortağı, durugörü AI, kahve foto analizi → API çağrısına `locale` geçilerek İngilizce üretiliyor.
+
+### SwipeBack Widget Kullanımı (yeni ekranlarda)
+`import '../../core/widgets/swipe_back.dart';` → `return SwipeBack(onSwipeBack: <geri-aksiyonu>, child: Scaffold(...))`.
+Step-aware ekranlarda (numeroloji, dertortagi) onSwipeBack içinde mevcut adım kontrol edilir; ilk adımdaysa `context.pop()`, ara adımdaysa bir önceki adıma döner. Dosya: `lib/core/widgets/swipe_back.dart`.
 
 ---
 

@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
 
 class KehanetMenuScreen extends ConsumerWidget {
@@ -19,7 +20,9 @@ class KehanetMenuScreen extends ConsumerWidget {
       _KehanetItem('Yana', 'assets/images/kehanet/yana.png', '/yana'),
       _KehanetItem(s.askOracles, 'assets/images/menu/digerfalcilar.png', '/kahinler'),
     ];
-    return Scaffold(
+    return SwipeBack(
+      onSwipeBack: () => context.pop(),
+      child: Scaffold(
       backgroundColor: const Color(0xFF0A0718),
       body: SafeArea(
         child: Column(
@@ -63,6 +66,7 @@ class KehanetMenuScreen extends ConsumerWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

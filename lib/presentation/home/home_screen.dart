@@ -2039,16 +2039,23 @@ class _ArcProgressPainter extends CustomPainter {
 
   // Saat yönünde: Sarı → Turuncu → Kırmızı → Pembe → Mor  (12'den başlar, 12'de biter)
   // 12→3 arası eski renkler kaldırıldı; sarı artık arc'ın ilk noktasında çıkar.
+  // Seamless 360° gradyan — 12 yönünde turuncu ile başlar/biter (dikiş yok).
+  // Turuncu(12) → kırmızı → pembe → mor(6) → pembe → kırmızı → turuncu(12) palindrom.
+  // İlk renk == son renk olduğu için 12 noktasında ani geçiş (jump) görünmez.
   static const _rainbow = [
-    Color(0xFFFFE800), // sarı       — arc başlangıcı (12)
-    Color(0xFFFFCC00), // sarı→turuncu
-    Color(0xFFFF9A10), // turuncu
+    Color(0xFFFF9A10), // turuncu       — 12 (başlangıç)
     Color(0xFFFF6820), // turuncu→kırmızı
     Color(0xFFFF3B30), // kırmızı
     Color(0xFFFF3260), // kırmızı→pembe
     Color(0xFFFF2EC7), // pembe
     Color(0xFFBB28E8), // pembe→mor
-    Color(0xFF8A2EFF), // mor        — seamless kapanış (12)
+    Color(0xFF8A2EFF), // mor           — 6 (orta nokta)
+    Color(0xFFBB28E8), // mor→pembe
+    Color(0xFFFF2EC7), // pembe
+    Color(0xFFFF3260), // pembe→kırmızı
+    Color(0xFFFF3B30), // kırmızı
+    Color(0xFFFF6820), // kırmızı→turuncu
+    Color(0xFFFF9A10), // turuncu       — 12 (seamless kapanış)
   ];
 
   @override

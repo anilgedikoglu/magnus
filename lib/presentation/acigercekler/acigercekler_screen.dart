@@ -16,6 +16,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
@@ -171,7 +172,9 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SwipeBack(
+      onSwipeBack: () => context.pop(),
+      child: Scaffold(
       backgroundColor: const Color(0xFF0A0718),
       body: SafeArea(
         child: !_veriYuklendi
@@ -182,6 +185,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
                 _Adim.icerik     => _buildIcerik(),
                 _Adim.limit      => _buildLimit(),
               },
+      ),
       ),
     );
   }

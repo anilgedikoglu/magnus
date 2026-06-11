@@ -16,6 +16,7 @@ import 'package:uuid/uuid.dart';
 
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -190,7 +191,9 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SwipeBack(
+      onSwipeBack: () { if (!_odaklaniyor) context.pop(); },
+      child: Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
       body: Stack(
@@ -216,6 +219,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
             child: _odaklaniyor ? _buildOdaklaniyor() : _buildSorular(),
           ),
         ],
+      ),
       ),
     );
   }

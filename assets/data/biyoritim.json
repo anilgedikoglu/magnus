@@ -5363,409 +5363,490 @@
       {
         "id": 1,
         "metin": "Aman bugün cebini kolla {{isim}}, hırsızıdır, yankesicisidir, bu şansla...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Watch your pocket today, {{isim}}; with this luck, there are thieves and pickpockets about..."
       },
       {
         "id": 2,
         "metin": "Bu konuda senin için günün sözü şu olsa gerek: \"Vermeyince mabud, neylesin Mahmut.\" <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On this matter, the word of the day for you must be: 'If the Lord won't grant, what can Mahmut do.' <sprite=0>"
       },
       {
         "id": 3,
         "metin": "Buradaki değerinin bu seviyelere düştüğü günlerde alışverişi kesmelisin {{isim}}. Bakkaldan sakız bile alma derim. <sprite=33>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On days this value drops to these levels, you should stop shopping, {{isim}}. I'd say don't even buy gum from the corner shop. <sprite=33>"
       },
       {
         "id": 4,
         "metin": "Şansın olsa, horozun bile altın yumurtlar. Bugün tavuğundan bile ümit yok {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you had luck, even your rooster would lay golden eggs. Today there's no hope even from your hen, {{isim}}."
       },
       {
         "id": 5,
         "metin": "Sana bu şansla William Shakespeare'in bir sözünü hatırlatmak istiyorum {{isim}}: \"İnsanın iyisi, talihin kötüsünde belli olur.\"",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With this luck, I want to remind you of a Shakespeare quote, {{isim}}: 'The good in a person shows in their bad luck.'"
       },
       {
         "id": 6,
         "metin": "Maddi anlamda çok mu daraldın? Şansın da mı yardım etmiyor? O zaman iş başa düştü demektir {{isim}}. Unutma, işler sıkışınca sıkılar işe başlar! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Are you very strapped financially? And luck isn't helping either? Then it's up to you, {{isim}}. Remember, when things get tight, the tough get going! <sprite=7>"
       },
       {
         "id": 7,
         "metin": "İdareli davranarak böyle günleri rahatlıkla atlatabilecek finansal kabiliyete sahipsin. Kötü sürprizler seni yıldırmasın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have the financial ability to get through such days easily by being frugal. Don't let bad surprises break you."
       },
       {
         "id": 8,
         "metin": "Yunan mitolojisinde bereket tanrısı olarak geçen Priapos'un \"Lampsakos\" (yani Lapseki, Çanakkale) doğumlu olduğunu biliyor muydun {{isim}}? Çanakkaleli tanıdığın varsa kendisini bugün araya sokalım derim. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Did you know that Priapus, the god of abundance in Greek mythology, was born in 'Lampsacus' (that is, Lapseki, Çanakkale), {{isim}}? If you have an acquaintance from Çanakkale, I'd say let's bring them in as an intermediary today. <sprite=84>"
       },
       {
         "id": 9,
         "metin": "Üzülme, bağlantılarım geniştir benim. Paraya ihtiyacın olursa Elon Musk ya da Jeff Bezos'dan senin için ricacı olabilirim {{isim}}. <sprite=23> Gerçi sen bu şansla çektiğin parayı eve kadar düşürürsün. <sprite=20>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Don't be sad, my connections are broad. If you need money, I could put in a word with Elon Musk or Jeff Bezos for you, {{isim}}. <sprite=23> Then again, with this luck you'd drop the money you withdrew before you got home. <sprite=20>"
       },
       {
         "id": 10,
         "metin": "İflas etmiş Varyemez Amca gibisin maşallah!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a bankrupt Scrooge McDuck, bless you!"
       },
       {
         "id": 11,
         "metin": "Kuruşu kuruşuna sayıldığında beş para etmeyen insanların olduğu bir dünyada, sen gene de çok şanslısın bence {{isim}}. <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In a world where there are people not worth a penny when counted to the last cent, you're still very lucky, I think, {{isim}}. <sprite=7>"
       },
       {
         "id": 12,
         "metin": "Senin yerinde olsam bu şansla elimi cüzdanıma bile götürmezdim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If I were you, with this luck I wouldn't even reach for my wallet."
       },
       {
         "id": 13,
         "metin": "Para ile daha fazla arkadaş değil daha kaliteli düşman kazanılır {{isim}}. Üzülme derim...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With money you gain not more friends but higher-quality enemies, {{isim}}. Don't be sad, I'd say..."
       },
       {
         "id": 14,
         "metin": "\"Para para\" derken \"pare pare\" olmak anlamsız. Boşver...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Chasing 'money money' until you fall to 'pieces pieces' is pointless. Never mind..."
       },
       {
         "id": 15,
         "metin": "Paranın peşinde koşulmaz, ayağına çağıracaksın. Bunun için bir yol bulmalısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You don't chase after money, you call it to your feet. You must find a way for that."
       },
       {
         "id": 16,
         "metin": "Sen şerefli bir insansın {{isim}}, her zaman para kazanabilirsin. Fakat para ile şeref kazanılmaz.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're an honorable person, {{isim}}, you can always earn money. But honor can't be earned with money."
       },
       {
         "id": 17,
         "metin": "Bu düşük yüzdeyi görünce Özdemir Asaf'ın güzel bir sözü geldi bak aklıma: \"İnsan mı paraya bağlıdır, para mı insana bağlı? Bu; insana bağlı.\"",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Seeing this low percentage, a fine quote by Özdemir Asaf came to mind: 'Is a person bound to money, or money to a person? This depends on the person.'"
       },
       {
         "id": 18,
         "metin": "Sahip olan değil bağışlayan zengindir {{isim}}. Sen bugün çevrene bol bol yardım et. Şansın artsın, paran bereketlensin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It's not the one who has but the one who gives that's rich, {{isim}}. Today help those around you plenty. Let your luck grow and your money find abundance."
       },
       {
         "id": 19,
         "metin": "Bugün sevdiğine \"tura gelse benimsin, yazı gelse seninim\" desen, para dik gelir {{isim}}. Aman dikkat et! <sprite=5>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if you said to your beloved 'heads you're mine, tails I'm yours', the coin would land on edge, {{isim}}. Be careful! <sprite=5>"
       },
       {
         "id": 20,
         "metin": "Şans aslında kazanırken değil harcarken lazım, bunu bilir bunu söylerim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Luck is actually needed not while earning but while spending; I know this, I say this."
       },
       {
         "id": 21,
         "metin": "Paran varsa bugün ona fazla güvenme, onu koyduğun yere güven.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you have money today, don't trust it too much; trust the place you keep it."
       },
       {
         "id": 22,
         "metin": "Çok paran var diye kanat taktırsan uçak çarpar, öyle şanslısın bugün. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're so lucky today that if you put wings on for having lots of money, a plane would hit you. <sprite=84>"
       },
       {
         "id": 23,
         "metin": "Savurmak yerine elindekini tutmaya çalışman gereken bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you should try to hold onto what you have rather than squander it."
       },
       {
         "id": 24,
         "metin": "Yeni uyutulan bir bebeğin yanından ayrılırken üzerine basılan parkelerin çatırdaması gibi.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Like the creaking of the parquet stepped on as you leave the side of a just-put-to-sleep baby."
       },
       {
         "id": 25,
         "metin": "Çok beklenen bir canlı yayın izleneceği gün, çanak antenin yağmurdan bozulması gibi.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Like your satellite dish breaking from the rain on the day a much-awaited live broadcast is to be watched."
       },
       {
         "id": 26,
         "metin": "Cep delik cepken delik gibi gözüküyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your pockets look like sieves today, holes everywhere."
       },
       {
         "id": 27,
         "metin": "Para havuzunu bir musluk üç saatte doldururken, diğer musluk 1 saatte boşaltıyor sanki. Bugünkü durumun tıpkı bir havuz problemi.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It's as if one tap fills your money pool in three hours while another empties it in 1. Your situation today is just like a pool problem."
       },
       {
         "id": 28,
         "metin": "Cüzdanındaki paranın yerinde bugün yeller esebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today the money in your wallet may be replaced by thin air."
       },
       {
         "id": 29,
         "metin": "Eldeki kuşa bugün sahip çık {{isim}}. Daldaki kuşlardan sana hiç hayır yok çünkü.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Hold onto the bird in hand today, {{isim}}. The birds on the branch are no good to you."
       },
       {
         "id": 30,
         "metin": "Manyetizmada bugün senin için iki kural var; para parayı çekiyor, sen parayı itiyorsun. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In magnetism today there are two rules for you; money attracts money, and you repel money. <sprite=84>"
       },
       {
         "id": 31,
         "metin": "Bugün yere bakarak bütün ülkeyi gezsen bir lira bulamazsın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if you toured the whole country looking at the ground, you couldn't find a single lira."
       },
       {
         "id": 32,
         "metin": "Maddi anlamda beklenmedik zorluklar yaşayabileceğin bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you may face unexpected difficulties financially."
       },
       {
         "id": 33,
         "metin": "Cüzdanını bir yerlerde unutmak ya da kartının bankamatikte kalması gibi aksilikler yaşayabileceğin bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you may have mishaps like leaving your wallet somewhere or your card getting stuck in the ATM."
       },
       {
         "id": 34,
         "metin": "Yarına cep delik cepken delik çıkabilirsin. Aman dikkat {{isim}}!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "By tomorrow you could end up flat broke. Be careful, {{isim}}!"
       },
       {
         "id": 35,
         "metin": "Gün sonu muhasebesi yaptığında verdiğinin aldığından çok daha fazla olduğunu gözlemleyebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "When you do the end-of-day accounting, you may observe that what you gave was much more than what you received."
       },
       {
         "id": 36,
         "metin": "Bir para bekliyorsan bugün gelmeyebilir. Harcamalarını ertelemek durumunda kalabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you're expecting money, it may not come today. You may have to postpone your spending."
       },
       {
         "id": 37,
         "metin": "Hiç de para ile riske girilecek ya da yatırım yapılacak bir günde değilsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're not at all on a day to take risks or invest with money."
       },
       {
         "id": 38,
         "metin": "Bugün satın alacağın bir şey, yarın inanılmaz indirime girebilir. Harcamalarını ertele derim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Something you buy today could go on an incredible discount tomorrow. I'd say postpone your spending."
       },
       {
         "id": 39,
         "metin": "Para bugün senin için avucunda eriyen kar taneleri hükmünde.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Money today acts like snowflakes melting in your palm for you."
       },
       {
         "id": 40,
         "metin": "Paranın bugün sana ne akası ne de damlayası var sanki {{isim}}. <sprite=34>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today money seems to neither flow nor drip to you, {{isim}}. <sprite=34>"
       },
       {
         "id": 41,
         "metin": "Bugün adın {{isim}} {{soyisim}} değil Elon Musk da olsa, Jeff Bezos da olsa, bu değerle vay haline...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today even if your name were Elon Musk or Jeff Bezos instead of {{isim}} {{soyisim}}, with this value, woe to you..."
       },
       {
         "id": 42,
         "metin": "Murphy kanunları bugün para konusunda senin için işliyor gibi gözüküyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Murphy's laws seem to be working against you in money matters today."
       },
       {
         "id": 43,
         "metin": "Satın almayı planladığın bir şeyleri bugün stokta bulamayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may not find something you planned to buy in stock today."
       },
       {
         "id": 44,
         "metin": "Elindeki para bugün senin için çok da bereketli olmayabilir {{isim}}. Nasıl tükendiğini anlamayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The money in your hand may not be very abundant for you today, {{isim}}. You may not understand how it runs out."
       },
       {
         "id": 45,
         "metin": "Sen sağ cebindekini sol cebine geçirene kadar kur artışından dolayı paran değer kaybedebilir bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "By the time you move the money from your right pocket to your left, your money could lose value from the exchange rate today."
       },
       {
         "id": 46,
         "metin": "Yapacağın ödemelerin karşılığını alabileceğin bir günde değilsin. Satın alacağın şeylere bugün dikkat etmelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're not on a day when you'll get full value for the payments you make. You should be careful about what you buy today."
       },
       {
         "id": 47,
         "metin": "Nereye yatırım yapsam diye düşünüyorsan hiç doğru bir günde değilsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you're thinking about where to invest, you're on a very wrong day."
       },
       {
         "id": 48,
         "metin": "Sana uzatılan dört biletten birinde ikramiye olsa, boş olan diğer üçünden birini çekme ihtimalin bugün neredeyse 4/4. Şanssızlık matematik tanımaz. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If one of four tickets handed to you had a prize, today your chance of drawing one of the other three empty ones is nearly 4 out of 4. Bad luck knows no math. <sprite=84>"
       },
       {
         "id": 49,
         "metin": "Bu şansla sen bugün gider göle para mayalarsın. Yok, tutacağı varsa da bugün tutmaz.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With this luck, today you'd go pour money into the lake to ferment it. No, even if it had a chance, today it wouldn't take."
       },
       {
         "id": 50,
         "metin": "Pencerende bir kuş olsa, kanadında gümüş olsa, sen ona ulaşana kadar çoktan uçup gider. Cebindeki yemişle kalakalırsın. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If there were a bird on your window with silver on its wing, by the time you reached it, it would have flown off long ago. You'd be left with the nuts in your pocket. <sprite=84>"
       }
     ],
     "25-50": [
       {
         "id": 51,
         "metin": "Elinde avucunda olanlar günü kurtarmana yeter mi bilmem.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I can't say whether what you have on hand will be enough to save the day."
       },
       {
         "id": 52,
         "metin": "Şöyle güzel bir duş almak için banyoya girip, daha köpüklenmenin ikinci dakikasında sıcak suyu biten insan kadar.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Like a person who steps into the bathroom for a nice shower and runs out of hot water in the second minute of lathering up."
       },
       {
         "id": 53,
         "metin": "Sınavdan bir gün önce gece yarısı evde kahvenin bitmek üzere olduğunu fark eden öğrenciler kadar şanslısın. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're as lucky as students who realize at midnight, the night before an exam, that the coffee at home is about to run out. <sprite=0>"
       },
       {
         "id": 54,
         "metin": "\"Oooh ne güzel, serbest geziyorum!\" diye gıdaklayan ancak ertesi gün tüm yumurtalarının satılacağından habersiz olan organik tavuk kadar şanslısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're as lucky as an organic hen clucking 'Oh how nice, I roam free!' while unaware that all its eggs will be sold the next day."
       },
       {
         "id": 55,
         "metin": "Pahalı bir restoranda arkadaşına yemek ısmarladıktan sonra hesabı isteyince kart limitinin çok az kaldığını anlayan insan kadar, belki bir tık daha şanslısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're maybe a notch luckier than the person who treats their friend to dinner at an expensive restaurant and, asking for the bill, realizes their card limit is nearly maxed out."
       },
       {
         "id": 56,
         "metin": "Maddi anlamda her an yolda kalabileceğin bir gündesin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you could be stranded financially at any moment, {{isim}}."
       },
       {
         "id": 57,
         "metin": "Hesapta olmayan harcamaların bir anda çıkabileceği, \"sınırda\" bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a 'borderline' day when unplanned expenses could suddenly arise."
       },
       {
         "id": 58,
         "metin": "Bu durumda idareli davranmazsan \"meteliğe kurşun sıkmak\" deyimini bizzat yaşaman işten bile değil {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In this case, if you don't act frugally, you experiencing the phrase 'firing a bullet at a penny' firsthand is no trouble at all, {{isim}}."
       },
       {
         "id": 59,
         "metin": "Maddi dengelerin acil ve mecburi bir harcamayla bir anda allak bullak olabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your financial balance could be thrown into chaos in an instant by an urgent, obligatory expense."
       },
       {
         "id": 60,
         "metin": "Zorlukla biriktirdiği parayla sevgilisini sinemaya götürüp, girmek istediği film için ön sıradaki tüm koltukların dolu olduğunu duyan öğrenciden daha şanslı sayılmazsın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're no luckier than a student who takes their partner to the cinema with hard-saved money and hears that all the front-row seats for the film they want are full."
       },
       {
         "id": 61,
         "metin": "Uzun süredir dolabı açıp yüzüne bakmadığı meyveden yemek istediğinde, büyük çoğunluğunun çürüdüğünü fark eden insan kadar şansın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're as lucky as someone who, wanting to eat the fruit they hadn't looked at in the fridge for a long time, realizes most of it has rotted."
       },
       {
         "id": 62,
         "metin": "Bir atımlık kurşunun var. Getirisi olacak bir yerlere nişan alsan iyi edersin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have one bullet. You'd do well to aim it at something with a return, {{isim}}."
       },
       {
         "id": 63,
         "metin": "Harcamalarının bütçeni aşabileceği ve sıkıntı yaşayabileceğin bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when your spending could exceed your budget and you could have trouble."
       },
       {
         "id": 64,
         "metin": "Yolda içi dolu cüzdan bulup sahibine teslim ettikten sonra bir teşekkür bile alamayan insanlar kadar şanslısın bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're as lucky today as people who find a full wallet on the street, hand it to its owner, and don't even get a thank-you."
       },
       {
         "id": 65,
         "metin": "Yazın deniz kenarı bir beldeye tatile giden ve yağan yağmurdan dolayı dışarı bile çıkamayan insan talihi var bugün sende.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you have the luck of someone who goes on vacation to a seaside town in summer and can't even go outside because of the rain."
       },
       {
         "id": 66,
         "metin": "Beğendiği kıyafetin bedenini bulmak için mağaza mağaza gezen, satın alıp eve geldikten sonra da defosunu bulan talihli bugün sen olabilirsin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you could be the lucky one who tours shop to shop to find their size of a garment they like, buys it, gets home, and then finds a defect, {{isim}}."
       },
       {
         "id": 67,
         "metin": "Sevgilisini ilk buluşmada dolmuşa bindirmemek için evinden taksiyle alan, ertesi gün buluşma yerine çağırdığında ise 4x4 bir cip ile geldiğini görünce süblimleşip yok olmayı dileyen yüce gönüllü sen misin? <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Are you the generous soul who, to avoid putting their partner on a minibus for the first date, picks them up from home by taxi, and then, calling them to the meeting spot the next day, wishes to sublimate and vanish upon seeing them arrive in a 4x4 SUV? <sprite=0>"
       },
       {
         "id": 68,
         "metin": "Her gün maddi konularda şansın bu düzeyde olsa, birkaç ay sonra bazı eşyalarını satmak zorunda bile kalabilirsin bence.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If your luck in money matters were this level every day, in a few months you might even have to sell some of your belongings, I think."
       },
       {
         "id": 69,
         "metin": "Sahip olduğu boş arsayı sattıktan kısa bir süre sonra imar izni çıktığını öğrenen kişinin sarsıcı talihi bugün sende de var {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you too have the jarring luck of someone who learns that, shortly after selling their empty plot, it got a building permit, {{isim}}."
       },
       {
         "id": 70,
         "metin": "Bayram tatili hafta sonuna denk geldiği için pek sevinemeyen \"çalışan\" şansı var bugün sende.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you have the luck of a 'worker' who can't quite rejoice because the holiday fell on the weekend."
       },
       {
         "id": 71,
         "metin": "Hayal ettiğin maddi refah düzeyine uzak sayılabileceğin günlerin birindesin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day far from the level of financial prosperity you dreamed of, {{isim}}."
       },
       {
         "id": 72,
         "metin": "Bu tarz günlerde tahmin etmediğin yerlerden seni kurtaracak bir para gelmesini pek bekleme derim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On such days, I'd say don't much expect money to come from somewhere unforeseen to save you."
       },
       {
         "id": 73,
         "metin": "Bu şartlar altında finansal önceliklerini yeniden belirlemen gerekebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Under these conditions, you may need to redetermine your financial priorities."
       },
       {
         "id": 74,
         "metin": "Evet düşük fakat mutlu olmaya engel mi? Değil. Can sağlığı olsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Yes it's low, but does it block happiness? No. As long as you're healthy."
       },
       {
         "id": 75,
         "metin": "Paranın bugün sana pek hayrı yok {{isim}}. Mümkünse kullanma. Bereketli bir günde değilsin. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Money is no good to you today, {{isim}}. Don't use it if you can help it. You're not on an abundant day. <sprite=0>"
       },
       {
         "id": 76,
         "metin": "Bugün internetten alacağın bir ürün beklediğin gibi çıkmayabilir. Paranı dikkatli harcamanı öneririm.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "A product you buy online today may not turn out as you expected. I recommend spending your money carefully."
       },
       {
         "id": 77,
         "metin": "Online alışveriş yaparsan, kargoya verilmesinde gecikmeler yaşayabileceğin bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you shop online, you're on a day when you could have delays in shipping."
       },
       {
         "id": 78,
         "metin": "Bugün almayı planladığın bir şeyin satıcısıyla aranda iletişim problemleri yaşanabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You could have communication problems today with the seller of something you plan to buy."
       },
       {
         "id": 79,
         "metin": "Kıyafet alırsan beden problemleri, ayakkabı alırsan kalite problemleri yaşayabileceğin bir gündesin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you buy clothes you could have size problems, if you buy shoes you could have quality problems today, {{isim}}."
       },
       {
         "id": 80,
         "metin": "Bugün kendin için alışveriş yapmak istersen, üründe istediğin model, renk ya da bedenden bulamama ihtimalin çok yüksek.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you want to shop for yourself today, your chance of not finding the model, color or size you want is very high."
       },
       {
         "id": 81,
         "metin": "Para alışverişinde bulunman gereken insanlarla aranda gerginlikler yaşayabileceğin bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you could have tensions with people you need to do money business with."
       },
       {
         "id": 82,
@@ -5775,496 +5856,594 @@
             "degisken": "meslek",
             "deger": "kendi"
           }
-        ]
+        ],
+        "metin_en": "Your earnings at work may not reach the levels you want today, {{isim}}."
       },
       {
         "id": 83,
         "metin": "Sevdiğin bazı insanlar bugün gereğinden fazla harcama yapmana neden olabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Some people you love could cause you to spend more than necessary today."
       },
       {
         "id": 84,
         "metin": "Bugün değirmen, taşıma suyla dönmek zorunda.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today the mill has to turn with carried water."
       },
       {
         "id": 85,
         "metin": "Hiç hesapta olmayan acil birtakım ihtiyaçlar için para harcamak durumunda kalabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may have to spend money on certain urgent, completely unplanned needs."
       },
       {
         "id": 86,
         "metin": "Bugün selam verip borçlu çıkacağın bir insanla karşılaşabilirsin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you could come across someone to whom you'll end up owing money after just a greeting, {{isim}}."
       },
       {
         "id": 87,
         "metin": "Bazı isteklerin için bütçen bugün yetersiz kalabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your budget may fall short for some of your wishes today."
       },
       {
         "id": 88,
         "metin": "Arıza yapan, bozulan, kırılan, patlayan ya da yırtılan bir şey için bugün mecburen para harcaman gerekebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may have to spend money today on something that broke down, got spoiled, cracked, burst or tore."
       },
       {
         "id": 89,
         "metin": "Elektronik ortamlarda para transferi yaptığında aksiliklerle karşılaşabileceğin bir günündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you could face mishaps doing money transfers in electronic environments."
       },
       {
         "id": 90,
         "metin": "Normalde senin için ücretsiz bir şeylerin bugün ücretli olduğunu öğrendiğinde canın biraz sıkılabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may get a bit upset today learning that something normally free for you is now paid."
       },
       {
         "id": 91,
         "metin": "Yeme içmeye bugün beklediğinden daha fazla para harcayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may spend more money on food and drink than expected today."
       },
       {
         "id": 92,
         "metin": "Bugün satın alacağın bir ürün varsa dikkatlice incele, defolu çıkabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If there's a product you'll buy today, examine it carefully, it could be defective."
       },
       {
         "id": 93,
         "metin": "Bugün ani kararlar vererek yapacağın satın alımlar, ihtiyaçlarını uzun vadede karşılamayabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Purchases you make today on sudden decisions may not meet your needs in the long term."
       },
       {
         "id": 94,
         "metin": "Alacaklılar bugün seni köşeye biraz daha fazla sıkıştırabilir. Mecbur kalmadıkça kulağının üstüne yat derim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Creditors could corner you a bit more today. Unless forced, I'd say lie low."
       },
       {
         "id": 95,
         "metin": "Yeni yapılmış bir kardan adamın burnuna takılan havuç kadar kayda değer.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "As noteworthy as the carrot stuck on the nose of a freshly built snowman."
       },
       {
         "id": 96,
         "metin": "Bugün satın alacağın bir şeyde uyum, renk ya da kalite sorunları yaşayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you could have compatibility, color or quality problems with something you buy."
       },
       {
         "id": 97,
         "metin": "Bugün satın alacağın bir şey, vadettiklerini tam olarak gerçekleştirmeyebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Something you buy today may not fully deliver what it promised."
       },
       {
         "id": 98,
         "metin": "Aylar sonra spor salonuna gitmeye kalktığında, üyeliğinin üç dört güne biteceğini öğrenenler gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like those who, going to the gym after months, learn their membership ends in three or four days."
       },
       {
         "id": 99,
         "metin": "İyi hesap kitap yapman gereken bir gündesin. Paranı şansa bırakma.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you need to count your money well. Don't leave your money to chance."
       },
       {
         "id": 100,
         "metin": "İhtiyaç halinde elini attığı derin çantasından yalnızca 25 kuruşlar bulan insan kadar şansın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're as lucky as someone who, in need, reaches into their deep bag and finds only 25-cent coins."
       },
       {
         "id": 101,
         "metin": "Acıktığı için gece vakti dolabı açıp, yiyecek olarak yalnızca üç günlük yarım yoğurt bulan insanınki kadar. Sulu sulu böyle!... <sprite=20>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "As lucky as someone who, hungry at night, opens the fridge and finds only three-day-old half a tub of yogurt as food. All watery!... <sprite=20>"
       }
     ],
     "50-75": [
       {
         "id": 102,
         "metin": "İmkansızlıklar peşinde koşmadığın sürece bu yüzde sana yeter de artar bile.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "As long as you don't chase impossibilities, this percentage is more than enough for you."
       },
       {
         "id": 103,
         "metin": "Hiç de az değil. Güzel değerlendirerek iyi bir maddi çıkış yakalayabileceğine inanıyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It's not low at all. I believe you can catch a good financial outcome by making good use of it."
       },
       {
         "id": 104,
         "metin": "%90'ları geçtiğin ve parayı koyacak yer bulamadığın günler de gelecek inşallah {{isim}}... <sprite=79>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Days will come, God willing, when you pass 90% and can't find a place to put the money, {{isim}}... <sprite=79>"
       },
       {
         "id": 105,
         "metin": "Bugün bir fidan diksen, kısa süre sonra dallarından aşağı banknotlar sarkmaya başladığını görebilirsin. Bence yatırım yapmalık yüzdelerdesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if you planted a sapling, you might soon see banknotes dangling from its branches. I think you're at investment-worthy percentages."
       },
       {
         "id": 106,
         "metin": "Bu değer, \"borçlu\" konumundan \"alacaklı\" konumuna yavaş yavaş geçmeye başladığını gösteriyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "This value shows you're slowly starting to shift from 'debtor' to 'creditor' status."
       },
       {
         "id": 107,
         "metin": "Üstteki bu sarı barın daha uzun olduğu zamanlar da gelecektir. İşte o günlerin birinde zengin olacaksın! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There will be times when this yellow bar above is longer too. On one of those days, you'll get rich! <sprite=7>"
       },
       {
         "id": 108,
         "metin": "{{kullanici sehri}} gibi bir şehirde de her şeye para yetiştirmek zor olsa gerek. Bu şans yine de sana yeterli {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In a city like {{kullanici sehri}}, making money stretch to everything must be hard too. Still, this luck is enough for you, {{isim}}."
       },
       {
         "id": 109,
         "metin": "Sence bu yüzde aşktaki şanstan daha mı önemli? Bence değil. Aşk olsun, gerisi mühim değil.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Do you think this percentage is more important than luck in love? I think not. As long as there's love, the rest doesn't matter."
       },
       {
         "id": 110,
         "metin": "Bu şans bugün eline geçecek beklenmedik, küçük bir meblağ olarak yansıyabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "This luck could be reflected today as an unexpected small sum coming into your hand."
       },
       {
         "id": 111,
         "metin": "Şansını artırmak istiyorsan paylaşmalısın. Bir kişiye yardım, yüzdeni en az 10 değerinde yukarı çekecektir {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you want to increase your luck, you should share. Helping one person will pull your percentage up by at least 10, {{isim}}."
       },
       {
         "id": 112,
         "metin": "Şansın yüzdesi kadar bu yüzdenin kime ait olduğu da önemlidir. Senin gibi bir {{burc}} burcu mensubu {{gun_0}} günlerinde bu değere rahatlıkla 15-20 daha ilave edebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "As much as the percentage of luck, who that percentage belongs to matters too. A {{burc}} native like you can easily add 15-20 more to this value on {{gun_0}}s."
       },
       {
         "id": 113,
         "metin": "İtidalli davranırsan bu değer seni sarsmaz {{isim}}. Planlı bir şekilde isteklerini yine hayata geçirebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you act moderately, this value won't shake you, {{isim}}. You can still realize your wishes in a planned way."
       },
       {
         "id": 114,
         "metin": "Bu değerlere sahip olmayı bekleyen ve sinek avlayan ne çok girişimci var biliyor musun?...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Do you know how many entrepreneurs are waiting to have these values and catching flies?..."
       },
       {
         "id": 115,
         "metin": "Belki 2-3 sene önceki bir {{ay_0}} ayında bu yüzde gelseydi, senin için pek değeri olmayabilirdi. Fakat bugün çok daha anlamlı olduğunu düşünüyorum {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Maybe if this percentage had come in a {{ay_0}} 2-3 years ago, it wouldn't have meant much to you. But today I think it's far more meaningful, {{isim}}."
       },
       {
         "id": 116,
         "metin": "Maddi anlamda daha sıkışık olduğun bir gün, bu değer daha yüksek de çıkabilir. Önemli olan yalnızca şansının sana açacağı kapı değil, aynı zamanda o kapıyı ne zaman açtığıdır.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On a day when you're more financially strapped, this value could come out higher. What matters isn't only the door your luck will open but also when it opens it."
       },
       {
         "id": 117,
         "metin": "Ekonomi rüzgarları lehine esiyor gibi gözüküyor bugün. Yelkenleri doldur derim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The winds of economy seem to be blowing in your favor today. I'd say fill the sails."
       },
       {
         "id": 118,
         "metin": "Bayramda mendil arasında harçlık alıp sevinen çocuk gibisin. Miktarı bilmiyorsun ama içinde güzel bir his var. Belki de istediğin oyuncağı almaya yeter? Kim bilir... <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a child happy to get holiday money tucked in a handkerchief. You don't know the amount but have a nice feeling inside. Maybe it's enough to buy the toy you want? Who knows... <sprite=10>"
       },
       {
         "id": 119,
         "metin": "Denize çapari atsan, iğnelerin yarıdan fazlası balık dolar {{isim}}. Kısmetlisin ha bugün! <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you cast a fishing line into the sea, more than half your hooks would fill with fish, {{isim}}. You're in luck today! <sprite=0>"
       },
       {
         "id": 120,
         "metin": "Maddi anlamda radikal manevralar yapmak için doğru bir gün olmasa da, doğru kararlar iktisadi açıdan seni güçlendirecektir {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if it's not the right day for radical financial maneuvers, the right decisions will strengthen you economically, {{isim}}."
       },
       {
         "id": 121,
         "metin": "Ortalama üstü bir değerlemedesin. Bence bugün para konusunda gönlünü hoş tutabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're at an above-average valuation. I think you can keep your heart content about money today."
       },
       {
         "id": 122,
         "metin": "Yarınki şansın bugünden az olabilir. Adımlarını her zaman bunu düşünerek atmanı tavsiye ederim. Evet, acele etme; fakat erteleme de...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Tomorrow's luck could be less than today's. I advise always taking your steps with this in mind. Yes, don't rush; but don't postpone either..."
       },
       {
         "id": 123,
         "metin": "Ortada sevimsiz bir durum gözükmüyor. Bugünkü şansın seni mutlu etmeye yetecektir {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's no unpleasant situation in sight. Today's luck will be enough to make you happy, {{isim}}."
       },
       {
         "id": 124,
         "metin": "Bu civarda bir değer ortalamasıyla bütün ömrünü çok mutlu geçiren insanlar tanıyorum {{isim}}. Para neticede bir araç.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I know people who spend their whole lives very happily with an average value around this, {{isim}}. Money is, after all, a means."
       },
       {
         "id": 125,
         "metin": "Bu değerlerdeyken büyük ikramiye çıkmayacağı belli. Zaten şans olarak algıladığın şey hiçbir zaman pişmiş ve ağzına düşmeyi bekleyen bir armut olmasın derim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "At these values it's clear no jackpot will come out. After all, what you perceive as luck should never be a pear cooked and waiting to drop into your mouth, I'd say."
       },
       {
         "id": 126,
         "metin": "Satın alacağın bir şeyde tatminkar bir iskonto yakalayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You could catch a satisfying discount on something you buy."
       },
       {
         "id": 127,
         "metin": "Ödemekle mükellef olduğun bir şeyde bugün bir miktar indirim yapıldığını duyabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may hear that a discount has been made today on something you're obliged to pay."
       },
       {
         "id": 128,
         "metin": "Seni maddi olarak strese sokan birtakım yüklerin hafiflemeye başladığını hissedebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may feel some financial burdens that stress you starting to lighten."
       },
       {
         "id": 129,
         "metin": "Bugün yapacağın alışverişlerde pazarlıkların lehine sonuçlanma ihtimalini oldukça yüksek görüyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see your chance of your bargains turning out in your favor in today's shopping as quite high."
       },
       {
         "id": 130,
         "metin": "Hayat bugün sana rahat bir döşek vadetmese de, ihtiyacın olan tabureyi altından kimse çekemeyecek.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if life doesn't promise you a comfortable bed today, no one can pull out from under you the stool you need."
       },
       {
         "id": 131,
         "metin": "Sağ cebinden çıkardığın beş lirayı sol cebine geçirirken iki lirasını düşürme ihtimalin var bugün. Aman dikkat! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's a chance you'll drop two of the five liras you take from your right pocket while moving them to your left today. Be careful! <sprite=7>"
       },
       {
         "id": 132,
         "metin": "İktisadi manada hiç kuşkusuz bundan daha refah dolu günlerin olacaktır {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Economically, you'll undoubtedly have more prosperous days than this, {{isim}}."
       },
       {
         "id": 133,
         "metin": "Ekonomik değerlerin, bugün tüm yatırımlarını tek bir kanalda toplamaman gerektiğini işaret ediyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your economic values indicate you shouldn't gather all your investments in a single channel today."
       },
       {
         "id": 134,
         "metin": "Para, uçtuktan sonra kendiliğinden dönüp gelecek sadık bir güvercin değil bugün. Kapını pencereni kapalı tut.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Money isn't a loyal pigeon that returns on its own after flying off today. Keep your doors and windows shut."
       },
       {
         "id": 135,
         "metin": "Çok daha düşük şans ve doğru kararlarla bazı günlerde çok güzel işler çıkartılabilir {{isim}}. Umutsuzluğa kapılma.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With much lower luck and the right decisions, very fine work can be done on some days, {{isim}}. Don't fall into hopelessness."
       },
       {
         "id": 136,
         "metin": "Para bugün ihtiyaçlarını karşılayabileceğin bir araç olabilir. Fakat önünde yepyeni kapılar açmasını beklememelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Money today could be a means to meet your needs. But you shouldn't expect it to open brand-new doors before you."
       },
       {
         "id": 137,
         "metin": "Takılıp düşmesen de ekonomik anlamda sendeleyebileceğin bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if you don't trip and fall, you're on a day when you could stumble financially."
       },
       {
         "id": 138,
         "metin": "Para bugün senin için tavuk kanadı gibi. Uçurmasa da birkaç boy zıplatır. <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Money today is like a chicken wing for you. It won't make you fly, but it'll bounce you a few levels. <sprite=10>"
       },
       {
         "id": 139,
         "metin": "Gelir gider dengelerini iyi ayarlarsan, gün sonuna sıkıntısız bir şekilde ulaşabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you balance your income and expenses well, you can reach the end of the day trouble-free."
       },
       {
         "id": 140,
         "metin": "Evrenin bereket kaynaklarına bugün kısıtlı da olsa bir erişimin var. Doğru hamlelerle var olanın artmasını sağlayabilirsin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you have access, even if limited, to the universe's sources of abundance. With the right moves you can grow what exists, {{isim}}."
       },
       {
         "id": 141,
         "metin": "Var olanı sonuna kadar tüketmemen ve ihtiyatlı gitmen gereken bir gündesin Değerli {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you shouldn't consume what exists to the very end and should go cautiously, dear {{isim}}."
       },
       {
         "id": 142,
         "metin": "Yüksek iktisadi sıçramalar gerçekleştiremesen de günü karda kapatabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if you can't make great economic leaps, you can close the day in profit."
       },
       {
         "id": 143,
         "metin": "Elindeki kaynaklar bugün sana yeter {{isim}}. Harcamalarında açılırsan, yarına zararla girebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The resources you have are enough for you today, {{isim}}. If you overspend, you could start tomorrow at a loss."
       },
       {
         "id": 144,
         "metin": "Az da olsa şans senden yana. Buna rağmen ekonomik olarak kendini sıkıntıya sokacak alışverişlerden kaçınmalısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Luck is on your side, even if a little. Still, you should avoid purchases that put you in financial trouble."
       },
       {
         "id": 145,
         "metin": "Maddi bütünlüğünü korumakta kısmen zorlanabileceğin bir gündesin. Gerekmediği takdirde hiçbir şey için bir kuruş vermemelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you may partly struggle to protect your financial wholeness. Unless necessary, you shouldn't give a cent for anything."
       },
       {
         "id": 146,
         "metin": "Kaynaklarını doğru kullanırsan üçü dört yapmak senin elinde {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you use your resources right, turning three into four is in your hands, {{isim}}."
       },
       {
         "id": 147,
         "metin": "Parayı para kazanmak için kullanırsan başarısız olabilirsin. Yalnızca ihtiyaçlarını karşılamakla yetinmelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you use money to make money, you could fail. You should make do with just meeting your needs."
       },
       {
         "id": 148,
         "metin": "Bence maddi konularda şansı biraz da insanın kendisi yaratıyor. Birileri yapabiliyorsa, sen de pekala yapabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think a person partly creates their own luck in money matters. If others can do it, so can you."
       },
       {
         "id": 149,
         "metin": "Hayat sana 5-6 tuğla veriyorsa, 2-3 tane de kendin bulup başını sokacak bir yer yapmaya başlayabilirsin. Şans bize sunulandır. Sunulanı değerlendirme şeklimiz ise onu fırsata çevirir {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If life gives you 5-6 bricks, you can find 2-3 yourself and start building somewhere to shelter. Luck is what's offered. How we make use of what's offered turns it into opportunity, {{isim}}."
       },
       {
         "id": 150,
         "metin": "Daha düşük yüzdelerle bile doğru planlamalar yaparak yoluna devam edebilecek potansiyele sahipsin sen {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have the potential to carry on by making the right plans even at lower percentages, {{isim}}."
       },
       {
         "id": 151,
         "metin": "Bugün satın almayı planladığın bazı şeylerde uygun fırsatlar yakalama olasılığın var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have a chance of catching good deals today on some things you plan to buy."
       }
     ],
     "75-100": [
       {
         "id": 152,
         "metin": "Çarşıdan alsan bir tane, evde çıkar bin tane. Nar tüccarı şansı var bugün sende.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What you buy at the market, you find a thousand of at home. Today you have a pomegranate-merchant's luck."
       },
       {
         "id": 153,
         "metin": "Para konusunda şansı sonradan açılanlardansın, dikkat ediyor musun? Daha bunlar kötü günlerin; sen bir de iyileri gör! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're one of those whose money luck opens up later, do you notice? These are still your bad days; just wait till you see the good ones! <sprite=7>"
       },
       {
         "id": 154,
         "metin": "Ya bugün ya da buna benzer bir günde zengin olacaksın sen. Demedi deme. Şeytan o bacakla bir zıplar, iki zıplar; elbet kıracaksın! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Either today or on a day like this, you'll get rich. Don't say I didn't tell you. The devil leaps once on that leg, leaps twice; you'll surely break it! <sprite=7>"
       },
       {
         "id": 155,
         "metin": "Harika! Allah bugün sana resmen \"Yürü ya kulum!\" diyor... <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Wonderful! Today God is practically saying to you, 'Go forth, my servant!'... <sprite=10>"
       },
       {
         "id": 156,
         "metin": "Para konusunda sendeki şu şansa sahip olabileceğim şansa 1 saat sahip olsam. Ah ahh... <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If only I could have for 1 hour the luck I'd be lucky to have, that you have in money matters. Oh my... <sprite=0>"
       },
       {
         "id": 157,
         "metin": "Haftada bir iki kez bu düzeylere ulaşabilirsen senin gelecekte ekonomik olarak önün çok açık {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you can reach these levels once or twice a week, your economic future is very bright, {{isim}}."
       },
       {
         "id": 158,
         "metin": "Bugün şanssızları anlayamazsın {{isim}}, senin tuzun kuru. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you can't relate to the unlucky, {{isim}}, you're sitting pretty. <sprite=0>"
       },
       {
         "id": 159,
         "metin": "Demir para eksen banknot biçersin bugün. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you sowed metal coins, you'd reap banknotes today. <sprite=84>"
       },
       {
         "id": 160,
         "metin": "Ne milyarderler geliyor da şu yüzdeleri yakalayamıyorlar...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What billionaires there are who can't catch these percentages..."
       },
       {
         "id": 161,
         "metin": "Çok şanslısın. Sende bu şans varken, %100'ü de bulur, parayı vurursun!  <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're very lucky. With this luck, you'd reach 100% and strike it rich! <sprite=7>"
       },
       {
         "id": 162,
         "metin": "Şansın bol. Değerlendirmeyi de başarırsan önünde kimse duramaz! <sprite=73>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your luck is abundant. If you also manage to make good use of it, no one can stand before you! <sprite=73>"
       },
       {
         "id": 163,
         "metin": "Paradaki şansın kripto para için de geçerli olabilir. Yerinde olsam üç beş alır kenara atardım, belli mi olur?... <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your money luck could be valid for crypto too. If I were you, I'd buy a little and set it aside, who knows?... <sprite=84>"
       },
       {
         "id": 164,
         "metin": "Bugün eline geçen her şeyi altına dönüştürebilecek bir simyacı gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like an alchemist who can turn everything that comes to hand into gold."
       },
       {
         "id": 165,
         "metin": "Nefesini tutup küvete dalsan, dipten bulacakların sabun yerine inci mercan olur, öyle şanslısın bugün!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you held your breath and dove into the tub, what you'd find at the bottom would be pearls and corals instead of soap, that's how lucky you are today!"
       },
       {
         "id": 166,
         "metin": "Sende bu şans varken ve yazgın sana tüm kapıları aralarken yerinde sayarsan ayıp olur {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With this luck, and your fate ajar to all doors, standing still would be a shame, {{isim}}."
       },
       {
         "id": 167,
         "metin": "Dünyada tek bir kuş kalsa, üzerinden uçarken işaretleyeceği o şanslı kişi sen olursun {{isim}}. <sprite=20> Bereketi adeta mıknatıs gibi çekiyorsun bugün! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If a single bird were left in the world, the lucky person it'd mark while flying over would be you, {{isim}}. <sprite=20> You're practically drawing abundance like a magnet today! <sprite=7>"
       },
       {
         "id": 168,
         "metin": "\"Para parayı çeker.\" diye bir tabir var, duymuş muydun? Bugün parayı çeken sensin maşallah...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's a saying, 'money attracts money', had you heard it? Today you're the one attracting money, bless you..."
       },
       {
         "id": 169,
         "metin": "Bir yerlerde çekiliş filan yok mu {{isim}} bugün? Saatler 24'ü geçmeden git katıl bence. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Isn't there a raffle or something somewhere today, {{isim}}? I'd say go enter before the clock passes midnight. <sprite=0>"
       },
       {
         "id": 170,
         "metin": "Senden 6 tane sayı öğrenip gidip loto oynamak lazım hemen. Bal da petek de sende bugün!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Someone should learn 6 numbers from you and go play the lottery right away. You have both the honey and the comb today!"
       },
       {
         "id": 171,
         "metin": "Bence bugün \"{{isim}}Coin\" diye bir kripto para çıkarmalısın. Elon Musk'a da \"Tesla satışlarında geçerli\" diye iki tweet attırırız, son hız değerlenir! <sprite=20>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think today you should launch a crypto called '{{isim}}Coin'. We'd have Elon Musk tweet twice that it's 'valid for Tesla purchases', and it'd skyrocket! <sprite=20>"
       },
       {
         "id": 172,
         "metin": "Ne Sabancı ne Koç, bugünün potansiyel en zengini sensin bence! <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Neither Sabancı nor Koç, today the potentially richest person is you, I think! <sprite=10>"
       },
       {
         "id": 173,
         "metin": "Yıkanmış kıyafetlerinin ceplerinden bile para çıkabilir bugün. Öyle şanslısın!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Money could come out even from the pockets of your washed clothes today. That's how lucky you are!"
       },
       {
         "id": 174,
         "metin": "Çok büyük bolluk ve bereket potansiyeli olan bir gündesin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day with very great potential for abundance and blessing, {{isim}}."
       },
       {
         "id": 175,
         "metin": "Bugün paranı harcayarak bitirmen çok zor. Yoksa da aniden çoğalabilir. Tılsımlı bir bereket var üzerinde.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today it's very hard for you to use up your money. If you do, it could suddenly multiply. There's a charmed abundance upon you."
       },
       {
         "id": 176,
         "metin": "Deniz kenarındaki arsalarına imar izni bile gelebilir. Öyle şanslısın bugün!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even your seaside plots could get a building permit. That's how lucky you are today!"
       },
       {
         "id": 177,
         "metin": "Atadan dededen yüklü bir miras kaldığını öğrenecek olsan, işte böyle bir günde gerçekleşecek {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you were to learn you'd inherited a hefty fortune from your forebears, it'd happen on a day just like this, {{isim}}."
       },
       {
         "id": 178,
         "metin": "Bir koyup beş alabileceğin ultra ballı bir günündesin! <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on an ultra-lucky day when you can put in one and take out five! <sprite=0>"
       },
       {
         "id": 179,
         "metin": "Havaya bir lira atsan, bir dolar olarak avucuna düşer bugün! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you tossed one lira into the air, it would land in your palm as one dollar today! <sprite=7>"
       },
       {
         "id": 180,
@@ -6274,7 +6453,8 @@
             "degisken": "meslek",
             "deger": "öğrenci"
           }
-        ]
+        ],
+        "metin_en": "When you start your working life, you'll get rich on a day just like this, {{isim}}. <sprite=0>"
       },
       {
         "id": 181,
@@ -6284,7 +6464,8 @@
             "degisken": "meslek",
             "deger": "iş"
           }
-        ]
+        ],
+        "metin_en": "You'll start a job that satisfies you and fully fulfills you financially on a day just like this."
       },
       {
         "id": 182,
@@ -6294,7 +6475,8 @@
             "degisken": "meslek",
             "deger": "özel"
           }
-        ]
+        ],
+        "metin_en": "You're on a day reeking of promotion. Even if not today, it'll surely happen on such a day."
       },
       {
         "id": 183,
@@ -6304,7 +6486,8 @@
             "degisken": "meslek",
             "deger": "akademisyen"
           }
-        ]
+        ],
+        "metin_en": "You could make a strong leap in your career today."
       },
       {
         "id": 184,
@@ -6314,92 +6497,110 @@
             "degisken": "meslek",
             "deger": "emekli"
           }
-        ]
+        ],
+        "metin_en": "Something you've worked toward for many years could become extremely valuable today, {{isim}}."
       },
       {
         "id": 185,
         "metin": "Maddi anlamda bugün elin çok güçlü. Her an güzel bir gelişme yaşayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your hand is very strong financially today. You could have a nice development at any moment."
       },
       {
         "id": 186,
         "metin": "Eline hiç hesapta olmayan ve seni şaşırtacak boyutlarda bir para geçebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "A completely unplanned sum of surprising proportions could come into your hand."
       },
       {
         "id": 187,
         "metin": "Sahip olduğun bir şeyin piyasada aşırı değerlendiğini öğrenince bugün kendinle gurur duyabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Learning that something you own has become extremely valuable on the market, you could feel proud of yourself today."
       },
       {
         "id": 188,
         "metin": "Seni çok şaşırtacak bir şeyden bugün durup dururken kara geçebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You could profit out of the blue today from something that will surprise you greatly."
       },
       {
         "id": 189,
         "metin": "Sevdiğin biri bugün sana maddi anlamda kıymetli bir jest yapabilir {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "A loved one could make you a financially valuable gesture today, {{isim}}."
       },
       {
         "id": 190,
         "metin": "Birine karşı aniden borçlu halden alacaklı hale geçebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You could suddenly shift from being in debt to someone to being their creditor."
       },
       {
         "id": 191,
         "metin": "Birileri bugün sana şaşırtıcı bir sebeple elden ya da eft yoluyla para verebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Someone could give you money for a surprising reason today, by hand or by transfer."
       },
       {
         "id": 192,
         "metin": "Yapmayı planladığın bir şey için bugün aniden kaynak bulabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You could suddenly find resources today for something you plan to do."
       },
       {
         "id": 193,
         "metin": "Bugün yapacağın cüz-i harcamaların sana orta vadede büyük getirileri olabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The small expenses you make today could bring you big returns in the medium term."
       },
       {
         "id": 194,
         "metin": "Şansa bak vallahi, bugün Dubai'de yatırımları olan prensler gibisin! <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Look at the luck, honestly, today you're like the princes with investments in Dubai! <sprite=84>"
       },
       {
         "id": 195,
         "metin": "Küçük büyük her türlü piyango ve şans oyununda yüzün gülebilir bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your face could smile in every lottery and game of chance, big or small, today."
       },
       {
         "id": 196,
         "metin": "Öyle bir bal bereket hakim ki üzerinde, bir harcasan iki artacakmış gibi paran.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's such honeyed abundance upon you that if you spend a little, your money seems set to double."
       },
       {
         "id": 197,
         "metin": "Para harcamak insana kazandırır mı? Sana bugün kazandırabilir {{isim}}...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Does spending money make a person gain? Today it could make you gain, {{isim}}..."
       },
       {
         "id": 198,
         "metin": "Bugün loto oynadığını duysam, 6 bilenin sen olduğuna bahse girerdim! <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If I heard you played the lottery today, I'd bet you're the one who got all 6! <sprite=0>"
       },
       {
         "id": 199,
         "metin": "Bugün bir şey satın alsan, yarına kadar değeri iki kat artabilir. Şans yıldızları senin için kayıyor! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you bought something today, its value could double by tomorrow. The stars of luck are shooting for you! <sprite=7>"
       },
       {
         "id": 200,
         "metin": "Sezgilerin bugün finansal meselelerde çok kuvvetli. Şansın da yaver. Çok kazançlı çıkabileceğin bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your intuitions are very strong in financial matters today. Luck favors you too. You're on a day when you could come out very profitable."
       },
       {
         "id": 201,
         "metin": "Söz meclisten dışarı; {{burc}} burcu olduğun için zaten diğerlerinden bir tık daha şanslısın. Bugün buna bir de ekonomik anlamdaki şansın eklenince, önünden geçilmez artık {{isim}}! <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With all due respect; because you're a {{burc}}, you're already a notch luckier than others. Today, when your economic luck is added to this, you're unstoppable, {{isim}}! <sprite=0>"
       }
     ]
   },

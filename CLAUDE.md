@@ -1473,16 +1473,14 @@ node scripts/apply_ordered_en.js apply <file.json> <dotPath> tmp_en.json
 Gezinme sırası: insertion order + array index. `{{data, cinsiyet=..., X | ...}}`,
 `{{burc}}`, `{{isim}}`, `{{burc_ilkHarfBuyuk}}` placeholder'ları AYNEN korunmalı.
 
-### askuyumu DURUM (`assets/data/askuyumu.json` — ekran wire EDİLDİ ✅)
-- ✅ bars.{ask,aile,maddi,ten,vizyon,iletisim} → 743/743 (kısa aforizmalar)
-- ✅ uyum.evli → 60/60 (uzun burç-çifti, placeholder'lı)
-- ⏳ uyum.iliskisivar (48) + uyum.iliskisiyok (36) → KALDI (uzun, placeholder'lı)
+### ✅ askuyumu TAM (`assets/data/askuyumu.json` — 887/887)
+- bars.{ask,aile,maddi,ten,vizyon,iletisim} → 743/743 (kısa aforizmalar)
+- uyum.{evli(60),iliskisivar(48),iliskisiyok(36)} → 144/144 (uzun burç-çifti, placeholder'lı)
 
-### ⏳ KALAN — Kaynakta İngilizce YOK, ELLE çevrilecek
-- **askuyumu uyum.iliskisivar (48) + uyum.iliskisiyok (36)**: uzun burç-çifti
-  yorumları, `{{data, cinsiyet=...}}` placeholder'lı. apply_ordered_en pipeline ile.
-- **biyoritim** (`assets/data/biyoritim.json`): ~1127 paragraf, iç içe
-  (`b2a.{0-25}` gibi). Ekran wire edildi (`biyoritim_screen.dart`). deepWalk yapısı —
-  apply_ordered_en `dump biyoritim.json b2a` gibi her bölümü ayrı işle.
-- Bu içerikler Flutter için yeniden üretilmiş; Unity kaynağında karşılığı yok.
-- el fali/yüz fali/dert ortağı/durugörü AI: runtime'da AI üretimi (API'ye locale geç).
+### ✅ biyoritim TAM (`assets/data/biyoritim.json` — 1127/1127)
+- b1(7), b2a/b2b/b2c(200'er), b3a(200), b3b(201), b4(59), b5(60) → hepsi ELLE çevrildi.
+- Ekran `biyoritim_screen.dart` wire edildi.
+
+### TÜM STATİK İÇERİK ÇEVRİLDİ ✅ (~9550 metin_en + 100 rüya sembolü Dart'ta)
+Geriye yalnızca runtime AI üretimi kalır (el fali/yüz fali/dert ortağı/durugörü AI/kahve
+foto analizi) — bunlar API çağrısına locale geçilerek İngilizce üretilir, statik çeviri gerekmez.

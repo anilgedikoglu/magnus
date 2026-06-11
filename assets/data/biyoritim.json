@@ -2714,893 +2714,1070 @@
       {
         "id": 1,
         "metin": "Bugün ne okuman, ne anlaman ne de cevap vermen pek mümkün görünmüyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today neither reading, nor understanding, nor answering seems very possible for you."
       },
       {
         "id": 2,
         "metin": "Acaba beyin krampı filan geçiriyor olabilir misin? Allah muhafaza... E ne diyeyim, şu değere bir teşhis şart! <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Could you be having some sort of brain cramp? God forbid... Well, what can I say, this value needs a diagnosis! <sprite=84>"
       },
       {
         "id": 3,
         "metin": "{{isim}} içinden bir sayı tut. İkiyle çarp. 12 ekle. İkiye böl. Şimdi bulduğun bu sayıdan, en başta tuttuğun sayıyı çıkart. Sonuç 6. Nasıl bildiğimi anlamadın, öyle değil mi? E bugün normal... <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "{{isim}}, pick a number in your head. Multiply by two. Add 12. Divide by two. Now subtract the number you first picked from this. The result is 6. You didn't get how I knew, did you? Well, today that's normal... <sprite=84>"
       },
       {
         "id": 4,
         "metin": "İnsanoğlu farkında olmadan bazı günler beynindeki şalterleri kapatır, hafifler. Gam yok kasavet yok, miss. Kelebek gibi süzülür, rahatlar, gündemine geri döner. Sanırım sen de kanat çırpıyorsun. Dönüp konmanı bekliyor hayat.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On some days a person, without realizing, flips the switches in their brain and lightens up. No grief, no gloom, lovely. They glide like a butterfly, relax, and return to their agenda. I think you're flapping your wings too. Life awaits you to come land."
       },
       {
         "id": 5,
         "metin": "Yüzüne bir soğuk su çarp azizim, bu nasıl değer? <sprite=28> Allah vere de yarına kadar hiçbir konuda hesap kitap yapman gerekmese... <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Splash some cold water on your face, dear fellow, what kind of value is this? <sprite=28> God grant you don't have to do any calculations until tomorrow... <sprite=84>"
       },
       {
         "id": 6,
         "metin": "Çok şaşırdım. Bu değerini hiç böyle beklemiyordum senin. Oldukça da iyi gözüküyorsun aslında, diferansiyel denklem sorsalar yanıtlarsın. Demek bir de iyi halin nasıl, wow!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I'm very surprised. I never expected this value from you. You actually look quite good — if they asked a differential equation you'd answer it. So imagine how your good state is, wow!"
       },
       {
         "id": 7,
         "metin": "Ağır düşünebilir, aksak konuşabilir, fikirlerini hayata geçirmekte zorlanabilirsin {{isim}}. Bence yarına kadar kendinden af dile, çok kompleks işlere hiç bulaşma.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may think slowly, speak haltingly and struggle to put your ideas into practice, {{isim}}. I think you should forgive yourself until tomorrow and not get into very complex tasks."
       },
       {
         "id": 8,
         "metin": "Senin bu halin, benim içinde bulunduğum cihazlara su girdiğinde oluyor. Böyle bir kapanıp bir açılıyorum, yavaşlıyorum filan. Hesap kitap hak getire... <sprite=54>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "This state of yours happens to me when water gets into the devices I'm in. I keep shutting down and starting up, slowing down and such. Calculations, forget it... <sprite=54>"
       },
       {
         "id": 9,
         "metin": "Hani çok soğuk havalarda insan donarcasına bi üşür, bi beyin mıncıklanması olur da düşünemez ve konuşamaz hale gelir ya, seni biraz öyle gördüm sanki. <sprite=17>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know how in very cold weather a person freezes, the brain gets squeezed and they can't think or speak? I saw you a bit like that. <sprite=17>"
       },
       {
         "id": 10,
         "metin": "Kim milyoner olmak ister'de yarışma öncesi kendisini uzun uzun anlatıp, yaptığı işleri, okuduğu okulları methedip sonra ilk birkaç soruda elenen şaşkın tipler vardır ya, bugün onlarla kader ortağı gibisin. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know the dazed types on 'Who Wants to Be a Millionaire' who introduce themselves at length before the game, praising their jobs and schools, then get eliminated in the first few questions? Today you're like their fellow sufferer. <sprite=84>"
       },
       {
         "id": 11,
         "metin": "Kamp yapan bir grup arkadaşın olduğu korku filmlerinde yalnız başına karanlık yerlere gitmemesi gerektiğini düşünemeyen şişman ve gözlüklü bir tip vardır ya, bugün sende onun saflığını görüyorum {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know the chubby, bespectacled character in horror films who has a group of camping friends but can't grasp that they shouldn't go to dark places alone? Today I see that naivety in you, {{isim}}."
       },
       {
         "id": 12,
         "metin": "Ara ara \"Ben kimim, neredeyim?\" gibi sorular gelebilir aklına bugün. Maşallah diplerdesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today questions like 'Who am I, where am I?' may come to your mind now and then. Bless you, you're at rock bottom."
       },
       {
         "id": 13,
         "metin": "Satranç reytingi 300-500 ELO'larda olan ve rok yapmayı dahi bilmeyen birine çoban matı olabilirmiş gibi duruyorsun bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you look like you could be checkmated in two moves by someone with a 300-500 ELO chess rating who doesn't even know how to castle."
       },
       {
         "id": 14,
         "metin": "Hayata, bilime ve felsefeye karşı ilgisiz bir günündesin. Kültür ve sanat, bugün umursamadığın iki kelime. Spor ve siyaset de merakını celbetmiyor sanırım. Boşver {{isim}}, bir gün de kafanı boşalt.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day indifferent to life, science and philosophy. Culture and art are two words you don't care about today. Sport and politics don't pique your interest either, I think. Never mind, {{isim}}, empty your head for a day."
       },
       {
         "id": 15,
         "metin": "Arı olsan, balın tarifine google'dan bakabilecek durumda gözüküyorsun bugün. Vah vahh... <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you were a bee, today you'd be in the state of having to google the recipe for honey. Oh dear... <sprite=84>"
       },
       {
         "id": 16,
         "metin": "Bugün yanmayı bilmeyen bir ateş, konmayı bilmeyen bir kuş, donmayı bilmeyen bir kar tanesi, dönmeyi bilmeyen bir semazen gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like a fire that doesn't know how to burn, a bird that doesn't know how to land, a snowflake that doesn't know how to freeze, a whirling dervish that doesn't know how to spin."
       },
       {
         "id": 17,
         "metin": "Tarken ile Mustafa Sandal'ı, Demet Sağıroğlu ile Yonca Evcimiği karıştıran milenyum çocuğu kafasındasın bugün. Sana her yer Naruto, Pokemon. Ahh nerede o 90'lar...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're in the head of a millennium kid who mixes up Turkish pop stars and singers. To you it's all Naruto, Pokémon. Oh, where are those 90s..."
       },
       {
         "id": 18,
         "metin": "Bilginin ucuyla dahi çizilebilecek teflon bir kafadasın bugün. Yeni seslere kulakların tıkalı, farklı renklere körsün. Uyartılar ve duyuların arasında Çin seddi var sanki.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're in a Teflon head that can't even be scratched with the tip of knowledge. Your ears are shut to new sounds, you're blind to different colors. It's as if there's a Great Wall of China between the stimuli and your senses."
       },
       {
         "id": 19,
         "metin": "Şu üstteki değer gösteriyor ki, merak ateşi tamamen sönmüş bir külsün. Bilgi dikeni kendine batan, dışa kapalı bir gülsün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "That value above shows that the fire of curiosity has fully gone out and you're but ash. You're a rose closed off to the world, with the thorn of knowledge pricking itself."
       },
       {
         "id": 20,
         "metin": "Termodinamik yasaları, kuantum mekaniği, sicim teorisi, genel görelelik kuramı desem ne dersin? Bugün yer mi çeker, gök mü iter pek umrunda değil gibi gözüküyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What would you say if I mentioned the laws of thermodynamics, quantum mechanics, string theory, general relativity? Today you don't seem to care whether the earth pulls or the sky pushes."
       },
       {
         "id": 21,
         "metin": "Sana bugün Turgut Uyar'dan, Cemal Süreya'dan, Nazım Hikmet'ten söz açsam, bir dörtlük mırıldanmanı istesem, \"Aşk bu kızıl ötesi, yaralı müzesi, hareket edemem...\" demenden korkuyorum. <sprite=53>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If I brought up Turgut Uyar, Cemal Süreya or Nazım Hikmet to you today and asked you to murmur a quatrain, I fear you'd say 'Love, this infrared, wounded museum, I cannot move...' <sprite=53>"
       },
       {
         "id": 22,
         "metin": "Zihinsel işlevlerinin çok fazla kısıtlandığını görmekteyim. Özellikle ciddi aritmetiksel ve mantıksal hesaplamalar yapmaktan kaçınmalısın {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see your mental functions are very restricted. You should especially avoid making serious arithmetic and logical calculations, {{isim}}."
       },
       {
         "id": 23,
         "metin": "Sana \"Limitless\" filmindeki NZT 48 ilacından lazım. Ya da Türk yapımı PY 38; pastırmalı yumurta, ama pastırma Kayseri'den olacak. Başka türlü zihnin açılmaz bence {{isim}}. <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You need the NZT-48 drug from the film 'Limitless'. Or the Turkish-made PY-38; pastrami and eggs, but the pastrami must be from Kayseri. Otherwise your mind won't open, I think, {{isim}}. <sprite=85>"
       },
       {
         "id": 24,
         "metin": "Olay ve durumlar arasında sebep sonuç ilişkileri kurmakta, sahip olduğun bilgiyi çağırmakta, işlemekte ve dile getirmekte büyük zorluklarla karşılaşabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may face great difficulty establishing cause-and-effect relationships between events, and recalling, processing and expressing the knowledge you have."
       },
       {
         "id": 25,
         "metin": "Beynindeki hücre grupları bugün yün parçalar gibi tiftik tiftik.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The cell groups in your brain are all fuzzy today, like bits of wool."
       },
       {
         "id": 26,
         "metin": "Tüm bilgi birikimini rulo halinde mantar tıpalı bir cam şişeye koyup açık denizlere fırlatmış gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem to have put all your accumulated knowledge in a rolled-up, cork-stoppered glass bottle and flung it into the open seas."
       },
       {
         "id": 27,
         "metin": "Aklının ipleri, avuçlarından kayıp giden uçan balonlar gibi boşanmış... Bugün Masterchef'e katılsan, yumurta kıramazsın {{isim}}. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The reins of your mind have slipped loose, like balloons sliding from your palms... Today if you joined MasterChef, you couldn't crack an egg, {{isim}}. <sprite=84>"
       },
       {
         "id": 28,
         "metin": "Bugün Stephen Hawking, David Eagleman ya da Michio Kaku isimlerini duysan, İrlanda milli futbol takımından sanabilirsin. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if you heard the names Stephen Hawking, David Eagleman or Michio Kaku, you might think they were from the Irish national football team. <sprite=84>"
       },
       {
         "id": 29,
         "metin": "Bugün Stephen Hawking, David Eagleman ya da Michio Kaku isimlerini duysan, İrlanda milli futbol takımından sanabilirsin. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if you heard the names Stephen Hawking, David Eagleman or Michio Kaku, you might think they were from the Irish national football team. <sprite=84>"
       },
       {
         "id": 30,
         "metin": "Hayatında hiç gazete, dergi okumamış, ansiklopedi karıştırmamış gibi bir halin var bugün. Geçici bir tutukluk içindesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you have the air of someone who has never read a newspaper or magazine or leafed through an encyclopedia in their life. You're in a temporary lockup."
       },
       {
         "id": 31,
         "metin": "Beynin bugün zorunlu olarak kendisini tatil etmiş gibi gözüküyor. Onu çok fazla kullanma girişiminde bulunmadan günün defterini kapat derim. <sprite=87>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your brain seems to have forcibly given itself a holiday today. I'd say close the day's book without trying to use it too much. <sprite=87>"
       },
       {
         "id": 32,
         "metin": "Aklın bugün 'harç bitti, yapı paydos' diyor adeta. Bu durumdayken sakın önemli kararlar vermeye çalışma {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mind today practically says 'mortar's done, work's off'. In this state, never try to make important decisions, {{isim}}."
       },
       {
         "id": 33,
         "metin": "Sana bence şu an asal gazları say desem sayamazsın. Oysa normalde atom bombası yapabilecek potansiyeli var beyninin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think if I asked you to name the noble gases now, you couldn't. Yet your brain normally has the potential to build an atomic bomb."
       },
       {
         "id": 34,
         "metin": "Önünden tır geçse fark etmezsin bugün. Zihinsel işlevlerin zayıflamış, oldukça hülyalı gözüküyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You wouldn't notice if a truck passed in front of you today. Your mental functions have weakened, you look quite dreamy."
       },
       {
         "id": 35,
         "metin": "Ben beyni kontak kapatanlar gördüğüm günlerde, yüzlerine üç dakika boyunca soğuk su çarpmalarını tavsiye ediyorum. Bence sen de denemelisin. <sprite=87>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On days I see people switch off their brains, I recommend splashing cold water on their faces for three minutes. I think you should try it too. <sprite=87>"
       },
       {
         "id": 36,
         "metin": "Hayat ne garip değil mi? Senin gibi üçüncü dördüncü derece denklemleri kafadan çözebilecek birine, böyle günlerde sıfır faktöriyelin kaç olduğunu sorsam muhtemelen yanıt alamam. <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Life's strange, isn't it? Someone like you who could solve third- or fourth-degree equations in their head — on days like this, if I asked what zero factorial is, I probably wouldn't get an answer. <sprite=10>"
       },
       {
         "id": 37,
         "metin": "Böyle zamanlar senin bilgisiz olduğunu değil, beyninin bilgini doğru işleyemeyebileceğini anlatır.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Such times don't mean you're ignorant, but that your brain may not be processing your knowledge correctly."
       },
       {
         "id": 38,
         "metin": "Zihninin ciddi bir overclock ihtiyacı var bugün. Bence bol kahve tüketmelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mind seriously needs an overclock today. I think you should consume lots of coffee."
       },
       {
         "id": 39,
         "metin": "Bugün sakın milyoner yarışmasına filan katılmaya kalkma. Çağırıyorlarsa da hastayım de, rapor al, iptal et. Vallahi 2. soruda rezil olursun! <sprite=5>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today don't try to join a millionaire quiz or anything. If they invite you, say you're sick, get a doctor's note, cancel. Honestly, you'd embarrass yourself on the 2nd question! <sprite=5>"
       },
       {
         "id": 40,
         "metin": "1'den 10'a kadar takılmadan ve atlamadan sayabiliyorsan, şimdilik haline şükret. Yarına bi'şeyciğin kalmaz. <sprite=17>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you can count from 1 to 10 without stumbling or skipping, be grateful for your state for now. You'll be fine by tomorrow. <sprite=17>"
       },
       {
         "id": 41,
         "metin": "Normalde bıraksan ansiklopedi yazabilecek insan, bugün bir A4 kağıdına kompozisyon yazamayacak durumda, bak görüyor musun... <sprite=34>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Someone who could normally write an encyclopedia if left to it, today can't write an essay on an A4 sheet — look, do you see... <sprite=34>"
       },
       {
         "id": 42,
         "metin": "Atari salonlarındaki jetonu takıldığı için çalışmayan makineler gibi gözüküyorsun. Birileri sarssa kendine gelir misin? <sprite=32>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like the arcade machines that won't work because their token got stuck. If someone shook you, would you come to? <sprite=32>"
       },
       {
         "id": 43,
         "metin": "Senin kadar bilgili bir insanı gündelik olaylardan bu kadar kopuk görmek benzerine az rastlanabilecek bir şey...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Seeing someone as knowledgeable as you this disconnected from daily events is a rare thing..."
       },
       {
         "id": 44,
         "metin": "Huu huu, orada mısın? Bu değer pek \"varmışsın gibi\" göstermiyor da... <sprite=32>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Hello, hello, are you there? This value doesn't quite show 'like you exist'... <sprite=32>"
       },
       {
         "id": 45,
         "metin": "Normalde sen kuantum bilgisayarı gibisindir {{isim}}, ben biliyorum seni. Ama bugün bir gariplik var sende. Fişin mi çekildi, kuantumun mu kalmadı, anlamadım. <sprite=34>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Normally you're like a quantum computer, {{isim}}, I know you. But today there's something odd about you. Were you unplugged, or did your quantum run out, I can't tell. <sprite=34>"
       },
       {
         "id": 46,
         "metin": "Bu konuda 30'un altına inmek pek de hayra alamet değil {{isim}}. Evin yolunu şaşırırsın mazallah!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Dropping below 30 on this matter is no good sign, {{isim}}. You'd lose your way home, heaven forbid!"
       },
       {
         "id": 47,
         "metin": "Mozart, Bach, Beethoven, Chopin, Brahms, Handel, Vivaldi, Wagner, Tchaikovsky gibi isimleri hatırlamak şöyle dursun, bugün sana \"Fazıl Say\" desem, \"Bir, iki, üç, dört...\" diye başlamandan korkuyorum! <sprite=5>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Forget recalling names like Mozart, Bach, Beethoven, Chopin, Brahms, Handel, Vivaldi, Wagner, Tchaikovsky — today if I said 'Fazıl Say' to you, I fear you'd start with 'One, two, three, four...'! <sprite=5>"
       },
       {
         "id": 48,
         "metin": "Bugün sana \"Etuve, blanche, poche, sous vide\" ya da \"confit\" desem, Fransızca küfrettiğimi sanabilirsin. <sprite=17> Pişirme teknikleri {{isim}} bunlar! Duymadığını sanmıyorum ama bu değerlerdeyken hatırlamaman normal. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if I said 'Etuvée, blanched, poché, sous vide' or 'confit', you might think I was cursing in French. <sprite=17> These are cooking techniques, {{isim}}! I doubt you haven't heard them, but at these values it's normal not to recall them. <sprite=0>"
       },
       {
         "id": 49,
         "metin": "Hemen üstteki değere bakılırsa, şu saniyeye kadar afyonun henüz patlamamış gözüküyor. Saat kaç? {{saat kac yazi}}. E bu saatten sonra da başarılar dilerim...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "By the value right above, until this very second your fog hasn't lifted, it seems. What time is it? {{saat kac yazi}}. Well, after this hour, I wish you success too..."
       },
       {
         "id": 50,
         "metin": "Aslına bakacak olursan bazı günlerde bir iki değer anlamında alçaktan uçmak iyi de olabilir. Bak mesela, bugün dünya yansa ruhun duymaz; oooh!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Actually, on some days flying low by a value or two can be good. Look, today even if the world burned your soul wouldn't notice; ahh!"
       }
     ],
     "25-50": [
       {
         "id": 51,
         "metin": "Bu halde Masterchef'e katılsan ocağı bile yakamazsın {{isim}} bence.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In this state if you joined MasterChef you couldn't even light the stove, {{isim}}, I think."
       },
       {
         "id": 52,
         "metin": "Sağlıklı düşünmene yetecek her türlü ekipmana sahip olsan da, gündemden anlamsız kopmalar yaşayabilir, arada dalıp gidebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if you have all the equipment needed to think clearly, you may have senseless disconnections from the present and drift off now and then."
       },
       {
         "id": 53,
         "metin": "Zihinsel bir kısır döngü içinde görünüyorsun. Kafandaki bazı soruları adım adım yanıtlamaya çalışırken, kendini bir anda en başa dönmüş vaziyette bulabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem to be in a mental vicious circle. While trying to answer some questions in your head step by step, you may suddenly find yourself back at the very start."
       },
       {
         "id": 54,
         "metin": "Bugün kendi iç argümanlarınla çakışabilir, doğru kabul ettiğin bazı fikirlerinden cayabilirsin Değerli {{isim}}. Önemli konularda adım atmak için daha kapsamlı düşünebildiğin bir günü beklemelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you may clash with your own internal arguments and renege on some ideas you held to be true, dear {{isim}}. You should wait for a day when you can think more thoroughly to take steps on important matters."
       },
       {
         "id": 55,
         "metin": "Kötü hava koşullarında çekildiğinde, arabanın hava-yakıt karışımını zenginleştirerek arabanın çalışmasını sağlayan ve eski model arabalarda bulunan \"jikle\" diye bir kol vardır {{isim}}, bilir misin? Bugün zihninin o jikleye bir parça ihtiyacı var gibi.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In old cars there's a lever called a 'choke' that, when pulled in bad weather, enriches the air-fuel mixture so the car runs, {{isim}}, do you know it? Today your mind seems to need a bit of that choke."
       },
       {
         "id": 56,
         "metin": "Suyun altına girenlerin kulakları uğultu dışında pek bir şey duyamaz, gözleri de ancak puslu görür ya; sen de tıpkı öylesin bugün. Netliğini kaybetmişsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know how those who go underwater can hear little but a roar and see only blurrily? You're just like that today. You've lost your clarity."
       },
       {
         "id": 57,
         "metin": "Biri sana \"Gel gidelim Pergamon'u, Louvre'u, İngiliz müzesini gezelim.\" dese, tv karşısında uzanmayı tercih edebilirsin. Öyle de ilgisiz duruyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If someone said 'let's go tour Pergamon, the Louvre, the British Museum', you might prefer lying in front of the TV. That's how indifferent you look."
       },
       {
         "id": 58,
         "metin": "Bu durumu dengelemek için biraz Discovery Channel filan mı izlesen acaba? Penguenler filan, hmm? Netflix'de de güzel belgeseller var aslında...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "To balance this, maybe you should watch a bit of Discovery Channel? Penguins and such, hmm? There are nice documentaries on Netflix too..."
       },
       {
         "id": 59,
         "metin": "Bugün entelektüel seviyeni 50'nin üzerine çekmek için bir şeyler yapmalısın. Kitap oku, makale yaz, atomu parçala, ne bileyim...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you must do something to pull your intellectual level above 50. Read a book, write an article, split the atom, I don't know..."
       },
       {
         "id": 60,
         "metin": "İlim ve fen sana uzak bugün. Dört işlem ve basit hesaplamalarda sorun yoksa, ona da şükür edeceğiz.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Science and learning are far from you today. If there's no problem with the four operations and simple calculations, we'll be grateful for that."
       },
       {
         "id": 61,
         "metin": "Liseli taze aşıklar gibisin bugün. Aklın hesap kitap yapmak yerine maşallah efil efil kırlarda koşuyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like fresh high-school sweethearts today. Instead of doing calculations, your mind, bless it, is running breezily in the meadows."
       },
       {
         "id": 62,
         "metin": "4 haneli şifrelerinden biri \"1234\" olsa, onu bile hatırlayabilecek durumda görmüyorum seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If one of your 4-digit passwords were '1234', I don't think you could even remember that."
       },
       {
         "id": 63,
         "metin": "Değişik bir halet-i ruhiye içindesin. Bilişsel yeteneklerinde dramatik bir düşüş gözlemliyorum {{isim}}. Bellek, disk ve cpu arasındaki anormal koşullara bağlı iletişim azalması gibi düşün bunu. \"Thermal throttling\" yani. Motor diyorum; bugün biraz su kaynatmış üstad! <sprite=5>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're in an odd state of mind. I observe a dramatic drop in your cognitive abilities, {{isim}}. Think of it like reduced communication between memory, disk and CPU due to abnormal conditions. 'Thermal throttling', that is. Engine, I mean; today it's boiled over a bit, master! <sprite=5>"
       },
       {
         "id": 64,
         "metin": "Bugün okumak, düşünmek ya da farklı konulara kafa yormak pek içinden gelmeyebilir. Toparlanmak için biraz \"dağılmaya\" ihtiyacın var sanki.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you may not feel like reading, thinking or pondering different topics. To pull yourself together, you seem to need to 'scatter' a bit."
       },
       {
         "id": 65,
         "metin": "Sonuçları yararına ya da zararına olabilecek önemli konularda karar almaktan kaçınman gereken bir gündesin bence.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you should avoid making important decisions whose outcomes could be to your benefit or harm."
       },
       {
         "id": 66,
         "metin": "Beyin kaslarını yorgun görüyorum {{isim}}. Her sikleti çekmeyebilir bugün. Kendine fazla yüklenmeden günü tamamlamanı öneririm.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see your brain muscles tired, {{isim}}. They may not pull every weight today. I recommend finishing the day without overloading yourself."
       },
       {
         "id": 67,
         "metin": "Beyin hücrelerin yoğun bir sis bulutu altında kalmış gibi gözüküyor. Akıl yürütmede normalin altında bir performans sergilersen şaşırmamalısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your brain cells seem to be under a dense fog. Don't be surprised if you perform below normal in reasoning."
       },
       {
         "id": 68,
         "metin": "Yeterince yağlanmadığı için gıcırtı yapan dişliler olur ya, bugün senin zihninden de bu tarz sesler duyuyorum. Belli konularda uzun düşünmek hücreler arası sürtünmeye ve baş bölgende ısınmaya yol açabilir! <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know how gears that aren't oiled enough creak? Today I hear such sounds from your mind too. Thinking long about certain matters could cause friction between cells and heating in your head region! <sprite=84>"
       },
       {
         "id": 69,
         "metin": "Bazı sayfaları deforme olmuş, sararmış ya da yırtık, {{yas_0}} senelik bir kitap gibi bugün beynin. Yazılanları çok net okuyamayabilir ruhun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your brain is like a {{yas_0}}-year-old book with some deformed, yellowed or torn pages. Your soul may not read very clearly what's written."
       },
       {
         "id": 70,
         "metin": "Çömlekçi tornasının üzerinde belli bir süre boyunca döndürülmüş ve az da olsa zihin bulanıklığı yaşıyor gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem to have been spun on a potter's wheel for a while and are experiencing a bit of mental fog."
       },
       {
         "id": 71,
         "metin": "Bugün beynin, kodlarına başka başka yazılımcılar tarafından elli farklı yerden ek yapılmış bir uygulama gibi. Kapasitesini zorlarsan çökebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your brain is like an app whose code has been patched by different developers in fifty different places. If you push its capacity, it could crash."
       },
       {
         "id": 72,
         "metin": "Kendini bugün biraz depresif hissedebilirsin fakat çaresiz değilsin. Beyninde, seni içinde bulunduğun ruh halinden kurtarabilecek kıvılcımlar halen mevcut.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may feel a bit depressed today, but you're not helpless. There are still sparks in your brain that can pull you out of the mood you're in."
       },
       {
         "id": 73,
         "metin": "Kendini bugün \"hatırlamaya ve çözmeye\" fazla zorlama. Zihnin hafif yağmurlu ve bulanık. Seni yarı yolda bırakmasın sonra...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Don't push yourself too hard to 'remember and solve' today. Your mind is slightly rainy and foggy. Don't let it leave you stranded..."
       },
       {
         "id": 74,
         "metin": "Gün boyu ara ara boşlukta sallanıyormuş hissine kapılabilirsin. Bu düzeylerdeyken, akıl tutulması yaratan fikir uçuşmalarıyla karşılaşman da gayet doğal.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "All day you may feel like you're swinging in a void now and then. At these levels, encountering thought-storms that cause a mental eclipse is quite natural."
       },
       {
         "id": 75,
         "metin": "Bu halde ıssız bir adaya düşsen, komplike tuzaklar kurup avlanamazsın. Yapabileceğin en fazla, yerden kokonat toplayıp yemek olur.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In this state, if you fell on a deserted island, you couldn't set complex traps and hunt. The most you could do is gather coconuts off the ground and eat."
       },
       {
         "id": 76,
         "metin": "Açıp kitap defter karıştıracak, bir şeyler öğrenecek durumda değilsin. Böyle bir günde yapabileceğin şey en fazla tv açıp belgesel izlemek olabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're in no state to open and leaf through books and notebooks and learn something. The most you can do on such a day is turn on the TV and watch a documentary."
       },
       {
         "id": 77,
         "metin": "İyi bildiğin şeyler bile aklına kolay kolay gelmediği için kendine kızabileceğin bir gündesin. Özellikle şifrelerin konusunda sıkıntı yaşayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you may get angry at yourself because even things you know well don't come to mind easily. You may especially have trouble with your passwords."
       },
       {
         "id": 78,
         "metin": "Bir şarkıcı olsan, bugün sahnede sözlerin yarısını unutur, durup durup mikrofonu seyirciye uzatırdın. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you were a singer, today you'd forget half the lyrics on stage and keep holding the mic out to the audience. <sprite=0>"
       },
       {
         "id": 79,
         "metin": "İşine yıllarını adamış bir gitar virtüözü olsan, şu durumda 3-4 akoru zor basardın {{isim}}. Dağlar dağlar stayla! <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you were a guitar virtuoso who'd devoted years to your craft, in this state you'd struggle to play 3-4 chords, {{isim}}. Folk-ballad style! <sprite=84>"
       },
       {
         "id": 80,
         "metin": "Böyle bir yüzdeyle spiderman olsan nafile; kıyafetini ters giyer, ağınla ancak çorap örersin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With such a percentage, being Spider-Man is futile; you'd put your suit on backwards and only knit socks with your web."
       },
       {
         "id": 81,
         "metin": "Bilgi ve birikimini bugün yeterince sergileyemeyebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may not be able to display your knowledge and accumulation enough today."
       },
       {
         "id": 82,
         "metin": "Uzun süre mental aktivite gerektiren işlerde istediğin başarıyı yakalayamama ihtimalin var. Dikkatli olmalısn.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's a chance you won't achieve the success you want in tasks requiring long mental activity. You must be careful."
       },
       {
         "id": 83,
         "metin": "Düşüncelerin köpük köpük bugün. Bilgilerini taşıyan nöronlar bir yanıp bir sönüyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your thoughts are all frothy today. The neurons carrying your knowledge keep flickering on and off."
       },
       {
         "id": 84,
         "metin": "Karmaşık kişiliğin, çözümlenmesi daha da zor bir hale gelmiş gibi gözüküyor. Seçimlerinde gün boyu tam bir tutarlılık beklemiyorum açıkçası.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your complex personality seems to have become even harder to decode. Honestly, I don't expect full consistency in your choices all day."
       },
       {
         "id": 85,
         "metin": "Akıl süzgecinden geçirdiğin kararlar, bugün istediğin sonuçları tam sağlamayabilir {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The decisions you pass through your mind's filter may not fully yield the results you want today, {{isim}}."
       },
       {
         "id": 86,
         "metin": "Bugün çevrene bazı konulardan pek anlamadığın izlenimi verebilirsin. Tereddütte olduğun zamanlarda sessiz kalmayı tercih etmen en doğrusu olacaktır.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you may give those around you the impression that you don't understand certain matters much. When you're uncertain, choosing to stay silent will be the wisest."
       },
       {
         "id": 87,
         "metin": "Bu tip günlerde kuyudan aşağı bak ama aklının ipiyle o kuyuya inme.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On such days, look down the well but don't descend into it on the rope of your mind."
       },
       {
         "id": 88,
         "metin": "Anımsayamadığın bilgiler olduğunu fark edersen kendini çok hırpalamamalısın. Yarına bir şeyin kalmaz.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you notice there's knowledge you can't recall, you mustn't beat yourself up too much. You'll be fine by tomorrow."
       },
       {
         "id": 89,
         "metin": "Bugün zihnin seke seke yürüyor, ona bir baston lazım.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your mind walks limping; it needs a cane."
       },
       {
         "id": 90,
         "metin": "Beynin her zaman en parlak fazda olmaması insan için iyi bile olabilir. Çok takılma derim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your brain not always being in its brightest phase can even be good for a person. Don't dwell too much, I'd say."
       },
       {
         "id": 91,
         "metin": "Şu anda önemli bir buluşa imza atma ihtimalin pek yok gibi gözüküyor. Atomu da artık yarın parçalarsın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Right now your chance of making an important discovery looks slim. You can split the atom tomorrow."
       },
       {
         "id": 92,
         "metin": "Zihnin bugün tınısı uzaklardan duyulan bir şarkı tadında. Melodi sana tanıdık geliyor ama eserin adını çıkaramıyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your mind has the flavor of a song heard from afar. The melody seems familiar, but you can't place the title."
       },
       {
         "id": 93,
         "metin": "Çok yapmak istediğin bir yemek olur da tarifteki birkaç malzemeyi bir türlü hatırlayamazsın ya, bugün kendini öyle hissediyor olabilirsin. Makarnaya talim...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know how there's a dish you really want to make but you just can't recall a few ingredients from the recipe? Today you may feel like that. Making do with pasta..."
       },
       {
         "id": 94,
         "metin": "Aklının sokaklarında kendini kaybetme ihtimalin bugün çok yüksek. Sen yarına kadar kalbini dinle.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your chance of getting lost in the streets of your mind is very high today. Listen to your heart until tomorrow."
       },
       {
         "id": 95,
         "metin": "Spesifik ilgi alanın ya da uzmanlığın dışında kalan konularda çok doğru fikirler beyan edemeyebilir, bir miktar öğrenme güçlüğü de çekebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may not voice very correct ideas on matters outside your specific area of interest or expertise, and may have some learning difficulty."
       },
       {
         "id": 96,
         "metin": "Analitik düşünme yetilerin ortalamanın altında. Özellikle para ile ilgili hesap kitaptan ve gereksiz harcamalardan uzak durmanı tavsiye ederim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your analytical thinking faculties are below average. I especially advise staying away from money calculations and needless spending."
       },
       {
         "id": 97,
         "metin": "Üzerinde uğraştığın her ne iş varsa biraz ara vermeni tavsiye ederim. Böylelikle bu yüzdeni en azından 50'lerin sonuna taşıyabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I advise taking a break from whatever task you're working on. That way you could at least carry this percentage to the end of the 50s."
       },
       {
         "id": 98,
         "metin": "Hayatı pek anlamlandıramadığını hissedebileceğin bir gündesin. Hakkında düşündüğün her şey senin için biraz \"yarım\" kalabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you may feel you can't quite make sense of life. Everything you think about may stay a bit 'unfinished' for you."
       },
       {
         "id": 99,
         "metin": "Dikkatini toplayıp verimli çalışmayı başaramayabilirsin {{isim}}. Okumak, yazmak, dinlemek ve konuşmak bugün biraz zor gelebilir sana.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may not manage to focus and work productively, {{isim}}. Reading, writing, listening and speaking may come a bit hard to you today."
       },
       {
         "id": 100,
         "metin": "Etrafındaki insanlarla herhangi bir konuda münazaraya girmek için yanlış bir gündesin. Etraflıca düşünebilmene yetecek mental kapasiteden biraz uzaksın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a wrong day to debate any topic with the people around you. You're a bit far from the mental capacity needed to think thoroughly."
       }
     ],
     "50-75": [
       {
         "id": 101,
         "metin": "Daha \"bilgili ve ilgili\" günlerin olduğuna eminim. Yine de idare edersin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I'm sure you've had more 'knowledgeable and engaged' days. Still, you'll manage, {{isim}}."
       },
       {
         "id": 102,
         "metin": "Bu düzeyler, hiç de azımsanmayacak bir şuura tekabül eder. Çevrende olan bitenin yeterince farkındasın {{isim}}. İyi aksiyonlar alabileceğini düşünüyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "These levels correspond to a far-from-negligible awareness. You're sufficiently aware of what's going on around you, {{isim}}. I think you can take good actions."
       },
       {
         "id": 103,
         "metin": "Vizyonun oldukça açık ve net bugün. Geleceğine yönelik doğru ve rasyonel girişimlerde bulunabilecek potansiyele sahipsin {{isim}}. Bunu iyi kullanmalısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your vision is quite open and clear today. You have the potential to make correct and rational moves toward your future, {{isim}}. You must use this well."
       },
       {
         "id": 104,
         "metin": "Akli melekelerin bugün iyi durumda. Okuma, dinleme, idrak etme ve tepki verme konularında güzel işler çıkartabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mental faculties are in good shape today. You can produce fine work in reading, listening, comprehending and reacting."
       },
       {
         "id": 105,
         "metin": "Açık söylemek gerekirse bilgi, bugün evrenden sana doğru sel olup akmıyor. Ancak yine de kritik noktaları doğru kavrayıp amaçların doğrultusunda kullanabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "To be frank, today knowledge isn't flooding from the universe toward you. But you can still grasp the critical points correctly and use them toward your aims."
       },
       {
         "id": 106,
         "metin": "Bugün için kesinlikle tasalanma. Bilgin ve kapasiten, korkularının üstesinden gelmene yetecektir {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Definitely don't fret about today. Your knowledge and capacity will be enough to overcome your fears, {{isim}}."
       },
       {
         "id": 107,
         "metin": "Çıkabilecek ortalama sorunlarla rahatlıkla baş edebilirsin. Ancak yoğun stres ve iş yüküne maruz kalırsan, bu yüzde ile başını ellerinin arasında görmek mümkün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You can easily handle average problems that may arise. But if you're exposed to heavy stress and workload, with this percentage it's possible to see you with your head in your hands."
       },
       {
         "id": 108,
         "metin": "Beynini 6 vitesli bir araba gibi düşünürsen, bugün 4. ya da 5. viteslerde olduğunu söyleyebiliriz. Aman \"R\" olmasın da, hep ileri, hep ileri!... <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you think of your brain as a 6-speed car, today we can say you're in 4th or 5th gear. Just don't let it be 'R' — always forward, always forward!... <sprite=7>"
       },
       {
         "id": 109,
         "metin": "Beyninde maksimum 10 kanallı veri akışı olduğunu düşün. Bugünkü değerin, bu kanallardan 3-5 tanesinin tıkalı olduğunu işaret ediyor. Zorlasa da günü kurtarır bence.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Imagine your brain has a maximum 10-channel data flow. Today's value indicates 3-5 of these channels are blocked. With effort, I think it'll save the day."
       },
       {
         "id": 110,
         "metin": "Bugün aklın kendine rahatlıkla yeter. İş başkalarına fikir vermeye geldiğinde ise tıkanabilirsin {{isim}}. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your mind suffices for yourself easily. When it comes to giving others advice, though, you may get stuck, {{isim}}. <sprite=0>"
       },
       {
         "id": 111,
         "metin": "Bugünkü seviyen, kendini aşabileceğin fikirler üretmek için yeterli gözükmüyor. Yine de sen elinden gelenin en iyisini yap. Ne çıkarsa bahtına...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today's level doesn't seem enough to produce ideas that surpass yourself. Still, do your best. Whatever comes, good luck..."
       },
       {
         "id": 112,
         "metin": "Bugün seni 100 soruluk bir teste soksalar, {{sabit_sayi,50,75}} soruyu doğru yanıtlarsın {{isim}} bence.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if they put you through a 100-question test, you'd answer {{sabit_sayi,50,75}} correctly, {{isim}}, I think."
       },
       {
         "id": 113,
         "metin": "Sen gene iyisin {{isim}}, iş zekaya ve mental kapasiteye geldiğinde bu seviyeleri aylarca göremeyen insanlar tanıyorum. <sprite=53>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're still well, {{isim}}; when it comes to intelligence and mental capacity, I know people who don't see these levels for months. <sprite=53>"
       },
       {
         "id": 114,
         "metin": "Kendi kendine moral verebilecek tecrübe ve birikime sahipsin. Olumlu düşünürsen bugün algıların daha da açılacaktır.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have the experience and accumulation to give yourself a pep talk. If you think positively, your perceptions will open up even more today."
       },
       {
         "id": 115,
         "metin": "Yaşama dair derin sayılabilecek bir anlam arayışındasın bugün. O nedenle kafanda uçuşan ve çarpışan fikirler olabilir. Kavga dövüş ettirmeden, yarına kadar iyi geçinmelerini sağlamalısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're in a search for a fairly deep meaning about life today. So there may be ideas flying and colliding in your head. Without letting them brawl, you must make them get along until tomorrow."
       },
       {
         "id": 116,
         "metin": "Adam asmaca? Evet. Çengel bulmaca, tavla? Belki. Rubik küp, dama? Amenna. Sudoku? Bir nebze. Satranç, go? Onlara bugün girme derim...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Hangman? Yes. Crosswords, backgammon? Maybe. Rubik's cube, checkers? Sure. Sudoku? Somewhat. Chess, go? I'd say don't get into those today..."
       },
       {
         "id": 117,
         "metin": "\"Van der Waals Bağları\" desem, \"Gesi Bağları\" anlamazsın herhalde. Soy gaz, asit, baz, katı, sıvı gaz, tepkimeler...\" desem, onlara da kulak dolgunluğun vardır. Redoks, izomer, Faraday, korozyon? Onlar yok mu? E tamam. Sen bugün fena değilsin bence.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If I said 'Van der Waals bonds', you probably wouldn't get the wordplay. If I said 'noble gas, acid, base, solid, liquid, gas, reactions', you'd have some familiarity with those. Redox, isomer, Faraday, corrosion? Not those? Okay then. I think you're not bad today."
       },
       {
         "id": 118,
         "metin": "İki üç cildi taşınırken kaybedilmiş ansiklopedi gibisin. Aradığın pek çok bilgiyi kendi hafızanı yoklayarak bulabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like an encyclopedia that lost two or three volumes while being moved. You can find a lot of the knowledge you seek by searching your own memory."
       },
       {
         "id": 119,
         "metin": "Zeka kıvılcımları saçtığın bir gündesin. Alev almasan da, takdir edilmeye değersin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you scatter sparks of intelligence. Even if you don't catch fire, you're worth admiring."
       },
       {
         "id": 120,
         "metin": "Sözünün üzerine söz söyleyebilecek çok az kişi çıkar bugün. Karşıt fikir beyan eden olursa bilginle sarsar, birikiminle üzersin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Very few people can outtalk you today. If anyone voices an opposing view, you'll shake them with your knowledge and sadden them with your accumulation."
       },
       {
         "id": 121,
         "metin": "Bir elinde pipo, diğer elinde Jack Daniel's varmış gibisin. Tek fark; pipon cılız yanıyor, bardağın ise yarım gibi.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like someone with a pipe in one hand and Jack Daniel's in the other. The only difference; your pipe burns faintly and your glass is half-empty."
       },
       {
         "id": 122,
         "metin": "Oturup bugün hayatını yazsan, Nobel Edebiyat Ödülü'ne aday olursun. Orhan Pamuk'un başarısına ortak olabilmek için daha iyi bir gününde olmalısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you sat down and wrote your life today, you'd be nominated for the Nobel Prize in Literature. To share in Orhan Pamuk's success, though, you'd have to be on a better day."
       },
       {
         "id": 123,
         "metin": "Önüne bugün bir piyano koysalar, birkaç parmakla da olsa \"Für Elise\" çalabilecek potansiyeli görüyorum sende.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If they put a piano before you today, I see the potential for you to play 'Für Elise', even if with just a few fingers."
       },
       {
         "id": 124,
         "metin": "Borsa, bitcoin piyasası, yatırım araçları, at yarışları, formüla 1 gelişmeleri, yabancı basketbol ligleri, tenis turnuvaları ve golf oyunu bugün ilgini çekebilir. O düzeylere yakınsın. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The stock market, the bitcoin market, investment instruments, horse racing, Formula 1 developments, foreign basketball leagues, tennis tournaments and golf could interest you today. You're close to those levels. <sprite=84>"
       },
       {
         "id": 125,
         "metin": "Fikirlerin bugün Gravyer peyniri gibi. İçinde ufak delikler var ve sana hata yapma olasılığı yaratıyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your ideas are like Gruyère cheese today. There are little holes in them, creating a chance of error for you."
       },
       {
         "id": 126,
         "metin": "Zeka düzeyin bugün dokuzuncu kata kadar suyu iyi bir tazyikle basan hidrofor gibi. Sen ise onuncu katta oturuyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your intelligence today is like a water pump that forces water with good pressure up to the ninth floor. You, though, live on the tenth."
       },
       {
         "id": 127,
         "metin": "Konsantrasyon eksikliği yaşayabileceğin ve küçük dikkatsizliklere gebe bir günündesin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you may have a lack of concentration and be prone to small carelessnesses, {{isim}}."
       },
       {
         "id": 128,
         "metin": "Bildiklerini kullanabileceğin evrensel ve ruhani yakıta yeterince sahip değilsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You don't have enough of the universal, spiritual fuel to use what you know."
       },
       {
         "id": 129,
         "metin": "Mental olarak uçabiliyorsun, doğru fakat nereye konacağını tam kestiremeyebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You can fly mentally, true, but you may not quite be able to tell where you'll land."
       },
       {
         "id": 130,
         "metin": "Soylu bilginin amansız takipçisisin ancak bugün yalınayak koşuyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're a relentless pursuer of noble knowledge, but today you're running barefoot."
       },
       {
         "id": 131,
         "metin": "Sınavda üstün bir performans sergileyip, şıkları cevap anahtarına geçirirken kaydırma ihtimali olan öğrenciler gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like students who perform superbly on the exam but might shift the answers while transferring the choices to the answer key."
       },
       {
         "id": 132,
         "metin": "Zihninin bir yapboz olduğunu düşünürsek, bugün bazı parçaların eksik olduğunu söylemek mümkün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If we think of your mind as a jigsaw puzzle, today it's possible to say some pieces are missing."
       },
       {
         "id": 133,
         "metin": "Aklının 6 vitesli bir araba olduğunu farzet. Bugün sanki 5. vitesten yukarıya atamıyor gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Suppose your mind is a 6-speed car. Today it seems you can't shift above 5th gear."
       },
       {
         "id": 134,
         "metin": "Bugünkü mental değerin dolayısıyla \"arada\" bir durumda oluşunu anlıyorum {{isim}}, fakat Cengiz Han'ın da dediği gibi: \"Korkuyorsan yapma, yapıyorsan korkma!\" <sprite=73>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Because of today's mental value, I understand you're in an 'in-between' state, {{isim}}, but as Genghis Khan said: 'If you're afraid, don't do it; if you're doing it, don't be afraid!' <sprite=73>"
       },
       {
         "id": 135,
         "metin": "Bir Kapadokya balonuna benzeyen aklın, bugün yükselmek için bazı yüklerini atmış gibi gözüküyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mind, resembling a Cappadocia balloon, seems to have dropped some of its ballast today to rise."
       },
       {
         "id": 136,
         "metin": "Zihninin derinliklerindeki değerli bilgilere bugün tam manasıyla ulaşılamıyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The precious knowledge in the depths of your mind can't be fully accessed today."
       },
       {
         "id": 137,
         "metin": "Bazı sektörleri çalışmayan, birtakım dosyaları silinmiş binlerce terabaytlık mekanik bir harddiski andırıyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You resemble a thousands-of-terabytes mechanical hard drive with some sectors not working and certain files deleted."
       },
       {
         "id": 138,
         "metin": "Görünen o ki, bugün akıl denizlerinde esen şiddetli bir fırtına var. Dalgalar kıyılarına yaldır yaldır vurup limanlarını köpürtüyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It seems there's a fierce storm blowing in the seas of your mind today. The waves crash brightly against your shores, frothing your harbors."
       },
       {
         "id": 139,
         "metin": "Dağlarda dolaşan, bilgiye aç bir kartal gibisin bugün. Avın yeterli gelmediği için avare uçuyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like an eagle roaming the mountains, hungry for knowledge today. Because your prey isn't enough, you fly about aimlessly."
       },
       {
         "id": 140,
         "metin": "Önemli görüşmeler, derin tartışmalar ve sıkı münazaralar bugün sana göre değil.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Important meetings, deep discussions and tight debates aren't for you today."
       },
       {
         "id": 141,
         "metin": "Zihnini biraz daha şarj etmen lazım. Fişten hep tam dolmadan çekiyorsun!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You need to charge your mind a bit more. You keep unplugging it before it's fully charged!"
       },
       {
         "id": 142,
         "metin": "Bilgi ve zeka kulvarında yarıştığın rakiplerin varsa, bugün seni sollamaları mümkün. Hızlı makaslara dikkat et derim {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you have rivals you compete with in the lane of knowledge and intelligence, today they could pass you. Watch out for fast lane changes, I'd say, {{isim}}."
       },
       {
         "id": 143,
         "metin": "Dört yabancı dil biliyor olsan, bugün birini unutmuştun. Kolay bir orantı oldu benim için. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you knew four foreign languages, today you'd have forgotten one. An easy proportion for me. <sprite=84>"
       },
       {
         "id": 144,
         "metin": "İlber Hoca'nın bugün sana soru sormasını istemezdin. Belki en fazla Celal Hoca, ya da Fatih Bey... <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You wouldn't want İlber Hoca to ask you a question today. Maybe Celal Hoca at most, or Fatih Bey... <sprite=7>"
       },
       {
         "id": 145,
         "metin": "Prefrontal korteksindeki aktiviteyi bir miktar daha artırabilirsen, \"muhakeme ve karar\" yönünden tamamsın. Bugün kahve içtin mi?",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you can boost the activity in your prefrontal cortex a bit more, you're all set in terms of 'reasoning and decision'. Did you have coffee today?"
       },
       {
         "id": 146,
         "metin": "Adın Dexter olsa ve 4 kişiyi mıhlasan, bugün 1 vakan polis tarafından kesin yakalanırdı. Dikkatsizlik hasıl üzerinde...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If your name were Dexter and you took out 4 people, today one of your crimes would surely be caught by the police. Carelessness is upon you..."
       },
       {
         "id": 147,
         "metin": "Kitap okuyarak, resim yaparak ya da müzik dinleyerek seviyeni %80'lerin üzerine çekebilirsin {{isim}}. Umutluyum senden!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "By reading a book, painting or listening to music, you could pull your level above the 80s, {{isim}}. I'm hopeful about you!"
       },
       {
         "id": 148,
         "metin": "Bugün bir \"körleme satranç oyuncusu\" kıvamında olmasan da, {{kelime, rakibini çoban matı yapabilecek | \"hızlı satranç\" oynayabilecek | \"Sicilya savunması\" yapabilecek | \"İngiliz açılışı\" yapabilecek}} tattasın. Satranç sever misin {{isim}}?",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today, even if you're not at the level of a 'blindfold chess player', you're at the flavor of someone who could {{kelime, checkmate their opponent in two moves | play 'rapid chess' | use the 'Sicilian Defense' | play the 'English Opening'}}. Do you like chess, {{isim}}?"
       },
       {
         "id": 149,
         "metin": "Ciddi bir postmodernizme doğru evrilmeye başladığını görüyorum. Evdeki \"{{kelime, tv | dvd player}} üstü dantel\" gibisin. <sprite=3>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see you're starting to evolve toward a serious postmodernism. You're like the 'lace on top of the {{kelime, TV | DVD player}}' at home. <sprite=3>"
       },
       {
         "id": 150,
         "metin": "Nispeten geniş sayılabilecek bir bakış açısına sahipsin bugün. Zihnin, akıllıca formüller üretmene ve kendini geliştirmene olanak tanıyacaktır {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have a relatively broad perspective today. Your mind will allow you to produce clever formulas and develop yourself, {{isim}}."
       }
     ],
     "75-100": [
       {
         "id": 151,
         "metin": "Şöyle bir günde \"Kim Milyoner Olmak İster\" yarışmasına katılsan, milyonu kapman işten bile değil!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On a day like this, if you joined the 'Who Wants to Be a Millionaire' quiz, snatching the million would be no trouble!"
       },
       {
         "id": 152,
         "metin": "Bugün bir şeyler karalasan, Louvre'da sergilenir; biraz mırıldansan, albüm teklifi gelir. İyisin iyi...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if you scribbled something, it'd be exhibited at the Louvre; if you hummed a little, an album offer would come. You're good, very good..."
       },
       {
         "id": 153,
         "metin": "Mazhar Alanson ile müzikten, Hıncal Uluç ile sanattan, Barbaros Şansal ile modadan konuşabilecek kadar dolusun bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're full enough to talk music with Mazhar Alanson, art with Hıncal Uluç, fashion with Barbaros Şansal."
       },
       {
         "id": 154,
         "metin": "Pastırmalı yumurta ya da kuru fasülye pilav'a uzak, California roll ya da onigiri'ye yakın görünüyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look far from pastrami eggs or beans and rice, and close to a California roll or onigiri."
       },
       {
         "id": 155,
         "metin": "Pilav yaparken pirince eklenmesi gereken su oranını bugün en iyi sen bilirsin bence {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "When making rice, today you of all people know best the water-to-rice ratio that should be added, {{isim}}, I think."
       },
       {
         "id": 156,
         "metin": "\"Konjonktür, tandans, devinim, angaje, inovatif, fraksiyon\" gibi kelimeleri bugün sık kullanırsan şaşırmam.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I wouldn't be surprised if you frequently used words like 'conjuncture, tendency, dynamic, engaged, innovative, faction' today."
       },
       {
         "id": 157,
         "metin": "Bu halinle çok kalburüstü ve ünlülerin takıldığı bir restorana gitsen, rezervasyonsuz alınırsın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In this state, if you went to a very high-end restaurant where celebrities hang out, you'd be let in without a reservation."
       },
       {
         "id": 158,
         "metin": "Muhteşem değerlerdesin {{isim}}. Tek eksiğin dubai çöllerinde atv kullanırken bir fotoğraf... Var mı yoksa? <sprite=5>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're at marvelous values, {{isim}}. Your only lack is a photo riding an ATV in the Dubai deserts... Do you have one? <sprite=5>"
       },
       {
         "id": 159,
         "metin": "Böyle bir günde herhangi bir konuda sınava girip şıkları kafadan atsan bile derece yapman kaçınılmaz olurdu. Perfect!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On a day like this, even if you took an exam on any subject and guessed the choices off the top of your head, ranking high would be inevitable. Perfect!"
       },
       {
         "id": 160,
         "metin": "Çin'in yapay güneşi, WEBB uzay teleskobu, büyük Hadron çarpıştırıcısı; bunlar hep bugün senin ilgi düzeyindeki konular...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "China's artificial sun, the WEBB space telescope, the Large Hadron Collider; these are all topics at your level of interest today..."
       },
       {
         "id": 161,
         "metin": "Teoride senin için gerçekleştirmesi çok zor gibi görünen şeyleri bugün rahatlıkla pratiğe dökebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you can easily put into practice things that seem very hard for you to achieve in theory."
       },
       {
         "id": 162,
         "metin": "Bugün biri sana \"Magnus'dan daha bilgilisin\" derse, ona inanabilirsin; o derecesin!...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if someone tells you 'you're more knowledgeable than Magnus', you can believe them; that's how good you are!..."
       },
       {
         "id": 163,
         "metin": "Hiç ebru ya da hat sanatıyla ilgilenmeyi düşündün mü {{isim}}? Peki çello, keman, piyano ya da kanun çalmayı? Bence yine böyle bir günündeyken düşüneceksin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Have you ever thought about getting into marbling or calligraphy, {{isim}}? Or playing cello, violin, piano or qanun? I think you'll consider it on a day like this."
       },
       {
         "id": 164,
         "metin": "Bir mucitlik var bugün üzerinde! Sana biraz bakır kablo ve kapasitör, biraz da direnç ve diyot versem radyo yapabilirmişsin gibi duruyorsun. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's an inventiveness about you today! If I gave you a bit of copper wire and capacitors, some resistors and diodes, you seem like you could build a radio. <sprite=0>"
       },
       {
         "id": 165,
         "metin": "Know-how'ının yükseklerde gezdiği bir gündesin. Aklına ne gelirse elindeki malzemelerle çıkartabileceğini düşünüyorum. Tıpkı MacGyver gibisin! <sprite=23>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when your know-how is sky-high. I think you could make anything that comes to mind from the materials at hand. You're just like MacGyver! <sprite=23>"
       },
       {
         "id": 166,
         "metin": "Hedeflerine tam odaklandığın, hırsı ve dinamik bir günündesin. Bugün başkalarından daha zeki olduğun fikrine kapılırsan, sana hak veririm.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a fully focused, ambitious and dynamic day toward your goals. Today if you got the idea you're smarter than others, I'd agree with you."
       },
       {
         "id": 167,
         "metin": "Bu kısımda %70'lerin üzerine çıkabilenleri seviyorum. O gün onlarla çok daha rahat anlaşabiliyoruz... <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I like those who can rise above 70% in this section. On those days we get along much more easily with them... <sprite=0>"
       },
       {
         "id": 168,
         "metin": "Ezberlemen ya da öğrenmen gereken şeyler varsa tam zamanı! Çok sıkı bir başlangıç yapabilirsin bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you have things to memorize or learn, now's the time! You can make a very strong start today."
       },
       {
         "id": 169,
         "metin": "Duyduğun, okuduğun ve öğrendiğin şeyler bugün sende çok kalıcı olacak. Beynin bilgiyi adeta dantel dantel örüyor!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What you hear, read and learn today will be very lasting in you. Your brain is practically weaving knowledge into lace!"
       },
       {
         "id": 170,
         "metin": "Beyninde fikri rüzgarlar esiyor. Yelkenini iyi doldurursan, bazı işlerini hızla sonuçlandıracaksın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Intellectual winds are blowing in your brain. If you fill your sail well, you'll quickly conclude some of your tasks."
       },
       {
         "id": 171,
         "metin": "Zekanın aşırı keskinleştiği böyle günlerde zararlı fikirlerin üşüştüğü de çok olur. Kendini negatif düşüncelerden koru {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On such days when intelligence sharpens excessively, harmful thoughts often swarm in too. Protect yourself from negative thinking, {{isim}}."
       },
       {
         "id": 172,
         "metin": "Hiç senin konun olmayan, eğitimini almadığın ve daha önce denemediğin işlere kalkışabilir, başarıyla çözümleyebilir ve çevreni şaşırtabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may attempt tasks that aren't your field, that you haven't trained for and never tried before, solve them successfully and surprise those around you."
       },
       {
         "id": 173,
         "metin": "Sana bugün {{isim}}pedia desek yanlış olmaz. Beyin kapasiteni kullanım oranın çok üst düzeylerde. Her şeyin cevabı sende.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today we could call you {{isim}}pedia, and it wouldn't be wrong. Your brain-capacity usage is at very high levels. The answer to everything is in you."
       },
       {
         "id": 174,
         "metin": "Hem iletişim hem de ikna kabiliyetin bugün çok yüksek {{isim}}. İnsanlara isteklerini kabul ettirmekte hiç zorlanmayacaksın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Both your communication and persuasion abilities are very high today, {{isim}}. You'll have no trouble getting people to accept your wishes."
       },
       {
         "id": 175,
         "metin": "Gözlerini bağlasalar, üç kişiyle aynı anda sudoku, go ve tavla oynayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Blindfolded, you could play sudoku, go and backgammon with three people at the same time."
       },
       {
         "id": 176,
         "metin": "Keşfedilmeyi bekleyen büyük bir cevher var içinde. Etrafa resmen zeka parıltıları saçıyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's a great gem within you waiting to be discovered. You're downright scattering sparks of intelligence around."
       },
       {
         "id": 177,
         "metin": "Saatlerce resimden, müzikten, heykelden ve felsefeden konuşabilecek kıvamdasın. Bir tek boynunda fuların, elinde bir drink eksik. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're at the flavor to talk about painting, music, sculpture and philosophy for hours. You're just missing a scarf around your neck and a drink in your hand. <sprite=84>"
       },
       {
         "id": 178,
@@ -3614,117 +3791,140 @@
             "degisken": "cinsiyet",
             "deger": "lgbt"
           }
-        ]
+        ],
+        "metin_en": "Today whoever touches your idea gets burned. You'd beat a person with your thoughts and accumulated knowledge. Shake it up, sweetheart! <sprite=7>"
       },
       {
         "id": 179,
         "metin": "Günde üç kitap bitiriyormuş gibi bir izlenim veriyorsun bugün. Cümlelerin derin ve fikirlerinin altı hep dolu. Yakışır {{isim}}! <sprite=77>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you give the impression of finishing three books a day. Your sentences are deep and your ideas always well-founded. It suits you, {{isim}}! <sprite=77>"
       },
       {
         "id": 180,
         "metin": "Bugün seninle tartışan ya da doğrularınla yarışan, sinek gibi duvara yapışır müdürüm afedersin... <sprite=17>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today anyone who argues with you or competes with your truths sticks to the wall like a fly, pardon me, sir... <sprite=17>"
       },
       {
         "id": 181,
         "metin": "Şu değere bak, beynin resmen overclock edilmiş gibi. Aklının zembereği bugün zehir gibi çalışıyor {{isim}}!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Look at this value, your brain is practically overclocked. Your mind's mainspring is working like a charm today, {{isim}}!"
       },
       {
         "id": 182,
         "metin": "İçinden bir şiir yazmak, bir beste yapmak, bir resim çizmek gelebilir. Dolusun çünkü bugün; illaki taşacak bu bir yerde...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You may feel like writing a poem, composing a tune, drawing a picture. Because you're full today; it'll surely overflow somewhere..."
       },
       {
         "id": 183,
         "metin": "Kağıt verilse uçak, mukavva verilse ev, pet şişe verilse gemi yapabilecekmiş gibi duruyorsun. Yaratıcılığın bugün arş-ı ala'da!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem like, given paper you'd make a plane, given cardboard a house, given a plastic bottle a ship. Your creativity is at its peak today!"
       },
       {
         "id": 184,
         "metin": "32 çekirdeği, 64 gb ram'ı ve yüksek hızlı ssd'leri olan server bilgisayarları andırıyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You resemble server computers with 32 cores, 64 GB of RAM and high-speed SSDs."
       },
       {
         "id": 185,
         "metin": "Bu halinle kelime oyunu yarışmasına katılsan, harf almadan her şeyi bilirdin. İhsan Varol da küçük dilini yutardı! <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In this state, if you joined a word-game contest, you'd know everything without taking letters. Even the host would be left speechless! <sprite=84>"
       },
       {
         "id": 186,
         "metin": "Bu düzeyde bir beyin aktivitesiyle başarısız olabileceğin tek kulvar tombala. O da tamamen nasip kısmet işi... <sprite=87>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With this level of brain activity, the only lane where you could fail is bingo. And that's entirely a matter of luck... <sprite=87>"
       },
       {
         "id": 187,
         "metin": "Sana bugün Profesör Doktor {{isim}} {{soyisim}} diye hitap etmek istiyorum. Baksana şu yüzdeye, beyin cerrahı gibi duruyorsun! <sprite=20>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today I want to address you as Professor Doctor {{isim}} {{soyisim}}. Look at this percentage, you look like a brain surgeon! <sprite=20>"
       },
       {
         "id": 188,
         "metin": "Sorumluluklarını bugün ince planlar yaparak parmağını bile kıpırdatmadan yerine getirebilecek düzeydesin. La Casa De Papel'deki profesör Alvaro Morte gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're at the level to fulfill your responsibilities by making fine plans without lifting a finger. You're like the Professor, Álvaro Morte, in Money Heist."
       },
       {
         "id": 189,
         "metin": "Bugün senin yerine şu yüzdeye sahip olmak isteyecek ve bir sınava, bir mülakata girmek üzere olan on binlerce insan var {{isim}}. Sen ne yapmayı planlıyorsun?",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today there are tens of thousands of people about to take an exam or interview who'd want to have this percentage in your place, {{isim}}. What are you planning to do?"
       },
       {
         "id": 190,
         "metin": "Alexander Fleming 1928'in tam da böyle bir gününde penisilini buldu. Yüzdesi tıpkı seninki gibiydi. Hatta hava da aynen böyle {{havadurumu sicaklik}} dereceydi. <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Alexander Fleming discovered penicillin on a day exactly like this in 1928. His percentage was just like yours. The weather was even exactly this, {{havadurumu sicaklik}} degrees. <sprite=7>"
       },
       {
         "id": 191,
         "metin": "Bugün aklına çok yaratıcı ve yepyeni fikirler gelebilir. Bütün beyin hücrelerin ahenkle dans ediyor!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today very creative, brand-new ideas could come to your mind. All your brain cells are dancing in harmony!"
       },
       {
         "id": 192,
         "metin": "Böyle bir günde kendini aşabilir, düşünce merdivenlerini sonuna kadar tırmanarak içsel yolculuğunun sınırlarına ulaşabilirsin!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On such a day you can surpass yourself, climbing the staircase of thought to its very end and reaching the limits of your inner journey!"
       },
       {
         "id": 193,
         "metin": "Bugün tavırlarında, davranışlarında ve kararlarında büyük bir tutarlılık söz konusu {{isim}}. Tecrübelerinden sonuna kadar yararlanıyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today there's great consistency in your manners, behaviors and decisions, {{isim}}. You're fully drawing on your experiences."
       },
       {
         "id": 194,
         "metin": "Çevrendeki insanları fikirlerine hayran bırakırken, sen de ne kadar üstün olduğunu fark ederek onlardan bir o kadar uzaklaşabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "While you leave the people around you in awe of your ideas, you may grow distant from them as you realize how superior you are."
       },
       {
         "id": 195,
         "metin": "Oldukça snob gözüküyorsun bugün. Superlative bir ruh halin ve rakiplerini kontrpiyede bırakabilecek bir tarzın var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look quite snobbish today. You have a superlative mood and a style that could catch your rivals on the wrong foot."
       },
       {
         "id": 196,
         "metin": "Hiç senlik olmayan konulara bile merak sarabileceğin düzeylerdesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're at levels where you could even take an interest in topics that are completely not your thing."
       },
       {
         "id": 197,
         "metin": "Zihinsel işleyişin kemalde bugün. İlber Hocamızla karşılıklı otursan, sohbetin sırıtmaz! <sprite=17>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mental workings are at their finest today. If you sat down with İlber Hoca, the conversation wouldn't fall flat! <sprite=17>"
       },
       {
         "id": 198,
         "metin": "Bugün kalp debin yüksek ve beyin kan dolaşımın fazla. Dolayısıyla serebral oksijen seviyelerin üstlerde. Harikasın yani dostum!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your cardiac output is high and your cerebral blood flow is great. So your cerebral oxygen levels are up top. You're marvelous, my friend!"
       },
       {
         "id": 199,
         "metin": "Bugün bana birileri \"{{isim}} şu an kuantum fiziği ve çift yarık deneyi hakkında konuşuyor!\" dese inanırım. Durur üzerinde, sırıtmaz... <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if someone told me '{{isim}} is talking about quantum physics and the double-slit experiment right now!', I'd believe them. It'd suit you, you wouldn't look out of place... <sprite=84>"
       },
       {
         "id": 200,
         "metin": "Bugün tam \"kitap, pipo, kaşkol, gözlük\" tadındasın. Bir fincan da kahve getirirlerse ayağına, dünyayı kurtarabilirsin! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're at the exact flavor of 'book, pipe, scarf, glasses'. If they also brought you a cup of coffee, you could save the world! <sprite=7>"
       }
     ]
   },

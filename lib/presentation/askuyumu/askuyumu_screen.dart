@@ -314,7 +314,11 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     final pick = unseen.first;
     shown.add('${pick['id']}');
     prefs.setStringList(prefsKey, shown);
-    return VariableReplacer.replace(pick['metin'] as String, varMap);
+    final isEn = ref.read(localeProvider) == 'en';
+    final pickMetin = (isEn && (pick['metin_en'] as String?)?.isNotEmpty == true)
+        ? pick['metin_en'] as String
+        : pick['metin'] as String;
+    return VariableReplacer.replace(pickMetin, varMap);
   }
 
   // ─── BUILD ───────────────────────────────────────────────────────────────────

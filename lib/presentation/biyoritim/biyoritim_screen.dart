@@ -33,8 +33,10 @@ import '../../data/providers.dart';
 class _Entry {
   final int id;
   final String metin;
+  final String metinEn;
   final List<Map<String, String>> kosullar;
-  const _Entry({required this.id, required this.metin, required this.kosullar});
+  const _Entry({required this.id, required this.metin, this.metinEn = '', required this.kosullar});
+  String metinFor(bool isEn) => (isEn && metinEn.isNotEmpty) ? metinEn : metin;
 }
 
 // ─── Seçilen biyoritim verisi ─────────────────────────────────────────────────
@@ -212,7 +214,8 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
       orElse: () => pool.isNotEmpty ? pool.first : const _Entry(id: -1, metin: '', kosullar: []),
     );
     if (entry.metin.isEmpty) return '';
-    return VariableReplacer.replace(entry.metin, profile.toVariableMap());
+    final isEn = ref.read(localeProvider) == 'en';
+    return VariableReplacer.replace(entry.metinFor(isEn), profile.toVariableMap());
   }
 
   // ─── Yardımcı: yeni metin seç, no-repeat kaydet, ID'yi cache'e yaz ───────
@@ -257,7 +260,8 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
     // Bugünün ID'sini kaydet
     prefs.setInt(idCacheKey, pick.id);
 
-    return VariableReplacer.replace(pick.metin, profile.toVariableMap());
+    final isEn = ref.read(localeProvider) == 'en';
+    return VariableReplacer.replace(pick.metinFor(isEn), profile.toVariableMap());
   }
 
   // ─── Yardımcı: yüzdeye göre aralık anahtarı ──────────────────────────────
@@ -277,6 +281,7 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
       return _Entry(
         id: m['id'] as int,
         metin: m['metin'] as String,
+        metinEn: (m['metin_en'] as String?) ?? '',
         kosullar: (m['kosullar'] as List)
             .map((k) => Map<String, String>.from(k as Map))
             .toList(),

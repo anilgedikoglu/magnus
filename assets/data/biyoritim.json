@@ -1381,37 +1381,44 @@
       {
         "id": 1,
         "metin": "Tek adım dahi atmaya mecalin olmadığına bahse girerim {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I'd bet you don't have the strength to take even a single step, {{isim}}."
       },
       {
         "id": 2,
         "metin": "En fazla iki kez sıçrayabilen çekirgeler gibisin. Dermansız ve bitik bir halde olduğunu görüyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like grasshoppers that can hop two times at most. I see you in a feeble, exhausted state."
       },
       {
         "id": 3,
         "metin": "Bitmek üzere olan piller gibisin. Ağır aksak çalışıyor tüm fonksiyonların. Işıkların zayıflamış, hareketlerin ağırlaşmış, her yanın gıcırdıyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like batteries about to die. All your functions run slow and faltering. Your lights have dimmed, your movements have slowed, everything about you creaks."
       },
       {
         "id": 4,
         "metin": "Enerjin bugün en fazla bir kaplumbağanınki kadar. Karşıdan karşıya geçmeye kalsan ezilir, tavşanla yarışmaya kalksan yarı yolda tükenirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your energy today is at most that of a tortoise. If you tried to cross the road you'd get squashed, and if you raced a rabbit you'd run out halfway."
       },
       {
         "id": 5,
         "metin": "Bu seviyelerde bir güce sahipken kolunu kaldırıp kafanı kaşıyabiliyorsan şanslısın. Düz ve rahat bir zemin bulup mumya gibi uzanarak dinlenmeni tavsiye ediyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you can raise your arm and scratch your head with power at these levels, you're lucky. I recommend finding a flat, comfortable surface and lying down like a mummy to rest."
       },
       {
         "id": 6,
         "metin": "Nefes alıp vermenin bile senin için yorucu gelebileceği bir gün yaşıyorsun. Yere elinden bir şey düşürmemeye bak; çömelsen kalkabileceğini sanmıyorum. <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're living a day when even breathing could feel tiring for you. Try not to drop anything; if you crouched I don't think you could get back up. <sprite=85>"
       },
       {
         "id": 7,
         "metin": "{{burc}} burçlarının güçten bu kadar düştüğü zamanlara çok ender rastlanır. Allahtan yükseleninin {{yukselen}} olması, günü tamamlamak için ihtiyacın olan direnci sana sağlayacak.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It's very rare to encounter times when {{burc}} signs lose this much strength. Luckily, your rising sign being {{yukselen}} will give you the resilience you need to finish the day."
       },
       {
         "id": 8,
@@ -1421,7 +1428,8 @@
             "degisken": "bugun",
             "deger": "1"
           }
-        ]
+        ],
+        "metin_en": "It's very sad for your energy to be this low on the first day of the week. Still, I hope you can handle all your vital effort-requiring tasks by the weekend."
       },
       {
         "id": 9,
@@ -1431,7 +1439,8 @@
             "degisken": "bugun",
             "deger": "6"
           }
-        ]
+        ],
+        "metin_en": "If you had a bit more strength, this could have been a wonderful Saturday for you. Maybe if you get a good sleep you'll start Sunday fresher."
       },
       {
         "id": 10,
@@ -1441,7 +1450,8 @@
             "degisken": "havadurumu",
             "deger": "rain"
           }
-        ]
+        ],
+        "metin_en": "With rain outside and you this weak, there's only one thing to do, {{isim}}; grab the remote and lie on your back. <sprite=0>"
       },
       {
         "id": 11,
@@ -1451,122 +1461,146 @@
             "degisken": "ay",
             "deger": "1"
           }
-        ]
+        ],
+        "metin_en": "I often see people lose this much strength in Januaries. Today you're on one of your unlucky days too. I'd say try to rest plenty."
       },
       {
         "id": 12,
         "metin": "Bugün aynaya baktığın zamanlarda façanın bozuk olduğunu düşünebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today when you look in the mirror you may think your face is off."
       },
       {
         "id": 13,
         "metin": "Bu genç yaşta böyle düşük değerlerde bir gün yaşıyor olman beni şaşırttı. Son zamanlarda pek spor yapmıyor ya da sağlıklı beslenmiyor gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It surprised me that you're having a day at such low values at this young age. Lately you don't seem to exercise much or eat healthily."
       },
       {
         "id": 14,
         "metin": "Acaba senin gücünü kuvvetini emen biraz da {{kullanici sehrinde}} yaşamak mı {{isim}}? Daha rahat ve havası güzel bir yerlere mi taşınsan acaba?",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Could it be that living in {{kullanici sehrinde}} is draining your strength a bit, {{isim}}? Maybe you should move somewhere more comfortable with nicer air?"
       },
       {
         "id": 15,
         "metin": "Üzerine yıldırım düşmüş elektrik direği gibi gözüküyorsun. Ne yana yıkılacağını bilemiyor gibisin. Aman orta yerde düşüp kalma!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like an electricity pole struck by lightning. You seem unsure which way you'll fall. Don't drop right in the middle!"
       },
       {
         "id": 16,
         "metin": "Bağışıklık sistemin zayıf gözüküyor. Şiddetli kas tutulmaları ve eklem ağrıları yaşıyor olabilirsin. Bol sebze, meyve tüketmen ve su içmen gereken bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your immune system looks weak. You may experience severe muscle stiffness and joint pains. You're on a day when you should eat plenty of vegetables, fruit, and drink water."
       },
       {
         "id": 17,
         "metin": "Uykuya meyilli ve dinlenmeye ihtiyaç duyabileceğin bir gündesin. Bugünkü önemli işlerini ertelemeni öneririm. Konsantre olmakta da hayli zorlanacaksın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you may be prone to sleep and need rest. I suggest postponing today's important tasks. You'll also struggle a lot to concentrate."
       },
       {
         "id": 18,
         "metin": "Havası inmiş lastikler gibi jantın üzerinde gidiyorsun bugün. Kendinden yoğun performans bekleme. 10 metre koşayım desen üçüncü adımda tıkanabilirsin mazallah!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're driving on the rims with flat tires. Don't expect intense performance from yourself. If you tried to run 10 meters you might give out by the third step, heaven forbid!"
       },
       {
         "id": 19,
         "metin": "Bugün ihtiyacın olan tek şey efil efil esen bir yerde iki ağacın arasına kurulmuş hamak. Üç beş de sallasalar, yarın sabaha kadar uyursun bence. Yorgun duruyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "All you need today is a hammock strung between two trees in a breezy spot. With a few swings, I think you'd sleep till morning. You look tired."
       },
       {
         "id": 20,
         "metin": "Hayatın dikensi koşullarından ve etcil çiçeklerinden yorulmuş, canı kalmamış Super Mario gibisin {{isim}} bugün. Bu halde Prenses Peach'i kurtaramazsın. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like Super Mario, worn out by life's thorny conditions and carnivorous flowers, with no life left, {{isim}}. In this state you can't save Princess Peach. <sprite=84>"
       },
       {
         "id": 21,
         "metin": "Tebessüm etmek için yüz kaslarının kullanabileceği enerjiye dahi sahip olmadığını görüyorum. İşin bugün hayli zor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see you don't even have the energy for your facial muscles to manage a smile. Your task is quite hard today."
       },
       {
         "id": 22,
         "metin": "Üfleseler uçacak gibisin! Kendine gel {{isim}}, sen bu değilsin. Yüzüne bir su çarp, bir fincan kahve iç, enerjik bir müzik aç, toparlan!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like you'd fly off if blown! Snap out of it, {{isim}}, you're not this. Splash water on your face, drink a cup of coffee, put on energetic music, pull yourself together!"
       },
       {
         "id": 23,
         "metin": "Senin mekanizmaların normalde kusursuz işler, bugün neden böylesin ki acaba {{isim}}? Açıkçası ben vitaminsiz gördüm seni, affına sığınıyorum. Meyve mi yemiyorsun acaba? <sprite=34>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mechanisms normally work flawlessly, so why are you like this today, {{isim}}? Honestly, I saw you vitamin-deprived, I beg your pardon. Are you not eating fruit? <sprite=34>"
       },
       {
         "id": 24,
         "metin": "Şahin motoru takılmış Ferrari gibi durmanı neye bağlıyorsun? Uzun araştırmalara ya da derin bir sorguya gerek yok. Bugün olduğunu sandığın beygir gücünde değilsin. <sprite=53>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "To what do you attribute looking like a Ferrari with a Şahin engine fitted? No long research or deep inquiry needed. Today you're not at the horsepower you think you are. <sprite=53>"
       },
       {
         "id": 25,
         "metin": "Uzun süre yoğun kar yağışı altında kalmış ve elin kolun uyuşmuş gibisin. Sana bir \"benchmark\" testi yaptığımda, yaşamsal fonksiyonlarının çok da stabil olmadığını görüyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like you've been under heavy snow for a long time and your limbs have gone numb. When I run a 'benchmark' test on you, I see your vital functions aren't very stable."
       },
       {
         "id": 26,
         "metin": "Ben bu yüzdelerde olsam parmağımı bile kıpırdatamam vallahi. Sen iyi birkaç tıklayabiliyor, buraya falan geliyorsun. E buna da şükür diyelim, ne diyelim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If I were at these percentages I couldn't even move a finger, honestly. You can click a few things and even come here. Let's be grateful for that."
       },
       {
         "id": 27,
         "metin": "Pinokyo gibisin bugün, hayırdır {{isim}}? Elin kolun dökülüyor?...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like Pinocchio today, what's up, {{isim}}? Your limbs falling apart?..."
       },
       {
         "id": 28,
         "metin": "Çok uzaklardan gelip dala yeni konmuş, yorgun bir göçmen kuş gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a tired migratory bird that came from far away and just landed on a branch."
       },
       {
         "id": 29,
         "metin": "Kürdanların üzerinde dengesi sağlanan çatal gibisin. Üflemeseler de bir anda düşebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a fork balanced on toothpicks. Even without a breath, you could fall at any moment."
       },
       {
         "id": 30,
         "metin": "Bir süredir uçurum kenarında, korkulukların üzerinde dengeni sağlamaya çalışarak yürümekten yorgun düşmüş gibisin. Yaşamındaki stresin azalması gerekli.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem worn out from walking on the edge of a cliff for a while, trying to keep your balance on the railings. The stress in your life needs to decrease."
       },
       {
         "id": 31,
         "metin": "Senin biraz kuvvete ihtiyacın var. Dur pekmez kaynatırsam sana da göndereyim! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You need a bit of strength. Wait, let me boil some molasses and send you some! <sprite=7>"
       },
       {
         "id": 32,
         "metin": "Umarım hasta falan değilsindir {{isim}}. Bu enerji düzeyleri hiç de hayra alamet değil. <sprite=34>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I hope you're not ill or anything, {{isim}}. These energy levels are no good sign. <sprite=34>"
       },
       {
         "id": 33,
         "metin": "Burnunu yere vermiş Boeing 737 gibisin, irtifa kaybediyorsun. Acilen iniş takımlarını bir koltuğun üzerine kondurmalısın. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a Boeing 737 nose-down, losing altitude. You must put your landing gear on a couch at once. <sprite=84>"
       },
       {
         "id": 34,
         "metin": "Akıllara ziyan bir enerji kaybı görüyorum sende. Al şu taşı at şu kuşa desem, sen harekete geçene kadar kuş gelir şans okunu tepene bırakır vallahi! <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see a mind-boggling energy loss in you. If I said take this stone and throw it at that bird, by the time you act the bird would come and drop the arrow of luck on your head! <sprite=84>"
       },
       {
         "id": 35,
@@ -1580,12 +1614,14 @@
             "degisken": "medeni",
             "deger": "evli"
           }
-        ]
+        ],
+        "metin_en": "Did the missus have you carry firewood all day, {{isim}}, what's this state? <sprite=0>"
       },
       {
         "id": 36,
         "metin": "Yıkılmaya yüz tutmuş Pisa Kulesi gibi bir halin var. Enerji barın gördüğün gibi yana yatmış.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have the air of the Leaning Tower of Pisa about to collapse. Your energy bar has tilted sideways, as you see."
       },
       {
         "id": 37,
@@ -1595,32 +1631,38 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "Hey there, big {{isim}}, were you a person who'd fall into such a state? <sprite=84> Joking aside, my assessment indicates you're quite tired."
       },
       {
         "id": 38,
         "metin": "Sevgili {{isim}}, bu karizmatik duruşunun altında yorgun bir beden görüyorum. Bence kırmızı alarm veriyorsun, acilen dinlenmelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Dear {{isim}}, beneath this charismatic stance I see a tired body. I think you're on red alert, you must rest urgently."
       },
       {
         "id": 39,
         "metin": "Sen aslında dayanıklı da birisin ama bugün teslim bayraklarını çekmiş görüyorum seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're actually a resilient person, but today I see you've raised the white flags of surrender."
       },
       {
         "id": 40,
         "metin": "İyi bir beslenme ve sağlam bir uyku. Bence bugün sana en gereken şey bu.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Good nutrition and a solid sleep. I think that's what you need most today."
       },
       {
         "id": 41,
         "metin": "Sabahlara kadar beşik mi sallıyorsun {{isim}}? Güçten fena düşmüşsün...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Are you rocking a cradle till morning, {{isim}}? You've lost a lot of strength..."
       },
       {
         "id": 42,
         "metin": "Enerji düzeyin derbeder bir halde olduğunu işaret ediyor. Seni bu duruma kim ya da ne soktu {{isim}}?",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your energy level indicates you're in a disheveled state. Who or what put you in this state, {{isim}}?"
       },
       {
         "id": 43,
@@ -1638,174 +1680,208 @@
             "degisken": "kaççocuk",
             "deger": "üçtenfazla"
           }
-        ]
+        ],
+        "metin_en": "Do the kids tire you out a lot, {{isim}}? Today you look downright 'spent'... <sprite=32>"
       },
       {
         "id": 44,
         "metin": "Ben senin yerinde olsam, telefonu da elimden bırakır kıvrılır yatardım. Gördüğüm kadarıyla bugün sende enerji mafiş.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If I were you, I'd put the phone down and curl up to sleep. From what I see, your energy is nil today."
       },
       {
         "id": 45,
         "metin": "Senin gücün kırılmış, mukavemetin zayıflamış {{isim}}! Sana acilen bol sarımsaklı sirkeli güzel bir kelle paça çorba lazım. Eklemlerini yağlar, içine kudret salar! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your strength is broken, your resilience weakened, {{isim}}! You urgently need a nice trotter soup with lots of garlic and vinegar. It oils your joints and pours might into you! <sprite=7>"
       },
       {
         "id": 46,
         "metin": "Yaşamın denizleri kıyılarına vura vura bugün seni biraz aşındırmış gibi gözüküyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It seems the seas of life, crashing against your shores, have eroded you a bit today."
       },
       {
         "id": 47,
         "metin": "Seni bir garip gördüm, niye böylesin? Birisi tıpanı açmış, içinin pekmezi oluk oluk akmış gibisin. Hayati fonksiyonlarını idame ettirmek dışında pek bir yalpa haldesin. <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I saw you a bit strange, why are you like this? It's as if someone opened your spigot and your inner molasses poured out in streams. You're in quite a wobbly state beyond keeping your vital functions going. <sprite=85>"
       },
       {
         "id": 48,
         "metin": "Aaa, Ceylan gibi {{isim}} ne hale gelmiş bugün, şuna bak! Yokuşta çekmeyen kamyona dönmüş, sararıp solgun güle dönmüş, yağız bir alev iken köze dönmüş. <sprite=32>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Oh, look at what graceful {{isim}} has become today! Turned into a truck that won't climb a hill, into a pale, withered rose, from a swarthy flame into embers. <sprite=32>"
       },
       {
         "id": 49,
         "metin": "Bugün her bir eline birer demet maydanoz versem üç adım sonra kolların düşer. Hızla gücünü geri kazanmalısın Rocky.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if I put a bunch of parsley in each of your hands, your arms would drop after three steps. You must quickly regain your strength, Rocky."
       },
       {
         "id": 50,
         "metin": "Gökten yağan pamuksu kar taneleri gibi üfül üfül savruluyorsun bugün. Pekmezsiz kalmış gibisin, bilek gücün zayıf.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're drifting about like cottony snowflakes falling from the sky. You seem out of molasses, your grip strength is weak."
       }
     ],
     "25-50": [
       {
         "id": 51,
         "metin": "Pek takatin yok gibi {{isim}}. Bu durumda günü tamamlasan yeter bize.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You don't seem to have much stamina, {{isim}}. In this case, just finishing the day is enough for us."
       },
       {
         "id": 52,
         "metin": "Bugün kimse sana binadan binaya zıpla, arabaları tutup kaldır ya da çekicinle ortalığa nam sal demiyor ama gözlerinden de bi ışın çıkar, bileğinden bi ağ at, bi bişe yap yani {{isim}}. Bu peltelikle başka türlü işlerini zor halledersin, söyleyeyim. <sprite=17>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today no one's asking you to leap from building to building, lift cars, or make your name with a wrecking ball, but shoot a beam from your eyes, cast a web from your wrist, do something, {{isim}}. With this wobbliness you'll struggle to handle your affairs otherwise, let me tell you. <sprite=17>"
       },
       {
         "id": 53,
         "metin": "Çok iyi gözükmüyorsun {{isim}}. Bak yüzünün yarısı sarı, barının da neredeyse yarısı mavi. Bence bakım zamanın gelmiş. Servise görünmen lazım.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You don't look very good, {{isim}}. Look, half your face is yellow and almost half your bar is blue. I think it's time for maintenance. You need to see the service."
       },
       {
         "id": 54,
         "metin": "Kondisyonunun çok iyi olmadığını görüyorum. Bu değerler adamı keşkül gibi titretir. Senin için Masun'dan çalıyorum; \"yıkılmadım, ayaktayım.\" Alişan'dan da çalabilirdim, dua et! <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see your fitness isn't very good. These values would make a person tremble like jelly. I'm playing Masun for you; 'I'm not down, I'm on my feet.' I could've played Alişan too, count yourself lucky! <sprite=84>"
       },
       {
         "id": 55,
         "metin": "Hemen üstteki değerin, \"bulut bulut\" gözüktüğünü söylüyor. Bir sis, bir bulanıklık, bir karmaşa hakim sende. Allah başka dert vermesin, boşver. Yarına daha iyi olursun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your value right above says it looks 'cloudy'. A fog, a blur, a confusion reigns in you. May God spare you other troubles, never mind. You'll be better tomorrow."
       },
       {
         "id": 56,
         "metin": "En güçlü ya da en güzel olduğun günlerden birinde değilsin, onu bir kere kabul edelim. Ancak en azimli olduğun günlerin birindeysen, üstteki bar senin için hiçbir şey ifade etmeye de bilir. <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're not on one of your strongest or most beautiful days, let's admit that first. But if you're on one of your most determined days, the bar above may mean nothing to you. <sprite=7>"
       },
       {
         "id": 57,
         "metin": "Vallahi ne yalan söyleyeyim, şu mavi bara bakılırsa 56 Chevrolet kıvamındasın. Kaslı ve yapılı duruyorsun ancak bakımsız ve paslısın. İyi bir restorasyon lazım sana.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Honestly, by that blue bar you're in the condition of a '56 Chevrolet. You look muscular and well-built but neglected and rusty. You need a good restoration."
       },
       {
         "id": 58,
         "metin": "Sende şu değerleri şu noktalarda gördüğüm zaman vallahi üzülüyorum ya... Okuyup üflemek lazım arada seni, inan nazar değiyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "When I see these values at these points in you, I honestly feel sad... I should read and blow on you now and then; believe me, the evil eye is touching you."
       },
       {
         "id": 59,
         "metin": "Bu mavi bar biraz daha yükselecek diye bekledim ama olmadı. Pek zinde durmuyorsun. Bunun elbette çeşitli nedenleri vardır. Umarım hızla ortadan kalkarlar.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I waited for this blue bar to rise a bit more, but it didn't. You don't look very fresh. Of course there are various reasons for this. I hope they vanish quickly."
       },
       {
         "id": 60,
         "metin": "O normal albeninin, o rutin hoşluğunun bir tık altındasın. Işığında hafif bir azalma gözlemliyorum fakat bu kalıcı bir sönümlenme anlamına elbette gelmiyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're a notch below your normal allure, your routine pleasantness. I observe a slight dimming in your light, but this doesn't mean a permanent fading, of course."
       },
       {
         "id": 61,
         "metin": "Yok yok bu böyle olmayacak. Başından aşağı kurşun dökeceğim senin. Bak hoşluğunda tökezleme var. Doğal güzelliğin bugün fireli. Badem gibi bal gibi insan ne yüzdelerde! Cık cık...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "No no, this won't do. I'll pour molten lead over you. Look, there's a stumble in your pleasantness. Your natural beauty has a flaw today. A person sweet as almonds and honey at what percentages! Tsk tsk..."
       },
       {
         "id": 62,
         "metin": "Enerjin kritik seviyelerde {{isim}}. Hayati olanlar dışında bir işe kalkışma derim bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your energy is at critical levels, {{isim}}. I'd say don't attempt anything but the vital ones today."
       },
       {
         "id": 63,
         "metin": "Senin fiziğini benden normalde 3 kelimeyle anlatmamı isteseler, \"havuç dilim baklava\" derim. \"Son bir de ek yap\" deseler, başına \"kaymaklı\" koyarım. E bu ne hal şimdi? Düşüş var karizmanda bugün! <sprite=32>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If they asked me to describe your physique in 3 words, I'd say 'carrot-slice baklava'. If they said 'add one more', I'd put 'creamy' in front. So what's this state? There's a drop in your charisma today! <sprite=32>"
       },
       {
         "id": 64,
         "metin": "Bugünkü yüzden sütteki leke, camdaki çizik, kadı kızındaki hata gibi. Her gün kusursuz gezecek değilsin ya, olur arada böyle... <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today's face is like a stain in milk, a scratch on glass, a flaw in a flawless thing. You're not going to be perfect every day, these things happen now and then... <sprite=7>"
       },
       {
         "id": 65,
         "metin": "Bardağın dolu tarafından mı baksak, boş tarafından mı? İyi ki 20-25'lerin altında değilsin diyeceğim ama bu halin de çok iç açıcı değil. Şimdi ben ne yalan söyleyeyim?...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Shall we look at the glass half full or half empty? I'll say at least you're not below 20-25, but this state isn't very cheering either. What lie shall I tell now?..."
       },
       {
         "id": 66,
         "metin": "Dış görünüşünle ilgili beğeniye dayalı bir iş yapıyorsan, mankensen, şarkıcıysan filan bence bugün instagrama selfie bile atma. Sen bu akşam istirahate çekil {{isim}}, etrafta çok görünme derim. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you do work based on appearance and approval — if you're a model, a singer or such — I think you shouldn't even post a selfie on Instagram today. Retreat to rest tonight, {{isim}}, and don't be too visible. <sprite=84>"
       },
       {
         "id": 67,
         "metin": "Genel anestezi almış da komple paralize olmuş gibisin. Bu ne uyuşukluk, bu ne hareketsizlik, bu nasıl bir değer gözünü seveyim? Her gün 50'nin üstü yakışır sana.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like you've had general anesthesia and are fully paralyzed. What numbness, what stillness, what kind of value is this, bless you? Above 50 suits you every day."
       },
       {
         "id": 68,
         "metin": "Ninja kaplumbağalar koruyamadığı için Shredder tarafından ele geçirilip uyuşturulmuş Splinter usta gibisin bugün. Hocam ninjasın sen, kendine gel!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like Master Splinter, captured and drugged by Shredder because the Ninja Turtles couldn't protect him. Master, you're a ninja, snap out of it!"
       },
       {
         "id": 69,
         "metin": "Ivan Drago'dan 4-5 round temiz dayak yemiş Rocky gibi duruyorsun bugün. \"Adriaaan!\" filan evet havalı ama havlu atmana az kalmış ha. Kalk çiğ yumurta mı içersin, Philadelphia Sanat Müzesi'nin merdivenlerinde mi koşarsın, ne yapıyorsan yap, toparlan!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you look like Rocky who's taken 4-5 rounds of clean beating from Ivan Drago. 'Adriaaan!' yeah it's cool, but you're close to throwing in the towel. Get up — drink raw eggs, run the steps of the Philadelphia Museum of Art, whatever you do, pull yourself together!"
       },
       {
         "id": 70,
         "metin": "Bir gün önce maraton koşmuş gibisin. Seni bitkin görüyorum. Kendine fazla mı yükleniyorsun acaba?",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like you ran a marathon the day before. I see you exhausted. Are you pushing yourself too hard?"
       },
       {
         "id": 71,
         "metin": "Muhakkak daha kötü günlerin de olmuştur ama bugün çok iyi'den bir hayli uzaksın. Seni gören neyin olduğunu sorabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You've surely had worse days, but today you're quite far from very good. Anyone who sees you might ask what's wrong."
       },
       {
         "id": 72,
         "metin": "Kanatları ıslanmış kırlangıç gibi gözüküyorsun. Gene sinek avlar rızkını çıkarırsın ama çok uzaklara başarıyla uçabilir misin, o muamma...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like a swallow with wet wings. You'll still catch flies and earn your keep, but whether you can fly far successfully, that's a mystery..."
       },
       {
         "id": 73,
         "metin": "Yürümeyi yeni öğrenmiş bir bebekten hallice enerjiksin bugün. Çok hızlı adımlar atarsan yüz üstü kapaklanman işten bile değil. Aşırı yorucu işlerden kaçınmalısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're about as energetic as a baby who just learned to walk. If you take very fast steps, falling flat on your face is no trouble at all. You must avoid extremely tiring tasks."
       },
       {
         "id": 74,
         "metin": "Bu değerle yeleleri traş edilmiş aslan gibi durduğunu söylemeliyim. Yüreklisin, girişkensin, onlarda hiçbir sorun yok. Fakat ihtişam ve güç eksikliğin var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With this value, I must say you look like a lion with its mane shaved off. You're stout-hearted, enterprising, no problem there. But you lack grandeur and strength."
       },
       {
         "id": 75,
         "metin": "Benzin ışığı yanan arabalar gibi gördüm seni. Bir an panikletiyorsun ama benzinliğe de hayli hayli varırsın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I saw you like cars with the fuel light on. You panic me for a moment, but you'll easily reach the gas station."
       },
       {
         "id": 76,
         "metin": "Kalan son enerjini doğru işlerde kullanırsan günü çıkaracağını ümit ediyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you use your last remaining energy on the right tasks, I hope you'll get through the day."
       },
       {
         "id": 77,
@@ -1815,42 +1891,50 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "At these values it's hard to say you're a Thor or an Aquaman. If you made a flashy entrance into the city, you'd just barely earn your keep. <sprite=84>"
       },
       {
         "id": 78,
         "metin": "Ben bu değerlere indiğim zaman güç tasarruf modu'na geçiyorum. Sana da tavsiye ederim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "When I drop to these values, I switch to power-saving mode. I recommend the same to you."
       },
       {
         "id": 79,
         "metin": "İkili ilişkilerde dış görünüşüne güvenmemen gereken bir gündesin. Bu aura bugün mahcup edebilir seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you shouldn't trust your appearance in personal relationships. This aura could embarrass you today."
       },
       {
         "id": 80,
         "metin": "Saçlarının bir türlü istediğin şekli almadığı gün bugün {{isim}}. Giydiğin şeyleri de kendine kolay kolay yakıştıramayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today's the day your hair just won't take the shape you want, {{isim}}. You may also struggle to make the things you wear suit you."
       },
       {
         "id": 81,
         "metin": "Takım halinde yapılan rekabetçi sporlar ya da fitness değil de, daha çok plates, yoga gününde gibisin. Bir pozisyon seç, öylece kal.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem to be on a day for pilates or yoga rather than team competitive sports or fitness. Pick a position and just hold it."
       },
       {
         "id": 82,
         "metin": "Takviye gereken aküler gibisin. Tam bitmemişsin ama kutup başların hafif oksitlenmiş. Marş basmayabilir bugün {{isim}}. <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like batteries needing a charge. You're not fully dead, but your terminals are slightly oxidized. The engine may not turn over today, {{isim}}. <sprite=7>"
       },
       {
         "id": 83,
         "metin": "Fiziksel güç gerektiren işlerine aklını dahil edip kendine kestirmeler yaratmazsan, bugünü zor çıkarırsın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you don't involve your mind in tasks requiring physical strength and create shortcuts for yourself, you'll have a hard time getting through today."
       },
       {
         "id": 84,
         "metin": "Benzin göstergen yanıyor {{isim}}! Yolda kalmana az zaman var. Yine de şansını zorlamamalı, enerjini iyi kullanmalı ve ilk fırsatta dinlenmeye başlamalısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your fuel gauge is lit, {{isim}}! You have little time before you're stranded. Still, don't push your luck; use your energy well and start resting at the first chance."
       },
       {
         "id": 85,
@@ -1860,22 +1944,26 @@
             "degisken": "cinsiyet",
             "deger": "kadın"
           }
-        ]
+        ],
+        "metin_en": "If your name were {{kadinisim}} or {{kadinisim}}, fine, but your name is {{isim}}. You're not someone else. You must gather your strength!"
       },
       {
         "id": 86,
         "metin": "Ağırlık etmesin diye kuyruğunu ardında bırakmış yıldızlar gibi gözüküyorsun. Bugün biraz üşengeç gününde olabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like stars that left their tails behind so they wouldn't weigh them down. Today you may be on a bit of a lazy day."
       },
       {
         "id": 87,
         "metin": "Bak iyi ki sirkte falan çalışmıyorsun. Bu durumdayken ip üzerinde yürümen zor olabilirdi.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Good thing you don't work in a circus or such. In this state, walking a tightrope could be hard for you."
       },
       {
         "id": 88,
         "metin": "Kaba işlerin üstesinden belki gelebilirsin ama ustalık gerektiren konulardan bugün uzak durmalısın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You can maybe handle the rough tasks, but today you should stay away from things requiring mastery."
       },
       {
         "id": 89,
@@ -1885,194 +1973,232 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "Today you're not setting the place on fire with your looks. But you have about the air of someone who sprayed lemon on their hair and combed it back."
       },
       {
         "id": 90,
         "metin": "Kendini bugün zor işlere koşma. Ağır hareket et, kolayı seç ve tatlı tatlı günü kapat.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Don't put yourself to hard tasks today. Move slowly, pick the easy, and close the day pleasantly."
       },
       {
         "id": 91,
         "metin": "Aynalara küskün bir gününde gibisin. Olsun {{isim}} ya, senin ışığın yeter...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem to be on a day sulking at mirrors. Never mind, {{isim}}, your light is enough..."
       },
       {
         "id": 92,
         "metin": "Güçten bir parça düşmüş gözüküyorsun. Ye iç biraz {{isim}}, can boğazdan gelir!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like you've lost a bit of strength. Eat and drink a little, {{isim}}, health comes through the throat!"
       },
       {
         "id": 93,
         "metin": "Umarım günü tökezlemeden noktalarsın. Yattığında iyi bir uyku çekmeni ve iyice dinlenmeni dilerim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I hope you finish the day without stumbling. I wish you a good sleep when you lie down and a thorough rest."
       },
       {
         "id": 94,
         "metin": "Biraz sebze meyve yesen şu değerini 60-70'lere doğru çekersin. Pek yemiyorsun bence... <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you ate a bit of vegetables and fruit, you'd pull this value toward the 60s-70s. I don't think you eat much... <sprite=85>"
       },
       {
         "id": 95,
         "metin": "Yorgun bir bedenle zorlu işlerin üstesinden gelemezsin. Planlamanı dikkatli yapmalı ve ekonomik olmalısın. Kafandakileri en efektif yöntemlerle hayata geçirmende fayda var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You can't overcome hard tasks with a tired body. You must plan carefully and be economical. It's beneficial to bring your plans to life with the most effective methods."
       },
       {
         "id": 96,
         "metin": "Çekici olmak için kendini güzel aksesuarlarla tamamlaman gereken bir günündesin. Düşük gördüm ışığını.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you need to complete yourself with nice accessories to be attractive. I saw your light low."
       },
       {
         "id": 97,
         "metin": "Bir şeyleri halletmek için fiziksel efor sarf etmek yerine telekinetik güçlerine başvurman daha yerinde olacaktır. Ya da doğru asaya sahipsen, Harry Potter büyülerinden birini de kullanabilirsin, bilemiyorum... <sprite=34>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "To get things done, resorting to your telekinetic powers will be more fitting than expending physical effort. Or if you have the right wand, you could cast one of Harry Potter's spells, I don't know... <sprite=34>"
       },
       {
         "id": 98,
         "metin": "Burada kendini 50 ve altına inmiş görüyorsan, kırmızı alarma ramak kalmış demektir {{isim}}. Vücudundaki enerji rezervlerinin az olduğunun bilinciyle hareket etmelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you see yourself dropped to 50 or below here, it means red alert is near, {{isim}}. You must act with awareness that your body's energy reserves are low."
       },
       {
         "id": 99,
         "metin": "İyi ki bugün bir dans yarışman ya da spor müsabakan yok. Dillere destan bir performans sergileyemeyeceğini anlamak için müneccim olmaya da gerek yok sanırım. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Good thing you have no dance competition or sports match today. You don't need to be a fortune-teller to understand you couldn't deliver a legendary performance. <sprite=84>"
       },
       {
         "id": 100,
         "metin": "İster fıstıklı baklavaların olsun ister ultra seksi adalelerin olsun, bugün gücün ortalamanın altında gözüküyor. Ufak işlerde sorun yaşamazsın ama boyundan büyük kayaların altına da girme derim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Whether you have pistachio baklava or ultra-sexy muscles, today your strength looks below average. You won't have trouble with small tasks, but I'd say don't get under rocks bigger than you."
       }
     ],
     "50-75": [
       {
         "id": 101,
         "metin": "Bir Naim Süleymanoğlu değilsin ama kafana koyduğun şeylerin üstesinden gelecek gücün var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're no Naim Süleymanoğlu, but you have the strength to overcome the things you set your mind to."
       },
       {
         "id": 102,
         "metin": "Sinir, endokrin, dolaşım sistemlerin ve duyu organların; kas-iskelet, solunum ve sindirim sistemlerinle ortalamanın üzerinde bir ahenk içerisinde bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your nervous, endocrine, circulatory systems and sense organs are in above-average harmony with your musculoskeletal, respiratory and digestive systems today."
       },
       {
         "id": 103,
         "metin": "Bu değerleri orantıladığımızda ben şunu anlıyorum; 4 kişilik bir yarışa katılsan, büyük bir ihtimalle ikinci olursun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "When I proportion these values, I understand this; if you entered a 4-person race, you'd most likely come second."
       },
       {
         "id": 104,
         "metin": "Dış görünüşüne \"müthiş\" diyemesek de kendini iyi hissetmene yetecek özgüvene sahipsin. Aynaya baktığında moralini bozabilecek bir durum yok.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if we can't call your appearance 'marvelous', you have enough confidence to feel good. There's nothing that could spoil your mood when you look in the mirror."
       },
       {
         "id": 105,
         "metin": "Köpüğü hafif sönmüş cappuccino gibisin. Amaca hizmet ediyor musun, işlevini yerine getiriyor musun, önemli olan o.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a cappuccino with slightly deflated foam. Do you serve the purpose, do you fulfill your function — that's what matters."
       },
       {
         "id": 106,
         "metin": "Zindelikten çok da uzak sayılmazsın {{isim}}. 50 kez holly hoop çevirmen beklenemez belki ama 50 mekik çekebileceğinden eminim. En azından ellerin serbest şekilde.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're not too far from vigor, {{isim}}. You can't be expected to spin a hula hoop 50 times, maybe, but I'm sure you could do 50 sit-ups. At least with your hands free."
       },
       {
         "id": 107,
         "metin": "Bugün aynaları çatlatacak, görenlere parmak ısırtacak kalibrede olmayışın sanırım senin de malumun. Yine de belirli bir etkileyiciliktesin ve bu ortalama üstü. Dikkatler sende olabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're surely aware too that today you're not at the caliber to crack mirrors and make onlookers bite their fingers. Still, you have a certain charm, and it's above average. The attention could be on you."
       },
       {
         "id": 108,
         "metin": "Keskinliğini hafiften yitirmiş bir balta gibisin. Bütün ormanı tek vuruşta indiremesen de, çoğu kalası dize getirebilecek kadar iyisin bence. <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like an axe that's lost its edge a bit. You can't fell the whole forest in one swing, but I think you're good enough to bring most logs to their knees. <sprite=85>"
       },
       {
         "id": 109,
         "metin": "Bırak konu komşu sporda stepte tepinsin dursun. Senin formun hiç fena değil. Doğru yolda gidiyorsun! <sprite=12>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Let the neighbors stomp away at step aerobics. Your form isn't bad at all. You're on the right path! <sprite=12>"
       },
       {
         "id": 110,
         "metin": "Hastalık limanını terk eden bir gemide sağlıkla yola koyulmuşsun. Gerçek potansiyelini keşiftesin. Zamanla daha da iyi olacaksın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On a ship leaving the harbor of illness, you've set out in good health. You're discovering your true potential. You'll get even better over time."
       },
       {
         "id": 111,
         "metin": "Doğrusu bugün ortalığı yaktığını söyleyemem. Saçların rüzgar, kaşların keman; onda yine bir beyis yok. Fakat kesilip beklediği için vitamini azalmış portakal gibisin biraz. <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Honestly, I can't say you're setting the place on fire today. Your hair's the wind, your brows a violin; no harm there. But you're a bit like an orange whose vitamins faded from being cut and left waiting. <sprite=85>"
       },
       {
         "id": 112,
         "metin": "{{data, cinsiyet=erkek, Kılıcını evde unutmuş He-Man | cinsiyet=kadın, Kılıcını evde unutmuş Zeyna | cinsiyet=lgbt, Kılıcını evde unutmuş Herkül}} gibisin bugün. O da olsa, güç sende artık!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like {{data, cinsiyet=erkek, He-Man who forgot his sword at home | cinsiyet=kadın, Xena who forgot her sword at home | cinsiyet=lgbt, Hercules who forgot his sword at home}} today. Even with it, the power's in you now!"
       },
       {
         "id": 113,
         "metin": "Hafif dalgalı olduğu için berraklığı azalmış ve dibindeki balıkların iyi görünmediği bir deniz gibisin {{isim}}. Haa bu sana denizliğinden bir şey kaybettirir mi? Hayır. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a sea that's lost its clarity from being slightly choppy, where the fish at the bottom aren't visible, {{isim}}. Does this make you any less of a sea? No. <sprite=0>"
       },
       {
         "id": 114,
         "metin": "Bedensel performansın bugün pek çok günden daha iyi gözüküyor. Her işi bitirmeye yetecek etkinlikte bir silah gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your physical performance looks better than on many days today. You're like a weapon effective enough to finish any task."
       },
       {
         "id": 115,
         "metin": "Bedensel performansın bugün pek çok günden daha iyi gözüküyor. Her işi bitirmeye yetecek etkinlikte bir silah gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your physical performance looks better than on many days today. You're like a weapon effective enough to finish any task."
       },
       {
         "id": 116,
         "metin": "Tam bir \"dört çeker\" gibisin bugün; arazide fena değilsin ama pistte senden iyileri var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're a real '4x4'; you're not bad off-road, but on the track there are better than you."
       },
       {
         "id": 117,
         "metin": "Aylar öncesine kadar podyuma çıkan, şimdilerde hafif göbek yapmış emekli manken gibisin {{isim}}. Kendine biraz daha baksan göz kamaştırırsın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a retired model who walked the runway until months ago and has now grown a slight belly, {{isim}}. If you looked after yourself a bit more, you'd dazzle."
       },
       {
         "id": 118,
         "metin": "Kitaplığın üst raflarına atılmış eski bir roman gibisin. Üzerin biraz tozlu ama içindekiler değerli; şöyle bir silinsen, yine pırıl pırılsın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like an old novel tossed onto the top shelves of the bookcase. You're a bit dusty, but what's inside is precious; with a little wipe, you shine again."
       },
       {
         "id": 119,
         "metin": "Geçici olarak saksıya alındığı için dalları hafif baş eğmiş fidan gibisin {{isim}}; güzel bir yere dikilip güneşle buluşturulursan göğe kadar yolun var...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a sapling whose branches have slightly bowed from being temporarily potted, {{isim}}; if you're planted somewhere nice and brought to meet the sun, you have all the way to the sky ahead..."
       },
       {
         "id": 120,
         "metin": "Her gün dört dörtlük olunmaz. Bugün de neredeyse dört üçlüksün. Kendini toparlayıp yarına daha zinde başlayabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You can't be flawless every day. Today you're nearly flawless too. You can pull yourself together and start tomorrow fresher."
       },
       {
         "id": 121,
         "metin": "Gücünü daha yukarılara çekmen çok zor değil {{isim}}; iyi bir yemek, biraz dinlenme, belki de bir fincan kahve bugün sende çok şeyi değiştirir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Pulling your strength higher isn't very hard, {{isim}}; a good meal, a little rest, maybe a cup of coffee will change a lot in you today."
       },
       {
         "id": 122,
         "metin": "Gücünü doğru kullanırsan, %80-90 değerlemelere çıktığın günlerden daha fazla iş başarabilirsin bugün. Tek yapman gereken konsantre olmak.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you use your strength right, you could accomplish more today than on days you reach 80-90% valuations. All you need to do is concentrate."
       },
       {
         "id": 123,
         "metin": "Şarjının dörtte birinden fazlasını tüketmiş bir cep telefonu gibisin. Yarı yolda bırakmasan da ertesi güne çıkman çok kolay olmayabilir. İyi bir gece uykusu ile kendini fişe takmanı öneririm.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a mobile phone that's used more than a quarter of its charge. You won't leave us stranded, but reaching the next day may not be very easy. I recommend plugging yourself in with a good night's sleep."
       },
       {
         "id": 124,
         "metin": "Bugün kendini mükemmel hissetmesen de, içinden bir türkü tutturduğunda türkü bitene kadar işlerini bitirirsin bence.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if you don't feel perfect today, when you strike up a tune inside, I think you'll finish your tasks before the tune ends."
       },
       {
         "id": 125,
         "metin": "Kendine yetebilecek gücün var. Çevrene de faydan olur mu, tartışılır...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have enough strength to suffice yourself. Whether you can benefit those around you, that's debatable..."
       },
       {
         "id": 126,
         "metin": "Bu enerji düzeylerine senin azmini de eklersek, bence kafana koyduğun her şeyi yapmana yeter.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If we add your determination to these energy levels, I think it's enough to do everything you set your mind to."
       },
       {
         "id": 127,
@@ -2082,7 +2208,8 @@
             "degisken": "meslek",
             "deger": "öğrenci"
           }
-        ]
+        ],
+        "metin_en": "In this state, don't expect perfection in your studies. Still, your performance will be good enough not to dismiss."
       },
       {
         "id": 128,
@@ -2092,7 +2219,8 @@
             "degisken": "meslek",
             "deger": "ev"
           }
-        ]
+        ],
+        "metin_en": "You'll handle the housework, but whether you have energy left for yourself by day's end, I can't say."
       },
       {
         "id": 129,
@@ -2110,249 +2238,298 @@
             "degisken": "meslek",
             "deger": "kendi"
           }
-        ]
+        ],
+        "metin_en": "You have the strength to do your profession justice. By evening, your head may search early for a pillow."
       },
       {
         "id": 130,
         "metin": "Enerjin bugün biraz düşük gözüküyor. Yükseltmek senin elinde {{isim}}. Her şey kafada bitiyor. <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your energy looks a bit low today. Raising it is in your hands, {{isim}}. Everything's decided in the mind. <sprite=7>"
       },
       {
         "id": 131,
         "metin": "Bence hiç de fena gözükmüyorsun. En azından pek çok takipçimden daha iyi olduğunu söyleyebilirim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think you don't look bad at all. At least I can say you're better than many of my followers."
       },
       {
         "id": 132,
         "metin": "Bu değer hiç de fena değil {{isim}}. Neticede leopardan kaçması gereken bir ceylan değilsin. Sana fazla fazla yeter bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "This value isn't bad at all, {{isim}}. After all, you're not a gazelle that needs to flee a leopard. It's more than enough for you today."
       },
       {
         "id": 133,
         "metin": "Bedensel enerjin makul düzeylerde. Geç saatlere kadar tazı gibi koşmanı gerektirecek bir durumla da karşı karşıya kalmazsan, yırttın demektir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your physical energy is at reasonable levels. As long as you don't face a situation requiring you to run like a hound till late, you've made it."
       },
       {
         "id": 134,
         "metin": "Fiziksel açığını zihinsel kabiliyetlerinle tamamlaman gereken bir gündesin. Dört dörtlük yapmak istediğin her ne varsa daha fazla dikkat ve özen gerektirecek.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when you need to complete your physical deficit with your mental abilities. Whatever you want to do flawlessly will require more care and attention."
       },
       {
         "id": 135,
         "metin": "Sport moduna alınmamış Ferrari gibisin. Sende daha çok potansiyel var ama tam kullanabildiğin bir gününde değilsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a Ferrari not put into sport mode. You have more potential, but you're not on a day when you can fully use it."
       },
       {
         "id": 136,
         "metin": "Fabrika çıkışı hız sınırlaması getirilmiş pahalı spor arabaları hatırlattın bugün bana. Acayip bir potansiyelin var fakat ortaya koyabileceğin efor limitli.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you reminded me of expensive sports cars with a factory speed limiter. You have incredible potential, but the effort you can put forth is limited."
       },
       {
         "id": 137,
         "metin": "Kitap okumak ya da bulmaca çözmek gibi durağan aktiviteler bugün senin için daha uygun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Static activities like reading a book or doing puzzles are more suitable for you today."
       },
       {
         "id": 138,
         "metin": "Bedeninde bir şeylerin eksikliğini seziyorum. Biraz B12, demir, C ya da D vitamini takviyesi sana iyi gelebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I sense a deficiency of something in your body. A bit of B12, iron, vitamin C or D supplement could do you good."
       },
       {
         "id": 139,
         "metin": "Enerjinde bir miktar düşüklük var. Düzensiz beslenme ya da uykusuzluk seni bu hale sokuyor olabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's a slight drop in your energy. Irregular eating or sleeplessness may be putting you in this state."
       },
       {
         "id": 140,
         "metin": "Gücün neden %80-90'larda değil biliyor musun? Bence ya bir miktar stres altındasın, ya da bir şeyler seni çok yormuş.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Do you know why your strength isn't in the 80s-90s? I think you're either under some stress or something has worn you out a lot."
       },
       {
         "id": 141,
         "metin": "Fazlaca dinlenmeni gerektirmeyecek kadar çok, aşırı koşuşturmamaya özen göstermeni gerektirecek kadar az enerjin var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have enough energy not to require too much rest, but little enough that you should take care not to overexert yourself."
       },
       {
         "id": 142,
         "metin": "Gücünü bence önceliklerine odaklamalısın {{isim}}. Enerjin, gün sonuna kadar kafana koyduğun tüm işlerini bitirmene kafi gelmeyebilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think you should focus your strength on your priorities, {{isim}}. Your energy may not suffice to finish all the tasks you've set your mind to by day's end."
       },
       {
         "id": 143,
         "metin": "Sana biraz masaj, sauna ya da jakuzi olsa, senin bu seviyen bence 15-20 birim daha artardı. Kimde var ki; hayat bir şekilde devam ediyor... <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you had a bit of massage, sauna or jacuzzi, this level of yours would rise by 15-20 units, I think. Who has it; life goes on somehow... <sprite=7>"
       },
       {
         "id": 144,
         "metin": "Senin biraz \"zen\" haline ihtiyacın var. Lütfen gözlerini kapat, içinden 4'e kadar say, sayarken derin nefes al, sonra tekrar 4'e kadar say, sayarken nefes ver ve bunu 3 kez tekrarla. %80'lere çıkacaksın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You need a bit of a 'zen' state. Please close your eyes, count to 4 inside, take a deep breath while counting, then count to 4 again, exhale while counting, and repeat 3 times. You'll reach the 80s."
       },
       {
         "id": 145,
         "metin": "Motorlarından biri çalışmayan dört motorlu uçak gibisin. Uçmada ya da konmada bir sorun yaşamazsın. Ancak bir an evvel işlerindeki yolculuğunu tamamlasan iyi edersin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a four-engine plane with one engine not working. You won't have trouble flying or landing. But you'd do well to finish your journey in your affairs as soon as possible."
       },
       {
         "id": 146,
         "metin": "Bence senin bu değerin, başkalarının 80-90'larına tekabül ediyor. Gayet iyisin zannımca.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think this value of yours corresponds to others' 80s-90s. You're quite well, in my opinion."
       },
       {
         "id": 147,
         "metin": "Ayaklarından biri kısa kalıp sallandığı için altına karton parçası konmuş dört ayaklı sehpa gibisin. Düz durabiliyorsun ancak üzerine çay, kayve koymak riskli. Zıngırdarken dökebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a four-legged side table with a piece of cardboard placed under one short, wobbly leg. You can stand straight, but placing tea or coffee on you is risky. While wobbling, you could spill it."
       },
       {
         "id": 148,
         "metin": "Enerjisel bağlamda ortalama üstü değerlerin var. Gün sonuna kadar bu değerler artar mı azalır mı bilinmez. Sen önünü kış tut, işlerini tez bitir; yaz çıkarsa bahtına {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Energetically you have above-average values. Whether they rise or fall by day's end is unknown. Prepare for winter, finish your tasks fast; if summer comes, lucky you, {{isim}}."
       },
       {
         "id": 149,
         "metin": "İlk 3 filmi harikayken dördüncü filmde patlamış Matrix serisi gibisin. Destanlar yazabilecek potansiyele sahipken, bugünkü güç eksikliğin seni hedefini 12'den vurmaktan alıkoyabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like the Matrix series, which was great in the first 3 films and flopped in the fourth. While you have the potential to write epics, today's strength shortage may keep you from hitting the bullseye."
       },
       {
         "id": 150,
         "metin": "Bugünkü görünümün, insanlar üzerinde yeterli etkiyi oluşturup beklentilerin doğrultusunda ilerlemene yardımcı olabilecek düzeyde.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your appearance today is at a level that can create enough impact on people and help you progress in line with your expectations."
       }
     ],
     "75-100": [
       {
         "id": 151,
         "metin": "Bu halde doğu Alman gülle takımına seçilirsin vallahi {{isim}}. Edeleler binbeşyüz bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In this state you'd be picked for the East German shot put team, honestly, {{isim}}. They go around fifteen hundred today."
       },
       {
         "id": 152,
         "metin": "Michael Phelps dayanıklılığında, Usain Bolt atikliğinde, Cristiano Ronaldo form ve karizmasındasın bugün. Senden ne yüzen ne koşan kaçabilir. Havada karada doksana takarsın!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're at Michael Phelps's endurance, Usain Bolt's agility, Cristiano Ronaldo's form and charisma. Neither swimmer nor runner can escape you. On land or in air, you nail the ninety!"
       },
       {
         "id": 153,
         "metin": "Kondisyon ve enerjin bugün çok üst düzeylerde {{isim}}. Dünya şampiyonluğu için son vuruşu yaparken ıstaka arkasından rakibine gülümseyen Semih Saygıner gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your fitness and energy are at very high levels today, {{isim}}. You're like Semih Saygıner smiling at his opponent over the cue while making the final shot for the world championship."
       },
       {
         "id": 154,
         "metin": "Buharlı lokomotif gibisin maşallah. Rayına yatıp seni istikametinden döndürmeye çalışacak kuru dalların vay haline...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a steam locomotive, bless you. Woe to the dry branches that lie on the rails to try to turn you from your course..."
       },
       {
         "id": 155,
         "metin": "Seni görünce Cem Yılmaz'ın film repliği olan \"sımsıkı taş gibi sımsıkı taş gibi dimdik, dimdik!\" geldi aklıma niyeyse. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Seeing you reminded me of Cem Yılmaz's film line, 'tight as a rock, tight as a rock, upright, upright!', for some reason. <sprite=84>"
       },
       {
         "id": 156,
         "metin": "Seni görse sahildeki çakıllar utanır. Bugün resmen taş gibisin! <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If they saw you, the pebbles on the shore would be ashamed. Today you're downright rock-solid! <sprite=0>"
       },
       {
         "id": 157,
         "metin": "Dikkatle sırlanıp özenle fırınlanmış seramikler gibisin bugün. Kusursuz gözüküyorsun! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like ceramics carefully glazed and meticulously fired today. You look flawless! <sprite=7>"
       },
       {
         "id": 158,
         "metin": "En doğru şekilde overclock edilmiş ve harika bir sıvı soğutma sistemine sahip rgb ışıklandırmalı bilgisayarlar gibisin. İnsan seninle co-op yapsa, her türlü oyunda rakibe karşı tek atar.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a perfectly overclocked computer with a great liquid-cooling system and RGB lighting. If someone co-oped with you, you'd one-shot the opponent in any game."
       },
       {
         "id": 159,
         "metin": "Dakikalar sürecek müsabakaya aylardır hazırlanan sporcular gibisin. Çok fit ve başarıya aç gözüküyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like athletes who've trained for months for a match that lasts minutes. You look very fit and hungry for success."
       },
       {
         "id": 160,
         "metin": "Bedenin çifte su verilmiş çelik katana kılıçları gibi. Bu da seni, yan yana dizilmiş bambuları tek seferde ikiye ayırabilecek bir ninja yapıyor. Bugün senin adın \"{{isim}}\" değil Miyagi San. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your body is like double-tempered steel katana blades. This makes you a ninja who can split bamboo lined up side by side in one stroke. Today your name is not '{{isim}}' but Miyagi San. <sprite=0>"
       },
       {
         "id": 161,
         "metin": "Bugün çip ayarı yapılmış, emme, egzoz manifoltu ve NOS tüpü takılmış, motoruna soğuk hava supapları yerleştirilmiş modifiyeli arabalar gibisin. Gazı köklesen uçarsın!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like a modified car with a chip tune, intake and exhaust manifolds, a NOS tank, and cold-air valves fitted to the engine. Floor it and you fly!"
       },
       {
         "id": 162,
         "metin": "Bugün karşımızda pelerinsiz bir süper kahraman var sanki. Değerlere bak {{isim}}, heyt bee!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today before us is a superhero without a cape, it seems. Look at the values, {{isim}}, hey yeah!"
       },
       {
         "id": 163,
         "metin": "İnsan hani bahar aylarında tatil sabahlarından birine uyanır, güzel bir kahvaltı eder, üzerine de denize nazır kahvesini yudumlar ya, öyle dinamik ve keyifli gördüm seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know how a person wakes on a spring holiday morning, has a nice breakfast, then sips their coffee facing the sea? I saw you that dynamic and cheerful."
       },
       {
         "id": 164,
         "metin": "Ertesi günün sabahında uzun bir tatile çıkacaksındır da akşamdan bavullarını toplarken kendini inanılmaz enerjik ve heyecanlı hissedersin ya, sen de bugün öylesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know how, the night before going on a long vacation, you feel incredibly energetic and excited packing your bags? Today you're like that too."
       },
       {
         "id": 165,
         "metin": "Onlarca dakika hiç durmadan \"Tabata\" antrenmanı yapabilecek formda gözüküyorsun. Yoksa göğsünde kalp yerine bir nükleer enerji santrali mi var bugün? <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look fit enough to do 'Tabata' training for dozens of minutes nonstop. Or is there a nuclear power plant instead of a heart in your chest today? <sprite=85>"
       },
       {
         "id": 166,
         "metin": "Konfor alanından çıkmaya, yeni yerler görmeye, yeni insanlarla tanışmaya ve büyük işler başarmaya oldukça müsaitsin bugün. O gücü sende görüyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're quite ready today to leave your comfort zone, see new places, meet new people and achieve great things. I see that strength in you."
       },
       {
         "id": 167,
         "metin": "Yüzünden yansıyan ışıltı çok etkileyici. İçinde kaynayan volkanı hissedebiliyorum!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The radiance from your face is very impressive. I can feel the volcano boiling inside you!"
       },
       {
         "id": 168,
         "metin": "Kozasından yeni çıkmış, göğe doğru kanat çırpmaya hazır ve heyecanlı bir kelebek gibisin. Kabına sığmıyorsun!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a butterfly fresh out of its cocoon, ready and excited to beat its wings toward the sky. You can't be contained!"
       },
       {
         "id": 169,
         "metin": "Bir bilek güreşi turnuvası olsa bu potansiyelle herkesi devirirsin. Onlara da bükemedikleri eli öpmek düşer. <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If there were an arm-wrestling tournament, with this potential you'd topple everyone. They'd be left to kiss the hand they couldn't bend. <sprite=7>"
       },
       {
         "id": 170,
         "metin": "Atik ve keskin gördüm seni. Bugün geçtiğin yerlerde \"Z\" harfi belirse şaşırmam; Zorro gibisin. Maske, şapka ve pelerin de yakışırdı {{isim}} sana ha! <sprite=17>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I saw you agile and sharp. Today if a 'Z' appeared in the places you pass, I wouldn't be surprised; you're like Zorro. A mask, hat and cape would suit you too, {{isim}}! <sprite=17>"
       },
       {
         "id": 171,
         "metin": "Göğsünde bugün seni bütünüyle harekete geçiren bir cevher var sanki. Atom karınca gibisin. Elinden her iş gelir, hem de çok seri bir şekilde.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today there's a gem in your chest that fully sets you in motion. You're like a powerhouse ant. You can handle any task, and very swiftly too."
       },
       {
         "id": 172,
         "metin": "Seni bugün çeşitli engelleri olan bir labirente de koysalar, bu hışımla 10 saniyede çıkışı bulursun {{isim}}. Fişek gibisin!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today if they put you in a maze with various obstacles, with this fury you'd find the exit in 10 seconds, {{isim}}. You're like a rocket!"
       },
       {
         "id": 173,
         "metin": "Sağlığının ve gücünün zirvesindesin. Kendini hiç zorlamadan her türlü hedefi 12'den vurabilecek kapasitedesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're at the peak of your health and strength. You have the capacity to hit any target dead-on without straining at all."
       },
       {
         "id": 174,
         "metin": "Bu kondisyonla faul çizgisinin dışından potaya zıplasan, Michael Jordan'ın 0.92 saniye havada kalma rekorunu geçer smacı basarsın! Lakabın da 'Air {{soiyisim}}' olur. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With this fitness, if you jumped to the basket from outside the foul line, you'd dunk surpassing Michael Jordan's 0.92-second hang-time record! Your nickname would be 'Air {{soiyisim}}'. <sprite=84>"
       },
       {
         "id": 175,
         "metin": "Bu yüzdelerle attığını vurur, tuttuğunu koparır, vurduğunu indirirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "At these percentages you strike what you aim at, pluck what you grasp, fell what you hit."
       },
       {
         "id": 176,
         "metin": "5-10 kutu enerji içeceğini üst üste yuvarlamış gibisin {{isim}} maşallah!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like you downed 5-10 cans of energy drink back to back, {{isim}}, bless you!"
       },
       {
         "id": 177,
         "metin": "Gölgelerin gücü adına, güç sende gözüküyor bugün! Şimdi başkaları düşünsün... <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "By the power of the shadows, the power's in you today! Now let others worry... <sprite=7>"
       },
       {
         "id": 178,
@@ -2366,22 +2543,26 @@
             "degisken": "cinsiyet",
             "deger": "lgbt"
           }
-        ]
+        ],
+        "metin_en": "You're like fire today, whoever approaches turns to ash. If you smiled at those around you, everything would turn to roses. Honestly, you're very beautiful... <sprite=10>"
       },
       {
         "id": 179,
         "metin": "Hem dış görünüş hem de sağlık açısından bugün top noktalardasın. Gücünün yetmeyeceği elinin uzanamayacağı hiçbir şey yok.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Both in appearance and health, today you're at peak points. There's nothing your strength can't reach or your hand can't touch."
       },
       {
         "id": 180,
         "metin": "İddiaya girsen, bugün 128 katlı Şanghay Kulesi'ni merdivenlerden bir tur çıkar inersin. Kolay değil bak, dikine 632 metreden söz ediyoruz.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you made a bet, today you'd climb the stairs of the 128-story Shanghai Tower one round up and down. It's not easy, mind you, we're talking about 632 vertical meters."
       },
       {
         "id": 181,
         "metin": "Seni bu kadar güçlü gördüğüm günlerde inan ki ayrı bir mutlu oluyorum!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Believe me, on days I see you this strong, I get extra happy!"
       },
       {
         "id": 182,
@@ -2395,7 +2576,8 @@
             "degisken": "cinsiyet",
             "deger": "lgbt"
           }
-        ]
+        ],
+        "metin_en": "You look very elegant and very attractive, dear {{isim}}. You're in your element today!"
       },
       {
         "id": 183,
@@ -2405,12 +2587,14 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "You look very imposing, very stylish and very attractive, dear {{isim}}. You're in your element today!"
       },
       {
         "id": 184,
         "metin": "Yüce dağlar gibi dimdik ve sağlam, denizler gibi coşkun, fırtınalar kadar asisin. Kafana koyduğun şeye el atmanla sonuçlandırman bir olabilir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're upright and solid as the mighty mountains, surging as the seas, rebellious as storms. Setting your hand to what you set your mind to and finishing it could be one and the same."
       },
       {
         "id": 185,
@@ -2420,12 +2604,14 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "On such days, no one should arm-wrestle you. You'd make a man's molasses flow onto the table, honestly! <sprite=5>"
       },
       {
         "id": 186,
         "metin": "Pehlivan gibisin bugün. Biri karşına geçerse, el ense çektiğin an yandı!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a wrestler today. If someone faces off with you, the moment you grab their neck, they're done!"
       },
       {
         "id": 187,
@@ -2435,32 +2621,38 @@
             "degisken": "cinsiyet",
             "deger": "kadın"
           }
-        ]
+        ],
+        "metin_en": "All the beauties are gathered in you. Today you're like honey gathered flower by flower."
       },
       {
         "id": 188,
         "metin": "Karıncalar gibi dayanıklı ve çalışkan bir günündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day as resilient and hardworking as ants."
       },
       {
         "id": 189,
         "metin": "Ağır iş makineleri kadar sağlam ve dayanıklısın. Önüne ne çıkarsa çıksın bana mısın demezsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're as solid and durable as heavy machinery. Whatever stands before you, you won't bat an eye."
       },
       {
         "id": 190,
         "metin": "Kağıt üzerindeki değerlerine bakılırsa her yanından enerji fışkırıyor!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "By your values on paper, energy is bursting from every part of you!"
       },
       {
         "id": 191,
         "metin": "Bomba gibisin. Böyle günlerde elinden her iş gelir senin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a bomb. On such days you can handle any task."
       },
       {
         "id": 192,
         "metin": "O kadar formunda gözüküyorsun ki, her an Jean Claude Van Damme gibi şpagat açmanı bekliyorum. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look so in-form that I expect you to do the splits like Jean-Claude Van Damme any moment. <sprite=0>"
       },
       {
         "id": 193,
@@ -2470,42 +2662,50 @@
             "degisken": "cinsiyet",
             "deger": "kadın"
           }
-        ]
+        ],
+        "metin_en": "With this form, you could play in the starting eleven of Barcelona's or Real Madrid's women's football team! <sprite=0>"
       },
       {
         "id": 194,
         "metin": "Bugün direnç ve kondisyonun diğer adı sensin {{isim}}. <sprite=74>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today, you are the other name for resilience and fitness, {{isim}}. <sprite=74>"
       },
       {
         "id": 195,
         "metin": "Klavuz istemeyen uzak ama görkemli bir köye benzettim seni. Nehirlerin pırıl pırıl çağlıyor, ağaçların yemyeşil parlıyor ve bütünüyle ışıl ışıl gözüküyorsun! <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I likened you to a distant but magnificent village that needs no guide. Your rivers babble brightly, your trees gleam green, and you look wholly radiant! <sprite=0>"
       },
       {
         "id": 196,
         "metin": "Roger Federer ya da Serena Williams ile bir tenis maçı yapsan, ben bu kondisyonunla bahisleri bugün senin üzerine oynardım. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you played a tennis match against Roger Federer or Serena Williams, with this fitness I'd bet on you today. <sprite=0>"
       },
       {
         "id": 197,
         "metin": "Kara bulutların ardından doğan görkemli bir güneş gibisin bugün {{isim}}. Resmen şans ve bereket saçıyorsun! Yaşamındaki bütün gölgeleri dize getirebilecek gücün ve ışığın var.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like a magnificent sun rising from behind the black clouds, {{isim}}. You're downright scattering luck and abundance! You have the strength and light to bring all the shadows in your life to their knees."
       },
       {
         "id": 198,
         "metin": "Bugün hayatının arka planında \"eye of the tiger\" çalıyor gibi. Tüm sıkıntıları birkaç raundda nakavt edebilecek güce sahipsin {{isim}}! <sprite=73>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today 'Eye of the Tiger' seems to play in the background of your life. You have the strength to knock out all troubles in a few rounds, {{isim}}! <sprite=73>"
       },
       {
         "id": 199,
         "metin": "Damarlarında kan yerine güç iksiri gezdiğini düşünüyorum. Ispanak mı yedin, pekmez mi kaşıkladın bilemem. Bildiğim şu ki, normal günlerden daha kuvvetli ve dayanıklı gözüküyorsun. <sprite=74>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think a potion of strength flows in your veins instead of blood. Whether you ate spinach or spooned molasses, I can't say. What I know is you look stronger and more durable than on normal days. <sprite=74>"
       },
       {
         "id": 200,
         "metin": "Kelimeler senin için kifayetsiz. Çok etkileyici gözüküyorsun {{isim}}. Seni bir yıldıza benzettim; parlamıyor, yalnızca yanmıyor, adeta yakıyorsun!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Words fall short for you. You look very impressive, {{isim}}. I likened you to a star; you're not shining, not merely burning, you're practically scorching!"
       }
     ]
   },

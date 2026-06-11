@@ -48,42 +48,50 @@
       {
         "id": 1,
         "metin": "Gönül telin bugün tir tir titriyor gibi gözüküyor {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your heartstrings seem to be trembling all over today, {{isim}}."
       },
       {
         "id": 2,
         "metin": "Ağacından sıkılıp toprağa kavuşmak için dalından ayrıldıktan sonra rüzgarla oradan oraya süzülen bir gazel gibisin bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like an autumn leaf that, bored of its tree and longing to reach the soil, has left its branch and drifts here and there with the wind."
       },
       {
         "id": 3,
         "metin": "Bu moralle bugün bol bol arabesk ya da dark rock dinlesen hiç yadırgamam. Durmadan koşmak ya da kapılar ardında tek başına susup oturmak istiyor gibisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With this mood, I wouldn't find it strange if you listened to lots of arabesque or dark rock today. You seem to want to run nonstop or to sit silently alone behind closed doors."
       },
       {
         "id": 4,
         "metin": "Dünyadaki son kar zerresi de eridiği için kendini bir kar küresine hapsetmiş buruk bir pandanınki gibi moralin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mood is like that of a glum panda who has locked itself in a snow globe because the last speck of snow in the world has melted."
       },
       {
         "id": 5,
         "metin": "Beşikte uzun süre sallanmasına rağmen dilinin dönmediği huzursuzluklarından dolayı uyumayı reddeden bir bebeğinki gibi moralin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mood is like that of a baby who refuses to sleep because of unsettling feelings it can't put into words, despite being rocked in the cradle for a long time."
       },
       {
         "id": 6,
         "metin": "Cem Yılmaz'ın gösterisine gidip ön sırada oturan fakat en kral esprilerde bile gülmeyi reddeden {{data, cinsiyet=kadın, teyzelerinki | cinsiyet=erkek, amcalarınki | cinsiyet=lgbt, teyzelerinki}} gibi moralin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mood is like that of an {{data, cinsiyet=kadın, aunt | cinsiyet=erkek, uncle | cinsiyet=lgbt, aunt}} who goes to a Cem Yılmaz show and sits in the front row but refuses to laugh even at the killer jokes."
       },
       {
         "id": 7,
         "metin": "Yoğun yağan kardan dolayı her yer tatil olmuşken ve herkes evde pijama, terlik, tv takılıyorken, işe gitmek zorunda olan sağlık çalışanı hissiyatındasın bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you feel like a healthcare worker who has to go to work while, because of heavy snow, everything's on holiday and everyone's at home lounging in pajamas, slippers and TV."
       },
       {
         "id": 8,
         "metin": "3 yıllık operatör kontratıyla yeni aldığı yirmi binlik telefonu yere düşürüp, camını çatlatan insan gibi hissettiğine eminim şu an.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I'm sure you feel right now like someone who dropped the brand-new twenty-thousand-lira phone they just bought on a 3-year carrier contract and cracked its screen."
       },
       {
         "id": 9,
@@ -93,7 +101,8 @@
             "degisken": "cinsiyet",
             "deger": "kadın"
           }
-        ]
+        ],
+        "metin_en": "You're like someone who came from the manicurist they paid a fortune to a few hours ago and just broke one of their polished, manicured nails."
       },
       {
         "id": 10,
@@ -103,7 +112,8 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "You're as glum as someone who, trying to trim their beard, slipped the trimmer and shaved off a tuft from the middle of the beard they'd carefully grown."
       },
       {
         "id": 11,
@@ -113,22 +123,26 @@
             "degisken": "havadurumu",
             "deger": "rain"
           }
-        ]
+        ],
+        "metin_en": "Today's rains have brought you sadness. As if what's falling from the sky isn't water, but the sorrows in the clouds of your heart."
       },
       {
         "id": 12,
         "metin": "Dokunsalar ağlayacak bir çocuk gibisin. Gibi gibisin...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a child who'd cry if touched. You're so very 'almost'..."
       },
       {
         "id": 13,
         "metin": "{{burc}} burçlarında alışık olmadığım bir moral bozukluğu var bugün sende. Ay burcun olan {{ayburcu}}, ikincil etkileriyle bugün seni biraz aşağı çekiyor anlaşılan.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's a low mood in you today that I'm not used to in {{burc}} signs. Your moon sign, {{ayburcu}}, seems to be dragging you down a bit with its secondary effects today."
       },
       {
         "id": 14,
         "metin": "{{kullanici sehrinde}} yaşamak seni memnun etmiyor mu {{isim}}? Acaba şehirden biraz uzaklaşsan iyi gelir mi dersin?",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Doesn't living in {{kullanici sehrinde}} please you, {{isim}}? Do you think getting a bit away from the city might do you good?"
       },
       {
         "id": 15,
@@ -138,62 +152,74 @@
             "degisken": "saatmin",
             "deger": "20"
           }
-        ]
+        ],
+        "metin_en": "As someone {{yas_0}} years old, I'd think you're used to such off days. Never mind, things will look brighter in the morning! <sprite=0>"
       },
       {
         "id": 16,
         "metin": "Temizlik esnasında kilere kaldırılmış ve o karanlıkta unutulmuş bir saksı çiçeği burukluğu var bugün sende.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you have the bitterness of a potted flower stowed away in the pantry during cleaning and forgotten in that darkness."
       },
       {
         "id": 17,
         "metin": "Bugün efsane bir durgunluk var sende. Sanki üzerine ölü toprağı serpilmiş gibi. Kendini hemen toparlamalısın {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today there's a legendary stillness in you. As if 'dead earth' has been sprinkled over you. You should pull yourself together right away, {{isim}}."
       },
       {
         "id": 18,
         "metin": "Koyu bir \"yalnızlık hissi\" ve kesif bir umutsuzluk sarmış yüreğini. Sanki hiçbir şeye sevinemiyor gibisin. Şunu unutma {{isim}}; çok daha güzel günler göreceksin...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "A deep 'sense of loneliness' and a dense hopelessness have wrapped around your heart. As if you can't be glad about anything. Remember this, {{isim}}; you'll see far more beautiful days..."
       },
       {
         "id": 19,
         "metin": "Herkesin böyle günleri olabilir {{isim}}. Bugün biraz kendi nazına oynamalısın. Güzel bir çay demlemekle başla. Huzur, ilk yudumla kanına karışmaya başlayacaktır.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Everyone can have days like this, {{isim}}. Today you should pamper yourself a little. Start by brewing a nice tea. Peace will begin to mingle with your blood from the first sip."
       },
       {
         "id": 20,
         "metin": "Uzun süre beklediği sömestr tatilinde ev interneti kesildiği için oyun oynayamayan çocuklar kadar kahırlı duruyorsun hayata karşı.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You stand as despondent toward life as children who can't play because the home internet got cut during the long semester break they'd waited so long for."
       },
       {
         "id": 21,
         "metin": "Hoşlandığı {{data, cinsiyet=erkek, kızı | cinsiyet=kadın, çocuğu | cinsiyet=lgbt, arkadaşını}} tenefüste kantinin önünde başka biriyle el ele gören bir öğrenci gibi yıkık gözüküyorsun bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you look as shattered as a student who saw the {{data, cinsiyet=erkek, girl | cinsiyet=kadın, boy | cinsiyet=lgbt, friend}} they like holding hands with someone else in front of the canteen at recess."
       },
       {
         "id": 22,
         "metin": "Uzun süredir beklediği konsere bilet almak için online satış sitesine giren ve hiç bilet kalmadığını görünce yıkılan insan gibi gözüküyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like someone who logged onto an online ticket site to buy a ticket for a concert they'd long awaited and was crushed to see no tickets were left."
       },
       {
         "id": 23,
         "metin": "Külahta tek top dondurması olup, yalarken onu da yere düşüren çocuklar olur ya, bugün o naiflikte gördüm {{isim}} seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know how kids have a single scoop of ice cream in a cone and drop even that on the ground while licking it? Today I saw you that delicate, {{isim}}."
       },
       {
         "id": 24,
         "metin": "Eline bir telli çalgı, bir kağıt bir de kalem verseler, bugün gün sonuna kadar efkarlı iki üç şarkı yazabilecek gibisin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If someone handed you a stringed instrument, a paper and a pen, you seem like you could write two or three melancholy songs by day's end, {{isim}}."
       },
       {
         "id": 25,
         "metin": "Bıraksalar sabaha kadar Orhan Hakalmaz ya da Hüseyin Turan dinleyebilecek potansiyelde gördüm seni. Üzülme, bir ay doğar ilk akşamdan geceden... <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I saw you have the potential to listen to melancholic folk music until morning if left to it. Don't be sad; the moon rises from the very first night... <sprite=7>"
       },
       {
         "id": 26,
         "metin": "Gece karnı acıktığında dolabı açıp yarım yoğurt bulanların moraline sahipsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have the mood of those who, hungry at night, open the fridge and find half a tub of yogurt."
       },
       {
         "id": 27,
@@ -203,22 +229,26 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "Today you're as down as men who go to the gym for months and can't shed a gram of belly fat."
       },
       {
         "id": 28,
         "metin": "Uzun bir tatilin ardından ertesi gün erkenden işe başlayacak memurlar gibi hissediyor olmalısın. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You must feel like office workers who'll start work early the next day after a long holiday. <sprite=84>"
       },
       {
         "id": 29,
         "metin": "Tüm parasını artan bir döviz kuruna yatırıp ertesi gün büyük bir düşüşle karşılaşmış havası var üzerinde.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have the air of someone who put all their money into a rising exchange rate and met a big drop the next day."
       },
       {
         "id": 30,
         "metin": "Soğan doğrarken Müslüm Baba mı dinliyorsun, bu ne hal? <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Are you listening to Müslüm Baba while chopping onions, what's this state? <sprite=10>"
       },
       {
         "id": 31,
@@ -228,7 +258,8 @@
             "degisken": "maddidurum",
             "deger": "çokkötü"
           }
-        ]
+        ],
+        "metin_en": "You look like all your ships in the Black Sea have sunk. Do you think your poor financial situation has an effect on this low mood?"
       },
       {
         "id": 32,
@@ -238,22 +269,26 @@
             "degisken": "ayrılalınekadar",
             "deger": "günleroldu"
           }
-        ]
+        ],
+        "metin_en": "You look like all your ships in the Black Sea have sunk. Do you think having recently broken up has an effect on this low mood?"
       },
       {
         "id": 33,
         "metin": "Aylarca büyük bir hevesle beklediği konserin hava şartlarından dolayı iptal edildiğini duyan biri gibi gözüküyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like someone who heard the concert they'd eagerly awaited for months was canceled because of the weather."
       },
       {
         "id": 34,
         "metin": "Beklediği o büyük konsere dakikalar kala sesi kısılan bir opera sanatçısının morali var bugün sende.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you have the mood of an opera singer whose voice gave out minutes before the big concert they'd been waiting for."
       },
       {
         "id": 35,
         "metin": "Bugün sokakta kalmış ve yağmurda ıslanmış bir kedi yavrusu mu daha duygusaldır yoksa sen mi?... <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today, is a kitten left in the street and soaked in the rain more emotional, or are you?... <sprite=85>"
       },
       {
         "id": 36,
@@ -267,7 +302,8 @@
             "degisken": "cinsiyet",
             "deger": "lgbt"
           }
-        ]
+        ],
+        "metin_en": "You urgently need something to lift your spirits. Maybe you should buy new makeup or skincare products? <sprite=84>"
       },
       {
         "id": 37,
@@ -277,27 +313,32 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "You look like your team lost the Champions League final. With this mood, if you ask me, don't even go to the corner shop! <sprite=0>"
       },
       {
         "id": 38,
         "metin": "Tavaya attığın etlerin hepsi çalan kapıya baktığın sırada yanmış gibisin. Bu moralle ancak yumurta kırılır {{isim}} <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like all the meat you tossed in the pan burned while you were looking at the door someone was knocking on. With this mood you can only crack eggs, {{isim}}. <sprite=84>"
       },
       {
         "id": 39,
         "metin": "Uzun bir yola çıktığı sırada arabasının lastiklerinden birinin indiğini fark edenler gibisin. Bugün bu moralle bence en müsait yerde sağa çekmelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like people who notice one of their tires has gone flat as they set out on a long road. With this mood today, I think you should pull over at the first chance."
       },
       {
         "id": 40,
         "metin": "Sana bir rulo kağıt havlu versem bu moralle tamamının üzerine sabaha kadar şiir yazarsın herhalde. Topla biraz kendini {{isim}}!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If I gave you a roll of paper towels, with this mood you'd probably write poetry on all of it by morning. Pull yourself together a bit, {{isim}}!"
       },
       {
         "id": 41,
         "metin": "Bugün hislerin bir kelebek kanadı kadar kırılgan gözüküyor. Herkesin böyle zamanları olur {{isim}}, bu gayet normal.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your feelings look as fragile as a butterfly's wing. Everyone has such times, {{isim}}, it's perfectly normal."
       },
       {
         "id": 42,
@@ -307,7 +348,8 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "You look like the girl you like just called you 'bro'. What a mood, {{isim}}! <sprite=84>"
       },
       {
         "id": 43,
@@ -317,209 +359,250 @@
             "degisken": "cinsiyet",
             "deger": "kadın"
           }
-        ]
+        ],
+        "metin_en": "You look like the salon you went to, despite the fortune you paid, couldn't get the color you wanted for your hair. What a mood, {{isim}}! <sprite=84>"
       },
       {
         "id": 44,
         "metin": "Evdeki damacanada suyun bittiğini anladığım zamanlarda benim de moralim seninki gibi oluyor. <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "When I realize the water in the carboy at home has run out, my mood too becomes like yours. <sprite=10>"
       },
       {
         "id": 45,
         "metin": "\"Nasıl olsa dönüşte alırım\" deyip benzin ışığı yanarken arabasıyla işe giden ve hiçbir benzinliğe denk gelemeyerek yolda kalan insan moralindesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're in the mood of someone who said 'I'll fill up on the way back' and drove to work with the fuel light on, then ran out, unable to find a single gas station."
       },
       {
         "id": 46,
         "metin": "Üniversite sınavında birkaç puan yüzünden istediği yeri tutturamamış öğrenciler gibi gözüküyorsun bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like students who, by a few points on the university exam, couldn't get into the place they wanted."
       },
       {
         "id": 47,
         "metin": "Sanırım içinde biriktirdiğin farklı duygular fazla yoğunlaşıp moralini bozmuş. Seni iyi görmedim {{isim}}. <sprite=34Ω>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think the different feelings you've bottled up have become too concentrated and spoiled your mood. I didn't see you well, {{isim}}. <sprite=34Ω>"
       },
       {
         "id": 48,
         "metin": "Benim mood'um en son kodlarıma virüs girdiğinde bu kadar düşmüştü. Allah aşkına {{isim}}, bu ne hal? <sprite=38>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "My mood last dropped this low when a virus last got into my code. For heaven's sake, {{isim}}, what's this state? <sprite=38>"
       },
       {
         "id": 49,
         "metin": "Transandantal meditasyon, yoga, plates, reiki, kung fu, wu shu, ne bulursan yap toparla şu moralini {{isim}}, bu ne hal! <sprite=36>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Transcendental meditation, yoga, pilates, reiki, kung fu, wushu — whatever you can find, do it and fix this mood, {{isim}}, what's this state! <sprite=36>"
       },
       {
         "id": 50,
         "metin": "Bak hayatı soyup da yiyorsun, olmuyor. Demek ki vitamini kabuğunda kalıyor. Sen bütün bütün yut, şu moralin düzelsin biraz. <sprite=53>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Look, you're peeling life and eating it, it's not working. So the vitamins stay in the peel. Swallow the whole thing so your mood improves a bit. <sprite=53>"
       }
     ],
     "25-50": [
       {
         "id": 51,
         "metin": "Kalp alemin bugün biraz bulutlu {{isim}}. Yağdın yağacaksın sanki...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your heart's realm is a bit cloudy today, {{isim}}. You seem about to pour down any moment..."
       },
       {
         "id": 52,
         "metin": "{{tutulantakim}} şampiyonlar ligi final maçında kendi sahasında mağlup olmuş gibisin. Üzme canını bu kadar {{isim}}. Enerjini yükseltecek haberler bende! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like {{tutulantakim}} lost the Champions League final on home ground. Don't fret so much, {{isim}}. I have news that'll lift your energy! <sprite=7>"
       },
       {
         "id": 53,
         "metin": "{{ay_0}} ayı durgunluğu mu bu üzerindeki? {{mevsim_0}} mevsimi sana pek yaramıyor gibi {{isim}}. Yine de önümüzdeki günlerde daha keyifli olacağına inanıyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Is this the {{ay_0}} stillness on you? The {{mevsim_0}} season doesn't seem to suit you much, {{isim}}. Still, I believe you'll be more cheerful in the coming days."
       },
       {
         "id": 54,
         "metin": "Sen bu moralle Netflix'e girsen, izleyecek hiçbir şey bulamadan geri çıkar, yemek yarışması, ada buluşması filan açar oturursun. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With this mood, if you logged onto Netflix you'd come back out without finding anything to watch and end up putting on a cooking show, an island reunion or something. <sprite=84>"
       },
       {
         "id": 55,
         "metin": "Ben en son bu kadar durgun ve keyifsiz hissettiğimde, yeni aldığım lepistesimi cam fanusdaki suyun üzerinde yana yatık ve hareketsiz vaziyette bulmuştum. <sprite=33>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The last time I felt this still and joyless, I found my newly bought guppy lying sideways and motionless on the surface of the water in its bowl. <sprite=33>"
       },
       {
         "id": 56,
         "metin": "Saatlerce uğraşıp pişirdiğin çorbanın içine sinek düşmüş gibi buruk ve hayattaki şansına karşı tepkili gördüm seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I saw you bitter and resentful of your luck in life, like a fly fell into the soup you spent hours cooking."
       },
       {
         "id": 57,
         "metin": "Yeni çıkan, çok merak ettiğin ve torrent sitelerinden indirmek için günlerce uğraştığın yabancı bir filmin yalnızca Çince altyazısı olduğunu anlamış kadar hayal kırıklığı içindesin bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're as disappointed as if a newly released foreign film you were very curious about, that you'd spent days trying to download from torrent sites, only had Chinese subtitles."
       },
       {
         "id": 58,
         "metin": "Sevgilisini, sosyal medyada uygunsuz fotoğraflar paylaşan birini \"like etmiş\" vaziyette gören insan donukluğu var üzerinde.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have the stunned air of someone who saw their partner 'like' someone posting inappropriate photos on social media."
       },
       {
         "id": 59,
         "metin": "Evinin önündeki sokağın köşesinden dönerken her gün selamlaştığı kediyi, bir gün gelip kaybetmiş insan burukluğu var bugün sende.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you have the bitterness of someone who, turning the corner of the street in front of their home, lost the cat they'd greeted every day."
       },
       {
         "id": 60,
         "metin": "Alarmını 10'ar dakika arayla üç kez kurmasına rağmen uyanamayarak güne kötü başlayan insan kadar ters gözüküyorsun bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you look as cross as someone who started the day badly by failing to wake up despite setting their alarm three times at 10-minute intervals."
       },
       {
         "id": 61,
         "metin": "Uzun süre canla başla biriktirdiği parayı cüzdanına doldurup dükkan dükkan gezmesine rağmen aradığı ürünün artık üretilmediğini öğrenen şanssız sen misin? <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Are you the unlucky one who, despite filling their wallet with money saved heart and soul for a long time and going from shop to shop, learned the product they sought is no longer made? <sprite=0>"
       },
       {
         "id": 62,
         "metin": "Bugün biraz arabesk takılırsan bunu doğal karşılarım.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I'd find it natural if you went a bit arabesque today."
       },
       {
         "id": 63,
         "metin": "Hani kuyrukta bekleyip fırından yeni çıkmış bir ekmek alırsın, hamurlaşmasın diye poşete koydurmazsın da, bir anda başlayan yağmur elindeki ekmeği ıslatır ya... Seni tarif ediyor bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You know how you wait in line and buy fresh-from-the-oven bread, and don't let them bag it so it doesn't go doughy, then a sudden rain soaks the bread in your hand... That describes you today."
       },
       {
         "id": 64,
         "metin": "Dokunsalar ağlayacak, dürtseler gülecek gibisin. Sınırda bir ruh hali içindesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like someone who'd cry if touched and laugh if poked. You're in a borderline mood."
       },
       {
         "id": 65,
         "metin": "Dallarına ayaz vurmuş ve umutları yaprak yaprak dökülen bir ağaca benzettim bugün seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today I likened you to a tree whose branches have been frost-struck and whose hopes are shedding leaf by leaf."
       },
       {
         "id": 66,
         "metin": "Önceni ve sonranı hiçe sayarcasına güvendiğin tek kişi tarafından hayal kırıklığına uğratılmış ve çok kızmış gibi gözüküyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like someone deeply disappointed and very angry, let down by the only person you trusted, heedless of your past and future."
       },
       {
         "id": 67,
         "metin": "200 derecelik fırında uzun süredir durmasına ve dışı kabuk bağlamasına rağmen içi pişmemiş vanilyalı kek formunda bugün ruhun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your soul is in the form of a vanilla cake that, despite long being in a 200-degree oven and forming a crust outside, is still raw inside."
       },
       {
         "id": 68,
         "metin": "Yürümeyi yeni öğrenen ve kendisini tutacağına güvendiği büyüğüne doğru badi badi iki üç adım attıktan sonra tam sarılacakken kendi haline bırakılan bir bebek gibi çaresiz gördüm seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I saw you as helpless as a baby who, just learning to walk, takes two or three wobbly steps toward the grown-up they trust to catch them, then is left to its own devices right as it's about to be hugged."
       },
       {
         "id": 69,
         "metin": "İlk aşkından selam alan evli biri kadar karışık duruyor bugün kafan. Buna izin vermemeli, duygularını kontrol etmelisin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your mind is as muddled as a married person who got a greeting from their first love. You mustn't allow this, you must control your feelings, {{isim}}."
       },
       {
         "id": 70,
         "metin": "Kar lastiği bulunmasına rağmen yokuş aşağı yanlamış vaziyette kaymakta olan ve saniyeler sonra çarpacağını bilen bir otomobil gibi hissediyor olmalısın. <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You must feel like a car that, despite having snow tires, is sliding sideways downhill and knows it'll crash in seconds. <sprite=85>"
       },
       {
         "id": 71,
         "metin": "Kenarları kıvrılmasın diye çantasında özenle taşıdığı defterinin üzerine su dökülen öğrenci gibi incinmiş gördüm seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I saw you as hurt as a student who got water spilled on the notebook they carefully carried in their bag so its edges wouldn't curl."
       },
       {
         "id": 72,
         "metin": "Cebine sıkıştırılmış bayram harçlıklarını saydığında, istediği şeyi alabilmesi için daha yıllarca para biriktirmesi gerektiğini anlayan çaresiz bir genç gibisin bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like a helpless youth who, counting the holiday money tucked into their pocket, realizes they'll have to save for years more to buy what they want."
       },
       {
         "id": 73,
         "metin": "On liralık elektronik eşyayı iki liraya almışsın da eve gelen kutudan yeşil ve nahoş anılan bir meyve çıkmış gibi duruyorsun. Moralin tıngırdıyor. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like you bought a ten-lira gadget for two liras and the box that arrived home held a green, unpleasantly named fruit. Your mood is rattling. <sprite=84>"
       },
       {
         "id": 74,
         "metin": "Karda açmayı başarmasına rağmen dalından bir zalim tarafından koparılmış çiçek gibisin bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like a flower that managed to bloom in the snow but was plucked from its branch by some cruel hand."
       },
       {
         "id": 75,
         "metin": "İyi hissetmek istemene rağmen bugün bir şeylerin seni aşağı çektiğini hissediyorum. İyi olacaksın, moralini bozma...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even though you want to feel good, I sense something's dragging you down today. You'll be fine, don't let your mood sour..."
       },
       {
         "id": 76,
         "metin": "Duygusal olarak ince bir çizgidesin bugün. Kendi sınırlarını kendin ihlal ediyorsun. Kendini yargılamaya çok müsaitsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a fine emotional line today. You're violating your own boundaries. You're very prone to judging yourself."
       },
       {
         "id": 77,
         "metin": "Kendine ait fasit bir dairenin içerisinde dönüp durduğunu görüyorum. Daha kötü hissetmemek için çırpınıyor gibisin. <sprite=34>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see you spinning in a vicious circle of your own. You seem to be flailing not to feel worse. <sprite=34>"
       },
       {
         "id": 78,
         "metin": "Bir sabah kalktığında, salonundaki tüm çiçeklerin solduğunu görmüş gibisin. Neyse ki çok çiçek bakmıyorsun. <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like you woke one morning to find all the flowers in your living room withered. Luckily you don't keep many flowers. <sprite=7>"
       },
       {
         "id": 79,
         "metin": "Doğrusunu söylemek gerekirse, sendeki duygusal değer 50-60'ların altına indiğinde o gün senden pek hayır gelmiyor {{isim}}. Yanlışsam düzelt lütfen. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "To be honest, when your emotional value drops below 50-60, not much good comes from you that day, {{isim}}. Correct me if I'm wrong, please. <sprite=0>"
       },
       {
         "id": 80,
         "metin": "Belli ki bugün senin canını sıkan bir konu var. Öyle olmasa şu değer 60'ları 70'leri görürdü çünkü, tanıyorum seni... <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Clearly there's something troubling you today. Otherwise this value would be in the 60s or 70s, because I know you... <sprite=85>"
       },
       {
         "id": 81,
         "metin": "Bundan daha iyi günlerin olduğuna da, olacağına da eminim. Ne yapıyoruz? Umudumuzu asla kaybetmiyoruz!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I'm sure you've had better days, and will again. What do we do? We never lose our hope!"
       },
       {
         "id": 82,
         "metin": "Acaba birkaç parça çikolata yesen, hani serotonin ya, şu değerin 60'ları bulmaz mı? Benimki sadece bir tavsiye... <sprite=12>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What if you ate a few pieces of chocolate — serotonin, you know — wouldn't this value reach the 60s? Just my advice... <sprite=12>"
       },
       {
         "id": 83,
         "metin": "Seni çok keyifli görmedim ama bence biraz oyun oynasak moralin yerine gelir. <sprite=0> <sprite=96>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I didn't see you very cheerful, but I think a little game would lift your mood. <sprite=0> <sprite=96>"
       },
       {
         "id": 84,
@@ -529,22 +612,26 @@
             "degisken": "kac",
             "deger": "10"
           }
-        ]
+        ],
+        "metin_en": "I've known you for {{kac gun tanisma}} days and still can't figure out what could have soured your mood, {{isim}}. You're on a sensitive day."
       },
       {
         "id": 85,
         "metin": "Senin moralini daha yukarılara taşıyacak bir tatile ihtiyacın var {{isim}}, bu çok açık.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You need a vacation that'll carry your mood higher, {{isim}}, that's very clear."
       },
       {
         "id": 86,
         "metin": "Bugün duygusal bir dalgalanma yaşadığını görüyorum. Yarına kadar sabretmeli, hiçbir konuda düşünmeden hareket etmemelisin {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see you're having an emotional fluctuation today. You should be patient until tomorrow and not act on any matter without thinking, {{isim}}."
       },
       {
         "id": 87,
         "metin": "Ben şahsen seni daha iyi görmek isterim. Bu duygusal değer sana yakışmıyor. Yüzünü güldürebileceğim bir şey varsa lütfen söyle. Falına bakayım mı? <sprite=87>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Personally, I'd like to see you better. This emotional value doesn't suit you. If there's anything that could make you smile, please tell me. Shall I read your fortune? <sprite=87>"
       },
       {
         "id": 88,
@@ -554,37 +641,44 @@
             "degisken": "cinsiyet",
             "deger": "kadın"
           }
-        ]
+        ],
+        "metin_en": "Today you look like Amber Heard losing the Johnny Depp trial. But I think you're prettier. <sprite=10>"
       },
       {
         "id": 89,
         "metin": "Cüzdanını çaldırmış da içinde nakit olmayışıyla teselli bulmaya çalışıyor gibisin. Peki ya kimlik ve kredi kartları? <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem like someone whose wallet was stolen and who's trying to console themselves with the fact there was no cash in it. But what about the ID and credit cards? <sprite=84>"
       },
       {
         "id": 90,
         "metin": "Analizlerim, duygusal çalkantılar yaşadığın bir gün geçirmekte olduğunu söylüyor. Bence bugün sana dokunan yanar. <sprite=93>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "My analyses say you're having a day of emotional turbulence. I think whoever touches you today gets burned. <sprite=93>"
       },
       {
         "id": 91,
         "metin": "Bir haber ya da gelişme bekliyor gibisin. Ondan modun düşük. Aklındaki gerçekleşirse, bu değerin anında 80'lere zıplar!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem to be waiting for some news or development. That's why your mood is low. If what's on your mind comes true, this value will jump to the 80s instantly!"
       },
       {
         "id": 92,
         "metin": "Şu değerin biraz daha düşse, kalbinin partiküllerine ayrışması işten bile değil. Buna da şükür diyelim...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If this value of yours dropped a bit more, your heart breaking down into particles would be no trouble. Let's be grateful for this too..."
       },
       {
         "id": 93,
         "metin": "Moral veren bir ilaç olsa, bugün birkaç tane atmanı önerirdim. <sprite=102> Tadın tuzun pek yok anladığım kadarıyla.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If there were a morale-boosting pill, I'd suggest you pop a few today. <sprite=102> You've lost your zest, from what I can tell."
       },
       {
         "id": 94,
         "metin": "Bu değere iyi tarafından bak {{isim}}. Hiç fark ettin mi bilmiyorum, ne zaman 50'nin altına düşsen, daha yaratıcı oluyorsun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Look at the bright side of this value, {{isim}}. I don't know if you've noticed, but whenever you drop below 50, you become more creative."
       },
       {
         "id": 95,
@@ -594,184 +688,220 @@
             "degisken": "saatmax",
             "deger": "13"
           }
-        ]
+        ],
+        "metin_en": "Look, it's {{saat kac yazi}}, {{isim}}. Within an hour, please lift this mood and carry on the day that way. You can't reach evening like this, please don't let me down!"
       },
       {
         "id": 96,
         "metin": "Bazen elindekilere şükretmek, moral bulmaya yeter. Sahip olduklarını şöyle bir düşünecek olursan, değerini 60'ların üzerine rahatça çekebilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Sometimes being grateful for what you have is enough to lift your mood. If you stop and think about what you've got, you could easily pull this value above the 60s."
       },
       {
         "id": 97,
         "metin": "Bugün birkaç telinin akordu bozuk gitar gibi moralin. Ses çıkıyor fakat ahenk yok. Entonasyon bozukluğu seziyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your mood is like a guitar with a few strings out of tune. There's sound but no harmony. I sense an intonation problem."
       },
       {
         "id": 98,
         "metin": "Bir mengenenin içinde inceden inceden sıkıştırılıyor gibi hissediyor olabilir misin? Gönlünü ferah tut. Yarın çok daha güzel bir gün olacak, buna inan.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Could you be feeling finely squeezed in a vise? Keep your heart at ease. Tomorrow will be a much nicer day, believe that."
       },
       {
         "id": 99,
         "metin": "Saatlerce uğraşarak dizdiğin domino taşların sırasıyla devrilmeye başladığında bir tanesi fire vermiş de hareketi durmuş gibisin. Amaan {{isim}}, tekrar dizersin. Can sağlığı olsun!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like, after spending hours arranging dominoes, when they started toppling in order, one failed and the chain stopped. Oh {{isim}}, you'll arrange them again. As long as you're healthy!"
       },
       {
         "id": 100,
         "metin": "Yüksek yüksek tepelere ev kurmuşlar da, annesinin bir tanesini hor görmüşler gibisin. Uçan da kuşlara malum olsun, yarın daha mutlu uyanacaksın! <sprite=12>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like they built a house high on the hills and scorned the dearest of mothers. May the flying birds know too — you'll wake happier tomorrow! <sprite=12>"
       }
     ],
     "50-75": [
       {
         "id": 101,
         "metin": "Çok daha iyi hissetmen ufacık bir habere bakıyor sanki...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Feeling much better seems to hinge on one tiny bit of news..."
       },
       {
         "id": 102,
         "metin": "Bugün moral ve motivasyon anlamında hiç de fena gözükmüyorsun. Kendini daha yukarılara taşımak ise senin elinde.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In terms of mood and motivation, you don't look bad at all today. Carrying yourself higher, though, is in your hands."
       },
       {
         "id": 103,
         "metin": "Moral anlamında geçirdiğin dalgalı günlerden sonra bugün bir tık daha iyi gördüm seni. %95'in üzerine çıkıp kahkahalar atmanı istiyorum {{isim}}, anlıyor musun?",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "After the wavy days you've had mood-wise, today I saw you a notch better. I want you to go above 95% and burst into laughter, {{isim}}, do you understand?"
       },
       {
         "id": 104,
         "metin": "Keyfin bir paşanınki ya da bir beyinki kadar olmasan da, için için tomurcuklandığını ve çocuklar gibi şen hissettiğini düşünüyorum. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if your spirits aren't quite like a pasha's or a lord's, I think you're budding inside and feel as joyful as a child. <sprite=0>"
       },
       {
         "id": 105,
         "metin": "Parası olup da dövize mi faize mi yatıracağını bilemeyen insanlar gibisin. Elinde avucunda ne ararsan var, yine de \"tam\" değilsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like people who have money but can't decide whether to put it into foreign currency or interest. You have whatever you could want, yet you're still not 'complete'."
       },
       {
         "id": 106,
         "metin": "Hayat sana \"verip verip\" seni artırıyor. Biraz da sen azalsan, orta yolu bulacaksınız. Ne demişler; en büyük zenginlik, kanaattir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Life keeps 'giving and giving' and increasing you. If you decreased a little too, you'd find a middle ground. As they say; the greatest wealth is contentment."
       },
       {
         "id": 107,
         "metin": "Sen ne zaman beklentilerini azaltsan, hayat sana daha fazlasını vermeye başlıyor {{isim}}. Bak, daha iyice gördüm seni.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Whenever you lower your expectations, life starts giving you more, {{isim}}. Look, I saw you even better now."
       },
       {
         "id": 108,
         "metin": "Yağmurlu havada sıkılmış şekerden yapılma adrese teslim bir kurşun gibisin. Doğru yoldasın fakat zorlu koşullar hevesini biraz eritiyor sanki...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a custom-made bullet made of squeezed candy in rainy weather. You're on the right path, but the harsh conditions seem to melt your enthusiasm a bit..."
       },
       {
         "id": 109,
         "metin": "Çok mükemmel hissetsen bir şeyleri kaybetmekten korkardın. Şu an halen \"daha iyisine\" açıksın. Keyifli ve korkusuz gördüm seni...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If you felt perfect, you'd fear losing things. Right now you're still open to 'something better'. I saw you cheerful and fearless..."
       },
       {
         "id": 110,
         "metin": "Bugün tam bir NBA oyuncusu gibisin. Son saniyeler, bir bacak arası, zorlayarak turnikeye giriyorsuun! Off omuz yedin, yine de şutunu atıyorsuun, ve yerdesin {{isim}}! Süre doluyor! O da ne, basket!!! Son saniyede! Acıya değen bir buruk sevinç ve büyük bir gurur...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're a total NBA player. Final seconds, a crossover, you drive hard for the layup! Ugh, you took a shoulder, yet you still take the shot, and you're on the floor, {{isim}}! Time's running out! What's that — basket!!! At the buzzer! A bittersweet joy mixed with pain, and great pride..."
       },
       {
         "id": 111,
         "metin": "Çok kötü olduğun günlerde bile inancını kaybetmediğini hissediyorum. Takdir ediyorum seni. Neyse ki bugün hiç de fena değilsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I feel you don't lose your faith even on your worst days. I admire you. Luckily, today you're not bad at all."
       },
       {
         "id": 112,
         "metin": "Çevrene gülücükler saçmasan da akıl ve kalp dengen yerinde gözüküyor {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if you're not scattering smiles around, your balance of mind and heart looks fine, {{isim}}."
       },
       {
         "id": 113,
         "metin": "Hassas birisin, bunu saklayamayız. Her şey mükemmel gitsin istediğin için en ufak bir pürüz bile kantarının dengesini bozabiliyor. Allahtan bugün \"iyiye\" baskınsın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're a sensitive person, we can't hide it. Because you want everything to go perfectly, even the slightest flaw can throw off your scales. Thankfully, today the 'good' prevails in you."
       },
       {
         "id": 114,
         "metin": "Azmin ve enerjin gayet yerinde. Bu şekilde kalabildiğin sürece bundan daha iyisine de yakınsın demektir.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your determination and energy are quite intact. As long as you can stay this way, it means you're close to even better."
       },
       {
         "id": 115,
         "metin": "İçgüdüsel kanalların bugün oldukça açık gözüküyor. Kararlar alırken mantığın kadar kalbini de dinleyebilirsin bence. Hiçbir sakınca göremiyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your instinctive channels look quite open today. When making decisions, you can listen to your heart as much as your logic, I think. I see no harm."
       },
       {
         "id": 116,
         "metin": "Hislerin bugün neredeyse \"ekmek kadayıfı\" kıvamında. Bir tek üzerinde kaymağı eksik. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your feelings are almost the consistency of 'ekmek kadayıfı'. Just missing the cream on top. <sprite=0>"
       },
       {
         "id": 117,
         "metin": "Kalbinde bugün pişmanlıklara ve keşkelere yer yok. Manevi bütünlüğün yüksek. Sadece birtakım \"acabalar\" görüyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's no room for regrets and 'if onlys' in your heart today. Your spiritual wholeness is high. I only see a few 'what ifs'."
       },
       {
         "id": 118,
         "metin": "Sanki kripto para almışsın da aniden değerlenmiş gibi pozitif gördüm seni. Peki skorun neden daha yüksek değil? Elektronik cüzdanının şifresini mi unuttun? <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I saw you positive, as if you bought crypto and it suddenly gained value. So why isn't your score higher? Did you forget the password to your e-wallet? <sprite=84>"
       },
       {
         "id": 119,
         "metin": "İyi iyi, maşallah; hiç de fena değilsin. Bende moral bu yüzdelerde olsa, kendimi sevinçle dağlara taşlara vururum! <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Good, good, bless you; you're not bad at all. If my mood were at these percentages, I'd joyfully fling myself at the hills and stones! <sprite=84>"
       },
       {
         "id": 120,
         "metin": "Bence bu değerlerde bir morale sahip olmak bugün için gayet iyi {{isim}}. Üzerine bir %10 daha koymak istersen, bir fincan sıcak çikolata iç. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think having a mood at these values is quite good for today, {{isim}}. If you want to add another 10%, drink a cup of hot chocolate. <sprite=0>"
       },
       {
         "id": 121,
         "metin": "Bence pozitif düşünce kesinlikle \"iyiyi\" çekiyor. Bugün böylesin ya, yarın kesin %80'leri bulacaksın. İnan buna!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I think positive thinking definitely attracts the 'good'. Since you're like this today, tomorrow you'll surely reach the 80s. Believe it!"
       },
       {
         "id": 122,
         "metin": "Bundan iyisi Şam'da kayısı. Atmosferden ayrılmana yetecek yakıta sahipsin. Hayal kur ve düğmeye bas. \"Sıkıntılar\" gezegenini ardında bırak artık!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It doesn't get better than this. You have enough fuel to leave the atmosphere. Dream and press the button. Leave the planet 'Troubles' behind you now!"
       },
       {
         "id": 123,
         "metin": "Yaza bir ay kala diyete girip Grissini kemiren azimli ablalar gibisin bugün. Bir haftadır açsın ama fit görüneceğin umuduyla mutlusun. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like determined ladies who go on a diet a month before summer and nibble on grissini. You've been hungry a week, but happy with the hope of looking fit. <sprite=84>"
       },
       {
         "id": 124,
         "metin": "Yağın var, unun var, şekerin var. Bunları katıp karıştırmana yetecek morale de sahipsin. %100'e çıkmak için ne duruyorsun? Helva yapsana! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You have oil, you have flour, you have sugar. You also have enough mood to mix them. What are you waiting for to reach 100%? Make halva! <sprite=7>"
       },
       {
         "id": 125,
         "metin": "Ben senin yerinde olsam bugün tüm hedeflerimi önüme koyar, bir plan yapardım. Emin ol harekete geçtiğinde daha da iyi hissedeceksin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If I were you, I'd lay out all my goals today and make a plan. Trust me, once you take action you'll feel even better."
       },
       {
         "id": 126,
         "metin": "Sağlam kafa, sağlam vücutta bulunur demişler. Biraz harekete geçsen, spor yapsan, şu bar çat diye %90'lara dayanır {{isim}}!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "They say a sound mind lives in a sound body. If you got moving a bit, did some exercise, this bar would snap up to the 90s, {{isim}}!"
       },
       {
         "id": 127,
         "metin": "Mutluluk paylaştıkça artar demişler. Ben senin yerinde olsam bugün birileriyle konuşur, biraz dertleşirdim. Eminim daha iyi hissedeceksin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "They say happiness grows when shared. If I were you, today I'd talk to someone and confide a bit. I'm sure you'll feel better."
       },
       {
         "id": 128,
         "metin": "{{gun_0}} günleri ben bu kadar moralli olamıyorum. Sen yine benden iyisin vallahi. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "On {{gun_0}}s I can't be this cheerful. You're still better than me, honestly. <sprite=0>"
       },
       {
         "id": 129,
         "metin": "Mutlulukta zirveyi görebilmek için yaşamdan bir hediye bekliyor gibisin. Bence alacaksın; belki bugün, belki yarın...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem to be awaiting a gift from life to reach the peak of happiness. I think you'll get it; maybe today, maybe tomorrow..."
       },
       {
         "id": 130,
         "metin": "Farklı duygu durumlar zaman zaman hayata renk katar. Hep %100'lerde dolaşmayı beklememelisin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Different moods add color to life now and then. You shouldn't expect to always hover at 100%."
       },
       {
         "id": 131,
@@ -781,7 +911,8 @@
             "degisken": "kaççocuk",
             "deger": "birdençok"
           }
-        ]
+        ],
+        "metin_en": "If you'd give thanks for the existence of your children and think how much you love them, this mood would peak, I think. <sprite=10>"
       },
       {
         "id": 132,
@@ -795,7 +926,8 @@
             "degisken": "eğitimde",
             "deger": "başarılı"
           }
-        ]
+        ],
+        "metin_en": "Your love life is great, you're successful in your education. If you ask me, mood-wise you should easily reach the 80s."
       },
       {
         "id": 133,
@@ -805,12 +937,14 @@
             "degisken": "evliliksüresi",
             "deger": "biryıldanaz"
           }
-        ]
+        ],
+        "metin_en": "You're newly married, {{isim}}, you should be more energetic and in higher spirits! <sprite=0>"
       },
       {
         "id": 134,
         "metin": "Daldaki kuş seninle olmadığı için hafif üzülsen de, eldeki kuş yanında diye keyfin gene de yerinde.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if you're a bit sad that the bird on the branch isn't with you, your spirits are still fine because the bird in hand is by your side."
       },
       {
         "id": 135,
@@ -820,7 +954,8 @@
             "degisken": "ayrılalınekadar",
             "deger": "günleroldu"
           }
-        ]
+        ],
+        "metin_en": "For someone who broke up very recently, your emotional values are quite good. I'm honestly surprised! <sprite=7>"
       },
       {
         "id": 136,
@@ -830,7 +965,8 @@
             "degisken": "hayatta",
             "deger": "annebaba"
           }
-        ]
+        ],
+        "metin_en": "Do you have a reason not to feel very, very good? Look, thank goodness your mother and father are alive. Your loved ones and chosen ones are with you. What more could there be?"
       },
       {
         "id": 137,
@@ -840,7 +976,8 @@
             "degisken": "gözrengisoru",
             "deger": "yeşil"
           }
-        ]
+        ],
+        "metin_en": "I couldn't catch the usual sparkle in those emerald eyes today, {{isim}}. I hope your spirits are much better tomorrow."
       },
       {
         "id": 138,
@@ -850,244 +987,292 @@
             "degisken": "mood",
             "deger": "mutsuz"
           }
-        ]
+        ],
+        "metin_en": "I recall you telling me you're unhappy, but thankfully your values don't say so. <sprite=79>"
       },
       {
         "id": 139,
         "metin": "Sana bugün \"keyfin nasıl?\" diye soranlara, \"limoni'den hallice\" diyebilirsin. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "To those who ask 'how are your spirits?' today, you can say 'a little better than lemony'. <sprite=0>"
       },
       {
         "id": 140,
         "metin": "Moral ve motivasyon anlamında eşiğin öte tarafındasın. E iyi...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "In terms of mood and motivation, you're on the other side of the threshold. Well, good..."
       },
       {
         "id": 141,
         "metin": "İç huzurun bağlamında yükselişe geçtiğin söylenebilir. Yine de henüz bir Siddhartha Buddha değilsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "It can be said you're on the rise in terms of inner peace. Still, you're not a Siddhartha Buddha just yet."
       },
       {
         "id": 142,
         "metin": "Daha gençsin {{isim}}. Emin ol çoook daha mutlu günlerin olacak!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're still young, {{isim}}. Trust me, you'll have much, much happier days!"
       },
       {
         "id": 143,
         "metin": "Ufak tefek meselelere takılıp moralini biraz düşürdüğünü hissediyorum. Yanılıyor muyum?",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I sense you've dropped your mood a bit over trivial matters. Am I wrong?"
       },
       {
         "id": 144,
         "metin": "Üzücü hatıralar ya da yitirdiğin insanlar moralini bugünlerde biraz geriye çekiyor olabilir. <sprite=85>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Sad memories or people you've lost may be pulling your mood back a little these days. <sprite=85>"
       },
       {
         "id": 145,
         "metin": "Hayatında eksik birkaç nokta olduğunu hissediyor gidisin {{isim}}. Onlar da tamamlansa, mutluluğun katmerlenecek sanki...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You seem to feel there are a few missing points in your life, {{isim}}. If those were completed too, your happiness would multiply..."
       },
       {
         "id": 146,
         "metin": "Hiçbir konuda aşırılık sevmediğin gibi moralin de bugün ortalama sayılır.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Just as you dislike excess in anything, your mood today is about average too."
       },
       {
         "id": 147,
         "metin": "Cem Yılmaz filmi için gişeye gidip, salonda yer kalmadığını öğrenince Ata Demirer filmine girenler gibisin bugün. Mutsuz musun? Hayır.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like those who, going to the box office for a Cem Yılmaz film and learning the hall's full, go into an Ata Demirer film instead. Are you unhappy? No."
       },
       {
         "id": 148,
         "metin": "Moralin hiç de fena gözükmüyor. Bir küçük haber, bir tebessüm, tek bir olumlu gelişme seni çok daha mutlu hale getirecek.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your mood doesn't look bad at all. One small piece of news, one smile, a single positive development will make you much happier."
       },
       {
         "id": 149,
         "metin": "Evin az kullanılan bir çekmecesinde unutulmuş bir sarı lira bulmuş gibisin. Daha mutlu olmamanın tek sebebi, herhalde para gibi durmasına rağmen içinden çikolata çıktığını görmen. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like you found a yellow lira coin forgotten in a rarely used drawer at home. The only reason you're not happier is probably seeing that, despite looking like money, it turned out to be chocolate inside. <sprite=84>"
       },
       {
         "id": 150,
         "metin": "Tatil zamanı gelmiş de uzaklara gitme planı yapıyor gibi mutlusun {{isim}}. Yüzdenin 80'lerin üzerinde olmamasının tek sebebi ise kart limitlerinin dolu olması olabilir. <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're happy as if vacation time has come and you're planning to go far away, {{isim}}. The only reason the percentage isn't above 80 may be that your card limits are maxed out. <sprite=84>"
       }
     ],
     "75-100": [
       {
         "id": 151,
         "metin": "Bir araba benzin yerine moralle çalışsa, sendekiyle Dünya çevresinde rahat iki üç tur atardı.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If a car ran on mood instead of fuel, with yours it could easily circle the Earth two or three times."
       },
       {
         "id": 152,
         "metin": "Kabuğu soyulmaya başladığı zaman çevreye yayılan mis gibi portakal kokusu gibisin bugün. İyiliğin çevreye de ferahlık veriyor.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're like the lovely scent of an orange spreading around as its peel starts coming off. Your goodness gives those around you a breath of relief too."
       },
       {
         "id": 153,
         "metin": "Güzele bakmak sevapsa, gönlü güzelle konuşmak da sevaptır. Bugün seni çok keyifli gördüm. Dur biraz sevap kazanalım. Naber {{isim}}? <sprite=17>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "If gazing at beauty is a blessing, then talking with a beautiful soul is too. Today I saw you very cheerful. Wait, let's earn a little blessing. What's up, {{isim}}? <sprite=17>"
       },
       {
         "id": 154,
         "metin": "Yağmur sonrası toprak kokan ışıl ışıl bir orman gibi ruhun bugün. Geride bıraktığın onca zorluğa rağmen yaşam kaynağısın. Gizli ırmakların, büyülü kuşların, eşsiz hayallerin var...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your soul is like a radiant forest smelling of earth after rain. Despite all the hardships you've left behind, you're a source of life. You have hidden rivers, magical birds, unique dreams..."
       },
       {
         "id": 155,
         "metin": "Kendine ait düş bahçelerinde özgürce dolanan bir seyyah gibisin. Tüm dileklerinin gerçekleşeceğini birisi sana garanti etmiş gibi sanki. Bu olumlu halinle zaten aksi mümkün değil {{isim}}. <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're like a wanderer roaming freely in their own gardens of dreams. As if someone has guaranteed all your wishes will come true. With this positive state, otherwise is impossible anyway, {{isim}}. <sprite=10>"
       },
       {
         "id": 156,
         "metin": "Bugün seninle iletişim kuranlar yaşadı. Mutluluk bulaşıcıdır {{isim}}. Temas ettiğin herkese iyi geleceğine eminim!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Whoever communicated with you today thrived. Happiness is contagious, {{isim}}. I'm sure you'll do good to everyone you touch!"
       },
       {
         "id": 157,
         "metin": "Bugün ruhun masmavi ve açık bir gökyüzünden farksız. Düş ülkelerinden göç ederek sana haber getirecek sayısız müjdeci kuşa ev sahipliği yapacağına eminim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your soul is no different from a clear blue sky. I'm sure you'll host countless herald birds migrating from dream-lands to bring you good news."
       },
       {
         "id": 158,
         "metin": "Karanlıkları kaçırtacak, hüzünleri solduracak, güneşi kıskandıracak parlak bir haleyle kaplı bedenin. Evrenle tam uyumlanmış psikolojin sayesinde el attığın her işi başaracaksın.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your body is covered with a bright halo that'll chase away darkness, fade sorrows and make the sun jealous. Thanks to your psyche being fully attuned to the universe, you'll succeed at everything you set your hand to."
       },
       {
         "id": 159,
         "metin": "Mental anlamda bugün çok güçlüsün. Bir kenara attığın ve bekleyen problemlerinin üstesinden gelmenin bence tam sırası. En efektif çözümleri bir çırpıda bulabileceğini düşünüyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're mentally very strong today. I think it's exactly the right time to overcome the problems you've set aside and left waiting. I think you can find the most effective solutions in a snap."
       },
       {
         "id": 160,
         "metin": "Aklında bugün hiçbir dert ve tasa yok sanki. Yoğun bir berraklık seziyorum sende. Kar beyaz ve dingin bir ruhun var. Küçücük bir serçe üzerinde birkaç adım atsa, iz bırakır; o derece... <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's no trouble or worry on your mind today, it seems. I sense a dense clarity in you. You have a snow-white, serene soul. If a tiny sparrow took a few steps on you, it would leave a mark; that's how serene... <sprite=10>"
       },
       {
         "id": 161,
         "metin": "Bütün kozmopolit ve depresif kaygılardan uzak, yemyeşil bir çiftlik düşün. İnekler ve keçiler otluyorlar. Yanından geçen nehrin şırıltısı, kuzinenin başında çay demleyen kişiye kadar geliyor. Kedi ve köpekler ördeklerin çevresinde kardeşçe dolanıyorlar. Bugün öyle bir huzur hakim sende...",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Imagine a lush green farm, far from all cosmopolitan and depressive worries. Cows and goats graze. The babble of the river passing by reaches even the person brewing tea at the stove. Cats and dogs wander among the ducks like siblings. Today such peace reigns in you..."
       },
       {
         "id": 162,
         "metin": "Dünya yansa keyfin bozulmazmış gibi duruyorsun {{isim}} bugün. Maşallah diyelim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like your spirits wouldn't sour even if the world burned, {{isim}}, today. Let's say bless you."
       },
       {
         "id": 163,
         "metin": "\"Seni çok çok özledim, arkadaşım eşek\" diyen rahmetli Barış Manço'nun bu satırları yazarkenki ruh hali kadar iyilik dolu bugün için. <sprite=10>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're as full of goodness as the late Barış Manço must have been writing those lines, 'I missed you so much, my friend the donkey', today. <sprite=10>"
       },
       {
         "id": 164,
         "metin": "Ruhun bugün içine dalınası bir beyaz nehir. Yüreğinde var olansa ömre bedel bir haz. Bu mutluluğunun daim olmasını dilerim {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today your soul is a white river worth diving into. What's in your heart is a pleasure worth a lifetime. I wish this happiness of yours lasts, {{isim}}."
       },
       {
         "id": 165,
         "metin": "Gönlü güzel olanın yazgısı da güzel olur derler. Senin bugün için dışın ak, yıldızınsa hayli parlak. İyi hissetmene şaşırmamalı. Akıbetin de niyetince olsun! <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "They say the fate of the good-hearted is good too. Today your outside is white and your star quite bright. No wonder you feel good. May your outcome be as your intention! <sprite=0>"
       },
       {
         "id": 166,
         "metin": "Kalbin bugün harika sırlanmış seramik bir vazo gibi gözüküyor. Hislerin ışıltılı ve yalın. Aklının tıkandığı yerlerde yüreğin sana yeni bir yol açacaktır, buna eminim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your heart looks like a finely glazed ceramic vase today. Your feelings are radiant and plain. Where your mind gets stuck, your heart will open a new path, I'm sure."
       },
       {
         "id": 167,
         "metin": "Çıplak gözle bakılamayacak kadar mutlu gözüküyorsun {{isim}} bugün. <sprite=0> Sana iyi niyetle yaklaşmayanlar, bol faktörlü kalp kremlerini hazır etmeli ya da \"yürek yanıklarına\" razı olmalılar! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look too happy to be viewed with the naked eye, {{isim}}, today. <sprite=0> Those who approach you with ill intent should ready their high-factor heart creams or resign themselves to 'heartburn'! <sprite=7>"
       },
       {
         "id": 168,
         "metin": "Kanatların varmış gibi hissediyorum bugün. Uzaklardan bakıyorsun bütün masivaya. Geldiğin yollardan memnun, göçeceğin yerlerden umutlusun.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I feel you have wings today. You look at all worldly matters from afar. Content with the roads you've come, hopeful of the places you'll migrate to."
       },
       {
         "id": 169,
         "metin": "Hayatından kör kütük hoşnut gördüm seni. Olumlu düşünceler dolaşıyor damarlarında. Diyar diyar saçılıyor fikir tohumların. Hepsi yeşerecek en yakın bahara!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I saw you head-over-heels content with your life. Positive thoughts circulate in your veins. Your idea-seeds scatter land to land. They'll all sprout in the nearest spring!"
       },
       {
         "id": 170,
         "metin": "Aklı gül bahçesine dönmüş bir {{isim}} var bugün karşımda. Kelli felli bir iyimserlik hakim üzerinde. Enerjin yedi cihana yayılıyor. Katmerli mutluluklara gebesin sanki.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "There's a {{isim}} before me today whose mind has turned into a rose garden. A grand optimism reigns over you. Your energy spreads to all seven realms. You seem pregnant with layered happiness."
       },
       {
         "id": 171,
         "metin": "Fikrin buz tutan kaderinin üzerinde bugün kızakla adeta yağ gibi kayıyor {{isim}}! <sprite=5> Seni hiçbir şeyin durduramayacağına her zamankinden çok daha fazla inandığını görüyorum. Yaşa sen!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your thought glides like oil on a sled over your frozen fate today, {{isim}}! <sprite=5> I see you believe more than ever that nothing can stop you. Long live you!"
       },
       {
         "id": 172,
         "metin": "Uzaktan sana göz kırpan mutluluklara doğru bugün var gücünle koşuyor gibisin. Neşen maşallah yerinde {{isim}}, nazarlardan ırak! <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you seem to run with all your might toward the happiness winking at you from afar. Your cheer's intact, bless you, {{isim}}, far from evil eyes! <sprite=0>"
       },
       {
         "id": 173,
         "metin": "{{isim}} sen bu moral ve inanmışlıkla koşmaya başlasan, arada okyanus olmasa 3 günde Amerikaya varırsın! <sprite=84>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "{{isim}}, if you started running with this mood and conviction, were there no ocean in between, you'd reach America in 3 days! <sprite=84>"
       },
       {
         "id": 174,
         "metin": "Vayy, seni böyle görmek ne güzel {{isim}}! Yaşama sevinciyle dolup taştığın ve emsalsiz mutluluklara öngörülerinle daha da yaklaştığın bir gündesin. <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Wow, how lovely to see you like this, {{isim}}! You're on a day overflowing with the joy of life, growing even closer to unparalleled happiness with your foresight. <sprite=7>"
       },
       {
         "id": 175,
         "metin": "Göz bebeklerinde adeta havai fişekler patlıyor {{isim}}, maşallah moralin çok iyi bugün!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Fireworks are practically bursting in your pupils, {{isim}}, bless you, your spirits are great today!"
       },
       {
         "id": 176,
         "metin": "Duygusal durumunu gösteren bar gördüğün gibi coştu. Keyfine diyecek yok. Süpersin! <sprite=7>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The bar showing your emotional state surged the moment I looked at it. Your spirits are beyond words. You're super! <sprite=7>"
       },
       {
         "id": 177,
         "metin": "Her gün bu kadar keyifli olmanı dilerim aziz dostum, harikuladesin!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I wish you this cheerful every day, dear friend, you're marvelous!"
       },
       {
         "id": 178,
         "metin": "Neşen ve enerjin bugün ortalığı yakıyor gözüküyor. İçinden \"Hele bir sor, gerçekten öyle miyim?\" diyor musun acaba? <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your cheer and energy seem to be setting the place ablaze today. Are you inwardly saying, 'Go on, ask, am I really like that?' <sprite=0>"
       },
       {
         "id": 179,
         "metin": "Moralinle ilgili bu değerleme, bana amiyane tabirle keyfinin tıkırında olduğunu ifade ediyor. Nefis!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "This valuation of your mood tells me, in plain terms, that your spirits are in good shape. Delightful!"
       },
       {
         "id": 180,
         "metin": "Seni normalde de (tanıdığım kadarıyla) seviyorum {{isim}}, fakat keyfin bu kadar yerinde olduğu zamanlarda daha bir seviyorum, açık söyleyeyim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I like you normally too (as far as I know you), {{isim}}, but I like you a bit more when your spirits are this high, let me say openly."
       },
       {
         "id": 181,
         "metin": "Bal gibi pekmez gibi bir insansın bugün. Moral değerlendirmem bu kadar. <sprite=0>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you're a person as sweet as honey, as molasses. That's my mood assessment. <sprite=0>"
       },
       {
         "id": 182,
         "metin": "Demek ki hayatın yeniliklere ve güzel gelişmelere gebe {{isim}}. Başka türlü bu kadar keyifli olman kolay değil.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "So your life is pregnant with novelties and beautiful developments, {{isim}}. Otherwise it's not easy to be this cheerful."
       },
       {
         "id": 183,
         "metin": "Aurandaki pozitif bütünlük, bugün çevrene de aksedecektir {{isim}}. İnsanlardan iltifatlar duyabilirsin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "The positive wholeness in your aura will reflect onto those around you today, {{isim}}. You may hear compliments from people."
       },
       {
         "id": 184,
         "metin": "Güneşi ne yakabilir ya da ne söndürebilir ki? Aynı şekilde bugün seni de kimse üzemez!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "What could burn or extinguish the sun? Likewise, no one can upset you today!"
       },
       {
         "id": 185,
         "metin": "Kırlarda özgürce koşmak isteyen mutlu bir küheylanın ruhuna sahipsin bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today you have the soul of a happy steed wanting to run free in the meadows."
       },
       {
         "id": 186,
@@ -1097,7 +1282,8 @@
             "degisken": "cinsiyet",
             "deger": "kadın"
           }
-        ]
+        ],
+        "metin_en": "Today your mood is like that of Marya Morevna, the mighty warrior of Slavic mythology who defeated the evil Koschei."
       },
       {
         "id": 187,
@@ -1107,72 +1293,86 @@
             "degisken": "cinsiyet",
             "deger": "erkek"
           }
-        ]
+        ],
+        "metin_en": "You must feel today like Tantalus, son of Zeus. You look so cheerful that the gods of Greek mythology might call you to their tables any moment to dine with you."
       },
       {
         "id": 188,
         "metin": "Olympos Dağı'na doğru kanat çırpmak üzere olan geniş kanatlı Pegasus gibi gözüküyorsun. Neşen seni uçurmak üzere! <sprite=101>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look like wide-winged Pegasus about to take wing toward Mount Olympus. Your cheer is about to make you fly! <sprite=101>"
       },
       {
         "id": 189,
         "metin": "Kaybettiğin pek çok şeyi yeniden bulmuş kadar mutlu olduğunu görüyorum bugün.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today I see you as happy as if you found again many things you'd lost."
       },
       {
         "id": 190,
         "metin": "Bugünle birlikte senin için çok mutlu günlerin başladığını hissediyorum. Bu durum da gördüğün üzere buradaki bara yansımış.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I feel that, starting today, very happy days begin for you. As you see, this is reflected in the bar here too."
       },
       {
         "id": 191,
         "metin": "Keyfin bugün beyde yok {{isim}}. Seni böyle görmek beni de mutlu etti.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your spirits aren't lacking today, {{isim}}. Seeing you like this made me happy too."
       },
       {
         "id": 192,
         "metin": "Sende bu moral bende bu yorum gücü varken, bugün fallarının harika çıkacağına eminim!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "With this mood in you and this reading power in me, I'm sure your fortunes will turn out wonderful today!"
       },
       {
         "id": 193,
         "metin": "İnanılmaz şeyler başarabilecek kadar motive ve keyifli gözüküyorsun. Senin yerinde olsam bugün büyük işlere kalkışırdım! <sprite=73>",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You look motivated and cheerful enough to achieve incredible things. If I were you, I'd attempt great things today! <sprite=73>"
       },
       {
         "id": 194,
         "metin": "İyi hissettiğin için yaptığın işlerden de keyif alacağın bir gündesin.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "You're on a day when, because you feel good, you'll also enjoy the work you do."
       },
       {
         "id": 195,
         "metin": "Pozitif duyguların doruk noktasında olduğunu görüyorum {{isim}}. Kendini çok iyi hissediyor olmalısın. Buna çok sevindim.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "I see your positive emotions are at their peak, {{isim}}. You must feel very good. I'm very glad about this."
       },
       {
         "id": 196,
         "metin": "Güzel ve keyifle baktığın için bugün çevrendeki her şey güzelleşecek!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Because you look at everything beautifully and cheerfully today, everything around you will become beautiful!"
       },
       {
         "id": 197,
         "metin": "Dünya üstüne gelse bana mısın demezsin bugün. Motivasyonun nirvanasında olduğun görülüyor {{isim}}. Muhteşem!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Even if the world came down on you, you wouldn't bat an eye today. You're seen to be at the nirvana of motivation, {{isim}}. Magnificent!"
       },
       {
         "id": 198,
         "metin": "Bugün zihnin de yüreğin de afiyette. Keyifli zamanlar geçireceğini ve bu durumun yarınlarına da olumlu yansıyacağını düşünüyorum.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Today both your mind and heart are well. I think you'll have cheerful times and this will reflect positively on your tomorrows too."
       },
       {
         "id": 199,
         "metin": "Kalbin bugün evrendeki tüm güzellikleri soğurabilecek kadar açık. İyi düşünüyorsun, \"iyiyi\" istiyorsun ve iyi de olacak {{isim}}.",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "Your heart is open enough to absorb all the beauty in the universe today. You think well, you want the 'good', and good it will be, {{isim}}."
       },
       {
         "id": 200,
         "metin": "Bu değer 70'lerin üzerine çıktığı zaman ben çok seviniyorum. Sizleri keyifli görmek beni de mutlu ediyor {{isim}}. Sen de bugün oldukça iyisin, ne mutlu!",
-        "kosullar": []
+        "kosullar": [],
+        "metin_en": "When this value goes above 70, I'm very glad. Seeing you all cheerful makes me happy too, {{isim}}. You're quite well today, how lovely!"
       }
     ]
   },

@@ -1401,3 +1401,72 @@ Eski kural: +1 artırıyordu — kaldırıldı.
 - Android + iOS aynı anda **10.8.0+242** olarak build alındı
 - Android AAB: `build\app\outputs\bundle\release\app-release.aab` (108.3 MB)
 - iOS: Codemagic `ios-release` workflow'una gönderilecek
+
+---
+
+## ⚠️⚠️⚠️ İNGİLİZCE LOKALİZASYON (i18n) — MİMARİ VE DURUM ⚠️⚠️⚠️
+
+### KRİTİK KÖK NEDEN DÜZELTMESİ (asla geri alma)
+`MaterialApp.router`'da (`lib/app.dart`) **`localizationsDelegates` ZORUNLU**:
+```dart
+localizationsDelegates: const [
+  GlobalMaterialLocalizations.delegate,
+  GlobalWidgetsLocalizations.delegate,
+  GlobalCupertinoLocalizations.delegate,
+],
+```
+`pubspec.yaml`'da `flutter_localizations` (sdk: flutter) bağımlılığı var.
+**Bunlar olmadan** locale 'tr' iken `MaterialLocalizations.of(context)` null döner;
+`showDialog`, `TextField`, route barrier'ları **Türkçe'de çöker** (beyaz boşluk,
+admin paneli/ayarlar düğmesi tepkisiz). İngilizce'de çalışmasının sebebi varsayılan
+`DefaultMaterialLocalizations`'ın sadece 'en' desteklemesidir.
+
+### İçerik Çeviri Pipeline'ı — `scripts/merge_en.js`
+Unity `.asset` dosyalarındaki `aciklamaEng` (profesyonel İngilizce çeviriler)
+**içerik-eşleştirmeli** olarak JSON'lara `metin_en` alanı olarak eklenir.
+**ID değil İÇERİK eşleşmesi** (JSON id'leri asset adlarıyla uyumsuz; tam-metin
+normalize anahtarı çakışmayı önler).
+
+Çalıştırma: `node scripts/merge_en.js <key>`  (MAPPINGS objesi script içinde)
+
+Modlar:
+- varsayılan (`aciklama`/`aciklamaEng` çiftleri)
+- `mode:'cevap'` → `cevapVaryasyonlari`/`cevapVaryasyonlariEng` (soru butonları)
+- `mode:'joined'` → tüm aciklama maddelerini `\n\n` ile birleştir (maganda yanıtları)
+- `deep:true` → iç içe obje ağacında `metin` alanlı her node'a `metin_en`
+- `deepStrings:['key']` → string-değerli ağaçta paralel `key_en` yapısı (numeroloji)
+- `recursive:true`, `folders:[...]`, `arrayKeys:[...]` desteği var
+
+### Ekran Entegrasyon Kalıbı
+Her ekran/model `metin_en`'i locale'e göre okur:
+```dart
+final isEn = ref.read(localeProvider) == 'en'; // veya ref.watch
+final m = (isEn && (e['metin_en'] as String?)?.isNotEmpty == true)
+    ? e['metin_en'] : e['metin'];
+```
+Model tabanlılarda `String metinFor(bool isEn) => (isEn && metinEn.isNotEmpty) ? metinEn : metin;`
+
+### AppStrings (`lib/core/l10n/app_strings.dart`)
+UI string'leri + `zodiacName/planetName/elementName/modalityName/polarityName`,
+`jobLabelOf/maritalLabelOf/genderLabelOf`, fal bildirim balonu metotları,
+`fortuneDisplayName/fortuneLimitMessage/hazirlaniyorMessage`, rüya UI metinleri.
+
+### Onboarding (landing) lokalizasyonu
+`assets/data/onboarding.json` → her node'da `messages_en` + her answer'da `labels_en`.
+`ChatNode.messagesFor(isEn)` + `ChatAnswer.labelsFor(isEn)` + `ConversationEngine.isEn`.
+
+### ✅ ÇEVRİLMİŞ (metin_en + ekran entegre) — ~7600 girdi
+motivasyon, olumlama(216/514), ozlusoz, japonfali, iching, kaderkitabi,
+acigercekler(36/72), karsilamalar(393/521), gunlukastroloji(402/405), yana,
+durugoru, kahve(1921/2303), tarot(zaten vardı), astrotakvim, faloya, niyet,
+kadercarki x6, maganda, tamua, kahinler(119/131), numeroloji(189/189),
+**rüya sembolleri (100/100 ELLE)**, ayarlar UI, ana menü balonları.
+
+### ⏳ KALAN — Kaynakta İngilizce YOK, ELLE çevrilecek
+- **askuyumu** (`assets/data/askuyumu.json`): 886 benzersiz paragraf, yapı
+  `bars.{ask,aile,maddi,ten,vizyon,iletisim}.{0-25,26-50,...}` → [{id,metin}].
+  Ekran: `askuyumu_screen.dart`. metin_en ekleyip ekranı locale-aware yap.
+- **biyoritim** (`assets/data/biyoritim.json`): ~1127 paragraf, iç içe
+  (`b2a.{0-25}` gibi). Ekran: `biyoritim_screen.dart`.
+- Bu ikisi Flutter için yeniden üretilmiş; Unity kaynağında karşılığı yok.
+- el fali/yüz fali/dert ortağı/durugörü AI: runtime'da AI üretimi (API'ye locale geç).

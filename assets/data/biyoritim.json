@@ -3,37 +3,44 @@
     {
       "id": 1,
       "metin": "Hesaplamalarıma göre, {{dogum yili}} yılı {{dogum ayi yazi}} ayının {{dogum gunu}} gününde doğan {{burc}} burcu {{data, cinsiyet=erkek, bir beyefendi | cinsiyet=kadın, bir hanımefendi | cinsiyet=lgbt, bir kişi}} olarak BUGÜNKÜ kesin değerlerin şu şekilde {{isim}}:",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "According to my calculations, as a {{burc}} {{data, cinsiyet=erkek, gentleman | cinsiyet=kadın, lady | cinsiyet=lgbt, person}} born on the {{dogum gunu}} of {{dogum ayi yazi}}, {{dogum yili}}, your exact values for TODAY are as follows, {{isim}}:"
     },
     {
       "id": 2,
       "metin": "Biyoritim hesaplamalarınla bugün için vardığım detaylı sonuçlar şu şekilde Değerli {{isim}}:",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "The detailed results I've reached for today with your biorhythm calculations are as follows, dear {{isim}}:"
     },
     {
       "id": 3,
       "metin": "Senin bugününe dair detaylı biyoritim analizim şöyle:",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "My detailed biorhythm analysis for your day is as follows:"
     },
     {
       "id": 4,
       "metin": "Gökte senin için dizilmiş olan yıldızların resmen nabzını tuttum {{isim}}. Analizim şöyle:",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "I've literally taken the pulse of the stars aligned for you in the sky, {{isim}}. My analysis is as follows:"
     },
     {
       "id": 5,
       "metin": "Gökte senin için dizilmiş olan yıldızları resmen sorguya çektim {{isim}}. Analizim şöyle:",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "I've literally interrogated the stars aligned for you in the sky, {{isim}}. My analysis is as follows:"
     },
     {
       "id": 6,
       "metin": "Kağıdı kalemi alıp bugün için senin adına uzun hesaplamalar yaptım {{isim}}. Analizim şöyle:",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "I took paper and pen and made long calculations for you today, {{isim}}. My analysis is as follows:"
     },
     {
       "id": 7,
       "metin": "Hesaplamalarıma göre, {{dogum yili}} yılı {{dogum ayi yazi}} ayının {{dogum gunu}} gününde doğan {{burc}} burcu {{data, cinsiyet=erkek, bir erkek | cinsiyet=kadın, bir kadın | cinsiyet=lgbt, birisi}} olarak BUGÜNKÜ kesin değerlerin şu şekilde {{isim}}:",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "According to my calculations, as a {{burc}} {{data, cinsiyet=erkek, man | cinsiyet=kadın, woman | cinsiyet=lgbt, person}} born on the {{dogum gunu}} of {{dogum ayi yazi}}, {{dogum yili}}, your exact values for TODAY are as follows, {{isim}}:"
     }
   ],
   "b2a": {
@@ -5600,297 +5607,356 @@
     {
       "id": 1,
       "metin": "Bugün ön planda olan çakran, \"muladhara\" olarak bilinen kök çakra. Bu çakran dengede gözüküyor {{isim}}. Yaşamdan lezzet aldığın ve insanlara sevecen yaklaşacağın bir gündesin. Olumlu enerjinle çevreni de büyüleyeceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the root chakra, known as 'muladhara'. This chakra looks balanced, {{isim}}. You're on a day when you take pleasure from life and approach people affectionately. You'll enchant those around you with your positive energy."
     },
     {
       "id": 2,
       "metin": "Bugün ön planda olan çakran, boğaz çakrası, yani \"visuda\" çakra. Bu çakran bloke vaziyette. Derdini karşındakilere anlatamadığın noktalarda susmayı tercih edebilirsin {{isim}}. Karşı karşıya kalman durumunda, kazanan \"nefsin\" olacaktır.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the throat chakra, that is, the 'vishuddha' chakra. This chakra is in a blocked state. At points where you can't express your troubles to others, you may prefer silence, {{isim}}. If you're confronted, your 'ego' will be the winner."
     },
     {
       "id": 3,
       "metin": "Bugün ön planda olan çakran, \"vishuddhi çakra, yani boğaz çakrası. Bu çakran hayli dengede gözüküyor {{isim}}. İletişim ve ifadede bugün usta sensin. Karşındakileri başarıyla yönlendirebilir, manipüle edebilir ve etkileyebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is 'vishuddhi', the throat chakra. This chakra looks quite balanced, {{isim}}. In communication and expression, today you're the master. You can successfully guide, manipulate and influence those before you."
     },
     {
       "id": 4,
       "metin": "Bugün ön planda olan çakran, 4. çakra olan \"anahata çakra\" yani kalp çakrası. Bu çakran açık ve aktif. Sevecek, sevilecek ve bunu fark edeceksin {{isim}}. İlgi odağı olabilir, iltifatlar alabilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the 4th chakra, 'anahata', the heart chakra. This chakra is open and active. You'll love, be loved, and notice it, {{isim}}. You may be the center of attention and receive compliments."
     },
     {
       "id": 5,
       "metin": "Bugün ön planda olan çakran, \"anahata çakra\" yani göğsünün üzerinde olan kalp çakrası. Bugün bu çakranda bir blokaj gözüküyor {{isim}}. Yersiz endişeler, sevgisizlik, maneviyattan uzaklaşma ve anlam arayışı, bugünkü hislerin arasında olabilir.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is 'anahata', the heart chakra over your chest. Today there seems to be a blockage in this chakra, {{isim}}. Needless worries, lovelessness, drifting from spirituality and a search for meaning may be among today's feelings."
     },
     {
       "id": 6,
       "metin": "Bugün ön planda olan çakran, kalp çakrası olarak bilinen \"anahata çakra.\" Bu çakran fevkalade dengede gözüküyor {{isim}}. Her konuda bardağın dolu tarafını görecek ve iyimserlikten pek çok kazanım elde edeceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is 'anahata', known as the heart chakra. This chakra looks extraordinarily balanced, {{isim}}. You'll see the glass half full on every matter and gain a lot from optimism."
     },
     {
       "id": 7,
       "metin": "\"solar pleksus çakrası\" adı verilen göbek çakrası. Bu çakran çok açık ve aktif. Bedenine yayılan yüksek enerji, sana her konuda özgüven verecek. Bugün her zaman olduğundan daha kararlı, mükemmeliyetçi ve detaycısın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "The navel chakra called the 'solar plexus chakra'. This chakra is very open and active. The high energy spreading through your body will give you confidence on every matter. Today you're more determined, perfectionist and detail-oriented than ever."
     },
     {
       "id": 8,
       "metin": "Bugün ön planda olan çakran, \"manipura\" adı verilen ve mücevher şehri anlamına gelen göbek çakrası. Bu çakranda kısmi bir blokaj söz konusu. Özgüveninde bir miktar düşüş hissedebilir, kıskançlık ve terk edilme korkusu yaşayabilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the navel chakra called 'manipura', meaning the city of jewels. There's a partial blockage in this chakra. You may feel a slight drop in confidence and experience jealousy and a fear of abandonment."
     },
     {
       "id": 9,
       "metin": "Bugün ön planda olan çakran, 3. çakra olan ve solar pleksus çakrası adı da verilen göbek çakrası. Bu çakran dengede gözüküyor. Kararlı söylemlerin ve ne istediğini bilen tavrın, dost meclislerinde fırtınalar estirebilir.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the 3rd chakra, the navel chakra also called the solar plexus chakra. This chakra looks balanced. Your determined statements and your air of knowing what you want could stir up storms in friendly gatherings."
     },
     {
       "id": 10,
       "metin": "Bugün ön planda olan çakran, 2. çakran olan \"svadisthana\" yani sakral çakra. Bu çakran çok aktif gözüküyor {{isim}}. İstekli, hırslı hatta tutkulu bir gün geçireceksin. Ateşinle çevrendekileri yakmaktan, hoyrat davranıp kalp kırmaktan sakınmalısın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is your 2nd chakra, 'svadisthana', the sacral chakra. This chakra looks very active, {{isim}}. You'll spend an eager, ambitious, even passionate day. You should take care not to burn those around you with your fire or to act roughly and break hearts."
     },
     {
       "id": 11,
       "metin": "Bugün ön planda olan çakran, \"svadisthana\" yani sakral çakra. Bu çakranda blokaj görmekteyim {{isim}}. Çekingen ve utangaç tavırlar sergileyebilir, sevdiğin kişilerin yanında pasif kalabilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is 'svadisthana', the sacral chakra. I see a blockage in this chakra, {{isim}}. You may display timid and shy attitudes and stay passive around the people you love."
     },
     {
       "id": 12,
       "metin": "Bugün ön planda olan çakran, \"sahasrara çakra\" yani, başının üzerinde bulunan taç çakran. Bu çakranın oldukça açık ve aktif olduğunu görüyorum {{isim}}. Altıncı hissin kuvvetli. İçgüdülerine güvenebilirsin. İlahi ve ezeli olanla irtibatın bugün çok açık. Seçimlerinde doğru yönlendirilecek, yardımlar görecek ve korunacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is 'sahasrara', the crown chakra above your head. I see this chakra is quite open and active, {{isim}}. Your sixth sense is strong. You can trust your instincts. Your connection with the divine and eternal is very open today. You'll be guided rightly in your choices, receive help and be protected."
     },
     {
       "id": 13,
       "metin": "Bugün ön planda olan çakran, sakral çakra, yani \"svadisthana\" olarak da geçen 2. çakra. Bu çakran bir hayli dengede gözüküyor. Çevrendeki insanlar çok anlayışlı ve neşeli olduğunu düşünebilir. Bu senin için bir avantaj oluşturacak {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the sacral chakra, the 2nd chakra also referred to as 'svadisthana'. This chakra looks quite balanced. People around you may think you're very understanding and cheerful. This will create an advantage for you, {{isim}}."
     },
     {
       "id": 14,
       "metin": "Bugün ön planda olan çakran, \"muladhara\" yani kök çakra. Bu çakran oldukça açık ve aktif gözüküyor. Maneviyattan ziyade maddiyata önem vereceğin bir gündesin. Başkalarından çok kendini düşünecek, kendi ihtiyaçlarını önceleyeceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is 'muladhara', the root chakra. This chakra looks quite open and active. You're on a day when you'll value the material over the spiritual. You'll think more of yourself than others and prioritize your own needs."
     },
     {
       "id": 15,
       "metin": "Bugün ön planda olan çakran, kök çakra olarak geçen \"muladhara.\" Bu çakran bir miktar blokaj içerisinde gözüküyor {{isim}}. Yaşamaktan zevk almadığını hissedebilir, ufak konularda bile öfke patlamaları yaşayabilirsin. Kendini gün sonuna dek oyalayacak bir şeyler bulmalı, sakin kalmalısın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is 'muladhara', referred to as the root chakra. This chakra looks somewhat blocked, {{isim}}. You may feel you take no pleasure in living and experience outbursts of anger even over small matters. You should find something to keep yourself occupied until the end of the day and stay calm."
     },
     {
       "id": 16,
       "metin": "Bugün ön planda olan çakran göz çakrası olarak da geçen Ajna. Bu çakran bir hayli açık. Sezgilerinin çok güçlü olacağını söyleyebilirim. İnsanların aklından geçenleri anlayabilmek için yüzlerine bakman ya da onların baş bölgelerine bir miktar yakınlaşman yeterli olacak {{isim}}. Bu durumun olumlu ve olumsuz yönleriyle karşılaşabilirsin. Duyumsayacakların her zaman hoşuna gitmeyebilir.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is Ajna, also referred to as the brow chakra. This chakra is quite open. I can say your intuition will be very strong. To understand what's on people's minds, it'll be enough to look at their faces or get a little closer to their head region, {{isim}}. You may encounter the positive and negative sides of this. What you sense may not always please you."
     },
     {
       "id": 17,
       "metin": "Bugün ön planda olan çakran boğaz çakrası olarak da geçen vishuddha. Normalden daha aktif olacağını öngördüğüm bu çakran, tiroid ve paratiroid bezlerini etkilemekte. Gün içerisinde metabolizman hızlanacaktır {{isim}}. Düşünme ve değerlendirme hızında artış gözlemleyeceğin gibi, kararlar alman da çabuklaşacak. Pek fazla konuşmak istememeni ve zaman zaman terlemeni doğal karşılamalısın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is vishuddha, also referred to as the throat chakra. This chakra, which I foresee will be more active than normal, affects the thyroid and parathyroid glands. Your metabolism will speed up during the day, {{isim}}. As you'll observe an increase in your thinking and assessment speed, your decision-making will quicken too. You should consider it natural not to want to talk much and to sweat now and then."
     },
     {
       "id": 18,
       "metin": "Bugün ön planda olan çakran anahata, yani kalp çakrası {{isim}}. Göğsünün tam ortasında bulunan bu çakra, vücudunun üst ve alt bölgelerinde bulunan tüm çakraların arasında bir köprü görevi görür. Bugün normalden daha işlevsel olacağı için, kendini enerjik hissedebilirsin. Diğer insanlarla aramızdaki sevgi bağının da idarecisi olduğu için, bugün şefkat ve merhamet duygularında artış sezebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is anahata, the heart chakra, {{isim}}. This chakra, located right in the middle of your chest, acts as a bridge among all the chakras in the upper and lower regions of your body. Because it'll be more functional than normal today, you may feel energetic. As it also governs the bond of love between us and others, you may sense an increase in feelings of compassion and mercy today."
     },
     {
       "id": 19,
       "metin": "Bugün ön planda olan çakran, manipura olarak da adlandırılan göbek çakrası. Aşırı aktif olacağını gördüğüm bu çakran, bugün seni olduğundan çok daha cesur bir insan haline getirebilir {{isim}}. Özgüven ve öz saygı ile ilişkili olan bu çakra fazla çalıştığında, sözünü sakınmayan ve gözü kara bir insan ortaya çıkar.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the navel chakra, also called manipura. This chakra, which I see will be overly active, could make you a far braver person than you are today, {{isim}}. When this chakra, related to confidence and self-respect, works too much, an outspoken and daring person emerges."
     },
     {
       "id": 20,
       "metin": "Bugün ön planda olan çakran, taç çakrası diye de bilinen sahasrara. Beyin ve sinir sistemi ile bağlantılı olan bu çakran bugün normalden %{{sayi,30,70}} oranında daha aktif gözüküyor. Olaylara karşı farkındalığın daha yüksek {{isim}}. Pratik düşünebilir, kararlarını daha hızlı ve daha doğru alabilirsin. Bu çakranın tam açık olması durumu, çok az insanın ulaşabildiği bir noktadır.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is sahasrara, also known as the crown chakra. This chakra, connected to the brain and nervous system, looks {{sayi,30,70}}% more active than normal today. Your awareness of events is higher, {{isim}}. You can think practically and make your decisions faster and more correctly. Having this chakra fully open is a point very few people can reach."
     },
     {
       "id": 21,
       "metin": "Bugün ön planda olan çakran, swadhishthana yani sakral çakra. Cinsiyete özgü seks hormonlarını etkileyen bu çakran bugün hiperaktif gözüküyor {{isim}}. Cinsel isteğinde fazlalaşma gözleyebilir, yaratıcılığının arttığına şahit olabilirsin. Kendine daha fazla değer vereceğin ve duyumsadığın şeylerden ekstra haz alacağın bir gündesin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is swadhishthana, the sacral chakra. This chakra, which affects gender-specific sex hormones, looks hyperactive today, {{isim}}. You may observe an increase in your sexual desire and witness a rise in your creativity. You're on a day when you value yourself more and take extra pleasure from what you sense."
     },
     {
       "id": 22,
       "metin": "Bugün ön planda olan çakran, muladhara olarak anılan kök çakrası. Kuyruk sokumumuzun en uç noktasında bulunan ve yerle temasımızı sağlayan bu çakran bugün %{{sayi,20,80}} kadar hiperaktif. Kendine fazlaca güvendiğin ve ruhsal dengelerini iyi sağladığın bir gündesin {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the root chakra referred to as muladhara. This chakra, located at the very tip of our tailbone and providing our contact with the earth, is about {{sayi,20,80}}% hyperactive today. You're on a day when you're very self-confident and maintain your spiritual balance well, {{isim}}."
     },
     {
       "id": 23,
       "metin": "Bugün ön planda olan çakran, diğer çakraların da başı olan \"sahasrara çakra\" yani taç çakran {{isim}}. Bu çakranda bir blokaj görmekteyim. Doğru olanı sezmekte zorlanabilir, kendini bir parça depresif hissedebilirsin. Gün sonuna dek ani kararlar almamalı, sakin ve ihtiyatlı olmaya özen göstermelisin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is 'sahasrara', the head of all the other chakras, the crown chakra, {{isim}}. I see a blockage in this chakra. You may struggle to sense what's right and feel a bit depressed. You shouldn't make sudden decisions until the end of the day and should take care to be calm and cautious."
     },
     {
       "id": 24,
       "metin": "Bugün ön planda olan çakran muladhara yani kök çakra. Geleceğe dair endişelerin bugün bu çakrayı %{{sayi,20,50}} oranında tıkamış gözüküyor {{isim}}. Bu çakra hayatta kalma ile ilgili temel ihtiyaçları yönettiği için, bugün enerjinde bir miktar düşüklük gözlemleyebilirsin. Canın pek bir şey yapmak istemeyebilir.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is muladhara, the root chakra. Your worries about the future seem to have clogged this chakra by {{sayi,20,50}}% today, {{isim}}. Because this chakra governs basic survival needs, you may observe a slight drop in your energy today. You may not feel like doing much."
     },
     {
       "id": 25,
       "metin": "Bugün ön planda olan çakran swadhistana diye anılan sakral çakra. Göbek altında yer alan ve rengi turuncu olan bu çakran bugün %{{sayi,15,45}} oranında bloke olmuş gözüküyor {{isim}}. Bu blokajın, kendini aşırı zorlamandan ya da bir konudaki suçluluk duygusundan kaynaklı olabileceğini görüyorum. Kendinle pek barışık olmadığın bir gün geçirebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the sacral chakra referred to as swadhistana. This chakra, located below the navel and orange in color, looks {{sayi,15,45}}% blocked today, {{isim}}. I see this blockage may stem from pushing yourself too hard or a sense of guilt about something. You may spend a day not quite at peace with yourself."
     },
     {
       "id": 26,
       "metin": "Bugün ön planda olan çakran swadhistana diye anılan sakral çakra. Cinsel içgüdüleri ve arzuları tetikleyen bu çakra sende %{{sayi,30,80}} bloke olmuş gözüküyor. Açık konuşmak gerekirse bugün kendini pokemon'a dönmüş gibi hissedebilirsin {{isim}}. Aşk konusunda duyarsızlık ve seksüel manada isteksizlik gözlemlenebilir. Daha nasıl anlatsam bilemedim. <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the sacral chakra referred to as swadhistana. This chakra, which triggers sexual instincts and desires, looks {{sayi,30,80}}% blocked in you. To speak frankly, today you may feel as if you've turned into a Pokémon, {{isim}}. Indifference about love and unwillingness in a sexual sense may be observed. I couldn't figure out how else to put it. <sprite=10>"
     },
     {
       "id": 27,
       "metin": "Bugün ön planda olan çakran swadhistana diye anılan sakral çakra. Seksüel dürtüler üzerinde çokça sözü geçen bu çakran, bugün normalin %{{sayi,30,80}} üzerinde bir açıklığa sahip Değerli {{isim}}. Kendini beğendiğin, tüm özelliklerini olduğu gibi kabul ettiğin ve arzularını serbest bıraktığın bir gündesin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the sacral chakra referred to as swadhistana. This chakra, which has much say over sexual urges, has an openness {{sayi,30,80}}% above normal today, dear {{isim}}. You're on a day when you like yourself, accept all your traits as they are, and let your desires run free."
     },
     {
       "id": 28,
       "metin": "Bugün ön planda olan çakran, manipura adındaki solar pleksus yani göbek çakrası {{isim}}. Umbilikal bölge civarında konumlanan bu çakra medeni cesaret üzerinde bir hayli etkilidir. Sende bugün %{{sayi,20,80}} düzeyinde hiperaktif olduğunu gözlediğim bu çakra sayesinde normalde yapmaya korktuğun işlere girişebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the solar plexus, that is, the navel chakra called manipura, {{isim}}. This chakra, located around the umbilical region, has quite an effect on civic courage. Thanks to this chakra, which I observe to be {{sayi,20,80}}% hyperactive in you today, you may undertake tasks you'd normally be afraid to do."
     },
     {
       "id": 29,
       "metin": "Bugün ön planda olan çakran, anahata olarak bilinen kalp çakrası. Hava elementiyle bağlantılı olan yeşil renkteki bu çakran bugün %{{sayi,10,40}} dolaylarında bloke gözüküyor. Üzerinden atamadığın birtakım olumsuz duyguların gün boyu esiri olabilirsin {{isim}}. Bu duyguların antidotu ise sevgidir. Sevgini bir yere kanalize etmelisin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the heart chakra known as anahata. This green chakra, connected to the air element, looks about {{sayi,10,40}}% blocked today. You may be captive all day to certain negative emotions you can't shake off, {{isim}}. The antidote to these emotions is love. You must channel your love somewhere."
     },
     {
       "id": 30,
       "metin": "Bugün ön planda olan çakran, anahata olarak bilinen kalp çakrası. Blokajının kayıp, yas ve üzüntü gibi duygularla ilişkisi olduğu bilinen bu çakran bugün %{{sayi,30,90}} daha açık gözüküyor. Bunun anlamı şu {{isim}}; gün boyu neşeli, hevesli, enerjik ve sevgi dolu olacaksın. <sprite=10>",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the heart chakra known as anahata. This chakra, whose blockage is known to relate to feelings like loss, grief and sadness, looks {{sayi,30,90}}% more open today. This means, {{isim}}; you'll be cheerful, eager, energetic and loving all day. <sprite=10>"
     },
     {
       "id": 31,
       "metin": "Bugün ön planda olan çakran, anahata olarak bilinen kalp çakrası. İnsan vücudundaki 7 çakranın en güçlülerinden biri olduğuna inanılan bu çakra sende bugün normale göre %{{sayi,10,60}} oranında daha açık gözüküyor {{isim}}. İnsanlarla ilişkilerinde ve şefkat duygunda artış beklenebilir. Başkalarına karşı daha duyarlı olabilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the heart chakra known as anahata. This chakra, believed to be one of the most powerful of the 7 chakras in the human body, looks {{sayi,10,60}}% more open than normal in you today, {{isim}}. An increase can be expected in your relationships with people and your sense of compassion. You may be more sensitive toward others."
     },
     {
       "id": 32,
       "metin": "Bugün bedenindeki 7 çakra da açık, dengeli ve uyumlu gözüküyor {{isim}}. Güven dolu, dinamik, yaratıcı, alçakgönüllü, şefkatli ve sevecen olduğun bir gün geçireceğini ve bunun da karşılığını evrenden fazlasıyla alacağını düşünüyorum. İnsanların ilgi odağı olabilir, onlarda hayranlık uyandırabilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today all 7 chakras in your body look open, balanced and harmonious, {{isim}}. I think you'll spend a day full of confidence, dynamic, creative, humble, compassionate and affectionate, and you'll receive its reward from the universe more than enough. You may be the center of attention and inspire admiration in people."
     },
     {
       "id": 33,
       "metin": "Bugün bedenindeki birden fazla çakrada blokaj gözlemliyorum {{isim}}. Özellikle de kök çakran ve sakral çakran tutarsız bir akış sergiliyor. Temel ihtiyaçların ve lükslerin arasında ikilemde kalabilir, bilinçli ve mantıklı seçimler yapmak yerine içgüdülerini dinlemeye yönelebilirsin. Aşırı hırslı olduğunu fark edersen, bu duygunu baskılamaya çalışmalısın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today I observe a blockage in more than one chakra in your body, {{isim}}. Especially your root chakra and sacral chakra display an inconsistent flow. You may be caught in a dilemma between basic needs and luxuries, and tend to listen to your instincts instead of making conscious, logical choices. If you notice you're overly ambitious, you should try to suppress that feeling."
     },
     {
       "id": 34,
       "metin": "Bugün ön planda olan çakran, başının üzerinde bulunan \"sahasrara çakra\" yani taç çakra. Bu çakran oldukça dengede gözüküyor {{isim}}. Hedeflerine doğru harekete geçmek için ihtiyacın olan manevi enerjiyi kendinde bulacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is 'sahasrara', the crown chakra above your head. This chakra looks quite balanced, {{isim}}. You'll find within yourself the spiritual energy you need to take action toward your goals."
     },
     {
       "id": 35,
       "metin": "Bugün ön planda olan çakran manipura, yani güneş sinirağı çakrası. Bu çakranda cüz-i bir tıkanıklık mevcut {{isim}}. Kendi kendini birileriyle aşırı rekabet halinde bulursan, bu çakrandaki akışın sekteye uğramasından kaynaklı olduğunu bilmelisin. Gücünü birilerine kanıtlamaya çalışabilir ve kararlarını zorunlu şekilde kabul ettirmek isteyebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is manipura, the solar plexus chakra. There's a minor blockage in this chakra, {{isim}}. If you find yourself in excessive competition with others, you should know it stems from the disrupted flow in this chakra. You may try to prove your strength to others and forcibly want your decisions accepted."
     },
     {
       "id": 36,
       "metin": "Bugün ön planda olan çakran, birliği sembolize eden ve çakra sütununun ortasında bulunan kalp çakrası. Denge noktası olarak bilinen bu çakran bugün normale göre daha açık {{isim}}. Tabiatla uyumlu, canlılara karşı duyarlı ve ikili ilişkilerde başarılı bir gün geçireceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the heart chakra, symbolizing unity and located in the middle of the chakra column. This chakra, known as the point of balance, is more open than normal today, {{isim}}. You'll spend a day in harmony with nature, sensitive toward living beings and successful in personal relationships."
     },
     {
       "id": 37,
       "metin": "Bugün ön planda olan çakran vishuddha olarak bilinen 5. çakra, yani boğaz çakrası {{isim}}. Ağız, dişler ve enseye bağlı olan bu çakra sende bugün normalin %{{sayi,20,70}} daha üzerinde bir açıklık sergiliyor. Müzisyenlerin, ressamların, konuşmacıların ve kaşiflerin boğaz çakralarına yakın faaliyet gösteren bu çakran sayesinde bugün yaratıcılığın üst seviyelerde olacak.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the 5th chakra known as vishuddha, the throat chakra, {{isim}}. This chakra, connected to the mouth, teeth and nape, displays an openness {{sayi,20,70}}% above normal in you today. Thanks to this chakra, which operates close to the throat chakras of musicians, painters, speakers and explorers, your creativity will be at its peak today."
     },
     {
       "id": 38,
       "metin": "Bugün ön planda olan çakran aydınlanma çakrası olan 6. çakra, yani üçüncü göz çakrası. Ajna olarak da bilinen bu çakra sende bugün %{{sayi,20,80}} dolayında ekstra faal {{isim}}. Dahilerin bu çakralarının sürekli çok güçlü olduğunu düşünürsek, senin de nasıl bir gün geçireceğinin az çok çıkarımını yapabiliriz.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the 6th chakra of enlightenment, the third eye chakra. This chakra, also known as Ajna, is about {{sayi,20,80}}% extra active in you today, {{isim}}. Considering that geniuses have this chakra constantly very strong, we can more or less infer what kind of day you'll have too."
     },
     {
       "id": 39,
       "metin": "Bugün ön planda olan çakran, başın tepesinde konumlanan taç çakra. İlahi bilinç ile bağlantıyı sağlayan ve sahasrara olarak da bilinen bu çakra sende %{{sayi,20,69}} dolayında ekstra açıklık sergiliyor {{isim}}. Dindar yönlerin ön plana çıkabileceği gibi, rahmani sezgilerin ve iç sesin, yani manevi latifelerin seni doğru seçimlere yöneltebilir.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the crown chakra, located at the top of your head. This chakra, providing connection with divine consciousness and also known as sahasrara, displays about {{sayi,20,69}}% extra openness in you, {{isim}}. As your devout sides may come to the fore, your divine intuitions and inner voice — your spiritual faculties — could guide you to the right choices."
     },
     {
       "id": 40,
       "metin": "Bugün kalp, ciğerler ve damarlar üzerinde etkisi olan anahata, sende fevkalade işliyor {{isim}}! 4. çakra olarak bilinen bu kalp çakrası sayesinde hoşgörü ve sevgi ile kuşatılmış vaziyettesin bugün. Yaratıcı işler üretme konusunda da normal zamanlara göre daha iyi olduğunu fark edeceksin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today anahata, which has an effect on the heart, lungs and vessels, is working extraordinarily well in you, {{isim}}! Thanks to this heart chakra, known as the 4th chakra, you're surrounded by tolerance and love today. You'll also notice you're better at producing creative work than usual."
     },
     {
       "id": 41,
       "metin": "Bugün çakralarının geneli dış etkenlere fazlaca açık gözüküyor {{isim}}. Pozitif insanlarla bir araya gelmen durumunda olumlu etkilenebilirsin. Tam tersi bir durumla karşılaşma ihtimaline karşı ise insanlardan bugünlük bir miktar uzaklaşmanı ve inzivaya çekilmeni tavsiye ediyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your chakras in general look quite open to external influences, {{isim}}. If you come together with positive people, you may be positively affected. Against the chance of the opposite situation, I advise you to keep a little distance from people and retreat into seclusion for today."
     },
     {
       "id": 42,
       "metin": "Bugün çakraların, geneli itibariyle açık gözüküyor. Güçlü bir enerjiye sahipsin {{isim}}. Yanına yaklaşan herkesi anında etkileyebilirsin. Zayıf enerjiye sahip ve kendini iyi hissetmeyen birine huzur verebilir, onun için şifa kaynağı olabilirsin. Çakra düzeyleri seninle eşit olan insanlarla aranda ise iyi bir denge ve uyum sağlanacaktır.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your chakras, in general, look open. You have a strong energy, {{isim}}. You can instantly affect everyone who approaches you. You can give peace to someone with weak energy who doesn't feel well and be a source of healing for them. With people whose chakra levels are equal to yours, a good balance and harmony will be achieved."
     },
     {
       "id": 43,
       "metin": "Bugün sakral çakran olan swadhishthana, diğer çakralarına oranla daha açık gözüküyor. Bu çakranın seksüel bir çakra olması dolayısıyla, insanlardan aldığın enerjiyi cinsellik kademesinde deneyimleyeceğin bir gün geçireceksin {{isim}}. Feromonların işlevi senin için hayati olacak. Örneğin kokusunu beğenmediğin birinin yanından hızla uzaklaşmak isteyebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your sacral chakra swadhishthana looks more open than your other chakras. Because this is a sexual chakra, you'll spend a day experiencing the energy you get from people at a sexual level, {{isim}}. The function of your pheromones will be vital for you. For instance, you may want to quickly move away from someone whose scent you dislike."
     },
     {
       "id": 44,
       "metin": "Bugün timüs bezini etkileyen anahata, diğer adıyla kalp çakrası, sende %{{sayi,5,30}} oranında kapalı gözüküyor. Hayatı sevgi kademesinde deneyimlemek ve insanlara karşı şefkat dolu olmak yerine, daha materyalist ve acımasız bir yaklaşım sergileyeceğini düşünüyorum. Kendi çıkarların için belki de bugün böylesi doğru olandır...",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today anahata, the chakra affecting the thymus gland, otherwise known as the heart chakra, looks about {{sayi,5,30}}% closed in you. Instead of experiencing life at the level of love and being full of compassion toward people, I think you'll display a more materialistic and ruthless approach. For your own interests, maybe that's the right thing today..."
     },
     {
       "id": 45,
       "metin": "Bugün ön planda olan çakran, kaşlarının arasında bulunan \"ajna çakra\" yani üçüncü göz çakrası. Bu çakran oldukça aktif gözüküyor {{isim}}. İnsanları etkilemek ve ikna etmek gibi isteklerin olursa, bu konularda başarı sergileyebilirsin. Farkındalığın bugün üst düzeyde. Yerinde tercihlerle isabetli sonuçlar elde edebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the 'ajna chakra', the third eye chakra located between your eyebrows. This chakra looks quite active, {{isim}}. If you have desires like influencing and persuading people, you can show success in these matters. Your awareness is at a high level today. With apt choices you can achieve accurate results."
     },
     {
       "id": 46,
       "metin": "Bugün sakral çakran yani karaciğer, dalak ve böbrek çakrası, diğer çakralarından daha açık gözüküyor {{isim}}. Gereğinden fazla açık olan bir çakra, dış enerjiyi daha çok emer. O nedenle bugün sende duygusal reaksiyonlar gözlenebilir. Şahit olacağın olayların seni mutlu etmesini ve iyi yönde etkilemesini dilerim.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your sacral chakra, that is, the liver, spleen and kidney chakra, looks more open than your other chakras, {{isim}}. A chakra that's more open than necessary absorbs more external energy. So today, emotional reactions may be observed in you. I hope the events you witness make you happy and affect you positively."
     },
     {
       "id": 47,
       "metin": "{{isim}} sen sanıyorum enerjinin çoğunu üçüncü göz çakrandan yani ajna'dan alıyorsun. Senin gibi kişiler dünya ile bağlantılarını ağırlıklı olarak zihinsel kademelerde kurarlar. Eğer farklı bir çakran bu çakra kadar açılırsa ki bugün öyle gözüküyor, beklenmeyen reaksiyonlar verebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "{{isim}}, I think you get most of your energy from your third eye chakra, ajna. People like you mostly establish their connection with the world at mental levels. If a different chakra opens as much as this one — and today it seems so — you may give unexpected reactions."
     },
     {
       "id": 48,
       "metin": "Bugün çakralarının geneli, normale göre ortalama %{{sayi,10,40}} kadar daha açık gözüküyor. Bunun şöyle bir mahsuru var {{isim}}; soğurduğun tüm dış enerjiler sende yoğunlaştığı için kendini bedensel olarak rahat hissetmeyebilir, stres yaşayabilirsin. Bu enerjiyi dağıtabilmen adına derin nefes ve bol egzersiz öneriyorum.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your chakras in general look about {{sayi,10,40}}% more open than normal on average. This has a drawback, {{isim}}; because all the external energies you absorb concentrate in you, you may not feel physically comfortable and could experience stress. To disperse this energy, I recommend deep breathing and plenty of exercise."
     },
     {
       "id": 49,
       "metin": "Bugün çakralarının geneli, normale göre ortalama %{{sayi,10,40}} kadar daha açık gözüküyor. Çakralar çeşitli boyutlarla bedenimiz arasındaki arayüzdür. Yüksek boyutlardan gelen enerjiyi bir transformatör gibi düşürürler ve sinir sistemimizin hasar görmesini engellerler. Sendeki gibi fazla açık oldukları zaman da, eklem ağrıları gözlemlenebilir {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your chakras in general look about {{sayi,10,40}}% more open than normal on average. Chakras are the interface between our body and various dimensions. They step down energy coming from higher dimensions like a transformer and prevent damage to our nervous system. When they're too open, as in you, joint pains may be observed, {{isim}}."
     },
     {
       "id": 50,
       "metin": "Bugün çakralarının geneli, normale göre ortalama %{{sayi,20,50}} kadar daha açık gözüküyor {{isim}}. Çakralar açıldıkça zaman kavramı yitirilir, bilinç yükselir ve \"benlik\" olgusundan kolektif üst bilince geçiş yapılır. Kendini böyle günlerde diğer günlere nazaran daha spiritüel hissedebilir, düşünce gücünle belki birtakım mucizeler gerçekleştirebilirsin. Kim bilir...",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your chakras in general look about {{sayi,20,50}}% more open than normal on average, {{isim}}. As chakras open, the concept of time is lost, consciousness rises, and one transitions from the notion of 'ego' to the collective higher consciousness. On such days you may feel more spiritual than other days and perhaps perform certain miracles with the power of your thought. Who knows..."
     },
     {
       "id": 51,
       "metin": "Çakra merkezleri su girdapları gibi enerji girdaplarından oluşur {{isim}}. Bugün muladhara çakra dediğimiz, hayatta kalmaya dair kök çakran çok hızlı dönüyor. Koşullarını iyileştirebilmek için canla başla çalışacağını ve yorgunluğuna aldırmayacağını düşünüyorum. Umarım uğraşlarının karşılığını alırsın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Chakra centers consist of energy vortices, like whirlpools of water, {{isim}}. Today your root chakra, which we call the muladhara chakra and which concerns survival, is spinning very fast. I think you'll work heart and soul to improve your conditions and pay no mind to your fatigue. I hope you reap the reward of your efforts."
     },
     {
       "id": 52,
       "metin": "Evet {{isim}}, sanıyorum seksüel dürtülerinin azaldığı bir gündeyiz. Swadhisthara çakranda geçici ve kısmi bir blokaj gözlemledim. Bu gibi zamanların bir kazanımı vardır; iş ya da uğraşlarla ilgili konsantrasyon artar. Bence bugünkü bu halini lehine çevirebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Yes {{isim}}, I think we're on a day when your sexual urges have decreased. I observed a temporary and partial blockage in your swadhistana chakra. Such times have one gain; concentration on work or tasks increases. I think you can turn this state of yours to your advantage today."
     },
     {
       "id": 53,
       "metin": "Manipura adı verilen göbek çakranda bugün %{{sayi,30,60}} seviyelerinde bir tıkanıklık var {{isim}}. Fiziksel olarak yorgun olmasan da genel bir halsizlik hissedebilirsin. Omuz ve sırt ağrılarıyla birlikte aşırı uyku hali de yine böyle günlerde kendinde gözlemleyebileceklerin arasında.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "In your navel chakra called manipura, there's a blockage of around {{sayi,30,60}}% today, {{isim}}. Even if you're not physically tired, you may feel a general lethargy. Along with shoulder and back pains, excessive sleepiness is also among the things you may observe in yourself on such days."
     },
     {
       "id": 54,
       "metin": "Anahata adı verilen kalp çakranda bugün %{{sayi,20,60}} seviyelerinde bir tıkanıklık var {{isim}}. Hiç kimse için empati yapmak istemeyebilirsin. Merhamet duygun azalabilir ve ketum bir hale bürünebilirsin. Arkadaşça diyalog kurabilmekten de bugün nispeten uzaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "In your heart chakra called anahata, there's a blockage of around {{sayi,20,60}}% today, {{isim}}. You may not want to empathize with anyone. Your sense of compassion may decrease and you may become withdrawn. You're relatively far from being able to build friendly dialogue today too."
     },
     {
       "id": 55,
       "metin": "Vishuddha adı verilen boğaz çakran bugün büyük ölçüde tıkalı {{isim}}. Hani bir şeylere üzüldüğünde boğazında bir yumru oluşur ya, bugün tam tersi bir haldesin. Kimse için canını sıkmayacağını ve kimsenin derdine derman olmaya uğraşmayacağını düşünüyorum. İletişime tamamen kapalı gözüküyorsun.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Your throat chakra called vishuddha is largely blocked today, {{isim}}. You know how a lump forms in your throat when you're sad about something? Today you're in the opposite state. I think you won't trouble yourself for anyone or strive to be a remedy for anyone's woes. You seem completely closed to communication."
     },
     {
       "id": 56,
       "metin": "Bugün ön planda olan çakran, alnında bulunan üçüncü göz çakrası, yani \"ajna çakra.\" Bu çakranda blokaj gözüküyor {{isim}}. Geleceği düşünmek yerine an'ı yaşamak bugün sana daha cazip gelebilir. Mutlu olmak adına gereksiz harcamalar yapabilir, farklı konularda sonuçları hesaplamadan harekete geçebilirsin.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the third eye chakra on your forehead, the 'ajna chakra'. There seems to be a blockage in this chakra, {{isim}}. Living the moment instead of thinking about the future may seem more appealing to you today. You may make needless expenses to be happy and act on various matters without calculating the consequences."
     },
     {
       "id": 57,
       "metin": "Göz çakrası olarak bilinen ajna çakra bugün sende biraz pasif. Sezgilerinde zayıflık olduğunu fark edebilirsin. İyi gözlem yapabilmekten ve başkalarının duygularını anlayabilmekten uzak gibisin. Karşılaşacağın her şeyi yüzeysel geçeceğini ve hiçbir şeyi içselleştirmeyeceğini düşünüyorum {{isim}}.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "The eye chakra known as ajna is a bit passive in you today. You may notice a weakness in your intuition. You seem far from observing well and understanding others' feelings. I think you'll pass over everything you encounter superficially and internalize nothing, {{isim}}."
     },
     {
       "id": 58,
       "metin": "Bugün ön planda olan çakran, alın çakran, yani üçüncü göz çakrası diye de bilinen \"ajna çakra.\" Dengeli olduğunu gördüğüm bu çakran, sana insanların akıl ve niyetlerini okuyabilme gücü sunuyor {{isim}}. Hakkında düşündüğün kişilerle ilgili yanılmayacak, ikili ilişkilerde doğru ve stratejik davranacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the brow chakra, the 'ajna chakra' also known as the third eye chakra. This chakra, which I see is balanced, offers you the power to read people's minds and intentions, {{isim}}. You won't be wrong about the people you think about, and you'll act correctly and strategically in personal relationships."
     },
     {
       "id": 59,
       "metin": "Bugün ön planda olan çakran, \"vishuddha çakra\" yani, boğaz çakrası. Bu çakran çok aktif ve açık {{isim}}. Her konuda yüksek özgüven sergileyebilir, ikili ilişkilerde etkileyici ve ikna edici olabilirsin. Kendini karşındakine ifade etmekte zorlanmayacaksın.",
-      "kosullar": []
+      "kosullar": [],
+      "metin_en": "Today your prominent chakra is the 'vishuddha chakra', the throat chakra. This chakra is very active and open, {{isim}}. You can display high confidence on every matter and be impressive and persuasive in personal relationships. You won't struggle to express yourself to others."
     }
   ],
   "b5": [

@@ -1,5 +1,25 @@
 # Magnus App — Claude Proje Hafızası
 
+## 📌 NEREDE KALINDI — GÜNCEL DURUM (2026-06-11)
+
+> Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
+
+### Sürüm
+- **Mevcut build: `10.8.2+248`** (pubspec.yaml). Android AAB ALINDI:
+  `build\app\outputs\bundle\release\app-release.aab` (110 MB) — Play Console'a yüklenecek.
+- iOS: tüm kod `main`'e push edildi → Codemagic `ios-release` workflow'undan **manuel** başlatılacak (otomatik webhook yok).
+- **Bir sonraki build: `10.8.3+251`** (versionCode +3 kuralı).
+
+### Bu büyük session'da tamamlananlar
+1. **KRİTİK HATA DÜZELTMESİ:** `MaterialApp.router`'a `localizationsDelegates` (Global Material/Widgets/Cupertino) eklendi + `flutter_localizations` paketi. Türkçe'de admin paneli/ayarlar düğmesi/rüya arama kutusu beyaz boşluk + tepkisizlik çöküyordu → ÇÖZÜLDÜ. (bkz. i18n bölümü)
+2. **TAM İNGİLİZCE LOKALİZASYON:** ~9.550 `metin_en` (JSON) + 100 rüya sembolü (Dart) + onboarding + tüm UI. **askuyumu 887/887, biyoritim 1127/1127 ELLE çevrildi.** Tüm ~25 fal türü + ekranları locale-aware. (bkz. i18n bölümü)
+3. **Pipeline'lar:** `scripts/merge_en.js` (Unity aciklamaEng → metin_en, içerik eşleştirme) + `scripts/apply_ordered_en.js` (elle çeviri, sıralı dizi uygulama).
+
+### Geriye kalan (statik çeviri GEREKMEZ)
+- Runtime AI üretimi: el/yüz falı, dert ortağı, durugörü AI, kahve foto analizi → API çağrısına `locale` geçilerek İngilizce üretiliyor.
+
+---
+
 ## ⚠️⚠️⚠️ PARALEL İNGİLİZCE KURALI — İSTİSNASIZ ⚠️⚠️⚠️
 
 Herhangi bir metin, ekran veya içerik düzeltildiğinde / güncellendiğinde / eklendiğinde, **İngilizcesi de her zaman paralel olarak düzeltilir / güncellenir / eklenir.** Bu kural hiçbir istisna kabul etmez. Türkçe güncelleme → İngilizce güncelleme zorunludur.

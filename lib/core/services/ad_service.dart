@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -14,9 +15,16 @@ class AdService {
   AdService._();
   static final AdService instance = AdService._();
 
-  // ── Reklam ID'leri ─────────────────────────────────────────────────────────
-  static const _interstitialId = 'ca-app-pub-6470338276121414/7632109672';
-  static const _rewardedId     = 'ca-app-pub-6470338276121414/2337219262';
+  // ── Reklam ID'leri (platforma ÖZEL — AdMob'da iOS ve Android ayrı uygulamalar) ─
+  // Android app:  ca-app-pub-6470338276121414~6209031577
+  // iOS app:      ca-app-pub-6470338276121414~5546686598
+  // Bir platformun reklam birimi diğerinde reklam GÖSTERMEZ → Platform.isIOS şart.
+  static String get _interstitialId => Platform.isIOS
+      ? 'ca-app-pub-6470338276121414/7944769167'  // iOS — Geçiş
+      : 'ca-app-pub-6470338276121414/7632109672'; // Android — Geçiş
+  static String get _rewardedId => Platform.isIOS
+      ? 'ca-app-pub-6470338276121414/5318605820'  // iOS — Ödüllü
+      : 'ca-app-pub-6470338276121414/2337219262'; // Android — Ödüllü
 
   InterstitialAd? _interstitialAd;
   RewardedAd?     _rewardedAd;

@@ -5,13 +5,14 @@
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **Mevcut build: `10.8.4+254`** (pubspec.yaml). `main` branch'i de **254**'te (fast-forward push edildi).
-- **Android AAB ALINDI (110 MB):**
+- **Mevcut build: `10.8.5+257`** (pubspec.yaml). `main`'e push edilecek (Codemagic main'den build alır).
+- **Android AAB:**
   `C:\src\magnus_app\.claude\worktrees\exciting-swanson-a016eb\build\app\outputs\bundle\release\app-release.aab`
   → Play Console'a yüklenecek.
-- iOS: `main` 254'te → Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
+- iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
-- **Bir sonraki build: `10.8.5+257`** (versionCode +3 kuralı).
+- **257'deki kritik fix:** iOS AdMob reklam birimi ID'leri Android'inkini kullanıyordu → `Platform.isIOS` ayrımı eklendi (bkz. AdMob bölümü). 254 (önceki): swipe + gradient + alt menü.
+- **Bir sonraki build: `10.8.6+260`** (versionCode +3 kuralı).
 
 ### En son session'da tamamlananlar (2026-06-11 — swipe + gradient + alt menü)
 1. **SOLDAN SAĞA SWIPE = GERİ (10 ekran):** `lib/core/widgets/swipe_back.dart` oluşturuldu (raw `Listener` — gesture arena'ya girmez, ScrollView/PageView ile çakışmaz). Soldan sağa kaydırma "geri" tuşu gibi çalışır. Uygulanan ekranlar: coffee (fal konusu seçim), tarot_type, numeroloji (step-aware: seçim→geri), durugoru (odaklanmıyorsa pop), yuz_fali_kimin, motivation, acigercekler, kaderkitabi, dertortagi (step-aware: `_geriDon()` kullanır), kehanet_menu. Eşik: `threshold=60px` + yatay > dikey×1.5.
@@ -1149,6 +1150,34 @@ Her iki fal da analiz sonucunu **direkt ekranda göstermez**; inbox'a düşürü
 final elFaliSentProvider = StateProvider<bool>((ref) => false);
 final yuzFaliSentProvider = StateProvider<bool>((ref) => false);
 ```
+
+---
+
+## ⚠️⚠️⚠️ AdMob Reklam Birimi ID'leri — PLATFORMA ÖZEL (KRİTİK) ⚠️⚠️⚠️
+
+AdMob'da **iOS ve Android ayrı uygulamalardır**, her birinin kendi reklam birimleri vardır.
+**Bir platformun reklam birimi ID'si diğerinde reklam GÖSTERMEZ** (no-fill). `ad_service.dart`'ta
+`Platform.isIOS` ile ayrılmak ZORUNLU — tek sabit ID kullanılırsa bir platform reklamsız kalır.
+
+**Yaşanan hata (2026-06-12):** Kodda tek set vardı (Android'in birimleri), iOS de onları
+kullanıyordu → iOS'ta reklam dolmuyordu. `Platform.isIOS` ayrımı eklendi.
+
+| AdMob App | App ID | Interstitial (Geçiş) | Rewarded (Ödüllü) | Banner (kod kullanmıyor) |
+|---|---|---|---|---|
+| **Android** | `ca-app-pub-6470338276121414~6209031577` | `/7632109672` | `/2337219262` | — |
+| **iOS** | `ca-app-pub-6470338276121414~5546686598` | `/7944769167` | `/5318605820` | `/1570932503` |
+
+`lib/core/services/ad_service.dart`:
+```dart
+static String get _interstitialId => Platform.isIOS
+    ? 'ca-app-pub-6470338276121414/7944769167'   // iOS
+    : 'ca-app-pub-6470338276121414/7632109672';  // Android
+static String get _rewardedId => Platform.isIOS
+    ? 'ca-app-pub-6470338276121414/5318605820'   // iOS
+    : 'ca-app-pub-6470338276121414/2337219262';  // Android
+```
+Hepsi gerçek (ücretli) yayıncı `ca-app-pub-6470338276121414` — test ID'si (`3940256099942544`) YOK.
+Kodda `testDeviceIds` tanımlı değil → canlı uygulamada kendi reklamına tıklama = invalid traffic riski.
 
 ---
 

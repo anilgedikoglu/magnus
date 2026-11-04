@@ -12,6 +12,11 @@ class AppShell extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
+      // Klavye açılınca kabuk gövdeyi küçültmesin: aksi hâlde MainTabsScreen'deki cam
+      // alt bar klavyenin üstüne çıkıp havada kalır (Instagram'daki gibi arkada kalmalı).
+      // Klavyeye yer açma iç ekranların kendi Scaffold'larında (viewInsets tüketilmediği
+      // için onlar görmeye devam eder).
+      resizeToAvoidBottomInset: false,
       body: navigationShell,
     );
   }

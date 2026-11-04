@@ -110,8 +110,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/models/inbox_item.dart';
+import '../../core/widgets/glass_tab_bar.dart';
 import '../../data/providers.dart';
-import '../inbox/inbox_screen.dart';
+import '../shell/main_tabs.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -518,7 +519,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     });
   }
 
-  bool get _isLastPage => _currentPage == _totalPages - 1;
 
   void _goNext() {
     _scheduleUnlockTimer(); // buton basışında kilit kontrolü
@@ -534,44 +534,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     _pageController.animateToPage(prev,
         duration: const Duration(milliseconds: 380), curve: Curves.easeInOut);
     setState(() => _currentPage = prev);
-  }
-
-  // ─── Inbox açma — animasyon kaynağa göre ──────────────────────────────────
-
-  /// Sağdan sola kayarak açar (3. sayfadan swipe geldiğinde).
-  void _openInboxFromSwipe(BuildContext ctx) {
-    Navigator.of(ctx).push(
-      PageRouteBuilder(
-        pageBuilder: (_, __, ___) => const InboxScreen(),
-        transitionDuration: const Duration(milliseconds: 350),
-        reverseTransitionDuration: const Duration(milliseconds: 300),
-        transitionsBuilder: (_, anim, __, child) {
-          final tween = Tween<Offset>(
-            begin: const Offset(1.0, 0.0),
-            end: Offset.zero,
-          ).chain(CurveTween(curve: Curves.easeInOut));
-          return SlideTransition(position: anim.drive(tween), child: child);
-        },
-      ),
-    );
-  }
-
-  /// Aşağıdan yukarıya kayarak açar (buton tıklamasında).
-  void _openInboxFromTap(BuildContext ctx) {
-    Navigator.of(ctx).push(
-      PageRouteBuilder(
-        pageBuilder: (_, __, ___) => const InboxScreen(),
-        transitionDuration: const Duration(milliseconds: 350),
-        reverseTransitionDuration: const Duration(milliseconds: 300),
-        transitionsBuilder: (_, anim, __, child) {
-          final tween = Tween<Offset>(
-            begin: const Offset(0.0, 1.0),
-            end: Offset.zero,
-          ).chain(CurveTween(curve: Curves.easeInOut));
-          return SlideTransition(position: anim.drive(tween), child: child);
-        },
-      ),
-    );
   }
 
   // ─── Günlük kredi yükleme ─────────────────────────────────────────────────
@@ -776,6 +738,22 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     ref.watch(userProfileProvider); // profil değişince rebuild tetikle
     ref.watch(localeProvider);      // dil değişince menü etiketleri + balonlar yenilensin
 
+    // Sekme değişimleri (eskiden push/pop dönüşünde yapılan işler):
+    //  - Ana menüden çıkarken kilit zamanlayıcısını tazele (eski: bilgi butonu basışı).
+    //  - Kullanıcı Bilgileri'nden dönünce günlük hakları yenile (admin reset vb.).
+    ref.listen<int>(mainTabProvider, (prev, next) {
+      if (next != MainTab.home) _scheduleUnlockTimer();
+      // Ana menüye HER dönüşte (Codex: ayarlar→reset→inbox→ana menü yolu kaçıyordu).
+      if (next == MainTab.home && prev != MainTab.home && mounted) _refreshCredits();
+    });
+    // Ana menüdeyken "ev"e tekrar basılınca 1. sayfaya dön (eski "önceki" okunun yerine).
+    ref.listen<int>(homeResetProvider, (_, __) {
+      if (!_pageController.hasClients || _currentPage == 0) return;
+      _pageController.animateToPage(0,
+          duration: const Duration(milliseconds: 380), curve: Curves.easeInOut);
+      setState(() => _currentPage = 0);
+    });
+
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
@@ -812,23 +790,29 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       if (dx < -50) {
                         // Sola swipe
                         if (_currentPage == _totalPages - 1) {
-                          // Son sayfadan sola → gelen kutusu (sağdan sola animasyon)
-                          _openInboxFromSwipe(context);
+                          // Son sayfadan sola → gelen kutusu sekmesi (sağdan gelir)
+                          selectMainTab(context, MainTab.inbox, entry: TabEntry.right);
                         } else {
                           _goNext();
                         }
                       } else if (dx > 50) {
                         // Sağa swipe
                         if (_currentPage == 0) {
-                          // İlk sayfadan sağa → kullanıcı bilgileri
-                          context.push('/settings');
+                          // İlk sayfadan sağa → kullanıcı bilgileri sekmesi (soldan gelir)
+                          selectMainTab(context, MainTab.profile);
                         } else {
                           _goPrev();
                         }
                       }
                     },
                     onPointerCancel: (_) => _swipeStartX = null,
-                    child: PageView.builder(
+                    // Ok butonları kalktı → ekran okuyucu için sayfa değiştirme aksiyonu
+                    // (Codex: VoiceOver/TalkBack kullanıcısı özel swipe'a mahkûm kalmasın).
+                    child: Semantics(
+                      value: '${_currentPage + 1} / $_totalPages',
+                      onIncrease: _currentPage < _totalPages - 1 ? _goNext : null,
+                      onDecrease: _currentPage > 0 ? _goPrev : null,
+                      child: PageView.builder(
                       controller: _pageController,
                       physics: const NeverScrollableScrollPhysics(),
                       clipBehavior: Clip.none,
@@ -842,6 +826,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                 : _page3Items(context);
                         return _buildGrid(items, _pageColors[pageIndex]);
                       },
+                    ),
                     ),
                   ),
                 ),
@@ -969,15 +954,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   Widget _buildBottomBar(BuildContext context) {
-    // Sayfa 0'da önceki yok (sol ikon pasif), son sayfada sonraki yok (sağ ikon pasif).
-    final showPrev = _currentPage > 0;
-    final showNext = !_isLastPage;
-    // AnimatedSize kullanıyoruz — width 0'ın altına düşmez, güvenli.
-    const dur = Duration(milliseconds: 420);
-    const curve = Curves.easeInOutCubic;
-
+    // Alt bar artık MainTabsScreen'de: cam GlassTabBar 3 ekranda da aynı yerde ve
+    // sabit duruyor. Burada yalnız hazırlanan fallar satırı + barın yer tutucusu.
     return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 4, 12, 10),
+      padding: const EdgeInsets.fromLTRB(12, 4, 12, kGlassBarGap),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -1004,148 +984,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     ),
             );
           }),
-          // ── Butonlar ──────────────────────────────────────────────────────
-          // Layout: [önceki?] [bilgi(Expanded)] [inbox] [sonraki?]
-          // 4 eşit slot, hiçbirinde yazı yok — sadece ikon.
-          LayoutBuilder(builder: (ctx, constraints) {
-            // 4 eşit slot + 3 gap → her slot navW genişliğinde
-            final navW = (constraints.maxWidth - 3 * 8.0) / 4.0;
-            return SizedBox(
-              height: 44,
-              child: Row(
-                children: [
-                  // [1] Önceki — 3. sayfada büyür (2×navW+8), diğer sayfalarda navW,
-                  // 1. sayfada gizlenir (width=0).
-                  ClipRect(
-                    child: AnimatedContainer(
-                      duration: dur,
-                      curve: curve,
-                      width: showPrev ? (!showNext ? navW + 8.0 + navW : navW) : 0,
-                      height: 44,
-                      child: _BottomBtn(
-                        imagePath: 'assets/images/menuleft.png',
-                        label: ref.read(l10nProvider).prev,
-                        onTap: _goPrev,
-                        showLabel: false,
-                      ),
-                    ),
-                  ),
-                  // Gap — önceki ile birlikte kaybolur
-                  AnimatedSize(
-                    duration: dur,
-                    curve: curve,
-                    child: SizedBox(width: showPrev ? 8.0 : 0.0),
-                  ),
-                  // [2] Bilgi Ekranı (ikon sadece) — her zaman görünür, sabit navW
-                  SizedBox(
-                    width: navW,
-                    child: _BottomBtn(
-                      imagePath: 'assets/images/bilgiekranilogo.png',
-                      label: 'Bilgiler',
-                      onTap: () async {
-                        _scheduleUnlockTimer();
-                        await context.push('/settings');
-                        if (mounted) await _refreshCredits();
-                      },
-                      showLabel: false,
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  // [3] Gelen Kutusu — her zaman navW
-                  Consumer(builder: (_, cref, __) {
-                    final inboxItems = cref.watch(inboxProvider);
-                    final hasUnread  = cref.watch(readyUnreadCountProvider) > 0;
-                    // Yeşil çember: (1) hazırlanan (kilitli) fal kalmadı +
-                    // (2) okunmamış (hazır) en az 1 fal var. 2 şarttan biri
-                    // bozulursa yeşil kalkar, pembe dış çember geri gelir.
-                    final hasLocked  = inboxItems.any((e) => e.isLocked);
-                    final greenRing  = !hasLocked && hasUnread;
-                    return GestureDetector(
-                      onTap: () => _openInboxFromTap(context),
-                      child: AnimatedContainer(
-                        duration: dur,
-                        curve: curve,
-                        width: navW,
-                        height: 44,
-                        decoration: BoxDecoration(
-                          // ~%15 şeffaflık (alpha 0.85)
-                          gradient: LinearGradient(colors: [
-                            const Color(0xFFDD00EE).withValues(alpha: 0.85),
-                            const Color(0xFF9900CC).withValues(alpha: 0.85),
-                          ]),
-                          borderRadius: BorderRadius.circular(22),
-                          border: Border.all(
-                            color: greenRing
-                                ? const Color(0xFF44FF88)
-                                : const Color(0xFFFF44FF).withValues(alpha: 0.7),
-                            width: greenRing ? 2.2 : 1.5,
-                          ),
-                          boxShadow: greenRing
-                              ? [
-                                  BoxShadow(
-                                    color: const Color(0xFF44FF88).withValues(alpha: 0.55),
-                                    blurRadius: 18,
-                                    spreadRadius: 0,
-                                  ),
-                                  BoxShadow(
-                                    color: const Color(0xFF44FF88).withValues(alpha: 0.22),
-                                    blurRadius: 34,
-                                    spreadRadius: 0,
-                                  ),
-                                ]
-                              : [
-                                  BoxShadow(
-                                    color: const Color(0xFFCC00EE).withValues(alpha: 0.55),
-                                    blurRadius: hasUnread ? 18 : 8,
-                                    spreadRadius: 0,
-                                  ),
-                                  if (hasUnread) ...[
-                                    BoxShadow(
-                                      color: const Color(0xFFFFAA22).withValues(alpha: 0.45),
-                                      blurRadius: 22,
-                                      spreadRadius: 0,
-                                    ),
-                                    BoxShadow(
-                                      color: const Color(0xFFFFCC66).withValues(alpha: 0.18),
-                                      blurRadius: 38,
-                                      spreadRadius: 0,
-                                    ),
-                                  ],
-                                ],
-                        ),
-                        child: Center(
-                          child: Image.asset('assets/images/inbox_icon.png',
-                              width: 36, height: 36),
-                        ),
-                      ),
-                    );
-                  }),
-                  // Gap — sonraki ile birlikte kaybolur
-                  AnimatedSize(
-                    duration: dur,
-                    curve: curve,
-                    child: SizedBox(width: showNext ? 8.0 : 0.0),
-                  ),
-                  // [4] Sonraki — 1. sayfada büyür (2×navW+8), diğer sayfalarda navW,
-                  // 3. sayfada gizlenir (width=0).
-                  ClipRect(
-                    child: AnimatedContainer(
-                      duration: dur,
-                      curve: curve,
-                      width: showNext ? (!showPrev ? navW + 8.0 + navW : navW) : 0,
-                      height: 44,
-                      child: _BottomBtn(
-                        imagePath: 'assets/images/menuright.png',
-                        label: ref.read(l10nProvider).next,
-                        onTap: _goNext,
-                        showLabel: false,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            );
-          }),
+          // ── Cam alt bar yer tutucusu (bar MainTabsScreen'de, üstte overlay) ──
+          const SizedBox(height: kGlassBarHeight),
         ],
       ),
     );
@@ -1809,80 +1649,6 @@ class _MagnusAvatar extends StatelessWidget {
   }
 }
 
-class _BottomBtn extends StatelessWidget {
-  final String imagePath;
-  final String label;
-  final VoidCallback onTap;
-  final bool iconTrailing;
-  final bool showLabel;
-
-  const _BottomBtn({
-    required this.imagePath,
-    required this.label,
-    required this.onTap,
-    this.iconTrailing = false,
-    this.showLabel = true,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final img = Image.asset(imagePath, width: 31, height: 31,
-        filterQuality: FilterQuality.high,
-        errorBuilder: (_, __, ___) => const SizedBox(width: 31, height: 31));
-    final txt = Text(label,
-        style: const TextStyle(
-            color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13,
-            shadows: [Shadow(color: Colors.black54, blurRadius: 4)]));
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 44,
-        decoration: BoxDecoration(
-          // ~%15 şeffaflık (alpha 0.85) → arka plan hafifçe gözükür
-          gradient: LinearGradient(
-            colors: [
-              const Color(0xFFCC00DD).withValues(alpha: 0.85),
-              const Color(0xFF8800BB).withValues(alpha: 0.85),
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          borderRadius: BorderRadius.circular(22),
-          border: Border.all(
-            color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-            width: 1.5,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0xFFCC00EE).withValues(alpha: 0.50),
-              blurRadius: 10,
-              spreadRadius: 0,
-            ),
-            BoxShadow(
-              color: const Color(0xFFFF44FF).withValues(alpha: 0.20),
-              blurRadius: 20,
-              spreadRadius: 0,
-            ),
-          ],
-        ),
-        child: showLabel
-            ? Stack(
-                children: iconTrailing
-                    ? [
-                        Align(alignment: const Alignment(-1/3, 0), child: txt),
-                        Align(alignment: const Alignment(0.52, 0), child: img),
-                      ]
-                    : [
-                        Align(alignment: const Alignment(-0.52, 0), child: img),
-                        Align(alignment: const Alignment(1/3, 0),   child: txt),
-                      ],
-              )
-            : Center(child: img),
-      ),
-    );
-  }
-}
-
 // ─────────────────────────────────────────────────────────────────────────────
 // Hazırlanan fallar progress satırı — tüm kilitli öğeler yatay scroll
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1952,20 +1718,8 @@ class _FortuneCircleBadge extends StatelessWidget {
     final innerSize = size - 6; // arc strokeWidth=3 → her yanda 1.5px, iç alan = size-3; -6 ile ikon tam sığar
 
     return GestureDetector(
-      // Sadece hazır (tamamlanmış) fallar tıklanabilir → gelen kutusunu aç
-      onTap: isReady ? () => Navigator.of(context).push(
-        PageRouteBuilder(
-          pageBuilder: (_, __, ___) => const InboxScreen(),
-          transitionDuration: const Duration(milliseconds: 350),
-          reverseTransitionDuration: const Duration(milliseconds: 300),
-          transitionsBuilder: (_, anim, __, child) => SlideTransition(
-            position: Tween<Offset>(begin: const Offset(0.0, 1.0), end: Offset.zero)
-                .chain(CurveTween(curve: Curves.easeInOut))
-                .animate(anim),
-            child: child,
-          ),
-        ),
-      ) : null,
+      // Sadece hazır (tamamlanmış) fallar tıklanabilir → gelen kutusu sekmesi (alttan)
+      onTap: isReady ? () => selectMainTab(context, MainTab.inbox) : null,
       child: SizedBox(
       width: size, height: size,
       child: Stack(

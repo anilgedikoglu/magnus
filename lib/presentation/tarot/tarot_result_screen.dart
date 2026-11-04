@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../data/providers.dart';
+import '../shell/main_tabs.dart';
 
 class TarotResultScreen extends ConsumerWidget {
   final String inboxItemId;
@@ -34,7 +35,7 @@ class TarotResultScreen extends ConsumerWidget {
         ),
         actions: [
           TextButton(
-            onPressed: () => context.go('/inbox'),
+            onPressed: () => selectMainTab(context, MainTab.inbox), // inbox = ana sekme
             child: Text(
               s.inbox,
               style: AppTextStyles.inboxMeta.copyWith(

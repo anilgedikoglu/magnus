@@ -539,6 +539,46 @@ return Scaffold(
 
 ---
 
+## ⚠️⚠️⚠️ ANA SEKMELER + CAM ALT BAR (MainTabs / GlassTabBar) — NAVİGASYON MİMARİSİ ⚠️⚠️⚠️
+
+**2026-11-04'ten itibaren** Ana Menü, Kullanıcı Bilgileri ve Gelen Kutusu **rota DEĞİL, sekme**dir.
+`/home` rotası → `MainTabsScreen` (`lib/presentation/shell/main_tabs.dart`): üç ekran tek kapsayıcıda,
+iOS 26 "Liquid Glass" tarzı cam alt bar (`lib/core/widgets/glass_tab_bar.dart`) en üstte, üçünde de
+TAM AYNI yerde ve geçişlerde hiç kımıldamadan durur; seçim kapsülü yay fiziğiyle kayar.
+
+| Sekme | İndeks | İkon | Giriş yönü |
+|---|---|---|---|
+| Kullanıcı Bilgileri (`SettingsScreen`) | `MainTab.profile` = 0 | `bilgiekranilogo.png` | soldan |
+| Ana Menü (`HomeScreen`) | `MainTab.home` = 1 | ev (CustomPainter; pasif çizgi, aktif dolu) | — |
+| Gelen Kutusu (`InboxScreen`) | `MainTab.inbox` = 2 | `inbox_icon.png` | alttan (swipe ile: sağdan) |
+
+**KURALLAR (bozma):**
+- Sekme değiştirmek için **her yerde** `selectMainTab(context, MainTab.x)` kullan. `context.push('/settings')`,
+  `Navigator.push(InboxScreen)`, `context.go('/inbox')` **KULLANMA** (eski yollar; sekme barını atlar).
+  Kapsayıcı dışındaki (üstte açık) bir rotadan çağrılırsa provider'ı ayarlayıp `go('/home')` yapar.
+- Aktif sekme tek kaynak: `mainTabProvider`. Ana menüdeyken eve tekrar basma → `homeResetProvider` → 1. sayfa.
+- Sekmeler keyed Stack çocukları: state korunur; gizli sekmede `TickerMode` kapalı (nebula/yıldızlar durur).
+  Ekranlar artık hep mounted → eskiden push/pop dönüşünde yapılan işler `ref.listen(mainTabProvider)` ile
+  (HomeScreen: settings'ten dönünce `_refreshCredits`, ana menüden çıkarken `_scheduleUnlockTimer`).
+- `MainTabsScope.maybeOf(context) != null` → ekran sekme içinde: Settings "Ana Menü" butonu ve Inbox
+  "Geri Git" GİZLİ (yerine bar); değilse (tek başına rota) eski butonlar yedek olarak çıkar.
+- İçerik bar için alttan pay bırakır: `kGlassBarReserve` (56 + 10). Inbox listesi camın ARKASINA uzanır.
+- Fallar / inbox detayı kendi rotalarında açılır → kapsayıcının (ve barın) ÜSTÜNE biner.
+- Android geri: sekme ≠ ana menü ise ana menüye döner (`PopScope`).
+- `AppShell` Scaffold `resizeToAvoidBottomInset: false` → bar klavyenin üstüne çıkmaz.
+- Yeşil halka kuralı korunur: `greenRing = !hasLocked && hasUnread` → zarfta ince yeşil halka; okunmamış →
+  zarfta nokta (yeşil halka varken yeşil, yoksa turuncu). Hazırlanan fal satırı ana menüde barın üstünde.
+- Ana menüdeki önceki/sonraki ok butonları KALDIRILDI: sayfalar swipe ile; ekran okuyucu için
+  `Semantics(onIncrease/onDecrease)`; sayfa göstergesi duruyor.
+
+**Cam:** tek `BackdropFilter` (blur σ20 + doygunluk 1.25 yalnız backdrop zincirinde) + `#1C1C1E` %55 tint +
+üst parlama + gradyan kenar ışığı + dış gölge. Seçim kapsülü: ikinci blur YOK. Yay: kütle 1, sertlik 420,
+sönüm 36; hıza göre ≤%10 uzama. Kırılma (lens) yok: `ImageFilter.shader` Skia'da desteklenmez; `liquid_glass_renderer`
+Flutter 3.47+ ister. Neden Hero değil: `go('/inbox')` dal değişiminde uçuş yok, pop+push örtüşür (Codex).
+**Testler:** `test/main_tabs_test.dart` (state/ticker/geri tuşu/scope), `test/glass_tab_bar_test.dart`.
+
+---
+
 ## Kozmik Gökyüzü Katmanı — Yaşayan Nebula Shader + Twinkle / Kayan Yıldız
 
 **Dosyalar:** `shaders/living_nebula.frag` (pubspec `flutter: shaders:`) · `lib/core/widgets/living_nebula.dart`

@@ -4,8 +4,10 @@ import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/glass_tab_bar.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
+import '../shell/main_tabs.dart';
 import 'widgets/inbox_item_card.dart';
 import 'inbox_detail_screen.dart';
 
@@ -39,7 +41,11 @@ class InboxScreen extends ConsumerWidget {
         // Soldan sağa swipe → geri (ana menüye dön)
         onHorizontalDragEnd: (details) {
           if ((details.primaryVelocity ?? 0) > 200) {
-            if (Navigator.canPop(context)) Navigator.pop(context);
+            if (MainTabsScope.maybeOf(context) != null) {
+              selectMainTab(context, MainTab.home); // sekme: geldiği yöne kayarak çıkar
+            } else if (Navigator.canPop(context)) {
+              Navigator.pop(context);
+            }
           }
         },
         child: Column(
@@ -49,7 +55,9 @@ class InboxScreen extends ConsumerWidget {
                   ? _buildEmpty(s)
                   : _buildList(context, ref, items),
             ),
-            _buildBackButton(context, s),
+            // Sekme kapsayıcısında "Geri Git" yerine cam alt bar (MainTabsScreen) var;
+            // tek başına açıldıysa (ör. /inbox-full) eski buton yedek olarak kalır.
+            if (MainTabsScope.maybeOf(context) == null) _buildBackButton(context, s),
           ],
         ),
       ),
@@ -139,8 +147,14 @@ class InboxScreen extends ConsumerWidget {
   }
 
   Widget _buildList(BuildContext context, WidgetRef ref, List<InboxItem> items) {
+    // Liste camın ARKASINA uzanır (Codex: aksi hâlde cam düz zemin üstünde kalır);
+    // son öğe barın üstüne kaydırılabilsin diye alta bar kadar pay.
+    final inTabs = MainTabsScope.maybeOf(context) != null;
+    final bottomPad = inTabs
+        ? MediaQuery.paddingOf(context).bottom + kGlassBarReserve + 12
+        : 12.0;
     return ListView.separated(
-      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 0),
+      padding: EdgeInsets.fromLTRB(0, 12, 0, bottomPad),
       itemCount: items.length,
       separatorBuilder: (_, __) => const Divider(
         height: 1,

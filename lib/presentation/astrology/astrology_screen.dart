@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../data/providers.dart';
+import '../shell/main_tabs.dart';
 
 class AstrologyScreen extends ConsumerStatefulWidget {
   const AstrologyScreen({super.key});
@@ -197,7 +198,8 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
       final item = await service.generateDailyAstrology(profile: profile);
       await ref.read(inboxProvider.notifier).addItem(item);
       if (!mounted) return;
-      context.go('/inbox');
+      // Gelen kutusu artık ana sekme (cam bar ile) → sekmeyi seç + ana ekrana dön.
+      selectMainTab(context, MainTab.inbox);
     } finally {
       if (mounted) setState(() => _isGenerating = false);
     }

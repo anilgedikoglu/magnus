@@ -82,6 +82,7 @@ class AppStrings {
 
   // ── Inbox Screen ────────────────────────────────────────────────────────
   String get inboxTitle        => _s('GELEN KUTUSU',   'INBOX');
+  String get tabInbox          => _s('Gelen Kutusu',   'Inbox'); // cam alt bar erişilebilirlik etiketi
   String get clearAll          => _s('Temizle',        'Clear');
   String get inboxEmpty        => _s('BURALAR ÇOK SESSİZ...', 'SO QUIET HERE...');
   String get inboxEmptyDesc    => _s('Okumaya değer bir şey henüz almadın.', "You haven't received anything worth reading yet.");

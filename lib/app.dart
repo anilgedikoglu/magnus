@@ -11,7 +11,6 @@ import 'presentation/olumlama/olumlama_screen.dart';
 import 'presentation/ozlusoz/ozlusoz_screen.dart';
 import 'presentation/chat/chat_screen.dart';
 import 'presentation/coffee/coffee_screen.dart';
-import 'presentation/home/home_screen.dart';
 import 'presentation/inbox/inbox_screen.dart';
 import 'presentation/motivation/motivation_screen.dart';
 import 'presentation/biyoritim/biyoritim_screen.dart';
@@ -20,6 +19,7 @@ import 'presentation/kaderkitabi/kaderkitabi_screen.dart';
 import 'presentation/numeroloji/numeroloji_screen.dart';
 import 'presentation/settings/settings_screen.dart';
 import 'presentation/shell/app_shell.dart';
+import 'presentation/shell/main_tabs.dart';
 import 'presentation/tarot/tarot_screen.dart';
 import 'presentation/tarot/tarot_result_screen.dart';
 import 'presentation/tarot/tarot_type_screen.dart';
@@ -110,7 +110,9 @@ final routerProvider = Provider<GoRouter>((ref) {
             routes: [
               GoRoute(
                 path: '/home',
-                builder: (_, __) => const HomeScreen(),
+                // Ana Menü + Kullanıcı Bilgileri + Gelen Kutusu tek kapsayıcıda;
+                // cam alt bar üçünde de aynı yerde sabit (bkz. main_tabs.dart).
+                builder: (_, __) => const MainTabsScreen(),
               ),
             ],
           ),

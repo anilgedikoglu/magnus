@@ -9,10 +9,12 @@ import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/glass_tab_bar.dart';
 import '../../core/widgets/living_nebula.dart';
 import '../../core/widgets/starfield_overlay.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
+import '../shell/main_tabs.dart';
 
 // ─── Yardımcı: burç bilgileri ─────────────────────────────────────────────────
 
@@ -1446,7 +1448,13 @@ class SettingsScreen extends ConsumerWidget {
           final dx = e.position.dx - (swipeStartX ?? e.position.dx);
           swipeStartX = null;
           // Sağdan sola swipe → ana menüye dön
-          if (dx < -60 && Navigator.canPop(context)) Navigator.pop(context);
+          if (dx < -60) {
+            if (MainTabsScope.maybeOf(context) != null) {
+              selectMainTab(context, MainTab.home); // sekme: sola kayarak çıkar
+            } else if (Navigator.canPop(context)) {
+              Navigator.pop(context);
+            }
+          }
         },
         onPointerCancel: (_) => swipeStartX = null,
         child: Stack(
@@ -1484,11 +1492,15 @@ class SettingsScreen extends ConsumerWidget {
                       child: _buildDonutRow(scores, ref),
                     ),
                   ),
-                  // Alt sabit: Ana Menü butonu
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(12, 0, 12, 20),
-                    child: _buildMenuButton(context, ref),
-                  ),
+                  // Alt: sekme kapsayıcısında cam bar (MainTabsScreen) için yer;
+                  // tek başına rota olarak açıldıysa eski "Ana Menü" butonu (yedek).
+                  if (MainTabsScope.maybeOf(context) != null)
+                    const SizedBox(height: kGlassBarReserve + 6)
+                  else
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(12, 0, 12, 20),
+                      child: _buildMenuButton(context, ref),
+                    ),
                 ],
               )),
             ),

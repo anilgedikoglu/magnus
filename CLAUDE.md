@@ -581,7 +581,8 @@ viewBox 24, stroke 2.1, yalnız M/L/Q/Z) ve birebir `Path`'e çevrildi. Rakamlar
   Çözüm: MainTabs'ta öncelikli `ChildBackButtonDispatcher` (üstte rota varsa önce o kapanır). `GoRoute.onExit`
   KULLANMA: `go()` navigasyonunda da çağrılıp yönlendirmeyi bloklar. `PopScope` yalnız predictive-back için kalır.
 - `AppShell` Scaffold `resizeToAvoidBottomInset: false` → bar klavyenin üstüne çıkmaz.
-- Yeşil halka kuralı korunur: `greenRing = !hasLocked && hasUnread` → zarfta ince yeşil halka; okunmamış →
+- Yeşil durum kuralı korunur: `greenRing = !hasLocked && hasUnread` → zarftaki nokta YEŞİL (halka 2026-11-05 kaldırıldı:
+  "yeşil badge yeterli"); okunmamış →
   zarfta nokta (yeşil halka varken yeşil, yoksa turuncu). Hazırlanan fal satırı ana menüde barın üstünde.
 - Ana menüdeki önceki/sonraki ok butonları KALDIRILDI: sayfalar swipe veya bardaki Ev1-3 ile; ekran okuyucu
   için `Semantics(onIncrease/onDecrease)`; sayfa göstergesi duruyor. Etiketler: "Ana menü, sayfa 1/3" (TR/EN),

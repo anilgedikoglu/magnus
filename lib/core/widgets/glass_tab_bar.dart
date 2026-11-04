@@ -38,7 +38,7 @@ class GlassTabBar extends StatefulWidget {
   /// Hazır + okunmamış fal var → zarfta küçük sıcak nokta.
   final bool hasUnread;
 
-  /// Hazırlanan fal kalmadı + okunmamış var → zarfın çevresinde yeşil halka.
+  /// Hazırlanan fal kalmadı + okunmamış var → zarftaki nokta yeşil (halka yok).
   final bool greenRing;
 
   /// Erişilebilirlik etiketleri (TR/EN), slot sırasıyla (5 adet).
@@ -229,7 +229,7 @@ class _SelectionPill extends StatelessWidget {
   }
 }
 
-/// Zarf + inbox durumu: okunmamış → sıcak nokta; greenRing → yeşil halka (nokta da yeşil).
+/// Zarf + inbox durumu: okunmamış → nokta; greenRing (hazırlanan fal kalmadı) → nokta yeşil, değilse turuncu.
 class _InboxIcon extends StatelessWidget {
   final bool hasUnread;
   final bool greenRing;
@@ -246,17 +246,8 @@ class _InboxIcon extends StatelessWidget {
         alignment: Alignment.center,
         clipBehavior: Clip.none,
         children: [
-          if (greenRing)
-            Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                // İnce (görsel doğrulama: 1.8 neon gibiydi).
-                border: Border.all(color: green.withValues(alpha: 0.85), width: 1.3),
-                boxShadow: [BoxShadow(color: green.withValues(alpha: 0.28), blurRadius: 8)],
-              ),
-            ),
+          // Yeşil halka KALDIRILDI (Anıl, 2026-11-05: "yeşil badge yeterli") —
+          // greenRing durumu yalnız noktanın yeşil olmasıyla gösterilir.
           const CustomPaint(size: Size(27, 27), painter: _EnvelopePainter()),
           if (hasUnread)
             Positioned(

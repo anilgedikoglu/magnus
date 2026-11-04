@@ -15,7 +15,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/filmed_image.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
@@ -181,9 +186,10 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
 
   // ── Spin tamamlandı: dur → 2s → fal adı → 2s → kum saati + metin fetch ──────
 
+  // Hız göstergesi: sönük kemik -> mum altını (neon kırmızı/yeşil yok)
   Color get _haloColor => Color.lerp(
-    const Color(0xFFFF1111),
-    const Color(0xFF00FF44),
+    AppColors.boneDim,
+    AppColors.gold,
     _speedFraction,
   )!;
 
@@ -235,7 +241,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       setState(() {
         _hazirlaniyor = false;
         _metinGeldi   = true;
-        _metin        = 'Fal hazırlanırken bir sorun oluştu. Lütfen tekrar deneyin.';
+        _metin        = ref.read(l10nProvider).kaderCarkiError;
       });
     }
   }
@@ -306,7 +312,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     if (local < 0) local += 2 * pi;
     final off = (local + pi / 2) % (2 * pi);
     final idx = (off / segAngle).floor().clamp(0, _bolmeSayisi - 1);
-    return _bolmeler[idx].label;
+    return ref.read(l10nProvider).kaderBolmeName(_bolmeler[idx].key);
   }
 
   // ── Sıfırla ──────────────────────────────────────────────────────────────────
@@ -328,27 +334,11 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.ink,
       extendBody: true,
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Image.asset(
-            'assets/images/kadercarkimenu.png',
-            fit: BoxFit.cover,
-            errorBuilder: (_, __, ___) => const ColoredBox(color: Color(0xFF060D1A)),
-          ),
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Color(0xBB000000), Color(0x55000000), Color(0xBB000000)],
-              ),
-            ),
-          ),
-          SafeArea(child: _buildBody()),
-        ],
+      body: GrimoireBackdrop(
+        asset: 'assets/images/kadercarkimenu.png',
+        child: SafeArea(child: _buildBody()),
       ),
     );
   }
@@ -370,32 +360,19 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           Transform.rotate(
             angle: -pi / 2,
-            child: Image.asset(
-              bolme.ikonAsset,
-              width: 90,
-              height: 90,
-              errorBuilder: (_, __, ___) => const SizedBox(),
-            ),
+            child: _filmedIcon(bolme.ikonAsset, 90),
           ),
           const SizedBox(height: 28),
           Text(
-            '${bolme.label} Falı',
+            ref.watch(l10nProvider).kaderFalTitle(ref.watch(l10nProvider).kaderBolmeName(bolme.key)),
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.2,
-            ),
+            style: AppTextStyles.ritualTitle,
           ),
           const SizedBox(height: 12),
           Container(
             width: 48,
-            height: 2,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.40),
-              borderRadius: BorderRadius.circular(1),
-            ),
+            height: 1,
+            color: AppColors.gold,
           ),
         ]),
       )),
@@ -419,12 +396,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
                 // Anlık bölme adı
                 Text(
                   _pointerBolmeLabel,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.6,
-                  ),
+                  style: AppTextStyles.cardLabel.copyWith(fontSize: 15),
                 ),
               ],
             );
@@ -435,12 +407,8 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       Padding(
         padding: const EdgeInsets.symmetric(vertical: 14),
         child: Text(
-          _doniyor ? '' : 'Çarkı parmağınla çevir',
-          style: const TextStyle(
-            color: Colors.white54,
-            fontSize: 15,
-            fontStyle: FontStyle.italic,
-          ),
+          _doniyor ? '' : ref.watch(l10nProvider).kaderCarkiSpinHint,
+          style: AppTextStyles.meta.copyWith(fontSize: 14, fontStyle: FontStyle.italic),
         ),
       ),
       // Geri Git — dert ortağı standardı
@@ -508,13 +476,13 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
           height: 44,
           decoration: BoxDecoration(
             shape:     BoxShape.circle,
-            color:     const Color(0xFF111122),
+            color:     AppColors.inkSurface,
             boxShadow: [
               BoxShadow(color: Colors.black.withValues(alpha: 0.6), blurRadius: 8),
             ],
-            border: Border.all(color: Colors.white24, width: 2),
+            border: Border.all(color: AppColors.gold.withValues(alpha: 0.55), width: 1),
           ),
-          child: const Icon(Icons.autorenew_rounded, color: Colors.white60, size: 20),
+          child: const Icon(Icons.autorenew_rounded, color: AppColors.boneDim, size: 20),
         ),
       ],
     );
@@ -530,16 +498,14 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           Transform.rotate(
             angle: -pi / 2,
-            child: Image.asset(bolme.ikonAsset, width: 80, height: 80,
-                errorBuilder: (_, __, ___) => const SizedBox()),
+            child: _filmedIcon(bolme.ikonAsset, 80),
           ),
           const SizedBox(height: 24),
-          const ElegantHourglass(size: 52, color: Color(0xFF4DBBCC)),
+          const ElegantHourglass(size: 52, color: AppColors.gold),
           const SizedBox(height: 20),
-          Text('${bolme.label} Falın geliyor...',
+          Text(ref.watch(l10nProvider).kaderFalComing(ref.watch(l10nProvider).kaderBolmeName(bolme.key)),
             textAlign: TextAlign.center,
-            style: const TextStyle(color: Colors.white70, fontSize: 17,
-                height: 1.5, fontWeight: FontWeight.w300)),
+            style: AppTextStyles.bubbleText.copyWith(color: AppColors.boneDim)),
         ]),
       )),
     ]);
@@ -556,23 +522,14 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       // İkon — üst orta
       Transform.rotate(
         angle: -pi / 2,
-        child: Image.asset(
-          bolme.ikonAsset,
-          width: 72, height: 72,
-          errorBuilder: (_, __, ___) => const SizedBox(height: 72),
-        ),
+        child: _filmedIcon(bolme.ikonAsset, 72),
       ),
       const SizedBox(height: 10),
 
       // Fal adı — ortalı
       Text(
-        '${bolme.label} Falı',
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 0.8,
-        ),
+        ref.watch(l10nProvider).kaderFalTitle(ref.watch(l10nProvider).kaderBolmeName(bolme.key)),
+        style: AppTextStyles.screenTitle,
       ),
       const SizedBox(height: 16),
 
@@ -580,23 +537,14 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       Expanded(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.black.withValues(alpha: 0.40),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                color: Colors.white.withValues(alpha: 0.30),
-                width: 1.2,
-              ),
-            ),
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(18),
-              child: RichTextParser.build(
-                _metin,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  height: 1.85,
+          child: GlassPanel(
+            variant: GlassVariant.reading,
+            child: SizedBox.expand(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(18),
+                child: RichTextParser.build(
+                  _metin,
+                  style: AppTextStyles.reading,
                 ),
               ),
             ),
@@ -618,12 +566,12 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
               borderRadius: BorderRadius.circular(23),
               border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
             ),
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                SizedBox(width: 2),
-                Text('Çıkış', style: TextStyle(color: Colors.white,
+                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+                const SizedBox(width: 2),
+                Text(ref.watch(l10nProvider).exit, style: const TextStyle(color: Colors.white,
                     fontSize: 14, fontWeight: FontWeight.w500)),
               ],
             ),
@@ -631,6 +579,20 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
         ),
       ),
     ]);
+  }
+
+  // Segment/fal ikonu: filmlenmiş (tanınır ama bastırılmış)
+  Widget _filmedIcon(String asset, double size) {
+    return SizedBox(
+      width: size,
+      height: size,
+      child: ColorFiltered(
+        colorFilter: ColorFilter.matrix(FilmedImage.matrix(0.30, 0.88)),
+        child: Image.asset(asset,
+            width: size, height: size,
+            errorBuilder: (_, __, ___) => SizedBox(width: size, height: size)),
+      ),
+    );
   }
 
   Widget _buildHeader() {
@@ -651,9 +613,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
           ),
         ),
         const Spacer(),
-        const Text('Kader Çarkı',
-          style: TextStyle(color: Colors.white, fontSize: 17,
-              fontWeight: FontWeight.bold)),
+        Text(ref.watch(l10nProvider).kaderCarkiTitle, style: AppTextStyles.screenTitle),
         const Spacer(),
         const SizedBox(width: 36),
       ]),
@@ -695,7 +655,9 @@ class _WheelPainter extends CustomPainter {
       final start = -pi / 2 + i * segAngle;
 
       // Segment arka planı
-      final paint = Paint()..color = bolme.renk.withValues(alpha: 0.85);
+      final paint = Paint()
+        ..color = (i.isEven ? AppColors.inkCard : AppColors.inkRaised)
+            .withValues(alpha: 0.94);
       canvas.drawArc(
         Rect.fromCircle(center: Offset.zero, radius: r),
         start, segAngle, true, paint,
@@ -703,9 +665,9 @@ class _WheelPainter extends CustomPainter {
 
       // Segment kenarlığı
       final borderPaint = Paint()
-        ..color     = Colors.white.withValues(alpha: 0.25)
+        ..color     = AppColors.gold.withValues(alpha: 0.55)
         ..style     = PaintingStyle.stroke
-        ..strokeWidth = 1.5;
+        ..strokeWidth = 0.8;
       canvas.drawArc(
         Rect.fromCircle(center: Offset.zero, radius: r),
         start, segAngle, true, borderPaint,
@@ -725,7 +687,11 @@ class _WheelPainter extends CustomPainter {
         canvas.rotate(midAngle);
         final src = Rect.fromLTWH(0, 0, ikon.width.toDouble(), ikon.height.toDouble());
         final dst = Rect.fromCenter(center: Offset.zero, width: imgSize * 2.4, height: imgSize * 2.4);
-        canvas.drawImageRect(ikon, src, dst, Paint());
+        canvas.drawImageRect(
+            ikon, src, dst,
+            Paint()
+              ..filterQuality = FilterQuality.medium
+              ..colorFilter = ColorFilter.matrix(FilmedImage.matrix(0.30, 0.88)));
         canvas.restore();
       }
     }
@@ -739,10 +705,10 @@ class _WheelPainter extends CustomPainter {
     canvas.drawCircle(
       center, r + 3,
       Paint()
-        ..color       = haloColor.withValues(alpha: 0.35 + speedFraction * 0.25)
+        ..color       = haloColor.withValues(alpha: 0.10 + speedFraction * 0.14)
         ..style       = PaintingStyle.stroke
-        ..strokeWidth = 2.5
-        ..maskFilter  = MaskFilter.blur(BlurStyle.outer, 8 + speedFraction * 12),
+        ..strokeWidth = 2
+        ..maskFilter  = MaskFilter.blur(BlurStyle.outer, 6 + speedFraction * 8),
     );
 
     // 2. Alt yarım çevre — güçlü glow (alttan vuruyor etkisi)
@@ -750,19 +716,19 @@ class _WheelPainter extends CustomPainter {
     canvas.drawArc(
       rect, 0, pi, false,
       Paint()
-        ..color       = haloColor.withValues(alpha: 0.65 + speedFraction * 0.30)
+        ..color       = haloColor.withValues(alpha: 0.18 + speedFraction * 0.20)
         ..style       = PaintingStyle.stroke
-        ..strokeWidth = 3
-        ..maskFilter  = MaskFilter.blur(BlurStyle.outer, 14 + speedFraction * 20),
+        ..strokeWidth = 2
+        ..maskFilter  = MaskFilter.blur(BlurStyle.outer, 10 + speedFraction * 10),
     );
 
     // 3. Üstüne ince beyaz çerçeve
     canvas.drawCircle(
       center, r + 3,
       Paint()
-        ..color       = Colors.white.withValues(alpha: 0.18)
+        ..color       = AppColors.gold.withValues(alpha: 0.85)
         ..style       = PaintingStyle.stroke
-        ..strokeWidth = 1,
+        ..strokeWidth = 1.2,
     );
   }
 
@@ -777,7 +743,7 @@ class _WheelPainter extends CustomPainter {
 class _ArrowPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()..color = Colors.white;
+    final paint = Paint()..color = AppColors.gold;
     final path  = Path()
       ..moveTo(size.width / 2, 0)
       ..lineTo(size.width,     size.height)

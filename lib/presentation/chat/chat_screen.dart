@@ -214,7 +214,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                 ),
                 child: const Icon(
                   Icons.send_rounded,
-                  color: Colors.white,
+                  color: AppColors.gold,
                   size: 20,
                 ),
               ),

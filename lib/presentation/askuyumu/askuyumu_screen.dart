@@ -11,9 +11,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/filmed_image.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
 import '../../data/providers.dart';
 
 // ─── Burç listesi (index 0=Koç … 11=Balık) ───────────────────────────────────
@@ -213,12 +218,12 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       final prefs = await SharedPreferences.getInstance();
 
       final barDefs = [
-        ('ask', 'Aşk', const Color(0xFFFF4466)),
-        ('aile', 'Aile', const Color(0xFFFF8844)),
-        ('maddi', 'Maddi', const Color(0xFFFFDD00)),
-        ('ten', 'Ten', const Color(0xFFAA44FF)),
-        ('vizyon', 'Vizyon', const Color(0xFF4488FF)),
-        ('iletisim', 'İletişim', const Color(0xFF44DDCC)),
+        ('ask', ref.read(l10nProvider).askUyumuCategory('ask'), const Color(0xFFFF4466)),
+        ('aile', ref.read(l10nProvider).askUyumuCategory('aile'), const Color(0xFFFF8844)),
+        ('maddi', ref.read(l10nProvider).askUyumuCategory('maddi'), const Color(0xFFFFDD00)),
+        ('ten', ref.read(l10nProvider).askUyumuCategory('ten'), const Color(0xFFAA44FF)),
+        ('vizyon', ref.read(l10nProvider).askUyumuCategory('vizyon'), const Color(0xFF4488FF)),
+        ('iletisim', ref.read(l10nProvider).askUyumuCategory('iletisim'), const Color(0xFF44DDCC)),
       ];
 
       final results = <_BarResult>[];
@@ -256,7 +261,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
 
       results.add(_BarResult(
         key: 'uyum',
-        label: 'Genel Uyum',
+        label: ref.read(l10nProvider).askUyumuOverall,
         color: const Color(0xFF44DD66),
         pct: uyumPct,
         metin: uyumMetin,
@@ -326,60 +331,19 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.ink,
       extendBody: true,
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          _buildBackground(),
-          SafeArea(
-            child: _phase == 1
-                ? _buildPhase1()
-                : _phase == 2
-                    ? _buildPhase2()
-                    : _buildPhase3(),
-          ),
-        ],
+      body: GrimoireBackdrop(
+        asset: 'assets/images/askuyumu.png',
+        imageAlignment: Alignment.topCenter,
+        child: SafeArea(
+          child: _phase == 1
+              ? _buildPhase1()
+              : _phase == 2
+                  ? _buildPhase2()
+                  : _buildPhase3(),
+        ),
       ),
-    );
-  }
-
-  Widget _buildBackground() {
-    return Stack(
-      fit: StackFit.expand,
-      children: [
-        const ColoredBox(color: Colors.black),
-        Align(
-          alignment: Alignment.topCenter,
-          child: FractionallySizedBox(
-            heightFactor: 0.52,
-            widthFactor: 1.0,
-            child: Image.asset(
-              'assets/images/askuyumu.png',
-              fit: BoxFit.cover,
-              alignment: Alignment.topCenter,
-              errorBuilder: (_, __, ___) =>
-                  Container(color: const Color(0xFF0A0018)),
-            ),
-          ),
-        ),
-        Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              stops: [0.0, 0.25, 0.52, 0.65, 1.0],
-              colors: [
-                Color(0x00000000),
-                Color(0x22000000),
-                Color(0xBB000000),
-                Color(0xEE000000),
-                Color(0xFF000000),
-              ],
-            ),
-          ),
-        ),
-      ],
     );
   }
 
@@ -402,11 +366,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
           ),
         ),
         const Spacer(),
-        const Text(
-          'Aşk Uyumu',
-          style: TextStyle(
-              color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
-        ),
+        Text(ref.watch(l10nProvider).askUyumuTitle, style: AppTextStyles.screenTitle),
         const Spacer(),
         const SizedBox(width: 36),
       ]),
@@ -422,38 +382,25 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 32),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
               child: Text(
-                'Uyumunu merak ettiğin kişinin burcunu seç!',
+                ref.watch(l10nProvider).askUyumuPrompt,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  height: 1.6,
-                  fontWeight: FontWeight.w300,
-                ),
+                style: AppTextStyles.bubbleText.copyWith(color: AppColors.boneDim),
               ),
             ),
             const SizedBox(height: 20),
             _buildWheelWithPointer(),
             const SizedBox(height: 8),
             Text(
-              _selectedBurc,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 0.5,
-              ),
+              ref.watch(l10nProvider).zodiacName(_selectedBurc),
+              style: AppTextStyles.ritualTitle.copyWith(fontSize: 20),
             ),
             const SizedBox(height: 24),
             _buildHoldButton(),
             const SizedBox(height: 10),
-            const Text(
-              'Basılı tut',
-              style: TextStyle(color: Colors.white38, fontSize: 12),
-            ),
+            Text(ref.watch(l10nProvider).askUyumuHold, style: AppTextStyles.meta),
             const SizedBox(height: 16),
           ],
         ),
@@ -511,11 +458,15 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             onPanEnd: _onWheelPanEnd,
             child: Transform.rotate(
               angle: _wheelAngle,
-              child: Image.asset(
-                'assets/images/burclar_wheel.png',
-                width: wheelSize,
-                height: wheelSize,
-                fit: BoxFit.contain,
+              child: ColorFiltered(
+                colorFilter: ColorFilter.matrix(
+                    FilmedImage.matrix(FilmedImage.restSaturation, 0.78)),
+                child: Image.asset(
+                  'assets/images/burclar_wheel.png',
+                  width: wheelSize,
+                  height: wheelSize,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           ),
@@ -525,16 +476,20 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               clipper: const _TopSegmentClipper(wheelSize: wheelSize),
               child: Transform.rotate(
                 angle: _wheelAngle,
-                child: Image.asset(
-                  'assets/images/burclar_wheel_highlight.png',
-                  width: wheelSize,
-                  height: wheelSize,
-                  fit: BoxFit.contain,
+                child: ColorFiltered(
+                  colorFilter: ColorFilter.matrix(FilmedImage.matrix(
+                      FilmedImage.activeSaturation, FilmedImage.activeBrightness)),
+                  child: Image.asset(
+                    'assets/images/burclar_wheel_highlight.png',
+                    width: wheelSize,
+                    height: wheelSize,
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
             ),
           ),
-          // Seçili dilim sarı ışık — fixed, touch geçirgen
+          // Seçili dilim altın ışık — fixed, touch geçirgen
           IgnorePointer(
             child: CustomPaint(
               size: const Size(wheelSize, wheelSize),
@@ -545,7 +500,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             bottom: 0,
             child: Icon(
               Icons.arrow_drop_up_rounded,
-              color: Colors.white,
+              color: AppColors.gold,
               size: pointerSize,
             ),
           ),
@@ -574,10 +529,10 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                   height: buttonRadius * 2,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.white.withValues(alpha: 0.12),
+                    color: AppColors.glassTint,
                     border: Border.all(
-                      color: Colors.white.withValues(alpha: 0.35),
-                      width: 1.5,
+                      color: AppColors.gold.withValues(alpha: 0.45),
+                      width: 1,
                     ),
                   ),
                 ),
@@ -586,10 +541,11 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                   painter: _FillCirclePainter(
                     progress: _fillCtrl.value,
                     maxRadius: buttonRadius,
-                    color: const Color(0xFFFF4466),
+                    color: AppColors.gold,
                   ),
                 ),
-                const Icon(Icons.favorite_rounded, color: Colors.white, size: 28),
+                const Icon(Icons.favorite_border_rounded,
+                    color: AppColors.gold, size: 28),
               ],
             ),
           );
@@ -606,17 +562,12 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       Expanded(
         child: Center(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            const ElegantHourglass(size: 56, color: Color(0xFFFF4466)),
+            const ElegantHourglass(size: 56, color: AppColors.gold),
             const SizedBox(height: 20),
-            const Text(
-              'Uyumun hesaplanıyor...',
+            Text(
+              ref.watch(l10nProvider).askUyumuCalculating,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white70,
-                fontSize: 16,
-                fontWeight: FontWeight.w300,
-                height: 1.5,
-              ),
+              style: AppTextStyles.bubbleText.copyWith(color: AppColors.boneDim),
             ),
           ]),
         ),
@@ -631,10 +582,9 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     if (results == null) {
       return Column(children: [
         _buildHeader(),
-        const Expanded(
+        Expanded(
           child: Center(
-            child: Text('Sonuçlar yüklenemedi.',
-                style: TextStyle(color: Colors.white70, fontSize: 14)),
+            child: Text(ref.watch(l10nProvider).askUyumuLoadFail, style: AppTextStyles.meta),
           ),
         ),
       ]);
@@ -657,22 +607,21 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   }
 
   Widget _buildBarCard(_BarResult bar) {
+    // Kategori başına ayrı renk yok: altın dolgu; düşük değer (<25) kurumuş kan.
+    final fill = bar.pct < 25 ? AppColors.blood : AppColors.gold;
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Container(
+      child: GlassPanel(
+        variant: GlassVariant.reading,
         padding: const EdgeInsets.fromLTRB(14, 12, 14, 14),
-        decoration: BoxDecoration(
-          color: Colors.black.withValues(alpha: 0.55),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: bar.color.withValues(alpha: 0.30), width: 1),
-        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               '${bar.label}  %${bar.pct}',
-              style: TextStyle(
-                  color: bar.color, fontSize: 16, fontWeight: FontWeight.bold),
+              style: AppTextStyles.value.copyWith(
+                  fontWeight: FontWeight.w600,
+                  fontFeatures: AppTextStyles.tabular),
             ),
             const SizedBox(height: 8),
             AnimatedBuilder(
@@ -683,23 +632,16 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                   borderRadius: BorderRadius.circular(4),
                   child: Stack(children: [
                     Container(
-                        height: 10,
+                        height: 6,
                         width: double.infinity,
-                        color: Colors.white.withValues(alpha: 0.12)),
+                        color: AppColors.bone.withValues(alpha: 0.10)),
                     FractionallySizedBox(
                       widthFactor: widthFactor,
                       child: Container(
-                        height: 10,
+                        height: 6,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(4),
-                          gradient: LinearGradient(
-                            colors: [
-                              bar.color.withValues(alpha: 0.7),
-                              bar.color,
-                            ],
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                          ),
+                          color: fill,
                         ),
                       ),
                     ),
@@ -711,8 +653,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             bar.metin.isNotEmpty
                 ? RichTextParser.build(
                     bar.metin,
-                    style: const TextStyle(
-                        color: Color(0xEEFFFFFF), fontSize: 13, height: 1.6),
+                    style: AppTextStyles.reading.copyWith(fontSize: 15.5),
                   )
                 : const SizedBox.shrink(),
           ],
@@ -734,13 +675,13 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             borderRadius: BorderRadius.circular(23),
             border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
           ),
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              SizedBox(width: 2),
-              Text('Çıkış',
-                  style: TextStyle(
+              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+              const SizedBox(width: 2),
+              Text(ref.watch(l10nProvider).exit,
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 14,
                       fontWeight: FontWeight.w500)),
@@ -769,7 +710,7 @@ class _SegmentGlowPainter extends CustomPainter {
       Rect.fromCircle(center: Offset(cx, cy), radius: r * 0.92),
       startAngle, sweepAngle, true,
       Paint()
-        ..color = const Color(0xFFFFD700).withValues(alpha: 0.18)
+        ..color = AppColors.gold.withValues(alpha: 0.10)
         ..style = PaintingStyle.fill,
     );
 
@@ -778,10 +719,10 @@ class _SegmentGlowPainter extends CustomPainter {
       Rect.fromCircle(center: Offset(cx, cy), radius: r * 0.92),
       startAngle, sweepAngle, false,
       Paint()
-        ..color = const Color(0xFFFFD700).withValues(alpha: 0.70)
+        ..color = AppColors.gold.withValues(alpha: 0.55)
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 2.0
-        ..maskFilter = const MaskFilter.blur(BlurStyle.outer, 6),
+        ..strokeWidth = 1.5
+        ..maskFilter = const MaskFilter.blur(BlurStyle.outer, 3),
     );
   }
 

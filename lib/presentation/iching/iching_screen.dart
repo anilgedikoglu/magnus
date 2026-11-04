@@ -12,12 +12,15 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
 import '../../data/providers.dart';
 import '../../data/models/inbox_item.dart';
 
@@ -125,138 +128,81 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.ink,
       extendBody: true,
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Image.asset(
-            'assets/images/falbg/ichingbg.png',
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
-            filterQuality: FilterQuality.high,
-            errorBuilder: (_, __, ___) => Container(color: const Color(0xFF050A0F)),
-          ),
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xCC000000),
-                  Color(0x66000000),
-                  Color(0xCC000000),
-                ],
-              ),
-            ),
-          ),
-          SafeArea(
-            child: Column(
-              children: [
-                // Başlık
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(12, 10, 12, 0),
-                  child: Row(
-                    children: [
-                      GestureDetector(
-                        onTap: _done ? null : () => context.pop(),
-                        child: Container(
-                          width: 38, height: 38,
-                          decoration: BoxDecoration(
-                            color: Colors.white.withValues(alpha: 0.08),
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: const Color(0xFFB8941F).withValues(alpha: 0.5), width: 1),
-                          ),
-                          child: const Icon(
-                            Icons.arrow_back_ios_new_rounded,
-                            color: Color(0xFFD4AF37),
-                            size: 18,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Center(
-                          child: Text(
-                            ref.watch(l10nProvider).ichingTitle,
-                            style: GoogleFonts.cinzel(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: const Color(0xFFD4AF37),
-                              letterSpacing: 5,
-                              shadows: const [
-                                Shadow(color: Color(0xAAD4AF37), blurRadius: 18),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 38),
-                    ],
-                  ),
-                ),
-                const Spacer(),
-                // Kum saati + yazı
-                Column(
-                  mainAxisSize: MainAxisSize.min,
+      body: GrimoireBackdrop(
+        asset: 'assets/images/falbg/ichingbg.png',
+        child: SafeArea(
+          child: Column(
+            children: [
+              // Başlık
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 10, 12, 0),
+                child: Row(
                   children: [
-                    const ElegantHourglass(size: 56, color: Color(0xFFD4AF37)),
-                    const SizedBox(height: 28),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 32),
-                      padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 20),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF080E18).withValues(alpha: 0.88),
-                        borderRadius: BorderRadius.circular(18),
-                        border: Border.all(
-                          color: const Color(0xFFD4AF37).withValues(alpha: 0.4),
-                          width: 1.2,
+                    GestureDetector(
+                      onTap: _done ? null : () => context.pop(),
+                      child: Container(
+                        width: 38, height: 38,
+                        decoration: BoxDecoration(
+                          color: AppColors.bone.withValues(alpha: 0.08),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: AppColors.rim, width: 0.8),
                         ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: const Color(0xFFD4AF37).withValues(alpha: 0.15),
-                            blurRadius: 24,
-                            spreadRadius: 2,
-                          ),
-                        ],
+                        child: const Icon(
+                          Icons.arrow_back_ios_new_rounded,
+                          color: AppColors.gold,
+                          size: 18,
+                        ),
                       ),
+                    ),
+                    Expanded(
+                      child: Center(
+                        child: Text(ref.watch(l10nProvider).ichingTitle, style: AppTextStyles.screenTitle),
+                      ),
+                    ),
+                    const SizedBox(width: 38),
+                  ],
+                ),
+              ),
+              const Spacer(),
+              // Kum saati + yazı
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const ElegantHourglass(size: 56, color: AppColors.gold),
+                  const SizedBox(height: 26),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 32),
+                    child: GlassPanel(
+                      variant: GlassVariant.bubble,
+                      padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 20),
                       child: Column(
                         children: [
                           Text(
-                            'Zarlar atılıyor,',
+                            ref.watch(l10nProvider).ichingRolling1,
                             textAlign: TextAlign.center,
-                            style: GoogleFonts.cinzel(
-                              fontSize: 16,
-                              color: const Color(0xFFD4AF37),
-                              fontWeight: FontWeight.w600,
-                              letterSpacing: 1.5,
-                            ),
+                            style: AppTextStyles.cardLabel.copyWith(fontSize: 14.5),
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            'lütfen bekle...',
+                            ref.watch(l10nProvider).ichingRolling2,
                             textAlign: TextAlign.center,
-                            style: GoogleFonts.cinzel(
-                              fontSize: 16,
-                              color: const Color(0xFFD4AF37),
-                              fontWeight: FontWeight.w600,
-                              letterSpacing: 1.5,
-                            ),
+                            style: AppTextStyles.cardLabel.copyWith(fontSize: 14.5),
                           ),
                           const SizedBox(height: 16),
-                          // Nokta animasyonu
                           _DotsIndicator(),
                         ],
                       ),
                     ),
-                  ],
-                ),
-                const Spacer(),
-                const SizedBox(height: 24),
-              ],
-            ),
+                  ),
+                ],
+              ),
+              const Spacer(),
+              const SizedBox(height: 24),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
@@ -292,8 +238,8 @@ class _DotsIndicatorState extends State<_DotsIndicator> {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: active
-                ? const Color(0xFFD4AF37)
-                : const Color(0xFFD4AF37).withValues(alpha: 0.25),
+                ? AppColors.gold
+                : AppColors.gold.withValues(alpha: 0.25),
           ),
         );
       }),

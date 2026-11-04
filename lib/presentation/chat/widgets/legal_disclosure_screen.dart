@@ -111,7 +111,7 @@ class LegalDisclosureScreen extends ConsumerWidget {
               child: Text(
                 _legalText,
                 style: AppTextStyles.bubbleText.copyWith(
-                  color: Colors.white.withValues(alpha: 0.85),
+                  color: AppColors.bone.withValues(alpha: 0.85),
                   height: 1.65,
                   fontSize: 13.5,
                 ),

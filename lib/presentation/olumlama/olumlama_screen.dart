@@ -20,10 +20,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/services/ad_service.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -284,7 +286,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.ink,
       extendBody: true,
       body: GestureDetector(
         onHorizontalDragEnd: (details) {
@@ -295,54 +297,21 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
         child: Stack(
         fit: StackFit.expand,
         children: [
-          // ── Arka plan: alt %100 opak, üst yeni görsel fade-in ────────────
-          if (_bgBottom != null)
-            Image.asset(_bgBottom!,
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
-              alignment: Alignment.center,
-              filterQuality: FilterQuality.high,
-              errorBuilder: (_, __, ___) =>
-                  const ColoredBox(color: Color(0xFF0D0A20)),
-            )
-          else
-            const ColoredBox(color: Color(0xFF0D0A20)),
+          // ── Arka plan: alt %100 opak, üst yeni görsel fade-in (filmlenmiş) ─
+          GrimoireBackdrop(asset: _bgBottom, child: const SizedBox.shrink()),
           if (_bgTop != null)
             AnimatedBuilder(
               animation: _bgCtrl,
               builder: (_, child) =>
                   Opacity(opacity: _bgCtrl.value, child: child!),
-              child: Image.asset(_bgTop!,
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: double.infinity,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) =>
-                    const ColoredBox(color: Color(0xFF0D0A20)),
-              ),
+              child: GrimoireBackdrop(asset: _bgTop, child: const SizedBox.shrink()),
             ),
-          // ── Koyu overlay — hafif tutuldu (görseli bozmamak için) ──────────
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0x99000000), // üst: %60
-                  Color(0x44000000), // orta: %27 — görsel görünsün
-                  Color(0x99000000), // alt: %60
-                ],
-              ),
-            ),
-          ),
           // ── İçerik ────────────────────────────────────────────────────────
           SafeArea(
             child: _loading
                 ? const Center(
                     child: CircularProgressIndicator(
-                      color: Color(0xFFBB88FF),
+                      color: AppColors.gold,
                       strokeWidth: 2,
                     ),
                   )
@@ -374,14 +343,13 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
             child: Container(
               width: 38, height: 38,
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.1),
+                color: AppColors.glassTint,
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.25), width: 1),
+                border: Border.all(color: AppColors.rim, width: 0.9),
               ),
               child: const Icon(
                 Icons.arrow_back_ios_new_rounded,
-                color: Colors.white,
+                color: AppColors.bone,
                 size: 18,
               ),
             ),
@@ -391,15 +359,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
             child: Center(
               child: Text(
                 ref.watch(l10nProvider).affirmationTitle,
-                style: GoogleFonts.cinzel(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  letterSpacing: 5,
-                  shadows: const [
-                    Shadow(color: Color(0xAABB88FF), blurRadius: 14),
-                  ],
-                ),
+                style: AppTextStyles.screenTitle,
               ),
             ),
           ),
@@ -421,10 +381,10 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
 
   Widget _buildTextArea() {
     if (_entries.isEmpty) {
-      return const Center(
+      return Center(
         child: Text(
-          'Olumlama bulunamadı.',
-          style: TextStyle(color: Colors.white54, fontSize: 15),
+          ref.watch(l10nProvider).affirmationNotFound,
+          style: AppTextStyles.meta.copyWith(fontSize: 15),
         ),
       );
     }
@@ -484,35 +444,20 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
                 child: ConstrainedBox(
                   constraints: BoxConstraints(minHeight: constraints.maxHeight - 16),
                   child: Center(
-                    child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                    child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  child: GlassPanel(
+                  variant: GlassVariant.reading,
                   padding: const EdgeInsets.fromLTRB(24, 22, 24, 22),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withValues(alpha: 0.45),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                      color: Colors.white.withValues(alpha: 0.18),
-                      width: 1.2,
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: RichTextParser.build(
+                      metin,
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.reading.copyWith(fontSize: 19, height: 1.7),
                     ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.35),
-                        blurRadius: 24,
-                        spreadRadius: 2,
-                      ),
-                    ],
                   ),
-                  child: RichTextParser.build(
-                    metin,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 19,
-                      height: 1.75,
-                      fontWeight: FontWeight.w300,
-                      letterSpacing: 0.4,
-                    ),
-                  ),  // Container
+                  ),  // Padding
                   ),  // Center
                 ),  // ConstrainedBox
               ),  // SingleChildScrollView
@@ -540,20 +485,14 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
               height: 56,
               padding: const EdgeInsets.symmetric(horizontal: 22),
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.10),
+                color: AppColors.glassTint,
                 borderRadius: BorderRadius.circular(28),
-                border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.25), width: 1,
-                ),
+                border: Border.all(color: AppColors.rim, width: 0.9),
               ),
-              child: const Center(
+              child: Center(
                 child: Text(
-                  'Çıkış',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  ref.watch(l10nProvider).exit,
+                  style: AppTextStyles.uiLabel,
                 ),
               ),
             ),
@@ -593,26 +532,16 @@ class _NavBtnState extends State<_NavBtn> {
         width: 56,
         height: 56,
         decoration: BoxDecoration(
-          color: _pressed
-              ? Colors.white.withValues(alpha: 0.25)
-              : Colors.white.withValues(alpha: 0.12),
+          color: _pressed ? AppColors.glassTintSelected : AppColors.glassTint,
           shape: BoxShape.circle,
           border: Border.all(
-            color: Colors.white.withValues(alpha: _pressed ? 0.7 : 0.35),
-            width: 1.5,
+            color: _pressed ? AppColors.gold.withValues(alpha: 0.62) : AppColors.rim,
+            width: 0.9,
           ),
-          boxShadow: _pressed
-              ? [
-                  BoxShadow(
-                    color: const Color(0xFFBB88FF).withValues(alpha: 0.4),
-                    blurRadius: 12,
-                  )
-                ]
-              : null,
         ),
         child: Icon(
           widget.icon,
-          color: Colors.white,
+          color: AppColors.bone,
           size: 30,
         ),
       ),

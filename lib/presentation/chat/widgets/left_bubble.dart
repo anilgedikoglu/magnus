@@ -117,7 +117,7 @@ class _MagnusAvatar extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'AngillaTattoo',
                 fontSize: 16,
-                color: Colors.white,
+                color: AppColors.bone,
               ),
             ),
           ),

@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/l10n/app_strings.dart';
 import '../../core/utils/rich_text_parser.dart';
+import '../../core/widgets/filmed_image.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/widgets/occult_cards.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 
@@ -132,689 +137,350 @@ const _sans2file = <String, String>{
 
 /// Fal metninin tamamını gösteren detay ekranı.
 /// Unity'deki PanelShowWholeTextManager karşılığı.
-class InboxDetailScreen extends StatelessWidget {
+///
+/// Gece Grimuarı (2026-11): tüm fal türleri TEK okuma dili — filmlenmiş tür arka planı
+/// (GrimoireBackdrop), şeffaf başlık, okuma camı (GlassPanel.reading) + EB Garamond
+/// okuma metni, mum altını kıl çizgiler. Türe özgü renkler (I-Ching altını, Japon
+/// kırmızısı, rüya moru) kalktı; tür kimliği logo + başlıkta kalır.
+class InboxDetailScreen extends ConsumerWidget {
   final InboxItem item;
 
   const InboxDetailScreen({super.key, required this.item});
 
+  /// Türe göre arka plan görseli (yoksa düz mürekkep + atmosfer).
+  String? get _bgAsset => switch (item.fortuneType) {
+        FortuneType.tarot => 'assets/images/tarot_bg.png',
+        FortuneType.coffee => 'assets/images/kahvefalibg.png',
+        FortuneType.iching => 'assets/images/falbg/ichingbg.png',
+        FortuneType.japonfali => 'assets/images/falbg/omikujibg.png',
+        FortuneType.yuzfali => 'assets/images/falbg/yuzfalibg.png',
+        _ => null,
+      };
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
+    final topPad = MediaQuery.paddingOf(context).top + kToolbarHeight;
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.ink,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: AppColors.navBarBackground,
-        title: Text(item.fortuneTypeLabel),
+        backgroundColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
+        scrolledUnderElevation: 0,
+        flexibleSpace: const IgnorePointer(
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: [0.0, 0.70, 1.0],
+                colors: [Color(0xF207080B), Color(0xCC07080B), Color(0x0007080B)],
+              ),
+            ),
+          ),
+        ),
+        title: Text(item.fortuneTypeLabel, style: AppTextStyles.screenTitle),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
+          icon: const Icon(Icons.chevron_left_rounded, color: AppColors.bone, size: 28),
+          tooltip: s.backButton,
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: Stack(
-        children: [
-          // Tarot: arka plan görseli + koyu overlay
-          if (item.fortuneType == FortuneType.tarot) ...[
-            Positioned.fill(
-              child: Image.asset(
-                'assets/images/tarot_bg.png',
-                fit: BoxFit.cover,
-              ),
-            ),
-            Positioned.fill(
-              child: ColoredBox(
-                color: Colors.black.withValues(alpha: 0.60),
-              ),
-            ),
-          ],
-          // Kahve: arka plan görseli + koyu overlay
-          if (item.fortuneType == FortuneType.coffee) ...[
-            Positioned.fill(
-              child: Image.asset(
-                'assets/images/kahvefalibg.png',
-                fit: BoxFit.cover,
-              ),
-            ),
-            Positioned.fill(
-              child: ColoredBox(
-                color: Colors.black.withValues(alpha: 0.55),
-              ),
-            ),
-          ],
-          // I-Ching: arka plan görseli + koyu overlay
-          if (item.fortuneType == FortuneType.iching) ...[
-            Positioned.fill(
-              child: Image.asset(
-                'assets/images/falbg/ichingbg.png',
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-              ),
-            ),
-            Positioned.fill(
-              child: ColoredBox(
-                color: Colors.black.withValues(alpha: 0.60),
-              ),
-            ),
-          ],
-          // Japon Falı: arka plan görseli + koyu overlay
-          if (item.fortuneType == FortuneType.japonfali) ...[
-            Positioned.fill(
-              child: Image.asset(
-                'assets/images/falbg/omikujibg.png',
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-              ),
-            ),
-            Positioned.fill(
-              child: ColoredBox(
-                color: Colors.black.withValues(alpha: 0.60),
-              ),
-            ),
-          ],
-          // Yüz Falı: arka plan görseli + koyu overlay
-          if (item.fortuneType == FortuneType.yuzfali) ...[
-            Positioned.fill(
-              child: Image.asset(
-                'assets/images/falbg/yuzfalibg.png',
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-              ),
-            ),
-            Positioned.fill(
-              child: ColoredBox(
-                color: Colors.black.withValues(alpha: 0.60),
-              ),
-            ),
-          ],
-          SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Photos for coffee fortune
-            if (_hasPhotos) _buildPhotos(context),
-            // Tarot: özel başlık (kartlar görselli)
-            if (item.fortuneType == FortuneType.tarot)
-              _buildTarotHeader(),
-            // El Falı: özel bar görünümü (metin alanı yerine geçer)
-            if (item.fortuneType == FortuneType.elfali)
-              _buildElFaliContent()
-            // Rüya Yorumu: özel logo + çerçeveli metin
-            else if (item.fortuneType == FortuneType.dream)
-              _buildDreamContent(context)
-            // I-Ching: koyu altın temalı metin kutusu
-            else if (item.fortuneType == FortuneType.iching)
-              _buildIChingContent(context)
-            // Japon Falı: kırmızı temalı metin kutusu
-            else if (item.fortuneType == FortuneType.japonfali)
-              _buildJaponFaliContent(context)
-            else
-            // Fortune text
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Non-tarot: sadece tarih (başlık ve süslü ayraç kaldırıldı)
-                  if (item.fortuneType != FortuneType.tarot) ...[
-                    Text(
-                      _formatDate(item.date),
-                      style: AppTextStyles.inboxMeta,
-                    ),
-                    const SizedBox(height: 20),
-                  ],
-                  // Decorative divider — sadece tarot için göster
-                  if (item.fortuneType == FortuneType.tarot)
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          height: 1,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Colors.transparent,
-                                AppColors.bubble1.first.withValues(alpha: 0.7),
-                                Colors.transparent,
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 12),
-                        child: Text(
-                          '✦',
-                          style: TextStyle(
-                            color: AppColors.bubble1.first,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          height: 1,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Colors.transparent,
-                                AppColors.bubble1.first.withValues(alpha: 0.7),
-                                Colors.transparent,
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  if (item.fortuneType == FortuneType.tarot)
-                    const SizedBox(height: 24),
-                  // Fortune text — <color=X>...</color> tag'larını renklendir
-                  RichTextParser.build(
-                    item.text,
-                    style: AppTextStyles.bubbleText.copyWith(
-                      height: 1.8,
-                      color: AppColors.textPrimary,
-                    ),
-                  ),
-                  const SizedBox(height: 40),
-                  // Footer
-                  _buildMagnusFooter(),
-                  const SizedBox(height: 20),
-                ],
-              ),
-            ),
-          ],
+      body: GrimoireBackdrop(
+        asset: _bgAsset,
+        imageSaturation: 0.16,
+        imageBrightness: 0.48,
+        child: SingleChildScrollView(
+          padding: EdgeInsets.only(
+            top: topPad,
+            bottom: MediaQuery.paddingOf(context).bottom + 12,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Kahve: kullanıcının fincan fotoğrafları
+              if (_hasPhotos) _buildPhotos(context),
+              // Tarot: özel başlık (kartlar görselli)
+              if (item.fortuneType == FortuneType.tarot) _buildTarotHeader(s),
+              if (item.fortuneType == FortuneType.elfali)
+                _buildElFaliContent(s)
+              else if (item.fortuneType == FortuneType.dream)
+                _buildRitualContent(context, s,
+                    logo: 'assets/images/ruyaozel.png',
+                    fallbackIcon: Icons.nightlight_outlined,
+                    title: s.dreamTitle)
+              else if (item.fortuneType == FortuneType.iching)
+                _buildRitualContent(context, s,
+                    logo: 'assets/images/ichingikonlogo.png',
+                    fallbackIcon: Icons.contrast_rounded,
+                    title: s.ichingTitle)
+              else if (item.fortuneType == FortuneType.japonfali)
+                _buildRitualContent(context, s,
+                    logo: 'assets/images/japonfalilogo.png',
+                    fallbackIcon: Icons.temple_buddhist_outlined,
+                    title: s.japonFaliTitle)
+              else
+                _buildGenericContent(s),
+            ],
+          ),
         ),
-          ), // SingleChildScrollView
-        ],
-      ), // Stack
+      ),
     );
   }
 
-  // ─── Magnus footer (renkli logo) ────────────────────────────────────────────
+  // ─── Genel okuma (kahve, astroloji, motivasyon, durugörü, yüz falı…) ──────────
+
+  Widget _buildGenericContent(AppStrings s) {
+    final isTarot = item.fortuneType == FortuneType.tarot;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          if (!isTarot) ...[
+            Center(
+              child: Text(
+                _formatDate(item.date, s),
+                style: AppTextStyles.meta.copyWith(fontFeatures: AppTextStyles.tabular),
+              ),
+            ),
+            const SizedBox(height: 16),
+          ] else ...[
+            const _GoldRule(withStar: true),
+            const SizedBox(height: 18),
+          ],
+          _readingPanel(item.text),
+          const SizedBox(height: 32),
+          _buildMagnusFooter(),
+          const SizedBox(height: 12),
+        ],
+      ),
+    );
+  }
+
+  /// Okuma camı: kıl çizgi + EB Garamond metin + kıl çizgi.
+  Widget _readingPanel(String text, {Widget? ornament}) {
+    return GlassPanel(
+      variant: GlassVariant.reading,
+      padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const _GoldRule(),
+          const SizedBox(height: 16),
+          RichTextParser.build(text, style: AppTextStyles.reading),
+          const SizedBox(height: 16),
+          const _GoldRule(),
+          if (ornament != null) ...[
+            const SizedBox(height: 12),
+            Center(child: ornament),
+          ],
+        ],
+      ),
+    );
+  }
+
+  // ─── Ritüel okumaları (I-Ching, Japon Falı, Rüya): logo + başlık + okuma camı ──
+
+  Widget _buildRitualContent(
+    BuildContext context,
+    AppStrings s, {
+    required String logo,
+    required IconData fallbackIcon,
+    required String title,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+      child: Column(
+        children: [
+          // Renkli tür logosu filmlenir (tanınır ama bağırmaz).
+          ColorFiltered(
+            colorFilter: ColorFilter.matrix(FilmedImage.matrix(0.30, 0.95)),
+            child: Image.asset(
+              logo,
+              height: 68,
+              width: 68,
+              errorBuilder: (_, __, ___) =>
+                  Icon(fallbackIcon, color: AppColors.gold, size: 52),
+            ),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: AppTextStyles.cardLabel.copyWith(
+              color: AppColors.gold,
+              fontSize: 13,
+              letterSpacing: 3,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            _formatDate(item.date, s),
+            style: AppTextStyles.meta.copyWith(fontFeatures: AppTextStyles.tabular),
+          ),
+          const SizedBox(height: 20),
+          _readingPanel(
+            item.text,
+            ornament: Icon(fallbackIcon, size: 14, color: AppColors.gold.withValues(alpha: 0.55)),
+          ),
+          const SizedBox(height: 28),
+          _buildMagnusFooter(),
+          const SizedBox(height: 24),
+          _buildBackButton(context, s),
+          const SizedBox(height: 8),
+        ],
+      ),
+    );
+  }
+
+  // ─── Magnus imzası (renkli yazı logosu filmli — mum ışığında silik bir mühür) ───
 
   Widget _buildMagnusFooter() {
     return Center(
-      child: Image.asset(
-        'assets/images/magnusYaziLogoRenkli.PNG',
-        height: 110,
-        errorBuilder: (_, __, ___) => Text(
-          '✦ Magnus ✦',
-          style: AppTextStyles.magnusLabel,
+      child: Opacity(
+        opacity: 0.85,
+        child: ColorFiltered(
+          colorFilter: ColorFilter.matrix(FilmedImage.matrix(0.25, 0.90)),
+          child: Image.asset(
+            'assets/images/magnusYaziLogoRenkli.PNG',
+            height: 84,
+            errorBuilder: (_, __, ___) => Text(
+              'Magnus',
+              style: AppTextStyles.screenTitle.copyWith(color: AppColors.boneDim),
+            ),
+          ),
         ),
       ),
     );
   }
 
-  // ─── Geri Git butonu ─────────────────────────────────────────────────────────
+  // ─── Geri Git butonu (CLAUDE.md standardı) ────────────────────────────────────
 
-  Widget _buildBackButton(BuildContext context) {
-    return Consumer(
-      builder: (ctx, ref, _) {
-        final s = ref.watch(l10nProvider);
-        return GestureDetector(
-          onTap: () => Navigator.of(context).pop(),
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 14),
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.08),
-              borderRadius: BorderRadius.circular(23),
-              border: Border.all(
-                color: Colors.white.withValues(alpha: 0.20),
-                width: 1,
+  Widget _buildBackButton(BuildContext context, AppStrings s) {
+    return GestureDetector(
+      onTap: () => Navigator.of(context).pop(),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.10),
+          borderRadius: BorderRadius.circular(23),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.25), width: 1),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+            const SizedBox(width: 2),
+            Text(
+              s.backButton,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
               ),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                const SizedBox(width: 2),
-                Text(
-                  s.backButton,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-
-  // ─── I-Ching: koyu altın temalı kutu ────────────────────────────────────────
-
-  Widget _buildIChingContent(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 24, 16, 28),
-      child: Column(
-        children: [
-          // Logo
-          Image.asset(
-            'assets/images/ichingikonlogo.png',
-            height: 72,
-            width: 72,
-            errorBuilder: (_, __, ___) => const Text('☯', style: TextStyle(fontSize: 56, color: Color(0xFFD4AF37))),
-          ),
-          const SizedBox(height: 8),
-          Consumer(builder: (ctx, ref, _) => Text(
-            ref.watch(l10nProvider).ichingTitle,
-            style: TextStyle(
-              color: const Color(0xFFD4AF37).withValues(alpha: 0.9),
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 4,
-            ),
-          )),
-          const SizedBox(height: 6),
-          Text(
-            _formatDate(item.date),
-            style: AppTextStyles.inboxMeta.copyWith(fontSize: 12),
-          ),
-          const SizedBox(height: 20),
-          // Metin kutusu — koyu, altın border
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18),
-              color: const Color(0xFF080E18).withValues(alpha: 0.90),
-              border: Border.all(
-                color: const Color(0xFFD4AF37).withValues(alpha: 0.40),
-                width: 1.2,
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0xFFD4AF37).withValues(alpha: 0.14),
-                  blurRadius: 24,
-                  spreadRadius: 2,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: Column(
-              children: [
-                Container(
-                  height: 1,
-                  margin: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.transparent,
-                        const Color(0xFFD4AF37).withValues(alpha: 0.55),
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
-                  child: RichTextParser.build(
-                    item.text,
-                    style: AppTextStyles.bubbleText.copyWith(
-                      height: 1.88,
-                      color: const Color(0xFFE8E0CC),
-                      fontSize: 14.5,
-                    ),
-                  ),
-                ),
-                Container(
-                  height: 1,
-                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.transparent,
-                        const Color(0xFFD4AF37).withValues(alpha: 0.55),
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 16),
-                  child: Text('☯',
-                    style: TextStyle(fontSize: 14, color: const Color(0xFFD4AF37).withValues(alpha: 0.5))),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 28),
-          _buildMagnusFooter(),
-          const SizedBox(height: 24),
-          _buildBackButton(context),
-          const SizedBox(height: 8),
-        ],
+          ],
+        ),
       ),
     );
   }
 
-  // ─── Japon Falı: kırmızı temalı kutu ───────────────────────────────────────
+  // ─── El Falı: hat barları ───────────────────────────────────────────────────
 
-  Widget _buildJaponFaliContent(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 24, 16, 28),
-      child: Column(
-        children: [
-          // Logo
-          Image.asset(
-            'assets/images/japonfalilogo.png',
-            height: 72,
-            width: 72,
-            errorBuilder: (_, __, ___) => const Text('⛩', style: TextStyle(fontSize: 52, color: Color(0xFFFF4466))),
-          ),
-          const SizedBox(height: 8),
-          Consumer(builder: (ctx, ref, _) => Text(
-            ref.watch(l10nProvider).japonFaliTitle,
-            style: TextStyle(
-              color: const Color(0xFFFF4466).withValues(alpha: 0.9),
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 4,
-            ),
-          )),
-          const SizedBox(height: 6),
-          Text(
-            _formatDate(item.date),
-            style: AppTextStyles.inboxMeta.copyWith(fontSize: 12),
-          ),
-          const SizedBox(height: 20),
-          // Metin kutusu — koyu, kırmızı border
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18),
-              color: const Color(0xFF180008).withValues(alpha: 0.90),
-              border: Border.all(
-                color: const Color(0xFFFF4466).withValues(alpha: 0.35),
-                width: 1.2,
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0xFFFF4466).withValues(alpha: 0.12),
-                  blurRadius: 24,
-                  spreadRadius: 2,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: Column(
-              children: [
-                Container(
-                  height: 1,
-                  margin: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.transparent,
-                        const Color(0xFFFF4466).withValues(alpha: 0.55),
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
-                  child: RichTextParser.build(
-                    item.text,
-                    style: AppTextStyles.bubbleText.copyWith(
-                      height: 1.88,
-                      color: const Color(0xFFFFE0E8),
-                      fontSize: 14.5,
-                    ),
-                  ),
-                ),
-                Container(
-                  height: 1,
-                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.transparent,
-                        const Color(0xFFFF4466).withValues(alpha: 0.55),
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 16),
-                  child: Text('⛩',
-                    style: TextStyle(fontSize: 14, color: const Color(0xFFFF4466).withValues(alpha: 0.5))),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 28),
-          _buildMagnusFooter(),
-          const SizedBox(height: 24),
-          _buildBackButton(context),
-          const SizedBox(height: 8),
-        ],
-      ),
-    );
-  }
-
-  // ─── Rüya Yorumu: logo + çerçeveli metin ─────────────────────────────────────
-
-  Widget _buildDreamContent(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 24, 16, 28),
-      child: Column(
-        children: [
-          // Logo
-          Image.asset(
-            'assets/images/ruyaozel.png',
-            height: 80,
-            width: 80,
-            errorBuilder: (_, __, ___) => const Icon(
-              Icons.bedtime_rounded,
-              color: Color(0xFFA78BFA),
-              size: 64,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Consumer(builder: (ctx, ref, _) => Text(
-            ref.watch(l10nProvider).dreamTitle,
-            style: TextStyle(
-              color: const Color(0xFFA78BFA).withValues(alpha: 0.9),
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 3,
-            ),
-          )),
-          const SizedBox(height: 6),
-          Text(
-            _formatDate(item.date),
-            style: AppTextStyles.inboxMeta.copyWith(fontSize: 12),
-          ),
-          const SizedBox(height: 20),
-          // Çerçeveli metin kutusu
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18),
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  const Color(0xFF1A0E2E).withValues(alpha: 0.92),
-                  const Color(0xFF0D0820).withValues(alpha: 0.92),
-                ],
-              ),
-              border: Border.all(
-                color: const Color(0xFF7C3AED).withValues(alpha: 0.45),
-                width: 1.2,
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0xFF7C3AED).withValues(alpha: 0.18),
-                  blurRadius: 24,
-                  spreadRadius: 2,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: Column(
-              children: [
-                // Üst ayraç çizgisi
-                Container(
-                  height: 1,
-                  margin: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.transparent,
-                        const Color(0xFF9D6EF5).withValues(alpha: 0.6),
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
-                  child: RichTextParser.build(
-                    item.text,
-                    style: AppTextStyles.bubbleText.copyWith(
-                      height: 1.85,
-                      color: const Color(0xFFEDE9FE),
-                      fontSize: 14.5,
-                    ),
-                  ),
-                ),
-                // Alt ayraç çizgisi
-                Container(
-                  height: 1,
-                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.transparent,
-                        const Color(0xFF9D6EF5).withValues(alpha: 0.6),
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 28),
-          _buildMagnusFooter(),
-          const SizedBox(height: 24),
-          _buildBackButton(context),
-          const SizedBox(height: 8),
-        ],
-      ),
-    );
-  }
-
-  // ─── El Falı: bar görünümü ────────────────────────────────────────────────────
-  Widget _buildElFaliContent() {
+  Widget _buildElFaliContent(AppStrings s) {
     try {
-      final data      = jsonDecode(item.text) as Map<String, dynamic>;
-      final genel     = data['genel'] as String? ?? '';
+      final data = jsonDecode(item.text) as Map<String, dynamic>;
+      final genel = data['genel'] as String? ?? '';
       final hatlarRaw = data['hatlar'] as List? ?? [];
-      final hatlar    = hatlarRaw.map((h) => h as Map<String, dynamic>).toList();
+      final hatlar = hatlarRaw.map((h) => h as Map<String, dynamic>).toList();
 
       return Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(_formatDate(item.date), style: AppTextStyles.inboxMeta),
-            const SizedBox(height: 20),
-            // Genel değerlendirme
+            Center(
+              child: Text(
+                _formatDate(item.date, s),
+                style: AppTextStyles.meta.copyWith(fontFeatures: AppTextStyles.tabular),
+              ),
+            ),
+            const SizedBox(height: 16),
             if (genel.isNotEmpty) ...[
-              const Text(
-                'Genel Değerlendirme',
-                style: TextStyle(
-                  color: Color(0xFFD8B4FE),
-                  fontSize: 13,
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: 0.8,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                genel,
-                style: AppTextStyles.bubbleText.copyWith(height: 1.75),
-              ),
-              const SizedBox(height: 20),
-              const Divider(color: Colors.white12),
-              const SizedBox(height: 16),
+              OccultSectionLabel(s.generalAssessment),
+              const SizedBox(height: 10),
+              _readingPanel(genel),
+              const SizedBox(height: 22),
             ],
-            // Hatlar
-            ...hatlar.map((hat) {
-              final ad    = hat['ad'] as String;
-              final renk  = hat['renk'] as String;
-              final yuzde = hat['yuzde'] as int;
-              final metin = hat['metin'] as String;
-              final color = _elfaliHatRengi(renk);
-              return Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          ad,
-                          style: TextStyle(
-                            color: color,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        Text(
-                          '%$yuzde',
-                          style: TextStyle(
-                            color: color,
-                            fontSize: 13,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 6),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(4),
-                      child: LinearProgressIndicator(
-                        value: yuzde / 100,
-                        backgroundColor: color.withValues(alpha: 0.15),
-                        valueColor: AlwaysStoppedAnimation<Color>(color),
-                        minHeight: 6,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      metin,
-                      style: AppTextStyles.bubbleText.copyWith(height: 1.65),
-                    ),
-                  ],
-                ),
-              );
-            }),
-            const SizedBox(height: 24),
-            _buildMagnusFooter(),
+            for (final hat in hatlar) ...[
+              _buildHat(hat),
+              const SizedBox(height: 12),
+            ],
             const SizedBox(height: 20),
+            _buildMagnusFooter(),
+            const SizedBox(height: 12),
           ],
         ),
       );
     } catch (_) {
       return Padding(
-        padding: const EdgeInsets.all(20),
-        child: Text(item.text, style: AppTextStyles.bubbleText),
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),
+        child: _readingPanel(item.text),
       );
     }
+  }
+
+  Widget _buildHat(Map<String, dynamic> hat) {
+    final ad = hat['ad'] as String? ?? '';
+    final renk = hat['renk'] as String? ?? '';
+    final yuzde = (hat['yuzde'] as num?)?.toInt() ?? 0;
+    final metin = hat['metin'] as String? ?? '';
+    // Hat rengi ANLAM taşır (yapay zekâ seçer) → ton korunur, neon kısılır.
+    final color = RichTextParser.mute(_elfaliHatRengi(renk));
+    return GlassPanel(
+      variant: GlassVariant.reading,
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 6,
+                height: 6,
+                decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+              ),
+              const SizedBox(width: 8),
+              Expanded(child: Text(ad, style: AppTextStyles.value.copyWith(fontSize: 15))),
+              Text(
+                '%$yuzde',
+                style: AppTextStyles.meta.copyWith(
+                  color: AppColors.boneDim,
+                  fontSize: 13,
+                  fontFeatures: AppTextStyles.tabular,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(2),
+            child: LinearProgressIndicator(
+              value: (yuzde / 100).clamp(0.0, 1.0),
+              backgroundColor: AppColors.bone.withValues(alpha: 0.08),
+              valueColor: AlwaysStoppedAnimation<Color>(
+                  yuzde < 25 ? AppColors.blood : AppColors.gold),
+              minHeight: 3,
+            ),
+          ),
+          const SizedBox(height: 12),
+          RichTextParser.build(metin, style: AppTextStyles.reading.copyWith(fontSize: 16)),
+        ],
+      ),
+    );
   }
 
   static Color _elfaliHatRengi(String renk) {
@@ -835,11 +501,9 @@ class InboxDetailScreen extends StatelessWidget {
 
   // ─── Tarot başlığı: başlık + tarih + kart görseli(leri) ─────────────────────
 
-  // Başlık formatı:
+  // Başlık formatı (VERİ — Türkçe kalır, yalnız ayrıştırılır):
   //   Klasik: "Tarot Falın: Kart1, Ters Kart2, Kart3"
-  //   Tek kart: "Aşk Kartı Falın: JsonKartAdi"
-  //             "Dilek Kartı Falın: JsonKartAdi"
-  //             "Şans Kartı Falın: JsonKartAdi"
+  //   Tek kart: "Aşk Kartı Falın: JsonKartAdi" / "Dilek Kartı Falın: …" / "Şans Kartı Falın: …"
 
   String get _isSingleTarotType {
     for (final p in ['Aşk Kartı Falın: ', 'Dilek Kartı Falın: ', 'Şans Kartı Falın: ']) {
@@ -848,7 +512,7 @@ class InboxDetailScreen extends StatelessWidget {
     return '';
   }
 
-  Widget _buildTarotHeader() {
+  Widget _buildTarotHeader(AppStrings s) {
     final singlePrefix = _isSingleTarotType;
 
     if (singlePrefix.isNotEmpty) {
@@ -860,33 +524,25 @@ class InboxDetailScreen extends StatelessWidget {
               ? 'dilek'
               : 'sans';
       final headerLabel = type == 'ask'
-          ? 'AŞK KARTIN'
+          ? s.loveCardYours
           : type == 'dilek'
-              ? 'DİLEK KARTIN'
-              : 'ŞANS KARTIN';
+              ? s.wishCardYours
+              : s.luckCardYours;
       return SizedBox(
         width: double.infinity,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 20, 16, 8),
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                headerLabel,
-                textAlign: TextAlign.center,
-                style: AppTextStyles.title.copyWith(letterSpacing: 2.0),
-              ),
+              Text(headerLabel, textAlign: TextAlign.center, style: AppTextStyles.screenTitle),
               const SizedBox(height: 6),
               Text(
-                _formatDate(item.date),
+                _formatDate(item.date, s),
                 textAlign: TextAlign.center,
-                style: AppTextStyles.inboxMeta.copyWith(fontSize: 12),
+                style: AppTextStyles.meta.copyWith(fontFeatures: AppTextStyles.tabular),
               ),
               const SizedBox(height: 20),
-              SizedBox(
-                width: 116,
-                child: _buildCardThumb(jsonName, false, type: type),
-              ),
+              SizedBox(width: 124, child: _buildCardThumb(jsonName, false, s, type: type)),
               const SizedBox(height: 8),
             ],
           ),
@@ -899,26 +555,23 @@ class InboxDetailScreen extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 20, 16, 8),
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              'TAROT FALIN',
-              textAlign: TextAlign.center,
-              style: AppTextStyles.title.copyWith(letterSpacing: 2.0),
-            ),
+            Text(s.tarotYourReading, textAlign: TextAlign.center, style: AppTextStyles.screenTitle),
             const SizedBox(height: 6),
             Text(
-              _formatDate(item.date),
+              _formatDate(item.date, s),
               textAlign: TextAlign.center,
-              style: AppTextStyles.inboxMeta.copyWith(fontSize: 12),
+              style: AppTextStyles.meta.copyWith(fontFeatures: AppTextStyles.tabular),
             ),
             const SizedBox(height: 20),
             if (cards.isNotEmpty)
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: cards.map((c) => Expanded(child: _buildCardThumb(c.$1, c.$2))).toList(),
+                children: cards
+                    .map((c) => Expanded(child: _buildCardThumb(c.$1, c.$2, s)))
+                    .toList(),
               ),
             const SizedBox(height: 8),
           ],
@@ -930,7 +583,7 @@ class InboxDetailScreen extends StatelessWidget {
   // Tarot kart görseli oranı: 276 × 480  →  ratio = 276/480 = 0.575
   static const double _cardRatio = 276 / 480;
 
-  Widget _buildCardThumb(String cardName, bool isReversed, {String? type}) {
+  Widget _buildCardThumb(String cardName, bool isReversed, AppStrings s, {String? type}) {
     // type == null → klasik (tarot/ klasör), aksi halde tek kart türü
     String? asset;
     if (type == null) {
@@ -945,29 +598,47 @@ class InboxDetailScreen extends StatelessWidget {
       };
     }
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       child: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: AspectRatio(
-              aspectRatio: _cardRatio,
-              child: Transform.rotate(
-                angle: isReversed ? 3.14159 : 0,
-                child: asset != null
-                    ? Image.asset(
-                        asset,
-                        fit: BoxFit.cover,
-                        errorBuilder: (_, __, ___) => _cardPlaceholder(),
-                      )
-                    : _cardPlaceholder(),
+          DecoratedBox(
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              boxShadow: [BoxShadow(color: Color(0x99000000), blurRadius: 14, offset: Offset(0, 6))],
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: AspectRatio(
+                aspectRatio: _cardRatio,
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    Transform.rotate(
+                      angle: isReversed ? 3.14159 : 0,
+                      // Kader açıldı: kartlar filmin biraz üstünde renk taşır (active).
+                      child: asset != null
+                          ? FilmedImage(asset, active: true, vignette: 0.30,
+                              errorBuilder: (_, __, ___) => _cardPlaceholder())
+                          : _cardPlaceholder(),
+                    ),
+                    IgnorePointer(
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                              color: AppColors.gold.withValues(alpha: 0.45), width: 0.8),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: 8),
           Text(
-            isReversed ? 'Ters $cardName' : cardName,
-            style: AppTextStyles.inboxMeta.copyWith(fontSize: 10),
+            isReversed ? s.reversedCard(cardName) : cardName,
+            style: AppTextStyles.meta.copyWith(fontSize: 11, color: AppColors.boneDim),
             textAlign: TextAlign.center,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
@@ -980,12 +651,12 @@ class InboxDetailScreen extends StatelessWidget {
   Widget _cardPlaceholder() {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.backgroundCard,
+        color: AppColors.inkCard,
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: AppColors.divider),
+        border: Border.all(color: AppColors.rim),
       ),
       child: const Center(
-        child: Text('🃏', style: TextStyle(fontSize: 28)),
+        child: Icon(Icons.style_outlined, color: AppColors.ash, size: 28),
       ),
     );
   }
@@ -1024,13 +695,24 @@ class InboxDetailScreen extends StatelessWidget {
         separatorBuilder: (_, __) => const SizedBox(width: 12),
         itemBuilder: (_, i) => GestureDetector(
           onTap: () => _viewPhoto(context, photos[i]),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Image.file(
-              File(photos[i]),
-              width: 148,
-              height: 148,
-              fit: BoxFit.cover,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: AppColors.rim, width: 0.8),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.file(
+                File(photos[i]),
+                width: 148,
+                height: 148,
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) => const SizedBox(
+                  width: 148,
+                  height: 148,
+                  child: ColoredBox(color: AppColors.inkCard),
+                ),
+              ),
             ),
           ),
         ),
@@ -1054,16 +736,44 @@ class InboxDetailScreen extends StatelessWidget {
     );
   }
 
-  String _formatDate(String isoDate) {
+  String _formatDate(String isoDate, AppStrings s) {
     try {
       final dt = DateTime.parse(isoDate);
-      const months = [
-        '', 'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
-        'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'
-      ];
-      return '${dt.day} ${months[dt.month]} ${dt.year}, ${dt.hour.toString().padLeft(2, '0')}:${dt.minute.toString().padLeft(2, '0')}';
+      final hm = '${dt.hour.toString().padLeft(2, '0')}:${dt.minute.toString().padLeft(2, '0')}';
+      return s.isEn
+          ? '${s.monthName(dt.month)} ${dt.day}, ${dt.year} · $hm'
+          : '${dt.day} ${s.monthName(dt.month)} ${dt.year} · $hm';
     } catch (_) {
       return isoDate;
     }
+  }
+}
+
+/// Mum altını kıl çizgi (iki ucu sönen); istenirse ortada küçük dört köşeli yıldız.
+class _GoldRule extends StatelessWidget {
+  final bool withStar;
+  const _GoldRule({this.withStar = false});
+
+  @override
+  Widget build(BuildContext context) {
+    const line = DecoratedBox(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Color(0x00C2A46B), Color(0x8CC2A46B), Color(0x00C2A46B)],
+        ),
+      ),
+      child: SizedBox(height: 1),
+    );
+    if (!withStar) return line;
+    return Row(
+      children: [
+        const Expanded(child: line),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Icon(Icons.auto_awesome, size: 12, color: AppColors.gold.withValues(alpha: 0.8)),
+        ),
+        const Expanded(child: line),
+      ],
+    );
   }
 }

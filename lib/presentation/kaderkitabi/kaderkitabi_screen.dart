@@ -13,10 +13,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
 import '../../data/models/user_profile.dart';
@@ -216,54 +220,28 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
     return SwipeBack(
       onSwipeBack: () => context.pop(),
       child: Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.ink,
       extendBody: true,
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          // Arka plan — %20 zoom (1.2 scale, ortalı)
-          Transform.scale(
-            scale: 1.2,
-            child: Image.asset(
-              'assets/images/ozlusoz_bg.png',
-              fit: BoxFit.cover,
-              alignment: Alignment.center,
-              filterQuality: FilterQuality.high,
-              errorBuilder: (_, __, ___) => Container(color: const Color(0xFF0D0A1A)),
-            ),
-          ),
-          // Koyu overlay
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xAA000000),
-                  Color(0x55000000),
-                  Color(0xAA000000),
-                ],
+      body: GrimoireBackdrop(
+        asset: 'assets/images/ozlusoz_bg.png',
+        imageSaturation: 0.22,
+        imageBrightness: 0.40, // parşömen karanlık dilde fazla açıktı (0.60)
+        child: SafeArea(
+          bottom: false,
+          child: Column(
+            children: [
+              _buildHeader(context),
+              Expanded(
+                child: _loading
+                    ? const Center(child: CircularProgressIndicator(
+                        color: AppColors.gold, strokeWidth: 2))
+                    : _hakDoldu
+                        ? _buildHakDoldu()
+                        : _buildContent(context, bottomPad),
               ),
-            ),
+            ],
           ),
-          // İçerik
-          SafeArea(
-            bottom: false,
-            child: Column(
-              children: [
-                _buildHeader(context),
-                Expanded(
-                  child: _loading
-                      ? const Center(child: CircularProgressIndicator(
-                          color: Color(0xFFD4AF37), strokeWidth: 2))
-                      : _hakDoldu
-                          ? _buildHakDoldu()
-                          : _buildContent(context, bottomPad),
-                ),
-              ],
-            ),
-          ),
-        ],
+        ),
       ),
       ),
     );
@@ -281,14 +259,13 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
             child: Container(
               width: 38, height: 38,
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.08),
+                color: AppColors.glassTint,
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  color: const Color(0xFFD4AF37).withValues(alpha: 0.4), width: 1),
+                border: Border.all(color: AppColors.rim, width: 0.9),
               ),
               child: const Icon(
                 Icons.arrow_back_ios_new_rounded,
-                color: Color(0xFFD4AF37),
+                color: AppColors.bone,
                 size: 18,
               ),
             ),
@@ -297,15 +274,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
             child: Center(
               child: Text(
                 ref.watch(l10nProvider).fatebookTitle,
-                style: GoogleFonts.cinzel(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xFFD4AF37),
-                  letterSpacing: 4,
-                  shadows: const [
-                    Shadow(color: Color(0xAAD4AF37), blurRadius: 16),
-                  ],
-                ),
+                style: AppTextStyles.screenTitle,
               ),
             ),
           ),
@@ -321,36 +290,24 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(32),
-        child: Container(
+        child: GlassPanel(
+          variant: GlassVariant.reading,
           padding: const EdgeInsets.all(28),
-          decoration: BoxDecoration(
-            color: const Color(0xFF1A0E2E).withValues(alpha: 0.9),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: const Color(0xFFD4AF37).withValues(alpha: 0.4), width: 1.2),
-          ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('📖', style: TextStyle(fontSize: 44)),
+              const Icon(Icons.menu_book_outlined, color: AppColors.gold, size: 40),
               const SizedBox(height: 16),
               Text(
-                'Kader kitabının bugünkü\nsayfasını okudun.',
+                ref.watch(l10nProvider).fatebookPageRead,
                 textAlign: TextAlign.center,
-                style: GoogleFonts.cinzel(
-                  fontSize: 15,
-                  color: const Color(0xFFD4AF37),
-                  height: 1.6,
-                ),
+                style: AppTextStyles.cardLabel.copyWith(fontSize: 15, height: 1.6),
               ),
               const SizedBox(height: 10),
               Text(
-                'Yarın yeni bir sayfa açılacak.',
+                ref.watch(l10nProvider).fatebookTomorrow,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white.withValues(alpha: 0.4),
-                  fontSize: 13,
-                ),
+                style: AppTextStyles.meta.copyWith(fontSize: 13),
               ),
             ],
           ),
@@ -364,82 +321,27 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
   Widget _buildContent(BuildContext context, double bottomPad) {
     final metin = _metin ?? '';
 
-    final bookCard = Container(
+    final bookCard = SizedBox(
       width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFFF5ECD7), Color(0xFFEDD9A3)],
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFFD4AF37).withValues(alpha: 0.25),
-            blurRadius: 30,
-            spreadRadius: 4,
-            offset: const Offset(0, 6),
-          ),
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.5),
-            blurRadius: 20,
-            offset: const Offset(0, 10),
-          ),
-        ],
-        border: Border.all(
-          color: const Color(0xFFB8960C).withValues(alpha: 0.6),
-          width: 1.5,
-        ),
-      ),
-      child: Stack(
-        children: [
-          // Sol cilt gölgesi
-          Positioned(
-            left: 0, top: 0, bottom: 0,
-            child: Container(
-              width: 18,
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.horizontal(left: Radius.circular(14)),
-                gradient: LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  colors: [
-                    Colors.black.withValues(alpha: 0.18),
-                    Colors.transparent,
-                  ],
-                ),
-              ),
-            ),
-          ),
-          // Metin
-          Padding(
-            padding: const EdgeInsets.fromLTRB(26, 28, 26, 40),
-            child: Text(
+      child: GlassPanel(
+        variant: GlassVariant.reading,
+        padding: const EdgeInsets.fromLTRB(26, 28, 26, 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            RichTextParser.build(
               metin,
               textAlign: TextAlign.justify,
-              style: const TextStyle(
-                color: Color(0xFF2C1A0A),
-                fontSize: 15,
-                height: 1.85,
-                fontWeight: FontWeight.w400,
-                letterSpacing: 0.2,
-              ),
+              style: AppTextStyles.reading.copyWith(fontSize: 16.5, height: 1.75),
             ),
-          ),
-          // Alt süsleme
-          Positioned(
-            bottom: 10, left: 0, right: 0,
-            child: Center(
-              child: Text(
-                '✦',
-                style: TextStyle(
-                  fontSize: 12,
-                  color: const Color(0xFF8B6914).withValues(alpha: 0.7),
-                ),
-              ),
+            const SizedBox(height: 18),
+            Container(
+              height: 1,
+              width: 48,
+              color: AppColors.gold.withValues(alpha: 0.5),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
 
@@ -452,9 +354,9 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
             if (_darkOverlay.value > 0.001)
               Positioned.fill(
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(20),
                   child: Container(
-                    color: Colors.black.withValues(alpha: _darkOverlay.value),
+                    color: AppColors.ink.withValues(alpha: _darkOverlay.value),
                   ),
                 ),
               ),

@@ -187,6 +187,19 @@ class AppStrings {
 
   // ── Dream Reading ────────────────────────────────────────────────────────
   String get dreamTitle        => _s('RÜYA YORUMU',        'DREAM READING');
+
+  // ── Fal detayı (inbox_detail_screen) — 2026-11 Gece Grimuarı ─────────────
+  String get tarotYourReading  => _s('TAROT FALIN',        'YOUR TAROT READING');
+  String get loveCardYours     => _s('AŞK KARTIN',         'YOUR LOVE CARD');
+  String get wishCardYours     => _s('DİLEK KARTIN',       'YOUR WISH CARD');
+  String get luckCardYours     => _s('ŞANS KARTIN',        'YOUR LUCK CARD');
+  String reversedCard(String name) => _s('Ters $name', 'Reversed $name');
+  String get generalAssessment => _s('Genel Değerlendirme', 'Overall Reading');
+  static const _monthsTr = ['', 'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
+      'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+  static const _monthsEn = ['', 'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'];
+  String monthName(int m) => (isEn ? _monthsEn : _monthsTr)[m.clamp(1, 12)];
   String get dreamHint         => _s('Rüyanda ne gördün?', 'What did you dream?');
   String get interpret         => _s('Yorumla',            'Interpret');
   String get dreamSending      => _s('Rüyan yorumlanıyor...', 'Your dream is being interpreted...');
@@ -410,6 +423,111 @@ class AppStrings {
       default:            return null;
     }
   }
+
+  // ── Gece Grimuarı l10n borcu (2026-11) ──
+  String get exit => _s('Çıkış', 'Exit');
+
+  // Acı Gerçekler
+  String get bitterTruthsPreparing => _s('Sana acı ama gerçek bir şeyler anlatmaya hazırlanıyorum...',
+      'I am preparing to tell you something bitter but true...');
+  String get bitterTruthsLimitTitle => _s('Bugün gerçeklerle yüzleştin.', 'You have faced the truth today.');
+  String get bitterTruthsLimitSub => _s('Yarın daha fazlası için tekrar gel.', 'Come back tomorrow for more.');
+
+  // Aşk Uyumu
+  String get askUyumuTitle => _s('Aşk Uyumu', 'Love Compatibility');
+  String get askUyumuPrompt => _s('Uyumunu merak ettiğin kişinin burcunu seç!',
+      'Choose the sign of the person you are curious about!');
+  String get askUyumuHold => _s('Basılı tut', 'Press and hold');
+  String get askUyumuCalculating => _s('Uyumun hesaplanıyor...', 'Calculating your compatibility...');
+  String get askUyumuLoadFail => _s('Sonuçlar yüklenemedi.', 'Results could not be loaded.');
+  String get askUyumuOverall => _s('Genel Uyum', 'Overall');
+  String askUyumuCategory(String key) => switch (key) {
+        'ask' => _s('Aşk', 'Love'),
+        'aile' => _s('Aile', 'Family'),
+        'maddi' => _s('Maddi', 'Money'),
+        'ten' => _s('Ten', 'Intimacy'),
+        'vizyon' => _s('Vizyon', 'Vision'),
+        'iletisim' => _s('İletişim', 'Communication'),
+        _ => key,
+      };
+
+  // Astroloji bölüm başlıkları
+  String astroSectionLabel(String key) => switch (key) {
+        'giris' => _s('Giriş', 'Introduction'),
+        'astroyorum' => _s('Astro Yorum', 'Astro Reading'),
+        'astrogununsozu' => _s('Günün Sözü', 'Quote of the Day'),
+        'astrogununayeti' => _s('Günün Ayeti', 'Verse of the Day'),
+        'astrogununhadisi' => _s('Günün Hadisi', 'Hadith of the Day'),
+        'astroeglencelibilgi' => _s('Eğlenceli Bilgi', 'Fun Fact'),
+        'astrokesif' => _s('Astro Keşif', 'Astro Discovery'),
+        'astrogununismi' => _s('Günün İsmi', 'Name of the Day'),
+        'astrogununyemegi' => _s('Günün Yemeği', 'Dish of the Day'),
+        'astroveda' => _s('Astro Veda', 'Astro Farewell'),
+        _ => key,
+      };
+
+  // Durugörü
+  String get durugoruLimitTitle => _s('Bugünkü durugörü\nhakkın doldu.', "Today's clairvoyance\nlimit is used up.");
+  String get durugoruLimitSub => _s('Yarın yeni bir görü açılacak.', 'A new vision opens tomorrow.');
+  String get durugoruHowProceed => _s('Nasıl ilerleyelim?', 'How shall we proceed?');
+  String get durugoruFocusing => _s('Geleceğine odaklanıyorum...', 'I am focusing on your future...');
+  /// [key]: bno | yno | gno
+  String durugoruQuestion(String key) => switch (key) {
+        'bno' => _s('Bugün neler olacak?', 'What will happen today?'),
+        'yno' => _s('Yarın neler olacak?', 'What will happen tomorrow?'),
+        'gno' => _s('Gelecekte neler olacak?', 'What will happen in the future?'),
+        _ => key,
+      };
+
+  // I-Ching / Japon Falı
+  String get ichingRolling1 => _s('Zarlar atılıyor,', 'Casting the coins,');
+  String get ichingRolling2 => _s('lütfen bekle...', 'please wait...');
+  String get japonFaliWorking => _s('Japon Falı çalışılıyor...', 'Reading your Japanese omikuji...');
+
+  // Kader Çarkı
+  String get kaderCarkiTitle => _s('Kader Çarkı', 'Wheel of Fate');
+  String get kaderCarkiSpinHint => _s('Çarkı parmağınla çevir', 'Spin the wheel with your finger');
+  String get kaderCarkiError => _s('Fal hazırlanırken bir sorun oluştu. Lütfen tekrar deneyin.',
+      'Something went wrong while preparing your reading. Please try again.');
+  /// [key]: alev | hayvan | kure | renk | tas | zar
+  String kaderBolmeName(String key) => switch (key) {
+        'alev' => _s('Alev', 'Flame'),
+        'hayvan' => _s('Hayvan', 'Animal'),
+        'kure' => _s('Küre', 'Orb'),
+        'renk' => _s('Renkler', 'Colors'),
+        'tas' => _s('Taş', 'Stone'),
+        'zar' => _s('Zar', 'Dice'),
+        _ => key,
+      };
+  String kaderFalTitle(String name) => _s('$name Falı', '$name Reading');
+  String kaderFalComing(String name) => _s('$name Falın geliyor...', 'Your $name reading is coming...');
+
+  // Kader Kitabı
+  String get fatebookPageRead => _s('Kader kitabının bugünkü\nsayfasını okudun.',
+      "You have read today's page\nof the book of fate.");
+  String get fatebookTomorrow => _s('Yarın yeni bir sayfa açılacak.', 'A new page will open tomorrow.');
+
+  // Numeroloji
+  String numLabel(int i) => [
+        _s('Genel Rapor', 'General Report'),
+        _s('Bugüne Dair', 'About Today'),
+        _s('Bu Yıla Dair', 'About This Year'),
+      ][i];
+  String numDesc(int i) => [
+        _s('Kalıcı sayılarınla oluşturulan kişilik raporu', 'A personality report built from your lasting numbers'),
+        _s('Bugünün enerjisini şekillendiren sayılar', "The numbers shaping today's energy"),
+        _s('Bu yıl seni bekleyen döngüler ve fırsatlar', 'The cycles and opportunities awaiting you this year'),
+      ][i];
+  String get numReportPrompt => _s('Numeroloji raporunu hangisi için istersin?',
+      'Which numerology report would you like?');
+  String get numPreparing => _s('Hazırlanıyor, biraz bekle...', 'Preparing, wait a moment...');
+  String get numReadAgain => _s('Raporuna tekrar bak →', 'View your report again →');
+
+  // Olumlama / Özlü Söz
+  String get affirmationNotFound => _s('Olumlama bulunamadı.', 'No affirmation found.');
+  String get quoteNotFound => _s('Özlü söz bulunamadı.', 'No quote found.');
+  String get quotesLimitReached => _s('Günlük özlü söz\nhakkın doldu.', 'Your daily quote\nlimit is used up.');
+  String get quotesRestarting => _s('Baştan başlıyoruz...', 'Starting over...');
 
   // ── Astroloji terim çevirileri (kayıtlı Türkçe değer → ekran dili) ───────
   // Profilde burç/gezegen/element vb. Türkçe saklanır; ekranda dile göre çevrilir.

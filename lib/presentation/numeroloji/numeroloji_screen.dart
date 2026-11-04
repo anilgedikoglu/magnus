@@ -38,14 +38,8 @@ enum _RaporTur { genel, bugun, yil }
 
 extension _RaporTurExt on _RaporTur {
   String get jsonKey => ['genel', 'bugun', 'yil'][index];
-  // L10N: numGeneralLabel, numTodayLabel, numYearLabel
+  // Inbox başlığı için (saklanan veri) TR sabit; ekran metni l10n: numLabel/numDesc
   String get label   => ['Genel Rapor', 'Bugüne Dair', 'Bu Yıla Dair'][index];
-  // L10N: numGeneralDesc, numTodayDesc, numYearDesc
-  String get desc    => [
-    'Kalıcı sayılarınla oluşturulan kişilik raporu',
-    'Bugünün enerjisini şekillendiren sayılar',
-    'Bu yıl seni bekleyen döngüler ve fırsatlar',
-  ][index];
   IconData get icon  => [
     Icons.auto_awesome_outlined,
     Icons.wb_sunny_outlined,
@@ -344,8 +338,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(
-            // L10N: numReportPrompt
-            'Numeroloji raporunu hangisi için istersin?',
+            ref.watch(l10nProvider).numReportPrompt,
             textAlign: TextAlign.center,
             style: AppTextStyles.uiLabel,
           ),
@@ -411,11 +404,10 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
          (tur == _RaporTur.yil   && _yilDone)  ||
          (tur == _RaporTur.bugun && _bugunDone));
 
-    // L10N: numPreparing, numReadAgain
     return Padding(padding: const EdgeInsets.only(bottom:16),
       child: Opacity(opacity: disabled ? 0.70 : 1, child: OccultListCard(
-        title: tur.label,
-        subtitle: locked ? 'Haz?rlan?yor, biraz bekle...' : hasCached ? 'Raporuna tekrar bak ?' : tur.desc,
+        title: ref.watch(l10nProvider).numLabel(tur.index),
+        subtitle: locked ? ref.watch(l10nProvider).numPreparing : hasCached ? ref.watch(l10nProvider).numReadAgain : ref.watch(l10nProvider).numDesc(tur.index),
         glyph: (color, size) => Icon(disabled ? Icons.block_outlined : tur.icon, color: color, size: size),
         onTap: disabled ? null : () => _onTur(tur),
       )),
@@ -438,7 +430,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
               border: Border.all(color: AppColors.gold.withValues(alpha: 0.50), width: 0.8),
             ),
             child: Text(
-              _secilen!.label,
+              ref.watch(l10nProvider).numLabel(_secilen!.index),
               style: AppTextStyles.uiLabel,
             ),
           ),

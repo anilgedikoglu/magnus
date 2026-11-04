@@ -58,7 +58,7 @@ class _TypingIndicatorState extends State<TypingIndicator>
                     style: TextStyle(
                       fontFamily: 'AngillaTattoo',
                       fontSize: 16,
-                      color: Colors.white,
+                      color: AppColors.bone,
                     ),
                   ),
                 ),
@@ -122,7 +122,7 @@ class _Dot extends StatelessWidget {
             width: 7,
             height: 7,
             decoration: const BoxDecoration(
-              color: Colors.white,
+              color: AppColors.bone,
               shape: BoxShape.circle,
             ),
           ),

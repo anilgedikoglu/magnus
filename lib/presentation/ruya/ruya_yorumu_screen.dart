@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uuid/uuid.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
@@ -489,67 +492,40 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.ink,
       extendBody: true,
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Image.asset(
-            'assets/images/dream_bg.png',
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
-            filterQuality: FilterQuality.high,
-            errorBuilder: (_, __, ___) => Container(color: const Color(0xFF060912)),
-          ),
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0x99000000),
-                  Color(0x44000000),
-                  Color(0x99000000),
-                ],
-              ),
-            ),
-          ),
-          SafeArea(
-            child: Column(
-              children: [
-            // Başlık
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-              child: Row(children: [
-                IconButton(
-                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-                  onPressed: () => context.pop(),
-                ),
-                Expanded(
-                  child: Text(
-                    ref.watch(l10nProvider).dreamTitle,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.5,
+      body: GrimoireBackdrop(
+        asset: 'assets/images/dream_bg.png',
+        child: SafeArea(
+          child: Column(
+            children: [
+              // Başlık
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Row(children: [
+                  IconButton(
+                    icon: const Icon(Icons.arrow_back_ios, color: AppColors.bone),
+                    onPressed: () => context.pop(),
+                  ),
+                  Expanded(
+                    child: Text(
+                      ref.watch(l10nProvider).dreamTitle,
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.screenTitle,
                     ),
                   ),
-                ),
-                const SizedBox(width: 48),
-              ]),
-            ),
-            Expanded(
-              child: switch (_adim) {
-                _RYAdim.secim  => _buildSecim(),
-                _RYAdim.analiz => _buildAnaliz(),
-              },
-            ),
-              ],
-            ),
+                  const SizedBox(width: 48),
+                ]),
+              ),
+              Expanded(
+                child: switch (_adim) {
+                  _RYAdim.secim  => _buildSecim(),
+                  _RYAdim.analiz => _buildAnaliz(),
+                },
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
@@ -568,12 +544,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
           child: Text(
             s.dreamWhatDidYouSee(isim),
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Color(0xFFD8C4FF),
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-              height: 1.4,
-            ),
+            style: AppTextStyles.bubbleText.copyWith(fontSize: 18, height: 1.4),
           ),
         ),
         // ── Arama kutusu ──────────────────────────────────────────────────
@@ -582,41 +553,39 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
           child: TextField(
             controller: _aramaCtrl,
             onChanged: (v) => setState(() => _arama = v),
-            style: const TextStyle(color: Colors.white, fontSize: 14),
-            cursorColor: const Color(0xFF8B5CF6),
+            style: AppTextStyles.uiLabel.copyWith(fontSize: 14),
+            cursorColor: AppColors.gold,
             decoration: InputDecoration(
               hintText: s.searchHint,
-              hintStyle: TextStyle(color: Colors.white.withValues(alpha: 0.35)),
-              prefixIcon: Icon(Icons.search_rounded,
-                  color: Colors.white.withValues(alpha: 0.45), size: 20),
+              hintStyle: AppTextStyles.meta.copyWith(fontSize: 14),
+              prefixIcon: const Icon(Icons.search_rounded,
+                  color: AppColors.ash, size: 20),
               suffixIcon: _arama.isNotEmpty
                   ? GestureDetector(
                       onTap: () {
                         _aramaCtrl.clear();
                         setState(() => _arama = '');
                       },
-                      child: Icon(Icons.close_rounded,
-                          color: Colors.white.withValues(alpha: 0.45), size: 18),
+                      child: const Icon(Icons.close_rounded,
+                          color: AppColors.ash, size: 18),
                     )
                   : null,
               filled: true,
-              fillColor: const Color(0x800D0A1E),
+              fillColor: AppColors.glassTint,
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(
-                    color: Colors.white.withValues(alpha: 0.08), width: 1),
+                borderRadius: BorderRadius.circular(14),
+                borderSide: const BorderSide(color: AppColors.rim, width: 0.9),
               ),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(
-                    color: Colors.white.withValues(alpha: 0.08), width: 1),
+                borderRadius: BorderRadius.circular(14),
+                borderSide: const BorderSide(color: AppColors.rim, width: 0.9),
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide:
-                    const BorderSide(color: Color(0xFF8B5CF6), width: 1.5),
+                borderRadius: BorderRadius.circular(14),
+                borderSide: BorderSide(
+                    color: AppColors.gold.withValues(alpha: 0.62), width: 1),
               ),
             ),
           ),
@@ -628,9 +597,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
               ? Center(
                   child: Text(
                     s.noResults,
-                    style: TextStyle(
-                        color: Colors.white.withValues(alpha: 0.35),
-                        fontSize: 14),
+                    style: AppTextStyles.meta.copyWith(fontSize: 14),
                   ),
                 )
               : ListView.builder(
@@ -648,15 +615,15 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(16),
                           color: secili
-                              ? const Color(0xFF6D28D9).withValues(alpha: 0.35)
-                              : const Color(0x800D0A1E),
+                              ? AppColors.glassTintSelected
+                              : AppColors.glassTint,
                           border: Border.all(
                             color: secili
-                                ? const Color(0xFF8B5CF6)
-                                : Colors.white.withValues(alpha: 0.08),
-                            width: secili ? 1.5 : 1,
+                                ? AppColors.gold.withValues(alpha: 0.62)
+                                : AppColors.rim,
+                            width: secili ? 1.0 : 0.9,
                           ),
                         ),
                         child: Row(
@@ -664,20 +631,14 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                             Expanded(
                               child: Text(
                                 sembol.kelimeFor(s.isEn),
-                                style: TextStyle(
-                                  color: secili
-                                      ? const Color(0xFFDDD6FE)
-                                      : Colors.white.withValues(alpha: 0.85),
-                                  fontSize: 15,
-                                  fontWeight: secili
-                                      ? FontWeight.w600
-                                      : FontWeight.w400,
+                                style: AppTextStyles.uiLabel.copyWith(
+                                  color: secili ? AppColors.bone : AppColors.boneDim,
                                 ),
                               ),
                             ),
                             if (secili)
-                              const Icon(Icons.check_circle_rounded,
-                                  color: Color(0xFF8B5CF6), size: 20),
+                              const Icon(Icons.check_circle_outline_rounded,
+                                  color: AppColors.gold, size: 20),
                           ],
                         ),
                       ),
@@ -695,17 +656,13 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
               height: 50,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(23),
-                gradient: _secili != null
-                    ? const LinearGradient(
-                        colors: [Color(0xFF6D28D9), Color(0xFF8B5CF6)])
-                    : null,
-                color: _secili == null
-                    ? Colors.white.withValues(alpha: 0.10)
-                    : null,
+                color: _secili != null
+                    ? AppColors.glassTintSelected
+                    : Colors.white.withValues(alpha: 0.10),
                 border: Border.all(
                   color: _secili == null
                       ? Colors.white.withValues(alpha: 0.25)
-                      : Colors.transparent,
+                      : AppColors.gold.withValues(alpha: 0.85),
                   width: 1,
                 ),
               ),
@@ -713,11 +670,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                 child: _secili != null
                     ? Text(
                         ref.read(l10nProvider).interpret,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: AppTextStyles.uiLabel.copyWith(fontSize: 16),
                       )
                     : Row(
                         mainAxisSize: MainAxisSize.min,
@@ -750,15 +703,10 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
       children: [
         Text(
           ref.read(l10nProvider).dreamEvaluating,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-            letterSpacing: 0.4,
-          ),
+          style: AppTextStyles.bubbleText.copyWith(fontSize: 18),
         ),
         const SizedBox(height: 32),
-        const ElegantHourglass(size: 56, color: Colors.white),
+        const ElegantHourglass(size: 56, color: AppColors.gold),
       ],
     );
   }

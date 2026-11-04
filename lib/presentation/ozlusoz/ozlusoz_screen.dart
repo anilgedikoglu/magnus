@@ -9,10 +9,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/services/ad_service.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
 import '../../data/providers.dart';
 
 class _OzluSozEntry {
@@ -163,7 +166,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.ink,
       extendBody: true,
       body: GestureDetector(
         onHorizontalDragEnd: (details) {
@@ -177,27 +180,10 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
             // ── Arka plan — yükleme öncesi de ilk görsel anında çıkar ──────────
             AnimatedSwitcher(
               duration: const Duration(milliseconds: 600),
-              child: Image.asset(
-                _currentBg ?? 'assets/images/ozlusoz_bgs/${_bgFiles[0]}',
+              child: GrimoireBackdrop(
                 key: ValueKey(_currentBg ?? '__default__'),
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: double.infinity,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) =>
-                    const ColoredBox(color: Color(0xFF0D0A20)),
-              ),
-            ),
-
-            // ── Overlay ────────────────────────────────────────────────────────
-            Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0x88000000), Color(0x33000000), Color(0x88000000)],
-                ),
+                asset: _currentBg ?? 'assets/images/ozlusoz_bgs/${_bgFiles[0]}',
+                child: const SizedBox.shrink(),
               ),
             ),
 
@@ -205,7 +191,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
             SafeArea(
               child: _loading
                   ? const Center(child: CircularProgressIndicator(
-                      color: Color(0xFFBB88FF), strokeWidth: 2))
+                      color: AppColors.gold, strokeWidth: 2))
                   : Column(children: [
                       _buildHeader(),
                       Expanded(child: _buildTextArea()),
@@ -228,18 +214,16 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
           child: Container(
             width: 38, height: 38,
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.1),
+              color: AppColors.glassTint,
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.25), width: 1),
+              border: Border.all(color: AppColors.rim, width: 0.9),
             ),
             child: const Icon(Icons.arrow_back_ios_new_rounded,
-                color: Colors.white, size: 18),
+                color: AppColors.bone, size: 18),
           ),
         ),
         Expanded(child: Center(child: Text(ref.watch(l10nProvider).quotesTitle,
-          style: GoogleFonts.cinzel(fontSize: 20, fontWeight: FontWeight.bold,
-            color: Colors.white, letterSpacing: 5,
-            shadows: const [Shadow(color: Color(0xAABB88FF), blurRadius: 14)])))),
+          style: AppTextStyles.screenTitle))),
         const SizedBox(width: 38),
       ]),
     );
@@ -247,8 +231,9 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
 
   Widget _buildTextArea() {
     if (_sessionEntries.isEmpty) {
-      return const Center(child: Text('Özlü söz bulunamadı.',
-          style: TextStyle(color: Colors.white54, fontSize: 15)));
+      return Center(child: Text(
+          ref.watch(l10nProvider).quoteNotFound,
+          style: AppTextStyles.meta.copyWith(fontSize: 15)));
     }
 
     final entry  = _sessionEntries[_index];
@@ -257,7 +242,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
         ref.read(userProfileProvider).toVariableMap());
     final dir    = _direction;
     final curKey = _limitVisible ? const ValueKey('limit') : ValueKey(_index);
-    const accent = Color(0xFFBB88FF);
+    const accent = AppColors.gold;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 28),
@@ -278,73 +263,58 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
           layoutBuilder: (cur, prev) => Stack(alignment: Alignment.center,
               children: [...prev, if (cur != null) cur]),
           child: _limitVisible
-              ? Center(key: curKey, child: Container(
+              ? Center(key: curKey, child: SizedBox(
                   width: 220, height: 220,
-                  decoration: BoxDecoration(
-                    color: Colors.black.withValues(alpha: 0.80),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                        color: accent.withValues(alpha: 0.30), width: 1),
-                  ),
+                  child: GlassPanel(
+                  variant: GlassVariant.reading,
                   child: Column(mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(width: 52, height: 52,
                         decoration: BoxDecoration(shape: BoxShape.circle,
-                          color: accent.withValues(alpha: 0.12),
                           border: Border.all(
-                              color: accent.withValues(alpha: 0.55), width: 2)),
-                        child: const Center(child: Text('!',
-                            style: TextStyle(color: Color(0xFFBB88FF),
-                                fontSize: 26, fontWeight: FontWeight.bold)))),
+                              color: accent.withValues(alpha: 0.6), width: 1)),
+                        child: Center(child: Text('!',
+                            style: AppTextStyles.ritualTitle.copyWith(
+                                color: accent, fontSize: 26)))),
                       const SizedBox(height: 16),
-                      const Text('Günlük özlü söz\nhakkın doldu.',
+                      Text(
+                        ref.watch(l10nProvider).quotesLimitReached,
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white, fontSize: 16,
-                            fontWeight: FontWeight.w500, height: 1.5)),
+                        style: AppTextStyles.uiLabel.copyWith(
+                            fontSize: 16, height: 1.5)),
                       const SizedBox(height: 8),
-                      Text('Baştan başlıyoruz...', textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white.withValues(alpha: 0.45),
-                            fontSize: 12)),
+                      Text(
+                          ref.watch(l10nProvider).quotesRestarting, textAlign: TextAlign.center,
+                        style: AppTextStyles.meta),
                     ]),
-                ))
+                )))
               : SizedBox.expand(key: curKey, child: LayoutBuilder(
                   builder: (context, constraints) => SingleChildScrollView(
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   child: ConstrainedBox(
                     constraints: BoxConstraints(minHeight: constraints.maxHeight - 16),
-                    child: Center(child: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 4),
+                    child: Center(child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                    child: GlassPanel(
+                    variant: GlassVariant.reading,
                     padding: const EdgeInsets.fromLTRB(24, 20, 24, 20),
-                    decoration: BoxDecoration(
-                      color: Colors.black.withValues(alpha: 0.80),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                          color: accent.withValues(alpha: 0.30), width: 1),
-                    ),
-                    child: Column(mainAxisSize: MainAxisSize.min, children: [
-                      Text('❝', style: TextStyle(fontSize: 38,
-                          color: accent.withValues(alpha: 0.75), height: 1)),
+                    child: SizedBox(width: double.infinity, child: Column(mainAxisSize: MainAxisSize.min, children: [
+                      Icon(Icons.format_quote_rounded, size: 34,
+                          color: accent.withValues(alpha: 0.75)),
                       const SizedBox(height: 8),
-                      Text(metin, textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white,
-                            fontSize: metin.length > 200 ? 15 : 17,
-                            height: 1.75, fontWeight: FontWeight.w300,
-                            letterSpacing: 0.3)),
-                      const SizedBox(height: 8),
-                      Text('❞', style: TextStyle(fontSize: 38,
-                          color: accent.withValues(alpha: 0.75), height: 1)),
+                      RichTextParser.build(metin, textAlign: TextAlign.center,
+                        style: AppTextStyles.reading.copyWith(
+                            fontSize: metin.length > 200 ? 16 : 18, height: 1.7)),
                       if (entry.yazar.isNotEmpty) ...[
-                        const SizedBox(height: 12),
-                        Container(height: 1, color: accent.withValues(alpha: 0.2)),
+                        const SizedBox(height: 16),
+                        Container(height: 1, color: accent.withValues(alpha: 0.25)),
                         const SizedBox(height: 10),
                         Text('— ${entry.yazar}', textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 13,
-                              color: accent.withValues(alpha: 0.85),
-                              fontStyle: FontStyle.italic, letterSpacing: 0.5)),
+                          style: AppTextStyles.uiLabel.copyWith(
+                              fontSize: 13, color: accent, letterSpacing: 0.5)),
                       ],
-                    ]),
-                  )),  // Container + Center
+                    ])),
+                  ))),  // GlassPanel + Padding + Center
                 ),     // ConstrainedBox
               ),       // SingleChildScrollView
             )),        // LayoutBuilder + SizedBox.expand
@@ -363,14 +333,12 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
           child: Container(
             height: 56, padding: const EdgeInsets.symmetric(horizontal: 22),
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.10),
+              color: AppColors.glassTint,
               borderRadius: BorderRadius.circular(28),
-              border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.25), width: 1),
+              border: Border.all(color: AppColors.rim, width: 0.9),
             ),
-            child: const Center(child: Text('Çıkış',
-                style: TextStyle(color: Colors.white, fontSize: 15,
-                    fontWeight: FontWeight.w500))),
+            child: Center(child: Text(
+                ref.watch(l10nProvider).exit, style: AppTextStyles.uiLabel)),
           ),
         ),
         _NavBtn(icon: Icons.chevron_right_rounded, onTap: _next),
@@ -399,18 +367,13 @@ class _NavBtnState extends State<_NavBtn> {
         duration: const Duration(milliseconds: 100),
         width: 56, height: 56,
         decoration: BoxDecoration(
-          color: _pressed
-              ? Colors.white.withValues(alpha: 0.25)
-              : Colors.white.withValues(alpha: 0.12),
+          color: _pressed ? AppColors.glassTintSelected : AppColors.glassTint,
           shape: BoxShape.circle,
           border: Border.all(
-              color: Colors.white.withValues(alpha: _pressed ? 0.7 : 0.35),
-              width: 1.5),
-          boxShadow: _pressed ? [BoxShadow(
-              color: const Color(0xFFBB88FF).withValues(alpha: 0.4),
-              blurRadius: 12)] : null,
+              color: _pressed ? AppColors.gold.withValues(alpha: 0.62) : AppColors.rim,
+              width: 0.9),
         ),
-        child: Icon(widget.icon, color: Colors.white, size: 30),
+        child: Icon(widget.icon, color: AppColors.bone, size: 30),
       ),
     );
   }

@@ -568,15 +568,11 @@ Future<void> _showEditPopup(
                 margin: const EdgeInsets.symmetric(horizontal: 24),
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF12082A),
+                  color: AppColors.inkSurface,
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: const Color(0xFFDD00BB), width: 1.5),
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color(0xFFDD00BB).withValues(alpha: 0.3),
-                      blurRadius: 24,
-                      spreadRadius: 2,
-                    ),
+                  border: Border.all(color: AppColors.rim, width: 0.8),
+                  boxShadow: const [
+                    BoxShadow(color: Color(0xB3000000), blurRadius: 30, offset: Offset(0, 12)),
                   ],
                 ),
                 child: Column(
@@ -585,15 +581,11 @@ Future<void> _showEditPopup(
                     // Başlık
                     Row(
                       children: [
-                        Icon(icon, color: const Color(0xFFDD00BB), size: 18),
+                        Icon(icon, color: AppColors.gold, size: 18),
                         const SizedBox(width: 8),
                         Text(
                           title,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: AppTextStyles.cardLabel.copyWith(fontSize: 14, letterSpacing: 1.6),
                         ),
                       ],
                     ),
@@ -619,7 +611,7 @@ Future<void> _showEditPopup(
                                   child: Text(
                                     options[i].$2,
                                     style: const TextStyle(
-                                      color: Colors.white,
+                                      color: AppColors.bone,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                     ),
@@ -634,8 +626,8 @@ Future<void> _showEditPopup(
                                   begin: Alignment.topCenter,
                                   end: Alignment.bottomCenter,
                                   colors: [
-                                    const Color(0xFF12082A),
-                                    const Color(0xFF12082A).withValues(alpha: 0),
+                                    AppColors.inkSurface,
+                                    AppColors.inkSurface.withValues(alpha: 0),
                                   ],
                                   stops: const [0, 0.38],
                                 ),
@@ -648,8 +640,8 @@ Future<void> _showEditPopup(
                                   begin: Alignment.bottomCenter,
                                   end: Alignment.topCenter,
                                   colors: [
-                                    const Color(0xFF12082A),
-                                    const Color(0xFF12082A).withValues(alpha: 0),
+                                    AppColors.inkSurface,
+                                    AppColors.inkSurface.withValues(alpha: 0),
                                   ],
                                   stops: const [0, 0.38],
                                 ),
@@ -661,17 +653,17 @@ Future<void> _showEditPopup(
                               children: [
                                 Container(height: 1, decoration: const BoxDecoration(
                                   gradient: LinearGradient(
-                                    colors: [Colors.transparent, Color(0xCCDD00BB), Colors.transparent],
+                                    colors: [Colors.transparent, Color(0x99C2A46B), Colors.transparent],
                                   ),
                                 )),
                                 Container(height: 44, decoration: BoxDecoration(
                                   gradient: LinearGradient(
-                                    colors: [Colors.transparent, Colors.white.withValues(alpha: 0.07), Colors.transparent],
+                                    colors: [Colors.transparent, AppColors.bone.withValues(alpha: 0.07), Colors.transparent],
                                   ),
                                 )),
                                 Container(height: 1, decoration: const BoxDecoration(
                                   gradient: LinearGradient(
-                                    colors: [Colors.transparent, Color(0xCCDD00BB), Colors.transparent],
+                                    colors: [Colors.transparent, Color(0x99C2A46B), Colors.transparent],
                                   ),
                                 )),
                               ],
@@ -693,17 +685,17 @@ Future<void> _showEditPopup(
                       TextField(
                         controller: textCtrl,
                         autofocus: true,
-                        style: const TextStyle(color: Colors.white),
+                        style: const TextStyle(color: AppColors.bone),
                         decoration: InputDecoration(
                           hintText: title,
-                          hintStyle: const TextStyle(color: Colors.white38),
+                          hintStyle: const TextStyle(color: AppColors.ash),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Color(0xFFDD00BB)),
+                            borderSide: const BorderSide(color: AppColors.gold),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Color(0xFFFF44CC), width: 2),
+                            borderSide: const BorderSide(color: AppColors.gold, width: 2),
                           ),
                         ),
                         onChanged: (v) => selected = v,
@@ -717,15 +709,18 @@ Future<void> _showEditPopup(
                         Expanded(
                           child: TextButton(
                             onPressed: () { rollerCtrl?.dispose(); Navigator.pop(ctx); },
-                            child: Text(ref.read(l10nProvider).cancel, style: const TextStyle(color: Colors.white38)),
+                            child: Text(ref.read(l10nProvider).cancel, style: AppTextStyles.uiLabel.copyWith(color: AppColors.ash)),
                           ),
                         ),
                         const SizedBox(width: 8),
                         Expanded(
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFFDD00BB),
-                              foregroundColor: Colors.white,
+                              backgroundColor: AppColors.glassTint,
+                              foregroundColor: AppColors.bone,
+                              elevation: 0,
+                              shadowColor: Colors.transparent,
+                              side: BorderSide(color: AppColors.gold.withValues(alpha: 0.85), width: 1),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -744,7 +739,7 @@ Future<void> _showEditPopup(
                               rollerCtrl?.dispose();
                               if (onSave != null) await onSave(val);
                             },
-                            child: Text(ref.read(l10nProvider).save, style: const TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text(ref.read(l10nProvider).save, style: AppTextStyles.uiLabel),
                           ),
                         ),
                       ],
@@ -794,8 +789,8 @@ class _SpriteAvatar extends StatelessWidget {
               fit: BoxFit.cover,
               errorBuilder: (_, __, ___) => Container(
                 width: imgSize, height: imgSize,
-                color: const Color(0xFF2A1A4C),
-                child: const Icon(Icons.person_rounded, color: Colors.white38),
+                color: AppColors.inkCard,
+                child: const Icon(Icons.person_rounded, color: AppColors.ash),
               ),
             ),
           ),
@@ -885,19 +880,19 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
       height: size,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border: Border.all(color: const Color(0xFF00CCFF), width: 2.5),
+        border: Border.all(color: AppColors.gold, width: 2.5),
         boxShadow: [
-          BoxShadow(color: const Color(0xFF00CCFF).withValues(alpha: 0.5),
+          BoxShadow(color: AppColors.gold.withValues(alpha: 0.5),
               blurRadius: 16, spreadRadius: 2),
         ],
-        color: const Color(0xFF0A0520),
+        color: AppColors.inkSurface,
       ),
       child: ClipOval(child: content),
     );
   }
 
   Widget _defaultIcon() => const Center(
-      child: Icon(Icons.person_rounded, color: Colors.white54, size: 36));
+      child: Icon(Icons.person_rounded, color: AppColors.ash, size: 36));
 
   @override
   Widget build(BuildContext context) {
@@ -907,9 +902,9 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
       child: Container(
         padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
         decoration: const BoxDecoration(
-          color: Color(0xFF1A0A3C),
+          color: AppColors.inkSurface,
           borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-          border: Border(top: BorderSide(color: Color(0xFFDD00BB), width: 1)),
+          border: Border(top: BorderSide(color: AppColors.gold, width: 1)),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -917,11 +912,11 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
             children: [
               // Handle
               Container(width: 40, height: 4,
-                  decoration: BoxDecoration(color: Colors.white24,
+                  decoration: BoxDecoration(color: Color(0x3DE8E2D6),
                       borderRadius: BorderRadius.circular(2))),
               const SizedBox(height: 16),
               Text(s.editProfile,
-                  style: const TextStyle(color: Colors.white, fontSize: 18,
+                  style: const TextStyle(color: AppColors.bone, fontSize: 18,
                       fontWeight: FontWeight.bold)),
               const SizedBox(height: 20),
 
@@ -933,7 +928,7 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(s.chooseAvatar,
-                    style: const TextStyle(color: Color(0xFFDD88CC), fontSize: 12,
+                    style: const TextStyle(color: AppColors.ash, fontSize: 12,
                         fontWeight: FontWeight.w500)),
               ),
               const SizedBox(height: 10),
@@ -951,12 +946,12 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: sel ? const Color(0xFFDD00BB) : Colors.white24,
+                          color: sel ? AppColors.gold : Color(0x3DE8E2D6),
                           width: sel ? 2.5 : 1.5,
                         ),
                         boxShadow: sel
                             ? [BoxShadow(
-                            color: const Color(0xFFDD00BB).withValues(alpha: 0.5),
+                            color: AppColors.gold.withValues(alpha: 0.5),
                             blurRadius: 10)]
                             : null,
                       ),
@@ -985,26 +980,26 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(s.nameLabel,
-                    style: const TextStyle(color: Color(0xFFDD88CC), fontSize: 12,
+                    style: const TextStyle(color: AppColors.ash, fontSize: 12,
                         fontWeight: FontWeight.w500)),
               ),
               const SizedBox(height: 8),
               TextField(
                 controller: _nameCtrl,
-                style: const TextStyle(color: Colors.white, fontSize: 16),
+                style: const TextStyle(color: AppColors.bone, fontSize: 16),
                 decoration: InputDecoration(
                   hintText: s.nameHint,
-                  hintStyle: const TextStyle(color: Colors.white38),
+                  hintStyle: const TextStyle(color: AppColors.ash),
                   contentPadding: const EdgeInsets.symmetric(
                       horizontal: 16, vertical: 12),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(color: Color(0xFFDD00BB)),
+                    borderSide: const BorderSide(color: AppColors.gold),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide:
-                    const BorderSide(color: Color(0xFFFF44CC), width: 2),
+                    const BorderSide(color: AppColors.gold, width: 2),
                   ),
                 ),
               ),
@@ -1022,22 +1017,18 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
                 },
                 child: Container(
                   width: double.infinity, height: 50,
+                  // Birincil eylem: cam + mum altını kenar (dolu renk/glow yok).
                   decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                        colors: [Color(0xFFCC00AA), Color(0xFF8800CC)]),
-                    borderRadius: BorderRadius.circular(25),
-                    boxShadow: [BoxShadow(
-                        color: const Color(0xFFCC00AA).withValues(alpha: 0.4),
-                        blurRadius: 14, offset: const Offset(0, 4))],
+                    color: AppColors.glassTint,
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: AppColors.gold.withValues(alpha: 0.85), width: 1),
                   ),
                   child: Center(
                     child: _saving
                         ? const SizedBox(width: 20, height: 20,
                         child: CircularProgressIndicator(
-                            color: Colors.white, strokeWidth: 2))
-                        : Text(s.saveProfile,
-                        style: const TextStyle(color: Colors.white,
-                            fontSize: 16, fontWeight: FontWeight.bold)),
+                            color: AppColors.bone, strokeWidth: 2))
+                        : Text(s.saveProfile, style: AppTextStyles.uiLabel),
                   ),
                 ),
               ),
@@ -1054,17 +1045,17 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 10),
         decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.05),
+          color: AppColors.bone.withValues(alpha: 0.05),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.white24),
+          border: Border.all(color: Color(0x3DE8E2D6)),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: const Color(0xFFDD88CC), size: 18),
+            Icon(icon, color: AppColors.ash, size: 18),
             const SizedBox(width: 6),
             Text(label,
-                style: const TextStyle(color: Colors.white70, fontSize: 13)),
+                style: const TextStyle(color: AppColors.boneDim, fontSize: 13)),
           ],
         ),
       ),
@@ -1131,7 +1122,7 @@ class _CylinderRollerState extends State<_CylinderRoller> {
                       child: Text(
                         item,
                         style: const TextStyle(
-                          color: Colors.white,
+                          color: AppColors.bone,
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
@@ -1147,8 +1138,8 @@ class _CylinderRollerState extends State<_CylinderRoller> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    const Color(0xFF1A0A3C),
-                    const Color(0xFF1A0A3C).withValues(alpha: 0),
+                    AppColors.inkSurface,
+                    AppColors.inkSurface.withValues(alpha: 0),
                   ],
                   stops: const [0, 0.38],
                 ),
@@ -1163,8 +1154,8 @@ class _CylinderRollerState extends State<_CylinderRoller> {
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
                   colors: [
-                    const Color(0xFF1A0A3C),
-                    const Color(0xFF1A0A3C).withValues(alpha: 0),
+                    AppColors.inkSurface,
+                    AppColors.inkSurface.withValues(alpha: 0),
                   ],
                   stops: const [0, 0.38],
                 ),
@@ -1179,17 +1170,17 @@ class _CylinderRollerState extends State<_CylinderRoller> {
                 children: [
                   Container(height: 1, decoration: const BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colors.transparent, Color(0xCCDD00BB), Colors.transparent],
+                      colors: [Colors.transparent, Color(0x99C2A46B), Colors.transparent],
                     ),
                   )),
                   Container(height: widget.itemExtent, decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colors.transparent, Colors.white.withValues(alpha: 0.07), Colors.transparent],
+                      colors: [Colors.transparent, AppColors.bone.withValues(alpha: 0.07), Colors.transparent],
                     ),
                   )),
                   Container(height: 1, decoration: const BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colors.transparent, Color(0xCCDD00BB), Colors.transparent],
+                      colors: [Colors.transparent, Color(0x99C2A46B), Colors.transparent],
                     ),
                   )),
                 ],
@@ -1299,7 +1290,7 @@ class _TimeRollerPickerState extends State<_TimeRollerPicker> {
         // Format ipucu
         Consumer(builder: (ctx, ref, _) => Text(
           ref.watch(l10nProvider).timeHint,
-          style: const TextStyle(color: Color(0xFFDD88CC), fontSize: 11),
+          style: const TextStyle(color: AppColors.ash, fontSize: 11),
         )),
         const SizedBox(height: 8),
         Row(
@@ -1319,7 +1310,7 @@ class _TimeRollerPickerState extends State<_TimeRollerPicker> {
               child: Text(
                 ':',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.bone,
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
@@ -2141,32 +2132,29 @@ class SettingsScreen extends ConsumerWidget {
   Widget _buildMenuButton(BuildContext context, WidgetRef ref) {
     return GestureDetector(
       onTap: () => context.pop(),
+      // Geri Git standardı (CLAUDE.md): beyaz %10 zemin, %25 kenar, radius 23.
       child: Container(
         width: double.infinity,
-        height: 44,
+        height: 48,
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [Color(0xFFCC00AA), Color(0xFF8800CC)],
-          ),
-          borderRadius: BorderRadius.circular(25),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0xFFCC00AA).withValues(alpha: 0.5),
-              blurRadius: 14,
-              offset: const Offset(0, 4),
+          color: Colors.white.withValues(alpha: 0.10),
+          borderRadius: BorderRadius.circular(23),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.25), width: 1),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+            const SizedBox(width: 2),
+            Text(
+              ref.read(l10nProvider).mainMenuBtn,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ],
-        ),
-        child: Center(
-          child: Text(
-            ref.read(l10nProvider).mainMenuBtn,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 0.5,
-            ),
-          ),
         ),
       ),
     );
@@ -2216,9 +2204,9 @@ class SettingsScreen extends ConsumerWidget {
         insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
         child: Container(
           decoration: BoxDecoration(
-            color: const Color(0xFF1A0A3C),
+            color: AppColors.inkSurface,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: const Color(0xFFDD00BB), width: 1),
+            border: Border.all(color: AppColors.gold, width: 1),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -2229,14 +2217,14 @@ class SettingsScreen extends ConsumerWidget {
                 padding: const EdgeInsets.fromLTRB(20, 18, 20, 14),
                 decoration: const BoxDecoration(
                   border: Border(
-                    bottom: BorderSide(color: Color(0x33DD00BB), width: 1),
+                    bottom: BorderSide(color: Color(0x29C2A46B), width: 1),
                   ),
                 ),
                 child: const Text(
                   'Ayarlar / Settings',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppColors.bone,
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.5,
@@ -2256,7 +2244,7 @@ class SettingsScreen extends ConsumerWidget {
                         Text(
                           'DİL / LANGUAGE',
                           style: TextStyle(
-                            color: const Color(0xFF00CCFF).withValues(alpha: 0.85),
+                            color: AppColors.gold.withValues(alpha: 0.85),
                             fontSize: 11,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 2,
@@ -2273,13 +2261,13 @@ class SettingsScreen extends ConsumerWidget {
                                   padding: const EdgeInsets.symmetric(vertical: 10),
                                   decoration: BoxDecoration(
                                     color: currentLocale == 'tr'
-                                        ? const Color(0xFF00CCFF).withValues(alpha: 0.20)
-                                        : Colors.white.withValues(alpha: 0.05),
+                                        ? AppColors.gold.withValues(alpha: 0.20)
+                                        : AppColors.bone.withValues(alpha: 0.05),
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
                                       color: currentLocale == 'tr'
-                                          ? const Color(0xFF00CCFF)
-                                          : Colors.white24,
+                                          ? AppColors.gold
+                                          : Color(0x3DE8E2D6),
                                       width: currentLocale == 'tr' ? 1.5 : 1,
                                     ),
                                   ),
@@ -2287,7 +2275,7 @@ class SettingsScreen extends ConsumerWidget {
                                     '🇹🇷 Türkçe',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: currentLocale == 'tr' ? Colors.white : Colors.white54,
+                                      color: currentLocale == 'tr' ? AppColors.bone : AppColors.ash,
                                       fontSize: 14,
                                       fontWeight: currentLocale == 'tr' ? FontWeight.w600 : FontWeight.w400,
                                     ),
@@ -2304,13 +2292,13 @@ class SettingsScreen extends ConsumerWidget {
                                   padding: const EdgeInsets.symmetric(vertical: 10),
                                   decoration: BoxDecoration(
                                     color: currentLocale == 'en'
-                                        ? const Color(0xFF00CCFF).withValues(alpha: 0.20)
-                                        : Colors.white.withValues(alpha: 0.05),
+                                        ? AppColors.gold.withValues(alpha: 0.20)
+                                        : AppColors.bone.withValues(alpha: 0.05),
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
                                       color: currentLocale == 'en'
-                                          ? const Color(0xFF00CCFF)
-                                          : Colors.white24,
+                                          ? AppColors.gold
+                                          : Color(0x3DE8E2D6),
                                       width: currentLocale == 'en' ? 1.5 : 1,
                                     ),
                                   ),
@@ -2318,7 +2306,7 @@ class SettingsScreen extends ConsumerWidget {
                                     '🇬🇧 English',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: currentLocale == 'en' ? Colors.white : Colors.white54,
+                                      color: currentLocale == 'en' ? AppColors.bone : AppColors.ash,
                                       fontSize: 14,
                                       fontWeight: currentLocale == 'en' ? FontWeight.w600 : FontWeight.w400,
                                     ),
@@ -2339,7 +2327,7 @@ class SettingsScreen extends ConsumerWidget {
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
                 height: 1,
-                color: const Color(0x33DD00BB),
+                color: const Color(0x29C2A46B),
               ),
 
               // ── Uyarılar bölümü ──────────────────────────────────────────
@@ -2348,7 +2336,7 @@ class SettingsScreen extends ConsumerWidget {
                 child: Text(
                   ref.read(l10nProvider).warnings,
                   style: TextStyle(
-                    color: const Color(0xFFDD00BB).withValues(alpha: 0.85),
+                    color: AppColors.gold.withValues(alpha: 0.85),
                     fontSize: 11,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2,
@@ -2357,7 +2345,7 @@ class SettingsScreen extends ConsumerWidget {
               ),
               _OptionsItem(
                 icon: Icons.gavel_rounded,
-                iconColor: const Color(0xFFBB88FF),
+                iconColor: AppColors.gold,
                 label: ref.read(l10nProvider).termsOfUse,
                 onTap: () {
                   Navigator.pop(context);
@@ -2365,14 +2353,14 @@ class SettingsScreen extends ConsumerWidget {
                     context,
                     title: ref.read(l10nProvider).termsOfUse,
                     icon: Icons.gavel_rounded,
-                    iconColor: const Color(0xFFBB88FF),
+                    iconColor: AppColors.gold,
                     text: _kKullanimKosullari,
                   );
                 },
               ),
               _OptionsItem(
                 icon: Icons.privacy_tip_outlined,
-                iconColor: const Color(0xFF44CCFF),
+                iconColor: AppColors.gold,
                 label: ref.read(l10nProvider).privacyPolicy,
                 onTap: () {
                   Navigator.pop(context);
@@ -2380,14 +2368,14 @@ class SettingsScreen extends ConsumerWidget {
                     context,
                     title: ref.read(l10nProvider).privacyPolicy,
                     icon: Icons.privacy_tip_outlined,
-                    iconColor: const Color(0xFF44CCFF),
+                    iconColor: AppColors.gold,
                     text: _kGizlilikPolitikasi,
                   );
                 },
               ),
               _OptionsItem(
                 icon: Icons.assignment_outlined,
-                iconColor: const Color(0xFF88FFCC),
+                iconColor: AppColors.gold,
                 label: ref.read(l10nProvider).explicitConsent,
                 onTap: () {
                   Navigator.pop(context);
@@ -2395,7 +2383,7 @@ class SettingsScreen extends ConsumerWidget {
                     context,
                     title: ref.read(l10nProvider).explicitConsent,
                     icon: Icons.assignment_outlined,
-                    iconColor: const Color(0xFF88FFCC),
+                    iconColor: AppColors.gold,
                     text: _kAcikRizaMetni,
                   );
                 },
@@ -2405,7 +2393,7 @@ class SettingsScreen extends ConsumerWidget {
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 height: 1,
-                color: const Color(0x33DD00BB),
+                color: const Color(0x29C2A46B),
               ),
 
               // ── Tehlikeli İşlemler ───────────────────────────────────────
@@ -2423,7 +2411,7 @@ class SettingsScreen extends ConsumerWidget {
               ),
               _OptionsItem(
                 icon: Icons.refresh_rounded,
-                iconColor: const Color(0xFFFF8800),
+                iconColor: AppColors.warning,
                 label: ref.read(l10nProvider).resetProfile,
                 onTap: () {
                   Navigator.pop(context);
@@ -2432,7 +2420,7 @@ class SettingsScreen extends ConsumerWidget {
               ),
               _OptionsItem(
                 icon: Icons.delete_outline_rounded,
-                iconColor: const Color(0xFFFF3333),
+                iconColor: AppColors.danger,
                 label: ref.read(l10nProvider).deleteAllReadings,
                 onTap: () {
                   Navigator.pop(context);
@@ -2448,17 +2436,17 @@ class SettingsScreen extends ConsumerWidget {
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                   decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.04),
+                    color: AppColors.bone.withValues(alpha: 0.04),
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
-                      color: Colors.white.withValues(alpha: 0.10),
+                      color: AppColors.bone.withValues(alpha: 0.10),
                       width: 1,
                     ),
                   ),
                   child: Text(
                     ref.read(l10nProvider).entertainmentOnly,
                     style: const TextStyle(
-                      color: Color(0x99FFFFFF),
+                      color: Color(0x99E8E2D6),
                       fontSize: 10.5,
                       height: 1.5,
                     ),
@@ -2475,15 +2463,15 @@ class SettingsScreen extends ConsumerWidget {
                   child: Container(
                     height: 44,
                     decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.07),
+                      color: AppColors.bone.withValues(alpha: 0.07),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                          color: Colors.white.withValues(alpha: 0.15), width: 1),
+                          color: AppColors.bone.withValues(alpha: 0.15), width: 1),
                     ),
                     child: Center(
                       child: Text(ref.read(l10nProvider).close,
                           style: const TextStyle(
-                              color: Colors.white70, fontSize: 14)),
+                              color: AppColors.boneDim, fontSize: 14)),
                     ),
                   ),
                 ),
@@ -2511,9 +2499,9 @@ class SettingsScreen extends ConsumerWidget {
         insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 48),
         child: Container(
           decoration: BoxDecoration(
-            color: const Color(0xFF12082A),
+            color: AppColors.inkSurface,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: const Color(0xFFDD00BB).withValues(alpha: 0.5), width: 1),
+            border: Border.all(color: AppColors.gold.withValues(alpha: 0.5), width: 1),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -2524,7 +2512,7 @@ class SettingsScreen extends ConsumerWidget {
                 decoration: BoxDecoration(
                   border: Border(
                     bottom: BorderSide(
-                      color: const Color(0xFFDD00BB).withValues(alpha: 0.25),
+                      color: AppColors.gold.withValues(alpha: 0.25),
                       width: 1,
                     ),
                   ),
@@ -2537,7 +2525,7 @@ class SettingsScreen extends ConsumerWidget {
                       child: Text(
                         title,
                         style: const TextStyle(
-                          color: Colors.white,
+                          color: AppColors.bone,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
@@ -2556,7 +2544,7 @@ class SettingsScreen extends ConsumerWidget {
                   child: Text(
                     text,
                     style: const TextStyle(
-                      color: Color(0xCCFFFFFF),
+                      color: Color(0xCCE8E2D6),
                       fontSize: 13.5,
                       height: 1.75,
                     ),
@@ -2571,17 +2559,17 @@ class SettingsScreen extends ConsumerWidget {
                   child: Container(
                     height: 44,
                     decoration: BoxDecoration(
-                      color: const Color(0xFFDD00BB).withValues(alpha: 0.15),
+                      color: AppColors.gold.withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: const Color(0xFFDD00BB).withValues(alpha: 0.40),
+                        color: AppColors.gold.withValues(alpha: 0.40),
                         width: 1,
                       ),
                     ),
                     child: const Center(
                       child: Text('Anladım',
                           style: TextStyle(
-                              color: Colors.white,
+                              color: AppColors.bone,
                               fontSize: 14,
                               fontWeight: FontWeight.w500)),
                     ),
@@ -2698,10 +2686,10 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
   void _showAdminPanel(BuildContext context) {
     showModalBottomSheet(
       context: context,
-      backgroundColor: const Color(0xFF1A1000),
+      backgroundColor: AppColors.inkSurface,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-        side: BorderSide(color: Color(0xFFFFCC00), width: 1.5),
+        side: BorderSide(color: AppColors.gold, width: 1.5),
       ),
       builder: (ctx) {
         bool resetDone = false;
@@ -2765,7 +2753,7 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
                     child: Container(
                       width: 40, height: 4,
                       decoration: BoxDecoration(
-                        color: const Color(0xFFFFCC00).withValues(alpha: 0.5),
+                        color: AppColors.gold.withValues(alpha: 0.5),
                         borderRadius: BorderRadius.circular(2),
                       ),
                     ),
@@ -2774,12 +2762,12 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
                   // Başlık
                   const Row(
                     children: [
-                      Icon(Icons.settings_rounded, color: Color(0xFFFFCC00), size: 18),
+                      Icon(Icons.settings_rounded, color: AppColors.gold, size: 18),
                       SizedBox(width: 8),
                       Text(
                         'Admin Panel',
                         style: TextStyle(
-                          color: Color(0xFFFFCC00),
+                          color: AppColors.gold,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1,
@@ -2797,13 +2785,13 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
                       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
                       decoration: BoxDecoration(
                         color: resetDone
-                            ? const Color(0xFF003322)
-                            : const Color(0xFF00CCFF).withValues(alpha: 0.08),
+                            ? Color(0xFF16231B)
+                            : AppColors.gold.withValues(alpha: 0.08),
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
                           color: resetDone
-                              ? const Color(0xFF00FF88).withValues(alpha: 0.6)
-                              : const Color(0xFF00CCFF).withValues(alpha: 0.5),
+                              ? AppColors.success.withValues(alpha: 0.6)
+                              : AppColors.gold.withValues(alpha: 0.5),
                           width: 1.2,
                         ),
                       ),
@@ -2811,13 +2799,13 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
                         children: [
                           resetDone
                               ? const Icon(Icons.check_circle_outline_rounded,
-                                  color: Color(0xFF00FF88), size: 20)
-                              : const ElegantHourglass(size: 20, color: Color(0xFF00CCFF)),
+                                  color: AppColors.success, size: 20)
+                              : const ElegantHourglass(size: 20, color: AppColors.gold),
                           const SizedBox(width: 12),
                           Text(
                             resetDone ? 'Günlük haklar sıfırlandı ✓' : 'Günlük Hakları Sıfırla',
                             style: TextStyle(
-                              color: resetDone ? const Color(0xFF00FF88) : Colors.white,
+                              color: resetDone ? AppColors.success : AppColors.bone,
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                             ),
@@ -2833,23 +2821,23 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFFFCC00).withValues(alpha: 0.06),
+                      color: AppColors.gold.withValues(alpha: 0.06),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: const Color(0xFFFFCC00).withValues(alpha: 0.35),
+                        color: AppColors.gold.withValues(alpha: 0.35),
                         width: 1.2,
                       ),
                     ),
                     child: Row(
                       children: [
                         const Icon(Icons.ads_click_rounded,
-                            color: Color(0xFFFFCC00), size: 18),
+                            color: AppColors.gold, size: 18),
                         const SizedBox(width: 12),
                         const Expanded(
                           child: Text(
                             'Reklamlar',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: AppColors.bone,
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                             ),
@@ -2860,15 +2848,15 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
                           child: Switch(
                             value: !adsDisabled,
                             onChanged: (v) => toggleAds(!v),
-                            activeColor: const Color(0xFFFFCC00),
-                            inactiveThumbColor: Colors.white38,
-                            inactiveTrackColor: Colors.white12,
+                            activeColor: AppColors.gold,
+                            inactiveThumbColor: AppColors.ash,
+                            inactiveTrackColor: Color(0x1FE8E2D6),
                           ),
                         ),
                         Text(
                           adsDisabled ? 'Kapalı' : 'Açık',
                           style: TextStyle(
-                            color: adsDisabled ? Colors.white38 : const Color(0xFFFFCC00),
+                            color: adsDisabled ? AppColors.ash : AppColors.gold,
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
                           ),
@@ -2890,22 +2878,22 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: const Color(0xFF1A0A3C),
+        backgroundColor: AppColors.inkSurface,
         title: Text(ref.read(l10nProvider).resetProfileConfirm,
-            style: const TextStyle(color: Colors.white)),
+            style: const TextStyle(color: AppColors.bone)),
         content: Text(
           ref.read(l10nProvider).resetProfileDesc,
-          style: const TextStyle(color: Colors.white70),
+          style: const TextStyle(color: AppColors.boneDim),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: Text(ref.read(l10nProvider).cancel, style: const TextStyle(color: Colors.white54)),
+            child: Text(ref.read(l10nProvider).cancel, style: const TextStyle(color: AppColors.ash)),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
             child: Text(ref.read(l10nProvider).resetAction,
-                style: const TextStyle(color: Color(0xFFFF3333))),
+                style: const TextStyle(color: AppColors.danger)),
           ),
         ],
       ),
@@ -2920,20 +2908,20 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: const Color(0xFF1A0A3C),
+        backgroundColor: AppColors.inkSurface,
         title: Text(ref.read(l10nProvider).deleteAllConfirm,
-            style: const TextStyle(color: Colors.white)),
+            style: const TextStyle(color: AppColors.bone)),
         content: Text(ref.read(l10nProvider).deleteForever,
-            style: const TextStyle(color: Colors.white70)),
+            style: const TextStyle(color: AppColors.boneDim)),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: Text(ref.read(l10nProvider).cancel, style: const TextStyle(color: Colors.white54)),
+            child: Text(ref.read(l10nProvider).cancel, style: const TextStyle(color: AppColors.ash)),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
             child: Text(ref.read(l10nProvider).delete,
-                style: const TextStyle(color: Color(0xFFFF3333))),
+                style: const TextStyle(color: AppColors.danger)),
           ),
         ],
       ),
@@ -2976,11 +2964,11 @@ class _OptionsItem extends StatelessWidget {
             Expanded(
               child: Text(
                 label,
-                style: const TextStyle(color: Colors.white, fontSize: 15),
+                style: const TextStyle(color: AppColors.bone, fontSize: 15),
               ),
             ),
             Icon(Icons.chevron_right_rounded,
-                color: Colors.white.withValues(alpha: 0.30), size: 20),
+                color: AppColors.bone.withValues(alpha: 0.30), size: 20),
           ],
         ),
       ),

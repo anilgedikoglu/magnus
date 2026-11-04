@@ -242,13 +242,8 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
   }
 
   String _todayStr() {
-    // L10N: astroDateMonths
-    const ay = [
-      '', 'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
-      'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık',
-    ];
     final now = DateTime.now();
-    return '${now.day} ${ay[now.month]} ${now.year}';
+    return '${now.day} ${ref.read(l10nProvider).monthName(now.month)} ${now.year}';
   }
 
   // ─── Yükleniyor ───────────────────────────────────────────────────────────────
@@ -277,11 +272,10 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
   }
 
   Widget _buildSectionCard(_SelectedText item) {
-    // L10N: astroSectionLabels
     return Padding(padding: const EdgeInsets.only(bottom: 14), child: GlassPanel(
       variant: GlassVariant.reading, padding: const EdgeInsets.all(18),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        OccultSectionLabel(item.section.baslik), const SizedBox(height:12),
+        OccultSectionLabel(ref.watch(l10nProvider).astroSectionLabel(item.section.key)), const SizedBox(height:12),
         RichTextParser.build(item.metin, style: AppTextStyles.reading),
       ]),
     ));

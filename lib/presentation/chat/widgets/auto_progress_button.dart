@@ -89,7 +89,7 @@ class _AutoProgressButtonState extends ConsumerState<AutoProgressButton>
               Text(
                 ref.watch(l10nProvider).magnusWakingUp,
                 style: const TextStyle(
-                  color: Colors.white,
+                  color: AppColors.bone,
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
                   letterSpacing: 0.5,

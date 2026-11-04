@@ -14,7 +14,17 @@
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
 
-### En son session'da tamamlananlar (2026-11-04 — Kullanıcı Bilgileri ekranı "yaşayan nebula")
+### En son session'da tamamlananlar (2026-11-05 — TÜM UYGULAMA "Gece Grimuarı" yeniden tasarımı)
+Anıl: "daha az renkli, ciddi, ürpertici, koyu, liquid glass, çok cilalı". Tüm ekranlar (ana menü 3 sayfa,
+Kullanıcı Bilgileri + açılır pencereleri, Gelen Kutusu, fal detayı, 28 fal ekranı, onboarding balonları)
+tek dile geçti: mürekkep zemin + filmli görseller + cam kartlar + TEK vurgu mum altını + Cinzel/Jost/EB Garamond
+(pakete gömülü). Yeni ortak parçalar: `GrimoireBackdrop`, `OccultGlyphs`, menü kartı/"Mühürlü" slot.
+~40 İngilizcesiz UI metni + fal detayı başlıkları/ay adları TR+EN yapıldı. Ayrıntı → "GECE GRİMUARI" bölümü.
+Üretim: Claude (ana menü/ayarlar/gelen kutusu/fal detayı/çekirdek) + Codex (paket 1-4; 3-4'te kullanım limiti →
+yarım kalanlar elle tamamlandı) + flutter-expert ajanları (paket 5-6, l10n borcu). Commit'ler: 58fb31a5 → 47316fc6.
+⚠️ Codex son inceleme limiti nedeniyle YAPILMADI (Claude code-reviewer yaptı) → HANDOFF "Sıradaki adım".
+
+### Önceki session (2026-11-04 — Kullanıcı Bilgileri ekranı "yaşayan nebula")
 `settings_screen.dart` (Kullanıcı Bilgileri) arka planı: **fragment shader ile yaşayan nebula** (gökte yavaş
 dalgalanma + bölge bölge ALACALI sıcak/soğuk renk değişimi + ışık nefesi + daha koyu) + twinkle yıldızlar +
 kayan yıldız. Anıl'ın geri bildirimiyle **beyaz aurora perdesi ve haleler KALDIRILDI** ("tek beyaz perde
@@ -559,8 +569,11 @@ ayrı renk, renkli dolu buton, glow'lu başlık, saf beyaz metin.
 **Tipografi (`AppTextStyles`):** başlık **Cinzel** (`screenTitle` 18/w600/ls 3, `ritualTitle`, `cardLabel` 12.5) —
 12dp altında ve gövdede YOK; **`toUpperCase()` KULLANMA** (Türkçe İ bozulur; Cinzel zaten kapitalik).
 UI **Jost** (tema + `uiLabel`, `value`, `meta`, `sectionLabel`). Uzun okuma/Magnus balonu **EB Garamond**
-(`reading`/`cardText` 17/w500/1.55, `bubbleText`). Yüzde/tarih: `AppTextStyles.tabular`. Fontlar şimdilik
-google_fonts çalışma anında; ileride pakete gömülmeli (OFL).
+(`reading`/`cardText` 17/w500/1.55, `bubbleText`). Yüzde/tarih: `AppTextStyles.tabular`.
+**Fontlar pakete GÖMÜLÜ (2026-11-05):** `assets/google_fonts/` — Jost 300-700(+italik 400/500), Cinzel 400-900,
+EB Garamond 400-700(+italik 400/500), resmî Google Fonts statik TTF (OFL; lisanslar `OFL-*.txt`, `main.dart`
+`LicenseRegistry`). google_fonts paketi önce buradan yükler → çevrimdışı ilk açılışta font kaybı yok; test
+ortamında da gerçek font render olur. Yeni ağırlık gerekirse aynı adlandırmayla (`Aile-Varyant.ttf`) ekle.
 
 **Bileşenler (`lib/core/widgets/`):** `GlassPanel` (sahte cam: tint+rim+parlama+gölge; `blur:true` yalnız
 gerektiğinde — ekranda ≤2 blur: alt bar + açık modal; kart/balon/satıra blur YOK) · `OccultButton`
@@ -569,8 +582,32 @@ gerektiğinde — ekranda ≤2 blur: alt bar + açık modal; kart/balon/satıra 
 `OccultSectionLabel` (12px altın çizgi + kül etiket) · `FilmedImage` (renkli AI görseline film: doygunluk
 0.20, parlaklık 0.80, kontrast 1.10, soğuk gümüş, vinyet; basılı 0.45/0.90; sepya YOK).
 **İçerik renkleri:** `RichTextParser` `<color=…>` etiketlerini desatüre eder (ton/anlam korunur; hex → `mute()`).
+Kelime kelime animasyon gibi özel çizim için `RichTextParser.span(metin, style:)` ham `TextSpan` verir.
 **Kural:** Seçim ekranları ya `OccultChoiceTile` ya `OccultListCard`. Emoji ikon YOK (çizgi glif).
 "Geri Git" standardı (aşağıda) geçerli. Mikro detay: statik grain/vinyet; mum titremesi ekranda en fazla 1 öğe.
+
+**Ekran zemini — `GrimoireBackdrop` (`lib/core/widgets/grimoire_backdrop.dart`):** TÜM ekranlar
+`Scaffold(backgroundColor: AppColors.ink, body: GrimoireBackdrop(asset: <varsa bg>, child: …))`. Mürekkep +
+üstten hafif mum ışığı + gümüş dip ışığı + eliptik vinyet + STATİK grain (seed'li, `drawRawPoints`); asset
+verilirse `FilmedImage.matrix(imageSaturation 0.18, imageBrightness 0.55)` ile filmler. Eski "Full-Screen
+Arka Plan" şablonundaki çift karartma overlay'i YAPMA. AppBar'lı ekranda tema AppBar'ı şeffaf →
+`extendBodyBehindAppBar: true` + içerikte üst pay (`paddingOf.top + kToolbarHeight`), istenirse başlık
+bandına `flexibleSpace` mürekkep→şeffaf gradyan (Gelen Kutusu, fal detayı örnek). Test: `test/grimoire_backdrop_test.dart`.
+**Okült glifler — `OccultGlyphIcon(OccultGlyph.x, color:, size:)` (`occult_glyphs.dart`):** eye (genel), heart
+(hançerli kalp, aşk), key (kariyer), sprig (şifalı dal, sağlık), compass (pusula-yıldız), moon (hilal). 24'lük
+ızgara, çizgi 1.5, vektör. Seçim kartlarında Material ikonları yerine bunlar (kahve falı, dert ortağı).
+**Ana menü kartı:** `FilmedImage` + alttan mürekkep örtüsü + alt-orta Cinzel etiket + sağ üstte cam kredi
+kapsülü (altın rakam) + `GlassRimPainter`; boş slot = "Mühürlü" kapı (`s.sealed`, kapalı göz mühürü).
+Sayfa göstergesi: etkin altın 24×3, diğerleri kül 8×3 (sayfa başına renk YOK). Hazırlanma halkası
+`_ArcProgressPainter._candle` (soluk altın→parşömen altını palindrom, dikişsiz), hazır = `AppColors.success`.
+**Eski Unity tokenları** (`bubble1-5`, `bubbleFrame1-5`, `glow*`, `astroAccent`) adları korunarak koyu cam +
+altın DEĞERLERE eşlendi (onboarding sohbeti, tarot seçimleri bunları kullanıyor). Yeni kodda kullanma.
+**Nebula (Kullanıcı Bilgileri):** shader son çıktısı `GRIMOIRE_SAT 0.58` (statik yedek `_kSat058` ile aynı).
+**Profil etiketleri** (`jobLabelOf/genderLabelOf/maritalLabelOf`) eski/elle yazılmış anahtarlara toleranslı
+('kadın'→'kadin', 'ozelsektor'→'ozelsektoru').
+**Görsel doğrulama:** `build/visual_check/app_screens_capture_test.dart --dart-define=CAP_PHASE=<ad>` → tüm
+ana sekmeler + 28 fal ekranı + 4 fal detayı + ayar pencereleri + onboarding PNG'leri `screens/<ad>/`.
+Kontak sayfaları: `screens/kontak_once_A.png` (önce) / `kontak_sonra6_{A,B,C}.png` (sonra).
 
 ---
 

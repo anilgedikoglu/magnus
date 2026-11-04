@@ -7,6 +7,8 @@
 ### Sürüm
 - **main'deki sürüm: `10.8.6+258`** (başka bir oturum: Android API 36 hedefi + intl ^0.20.2, commit `0fd1cc89`).
   Not: o oturum +1 artırmış (257→258); kural +3.
+- **⚠️ TOOLCHAIN: Flutter 3.41.5 (`C:\src\flutter\bin\flutter.bat`).** main bunu ister (API 36 = 3.41'in
+  `flutter.targetSdkVersion`). `C:\flutter` 3.29.2 ile `pub get` çözülmez. Codemagic de 3.41.5'e hizalandı.
 - **Bir sonraki build: `10.8.7+261`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
@@ -1290,7 +1292,9 @@ Tüm sayfalar TR/EN dil seçimi içeriyor (tarayıcı diline göre otomatik).
 
 ### Codemagic
 - **Workflow:** `ios-release` (codemagic.yaml)
-- **Flutter:** 3.29.2 (pinli)
+- **Flutter:** 3.41.5 (pinli — 2026-11-04'te 3.29.2'den yükseltildi; lokal `C:\src\flutter` ile aynı).
+  ⚠️ main `intl ^0.20.2` + lock Dart ≥3.9 ister → 3.29.2 ile `pub get` ÇÖZÜLMEZ. Lokal için `C:\flutter` (3.29.2) KULLANMA.
+  ⚠️ 3.41.5 ile ilk iOS build'i henüz denenmedi — Podfile/min iOS sürümü uyarısı çıkarsa oradan bak.
 - **Instance:** mac_mini_m2
 - **Env groups:** `ios_signing`, `app_secrets`, `app_store_connect`
 - **Env variables (app level):**

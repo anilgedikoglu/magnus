@@ -7,7 +7,7 @@ workflows:
     instance_type: mac_mini_m2
 
     environment:
-      flutter: 3.29.2        # Lokal dev ile aynı versiyon — breaking change önleme
+      flutter: 3.41.5        # Lokal C:/src/flutter ile aynı (main lock Dart >=3.9 ister; 3.29.2 intl çakışması verir)
       xcode: latest
       cocoapods: default
       groups:

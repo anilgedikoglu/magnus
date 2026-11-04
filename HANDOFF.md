@@ -11,7 +11,12 @@
   - `test/starfield_overlay_test.dart` (3 test: olaylar boyunca hatasız, reduced-motion kare planlamaz, küçük starCount)
 - Mimari/değerler: `CLAUDE.md` → "Kozmik Gökyüzü Katmanı" bölümü.
 
+- **Toolchain uyumsuzluğu giderildi:** main (başka oturum, `0fd1cc89`) Flutter 3.41.5 + `intl ^0.20.2` istiyordu
+  ama `codemagic.yaml` hâlâ `flutter: 3.29.2` idi → iOS build `pub get`'te kesin patlardı. Codemagic → 3.41.5.
+  Lokal Flutter: `C:\src\flutter` (3.41.5). `C:\flutter` (3.29.2) artık bu projede çalışmaz.
+
 ## Yarım kalan
+- **Flutter 3.41.5 ile ilk iOS (Codemagic) build'i hiç denenmedi** — Podfile / min iOS / CocoaPods uyarılarına hazırlıklı ol.
 - Cihazda (gerçek iPhone/Android) görsel + FPS ölçümü yapılmadı; doğrulama widget-test render kareleriyle yapıldı.
 - Mağaza build'i ALINMADI (Anıl "test çık" demeden build yok). Bir sonraki: `10.8.7+261` (main `10.8.6+258`).
 

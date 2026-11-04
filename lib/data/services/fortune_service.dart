@@ -564,6 +564,18 @@ class FortuneService {
   };
 
   // JSON kart adı → İngilizce kart adı (InboxItem başlığı için)
+  /// Fal detayı için: İngilizce başlıktaki kart adı → Türkçe görünen ad (görsel anahtarı).
+  /// Ters yön: Flutter adı → JSON kart → İngilizce. Bulunamazsa null.
+  static String? trCardNameForEn(String en) {
+    for (final e in _flutterToJsonKart.entries) {
+      if (_jsonKartToEnName[e.value] == en) return e.key;
+    }
+    for (final e in _jsonKartToEnName.entries) {
+      if (e.value == en) return e.key;
+    }
+    return null;
+  }
+
   static const _jsonKartToEnName = <String, String>{
     'Adalet': 'Justice',
     'Asiklar': 'The Lovers',

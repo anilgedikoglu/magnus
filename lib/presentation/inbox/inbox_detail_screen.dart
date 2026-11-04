@@ -11,6 +11,7 @@ import '../../core/widgets/glass_panel.dart';
 import '../../core/widgets/grimoire_backdrop.dart';
 import '../../core/widgets/occult_cards.dart';
 import '../../data/models/inbox_item.dart';
+import '../../data/services/fortune_service.dart';
 import '../../data/providers.dart';
 
 // Kart adı → asset yolu eşleştirmesi (tarot_screen._allCards ile birebir)
@@ -505,8 +506,14 @@ class InboxDetailScreen extends ConsumerWidget {
   //   Klasik: "Tarot Falın: Kart1, Ters Kart2, Kart3"
   //   Tek kart: "Aşk Kartı Falın: JsonKartAdi" / "Dilek Kartı Falın: …" / "Şans Kartı Falın: …"
 
+  // TR ve EN başlık önekleri (fortune_service: isEn ? '<Type> Reading: ' : '<Tür> Falın: ').
+  static const _singlePrefixes = [
+    'Aşk Kartı Falın: ', 'Dilek Kartı Falın: ', 'Şans Kartı Falın: ',
+    'Love Card Reading: ', 'Wish Card Reading: ', 'Luck Card Reading: ',
+  ];
+
   String get _isSingleTarotType {
-    for (final p in ['Aşk Kartı Falın: ', 'Dilek Kartı Falın: ', 'Şans Kartı Falın: ']) {
+    for (final p in _singlePrefixes) {
       if (item.title.startsWith(p)) return p;
     }
     return '';
@@ -518,9 +525,9 @@ class InboxDetailScreen extends ConsumerWidget {
     if (singlePrefix.isNotEmpty) {
       // ── Tek kart ──
       final jsonName = item.title.substring(singlePrefix.length).trim();
-      final type = singlePrefix.startsWith('Aşk')
+      final type = (singlePrefix.startsWith('Aşk') || singlePrefix.startsWith('Love'))
           ? 'ask'
-          : singlePrefix.startsWith('Dilek')
+          : (singlePrefix.startsWith('Dilek') || singlePrefix.startsWith('Wish'))
               ? 'dilek'
               : 'sans';
       final headerLabel = type == 'ask'
@@ -542,7 +549,7 @@ class InboxDetailScreen extends ConsumerWidget {
                 style: AppTextStyles.meta.copyWith(fontFeatures: AppTextStyles.tabular),
               ),
               const SizedBox(height: 20),
-              SizedBox(width: 124, child: _buildCardThumb(jsonName, false, s, type: type)),
+              SizedBox(width: 124, child: _buildCardThumb(jsonName, jsonName, false, s, type: type)),
               const SizedBox(height: 8),
             ],
           ),
@@ -570,7 +577,7 @@ class InboxDetailScreen extends ConsumerWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: cards
-                    .map((c) => Expanded(child: _buildCardThumb(c.$1, c.$2, s)))
+                    .map((c) => Expanded(child: _buildCardThumb(c.key, c.label, c.reversed, s)))
                     .toList(),
               ),
             const SizedBox(height: 8),
@@ -583,7 +590,9 @@ class InboxDetailScreen extends ConsumerWidget {
   // Tarot kart görseli oranı: 276 × 480  →  ratio = 276/480 = 0.575
   static const double _cardRatio = 276 / 480;
 
-  Widget _buildCardThumb(String cardName, bool isReversed, AppStrings s, {String? type}) {
+  /// [cardName] görsel anahtarı (Türkçe ad / JSON adı), [label] ekranda yazan ad.
+  Widget _buildCardThumb(String cardName, String label, bool isReversed, AppStrings s,
+      {String? type}) {
     // type == null → klasik (tarot/ klasör), aksi halde tek kart türü
     String? asset;
     if (type == null) {
@@ -637,7 +646,7 @@ class InboxDetailScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            isReversed ? s.reversedCard(cardName) : cardName,
+            isReversed ? s.reversedCard(label) : label,
             style: AppTextStyles.meta.copyWith(fontSize: 11, color: AppColors.boneDim),
             textAlign: TextAlign.center,
             maxLines: 2,
@@ -662,17 +671,26 @@ class InboxDetailScreen extends ConsumerWidget {
   }
 
   /// Başlıktan kart isimlerini ve ters bilgisini parse eder.
-  /// Başlık formatı: "Tarot Falın: Kart1, Ters Kart2, Kart3"
-  List<(String, bool)> _parseTarotCards() {
-    const prefix = 'Tarot Falın: ';
-    if (!item.title.startsWith(prefix)) return [];
-    final part = item.title.substring(prefix.length);
-    return part.split(', ').map((s) {
-      final trimmed = s.trim();
-      if (trimmed.startsWith('Ters ')) {
-        return (trimmed.substring(5), true);
+  /// TR: "Tarot Falın: Kart1, Ters Kart2, Kart3"
+  /// EN: "Your Tarot Reading: The Moon, Reversed Death, The Star" → görsel için TR ada çevrilir.
+  List<({String key, String label, bool reversed})> _parseTarotCards() {
+    const trPrefix = 'Tarot Falın: ';
+    const enPrefix = 'Your Tarot Reading: ';
+    final isEnTitle = item.title.startsWith(enPrefix);
+    if (!isEnTitle && !item.title.startsWith(trPrefix)) return [];
+    final part = item.title.substring(isEnTitle ? enPrefix.length : trPrefix.length);
+    return part.split(', ').map((raw) {
+      var name = raw.trim();
+      var reversed = false;
+      for (final r in const ['Ters ', 'Reversed ']) {
+        if (name.startsWith(r)) {
+          name = name.substring(r.length);
+          reversed = true;
+          break;
+        }
       }
-      return (trimmed, false);
+      final key = isEnTitle ? (FortuneService.trCardNameForEn(name) ?? name) : name;
+      return (key: key, label: name, reversed: reversed);
     }).toList();
   }
 

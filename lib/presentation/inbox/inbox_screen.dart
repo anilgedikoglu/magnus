@@ -57,6 +57,8 @@ class InboxScreen extends ConsumerWidget {
         ],
       ),
       body: GrimoireBackdrop(child: GestureDetector(
+        // Boş kutuda içerik yalnız ortadaki ikon/metin → opak, tüm alan kaydırmayı yakalar.
+        behavior: HitTestBehavior.opaque,
         // Soldan sağa swipe → geri (ana menüye dön)
         onHorizontalDragEnd: (details) {
           if ((details.primaryVelocity ?? 0) > 200) {

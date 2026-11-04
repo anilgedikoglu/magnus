@@ -30,7 +30,10 @@ class TarotTypeScreen extends ConsumerWidget {
           onPressed: () => context.pop(),
         ),
       ),
-      body: GrimoireBackdrop(child: Padding(padding: EdgeInsets.only(top: MediaQuery.paddingOf(context).top + kToolbarHeight, bottom: MediaQuery.paddingOf(context).bottom), child: SafeArea(
+      body: GrimoireBackdrop(child: Padding(padding: EdgeInsets.only(top: MediaQuery.paddingOf(context).top + kToolbarHeight, bottom: MediaQuery.paddingOf(context).bottom), child: MediaQuery.removePadding(
+        context: context,
+        removeTop: true,
+        removeBottom: true,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 28, 20, 16),
           child: Column(
@@ -48,7 +51,7 @@ class TarotTypeScreen extends ConsumerWidget {
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 20,
                   childAspectRatio: 0.78,
-                  physics: const BouncingScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   children: [
                     _TypeCard(
                       imagePath: 'assets/images/tarotbir.png',

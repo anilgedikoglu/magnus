@@ -372,11 +372,39 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
       child: SafeArea(
         child: Column(
           children: [
+            // Üst bar: cam geri kutusu + başlık (Codex/inceleme: üst geri kaldırılmıştı;
+            // rota FadeTransition olduğu için iOS'ta kenardan kaydırma yok).
             Padding(
-              padding: const EdgeInsets.all(16),
-              child: Text(
-                ref.watch(l10nProvider).biyoritimTitle,
-                style: AppTextStyles.screenTitle,
+              padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+              child: Row(
+                children: [
+                  Semantics(
+                    button: true,
+                    label: ref.watch(l10nProvider).backButton,
+                    child: GestureDetector(
+                      onTap: () => context.pop(),
+                      child: Container(
+                        width: 38,
+                        height: 38,
+                        decoration: BoxDecoration(
+                          color: AppColors.glassTint,
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: AppColors.rim, width: 0.8),
+                        ),
+                        child: const Icon(Icons.chevron_left_rounded,
+                            color: AppColors.bone, size: 24),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      ref.watch(l10nProvider).biyoritimTitle,
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.screenTitle,
+                    ),
+                  ),
+                  const SizedBox(width: 38),
+                ],
               ),
             ),
             Expanded(

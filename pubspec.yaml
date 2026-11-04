@@ -90,6 +90,10 @@ flutter_native_splash:
 flutter:
   uses-material-design: true
 
+  # Fragment shader'lar (FragmentProgram.fromAsset) — Kullanıcı Bilgileri "yaşayan nebula"
+  shaders:
+    - shaders/living_nebula.frag
+
   assets:
     - assets/data/
     - assets/images/

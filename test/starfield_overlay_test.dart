@@ -4,8 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:magnus_app/core/widgets/starfield_overlay.dart';
 
 void main() {
-  testWidgets(
-      'ilk kayan yıldız + ilk hale + aurora boyunca hatasız çizer, sürekli kare ister',
+  testWidgets('ilk kayan yıldız boyunca hatasız çizer, sürekli kare ister',
       (tester) async {
     await tester.pumpWidget(const MaterialApp(
       home: Stack(children: [
@@ -14,10 +13,7 @@ void main() {
       ]),
     ));
     final shot = StarfieldOverlay.debugFirstShot();
-    final halo = StarfieldOverlay.debugFirstHalo();
-    final end = [shot.start + shot.duration, halo.start + halo.duration]
-        .reduce((a, b) => a > b ? a : b);
-    final steps = ((end + 1) / 0.1).ceil();
+    final steps = ((shot.start + shot.duration + 1) / 0.1).ceil();
     for (var i = 0; i < steps; i++) {
       await tester.pump(const Duration(milliseconds: 100));
     }

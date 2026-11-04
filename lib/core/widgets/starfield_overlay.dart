@@ -1,24 +1,17 @@
 // lib/core/widgets/starfield_overlay.dart
 //
-// Nebula arka planının üstünde performanslı "kozmik gökyüzü" katmanı:
+// Nebula arka planının üstünde performanslı yıldız katmanı:
 //   • Noktasal yıldızlar twinkle yapar (ışıyıp kaybolur; sönenler yeni yere atlar).
 //   • Nadiren, uzakta bir kayan yıldız geçer.
-//   • Kuzey ışığı perdeleri: yavaş dalgalanan, alt kenarı parlak, yukarı sönen
-//     mat mor/teal kurdeleler (drawVertices, blur yok).
-//   • Halelenmeler: ara ara bir yerde yavaşça açılıp sönen yumuşak ışık halesi.
+// (Gökyüzü dalgalanması / alacalı renk → living_nebula.dart shader'ı.
+//  Eski aurora kurdeleleri + haleler 2026-11-04'te kullanıcı isteğiyle kaldırıldı.)
 //
 // Mimari (Codex ile danışıldı + eleştirildi, 2026-11-04):
-//   - Tek Ticker → _time (yıldızlar, ekran hızında) + _auroraTime (aurora/hale,
-//     1/30 sn zaman dilimleriyle — hareket çok yavaş, judder olmaz).
-//   - Painter'lar t'ye bağlı SAF fonksiyon: Random / setState / olay üretimi YOK.
-//     Tüm takvim ve konumlar seed'li Random ile model kurulurken BİR KEZ üretilir.
-//   - Işık: Paint.blendMode = plus (Porter-Duff, Impeller'da ucuz; düşük alpha'da
-//     screen ile farkı yok). Blur / saveLayer YOK.
-//   - IgnorePointer + iki ayrı RepaintBoundary (aurora / yıldız) + içerik ayrı.
-//   - TickerMode ve reduced-motion'a saygılı (hareket durur, hale kapanır).
+//   - Tek Ticker → _time; painter t'ye bağlı SAF fonksiyon (Random/setState yok).
+//   - Yıldız konumları ve kayan yıldız takvimi seed'li Random ile BİR KEZ üretilir.
+//   - IgnorePointer + RepaintBoundary; TickerMode ve reduced-motion'a saygılı.
 
 import 'dart:math';
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -30,15 +23,8 @@ class StarfieldOverlay extends StatefulWidget {
   final int starCount;
   final int seed;
 
-  /// Kuzey ışığı perdeleri + halelenmeler.
-  final bool aurora;
-
-  const StarfieldOverlay({
-    super.key,
-    this.starCount = 170,
-    this.seed = 7312,
-    this.aurora = true,
-  }) : assert(starCount > 0);
+  const StarfieldOverlay({super.key, this.starCount = 170, this.seed = 7312})
+      : assert(starCount > 0);
 
   /// Test/görsel doğrulama için: ilk kayan yıldız.
   @visibleForTesting
@@ -55,22 +41,13 @@ class StarfieldOverlay extends StatefulWidget {
     );
   }
 
-  /// Test/görsel doğrulama için: ilk hale.
-  @visibleForTesting
-  static ({double start, double duration, double x, double y}) debugFirstHalo(
-      {int seed = 7312, int starCount = 170}) {
-    final h = _SkyModel(seed, starCount).halos.first;
-    return (start: h.startT, duration: h.duration, x: h.x, y: h.y);
-  }
-
   @override
   State<StarfieldOverlay> createState() => _StarfieldOverlayState();
 }
 
-/// Nebula arka planını "gizemli" koyulaştırır (yıldız katmanının ALTINA konur):
-///   1) Hafif dikey gradient (üst/alt ~%50, orta ~%40 — eski düz %38'den biraz koyu)
-///   2) Ekran oranına normalize ELİPTİK vinyet: merkezdeki nebula korunur,
-///      kenar/köşeler koyulaşır.
+/// Statik koyulaştırma (shader yokken / yüklenirken yedek — LivingNebulaBackground):
+///   1) Dikey gradient (üst/alt ~%55, orta ~%47) — shader'ın koyuluğuna yakın.
+///   2) Ekran oranına normalize ELİPTİK vinyet: merkez korunur, kenar/köşeler koyu.
 /// Not (Codex incelemesi): düz RadialGradient yarıçapı kısa kenara göre çizildiği
 /// için uzun ekranlarda üst/alt aşırı kararıyordu → _FitEllipse ile düzeltildi.
 class SkyDarkenOverlay extends StatelessWidget {
@@ -88,9 +65,9 @@ class SkyDarkenOverlay extends StatelessWidget {
               end: Alignment.bottomCenter,
               stops: [0.0, 0.5, 1.0],
               colors: [
-                Color(0x80000000), // üst ~%50
-                Color(0x66000000), // orta ~%40 (nebula görünür kalsın)
-                Color(0x80000000), // alt ~%50
+                Color(0x8C000000), // üst ~%55
+                Color(0x78000000), // orta ~%47
+                Color(0x8C000000), // alt ~%55
               ],
             ),
           ),
@@ -136,39 +113,29 @@ class _StarfieldOverlayState extends State<StarfieldOverlay>
   Ticker? _ticker;
   late final _SkyModel _sky;
   final ValueNotifier<double> _time = ValueNotifier<double>(3.0);
-  final ValueNotifier<double> _auroraTime = ValueNotifier<double>(3.0);
-  int _auroraSlot = -1;
   bool _reducedMotion = false;
 
   @override
   void initState() {
     super.initState();
     _sky = _SkyModel(widget.seed, widget.starCount);
-    // Tek ticker: yıldızlar ekran hızında, aurora/hale 1/30 sn dilimlerinde.
+    // Tek ticker — mutlak geçen süreyi saniye olarak _time'a yazar.
     _ticker = createTicker((elapsed) {
-      final sec = elapsed.inMicroseconds / 1e6;
-      _time.value = sec;
-      final slot = (sec * 30).floor();
-      if (slot != _auroraSlot) {
-        _auroraSlot = slot;
-        _auroraTime.value = slot / 30.0;
-      }
+      _time.value = elapsed.inMicroseconds / 1e6;
     });
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    // Reduced-motion: animasyonu durdur, statik sabit kare göster.
+    // Reduced-motion: animasyonu durdur, yıldızları statik sabit karede göster.
     _reducedMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     final tk = _ticker;
     if (tk != null) {
       if (_reducedMotion) {
         if (tk.isActive) tk.stop();
-        _time.value = 3.0;
-        _auroraTime.value = 3.0;
+        _time.value = 3.0; // sabit kare
       } else if (!tk.isActive) {
-        _auroraSlot = -1; // ticker sıfırdan başlar → dilim sayacı da
         tk.start();
       }
     }
@@ -178,31 +145,17 @@ class _StarfieldOverlayState extends State<StarfieldOverlay>
   void dispose() {
     _ticker?.dispose();
     _time.dispose();
-    _auroraTime.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    final animate = !_reducedMotion;
     return IgnorePointer(
-      child: Stack(
-        fit: StackFit.expand,
-        children: [
-          if (widget.aurora)
-            RepaintBoundary(
-              child: CustomPaint(
-                painter: _AuroraPainter(_auroraTime, _sky, animate: animate),
-                child: const SizedBox.expand(),
-              ),
-            ),
-          RepaintBoundary(
-            child: CustomPaint(
-              painter: _SkyPainter(_time, _sky, animate: animate),
-              child: const SizedBox.expand(),
-            ),
-          ),
-        ],
+      child: RepaintBoundary(
+        child: CustomPaint(
+          painter: _SkyPainter(_time, _sky, animate: !_reducedMotion),
+          child: const SizedBox.expand(),
+        ),
       ),
     );
   }
@@ -235,65 +188,18 @@ class _Shot {
       this.thickness, this.maxA);
 }
 
-class _Halo {
-  final double startT, duration; // s
-  final double x, y; // normalize merkez
-  final double rFrac; // kısa kenarın oranı
-  final Color color;
-  final double peakA;
-  const _Halo(this.startT, this.duration, this.x, this.y, this.rFrac,
-      this.color, this.peakA);
-}
-
-/// Kuzey ışığı perdesi yapılandırması (geometri paint()'te t'den hesaplanır).
-class _Ribbon {
-  final double base; // parlak alt kenarın normalize y'si
-  final double height; // perdenin yukarı uzanımı (normalize)
-  final double peakA; // tepe alpha
-  final Color top, edge; // üst ton, parlak kenar tonu (tek baskın aile)
-  final double x0, x1; // yatay kapsam (normalize), uçlarda söner
-  final double p1, p2, p3; // fazlar
-  final double speed; // hız çarpanı
-  /// Alt kenar yumuşaklığı: 1 = keskin aurora kenarı, >1 = pus bandı (çizgi gibi durmasın).
-  final double edgeSoft;
-  // Kalıcı tampon (her karede yeniden ayrılmasın).
-  final Float32List pos = Float32List(_kCols * _kRows * 2);
-  final Int32List cols = Int32List(_kCols * _kRows);
-  _Ribbon(this.base, this.height, this.peakA, this.top, this.edge, this.x0,
-      this.x1, this.p1, this.p2, this.p3, this.speed, [this.edgeSoft = 1.0]);
-}
-
-// Perde ızgarası: 72 sütun × 7 sıra. Sıralar üstten alta; alt kenar parlak/dar,
-// yukarı uzun sönüm (gerçek aurora profili). Son sıra kenarın biraz altı (söner).
-const int _kCols = 72;
-const int _kRows = 7;
-const List<double> _kRowS = [0.0, 0.30, 0.58, 0.80, 0.93, 1.0, 1.14];
-const List<double> _kRowI = [0.0, 0.10, 0.30, 0.62, 0.92, 1.0, 0.0];
-const List<double> _kRowEdgeMix = [0.0, 0.0, 0.10, 0.35, 0.70, 1.0, 1.0];
-
-// Mat palet (neon değil) — uygulamanın mor-pembe kimliğiyle uyumlu.
-const Color _kViolet = Color(0xFF7762B5);
-const Color _kTeal = Color(0xFF4FA99F);
-const Color _kMagenta = Color(0xFFA35B92);
-
 class _SkyModel {
   final int seed;
   final List<_Star> stars;
   final List<_Shot> shots;
-  final List<_Halo> halos;
-  final List<_Ribbon> ribbons;
-  final Uint16List ribbonIndices = _mkIndices();
 
-  /// Döngüler: son olay tamamen bittikten sonra liste baştan tekrar eder
+  /// Takvim döngüsü: son kaymadan 12 sn sonra liste baştan tekrar eder
   /// (Codex incelemesi: ~22 dk sonra kayan yıldızlar bitiyordu).
   late final double shotCycle = shots.last.startT + shots.last.duration + 12;
-  late final double haloCycle = halos.last.startT + halos.last.duration + 6;
 
   _SkyModel._(this.seed, Random r, int count)
       : stars = _mkStars(r, count),
-        shots = _mkShots(r),
-        halos = _mkHalos(r),
-        ribbons = _mkRibbons(r);
+        shots = _mkShots(r);
 
   factory _SkyModel(int seed, int count) =>
       _SkyModel._(seed, Random(seed), count);
@@ -339,57 +245,6 @@ class _SkyModel {
     return shots;
   }
 
-  // Halelenmeler: aralık (10..18 sn) > süre (5..8 sn) → asla üst üste binmez.
-  static List<_Halo> _mkHalos(Random r) {
-    final halos = <_Halo>[];
-    double t = 3 + r.nextDouble() * 4; // ilk hale 3..7 sn sonra
-    for (var i = 0; i < 80; i++) {
-      final dur = 5 + r.nextDouble() * 3;
-      final top = r.nextDouble() < 0.3; // %30 üst şerit, %70 nebula bölgesi
-      final x = 0.10 + r.nextDouble() * 0.80;
-      final y = top ? 0.04 + r.nextDouble() * 0.14 : 0.46 + r.nextDouble() * 0.38;
-      final rFrac = 0.12 + r.nextDouble() * 0.13; // kısa kenarın %12..25'i
-      final pick = r.nextDouble();
-      final color = pick < 0.5 ? _kViolet : (pick < 0.8 ? _kTeal : _kMagenta);
-      // Görsel doğrulama: 0.10..0.18 mat renk + plus ile görünmüyordu → 0.32..0.48.
-      final peakA = 0.32 + r.nextDouble() * 0.16;
-      halos.add(_Halo(t, dur, x, y, rFrac, color, peakA));
-      t += 10 + r.nextDouble() * 8;
-    }
-    return halos;
-  }
-
-  static List<_Ribbon> _mkRibbons(Random r) {
-    double ph() => r.nextDouble() * 2 * pi;
-    return [
-      // Ana perde: üst şerit (dişliler/başlık hizası), mor baskın, kenar hafif teal.
-      // Görsel doğrulama: peakA 0.16 neredeyse görünmüyordu → 0.50 (ikinci 0.08 → 0.26).
-      _Ribbon(0.115, 0.085, 0.50, _kViolet,
-          // Kenar teal-yeşile yakın: gerçek aurora imzası (altta yeşil, üstte mor).
-          Color.lerp(_kViolet, _kTeal, 0.7)!, -0.05, 1.05, ph(), ph(), ph(), 1.0),
-      // İkinci, çok soluk perde: kutular ile donutlar arası, teal baskın.
-      _Ribbon(0.47, 0.06, 0.26, Color.lerp(_kTeal, _kViolet, 0.4)!, _kTeal,
-          0.12, 0.95, ph(), ph(), ph(), 0.8, 2.6),
-    ];
-  }
-
-  static Uint16List _mkIndices() {
-    final idx = Uint16List((_kRows - 1) * (_kCols - 1) * 6);
-    var k = 0;
-    for (var rr = 0; rr < _kRows - 1; rr++) {
-      for (var c = 0; c < _kCols - 1; c++) {
-        final a = rr * _kCols + c, b = a + 1, d = a + _kCols, e = d + 1;
-        idx[k++] = a;
-        idx[k++] = b;
-        idx[k++] = d;
-        idx[k++] = d;
-        idx[k++] = b;
-        idx[k++] = e;
-      }
-    }
-    return idx;
-  }
-
   /// Deterministik tamsayı hash → [0,1). Seed dahil (Codex incelemesi).
   double hash01(int i, int c, int salt) {
     var x = (i * 374761393 + c * 668265263 + (salt + seed * 7919) * 1442695041) &
@@ -398,11 +253,6 @@ class _SkyModel {
     x = (x ^ (x >> 16)) & 0x7fffffff;
     return x / 0x80000000;
   }
-}
-
-double _smooth(double e0, double e1, double x) {
-  final t = ((x - e0) / (e1 - e0)).clamp(0.0, 1.0);
-  return t * t * (3 - 2 * t);
 }
 
 // ── Yıldız + kayan yıldız painter'ı (ekran hızında) ─────────────────────────
@@ -507,109 +357,4 @@ class _SkyPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _SkyPainter old) => old.animate != animate;
-}
-
-// ── Kuzey ışığı perdeleri + halelenme painter'ı (30 Hz) ─────────────────────
-
-class _AuroraPainter extends CustomPainter {
-  final ValueNotifier<double> time;
-  final _SkyModel sky;
-  final bool animate;
-  _AuroraPainter(this.time, this.sky, {required this.animate})
-      : super(repaint: time);
-
-  static final Paint _light = Paint()..blendMode = BlendMode.plus;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final t = time.value;
-    final w = size.width, h = size.height;
-    if (w <= 0 || h <= 0) return;
-    for (final rb in sky.ribbons) {
-      _drawRibbon(canvas, rb, w, h, t);
-    }
-    if (animate) _drawHalo(canvas, w, h, t);
-  }
-
-  void _drawRibbon(Canvas canvas, _Ribbon rb, double w, double h, double t) {
-    final ts = t * rb.speed;
-    // Yavaş genel nefes (parıltı tamamen sabit durmasın).
-    final breath = 0.72 + 0.28 * sin(0.21 * ts + rb.p3);
-    for (var c = 0; c < _kCols; c++) {
-      final xi = rb.x0 + (rb.x1 - rb.x0) * c / (_kCols - 1);
-      // Parlak alt kenar: katmanlı yavaş sinüsler (~2-5 px/sn hareket).
-      final yb = rb.base +
-          0.018 * sin(2 * pi * 0.9 * xi + 0.30 * ts + rb.p1) +
-          0.010 * sin(2 * pi * 2.1 * xi - 0.22 * ts + rb.p2) +
-          0.004 * sin(2 * pi * 4.3 * xi + 0.41 * ts + rb.p3);
-      final hh = rb.height * (0.75 + 0.25 * sin(2 * pi * 0.6 * xi + 0.17 * ts + rb.p2));
-      // Yatay yoğunluk: uçlarda söner, yamalı, hafif dikey ışın dokusu.
-      final ends = _smooth(rb.x0, rb.x0 + 0.18, xi) * _smooth(rb.x1, rb.x1 - 0.18, xi);
-      final patch = 0.35 +
-          0.65 *
-              (0.5 + 0.5 * sin(2 * pi * 0.75 * xi - 0.19 * ts + rb.p1)) *
-              (0.6 + 0.4 * sin(2 * pi * 1.6 * xi + 0.13 * ts + rb.p3));
-      final rays = 0.86 + 0.14 * sin(2 * pi * 8 * xi + 0.35 * ts);
-      final inten = ends * patch * rays * breath;
-
-      for (var r = 0; r < _kRows; r++) {
-        final vi = r * _kCols + c;
-        final s = r == _kRows - 1 ? 1 + 0.14 * rb.edgeSoft : _kRowS[r];
-        final y = yb + (s - 1) * hh;
-        rb.pos[vi * 2] = xi * w;
-        rb.pos[vi * 2 + 1] = y * h;
-        final a = (rb.peakA * inten * _kRowI[r]).clamp(0.0, 1.0);
-        final col = Color.lerp(rb.top, rb.edge, _kRowEdgeMix[r])!;
-        rb.cols[vi] = col.withValues(alpha: a).toARGB32();
-      }
-    }
-    final v = ui.Vertices.raw(ui.VertexMode.triangles, rb.pos,
-        colors: rb.cols, indices: sky.ribbonIndices);
-    try {
-      // BlendMode.dst → köşe renkleri aynen; Paint.blendMode=plus → ışık gibi toplanır.
-      canvas.drawVertices(v, BlendMode.dst, _light);
-    } finally {
-      // 30 Hz × 2 kurdele: native belleği GC'yi beklemeden bırak. Güvenli —
-      // kaydedilen çizim alttaki köşe verisine kendi referansını tutar
-      // (Flutter 3.29.2 painting.dart Vertices.dispose; Codex incelemesi).
-      v.dispose();
-    }
-  }
-
-  void _drawHalo(Canvas canvas, double w, double h, double time) {
-    final t = time % sky.haloCycle;
-    _Halo? cur;
-    for (final hl in sky.halos) {
-      if (hl.startT > t) break;
-      if (t <= hl.startT + hl.duration) {
-        cur = hl;
-        break;
-      }
-    }
-    if (cur == null) return;
-    final p = (t - cur.startT) / cur.duration; // 0..1
-    final s = sin(pi * p);
-    final env = s * s; // uçlarda eğimi sıfır → yumuşak açılıp sönme
-    final a = cur.peakA * env;
-    if (a < 0.004) return;
-    // Halelenme: açılırken hafifçe genişler.
-    final r = cur.rFrac * min(w, h) * (0.85 + 0.25 * p);
-    final center = Offset(cur.x * w, cur.y * h);
-    final paint = Paint()
-      ..blendMode = BlendMode.plus
-      ..shader = ui.Gradient.radial(
-        center,
-        r,
-        [
-          cur.color.withValues(alpha: a),
-          cur.color.withValues(alpha: a * 0.55),
-          cur.color.withValues(alpha: 0),
-        ],
-        const [0.0, 0.45, 1.0],
-      );
-    canvas.drawCircle(center, r, paint);
-  }
-
-  @override
-  bool shouldRepaint(covariant _AuroraPainter old) => old.animate != animate;
 }

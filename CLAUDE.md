@@ -14,11 +14,13 @@
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
 
-### En son session'da tamamlananlar (2026-11-04 — Kullanıcı Bilgileri ekranı kozmik gökyüzü)
-`settings_screen.dart` (Kullanıcı Bilgileri) arka planı: **koyulaştırma + twinkle yıldızlar + kayan yıldız +
-kuzey ışığı perdeleri + halelenmeler**. Tek dosya: `lib/core/widgets/starfield_overlay.dart`. Ayrıntı:
-→ "Kozmik Gökyüzü Katmanı" bölümü. Testler: `test/starfield_overlay_test.dart` (3 test, geçiyor).
-Codex'e önce danışıldı + 2 kez kod incelemesi yaptırıldı; değerler gerçek render karelerine bakılarak ayarlandı.
+### En son session'da tamamlananlar (2026-11-04 — Kullanıcı Bilgileri ekranı "yaşayan nebula")
+`settings_screen.dart` (Kullanıcı Bilgileri) arka planı: **fragment shader ile yaşayan nebula** (gökte yavaş
+dalgalanma + bölge bölge ALACALI sıcak/soğuk renk değişimi + ışık nefesi + daha koyu) + twinkle yıldızlar +
+kayan yıldız. Anıl'ın geri bildirimiyle **beyaz aurora perdesi ve haleler KALDIRILDI** ("tek beyaz perde
+istemiyorum, sabit morluk yerine alacalı değişim"). Ayrıntı → "Kozmik Gökyüzü Katmanı" bölümü.
+Testler: `test/living_nebula_test.dart` (3: gerçek piksel kontrolü dahil) + `test/starfield_overlay_test.dart` (3).
+Codex'e her adımda önce danışıldı + kod incelemeleri; değerler gerçek render kareleri/video + PSNR ile ayarlandı.
 
 ### En son session'da tamamlananlar (2026-06-11 — swipe + gradient + alt menü)
 1. **SOLDAN SAĞA SWIPE = GERİ (10 ekran):** `lib/core/widgets/swipe_back.dart` oluşturuldu (raw `Listener` — gesture arena'ya girmez, ScrollView/PageView ile çakışmaz). Soldan sağa kaydırma "geri" tuşu gibi çalışır. Uygulanan ekranlar: coffee (fal konusu seçim), tarot_type, numeroloji (step-aware: seçim→geri), durugoru (odaklanmıyorsa pop), yuz_fali_kimin, motivation, acigercekler, kaderkitabi, dertortagi (step-aware: `_geriDon()` kullanır), kehanet_menu. Eşik: `threshold=60px` + yatay > dikey×1.5.
@@ -537,31 +539,40 @@ return Scaffold(
 
 ---
 
-## Kozmik Gökyüzü Katmanı — Twinkle / Kayan Yıldız / Aurora / Hale (starfield_overlay.dart)
+## Kozmik Gökyüzü Katmanı — Yaşayan Nebula Shader + Twinkle / Kayan Yıldız
 
-**Dosya:** `lib/core/widgets/starfield_overlay.dart` · **Kullanım:** `settings_screen.dart` build() Stack:
-`bg image → const SkyDarkenOverlay() → const StarfieldOverlay() → SafeArea(RepaintBoundary(içerik))`
-Başka ekrana eklemek: aynı iki `Positioned.fill(child: ...)` satırı + içeriği `RepaintBoundary`'ye sar.
+**Dosyalar:** `shaders/living_nebula.frag` (pubspec `flutter: shaders:`) · `lib/core/widgets/living_nebula.dart`
+(`LivingNebulaBackground`) · `lib/core/widgets/starfield_overlay.dart` (`StarfieldOverlay`, yedek `SkyDarkenOverlay`).
+**Kullanım** (`settings_screen.dart` build Stack):
+`LivingNebulaBackground(asset: 'assets/images/signinbackground.png') → StarfieldOverlay() → SafeArea(RepaintBoundary(içerik))`
 
 | Parça | Nasıl | Değerler |
 |---|---|---|
-| `SkyDarkenOverlay` | dikey gradient + **eliptik** vinyet (`_FitEllipse` GradientTransform) | dikey 50/40/50 %, vinyet kenar 0x99 |
-| Twinkle yıldız | sinüs zarfı `pow(raw, sharp)`; yarısı tamamen söner ve **sönükken yeni rastgele yere atlar** (döngü sınırı sinüs dibine hizalı) | telefon ~90, tablet ≤170 (alan/3650) |
-| Kayan yıldız | deterministik takvim (ilk 6–15 sn, sonra 9–24 sn), döngüsel; kuyruk yolun %45'i + baş parıltısı | 0.7–1.4 sn |
-| Aurora perdesi | `drawVertices` 72×7 ızgara, köşe renkli; alt kenar parlak/dar, yukarı uzun sönüm; kenar teal, üst mor | ana peakA 0.50 (y≈%11.5), ikinci 0.26 (y≈%47, `edgeSoft 2.6`) |
-| Halelenme | `RadialGradient` tek daire, `sin²` zarf, açılırken %25 büyür; aralık 10–18 sn > süre 5–8 sn (çakışmaz) | peakA 0.32–0.48, r = kısa kenar %12–25 |
+| Dalgalanma | domain-warp: `fbm2` iki alan → uv kaydırma, ekran kenarında söner | `WARP_PX 14` → tipik ±2, tepe ±5.5 px; desen ~4 px/sn |
+| Alacalı renk | YIQ **ton döndürme**, bölgeye göre: soğuk yamalar **+72°** (kırmızı→magenta→mor, mor→indigo-mavi), sıcak yamalar −10° + doygunluk/parıltı; yalnız bulut maskesinde (parlaklık × doygunluk → yıldızlar hariç) | `HUE_COOL 1.25`, `HUE_WARM 0.17`; mor tint `TINT 0.12` yalnız soğukta |
+| Işık nefesi | bulutlarda faz uzaya göre değişen ±%10 parlaklık | `BREATH 0.10` |
+| Koyulaştırma | shader içi geçirgenlik + eliptik vinyet | merkez ~0.53, üst/alt ~0.45, köşe ~0.33 (`dark 0.07`) |
+| Twinkle yıldız | `pow(raw, sharp)` zarf; yarısı söner ve **sönükken rastgele yere atlar** | telefon ~90, tablet ≤170 |
+| Kayan yıldız | deterministik döngüsel takvim (ilk 6–15 sn, sonra 9–24 sn); kuyruk yolun %45'i | 0.7–1.4 sn |
 
 **Mimari kurallar (bozma):**
-- Tek `Ticker` (`SingleTickerProviderStateMixin`, initState'te BİR KEZ `createTicker`) → `_time` (yıldız, ekran hızı) + `_auroraTime` (1/30 sn dilim).
-- Painter'lar SAF: `paint()` içinde Random/setState/olay üretimi YOK. Tüm takvim/konum seed'li Random ile modelde bir kez; sönük-yıldız konumu `hash01(i, cycle, salt)` (seed dahil).
-- Işık = `BlendMode.plus` (Porter-Duff, Impeller'da ucuz). `drawVertices(v, BlendMode.dst, paint)` → köşe renkleri aynen. Blur/saveLayer YOK.
-- Reduced-motion: ticker durur, statik kare, hale/kayan yıldız kapalı. `TickerMode` (ekran örtülünce) otomatik.
-- **Renk/alpha dersi:** mat palet (`#7762B5` mor, `#4FA99F` teal, `#A35B92` magenta) + plus ile alpha < ~0.2 **görünmüyor** (eklenen RGB +10..20). Değerleri tahminle değil render karesiyle ayarla.
+- Zaman shader'a HAM verilmez: gürültü ofsetleri Dart'ta double ile **sınırlı dairesel yörüngelerden** (`_orbit`) hesaplanır → mediump GPU'da hassasiyet bozulması / sarma sıçraması yok. Uniform sırası: uSize(0,1) uImgSize(2,3) uDark(4) uFlow1(5,6) uFlow2(7,8) uCol1(9,10) uCol2(11,12) uBreath(13), sampler 0.
+- `setImageSampler(..., filterQuality: FilterQuality.low)` (varsayılan `none` yavaş harekette pikselleşir). Görsel, `Image.asset` ile aynı `AssetImage` provider'ından (ImageCache paylaşımı), `clone()` + dispose.
+- Shader/görsel hazır olana kadar statik görsel + `SkyDarkenOverlay`; hazır olunca 600 ms cross-fade (onEnd → **postFrame** setState; süre 0'da build içinde setState assert'i). Yükleme hatası → statik kalır, asla çökmez.
+- Nebula 30 Hz, yıldızlar ekran hızı; ayrı RepaintBoundary'ler. Reduced-motion: ticker durur; geri açılınca zaman kaldığı yerden devam (`_timeBase`).
+- Yıldız painter SAF (Random/setState yok), seed'li `hash01`.
+
+**Renk dersleri (görsel doğrulamayla öğrenildi — tekrarlama):**
+- YIQ'de θ=atan(Q,I): kırmızı +19°, magenta +62°, mor +93°, mavi +136° / turuncu −6°, sarı −44°, yeşil −118°. **Negatif dönüş kırmızıyı sarı→ZEYTİN'e iter.**
+- Teal paleti sıcak yamalarla aynı yere düşüp turuncuya karışınca zeytin yaptı → paletten çıkarıldı.
+- Palet tinti %40 tüm nebulayı mora boyadı ("sabit morluk") → alacalanma tinti değil, ton döndürme ile yapılmalı.
+- Eski denemeler (kaldırıldı): beyaz-teal aurora kurdeleleri (`drawVertices`) + `BlendMode.plus` haleler — mat palet + plus ile alpha <0.2 görünmüyordu; görününce de "tek beyaz perde" olarak beğenilmedi.
 
 **Görsel doğrulama yöntemi (Flutter-içi değişiklik panelde görünmez):** `build/visual_check/` (gitignored) altında
-widget testi → gerçek `assets/images/signinbackground.png` üstünde `matchesGoldenFile` + `--update-goldens` ile PNG kare
-yakala, gerekirse `Transform.scale` ile zoom (Transform hep ağaçta olsun → State korunur). `debugFirstShot()` /
-`debugFirstHalo()` (`@visibleForTesting`) olay zamanını verir. test/ altına golden YAZMA (protect-tests hook silmeyi engeller).
+widget testi → gerçek bg üstünde `matchesGoldenFile` + `--update-goldens` ile PNG kare; video için kare dizisi +
+`ffmpeg` (`%LOCALAPPDATA%\Microsoft\WinGet\Links\ffmpeg.exe`) → mp4; hareket ölçümü `ffmpeg -lavfi psnr`
+(ölçülen: ardışık kare 65 dB = titreme yok, 8 sn 35 dB, 60 sn 29 dB). Shader flutter_tester'da (Skia) ÇALIŞIR.
+test/ altına golden YAZMA (protect-tests hook silmeyi engeller). Flutter: `C:\src\flutter` (3.41.5).
 
 ---
 

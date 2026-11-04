@@ -9,6 +9,7 @@ import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/living_nebula.dart';
 import '../../core/widgets/starfield_overlay.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -1450,19 +1451,11 @@ class SettingsScreen extends ConsumerWidget {
         onPointerCancel: (_) => swipeStartX = null,
         child: Stack(
           children: [
-            // ── Arka plan görseli
-            Positioned.fill(
-              child: Image.asset(
-                'assets/images/signinbackground.png',
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) =>
-                    Container(color: const Color(0xFF1A0A3C)),
-              ),
+            // ── Arka plan: "yaşayan nebula" shader'ı — dalgalanma + alacalı renk +
+            //    bölgesel ışık nefesi + koyulaştırma (yüklenirken/yoksa statik yedek)
+            const Positioned.fill(
+              child: LivingNebulaBackground(asset: 'assets/images/signinbackground.png'),
             ),
-            // ── Koyulaştırma — hafif dikey gradient + eliptik vinyet (gizem)
-            const Positioned.fill(child: SkyDarkenOverlay()),
             // ── Yıldız katmanı — twinkle + nadir kayan yıldız (koyu bg üstünde parlar)
             const Positioned.fill(child: StarfieldOverlay()),
 

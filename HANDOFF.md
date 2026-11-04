@@ -19,7 +19,8 @@
 
 ## Yarım kalan
 - **Codex son incelemesi YAPILMADI** (Codex kullanım limiti, 2026-11-05 ~02:56'ya kadar). Claude
-  code-reviewer ajanı mantık regresyonu taradı (sonucu commit mesajı / bu dosyada).
+  code-reviewer 55 dosyayı taradı: 3 regresyon (biyoritim üst geri, tarot türü çift SafeArea, boş gelen
+  kutusunda kaydırma) + önceden var olan EN tarot kart görseli hatası → hepsi düzeltildi (e1d6d5e8, testli).
 - **Gerçek cihazda hiç denenmedi:** yeni zemin (grain + vinyet), filmli görsellerin parlaklığı, cam bar,
   Olumlama'daki çift `GrimoireBackdrop` çapraz geçişinin düşük cihazda kare süresi.
 - Dert Ortağı içerik verisinde (200 dert + 1000 tavsiye) İngilizce yok → ayrı görev önerildi.

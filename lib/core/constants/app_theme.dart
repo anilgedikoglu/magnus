@@ -9,7 +9,8 @@ class AppTheme {
 
   static ThemeData get dark {
     final base = ThemeData(brightness: Brightness.dark);
-    final nunitoTextTheme = GoogleFonts.nunitoTextTheme(base.textTheme).apply(
+    // UI Jost (art-deco, okunur), başlık Cinzel (ritüel), uzun okuma EB Garamond (AppTextStyles) — 2026-11.
+    final bodyTextTheme = GoogleFonts.jostTextTheme(base.textTheme).apply(
       bodyColor: AppColors.textPrimary,
       displayColor: AppColors.textPrimary,
     );
@@ -17,13 +18,13 @@ class AppTheme {
     return ThemeData(
       brightness: Brightness.dark,
       scaffoldBackgroundColor: AppColors.background,
-      textTheme: nunitoTextTheme,
+      textTheme: bodyTextTheme,
       colorScheme: const ColorScheme.dark(
-        primary: Color(0xFF7B5CE8),
-        secondary: Color(0xFFAA88FF),
+        primary: AppColors.gold, // eski: mor 7B5CE8
+        secondary: AppColors.silver, // eski: lavanta AA88FF
         surface: AppColors.backgroundSurface,
-        onPrimary: Colors.white,
-        onSecondary: Colors.white,
+        onPrimary: AppColors.ink, // altın üstünde koyu metin (Codex)
+        onSecondary: AppColors.ink,
         onSurface: AppColors.textPrimary,
       ),
       appBarTheme: AppBarTheme(

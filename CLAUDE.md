@@ -539,6 +539,41 @@ return Scaffold(
 
 ---
 
+## ⚠️⚠️⚠️ "GECE GRİMUARI" TASARIM SİSTEMİ (2026-11) — TÜM UI BUNA UYAR ⚠️⚠️⚠️
+
+Anıl: "daha az renkli, ciddi, ürpertici, koyu, liquid glass, çok cilalı". Kişilik: gece kapanmış bir
+gözlemevinin okuma odası — mürekkep siyahı, isli cam, kemik beyazı, TEK mum altını. Renk yalnız
+dokunulunca / kader "hazır" olunca gelir. Ürperti yüksek kontrast + sessizlikten (korku efekti değil).
+Kaynak: Codex denetimi + sanat yönetmeni ajanı (Claude), sentez Claude. "Önce" kontakları:
+`build/visual_check/screens/kontak_once_*.png` (harness: `build/visual_check/app_screens_capture_test.dart`).
+
+**Tokenlar (`AppColors`):** ink `#07080B` zemin · inkSurface `#111216` · inkCard `#17181C` · bone `#E8E2D6`
+metin · boneDim `#B8B3A9` · ash `#8D8A93` meta/pasif · **gold `#C2A46B` TEK vurgu** (seçim, birincil eylem,
+ilerleme) · silver `#939EAD` ikincil kozmik detay · success `#7FAF8E` (hazır — yeşil badge kalır) ·
+danger `#C98A86` (silme METNİ) · blood `#A8443D` (yıkıcı kenar / düşük değer; küçük metinde YOK) ·
+rim kemik %16 · cam `#1C1C1E` (alt barla tek cam dili): `glassTint` %62, `glassTintSelected`, `glassTintReading` %94.
+Eski tokenlar (`background`, `textPrimary`, `inboxUnread`…) yeni değerlere eşlendi.
+**YASAK:** neon `FF55FF FF44FF FF00DD DD00EE 9B00D3 00E5FF 44FF88 FFE800 FF4466 8A2EFF`, sayfa/kategori başına
+ayrı renk, renkli dolu buton, glow'lu başlık, saf beyaz metin.
+
+**Tipografi (`AppTextStyles`):** başlık **Cinzel** (`screenTitle` 18/w600/ls 3, `ritualTitle`, `cardLabel` 12.5) —
+12dp altında ve gövdede YOK; **`toUpperCase()` KULLANMA** (Türkçe İ bozulur; Cinzel zaten kapitalik).
+UI **Jost** (tema + `uiLabel`, `value`, `meta`, `sectionLabel`). Uzun okuma/Magnus balonu **EB Garamond**
+(`reading`/`cardText` 17/w500/1.55, `bubbleText`). Yüzde/tarih: `AppTextStyles.tabular`. Fontlar şimdilik
+google_fonts çalışma anında; ileride pakete gömülmeli (OFL).
+
+**Bileşenler (`lib/core/widgets/`):** `GlassPanel` (sahte cam: tint+rim+parlama+gölge; `blur:true` yalnız
+gerektiğinde — ekranda ≤2 blur: alt bar + açık modal; kart/balon/satıra blur YOK) · `OccultButton`
+(primary = cam + 1px altın kenar + kemik metin 52dp, ekranda TEK; `.secondary` = nötr) · `OccultChoiceTile`
+(2×2 alan kartı: glif + Cinzel etiket, basınca altın) · `OccultListCard` (Numeroloji tipi satır) ·
+`OccultSectionLabel` (12px altın çizgi + kül etiket) · `FilmedImage` (renkli AI görseline film: doygunluk
+0.20, parlaklık 0.80, kontrast 1.10, soğuk gümüş, vinyet; basılı 0.45/0.90; sepya YOK).
+**İçerik renkleri:** `RichTextParser` `<color=…>` etiketlerini desatüre eder (ton/anlam korunur; hex → `mute()`).
+**Kural:** Seçim ekranları ya `OccultChoiceTile` ya `OccultListCard`. Emoji ikon YOK (çizgi glif).
+"Geri Git" standardı (aşağıda) geçerli. Mikro detay: statik grain/vinyet; mum titremesi ekranda en fazla 1 öğe.
+
+---
+
 ## ⚠️⚠️⚠️ ANA SEKMELER + CAM ALT BAR (MainTabs / GlassTabBar) — NAVİGASYON MİMARİSİ ⚠️⚠️⚠️
 
 **2026-11-04'ten itibaren** Ana Menü, Kullanıcı Bilgileri ve Gelen Kutusu **rota DEĞİL, sekme**dir.

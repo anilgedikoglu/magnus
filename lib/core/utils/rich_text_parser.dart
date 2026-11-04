@@ -19,28 +19,43 @@ class RichTextParser {
         .replaceAll(RegExp(r'<\/i>', caseSensitive: false), '');
   }
 
+  // 2026-11 "Gece Grimuarı": içerik vurgu renkleri desatüre — TON (anlam) korunur,
+  // neon kısılır (Codex: "renk" fallarında gerçek renk anlamı kaybolmasın). Eski neon
+  // değerler: yellow FFDD33, red FF5555, green 55FF88, blue 5599FF, cyan 44EEFF,
+  // magenta FF55FF, orange FF9944.
   static Color _parseColor(String name) {
     final n = name.toLowerCase().trim();
     if (n.startsWith('#')) {
       final hex = n.replaceFirst('#', '');
       if (hex.length == 6) {
-        return Color(int.parse('FF$hex', radix: 16));
+        return mute(Color(int.parse('FF$hex', radix: 16)));
       } else if (hex.length == 8) {
-        return Color(int.parse(hex, radix: 16));
+        return mute(Color(int.parse(hex, radix: 16)));
       }
     }
     switch (n) {
-      case 'yellow':  return const Color(0xFFFFDD33);
-      case 'red':     return const Color(0xFFFF5555);
-      case 'green':   return const Color(0xFF55FF88);
-      case 'blue':    return const Color(0xFF5599FF);
-      case 'cyan':    return const Color(0xFF44EEFF);
-      case 'magenta': return const Color(0xFFFF55FF);
-      case 'orange':  return const Color(0xFFFF9944);
-      case 'white':   return Colors.white;
-      case 'black':   return Colors.black;
-      default:        return Colors.white;
+      case 'yellow':  return const Color(0xFFD6BE82); // eski altın tonu
+      case 'red':     return const Color(0xFFC98A86); // desatüre gül
+      case 'green':   return const Color(0xFF8FB59A); // adaçayı
+      case 'blue':    return const Color(0xFF8FA6C9); // çelik mavisi
+      case 'cyan':    return const Color(0xFF8FB8BF); // soğuk gümüş-camgöbeği
+      case 'magenta': return const Color(0xFFB98FB0); // tozlu leylak
+      case 'orange':  return const Color(0xFFC9986A); // kehribar
+      case 'white':   return const Color(0xFFEEEAE2); // kemik beyazı
+      // Koyu zeminde siyah okunmaz (Unity metinleri açık zemin için yazılmış olabilir).
+      case 'black':   return const Color(0xFF898C91);
+      default:        return const Color(0xFFEEEAE2);
     }
+  }
+
+  /// Hex içerik rengini palete yaklaştır: doygunluk ≤ 0.38, açıklık 0.60–0.82
+  /// (koyu cam üstünde okunur). Ton aynı kalır.
+  static Color mute(Color c) {
+    final hsl = HSLColor.fromColor(c);
+    return hsl
+        .withSaturation(hsl.saturation.clamp(0.0, 0.38))
+        .withLightness(hsl.lightness.clamp(0.60, 0.82))
+        .toColor();
   }
 
   /// Metinde color etiketi varsa RichText, yoksa sade Text döner.

@@ -26,6 +26,8 @@ class AppStrings {
   String get no             => _s('Hayır',       'No');
   String get ok             => _s('Tamam',       'OK');
   String get soon           => _s('Yakında...', 'Coming Soon...');
+  // Ana menü boş slotu: "mühürlü kapı" (Gece Grimuarı, 2026-11)
+  String get sealed         => _s('Mühürlü',    'Sealed');
 
   // ── Home Screen ─────────────────────────────────────────────────────────
   String get mainMenu       => _s('Ana Menü',    'Main Menu');
@@ -67,7 +69,9 @@ class AppStrings {
   String get takePhoto      => _s('Foto Çek',         'Take Photo');
   String get fromFile       => _s('Dosyadan',         'From Gallery');
   String get drinkForMe     => _s('Yerime İç',        'Drink for Me');
-  String get sendFortune    => _s('Falımı Gönder ✨', 'Send My Reading ✨');
+  // Gece Grimuarı: buton metninde emoji YOK (eski: '✨').
+  String get sendFortune    => _s('Falımı Gönder', 'Send My Reading');
+  String photoCount(int n)  => _s('$n/3 Fotoğraf', '$n/3 Photos');
   String get sending        => _s('Falın gönderiliyor...', 'Your reading is being sent...');
   String get checkingPhotos => _s('Kontrol ediliyor...', 'Checking...');
   String get fortuneSubject => _s('Fal konusu ne olsun?', 'What topic for the reading?');
@@ -200,6 +204,17 @@ class AppStrings {
   String get companionTitle    => _s('DERT ORTAĞI',        'COMPANION');
   String get companionDesc     => _s('Derdini anlat...', 'Tell me what troubles you...');
   String get companionSending  => _s('Dert Ortağın düşünüyor...', 'Your companion is thinking...');
+  String get dertEnoughToday   => _s('Bugün yeterince dertleştik.', 'We have shared enough troubles for today.');
+  String get dertComeTomorrow  => _s('Yarın tekrar gel, her zaman buradayım.', 'Come back tomorrow, I am always here.');
+  String dertAskTopic(String name) => name.isEmpty
+      ? _s('Derdin neyle ilgili?', 'What is troubling you?')
+      : _s('Derdin neyle ilgili $name?', 'What is troubling you, $name?');
+  String get dertNoneInCategory => _s('Bu kategori için uygun dert bulunamadı.', 'No matching troubles found for this category.');
+  String get dertWhichFits     => _s('Hangisi seni daha iyi anlatıyor?', 'Which one describes you best?');
+  String get dertAnalyzing     => _s('Dertlerini çözümlüyorum...', 'I am untangling your troubles...');
+  String get dertPatience      => _s('Biraz sabır...', 'A little patience...');
+  String get dertMyAdvice      => _s('İşte sana tavsiyelerim!', 'Here is my advice for you!');
+  String get thanks            => _s('Teşekkürler', 'Thank you');
 
   // ── Affirmation ───────────────────────────────────────────────────────────
   String get affirmationTitle  => _s('OLUMLAMA',           'AFFIRMATION');
@@ -440,19 +455,21 @@ class AppStrings {
   // ── Profil alan etiketleri (anahtar → ekran dili) ───────────────────────
   // Not: UserProfile.*Label getter'ları Türkçe döner ve VariableReplacer'da
   // kullanıldığı için değiştirilemez. Ekran gösterimi için bu metotları kullan.
-  String jobLabelOf(String key) {
-    if (!isEn) return _jobTr[key] ?? key;
-    return _jobEn[key] ?? key;
-  }
+  String jobLabelOf(String key) => _label(isEn ? _jobEn : _jobTr, key);
+  String maritalLabelOf(String key) => _label(isEn ? _maritalEn : _maritalTr, key);
+  String genderLabelOf(String key) => _label(isEn ? _genderEn : _genderTr, key);
 
-  String maritalLabelOf(String key) {
-    if (!isEn) return _maritalTr[key] ?? key;
-    return _maritalEn[key] ?? key;
-  }
-
-  String genderLabelOf(String key) {
-    if (!isEn) return _genderTr[key] ?? key;
-    return _genderEn[key] ?? key;
+  /// Eski / elle yazılmış kayıtlara toleranslı arama: önce birebir, sonra Türkçe
+  /// karakterleri sadeleştirilmiş anahtar ('kadın' → 'kadin'), sonra sonek 'u'
+  /// ('ozelsektor' → 'ozelsektoru'). Hiçbiri yoksa ham değer (veri kaybolmaz).
+  static String _label(Map<String, String> map, String key) {
+    final direct = map[key];
+    if (direct != null) return direct;
+    const tr = {'ı': 'i', 'İ': 'i', 'ş': 's', 'Ş': 's', 'ç': 'c', 'Ç': 'c',
+                'ğ': 'g', 'Ğ': 'g', 'ö': 'o', 'Ö': 'o', 'ü': 'u', 'Ü': 'u'};
+    final n = key.trim().split('').map((c) => tr[c] ?? c).join().toLowerCase()
+        .replaceAll(' ', '');
+    return map[n] ?? map['${n}u'] ?? map[n.replaceAll('_', '')] ?? key;
   }
 
   static const Map<String, String> _jobTr = {

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -8,6 +9,18 @@ import 'data/providers.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Gömülü OFL yazı tiplerinin lisansları (Jost, Cinzel, EB Garamond) — lisans sayfasında görünür.
+  LicenseRegistry.addLicense(() async* {
+    for (final (fam, file) in const [
+      ('Jost', 'OFL-Jost.txt'),
+      ('Cinzel', 'OFL-Cinzel.txt'),
+      ('EB Garamond', 'OFL-EBGaramond.txt'),
+    ]) {
+      final text = await rootBundle.loadString('assets/google_fonts/$file');
+      yield LicenseEntryWithLineBreaks(['google_fonts', fam], text);
+    }
+  });
 
   // Lock to portrait
   await SystemChrome.setPreferredOrientations([

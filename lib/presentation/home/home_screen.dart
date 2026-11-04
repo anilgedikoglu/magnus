@@ -107,9 +107,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/models/inbox_item.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/filmed_image.dart';
+import '../../core/widgets/glass_panel.dart';
 import '../../core/widgets/glass_tab_bar.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
@@ -131,11 +134,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   /// provider'a yazılmaz → bardaki kapsül doğrudan hedefe kayar, geri sekmez).
   int? _animTarget;
   static const _totalPages = 3;
-  static const _pageColors = [
-    Color(0xFFDD00CC), // Sayfa 1 — pembe
-    Color(0xFF0099FF), // Sayfa 2 — mavi
-    Color(0xFF00CC77), // Sayfa 3 — yeşil
-  ];
 
   final List<_ExtraBubble> _extraBubbles = [];
   int _typingIndex = 0; // hangi balon şu an yazılıyor
@@ -793,18 +791,46 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       body: Stack(
         children: [
           // ── Ana menü arka planı ───────────────────────────────────────────
+          // Gece Grimuarı: görsel filmlenir (doygunluk 0.15, parlaklık 0.62) → mürekkep
+          // örtüsü + kenar vinyeti. Renkli neon gökyüzü yerine isli gece camı.
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/welcomscreenbackground.jpg',
-              fit: BoxFit.cover,
-              alignment: Alignment.center,
-              filterQuality: FilterQuality.high,
-              errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+            child: ColorFiltered(
+              colorFilter: ColorFilter.matrix(FilmedImage.matrix(0.15, 0.62)),
+              child: Image.asset(
+                'assets/images/welcomscreenbackground.jpg',
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+                filterQuality: FilterQuality.high,
+                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+              ),
             ),
           ),
-          // ── Hafif karartma katmanı (görsel işlem yok — sadece layer) ─────
-          Positioned.fill(
-            child: Container(color: Colors.black.withValues(alpha: 0.42)),
+          const Positioned.fill(
+            child: IgnorePointer(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    stops: [0.0, 0.45, 1.0],
+                    colors: [Color(0x8C07080B), Color(0x4007080B), Color(0xA607080B)],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const Positioned.fill(
+            child: IgnorePointer(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                    radius: 1.05,
+                    stops: [0.55, 1.0],
+                    colors: [Color(0x00000000), Color(0x99000000)],
+                  ),
+                ),
+              ),
+            ),
           ),
           // ── İçerik ───────────────────────────────────────────────────────
           SafeArea(
@@ -864,7 +890,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             : pageIndex == 1
                                 ? _page2Items(context)
                                 : _page3Items(context);
-                        return _buildGrid(items, _pageColors[pageIndex]);
+                        return _buildGrid(items);
                       },
                     ),
                     ),
@@ -951,6 +977,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
+  // Gece Grimuarı: sayfa başına renk YOK — etkin sayfa mum altını uzun çizgi,
+  // diğerleri kül kısa çizgi (sanat yönetmeni).
   Widget _buildPageIndicator() {
     return Padding(
       padding: const EdgeInsets.only(top: 15, bottom: 5),
@@ -958,14 +986,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(_totalPages, (i) {
           final active = i == _currentPage;
-          final color = _pageColors[i];
           return AnimatedContainer(
             duration: const Duration(milliseconds: 250),
+            curve: Curves.easeOutCubic,
             margin: const EdgeInsets.symmetric(horizontal: 3),
-            width: 34,
+            width: active ? 24 : 8,
             height: 3,
             decoration: BoxDecoration(
-              color: active ? color : color.withValues(alpha: 0.22),
+              color: active ? AppColors.gold : AppColors.ash.withValues(alpha: 0.30),
               borderRadius: BorderRadius.circular(2),
             ),
           );
@@ -974,11 +1002,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget _buildGrid(List<_MenuItem> items, Color pageColor) {
-    final coloredItems = items
-        .map((item) => _MenuItem(item.title, item.imagePath, item.credits, item.onTap,
-            borderColor: pageColor))
-        .toList();
+  Widget _buildGrid(List<_MenuItem> items) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 4, 10, 0),
       child: GridView.count(
@@ -988,7 +1012,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         crossAxisSpacing: 8,
         mainAxisSpacing: 8,
         childAspectRatio: 0.75,
-        children: coloredItems.map((item) => _MenuCard(item: item)).toList(),
+        children: items.map((item) => _MenuCard(item: item)).toList(),
       ),
     );
   }
@@ -1206,9 +1230,7 @@ class _MenuItem {
   final String imagePath;
   final int credits;
   final VoidCallback onTap;
-  final Color borderColor;
-  const _MenuItem(this.title, this.imagePath, this.credits, this.onTap,
-      {this.borderColor = const Color(0xFFDD00CC)});
+  const _MenuItem(this.title, this.imagePath, this.credits, this.onTap);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1226,6 +1248,9 @@ class _MenuCard extends StatefulWidget {
 class _MenuCardState extends State<_MenuCard>
     with SingleTickerProviderStateMixin {
   late final AnimationController _ctrl;
+  bool _down = false;
+
+  static const _radius = BorderRadius.all(Radius.circular(14));
 
   @override
   void initState() {
@@ -1233,7 +1258,7 @@ class _MenuCardState extends State<_MenuCard>
     _ctrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 100),
-      lowerBound: 0.95,
+      lowerBound: 0.97, // 0.95 "oyuncak" hissi veriyordu (Codex)
       upperBound: 1.0,
       value: 1.0,
     );
@@ -1245,119 +1270,92 @@ class _MenuCardState extends State<_MenuCard>
     super.dispose();
   }
 
+  void _press(bool down) {
+    if (down) {
+      _ctrl.reverse();
+    } else {
+      _ctrl.forward();
+    }
+    if (_down != down) setState(() => _down = down);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return ScaleTransition(
-      scale: _ctrl,
-      child: GestureDetector(
-        onTapDown: (_) => _ctrl.reverse(),
-        onTapUp: (_) {
-          _ctrl.forward();
-          widget.item.onTap();
-        },
-        onTapCancel: () => _ctrl.forward(),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: widget.item.borderColor, width: 1.5),
-            boxShadow: [
-              BoxShadow(
-                color: widget.item.borderColor.withValues(alpha: 0.4),
-                blurRadius: 6,
-              ),
-            ],
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(11),
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Opacity(
-                  // Sadece gerçek boş slotlar (title boş) soluk gösterilir
-                  opacity: widget.item.title.isEmpty ? 0.15 : 1.0,
-                  child: Image.asset(
-                    widget.item.imagePath,
-                    fit: BoxFit.cover,
-                    filterQuality: FilterQuality.high,
-                    errorBuilder: (_, __, ___) =>
-                        Container(color: const Color(0xFF1A1040)),
-                  ),
-                ),
-                // Üst karartma
-                Positioned(
-                  top: 0, left: 0, right: 0,
-                  child: Container(
-                    height: 44,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Colors.black.withValues(alpha: 0.65),
-                          Colors.transparent,
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                // Alt karartma
-                Positioned(
-                  bottom: 0, left: 0, right: 0,
-                  child: Container(
-                    height: 30,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
-                        colors: [
-                          Colors.black.withValues(alpha: 0.5),
-                          Colors.transparent,
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                // Başlık
-                Positioned(
-                  top: 6, left: 6, right: 6,
-                  child: Text(
-                    widget.item.title,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 11,
-                      fontWeight: FontWeight.w700,
-                      shadows: [
-                        Shadow(
-                          color: Colors.black,
-                          blurRadius: 4,
-                          offset: Offset(0, 1),
-                        ),
-                      ],
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                // Kredi rozeti — credits >= 0 ise göster (-1 = badge yok)
-                if (widget.item.credits >= 0)
-                  Positioned(
-                    bottom: 5, left: 5,
-                    child: _CreditBadge(count: widget.item.credits),
-                  ),
-                // Yer tutucu — dikey ortada "Yakında..." yazısı (sadece boş slotlar)
-                if (widget.item.title.isEmpty)
-                  Center(
-                    child: Consumer(builder: (ctx, ref, _) => Text(
-                      ref.watch(l10nProvider).soon,
-                      style: const TextStyle(
-                        color: Colors.white54,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 0.3,
-                      ),
-                      textAlign: TextAlign.center,
-                    )),
-                  ),
+    final item = widget.item;
+    // Gerçek boş slot (başlıksız) → "mühürlü kapı".
+    if (item.title.isEmpty) return const _SealedCard();
+
+    // Gece Grimuarı menü kartı (2026-11): neon sayfa çerçevesi/glow KALKTI. Görsel
+    // filmli (basınca renk biraz sızar), kemik cam kenarı, alt-orta Cinzel etiket,
+    // sağ üstte cam kredi kapsülü.
+    return Semantics(
+      button: true,
+      label: item.title,
+      excludeSemantics: true,
+      onTap: item.onTap,
+      child: ScaleTransition(
+        scale: _ctrl,
+        child: GestureDetector(
+          onTapDown: (_) => _press(true),
+          onTapUp: (_) {
+            _press(false);
+            item.onTap();
+          },
+          onTapCancel: () => _press(false),
+          child: DecoratedBox(
+            decoration: const BoxDecoration(
+              borderRadius: _radius,
+              boxShadow: [
+                BoxShadow(color: Color(0x80000000), blurRadius: 12, offset: Offset(0, 4)),
               ],
+            ),
+            child: ClipRRect(
+              borderRadius: _radius,
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  FilmedImage(item.imagePath, active: _down, vignette: 0.40),
+                  // Etiket örtüsü: alttan %45, mürekkep %85 → şeffaf.
+                  const IgnorePointer(
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          stops: [0.0, 0.45],
+                          colors: [Color(0xD907080B), Color(0x0007080B)],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 6,
+                    right: 6,
+                    bottom: 9,
+                    child: Text(
+                      item.title,
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTextStyles.cardLabel.copyWith(
+                        fontSize: 11.5,
+                        letterSpacing: 1.0,
+                        height: 1.15,
+                        color: _down ? AppColors.bone : AppColors.bone.withValues(alpha: 0.92),
+                      ),
+                    ),
+                  ),
+                  if (item.credits >= 0)
+                    Positioned(top: 6, right: 6, child: _CreditBadge(count: item.credits)),
+                  Positioned.fill(
+                    child: IgnorePointer(
+                      child: CustomPaint(
+                        painter: GlassRimPainter(radius: _radius, selected: _down),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -1366,10 +1364,89 @@ class _MenuCardState extends State<_MenuCard>
   }
 }
 
+/// Boş slot: "mühürlü kapı" — soluk cam, ortada kapalı göz mühürü + "Mühürlü".
+/// Basma animasyonu yok; dokununca hafif titreşim (sanat yönetmeni).
+class _SealedCard extends StatelessWidget {
+  const _SealedCard();
+
+  @override
+  Widget build(BuildContext context) {
+    return Consumer(builder: (context, ref, _) {
+      final label = ref.watch(l10nProvider).sealed;
+      return Semantics(
+        label: label,
+        child: GestureDetector(
+          onTap: () => HapticFeedback.selectionClick(),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              color: const Color(0x4D1C1C1E),
+              borderRadius: const BorderRadius.all(Radius.circular(14)),
+              border: Border.all(color: const Color(0x0FE8E2D6), width: 0.8),
+            ),
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  CustomPaint(
+                    size: const Size(28, 28),
+                    painter: _SealGlyphPainter(AppColors.ash.withValues(alpha: 0.40)),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    label,
+                    style: AppTextStyles.sectionLabel.copyWith(
+                      fontSize: 10,
+                      letterSpacing: 2.0,
+                      color: AppColors.ash.withValues(alpha: 0.55),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
+    });
+  }
+}
+
+/// Mühür glifi: halka içinde kapalı göz (kirpikli yay) — 24'lük ızgara.
+class _SealGlyphPainter extends CustomPainter {
+  final Color color;
+  const _SealGlyphPainter(this.color);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final k = size.width / 24;
+    final p = Paint()
+      ..color = color
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.4 * k
+      ..strokeCap = StrokeCap.round;
+    canvas.drawCircle(Offset(12 * k, 12 * k), 10.5 * k, p);
+    final lid = Path()
+      ..moveTo(6.5 * k, 11.0 * k)
+      ..quadraticBezierTo(12 * k, 16.5 * k, 17.5 * k, 11.0 * k);
+    canvas.drawPath(lid, p);
+    const lashes = [
+      [8.6, 13.2, 7.8, 15.0],
+      [12.0, 14.1, 12.0, 16.1],
+      [15.4, 13.2, 16.2, 15.0],
+    ];
+    for (final l in lashes) {
+      canvas.drawLine(Offset(l[0] * k, l[1] * k), Offset(l[2] * k, l[3] * k), p);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _SealGlyphPainter old) => old.color != color;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Yardımcı widget'lar
 // ─────────────────────────────────────────────────────────────────────────────
 
+/// Kredi rozeti: sağ üstte küçük cam kapsül, mum altını rakam (bitmişse kül).
 class _CreditBadge extends StatelessWidget {
   final int count;
   const _CreditBadge({required this.count});
@@ -1377,27 +1454,26 @@ class _CreditBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final used = count <= 0;
+    final c = used ? AppColors.ash : AppColors.gold;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
       decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.65),
-        borderRadius: BorderRadius.circular(8),
+        color: const Color(0xA607080B),
+        borderRadius: BorderRadius.circular(9),
+        border: Border.all(color: AppColors.rim, width: 0.6),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(
-            used ? Icons.stars_rounded : Icons.stars_rounded,
-            color: used ? Colors.white30 : const Color(0xFF00E5FF),
-            size: 10,
-          ),
+          Icon(Icons.auto_awesome, color: c, size: 9),
           const SizedBox(width: 2),
           Text(
             '$count',
-            style: TextStyle(
-              color: used ? Colors.white30 : Colors.white,
-              fontSize: 9,
-              fontWeight: FontWeight.bold,
+            style: AppTextStyles.meta.copyWith(
+              color: c,
+              fontSize: 10,
+              fontWeight: FontWeight.w600,
+              fontFeatures: AppTextStyles.tabular,
             ),
           ),
         ],
@@ -1444,7 +1520,8 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
   double _bubbleInnerWidth = 0;
   bool _marqueeRunning = false;
 
-  static const _textStyle = TextStyle(color: Colors.white, fontSize: 13, height: 1.4);
+  // Gece Grimuarı: kemik beyazı Jost (ölçüm de aynı stille → marquee hesabı tutarlı).
+  static final TextStyle _textStyle = _bubbleTextStyle;
   static const _hPad = 24.0; // horizontal padding inside bubble (12*2)
 
   @override
@@ -1564,17 +1641,12 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
       final loopContent = '${widget.text}$_marqueeGap${widget.text}';
 
       return Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(colors: widget.gradient,
-              begin: Alignment.topLeft, end: Alignment.bottomRight),
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(4), topRight: Radius.circular(14),
-            bottomLeft: Radius.circular(14), bottomRight: Radius.circular(14),
-          ),
-          border: Border.all(color: widget.borderColor.withValues(alpha: 0.5)),
-        ),
+        decoration: _grimoireBubble,
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-        child: ClipRect(
+        // Kayan yazı iki kenarda 14px yumuşak söner (sanat yön.: keskin kesik 'eniz.' yoktu).
+        child: _EdgeFade(
+          enabled: _marqueeRunning,
+          child: ClipRect(
           child: _marqueeRunning && _marqueeCtrl != null
             ? AnimatedBuilder(
                 animation: _marqueeCtrl!,
@@ -1602,9 +1674,47 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
                       overflow: TextOverflow.visible, softWrap: false),
                 );
               }),
+          ),
         ),
       );
     });
+  }
+}
+
+// ── Gece Grimuarı balon dili (tüm balonlar tek cam; çağıranın gradient/borderColor'ı
+//    artık yalnız API uyumu için — renkli teal/mor/pembe balonlar kalktı, 2026-11) ──
+const _bubbleRadius = BorderRadius.only(
+  topLeft: Radius.circular(6), topRight: Radius.circular(18),
+  bottomLeft: Radius.circular(18), bottomRight: Radius.circular(18),
+);
+final BoxDecoration _grimoireBubble = BoxDecoration(
+  color: AppColors.glassTint,
+  borderRadius: _bubbleRadius,
+  border: Border.all(color: AppColors.rim, width: 0.8),
+);
+final TextStyle _bubbleTextStyle =
+    AppTextStyles.uiLabel.copyWith(fontSize: 13.5, height: 1.4, letterSpacing: 0.1);
+
+/// Yatay kenar sönümü (marquee): iki kenarda 14px.
+class _EdgeFade extends StatelessWidget {
+  final bool enabled;
+  final Widget child;
+  const _EdgeFade({required this.enabled, required this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    if (!enabled) return child;
+    return ShaderMask(
+      blendMode: BlendMode.dstIn,
+      shaderCallback: (r) {
+        final f = r.width <= 0 ? 0.0 : (14 / r.width).clamp(0.0, 0.3);
+        return LinearGradient(
+          stops: [0, f, 1 - f, 1],
+          colors: const [Color(0x00000000), Color(0xFF000000), Color(0xFF000000), Color(0x00000000)],
+        ).createShader(r);
+      },
+      child: child,
+    );
   }
 }
 
@@ -1625,20 +1735,7 @@ class _ChatBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: gradient,
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(4),
-          topRight: Radius.circular(14),
-          bottomLeft: Radius.circular(14),
-          bottomRight: Radius.circular(14),
-        ),
-        border: Border.all(color: borderColor.withValues(alpha: 0.5)),
-      ),
+      decoration: _grimoireBubble,
       child: iconPath != null
           ? Row(
               mainAxisSize: MainAxisSize.min,
@@ -1646,12 +1743,10 @@ class _ChatBubble extends StatelessWidget {
                 Image.asset(iconPath!, width: 22, height: 22,
                     errorBuilder: (_, __, ___) => const SizedBox.shrink()),
                 const SizedBox(width: 8),
-                Flexible(child: Text(text,
-                    style: const TextStyle(color: Colors.white, fontSize: 13, height: 1.4))),
+                Flexible(child: Text(text, style: _bubbleTextStyle)),
               ],
             )
-          : Text(text,
-              style: const TextStyle(color: Colors.white, fontSize: 13, height: 1.4)),
+          : Text(text, style: _bubbleTextStyle),
     );
   }
 }
@@ -1664,19 +1759,19 @@ class _MagnusAvatar extends StatelessWidget {
       height: 38,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border: Border.all(color: const Color(0xFFAA88FF), width: 1.5),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.8), width: 1.0), // eski: lavanta
       ),
       child: ClipOval(
         child: Image.asset(
           'assets/images/magnusicon.png',
           fit: BoxFit.cover,
           errorBuilder: (_, __, ___) => Container(
-            color: const Color(0xFF4835A6),
+            color: AppColors.inkCard,
             child: const Center(
               child: Text(
                 'M',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.bone,
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),
@@ -1751,7 +1846,6 @@ class _FortuneCircleBadge extends StatelessWidget {
     final progress  = item.unlockProgress; // 0.0 → 1.0
     final isLocked  = item.isLocked;       // hazırlanıyor mu?
     final isReady   = !isLocked;           // tamamlandı mı?
-    const accent    = Color(0xFFFF44FF);
 
     // İkon: hazırlanıyorsa grayscale (2 suffix), tamam ise renkli
     final iconPath  = _iconAsset(item.fortuneType, locked: isLocked);
@@ -1770,9 +1864,9 @@ class _FortuneCircleBadge extends StatelessWidget {
             size: Size(size, size),
             painter: _ArcProgressPainter(
               progress: progress,
-              color: const Color(0xFF44FF88),
-              gradientColors: isLocked ? _ArcProgressPainter._rainbow : null,
-              trackColor: Colors.white.withValues(alpha: 0.15),
+              color: AppColors.success,
+              gradientColors: isLocked ? _ArcProgressPainter._candle : null,
+              trackColor: AppColors.bone.withValues(alpha: 0.08),
               strokeWidth: 3.0,
             ),
           ),
@@ -1781,33 +1875,40 @@ class _FortuneCircleBadge extends StatelessWidget {
             child: SizedBox(
               width: innerSize, height: innerSize,
               child: iconPath != null
-                  ? Image.asset(
-                      iconPath,
-                      fit: BoxFit.cover,
-                      filterQuality: FilterQuality.high,
-                      errorBuilder: (_, __, ___) => _fallbackIcon(),
+                  // Gece Grimuarı filmi: hazırlanıyorken kül, hazır olunca renk biraz sızar.
+                  ? ColorFiltered(
+                      colorFilter: ColorFilter.matrix(isReady
+                          ? FilmedImage.matrix(FilmedImage.activeSaturation, FilmedImage.activeBrightness)
+                          : FilmedImage.matrix(0.0, 0.70)),
+                      child: Image.asset(
+                        iconPath,
+                        fit: BoxFit.cover,
+                        filterQuality: FilterQuality.high,
+                        errorBuilder: (_, __, ___) => _fallbackIcon(),
+                      ),
                     )
                   : _fallbackIcon(),
             ),
           ),
-          // Badge — SADECE hazırlık tamamlanınca (kırmızı "1")
+          // Badge — SADECE hazırlık tamamlanınca: yeşil "hazır" noktası (Gece Grimuarı
+          // success; eski kırmızı "1" neon dili kalktı).
           if (isReady)
             Positioned(
               top: 1, right: 1,
               child: Container(
                 width: 14, height: 14,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFF2222),
+                  color: AppColors.success,
                   shape: BoxShape.circle,
-                  border: Border.all(color: Colors.black, width: 1),
+                  border: Border.all(color: AppColors.ink, width: 1.5),
                 ),
                 child: const Center(
                   child: Text(
                     '1',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppColors.ink,
                       fontSize: 9,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w700,
                       height: 1,
                     ),
                   ),
@@ -1821,8 +1922,8 @@ class _FortuneCircleBadge extends StatelessWidget {
   }
 
   Widget _fallbackIcon() => Container(
-    color: const Color(0xFF220033),
-    child: const Icon(Icons.auto_awesome, color: Colors.white54, size: 16),
+    color: AppColors.inkCard,
+    child: const Icon(Icons.auto_awesome, color: AppColors.ash, size: 16),
   );
 
   /// Hazır → renkli ikon, hazırlanıyor → grayscale (2-suffix)
@@ -1865,25 +1966,19 @@ class _ArcProgressPainter extends CustomPainter {
     required this.strokeWidth,
   });
 
-  // Saat yönünde: Sarı → Turuncu → Kırmızı → Pembe → Mor  (12'den başlar, 12'de biter)
-  // 12→3 arası eski renkler kaldırıldı; sarı artık arc'ın ilk noktasında çıkar.
-  // Seamless 360° gradyan — 12 yönünde turuncu ile başlar/biter (dikiş yok).
-  // Turuncu(12) → kırmızı → pembe → mor(6) → pembe → kırmızı → turuncu(12) palindrom.
-  // İlk renk == son renk olduğu için 12 noktasında ani geçiş (jump) görünmez.
-  static const _rainbow = [
-    Color(0xFFFF9A10), // turuncu       — 12 (başlangıç)
-    Color(0xFFFF6820), // turuncu→kırmızı
-    Color(0xFFFF3B30), // kırmızı
-    Color(0xFFFF3260), // kırmızı→pembe
-    Color(0xFFFF2EC7), // pembe
-    Color(0xFFBB28E8), // pembe→mor
-    Color(0xFF8A2EFF), // mor           — 6 (orta nokta)
-    Color(0xFFBB28E8), // mor→pembe
-    Color(0xFFFF2EC7), // pembe
-    Color(0xFFFF3260), // pembe→kırmızı
-    Color(0xFFFF3B30), // kırmızı
-    Color(0xFFFF6820), // kırmızı→turuncu
-    Color(0xFFFF9A10), // turuncu       — 12 (seamless kapanış)
+  // Gece Grimuarı (2026-11): neon gökkuşağı yerine MUM ALTINI palindromu — 12 yönünde
+  // soluk altınla başlar, 6'da en açık parşömen-altın, 12'de aynı soluk altınla kapanır
+  // (ilk renk == son renk → dikişsiz 360°, eski 2026-06 kuralı korunur).
+  static const _candle = [
+    Color(0xFF6E5B3A), // soluk altın — 12 (başlangıç)
+    Color(0xFF9C8250),
+    Color(0xFFC2A46B), // mum altını
+    Color(0xFFD9C08A),
+    Color(0xFFE8D6A8), // parşömen altını — 6 (orta)
+    Color(0xFFD9C08A),
+    Color(0xFFC2A46B),
+    Color(0xFF9C8250),
+    Color(0xFF6E5B3A), // soluk altın — 12 (dikişsiz kapanış)
   ];
 
   @override

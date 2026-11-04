@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
-import 'app_text_styles.dart';
 
 class AppTheme {
   AppTheme._();
@@ -28,7 +27,10 @@ class AppTheme {
         onSurface: AppColors.textPrimary,
       ),
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.navBarBackground,
+        // Gece Grimuarı: başlık bandı yok — zemin görünür (eski: inkSurface düz band).
+        backgroundColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
+        scrolledUnderElevation: 0,
         foregroundColor: AppColors.textPrimary,
         elevation: 0,
         centerTitle: true,

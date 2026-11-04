@@ -23,7 +23,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/widgets/occult_cards.dart';
+import '../../core/utils/rich_text_parser.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
@@ -35,7 +40,12 @@ class _Entry {
   final String metin;
   final String metinEn;
   final List<Map<String, String>> kosullar;
-  const _Entry({required this.id, required this.metin, this.metinEn = '', required this.kosullar});
+  const _Entry({
+    required this.id,
+    required this.metin,
+    this.metinEn = '',
+    required this.kosullar,
+  });
   String metinFor(bool isEn) => (isEn && metinEn.isNotEmpty) ? metinEn : metin;
 }
 
@@ -120,14 +130,13 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
   // ─── JSON yükle, günlük cache'e bak, gerekirse yeni üret ─────────────────
 
   Future<void> _loadData() async {
-    final raw   = await rootBundle.loadString('assets/data/biyoritim.json');
-    final data  = jsonDecode(raw) as Map<String, dynamic>;
+    final raw = await rootBundle.loadString('assets/data/biyoritim.json');
+    final data = jsonDecode(raw) as Map<String, dynamic>;
     final prefs = await SharedPreferences.getInstance();
     final today = _todayKey();
 
     // Havuz yardımcıları
-    List<_Entry> flatPool(String key) =>
-        _parseList(data[key] as List);
+    List<_Entry> flatPool(String key) => _parseList(data[key] as List);
     List<_Entry> rangedPool(String key, int pct) =>
         _parseList((data[key] as Map)[_rangeFor(pct)] as List);
 
@@ -136,26 +145,30 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
 
     if (lastDate == today) {
       // ── Aynı gün: cache'ten yükle ─────────────────────────────────────────
-      final dp = prefs.getInt('biyo_pct_duygusal')    ?? 50;
-      final fp = prefs.getInt('biyo_pct_fiziksel')    ?? 50;
+      final dp = prefs.getInt('biyo_pct_duygusal') ?? 50;
+      final fp = prefs.getInt('biyo_pct_fiziksel') ?? 50;
       final ep = prefs.getInt('biyo_pct_entelektuel') ?? 50;
-      final ap = prefs.getInt('biyo_pct_asksans')     ?? 50;
-      final pp = prefs.getInt('biyo_pct_parasans')    ?? 50;
+      final ap = prefs.getInt('biyo_pct_asksans') ?? 50;
+      final pp = prefs.getInt('biyo_pct_parasans') ?? 50;
 
       result = _BiyoResult(
-        b1Metin:         _findById(prefs, 'biyo_id_b1',  flatPool('b1')),
-        duygusalPct:     dp,
-        duygusalMetin:   _findById(prefs, 'biyo_id_b2a', rangedPool('b2a', dp)),
-        fizikselPct:     fp,
-        fizikselMetin:   _findById(prefs, 'biyo_id_b2b', rangedPool('b2b', fp)),
-        entelektuelPct:  ep,
-        entelektuelMetin:_findById(prefs, 'biyo_id_b2c', rangedPool('b2c', ep)),
-        askSansPct:      ap,
-        askSansMetin:    _findById(prefs, 'biyo_id_b3a', rangedPool('b3a', ap)),
-        paraSansPct:     pp,
-        paraSansMetin:   _findById(prefs, 'biyo_id_b3b', rangedPool('b3b', pp)),
-        cakraMetin:      _findById(prefs, 'biyo_id_b4',  flatPool('b4')),
-        cinTakvimMetin:  _findById(prefs, 'biyo_id_b5',  flatPool('b5')),
+        b1Metin: _findById(prefs, 'biyo_id_b1', flatPool('b1')),
+        duygusalPct: dp,
+        duygusalMetin: _findById(prefs, 'biyo_id_b2a', rangedPool('b2a', dp)),
+        fizikselPct: fp,
+        fizikselMetin: _findById(prefs, 'biyo_id_b2b', rangedPool('b2b', fp)),
+        entelektuelPct: ep,
+        entelektuelMetin: _findById(
+          prefs,
+          'biyo_id_b2c',
+          rangedPool('b2c', ep),
+        ),
+        askSansPct: ap,
+        askSansMetin: _findById(prefs, 'biyo_id_b3a', rangedPool('b3a', ap)),
+        paraSansPct: pp,
+        paraSansMetin: _findById(prefs, 'biyo_id_b3b', rangedPool('b3b', pp)),
+        cakraMetin: _findById(prefs, 'biyo_id_b4', flatPool('b4')),
+        cinTakvimMetin: _findById(prefs, 'biyo_id_b5', flatPool('b5')),
       );
     } else {
       // ── Yeni gün: taze değerler üret, kaydet ──────────────────────────────
@@ -166,35 +179,65 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
       final pp = _rng.nextInt(101);
 
       result = _BiyoResult(
-        b1Metin:          _pickAndSave(prefs, 'bio_b1',                       flatPool('b1'),          'biyo_id_b1'),
-        duygusalPct:      dp,
-        duygusalMetin:    _pickAndSave(prefs, 'bio_b2a_${_rangeFor(dp)}',     rangedPool('b2a', dp),   'biyo_id_b2a'),
-        fizikselPct:      fp,
-        fizikselMetin:    _pickAndSave(prefs, 'bio_b2b_${_rangeFor(fp)}',     rangedPool('b2b', fp),   'biyo_id_b2b'),
-        entelektuelPct:   ep,
-        entelektuelMetin: _pickAndSave(prefs, 'bio_b2c_${_rangeFor(ep)}',     rangedPool('b2c', ep),   'biyo_id_b2c'),
-        askSansPct:       ap,
-        askSansMetin:     _pickAndSave(prefs, 'bio_b3a_${_rangeFor(ap)}',     rangedPool('b3a', ap),   'biyo_id_b3a'),
-        paraSansPct:      pp,
-        paraSansMetin:    _pickAndSave(prefs, 'bio_b3b_${_rangeFor(pp)}',     rangedPool('b3b', pp),   'biyo_id_b3b'),
-        cakraMetin:       _pickAndSave(prefs, 'bio_b4',                       flatPool('b4'),           'biyo_id_b4'),
-        cinTakvimMetin:   _pickAndSave(prefs, 'bio_b5',                       flatPool('b5'),           'biyo_id_b5'),
+        b1Metin: _pickAndSave(prefs, 'bio_b1', flatPool('b1'), 'biyo_id_b1'),
+        duygusalPct: dp,
+        duygusalMetin: _pickAndSave(
+          prefs,
+          'bio_b2a_${_rangeFor(dp)}',
+          rangedPool('b2a', dp),
+          'biyo_id_b2a',
+        ),
+        fizikselPct: fp,
+        fizikselMetin: _pickAndSave(
+          prefs,
+          'bio_b2b_${_rangeFor(fp)}',
+          rangedPool('b2b', fp),
+          'biyo_id_b2b',
+        ),
+        entelektuelPct: ep,
+        entelektuelMetin: _pickAndSave(
+          prefs,
+          'bio_b2c_${_rangeFor(ep)}',
+          rangedPool('b2c', ep),
+          'biyo_id_b2c',
+        ),
+        askSansPct: ap,
+        askSansMetin: _pickAndSave(
+          prefs,
+          'bio_b3a_${_rangeFor(ap)}',
+          rangedPool('b3a', ap),
+          'biyo_id_b3a',
+        ),
+        paraSansPct: pp,
+        paraSansMetin: _pickAndSave(
+          prefs,
+          'bio_b3b_${_rangeFor(pp)}',
+          rangedPool('b3b', pp),
+          'biyo_id_b3b',
+        ),
+        cakraMetin: _pickAndSave(prefs, 'bio_b4', flatPool('b4'), 'biyo_id_b4'),
+        cinTakvimMetin: _pickAndSave(
+          prefs,
+          'bio_b5',
+          flatPool('b5'),
+          'biyo_id_b5',
+        ),
       );
 
       // Yüzdeleri ve tarihi sakla
       await Future.wait([
-        prefs.setInt('biyo_pct_duygusal',    dp),
-        prefs.setInt('biyo_pct_fiziksel',    fp),
+        prefs.setInt('biyo_pct_duygusal', dp),
+        prefs.setInt('biyo_pct_fiziksel', fp),
         prefs.setInt('biyo_pct_entelektuel', ep),
-        prefs.setInt('biyo_pct_asksans',     ap),
-        prefs.setInt('biyo_pct_parasans',    pp),
-        prefs.setString('biyo_last_date',    today),
+        prefs.setInt('biyo_pct_asksans', ap),
+        prefs.setInt('biyo_pct_parasans', pp),
+        prefs.setString('biyo_last_date', today),
       ]);
     }
 
     if (!mounted) return;
     setState(() {
-      _result  = result;
+      _result = result;
       _loading = false;
     });
 
@@ -211,11 +254,18 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
     final profile = ref.read(userProfileProvider);
     final entry = pool.firstWhere(
       (e) => e.id == id,
-      orElse: () => pool.isNotEmpty ? pool.first : const _Entry(id: -1, metin: '', kosullar: []),
+      orElse:
+          () =>
+              pool.isNotEmpty
+                  ? pool.first
+                  : const _Entry(id: -1, metin: '', kosullar: []),
     );
     if (entry.metin.isEmpty) return '';
     final isEn = ref.read(localeProvider) == 'en';
-    return VariableReplacer.replace(entry.metinFor(isEn), profile.toVariableMap());
+    return VariableReplacer.replace(
+      entry.metinFor(isEn),
+      profile.toVariableMap(),
+    );
   }
 
   // ─── Yardımcı: yeni metin seç, no-repeat kaydet, ID'yi cache'e yaz ───────
@@ -230,13 +280,14 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
     final profile = ref.read(userProfileProvider);
 
     // Koşul filtresi
-    final filtered = pool.where((e) {
-      for (final k in e.kosullar) {
-        final val = _profileVal(k['degisken'] ?? '');
-        if (val != k['deger']) return false;
-      }
-      return true;
-    }).toList();
+    final filtered =
+        pool.where((e) {
+          for (final k in e.kosullar) {
+            final val = _profileVal(k['degisken'] ?? '');
+            if (val != k['deger']) return false;
+          }
+          return true;
+        }).toList();
 
     final available = filtered.isEmpty ? pool : filtered;
 
@@ -249,7 +300,9 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
       shown = lastId != null ? [lastId] : [];
       prefs.setStringList(noRepeatKey, shown);
       unseen = available.where((e) => '${e.id}' != lastId).toList();
-      if (unseen.isEmpty) unseen = List.from(available); // tek metin var, zorunlu tekrar
+      if (unseen.isEmpty) {
+        unseen = List.from(available); // tek metin var, zorunlu tekrar
+      }
     }
 
     unseen.shuffle(_rng);
@@ -261,7 +314,10 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
     prefs.setInt(idCacheKey, pick.id);
 
     final isEn = ref.read(localeProvider) == 'en';
-    return VariableReplacer.replace(pick.metinFor(isEn), profile.toVariableMap());
+    return VariableReplacer.replace(
+      pick.metinFor(isEn),
+      profile.toVariableMap(),
+    );
   }
 
   // ─── Yardımcı: yüzdeye göre aralık anahtarı ──────────────────────────────
@@ -282,9 +338,10 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
         id: m['id'] as int,
         metin: m['metin'] as String,
         metinEn: (m['metin_en'] as String?) ?? '',
-        kosullar: (m['kosullar'] as List)
-            .map((k) => Map<String, String>.from(k as Map))
-            .toList(),
+        kosullar:
+            (m['kosullar'] as List)
+                .map((k) => Map<String, String>.from(k as Map))
+                .toList(),
       );
     }).toList();
   }
@@ -292,315 +349,143 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
   String _profileVal(String key) {
     final p = ref.read(userProfileProvider);
     switch (key) {
-      case 'cinsiyet':     return p.gender;
-      case 'medeni_durum': return p.maritalStatus;
-      case 'meslek':       return p.job;
-      default:             return '';
+      case 'cinsiyet':
+        return p.gender;
+      case 'medeni_durum':
+        return p.maritalStatus;
+      case 'meslek':
+        return p.job;
+      default:
+        return '';
     }
   }
 
   // ─── BUILD ────────────────────────────────────────────────────────────────
 
   @override
-  Widget build(BuildContext context) {
-    final bottomPad = MediaQuery.of(context).padding.bottom;
-    return Scaffold(
-      backgroundColor: Colors.black,
-      extendBody: true,
-      body: Stack(
-        children: [
-          // ── Arka plan ─────────────────────────────────────────────────────
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/falbg/biyoritim.png',
-              fit: BoxFit.cover,
-              alignment: Alignment.topCenter,
-              filterQuality: FilterQuality.high,
-              errorBuilder: (_, __, ___) =>
-                  Container(color: const Color(0xFF050018)),
-            ),
-          ),
-          // ── Karartma ──────────────────────────────────────────────────────
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0x88000000),
-                  Color(0xCC000000),
-                ],
-              ),
-            ),
-          ),
-          // ── İçerik ────────────────────────────────────────────────────────
-          SafeArea(
-            bottom: false, // bottomPad'i manuel ekleyeceğiz
-            child: Column(
-              children: [
-                _buildHeader(),
-                Expanded(
-                  child: _loading
-                      ? const Center(
-                          child: CircularProgressIndicator(
-                            color: Color(0xFF00E5FF),
-                            strokeWidth: 2,
-                          ),
-                        )
-                      : _buildContent(bottomPad),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ─── Başlık ───────────────────────────────────────────────────────────────
-
-  Widget _buildHeader() {
-    // SafeArea(bottom:false) üst inset'i zaten ekledi — sadece 10px iç boşluk yeterli.
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 10, 12, 0),
-      child: Row(
-        children: [
-          GestureDetector(
-            onTap: () => context.pop(),
-            child: Container(
-              width: 38, height: 38,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.25), width: 1),
-              ),
-              child: const Icon(
-                Icons.arrow_back_ios_new_rounded,
-                color: Colors.white,
-                size: 18,
-              ),
-            ),
-          ),
-          Expanded(
-            child: Center(
+  Widget build(BuildContext context) => Scaffold(
+    backgroundColor: AppColors.ink,
+    extendBody: true,
+    body: GrimoireBackdrop(
+      asset: 'assets/images/falbg/biyoritim.png',
+      imageAlignment: Alignment.topCenter,
+      child: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16),
               child: Text(
                 ref.watch(l10nProvider).biyoritimTitle,
-                style: GoogleFonts.cinzel(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  letterSpacing: 5,
-                  shadows: const [
-                    Shadow(color: Color(0xAA00E5FF), blurRadius: 14),
-                  ],
-                ),
+                style: AppTextStyles.screenTitle,
               ),
             ),
-          ),
-          const SizedBox(width: 38), // simetri
-        ],
-      ),
-    );
-  }
-
-  // ─── Ana içerik (kaydırılabilir) ──────────────────────────────────────────
-
-  Widget _buildContent(double bottomPad) {
-    final r = _result!;
-    // Sistem nav çubuğu + ekstra boşluk
-    final extraBottom = bottomPad + 16;
-    return ListView(
-      padding: EdgeInsets.fromLTRB(14, 12, 14, extraBottom),
-      children: [
-        // B1 — Giriş
-        _buildIntroCard(r.b1Metin),
-        const SizedBox(height: 10),
-
-        // B2 — Biyoritim çubukları
-        _buildBarCard(ref.read(l10nProvider).emotional,     r.duygusalPct,    r.duygusalMetin,    const Color(0xFFFF4444)),
-        _buildBarCard(ref.read(l10nProvider).physical,      r.fizikselPct,    r.fizikselMetin,    const Color(0xFF4488FF)),
-        _buildBarCard(ref.read(l10nProvider).intellectual,  r.entelektuelPct, r.entelektuelMetin, const Color(0xFF44DD66)),
-
-        // B3 — Şans
-        _buildSectionLabel('ŞANS'),
-        _buildBarCard('Aşkta Şansın',  r.askSansPct,  r.askSansMetin,  const Color(0xFFFF44CC)),
-        _buildBarCard('Parada Şansın', r.paraSansPct, r.paraSansMetin, const Color(0xFFFFDD00)),
-
-        // B4 — Çakralar
-        _buildSectionLabel('ÇAKRALAR'),
-        _buildTextCard(r.cakraMetin, const Color(0xFFBB44FF)),
-
-        // B5 — Çin Takvimi
-        _buildSectionLabel('ÇİN TAKVİMİ'),
-        _buildTextCard(r.cinTakvimMetin, const Color(0xFF44DDFF)),
-
-        const SizedBox(height: 20),
-
-        // Geri Dön — scroll sonunda görünür, sabit overlay DEĞİL
-        _buildBackButton(),
-        const SizedBox(height: 8),
-      ],
-    );
-  }
-
-  // ─── Giriş kartı ──────────────────────────────────────────────────────────
-
-  Widget _buildIntroCard(String metin) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
-      decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.55),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: const Color(0xFF00E5FF).withValues(alpha: 0.35),
-          width: 1,
-        ),
-      ),
-      child: Text(
-        metin,
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 14,
-          height: 1.65,
-        ),
-      ),
-    );
-  }
-
-  // ─── Bar kartı ────────────────────────────────────────────────────────────
-
-  Widget _buildBarCard(String baslik, int pct, String metin, Color color) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(14, 12, 14, 14),
-        decoration: BoxDecoration(
-          color: Colors.black.withValues(alpha: 0.55),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: color.withValues(alpha: 0.30),
-            width: 1,
-          ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Başlık + yüzde
-            Text(
-              '$baslik  %$pct',
-              style: TextStyle(
-                color: color,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 8),
-            // Animasyonlu bar
-            AnimatedBuilder(
-              animation: _barAnim,
-              builder: (_, __) {
-                final widthFactor = (pct / 100.0) * _barAnim.value;
-                return ClipRRect(
-                  borderRadius: BorderRadius.circular(4),
-                  child: Stack(
-                    children: [
-                      // Arka plan izi
-                      Container(
-                        height: 10,
-                        width: double.infinity,
-                        color: Colors.white.withValues(alpha: 0.12),
-                      ),
-                      // Dolu kısım
-                      FractionallySizedBox(
-                        widthFactor: widthFactor,
-                        child: Container(
-                          height: 10,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            gradient: LinearGradient(
-                              colors: [
-                                color.withValues(alpha: 0.7),
-                                color,
-                              ],
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
-                            ),
-                          ),
+            Expanded(
+              child:
+                  _loading
+                      ? const Center(
+                        child: CircularProgressIndicator(
+                          color: AppColors.gold,
+                          strokeWidth: 2,
                         ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-            const SizedBox(height: 10),
-            // Açıklama metni
-            Text(
-              metin,
-              style: const TextStyle(
-                color: Color(0xEEFFFFFF),
-                fontSize: 13,
-                height: 1.6,
-              ),
+                      )
+                      : _buildContent(),
             ),
           ],
         ),
       ),
+    ),
+  );
+  Widget _buildContent() {
+    final r = _result!;
+    final s = ref.watch(l10nProvider);
+    final isEn = ref.watch(localeProvider) == 'en';
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+      children: [
+        _buildTextCard(r.b1Metin),
+        _buildBarCard(s.emotional, r.duygusalPct, r.duygusalMetin),
+        _buildBarCard(s.physical, r.fizikselPct, r.fizikselMetin),
+        _buildBarCard(s.intellectual, r.entelektuelPct, r.entelektuelMetin),
+        _buildSectionLabel(isEn ? 'Luck' : 'Şans'),
+        _buildBarCard(
+          isEn ? 'Luck in love' : 'Aşkta Şansın',
+          r.askSansPct,
+          r.askSansMetin,
+        ),
+        _buildBarCard(
+          isEn ? 'Luck with money' : 'Parada Şansın',
+          r.paraSansPct,
+          r.paraSansMetin,
+        ),
+        _buildSectionLabel(isEn ? 'Chakras' : 'Çakralar'),
+        _buildTextCard(r.cakraMetin),
+        _buildSectionLabel(isEn ? 'Chinese calendar' : 'Çin Takvimi'),
+        _buildTextCard(r.cinTakvimMetin),
+        const SizedBox(height: 12), _buildBackButton(),
+      ],
     );
   }
 
-  // ─── Bölüm etiketi ────────────────────────────────────────────────────────
-
-  Widget _buildSectionLabel(String label) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 4, 0, 8),
-      child: Center(
-        child: Text(
-          label,
-          style: GoogleFonts.cinzel(
-            fontSize: 14,
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-            letterSpacing: 4,
-            shadows: const [
-              Shadow(color: Color(0x88FFFFFF), blurRadius: 8),
+  Widget _buildSectionLabel(String label) => Padding(
+    padding: const EdgeInsets.symmetric(vertical: 12),
+    child: OccultSectionLabel(label),
+  );
+  Widget _buildTextCard(String text) => Padding(
+    padding: const EdgeInsets.only(bottom: 12),
+    child: GlassPanel(
+      variant: GlassVariant.reading,
+      padding: const EdgeInsets.all(18),
+      child: RichTextParser.build(
+        text.replaceAll(RegExp(r'<sprite=[^>]*>', caseSensitive: false), ''),
+        style: AppTextStyles.reading,
+      ),
+    ),
+  );
+  Widget _buildBarCard(String label, int pct, String text) => Padding(
+    padding: const EdgeInsets.only(bottom: 12),
+    child: GlassPanel(
+      variant: GlassVariant.reading,
+      padding: const EdgeInsets.all(18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(child: Text(label, style: AppTextStyles.uiLabel)),
+              Text(
+                ref.read(localeProvider) == 'en' ? '$pct%' : '%$pct',
+                style: AppTextStyles.value.copyWith(
+                  fontFeatures: AppTextStyles.tabular,
+                ),
+              ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-
-  // ─── Düz metin kartı (Çakra / Çin Takvimi) ───────────────────────────────
-
-  Widget _buildTextCard(String metin, Color accent) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(14, 12, 14, 14),
-        decoration: BoxDecoration(
-          color: Colors.black.withValues(alpha: 0.55),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: accent.withValues(alpha: 0.30),
-            width: 1,
+          const SizedBox(height: 12),
+          AnimatedBuilder(
+            animation: _barAnim,
+            builder:
+                (context, child) => ClipRRect(
+                  borderRadius: BorderRadius.circular(4),
+                  child: LinearProgressIndicator(
+                    value: pct / 100 * _barAnim.value,
+                    minHeight: 6,
+                    backgroundColor: AppColors.bone.withValues(alpha: 0.08),
+                    color: pct < 25 ? AppColors.blood : AppColors.gold,
+                  ),
+                ),
           ),
-        ),
-        child: Text(
-          metin,
-          style: const TextStyle(
-            color: Color(0xEEFFFFFF),
-            fontSize: 13,
-            height: 1.65,
+          const SizedBox(height: 14),
+          RichTextParser.build(
+            text.replaceAll(
+              RegExp(r'<sprite=[^>]*>', caseSensitive: false),
+              '',
+            ),
+            style: AppTextStyles.reading,
           ),
-        ),
+        ],
       ),
-    );
-  }
-
+    ),
+  );
   Widget _buildBackButton() {
     return GestureDetector(
       onTap: () => context.pop(),
@@ -608,19 +493,30 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
         width: double.infinity,
         height: 48,
         decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.10),
+          color: AppColors.bone.withValues(alpha: 0.10),
           borderRadius: BorderRadius.circular(23),
           border: Border.all(
-              color: Colors.white.withValues(alpha: 0.25), width: 1.2),
+            color: AppColors.bone.withValues(alpha: 0.25),
+            width: 1.2,
+          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
+            const Icon(
+              Icons.chevron_left_rounded,
+              color: AppColors.bone,
+              size: 20,
+            ),
             const SizedBox(width: 2),
-            Text(ref.read(l10nProvider).backButton,
-              style: const TextStyle(color: Colors.white, fontSize: 15,
-                  fontWeight: FontWeight.w500)),
+            Text(
+              ref.read(l10nProvider).backButton,
+              style: const TextStyle(
+                color: AppColors.bone,
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ],
         ),
       ),

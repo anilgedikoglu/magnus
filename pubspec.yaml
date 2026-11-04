@@ -116,6 +116,9 @@ flutter:
     - assets/videos/
     - assets/videos/kahinler/
     - assets/sounds/kehanet/tamua/
+    # Gece Grimuarı yazı tipleri (OFL, Google Fonts resmî statik TTF'ler; google_fonts
+    # paketi önce buradan yükler → çevrimdışı ilk açılışta font kaybı yok). Lisans: OFL-*.txt
+    - assets/google_fonts/
 
   fonts:
     - family: ChixaDemiBold

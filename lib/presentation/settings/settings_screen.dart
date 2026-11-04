@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/glass_tab_bar.dart';
@@ -176,8 +177,15 @@ class _DonutPainter extends CustomPainter {
     final cy = size.height / 2;
     final r = (min(size.width, size.height) - strokeWidth) / 2;
     final rect = Rect.fromCircle(center: Offset(cx, cy), radius: r);
-    const gap = 0.07;
+    const gap = 0.06;
     var start = -pi / 2;
+
+    // Gece Grimuarı (2026-11): neon glow + beyaz özek KALKTI. Kemik %7 iz halkası,
+    // segmentler mum altını / gümüş / kemik tonlarında düz çizgi; ayrım boşluk + ton farkı.
+    canvas.drawCircle(Offset(cx, cy), r, Paint()
+      ..color = AppColors.bone.withValues(alpha: 0.07)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth);
 
     // Toplam açı progress ile ölçeklenir (saat yönünde dolma)
     double remaining = progress; // 0→1 toplam ilerleme
@@ -189,26 +197,18 @@ class _DonutPainter extends CustomPainter {
       final sweep = fullSweep * segProgress;
 
       if (sweep > gap) {
-        // Katman 1: dış glow (daha hafif)
         canvas.drawArc(rect, start + gap / 2, sweep - gap, false, Paint()
-          ..color = seg.color.withValues(alpha: 0.25)
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = strokeWidth + 12
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 8));
-
-        // Katman 2: ana çizgi + hafif glow
-        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, Paint()
-          ..color = seg.color.withValues(alpha: 0.85)
+          ..color = seg.color.withValues(alpha: 0.92)
           ..style = PaintingStyle.stroke
           ..strokeWidth = strokeWidth
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2));
-
-        // Katman 3: beyaz özek
-        canvas.drawArc(rect, start + gap / 2, sweep - gap, false, Paint()
-          ..color = Colors.white.withValues(alpha: 0.45)
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = strokeWidth * 0.28
           ..strokeCap = StrokeCap.butt);
+        // İnce iç parıltı çizgisi (cam kenarı gibi) — çok hafif.
+        canvas.drawArc(
+            Rect.fromCircle(center: Offset(cx, cy), radius: r - strokeWidth * 0.36),
+            start + gap / 2, sweep - gap, false, Paint()
+          ..color = AppColors.bone.withValues(alpha: 0.16)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 0.8);
       }
 
       remaining -= seg.fraction;
@@ -319,7 +319,7 @@ class _DonutChartState extends State<_DonutChart>
   @override
   Widget build(BuildContext context) {
     final size = widget.size;
-    final sw = size * 0.17;
+    final sw = size * 0.12; // eski 0.17 — ince halka daha ciddi duruyor
     final extra = widget.extra;
     final totalSize = size + extra * 2;
 
@@ -365,10 +365,10 @@ class _DonutChartState extends State<_DonutChart>
                       child: Text(
                         widget.title,
                         textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
+                        style: AppTextStyles.cardLabel.copyWith(
+                          fontSize: 11.5,
+                          letterSpacing: 1.2,
+                          color: AppColors.boneDim,
                         ),
                       ),
                     ),
@@ -389,19 +389,13 @@ class _DonutChartState extends State<_DonutChart>
                         children: [
                           for (final seg in widget.segments) ...[
                             Text(
-                              seg.label,
+                              '${seg.label}  ${(seg.fraction * 100).round()}%',
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: AppTextStyles.meta.copyWith(
                                 color: seg.color,
                                 fontSize: 11,
-                                fontWeight: FontWeight.w800,
-                                shadows: [
-                                  Shadow(
-                                    color: seg.color.withValues(alpha: 0.9),
-                                    blurRadius: 12,
-                                  ),
-                                  const Shadow(color: Colors.black, blurRadius: 4),
-                                ],
+                                fontWeight: FontWeight.w600,
+                                fontFeatures: AppTextStyles.tabular,
                               ),
                             ),
                             const SizedBox(height: 4),
@@ -423,7 +417,10 @@ class _DonutChartState extends State<_DonutChart>
 
 // ─── Bilgi kartı ─────────────────────────────────────────────────────────────
 
-class _InfoCard extends StatelessWidget {
+/// Gece Grimuarı bilgi kartı (2026-11): pembe neon çerçeve + kalem ikonları KALKTI.
+/// Cam kart (glassTint + kemik kenar); etiket kül, değer kemik. Basınca kenar mum
+/// altını olur. Düzenlenebilirlik kart dokunuşundan anlaşılır (Semantics'te de söylenir).
+class _InfoCard extends StatefulWidget {
   final IconData icon;
   final String label;
   final String value;
@@ -437,54 +434,80 @@ class _InfoCard extends StatelessWidget {
   });
 
   @override
+  State<_InfoCard> createState() => _InfoCardState();
+}
+
+class _InfoCardState extends State<_InfoCard> {
+  bool _down = false;
+
+  void _set(bool v) {
+    if (_down != v) setState(() => _down = v);
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 150),
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 7),
-        decoration: BoxDecoration(
-          color: Colors.black.withValues(alpha: 0.55),
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            color: onTap != null ? const Color(0xFFDD00BB) : const Color(0xFF660044),
-            width: 1.5,
-          ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Row(
+    final editable = widget.onTap != null;
+    return Semantics(
+      button: editable,
+      label: '${widget.label}: ${widget.value}',
+      excludeSemantics: true,
+      onTap: widget.onTap,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTapDown: editable ? (_) => _set(true) : null,
+        onTapCancel: () => _set(false),
+        onTapUp: (_) => _set(false),
+        onTap: widget.onTap,
+        child: AnimatedScale(
+          scale: _down ? 0.98 : 1.0,
+          duration: const Duration(milliseconds: 110),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 140),
+            padding: const EdgeInsets.fromLTRB(10, 8, 8, 8),
+            decoration: BoxDecoration(
+              color: _down ? AppColors.glassTintSelected : AppColors.glassTint,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: _down ? AppColors.gold.withValues(alpha: 0.75) : AppColors.rim,
+                width: 0.8,
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(icon, color: const Color(0xFFDD00BB), size: 11),
-                const SizedBox(width: 4),
-                Expanded(
-                  child: Text(
-                    label,
-                    style: const TextStyle(
-                      color: Color(0xFFDD88CC),
-                      fontSize: 9.5,
-                      fontWeight: FontWeight.w500,
+                Row(
+                  children: [
+                    Icon(widget.icon, color: AppColors.gold.withValues(alpha: 0.80), size: 11),
+                    const SizedBox(width: 5),
+                    Expanded(
+                      child: Text(
+                        widget.label,
+                        style: AppTextStyles.meta.copyWith(
+                          fontSize: 10,
+                          letterSpacing: 0.6,
+                          height: 1.1,
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
-                    overflow: TextOverflow.ellipsis,
-                  ),
+                  ],
                 ),
-                if (onTap != null)
-                  const Icon(Icons.edit, color: Color(0xFFDD00BB), size: 9),
+                const SizedBox(height: 4),
+                Text(
+                  widget.value,
+                  style: AppTextStyles.value.copyWith(
+                    fontSize: 14,
+                    height: 1.15,
+                    fontFeatures: AppTextStyles.tabular,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ],
             ),
-            const SizedBox(height: 3),
-            Text(
-              value,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 13,
-                fontWeight: FontWeight.bold,
-              ),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ],
+          ),
         ),
       ),
     );
@@ -1538,14 +1561,14 @@ class SettingsScreen extends ConsumerWidget {
         children: [
           if (_isAdmin(profile))
             IconButton(
-              icon: const Icon(Icons.settings_rounded,
-                  color: Color(0xFFFFCC00), size: 26),
+              icon: const Icon(Icons.admin_panel_settings_outlined,
+                  color: AppColors.gold, size: 24),
               onPressed: () => _showAdminPanel(context),
             ),
           const Spacer(),
           IconButton(
-            icon: const Icon(Icons.settings_rounded,
-                color: Colors.white70, size: 26),
+            icon: const Icon(Icons.settings_outlined,
+                color: AppColors.boneDim, size: 24),
             onPressed: () => _showOptions(context, ref),
           ),
         ],
@@ -1559,24 +1582,16 @@ class SettingsScreen extends ConsumerWidget {
     final s = ref.watch(l10nProvider);
     return Column(
       children: [
-        Text(
-          s.settingsTitle,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 0.5,
-          ),
-        ),
-        const SizedBox(height: 6),
+        Text(s.settingsTitle, style: AppTextStyles.screenTitle),
+        const SizedBox(height: 8),
+        // Mum altını kıl çizgi (eski: camgöbeği neon).
         Container(
-          width: 140,
-          height: 2,
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Colors.transparent, Color(0xFF00DDFF), Colors.transparent],
+          width: 120,
+          height: 1,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0x00C2A46B), Color(0xB3C2A46B), Color(0x00C2A46B)],
             ),
-            borderRadius: BorderRadius.circular(1),
           ),
         ),
       ],
@@ -1991,15 +2006,11 @@ class SettingsScreen extends ConsumerWidget {
                 height: 76,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: const Color(0xFF00CCFF), width: 2.5),
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color(0xFF00CCFF).withValues(alpha: 0.55),
-                      blurRadius: 18,
-                      spreadRadius: 3,
-                    ),
+                  border: Border.all(color: AppColors.gold.withValues(alpha: 0.85), width: 1.2),
+                  boxShadow: const [
+                    BoxShadow(color: Color(0x99000000), blurRadius: 14, offset: Offset(0, 4)),
                   ],
-                  color: const Color(0xFF1A0A3C),
+                  color: AppColors.inkCard,
                 ),
                 child: ClipOval(child: avatarContent),
               ),
@@ -2010,15 +2021,11 @@ class SettingsScreen extends ConsumerWidget {
                 child: Container(
                   width: 22, height: 22,
                   decoration: BoxDecoration(
-                    color: const Color(0xFFDD00BB),
+                    color: AppColors.inkSurface,
                     shape: BoxShape.circle,
-                    border: Border.all(color: const Color(0xFF1A0A3C), width: 1.5),
-                    boxShadow: [
-                      BoxShadow(color: const Color(0xFFDD00BB).withValues(alpha: 0.5),
-                          blurRadius: 6),
-                    ],
+                    border: Border.all(color: AppColors.gold.withValues(alpha: 0.85), width: 0.9),
                   ),
-                  child: const Icon(Icons.edit, color: Colors.white, size: 11),
+                  child: const Icon(Icons.photo_camera_outlined, color: AppColors.gold, size: 12),
                 ),
               ),
             ],
@@ -2027,11 +2034,9 @@ class SettingsScreen extends ConsumerWidget {
           Text(
             profile.name.isNotEmpty ? profile.name : ref.read(l10nProvider).userFallback,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: AppTextStyles.value.copyWith(fontSize: 15, letterSpacing: 0.3),
           ),
         ],
       ),
@@ -2055,9 +2060,9 @@ class SettingsScreen extends ConsumerWidget {
       labelInset: 1,
       delay: Duration.zero,
       segments: [
-        _Seg(const Color(0xFFFFDD00), s['Kardinal']!, loc.modalityName('Kardinal')),
-        _Seg(const Color(0xFF00EE88), s['Değişken']!, loc.modalityName('Değişken')),
-        _Seg(const Color(0xFF00CCFF), s['Sabit']!,    loc.modalityName('Sabit')),
+        _Seg(AppColors.gold, s['Kardinal']!, loc.modalityName('Kardinal')),
+        _Seg(AppColors.silver, s['Değişken']!, loc.modalityName('Değişken')),
+        _Seg(AppColors.boneDim, s['Sabit']!,    loc.modalityName('Sabit')),
       ],
     );
 
@@ -2071,8 +2076,8 @@ class SettingsScreen extends ConsumerWidget {
               labelInset: 1,
               delay: const Duration(milliseconds: 950),
               segments: [
-                _Seg(const Color(0xFFAA44FF), s['Feminen']!,  loc.polarityName('Feminen')),
-                _Seg(const Color(0xFF00CCAA), s['Maskülen']!, loc.polarityName('Maskülen')),
+                _Seg(AppColors.silver, s['Feminen']!,  loc.polarityName('Feminen')),
+                _Seg(AppColors.gold, s['Maskülen']!, loc.polarityName('Maskülen')),
               ],
             ),
           ),
@@ -2087,10 +2092,10 @@ class SettingsScreen extends ConsumerWidget {
               labelDy: 1,
               delay: const Duration(milliseconds: 1900),
               segments: [
-                _Seg(const Color(0xFFFF6622), s['Ateş']!,   loc.elementName('Ateş')),
-                _Seg(const Color(0xFF88DD00), s['Toprak']!, loc.elementName('Toprak')),
-                _Seg(const Color(0xFF00AAFF), s['Hava']!,   loc.elementName('Hava')),
-                _Seg(const Color(0xFF0066FF), s['Su']!,     loc.elementName('Su')),
+                _Seg(AppColors.gold, s['Ateş']!,   loc.elementName('Ateş')),
+                _Seg(const Color(0xFF8A7550), s['Toprak']!, loc.elementName('Toprak')),
+                _Seg(AppColors.boneDim, s['Hava']!,   loc.elementName('Hava')),
+                _Seg(AppColors.silver, s['Su']!,     loc.elementName('Su')),
               ],
             ),
           ),

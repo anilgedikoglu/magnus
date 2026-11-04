@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../core/widgets/filmed_image.dart';
 import '../../../data/models/inbox_item.dart';
 import '../../../core/l10n/app_strings.dart';
 import '../../../data/providers.dart';
@@ -35,13 +36,13 @@ class InboxItemCard extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.delete_outline_rounded, color: Colors.white, size: 24),
+            const Icon(Icons.delete_outline_rounded, color: AppColors.danger, size: 22),
             const SizedBox(height: 4),
             Text(s.deleteSwipe,
-                style: const TextStyle(
-                  color: Colors.white,
+                style: AppTextStyles.meta.copyWith(
+                  color: AppColors.danger,
                   fontSize: 11,
-                  fontFamily: 'ChixaDemiBold',
+                  letterSpacing: 0.6,
                 )),
           ],
         ),
@@ -51,10 +52,10 @@ class InboxItemCard extends ConsumerWidget {
         onTap: locked ? null : onTap, // kilitliyse dokunma engeli
         splashColor: locked
             ? Colors.transparent
-            : AppColors.bubble1.first.withValues(alpha: 0.1),
+            : AppColors.gold.withValues(alpha: 0.06),
         highlightColor: locked
             ? Colors.transparent
-            : AppColors.bubble1.first.withValues(alpha: 0.05),
+            : AppColors.bone.withValues(alpha: 0.04),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Row(
@@ -73,6 +74,10 @@ class InboxItemCard extends ConsumerWidget {
                           child: Text(
                             locked ? item.fortuneTypeLabel : item.displayTitle,
                             style: AppTextStyles.inboxTitle.copyWith(
+                              fontWeight: (!locked && !item.isRead)
+                                  ? FontWeight.w600
+                                  : FontWeight.w500,
+                              fontFeatures: AppTextStyles.tabular,
                               color: locked
                                   ? AppColors.textMuted
                                   : item.isRead
@@ -220,17 +225,44 @@ class _FortuneIconState extends State<_FortuneIcon>
           height: 50,
           child: Stack(
             children: [
-              // PNG ikon — kilitliyse "2" (siyah-beyaz) versiyonu
+              // PNG ikon — kilitliyse "2" (siyah-beyaz) versiyonu. Gece Grimuarı filmi:
+              // neon çizgi ikonlar kısılır (hazır: hafif renk, okunmuş: daha da soluk).
               ClipRRect(
                 borderRadius: BorderRadius.circular(14),
-                child: assetPath != null
-                    ? Image.asset(
-                        assetPath,
-                        width: 50,
-                        height: 50,
-                        fit: BoxFit.cover,
-                      )
-                    : _FallbackIcon(type: widget.item.fortuneType),
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: AppColors.inkCard,
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  child: assetPath != null
+                      ? ColorFiltered(
+                          colorFilter: ColorFilter.matrix(locked
+                              ? FilmedImage.matrix(0.0, 0.70)
+                              : widget.item.isRead
+                                  ? FilmedImage.matrix(0.15, 0.78)
+                                  : FilmedImage.matrix(0.35, 0.92)),
+                          child: Image.asset(
+                            assetPath,
+                            width: 50,
+                            height: 50,
+                            fit: BoxFit.cover,
+                            errorBuilder: (_, __, ___) =>
+                                _FallbackIcon(type: widget.item.fortuneType),
+                          ),
+                        )
+                      : _FallbackIcon(type: widget.item.fortuneType),
+                ),
+              ),
+              // Cam kenar
+              IgnorePointer(
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: AppColors.rim, width: 0.8),
+                  ),
+                ),
               ),
               // Saat yönünde açılım örtüsü (kilitliyse)
               if (locked)
@@ -283,7 +315,7 @@ class _FortuneIconState extends State<_FortuneIcon>
   }
 }
 
-// ─── PNG bulunamazsa emoji fallback ───────────────────────────────────────────
+// ─── PNG bulunamazsa çizgi ikon (Gece Grimuarı: emoji YOK) ─────────────────────
 
 class _FallbackIcon extends StatelessWidget {
   final FortuneType type;
@@ -291,29 +323,29 @@ class _FallbackIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final emoji = switch (type) {
-      FortuneType.coffee     => '☕',
-      FortuneType.tarot      => '🃏',
-      FortuneType.astrology  => '✨',
-      FortuneType.dream      => '🌙',
-      FortuneType.motivation => '💫',
-      FortuneType.general    => '🔮',
-      FortuneType.birthChart  => '🌟',
-      FortuneType.numeroloji  => '🔢',
-      FortuneType.durugoru    => '👁️',
-      FortuneType.elfali      => '🖐️',
-      FortuneType.iching      => '☯',
-      FortuneType.japonfali   => '⛩',
-      FortuneType.yuzfali     => '🫦',
+    final icon = switch (type) {
+      FortuneType.coffee     => Icons.coffee_outlined,
+      FortuneType.tarot      => Icons.style_outlined,
+      FortuneType.astrology  => Icons.auto_awesome_outlined,
+      FortuneType.dream      => Icons.nightlight_outlined,
+      FortuneType.motivation => Icons.local_fire_department_outlined,
+      FortuneType.general    => Icons.blur_circular_outlined,
+      FortuneType.birthChart  => Icons.brightness_7_outlined,
+      FortuneType.numeroloji  => Icons.tag_rounded,
+      FortuneType.durugoru    => Icons.visibility_outlined,
+      FortuneType.elfali      => Icons.back_hand_outlined,
+      FortuneType.iching      => Icons.contrast_rounded,
+      FortuneType.japonfali   => Icons.temple_buddhist_outlined,
+      FortuneType.yuzfali     => Icons.face_retouching_natural_outlined,
     };
     return Container(
       width: 50,
       height: 50,
       decoration: BoxDecoration(
-        color: AppColors.backgroundCard,
+        color: AppColors.inkCard,
         borderRadius: BorderRadius.circular(14),
       ),
-      child: Center(child: Text(emoji, style: const TextStyle(fontSize: 22))),
+      child: Center(child: Icon(icon, color: AppColors.ash, size: 22)),
     );
   }
 }

@@ -5,6 +5,7 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/glass_tab_bar.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
@@ -19,25 +20,43 @@ class InboxScreen extends ConsumerWidget {
     final items = ref.watch(inboxProvider);
     final s = ref.watch(l10nProvider);
 
+    // Gece Grimuarı (2026-11): başlık bandı şeffaf — liste başlığın altından mürekkep
+    // geçişiyle kayar; zemin ortak atmosfer (mum ışığı + vinyet + grain).
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.ink,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: AppColors.navBarBackground,
-        title: Text(s.inboxTitle),
+        backgroundColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
+        scrolledUnderElevation: 0,
+        flexibleSpace: const IgnorePointer(
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: [0.0, 0.70, 1.0],
+                colors: [Color(0xF207080B), Color(0xCC07080B), Color(0x0007080B)],
+              ),
+            ),
+          ),
+        ),
+        title: Text(s.inboxTitle, style: AppTextStyles.screenTitle),
         actions: [
           if (items.isNotEmpty)
             TextButton(
               onPressed: () => _confirmClearAll(context, ref),
               child: Text(
                 s.clearAll,
-                style: AppTextStyles.inboxMeta.copyWith(
-                  color: AppColors.glowRed.withValues(alpha: 0.8),
+                style: AppTextStyles.uiLabel.copyWith(
+                  fontSize: 13,
+                  color: AppColors.ash,
                 ),
               ),
             ),
         ],
       ),
-      body: GestureDetector(
+      body: GrimoireBackdrop(child: GestureDetector(
         // Soldan sağa swipe → geri (ana menüye dön)
         onHorizontalDragEnd: (details) {
           if ((details.primaryVelocity ?? 0) > 200) {
@@ -60,7 +79,7 @@ class InboxScreen extends ConsumerWidget {
             if (MainTabsScope.maybeOf(context) == null) _buildBackButton(context, s),
           ],
         ),
-      ),
+      )),
     );
   }
 
@@ -104,45 +123,32 @@ class InboxScreen extends ConsumerWidget {
     );
   }
 
+  // Boş kutu: sessiz zarf glifi (kül) + Cinzel başlık + kül açıklama. Neon ✦ / renkli
+  // gradyan YOK; zemin üstteki ortak atmosfer.
   Widget _buildEmpty(AppStrings s) {
-    return Stack(
-      fit: StackFit.expand,
-      children: [
-        Image.asset(
-          'assets/images/welcomscreenbackground.jpg',
-          fit: BoxFit.cover,
-          alignment: Alignment.center,
-          filterQuality: FilterQuality.high,
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 40),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.drafts_outlined,
+                size: 44, color: AppColors.ash.withValues(alpha: 0.55)),
+            const SizedBox(height: 22),
+            Text(
+              s.inboxEmpty,
+              style: AppTextStyles.screenTitle.copyWith(letterSpacing: 2),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 10),
+            Text(
+              s.inboxEmptyDesc,
+              style: AppTextStyles.meta.copyWith(fontSize: 13.5, height: 1.5),
+              textAlign: TextAlign.center,
+            ),
+          ],
         ),
-        Container(color: const Color(0xFF100B35).withValues(alpha: 0.50)),
-        Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ShaderMask(
-                shaderCallback: (bounds) => const LinearGradient(
-                  colors: AppColors.bubble1,
-                ).createShader(bounds),
-                child: const Text(
-                  '✦',
-                  style: TextStyle(fontSize: 64, color: Colors.white),
-                ),
-              ),
-              const SizedBox(height: 20),
-              Text(
-                s.inboxEmpty,
-                style: AppTextStyles.title,
-              ),
-              const SizedBox(height: 8),
-              Text(
-                s.inboxEmptyDesc,
-                style: AppTextStyles.inboxDescription,
-                textAlign: TextAlign.center,
-              ),
-            ],
-          ),
-        ),
-      ],
+      ),
     );
   }
 
@@ -153,13 +159,16 @@ class InboxScreen extends ConsumerWidget {
     final bottomPad = inTabs
         ? MediaQuery.paddingOf(context).bottom + kGlassBarReserve + 12
         : 12.0;
+    // Üst pay: şeffaf başlık bandının altından başlar (extendBodyBehindAppBar).
+    final topPad = MediaQuery.paddingOf(context).top + kToolbarHeight + 6;
     return ListView.separated(
-      padding: EdgeInsets.fromLTRB(0, 12, 0, bottomPad),
+      padding: EdgeInsets.fromLTRB(0, topPad, 0, bottomPad),
       itemCount: items.length,
-      separatorBuilder: (_, __) => const Divider(
+      separatorBuilder: (_, __) => Divider(
         height: 1,
-        color: AppColors.divider,
-        indent: 16,
+        thickness: 0.6,
+        color: AppColors.bone.withValues(alpha: 0.08),
+        indent: 80,
         endIndent: 16,
       ),
       itemBuilder: (context, index) {
@@ -199,7 +208,11 @@ class InboxScreen extends ConsumerWidget {
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppColors.backgroundSurface,
+        backgroundColor: AppColors.inkSurface,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18),
+          side: const BorderSide(color: AppColors.rim, width: 0.8),
+        ),
         title: Text(s.deleteAllConfirm, style: AppTextStyles.inboxTitle),
         content: Text(
           s.deleteAllSubtitle,
@@ -217,7 +230,7 @@ class InboxScreen extends ConsumerWidget {
             onPressed: () => Navigator.pop(ctx, true),
             child: Text(s.delete,
                 style: AppTextStyles.answerText.copyWith(
-                  color: AppColors.glowRed,
+                  color: AppColors.danger,
                 )),
           ),
         ],

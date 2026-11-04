@@ -546,17 +546,29 @@ return Scaffold(
 iOS 26 "Liquid Glass" tarzı cam alt bar (`lib/core/widgets/glass_tab_bar.dart`) en üstte, üçünde de
 TAM AYNI yerde ve geçişlerde hiç kımıldamadan durur; seçim kapsülü yay fiziğiyle kayar.
 
-| Sekme | İndeks | İkon | Giriş yönü |
+**Bar: 5 eşit slot — Bilgisayar · Ev1 · Ev2 · Ev3 · Zarf** (Anıl, 2026-11-05: ana menünün 3 sayfası için
+3 ayrı rakamlı ev). Bar slotu = `barSlotFor(tab, homePage)`: profil→0, ana menü sayfa p→1+p, inbox→4.
+
+| Slot | Ekran | İkon (hepsi beyaz ÇİZGİ vektör glif, CustomPainter) | Giriş yönü |
 |---|---|---|---|
-| Kullanıcı Bilgileri (`SettingsScreen`) | `MainTab.profile` = 0 | `bilgiekranilogo.png` | soldan |
-| Ana Menü (`HomeScreen`) | `MainTab.home` = 1 | ev (CustomPainter; pasif çizgi, aktif dolu) | — |
-| Gelen Kutusu (`InboxScreen`) | `MainTab.inbox` = 2 | `inbox_icon.png` | alttan (swipe ile: sağdan) |
+| 0 | Kullanıcı Bilgileri (`SettingsScreen`, `MainTab.profile`) | `_ComputerPainter` — monitör | soldan |
+| 1-3 | Ana Menü sayfa 1-3 (`HomeScreen`, `MainTab.home`) | `_HousePainter(number)` — ev + çizgi rakam 1/2/3 | — |
+| 4 | Gelen Kutusu (`InboxScreen`, `MainTab.inbox`) | `_EnvelopePainter` — zarf | alttan (swipe ile: sağdan) |
+
+**İkon kuralı:** Dolu (beyaz dolgulu) varyant YOK — Anıl: "fazla beyazlı modeller kaba, çizgili modelleri kullan".
+Aktif sekme yalnız kapsülle gösterilir. Monitör + zarf glifleri ChatGPT'ye çizdirildi (önce görsel, sonra SVG:
+viewBox 24, stroke 2.1, yalnız M/L/Q/Z) ve birebir `Path`'e çevrildi. Rakamlar da font değil ÇİZGİ path
+(TextPainter test ortamında kutu basıyordu; font bağımlılığı da yok). Eski renkli PNG'ler (`bilgiekranilogo.png`,
+`inbox_icon.png`) barda artık kullanılmıyor.
 
 **KURALLAR (bozma):**
 - Sekme değiştirmek için **her yerde** `selectMainTab(context, MainTab.x)` kullan. `context.push('/settings')`,
   `Navigator.push(InboxScreen)`, `context.go('/inbox')` **KULLANMA** (eski yollar; sekme barını atlar).
   Kapsayıcı dışındaki (üstte açık) bir rotadan çağrılırsa provider'ı ayarlayıp `go('/home')` yapar.
-- Aktif sekme tek kaynak: `mainTabProvider`. Ana menüdeyken eve tekrar basma → `homeResetProvider` → 1. sayfa.
+- Aktif sekme tek kaynak: `mainTabProvider`; ana menü sayfası tek kaynak: `homePageProvider`.
+  HomeScreen'de sayfa geçişinin TEK sahibi `_animateHomeTo` (swipe, semantik aksiyon, bar Ev1-3). Programatik
+  animasyon sürerken `onPageChanged` ara sayfayı provider'a YAZMAZ (`_animTarget`) → kapsül geri sekmez.
+  Gizli sekmede (TickerMode kapalı) `jumpToPage`. `PageController(initialPage: provider, keepPage: false)`.
 - Sekmeler keyed Stack çocukları: state korunur; gizli sekmede `TickerMode` kapalı (nebula/yıldızlar durur).
   Ekranlar artık hep mounted → eskiden push/pop dönüşünde yapılan işler `ref.listen(mainTabProvider)` ile
   (HomeScreen: settings'ten dönünce `_refreshCredits`, ana menüden çıkarken `_scheduleUnlockTimer`).
@@ -564,18 +576,24 @@ TAM AYNI yerde ve geçişlerde hiç kımıldamadan durur; seçim kapsülü yay f
   "Geri Git" GİZLİ (yerine bar); değilse (tek başına rota) eski butonlar yedek olarak çıkar.
 - İçerik bar için alttan pay bırakır: `kGlassBarReserve` (56 + 10). Inbox listesi camın ARKASINA uzanır.
 - Fallar / inbox detayı kendi rotalarında açılır → kapsayıcının (ve barın) ÜSTÜNE biner.
-- Android geri: sekme ≠ ana menü ise ana menüye döner (`PopScope`).
+- Android geri: sekme ≠ ana menü ise ana menüye döner. ⚠️ go_router 13.2.5 `popRoute` hiçbir navigatör pop
+  edemezken `maybePop()` ÇAĞIRMAZ (delegate.dart:59-77) → `PopScope` tek başına çalışmaz, uygulama kapanırdı.
+  Çözüm: MainTabs'ta öncelikli `ChildBackButtonDispatcher` (üstte rota varsa önce o kapanır). `GoRoute.onExit`
+  KULLANMA: `go()` navigasyonunda da çağrılıp yönlendirmeyi bloklar. `PopScope` yalnız predictive-back için kalır.
 - `AppShell` Scaffold `resizeToAvoidBottomInset: false` → bar klavyenin üstüne çıkmaz.
 - Yeşil halka kuralı korunur: `greenRing = !hasLocked && hasUnread` → zarfta ince yeşil halka; okunmamış →
   zarfta nokta (yeşil halka varken yeşil, yoksa turuncu). Hazırlanan fal satırı ana menüde barın üstünde.
-- Ana menüdeki önceki/sonraki ok butonları KALDIRILDI: sayfalar swipe ile; ekran okuyucu için
-  `Semantics(onIncrease/onDecrease)`; sayfa göstergesi duruyor.
+- Ana menüdeki önceki/sonraki ok butonları KALDIRILDI: sayfalar swipe veya bardaki Ev1-3 ile; ekran okuyucu
+  için `Semantics(onIncrease/onDecrease)`; sayfa göstergesi duruyor. Etiketler: "Ana menü, sayfa 1/3" (TR/EN),
+  inbox'ta okunmamış varsa "Gelen Kutusu, okunmamış fal var".
 
 **Cam:** tek `BackdropFilter` (blur σ20 + doygunluk 1.25 yalnız backdrop zincirinde) + `#1C1C1E` %55 tint +
 üst parlama + gradyan kenar ışığı + dış gölge. Seçim kapsülü: ikinci blur YOK. Yay: kütle 1, sertlik 420,
 sönüm 36; hıza göre ≤%10 uzama. Kırılma (lens) yok: `ImageFilter.shader` Skia'da desteklenmez; `liquid_glass_renderer`
 Flutter 3.47+ ister. Neden Hero değil: `go('/inbox')` dal değişiminde uçuş yok, pop+push örtüşür (Codex).
-**Testler:** `test/main_tabs_test.dart` (state/ticker/geri tuşu/scope), `test/glass_tab_bar_test.dart`.
+**Testler:** `test/main_tabs_test.dart` (state/ticker/scope/Ev3→sayfa 3 + GERÇEK go_router ile geri tuşu:
+çıkış yok/detay ve kök rota önce kapanır, `SystemNavigator.pop` dinlenerek), `test/glass_tab_bar_test.dart`.
+Görsel doğrulama: `build/visual_check/glassbar_capture_test.dart` (3 gerçek arka plan + kayma videosu).
 
 ---
 

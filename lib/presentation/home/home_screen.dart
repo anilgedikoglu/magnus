@@ -122,9 +122,14 @@ class HomeScreen extends ConsumerStatefulWidget {
 }
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
-  final PageController _pageController = PageController();
+  // Başlangıç sayfası homePageProvider'dan (yeniden mount'ta bar ile uyuşsun);
+  // keepPage:false → PageStorage eski konumu geri yükleyip provider'ı ezmesin (Codex).
+  late final PageController _pageController;
   final ScrollController _chatScrollCtrl = ScrollController();
   int _currentPage = 0;
+  /// Programatik sayfa animasyonunun hedefi (sürerken onPageChanged ara değerleri
+  /// provider'a yazılmaz → bardaki kapsül doğrudan hedefe kayar, geri sekmez).
+  int? _animTarget;
   static const _totalPages = 3;
   static const _pageColors = [
     Color(0xFFDD00CC), // Sayfa 1 — pembe
@@ -187,6 +192,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    _currentPage = ref.read(homePageProvider).clamp(0, _totalPages - 1);
+    _pageController = PageController(initialPage: _currentPage, keepPage: false);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _scheduleUnlockTimer();
       _refreshCredits();
@@ -520,20 +527,47 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
 
+  // Başa sarma (modulo) yok: _animateHomeTo sınırlar (Codex: sarma, art arda
+  // aksiyonda son sayfadan 1. sayfaya atlatabiliyordu).
   void _goNext() {
-    _scheduleUnlockTimer(); // buton basışında kilit kontrolü
-    final next = (_currentPage + 1) % _totalPages;
-    _pageController.animateToPage(next,
-        duration: const Duration(milliseconds: 380), curve: Curves.easeInOut);
-    setState(() => _currentPage = next);
+    _scheduleUnlockTimer(); // sayfa değişiminde kilit kontrolü
+    _animateHomeTo(_currentPage + 1);
   }
 
   void _goPrev() {
     _scheduleUnlockTimer();
-    final prev = (_currentPage - 1 + _totalPages) % _totalPages;
-    _pageController.animateToPage(prev,
-        duration: const Duration(milliseconds: 380), curve: Curves.easeInOut);
-    setState(() => _currentPage = prev);
+    _animateHomeTo(_currentPage - 1);
+  }
+
+  /// Sayfa geçişinin TEK sahibi (swipe, semantik aksiyon, bardaki Ev1/2/3) — iki
+  /// animasyon yarışmasın (Codex). Hedef ÖNCE yerel duruma yazılır, sonra provider'a:
+  /// provider dinleyicisi hedefi görüp tekrar tetiklemez.
+  void _animateHomeTo(int page) {
+    page = page.clamp(0, _totalPages - 1);
+    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    // Gizli sekmedeyken (TickerMode kapalı) animasyon ilerlemez → anında atla.
+    final visible = TickerMode.valuesOf(context).enabled;
+    if (!_pageController.hasClients || !visible || reduce) {
+      _animTarget = null;
+      setState(() => _currentPage = page);
+      if (_pageController.hasClients) _pageController.jumpToPage(page);
+      _syncPageProvider(page);
+      return;
+    }
+    _animTarget = page;
+    setState(() => _currentPage = page);
+    _syncPageProvider(page);
+    _pageController
+        .animateToPage(page,
+            duration: const Duration(milliseconds: 380), curve: Curves.easeInOut)
+        .whenComplete(() {
+      if (_animTarget == page) _animTarget = null;
+    });
+  }
+
+  void _syncPageProvider(int page) {
+    final n = ref.read(homePageProvider.notifier);
+    if (n.state != page) n.state = page;
   }
 
   // ─── Günlük kredi yükleme ─────────────────────────────────────────────────
@@ -746,12 +780,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       // Ana menüye HER dönüşte (Codex: ayarlar→reset→inbox→ana menü yolu kaçıyordu).
       if (next == MainTab.home && prev != MainTab.home && mounted) _refreshCredits();
     });
-    // Ana menüdeyken "ev"e tekrar basılınca 1. sayfaya dön (eski "önceki" okunun yerine).
-    ref.listen<int>(homeResetProvider, (_, __) {
-      if (!_pageController.hasClients || _currentPage == 0) return;
-      _pageController.animateToPage(0,
-          duration: const Duration(milliseconds: 380), curve: Curves.easeInOut);
-      setState(() => _currentPage = 0);
+    // Bardaki Ev1/Ev2/Ev3 → o sayfaya git. Hedef (sürüyorsa) ya da mevcut sayfayla
+    // aynıysa yeni komut değildir (kendi yazdığımız değer) → yok say.
+    ref.listen<int>(homePageProvider, (_, next) {
+      final cur = _animTarget ?? _currentPage;
+      if (next != cur) _animateHomeTo(next);
     });
 
     return Scaffold(
@@ -817,7 +850,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       physics: const NeverScrollableScrollPhysics(),
                       clipBehavior: Clip.none,
                       itemCount: _totalPages,
-                      onPageChanged: (p) => setState(() => _currentPage = p),
+                      onPageChanged: (p) {
+                        // Programatik geçiş sürerken ara sayfa YOK sayılır: hedef zaten
+                        // _currentPage'de. (Codex: ara değer swipe/semantik kararlarını
+                        // bozuyor, "artır" aynı hedefi yeniden başlatabiliyordu.)
+                        if (_animTarget != null) return;
+                        setState(() => _currentPage = p);
+                        _syncPageProvider(p);
+                      },
                       itemBuilder: (context, pageIndex) {
                         final items = pageIndex == 0
                             ? _page1Items(context)

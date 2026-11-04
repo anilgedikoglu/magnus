@@ -82,7 +82,11 @@ class AppStrings {
 
   // ── Inbox Screen ────────────────────────────────────────────────────────
   String get inboxTitle        => _s('GELEN KUTUSU',   'INBOX');
-  String get tabInbox          => _s('Gelen Kutusu',   'Inbox'); // cam alt bar erişilebilirlik etiketi
+  // Cam alt bar erişilebilirlik etiketleri (ekranda metin yok; ekran okuyucu için)
+  String get tabInbox          => _s('Gelen Kutusu',   'Inbox');
+  String get tabInboxUnread    => _s('Gelen Kutusu, okunmamış fal var', 'Inbox, unread reading');
+  String homePageLabel(int page, int total) =>
+      _s('Ana menü, sayfa $page/$total', 'Main menu, page $page of $total');
   String get clearAll          => _s('Temizle',        'Clear');
   String get inboxEmpty        => _s('BURALAR ÇOK SESSİZ...', 'SO QUIET HERE...');
   String get inboxEmptyDesc    => _s('Okumaya değer bir şey henüz almadın.', "You haven't received anything worth reading yet.");

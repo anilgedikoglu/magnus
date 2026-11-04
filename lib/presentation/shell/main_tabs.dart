@@ -37,8 +37,21 @@ abstract final class MainTab {
 /// Aktif ana sekme (tek doğru kaynak).
 final mainTabProvider = StateProvider<int>((ref) => MainTab.home);
 
-/// Ana menüdeyken "ev"e tekrar basılınca artar → HomeScreen 1. sayfaya döner.
-final homeResetProvider = StateProvider<int>((ref) => 0);
+/// Ana menünün sayfası (0..2) — tek kaynak. Barda Ev1/Ev2/Ev3 → bu değer.
+/// HomeScreen swipe/ok ile değişince yazar; bar dokunuşu yazınca HomeScreen o sayfaya gider.
+/// (Codex: hedef ile ara sayfa karışmasın diye HomeScreen programatik animasyon
+/// sırasında onPageChanged ara değerlerini yazmaz → kapsül doğrudan hedefe kayar.)
+final homePageProvider = StateProvider<int>((ref) => 0);
+
+/// Ana menü sayfa sayısı (bardaki ev slotları).
+const int kHomePages = 3;
+
+/// Bar slotu ↔ sekme/sayfa eşlemesi: 0 = profil, 1..3 = ana menü sayfa 1..3, 4 = inbox.
+int barSlotFor(int tab, int homePage) => switch (tab) {
+      MainTab.profile => 0,
+      MainTab.inbox => kHomePages + 1,
+      _ => 1 + homePage.clamp(0, kHomePages - 1),
+    };
 
 /// Sekme sayfasının hangi yönden kayarak geleceği.
 enum TabEntry { left, right, bottom }
@@ -176,6 +189,16 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
     super.dispose();
   }
 
+  /// Bar dokunuşu: 0 → profil, 1..3 → ana menü o sayfa, 4 → inbox.
+  void _onBarTap(int slot) {
+    if (slot == 0) return _select(MainTab.profile);
+    if (slot == kHomePages + 1) return _select(MainTab.inbox);
+    // Önce sayfa, sonra sekme: ana menü gizliyken HomeScreen anında atlar
+    // (TickerMode kapalı → jumpToPage), görünürken kayarak gider.
+    ref.read(homePageProvider.notifier).state = slot - 1;
+    _select(MainTab.home);
+  }
+
   void _select(int tab, {TabEntry? entry}) {
     _pendingEntry = entry;
     final notifier = ref.read(mainTabProvider.notifier);
@@ -195,10 +218,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
       _queuedEntry = entry;
       return;
     }
-    if (tab == _current) {
-      if (tab == MainTab.home) ref.read(homeResetProvider.notifier).state++;
-      return;
-    }
+    if (tab == _current) return; // aynı sekme (ev sayfaları homePageProvider ile)
     if (tab != MainTab.home) _entry[tab] = entry ?? (tab == MainTab.profile ? TabEntry.left : TabEntry.bottom);
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
     setState(() {
@@ -295,12 +315,18 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
                 final items = cref.watch(inboxProvider);
                 final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
                 final hasLocked = items.any((e) => e.isLocked);
+                final page = cref.watch(homePageProvider);
                 return GlassTabBar(
-                  selected: _current,
-                  onTap: (i) => _select(i),
+                  // Görünen sekme (_current) + ana menü sayfası → kapsülün yeri.
+                  selected: barSlotFor(_current, page),
+                  onTap: _onBarTap,
                   hasUnread: hasUnread,
                   greenRing: !hasLocked && hasUnread,
-                  labels: [s.settingsTitle, s.mainMenu, s.tabInbox],
+                  labels: [
+                    s.settingsTitle,
+                    for (var p = 1; p <= kHomePages; p++) s.homePageLabel(p, kHomePages),
+                    hasUnread ? s.tabInboxUnread : s.tabInbox,
+                  ],
                 );
               }),
             ),

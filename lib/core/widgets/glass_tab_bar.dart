@@ -1,13 +1,18 @@
 // lib/core/widgets/glass_tab_bar.dart
 //
 // iOS 26 "Liquid Glass" tarzı koyu gri cam alt bar (WhatsApp/Instagram örneği):
-//   • Tek cam kapsül, 3 eşit slot: Kullanıcı Bilgileri (bilgisayar) · Ana Menü (ev) · Gelen Kutusu (zarf).
-//   • Cam: TEK blur + doygunluk (yalnız arka plan zincirinde; ikonlar etkilenmez)
-//     + koyu gri tint + gradyan kenar ışığı (specular rim) + üst parlama + dış gölge.
-//   • Seçili sekmenin arkasındaki açık "mini kapsül" yay (spring) fiziğiyle kayar,
-//     hızına göre en fazla %10 uzar / %3 incelir ("liquid" his), sonra oturur.
-// Tasarım Codex ile (2026-11-04). Apple'ın gerçek lens/kırılma shader'ı birebir
-// taklit edilmez (Skia'da ImageFilter.shader yok; risk) — blur+tint+rim+kapsül.
+//   • Tek cam kapsül, 5 eşit slot: Kullanıcı Bilgileri (bilgisayar) · Ana Menü 1 · 2 · 3
+//     (rakamlı ev) · Gelen Kutusu (zarf).
+//   • İkonlar tek renk beyaz ÇİZGİ glifler (vektör, her DPR'de keskin). Anıl: "fazla
+//     beyazlı (dolu) modeller kaba, çizgili modelleri kullan" → aktif sekme ikon
+//     değişimiyle değil, yalnız arkadaki kapsülle gösterilir.
+//     Bilgisayar + zarf glifleri ChatGPT'ye çizdirildi (SVG, 24'lük ızgara, stroke 2.1),
+//     ev ailesine uyumlu; ev = WhatsApp/Instagram tarzı, kapı yerine sayfa rakamı.
+//   • Cam: TEK blur + doygunluk (yalnız arka plan zincirinde) + koyu gri tint +
+//     gradyan kenar ışığı (specular rim) + üst parlama + dış gölge.
+//   • Seçim kapsülü yay (spring) fiziğiyle kayar, hızına göre ≤%10 uzar / %3 incelir.
+// Tasarım Codex ile (2026-11-04/05). Gerçek lens/kırılma shader'ı yok (Skia'da
+// ImageFilter.shader desteklenmez) — blur+tint+rim+kapsül.
 
 import 'dart:ui' as ui;
 
@@ -22,8 +27,11 @@ const double kGlassBarSide = 12;
 /// Bar + boşluk: içerik bu kadar alttan pay bırakmalı (SafeArea içinde).
 const double kGlassBarReserve = kGlassBarHeight + kGlassBarGap;
 
+/// Slot sayısı: Bilgisayar · Ev1 · Ev2 · Ev3 · Zarf.
+const int kGlassBarSlots = 5;
+
 class GlassTabBar extends StatefulWidget {
-  /// 0 = Kullanıcı Bilgileri, 1 = Ana Menü, 2 = Gelen Kutusu.
+  /// 0 = Kullanıcı Bilgileri, 1..3 = Ana Menü sayfa 1..3, 4 = Gelen Kutusu.
   final int selected;
   final ValueChanged<int> onTap;
 
@@ -33,7 +41,7 @@ class GlassTabBar extends StatefulWidget {
   /// Hazırlanan fal kalmadı + okunmamış var → zarfın çevresinde yeşil halka.
   final bool greenRing;
 
-  /// Erişilebilirlik etiketleri (TR/EN), slot sırasıyla.
+  /// Erişilebilirlik etiketleri (TR/EN), slot sırasıyla (5 adet).
   final List<String> labels;
 
   const GlassTabBar({
@@ -43,7 +51,7 @@ class GlassTabBar extends StatefulWidget {
     required this.labels,
     this.hasUnread = false,
     this.greenRing = false,
-  }) : assert(labels.length == 3);
+  }) : assert(labels.length == kGlassBarSlots);
 
   @override
   State<GlassTabBar> createState() => _GlassTabBarState();
@@ -51,7 +59,7 @@ class GlassTabBar extends StatefulWidget {
 
 class _GlassTabBarState extends State<GlassTabBar>
     with SingleTickerProviderStateMixin {
-  // Konum indeks uzayında (0..2). Codex önerisi: kütle 1, sertlik 420, sönüm 36
+  // Konum indeks uzayında (0..4). Codex önerisi: kütle 1, sertlik 420, sönüm 36
   // → sönüm oranı ~0.88: hafif esnek, çabuk oturur.
   static const _spring = SpringDescription(mass: 1, stiffness: 420, damping: 36);
 
@@ -111,7 +119,7 @@ class _GlassTabBarState extends State<GlassTabBar>
           borderRadius: BorderRadius.circular(radius),
           child: LayoutBuilder(builder: (context, c) {
             const inset = 5.0;
-            final slot = (c.maxWidth - 2 * inset) / 3;
+            final slot = (c.maxWidth - 2 * inset) / kGlassBarSlots;
             return Stack(
               fit: StackFit.expand,
               children: [
@@ -137,7 +145,7 @@ class _GlassTabBarState extends State<GlassTabBar>
                 AnimatedBuilder(
                   animation: _pos,
                   builder: (context, _) {
-                    final x = _pos.value.clamp(-0.15, 2.15);
+                    final x = _pos.value.clamp(-0.15, kGlassBarSlots - 1 + 0.15);
                     final stretch = (_pos.velocity.abs() / 8).clamp(0.0, 1.0);
                     final w = slot * (1 + 0.10 * stretch);
                     final h = (kGlassBarHeight - 2 * inset) * (1 - 0.03 * stretch);
@@ -154,7 +162,7 @@ class _GlassTabBarState extends State<GlassTabBar>
                 // 4) Sekmeler.
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: inset),
-                  child: Row(children: List.generate(3, _slot)),
+                  child: Row(children: List.generate(kGlassBarSlots, _slot)),
                 ),
                 // 5) Kenar ışığı (specular rim).
                 const IgnorePointer(child: CustomPaint(painter: _RimPainter(radius))),
@@ -169,10 +177,9 @@ class _GlassTabBarState extends State<GlassTabBar>
   Widget _slot(int i) {
     final selected = widget.selected == i;
     final Widget icon = switch (i) {
-      0 => Image.asset('assets/images/bilgiekranilogo.png',
-          width: 30, height: 30, filterQuality: FilterQuality.high),
-      1 => CustomPaint(size: const Size(27, 27), painter: _HousePainter(filled: selected)),
-      _ => _InboxIcon(hasUnread: widget.hasUnread, greenRing: widget.greenRing),
+      0 => const CustomPaint(size: Size(27, 27), painter: _ComputerPainter()),
+      4 => _InboxIcon(hasUnread: widget.hasUnread, greenRing: widget.greenRing),
+      _ => CustomPaint(size: const Size(27, 27), painter: _HousePainter(number: i)),
     };
     return Expanded(
       child: Semantics(
@@ -233,8 +240,8 @@ class _InboxIcon extends StatelessWidget {
     const green = Color(0xFF44FF88);
     const warm = Color(0xFFFFA62B);
     return SizedBox(
-      width: 42,
-      height: 42,
+      width: 40,
+      height: 40,
       child: Stack(
         alignment: Alignment.center,
         clipBehavior: Clip.none,
@@ -245,18 +252,16 @@ class _InboxIcon extends StatelessWidget {
               height: 40,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: green.withValues(alpha: 0.85), width: 1.3), // ince (görsel doğrulama: 1.8 neon gibiydi)
-                boxShadow: [
-                  BoxShadow(color: green.withValues(alpha: 0.28), blurRadius: 8),
-                ],
+                // İnce (görsel doğrulama: 1.8 neon gibiydi).
+                border: Border.all(color: green.withValues(alpha: 0.85), width: 1.3),
+                boxShadow: [BoxShadow(color: green.withValues(alpha: 0.28), blurRadius: 8)],
               ),
             ),
-          Image.asset('assets/images/inbox_icon.png',
-              width: 32, height: 32, filterQuality: FilterQuality.high),
+          const CustomPaint(size: Size(27, 27), painter: _EnvelopePainter()),
           if (hasUnread)
             Positioned(
-              top: 3,
-              right: 2,
+              top: 6,
+              right: 4,
               child: Container(
                 width: 9,
                 height: 9,
@@ -303,16 +308,87 @@ class _RimPainter extends CustomPainter {
   bool shouldRepaint(covariant _RimPainter old) => old.radius != radius;
 }
 
-/// WhatsApp/Instagram tarzı yuvarlak köşeli ev: pasif = çizgi, aktif = dolu.
-/// Kapı boşluğu çizginin içinde (dolu hâlde kapı oyuk kalır).
-class _HousePainter extends CustomPainter {
-  final bool filled;
-  const _HousePainter({required this.filled});
+/// Ortak glif çizgisi: 24'lük ızgarada 2.1 birim, yuvarlak uç/birleşim, beyaz.
+Paint _glyphStroke(double k) => Paint()
+  ..color = Colors.white
+  ..style = PaintingStyle.stroke
+  ..strokeWidth = 2.1 * k
+  ..strokeJoin = StrokeJoin.round
+  ..strokeCap = StrokeCap.round;
+
+/// Bilgisayar (masaüstü monitör) — ChatGPT SVG'si (viewBox 24) birebir.
+class _ComputerPainter extends CustomPainter {
+  const _ComputerPainter();
 
   @override
   void paint(Canvas canvas, Size size) {
     final k = size.width / 24;
-    final p = Path()
+    final screen = Path()
+      ..moveTo(4.5 * k, 4.5 * k)
+      ..lineTo(19.5 * k, 4.5 * k)
+      ..quadraticBezierTo(21 * k, 4.5 * k, 21 * k, 6 * k)
+      ..lineTo(21 * k, 15 * k)
+      ..quadraticBezierTo(21 * k, 16.5 * k, 19.5 * k, 16.5 * k)
+      ..lineTo(4.5 * k, 16.5 * k)
+      ..quadraticBezierTo(3 * k, 16.5 * k, 3 * k, 15 * k)
+      ..lineTo(3 * k, 6 * k)
+      ..quadraticBezierTo(3 * k, 4.5 * k, 4.5 * k, 4.5 * k)
+      ..close();
+    final stand = Path()
+      ..moveTo(12 * k, 16.5 * k)
+      ..lineTo(12 * k, 19.5 * k)
+      ..moveTo(8 * k, 19.5 * k)
+      ..lineTo(16 * k, 19.5 * k);
+    final p = _glyphStroke(k);
+    canvas.drawPath(screen, p);
+    canvas.drawPath(stand, p);
+  }
+
+  @override
+  bool shouldRepaint(covariant _ComputerPainter old) => false;
+}
+
+/// Zarf — ChatGPT SVG'si (viewBox 24) birebir: yuvarlak gövde + V kapak.
+class _EnvelopePainter extends CustomPainter {
+  const _EnvelopePainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final k = size.width / 24;
+    final body = Path()
+      ..moveTo(4.5 * k, 5 * k)
+      ..lineTo(19.5 * k, 5 * k)
+      ..quadraticBezierTo(21 * k, 5 * k, 21 * k, 6.5 * k)
+      ..lineTo(21 * k, 17.5 * k)
+      ..quadraticBezierTo(21 * k, 19 * k, 19.5 * k, 19 * k)
+      ..lineTo(4.5 * k, 19 * k)
+      ..quadraticBezierTo(3 * k, 19 * k, 3 * k, 17.5 * k)
+      ..lineTo(3 * k, 6.5 * k)
+      ..quadraticBezierTo(3 * k, 5 * k, 4.5 * k, 5 * k)
+      ..close();
+    final flap = Path()
+      ..moveTo(4.5 * k, 7.5 * k)
+      ..lineTo(11.35 * k, 12.6 * k)
+      ..quadraticBezierTo(12 * k, 13.1 * k, 12.65 * k, 12.6 * k)
+      ..lineTo(19.5 * k, 7.5 * k);
+    final p = _glyphStroke(k);
+    canvas.drawPath(body, p);
+    canvas.drawPath(flap, p);
+  }
+
+  @override
+  bool shouldRepaint(covariant _EnvelopePainter old) => false;
+}
+
+/// WhatsApp/Instagram tarzı yuvarlak köşeli ev (çizgi) — kapı yerine sayfa rakamı.
+class _HousePainter extends CustomPainter {
+  final int number;
+  const _HousePainter({required this.number});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final k = size.width / 24;
+    final house = Path()
       ..moveTo(4.6 * k, 19.0 * k)
       ..lineTo(4.6 * k, 10.6 * k)
       ..quadraticBezierTo(4.6 * k, 9.7 * k, 5.3 * k, 9.1 * k)
@@ -322,27 +398,55 @@ class _HousePainter extends CustomPainter {
       ..quadraticBezierTo(19.4 * k, 9.7 * k, 19.4 * k, 10.6 * k)
       ..lineTo(19.4 * k, 19.0 * k)
       ..quadraticBezierTo(19.4 * k, 20.4 * k, 18.0 * k, 20.4 * k)
-      ..lineTo(14.6 * k, 20.4 * k)
-      ..lineTo(14.6 * k, 15.6 * k)
-      ..quadraticBezierTo(14.6 * k, 14.6 * k, 13.6 * k, 14.6 * k)
-      ..lineTo(10.4 * k, 14.6 * k)
-      ..quadraticBezierTo(9.4 * k, 14.6 * k, 9.4 * k, 15.6 * k)
-      ..lineTo(9.4 * k, 20.4 * k)
       ..lineTo(6.0 * k, 20.4 * k)
       ..quadraticBezierTo(4.6 * k, 20.4 * k, 4.6 * k, 19.0 * k)
       ..close();
-    final stroke = Paint()
-      ..color = Colors.white
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 2.1 * k
-      ..strokeJoin = StrokeJoin.round
-      ..strokeCap = StrokeCap.round;
-    if (filled) {
-      canvas.drawPath(p, Paint()..color = Colors.white);
+    canvas.drawPath(house, _glyphStroke(k));
+
+    // Rakam da ÇİZGİ glif (font değil): diğer ikonlarla aynı yuvarlak uç dili,
+    // platform fontundan bağımsız, her DPR'de keskin. (Görsel doğrulama: TextPainter
+    // test ortamında kutu basıyordu → okunurluk doğrulanamıyordu.)
+    // Kutu: x 10.1..14.1, y 10.9..17.1 (gövdenin optik ortası, çatıya değmez).
+    canvas.drawPath(
+      _digit(number, k),
+      _glyphStroke(k)..strokeWidth = 1.8 * k, // ince → küçük boyutta okunur
+    );
+  }
+
+  static Path _digit(int n, double k) {
+    Offset o(double x, double y) => Offset(x * k, y * k);
+    final p = Path();
+    void m(double x, double y) => p.moveTo(x * k, y * k);
+    void l(double x, double y) => p.lineTo(x * k, y * k);
+    void c(double x1, double y1, double x2, double y2, double x3, double y3) {
+      final a = o(x1, y1), b = o(x2, y2), d = o(x3, y3);
+      p.cubicTo(a.dx, a.dy, b.dx, b.dy, d.dx, d.dy);
     }
-    canvas.drawPath(p, stroke);
+
+    switch (n) {
+      case 1:
+        m(10.8, 12.2);
+        l(12.4, 10.9);
+        l(12.4, 17.1);
+      case 2:
+        m(10.2, 12.5);
+        c(10.4, 11.4, 11.2, 10.9, 12.1, 10.9);
+        c(13.2, 10.9, 13.9, 11.6, 13.9, 12.5);
+        c(13.9, 13.3, 13.4, 13.9, 12.7, 14.5);
+        l(10.1, 17.1);
+        l(14.0, 17.1);
+      default: // 3
+        m(10.3, 11.4);
+        c(10.9, 11.0, 11.5, 10.9, 12.1, 10.9);
+        c(13.2, 10.9, 13.9, 11.5, 13.9, 12.35);
+        c(13.9, 13.2, 13.2, 13.8, 12.0, 13.8);
+        c(13.3, 13.8, 14.1, 14.5, 14.1, 15.45);
+        c(14.1, 16.45, 13.2, 17.15, 12.0, 17.15);
+        c(11.3, 17.15, 10.7, 16.95, 10.2, 16.5);
+    }
+    return p;
   }
 
   @override
-  bool shouldRepaint(covariant _HousePainter old) => old.filled != filled;
+  bool shouldRepaint(covariant _HousePainter old) => old.number != number;
 }

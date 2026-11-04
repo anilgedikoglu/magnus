@@ -1,18 +1,22 @@
 # Magnus App — Claude Proje Hafızası
 
-## 📌 NEREDE KALINDI — GÜNCEL DURUM (2026-06-11)
+## 📌 NEREDE KALINDI — GÜNCEL DURUM (2026-11-04)
 
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **Mevcut build: `10.8.5+257`** (pubspec.yaml). `main`'e push edilecek (Codemagic main'den build alır).
-- **Android AAB:**
-  `C:\src\magnus_app\.claude\worktrees\exciting-swanson-a016eb\build\app\outputs\bundle\release\app-release.aab`
-  → Play Console'a yüklenecek.
+- **main'deki sürüm: `10.8.6+258`** (başka bir oturum: Android API 36 hedefi + intl ^0.20.2, commit `0fd1cc89`).
+  Not: o oturum +1 artırmış (257→258); kural +3.
+- **Bir sonraki build: `10.8.7+261`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
+- 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
-- **257'deki kritik fix:** iOS AdMob reklam birimi ID'leri Android'inkini kullanıyordu → `Platform.isIOS` ayrımı eklendi (bkz. AdMob bölümü). 254 (önceki): swipe + gradient + alt menü.
-- **Bir sonraki build: `10.8.6+260`** (versionCode +3 kuralı).
+
+### En son session'da tamamlananlar (2026-11-04 — Kullanıcı Bilgileri ekranı kozmik gökyüzü)
+`settings_screen.dart` (Kullanıcı Bilgileri) arka planı: **koyulaştırma + twinkle yıldızlar + kayan yıldız +
+kuzey ışığı perdeleri + halelenmeler**. Tek dosya: `lib/core/widgets/starfield_overlay.dart`. Ayrıntı:
+→ "Kozmik Gökyüzü Katmanı" bölümü. Testler: `test/starfield_overlay_test.dart` (3 test, geçiyor).
+Codex'e önce danışıldı + 2 kez kod incelemesi yaptırıldı; değerler gerçek render karelerine bakılarak ayarlandı.
 
 ### En son session'da tamamlananlar (2026-06-11 — swipe + gradient + alt menü)
 1. **SOLDAN SAĞA SWIPE = GERİ (10 ekran):** `lib/core/widgets/swipe_back.dart` oluşturuldu (raw `Listener` — gesture arena'ya girmez, ScrollView/PageView ile çakışmaz). Soldan sağa kaydırma "geri" tuşu gibi çalışır. Uygulanan ekranlar: coffee (fal konusu seçim), tarot_type, numeroloji (step-aware: seçim→geri), durugoru (odaklanmıyorsa pop), yuz_fali_kimin, motivation, acigercekler, kaderkitabi, dertortagi (step-aware: `_geriDon()` kullanır), kehanet_menu. Eşik: `threshold=60px` + yatay > dikey×1.5.
@@ -528,6 +532,34 @@ return Scaffold(
 - `filterQuality: FilterQuality.high` → görsel upscaling'de kalite kaybı önlenir.
 - Overlay opacity: üst/alt `0x99` (%60), orta `0x44` (%27). Daha az karartma görseli daha net gösterir.
 - `backgroundColor: Colors.black` → `edgeToEdge` modda transparent nav bar arkasını doldurur.
+
+---
+
+## Kozmik Gökyüzü Katmanı — Twinkle / Kayan Yıldız / Aurora / Hale (starfield_overlay.dart)
+
+**Dosya:** `lib/core/widgets/starfield_overlay.dart` · **Kullanım:** `settings_screen.dart` build() Stack:
+`bg image → const SkyDarkenOverlay() → const StarfieldOverlay() → SafeArea(RepaintBoundary(içerik))`
+Başka ekrana eklemek: aynı iki `Positioned.fill(child: ...)` satırı + içeriği `RepaintBoundary`'ye sar.
+
+| Parça | Nasıl | Değerler |
+|---|---|---|
+| `SkyDarkenOverlay` | dikey gradient + **eliptik** vinyet (`_FitEllipse` GradientTransform) | dikey 50/40/50 %, vinyet kenar 0x99 |
+| Twinkle yıldız | sinüs zarfı `pow(raw, sharp)`; yarısı tamamen söner ve **sönükken yeni rastgele yere atlar** (döngü sınırı sinüs dibine hizalı) | telefon ~90, tablet ≤170 (alan/3650) |
+| Kayan yıldız | deterministik takvim (ilk 6–15 sn, sonra 9–24 sn), döngüsel; kuyruk yolun %45'i + baş parıltısı | 0.7–1.4 sn |
+| Aurora perdesi | `drawVertices` 72×7 ızgara, köşe renkli; alt kenar parlak/dar, yukarı uzun sönüm; kenar teal, üst mor | ana peakA 0.50 (y≈%11.5), ikinci 0.26 (y≈%47, `edgeSoft 2.6`) |
+| Halelenme | `RadialGradient` tek daire, `sin²` zarf, açılırken %25 büyür; aralık 10–18 sn > süre 5–8 sn (çakışmaz) | peakA 0.32–0.48, r = kısa kenar %12–25 |
+
+**Mimari kurallar (bozma):**
+- Tek `Ticker` (`SingleTickerProviderStateMixin`, initState'te BİR KEZ `createTicker`) → `_time` (yıldız, ekran hızı) + `_auroraTime` (1/30 sn dilim).
+- Painter'lar SAF: `paint()` içinde Random/setState/olay üretimi YOK. Tüm takvim/konum seed'li Random ile modelde bir kez; sönük-yıldız konumu `hash01(i, cycle, salt)` (seed dahil).
+- Işık = `BlendMode.plus` (Porter-Duff, Impeller'da ucuz). `drawVertices(v, BlendMode.dst, paint)` → köşe renkleri aynen. Blur/saveLayer YOK.
+- Reduced-motion: ticker durur, statik kare, hale/kayan yıldız kapalı. `TickerMode` (ekran örtülünce) otomatik.
+- **Renk/alpha dersi:** mat palet (`#7762B5` mor, `#4FA99F` teal, `#A35B92` magenta) + plus ile alpha < ~0.2 **görünmüyor** (eklenen RGB +10..20). Değerleri tahminle değil render karesiyle ayarla.
+
+**Görsel doğrulama yöntemi (Flutter-içi değişiklik panelde görünmez):** `build/visual_check/` (gitignored) altında
+widget testi → gerçek `assets/images/signinbackground.png` üstünde `matchesGoldenFile` + `--update-goldens` ile PNG kare
+yakala, gerekirse `Transform.scale` ile zoom (Transform hep ağaçta olsun → State korunur). `debugFirstShot()` /
+`debugFirstHalo()` (`@visibleForTesting`) olay zamanını verir. test/ altına golden YAZMA (protect-tests hook silmeyi engeller).
 
 ---
 

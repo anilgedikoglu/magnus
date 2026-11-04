@@ -9,6 +9,7 @@ import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/starfield_overlay.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
@@ -1460,13 +1461,15 @@ class SettingsScreen extends ConsumerWidget {
                     Container(color: const Color(0xFF1A0A3C)),
               ),
             ),
-            Positioned.fill(
-              child: Container(color: Colors.black.withValues(alpha: 0.38)),
-            ),
+            // ── Koyulaştırma — hafif dikey gradient + eliptik vinyet (gizem)
+            const Positioned.fill(child: SkyDarkenOverlay()),
+            // ── Yıldız katmanı — twinkle + nadir kayan yıldız (koyu bg üstünde parlar)
+            const Positioned.fill(child: StarfieldOverlay()),
 
             // ── İçerik
             SafeArea(
-              child: Column(
+              child: RepaintBoundary(
+                child: Column(
                 children: [
                   _buildTopBar(context, ref, profile),
                   // Üst sabit blok: başlık + kutucuklar
@@ -1494,7 +1497,7 @@ class SettingsScreen extends ConsumerWidget {
                     child: _buildMenuButton(context, ref),
                   ),
                 ],
-              ),
+              )),
             ),
           ],
         ),

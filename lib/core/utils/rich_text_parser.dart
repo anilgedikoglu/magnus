@@ -71,6 +71,14 @@ class RichTextParser {
     );
   }
 
+  /// Widget yerine ham TextSpan (kelime kelime animasyon gibi özel çizimler için).
+  /// Etiket temizliği + desatüre renkler build() ile aynı.
+  static TextSpan span(String text, {required TextStyle style}) {
+    final cleaned = _stripUnknownTags(text);
+    if (!cleaned.contains('<color=')) return TextSpan(text: cleaned, style: style);
+    return TextSpan(style: style, children: _parse(cleaned, style));
+  }
+
   static List<TextSpan> _parse(String text, TextStyle base) {
     final spans = <TextSpan>[];
     int lastEnd = 0;

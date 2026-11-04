@@ -1,6 +1,9 @@
 // C:/src/magnus_app/lib/presentation/kehanet/parmak_surtme_screen.dart
 // Parmak sürtme ekranı - kahin seçimi sonrası etkileşim
 
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -73,8 +76,8 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0A0718),
-      body: SafeArea(
+      backgroundColor: AppColors.ink,
+      body: GrimoireBackdrop(child: SafeArea(
         child: Column(
           children: [
             // ── Başlık ──────────────────────────────────────────
@@ -83,19 +86,14 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
               child: Row(
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                    icon: const Icon(Icons.arrow_back_ios, color: AppColors.bone),
                     onPressed: () => context.pop(),
                   ),
                   Expanded(
                     child: Text(
-                      widget.kahinId.toUpperCase(),
+                      widget.kahinId,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
-                      ),
+                      style: AppTextStyles.screenTitle,
                     ),
                   ),
                   const SizedBox(width: 48),
@@ -115,7 +113,7 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
                 key: ValueKey(_done),
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: _done ? const Color(0xFFFF55FF) : Colors.white60,
+                  color: _done ? AppColors.gold : AppColors.boneDim,
                   fontSize: 15,
                   height: 1.5,
                 ),
@@ -132,12 +130,12 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
                   ? const ElegantHourglass(
                       key: ValueKey('hourglass'),
                       size: 36,
-                      color: Color(0xFFFF55FF),
+                      color: AppColors.gold,
                     )
                   : const Icon(
                       Icons.fingerprint,
                       key: ValueKey('fingerprint'),
-                      color: Color(0xFFFF55FF),
+                      color: AppColors.gold,
                       size: 36,
                     ),
             ),
@@ -155,10 +153,10 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
                     border: Border.all(
-                      color: const Color(0xFFFF55FF).withValues(alpha: 0.55),
-                      width: 1.5,
+                      color: AppColors.gold.withValues(alpha: 0.55),
+                      width: 0.8,
                     ),
-                    color: const Color(0xFFFF55FF).withValues(alpha: 0.03),
+                    color: AppColors.gold.withValues(alpha: 0.03),
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(16),
@@ -183,9 +181,9 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
                     child: LinearProgressIndicator(
                       value: _progress,
                       minHeight: 5,
-                      backgroundColor: Colors.white10,
+                      backgroundColor: AppColors.rim,
                       valueColor: const AlwaysStoppedAnimation<Color>(
-                        Color(0xFFFF55FF),
+                        AppColors.gold,
                       ),
                     ),
                   ),
@@ -193,7 +191,7 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
                   Text(
                     '${(_progress * 100).toInt()}%',
                     style: const TextStyle(
-                      color: Color(0xFFFF55FF),
+                      color: AppColors.gold,
                       fontSize: 13,
                     ),
                   ),
@@ -204,7 +202,7 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
             const SizedBox(height: 28),
           ],
         ),
-      ),
+      )),
     );
   }
 }
@@ -236,7 +234,7 @@ class _TailPainter extends CustomPainter {
       canvas.drawLine(
         a.pos, b.pos,
         Paint()
-          ..color = const Color(0xFFFF55FF).withValues(alpha: t * 0.20)
+          ..color = AppColors.gold.withValues(alpha: t * 0.20)
           ..strokeWidth = t * 20
           ..strokeCap = StrokeCap.round
           ..style = PaintingStyle.stroke
@@ -248,8 +246,8 @@ class _TailPainter extends CustomPainter {
         a.pos, b.pos,
         Paint()
           ..color = Color.lerp(
-            const Color(0xFFCC00CC),
-            const Color(0xFFFFAAFF),
+            AppColors.gold,
+            AppColors.gold,
             t,
           )!.withValues(alpha: t * 0.60)
           ..strokeWidth = t * 7
@@ -261,7 +259,7 @@ class _TailPainter extends CustomPainter {
       canvas.drawLine(
         a.pos, b.pos,
         Paint()
-          ..color = Colors.white.withValues(alpha: t * 0.85)
+          ..color = AppColors.bone.withValues(alpha: t * 0.85)
           ..strokeWidth = t * 2.5
           ..strokeCap = StrokeCap.round
           ..style = PaintingStyle.stroke,

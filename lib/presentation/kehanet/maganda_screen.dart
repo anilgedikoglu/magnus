@@ -1,6 +1,14 @@
 // C:/src/magnus_app/lib/presentation/kehanet/maganda_screen.dart
 // Maganda - soru seç → 5s odaklanıyor animasyonu → cevap typewriter
 
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/filmed_image.dart';
+import '../../core/widgets/occult_button.dart';
+import '../../core/widgets/occult_cards.dart';
+import '../../core/utils/rich_text_parser.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -57,19 +65,19 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
     )..repeat();
     _colorAnim = TweenSequence<Color?>([
       TweenSequenceItem(
-        tween: ColorTween(begin: const Color(0xFFFF2200), end: const Color(0xFFFF7700)),
+        tween: ColorTween(begin: AppColors.gold, end: AppColors.gold),
         weight: 25,
       ),
       TweenSequenceItem(
-        tween: ColorTween(begin: const Color(0xFFFF7700), end: const Color(0xFFFFDD00)),
+        tween: ColorTween(begin: AppColors.gold, end: AppColors.gold),
         weight: 25,
       ),
       TweenSequenceItem(
-        tween: ColorTween(begin: const Color(0xFFFFDD00), end: const Color(0xFFFF0077)),
+        tween: ColorTween(begin: AppColors.gold, end: AppColors.gold),
         weight: 25,
       ),
       TweenSequenceItem(
-        tween: ColorTween(begin: const Color(0xFFFF0077), end: const Color(0xFFFF2200)),
+        tween: ColorTween(begin: AppColors.gold, end: AppColors.gold),
         weight: 25,
       ),
     ]).animate(_colorCtrl);
@@ -178,22 +186,22 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
         animation: Listenable.merge([_glowAnim, _colorAnim]),
         builder: (context, child) {
           final t     = _glowAnim.value;
-          final color = _colorAnim.value ?? const Color(0xFFFF2200);
+          final color = _colorAnim.value ?? AppColors.gold;
           return Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
               border: Border.all(
-                color: color.withValues(alpha: 0.30 + t * 0.60),
-                width: 1.5,
+                color: color.withValues(alpha: 0.12 + t * 0.13),
+                width: 0.8,
               ),
               boxShadow: [
                 BoxShadow(
-                  color: color.withValues(alpha: 0.25 + t * 0.50),
+                  color: Colors.black.withValues(alpha: 0.12),
                   blurRadius: 5 + t * 16,
                   spreadRadius: 1 + t * 4,
                 ),
                 BoxShadow(
-                  color: color.withValues(alpha: 0.08 + t * 0.28),
+                  color: Colors.black.withValues(alpha: 0.12),
                   blurRadius: 14 + t * 26,
                   spreadRadius: t * 7,
                 ),
@@ -204,11 +212,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
         },
         child: ClipRRect(
           borderRadius: BorderRadius.circular(18),
-          child: Image.asset(
-            'assets/images/kehanet/maganda.png',
-            height: 180,
-            fit: BoxFit.contain,
-          ),
+          child: SizedBox(height: 180, width: 180, child: FilmedImage('assets/images/kehanet/maganda.png', fit: BoxFit.contain)),
         ),
       ),
     );
@@ -218,8 +222,8 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
   Widget build(BuildContext context) {
     final s = ref.watch(l10nProvider);
     return Scaffold(
-      backgroundColor: const Color(0xFF0A0718),
-      body: SafeArea(
+      backgroundColor: AppColors.ink,
+      body: GrimoireBackdrop(child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -229,19 +233,14 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
               child: Row(
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                    icon: const Icon(Icons.arrow_back_ios, color: AppColors.bone),
                     onPressed: () => context.pop(),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'MAGANDA',
+                      'Maganda',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
-                      ),
+                      style: AppTextStyles.screenTitle,
                     ),
                   ),
                   const SizedBox(width: 48),
@@ -260,7 +259,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
             if (_loading)
               const Expanded(
                 child: Center(
-                  child: CircularProgressIndicator(color: Color(0xFFFF55FF)),
+                  child: CircularProgressIndicator(color: AppColors.gold),
                 ),
               )
 
@@ -274,34 +273,15 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Text(
-                          s.selectQuestion,
-                          style: const TextStyle(color: Colors.white70, fontSize: 16),
-                        ),
+                        OccultSectionLabel(s.selectQuestion),
                         const SizedBox(height: 14),
                         for (int i = 0; i < _sorular.length; i++) ...[
-                          GestureDetector(
-                            onTap: () => _onSoruSecildi(i),
-                            child: Container(
-                              padding: const EdgeInsets.all(16),
-                              decoration: BoxDecoration(
-                                color: Colors.white.withValues(alpha: 0.05),
-                                borderRadius: BorderRadius.circular(12),
-                                border: Border.all(
-                                  color: const Color(0xFFFF55FF).withValues(alpha: 0.40),
-                                  width: 1,
-                                ),
-                              ),
-                              child: Text(
-                                (s.isEn && (_sorular[i]['metin_en'] as String?)?.isNotEmpty == true
+                          OccultListCard(
+                            title: ((s.isEn && (_sorular[i]['metin_en'] as String?)?.isNotEmpty == true
                                     ? _sorular[i]['metin_en']
-                                    : _sorular[i]['metin']) ?? '',
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                ),
-                              ),
-                            ),
+                                    : _sorular[i]['metin']) as String?) ?? '',
+                            glyph: (color, size) => Icon(Icons.help_outline_rounded, color: color, size: size),
+                            onTap: () => _onSoruSecildi(i),
                           ),
                           if (i < _sorular.length - 1) const SizedBox(height: 12),
                         ],
@@ -322,13 +302,13 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                         s.magandaFocusing,
                         textAlign: TextAlign.center,
                         style: const TextStyle(
-                          color: Colors.white70,
+                          color: AppColors.boneDim,
                           fontSize: 16,
                           letterSpacing: 0.3,
                         ),
                       ),
                       const SizedBox(height: 24),
-                      const ElegantHourglass(size: 52, color: Colors.white),
+                      const ElegantHourglass(size: 52, color: AppColors.gold),
                     ],
                   ),
                 ),
@@ -349,14 +329,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Text(
-                              _displayed,
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                height: 1.7,
-                              ),
-                            ),
+                            GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(18), child: RichTextParser.build(_displayed, style: AppTextStyles.reading)),
                           ],
                         ),
                       ),
@@ -366,37 +339,12 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
               ),
               Padding(
                 padding: const EdgeInsets.all(20),
-                child: GestureDetector(
-                  onTap: () => context.pop(),
-                  child: Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-                      ),
-                      border: Border.all(
-                        color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                        width: 1.5,
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        s.close,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                child: OccultButton(label: s.close, onTap: () => context.pop()),
               ),
             ],
           ],
         ),
-      ),
+      )),
     );
   }
 }

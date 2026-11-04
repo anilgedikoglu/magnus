@@ -1,6 +1,12 @@
 // C:/src/magnus_app/lib/presentation/kehanet/kahin_metin_screen.dart
 // Kahin metin ve video ekranı
 
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/occult_button.dart';
+import '../../core/utils/rich_text_parser.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -112,15 +118,15 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
   Widget build(BuildContext context) {
     if (_loading) {
       return const Scaffold(
-        backgroundColor: Color(0xFF0A0718),
-        body: Center(
-          child: CircularProgressIndicator(color: Color(0xFFFF55FF)),
-        ),
+        backgroundColor: AppColors.ink,
+        body: GrimoireBackdrop(child: Center(
+          child: CircularProgressIndicator(color: AppColors.gold),
+        )),
       );
     }
     return Scaffold(
-      backgroundColor: const Color(0xFF0A0718),
-      body: SafeArea(
+      backgroundColor: AppColors.ink,
+      body: GrimoireBackdrop(child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -134,7 +140,7 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
                 height: 200,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFF1A0A30), Color(0xFF0A0718)],
+                    colors: [AppColors.inkRaised, AppColors.ink],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                   ),
@@ -142,7 +148,7 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
                 child: const Center(
                   child: Icon(
                     Icons.auto_awesome,
-                    color: Color(0xFFFF55FF),
+                    color: AppColors.gold,
                     size: 60,
                   ),
                 ),
@@ -150,49 +156,16 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
             Expanded(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(20),
-                child: Text(
-                  _displayed,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    height: 1.6,
-                  ),
-                ),
+                child: GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(18), child: RichTextParser.build(_displayed, style: AppTextStyles.reading)),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(20),
-              child: GestureDetector(
-                onTap: () => context.pop(),
-                child: Container(
-                  width: double.infinity,
-                  height: 48,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    gradient: const LinearGradient(
-                      colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-                    ),
-                    border: Border.all(
-                      color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                      width: 1.5,
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      ref.read(l10nProvider).ok,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              child: OccultButton(label: ref.read(l10nProvider).ok, onTap: () => context.pop()),
             ),
           ],
         ),
-      ),
+      )),
     );
   }
 }

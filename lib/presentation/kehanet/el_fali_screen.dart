@@ -2,6 +2,13 @@
 // El Falı — fotoğraf çekme/seçme, el analizi ve fal ekranı.
 // Kaynak metinler: assets/data/elfali.json
 
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/occult_button.dart';
+import '../../core/widgets/occult_cards.dart';
+import '../../core/utils/rich_text_parser.dart';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -145,8 +152,8 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF060812),
-      body: SafeArea(
+      backgroundColor: AppColors.ink,
+      body: GrimoireBackdrop(child: SafeArea(
         child: Column(
           children: [
             // Başlık
@@ -154,19 +161,14 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: Row(children: [
                 IconButton(
-                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                  icon: const Icon(Icons.arrow_back_ios, color: AppColors.bone),
                   onPressed: () => context.pop(),
                 ),
                 Expanded(
                   child: Text(
                     ref.watch(l10nProvider).palmReadingTitle,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.5,
-                    ),
+                    style: AppTextStyles.screenTitle,
                   ),
                 ),
                 const SizedBox(width: 48),
@@ -182,7 +184,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
             ),
           ],
         ),
-      ),
+      )),
     );
   }
 
@@ -191,22 +193,8 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
     return Container(
       width: double.infinity,
       height: height,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(
-          color: const Color(0xFF8B5CF6).withValues(alpha: 0.40),
-          width: 1.5,
-        ),
-        color: const Color(0xFF0D0A1E),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFF6D28D9).withValues(alpha: 0.15),
-            blurRadius: 18,
-            spreadRadius: 1,
-          ),
-        ],
-      ),
-      child: ClipRRect(
+
+      child: GlassPanel(child: ClipRRect(
         borderRadius: BorderRadius.circular(17),
         child: _foto != null
             ? SizedBox.expand(child: Image.file(_foto!, fit: BoxFit.cover))
@@ -216,14 +204,14 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
                   children: [
                     Icon(
                       Icons.back_hand_rounded,
-                      color: Colors.white.withValues(alpha: 0.18),
+                      color: AppColors.bone.withValues(alpha: 0.18),
                       size: 80,
                     ),
                     const SizedBox(height: 14),
                     Text(
                       'Avucunu göster',
                       style: TextStyle(
-                        color: Colors.white.withValues(alpha: 0.28),
+                        color: AppColors.bone.withValues(alpha: 0.28),
                         fontSize: 15,
                       ),
                     ),
@@ -231,7 +219,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
                 ),
               ),
       ),
-    );
+    ));
   }
 
   // ── Durum: secim ─────────────────────────────────────────────────────────
@@ -247,22 +235,22 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               height: 90,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.white.withValues(alpha: 0.07),
-                border: Border.all(color: const Color(0xFF8B5CF6).withValues(alpha: 0.35), width: 1.5),
+                color: AppColors.bone.withValues(alpha: 0.07),
+                border: Border.all(color: AppColors.gold.withValues(alpha: 0.35), width: 0.8),
               ),
-              child: const Center(child: Text('🔒', style: TextStyle(fontSize: 38))),
+              child: const Center(child: Icon(Icons.lock_outline_rounded, color: AppColors.gold, size: 38)),
             ),
             const SizedBox(height: 28),
             const Text(
               'Günlük hakkın doldu',
-              style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(color: AppColors.bone, fontSize: 20, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 12),
             Text(
               'El falı günde 1 kez bakılabilir.\nYarın tekrar gel.',
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 15, height: 1.6),
+              style: TextStyle(color: AppColors.bone.withValues(alpha: 0.55), fontSize: 15, height: 1.6),
             ),
             const SizedBox(height: 36),
             GestureDetector(
@@ -298,7 +286,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
             'Avucunu kameraya aç, çizgiler net görünsün.',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Color(0xFFB8A8D8),
+              color: AppColors.boneDim,
               fontSize: 14,
               height: 1.5,
             ),
@@ -343,17 +331,17 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
                 height: 32,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: Colors.orange.withValues(alpha: 0.15),
-                  border: Border.all(color: Colors.orange.withValues(alpha: 0.40)),
+                  color: AppColors.ash.withValues(alpha: 0.15),
+                  border: Border.all(color: AppColors.ash.withValues(alpha: 0.40)),
                 ),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('🧪', style: TextStyle(fontSize: 13)),
+                    Icon(Icons.science_outlined, color: AppColors.gold, size: 13),
                     SizedBox(width: 5),
                     Text(
                       'TEST — Örnek El Görseli',
-                      style: TextStyle(color: Colors.orange, fontSize: 12, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppColors.ash, fontSize: 12, fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),
@@ -379,7 +367,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
         const Text(
           'El çizgilerin okunuyor...',
           style: TextStyle(
-            color: Colors.white,
+            color: AppColors.bone,
             fontSize: 18,
             fontWeight: FontWeight.w500,
             letterSpacing: 0.4,
@@ -392,7 +380,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
             scale: 0.88 + 0.12 * _hourAnim.value,
             child: Opacity(
               opacity: 0.65 + 0.35 * _hourAnim.value,
-              child: const Text('🔮', style: TextStyle(fontSize: 52)),
+              child: const Icon(Icons.auto_awesome_outlined, color: AppColors.gold, size: 52),
             ),
           ),
         ),
@@ -413,26 +401,11 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               children: [
                 // Genel değerlendirme
                 if (_genelMetin.isNotEmpty) ...[
-                  const Text(
-                    'Genel Değerlendirme',
-                    style: TextStyle(
-                      color: Color(0xFFD8B4FE),
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 0.8,
-                    ),
-                  ),
+                  const OccultSectionLabel('Genel Değerlendirme'),
                   const SizedBox(height: 8),
-                  Text(
-                    _genelMetin,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      height: 1.75,
-                    ),
-                  ),
+                  GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(18), child: RichTextParser.build(_genelMetin, style: AppTextStyles.reading)),
                   const SizedBox(height: 20),
-                  const Divider(color: Colors.white12),
+                  const Divider(color: AppColors.rim),
                   const SizedBox(height: 12),
                 ],
                 // Hatlar
@@ -449,7 +422,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               const Text(
                 'El falın gelen kutuna kaydedildi.',
                 style: TextStyle(
-                  color: Color(0xFF9CA3AF),
+                  color: AppColors.boneDim,
                   fontSize: 13,
                 ),
               ),
@@ -470,7 +443,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
     final renk  = hat['renk'] as String;
     final yuzde = hat['yuzde'] as int;
     final metin = hat['metin'] as String;
-    final color = _hatRengi(renk);
+    final color = RichTextParser.mute(_hatRengi(renk));
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
@@ -513,14 +486,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
           ),
           const SizedBox(height: 8),
           // Açıklama metni
-          Text(
-            metin,
-            style: const TextStyle(
-              color: Color(0xFFE2D9F3),
-              fontSize: 14,
-              height: 1.65,
-            ),
-          ),
+          GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(18), child: RichTextParser.build(metin, style: AppTextStyles.reading)),
         ],
       ),
     );
@@ -544,34 +510,9 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
 
   Widget _buildGradientButton({
     required String label,
-    required VoidCallback onTap,
+    required VoidCallback? onTap,
   }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 50,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          gradient: const LinearGradient(
-            colors: [Color(0xFF6D28D9), Color(0xFF8B5CF6)],
-          ),
-          border: Border.all(
-            color: const Color(0xFF8B5CF6).withValues(alpha: 0.80),
-            width: 1.5,
-          ),
-        ),
-        child: Center(
-          child: Text(
-            label,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
-    );
+    return OccultButton(label: label, onTap: onTap);
   }
 }
 
@@ -589,38 +530,6 @@ class _FotoButon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 54,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(14),
-          gradient: const LinearGradient(
-            colors: [Color(0xFF1A1035), Color(0xFF2A1A55)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          border: Border.all(
-            color: const Color(0xFF8B5CF6).withValues(alpha: 0.45),
-            width: 1.5,
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, color: const Color(0xFF8B5CF6), size: 22),
-            const SizedBox(width: 8),
-            Text(
-              label,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+    return OccultButton.secondary(label: label, icon: icon, onTap: onTap);
   }
 }

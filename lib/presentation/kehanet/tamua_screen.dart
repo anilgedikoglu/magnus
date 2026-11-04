@@ -1,6 +1,13 @@
 // C:/src/magnus_app/lib/presentation/kehanet/tamua_screen.dart
 // Tamua — tepsi + taş bilardo animasyonu; son konum sektörüne göre fal metni
 
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/filmed_image.dart';
+import '../../core/widgets/occult_button.dart';
+import '../../core/utils/rich_text_parser.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -382,10 +389,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
               offset: Offset(0, -_slideAnim.value * _maxSlide),
               child: child,
             ),
-            child: Image.asset(
-              'assets/images/kehanet/tamuacharacter.png',
-              width: _charH, height: _charH, fit: BoxFit.contain,
-            ),
+            child: SizedBox(width: _charH, height: _charH, child: FilmedImage('assets/images/kehanet/tamuacharacter.png', fit: BoxFit.contain)),
           ),
         // Tepsi + taş — karakterin önünde
         SizedBox(
@@ -398,16 +402,10 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
               return Stack(
                 alignment: Alignment.center,
                 children: [
-                  Image.asset(
-                    'assets/images/kehanet/tauma_tray.png',
-                    width: _traySize, height: _traySize, fit: BoxFit.contain,
-                  ),
+                  SizedBox(width: _traySize, height: _traySize, child: FilmedImage('assets/images/kehanet/tauma_tray.png', fit: BoxFit.contain)),
                   Transform.translate(
                     offset: pos,
-                    child: Image.asset(
-                      'assets/images/kehanet/tauma_inner.png',
-                      width: _innerSize, height: _innerSize, fit: BoxFit.contain,
-                    ),
+                    child: SizedBox(width: _innerSize, height: _innerSize, child: FilmedImage('assets/images/kehanet/tauma_inner.png', fit: BoxFit.contain)),
                   ),
                 ],
               );
@@ -426,41 +424,13 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
         child: AnimatedBuilder(
           animation: _glowAnim,
           builder: (ctx, child) {
-            final t = _glowAnim.value;
-            return Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(
-                  color: const Color(0xFFFF2200).withValues(alpha: 0.30 + t * 0.55),
-                  width: 1.5,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0xFFFF2200).withValues(alpha: 0.15 + t * 0.35),
-                    blurRadius: 8 + t * 16,
-                    spreadRadius: t * 4,
-                  ),
-                  BoxShadow(
-                    color: const Color(0xFF990000).withValues(alpha: 0.08 + t * 0.22),
-                    blurRadius: 20 + t * 28,
-                    spreadRadius: t * 7,
-                  ),
-                ],
-              ),
-              child: child,
-            );
+
+            return GlassPanel(variant: GlassVariant.reading,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10), child: child!);
           },
           child: Transform.translate(
             offset: const Offset(0, -3),
-            child: Text(
-              _displayed,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white, fontSize: 15, height: 1.65,
-              ),
-            ),
+            child: GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(18), child: RichTextParser.build(_displayed, style: AppTextStyles.reading)),
           ),
         ),
       ),
@@ -469,31 +439,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
 
   // ── Kapat butonu ─────────────────────────────────────────────────────────────
   Widget _buildCloseButton() {
-    return GestureDetector(
-      onTap: () => context.pop(),
-      child: Container(
-        height: 44,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          gradient: const LinearGradient(
-            colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-          ),
-          border: Border.all(
-            color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-            width: 1.5,
-          ),
-        ),
-        child: const Center(
-          child: Text(
-            'Kapat',
-            style: TextStyle(
-              color: Colors.white, fontSize: 15,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
-    );
+    return OccultButton(label: 'Kapat', onTap: () => context.pop());
   }
 
   // ── Alt bölüm: her adımda sabit 160 px → tray konumu hiç kayamaz ──────────
@@ -513,36 +459,12 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
                 'Aklından bir soru geçir...',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.white70, fontSize: 16, height: 1.6,
+                  color: AppColors.boneDim, fontSize: 16, height: 1.6,
                   letterSpacing: 0.3,
                 ),
               ),
               const SizedBox(height: 16),
-              GestureDetector(
-                onTap: _onHazirTap,
-                child: Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    gradient: const LinearGradient(
-                      colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-                    ),
-                    border: Border.all(
-                      color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                      width: 1.5,
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      ref.read(l10nProvider).tamuaReady,
-                      style: const TextStyle(
-                        color: Colors.white, fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              OccultButton(label: ref.read(l10nProvider).tamuaReady, onTap: _onHazirTap),
             ],
           ),
         );
@@ -556,8 +478,8 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0A0718),
-      body: SafeArea(
+      backgroundColor: AppColors.ink,
+      body: GrimoireBackdrop(child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -567,17 +489,14 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
               child: Row(
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                    icon: const Icon(Icons.arrow_back_ios, color: AppColors.bone),
                     onPressed: () => context.pop(),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'TAMUA',
+                      'Tamua',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white, fontSize: 20,
-                        fontWeight: FontWeight.bold, letterSpacing: 1.2,
-                      ),
+                      style: AppTextStyles.screenTitle,
                     ),
                   ),
                   const SizedBox(width: 48),
@@ -588,7 +507,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
             // ── İçerik ──────────────────────────────────────────────────────
             if (_adim == _TamuaAdim.yukleniyor)
               const Expanded(
-                child: Center(child: CircularProgressIndicator(color: Color(0xFFFF55FF))),
+                child: Center(child: CircularProgressIndicator(color: AppColors.gold)),
               )
 
             // ── icerik adımı ────────────────────────────────────────────────
@@ -626,7 +545,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
             ],
           ],
         ),
-      ),
+      )),
     );
   }
 }

@@ -1,3 +1,4 @@
+import '../../core/widgets/grimoire_backdrop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -23,16 +24,17 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
     final zodiac = profile.zodiacSign ?? '—';
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.ink,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: AppColors.navBarBackground,
-        title: Text(s.astrologyTitle),
+        backgroundColor: Colors.transparent,
+        title: Text(s.astrologyTitle, style: AppTextStyles.screenTitle),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
           onPressed: () => context.pop(),
         ),
       ),
-      body: SingleChildScrollView(
+      body: GrimoireBackdrop(child: Padding(padding: EdgeInsets.only(top: MediaQuery.paddingOf(context).top + kToolbarHeight, bottom: MediaQuery.paddingOf(context).bottom), child: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -186,7 +188,7 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
             ),
           ],
         ),
-      ),
+      ))),
     );
   }
 

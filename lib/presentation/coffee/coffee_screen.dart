@@ -23,6 +23,7 @@ import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/widgets/occult_glyphs.dart';
 import '../../core/widgets/glass_panel.dart';
 import '../../core/widgets/occult_button.dart';
 import '../../core/widgets/occult_cards.dart';
@@ -200,14 +201,15 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
 
   // ── Konu seçim ekranı (2x2 grid) ────────────────────────────────────────
   // Yeni glif seti geldiğinde yalnız bu eşlemeyi değiştir.
+  // Gece Grimuarı okült çizgi glifleri (lib/core/widgets/occult_glyphs.dart).
   GlyphBuilder _konuGlyph(String konu) {
-    final icon = switch (konu) {
-      'ask' => Icons.favorite_border_rounded,
-      'kariyer' => Icons.key_outlined,
-      'saglik' => Icons.spa_outlined,
-      _ => Icons.visibility_outlined,
+    final g = switch (konu) {
+      'ask' => OccultGlyph.heart,
+      'kariyer' => OccultGlyph.key,
+      'saglik' => OccultGlyph.sprig,
+      _ => OccultGlyph.eye,
     };
-    return (c, s) => Icon(icon, color: c, size: s);
+    return (c, s) => OccultGlyphIcon(g, color: c, size: s);
   }
 
   Widget _buildKonuSecim(AppStrings s) {

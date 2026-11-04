@@ -1,3 +1,8 @@
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/filmed_image.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/constants/app_colors.dart';
 // Kaynak: C:\Users\AG\Desktop\Magnus\Assets\Resources\OnlineSohbetVeriTabani\Astroloji\DogumHaritasi\
 // JSON:   assets/data/dogumharitasi.json
 //
@@ -12,7 +17,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/utils/rich_text_parser.dart';
@@ -178,32 +182,9 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
     final topPad    = MediaQuery.of(context).padding.top;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.ink,
       extendBody: true,
-      body: Stack(
-        children: [
-          // Arka plan
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/dogum.png',
-              fit: BoxFit.cover,
-              alignment: Alignment.topCenter,
-              filterQuality: FilterQuality.high,
-              errorBuilder: (_, __, ___) => Container(color: const Color(0xFF050020)),
-            ),
-          ),
-          // Karartma
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Color(0x88000000), Color(0xCC000000)],
-              ),
-            ),
-          ),
-          // İçerik
-          Column(
+      body: GrimoireBackdrop(asset: 'assets/images/dogum.png', child: Column(
             children: [
               // Başlık
               Padding(
@@ -231,13 +212,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
                       child: Center(
                         child: Text(
                           ref.watch(l10nProvider).birthChartTitle,
-                          style: GoogleFonts.cinzel(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            letterSpacing: 4,
-                            shadows: const [Shadow(color: Color(0xAA9988FF), blurRadius: 14)],
-                          ),
+                          style: AppTextStyles.screenTitle,
                         ),
                       ),
                     ),
@@ -250,113 +225,29 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
               Expanded(
                 child: _loading
                     ? const Center(child: CircularProgressIndicator(
-                        color: Color(0xFF9988FF), strokeWidth: 2))
+                        color: AppColors.gold, strokeWidth: 2))
                     : _buildContent(bottomPad),
               ),
             ],
-          ),
-        ],
-      ),
+          )),
     );
   }
 
   // ─── Wheel chart + animated edge lights ──────────────────────────────────
 
   Widget _buildWheelChart() {
-    const flareThick = 88.0;
-
-    Widget breathWrap(Widget child) => AnimatedBuilder(
-      animation: _breathAnim,
-      builder: (_, __) => Opacity(
-        opacity: 0.30 + 0.70 * _breathAnim.value,
-        child: child,
-      ),
-    );
-
-    return Padding(
-      padding: const EdgeInsets.only(top: 4, bottom: 24),
-      child: LayoutBuilder(
-        builder: (_, constraints) {
-          final size      = constraints.maxWidth * 0.60;
-          final flareLen  = size * 5.0;
-          final sideOffset = (flareLen - size) / 2;
-
-          Widget flareImg() => Image.asset(
-            'assets/images/red-light-line-png-2.png',
-            fit: BoxFit.fill,
-            errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-          );
-
-          Widget hFlare() => breathWrap(SizedBox(
-            width: flareLen,
-            height: flareThick,
-            child: flareImg(),
-          ));
-
-          Widget vFlare() => breathWrap(SizedBox(
-            width: flareThick,
-            height: flareLen,
-            child: RotatedBox(quarterTurns: 1, child: SizedBox(
-              width: flareLen,
-              height: flareThick,
-              child: flareImg(),
-            )),
-          ));
-
-          return Center(
-            child: SizedBox(
-              width: size,
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(top: -flareThick / 2, left: -sideOffset, child: hFlare()),
-                  Positioned(bottom: -flareThick / 2, left: -sideOffset, child: hFlare()),
-                  Positioned(left: -flareThick / 2, top: -sideOffset, child: vFlare()),
-                  Positioned(right: -flareThick / 2, top: -sideOffset, child: vFlare()),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: const Color(0xFF9988FF).withValues(alpha: 0.55),
-                        width: 1.5,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFF9944FF).withValues(alpha: 0.30),
-                          blurRadius: 24,
-                          spreadRadius: 2,
-                        ),
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.55),
-                          blurRadius: 16,
-                          offset: const Offset(0, 6),
-                        ),
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(11),
-                      child: AspectRatio(
-                        aspectRatio: 1.0,
-                        child: Image.asset(
-                          'assets/images/WheelChartBackground.jpg',
-                          fit: BoxFit.cover,
-                          filterQuality: FilterQuality.high,
-                          errorBuilder: (_, __, ___) => Container(
-                            color: const Color(0xFF1A0033),
-                            child: const Center(
-                              child: Text('✦', style: TextStyle(color: Colors.white54, fontSize: 32)),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
-      ),
+    return Padding(padding: const EdgeInsets.only(top:4,bottom:24),
+      child: LayoutBuilder(builder: (_, constraints) => Center(child: SizedBox(
+        width: constraints.maxWidth * 0.60,
+        child: AnimatedBuilder(animation: _breathAnim,
+          builder: (_, child) => DecoratedBox(decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: AppColors.bone.withValues(alpha: 0.08 + 0.08 * _breathAnim.value), width: 0.8),
+          ), child: child),
+          child: ClipRRect(borderRadius: BorderRadius.circular(11),
+            child: const AspectRatio(aspectRatio: 1, child: FilmedImage('assets/images/WheelChartBackground.jpg'))),
+        ),
+      ))),
     );
   }
 
@@ -376,26 +267,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: SingleChildScrollView(
               padding: const EdgeInsets.only(top: 4, bottom: 16),
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
-                decoration: BoxDecoration(
-                  color: Colors.black.withValues(alpha: 0.55),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: const Color(0xFF9988FF).withValues(alpha: 0.35),
-                    width: 1,
-                  ),
-                ),
-                child: RichTextParser.build(
-                  _metin ?? '',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    height: 1.75,
-                  ),
-                ),
-              ),
+              child: GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.fromLTRB(18,16,18,16), child: RichTextParser.build(_metin ?? '', style: AppTextStyles.reading)),
             ),
           ),
         ),

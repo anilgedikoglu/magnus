@@ -39,6 +39,9 @@ const float TINT      = 0.12; // mor/indigo palet tinti (kimlik bağı, düşük
 const float HUE_COOL  = 1.25;  // +72°
 const float HUE_WARM  = 0.17;  // −10°
 const float BREATH    = 0.10; // bölgesel parlaklık nefesi ±%10 (sadece bulutlarda)
+// Gece Grimuarı (2026-11): arayüz kemik/altın/cam diline geçti; nebula hâlâ alacalı ama
+// kırmızı-turuncu bağırmasın diye son çıktı doygunluğu %58'e çekilir (ton/hareket aynı).
+const float GRIMOIRE_SAT = 0.58;
 
 // YIQ uzayında ton döndürme: parlaklık (Y) korunur, sadece renk açısı döner.
 vec3 hueRotate(vec3 c, float ang) {
@@ -143,5 +146,6 @@ void main() {
   float vignette = 1.0 - 0.27 * smoothstep(0.35, 0.95, length(e));
 
   vec3 rgb = colored * breath * transmission * vignette;
+  rgb = mix(vec3(dot(rgb, vec3(0.299, 0.587, 0.114))), rgb, GRIMOIRE_SAT);
   fragColor = vec4(clamp(rgb * texel.a, 0.0, 1.0), 1.0); // opak
 }

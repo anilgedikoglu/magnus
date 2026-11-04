@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_styles.dart';
-import '../../../core/l10n/app_strings.dart';
 import '../../../core/providers/providers.dart';
 import '../../../data/models/chat_node.dart';
 import 'legal_disclosure_screen.dart';

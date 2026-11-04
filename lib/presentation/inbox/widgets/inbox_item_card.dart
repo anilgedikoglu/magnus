@@ -237,10 +237,10 @@ class _FortuneIconState extends State<_FortuneIcon>
                   child: assetPath != null
                       ? ColorFiltered(
                           colorFilter: ColorFilter.matrix(locked
-                              ? FilmedImage.matrix(0.0, 0.70)
+                              ? FilmedImage.matrix(0.0, 0.85)
                               : widget.item.isRead
-                                  ? FilmedImage.matrix(0.15, 0.78)
-                                  : FilmedImage.matrix(0.35, 0.92)),
+                                  ? FilmedImage.matrix(0.18, 1.00)
+                                  : FilmedImage.matrix(0.38, 1.18)),
                           child: Image.asset(
                             assetPath,
                             width: 50,

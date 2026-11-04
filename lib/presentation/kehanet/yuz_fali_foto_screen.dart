@@ -1,6 +1,12 @@
 // lib/presentation/kehanet/yuz_fali_foto_screen.dart
 // Yüz Falı — fotoğraf çekme/seçme, analiz ve fal metni ekranı.
 
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/occult_button.dart';
+import '../../core/utils/rich_text_parser.dart';
 import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
@@ -235,8 +241,8 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0A0718),
-      body: SafeArea(
+      backgroundColor: AppColors.ink,
+      body: GrimoireBackdrop(child: SafeArea(
         child: Column(
           children: [
             // ── Başlık ──────────────────────────────────────────────────
@@ -244,19 +250,14 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: Row(children: [
                 IconButton(
-                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                  icon: const Icon(Icons.arrow_back_ios, color: AppColors.bone),
                   onPressed: () => context.pop(),
                 ),
                 Expanded(
                   child: Text(
                     widget.kimin == 'kullanici' ? ref.watch(l10nProvider).faceFortuneTilte : ref.watch(l10nProvider).faceFortuneTilte,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.2,
-                    ),
+                    style: AppTextStyles.screenTitle,
                   ),
                 ),
                 const SizedBox(width: 48),
@@ -274,7 +275,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
             ),
           ],
         ),
-      ),
+      )),
     );
   }
 
@@ -283,22 +284,8 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
     return Container(
       width: double.infinity,
       height: height,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(
-          color: const Color(0xFFFF55FF).withValues(alpha: 0.35),
-          width: 1.5,
-        ),
-        color: const Color(0xFF110430),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFF9B00D3).withValues(alpha: 0.15),
-            blurRadius: 16,
-            spreadRadius: 1,
-          ),
-        ],
-      ),
-      child: ClipRRect(
+
+      child: GlassPanel(child: ClipRRect(
         borderRadius: BorderRadius.circular(17),
         child: _foto != null
             ? SizedBox.expand(child: Image.file(_foto!, fit: BoxFit.cover))
@@ -307,12 +294,12 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(Icons.face_retouching_natural,
-                        color: Colors.white.withValues(alpha: 0.2), size: 72),
+                        color: AppColors.bone.withValues(alpha: 0.2), size: 72),
                     const SizedBox(height: 14),
                     Text(
                       'Fotoğraf seç veya çek',
                       style: TextStyle(
-                        color: Colors.white.withValues(alpha: 0.3),
+                        color: AppColors.bone.withValues(alpha: 0.3),
                         fontSize: 15,
                       ),
                     ),
@@ -320,7 +307,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
                 ),
               ),
       ),
-    );
+    ));
   }
 
   // ── Durum: secim ──────────────────────────────────────────────────────────
@@ -367,17 +354,17 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
                 height: 32,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: Colors.orange.withValues(alpha: 0.15),
-                  border: Border.all(color: Colors.orange.withValues(alpha: 0.40)),
+                  color: AppColors.ash.withValues(alpha: 0.15),
+                  border: Border.all(color: AppColors.ash.withValues(alpha: 0.40)),
                 ),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('🧪', style: TextStyle(fontSize: 13)),
+                    Icon(Icons.science_outlined, color: AppColors.gold, size: 13),
                     SizedBox(width: 5),
                     Text(
                       'TEST — Örnek Yüz Görseli',
-                      style: TextStyle(color: Colors.orange, fontSize: 12, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppColors.ash, fontSize: 12, fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),
@@ -426,11 +413,11 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
                                       end:   Alignment.bottomCenter,
                                       colors: [
                                         Colors.transparent,
-                                        const Color(0xFF00CCFF).withValues(alpha: 0.10),
-                                        const Color(0xFF00EEFF).withValues(alpha: 0.75),
-                                        const Color(0xFFFFFFFF).withValues(alpha: 0.90),
-                                        const Color(0xFF00EEFF).withValues(alpha: 0.75),
-                                        const Color(0xFF00CCFF).withValues(alpha: 0.10),
+                                        AppColors.gold.withValues(alpha: 0.10),
+                                        AppColors.gold.withValues(alpha: 0.75),
+                                        AppColors.bone.withValues(alpha: 0.90),
+                                        AppColors.gold.withValues(alpha: 0.75),
+                                        AppColors.gold.withValues(alpha: 0.10),
                                         Colors.transparent,
                                       ],
                                       stops: const [0, 0.30, 0.46, 0.50, 0.54, 0.70, 1],
@@ -448,7 +435,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
                                   decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
-                                        color: const Color(0xFF00EEFF).withValues(alpha: 0.70),
+                                        color: Colors.black.withValues(alpha: 0.12),
                                         blurRadius: 12,
                                         spreadRadius: 2,
                                       ),
@@ -473,7 +460,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         const Text(
           'Analiz ediliyor...',
           style: TextStyle(
-            color: Colors.white,
+            color: AppColors.bone,
             fontSize: 18,
             fontWeight: FontWeight.w500,
             letterSpacing: 0.5,
@@ -482,7 +469,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         const SizedBox(height: 20),
 
         // Animasyonlu kum saati
-        const ElegantHourglass(size: 56, color: Colors.white),
+        const ElegantHourglass(size: 56, color: AppColors.gold),
         const Spacer(),
       ],
     );
@@ -495,13 +482,13 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('⚠️', style: TextStyle(fontSize: 56)),
+          const Icon(Icons.warning_amber_outlined, color: AppColors.gold, size: 56),
           const SizedBox(height: 24),
           Text(
             _hataMetni,
             textAlign: TextAlign.center,
             style: const TextStyle(
-              color: Colors.white,
+              color: AppColors.bone,
               fontSize: 17,
               height: 1.6,
             ),
@@ -527,15 +514,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         Expanded(
           child: SingleChildScrollView(
             padding: const EdgeInsets.fromLTRB(24, 8, 24, 0),
-            child: Text(
-              _falMetni,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                height: 1.85,
-                letterSpacing: 0.2,
-              ),
-            ),
+            child: GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(18), child: RichTextParser.build(_falMetni, style: AppTextStyles.reading)),
           ),
         ),
         Padding(
@@ -552,34 +531,9 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
   // ── Gradient buton (ortak) ────────────────────────────────────────────────
   Widget _buildGradientButton({
     required String label,
-    required VoidCallback onTap,
+    required VoidCallback? onTap,
   }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 50,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          gradient: const LinearGradient(
-            colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-          ),
-          border: Border.all(
-            color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-            width: 1.5,
-          ),
-        ),
-        child: Center(
-          child: Text(
-            label,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
-    );
+    return OccultButton(label: label, onTap: onTap);
   }
 }
 
@@ -597,38 +551,6 @@ class _FotoButon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 54,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(14),
-          gradient: const LinearGradient(
-            colors: [Color(0xFF1A0640), Color(0xFF2A0860)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          border: Border.all(
-            color: const Color(0xFFFF55FF).withValues(alpha: 0.40),
-            width: 1.5,
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, color: const Color(0xFFFF55FF), size: 22),
-            const SizedBox(width: 8),
-            Text(
-              label,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+    return OccultButton.secondary(label: label, icon: icon, onTap: onTap);
   }
 }

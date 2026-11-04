@@ -2,7 +2,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
-import '../../../core/l10n/app_strings.dart';
 import '../../../core/providers/providers.dart';
 
 /// Soldan sağa dolarak otomatik tamamlanan buton.

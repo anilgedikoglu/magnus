@@ -1,6 +1,13 @@
 // C:/src/magnus_app/lib/presentation/kehanet/faloya_screen.dart
 // Faloya fal ekranı - üstte nefes alan ışık çerçeveli görsel, 5s yükleme, typewriter metin
 
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/grimoire_backdrop.dart';
+import '../../core/widgets/glass_panel.dart';
+import '../../core/widgets/filmed_image.dart';
+import '../../core/widgets/occult_button.dart';
+import '../../core/utils/rich_text_parser.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -147,21 +154,21 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
               borderRadius: BorderRadius.circular(18),
               // İnce ışık çerçevesi — nefesle parlar/söner
               border: Border.all(
-                color: const Color(0xFFFF55FF).withValues(alpha: 0.25 + t * 0.55),
-                width: 1.5,
+                color: AppColors.gold.withValues(alpha: 0.12 + t * 0.13),
+                width: 0.8,
               ),
               boxShadow: [
                 // İç halka — yoğun, dar
                 BoxShadow(
-                  color: const Color(0xFFFF55FF).withValues(alpha: 0.20 + t * 0.45),
-                  blurRadius: 6 + t * 14,
+                  color: AppColors.gold.withValues(alpha: 0.04 + t * 0.08),
+                  blurRadius: 6 + t * 6,
                   spreadRadius: t * 3,
                 ),
                 // Dış halo — geniş, yumuşak
                 BoxShadow(
-                  color: const Color(0xFF9B00D3).withValues(alpha: 0.10 + t * 0.30),
-                  blurRadius: 18 + t * 28,
-                  spreadRadius: t * 6,
+                  color: AppColors.gold.withValues(alpha: 0.02 + t * 0.04),
+                  blurRadius: 12 + t * 8,
+                  spreadRadius: t,
                 ),
               ],
             ),
@@ -170,11 +177,7 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
         },
         child: ClipRRect(
           borderRadius: BorderRadius.circular(18),
-          child: Image.asset(
-            'assets/images/kehanet/faloya.png',
-            height: 200,
-            fit: BoxFit.contain,
-          ),
+          child: SizedBox(height: 200, width: 200, child: FilmedImage('assets/images/kehanet/faloya.png', fit: BoxFit.contain)),
         ),
       ),
     );
@@ -184,8 +187,8 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
   Widget build(BuildContext context) {
     final s = ref.watch(l10nProvider);
     return Scaffold(
-      backgroundColor: const Color(0xFF0A0718),
-      body: SafeArea(
+      backgroundColor: AppColors.ink,
+      body: GrimoireBackdrop(child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -195,19 +198,14 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
               child: Row(
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                    icon: const Icon(Icons.arrow_back_ios, color: AppColors.bone),
                     onPressed: () => context.pop(),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'FALOYA',
+                      'Faloya',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
-                      ),
+                      style: AppTextStyles.screenTitle,
                     ),
                   ),
                   const SizedBox(width: 48),
@@ -228,14 +226,14 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
                 s.faloyaFocusing,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                  color: Colors.white70,
+                  color: AppColors.boneDim,
                   fontSize: 16,
                   letterSpacing: 0.3,
                 ),
               ),
               const SizedBox(height: 24),
               const Center(
-                child: ElegantHourglass(size: 52, color: Colors.white),
+                child: ElegantHourglass(size: 52, color: AppColors.gold),
               ),
               const Spacer(),
 
@@ -244,49 +242,17 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
               Expanded(
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.fromLTRB(24, 20, 24, 12),
-                  child: Text(
-                    _displayed,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      height: 1.7,
-                    ),
-                  ),
+                  child: GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(18), child: RichTextParser.build(_displayed, style: AppTextStyles.reading)),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(20),
-                child: GestureDetector(
-                  onTap: () => context.pop(),
-                  child: Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-                      ),
-                      border: Border.all(
-                        color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                        width: 1.5,
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        s.close,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                child: OccultButton(label: s.close, onTap: () => context.pop()),
               ),
             ],
           ],
         ),
-      ),
+      )),
     );
   }
 }

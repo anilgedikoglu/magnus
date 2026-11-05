@@ -91,7 +91,7 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     _bounceCtrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 5600), // varsayılan; _calculateBounce'da güncellenir
-    );
+    )..addListener(_duvarVurusu);
     _slideCtrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 800),
@@ -223,6 +223,22 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
         ? max(t1, t2)
         : (t1 > eps ? t1 : (t2 > eps ? t2 : max(t1.abs(), t2.abs())));
     return Offset(from.dx + tUse * dir.dx, from.dy + tUse * dir.dy);
+  }
+
+  // Taş tepsinin kenarına her çarpışta hafif vuruş (ara noktalar = çarpma anları; 2026-11-06).
+  int _sonSegment = 0;
+  void _duvarVurusu() {
+    if (_segStops.length < 2) return;
+    final t = _bounceCtrl.value;
+    var i = 0;
+    while (i < _segStops.length - 2 && t > _segStops[i + 1]) {
+      i++;
+    }
+    if (t <= 0.0001) _sonSegment = 0;
+    if (i > _sonSegment) {
+      _sonSegment = i;
+      HapticFeedback.lightImpact();
+    }
   }
 
   // ── Animasyon değerinden konum ────────────────────────────────────────────────

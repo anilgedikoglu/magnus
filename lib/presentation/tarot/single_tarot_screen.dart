@@ -368,6 +368,7 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
   void _onDragEnd(DragEndDetails _) => _cancelDrag();
 
   void _performSnap(int index) {
+    HapticFeedback.mediumImpact(); // kart yuvaya oturdu (2026-11-06)
     _overlayEntry?.remove();
     _overlayEntry = null;
     final card = _shuffled[index];

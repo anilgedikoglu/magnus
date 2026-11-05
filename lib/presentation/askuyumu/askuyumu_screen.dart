@@ -62,6 +62,22 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   double _wheelAngle = pi + pi / 12;
   double _velocity = 0; // rad/frame
   bool _snapping = false;
+  int _lastBurc = -1; // çark tıkı: imleç altındaki burç değişince
+  int _lastTickMs = 0;
+
+  int get _burcIndex =>
+      ((6 - ((_wheelAngle - _kSnapOffset) / (pi / 6)).round()) % 12 + 12) % 12;
+
+  /// İmleç altındaki burç değiştiyse tık (iOS'ta en fazla ~22/sn).
+  void _burcTik() {
+    final i = _burcIndex;
+    if (i == _lastBurc) return;
+    _lastBurc = i;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    if (now - _lastTickMs < 45) return;
+    _lastTickMs = now;
+    HapticFeedback.selectionClick();
+  }
   double _snapTarget = pi + pi / 12;
   late Ticker _spinTicker;
 
@@ -95,7 +111,10 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       vsync: this,
       duration: const Duration(seconds: 3),
     )..addStatusListener((status) {
-        if (status == AnimationStatus.completed) _gotoPhase2();
+        if (status == AnimationStatus.completed) {
+          HapticFeedback.heavyImpact(); // kalp doldu
+          _gotoPhase2();
+        }
       });
 
     _barCtrl = AnimationController(
@@ -123,6 +142,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         _wheelAngle = _snapTarget;
         _snapping = false;
         _spinTicker.stop();
+        HapticFeedback.lightImpact(); // burca oturdu
       }
     } else {
       _velocity *= 0.93;
@@ -133,6 +153,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         _snapTarget = ((_wheelAngle - _kSnapOffset) / (pi / 6)).round() * (pi / 6) + _kSnapOffset;
       }
     }
+    _burcTik();
     setState(() {});
   }
 
@@ -161,6 +182,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     _velocity = delta / dt * 16.0;
     _prevPanMs = now;
     _lastPanAngle = currentAngle;
+    _burcTik();
     setState(() {});
   }
 

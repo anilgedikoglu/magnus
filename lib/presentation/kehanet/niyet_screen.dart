@@ -133,6 +133,7 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
     final pos = d.localPosition;
     if (pos.dx < 0 || pos.dy < 0 || pos.dx > _boxW || pos.dy > _boxH) return;
 
+    final onceYuzde = (_scratchPct * 20).floor();
     setState(() {
       _scratchPoints.add(pos);
 
@@ -152,8 +153,13 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
 
       _scratchPct = _scratchedCells.length / (_gridCols * _gridRows);
 
+      // Kazırken her %5'te hafif tık; açılınca güçlü vuruş (2026-11-06).
+      if (!_fullyRevealed && (_scratchPct * 20).floor() > onceYuzde) {
+        HapticFeedback.selectionClick();
+      }
       if (!_fullyRevealed && _scratchPct >= 0.40) {
         _fullyRevealed = true;
+        HapticFeedback.heavyImpact();
         _revealCtrl.forward().then((_) {
           if (mounted) setState(() => _adim = _NiyetAdim.tamamlandi);
         });

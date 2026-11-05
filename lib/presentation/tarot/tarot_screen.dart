@@ -256,6 +256,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
   }
 
   void _performSnap(int index) {
+    HapticFeedback.mediumImpact(); // kart yuvaya oturdu (2026-11-06)
     _overlayEntry?.remove();
     _overlayEntry = null;
     final isReversed = Random().nextBool();

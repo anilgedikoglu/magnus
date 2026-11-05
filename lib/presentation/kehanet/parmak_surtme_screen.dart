@@ -4,6 +4,7 @@
 import 'dart:async';
 import '../../core/widgets/edge_swipe_back.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../data/providers.dart';
@@ -52,15 +53,21 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
     final pos = details.localPosition;
     if (_lastPos != null) {
       final dist = (pos - _lastPos!).distance;
+      final once = (_progress * 10).floor();
       setState(() {
         _progress = (_progress + dist / _threshold).clamp(0.0, 1.0);
         _tail.add(_TailPoint(pos: pos, life: 1.0));
         if (_tail.length > 500) _tail.removeRange(0, _tail.length - 500);
       });
+      // Her %10'da hafif tık: sürtmenin "işlediği" hissedilsin (2026-11-06).
+      if ((_progress * 10).floor() > once && _progress < 1.0) HapticFeedback.selectionClick();
       if (_progress >= 1.0 && !_done) {
         _done = true;
-        // 5 saniye sonra geçiş
-        Future.delayed(const Duration(seconds: 5), () {
+        // %100: güçlü vuruş + yankı.
+        HapticFeedback.heavyImpact();
+        Future.delayed(const Duration(milliseconds: 140), HapticFeedback.mediumImpact);
+        // 3 saniye sonra geçiş (eski 5 sn ölü bekleme kısaldı)
+        Future.delayed(const Duration(seconds: 3), () {
           if (mounted) context.pushReplacement('/kahin_metin', extra: widget.kahinId);
         });
       }

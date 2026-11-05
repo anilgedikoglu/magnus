@@ -7,7 +7,7 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 758** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 120 (+Gelecek 20 çeviride); tur 7–10 seçim/çeviride) — her tur sonunda güncelle.
+- **Toplam eklenen: 938** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 80 (+Motivasyon/Likia/Yousuf), tur 9: 80 (+Bugün/Sonuç/Yana); tur 8, 10–12 seçim/çeviride) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
@@ -26,6 +26,16 @@
 | Kâhin Uraz | `kahinler.json` › `kahinler.uraz` | uraz_24–43 |
 | Kahve – Giriş | `kahve_giris.json` › `girisler` | 769–788 |
 | Durugörü – Yarın | `durugoru_yno.json` › `durugoru_yno` | 40–59 |
+| Durugörü – Gelecek | `durugoru_gno.json` › `durugoru_gno` | 67–86 |
+
+## Tur 7–12 — 2026-11-05 akşam (sürüyor; ChatGPT + Codex, dosya eki sınırında içerik metin olarak)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Olumlama | `olumlamalar.json` › `olumlamalar` (M2 ham anahtar) | 515–554 |
+| Acı Gerçekler | `acigercekler.json` › `acigercekler` | ag073–ag112 |
+| Tavşan Falı | `tavsanfali.json` › `tavsanfali` | 181–220 |
+| Niyet | `niyet.json` › `niyet` | 239–278 |
 | Kahve – Bağlama | `kahve_baglama.json` › `baglamalar` | 251–290 |
 | Faloya (3) | `faloya.json` › `faloya` | 132–171 |
 

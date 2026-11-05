@@ -265,6 +265,11 @@ const tekrar = (tur, id) => ({ ...TURLAR[tur].find(k => k.id === id) });
 TURLAR[9] = [tekrar(4, 'tavsanfali'), tekrar(4, 'niyet'), tekrar(3, 'durugoru_bno'), tekrar(4, 'kahve_sonuc'), tekrar(4, 'yana_bana')];
 TURLAR[10] = [tekrar(6, 'kahve_giris'), tekrar(4, 'kahve_gelisme'), { ...tekrar(3, 'kaderkitabi'), orijinalMaxId: 229 },
   { ...tekrar(5, 'kahin_derun'), orijinalMaxId: 33 }, { ...tekrar(5, 'kahin_khaleesi'), orijinalMaxId: 31 }];
+// Tur 11-12 (2026-11-05 akşam): ikinci geçiş — örnekler hep ORİJİNAL havuzdan (orijinalMaxId önceki tanımdan).
+TURLAR[11] = [{ ...tekrar(3, 'kahve_ugurlama'), orijinalMaxId: 143 }, tekrar(5, 'yana_yasama'), tekrar(6, 'kahve_baglama'), tekrar(6, 'faloya'),
+  tekrar(6, 'durugoru_gno')];
+TURLAR[12] = [tekrar(5, 'kahve_karsilama'), tekrar(6, 'durugoru_yno'), tekrar(7, 'olumlama'), tekrar(7, 'acigercekler'),
+  { ...tekrar(5, 'kahin_uraz'), orijinalMaxId: 23 }];
 
 const ORTAK_YER = 'YER TUTUCULAR (yalnız bunları, AYNEN yaz): {{isim}} = kullanıcının adı; {{ay_N}} = bugünden N ay sonraki ayın adı (ör. {{ay_2}}); {{sayi,a,b}} = a ile b arası rastgele sayı (BOŞLUKSUZ, ör. {{sayi,2,6}}); {{randomtarih,a,b}} = bugünden a-b gün sonraki tarih (ör. "17 Ocak"); {{kelime, A | B | C}} = seçeneklerden rastgele biri; {{harf}} = rastgele bir harf (isim baş harfi için); {{gun_N}} = N gün sonraki haftanın günü adı; {{burc}} = kullanıcının burcu. Cinsiyete göre kelime gerekirse: {{data, cinsiyet=erkek, X | cinsiyet=kadin, Y}}. {{yil_+1}} gibi artı işaretli biçim YASAK.';
 const HEDEF = 'HEDEF: Okuyana "wow, bildin!" dedirtecek, BİLİYOR HİSSİ VEREN, SPESİFİK GÖRÜNEN metinler. Somut gündelik ayrıntı kullan (bir mesaj, bir anahtar, bir koku, bir renk, bir sokak, bir harfle başlayan isim, bir ay/gün, bir sayı, bir alışkanlık) ve kişinin hayatına dokunan isabetli gözlemler yap. Herkese uyan basmakalıp klişelerden kaçın — ama ayrıntı, olayın TUTMA ihtimalini düşürmesin (aşağıdaki COLD READING kuralı).';

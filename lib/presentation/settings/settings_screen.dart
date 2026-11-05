@@ -803,11 +803,14 @@ class _InlineEditorState extends ConsumerState<_InlineEditor> {
       final below = (MainTabsScope.maybeOf(context) != null ? kGlassBarReserve + 6 : 76.0) +
           MediaQuery.paddingOf(context).bottom;
       final lift = kb > 0 ? max(0.0, kb - below + 10) : 0.0;
-      return Transform.translate(
-        offset: Offset(0, -lift),
+      // Yerleşimle (padding) — paint kaydırması yok → panel alan içinde, dokunulabilir.
+      return Padding(
+        padding: EdgeInsets.only(bottom: lift),
         child: Align(
           alignment: kb > 0 ? Alignment.bottomCenter : Alignment.center,
-          child: Padding(
+          // Kaydırılabilir: klavye/üst blok geçişi sırasında alan anlık daralınca taşma olmaz.
+          child: SingleChildScrollView(
+            physics: const ClampingScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             child: Material(
               type: MaterialType.transparency,
@@ -1590,17 +1593,33 @@ class SettingsScreen extends ConsumerWidget {
                 child: Column(
                 children: [
                   _buildTopBar(context, ref, profile),
-                  // Üst sabit blok: başlık + kutucuklar
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const SizedBox(height: 6),
-                        _buildTitle(ref),
-                        const SizedBox(height: 14),
-                        _buildGridSection(context, ref, profile),
-                      ],
+                  // Üst sabit blok: başlık + kutucuklar. Satır içi METİN düzenlerken klavye
+                  // açıksa geçici gizlenir → düzenleyici alanı büyür, panel klavyenin üstünde
+                  // ve alan SINIRLARI İÇİNDE kalır (dokunulabilir; Codex bulgusu).
+                  Consumer(
+                    builder: (context, cref, child) {
+                      final edit = cref.watch(_inlineEditProvider);
+                      final typing = edit != null &&
+                          edit.fieldType == 'text' &&
+                          MediaQuery.viewInsetsOf(context).bottom > 0;
+                      return AnimatedSize(
+                        duration: const Duration(milliseconds: 220),
+                        curve: Curves.easeOutCubic,
+                        alignment: Alignment.topCenter,
+                        child: typing ? const SizedBox(width: double.infinity) : child,
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const SizedBox(height: 6),
+                          _buildTitle(ref),
+                          const SizedBox(height: 14),
+                          _buildGridSection(context, ref, profile),
+                        ],
+                      ),
                     ),
                   ),
                   // Orta: donut yuvarlakları — bilgi kartına dokununca AYNI alanda

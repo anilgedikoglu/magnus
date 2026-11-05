@@ -32,6 +32,10 @@
   Kullanıcı Bilgileri satır içi düzenleyici (`settings_screen.dart` `_InlineEditor`). Testler:
   `edge_swipe_back_test`, `settings_dialog_pop_test`, `settings_inline_editor_test`.
 
+- **iOS 10.8.8+264 TestFlight'a yüklendi** (GitHub Actions run 41985291340, 2026-11-05 ~10:16). Codex inceleme:
+  2 ORTA bulgu (kenar kaydırmada dikey erken iptal; klavyede paneli Transform ile taşıma → dokunuş) — ikisi de
+  düzeltildi + testli, 264 SONRASI commit (bir sonraki build'de).
+
 ## Yarım kalan
 - **Gerçek cihazda ilk kez bu build'le denenecek:** yeni zemin (grain + vinyet), filmli görsellerin parlaklığı,
   cam bar, Olumlama'daki çift `GrimoireBackdrop` çapraz geçişinin düşük cihazda kare süresi.

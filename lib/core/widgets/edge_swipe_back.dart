@@ -82,6 +82,10 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
   Route<dynamic>? _route;
   bool _reached = false;
 
+  /// Yön kesinleşti mi (yatay)? Kesinleşmeden gösterge çıkmaz; önce dikeyse takip biter.
+  bool _decided = false;
+  static const double _slop = 10;
+
   @override
   void dispose() {
     _drag.dispose();
@@ -94,6 +98,7 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
     _nav = null;
     _route = null;
     _reached = false;
+    _decided = false;
     _drag.value = null;
   }
 
@@ -153,10 +158,15 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
     final start = _start;
     if (e.pointer != _pointer || start == null) return;
     final d = e.position - start;
-    // Önce dikey başlayan hareket kaydırmadır: takibi kalıcı bırak.
-    if (_drag.value == null && d.dy.abs() > 18 && d.dy.abs() > d.dx.abs() * 1.5) {
-      _reset();
-      return;
+    // Yön kesinleşene kadar (slop) karar verme; ilk belirgin hareket dikeyse (veya sola)
+    // bu bir kaydırmadır → takibi kalıcı bırak (Codex: küçük (0,5) adımı iptali atlatıyordu).
+    if (!_decided) {
+      if (d.distance < _slop) return;
+      if (d.dx <= 0 || d.dy.abs() >= d.dx.abs()) {
+        _reset();
+        return;
+      }
+      _decided = true;
     }
     final valid = d.dx > 0 && d.dx.abs() > d.dy.abs() * 1.5;
     _drag.value = _EdgeDrag(e.position.dy, valid ? d.dx : 0);
@@ -172,7 +182,9 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
     final route = _route;
     if (e.pointer != _pointer || start == null || nav == null || route == null) return;
     final d = e.position - start;
+    final decided = _decided;
     _reset();
+    if (!decided) return;
     // Ekranın kendi SwipeBack'i bu dokunuşu işlediyse dokunma.
     if (SwipeBack.wasClaimed(e.pointer)) return;
     if (!(d.dx > widget.threshold && d.dx.abs() > d.dy.abs() * 1.5)) return;

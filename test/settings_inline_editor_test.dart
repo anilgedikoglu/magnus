@@ -83,7 +83,24 @@ void main() {
     expect(find.text('Kaydet'), findsNothing);
     expect(find.text('Modalite'), findsOneWidget);
 
+    // Doğum Yeri (metin) + klavye: üst blok geçici gizlenir, panel klavyenin üstünde ve
+    // DOKUNULABİLİR (Codex: Transform ile alan dışına taşan kısım dokunuş almıyordu).
+    await t.tap(find.text('Doğum Yeri'));
+    await _settle(t);
+    t.view.viewInsets = const FakeViewPadding(bottom: 700); // ~350 mantıksal klavye
+    await _settle(t);
+    expect(find.text('Medeni Hal'), findsNothing); // kartlar geçici gizli
+    final iptal = find.text('İptal');
+    expect(t.getBottomLeft(iptal).dy, lessThan(844 - 350));
+    await t.tap(iptal);
+    t.view.resetViewInsets();
+    await _settle(t);
+    expect(find.text('Kaydet'), findsNothing);
+    expect(find.text('Medeni Hal'), findsOneWidget);
+    expect(find.text('Modalite'), findsOneWidget);
+
     await t.pumpWidget(const SizedBox.shrink());
     await _settle(t, steps: 3);
+    await t.pump(const Duration(seconds: 3)); // metin alanı/odak gecikme zamanlayıcıları
   });
 }

@@ -190,6 +190,23 @@ void main() {
     expect(find.text('A'), findsOneWidget);
   });
 
+  testWidgets('önce dikey başlayıp sonra sağa dönen hareket geri götürmez (Codex)', (t) async {
+    final r = await _pump(t);
+    r.push('/a');
+    await t.pumpAndSettle();
+    final g = await t.startGesture(const Offset(8, 300));
+    await g.moveBy(const Offset(0, 5)); // slop altı: karar yok
+    await t.pump();
+    await g.moveBy(const Offset(0, 60)); // dikey → kalıcı iptal
+    await t.pump();
+    await g.moveBy(const Offset(160, 0)); // sonra sağa
+    await t.pump();
+    expect(find.byKey(const ValueKey('edge-back-hint')), findsNothing);
+    await g.up();
+    await t.pumpAndSettle();
+    expect(find.text('A'), findsOneWidget);
+  });
+
   testWidgets('çekerken gösterge görünür, bırakınca kaybolur', (t) async {
     final r = await _pump(t);
     r.push('/a');

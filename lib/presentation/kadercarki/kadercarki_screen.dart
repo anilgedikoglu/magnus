@@ -671,6 +671,15 @@ class _WheelPainter extends CustomPainter {
     final r  = min(cx, cy) - rim - 6;          // dilim yarıçapı
     final center = Offset(cx, cy);
 
+    // -1. Gölge: çark zemine oturur, derinlik (Grok: çarkın gölgesi yok).
+    canvas.drawCircle(
+      center + Offset(0, rim * 1.4),
+      r + rim,
+      Paint()
+        ..color = const Color(0x8C000000)
+        ..maskFilter = MaskFilter.blur(BlurStyle.normal, rim * 2.2),
+    );
+
     // 0. Dış hale (gerçek hıza göre; durgunken sakin)
     canvas.drawCircle(
       center, r + rim,
@@ -825,6 +834,36 @@ class _WheelPainter extends CustomPainter {
     );
     canvas.drawCircle(center + Offset(-gem * 0.35, -gem * 0.38), gem * 0.22,
         Paint()..color = const Color(0xCCFFFFFF));
+
+    // 4. Kazanınca kıvılcımlar
+    _sparks(canvas, center, r + rim);
+  }
+
+  /// Kazanınca okun çevresinde nabızla parlayan dört köşeli yıldız kıvılcımlar.
+  void _sparks(Canvas canvas, Offset center, double r) {
+    if (winner < 0) return;
+    final pts = [
+      Offset(-r * 0.30, r * 0.93), Offset(r * 0.27, r * 0.95),
+      Offset(-r * 0.12, r * 0.80), Offset(r * 0.10, r * 1.07),
+    ];
+    for (var i = 0; i < pts.length; i++) {
+      final g = ((winGlow + i * 0.27) % 1.0);
+      final a = (0.35 + 0.65 * g).clamp(0.0, 1.0);
+      final sz = r * (0.035 + 0.03 * g);
+      final c = center + pts[i];
+      final star = Path()
+        ..moveTo(c.dx, c.dy - sz)
+        ..quadraticBezierTo(c.dx, c.dy, c.dx + sz, c.dy)
+        ..quadraticBezierTo(c.dx, c.dy, c.dx, c.dy + sz)
+        ..quadraticBezierTo(c.dx, c.dy, c.dx - sz, c.dy)
+        ..quadraticBezierTo(c.dx, c.dy, c.dx, c.dy - sz)
+        ..close();
+      canvas.drawPath(star,
+          Paint()
+            ..color = _goldLight.withValues(alpha: a * 0.6)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 3));
+      canvas.drawPath(star, Paint()..color = Colors.white.withValues(alpha: a));
+    }
   }
 
   @override

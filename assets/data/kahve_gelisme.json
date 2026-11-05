@@ -7591,6 +7591,323 @@
         "ask",
         "genel"
       ]
+    },
+    {
+      "id": 439,
+      "metin": "İki kişinin karşılıklı oturduğu yuvarlak bir masa görüyorum. Masanın ortasında duran küçük bir hesap makinesi, son zamanlarda işinle ilgili yaptığın değerlendirmeleri temsil ediyor. Aklından geçenleri eşinle paylaşsan bile bazı hesapları kendi içinde çözmeyi tercih ediyorsun {{isim}}. Sorumluluklarını sessizce taşımaya alışmışsın. Fakat fincanda masanın arkasında beliren geniş bir kemer, bu yükün hafifleyeceğine işaret. {{ay_2}} ayına kadar iş hayatında seni rahatlatacak bir düzenleme gündeme gelecek. Önce çalışma arkadaşlarından biriyle yapacağın sıradan bir sohbet sırasında konunun açıldığını, ardından yetkili birinden daha açık bilgiler aldığını görüyorum.\n\nKemerin hemen altında birbirine bitişik iki küçük kese var. Bunlardan biri maddi rahatlığı, diğeri ev içindeki huzuru temsil ediyor. Beklediğin bir işin olumlu ilerlemesiyle harcamalarını daha rahat planlayabilecek, eşinle birlikte ertelediğiniz bir isteği yeniden konuşacaksınız. Özellikle önümüzdeki {{sayi,4,9}} hafta içerisinde vereceğin sakin ve hesaplı bir kararın uzun süre faydasını göreceksin. Fincanın bana bir de şunu söylüyor: Her şeyi tek başına çözmeye çalıştığında gücün artmıyor; bazen doğru insanla konuşmak, işin yarısını hallediyor.",
+      "metin_en": "I see a round table with two people sitting across from each other. A small calculator resting in the center represents the assessments you've been making about your work lately. Even when you share your thoughts with your spouse, you prefer to work through certain calculations on your own, {{isim}}. You've grown accustomed to carrying your responsibilities quietly. But a broad arch appearing behind the table in your cup suggests that this burden will grow lighter. By {{ay_2}}, a change that brings relief to your professional life will come up. I see the subject first arising during an ordinary conversation with a colleague, followed by more definite information from someone in authority.\n\nJust beneath the arch are two small pouches touching each other. One represents financial ease, the other harmony at home. As something you've been waiting for progresses favorably, you'll be able to plan your expenses more comfortably, and you and your spouse will revisit a wish you've both been putting off. A calm, carefully considered decision you make within the next {{sayi,4,9}} weeks will benefit you for a long time. Your cup tells me one more thing: Trying to solve everything alone doesn't make you stronger. Sometimes talking to the right person gets half the job done.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 440,
+      "metin": "Kurumunun uzun koridorlarını andıran bir geçit var telvelerinin arasında. Bu geçidin sonunda üst üste konmuş dosyalar ve yanında duran küçük bir mühür seçiyorum. İşini gerektiği gibi yapmak için gösterdiğin titizlik, bazen başkalarının fark etmediği ayrıntılarla fazladan uğraşmana neden oluyor {{isim}}. Fincandaki mühür, uzayan bir işlemin ya da cevabını beklediğin kurumsal bir meselenin ilerleyeceğini anlatıyor. Önümüzdeki {{sayi,2,6}} hafta içinde çalışma ortamında yapılacak kısa bir bilgilendirme, senin de ilgilendiğin bir konuyu açıklığa kavuşturacak. İlk duyduğun bilgi biraz eksik gelebilir; fakat daha sonra eline ulaşacak resmî açıklamayla soru işaretlerin azalacak.\n\nGeçidin karşı tarafında, omzunda açık renk bir çanta taşıyan biri var. Bu kişinin amirlerinle ya da mesai çevrenle bağlantılı olduğunu hissediyorum. Sana aktaracağı bir ayrıntı sayesinde gereksiz yere uğraştığın bir işi kolaylaştıracaksın. Bir başka sembol de pencereden içeri uzanan güneş ışığı. Bu, kurum içindeki çabalarının daha görünür hâle geleceğini gösteriyor. Özellikle sakin kaldığın bir meselede haklılığının anlaşılması, içinden sessizce 'Nihayet!' demene yol açacak. İşin sonunda küçük ama kıymetli bir takdir de görüyorum.",
+      "metin_en": "Among your coffee grounds, there's a passageway resembling the long corridors of your workplace. At the end, I make out a stack of files with a small official stamp beside them. The care you take to do your job properly sometimes leads you to spend extra time on details that others don't even notice, {{isim}}. The stamp in your cup tells me that a drawn-out procedure or an institutional matter you've been awaiting an answer about will finally move forward. Within the next {{sayi,2,6}} weeks, a brief announcement at work will clarify something that concerns you. The first information you hear may seem a little incomplete, but an official explanation that reaches you afterward will put more of your questions to rest.\n\nOn the other side of the passageway, there's someone carrying a light-colored bag over their shoulder. I sense this person is connected to your supervisors or your professional circle. A detail they pass along will help you simplify a task you've been spending unnecessary effort on. Another symbol is a beam of sunlight stretching through a window. It shows that your efforts within the organization will become more visible. In particular, having your position recognized as justified in a matter where you've remained calm will make you silently say, 'Finally!' I also see a small but meaningful acknowledgment at the end of it all.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 441,
+      "metin": "Burnuma yeni açılmış bir defterin kâğıt kokusu gelir gibi oldu. İlginçtir, fincanının üst bölümünde gerçekten de kıvrılmış sayfalara benzeyen beyazlıklar var. Bu görüntü, uzun zamandır aklının bir köşesinde duran bir işi yeniden ele alacağını gösteriyor {{isim}}. Bazen küçücük bir işi bile zihninde büyütüyor, başladıktan sonra neden daha önce bitirmediğine şaşırıyorsun. Sayfaların üzerine düşmüş üç nokta, önümüzdeki {{sayi,3,10}} gün içinde peş peşe hatırlayacağın bazı sorumlulukları temsil ediyor. Bunlardan birini beklediğinden kolay halledecek, hemen ardından başka bir konuda sana yardımcı olabilecek biriyle konuşacaksın.\n\nFincanın dibindeki kıvrık saplı şemsiye de gözüme çarptı. Şemsiyenin üzerinde yağmur yok; aksine çevresi oldukça aydınlık. Bu, hazırlıklı olduğun bir konuda endişelerinin boşa çıkacağını anlatıyor. Yakında planladığın bir görüşme ya da günlük düzenini ilgilendiren bir iş, zihninde kurduğundan daha rahat ilerleyecek. Birinin ağzından duyacağın içten bir cümle de bu rahatlığa eşlik edecek. Sen çoğu zaman sorunları çözmeye o kadar odaklanıyorsun ki yolunda giden şeyleri kutlamayı unutuyorsun. Bu kez küçücük bir gelişmenin bile yüzünü güldürmesine izin vereceksin.",
+      "metin_en": "For a moment, I could almost smell the paper of a freshly opened notebook. Interestingly, there really are pale shapes resembling curled pages near the top of your cup. This image tells me you'll return to something that's been sitting in the back of your mind for a long time, {{isim}}. Sometimes you make even the smallest task seem enormous in your head, only to wonder why you didn't finish it sooner once you've started. Three dots resting on the pages represent several responsibilities that will come back to mind one after another within the next {{sayi,3,10}} days. You'll handle one of them more easily than expected, then speak with someone who can help you with another matter.\n\nA curved-handled umbrella at the bottom of your cup also caught my attention. There's no rain above it; in fact, its surroundings are quite bright. This tells me that your worries about something you've prepared for will prove unnecessary. An upcoming meeting or a task involving your daily routine will go more smoothly than you've imagined. A sincere remark from someone will add to that sense of relief. You're often so focused on solving problems that you forget to celebrate the things going right. This time, you'll allow even a tiny positive development to bring a smile to your face.",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 442,
+      "metin": "Evinin düzenini çağrıştıran geniş bir raf ve rafın üzerinde birbirinden farklı kaplar görüyorum. Kapların biri diğerlerinden biraz öne çıkmış. Bu, günlük hayatında sürekli el attığın işlerin arasında kendin için ayırmak istediğin vakti temsil ediyor. {{isim}}, çevrendekilerin ihtiyaçlarını hatırlamakta çok iyisin; fakat sıra kendi isteklerine geldiğinde bazen onları sonraya bırakıyorsun. Rafın üzerindeki açık kapak, {{sayi,2,5}} hafta içinde evinle ilgili beklettiğin küçük bir düzenlemeyi tamamlayacağını söylüyor. Bu iş için daha önce konuştuğun biri, sana pratik bir fikir verecek. İlk başta uğraştırıcı görünen mesele, bu öneriyle düşündüğünden kolay çözülecek.\n\nTelvelerin aşağısında yan yana duran iki tabure var. Üzerlerinden biri boş, diğerinin yanında ise çiçekli bir örtü duruyor. Bu, yakın çevrenden bir kadınla gerçekleştireceğin sıcak bir sohbetin işareti. Günlük bir konuyla başlayacak konuşma, içini açmak istediğin başka bir meseleye uzanacak. Karşındaki kişinin sözlerinde beklemediğin kadar anlayış bulacaksın. Fincanın kenarındaki küçük nar tanesi de ev içindeki bereketi simgeliyor. Harcamalarını ilgilendiren sevindirici bir gelişme, ertelediğin ufak bir ihtiyacı karşılamanı kolaylaştıracak. Ardından evinin havası kadar kendi keyfinin de değiştiğini fark edeceksin.",
+      "metin_en": "I see a wide shelf that reminds me of the way your home is organized, with several different containers arranged on it. One container stands a little farther forward than the others. It represents the time you want to set aside for yourself amid all the everyday tasks you constantly attend to. {{isim}}, you're excellent at remembering what the people around you need, but when it comes to your own wishes, you sometimes put them off. An open lid on the shelf tells me that within {{sayi,2,5}} weeks, you'll finish a small household improvement you've been postponing. Someone you've discussed it with before will offer a practical idea. What initially seems troublesome will become much easier to resolve thanks to that suggestion.\n\nLower down in the grounds, there are two stools standing side by side. One is empty, while a floral cloth rests beside the other. This points to a warm conversation with a woman close to you. What begins as a chat about an everyday subject will lead to another matter you've wanted to open up about. You'll find more understanding in her words than you expected. A tiny pomegranate seed at the rim of your cup symbolizes abundance in the home. A welcome development involving your expenses will make it easier to take care of a small need you've been putting off. Afterward, you'll notice that not only the atmosphere at home but your own mood has changed for the better.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 443,
+      "metin": "Yarım bırakılmış bir örgünün ucunda gevşekçe duran iplik görüyorum. Bu görüntü, geride bıraktığın ilişkide zihnini meşgul eden bazı soruların henüz bütünüyle susmadığını anlatıyor. {{isim}}, bir karar verdiğinde arkasında durabiliyorsun; yine de geçmişte söylenen bazı sözlerin anlamını sonradan yeniden düşünmekten kendini alamıyorsun. İpliğin yanında küçük bir toka şekli var. Bu, dağınık kalan duygularını toparlayacağın bir döneme işaret. Önümüzdeki {{sayi,3,8}} hafta içerisinde geçmişi hatırlatan bir konuşma ya da karşılaşacağın tanıdık bir ayrıntı, içinden geçenleri daha açık görmeni sağlayacak. Başta hafifçe hüzünlenebilirsin, fakat hemen ardından artık hangi duyguları geride bırakmak istediğini anlayacaksın.\n\nÖrgünün bitiminde ise iki kanadını açmış bir kelebek var. Kelebeğin çevresindeki boş alanın genişliği beni özellikle etkiledi. Bu, hayatında kendine daha fazla yer açacağını gösteriyor. Yakın çevrenden gelen içten bir davetle katılacağın sohbet, yüzünü uzun zamandır olmadığı kadar güldürebilir. Orada duyacağın bir söz, kendine bakışını değiştirecek. Aşk konusunda aceleyle karar vermene gerek yok; fincanında gördüğüm aydınlık, yeniden sevilme ihtimalinden önce kendini değerli hissetmenin güzelliğini anlatıyor.",
+      "metin_en": "I see a loose strand of yarn hanging from an unfinished piece of knitting. This image tells me that some questions about the relationship you've left behind haven't completely quieted in your mind. {{isim}}, once you make a decision, you can stand by it. Even so, you sometimes find yourself reconsidering the meaning of words spoken in the past. Beside the yarn is the shape of a small hair clip. It points to a period when you'll begin sorting through the feelings that have remained tangled. Within the next {{sayi,3,8}} weeks, a conversation that recalls the past or a familiar detail you encounter will help you see your emotions more clearly. You may feel a little sadness at first, but soon afterward you'll understand which feelings you no longer want to carry.\n\nAt the end of the knitting, there's a butterfly with both wings spread wide. The spaciousness around it particularly struck me. It shows that you'll make more room for yourself in your life. A sincere invitation from someone close to you may lead to a gathering that makes you smile more than you have in a long time. Something you hear there will change the way you see yourself. There's no need to rush into decisions about love. The brightness I see in your cup speaks of the beauty of recognizing your own worth before even considering the possibility of being loved again.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 444,
+      "metin": "Kitaplarının arasında sıkışmış küçük bir yaprak var fincanında. Yaprağın damarları belirgin, fakat kenarları hafifçe kıvrılmış. Bu görüntü, okul hayatının temposu içinde bazen dinlenmeyi en sona bıraktığını gösteriyor. Özellikle zihnini meşgul eden bir ders ya da yaklaşan sorumluluk olduğunda, mola versen bile aklın yapman gerekenlerde kalıyor. Yaprağın hemen üzerinde açık bir pencere seçiyorum. Bu pencere, günlük alışkanlıklarında yapacağın küçük bir değişikliğin sana iyi geleceğini anlatıyor. Önümüzdeki {{sayi,4,10}} gün içinde çalışma düzenini biraz daha dengeli kurmayı deneyecek, kısa araların düşündüğünden daha verimli olduğunu fark edeceksin.\n\nFincanın tabanında küçük bir su testisi ve yanında düzgünce yerleştirilmiş iki kitap var. Testi, kendi ihtiyaçlarını ihmal etmeden ilerlemenin; kitaplar ise daha planlı çalışmanın sembolü. Arkadaş grubundan biriyle yapacağın sıradan bir konuşma, kendini fazla zorladığın bir konuda farklı düşünmeni sağlayacak. Kafanı kurcalayan ders meselesini de daha kolay ele almaya başlayacaksın. Bir şeyi özellikle belirtmek istiyorum {{isim}}: Her dakikayı üretken geçirmek zorunda değilsin. Dinlenmeye hak tanıdığında hem zihinsel olarak daha rahat hem de günlük işlerinde daha istekli hissedeceksin.",
+      "metin_en": "There's a small leaf tucked between your books in your cup. Its veins are clearly visible, though its edges are slightly curled. This image shows me that amid the pace of school life, you sometimes leave rest until the very end. Especially when a particular class is on your mind or a responsibility is approaching, your thoughts remain on what you need to do even when you take a break. Just above the leaf, I make out an open window. It tells me that a small change in your daily habits will do you good. Within the next {{sayi,4,10}} days, you'll try to bring a little more balance to your study routine and discover that short breaks are more productive than you thought.\n\nAt the bottom of your cup, there's a small water jug beside two neatly arranged books. The jug symbolizes moving forward without neglecting your own needs, while the books represent a more structured approach to studying. An ordinary conversation with someone in your group of friends will help you see a situation where you've been pushing yourself too hard from a different perspective. You'll also begin approaching a troubling academic matter more easily. There's something I particularly want to tell you, {{isim}}: You don't have to make every minute productive. When you give yourself permission to rest, you'll feel both mentally lighter and more motivated in your daily activities.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 445,
+      "metin": "Birbirine bağlanmış iki ince dalın üzerinde taze filizler görüyorum. Dalların biri hafifçe eğilmiş olsa da ikisinin de yönü aynı. Bu görüntü, nişanlınla ortak bir gelecek kurarken zaman zaman farklı fikirlerden hareket etseniz bile sonunda birbirinizi anlamayı başardığınızı anlatıyor. Hazırlıklarla ilgili bazı küçük ayrıntılar beklediğinden fazla vaktini alıyor olabilir {{isim}}. Fakat dalların üzerinde beliren minik yuvalar, bu uğraşların güzel bir düzene dönüşeceğinin işareti. Önümüzdeki {{sayi,3,7}} hafta içerisinde birlikte planladığınız bir konuyla ilgili beklediğiniz açıklık sağlanacak. Bunun için yapacağınız kısa bir görüşmenin ardından karar vermeniz kolaylaşacak.\n\nFincanın ağzına yakın yerde süslü bir kurdeleye bağlanmış küçük bir paket var. Paketin üzerinde belirgin bir isim seçilmiyor, ancak çevresinde aile büyüklerini çağrıştıran siluetler bulunuyor. Yakınlarınızdan biri, hazırlıklarınız sırasında düşündüğünüzden daha fazla kolaylık sağlayacak. Özellikle pratik bir önerisi, uğraştırıcı görünen bir ayrıntıyı çözmenize yardım edecek. Sonrasında nişanlınla baş başa yapacağın bir konuşmada ikinizin de aynı şeyleri istediğinizi yeniden hissedeceksin. Küçük telaşların arasında birbirinize gösterdiğiniz anlayış, bu dönemin en kıymetli kazancı olacak.",
+      "metin_en": "I see fresh shoots growing from two slender branches tied together. Although one branch bends slightly, both are pointing in the same direction. This image tells me that as you and your fiancé build a future together, you manage to understand each other in the end, even when you occasionally start from different opinions. Some small details of your preparations may be taking more time than you expected, {{isim}}. But the tiny nests appearing on the branches suggest that all this effort will turn into something beautifully organized. Within the next {{sayi,3,7}} weeks, you'll gain the clarity you've been waiting for concerning something you've planned together. A brief discussion about it will make your decision easier.\n\nNear the rim of your cup is a small package tied with a decorative ribbon. I can't make out a distinct name on it, but there are silhouettes around it that remind me of older family members. Someone close to you will make your preparations considerably easier than you anticipated. A practical suggestion from this person will be particularly helpful in resolving a detail that initially seems complicated. Later, during a private conversation with your fiancé, you'll feel once again that you both want the same things. The understanding you show each other amid all the little stresses will be the most precious reward of this period.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 446,
+      "metin": "Fincanının kenarında üst üste dizilmiş ince kitapların üzerinde duran bir büyüteç var. Büyütecin altında tek bir satır diğerlerinden daha belirgin. Bu görüntü, bölümde üzerinde çalıştığın bir konunun ayrıntılarına ne kadar önem verdiğini anlatıyor. Bazen bir metnin yalnızca birkaç cümlesi için düşündüğünden çok daha fazla vakit harcıyorsun {{isim}}. Fakat gördüğüm işaretler, bu titizliğinin boşa gitmeyeceğini söylüyor. Önümüzdeki {{sayi,3,9}} hafta içerisinde akademik çalışmalarınla ilgili beklediğin bir değerlendirme ya da geri bildirim gündemine gelecek. İlk açıklama bazı noktaları yeniden gözden geçirmeni gerektirebilir; ancak sonrasında yapacağın küçük düzeltmeler çalışmanın daha güçlü görünmesini sağlayacak.\n\nBüyütecin arkasında açık duran bir kapı ve kapının önünde konuşan iki kişi seçiyorum. Bunlardan birinin bölüm çevrenden olduğunu hissediyorum. Yapacağın bir fikir alışverişi, daha önce üzerinde yeterince durmadığın bir bağlantıyı fark etmene yol açacak. Ayrıca öğrencilerinden birinin soracağı sade bir soru, karmaşık düşündüğün bir meseleyi farklı açıdan görmeni sağlayabilir. Fincanının dibindeki ışıklı masa da verimli bir dönemin habercisi. Yakında tamamladığın bir işle ilgili duyacağın takdir, uzun süredir verdiğin emeğin gerçekten görüldüğünü hissettirecek.",
+      "metin_en": "At the edge of your cup, there's a magnifying glass resting on a stack of thin books. Beneath the glass, one line stands out more clearly than the others. This image reflects how much attention you give to the details of a subject you're working on in your department. Sometimes you spend far more time than you'd expect on just a few sentences of a text, {{isim}}. But the signs I see tell me that your meticulousness won't go to waste. Within the next {{sayi,3,9}} weeks, an evaluation or feedback you've been expecting about your academic work will come to your attention. The initial response may require you to revisit certain points, but a few small revisions afterward will make your work stronger.\n\nBehind the magnifying glass, I make out an open door with two people talking in front of it. I sense that one of them belongs to your departmental circle. An exchange of ideas will help you notice a connection you haven't previously explored in sufficient depth. A simple question from one of your students may also allow you to see a matter you've been overcomplicating from a different angle. The illuminated desk at the bottom of your cup announces a productive period ahead. Soon, appreciation you receive for something you've completed will make you feel that the effort you've invested for so long has truly been recognized.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 447,
+      "metin": "Kalabalık bir sofranın üzerinde duran tek bir cam bardak görüyorum. Bardakta içecek yok; fakat kenarına yansıyan ışık oldukça belirgin. Bu görüntü, sosyal ortamlarda insanlarla kolayca iletişim kurabilsen de kalbini herkese açmadığını anlatıyor {{isim}}. Senin için biriyle uzun uzun konuşabilmek kadar, yanında sessizce dururken rahat hissetmek de önemli. Bardağın arkasında hafifçe yana dönmüş bir insan silueti var. Bu kişi yakın çevrendeki bir sohbet sırasında dikkatini çekecek birini temsil ediyor. {{ay_2}} ayına kadar gerçekleşecek bir görüşmede, sıradan bir konu üzerinden başlayan iletişimin beklediğinden daha keyifli bir hâl aldığını fark edeceksin.\n\nSofranın alt tarafında iki küçük zil şekli belirmiş. Bunlardan biri sana yapılacak bir hatırlatmayı, diğeri ise sonrasında gerçekleşecek bir buluşmayı anlatıyor. Önce pek önemsemediğin bir davet, güzel bir sohbetin başlangıcına dönüşebilir. Karşındaki insanın özellikle düşüncelerini anlatış biçimi sana tanıdık gelecek. Fincanın aşk konusunda büyük vaatlerden önce doğal bir yakınlaşmayı gösteriyor. Şunu da sezdim: Bu kez birinin ilgisini çözmeye çalışarak yorulmak yerine, yanında nasıl hissettiğine odaklanacaksın. İşte bu değişiklik, kalbinin yeni bir ihtimale daha rahat açılmasını sağlayacak.",
+      "metin_en": "I see a single glass resting on a crowded dining table. There's no drink inside it, but the light reflected along its rim is remarkably clear. This image tells me that although you connect easily with people in social settings, you don't open your heart to everyone, {{isim}}. For you, feeling comfortable sitting quietly beside someone matters just as much as being able to talk with them for hours. Behind the glass is a human silhouette turned slightly to one side. This figure represents someone who will catch your attention during a conversation within your social circle. By {{ay_2}}, you'll notice during a meeting that an interaction beginning with an ordinary subject has become far more enjoyable than you expected.\n\nTwo tiny bell shapes have appeared beneath the table. One represents a reminder you'll receive, while the other points to a meeting that follows. An invitation you initially think little of may turn into the beginning of a lovely conversation. The way the other person expresses their thoughts will feel particularly familiar to you. Rather than grand promises, your cup shows a natural connection developing in matters of love. I sense something else, too: This time, instead of exhausting yourself trying to decipher someone's interest, you'll focus on how you feel in their presence. And that change will help your heart open more comfortably to a new possibility.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 448,
+      "metin": "Beyaz bir örtünün üzerine bırakılmış küçük bir lavanta demeti seçiyorum. Çiçeklerin çevresinde dalgalı çizgiler var; bunlar günlük telaşın içinde kendine ayırdığın zamanın bazen bölündüğünü anlatıyor. {{isim}}, evde ve dışarıda yapılması gerekenleri aklında tutarken kendi rahatını unutabildiğin oluyor. Herkese yetişmeye çalışmakla kendi sınırlarını korumak arasında ince bir denge kurmuşsun. Lavantanın yanında duran küçük kum saati, {{sayi,3,8}} hafta içerisinde günlük düzeninde kendine daha fazla alan açacağını gösteriyor. Eşinle konuşacağın sıradan bir mesele, iş bölümünü ve dinlenme zamanlarınızı yeniden değerlendirmene vesile olacak.\n\nFincanın tabanında yuvarlak bir ayna var. Aynanın çevresine yerleşmiş ince ışık çizgileri, kendine daha özenli davranmaya başlayacağının sembolü. Uzun zamandır yapmak isteyip de ertelediğin kişisel bir bakım ya da keyifli etkinlik için fırsat bulacaksın. Ardından kendini daha toparlanmış ve neşeli hissettiğini fark edeceksin. Burada eşinin de bir katkısı var; senden beklemediğin bir anda günlük bir sorumluluğu üstlenmesi, sana rahat bir nefes aldıracak. Fincanın bedeninle ve zihninle daha uyumlu bir ritim kurduğun, küçük alışkanlıkların büyük bir ferahlığa dönüştüğü bir dönemi işaret ediyor.",
+      "metin_en": "I make out a small bundle of lavender resting on a white cloth. Wavy lines surround the flowers, showing that the time you set aside for yourself is sometimes interrupted by the demands of everyday life. {{isim}}, while keeping track of everything that needs doing both at home and outside, you occasionally forget your own comfort. You've established a delicate balance between trying to be there for everyone and protecting your personal boundaries. A small hourglass beside the lavender shows that within {{sayi,3,8}} weeks, you'll create more space for yourself in your daily routine. An ordinary matter you discuss with your spouse will prompt you to reconsider how you divide responsibilities and make time for rest.\n\nAt the bottom of your cup is a round mirror. Fine rays of light surrounding it symbolize your growing willingness to take better care of yourself. You'll find an opportunity for some personal care or an enjoyable activity you've wanted to make time for but kept postponing. Afterward, you'll notice that you feel more refreshed and cheerful. Your spouse has a part to play here, too. Unexpectedly taking over an everyday responsibility will give you a welcome chance to breathe. Your cup points to a period when you'll find a rhythm more in harmony with your body and mind, as small habits turn into a profound sense of relief.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 449,
+      "metin": "İki dişi birbirine geçmiş bir çark seçiyorum telvelerinde, {{isim}}. Biri hareket edince öteki de dönüyor. Mesleki hayatında kendi başına halletmeye çalıştığın bir konuda, işin yöntemini bilen birinin kısa açıklaması sana hız kazandıracak gibi. {{sayi,4,12}} gün içinde gündelik bir konuşma sırasında söylenecek bir ayrıntı, gözünde büyüyen hazırlığın ilk bölümünü tamamlamanı sağlayacak. Söz konusu kişi cümlesini bitirmeden çözümü kavrayıp belli etmemeye çalışabilirsin. Senin o ağırbaşlı duruşunun altında epey meraklı bir taraf var.\n\nÇarkın ilerisinde ağzı açılmış bir pergel görüyorum. Bunu, emeğini hangi alanda değerlendirmek istediğini daha açık anlatman olarak okuyorum. Bir belgeye ekleyeceğin birkaç satır sayesinde yapabildiklerin daha anlaşılır hale gelecek. Kalbinde şu sıra kimseye ayrılmış bir yer bulunmaması, kendi hedeflerine ayıracağın alanı da sana düşündürüyor. Serbest davranmayı seviyorsun ama çabanın bir yere bağlanmasını da istiyorsun. Düzelttiğin o anlatımı birine gösterdiğinde alacağın olumlu karşılık, kendini mesleki açıdan daha sağlam ifade etmene yardım edecek.",
+      "metin_en": "I make out two interlocking gears in your coffee grounds, {{isim}}. When one moves, the other turns with it. It seems that a brief explanation from someone who knows the right way to handle a task will help you make faster progress on a professional matter you've been trying to resolve alone. Within {{sayi,4,12}} days, a detail mentioned during a casual conversation will allow you to complete the first part of a preparation that's been looming large in your mind. You may grasp the solution before the other person even finishes speaking, then try not to show it. Beneath that composed manner of yours lies a remarkably curious side.\n\nFarther along, I see a drafting compass with its arms spread open. I interpret this as you becoming clearer about the area where you want to put your skills and efforts to use. A few lines you add to a document will make your abilities easier to understand. The fact that there's currently no one occupying a romantic place in your heart also has you thinking about the room you can devote to your own goals. You enjoy your independence, but you also want your efforts to lead somewhere meaningful. When you show someone that revised description, the positive response you receive will help you express yourself with greater professional confidence.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 450,
+      "metin": "Eşinin sana yönelteceği sade bir soruyla, kariyerine dair düşüncenin toparlanacağını hissediyorum. Fincandaki marangoz rendesi bunu anlatıyor bana. Kıvrılarak çıkan talaşlar, üzerinde gereğinden fazla durduğun ayrıntıların ayıklanması gibi. İş konusunda kararlı görünmeyi önemsiyorsun, buna karşılık evde fikrini rahatça değiştirebildiğin bir sohbet sana iyi geliyor. Gelecek birkaç hafta içinde, yemek sonrası açılacak bir konuşmada asıl önceliğini kendi ağzından duyacaksın. Eşin çözüm sunmaya uğraşmadan seni dinlediğinde, neyi talep edeceğin belirginleşecek.\n\nRendenin yanında kumaşı tek çizgide kesen bir makas var. Mesleki bir görüşmede anlatacaklarını kısaltıp en önemli noktayı öne alacağını düşünüyorum. Karşındaki, her zamankinden daha doğrudan bir cevap verecek. Böylece uzayıp giden değerlendirme yerini yapılabilir bir adıma bırakacak. İşi ciddiye alışın bazen bütün ayrıntıları beraber taşımanı gerektiriyormuş gibi hissettiriyor. Bu kez konuşmadan çıkarken cebindeki telefonla oynamak yerine eşine güzel kısmı anlatmak isteyeceksin. Sana gösterilen ilgi, evdeki paylaşımınıza da tatlı bir heyecan katacak.",
+      "metin_en": "I sense that a simple question from your spouse will help bring your thoughts about your career into focus. The carpenter's plane in your cup tells me this. The curling wood shavings resemble the removal of details you've been dwelling on more than necessary. You care about appearing decisive when it comes to work, yet a conversation at home where you can freely change your mind does you good. Sometime over the next few weeks, during a conversation after a meal, you'll hear yourself express what truly matters most to you. When your spouse listens without trying to offer a solution, what you want to ask for will become clear.\n\nBeside the plane is a pair of scissors cutting through fabric in one straight line. I believe you'll shorten what you plan to say in a professional discussion and bring the most important point forward. The person you're speaking with will give you a more direct answer than usual. This will turn a drawn-out evaluation into an actionable step. Taking your work seriously sometimes makes you feel as though you have to carry every detail at once. This time, as you leave the conversation, instead of fiddling with the phone in your pocket, you'll want to tell your spouse the good part. The attention shown to you will add a sweet sense of excitement to what you share at home.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 451,
+      "metin": "Kurumdaki evrak trafiğinin arasından yükselen bir mühür sapı dikkatimi çekti. Altındaki iz düzgün çıkmış, kenarında da boş bir alan kalmış. Bunu, nasıl ilerleyeceği netleşen bir işlemle bağlantılı görüyorum. {{sayi,5,14}} gün içerisinde, açıklamasını birkaç kez okumak istediğin bir hususu ilgili birimdeki kişi sana anlaşılır biçimde aktaracak. Masanın kenarına parmağıyla işaret ederek anlatması bile gözümde canlandı. Bu açıklama sayesinde aynı konu için yeniden dönüp kontrol etme ihtiyacın azalacak, kendi işini daha rahat sürdüreceksin.\n\nBiraz aşağıda katlanır bir sepet belirmiş. Açıldıkça içinde yer oluşuyor. Kurumdaki görevlerini düzenlerken bir arada yürütülebilen iki uğraşı fark edeceğini düşünüyorum. Sen usule dikkat ediyorsun ama pratik bir yol gördüğünde ona da kayıtsız kalamıyorsun. Düzenlediğin sırayı bir mesai arkadaşına anlatman, onun da işini kolaylaştıracak. Karşılığında duyacağın samimi teşekkür, yaptığının görünür olduğunu hissettirecek. Günün sonunda zihninde evrak başlıkları taşımadan başka bir şeye odaklanabilmek sana geniş bir boşluk açacak.",
+      "metin_en": "The handle of an official stamp rising above the flow of paperwork at your institution caught my attention. The impression beneath it is clean, with some empty space remaining along the edge. I connect this with a procedure whose next steps are becoming clear. Within {{sayi,5,14}} days, someone in the relevant department will explain a matter you've wanted to read through several times in a way that's easy to understand. I can even picture the person pointing to the edge of the desk with a finger while explaining it. Thanks to this clarification, you'll feel less need to go back and check the same issue repeatedly, allowing you to get on with your work more comfortably.\n\nA little farther down, a collapsible basket has appeared. As it opens, more room becomes available inside. I believe you'll realize that two of your responsibilities at the institution can be handled together as you organize your tasks. You're attentive to proper procedures, but when you spot a practical approach, you can't ignore it either. Explaining the sequence you've arranged to a colleague will make their work easier as well. The sincere thanks you receive in return will make you feel that your contribution has been noticed. At the end of the day, being able to focus on something else without carrying paperwork headings around in your mind will give you a welcome sense of space.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 452,
+      "metin": "Yılların deneyimi, telvelerinde sağlam saplı bir el matkabına dönüşmüş. Ben bu şekli görünce, bir işin püf noktasını anlatırken sesine gelen o güveni düşündüm. Emeklilikle birlikte kendi vaktine sahip olmak hoşuna gidiyor, birikiminin işe yaradığını duymak da ayrı bir memnuniyet veriyor sana. Önümüzdeki ay içinde çalışma hayatından tanıdığın birinin açacağı mesleki konu, bildiklerini yeniden hatırlamana vesile olacak. Sana basit gelen bir ayrıntıyı açıklayacak, karşı tarafın neden orada takıldığını anlayınca anlatımını değiştireceksin.\n\nMatkabın yanında düzgün sarılmış bir kablo görüyorum. Bağlantının sürmesi ve bilgilerin toparlanması anlamı çıkıyor buradan. Konuşmanın ardından, anlattığın yöntemin kısa bir özetini iletmen istenecek gibi. Sen de aklındaki sırayı yazıya dökerken kendine has çözümünü daha açık göreceksin. İş yaşamında alışkanlıkla yaptığın bir şeyin başkası için ne kadar kıymetli olduğunu duymak yüzünü aydınlatacak. Bütün gününü dolduracak bir uğraşa gerek kalmadan, deneyimini paylaşabileceğin ölçüyü bulman var. Emeklilik takvimine bu kez gurur duyacağın bir sohbet eklenecek.",
+      "metin_en": "Your years of experience have taken the shape of a hand drill with a sturdy handle in your coffee grounds. When I saw it, I thought of the confidence that enters your voice when you explain the finer points of a task. You enjoy having control over your own time in retirement, and hearing that your accumulated knowledge is still useful brings you a special kind of satisfaction. Within the coming month, a professional subject raised by someone you knew during your working years will give you an opportunity to revisit what you know. You'll explain a detail that seems simple to you, then adjust your explanation once you understand why the other person was having difficulty with it.\n\nBeside the drill, I see a neatly coiled cable. To me, it symbolizes maintaining connections and bringing knowledge together. After the conversation, it seems you'll be asked to send a brief summary of the method you've described. As you put the sequence in your mind into writing, you'll see your distinctive approach more clearly. Hearing just how valuable something you once did almost automatically at work can be to someone else will light up your face. You'll find a comfortable way to share your experience without taking on a commitment that fills your entire day. This time, a conversation you can be proud of will find its place in your retirement calendar.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 453,
+      "metin": "Üç bölmeli bir kutunun yalnız bir gözü dolu çıkmış fincanında. Diğerlerini de doldurmak zorundaymışsın gibi bakıyorsun sanki, {{isim}}. Ben burada, bütün boşlukları bir işle kapatmadan da rahat edebileceğini keşfetmeni görüyorum. {{sayi,6,15}} gün içinde günlük ihtiyaçların için baktığın bir alışveriş sayfasında, zaten sahip olduğun bir şeyi yeniden almaya yaklaştığını anlayacaksın. Bunun üzerine eşyalarını gözden geçirmen, neye gerçekten ihtiyaç duyduğunu netleştirecek. Kullanabileceğin malzemenin elinin altında olduğunu görmek hoşuna gidecek.\n\nKutunun önünde geniş yüzlü bir spatula var. Yüzeyi düzelten bu nesne, yaptığın ayıklamanın gündelik işlerini kolaylaştıracağını söylüyor bana. Ulaşmak istediğin şeyleri görünür bir yere alacak, hazırlık için daha az uğraşacaksın. Kullanışlı olana önem veren tarafınla güzel görünsün isteyen tarafın aynı düzen üzerinde anlaşacak. Üstelik satın almaktan vazgeçtiğin şeyin bedeli cebinde kalacak. Bir yakınına bulduğun çözümü anlatırken farkına varmadan gülümsemen var. Rahatlık bazen tam da aynı eşyaya ikinci kez yer açmamakla geliyor.",
+      "metin_en": "A box with three compartments has appeared in your cup, but only one of them is filled. It's almost as though you're looking at the others feeling obliged to fill them too, {{isim}}. What I see here is your discovery that you can feel at ease without filling every empty space with something to do. Within {{sayi,6,15}} days, while browsing a shopping website for everyday necessities, you'll realize you're close to buying something you already own. This will prompt you to look through your belongings and clarify what you actually need. You'll be pleased to see that the materials you can use are already within reach.\n\nIn front of the box is a wide-bladed spatula. This tool, which smooths out surfaces, tells me that your sorting and decluttering will make everyday tasks easier. You'll move the things you want to reach to a visible spot and spend less effort getting ready. The part of you that values practicality and the part that wants things to look beautiful will agree on the same arrangement. What's more, the money you would have spent on the item you decide not to buy will stay in your pocket. I see you smiling without even realizing it as you tell someone close to you about the solution you've found. Sometimes comfort comes simply from not making room for the same object twice.",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 454,
+      "metin": "Söylemek istediğini içine atmadan da yumuşak kalabildiğin bir dönem açılıyor önünde. Bunu, telvelerinde düzgünce kıvrılmış bir atkıdan okuyorum. Ayrılığın ardından kendi düzenini kurarken bazı alışkanlıkları koruyup bazılarını bırakmak istiyorsun. {{isim}}, bir yanın gönül konularını düşünmeden durmayı seviyor, öteki yanın yeniden heyecanlanabileceğini bilmek istiyor. Gelecek haftalarda yakın bir dostun sana nasıl olduğunu soracak. Hazır bir cevap vermek yerine içinden geçenin bir bölümünü anlattığında, duygularının sandığından daha anlaşılır olduğunu hissedeceksin.\n\nAtkının yanında henüz açılmış bir narenciye dilimi görüyorum. Bu tazelik, sevgiye dair kendi isteğini yeniden ayırt etmene bağlanıyor. Dostunun anlattığı gündelik bir yakınlık hikâyesi üzerinden, senin için hangi davranışın kıymetli olduğunu söyleyeceksin. Geride bıraktığın ilişkiyi uzun uzun çözümlemek zorunda hissetmeden, bundan sonra nasıl bir bağ istediğine sözcük bulman var. Sohbet bittiğinde sesinin daha rahat çıktığını duyacaksın. Birine yaklaşma düşüncesinin yüzünde hafif bir merak oluşturması bile kalbinin kendine yer açtığını anlatacak.",
+      "metin_en": "A period is opening up before you when you can speak your mind without losing your gentleness. I read this in a neatly folded scarf among your coffee grounds. As you establish your own routine after the separation, you want to keep certain habits and let others go. {{isim}}, one side of you enjoys not having to think about matters of the heart, while another wants to know that you can feel excited about someone again. In the coming weeks, a close friend will ask how you're doing. Instead of giving a ready-made answer, you'll share some of what's really on your mind and realize that your feelings are easier to understand than you thought.\n\nBeside the scarf, I see a freshly cut slice of citrus fruit. I connect this freshness with rediscovering what you personally want from love. As your friend tells an everyday story about a close connection, you'll express what kind of behavior truly matters to you. Without feeling obliged to analyze the relationship you've left behind at length, you'll find words for the kind of bond you'd like from now on. When the conversation ends, you'll notice that your voice sounds more relaxed. Even the slight curiosity that crosses your face at the thought of growing close to someone will show that your heart is making room for itself.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 455,
+      "metin": "Senin için söylenmiş bir övgünün üzerinde küçük bir broş parlıyor telvelerinde. İğnesi kapalı, yüzeyi belirgin. Gönül meselelerinde görülmek hoşuna gidiyor ama sırf güzel söylendi diye her sözü de hemen sahiplenmiyorsun. {{sayi,7,18}} gün içerisinde biri, sende beğendiği bir davranışı konuşmanın içinde dile getirecek. Dış görünüşünle sınırlı kalmayan bu söz, kendini nasıl anlattığına dikkat etmeni sağlayacak. Gülüp konuyu değiştirmeye hazırlanırken teşekkür edip orada kalabilmen, aranızdaki sıcaklığı artıracak gibi.\n\nBroşun arkasında yuvarlak bir ayna görüyorum. Bu simgeyi, karşındaki kişinin ilgisini kendi değerinden ayrı tartabilmen olarak okuyorum. Bir kadının kendini anlatırken sesini küçültmesi gerektiğini düşünmüyorsun, yine de iş kendine gelince başarılarını çabucak geçiştirebiliyorsun. Sohbet sürerken sevdiğin bir özelliğini sen de rahatça söyleyeceksin. Karşı tarafın merakla sorduğu devam sorusu, anlatacaklarına alan açacak. Duygusal yakınlığın yalnız dinleyerek kurulmadığını, kendinden bir parça gösterdiğinde de güzelleştiğini hissedeceksin.",
+      "metin_en": "A small brooch gleams above a compliment meant for you in your coffee grounds. Its clasp is closed, and its surface is clearly defined. In matters of the heart, you enjoy being noticed, but you don't immediately take every flattering word to heart just because it sounds lovely. Within {{sayi,7,18}} days, someone will mention a behavior of yours that they admire during a conversation. This compliment, which goes beyond your physical appearance, will make you pay attention to the way you present yourself. As you're about to laugh and change the subject, being able to simply say thank you and stay with the moment seems likely to deepen the warmth between you.\n\nBehind the brooch, I see a round mirror. I interpret this symbol as your ability to assess another person's interest separately from your own worth. You don't believe a woman should diminish her voice when speaking about herself, yet when it comes to your own achievements, you can sometimes brush them aside too quickly. As the conversation continues, you'll comfortably mention a quality you like about yourself. The other person's curious follow-up question will give you room to say more. You'll feel that emotional closeness isn't built through listening alone; it also becomes more beautiful when you reveal a part of yourself.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 456,
+      "metin": "Bir paragrafın kenarına konmuş köşeli ayraç belirginleşti fincanında. Ben burada akademik bir metinde aradığın açıklığı görüyorum. Düşünceni inceltmekten hoşlanıyorsun, yine de bazen bir cümlenin etrafında gereğinden çok dolaştığını kendin de biliyorsun. {{sayi,8,20}} gün içinde, bölümden bir meslektaşınla konuşurken kullandığın sade bir ifade yazdığın metne de yol gösterecek. Karşındaki seni hemen anlayınca, üzerinde durduğun paragrafı aynı açıklıkla yeniden kurmak isteyeceksin. Sözlü anlatımının yazına sağladığı kolaylık hoşuna gidecek.\n\nAyracın aşağısında birbirini tutan iki kitap desteği var. Bunları kaynaklarla kendi sesin arasındaki dengeye bağlıyorum. Bir atfın çevresindeki açıklamayı yeniden düzenlemen, katkını daha görünür hale getirecek. Öğrencilerine anlatırken doğal olarak kurduğun bağlantıyı metninde de kullanacaksın. Ekranda cümlelerin yerini değiştirip yeniden okuduğunda akışın oturduğunu hissedeceksin. Bir meslektaşına gönderdiğin bölüm üzerine gelecek odaklı yorum, çalışmanın hangi tarafının güçlü olduğunu sana gösterecek ve devam etme isteğini besleyecek.",
+      "metin_en": "An angular bracket placed beside a paragraph has become prominent in your cup. Here, I see the clarity you're seeking in an academic text. You enjoy refining your thoughts, though you also know that sometimes you circle around a single sentence longer than necessary. Within {{sayi,8,20}} days, a simple expression you use while speaking with a colleague from your department will also guide the text you're writing. When the other person understands you immediately, you'll want to reconstruct the paragraph you've been working on with that same clarity. You'll enjoy discovering how much your spoken explanation can help your writing.\n\nBelow the bracket are two bookends holding things together. I associate them with the balance between your sources and your own voice. Reorganizing the explanation surrounding a citation will make your contribution more visible. You'll bring into your writing a connection you naturally make when teaching your students. As you rearrange the sentences on your screen and read them again, you'll feel the flow fall into place. Focused feedback on the section you send to a colleague will show you which aspect of your work is particularly strong and encourage you to keep going.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 457,
+      "metin": "Henüz tanımlamadığın bir hoşlanma, fincanında renkli bir tebeşir gibi iz bırakmış. Çizgi hafif, yönü ise belli. Bekâr hayatında kendi kararlarını rahatça vermeyi seviyorsun, biriyle karşılıklı merak paylaşma düşüncesi de sana çekici geliyor. {{ay_2}} ayına uzanan dönemde, çevrimiçi bir paylaşım üzerinden başlayacak kısa bir yazışma dikkatini çekecek. Konuştuğun kişinin, anlattığın ayrıntıya gerçekten cevap vermesi hoşuna gidecek. Hazır bir espriyle geçmek yerine ne düşündüğünü yazdığında sohbetin kendiliğinden uzadığını göreceksin.\n\nTebeşirin yanında küçük bir dürbün seçiyorum. Bunu, karşı tarafı uzaktan kurgulamak yerine sorularla tanımaya başlaman diye okuyorum. Ortak bir ilgi hakkında konuşurken sana yöneltilecek bir soru, kendi zevkini anlatman için güzel bir alan açacak. Hemen karar vermeyen yanın bu kez merakına engel olmayacak. Telefonu elinden bıraktığında yazdığın cümleye dönüp gülümsemen var, {{isim}}. Birinin cevabını merak etmek, gündelik akışına hafif bir heyecan katacak. Kalbinde yer açmanın ilk hissi, sana rahat gelen bu karşılıklı dikkatle belirecek.",
+      "metin_en": "An attraction you haven't quite defined yet has left a mark in your cup like a piece of colored chalk. The line is faint, but its direction is clear. You enjoy making your own decisions freely in your single life, yet the thought of sharing mutual curiosity with someone appeals to you as well. In the period leading up to {{ay_2}}, a brief exchange of messages beginning with an online post will catch your attention. You'll appreciate that the person you're talking to genuinely responds to a detail you've shared. Instead of brushing it off with a ready-made joke, you'll write what you really think and find that the conversation naturally continues.\n\nBeside the chalk, I make out a small pair of binoculars. I interpret this as you beginning to get to know the other person through questions rather than imagining who they are from a distance. While discussing a shared interest, a question directed at you will create a lovely opportunity to talk about your own tastes. The part of you that doesn't rush into decisions won't stand in the way of your curiosity this time. I see you putting down your phone, then thinking back to something you wrote and smiling, {{isim}}. Wondering what someone will say in reply will bring a gentle excitement into your daily routine. The first feeling of making room in your heart will emerge through this mutual attentiveness that feels so natural to you.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 458,
+      "metin": "Dikkatini çeken şeyin büyüklüğünden çok inceliğine önem veriyorsun, {{isim}}. Fincanında kenarı oyalı bir mendil ile yanına bırakılmış tek bir düğme gördüm. Mendilin işçiliği, gönlüne ulaşan davranışlarda aradığın özeni anlatıyor bana. Önündeki ay boyunca, senin daha önce söylediğin bir tercihin hatırlanması içini ısıtacak. Bir sohbetin içinde sana göre yapılmış ufak bir düzenlemeyi duyacaksın. Söylediğinin akılda kalmış olması, karşındaki kişiye daha dikkatli bakmana neden olacak. Bunu beğendiğini saklamadan belirtmen, aranızdaki iletişimi yumuşatacak.\n\nDüğmeyi ise birbirine denk gelen ayrıntıların simgesi olarak okuyorum. Karşılığında sen de o kişinin anlattığı bir şeyi hatırlayıp soracaksın. Böylece nezaketle başlayan konuşma, ikinizin de kendinden bir parça eklediği yakın bir paylaşıma dönecek. Sevilmenin gösterişli yanına gülümseyebiliyorsun ama gündelik özen sende daha uzun kalıyor. Sohbet dağıldığında aklına takılacak olan, sana ayrılan dikkatin doğallığı olacak. Kendi hislerini anlamak için acele etmeden, bu sıcaklığın sende bıraktığı güzel etkiyi taşımayı seçeceksin.",
+      "metin_en": "You care less about how grand a gesture is than about the thoughtfulness behind it, {{isim}}. In your cup, I saw a handkerchief with delicately embroidered edges and a single button placed beside it. The careful workmanship of the handkerchief tells me about the consideration you look for in gestures that touch your heart. Over the coming month, someone remembering a preference you've mentioned before will warm your heart. During a conversation, you'll hear about a small adjustment made with you in mind. Realizing that your words were remembered will make you look at that person more attentively. Openly expressing your appreciation will bring a new softness to the communication between you.\n\nI interpret the button as a symbol of details that fit together. In return, you'll remember something that person told you and ask about it. What begins as a polite exchange will turn into a closer conversation in which both of you contribute something personal. You can smile at the grand gestures of being loved, but everyday thoughtfulness stays with you longer. When the conversation comes to an end, what will linger in your mind is how naturally that attention was given to you. Without rushing to understand your own feelings, you'll choose to enjoy the lovely warmth this experience leaves behind.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
     }
   ]
 }

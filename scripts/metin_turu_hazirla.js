@@ -138,6 +138,73 @@ const TURLAR = {
       gorev: 'GELİŞME — falın gövdesi: fincanda gördüğün 2-3 ana sembol ve her birinin öngörüsü; zaman ipuçları ({{ay_N}}, {{sayi,a,b}} gün/hafta, {{gun_N}}), kişiler ve olayların zincirlenmesi (biri ötekine yol açar). Uzunluk: 850-1250 karakter.',
     },
   ],
+  5: [
+    {
+      id: 'kahve_karsilama', file: 'kahve_akarsilama.json', key: 'karsilamalar', matcher: 'M1', kitle: KITLE_M1, konu: true, adet: 40, orijinalMaxId: 346,
+      tur: 'Kahve falı',
+      sistem: 'Uygulama kullanıcının fincan fotoğrafına bakıp 6 parçalı bir fal oluşturur: KARŞILAMA → giriş → bağlama → gelişme → sonuç → uğurlama. Her parça kendi havuzundan rastgele seçilir ve alt alta eklenir.',
+      gorev: 'KARŞILAMA — falın ilk paragrafı: kullanıcıyı adıyla ya da özelliğiyle karşıla, fincanına bakmadan önceki ilk izlenimini söyle (Barnum tarzı kısa bir tespit: o günkü hâli, beklentisi), seçtiği konuya (aşk/kariyer/sağlık/genel) göndermeyle falı sun ve "başlıyorum" duygusuyla bitir (çoğu ";" ya da "…" ile biter, bir sonraki parçaya bağlanır). Uzunluk: 180-420 karakter.',
+    },
+    {
+      id: 'yana_yasama', file: 'yana.json', key: 'yasama_dair', matcher: 'M4', kitle: KITLE_KOSULSUZ, adet: 40, orijinalMaxId: 110, extra: { tur: 'yasama' },
+      tur: 'Yana — Yaşama Dair (dünyanın geleceği kehaneti)',
+      sistem: 'Kullanıcı "Yaşama dair" seçer; Magnus Magnuskop\'u uzak geleceğe ayarlar ve dünyada, bilimde, teknolojide, gündelik yaşamda olacakları söyler (kişisel değil, insanlığa dair). Metin ekranda kelime kelime yerleşir.',
+      gorev: 'DÜNYANIN GELECEĞİ — yıllar/onyıllar sonrası ({{sayi,a,b}} ile yıl: "20{{sayi,40,96}} yılında") bilim, teknoloji, şehir, doğa, sağlık, iletişim, yemek, eğitim ya da gündelik alışkanlıklarda olacak somut ve hayal gücü yüksek ama makul bir gelişme; sonunda kullanıcıya ({{isim}}) dönük kısa bir bağ. Felaket/savaş/salgın YOK; umutlu. HEPSİ KOŞULSUZ. Uzunluk: 220-450 karakter.',
+    },
+    {
+      id: 'kahin_derun', file: 'kahinler.json', key: 'kahinler.derun', matcher: 'M7', kitle: KITLE_KOSULSUZ,
+      tur: 'Kâhinlere Sor — Kâhin DERUN',
+      sistem: 'Kullanıcı AKLINDAN bir soru tutar (uygulama soruyu BİLMEZ) ve kâhinlerden Derun\'u seçer. Derun kendini tanıtır, tutulan soruya cevap verir ve vedalaşır. Cevap HER SORUYA oturmalı.',
+      gorev: 'DERUN CEVABI — 3-4 paragraf: (1) tanıtım: örneklerdeki kişiliği koru (bilinmezleri gözeten yüce kâhin, yıldızların habercisi, ciddi ve ağır, "yabancı" diye hitap edebilir, "Güce selam olsun!" tarzı kapanışlar) ama cümleleri KOPYALAMA; (2) cevap: soruyu bilmeden biliyormuş gibi, çift çıkışlı hüküm (inanç/şart/iki zaman); (3) kısa veda. Uzunluk: 400-750 karakter.',
+      uslup: 'ÜSLUP: Derun birinci tekil konuşur, "sen" der; vakur, gizemli, biraz kibirli ama koruyucu. <sprite=…> etiketi KULLANMA.',
+    },
+    {
+      id: 'kahin_khaleesi', file: 'kahinler.json', key: 'kahinler.khaleesi', matcher: 'M7', kitle: KITLE_KOSULSUZ,
+      tur: 'Kâhinlere Sor — Kâhin KHALEESI',
+      sistem: 'Kullanıcı AKLINDAN bir soru tutar (uygulama soruyu BİLMEZ) ve kâhinlerden Khaleesi\'yi seçer. Khaleesi kendini tanıtır, tutulan soruya cevap verir ve vedalaşır. Cevap HER SORUYA oturmalı.',
+      gorev: 'KHALEESI CEVABI — 3-4 paragraf: (1) tanıtım: örneklerdeki kişiliği koru (kehanetlerin iç sesi, karlı/soğuk diyarlardan gelen, samimi ve geveze, "naber", "okeyiz" gibi rahat dil) ama cümleleri KOPYALAMA; (2) cevap: soruyu bilmeden biliyormuş gibi; vadeler, kırılmalar ve sonunda isteğin ötesine geçen bir varış; (3) kısa veda. Uzunluk: 400-750 karakter.',
+      uslup: 'ÜSLUP: Khaleesi birinci tekil konuşur, "sen" der; sıcak, esprili, laubali ama güçlü. <sprite=…> etiketi KULLANMA.',
+    },
+    {
+      id: 'kahin_uraz', file: 'kahinler.json', key: 'kahinler.uraz', matcher: 'M7', kitle: KITLE_KOSULSUZ,
+      tur: 'Kâhinlere Sor — Kâhin URAZ',
+      sistem: 'Kullanıcı AKLINDAN bir soru tutar (uygulama soruyu BİLMEZ) ve kâhinlerden Uraz\'ı seçer. Uraz kendini tanıtır, tutulan soruya cevap verir ve vedalaşır. Cevap HER SORUYA oturmalı.',
+      gorev: 'URAZ CEVABI — 3-4 paragraf: (1) tanıtım: örneklerdeki kişiliği koru (son derece kibar, eski İstanbul nezaketi, Osmanlıca kelimeler — "efendim", "mümtaz", "emrinize amadeyim", "şükran duyarım" —, kullanıcıya "SİZ" der ve "{{isim hanim/bey}}" ile seslenir) ama cümleleri KOPYALAMA; (2) cevap: soruyu bilmeden biliyormuş gibi, ölçülü ve çift çıkışlı (vade, beklentinin dozu, gönle göre olma); (3) nazik veda. Uzunluk: 400-750 karakter.',
+      uslup: 'ÜSLUP: Uraz birinci tekil konuşur, kullanıcıya "SİZ" diye hitap eder; ağırbaşlı, zarif, eski usul nezaket. Hitap için {{isim hanim/bey}} yer tutucusunu kullan ("Ayşe Hanım"/"Ahmet Bey" olur). <sprite=…> etiketi KULLANMA.',
+    },
+  ],
+  6: [
+    {
+      id: 'kahve_baglama', file: 'kahve_baglama.json', key: 'baglamalar', matcher: 'M1', kitle: KITLE_M1, konu: true, adet: 40, orijinalMaxId: 250,
+      tur: 'Kahve falı',
+      sistem: 'Uygulama kullanıcının fincan fotoğrafına bakıp 6 parçalı bir fal oluşturur: karşılama → giriş → BAĞLAMA → gelişme → sonuç → uğurlama. Her parça kendi havuzundan rastgele seçilir ve alt alta eklenir.',
+      gorev: 'BAĞLAMA — girişten gelişmeye geçen 1-3 cümlelik köprü: fincanda daha derine indiğini, yeni işaretler gördüğünü söyle; kimi zaman kullanıcıya dair kısa bir Barnum tespiti ya da tatlı bir espriyle (yer tutucu: {{isim}}, {{burc}}). Sonu ":" / ";" / "…" ile bir sonraki parçaya açılabilir. Şarkı sözü alıntısı YOK. Uzunluk: 70-260 karakter.',
+    },
+    {
+      id: 'faloya', file: 'faloya.json', key: 'faloya', matcher: 'M7', kitle: KITLE_KOSULSUZ, adet: 40, orijinalMaxId: 111,
+      tur: 'Faloya (varlıkların fısıldadığı tarihli öngörü)',
+      sistem: 'Kullanıcı "Faloya" der; Magnus varlıklardan bir fısıltı alır ve belirli bir tarihte olacak tek bir şeyi söyler. Metin hep şu açılışla başlar: "Merhaba {{isim}}.\\n\\nVarlıklar fısıldıyor...\\n\\nGeleceğine dair bir öngörüm var.\\n\\n" ve ardından tarihli öngörü gelir (çoğu "Önümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, …" ya da {{randomtarih,a,b}}); çoğu "\\n\\nTekrar gel." ile biter.',
+      gorev: 'TARİHLİ ÖNGÖRÜ — açılıştan sonra 2-4 cümle: tarih + olay + kim/nasıl + duygu. Tarih kesin görünür ama olay yaygın olsun (COLD READING); "o gün" yerine "o tarihte ya da hemen sonrasında" gibi tolerans payı. HEPSİ KOŞULSUZ (cinsiyet/medeni durum/meslek varsayma). Uzunluk: 280-460 karakter (açılış dahil).',
+    },
+    {
+      id: 'kahve_giris', file: 'kahve_giris.json', key: 'girisler', matcher: 'M1', kitle: KITLE_M1, konu: true, orijinalMaxId: 748,
+      tur: 'Kahve falı',
+      sistem: 'Uygulama kullanıcının fincan fotoğrafına bakıp 6 parçalı bir fal oluşturur: karşılama → GİRİŞ → bağlama → gelişme → sonuç → uğurlama. Her parça kendi havuzundan rastgele seçilir ve alt alta eklenir; her metin tek başına anlamlı olmalı.',
+      gorev: 'GİRİŞ — fincanda gözüne İLK çarpan sembol: onu canlı ve somut tarif et, ne anlama geldiğini söyle ve kişinin hayatına dair Barnum tarzı isabetli bir gözlem + yaygın ama hikâyeleşmiş bir öngörüyle bağla. Uzunluk: 400-800 karakter.',
+    },
+    {
+      id: 'durugoru_yno', file: 'durugoru_yno.json', key: 'durugoru_yno', matcher: 'M1', kitle: KITLE_M1, orijinalMaxId: 19,
+      tur: 'Durugörü',
+      sistem: 'Kullanıcı "Yarın beni neler bekliyor?" sorusunu seçer; Magnus odaklanır ve YARIN olacakları anlatır. Metin gelen kutusuna tek parça düşer.',
+      gorev: 'YARIN — yarının akışından 1-2 sahne/olay ve anlamı: zincirli zaman ("sabah işe çıkarken… ardından birkaç saat içinde"), az ve yumuşak bir olumsuz + bol olumlu; "Tavsiyem" ile bitirme. Uzunluk: 550-900 karakter.',
+    },
+    {
+      id: 'durugoru_gno', file: 'durugoru_gno.json', key: 'durugoru_gno', matcher: 'M1', kitle: KITLE_M1, orijinalMaxId: 46,
+      tur: 'Durugörü',
+      sistem: 'Kullanıcı "Geleceğimde neler var?" sorusunu seçer; Magnus odaklanır ve aylar sonrasını anlatır (çoğu "Geleceğine odaklandığımda, seni {{ay_5}} ayında … görüyorum {{isim}}" duygusunda, ama hep aynı açılışla değil). Metin gelen kutusuna tek parça düşer.',
+      gorev: 'GELECEK — birkaç ay sonrasından ({{ay_N}}) bir sahne ve ona giden yol: bir gelişme, bir kişi, bir değişim; zaman geniş, doku canlı. Uzunluk: 380-650 karakter.',
+    },
+  ],
 };
 const getPath = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
 

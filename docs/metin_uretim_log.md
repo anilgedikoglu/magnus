@@ -7,13 +7,23 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 338** (tur 1: 100, tur 2: 100, tur 3: 138) — her tur sonunda güncelle.
+- **Toplam eklenen: 498** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 4 — 2026-11-05 (160 metin; ilk tam ChatGPT + Codex turu)
+
+| Kompartman | Dosya / anahtar | Eşleştirici | Eklenen id | Kaynak |
+|---|---|---|---|---|
+| Tavşan Falı (2) | `tavsanfali.json` › `tavsanfali` | M5 | 141–180 | ChatGPT 20 (Codex seçti) + Codex 20 (ChatGPT seçti) |
+| Niyet (2) | `niyet.json` › `niyet` | M3 | 199–238 | aynı |
+| Yana – Bana Dair (2) | `yana.json` › `bana_dair` | M4 | 89–128 | aynı |
+| Kahve – Sonuç (2) | `kahve_sonuc.json` › `sonuclar` | M1 + konu | 419–438 | ChatGPT 10 + Codex 10 |
+| Kahve – Gelişme (2) | `kahve_gelisme.json` › `gelismeler` | M1 + konu | 439–458 | ChatGPT 10 + Codex 10 |
 
 ## Tur 3 — 2026-11-05 (138 metin; cold reading + altın örnekler + kişiselleştirme; DeepSeek→Codex geçişi)
 

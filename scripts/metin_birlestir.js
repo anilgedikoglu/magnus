@@ -9,7 +9,7 @@ const [mode, ...rest] = process.argv.slice(2);
 // İç içe anahtar desteği: 'kahinler.likia'
 const getPath = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
 
-const ALLOWED_PH = /^(isim|isime|isimi|isimden|isimcigim|harf|sabit_harf|burc|burc_ilkHarfBuyuk|rastgeleburc|yas|meslek|medeni_durum|gelecek_ay|gecen_ay|simdiki_ay|tam saat|saat kac yazi|fiziki|kadinisim|erkekisim|xgundur|kullanici sehri|kullanici sehrinde|nereli|dogum gunu|dogum ayi|dogum yili|dogum ayi yazi)$|^(ay|gun|gunsayi|yil|mevsim|yas)_[+-]?\d+$|^(sayi|sabit_sayi),\d+,\d+$|^(kelime|sabitkelime|data|saat|kelimecins|medenidurum|randomtarih),/;
+const ALLOWED_PH = /^(isim hanim\/bey|isim|isime|isimi|isimden|isimcigim|harf|sabit_harf|burc|burc_ilkHarfBuyuk|rastgeleburc|yas|meslek|medeni_durum|gelecek_ay|gecen_ay|simdiki_ay|tam saat|saat kac yazi|fiziki|kadinisim|erkekisim|xgundur|kullanici sehri|kullanici sehrinde|nereli|dogum gunu|dogum ayi|dogum yili|dogum ayi yazi)$|^(ay|gun|gunsayi|yil|mevsim|yas)_[+-]?\d+$|^(sayi|sabit_sayi),\d+,\d+$|^(kelime|sabitkelime|data|saat|kelimecins|medenidurum|randomtarih),/;
 
 // Nötr kitle → koşullar (eşleştiriciye göre)
 function kosullar(kitle, matcher) {
@@ -62,7 +62,8 @@ function fixPh(metin, warn) {
     if (!ALLOWED_PH.test(inner)) warn.push(`bilinmeyen yer tutucu ${ph}`);
   }
   // Kahve uğurlaması "\n\nMagnus" imzasıyla biter — kesik sayılmaz
-  if (!/[.!?…"”')]\s*$/.test(m.trim()) && !/\n\s*Magnus\s*$/.test(m)) warn.push('noktalama ile bitmiyor');
+  // Kahve karşılama/bağlama ";" ya da ":" ile bir sonraki parçaya bağlanır — kesik sayılmaz
+  if (!/[.!?…"”');:]\s*$/.test(m.trim()) && !/\n\s*Magnus\s*$/.test(m)) warn.push('noktalama ile bitmiyor');
   return m.trim();
 }
 

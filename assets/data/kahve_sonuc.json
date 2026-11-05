@@ -7019,6 +7019,317 @@
         "kariyer",
         "saglik"
       ]
+    },
+    {
+      "id": 419,
+      "metin": "Birbirine değmeden duran iki halka görüyorum fincanının dibinde {{isim}}. Aralarında incecik bir çizgi kalmış; biten ilişkinin ardından bazen özlemle rahatlamayı aynı anda yaşadığını söylüyor bu. Önümüzdeki günlerde geçmişi hatırlatan bir söz kulağına gelecek. İlk anda yüzün biraz düşebilir. Fakat ardından, seni uzun zamandır böyle içten gülerken görmediğini söyleyen birinin ilgisiyle karşılaşacaksın. Özellikle kalabalık bir ortamda başlayıp sonradan baş başa devam eden bir sohbet görüyorum. Bu konuşmanın ardından eve dönerken telefonuna bakıp gülümsediğini hissediyorum. Eski hikâyenin bıraktığı boşluğun aslında yeni bir mutluluğa yer açtığını ilk kez bu kadar açık fark edeceksin.",
+      "metin_en": "I see two rings resting at the bottom of your cup without touching each other, {{isim}}. Only the thinnest line separates them. This tells me that since your relationship ended, you've sometimes felt longing and relief at the same time. In the coming days, you'll hear something that reminds you of the past. Your expression may fall for a moment. But soon afterward, someone will show interest in you and remark that they haven't seen you laugh so genuinely in a long time. I see a conversation in particular that begins in a crowded setting and later continues with just the two of you. I can almost feel you smiling at your phone on your way home afterward. For the first time, you'll clearly recognize that the emptiness left by your old story has actually made room for a new kind of happiness.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 420,
+      "metin": "İncecik saplı bir ayna ve hemen arkasında açılmış bir pencere belirmiş telvelerinde. Aynanın karşısındaki kadın sensin; herkesin gönlünü hoş tutmaya çalışırken kendi isteklerini bazen son sıraya koyuyorsun. Fakat {{ay_1}} ayına doğru, günlük hayatında seni uğraştıran küçük bir mesele hiç beklemediğin kadar kolay çözülecek. Özellikle kadınlar arasında geçen bir konuşmanın sonunda, sana daha önce söylenmemiş güzel bir düşünceyi duyacaksın. Birinin seni uzaktan takdir ettiğini öğrenmek hoşuna gidecek. Sonrasında, uzun süredir aklında tuttuğun küçük bir isteğini kendin için gerçekleştireceksin. Fincandaki ayna boşuna parlamıyor; bu kez kendi yüzündeki memnuniyeti sen de göreceksin.",
+      "metin_en": "A mirror with a delicate handle has appeared in your coffee grounds, with an open window just behind it. The woman standing before that mirror is you. While trying to keep everyone else happy, you sometimes put your own wishes last. But around {{ay_1}}, a small problem that's been troubling you in everyday life will be resolved far more easily than you expect. Toward the end of a conversation among women, you'll hear a lovely opinion about yourself that no one has shared with you before. Learning that someone has admired you from afar will make you happy. Afterward, you'll finally fulfill a small wish you've been keeping in mind for a long time, just for yourself. That mirror in your cup isn't shining for nothing. This time, you'll see the satisfaction on your own face too.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 421,
+      "metin": "Fincanın en altında, bir taşın üzerine bırakılmış deri bir kemer görüyorum. Yanında da oldukça belirgin bir basamak var. Bu, üzerine aldığın sorumlulukları kimseye fazla belli etmeden taşımaya alıştığını anlatıyor. Yakın zamanda senden bir konuda fikir isteyen bir erkekle konuşacaksın. Söylediklerini fazla önemsememiş gibi davranabilir ama ardından söylediklerinin işe yaradığını bizzat kendisinden duyacaksın. Üstelik ertelediğin kişisel bir işi de bu konuşmanın ardından halletmeye başlayacaksın. {{sayi,3,10}} gün içerisinde bir süredir kafanı kurcalayan meselede somut bir ilerleme görüyorum. İçinden 'Bunu neden daha önce yapmadım?' diye geçireceksin. Bazen insanın önündeki basamağı çıkması için yalnızca ilk adımı atması gerekiyormuş.",
+      "metin_en": "At the very bottom of your cup, I see a leather belt resting on a stone. Beside it is a clearly defined step. This tells me you've grown accustomed to carrying responsibilities without letting others see just how much you take on. Soon, you'll speak with a man who asks for your opinion on something. He may act as though he hasn't paid much attention to your words, but later you'll hear directly from him that your advice worked. What's more, that conversation will inspire you to start dealing with a personal task you've been postponing. Within {{sayi,3,10}} days, I see concrete progress on a matter that's been troubling your mind for some time. You'll find yourself thinking, 'Why didn't I do this sooner?' Sometimes all it takes to climb the step in front of us is the courage to take that first step.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 422,
+      "metin": "Üzeri silinmiş bir kara tahtanın köşesinde hâlâ duran iki rakam dikkatimi çekti. Tahtanın önünde de elinde defter tutan birini görüyorum; sensin bu {{isim}}. Okulda özellikle önem verdiğin bir konuda ne kadar hazırlansan da kendini bazen eksik hissettiğini anlıyorum. Önümüzdeki haftalarda dersle ilgili bir açıklama ya da değerlendirme, düşündüğünden daha olumlu sonuçlanacak. Öncesinde bir arkadaşının söylediği küçük bir şey kafanı karıştırabilir; fakat konuyu doğrudan ilgilisine sorduğunda rahatlayacaksın. Ardından bir öğretmenin ya da dersinde söz sahibi birinin dikkatini çeken cevabın olacak. Defterini kapatırken yüzündeki o gizli gururu görüyorum. Bu küçük başarı, sonraki hedefin için de cesaret verecek.",
+      "metin_en": "Two numbers still visible in the corner of an otherwise erased blackboard catch my attention. I also see someone standing in front of it, holding a notebook. That's you, {{isim}}. I sense that at school, even when you prepare thoroughly for something you care deeply about, you sometimes feel that you haven't done enough. In the coming weeks, an announcement or assessment related to your studies will turn out more positively than you expect. Before that, a small remark from a friend might confuse you, but you'll feel reassured once you ask the person directly responsible. Afterward, an answer you give will catch the attention of a teacher or someone with authority in your class. I can see the quiet pride on your face as you close your notebook. This small success will also give you courage for your next goal.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 423,
+      "metin": "İki ucundan tutulmuş ince bir ip görüyorum fincanında. İpin ortasında küçücük bir düğüm var; birine söylemek istediğin bir şeyi nasıl ifade edeceğine bir süredir karar veremediğini hissediyorum. Sen duygularını derinden yaşarken onları her zaman aynı açıklıkla anlatamıyorsun. Önümüzdeki günlerde, sıradan başlayan bir konuşma beklediğinden daha samimi bir hâl alacak. Karşındaki insanın söylediği kısa bir cümle, aklındaki o düğümü çözebilir. Özellikle konuşmanın sonunda ikinizin de ses tonunun yumuşadığını görüyorum. Ardından günlük hayatına dönerken aynı sözleri zihninde yeniden canlandıracaksın. {{burc}} burcunun kolay vazgeçmeyen tarafı bu kez kalbini güzel bir yakınlığa taşıyacak.",
+      "metin_en": "I see a thin cord held at both ends inside your cup. There's a tiny knot in the middle, and I sense that you've been struggling to decide how to express something you want to say to someone. You experience your emotions deeply, but you can't always put them into words with the same clarity. In the coming days, a conversation that begins quite ordinarily will become more heartfelt than you expect. A short sentence from the person you're speaking with may untie that knot in your mind. I can see both your voices softening toward the end of the conversation. Later, as you return to your daily routine, you'll replay those words in your mind. The persistent side of your {{burc}} nature will lead your heart toward a beautiful new closeness this time.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 424,
+      "metin": "Eski bir kapının önünde, birbirinden farklı iki ayakkabı izi dikkatimi çekti. İzlerden biri geride kalırken diğeri aydınlık bir yola uzanıyor. Geride bıraktığın düzenin bazı alışkanlıklarını hâlâ taşıyorsun {{isim}}; fakat artık hangi kararın sana ait olduğunu daha iyi biliyorsun. Yakın zamanda evinle ya da günlük işlerinle ilgili küçük bir düzenleme yapacaksın. Başlangıçta uğraştırıcı görünebilir ama konuşacağın birinin vereceği pratik fikir sayesinde iş beklediğinden çabuk sonuçlanacak. Sonrasında, önceden sürekli ertelediğin bir şeyi sırf canın istediği için yapacağını görüyorum. İçinde hafif bir gurur belirecek. Falının sonundaki yol, yeni hayatının giderek daha çok senin seçtiğin biçime kavuştuğunu anlatıyor.",
+      "metin_en": "In front of an old door, two different footprints catch my attention. One remains behind, while the other stretches toward a brightly lit path. You still carry some habits from the life you've left behind, {{isim}}, but you've become better at recognizing which decisions are truly yours. Soon, you'll make a small adjustment to your home or daily routine. It may seem troublesome at first, but thanks to a practical suggestion from someone you speak with, the task will be completed sooner than expected. Afterward, I see you doing something you've repeatedly postponed in the past, simply because you feel like it. A quiet sense of pride will rise within you. The path at the end of your reading tells me that your new life is increasingly taking the shape you've chosen for yourself.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 425,
+      "metin": "Sayfaları hafifçe kıvrılmış bir kitap ve üzerine bırakılmış ince uçlu bir kalem çıkmış fincanının dibinde. Kalemin ucunda tek bir nokta var; üzerinde epey düşündüğün akademik bir konunun nihayet açıklığa kavuşacağını hissediyorum. Bölümde ya da çalışmalarınla bağlantılı bir ortamda yapacağın konuşma sırasında, daha önce üzerinde durmadığın bir ayrıntı dikkatini çekecek. İlk anda kendi yaklaşımını yeniden gözden geçirmek isteyebilirsin. Fakat bu küçük değişiklik çalışmanı güçlendirecek. {{ay_1}} içinde göndereceğin veya tamamlayacağın bir akademik işin ardından olumlu bir geri dönüş görüyorum. Bir meslektaşının takdirini de duyabilirsin. Kalemin ucundaki o nokta, uzun bir emeğin sonunda koyacağın tatmin edici son noktayı simgeliyor.",
+      "metin_en": "At the bottom of your cup, I see a book with slightly curled pages and a fine-tipped pen resting on top of it. There's a single dot at the tip of the pen. I sense that an academic matter you've spent considerable time thinking about will finally become clear. During a discussion in your department or another setting connected to your research, a detail you hadn't previously considered will catch your attention. At first, you may want to reassess your approach, but this small adjustment will strengthen your work. I see positive feedback following an academic task you'll submit or complete during {{ay_1}}. You may also receive praise from a colleague. That dot at the tip of the pen symbolizes the satisfying final period you'll place after a long stretch of hard work.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 426,
+      "metin": "Eşinin sana uzattığı küçük bir tabak görüyorum {{isim}}. Tabağın içinde tek bir tatlı dilimi var; ilginçtir, yanında iki çatal duruyor. Evliliğinizde bazen günün koşturmacası yüzünden birbirinize söylemek istediğiniz güzel sözleri sonraya bırakıyorsunuz. Önümüzdeki haftalarda eşinle konuşurken eskiden birlikte yaptığınız bir şey yeniden gündeme gelecek. Önce 'Ne zamandır yapmıyoruz!' diye düşüneceksin. Ardından bu konuşma, ikinize de iyi gelecek ufak bir planın başlangıcı olacak. Birlikte geçirdiğiniz zamanın sonunda eşinin söyleyeceği içten bir söz, günlerce aklında kalabilir. Fincandaki iki çatalı boşuna görmedim; paylaştığınız küçük mutlulukların, aranızdaki sevgiyi yeniden canlandırdığı bir dönem geliyor.",
+      "metin_en": "I see your spouse handing you a small plate, {{isim}}. There's a single slice of dessert on it, but strangely enough, two forks are resting beside it. In your marriage, the rush of everyday life sometimes causes you both to put off saying the lovely things you want to tell each other. In the coming weeks, something you and your spouse used to do together will come up in conversation again. At first you'll think, 'It's been so long since we did that!' Then this conversation will become the beginning of a small plan that will do you both good. At the end of your time together, something heartfelt your spouse says may stay with you for days. I didn't see those two forks in your cup for nothing. A period is coming when the little joys you share will rekindle the love between you.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 427,
+      "metin": "Fincanın dibinde, açık havada duran bir bank ve üzerinde unutulmuş gibi görünen ince bir atkı var. Rüzgâr atkının ucunu hafifçe kaldırıyor. Sen bazen insanların arasına karışmayı seviyor, bazen de kimseyle konuşmadan kendi dünyanda kalmak istiyorsun. Özellikle yoğun geçen günlerin ardından bu ikinci tarafın ağır basıyor. {{ay_1}} ayına doğru günlük hareketlerini biraz daha düzene koyduğunda bedenindeki yorgunluğun hafiflediğini hissedeceksin. Yakın çevrenden biri seni kısa bir gezintiye ya da dışarıda zaman geçirmeye teşvik edecek. Başta pek istekli olmasan da döndüğünde zihninin açıldığını fark edeceksin. Bankın üzerindeki atkı, kendine gösterdiğin özenin sana huzur olarak geri dönmesini anlatıyor.",
+      "metin_en": "At the bottom of your cup, there's a bench standing outdoors, with a thin scarf that looks as though someone has forgotten it. The wind gently lifts one end of the scarf. Sometimes you love being around people, while at other times you want to retreat into your own world without speaking to anyone. Especially after busy days, that second side of you tends to take over. Around {{ay_1}}, as you bring a little more order to your daily activities, you'll begin to feel the tiredness in your body ease. Someone close to you will encourage you to take a short walk or spend some time outside. You may not feel particularly enthusiastic at first, but when you return, you'll notice how much clearer your mind feels. The scarf on the bench represents the peace that comes back to you when you take good care of yourself.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 428,
+      "metin": "Dibinde az miktarda mürekkep kalmış bir hokka görüyorum. Yanında katlanmış bir çalışma kâğıdı duruyor; üzerinde yarım bırakılmış bir çizgi var. Bir konuda harekete geçmeden önce bütün ihtimalleri düşünme alışkanlığın, bazen fırsatları gereğinden fazla bekletmene neden oluyor. Fakat {{ay_1}} ayı içerisinde iş veya gelecek planlarınla ilgili bir konu yeniden gündemine gelecek. Daha önce önemsemediğin bir görüşme ya da yazışmanın ardından, önünde aslında düşündüğünden daha kolay bir seçenek olduğunu fark edeceksin. Ardından tamamlayacağın küçük bir iş, daha büyük bir hedefe hazırlanmanı sağlayacak. Bu gelişmenin sana getireceği güven duygusu çok belirgin. Hokkadaki mürekkep henüz bitmemiş; yazacak yeni başarıların var.",
+      "metin_en": "I see an inkwell with a little ink remaining at the bottom. Beside it lies a folded worksheet with an unfinished line. Your habit of considering every possibility before taking action sometimes causes you to delay opportunities longer than necessary. But during {{ay_1}}, a matter related to your work or future plans will return to your attention. Following a conversation or exchange of messages you previously considered unimportant, you'll realize that an easier option has been available to you all along. Completing a small task afterward will help you prepare for a much larger goal. The confidence this development brings you is unmistakable. The ink in that inkwell hasn't run out yet. You still have new successes waiting to be written.",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 429,
+      "metin": "Birkaç hafta içinde, geride bıraktığın ilişkiyi anlatırken kullandığın bir cümlenin değişeceğini seziyorum {{isim}}. Fincanın dibindeki sökülmüş teyel, kendini açıklama ihtiyacının azalmasına yorulur. Bir sohbet sırasında ayrılıktan söz açılması seni hafifçe duraksatabilir; ardından karşındaki insanın yargılamadan dinlemesiyle rahatlayacaksın. Telefonunu ters çevirip anlatmaya devam ettiğin o sahne çok belirgin. Birini özlemekle ona dönmek istemenin aynı şey olmadığını kendine daha kolay söyleyeceksin. Aşk konusunda vereceğin sonraki kararda, suçluluk yerine kendi isteğini duyabileceğini görüyorum.",
+      "metin_en": "I sense that within a few weeks, the words you use to describe your past relationship will begin to change, {{isim}}. The loosened basting stitch at the bottom of your cup symbolizes a fading need to explain yourself. When a separation comes up in conversation, you may hesitate briefly, but then you'll relax as the person across from you listens without judgment. The image of you turning your phone face down and continuing to talk is especially clear. You'll find it easier to remind yourself that missing someone and wanting to return to them aren't the same thing. I see that when you make your next decision about love, you'll be able to hear your own wishes rather than your guilt.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 430,
+      "metin": "Kenarına kumaş sıkışmış bir fermuar seçiyorum fincanının alt kıvrımında. Çözülmeyecek sanılan ama hafifçe geri çekilince açılan türden; senin her şeyi zorlayarak halletmen de gerekmiyor demek ki. Başkalarının isteğine çabuk karşılık verirken kendi ihtiyacını sonraya bıraktığın oluyor. Yaklaşan haftalarda birinden gelecek rica karşısında, elindeki işi göstererek ne kadarını üstlenebileceğini açıkça söyleyeceksin. Bunun sandığın kadar mesele edilmemesi hoşuna gidecek. Sana kalan vakitte kişisel bir işini tamamlayıp aynaya bakarken yüzündeki memnuniyeti yakalayacaksın.",
+      "metin_en": "I can make out a zipper with a piece of fabric caught along its edge in the lower curve of your cup. It's the kind that seems hopelessly stuck but opens when gently pulled back. So perhaps you don't have to force your way through everything after all. Sometimes you respond quickly to other people's requests while leaving your own needs until later. In the coming weeks, when someone asks you for a favor, you'll point to the work already on your plate and clearly explain how much you can take on. You'll be pleasantly surprised when they don't make nearly as much of an issue of it as you expected. With the time you've kept for yourself, you'll finish a personal task and catch a glimpse of satisfaction on your face in the mirror.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 431,
+      "metin": "Sözü kısa kesen birinin yanında senin daha rahat konuştuğun bir sahne belirdi; aşağıdaki telvede buna eşlik eden yuvarlak bir düğme buldum. Her şeyi tek başına çözebilen adam olmak güzel de, insanın kullanım kılavuzunda yardım istemek de var {{isim}}. Önündeki günlerde nasıl yapacağını düşündüğün gündelik bir meseleye, bir yakının kendi denediği yöntemi anlatacak. Ekranı sana doğru çevirdiği anda konu gözünde küçülecek. Uygulayıp sonuç aldığında hem uğraştığın iş kolaylaşacak hem de yardım kabul etmenin bağımsızlığından bir şey eksiltmediğini hissedeceksin.",
+      "metin_en": "A scene appeared in which you feel more comfortable speaking beside someone who keeps their words brief. In the coffee grounds below, I found a round button accompanying that image. It's wonderful to be the man who can solve everything on his own, but the human instruction manual includes asking for help too, {{isim}}. In the days ahead, someone close to you will describe a method they've personally tried for an everyday problem you've been wondering how to solve. The moment they turn their screen toward you, the problem will seem much smaller. Once you try it and see results, not only will the task become easier, but you'll also feel that accepting help takes nothing away from your independence.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 432,
+      "metin": "İki satırın arasına sığdırılmış bir ekleme dikkatimi çekti; fincanın dibinde ucu aşınmış bir silgiyle yan yana duruyor. Okulda bir çalışmayı teslim etmeden önce gereğinden fazla düzeltme yaptığını hissediyorum. Yakın haftalarda dersle ilgili alacağın kısa bir geri bildirim, uğraşman gereken asıl noktayı gösterecek. Sayfanın köşesine koyacağın işaretten sonra geri kalanını daha hızlı toparlayabilirsin. Her ayrıntıyı kusursuzlaştırmadan da iyi bir sonuç çıkarabildiğini göreceksin. Bu tamamlanma, gelecekte hangi becerine daha çok güvenebileceğin konusunda sana somut bir dayanak olacak.",
+      "metin_en": "An addition squeezed between two lines catches my attention. At the bottom of your cup, it rests beside an eraser with a worn tip. I sense that you make more corrections than necessary before submitting schoolwork. In the coming weeks, a brief piece of feedback related to your studies will show you exactly what deserves your attention. Once you've made a mark in the corner of the page, you may find it easier to finish the rest more quickly. You'll see that you can produce a good result without making every detail perfect. Completing this task will give you concrete evidence of which of your abilities you can trust more in the future.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 433,
+      "metin": "Rahatlama bazen büyük bir başlangıçtan değil, adres sorulmadan bulunan bir eşyanın yerinden gelir. Fincanın alt bölümünde bölmeleri belirgin bir sepet seçtim; yeni düzenini kendi kullanımına göre kurmanı anlatıyor. Bu ayın kalanında evde sürekli elinin gittiği bir köşeyi yeniden düzenleyeceksin. Başkasının alışkanlığını hesaba katmadan vereceğin bu karar, beklediğinden fazla hoşuna gidebilir {{isim}}. Düzen kurmakta beceriklisin ama kendine uygun olanı seçerken hâlâ açıklama yapma gereği duyabiliyorsun. Eşyaları yerleştirip birkaç adım geri çekildiğinde, bu kez yaptığını savunmak yerine tadını çıkaracaksın.",
+      "metin_en": "Sometimes relief comes not from a grand new beginning, but from placing an everyday object exactly where it belongs, without anyone questioning your choice. In the lower part of your cup, I see a basket with clearly defined compartments. It represents arranging your new life according to your own needs. During the remainder of this month, you'll reorganize a corner of your home that you use constantly. Making this decision without having to consider someone else's habits may please you more than you expect, {{isim}}. You're good at creating order, but when choosing what suits you, you can still feel the need to explain yourself. Once you've arranged everything and taken a few steps back, this time you'll simply enjoy what you've done instead of defending it.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 434,
+      "metin": "Bir paragrafı zihninde yeniden kurarken başka bir sorumluluğun araya girmesi… Dipteki ataç biçimi bana akademik emeğinin görünmeyen bu tarafını anlattı. Bölümde yakın haftalarda yapılacak kısa bir fikir alışverişinde, üzerinde çalıştığın metnin dağınık bulduğun kısmını bir meslektaşına anlatacaksın. Söylerken kendi cümlenin içinden çözümü yakalayabilirsin. Açık dosyanın kenarında biriken notlardan yalnızca gerekli olanları ayırmanla yazı ilerleyecek. Ben burada gösterişli bir zaferden çok, düşüncenin yerine oturmasının sevincini görüyorum; tamamlanan bölüm, çalışmanın devamına duyduğun hevesi güçlendirecek.",
+      "metin_en": "Reworking a paragraph in your mind, only to have another responsibility interrupt you... The paperclip shape at the bottom of your cup revealed this unseen side of your academic efforts to me. During a brief exchange of ideas in your department in the coming weeks, you'll describe to a colleague a section of your writing that feels disorganized to you. As you explain it, you may discover the solution within your own words. Once you separate the essential notes from those accumulating beside your open document, the writing will move forward. What I see here isn't a spectacular victory, but the joy of your thoughts finally falling into place. Completing that section will renew your enthusiasm for the rest of your work.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 435,
+      "metin": "Duyduğun bir ezginin peşinden giden telve izini takip ettim; en altta ince bir diyapazon çıktı. Sen sevgiyi kolayca fark ediyorsun ama sana gösterildiğinde bazen önce nedenini arıyorsun. {{ay_1}} içinde birinin sana seslenişindeki yumuşaklık dikkatini çekecek. Sıradan başlayan iletişimin arasında, söylediğin bir ayrıntının hatırlandığını duyabilirsin. Cevap vermeden önce yüzünde beliren o küçücük şaşkınlık çok canlı. Ben bunu hemen bir ad koyma zorunluluğuna değil, değer gördüğünü kabul edebilmene yoruyorum. Duygunu tartıp biçmeden vereceğin samimi karşılık, aranızdaki bağı daha rahat yaşamanı sağlayacak.",
+      "metin_en": "I followed a trail of coffee grounds that seemed to be chasing a melody you'd heard, and at the very bottom I found a slender tuning fork. You recognize affection easily, but when someone shows it to you, you sometimes search for a reason before accepting it. During {{ay_1}}, the gentleness in someone's voice as they address you will catch your attention. In the middle of an ordinary exchange, you may discover that they've remembered a detail you mentioned. That tiny look of surprise crossing your face before you answer is remarkably vivid. I don't interpret this as a need to immediately put a label on the connection, but rather as your ability to accept being valued. Responding sincerely without overanalyzing your feelings will allow you to experience the bond between you more comfortably.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 436,
+      "metin": "Eşinle ortak bir ihtiyaç için yaptığınız hesabın yanına kendi isteğini de yazman görünüyor. Fincanın dip tarafında ağzı açık bir cüzdan buldum; burada savurganlık değil, kendini de hesaba katmak var. Bu haftaları kapsayan alışverişlerinizden birinde, bir süredir karşılaştırdığın ürünün daha uygun seçeneğini görebilirsin. Etiketi bir kez daha kontrol ettikten sonra eşine göstereceksin. Ev için karar verirken ölçülüsün; kendi beğenine gelince gereğinden uzun düşündüğün oluyor. İçine sinen seçimi yapmanızla hem bütçenin korunduğunu hem de senin istediğinin önemsendiğini hissedeceksin {{isim}}.",
+      "metin_en": "I can see you adding something you personally want beside the figures you and your spouse have calculated for a shared need. At the bottom of your cup, I found an open wallet. This isn't about extravagance; it's about including yourself in the equation. During one of your shopping trips in the coming weeks, you may find a more affordable version of a product you've been comparing for some time. After checking the price tag once more, you'll show it to your spouse. You're sensible when making decisions for your home, but when it comes to your own preferences, you sometimes think things over longer than necessary. By making a choice you're genuinely happy with, you'll feel that you've protected your budget while also giving your own wishes the consideration they deserve, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 437,
+      "metin": "Azıcık ertelenen bir ortak plan, eşinle daha kullanışlı bir çözüm bulmanıza yarayabilir. Aşağıdaki telvede ayakları yere düzgün basan bir sehpa görüyorum; evdeki sorumlulukların dengelenmesine işaret ediyor. Yakın haftalarda yapılacakları konuşurken senin zaten üstlendiğin bir işin yanına yenisini eklemek yerine görevleri yeniden paylaşacaksınız. Buzdolabına iliştirilmiş listenin üzerinde bir maddenin yer değiştirmesi kadar gündelik bir sahne bu. Yük almaktan kaçmıyorsun, yalnız fark edilmesini de istiyorsun. Eşinin senin emeğini hesaba kattığını görmek, ortak hayatınızdan duyduğun memnuniyeti artıracak.",
+      "metin_en": "A shared plan that's been postponed a little may help you and your spouse find a more practical solution. In the coffee grounds below, I see a small table standing firmly on all its legs. It points to a better balance of responsibilities at home. In the coming weeks, as you discuss what needs to be done, you'll redistribute the tasks rather than adding yet another responsibility to something you're already handling. It's an everyday scene, as simple as moving one item on a list attached to the refrigerator. You don't shy away from carrying your share of the load; you simply want your efforts to be recognized too. Seeing your spouse take your contribution into account will deepen your satisfaction with the life you share.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 438,
+      "metin": "Çalıştığın yerde senden bir şey istenince, daha sorunun tamamı söylenmeden çözümü düşünmeye başlıyorsun. Fincanın altındaki döner sandalye bu hızlı geçişleri çağrıştırdı bana. Yaklaşan iş günlerinde yöneticinin kısa bir açıklamasıyla bir işin önceliği netleşecek; böylece aynı anda her talebe yetişmek için bölünmeyeceksin. Takvimde üst üste duran kutulardan birinin boşalması gözümde canlandı. İşini iyi yapmakla her şeye hemen yetişmenin ayrı şeyler olduğunu yaşayarak görebilirsin. Mesaiyi kapatırken tamamladığın kısmın belli olması, eve de taşıdığın zihinsel kalabalığı azaltıp sana güzel bir rahatlık verecek.",
+      "metin_en": "When someone asks you for something at work, you start thinking of a solution before they've even finished explaining the problem. The swivel chair at the bottom of your cup reminds me of these rapid shifts in attention. During the coming workdays, a brief explanation from your manager will clarify the priority of a task, so you won't have to stretch yourself thin trying to meet every request at once. I can picture one of the overlapping blocks on your calendar becoming free. You may discover firsthand that doing your job well and responding immediately to everything are two different things. As you finish your workday, seeing clearly what you've accomplished will ease the mental clutter you've been carrying home and bring you a welcome sense of relief.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
     }
   ]
 }

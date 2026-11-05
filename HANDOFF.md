@@ -2,7 +2,33 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
-## Ne yapıldı (2026-11-06) + değişen dosyalar
+## Ne yapıldı (2026-11-06 gece, 276 sonrası; main'de) + değişen dosyalar
+Anıl: "her falın alınışı daha mistik/animatif/profesyonel olsun, Codex ve Grok'a danış". Envanter + Grok raporu:
+`build/visual_check/codex_review/fal_akis_envanteri.md` (gitignored). Codex'in fal akışı raporu kullanım sınırında yarım kaldı.
+- **Ana menü sohbet bandı:** önce yerinde durur, ızgara altına girer (`kHomeHeaderHold`); bant gizliyken yeni balon
+  gelirse bant üstte belirir, yazı sonra (`_revealHeader`); dışına dokunuş yavaşça kapatır, alttaki karta geçmez.
+- **Kullanıcı Bilgileri:** bar orada küçülmez (`floating_bar.dart _minimizeLocked`), ikinci dokunuş paneli kapatır,
+  dişli kalktı, cam önizlemesi görselsiz, yönetici paneli ortada açılır pencere. Kenar geri göstergesi kaldırıldı.
+- **Kader Kitabı yeniden** (`kaderkitabi/kader_book_scene.dart`, `core/widgets/living_sea.dart` + `shaders/living_sea.frag`):
+  dalgalanan gece denizinden yükselen açık parşömen, damlalar akar, mürekkep belirir, suda bulanık yansıma.
+- **Kader Çarkı yeniden** (`kadercarki_screen.dart`): altın kasnak, çivi tıkı + ok sekmesi, kazanan parlar; ters
+  dönüş hatası düzeldi (`kaderSpinEnd`), dönerken tekrar çevirme kilitli. Test `kadercarki_test` (2000 rastgele vaka).
+- **Fal ritüelleri:** I-Ching hexagram çizgi çizgi, Japon omikuji kutusu sallanır; El Falı avuç çizgileri ışıyarak;
+  Numeroloji sayıları belirir; Biyoritim yüzdeleri sayar; Doğum Haritası dairesel açılır; Tarot kadife masa + deste
+  yelpaze gibi dağılır (`tarot/deck_deal.dart`); Kahve "Yerime İç" fincanından buhar (`coffee/cup_steam.dart`).
+- **Ortak parçalar:** `ResultReveal` (fal detayı ışık süpürmesiyle açılır), `StaggerIn` (Astroloji/Dert Ortağı sıralı),
+  `FocusRipple` (kum saati yerine nabız gözü: Faloya, Maganda, Yana, Acı Gerçekler), `UnlockFlash` (Kısmetim/Arabam/Evim
+  kilit açılışı). Hepsi azaltılmış harekette sade; testleri `test/<ad>_test.dart`.
+- **Titreşimler:** sürtme/kazıma tıkları, burç çarkı, kart oturuşu, taş çarpması, kilit açılışı, Maganda sarsıntısı.
+- **Süre kısaltmaları:** Yana ~14→~9 sn, Acı Gerçekler 5→3.2 sn (dokununca yazı tamamlanır), tek kart tarot artık
+  kendiliğinden gönderilmez ("Gönder" düğmesi). Tamua'ya dokunulmadı (8-12 sekme yarı hız Nisan'da bilinçli seçilmiş).
+- **Tavşan:** zarflar yukarı, çift göz kırpma (`tavsan_goz_kapali.png`, `tools/tavsan_kapali_goz.py`), kart dışına
+  dokununca kapanır. Fal konusu ikonları yeniden çizildi (ChatGPT). AstroTakvim düğmeleri eski boyutta.
+- **Paralel İngilizce eksikleri:** El/Yüz Falı ekranları, Niyet, Tamua, Yana, yasal metin "Anladım", tarot yedek metni.
+- **Metin turları 11-14** (+611 metin) — ayrıntı `docs/metin_uretim_log.md`.
+- Testler: 157+ geçiyor; tek kırmızı takipsiz `test/_visual_starfield_capture_test.dart`.
+
+## Önceki (2026-11-06 gündüz)
 - **10.8.12+276 test build'i** (Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).
 - **Ana menü 3 düzen** (`home/menu_layout.dart`): açılışta 1/3 ihtimalle 3×9 / büyük·3×4·büyük·3×4·büyük /
   "Favoriler" 3×2 + "Diğer Türler" 3×7 (kullanım sayımı `menu_kullanim`, oturum boyu sabit). Test `menu_layout_test`.

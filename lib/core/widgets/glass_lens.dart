@@ -33,23 +33,39 @@ Future<ui.FragmentProgram?> loadGlassLens() {
 /// dikdörtgenini ister → her boyamada dönüşümden hesaplanır (ölçek dahil; Transform
 /// değişince bu nesne de yeniden boyanır).
 class GlassLensBackdrop extends SingleChildRenderObjectWidget {
-  const GlassLensBackdrop({super.key, required this.program, this.zoom = 1, super.child});
+  const GlassLensBackdrop({
+    super.key,
+    required this.program,
+    this.zoom = 1,
+    this.refract = 0.238,
+    this.bevel = 0.234,
+    super.child,
+  });
 
   final ui.FragmentProgram program;
+
+  /// Kırılma katsayısı ve pah genişliği (h oranı). Varsayılanlar Instagram barı ölçümü;
+  /// küçük öğeler (kaydırıcı topuzu) daha yumuşak değer verir.
+  final double refract;
+  final double bevel;
 
   /// Büyütme (bar 1; havalanan damla / kaydırıcı topuzu >1 → alttaki büyür).
   final double zoom;
 
   @override
   RenderObject createRenderObject(BuildContext context) =>
-      RenderGlassLensBackdrop(program, MediaQuery.devicePixelRatioOf(context), zoom);
+      RenderGlassLensBackdrop(program, MediaQuery.devicePixelRatioOf(context), zoom)
+        ..refract = refract
+        ..bevel = bevel;
 
   @override
   void updateRenderObject(BuildContext context, RenderGlassLensBackdrop renderObject) {
     renderObject
       ..program = program
       ..devicePixelRatio = MediaQuery.devicePixelRatioOf(context)
-      ..zoom = zoom;
+      ..zoom = zoom
+      ..refract = refract
+      ..bevel = bevel;
   }
 }
 
@@ -57,8 +73,19 @@ class RenderGlassLensBackdrop extends RenderProxyBox {
   RenderGlassLensBackdrop(this._program, this._dpr, this._zoom);
 
   // Ölçülen model (bkz. shaders/glass_lens.frag başlığı). Doygunluk = bizim buzlu camla aynı.
-  static const double _refract = 0.238;
-  static const double _bevel = 0.234;
+  double _refract = 0.238;
+  double _bevel = 0.234;
+  set refract(double v) {
+    if (v == _refract) return;
+    _refract = v;
+    markNeedsPaint();
+  }
+
+  set bevel(double v) {
+    if (v == _bevel) return;
+    _bevel = v;
+    markNeedsPaint();
+  }
   static const double _blur = 0.028;
   static const double _saturation = 1.25;
 

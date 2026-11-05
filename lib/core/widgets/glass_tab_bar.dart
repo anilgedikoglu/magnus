@@ -75,10 +75,10 @@ const double _kMaxStretch = 0.32;
 /// Seçimde kapsülün "havalanması" (iOS 26 Liquid Glass sekme seçimi): dokununca kapsül
 /// camdan bir damla gibi BÜYÜYEREK bardan taşar, alttaki ikonları mercek gibi büyütür,
 /// hedefe kayar, varınca yaylı (hafif ezilerek) bara geri oturur.
-const double _kLiftHeight = 0.40; // tam havada yükseklik ×1.40 (46 → 64 dp; 56'lık bardan taşar)
+const double _kLiftHeight = 0.24; // tam havada ×1.24 (46 → 57 dp) — Codex: 0.40 ikonları uzatıp çiftliyordu
 const double _kLiftWidth = 0.08; // tam havada genişlik ×1.08
 const double _kLandSquash = 0.6; // iniş taşmasında (L<0) yassılaşma: genişlik +0.6·|L|
-const double _kLiftZoom = 0.22; // damla merceği büyütmesi (1.22×)
+const double _kLiftZoom = 0.10; // damla merceği büyütmesi (1.10×)
 const Duration _kLiftUp = Duration(milliseconds: 130);
 
 class GlassTabBar extends StatefulWidget {
@@ -300,7 +300,8 @@ class _GlassTabBarState extends State<GlassTabBar>
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius),
           boxShadow: const [
-            BoxShadow(color: Color(0x59000000), blurRadius: 18, offset: Offset(0, 6)),
+            // Codex: referansta gölge çok daha hafif (alt kenarda koyu şerit yapıyordu).
+            BoxShadow(color: Color(0x33000000), blurRadius: 18, offset: Offset(0, 3)),
           ],
         ),
         child: ClipRRect(
@@ -455,7 +456,7 @@ class _SelectionPill extends StatelessWidget {
             Colors.white.withValues(alpha: 0.12 * fade),
           ],
         ),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.12 * fade), width: 0.8),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.06 * fade), width: 0.6),
       ),
     );
   }

@@ -9,6 +9,7 @@
 //   • 0 / 0.5 / 1'de rayın 7.7 pt altında küçük noktalar; bu noktalardan geçerken hafif titreşim.
 //   • Solda "şeffaf" (iki çizgi kare), sağda "renkli" (dolu kare) simgesi, gri #818082.
 
+import 'dart:async';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -87,8 +88,13 @@ class _LiquidGlassSliderState extends State<LiquidGlassSlider>
   }
 
   void _up() {
-    widget.onChangeEnd?.call(_latest ?? widget.value);
-    _latest = null;
+    // Codex: ham pointer-up, dokunuşun onTapUp değer güncellemesinden (arena süpürmesi)
+    // ÖNCE gelir → bildirim mikro göreve ertelenir; böylece son değer kaydedilir.
+    scheduleMicrotask(() {
+      if (!mounted) return;
+      widget.onChangeEnd?.call(_latest ?? widget.value);
+      _latest = null;
+    });
     if (_reduce) {
       _press.value = 0;
     } else {
@@ -212,7 +218,9 @@ class _LiquidGlassSliderState extends State<LiquidGlassSlider>
                         child: lens != null
                             ? GlassLensBackdrop(
                                 program: lens,
-                                zoom: 1 + 0.35 * pc,
+                                zoom: 1 + 0.15 * pc, // Codex: 1.35 ray çatallanıyordu
+                                refract: 0.12,
+                                bevel: 0.18,
                                 child: const ColoredBox(color: Color(0x14FFFFFF)),
                               )
                             : const ColoredBox(color: Color(0x26FFFFFF)),

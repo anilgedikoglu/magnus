@@ -7,7 +7,7 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 1338** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 120, tur 8: 180, tur 9: 140, tur 10: 120; kalan Yousuf/Sonuç/Giriş çeviride, tur 11–12 seçimde) — her tur sonunda güncelle.
+- **Toplam eklenen: 1398** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140; tur 11–12 seçimde — Codex sınırı) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
@@ -47,6 +47,9 @@
 | Kâhin Khaleesi | `kahinler.json` › `kahinler.khaleesi` | khaleesi_52–71 |
 | Kader Kitabı | `kaderkitabi.json` › `kaderkitabi` (M2) | 270–309 |
 | Karşılama – 5. ziyaret | `karsilamalar.json` › `karsilamalar` (ziyaret 5) | 580–619 |
+| Kâhin Yousuf | `kahinler.json` › `kahinler.yousuf` | yousuf_43–62 |
+| Kahve – Sonuç | `kahve_sonuc.json` › `sonuclar` | 439–458 |
+| Kahve – Giriş | `kahve_giris.json` › `girisler` | 789–808 |
 | Kahve – Bağlama | `kahve_baglama.json` › `baglamalar` | 251–290 |
 | Faloya (3) | `faloya.json` › `faloya` | 132–171 |
 

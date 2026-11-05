@@ -10,9 +10,10 @@ const double _inset = 12; // sahte üst güvenli alan
 const double _gap = 8; // layer 2 – ızgara aralığı
 
 class _Harness extends StatelessWidget {
-  const _Harness({required this.height, required this.ctrl});
+  const _Harness({required this.height, required this.ctrl, this.hold = 0});
   final ValueNotifier<double> height;
   final ScrollController ctrl;
+  final double hold;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,8 @@ class _Harness extends StatelessWidget {
               controller: ctrl,
               physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
               slivers: [
-                HeaderSpacerSliver(height: height, extra: _inset + _gap, slack: _gap),
+                HeaderSpacerSliver(
+                    height: height, extra: _inset + _gap, slack: _gap, hold: hold),
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
                     (context, i) => SizedBox(height: 100, key: ValueKey('item$i')),
@@ -41,6 +43,7 @@ class _Harness extends StatelessWidget {
             right: 0,
             child: ScrollFollower(
               controller: ctrl,
+              hold: hold,
               child: ValueListenableBuilder<double>(
                 valueListenable: height,
                 builder: (context, h, _) =>
@@ -181,6 +184,47 @@ void main() {
     final after = global(t.getSemantics(find.bySemanticsLabel('bant')));
     expect(after.top, closeTo(before.top - 30 * dpr, 0.01));
     handle.dispose();
+  });
+
+  testWidgets('bekleme: önce menü bandın ALTINA girer, sonra bant menüyle birlikte çıkar', (t) async {
+    await t.pumpWidget(_Harness(height: height, ctrl: ctrl, hold: 120));
+    Rect l2() => t.getRect(find.byKey(const ValueKey('layer2')));
+    ctrl.jumpTo(80);
+    await t.pump();
+    expect(l2().top, 0, reason: 'bekleme bitmeden bant yerinde');
+    expect(top(t, 'item0'), _inset + 56 + _gap - 80, reason: 'menü kayıyor (bandın altına)');
+    ctrl.jumpTo(150);
+    await t.pump();
+    expect(l2().top, -30, reason: 'bekleme sonrası menüyle aynı hızda');
+    ctrl.jumpTo(120 + _inset + 56 + 5);
+    await t.pump();
+    expect(l2().bottom, lessThanOrEqualTo(0), reason: 'tamamen çıktı');
+    // Geri: bant üstten iner, beklemede yerine oturur, menü son kısmı altından çıkar.
+    ctrl.jumpTo(100);
+    await t.pump();
+    expect(l2().top, 0);
+    ctrl.jumpTo(0);
+    await t.pump();
+    expect(top(t, 'item0') - l2().bottom, _gap, reason: 'her şey ilk yerinde');
+  });
+
+  testWidgets('bekleme sırasında bant uzarsa menü onunla iner; gizliyken menü oynamaz', (t) async {
+    await t.pumpWidget(_Harness(height: height, ctrl: ctrl, hold: 120));
+    Rect l2() => t.getRect(find.byKey(const ValueKey('layer2')));
+    ctrl.jumpTo(60);
+    await t.pump();
+    final item = top(t, 'item1');
+    height.value = 104;
+    await t.pump();
+    expect(top(t, 'item1'), item + 48, reason: 'bant uzadı, altındaki menü de indi');
+    expect(l2().top, 0);
+    ctrl.jumpTo(1000);
+    await t.pump();
+    final before = top(t, 'item12');
+    height.value = 152;
+    await t.pump();
+    expect(top(t, 'item12'), before, reason: 'gizli bant uzadı, menü yerinde');
+    expect(l2().bottom, lessThanOrEqualTo(0));
   });
 
   testWidgets('üstte esneme: layer 2 aşağı inmez', (t) async {

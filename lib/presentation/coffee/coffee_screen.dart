@@ -48,6 +48,26 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   // ── Fal konusu ──────────────────────────────────────────────────────────
   String? _falKonusu;   // null = henüz seçilmedi (konu ekranı gösterilir)
 
+  /// Konu ikonları ilk karede hazır olsun (Anıl, 2026-11-06: ilk açılışta kutular ince
+  /// çubuk gibi başlayıp açılıyordu — görsel yüklenene kadar kutu genişliği 0'dı).
+  static const _konuIkonlari = [
+    'assets/images/fal_konu/fgenel.png',
+    'assets/images/fal_konu/fask.png',
+    'assets/images/fal_konu/fkariyer.png',
+    'assets/images/fal_konu/fsaglik.png',
+  ];
+  bool _ikonlarYuklendi = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_ikonlarYuklendi) return;
+    _ikonlarYuklendi = true;
+    for (final p in _konuIkonlari) {
+      precacheImage(AssetImage(p), context);
+    }
+  }
+
   static const _fincanImages = [
     'assets/images/kahve/Fincan1.png',
     'assets/images/kahve/Fincan3.png',
@@ -187,10 +207,10 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   Widget _buildKonuSecim(AppStrings s) {
     // (key, ikonDosya, etiket)
     final konular = [
-      ('genel',   'assets/images/fal_konu/fgenel.png',   s.general),
-      ('ask',     'assets/images/fal_konu/fask.png',     s.love),
-      ('kariyer', 'assets/images/fal_konu/fkariyer.png', s.career),
-      ('saglik',  'assets/images/fal_konu/fsaglik.png',  s.health),
+      ('genel',   _konuIkonlari[0], s.general),
+      ('ask',     _konuIkonlari[1], s.love),
+      ('kariyer', _konuIkonlari[2], s.career),
+      ('saglik',  _konuIkonlari[3], s.health),
     ];
 
     return Padding(
@@ -221,9 +241,11 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
                 onTap: () => setState(() => _falKonusu = key),
                 child: Column(
                   children: [
-                    // Kare kutu
+                    // Kare kutu — hücre genişliğini TAM doldurur (görsel yüklenmeden de;
+                    // önceden genişlik görselden geliyordu → ilk açılışta ince çubuk).
                     Expanded(
                       child: Container(
+                        width: double.infinity,
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(
                             begin: Alignment.topLeft,

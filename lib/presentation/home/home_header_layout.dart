@@ -8,6 +8,10 @@
 //    yok). Layer 2 tamamen kaydırılıp gizlenmişken boy değişirse kaydırma ofseti AYNI
 //    miktarda düzeltilir (sliver scrollOffsetCorrection) → kullanıcı aşağıdayken yeni balon
 //    gelince menü zıplamaz; başlık görünürken ise menü balonla birlikte yumuşakça iner.
+//  • Bekleme ([hold], Anıl 2026-11-06: "menü ikonları yukarı swipe'da önce chat layer'ının
+//    altına kaymalı, sonra chat layer'ı da yukarı kayıp kaybolmalı"): ilk [hold] kadar
+//    kaydırmada layer 2 yerinde durur, ızgara ALTINA girer; sonra ızgarayla aynı hızda çıkar.
+//    Geri gelirken simetrik: bant üstten kayarak iner, son [hold]'da ızgara altından çıkar.
 //  • [ScrollFollower]: layer 2'yi ızgaranın kaydırmasıyla yukarı taşır. Ofseti BOYAMA
 //    anında okur: düzeltme (bildirim üretmez) yerleşimde uygulandığı için build anında
 //    okunan ofset bir kare geride kalır ve gizli başlık birkaç piksel görünürdü.
@@ -17,13 +21,14 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 /// Izgaranın üst boşluğu: `extra + height.value`. Başlık gizliyken (kaydırma ofseti
-/// ≥ eski boşluk − [slack]) boy değişimi kadar ofset düzeltilir.
+/// ≥ eski boşluk − [slack] + [hold]) boy değişimi kadar ofset düzeltilir.
 class HeaderSpacerSliver extends LeafRenderObjectWidget {
   const HeaderSpacerSliver({
     super.key,
     required this.height,
     this.extra = 0,
     this.slack = 0,
+    this.hold = 0,
   });
 
   /// Layer 2'nin güvenli alan altındaki (canlı) yüksekliği.
@@ -35,16 +40,20 @@ class HeaderSpacerSliver extends LeafRenderObjectWidget {
   /// Boşluğun alttaki bu kadarı görünse de başlık gizli sayılır (başlık–ızgara aralığı).
   final double slack;
 
+  /// Başlığın yerinde beklediği kaydırma ([ScrollFollower.hold] ile aynı olmalı).
+  final double hold;
+
   @override
   RenderHeaderSpacerSliver createRenderObject(BuildContext context) =>
-      RenderHeaderSpacerSliver(height: height, extra: extra, slack: slack);
+      RenderHeaderSpacerSliver(height: height, extra: extra, slack: slack, hold: hold);
 
   @override
   void updateRenderObject(BuildContext context, RenderHeaderSpacerSliver renderObject) {
     renderObject
       ..height = height
       ..extra = extra
-      ..slack = slack;
+      ..slack = slack
+      ..hold = hold;
   }
 }
 
@@ -53,9 +62,11 @@ class RenderHeaderSpacerSliver extends RenderSliver {
     required ValueListenable<double> height,
     double extra = 0,
     double slack = 0,
+    double hold = 0,
   })  : _height = height,
         _extra = extra,
-        _slack = slack;
+        _slack = slack,
+        _hold = hold;
 
   ValueListenable<double> _height;
   set height(ValueListenable<double> v) {
@@ -82,6 +93,13 @@ class RenderHeaderSpacerSliver extends RenderSliver {
     markNeedsLayout();
   }
 
+  double _hold;
+  set hold(double v) {
+    if (v == _hold) return;
+    _hold = v;
+    markNeedsLayout();
+  }
+
   /// Son yerleşimdeki boşluk (ilk yerleşimden önce null).
   double? _laidOut;
 
@@ -105,7 +123,7 @@ class RenderHeaderSpacerSliver extends RenderSliver {
     final extent = _extent;
     final old = _laidOut;
     _laidOut = extent;
-    if (old != null && old != extent && c.scrollOffset > 0 && c.scrollOffset >= old - _slack) {
+    if (old != null && old != extent && c.scrollOffset > 0 && c.scrollOffset >= old - _slack + _hold) {
       // Başlık ekranın üstünde, görünmüyor: altındaki menü yerinde kalsın.
       geometry = SliverGeometry(scrollOffsetCorrection: extent - old);
       return;
@@ -120,25 +138,37 @@ class RenderHeaderSpacerSliver extends RenderSliver {
   }
 }
 
-/// Çocuğunu [controller]'ın ofseti kadar (0 … kendi yüksekliği) yukarı taşır.
-/// Ofset boyama anında okunur; kaydırmada yalnız yeniden boyar (yeniden kurulum yok).
+/// Çocuğunu [controller]'ın ofseti kadar (önce [hold] bekler; 0 … kendi yüksekliği)
+/// yukarı taşır. Ofset boyama anında okunur; kaydırmada yalnız yeniden boyar.
 class ScrollFollower extends SingleChildRenderObjectWidget {
-  const ScrollFollower({super.key, required this.controller, super.child});
+  const ScrollFollower({super.key, required this.controller, this.hold = 0, super.child});
 
   final ScrollController controller;
 
+  /// Bu kadar kaydırmaya dek yerinde durur (ızgara altına girer), sonra birlikte kayar.
+  final double hold;
+
   @override
   RenderScrollFollower createRenderObject(BuildContext context) =>
-      RenderScrollFollower(controller);
+      RenderScrollFollower(controller, hold: hold);
 
   @override
   void updateRenderObject(BuildContext context, RenderScrollFollower renderObject) {
-    renderObject.controller = controller;
+    renderObject
+      ..controller = controller
+      ..hold = hold;
   }
 }
 
 class RenderScrollFollower extends RenderProxyBox {
-  RenderScrollFollower(this._controller);
+  RenderScrollFollower(this._controller, {double hold = 0}) : _hold = hold;
+
+  double _hold;
+  set hold(double v) {
+    if (v == _hold) return;
+    _hold = v;
+    _moved();
+  }
 
   ScrollController _controller;
   set controller(ScrollController v) {
@@ -170,12 +200,12 @@ class RenderScrollFollower extends RenderProxyBox {
     super.detach();
   }
 
-  /// Yukarı kayma miktarı: ofset, [0, kendi yüksekliği] aralığına kırpılır
+  /// Yukarı kayma miktarı: (ofset − bekleme), [0, kendi yüksekliği] aralığına kırpılır
   /// (üstte esneme olsa da aşağı inmez; tamamen gizlenince durur).
   double get shift {
     if (!_controller.hasClients || !hasSize) return 0;
     final px = _controller.positions.first.pixels;
-    return px.clamp(0.0, size.height);
+    return (px - _hold).clamp(0.0, size.height);
   }
 
   @override

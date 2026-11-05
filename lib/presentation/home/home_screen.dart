@@ -125,6 +125,10 @@ const double kChatPadBottom = 8;
 const double kChatRowGap = 8;
 const double kHomeLayerGap = 8;
 
+/// Yukarı kaydırmada layer 2 bu kadar yerinde durur, menü ALTINA girer; sonra menüyle
+/// birlikte yukarı çıkıp kaybolur (Anıl, 2026-11-06). Geri gelişte simetrik.
+const double kHomeHeaderHold = 120;
+
 /// Layer 2 en çok bu kadar satır gösterir; fazlası kendi içinde yukarı kayar.
 const int kChatMaxRows = 3;
 
@@ -848,6 +852,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             right: 0,
             child: ScrollFollower(
               controller: _gridScrollCtrl,
+              hold: kHomeHeaderHold,
               child: RepaintBoundary(
                 child: AnimatedBuilder(
                   animation: _hdrCtrl,
@@ -1077,7 +1082,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       slivers: [
         // Layer 2'nin canlı yüksekliği kadar boşluk; başlık gizliyken boy değişirse menü
         // yerinde kalır (kaydırma ofseti düzeltilir).
-        HeaderSpacerSliver(height: _hdrCtrl, extra: topExtra, slack: kHomeLayerGap),
+        HeaderSpacerSliver(
+            height: _hdrCtrl, extra: topExtra, slack: kHomeLayerGap, hold: kHomeHeaderHold),
         SliverPadding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           sliver: SliverMainAxisGroup(slivers: slivers),

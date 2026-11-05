@@ -266,14 +266,15 @@ void main() {
     expect(find.text('A'), findsOneWidget);
   });
 
-  testWidgets('çekerken gösterge görünür, bırakınca kaybolur', (t) async {
+  testWidgets('çekerken kenarda gösterge ÇIKMAZ (Anıl, 2026-11-06), geri çekince iptal', (t) async {
     final r = await _pump(t);
     r.push('/a');
     await t.pumpAndSettle();
     final g = await t.startGesture(const Offset(8, 400));
     await g.moveBy(const Offset(40, 0));
     await t.pump();
-    expect(find.byKey(const ValueKey('edge-back-hint')), findsOneWidget);
+    expect(find.byKey(const ValueKey('edge-back-hint')), findsNothing);
+    expect(find.byIcon(Icons.chevron_left_rounded), findsNothing);
     await g.moveBy(const Offset(-38, 0)); // geri çek → iptal
     await t.pump();
     await g.up();

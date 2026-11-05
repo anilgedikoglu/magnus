@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
-import '../constants/app_colors.dart';
 import 'swipe_back.dart';
 
 /// Kenar şeridi genişliği — yalnız [NoEdgeSwipeBack] `edgeOnly` alanlarında kullanılır
@@ -26,7 +25,8 @@ const double kEdgeSwipeThreshold = 60;
 ///   dokunuşu o işlerse burada hiçbir şey yapılmaz (çift geri yok).
 /// - Kenara değen sürükleme alanları (çark, kazıma) [NoEdgeSwipeBack] ile sarılır.
 /// - Raw `Listener` → jest arenasına girmez; ScrollView/PageView/düğmelerle yarışmaz.
-/// - Çekerken sol kenarda cam bir geri oku belirir; eşik geçilince altına döner (+ hafif titreşim).
+/// - Görsel gösterge YOK (Anıl, 2026-11-06: "sağ sol swipe'larda kenardaki şey çıkmasın");
+///   eşik geçilince yalnız hafif titreşim.
 class EdgeSwipeBack extends StatefulWidget {
   const EdgeSwipeBack({
     super.key,
@@ -81,16 +81,7 @@ class NoEdgeSwipeBack extends StatelessWidget {
   }
 }
 
-class _EdgeDrag {
-  const _EdgeDrag(this.y, this.dx);
-  final double y;
-
-  /// Geçerli (yatay baskın, sağa) çekme miktarı; değilse 0.
-  final double dx;
-}
-
 class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
-  final _drag = ValueNotifier<_EdgeDrag?>(null);
   final _down = <int>{};
   int? _pointer;
   Offset? _start;
@@ -102,12 +93,6 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
   bool _decided = false;
   static const double _slop = 10;
 
-  @override
-  void dispose() {
-    _drag.dispose();
-    super.dispose();
-  }
-
   void _reset() {
     _pointer = null;
     _start = null;
@@ -115,7 +100,6 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
     _route = null;
     _reached = false;
     _decided = false;
-    _drag.value = null;
   }
 
   /// Navigatörün en üstteki rotası (hiçbir şeyi kapatmadan okunur).
@@ -185,7 +169,6 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
       _decided = true;
     }
     final valid = d.dx > 0 && d.dx.abs() > d.dy.abs() * 1.5;
-    _drag.value = _EdgeDrag(e.position.dy, valid ? d.dx : 0);
     final reached = valid && d.dx > widget.threshold;
     if (reached && !_reached) HapticFeedback.selectionClick();
     _reached = reached;
@@ -238,80 +221,7 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
       onPointerMove: _onMove,
       onPointerUp: _onUp,
       onPointerCancel: _onCancel,
-      child: Stack(
-        fit: StackFit.expand,
-        textDirection: TextDirection.ltr,
-        children: [
-          widget.child,
-          IgnorePointer(
-            child: ValueListenableBuilder<_EdgeDrag?>(
-              valueListenable: _drag,
-              builder: (context, d, _) {
-                if (d == null || d.dx <= 0) return const SizedBox.shrink();
-                return _EdgeBackHint(
-                  y: d.y,
-                  progress: (d.dx / widget.threshold).clamp(0.0, 1.0),
-                  reached: d.dx > widget.threshold,
-                );
-              },
-            ),
-          ),
-        ],
-      ),
+      child: widget.child,
     ));
-  }
-}
-
-/// Sol kenardan kayarak gelen cam geri oku (Gece Grimuarı: cam + kemik, eşikte mum altını).
-class _EdgeBackHint extends StatelessWidget {
-  const _EdgeBackHint({required this.y, required this.progress, required this.reached});
-
-  final double y;
-  final double progress;
-  final bool reached;
-
-  static const double _size = 42;
-
-  @override
-  Widget build(BuildContext context) {
-    final mq = MediaQuery.maybeOf(context);
-    final h = mq?.size.height ?? 800;
-    final minTop = (mq?.padding.top ?? 0) + 8;
-    final maxTop = h - (mq?.padding.bottom ?? 0) - _size - 8;
-    final top = maxTop > minTop ? (y - _size / 2).clamp(minTop, maxTop).toDouble() : minTop;
-    final t = Curves.easeOutCubic.transform(progress);
-    return Stack(
-      textDirection: TextDirection.ltr,
-      children: [
-        Positioned(
-          key: const ValueKey('edge-back-hint'),
-          left: -_size + (_size + 10) * t,
-          top: top,
-          child: Opacity(
-            opacity: (0.25 + 0.75 * t).clamp(0.0, 1.0),
-            child: Container(
-              width: _size,
-              height: _size,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.glassTintReading,
-                border: Border.all(
-                  color: reached ? AppColors.gold : AppColors.rim,
-                  width: reached ? 1.2 : 0.8,
-                ),
-                boxShadow: const [
-                  BoxShadow(color: Color(0x73000000), blurRadius: 14, offset: Offset(0, 4)),
-                ],
-              ),
-              child: Icon(
-                Icons.chevron_left_rounded,
-                size: 26,
-                color: reached ? AppColors.gold : AppColors.bone,
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
   }
 }

@@ -9,6 +9,7 @@ import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/utils/admin_gate.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/glass_tab_bar.dart';
 import '../../core/widgets/living_nebula.dart';
@@ -1524,24 +1525,7 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
-  // ── Admin kontrolü ───────────────────────────────────────────────────────
-
-  // Türkçe i/ı farkını görmezden gelen normalize: hepsini 'i'ye indirir.
-  // 'Anıl', 'Anil', 'ANIL', 'ANıL' → 'anil'
-  static String _trNorm(String s) => s
-      .replaceAll('ı', 'i')
-      .replaceAll('I', 'i')
-      .replaceAll('İ', 'i')
-      .toLowerCase();
-
-  bool _isAdmin(UserProfile p) =>
-      _trNorm(p.name) == 'anil' &&
-      p.maritalStatus == 'evli' &&
-      p.birthDate == '1983-10-14' &&
-      p.job == 'kamusektoru' &&
-      p.zodiacSign == 'Terazi' &&
-      p.birthTime == '13:30' &&
-      p.birthCity == 'Ankara';
+  // ── Admin kontrolü (kişisel veri içermez — bkz. core/utils/admin_gate.dart) ──
 
   // ── Üst bar ──────────────────────────────────────────────────────────────
 
@@ -1550,7 +1534,7 @@ class SettingsScreen extends ConsumerWidget {
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       child: Row(
         children: [
-          if (_isAdmin(profile))
+          if (isAdmin(profile, ref.read(sharedPrefsProvider)))
             IconButton(
               icon: const Icon(Icons.admin_panel_settings_outlined,
                   color: AppColors.gold, size: 24),

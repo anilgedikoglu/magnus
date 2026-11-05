@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/utils/admin_gate.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 import 'chat_controller.dart';
@@ -241,25 +242,14 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   }
 
   Future<void> _adminBypass() async {
-    final adminProfile = UserProfile(
-      name: 'Anıl',
-      lastName: 'Gedikoğlu',
-      age: 42,
-      gender: 'erkek',
-      job: 'kamusektoru',
-      maritalStatus: 'evli',
-      birthDate: '1983-10-14',
-      birthCity: 'Ankara',
-      zodiacSign: 'Terazi',
-      birthTime: '13:30',
-      onboardingComplete: true,
-    );
-    await ref.read(userProfileProvider.notifier).save(adminProfile);
+    // Nötr profil (kişisel veri yok) + yönetici bayrağı — bkz. admin_gate.dart.
+    await ref.read(userProfileProvider.notifier).save(neutralAdminProfile());
     // Dil seçimini de işaretle (yoksa router /language'a yönlendirebilir)
     await ref.read(languagePickedProvider.notifier).markPicked();
     // Admin modunda reklamlar kapalı
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('admin_ads_disabled', true);
+    await prefs.setBool(kAdminModeKey, true);
     AdService.instance.setAdsDisabled(true);
     if (mounted) context.go('/home');
   }

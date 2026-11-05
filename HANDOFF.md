@@ -17,15 +17,16 @@
 - Önceki: cam alt bar + ana sekmeler (`main_tabs.dart`, `glass_tab_bar.dart`), Android geri tuşu düzeltmesi,
   Kullanıcı Bilgileri yaşayan nebula (şimdi doygunluk 0.58).
 
+- **2026-11-05 test build'i `10.8.7+261`** (Anıl "test çık"): Codex son davranış incelemesi → BULGU YOK.
+  Claude code-reviewer'ın 3 regresyonu + EN tarot kart hatası önceden düzeltilmişti (e1d6d5e8).
+  Yönetici "godag" girişindeki gerçek kişisel veri koddan çıkarıldı → `lib/core/utils/admin_gate.dart`
+  (nötr profil + `admin_mode` bayrağı; eski cihaz FNV-1a özetiyle tanınır), test `test/admin_gate_test.dart`.
+
 ## Yarım kalan
-- **Codex son incelemesi YAPILMADI** (Codex kullanım limiti, 2026-11-05 ~02:56'ya kadar). Claude
-  code-reviewer 55 dosyayı taradı: 3 regresyon (biyoritim üst geri, tarot türü çift SafeArea, boş gelen
-  kutusunda kaydırma) + önceden var olan EN tarot kart görseli hatası → hepsi düzeltildi (e1d6d5e8, testli).
-- **Gerçek cihazda hiç denenmedi:** yeni zemin (grain + vinyet), filmli görsellerin parlaklığı, cam bar,
-  Olumlama'daki çift `GrimoireBackdrop` çapraz geçişinin düşük cihazda kare süresi.
+- **Gerçek cihazda ilk kez bu build'le denenecek:** yeni zemin (grain + vinyet), filmli görsellerin parlaklığı,
+  cam bar, Olumlama'daki çift `GrimoireBackdrop` çapraz geçişinin düşük cihazda kare süresi.
 - Dert Ortağı içerik verisinde (200 dert + 1000 tavsiye) İngilizce yok → ayrı görev önerildi.
-- Admin "godag" bypass'ında gerçek kişisel veri var (yayınlanan koda giriyor) → ayrı görev önerildi.
-- Mağaza build'i ALINMADI (Anıl "test çık" demeden yok). Bir sonraki: `10.8.7+261` (main `10.8.6+258`).
+- Bir sonraki build: `10.8.8+264` (yalnız "test çık" ile).
 - Takipsiz geçici dosyalar (`test/_visual_starfield_capture_test.dart`, `test/goldens/`, `AGENTS.md`):
   protect-tests hook silmeyi engelliyor; commit edilmedi.
 
@@ -37,9 +38,7 @@
 - `dusuk.cmd flutter.bat ...` arka planda asılı kalır → `dusuk.cmd cmd /c flutter.bat ... < /dev/null`.
 
 ## Sıradaki adım
-- Codex: "Önce HANDOFF.md'yi oku" + `git diff 58fb31a5 HEAD -- lib` için davranış regresyonu incelemesi
-  (tercihler/zamanlayıcılar/reklam/inbox/geri tuşu) — özellikle `lib/presentation/kehanet/*`, `tarot/*`,
-  `kadercarki`, `askuyumu`, `inbox_detail_screen.dart`.
+- Anıl'ın `10.8.7+261` cihaz geri bildirimi → ayarlar.
 - Anıl cihazda bakınca: film gücü (`FilmedImage.restSaturation/restBrightness`), zemin grain/mum ışığı
   (`GrimoireBackdrop` candle/vignette/grain), menü kartı etiketi, glif seti (`occult_glyphs.dart`).
-- "test çık" gelirse: pubspec `10.8.7+261` → AAB (`C:\src\flutter`) + main'e push → Codemagic `ios-release`.
+- "test çık" gelirse: pubspec `10.8.8+264` → AAB (`C:\src\flutter`) + main'e push → Codemagic `ios-release`.

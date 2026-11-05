@@ -5,11 +5,10 @@
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **main'deki sürüm: `10.8.6+258`** (başka bir oturum: Android API 36 hedefi + intl ^0.20.2, commit `0fd1cc89`).
-  Not: o oturum +1 artırmış (257→258); kural +3.
+- **main'deki sürüm: `10.8.7+261`** (2026-11-05 test build'i: Gece Grimuarı + kişisel verisiz yönetici kapısı).
 - **⚠️ TOOLCHAIN: Flutter 3.41.5 (`C:\src\flutter\bin\flutter.bat`).** main bunu ister (API 36 = 3.41'in
   `flutter.targetSdkVersion`). `C:\flutter` 3.29.2 ile `pub get` çözülmez. Codemagic de 3.41.5'e hizalandı.
-- **Bir sonraki build: `10.8.7+261`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
+- **Bir sonraki build: `10.8.8+264`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
@@ -931,12 +930,14 @@ static const _kahveJsonKeys = {
 
 ---
 
-## Admin Bypass — Onboarding (chat_screen.dart)
+## Admin Bypass — Onboarding (chat_screen.dart + core/utils/admin_gate.dart)
 
-İsim alanına `godag` yazılınca onboarding atlanır, admin profili otomatik doldurulur:
-- İsim: Anıl, Soyisim: Gedikoğlu, Doğum: 1983-10-14, Şehir: Ankara, Burç: Terazi
-- Meslek: kamusektoru, Medeni: evli, Saat: 13:30
-- `_adminBypass()` → `userProfileProvider.notifier.save(adminProfile)` → `context.go('/home')`
+İsim alanına `godag` yazılınca onboarding atlanır. **Kodda kişisel veri YOK (2026-11-05):**
+- `neutralAdminProfile()` kaydedilir (ad "Magnus", evli/kamu sektörü/erkek/Terazi — kimseye ait değil;
+  ad ayarlardan değiştirilebilir) + `admin_mode` prefs bayrağı + reklamlar kapalı.
+- Yönetici paneli: `isAdmin(profile, prefs)` = `admin_mode` bayrağı VEYA eski godag profilinin FNV-1a
+  özeti (eski cihazlar yönetici kalsın diye; açık metin veri yok). Testi: `admin_gate_test.dart`.
+- Gerçek ad/doğum bilgisi bu dosyaya, koda, asset'e YAZILMAZ (global gizlilik kuralı).
 
 ---
 

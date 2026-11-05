@@ -62,6 +62,11 @@
   revizyon istemek karşı modelin metinlerini kopyalattı → yeni sohbet + DeepThink + taslaksız yazım.
 
 ## Sıradaki adım
+- **Metin döngüsü durumu (2026-11-05 20:50):** toplam eklenen **1398** (tur 1–10 tamam). Tur 11–14: ChatGPT yazımları
+  `C:\Users\AG\Desktop\indirilen\tur1[1-4]_*_chatgpt.json` (14/kahve_gelisme yeniden yazılıyor); ChatGPT'nin Codex
+  metinlerinden seçimleri oturum scratchpad'inde `bekleyen_secimler.json`. Codex kullanım sınırında (23:34'te kuyruk
+  `codex_isler.txt` kaldığı yerden: 12. tur 4 yazım + 11–14 seçim + 13–14 yazım). Kader Çarkı'na metin EKLENMEDİ —
+  koşul filtresi bozuk (tüm metinlerde `wheel mod=fal`), ayrı görev önerildi.
 - **METİN DÖNGÜSÜ SÜRÜYOR (Anıl: 4-5 bin ilave metin; "sonra 10 tur daha"):** toplam/ilerleme `docs/metin_uretim_log.md` en üstte.
   Hat: ChatGPT (Anıl'ın Chrome'u) + Codex CLI (`scripts/metin_codex.sh`); adımlar skill `magnus-metin-uretimi` → "Döngü akışı".
   Tur tanımları `scripts/metin_turu_hazirla.js` TURLAR[3..10] (9-10 önceki tanımları yeniden kullanır). Çalışma dosyaları

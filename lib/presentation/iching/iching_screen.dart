@@ -17,7 +17,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/utils/variable_replacer.dart';
-import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../../data/models/inbox_item.dart';
@@ -201,8 +200,10 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const ElegantHourglass(size: 56, color: Color(0xFFD4AF37)),
-                    const SizedBox(height: 28),
+                    // Bekleme bir ritüel: hexagram aşağıdan yukarı çizgi çizgi atılır (2026-11-06;
+                    // eskiden "zarlar atılıyor" yazıp yalnız kum saati gösteriyordu).
+                    const _HexagramCasting(),
+                    const SizedBox(height: 24),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 32),
                       padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 20),
@@ -261,6 +262,119 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
       ),
     );
   }
+}
+
+/// Hexagram atılışı: 6 çizgi (yin kesik / yang düz) alttan üste ~0,75 sn arayla belirir;
+/// her çizgide altın parlama + hafif tık. Toplam ~4,6 sn (ekran 5 sn bekler).
+class _HexagramCasting extends StatefulWidget {
+  const _HexagramCasting();
+  @override
+  State<_HexagramCasting> createState() => _HexagramCastingState();
+}
+
+class _HexagramCastingState extends State<_HexagramCasting> with SingleTickerProviderStateMixin {
+  late final AnimationController _c =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 4600));
+  final List<bool> _yang = List.generate(6, (_) => Random().nextBool());
+  int _shown = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _c.addListener(() {
+      final n = (_c.value * 6.4).floor().clamp(0, 6);
+      if (n > _shown) {
+        _shown = n;
+        HapticFeedback.selectionClick();
+      }
+    });
+    final reduce = WidgetsBinding.instance.platformDispatcher.accessibilityFeatures.disableAnimations;
+    if (reduce) {
+      _c.value = 1;
+    } else {
+      _c.forward();
+    }
+  }
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => SizedBox(
+        width: 180,
+        height: 150,
+        child: AnimatedBuilder(
+          animation: _c,
+          builder: (context, _) =>
+              CustomPaint(painter: _HexagramPainter(t: _c.value, yang: _yang)),
+        ),
+      );
+}
+
+class _HexagramPainter extends CustomPainter {
+  _HexagramPainter({required this.t, required this.yang});
+  final double t;
+  final List<bool> yang;
+  static const _gold = Color(0xFFD4AF37);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final lineH = size.height / 6 * 0.46;
+    final gap = size.height / 6;
+    for (var i = 0; i < 6; i++) {
+      // i = 0 en alttaki çizgi
+      final p = ((t * 6.4 - i) / 0.8).clamp(0.0, 1.0);
+      if (p <= 0) continue;
+      final e = Curves.easeOutCubic.transform(p);
+      final cy = size.height - gap * (i + 0.5);
+      final half = size.width / 2 * e;
+      final cx = size.width / 2;
+      final glow = Paint()
+        ..color = _gold.withValues(alpha: 0.55 * (1 - p) + 0.18)
+        ..maskFilter = MaskFilter.blur(BlurStyle.normal, 6 + 10 * (1 - p));
+      final fill = Paint()
+        ..shader = const LinearGradient(
+          colors: [Color(0xFFB8941F), Color(0xFFFFE9A3), Color(0xFFB8941F)],
+        ).createShader(Rect.fromLTWH(0, cy - lineH / 2, size.width, lineH));
+      final rects = <RRect>[];
+      if (yang[i]) {
+        rects.add(RRect.fromRectAndRadius(
+            Rect.fromLTRB(cx - half, cy - lineH / 2, cx + half, cy + lineH / 2),
+            Radius.circular(lineH / 2)));
+      } else {
+        final g = size.width * 0.07;
+        if (half > g) {
+          rects.add(RRect.fromRectAndRadius(
+              Rect.fromLTRB(cx - half, cy - lineH / 2, cx - g, cy + lineH / 2),
+              Radius.circular(lineH / 2)));
+          rects.add(RRect.fromRectAndRadius(
+              Rect.fromLTRB(cx + g, cy - lineH / 2, cx + half, cy + lineH / 2),
+              Radius.circular(lineH / 2)));
+        }
+      }
+      for (final r in rects) {
+        canvas.drawRRect(r, glow);
+        canvas.drawRRect(r, fill);
+      }
+      // Belirme parlaması (çizginin merkezinde genişleyen halka)
+      if (p < 1) {
+        canvas.drawCircle(
+          Offset(cx, cy),
+          8 + 40 * e,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 1.5
+            ..color = _gold.withValues(alpha: 0.6 * (1 - p)),
+        );
+      }
+    }
+  }
+
+  @override
+  bool shouldRepaint(_HexagramPainter old) => old.t != t;
 }
 
 // Sıralı nokta animasyonu

@@ -15,6 +15,38 @@ class _FakeInbox extends InboxNotifier {
   List<InboxItem> build() => [];
 }
 
+/// Rozet testi için sabit gelen kutusu.
+class _FixedInbox extends InboxNotifier {
+  _FixedInbox(this.items);
+  final List<InboxItem> items;
+  @override
+  List<InboxItem> build() => items;
+}
+
+InboxItem _item(String id, {bool locked = false, bool read = false, Duration? unlockIn}) {
+  final now = DateTime.now();
+  if (unlockIn != null) {
+    return InboxItem(
+      id: id,
+      title: 'Fal',
+      text: 'metin',
+      date: now.toIso8601String(),
+      fortuneTypeKey: 'coffee',
+      unlockAt: now.add(unlockIn).toIso8601String(),
+    );
+  }
+  return InboxItem(
+    id: id,
+    title: 'Fal',
+    text: 'metin',
+    date: now.subtract(const Duration(minutes: 1)).toIso8601String(),
+    isRead: read,
+    fortuneTypeKey: 'coffee',
+    unlockAt: (locked ? now.add(const Duration(hours: 1)) : now.subtract(const Duration(seconds: 1)))
+        .toIso8601String(),
+  );
+}
+
 /// Durum (sayaç) + ticker durumu gösteren sahte sekme sayfası.
 class _Page extends StatefulWidget {
   final String name;
@@ -48,9 +80,12 @@ class _PageState extends State<_Page> {
   );
 }
 
-Widget _app() => ProviderScope(
+Widget _app({List<InboxItem>? inbox, Key? key}) => ProviderScope(
+  key: key, // farklı anahtar → yeni kapsayıcı (override değişimi için)
   overrides: [
-    inboxProvider.overrideWith(_FakeInbox.new),
+    inbox == null
+        ? inboxProvider.overrideWith(_FakeInbox.new)
+        : inboxProvider.overrideWith(() => _FixedInbox(inbox)),
     l10nProvider.overrideWithValue(AppStrings('tr')),
   ],
   child: MaterialApp(
@@ -91,7 +126,7 @@ void main() {
       reason: 'gizli sekmede animasyon/ticker çalışmamalı',
     );
 
-    await tester.tap(find.bySemanticsLabel('Ana menü, sayfa 1/3'));
+    await tester.tap(find.bySemanticsLabel('Ana Menü'));
     await tester.pumpAndSettle();
     expect(find.text('H:1'), findsOneWidget, reason: 'geri gelince sayaç aynı');
     expect(find.text('ticker H:true'), findsOneWidget);
@@ -114,27 +149,88 @@ void main() {
     sem.dispose();
   });
 
-  testWidgets('Ev 3 dokunuşu: ana menüye + sayfa 3, kapsül 3. ev slotunda', (
+  testWidgets('bar sırası Ev · Zarf · Profil; kapsül seçili sekmenin slotunda', (
     tester,
   ) async {
     final sem = tester.ensureSemantics();
     await tester.pumpWidget(_app());
+    double pillSlot() {
+      final bar = tester.getRect(find.byType(GlassTabBar));
+      final pill = tester.getRect(find.byKey(const ValueKey('glassTabBarPill')));
+      final slot = (bar.width - 10) / kGlassBarSlots;
+      return (pill.center.dx - bar.left - 5 - slot / 2) / slot;
+    }
+
+    final home = tester.getCenter(find.bySemanticsLabel('Ana Menü'));
+    final inbox = tester.getCenter(find.bySemanticsLabel('Gelen Kutusu'));
+    final profile = tester.getCenter(find.bySemanticsLabel('Kullanıcı Bilgileri'));
+    expect(home.dx, lessThan(inbox.dx));
+    expect(inbox.dx, lessThan(profile.dx));
+    expect(pillSlot(), closeTo(0, 0.02));
+
     await tester.tap(find.bySemanticsLabel('Kullanıcı Bilgileri'));
     await tester.pumpAndSettle();
     expect(find.text('P:0'), findsOneWidget);
-    await tester.tap(find.bySemanticsLabel('Ana menü, sayfa 3/3'));
+    expect(pillSlot(), closeTo(2, 0.02));
+
+    await tester.tap(find.bySemanticsLabel('Gelen Kutusu'));
     await tester.pumpAndSettle();
-    expect(find.text('H:0'), findsOneWidget);
-    final c = ProviderScope.containerOf(
-      tester.element(find.byType(MainTabsScreen)),
-    );
-    expect(c.read(homePageProvider), 2);
-    expect(c.read(mainTabProvider), MainTab.home);
-    final bar = tester.getRect(find.byType(GlassTabBar));
-    final pill = tester.getRect(find.byKey(const ValueKey('glassTabBarPill')));
-    final slot = (bar.width - 10) / kGlassBarSlots;
-    expect((pill.center.dx - bar.left - 5 - slot / 2) / slot, closeTo(3, 0.02));
+    expect(find.text('I:0'), findsOneWidget);
+    expect(pillSlot(), closeTo(1, 0.02));
     sem.dispose();
+  });
+
+  testWidgets('ana menüdeyken eve tekrar dokunuş: sekme aynı, reselect sayacı artar', (
+    tester,
+  ) async {
+    final sem = tester.ensureSemantics();
+    await tester.pumpWidget(_app());
+    final c = ProviderScope.containerOf(tester.element(find.byType(MainTabsScreen)));
+    expect(c.read(mainTabReselectProvider), 0);
+    await tester.tap(find.bySemanticsLabel('Ana Menü'));
+    await tester.pumpAndSettle();
+    expect(c.read(mainTabReselectProvider), 1);
+    expect(c.read(mainTabProvider), MainTab.home);
+    // Başka sekmeden eve dönüş "tekrar dokunuş" sayılmaz.
+    await tester.tap(find.bySemanticsLabel('Gelen Kutusu'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.bySemanticsLabel('Ana Menü'));
+    await tester.pumpAndSettle();
+    expect(c.read(mainTabReselectProvider), 1);
+    sem.dispose();
+  });
+
+  testWidgets('zarf rozeti: hazırlanan → turuncu, hepsi hazır → yeşil, okunmamış yok → yok', (
+    tester,
+  ) async {
+    Color? dot() {
+      final f = find.byKey(const ValueKey('glassTabBarInboxDot'));
+      if (f.evaluate().isEmpty) return null;
+      return (tester.widget<Container>(f).decoration! as BoxDecoration).color;
+    }
+
+    await tester.pumpWidget(_app(inbox: [_item('a', locked: true), _item('b')], key: const ValueKey(1)));
+    expect(dot(), const Color(0xFFFFA62B), reason: 'hazırlanan fal var → turuncu');
+
+    await tester.pumpWidget(_app(inbox: [_item('c'), _item('d', read: true)], key: const ValueKey(2)));
+    await tester.pump();
+    expect(dot(), const Color(0xFF44FF88), reason: 'hepsi hazır, okunmamış var → yeşil');
+
+    await tester.pumpWidget(_app(inbox: [_item('e', read: true)], key: const ValueKey(3)));
+    await tester.pump();
+    expect(dot(), isNull, reason: 'okunmamış yok → nokta yok');
+
+    // Zamanla: hazırlanan fal açılma anında kendiliğinden hazır olur → rozet yeşile döner
+    // (inboxProvider değişmese de; Codex: aksi hâlde turuncuda takılıyordu).
+    await tester.pumpWidget(_app(
+      inbox: [_item('f', unlockIn: const Duration(milliseconds: 300))],
+      key: const ValueKey(4),
+    ));
+    await tester.pump();
+    expect(dot(), const Color(0xFFFFA62B));
+    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 420)));
+    await tester.pump(const Duration(milliseconds: 420));
+    expect(dot(), const Color(0xFF44FF88), reason: 'açılma anı geçti → yeşil');
   });
 
   testWidgets('sayfa içinden selectMainTab (scope) çalışır', (tester) async {

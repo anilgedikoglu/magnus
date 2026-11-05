@@ -15,6 +15,7 @@ import '../../core/utils/admin_gate.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/glass_tab_bar.dart';
 import '../../core/widgets/living_nebula.dart';
+import '../../core/widgets/tab_swipe.dart';
 import '../../core/widgets/starfield_overlay.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -1567,27 +1568,20 @@ class SettingsScreen extends ConsumerWidget {
       }
     });
 
-    double? swipeStartX;
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
       // Klavye düzeni sıkıştırmasın; satır içi düzenleyici kendini klavyenin üstüne kaldırır.
       resizeToAvoidBottomInset: false,
-      body: Listener(
-        onPointerDown:  (e) => swipeStartX = e.position.dx,
-        onPointerUp:    (e) {
-          final dx = e.position.dx - (swipeStartX ?? e.position.dx);
-          swipeStartX = null;
-          // Sağdan sola swipe → ana menüye dön
-          if (dx < -60) {
-            if (MainTabsScope.maybeOf(context) != null) {
-              selectMainTab(context, MainTab.home); // sekme: sola kayarak çıkar
-            } else if (Navigator.canPop(context)) {
-              Navigator.pop(context);
-            }
-          }
-        },
-        onPointerCancel: (_) => swipeStartX = null,
+      // Soldan sağa swipe → barda soldaki komşu: Gelen Kutusu (2026-11-05 sırası:
+      // Ana Menü · Gelen Kutusu · Kullanıcı Bilgileri). Yön kilitli; satır içi düzenleyici
+      // açıkken kapalı (metin seçimi tutamacı sekme değiştirmesin — Codex). Tek başına
+      // rotadaysa geri hareketini genel EdgeSwipeBack yapar (çift geri olmasın).
+      body: TabSwipe(
+        threshold: 60,
+        enabled: () =>
+            MainTabsScope.maybeOf(context) != null && ref.read(_inlineEditProvider) == null,
+        onSwipeRight: () => selectMainTab(context, MainTab.inbox, entry: TabEntry.left),
         child: Stack(
           children: [
             // ── Arka plan: "yaşayan nebula" shader'ı — dalgalanma + alacalı renk +

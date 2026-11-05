@@ -5,7 +5,8 @@
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **main'deki sürüm: `10.8.10+270`** (2026-11-05 13:30 test build'i; önceki 267: 4 yeni fal — Tavşan Falı, Kısmetim Kim?, Arabam Ne?,
+- **main'deki sürüm: `10.8.11+273`** (2026-11-05 akşam test build'i: 3 ikonlu cam bar Ev·Zarf·Profil, tek kaydırmalı
+  3×9 ana menü, zarf rozeti turuncu/yeşil, yönlü esneyen kapsül + ~180 yeni metin. Önceki 270; önceki 267: 4 yeni fal — Tavşan Falı, Kısmetim Kim?, Arabam Ne?,
   Evim Neresi? — + serbest metin rüya yorumu (Claude Haiku) + açılış yasal bilgilendirmesi + her yerden kaydırarak geri).
   Android Play Dahili test + iOS TestFlight (GitHub Actions). Ayrıntı → HANDOFF.md.
   Android: Play **Dahili test** kanalında (üretime/incelemeye GÖNDERİLMEDİ — Anıl: "geliştirmeye devam, yalnız test").
@@ -19,7 +20,7 @@
 - **10.8.8+264 (2026-11-05, iOS TestFlight GitHub Actions):** Anıl cihazda gördü → RENKLER ESKİ PALETE döndü
   (yapı kaldı), gövde fontları eski (Nunito/Raleway; başlıklar Cinzel), sol kenardan kaydır = geri (tüm iç sayfalar),
   gelen kutusu hep sağdan, Kullanıcı Bilgileri düzenleyicisi dairelerin YERİNDE (satır içi), siyah ekran düzeltmesi.
-- **Bir sonraki build: `10.8.11+273`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
+- **Bir sonraki build: `10.8.12+276`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
@@ -642,55 +643,67 @@ Kontak sayfaları: `screens/kontak_once_A.png` (önce) / `kontak_sonra6_{A,B,C}.
 iOS 26 "Liquid Glass" tarzı cam alt bar (`lib/core/widgets/glass_tab_bar.dart`) en üstte, üçünde de
 TAM AYNI yerde ve geçişlerde hiç kımıldamadan durur; seçim kapsülü yay fiziğiyle kayar.
 
-**Bar: 5 eşit slot — Bilgisayar · Ev1 · Ev2 · Ev3 · Zarf** (Anıl, 2026-11-05: ana menünün 3 sayfası için
-3 ayrı rakamlı ev). Bar slotu = `barSlotFor(tab, homePage)`: profil→0, ana menü sayfa p→1+p, inbox→4.
+**Bar: 3 eşit slot — Ev · Zarf · Profil** (Anıl, 2026-11-05 "ÖNEMLİ MENÜ DEĞİŞİKLİĞİ"; önceki 5 slotlu
+Bilgisayar·Ev1·Ev2·Ev3·Zarf düzeni KALDIRILDI). Sıra `kMainTabOrder = [home, inbox, profile]`,
+`barSlotFor(tab)` = sıradaki indeks. `MainTab` sabitleri (profile 0 / home 1 / inbox 2) yalnız kimlik; sıra değildir.
 
 | Slot | Ekran | İkon (hepsi beyaz ÇİZGİ vektör glif, CustomPainter) | Giriş yönü |
 |---|---|---|---|
-| 0 | Kullanıcı Bilgileri (`SettingsScreen`, `MainTab.profile`) | `_ComputerPainter` — monitör | soldan |
-| 1-3 | Ana Menü sayfa 1-3 (`HomeScreen`, `MainTab.home`) | `_HousePainter(number)` — ev + çizgi rakam 1/2/3 | — |
-| 4 | Gelen Kutusu (`InboxScreen`, `MainTab.inbox`) | `_EnvelopePainter` — zarf | alttan (swipe ile: sağdan) |
+| 0 | Ana Menü (`HomeScreen`, `MainTab.home`) | `_HousePainter` — ev + kemerli kapı | — (en sol; dönüşte çıkan sayfa SAĞA kayar) |
+| 1 | Gelen Kutusu (`InboxScreen`, `MainTab.inbox`) | `_EnvelopePainter` — zarf + rozet | evden sağdan, profilden soldan |
+| 2 | Kullanıcı Bilgileri (`SettingsScreen`, `MainTab.profile`) | `_PersonPainter` — insan büstü (baş + omuz) | sağdan |
+
+**Ana menü = TEK sayfa, 3 sütun × 9 satır, yukarıdan aşağı kaydırmalı** (`HomeScreen._buildGrid`, GridView.builder,
+Bouncing). Sıra eski sayfa 1+2+3; her 3 satır eski sayfa rengini korur (pembe/mavi/yeşil çerçeve). PageView,
+sayfa göstergesi (üçlü çizgi), `homePageProvider`, hazırlanan fal yuvarlakları (`_FortuneProgressRow`,
+`_ArcProgressPainter`) KALDIRILDI; o alan ızgaraya katıldı. Izgara cam barın ARKASINA uzanır (`SafeArea(bottom:false)`,
+alt pay = güvenli alan + bar + 14). Bardaki eve TEKRAR dokunuş → liste başa kayar (`mainTabReselectProvider`, yalnız
+ana menü görünürken).
+
+**Zarf rozeti (`InboxBadge`):** hazırlanan (kilitli) fal varsa TURUNCU `#FFA62B`; yoksa ve okunmamış hazır fal varsa
+YEŞİL `#44FF88`; okunmamış yoksa nokta YOK. Doğrudan öğelerden hesaplanır (önbellekli `readyUnreadCountProvider`
+zamanla değişmez). Kilit zamana bağlı → MainTabs en erken `unlockAt`'e zamanlayıcı kurar + uygulamaya dönüşte
+(`AppLifecycleListener.onResume`) yeniler; yoksa rozet turuncuda takılırdı (Codex).
+
+**Kaydırma jestleri (`lib/core/widgets/tab_swipe.dart` `TabSwipe`):** raw Listener + YÖN KİLİDİ (ilk 12 px'te
+yatay = |dx| > |dy|×1.5; dikey kilitlenen hareket sekme değiştiremez) + yalnız ilk parmak (ikinci parmak iptal).
+Ana menü: sola → Gelen Kutusu. Profil: sağa → Gelen Kutusu (satır içi düzenleyici açıkken KAPALI — metin seçimi).
+Gelen Kutusu (GestureDetector hız): sağa → Ana Menü, sola → Profil.
 
 **İkon kuralı:** Dolu (beyaz dolgulu) varyant YOK — Anıl: "fazla beyazlı modeller kaba, çizgili modelleri kullan".
-Aktif sekme yalnız kapsülle gösterilir. Monitör + zarf glifleri ChatGPT'ye çizdirildi (önce görsel, sonra SVG:
-viewBox 24, stroke 2.1, yalnız M/L/Q/Z) ve birebir `Path`'e çevrildi. Rakamlar da font değil ÇİZGİ path
-(TextPainter test ortamında kutu basıyordu; font bağımlılığı da yok). Eski renkli PNG'ler (`bilgiekranilogo.png`,
-`inbox_icon.png`) barda artık kullanılmıyor.
+Aktif sekme yalnız kapsülle gösterilir. Zarf glifi ChatGPT'ye çizdirildi (SVG viewBox 24, stroke 2.1) ve birebir
+`Path`'e çevrildi; ev ve büst aynı dilde (24'lük ızgara, 2.1 çizgi, yuvarlak uç). Eski renkli PNG'ler barda yok.
 
 **KURALLAR (bozma):**
 - Sekme değiştirmek için **her yerde** `selectMainTab(context, MainTab.x)` kullan. `context.push('/settings')`,
   `Navigator.push(InboxScreen)`, `context.go('/inbox')` **KULLANMA** (eski yollar; sekme barını atlar).
   Kapsayıcı dışındaki (üstte açık) bir rotadan çağrılırsa provider'ı ayarlayıp `go('/home')` yapar.
-- Aktif sekme tek kaynak: `mainTabProvider`; ana menü sayfası tek kaynak: `homePageProvider`.
-  HomeScreen'de sayfa geçişinin TEK sahibi `_animateHomeTo` (swipe, semantik aksiyon, bar Ev1-3). Programatik
-  animasyon sürerken `onPageChanged` ara sayfayı provider'a YAZMAZ (`_animTarget`) → kapsül geri sekmez.
-  Gizli sekmede (TickerMode kapalı) `jumpToPage`. `PageController(initialPage: provider, keepPage: false)`.
+- Aktif sekme tek kaynak: `mainTabProvider`.
 - Sekmeler keyed Stack çocukları: state korunur; gizli sekmede `TickerMode` kapalı (nebula/yıldızlar durur).
   Ekranlar artık hep mounted → eskiden push/pop dönüşünde yapılan işler `ref.listen(mainTabProvider)` ile
   (HomeScreen: settings'ten dönünce `_refreshCredits`, ana menüden çıkarken `_scheduleUnlockTimer`).
 - `MainTabsScope.maybeOf(context) != null` → ekran sekme içinde: Settings "Ana Menü" butonu ve Inbox
   "Geri Git" GİZLİ (yerine bar); değilse (tek başına rota) eski butonlar yedek olarak çıkar.
-- İçerik bar için alttan pay bırakır: `kGlassBarReserve` (56 + 10). Inbox listesi camın ARKASINA uzanır.
+- İçerik bar için alttan pay bırakır: `kGlassBarReserve` (56 + 10). Inbox listesi ve ana menü ızgarası camın ARKASINA uzanır.
 - Fallar / inbox detayı kendi rotalarında açılır → kapsayıcının (ve barın) ÜSTÜNE biner.
 - Android geri: sekme ≠ ana menü ise ana menüye döner. ⚠️ go_router 13.2.5 `popRoute` hiçbir navigatör pop
   edemezken `maybePop()` ÇAĞIRMAZ (delegate.dart:59-77) → `PopScope` tek başına çalışmaz, uygulama kapanırdı.
   Çözüm: MainTabs'ta öncelikli `ChildBackButtonDispatcher` (üstte rota varsa önce o kapanır). `GoRoute.onExit`
   KULLANMA: `go()` navigasyonunda da çağrılıp yönlendirmeyi bloklar. `PopScope` yalnız predictive-back için kalır.
 - `AppShell` Scaffold `resizeToAvoidBottomInset: false` → bar klavyenin üstüne çıkmaz.
-- Yeşil durum kuralı korunur: `greenRing = !hasLocked && hasUnread` → zarftaki nokta YEŞİL (halka 2026-11-05 kaldırıldı:
-  "yeşil badge yeterli"); okunmamış →
-  zarfta nokta (yeşil halka varken yeşil, yoksa turuncu). Hazırlanan fal satırı ana menüde barın üstünde.
-- Ana menüdeki önceki/sonraki ok butonları KALDIRILDI: sayfalar swipe veya bardaki Ev1-3 ile; ekran okuyucu
-  için `Semantics(onIncrease/onDecrease)`; sayfa göstergesi duruyor. Etiketler: "Ana menü, sayfa 1/3" (TR/EN),
-  inbox'ta okunmamış varsa "Gelen Kutusu, okunmamış fal var".
+- Etiketler (ekran okuyucu): "Ana Menü", "Gelen Kutusu" / "…, hazırlanan fal var" / "…, okunmamış fal var",
+  "Kullanıcı Bilgileri" (TR/EN `AppStrings.tabHome/tabInbox*/settingsTitle`).
 
 **Cam:** tek `BackdropFilter` (blur σ20 + doygunluk 1.25 yalnız backdrop zincirinde) + `#1C1C1E` %55 tint +
 üst parlama + gradyan kenar ışığı + dış gölge. Seçim kapsülü: ikinci blur YOK. Yay: kütle 1, sertlik 420,
-sönüm 36; hıza göre ≤%10 uzama. Kırılma (lens) yok: `ImageFilter.shader` Skia'da desteklenmez; `liquid_glass_renderer`
+sönüm 36. **Esneme:** kapsül HAREKET YÖNÜNE uzar — hız×0.03 slot (en çok 0.32), sağa giderken sağ kenar,
+sola giderken sol kenar önden koşar; hız düştükçe (varınca) kısalır, uzarken %5'e kadar incelir. Kırılma (lens) yok: `ImageFilter.shader` Skia'da desteklenmez; `liquid_glass_renderer`
 Flutter 3.47+ ister. Neden Hero değil: `go('/inbox')` dal değişiminde uçuş yok, pop+push örtüşür (Codex).
-**Testler:** `test/main_tabs_test.dart` (state/ticker/scope/Ev3→sayfa 3 + GERÇEK go_router ile geri tuşu:
-çıkış yok/detay ve kök rota önce kapanır, `SystemNavigator.pop` dinlenerek), `test/glass_tab_bar_test.dart`.
-Görsel doğrulama: `build/visual_check/glassbar_capture_test.dart` (3 gerçek arka plan + kayma videosu).
+**Testler:** `test/main_tabs_test.dart` (state/ticker/scope, bar sırası, eve tekrar dokunuş, rozet renkleri +
+zamanla turuncu→yeşil, GERÇEK go_router ile geri tuşu: çıkış yok/detay ve kök rota önce kapanır),
+`test/glass_tab_bar_test.dart` (3 slot, yönlü esneme, rozet, reduced-motion), `test/tab_swipe_test.dart` (yön kilidi,
+çok parmak, eşik, devre dışı). Görsel doğrulama: `build/visual_check/menu3_capture_test.dart --dart-define=CAP_PHASE=<ad>`
+(gerçek uygulama: ana menü üst/orta/alt, başa dönüş, geçiş kareleri, sola kaydırma).
 
 ---
 
@@ -823,18 +836,9 @@ AnimatedBuilder(
 
 ---
 
-## Alt Nav Buton Boyutları (home_screen.dart `_buildBottomBar`)
+## Alt Nav Buton Boyutları — KALDIRILDI
 
-**Kural:** Sayfa konumuna göre büyüyen buton:
-- **1. sayfa** (showPrev=false, showNext=true): Sonraki = `2×navW+8` (büyük), diğerleri `navW`
-- **2. sayfa** (showPrev=true, showNext=true): hepsi `navW`
-- **3. sayfa** (showPrev=true, showNext=false): Önceki = `2×navW+8` (büyük), diğerleri `navW`
-
-`navW = (constraints.maxWidth - 3×8) / 4`
-
-Önceki ve Sonraki için `ClipRect + AnimatedContainer` pattern (width 0→navW→2×navW+8 animasyonu).
-Bilgi butonu: `SizedBox(width: navW)` — sabit.
-Inbox: `AnimatedContainer(width: navW)` — sabit genişlik.
+Eski önceki/sonraki butonları yok; alt gezinme = 3 slotlu cam bar (bkz. ANA SEKMELER + CAM ALT BAR).
 
 ---
 
@@ -994,13 +998,9 @@ Kullanıcı "renkli magnus yazı görseli koy" dediğinde bu asset kullanılır.
 
 ---
 
-## Hazırlanma Baloncukları — Rainbow Gradient (home_screen.dart)
+## Hazırlanma Baloncukları — KALDIRILDI (2026-11-05)
 
-`_ArcProgressPainter` → `gradientColors` parametresi eklendi.
-`_FortuneCircleBadge`'de `isLocked` ise `_ArcProgressPainter._rainbow` geçilir:
-- Renk sırası: mavi→cyan→yeşil→sarı→turuncu→kırmızı→mor→kırmızı→turuncu→sarı→yeşil→cyan→mavi (palindrom)
-- `SweepGradient` başlangıç: `pi/2 - segAngle/2` (alt)
-- `isReady` ise solid yeşil (`0xFF44FF88`)
+Ana menüdeki hazırlanan fal yuvarlakları (`_FortuneProgressRow`) kaldırıldı; durum bardaki zarf rozetinde (turuncu/yeşil).
 
 ---
 
@@ -1122,12 +1122,6 @@ Kaynak: `C:\src\magnus_app\assets\images\Yeniikonlar\` (renkli) ve `Yeniikonlar\
 - En altta `_buildBackButton(context)` ("< Geri Git")
 
 ---
-
-## Hazırlanma Çemberi Gradyan (home_screen.dart)
-
-`_ArcProgressPainter._rainbow` — 20 renk durağı, neon paleti:
-`Koyu Mavi(#1A47FF) → Camgöbeği(#00E5FF) → Mor(#8A2EFF) → Pembe(#FF2EC7) → Kırmızı(#FF3B30) → Sarımsı Beyaz(#FFF2A6) → Camgöbeği(#00E5FF)` ve devamı.
-`isReady` ise solid yeşil `0xFF44FF88`.
 
 ---
 

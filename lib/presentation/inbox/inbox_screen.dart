@@ -59,14 +59,19 @@ class InboxScreen extends ConsumerWidget {
       body: GrimoireBackdrop(child: GestureDetector(
         // Boş kutuda içerik yalnız ortadaki ikon/metin → opak, tüm alan kaydırmayı yakalar.
         behavior: HitTestBehavior.opaque,
-        // Soldan sağa swipe → geri (ana menüye dön)
+        // Soldan sağa swipe → ana menü (barda solda); sağdan sola → Kullanıcı Bilgileri
+        // (barda sağda). Tek başına rotadaysa soldan sağa = geri.
         onHorizontalDragEnd: (details) {
-          if ((details.primaryVelocity ?? 0) > 200) {
-            if (MainTabsScope.maybeOf(context) != null) {
-              selectMainTab(context, MainTab.home); // sekme: geldiği yöne kayarak çıkar
+          final v = details.primaryVelocity ?? 0;
+          final inTabs = MainTabsScope.maybeOf(context) != null;
+          if (v > 200) {
+            if (inTabs) {
+              selectMainTab(context, MainTab.home); // sekme: sağa kayarak çıkar
             } else if (Navigator.canPop(context)) {
               Navigator.pop(context);
             }
+          } else if (v < -200 && inTabs) {
+            selectMainTab(context, MainTab.profile, entry: TabEntry.right);
           }
         },
         child: Column(

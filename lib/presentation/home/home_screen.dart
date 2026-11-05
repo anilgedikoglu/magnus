@@ -43,22 +43,14 @@
 //   dönüşte _refreshCredits() → eğer fal tamamlanmamışsa (geri basıldıysa)
 //   date key set edilmemiştir, kredi otomatik 1'e döner.
 //
-// ── SAYFA YAPISI (3×3 Grid) ───────────────────────────────────────────────
-// Üç sayfa, her biri 9 ikonluk 3×3 ızgara:
-//   Sayfa 1: Kahve Falı, Tarot, Astroloji,
-//            Numeroloji, Durugörü, Yüz Falı,
-//            AstroTakvim, Biyoritim, Doğum Haritası
-//   Sayfa 2: Motivasyon, Dert Ortağı, Olumlama,
-//            Özlü Sözler, Acı Gerçekler, Kader Kitabı,
-//            Kehanet, Niyet, Japon Falı
-//   Sayfa 3: I-Ching, Aşk Uyumu, Kader Çarkı, Rüya Yorumu, + 5 yer tutucu (yakında)
-//
-// Sayfa geçişi: alt bardaki Önceki/Sonraki butonları VEYA yatay swipe
-//   (Listener ile — GestureDetector değil, jest arenası sorunu olmaz).
-//   Eşik: 50px yatay hareket. Geçiş animasyonu: 380ms easeInOut.
-//
-// Sayfa göstergesi: üç ince dikdörtgen (36×3px), aktif sayfa parlak mor.
-//   Grid'in içine Stack overlay olarak yerleştirilmiştir (alt kenar).
+// ── MENÜ YAPISI (tek ana menü, 3×9) — Anıl, 2026-11-05 ───────────────────
+// Sayfa YOK: 27 kart tek ızgarada, 3 sütun × 9 satır, yukarıdan aşağı kaydırılır
+// (_buildGrid). Sıra = eski sayfa 1 + 2 + 3 (_page1Items/_page2Items/_page3Items);
+// her 3 satırlık grup eski sayfa rengini korur (pembe / mavi / yeşil).
+// Izgara cam barın ARKASINA uzanır (alt pay = güvenli alan + bar). Sayfa göstergesi
+// ve hazırlanan fal yuvarlakları kaldırıldı; fal durumu bardaki zarf rozetinde.
+// Sola kaydırma (yatay > dikey×1.5) → gelen kutusu. Bardaki eve tekrar dokunuş →
+// liste başa kayar (mainTabReselectProvider).
 //
 // ── UNITY .ASSET DÖNÜŞÜM NOTU (metin motoru) ─────────────────────────────
 // Unity .asset dosyalarında `aciklama:` ve `element:` alanları YAML LİSTESİDİR.
@@ -106,11 +98,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
-import '../../data/models/inbox_item.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/filmed_image.dart';
 import '../../core/widgets/glass_tab_bar.dart';
+import '../../core/widgets/tab_swipe.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
 
@@ -122,15 +114,9 @@ class HomeScreen extends ConsumerStatefulWidget {
 }
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
-  // Başlangıç sayfası homePageProvider'dan (yeniden mount'ta bar ile uyuşsun);
-  // keepPage:false → PageStorage eski konumu geri yükleyip provider'ı ezmesin (Codex).
-  late final PageController _pageController;
+  // Tek ana menü (Anıl, 2026-11-05): 3 sütun × 9 satır, yukarıdan aşağı kaydırmalı.
+  final ScrollController _gridScrollCtrl = ScrollController();
   final ScrollController _chatScrollCtrl = ScrollController();
-  int _currentPage = 0;
-  /// Programatik sayfa animasyonunun hedefi (sürerken onPageChanged ara değerleri
-  /// provider'a yazılmaz → bardaki kapsül doğrudan hedefe kayar, geri sekmez).
-  int? _animTarget;
-  static const _totalPages = 3;
 
   final List<_ExtraBubble> _extraBubbles = [];
   int _typingIndex = 0; // hangi balon şu an yazılıyor
@@ -164,7 +150,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   String get _today => DateTime.now().toIso8601String().substring(0, 10);
 
-  double? _swipeStartX;
 
   void _onBubbleComplete(int index) {
     if (!mounted) return;
@@ -188,8 +173,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _currentPage = ref.read(homePageProvider).clamp(0, _totalPages - 1);
-    _pageController = PageController(initialPage: _currentPage, keepPage: false);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _scheduleUnlockTimer();
       _refreshCredits();
@@ -490,7 +473,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   void dispose() {
     _unlockTimer?.cancel();
-    _pageController.dispose();
+    _gridScrollCtrl.dispose();
     _chatScrollCtrl.dispose();
     super.dispose();
   }
@@ -522,49 +505,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     });
   }
 
-
-  // Başa sarma (modulo) yok: _animateHomeTo sınırlar (Codex: sarma, art arda
-  // aksiyonda son sayfadan 1. sayfaya atlatabiliyordu).
-  void _goNext() {
-    _scheduleUnlockTimer(); // sayfa değişiminde kilit kontrolü
-    _animateHomeTo(_currentPage + 1);
-  }
-
-  void _goPrev() {
-    _scheduleUnlockTimer();
-    _animateHomeTo(_currentPage - 1);
-  }
-
-  /// Sayfa geçişinin TEK sahibi (swipe, semantik aksiyon, bardaki Ev1/2/3) — iki
-  /// animasyon yarışmasın (Codex). Hedef ÖNCE yerel duruma yazılır, sonra provider'a:
-  /// provider dinleyicisi hedefi görüp tekrar tetiklemez.
-  void _animateHomeTo(int page) {
-    page = page.clamp(0, _totalPages - 1);
-    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-    // Gizli sekmedeyken (TickerMode kapalı) animasyon ilerlemez → anında atla.
-    final visible = TickerMode.valuesOf(context).enabled;
-    if (!_pageController.hasClients || !visible || reduce) {
-      _animTarget = null;
-      setState(() => _currentPage = page);
-      if (_pageController.hasClients) _pageController.jumpToPage(page);
-      _syncPageProvider(page);
-      return;
-    }
-    _animTarget = page;
-    setState(() => _currentPage = page);
-    _syncPageProvider(page);
-    _pageController
-        .animateToPage(page,
-            duration: const Duration(milliseconds: 380), curve: Curves.easeInOut)
-        .whenComplete(() {
-      if (_animTarget == page) _animTarget = null;
-    });
-  }
-
-  void _syncPageProvider(int page) {
-    final n = ref.read(homePageProvider.notifier);
-    if (n.state != page) n.state = page;
-  }
 
   // ─── Günlük kredi yükleme ─────────────────────────────────────────────────
   Future<void> _refreshCredits() async {
@@ -675,7 +615,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     });
   }
 
-  // ─── Sayfa 1 ──────────────────────────────────────────────────────────────
+  // ─── Satır 1-3 (eski sayfa 1) ───────────────────────────────────────────────
   List<_MenuItem> _page1Items(BuildContext context) {
     final s = ref.read(l10nProvider);
     return [
@@ -704,7 +644,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ];
   }
 
-  // ─── Sayfa 2 ──────────────────────────────────────────────────────────────
+  // ─── Satır 4-6 (eski sayfa 2) ───────────────────────────────────────────────
   List<_MenuItem> _page2Items(BuildContext context) {
     final s = ref.read(l10nProvider);
     return [
@@ -741,7 +681,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ];
   }
 
-  // ─── Sayfa 3 ──────────────────────────────────────────────────────────────
+  // ─── Satır 7-9 (eski sayfa 3) ───────────────────────────────────────────────
   List<_MenuItem> _page3Items(BuildContext context) {
     final s = ref.read(l10nProvider);
     return [
@@ -787,11 +727,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       // Ana menüye HER dönüşte (Codex: ayarlar→reset→inbox→ana menü yolu kaçıyordu).
       if (next == MainTab.home && prev != MainTab.home && mounted) _refreshCredits();
     });
-    // Bardaki Ev1/Ev2/Ev3 → o sayfaya git. Hedef (sürüyorsa) ya da mevcut sayfayla
-    // aynıysa yeni komut değildir (kendi yazdığımız değer) → yok say.
-    ref.listen<int>(homePageProvider, (_, next) {
-      final cur = _animTarget ?? _currentPage;
-      if (next != cur) _animateHomeTo(next);
+    // Ana menüdeyken bardaki eve tekrar dokunuş → listenin başına kaydır (iOS alışkanlığı).
+    // Yalnız ana menü görünürken (başka sekmeye tekrar dokunuş listeyi başa sarmasın).
+    ref.listen<int>(mainTabReselectProvider, (_, __) {
+      if (ref.read(mainTabProvider) == MainTab.home) _scrollGridToTop();
     });
 
     return Scaffold(
@@ -818,80 +757,25 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             child: IgnorePointer(child: ColoredBox(color: Color(0x6B000000))),
           ),
           // ── İçerik ───────────────────────────────────────────────────────
+          // Alt kenar SafeArea'ya kesilmez: ızgara cam barın ARKASINA kadar uzanır,
+          // kaydırınca kartlar camın altından bulanık görünür (liquid glass).
           SafeArea(
+            bottom: false,
             child: Column(
               children: [
                 // ─── Chat header (sabit) ──────────────────────────────────
                 _buildChatHeader(),
 
-                // ─── Animasyonlu 3×3 grid ─────────────────────────────────
+                // ─── Tek ana menü: 3×9, yukarıdan aşağı kaydırmalı ────────
                 Expanded(
-                  child: Listener(
-                    onPointerDown:  (e) => _swipeStartX = e.position.dx,
-                    onPointerUp:    (e) {
-                      final dx = e.position.dx - (_swipeStartX ?? e.position.dx);
-                      _swipeStartX = null;
-                      if (dx < -50) {
-                        // Sola swipe
-                        if (_currentPage == _totalPages - 1) {
-                          // Son sayfadan sola → gelen kutusu sekmesi (sağdan gelir)
-                          selectMainTab(context, MainTab.inbox, entry: TabEntry.right);
-                        } else {
-                          _goNext();
-                        }
-                      } else if (dx > 50) {
-                        // Sağa swipe
-                        if (_currentPage == 0) {
-                          // İlk sayfadan sağa → kullanıcı bilgileri sekmesi (soldan gelir)
-                          selectMainTab(context, MainTab.profile);
-                        } else {
-                          _goPrev();
-                        }
-                      }
-                    },
-                    onPointerCancel: (_) => _swipeStartX = null,
-                    // Ok butonları kalktı → ekran okuyucu için sayfa değiştirme aksiyonu
-                    // (Codex: VoiceOver/TalkBack kullanıcısı özel swipe'a mahkûm kalmasın).
-                    child: Semantics(
-                      value: '${_currentPage + 1} / $_totalPages',
-                      // value ile birlikte artış/azalış değerleri de verilmeli (semantics assert'i).
-                      increasedValue: _currentPage < _totalPages - 1
-                          ? '${_currentPage + 2} / $_totalPages'
-                          : null,
-                      decreasedValue:
-                          _currentPage > 0 ? '$_currentPage / $_totalPages' : null,
-                      onIncrease: _currentPage < _totalPages - 1 ? _goNext : null,
-                      onDecrease: _currentPage > 0 ? _goPrev : null,
-                      child: PageView.builder(
-                      controller: _pageController,
-                      physics: const NeverScrollableScrollPhysics(),
-                      clipBehavior: Clip.none,
-                      itemCount: _totalPages,
-                      onPageChanged: (p) {
-                        // Programatik geçiş sürerken ara sayfa YOK sayılır: hedef zaten
-                        // _currentPage'de. (Codex: ara değer swipe/semantik kararlarını
-                        // bozuyor, "artır" aynı hedefi yeniden başlatabiliyordu.)
-                        if (_animTarget != null) return;
-                        setState(() => _currentPage = p);
-                        _syncPageProvider(p);
-                      },
-                      itemBuilder: (context, pageIndex) {
-                        final items = pageIndex == 0
-                            ? _page1Items(context)
-                            : pageIndex == 1
-                                ? _page2Items(context)
-                                : _page3Items(context);
-                        return _buildGrid(items, _pageColors[pageIndex]);
-                      },
-                    ),
-                    ),
+                  // Sola kaydırma → gelen kutusu (barda ana menünün sağındaki sekme).
+                  // Yön kilitli: dikey kaydırma bir kez başladıysa sekme değişmez.
+                  child: TabSwipe(
+                    onSwipeLeft: () =>
+                        selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
+                    child: _buildGrid(context),
                   ),
                 ),
-                // ─── Sayfa göstergesi — grid'e yapışık, sabit pozisyon ────
-                _buildPageIndicator(),
-
-                // ─── Alt bar ─────────────────────────────────────────────
-                _buildBottomBar(context),
               ],
             ),
           ),
@@ -968,88 +852,48 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  // Gece Grimuarı: sayfa başına renk YOK — etkin sayfa mum altını uzun çizgi,
-  // diğerleri kül kısa çizgi (sanat yönetmeni).
-  Widget _buildPageIndicator() {
-    return Padding(
-      padding: const EdgeInsets.only(top: 15, bottom: 5),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(_totalPages, (i) {
-          final active = i == _currentPage;
-          final color = _pageColors[i];
-          return AnimatedContainer(
-            duration: const Duration(milliseconds: 250),
-            curve: Curves.easeOutCubic,
-            margin: const EdgeInsets.symmetric(horizontal: 3),
-            width: 34,
-            height: 3,
-            decoration: BoxDecoration(
-              color: active ? color : color.withValues(alpha: 0.22),
-              borderRadius: BorderRadius.circular(2),
-            ),
-          );
-        }),
-      ),
-    );
-  }
-
-  /// Eski sayfa renkleri (2026-11-05 geri geldi): kart çerçevesi + sayfa göstergesi.
-  static const _pageColors = [
-    Color(0xFFDD00CC), // Sayfa 1 — pembe
-    Color(0xFF0099FF), // Sayfa 2 — mavi
-    Color(0xFF00CC77), // Sayfa 3 — yeşil
+  /// Eski sayfa renkleri: her 3 satırlık grup kendi çerçeve rengini korur
+  /// (satır 1-3 pembe, 4-6 mavi, 7-9 yeşil).
+  static const _groupColors = [
+    Color(0xFFDD00CC), // eski sayfa 1 — pembe
+    Color(0xFF0099FF), // eski sayfa 2 — mavi
+    Color(0xFF00CC77), // eski sayfa 3 — yeşil
   ];
 
-  Widget _buildGrid(List<_MenuItem> items, Color pageColor) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 4, 10, 0),
-      child: GridView.count(
-        physics: const NeverScrollableScrollPhysics(),
-        clipBehavior: Clip.none,
+  void _scrollGridToTop() {
+    if (!mounted || !_gridScrollCtrl.hasClients) return;
+    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    if (reduce || !TickerMode.valuesOf(context).enabled) {
+      _gridScrollCtrl.jumpTo(0);
+    } else {
+      _gridScrollCtrl.animateTo(0,
+          duration: const Duration(milliseconds: 420), curve: Curves.easeOutCubic);
+    }
+  }
+
+  Widget _buildGrid(BuildContext context) {
+    final items = [
+      ..._page1Items(context),
+      ..._page2Items(context),
+      ..._page3Items(context),
+    ];
+    // Son satır cam barın üstünde rahatça görünsün: alt güvenli alan + bar + nefes payı.
+    final bottomPad =
+        MediaQuery.paddingOf(context).bottom + kGlassBarGap + kGlassBarHeight + 14;
+    return GridView.builder(
+      controller: _gridScrollCtrl,
+      physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+      padding: EdgeInsets.fromLTRB(10, 6, 10, bottomPad),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         crossAxisSpacing: 8,
         mainAxisSpacing: 8,
         childAspectRatio: 0.75,
-        children: items.map((item) => _MenuCard(item: item, color: pageColor)).toList(),
       ),
-    );
-  }
-
-  Widget _buildBottomBar(BuildContext context) {
-    // Alt bar artık MainTabsScreen'de: cam GlassTabBar 3 ekranda da aynı yerde ve
-    // sabit duruyor. Burada yalnız hazırlanan fallar satırı + barın yer tutucusu.
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 4, 12, kGlassBarGap),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          // ── Hazırlanan fallar progress satırı — sabit 50px, içerik yoksa şeffaf ──
-          Consumer(builder: (_, cref, __) {
-            final items = cref.watch(inboxProvider);
-            // Yeşil halka durumu: (1) hazırlanan (kilitli) fal kalmadı +
-            // (2) okunmamış (hazır) en az 1 fal var → küçük ikonları gizle,
-            // bunun yerine inbox butonu yeşil çemberle uyarı verir.
-            final hasLocked   = items.any((e) => e.isLocked);
-            final readyUnread = items.where((e) => !e.isRead && !e.isLocked).length;
-            final greenRing   = !hasLocked && readyUnread > 0;
-            final cooking = items
-                .where((e) => e.unlockAt != null && (e.isLocked || !e.isRead))
-                .toList()
-              ..sort((a, b) => (a.unlockAt!).compareTo(b.unlockAt!));
-            return SizedBox(
-              height: 50,
-              child: (cooking.isEmpty || greenRing)
-                  ? const SizedBox()
-                  : Padding(
-                      padding: const EdgeInsets.only(bottom: 6),
-                      child: _FortuneProgressRow(items: cooking),
-                    ),
-            );
-          }),
-          // ── Cam alt bar yer tutucusu (bar MainTabsScreen'de, üstte overlay) ──
-          const SizedBox(height: kGlassBarHeight),
-        ],
+      itemCount: items.length,
+      itemBuilder: (context, i) => _MenuCard(
+        item: items[i],
+        color: _groupColors[(i ~/ 9).clamp(0, _groupColors.length - 1)],
       ),
     );
   }
@@ -1792,255 +1636,3 @@ class _MagnusAvatar extends StatelessWidget {
     );
   }
 }
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Hazırlanan fallar progress satırı — tüm kilitli öğeler yatay scroll
-// ─────────────────────────────────────────────────────────────────────────────
-
-class _FortuneProgressRow extends StatefulWidget {
-  final List<InboxItem> items;
-  const _FortuneProgressRow({required this.items});
-
-  @override
-  State<_FortuneProgressRow> createState() => _FortuneProgressRowState();
-}
-
-class _FortuneProgressRowState extends State<_FortuneProgressRow> {
-  Timer? _ticker;
-
-  @override
-  void initState() {
-    super.initState();
-    _ticker = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (mounted) setState(() {});
-    });
-  }
-
-  @override
-  void dispose() {
-    _ticker?.cancel();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    const size = 44.0;
-
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          for (int i = 0; i < widget.items.length; i++) ...[
-            _FortuneCircleBadge(item: widget.items[i], size: size),
-            if (i < widget.items.length - 1)
-              const SizedBox(width: 8),
-          ],
-        ],
-      ),
-    );
-  }
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Tek fal daire rozeti
-// ─────────────────────────────────────────────────────────────────────────────
-
-class _FortuneCircleBadge extends StatelessWidget {
-  final InboxItem item;
-  final double size;
-  const _FortuneCircleBadge({required this.item, required this.size});
-
-  @override
-  Widget build(BuildContext context) {
-    final progress  = item.unlockProgress; // 0.0 → 1.0
-    final isLocked  = item.isLocked;       // hazırlanıyor mu?
-    final isReady   = !isLocked;           // tamamlandı mı?
-
-    // İkon: hazırlanıyorsa grayscale (2 suffix), tamam ise renkli
-    final iconPath  = _iconAsset(item.fortuneType, locked: isLocked);
-    final innerSize = size - 6; // arc strokeWidth=3 → her yanda 1.5px, iç alan = size-3; -6 ile ikon tam sığar
-
-    return GestureDetector(
-      // Sadece hazır (tamamlanmış) fallar tıklanabilir → gelen kutusu sekmesi (alttan)
-      onTap: isReady ? () => selectMainTab(context, MainTab.inbox) : null,
-      child: SizedBox(
-      width: size, height: size,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          // Arc progress ring
-          CustomPaint(
-            size: Size(size, size),
-            painter: _ArcProgressPainter(
-              progress: progress,
-              color: AppColors.success,
-              gradientColors: isLocked ? _ArcProgressPainter._rainbow : null,
-              trackColor: AppColors.bone.withValues(alpha: 0.08),
-              strokeWidth: 3.0,
-            ),
-          ),
-          // İkon — grayscale veya renkli
-          ClipOval(
-            child: SizedBox(
-              width: innerSize, height: innerSize,
-              child: iconPath != null
-                  // Gece Grimuarı filmi: hazırlanıyorken kül, hazır olunca renk biraz sızar.
-                  ? ColorFiltered(
-                      colorFilter: ColorFilter.matrix(isReady
-                          ? FilmedImage.matrix(FilmedImage.activeSaturation, FilmedImage.activeBrightness)
-                          : FilmedImage.matrix(0.0, 1.0)),
-                      child: Image.asset(
-                        iconPath,
-                        fit: BoxFit.cover,
-                        filterQuality: FilterQuality.high,
-                        errorBuilder: (_, __, ___) => _fallbackIcon(),
-                      ),
-                    )
-                  : _fallbackIcon(),
-            ),
-          ),
-          // Badge — SADECE hazırlık tamamlanınca: yeşil "hazır" noktası (Gece Grimuarı
-          // success; eski kırmızı "1" neon dili kalktı).
-          if (isReady)
-            Positioned(
-              top: 1, right: 1,
-              child: Container(
-                width: 14, height: 14,
-                decoration: BoxDecoration(
-                  color: AppColors.success,
-                  shape: BoxShape.circle,
-                  border: Border.all(color: AppColors.ink, width: 1.5),
-                ),
-                child: const Center(
-                  child: Text(
-                    '1',
-                    style: TextStyle(
-                      color: AppColors.ink,
-                      fontSize: 9,
-                      fontWeight: FontWeight.w700,
-                      height: 1,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-        ],
-      ),
-    ),   // SizedBox
-    );   // GestureDetector
-  }
-
-  Widget _fallbackIcon() => Container(
-    color: AppColors.inkCard,
-    child: const Icon(Icons.auto_awesome, color: AppColors.ash, size: 16),
-  );
-
-  /// Hazır → renkli ikon, hazırlanıyor → grayscale (2-suffix)
-  static String? _iconAsset(FortuneType type, {required bool locked}) {
-    const base = 'assets/images/inbox_icons/';
-    switch (type) {
-      case FortuneType.coffee:     return locked ? '${base}kahve2.png'     : '${base}kahve.png';
-      case FortuneType.tarot:      return locked ? '${base}tarot2.png'     : '${base}tarot.png';
-      case FortuneType.astrology:  return locked ? '${base}astroloji2.png' : '${base}astroloji.png';
-      case FortuneType.motivation: return locked ? '${base}motivasyon2.png': '${base}motivasyon.png';
-      case FortuneType.dream:      return locked ? '${base}ruya2.png'      : '${base}ruya.png';
-      case FortuneType.general:    return locked ? '${base}cark2.png'      : '${base}cark.png';
-      case FortuneType.birthChart:  return locked ? '${base}dogum2.png'      : '${base}dogum.png';
-      case FortuneType.numeroloji:  return locked ? '${base}numeroloji2.png' : '${base}numeroloji.png';
-      case FortuneType.durugoru:    return locked ? '${base}durugoru2.png'   : '${base}durugoru.png';
-      case FortuneType.elfali:      return locked ? '${base}elfali2.png'      : '${base}elfali.png';
-      case FortuneType.iching:      return locked ? '${base}iching2.png'      : '${base}iching.png';
-      case FortuneType.japonfali:   return locked ? '${base}japonfali2.png'   : '${base}japonfali.png';
-      case FortuneType.yuzfali:     return locked ? '${base}elfali2.png'      : '${base}elfali.png';
-    }
-  }
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Arc progress CustomPainter
-// ─────────────────────────────────────────────────────────────────────────────
-
-class _ArcProgressPainter extends CustomPainter {
-  final double progress;
-  final Color color;
-  final List<Color>? gradientColors;
-  final Color trackColor;
-  final double strokeWidth;
-
-  const _ArcProgressPainter({
-    required this.progress,
-    required this.color,
-    this.gradientColors,
-    required this.trackColor,
-    required this.strokeWidth,
-  });
-
-  // Gece Grimuarı (2026-11): neon gökkuşağı yerine MUM ALTINI palindromu — 12 yönünde
-  // soluk altınla başlar, 6'da en açık parşömen-altın, 12'de aynı soluk altınla kapanır
-  // (ilk renk == son renk → dikişsiz 360°, eski 2026-06 kuralı korunur).
-  // 2026-11-05: eski gökkuşağı geri geldi (palindrom → dikişsiz 360°).
-  static const _rainbow = [
-    Color(0xFFFF9A10), // turuncu       — 12 (başlangıç)
-    Color(0xFFFF6820), // turuncu→kırmızı
-    Color(0xFFFF3B30), // kırmızı
-    Color(0xFFFF3260), // kırmızı→pembe
-    Color(0xFFFF2EC7), // pembe
-    Color(0xFFBB28E8), // pembe→mor
-    Color(0xFF8A2EFF), // mor           — 6 (orta nokta)
-    Color(0xFFBB28E8), // mor→pembe
-    Color(0xFFFF2EC7), // pembe
-    Color(0xFFFF3260), // pembe→kırmızı
-    Color(0xFFFF3B30), // kırmızı
-    Color(0xFFFF6820), // kırmızı→turuncu
-    Color(0xFFFF9A10), // turuncu       — 12 (seamless kapanış)
-  ];
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final center = Offset(size.width / 2, size.height / 2);
-    final radius = (size.width - strokeWidth) / 2;
-    final rect   = Rect.fromCircle(center: center, radius: radius);
-
-    final trackPaint = Paint()
-      ..color       = trackColor
-      ..style       = PaintingStyle.stroke
-      ..strokeWidth = strokeWidth
-      ..strokeCap   = StrokeCap.round;
-    canvas.drawCircle(center, radius, trackPaint);
-
-    if (progress > 0) {
-      const startAngle = -1.5707963;
-      final arcPaint = Paint()
-        ..style       = PaintingStyle.stroke
-        ..strokeWidth = strokeWidth
-        ..strokeCap   = StrokeCap.round;
-
-      if (gradientColors == null) {
-        arcPaint.color = color;
-      } else {
-        // Gradient arc ile aynı noktadan başlar: 12 o'clock = -π/2
-        // SweepGradient 3 o'clock = 0; -π/2 → 12 o'clock
-        const gradStart = startAngle; // -π/2 = 12 o'clock
-        arcPaint.shader = SweepGradient(
-          center: Alignment.center,
-          startAngle: gradStart,
-          endAngle: gradStart + 2 * 3.1415926,
-          colors: gradientColors!,
-        ).createShader(rect);
-      }
-      // shader zaten set edildiyse renk ayarına gerek yok
-      canvas.drawArc(
-        rect,
-        startAngle,
-        2 * 3.1415926 * progress,
-        false,
-        arcPaint,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(_ArcProgressPainter old) =>
-      old.progress != progress || old.color != color;
-}
-

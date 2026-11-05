@@ -1,8 +1,8 @@
 // lib/presentation/shell/main_tabs.dart
 //
-// Ana sekmeler kapsayıcısı: Kullanıcı Bilgileri (0) · Ana Menü (1) · Gelen Kutusu (2).
-// Cam alt bar (GlassTabBar) sayfa geçişlerinin DIŞINDA, en üstte durur → üç ekranda
-// tam aynı yerde, hiç kımıldamadan; seçim kapsülü doğrudan kayar (settings↔inbox 0↔2).
+// Ana sekmeler kapsayıcısı: Ana Menü · Gelen Kutusu · Kullanıcı Bilgileri (bardaki sıra,
+// Anıl 2026-11-05). Cam alt bar (GlassTabBar) sayfa geçişlerinin DIŞINDA, en üstte durur →
+// üç ekranda tam aynı yerde, hiç kımıldamadan; seçim kapsülü doğrudan kayar.
 //
 // Neden ortak kapsayıcı (Codex incelemesi, 2026-11-04): Hero ile rota geçişinde bar
 // taşımak go('/inbox') dal değişiminde çalışmıyor, pop+push örtüşüyor ve geçiş anında
@@ -12,10 +12,12 @@
 //   - Aktif sekme tek kaynak: mainTabProvider. Her yerden selectMainTab(context, tab).
 //   - Sekmeler keyed Stack çocukları → state korunur; gizli sekmede TickerMode kapalı
 //     (settings nebula shader'ı / yıldızlar arka planda çalışmaz).
-//   - Geçişler eskisiyle aynı yön: settings soldan, inbox alttan (swipe ile sağdan);
-//     ana menüye dönüşte çıkan sayfa geldiği yöne kayar.
+//   - Geçiş yönü bardaki sıradan: sağdaki sekme sağdan, soldaki soldan gelir; ana menü
+//     en solda → ana menüye dönüşte çıkan sayfa sağa kayar.
 //   - Android geri: ana menü dışındaysa ana menüye döner.
 //   - Fallar/detaylar kendi rotalarında açılır → bu kapsayıcının (ve barın) ÜSTÜNE biner.
+
+import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +25,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/widgets/glass_tab_bar.dart';
+import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 import '../home/home_screen.dart';
 import '../inbox/inbox_screen.dart';
@@ -37,21 +40,14 @@ abstract final class MainTab {
 /// Aktif ana sekme (tek doğru kaynak).
 final mainTabProvider = StateProvider<int>((ref) => MainTab.home);
 
-/// Ana menünün sayfası (0..2) — tek kaynak. Barda Ev1/Ev2/Ev3 → bu değer.
-/// HomeScreen swipe/ok ile değişince yazar; bar dokunuşu yazınca HomeScreen o sayfaya gider.
-/// (Codex: hedef ile ara sayfa karışmasın diye HomeScreen programatik animasyon
-/// sırasında onPageChanged ara değerlerini yazmaz → kapsül doğrudan hedefe kayar.)
-final homePageProvider = StateProvider<int>((ref) => 0);
+/// Bardaki soldan sağa sıra: Ana Menü · Gelen Kutusu · Kullanıcı Bilgileri.
+const List<int> kMainTabOrder = [MainTab.home, MainTab.inbox, MainTab.profile];
 
-/// Ana menü sayfa sayısı (bardaki ev slotları).
-const int kHomePages = 3;
+/// Görünen sekmeye bardan TEKRAR dokunulunca artar (ör. ana menü listesi başa kayar).
+final mainTabReselectProvider = StateProvider<int>((ref) => 0);
 
-/// Bar slotu ↔ sekme/sayfa eşlemesi: 0 = profil, 1..3 = ana menü sayfa 1..3, 4 = inbox.
-int barSlotFor(int tab, int homePage) => switch (tab) {
-      MainTab.profile => 0,
-      MainTab.inbox => kHomePages + 1,
-      _ => 1 + homePage.clamp(0, kHomePages - 1),
-    };
+/// Sekmenin bar slotu (0..2).
+int barSlotFor(int tab) => kMainTabOrder.indexOf(tab).clamp(0, kMainTabOrder.length - 1);
 
 /// Sekme sayfasının hangi yönden kayarak geleceği.
 enum TabEntry { left, right, bottom }
@@ -106,9 +102,10 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
   late int _current;
   int? _from; // geçişte çıkan sekme
   final Set<int> _built = {};
+  // Sağdaki sekmeler sağdan gelir (gelen kutusu HER ZAMAN sağdan — Anıl).
   final Map<int, TabEntry> _entry = {
-    MainTab.profile: TabEntry.left,
-    MainTab.inbox: TabEntry.right, // Anıl: gelen kutusu HER ZAMAN sağdan sola açılır
+    MainTab.profile: TabEntry.right,
+    MainTab.inbox: TabEntry.right,
   };
   TabEntry? _pendingEntry;
 
@@ -127,11 +124,41 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
 
   static const _still = AlwaysStoppedAnimation<Offset>(Offset.zero);
 
+  /// Zarf rozeti zamana bağlı: "hazırlanıyor" bir fal, unlockAt anında kendiliğinden
+  /// "hazır" olur ama inboxProvider değişmez → bar yenilenmezse rozet turuncuda kalırdı
+  /// (Codex). En erken açılma anına zamanlayıcı + uygulamaya dönüşte yenileme.
+  Timer? _badgeTimer;
+  late final AppLifecycleListener _life = AppLifecycleListener(onResume: _refreshBadge);
+
+  void _refreshBadge() {
+    if (!mounted) return;
+    setState(() {});
+    _scheduleBadgeTimer(ref.read(inboxProvider));
+  }
+
+  void _scheduleBadgeTimer(List<InboxItem> items) {
+    _badgeTimer?.cancel();
+    _badgeTimer = null;
+    final now = DateTime.now();
+    DateTime? earliest;
+    for (final e in items) {
+      final u = DateTime.tryParse(e.unlockAt ?? '');
+      if (u != null && u.isAfter(now) && (earliest == null || u.isBefore(earliest))) {
+        earliest = u;
+      }
+    }
+    if (earliest == null) return;
+    // +50 ms: isLocked'un "şimdi"si kesin olarak açılma anını geçmiş olsun.
+    _badgeTimer = Timer(earliest.difference(now) + const Duration(milliseconds: 50), _refreshBadge);
+  }
+
   @override
   void initState() {
     super.initState();
     _current = ref.read(mainTabProvider);
     _built.add(_current);
+    _life; // dinleyiciyi başlat
+    _scheduleBadgeTimer(ref.read(inboxProvider));
     _anim.addStatusListener((s) {
       if (s != AnimationStatus.completed || !mounted) return;
       setState(() => _from = null);
@@ -183,20 +210,22 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
 
   @override
   void dispose() {
+    _badgeTimer?.cancel();
+    _life.dispose();
     _releaseBack();
     _curved.dispose();
     _anim.dispose();
     super.dispose();
   }
 
-  /// Bar dokunuşu: 0 → profil, 1..3 → ana menü o sayfa, 4 → inbox.
+  /// Bar dokunuşu: 0 → ana menü, 1 → gelen kutusu, 2 → kullanıcı bilgileri.
   void _onBarTap(int slot) {
-    if (slot == 0) return _select(MainTab.profile);
-    if (slot == kHomePages + 1) return _select(MainTab.inbox);
-    // Önce sayfa, sonra sekme: ana menü gizliyken HomeScreen anında atlar
-    // (TickerMode kapalı → jumpToPage), görünürken kayarak gider.
-    ref.read(homePageProvider.notifier).state = slot - 1;
-    _select(MainTab.home);
+    final tab = kMainTabOrder[slot];
+    if (tab == _current && _from == null) {
+      ref.read(mainTabReselectProvider.notifier).state++;
+      return;
+    }
+    _select(tab);
   }
 
   void _select(int tab, {TabEntry? entry}) {
@@ -218,8 +247,12 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
       _queuedEntry = entry;
       return;
     }
-    if (tab == _current) return; // aynı sekme (ev sayfaları homePageProvider ile)
-    if (tab != MainTab.home) _entry[tab] = entry ?? (tab == MainTab.profile ? TabEntry.left : TabEntry.right);
+    if (tab == _current) return; // aynı sekme
+    // Varsayılan yön bardaki sıradan: hedef sağdaysa sağdan, soldaysa soldan gelir.
+    if (tab != MainTab.home) {
+      _entry[tab] = entry ??
+          (barSlotFor(tab) > barSlotFor(_current) ? TabEntry.right : TabEntry.left);
+    }
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
     setState(() {
       _built.add(tab);
@@ -270,6 +303,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
   @override
   Widget build(BuildContext context) {
     ref.listen<int>(mainTabProvider, (prev, next) => _onTabChanged(next));
+    ref.listen<List<InboxItem>>(inboxProvider, (_, items) => _scheduleBadgeTimer(items));
 
     final from = _from;
     final to = _current;
@@ -281,10 +315,11 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
     if (from == null) {
       children.add(_tab(to, visible: true));
     } else if (to == MainTab.home) {
-      // Ana menüye dönüş: ana menü altta sabit, çıkan sayfa geldiği yöne kayar.
+      // Ana menüye dönüş: ana menü altta sabit; ana menü barın en solunda → çıkan
+      // sayfa her zaman sağa kayar.
       children.add(_tab(to, visible: true));
       children.add(_tab(from, visible: true,
-          slide: Tween(begin: Offset.zero, end: _offsetFor(from)).animate(_curved)));
+          slide: Tween(begin: Offset.zero, end: const Offset(1, 0)).animate(_curved)));
     } else {
       // Yeni sekme üstte kayarak gelir; çıkan altta bekler.
       children.add(_tab(from, visible: true));
@@ -311,21 +346,30 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
               bottom: bottom + kGlassBarGap,
               height: kGlassBarHeight,
               child: Consumer(builder: (context, cref, _) {
-                // Yeşil halka kuralı (değişmedi): hazırlanan fal kalmadı + okunmamış ≥1.
+                // Zarf rozeti (Anıl, 2026-11-05): hazırlanan fal varsa turuncu, hepsi
+                // hazır + okunmamış varsa yeşil, okunmamış yoksa nokta yok.
+                // Doğrudan öğelerden (önbellekli readyUnreadCountProvider zamanla
+                // değişmez): rozet zamanlayıcısı bu kapsayıcıyı yeniden çizdirince güncel.
                 final items = cref.watch(inboxProvider);
-                final hasUnread = cref.watch(readyUnreadCountProvider) > 0;
                 final hasLocked = items.any((e) => e.isLocked);
-                final page = cref.watch(homePageProvider);
+                final hasUnread = items.any((e) => !e.isRead && !e.isLocked);
+                final badge = hasLocked
+                    ? InboxBadge.preparing
+                    : hasUnread
+                        ? InboxBadge.ready
+                        : InboxBadge.none;
                 return GlassTabBar(
-                  // Görünen sekme (_current) + ana menü sayfası → kapsülün yeri.
-                  selected: barSlotFor(_current, page),
+                  selected: barSlotFor(_current), // görünen sekme → kapsülün yeri
                   onTap: _onBarTap,
-                  hasUnread: hasUnread,
-                  greenRing: !hasLocked && hasUnread,
+                  badge: badge,
                   labels: [
+                    s.tabHome,
+                    switch (badge) {
+                      InboxBadge.preparing => s.tabInboxPreparing,
+                      InboxBadge.ready => s.tabInboxUnread,
+                      InboxBadge.none => s.tabInbox,
+                    },
                     s.settingsTitle,
-                    for (var p = 1; p <= kHomePages; p++) s.homePageLabel(p, kHomePages),
-                    hasUnread ? s.tabInboxUnread : s.tabInbox,
                   ],
                 );
               }),

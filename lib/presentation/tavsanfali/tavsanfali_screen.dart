@@ -6,7 +6,7 @@ import 'dart:convert';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/services.dart' show HapticFeedback, rootBundle;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +25,7 @@ class TavsanFaliScreen extends ConsumerStatefulWidget {
 }
 
 class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   static const _kPapers = 5;
   // Toplam süre: 1000 ms bekleme + 900 uzanma + 400 kalkış + 600 süzülme + 500 açılış.
   static const _kLeadMs = 1000;
@@ -33,7 +33,13 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
   static const _kTotalMs = _kLeadMs + _kActionMs;
 
   late final AnimationController _ctrl;
+  // Bekleme: kağıtlar hafifçe dalgalanır (dokunulabilir olduklarını belli eder).
+  late final AnimationController _idle;
   int _target = 0;
+  // Kullanıcı dokunmadan tavşan çekmez (Anıl, 2026-11-05). Kayıt da dokununca yapılır:
+  // açıp dokunmadan çıkan kullanıcının günlük hakkı boşa gitmez.
+  bool _started = false;
+  Future<void> Function()? _persist;
   String? _text; // hazır (yer tutucuları doldurulmuş) metin
   bool _repeat = false; // aynı gün tekrar açılış → animasyonsuz
   bool _failed = false;
@@ -44,11 +50,29 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
     _target = math.Random().nextInt(_kPapers);
     _ctrl = AnimationController(
         vsync: this, duration: const Duration(milliseconds: _kTotalMs));
+    _idle = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 2600));
     _load();
+  }
+
+  /// Dokunuş → seçimi kaydet, tavşan [paper] kağıdını (null → rastgele) çeksin.
+  void _start([int? paper]) {
+    if (_started || _text == null || _failed) return;
+    HapticFeedback.selectionClick();
+    setState(() {
+      _started = true;
+      if (paper != null) _target = paper;
+    });
+    _persist?.call();
+    _persist = null;
+    _idle.stop();
+    // Bekleme payını atla: dokunur dokunmaz uzansın.
+    _ctrl.forward(from: _kLeadMs / _kTotalMs);
   }
 
   @override
   void dispose() {
+    _idle.dispose();
     _ctrl.dispose();
     super.dispose();
   }
@@ -114,23 +138,24 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
         if (pool.isEmpty) pool = List.of(all);
         final shown = prefs.getStringList('tavsanfali_gosterilen') ?? <String>[];
         var available = pool.where((e) => !shown.contains('${e['id']}')).toList();
+        var base = shown;
         if (available.isEmpty) {
           final lastId = shown.isNotEmpty ? shown.last : null;
-          await prefs.setStringList(
-              'tavsanfali_gosterilen', lastId != null ? [lastId] : <String>[]);
+          base = lastId != null ? [lastId] : <String>[];
           available = pool.where((e) => '${e['id']}' != lastId).toList();
           if (available.isEmpty) available = List.of(pool);
         }
         available.shuffle();
-        pick = available.first;
-        final updated = List<String>.of(
-            prefs.getStringList('tavsanfali_gosterilen') ?? <String>[])
-          ..add('${pick['id']}');
-        // Sıra önemli: önce ID + gösterilenler, EN SON tarih. Arada uygulama kapanırsa
-        // tarih eski kalır → ertesi açılış yeni seçim yapar; dünün ID'si bugünün sayılmaz.
-        await prefs.setInt('tavsanfali_bugun_id', pick['id'] as int);
-        await prefs.setStringList('tavsanfali_gosterilen', updated);
-        await prefs.setString('tavsanfali_bugun_tarih', today);
+        final chosen = available.first;
+        pick = chosen;
+        final updated = List<String>.of(base)..add('${chosen['id']}');
+        // Kayıt kullanıcı dokununca (_start). Sıra önemli: önce ID + gösterilenler, EN SON
+        // tarih → arada uygulama kapanırsa dünün ID'si bugünün sayılmaz.
+        _persist = () async {
+          await prefs.setInt('tavsanfali_bugun_id', chosen['id'] as int);
+          await prefs.setStringList('tavsanfali_gosterilen', updated);
+          await prefs.setString('tavsanfali_bugun_tarih', today);
+        };
       }
 
       final en = pick['metin_en'] as String?;
@@ -144,9 +169,10 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
         _repeat = repeat;
       });
       if (repeat) {
+        _started = true;
         _ctrl.value = 1;
       } else {
-        _ctrl.forward();
+        _idle.repeat(); // dokunuşu bekle
       }
     } catch (_) {
       if (mounted) setState(() => _failed = true);
@@ -238,7 +264,7 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
       double paperRot(int i) => (i - 2) * 0.14;
 
       return AnimatedBuilder(
-        animation: _ctrl,
+        animation: Listenable.merge([_ctrl, _idle]),
         builder: (context, _) {
           final p = _repeat
               ? 1.0
@@ -269,7 +295,11 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
                 top: rabBottom - rabH,
                 width: rabW,
                 height: rabH,
-                child: Transform.translate(
+                child: GestureDetector(
+                  key: const ValueKey('tavsan-kendisi'),
+                  behavior: HitTestBehavior.opaque,
+                  onTap: _started ? null : () => _start(),
+                  child: Transform.translate(
                   offset: Offset(rabDx, rabDy),
                   child: Transform.rotate(
                     angle: rabRot,
@@ -283,6 +313,7 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
                           errorBuilder: (_, __, ___) => const SizedBox.shrink()),
                     ),
                   ),
+                ),
                 ),
               ),
               // Kağıtlar
@@ -323,6 +354,12 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
     var angle = rot;
     var scale = 1.0;
     var opacity = 1.0;
+    if (!_started) {
+      // Bekleme dalgası: soldan sağa hafif kalkıp inme (±3 px) + çok az büyüme.
+      final wave = math.sin(2 * math.pi * (_idle.value - i / _kPapers));
+      y -= 3 * wave;
+      scale = 1 + 0.025 * (wave + 1) / 2;
+    }
     if (isTarget) {
       y -= h * 0.14 * lift;
       final cx = w / 2, cy = h * 0.40;
@@ -339,7 +376,11 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
       top: y - ph / 2,
       width: pw,
       height: ph,
-      child: Opacity(
+      child: GestureDetector(
+        key: ValueKey('tavsan-kagit-$i'),
+        behavior: HitTestBehavior.opaque,
+        onTap: _started ? null : () => _start(i),
+        child: Opacity(
         opacity: opacity.clamp(0.0, 1.0),
         child: Transform.rotate(
           angle: angle,
@@ -351,6 +392,7 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
                 errorBuilder: (_, __, ___) => const SizedBox.shrink()),
           ),
         ),
+      ),
       ),
     );
   }
@@ -397,9 +439,13 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
   }
 
   Widget _statusText(bool isEn) => Text(
-        isEn
-            ? 'The rabbit is picking a paper for you...'
-            : 'Tavşan senin için bir kağıt seçiyor...',
+        !_started
+            ? (isEn
+                ? 'Tap a paper and the rabbit will pull it for you.'
+                : 'Bir kağıda dokun, tavşan onu senin için çeksin.')
+            : (isEn
+                ? 'The rabbit is picking a paper for you...'
+                : 'Tavşan senin için bir kağıt seçiyor...'),
         textAlign: TextAlign.center,
         style: const TextStyle(color: Colors.white70, fontSize: 15),
       );

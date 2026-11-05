@@ -11,7 +11,7 @@ String _today() {
 }
 
 Future<SharedPreferences> _open(WidgetTester t, Map<String, Object> init,
-    {String lang = 'tr', bool finish = true}) async {
+    {String lang = 'tr', bool finish = true, bool tap = true}) async {
   SharedPreferences.setMockInitialValues({'app_locale': lang, ...init});
   final prefs = await SharedPreferences.getInstance();
   await t.binding.setSurfaceSize(const Size(400, 800));
@@ -23,6 +23,12 @@ Future<SharedPreferences> _open(WidgetTester t, Map<String, Object> init,
     await t.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 100)));
     await t.pump();
     if (find.byType(Opacity).evaluate().length > 3) break; // sahne kuruldu
+  }
+  // Tavşan kullanıcı dokunmadan çekmez: ortadaki kağıda dokun (aynı gün tekrarında kağıt yok).
+  final kagit = find.byKey(const ValueKey('tavsan-kagit-2'));
+  if (tap && kagit.evaluate().isNotEmpty) {
+    await t.tap(kagit, warnIfMissed: false);
+    await t.pump();
   }
   if (finish) {
     for (var i = 0; i < 40; i++) {
@@ -51,6 +57,22 @@ void main() {
     expect(_cardText(t).length, greaterThan(30));
     expect(find.text('Geri Git'), findsOneWidget);
     expect(find.textContaining('Yarın tavşan'), findsNothing);
+  });
+
+  testWidgets('dokunmadan çekmez: kayıt yok, ipucu görünür; dokununca çeker ve kaydeder', (t) async {
+    final prefs = await _open(t, {}, tap: false);
+    expect(prefs.getString('tavsanfali_bugun_tarih'), isNull); // hak harcanmadı
+    expect(prefs.getInt('tavsanfali_bugun_id'), isNull);
+    expect(find.textContaining('Bir kağıda dokun'), findsOneWidget);
+    expect(find.textContaining('Yarın tavşan'), findsNothing);
+
+    await t.tap(find.byKey(const ValueKey('tavsan-kagit-4')), warnIfMissed: false);
+    for (var i = 0; i < 40; i++) {
+      await t.pump(const Duration(milliseconds: 100));
+    }
+    expect(prefs.getString('tavsanfali_bugun_tarih'), _today());
+    expect(prefs.getInt('tavsanfali_bugun_id'), isNotNull);
+    expect(find.textContaining('Bir kağıda dokun'), findsNothing);
   });
 
   testWidgets('aynı gün tekrar: aynı metin + yarın notu, yeni id yazılmaz', (t) async {

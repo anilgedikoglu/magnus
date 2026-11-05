@@ -10,6 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/marquee_text.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 import '../../data/services/ev_engine.dart';
@@ -501,7 +502,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                       ? Align(
                           key: const ValueKey('acik'),
                           alignment: Alignment.centerLeft,
-                          child: Text(_deger(s, field),
+                          child: MarqueeText(_deger(s, field),
                               style: const TextStyle(color: Colors.white, fontSize: 14.5, fontWeight: FontWeight.w700)),
                         )
                       : Row(

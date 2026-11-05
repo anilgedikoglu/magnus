@@ -18,6 +18,7 @@ import '../../core/widgets/living_nebula.dart';
 import '../../core/widgets/starfield_overlay.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
+import '../../data/services/fortune_reset.dart';
 import '../shell/main_tabs.dart';
 
 // ─── Yardımcı: burç bilgileri ─────────────────────────────────────────────────
@@ -3094,6 +3095,8 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
       for (final item in items) {
         await ref.read(inboxProvider.notifier).deleteItem(item.id);
       }
+      // Yeni fal türleri de hiç alınmamış gibi (Tavşan, Kısmetim, Arabam, Evim, rüya AI hakkı).
+      await FortuneReset.resetNewFortunes(ref.read(sharedPrefsProvider));
     }
   }
 }

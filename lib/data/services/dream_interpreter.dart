@@ -26,6 +26,9 @@ class DreamInterpreter {
 
   static final Map<String, String> _cache = {};
 
+  /// "Tüm Falları Sil" sonrası bellekteki yorumlar da unutulur.
+  static void clearCache() => _cache.clear();
+
   /// Rüya metnini yorumlar. Ağ/anahtar yoksa ya da yanıt uygunsuzsa çevrimdışı yedeğe düşer.
   /// [symbolHint]: ekranın sözlükte bulduğu sembol anlamı (varsa).
   static Future<String> interpret({

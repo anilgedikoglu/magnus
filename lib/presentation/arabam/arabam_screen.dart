@@ -9,6 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/marquee_text.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 import '../../data/services/araba_engine.dart';
@@ -299,12 +300,12 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
           child: acik && car != null
               ? Column(
                   key: const ValueKey('acik'),
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(car.model,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
+                    // Sığmayan model adı alt satıra inmez: tek satırda yavaşça kayar.
+                    MarqueeText(car.model,
+                        textAlign: TextAlign.center,
                         style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w700)),
                     const SizedBox(height: 2),
                     Row(mainAxisSize: MainAxisSize.min, children: [

@@ -10,6 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/marquee_text.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 import '../../data/services/kismet_engine.dart';
@@ -378,9 +379,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
                       ? Align(
                           key: const ValueKey('acik'),
                           alignment: Alignment.centerLeft,
-                          child: Text(_deger(p, field, _year),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
+                          child: MarqueeText(_deger(p, field, _year),
                               style: const TextStyle(color: Colors.white, fontSize: 15.5, fontWeight: FontWeight.w700)),
                         )
                       : Row(

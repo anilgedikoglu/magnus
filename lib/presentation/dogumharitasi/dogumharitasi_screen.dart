@@ -337,7 +337,23 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
                       borderRadius: BorderRadius.circular(11),
                       child: AspectRatio(
                         aspectRatio: 1.0,
-                        child: Image.asset(
+                        // Harita merkezden dairesel açılır, hafifçe dönerek yerine oturur
+                        // (2026-11-06, Grok/Codex: herkese aynı statik resimdi, girişsiz).
+                        child: TweenAnimationBuilder<double>(
+                          tween: Tween(begin: 0, end: 1),
+                          duration: Duration(
+                              milliseconds: (MediaQuery.maybeDisableAnimationsOf(context) ?? false)
+                                  ? 0
+                                  : 1300),
+                          curve: Curves.easeOutCubic,
+                          builder: (context, v, child) => ClipPath(
+                            clipper: _DaireAcilis(v),
+                            child: Transform.rotate(
+                              angle: 0.35 * (1 - v),
+                              child: Transform.scale(scale: 0.9 + 0.1 * v, child: child),
+                            ),
+                          ),
+                          child: Image.asset(
                           'assets/images/WheelChartBackground.jpg',
                           fit: BoxFit.cover,
                           filterQuality: FilterQuality.high,
@@ -347,6 +363,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
                               child: Text('✦', style: TextStyle(color: Colors.white54, fontSize: 32)),
                             ),
                           ),
+                        ),
                         ),
                       ),
                     ),
@@ -405,4 +422,18 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
       ],
     );
   }
+}
+
+/// Merkezden büyüyen daire (0 → köşeleri de kapsayan yarıçap).
+class _DaireAcilis extends CustomClipper<Path> {
+  _DaireAcilis(this.t);
+  final double t;
+  @override
+  Path getClip(Size size) {
+    final r = size.longestSide * 0.75 * t;
+    return Path()..addOval(Rect.fromCircle(center: size.center(Offset.zero), radius: r));
+  }
+
+  @override
+  bool shouldReclip(_DaireAcilis old) => old.t != t;
 }

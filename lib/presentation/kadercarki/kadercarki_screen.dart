@@ -13,6 +13,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/constants/app_colors.dart';
@@ -444,7 +445,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     return Stack(
       alignment: Alignment.center,
       children: [
-        GestureDetector(
+        NoEdgeSwipeBack(child: GestureDetector(
           onPanStart:  (d) => _onPanStart(d, Size(size, size)),
           onPanUpdate: (d) => _onPanUpdate(d, Size(size, size)),
           onPanEnd:    _onPanEnd,
@@ -461,7 +462,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
               ),
             ),
           ),
-        ),
+        )),
         // Ok işareti — altta, daire kenarında
         Positioned(
           bottom: 0,

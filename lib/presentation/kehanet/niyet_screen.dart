@@ -2,6 +2,7 @@
 // Niyet Falı — kazı-kazan tarzı metin açma ekranı
 
 import '../../core/constants/app_colors.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/grimoire_backdrop.dart';
 import '../../core/widgets/glass_panel.dart';
@@ -349,7 +350,7 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
             if (!_fullyRevealed || _revealCtrl.value < 1.0)
               AnimatedBuilder(
                 animation: _revealAnim,
-                builder: (ctx, _) => GestureDetector(
+                builder: (ctx, _) => NoEdgeSwipeBack(child: GestureDetector(
                   onPanUpdate: _onPanUpdate,
                   child: RepaintBoundary(
                     child: CustomPaint(
@@ -361,7 +362,7 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
                       ),
                     ),
                   ),
-                ),
+                )),
               ),
           ]),
         ),

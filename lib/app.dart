@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'core/widgets/edge_swipe_back.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -417,6 +418,9 @@ class MagnusApp extends ConsumerWidget {
       title: 'Magnus',
       theme: AppTheme.dark,
       routerConfig: router,
+      // Sol kenardan sağa kaydır = geri (tüm iç sayfalarda; ana sekmelerde etkisiz).
+      builder: (context, child) =>
+          EdgeSwipeBack(router: router, child: child ?? const SizedBox.shrink()),
       debugShowCheckedModeBanner: false,
       locale: Locale(locale),
       supportedLocales: const [Locale('tr'), Locale('en')],

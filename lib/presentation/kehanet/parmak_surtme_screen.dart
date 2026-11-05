@@ -2,6 +2,7 @@
 // Parmak sürtme ekranı - kahin seçimi sonrası etkileşim
 
 import '../../core/constants/app_colors.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/grimoire_backdrop.dart';
 import 'dart:async';
@@ -145,7 +146,7 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
             // ── Etkileşim kutusu ─────────────────────────────────
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 28),
-              child: GestureDetector(
+              child: NoEdgeSwipeBack(child: GestureDetector(
                 onPanUpdate: _onPanUpdate,
                 onPanEnd: _onPanEnd,
                 child: Container(
@@ -166,7 +167,7 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
                     ),
                   ),
                 ),
-              ),
+              )),
             ),
 
             const SizedBox(height: 16),

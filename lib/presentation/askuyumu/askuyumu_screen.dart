@@ -12,6 +12,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/constants/app_colors.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
@@ -452,7 +453,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       child: Stack(
         alignment: Alignment.topCenter,
         children: [
-          GestureDetector(
+          NoEdgeSwipeBack(child: GestureDetector(
             onPanStart: _onWheelPanStart,
             onPanUpdate: _onWheelPanUpdate,
             onPanEnd: _onWheelPanEnd,
@@ -469,7 +470,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                 ),
               ),
             ),
-          ),
+          )),
           // Highlight çarkı — çarkla aynı dönüşte, sadece üstteki dilim kliplenir
           IgnorePointer(
             child: ClipPath(

@@ -270,6 +270,15 @@ TURLAR[11] = [{ ...tekrar(3, 'kahve_ugurlama'), orijinalMaxId: 143 }, tekrar(5, 
   tekrar(6, 'durugoru_gno')];
 TURLAR[12] = [tekrar(5, 'kahve_karsilama'), tekrar(6, 'durugoru_yno'), tekrar(7, 'olumlama'), tekrar(7, 'acigercekler'),
   { ...tekrar(5, 'kahin_uraz'), orijinalMaxId: 23 }];
+// Tur 13-14: gün içi 1. ve 6.+ ziyaret karşılamaları (havuzun en büyük iki parçası) + kâhin/astro/fal üçüncü geçiş.
+const karsilamaZ = (z, gorev) => ({ ...tekrar(8, 'karsilama_z2'), id: `karsilama_z${z}`, filtre: e => e.ziyaret === z,
+  extra: { ziyaret: z }, sistem: `Kullanıcı uygulamayı ${z === 1 ? 'günün İLK açılışında' : 'gün içinde 6. ya da daha sonraki kez'} açtığında ana menüdeki ilk sohbet balonunda Magnus onu karşılar (tek satırlık balon, uzun metin kayarak okunur).`, gorev });
+TURLAR[13] = [
+  karsilamaZ(1, 'KARŞILAMA (GÜNÜN İLK AÇILIŞI) — güne başlarken Magnus\'un sıcak, gizemli ya da esprili kısa selamı; kimi zaman günün havasına dair Barnum tarzı kısa bir sezgi ya da hafif bir müjde ipucu. "Yine geldin" DEME (bugün ilk kez). {{isim}} çoğu metinde. HEPSİ KOŞULSUZ. Uzunluk: 50-160 karakter.'),
+  karsilamaZ(6, 'KARŞILAMA (6. VE SONRAKİ ZİYARET) — gün içinde defalarca gelen kullanıcıya: şakacı ("artık seni bekliyordum"), sevecen, gizemli; merakına, sabırsızlığına ya da Magnus\'la vakit geçirmeyi sevmesine dokun. Sayı SÖYLEME (kaçıncı olduğu değişken). {{isim}} çoğu metinde. HEPSİ KOŞULSUZ. Uzunluk: 50-160 karakter.'),
+  { ...tekrar(3, 'kahin_likia'), orijinalMaxId: 22 }, { ...tekrar(3, 'kahin_yousuf'), orijinalMaxId: 22 }, tekrar(8, 'astroyorum'),
+];
+TURLAR[14] = [tekrar(4, 'tavsanfali'), tekrar(4, 'niyet'), tekrar(4, 'yana_bana'), tekrar(4, 'kahve_sonuc'), tekrar(4, 'kahve_gelisme')];
 
 const ORTAK_YER = 'YER TUTUCULAR (yalnız bunları, AYNEN yaz): {{isim}} = kullanıcının adı; {{ay_N}} = bugünden N ay sonraki ayın adı (ör. {{ay_2}}); {{sayi,a,b}} = a ile b arası rastgele sayı (BOŞLUKSUZ, ör. {{sayi,2,6}}); {{randomtarih,a,b}} = bugünden a-b gün sonraki tarih (ör. "17 Ocak"); {{kelime, A | B | C}} = seçeneklerden rastgele biri; {{harf}} = rastgele bir harf (isim baş harfi için); {{gun_N}} = N gün sonraki haftanın günü adı; {{burc}} = kullanıcının burcu. Cinsiyete göre kelime gerekirse: {{data, cinsiyet=erkek, X | cinsiyet=kadin, Y}}. {{yil_+1}} gibi artı işaretli biçim YASAK.';
 const HEDEF = 'HEDEF: Okuyana "wow, bildin!" dedirtecek, BİLİYOR HİSSİ VEREN, SPESİFİK GÖRÜNEN metinler. Somut gündelik ayrıntı kullan (bir mesaj, bir anahtar, bir koku, bir renk, bir sokak, bir harfle başlayan isim, bir ay/gün, bir sayı, bir alışkanlık) ve kişinin hayatına dokunan isabetli gözlemler yap. Herkese uyan basmakalıp klişelerden kaçın — ama ayrıntı, olayın TUTMA ihtimalini düşürmesin (aşağıdaki COLD READING kuralı).';

@@ -7,7 +7,7 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 1118** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 100, tur 8: 140, tur 9: 100; tur 7–12'nin kalanı seçim/çeviride) — her tur sonunda güncelle.
+- **Toplam eklenen: 1338** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 120, tur 8: 180, tur 9: 140, tur 10: 120; kalan Yousuf/Sonuç/Giriş çeviride, tur 11–12 seçimde) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
@@ -40,6 +40,13 @@
 | Günlük Astroloji – Yorum | `gunlukastroloji.json` › `astroyorum` | 80–99 |
 | Karşılama – 2./3./4. ziyaret | `karsilamalar.json` › `karsilamalar` (ziyaret 2-4) | 460–579 |
 | Durugörü – Bugün | `durugoru_bno.json` › `durugoru_bno` | 131–150 |
+| Motivasyon | `motivasyonlar.json` › `motivasyonlar` | 81–100 |
+| Yana – Bana Dair | `yana.json` › `bana_dair` | 129–168 |
+| Kahve – Gelişme | `kahve_gelisme.json` › `gelismeler` | 459–478 |
+| Kâhin Derun | `kahinler.json` › `kahinler.derun` | derun_54–73 |
+| Kâhin Khaleesi | `kahinler.json` › `kahinler.khaleesi` | khaleesi_52–71 |
+| Kader Kitabı | `kaderkitabi.json` › `kaderkitabi` (M2) | 270–309 |
+| Karşılama – 5. ziyaret | `karsilamalar.json` › `karsilamalar` (ziyaret 5) | 580–619 |
 | Kahve – Bağlama | `kahve_baglama.json` › `baglamalar` | 251–290 |
 | Faloya (3) | `faloya.json` › `faloya` | 132–171 |
 

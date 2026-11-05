@@ -1708,6 +1708,484 @@
           "deger": "kamu sektörü"
         }
       ]
+    },
+    {
+      "id": 129,
+      "tur": "bana",
+      "metin": "Bir apartmanın merdivenlerinden yükselen kahkaha dikkatimi çekti. Magnuskop tam beş yıl sonrasını gösteriyor. Elinde iki poşetle yukarı çıkan sensin. Kapıyı açan kadın poşetlerden birini alıp sana takılıyor. Belli ki aranızda yıllardır süren bir şaka var. {{isim}}, bir zamanlar tek başına karar vermeye alışkın olan sen, şimdi birine danışmayı özellikle seviyorsun.",
+      "metin_en": "Laughter rising from the stairwell of an apartment building caught my attention. MagnusScope is showing me exactly five years into the future. You're walking upstairs carrying two shopping bags. A woman opens the door, takes one of the bags, and playfully teases you. Clearly, there's a joke between you that's been going on for years. {{isim}}, you once grew accustomed to making decisions alone, but now you genuinely enjoy asking someone else what they think.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "tur": "bana",
+      "metin": "Üç yıl ileri gittim ve seni telefonunun ekranındaki eski bir fotoğrafa bakarken buldum. Fotoğrafta bugünkü arkadaş çevrenden birkaç kişi var. Hemen ardından yeni bir grubun konuşmasına katılıyorsun. Önünde açık bir defter, yanında üzerinde çizikler bulunan bir kalem duruyor. {{isim}}, kendine bir zamanlar çok uzak gördüğün bir hayatın artık tam ortasındasın. Bunu fark ettiğinde yüzün aydınlanıyor.",
+      "metin_en": "I traveled three years into the future and found you looking at an old photograph on your phone. Several people from your current circle of friends are in it. A moment later, you join a conversation with a new group. An open notebook lies in front of you, with a scratched-up pen beside it. {{isim}}, you're now right in the middle of a life you once thought was far beyond your reach. Your face lights up when you realize it.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "tur": "bana",
+      "metin": "Çalıştığın yerdeki toplantı odasını sekiz yıl sonrasında görüyorum. Önünde kapağı kıvrılmış bir dosya, karşında seni dikkatle dinleyen iki kişi var. Konuşmayı bitirdiğinde içlerinden biri başını onaylayarak sallıyor. {{isim}}, bir zamanlar başkalarının kararlarını beklediğin konularda şimdi senin fikrinin sorulduğunu hissediyorum. Odadan çıktığında omuzların ne kadar dik!",
+      "metin_en": "I can see the meeting room at your workplace eight years from now. There's a folder with a curled cover in front of you, and two people across the table are listening attentively. When you finish speaking, one of them nods in agreement. {{isim}}, I sense that people now seek your opinion on matters where you once had to wait for others to make the decisions. Look how confidently you carry yourself as you leave the room!",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "tur": "bana",
+      "metin": "Sarı ışıklı bir odanın köşesinde, beş yıl sonraki seni görüyorum. Küçük bir kutunun içinden eski bir eşya çıkarıp avucunda çeviriyorsun. Sonra telefonunu eline alıyor ve uzun zamandır görüşmediğin birine yazıyorsun. Cevap geldiğinde gülümsemen değişiyor {{isim}}. Yıllar önce yarım kaldığını düşündüğün bir konuşmanın, içinde ne kadar güzel bir yere oturduğunu o an anlayacaksın.",
+      "metin_en": "In the corner of a room bathed in warm yellow light, I see you five years from now. You take an old object out of a small box and turn it over in your palm. Then you pick up your phone and write to someone you haven't spoken to in a long time. When the reply arrives, your smile changes, {{isim}}. In that moment, you'll understand how beautifully a conversation you once thought unfinished has finally settled in your heart.",
+      "kosullar": []
+    },
+    {
+      "id": 133,
+      "tur": "bana",
+      "metin": "Taze yıkanmış perdelerin kokusu geliyor Magnuskop'tan. Dört yıl sonraki evinde, masanın üzerindeki renkli örtüyü düzeltiyorsun. Az sonra kapı çalıyor ve içeri giren tanıdığın biri, yaptığın değişikliğe hemen dikkat ediyor. {{isim}}, evinin düzeniyle ilgili uzun zamandır aklında olan bir fikri gerçekleştirmişsin. Üstelik bu kez kendi zevkinden hiç ödün vermemişsin.",
+      "metin_en": "The scent of freshly washed curtains is drifting from MagnusScope. Four years from now, you're straightening a colorful tablecloth in your home. Soon, the doorbell rings, and someone you know walks in and immediately notices the change you've made. {{isim}}, you've finally brought to life an idea for your home that you've been considering for a long time. And this time, you haven't compromised your personal taste one bit.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "tur": "bana",
+      "metin": "İki yıl sonrasındaki bir akşamı izliyorum. Seni açık renkli bir koltuğa uzanmış, telefonunda eski yazışmaların arasından birkaçını silerken görüyorum {{isim}}. Yüzünde üzüntüden çok huzur var. Ardından yeni bir konuşmaya gelen cevabı okuyorsun ve gülüyorsun. Bir zamanlar seni günlerce düşündüren meselelerin artık hayatında ne kadar az yer kapladığını görmek beni sevindirdi.",
+      "metin_en": "I'm watching an evening two years from now. You're stretched out on a light-colored sofa, deleting a few messages from old conversations on your phone, {{isim}}. There's more peace than sadness on your face. Then you read a reply to a new conversation and laugh. Seeing how little space those matters that once occupied your thoughts for days now take up in your life makes me happy.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "tur": "bana",
+      "metin": "Seni altı yıl sonrasının sonbaharında, bir dükkânın vitrinine bakarken yakaladım. Camdaki yansımanda daha kendinden emin bir ifade var. İçeri girip uzun süredir aklında olan bir şeyi inceliyorsun. Birkaç dakika sonra telefonundan birine fotoğrafını gönderiyorsun {{isim}}. Gelen cevap seni güldürüyor. Eskiden gereğinden fazla ertelediğin küçük mutluluklara artık daha kolay izin veriyorsun.",
+      "metin_en": "I caught sight of you six years from now, during autumn, looking into a shop window. Your reflection in the glass carries a more confident expression. You step inside and examine something you've wanted for a long time. A few minutes later, you send someone a photograph of it, {{isim}}. Their reply makes you laugh. You've learned to allow yourself the little pleasures you once postponed far too often.",
+      "kosullar": []
+    },
+    {
+      "id": 136,
+      "tur": "bana",
+      "metin": "İnce bir bilekliğin tokasını kapatmaya çalışıyorsun. Magnuskop üç yıl sonrasının bir akşamını gösteriyor. Yanına yaklaşan biri yardım ediyor, ardından kulağına bir şey söyleyince kahkaha atıyorsun. {{isim}}, o insanla aranızdaki yakınlık yeni değil. Bir zamanlar karşı tarafın niyetini anlamak için uzun uzun düşündüğün günlerden eser kalmamış. Şimdi seni en çok rahatlatan şey, yanında kendin gibi davranabilmen.",
+      "metin_en": "You're trying to fasten the clasp of a delicate bracelet. MagnusScope is showing me an evening three years from now. Someone approaches to help you, then whispers something in your ear that makes you burst out laughing. {{isim}}, the closeness between you and this person is nothing new. Those days when you spent ages trying to understand the other person's intentions are long gone. What comforts you most now is being able to be yourself around them.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "tur": "bana",
+      "metin": "Tecrübenin insanın yüzüne nasıl yerleştiğini sekiz yıl sonrasında daha iyi anlıyorum {{isim}}. Seni bir masada, senden genç birinin anlattıklarını dinlerken görüyorum. Önündeki bardağa dokunup kısa bir cevap veriyorsun. Karşındaki kişi rahatlayarak gülümsüyor. Bir zamanlar senin de başkalarına sorduğun meselelerde artık yol gösteren taraf olmuşsun. Bunu yaparken hiç gösterişe ihtiyaç duymaman hoşuma gitti.",
+      "metin_en": "Eight years from now, I understand even better how experience settles into a person's expression, {{isim}}. I see you sitting at a table, listening to someone younger than you. You touch the glass in front of you and give a brief reply. The person across from you smiles with relief. In matters where you once sought guidance from others, you're now the one showing the way. I particularly like that you feel no need to show off.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "tur": "bana",
+      "metin": "Üç yıl sonrası için açtığım görüntüde, seni yeni düzeninin iyice oturduğu bir evde görüyorum. Kapının arkasında asılı duran ceketi alıp dışarı çıkmaya hazırlanıyorsun. Telefonuna gelen daveti okuyunca yüzün aydınlanıyor {{isim}}. Geçmişte uzun uzun açıklamak zorunda hissettiğin kararlarını, şimdi kimseye anlatma ihtiyacı duymuyorsun. Kendi hayatının ritmini yeniden kurmuşsun.",
+      "metin_en": "In a vision set three years from now, I see you in a home where your new routine has truly settled into place. You take a jacket hanging behind the door and prepare to go out. Your face lights up when you read an invitation on your phone, {{isim}}. Decisions you once felt compelled to explain at length now require no explanation to anyone. You've rebuilt the rhythm of your own life.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "tur": "bana",
+      "metin": "Sevdiğin kişiyle bir vitrinin önünde duruyorsunuz. Magnuskop beş yıl sonrasını gösteriyor. İçeride gördüğünüz bir eşya üzerine konuşurken aranızda tatlı bir fikir ayrılığı çıkıyor. Sonra o sana bir şey fısıldıyor ve ikiniz de gülüyorsunuz. {{isim}}, ilişkinizde eskiden üzerinde uzun uzun durduğunuz meselelerin çoğunu artık birkaç cümlede çözebiliyorsunuz. Birlikte büyümek böyle bir şey olsa gerek.",
+      "metin_en": "You're standing in front of a shop window with the person you love. MagnusScope is showing me five years into the future. A sweet little disagreement arises as you discuss something you've spotted inside. Then your loved one whispers something to you, and you both laugh. {{isim}}, most of the matters you once spent ages discussing in your relationship can now be resolved in just a few sentences. I suppose that's what growing together looks like.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "tur": "bana",
+      "metin": "Üzerinde notlarla dolu sayfalar bulunan bir çalışma masası görüyorum. Magnuskop yedi yıl sonrasının bir gününü gösteriyor. Bölümden bir meslektaşın kapıya gelip sana yeni tamamlanan bir çalışmadan söz ediyor. Sen bilgisayarındaki dosyayı açıp bir ayrıntıyı gösteriyorsun {{isim}}. Yıllardır biriktirdiğin bilgilerin başkalarının çalışmalarına da yön verdiği bir döneme girmişsin. Gözlerindeki memnuniyet saklanmıyor.",
+      "metin_en": "I see a desk covered with pages full of notes. MagnusScope is showing me a day seven years from now. A colleague from your department appears at your door and tells you about a newly completed research project. You open a file on your computer and point out a detail, {{isim}}. You've entered a period when the knowledge you've accumulated over the years is helping guide other people's work as well. The satisfaction in your eyes is impossible to hide.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "tur": "bana",
+      "metin": "Bilgisayar ekranında tamamlanmış bir işin yanında beliren işareti görüyorum. Magnuskop tam altı yıl ileriye ayarlı. Çalıştığın yerde, yan masadaki mesai arkadaşın sana dönüp bir şey soruyor. Sen de gülümseyerek cevap veriyorsun {{isim}}. Bir zamanlar yetiştirmek için uğraştığın işlerin artık düzenini sen kuruyorsun. Üstelik mesai bitince zihnini işte bırakmayı da öğrenmişsin.",
+      "metin_en": "I see a checkmark appearing beside a completed task on a computer screen. MagnusScope is set exactly six years into the future. At your workplace, a colleague at the next desk turns to ask you something. You answer with a smile, {{isim}}. You now organize the very work you once struggled to finish on time. What's more, you've learned to leave your work behind mentally when the working day ends.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "tur": "bana",
+      "metin": "Bir akşam yemeğinin ardından masada kalan iki boş tabak görüyorum. Dört yıl sonradasınız. Sevdiğin kişi telefonundan bir görüntü açıp sana gösteriyor, sen de başını onun omzuna yaslıyorsun. {{isim}}, uzun zamandır ertelediğiniz ortak bir isteği gerçekleştirmek üzere konuşuyorsunuz. Görüntüdeki en güzel ayrıntı, ikinizin de artık gelecekle ilgili cümleler kurarken hiç çekinmemeniz.",
+      "metin_en": "I see two empty plates left on a table after dinner. It's four years from now. The person you love opens something on their phone to show you, and you rest your head on their shoulder. {{isim}}, you're discussing how to finally fulfill a shared wish you've been putting off for a long time. The loveliest detail in this vision is that neither of you hesitates anymore when talking about your future together.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "tur": "bana",
+      "metin": "Sekiz yıl sonrasının ilkbaharında, seni küçük bir parkın içinden geçerken görüyorum. Bir bankın yanında durup tanıdık bir sese dönüyorsun. Karşındaki insan seni görünce içtenlikle gülümsüyor. Kısa bir sohbet beklenmedik şekilde uzuyor {{isim}}. Ayrılırken yüzünde hoş bir şaşkınlık var. Geçmişte attığın küçücük bir adımın, yıllar sonra bile güzel bir karşılığı olabileceğini hissediyorsun.",
+      "metin_en": "In the spring eight years from now, I see you walking through a small park. You pause beside a bench and turn toward a familiar voice. The person facing you smiles warmly when they recognize you. What was meant to be a brief conversation unexpectedly stretches on, {{isim}}. When you part ways, there's a pleasant look of surprise on your face. You realize that even the smallest step you took in the past can bring something wonderful years later.",
+      "kosullar": []
+    },
+    {
+      "id": 144,
+      "tur": "bana",
+      "metin": "Dokuz yıl sonrasında, eşinle birlikte bir odanın yerleşimini değiştirdiğinizi görüyorum. Sen ağır bir eşyayı dikkatlice kaydırırken eşin nerede durması gerektiğini tarif ediyor. Bir noktada ikiniz de gülmeye başlıyorsunuz {{isim}}. Eskiden böyle işler uzadığında biraz sabırsızlanırdın. Şimdi evinizle ilgili ortak kararlar almak hoşuna gidiyor. Sonunda ortaya çıkan düzen ikinizin de içine sinmiş.",
+      "metin_en": "Nine years from now, I see you and your spouse rearranging a room together. As you carefully slide a heavy piece of furniture, your spouse tells you where it should go. At one point, you both start laughing, {{isim}}. In the past, you used to grow a little impatient when tasks like these dragged on. Now you enjoy making shared decisions about your home. In the end, you're both pleased with the new arrangement.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "tur": "bana",
+      "metin": "Pencereden içeri süzülen sabah güneşi, Magnuskop'un on yıl sonraki görüntüsünü aydınlatıyor. Seni bir kitabın arasına ayraç koyarken görüyorum {{isim}}. Biraz sonra tanıdığın biri seni arayıp birlikte yapacağınız bir planı hatırlatıyor. Hiç acele etmeden hazırlanıyorsun. Eskiden zaman bulamadığın küçük uğraşlara artık istediğin kadar yer açabilmen sana büyük bir keyif veriyor.",
+      "metin_en": "Morning sunlight streaming through a window illuminates a vision of ten years from now in MagnusScope. I see you placing a bookmark inside a book, {{isim}}. A little later, someone you know calls to remind you about a plan you've made together. You get ready without the slightest rush. Being able to devote as much time as you wish to the little activities you once couldn't fit into your schedule brings you enormous pleasure.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "tur": "bana",
+      "metin": "Arkadaş grubundan yükselen neşeli sesler beni altı yıl sonrasına çekti. Seni bir masanın etrafında, geçmişte çekilmiş komik bir görüntüyü izlerken görüyorum. Yanındakilerden biri sana bugünkü uğraşınla ilgili bir soru soruyor {{isim}}. Cevabını verirken ne kadar emin konuştuğuna dikkat ettim. Şu sıralar kafanı kurcalayan gelecek meselesinin, bir gün keyifle anlatacağın eski bir hatıraya dönüşeceğini görüyorum.",
+      "metin_en": "Cheerful voices rising from a group of friends drew me six years into the future. I see you gathered around a table, watching a funny recording from years ago. Someone beside you asks about something you're working on today, {{isim}}. I noticed how confidently you answer. I can see that the question about your future that's troubling you these days will one day become an old memory you'll enjoy telling people about.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "tur": "bana",
+      "metin": "Eşinin masaya bıraktığı küçük bir pakete bakıyorsun. Magnuskop yedi yıl sonrasının sıradan bir akşamını gösteriyor. Paketi açınca gülerek ona bir şey söylüyorsun {{isim}}. Belli ki senin uzun zaman önce sözünü ettiğin ufak bir isteğini hatırlamış. Aranızda geçen konuşmadan anlıyorum ki günlük telaşlarınız devam etse de birbirinizin ayrıntılarına dikkat etmeyi hiç bırakmamışsınız.",
+      "metin_en": "You're looking at a small package your spouse has placed on the table. MagnusScope is showing me an ordinary evening seven years from now. When you open it, you laugh and say something to your spouse, {{isim}}. Clearly, they've remembered a little wish you mentioned long ago. From the conversation between you, I can tell that although the bustle of everyday life continues, neither of you has ever stopped paying attention to the little details that matter to the other.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "tur": "bana",
+      "metin": "Resmî bir yazının altındaki imzaya bakarken yakaladım seni. Magnuskop altı yıl sonrasına ayarlı. Kurumdaki masanda oturuyorsun; bir çalışma arkadaşın gelip tamamlanan işle ilgili güzel bir şey söylüyor. {{isim}}, uzun zamandır emek verdiğin bir düzenleme artık herkesin işini kolaylaştırıyor gibi. Eskiden seni biraz yoran ayrıntılar, şimdi deneyimin sayesinde kısa sürede çözülüyor. Yüzündeki gurur çok doğal.",
+      "metin_en": "I caught sight of you examining the signature at the bottom of an official document. MagnusScope is set six years into the future. You're sitting at your desk in the institution where you work, and a colleague comes over with good news about a completed procedure. {{isim}}, an improvement you've worked on for a long time now seems to be making everyone's work easier. Details that once caused you some difficulty are now quickly resolved thanks to your experience. The pride on your face is perfectly natural.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "tur": "bana",
+      "metin": "Bir soruya cevap yazıp son kelimeyi siliyorsun; üç yıl ötedeki görüntünde bunu yakaladım. İlgini belli ederken fazla hevesli görünmemeye çalışman tanıdık geldi {{isim}}. Karşı taraftan gelen ses kaydında senin söylediğin ayrıntıya dönülünce yüzün açılıyor. Anlaşılan bu kez merak eden yalnız sen değilsin.",
+      "metin_en": "You're writing an answer to a question, then deleting the last word. I caught this in a vision three years from now. Your effort to show interest without appearing too eager feels familiar, {{isim}}. Your face brightens when a voice message arrives and the other person returns to a detail you mentioned. Apparently, this time you're not the only one who's curious.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "tur": "bana",
+      "metin": "Eşinin cümlesini tamamlamak üzereyken durup dinlediğin bir an var, dört yıl ötede. Magnuskop'ta koltuğun kenarına bıraktığın örtü dikkatimi çekti {{isim}}. Gündelik bir mesele açılıyor; bu kez ikiniz de çözümü savunmak yerine yükü paylaşmayı konuşuyorsunuz. Kısacık bir anlaşma, evde koca bir ferahlığa dönüşüyor.",
+      "metin_en": "Four years from now, there's a moment when you're about to finish your spouse's sentence but stop and listen instead. A blanket you've left on the arm of the sofa catches my attention in MagnusScope, {{isim}}. An everyday matter comes up, but this time, instead of defending your individual solutions, you discuss sharing the responsibility. A very simple agreement brings an enormous sense of relief into your home.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 151,
+      "tur": "bana",
+      "metin": "Yöneticinin toplantıda sözü sana bırakışıyla sandalye gıcırtıları kesiliyor. Birkaç yıl ileride, hazırladığın kısa açıklamanın iş yerinde gereksiz bir karışıklığı önlediğini görüyorum. Notlarının kenarı kıvrılmış {{isim}}; belli ki emek var. Övgüyü hemen başkasına yöneltmeden kabul edişin de ayrıca güzel.",
+      "metin_en": "The creaking of chairs falls silent as your manager gives you the floor during a meeting. A few years into the future, I see that a brief explanation you've prepared prevents unnecessary confusion at work. The edges of your notes are curled, {{isim}}; clearly, you've put effort into them. And it's particularly lovely to see you accept the praise without immediately passing the credit to someone else.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "tur": "bana",
+      "metin": "Koridordaki duyuru panosunun önünde kısa bir duruşunu seçiyorum, üç yıl sonraki kurumunda. Değişen bir uygulama önce sana fazladan uğraş gibi gelebilir; ardından bir çalışma arkadaşının gösterdiği işlem sırası işleri kolaylaştırıyor. {{isim}}, evrak yığınının incelmesine bakılırsa öğrendiğin yolu başkalarıyla da paylaşmışsın.",
+      "metin_en": "I can make out a moment when you pause in front of a noticeboard in the corridor of your institution three years from now. A change in procedure may initially seem like extra work, but then a colleague shows you a sequence of steps that makes everything easier. {{isim}}, judging by the shrinking pile of paperwork, you've shared what you've learned with others as well.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "tur": "bana",
+      "metin": "Bir şarkıyı değiştirmeden sonuna kadar dinleyişin dikkatimi çekti. Magnuskop'un birkaç yıl ilerisinde, eskiden başka anlam taşıyan nakarata kendi kendine eşlik ediyorsun. Geride bıraktığın ilişkiyi yok saymadan da keyif alabileceğin bir hayat kurulmuş {{isim}}. Sesin pek iddialı değil ama neşen gayet yerinde.",
+      "metin_en": "I noticed you listening to a song all the way through without changing it. A few years into the future, MagnusScope shows you singing along to a chorus that once carried a very different meaning. You've built a life where you can enjoy yourself without pretending the relationship you left behind never existed, {{isim}}. Your singing voice isn't particularly bold, but your spirits are wonderfully high.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "tur": "bana",
+      "metin": "Adını duyunca başını kaldırıyorsun; dört yıl ötedeki bir sohbette, eski çalışma arkadaşlarından biri senin öğrettiğin yöntemi anlatıyor. Ceketinin kolunu düzeltirken yüzündeki memnuniyeti yakalıyorum. İşten uzaklaşmış olsan da emeğinin insanlarda sürmesi hoşuna gidecek {{isim}}. Hatırlanan, yalnız yaptığın görev değil.",
+      "metin_en": "You lift your head when you hear your name. In a conversation four years from now, one of your former colleagues is describing a method you once taught them. I catch the satisfaction on your face as you straighten the sleeve of your jacket. Even though you've stepped away from work, you'll be pleased to know that the results of your efforts live on in other people, {{isim}}. It's not merely the duties you performed that are remembered.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "tur": "bana",
+      "metin": "Üstü çizilmiş hazırlık maddelerine bakıp nişanlınla birbirinize gülüyorsunuz; Magnuskop'ta birkaç yıl ileride açılan bir hatıra kutusu var. Sakladığınız ufak not, telaşın içindeki komik bir kararı hatırlatıyor. Her ayrıntıyı yetiştirmekten çok birlikte karar verebilmiş olmanıza sevindiğinizi hissediyorum {{isim}}.",
+      "metin_en": "You and your fiancé exchange smiles while looking at crossed-off items on a wedding preparation list. In MagnusScope, a memory box is being opened a few years into the future. A little note you've kept brings back a funny decision made amid all the excitement. I sense that what makes you both happiest isn't having managed every detail, but having made those decisions together, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 156,
+      "tur": "bana",
+      "metin": "Bildirim sesiyle kaşların kalkıyor: Dört yıl ötedeki ekranında, fazla alınan bir ücretin geri aktarıldığını seçiyorum. Tutarı okumuyorum; yüzündeki tatmin yeterince açık. {{burc}} burcuna yakıştırılan kararlılığını burada anlıyorum, sen peşini bırakmamışsın. İşlem kapanınca kendine hak vermenin tadını çıkarıyorsun.",
+      "metin_en": "Your eyebrows rise at the sound of a notification. On your screen four years from now, I can see that an overcharged amount has been refunded. I can't make out the figure, but the satisfaction on your face says enough. I understand the determination associated with your {{burc}} sign now; you refused to let the matter go. Once the transaction is settled, you savor the pleasure of knowing you were right.",
+      "kosullar": []
+    },
+    {
+      "id": 157,
+      "tur": "bana",
+      "metin": "Aynadaki kendine bakarken yakandaki kıvrımı düzeltiyorsun. Birkaç yıl sonraki görüntünde, sana yakıştığını düşündüğün şeyi başkasının onayını beklemeden seçtiğini fark ettim {{isim}}. Dışarı çıkınca bir kadının içten iltifatı yüzünü aydınlatıyor. Güzel tarafı, o söz gelmeden de kendinden memnun olman.",
+      "metin_en": "You're looking at yourself in the mirror, straightening a fold in your collar. In a vision a few years from now, I notice that you choose what you think suits you without waiting for anyone else's approval, {{isim}}. When you step outside, a woman's sincere compliment lights up your face. The wonderful part is that you were already happy with yourself before she said a word.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 158,
+      "tur": "bana",
+      "metin": "Tecrübene başvurulan yerde hemen cevabı vermeyip önce bir soru soruyorsun. Beş yıl sonraki görüntünde karşındaki genç, anlattıkça kendi çözümünü buluyor; sen de kalemin kapağını kapatıyorsun. {{isim}}, yol göstermekle yönetmek arasındaki farkı iyi biliyorsun. Fikrinin işe yaradığını onun rahatlayan sesinden anlayacaksın.",
+      "metin_en": "When someone seeks your experience, instead of answering immediately, you ask a question first. In a vision five years from now, the young person across from you discovers their own solution as they explain the situation, and you close the cap of your pen. {{isim}}, you understand the difference between guiding someone and controlling them. You'll know your advice has helped by the relief in their voice.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 159,
+      "tur": "bana",
+      "metin": "Yarım bırakılmış bir hobi malzemesi evde yeniden ortaya çıkıyor. Dört yıl sonraki sahnende eşin sana rahat çalışabileceğin bir alan açarken, sen parçaları örtünün üstüne yayıyorsun. Merakla bakıyorum {{isim}}; hep sonraya ayırdığın uğraşa dönmüşsün. Birlikteliğinizin içinde yalnız sana ait bir hevesin de yer bulması sevindirecek.",
+      "metin_en": "Materials from a hobby you once abandoned have reappeared in your home. In a scene four years from now, your spouse clears a space where you can work comfortably while you spread the pieces out on a cloth. I watch with curiosity, {{isim}}; you've returned to an activity you always put off until later. You'll be delighted that something you're personally passionate about has found its own place within your life together.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "tur": "bana",
+      "metin": "Unuttuğunu sandığın bir cümleyi sana geri söylüyorlar. Magnuskop'ta birkaç yıl ötedeki sohbetin bu bölümünü duydum: Vaktiyle verdiğin cesaret, karşındaki kişinin aklında kalmış. Elindeki şişenin kapağını çevirmeyi bırakıyorsun {{isim}}. Sana küçük görünen bir sözün başka birinde yer etmesi, günün en güzel şaşkınlığı olacak.",
+      "metin_en": "Someone repeats a sentence to you that you thought you'd forgotten. I heard this part of a conversation a few years into the future through MagnusScope: the encouragement you once offered has stayed in the other person's mind. You stop twisting the cap of the bottle in your hand, {{isim}}. Discovering that a few words you considered insignificant left such a lasting impression on someone will be the day's most wonderful surprise.",
+      "kosullar": []
+    },
+    {
+      "id": 161,
+      "tur": "bana",
+      "metin": "Kenarına soru işareti koyduğun paragraf, üç yıl sonraki bölüm odanda yeniden önünde. Bir meslektaşının makalene bıraktığı kısa yorumla anlatımın düğümünü çözdüğünü seçiyorum. {{isim}}, eleştiriye açıksın ama metnin sesini de korumak istiyorsun. Düzelttiğin kısmı yüksek sesle okuyunca aradığın açıklığın geldiğini anlayacaksın.",
+      "metin_en": "A paragraph you marked with a question mark is in front of you again, in your department office three years from now. I can see that a short comment a colleague has left on your paper helps you untangle a difficult passage. {{isim}}, you're open to criticism, but you also want to preserve your own voice in the writing. When you read the revised section aloud, you'll realize you've finally achieved the clarity you were seeking.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "tur": "bana",
+      "metin": "Gülüşünün ardından ciddileşip neye ihtiyacın olduğunu açıkça söylüyorsun. Magnuskop'un dört yıl sonrasında, bir yakınından destek isterken avucundaki bozukluğu masaya bıraktığını gördüm. Herkesi idare edebiliyorsun; kendine sıra vermekte biraz gecikiyorsun {{isim}}. Karşındaki seni yadırgamadan dinleyince konuşmayı sürdürmek kolaylaşacak.",
+      "metin_en": "After laughing, you grow serious and clearly explain what you need. Four years into the future, MagnusScope shows you placing a coin from your palm onto a table as you ask someone close to you for support. You're good at looking after everyone else, but you take a little too long to give yourself a turn, {{isim}}. When the person across from you listens without judging, it becomes easier to continue the conversation.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 163,
+      "tur": "bana",
+      "metin": "Yanlış hatırladığınız bir ayrıntı ikinizi de güldürüyor; beş yıl ötedeki görüntüde sevdiğin kişiyle bir anınızı yeniden anlatıyorsunuz. Sen avucunda mandalina kabuğunu toplarken o hikâyenin eksik kısmını ekliyor. Birlikte yaşananları aynı biçimde hatırlamak gerekmiyormuş, diye düşünüyorum {{isim}}. Aranızdaki şakanın hâlâ canlı olması güzel.",
+      "metin_en": "A detail you've both remembered incorrectly makes you laugh. In a vision five years from now, you're retelling a shared memory with the person you love. While you gather mandarin peels in your palm, your loved one fills in the missing part of the story. I find myself thinking that you don't have to remember shared experiences in exactly the same way, {{isim}}. It's lovely that the joke between you is still so alive.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 164,
+      "tur": "bana",
+      "metin": "Üç parçaya ayırdığın bir uğraşın son bölümünü de bitirmişsin. Magnuskop'un iki yıl ilerisinde, yerdeki malzemeleri toplarken geriye dönüp yaptığın işe bakışını izliyorum. Başlarken gözünde büyüyen şey artık tamam {{isim}}. Sonucu bir yakınına gösterdiğinde aldığın içten tepki, emeğinin karşılığını daha belirgin hissettirecek.",
+      "metin_en": "You've finished the final part of a task you divided into three sections. Two years into the future, MagnusScope shows you gathering materials from the floor and turning back to admire what you've accomplished. Something that seemed overwhelming when you started is now complete, {{isim}}. When you show the result to someone close to you, their heartfelt reaction will make the reward for your efforts feel all the more real.",
+      "kosullar": []
+    },
+    {
+      "id": 165,
+      "tur": "bana",
+      "metin": "Eşinin sana uzattığı alışveriş listesinin arkasında senin sevdiğin şeye dair bir not var. Beş yıl sonraki bu ayrıntıyı kaçırmadım {{isim}}. Dışarı çıkmadan girişte ayakkabını giyerken yazıyı okuyup gülümsüyorsun. Birlikte geçirilen zamanın içinde tercihinin hatırlanması, uzun bir sevgi cümlesinden daha sıcak gelecek.",
+      "metin_en": "On the back of the shopping list your spouse hands you, there's a note about something you love. I didn't miss this little detail five years into the future, {{isim}}. As you put on your shoes by the entrance before heading out, you read the note and smile. Having your preferences remembered amid everyday life together will feel warmer than any long declaration of love.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 166,
+      "tur": "bana",
+      "metin": "Kimsenin senin yerine seçmediği ilk küçük kararlarından birini anlatıyorsun, dört yıl sonraki arkadaş sohbetinde. Dizinin üstündeki çantanın askısını bırakıp sözünü tamamlayışını görüyorum. Başta onay aramışsın {{isim}}; şimdi sonucuyla birlikte kararına sahip çıkıyorsun. Arkadaşının seni ciddiyetle dinlemesi, büyüdüğünü hissettiren hoş bir an olacak.",
+      "metin_en": "Four years from now, you're telling your friends about one of the first small decisions you made entirely on your own. I see you let go of the strap of the bag resting on your lap as you finish speaking. At first, you sought approval, {{isim}}; now you stand by both your decision and its outcome. The serious attention your friend gives you will make for a lovely moment when you realize just how much you've grown.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 167,
+      "tur": "bana",
+      "metin": "Kalabalıktan ayrılırken telefonuna uzanmadan önce kendi kendine gülümsüyorsun. Magnuskop'ta birkaç yıl sonraki bir buluşmanın çıkışını gördüm: Hoşlandığın insanla konuşurken kendini olduğundan farklı göstermemişsin. {{isim}}, heyecan var ama prova yok. Eve doğru ilerlerken aklında nasıl göründüğünden çok sohbetin tadı kalacak.",
+      "metin_en": "As you leave a crowd behind, you smile to yourself before reaching for your phone. MagnusScope has shown me the end of a gathering a few years from now: while talking to someone you're attracted to, you haven't tried to pretend to be anyone other than yourself. {{isim}}, there's excitement, but no rehearsal. As you make your way home, what stays with you isn't how you appeared, but how much you enjoyed the conversation.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "tur": "bana",
+      "metin": "Amirinin kısa sorusuna dosyanın ilgili bölümünü açarak cevap veriyorsun. Dört yıl sonraki kurum görüntüsünde, ayraçların arasından aradığın kaydı rahatça bulduğunu izliyorum. Düzen kurmak bazen fazladan iş gibi gelir {{isim}}; burada karşılığını almışsın. Konu uzamadan açıklığa kavuşunca masandaki işe gönül rahatlığıyla döneceksin.",
+      "metin_en": "You answer your supervisor's brief question by opening the relevant section of a file. In a vision of your institution four years from now, I watch you easily find the record you need among the dividers. Creating an organized system can sometimes seem like extra work, {{isim}}, but here it's clearly paid off. Once the matter is clarified without dragging on, you'll return to the work on your desk with complete peace of mind.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
     }
   ],
   "yasama_dair": [

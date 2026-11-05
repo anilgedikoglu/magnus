@@ -7,13 +7,33 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 1398** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140; tur 11–12 seçimde — Codex sınırı) — her tur sonunda güncelle.
+- **Toplam eklenen: 1729** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 11–12 — 2026-11-06 gece (331 metin; ChatGPT + Codex, ikinci geçiş)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Kahve – Uğurlama | `kahve_ugurlama.json` › `ugurlamalar` | 184–223 |
+| Yana – Yaşama Dair | `yana.json` › `yasama_dair` | 151–190 |
+| Kahve – Bağlama | `kahve_baglama.json` › `baglamalar` | 291–330 |
+| Faloya | `faloya.json` › `faloya` | 172–205 (34: ChatGPT'nin tarih açılışlı metinleri "aynı açılış" kuralıyla 14'e indi) |
+| Durugörü – Gelecek | `durugoru_gno.json` › `durugoru_gno` | 87–106 |
+| Kahve – Karşılama | `kahve_akarsilama.json` › `karsilamalar` | 387–426 |
+| Durugörü – Yarın | `durugoru_yno.json` › `durugoru_yno` | 60–79 |
+| Olumlama | `olumlamalar.json` › `olumlamalar` | 555–592 (38: 2 yakın tekrar elendi) |
+| Acı Gerçekler | `acigercekler.json` › `acigercekler` | ag113–ag151 (39: 1 yakın tekrar elendi) |
+| Kâhin Uraz | `kahinler.json` › `kahinler.uraz` | uraz_44–uraz_63 |
+
+Notlar: Claude denetimi Kahve Karşılama'daki 4 "tıbbi teşhis değildir/sembolik yorum" ibaresini çıkardı (istenmeyen not
+kuralı), Gelecek #14'te dil bilgisi, Faloya EN #19'da eksik çerçeve satırı düzeltildi. ChatGPT seçimleri ve çeviriler
+geçici sohbette (normal "Yeni sohbet" kutusunda başka işin taslağı var; dokunulmadı). Codex 01:41'de kullanım sınırına
+takıldı (04:35'e kadar).
 
 ## Tur 5–6 — 2026-11-05 (sürüyor; ChatGPT + Codex)
 

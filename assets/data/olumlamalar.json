@@ -5436,6 +5436,419 @@
           "deger": "evli"
         }
       ]
+    },
+    {
+      "id": 555,
+      "metin": "<color=yellow><b>Telefonum sessiz kaldığında kendimi eksik hissetmiyorum; huzurum birinin ilgisine bağlı değil.</b></color>",
+      "metin_en": "<color=yellow><b>When my phone stays silent, I don't feel incomplete; my peace of mind doesn't depend on someone else's attention.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 556,
+      "metin": "<color=yellow><b>Ertelediğim küçük bir işi tamamladığımda ilerlediğimi görüyor, kendimi daha fazlası için sıkıştırmıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When I finish a small task I've been putting off, I recognize my progress without pressuring myself to do more.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 557,
+      "metin": "<color=yellow><b>Eşimin anlattıklarını aceleyle çözmeye çalışmadan dinliyor, evliliğimizde anlayışa yer veriyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I listen to my spouse without rushing to solve everything they tell me, making room for understanding in our marriage.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 558,
+      "metin": "<color=yellow><b>Sevdiğim kişinin kısa bir mesajına gereğinden fazla anlam yüklemiyor, duygularımı açıkça paylaşabiliyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I don't read too much into a short message from the person I love, and I can express my feelings openly.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliski_var"
+        }
+      ]
+    },
+    {
+      "id": 559,
+      "metin": "<color=yellow><b>Aynaya baktığımda kusur aramak yerine kendime gösterdiğim özeni görüyor, güzelliğimi kendi gözümle tanımlıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When I look in the mirror, I see the care I give myself instead of searching for flaws, and I define my beauty through my own eyes.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 560,
+      "metin": "<color=yellow><b>Sabah kahvaltımı acele etmeden yapıyor, yıllarca verdiğim emeğin ardından kendi zamanımın tadını çıkarıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I enjoy my breakfast without rushing, savoring the freedom to spend my time as I please after years of hard work.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 561,
+      "metin": "<color=yellow><b>Yeni düzenimde küçük kararları kendim verirken bağımsızlığımın huzurunu hissediyor, geçmişimle barışıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>As I make small decisions for myself in my new routine, I feel the peace that comes with independence and make peace with my past.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "bosanmis"
+        }
+      ]
+    },
+    {
+      "id": 562,
+      "metin": "<color=yellow><b>Bir ricaya cevap vermeden önce kendi zamanımı düşünüyor, gerektiğinde nazikçe hayır diyebiliyorum.</b></color>",
+      "metin_en": "<color=yellow><b>Before agreeing to a request, I consider my own time, and I can politely say no when I need to.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 563,
+      "metin": "<color=yellow><b>Mutfağı toparladıktan sonra kendime ayırdığım sessiz dakikaları önemsiyor, dinlenmeyi de hak ettiğimi biliyorum.</b></color>",
+      "metin_en": "<color=yellow><b>After tidying the kitchen, I cherish the quiet moments I set aside for myself, knowing that I deserve rest too.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 564,
+      "metin": "<color=yellow><b>Arkadaşlarım ilişkilerinden söz ederken kendi hayatımı kıyaslamıyor, mutluluğumun yönünü kendim çiziyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When my friends talk about their relationships, I don't compare my life to theirs; I choose my own path to happiness.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 565,
+      "metin": "<color=yellow><b>Makaledeki düzeltmeleri tek tek ele alıyor, bilimsel emeğimin değerini başkalarının onayına bağlamıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I address the revisions to my article one by one, without tying the value of my scientific work to other people's approval.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 566,
+      "metin": "<color=yellow><b>Yöneticimden gelen yeni talebin süresini netleştiriyor, emeğimi gerçekçi bir planla ortaya koyuyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I clarify the deadline for a new request from my manager and approach my work with a realistic plan.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 567,
+      "metin": "<color=yellow><b>Bir iltifat duyduğumda kusurlarımı sıralamıyor, içten bir teşekkürle güzel sözleri kabul ediyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When someone compliments me, I don't start listing my flaws; I accept their kind words with a sincere thank you.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 568,
+      "metin": "<color=yellow><b>Düğün hazırlığında seçenekler çoğalsa da nişanlımla önceliklerimizi belirliyor, bütçemizi huzurla yönetiyorum.</b></color>",
+      "metin_en": "<color=yellow><b>Even as the wedding planning brings more choices, my fiancé and I set our priorities and manage our budget with peace of mind.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nisanli"
+        }
+      ]
+    },
+    {
+      "id": 569,
+      "metin": "<color=yellow><b>Zor bir konuşmada duygularımı saklamak zorunda değilim; sakin ve açık olmak bana güç veriyor.</b></color>",
+      "metin_en": "<color=yellow><b>I don't have to hide my feelings during a difficult conversation; being calm and open gives me strength.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 570,
+      "metin": "<color=yellow><b>Sınavda zorlandığım bir soru bütün emeğimi gölgelemiyor; bildiklerime güvenerek devam ediyorum.</b></color>",
+      "metin_en": "<color=yellow><b>One difficult exam question doesn't overshadow all my hard work; I keep going with confidence in what I know.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 571,
+      "metin": "<color=yellow><b>Alıştığım bir hitabı hatırladığımda kendime kızmıyor, geçmişin ardından yeni alışkanlıklar kuruyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When I remember a familiar term of endearment, I don't get angry with myself; I'm building new habits as I move on from the past.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 572,
+      "metin": "<color=yellow><b>Evde herkesin ihtiyacını düşünürken kendimi ihmal etmiyor, eşimden destek istemeyi doğal buluyorum.</b></color>",
+      "metin_en": "<color=yellow><b>As I take care of everyone's needs at home, I don't neglect my own, and I see asking my spouse for support as perfectly natural.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 573,
+      "metin": "<color=yellow><b>Yastığa başımı koyduğumda yarının işlerini zihnimde büyütmüyor, bugünün yorgunluğunu geride bırakıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When I lay my head on the pillow, I don't let tomorrow's tasks grow overwhelming in my mind; I leave today's exhaustion behind.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 574,
+      "metin": "<color=yellow><b>Telefonu ters çevirdiğim kısa aralarda, her bildirime yetişmeden de günü yönetebildiğimi görüyorum.</b></color>",
+      "metin_en": "<color=yellow><b>During those brief moments when I turn my phone face down, I realize I can manage my day without keeping up with every notification.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 575,
+      "metin": "<color=yellow><b>Yeni bir sohbette sorularımın da yer bulmasına dikkat ediyor, yakınlığı karşılıklı merakla kuruyorum.</b></color>",
+      "metin_en": "<color=yellow><b>In a new conversation, I make sure there's room for my questions too, building closeness through mutual curiosity.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 576,
+      "metin": "<color=yellow><b>Eşimle sofradan kalkmadan kendi isteğimi de dile getiriyor, ortak hayatımızda sesime yer açıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>Before my spouse and I leave the dinner table, I express what I want too, making room for my voice in our shared life.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 577,
+      "metin": "<color=yellow><b>Ayrılığın ardından boşalan saatlerime sevdiğim şarkıları katıyor, günlerimi kendi zevkime göre örüyorum.</b></color>",
+      "metin_en": "<color=yellow><b>After the breakup, I fill my newly empty hours with songs I love, shaping my days around my own tastes.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 578,
+      "metin": "<color=yellow><b>Evde yapılacakları eşimin hatırlatmasını beklemeden fark ediyor, evliliğimize davranışlarımla özen gösteriyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I notice what needs to be done around the house without waiting for my spouse to remind me, showing care for our marriage through my actions.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 579,
+      "metin": "<color=yellow><b>Toplantıdaki kısa söz hakkımı somut bir öneriyle değerlendiriyor, işimde katkımı görünür kılıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I make the most of my brief chance to speak in a meeting by offering a concrete suggestion, making my contribution at work visible.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 580,
+      "metin": "<color=yellow><b>Boşanma sonrası bütçemde giderleri ayrı satırlara yazıyor, yeni hayatımı anlaşılır adımlarla kuruyorum.</b></color>",
+      "metin_en": "<color=yellow><b>In my post-divorce budget, I list my expenses on separate lines, building my new life one clear step at a time.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "bosanmis"
+        }
+      ]
+    },
+    {
+      "id": 581,
+      "metin": "<color=yellow><b>Temiz çamaşırları katlarken evdeki emeğimi küçümsemiyor, ortaya çıkan ferahlıkta kendi payımı görüyorum.</b></color>",
+      "metin_en": "<color=yellow><b>As I fold the clean laundry, I don't underestimate the work I do at home; I recognize my part in creating this sense of freshness and order.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 582,
+      "metin": "<color=yellow><b>Kurumdaki evrakın eksik hanesini dikkatle tamamlıyor, ayrıntıları takip eden yanıma güveniyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I carefully fill in the missing field on a document at work, trusting my ability to keep track of the details.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 583,
+      "metin": "<color=yellow><b>Makale taslağımda bir paragrafı berraklaştırdıkça araştırmamın yönünü daha iyi görüyor, emeğimi takdir ediyorum.</b></color>",
+      "metin_en": "<color=yellow><b>As I clarify each paragraph in my article draft, I see the direction of my research more clearly and appreciate my own hard work.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 584,
+      "metin": "<color=yellow><b>Defterimin kenarına kendi örneğimi yazınca konuyu kavrayışım derinleşiyor, öğrenme biçimimi tanıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When I write my own example in the margin of my notebook, my understanding of the subject deepens, and I recognize how I learn best.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 585,
+      "metin": "<color=yellow><b>Amirimden gelen talepte önceliği sorarak netleştiriyor, kurumdaki iş sıramı daha sağlam belirliyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When my supervisor gives me a task, I ask about its priority to clarify what's expected, helping me organize my workload more effectively.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 586,
+      "metin": "<color=yellow><b>Yüzüğüm gözüme iliştiğinde nişanlımla kurmak istediğim hayatı düşünüyor, hazırlıkların içindeki anlamı koruyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When my ring catches my eye, I think about the life I want to build with my fiancé, keeping the meaning behind all the preparations close to my heart.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nisanli"
+        }
+      ]
+    },
+    {
+      "id": 587,
+      "metin": "<color=yellow><b>Sözüm sohbetin arasında kesilse de düşüncemi tamamlamak için yeniden söze giriyor, kadın olarak yerimi koruyorum.</b></color>",
+      "metin_en": "<color=yellow><b>Even when someone interrupts me mid-conversation, I speak up again to finish my thought, standing my ground as a woman.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 588,
+      "metin": "<color=yellow><b>Yılların deneyiminden bir püf noktasını paylaşırken emeklilikte de bilgimin işe yarayan tarafını hissediyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When I share a useful tip from my years of experience, I feel that my knowledge still makes a difference in retirement.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 589,
+      "metin": "<color=yellow><b>Çözümünü hemen bulamadığım soruda verilerin altını çiziyor, sınava hazırlanırken sabrımla yol açıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When I can't immediately find the solution to a question, I underline the given information, letting my patience guide me through my exam preparation.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 590,
+      "metin": "<color=yellow><b>Birlikte çekilmiş fotoğraflara bakmaya ara verebiliyor, ayrılıktan sonraki alışma sürecimde hızımı kendim seçiyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I can take a break from looking at photos of us together, choosing my own pace as I adjust to life after the breakup.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 591,
+      "metin": "<color=yellow><b>Tek kişilik bir planı da hevesle yapıyor, aşkı beklerken sevdiğim etkinliklerden kendimi mahrum bırakmıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I make plans just for myself with genuine excitement, refusing to miss out on activities I love while waiting for love to come into my life.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 592,
+      "metin": "<color=yellow><b>Boşandıktan sonraki düzenimde bir rafı kendi zevkime göre yerleştiriyor, yaşam alanımda aidiyetimi büyütüyorum.</b></color>",
+      "metin_en": "<color=yellow><b>In my new life after divorce, I arrange a shelf exactly to my taste, deepening my sense of belonging in my own living space.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "bosanmis"
+        }
+      ]
     }
   ]
 }

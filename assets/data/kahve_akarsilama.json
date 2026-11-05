@@ -4972,6 +4972,593 @@
         "kariyer",
         "genel"
       ]
+    },
+    {
+      "id": 387,
+      "metin": "Hoş geldin {{isim}}! Ben Magnus. Nişanlınla geleceğinizi düşünürken bazen en ufak ayrıntıyı bile uzun uzun tartıyorsun. Fakat bütün bu hazırlıkların ardında çok daha güzel bir isteğin var: Birlikte huzurlu olmak. Fincanının kenarında yan yana duran iki iz gözüme çarptı. Bakalım aşkınızın önündeki günler neler getirecek...",
+      "metin_en": "Welcome, {{isim}}! I'm Magnus. When you think about your future with your fiancé, you sometimes spend ages weighing even the smallest details. But behind all those preparations lies a much more beautiful wish: to find peace and happiness together. Two marks sitting side by side along the rim of your cup have caught my eye. Let's see what the days ahead have in store for your love...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 388,
+      "metin": "Bir insanın adını duyunca yüzündeki ifadenin değiştiği olur mu {{isim}}? Ben Magnus, aşk falına hoş geldin! Duygularını kolayca ele vermediğini, fakat küçük bir sözü bile günlerce hatırlayabildiğini hissediyorum. Fincanın ağız kısmında birbirine yaklaşan izler var. Kalbinin hangi sorusuna karşılık bulacağız, birlikte inceleyelim...",
+      "metin_en": "Does hearing someone's name ever change the expression on your face, {{isim}}? I'm Magnus, and welcome to your love reading! I sense that you don't reveal your feelings easily, yet you can remember even the smallest remark for days. There are marks drawing closer together near the rim of your cup. Let's explore which question in your heart we're about to find an answer to...",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 389,
+      "metin": "{{isim}}, hoş geldin. Ben Magnus. Bir ayrılığın ardından insan bazen eski bir cümleyi hatırlayıp gülümsüyor, bazen de aynı cümleyi düşünmek istemiyor. Senin içinde de böyle iki ayrı duygu seziyorum. Fincanında birbirinden uzaklaşmış iki izin yanında yeni bir açıklık var. Bunun aşk hayatın açısından ne anlama geldiğine bakalım...",
+      "metin_en": "{{isim}}, welcome. I'm Magnus. After a breakup, sometimes an old remark brings a smile to your face, while other times you don't even want to think about those same words. I sense these two conflicting feelings within you as well. In your cup, there's a new opening beside two marks that have drifted apart. Let's see what this means for your love life...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 390,
+      "metin": "Magnus karşında, hoş geldin {{isim}}! Sevdiğin kişiyle konuşurken hayatın diğer meselelerini de bir süreliğine unuttuğun oluyor. Yine de zihninin arkasında çözülmeyi bekleyen birkaç konu var. Fincanın dibinde birbirinden ayrı duran küçük izler görüyorum. Bunların hangisi yakında yüzünü güldürecek, şimdi anlatmaya başlıyorum;",
+      "metin_en": "Magnus is here before you. Welcome, {{isim}}! When you're talking to the person you love, you sometimes forget about everything else in life for a while. Still, there are a few matters lingering in the back of your mind, waiting to be resolved. I can see small, separate marks at the bottom of your cup. Which of these will soon bring a smile to your face? I'm about to tell you;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 391,
+      "metin": "Merhaba {{isim}}, ben Magnus. Evinde bir şeyin yerini değiştirince hemen fark eden gözlerin, insanların davranışlarındaki küçük değişimleri de kaçırmıyor. Aşk konusunda bazen tek bir içten sözün bütün gösterişli hareketlerden değerli olduğunu düşünüyorsun. Fincanının kulp tarafındaki yumuşak izler dikkatimi çekti. Gel, gönül meselelerine birlikte bakalım...",
+      "metin_en": "Hello, {{isim}}, I'm Magnus. The same keen eyes that immediately notice when something has been moved in your home never miss the slightest changes in people's behavior. When it comes to love, you sometimes believe that a single heartfelt word is worth more than the grandest gestures. The gentle marks near the handle of your cup have caught my attention. Come, let's explore the matters of your heart together...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 392,
+      "metin": "Kıymetli {{isim}}, sağlık odaklı kahve falına hoş geldin. Bendeniz Magnus. Gün içinde ne kadar işin olursa olsun, bazen yalnızca birkaç dakikalık sessizliğin bile sana iyi geldiğini hissediyorum. Fincanındaki geniş beyaz alan bana dinlenmeyi hatırlatıyor. Bakalım telvelerin arasındaki semboller sana neler anlatacak...",
+      "metin_en": "My dear {{isim}}, welcome to your health-focused coffee reading. I'm Magnus, at your service. No matter how busy your day gets, I sense that even a few minutes of silence can sometimes do you a world of good. The broad white space in your cup reminds me of the importance of rest. Let's see what the symbols among the coffee grounds have to tell you...",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 393,
+      "metin": "Bir fincan kahvenin kokusu bile insanın gün içindeki telaşını değiştirebilir, değil mi {{isim}}? Magnus olarak seni selamlıyorum. Kimi zaman dinlenmek isterken bile yapılacakları düşündüğünü seziyorum. Sağlık ve yaşam dengesi üzerine seçtiğin bu falda, telvelerin arasındaki sakin görüntüler dikkatimi çekti. Şimdi yorumlamaya başlıyorum;",
+      "metin_en": "Even the aroma of a cup of coffee can change the pace of a hectic day, can't it, {{isim}}? I'm Magnus, and I bid you a warm welcome. I sense that even when you want to rest, your mind sometimes wanders to everything you still need to do. In this reading you've chosen about health and life balance, the peaceful patterns among the coffee grounds have caught my attention. Let me begin my interpretation;",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 394,
+      "metin": "İki ayrı mesele arasında gidip gelirken birinin kendiliğinden çözülmesini beklediğin oluyor {{isim}}. Merhaba, ben Magnus! Fincanında bir yol ayrımını andıran şekil görüyorum. Ama hemen telaşlanma; her ayrım zor bir karar demek değildir. Bugün yaşamının genel akışına bakacağız. Bakalım hangi ayrıntı gözümüzden kaçmayacak...",
+      "metin_en": "When you're torn between two different matters, you sometimes hope one of them will resolve itself, {{isim}}. Hello, I'm Magnus! I can see a shape resembling a fork in the road in your cup. But don't worry just yet; not every crossroads means a difficult decision. Today, we'll look at the overall direction of your life. Let's see which details refuse to escape our notice...",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 395,
+      "metin": "Değerli {{isim}}, bendeniz Magnus. Kahve falına hoş geldin! Dışarıdan bakıldığında kolay karar veren bir beyefendi gibi görünüyorsun, fakat bazı konuları herkesten önce kendi içinde tartıyorsun. Fincanının dibindeki yoğun telve bana uzun zamandır zihnini meşgul eden bir meseleyi düşündürdü. Şimdi hayatının farklı alanlarına birlikte göz atalım;",
+      "metin_en": "My dear {{isim}}, I'm Magnus. Welcome to your coffee reading! To others, you appear to be a gentleman who makes decisions easily, yet there are matters you prefer to weigh privately before discussing them with anyone else. The thick coffee grounds at the bottom of your cup remind me of something that's been weighing on your mind for quite some time. Now, let's take a look at the different areas of your life together;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 396,
+      "metin": "Merhaba {{isim}}. Yaşamındaki yeni düzene alışırken kendine ayırdığın zamanın kıymetini daha iyi anladığını hissediyorum. Ben Magnus, sağlık temalı kahve falına hoş geldin. Fincanın kenarında genişçe açılmış bir alan var; bana yeniden kurulan günlük alışkanlıkları hatırlatıyor. Gel, bu açıklığın anlattıklarına birlikte bakalım...",
+      "metin_en": "Hello, {{isim}}. As you adjust to the new rhythm of your life, I sense that you've come to appreciate the time you set aside for yourself even more. I'm Magnus, and welcome to your health-themed coffee reading. There's a wide, clear space along the rim of your cup; it reminds me of daily routines being rebuilt. Come, let's discover what this opening has to tell us...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 397,
+      "metin": "Bir işi bitirdiğinde hemen sıradakini düşünüyorsun, öyle değil mi {{isim}}? Magnus'un kariyer falına hoş geldin. Emeğinin karşılığını görmek senin için yalnızca maddi bir mesele değil; yaptığının fark edilmesini de önemsiyorsun. Fincanında yukarı doğru uzanan ince bir çizgi seçiyorum. Bunun çalışma hayatına dair ne söylediğini inceleyelim...",
+      "metin_en": "As soon as you finish one task, you're already thinking about the next, aren't you, {{isim}}? Welcome to Magnus's career reading. Seeing your hard work pay off isn't just about money for you; you also care about having your efforts recognized. I can make out a thin line stretching upward in your cup. Let's explore what it reveals about your professional life...",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 398,
+      "metin": "Kurumdaki evrakların bazen bitmeyecekmiş gibi göründüğünü tahmin ediyorum {{isim}}. Bendeniz Magnus, hoş geldin! İşini usulüne uygun yapmak istiyorsun ama gereksiz yere uzayan süreçlere de pek tahammülün yok. Fincanında düzgün ilerleyip sonra genişleyen bir yol görüyorum. Amirlerinle ve çalışma düzeninle ilgili sembolleri yorumlamaya başlıyorum...",
+      "metin_en": "I imagine the paperwork at your institution sometimes feels endless, {{isim}}. I'm Magnus, at your service. Welcome! You want to do your job properly and follow the rules, but you have little patience for procedures that drag on unnecessarily. In your cup, I can see a path that runs straight before widening. I'm about to interpret the symbols relating to your superiors and your working arrangements...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 399,
+      "metin": "Hanımefendi, Magnus'un kahve falına hoş geldin {{isim}}! Bazen aynaya bakarken saçındaki küçücük bir ayrıntıyı düzeltip ardından bambaşka bir konuyu düşünmeye başladığını hissediyorum. Zihnin aynı anda birkaç meseleyle uğraşabiliyor. Fincanının kenarındaki zarif şekiller ilgimi çekti. Hayatında hangi güzel gelişmelerin izleri var, beraber bakalım...",
+      "metin_en": "My dear lady, welcome to Magnus's coffee reading, {{isim}}! I sense that sometimes, while looking in the mirror, you fix the tiniest detail in your hair, only to find yourself thinking about something entirely different a moment later. Your mind can juggle several matters at once. The delicate shapes along the rim of your cup have caught my attention. Let's discover together what signs of beautiful developments lie ahead in your life...",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 400,
+      "metin": "Bir defterin köşesine aldığın küçük not bazen bütün sayfadan daha işe yarar, değil mi {{isim}}? Ben Magnus, hoş geldin! Okulda kendinden beklentin yüksek fakat arada kafanı derslerden uzaklaştırmak da istiyorsun. Fincanın dibinde yan yana duran birkaç işaret seçiyorum. Bunların arkadaşlıklarına, eğitimine ve günlük hayatına nasıl yansıdığını anlatacağım...",
+      "metin_en": "Sometimes a tiny note scribbled in the corner of a notebook proves more useful than the entire page, doesn't it, {{isim}}? I'm Magnus, welcome! You have high expectations of yourself at school, but you also want to take your mind off your studies now and then. I can make out several marks sitting side by side at the bottom of your cup. I'll tell you how these may affect your friendships, education, and everyday life...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 401,
+      "metin": "Mesai boyunca telefonuna bakmaya fırsat bulamadığın bir günün sonunda, sevdiğin bir ses bütün yorgunluğunu hafifletebilir {{isim}}. Magnus'un aşk falına hoş geldin! İşinle özel hayatın arasındaki dengeyi önemsiyorsun; yine de duygularını her zaman aynı rahatlıkla anlatamıyorsun. Fincanında kalbe benzeyen bir kıvrım seçtim. Hadi bakalım...",
+      "metin_en": "After a day when you haven't even had a chance to check your phone at work, hearing a familiar voice you love can make all your exhaustion fade away, {{isim}}. Welcome to Magnus's love reading! You value the balance between work and your personal life, yet you can't always express your feelings with the same ease. I've spotted a curve resembling a heart in your cup. Let's take a look...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 402,
+      "metin": "Eşinle aynı masada oturup birbirinden tamamen farklı şeyler düşündüğünüz anlar oluyor {{isim}}. Ben Magnus, kahve falına hoş geldin! İkinizin ortak hayatına değer verirken kendi küçük alışkanlıklarını da korumak istiyorsun. Fincanında yan yana ilerleyen iki yol dikkatimi çekti. Ev düzeninden kişisel beklentilerine kadar bakalım neler göreceğiz...",
+      "metin_en": "There are moments when you and your spouse sit at the same table, each thinking about something completely different, {{isim}}. I'm Magnus, welcome to your coffee reading! While you treasure the life you've built together, you also want to hold on to your own little habits. Two paths running side by side in your cup have caught my attention. From your household routines to your personal expectations, let's see what we'll discover...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 403,
+      "metin": "Bir makalenin başında geçen saatleri unutup sonra oturduğun yerden kalkınca zamanın nasıl geçtiğine şaşırdığın olur mu {{isim}}? Ben Magnus, hoş geldin. Bilimsel çalışmalarına gösterdiğin titizliği kendine ayırdığın zamana da göstermek istiyorsun. Fincanındaki genişleyen boşluğu sağlık ve dinlenme temasıyla yorumlayacağım. Başlıyoruz...",
+      "metin_en": "Have you ever become so absorbed in an article that you lose track of the hours, only to stand up and wonder where all the time went, {{isim}}? I'm Magnus, welcome. You want to give the time you set aside for yourself the same careful attention you devote to your scientific work. I'll interpret the widening clear space in your cup through the themes of health and rest. Let's begin...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 404,
+      "metin": "Sevgili {{isim}}, ben Magnus. Hoş geldin! Evin düzeniyle ilgilenirken sevdiğin birinin küçücük ilgisini fark etmek, bazen bütün gününü güzelleştirebiliyor. Sen gösterişli sözlerden çok içten davranışlara değer veriyorsun. Fincanının ağız kısmında yumuşakça birleşen izler görüyorum. Gönlünü ilgilendiren gelişmeler hakkında neler söyleyebilirim, bakalım...",
+      "metin_en": "Dear {{isim}}, I'm Magnus. Welcome! While you're taking care of things around the house, noticing even the smallest thoughtful gesture from someone you love can sometimes brighten your entire day. You value sincere actions far more than grand words. I can see marks gently coming together near the rim of your cup. Let's discover what I can tell you about the developments awaiting your heart...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 405,
+      "metin": "Kıymetli {{isim}}, ben Magnus. Akademik hayatında bir cümleyi defalarca düzeltirken bile aslında daha büyük bir düşünceyi tamamlamaya çalışıyorsun. Ayrıntılara gösterdiğin özen bazen günlük kararlarına da yansıyor. Fincanında düzenli çizgilerin arasında farklı yönde ilerleyen bir iz dikkatimi çekti. Bu kez yalnız çalışmalarına değil, hayatının bütününe bakıyorum...",
+      "metin_en": "My dear {{isim}}, I'm Magnus. In your academic life, even when you revise a single sentence over and over, you're actually trying to bring a much bigger idea to completion. The care you give to details sometimes carries over into your everyday decisions. Among the orderly lines in your cup, a mark heading in a different direction has caught my eye. This time, I'm looking not only at your work, but at your life as a whole...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 406,
+      "metin": "Kimi günler insan erkenden dinlense bile zihnindeki düşünceler hemen durulmuyor {{isim}}. Ben Magnus, sağlık temalı falına hoş geldin. Sen de kendine iyi gelecek bir günlük düzen kurmanın önemini hissediyorsun. Fincanının orta kısmında açık bir yol seçiyorum. Bunun beden ve ruh dengesine dair anlamını şimdi anlatacağım...",
+      "metin_en": "On some days, even getting plenty of rest early on doesn't immediately quiet the thoughts running through your mind, {{isim}}. I'm Magnus, and welcome to your health-themed reading. You, too, recognize the importance of building a daily routine that helps you feel your best. I can make out a clear path in the middle of your cup. Now I'll tell you what it means for the balance between your body and mind...",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 407,
+      "metin": "Liste kenarına düşülen küçücük notlar bile nişanlınla kuracağın hayatı düşündürüyor sana, hoş geldin {{isim}}. Hazırlıklarda kararlısın ama bir konuda onun da hevesini duymak istiyorsun. Aşk için ilk sezgim, birlikte seçilecek bir ayrıntının seni yakın zamanda gülümseteceği. Fincanını bu heyecanla elime alıyorum…",
+      "metin_en": "Even the tiniest notes scribbled in the margins of a checklist remind you of the life you're going to build with your fiancé. Welcome, {{isim}}. You're determined when it comes to the preparations, but there's one matter where you'd really like to feel your partner's enthusiasm too. My first intuition about your love life is that a little detail you choose together will soon bring a smile to your face. With that excitement in mind, I take your cup into my hands…",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 408,
+      "metin": "Bir şarkının ilk birkaç notasına elin hâlâ biraz çabuk gidiyor sanki. Geldin ya, otur yanıma. Ayrılıktan sonra özlemekle geri dönmek istemenin sende ayrı duygular olduğunu seziyorum. Aşka dair bu falda, dinlemeye yeniden dayanabildiğin bir ezginin getireceği hafifliği merak ediyorum. İlk sözü fincanına bırakıyorum…",
+      "metin_en": "It seems your hand still reaches a little too quickly to stop a song after its first few notes. You're here now, so come sit beside me. I sense that, since the breakup, missing someone and wanting them back have become two very different feelings for you. In this love reading, I'm curious about the sense of relief a melody you've finally found the strength to listen to again might bring. I'll let your cup have the first word…",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 409,
+      "metin": "Mutfak havlusunu düzeltirken bile aklının bir köşesinde gönül meseleleri dolaşıyor, hissediyorum. Evin işlerine gösterdiğin özeni duygularında da arıyorsun {{isim}}. Yakında birinin senin için düşünerek yaptığı incelik, fark edildiğini hissettirebilir. Aşk niyetini aldım, şimdi fincanının başına geçiyorum…",
+      "metin_en": "Even as you straighten a kitchen towel, matters of the heart are lingering somewhere in the back of your mind. I can feel it. You look for the same care in your emotional life that you put into looking after your home, {{isim}}. Soon, a thoughtful little gesture someone makes just for you may leave you feeling truly noticed. I've received your wish for love, and now I'm turning my attention to your cup…",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 410,
+      "metin": "Kaç kere bir şeyi sakladığın yeri unutunca bütün evi gözünle taradın? Sana ilk merhabam biraz bu tanıdık telaştan geliyor. Genel falında, çantanın yan cebinden çıkacak ufak bir eşyanın vereceği rahatlık dolaşıyor aklımda. Düzen arıyorsun ama sürprizleri de seviyorsun. Bakalım kahven bu hâline nasıl eşlik edecek…",
+      "metin_en": "How many times have you forgotten where you put something and searched the whole house with your eyes? My first greeting comes from that familiar little panic. In your general reading, I keep thinking of the relief a small item turning up in the side pocket of your bag might bring. You like things organized, but you also enjoy surprises. Let's see how your coffee reflects this side of you…",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 411,
+      "metin": "Tek kişilik zamanını seviyorsun, yine de güzel bir yakınlığa yerin var. Hoş geldin {{isim}}, sende önce bu dengeyi hissettim. Aşkı düşünürken büyük sözlerden çok yan yana rahatça susabilmeyi önemsiyorsun. Yakın günlerde bir sohbetin telaşsız akışı hoşuna gidebilir. Ben şimdi gönül niyetinle kahvene dönüyorum…",
+      "metin_en": "You enjoy your time alone, yet there's still room in your life for a beautiful connection. Welcome, {{isim}}. That's the balance I sensed in you first. When you think about love, being able to sit comfortably together in silence matters more to you than grand declarations. In the coming days, you may enjoy the easy, unhurried flow of a conversation. Now I'm turning back to your coffee with your wish for love in mind…",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 412,
+      "metin": "Bir dosyaya isim verirken bile daha düzgününü arayan yanını selamlıyorum bugün. Kariyer deyince sende hem ilerleme isteği hem de emeğini doğru anlatma derdi hissediyorum. Hazırladığın bir metindeki son düzeltme, kendini sunarken elini rahatlatabilir. Ben de fincanını önümüze alıp bu niyetin izini sürmeye geçiyorum…",
+      "metin_en": "Today, I greet the part of you that searches for an even better name when saving a file. When it comes to your career, I sense both a desire to move forward and a concern about presenting your hard work in the right way. One final revision to something you've written may help you feel more confident when presenting yourself. And now, with those efforts in mind, I'm placing your cup before us and beginning to follow the signs of your intentions…",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 413,
+      "metin": "{{isim}}, gönül tarafında kendi kararlarını korurken geleceğin için de söz sahibi olmak istiyorsun, hoş geldin. Kariyere dair ilk sezgim, bir kenara kaydettiğin ilanın yeniden dikkatini çekmesi. Şartları daha sakin okuyunca kendine uygun bir yön fark edebilirsin. Fincanla ilk tanışmamızı buradan yapıyorum…",
+      "metin_en": "{{isim}}, welcome. While holding on to your own decisions in matters of the heart, you also want to have a say in your future. My first career-related intuition is that a job posting you saved earlier will catch your attention again. Reading the requirements with a calmer mind may help you recognize a direction that suits you. This is where I'll begin getting acquainted with your cup…",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 414,
+      "metin": "Kurum koridorlarında bir işin hangi aşamada olduğunu sormak bile ayrı mesai, seni anlıyorum. Hoş geldin. Kariyer niyetinde titizliğinin görülmesini beklediğini seziyorum. Bir evrakın üzerindeki eksik tamamlandığında hem işin akışı hem keyfin açılabilir. Şimdi ben kahveni önüme çekiyor, yorumun ilk adımını atıyorum…",
+      "metin_en": "In the corridors of your institution, even asking what stage a procedure has reached can feel like a job in itself. I understand. Welcome. In your career intentions, I sense that you're waiting for your meticulous work to be recognized. Once a missing detail on a document is completed, both the workflow and your mood may improve. Now I'm drawing your coffee closer and taking the first step into your reading…",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 415,
+      "metin": "Defterin arasında kıvrılan sayfa köşesi kadar ufak şeyler bile aklındaki konuyu hatırlatıyor sana. Öğrenci telaşının içinde buraya uğradın, hoş geldin. Genel niyetinde hem yetişme çabası hem arkadaşlarına vakit açma isteği hissediyorum. Derste anlaşılır hâle gelen bir nokta gününü güzelleştirebilir. Kahveni önüme aldım…",
+      "metin_en": "Even something as small as a folded page corner in your notebook reminds you of what's on your mind. You've stopped by amid the rush of student life. Welcome. In your general intentions, I sense both the struggle to keep up and the desire to make time for your friends. Finally understanding something in class may brighten your day. I've placed your coffee in front of me…",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 416,
+      "metin": "Eşinle aynı sofrada otururken günün ayrıntılarını bazen en sona saklıyorsun, öyle bir izlenim aldım senden. Genel falına hoş geldin {{isim}}. Yakında yemekten sonra uzayan bir konuşma, birlikte vereceğiniz ufak bir kararı kolaylaştırabilir. İkisinin de içine sinmesi güzel şey. Şimdi fincanınla baş başa kalıyorum…",
+      "metin_en": "I get the impression that when you're sitting down to a meal with your spouse, you sometimes save the details of your day until the very end. Welcome to your general reading, {{isim}}. Soon, a conversation that stretches on after dinner may make a small decision you'll make together easier. It's a lovely thing when a choice feels right to both of you. Now I'm spending a little time alone with your cup…",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 417,
+      "metin": "Bir becerinden söz ederken cümleyi çabucak küçülttüğünü seziyorum {{isim}}, hoş geldin. Eşinle kurduğun hayatın yanında kendi hedeflerinin de adı olsun istiyorsun. Kariyer için, yaptıklarını birkaç maddede toplaman sana ne kadar yol aldığını gösterebilir. Kahvenin başına bu emeği aklımda tutarak oturuyorum…",
+      "metin_en": "I sense that when you talk about one of your skills, you're quick to downplay it, {{isim}}. Welcome. Alongside the life you've built with your spouse, you want your own goals to have a place and a name of their own. As for your career, putting your accomplishments into a few bullet points may show you just how far you've come. I'm sitting down with your coffee, keeping all that hard work in mind…",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 418,
+      "metin": "Tecrüben sana hemen cevap vermemeyi öğretmiş, yine de yeni bir fikir duyunca gözünün parladığını hissediyorum. Hoş geldin. Kariyer niyetinde, bir tanıdığın senden görüş istemesiyle bilgine yeniden güvenebilirsin. Kenarı çizilmiş bir not kadar sade başlayacak bu alışverişe bakalım kahven ne ekleyecek…",
+      "metin_en": "Experience has taught you not to respond too quickly, yet I sense that your eyes still light up when you hear a new idea. Welcome. In your career reading, an acquaintance asking for your opinion may renew your confidence in your own knowledge. Let's see what your coffee has to add to this exchange, which may begin as simply as a note with a line drawn beside it…",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 419,
+      "metin": "Ufak bir indirim görünce sevinen yanınla gereksiz harcamayı hemen sorgulayan yanın pek güzel anlaşıyor galiba. Hoş geldin {{isim}}. Genel niyetinde, kasada fark edeceğin bir avantajın alışverişini tatlıya bağlayabileceğini hissediyorum. Küçük sevinçlerin hesabını ben de tutarım. Fincanına doğru yaklaşıyorum…",
+      "metin_en": "The part of you that gets excited about a small discount and the part that immediately questions unnecessary spending seem to get along rather well. Welcome, {{isim}}. In your general reading, I sense that a little advantage you notice at the checkout may bring your shopping trip to a satisfying close. I keep track of life's little joys too. Now I'm leaning closer to your cup…",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 420,
+      "metin": "{{burc}} burcuna yakıştırılan özelliklerin hepsine uymazsın ama kararını sessizce olgunlaştırdığın zamanlar var, hissediyorum. Hoş geldin. Genel falında, kâğıda attığın tek bir çizgiyle gereksiz bir işi planından çıkarma ferahlığı var gibi. Ben önce bu sadeleşme isteğini kahvenle buluşturacağım…",
+      "metin_en": "You may not fit every characteristic associated with the {{burc}} zodiac sign, but I sense there are times when you quietly let a decision take shape in your mind. Welcome. In your general reading, I sense the relief of crossing an unnecessary task off your plans with a single stroke of your pen. First, I'll bring this desire for simplicity together with what your coffee reveals…",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 421,
+      "metin": "Sıcak ekmek kokusu kadar tanıdık bir güven arıyorsun aşkta, ilk sezgim bu. Geldiğine sevindim {{isim}}. İlgi hoşuna gidiyor ama yanında rahat davranabildiğin insanı ayrı tutuyorsun. Önümüzdeki günlerde ufak bir sakarlığına birlikte gülmek, yakınlık duygunu büyütebilir. Ben de fincanını gönül niyetinle açıyorum…",
+      "metin_en": "In love, you're looking for a sense of comfort as familiar as the smell of freshly baked bread. That's my first intuition. I'm glad you're here, {{isim}}. You enjoy attention, but the person you can truly be yourself around holds a special place in your heart. In the days ahead, laughing together over a little clumsy moment of yours may deepen your sense of closeness. Now I'm opening your cup with your wish for love in mind…",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 422,
+      "metin": "Bölümde konuşulan bir konuyu eve kadar zihninde taşıyan yanına merhaba. Genel niyetinde biraz da ilgini tazeleyecek bir kıvılcım aradığını hissediyorum. Bir öğrencinin soruya başka açıdan yaklaşması, not aldığın sayfada yeni bir düşünce başlatabilir. Ben de fincanına aynı merakla bakmaya hazırlanıyorum…",
+      "metin_en": "Hello to the part of you that carries a topic discussed in your department all the way home in your thoughts. In your general intentions, I sense that you're also looking for a spark to rekindle your interest. A student approaching a question from a different angle may inspire a fresh idea on the page where you've been taking notes. I'm preparing to look into your cup with that same curiosity…",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 423,
+      "metin": "Bir paylaşımın altına ne yazacağını düşünüp sonra tek kelimeyle yetindiğin oluyor mu? Aşk için gelmişsin, hoş geldin. Arkadaş çevrende rahatken duygun işin içine girince daha ölçülü davrandığını seziyorum. Verdiğin doğal bir tepkinin karşılık bulması cesaretini artırabilir. Şimdi kahvene gönül tarafından giriyorum…",
+      "metin_en": "Do you ever spend time thinking about what to comment on a post, only to settle for a single word? You've come for love. Welcome. I sense that while you're relaxed around your friends, you become more reserved when feelings enter the picture. Having one of your spontaneous reactions warmly received may give you more confidence. Now I'm approaching your coffee from the heart's side…",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 424,
+      "metin": "Gürültü azaldığında kendi düşüncelerini daha net duyuyorsun, ama bazen sessizliğe alışman da vakit alıyor. Seni sağlık niyetinle karşılıyorum {{isim}}. Akşam ekranın parlaklığını kısıp kendine ayıracağın sakin bir aralık hoşuna gidebilir. İlk izlenimim, kendini dinlemeye hevesli olduğun. Kahveni usulca açmaya geçiyorum…",
+      "metin_en": "When the noise dies down, you can hear your own thoughts more clearly, though sometimes it takes you a while to settle into the silence. I welcome you and your wish for good health, {{isim}}. Dimming your screen in the evening and setting aside a peaceful little stretch of time for yourself may feel good. My first impression is that you're eager to listen to what your body and mind are telling you. Now I'll gently begin revealing what your coffee holds…",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 425,
+      "metin": "Cebindeki telefonu sebepsiz yere yokladığın anlarda bile beklentini hemen belli etmiyorsun sanki. Aşk niyetinle geldin, yerin hazır. Bekârlığın rahatlığını sevsen de birinin seni merak etmesi hoşuna gidiyor. Önümüzdeki dönemde sana ayrıntılı sorulan bir soru ilgini çekebilir. Ben gönlünün bu kıpırtısıyla falına başlıyorum…",
+      "metin_en": "Even when you check your pocket for your phone for no particular reason, you don't seem to give away what you're hoping for. You've come with love on your mind, and your place is ready. You enjoy the freedom of being single, but you also like knowing someone is curious about you. In the coming days, a thoughtful, detailed question someone asks you may catch your interest. With this little flutter in your heart, I'm beginning your reading…",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 426,
+      "metin": "Ayrılığın ardından hayatının yönünü kendi elinle belirleme isteğin bana kadar geldi {{isim}}. Kariyer falına hoş geldin. Bilgisayardaki eski bir taslağı açıp işe yarar kısmını yeniden kullanmak, yapabildiklerini sana hatırlatabilir. Bir adım atmaya isteklisin, sadece içine sinsin istiyorsun. Kahvene bu kararlılıkla dönüyorum…",
+      "metin_en": "Your desire to take control of the direction of your life after the breakup has reached me, {{isim}}. Welcome to your career reading. Opening an old draft on your computer and reusing the parts that still work may remind you of what you're capable of. You're ready to take a step forward; you just want to be sure it feels right. With that determination in mind, I'm turning back to your coffee…",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
     }
   ]
 }

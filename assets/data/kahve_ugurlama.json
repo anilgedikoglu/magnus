@@ -2655,6 +2655,623 @@
         "kariyer",
         "saglik"
       ]
+    },
+    {
+      "id": 184,
+      "metin": "Geride bıraktığın günlerin yorgunluğunu bazen omuzlarında taşıdığını seziyorum. Önümüzdeki günlerde kendine ayıracağın sakin bir sabah, ne kadar toparlandığını fark ettirecek. Yeni düzeninde bedenine de ruhuna da iyi davran {{isim}}.\n\nSağlıkla kal...\nMagnus",
+      "metin_en": "I sense that sometimes you still carry the exhaustion of the days you've left behind on your shoulders. In the coming days, a peaceful morning set aside just for yourself will help you realize how much you've recovered. Be kind to both your body and your soul as you settle into your new routine, {{isim}}.\n\nStay healthy...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 185,
+      "metin": "Düğün hazırlıklarıyla iş hayatının hesaplarını aynı deftere sığdırmaya çalışıyorsun sanki. Yakında çalışma düzeninde netleşecek bir ayrıntı, nişanlınla yapacağın planı da kolaylaştıracak. Hem gönlün hem kazancın ferah olsun {{isim}}.\n\nSevgilerimle...\nMagnus",
+      "metin_en": "It's as though you're trying to fit your wedding preparations and your work-related finances into the same notebook. Soon, a detail about your work arrangements will become clearer, making it easier to plan things with your fiancé. May both your heart and your finances find some breathing room, {{isim}}.\n\nWith love...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 186,
+      "metin": "Bazen bir şarkının ilk birkaç saniyesi, geride bıraktığın uzun bir konuşmayı yeniden hatırlatıyor. Ama önümüzdeki günlerde aynı melodiyi dinlerken başka şeyler düşüneceksin {{isim}}. Kalbinin hafiflediği o anı şimdiden seviyorum.\n\nSevgiyle kal...\nMagnus",
+      "metin_en": "Sometimes, the first few seconds of a song bring back memories of a long conversation you've left behind. But in the coming days, you'll find yourself thinking about something entirely different when you hear that same melody, {{isim}}. I'm already fond of that moment when your heart will finally feel lighter.\n\nWith love...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 187,
+      "metin": "Arkadaşlarınla saatlerin nasıl geçtiğini unutabiliyorsun ama bazen kendine ayıracağın uykudan çalıyorsun. Fincanında biraz daha düzenli bir temponun sana iyi geleceğini seziyorum. Gençliğinin enerjisini güzel kullan {{isim}}.\n\nDinç ve neşeli kal!\nMagnus",
+      "metin_en": "You can lose track of time when you're with your friends, but sometimes you sacrifice sleep that you really need. I sense in your coffee cup that a slightly more regular routine would do you good. Make the most of the energy of your youth, {{isim}}.\n\nStay energetic and cheerful!\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 188,
+      "metin": "Bir pencereyi açıp içeri dolan havayı derin derin içine çektiğin anı görüyorum. Yakında böyle sade bir anda günün ağırlığının biraz hafiflediğini fark edeceksin. Her şeye yetişirken kendini unutma {{isim}}.\n\nDaha huzurlu fincanlarda görüşelim.\nMagnus",
+      "metin_en": "I see you opening a window and taking a deep breath of the fresh air flowing inside. Soon, in a simple moment just like that, you'll notice some of the day's weight lifting from your shoulders. Don't forget yourself while trying to keep up with everything, {{isim}}.\n\nUntil we meet over another, more peaceful cup of coffee.\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 189,
+      "metin": "Eşinin bazen uzun açıklamalardan çok, senin kendiliğinden gösterdiğin küçük ilgileri önemsediğini biliyorsun. Yakında birlikte güleceğiniz sıradan bir olay, aranızdaki sıcaklığı artıracak {{isim}}. Hanımefendiye de selamlarımı iletiyorum.\n\nMuhabbetiniz daim olsun!\nMagnus",
+      "metin_en": "You know that sometimes your wife values the little gestures of affection you show her spontaneously more than lengthy explanations. Soon, an ordinary moment that makes you laugh together will bring even more warmth into your relationship, {{isim}}. Please give my regards to your lovely lady as well.\n\nMay your affection for each other never fade!\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 190,
+      "metin": "Sevdiğin kişiyle aynı konuya bazen farklı pencerelerden baktığınızı seziyorum. Yakında birlikte vereceğiniz küçük bir karar, düşündüğünden kolay sonuçlanacak. Birbirinizi dinlemenin güzelliğini yeniden hissedeceksiniz {{isim}}.\n\nİkinize de sevgiler...\nMagnus",
+      "metin_en": "I sense that you and the person you love sometimes see the same situation from different perspectives. Soon, a small decision you make together will turn out to be easier than you expected. You'll rediscover the beauty of truly listening to each other, {{isim}}.\n\nSending love to you both...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 191,
+      "metin": "Yılların sana kazandırdığı güzel bir özellik var {{isim}}: Kimin ne söylediğinden çok, söylediğini nasıl yaşadığına bakıyorsun. Önümüzdeki günlerde bir tanıdığından duyacağın teşekkür, tecrübenin değerini hatırlatacak.\n\nSaygı ve sevgilerimle...\nMagnus",
+      "metin_en": "The years have given you a wonderful quality, {{isim}}: You pay more attention to whether people live by their words than to what they actually say. In the coming days, a thank-you from someone you know will remind you just how valuable your experience is.\n\nWith respect and affection...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 192,
+      "metin": "İşten eve dönerken zihninde hâlâ tamamlanmamış bir konu taşıdığın oluyor. Yakında o meseleyle ilgili beklediğin açıklık sağlanacak ve eşinle geçirdiğin vakte daha rahat odaklanacaksın. Emeğin bereket, yuvan huzur getirsin {{isim}}.\n\nGörüşmek üzere...\nMagnus",
+      "metin_en": "Sometimes, even on your way home from work, you're still carrying an unresolved matter in your mind. Soon, you'll get the clarity you've been waiting for, and you'll be able to focus more comfortably on the time you spend with your wife. May your hard work bring prosperity and your home be filled with peace, {{isim}}.\n\nUntil we meet again...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 193,
+      "metin": "Defterindeki bir sayfaya tekrar tekrar dönüp baktığını görüyorum {{isim}}. Yakında okulda kafanı kurcalayan bir ayrıntı netleşecek; küçük bir başarı bile çalışma isteğini artıracak. Kaleminin ucundan güzel sonuçlar eksik olmasın.\n\nZihin açıklığı diliyorum!\nMagnus",
+      "metin_en": "I see you turning back to the same page in your notebook again and again, {{isim}}. Soon, something that's been bothering you at school will become clear, and even a small success will boost your motivation to study. May your pen always lead you to wonderful results.\n\nWishing you a clear and focused mind!\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 194,
+      "metin": "Kurumdaki evrakların arasında bazen en basit işin bile neden uzadığını düşünüyorsun. Önümüzdeki günlerde bir çalışma arkadaşından alacağın açıklama, takip ettiğin meseleyi kolaylaştıracak. Mesai bitiminde yüzün gülsün {{isim}}.\n\nSelam ve sevgilerimle...\nMagnus",
+      "metin_en": "Sometimes, surrounded by paperwork at your workplace, you wonder why even the simplest task takes so long. In the coming days, an explanation from a colleague will make the matter you're dealing with easier to handle. May you have a smile on your face when your workday ends, {{isim}}.\n\nWith warm regards...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 195,
+      "metin": "Bir makalenin tek cümlesini uzun uzun tartabiliyorsun ama gönül meselelerinde her şeyin mantıklı açıklaması olmuyor. Yakında sevgi üzerine yapacağın samimi bir sohbet, zihnindeki sorulardan birini hafifletecek {{isim}}.\n\nKalbin de zihnin kadar aydınlık olsun.\nMagnus",
+      "metin_en": "You can spend ages weighing the meaning of a single sentence in an article, but matters of the heart don't always have logical explanations. Soon, a heartfelt conversation about love will ease one of the questions that's been occupying your mind, {{isim}}.\n\nMay your heart be as bright as your mind.\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 196,
+      "metin": "Kalbinin kapısını kapatmış değilsin; yalnızca içeri girecek kişinin ayak sesini daha dikkatli dinliyorsun. Önümüzdeki günlerde bir sohbetin beklediğinden keyifli uzadığını görebilirsin {{isim}}. Umarım bu güzel his çoğalır.\n\nBaşka bir fincanda görüşelim.\nMagnus",
+      "metin_en": "You haven't closed the door to your heart; you're simply listening more carefully to the footsteps of whoever might enter. In the coming days, you may find a conversation lasting much longer, and being far more enjoyable, than you expected, {{isim}}. I hope that wonderful feeling continues to grow.\n\nUntil our next cup of coffee.\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 197,
+      "metin": "Bilgisayarındaki açık sekmeler gibi zihninde de birden fazla iş taşıyorsun. Yakında yöneticinle ya da mesai arkadaşlarınla yapacağın kısa bir görüşme, önceliklerini netleştirecek. Emeğinin karşılığını gönül rahatlığıyla almanı diliyorum {{isim}}.\n\nBol kazançlar!\nMagnus",
+      "metin_en": "Just like the open tabs on your computer, you're juggling several tasks in your mind at once. Soon, a brief conversation with your manager or colleagues will help you clarify your priorities. I hope you receive the rewards of your hard work with complete peace of mind, {{isim}}.\n\nWishing you plenty of success and prosperity!\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 198,
+      "metin": "Omuzlarını farkında olmadan sıktığın anları seziyorum. Her sorumluluğu aynı anda taşımana gerek olmadığını sen de biliyorsun. Yakında tamamlayacağın küçük bir işin ardından duyacağın ferahlık sana güzel gelecek {{isim}}.\n\nKendine özen göster, esen kal.\nMagnus",
+      "metin_en": "I sense those moments when you unconsciously tense your shoulders. You know you don't have to carry every responsibility at once. Soon, the relief you'll feel after completing a small task will do you a world of good, {{isim}}.\n\nTake good care of yourself and stay well.\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 199,
+      "metin": "Sevgili {{isim}}, bir kadının kalbine ulaşmanın yolunun gösterişli sözlerden değil, hatırlanan küçük ayrıntılardan geçtiğini sen iyi biliyorsun. Yakında birinin söylediklerini unutmamış olması seni gülümsetecek.\n\nGönlünün güzelliği sana geri dönsün.\nMagnus",
+      "metin_en": "Dear {{isim}}, you know very well that the way to a woman's heart isn't through grand words, but through remembering the little details. Soon, the realization that someone hasn't forgotten something you told them will bring a smile to your face.\n\nMay the kindness in your heart find its way back to you.\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 200,
+      "metin": "Evinin düzenindeki küçücük değişikliği bile hemen fark ediyorsun. Yakında uzun süredir el atmak istediğin bir köşeyi toparlayacak, ardından kendine ayıracağın vaktin tadını çıkaracaksın {{isim}}. Emeğinin bereketi, gönlünün ferahlığı eksilmesin.\n\nSevgiler...\nMagnus",
+      "metin_en": "You notice even the tiniest change in the way your home is arranged. Soon, you'll finally tidy up a corner you've been meaning to tackle for ages, then enjoy some well-deserved time to yourself, {{isim}}. May your efforts always bear fruit and your heart remain at ease.\n\nWith love...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 201,
+      "metin": "Sabah çayının yanında uzayan bir sohbetin değerini yılların deneyimiyle biliyorsun. Yakında eski günlerden söz eden biri, sana unutmaya yüz tuttuğun hoş bir anıyı hatırlatacak {{isim}}. Gönül dediğin, güzel hatıralarla da genç kalıyor.\n\nMuhabbetle kal efendim...\nMagnus",
+      "metin_en": "Years of experience have taught you the value of a leisurely conversation over morning tea. Soon, someone reminiscing about the old days will remind you of a lovely memory you'd almost forgotten, {{isim}}. After all, beautiful memories have a way of keeping the heart young.\n\nStay surrounded by warmth and good conversation, my dear friend...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 202,
+      "metin": "Geride bıraktığın döneme ait küçük bir alışkanlığı değiştirirken bir an duraksayabilirsin. Ama yeni düzeninde kendi seçtiğin ayrıntıların çoğalacağını görüyorum {{isim}}. Yakında vereceğin sade bir karar sana güzel bir özgürlük hissi yaşatacak.\n\nYeni başlangıçlara sevgiler...\nMagnus",
+      "metin_en": "You may hesitate for a moment as you change a small habit from the chapter of life you've left behind. But I can see that more and more details of your new routine will be choices you've made for yourself, {{isim}}. Soon, a simple decision will bring you a wonderful sense of freedom.\n\nWith love for new beginnings...\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 203,
+      "metin": "Eşinle günün yorgunluğunu paylaştığınız kısa bir akşam sohbetinin bile sana iyi geldiğini görüyorum. Yakında birlikte kendinize ayıracağınız sakin bir zaman, ikinizin de yenilenmiş hissetmesine yardımcı olacak {{isim}}.\n\nYuvanıza huzur, ikinize sağlık diliyorum.\nMagnus",
+      "metin_en": "I can see that even a brief evening conversation with your spouse, sharing the day's exhaustion, does you good. Soon, some peaceful time you set aside just for the two of you will help you both feel refreshed, {{isim}}.\n\nI wish peace for your home and good health for you both.\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 204,
+      "metin": "Birinin sözünden çok, konuşurken sana gerçekten dönüp dönmediğine bakıyorsun {{isim}}. Çantanın askısını düzeltirken bile çevreni tartan o dikkatini görüyorum. Aşkta acele etmeyen yanına içten bir yakınlık diliyorum, kendine iyi davran.\n\nMagnus",
+      "metin_en": "You pay more attention to whether someone truly turns toward you when they speak than to the words they say, {{isim}}. I can see that watchful side of you, quietly sizing up your surroundings even as you adjust the strap of your bag. I wish the part of you that refuses to rush into love a genuinely heartfelt connection. Take good care of yourself.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 205,
+      "metin": "Yeni düzeninde banyodaki havluyu bile kendi istediğin yere koyabilmenin kıymeti var. Başkalarına kolay anlatamadığın bu ferahlığı seziyorum. Kendine ayırdığın vakti savunmak zorunda hissetmediğin günlerin çoğalmasını dileyerek seni uğurluyorum.\n\nMagnus",
+      "metin_en": "There's something precious about being able to put even the bathroom towel exactly where you want it in your new routine. I sense that feeling of relief you find so hard to explain to others. As I bid you farewell, I wish you more and more days when you don't feel the need to justify taking time for yourself.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 206,
+      "metin": "Nişanlınla gelecek konuşulurken hesap makinesine uzanan elini görüyorum. İsteklisin, yine de kariyerinde zemini yoklamadan adım atmayı sevmiyorsun. Önünüzdeki günlerde birlikte yapacağınız sade bir hesap, kararını kolaylaştırabilir. İçin rahat etsin.\n\nMagnus",
+      "metin_en": "I can see your hand reaching for the calculator whenever you and your fiancé talk about the future. You're eager, but you don't like making career moves without first testing the ground beneath your feet. In the coming days, going over some simple figures together may make your decision easier. May your mind be at ease.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 207,
+      "metin": "Omuzlarını ne zaman yukarı topladığını çoğu kez işin bitince fark ediyorsun, değil mi? Sana veda ederken bunu görüyorum. Gün arasında sandalyeye yaslanıp vereceğin kısa bir mola, kendini ne kadar sıkıştırdığını anlamana yardım edebilir. Rahatlık diliyorum.\n\nMagnus",
+      "metin_en": "You often don't realize how much you've been hunching your shoulders until your work is done, do you? I can see that as I say goodbye. Taking a short break to lean back in your chair during the day may help you realize just how much pressure you're putting on yourself. I wish you some much-needed ease.\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 208,
+      "metin": "{{isim}}, eski konuşmaları hatırlayınca artık yalnız söylenenleri değil, senin neleri içine attığını da tartıyorsun. Şarkıyı yarıda değiştirirken bile kendini kollayan yanını hissediyorum. Kalbinin kendi tercihlerini yeniden duymasını diliyorum. Usulca ilerle.\n\nMagnus",
+      "metin_en": "{{isim}}, when you remember old conversations now, you don't just weigh what was said, but also everything you kept to yourself. I can sense the part of you that's protecting itself, even when you change a song halfway through. I hope your heart learns to hear its own wishes again. Move forward gently.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 209,
+      "metin": "Eşinle aynı odada bulunmakla gerçekten baş başa kalmak arasındaki farkı biliyorsun. Kumandayı bir yana bıraktığınızda açılan sohbetlerde başka bir sıcaklık görüyorum. Yakın günlerde gündelik bir ayrıntıya beraber gülmeniz, özlediğin yakınlığı hatırlatabilir. Muhabbetiniz artsın.\n\nMagnus",
+      "metin_en": "You know the difference between simply being in the same room as your spouse and truly spending quality time together. I see a different kind of warmth in the conversations that begin when you put the remote aside. In the coming days, laughing together over some everyday little thing may remind you of the closeness you've been missing. May your bond grow even stronger.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 210,
+      "metin": "Sevdiğin kişinin cümlesindeki küçücük ton değişimini yakalıyorsun, fakat kendi beklentini bazen şakaya sarıyorsun. Masada peçeteyi katlarken sustuğun o anı anlar gibiyim. Daha dolaysız bir konuşmanın sana getireceği rahatlığı diliyorum. İçtenliğin karşılık bulsun.\n\nMagnus",
+      "metin_en": "You catch even the slightest change in the tone of your loved one's voice, yet sometimes you disguise your own expectations as jokes. I feel as though I understand that moment when you fall silent while folding a napkin at the table. I wish you the relief that a more direct conversation could bring. May your sincerity be met with sincerity.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 211,
+      "metin": "Defterin kenarındaki gelişigüzel çizgiler bana şunu söylüyor, derste aklın dağılsa da önemli gördüğünü sonradan toparlıyorsun. Okulda bir arkadaşınla notları karşılaştırınca eksik sandığın kısmın az olduğunu görebilirsin. İçin açılarak çalışmanı dileyip vedalaşıyorum.\n\nMagnus",
+      "metin_en": "The random doodles in the margins of your notebook tell me something: Even when your mind wanders during class, you manage to piece together what matters afterward. When you compare notes with a friend at school, you may discover that you've missed less than you thought. I bid you farewell, wishing you the joy of studying with a clearer mind.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 212,
+      "metin": "Kurumda herkes bir evrakın nerede kaldığını sorarken, sen önce kayıt numarasına bakmayı düşünüyorsun. Bu sessiz pratikliğini fark ediyorum. Önümüzdeki günlerde basit bir kontrolün uzayan bir işi netleştirmesi mümkün. Mesai bitince zihnin de paydos edebilsin.\n\nMagnus",
+      "metin_en": "While everyone at your workplace is asking where a document has ended up, you're already thinking of checking its reference number first. I notice this quiet practicality of yours. In the coming days, a simple check may finally clear up a task that's been dragging on. May your mind be able to clock out when your workday ends, too.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 213,
+      "metin": "Dipnotlarda gösterdiğin titizliği gönül işlerine de taşıyorsun, söylenmeyene anlam arıyorsun. Kitabın arasına koyduğun ayraç kadar küçük bir ilginin sende nasıl yer ettiğini seziyorum. Sana, her duyguyu çözümlemek zorunda kalmadan yakınlık duyabildiğin anlar diliyorum.\n\nMagnus",
+      "metin_en": "You bring the same meticulous attention you give to footnotes into matters of the heart, searching for meaning in what's left unsaid. I sense how deeply a gesture of affection, as small as the bookmark tucked between the pages of your book, can stay with you. I wish you moments when you can feel close to someone without having to analyze every emotion.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 214,
+      "metin": "Çalıştığın yerde toplantı dağılınca asıl yapılacakları toparlayan yanın öne çıkıyor. Ekrandaki madde işaretlerine bakarken başkalarının atladığını seçtiğini görüyorum. Yakında bir mesai arkadaşının fikrini özellikle sorması emeğinin görünür olduğunu hissettirebilir. Verimli günler sana.\n\nMagnus",
+      "metin_en": "At work, you're the one who steps up to organize what actually needs to be done after a meeting ends. I can see you looking at the bullet points on your screen and spotting what others have overlooked. Soon, a colleague asking specifically for your opinion may make you feel that your efforts are being recognized. Wishing you productive days ahead.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 215,
+      "metin": "Sana yakışanı söyleyen çok olsa da seni neyin duygulandırdığını soran insanı ayrı tutuyorsun. Aynaya hazırlanmak için eğilirken aklından geçenleri bile paylaşmadığın oluyor, hissediyorum. Sevgide ayrıntılarını merak eden bir ilginin çoğalmasını dilerim. Neşeyle uğurluyorum seni.\n\nMagnus",
+      "metin_en": "Plenty of people may tell you what looks good on you, but you hold a special place for someone who asks what truly moves you. I sense that there are thoughts you don't share with anyone, not even as you lean toward the mirror to get ready. I hope you find more of the kind of affection that takes an interest in the little details that make you who you are. I send you off with a smile.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 216,
+      "metin": "Evinin düzeninde başkalarının fark etmediği bir ayrıntı seni hemen durduruyor, dolap kapağındaki parmak izi gibi. Yaptıkların kendiliğinden oluyormuş sanılınca içinden geçeni anlıyorum. Komşularından duyacağın içten bir takdirin emeğini görünür kılmasını dilerim. Eline sağlık.\n\nMagnus",
+      "metin_en": "A detail in your home that others wouldn't even notice can stop you in your tracks, like a fingerprint on a cabinet door. I understand how you feel when people assume everything you do somehow takes care of itself. I hope a heartfelt word of appreciation from your neighbors will make your efforts feel truly seen. You deserve recognition for all you do.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 217,
+      "metin": "Tek başına karar verebilmek hoşuna gidiyor, yine de her seçimi uzun uzun tartmaktan yorulduğun oluyor. Alışveriş sepetinden çıkardığın gereksiz bir ürün kadar sade bir vazgeçiş görüyorum. Yakın zamanda bir masrafı elemek sana küçük bir özgürlük hissi verebilir. Güle güle harca vaktini.\n\nMagnus",
+      "metin_en": "You enjoy being able to make decisions on your own, yet sometimes you grow tired of weighing every choice so carefully. I see a simple act of letting go, like removing an unnecessary item from your shopping cart. In the near future, cutting out an expense may give you a small sense of freedom. May you spend your time happily and wisely.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 218,
+      "metin": "Çektiğin fotoğrafı paylaşmadan önce kırpman bana biraz da kendinden ne kadarını göstereceğini seçtiğini düşündürüyor. Görünür olmayı seviyorsun, her ayrıntının sorulmasını ise istemiyorsun. Önümüzdeki günlerde yalnız sana kalan bir sevinci sakince yaşamanı dilerim. Tadını çıkar.\n\nMagnus",
+      "metin_en": "The way you crop a photo before sharing it makes me think you're also choosing how much of yourself to reveal. You like being seen, but you don't want every little detail questioned. In the coming days, I hope you quietly savor a moment of happiness that belongs to you alone. Enjoy it.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 219,
+      "metin": "Sevilmek konusunda gözüne çarpan ayrıntı, birinin daha önce anlattığın küçücük şeyi unutmaması. İçeceğini nasıl sevdiğinin hatırlanmasına bile kayıtsız kalamadığını seziyorum. Böyle bir özenle karşılaştığında sevincini küçültmeden yaşamanı dilerim {{isim}}. Yüreğin ısınsın.\n\nMagnus",
+      "metin_en": "When it comes to feeling loved, what catches your attention is someone remembering the tiniest thing you once told them. I sense that even someone remembering exactly how you like your drink can touch your heart. When you encounter that kind of thoughtfulness, I hope you let yourself feel the full joy of it, {{isim}}. May it warm your heart.\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 220,
+      "metin": "Amirinin odasına girmeden önce söyleyeceğini zihninde kısaltıyorsun, ayrıntıları sorarsa açmayı tercih ediyorsun. Kurumdaki koridorda bu hazırlığını görür gibiyim. Yakın günlerde kısa tuttuğun bir açıklamanın anlaşılması sana zaman kazandırabilir. Günün kalanını keyifle geçir.\n\nMagnus",
+      "metin_en": "Before entering your supervisor's office, you mentally shorten what you're going to say, preferring to elaborate only if they ask for details. I can almost see you preparing yourself in the corridor at work. In the coming days, having one of your brief explanations understood right away may save you some time. Enjoy the rest of your day.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 221,
+      "metin": "Yastığın serin tarafını ararken ertesi güne dair düşünceler sıralanabiliyor. Her şeyi aklında tutmaya uğraşan yanını hissediyorum. Yatmadan önce yapılacakları bir kâğıda dökmek, geceyi planlamadan geçirmene yardımcı olabilir. Sana dinlenmeye izin verdiğin huzurlu geceler dilerim.\n\nMagnus",
+      "metin_en": "As you search for the cool side of your pillow, thoughts about the following day can start lining up in your mind. I sense the part of you that's always trying to keep track of everything. Writing down your to-do list before bed may help you spend the night without making plans. I wish you peaceful nights when you allow yourself to truly rest.\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 222,
+      "metin": "Bir rafı boşaltırken neyin hâlâ sana ait bir zevki yansıttığını yeniden seçiyorsun. Geride bıraktığın düzenden sonra böyle sıradan tercihler bile anlam kazanıyor, görüyorum. Yakında yerini değiştirdiğin bir eşya, bulunduğun köşeyi daha çok benimsemeni sağlayabilir. İçin yerleşsin.\n\nMagnus",
+      "metin_en": "As you clear a shelf, you're deciding all over again which things still reflect your personal taste. After leaving your old routine behind, even such ordinary choices take on meaning. I can see that. Soon, moving a single object may help you feel more at home in your own little corner. May you find a true sense of belonging.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 223,
+      "metin": "İlk kez yapacağın bir şey için yol tarifine tekrar bakarken heyecanını belli etmemeye çalışabiliyorsun. Arkadaş grubunda rahat görünsen de hazırlıksız yakalanmayı pek sevmediğini seziyorum. Bir işi kendi başına hallettikten sonra duyacağın gururun keyfini sürmeni dilerim.\n\nMagnus",
+      "metin_en": "When you check the directions again before trying something for the first time, you sometimes try not to show your nervous excitement. I sense that although you seem relaxed among your friends, you really don't like being caught unprepared. I hope you savor the pride you'll feel after managing something entirely on your own.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
     }
   ]
 }

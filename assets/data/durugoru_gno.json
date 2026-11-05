@@ -793,6 +793,210 @@
       "metin": "{{isim}}, telefonunu yüzüstü bıraktığın anda yüzündeki ifadeyi seçebiliyorum. {{ay_3}} ayında, cevabını merak ettiğin bir konuya ilişkin açıklama sana ulaşmış. İlk satırı hızlı okuyup devamında yavaşlıyorsun; ayrıntılar beklentini karşılıyor. Sonucu öğrenmek istiyor, bir yandan da sürekli kontrol eden kişi olmak istemiyorsun. Burada hoşuma giden, artık tahmin yürütmek zorunda kalmaman. Aldığın bilgiyle kendi planını yapabileceksin. Ekranı kapatınca dikkatinin yeniden çevrene dönmesi, sevincinin en belirgin işareti.",
       "metin_en": "{{isim}}, I can make out the expression on your face the moment you place your phone face down. During {{ay_3}}, an explanation about a matter you've been waiting to hear about will reach you. You'll read the first line quickly, then slow down as you continue; the details meet your expectations. You want to know the outcome, but you also don't want to be the person who's constantly checking. What pleases me here is that you no longer have to speculate. With the information you've received, you'll be able to make your own plans. The way your attention returns to your surroundings when you put the screen away will be the clearest sign of your happiness.",
       "kosullar": []
+    },
+    {
+      "id": 87,
+      "metin": "Geleceğine odaklandığımda, {{ay_3}} ayında bölümdeki masanın üzerinde iki ayrı makale çıktısı görüyorum {{isim}}. Birinin kenarına kurşun kalemle koyduğun işaret dikkatimi çekti. Uzun zamandır üzerinde çalıştığın bir düşünceyi anlatmanın daha sade bir yolunu bulacaksın. Önce bir meslektaşının küçük bir itirazı seni düşündürecek. Ardından yapacağınız kısa görüşmede, o itirazın aslında metninin güçlü yanını ortaya çıkardığını fark edeceksin. Sen eleştiriyi ciddiye alan ama emeğini de kolay kolay gözden çıkarmayan birisin. Bu kez ikisinin dengesini kuracak, çalışmana eskisinden daha büyük bir güven duyacaksın.",
+      "metin_en": "When I focus on your future, I see two printed articles lying on a desk in your department in {{ay_3}}, {{isim}}. A mark you've made in pencil along the edge of one catches my attention. You'll find a simpler way to explain an idea you've been working on for a long time. At first, a minor objection from a colleague will give you something to think about. Then, during a brief conversation, you'll realize that the objection actually highlights one of your paper's strengths. You're someone who takes criticism seriously but doesn't easily discard the work you've put your heart into. This time, you'll strike a balance between the two and feel more confident in your work than ever before.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "metin": "Sevdiğin kişinin elinde tuttuğu bir bardak görüyorum. Karşılıklı oturmuş, gündelik bir meseleyi konuşuyorsunuz. Bu görüntü {{ay_2}} ayının sonlarına ait {{isim}}. Önceden ikinizin de farklı düşündüğü küçük bir plan yeniden gündeme gelecek. Sen bazen huzur bozulmasın diye kendi beklentini ikinci plana atıyorsun. Oysa bu kez açıkça söyleyeceğin bir cümle, karşındaki insanın seni daha iyi anlamasını sağlayacak. Sohbetin sonunda birlikte yapacağınız bir şey için karar vereceksiniz. En çok da sevdiğin kişinin, sen söylemeden önce fark etmediği bir ayrıntıyı sonradan hatırlaması hoşuna gidecek.",
+      "metin_en": "I see a glass in the hand of the person you love. You're sitting across from each other, talking about an everyday matter. This scene belongs to the end of {{ay_2}}, {{isim}}. A small plan you previously had different opinions about will come up again. Sometimes you put your own expectations aside just to keep the peace. But this time, something you say openly will help your partner understand you better. By the end of the conversation, you'll have decided on something to do together. What will please you most is that the person you love will later remember a detail they hadn't even noticed until you mentioned it.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "metin": "Açık renkli bir kumaşın üzerine düşen güneş ışığı dikkatimi çekiyor. {{ay_4}} ayında seni hazırlanırken aynanın karşısında görüyorum {{isim}}. Saçında ya da kıyafetinde değiştirmeyi düşündüğün küçük bir ayrıntı var. O gün yakın çevrenden bir kadınla yapacağın konuşmada beklemediğin kadar içten bir iltifat duyacaksın. Asıl güzelliği ise görünüşüne dair sözlerden çok, daha önce verdiğin bir karara gösterilen saygıda bulacaksın. Sen başkalarına cesaret verirken kendine aynı cömertlikle davranmayı bazen unutuyorsun. Bu gelişmenin ardından bir konuda kendi tercihini savunmak sana daha kolay gelecek.",
+      "metin_en": "Sunlight falling across a piece of light-colored fabric catches my attention. I see you getting ready in front of a mirror in {{ay_4}}, {{isim}}. There's a small detail about your hair or outfit that you've been thinking of changing. That day, during a conversation with a woman close to you, you'll receive a compliment that's more heartfelt than you expected. But the real beauty of the moment will lie not so much in what she says about your appearance, but in the respect she shows for a decision you've made before. You're someone who encourages others, yet sometimes forgets to show yourself the same generosity. After this experience, you'll find it easier to stand up for your own choice in a particular matter.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "metin": "Bilgisayar ekranında yan yana açılmış iki çalışma dosyası görüyorum. {{ay_2}} ayında iş yerinde senden beklenen bir işin ayrıntıları değişecek {{isim}}. İlk anda yeniden düzenleme yapmak biraz canını sıkabilir. Fakat yöneticinle gerçekleştireceğin kısa görüşmede, daha önce hazırladığın bir bölümün yeniden kullanılabileceği anlaşılacak. Bir mesai arkadaşının göstereceği pratik yöntem sayesinde de işini hızlandıracaksın. Sen sorumluluk almaktan kaçınmıyorsun ama harcadığın zamanın karşılığının görülmesini önemsiyorsun. Bu kez tamamladığın çalışmayla ilgili duyacağın olumlu bir yorum, emeğinin karşılığını aldığını hissettirecek.",
+      "metin_en": "I see two work files open side by side on a computer screen. In {{ay_2}}, the details of a task you're expected to complete at work will change, {{isim}}. At first, having to reorganize everything may be a little frustrating. But during a brief conversation with your manager, it will become clear that a section you've already prepared can be reused. A practical method shown to you by a coworker will also help you work faster. You don't shy away from responsibility, but it matters to you that the time you invest is recognized. This time, a positive comment about your completed work will make you feel that your efforts have truly paid off.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "metin": "Bir pencerenin önünde durup dışarıyı izlediğin anı görüyorum {{isim}}. Görüntü {{ay_5}} ayından geliyor. Telefonunda eski bir konuşmanın izine rastlayacak, ardından geçmişte verdiğin bir kararı yeniden düşüneceksin. Önceden seni meşgul eden aynı meseleye bu kez daha sakin yaklaşman dikkatimi çekiyor. Birkaç gün sonra bir tanıdığınla yapacağın sohbet, o dönemden kalan küçük bir soru işaretini giderecek. Sen bazı şeyleri kolay unutmasan da zaman geçtikçe onlara başka gözle bakabiliyorsun. Bu gelişme sana geride bıraktığın sürede ne kadar yol aldığını hatırlatacak.",
+      "metin_en": "I see you standing by a window, looking outside, {{isim}}. This vision comes from {{ay_5}}. You'll come across an old conversation on your phone, prompting you to reconsider a decision you made in the past. What catches my attention is how much more calmly you approach the very same issue that once occupied your thoughts. A few days later, a conversation with someone you know will clear up a small lingering question from that time. Although you don't forget certain things easily, you're able to see them differently as time passes. This experience will remind you just how far you've come since then.",
+      "kosullar": []
+    },
+    {
+      "id": 92,
+      "metin": "{{ay_2}} ayında karşımda, üzerinde küçük rakamlar bulunan bir fişi dikkatle inceleyen sen varsın {{isim}}. Yakın zamanda yaptığın bir harcamayla ilgili gözünden kaçmış bir ayrıntıyı fark edeceksin. İlk anda yeniden kontrol etmek zorunda kalmak biraz yorucu gelebilir. Fakat konuyla ilgili yapacağın kısa bir görüşme, hesabını netleştirmeni sağlayacak. Üstelik düşündüğünden daha uygun bir seçenekle karşılaşabilirsin. Sen maddi konularda tedbirli davranmayı seviyorsun ama kendini sevindirecek şeylerden tamamen vazgeçmek istemiyorsun. Bu kez aradığın dengeyi bulunca içinden güzel bir rahatlama geçecek.",
+      "metin_en": "In {{ay_2}}, I see you carefully examining a receipt covered in small numbers, {{isim}}. You'll notice a detail you previously overlooked in a recent expense. At first, having to check everything again may feel a little tiring. But a brief conversation about the matter will help you get your figures straight. You may even come across an option that's more affordable than you expected. You like being cautious with money, but you don't want to give up entirely on the things that bring you joy. This time, finding the balance you've been looking for will bring you a lovely sense of relief.",
+      "kosullar": []
+    },
+    {
+      "id": 93,
+      "metin": "Evinin bir köşesinde üst üste dizilmiş küçük kutular görüyorum. Bu görüntü {{ay_5}} ayına ait {{isim}}. Uzun zamandır elden geçirmek istediğin bir alanı yeniden düzenlemeye karar vereceksin. İlk başta ayırdığın eşyaların düşündüğünden fazla olduğunu fark edip biraz şaşıracaksın. Fakat tanıdığın bir kadının önerisiyle işi kolaylaştıracak bir yöntem bulacaksın. Düzenleme sırasında uzun süredir kullanmadığın ama işine yarayabilecek bir parçayla yeniden karşılaşman da hoşuna gidecek. Sen evinin huzurunu önemsiyorsun ama kendi rahatlığını da ihmal etmemelisin. Sonunda açılan boşluğa bakarken bunu daha iyi anlayacaksın.",
+      "metin_en": "I see small boxes stacked in a corner of your home. This scene belongs to {{ay_5}}, {{isim}}. You'll decide to reorganize an area you've been meaning to sort through for a long time. At first, you'll be a little surprised to realize how many belongings you've set aside. But a suggestion from a woman you know will help you find a way to make the task easier. You'll also be pleased to rediscover something you haven't used in ages but that could still come in handy. You care about the peaceful atmosphere of your home, but you shouldn't neglect your own comfort either. As you look at the space you've finally cleared, you'll understand this more deeply.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "metin": "İki farklı seçeneğin yan yana durduğu bir ekran görüyorum. {{ay_3}} ayında nişanlınla yaklaşan hazırlıklarınız hakkında konuşuyorsunuz {{isim}}. Bir ayrıntıya karar vermeden önce fiyatları ve size sağlayacağı kolaylığı karşılaştıracaksınız. Sen güzel bir sonuç istiyor, aynı zamanda gereksiz masraflardan kaçınmaya çalışıyorsun. Bu kez nişanlının fark edeceği küçük bir avantaj, ikinizin de içine sinen bir seçim yapmanızı sağlayacak. Ardından yakın çevrenizden biri size daha önce aklınıza gelmeyen pratik bir öneride bulunacak. Hazırlıkların yalnızca yük olmadığını, birlikte karar verdikçe güzel anılara da dönüştüğünü hissedeceksin.",
+      "metin_en": "I see a screen displaying two different options side by side. In {{ay_3}}, you're discussing your upcoming preparations with your fiancé, {{isim}}. Before settling on one detail, you'll compare prices and how convenient each option would be for you both. You want everything to turn out beautifully, while also trying to avoid unnecessary expenses. This time, a small advantage your fiancé notices will help you make a choice you're both happy with. Afterward, someone close to you will offer a practical suggestion neither of you had considered before. You'll feel that these preparations aren't merely a burden; as you make decisions together, they're also becoming beautiful memories.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "metin": "Bir masanın etrafında oturmuş birkaç kişinin konuşmasını izliyorum. {{ay_5}} ayında senden daha genç biri, kendi hayatıyla ilgili bir karar konusunda düşünceni soracak {{isim}}. Önce yalnızca kısa bir cevap vereceksin. Fakat anlattığın geçmişten bir örnek, karşındaki insanın meseleyi farklı değerlendirmesini sağlayacak. Sen yılların getirdiği tecrübeyle bazı şeyleri daha çabuk fark ediyorsun ama herkese karışmak istemiyorsun. Birkaç gün sonra o kişinin sana yeniden dönüp söylediklerinin işine yaradığını anlatması hoşuna gidecek. Bildiklerini paylaşmanın, geçmişin yükünü değil güzelliğini taşımak olduğunu hissedeceksin.",
+      "metin_en": "I'm watching several people talking around a table. In {{ay_5}}, someone younger than you will ask for your opinion about a decision in their life, {{isim}}. At first, you'll offer only a brief answer. But an example you share from your own past will help that person see the situation differently. Your years of experience allow you to notice certain things more quickly, yet you don't want to interfere in everyone's affairs. A few days later, you'll be pleased when that person comes back to tell you how helpful your words were. You'll feel that sharing what you know means carrying forward the beauty of your past rather than its burdens.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "metin": "Bir sohbetin ortasında aniden gülümsediğini görüyorum {{isim}}. Görüntü {{ay_5}} ayından. Yakın çevrenden birinin vesilesiyle başlayacak yeni bir tanışıklık, beklediğinden daha keyifli ilerleyecek. Karşındaki kişi, senin daha önce söz arasında anlattığın küçük bir ayrıntıyı hatırlayacak. Sen kendi hayatının düzenini seviyor, bunun yanında gerçekten anlaşılabileceğin bir yakınlığın da güzel olacağını düşünüyorsun. İlk zamanlarda bu yeni ilgiyi fazla anlamlandırmak istemeyebilirsin. Fakat birkaç görüşme sonrasında sohbetin kendiliğinden akması hoşuna gidecek. Kalbinin kapısını açmak için acele etmene gerek olmadığını, doğru his geldiğinde zaten anlayacağını görüyorum.",
+      "metin_en": "I see you suddenly smiling in the middle of a conversation, {{isim}}. This vision comes from {{ay_5}}. A new acquaintance, made through someone close to you, will develop more pleasantly than you expected. The other person will remember a small detail you casually mentioned earlier. You enjoy the routines you've established in your life, but you also feel that having someone who truly understands you could be wonderful. At first, you may not want to read too much into this new attention. Yet after a few meetings, you'll enjoy how naturally the conversation flows. I can see that there's no need to rush into opening your heart. When the feeling is right, you'll know.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "metin": "Sayfa kenarına düşülmüş eğri bir not dikkatimi çekiyor; {{ay_3}} ayında bölümde yaptığın bir görüşmenin ardından o nota yeniden bakıyorsun. Bir meslektaşının, üzerinde çalıştığın konuya getireceği sade bir yorumla metninin eksik bağlantısını kurduğunu görüyorum. Başkalarının yazısında hemen seçtiğin açıklığı kendi yazında ararken ölçüyü biraz yükseltiyorsun {{isim}}. Bu kez her satırı yeniden kurcalamak yerine bir kısmı tamamlanmış sayacak, dosyayı kapatırken emeğinin ilerlediğini hissedeceksin.",
+      "metin_en": "A crooked note scribbled in the margin catches my attention. In {{ay_3}}, you're looking at that note again after a conversation in your department. I see a colleague making a simple observation about the subject you're working on, helping you find a missing connection in your text. You're quick to spot clarity in other people's writing, but when you look for it in your own, you tend to set the bar a little higher, {{isim}}. This time, rather than going over every line again, you'll consider one section finished. As you close the file, you'll feel that your hard work is finally moving forward.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "metin": "Sevdiğin kişinin sana doğru çevirdiği bir fotoğrafla açılıyor önümdeki sahne. {{ay_4}} ayında birlikte baktığınız bu görüntü, aranızda unutulmuş hoş bir ayrıntıyı yeniden konuşturacak. Ben burada büyük sözlerden çok, onun senin anlattığın küçücük bir şeyi hatırlamasını görüyorum. İlgiyi istemektense kendiliğinden gelince daha çok önemsiyorsun; yine de bunu belli ederken şakaya sığınabiliyorsun. Fotoğrafı büyütüp birbirinize takılırken yakınlığınızın ne kadar tanıdık bir yerde durduğunu hissedeceksin.",
+      "metin_en": "The scene before me opens with the person you love turning a photograph toward you. In {{ay_4}}, this picture you're looking at together will bring a lovely, forgotten detail back into your conversation. What I see here isn't a grand declaration, but the way your partner remembers the tiniest thing you've shared. You value attention more when it comes naturally than when you have to ask for it, though you sometimes hide how much it means to you behind a joke. As you zoom in on the photo and tease each other, you'll feel just how familiar and comfortable your closeness has become.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "metin": "Sohbet ederken kendini ne kadarını anlatmış bulacağına şaşıracaksın, {{isim}}. {{ay_5}} ayındaki bir tanışıklığın devamında, karşındaki kişinin sana yönelttiği basit bir soruyla konuşmanın uzadığını görüyorum. Oturduğun yerde kolunu yaslayıp daha rahat cevap veriyorsun. İlk anda ölçülü davranıyorsun ama merak edildiğini hissedince mizahın ortaya çıkıyor. Burada hemen adını koyacağın bir ilişki aramıyorum; seni yeniden konuşmaya heveslendiren karşılıklı ilgiyi ve bunun sende bıraktığı canlılığı seçiyorum.",
+      "metin_en": "You'll be surprised by how much you end up revealing about yourself during a conversation, {{isim}}. I see an acquaintance you make in {{ay_5}} asking you a simple question that turns into a much longer discussion. You lean your arm against the place where you're sitting and begin answering more comfortably. You're reserved at first, but once you feel that someone is genuinely curious about you, your sense of humor comes out. I'm not looking at a relationship you'll immediately want to define. What I see is a mutual interest that makes you eager to talk again, and the sense of excitement it leaves within you.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "metin": "Çalıştığın yerde herkes başka bir ayrıntıya bakarken sen işin tekrar eden kısmını işaret ediyorsun. {{ay_4}} ayına ait bu sahnede, yöneticine göstereceğin kısa bir karşılaştırmanın günlük işleyişi kolaylaştırdığını görüyorum. Ekranın yanında yapışkanı kıvrılmış bir not var; çözümü süslü bir sunumla anlatman gerekmeyecek. İşini sahipleniyorsun ama her sorunun kendiliğinden sana kalmasını da istemiyorsun. Önerinin uygulanmasıyla hem katkının görünür olması hem de gereksiz uğraşın azalması seni sevindirecek.",
+      "metin_en": "While everyone at your workplace is focused on a different detail, you're pointing out the repetitive part of the task. In this scene from {{ay_4}}, I see a brief comparison you present to your manager making everyday operations easier. Beside the screen is a sticky note with a curled-up corner. You won't need an elaborate presentation to explain your solution. You take ownership of your work, but you don't want every problem to automatically become your responsibility either. Seeing your suggestion put into practice will make you happy, both because your contribution is recognized and because it reduces unnecessary effort.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "metin": "Aklındaki hesabın sandığından daha iyi çıkmasıyla kaşlarının kalktığını görüyorum. {{ay_5}} ayında bir harcamayı kontrol ederken ekranda fark edeceğin avantaj, ayırdığın paranın bir bölümünü elinde tutmanı sağlayacak. Tutarın büyüklüğünden ziyade, ayrıntıya bakmış olmanın keyfi var burada {{isim}}. Gerektiğinde eli açıksın ama karşılığı olmayan masrafa pek razı gelmiyorsun. İşlemi onaylamadan önce son satırı yeniden okuyuşun belirgin; o dikkat sayesinde kendine küçük bir hareket alanı bırakacaksın.",
+      "metin_en": "I see your eyebrows rise when the numbers you've been calculating turn out better than you expected. In {{ay_5}}, while checking an expense, you'll notice an advantage on the screen that allows you to keep some of the money you've set aside. The pleasure here isn't so much about the amount as it is about the satisfaction of having paid attention to the details, {{isim}}. You're generous when the occasion calls for it, but you're not particularly willing to spend money without getting anything worthwhile in return. I can clearly see you rereading the final line before confirming the transaction. Thanks to that careful attention, you'll leave yourself a little financial breathing room.",
+      "kosullar": []
+    },
+    {
+      "id": 102,
+      "metin": "Nereye kaldırdığını düşünürken elinin hiç beklemediğin bir kumaş cebine uzandığını görüyorum. {{ay_2}} ayında aradığın ufak bir eşyanın karşına çıkması, düşündüğünden fazla sevindirecek seni. Bulduğun şeyi avucunda çevirirken kendi yerleştirme mantığına güleceksin {{isim}}. Bazı ayrıntıları kolayca hatırlıyor, bazılarını da çok iyi sakladığın için unutuyorsun. Ben burada yalnız buluşu değil, ardından ona daha kullanışlı bir yer seçmeni görüyorum; küçücük bir işin tamamlanması gününe tatlı bir rahatlık katacak.",
+      "metin_en": "As you try to remember where you put something, I see your hand reaching into a fabric pocket you'd never have thought to check. In {{ay_2}}, finding a small item you've been looking for will make you happier than you expected. As you turn it over in your palm, you'll laugh at your own logic for putting it there, {{isim}}. You remember some details effortlessly, while others slip your mind precisely because you've tucked them away so carefully. What I see here isn't just the discovery, but also you choosing a more practical place to keep it afterward. Finishing this tiny task will bring a sweet sense of relief to your day.",
+      "kosullar": []
+    },
+    {
+      "id": 103,
+      "metin": "Tahtadan defterine geçen bir ok, zihninde de iki parçayı birleştiriyor. {{ay_3}} ayında derste yeniden ele alınan bir konuyu, verilen gündelik örnek sayesinde daha rahat kavradığını görüyorum. Yanına koyduğun silginin kırıntılarını temizlerken çözümü kendi cümlenle yazacaksın. Anlamadığında hemen sormuyorsun; önce tek başına bir yol daha denemek istiyorsun. Bu kez soracağın kısa soru anlatımı senin için yerine oturtacak. Çalışmaya döndüğünde aynı noktada oyalanmadan ilerlemenin sevincini hissedeceksin.",
+      "metin_en": "An arrow you copy from the board into your notebook also connects two ideas in your mind. In {{ay_3}}, I see you gaining a clearer understanding of a topic revisited in class, thanks to an everyday example the teacher gives. As you brush away the eraser crumbs beside your notebook, you'll write out the solution in your own words. When you don't understand something, you don't ask right away. You prefer to try finding another way on your own first. This time, a brief question you ask will make the explanation finally click for you. When you return to studying, you'll feel the satisfaction of moving forward without getting stuck at the same point again.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "metin": "Rahatlığın bazen bir davete vereceğin cevabı uzatmadan söylemek kadar sade olacak. {{ay_4}} ayında yeni düzenine uymayan bir öneriye, açıklamanı kısa tutarak karşılık verdiğini görüyorum. Antrede ayakkabını düzeltirken konuşma bitiyor ve kendini kaba davranmış hissetmiyorsun. Geride bıraktığın dönemden taşıdığın bir alışkanlık var: anlaşılmak için bütün gerekçelerini sıralamak. {{isim}}, bu sahnede karşındaki kişi cevabını doğal karşılayacak; sen de tercihinin uzun bir savunmaya ihtiyaç duymadığını yaşayarak göreceksin.",
+      "metin_en": "Sometimes, peace of mind will be as simple as giving a straightforward answer to an invitation without dragging it out. In {{ay_4}}, I see you responding to a suggestion that doesn't fit your new routine, keeping your explanation brief. The conversation ends as you adjust your shoes in the entryway, and you don't feel that you've been rude. There's a habit you've carried over from an earlier chapter of your life: listing every reason for your decisions in order to feel understood. {{isim}}, in this scene, the other person will take your answer in stride. You'll discover firsthand that your choices don't require a lengthy defense.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "metin": "Üzerinde düzeltme izi bulunan bir evrakı masanın öbür tarafına uzatıyorsun. {{ay_3}} ayında kurumda yürüttüğün bir işlemin hangi aşamada olduğunu açıkça öğrendiğin sahneyi görüyorum. İlgili birimdeki görevli, eksik sandığın ayrıntının sistemde bulunduğunu gösterecek. Usulüne uygun davranmayı önemsiyorsun ama aynı bilgiyi tekrar tekrar anlatmak hevesini azaltabiliyor. Burada anlatımın kısalıyor {{isim}}; işlem sırasının belirginleşmesiyle ne yapacağını bilecek, elindeki dosyayı daha rahat taşıyacaksın.",
+      "metin_en": "You're handing a document marked with corrections across a desk. In {{ay_3}}, I see a scene in which you find out exactly what stage a procedure you're handling at your institution has reached. An employee in the relevant department will show you that a detail you thought was missing is already in the system. You care about following proper procedures, but having to explain the same information over and over can wear down your enthusiasm. Here, your explanation becomes shorter, {{isim}}. Once the sequence of steps becomes clear, you'll know what to do next and feel more at ease carrying the file in your hands.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "metin": "Bekârlığını açıklayan cümleler yerine, nelerden hoşlandığını anlattığın bir konuşma duyuyorum. {{ay_3}} ayında bir ortamda senden söz açıldığında, yakınındaki kişi seni ilişki durumunla değil ilginç bulduğu bir yönünle tanıtacak. Bardağın altındaki halkayı peçeteyle silerken konuşmaya katılışın rahatlıyor. Kalbinin kapısını bütünüyle kapatmıyorsun; yalnız tanınmadan bir role yerleştirilmek hoşuna gitmiyor. Sana yönelen merakın sahici bir ayrıntıdan başlaması hoşuna gidecek, kendini olduğun gibi anlatmak kolaylaşacak.",
+      "metin_en": "Instead of hearing you explain why you're single, I hear a conversation in which you're talking about the things you enjoy. In {{ay_3}}, when your name comes up at a gathering, someone close to you will introduce you not by your relationship status, but by an aspect of your personality they find interesting. As you wipe the ring left beneath your glass with a napkin, you become more comfortable joining the conversation. You haven't completely closed the door to love; you simply don't like being placed into a role before anyone has truly gotten to know you. You'll appreciate that someone's curiosity about you begins with a genuine detail, and it'll become easier to show who you really are.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
     }
   ]
 }

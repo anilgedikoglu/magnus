@@ -1164,6 +1164,7 @@ class _MenuCardState extends State<_MenuCard>
           onTapDown: (_) => _press(true),
           onTapUp: (_) {
             _press(false);
+            HapticFeedback.mediumImpact(); // fal ikonu titreşimi (Anıl 2026-11-05)
             item.onTap();
           },
           onTapCancel: () => _press(false),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 /// Soldan sağa swipe ile "geri/ana menü" dönüşü sağlar.
 ///
@@ -76,6 +77,7 @@ class _SwipeBackState extends State<SwipeBack> {
         // Soldan sağa, yatay baskın hareket (dikey kaydırmayı yanlış tetiklememek için)
         if (dx > widget.threshold && dx.abs() > dy.abs() * 1.5) {
           SwipeBack._claimedPointer = e.pointer; // önce sahiplen, sonra aksiyon
+          HapticFeedback.heavyImpact(); // her kaydırma hareketinde güçlü titreşim (Anıl)
           widget.onSwipeBack();
         }
       },

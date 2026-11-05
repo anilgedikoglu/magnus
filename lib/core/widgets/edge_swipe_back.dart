@@ -208,6 +208,7 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
     final now = _activeNavigator();
     if (!identical(now, nav) || !identical(_topOf(nav), route)) return;
     if (nav.userGestureInProgress) return;
+    HapticFeedback.heavyImpact(); // her kaydırma hareketinde güçlü titreşim (Anıl)
     nav.maybePop();
   }
 

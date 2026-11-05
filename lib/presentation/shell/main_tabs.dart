@@ -7,8 +7,11 @@
 // 2026-11-05 (Anıl):
 //   • Cam alt bar artık BURADA DEĞİL: tüm rotaların üstünde yüzen tek bar
 //     (shell/floating_bar.dart, MaterialApp.builder). Fal ekranlarında da aynı yerde durur.
-//   • Sekme geçişleri ANİMASYONSUZ ("her nereden nereye olursa olsun tak tak tak"): sayfa
-//     anında değişir; yalnız bardaki cam kapsül yayla kayar.
+//   • Bar ikonuyla geçiş ANİMASYONSUZ ("tak tak tak"): sayfa anında değişir; yalnız bardaki
+//     cam kapsül yayla kayar.
+//   • KAYDIRMA ile geçiş: çağrılan sayfa kaydırma yönünden gelip ötekinin ÜSTÜNÜ örter
+//     ("nereden ne çağırılıyorsa o diğerinin üzerini örtsün animasyonla") + güçlü titreşim.
+//     Ör. gelen kutusunda sağa kaydırma → ana menü SOLDAN gelip gelen kutusunu örter.
 //
 // Kurallar:
 //   - Aktif sekme tek kaynak: mainTabProvider. Her yerden selectMainTab(context, tab).
@@ -20,6 +23,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -45,7 +49,7 @@ final mainTabReselectProvider = StateProvider<int>((ref) => 0);
 /// Sekmenin bar slotu (0..2).
 int barSlotFor(int tab) => kMainTabOrder.indexOf(tab).clamp(0, kMainTabOrder.length - 1);
 
-/// Eski API (yön) — geçişler artık anında; parametre geriye uyum için duruyor.
+/// Kaydırmayla geçişte gelen sayfanın geldiği yön (null = bar dokunuşu → anında).
 enum TabEntry { left, right, bottom }
 
 class MainTabsScope extends InheritedWidget {
@@ -61,8 +65,9 @@ class MainTabsScope extends InheritedWidget {
   bool updateShouldNotify(MainTabsScope oldWidget) => false;
 }
 
-/// Her yerden sekme değiştir. Kapsayıcı içindeyse doğrudan; dışındaysa (üstte açılmış bir
-/// rota, ör. tarot / astroloji) provider'ı ayarlayıp ana ekrana döner.
+/// Her yerden sekme değiştir. [entry] verilirse (kaydırma) yeni sayfa o yönden gelip
+/// öncekini örter; verilmezse anında. Kapsayıcı dışındaysa (üstte açılmış bir rota)
+/// provider'ı ayarlayıp ana ekrana döner.
 void selectMainTab(BuildContext context, int tab, {TabEntry? entry}) {
   final scope = MainTabsScope.maybeOf(context);
   if (scope != null) {
@@ -86,9 +91,19 @@ class MainTabsScreen extends ConsumerStatefulWidget {
   ConsumerState<MainTabsScreen> createState() => _MainTabsScreenState();
 }
 
-class _MainTabsScreenState extends ConsumerState<MainTabsScreen> {
+class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
+    with SingleTickerProviderStateMixin {
   late int _current;
   final Set<int> _built = {};
+
+  /// Kaydırmayla geçiş: gelen sayfa [_entryDir] yönünden kayıp çıkan sayfanın ([_from])
+  /// üstünü örter. Çıkan sayfa altta KIMILDAMAZ.
+  // initState'te kurulur (late tembel kurulum dispose sırasında ticker açmaya çalışıyordu).
+  late final AnimationController _cover;
+  late final CurvedAnimation _coverCurve;
+  int? _from;
+  TabEntry? _entryDir;
+  TabEntry? _pendingEntry;
 
   /// Sistem geri tuşu: go_router 13.2.5 `popRoute`, hiçbir navigatör pop edemezken
   /// `maybePop()` ÇAĞIRMIYOR (delegate.dart:59-77) → PopScope atlanır, uygulama
@@ -103,6 +118,8 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen> {
     super.initState();
     _current = ref.read(mainTabProvider);
     _built.add(_current);
+    _cover = AnimationController(vsync: this, duration: const Duration(milliseconds: 320));
+    _coverCurve = CurvedAnimation(parent: _cover, curve: Curves.easeOutCubic);
   }
 
   @override
@@ -145,10 +162,13 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen> {
   @override
   void dispose() {
     _releaseBack();
+    _coverCurve.dispose();
+    _cover.dispose();
     super.dispose();
   }
 
   void _select(int tab, {TabEntry? entry}) {
+    _pendingEntry = entry;
     final notifier = ref.read(mainTabProvider.notifier);
     if (notifier.state == tab) {
       _onTabChanged(tab);
@@ -157,14 +177,42 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen> {
     }
   }
 
-  /// Anında geçiş (Anıl: "tak tak tak").
   void _onTabChanged(int tab) {
+    final entry = _pendingEntry;
+    _pendingEntry = null;
     if (tab == _current) return;
+    // Sürmekte olan örtme animasyonu varsa bitir (yeni istek hemen geçerli).
+    if (_from != null) {
+      _cover.value = 1;
+      _from = null;
+    }
+    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    if (entry == null || reduce) {
+      // Bar dokunuşu: anında (Anıl: "tak tak tak").
+      setState(() {
+        _built.add(tab);
+        _current = tab;
+      });
+      return;
+    }
+    // Kaydırma: güçlü titreşim + gelen sayfa yönünden gelip öncekini örter.
+    HapticFeedback.heavyImpact();
     setState(() {
       _built.add(tab);
+      _from = _current;
       _current = tab;
+      _entryDir = entry;
+    });
+    _cover.forward(from: 0).whenCompleteOrCancel(() {
+      if (mounted && _from != null) setState(() => _from = null);
     });
   }
+
+  Offset _startOffset() => switch (_entryDir ?? TabEntry.right) {
+        TabEntry.left => const Offset(-1, 0),
+        TabEntry.right => const Offset(1, 0),
+        TabEntry.bottom => const Offset(0, 1),
+      };
 
   Widget _page(int tab) {
     final debug = widget.debugPageBuilder;
@@ -176,9 +224,10 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen> {
     };
   }
 
-  /// Yapı HER ZAMAN aynı (Offstage/TickerMode) → state kaybolmaz.
+  /// Yapı HER ZAMAN aynı (Offstage/TickerMode/SlideTransition) → state kaybolmaz.
   Widget _tab(int tab) {
-    final visible = tab == _current;
+    final visible = tab == _current || tab == _from;
+    final covering = tab == _current && _from != null;
     return Positioned.fill(
       key: ValueKey<int>(tab),
       child: Offstage(
@@ -186,9 +235,17 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen> {
         child: TickerMode(
           enabled: visible,
           // Yalnız görünen sekmenin kaydırması yüzen bara ulaşır (gizli sekme olayı yutulur).
-          child: NotificationListener<ScrollNotification>(
-            onNotification: (_) => tab != _current,
-            child: _page(tab),
+          child: IgnorePointer(
+            ignoring: _from != null, // örtme sırasında çift dokunuş yok
+            child: NotificationListener<ScrollNotification>(
+              onNotification: (_) => tab != _current,
+              child: SlideTransition(
+                position: covering
+                    ? Tween(begin: _startOffset(), end: Offset.zero).animate(_coverCurve)
+                    : const AlwaysStoppedAnimation(Offset.zero),
+                child: _page(tab),
+              ),
+            ),
           ),
         ),
       ),
@@ -205,7 +262,13 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen> {
       },
       child: MainTabsScope(
         select: _select,
-        child: Stack(children: [for (final t in _built) _tab(t)]),
+        // Sıra: gizliler, sonra çıkan (altta, sabit), en üstte gelen (örter).
+        child: Stack(children: [
+          for (final t in _built)
+            if (t != _current && t != _from) _tab(t),
+          if (_from != null) _tab(_from!),
+          _tab(_current),
+        ]),
       ),
     );
   }

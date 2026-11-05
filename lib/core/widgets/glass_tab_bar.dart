@@ -38,6 +38,11 @@ const double kGlassBarHeight = 56;
 const double kGlassBarGap = 10;
 const double kGlassBarSide = 12;
 
+/// Barın ekranın ALT KENARINDAN uzaklığı (Anıl, 2026-11-05: "görseldeki ile dikeyde aynı
+/// yer"). Instagram iOS 26 ölçümü (iPhone Pro Max, 3x): bar alt kenarı ekran altından 24 pt
+/// → alt güvenli alanın (34) 10 pt İÇİNDE; küçük hâl aynı merkezde. Güvenli alan yoksa 12.
+double glassBarBottom(double safeBottom) => safeBottom - 10 < 12 ? 12 : safeBottom - 10;
+
 /// Bar + boşluk: içerik bu kadar alttan pay bırakmalı (SafeArea içinde).
 const double kGlassBarReserve = kGlassBarHeight + kGlassBarGap;
 

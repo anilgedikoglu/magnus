@@ -14,7 +14,7 @@ import 'glass_tab_bar.dart';
 
 /// Yüzen bar için alttan bırakılması gereken yükseklik (bu bağlamda).
 double floatingBarInset(BuildContext context, {double extra = 8}) =>
-    MediaQuery.paddingOf(context).bottom + kGlassBarGap + kGlassBarHeight + extra;
+    glassBarBottom(MediaQuery.paddingOf(context).bottom) + kGlassBarHeight + extra;
 
 /// Sütunların en altına konur: içerik yüzen barın altında kalmaz.
 class FloatingBarSpacer extends StatelessWidget {

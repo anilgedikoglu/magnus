@@ -66,7 +66,8 @@ class InboxScreen extends ConsumerWidget {
           final inTabs = MainTabsScope.maybeOf(context) != null;
           if (v > 200) {
             if (inTabs) {
-              selectMainTab(context, MainTab.home); // sekme: sağa kayarak çıkar
+              // Ana menü SOLDAN gelip gelen kutusunun üstünü örter (Anıl 2026-11-05).
+              selectMainTab(context, MainTab.home, entry: TabEntry.left);
             } else if (Navigator.canPop(context)) {
               Navigator.pop(context);
             }

@@ -1,4 +1,6 @@
 // Regresyon: Kullanıcı Bilgileri → ayarlar penceresi → Kapat sonrası ekran SİMSİYAH oluyordu.
+// 2026-11-05: Ayarlar artık ayrı pencere değil, Kullanıcı Bilgileri'nin 3. KARTI (Anıl). Aynı
+// risk ayarlar kartındaki yasal metin penceresi için sınanır (kapanınca ekran yerinde kalır).
 // Neden: pencere kök navigatörde açılıyor, kapat ise dış context ile Navigator.pop(context)
 // çağırıp sekme DAL navigatöründeki tek sayfayı (MainTabs) kapatıyordu.
 import 'package:flutter/material.dart';
@@ -22,7 +24,7 @@ Future<void> _settle(WidgetTester t, {int steps = 12}) async {
 }
 
 void main() {
-  testWidgets('ayarlar penceresi kapanınca Kullanıcı Bilgileri ekranı yerinde kalır', (t) async {
+  testWidgets('ayarlar kartı: yasal metin penceresi kapanınca Kullanıcı Bilgileri ekranı yerinde kalır', (t) async {
     GoogleFonts.config.allowRuntimeFetching = false;
     StartupDisclaimer.debugSkip = true; // açılış perdesi ayrı testte
     t.view.devicePixelRatio = 2.0;
@@ -47,11 +49,19 @@ void main() {
     c.read(mainTabProvider.notifier).state = MainTab.profile;
     await _settle(t);
 
+    // Dişli artık pencere açmaz; ayarlar kartına kaydırır.
     await t.tap(find.byIcon(Icons.settings_outlined));
+    await _settle(t);
+    expect(find.byType(Dialog), findsNothing);
+    expect(find.text('DİL / LANGUAGE'), findsOneWidget);
+
+    await t.ensureVisible(find.text('Kullanım Koşulları'));
+    await _settle(t, steps: 4);
+    await t.tap(find.text('Kullanım Koşulları'));
     await _settle(t);
     expect(find.byType(Dialog), findsOneWidget);
 
-    await t.tap(find.text('Kapat').last);
+    await t.tap(find.text('Anladım').last);
     await _settle(t);
 
     expect(find.byType(Dialog), findsNothing);

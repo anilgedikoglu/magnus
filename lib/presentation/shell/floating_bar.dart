@@ -10,6 +10,9 @@
 //   • "Yukarı swipe ile küçülme, aşağı swipe ile büyüme app'in her yerinde": tüm rotaların
 //     dikey kaydırma olayları burada dinlenir (bar_minimize.dart). Rota/sekme değişince tam boy.
 //   • Alttaki "Geri Git" tuşları kaldırıldı; ekranlar FloatingBarSpacer ile yer bırakır.
+//   • Fal titreşimleri (merkezi, tüm fal türleri): gelen kutusuna yeni fal düşünce
+//     ("fal gönderildi") güçlü + orta vuruş; hazırlanan fal açılınca ("fal hazır/geldi")
+//     artan üçlü vuruş.
 
 import 'dart:async';
 import 'dart:math' as math;
@@ -17,6 +20,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -96,6 +100,35 @@ class _FloatingBarHostState extends ConsumerState<FloatingBarHost>
 
   bool get _reduce => MediaQuery.maybeDisableAnimationsOf(context) ?? false;
 
+  /// Fal titreşimleri için önceki durum: gelen kutusundaki fallar ve açılmış olanlar.
+  Set<String> _itemIds = {};
+  Set<String> _readyIds = {};
+
+  void _rememberFortunes(List<InboxItem> items) {
+    _itemIds = {for (final e in items) e.id};
+    _readyIds = {for (final e in items) if (!e.isLocked) e.id};
+  }
+
+  /// Yeni fal düştü mü / hazırlanan fal açıldı mı → uygun titreşim.
+  void _fortuneHaptics(List<InboxItem> items) {
+    final ids = {for (final e in items) e.id};
+    final ready = {for (final e in items) if (!e.isLocked) e.id};
+    final sent = ids.difference(_itemIds).isNotEmpty;
+    final opened = ready.difference(_readyIds).intersection(_itemIds).isNotEmpty;
+    _itemIds = ids;
+    _readyIds = ready;
+    if (sent) {
+      // "Fal gönderildi": tok bir vuruş + yankı.
+      HapticFeedback.heavyImpact();
+      Future<void>.delayed(const Duration(milliseconds: 110), HapticFeedback.mediumImpact);
+    } else if (opened) {
+      // "Falın hazır": artan üçlü vuruş (müjde hissi).
+      HapticFeedback.lightImpact();
+      Future<void>.delayed(const Duration(milliseconds: 130), HapticFeedback.mediumImpact);
+      Future<void>.delayed(const Duration(milliseconds: 260), HapticFeedback.heavyImpact);
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -103,6 +136,7 @@ class _FloatingBarHostState extends ConsumerState<FloatingBarHost>
     widget.router?.routerDelegate.addListener(_onRoute);
     floatingBarModalCount.addListener(_onModal);
     _life; // dinleyiciyi başlat
+    _rememberFortunes(ref.read(inboxProvider));
     _scheduleBadgeTimer(ref.read(inboxProvider));
   }
 
@@ -195,7 +229,9 @@ class _FloatingBarHostState extends ConsumerState<FloatingBarHost>
   void _refreshBadge() {
     if (!mounted) return;
     setState(() {});
-    _scheduleBadgeTimer(ref.read(inboxProvider));
+    final items = ref.read(inboxProvider);
+    _fortuneHaptics(items); // açılma anı: "falın hazır" titreşimi
+    _scheduleBadgeTimer(items);
   }
 
   void _scheduleBadgeTimer(List<InboxItem> items) {
@@ -235,7 +271,10 @@ class _FloatingBarHostState extends ConsumerState<FloatingBarHost>
 
   @override
   Widget build(BuildContext context) {
-    ref.listen<List<InboxItem>>(inboxProvider, (_, items) => _scheduleBadgeTimer(items));
+    ref.listen<List<InboxItem>>(inboxProvider, (_, items) {
+      _fortuneHaptics(items); // yeni fal: "fal gönderildi" titreşimi
+      _scheduleBadgeTimer(items);
+    });
     ref.listen<int>(mainTabProvider, (_, __) => _logic.reset());
 
     final content = NotificationListener<ScrollNotification>(
@@ -269,7 +308,7 @@ class _FloatingBarHostState extends ConsumerState<FloatingBarHost>
         Positioned(
           left: kGlassBarSide,
           right: kGlassBarSide,
-          bottom: bottom + kGlassBarGap,
+          bottom: glassBarBottom(bottom), // Instagram ile aynı dikey yer
           height: kGlassBarHeight,
           child: IgnorePointer(
             ignoring: modal,

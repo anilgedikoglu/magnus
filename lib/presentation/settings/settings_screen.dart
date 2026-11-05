@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 import 'dart:ui' show ImageFilter;
@@ -13,6 +14,7 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/admin_gate.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/glass_tab_bar.dart';
 import '../../core/widgets/liquid_glass_slider.dart';
 import '../../core/widgets/living_nebula.dart';
@@ -551,6 +553,34 @@ class _InlineEdit {
 
 final _inlineEditProvider = StateProvider<_InlineEdit?>((ref) => null);
 
+/// 1. kartın altındaki ARA panel isteği (Anıl, 2026-11-05): "hali hazırda açık olan
+/// (araya giren) kapanmadan bir diğer araya giren çıkamaz; kapatıp öyle çıkacak".
+/// Açık panel varsa önce kapanır (300 ms), sonra yenisi açılır.
+Timer? _insertTimer;
+const Duration _kInsertAnim = Duration(milliseconds: 300);
+
+void _requestInsert(WidgetRef ref, _InlineEdit next) {
+  final n = ref.read(_inlineEditProvider.notifier);
+  _insertTimer?.cancel();
+  if (n.state == null) {
+    n.state = next;
+    return;
+  }
+  n.state = null; // önce açık olan kapanır
+  _insertTimer = Timer(_kInsertAnim, () => n.state = next);
+}
+
+/// Açılan paneli kaydırılan sütunda görünür kıl (açılış animasyonu bitince).
+void _revealAfterOpen(State st) {
+  Timer(_kInsertAnim + const Duration(milliseconds: 20), () {
+    if (!st.mounted) return;
+    Scrollable.ensureVisible(st.context,
+        duration: const Duration(milliseconds: 320),
+        curve: Curves.easeOutCubic,
+        alignment: 0.1);
+  });
+}
+
 Future<void> _showEditPopup(
   BuildContext context,
   WidgetRef ref, {
@@ -562,19 +592,22 @@ Future<void> _showEditPopup(
   Future<void> Function(String value)? onSave,
 }) async {
   HapticFeedback.selectionClick();
-  ref.read(_inlineEditProvider.notifier).state = _InlineEdit(
-    title: title,
-    icon: icon,
-    fieldType: fieldType,
-    currentValue: currentValue,
-    options: options,
-    onSave: onSave,
+  _requestInsert(
+    ref,
+    _InlineEdit(
+      title: title,
+      icon: icon,
+      fieldType: fieldType,
+      currentValue: currentValue,
+      options: options,
+      onSave: onSave,
+    ),
   );
 }
 
-/// Daire alanında açılan düzenleyici paneli (eski açılır pencerenin içeriği aynen).
+/// 1. kartın altında ARA panel olarak açılan düzenleyici (eski açılır pencerenin içeriği).
 class _InlineEditor extends ConsumerStatefulWidget {
-  const _InlineEditor({super.key, required this.edit, required this.onClose});
+  const _InlineEditor({required this.edit, required this.onClose});
 
   final _InlineEdit edit;
   final VoidCallback onClose;
@@ -607,6 +640,7 @@ class _InlineEditorState extends ConsumerState<_InlineEditor> {
     _textCtrl = TextEditingController(
       text: (e.fieldType == 'text' && e.currentValue != '—') ? e.currentValue : '',
     );
+    _revealAfterOpen(this);
   }
 
   @override
@@ -797,6 +831,8 @@ class _InlineEditorState extends ConsumerState<_InlineEditor> {
         autofocus: true,
         style: const TextStyle(color: AppColors.bone),
         textInputAction: TextInputAction.done,
+        // Klavye açılınca alan + altındaki İptal/Kaydet birlikte görünür kaysın.
+        scrollPadding: const EdgeInsets.fromLTRB(20, 20, 20, 110),
         onSubmitted: (_) => _save(),
         decoration: InputDecoration(
           hintText: e.title,
@@ -812,28 +848,14 @@ class _InlineEditorState extends ConsumerState<_InlineEditor> {
         ),
         onChanged: (v) => _selected = v,
       );
-      final kb = MediaQuery.viewInsetsOf(context).bottom;
-      final below = (MainTabsScope.maybeOf(context) != null ? kGlassBarReserve + 6 : 76.0) +
-          MediaQuery.paddingOf(context).bottom;
-      final lift = kb > 0 ? max(0.0, kb - below + 10) : 0.0;
-      // Yerleşimle (padding) — paint kaydırması yok → panel alan içinde, dokunulabilir.
-      return Padding(
-        padding: EdgeInsets.only(bottom: lift),
-        child: Align(
-          alignment: kb > 0 ? Alignment.bottomCenter : Alignment.center,
-          // Kaydırılabilir: klavye/üst blok geçişi sırasında alan anlık daralınca taşma olmaz.
-          child: SingleChildScrollView(
-            physics: const ClampingScrollPhysics(),
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            child: Material(
-              type: MaterialType.transparency,
-              child: shell(Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [header, const SizedBox(height: 14), field, const SizedBox(height: 14), buttons],
-              )),
-            ),
-          ),
-        ),
+      // Kart düzeninde doğal yükseklik; klavye açılınca Scaffold küçülür ve alan
+      // kendini görünür kaydırır.
+      return Material(
+        type: MaterialType.transparency,
+        child: shell(Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [header, const SizedBox(height: 14), field, const SizedBox(height: 14), buttons],
+        )),
       );
     }
 
@@ -878,7 +900,7 @@ class _InlineEditorState extends ConsumerState<_InlineEditor> {
       );
       return SingleChildScrollView(
         physics: const ClampingScrollPhysics(),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: vMargin),
+        padding: const EdgeInsets.symmetric(vertical: vMargin),
         child: Material(type: MaterialType.transparency, child: panel),
       );
     });
@@ -935,7 +957,10 @@ class _SpriteAvatar extends StatelessWidget {
 class _ProfileEditSheet extends ConsumerStatefulWidget {
   final UserProfile profile;
   final Future<void> Function(String name, int? picIndex, String? photoPath) onSave;
-  const _ProfileEditSheet({required this.profile, required this.onSave});
+
+  /// Ara paneli kapat (kaydedince ya da X'e basınca).
+  final VoidCallback onClose;
+  const _ProfileEditSheet({required this.profile, required this.onSave, required this.onClose});
 
   @override
   ConsumerState<_ProfileEditSheet> createState() => _ProfileEditSheetState();
@@ -959,6 +984,7 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
       final g = widget.profile.gender;
       _selectedIndex = g == 'kadin' ? 0 : g == 'erkek' ? 1 : 3;
     }
+    _revealAfterOpen(this);
   }
 
   @override
@@ -1027,27 +1053,47 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
   @override
   Widget build(BuildContext context) {
     final s = ref.watch(l10nProvider);
+    // 1. kartın altında ara panel (eski alt sayfa): kartlarla aynı genişlik, tam çerçeve.
     return Padding(
-      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+      padding: EdgeInsets.zero,
       child: Container(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
-        decoration: const BoxDecoration(
+        padding: const EdgeInsets.fromLTRB(20, 14, 20, 22),
+        decoration: BoxDecoration(
           color: AppColors.inkSurface,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-          border: Border(top: BorderSide(color: AppColors.gold, width: 1)),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: AppColors.gold, width: 1),
         ),
-        child: SingleChildScrollView(
+        child: Material(
+          type: MaterialType.transparency,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // Handle
-              Container(width: 40, height: 4,
-                  decoration: BoxDecoration(color: Color(0x3DFFFFFF),
-                      borderRadius: BorderRadius.circular(2))),
-              const SizedBox(height: 16),
-              Text(s.editProfile,
-                  style: const TextStyle(color: AppColors.bone, fontSize: 18,
-                      fontWeight: FontWeight.bold)),
+              Row(
+                children: [
+                  const SizedBox(width: 28),
+                  Expanded(
+                    child: Text(s.editProfile,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(color: AppColors.bone, fontSize: 18,
+                            fontWeight: FontWeight.bold)),
+                  ),
+                  Semantics(
+                    button: true,
+                    label: s.cancel,
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () {
+                        FocusScope.of(context).unfocus();
+                        widget.onClose();
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.all(4),
+                        child: Icon(Icons.close_rounded, color: AppColors.ash, size: 20),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(height: 20),
 
               // Önizleme
@@ -1143,7 +1189,10 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
                   setState(() => _saving = true);
                   await widget.onSave(
                       _nameCtrl.text.trim(), _selectedIndex, _customPath);
-                  if (mounted) Navigator.pop(context);
+                  if (mounted) {
+                    FocusScope.of(context).unfocus();
+                    widget.onClose();
+                  }
                 },
                 child: Container(
                   width: double.infinity, height: 50,
@@ -1572,8 +1621,9 @@ class SettingsScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
-      // Klavye düzeni sıkıştırmasın; satır içi düzenleyici kendini klavyenin üstüne kaldırır.
-      resizeToAvoidBottomInset: false,
+      // Kart düzeni kaydırılabilir: klavye açılınca gövde küçülür, açık alan görünür kayar
+      // (yüzen bar tüm rotaların üstünde ayrı katman → klavyeyle yukarı çıkmaz).
+      resizeToAvoidBottomInset: true,
       // Soldan sağa swipe → barda soldaki komşu: Gelen Kutusu (2026-11-05 sırası:
       // Ana Menü · Gelen Kutusu · Kullanıcı Bilgileri). Yön kilitli; satır içi düzenleyici
       // açıkken kapalı (metin seçimi tutamacı sekme değiştirmesin — Codex). Tek başına
@@ -1593,90 +1643,56 @@ class SettingsScreen extends ConsumerWidget {
             // ── Yıldız katmanı — twinkle + nadir kayan yıldız (koyu bg üstünde parlar)
             const Positioned.fill(child: StarfieldOverlay()),
 
-            // ── İçerik
+            // ── İçerik: KART KART, yukarı kaydırılabilir (Anıl, 2026-11-05).
+            //   Kart 1: profil + bilgi kutucukları.
+            //   ARA panel: profil düzenleme YA DA bir kutucuğun düzenleyicisi — 1. kartın
+            //     altında açılır, 2. ve 3. kartı aşağı iter; biri açıkken diğeri, açık olan
+            //     kapanınca açılır (_requestInsert).
+            //   Kart 2: Modalite / Polarite / Element halkaları.
+            //   Kart 3: Ayarlar (dil, cam, uyarılar, tehlikeli işlemler) — ayrı pencere yok.
+            //   Kartların eni aynı, boyları içeriğe göre.
             SafeArea(
+              bottom: false,
               child: RepaintBoundary(
-                child: Column(
-                children: [
-                  _buildTopBar(context, ref, profile),
-                  // Üst sabit blok: başlık + kutucuklar. Satır içi METİN düzenlerken klavye
-                  // açıksa geçici gizlenir → düzenleyici alanı büyür, panel klavyenin üstünde
-                  // ve alan SINIRLARI İÇİNDE kalır (dokunulabilir; Codex bulgusu).
-                  Consumer(
-                    builder: (context, cref, child) {
-                      final edit = cref.watch(_inlineEditProvider);
-                      final typing = edit != null &&
-                          edit.fieldType == 'text' &&
-                          MediaQuery.viewInsetsOf(context).bottom > 0;
-                      return AnimatedSize(
-                        duration: const Duration(milliseconds: 220),
-                        curve: Curves.easeOutCubic,
-                        alignment: Alignment.topCenter,
-                        child: typing ? const SizedBox(width: double.infinity) : child,
-                      );
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const SizedBox(height: 6),
-                          _buildTitle(ref),
-                          const SizedBox(height: 14),
-                          _buildGridSection(context, ref, profile),
-                        ],
+                child: SingleChildScrollView(
+                  key: const ValueKey('profileScroll'),
+                  physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      _buildTopBar(context, ref, profile),
+                      const SizedBox(height: 2),
+                      _buildTitle(ref),
+                      const SizedBox(height: 14),
+                      _ProfileCard(
+                        key: const ValueKey('profileCard1'),
+                        child: _buildGridSection(context, ref, profile),
                       ),
-                    ),
-                  ),
-                  // Orta: donut yuvarlakları — bilgi kartına dokununca AYNI alanda
-                  // düzenleyici açılır (eski: ekran ortasında açılır pencere).
-                  Expanded(
-                    child: Consumer(builder: (context, cref, _) {
-                      final edit = cref.watch(_inlineEditProvider);
-                      // Geliş: alttan hafif yükselir + büyür + belirir (340 ms, easeOutCubic);
-                      // gidiş: tersi, daha kısa (220 ms). Daireler aynı geçişle çekilir/döner.
-                      return AnimatedSwitcher(
-                        duration: const Duration(milliseconds: 340),
-                        reverseDuration: const Duration(milliseconds: 220),
-                        switchInCurve: Curves.easeOutCubic,
-                        switchOutCurve: Curves.easeInCubic,
-                        layoutBuilder: (current, previous) => Stack(
-                          fit: StackFit.expand,
-                          children: [...previous, if (current != null) current],
+                      const _InsertSlot(),
+                      const SizedBox(height: 12),
+                      _ProfileCard(
+                        key: const ValueKey('profileCard2'),
+                        padding: const EdgeInsets.fromLTRB(8, 22, 8, 22),
+                        child: Center(child: _buildDonutRow(scores, ref)),
+                      ),
+                      const SizedBox(height: 12),
+                      _ProfileCard(
+                        key: _settingsCardKey,
+                        padding: const EdgeInsets.symmetric(vertical: 4),
+                        child: _buildSettingsCard(context, ref),
+                      ),
+                      // Tek başına rota olarak açıldıysa eski "Ana Menü" butonu (yedek).
+                      if (MainTabsScope.maybeOf(context) == null)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 12),
+                          child: _buildMenuButton(context, ref),
                         ),
-                        transitionBuilder: (child, anim) => FadeTransition(
-                          opacity: anim,
-                          child: SlideTransition(
-                            position: Tween(begin: const Offset(0, 0.06), end: Offset.zero)
-                                .animate(anim),
-                            child: ScaleTransition(
-                              scale: Tween(begin: 0.94, end: 1.0).animate(anim),
-                              child: child,
-                            ),
-                          ),
-                        ),
-                        child: edit == null
-                            ? Center(key: const ValueKey('donuts'), child: _buildDonutRow(scores, ref))
-                            : _InlineEditor(
-                                key: ValueKey(edit.token),
-                                edit: edit,
-                                onClose: () =>
-                                    cref.read(_inlineEditProvider.notifier).state = null,
-                              ),
-                      );
-                    }),
+                      const FloatingBarSpacer(extra: 16),
+                    ],
                   ),
-                  // Alt: sekme kapsayıcısında cam bar (MainTabsScreen) için yer;
-                  // tek başına rota olarak açıldıysa eski "Ana Menü" butonu (yedek).
-                  if (MainTabsScope.maybeOf(context) != null)
-                    const SizedBox(height: kGlassBarReserve + 6)
-                  else
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(12, 0, 12, 20),
-                      child: _buildMenuButton(context, ref),
-                    ),
-                ],
-              )),
+                ),
+              ),
             ),
           ],
         ),
@@ -1703,7 +1719,13 @@ class SettingsScreen extends ConsumerWidget {
           IconButton(
             icon: const Icon(Icons.settings_outlined,
                 color: AppColors.boneDim, size: 24),
-            onPressed: () => _showOptions(context, ref),
+            onPressed: () {
+              final c = _settingsCardKey.currentContext;
+              if (c != null) {
+                Scrollable.ensureVisible(c,
+                    duration: const Duration(milliseconds: 420), curve: Curves.easeOutCubic);
+              }
+            },
           ),
         ],
       ),
@@ -2322,75 +2344,26 @@ class SettingsScreen extends ConsumerWidget {
   // ── Profil düzenleme ──────────────────────────────────────────────────────
 
   void _showProfileEdit(BuildContext context, WidgetRef ref, UserProfile profile) {
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: Colors.transparent,
-      isScrollControlled: true,
-      builder: (_) => _ProfileEditSheet(
-        profile: profile,
-        onSave: (name, picIndex, photoPath) async {
-          final p = ref.read(userProfileProvider);
-          await ref.read(userProfileProvider.notifier).save(UserProfile(
-            name: name.isEmpty ? p.name : name,
-            lastName: p.lastName,
-            age: p.age,
-            gender: p.gender,
-            job: p.job,
-            maritalStatus: p.maritalStatus,
-            birthDate: p.birthDate,
-            birthCity: p.birthCity,
-            zodiacSign: p.zodiacSign,
-            onboardingComplete: p.onboardingComplete,
-            birthTime: p.birthTime,
-            risingSign: p.risingSign,
-            moonSign: p.moonSign,
-            planet: p.planet,
-            profilePicIndex: picIndex,
-            customPhotoPath: photoPath,
-          ));
-        },
+    HapticFeedback.selectionClick();
+    _requestInsert(
+      ref,
+      _InlineEdit(
+        title: ref.read(l10nProvider).editProfile,
+        icon: Icons.person_rounded,
+        fieldType: 'profile',
+        currentValue: '',
       ),
     );
   }
 
-  // ── Ayarlar dialog ────────────────────────────────────────────────────────
+  // ── Ayarlar: Kullanıcı Bilgileri'nin 3. kartı (Anıl, 2026-11-05: "ayarlar artık
+  //    kullanıcı bilgilerinin altında bir kart yalnızca"; eski açılır pencere kaldırıldı).
 
-  void _showOptions(BuildContext context, WidgetRef ref) {
-    showDialog(
-      context: context,
-      builder: (dialogCtx) => Dialog(
-        backgroundColor: Colors.transparent,
-        insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
-        child: Container(
-          decoration: BoxDecoration(
-            color: AppColors.inkSurface,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: AppColors.gold, width: 1),
-          ),
-          child: SingleChildScrollView(
-            child: Column(
+  Widget _buildSettingsCard(BuildContext context, WidgetRef ref) {
+    return Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Başlık
-              Container(
-                padding: const EdgeInsets.fromLTRB(20, 18, 20, 14),
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(color: Color(0x29FF55FF), width: 1),
-                  ),
-                ),
-                child: const Text(
-                  'Ayarlar / Settings',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: AppColors.bone,
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.5,
-                  ),
-                ),
-              ),
 
               // ── Dil / Language bölümü ────────────────────────────────────
               Consumer(
@@ -2516,7 +2489,6 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.gold,
                 label: ref.read(l10nProvider).termsOfUse,
                 onTap: () {
-                  Navigator.pop(dialogCtx);
                   _showLegalText(
                     context,
                     title: ref.read(l10nProvider).termsOfUse,
@@ -2531,7 +2503,6 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.gold,
                 label: ref.read(l10nProvider).privacyPolicy,
                 onTap: () {
-                  Navigator.pop(dialogCtx);
                   _showLegalText(
                     context,
                     title: ref.read(l10nProvider).privacyPolicy,
@@ -2546,7 +2517,6 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.gold,
                 label: ref.read(l10nProvider).explicitConsent,
                 onTap: () {
-                  Navigator.pop(dialogCtx);
                   _showLegalText(
                     context,
                     title: ref.read(l10nProvider).explicitConsent,
@@ -2582,7 +2552,6 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.warning,
                 label: ref.read(l10nProvider).resetProfile,
                 onTap: () {
-                  Navigator.pop(dialogCtx);
                   _confirmReset(context, ref);
                 },
               ),
@@ -2591,7 +2560,6 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.danger,
                 label: ref.read(l10nProvider).deleteAllReadings,
                 onTap: () {
-                  Navigator.pop(dialogCtx);
                   _confirmDeleteInbox(context, ref);
                 },
               ),
@@ -2622,33 +2590,7 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                 ),
               ),
-
-              // Kapat butonu
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                child: GestureDetector(
-                  onTap: () => Navigator.pop(dialogCtx),
-                  child: Container(
-                    height: 44,
-                    decoration: BoxDecoration(
-                      color: AppColors.bone.withValues(alpha: 0.07),
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                          color: AppColors.bone.withValues(alpha: 0.15), width: 1),
-                    ),
-                    child: Center(
-                      child: Text(ref.read(l10nProvider).close,
-                          style: const TextStyle(
-                              color: AppColors.boneDim, fontSize: 14)),
-                    ),
-                  ),
-                ),
-              ),
             ],
-          ),
-          ),
-        ),
-      ),
     );
   }
 
@@ -3219,4 +3161,97 @@ class _GlassTintSection extends ConsumerWidget {
       ),
     );
   }
+}
+
+/// Kullanıcı Bilgileri kartı: hepsi aynı en (ekran − 24), boy içeriğe göre.
+final GlobalKey _settingsCardKey = GlobalKey(debugLabel: 'profileCard3');
+
+class _ProfileCard extends StatelessWidget {
+  const _ProfileCard({super.key, required this.child, this.padding = const EdgeInsets.all(12)});
+
+  final Widget child;
+  final EdgeInsetsGeometry padding;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: padding,
+      decoration: BoxDecoration(
+        color: AppColors.inkSurface.withValues(alpha: 0.62),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.55), width: 1),
+      ),
+      child: child,
+    );
+  }
+}
+
+/// 1. kartın altındaki ARA panel yuvası: profil düzenleme ya da kutucuk düzenleyicisi.
+/// Açılırken aşağı doğru büyüyerek 2. ve 3. kartı iter, kapanırken toplanır.
+class _InsertSlot extends ConsumerWidget {
+  const _InsertSlot();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final edit = ref.watch(_inlineEditProvider);
+    void close() => ref.read(_inlineEditProvider.notifier).state = null;
+    Widget child = const SizedBox(key: ValueKey('insert_none'), width: double.infinity);
+    if (edit != null) {
+      final Widget panel = switch (edit.fieldType) {
+        'profile' => _ProfileEditSheet(
+            profile: ref.read(userProfileProvider),
+            onSave: (name, picIndex, photoPath) => _saveProfileEdit(ref, name, picIndex, photoPath),
+            onClose: close,
+          ),
+        'text' => _InlineEditor(edit: edit, onClose: close),
+        _ => SizedBox(height: 380, child: _InlineEditor(edit: edit, onClose: close)),
+      };
+      child = Padding(
+        key: ValueKey('insert_${edit.token}'),
+        padding: const EdgeInsets.only(top: 12),
+        child: panel,
+      );
+    }
+    return AnimatedSwitcher(
+      duration: _kInsertAnim,
+      reverseDuration: _kInsertAnim,
+      switchInCurve: Curves.easeOutCubic,
+      switchOutCurve: Curves.easeInCubic,
+      layoutBuilder: (current, previous) => Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [...previous, if (current != null) current],
+      ),
+      transitionBuilder: (child, anim) => SizeTransition(
+        sizeFactor: anim,
+        axisAlignment: -1,
+        child: FadeTransition(opacity: anim, child: child),
+      ),
+      child: child,
+    );
+  }
+}
+
+/// Profil düzenleme kaydı (eski alt sayfanın onSave'i).
+Future<void> _saveProfileEdit(
+    WidgetRef ref, String name, int? picIndex, String? photoPath) async {
+  final p = ref.read(userProfileProvider);
+  await ref.read(userProfileProvider.notifier).save(UserProfile(
+        name: name.isEmpty ? p.name : name,
+        lastName: p.lastName,
+        age: p.age,
+        gender: p.gender,
+        job: p.job,
+        maritalStatus: p.maritalStatus,
+        birthDate: p.birthDate,
+        birthCity: p.birthCity,
+        zodiacSign: p.zodiacSign,
+        onboardingComplete: p.onboardingComplete,
+        birthTime: p.birthTime,
+        risingSign: p.risingSign,
+        moonSign: p.moonSign,
+        planet: p.planet,
+        profilePicIndex: picIndex,
+        customPhotoPath: photoPath,
+      ));
 }

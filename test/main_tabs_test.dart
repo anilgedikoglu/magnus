@@ -17,6 +17,25 @@ class _FakeInbox extends InboxNotifier {
   List<InboxItem> build() => [];
 }
 
+/// Titreşim testi: elle fal eklenebilen gelen kutusu.
+class _PushInbox extends InboxNotifier {
+  @override
+  List<InboxItem> build() => [];
+  void push(InboxItem i) => state = [...state, i];
+}
+
+/// Platform kanalındaki titreşim çağrılarını toplar.
+List<String> _recordHaptics(WidgetTester tester) {
+  final haptics = <String>[];
+  tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(SystemChannels.platform, (call) async {
+    if (call.method == 'HapticFeedback.vibrate') haptics.add('${call.arguments}');
+    return null;
+  });
+  addTearDown(() =>
+      tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(SystemChannels.platform, null));
+  return haptics;
+}
+
 /// Rozet testi için sabit gelen kutusu.
 class _FixedInbox extends InboxNotifier {
   _FixedInbox(this.items);
@@ -102,6 +121,68 @@ Widget _app({List<InboxItem>? inbox, Key? key}) => ProviderScope(
 
 void main() {
   _routerTests();
+
+  testWidgets('kaydırmayla geçiş: gelen sayfa yönünden gelip öncekini örter + güçlü titreşim; bar dokunuşu anında', (
+    tester,
+  ) async {
+    final sem = tester.ensureSemantics();
+    final haptics = _recordHaptics(tester);
+    await tester.pumpWidget(_app());
+    await tester.pumpAndSettle();
+    // Bar dokunuşu: anında (animasyon yok).
+    await tester.tap(find.bySemanticsLabel(RegExp('^Gelen Kutusu')));
+    await tester.pump();
+    expect(find.text('I:0'), findsOneWidget);
+    expect(find.text('H:0'), findsNothing);
+    haptics.clear();
+    // Kaydırma (gelen kutusunda sağa): ana menü SOLDAN gelip gelen kutusunu örter.
+    MainTabsScope.maybeOf(tester.element(find.text('I:0')))!
+        .select(MainTab.home, entry: TabEntry.left);
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 90));
+    final ix = tester.getCenter(find.text('I:0')).dx;
+    final hx = tester.getCenter(find.text('H:0')).dx;
+    expect(hx, lessThan(ix - 20), reason: 'gelen sayfa soldan geliyor');
+    expect(haptics, contains('HapticFeedbackType.heavyImpact'));
+    await tester.pumpAndSettle();
+    expect(find.text('I:0'), findsNothing, reason: 'örtülen sayfa geçiş bitince gizli');
+    expect(tester.getCenter(find.text('H:0')).dx, closeTo(ix, 1));
+    sem.dispose();
+  });
+
+  testWidgets('fal titreşimleri: yeni fal → güçlü vuruş; hazırlanan fal açılınca artan üçlü', (
+    tester,
+  ) async {
+    final haptics = _recordHaptics(tester);
+    await tester.pumpWidget(ProviderScope(
+      overrides: [
+        inboxProvider.overrideWith(_PushInbox.new),
+        l10nProvider.overrideWithValue(AppStrings('tr')),
+      ],
+      child: MaterialApp(
+        home: FloatingBarHost(
+          child: MainTabsScreen(debugPageBuilder: (t) => _Page(const ['P', 'H', 'I'][t])),
+        ),
+      ),
+    ));
+    await tester.pumpAndSettle();
+    final c = ProviderScope.containerOf(tester.element(find.byType(MainTabsScreen)));
+    (c.read(inboxProvider.notifier) as _PushInbox)
+        .push(_item('yeni', unlockIn: const Duration(milliseconds: 300)));
+    await tester.pump();
+    expect(haptics.first, 'HapticFeedbackType.heavyImpact', reason: 'fal gönderildi');
+    await tester.pump(const Duration(milliseconds: 200));
+    haptics.clear();
+    // Gerçek saat açılma anını geçsin, sonra rozet zamanlayıcısı tetiklensin.
+    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 420)));
+    await tester.pump(const Duration(milliseconds: 500));
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(haptics, [
+      'HapticFeedbackType.lightImpact',
+      'HapticFeedbackType.mediumImpact',
+      'HapticFeedbackType.heavyImpact',
+    ], reason: 'falın hazır');
+  });
   testWidgets('sekme geçişi: state korunur, gizli sekmede ticker kapalı', (
     tester,
   ) async {
@@ -236,6 +317,8 @@ void main() {
     await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 420)));
     await tester.pump(const Duration(milliseconds: 420));
     expect(dot(), const Color(0xFF44FF88), reason: 'açılma anı geçti → yeşil');
+    // Açılma anındaki 'falın hazır' titreşim dizisi (260 ms) tamamlansın.
+    await tester.pump(const Duration(milliseconds: 300));
   });
 
   testWidgets('sayfa içinden selectMainTab (scope) çalışır', (tester) async {

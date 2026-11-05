@@ -1,5 +1,7 @@
 // Kullanıcı Bilgileri: bilgi kartına dokununca düzenleyici ekran ortasında açılır pencere
-// olarak DEĞİL, polarite/modalite/element dairelerinin olduğu alanda açılır (Anıl, 2026-11-05).
+// olarak DEĞİL açılır. 2026-11-05 (Anıl, kart düzeni): 1. kartın ALTINDA ara panel olarak
+// açılır, halkalar (2. kart) ve ayarlar (3. kart) AŞAĞI itilir; biri açıkken diğerine
+// dokunulursa önce açık olan kapanır, sonra yenisi açılır.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -50,31 +52,35 @@ void main() {
     expect(donutTop, greaterThan(cardBottom));
 
     final barriers = find.byType(ModalBarrier).evaluate().length;
+    await t.ensureVisible(find.text('Medeni Hal')); // kart düzeni kaydırılabilir
     await t.tap(find.text('Medeni Hal'));
     await _settle(t);
 
-    // Açılır pencere YOK; düzenleyici daire alanında, daireler gizli.
+    // Açılır pencere YOK; düzenleyici 1. kartın altında, halkalar AŞAĞI itildi (kaybolmadı).
     expect(find.byType(Dialog), findsNothing);
     expect(find.byType(ModalBarrier).evaluate().length, barriers); // yeni pencere/bariyer yok
-    expect(find.text('Modalite'), findsNothing);
     final save = find.text('Kaydet');
     expect(save, findsOneWidget);
     expect(t.getTopLeft(save).dy, greaterThan(cardBottom));
+    expect(t.getTopLeft(find.text('Modalite')).dy, greaterThan(t.getBottomLeft(save).dy));
     // Bilgi kartları görünür ve dokunulabilir kalır (ekran örtülmez).
     expect(find.text('Doğum Tarihi'), findsOneWidget);
 
     // Başka karta dokununca düzenleyici o alana geçer.
+    await t.ensureVisible(find.text('Doğum Tarihi'));
     await t.tap(find.text('Doğum Tarihi'));
     await _settle(t);
     expect(find.text('Kaydet'), findsOneWidget);
 
     // İptal → daireler geri gelir.
+    await t.ensureVisible(find.text('İptal'));
     await t.tap(find.text('İptal'));
     await _settle(t);
     expect(find.text('Kaydet'), findsNothing);
     expect(find.text('Modalite'), findsOneWidget);
 
     // Sekmeden çıkınca açık düzenleyici kapanır.
+    await t.ensureVisible(find.text('Medeni Hal')); // kart düzeni kaydırılabilir
     await t.tap(find.text('Medeni Hal'));
     await _settle(t);
     expect(find.text('Kaydet'), findsOneWidget);
@@ -85,13 +91,13 @@ void main() {
     expect(find.text('Kaydet'), findsNothing);
     expect(find.text('Modalite'), findsOneWidget);
 
-    // Doğum Yeri (metin) + klavye: üst blok geçici gizlenir, panel klavyenin üstünde ve
+    // Doğum Yeri (metin) + klavye: gövde küçülür, panel klavyenin üstüne kayar ve
     // DOKUNULABİLİR (Codex: Transform ile alan dışına taşan kısım dokunuş almıyordu).
+    await t.ensureVisible(find.text('Doğum Yeri'));
     await t.tap(find.text('Doğum Yeri'));
     await _settle(t);
     t.view.viewInsets = const FakeViewPadding(bottom: 700); // ~350 mantıksal klavye
     await _settle(t);
-    expect(find.text('Medeni Hal'), findsNothing); // kartlar geçici gizli
     final iptal = find.text('İptal');
     expect(t.getBottomLeft(iptal).dy, lessThan(844 - 350));
     await t.tap(iptal);

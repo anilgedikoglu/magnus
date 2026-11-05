@@ -13,7 +13,8 @@ const [hf, hk] = havuzArg.split(':');
 const havuz = getPath(JSON.parse(fs.readFileSync(hf, 'utf8')), hk).map(e => e.metin);
 const diger = digerArg ? JSON.parse(fs.readFileSync(digerArg, 'utf8')).map(e => e.metin) : [];
 
-const kel = s => s.replace(/^Merhaba[\s\S]*?öngörüm var\./, '').toLocaleLowerCase('tr').replace(/\{\{[^}]*\}\}/g, ' ').replace(/[^a-zçğıöşüâîû0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
+// Unity zengin metin etiketleri (<color=…><b>, Olumlama) kelime sayılmaz
+const kel = s => s.replace(/<[^>]+>/g, ' ').replace(/^\s*Merhaba[\s\S]*?öngörüm var\./, '').toLocaleLowerCase('tr').replace(/\{\{[^}]*\}\}/g, ' ').replace(/[^a-zçğıöşüâîû0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
 const gr = s => { const w = kel(s), g = new Set(); for (let i = 0; i + 5 <= w.length; i++) g.add(w.slice(i, i + 5).join(' ')); return g; };
 const ac = s => kel(s).slice(0, 2).join(' ');
 // Havuzun sabit çerçevesi (Faloya gibi) yok sayılır

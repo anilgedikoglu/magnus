@@ -63,7 +63,8 @@ function fixPh(metin, warn) {
   }
   // Kahve uğurlaması "\n\nMagnus" imzasıyla biter — kesik sayılmaz
   // Kahve karşılama/bağlama ";" ya da ":" ile bir sonraki parçaya bağlanır — kesik sayılmaz
-  if (!/[.!?…"”');:]\s*$/.test(m.trim()) && !/\n\s*Magnus\s*$/.test(m)) warn.push('noktalama ile bitmiyor');
+  // Olumlama gibi metinler kapanış etiketiyle (</b></color>) biter — etiketten önceki karaktere bakılır
+  if (!/[.!?…"”');:]\s*$/.test(m.replace(/(<\/?[a-z]+(=[^>]*)?>\s*)+$/i, '').trim()) &&!/\n\s*Magnus\s*$/.test(m)) warn.push('noktalama ile bitmiyor');
   return m.trim();
 }
 

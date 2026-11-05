@@ -7,7 +7,7 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 698** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 120 (+Uraz 20 bekliyor), tur 6: 80 (+Giriş/Yarın/Gelecek 60 bekliyor)) — her tur sonunda güncelle.
+- **Toplam eklenen: 758** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 120 (+Gelecek 20 çeviride); tur 7–10 seçim/çeviride) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
@@ -23,6 +23,9 @@
 | Yana – Yaşama Dair | `yana.json` › `yasama_dair` | 111–150 |
 | Kâhin Derun | `kahinler.json` › `kahinler.derun` | derun_34–53 |
 | Kâhin Khaleesi | `kahinler.json` › `kahinler.khaleesi` | khaleesi_32–51 |
+| Kâhin Uraz | `kahinler.json` › `kahinler.uraz` | uraz_24–43 |
+| Kahve – Giriş | `kahve_giris.json` › `girisler` | 769–788 |
+| Durugörü – Yarın | `durugoru_yno.json` › `durugoru_yno` | 40–59 |
 | Kahve – Bağlama | `kahve_baglama.json` › `baglamalar` | 251–290 |
 | Faloya (3) | `faloya.json` › `faloya` | 132–171 |
 

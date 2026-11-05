@@ -23,7 +23,7 @@ if (args[0] === '--havuz-araligi') {
   }
 }
 
-const kelimeler = s => s.toLocaleLowerCase('tr').replace(/\{\{[^}]*\}\}/g, ' ').replace(/[^a-zçğıöşüâîû0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
+const kelimeler = s => s.replace(/<[^>]+>/g, ' ').toLocaleLowerCase('tr').replace(/\{\{[^}]*\}\}/g, ' ').replace(/[^a-zçğıöşüâîû0-9 ]/g, ' ').split(/\s+/).filter(Boolean);
 const gramlar = (w, n = 5) => { const g = new Set(); for (let i = 0; i + n <= w.length; i++) g.add(w.slice(i, i + n).join(' ')); return g; };
 
 // Türün sabit çerçevesi (ör. Faloya "Merhaba … Varlıklar fısıldıyor …"): havuzun %30'undan fazlasında geçen 5-gramlar yok sayılır.

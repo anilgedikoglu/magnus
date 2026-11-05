@@ -243,8 +243,28 @@ const TURLAR = {
       uslup: 'ÜSLUP: Yousuf birinci tekil, "sen" der; kibirli-komik, gürültülü, sıcak. <sprite=…> KULLANMA. {{data, cinsiyet=erkek, X | cinsiyet=kadin, Y}} kullanırsan "kadin" yaz.',
     },
   ],
+  8: [
+    {
+      id: 'astroyorum', file: 'gunlukastroloji.json', key: 'astroyorum', matcher: 'M7', kitle: KITLE_KOSULSUZ, orijinalMaxId: 77,
+      tur: 'Günlük Astroloji — Burç Yorumu',
+      sistem: 'Kullanıcı Günlük Astroloji\'yi açar; gün boyunca aynı kalan bir burç yorumu okur (kullanıcının burcu {{burc}} ile). Yorum gezegen/Ay hareketlerine atıfla günün ruh hâlini, ilişkileri, işi ve küçük bir öneriyi anlatır.',
+      gorev: 'GÜNLÜK BURÇ YORUMU — {{isim}} ve {{burc}} ile kişiselleştirilmiş, gezegen/Ay imgeleriyle açılan (kesin astronomik iddia değil, "Ay\'ın etkisi", "Merkür\'ün enerjisi" gibi yumuşak), sonra günün 2-3 alanına (duygu, ilişki, iş/para, beden/enerji) Barnum + cold reading tarzı somut dokulu öngörüler; az negatif → bol pozitif; sonunda küçük bir öneri. HEPSİ KOŞULSUZ ama {{burc}} ile kişisel. Uzunluk: 800-1250 karakter.',
+    },
+    ...[2, 3, 4, 5].map(z => ({
+      id: `karsilama_z${z}`, file: 'karsilamalar.json', key: 'karsilamalar', matcher: 'M7', kitle: KITLE_KOSULSUZ, adet: 40,
+      filtre: e => e.ziyaret === z, extra: { ziyaret: z },
+      tur: 'Ana Menü Karşılaması',
+      sistem: `Kullanıcı uygulamayı gün içinde ${z}. kez açtığında ana menüdeki ilk sohbet balonunda Magnus onu karşılar (tek satırlık balon, uzun metin kayarak okunur).`,
+      gorev: `KARŞILAMA (${z}. ZİYARET) — bugün ${z}. kez geldiğini bilen, sıcak, esprili ya da gizemli kısa bir karşılama: "yine geldin" duygusunu her seferinde farklı biçimde söyle (sayıyı her metinde tekrarlama), kimi zaman Barnum tarzı kısa bir tespit ya da günün geri kalanına dair hafif bir ipucu ekle. {{isim}} çoğu metinde. HEPSİ KOŞULSUZ. Uzunluk: 50-160 karakter.`,
+    })),
+  ],
 };
 const getPath = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
+// Sonraki turlar önceki tanımları yeniden kullanır (her turda örnekler tur numarasıyla değişir → "örnek ver, metin al")
+const tekrar = (tur, id) => ({ ...TURLAR[tur].find(k => k.id === id) });
+TURLAR[9] = [tekrar(4, 'tavsanfali'), tekrar(4, 'niyet'), tekrar(3, 'durugoru_bno'), tekrar(4, 'kahve_sonuc'), tekrar(4, 'yana_bana')];
+TURLAR[10] = [tekrar(6, 'kahve_giris'), tekrar(4, 'kahve_gelisme'), { ...tekrar(3, 'kaderkitabi'), orijinalMaxId: 229 },
+  { ...tekrar(5, 'kahin_derun'), orijinalMaxId: 33 }, { ...tekrar(5, 'kahin_khaleesi'), orijinalMaxId: 31 }];
 
 const ORTAK_YER = 'YER TUTUCULAR (yalnız bunları, AYNEN yaz): {{isim}} = kullanıcının adı; {{ay_N}} = bugünden N ay sonraki ayın adı (ör. {{ay_2}}); {{sayi,a,b}} = a ile b arası rastgele sayı (BOŞLUKSUZ, ör. {{sayi,2,6}}); {{randomtarih,a,b}} = bugünden a-b gün sonraki tarih (ör. "17 Ocak"); {{kelime, A | B | C}} = seçeneklerden rastgele biri; {{harf}} = rastgele bir harf (isim baş harfi için); {{gun_N}} = N gün sonraki haftanın günü adı; {{burc}} = kullanıcının burcu. Cinsiyete göre kelime gerekirse: {{data, cinsiyet=erkek, X | cinsiyet=kadin, Y}}. {{yil_+1}} gibi artı işaretli biçim YASAK.';
 const HEDEF = 'HEDEF: Okuyana "wow, bildin!" dedirtecek, BİLİYOR HİSSİ VEREN, SPESİFİK GÖRÜNEN metinler. Somut gündelik ayrıntı kullan (bir mesaj, bir anahtar, bir koku, bir renk, bir sokak, bir harfle başlayan isim, bir ay/gün, bir sayı, bir alışkanlık) ve kişinin hayatına dokunan isabetli gözlemler yap. Herkese uyan basmakalıp klişelerden kaçın — ama ayrıntı, olayın TUTMA ihtimalini düşürmesin (aşağıdaki COLD READING kuralı).';
@@ -301,7 +321,8 @@ for (const k of list) {
   const tumHavuz = getPath(raw, k.key);
   // Örnekler yalnız Anıl'ın orijinal metinlerinden (önceki turların yapay metinleri örnek olmaz)
   const idSayi = id => typeof id === 'number' ? id : parseInt(String(id).replace(/^\D+/, ''), 10); // "likia_23" → 23
-  const pool = k.orijinalMaxId ? tumHavuz.filter(e => idSayi(e.id) <= k.orijinalMaxId) : tumHavuz;
+  let pool = k.orijinalMaxId ? tumHavuz.filter(e => idSayi(e.id) <= k.orijinalMaxId) : tumHavuz;
+  if (k.filtre) pool = pool.filter(k.filtre); // ör. karşılamalarda yalnız aynı ziyaret numarası
   const r = rnd(tur * 1000 + k.id.length * 17);
   const lens = pool.map(e => e.metin.length).sort((a, b) => a - b);
   const med = lens[Math.floor(lens.length / 2)];

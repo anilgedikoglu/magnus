@@ -3,6 +3,12 @@
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
 ## Ne yapıldı (2026-11-05) + değişen dosyalar
+- **10.8.11+273 — ÖNEMLİ MENÜ DEĞİŞİKLİĞİ (Anıl):** cam bar 3 ikon: Ev · Zarf · Profil (insan büstü). Ana menü TEK
+  sayfa, 3×9 dikey kaydırmalı ızgara (sayfa göstergesi + hazırlanan fal yuvarlakları kaldırıldı, alan ızgaraya katıldı).
+  Zarf rozeti: hazırlanan fal → turuncu, hepsi hazır → yeşil, okunmamış yok → yok (zamanlayıcıyla kendiliğinden döner).
+  Kapsül hareket yönüne uzayıp kısalıyor. Yön kilitli sekme kaydırma `lib/core/widgets/tab_swipe.dart`.
+  Dosyalar: `glass_tab_bar.dart`, `shell/main_tabs.dart`, `home/home_screen.dart`, `inbox_screen.dart`, `settings_screen.dart`,
+  `app_strings.dart`; testler `main_tabs_test`, `glass_tab_bar_test`, `tab_swipe_test`. Codex incelemesi (4 bulgu) düzeltildi.
 - **Sürüm `10.8.10+270`** (main; 267 + kayan yazı, Tavşan dokunuş/günde 1, rüya cihazda, sıfırlama ayrımı, yeni ikonlar). Android → Play **Dahili test**; iOS → TestFlight (GitHub Actions
   `.github/workflows/ios-testflight.yml`). İncelemeye/üretime GÖNDERİLMEDİ (Anıl: "yalnız test").
 - **Görünüm:** renkler eski neon/mor palete döndü (yapı kaldı), gövde Nunito/Raleway, başlıklar Cinzel
@@ -56,6 +62,12 @@
   revizyon istemek karşı modelin metinlerini kopyalattı → yeni sohbet + DeepThink + taslaksız yazım.
 
 ## Sıradaki adım
+- **METİN DÖNGÜSÜ SÜRÜYOR (Anıl: 4-5 bin ilave metin; "sonra 10 tur daha"):** toplam/ilerleme `docs/metin_uretim_log.md` en üstte.
+  Hat: ChatGPT (Anıl'ın Chrome'u) + Codex CLI (`scripts/metin_codex.sh`); adımlar skill `magnus-metin-uretimi` → "Döngü akışı".
+  Tur tanımları `scripts/metin_turu_hazirla.js` TURLAR[3..10] (9-10 önceki tanımları yeniden kullanır). Çalışma dosyaları
+  oturum scratchpad'inde (metin_turN/, secimler.json, bekleyen_secimler.json) — yeni oturumda yoksa ilgili turu baştan üret.
+  Codex kullanım sınırı dolunca saatini bekle; o arada ChatGPT tarafı sürer.
+
 - Anıl'ın geri bildirimi → düzelt. Bir sonraki build `10.8.11+273`, yalnız "test çık" ile.
 - "Bir tur daha" denirse: `docs/metin_uretim_log.md` → "Sıradaki tur adayları" (Kahve Uğurlama, Kahve Bağlama,
   Japon, Kader Kitabı, Kâhinler) + `magnus-metin-uretimi` skill'i.

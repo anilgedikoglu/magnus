@@ -1,6 +1,7 @@
 // Kaynak metinler: C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu1\KaderCarki
 // Görseller:      C:\Magnus\Assets\Resources\YerelDOSYALAR\Gorseller\Wheel
-// Akış: Çarkı çevir → dur → 2s → fal adı → 2s → kum saati → metin göster
+// Akış (2026-11-06 yeniden): çarkı savur → çivilerde tık + ok sekmesi → durunca vuruş, kazanan
+// dilim parlar (1,2 sn) → ödüllü reklam → sonuç sırayla süzülür (eski 2+2+3 sn boş beklemeler yok).
 
 import 'dart:convert';
 import 'dart:math';
@@ -16,7 +17,6 @@ import '../../core/services/ad_service.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
-import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
@@ -45,6 +45,28 @@ const _bolmeler = [
 const int _bolmeSayisi = 6;
 const double _bolmeAcisi = 2 * pi / _bolmeSayisi; // 60°
 
+// ─── Çark geometrisi (test edilebilir) ───────────────────────────────────────
+
+/// Ok (altta) hangi dilimi gösteriyor? [angle] çarkın dönüş açısı.
+@visibleForTesting
+int kaderSegUnderPointer(double angle) {
+  var local = (pi / 2 - angle) % (2 * pi);
+  if (local < 0) local += 2 * pi;
+  final off = (local + pi / 2) % (2 * pi);
+  return (off / _bolmeAcisi).floor().clamp(0, _bolmeSayisi - 1);
+}
+
+/// [current] açısından [dir] yönünde ([+1]/[-1]) [turns] tam tur atıp [target] diliminin
+/// MERKEZİ okta duracak şekilde biten açı. Kalan yol dönüş yönünde ölçülür (ters savrulmada
+/// da ok seçilen dilimde durur — 2026-11-06 hatası: eskiden ok hedefin aynasında duruyordu).
+@visibleForTesting
+double kaderSpinEnd(double current, int target, int dir, int turns) {
+  final hedefAci = pi - (target * _bolmeAcisi + _bolmeAcisi / 2);
+  var kalan = dir > 0 ? (hedefAci - current) % (2 * pi) : (current - hedefAci) % (2 * pi);
+  if (kalan < 0) kalan += 2 * pi;
+  return current + dir * (turns * 2 * pi + kalan);
+}
+
 // ─── Ana ekran ────────────────────────────────────────────────────────────────
 
 class KaderCarkiScreen extends ConsumerStatefulWidget {
@@ -58,25 +80,35 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     with TickerProviderStateMixin {
 
   // Animasyon
-  late AnimationController _spinCtrl;
-  late Animation<double>    _spinAnim;
+  late final AnimationController _spinCtrl;
+  Animation<double>? _spinAnim;
+  // Ok: her çividen geçerken hafifçe sekip yerine döner.
+  late final AnimationController _kickCtrl;
+  double _kickDir = 1;
+  // Duruş: kazanan dilim parlar ve nabız gibi atar.
+  late final AnimationController _winCtrl;
+  // Sonuç ekranı: ikon → başlık → metin sırayla süzülür.
+  late final AnimationController _revealCtrl;
 
   // Durum
   bool   _doniyor      = false;
-  bool   _falAdiGoster = false;
-  bool   _hazirlaniyor = false;
+  bool   _bitti        = false; // çark durdu: bir daha çevrilemez (günde 1; ikinci akış yok)
   bool   _metinGeldi   = false;
   int    _kazananIndex = -1;
   String _metin        = '';
+  Future<String>? _metinFuture;
 
   // Swipe takibi
-  double _panStartAngle   = 0;
   double _panPrevAngle    = 0;
   double _angularVelocity = 0;
   DateTime _lastPanTime   = DateTime.now();
   // pi/6 = yarım bölme offset → başlangıçta pointer tam bölme merkezinde
   double _currentAngle    = pi / 6;
-  double _speedFraction   = 0.0; // 0=kırmızı, 1=yeşil
+  double _speedFraction   = 0.0; // gerçek açısal hıza göre 0 (durgun) … 1 (çok hızlı)
+  double _prevSpinAngle   = 0;
+  int    _prevSpinMicros  = 0;
+  int    _lastSeg         = -1;
+  int    _lastHapticMs    = 0;
 
   // Görsel cache
   final Map<String, ui.Image?> _ikonCache = {};
@@ -85,22 +117,23 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   void initState() {
     super.initState();
     _spinCtrl = AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _spinCtrl.addListener(() {
-      setState(() {
-        _currentAngle  = _spinAnim.value;
-        // Decelerate curve: hız başta max, sonda sıfır → (1 - progress)
-        _speedFraction = (1.0 - _spinCtrl.value).clamp(0.0, 1.0);
-      });
-    });
+    _spinCtrl.addListener(_onSpinTick);
     _spinCtrl.addStatusListener((status) {
       if (status == AnimationStatus.completed) _onSpinComplete();
     });
+    _kickCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 170));
+    _winCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 900));
+    _revealCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 1100));
+    _lastSeg = _segUnderPointer(_currentAngle);
     _preloadImages();
   }
 
   @override
   void dispose() {
     _spinCtrl.dispose();
+    _kickCtrl.dispose();
+    _winCtrl.dispose();
+    _revealCtrl.dispose();
     super.dispose();
   }
 
@@ -113,42 +146,78 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     }
   }
 
+  // ── Ok altındaki dilim + çivi geçişi (tık) ────────────────────────────────────
+
+  static int _segUnderPointer(double angle) => kaderSegUnderPointer(angle);
+
+  /// Ok bir dilim sınırını (çiviyi) geçtiyse: tık titreşimi + ok sekmesi.
+  void _checkPeg(double angle, double dir) {
+    final seg = _segUnderPointer(angle);
+    if (seg == _lastSeg) return;
+    _lastSeg = seg;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    if (now - _lastHapticMs > 45) {
+      // Çok hızlıyken titreşim seli olmasın (iOS'ta en fazla ~22/sn).
+      _lastHapticMs = now;
+      HapticFeedback.selectionClick();
+    }
+    _kickDir = dir >= 0 ? 1 : -1;
+    _kickCtrl.forward(from: 0);
+  }
+
+  void _onSpinTick() {
+    final a = _spinAnim?.value ?? _currentAngle;
+    final us = DateTime.now().microsecondsSinceEpoch;
+    final dt = (us - _prevSpinMicros) / 1e6;
+    if (dt > 0 && dt < 0.2) {
+      final v = (a - _prevSpinAngle).abs() / dt;
+      _speedFraction = (v / 16.0).clamp(0.0, 1.0);
+    }
+    _checkPeg(a, a - _prevSpinAngle);
+    _prevSpinAngle = a;
+    _prevSpinMicros = us;
+    setState(() => _currentAngle = a);
+  }
+
   // ── Swipe işleme ────────────────────────────────────────────────────────────
 
   double _angleFromPosition(Offset local, Size size) {
     final center = Offset(size.width / 2, size.height / 2);
-    final dx = local.dx - center.dx;
-    final dy = local.dy - center.dy;
-    return atan2(dy, dx);
+    return atan2(local.dy - center.dy, local.dx - center.dx);
   }
 
+  bool get _kilitli => _doniyor || _bitti || _metinGeldi;
+
   void _onPanStart(DragStartDetails d, Size size) {
-    if (_doniyor || _falAdiGoster || _hazirlaniyor || _metinGeldi) return;
-    _panStartAngle = _angleFromPosition(d.localPosition, size);
-    _panPrevAngle  = _panStartAngle;
+    if (_kilitli) return;
+    _panPrevAngle = _angleFromPosition(d.localPosition, size);
     _angularVelocity = 0;
     _lastPanTime = DateTime.now();
   }
 
   void _onPanUpdate(DragUpdateDetails d, Size size) {
-    if (_doniyor || _falAdiGoster || _hazirlaniyor || _metinGeldi) return;
+    if (_kilitli) return;
     final angle = _angleFromPosition(d.localPosition, size);
     final delta = _wrapAngle(angle - _panPrevAngle);
     final now   = DateTime.now();
     final dt    = now.difference(_lastPanTime).inMicroseconds / 1e6;
     if (dt > 0) _angularVelocity = delta / dt;
-    _currentAngle  += delta;
-    _panPrevAngle   = angle;
-    _lastPanTime    = now;
-    _speedFraction  = (_angularVelocity.abs() / 8.0).clamp(0.0, 1.0);
+    _currentAngle += delta;
+    _panPrevAngle  = angle;
+    _lastPanTime   = now;
+    _speedFraction = (_angularVelocity.abs() / 16.0).clamp(0.0, 1.0);
+    _checkPeg(_currentAngle, delta);
     setState(() {});
   }
 
   void _onPanEnd(DragEndDetails d) {
-    if (_doniyor || _falAdiGoster || _hazirlaniyor || _metinGeldi) return;
+    if (_kilitli) return;
     final speed = _angularVelocity.abs();
-    if (speed < 0.5) return;
-    _startSpin(speed);
+    if (speed < 0.5) {
+      setState(() => _speedFraction = 0);
+      return;
+    }
+    _startSpin(speed, _angularVelocity >= 0 ? 1 : -1);
   }
 
   double _wrapAngle(double a) {
@@ -159,88 +228,70 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
 
   // ── Spin başlat ──────────────────────────────────────────────────────────────
 
-  void _startSpin(double speed) {
+  void _startSpin(double speed, int dir) {
     setState(() => _doniyor = true);
-
-    final turSayisi  = 16 + Random().nextInt(8); // 16-23 tur
-    final hedefBolme = Random().nextInt(_bolmeSayisi);
-    final hedefMerkez = hedefBolme * _bolmeAcisi + _bolmeAcisi / 2;
-    // Bölme merkezini alt noktaya (pi/2) getirmek için gereken açı:
-    // screen_pos = angle + (-pi/2 + hedefMerkez) = pi/2 → angle = pi - hedefMerkez
-    final fark = _wrapAngle((pi - hedefMerkez) - _currentAngle % (2 * pi));
-    final toplamDelta = turSayisi * 2 * pi + fark;
-
+    HapticFeedback.mediumImpact();
+    final rnd = Random();
+    final hedefBolme = rnd.nextInt(_bolmeSayisi);
+    // Güçlü savurma = daha çok tur (daha hızlı görünür); 4–10 tur.
+    final tur = (3 + speed * 0.45).round().clamp(4, 9) + (rnd.nextBool() ? 1 : 0);
     final baslangic = _currentAngle;
-    final bitis     = baslangic + toplamDelta.abs() * (_angularVelocity >= 0 ? 1 : -1);
-
-    _spinCtrl.duration = Duration(milliseconds: (6000 + (speed * 600)).round().clamp(6000, 14000));
-    // Cubic(0.05, 0.9, 0.2, 1.0): hızlı başlar, çok uzun ve tatlı yavaşlama
+    final bitis = kaderSpinEnd(baslangic, hedefBolme, dir, tur);
+    // Süre turla orantılı (5,5–9 sn); easeOutCubic: başlangıç hızı ortalamanın 3 katı →
+    // ilk anda kare başına ~20°, dilimler göz takibinde (eski eğride 18 kat, strobe).
+    _spinCtrl.duration = Duration(milliseconds: (4200 + tur * 520).clamp(5500, 9000));
     _spinAnim = Tween<double>(begin: baslangic, end: bitis)
-        .animate(CurvedAnimation(parent: _spinCtrl,
-            curve: const Cubic(0.05, 0.9, 0.2, 1.0)));
-    _spinCtrl.forward(from: 0);
+        .animate(CurvedAnimation(parent: _spinCtrl, curve: Curves.easeOutCubic));
+    _prevSpinAngle = baslangic;
+    _prevSpinMicros = DateTime.now().microsecondsSinceEpoch;
     _kazananIndex = hedefBolme;
+    // Metin dönüş sırasında hazırlanır (sonra bekleme yok).
+    _metinFuture = _rastgeleMetnAl(_bolmeler[hedefBolme].key, ref.read(userProfileProvider));
+    _spinCtrl.forward(from: 0);
   }
 
-  // ── Spin tamamlandı: dur → 2s → fal adı → 2s → kum saati + metin fetch ──────
+  // ── Duruş: vuruş → kazanan dilim parlar → reklam → sonuç sırayla süzülür ─────────
 
   Color get _haloColor => Color.lerp(
-    const Color(0xFFFF1111),
-    const Color(0xFF00FF44),
+    const Color(0xFFFF1166),
+    const Color(0xFF44FFCC),
     _speedFraction,
   )!;
 
   void _onSpinComplete() {
-    setState(() { _doniyor = false; _speedFraction = 0.0; });
-    // Çark durdu → rewarded reklam → sonra fal akışı devam eder
-    AdService.instance.showRewarded(
-      onRewarded: _devamEt,
-      onFailed:   _devamEt,
-    );
-  }
-
-  void _devamEt() {
-    if (!mounted) return;
-    Future.delayed(const Duration(seconds: 2), () {
+    HapticFeedback.heavyImpact();
+    setState(() { _doniyor = false; _bitti = true; _speedFraction = 0.0; });
+    _winCtrl.repeat(reverse: true);
+    // Kazanan an kısa sürsün ama görülsün (1,2 sn), sonra reklam → sonuç.
+    Future.delayed(const Duration(milliseconds: 1200), () {
       if (!mounted) return;
-      setState(() => _falAdiGoster = true);
-      Future.delayed(const Duration(seconds: 2), () {
-        if (!mounted) return;
-        setState(() { _falAdiGoster = false; _hazirlaniyor = true; });
-        _metniGetir();
-      });
+      AdService.instance.showRewarded(onRewarded: _sonucuGoster, onFailed: _sonucuGoster);
     });
   }
 
-  Future<void> _metniGetir() async {
+  bool _sonucIstendi = false;
+
+  Future<void> _sonucuGoster() async {
+    if (!mounted || _sonucIstendi) return; // reklamın iki geri çağrısı da gelse tek akış
+    _sonucIstendi = true;
+    String metin;
     try {
-      final profile = ref.read(userProfileProvider);
-      final bolme   = _bolmeler[_kazananIndex];
-      // Metin fetch + 3s minimum bekleme aynı anda çalışır
-      String metin = '';
-      await Future.wait<void>([
-        _rastgeleMetnAl(bolme.key, profile).then((m) => metin = m),
-        Future.delayed(const Duration(seconds: 3)),
-      ]);
-      if (!mounted) return;
-      // Günlük kullanımı kaydet
+      metin = await (_metinFuture ??
+          _rastgeleMetnAl(_bolmeler[_kazananIndex].key, ref.read(userProfileProvider)));
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('kadercarki_bugun_tarih',
           DateTime.now().toIso8601String().substring(0, 10));
-      if (!mounted) return;
-      setState(() {
-        _hazirlaniyor = false;
-        _metinGeldi   = true;
-        _metin        = metin;
-      });
-    } catch (e) {
-      if (!mounted) return;
-      setState(() {
-        _hazirlaniyor = false;
-        _metinGeldi   = true;
-        _metin        = ref.read(l10nProvider).kaderCarkiError;
-      });
+    } catch (_) {
+      metin = ref.read(l10nProvider).kaderCarkiError;
     }
+    if (!mounted) return;
+    _winCtrl.stop();
+    HapticFeedback.lightImpact();
+    setState(() {
+      _metinGeldi = true;
+      _metin = metin;
+    });
+    _revealCtrl.forward(from: 0);
   }
 
   // ── Metin motoru: no-repeat, koşul filtreli ──────────────────────────────────
@@ -281,9 +332,9 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
 
     final vars = {
       'isim':        profile.name,
-      'cinsiyet':    profile.gender ?? '',
-      'medeni_durum': profile.maritalStatus ?? '',
-      'meslek':      profile.job ?? '',
+      'cinsiyet':    profile.gender,
+      'medeni_durum': profile.maritalStatus,
+      'meslek':      profile.job,
     };
     final isEn = ref.read(localeProvider) == 'en';
     final secMetin = (isEn && (secilen['metin_en'] as String?)?.isNotEmpty == true)
@@ -303,28 +354,8 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   }
 
   // Anlık pointer'ın altındaki bölmenin adı
-  String get _pointerBolmeLabel {
-    const segAngle = 2 * pi / _bolmeSayisi;
-    var local = (pi / 2 - _currentAngle) % (2 * pi);
-    if (local < 0) local += 2 * pi;
-    final off = (local + pi / 2) % (2 * pi);
-    final idx = (off / segAngle).floor().clamp(0, _bolmeSayisi - 1);
-    return ref.read(l10nProvider).kaderBolmeName(_bolmeler[idx].key);
-  }
-
-  // ── Sıfırla ──────────────────────────────────────────────────────────────────
-
-  void _sifirla() {
-    _spinCtrl.reset();
-    setState(() {
-      _doniyor      = false;
-      _falAdiGoster = false;
-      _hazirlaniyor = false;
-      _metinGeldi   = false;
-      _kazananIndex = -1;
-      _metin        = '';
-    });
-  }
+  String get _pointerBolmeLabel =>
+      ref.read(l10nProvider).kaderBolmeName(_bolmeler[_segUnderPointer(_currentAngle)].key);
 
   // ─── BUILD ───────────────────────────────────────────────────────────────────
 
@@ -350,94 +381,80 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
               ),
             ),
           ),
-          SafeArea(child: _buildBody()),
+          SafeArea(
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 420),
+              switchInCurve: Curves.easeOutCubic,
+              switchOutCurve: Curves.easeInCubic,
+              child: _metinGeldi
+                  ? KeyedSubtree(key: const ValueKey('metin'), child: _buildMetin())
+                  : KeyedSubtree(key: const ValueKey('cark'), child: _buildCark()),
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildBody() {
-    if (_falAdiGoster)  return _buildFalAdi();
-    if (_hazirlaniyor)  return _buildHazirlaniyor();
-    if (_metinGeldi)    return _buildMetin();
-    return _buildCark();
-  }
-
-  // ── Fal adı ekranı (spin sonrası 2s gösterilir) ───────────────────────────────
-
-  Widget _buildFalAdi() {
-    final bolme = _bolmeler[_kazananIndex];
-    return Column(children: [
-      _buildHeader(),
-      Expanded(child: Center(
-        child: Column(mainAxisSize: MainAxisSize.min, children: [
-          Transform.rotate(
-            angle: -pi / 2,
-            child: Image.asset(
-              bolme.ikonAsset,
-              width: 90,
-              height: 90,
-              errorBuilder: (_, __, ___) => const SizedBox(),
-            ),
-          ),
-          const SizedBox(height: 28),
-          Text(
-            ref.watch(l10nProvider).kaderFalTitle(ref.watch(l10nProvider).kaderBolmeName(bolme.key)),
-            textAlign: TextAlign.center,
-            style: AppTextStyles.screenTitle,
-          ),
-          const SizedBox(height: 12),
-          Container(
-            width: 48,
-            height: 2,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.40),
-              borderRadius: BorderRadius.circular(1),
-            ),
-          ),
-        ]),
-      )),
-    ]);
-  }
-
   // ── Çark ekranı ──────────────────────────────────────────────────────────────
 
   Widget _buildCark() {
+    final s = ref.watch(l10nProvider);
     return Column(children: [
       _buildHeader(),
       Expanded(
         child: Center(
           child: LayoutBuilder(builder: (ctx, constraints) {
-            final size = min(constraints.maxWidth, constraints.maxHeight) * 0.82;
+            final size = min(constraints.maxWidth, constraints.maxHeight) * 0.84;
+            final kazanildi = _bitti && _kazananIndex >= 0;
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _buildCarkWidget(size),
-                const SizedBox(height: 14),
-                // Anlık bölme adı
-                Text(
-                  _pointerBolmeLabel,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.6,
-                  ),
+                const SizedBox(height: 16),
+                // Anlık bölme adı; durunca kazanan "X Falı" olarak parlar.
+                AnimatedBuilder(
+                  animation: _winCtrl,
+                  builder: (context, _) {
+                    final g = kazanildi ? Curves.easeInOut.transform(_winCtrl.value) : 0.0;
+                    final renk = kazanildi ? _bolmeler[_kazananIndex].renk : Colors.white;
+                    return Text(
+                      kazanildi
+                          ? s.kaderFalTitle(s.kaderBolmeName(_bolmeler[_kazananIndex].key))
+                          : _pointerBolmeLabel,
+                      style: (kazanildi
+                              ? AppTextStyles.screenTitle.copyWith(fontSize: 20)
+                              : const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w600,
+                                  letterSpacing: 0.6))
+                          .copyWith(shadows: [
+                        Shadow(
+                            color: Color.lerp(renk, Colors.white, 0.3)!
+                                .withValues(alpha: 0.35 + 0.5 * g),
+                            blurRadius: 8 + 16 * g),
+                      ]),
+                    );
+                  },
                 ),
               ],
             );
           }),
         ),
       ),
-      // "Çarkı parmağınla çevir" — çark altı ile Geri Git arasında ortalanmış
       Padding(
         padding: const EdgeInsets.symmetric(vertical: 14),
-        child: Text(
-          _doniyor ? '' : ref.watch(l10nProvider).kaderCarkiSpinHint,
-          style: const TextStyle(
-            color: Colors.white54,
-            fontSize: 15,
-            fontStyle: FontStyle.italic,
+        child: AnimatedOpacity(
+          opacity: (_doniyor || _bitti) ? 0 : 1,
+          duration: const Duration(milliseconds: 250),
+          child: Text(
+            s.kaderCarkiSpinHint,
+            style: const TextStyle(
+              color: Colors.white54,
+              fontSize: 15,
+              fontStyle: FontStyle.italic,
+            ),
           ),
         ),
       ),
@@ -446,126 +463,141 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   }
 
   Widget _buildCarkWidget(double size) {
-    final halo = _haloColor;
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        NoEdgeSwipeBack(child: GestureDetector(
-          onPanStart:  (d) => _onPanStart(d, Size(size, size)),
-          onPanUpdate: (d) => _onPanUpdate(d, Size(size, size)),
-          onPanEnd:    _onPanEnd,
-          child: SizedBox(
-            width:  size,
-            height: size,
-            child: CustomPaint(
-              painter: _WheelPainter(
-                angle:         _currentAngle,
-                bolmeler:      _bolmeler,
-                ikonler:       _ikonCache,
-                haloColor:     halo,
-                speedFraction: _speedFraction,
+    return SizedBox(
+      width: size,
+      height: size + 18,
+      child: Stack(
+        alignment: Alignment.topCenter,
+        clipBehavior: Clip.none,
+        children: [
+          NoEdgeSwipeBack(child: GestureDetector(
+            onPanStart:  (d) => _onPanStart(d, Size(size, size)),
+            onPanUpdate: (d) => _onPanUpdate(d, Size(size, size)),
+            onPanEnd:    _onPanEnd,
+            child: SizedBox(
+              width:  size,
+              height: size,
+              child: AnimatedBuilder(
+                animation: _winCtrl,
+                builder: (context, _) => CustomPaint(
+                  painter: _WheelPainter(
+                    angle:         _currentAngle,
+                    bolmeler:      _bolmeler,
+                    ikonler:       _ikonCache,
+                    haloColor:     _haloColor,
+                    speedFraction: _speedFraction,
+                    winner:        _bitti ? _kazananIndex : -1,
+                    winGlow:       _bitti ? Curves.easeInOut.transform(_winCtrl.value) : 0,
+                  ),
+                ),
               ),
             ),
+          )),
+          // Ok: altta, çarkın kenarına batan altın gösterge; çivi geçişinde seker.
+          Positioned(
+            top: size - 30,
+            child: AnimatedBuilder(
+              animation: _kickCtrl,
+              builder: (context, child) {
+                final t = _kickCtrl.isAnimating || _kickCtrl.value < 1
+                    ? sin(pi * _kickCtrl.value) * (1 - _kickCtrl.value * 0.4)
+                    : 0.0;
+                return Transform.rotate(
+                  angle: -_kickDir * 0.32 * t,
+                  alignment: Alignment.bottomCenter,
+                  child: child,
+                );
+              },
+              child: CustomPaint(size: const Size(30, 42), painter: _ArrowPainter()),
+            ),
           ),
-        )),
-        // Ok işareti — altta, daire kenarında
-        Positioned(
-          bottom: 0,
-          child: CustomPaint(
-            size: const Size(24, 28),
-            painter: _ArrowPainter(),
-          ),
-        ),
-        // Merkez düğme
-        Container(
-          width:  44,
-          height: 44,
-          decoration: BoxDecoration(
-            shape:     BoxShape.circle,
-            color:     const Color(0xFF111122),
-            boxShadow: [
-              BoxShadow(color: Colors.black.withValues(alpha: 0.6), blurRadius: 8),
-            ],
-            border: Border.all(color: Colors.white24, width: 2),
-          ),
-          child: const Icon(Icons.autorenew_rounded, color: Colors.white60, size: 20),
-        ),
-      ],
+        ],
+      ),
     );
-  }
-
-  // ── Hazırlanıyor ekranı ───────────────────────────────────────────────────────
-
-  Widget _buildHazirlaniyor() {
-    final bolme = _bolmeler[_kazananIndex];
-    return Column(children: [
-      _buildHeader(),
-      Expanded(child: Center(
-        child: Column(mainAxisSize: MainAxisSize.min, children: [
-          Transform.rotate(
-            angle: -pi / 2,
-            child: Image.asset(bolme.ikonAsset, width: 80, height: 80,
-                errorBuilder: (_, __, ___) => const SizedBox()),
-          ),
-          const SizedBox(height: 24),
-          const ElegantHourglass(size: 52, color: Color(0xFF4DBBCC)),
-          const SizedBox(height: 20),
-          Text(ref.watch(l10nProvider).kaderFalComing(ref.watch(l10nProvider).kaderBolmeName(bolme.key)),
-            textAlign: TextAlign.center,
-            style: const TextStyle(color: Colors.white70, fontSize: 17,
-                height: 1.5, fontWeight: FontWeight.w300)),
-        ]),
-      )),
-    ]);
   }
 
   // ── Metin ekranı ──────────────────────────────────────────────────────────────
 
   Widget _buildMetin() {
+    final s = ref.watch(l10nProvider);
     final bolme = _bolmeler[_kazananIndex];
+    Animation<double> seg(double a, double b) => CurvedAnimation(
+        parent: _revealCtrl, curve: Interval(a, b, curve: Curves.easeOutCubic));
+    final ikonA = seg(0.0, 0.45);
+    final baslikA = seg(0.18, 0.6);
+    final metinA = seg(0.38, 1.0);
     return Column(children: [
       _buildHeader(),
       const SizedBox(height: 20),
-
-      // İkon — üst orta
-      Transform.rotate(
-        angle: -pi / 2,
-        child: Image.asset(
-          bolme.ikonAsset,
-          width: 72, height: 72,
-          errorBuilder: (_, __, ___) => const SizedBox(height: 72),
-        ),
-      ),
-      const SizedBox(height: 10),
-
-      // Fal adı — ortalı
-      Text(
-        ref.watch(l10nProvider).kaderFalTitle(ref.watch(l10nProvider).kaderBolmeName(bolme.key)),
-        style: AppTextStyles.screenTitle,
-      ),
-      const SizedBox(height: 16),
-
-      // Çerçeveli metin kutusu — kalan alanı doldurur, içi scroll edilebilir
-      Expanded(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+      // İkon — kazanan dilimin renginde hale ile büyüyerek gelir.
+      ScaleTransition(
+        scale: Tween(begin: 0.6, end: 1.0).animate(ikonA),
+        child: FadeTransition(
+          opacity: ikonA,
           child: Container(
+            width: 96,
+            height: 96,
             decoration: BoxDecoration(
-              color: Colors.black.withValues(alpha: 0.40),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                color: Colors.white.withValues(alpha: 0.30),
-                width: 1.2,
+              shape: BoxShape.circle,
+              gradient: RadialGradient(colors: [
+                bolme.renk.withValues(alpha: 0.55),
+                bolme.renk.withValues(alpha: 0.0),
+              ]),
+            ),
+            alignment: Alignment.center,
+            child: Transform.rotate(
+              angle: -pi / 2,
+              child: Image.asset(
+                bolme.ikonAsset,
+                width: 72, height: 72,
+                errorBuilder: (_, __, ___) => const SizedBox(height: 72),
               ),
             ),
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(18),
-              child: RichTextParser.build(
-                _metin,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  height: 1.85,
+          ),
+        ),
+      ),
+      const SizedBox(height: 8),
+      FadeTransition(
+        opacity: baslikA,
+        child: SlideTransition(
+          position: Tween(begin: const Offset(0, 0.4), end: Offset.zero).animate(baslikA),
+          child: Text(
+            s.kaderFalTitle(s.kaderBolmeName(bolme.key)),
+            style: AppTextStyles.screenTitle,
+          ),
+        ),
+      ),
+      const SizedBox(height: 16),
+      // Çerçeveli metin kutusu — kalan alanı doldurur, içi scroll edilebilir
+      Expanded(
+        child: FadeTransition(
+          opacity: metinA,
+          child: SlideTransition(
+            position: Tween(begin: const Offset(0, 0.06), end: Offset.zero).animate(metinA),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.black.withValues(alpha: 0.42),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: Color.lerp(bolme.renk, Colors.white, 0.45)!.withValues(alpha: 0.55),
+                    width: 1.2,
+                  ),
+                  boxShadow: [
+                    BoxShadow(color: bolme.renk.withValues(alpha: 0.28), blurRadius: 24),
+                  ],
+                ),
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(18),
+                  child: RichTextParser.build(
+                    _metin,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      height: 1.85,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -573,7 +605,6 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
         ),
       ),
       const SizedBox(height: 12),
-
       const FloatingBarSpacer(),
     ]);
   }
@@ -607,12 +638,16 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
 
 // ─── Çark CustomPainter ───────────────────────────────────────────────────────
 
+Color _shade(Color c, double t) => Color.lerp(c, t >= 0 ? Colors.white : Colors.black, t.abs())!;
+
 class _WheelPainter extends CustomPainter {
   final double            angle;
   final List<_Bolme>      bolmeler;
   final Map<String, ui.Image?> ikonler;
   final Color             haloColor;
   final double            speedFraction;
+  final int               winner;  // -1: yok
+  final double            winGlow; // 0 … 1 (nabız)
 
   const _WheelPainter({
     required this.angle,
@@ -620,119 +655,219 @@ class _WheelPainter extends CustomPainter {
     required this.ikonler,
     required this.haloColor,
     required this.speedFraction,
+    this.winner = -1,
+    this.winGlow = 0,
   });
+
+  static const _goldDark = Color(0xFF7A5A16);
+  static const _gold = Color(0xFFD9B04A);
+  static const _goldLight = Color(0xFFFFF0B0);
 
   @override
   void paint(Canvas canvas, Size size) {
     final cx = size.width  / 2;
     final cy = size.height / 2;
-    final r  = min(cx, cy) - 4;
+    final rim = min(cx, cy) * 0.075;          // altın kasnak kalınlığı
+    final r  = min(cx, cy) - rim - 6;          // dilim yarıçapı
+    final center = Offset(cx, cy);
+
+    // 0. Dış hale (gerçek hıza göre; durgunken sakin)
+    canvas.drawCircle(
+      center, r + rim,
+      Paint()
+        ..color       = haloColor.withValues(alpha: 0.20 + speedFraction * 0.45)
+        ..style       = PaintingStyle.stroke
+        ..strokeWidth = 3
+        ..maskFilter  = MaskFilter.blur(BlurStyle.outer, 10 + speedFraction * 18),
+    );
 
     canvas.save();
     canvas.translate(cx, cy);
     canvas.rotate(angle);
 
     final segAngle = 2 * pi / bolmeler.length;
+    final disk = Rect.fromCircle(center: Offset.zero, radius: r);
 
     for (int i = 0; i < bolmeler.length; i++) {
       final bolme = bolmeler[i];
       final start = -pi / 2 + i * segAngle;
-
-      // Segment arka planı
-      final paint = Paint()..color = bolme.renk.withValues(alpha: 0.85);
+      final win = i == winner;
+      // Derinlik: merkez açık → kenar koyu (radyal), kazananda parlaklık nabzı.
+      // Durunca kazanan parlar, diğerleri hafifçe kararır (göz kazanana gider).
+      final lift = winner < 0 ? 0.0 : (win ? 0.10 + 0.22 * winGlow : -0.38);
       canvas.drawArc(
-        Rect.fromCircle(center: Offset.zero, radius: r),
-        start, segAngle, true, paint,
+        disk, start, segAngle, true,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              _shade(bolme.renk, 0.32 + lift),
+              _shade(bolme.renk, lift),
+              _shade(bolme.renk, -0.45 + lift),
+            ],
+            stops: const [0.0, 0.55, 1.0],
+          ).createShader(disk),
       );
+      // Kazanan dilim: içten ışıyan altın kenar.
+      if (win) {
+        canvas.drawArc(
+          disk.deflate(2), start, segAngle, true,
+          Paint()
+            ..color = _goldLight.withValues(alpha: 0.55 + 0.45 * winGlow)
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 3.5
+            ..maskFilter = MaskFilter.blur(BlurStyle.solid, 2 + 6 * winGlow),
+        );
+      }
 
-      // Segment kenarlığı
-      final borderPaint = Paint()
-        ..color     = Colors.white.withValues(alpha: 0.25)
-        ..style     = PaintingStyle.stroke
-        ..strokeWidth = 1.5;
-      canvas.drawArc(
-        Rect.fromCircle(center: Offset.zero, radius: r),
-        start, segAngle, true, borderPaint,
-      );
-
-      // Görsel — ağırlık merkezinden biraz daha dışa, 90° sola döndürülmüş
+      // İkon — dilim ortasında, dışa doğru
       final ikon = ikonler[bolme.key];
       final midAngle = start + segAngle / 2;
-      final imgDist  = r * 0.72;
-      final imgX     = imgDist * cos(midAngle);
-      final imgY     = imgDist * sin(midAngle);
-      final imgSize  = r * 0.15;
-
+      final imgDist  = r * 0.66;
+      final imgSize  = r * 0.17;
       if (ikon != null) {
         canvas.save();
-        canvas.translate(imgX, imgY);
+        canvas.translate(imgDist * cos(midAngle), imgDist * sin(midAngle));
         canvas.rotate(midAngle);
         final src = Rect.fromLTWH(0, 0, ikon.width.toDouble(), ikon.height.toDouble());
         final dst = Rect.fromCenter(center: Offset.zero, width: imgSize * 2.4, height: imgSize * 2.4);
-        canvas.drawImageRect(ikon, src, dst, Paint());
+        // Hafif gölge + ikon
+        canvas.drawImageRect(ikon, src, dst.shift(const Offset(1.5, 1.5)),
+            Paint()..colorFilter = const ColorFilter.mode(Color(0x66000000), BlendMode.srcIn));
+        canvas.drawImageRect(ikon, src, dst, Paint()..filterQuality = FilterQuality.medium);
         canvas.restore();
       }
     }
 
+    // Üstten hafif cam parlaması (dönmeyen ışık hissi için tersine döndürülerek)
+    canvas.save();
+    canvas.rotate(-angle);
+    canvas.drawCircle(
+      Offset.zero, r,
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0x2EFFFFFF), Color(0x00FFFFFF), Color(0x24000000)],
+          stops: [0.0, 0.5, 1.0],
+        ).createShader(disk),
+    );
     canvas.restore();
 
-    final center = Offset(cx, cy);
-    final rect   = Rect.fromCircle(center: center, radius: r + 3);
+    // Dilim ayraçları: altın çizgi + kenarda çivi (ok bunlara takılır)
+    for (int i = 0; i < bolmeler.length; i++) {
+      final a = -pi / 2 + i * segAngle;
+      final dir = Offset(cos(a), sin(a));
+      canvas.drawLine(
+        dir * (r * 0.17), dir * r,
+        Paint()
+          ..shader = LinearGradient(colors: const [_goldDark, _goldLight, _gold])
+              .createShader(Rect.fromPoints(dir * (r * 0.17), dir * r))
+          ..strokeWidth = 2.2,
+      );
+    }
+    canvas.restore();
 
-    // 1. Tam çevre — hafif eşit glow
+    // 1. Altın kasnak (dönmez: ışık sabit kalır)
+    final rimRect = Rect.fromCircle(center: center, radius: r + rim / 2);
     canvas.drawCircle(
-      center, r + 3,
+      center, r + rim / 2,
       Paint()
-        ..color       = haloColor.withValues(alpha: 0.35 + speedFraction * 0.25)
-        ..style       = PaintingStyle.stroke
-        ..strokeWidth = 2.5
-        ..maskFilter  = MaskFilter.blur(BlurStyle.outer, 8 + speedFraction * 12),
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = rim
+        ..shader = const SweepGradient(
+          colors: [_goldDark, _goldLight, _gold, _goldDark, _gold, _goldLight, _goldDark],
+          stops: [0.0, 0.12, 0.3, 0.5, 0.68, 0.85, 1.0],
+        ).createShader(rimRect),
     );
+    // kasnağın iç ve dış ince çizgileri
+    for (final rr in [r, r + rim]) {
+      canvas.drawCircle(center, rr,
+          Paint()..style = PaintingStyle.stroke..strokeWidth = 1..color = const Color(0x99000000));
+    }
 
-    // 2. Alt yarım çevre — güçlü glow (alttan vuruyor etkisi)
-    // 0 (sağ/3 saat) → pi (sol/9 saat), saat yönünde = alt yarı
-    canvas.drawArc(
-      rect, 0, pi, false,
-      Paint()
-        ..color       = haloColor.withValues(alpha: 0.65 + speedFraction * 0.30)
-        ..style       = PaintingStyle.stroke
-        ..strokeWidth = 3
-        ..maskFilter  = MaskFilter.blur(BlurStyle.outer, 14 + speedFraction * 20),
-    );
+    // 2. Çiviler: dilim sınırlarında, kasnak üstünde (çarkla döner)
+    for (int i = 0; i < bolmeler.length; i++) {
+      final a = angle - pi / 2 + i * segAngle;
+      final p = center + Offset(cos(a), sin(a)) * (r + rim / 2);
+      final pr = rim * 0.42;
+      canvas.drawCircle(p + const Offset(1, 1.5), pr, Paint()..color = const Color(0x88000000));
+      canvas.drawCircle(
+        p, pr,
+        Paint()
+          ..shader = RadialGradient(
+            center: const Alignment(-0.35, -0.35),
+            colors: const [_goldLight, _gold, _goldDark],
+          ).createShader(Rect.fromCircle(center: p, radius: pr)),
+      );
+    }
 
-    // 3. Üstüne ince beyaz çerçeve
+    // 3. Göbek: altın disk + mor mücevher
+    final hub = r * 0.17;
+    canvas.drawCircle(center + const Offset(0, 2), hub, Paint()..color = const Color(0x99000000));
     canvas.drawCircle(
-      center, r + 3,
+      center, hub,
       Paint()
-        ..color       = Colors.white.withValues(alpha: 0.18)
-        ..style       = PaintingStyle.stroke
-        ..strokeWidth = 1,
+        ..shader = RadialGradient(
+          center: const Alignment(-0.3, -0.4),
+          colors: const [_goldLight, _gold, _goldDark],
+          stops: const [0.0, 0.45, 1.0],
+        ).createShader(Rect.fromCircle(center: center, radius: hub)),
     );
+    final gem = hub * 0.48;
+    canvas.drawCircle(
+      center, gem,
+      Paint()
+        ..shader = RadialGradient(
+          center: const Alignment(-0.35, -0.35),
+          colors: const [Color(0xFFFFB3FF), Color(0xFFB026C9), Color(0xFF4A0A5C)],
+          stops: const [0.0, 0.5, 1.0],
+        ).createShader(Rect.fromCircle(center: center, radius: gem)),
+    );
+    canvas.drawCircle(center + Offset(-gem * 0.35, -gem * 0.38), gem * 0.22,
+        Paint()..color = const Color(0xCCFFFFFF));
   }
 
   @override
   bool shouldRepaint(_WheelPainter old) =>
       old.angle != angle || old.ikonler != ikonler ||
-      old.haloColor != haloColor || old.speedFraction != speedFraction;
+      old.haloColor != haloColor || old.speedFraction != speedFraction ||
+      old.winner != winner || old.winGlow != winGlow;
 }
 
-// ─── Ok işareti (pointer) ─────────────────────────────────────────────────────
+// ─── Ok işareti (pointer): altta, yukarı bakan altın gösterge ─────────────────
 
 class _ArrowPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()..color = Colors.white;
-    final path  = Path()
-      ..moveTo(size.width / 2, 0)
-      ..lineTo(size.width,     size.height)
-      ..lineTo(0,              size.height)
+    final w = size.width, h = size.height;
+    final path = Path()
+      ..moveTo(w / 2, 0)
+      ..quadraticBezierTo(w * 0.82, h * 0.42, w * 0.78, h * 0.72)
+      ..quadraticBezierTo(w * 0.5, h * 0.98, w * 0.22, h * 0.72)
+      ..quadraticBezierTo(w * 0.18, h * 0.42, w / 2, 0)
       ..close();
-    canvas.drawPath(path, paint);
+    canvas.drawPath(path.shift(const Offset(1.5, 2)), Paint()..color = const Color(0x99000000));
+    canvas.drawPath(
+      path,
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFFFFF0B0), Color(0xFFD9B04A), Color(0xFF7A5A16)],
+        ).createShader(Offset.zero & size),
+    );
+    // ortada küçük mücevher
+    final c = Offset(w / 2, h * 0.66);
+    canvas.drawCircle(c, w * 0.16,
+        Paint()
+          ..shader = const RadialGradient(
+            center: Alignment(-0.3, -0.3),
+            colors: [Color(0xFFFFB3FF), Color(0xFFB026C9), Color(0xFF4A0A5C)],
+          ).createShader(Rect.fromCircle(center: c, radius: w * 0.16)));
     canvas.drawPath(path,
-        Paint()..color = Colors.black38..style = PaintingStyle.stroke..strokeWidth = 1);
+        Paint()..color = const Color(0x66000000)..style = PaintingStyle.stroke..strokeWidth = 1);
   }
 
   @override
   bool shouldRepaint(_ArrowPainter _) => false;
 }
-

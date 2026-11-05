@@ -267,6 +267,17 @@ class EvimEngine {
     'Kocaeli', 'Mersin', 'Kayseri', 'Eskişehir', 'Samsun'];
   static const _metroW = [6, 4, 4, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1];
   static const _bigThree = {'İstanbul', 'Ankara', 'İzmir'};
+
+  /// Şehir büyüklüğü: 3 = üç büyük, 2 = büyükşehir, 1 = diğer.
+  static int sizeOf(String il) => _bigThree.contains(il) ? 3 : _metros.contains(il) ? 2 : 1;
+
+  /// Taşınma ağırlığı: büyükten küçüğe geçiş nadir (Anıl, 2026-11-05: "İstanbul seçtim, 3 yıla
+  /// Tekirdağ çok anlamlı bir ihtimal mi?").
+  static double _sizeFactor(String from, String to) {
+    final a = sizeOf(from), b = sizeOf(to);
+    if (b >= a) return 1.0;
+    return a - b >= 2 ? 0.05 : 0.25;
+  }
   static const _retireCoastIller = {'İzmir', 'Aydın', 'Muğla', 'Balıkesir', 'Antalya', 'Mersin', 'Çanakkale'};
 
   // ── Yükleme / kayıt ───────────────────────────────────────────────────────
@@ -413,11 +424,19 @@ class EvimEngine {
           }
         } else {
           final kamuMove = kamu && age >= 30 && age <= 45 && !first;
-          final w = first || afterAbroad
-              ? const [65, 20, 15, 0]
-              : kamuMove
-                  ? const [48, 22, 20, 10]
-                  : const [60, 20, 15, 5];
+          // Yakın yıllarda aynı şehirde kalma çok olası; uzak gelecekte taşınma artar.
+          final offset = cursor - baseYear;
+          final w = first
+              ? const [94, 3, 3, 0]
+              : afterAbroad
+                  ? const [75, 10, 15, 0]
+                  : kamuMove
+                      ? const [58, 17, 18, 7]
+                      : offset < 10
+                          ? const [91, 3, 5, 1]
+                          : offset < 20
+                              ? const [78, 9, 10, 3]
+                              : const [66, 14, 15, 5];
           final c = _pickW(r, [0, 1, 2, 3], w);
           il = _chooseIl(r, d, c, anchor, age);
         }
@@ -486,17 +505,20 @@ class EvimEngine {
   /// c: 0 aynı il, 1 komşu, 2 başka büyükşehir, 3 sürpriz.
   static String _chooseIl(Random r, EvimData d, int c, String ref, int age) {
     bool ok(String il) => age < 50 || !farIller.contains(il) || il == ref;
+    // Büyükten küçüğe taşınma hem daha az seçilir hem de çoğunlukla "kabul edilmez" → aynı şehirde
+    // kalınır. Böylece komşularının hepsi küçük olan İstanbul'dan da kaçış olmaz.
+    String accept(String to) => r.nextDouble() < _sizeFactor(ref, to) ? to : ref;
     switch (c) {
       case 1:
         final n = (d.komsu[ref] ?? const <String>[]).where(ok).toList();
-        return n.isEmpty ? ref : n[r.nextInt(n.length)];
+        return n.isEmpty ? ref : accept(_pickW(r, n, [for (final x in n) _sizeFactor(ref, x)]));
       case 2:
         final idx = [for (var i = 0; i < _metros.length; i++) if (_metros[i] != ref && ok(_metros[i])) i];
         if (idx.isEmpty) return ref;
-        return _metros[_pickW(r, idx, [for (final i in idx) _metroW[i]])];
+        return accept(_metros[_pickW(r, idx, [for (final i in idx) _metroW[i] * _sizeFactor(ref, _metros[i])])]);
       case 3:
         final all = d.iller.where((e) => e != ref && ok(e)).toList();
-        return all.isEmpty ? ref : all[r.nextInt(all.length)];
+        return all.isEmpty ? ref : accept(_pickW(r, all, [for (final x in all) _sizeFactor(ref, x)]));
       default:
         return ref;
     }

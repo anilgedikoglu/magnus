@@ -96,7 +96,7 @@ void main() {
     expect(near / total, greaterThanOrEqualTo(0.70), reason: '$near/$total');
   });
 
-  test('ilk segmentte mevcut il ağırlığı ~%65', () {
+  test('ilk segmentte mevcut il ağırlığı ~%94 (yakın yıllarda aynı şehir)', () {
     var same = 0, neighbor = 0;
     const n = 1000;
     for (var seed = 0; seed < n; seed++) {
@@ -105,8 +105,23 @@ void main() {
       if (s.il == 'Ankara') same++;
       if (data.komsu['Ankara']!.contains(s.il)) neighbor++;
     }
-    expect(same / n, inInclusiveRange(0.58, 0.72));
-    expect(neighbor / n, inInclusiveRange(0.14, 0.27));
+    expect(same / n, inInclusiveRange(0.92, 0.99));
+    expect(neighbor / n, inInclusiveRange(0.0, 0.05));
+  });
+
+  test('İstanbul: ilk 10 yılda aynı şehir çok olası, büyükten küçük şehre geçiş nadir', () {
+    var stayAll10 = 0, toSmall10 = 0, toSmallAll = 0;
+    const n = 1000;
+    for (var seed = 0; seed < n; seed++) {
+      final t = EvimEngine.generate(data, _p(), 'İstanbul', baseYear: base, seed: seed);
+      final tr10 = t.segments.where((s) => !s.abroad && s.start < base + 10).toList();
+      if (tr10.every((s) => s.il == 'İstanbul')) stayAll10++;
+      if (tr10.any((s) => EvimEngine.sizeOf(s.il) == 1)) toSmall10++;
+      if (t.segments.any((s) => !s.abroad && EvimEngine.sizeOf(s.il) == 1 && s.start - base < 30)) toSmallAll++;
+    }
+    expect(stayAll10 / n, greaterThan(0.75), reason: 'ilk 10 yıl hep İstanbul: $stayAll10/$n');
+    expect(toSmall10 / n, lessThan(0.04), reason: 'ilk 10 yılda küçük şehir: $toSmall10/$n');
+    expect(toSmallAll / n, lessThan(0.15), reason: '30 yılda küçük şehir: $toSmallAll/$n');
   });
 
   test('yurt dışı: senaryoların <%8\'inde, 20-50 yaş ve ≥ bu yıl+5, en çok 1 segment; 60+ yaşta hiç yok', () {

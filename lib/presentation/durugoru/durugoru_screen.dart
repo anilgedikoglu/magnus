@@ -61,6 +61,8 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
   };
 
   bool   _odaklaniyor = false;
+  // Seçilen kart bekleme ekranından önce büyüyüp parlar (2026-11-06).
+  _SoruTipi? _vurgulu;
 
   String get _bugun => DateTime.now().toIso8601String().substring(0, 10);
 
@@ -120,8 +122,12 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
   // ── Soru seçimi ───────────────────────────────────────────────────────────
 
   Future<void> _soruyuSec(_SoruTipi tip) async {
-    if (_kullanildi[tip] == true) return;
+    if (_kullanildi[tip] == true || _vurgulu != null) return;
 
+    HapticFeedback.mediumImpact();
+    setState(() => _vurgulu = tip);
+    await Future<void>.delayed(const Duration(milliseconds: 620));
+    if (!mounted) return;
     setState(() => _odaklaniyor = true);
 
     final prefs   = await SharedPreferences.getInstance();
@@ -330,10 +336,15 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: GestureDetector(
           onTap: kullanildi ? null : () => _soruyuSec(tip),
-          child: AnimatedOpacity(
-            opacity: kullanildi ? 0.38 : 1.0,
+          child: AnimatedScale(
+            scale: _vurgulu == tip ? 1.08 : (_vurgulu != null ? 0.94 : 1.0),
+            duration: const Duration(milliseconds: 380),
+            curve: Curves.easeOutBack,
+            child: AnimatedOpacity(
+            opacity: kullanildi ? 0.38 : (_vurgulu != null && _vurgulu != tip ? 0.45 : 1.0),
             duration: const Duration(milliseconds: 300),
-            child: Container(
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 380),
               decoration: BoxDecoration(
                 color: kullanildi
                     ? Colors.white.withValues(alpha: 0.05)
@@ -342,13 +353,14 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
                 border: Border.all(
                   color: kullanildi
                       ? Colors.white.withValues(alpha: 0.10)
-                      : accent.withValues(alpha: 0.45),
-                  width: 1.2,
+                      : accent.withValues(alpha: _vurgulu == tip ? 1.0 : 0.45),
+                  width: _vurgulu == tip ? 2.0 : 1.2,
                 ),
                 boxShadow: kullanildi ? null : [
                   BoxShadow(
-                    color: accent.withValues(alpha: 0.15),
-                    blurRadius: 16, spreadRadius: 2,
+                    color: accent.withValues(alpha: _vurgulu == tip ? 0.55 : 0.15),
+                    blurRadius: _vurgulu == tip ? 30 : 16,
+                    spreadRadius: _vurgulu == tip ? 4 : 2,
                   ),
                 ],
               ),
@@ -391,6 +403,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
                   ],
                 ],
               ),
+            ),
             ),
           ),
         ),

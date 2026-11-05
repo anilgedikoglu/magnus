@@ -17,6 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/stagger_in.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/user_profile.dart';
@@ -210,7 +211,10 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
     _gecisTimer?.cancel();
     _gecisTimer = Timer(const Duration(seconds: 5), () {
       if (mounted) {
-        setState(() => _adim = _DertAdim.derman);
+        setState(() {
+          _adim = _DertAdim.derman;
+          _dermanAni = DateTime.now(); // kartlar sırayla gelsin
+        });
         _fadeCtrl.forward(from: 0);
       }
     });
@@ -489,6 +493,8 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
   // Derman (tavsiye) sayfası
   // ─────────────────────────────────────────────────────────────────────────────
 
+  DateTime _dermanAni = DateTime.now();
+
   Widget _buildDermanSayfasi() {
     final profile   = ref.read(userProfileProvider);
     final varMap    = profile.toVariableMap();
@@ -531,9 +537,14 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
               padding: const EdgeInsets.fromLTRB(20, 4, 20, 12),
               itemCount: dermanlar.length,
               separatorBuilder: (_, __) => const SizedBox(height: 10),
-              itemBuilder: (_, i) => _DermanKarti(
-                numara: i + 1,
-                metin: VariableReplacer.replace(dermanlar[i], varMap),
+              itemBuilder: (_, i) => StaggerIn(
+                index: i,
+                since: _dermanAni,
+                step: const Duration(milliseconds: 180),
+                child: _DermanKarti(
+                  numara: i + 1,
+                  metin: VariableReplacer.replace(dermanlar[i], varMap),
+                ),
               ),
             ),
           ),

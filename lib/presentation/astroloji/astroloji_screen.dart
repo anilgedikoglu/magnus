@@ -21,6 +21,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
+import '../../core/widgets/stagger_in.dart';
 import '../../data/providers.dart';
 
 // ─── Bölüm tanımları (sıra önemli) ──────────────────────────────────────────
@@ -296,13 +297,18 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
 
   // ─── Ana içerik ───────────────────────────────────────────────────────────────
 
+  // Kartlar ilk açılışta sırayla gelir (StaggerIn).
+  final DateTime _girisAni = DateTime.now();
+
   Widget _buildContent() {
     // itemCount + 1: son item = yüzen cam barın altında kalmamak için boşluk
     return ListView.builder(
       padding: const EdgeInsets.fromLTRB(14, 8, 14, 16),
       itemCount: _selected.length + 1,
       itemBuilder: (context, i) {
-        if (i < _selected.length) return _buildSectionCard(_selected[i]);
+        if (i < _selected.length) {
+          return StaggerIn(index: i, since: _girisAni, child: _buildSectionCard(_selected[i]));
+        }
         return const FloatingBarSpacer();
       },
     );

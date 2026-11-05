@@ -6,6 +6,7 @@ import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
+import '../../core/widgets/result_reveal.dart';
 import '../../data/models/inbox_item.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../data/providers.dart';
@@ -235,7 +236,8 @@ class InboxDetailScreen extends ConsumerWidget {
             ),
           ],
           SingleChildScrollView(
-        child: Column(
+        // Sonuç açılışı: belirir + yukarıdan aşağı mürekkep gibi açılır; dokununca tamamlanır.
+        child: ResultReveal(child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Photos for coffee fortune
@@ -334,7 +336,7 @@ class InboxDetailScreen extends ConsumerWidget {
             // Yüzen cam bar içeriği kapatmasın
             const FloatingBarSpacer(),
           ],
-        ),
+        )),
           ), // SingleChildScrollView
         ],
       ), // Stack

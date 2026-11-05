@@ -388,9 +388,8 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
       _selectedName = card.displayName;
       _tepkiText = tepki;
     });
-    _autoSendTimer = Timer(const Duration(seconds: 5), () {
-      if (mounted && !_isGenerating) _generateReading();
-    });
+    // Kendiliğinden gönderme kalktı (2026-11-06, Grok/Codex: kartı inceleme fırsatı
+    // vermiyordu): kart oturunca "Gönder" düğmesi belirir.
   }
 
   void _cancelDrag() {
@@ -596,12 +595,7 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: _isGenerating
-          ? const SizedBox(
-              width: 24,
-              height: 24,
-              child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFFB8E0FF)),
-            )
-          : Column(
+          ? Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 const _PulsingHourglass(),
@@ -614,6 +608,45 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
                   ),
                 ),
               ],
+            )
+          : TweenAnimationBuilder<double>(
+              tween: Tween(begin: 0, end: 1),
+              duration: const Duration(milliseconds: 320),
+              curve: Curves.easeOutCubic,
+              builder: (context, v, child) => Opacity(
+                opacity: v,
+                child: Transform.translate(offset: Offset(0, 10 * (1 - v)), child: child),
+              ),
+              child: GestureDetector(
+                key: const ValueKey('tekKartGonder'),
+                onTap: () {
+                  HapticFeedback.mediumImpact();
+                  _generateReading();
+                },
+                child: Container(
+                  width: 220,
+                  height: 52,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(26),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF7B2FF7), Color(0xFFFF55FF)],
+                    ),
+                    boxShadow: const [
+                      BoxShadow(color: Color(0x66FF55FF), blurRadius: 18, spreadRadius: 1),
+                    ],
+                  ),
+                  child: Text(
+                    _s.send,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 0.6,
+                    ),
+                  ),
+                ),
+              ),
             ),
     );
   }

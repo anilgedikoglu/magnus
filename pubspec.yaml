@@ -94,6 +94,7 @@ flutter:
   shaders:
     - shaders/living_nebula.frag
     - shaders/glass_lens.frag
+    - shaders/living_sea.frag
 
   assets:
     - assets/data/
@@ -101,6 +102,7 @@ flutter:
     - assets/images/wheel/
     - assets/images/menu/
     - assets/images/menu_hd/
+    - assets/images/kaderkitabi/
     - assets/images/tarot/
     - assets/images/tarot2/
     - assets/images/tarot3/

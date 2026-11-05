@@ -19,17 +19,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
+import '../../core/widgets/living_sea.dart';
+import 'kader_book_scene.dart';
 import '../../data/providers.dart';
 import '../../data/models/user_profile.dart';
 
 // ─── Logaritmik eğriler ──────────────────────────────────────────────────────
 
 // Yavaş başlar, hızlanır — metin yavaşça açılır
-class _SlowRevealCurve extends Curve {
-  const _SlowRevealCurve();
-  @override
-  double transformInternal(double t) => (exp(t) - 1) / (exp(1) - 1);
-}
 
 // ─── Model ───────────────────────────────────────────────────────────────────
 
@@ -44,6 +41,10 @@ class _KitapEntry {
 
 // ─── Ana ekran ───────────────────────────────────────────────────────────────
 
+/// Gece denizi arka planı ve ufkunun yeri (görselin uv.y'si).
+const String kKaderSea = 'assets/images/kaderkitabi/deniz.jpg';
+const double kKaderSeaHorizon = 0.28;
+
 class KaderKitabiScreen extends ConsumerStatefulWidget {
   const KaderKitabiScreen({super.key});
 
@@ -51,8 +52,7 @@ class KaderKitabiScreen extends ConsumerStatefulWidget {
   ConsumerState<KaderKitabiScreen> createState() => _KaderKitabiScreenState();
 }
 
-class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
-    with SingleTickerProviderStateMixin {
+class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
 
   static const _prefKeyGosterilen = 'kaderkitabi_gosterilen';
   static const _prefKeyBugunTarih = 'kaderkitabi_bugun_tarih';
@@ -62,38 +62,10 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
   bool    _loading  = true;
   bool    _hakDoldu = false;
 
-  late final AnimationController _mistikCtrl;
-  // 0.0 = metin tam görünür, 1.0 = kapkara
-  late final Animation<double> _darkOverlay;
-
   @override
   void initState() {
     super.initState();
-    // Tek seferlik: 2s karanlık + 3s yavaş açılış → yazı KALIR (Anıl: "çıkan yazı tekrar
-    // kaybolmasın"; eskiden 10 sn'lik döngüde yeniden kararıyordu).
-    _mistikCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 5),
-    );
-    _darkOverlay = TweenSequence<double>([
-      TweenSequenceItem(
-        tween: Tween(begin: 1.0, end: 1.0), // 2s kapkara
-        weight: 20,
-      ),
-      TweenSequenceItem(
-        tween: Tween(begin: 1.0, end: 0.0)
-            .chain(CurveTween(curve: const _SlowRevealCurve())),
-        weight: 30, // 3s yavaş açılış
-      ),
-    ]).animate(_mistikCtrl);
-
     _loadData();
-  }
-
-  @override
-  void dispose() {
-    _mistikCtrl.dispose();
-    super.dispose();
   }
 
   // ─── Koşul eşleştirme ────────────────────────────────────────────────────
@@ -191,7 +163,6 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
       _metin = rendered;
       _loading = false;
     });
-    _mistikCtrl.forward(); // bir kez açılır, yazı kalır (metin hazır olunca başlar)
   }
 
   // ─── BUILD ───────────────────────────────────────────────────────────────
@@ -207,29 +178,18 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Arka plan — %20 zoom (1.2 scale, ortalı)
-          Transform.scale(
-            scale: 1.2,
-            child: Image.asset(
-              'assets/images/ozlusoz_bg.png',
-              fit: BoxFit.cover,
-              alignment: Alignment.center,
-              filterQuality: FilterQuality.high,
-              errorBuilder: (_, __, ___) => Container(color: const Color(0xFF0D0A1A)),
-            ),
-          ),
-          // Koyu overlay
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                // Anıl: "bg'yi biraz koyulaştır" (eski 0xAA/0x55/0xAA)
-                colors: [
-                  Color(0xCC000000),
-                  Color(0x88000000),
-                  Color(0xCC000000),
-                ],
+          // Yaşayan gece denizi (Anıl, 2026-11-06: Hooop'taki gibi dalgalanan koyu deniz).
+          const LivingSeaBackground(asset: kKaderSea, horizon: kKaderSeaHorizon, dark: 0.06),
+          // Üstte başlık okunsun diye hafif karartma (deniz açık kalır).
+          const IgnorePointer(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  stops: [0.0, 0.22, 1.0],
+                  colors: [Color(0x99000000), Color(0x00000000), Color(0x00000000)],
+                ),
               ),
             ),
           ),
@@ -305,168 +265,35 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
   // ─── Hak Doldu ───────────────────────────────────────────────────────────
 
   Widget _buildHakDoldu() {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Container(
-          padding: const EdgeInsets.all(28),
-          decoration: BoxDecoration(
-            color: const Color(0xFF1A0E2E).withValues(alpha: 0.9),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: const Color(0xFFD4AF37).withValues(alpha: 0.4), width: 1.2),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text('📖', style: TextStyle(fontSize: 44)),
-              const SizedBox(height: 16),
-              Text(
-                ref.watch(l10nProvider).fatebookPageRead,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.cinzel(
-                  fontSize: 15,
-                  color: const Color(0xFFD4AF37),
-                  height: 1.6,
-                ),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                ref.watch(l10nProvider).fatebookTomorrow,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white.withValues(alpha: 0.4),
-                  fontSize: 13,
-                ),
-              ),
-            ],
-          ),
+    final s = ref.watch(l10nProvider);
+    return Column(children: [
+      Expanded(
+        child: KaderBookScene(
+          leftText: s.fatebookPageRead,
+          rightText: s.fatebookTomorrow,
+          animate: false,
         ),
       ),
-    );
+      const FloatingBarSpacer(),
+    ]);
   }
 
   // ─── Metin içeriği ────────────────────────────────────────────────────────
 
   Widget _buildContent(BuildContext context) {
     final metin = _metin ?? '';
-
-    final bookCard = Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFFF5ECD7), Color(0xFFEDD9A3)],
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFFD4AF37).withValues(alpha: 0.25),
-            blurRadius: 30,
-            spreadRadius: 4,
-            offset: const Offset(0, 6),
-          ),
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.5),
-            blurRadius: 20,
-            offset: const Offset(0, 10),
-          ),
-        ],
-        border: Border.all(
-          color: const Color(0xFFB8960C).withValues(alpha: 0.6),
-          width: 1.5,
-        ),
+    final scaler = MediaQuery.textScalerOf(context);
+    return Column(children: [
+      Expanded(
+        child: LayoutBuilder(builder: (context, box) {
+          final bookW = min(box.maxWidth * 0.94, 560.0);
+          final bookH = bookW / kKaderParchmentAspect;
+          final page = Size(kKaderLeftPage.width * bookW, kKaderLeftPage.height * bookH);
+          final (sol, sag, olcek) = splitKaderPages(metin, page, scaler);
+          return KaderBookScene(leftText: sol, rightText: sag, textScale: olcek);
+        }),
       ),
-      child: Stack(
-        children: [
-          // Sol cilt gölgesi
-          Positioned(
-            left: 0, top: 0, bottom: 0,
-            child: Container(
-              width: 18,
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.horizontal(left: Radius.circular(14)),
-                gradient: LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  colors: [
-                    Colors.black.withValues(alpha: 0.18),
-                    Colors.transparent,
-                  ],
-                ),
-              ),
-            ),
-          ),
-          // Metin
-          Padding(
-            padding: const EdgeInsets.fromLTRB(26, 28, 26, 40),
-            child: Text(
-              metin,
-              textAlign: TextAlign.justify,
-              style: const TextStyle(
-                color: Color(0xFF2C1A0A),
-                fontSize: 15,
-                height: 1.85,
-                fontWeight: FontWeight.w400,
-                letterSpacing: 0.2,
-              ),
-            ),
-          ),
-          // Alt süsleme
-          Positioned(
-            bottom: 10, left: 0, right: 0,
-            child: Center(
-              child: Text(
-                '✦',
-                style: TextStyle(
-                  fontSize: 12,
-                  color: const Color(0xFF8B6914).withValues(alpha: 0.7),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-
-    final animatedCard = AnimatedBuilder(
-      animation: _darkOverlay,
-      builder: (_, child) {
-        return Stack(
-          children: [
-            child!,
-            if (_darkOverlay.value > 0.001)
-              Positioned.fill(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Container(
-                    color: Colors.black.withValues(alpha: _darkOverlay.value),
-                  ),
-                ),
-              ),
-          ],
-        );
-      },
-      child: bookCard,
-    );
-
-    return Column(
-      children: [
-        // Kitap kartı — dikeyde ortalı, uzunsa kaydırılabilir
-        Expanded(
-          child: LayoutBuilder(
-            builder: (context, constraints) => SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
-              child: ConstrainedBox(
-                constraints: BoxConstraints(minHeight: constraints.maxHeight - 28),
-                child: Center(child: animatedCard),
-              ),
-            ),
-          ),
-        ),
-        const FloatingBarSpacer(),
-      ],
-    );
+      const FloatingBarSpacer(),
+    ]);
   }
 }

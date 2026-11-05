@@ -50,6 +50,9 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
     }
   }
 
+  /// TR/EN metin (ekranda İngilizcesi eksikti).
+  String _t(String tr, String en) => ref.read(localeProvider) == 'en' ? en : tr;
+
   // ── [DEBUG] Test görseli yükle ───────────────────────────────────────────
   Future<void> _testGorseliYukle() async {
     try {
@@ -205,7 +208,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
                     ),
                     const SizedBox(height: 14),
                     Text(
-                      'Avucunu göster',
+                      _t('Avucunu göster', 'Show your palm'),
                       style: TextStyle(
                         color: Colors.white.withValues(alpha: 0.28),
                         fontSize: 15,
@@ -237,14 +240,15 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               child: const Center(child: Text('🔒', style: TextStyle(fontSize: 38))),
             ),
             const SizedBox(height: 28),
-            const Text(
-              'Günlük hakkın doldu',
+            Text(
+              _t('Günlük hakkın doldu', "You've used today's reading"),
               style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 12),
             Text(
-              'El falı günde 1 kez bakılabilir.\nYarın tekrar gel.',
+              _t('El falı günde 1 kez bakılabilir.\nYarın tekrar gel.',
+                  'Palm reading is available once a day.\nCome back tomorrow.'),
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 15, height: 1.6),
             ),
@@ -255,12 +259,13 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
 
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Text(
-            'Avucunu kameraya aç, çizgiler net görünsün.',
+            _t('Avucunu kameraya aç, çizgiler net görünsün.',
+                'Open your palm to the camera so the lines are clear.'),
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               color: Color(0xFFB8A8D8),
               fontSize: 14,
               height: 1.5,
@@ -281,7 +286,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               Expanded(
                 child: _FotoButon(
                   icon: Icons.camera_alt_rounded,
-                  label: 'Fotoğraf Çek',
+                  label: _t('Fotoğraf Çek', 'Take Photo'),
                   onTap: () => _secimiYap(ImageSource.camera),
                 ),
               ),
@@ -289,7 +294,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               Expanded(
                 child: _FotoButon(
                   icon: Icons.photo_library_rounded,
-                  label: 'Telefondan Seç',
+                  label: _t('Telefondan Seç', 'Choose from Phone'),
                   onTap: () => _secimiYap(ImageSource.gallery),
                 ),
               ),
@@ -344,8 +349,8 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
           ),
         ),
         const Spacer(),
-        const Text(
-          'El çizgilerin okunuyor...',
+        Text(
+          _t('El çizgilerin okunuyor...', 'Reading the lines of your hand...'),
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -370,8 +375,8 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               children: [
                 // Genel değerlendirme
                 if (_genelMetin.isNotEmpty) ...[
-                  const Text(
-                    'Genel Değerlendirme',
+                  Text(
+                    _t('Genel Değerlendirme', 'Overall Reading'),
                     style: TextStyle(
                       color: Color(0xFFD8B4FE),
                       fontSize: 14,
@@ -403,8 +408,8 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 20),
           child: Column(
             children: [
-              const Text(
-                'El falın gelen kutuna kaydedildi.',
+              Text(
+                _t('El falın gelen kutuna kaydedildi.', 'Your palm reading was saved to your inbox.'),
                 style: TextStyle(
                   color: Color(0xFF9CA3AF),
                   fontSize: 13,
@@ -587,7 +592,7 @@ class _FotoButon extends StatelessWidget {
 /// çizgiler yavaşça nefes alır. Tarama ışığı yukarıdan aşağı süzülür.
 @visibleForTesting
 class AvucCizgileri extends StatefulWidget {
-  const AvucCizgileri();
+  const AvucCizgileri({super.key});
   @override
   State<AvucCizgileri> createState() => _AvucCizgileriState();
 }

@@ -13,6 +13,7 @@
 // Sonra kitap dalgalarla hafifçe sallanır. Reduced-motion: doğrudan son hâl.
 
 import 'dart:math' as math;
+import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -38,7 +39,7 @@ class KaderBookScene extends StatefulWidget {
     required this.rightText,
     this.textScale = 1,
     this.animate = true,
-    this.waterline = 0.80,
+    this.waterline = 0.72,
     this.onRisen,
   });
 
@@ -210,6 +211,48 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
                 ),
               ),
             ),
+            // Suya düşen yansıma: kitabın ayna görüntüsü, dalgalı, soluk, derine doğru söner
+            // (Grok: kitap havada asılı gibiydi; alt boş deniz de dolsun).
+            if (up > 0.2)
+              Positioned(
+                left: left,
+                top: water,
+                width: bookW,
+                height: bookH * 0.62,
+                child: IgnorePointer(
+                  child: ClipRect(
+                    child: Opacity(
+                      opacity: (0.40 * ((up - 0.2) / 0.8)).clamp(0.0, 0.40),
+                      // Su yansıması bulanık: içindeki ters yazı okunmasın.
+                      child: ImageFiltered(
+                        imageFilter: ui.ImageFilter.blur(sigmaX: 1.6, sigmaY: 3.2),
+                        child: ShaderMask(
+                        blendMode: BlendMode.dstIn,
+                        shaderCallback: (b) => const LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [Colors.white, Colors.transparent],
+                        ).createShader(b),
+                        child: ColorFiltered(
+                          colorFilter:
+                              const ColorFilter.mode(Color(0xFF8AA6DA), BlendMode.modulate),
+                          child: OverflowBox(
+                            alignment: Alignment.topCenter,
+                            minHeight: bookH,
+                            maxHeight: bookH,
+                            child: Transform.translate(
+                              offset: Offset(
+                                  2.5 * math.sin(phase * 1.3), water - top - bookH),
+                              child: Transform.flip(flipY: true, child: book),
+                            ),
+                          ),
+                        ),
+                      ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             // Kitap: suyun üstü net, altı soluk ve mavi (su içinden görünür)
             Positioned(
               left: left,

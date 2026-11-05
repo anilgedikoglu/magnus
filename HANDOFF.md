@@ -27,9 +27,9 @@
   kutusu + Tavşan/Kısmetim/Arabam/Evim kayıtları), günlük haklar KALIR; Yönetici > Günlük Hakları Sıfırla = tüm
   günlük haklar + bu dört falın kayıtları.
 - **Metin üretimi turu 1 (270 sonrası, main'de, build YOK):** ChatGPT+DeepSeek çapraz üretim/seçimle 100 yeni metin
-  (Tavşan, Yana Bana Dair, Durugörü Gelecek, Kahve Sonuç, Kahve Gelişme; TR+EN, koşullu). Skill: ;
-  algoritmalar , kayıt , betikler .
-  Arabam v2 (1.865 model), Evim taşınma kuralları, Kısmetim açıklama havuzları,  (EN ay adları).
+  (Tavşan, Yana Bana Dair, Durugörü Gelecek, Kahve Sonuç, Kahve Gelişme; TR+EN, koşullu). Skill: `magnus-metin-uretimi`;
+  algoritmalar `docs/metin_algoritmalari.md`, kayıt `docs/metin_uretim_log.md`, betikler `scripts/metin_*`.
+  Arabam v2 (1.865 model), Evim taşınma kuralları, Kısmetim açıklama havuzları, `VariableReplacer.isEn` (EN ay adları).
 - Testler: 100 geçiyor (`flutter test`); tek kırmızı takipsiz artık `test/_visual_starfield_capture_test.dart`.
 - Görsel doğrulama: `build/visual_check/yeni_fallar_capture_test.dart --dart-define=CAP_PHASE=yf` (gitignored).
 

@@ -7,13 +7,28 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 1729** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157) — her tur sonunda güncelle.
+- **Toplam eklenen: 2009** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 140 — Kahve Gelişme bekliyor) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 13–14 — 2026-11-06 gece (280 metin; ChatGPT + Codex)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Karşılama – günün 1. açılışı | `karsilamalar.json` › `karsilamalar` (ziyaret 1) | 620–659 |
+| Karşılama – 6.+ ziyaret | `karsilamalar.json` › `karsilamalar` (ziyaret 6) | 660–699 |
+| Kâhin Likia | `kahinler.json` › `kahinler.likia` | likia_63–likia_82 |
+| Kâhin Yousuf | `kahinler.json` › `kahinler.yousuf` | yousuf_63–yousuf_82 |
+| Günlük Astroloji – Yorum | `gunlukastroloji.json` › `astroyorum` | 100–119 |
+| Tavşan Falı | `tavsanfali.json` › `tavsanfali` | 221–260 |
+| Niyet | `niyet.json` › `niyet` | 279–318 |
+| Yana – Bana Dair | `yana.json` › `bana_dair` | 169–208 |
+| Kahve – Sonuç | `kahve_sonuc.json` › `sonuclar` | 459–478 |
+| Kahve – Gelişme | `kahve_gelisme.json` › `gelismeler` | (Codex seçimi 04:35 sınırı sonrası) |
 
 ## Tur 11–12 — 2026-11-06 gece (331 metin; ChatGPT + Codex, ikinci geçiş)
 

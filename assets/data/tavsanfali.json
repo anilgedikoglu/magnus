@@ -2034,6 +2034,448 @@
           "deger": "ogrenci"
         }
       ]
+    },
+    {
+      "id": 221,
+      "metin": "{{isim}}, önümüzdeki günlerde sevdiğin kişiyle eski bir fotoğraf üzerine konuşacaksın. Unuttuğunuz küçük bir ayrıntı ikinizi de güldürecek.",
+      "metin_en": "{{isim}}, in the coming days, you'll talk with someone you love about an old photograph. A little detail you'd both forgotten will make you laugh.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliski_var"
+        }
+      ]
+    },
+    {
+      "id": 222,
+      "metin": "Bu hafta bitmeden telefonuna düşecek kısa bir cevap, {{isim}}, uzattığın bir bekleyişi sona erdirebilir. Ardından içinden kocaman bir oh çekeceksin.",
+      "metin_en": "Before this week is over, {{isim}}, a brief reply that pops up on your phone could finally put an end to a wait that's dragged on too long. Afterward, you'll breathe a huge sigh of relief.",
+      "kosullar": []
+    },
+    {
+      "id": 223,
+      "metin": "{{isim}}, yakın zamanda aynanın karşısında yaptığın küçük bir değişiklik iltifat alacak. Özellikle birinin ayrıntıyı fark etmesi yüzünü güldürecek.",
+      "metin_en": "{{isim}}, a small change you make to your appearance in front of the mirror will soon earn you compliments. You'll be especially delighted when someone notices that little detail.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 224,
+      "metin": "Ders notlarında daha önce işaretlediğin bir satır yakında yeniden karşına çıkacak. Bir arkadaşının açıklamasıyla zor sandığın konuyu daha kolay kavrayacaksın.",
+      "metin_en": "A line you highlighted in your study notes will soon catch your eye again. With a friend's explanation, you'll find a topic you thought was difficult much easier to understand.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 225,
+      "metin": "{{isim}}, önümüzdeki günlerde mutfakta değiştireceğin küçük bir düzen günlük işlerini kolaylaştıracak. Zaman kazandığını fark edince kendine güzel bir mola vereceksin.",
+      "metin_en": "{{isim}}, in the coming days, a small change to the way you organize your kitchen will make your daily tasks easier. Once you realize how much time you've saved, you'll treat yourself to a lovely little break.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 226,
+      "metin": "Nişanlınla hazırlık listesinden çıkaracağınız bir ayrıntı, önümüzdeki haftalarda ikinize de zaman kazandıracak. Karar verirken aynı şeye gülmeniz ayrı bir güzellik.",
+      "metin_en": "In the coming weeks, removing one detail from your wedding preparations checklist will save both you and your fiancé time. The fact that you'll both laugh at the same thing while making the decision will make it even sweeter.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nisanli"
+        }
+      ]
+    },
+    {
+      "id": 227,
+      "metin": "{{isim}}, yakın günlerde işinle ilgili eski bir görüşmeden yeni bir talep doğabilir. Telefonla alacağın açıklama sana kullanışlı bir fırsat gösterecek.",
+      "metin_en": "{{isim}}, an old business conversation may soon lead to a new request. An explanation you receive over the phone will reveal a useful opportunity.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kendiisi"
+        }
+      ]
+    },
+    {
+      "id": 228,
+      "metin": "Bir alışverişin son aşamasında göreceğin küçük bir ayrıntı, {{isim}}, sana avantaj sağlayacak. Bu ay içinde hesabını düşündüğünden rahat kapatabileceksin.",
+      "metin_en": "A small detail you notice at the final stage of a purchase will work in your favor, {{isim}}. Before this month is over, you'll be able to settle your accounts more comfortably than you expected.",
+      "kosullar": []
+    },
+    {
+      "id": 229,
+      "metin": "Kurumda bekleyen bir evrakla ilgili açıklama önümüzdeki günlerde önüne gelecek. {{isim}}, küçük bir düzeltmenin ardından işin kolaylaştığını göreceksin.",
+      "metin_en": "In the coming days, you'll receive some clarification about a document that's been pending at your workplace. {{isim}}, after a minor correction, you'll see how much easier the process becomes.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 230,
+      "metin": "Bölümde bir meslektaşının makalenle ilgili söyleyeceği kısa yorum, gözünden kaçan bir ayrıntıyı gösterecek. {{isim}}, yaptığın düzeltme içine sinecek.",
+      "metin_en": "A brief comment from a colleague in your department about your paper will point out a detail you've overlooked. {{isim}}, you'll feel satisfied with the correction you make.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 231,
+      "metin": "{{isim}}, bir süredir gözünün önünde duran küçük bir eşyanın asıl yerini yakında fark edeceksin. Aramaktan vazgeçtiğin anda bulmak seni güldürecek.",
+      "metin_en": "{{isim}}, you'll soon discover where a small item that's been right in front of you for some time actually belongs. Finding it just when you've given up looking will make you laugh.",
+      "kosullar": []
+    },
+    {
+      "id": 232,
+      "metin": "Bir süredir dinlemediğin neşeli bir şarkı yakında yeniden kulağına çalınacak. {{isim}}, bu kez geçmişi düşünmek yerine ritmine eşlik ettiğini fark edeceksin.",
+      "metin_en": "A cheerful song you haven't heard in ages will soon find its way back to your ears. {{isim}}, this time, instead of dwelling on the past, you'll catch yourself moving along to the rhythm.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 233,
+      "metin": "{{isim}}, önümüzdeki haftalarda eski bir tanıdık senden pratik bir konuda fikir isteyecek. Verdiğin kısa önerinin işe yaradığını duyunca gururlanacaksın.",
+      "metin_en": "{{isim}}, in the coming weeks, an old acquaintance will ask for your advice on a practical matter. You'll feel proud when you hear that your simple suggestion worked.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 234,
+      "metin": "Çalıştığın yerde tamamladığın bir işin sonucu bu hafta dikkat çekecek. Mesai arkadaşının içten teşekkürünü duyunca {{isim}}, emeğinin görüldüğünü hissedeceksin.",
+      "metin_en": "The results of something you've completed at work will attract attention this week. When you hear a coworker's heartfelt thanks, {{isim}}, you'll feel that your efforts have truly been recognized.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 235,
+      "metin": "Yakında arkadaş ortamında başlayacak sıradan bir sohbet, tanıştığın birini daha yakından merak etmene yol açacak. {{isim}}, karşılıklı espriler hoşuna gidecek.",
+      "metin_en": "A casual conversation among friends will soon spark your curiosity about someone you've met, making you want to know them better. {{isim}}, you'll enjoy the playful jokes you exchange.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 236,
+      "metin": "Eşinin senin sevdiğin küçük bir ayrıntıyı hatırlaması, önümüzdeki günlerde yüzünü güldürecek. {{isim}}, sıradan bir akşamda kendini özel hissedeceksin.",
+      "metin_en": "In the coming days, your spouse will remember a little detail you love, and it will bring a smile to your face. {{isim}}, you'll feel special on an otherwise ordinary evening.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 237,
+      "metin": "Evindeki bir dolabı düzenlerken uzun süredir kullanmadığın faydalı bir şey bulacaksın. {{isim}}, yeniden işe yaraması seni küçük bir masraftan kurtarabilir.",
+      "metin_en": "While organizing a cupboard at home, you'll come across something useful that you haven't used in a long time. {{isim}}, putting it to use again could save you a little money.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 238,
+      "metin": "Yakın günlerde bir arkadaşından gelecek samimi davet, yeni bir ortamda güzel vakit geçirmeni sağlayacak. {{isim}}, eve dönerken kendini daha hafif hissedeceksin.",
+      "metin_en": "In the coming days, a heartfelt invitation from a friend will lead you to a wonderful time in a new setting. {{isim}}, you'll feel lighter as you make your way home.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 239,
+      "metin": "Eşinle ortak bir harcamayı yeniden değerlendirdiğinde daha hesaplı bir yol bulabilirsiniz. {{isim}}, ay bitmeden bu küçük anlaşma ikinizi de rahatlatacak.",
+      "metin_en": "When you and your spouse reconsider a shared expense, you may find a more affordable option. {{isim}}, before the month is over, this small agreement will put both your minds at ease.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 240,
+      "metin": "Özgeçmişinde değiştireceğin kısa bir ifade, yakında güçlü bir yönünü daha açık gösterecek. {{isim}}, ardından gelecek bir geri bildirim sana cesaret verebilir.",
+      "metin_en": "A short phrase you change on your résumé will soon highlight one of your strengths more clearly. {{isim}}, the feedback that follows may give you a boost of confidence.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 241,
+      "metin": "Sevdiğin kişinin kısa cevaplarına fazla anlam yüklüyorsun, {{isim}}. Yakında yan yana ekranı kapattığınızda uzayan sohbet, aranızdaki sıcaklığı hissettirecek.",
+      "metin_en": "You're reading too much into the short replies from someone you love, {{isim}}. Soon, when you put your screens away and sit together, a conversation that goes on and on will remind you of the warmth between you.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliski_var"
+        }
+      ]
+    },
+    {
+      "id": 242,
+      "metin": "Aynadaki son bakışın gözüme takıldı: önce kendi beğenini arıyorsun. Yakında bir buluşmaya sevdiğin parçayı giyip gidince rahatlığın sohbetine de yansıyacak.",
+      "metin_en": "That last look you gave yourself in the mirror caught my attention: you're looking for your own approval first. Soon, when you wear a favorite piece to a get-together, the comfort you feel will shine through in your conversation.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 243,
+      "metin": "Altını çizdiğin satırla başlayacak bu kez, {{isim}}. Önümüzdeki günlerde çalışmaya dönünce konunun devamını çözecek, boş bıraktığın soruyu dolduracaksın.",
+      "metin_en": "This time, it will begin with the line you underlined, {{isim}}. In the coming days, when you return to your studies, you'll work out the rest of the topic and finally answer that question you left blank.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 244,
+      "metin": "Hazırlık listesindeki silgi izlerine bakıyorum, {{isim}}. Yakında nişanlınla bir ayrıntıdan vazgeçince asıl istediğiniz belirginleşecek; ikiniz de rahatlayacaksınız.",
+      "metin_en": "I'm looking at the eraser marks on your preparations checklist, {{isim}}. Soon, when you and your fiancé decide to let go of one detail, what you both truly want will become clearer, and you'll both feel relieved.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nisanli"
+        }
+      ]
+    },
+    {
+      "id": 245,
+      "metin": "Fiyatı söylemeden önce verdiğin o kısa arayı fark ettim. Bu ay bir iş konuşmasında emeğini açıkça anlatacak, kendi ücretini daha rahat savunacaksın.",
+      "metin_en": "I noticed that brief pause you take before stating your price. This month, during a business conversation, you'll explain the value of your work clearly and feel more comfortable standing up for your fee.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kendiisi"
+        }
+      ]
+    },
+    {
+      "id": 246,
+      "metin": "Eşinin yarım bıraktığı sözü tamamlamak yerine dinleyeceğin bir an görüyorum. Bu hafta mutfaktaki ayaküstü konuşmada ne istediğini anlayıp ona destek olacaksın.",
+      "metin_en": "I see a moment when, instead of finishing your spouse's sentence, you'll simply listen. This week, during a quick conversation in the kitchen, you'll understand what your spouse wants and offer your support.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 247,
+      "metin": "Evrakın kenarındaki kısa not dikkatimi çekti. Önümüzdeki günlerde kurumda bir işlemin sırasını öğrenince gereksiz bir turdan kurtulacak, vaktini kazanacaksın.",
+      "metin_en": "A short note in the margin of a document caught my attention. In the coming days, once you learn the proper order of a procedure at your workplace, you'll avoid an unnecessary trip and save yourself some time.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 248,
+      "metin": "Başvuru ekranında duraksadığın kutuyu görüyorum. Yakında deneyimini tek bir örnekle yazınca anlatacaklarının sandığından güçlü olduğunu fark edeceksin.",
+      "metin_en": "I can see the field on an application form where you hesitate. Soon, when you describe your experience with a single example, you'll realize that what you have to say is more impressive than you thought.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 249,
+      "metin": "İki ayrı yükü sessizce taşıdığınızı hissediyorum. Önümüzdeki günlerde eşinle takvime bakıp bir sorumluluğu paylaşacak, boşalan vakitte birbirinize döneceksiniz.",
+      "metin_en": "I sense that the two of you have been quietly carrying separate burdens. In the coming days, you and your spouse will look at the calendar and share a responsibility, leaving you with more time for each other.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 250,
+      "metin": "Dışarıda uyumlu, kendi köşende seçicisin; bunu görüyorum. Yakında bir teklife nazikçe hayır deyip ayırdığın zamanda yarım bıraktığın keyfe döneceksin.",
+      "metin_en": "You go along with others when you're out, but you're selective in your own space. I can see that. Soon, you'll politely decline an invitation and use the time you've set aside to return to something you enjoy but left unfinished.",
+      "kosullar": []
+    },
+    {
+      "id": 251,
+      "metin": "Saçını düzeltirken kendine söylediğin eleştiri kulağıma geliyor sanki. Bu ay hazırlıksız çekilmiş bir görüntünde sevdiğin ifadeni bulup kendine yumuşayacaksın.",
+      "metin_en": "It's almost as though I can hear the criticism you whisper to yourself while fixing your hair. This month, you'll spot an expression you love in a candid photo of yourself and begin to be a little kinder to yourself.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 252,
+      "metin": "Parmağının alışkanlıkla gittiği ekran köşesi var, biliyorum. Önümüzdeki günlerde orayı açmadan başka bir işle oyalanacak, zamanın geçtiğine şaşıracaksın.",
+      "metin_en": "There's a corner of your screen your finger instinctively reaches for. I know it. In the coming days, you'll keep yourself busy with something else instead of opening it, and you'll be surprised by how much time has passed.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 253,
+      "metin": "Mesai arasında sana yöneltilen sorular boşuna değil, {{isim}}. Yakında iş yerinde bildiğin bir kısayolu gösterecek, ekipten gelen teşekkürle gururlanacaksın.",
+      "metin_en": "Those questions people ask you during work breaks aren't coming your way by chance, {{isim}}. Soon, you'll show your team a shortcut you know, and their thanks will fill you with pride.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 254,
+      "metin": "Evde herkesin ihtiyacını sayarken kendini sona koyduğunu fark ettim. Bu ay eşine dinlenmek istediğini söyleyip kendine ayırdığın saatin tadını çıkaracaksın.",
+      "metin_en": "I've noticed that when you think of everyone's needs at home, you put yourself last. This month, you'll tell your spouse that you need some rest and enjoy an hour you've set aside just for yourself.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 255,
+      "metin": "Kapının önünde durup geri dönme hissi var kâğıdında. Yakında çıkmadan önce yapacağın kısa kontrol, unuttuğun şeyi hatırlatacak; yoluna gönül rahatlığıyla devam edeceksin.",
+      "metin_en": "Your reading shows me a feeling of stopping at the door and wanting to turn back. Soon, a quick check before you leave will remind you of something you've forgotten, and you'll continue on your way with peace of mind.",
+      "kosullar": []
+    },
+    {
+      "id": 256,
+      "metin": "Sessizliğin artık her an aynı gelmediğini seziyorum. Bu ay eve dönerken kendin için aldığın ufak bir yiyeceği açacak, yeni düzeninin rahat bir yanını keşfedeceksin.",
+      "metin_en": "I sense that silence no longer feels the same to you every time. This month, on your way home, you'll open a little snack you bought just for yourself and discover a comforting side of your new routine.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 257,
+      "metin": "Eşine söylemeyi unutup zihninde tekrarladığın bir teşekkür var gibi. Yakında sofrayı toplarken dile getirecek, karşılığındaki içtenlikle aranızın ısındığını duyacaksın.",
+      "metin_en": "I sense there's a thank-you you've forgotten to say to your spouse, even though you've repeated it in your mind. Soon, while clearing the table, you'll finally say it, and the heartfelt response will make you feel the warmth between you grow.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 258,
+      "metin": "Açık sekmelerin arasında dikkatin bölünüyor, görüyorum. Önümüzdeki günlerde birini kapatıp tek işe odaklanacak, bitirdiğinde sandığından çok ilerlediğini anlayacaksın.",
+      "metin_en": "I can see your attention being pulled in different directions by all those open tabs. In the coming days, you'll close one and focus on a single task. When you're done, you'll realize you've made far more progress than you expected.",
+      "kosullar": []
+    },
+    {
+      "id": 259,
+      "metin": "Yöneticine soracağın cümleyi kafanda düzelttiğini hissediyorum. Yakında iş yerindeki önceliği netleştirince aynı işi yeniden yapmaktan kurtulacaksın.",
+      "metin_en": "I can sense you rehearsing and refining the question you want to ask your manager. Soon, once you clarify what's most important at work, you'll save yourself from having to do the same task all over again.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 260,
+      "metin": "İlanların benzer başlıkları gözünü yoruyor, farkındayım. Yakında görev tanımındaki tanıdık bir beceriyi seçip aramanı daraltacak, sana uyan işleri ayırt edeceksin.",
+      "metin_en": "I can tell those similar job posting titles are tiring your eyes. Soon, you'll pick out a familiar skill in a job description and narrow your search, making it easier to identify the positions that suit you.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
     }
   ]
 }

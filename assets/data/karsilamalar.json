@@ -4108,6 +4108,566 @@
       "metin": "Beni yeniden yokladın {{isim}}, buradayım. Bir yüzü hatırlayıp ismini çıkaramayınca konuşmanın geçtiği yeri zihninde dolaştığını görür gibiyim.",
       "metin_en": "You've checked in on me again, {{isim}}, and here I am. When you remember a face but can't recall the name, I can almost see you mentally revisiting the place where you last spoke to that person.",
       "kosullar": []
+    },
+    {
+      "id": 620,
+      "ziyaret": 1,
+      "metin": "Şu telefonunu eline alıp neye bakacağını unuttuğun anlar var ya {{isim}}... Ben Magnus, bugün zihnindeki kalabalığın biraz dağılacağını görüyorum!",
+      "metin_en": "You know those moments when you pick up your phone and forget what you were going to check, {{isim}}... I'm Magnus, and I can see that the clutter in your mind will begin to clear today!",
+      "kosullar": []
+    },
+    {
+      "id": 621,
+      "ziyaret": 1,
+      "metin": "Daha günün başında iki ayrı düşünce arasında kalmış gibisin {{isim}}. Magnus'un sezgisi der ki bugün küçük bir ayrıntı kararını kolaylaştıracak!",
+      "metin_en": "It seems you've been torn between two different thoughts since the day began, {{isim}}. Magnus's intuition tells me that a tiny detail will make your decision easier today!",
+      "kosullar": []
+    },
+    {
+      "id": 622,
+      "ziyaret": 1,
+      "metin": "Merhaba {{isim}}! Bugün birinin ağzından duyacağın küçücük bir teşekkürün bütün gün aklında kalabileceğini hissediyorum.",
+      "metin_en": "Hello, {{isim}}! I have a feeling that a simple little thank-you from someone today could stay on your mind all day long.",
+      "kosullar": []
+    },
+    {
+      "id": 623,
+      "ziyaret": 1,
+      "metin": "Selamlar! Ben Magnus. {{isim}}, bugün beklemediğin bir anda duyacağın tanıdık bir sesin içini ısıtabileceğini görüyorum.",
+      "metin_en": "Greetings! I'm Magnus. {{isim}}, I can see that hearing a familiar voice when you least expect it could warm your heart today.",
+      "kosullar": []
+    },
+    {
+      "id": 624,
+      "ziyaret": 1,
+      "metin": "Hoş geldin güzel insan! {{isim}}, bugün birinin hatırladığı küçücük bir ayrıntı sana ne kadar önemsendiğini gösterebilir.",
+      "metin_en": "Welcome, you lovely soul! {{isim}}, someone remembering the smallest detail today could show you just how much you matter to them.",
+      "kosullar": []
+    },
+    {
+      "id": 625,
+      "ziyaret": 1,
+      "metin": "Tık! Kristal küremde bir ışık yandı. Hoş geldin {{isim}}! Bugün telefonuna düşen sıradan bir haberin içinden güzel bir fırsat çıkabilir.",
+      "metin_en": "Click! A light just flickered on inside my crystal ball. Welcome, {{isim}}! An ordinary notification on your phone today could bring an unexpected opportunity.",
+      "kosullar": []
+    },
+    {
+      "id": 626,
+      "ziyaret": 1,
+      "metin": "Günün ilk sürprizini ben yapayım dedim {{isim}}! Seni bekleyen güzel şey büyük bir olay değil, beklenmedik derecede içten bir sohbet olabilir.",
+      "metin_en": "I thought I'd be the first to surprise you today, {{isim}}! The lovely thing awaiting you might not be some grand event, but a conversation that's unexpectedly heartfelt.",
+      "kosullar": []
+    },
+    {
+      "id": 627,
+      "ziyaret": 1,
+      "metin": "Kulağıma eski bir şarkının nakaratı geliyor! Selam {{isim}}. Bugün tanıdık bir melodi sana unuttuğunu sandığın güzel bir anı hatırlatabilir.",
+      "metin_en": "I can hear the chorus of an old song! Hello, {{isim}}. A familiar melody today might bring back a beautiful memory you thought you'd forgotten.",
+      "kosullar": []
+    },
+    {
+      "id": 628,
+      "ziyaret": 1,
+      "metin": "Bugünün şifresi iki kelime: Küçük kolaylık! {{isim}}, gözünde büyüttüğün bir uğraşın sandığından az zaman aldığını fark edebilirsin.",
+      "metin_en": "Today's secret code is just two words: Little shortcuts! {{isim}}, you may discover that a task you've been dreading takes far less time than you imagined.",
+      "kosullar": []
+    },
+    {
+      "id": 629,
+      "ziyaret": 1,
+      "metin": "Merhaba {{isim}}! İnsan bazen bir konuşmadan sonra keşke şunu da söyleseydim der. Bugün o eksik cümleyi tamamlama fırsatın olabilir.",
+      "metin_en": "Hello, {{isim}}! Sometimes, after a conversation, you find yourself wishing you'd said one more thing. Today, you might get the chance to finish that unspoken thought.",
+      "kosullar": []
+    },
+    {
+      "id": 630,
+      "ziyaret": 1,
+      "metin": "Seni kapıda karşılamadan önce defterimi açtım {{isim}}. Bugünün sayfasında bir plan değişikliği var; ama sonunda iyi ki diyebilirsin!",
+      "metin_en": "I opened my notebook before welcoming you at the door, {{isim}}. There's a change of plans written on today's page, but you might end up being glad it happened!",
+      "kosullar": []
+    },
+    {
+      "id": 631,
+      "ziyaret": 1,
+      "metin": "Bir aynaya bakıp sonra aklın başka yere kaymış gibi hissediyorum {{isim}}. Bugün duyacağın samimi bir iltifat kendine bakışını güzelleştirebilir.",
+      "metin_en": "I get the feeling you've looked in the mirror only to find your mind wandering elsewhere, {{isim}}. A sincere compliment today could help you see yourself in a more beautiful light.",
+      "kosullar": []
+    },
+    {
+      "id": 632,
+      "ziyaret": 1,
+      "metin": "Şu küçük hesapları zihninde çeviren yanını görüyorum {{isim}}! Bugün bir harcamada fark edeceğin uygun seçenek keyfini yerine getirebilir.",
+      "metin_en": "I can see that side of you that's always doing little calculations in your head, {{isim}}! Today, finding a more affordable option for something you're buying could really lift your spirits.",
+      "kosullar": []
+    },
+    {
+      "id": 633,
+      "ziyaret": 1,
+      "metin": "Günün telaşı başlamadan hoş geldin {{isim}}! Bir süredir aklında tuttuğun basit bir isteğin bugün beklediğinden sıcak karşılanabilir.",
+      "metin_en": "Welcome, {{isim}}, before the day's rush begins! A simple request you've been keeping to yourself for a while might receive a warmer response than you expected today.",
+      "kosullar": []
+    },
+    {
+      "id": 634,
+      "ziyaret": 1,
+      "metin": "Bak sen şu işe! Bugün aklındaki sorunun cevabı hiç beklemediğin bir sohbetten çıkabilir {{isim}}. Ben olsam kulaklarımı açık tutardım!",
+      "metin_en": "Well, would you look at that! The answer to a question on your mind could come from the most unexpected conversation today, {{isim}}. If I were you, I'd keep my ears open!",
+      "kosullar": []
+    },
+    {
+      "id": 635,
+      "ziyaret": 1,
+      "metin": "Bir kapı aralanmış gibi hissediyorum {{isim}}! Bugün birinden alacağın pratik öneri, uzattığını düşündüğün bir işi kolayca toparlamanı sağlayabilir.",
+      "metin_en": "I feel as though a door has opened just a crack, {{isim}}! Some practical advice from someone today could help you easily wrap up a task you thought you'd let drag on too long.",
+      "kosullar": []
+    },
+    {
+      "id": 636,
+      "ziyaret": 1,
+      "metin": "Gözüm takvimindeki boş bir yere ilişti {{isim}}. Bugün kendine ayıracağın küçük bir mola, düşündüğünden daha fazla enerji verebilir!",
+      "metin_en": "My eyes landed on an empty space in your calendar, {{isim}}. A short break you take for yourself today could give you more energy than you expect!",
+      "kosullar": []
+    },
+    {
+      "id": 637,
+      "ziyaret": 1,
+      "metin": "Bir kapak açıldı, kristal kürem aydınlandı! Merhaba {{isim}}. Bugün birinin senin fikrini özellikle sorması hoşuna gidecek gibi.",
+      "metin_en": "A lid lifted, and my crystal ball lit up! Hello, {{isim}}. I have a feeling you'll enjoy it when someone makes a point of asking for your opinion today.",
+      "kosullar": []
+    },
+    {
+      "id": 638,
+      "ziyaret": 1,
+      "metin": "Kendinden bazen fazla şey bekliyorsun {{isim}}. Ben Magnus; bugün bitirdiğin küçücük bir işin bile sana güzel bir başarı hissi vereceğini görüyorum.",
+      "metin_en": "Sometimes you expect too much of yourself, {{isim}}. I'm Magnus, and I can see that even finishing the tiniest task today will give you a wonderful sense of accomplishment.",
+      "kosullar": []
+    },
+    {
+      "id": 639,
+      "ziyaret": 1,
+      "metin": "Bir tarafta aklının sesi, diğer tarafta gönlünün isteği... Selam {{isim}}! Bugün küçücük bir gelişmeyle ikisinin de aynı şeyi söylediğini fark edebilirsin.",
+      "metin_en": "On one side, the voice of reason; on the other, the desires of your heart... Hello, {{isim}}! A tiny development today might make you realize they're both telling you the same thing.",
+      "kosullar": []
+    },
+    {
+      "id": 640,
+      "ziyaret": 1,
+      "metin": "Parmağın gönder tuşunda duruyor sanki, {{isim}}. Sözü tartıp samimiyeti saklamayan yanını tanırım; bugün selamı ben başlatayım.",
+      "metin_en": "I can almost see your finger hovering over the send button, {{isim}}. I know that side of you that chooses words carefully without hiding what you truly feel. Today, let me be the first to say hello.",
+      "kosullar": []
+    },
+    {
+      "id": 641,
+      "ziyaret": 1,
+      "metin": "İki seçenek arasında gidip gelişini görüyorum. Etiketlere son bir bakışta kendi isteğin belirginleşebilir, {{isim}}; benden sıcak bir selam!",
+      "metin_en": "I can see you going back and forth between two options. One last glance at the labels might make it clear what you really want, {{isim}}. Sending you a warm hello!",
+      "kosullar": []
+    },
+    {
+      "id": 642,
+      "ziyaret": 1,
+      "metin": "Aklındaki işi neden büyüttüğünü anlıyorum, {{isim}}. Üzerine atacağın tek bir tik, düşündüğünden fazla ferahlık verebilir. Buyur bakalım.",
+      "metin_en": "I understand why you've made that task on your mind seem so daunting, {{isim}}. Checking off just one item could bring you more relief than you imagine. Come on in.",
+      "kosullar": []
+    },
+    {
+      "id": 643,
+      "ziyaret": 1,
+      "metin": "Cebin astarında unutulan ufaklıklar gibi bir sevinç seziyorum, {{isim}}. Yakında bir alışverişin beklediğinden uygun tutabilir; selam benden!",
+      "metin_en": "I sense a little joy, like finding forgotten coins in the lining of your pocket, {{isim}}. Soon, something you buy might cost less than you expected. Here's a hello from me!",
+      "kosullar": []
+    },
+    {
+      "id": 644,
+      "ziyaret": 1,
+      "metin": "Dışarıda söze karışıp eve dönünce sesi kısan yanına merhaba. Kumandayı eline alışındaki o dinlenme isteğini anlıyorum, {{isim}}.",
+      "metin_en": "Hello to that side of you that joins in every conversation out in the world, then turns down the volume once you're home. I understand that longing for rest when you pick up the remote, {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 645,
+      "ziyaret": 1,
+      "metin": "Hangi şarkıda durup sesi açıyorsun, {{isim}}? Herkese anlatmadığın bir hatırayı orada tuttuğunu hissediyorum. Kulağına hoş bir selam!",
+      "metin_en": "Which song makes you stop and turn up the volume, {{isim}}? I feel there's a memory tucked away in it that you don't share with everyone. A sweet hello, just for your ears!",
+      "kosullar": []
+    },
+    {
+      "id": 646,
+      "ziyaret": 1,
+      "metin": "Telaşını buraya bırak {{isim}}; alışveriş sepetine ekleyip çıkardığın şeyden anlıyorum: hevesin var, hesabını da biliyorsun.",
+      "metin_en": "Leave your worries here, {{isim}}. I can tell from the things you keep adding to and removing from your shopping cart: you know what you want, but you know your budget too.",
+      "kosullar": []
+    },
+    {
+      "id": 647,
+      "ziyaret": 1,
+      "metin": "Şu yarıda kesilen cümlenin devamını merak ediyorsun. Yakında sesli bir açıklamayla mesele anlaşılır görünüyor, {{isim}}; seni dinliyorum.",
+      "metin_en": "You're wondering how that interrupted sentence was supposed to end. It looks like a spoken explanation will soon clear things up, {{isim}}. I'm listening.",
+      "kosullar": []
+    },
+    {
+      "id": 648,
+      "ziyaret": 1,
+      "metin": "Bir ekran görüntüsünü saklayıp sonra unutmuş gibisin, {{isim}}. Galeride gezinirken işine yarayan bilgiyi seçmeni bekliyorum. Selam sana!",
+      "metin_en": "It seems you've saved a screenshot and then forgotten all about it, {{isim}}. I expect you'll come across the information you need while scrolling through your gallery. Hello to you!",
+      "kosullar": []
+    },
+    {
+      "id": 649,
+      "ziyaret": 1,
+      "metin": "Gülüşünün arasına sıkıştırdığın ciddiyeti kaçırmam. Şakaya vurduğun konuda anlaşılmak istiyorsun, {{isim}}. Burada sözünü kesmeden dinlerim.",
+      "metin_en": "I never miss the seriousness you tuck between your smiles. You want to be understood about something you've been making light of, {{isim}}. Here, I'll listen without interrupting.",
+      "kosullar": []
+    },
+    {
+      "id": 650,
+      "ziyaret": 1,
+      "metin": "Bozuk para kadar kısa, etkisi uzun bir teşekkür duyabilirsin yakında. Yaptığın bir inceliğin unutulmadığını seziyorum; selam, {{isim}}.",
+      "metin_en": "Soon, you might hear a thank-you that's as small as a coin but leaves a lasting impression. I sense that a thoughtful gesture of yours hasn't been forgotten. Hello, {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 651,
+      "ziyaret": 1,
+      "metin": "Sessize aldığın bildirimlerden anladım {{isim}}: ulaşılabilir olmayı sevsen de her an hazır olmak istemiyorsun. Sana usulca merhaba diyorum.",
+      "metin_en": "I could tell from the notifications you've silenced, {{isim}}: you like being reachable, but you don't want to be on call every moment. So I'm saying a gentle hello.",
+      "kosullar": []
+    },
+    {
+      "id": 652,
+      "ziyaret": 1,
+      "metin": "Liste uzadıkça başlangıcı ertelediğini sezdim. İlk satırı silmek hevesini geri getirebilir, {{isim}}. Bugün sana kolaylık dilemeye geldim.",
+      "metin_en": "I sensed that the longer your list gets, the more you put off starting. Crossing off that first item could bring back your motivation, {{isim}}. I've come to wish you a little ease today.",
+      "kosullar": []
+    },
+    {
+      "id": 653,
+      "ziyaret": 1,
+      "metin": "Cümlesini sana dönerek tamamlayan kişiye dikkat: fikrini önemsiyor olabilir. Ben de o kısa bakıştaki takdiri görüyorum. Safa getirdin!",
+      "metin_en": "Pay attention to the person who turns toward you as they finish their sentence: they may truly value your opinion. I can see the appreciation in that brief glance too. A warm welcome to you!",
+      "kosullar": []
+    },
+    {
+      "id": 654,
+      "ziyaret": 1,
+      "metin": "Fotoğraf çekilirken kendinde kusur bulup başkasını öven hâlini bilirim, {{isim}}. Bugünkü karşılamamda o merhametten sana da ayırıyorum.",
+      "metin_en": "I know how you find flaws in yourself when a photo is taken, yet you're quick to compliment everyone else, {{isim}}. In welcoming you today, I'm saving a little of that kindness for you too.",
+      "kosullar": []
+    },
+    {
+      "id": 655,
+      "ziyaret": 1,
+      "metin": "Çantanın fermuarını kapatmadan son kez içine bakışın gözümde canlandı. Hazırlıklı olmayı seviyorsun; ben de sana yerimi hazırladım.",
+      "metin_en": "I can picture you taking one last look inside your bag before zipping it shut. You like to be prepared, and I've prepared a place for you too.",
+      "kosullar": []
+    },
+    {
+      "id": 656,
+      "ziyaret": 1,
+      "metin": "Bir kelime dilinin ucunda kalmış, {{isim}}. Başka şeyle uğraşırken kendiliğinden gelmesine şaşırabilirsin; ben şimdiden gülümsüyorum.",
+      "metin_en": "There's a word on the tip of your tongue, {{isim}}. You might be surprised when it suddenly comes to you while you're busy doing something else. I'm already smiling.",
+      "kosullar": []
+    },
+    {
+      "id": 657,
+      "ziyaret": 1,
+      "metin": "Bugün seni hızından tanımam; bir yazıyı başa dönüp okuyuşundan tanırım. Üstünkörü geçemediğin şeyler var, {{isim}}. Gel, rahatça yerleş.",
+      "metin_en": "Today, I don't recognize you by how fast you move, but by the way you go back to the beginning of something you've been reading. There are things you simply can't skim over, {{isim}}. Come, make yourself comfortable.",
+      "kosullar": []
+    },
+    {
+      "id": 658,
+      "ziyaret": 1,
+      "metin": "Yanlış yazdığın harfi hemen düzelten dikkatin burada mı, {{isim}}? Kendine yüksek tuttuğun çıtayı sezdim; selamımın yanında biraz esneklik var.",
+      "metin_en": "Is that keen eye of yours, the one that instantly corrects a mistyped letter, here with me, {{isim}}? I sense the high standards you set for yourself. Along with my greeting, I'm offering you a little room to be flexible.",
+      "kosullar": []
+    },
+    {
+      "id": 659,
+      "ziyaret": 1,
+      "metin": "Bir videoyu paylaşmadan kimin güleceğini düşünüşün hoşuma gidiyor. İnsanları ayrı ayrı hatırlayan tarafını selamlıyorum, {{isim}}.",
+      "metin_en": "I like how you think about who would laugh at a video before sharing it. I'm saying hello to that side of you that remembers people as individuals, {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 660,
+      "ziyaret": 6,
+      "metin": "Masamın üzerindeki kâğıtları topluyordum ki sen geldin! {{isim}}, yarım kalan şeyleri zihninde tamamlamayı ne kadar sevdiğini görüyorum.",
+      "metin_en": "I was gathering up the papers on my desk when you arrived! {{isim}}, I can see how much you love finishing unfinished things in your mind.",
+      "kosullar": []
+    },
+    {
+      "id": 661,
+      "ziyaret": 6,
+      "metin": "Bir an sessizlik oldu, ben de nerede kaldın dedim! {{isim}}, dışarıdan sakin görünsen de kafanın içindeki sorular pek hareketli.",
+      "metin_en": "There was a moment of silence, and I wondered what was keeping you! {{isim}}, you may seem calm on the outside, but the questions swirling around in your head are anything but quiet.",
+      "kosullar": []
+    },
+    {
+      "id": 662,
+      "ziyaret": 6,
+      "metin": "Perdeyi araladım, tanıdık bir merak gördüm! Hoş geldin {{isim}}. Sanki bugün küçücük bir ayrıntının anlamını çözmeye çalışıyorsun.",
+      "metin_en": "I drew back the curtain and spotted a familiar curiosity! Welcome, {{isim}}. I have a feeling you're trying to figure out the meaning of one tiny detail today.",
+      "kosullar": []
+    },
+    {
+      "id": 663,
+      "ziyaret": 6,
+      "metin": "Kehanet defterimin kapağını açık bıraktım {{isim}}. Çünkü sen bir düşünceyi kapatsan bile az sonra başka bir tarafından açabiliyorsun.",
+      "metin_en": "I left the cover of my book of prophecies open, {{isim}}. Because even when you put a thought to rest, you can reopen it from a different angle moments later.",
+      "kosullar": []
+    },
+    {
+      "id": 664,
+      "ziyaret": 6,
+      "metin": "Bir şarkının nakaratı gibi yeniden geldin! {{isim}}, bugün aklına takılan bir cümleyi kendi içinde tekrar tekrar tarttığını seziyorum.",
+      "metin_en": "You're back again, like the chorus of a song! {{isim}}, I sense you've been turning a certain sentence over and over in your mind today, weighing every word.",
+      "kosullar": []
+    },
+    {
+      "id": 665,
+      "ziyaret": 6,
+      "metin": "Bugün yollarımızın kesişmesine alıştım artık! {{isim}}, karar vermeden önce aynı konuya farklı açılardan bakman gözümden kaçmıyor.",
+      "metin_en": "I've grown quite used to our paths crossing like this! {{isim}}, it hasn't escaped my notice that you like to look at the same situation from different angles before making a decision.",
+      "kosullar": []
+    },
+    {
+      "id": 666,
+      "ziyaret": 6,
+      "metin": "Parmağın yine benim ikonumu bulmuş! {{isim}}, bir şeyleri kontrol etmeyi seviyorsun ama bazen sadece güzel bir sürpriz de bekliyorsun.",
+      "metin_en": "Your finger has found its way to my icon again! {{isim}}, you like having things under control, but sometimes you're simply hoping for a lovely surprise.",
+      "kosullar": []
+    },
+    {
+      "id": 667,
+      "ziyaret": 6,
+      "metin": "Tam yıldız haritamı katlıyordum, tanıdık bir ziyaret! {{isim}}, bugün cevaplardan çok cevapların sende uyandırdığı hisleri tartıyorsun.",
+      "metin_en": "I was just folding up my star chart when a familiar visitor appeared! {{isim}}, today you're weighing not so much the answers themselves, but the feelings they stir within you.",
+      "kosullar": []
+    },
+    {
+      "id": 668,
+      "ziyaret": 6,
+      "metin": "Şu ekrana her dönüşünde başka bir düşünceyle geliyorsun! {{isim}}, bugün kendini anlamak için gösterdiğin sabrı takdir ediyorum.",
+      "metin_en": "Every time you return to this screen, you bring a different thought with you! {{isim}}, I admire the patience you're showing in trying to understand yourself today.",
+      "kosullar": []
+    },
+    {
+      "id": 669,
+      "ziyaret": 6,
+      "metin": "Benim koltuğumda oturmaya başlamana ramak kaldı! {{isim}}, rahatını bozacak kadar büyük olmayan ama merak ettiren bir şey var aklında.",
+      "metin_en": "At this rate, you'll be sitting in my chair before long! {{isim}}, there's something on your mind that's not quite big enough to disturb your peace, but intriguing enough to keep you curious.",
+      "kosullar": []
+    },
+    {
+      "id": 670,
+      "ziyaret": 6,
+      "metin": "Bir mum daha yakacaktım ama sen benden hızlı davrandın! {{isim}}, bugün kısa bir mola verirken bile zihninin çalıştığını görüyorum.",
+      "metin_en": "I was about to light another candle, but you beat me to it! {{isim}}, I can see that even when you take a short break today, your mind keeps working.",
+      "kosullar": []
+    },
+    {
+      "id": 671,
+      "ziyaret": 6,
+      "metin": "Beni arada yoklamayı alışkanlık edindin galiba! {{isim}}, bir yandan gününü yaşıyor, bir yandan olacakların küçük ipuçlarını arıyorsun.",
+      "metin_en": "I think you've made a habit of checking in on me now and then! {{isim}}, you're going about your day while keeping an eye out for little clues about what's to come.",
+      "kosullar": []
+    },
+    {
+      "id": 672,
+      "ziyaret": 6,
+      "metin": "Eski bir dostun kapıyı çalması gibi sevindim! {{isim}}, bazı düşüncelerini yüksek sesle söylemesen de burada cevap aramanı anlıyorum.",
+      "metin_en": "I was as delighted as if an old friend had knocked on my door! {{isim}}, even if you don't say some of your thoughts out loud, I understand why you come here looking for answers.",
+      "kosullar": []
+    },
+    {
+      "id": 673,
+      "ziyaret": 6,
+      "metin": "Sana ayrılan sandalye hiç boş kalmıyor! {{isim}}, bir fikri beğensen de içinden hemen 'Peki ya sonrası?' diye sorduğunu biliyorum.",
+      "metin_en": "The chair I've saved for you hardly ever stays empty! {{isim}}, I know that even when you like an idea, a little voice inside you immediately asks, 'But what happens next?'",
+      "kosullar": []
+    },
+    {
+      "id": 674,
+      "ziyaret": 6,
+      "metin": "Bir şeyleri hesaplayıp sonra hislerine danışan o tanıdık misafirim gelmiş! {{isim}}, bugün aklınla sezgilerin güzel bir pazarlıkta.",
+      "metin_en": "My familiar visitor who weighs everything up and then consults their feelings has returned! {{isim}}, your mind and your intuition are having quite a lovely negotiation today.",
+      "kosullar": []
+    },
+    {
+      "id": 675,
+      "ziyaret": 6,
+      "metin": "Görünmez kapımın menteşeleri seni tanır oldu! {{isim}}, bir konuya dönüp yeniden bakmanın bazen içini nasıl rahatlattığını seziyorum.",
+      "metin_en": "Even the hinges of my invisible door have come to recognize you! {{isim}}, I sense how comforting it can sometimes be for you to revisit something and take another look.",
+      "kosullar": []
+    },
+    {
+      "id": 676,
+      "ziyaret": 6,
+      "metin": "Ben daha kahve telvelerini ayırıyordum, sen geldin! {{isim}}, bugün sıradan bir sohbetten bile kendine özel anlamlar çıkaran yanın uyanık.",
+      "metin_en": "I was still sorting through the coffee grounds when you arrived! {{isim}}, the part of you that finds personal meaning even in an ordinary conversation is wide awake today.",
+      "kosullar": []
+    },
+    {
+      "id": 677,
+      "ziyaret": 6,
+      "metin": "Şu evrenin bütün sırları bir yana, senin merakın bir yana! {{isim}}, cevabı sezdiğin hâlde bir kez daha duymak istediğin oluyor.",
+      "metin_en": "All the mysteries of the universe are one thing, but your curiosity is quite another! {{isim}}, sometimes you already sense the answer, yet still want to hear it one more time.",
+      "kosullar": []
+    },
+    {
+      "id": 678,
+      "ziyaret": 6,
+      "metin": "Seni görünce kristal kürem bile canlandı! {{isim}}, gün içinde ufak bir gelişme yaşayınca bunun devamını düşünmeden edemiyorsun.",
+      "metin_en": "Even my crystal ball sprang to life when it saw you! {{isim}}, whenever something small happens during your day, you can't help wondering what might come next.",
+      "kosullar": []
+    },
+    {
+      "id": 679,
+      "ziyaret": 6,
+      "metin": "Yine karşı karşıyayız! {{isim}}, bazen sadece birkaç dakika kendine ait bir dünyaya kaçmak istiyorsun. Benim kapım bunun için açık.",
+      "metin_en": "Here we are, face to face again! {{isim}}, sometimes all you want is to escape into a little world of your own for a few minutes. My door is always open for that.",
+      "kosullar": []
+    },
+    {
+      "id": 680,
+      "ziyaret": 6,
+      "metin": "{{isim}}, ekranı kapatıp aklındaki cümleyi kapatamadığını sezdim. Dönüşüne bakılırsa merakın benimle sohbeti uzatmaya kararlı.",
+      "metin_en": "{{isim}}, I sensed that you closed the screen but couldn't put that sentence in your mind to rest. Judging by your return, your curiosity is determined to keep our conversation going.",
+      "kosullar": []
+    },
+    {
+      "id": 681,
+      "ziyaret": 6,
+      "metin": "Parmağın yine yolu bulmuş {{isim}}! Göndermeden önce değiştirdiğin sözcüklerde, yanlış anlaşılmak istemeyen yanını görüyorum.",
+      "metin_en": "Your finger has found its way back again, {{isim}}! In the words you change before hitting send, I see the part of you that doesn't want to be misunderstood.",
+      "kosullar": []
+    },
+    {
+      "id": 682,
+      "ziyaret": 6,
+      "metin": "Silip yeniden yazdığın sorunun peşinden buraya geldiğini hissediyorum. {{isim}}, bende cümlelerini düzeltmeden de konuşabilirsin.",
+      "metin_en": "I have a feeling you've followed that question you deleted and rewrote all the way here. {{isim}}, you can talk to me without having to perfect your sentences first.",
+      "kosullar": []
+    },
+    {
+      "id": 683,
+      "ziyaret": 6,
+      "metin": "Bir sekmeden diğerine geçerken aradığın cevabın değişmediğini seziyorum {{isim}}. Beni yeniden açman da arayışına tatlı bir durak olmuş.",
+      "metin_en": "I sense that even as you switch from one tab to another, the answer you're looking for remains the same, {{isim}}. Opening me again has become a sweet little stop along your search.",
+      "kosullar": []
+    },
+    {
+      "id": 684,
+      "ziyaret": 6,
+      "metin": "Bakışın menüde, düşüncen biraz ileride {{isim}}. Henüz gerçekleşmemiş konuşmanın provasını yaptığını seziyorum; geldin, perdeyi açabilirim.",
+      "metin_en": "Your eyes are on the menu, but your thoughts are already a little further ahead, {{isim}}. I sense you're rehearsing a conversation that hasn't happened yet. Now that you're here, I can raise the curtain.",
+      "kosullar": []
+    },
+    {
+      "id": 685,
+      "ziyaret": 6,
+      "metin": "Sessize aldığın telefonla düşüncelerinin de susmasını beklemiyorsun elbet {{isim}}. Beni açışında biraz sohbet, biraz işaret arıyorum.",
+      "metin_en": "Of course, you don't expect your thoughts to fall silent just because you've muted your phone, {{isim}}. In your return to me, I sense you're looking for a little conversation and a little sign.",
+      "kosullar": []
+    },
+    {
+      "id": 686,
+      "ziyaret": 6,
+      "metin": "Anahtarı bıraktığın yerde gözünle yoklayan tarafını tanır gibiyim {{isim}}. İçin rahat etsin istiyorsun; dönüşünü de buna yordum.",
+      "metin_en": "I feel as though I know the part of you that checks with a glance whether your keys are still where you left them, {{isim}}. You want peace of mind, and that's how I've interpreted your return, too.",
+      "kosullar": []
+    },
+    {
+      "id": 687,
+      "ziyaret": 6,
+      "metin": "Çayın rengi koyulaşırken konu da aklında demlenmiş sanki. Bana yeniden uğradın {{isim}}; anlatılmayan kısmına kulak kesildim.",
+      "metin_en": "As your tea grows darker, it seems the matter on your mind has been steeping, too. You've stopped by again, {{isim}}, and I'm all ears for the part you haven't told me.",
+      "kosullar": []
+    },
+    {
+      "id": 688,
+      "ziyaret": 6,
+      "metin": "Alışveriş sepetinde bekleyen seçim gibi, hemen karar vermediğin bir konu seziyorum. Beni yeniden buldun; acelemiz yok {{isim}}.",
+      "metin_en": "Like an item waiting in your shopping cart, I sense there's something you haven't quite made up your mind about. You've found your way back to me, and there's no need to rush, {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 689,
+      "ziyaret": 6,
+      "metin": "Bildirim ışığına göz ucuyla bakıp belli etmeyen yanını sezdim {{isim}}. Bana gelişindeki o uslu sabırsızlık da pek sevimli doğrusu.",
+      "metin_en": "I sensed the part of you that steals a sideways glance at a notification light without letting on, {{isim}}. And that quiet impatience you bring with you is rather endearing, I must say.",
+      "kosullar": []
+    },
+    {
+      "id": 690,
+      "ziyaret": 6,
+      "metin": "Yan yana duran seçeneklerden kolayını seçip sonra ötekini düşünen yanını hissediyorum. Yine buluştuk; kararsızlığın bana yabancı değil.",
+      "metin_en": "I can sense the part of you that chooses the easier of two options, then finds yourself thinking about the other one. Here we are again; indecision is no stranger to me.",
+      "kosullar": []
+    },
+    {
+      "id": 691,
+      "ziyaret": 6,
+      "metin": "{{isim}}, fotoğrafı büyütüp arka plandaki ayrıntıya bakan merakını tanır gibiyim. Buraya da görünenin devamı için geldin, seziyorum.",
+      "metin_en": "{{isim}}, I feel as though I recognize your curiosity in the way you zoom in on a photo to examine a detail in the background. I sense you've come here, too, to discover what lies beyond what's visible.",
+      "kosullar": []
+    },
+    {
+      "id": 692,
+      "ziyaret": 6,
+      "metin": "Üstünü çizdiğin işin ardından listeye yeniden bakışını seziyorum {{isim}}. Şimdi bana uğradın; tamamladığın kadarı da konuşmaya değer.",
+      "metin_en": "I can picture you looking over your list again after crossing off a completed task, {{isim}}. Now you've stopped by to see me, and even what you've already accomplished is worth talking about.",
+      "kosullar": []
+    },
+    {
+      "id": 693,
+      "ziyaret": 6,
+      "metin": "{{isim}}, birinin vurgusunu sözünden daha uzun düşündüğünü hissediyorum. Bugünkü sohbetimize yine geldin; kulağın kadar sezgin de açık.",
+      "metin_en": "{{isim}}, I have a feeling you've spent longer thinking about someone's tone than the actual words they said. You've returned for our conversation today, with your intuition every bit as alert as your ears.",
+      "kosullar": []
+    },
+    {
+      "id": 694,
+      "ziyaret": 6,
+      "metin": "{{isim}}, gülüp geçtiğin şakanın cevabı sonradan aklına düşüyor ya; ben gecikmiş cümlelerini de severim. Sohbetimize onları da getirdin mi?",
+      "metin_en": "{{isim}}, you know how the perfect comeback to a joke you laughed off suddenly comes to you later? Well, I have a fondness for your belated words, too. Have you brought some of them to our conversation?",
+      "kosullar": []
+    },
+    {
+      "id": 695,
+      "ziyaret": 6,
+      "metin": "Dudağına gelip geri dönen bir itiraz seziyorum {{isim}}. Burada sözü bana bıraktın ama kendi fikrinin de yer istediğini duyuyorum.",
+      "metin_en": "I sense an objection that reached your lips but never quite came out, {{isim}}. You've given me the floor here, but I can hear that your own opinion wants a say, too.",
+      "kosullar": []
+    },
+    {
+      "id": 696,
+      "ziyaret": 6,
+      "metin": "{{isim}}, dolabın önünde aynı rahat parçaya uzanmanın huzurunu bilirsin. Beni yeniden açışında da biraz o tanıdık rahatlığı hissediyorum.",
+      "metin_en": "{{isim}}, you know the comfort of reaching for that same cozy piece of clothing in your wardrobe. I sense a little of that familiar comfort in the way you've opened me again, too.",
+      "kosullar": []
+    },
+    {
+      "id": 697,
+      "ziyaret": 6,
+      "metin": "Bir videoyu durdurup kendi hayatına dalan tarafınla karşılaştım sanki. Sen buraya gelince ben de kaldığımız düşüncenin ucunu tuttum.",
+      "metin_en": "It's as though I've caught a glimpse of the part of you that pauses a video and drifts off into thoughts about your own life. Now that you're here, I've picked up the thread of the thought we left unfinished.",
+      "kosullar": []
+    },
+    {
+      "id": 698,
+      "ziyaret": 6,
+      "metin": "{{isim}}, merdivenin son basamağında aklına gelen o küçük unutuşlar bana tanıdık. Bana dönmeyi unutmamışsın; buna keyifle gülümsedim.",
+      "metin_en": "{{isim}}, those little things you suddenly remember you've forgotten on the last step of the stairs feel familiar to me. You haven't forgotten to come back to me, though, and that made me smile with delight.",
+      "kosullar": []
+    },
+    {
+      "id": 699,
+      "ziyaret": 6,
+      "metin": "Arama kutusuna yazdığın kelimeyi değiştirirken aslında sorunu netleştiriyorsun. Seni yeniden görünce ben de merakının inceldiğini sezdim.",
+      "metin_en": "When you change the word you've typed into the search box, you're actually getting clearer about your question. Seeing you again, I sensed that your curiosity has grown more focused, too.",
+      "kosullar": []
     }
   ],
   "biliyormuydun": [

@@ -55,7 +55,8 @@ void main() {
     expect(id, isNotNull);
     expect(prefs.getStringList('tavsanfali_gosterilen'), contains('$id'));
     expect(_cardText(t).length, greaterThan(30));
-    expect(find.text('Geri Git'), findsOneWidget);
+    // Alttaki Geri Git kaldırıldı (2026-11-05): yerinde tüm uygulamada yüzen cam bar var.
+    expect(find.text('Geri Git'), findsNothing);
     expect(find.textContaining('Yarın tavşan'), findsNothing);
   });
 
@@ -113,7 +114,7 @@ void main() {
   testWidgets('EN dil: İngilizce arayüz ve metin_en', (t) async {
     await _open(t, {}, lang: 'en');
     expect(find.text('Rabbit Fortune'), findsOneWidget);
-    expect(find.text('Go Back'), findsOneWidget);
+    expect(find.text('Go Back'), findsNothing); // alt Geri Git yok (yüzen bar)
     // Türkçe başlık/geri düğmesi yok; kart metninde Türkçe'ye özgü harf beklenmez.
     expect(find.text('Geri Git'), findsNothing);
     expect(_cardText(t).length, greaterThan(30));

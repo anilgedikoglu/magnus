@@ -18,6 +18,7 @@ import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 import '../../data/services/claude_vision_service.dart';
 import 'package:uuid/uuid.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 
 enum _YFAdim { secim, analiz, hatali, sonuc }
 
@@ -272,6 +273,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
                 _YFAdim.sonuc  => _buildSonuc(),
               },
             ),
+            const FloatingBarSpacer(),
           ],
         ),
       ),

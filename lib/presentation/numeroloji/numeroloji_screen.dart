@@ -23,6 +23,7 @@ import 'package:uuid/uuid.dart';
 import '../../core/utils/numeroloji_hesap.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/inbox_item.dart';
@@ -239,9 +240,14 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
   @override
   Widget build(BuildContext context) {
     final topPad    = MediaQuery.of(context).padding.top;
-    final bottomPad = MediaQuery.of(context).padding.bottom;
 
-    return SwipeBack(
+    return PopScope(
+      // Sonuç görünürken Android geri tuşu seçime döner; seçimde ekrandan çıkar.
+      canPop: !(_secilen != null && _cachedMetin != null),
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) setState(() { _secilen = null; _cachedMetin = null; });
+      },
+      child: SwipeBack(
       onSwipeBack: () {
         if (_secilen != null && _cachedMetin != null) {
           setState(() { _secilen = null; _cachedMetin = null; });
@@ -316,23 +322,24 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
                 ),
               ),
               const SizedBox(height: 12),
-              Expanded(child: _buildBody(bottomPad)),
+              Expanded(child: _buildBody()),
             ],
           ),
         ],
       ),
       ),
+      ),
     );
   }
 
-  Widget _buildBody(double bottomPad) {
+  Widget _buildBody() {
     if (_json == null) {
       return const Center(child: CircularProgressIndicator(
         color: Color(0xFF9977FF), strokeWidth: 2));
     }
     if (_loading) return _buildLoading();
-    if (_cachedMetin != null) return _buildSonuc(bottomPad);
-    return _buildSecim(bottomPad);
+    if (_cachedMetin != null) return _buildSonuc();
+    return _buildSecim();
   }
 
   // ─── Kum saati yükleme ekranı ─────────────────────────────────────────────
@@ -360,7 +367,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
 
   // ─── Seçim ekranı ─────────────────────────────────────────────────────────
 
-  Widget _buildSecim(double bottomPad) {
+  Widget _buildSecim() {
     return Column(
       children: [
         const Spacer(),
@@ -386,40 +393,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
           ),
         ),
         const Spacer(),
-        Padding(
-          padding: EdgeInsets.fromLTRB(20, 0, 20, bottomPad + 16),
-          child: GestureDetector(
-            onTap: () => context.pop(),
-            child: Container(
-              width: double.infinity,
-              height: 48,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.10),
-                borderRadius: BorderRadius.circular(23),
-                border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.25),
-                  width: 1.2,
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.chevron_left_rounded,
-                      color: Colors.white, size: 20),
-                  const SizedBox(width: 2),
-                  Text(
-                    ref.read(l10nProvider).backButton,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
+        const FloatingBarSpacer(),
       ],
     );
   }
@@ -522,9 +496,9 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
 
   // ─── Sonuç (cache'ten) ekranı ─────────────────────────────────────────────
 
-  Widget _buildSonuc(double bottomPad) {
+  Widget _buildSonuc() {
     return ListView(
-      padding: EdgeInsets.fromLTRB(16, 0, 16, bottomPad + 24),
+      padding: EdgeInsets.fromLTRB(16, 0, 16, floatingBarInset(context)),
       children: [
         Center(
           child: Container(
@@ -555,30 +529,6 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
             style: const TextStyle(color: Colors.white, fontSize: 14, height: 1.80),
           ),
         ),
-        const SizedBox(height: 24),
-        GestureDetector(
-          onTap: () => setState(() { _secilen = null; _cachedMetin = null; }),
-          child: Container(
-            width: double.infinity, height: 48,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.10),
-              borderRadius: BorderRadius.circular(23),
-              border: Border.all(
-                color: Colors.white.withValues(alpha: 0.25), width: 1.2),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                const SizedBox(width: 2),
-                Text(ref.read(l10nProvider).backButton,
-                  style: const TextStyle(color: Colors.white, fontSize: 15,
-                      fontWeight: FontWeight.w500)),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(height: 8),
       ],
     );
   }

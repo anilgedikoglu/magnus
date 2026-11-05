@@ -27,6 +27,7 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 
 // ─── Kart veritabanı ──────────────────────────────────────────────────────────
 
@@ -313,7 +314,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
             _buildDeck(),
             const Spacer(),
             _buildGoButton(),
-            const SizedBox(height: 24),
+            const FloatingBarSpacer(),
           ],
         ), // Column
       ), // PopScope

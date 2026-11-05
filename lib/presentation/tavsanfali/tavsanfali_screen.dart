@@ -14,6 +14,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
@@ -338,11 +339,11 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
                     ),
                   ),
                 ),
-              // Alt alan: durum yazısı → not + Geri Git
+              // Alt alan: durum yazısı → not (yüzen barın üstünde)
               Positioned(
                 left: 20,
                 right: 20,
-                bottom: 20,
+                bottom: floatingBarInset(context),
                 child: done ? _bottomDone(isEn) : _statusText(isEn),
               ),
             ],
@@ -471,30 +472,6 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
               style: const TextStyle(color: Colors.white70, fontSize: 14),
             ),
           ),
-        SizedBox(
-          width: double.infinity,
-          child: GestureDetector(
-            onTap: () => context.pop(),
-            child: Container(
-              height: 48,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.10),
-                borderRadius: BorderRadius.circular(23),
-                border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                  const SizedBox(width: 2),
-                  Text(isEn ? 'Go Back' : 'Geri Git',
-                      style: const TextStyle(
-                          color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
-                ],
-              ),
-            ),
-          ),
-        ),
       ],
     );
   }

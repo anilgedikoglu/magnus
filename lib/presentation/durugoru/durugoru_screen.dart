@@ -16,6 +16,7 @@ import 'package:uuid/uuid.dart';
 
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/models/user_profile.dart';
@@ -261,32 +262,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
           ],
         ),
       ),
-      // Geri Git — dert ortağı standardı
-      SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 18),
-          child: GestureDetector(
-            onTap: () => context.pop(),
-            child: Container(
-              width: double.infinity,
-              height: 46,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.10),
-                borderRadius: BorderRadius.circular(23),
-                border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                  const SizedBox(width: 2),
-                  Text(ref.read(l10nProvider).backButton, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500)),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
+      const FloatingBarSpacer(),
     ]);
   }
 

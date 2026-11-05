@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
@@ -153,10 +154,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
                     },
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 4, 20, 16),
-                  child: _geriGit(),
-                ),
+                const FloatingBarSpacer(),
               ],
             ),
           ),
@@ -419,27 +417,5 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
       ),
     );
   }
-
-  Widget _geriGit() {
-    return GestureDetector(
-      onTap: () => context.pop(),
-      child: Container(
-        height: 46,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(23),
-          color: Colors.white.withValues(alpha: 0.10),
-          border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-            const SizedBox(width: 2),
-            Text(ref.watch(l10nProvider).backButton,
-                style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
-          ],
-        ),
-      ),
-    );
-  }
 }
+

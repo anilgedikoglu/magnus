@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
@@ -152,7 +153,6 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
   @override
   Widget build(BuildContext context) {
     final topPad    = MediaQuery.of(context).padding.top;
-    final bottomPad = MediaQuery.of(context).padding.bottom;
 
     return SwipeBack(
       onSwipeBack: () => context.pop(),
@@ -196,7 +196,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                 )
               : FadeTransition(
                   opacity: _fadeAnim,
-                  child: _buildContent(topPad, bottomPad),
+                  child: _buildContent(topPad),
                 ),
         ],
       ),
@@ -233,7 +233,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
     // _zatenKaydedildi = true olarak kalır — buton pasif
   }
 
-  Widget _buildContent(double topPad, double bottomPad) {
+  Widget _buildContent(double topPad) {
     final entry = _bugunEntry;
     if (entry == null) return const SizedBox.shrink();
 
@@ -336,7 +336,7 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
           ),  // Expanded
         // ── Alt alan: butonlar / onay mesajı ───────────────────────────
         Padding(
-          padding: EdgeInsets.fromLTRB(20, 4, 20, bottomPad + 16),
+          padding: EdgeInsets.fromLTRB(20, 4, 20, floatingBarInset(context)),
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 300),
             child: _kaydedildi
@@ -366,42 +366,6 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                     height: 52,
                     child: Row(
                       children: [
-                        // Geri Git
-                        Expanded(
-                          child: GestureDetector(
-                            onTap: () => context.pop(),
-                            child: Container(
-                              height: 52,
-                              decoration: BoxDecoration(
-                                color: Colors.white.withValues(alpha: 0.08),
-                                borderRadius: BorderRadius.circular(14),
-                                border: Border.all(
-                                  color: Colors.white.withValues(alpha: 0.2),
-                                  width: 1,
-                                ),
-                              ),
-                              child: Center(
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    const Icon(Icons.chevron_left_rounded,
-                                        color: Colors.white, size: 20),
-                                    const SizedBox(width: 2),
-                                    Text(
-                                      s.backButton,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 12),
                         // Kaydet
                         Expanded(
                           child: GestureDetector(

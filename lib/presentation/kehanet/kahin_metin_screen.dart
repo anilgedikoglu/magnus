@@ -11,6 +11,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:video_player/video_player.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 
 class KahinMetinScreen extends ConsumerStatefulWidget {
@@ -190,6 +191,7 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
                 ),
               ),
             ),
+            const FloatingBarSpacer(),
           ],
         ),
       ),

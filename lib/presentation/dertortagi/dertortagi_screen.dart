@@ -17,6 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -241,13 +242,23 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
   Widget build(BuildContext context) {
     return SwipeBack(
       onSwipeBack: _geriDon,
-      child: Scaffold(
-      backgroundColor: const Color(0xFF0A0718),
-      body: _ilkYukleme
-          ? const Center(child: CircularProgressIndicator(color: Color(0xFFAA88FF)))
-          : _limitDoldu
-              ? _buildLimitSayfasi()
-              : FadeTransition(opacity: _fadeAnim, child: _buildAdim()),
+      // Android geri tuşu: ara adımlarda (dert / yükleniyor) önce bir önceki adıma döner.
+      child: PopScope(
+        canPop: _ilkYukleme ||
+            _limitDoldu ||
+            _adim == _DertAdim.kategori ||
+            _adim == _DertAdim.derman,
+        onPopInvokedWithResult: (didPop, _) {
+          if (!didPop) _geriDon();
+        },
+        child: Scaffold(
+          backgroundColor: const Color(0xFF0A0718),
+          body: _ilkYukleme
+              ? const Center(child: CircularProgressIndicator(color: Color(0xFFAA88FF)))
+              : _limitDoldu
+                  ? _buildLimitSayfasi()
+                  : FadeTransition(opacity: _fadeAnim, child: _buildAdim()),
+        ),
       ),
     );
   }
@@ -296,13 +307,14 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
               ),
             ),
           ),
+          const FloatingBarSpacer(),
         ],
       ),
     );
   }
 
   // ─────────────────────────────────────────────────────────────────────────────
-  // Kategori seçimi (dikeyde ortalı, alta geri butonu)
+  // Kategori seçimi (dikeyde ortalı, altta yüzen bar boşluğu)
   // ─────────────────────────────────────────────────────────────────────────────
 
   Widget _buildKategoriSayfasi() {
@@ -353,15 +365,14 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
               );
             }),
           ),
-          // Alt geri butonu
-          _buildAltGeriButonu(),
+          const FloatingBarSpacer(),
         ],
       ),
     );
   }
 
   // ─────────────────────────────────────────────────────────────────────────────
-  // Dert seçimi (dikeyde ortalı, alta geri butonu)
+  // Dert seçimi (dikeyde ortalı, altta yüzen bar boşluğu)
   // ─────────────────────────────────────────────────────────────────────────────
 
   Widget _buildDertSayfasi() {
@@ -376,7 +387,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
                     style: const TextStyle(color: Colors.white54), textAlign: TextAlign.center),
               ),
             ),
-            _buildAltGeriButonu(),
+            const FloatingBarSpacer(),
           ],
         ),
       );
@@ -424,7 +435,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
               );
             }),
           ),
-          _buildAltGeriButonu(),
+          const FloatingBarSpacer(),
         ],
       ),
     );
@@ -468,6 +479,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
               ),
             ),
           ),
+          const FloatingBarSpacer(),
         ],
       ),
     );
@@ -527,7 +539,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
           ),
           // Kapat
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 4, 20, 16),
+            padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
             child: GestureDetector(
               onTap: () => context.pop(),
               child: Container(
@@ -548,6 +560,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
               ),
             ),
           ),
+          const FloatingBarSpacer(),
         ],
       ),
     );
@@ -578,35 +591,6 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
           ),
           const SizedBox(width: 44),
         ],
-      ),
-    );
-  }
-
-  Widget _buildAltGeriButonu() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 8, 20, 18),
-      child: GestureDetector(
-        onTap: _geriDon,
-        child: Container(
-          width: double.infinity,
-          height: 46,
-          decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(23),
-            border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              const SizedBox(width: 2),
-              Text(
-                ref.read(l10nProvider).backButton,
-                style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500),
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }

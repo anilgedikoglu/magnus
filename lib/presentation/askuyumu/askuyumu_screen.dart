@@ -15,6 +15,7 @@ import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
 
@@ -459,41 +460,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
           ],
         ),
       ),
-      Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
-        child: GestureDetector(
-          onTap: () => context.pop(),
-          child: Container(
-            height: 44,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.10),
-              borderRadius: BorderRadius.circular(23),
-              border: Border.all(
-                color: Colors.white.withValues(alpha: 0.25),
-                width: 1,
-              ),
-            ),
-            child: Center(
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.chevron_left_rounded,
-                      color: Colors.white, size: 20),
-                  const SizedBox(width: 2),
-                  Text(
-                    ref.read(l10nProvider).backButton,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
+      const FloatingBarSpacer(),
     ]);
   }
 
@@ -649,8 +616,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
           children: [
             for (final bar in results) _buildBarCard(bar),
             const SizedBox(height: 8),
-            _buildExitButton(),
-            const SizedBox(height: 18),
+            const FloatingBarSpacer(),
           ],
         ),
       ),
@@ -717,36 +683,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                   )
                 : const SizedBox.shrink(),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildExitButton() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-      child: GestureDetector(
-        onTap: () => context.pop(),
-        child: Container(
-          width: double.infinity,
-          height: 46,
-          decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(23),
-            border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              const SizedBox(width: 2),
-              Text(ref.watch(l10nProvider).exit,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500)),
-            ],
-          ),
         ),
       ),
     );

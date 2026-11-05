@@ -18,6 +18,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/swipe_back.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../../data/models/user_profile.dart';
 
@@ -197,7 +198,6 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
 
   @override
   Widget build(BuildContext context) {
-    final bottomPad = MediaQuery.of(context).padding.bottom;
 
     return SwipeBack(
       onSwipeBack: () => context.pop(),
@@ -245,7 +245,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
                           color: Color(0xFFD4AF37), strokeWidth: 2))
                       : _hakDoldu
                           ? _buildHakDoldu()
-                          : _buildContent(context, bottomPad),
+                          : _buildContent(context),
                 ),
               ],
             ),
@@ -348,7 +348,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
 
   // ─── Metin içeriği ────────────────────────────────────────────────────────
 
-  Widget _buildContent(BuildContext context, double bottomPad) {
+  Widget _buildContent(BuildContext context) {
     final metin = _metin ?? '';
 
     final bookCard = Container(
@@ -465,40 +465,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
             ),
           ),
         ),
-        // Geri Git — her zaman altta sabit
-        Padding(
-          padding: EdgeInsets.fromLTRB(20, 4, 20, bottomPad + 16),
-          child: GestureDetector(
-            onTap: () => context.pop(),
-            child: Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(vertical: 14),
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.08),
-                borderRadius: BorderRadius.circular(23),
-                border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.20),
-                  width: 1,
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                  const SizedBox(width: 2),
-                  Text(
-                    ref.read(l10nProvider).backButton,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
+        const FloatingBarSpacer(),
       ],
     );
   }

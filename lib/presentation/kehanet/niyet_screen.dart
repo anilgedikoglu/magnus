@@ -11,6 +11,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
 
@@ -210,39 +211,7 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
                 child: AnimatedSwitcher(
                   duration: const Duration(milliseconds: 400),
                   child: _adim == _NiyetAdim.tamamlandi
-                      ? Padding(
-                          key: const ValueKey('kapat'),
-                          padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
-                          child: GestureDetector(
-                            onTap: () => context.pop(),
-                            child: Container(
-                              width: double.infinity,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.white.withValues(alpha: 0.10),
-                                borderRadius: BorderRadius.circular(23),
-                                border: Border.all(
-                                  color: Colors.white.withValues(alpha: 0.25),
-                                  width: 1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Icon(Icons.chevron_left_rounded,
-                                      color: Colors.white, size: 20),
-                                  const SizedBox(width: 2),
-                                  Text(ref.read(l10nProvider).backButton,
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                      )),
-                                ],
-                              ),
-                            ),
-                          ),
-                        )
+                      ? const SizedBox(key: ValueKey('kapat'))
                       : Padding(
                           key: const ValueKey('talim'),
                           padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
@@ -269,6 +238,7 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
                         ),
                 ),
               ),
+              const FloatingBarSpacer(),
             ],
           ],
         ),

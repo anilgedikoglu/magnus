@@ -13,6 +13,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 enum _EFAdim { secim, analiz, sonuc }
 
 class ElFaliScreen extends ConsumerStatefulWidget {
@@ -176,6 +177,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
                 _EFAdim.sonuc  => _buildSonuc(),
               },
             ),
+            const FloatingBarSpacer(),
           ],
         ),
       ),
@@ -259,27 +261,6 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               'El falı günde 1 kez bakılabilir.\nYarın tekrar gel.',
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 15, height: 1.6),
-            ),
-            const SizedBox(height: 36),
-            GestureDetector(
-              onTap: () => context.pop(),
-              child: Container(
-                width: double.infinity,
-                height: 44,
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.10),
-                  borderRadius: BorderRadius.circular(23),
-                  border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                    const SizedBox(width: 2),
-                    Text(ref.read(l10nProvider).backButton, style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
-                  ],
-                ),
-              ),
             ),
           ],
         ),

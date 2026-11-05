@@ -78,7 +78,10 @@ const Duration _kLiftUp = Duration(milliseconds: 130);
 
 class GlassTabBar extends StatefulWidget {
   /// 0 = Ana Menü, 1 = Gelen Kutusu, 2 = Kullanıcı Bilgileri.
-  final int selected;
+  /// null = SEÇİMSİZ (bar bir fal ekranının üstünde yüzüyor; Anıl 2026-11-05): kapsül yok,
+  /// tüm ikonlar beyaz. Dokununca seçili faza geçiş: kapsül o slotta cam damla olarak
+  /// belirip yaylı inişle bara oturur (iOS 26 Liquid Glass temsili).
+  final int? selected;
   final ValueChanged<int> onTap;
 
   /// Zarftaki nokta durumu.
@@ -118,7 +121,11 @@ class _GlassTabBarState extends State<GlassTabBar>
   static const _spring = SpringDescription(mass: 1, stiffness: 420, damping: 36);
 
   late final AnimationController _pos =
-      AnimationController.unbounded(vsync: this, value: widget.selected.toDouble());
+      AnimationController.unbounded(vsync: this, value: (widget.selected ?? 0).toDouble());
+
+  /// Kapsülün var olma oranı: 1 = seçili sekme var, 0 = seçimsiz (fal ekranında).
+  late final AnimationController _presence = AnimationController.unbounded(
+      vsync: this, value: widget.selected == null ? 0 : 1);
 
   /// Havalanma: 0 = bara oturmuş düz kapsül, 1 = tam havada damla (inişte biraz <0 = ezilme).
   late final AnimationController _lift = AnimationController.unbounded(vsync: this);
@@ -132,7 +139,7 @@ class _GlassTabBarState extends State<GlassTabBar>
   @override
   void initState() {
     super.initState();
-    _target = widget.selected;
+    _target = widget.selected ?? 0;
     _pos.addListener(_checkLanding);
     if (_lens == null) {
       loadGlassLens().then((p) {
@@ -144,13 +151,51 @@ class _GlassTabBarState extends State<GlassTabBar>
   @override
   void didUpdateWidget(covariant GlassTabBar old) {
     super.didUpdateWidget(old);
-    if (old.selected != widget.selected) _moveTo(widget.selected);
+    final n = widget.selected;
+    if (old.selected == n) return;
+    if (n == null) {
+      _vanish();
+    } else if (old.selected == null) {
+      _appear(n);
+    } else {
+      _moveTo(n);
+    }
+  }
+
+  bool get _reduce => MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+
+  /// Seçimsiz faza: kapsül hafifçe havalanıp solarak kaybolur.
+  void _vanish() {
+    _airborne = false;
+    if (_reduce) {
+      _presence.value = 0;
+      _lift.value = 0;
+      return;
+    }
+    _presence.animateTo(0, duration: const Duration(milliseconds: 200), curve: Curves.easeOutCubic);
+    _lift.animateTo(0.6, duration: const Duration(milliseconds: 200), curve: Curves.easeOutCubic);
+  }
+
+  /// Seçimsizden seçiliye (Anıl: "seçisiz fazdan seçili faza geçiş için bir animasyon,
+  /// liquid glass'ı temsilen"): kapsül dokunulan slotta HAVADA bir cam damla olarak belirir
+  /// (alttaki ikonu büyütür), yaylı inişle hafif ezilerek bara oturur; ikon maviye döner.
+  void _appear(int index) {
+    _target = index;
+    _airborne = false;
+    _pos.value = index.toDouble();
+    if (_reduce) {
+      _presence.value = 1;
+      _lift.value = 0;
+      return;
+    }
+    _presence.animateTo(1, duration: const Duration(milliseconds: 150), curve: Curves.easeOutCubic);
+    _lift.value = 1;
+    _lift.animateWith(SpringSimulation(_landSpring, 1, 0, 0));
   }
 
   void _moveTo(int index) {
     _target = index;
-    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-    if (reduce) {
+    if (_reduce) {
       _airborne = false;
       _lift.value = 0;
       _pos.value = index.toDouble();
@@ -176,6 +221,7 @@ class _GlassTabBarState extends State<GlassTabBar>
     _pos.removeListener(_checkLanding);
     _pos.dispose();
     _lift.dispose();
+    _presence.dispose();
     super.dispose();
   }
 
@@ -191,8 +237,10 @@ class _GlassTabBarState extends State<GlassTabBar>
     // Uzarken çok hafif incelir (yüzey gerilimi).
     final baseH = (kGlassBarHeight - 2 * inset) * (1 - 0.05 * (s / _kMaxStretch));
     final l = _lift.value;
-    final hf = 1 + _kLiftHeight * l;
-    final wf = 1 + (l >= 0 ? _kLiftWidth * l : -_kLandSquash * l);
+    // Belirirken/kaybolurken küçükten büyür (0.7 → 1).
+    final pr = 0.7 + 0.3 * _presence.value.clamp(0.0, 1.0);
+    final hf = (1 + _kLiftHeight * l) * pr;
+    final wf = (1 + (l >= 0 ? _kLiftWidth * l : -_kLandSquash * l)) * pr;
     return Rect.fromCenter(
       center: Offset(inset + slot * (leftEdge + rightEdge) / 2, kGlassBarHeight / 2),
       width: slot * (rightEdge - leftEdge) * wf,
@@ -282,12 +330,14 @@ class _GlassTabBarState extends State<GlassTabBar>
                 ),
                 // 3) Kayan seçim kapsülü (bara oturmuş hâli) — havalandıkça solar.
                 AnimatedBuilder(
-                  animation: Listenable.merge([_pos, _lift]),
+                  animation: Listenable.merge([_pos, _lift, _presence]),
                   builder: (context, _) => Positioned.fromRect(
                     rect: _pillRect(slot, inset),
                     child: IgnorePointer(
                       key: const ValueKey('glassTabBarPill'),
-                      child: _SelectionPill(fade: 1 - _lift.value.clamp(0.0, 1.0)),
+                      child: _SelectionPill(
+                          fade: (1 - _lift.value.clamp(0.0, 1.0)) *
+                              _presence.value.clamp(0.0, 1.0)),
                     ),
                   ),
                 ),
@@ -304,15 +354,15 @@ class _GlassTabBarState extends State<GlassTabBar>
       ),
             // 6) Havalanan cam damla (bar kırpmasının DIŞINDA): alttaki ikonları büyütür.
             AnimatedBuilder(
-              animation: Listenable.merge([_pos, _lift]),
+              animation: Listenable.merge([_pos, _lift, _presence]),
               builder: (context, _) {
-                final l = _lift.value;
+                final l = _lift.value.clamp(0.0, 1.0) * _presence.value.clamp(0.0, 1.0);
                 if (l <= 0.01) return const SizedBox.shrink();
                 return Positioned.fromRect(
                   rect: _pillRect(slot, inset),
                   child: IgnorePointer(
                     key: const ValueKey('glassTabBarDroplet'),
-                    child: _LiftedDroplet(lift: l.clamp(0.0, 1.0), lens: lens),
+                    child: _LiftedDroplet(lift: l, lens: lens),
                   ),
                 );
               },
@@ -326,7 +376,7 @@ class _GlassTabBarState extends State<GlassTabBar>
   /// Slotun ikon rengi: kapsülün o slota yakınlığına göre beyaz → seçili mavisi.
   Color _iconColor(int i) {
     // Yay hedefe ~1e-3 yakınlıkta durur → uçlarda tam renge oturt.
-    final t = (1 - (_pos.value - i).abs()).clamp(0.0, 1.0);
+    final t = (1 - (_pos.value - i).abs()).clamp(0.0, 1.0) * _presence.value.clamp(0.0, 1.0);
     if (t > 0.99) return kGlassBarSelectedColor;
     if (t < 0.01) return Colors.white;
     return Color.lerp(Colors.white, kGlassBarSelectedColor, t)!;
@@ -335,7 +385,7 @@ class _GlassTabBarState extends State<GlassTabBar>
   Widget _slot(int i) {
     final selected = widget.selected == i;
     final Widget icon = AnimatedBuilder(
-      animation: _pos,
+      animation: Listenable.merge([_pos, _presence]),
       builder: (context, _) {
         final c = _iconColor(i);
         return switch (i) {

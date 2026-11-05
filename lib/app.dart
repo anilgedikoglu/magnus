@@ -52,6 +52,7 @@ import 'presentation/kismetim/kismetim_screen.dart';
 import 'presentation/evim/evim_screen.dart';
 import 'presentation/tavsanfali/tavsanfali_screen.dart';
 import 'presentation/language/language_pick_screen.dart';
+import 'presentation/shell/floating_bar.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 final _homeKey = GlobalKey<NavigatorState>(debugLabel: 'home');
@@ -74,6 +75,8 @@ final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
     navigatorKey: _rootKey,
     initialLocation: initialLocation,
+    // Açık diyalog / alt sayfa varken yüzen cam bar gizlenir (shell/floating_bar.dart).
+    observers: [FloatingBarRouteObserver()],
     redirect: (context, state) {
       final onboarded = ref.read(onboardingCompleteProvider);
       final picked = ref.read(languagePickedProvider);
@@ -448,8 +451,12 @@ class MagnusApp extends ConsumerWidget {
       routerConfig: router,
       // Sol kenardan sağa kaydır = geri (tüm iç sayfalarda; ana sekmelerde etkisiz).
       // Açılışta 6 sn yasal bilgilendirme (Oyuncu Dükkânı ile aynı süre) + kaydırarak geri.
+      // Yüzen cam alt bar TÜM rotaların üstünde (Anıl 2026-11-05; shell/floating_bar.dart).
       builder: (context, child) => StartupDisclaimer(
-        child: EdgeSwipeBack(router: router, child: child ?? const SizedBox.shrink()),
+        child: EdgeSwipeBack(
+          router: router,
+          child: FloatingBarHost(router: router, child: child ?? const SizedBox.shrink()),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       locale: Locale(locale),

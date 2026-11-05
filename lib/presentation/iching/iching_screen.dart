@@ -18,6 +18,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../../data/models/inbox_item.dart';
 
@@ -252,7 +253,7 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
                   ],
                 ),
                 const Spacer(),
-                const SizedBox(height: 24),
+                const FloatingBarSpacer(),
               ],
             ),
           ),

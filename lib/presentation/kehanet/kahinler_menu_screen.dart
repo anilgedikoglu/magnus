@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 
 class KahinlerMenuScreen extends ConsumerWidget {
@@ -58,6 +59,7 @@ class KahinlerMenuScreen extends ConsumerWidget {
                 itemBuilder: (ctx, i) => _buildKahin(ctx, kahinler[i]),
               ),
             ),
+            const FloatingBarSpacer(),
           ],
         ),
       ),

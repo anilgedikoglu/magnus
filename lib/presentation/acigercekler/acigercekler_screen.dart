@@ -16,6 +16,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -250,6 +251,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
             ),
           ),
         ),
+        const FloatingBarSpacer(),
       ],
     );
   }
@@ -298,9 +300,10 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
         ),
         // Kapat butonu
         Padding(
-          padding: const EdgeInsets.fromLTRB(24, 8, 24, 20),
+          padding: const EdgeInsets.fromLTRB(24, 8, 24, 0),
           child: _buildKapatButonu(),
         ),
+        const FloatingBarSpacer(),
       ],
     );
   }
@@ -374,6 +377,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
             ),
           ),
         ),
+        const FloatingBarSpacer(),
       ],
     );
   }

@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/models/inbox_item.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../data/providers.dart';
@@ -330,6 +331,8 @@ class InboxDetailScreen extends ConsumerWidget {
                 ],
               ),
             ),
+            // Yüzen cam bar içeriği kapatmasın
+            const FloatingBarSpacer(),
           ],
         ),
           ), // SingleChildScrollView
@@ -350,46 +353,6 @@ class InboxDetailScreen extends ConsumerWidget {
           style: AppTextStyles.magnusLabel,
         ),
       ),
-    );
-  }
-
-  // ─── Geri Git butonu ─────────────────────────────────────────────────────────
-
-  Widget _buildBackButton(BuildContext context) {
-    return Consumer(
-      builder: (ctx, ref, _) {
-        final s = ref.watch(l10nProvider);
-        return GestureDetector(
-          onTap: () => Navigator.of(context).pop(),
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 14),
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.08),
-              borderRadius: BorderRadius.circular(23),
-              border: Border.all(
-                color: Colors.white.withValues(alpha: 0.20),
-                width: 1,
-              ),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                const SizedBox(width: 2),
-                Text(
-                  s.backButton,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
     );
   }
 
@@ -486,9 +449,6 @@ class InboxDetailScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 28),
           _buildMagnusFooter(),
-          const SizedBox(height: 24),
-          _buildBackButton(context),
-          const SizedBox(height: 8),
         ],
       ),
     );
@@ -587,9 +547,6 @@ class InboxDetailScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 28),
           _buildMagnusFooter(),
-          const SizedBox(height: 24),
-          _buildBackButton(context),
-          const SizedBox(height: 8),
         ],
       ),
     );
@@ -696,9 +653,6 @@ class InboxDetailScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 28),
           _buildMagnusFooter(),
-          const SizedBox(height: 24),
-          _buildBackButton(context),
-          const SizedBox(height: 8),
         ],
       ),
     );

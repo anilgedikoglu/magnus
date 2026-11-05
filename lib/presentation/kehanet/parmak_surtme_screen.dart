@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../data/providers.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 
 class ParmakSurtmeScreen extends StatefulWidget {
   final String kahinId;
@@ -202,7 +203,7 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
               ),
             ),
 
-            const SizedBox(height: 28),
+            const FloatingBarSpacer(),
           ],
         ),
       ),

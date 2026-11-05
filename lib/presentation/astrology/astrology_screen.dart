@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
 
@@ -184,6 +185,7 @@ class _AstrologyScreenState extends ConsumerState<AstrologyScreen> {
                 ),
               ),
             ),
+            const FloatingBarSpacer(),
           ],
         ),
       ),

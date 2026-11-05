@@ -10,6 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/marquee_text.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
@@ -224,10 +225,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                     },
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 4, 20, 16),
-                  child: _geriGit(),
-                ),
+                const FloatingBarSpacer(),
               ],
             ),
           ),
@@ -537,29 +535,6 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
             child: Text(text,
                 style: TextStyle(color: Colors.white, fontSize: small ? 14.5 : 16.5, fontWeight: FontWeight.bold)),
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget _geriGit() {
-    return GestureDetector(
-      onTap: () => context.pop(),
-      child: Container(
-        height: 46,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(23),
-          color: Colors.white.withValues(alpha: 0.10),
-          border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-            const SizedBox(width: 2),
-            Text(ref.watch(l10nProvider).backButton,
-                style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500)),
-          ],
         ),
       ),
     );

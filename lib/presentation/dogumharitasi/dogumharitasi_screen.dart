@@ -16,6 +16,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/utils/rich_text_parser.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 
 // ─── Model ───────────────────────────────────────────────────────────────────
@@ -174,7 +175,6 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
 
   @override
   Widget build(BuildContext context) {
-    final bottomPad = MediaQuery.of(context).padding.bottom;
     final topPad    = MediaQuery.of(context).padding.top;
 
     return Scaffold(
@@ -251,7 +251,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
                 child: _loading
                     ? const Center(child: CircularProgressIndicator(
                         color: Color(0xFF9988FF), strokeWidth: 2))
-                    : _buildContent(bottomPad),
+                    : _buildContent(),
               ),
             ],
           ),
@@ -360,7 +360,7 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
     );
   }
 
-  Widget _buildContent(double bottomPad) {
+  Widget _buildContent() {
     return Column(
       children: [
         // Wheel chart — sabit üstte
@@ -400,33 +400,8 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
           ),
         ),
 
-        // Geri Git — her zaman ekran altında sabit
-        Padding(
-          padding: EdgeInsets.fromLTRB(16, 8, 16, bottomPad + 16),
-          child: GestureDetector(
-            onTap: () => context.pop(),
-            child: Container(
-              width: double.infinity,
-              height: 48,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.10),
-                borderRadius: BorderRadius.circular(23),
-                border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.25), width: 1.2),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                  const SizedBox(width: 2),
-                  Text(ref.read(l10nProvider).backButton,
-                    style: const TextStyle(color: Colors.white, fontSize: 15,
-                        fontWeight: FontWeight.w500)),
-                ],
-              ),
-            ),
-          ),
-        ),
+        // Yüzen cam barın altında kalmamak için boşluk
+        const FloatingBarSpacer(),
       ],
     );
   }

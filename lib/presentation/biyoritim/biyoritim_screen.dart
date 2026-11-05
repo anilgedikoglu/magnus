@@ -26,6 +26,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 
 // ─── Modeller ────────────────────────────────────────────────────────────────
@@ -304,7 +305,6 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
 
   @override
   Widget build(BuildContext context) {
-    final bottomPad = MediaQuery.of(context).padding.bottom;
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
@@ -348,7 +348,7 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
                             strokeWidth: 2,
                           ),
                         )
-                      : _buildContent(bottomPad),
+                      : _buildContent(),
                 ),
               ],
             ),
@@ -407,13 +407,11 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
 
   // ─── Ana içerik (kaydırılabilir) ──────────────────────────────────────────
 
-  Widget _buildContent(double bottomPad) {
+  Widget _buildContent() {
     final r = _result!;
-    // Sistem nav çubuğu + ekstra boşluk
-    final extraBottom = bottomPad + 16;
     final isEn = ref.watch(localeProvider) == 'en';
     return ListView(
-      padding: EdgeInsets.fromLTRB(14, 12, 14, extraBottom),
+      padding: const EdgeInsets.fromLTRB(14, 12, 14, 0),
       children: [
         // B1 — Giriş
         _buildIntroCard(r.b1Metin),
@@ -437,11 +435,10 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
         _buildSectionLabel(isEn ? 'CHINESE CALENDAR' : 'ÇİN TAKVİMİ'),
         _buildTextCard(r.cinTakvimMetin, const Color(0xFF44DDFF)),
 
-        const SizedBox(height: 20),
+        const SizedBox(height: 12),
 
-        // Geri Dön — scroll sonunda görünür, sabit overlay DEĞİL
-        _buildBackButton(),
-        const SizedBox(height: 8),
+        // Yüzen cam barın altında kalmamak için boşluk
+        const FloatingBarSpacer(),
       ],
     );
   }
@@ -598,32 +595,6 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
             fontSize: 13,
             height: 1.65,
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildBackButton() {
-    return GestureDetector(
-      onTap: () => context.pop(),
-      child: Container(
-        width: double.infinity,
-        height: 48,
-        decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.10),
-          borderRadius: BorderRadius.circular(23),
-          border: Border.all(
-              color: Colors.white.withValues(alpha: 0.25), width: 1.2),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-            const SizedBox(width: 2),
-            Text(ref.read(l10nProvider).backButton,
-              style: const TextStyle(color: Colors.white, fontSize: 15,
-                  fontWeight: FontWeight.w500)),
-          ],
         ),
       ),
     );

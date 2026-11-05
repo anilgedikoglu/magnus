@@ -12,6 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 
 class MagandaScreen extends ConsumerStatefulWidget {
@@ -394,6 +395,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
                 ),
               ),
             ],
+            const FloatingBarSpacer(),
           ],
         ),
       ),

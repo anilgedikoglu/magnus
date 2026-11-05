@@ -11,10 +11,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/edge_swipe_back.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 
 // ─── Sprite → Emoji eşlemesi ──────────────────────────────────────────────────
@@ -545,9 +545,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                     ),
                   ),
                 ),
-                // Geri Dön
-                _buildBackButton(accent),
-                const SizedBox(height: 8),
+                const FloatingBarSpacer(),
               ],
             ),
           ),
@@ -744,39 +742,6 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
     return Padding(
       padding: const EdgeInsets.only(bottom: 4, left: 2, right: 2),
       child: Column(children: rows),
-    );
-  }
-
-  // ─────────────────────────────────────────────────────────────────────────
-  // Geri Dön butonu
-  // ─────────────────────────────────────────────────────────────────────────
-
-  Widget _buildBackButton(Color accent) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: GestureDetector(
-        onTap: () => context.pop(),
-        child: Container(
-          width: double.infinity,
-          height: 48,
-          decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(23),
-            border: Border.all(
-                color: Colors.white.withValues(alpha: 0.25), width: 1.2),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              const SizedBox(width: 2),
-              Text(ref.read(l10nProvider).backButton,
-                style: const TextStyle(color: Colors.white, fontSize: 15,
-                    fontWeight: FontWeight.w500)),
-            ],
-          ),
-        ),
-      ),
     );
   }
 }

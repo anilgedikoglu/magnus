@@ -23,6 +23,7 @@ import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
@@ -130,6 +131,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
             // ── Konu seçilmemişse konu ekranını göster ──────────────────
             if (_falKonusu == null) ...[
               Expanded(child: _buildKonuSecim(s)),
+              const FloatingBarSpacer(),
             ] else ...[
             Expanded(
               child: _mode == _InputMode.none
@@ -441,50 +443,24 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   }
 
   Widget _buildSendButton() {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
-      decoration: const BoxDecoration(
-        color: Color(0xFF0D0D1A),
-        border: Border(top: BorderSide(color: Colors.white12)),
-      ),
-      child: SizedBox(
-        width: double.infinity,
-        child: _mode == _InputMode.none
-            ? _buildGeriGitButton()
-            : _buildFalGonderButton(),
-      ),
-    );
-  }
-
-  Widget _buildGeriGitButton() {
-    final s = ref.read(l10nProvider);
-    return GestureDetector(
-      onTap: () => context.pop(),
-      child: Container(
-        height: 54,
-        decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.10),
-          borderRadius: BorderRadius.circular(27),
-          border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-        ),
-        child: Center(
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              const SizedBox(width: 2),
-              Text(
-                s.backButton,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
+    // Yüzen cam bar en altta durur; gönder düğmesi (yalnız mod seçilince) onun üstünde.
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (_mode != _InputMode.none)
+          Container(
+            padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
+            decoration: const BoxDecoration(
+              color: Color(0xFF0D0D1A),
+              border: Border(top: BorderSide(color: Colors.white12)),
+            ),
+            child: SizedBox(
+              width: double.infinity,
+              child: _buildFalGonderButton(),
+            ),
           ),
-        ),
-      ),
+        const FloatingBarSpacer(),
+      ],
     );
   }
 

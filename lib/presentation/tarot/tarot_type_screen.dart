@@ -5,6 +5,7 @@ import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 
 // ─── Tarot türü seçim ekranı ──────────────────────────────────────────────────
 
@@ -73,33 +74,7 @@ class TarotTypeScreen extends ConsumerWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 12),
-              GestureDetector(
-                onTap: () => context.pop(),
-                child: Container(
-                  width: double.infinity,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.10),
-                    borderRadius: BorderRadius.circular(23),
-                    border: Border.all(
-                      color: Colors.white.withValues(alpha: 0.25),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                      const SizedBox(width: 2),
-                      Text(s.backButton,
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500)),
-                    ],
-                  ),
-                ),
-              ),
+              const FloatingBarSpacer(),
             ],
           ),
         ),

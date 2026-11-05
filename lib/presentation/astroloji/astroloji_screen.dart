@@ -20,6 +20,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 
 // ─── Bölüm tanımları (sıra önemli) ──────────────────────────────────────────
@@ -296,13 +297,13 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
   // ─── Ana içerik ───────────────────────────────────────────────────────────────
 
   Widget _buildContent() {
-    // itemCount + 1: son item = "Geri Dön" butonu (scroll sonunda görünür)
+    // itemCount + 1: son item = yüzen cam barın altında kalmamak için boşluk
     return ListView.builder(
       padding: const EdgeInsets.fromLTRB(14, 8, 14, 16),
       itemCount: _selected.length + 1,
       itemBuilder: (context, i) {
         if (i < _selected.length) return _buildSectionCard(_selected[i]);
-        return _buildBackButton();
+        return const FloatingBarSpacer();
       },
     );
   }
@@ -359,35 +360,6 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildBackButton() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: GestureDetector(
-        onTap: () => context.pop(),
-        child: Container(
-          width: double.infinity,
-          height: 48,
-          decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(23),
-            border: Border.all(
-              color: Colors.white.withValues(alpha: 0.25), width: 1.2),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-              const SizedBox(width: 2),
-              Text(ref.read(l10nProvider).backButton,
-                style: const TextStyle(color: Colors.white, fontSize: 15,
-                    fontWeight: FontWeight.w500)),
-            ],
-          ),
         ),
       ),
     );

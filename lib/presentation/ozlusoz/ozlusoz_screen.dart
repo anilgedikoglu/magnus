@@ -14,6 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/edge_swipe_back.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 
 class _OzluSozEntry {
@@ -211,7 +212,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
                       _buildHeader(),
                       Expanded(child: _buildTextArea()),
                       _buildNavButtons(),
-                      const SizedBox(height: 12),
+                      const FloatingBarSpacer(extra: 4),
                     ]),
             ),
           ],

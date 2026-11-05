@@ -12,6 +12,7 @@ import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 
 // ── Sembol verisi ──────────────────────────────────────────────────────────────
 class _Sembol {
@@ -846,60 +847,33 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                   },
                 ),
         ),
-        // ── Geri Git / Yorumla butonu ──────────────────────────────────────
-        Padding(
-          padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
-          child: GestureDetector(
-            onTap: _secili != null ? _tamam : () => context.pop(),
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 200),
-              height: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(23),
-                gradient: _secili != null
-                    ? const LinearGradient(
-                        colors: [Color(0xFF6D28D9), Color(0xFF8B5CF6)])
-                    : null,
-                color: _secili == null
-                    ? Colors.white.withValues(alpha: 0.10)
-                    : null,
-                border: Border.all(
-                  color: _secili == null
-                      ? Colors.white.withValues(alpha: 0.25)
-                      : Colors.transparent,
-                  width: 1,
+        // ── Yorumla butonu (seçim yapılınca; yüzen barın üstünde) ───────────
+        if (_secili != null)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
+            child: GestureDetector(
+              onTap: _tamam,
+              child: Container(
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(23),
+                  gradient: const LinearGradient(
+                      colors: [Color(0xFF6D28D9), Color(0xFF8B5CF6)]),
                 ),
-              ),
-              child: Center(
-                child: _secili != null
-                    ? Text(
-                        ref.read(l10nProvider).interpret,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    : Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Icon(Icons.chevron_left_rounded,
-                              color: Colors.white, size: 20),
-                          const SizedBox(width: 2),
-                          Text(
-                            ref.read(l10nProvider).backButton,
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
+                child: Center(
+                  child: Text(
+                    ref.read(l10nProvider).interpret,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
-        ),
+        const FloatingBarSpacer(),
       ],
     );
   }

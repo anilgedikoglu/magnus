@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/widgets/swipe_back.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
 
@@ -60,6 +61,7 @@ class KehanetMenuScreen extends ConsumerWidget {
                 itemBuilder: (ctx, i) => _buildItem(ctx, items[i]),
               ),
             ),
+            const FloatingBarSpacer(),
           ],
         ),
       ),

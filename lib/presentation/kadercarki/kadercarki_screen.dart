@@ -20,6 +20,7 @@ import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 
 // ─── Çark bölmeleri (saat yönünde, 0'dan başlar) ─────────────────────────────
 
@@ -440,31 +441,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
           ),
         ),
       ),
-      // Geri Git — dert ortağı standardı
-      Padding(
-        padding: const EdgeInsets.fromLTRB(20, 8, 20, 18),
-        child: GestureDetector(
-          onTap: () => context.pop(),
-          child: Container(
-            width: double.infinity,
-            height: 46,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.10),
-              borderRadius: BorderRadius.circular(23),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                const SizedBox(width: 2),
-                Text(ref.read(l10nProvider).backButton, style: const TextStyle(color: Colors.white, fontSize: 14,
-                    fontWeight: FontWeight.w500)),
-              ],
-            ),
-          ),
-        ),
-      ),
+      const FloatingBarSpacer(),
     ]);
   }
 
@@ -597,31 +574,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       ),
       const SizedBox(height: 12),
 
-      // Çıkış
-      Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 18),
-        child: GestureDetector(
-          onTap: () => context.pop(),
-          child: Container(
-            width: double.infinity,
-            height: 46,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.10),
-              borderRadius: BorderRadius.circular(23),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                const SizedBox(width: 2),
-                Text(ref.watch(l10nProvider).exit, style: const TextStyle(color: Colors.white,
-                    fontSize: 14, fontWeight: FontWeight.w500)),
-              ],
-            ),
-          ),
-        ),
-      ),
+      const FloatingBarSpacer(),
     ]);
   }
 

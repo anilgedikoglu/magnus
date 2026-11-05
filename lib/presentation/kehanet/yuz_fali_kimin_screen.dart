@@ -8,6 +8,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 
 class YuzFaliKiminScreen extends StatefulWidget {
   const YuzFaliKiminScreen({super.key});
@@ -83,37 +84,7 @@ class _YuzFaliKiminScreenState extends State<YuzFaliKiminScreen> {
                       : _buildSecim(),
             ),
 
-            // ── Geri Git butonu ───────────────────────────────────────────
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
-              child: GestureDetector(
-                onTap: () => context.pop(),
-                child: Container(
-                  width: double.infinity,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.10),
-                    borderRadius: BorderRadius.circular(23),
-                    border: Border.all(
-                      color: Colors.white.withValues(alpha: 0.25),
-                    ),
-                  ),
-                  child: Consumer(
-                    builder: (ctx, ref, _) => Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                        const SizedBox(width: 2),
-                        Text(
-                          ref.watch(l10nProvider).backButton,
-                          style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            const FloatingBarSpacer(),
           ],
         ),
       ),

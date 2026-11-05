@@ -26,6 +26,7 @@ import '../../core/services/ad_service.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/edge_swipe_back.dart';
+import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
 
@@ -353,7 +354,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
                       _buildHeader(context),
                       Expanded(child: _buildTextArea()),
                       _buildNavButtons(),
-                      const SizedBox(height: 12),
+                      const FloatingBarSpacer(extra: 4),
                     ],
                   ),
           ),

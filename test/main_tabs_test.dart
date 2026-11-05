@@ -9,6 +9,7 @@ import 'package:magnus_app/core/widgets/bar_minimize.dart';
 import 'package:magnus_app/core/widgets/glass_tab_bar.dart';
 import 'package:magnus_app/data/models/inbox_item.dart';
 import 'package:magnus_app/data/providers.dart';
+import 'package:magnus_app/presentation/shell/floating_bar.dart';
 import 'package:magnus_app/presentation/shell/main_tabs.dart';
 
 class _FakeInbox extends InboxNotifier {
@@ -89,9 +90,12 @@ Widget _app({List<InboxItem>? inbox, Key? key}) => ProviderScope(
         : inboxProvider.overrideWith(() => _FixedInbox(inbox)),
     l10nProvider.overrideWithValue(AppStrings('tr')),
   ],
+  // Yüzen bar artık sekme kapsayıcısında değil, üst katmanda (floating_bar.dart).
   child: MaterialApp(
-    home: MainTabsScreen(
-      debugPageBuilder: (t) => _Page(const ['P', 'H', 'I'][t]),
+    home: FloatingBarHost(
+      child: MainTabsScreen(
+        debugPageBuilder: (t) => _Page(const ['P', 'H', 'I'][t]),
+      ),
     ),
   ),
 );
@@ -251,7 +255,7 @@ void main() {
         l10nProvider.overrideWithValue(AppStrings('tr')),
       ],
       child: MaterialApp(
-        home: MainTabsScreen(
+        home: FloatingBarHost(child: MainTabsScreen(
           debugPageBuilder: (t) => t == MainTab.home
               ? ListView.builder(
                   itemCount: 300,
@@ -259,7 +263,7 @@ void main() {
                   itemBuilder: (_, i) => Text('satır $i'),
                 )
               : _Page(const ['P', 'H', 'I'][t]),
-        ),
+        )),
       ),
     ));
     double scale() => tester
@@ -300,7 +304,10 @@ Widget _routerApp(GoRouter router) => ProviderScope(
     inboxProvider.overrideWith(_FakeInbox.new),
     l10nProvider.overrideWithValue(AppStrings('tr')),
   ],
-  child: MaterialApp.router(routerConfig: router),
+  child: MaterialApp.router(
+    routerConfig: router,
+    builder: (context, child) => FloatingBarHost(router: router, child: child!),
+  ),
 );
 
 GoRouter _router() {
@@ -308,6 +315,7 @@ GoRouter _router() {
   return GoRouter(
     navigatorKey: root,
     initialLocation: '/home',
+    observers: [FloatingBarRouteObserver()],
     routes: [
       StatefulShellRoute.indexedStack(
         builder:
@@ -370,6 +378,57 @@ class _RoutedPage extends StatelessWidget {
 void _routerTests() {
   late bool exited;
   setUp(() => exited = false);
+
+  Color iconColor(WidgetTester tester, int i) =>
+      ((tester.widget<CustomPaint>(find.byKey(ValueKey('glassTabBarIcon$i'))).painter! as dynamic)
+              .color
+          as Color);
+
+  testWidgets('yüzen bar: fal rotasında seçimsiz; dokununca o sekmeye gider ve seçili olur', (
+    tester,
+  ) async {
+    final sem = tester.ensureSemantics();
+    await tester.pumpWidget(_routerApp(_router()));
+    await tester.pumpAndSettle();
+    expect(iconColor(tester, 0), kGlassBarSelectedColor, reason: 'ana menüde ev seçili');
+    await tester.tap(find.text('kok H'));
+    await tester.pumpAndSettle();
+    expect(find.text('KOK ROTA'), findsOneWidget);
+    // Fal ekranı (kök rota): bar duruyor ama hiçbir sekme seçili değil.
+    expect(find.byKey(const ValueKey('floatingGlassBar')), findsOneWidget);
+    for (var i = 0; i < 3; i++) {
+      expect(iconColor(tester, i), Colors.white, reason: 'ikon  seçimsiz');
+    }
+    // Profil'e dokun → rota kapanır, profil sekmesi açılır ve seçili olur.
+    await tester.tap(find.bySemanticsLabel('Kullanıcı Bilgileri'));
+    await tester.pumpAndSettle();
+    expect(find.text('KOK ROTA'), findsNothing);
+    expect(find.text('P:0'), findsOneWidget);
+    expect(iconColor(tester, 2), kGlassBarSelectedColor);
+    sem.dispose();
+  });
+
+  testWidgets('yüzen bar: diyalog açıkken gizlenir, kapanınca döner', (tester) async {
+    await tester.pumpWidget(_routerApp(_router()));
+    await tester.pumpAndSettle();
+    double opacity() => tester
+        .widget<AnimatedOpacity>(find.ancestor(
+            of: find.byKey(const ValueKey('floatingGlassBar')),
+            matching: find.byType(AnimatedOpacity)))
+        .opacity;
+    expect(opacity(), 1);
+    showDialog<void>(
+      context: tester.element(find.text('H:0')),
+      builder: (_) => const AlertDialog(content: Text('DIYALOG')),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('DIYALOG'), findsOneWidget);
+    expect(opacity(), 0);
+    Navigator.of(tester.element(find.text('DIYALOG'))).pop();
+    await tester.pumpAndSettle();
+    expect(opacity(), 1);
+  });
+
 
   Future<void> mockExit(WidgetTester tester) async {
     tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(

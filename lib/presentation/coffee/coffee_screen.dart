@@ -26,6 +26,7 @@ import '../../core/l10n/app_strings.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/swipe_back.dart';
+import 'cup_steam.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
 
@@ -436,15 +437,32 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
 
   Widget _buildFincanImage() {
     return Center(
-      child: Container(
+      child: SizedBox(
         width: 220,
         height: 220,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: Colors.white12),
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Positioned.fill(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.white12),
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(_fincanImage!, fit: BoxFit.contain),
+              ),
+            ),
+            // Fincan ağzından tüten buhar; gönderilirken yoğunlaşır.
+            Positioned(
+              left: 40,
+              right: 40,
+              top: -96,
+              height: 138,
+              child: IgnorePointer(child: CupSteam(strong: _sending)),
+            ),
+          ],
         ),
-        clipBehavior: Clip.antiAlias,
-        child: Image.asset(_fincanImage!, fit: BoxFit.contain),
       ),
     );
   }

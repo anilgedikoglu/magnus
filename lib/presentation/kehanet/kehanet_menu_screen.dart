@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 
 class KehanetMenuScreen extends ConsumerWidget {
   const KehanetMenuScreen({super.key});
@@ -39,12 +40,7 @@ class KehanetMenuScreen extends ConsumerWidget {
                     child: Text(
                       s.prophecyTitle,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
-                      ),
+                      style: AppTextStyles.screenTitle,
                     ),
                   ),
                   const SizedBox(width: 48),

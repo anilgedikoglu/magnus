@@ -20,6 +20,7 @@ import '../../core/widgets/swipe_back.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 
 // ─── Soru türleri ─────────────────────────────────────────────────────────────
 
@@ -238,8 +239,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
               const SizedBox(height: 20),
               Text(ref.watch(l10nProvider).durugoruLimitTitle,
                 textAlign: TextAlign.center,
-                style: const TextStyle(color: Colors.white70, fontSize: 17,
-                    height: 1.5, fontWeight: FontWeight.w300)),
+                style: AppTextStyles.screenTitle),
               const SizedBox(height: 8),
               Text(ref.watch(l10nProvider).durugoruLimitSub,
                 style: TextStyle(color: Colors.white.withValues(alpha: 0.35),

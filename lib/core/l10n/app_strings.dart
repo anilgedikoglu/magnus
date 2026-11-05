@@ -202,6 +202,18 @@ class AppStrings {
   String monthName(int m) => (isEn ? _monthsEn : _monthsTr)[m.clamp(1, 12)];
   String get dreamHint         => _s('Rüyanda ne gördün?', 'What did you dream?');
   String get interpret         => _s('Yorumla',            'Interpret');
+  // Serbest metin rüya yorumu (2026-11-05)
+  String get dreamInterpretMine => _s('Rüyamı Yorumla', 'Interpret My Dream');
+  String get dreamFreeHint => _s('Rüyanı bir cümleyle anlat, senin için yorumlayayım.\nÖrn: "Rüyamda beyaz bir kedi gördüm"',
+      'Describe your dream in a sentence and I will interpret it.\nE.g. "I saw a white cat in my dream"');
+  String get dreamInterpreting => _s('Rüyan yorumlanıyor...', 'Your dream is being interpreted...');
+  String get dreamResultTitle => _s('Rüya Yorumun', 'Your Dream Reading');
+  String get dreamAiConsentTitle => _s('Rüyanı nasıl yorumlayayım?', 'How should I read your dream?');
+  String get dreamAiConsentBody => _s(
+      'Daha kişisel bir yorum için rüya metnin bir yapay zekâ hizmet sağlayıcısına gönderilir (adın gönderilmez). İstemezsen yorum cihazında hazırlanır. Yorumlar eğlence amaçlıdır.',
+      'For a more personal reading, your dream text is sent to an AI service provider (your name is not sent). If you prefer, the reading is prepared on your device. Readings are for entertainment.');
+  String get dreamAiAccept => _s('Yapay zekâ ile', 'Use AI');
+  String get dreamDeviceOnly => _s('Cihazda yorumla', 'On my device');
   String get dreamSending      => _s('Rüyan yorumlanıyor...', 'Your dream is being interpreted...');
   String dreamWhatDidYouSee(String name) => _s('Rüyanda ne gördün, $name?', 'What did you see in your dream, $name?');
   String get searchHint        => _s('Ara…',               'Search…');
@@ -521,6 +533,7 @@ class AppStrings {
   String get numReportPrompt => _s('Numeroloji raporunu hangisi için istersin?',
       'Which numerology report would you like?');
   String get numPreparing => _s('Hazırlanıyor, biraz bekle...', 'Preparing, wait a moment...');
+  String get numCalculating => _s('Hesaplamalar başladı, lütfen bekle...', 'The calculations have begun, please wait...');
   String get numReadAgain => _s('Raporuna tekrar bak →', 'View your report again →');
 
   // Olumlama / Özlü Söz

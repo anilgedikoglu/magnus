@@ -20,6 +20,7 @@ import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -572,7 +573,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
             child: Text(
               ref.watch(l10nProvider).companionTitle,
               textAlign: TextAlign.center,
-              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16, letterSpacing: 1.2),
+              style: AppTextStyles.screenTitle,
             ),
           ),
           const SizedBox(width: 44),

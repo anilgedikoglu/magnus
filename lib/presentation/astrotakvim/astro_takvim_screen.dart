@@ -563,7 +563,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
 
   Widget _buildTabBar(Color accent) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: List.generate(_tabs.length, (i) => _iconBtn(
@@ -588,8 +588,9 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
-        width: active ? 50 : 44,
-        height: active ? 40 : 36,
+        // Anıl: "çok dip dibe; genişlikleri azalsın, araları açılsın" (eski 50/44 × 40/36)
+        width: active ? 40 : 34,
+        height: active ? 36 : 32,
         decoration: BoxDecoration(
           color: bg,
           borderRadius: BorderRadius.circular(8),
@@ -602,7 +603,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                   color: activeColor.withValues(alpha: 0.55), blurRadius: 8)]
               : null,
         ),
-        child: Icon(icon, color: Colors.white, size: active ? 21 : 19),
+        child: Icon(icon, color: Colors.white, size: active ? 19 : 17),
       ),
     );
   }

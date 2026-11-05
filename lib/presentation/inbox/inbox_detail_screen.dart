@@ -410,12 +410,7 @@ class InboxDetailScreen extends ConsumerWidget {
           const SizedBox(height: 8),
           Consumer(builder: (ctx, ref, _) => Text(
             ref.watch(l10nProvider).ichingTitle,
-            style: TextStyle(
-              color: const Color(0xFFD4AF37).withValues(alpha: 0.9),
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 4,
-            ),
+            style: AppTextStyles.screenTitle.copyWith(color: Color(0xFFD4AF37).withValues(alpha: 0.9)),
           )),
           const SizedBox(height: 6),
           Text(
@@ -516,12 +511,7 @@ class InboxDetailScreen extends ConsumerWidget {
           const SizedBox(height: 8),
           Consumer(builder: (ctx, ref, _) => Text(
             ref.watch(l10nProvider).japonFaliTitle,
-            style: TextStyle(
-              color: const Color(0xFFFF4466).withValues(alpha: 0.9),
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 4,
-            ),
+            style: AppTextStyles.screenTitle.copyWith(color: Color(0xFFFF4466).withValues(alpha: 0.9)),
           )),
           const SizedBox(height: 6),
           Text(
@@ -626,12 +616,7 @@ class InboxDetailScreen extends ConsumerWidget {
           const SizedBox(height: 8),
           Consumer(builder: (ctx, ref, _) => Text(
             ref.watch(l10nProvider).dreamTitle,
-            style: TextStyle(
-              color: const Color(0xFFA78BFA).withValues(alpha: 0.9),
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 3,
-            ),
+            style: AppTextStyles.screenTitle.copyWith(color: Color(0xFFA78BFA).withValues(alpha: 0.9)),
           )),
           const SizedBox(height: 6),
           Text(

@@ -16,6 +16,7 @@ import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 
 // ─── Burç listesi (index 0=Koç … 11=Balık) ───────────────────────────────────
 const _kBurclar = [
@@ -405,8 +406,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         const Spacer(),
         Text(
           ref.watch(l10nProvider).askUyumuTitle,
-          style: const TextStyle(
-              color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
+          style: AppTextStyles.screenTitle,
         ),
         const Spacer(),
         const SizedBox(width: 36),

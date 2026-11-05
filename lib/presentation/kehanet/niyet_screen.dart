@@ -12,6 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 
 class NiyetScreen extends ConsumerStatefulWidget {
   const NiyetScreen({super.key});
@@ -180,8 +181,7 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
                 ),
                 Expanded(child: Text(ref.watch(l10nProvider).intentionTitle,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 20,
-                      fontWeight: FontWeight.bold, letterSpacing: 1.2))),
+                  style: AppTextStyles.screenTitle)),
                 const SizedBox(width: 48),
               ]),
             ),

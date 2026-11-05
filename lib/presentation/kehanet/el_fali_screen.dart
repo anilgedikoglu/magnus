@@ -12,6 +12,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 enum _EFAdim { secim, analiz, sonuc }
 
 class ElFaliScreen extends ConsumerStatefulWidget {
@@ -161,12 +162,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
                   child: Text(
                     ref.watch(l10nProvider).palmReadingTitle,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.5,
-                    ),
+                    style: AppTextStyles.screenTitle,
                   ),
                 ),
                 const SizedBox(width: 48),

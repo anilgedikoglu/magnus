@@ -483,10 +483,10 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
             width: 1.5,
           ),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            'Kapat',
-            style: TextStyle(
+            ref.watch(l10nProvider).close,
+            style: const TextStyle(
               color: Colors.white, fontSize: 15,
               fontWeight: FontWeight.bold,
             ),

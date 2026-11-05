@@ -345,7 +345,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
           const SpinningHourglass(size: 64, color: Color(0xFFBBAAFF)),
           const SizedBox(height: 24),
           Text(
-            'Hesaplamalar başladı, lütfen bekle...',
+            ref.watch(l10nProvider).numCalculating,
             textAlign: TextAlign.center,
             style: GoogleFonts.cinzel(
               fontSize: 15,

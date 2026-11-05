@@ -5,10 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uuid/uuid.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../data/services/dream_interpreter.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 
 // ── Sembol verisi ──────────────────────────────────────────────────────────────
 class _Sembol {
@@ -436,6 +440,167 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
   String   _arama       = '';
 
   final _aramaCtrl = TextEditingController();
+  bool _yorumlaniyor = false; // serbest metin yorumu bekleme perdesi
+
+  /// Yazılan şey bir cümleye benziyor mu? (→ "Rüyamı Yorumla" düğmesi)
+  bool get _cumle {
+    final t = _arama.trim();
+    return t.split(RegExp(r'\s+')).length >= 2 || t.length >= 12;
+  }
+
+  /// Cümlede sözlükteki bir sembol geçiyorsa (ör. "kediyi" → kedi) onun anlamı ipucu olur.
+  _Sembol? _sembolIpucu(bool isEn) {
+    final tokens = _arama.toLowerCase().split(RegExp(r"[^a-zçğıöşüâîû]+")).where((w) => w.length >= 2);
+    for (final s in _semboller) {
+      final k = (isEn ? s.kelimeEn : s.kelime).toLowerCase();
+      if (k.isEmpty) continue;
+      for (final w in tokens) {
+        if (w == k || (k.length >= 3 && w.startsWith(k) && w.length - k.length <= 4)) return s;
+      }
+    }
+    return null;
+  }
+
+  /// Serbest metin rüya yorumu: izin (bir kez) → en az 5 sn bekleme → açılır pencere.
+  Future<void> _serbestYorumla() async {
+    if (_yorumlaniyor) return;
+    FocusScope.of(context).unfocus();
+    final s = ref.read(l10nProvider);
+    final isEn = ref.read(localeProvider) == 'en';
+    final prefs = await SharedPreferences.getInstance();
+    if (!mounted) return;
+
+    // Yapay zekâ izni (Apple 5.1.2 / KVKK): ilk kullanımda sor, kararı sakla.
+    var onay = prefs.getBool('ruya_ai_onay');
+    if (onay == null) {
+      onay = await showDialog<bool>(
+        context: context,
+        builder: (dctx) => AlertDialog(
+          backgroundColor: const Color(0xFF140D46),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+            side: const BorderSide(color: Color(0xFF8B5CF6), width: 1),
+          ),
+          title: Text(s.dreamAiConsentTitle, style: AppTextStyles.screenTitle.copyWith(fontSize: 16)),
+          content: Text(s.dreamAiConsentBody,
+              style: const TextStyle(color: Colors.white70, fontSize: 14, height: 1.45)),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(dctx, false),
+              child: Text(s.dreamDeviceOnly, style: const TextStyle(color: Colors.white70)),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(dctx, true),
+              child: Text(s.dreamAiAccept,
+                  style: const TextStyle(color: Color(0xFFD8C4FF), fontWeight: FontWeight.w700)),
+            ),
+          ],
+        ),
+      );
+      if (onay == null || !mounted) return; // pencere kapatıldı → vazgeç
+      await prefs.setBool('ruya_ai_onay', onay);
+    }
+
+    final profile = ref.read(userProfileProvider);
+    final isim = profile.name.trim();
+    final ipucuSembol = _sembolIpucu(isEn);
+    final ipucu = ipucuSembol == null
+        ? null
+        : VariableReplacer.replace(ipucuSembol.yorumFor(isEn), profile.toVariableMap());
+    final bugun = DateTime.now().toIso8601String().substring(0, 10);
+    // Günde 1 çevrimiçi yorum (maliyet); aynı gün sonrakiler cihazdaki motorla.
+    final cevrimici = onay && prefs.getString('ruya_ai_tarih') != bugun;
+
+    setState(() => _yorumlaniyor = true);
+    final sonucF = cevrimici
+        ? DreamInterpreter.interpret(dream: _arama, name: isim, isEn: isEn, symbolHint: ipucu)
+        : Future.value(DreamInterpreter.offline(
+            dream: _arama.trim(), name: isim.isEmpty ? (isEn ? 'friend' : 'dostum') : isim,
+            isEn: isEn, symbolHint: ipucu));
+    final results = await Future.wait<Object?>([sonucF, Future<void>.delayed(const Duration(seconds: 5))]);
+    if (cevrimici) await prefs.setString('ruya_ai_tarih', bugun);
+    if (!mounted) return;
+    setState(() => _yorumlaniyor = false);
+    final metin = results.first as String;
+    await showDialog<void>(
+      context: context,
+      builder: (dctx) => Dialog(
+        backgroundColor: Colors.transparent,
+        insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(22, 20, 22, 16),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            gradient: const LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFF1E1150), Color(0xFF2D1580)],
+            ),
+            border: Border.all(color: const Color(0xFF8B5CF6), width: 1.5),
+            boxShadow: [BoxShadow(color: const Color(0xFF8B5CF6).withValues(alpha: 0.35), blurRadius: 18)],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(s.dreamResultTitle, textAlign: TextAlign.center, style: AppTextStyles.screenTitle),
+              const SizedBox(height: 14),
+              Flexible(
+                child: SingleChildScrollView(
+                  child: RichTextParser.build(
+                    metin,
+                    style: const TextStyle(color: Colors.white, fontSize: 16, height: 1.55),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+              GestureDetector(
+                onTap: () => Navigator.pop(dctx),
+                child: Container(
+                  height: 46,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(23),
+                    color: Colors.white.withValues(alpha: 0.10),
+                    border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
+                  ),
+                  child: Center(
+                    child: Text(s.close,
+                        style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w600)),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _yorumlaButonu() {
+    final s = ref.watch(l10nProvider);
+    return GestureDetector(
+      onTap: _serbestYorumla,
+      child: Container(
+        height: 48,
+        margin: const EdgeInsets.symmetric(horizontal: 16),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(23),
+          gradient: const LinearGradient(colors: [Color(0xFF6D28D9), Color(0xFFB04BD8)]),
+          boxShadow: [BoxShadow(color: const Color(0xFF8B5CF6).withValues(alpha: 0.45), blurRadius: 12)],
+        ),
+        child: Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.auto_awesome_rounded, color: Colors.white, size: 18),
+              const SizedBox(width: 8),
+              Text(s.dreamInterpretMine,
+                  style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
   static const _uuid = Uuid();
 
@@ -529,12 +694,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                   child: Text(
                     ref.watch(l10nProvider).dreamTitle,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.5,
-                    ),
+                    style: AppTextStyles.screenTitle,
                   ),
                 ),
                 const SizedBox(width: 48),
@@ -549,6 +709,29 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
               ],
             ),
           ),
+          // Serbest yorum bekleme perdesi (en az 5 sn)
+          if (_yorumlaniyor)
+            Positioned.fill(
+              child: AbsorbPointer(
+                child: Container(
+                  color: Colors.black.withValues(alpha: 0.72),
+                  child: Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const ElegantHourglass(size: 64, color: Colors.white),
+                        const SizedBox(height: 22),
+                        Text(
+                          ref.watch(l10nProvider).dreamInterpreting,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(color: Color(0xFFD8C4FF), fontSize: 17, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
         ],
       ),
     );
@@ -622,15 +805,34 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
           ),
         ),
         const SizedBox(height: 10),
+        // Cümle yazıldıysa (ve listede eşleşme de varsa) serbest yorum düğmesi üstte
+        if (_cumle && liste.isNotEmpty) ...[
+          _yorumlaButonu(),
+          const SizedBox(height: 10),
+        ],
         // ── Sembol listesi ─────────────────────────────────────────────────
         Expanded(
           child: liste.isEmpty
               ? Center(
-                  child: Text(
-                    s.noResults,
-                    style: TextStyle(
-                        color: Colors.white.withValues(alpha: 0.35),
-                        fontSize: 14),
+                  // Eskiden "sonuç bulunamadı" yazıyordu; artık rüya serbestçe yorumlanır.
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 28),
+                          child: Text(
+                            s.dreamFreeHint,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white.withValues(alpha: 0.70),
+                                fontSize: 14, height: 1.45),
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        _yorumlaButonu(),
+                      ],
+                    ),
                   ),
                 )
               : ListView.builder(

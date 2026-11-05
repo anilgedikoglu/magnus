@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/constants/app_text_styles.dart';
 import '../../data/providers.dart';
 
 class KahinlerMenuScreen extends ConsumerWidget {
@@ -35,14 +36,9 @@ class KahinlerMenuScreen extends ConsumerWidget {
                   ),
                   Expanded(
                     child: Text(
-                      s.askOracles.toUpperCase(),
+                      s.askOracles, // toUpperCase YOK (Türkçe İ); başlık Cinzel
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
-                      ),
+                      style: AppTextStyles.screenTitle,
                     ),
                   ),
                   const SizedBox(width: 48),

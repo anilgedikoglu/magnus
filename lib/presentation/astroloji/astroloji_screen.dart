@@ -332,7 +332,8 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
                 ),
               ),
               child: Text(
-                ref.watch(l10nProvider).astroSectionLabel(item.section.key).toUpperCase(),
+                // toUpperCase YOK (Türkçe İ bozulur); Cinzel zaten kapitalik.
+                ref.watch(l10nProvider).astroSectionLabel(item.section.key),
                 style: GoogleFonts.cinzel(
                   fontSize: 12,
                   fontWeight: FontWeight.w700,

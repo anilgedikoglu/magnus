@@ -25,6 +25,7 @@ import '../../core/l10n/app_strings.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 
 class CoffeeScreen extends ConsumerStatefulWidget {
   const CoffeeScreen({super.key});
@@ -280,12 +281,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
             child: Text(
               s.coffeeTitle,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2,
-              ),
+              style: AppTextStyles.screenTitle,
             ),
           ),
           const SizedBox(width: 48),

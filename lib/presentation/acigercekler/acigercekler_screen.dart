@@ -19,6 +19,7 @@ import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -208,12 +209,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
           Expanded(
             child: Text(
               ref.watch(l10nProvider).bitterTruthsTitle,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 1.2,
-              ),
+              style: AppTextStyles.screenTitle,
               textAlign: TextAlign.center,
             ),
           ),
@@ -359,12 +355,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
                   const SizedBox(height: 20),
                   Text(
                     ref.watch(l10nProvider).bitterTruthsLimitTitle,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      height: 1.4,
-                    ),
+                    style: AppTextStyles.screenTitle,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 12),

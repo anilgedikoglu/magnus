@@ -30,13 +30,6 @@ class _SlowRevealCurve extends Curve {
   double transformInternal(double t) => (exp(t) - 1) / (exp(1) - 1);
 }
 
-// Hızlı başlar, yavaşlar — karanlık hızla örtüp sakinleşir
-class _FastCoverCurve extends Curve {
-  const _FastCoverCurve();
-  @override
-  double transformInternal(double t) => log(1 + t * (exp(1) - 1));
-}
-
 // ─── Model ───────────────────────────────────────────────────────────────────
 
 class _KitapEntry {
@@ -75,29 +68,21 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
   @override
   void initState() {
     super.initState();
-    // Toplam döngü: 3s karanlık + 3s açılış + 1s görünür + 3s kapanış = 10s
+    // Tek seferlik: 2s karanlık + 3s yavaş açılış → yazı KALIR (Anıl: "çıkan yazı tekrar
+    // kaybolmasın"; eskiden 10 sn'lik döngüde yeniden kararıyordu).
     _mistikCtrl = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 10),
+      duration: const Duration(seconds: 5),
     );
     _darkOverlay = TweenSequence<double>([
       TweenSequenceItem(
-        tween: Tween(begin: 1.0, end: 1.0), // 3s kapkara
-        weight: 30,
+        tween: Tween(begin: 1.0, end: 1.0), // 2s kapkara
+        weight: 20,
       ),
       TweenSequenceItem(
         tween: Tween(begin: 1.0, end: 0.0)
             .chain(CurveTween(curve: const _SlowRevealCurve())),
         weight: 30, // 3s yavaş açılış
-      ),
-      TweenSequenceItem(
-        tween: Tween(begin: 0.0, end: 0.0), // 1s tam görünür
-        weight: 10,
-      ),
-      TweenSequenceItem(
-        tween: Tween(begin: 0.0, end: 1.0)
-            .chain(CurveTween(curve: const _FastCoverCurve())),
-        weight: 30, // 3s kapanış
       ),
     ]).animate(_mistikCtrl);
 
@@ -204,7 +189,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
       _metin = rendered;
       _loading = false;
     });
-    _mistikCtrl.repeat(); // animasyon sadece metin hazır olunca başlar
+    _mistikCtrl.forward(); // bir kez açılır, yazı kalır (metin hazır olunca başlar)
   }
 
   // ─── BUILD ───────────────────────────────────────────────────────────────
@@ -238,10 +223,11 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
+                // Anıl: "bg'yi biraz koyulaştır" (eski 0xAA/0x55/0xAA)
                 colors: [
-                  Color(0xAA000000),
-                  Color(0x55000000),
-                  Color(0xAA000000),
+                  Color(0xCC000000),
+                  Color(0x88000000),
+                  Color(0xCC000000),
                 ],
               ),
             ),

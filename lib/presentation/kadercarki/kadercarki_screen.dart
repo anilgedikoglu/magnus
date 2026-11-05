@@ -19,6 +19,7 @@ import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
+import '../../core/constants/app_text_styles.dart';
 
 // ─── Çark bölmeleri (saat yönünde, 0'dan başlar) ─────────────────────────────
 
@@ -382,12 +383,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
           Text(
             ref.watch(l10nProvider).kaderFalTitle(ref.watch(l10nProvider).kaderBolmeName(bolme.key)),
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.2,
-            ),
+            style: AppTextStyles.screenTitle,
           ),
           const SizedBox(height: 12),
           Container(
@@ -568,12 +564,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       // Fal adı — ortalı
       Text(
         ref.watch(l10nProvider).kaderFalTitle(ref.watch(l10nProvider).kaderBolmeName(bolme.key)),
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 0.8,
-        ),
+        style: AppTextStyles.screenTitle,
       ),
       const SizedBox(height: 16),
 
@@ -653,8 +644,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
         ),
         const Spacer(),
         Text(ref.watch(l10nProvider).kaderCarkiTitle,
-          style: const TextStyle(color: Colors.white, fontSize: 17,
-              fontWeight: FontWeight.bold)),
+          style: AppTextStyles.screenTitle),
         const Spacer(),
         const SizedBox(width: 36),
       ]),

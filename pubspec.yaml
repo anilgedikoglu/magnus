@@ -93,6 +93,7 @@ flutter:
   # Fragment shader'lar (FragmentProgram.fromAsset) — Kullanıcı Bilgileri "yaşayan nebula"
   shaders:
     - shaders/living_nebula.frag
+    - shaders/glass_lens.frag
 
   assets:
     - assets/data/

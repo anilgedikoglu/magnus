@@ -5,10 +5,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'app.dart';
 import 'core/services/ad_service.dart';
+import 'core/widgets/glass_tab_bar.dart';
 import 'data/providers.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Cam barın sıvı cam kırılma shader'ı (yalnız Impeller) — beklemeden arka planda yüklenir.
+  GlassTabBar.preloadLens();
 
   // Gömülü OFL yazı tiplerinin lisansları (Nunito, Raleway, Cinzel) — lisans sayfasında görünür.
   LicenseRegistry.addLicense(() async* {

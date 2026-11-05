@@ -16,14 +16,18 @@
 //     en solda → ana menüye dönüşte çıkan sayfa sağa kayar.
 //   - Android geri: ana menü dışındaysa ana menüye döner.
 //   - Fallar/detaylar kendi rotalarında açılır → bu kapsayıcının (ve barın) ÜSTÜNE biner.
+//   - Bar kaydırmayla küçülür/büyür (Instagram iOS 26 ölçümü, bar_minimize.dart): görünen
+//     sekmenin dikey kaydırma olayları burada dinlenir; sekme değişince bar tam boy.
 
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/physics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/widgets/bar_minimize.dart';
 import '../../core/widgets/glass_tab_bar.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
@@ -91,11 +95,56 @@ class MainTabsScreen extends ConsumerStatefulWidget {
 }
 
 class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   late final AnimationController _anim = AnimationController(
     vsync: this,
     duration: const Duration(milliseconds: 360),
   );
+
+  /// Barın küçülme ilerlemesi (0 tam boy, 1 küçük; yayda hafif taşabilir).
+  late final AnimationController _minimize = AnimationController.unbounded(vsync: this);
+  late final BarMinimizeLogic _minimizeLogic = BarMinimizeLogic(
+    onCreep: (v) {
+      if (_reduceMotion) return; // azaltılmış harekette sürünme yok, yalnız karar
+      _minimize.value = v;
+    },
+    onCommit: (compact) => _springMinimize(compact ? 1 : 0,
+        compact ? kBarMinimizeKickVelocity : -kBarMinimizeKickVelocity),
+    onRelease: (compact) => _springMinimize(compact ? 1 : 0, 0),
+  );
+
+  bool get _reduceMotion => MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+
+  void _springMinimize(double target, double velocity) {
+    if (!mounted) return;
+    if (_reduceMotion) {
+      _minimize.value = target;
+      return;
+    }
+    if (_minimize.value == target && !_minimize.isAnimating) return;
+    _minimize.animateWith(SpringSimulation(
+        kBarMinimizeSpring, _minimize.value, target, _minimize.velocity + velocity));
+  }
+
+  /// Görünen sekmenin DİKEY ana kaydırması → küçülme mantığı. Esneme (overscroll) sayılmaz;
+  /// listenin başı = tam boy. Yatay (sekme/marquee) ve iç içe kaydırmalar yok sayılır.
+  bool _onScroll(ScrollNotification n) {
+    if (n.depth != 0 || n.metrics.axis != Axis.vertical) return false;
+    final m = n.metrics;
+    if (n is ScrollUpdateNotification) {
+      if (m.pixels <= m.minScrollExtent) {
+        _minimizeLogic.reset();
+        return false;
+      }
+      if (m.pixels > m.maxScrollExtent) return false; // alt esneme
+      // Hareket esneme bölgesinden başladıysa yalnız sınırın içindeki kısmı say.
+      final before = m.pixels - (n.scrollDelta ?? 0);
+      _minimizeLogic.add(m.pixels - before.clamp(m.minScrollExtent, m.maxScrollExtent));
+    } else if (n is ScrollEndNotification) {
+      _minimizeLogic.release();
+    }
+    return false;
+  }
   late final CurvedAnimation _curved =
       CurvedAnimation(parent: _anim, curve: Curves.easeInOutCubic);
 
@@ -215,6 +264,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
     _releaseBack();
     _curved.dispose();
     _anim.dispose();
+    _minimize.dispose();
     super.dispose();
   }
 
@@ -254,6 +304,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
           (barSlotFor(tab) > barSlotFor(_current) ? TabEntry.right : TabEntry.left);
     }
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    _minimizeLogic.reset(); // yeni sekmede bar tam boy
     setState(() {
       _built.add(tab);
       _from = _current;
@@ -339,7 +390,12 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
         select: _select,
         child: Stack(
           children: [
-            ...children,
+            Positioned.fill(
+              child: NotificationListener<ScrollNotification>(
+                onNotification: _onScroll,
+                child: Stack(children: children),
+              ),
+            ),
             Positioned(
               left: kGlassBarSide,
               right: kGlassBarSide,
@@ -362,6 +418,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
                   selected: barSlotFor(_current), // görünen sekme → kapsülün yeri
                   onTap: _onBarTap,
                   badge: badge,
+                  minimize: _minimize,
                   labels: [
                     s.tabHome,
                     switch (badge) {

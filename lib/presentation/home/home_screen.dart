@@ -106,6 +106,15 @@ import '../../core/widgets/tab_swipe.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
 
+/// Ana menünün (menu layer 1, ikonlar) düz arka plan rengi (Anıl'ın örneği: rgb 12,15,20).
+const Color kHomeBackground = Color(0xFF0C0F14);
+
+/// Menu layer 2'nin (üstteki 3 sıra sohbet balonu) zemini (Anıl'ın örneği: rgb 21,21,21).
+const Color kHomeHeaderBackground = Color(0xFF151515);
+
+/// Menu layer 2'nin güvenli alan ALTINDAKİ yüksekliği: 3. balon sırasının hemen altı.
+const double kHomeHeaderHeight = 155;
+
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
@@ -733,50 +742,57 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       if (ref.read(mainTabProvider) == MainTab.home) _scrollGridToTop();
     });
 
+    // ── Ana menü arka planı: DÜMDÜZ koyu renk (Anıl, 2026-11-05 "ikonların olduğu yerden
+    // background'u kaldırıp bg'yi dümdüz bu renk yap" — örnek görselden ölçüldü #0C0F14).
+    // Eski welcomscreenbackground.jpg + %42 karartma kaldırıldı.
+    // ── İki katman (Anıl, 2026-11-05) ──────────────────────────────────────
+    //   Menu layer 1 = ikon ızgarası: TAM EKRAN, içerik layer 2'nin alt kenarından başlar.
+    //   Menu layer 2 = üstteki 3 sıra sohbet balonu: ayrı ÜST katman, ekranın en üstünden
+    //     3. sıranın hemen altına kadar, zemin #151515.
+    //   Yukarı kaydırınca layer 2 ızgarayla AYNI hızda yukarı kayar ve ekrandan çıkar;
+    //   aşağı çekince ızgara başa yaklaşınca (kalan yol < layer 2 yüksekliği) ekranın
+    //   üstünden aynı hızla iner, ilk yerinde DURUR (üstte esneme olsa da aşağı inmez).
+    //   Ofset = ızgara kaydırması, [0, layer 2 yüksekliği] aralığına kırpılmış.
+    final topInset = MediaQuery.paddingOf(context).top;
+    final headerHeight = topInset + kHomeHeaderHeight;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: kHomeBackground,
       extendBody: true,
       body: Stack(
         children: [
-          // ── Ana menü arka planı ───────────────────────────────────────────
-          // 2026-11-05: eski renkler — görsel tam renk (film yok).
+          // ── Menu layer 1: tek ana menü, 3×9, yukarıdan aşağı kaydırmalı ─────
+          // Alt kenar SafeArea'ya kesilmez: ızgara cam barın ARKASINA kadar uzanır.
+          // Sola kaydırma → gelen kutusu (barda ana menünün sağındaki sekme).
+          // Yön kilitli: dikey kaydırma bir kez başladıysa sekme değişmez.
           Positioned.fill(
-            child: ColorFiltered(
-              colorFilter: ColorFilter.matrix(FilmedImage.matrix(1.0, 1.0)),
-              child: Image.asset(
-                'assets/images/welcomscreenbackground.jpg',
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-              ),
+            child: TabSwipe(
+              onSwipeLeft: () =>
+                  selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
+              child: _buildGrid(context, topPad: headerHeight + 6),
             ),
           ),
-          // Eski: hafif karartma katmanı (siyah %42), görsel tam renk.
-          const Positioned.fill(
-            child: IgnorePointer(child: ColoredBox(color: Color(0x6B000000))),
-          ),
-          // ── İçerik ───────────────────────────────────────────────────────
-          // Alt kenar SafeArea'ya kesilmez: ızgara cam barın ARKASINA kadar uzanır,
-          // kaydırınca kartlar camın altından bulanık görünür (liquid glass).
-          SafeArea(
-            bottom: false,
-            child: Column(
-              children: [
-                // ─── Chat header (sabit) ──────────────────────────────────
-                _buildChatHeader(),
-
-                // ─── Tek ana menü: 3×9, yukarıdan aşağı kaydırmalı ────────
-                Expanded(
-                  // Sola kaydırma → gelen kutusu (barda ana menünün sağındaki sekme).
-                  // Yön kilitli: dikey kaydırma bir kez başladıysa sekme değişmez.
-                  child: TabSwipe(
-                    onSwipeLeft: () =>
-                        selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
-                    child: _buildGrid(context),
-                  ),
+          // ── Menu layer 2: sohbet balonları (ızgarayla birlikte kayar) ────────
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            height: headerHeight,
+            child: AnimatedBuilder(
+              animation: _gridScrollCtrl,
+              child: ColoredBox(
+                key: const ValueKey('homeMenuLayer2'),
+                color: kHomeHeaderBackground,
+                child: Padding(
+                  padding: EdgeInsets.only(top: topInset),
+                  child: _buildChatHeader(),
                 ),
-              ],
+              ),
+              builder: (context, child) {
+                final scrolled = _gridScrollCtrl.hasClients
+                    ? _gridScrollCtrl.offset.clamp(0.0, headerHeight)
+                    : 0.0;
+                return Transform.translate(offset: Offset(0, -scrolled), child: child);
+              },
             ),
           ),
         ],
@@ -805,7 +821,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final visibleCount = (_typingIndex + 1).clamp(0, bubbles.length);
 
     return SizedBox(
-      height: 155,
+      height: kHomeHeaderHeight,
       child: SingleChildScrollView(
         controller: _chatScrollCtrl,
         physics: const NeverScrollableScrollPhysics(),
@@ -871,7 +887,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     }
   }
 
-  Widget _buildGrid(BuildContext context) {
+  Widget _buildGrid(BuildContext context, {required double topPad}) {
     final items = [
       ..._page1Items(context),
       ..._page2Items(context),
@@ -883,7 +899,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     return GridView.builder(
       controller: _gridScrollCtrl,
       physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-      padding: EdgeInsets.fromLTRB(10, 6, 10, bottomPad),
+      padding: EdgeInsets.fromLTRB(10, topPad, 10, bottomPad),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         crossAxisSpacing: 8,

@@ -1,6 +1,7 @@
 // GlassTabBar regresyon testleri (3 slot: Ana Menü · Gelen Kutusu · Kullanıcı Bilgileri).
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:magnus_app/core/widgets/bar_minimize.dart';
 import 'package:magnus_app/core/widgets/glass_tab_bar.dart';
 
 const _labels = ['Ana Menü', 'Gelen Kutusu', 'Kullanıcı Bilgileri'];
@@ -143,5 +144,62 @@ void main() {
     expect(_pillSlot(tester), closeTo(2, 0.01));
     expect(tester.getRect(find.byKey(_pill)).width, closeTo(_slotWidth(tester), 0.5));
     expect(tester.binding.hasScheduledFrame, isFalse);
+  });
+
+  testWidgets('küçük bar: merkezden 0.837 ölçek, ikonlara dokunuş doğru slotta', (tester) async {
+    final taps = <int>[];
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        body: Center(
+          child: SizedBox(
+            width: 366,
+            height: kGlassBarHeight,
+            child: GlassTabBar(
+              selected: 0,
+              onTap: taps.add,
+              labels: _labels,
+              minimize: const AlwaysStoppedAnimation(1.0),
+            ),
+          ),
+        ),
+      ),
+    ));
+    final outer = tester.getRect(find.byType(GlassTabBar));
+    final pill = tester.getRect(find.byKey(_pill));
+    // Kapsül yüksekliği (56 − 2·5) ölçekle küçülür; merkez sabit.
+    expect(pill.height, closeTo((kGlassBarHeight - 2 * _inset) * kBarCompactScale, 0.5));
+    expect(pill.center.dy, closeTo(outer.center.dy, 0.5));
+    // Küçük barın sağ ucundaki profil ikonu: ölçeklenmiş slot merkezi.
+    final w = outer.width * kBarCompactScale;
+    final left = outer.center.dx - w / 2;
+    final slot = (w - 2 * _inset * kBarCompactScale) / kGlassBarSlots;
+    await tester.tapAt(Offset(left + _inset * kBarCompactScale + slot * 2.5, outer.center.dy));
+    await tester.tapAt(Offset(left + _inset * kBarCompactScale + slot * 1.5, outer.center.dy));
+    expect(taps, [2, 1]);
+    // Küçük barın DIŞI (eski tam boy alanın ucu) bara dokunmaz.
+    await tester.tapAt(Offset(outer.left + 3, outer.center.dy));
+    expect(taps, [2, 1]);
+  });
+
+  testWidgets('seçili ikon iOS mavisi, diğerleri beyaz; kapsülle birlikte geçer', (tester) async {
+    Color iconColor(int i) =>
+        ((tester.widget<CustomPaint>(find.byKey(ValueKey('glassTabBarIcon$i'))).painter!
+                as dynamic)
+            .color as Color);
+    await tester.pumpWidget(_host(0, (_) {}));
+    expect(iconColor(0), kGlassBarSelectedColor);
+    expect(iconColor(1), Colors.white);
+    expect(iconColor(2), Colors.white);
+    await tester.pumpWidget(_host(1, (_) {}));
+    await tester.pump(const Duration(milliseconds: 60));
+    // Geçiş sırasında: kaynak ve hedef ikon ara tonda (beyaz ile mavi arasında).
+    expect(iconColor(1), isNot(Colors.white));
+    expect(iconColor(1), isNot(kGlassBarSelectedColor));
+    expect(iconColor(0), isNot(kGlassBarSelectedColor));
+    await tester.pumpAndSettle();
+    expect(iconColor(1), kGlassBarSelectedColor);
+    expect(iconColor(0), Colors.white);
+    expect(iconColor(2), Colors.white);
   });
 }

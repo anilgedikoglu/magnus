@@ -3,6 +3,18 @@
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
 ## Ne yapıldı (2026-11-05) + değişen dosyalar
+- **Sıvı cam + kaydırmayla küçülme + iki katmanlı ana menü (build YOK, main'de):** Anıl'ın Instagram kayıt/ekran
+  görüntülerinden ÖLÇÜLDÜ.
+  - (1) Cam bar Impeller'da gerçek ışık kırılması: `shaders/glass_lens.frag` (kenarda dairesel cam pahı, örnek içeri kayar,
+    hafif yönlü bulanıklık). Skia'da eski buzlu cam. Geçirgenlik değişmedi.
+  - (2) Bar kaydırmayla küçülür/büyür: `lib/core/widgets/bar_minimize.dart` + `main_tabs.dart`. 0.837 ölçek; küçülmede
+    45 pt ölü bölge, kararlar 72/60 pt'de; yay 250/24.
+  - (3) Ana menü arka planı düz #0C0F14. Üstteki sohbet balonları ayrı üst katman (#151515); ızgarayla birlikte kayıp
+    ekrandan çıkar, başa dönünce iner (`home_screen.dart`).
+  - (4) Seçili sekme ikonu iOS mavisi #5FBBF9.
+  - Testler: `bar_minimize_test` (yeni), `glass_tab_bar_test` / `main_tabs_test` (yeni vakalar).
+  - Görsel doğrulama Impeller ile Windows'ta: `flutter test --enable-impeller build/visual_check/lens_compare_test.dart`
+    ve `minimize_capture_test.dart`.
 - **10.8.11+273 — ÖNEMLİ MENÜ DEĞİŞİKLİĞİ (Anıl):** cam bar 3 ikon: Ev · Zarf · Profil (insan büstü). Ana menü TEK
   sayfa, 3×9 dikey kaydırmalı ızgara (sayfa göstergesi + hazırlanan fal yuvarlakları kaldırıldı, alan ızgaraya katıldı).
   Zarf rozeti: hazırlanan fal → turuncu, hepsi hazır → yeşil, okunmamış yok → yok (zamanlayıcıyla kendiliğinden döner).

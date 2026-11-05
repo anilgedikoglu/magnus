@@ -656,9 +656,18 @@ Bilgisayar·Ev1·Ev2·Ev3·Zarf düzeni KALDIRILDI). Sıra `kMainTabOrder = [hom
 **Ana menü = TEK sayfa, 3 sütun × 9 satır, yukarıdan aşağı kaydırmalı** (`HomeScreen._buildGrid`, GridView.builder,
 Bouncing). Sıra eski sayfa 1+2+3; her 3 satır eski sayfa rengini korur (pembe/mavi/yeşil çerçeve). PageView,
 sayfa göstergesi (üçlü çizgi), `homePageProvider`, hazırlanan fal yuvarlakları (`_FortuneProgressRow`,
-`_ArcProgressPainter`) KALDIRILDI; o alan ızgaraya katıldı. Izgara cam barın ARKASINA uzanır (`SafeArea(bottom:false)`,
-alt pay = güvenli alan + bar + 14). Bardaki eve TEKRAR dokunuş → liste başa kayar (`mainTabReselectProvider`, yalnız
+`_ArcProgressPainter`) KALDIRILDI; o alan ızgaraya katıldı. Izgara cam barın ARKASINA uzanır,
+alt pay = güvenli alan + bar + 14. Bardaki eve TEKRAR dokunuş → liste başa kayar (`mainTabReselectProvider`, yalnız
 ana menü görünürken).
+
+**Ana menü İKİ KATMAN (Anıl, 2026-11-05; Instagram akışındaki hikâyeler satırı gibi):**
+- **Menu layer 1** = ikon ızgarası, TAM EKRAN, düz zemin `kHomeBackground` #0C0F14 (eski welcomscreenbackground.jpg
+  + karartma KALDIRILDI). Izgara üst dolgusu = layer 2 yüksekliği + 6 → varsayılanda layer 2'nin alt kenarından başlar.
+- **Menu layer 2** = üstteki 3 sıra sohbet balonu, ayrı ÜST katman (`homeMenuLayer2`), zemin `kHomeHeaderBackground`
+  #151515, ekranın en tepesinden (çentik dahil) 3. sıranın hemen altına: yükseklik = üst güvenli alan + `kHomeHeaderHeight` 155.
+- Ofset = ızgara kaydırması, [0, layer 2 yüksekliği]'ne kırpılır (`Transform.translate`): yukarı kaydırınca layer 2
+  ızgarayla AYNI hızda çıkıp kaybolur; aşağı çekince ızgara başa yaklaşınca üstten aynı hızla iner, ilk yerinde DURUR
+  (üstte esneme olsa da aşağı inmez). Sekme kaydırması (TabSwipe) yalnız ızgarada.
 
 **Zarf rozeti (`InboxBadge`):** hazırlanan (kilitli) fal varsa TURUNCU `#FFA62B`; yoksa ve okunmamış hazır fal varsa
 YEŞİL `#44FF88`; okunmamış yoksa nokta YOK. Doğrudan öğelerden hesaplanır (önbellekli `readyUnreadCountProvider`
@@ -671,7 +680,7 @@ Ana menü: sola → Gelen Kutusu. Profil: sağa → Gelen Kutusu (satır içi d�
 Gelen Kutusu (GestureDetector hız): sağa → Ana Menü, sola → Profil.
 
 **İkon kuralı:** Dolu (beyaz dolgulu) varyant YOK — Anıl: "fazla beyazlı modeller kaba, çizgili modelleri kullan".
-Aktif sekme yalnız kapsülle gösterilir. Zarf glifi ChatGPT'ye çizdirildi (SVG viewBox 24, stroke 2.1) ve birebir
+Aktif sekme kapsül + ikonun iOS seçili mavisiyle (`kGlassBarSelectedColor` #5FBBF9, Anıl'ın Fotoğraflar örneğinden; kapsül yaklaştıkça beyaz→mavi) gösterilir. Zarf glifi ChatGPT'ye çizdirildi (SVG viewBox 24, stroke 2.1) ve birebir
 `Path`'e çevrildi; ev ve büst aynı dilde (24'lük ızgara, 2.1 çizgi, yuvarlak uç). Eski renkli PNG'ler barda yok.
 
 **KURALLAR (bozma):**
@@ -694,15 +703,28 @@ Aktif sekme yalnız kapsülle gösterilir. Zarf glifi ChatGPT'ye çizdirildi (SV
 - Etiketler (ekran okuyucu): "Ana Menü", "Gelen Kutusu" / "…, hazırlanan fal var" / "…, okunmamış fal var",
   "Kullanıcı Bilgileri" (TR/EN `AppStrings.tabHome/tabInbox*/settingsTitle`).
 
-**Cam:** tek `BackdropFilter` (blur σ20 + doygunluk 1.25 yalnız backdrop zincirinde) + `#1C1C1E` %55 tint +
-üst parlama + gradyan kenar ışığı + dış gölge. Seçim kapsülü: ikinci blur YOK. Yay: kütle 1, sertlik 420,
+**Cam:** `#1C1C1E` %55 tint + üst parlama + gradyan kenar ışığı + dış gölge (geçirgenlik DEĞİŞMEDİ — Anıl).
+Arka plan: **Impeller'da SIVI CAM KIRILMASI** (`shaders/glass_lens.frag`, `_LensBackdrop`; Anıl: "bizde buzlu cam,
+onlarda iki cam arası sıvı var gibi kırıyor ışığı"): Instagram iOS 26 ekran görüntülerinden ÖLÇÜLDÜ — kenarda dairesel
+cam pahı (genişlik 0.234h), örnek içeri doğru 0.238h·eğim kayar (en çok h/2), normal yönünde hafif bulanıklık σ 0.028h,
+doygunluk 1.25. Orta kısım arkayı aynen gösterir; pah bandında yatay çizgiler dikeyde akar. Shader barın GLOBAL
+FİZİKSEL dikdörtgenini ister: `getTransformTo(null)` MANTIKSAL verir → ×DPR (unutulunca lens yanlış yerde, yazı ters
+görünüyordu). Impeller yoksa (`ImageFilter.isShaderFilterSupported` false, Skia) eski buzlu cam (blur σ20 + doygunluk).
+Shader `main`'de önceden yüklenir (`GlassTabBar.preloadLens`). **Impeller görsel testi Windows'ta ÇALIŞIR:**
+`flutter test --enable-impeller build/visual_check/lens_compare_test.dart` (Instagram arka planında karşılaştırma) ve
+`minimize_capture_test.dart` (gerçek uygulama). `debugDisableGlassLens` yalnız karşılaştırma için.
+**Kaydırmayla küçülme** (`bar_minimize.dart`, Anıl'ın Instagram kaydından ölçüldü): yukarı kaydırma → bar merkezden
+0.837'ye küçülür (45 pt ölü bölge, sonra sürünme, 72 pt'de karar); aşağı kaydırma → hemen sürünme, 60 pt'de tam boy.
+Yay kütle 1 / sertlik 250 / sönüm 24, karar anı hızı 1/sn. Liste başı, sekme değişimi = tam boy; esneme sayılmaz;
+parmak kalkınca yarım sürünme geri döner. Kaydırma olayları MainTabs'ta (`depth==0`, dikey). Küçük barda dokunuş da ölçeklenir.
+Seçim kapsülü: ikinci blur YOK. Yay: kütle 1, sertlik 420,
 sönüm 36. **Esneme:** kapsül HAREKET YÖNÜNE uzar — hız×0.03 slot (en çok 0.32), sağa giderken sağ kenar,
-sola giderken sol kenar önden koşar; hız düştükçe (varınca) kısalır, uzarken %5'e kadar incelir. Kırılma (lens) yok: `ImageFilter.shader` Skia'da desteklenmez; `liquid_glass_renderer`
-Flutter 3.47+ ister. Neden Hero değil: `go('/inbox')` dal değişiminde uçuş yok, pop+push örtüşür (Codex).
+sola giderken sol kenar önden koşar; hız düştükçe (varınca) kısalır, uzarken %5'e kadar incelir.
+Neden Hero değil: `go('/inbox')` dal değişiminde uçuş yok, pop+push örtüşür (Codex).
 **Testler:** `test/main_tabs_test.dart` (state/ticker/scope, bar sırası, eve tekrar dokunuş, rozet renkleri +
 zamanla turuncu→yeşil, GERÇEK go_router ile geri tuşu: çıkış yok/detay ve kök rota önce kapanır),
-`test/glass_tab_bar_test.dart` (3 slot, yönlü esneme, rozet, reduced-motion), `test/tab_swipe_test.dart` (yön kilidi,
-çok parmak, eşik, devre dışı). Görsel doğrulama: `build/visual_check/menu3_capture_test.dart --dart-define=CAP_PHASE=<ad>`
+`test/glass_tab_bar_test.dart` (3 slot, yönlü esneme, rozet, reduced-motion, küçük barda dokunuş), `test/tab_swipe_test.dart` (yön kilidi,
+çok parmak, eşik, devre dışı), `test/bar_minimize_test.dart` (ölü bölge, sürünme, karar, yön dönüşü, bırakma, reset). Görsel doğrulama: `build/visual_check/menu3_capture_test.dart --dart-define=CAP_PHASE=<ad>`
 (gerçek uygulama: ana menü üst/orta/alt, başa dönüş, geçiş kareleri, sola kaydırma).
 
 ---

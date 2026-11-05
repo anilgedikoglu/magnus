@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:magnus_app/core/l10n/app_strings.dart';
+import 'package:magnus_app/core/widgets/bar_minimize.dart';
 import 'package:magnus_app/core/widgets/glass_tab_bar.dart';
 import 'package:magnus_app/data/models/inbox_item.dart';
 import 'package:magnus_app/data/providers.dart';
@@ -239,6 +240,56 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('I:0'), findsOneWidget);
     expect(find.text('H:0'), findsNothing);
+  });
+
+  testWidgets('kaydırma: yukarı → bar küçülür, aşağı → büyür, sekme değişince tam boy', (
+    tester,
+  ) async {
+    await tester.pumpWidget(ProviderScope(
+      overrides: [
+        inboxProvider.overrideWith(_FakeInbox.new),
+        l10nProvider.overrideWithValue(AppStrings('tr')),
+      ],
+      child: MaterialApp(
+        home: MainTabsScreen(
+          debugPageBuilder: (t) => t == MainTab.home
+              ? ListView.builder(
+                  itemCount: 300,
+                  itemExtent: 50,
+                  itemBuilder: (_, i) => Text('satır $i'),
+                )
+              : _Page(const ['P', 'H', 'I'][t]),
+        ),
+      ),
+    ));
+    double scale() => tester
+        .widget<Transform>(find.byKey(const ValueKey('glassTabBarScale')))
+        .transform
+        .storage[0]; // x ölçeği (getMaxScaleOnAxis z=1'i de sayar)
+    final list = find.byType(ListView);
+
+    expect(scale(), 1.0);
+    // Küçük oynama (ölü bölge) barı kımıldatmaz.
+    await tester.timedDrag(list, const Offset(0, -30), const Duration(milliseconds: 600));
+    await tester.pumpAndSettle();
+    expect(scale(), 1.0);
+    // Yukarı kaydırma → küçük.
+    await tester.timedDrag(list, const Offset(0, -200), const Duration(milliseconds: 800));
+    await tester.pumpAndSettle();
+    expect(scale(), closeTo(kBarCompactScale, 0.001));
+    // Küçük barda zarfa dokunuş hâlâ doğru sekmeyi açar (Transform dokunuşu da ölçekler).
+    // Önce aşağı kaydırma → tam boy (listenin başına varmadan).
+    await tester.timedDrag(list, const Offset(0, 90), const Duration(milliseconds: 800));
+    await tester.pumpAndSettle();
+    expect(scale(), closeTo(1.0, 0.001));
+    // Tekrar küçült, sonra sekme değiştir → tam boy.
+    await tester.timedDrag(list, const Offset(0, -200), const Duration(milliseconds: 800));
+    await tester.pumpAndSettle();
+    expect(scale(), closeTo(kBarCompactScale, 0.001));
+    await tester.tap(find.bySemanticsLabel('Gelen Kutusu'));
+    await tester.pumpAndSettle();
+    expect(find.text('I:0'), findsOneWidget);
+    expect(scale(), closeTo(1.0, 0.001));
   });
 }
 

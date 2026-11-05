@@ -431,19 +431,22 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
       children: [
         _buildTextCard(r.b1Metin),
-        _buildBarCard(s.emotional, r.duygusalPct, r.duygusalMetin),
-        _buildBarCard(s.physical, r.fizikselPct, r.fizikselMetin),
-        _buildBarCard(s.intellectual, r.entelektuelPct, r.entelektuelMetin),
+        // Eski çubuk renkleri (2026-11-05 geri geldi)
+        _buildBarCard(s.emotional, r.duygusalPct, r.duygusalMetin, const Color(0xFFFF4444)),
+        _buildBarCard(s.physical, r.fizikselPct, r.fizikselMetin, const Color(0xFF4488FF)),
+        _buildBarCard(s.intellectual, r.entelektuelPct, r.entelektuelMetin, const Color(0xFF44DD66)),
         _buildSectionLabel(isEn ? 'Luck' : 'Şans'),
         _buildBarCard(
           isEn ? 'Luck in love' : 'Aşkta Şansın',
           r.askSansPct,
           r.askSansMetin,
+          const Color(0xFFFF44CC),
         ),
         _buildBarCard(
           isEn ? 'Luck with money' : 'Parada Şansın',
           r.paraSansPct,
           r.paraSansMetin,
+          const Color(0xFFFFDD00),
         ),
         _buildSectionLabel(isEn ? 'Chakras' : 'Çakralar'),
         _buildTextCard(r.cakraMetin),
@@ -469,7 +472,7 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
       ),
     ),
   );
-  Widget _buildBarCard(String label, int pct, String text) => Padding(
+  Widget _buildBarCard(String label, int pct, String text, Color color) => Padding(
     padding: const EdgeInsets.only(bottom: 12),
     child: GlassPanel(
       variant: GlassVariant.reading,
@@ -479,10 +482,11 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
         children: [
           Row(
             children: [
-              Expanded(child: Text(label, style: AppTextStyles.uiLabel)),
+              Expanded(child: Text(label, style: AppTextStyles.uiLabel.copyWith(color: color))),
               Text(
                 ref.read(localeProvider) == 'en' ? '$pct%' : '%$pct',
                 style: AppTextStyles.value.copyWith(
+                  color: color,
                   fontFeatures: AppTextStyles.tabular,
                 ),
               ),
@@ -498,7 +502,7 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
                     value: pct / 100 * _barAnim.value,
                     minHeight: 6,
                     backgroundColor: AppColors.bone.withValues(alpha: 0.08),
-                    color: pct < 25 ? AppColors.blood : AppColors.gold,
+                    color: color,
                   ),
                 ),
           ),

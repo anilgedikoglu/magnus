@@ -26,11 +26,17 @@
   iOS 261 → TestFlight'a YÜKLENDİ (GitHub Actions `.github/workflows/ios-testflight.yml`, run 41975235819,
   ~7 dk; incelemeye gönderilmedi). Codemagic faturası ödenmediği için kapalı; secrets repo'da tanımlı.
 
+- **2026-11-05 öğleden önce (Anıl cihaz geri bildirimi, 10.8.8+264):** renkler eski palete (yapı kaldı),
+  fontlar Nunito/Raleway (+Cinzel başlık), sol kenardan kaydır=geri (`lib/core/widgets/edge_swipe_back.dart`),
+  ayarlar penceresi siyah ekran düzeltmesi, gelen kutusu hep sağdan + geçişteki koyu perde (vinyet kırpma),
+  Kullanıcı Bilgileri satır içi düzenleyici (`settings_screen.dart` `_InlineEditor`). Testler:
+  `edge_swipe_back_test`, `settings_dialog_pop_test`, `settings_inline_editor_test`.
+
 ## Yarım kalan
 - **Gerçek cihazda ilk kez bu build'le denenecek:** yeni zemin (grain + vinyet), filmli görsellerin parlaklığı,
   cam bar, Olumlama'daki çift `GrimoireBackdrop` çapraz geçişinin düşük cihazda kare süresi.
 - Dert Ortağı içerik verisinde (200 dert + 1000 tavsiye) İngilizce yok → ayrı görev önerildi.
-- Bir sonraki build: `10.8.8+264` (yalnız "test çık" ile).
+- Bir sonraki build: `10.8.9+267` (yalnız "test çık" ile).
 - Takipsiz geçici dosyalar (`test/_visual_starfield_capture_test.dart`, `test/goldens/`, `AGENTS.md`):
   protect-tests hook silmeyi engelliyor; commit edilmedi.
 
@@ -45,4 +51,4 @@
 - Anıl'ın `10.8.7+261` cihaz geri bildirimi → ayarlar.
 - Anıl cihazda bakınca: film gücü (`FilmedImage.restSaturation/restBrightness`), zemin grain/mum ışığı
   (`GrimoireBackdrop` candle/vignette/grain), menü kartı etiketi, glif seti (`occult_glyphs.dart`).
-- "test çık" gelirse: pubspec `10.8.8+264` → AAB (`C:\src\flutter`) + main'e push → Codemagic `ios-release`.
+- "test çık" gelirse: pubspec `10.8.9+267` → AAB (`C:\src\flutter`) + main'e push → Codemagic `ios-release`.

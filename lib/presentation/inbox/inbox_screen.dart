@@ -36,7 +36,7 @@ class InboxScreen extends ConsumerWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 stops: [0.0, 0.70, 1.0],
-                colors: [Color(0xF207080B), Color(0xCC07080B), Color(0x0007080B)],
+                colors: [Color(0xF20D0A20), Color(0xCC0D0A20), Color(0x000D0A20)],
               ),
             ),
           ),

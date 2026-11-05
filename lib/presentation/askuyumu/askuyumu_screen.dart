@@ -461,7 +461,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               angle: _wheelAngle,
               child: ColorFiltered(
                 colorFilter: ColorFilter.matrix(
-                    FilmedImage.matrix(FilmedImage.restSaturation, 0.78)),
+                    FilmedImage.matrix(1.0, 1.0)),
                 child: Image.asset(
                   'assets/images/burclar_wheel.png',
                   width: wheelSize,

@@ -3,100 +3,102 @@ import 'package:flutter/material.dart';
 class AppColors {
   AppColors._();
 
-  // ═══ 2026-11 "GECE GRİMUARI" TASARIM SİSTEMİ ═══════════════════════════════
-  // Anıl: "daha az renkli, ciddi, ürpertici, koyu, liquid glass". Yön: gece kapanmış
-  // bir gözlemevinin okuma odası — mürekkep siyahı, isli cam, kemik beyazı, TEK mum
-  // altını (Codex denetimi + sanat yönetmeni sentezi). Ayrıntı: CLAUDE.md "GECE GRİMUARI".
-  // KURAL: Yeni ekran/öğe bu tokenları kullanır; neon (FF55FF, FF44FF, DD00EE, 00E5FF,
-  // 44FF88, FFE800…) YOK. Renk yalnız dokunulunca / kader "hazır" olunca gelir.
-  static const Color ink = Color(0xFF07080B); //         mürekkep — ana zemin
-  static const Color inkSurface = Color(0xFF111216); //  is — sheet / dialog / iz tabanı
-  static const Color inkCard = Color(0xFF17181C); //     opak kart tabanı
-  static const Color inkRaised = Color(0xFF202126); //   seçili nötr yüzey
-  static const Color bone = Color(0xFFE8E2D6); //        kemik — birincil metin (saf beyaz YOK)
-  static const Color boneDim = Color(0xFFB8B3A9); //     ikincil metin
-  static const Color ash = Color(0xFF8D8A93); //         kül — etiket/meta/pasif (5.9:1)
-  static const Color gold = Color(0xFFC2A46B); //        mum altını — TEK ana vurgu (8.4:1)
-  static const Color silver = Color(0xFF939EAD); //      soğuk gümüş — ikincil kozmik detay
-  static const Color success = Color(0xFF7FAF8E); //     hazır (Anıl: "yeşil badge yeterli")
-  static const Color warning = Color(0xFFC9A26A); //     bekleme
-  static const Color danger = Color(0xFFC98A86); //      hata / silme METNİ (okunur gül)
-  static const Color blood = Color(0xFFA8443D); //       kurumuş kan — yıkıcı eylem kenarı,
-  //                                                     düşük değer barı; KÜÇÜK METİNDE YOK (3.4:1)
-  static const Color dangerSurface = Color(0xFF3A2224);
-  static const Color rim = Color(0x29E8E2D6); //         nötr cam kenarı (kemik %16)
-  // Cam: alt barla aynı #1C1C1E ailesi (tek cam dili). Kart %62, seçili %70, okuma %94.
-  static const Color glassTint = Color(0x9E1C1C1E);
-  static const Color glassTintSelected = Color(0xB3242428);
-  static const Color glassTintReading = Color(0xF01C1C1E);
+  // ═══ 2026-11-05: RENKLER ESKİ PALETE DÖNDÜ (Anıl: "yeni renklendirmeyi sevmedim,
+  // renklendirmede eskiye dön"; yapı/yerleşim — cam kartlar, Mühürlü, çizgi ikonlar — KALDI).
+  // Gece Grimuarı token ADLARI korunur (tüm yeni bileşenler bunları kullanıyor), DEĞERLER
+  // eski neon/mor uygulamanın paletinden: koyu lacivert-mor zemin, beyaz metin, pembe vurgu
+  // (#FF55FF — eski parıltı/çerçeve rengi), camgöbeği ikincil, neon yeşil "hazır".
+  static const Color ink = Color(0xFF0D0A20); //         eski background
+  static const Color inkSurface = Color(0xFF140D46); //  eski backgroundSurface
+  static const Color inkCard = Color(0xFF1A1040); //     eski backgroundCard
+  static const Color inkRaised = Color(0xFF241760); //   seçili yüzey (mor)
+  static const Color bone = Color(0xFFFFFFFF); //        birincil metin (eski: saf beyaz)
+  static const Color boneDim = Color(0xFFCCCCCC); //     eski textSecondary
+  static const Color ash = Color(0xFF9E98BE); //         etiket/meta/pasif (lavanta gri)
+  static const Color gold = Color(0xFFFF55FF); //        ana vurgu — eski pembe parıltı
+  static const Color silver = Color(0xFF00CCFF); //      ikincil — eski camgöbeği
+  static const Color success = Color(0xFF44FF88); //     hazır — eski neon yeşil
+  static const Color warning = Color(0xFFE0692D); //     bekleme — eski glowOrange
+  static const Color danger = Color(0xFFFF4466); //      hata / silme metni
+  static const Color blood = Color(0xFFC80000); //       yıkıcı eylem — eski koyu kırmızı
+  static const Color dangerSurface = Color(0xFF4A0012);
+  static const Color rim = Color(0x5C7B5ECC); //         kart/cam kenarı — eski mor çerçeve %36
+  // Cam: eski mor kart tabanı (#1A1040) — kart %62, seçili %70, okuma %94.
+  static const Color glassTint = Color(0x9E1A1040);
+  static const Color glassTintSelected = Color(0xB32A1F5E);
+  static const Color glassTintReading = Color(0xF0140D46);
 
   // ─── App background ──────────────────────────────────────────────────────
-  // (Eski: koyu mor #0D0A20 / #140D46 / #1A1040 → Gece Grimuarı kömürü)
-  static const Color background = ink;
-  static const Color backgroundSurface = inkSurface;
-  static const Color backgroundCard = inkCard;
+  static const Color background = Color(0xFF0D0A20);
+  static const Color backgroundSurface = Color(0xFF140D46);
+  static const Color backgroundCard = Color(0xFF1A1040);
 
-  // ─── Eski Unity balon paleti (BubbleColor.asset) — 2026-11 Gece Grimuarı eşlemesi ──
-  // Adlar korunur (onboarding sohbeti, tarot seçimleri, astroloji butonları kullanıyor);
-  // DEĞERLER artık koyu cam + tek vurgu. Eski değerler: mor→mavi→teal #4835A6/#3A86CA/
-  // #2DAAA0 + pembe çerçeve #FF00DD; kahve #65420C; mor #140D46; pembe #FF00AF; zeytin
-  // #7F9835. Gövde = cam gradyanı, çerçeve = seçim/odak rengi (çoğunlukla mum altını).
+  // ─── Unity balon paleti (BubbleColor.asset) — ESKİ DEĞERLER ─────────────────
   static const List<Color> bubble1 = [
-    Color(0xFF2A2A2F),
-    Color(0xFF222226),
-    Color(0xFF1C1C1F),
+    Color(0xFF4835A6), // #4835A6  rgba(0.282,0.208,0.596)
+    Color(0xFF3A86CA), // #3A86CA  rgba(0.228,0.525,0.792)
+    Color(0xFF2DAAA0), // #2DAAA0  rgba(0.180,0.670,0.597) — fades to transparent
   ];
-  static const Color bubbleFrame1 = gold;
+  static const Color bubbleFrame1 = Color(0xFFFF00DD); // Hot Pink
 
-  static const List<Color> bubble2 = [Color(0xFF2A241B), Color(0xFF221D16)]; // sıcak is
-  static const Color bubbleFrame2 = Color(0xFF8C8578);
+  static const List<Color> bubble2 = [
+    Color(0xFF65420C), // rgba(0.396,0.258,0.047)
+    Color(0xFF652D0C), // rgba(0.396,0.176,0.047)
+  ];
+  static const Color bubbleFrame2 = Color(0xFF2D2DFF); // Deep Blue
 
-  static const List<Color> bubble3 = [inkCard, inkSurface];
-  static const Color bubbleFrame3 = Color(0xFF8C8578);
+  static const List<Color> bubble3 = [
+    Color(0xFF140D46), // rgba(0.078,0.048,0.275)
+    Color(0xFF130C46),
+  ];
+  static const Color bubbleFrame3 = Color(0xFF00FF00); // Lime Green
 
-  static const List<Color> bubble4 = [Color(0xFF2A2024), Color(0x002A2024)]; // kan isi
-  static const Color bubbleFrame4 = blood;
+  static const List<Color> bubble4 = [
+    Color(0xFFFF00AF), // rgba(1,0,0.686)
+    Color(0x00FF00AF), // fades to transparent
+  ];
+  static const Color bubbleFrame4 = Color(0xFFC80000); // Dark Red
 
   static const List<Color> bubble5 = [
-    Color(0xFF24262A),
-    Color(0xFF1E2024),
-    Color(0xFF1A1B1E),
+    Color(0xFF7F9835), // rgba(0.498,0.596,0.208)
+    Color(0xFF3A86CA), // rgba(0.228,0.525,0.792)
+    Color(0xFF2DAAA0), // rgba(0.180,0.670,0.597)
   ];
-  static const Color bubbleFrame5 = silver;
+  static const Color bubbleFrame5 = Color(0xFFFFFF00); // Yellow
 
   // Default bubble used for Magnus (Color1)
   static List<Color> get magnusBubble => bubble1;
 
-  // ─── Eski parıltı renkleri → anlamlı tokenlar (neon yok) ────────────────────
-  static const Color glowRed = blood;
-  static const Color glowOrange = warning;
-  static const Color glowPurple = silver;
-  static const Color glowGreen = success;
-  static const Color glowBlue = silver;
+  // ─── Parıltı renkleri (eski) ────────────────────────────────────────────────
+  static const Color glowRed = Color(0xFFE02E2E);
+  static const Color glowOrange = Color(0xFFE0692D);
+  static const Color glowPurple = Color(0xFFBD2DE0);
+  static const Color glowGreen = Color(0xFF67E047);
+  static const Color glowBlue = Color(0xFF2D75E0);
 
   // ─── Text colors ──────────────────────────────────────────────────────────
-  static const Color textPrimary = bone; // eski: saf beyaz
-  static const Color textSecondary = boneDim;
-  static const Color textMuted = ash;
+  static const Color textPrimary = Color(0xFFFFFFFF);
+  static const Color textSecondary = Color(0xFFCCCCCC);
+  static const Color textMuted = Color(0xFF888888);
   static const Color textOnLight = Color(0xFF1A1040);
 
   // ─── Answer bubble ────────────────────────────────────────────────────────
-  static const Color answerBubbleBorder = rim; // eski: mor
-  static const Color answerBubbleFill = glassTint; // eski: mor alpha
+  static const Color answerBubbleBorder = Color(0xFF6B4FA0);
+  static const Color answerBubbleFill = Color(0x334835A6); // Color1 with low alpha
 
   // ─── UI elements ─────────────────────────────────────────────────────────
-  static const Color divider = Color(0xFF30343C);
-  static const Color inputBackground = Color(0xFF101319);
-  static const Color navBarBackground = inkSurface;
-  static const Color navBarActive = bone;
-  static const Color navBarInactive = ash;
+  static const Color divider = Color(0xFF2A1F5E);
+  static const Color inputBackground = Color(0xFF1E1550);
+  static const Color navBarBackground = Color(0xFF100B35);
+  static const Color navBarActive = Color(0xFFAA88FF);
+  static const Color navBarInactive = Color(0xFF555588);
 
   // ─── Inbox ────────────────────────────────────────────────────────────────
-  static const Color inboxUnread = gold;
-  static const Color inboxRead = ash;
-  static const Color inboxDeleteBackground = dangerSurface;
+  static const Color inboxUnread = Color(0xFFAA88FF);
+  static const Color inboxRead = Color(0xFF555577);
+  static const Color inboxDeleteBackground = Color(0xFFC80000);
 
-  // ─── Planet / astrology accent (eski Unity: #F57C00 / #FCFF96 → altın ailesi) ─────
-  static const Color astroAccent = gold;
-  static const Color astroInner = Color(0xFFE8D6A8);
+  // ─── Planet / astrology accent (Unity) ──────────────────────────────────────
+  static const Color astroAccent = Color(0xFFF57C00);
+  static const Color astroInner = Color(0xFFFCFF96);
 }

@@ -14,7 +14,10 @@
   JS'te `Blob` ile birleştir, SHA-256'yı yerel dosyayla karşılaştır, `DataTransfer` ile Play'in `.aab` girişine koy.
 - **⚠️ TOOLCHAIN: Flutter 3.41.5 (`C:\src\flutter\bin\flutter.bat`).** main bunu ister (API 36 = 3.41'in
   `flutter.targetSdkVersion`). `C:\flutter` 3.29.2 ile `pub get` çözülmez. Codemagic de 3.41.5'e hizalandı.
-- **Bir sonraki build: `10.8.8+264`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
+- **10.8.8+264 (2026-11-05, iOS TestFlight GitHub Actions):** Anıl cihazda gördü → RENKLER ESKİ PALETE döndü
+  (yapı kaldı), gövde fontları eski (Nunito/Raleway; başlıklar Cinzel), sol kenardan kaydır = geri (tüm iç sayfalar),
+  gelen kutusu hep sağdan, Kullanıcı Bilgileri düzenleyicisi dairelerin YERİNDE (satır içi), siyah ekran düzeltmesi.
+- **Bir sonraki build: `10.8.9+267`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
@@ -554,7 +557,21 @@ return Scaffold(
 
 ---
 
-## ⚠️⚠️⚠️ "GECE GRİMUARI" TASARIM SİSTEMİ (2026-11) — TÜM UI BUNA UYAR ⚠️⚠️⚠️
+## ⚠️⚠️⚠️ "GECE GRİMUARI" TASARIM SİSTEMİ (2026-11) — YAPI GEÇERLİ, RENK/FONT DEĞİŞTİ ⚠️⚠️⚠️
+
+> **2026-11-05 GÜNCEL (Anıl cihazda gördü):** "yeni renklendirmeyi sevmedim, renklendirmede eskiye dön" +
+> "başlıklar dışındaki fontları eski haline getir". Karar (Anıl seçti): **YAPI KALIR, RENK ESKİ.**
+> - `AppColors` token ADLARI aynı, DEĞERLER eski neon/mor palet: ink #0D0A20, inkSurface #140D46, bone beyaz,
+>   **gold = #FF55FF (pembe vurgu)**, silver #00CCFF, success #44FF88; eski Unity tokenları (bubble1-5, glow*,
+>   inbox*, navBar*, astro*) ESKİ değerlerinde. Aşağıdaki "mum altını / kemik / YASAK neon" kuralları ARTIK GEÇERSİZ.
+> - `FilmedImage` filmi KAPALI (tam renk); `GrimoireBackdrop` = görsel tam renk + eski 0x99/0x44/0x99 karartma,
+>   mum/gren/vinyet varsayılan 0 (kırpma var). Nebula GRIMOIRE_SAT 1.0. `<color>` etiketleri eski canlı renkler.
+> - Ana menü: eski sayfa renkleri (pembe #DD00CC / mavi #0099FF / yeşil #00CC77) kart çerçevesi+parıltı ve
+>   göstergede; Mühürlü kutu sayfa renginde; gökkuşağı hazırlanma halkası; balonlar çağıranın gradyanıyla.
+> - Kullanıcı Bilgileri: kartlar eski pembe (#DD00BB); daireler eski renklerin %35 beyazla PASTEL hali; kart
+>   dokunuşu → düzenleyici dairelerin YERİNDE (`_InlineEditor`, %70 saydam + blur, alanı dikeyde doldurur).
+> - Biyoritim çubukları + Dert Ortağı konu kutuları eski renkleri (`OccultChoiceTile(accent:)`).
+> - Fontlar: gövde **Nunito**, okuma/kart metni **Raleway**, başlıklar **Cinzel** (hepsi assets/google_fonts'ta gömülü).
 
 Anıl: "daha az renkli, ciddi, ürpertici, koyu, liquid glass, çok cilalı". Kişilik: gece kapanmış bir
 gözlemevinin okuma odası — mürekkep siyahı, isli cam, kemik beyazı, TEK mum altını. Renk yalnız

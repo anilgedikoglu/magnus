@@ -10,12 +10,12 @@ import 'data/providers.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Gömülü OFL yazı tiplerinin lisansları (Jost, Cinzel, EB Garamond) — lisans sayfasında görünür.
+  // Gömülü OFL yazı tiplerinin lisansları (Nunito, Raleway, Cinzel) — lisans sayfasında görünür.
   LicenseRegistry.addLicense(() async* {
     for (final (fam, file) in const [
-      ('Jost', 'OFL-Jost.txt'),
+      ('Nunito', 'OFL-Nunito.txt'),
       ('Cinzel', 'OFL-Cinzel.txt'),
-      ('EB Garamond', 'OFL-EBGaramond.txt'),
+      ('Raleway', 'OFL-Raleway.txt'),
     ]) {
       final text = await rootBundle.loadString('assets/google_fonts/$file');
       yield LicenseEntryWithLineBreaks(['google_fonts', fam], text);

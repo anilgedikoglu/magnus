@@ -24,8 +24,6 @@ import 'package:flutter/scheduler.dart';
 
 import 'starfield_overlay.dart' show SkyDarkenOverlay;
 
-/// Doygunluk 0.58 matrisi (Rec.601 luma — shader GRIMOIRE_SAT ile aynı).
-const List<double> _kSat058 = <double>[0.7056, 0.2465, 0.0479, 0, 0, 0.1256, 0.8265, 0.0479, 0, 0, 0.1256, 0.2465, 0.6279, 0, 0, 0, 0, 0, 1, 0];
 
 class LivingNebulaBackground extends StatefulWidget {
   final String asset;
@@ -179,7 +177,7 @@ class _LivingNebulaBackgroundState extends State<LivingNebulaBackground>
           Stack(fit: StackFit.expand, children: [
             // Shader'daki GRIMOIRE_SAT (0.58) ile aynı doygunluk → geçişte renk sıçramaz.
             ColorFiltered(
-              colorFilter: const ColorFilter.matrix(_kSat058),
+              colorFilter: const ColorFilter.mode(Color(0x00000000), BlendMode.dst), // tam renk (eski)
               child: Image.asset(
                 widget.asset,
                 fit: BoxFit.cover,

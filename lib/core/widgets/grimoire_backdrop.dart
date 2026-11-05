@@ -19,7 +19,6 @@ import 'dart:ui' show PointMode;
 import 'package:flutter/material.dart';
 
 import '../constants/app_colors.dart';
-import 'filmed_image.dart';
 
 class GrimoireBackdrop extends StatelessWidget {
   final Widget child;
@@ -45,12 +44,12 @@ class GrimoireBackdrop extends StatelessWidget {
     super.key,
     required this.child,
     this.asset,
-    this.imageSaturation = 0.18,
-    this.imageBrightness = 0.55,
+    this.imageSaturation = 1.0,
+    this.imageBrightness = 1.0,
     this.imageAlignment = Alignment.center,
-    this.candle = 1.0,
-    this.vignette = 1.0,
-    this.grain = 1.0,
+    this.candle = 0,
+    this.vignette = 0,
+    this.grain = 0,
   });
 
   @override
@@ -59,18 +58,29 @@ class GrimoireBackdrop extends StatelessWidget {
       fit: StackFit.expand,
       children: [
         const ColoredBox(color: AppColors.ink),
-        if (asset != null)
-          ColorFiltered(
-            colorFilter: ColorFilter.matrix(
-                FilmedImage.matrix(imageSaturation, imageBrightness)),
-            child: Image.asset(
-              asset!,
-              fit: BoxFit.cover,
-              alignment: imageAlignment,
-              filterQuality: FilterQuality.high,
-              errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+        // 2026-11-05 eski renkler: görsel filmsiz, üstünde eski "Full-Screen" karartması
+        // (üst/alt %60, orta %27). imageSaturation/imageBrightness artık yok sayılır.
+        if (asset != null) ...[
+          Image.asset(
+            asset!,
+            fit: BoxFit.cover,
+            alignment: imageAlignment,
+            filterQuality: FilterQuality.high,
+            errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+          ),
+          const IgnorePointer(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0x99000000), Color(0x44000000), Color(0x99000000)],
+                ),
+              ),
             ),
           ),
+        ],
+        if (candle > 0 || vignette > 0 || grain > 0)
         IgnorePointer(
           child: RepaintBoundary(
             child: CustomPaint(

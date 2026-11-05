@@ -8,8 +8,8 @@ class AppTheme {
 
   static ThemeData get dark {
     final base = ThemeData(brightness: Brightness.dark);
-    // UI Jost (art-deco, okunur), başlık Cinzel (ritüel), uzun okuma EB Garamond (AppTextStyles) — 2026-11.
-    final bodyTextTheme = GoogleFonts.jostTextTheme(base.textTheme).apply(
+    // Gövde Nunito, başlık Cinzel (ritüel), uzun okuma Raleway (AppTextStyles) — 2026-11.
+    final bodyTextTheme = GoogleFonts.nunitoTextTheme(base.textTheme).apply(
       bodyColor: AppColors.textPrimary,
       displayColor: AppColors.textPrimary,
     );

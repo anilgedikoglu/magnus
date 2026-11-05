@@ -362,6 +362,14 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
   // ─────────────────────────────────────────────────────────────────────────────
 
   // Gece Grimuarı okült çizgi glifleri (kahve falıyla aynı aile; genel = pusula).
+  /// Eski kategori renkleri (2026-11-05 geri geldi).
+  static const _konuRenk = <String, Color>{
+    'genel': Color(0xFF6A3FBF),
+    'ask': Color(0xFFBB1A7A),
+    'saglik': Color(0xFF1A6B4A),
+    'kariyer': Color(0xFF1A3A8F),
+  };
+
   GlyphBuilder _konuGlyph(String konu) {
     final g = switch (konu) {
       'ask' => OccultGlyph.heart,
@@ -415,6 +423,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
                                   OccultChoiceTile(
                                     label: k.$2,
                                     glyph: _konuGlyph(k.$1),
+                                    accent: _konuRenk[k.$1],
                                     onTap: () => _kategoriSec(k.$1),
                                   ),
                               ],

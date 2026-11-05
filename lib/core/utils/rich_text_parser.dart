@@ -28,23 +28,23 @@ class RichTextParser {
     if (n.startsWith('#')) {
       final hex = n.replaceFirst('#', '');
       if (hex.length == 6) {
-        return mute(Color(int.parse('FF$hex', radix: 16)));
+        return Color(int.parse('FF$hex', radix: 16));
       } else if (hex.length == 8) {
-        return mute(Color(int.parse(hex, radix: 16)));
+        return Color(int.parse(hex, radix: 16));
       }
     }
     switch (n) {
-      case 'yellow':  return const Color(0xFFD6BE82); // eski altın tonu
-      case 'red':     return const Color(0xFFC98A86); // desatüre gül
-      case 'green':   return const Color(0xFF8FB59A); // adaçayı
-      case 'blue':    return const Color(0xFF8FA6C9); // çelik mavisi
-      case 'cyan':    return const Color(0xFF8FB8BF); // soğuk gümüş-camgöbeği
-      case 'magenta': return const Color(0xFFB98FB0); // tozlu leylak
-      case 'orange':  return const Color(0xFFC9986A); // kehribar
-      case 'white':   return const Color(0xFFEEEAE2); // kemik beyazı
-      // Koyu zeminde siyah okunmaz (Unity metinleri açık zemin için yazılmış olabilir).
-      case 'black':   return const Color(0xFF898C91);
-      default:        return const Color(0xFFEEEAE2);
+      // 2026-11-05: eski canlı renkler (Gece Grimuarı desatürasyonu kaldırıldı).
+      case 'yellow':  return const Color(0xFFFFDD33);
+      case 'red':     return const Color(0xFFFF5555);
+      case 'green':   return const Color(0xFF55FF88);
+      case 'blue':    return const Color(0xFF5599FF);
+      case 'cyan':    return const Color(0xFF44EEFF);
+      case 'magenta': return const Color(0xFFFF55FF);
+      case 'orange':  return const Color(0xFFFF9944);
+      case 'white':   return Colors.white;
+      case 'black':   return Colors.black;
+      default:        return Colors.white;
     }
   }
 

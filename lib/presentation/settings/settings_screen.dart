@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'dart:math';
+import 'dart:ui' show ImageFilter;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -466,11 +468,11 @@ class _InfoCardState extends State<_InfoCard> {
             duration: const Duration(milliseconds: 140),
             padding: const EdgeInsets.fromLTRB(10, 8, 8, 8),
             decoration: BoxDecoration(
-              color: _down ? AppColors.glassTintSelected : AppColors.glassTint,
+              color: Colors.black.withValues(alpha: _down ? 0.70 : 0.55),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
-                color: _down ? AppColors.gold.withValues(alpha: 0.75) : AppColors.rim,
-                width: 0.8,
+                color: editable ? const Color(0xFFDD00BB) : const Color(0xFF660044),
+                width: _down ? 1.6 : 1.0,
               ),
             ),
             child: Column(
@@ -479,7 +481,7 @@ class _InfoCardState extends State<_InfoCard> {
               children: [
                 Row(
                   children: [
-                    Icon(widget.icon, color: AppColors.gold.withValues(alpha: 0.80), size: 11),
+                    Icon(widget.icon, color: const Color(0xFFDD00BB), size: 11),
                     const SizedBox(width: 5),
                     Expanded(
                       child: Text(
@@ -488,6 +490,7 @@ class _InfoCardState extends State<_InfoCard> {
                           fontSize: 10,
                           letterSpacing: 0.6,
                           height: 1.1,
+                          color: const Color(0xFFDD88CC),
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -515,7 +518,33 @@ class _InfoCardState extends State<_InfoCard> {
   }
 }
 
-// ─── Edit popup ───────────────────────────────────────────────────────────────
+// ─── Edit popup → SATIR İÇİ düzenleyici (2026-11-05) ─────────────────────────
+// Anıl: "bilgi kutucuklarına tıklayınca ekran ortasında pop-up çıkıyor; onun yerine
+// polarite/modalite/element dairelerinin olduğu boşlukta çıksın." Kart dokunuşu artık
+// diyalog açmaz: [_inlineEditProvider] dolar, daire alanı yumuşakça düzenleyiciye döner.
+
+class _InlineEdit {
+  _InlineEdit({
+    required this.title,
+    required this.icon,
+    required this.fieldType,
+    required this.currentValue,
+    this.options,
+    this.onSave,
+  }) : token = ++_seq;
+  static int _seq = 0;
+
+  /// Her açılış ayrı (AnimatedSwitcher anahtarı + yeni controller'lar).
+  final int token;
+  final String title;
+  final IconData icon;
+  final String fieldType; // 'text' | 'date' | 'time' | 'roller'
+  final String currentValue;
+  final List<(String, String)>? options;
+  final Future<void> Function(String value)? onSave;
+}
+
+final _inlineEditProvider = StateProvider<_InlineEdit?>((ref) => null);
 
 Future<void> _showEditPopup(
   BuildContext context,
@@ -527,233 +556,317 @@ Future<void> _showEditPopup(
   List<(String, String)>? options, // (key, label) roller için
   Future<void> Function(String value)? onSave,
 }) async {
-  // Roller için controller tek seferinde yaratılır, rebuild'de yeniden yaratılmaz
-  FixedExtentScrollController? rollerCtrl;
-  if (fieldType == 'roller' && options != null) {
-    final initIdx = options.indexWhere((o) => o.$1 == currentValue);
-    rollerCtrl = FixedExtentScrollController(
-      initialItem: initIdx == -1 ? 0 : initIdx,
+  HapticFeedback.selectionClick();
+  ref.read(_inlineEditProvider.notifier).state = _InlineEdit(
+    title: title,
+    icon: icon,
+    fieldType: fieldType,
+    currentValue: currentValue,
+    options: options,
+    onSave: onSave,
+  );
+}
+
+/// Daire alanında açılan düzenleyici paneli (eski açılır pencerenin içeriği aynen).
+class _InlineEditor extends ConsumerStatefulWidget {
+  const _InlineEditor({super.key, required this.edit, required this.onClose});
+
+  final _InlineEdit edit;
+  final VoidCallback onClose;
+
+  @override
+  ConsumerState<_InlineEditor> createState() => _InlineEditorState();
+}
+
+class _InlineEditorState extends ConsumerState<_InlineEditor> {
+  static const _panel = Color(0xFF140D46); // eski yüzey moru (panel %70 saydam + blur)
+  static const _accent = Color(0xFFDD00BB); // bilgi kartlarıyla aynı pembe
+
+  FixedExtentScrollController? _rollerCtrl;
+  late final TextEditingController _textCtrl;
+  late String _selected;
+  bool _saving = false;
+
+  _InlineEdit get e => widget.edit;
+
+  @override
+  void initState() {
+    super.initState();
+    _selected = e.currentValue;
+    final options = e.options;
+    if (e.fieldType == 'roller' && options != null && options.isNotEmpty) {
+      final idx = options.indexWhere((o) => o.$1 == _selected);
+      if (idx == -1) _selected = options[0].$1;
+      _rollerCtrl = FixedExtentScrollController(initialItem: idx == -1 ? 0 : idx);
+    }
+    _textCtrl = TextEditingController(
+      text: (e.fieldType == 'text' && e.currentValue != '—') ? e.currentValue : '',
     );
   }
 
-  String selected = currentValue;
-  if (fieldType == 'roller' && options != null) {
-    final idx = options.indexWhere((o) => o.$1 == selected);
-    if (idx == -1) selected = options[0].$1;
+  @override
+  void dispose() {
+    _rollerCtrl?.dispose();
+    _textCtrl.dispose();
+    super.dispose();
   }
 
-  final textCtrl = TextEditingController(
-    text: (fieldType == 'text' && currentValue != '—') ? currentValue : '',
-  );
+  Future<void> _save() async {
+    if (_saving) return;
+    _saving = true;
+    final options = e.options;
+    String val;
+    if (e.fieldType == 'text') {
+      val = _textCtrl.text;
+    } else if (e.fieldType == 'roller' && _rollerCtrl != null && options != null) {
+      // Controller'dan direkt oku — rebuild'den etkilenmez
+      val = options[_rollerCtrl!.selectedItem.clamp(0, options.length - 1)].$1;
+    } else {
+      val = _selected;
+    }
+    FocusScope.of(context).unfocus();
+    widget.onClose();
+    final onSave = e.onSave;
+    if (onSave != null) await onSave(val);
+  }
 
-  await showGeneralDialog(
-    context: context,
-    barrierDismissible: true,
-    barrierLabel: '',
-    barrierColor: Colors.black54,
-    transitionDuration: const Duration(milliseconds: 300),
-    transitionBuilder: (_, anim, __, child) {
-      final curved = CurvedAnimation(parent: anim, curve: Curves.easeOutBack);
-      return ScaleTransition(
-        scale: curved,
-        child: FadeTransition(opacity: anim, child: child),
+  /// Seçenek silindiri — verilen yüksekliği doldurur; solma alfa maskesiyle.
+  Widget _roller(List<(String, String)> options, double height) {
+    return SizedBox(
+      height: height,
+      child: Stack(
+        children: [
+          ShaderMask(
+            blendMode: BlendMode.dstIn,
+            shaderCallback: (r) => const LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0x00FFFFFF), Color(0xFFFFFFFF), Color(0xFFFFFFFF), Color(0x00FFFFFF)],
+              stops: [0, 0.30, 0.70, 1],
+            ).createShader(r),
+            child: ListWheelScrollView.useDelegate(
+              itemExtent: 44,
+              perspective: 0.005,
+              diameterRatio: 1.6,
+              physics: const FixedExtentScrollPhysics(),
+              controller: _rollerCtrl,
+              onSelectedItemChanged: (i) => setState(() => _selected = options[i].$1),
+              childDelegate: ListWheelChildBuilderDelegate(
+                childCount: options.length,
+                builder: (_, i) => Center(
+                  child: Text(
+                    options[i].$2,
+                    style: const TextStyle(
+                      color: AppColors.bone,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Seçim bandı — ortadan kenara solarak
+          IgnorePointer(child: Center(child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(height: 1, decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.transparent, Color(0x99FF55FF), Colors.transparent],
+                ),
+              )),
+              Container(height: 44, decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.transparent, AppColors.bone.withValues(alpha: 0.08), Colors.transparent],
+                ),
+              )),
+              Container(height: 1, decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.transparent, Color(0x99FF55FF), Colors.transparent],
+                ),
+              )),
+            ],
+          ))),
+        ],
+      ),
+    );
+  }
+
+  void _close() {
+    FocusScope.of(context).unfocus();
+    widget.onClose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final s = ref.watch(l10nProvider);
+    final options = e.options;
+    final isText = !(e.fieldType == 'roller' && options != null && options.isNotEmpty) &&
+        e.fieldType != 'time' &&
+        e.fieldType != 'date';
+
+    final header = Row(
+      children: [
+        Icon(e.icon, color: _accent, size: 18),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            e.title,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: AppTextStyles.cardLabel.copyWith(fontSize: 14, letterSpacing: 1.6),
+          ),
+        ),
+        Semantics(
+          button: true,
+          label: s.cancel,
+          child: GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: _close,
+            child: const Padding(
+              padding: EdgeInsets.all(4),
+              child: Icon(Icons.close_rounded, color: AppColors.ash, size: 20),
+            ),
+          ),
+        ),
+      ],
+    );
+
+    final buttons = Row(
+      children: [
+        Expanded(
+          child: TextButton(
+            onPressed: _close,
+            child: Text(s.cancel, style: AppTextStyles.uiLabel.copyWith(color: AppColors.ash)),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.glassTint,
+              foregroundColor: AppColors.bone,
+              elevation: 0,
+              shadowColor: Colors.transparent,
+              minimumSize: const Size.fromHeight(44),
+              side: BorderSide(color: AppColors.gold.withValues(alpha: 0.85), width: 1),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            ),
+            onPressed: _save,
+            child: Text(s.save, style: AppTextStyles.uiLabel),
+          ),
+        ),
+      ],
+    );
+
+    /// Yarı saydam, arkası hafif bulanık panel (Anıl: "biraz transparan olsun, yumuşasın,
+    /// arka plan görünsün"). Ekranda tek ek blur (alt bar + bu).
+    Widget shell(Widget child) => ClipRRect(
+          borderRadius: BorderRadius.circular(18),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+            child: Container(
+              padding: const EdgeInsets.fromLTRB(18, 14, 18, 14),
+              decoration: BoxDecoration(
+                color: _panel.withValues(alpha: 0.70),
+                borderRadius: BorderRadius.circular(18),
+                border: Border.all(color: _accent.withValues(alpha: 0.85), width: 1.2),
+              ),
+              child: child,
+            ),
+          ),
+        );
+
+    // ── Metin alanı (Doğum Yeri): kompakt; klavye açıkken klavyenin hemen üstünde.
+    if (isText) {
+      final field = TextField(
+        controller: _textCtrl,
+        autofocus: true,
+        style: const TextStyle(color: AppColors.bone),
+        textInputAction: TextInputAction.done,
+        onSubmitted: (_) => _save(),
+        decoration: InputDecoration(
+          hintText: e.title,
+          hintStyle: const TextStyle(color: AppColors.ash),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(color: _accent),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(color: _accent, width: 2),
+          ),
+        ),
+        onChanged: (v) => _selected = v,
       );
-    },
-    pageBuilder: (ctx, _, __) {
-      return Center(
-        child: Material(
-          color: Colors.transparent,
-          child: StatefulBuilder(
-            builder: (ctx, setS) {
-              return Container(
-                margin: const EdgeInsets.symmetric(horizontal: 24),
-                padding: const EdgeInsets.all(24),
-                decoration: BoxDecoration(
-                  color: AppColors.inkSurface,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: AppColors.rim, width: 0.8),
-                  boxShadow: const [
-                    BoxShadow(color: Color(0xB3000000), blurRadius: 30, offset: Offset(0, 12)),
-                  ],
-                ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    // Başlık
-                    Row(
-                      children: [
-                        Icon(icon, color: AppColors.gold, size: 18),
-                        const SizedBox(width: 8),
-                        Text(
-                          title,
-                          style: AppTextStyles.cardLabel.copyWith(fontSize: 14, letterSpacing: 1.6),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-
-                    // İçerik
-                    if (fieldType == 'roller' && options != null)
-                      SizedBox(
-                        height: 180,
-                        child: Stack(
-                          children: [
-                            // Silindir tekerlek
-                            ListWheelScrollView.useDelegate(
-                              itemExtent: 44,
-                              perspective: 0.005,
-                              diameterRatio: 1.4,
-                              physics: const FixedExtentScrollPhysics(),
-                              controller: rollerCtrl,
-                              onSelectedItemChanged: (i) => setS(() => selected = options[i].$1),
-                              childDelegate: ListWheelChildBuilderDelegate(
-                                childCount: options.length,
-                                builder: (_, i) => Center(
-                                  child: Text(
-                                    options[i].$2,
-                                    style: const TextStyle(
-                                      color: AppColors.bone,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            // Üst solma — silindir derinliği
-                            IgnorePointer(child: Container(
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    AppColors.inkSurface,
-                                    AppColors.inkSurface.withValues(alpha: 0),
-                                  ],
-                                  stops: const [0, 0.38],
-                                ),
-                              ),
-                            )),
-                            // Alt solma
-                            IgnorePointer(child: Container(
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  begin: Alignment.bottomCenter,
-                                  end: Alignment.topCenter,
-                                  colors: [
-                                    AppColors.inkSurface,
-                                    AppColors.inkSurface.withValues(alpha: 0),
-                                  ],
-                                  stops: const [0, 0.38],
-                                ),
-                              ),
-                            )),
-                            // Seçim bandı — ortadan kenara solarak
-                            IgnorePointer(child: Center(child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Container(height: 1, decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: [Colors.transparent, Color(0x99C2A46B), Colors.transparent],
-                                  ),
-                                )),
-                                Container(height: 44, decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: [Colors.transparent, AppColors.bone.withValues(alpha: 0.07), Colors.transparent],
-                                  ),
-                                )),
-                                Container(height: 1, decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: [Colors.transparent, Color(0x99C2A46B), Colors.transparent],
-                                  ),
-                                )),
-                              ],
-                            ))),
-                          ],
-                        ),
-                      )
-                    else if (fieldType == 'time')
-                      _TimeRollerPicker(
-                        initial: currentValue,
-                        onChanged: (v) => setS(() => selected = v),
-                      )
-                    else if (fieldType == 'date')
-                      _DatePickerInline(
-                        initial: currentValue,
-                        onChanged: (v) => setS(() => selected = v),
-                      )
-                    else
-                      TextField(
-                        controller: textCtrl,
-                        autofocus: true,
-                        style: const TextStyle(color: AppColors.bone),
-                        decoration: InputDecoration(
-                          hintText: title,
-                          hintStyle: const TextStyle(color: AppColors.ash),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: AppColors.gold),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: AppColors.gold, width: 2),
-                          ),
-                        ),
-                        onChanged: (v) => selected = v,
-                      ),
-
-                    const SizedBox(height: 24),
-
-                    // Butonlar
-                    Row(
-                      children: [
-                        Expanded(
-                          child: TextButton(
-                            onPressed: () { rollerCtrl?.dispose(); Navigator.pop(ctx); },
-                            child: Text(ref.read(l10nProvider).cancel, style: AppTextStyles.uiLabel.copyWith(color: AppColors.ash)),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: AppColors.glassTint,
-                              foregroundColor: AppColors.bone,
-                              elevation: 0,
-                              shadowColor: Colors.transparent,
-                              side: BorderSide(color: AppColors.gold.withValues(alpha: 0.85), width: 1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                            ),
-                            onPressed: () async {
-                              String val;
-                              if (fieldType == 'text') {
-                                val = textCtrl.text;
-                              } else if (fieldType == 'roller' && rollerCtrl != null && options != null) {
-                                // Controller'dan direkt oku — rebuild'den etkilenmez
-                                val = options[rollerCtrl.selectedItem.clamp(0, options.length - 1)].$1;
-                              } else {
-                                val = selected;
-                              }
-                              Navigator.pop(ctx);
-                              rollerCtrl?.dispose();
-                              if (onSave != null) await onSave(val);
-                            },
-                            child: Text(ref.read(l10nProvider).save, style: AppTextStyles.uiLabel),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              );
-            },
+      final kb = MediaQuery.viewInsetsOf(context).bottom;
+      final below = (MainTabsScope.maybeOf(context) != null ? kGlassBarReserve + 6 : 76.0) +
+          MediaQuery.paddingOf(context).bottom;
+      final lift = kb > 0 ? max(0.0, kb - below + 10) : 0.0;
+      return Transform.translate(
+        offset: Offset(0, -lift),
+        child: Align(
+          alignment: kb > 0 ? Alignment.bottomCenter : Alignment.center,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            child: Material(
+              type: MaterialType.transparency,
+              child: shell(Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [header, const SizedBox(height: 14), field, const SizedBox(height: 14), buttons],
+              )),
+            ),
           ),
         ),
       );
-    },
-  );
+    }
+
+    // ── Silindir / tarih / saat: panel daire alanını DİKEYDE DOLDURUR (Anıl: "altta üstte
+    //    çok boşluk kalmasın"), tekerlek kalan yüksekliği kaplar → daha çok seçenek görünür.
+    return LayoutBuilder(builder: (context, c) {
+      const vMargin = 6.0;
+      const minPanel = 300.0; // küçük ekranda altına inmez → kaydırılır
+      final panelH = max(minPanel, c.maxHeight - vMargin * 2);
+      // Tekerlek, başlık ile düğmeler arasında kalan GERÇEK yüksekliği doldurur (ölçülür).
+      Widget fieldFor(double h) {
+        if (e.fieldType == 'roller' && options != null && options.isNotEmpty) {
+          return _roller(options, h);
+        } else if (e.fieldType == 'time') {
+          return _TimeRollerPicker(
+            initial: e.currentValue,
+            rollerHeight: max(90.0, h - 28),
+            onChanged: (v) => setState(() => _selected = v),
+          );
+        }
+        return _DatePickerInline(
+          initial: e.currentValue,
+          rollerHeight: h,
+          onChanged: (v) => setState(() => _selected = v),
+        );
+      }
+      final panel = SizedBox(
+        height: panelH,
+        child: shell(Column(
+          children: [
+            header,
+            const SizedBox(height: 14),
+            Expanded(
+              child: LayoutBuilder(
+                builder: (_, fc) => Center(child: fieldFor(fc.maxHeight)),
+              ),
+            ),
+            const SizedBox(height: 14),
+            buttons,
+          ],
+        )),
+      );
+      return SingleChildScrollView(
+        physics: const ClampingScrollPhysics(),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: vMargin),
+        child: Material(type: MaterialType.transparency, child: panel),
+      );
+    });
+  }
 }
 
 // ─── Sprite avatar (profilepic.jpg 2×2 grid) ─────────────────────────────────
@@ -913,7 +1026,7 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
             children: [
               // Handle
               Container(width: 40, height: 4,
-                  decoration: BoxDecoration(color: Color(0x3DE8E2D6),
+                  decoration: BoxDecoration(color: Color(0x3DFFFFFF),
                       borderRadius: BorderRadius.circular(2))),
               const SizedBox(height: 16),
               Text(s.editProfile,
@@ -947,7 +1060,7 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: sel ? AppColors.gold : Color(0x3DE8E2D6),
+                          color: sel ? AppColors.gold : Color(0x3DFFFFFF),
                           width: sel ? 2.5 : 1.5,
                         ),
                         boxShadow: sel
@@ -1048,7 +1161,7 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
         decoration: BoxDecoration(
           color: AppColors.bone.withValues(alpha: 0.05),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Color(0x3DE8E2D6)),
+          border: Border.all(color: Color(0x3DFFFFFF)),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -1110,8 +1223,17 @@ class _CylinderRollerState extends State<_CylinderRoller> {
       height: widget.height,
       child: Stack(
         children: [
-          // Silindir tekerlek — perspektif 3D görünüm
-          ListWheelScrollView(
+          // Silindir tekerlek — perspektif 3D görünüm; üst/alt solma ALFA maskesiyle
+          // (renk katmanı değil → yarı saydam panelde opak bant kalmaz).
+          ShaderMask(
+            blendMode: BlendMode.dstIn,
+            shaderCallback: (r) => const LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0x00FFFFFF), Color(0xFFFFFFFF), Color(0xFFFFFFFF), Color(0x00FFFFFF)],
+              stops: [0, 0.32, 0.68, 1],
+            ).createShader(r),
+            child: ListWheelScrollView(
             controller: _ctrl,
             itemExtent: widget.itemExtent,
             diameterRatio: 1.3,
@@ -1131,37 +1253,6 @@ class _CylinderRollerState extends State<_CylinderRoller> {
                     ))
                 .toList(),
           ),
-          // Üst solma
-          IgnorePointer(
-            child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    AppColors.inkSurface,
-                    AppColors.inkSurface.withValues(alpha: 0),
-                  ],
-                  stops: const [0, 0.38],
-                ),
-              ),
-            ),
-          ),
-          // Alt solma
-          IgnorePointer(
-            child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                  colors: [
-                    AppColors.inkSurface,
-                    AppColors.inkSurface.withValues(alpha: 0),
-                  ],
-                  stops: const [0, 0.38],
-                ),
-              ),
-            ),
           ),
           // Seçim bandı — ortadan kenara solarak
           IgnorePointer(
@@ -1171,7 +1262,7 @@ class _CylinderRollerState extends State<_CylinderRoller> {
                 children: [
                   Container(height: 1, decoration: const BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colors.transparent, Color(0x99C2A46B), Colors.transparent],
+                      colors: [Colors.transparent, Color(0x99FF55FF), Colors.transparent],
                     ),
                   )),
                   Container(height: widget.itemExtent, decoration: BoxDecoration(
@@ -1181,7 +1272,7 @@ class _CylinderRollerState extends State<_CylinderRoller> {
                   )),
                   Container(height: 1, decoration: const BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colors.transparent, Color(0x99C2A46B), Colors.transparent],
+                      colors: [Colors.transparent, Color(0x99FF55FF), Colors.transparent],
                     ),
                   )),
                 ],
@@ -1199,7 +1290,8 @@ class _CylinderRollerState extends State<_CylinderRoller> {
 class _DatePickerInline extends StatefulWidget {
   final String initial; // 'YYYY-MM-DD' veya boş
   final ValueChanged<String> onChanged;
-  const _DatePickerInline({required this.initial, required this.onChanged});
+  final double rollerHeight;
+  const _DatePickerInline({required this.initial, required this.onChanged, this.rollerHeight = 140});
 
   @override
   State<_DatePickerInline> createState() => _DatePickerInlineState();
@@ -1227,7 +1319,7 @@ class _DatePickerInlineState extends State<_DatePickerInline> {
       initialItem: selected,
       onChanged: onChanged,
       width: 72,
-      height: 140,
+      height: widget.rollerHeight,
       itemExtent: 38,
     );
   }
@@ -1257,7 +1349,8 @@ class _DatePickerInlineState extends State<_DatePickerInline> {
 class _TimeRollerPicker extends StatefulWidget {
   final String initial; // "HH:MM" veya boş
   final ValueChanged<String> onChanged;
-  const _TimeRollerPicker({required this.initial, required this.onChanged});
+  final double rollerHeight;
+  const _TimeRollerPicker({required this.initial, required this.onChanged, this.rollerHeight = 140});
 
   @override
   State<_TimeRollerPicker> createState() => _TimeRollerPickerState();
@@ -1302,7 +1395,7 @@ class _TimeRollerPickerState extends State<_TimeRollerPicker> {
               initialItem: _hour,
               onChanged: (i) { setState(() => _hour = i); _notify(); },
               width: 72,
-              height: 140,
+              height: widget.rollerHeight,
               itemExtent: 38,
             ),
             // ":" ayracı
@@ -1322,7 +1415,7 @@ class _TimeRollerPickerState extends State<_TimeRollerPicker> {
               initialItem: _minute,
               onChanged: (i) { setState(() => _minute = i); _notify(); },
               width: 72,
-              height: 140,
+              height: widget.rollerHeight,
               itemExtent: 38,
             ),
           ],
@@ -1453,10 +1546,19 @@ class SettingsScreen extends ConsumerWidget {
       moonSign: profile.moonSign,
     );
 
+    // Sekmeden çıkınca açık satır içi düzenleyici kapanır.
+    ref.listen<int>(mainTabProvider, (prev, next) {
+      if (next != MainTab.profile && ref.read(_inlineEditProvider) != null) {
+        ref.read(_inlineEditProvider.notifier).state = null;
+      }
+    });
+
     double? swipeStartX;
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
+      // Klavye düzeni sıkıştırmasın; satır içi düzenleyici kendini klavyenin üstüne kaldırır.
+      resizeToAvoidBottomInset: false,
       body: Listener(
         onPointerDown:  (e) => swipeStartX = e.position.dx,
         onPointerUp:    (e) {
@@ -1501,11 +1603,43 @@ class SettingsScreen extends ConsumerWidget {
                       ],
                     ),
                   ),
-                  // Orta: donut yuvarlakları dikeyde ortalanmış
+                  // Orta: donut yuvarlakları — bilgi kartına dokununca AYNI alanda
+                  // düzenleyici açılır (eski: ekran ortasında açılır pencere).
                   Expanded(
-                    child: Center(
-                      child: _buildDonutRow(scores, ref),
-                    ),
+                    child: Consumer(builder: (context, cref, _) {
+                      final edit = cref.watch(_inlineEditProvider);
+                      // Geliş: alttan hafif yükselir + büyür + belirir (340 ms, easeOutCubic);
+                      // gidiş: tersi, daha kısa (220 ms). Daireler aynı geçişle çekilir/döner.
+                      return AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 340),
+                        reverseDuration: const Duration(milliseconds: 220),
+                        switchInCurve: Curves.easeOutCubic,
+                        switchOutCurve: Curves.easeInCubic,
+                        layoutBuilder: (current, previous) => Stack(
+                          fit: StackFit.expand,
+                          children: [...previous, if (current != null) current],
+                        ),
+                        transitionBuilder: (child, anim) => FadeTransition(
+                          opacity: anim,
+                          child: SlideTransition(
+                            position: Tween(begin: const Offset(0, 0.06), end: Offset.zero)
+                                .animate(anim),
+                            child: ScaleTransition(
+                              scale: Tween(begin: 0.94, end: 1.0).animate(anim),
+                              child: child,
+                            ),
+                          ),
+                        ),
+                        child: edit == null
+                            ? Center(key: const ValueKey('donuts'), child: _buildDonutRow(scores, ref))
+                            : _InlineEditor(
+                                key: ValueKey(edit.token),
+                                edit: edit,
+                                onClose: () =>
+                                    cref.read(_inlineEditProvider.notifier).state = null,
+                              ),
+                      );
+                    }),
                   ),
                   // Alt: sekme kapsayıcısında cam bar (MainTabsScreen) için yer;
                   // tek başına rota olarak açıldıysa eski "Ana Menü" butonu (yedek).
@@ -1565,7 +1699,7 @@ class SettingsScreen extends ConsumerWidget {
           height: 1,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0x00C2A46B), Color(0xB3C2A46B), Color(0x00C2A46B)],
+              colors: [Color(0x00FF55FF), Color(0xB3FF55FF), Color(0x00FF55FF)],
             ),
           ),
         ),
@@ -2035,9 +2169,9 @@ class SettingsScreen extends ConsumerWidget {
       labelInset: 1,
       delay: Duration.zero,
       segments: [
-        _Seg(AppColors.gold, s['Kardinal']!, loc.modalityName('Kardinal')),
-        _Seg(AppColors.silver, s['Değişken']!, loc.modalityName('Değişken')),
-        _Seg(AppColors.boneDim, s['Sabit']!,    loc.modalityName('Sabit')),
+        _Seg(const Color(0xFFFFE959), s['Kardinal']!, loc.modalityName('Kardinal')),
+        _Seg(const Color(0xFF59F4B2), s['Değişken']!, loc.modalityName('Değişken')),
+        _Seg(const Color(0xFF59DEFF), s['Sabit']!,    loc.modalityName('Sabit')),
       ],
     );
 
@@ -2051,8 +2185,8 @@ class SettingsScreen extends ConsumerWidget {
               labelInset: 1,
               delay: const Duration(milliseconds: 950),
               segments: [
-                _Seg(AppColors.silver, s['Feminen']!,  loc.polarityName('Feminen')),
-                _Seg(AppColors.gold, s['Maskülen']!, loc.polarityName('Maskülen')),
+                _Seg(const Color(0xFFC886FF), s['Feminen']!,  loc.polarityName('Feminen')),
+                _Seg(const Color(0xFF59DEC8), s['Maskülen']!, loc.polarityName('Maskülen')),
               ],
             ),
           ),
@@ -2067,10 +2201,10 @@ class SettingsScreen extends ConsumerWidget {
               labelDy: 1,
               delay: const Duration(milliseconds: 1900),
               segments: [
-                _Seg(AppColors.gold, s['Ateş']!,   loc.elementName('Ateş')),
-                _Seg(const Color(0xFF8A7550), s['Toprak']!, loc.elementName('Toprak')),
-                _Seg(AppColors.boneDim, s['Hava']!,   loc.elementName('Hava')),
-                _Seg(AppColors.silver, s['Su']!,     loc.elementName('Su')),
+                _Seg(const Color(0xFFFF9C6F), s['Ateş']!,   loc.elementName('Ateş')),
+                _Seg(const Color(0xFFB2E959), s['Toprak']!, loc.elementName('Toprak')),
+                _Seg(const Color(0xFF59C8FF), s['Hava']!,   loc.elementName('Hava')),
+                _Seg(const Color(0xFF599CFF), s['Su']!,     loc.elementName('Su')),
               ],
             ),
           ),
@@ -2201,7 +2335,7 @@ class SettingsScreen extends ConsumerWidget {
                 padding: const EdgeInsets.fromLTRB(20, 18, 20, 14),
                 decoration: const BoxDecoration(
                   border: Border(
-                    bottom: BorderSide(color: Color(0x29C2A46B), width: 1),
+                    bottom: BorderSide(color: Color(0x29FF55FF), width: 1),
                   ),
                 ),
                 child: const Text(
@@ -2251,7 +2385,7 @@ class SettingsScreen extends ConsumerWidget {
                                     border: Border.all(
                                       color: currentLocale == 'tr'
                                           ? AppColors.gold
-                                          : Color(0x3DE8E2D6),
+                                          : Color(0x3DFFFFFF),
                                       width: currentLocale == 'tr' ? 1.5 : 1,
                                     ),
                                   ),
@@ -2282,7 +2416,7 @@ class SettingsScreen extends ConsumerWidget {
                                     border: Border.all(
                                       color: currentLocale == 'en'
                                           ? AppColors.gold
-                                          : Color(0x3DE8E2D6),
+                                          : Color(0x3DFFFFFF),
                                       width: currentLocale == 'en' ? 1.5 : 1,
                                     ),
                                   ),
@@ -2311,7 +2445,7 @@ class SettingsScreen extends ConsumerWidget {
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
                 height: 1,
-                color: const Color(0x29C2A46B),
+                color: const Color(0x29FF55FF),
               ),
 
               // ── Uyarılar bölümü ──────────────────────────────────────────
@@ -2377,7 +2511,7 @@ class SettingsScreen extends ConsumerWidget {
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 height: 1,
-                color: const Color(0x29C2A46B),
+                color: const Color(0x29FF55FF),
               ),
 
               // ── Tehlikeli İşlemler ───────────────────────────────────────
@@ -2430,7 +2564,7 @@ class SettingsScreen extends ConsumerWidget {
                   child: Text(
                     ref.read(l10nProvider).entertainmentOnly,
                     style: const TextStyle(
-                      color: Color(0x99E8E2D6),
+                      color: Color(0x99FFFFFF),
                       fontSize: 10.5,
                       height: 1.5,
                     ),
@@ -2528,7 +2662,7 @@ class SettingsScreen extends ConsumerWidget {
                   child: Text(
                     text,
                     style: const TextStyle(
-                      color: Color(0xCCE8E2D6),
+                      color: Color(0xCCFFFFFF),
                       fontSize: 13.5,
                       height: 1.75,
                     ),
@@ -2834,7 +2968,7 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
                             onChanged: (v) => toggleAds(!v),
                             activeColor: AppColors.gold,
                             inactiveThumbColor: AppColors.ash,
-                            inactiveTrackColor: Color(0x1FE8E2D6),
+                            inactiveTrackColor: Color(0x1FFFFFFF),
                           ),
                         ),
                         Text(

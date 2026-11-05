@@ -25,23 +25,25 @@ class FilmedImage extends StatelessWidget {
     super.key,
     this.fit = BoxFit.cover,
     this.active = false,
-    this.vignette = 0.32,
+    this.vignette = 0,
     this.errorBuilder,
   });
 
   // Sentez (2026-11): sanat yönetmeni doygunluk %20, parlaklık ×0.80, kontrast ×1.10,
   // soğuk gümüş ton; Codex basılı 0.35 / sanat yön. 0.55 → 0.45 / 0.90. Tam renk HİÇ gelmez.
-  static const double restSaturation = 0.20;
-  static const double restBrightness = 0.80;
-  static const double activeSaturation = 0.45;
-  static const double activeBrightness = 0.90;
-  static const double contrast = 1.10;
+  // 2026-11-05: Anıl "renklendirmede eskiye dön" → film KAPALI, görseller tam renk.
+  // (Gri film değerleri: doygunluk 0.20 / parlaklık 0.80 / kontrast 1.10 — geri istenirse.)
+  static const double restSaturation = 1.0;
+  static const double restBrightness = 1.0;
+  static const double activeSaturation = 1.0;
+  static const double activeBrightness = 1.08;
+  static const double contrast = 1.0;
 
   /// Rec.709 doygunluk × parlaklık × kontrast (128 pivot) × soğuk gümüş ton
   /// (R×0.97, G×0.99, B×1.05). Ofsetler 0-255 ölçeğinde.
   static List<double> matrix(double s, double b, {double c = contrast}) {
     const lr = 0.2126, lg = 0.7152, lb = 0.0722;
-    const tint = [0.97, 0.99, 1.05];
+    const tint = [1.0, 1.0, 1.0]; // soğuk gümüş ton kaldırıldı (eski renkler)
     final k = 1 - s;
     final off = 128 * (1 - c);
     List<double> row(int ch, double a0, double a1, double a2) {
@@ -76,7 +78,7 @@ class FilmedImage extends StatelessWidget {
             fit: fit,
             filterQuality: FilterQuality.high,
             errorBuilder: errorBuilder ??
-                (_, __, ___) => const ColoredBox(color: Color(0xFF171A20)),
+                (_, __, ___) => const ColoredBox(color: Color(0xFF1A1040)),
           ),
           if (vignette > 0)
             IgnorePointer(

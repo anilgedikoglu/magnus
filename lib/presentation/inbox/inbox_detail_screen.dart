@@ -176,7 +176,7 @@ class InboxDetailScreen extends ConsumerWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 stops: [0.0, 0.70, 1.0],
-                colors: [Color(0xF207080B), Color(0xCC07080B), Color(0x0007080B)],
+                colors: [Color(0xF20D0A20), Color(0xCC0D0A20), Color(0x000D0A20)],
               ),
             ),
           ),
@@ -297,7 +297,7 @@ class InboxDetailScreen extends ConsumerWidget {
         children: [
           // Renkli tür logosu filmlenir (tanınır ama bağırmaz).
           ColorFiltered(
-            colorFilter: ColorFilter.matrix(FilmedImage.matrix(0.30, 0.95)),
+            colorFilter: ColorFilter.matrix(FilmedImage.matrix(1.0, 1.0)),
             child: Image.asset(
               logo,
               height: 68,
@@ -343,7 +343,7 @@ class InboxDetailScreen extends ConsumerWidget {
       child: Opacity(
         opacity: 0.85,
         child: ColorFiltered(
-          colorFilter: ColorFilter.matrix(FilmedImage.matrix(0.25, 0.90)),
+          colorFilter: ColorFilter.matrix(FilmedImage.matrix(1.0, 1.0)),
           child: Image.asset(
             'assets/images/magnusYaziLogoRenkli.PNG',
             height: 84,
@@ -777,7 +777,7 @@ class _GoldRule extends StatelessWidget {
     const line = DecoratedBox(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0x00C2A46B), Color(0x8CC2A46B), Color(0x00C2A46B)],
+          colors: [Color(0x00FF55FF), Color(0x8CFF55FF), Color(0x00FF55FF)],
         ),
       ),
       child: SizedBox(height: 1),

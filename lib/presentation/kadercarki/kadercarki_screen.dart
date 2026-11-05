@@ -588,7 +588,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       width: size,
       height: size,
       child: ColorFiltered(
-        colorFilter: ColorFilter.matrix(FilmedImage.matrix(0.30, 0.88)),
+        colorFilter: ColorFilter.matrix(FilmedImage.matrix(1.0, 1.0)),
         child: Image.asset(asset,
             width: size, height: size,
             errorBuilder: (_, __, ___) => SizedBox(width: size, height: size)),
@@ -692,7 +692,7 @@ class _WheelPainter extends CustomPainter {
             ikon, src, dst,
             Paint()
               ..filterQuality = FilterQuality.medium
-              ..colorFilter = ColorFilter.matrix(FilmedImage.matrix(0.30, 0.88)));
+              ..colorFilter = ColorFilter.matrix(FilmedImage.matrix(1.0, 1.0)));
         canvas.restore();
       }
     }

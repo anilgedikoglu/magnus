@@ -24,12 +24,17 @@ class OccultChoiceTile extends StatefulWidget {
   final VoidCallback? onTap;
   final bool selected;
 
+  /// Verilirse kutu bu renkte dolu çizilir (eski renkli kategori kutuları, 2026-11-05);
+  /// null → cam kutu.
+  final Color? accent;
+
   const OccultChoiceTile({
     super.key,
     required this.label,
     required this.glyph,
     required this.onTap,
     this.selected = false,
+    this.accent,
   });
 
   @override
@@ -57,14 +62,13 @@ class _OccultChoiceTileState extends State<OccultChoiceTile> {
         child: AnimatedScale(
           scale: _down ? 0.98 : 1.0,
           duration: const Duration(milliseconds: 110),
-          child: GlassPanel(
-            selected: lit,
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+          child: _tileShell(
+            lit: lit,
             child: Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  widget.glyph(lit ? AppColors.gold : AppColors.boneDim, 34),
+                  widget.glyph(widget.accent != null ? Colors.white : (lit ? AppColors.gold : AppColors.boneDim), 34),
                   const SizedBox(height: 12),
                   Text(
                     widget.label,
@@ -72,7 +76,7 @@ class _OccultChoiceTileState extends State<OccultChoiceTile> {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: AppTextStyles.cardLabel.copyWith(
-                      color: lit ? AppColors.bone : AppColors.boneDim,
+                      color: widget.accent != null || lit ? AppColors.bone : AppColors.boneDim,
                     ),
                   ),
                 ],
@@ -81,6 +85,23 @@ class _OccultChoiceTileState extends State<OccultChoiceTile> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget _tileShell({required bool lit, required Widget child}) {
+    const pad = EdgeInsets.symmetric(horizontal: 10, vertical: 14);
+    final accent = widget.accent;
+    if (accent == null) return GlassPanel(selected: lit, padding: pad, child: child);
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 140),
+      padding: pad,
+      decoration: BoxDecoration(
+        color: accent.withValues(alpha: lit ? 1.0 : 0.85),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.white.withValues(alpha: lit ? 0.45 : 0.15), width: 1),
+        boxShadow: [BoxShadow(color: accent.withValues(alpha: 0.35), blurRadius: 10)],
+      ),
+      child: child,
     );
   }
 }
@@ -131,7 +152,7 @@ class _OccultListCardState extends State<OccultListCard> {
                   width: 44,
                   height: 44,
                   decoration: BoxDecoration(
-                    color: const Color(0x14E8E2D6),
+                    color: const Color(0x14FFFFFF),
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(color: AppColors.rim, width: 0.8),
                   ),

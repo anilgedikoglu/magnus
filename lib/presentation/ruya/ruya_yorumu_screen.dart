@@ -2,6 +2,7 @@
 // Rüya Yorumu ekranı — 100 sembol seçimi + yorum gösterimi.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uuid/uuid.dart';
@@ -802,10 +803,13 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                     final sembol = liste[i];
                     final secili = _secili == sembol;
                     return GestureDetector(
-                      onTap: () =>
-                          setState(() => _secili = secili ? null : sembol),
+                      onTap: () {
+                        HapticFeedback.selectionClick();
+                        setState(() => _secili = secili ? null : sembol);
+                      },
                       child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 180),
+                        duration: const Duration(milliseconds: 220),
+                        curve: Curves.easeOutCubic,
                         margin: const EdgeInsets.only(bottom: 8),
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
@@ -820,6 +824,14 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                                 : Colors.white.withValues(alpha: 0.08),
                             width: secili ? 1.5 : 1,
                           ),
+                          // Seçilen sembol mor ışıkla parlar.
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0xFF8B5CF6)
+                                  .withValues(alpha: secili ? 0.38 : 0.0),
+                              blurRadius: secili ? 16 : 0,
+                            ),
+                          ],
                         ),
                         child: Row(
                           children: [
@@ -837,9 +849,13 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                                 ),
                               ),
                             ),
-                            if (secili)
-                              const Icon(Icons.check_circle_rounded,
+                            AnimatedScale(
+                              scale: secili ? 1.0 : 0.0,
+                              duration: const Duration(milliseconds: 260),
+                              curve: Curves.easeOutBack,
+                              child: const Icon(Icons.check_circle_rounded,
                                   color: Color(0xFF8B5CF6), size: 20),
+                            ),
                           ],
                         ),
                       ),

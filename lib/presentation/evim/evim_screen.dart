@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../core/widgets/unlock_flash.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
@@ -481,7 +482,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
           Expanded(
             child: GestureDetector(
               onTap: acik ? null : () => _ac(s, field),
-              child: AnimatedContainer(
+              child: UnlockFlash(revealed: acik, color: _pink, child: AnimatedContainer(
                 duration: const Duration(milliseconds: 260),
                 constraints: const BoxConstraints(minHeight: 44),
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -511,7 +512,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                           ],
                         ),
                 ),
-              ),
+              )),
             ),
           ),
         ],

@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/widgets/unlock_flash.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 
 import '../../core/constants/app_text_styles.dart';
@@ -362,7 +363,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
           Expanded(
             child: GestureDetector(
               onTap: acik ? null : () => _ac(p, field),
-              child: AnimatedContainer(
+              child: UnlockFlash(revealed: acik, color: _pink, child: AnimatedContainer(
                 duration: const Duration(milliseconds: 260),
                 height: 44,
                 padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -392,7 +393,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
                           ],
                         ),
                 ),
-              ),
+              )),
             ),
           ),
         ],

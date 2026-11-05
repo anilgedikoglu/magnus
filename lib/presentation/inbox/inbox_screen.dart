@@ -5,10 +5,10 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/glass_tab_bar.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
+import '../home/home_screen.dart' show kHomeBackground;
 import 'widgets/inbox_item_card.dart';
 import 'inbox_detail_screen.dart';
 
@@ -23,7 +23,8 @@ class InboxScreen extends ConsumerWidget {
     // Gece Grimuarı (2026-11): başlık bandı şeffaf — liste başlığın altından mürekkep
     // geçişiyle kayar; zemin ortak atmosfer (mum ışığı + vinyet + grain).
     return Scaffold(
-      backgroundColor: AppColors.ink,
+      // Zemin ana menüyle aynı düz renk (Anıl, 2026-11-06).
+      backgroundColor: kHomeBackground,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -36,7 +37,7 @@ class InboxScreen extends ConsumerWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 stops: [0.0, 0.70, 1.0],
-                colors: [Color(0xF20D0A20), Color(0xCC0D0A20), Color(0x000D0A20)],
+                colors: [Color(0xF20C0F14), Color(0xCC0C0F14), Color(0x000C0F14)],
               ),
             ),
           ),
@@ -56,7 +57,7 @@ class InboxScreen extends ConsumerWidget {
             ),
         ],
       ),
-      body: GrimoireBackdrop(child: GestureDetector(
+      body: ColoredBox(color: kHomeBackground, child: GestureDetector(
         // Boş kutuda içerik yalnız ortadaki ikon/metin → opak, tüm alan kaydırmayı yakalar.
         behavior: HitTestBehavior.opaque,
         // Soldan sağa swipe → ana menü (barda solda); sağdan sola → Kullanıcı Bilgileri

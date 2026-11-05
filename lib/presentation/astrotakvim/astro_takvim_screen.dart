@@ -586,9 +586,10 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
-        // Anıl: "çok dip dibe; genişlikleri azalsın, araları açılsın" (eski 50/44 × 40/36)
-        width: active ? 40 : 34,
-        height: active ? 36 : 32,
+        // Boyut eski hâline döndü (Anıl, 2026-11-06: "fazla küçülmüş, eski haline getir");
+        // aralar açık kaldı (yan dolgu 16, düğmeler eşit aralıklı).
+        width: active ? 50 : 44,
+        height: active ? 40 : 36,
         decoration: BoxDecoration(
           color: bg,
           borderRadius: BorderRadius.circular(8),
@@ -601,7 +602,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                   color: activeColor.withValues(alpha: 0.55), blurRadius: 8)]
               : null,
         ),
-        child: Icon(icon, color: Colors.white, size: active ? 19 : 17),
+        child: Icon(icon, color: Colors.white, size: active ? 21 : 19),
       ),
     );
   }

@@ -36,6 +36,11 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
   late final AnimationController _ctrl;
   // Bekleme: kağıtlar hafifçe dalgalanır (dokunulabilir olduklarını belli eder).
   late final AnimationController _idle;
+  // Göz kırpma (Anıl, 2026-11-06): iki hızlı kırpış → bekleme → yine iki hızlı kırpış.
+  late final AnimationController _blink;
+  // Not kartı: açıldıktan sonra dışına dokununca kapanır; kağıt tavşanın önünde kalır,
+  // ona dokununca yeniden açılır (Anıl, 2026-11-06). 1 = açık.
+  late final AnimationController _card;
   int _target = 0;
   // Kullanıcı dokunmadan tavşan çekmez (Anıl, 2026-11-05). Kayıt da dokununca yapılır:
   // açıp dokunmadan çıkan kullanıcının günlük hakkı boşa gitmez.
@@ -53,6 +58,11 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
         vsync: this, duration: const Duration(milliseconds: _kTotalMs));
     _idle = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 2600));
+    _blink = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: _kBlinkCycleMs))
+      ..repeat();
+    _card = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 280), value: 1);
     _load();
   }
 
@@ -81,7 +91,33 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
   void dispose() {
     _idle.dispose();
     _ctrl.dispose();
+    _blink.dispose();
+    _card.dispose();
     super.dispose();
+  }
+
+  bool _precached = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_precached) return;
+    _precached = true;
+    // İlk kırpışta katman yüklenirken boş kare olmasın.
+    precacheImage(const AssetImage(_kClosedEyes), context);
+  }
+
+  /// Not kartını kapat (dışına dokunuş) / yeniden aç (tavşanın önündeki kağıda dokunuş).
+  void _closeCard() {
+    if (_card.status == AnimationStatus.reverse || _card.value == 0) return;
+    HapticFeedback.selectionClick();
+    _card.reverse();
+  }
+
+  void _openCard() {
+    if (_card.status == AnimationStatus.forward || _card.value == 1) return;
+    HapticFeedback.selectionClick();
+    _card.forward();
   }
 
   static String _today() {
@@ -261,7 +297,8 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
       final pw = math.min(w * 0.17, 90.0);
       final ph = pw * 206 / 240;
       final spacing = w * 0.185;
-      final baseY = h * 0.76;
+      // Zarflar masanın ön kenarına yakın (Anıl, 2026-11-06: "az daha yukarıda"; eski 0.76).
+      final baseY = h * 0.70;
 
       Offset paperPos(int i) {
         final d = (i - 2).abs();
@@ -271,7 +308,7 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
       double paperRot(int i) => (i - 2) * 0.14;
 
       return AnimatedBuilder(
-        animation: Listenable.merge([_ctrl, _idle]),
+        animation: Listenable.merge([_ctrl, _idle, _card]),
         builder: (context, _) {
           final p = _repeat
               ? 1.0
@@ -292,6 +329,10 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
 
           final done = p >= 1.0;
           final cardW = math.min(w * 0.86, 420.0);
+          final card = _card.value;
+          // Kapalı kartın kağıdı: tavşanın önünde, ayaklarının hizasında.
+          final restW = pw * 1.5;
+          final restH = restW * 206 / 240;
 
           return Stack(
             clipBehavior: Clip.none,
@@ -314,10 +355,18 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
                     child: Transform.scale(
                       scale: 1 + 0.06 * rabbitAmt,
                       alignment: Alignment.bottomCenter,
-                      child: Image.asset('assets/images/tavsanfali/tavsan.png',
-                          fit: BoxFit.contain,
-                          filterQuality: FilterQuality.high,
-                          errorBuilder: (_, __, ___) => const SizedBox.shrink()),
+                      child: Stack(
+                        fit: StackFit.expand,
+                        children: [
+                          Image.asset('assets/images/tavsanfali/tavsan.png',
+                              fit: BoxFit.contain,
+                              filterQuality: FilterQuality.high,
+                              errorBuilder: (_, __, ___) => const SizedBox.shrink()),
+                          // Göz kapakları: tavşanın kendi kürkünden üretilmiş kapalı göz katmanı
+                          // (tools/tavsan_kapali_goz.py) yukarıdan aşağı iner.
+                          RepaintBoundary(child: _BlinkLayer(anim: _blink)),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -327,15 +376,50 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
               for (var i = 0; i < _kPapers; i++)
                 if (i != _target || open < 1.0 && !_repeat)
                   _paper(i, tp, paperPos(i), paperRot(i), pw, ph, w, h, lift, fly, open),
+              // Kart kapalıyken kağıt tavşanın önünde durur; dokununca kart yeniden açılır.
+              if (done && card < 1)
+                Positioned(
+                  left: w / 2 - restW / 2,
+                  top: rabBottom - restH * 0.55,
+                  width: restW,
+                  height: restH,
+                  child: GestureDetector(
+                    key: const ValueKey('tavsan-acik-kagit'),
+                    behavior: HitTestBehavior.opaque,
+                    onTap: _openCard,
+                    child: Opacity(
+                      opacity: (1 - card).clamp(0.0, 1.0),
+                      child: Transform.scale(
+                        scale: 0.85 + 0.15 * (1 - card),
+                        child: Image.asset('assets/images/tavsanfali/tavsan_kagit.png',
+                            fit: BoxFit.contain,
+                            filterQuality: FilterQuality.high,
+                            errorBuilder: (_, __, ___) => const SizedBox.shrink()),
+                      ),
+                    ),
+                  ),
+                ),
+              // Kart açıkken dışına dokunuş kapatır.
+              if (done && card > 0 && _card.status != AnimationStatus.reverse)
+                Positioned.fill(
+                  child: GestureDetector(
+                    key: const ValueKey('tavsan-kart-disi'),
+                    behavior: HitTestBehavior.opaque,
+                    onTap: _closeCard,
+                  ),
+                ),
               // Açılan not kartı
-              if (open > 0 || _repeat)
+              if ((open > 0 || _repeat) && card > 0)
                 Center(
-                  child: Opacity(
-                    opacity: open.clamp(0.0, 1.0),
-                    child: Transform.scale(
-                      scaleY: 0.02 + 0.98 * open,
-                      scaleX: 0.92 + 0.08 * open,
-                      child: _card(cardW),
+                  child: GestureDetector(
+                    onTap: () {}, // kartın kendisine dokunuş kapatmaz
+                    child: Opacity(
+                      opacity: (open * card).clamp(0.0, 1.0),
+                      child: Transform.scale(
+                        scaleY: (0.02 + 0.98 * open) * (0.6 + 0.4 * card),
+                        scaleX: (0.92 + 0.08 * open) * (0.6 + 0.4 * card),
+                        child: _noteCard(cardW),
+                      ),
                     ),
                   ),
                 ),
@@ -404,7 +488,7 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
     );
   }
 
-  Widget _card(double cardW) {
+  Widget _noteCard(double cardW) {
     const ink = Color(0xFF2A1450);
     return Container(
       width: cardW,
@@ -475,4 +559,124 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
       ],
     );
   }
+}
+
+/// Göz kırpma döngüsü: iki hızlı kırpış, sonra uzun bekleme (ms).
+const int _kBlinkCycleMs = 4600;
+
+/// Yalnız test/görsel doğrulama: göz kapağı kapanma oranını sabitle (0…1).
+@visibleForTesting
+double? debugTavsanBlink;
+
+/// Döngüdeki [ms] anında göz kapağının kapanma oranı (0 açık … 1 kapalı).
+double _blinkClosure(double ms) {
+  double one(double t0) {
+    final t = ms - t0;
+    if (t < 0 || t > 150) return 0;
+    if (t < 60) return Curves.easeIn.transform(t / 60); // kapanış
+    return 1 - Curves.easeOut.transform((t - 60) / 90); // açılış
+  }
+
+  return math.max(one(0), one(230));
+}
+
+const String _kClosedEyes = 'assets/images/tavsanfali/tavsan_goz_kapali.png';
+
+/// Göz kırpma katmanı: kapalı göz görseli, kapanma oranı kadar YUKARIDAN AŞAĞI açılır
+/// (göz kapağı iner). Açıkken hiçbir şey çizmez.
+class _BlinkLayer extends StatelessWidget {
+  const _BlinkLayer({required this.anim});
+
+  final Animation<double> anim;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: anim,
+      builder: (context, child) {
+        final c = debugTavsanBlink ?? _blinkClosure(anim.value * _kBlinkCycleMs);
+        if (c <= 0.001) return const SizedBox.expand();
+        final clip = _LidClipper(c);
+        return Stack(fit: StackFit.expand, children: [
+          ClipPath(clipper: clip, child: child),
+          // İnen kapağın kenarında kirpik çizgisi (kapalı görselin kendi kirpiği ~%58'de).
+          if (c > 0.05 && c < 0.62) CustomPaint(painter: _LidEdgePainter(clip)),
+        ]);
+      },
+      child: Image.asset(_kClosedEyes,
+          fit: BoxFit.contain,
+          filterQuality: FilterQuality.high,
+          gaplessPlayback: true,
+          errorBuilder: (_, __, ___) => const SizedBox.shrink()),
+    );
+  }
+}
+
+class _LidEdgePainter extends CustomPainter {
+  _LidEdgePainter(this.clip);
+
+  final _LidClipper clip;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final k = size.width / 505;
+    final p = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round
+      ..strokeWidth = 2.2 * k
+      ..color = const Color(0xE63A1E42);
+    for (final (ex, ey, rx, ry) in _LidClipper._eyes) {
+      final r = Rect.fromCenter(
+          center: Offset(ex * k, ey * k), width: rx * 2 * k * 0.86, height: (ry * 2 + 6) * k);
+      final edge = r.top + r.height * clip.closure;
+      final sag = r.height * 0.10 * clip.closure;
+      canvas.drawPath(
+          Path()
+            ..moveTo(r.left, edge - sag)
+            ..quadraticBezierTo(r.center.dx, edge + sag, r.right, edge - sag),
+          p);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_LidEdgePainter old) => old.clip.closure != clip.closure;
+}
+
+/// Her gözde üstten [closure] oranına kadar inen, alt kenarı hafif kavisli kapak bölgesi.
+class _LidClipper extends CustomClipper<Path> {
+  _LidClipper(this.closure);
+
+  final double closure;
+
+  // tools/tavsan_kapali_goz.py ile aynı elipsler (görsel pikseli, 505×640).
+  static const _eyes = [
+    (201.5, 240.5, 24.5, 27.0),
+    (310.0, 240.5, 22.0, 27.0),
+  ];
+
+  @override
+  Path getClip(Size size) {
+    final k = size.width / 505;
+    final path = Path();
+    for (final (ex, ey, rx, ry) in _eyes) {
+      final r = Rect.fromCenter(
+          center: Offset(ex * k, ey * k), width: (rx * 2 + 6) * k, height: (ry * 2 + 6) * k);
+      if (closure >= 0.999) {
+        path.addRect(r);
+        continue;
+      }
+      final edge = r.top + r.height * closure;
+      final sag = r.height * 0.10 * closure;
+      path
+        ..moveTo(r.left, r.top)
+        ..lineTo(r.right, r.top)
+        ..lineTo(r.right, edge - sag)
+        ..quadraticBezierTo(r.center.dx, edge + sag, r.left, edge - sag)
+        ..close();
+    }
+    return path;
+  }
+
+  @override
+  bool shouldReclip(_LidClipper old) => old.closure != closure;
 }

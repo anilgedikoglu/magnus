@@ -60,6 +60,25 @@ void main() {
     expect(find.textContaining('Yarın tavşan'), findsNothing);
   });
 
+  testWidgets('not kartı: dışına dokununca kapanır, kağıt tavşanın önünde kalır, ona dokununca açılır',
+      (t) async {
+    await _open(t, {});
+    final metin = _cardText(t);
+    expect(metin.length, greaterThan(30));
+    expect(find.byKey(const ValueKey('tavsan-acik-kagit')), findsNothing);
+    expect(find.byKey(const ValueKey('tavsan-kart-disi')), findsOneWidget);
+    await t.tapAt(const Offset(30, 120)); // kartın dışı
+    await t.pump();
+    await t.pump(const Duration(milliseconds: 400));
+    expect(find.text(metin), findsNothing, reason: 'kart kapandı');
+    expect(find.byKey(const ValueKey('tavsan-acik-kagit')), findsOneWidget);
+    await t.tap(find.byKey(const ValueKey('tavsan-acik-kagit')));
+    await t.pump();
+    await t.pump(const Duration(milliseconds: 400));
+    expect(_cardText(t), metin, reason: 'aynı yazı yeniden açıldı');
+    expect(find.byKey(const ValueKey('tavsan-acik-kagit')), findsNothing);
+  });
+
   testWidgets('dokunmadan çekmez: kayıt yok, ipucu görünür; dokununca çeker ve kaydeder', (t) async {
     final prefs = await _open(t, {}, tap: false);
     expect(prefs.getString('tavsanfali_bugun_tarih'), isNull); // hak harcanmadı

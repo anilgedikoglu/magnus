@@ -104,6 +104,7 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/filmed_image.dart';
 import '../../core/widgets/glass_tab_bar.dart';
 import '../../core/widgets/tab_swipe.dart';
+import '../../core/widgets/word_safe_text.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
 import 'home_header_layout.dart';
@@ -117,8 +118,9 @@ const Color kHomeHeaderBackground = Color(0xFF151515);
 
 /// Menu layer 2 (Anıl, 2026-11-06): yüksekliği O AN görünen balon satırı kadar (en çok
 /// [kChatMaxRows]); satır eklenince ızgara (layer 1) yumuşakça aşağı iner, boşluk kalmaz.
-/// Nizami ölçüler: üst/alt iç boşluk, satır arası ve layer 2 ile ızgara arası hep 8.
-const double kChatPadTop = 8;
+/// Nizami ölçüler: satır arası, alt iç boşluk ve layer 2 ile ızgara arası 8; üstte durum çubuğunun
+/// güvenli alanı zaten nefes payı verdiği için yalnız 4 (Anıl: "en üstte boşluk görüyorum").
+const double kChatPadTop = 4;
 const double kChatPadBottom = 8;
 const double kChatRowGap = 8;
 const double kHomeLayerGap = 8;
@@ -1370,11 +1372,9 @@ class _MenuCardState extends State<_MenuCard>
                     left: widget.big ? 16 : 6,
                     right: widget.big ? 16 : 6,
                     bottom: widget.big ? 20 : 9,
-                    child: Text(
+                    // Kelime ortasından bölünmez: dar ekran + büyük yazıda küçülür (WordSafeText).
+                    child: WordSafeText(
                       item.title,
-                      textAlign: TextAlign.center,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
                       style: AppTextStyles.cardLabel.copyWith(
                         fontSize: widget.big ? 22 : 11.5,
                         letterSpacing: widget.big ? 2.0 : 1.0,

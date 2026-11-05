@@ -361,6 +361,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
 
   void _selectDay(int day) {
     if (day == _selectedDay) return;
+    HapticFeedback.selectionClick();
     setState(() => _selectedDay = day);
     _updateContent();
   }
@@ -697,7 +698,11 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
-                      Text(
+                      AnimatedScale(
+                        scale: isSelected ? 1.14 : 1.0,
+                        duration: const Duration(milliseconds: 220),
+                        curve: Curves.easeOutBack,
+                        child: Text(
                         '$day',
                         style: TextStyle(
                           color: isToday
@@ -710,6 +715,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
                               ? FontWeight.bold
                               : FontWeight.normal,
                         ),
+                      ),
                       ),
                       // Transit tarihli içeriği olan günlerde parlayan nokta
                       if (hasDated)

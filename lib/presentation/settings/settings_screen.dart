@@ -559,18 +559,36 @@ final _inlineEditProvider = StateProvider<_InlineEdit?>((ref) => null);
 /// 1. kartın altındaki ARA panel isteği (Anıl, 2026-11-05): "hali hazırda açık olan
 /// (araya giren) kapanmadan bir diğer araya giren çıkamaz; kapatıp öyle çıkacak".
 /// Açık panel varsa önce kapanır (300 ms), sonra yenisi açılır.
+/// Aynı kutuya / profil resmine İKİNCİ dokunuş paneli kapatır (Anıl, 2026-11-06: "bir daha
+/// basınca kapanmıyor, illa X ile kapamak gerekiyor").
 Timer? _insertTimer;
+_InlineEdit? _insertPending;
 const Duration _kInsertAnim = Duration(milliseconds: 300);
+
+bool _sameInsert(_InlineEdit a, _InlineEdit b) =>
+    a.fieldType == b.fieldType && a.title == b.title;
 
 void _requestInsert(WidgetRef ref, _InlineEdit next) {
   final n = ref.read(_inlineEditProvider.notifier);
   _insertTimer?.cancel();
-  if (n.state == null) {
+  final pending = _insertPending;
+  _insertPending = null;
+  final open = n.state;
+  if ((open != null && _sameInsert(open, next)) ||
+      (pending != null && _sameInsert(pending, next))) {
+    n.state = null; // aynı kaynağa ikinci dokunuş: kapat
+    return;
+  }
+  if (open == null) {
     n.state = next;
     return;
   }
   n.state = null; // önce açık olan kapanır
-  _insertTimer = Timer(_kInsertAnim, () => n.state = next);
+  _insertPending = next;
+  _insertTimer = Timer(_kInsertAnim, () {
+    _insertPending = null;
+    n.state = next;
+  });
 }
 
 /// Açılan paneli kaydırılan sütunda görünür kıl (açılış animasyonu bitince).
@@ -1714,30 +1732,23 @@ class SettingsScreen extends ConsumerWidget {
 
   // ── Üst bar ──────────────────────────────────────────────────────────────
 
+  // Sağ üstteki ayar dişlisi KALDIRILDI (Anıl, 2026-11-06: "ayar düğmesi var, onu yok et");
+  // ayarlar zaten 3. kart. Yükseklik korunur (48) → başlık ve kartlar yerinden oynamaz.
   Widget _buildTopBar(BuildContext context, WidgetRef ref, UserProfile profile) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      child: Row(
-        children: [
-          if (isAdmin(profile, ref.read(sharedPrefsProvider)))
-            IconButton(
-              icon: const Icon(Icons.admin_panel_settings_outlined,
-                  color: AppColors.gold, size: 24),
-              onPressed: () => _showAdminPanel(context),
-            ),
-          const Spacer(),
-          IconButton(
-            icon: const Icon(Icons.settings_outlined,
-                color: AppColors.boneDim, size: 24),
-            onPressed: () {
-              final c = _settingsCardKey.currentContext;
-              if (c != null) {
-                Scrollable.ensureVisible(c,
-                    duration: const Duration(milliseconds: 420), curve: Curves.easeOutCubic);
-              }
-            },
-          ),
-        ],
+      child: SizedBox(
+        height: 48,
+        child: Row(
+          children: [
+            if (isAdmin(profile, ref.read(sharedPrefsProvider)))
+              IconButton(
+                icon: const Icon(Icons.admin_panel_settings_outlined,
+                    color: AppColors.gold, size: 24),
+                onPressed: () => _showAdminPanel(context),
+              ),
+          ],
+        ),
       ),
     );
   }
@@ -2760,15 +2771,20 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
     return '${p[2]}.${p[1]}.${p[0]}';
   }
 
+  // Ekranın ORTASINDA açılır pencere (Anıl, 2026-11-06: alttan açılan sayfa cam barın
+  // arkasında kalıyordu). Kök navigatörde → açıkken yüzen bar gizlenir.
   void _showAdminPanel(BuildContext context) {
-    showModalBottomSheet(
+    showDialog<void>(
       context: context,
-      backgroundColor: AppColors.inkSurface,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-        side: BorderSide(color: AppColors.gold, width: 1.5),
-      ),
-      builder: (ctx) {
+      barrierColor: const Color(0x99000000),
+      builder: (ctx) => Dialog(
+        backgroundColor: AppColors.inkSurface,
+        insetPadding: const EdgeInsets.symmetric(horizontal: 24),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+          side: const BorderSide(color: AppColors.gold, width: 1.5),
+        ),
+        child: Builder(builder: (ctx) {
         bool resetDone = false;
         bool adsDisabled = AdService.instance.adsDisabled;
 
@@ -2793,35 +2809,31 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
             }
 
             return Padding(
-              padding: const EdgeInsets.fromLTRB(20, 16, 20, 40),
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Tutma çubuğu
-                  Center(
-                    child: Container(
-                      width: 40, height: 4,
-                      decoration: BoxDecoration(
-                        color: AppColors.gold.withValues(alpha: 0.5),
-                        borderRadius: BorderRadius.circular(2),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 18),
-                  // Başlık
-                  const Row(
+                  // Başlık + kapat
+                  Row(
                     children: [
-                      Icon(Icons.settings_rounded, color: AppColors.gold, size: 18),
-                      SizedBox(width: 8),
-                      Text(
-                        'Admin Panel',
-                        style: TextStyle(
-                          color: AppColors.gold,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
+                      const Icon(Icons.settings_rounded, color: AppColors.gold, size: 18),
+                      const SizedBox(width: 8),
+                      const Expanded(
+                        child: Text(
+                          'Admin Panel',
+                          style: TextStyle(
+                            color: AppColors.gold,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1,
+                          ),
                         ),
+                      ),
+                      IconButton(
+                        visualDensity: VisualDensity.compact,
+                        icon: const Icon(Icons.close_rounded, color: AppColors.boneDim, size: 22),
+                        onPressed: () => Navigator.of(ctx).pop(),
                       ),
                     ],
                   ),
@@ -2914,13 +2926,13 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
                       ],
                     ),
                   ),
-                  const SizedBox(height: 8),
                 ],
               ),
             );
           },
         );
-      },
+        }),
+      ),
     );
   }
 
@@ -3038,12 +3050,6 @@ class _OptionsItem extends StatelessWidget {
 class _GlassTintSection extends ConsumerWidget {
   const _GlassTintSection();
 
-  static const _previewImages = [
-    'assets/images/menu/tarot.png',
-    'assets/images/menu/durugoru.png',
-    'assets/images/menu/numeroloji.png',
-  ];
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(l10nProvider);
@@ -3063,40 +3069,15 @@ class _GlassTintSection extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 10),
-          // Önizleme: menü kartlarının üstünde gerçek cam bar (dokunulmaz).
-          ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: SizedBox(
-              height: 104,
-              child: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Row(
-                    children: [
-                      for (final p in _previewImages)
-                        Expanded(
-                          child: Image.asset(p,
-                              fit: BoxFit.cover,
-                              errorBuilder: (_, __, ___) => const ColoredBox(color: Color(0xFF14121C))),
-                        ),
-                    ],
-                  ),
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: IgnorePointer(
-                        child: GlassTabBar(
-                          key: const ValueKey('glassTintPreviewBar'),
-                          selected: 0,
-                          onTap: (_) {},
-                          tint: tint,
-                          labels: [s.tabHome, s.tabInbox, s.settingsTitle],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+          // Önizleme: gerçek cam bar (dokunulmaz). Arka plan görseli YOK (Anıl, 2026-11-06:
+          // "bg istemiyorum burada") — kartın kendi zemini üstünde durur.
+          IgnorePointer(
+            child: GlassTabBar(
+              key: const ValueKey('glassTintPreviewBar'),
+              selected: 0,
+              onTap: (_) {},
+              tint: tint,
+              labels: [s.tabHome, s.tabInbox, s.settingsTitle],
             ),
           ),
           const SizedBox(height: 10),

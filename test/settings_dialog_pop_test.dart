@@ -49,8 +49,9 @@ void main() {
     c.read(mainTabProvider.notifier).state = MainTab.profile;
     await _settle(t);
 
-    // Dişli artık pencere açmaz; ayarlar kartına kaydırır.
-    await t.tap(find.byIcon(Icons.settings_outlined));
+    // Sağ üstteki dişli kaldırıldı (Anıl, 2026-11-06); ayarlar 3. kartta, kaydırarak ulaşılır.
+    expect(find.byIcon(Icons.settings_outlined), findsNothing);
+    await t.ensureVisible(find.text('DİL / LANGUAGE'));
     await _settle(t);
     expect(find.byType(Dialog), findsNothing);
     expect(find.text('DİL / LANGUAGE'), findsOneWidget);

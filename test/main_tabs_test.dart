@@ -378,6 +378,44 @@ void main() {
     expect(find.text('I:0'), findsOneWidget);
     expect(scale(), closeTo(1.0, 0.001));
   });
+
+  testWidgets('Kullanıcı Bilgileri sekmesinde bar kaydırmayla KÜÇÜLMEZ (Anıl, 2026-11-06)', (
+    tester,
+  ) async {
+    await tester.pumpWidget(ProviderScope(
+      overrides: [
+        inboxProvider.overrideWith(_FakeInbox.new),
+        l10nProvider.overrideWithValue(AppStrings('tr')),
+      ],
+      child: MaterialApp(
+        home: FloatingBarHost(child: MainTabsScreen(
+          debugPageBuilder: (t) => ListView.builder(
+            key: ValueKey<String>('liste$t'),
+            itemCount: 300,
+            itemExtent: 50,
+            itemBuilder: (_, i) => const Text('satır'),
+          ),
+        )),
+      ),
+    ));
+    double scale() => tester
+        .widget<Transform>(find.byKey(const ValueKey('glassTabBarScale')))
+        .transform
+        .storage[0];
+    await tester.tap(find.bySemanticsLabel('Kullanıcı Bilgileri'));
+    await tester.pumpAndSettle();
+    final profil = find.byKey(const ValueKey<String>('liste${MainTab.profile}'));
+    await tester.timedDrag(profil, const Offset(0, -300), const Duration(milliseconds: 900));
+    await tester.pumpAndSettle();
+    expect(scale(), 1.0, reason: 'profilde bar hep tam boy, en altta');
+    // Ana menüde küçülme sürer.
+    await tester.tap(find.bySemanticsLabel('Ana Menü'));
+    await tester.pumpAndSettle();
+    await tester.timedDrag(find.byKey(const ValueKey<String>('liste${MainTab.home}')),
+        const Offset(0, -300), const Duration(milliseconds: 900));
+    await tester.pumpAndSettle();
+    expect(scale(), closeTo(kBarCompactScale, 0.001));
+  });
 }
 
 // ── Gerçek go_router yapısı (StatefulShellRoute + kök rota) — Codex: MaterialApp(home:)

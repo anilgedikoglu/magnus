@@ -213,8 +213,13 @@ class _FloatingBarHostState extends ConsumerState<FloatingBarHost>
   /// kaydırma (ör. açılan paneli görünür kılma) sayılmaz. Liste başı her durumda tam boy.
   bool _userScrolling = false;
 
+  /// Kullanıcı Bilgileri sekmesinde bar HEP tam boy, en altta (Anıl, 2026-11-06: "sadece ve
+  /// sadece kullanıcı bilgileri sayfasında alt menü en altta büyük şekilde kalsın, küçülmesin").
+  bool get _minimizeLocked => _path == '/home' && ref.read(mainTabProvider) == MainTab.profile;
+
   bool _onScroll(ScrollNotification n) {
     if (n.depth != 0 || n.metrics.axis != Axis.vertical) return false;
+    if (_minimizeLocked) return false;
     final m = n.metrics;
     if (n is UserScrollNotification) {
       _userScrolling = n.direction != ScrollDirection.idle;

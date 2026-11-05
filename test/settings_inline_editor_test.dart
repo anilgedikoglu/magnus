@@ -107,6 +107,28 @@ void main() {
     expect(find.text('Medeni Hal'), findsOneWidget);
     expect(find.text('Modalite'), findsOneWidget);
 
+    // Aynı kutuya İKİNCİ dokunuş açık paneli kapatır (X gerekmez; Anıl, 2026-11-06).
+    await t.ensureVisible(find.text('Medeni Hal'));
+    await t.tap(find.text('Medeni Hal'));
+    await _settle(t);
+    expect(find.text('Kaydet'), findsOneWidget);
+    await t.ensureVisible(find.text('Medeni Hal').first);
+    await t.tap(find.text('Medeni Hal').first); // kutunun kendisi (panel başlığı altta)
+    await _settle(t);
+    expect(find.text('Kaydet'), findsNothing);
+    expect(find.text('Modalite'), findsOneWidget);
+    // Başka kutu açıkken farklı kutu: önce kapanır, sonra yenisi açılır (değişmedi).
+    await t.tap(find.text('Medeni Hal'));
+    await _settle(t);
+    await t.ensureVisible(find.text('Doğum Tarihi'));
+    await t.tap(find.text('Doğum Tarihi'));
+    await _settle(t);
+    expect(find.text('Kaydet'), findsOneWidget);
+    await t.ensureVisible(find.text('Doğum Tarihi').first);
+    await t.tap(find.text('Doğum Tarihi').first);
+    await _settle(t);
+    expect(find.text('Kaydet'), findsNothing);
+
     await t.pumpWidget(const SizedBox.shrink());
     await _settle(t, steps: 3);
     await t.pump(const Duration(seconds: 3)); // metin alanı/odak gecikme zamanlayıcıları

@@ -34,7 +34,9 @@ import 'glass_tint.dart';
 export 'glass_lens.dart' show debugDisableGlassLens;
 
 /// Barın yüksekliği ve SafeArea altından boşluğu — 3 ekranda AYNI yer.
-const double kGlassBarHeight = 56;
+/// Instagram iOS 26: en/boy ≈ 6,7 (397 × 57,7 pt). Bizim en 416 (kenar 12, kartlarla hizalı)
+/// → aynı oran için 62 (Codex 2. tur).
+const double kGlassBarHeight = 62;
 const double kGlassBarGap = 10;
 const double kGlassBarSide = 12;
 
@@ -69,16 +71,16 @@ enum InboxBadge {
 /// Kapsül uzaması: hız (slot/sn) × bu katsayı, en fazla [_kMaxStretch] slot.
 /// 1 slotluk geçişte tepe ~0.25 slot, 2 slotlukta 0.32 (sınır) — "azıcık uzayıp kısalır".
 const double _kStretchPerVelocity = 0.03;
-const double _kMaxStretch = 0.32;
+const double _kMaxStretch = 0.18; // Codex: 0.32 referanstan fazla uzuyordu
 
 
 /// Seçimde kapsülün "havalanması" (iOS 26 Liquid Glass sekme seçimi): dokununca kapsül
 /// camdan bir damla gibi BÜYÜYEREK bardan taşar, alttaki ikonları mercek gibi büyütür,
 /// hedefe kayar, varınca yaylı (hafif ezilerek) bara geri oturur.
-const double _kLiftHeight = 0.24; // tam havada ×1.24 (46 → 57 dp) — Codex: 0.40 ikonları uzatıp çiftliyordu
+const double _kLiftHeight = 0.15; // tam havada ×1.15 — Codex: daha fazlası ikonları uzatıp çiftliyor
 const double _kLiftWidth = 0.08; // tam havada genişlik ×1.08
 const double _kLandSquash = 0.6; // iniş taşmasında (L<0) yassılaşma: genişlik +0.6·|L|
-const double _kLiftZoom = 0.10; // damla merceği büyütmesi (1.10×)
+const double _kLiftZoom = 0.08; // damla merceği büyütmesi (1.08×, Codex)
 const Duration _kLiftUp = Duration(milliseconds: 130);
 
 class GlassTabBar extends StatefulWidget {
@@ -321,15 +323,16 @@ class _GlassTabBarState extends State<GlassTabBar>
                     filter: _glass,
                     child: ColoredBox(color: glassTintColor(widget.tint)),
                   ),
-                // 2) Üst parlama (cam yüzeyinin ışığı yakalaması).
+                // 2) İç kenar parıltısı (Instagram ölçümü): üst ve alt kenarın ~4 pt içinde
+                //    +13..15 seviye açılma, ortada yok (eski: yalnız üstte %8 parlama).
                 const IgnorePointer(
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        stops: [0.0, 0.45],
-                        colors: [Color(0x14FFFFFF), Color(0x00FFFFFF)],
+                        stops: [0.0, 0.07, 0.93, 1.0],
+                        colors: [Color(0x10FFFFFF), Color(0x00FFFFFF), Color(0x00FFFFFF), Color(0x12FFFFFF)],
                       ),
                     ),
                   ),
@@ -456,7 +459,7 @@ class _SelectionPill extends StatelessWidget {
             Colors.white.withValues(alpha: 0.12 * fade),
           ],
         ),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.06 * fade), width: 0.6),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.04 * fade), width: 0.5),
       ),
     );
   }
@@ -481,7 +484,7 @@ class _LiftedDroplet extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(kGlassBarHeight * 2),
           boxShadow: const [
-            BoxShadow(color: Color(0x47000000), blurRadius: 16, offset: Offset(0, 5)),
+            BoxShadow(color: Color(0x33000000), blurRadius: 14, offset: Offset(0, 3)), // Codex 2. tur
           ],
         ),
         child: ClipRRect(
@@ -490,7 +493,9 @@ class _LiftedDroplet extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               if (l != null)
-                GlassLensBackdrop(program: l, zoom: 1 + _kLiftZoom * lift, child: glass)
+                // Damla küçük ve hareketli: yumuşak mercek (ikon optik uzaması azalır — Codex).
+                GlassLensBackdrop(
+                    program: l, zoom: 1 + _kLiftZoom * lift, refract: 0.15, bevel: 0.18, child: glass)
               else
                 glass,
               const CustomPaint(painter: _DropletRimPainter()),
@@ -517,7 +522,7 @@ class _DropletRimPainter extends CustomPainter {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         stops: [0.0, 0.5, 1.0],
-        colors: [Color(0x99FFFFFF), Color(0x1AFFFFFF), Color(0x4DFFFFFF)],
+        colors: [Color(0x66FFFFFF), Color(0x14FFFFFF), Color(0x33FFFFFF)], // Codex: çevre fazla parlaktı
       ).createShader(rect);
     canvas.drawRRect(rrect, paint);
   }
@@ -586,12 +591,14 @@ class _RimPainter extends CustomPainter {
     final rrect = RRect.fromRectAndRadius(rect, Radius.circular(radius));
     final paint = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.0
+      // Instagram: 1 fiziksel px'lik parlak çizgi (~%40 beyaz) ÜSTTE VE ALTTA eşit; yanlarda
+      // biraz daha sönük (eski: yalnız üst parlak, alt %12).
+      ..strokeWidth = 0.7
       ..shader = const LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         stops: [0.0, 0.5, 1.0],
-        colors: [Color(0x52FFFFFF), Color(0x0DFFFFFF), Color(0x1FFFFFFF)],
+        colors: [Color(0x66FFFFFF), Color(0x2EFFFFFF), Color(0x66FFFFFF)],
       ).createShader(rect);
     canvas.drawRRect(rrect, paint);
   }

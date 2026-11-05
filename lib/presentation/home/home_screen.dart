@@ -105,6 +105,7 @@ import '../../core/widgets/glass_tab_bar.dart';
 import '../../core/widgets/tab_swipe.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
+import 'menu_layout.dart';
 
 /// Ana menünün (menu layer 1, ikonlar) düz arka plan rengi (Anıl'ın örneği: rgb 12,15,20).
 const Color kHomeBackground = Color(0xFF0C0F14);
@@ -892,30 +893,112 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     }
   }
 
+  /// Menü (Anıl, 2026-11-05): üç düzen, açılışta 1/3 ihtimalle (menu_layout.dart).
   Widget _buildGrid(BuildContext context, {required double topPad}) {
-    final items = [
+    final base = [
       ..._page1Items(context),
       ..._page2Items(context),
       ..._page3Items(context),
     ];
+    SharedPreferences? prefs;
+    try {
+      prefs = ref.read(sharedPrefsProvider);
+    } catch (_) {}
+    // Her dokunuş kullanım sayımına yazılır (Düzen 3 sıralaması bir SONRAKİ açılışta).
+    final items = [
+      for (final it in base)
+        _MenuItem(it.title, it.imagePath, it.credits, () {
+          MenuUsage.increment(prefs, it.imagePath);
+          it.onTap();
+        }),
+    ];
+    Color colorOf(int i) => _groupColors[(i ~/ 9).clamp(0, _groupColors.length - 1)];
+    final ids = [for (final it in items) it.imagePath];
+
     // Son satır cam barın üstünde rahatça görünsün: alt güvenli alan + bar + nefes payı.
     final bottomPad =
         MediaQuery.paddingOf(context).bottom + kGlassBarGap + kGlassBarHeight + 14;
-    return GridView.builder(
+    const gap = 8.0;
+    const grid = SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 3,
+      crossAxisSpacing: gap,
+      mainAxisSpacing: gap,
+      childAspectRatio: 0.75,
+    );
+    Widget cells(List<int> idx) => SliverGrid(
+          gridDelegate: grid,
+          delegate: SliverChildBuilderDelegate(
+            (context, k) => _MenuCard(item: items[idx[k]], color: colorOf(idx[k])),
+            childCount: idx.length,
+          ),
+        );
+    Widget space(double h) => SliverToBoxAdapter(child: SizedBox(height: h));
+    // Büyük ikon: 3×3 hücre kadar (en = 3 hücre + 2 aralık, boy = 3 hücre boyu + 2 aralık).
+    Widget big(int i) => SliverLayoutBuilder(builder: (context, c) {
+          final cw = (c.crossAxisExtent - 2 * gap) / 3;
+          final h = 3 * (cw / 0.75) + 2 * gap;
+          return SliverToBoxAdapter(
+            child: SizedBox(
+              height: h,
+              child: _MenuCard(item: items[i], color: colorOf(i), big: true),
+            ),
+          );
+        });
+    Widget header(String text) => SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(4, 2, 4, 10),
+            child: Text(
+              text,
+              style: AppTextStyles.cardLabel.copyWith(
+                fontSize: 13,
+                letterSpacing: 2.2,
+                color: AppColors.bone.withValues(alpha: 0.85),
+              ),
+            ),
+          ),
+        );
+
+    final s = ref.read(l10nProvider);
+    final List<Widget> slivers;
+    switch (sessionMenuLayout) {
+      case MenuLayout.grid:
+        slivers = [cells(List<int>.generate(items.length, (i) => i))];
+      case MenuLayout.bigBlocks:
+        final bigs = sessionBigPicks(ids, prefs);
+        final rest = [for (var i = 0; i < items.length; i++) if (!bigs.contains(i)) i];
+        slivers = [
+          big(bigs[0]),
+          space(gap),
+          cells(rest.sublist(0, 12)),
+          space(gap),
+          big(bigs[1]),
+          space(gap),
+          cells(rest.sublist(12, 24)),
+          space(gap),
+          big(bigs[2]),
+        ];
+      case MenuLayout.favorites:
+        final order = orderByUsage(ids, sessionUsage(prefs));
+        slivers = [
+          header(s.menuFavorites),
+          cells(order.sublist(0, 6)),
+          space(22),
+          header(s.menuOtherTypes),
+          cells(order.sublist(6)),
+        ];
+    }
+    return CustomScrollView(
+      key: ValueKey('homeMenu_${sessionMenuLayout.name}'),
       controller: _gridScrollCtrl,
       physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-      padding: EdgeInsets.fromLTRB(10, topPad, 10, bottomPad),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        crossAxisSpacing: 8,
-        mainAxisSpacing: 8,
-        childAspectRatio: 0.75,
-      ),
-      itemCount: items.length,
-      itemBuilder: (context, i) => _MenuCard(
-        item: items[i],
-        color: _groupColors[(i ~/ 9).clamp(0, _groupColors.length - 1)],
-      ),
+      slivers: [
+        space(topPad),
+        SliverPadding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          sliver: SliverMainAxisGroup(slivers: slivers),
+        ),
+        space(bottomPad),
+      ],
     );
   }
 
@@ -1104,7 +1187,10 @@ class _MenuItem {
 class _MenuCard extends StatefulWidget {
   final _MenuItem item;
   final Color color; // sayfa rengi (eski çerçeve rengi)
-  const _MenuCard({required this.item, required this.color});
+
+  /// Düzen 2'nin büyük ikonu (3×3 hücre): etiket, rozet ve köşe orantılı büyür.
+  final bool big;
+  const _MenuCard({required this.item, required this.color, this.big = false});
 
   @override
   State<_MenuCard> createState() => _MenuCardState();
@@ -1115,7 +1201,9 @@ class _MenuCardState extends State<_MenuCard>
   late final AnimationController _ctrl;
   bool _down = false;
 
-  static const _radius = BorderRadius.all(Radius.circular(14));
+  static const _radiusSmall = BorderRadius.all(Radius.circular(14));
+  static const _radiusBig = BorderRadius.all(Radius.circular(20));
+  BorderRadius get _radius => widget.big ? _radiusBig : _radiusSmall;
 
   @override
   void initState() {
@@ -1195,30 +1283,39 @@ class _MenuCardState extends State<_MenuCard>
                     ),
                   ),
                   Positioned(
-                    left: 6,
-                    right: 6,
-                    bottom: 9,
+                    left: widget.big ? 16 : 6,
+                    right: widget.big ? 16 : 6,
+                    bottom: widget.big ? 20 : 9,
                     child: Text(
                       item.title,
                       textAlign: TextAlign.center,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: AppTextStyles.cardLabel.copyWith(
-                        fontSize: 11.5,
-                        letterSpacing: 1.0,
+                        fontSize: widget.big ? 22 : 11.5,
+                        letterSpacing: widget.big ? 2.0 : 1.0,
                         height: 1.15,
                         color: _down ? AppColors.bone : AppColors.bone.withValues(alpha: 0.92),
                       ),
                     ),
                   ),
                   if (item.credits >= 0)
-                    Positioned(top: 6, right: 6, child: _CreditBadge(count: item.credits)),
+                    Positioned(
+                      top: widget.big ? 12 : 6,
+                      right: widget.big ? 12 : 6,
+                      child: widget.big
+                          ? Transform.scale(
+                              scale: 1.5,
+                              alignment: Alignment.topRight,
+                              child: _CreditBadge(count: item.credits))
+                          : _CreditBadge(count: item.credits),
+                    ),
                   Positioned.fill(
                     child: IgnorePointer(
                       child: DecoratedBox(
                         decoration: BoxDecoration(
                           borderRadius: _radius,
-                          border: Border.all(color: widget.color, width: 1.5),
+                          border: Border.all(color: widget.color, width: widget.big ? 2 : 1.5),
                         ),
                       ),
                     ),

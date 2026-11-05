@@ -8,8 +8,12 @@
 //   • En şeffaf hâlin kendisi arkaya göre: 0.61·arka + 45 (cam içi/dışı yazı parlaklığından).
 //   • Mutlak: geçirgenlik k_abs = 0.61·k, eklenen ışık c_abs = 45·k + c →
 //     tint opaklığı α = 1 − k_abs, tint gri seviyesi = c_abs / α.
-// Gidişat: 0 (şeffaf) α 0.39 / açık gri 115 → 0.5 α 0.75 / 78 → 1 (renkli) α 0.95 / koyu 51.
-// Yarıya kadar ortalama parlaklık sabit kalır (kontrast düşer), yarıdan sonra koyulaşır.
+// Gidişat (opaklık): 0 (şeffaf) α 0.39 → 0.5 α 0.75 → 1 (renkli) α 0.95.
+//
+// 2026-11-05 gece (Anıl: "tam aynısı değilse önce onu aynısı yap"; Codex: "bizim merkez açık
+// gri, Instagram koyu"): ORAN iOS kaydırıcısından, camın RENGİ Instagram barından ölçüldü
+// (iki ekran görüntüsü, gri zemin + bordo panel: cam = 0.20·arka + (12, 13, 16.5) →
+// α 0.80, tint (15, 16, 21)). Varsayılan ortada sonuç: 0.25·arka + (11, 12, 16) ≈ Instagram.
 
 import 'package:flutter/painting.dart';
 
@@ -34,7 +38,9 @@ const List<(double, double, double)> _kTable = [
 ];
 
 const double _kClearTransmit = 0.61;
-const double _kClearLight = 45;
+
+/// Instagram iOS 26 barının cam rengi (ölçüm: c / α = (12, 13, 16.5) / 0.80).
+const (int, int, int) _kTint = (15, 16, 21);
 
 /// Kaydırıcı değeri (0 şeffaf … 1 renkli) → camın tint rengi (alfa = opaklık).
 Color glassTintColor(double value) {
@@ -50,6 +56,7 @@ Color glassTintColor(double value) {
   final c = c0 + (c1 - c0) * t;
   final transmit = _kClearTransmit * k;
   final alpha = 1 - transmit;
-  final gray = ((_kClearLight * k + c) / alpha).clamp(0.0, 255.0);
-  return Color.fromARGB((alpha * 255).round(), gray.round(), gray.round(), (gray + 2).clamp(0, 255).round());
+  // Renk: Instagram camı (koyu, hafif soğuk). c (iOS'un eklediği ışık) yalnız oranı kurar.
+  assert(c >= 0);
+  return Color.fromARGB((alpha * 255).round(), _kTint.$1, _kTint.$2, _kTint.$3);
 }

@@ -96,6 +96,8 @@ class AppStrings {
   String get tabInboxUnread    => _s('Gelen Kutusu, okunmamış fal var', 'Inbox, unread reading');
   String get tabInboxPreparing => _s('Gelen Kutusu, hazırlanan fal var', 'Inbox, a reading is being prepared');
   String get tabHome           => _s('Ana Menü',       'Main Menu');
+  String get menuFavorites     => _s('Favoriler',      'Favorites');
+  String get menuOtherTypes    => _s('Diğer Türler',   'Other Readings');
   String get glassSectionTitle => _s('CAM / GLASS',    'GLASS');
   String get glassTransparency => _s('Alt bar cam saydamlığı', 'Bottom bar glass transparency');
   String get glassClear        => _s('Şeffaf',         'Clear');

@@ -5,17 +5,20 @@ import 'package:magnus_app/core/widgets/glass_tint.dart';
 import 'package:magnus_app/core/widgets/liquid_glass_slider.dart';
 
 void main() {
-  test('saydamlık tablosu: uçlar ve orta ölçümle uyumlu, opaklık monoton artar', () {
+  test('saydamlık: oran iOS kaydırıcı ölçümü, renk Instagram camı; opaklık monoton artar', () {
     final clear = glassTintColor(0);
     final mid = glassTintColor(kGlassTintDefault);
     final tinted = glassTintColor(1);
-    // Ölçüm: şeffaf α≈0.39 / gri≈115, orta α≈0.75 / ≈78, renkli α≈0.95 / ≈51.
+    // Opaklık (iOS ölçümü): şeffaf ≈0.39, orta ≈0.75, renkli ≈0.945.
     expect(clear.a, closeTo(0.39, 0.02));
-    expect(clear.r * 255, closeTo(115, 3));
     expect(mid.a, closeTo(0.75, 0.03));
-    expect(mid.r * 255, closeTo(78, 4));
     expect(tinted.a, closeTo(0.945, 0.02));
-    expect(tinted.r * 255, closeTo(51, 3));
+    // Renk: Instagram camı (15, 16, 21) her değerde.
+    for (final c in [clear, mid, tinted]) {
+      expect((c.r * 255).round(), 15);
+      expect((c.g * 255).round(), 16);
+      expect((c.b * 255).round(), 21);
+    }
     var prev = -1.0;
     for (var i = 0; i <= 100; i++) {
       final a = glassTintColor(i / 100).a;

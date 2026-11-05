@@ -112,7 +112,10 @@ if (mode === 'aday') {
     const phTr = (a.metin.match(/\{\{[^}]*\}\}/g) || []).sort().join('|');
     const phEn = (en[i].match(/\{\{[^}]*\}\}/g) || []).sort().join('|');
     if (phTr !== phEn) console.log('UYARI yer tutucu TR/EN farklı', a.kaynak, a.no, phTr, '≠', phEn);
-    const e = { id: numeric ? next++ : `${prefix}${nNext++}` };
+    // Metin id'lerde sıfır dolgusunu koru ("ag001" → "ag073"; "likia_22" → "likia_23")
+    const sonEk = String(pool[0].id).match(/(\d+)$/);
+    const genislik = sonEk && sonEk[1].startsWith('0') ? sonEk[1].length : 0;
+    const e = { id: numeric ? next++ : `${prefix}${String(nNext++).padStart(genislik, '0')}` };
     if (meta.extra) Object.assign(e, meta.extra);
     e.metin = a.metin;
     e.metin_en = en[i];

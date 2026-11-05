@@ -205,6 +205,44 @@ const TURLAR = {
       gorev: 'GELECEK — birkaç ay sonrasından ({{ay_N}}) bir sahne ve ona giden yol: bir gelişme, bir kişi, bir değişim; zaman geniş, doku canlı. Uzunluk: 380-650 karakter.',
     },
   ],
+  7: [
+    {
+      id: 'olumlama', file: 'olumlamalar.json', key: 'olumlamalar', matcher: 'M2', kitle: KITLE_M3, adet: 40, orijinalMaxId: 514,
+      tur: 'Olumlama (günlük olumlama cümlesi)',
+      sistem: 'Kullanıcı Olumlama\'yı açar; ekranda tek bir kısa, birinci tekil olumlama cümlesi belirir (her açılışta sıradaki). Metin <color=yellow><b>…</b></color> etiketleri içinde verilir (uygulama bunları renklendirir).',
+      gorev: 'OLUMLAMA — birinci tekil ("ben"), şimdiki ya da geniş zamanlı, kısa, güçlü, inandırıcı bir olumlama; kitleye göre (evliyse "eşim", öğrenciyse "derslerim/sınavım", kamu sektörü ise "kurumdaki işim" gibi) somut bir hayat alanına dokunsun. Klişe "ben harikayım" değil, gündelik ve kişisel. Biçim: <color=yellow><b>CÜMLE</b></color>. Uzunluk (etiketler dahil): 70-150 karakter.',
+      uslup: 'ÜSLUP: Kullanıcının kendi sesi (birinci tekil), sakin ve kendinden emin. Magnus konuşmaz.',
+      ekYasak: 'Dinî ibare kullanma. Yaş koşulu KOYMA (bu ekran yaşı tanımaz).',
+    },
+    {
+      id: 'acigercekler', file: 'acigercekler.json', key: 'acigercekler', matcher: 'M7', kitle: KITLE_KOSULSUZ, adet: 40,
+      tur: 'Acı Gerçekler',
+      sistem: 'Kullanıcı "Acı Gerçekler"i açar; her açılışta hayata dair sert ama doğru, insanın kendinde gördüğü tek bir gerçek gelir (kişiye hitapsız, genel).',
+      gorev: 'ACI GERÇEK — 2-3 cümle: insan doğasına ya da ilişkilere dair rahatsız edici ama tanıdık bir gözlem (Barnum tarzı: okuyan "bu ben miyim" desin), sonunda bir kıvrım. Kimseye hakaret, kırıcı genelleme, siyaset, din, sağlık tavsiyesi YOK. Yer tutucu YOK. HEPSİ KOŞULSUZ. Uzunluk: 140-320 karakter.',
+      uslup: 'ÜSLUP: Kısa, net, vurucu; hitapsız gözlem cümleleri ("İnsanlar…", "Bazen…").',
+    },
+    {
+      id: 'motivasyon', file: 'motivasyonlar.json', key: 'motivasyonlar', matcher: 'M7', kitle: KITLE_KOSULSUZ,
+      tur: 'Motivasyon',
+      sistem: 'Kullanıcı Motivasyon\'u açar; her açılışta sıradaki motivasyon metni gelir. Metinler kısa paragraflardan oluşan küçük bir düşünce yazısıdır (satır araları \\n\\n).',
+      gorev: 'MOTİVASYON YAZISI — 3-5 kısa paragraf: gündelik bir sahne ya da içsel bir durumla başla (Barnum: herkesin yaşadığı ama kişisel hissettiren), bir benzetme/imge ile derinleştir, sonunda uygulanabilir küçük bir adım ya da bakış değişikliği. Yer tutucu gerekmez ({{isim}} en fazla bir kez). HEPSİ KOŞULSUZ. Uzunluk: 350-700 karakter.',
+      uslup: 'ÜSLUP: Sıcak, sade, "sen"e konuşan bir köşe yazarı; vaaz gibi değil.',
+    },
+    {
+      id: 'kahin_likia', file: 'kahinler.json', key: 'kahinler.likia', matcher: 'M7', kitle: KITLE_KOSULSUZ, orijinalMaxId: 22,
+      tur: 'Kâhinlere Sor — Kâhin LİKİA',
+      sistem: 'Kullanıcı AKLINDAN bir soru tutar (uygulama soruyu BİLMEZ) ve kâhinlerden Likia\'yı seçer. Likia kendi kişiliğiyle kendini tanıtır, tutulan soruya cevap verir ve vedalaşır. Cevap HER SORUYA oturmalı.',
+      gorev: 'LİKİA CEVABI — 3 paragraf: (1) tanıtım (gölgelerin/kuytuların kâhini, fısıltılı, kendine hayran, flörtöz, "Sevgimle..." diye biter) ama cümleleri KOPYALAMA; (2) cevap: biliyormuş gibi, çift çıkışlı, zincirli zaman ve az negatif → bol pozitif; (3) kısa veda. Uzunluk: 450-800 karakter.',
+      uslup: 'ÜSLUP: Likia birinci tekil konuşur, "sen" der; gizemli, cilveli, esprili. <sprite=…> etiketi KULLANMA.',
+    },
+    {
+      id: 'kahin_yousuf', file: 'kahinler.json', key: 'kahinler.yousuf', matcher: 'M7', kitle: KITLE_KOSULSUZ, orijinalMaxId: 22,
+      tur: 'Kâhinlere Sor — Kâhin YOUSUF',
+      sistem: 'Kullanıcı AKLINDAN bir soru tutar (uygulama soruyu BİLMEZ) ve kâhinlerden Yousuf\'u seçer. Yousuf kendini tanıtır, tutulan soruya cevap verir ve vedalaşır. Cevap HER SORUYA oturmalı.',
+      gorev: 'YOUSUF CEVABI — 3 paragraf: (1) gösterişli giriş (kâhinlerin en azametlisi, kafiyeli övünmeler, "Hahh!", mahalle ağzı) ama cümleleri KOPYALAMA; (2) cevap: biliyormuş gibi, olumluya çıkan, zamanı açık bırakan; (3) esprili veda. Uzunluk: 450-850 karakter.',
+      uslup: 'ÜSLUP: Yousuf birinci tekil, "sen" der; kibirli-komik, gürültülü, sıcak. <sprite=…> KULLANMA. {{data, cinsiyet=erkek, X | cinsiyet=kadin, Y}} kullanırsan "kadin" yaz.',
+    },
+  ],
 };
 const getPath = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
 
@@ -262,7 +300,8 @@ for (const k of list) {
   const raw = JSON.parse(fs.readFileSync(path.join('assets/data', k.file), 'utf8'));
   const tumHavuz = getPath(raw, k.key);
   // Örnekler yalnız Anıl'ın orijinal metinlerinden (önceki turların yapay metinleri örnek olmaz)
-  const pool = k.orijinalMaxId ? tumHavuz.filter(e => typeof e.id !== 'number' || e.id <= k.orijinalMaxId) : tumHavuz;
+  const idSayi = id => typeof id === 'number' ? id : parseInt(String(id).replace(/^\D+/, ''), 10); // "likia_23" → 23
+  const pool = k.orijinalMaxId ? tumHavuz.filter(e => idSayi(e.id) <= k.orijinalMaxId) : tumHavuz;
   const r = rnd(tur * 1000 + k.id.length * 17);
   const lens = pool.map(e => e.metin.length).sort((a, b) => a - b);
   const med = lens[Math.floor(lens.length / 2)];

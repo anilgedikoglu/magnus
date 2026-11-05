@@ -813,7 +813,7 @@ class _InlineEditorState extends ConsumerState<_InlineEditor> {
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
             child: Container(
-              padding: const EdgeInsets.fromLTRB(18, 14, 18, 14),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: _panel.withValues(alpha: 0.70),
                 borderRadius: BorderRadius.circular(18),
@@ -862,7 +862,8 @@ class _InlineEditorState extends ConsumerState<_InlineEditor> {
     // ── Silindir / tarih / saat: panel daire alanını DİKEYDE DOLDURUR (Anıl: "altta üstte
     //    çok boşluk kalmasın"), tekerlek kalan yüksekliği kaplar → daha çok seçenek görünür.
     return LayoutBuilder(builder: (context, c) {
-      const vMargin = 6.0;
+      // Ara panelde ek dikey pay YOK: kartlar arası 12 ile birebir (kProfileCardGap).
+      const vMargin = 0.0;
       const minPanel = 300.0; // küçük ekranda altına inmez → kaydırılır
       final panelH = max(minPanel, c.maxHeight - vMargin * 2);
       // Tekerlek, başlık ile düğmeler arasında kalan GERÇEK yüksekliği doldurur (ölçülür).
@@ -1057,7 +1058,7 @@ class _ProfileEditSheetState extends ConsumerState<_ProfileEditSheet> {
     return Padding(
       padding: EdgeInsets.zero,
       child: Container(
-        padding: const EdgeInsets.fromLTRB(20, 14, 20, 22),
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: AppColors.inkSurface,
           borderRadius: BorderRadius.circular(20),
@@ -1664,22 +1665,22 @@ class SettingsScreen extends ConsumerWidget {
                       _buildTopBar(context, ref, profile),
                       const SizedBox(height: 2),
                       _buildTitle(ref),
-                      const SizedBox(height: 14),
+                      const SizedBox(height: kProfileCardGap),
                       _ProfileCard(
                         key: const ValueKey('profileCard1'),
                         child: _buildGridSection(context, ref, profile),
                       ),
                       const _InsertSlot(),
-                      const SizedBox(height: 12),
+                      const SizedBox(height: kProfileCardGap),
                       _ProfileCard(
                         key: const ValueKey('profileCard2'),
-                        padding: const EdgeInsets.fromLTRB(8, 22, 8, 22),
+                        padding: const EdgeInsets.all(16),
                         child: Center(child: _buildDonutRow(scores, ref)),
                       ),
-                      const SizedBox(height: 12),
+                      const SizedBox(height: kProfileCardGap),
                       _ProfileCard(
                         key: _settingsCardKey,
-                        padding: const EdgeInsets.symmetric(vertical: 4),
+                        padding: EdgeInsets.zero,
                         child: _buildSettingsCard(context, ref),
                       ),
                       // Tek başına rota olarak açıldıysa eski "Ana Menü" butonu (yedek).
@@ -2370,7 +2371,7 @@ class SettingsScreen extends ConsumerWidget {
                 builder: (ctx, cRef, _) {
                   final currentLocale = cRef.watch(localeProvider);
                   return Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 14, 20, 4),
+                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -2449,7 +2450,7 @@ class SettingsScreen extends ConsumerWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 12),
                       ],
                     ),
                   );
@@ -2458,7 +2459,7 @@ class SettingsScreen extends ConsumerWidget {
 
               // Ayırıcı
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+                margin: const EdgeInsets.symmetric(horizontal: 16),
                 height: 1,
                 color: const Color(0x29FF55FF),
               ),
@@ -2466,14 +2467,14 @@ class SettingsScreen extends ConsumerWidget {
               // ── Cam / Glass: alt barın saydamlığı (iOS 26 "Şeffaf ↔ Renkli") ──
               const _GlassTintSection(),
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+                margin: const EdgeInsets.symmetric(horizontal: 16),
                 height: 1,
                 color: const Color(0x29FF55FF),
               ),
 
               // ── Uyarılar bölümü ──────────────────────────────────────────
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 14, 20, 4),
+                padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
                 child: Text(
                   ref.read(l10nProvider).warnings,
                   style: TextStyle(
@@ -2529,14 +2530,14 @@ class SettingsScreen extends ConsumerWidget {
 
               // ── Ayırıcı ─────────────────────────────────────────────────
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                margin: const EdgeInsets.only(left: 16, right: 16, top: 4),
                 height: 1,
                 color: const Color(0x29FF55FF),
               ),
 
               // ── Tehlikeli İşlemler ───────────────────────────────────────
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 4),
+                padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
                 child: Text(
                   ref.read(l10nProvider).dangerousActions,
                   style: TextStyle(
@@ -2564,11 +2565,11 @@ class SettingsScreen extends ConsumerWidget {
                 },
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
 
               // ── Eğlence beyanı ───────────────────────────────────────────
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+                padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                   decoration: BoxDecoration(
@@ -3046,7 +3047,7 @@ class _OptionsItem extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(10),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Row(
           children: [
             Icon(icon, color: iconColor, size: 22),
@@ -3083,7 +3084,7 @@ class _GlassTintSection extends ConsumerWidget {
     final s = ref.watch(l10nProvider);
     final tint = ref.watch(glassTintProvider);
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 14, 20, 10),
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -3163,11 +3164,16 @@ class _GlassTintSection extends ConsumerWidget {
   }
 }
 
+/// Kullanıcı Bilgileri düzen ölçüleri (Anıl: "aralıkların nizami görünmesine dikkat et"):
+/// ekran kenarı → kart 12 (cam barın yan payıyla aynı) · kartlar ve ara panel arası 12 ·
+/// her kartın/panelin içi 16.
+const double kProfileCardGap = 12;
+
 /// Kullanıcı Bilgileri kartı: hepsi aynı en (ekran − 24), boy içeriğe göre.
 final GlobalKey _settingsCardKey = GlobalKey(debugLabel: 'profileCard3');
 
 class _ProfileCard extends StatelessWidget {
-  const _ProfileCard({super.key, required this.child, this.padding = const EdgeInsets.all(12)});
+  const _ProfileCard({super.key, required this.child, this.padding = const EdgeInsets.all(16)});
 
   final Widget child;
   final EdgeInsetsGeometry padding;
@@ -3208,7 +3214,7 @@ class _InsertSlot extends ConsumerWidget {
       };
       child = Padding(
         key: ValueKey('insert_${edit.token}'),
-        padding: const EdgeInsets.only(top: 12),
+        padding: const EdgeInsets.only(top: kProfileCardGap),
         child: panel,
       );
     }

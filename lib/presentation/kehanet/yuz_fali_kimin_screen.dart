@@ -10,14 +10,17 @@ import '../../core/widgets/swipe_back.dart';
 import '../../data/providers.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 
-class YuzFaliKiminScreen extends StatefulWidget {
+class YuzFaliKiminScreen extends ConsumerStatefulWidget {
   const YuzFaliKiminScreen({super.key});
 
   @override
-  State<YuzFaliKiminScreen> createState() => _YuzFaliKiminScreenState();
+  ConsumerState<YuzFaliKiminScreen> createState() => _YuzFaliKiminScreenState();
 }
 
-class _YuzFaliKiminScreenState extends State<YuzFaliKiminScreen> {
+class _YuzFaliKiminScreenState extends ConsumerState<YuzFaliKiminScreen> {
+  /// TR/EN metin (paralel İngilizce kuralı, 2026-11-06).
+  String _t(String tr, String en) => ref.read(localeProvider) == 'en' ? en : tr;
+
   bool _yukleniyor  = true;
   bool _gunlukDoldu = false;
 
@@ -112,14 +115,15 @@ class _YuzFaliKiminScreenState extends State<YuzFaliKiminScreen> {
             ),
           ),
           const SizedBox(height: 28),
-          const Text(
-            'Günlük hakkın doldu',
+          Text(
+            _t('Günlük hakkın doldu', "You've used today's reading"),
             style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 12),
           Text(
-            'Yüz falı günde 1 kez bakılabilir.\nYarın tekrar gel.',
+            _t('Yüz falı günde 1 kez bakılabilir.\nYarın tekrar gel.',
+                'Face reading is available once a day.\nCome back tomorrow.'),
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 15, height: 1.6),
           ),
@@ -167,8 +171,8 @@ class _YuzFaliKiminScreenState extends State<YuzFaliKiminScreen> {
 
           const SizedBox(height: 36),
 
-          const Text(
-            'Yüz analizini kimin için\nistiyorsun?',
+          Text(
+            _t('Yüz analizini kimin için\nistiyorsun?', 'Who is this face\nreading for?'),
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
@@ -181,7 +185,8 @@ class _YuzFaliKiminScreenState extends State<YuzFaliKiminScreen> {
           const SizedBox(height: 12),
 
           Text(
-            'Bir fotoğraf çekeceğiz veya\ngalerinden seçeceğiz.',
+            _t('Bir fotoğraf çekeceğiz veya\ngalerinden seçeceğiz.',
+                "We'll take a photo or\npick one from your gallery."),
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white.withValues(alpha: 0.55),
@@ -194,8 +199,8 @@ class _YuzFaliKiminScreenState extends State<YuzFaliKiminScreen> {
 
           _KiminButon(
             emoji: '🧍',
-            label: 'Kendim için',
-            sublabel: 'Kendi fotoğrafımı analiz et',
+            label: _t('Kendim için', 'For me'),
+            sublabel: _t('Kendi fotoğrafımı analiz et', 'Analyze my own photo'),
             onTap: () => context.push('/yuz_fali_foto', extra: 'kullanici'),
           ),
 
@@ -203,8 +208,8 @@ class _YuzFaliKiminScreenState extends State<YuzFaliKiminScreen> {
 
           _KiminButon(
             emoji: '👤',
-            label: 'Başkası için',
-            sublabel: 'Başka birinin fotoğrafını analiz et',
+            label: _t('Başkası için', 'For someone else'),
+            sublabel: _t('Başka birinin fotoğrafını analiz et', "Analyze someone else's photo"),
             onTap: () => context.push('/yuz_fali_foto', extra: 'baskasi'),
           ),
         ],

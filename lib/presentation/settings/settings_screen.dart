@@ -2654,9 +2654,9 @@ class SettingsScreen extends ConsumerWidget {
                         width: 1,
                       ),
                     ),
-                    child: const Center(
-                      child: Text('Anladım',
-                          style: TextStyle(
+                    child: Center(
+                      child: Text(Localizations.localeOf(dialogCtx).languageCode == 'en' ? 'Got it' : 'Anladım',
+                          style: const TextStyle(
                               color: AppColors.bone,
                               fontSize: 14,
                               fontWeight: FontWeight.w500)),

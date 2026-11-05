@@ -21,7 +21,7 @@ class TarotResultScreen extends ConsumerWidget {
     if (item == null) {
       return Scaffold(
         backgroundColor: AppColors.background,
-        body: const Center(child: Text('Fal bulunamadı.')),
+        body: Center(child: Text(s.isEn ? 'Reading not found.' : 'Fal bulunamadı.')),
       );
     }
 

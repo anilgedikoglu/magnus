@@ -34,6 +34,9 @@ class YuzFaliFotoScreen extends ConsumerStatefulWidget {
 
 class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
     with SingleTickerProviderStateMixin {
+  /// TR/EN metin (paralel İngilizce kuralı, 2026-11-06).
+  String _t(String tr, String en) => ref.read(localeProvider) == 'en' ? en : tr;
+
   _YFAdim _adim = _YFAdim.secim;
   File?   _foto;
   String  _falMetni  = '';
@@ -118,7 +121,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
     } catch (e) {
       if (mounted) {
         setState(() {
-          _hataMetni = 'Fotoğraf alınamadı. Lütfen tekrar dene.';
+          _hataMetni = _t('Fotoğraf alınamadı. Lütfen tekrar dene.', "Couldn't get the photo. Please try again.");
           _adim      = _YFAdim.hatali;
         });
       }
@@ -140,7 +143,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
 
       if (!analiz.isHuman) {
         setState(() {
-          _hataMetni = 'Lütfen gerçek bir insan fotoğrafı gönder.';
+          _hataMetni = _t('Lütfen gerçek bir insan fotoğrafı gönder.', 'Please send a photo of a real person.');
           _adim      = _YFAdim.hatali;
         });
         return;
@@ -222,8 +225,8 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
     } catch (e) {
       if (mounted) {
         setState(() {
-          _hataMetni =
-              'Analiz sırasında bir hata oluştu. İnternet bağlantını kontrol et.';
+          _hataMetni = _t('Analiz sırasında bir hata oluştu. İnternet bağlantını kontrol et.',
+              'Something went wrong during the analysis. Check your internet connection.');
           _adim = _YFAdim.hatali;
         });
       }
@@ -312,7 +315,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
                         color: Colors.white.withValues(alpha: 0.2), size: 72),
                     const SizedBox(height: 14),
                     Text(
-                      'Fotoğraf seç veya çek',
+                      _t('Fotoğraf seç veya çek', 'Choose or take a photo'),
                       style: TextStyle(
                         color: Colors.white.withValues(alpha: 0.3),
                         fontSize: 15,
@@ -344,7 +347,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
               Expanded(
                 child: _FotoButon(
                   icon: Icons.camera_alt_rounded,
-                  label: 'Fotoğraf Çek',
+                  label: _t('Fotoğraf Çek', 'Take Photo'),
                   onTap: () => _secimlYap(ImageSource.camera),
                 ),
               ),
@@ -352,7 +355,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
               Expanded(
                 child: _FotoButon(
                   icon: Icons.photo_library_rounded,
-                  label: 'Telefondan Seç',
+                  label: _t('Telefondan Seç', 'Choose from Phone'),
                   onTap: () => _secimlYap(ImageSource.gallery),
                 ),
               ),
@@ -472,8 +475,8 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         const Spacer(),
 
         // Yazı
-        const Text(
-          'Analiz ediliyor...',
+        Text(
+          _t('Analiz ediliyor...', 'Analyzing...'),
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -510,7 +513,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
           ),
           const SizedBox(height: 36),
           _buildGradientButton(
-            label: 'Tekrar Dene',
+            label: _t('Tekrar Dene', 'Try Again'),
             onTap: () => setState(() {
               _foto      = null;
               _hataMetni = '';
@@ -543,7 +546,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
           child: _buildGradientButton(
-            label: 'Kapat',
+            label: _t('Kapat', 'Close'),
             onTap: () => context.pop(),
           ),
         ),

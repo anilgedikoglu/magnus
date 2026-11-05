@@ -417,7 +417,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               ),
               const SizedBox(height: 12),
               _buildGradientButton(
-                label: 'Kapat',
+                label: _t('Kapat', 'Close'),
                 onTap: () => context.pop(),
               ),
             ],

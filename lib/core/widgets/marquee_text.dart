@@ -146,6 +146,8 @@ class _MarqueeRunnerState extends State<_MarqueeRunner> with SingleTickerProvide
                 minWidth: 0,
                 maxWidth: double.infinity,
                 child: Row(mainAxisSize: MainAxisSize.min, children: [
+                  // Baş payı: tur başında ilk harf soluk kenarın altında kalmasın.
+                  SizedBox(width: widget.fadeWidth),
                   line,
                   SizedBox(width: widget.gap),
                   line,

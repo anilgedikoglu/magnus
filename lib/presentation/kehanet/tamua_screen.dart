@@ -526,10 +526,12 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Aklından bir soru geçir...',
+              Text(
+                ref.read(localeProvider) == 'en'
+                    ? 'Think of a question...'
+                    : 'Aklından bir soru geçir...',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white70, fontSize: 16, height: 1.6,
                   letterSpacing: 0.3,
                 ),

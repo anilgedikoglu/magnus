@@ -230,7 +230,9 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
                                   const Text('☝️', style: TextStyle(fontSize: 20)),
                                   const SizedBox(width: 8),
                                   Text(
-                                    'Parmağınla niyetini kazı!',
+                                    ref.read(localeProvider) == 'en'
+                                        ? 'Scratch your wish with your finger!'
+                                        : 'Parmağınla niyetini kazı!',
                                     style: TextStyle(
                                       color: Colors.white.withValues(alpha: 0.75),
                                       fontSize: 15,

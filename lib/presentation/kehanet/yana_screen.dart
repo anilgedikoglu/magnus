@@ -166,7 +166,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
     }
 
     if (eligible.isEmpty) {
-      _metin = 'Kehanet hazırlanıyor...';
+      _metin = _isEn ? 'Your prophecy is being prepared...' : 'Kehanet hazırlanıyor...';
       return;
     }
 

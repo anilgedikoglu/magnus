@@ -11,6 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/marquee_text.dart';
+import '../../data/services/kismet_lines.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
 import '../../data/services/kismet_engine.dart';
@@ -297,11 +298,12 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
               style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w800)),
           const SizedBox(height: 10),
           Text(
+            // İlk cümle sabit, ikincisi yıla göre değişen havuzdan (art arda yıllarda farklı).
             es
-                ? _tr('$_year yılında da kısmetin eşinle. Bağınız yıllar içinde güçlenerek sürüyor.',
-                    'In $_year your destiny is still with your spouse. Your bond keeps growing stronger.')
-                : _tr('$_year yılında kısmetin, şu an yanında olan kişiyle görünüyor.',
-                    'In $_year your destiny appears to be with the person by your side today.'),
+                ? '${_tr('$_year yılında da kısmetin eşinle.', 'In $_year your destiny is still with your spouse.')} '
+                    '${KismetLines.spouse(t.seed, _year, _en)}'
+                : '${_tr('$_year yılında kısmetin, şu an yanında olan kişiyle görünüyor.', 'In $_year your destiny appears to be with the person by your side today.')} '
+                    '${KismetLines.partner(t.seed, _year, _en)}',
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.white.withValues(alpha: 0.85), fontSize: 15, height: 1.45),
           ),
@@ -315,8 +317,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
               style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
           Text(
-            _tr('Kendine ayırdığın bu dönem, bir sonraki kısmetine hazırlık gibi.',
-                'This time for yourself is like preparation for your next destiny.'),
+            KismetLines.gap(t.seed, _year, _en),
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 14.5, height: 1.4),
           ),

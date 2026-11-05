@@ -46,6 +46,9 @@ import 'presentation/kadercarki/kadercarki_screen.dart';
 import 'presentation/askuyumu/askuyumu_screen.dart';
 import 'presentation/iching/iching_screen.dart';
 import 'presentation/japonfali/japonfali_screen.dart';
+import 'presentation/arabam/arabam_screen.dart';
+import 'presentation/kismetim/kismetim_screen.dart';
+import 'presentation/tavsanfali/tavsanfali_screen.dart';
 import 'presentation/language/language_pick_screen.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
@@ -354,6 +357,21 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/japonfali',
         parentNavigatorKey: _rootKey,
         builder: (_, __) => const JaponFaliScreen(),
+      ),
+      GoRoute(
+        path: '/tavsanfali',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const TavsanFaliScreen(),
+      ),
+      GoRoute(
+        path: '/arabam',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const ArabamScreen(),
+      ),
+      GoRoute(
+        path: '/kismetim',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const KismetimScreen(),
       ),
       GoRoute(
         path: '/durugoru',

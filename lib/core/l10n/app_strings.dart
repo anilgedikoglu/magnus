@@ -55,6 +55,11 @@ class AppStrings {
   String get prophecy       => _s('Kehanet',          'Prophecy');
   String get intention      => _s('Niyet',            'Intention');
   String get japaneseFortune => _s('Japon Falı',      'Japanese Fortune');
+  // 2026-11-05 yeni fal türleri
+  String get rabbitFortune   => _s('Tavşan Falı',     'Rabbit Fortune');
+  String get whoIsMyDestiny  => _s('Kısmetim Kim?',   'Who Is My Destiny?');
+  String get whatIsMyCar     => _s('Arabam Ne?',      'What Is My Car?');
+  String get whereIsMyHome   => _s('Evim Neresi?',    'Where Is My Home?');
   String get iching         => _s('I-Ching',          'I-Ching');
   String get loveCompatibility => _s('Aşk Uyumu',     'Love Compatibility');
   String get wheelOfFate    => _s('Kader Çarkı',      'Wheel of Fate');
@@ -410,6 +415,10 @@ class AppStrings {
       case 'numeroloji':  return numerology;
       case 'iching':      return iching;
       case 'japonfali':   return japaneseFortune;
+      case 'tavsanfali':  return rabbitFortune;
+      case 'kismetim':    return whoIsMyDestiny;
+      case 'arabam':      return whatIsMyCar;
+      case 'evim':        return whereIsMyHome;
       case 'kadercarki':  return wheelOfFate;
       case 'askuyumu':    return loveCompatibility;
       default:            return type;

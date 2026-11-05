@@ -156,6 +156,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     'durugoru':     'durugoru_bugun_tarih',
     'iching':       'iching_bugun_tarih',
     'japonfali':    'japonfali_bugun_tarih',
+    'tavsanfali':   'tavsanfali_bugun_tarih',
     'kadercarki':   'kadercarki_bugun_tarih',
     'askuyumu':     'askuyumu_bugun_tarih',
     // 'numeroloji' burada yok — limit ekran içinden yönetilir
@@ -601,7 +602,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       _showDailyLimitBubble(type);
       return;
     }
-    context.push(route);
+    // Dönüşte rozeti yenile (Tavşan Falı gibi ekranda tamamlanan fallar için).
+    context.push(route).then((_) {
+      if (mounted) _refreshCredits();
+    });
   }
 
   // ─── Navigasyon yardımcısı ────────────────────────────────────────────────
@@ -752,13 +756,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             () => _onFortuneItemTap('kadercarki', '/kadercarki')),
         _MenuItem(s.dreamReading, 'assets/images/menu/ruyaozel.png', 1,
             () => _pushWithAd('/ruya_yorumu')),
-        // boş slot — rüya yorumu ile doğum haritası arasında
-        _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {}),
+        // Rüya Yorumu ile Doğum Haritası arası: Tavşan Falı (günde 1, 2026-11-05)
+        _MenuItem(s.rabbitFortune, 'assets/images/tavsanfali/tavsanfali_menu.jpg',
+            _remainingCredits['tavsanfali'] ?? 1,
+            () => _onDailyFalTap('tavsanfali', '/tavsanfali')),
         _MenuItem(s.birthChart, 'assets/images/dogum.png',
             1, () => _pushWithAd('/dogumharitasi')),
-        // 3 yer tutucu — ikon eklendikçe buralar dolacak
-        ...List.generate(3, (_) =>
-            _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {})),
+        // Rüya Yorumu'nun altı: Kısmetim Kim? (2026-11-05)
+        _MenuItem(s.whoIsMyDestiny, 'assets/images/kismetim/kismetim_menu.jpg', 1,
+            () => _pushWithAd('/kismetim')),
+        // Kısmetim'in sağı: Arabam Ne? (2026-11-05)
+        _MenuItem(s.whatIsMyCar, 'assets/images/arabam/arabam_menu.jpg', 1,
+            () => _pushWithAd('/arabam')),
+        // Son yer: Evim Neresi? gelecek
+        _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {}),
       ];
   }
 

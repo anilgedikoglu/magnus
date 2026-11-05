@@ -1,0 +1,964 @@
+{
+  "tavsanfali": [
+    {
+      "id": 1,
+      "metin": "{{isim}}, önümüzdeki 3 hafta içinde kapına sevindiren bir haber gelecek. Ertelediğin bir plan yeniden gündeme gelecek.",
+      "metin_en": "{{isim}}, happy news will reach your door within 3 weeks. A postponed plan will come back to life.",
+      "kosullar": []
+    },
+    {
+      "id": 2,
+      "metin": "{{isim}}, bir salı günü adı M ile başlayan biri sana güzel bir fikir verecek. O sohbetten küçük bir fırsat doğacak.",
+      "metin_en": "{{isim}}, on a Tuesday, someone whose name starts with M will share a lovely idea. That chat will lead to a small opportunity.",
+      "kosullar": []
+    },
+    {
+      "id": 3,
+      "metin": "{{isim}}, gelecek hafta iki davet arasında kalacaksın. Küçük olan buluşmada aradığın sıcaklığı bulacaksın.",
+      "metin_en": "{{isim}}, next week you will have two invitations to choose from. The smaller gathering will offer the warmth you seek.",
+      "kosullar": []
+    },
+    {
+      "id": 4,
+      "metin": "{{isim}}, akşamüstü gelen kısa bir mesaj yüzünü güldürecek. Uzun zamandır beklediğin cevap netleşecek.",
+      "metin_en": "{{isim}}, a brief late-afternoon message will make you smile. An answer you have waited for will finally become clear.",
+      "kosullar": []
+    },
+    {
+      "id": 5,
+      "metin": "{{isim}}, ay bitmeden mavi bir kapının ardında hoş bir sohbet görünüyor. Duyacağın bir isim sana yeni bir yol açacak.",
+      "metin_en": "{{isim}}, a pleasant chat awaits behind a blue door before the month ends. A name you hear will open a new path.",
+      "kosullar": []
+    },
+    {
+      "id": 6,
+      "metin": "{{isim}}, 10 gün içinde eski bir tanıdık senden haber almak isteyecek. Konuşmanız yarım kalan bir planı tamamlayacak.",
+      "metin_en": "{{isim}}, an old acquaintance will reach out within 10 days. Your conversation will settle an unfinished plan.",
+      "kosullar": []
+    },
+    {
+      "id": 7,
+      "metin": "{{isim}}, bir cuma sabahı beklemediğin bir teşekkür alacaksın. Küçük sandığın iyiliğinin izi düşündüğünden büyük.",
+      "metin_en": "{{isim}}, an unexpected thank-you will arrive one Friday morning. A kindness you thought was small has meant more than you knew.",
+      "kosullar": []
+    },
+    {
+      "id": 8,
+      "metin": "{{isim}}, yakında sarı bir paket dikkatini çekecek. İçinden çıkan şey güzel bir buluşmanın bahanesi olacak.",
+      "metin_en": "{{isim}}, a yellow parcel will soon catch your eye. What is inside will give you a reason for a lovely get-together.",
+      "kosullar": []
+    },
+    {
+      "id": 9,
+      "metin": "{{isim}}, önümüzdeki 2 hafta içinde kısa bir yol görünüyor. Dönüşte yanında anlatacak güzel bir hikâye getireceksin.",
+      "metin_en": "{{isim}}, a short trip lies ahead within 2 weeks. You will return with a lovely story to tell.",
+      "kosullar": []
+    },
+    {
+      "id": 10,
+      "metin": "{{isim}}, adında E harfi olan biri seni kalabalık bir sofraya çağıracak. O masada kendine yakın bir dost bulacaksın.",
+      "metin_en": "{{isim}}, someone with an E in their name will invite you to a lively meal. You will find a kindred spirit at that table.",
+      "kosullar": []
+    },
+    {
+      "id": 11,
+      "metin": "{{isim}}, bir pazar günü kayboldu sandığın küçük bir eşya eline geçecek. Güzel bir anı da onunla geri gelecek.",
+      "metin_en": "{{isim}}, one Sunday you will find a small item you thought was lost. A lovely memory will return with it.",
+      "kosullar": []
+    },
+    {
+      "id": 12,
+      "metin": "{{isim}}, gelecek ayın ilk haftası bir dileğin için kapı aralanacak. Haberi senden daha heyecanlı biri getirecek.",
+      "metin_en": "{{isim}}, a door will open for a wish in the first week of next month. Someone even more excited than you will bring the news.",
+      "kosullar": []
+    },
+    {
+      "id": 13,
+      "metin": "{{isim}}, iki ayrı kişiden aynı yerin adını duyacaksın. Oraya yapacağın küçük ziyaret gününe renk katacak.",
+      "metin_en": "{{isim}}, two people will mention the same place. A short visit there will brighten your day.",
+      "kosullar": []
+    },
+    {
+      "id": 14,
+      "metin": "{{isim}}, bir çarşamba öğleden sonra beklediğin görüşme gerçekleşecek. Çekingenlik yerini samimi bir sohbete bırakacak.",
+      "metin_en": "{{isim}}, an awaited meeting will happen on a Wednesday afternoon. A shy start will turn into a warm conversation.",
+      "kosullar": []
+    },
+    {
+      "id": 15,
+      "metin": "{{isim}}, önümüzdeki 7 gün içinde kapını küçük bir sürpriz çalacak. Arkasında seni dikkatle dinlemiş biri var.",
+      "metin_en": "{{isim}}, a little surprise will arrive at your door within 7 days. It will come from someone who has listened closely to you.",
+      "kosullar": []
+    },
+    {
+      "id": 16,
+      "metin": "{{isim}}, bu ay bir pencere kenarında güzel bir karar vereceksin. Yanındaki kişinin tek cümlesi aklındaki düğümü çözecek.",
+      "metin_en": "{{isim}}, this month you will make a happy decision beside a window. One sentence from your companion will clear up your doubts.",
+      "kosullar": []
+    },
+    {
+      "id": 17,
+      "metin": "{{isim}}, adı S ile başlayan biri sana bir yer önerecek. İlk ziyaretinde oraya tekrar gelmek isteyeceksin.",
+      "metin_en": "{{isim}}, someone whose name starts with S will recommend a place. Your first visit will leave you wanting to return.",
+      "kosullar": []
+    },
+    {
+      "id": 18,
+      "metin": "{{isim}}, gelecek hafta bir planın saati değişecek. Orada karşılaşacağın kişi bu değişikliğe sevinmeni sağlayacak.",
+      "metin_en": "{{isim}}, a plan will move to a different time next week. Someone you meet there will make you glad it changed.",
+      "kosullar": []
+    },
+    {
+      "id": 19,
+      "metin": "{{isim}}, 3 ayrı haberden sonuncusu seni en çok sevindirecek. Beklediğin davet de onunla birlikte gelecek.",
+      "metin_en": "{{isim}}, the last of 3 pieces of news will delight you most. It will bring the invitation you have been waiting for.",
+      "kosullar": []
+    },
+    {
+      "id": 20,
+      "metin": "{{isim}}, bir perşembe akşamı eski bir fotoğraf sohbet açacak. O sohbetten yeniden buluşma sözü çıkacak.",
+      "metin_en": "{{isim}}, an old photo will spark a conversation one Thursday evening. It will lead to a promise to meet again.",
+      "kosullar": []
+    },
+    {
+      "id": 21,
+      "metin": "{{isim}}, küçük bir çarşı gezisinde tam zevkine göre bir şey bulacaksın. Yanındaki kişi de onu sana hediye etmeyi düşünmüş olacak.",
+      "metin_en": "{{isim}}, a market outing will lead you to something just your style. Your companion will have been thinking of getting it for you.",
+      "kosullar": []
+    },
+    {
+      "id": 22,
+      "metin": "{{isim}}, önümüzdeki 4 hafta içinde bir kapıdan ikinci kez gireceksin. Bu kez seni isminle karşılayacaklar.",
+      "metin_en": "{{isim}}, within 4 weeks you will walk through a door for the second time. This time they will greet you by name.",
+      "kosullar": []
+    },
+    {
+      "id": 23,
+      "metin": "{{isim}}, bir sabah gelen sesli mesaj küçük bir kutlamanın habercisi olacak. Takviminde ona yer açacaksın.",
+      "metin_en": "{{isim}}, a morning voice message will announce a small celebration. You will find room for it in your calendar.",
+      "kosullar": []
+    },
+    {
+      "id": 24,
+      "metin": "{{isim}}, ayın son hafta sonu eski bir sokaktan geçeceksin. Orada hatırladığın bir anı yeni bir heves uyandıracak.",
+      "metin_en": "{{isim}}, on the last weekend of the month you will revisit an old street. A memory there will spark a new interest.",
+      "kosullar": []
+    },
+    {
+      "id": 25,
+      "metin": "{{isim}}, adının ilk harfi {{harf}} olan biriyle aynı masaya oturacaksın. Ortak bir merakınız uzun bir sohbet başlatacak.",
+      "metin_en": "{{isim}}, you will share a table with someone whose name starts with {{harf}}. A shared interest will spark a long conversation.",
+      "kosullar": []
+    },
+    {
+      "id": 26,
+      "metin": "{{isim}}, {{burc}} burcundan olduğunu öğrenen biri sana içten bir iltifat edecek. Küçük konuşmanız güzel bir tanışmaya dönüşecek.",
+      "metin_en": "{{isim}}, someone who learns your sign is {{burc}} will give you a heartfelt compliment. Your little chat will become a lovely new connection.",
+      "kosullar": []
+    },
+    {
+      "id": 27,
+      "metin": "{{isim}}, önümüzdeki {{sayi,2,4}} hafta içinde beklediğin davet gelecek. Buluşmanın yeri sana hoş bir sürpriz olacak.",
+      "metin_en": "{{isim}}, the invitation you await will arrive within {{sayi,2,4}} weeks. The meeting place will be a pleasant surprise.",
+      "kosullar": []
+    },
+    {
+      "id": 28,
+      "metin": "{{isim}}, bir cumartesi sabahı seninle aynı fikri düşünen biriyle karşılaşacaksın. İkinizin de ertelediği plan o gün başlayacak.",
+      "metin_en": "{{isim}}, one Saturday morning you will meet someone with the same idea as you. A plan you have both put off will begin that day.",
+      "kosullar": []
+    },
+    {
+      "id": 29,
+      "metin": "{{isim}}, ince uzun bir kutuda küçük bir armağan görünüyor. Onu seçen kişi sevdiğin bir ayrıntıyı unutmamış.",
+      "metin_en": "{{isim}}, a little gift awaits in a long, narrow box. Whoever chose it remembered a detail you love.",
+      "kosullar": []
+    },
+    {
+      "id": 30,
+      "metin": "{{isim}}, yakında duyacağın bir şarkı seni eski bir dosta götürecek. Göndereceğin mesaj sıcak bir karşılık bulacak.",
+      "metin_en": "{{isim}}, a song you hear soon will remind you of an old friend. Your message will receive a warm reply.",
+      "kosullar": []
+    },
+    {
+      "id": 31,
+      "metin": "{{isim}}, gelecek ay kısa bir gezi için iki kişi senden fikir isteyecek. Önerdiğin durak gezinin en güzel anısı olacak.",
+      "metin_en": "{{isim}}, next month two people will ask your advice about a short trip. Your suggested stop will become its best memory.",
+      "kosullar": []
+    },
+    {
+      "id": 32,
+      "metin": "{{isim}}, küçük dileğin bir kahve sohbetinde duyulacak. Bir hafta geçmeden sana yardımcı olacak biri çıkacak.",
+      "metin_en": "{{isim}}, your little wish will come up over coffee. Within a week, someone will offer to help.",
+      "kosullar": []
+    },
+    {
+      "id": 33,
+      "metin": "{{isim}}, aynı gün iki güzel tesadüf yaşayacaksın. İkincisi seni yeni bir arkadaş çevresine götürecek.",
+      "metin_en": "{{isim}}, two happy coincidences will happen on the same day. The second will introduce you to a new circle of friends.",
+      "kosullar": []
+    },
+    {
+      "id": 34,
+      "metin": "{{isim}}, {{burc}} burcu üzerine açılan bir sohbet beklenmedik bir davetle bitecek. Önümüzdeki hafta bu davete sevineceksin.",
+      "metin_en": "{{isim}}, a chat about the sign {{burc}} will end with an unexpected invitation. Next week you will be glad it came.",
+      "kosullar": []
+    },
+    {
+      "id": 35,
+      "metin": "{{isim}}, bir pazartesi öğle vakti küçük bir bekleyiş sona erecek. Gelen cevapla hafta sonu planın şekillenecek.",
+      "metin_en": "{{isim}}, a small wait will end around lunchtime on a Monday. The answer will help shape your weekend plans.",
+      "kosullar": []
+    },
+    {
+      "id": 36,
+      "metin": "{{isim}}, el yazısıyla yazılmış kısa bir not seni gülümsetecek. Notu veren kişiyle yeni bir geleneğiniz başlayacak.",
+      "metin_en": "{{isim}}, a short handwritten note will make you smile. It will start a new tradition with the person who gives it to you.",
+      "kosullar": []
+    },
+    {
+      "id": 37,
+      "metin": "{{isim}}, yakında bir kitap arasında unutulmuş bir kâğıt bulacaksın. Üzerindeki fikir sana yeni bir uğraşın kapısını açacak.",
+      "metin_en": "{{isim}}, you will soon find a forgotten slip inside a book. The idea on it will lead you to a new pastime.",
+      "kosullar": []
+    },
+    {
+      "id": 38,
+      "metin": "{{isim}}, ay bitmeden bir buluşmaya erken varacaksın. O birkaç dakika sana hoş bir tanışma getirecek.",
+      "metin_en": "{{isim}}, you will arrive early for a meeting before the month ends. Those few minutes will bring a pleasant introduction.",
+      "kosullar": []
+    },
+    {
+      "id": 39,
+      "metin": "{{isim}}, bir komşundan gelecek küçük ikram sohbetinizi uzatacak. Yakındaki güzel bir yeri ondan öğreneceksin.",
+      "metin_en": "{{isim}}, a small treat from a neighbor will turn into a longer chat. You will learn about a lovely nearby place.",
+      "kosullar": []
+    },
+    {
+      "id": 40,
+      "metin": "{{isim}}, önümüzdeki 3 hafta içinde adın güzel bir öneriyle anılacak. Seni tavsiye eden kişiyle yollarınız yeniden kesişecek.",
+      "metin_en": "{{isim}}, someone will warmly recommend you within 3 weeks. Your paths will cross again with the person who put in a good word.",
+      "kosullar": []
+    },
+    {
+      "id": 41,
+      "metin": "{{isim}}, bir akşam iki seçenekten sade olanını seçeceksin. Bu seçim beklediğinden keyifli bir güne kapı açacak.",
+      "metin_en": "{{isim}}, one evening you will choose the simpler of two options. It will lead to a day more enjoyable than you expected.",
+      "kosullar": []
+    },
+    {
+      "id": 42,
+      "metin": "{{isim}}, adının ilk harfi {{harf}} olan birinden güzel bir öneri gelecek. Denediğinde neden seni düşündüğünü anlayacaksın.",
+      "metin_en": "{{isim}}, someone whose name starts with {{harf}} will offer a lovely suggestion. Once you try it, you will see why they thought of you.",
+      "kosullar": []
+    },
+    {
+      "id": 43,
+      "metin": "{{isim}}, bir cuma günü ertelenen kutlama yeniden konuşulacak. Bu kez herkes aynı tarihte anlaşacak.",
+      "metin_en": "{{isim}}, a postponed celebration will come up again on a Friday. This time everyone will agree on a date.",
+      "kosullar": []
+    },
+    {
+      "id": 44,
+      "metin": "{{isim}}, gelecek hafta bir vitrinde gördüğün şey eski bir hevesini canlandıracak. İlk adımında yanında bir dost bulacaksın.",
+      "metin_en": "{{isim}}, something in a shop window will revive an old interest next week. A friend will join you for the first step.",
+      "kosullar": []
+    },
+    {
+      "id": 45,
+      "metin": "{{isim}}, {{burc}} burcunu seninle paylaşan biriyle kısa bir yolda tanışacaksın. Yol, ortak hikâyelerinizle çabuk geçecek.",
+      "metin_en": "{{isim}}, you will meet someone who shares your sign, {{burc}}, on a short trip. Shared stories will make the journey fly by.",
+      "kosullar": []
+    },
+    {
+      "id": 46,
+      "metin": "{{isim}}, önümüzdeki {{sayi,5,9}} gün içinde bir teşekkür mesajı alacaksın. Unuttuğun bir iyiliğin güzel bir dostluğa dönüşüyor.",
+      "metin_en": "{{isim}}, a thank-you message will arrive within {{sayi,5,9}} days. A kindness you have forgotten is growing into a lovely friendship.",
+      "kosullar": []
+    },
+    {
+      "id": 47,
+      "metin": "{{isim}}, açık renkli bir masada yapılan sohbet sana cesaret verecek. Ay bitmeden küçük bir hayalini biriyle paylaşacaksın.",
+      "metin_en": "{{isim}}, a chat at a pale wooden table will give you courage. Before the month ends you will share a little dream with someone.",
+      "kosullar": []
+    },
+    {
+      "id": 48,
+      "metin": "{{isim}}, bir hafta sonu plansız yürüyüşe çıkacaksın. Yol üzerindeki küçük bir dükkân yeni uğrak yerin olacak.",
+      "metin_en": "{{isim}}, an unplanned weekend walk lies ahead. A little shop along the way will become a favorite stop.",
+      "kosullar": []
+    },
+    {
+      "id": 49,
+      "metin": "Bir salı günü uzak bir dosttan haber var. Aynı hafta birlikte yapacağınız küçük bir plan doğacak.",
+      "metin_en": "News from a faraway friend will arrive on a Tuesday. That same week you will make a little plan together.",
+      "kosullar": []
+    },
+    {
+      "id": 50,
+      "metin": "Önümüzdeki 10 gün içinde kapına bir davet gelecek. Sıradan görünen bu buluşmadan güzel bir hatıra kalacak.",
+      "metin_en": "An invitation will reach your door within 10 days. A gathering that seems ordinary will leave you with a lovely memory.",
+      "kosullar": []
+    },
+    {
+      "id": 51,
+      "metin": "Adı A ile başlayan biri beklediğin bilgiyi sana ulaştıracak. Kafandaki iki seçenekten biri böylece öne çıkacak.",
+      "metin_en": "Someone whose name starts with A will bring the information you need. It will help one of your two options stand out.",
+      "kosullar": []
+    },
+    {
+      "id": 52,
+      "metin": "Bir pazar sofrasında sözü edilen yer yakında yoluna çıkacak. Orada kendine küçük bir keyif köşesi bulacaksın.",
+      "metin_en": "A place mentioned over Sunday lunch will soon appear on your route. You will find a cozy little corner there.",
+      "kosullar": []
+    },
+    {
+      "id": 53,
+      "metin": "Gelecek ayın ikinci haftası eski bir plan için yeniden gün belirlenecek. Hazırlıklar neşeli bir telaşla ilerleyecek.",
+      "metin_en": "A new date for an old plan will be set in the second week of next month. The preparations will bring a cheerful bustle.",
+      "kosullar": []
+    },
+    {
+      "id": 54,
+      "metin": "Çarşamba akşamı gelen kısa bir telefon konuşması içini ferahlatacak. Beklediğin ziyaretin günü belli olacak.",
+      "metin_en": "A brief Wednesday evening call will lift your spirits. The date for a visit you await will be settled.",
+      "kosullar": []
+    },
+    {
+      "id": 55,
+      "metin": "Küçük bir paketten sevdiğin renkte bir hediye çıkacak. Seni düşündüğünü söylemeyen biri bunu davranışıyla gösterecek.",
+      "metin_en": "A little parcel will hold a gift in your favorite color. Someone quiet about their affection will show it through this gesture.",
+      "kosullar": []
+    },
+    {
+      "id": 56,
+      "metin": "Önümüzdeki 2 hafta içinde aynı kişiyle iki farklı yerde karşılaşacaksın. İkinci karşılaşmada sohbet kendiliğinden başlayacak.",
+      "metin_en": "You will run into the same person in two places within 2 weeks. At the second meeting, conversation will come naturally.",
+      "kosullar": []
+    },
+    {
+      "id": 57,
+      "metin": "Bir cumartesi ertelenen kahve buluşması nihayet gerçekleşecek. Kalkarken yeni bir buluşmanın sözünü vereceksiniz.",
+      "metin_en": "A postponed coffee date will finally happen on a Saturday. Before leaving, you will promise to meet again.",
+      "kosullar": []
+    },
+    {
+      "id": 58,
+      "metin": "Adında N harfi olan biri seni küçük bir etkinliğe çağıracak. Orada uzun süredir merak ettiğin bir şeyi deneyeceksin.",
+      "metin_en": "Someone with an N in their name will invite you to a small event. There you will try something you have long been curious about.",
+      "kosullar": []
+    },
+    {
+      "id": 59,
+      "metin": "Ay bitmeden bir çekmeceden eski bir davetiye çıkacak. Hatırladığın kişiyle konuşmak gününü güzelleştirecek.",
+      "metin_en": "Before the month ends, an old invitation will turn up in a drawer. A chat with the person it recalls will brighten your day.",
+      "kosullar": []
+    },
+    {
+      "id": 60,
+      "metin": "Bir perşembe sabahı yolun farklı bir sokaktan geçecek. Küçük bir karşılaşma bu yolu sevmeni sağlayacak.",
+      "metin_en": "One Thursday morning you will take a different street. A pleasant encounter will make you fond of that route.",
+      "kosullar": []
+    },
+    {
+      "id": 61,
+      "metin": "Gelecek hafta bir arkadaşın senden fikir isteyecek. Önerinin işe yaradığını duyunca kendi planına da hevesleneceksin.",
+      "metin_en": "A friend will ask your advice next week. Hearing that your suggestion helped will inspire you to pursue your own plan.",
+      "kosullar": []
+    },
+    {
+      "id": 62,
+      "metin": "İki duraklık kısa bir yolda güzel bir haber alacaksın. Varınca bu haberi ilk paylaşmak istediğin kişiyi göreceksin.",
+      "metin_en": "Happy news will arrive on a journey of just two stops. At the end you will see the person you most want to tell.",
+      "kosullar": []
+    },
+    {
+      "id": 63,
+      "metin": "Bir cuma akşamı küçük bir masa etrafında yeni dostluklar kurulacak. Ortak bir şarkı sohbetin kapısını açacak.",
+      "metin_en": "New friendships will form around a small table one Friday evening. A song you all know will get the conversation started.",
+      "kosullar": []
+    },
+    {
+      "id": 64,
+      "metin": "Önümüzdeki 3 hafta içinde adını unuttuğun bir yer yeniden karşına çıkacak. Bu kez gitmek için güzel bir nedenin olacak.",
+      "metin_en": "Within 3 weeks you will come across a place whose name you had forgotten. This time you will have a lovely reason to visit.",
+      "kosullar": []
+    },
+    {
+      "id": 65,
+      "metin": "Sana ayrılmış pencere kenarı bir yer görünüyor. Yakındaki bir buluşmada manzaradan çok sohbet hoşuna gidecek.",
+      "metin_en": "A seat by the window is waiting for you. At an upcoming gathering, the conversation will charm you even more than the view.",
+      "kosullar": []
+    },
+    {
+      "id": 66,
+      "metin": "Ayın son günlerinde küçük bir hazırlık için bir araya geleceksiniz. İş bittiğinde kimse hemen dağılmak istemeyecek.",
+      "metin_en": "You will gather to prepare something small in the final days of the month. When it is done, nobody will want to leave just yet.",
+      "kosullar": []
+    },
+    {
+      "id": 67,
+      "metin": "Bir pazartesi sabahı gelen öneri hafta sonunu renklendirecek. İlk kez denediğin bir etkinlik güzel bir anı bırakacak.",
+      "metin_en": "A Monday morning suggestion will brighten your weekend. An activity you try for the first time will leave you with a happy memory.",
+      "kosullar": []
+    },
+    {
+      "id": 68,
+      "metin": "Üzerinde kuş resmi olan bir şey yakında eline geçecek. Onu veren kişiyle beklenen bir sohbet başlayacak.",
+      "metin_en": "Something with a bird on it will soon come your way. It will spark an awaited conversation with the person who gives it to you.",
+      "kosullar": []
+    },
+    {
+      "id": 69,
+      "metin": "Bir akşamüstü çayında eski bir yanlış anlaşılma tatlıya bağlanacak. Sonrasında aynı masada bolca güleceksiniz.",
+      "metin_en": "An old misunderstanding will be cleared up over afternoon tea. Soon everyone at the table will be laughing together.",
+      "kosullar": []
+    },
+    {
+      "id": 70,
+      "metin": "Önümüzdeki 8 gün içinde bir arkadaşın seni bir başkasıyla tanıştıracak. Ortak merakınız ilk dakikadan belli olacak.",
+      "metin_en": "A friend will introduce you to someone within 8 days. Your shared interest will be clear from the first minute.",
+      "kosullar": []
+    },
+    {
+      "id": 71,
+      "metin": "Bir pazar öğleden sonra yapılan küçük değişiklik evine neşe katacak. Gelen ilk misafir hemen fark edecek.",
+      "metin_en": "A small change on a Sunday afternoon will bring cheer to your home. Your next guest will notice it right away.",
+      "kosullar": []
+    },
+    {
+      "id": 72,
+      "metin": "Gelecek ay bir listede adını görmek seni sevindirecek. Katılmak istediğin küçük bir etkinlikte sana da yer ayrılacak.",
+      "metin_en": "Seeing your name on a list will delight you next month. There will be a place for you at a little event you hoped to attend.",
+      "kosullar": []
+    },
+    {
+      "id": 73,
+      "metin": "{{isim}}, önümüzdeki 2 hafta içinde eşin küçük bir gezi fikriyle gelecek. Birlikte seçeceğiniz yer ikinizin de gönlüne göre olacak.",
+      "metin_en": "{{isim}}, your spouse will suggest a little trip within 2 weeks. The place you choose together will suit you both.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "metin": "{{isim}}, bir cuma akşamı eşinle eski bir fotoğrafa güleceksiniz. O sohbet yeni bir ortak planın başlangıcı olacak.",
+      "metin_en": "{{isim}}, you and your spouse will laugh over an old photo one Friday evening. That chat will start a new shared plan.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "metin": "Eşinin ay bitmeden vereceği sürprizde sevdiğin bir ayrıntı saklı. Uzun zaman önce söylediğin bir sözü hatırlamış olacak.",
+      "metin_en": "A surprise from your spouse before the month ends will include a detail you love. They will have remembered something you said long ago.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "metin": "{{isim}}, gelecek hafta eşinle aynı dileği farklı sözlerle anlatacaksınız. Küçük bir ev planında kolayca anlaşacaksınız.",
+      "metin_en": "{{isim}}, next week you and your spouse will express the same wish in different words. You will easily agree on a little plan for your home.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "metin": "Bir pazar sabahı eşinle plansız bir kahvaltı yolu görünüyor. Yeni bulacağınız yer ortak favoriniz olacak.",
+      "metin_en": "A spontaneous Sunday breakfast outing with your spouse lies ahead. A new place you discover will become a shared favorite.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "metin": "{{isim}}, bir salı günü eşinin getirdiği haber evde tatlı bir heyecan yaratacak. Hafta sonu için birlikte hazırlık yapacaksınız.",
+      "metin_en": "{{isim}}, news your spouse brings on a Tuesday will stir happy excitement at home. You will prepare for the weekend together.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "metin": "{{isim}}, önümüzdeki 3 hafta içinde bir arkadaş buluşmasında yeni biriyle tanışacaksın. Sohbetiniz ortak bir merakla başlayacak.",
+      "metin_en": "{{isim}}, you will meet someone new at a gathering with friends within 3 weeks. A shared interest will start your conversation.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "metin": "Bir cumartesi öğleden sonra adında D harfi olan biri ilgini çekecek. İkinizi de güldüren bir tesadüf sohbeti başlatacak.",
+      "metin_en": "Someone with a D in their name will catch your eye one Saturday afternoon. A coincidence that makes you both laugh will break the ice.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "metin": "{{isim}}, gelecek ay küçük bir etkinlikte yanında boş kalan yer dolacak. Yeni tanışacağın kişi sohbeti sürdürmek isteyecek.",
+      "metin_en": "{{isim}}, the empty seat beside you at a small event will fill next month. Your new acquaintance will want to keep talking.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "metin": "{{isim}}, bir salı akşamı dostun seni biriyle tanıştırmak isteyecek. Ortak zevkiniz ilk sohbeti kolaylaştıracak.",
+      "metin_en": "{{isim}}, a friend will want to introduce you to someone one Tuesday evening. A shared taste will make that first chat easy.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "metin": "Ay bitmeden bir kahve sırasında hoş bir tanışma görünüyor. Sonraki karşılaşmada birbirinizi hemen hatırlayacaksınız.",
+      "metin_en": "A pleasant introduction awaits in a coffee queue before the month ends. You will recognize each other right away the next time you meet.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "metin": "{{isim}}, önümüzdeki 10 gün içinde gelen davet yeni bir tanışmaya kapı açacak. Aklında en çok o kişinin içten gülüşü kalacak.",
+      "metin_en": "{{isim}}, an invitation within 10 days will open the door to a new connection. Their warm smile will be what you remember most.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "metin": "{{isim}}, gelecek hafta ders arasında duyacağın öneri işini kolaylaştıracak. Zor görünen konuyu bir arkadaşınla anlayacaksın.",
+      "metin_en": "{{isim}}, a tip you hear between classes next week will make things easier. A friend will help a difficult topic make sense.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "metin": "Bir çarşamba günü okulda küçük bir gruba çağrılacaksın. Birlikte hazırladığınız çalışma beklediğinden keyifli ilerleyecek.",
+      "metin_en": "You will be invited to a small group at school on a Wednesday. Working together will be more enjoyable than you expected.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "metin": "{{isim}}, önümüzdeki 2 hafta içinde bir öğretmenin çabanı fark edecek. Söyleyeceği kısa bir cümle sana yeni heves verecek.",
+      "metin_en": "{{isim}}, a teacher will notice your effort within 2 weeks. A few words from them will give you fresh enthusiasm.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "metin": "{{isim}}, yaklaşan sınava hazırlanırken eksik bir not eline geçecek. Bir arkadaşının paylaşımı konuları toparlamana yardım edecek.",
+      "metin_en": "{{isim}}, missing notes will reach you as you prepare for an exam. A friend's help will bring the topics together.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "metin": "Ay bitmeden okulda merak ettiğin bir etkinliğin duyurusunu göreceksin. Katıldığında kendine yakın bir çalışma arkadaşı bulacaksın.",
+      "metin_en": "Before the month ends you will see a school event that interests you. Taking part will lead you to a compatible study partner.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "metin": "{{isim}}, bir pazartesi kütüphanede aradığın kaynağı bulacaksın. Yan masada başlayan sohbet de güzel bir dostluğa dönüşecek.",
+      "metin_en": "{{isim}}, you will find the resource you need at the library on a Monday. A chat at the next table will grow into a lovely friendship.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "metin": "{{isim}}, önümüzdeki 2 hafta içinde işte bekleyen bir evrak netleşecek. Bir çalışma arkadaşının açıklaması süreci kolaylaştıracak.",
+      "metin_en": "{{isim}}, a pending document at work will be clarified within 2 weeks. A colleague's explanation will make the process easier.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "metin": "Bir salı sabahı kurumda küçük bir görev paylaşımı yapılacak. Sana düşen bölümde bildiğin bir yöntem işe yarayacak.",
+      "metin_en": "Tasks will be shared out at your workplace one Tuesday morning. A method you know will come in handy for your part.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "metin": "{{isim}}, ay bitmeden iş yerinde emeğine dair güzel bir söz duyacaksın. Sessizce yaptığın bir katkı fark edilmiş olacak.",
+      "metin_en": "{{isim}}, you will hear kind words about your work before the month ends. A quiet contribution of yours will have been noticed.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "metin": "{{isim}}, bir cuma günü mesai arkadaşın senden fikir isteyecek. Önerin ortak bir işi daha düzenli hâle getirecek.",
+      "metin_en": "{{isim}}, a colleague will ask your opinion on a Friday. Your suggestion will help organize a shared task.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "metin": "Gelecek hafta kurum içindeki bir görüşme sandığından sıcak geçecek. Yalnız selamlaştığın biriyle sohbet başlayacak.",
+      "metin_en": "A workplace meeting next week will be warmer than you expect. You will get talking to someone you usually only greet.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "metin": "{{isim}}, bir perşembe öğle arasında aldığın haber iş planını rahatlatacak. Haftanın kalanını daha düzenli geçireceksin.",
+      "metin_en": "{{isim}}, news during Thursday lunch will ease your work schedule. The rest of your week will feel better organized.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "metin": "{{isim}}, gelecek hafta bir toplantıda küçük bir fikrin dikkat çekecek. Sonrasında bir çalışma arkadaşın ayrıntısını dinlemek isteyecek.",
+      "metin_en": "{{isim}}, a little idea of yours will stand out at a meeting next week. A colleague will want to hear more afterward.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "metin": "Bir cuma sabahı tamamladığın işle ilgili güzel bir geri dönüş alacaksın. Hafta sonuna içini ısıtan bir teşekkürle gireceksin.",
+      "metin_en": "Positive feedback on your work will arrive one Friday morning. A warm thank-you will send you into the weekend smiling.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "metin": "{{isim}}, önümüzdeki 3 hafta içinde yeni bir iş arkadaşınla uyum yakalayacaksın. Birlikte çözdüğünüz küçük mesele sohbetinizi açacak.",
+      "metin_en": "{{isim}}, you will click with a new colleague within 3 weeks. Solving a small issue together will get you talking.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "metin": "{{isim}}, bir salı günü işteki program değişikliği sana zaman kazandıracak. Ertelediğin fikri paylaşmak için fırsat bulacaksın.",
+      "metin_en": "{{isim}}, a schedule change at work on a Tuesday will free up time. You will get a chance to share an idea you have put off.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "metin": "Ay bitmeden iş yerinde hazırladığın bir ayrıntı beğenilecek. Sonraki ortak çalışmada aynı konuda fikrin sorulacak.",
+      "metin_en": "A detail you prepared at work will earn praise before the month ends. Your input on it will be sought on the next shared task.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "metin": "{{isim}}, bir perşembe öğleden sonra beklediğin iş yanıtı gelecek. Küçük bir planın önü açılacak.",
+      "metin_en": "{{isim}}, a work reply you await will arrive one Thursday afternoon. It will clear the way for a small plan.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "metin": "{{isim}}, önümüzdeki hafta evinde küçük bir çay buluşması görünüyor. Sohbette duyduğun bir fikir günlük işlerini kolaylaştıracak.",
+      "metin_en": "{{isim}}, a little tea gathering at your home lies ahead next week. An idea shared there will make your daily tasks easier.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "metin": "Bir pazar günü evde yerini değiştirdiğin küçük eşya odaya ferahlık katacak. İlk gelen misafir zevkini övecek.",
+      "metin_en": "Moving a little item at home on a Sunday will make the room feel airier. Your next guest will compliment your taste.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "metin": "{{isim}}, ay bitmeden aileden biri sana içten bir teşekkür edecek. Kimse fark etmiyor sandığın emeğin konuşulacak.",
+      "metin_en": "{{isim}}, a family member will sincerely thank you before the month ends. Effort you thought nobody noticed will be appreciated.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "metin": "{{isim}}, bir cuma öğleden sonra kapına sevdiğin bir ikram gelecek. Komşunla sohbetiniz yeni bir buluşmanın bahanesi olacak.",
+      "metin_en": "{{isim}}, a favorite treat will arrive at your door one Friday afternoon. A chat with your neighbor will lead to another get-together.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "metin": "Önümüzdeki 2 hafta içinde ev için düşündüğün düzenleme tamamlanacak. Ortaya çıkan köşe en sevdiğin dinlenme yeri olacak.",
+      "metin_en": "A small home project you have in mind will be finished within 2 weeks. The resulting corner will become your favorite spot to unwind.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "metin": "{{isim}}, bir çarşamba sabahı ailece yapılacak kısa bir gezi konuşulacak. Herkesin seveceği durağı sen önereceksin.",
+      "metin_en": "{{isim}}, a short family outing will come up one Wednesday morning. You will suggest the stop everyone enjoys.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "metin": "{{isim}}, önümüzdeki 3 hafta içinde bir tanıdığın sana uygun bir ilan paylaşacak. Kısa konuşmanız başvurunu toparlamana yardım edecek.",
+      "metin_en": "{{isim}}, an acquaintance will share a suitable job listing within 3 weeks. A brief chat will help you put your application together.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "metin": "Bir salı öğleden sonra iş arayışınla ilgili beklediğin mesaj gelecek. Sonraki adımın ne olduğu daha açık görünecek.",
+      "metin_en": "A message you await about your job search will arrive one Tuesday afternoon. Your next step will become clearer.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "metin": "{{isim}}, ay bitmeden eski bir çalışma tanıdığınla konuşacaksın. Söyleyeceği bir yer adı yeni bir araştırma kapısı açacak.",
+      "metin_en": "{{isim}}, you will talk to an old work contact before the month ends. A place they mention will give you a fresh lead to explore.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "metin": "{{isim}}, gelecek hafta özgeçmişinde yaptığın küçük değişiklik içine sinecek. Bir dostunun önerisi güçlü yanını daha iyi anlatmanı sağlayacak.",
+      "metin_en": "{{isim}}, a small change to your resume next week will feel right. A friend's tip will help you express a strength more clearly.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "metin": "Bir perşembe sabahı katıldığın görüşmede ortak bir ilgi konusu çıkacak. Bu ayrıntı kendini daha rahat anlatmanı sağlayacak.",
+      "metin_en": "A shared interest will come up in an interview one Thursday morning. It will help you talk about yourself more comfortably.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "metin": "{{isim}}, önümüzdeki 10 gün içinde iki farklı yer hakkında bilgi alacaksın. Birinin koşulları aradığın düzene daha yakın gelecek.",
+      "metin_en": "{{isim}}, you will learn about two workplaces within 10 days. One will seem closer to the routine you are looking for.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "metin": "{{isim}}, bir cumartesi eski bir dost seni yeni bir uğraşa çağıracak. İlk denemede zamanın nasıl geçtiğini anlamayacaksın.",
+      "metin_en": "{{isim}}, an old friend will invite you to try a new pastime on a Saturday. Your first session will make the time fly.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "metin": "Önümüzdeki 2 hafta içinde gündüz yapılan küçük bir geziye davet edileceksin. Yol arkadaşının anlattıkları güzel anılar hatırlatacak.",
+      "metin_en": "You will be invited on a little daytime outing within 2 weeks. Your companion's stories will bring back happy memories.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "metin": "{{isim}}, ay bitmeden yıllar önce bildiğin bir beceri yeniden işine yarayacak. Onu senden öğrenmek isteyen biri çıkacak.",
+      "metin_en": "{{isim}}, a skill you learned years ago will come in handy before the month ends. Someone will want you to teach them.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "metin": "{{isim}}, bir salı sabahı her zaman uğradığın yerde yeni bir dost edineceksin. Kısa selamlaşmalarınız uzun sohbetlere dönüşecek.",
+      "metin_en": "{{isim}}, you will make a new friend at your usual morning stop on a Tuesday. Brief greetings will grow into long conversations.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "metin": "Gelecek ay eski bir arkadaş grubuyla buluşma görünüyor. Masaya getirilen fotoğraf herkesi aynı güzel güne götürecek.",
+      "metin_en": "A reunion with old friends awaits next month. A photo brought to the table will take everyone back to the same happy day.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "metin": "{{isim}}, bir cuma öğleden sonra aileden biri senden küçük bir yardım isteyecek. Birlikte geçireceğiniz vakit yeni bir gelenek başlatacak.",
+      "metin_en": "{{isim}}, a family member will ask your help with something small one Friday afternoon. Your time together will start a new tradition.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    }
+  ]
+}

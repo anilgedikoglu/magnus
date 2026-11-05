@@ -3,6 +3,7 @@
 // Kaynak metinler: assets/data/elfali.json
 
 import 'dart:io';
+import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -33,18 +34,9 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
   String _genelMetin = '';
   List<Map<String, dynamic>> _hatlar = [];
 
-  // Kum saati animasyonu
-  late AnimationController _hourCtrl;
-  late Animation<double>   _hourAnim;
-
   @override
   void initState() {
     super.initState();
-    _hourCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 900),
-    )..repeat(reverse: true);
-    _hourAnim = CurvedAnimation(parent: _hourCtrl, curve: Curves.easeInOut);
     _kontrolEt();
   }
 
@@ -56,12 +48,6 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
     if (mounted && saved == todayStr) {
       setState(() => _gunlukDoldu = true);
     }
-  }
-
-  @override
-  void dispose() {
-    _hourCtrl.dispose();
-    super.dispose();
   }
 
   // ── [DEBUG] Test görseli yükle ───────────────────────────────────────────
@@ -349,7 +335,12 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
           padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
           child: AspectRatio(
             aspectRatio: 3 / 4,
-            child: _buildFotoAlan(),
+            // Okuma ritüeli: avuç çizgileri fotoğrafın üstüne sırayla, ışıyarak çizilir
+            // (2026-11-06, Grok/Codex: avuç fotoğrafında hiçbir efekt yoktu).
+            child: Stack(fit: StackFit.expand, children: [
+              _buildFotoAlan(),
+              const IgnorePointer(child: AvucCizgileri()),
+            ]),
           ),
         ),
         const Spacer(),
@@ -360,17 +351,6 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
             fontSize: 18,
             fontWeight: FontWeight.w500,
             letterSpacing: 0.4,
-          ),
-        ),
-        const SizedBox(height: 20),
-        AnimatedBuilder(
-          animation: _hourAnim,
-          builder: (ctx, _) => Transform.scale(
-            scale: 0.88 + 0.12 * _hourAnim.value,
-            child: Opacity(
-              opacity: 0.65 + 0.35 * _hourAnim.value,
-              child: const Text('🔮', style: TextStyle(fontSize: 52)),
-            ),
           ),
         ),
         const Spacer(),
@@ -600,4 +580,126 @@ class _FotoButon extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Avuç çizgileri: kalp, akıl, hayat, kader ve güneş çizgisi (fotoğraf alanına göre normalize
+/// eğriler) sırayla ~0,35 sn'de çizilir; ucu parlar, her çizgi bitince hafif tık. Sonra
+/// çizgiler yavaşça nefes alır. Tarama ışığı yukarıdan aşağı süzülür.
+@visibleForTesting
+class AvucCizgileri extends StatefulWidget {
+  const AvucCizgileri();
+  @override
+  State<AvucCizgileri> createState() => _AvucCizgileriState();
+}
+
+class _AvucCizgileriState extends State<AvucCizgileri> with SingleTickerProviderStateMixin {
+  late final AnimationController _c =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 5000));
+  int _bitenler = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _c.addListener(() {
+      final n = (_c.value * 5000 / 420).floor().clamp(0, 5);
+      if (n > _bitenler) {
+        _bitenler = n;
+        HapticFeedback.selectionClick();
+      }
+    });
+    final reduce = WidgetsBinding.instance.platformDispatcher.accessibilityFeatures.disableAnimations;
+    if (reduce) {
+      _c.value = 1;
+    } else {
+      _c.forward();
+    }
+  }
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => AnimatedBuilder(
+        animation: _c,
+        builder: (context, _) => CustomPaint(painter: _AvucPainter(_c.value * 5000)),
+      );
+}
+
+class _AvucPainter extends CustomPainter {
+  _AvucPainter(this.ms);
+  final double ms;
+
+  // (başlangıç, kontrol1, kontrol2, bitiş) — alan oranında
+  static const _cizgiler = <List<Offset>>[
+    [Offset(0.18, 0.40), Offset(0.36, 0.33), Offset(0.58, 0.33), Offset(0.84, 0.38)], // kalp
+    [Offset(0.20, 0.50), Offset(0.38, 0.47), Offset(0.56, 0.52), Offset(0.76, 0.58)], // akıl
+    [Offset(0.30, 0.42), Offset(0.22, 0.58), Offset(0.26, 0.74), Offset(0.42, 0.90)], // hayat
+    [Offset(0.52, 0.90), Offset(0.52, 0.76), Offset(0.50, 0.60), Offset(0.52, 0.44)], // kader
+    [Offset(0.66, 0.86), Offset(0.66, 0.76), Offset(0.67, 0.66), Offset(0.68, 0.56)], // güneş
+  ];
+  static const _renkler = [
+    Color(0xFFFF55FF), Color(0xFF00CCFF), Color(0xFF44FF88), Color(0xFFFFD27A), Color(0xFFFF8A5B),
+  ];
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    Offset at(Offset o) => Offset(o.dx * size.width, o.dy * size.height);
+    // Tarama ışığı (yukarıdan aşağı, 2,4 sn döngü)
+    final scan = (ms % 2400) / 2400;
+    final y = size.height * scan;
+    canvas.drawRect(
+      Rect.fromLTWH(0, y - 40, size.width, 80),
+      Paint()
+        ..shader = LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            const Color(0x0000CCFF),
+            const Color(0xFF00CCFF).withValues(alpha: 0.18),
+            const Color(0x0000CCFF),
+          ],
+        ).createShader(Rect.fromLTWH(0, y - 40, size.width, 80)),
+    );
+    final nefes = 0.75 + 0.25 * sin(ms / 1000 * 2 * pi / 1.8);
+    for (var i = 0; i < _cizgiler.length; i++) {
+      final p = ((ms - 300 - i * 420) / 380).clamp(0.0, 1.0);
+      if (p <= 0) continue;
+      final c = _cizgiler[i];
+      final path = Path()
+        ..moveTo(at(c[0]).dx, at(c[0]).dy)
+        ..cubicTo(at(c[1]).dx, at(c[1]).dy, at(c[2]).dx, at(c[2]).dy, at(c[3]).dx, at(c[3]).dy);
+      final m = path.computeMetrics().first;
+      final part = m.extractPath(0, m.length * Curves.easeInOutSine.transform(p));
+      final renk = _renkler[i];
+      final a = p < 1 ? 1.0 : nefes;
+      canvas.drawPath(
+          part,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeCap = StrokeCap.round
+            ..strokeWidth = 7
+            ..color = renk.withValues(alpha: 0.35 * a)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6));
+      canvas.drawPath(
+          part,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeCap = StrokeCap.round
+            ..strokeWidth = 2.2
+            ..color = Color.lerp(renk, Colors.white, 0.35)!.withValues(alpha: 0.95 * a));
+      if (p < 1) {
+        final uc = m.getTangentForOffset(m.length * Curves.easeInOutSine.transform(p))?.position;
+        if (uc != null) {
+          canvas.drawCircle(uc, 6, Paint()..color = Colors.white.withValues(alpha: 0.9)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4));
+        }
+      }
+    }
+  }
+
+  @override
+  bool shouldRepaint(_AvucPainter old) => old.ms != ms;
 }

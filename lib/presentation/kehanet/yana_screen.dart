@@ -16,7 +16,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
-import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/focus_ripple.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../../data/models/user_profile.dart';
@@ -31,7 +31,7 @@ class YanaScreen extends ConsumerStatefulWidget {
 // Adımlar:
 //  secim         → seçim ekranı (görsel + iki buton)
 //  gorselKayiyor → görsel merkeze'den tepeye kayıyor (700 ms)
-//  odaklanma     → "Kehanetine odaklanıyorum..." + ElegantHourglass (5.5 s)
+//  odaklanma     → "Kehanetine odaklanıyorum..." + nabız gözü (3.2 s; 2026-11-06 kısaltıldı)
 //  yagmur        → karakterler aşağı dökülüp kayboluyor (4.5 s)
 //  icerik        → üst yarı görsel, alt yarı kehanet yazısı
 enum _YanaAdim { secim, gorselKayiyor, odaklanma, yagmur, icerik }
@@ -64,12 +64,12 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
       vsync: this, duration: const Duration(milliseconds: 4000))..repeat();
 
     _slideCtrl = AnimationController(
-      vsync: this, duration: const Duration(milliseconds: 2100));
+      vsync: this, duration: const Duration(milliseconds: 1600));
     _slideAnim = CurvedAnimation(
       parent: _slideCtrl, curve: Curves.easeOutCubic);
 
     _rainCtrl = AnimationController(
-      vsync: this, duration: const Duration(milliseconds: 4500));
+      vsync: this, duration: const Duration(milliseconds: 3200));
 
     _fadeCtrl = AnimationController(
       vsync: this, duration: const Duration(milliseconds: 2400));
@@ -89,13 +89,16 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
   void _prepareRainChars() {
     final rng = Random();
     _rainChars.clear(); _rainDelays.clear(); _rainDrifts.clear();
-    const text = 'Kehanetine odaklanıyorum...';
+    final text = _odakMetni;
     for (int i = 0; i < text.length; i++) {
       _rainChars.add(text[i]);
       _rainDelays.add(rng.nextDouble() * 0.68);
       _rainDrifts.add((rng.nextDouble() - 0.5) * 80.0);
     }
   }
+
+  bool get _isEn => ref.read(localeProvider) == 'en';
+  String get _odakMetni => _isEn ? 'Focusing on your prophecy...' : 'Kehanetine odaklanıyorum...';
 
   // ── Seçim butonu: rewarded reklam → akışa devam ──────────────────────────
   void _onSecimTap(String tur) {
@@ -115,7 +118,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
     setState(() => _adim = _YanaAdim.odaklanma);
     final dataFuture = _loadData(tur);
 
-    _odakTimer = Timer(const Duration(milliseconds: 5500), () async {
+    _odakTimer = Timer(const Duration(milliseconds: 3200), () async {
       await dataFuture;
       if (!mounted) return;
       setState(() => _adim = _YanaAdim.yagmur);
@@ -496,11 +499,11 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                   children: [
                     _buildGlowImage(),
                     const SizedBox(height: 28),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
-                      child: Text('Ne hakkında kehanet istersin?',
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
+                      child: Text(_isEn ? 'What would you like a prophecy about?' : 'Ne hakkında kehanet istersin?',
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white70, fontSize: 16)),
+                        style: const TextStyle(color: Colors.white70, fontSize: 16)),
                     ),
                     const SizedBox(height: 28),
                     Padding(
@@ -548,8 +551,8 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            const Text(
-                              'Kehanetine odaklanıyorum...',
+                            Text(
+                              _odakMetni,
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white70,
@@ -558,7 +561,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                               ),
                             ),
                             const SizedBox(height: 20),
-                            const ElegantHourglass(size: 56, color: Colors.white),
+                            const FocusRipple(color: Color(0xFFFF55FF), size: 104),
                           ],
                         ),
                       ),

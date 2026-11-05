@@ -15,7 +15,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
-import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/focus_ripple.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/user_profile.dart';
@@ -47,6 +47,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   bool    _veriYuklendi = false;
 
   Timer? _gecisTimer;
+  final _yaziKey = GlobalKey<_TypewriterTextState>();
 
   String get _bugun => DateTime.now().toIso8601String().substring(0, 10);
 
@@ -163,10 +164,11 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   // ── Kum saati ────────────────────────────────────────────────────────────────
 
   void _baslatKumSaati() {
-    // Kum saatini 1.2sn aralıkla döndür
-    // 5 saniye sonra içerik ekranına geç
-    _gecisTimer = Timer(const Duration(seconds: 5), () {
-      if (mounted) setState(() => _adim = _Adim.icerik);
+    // 3.2 sn nabız gözü, sonra içerik (2026-11-06: 5 sn ölü bekleme kısaltıldı)
+    _gecisTimer = Timer(const Duration(milliseconds: 3200), () {
+      if (!mounted) return;
+      HapticFeedback.mediumImpact();
+      setState(() => _adim = _Adim.icerik);
     });
   }
 
@@ -232,7 +234,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const ElegantHourglass(size: 72, color: Color(0xFFCC44FF)),
+                const FocusRipple(color: Color(0xFFCC44FF)),
                 const SizedBox(height: 28),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
@@ -263,7 +265,11 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
       children: [
         _buildBaslikBar(),
         Expanded(
-          child: Center(
+          // İçerik alanının herhangi bir yerine dokununca yazı hemen tamamlanır.
+          child: GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: () => _yaziKey.currentState?._hemenTamamla(),
+            child: Center(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
               child: Column(
@@ -277,6 +283,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
                   const SizedBox(height: 16),
                   // Typewriter metin
                   _TypewriterText(
+                    key: _yaziKey,
                     text: _metin,
                     style: const TextStyle(
                       color: Colors.white,
@@ -296,6 +303,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
                 ],
               ),
             ),
+          ),
           ),
         ),
         // Kapat butonu
@@ -394,6 +402,7 @@ class _TypewriterText extends StatefulWidget {
   final int msPerChar;
 
   const _TypewriterText({
+    super.key,
     required this.text,
     required this.style,
     this.textAlign = TextAlign.start,
@@ -448,6 +457,16 @@ class _TypewriterTextState extends State<_TypewriterText> {
         });
       },
     );
+  }
+
+  /// Dokununca yazı hemen tamamlanır (beklemek istemeyen okur için).
+  void _hemenTamamla() {
+    if (_timer?.isActive != true) return;
+    _timer?.cancel();
+    setState(() {
+      _displayed = widget.text;
+      _index = widget.text.characters.length;
+    });
   }
 
   @override

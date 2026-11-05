@@ -454,10 +454,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                       fontStyle: FontStyle.italic,
                       height: 1.4)),
             ],
-            const SizedBox(height: 4),
-            Text(_tr('Eğlence amaçlıdır.', 'For entertainment purposes only.'),
-                style: TextStyle(color: Colors.white.withValues(alpha: 0.4), fontSize: 11)),
-            const SizedBox(height: 12),
+            const SizedBox(height: 14),
             _gradientButton(_tr('Başka bir yıl', 'Another year'), small: true, onTap: () {
               setState(() => _adim = _Adim.secim);
               WidgetsBinding.instance.addPostFrameCallback((_) {

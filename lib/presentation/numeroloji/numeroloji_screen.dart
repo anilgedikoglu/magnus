@@ -24,6 +24,7 @@ import '../../core/utils/numeroloji_hesap.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
+import '../../core/widgets/stagger_in.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/inbox_item.dart';
@@ -66,6 +67,10 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
   _RaporTur? _secilen;
   String?    _cachedMetin;  // sadece cache'ten gösteriliyorsa dolu
   bool       _loading = false;
+  // Bekleme anında gösterilen hesaplanmış sayılar (2026-11-06: hesaplanıp hiç
+  // gösterilmiyordu). (etiket, sayı)
+  List<(String, int)> _sayilar = const [];
+  DateTime _sayiAni = DateTime.now();
 
   // ── Cache/kullanım durumu ────────────────────────────────────────────────
   bool _genelDone    = false;
@@ -195,8 +200,30 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
       return;
     }
 
-    // Yeni rapor: loading göster
-    setState(() { _secilen = tur; _loading = true; _cachedMetin = null; });
+    // Yeni rapor: loading göster (hesaplanan sayılarla)
+    final profile = ref.read(userProfileProvider);
+    final isEn = ref.read(localeProvider) == 'en';
+    final List<(String, int)> sayilar;
+    if (tur == _RaporTur.bugun) {
+      sayilar = [(isEn ? 'Day Number' : 'Günün Sayısı', NumerologiHesap.bugunSayisi(profile))];
+    } else if (tur == _RaporTur.yil) {
+      sayilar = [(isEn ? 'Year Number' : 'Yılın Sayısı', NumerologiHesap.yilSayisi(profile))];
+    } else {
+      final n = NumerologiHesap.hesapla(profile);
+      sayilar = [
+        (isEn ? 'Life Path' : 'Yaşam Yolu', n.yasamYolu),
+        (isEn ? 'Expression' : 'İfade', n.ifade),
+        (isEn ? 'Soul' : 'Ruh', n.ruh),
+      ];
+    }
+    HapticFeedback.mediumImpact();
+    setState(() {
+      _secilen = tur;
+      _loading = true;
+      _cachedMetin = null;
+      _sayilar = sayilar;
+      _sayiAni = DateTime.now();
+    });
 
     final metin = _buildMetin(tur);
     final prefs = await SharedPreferences.getInstance();
@@ -349,7 +376,25 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const SpinningHourglass(size: 64, color: Color(0xFFBBAAFF)),
+          // Hesaplanan sayılar sırayla, büyük ve parlayan rakamlarla belirir.
+          if (_sayilar.isNotEmpty)
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (var i = 0; i < _sayilar.length; i++)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: StaggerIn(
+                      index: i,
+                      since: _sayiAni,
+                      step: const Duration(milliseconds: 380),
+                      child: _SayiKarti(etiket: _sayilar[i].$1, sayi: _sayilar[i].$2),
+                    ),
+                  ),
+              ],
+            )
+          else
+            const SpinningHourglass(size: 64, color: Color(0xFFBBAAFF)),
           const SizedBox(height: 24),
           Text(
             ref.watch(l10nProvider).numCalculating,
@@ -527,6 +572,55 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
           child: RichTextParser.build(
             _cachedMetin ?? '',
             style: const TextStyle(color: Colors.white, fontSize: 14, height: 1.80),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/// Hesaplanan numeroloji sayısı: büyük, altın parıltılı rakam + etiket.
+class _SayiKarti extends StatelessWidget {
+  const _SayiKarti({required this.etiket, required this.sayi});
+  final String etiket;
+  final int sayi;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          width: 78,
+          height: 78,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: const RadialGradient(
+              colors: [Color(0x66BBAAFF), Color(0x00BBAAFF)],
+            ),
+            border: Border.all(color: const Color(0xAABBAAFF), width: 1.2),
+            boxShadow: const [
+              BoxShadow(color: Color(0x55BBAAFF), blurRadius: 22, spreadRadius: 1),
+            ],
+          ),
+          child: Text(
+            '$sayi',
+            style: GoogleFonts.cinzel(
+              fontSize: 34,
+              fontWeight: FontWeight.w700,
+              color: const Color(0xFFFFF0B0),
+              shadows: const [Shadow(color: Color(0xCCD4AF37), blurRadius: 14)],
+            ),
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          etiket,
+          style: TextStyle(
+            color: Colors.white.withValues(alpha: 0.75),
+            fontSize: 12,
+            letterSpacing: 0.6,
           ),
         ),
       ],

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uuid/uuid.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/services/dream_interpreter.dart';
@@ -461,69 +460,27 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
     return null;
   }
 
-  /// Serbest metin rüya yorumu: izin (bir kez) → en az 5 sn bekleme → açılır pencere.
+  /// Serbest metin rüya yorumu: HER ZAMAN cihazda (Anıl, 2026-11-05: "sormasın, ne olursa olsun
+  /// cihazda olacak") → en az 5 sn bekleme → açılır pencere. Ağ isteği / yapay zekâ izni yok.
   Future<void> _serbestYorumla() async {
     if (_yorumlaniyor) return;
     FocusScope.of(context).unfocus();
     final s = ref.read(l10nProvider);
     final isEn = ref.read(localeProvider) == 'en';
-    final prefs = await SharedPreferences.getInstance();
-    if (!mounted) return;
-
-    // Yapay zekâ izni (Apple 5.1.2 / KVKK): ilk kullanımda sor, kararı sakla.
-    var onay = prefs.getBool('ruya_ai_onay');
-    if (onay == null) {
-      onay = await showDialog<bool>(
-        context: context,
-        builder: (dctx) => AlertDialog(
-          backgroundColor: const Color(0xFF140D46),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-            side: const BorderSide(color: Color(0xFF8B5CF6), width: 1),
-          ),
-          title: Text(s.dreamAiConsentTitle, style: AppTextStyles.screenTitle.copyWith(fontSize: 16)),
-          content: Text(s.dreamAiConsentBody,
-              style: const TextStyle(color: Colors.white70, fontSize: 14, height: 1.45)),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(dctx, false),
-              child: Text(s.dreamDeviceOnly, style: const TextStyle(color: Colors.white70)),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(dctx, true),
-              child: Text(s.dreamAiAccept,
-                  style: const TextStyle(color: Color(0xFFD8C4FF), fontWeight: FontWeight.w700)),
-            ),
-          ],
-        ),
-      );
-      if (onay == null || !mounted) return; // pencere kapatıldı → vazgeç
-      await prefs.setBool('ruya_ai_onay', onay);
-    }
-
     final profile = ref.read(userProfileProvider);
     final isim = profile.name.trim();
     final ipucuSembol = _sembolIpucu(isEn);
     final ipucu = ipucuSembol == null
         ? null
         : VariableReplacer.replace(ipucuSembol.yorumFor(isEn), profile.toVariableMap());
-    final bugun = DateTime.now().toIso8601String().substring(0, 10);
-    // Günde 1 çevrimiçi yorum (maliyet); aynı gün sonrakiler cihazdaki motorla.
-    final cevrimici = onay && prefs.getString('ruya_ai_tarih') != bugun;
-    // Hak istekten ÖNCE ayrılır: geri çıkıp yeniden girince aynı gün ikinci ağ isteği olmaz.
-    if (cevrimici) await prefs.setString('ruya_ai_tarih', bugun);
-    if (!mounted) return;
+    final metin = DreamInterpreter.offline(
+        dream: _arama.trim(), name: isim.isEmpty ? (isEn ? 'friend' : 'dostum') : isim,
+        isEn: isEn, symbolHint: ipucu);
 
     setState(() => _yorumlaniyor = true);
-    final sonucF = cevrimici
-        ? DreamInterpreter.interpret(dream: _arama, name: isim, isEn: isEn, symbolHint: ipucu)
-        : Future.value(DreamInterpreter.offline(
-            dream: _arama.trim(), name: isim.isEmpty ? (isEn ? 'friend' : 'dostum') : isim,
-            isEn: isEn, symbolHint: ipucu));
-    final results = await Future.wait<Object?>([sonucF, Future<void>.delayed(const Duration(seconds: 5))]);
+    await Future<void>.delayed(const Duration(seconds: 5));
     if (!mounted) return;
     setState(() => _yorumlaniyor = false);
-    final metin = results.first as String;
     await showDialog<void>(
       context: context,
       builder: (dctx) => Dialog(

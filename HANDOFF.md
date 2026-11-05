@@ -21,8 +21,11 @@
   (`ad_service.dart`), await sonrası `ref` yok, Tavşan tarih en son yazılır, rüya hakkı istekten önce ayrılır,
   Arabam geçmiş aralıkları gizler.
 - **267 sonrası (main'de, build YOK):** kayan yazı `lib/core/widgets/marquee_text.dart` (Arabam/Kısmetim/Evim
-  kutuları; sığmayan ad tek satırda yavaş kayar), Tavşan dokununca çeker (kayıt dokununca), Ayarlar > Tüm Falları Sil
-  yeni falları da sıfırlar (`lib/data/services/fortune_reset.dart`), 4 yeni fal ikonu turkuaz palete (ChatGPT).
+  kutuları; sığmayan ad tek satırda yavaş kayar), Tavşan dokununca çeker (kayıt dokununca) ve günde 1 (hak
+  bitince menüde balon), 4 yeni fal ikonu turkuaz palete (ChatGPT). Rüya serbest yorumu HEP cihazda (izin/ağ yok).
+  Sıfırlama tek kaynak `lib/data/services/fortune_reset.dart`: Ayarlar > Tüm Falları Sil = alınan fallar (gelen
+  kutusu + Tavşan/Kısmetim/Arabam/Evim kayıtları), günlük haklar KALIR; Yönetici > Günlük Hakları Sıfırla = tüm
+  günlük haklar + bu dört falın kayıtları.
 - Testler: 89 geçiyor (`flutter test`); tek kırmızı takipsiz artık `test/_visual_starfield_capture_test.dart`.
 - Görsel doğrulama: `build/visual_check/yeni_fallar_capture_test.dart --dart-define=CAP_PHASE=yf` (gitignored).
 

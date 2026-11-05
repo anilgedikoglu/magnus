@@ -596,10 +596,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   // ─── Günlük limitli fallar (I-Ching, Japon Falı) — reklam yok, git/gel yok (go) ──
-  /// [revisit] true → hak bitse de ekran açılır (Tavşan Falı bugünün kaydını yeniden gösterir).
-  void _onDailyFalTap(String type, String route, {bool revisit = false}) {
+  void _onDailyFalTap(String type, String route) {
     final remaining = _remainingCredits[type] ?? 1;
-    if (remaining <= 0 && !revisit) {
+    if (remaining <= 0) {
       _showDailyLimitBubble(type);
       return;
     }
@@ -760,7 +759,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         // Rüya Yorumu ile Doğum Haritası arası: Tavşan Falı (günde 1, 2026-11-05)
         _MenuItem(s.rabbitFortune, 'assets/images/tavsanfali/tavsanfali_menu.jpg',
             _remainingCredits['tavsanfali'] ?? 1,
-            () => _onDailyFalTap('tavsanfali', '/tavsanfali', revisit: true)),
+            () => _onDailyFalTap('tavsanfali', '/tavsanfali')), // günde 1: bugün çektiyse balon (Anıl)
         _MenuItem(s.birthChart, 'assets/images/dogum.png',
             1, () => _pushWithAd('/dogumharitasi')),
         // Rüya Yorumu'nun altı: Kısmetim Kim? (2026-11-05)

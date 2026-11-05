@@ -441,6 +441,7 @@ class AppStrings {
       case 'acigercekler':return _s('Bugün gerçeklerle yüzleştin.', "You've faced the truths today.");
       case 'kadercarki':  return _s('Günlük Kader Çarkı hakkın doldu.', 'Your daily Wheel of Fate limit is used.');
       case 'askuyumu':    return _s('Günlük Aşk Uyumu hakkın doldu.', 'Your daily Love Compatibility limit is used.');
+      case 'tavsanfali':  return _s('Tavşan bugünkü kâğıdını çekti; yarın yeni bir kâğıt seni bekliyor.', 'The rabbit already pulled your paper today; a new one awaits you tomorrow.');
       default:            return null;
     }
   }

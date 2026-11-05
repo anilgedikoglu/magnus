@@ -10,6 +10,9 @@
 //     çıkarır, cümle havuzlarından metnin özetine göre deterministik seçimle yorum kurar
 //     (aynı rüya → aynı yorum). Bilinen bir sembol eşleştiyse anlamı bir cümle olarak girer.
 // Eğlence amaçlıdır (açılış yasal bilgilendirmesi). Sağlık/ölüm/şiddet kehaneti üretmez.
+//
+// ⚠️ 2026-11-05 (Anıl: "sormasın, ne olursa olsun cihazda olacak"): ekran YALNIZ [offline] kullanır;
+// izin penceresi ve ağ isteği kaldırıldı. [interpret]/çevrimiçi yol testli olarak duruyor, arayüzde çağrılmıyor.
 import 'dart:convert';
 import 'dart:math';
 

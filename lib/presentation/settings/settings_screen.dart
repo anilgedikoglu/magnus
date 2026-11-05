@@ -2865,36 +2865,9 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
             // ── Günlük hakları sıfırla ─────────────────────────────────────
             Future<void> doReset() async {
               final prefs = await SharedPreferences.getInstance();
-              // ⚠️ YENİ GÜNLÜK FAL EKLENİNCE BURAYA DA EKLE
-              for (final key in const [
-                'motivasyon_bugun_tarih',
-                'olumlama_bugun_tarih',
-                'ozlusoz_bugun_tarih',
-                'tarot_bugun_tarih',
-                'kahve_bugun_tarih',
-                'astroloji_bugun_tarih',
-                'kaderkitabi_bugun_tarih',
-                'dertortagi_bugun_tarih',
-                'acigercekler_bugun_tarih',
-                'durugoru_bugun_tarih',
-                'iching_bugun_tarih',
-                'japonfali_bugun_tarih',
-                'kadercarki_bugun_tarih',
-                'askuyumu_bugun_tarih',
-              ]) {
-                await prefs.remove(key);
-              }
-              // Numeroloji: tüm cache sıfırla
-              for (final key in const [
-                'num_bugun_tarih', 'num_bugun_metin', 'num_bugun_unlock',
-                'num_genel_done',  'num_genel_metin', 'num_genel_unlock',
-                'num_yil_done',
-              ]) {
-                await prefs.remove(key);
-              }
-              final yr = DateTime.now().year.toString();
-              await prefs.remove('num_yil_metin_$yr');
-              await prefs.remove('num_yil_unlock_$yr');
+              // Tek kaynak: lib/data/services/fortune_reset.dart (yeni günlük fal oraya eklenir).
+              // Tavşan / Kısmetim / Arabam / Evim de sıfırlanır (Anıl, 2026-11-05).
+              await FortuneReset.resetDailyRights(prefs);
               setPanelState(() => resetDone = true);
             }
 
@@ -3095,8 +3068,9 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
       for (final item in items) {
         await ref.read(inboxProvider.notifier).deleteItem(item.id);
       }
-      // Yeni fal türleri de hiç alınmamış gibi (Tavşan, Kısmetim, Arabam, Evim, rüya AI hakkı).
-      await FortuneReset.resetNewFortunes(ref.read(sharedPrefsProvider));
+      // Alınan fallar silinir: yeni fal türleri de hiç alınmamış gibi. Günlük haklar KALIR —
+      // onları yönetici panelindeki "Günlük Hakları Sıfırla" sıfırlar (Anıl, 2026-11-05).
+      await FortuneReset.deleteTakenFortunes(ref.read(sharedPrefsProvider));
     }
   }
 }

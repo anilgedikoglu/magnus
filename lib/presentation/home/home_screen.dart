@@ -147,7 +147,7 @@ class HomeScreen extends ConsumerStatefulWidget {
 }
 
 class _HomeScreenState extends ConsumerState<HomeScreen>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   // Tek ana menü (Anıl, 2026-11-05): 3 sütun × 9 satır, yukarıdan aşağı kaydırmalı.
   final ScrollController _gridScrollCtrl = ScrollController();
   final ScrollController _chatScrollCtrl = ScrollController();
@@ -159,6 +159,83 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   late final AnimationController _hdrCtrl =
       AnimationController.unbounded(vsync: this, value: _hdrTarget);
 
+  // Bant kaydırılıp gizlenmişken yeni balon gelirse bant ÜSTTE belirir, yazı sonra başlar;
+  // bandın dışına dokununca yavaşça geri kalkar (Anıl, 2026-11-06).
+  late final AnimationController _hdrReveal = AnimationController(vsync: this);
+  int? _bubbleGate; // bant inerken yeni balon bekletilir
+  int _lastShown = 0;
+  bool _downInBand = false;
+  bool _downDismiss = false; // bu dokunuş yalnız beliren bandı kapatır (kart açmaz)
+
+  double get _layerHeight => MediaQuery.paddingOf(context).top + max(0.0, _hdrCtrl.value);
+
+  /// Kaydırmanın gerektirdiği kayma (0 = bant yerinde, katman boyu = tamamen gizli).
+  double get _naturalShift {
+    if (!_gridScrollCtrl.hasClients) return 0;
+    return (_gridScrollCtrl.positions.first.pixels - kHomeHeaderHold)
+        .clamp(0.0, _layerHeight)
+        .toDouble();
+  }
+
+  /// Bandın ekrandaki alt kenarı (kaydırma ve belirme payıyla).
+  double get _bandBottom => _layerHeight - _naturalShift * (1 - _hdrReveal.value);
+
+  /// Gösterilecek balon sayısı: bant gizliyken yeni balon gelirse bant inene kadar bekletir.
+  int _shownBubbles() {
+    final v = _visibleBubbles;
+    if (v > _lastShown &&
+        _lastShown > 0 &&
+        _bubbleGate == null &&
+        _naturalShift > 0.5 &&
+        _hdrReveal.value < 0.99) {
+      _bubbleGate = _lastShown;
+      WidgetsBinding.instance.addPostFrameCallback((_) => _revealHeader());
+    }
+    final gate = _bubbleGate;
+    final shown = gate == null ? v : min(v, gate);
+    _lastShown = shown;
+    return shown;
+  }
+
+  void _revealHeader() {
+    if (!mounted) return;
+    void release() {
+      if (mounted && _bubbleGate != null) setState(() => _bubbleGate = null);
+    }
+
+    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    if (reduce) {
+      _hdrReveal.value = 1;
+      release();
+      return;
+    }
+    _hdrReveal
+        .animateTo(1, duration: const Duration(milliseconds: 280), curve: Curves.easeOutCubic)
+        .whenCompleteOrCancel(release);
+  }
+
+  /// Izgaraya dokunuş: bandın üstündeyse altındaki kart açılmasın; bant "belirmiş" ve
+  /// kaydırma onu gizlemeyi gerektiriyorsa yavaşça geri kalkar.
+  void _onGridPointerDown(PointerDownEvent e) {
+    _downInBand = e.localPosition.dy < _bandBottom;
+    _downDismiss = false;
+    if (_downInBand || _hdrReveal.value == 0) return;
+    if (_naturalShift <= 0.5) {
+      _hdrReveal.value = 0;
+      return;
+    }
+    _downDismiss = true; // açılır pencere dışı gibi: bu dokunuş kart açmaz
+    _hdrReveal.animateBack(0,
+        duration: const Duration(milliseconds: 520), curve: Curves.easeInOutCubic);
+  }
+
+  void _onGridScroll() {
+    // Başa dönülünce belirme payı sessizce sıfırlanır (görünüşte fark yok).
+    if (_hdrReveal.value > 0 && !_hdrReveal.isAnimating && _naturalShift <= 0.5) {
+      _hdrReveal.value = 0;
+    }
+  }
+
   void _onRowHeight(int i, double h) {
     if (!mounted || _rowH[i] == h) return;
     setState(() => _rowH[i] = h);
@@ -169,8 +246,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
   /// Layer 2'nin hedef yüksekliği: son en çok [kChatMaxRows] satırın ölçülen boyları +
   /// aralıklar + iç boşluklar. Ölçülmemiş satır için ilk satırın boyu (yoksa tahmin).
-  double _chatTargetHeight() {
-    final n = _visibleBubbles;
+  double _chatTargetHeight(int n) {
     final start = max(0, n - kChatMaxRows);
     final fallback = _rowH[0] ?? _kChatRowEstimate;
     var h = kChatPadTop + kChatPadBottom + (n - start - 1) * kChatRowGap;
@@ -247,6 +323,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   @override
   void initState() {
     super.initState();
+    _gridScrollCtrl.addListener(_onGridScroll);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _scheduleUnlockTimer();
       _refreshCredits();
@@ -550,6 +627,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     _gridScrollCtrl.dispose();
     _chatScrollCtrl.dispose();
     _hdrCtrl.dispose();
+    _hdrReveal.dispose();
     super.dispose();
   }
 
@@ -821,7 +899,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     //   Ofset = ızgara kaydırması, [0, layer 2 yüksekliği] aralığına kırpılmış.
     final topInset = MediaQuery.paddingOf(context).top;
     // Hedef boy değişince (yeni satır, satır kırılması) bant yayla ona gider.
-    final chatHeight = _chatTargetHeight();
+    final shown = _shownBubbles();
+    final chatHeight = _chatTargetHeight(shown);
     if (chatHeight != _hdrTarget) {
       _hdrTarget = chatHeight;
       WidgetsBinding.instance.addPostFrameCallback((_) => _retargetHeader(chatHeight));
@@ -836,10 +915,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
           // Sola kaydırma → gelen kutusu (barda ana menünün sağındaki sekme).
           // Yön kilitli: dikey kaydırma bir kez başladıysa sekme değişmez.
           Positioned.fill(
-            child: TabSwipe(
-              onSwipeLeft: () =>
-                  selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
-              child: _buildGrid(context, topExtra: topInset + kHomeLayerGap),
+            child: Listener(
+              onPointerDown: _onGridPointerDown,
+              child: TabSwipe(
+                onSwipeLeft: () =>
+                    selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
+                child: _buildGrid(context, topExtra: topInset + kHomeLayerGap),
+              ),
             ),
           ),
           // ── Menu layer 2: sohbet balonları (ızgarayla birlikte kayar) ────────
@@ -853,6 +935,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             child: ScrollFollower(
               controller: _gridScrollCtrl,
               hold: kHomeHeaderHold,
+              reveal: _hdrReveal,
               child: RepaintBoundary(
                 child: AnimatedBuilder(
                   animation: _hdrCtrl,
@@ -874,7 +957,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                           // yeni balon "yukarı kaydırma" sayılıp liste başındayken barı küçültürdü.
                           child: NotificationListener<ScrollNotification>(
                             onNotification: (_) => true,
-                            child: _buildChatHeader(chatHeight),
+                            child: _buildChatHeader(chatHeight, shown),
                           ),
                         ),
                       ),
@@ -890,7 +973,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   }
 
   /// [height]: son en çok 3 satır kadar; daha eski balonlar yukarı kayıp gizlenir.
-  Widget _buildChatHeader(double height) {
+  Widget _buildChatHeader(double height, int shown) {
     // Tüm balonları tek listede birleştir (sabit 2 + dinamik ekstralar)
     final bubbles = [
       _ExtraBubble(
@@ -908,7 +991,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
     // Şu an ekranda görünen balon sayısı
     // (_typingIndex balon tamamlandıkça artar; bubbles.length ile sınırla)
-    final visibleCount = (_typingIndex + 1).clamp(0, bubbles.length);
+    final visibleCount = shown.clamp(0, bubbles.length);
 
     return SizedBox(
       height: height,
@@ -920,7 +1003,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             for (int i = 0; i < bubbles.length; i++)
-              if (i <= _typingIndex) ...[
+              if (i < visibleCount) ...[
                 if (i > 0) const SizedBox(height: kChatRowGap),
                 // Görünen balon sayısına göre eskilere doğru opasite düşür
                 Opacity(
@@ -996,6 +1079,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     final items = [
       for (final it in base)
         _MenuItem(it.title, it.imagePath, it.credits, () {
+          // Sohbet bandının üstüne dokunuş, altındaki kartı açmasın.
+          if (_downInBand || _downDismiss) return;
           MenuUsage.increment(prefs, it.imagePath);
           it.onTap();
         }),

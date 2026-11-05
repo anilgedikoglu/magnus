@@ -141,27 +141,46 @@ class RenderHeaderSpacerSliver extends RenderSliver {
 /// Çocuğunu [controller]'ın ofseti kadar (önce [hold] bekler; 0 … kendi yüksekliği)
 /// yukarı taşır. Ofset boyama anında okunur; kaydırmada yalnız yeniden boyar.
 class ScrollFollower extends SingleChildRenderObjectWidget {
-  const ScrollFollower({super.key, required this.controller, this.hold = 0, super.child});
+  const ScrollFollower(
+      {super.key, required this.controller, this.hold = 0, this.reveal, super.child});
 
   final ScrollController controller;
 
   /// Bu kadar kaydırmaya dek yerinde durur (ızgara altına girer), sonra birlikte kayar.
   final double hold;
 
+  /// 0 = kaydırmaya göre, 1 = kaydırma ne olursa olsun tamamen görünür (ör. gizliyken yeni
+  /// balon gelince bant iner). Kayma = doğal kayma × (1 − reveal).
+  final ValueListenable<double>? reveal;
+
   @override
   RenderScrollFollower createRenderObject(BuildContext context) =>
-      RenderScrollFollower(controller, hold: hold);
+      RenderScrollFollower(controller, hold: hold, reveal: reveal);
 
   @override
   void updateRenderObject(BuildContext context, RenderScrollFollower renderObject) {
     renderObject
       ..controller = controller
-      ..hold = hold;
+      ..hold = hold
+      ..reveal = reveal;
   }
 }
 
 class RenderScrollFollower extends RenderProxyBox {
-  RenderScrollFollower(this._controller, {double hold = 0}) : _hold = hold;
+  RenderScrollFollower(this._controller, {double hold = 0, ValueListenable<double>? reveal})
+      : _hold = hold,
+        _reveal = reveal;
+
+  ValueListenable<double>? _reveal;
+  set reveal(ValueListenable<double>? v) {
+    if (identical(v, _reveal)) return;
+    if (attached) {
+      _reveal?.removeListener(_moved);
+      v?.addListener(_moved);
+    }
+    _reveal = v;
+    _moved();
+  }
 
   double _hold;
   set hold(double v) {
@@ -192,11 +211,13 @@ class RenderScrollFollower extends RenderProxyBox {
   void attach(PipelineOwner owner) {
     super.attach(owner);
     _controller.addListener(_moved);
+    _reveal?.addListener(_moved);
   }
 
   @override
   void detach() {
     _controller.removeListener(_moved);
+    _reveal?.removeListener(_moved);
     super.detach();
   }
 
@@ -205,7 +226,9 @@ class RenderScrollFollower extends RenderProxyBox {
   double get shift {
     if (!_controller.hasClients || !hasSize) return 0;
     final px = _controller.positions.first.pixels;
-    return (px - _hold).clamp(0.0, size.height);
+    final natural = (px - _hold).clamp(0.0, size.height);
+    final r = (_reveal?.value ?? 0).clamp(0.0, 1.0);
+    return natural * (1 - r);
   }
 
   @override

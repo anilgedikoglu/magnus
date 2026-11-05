@@ -227,6 +227,49 @@ void main() {
     expect(l2().bottom, lessThanOrEqualTo(0));
   });
 
+  testWidgets('belirme (reveal): gizli bant kaydırma değişmeden üstte görünür', (t) async {
+    final reveal = ValueNotifier<double>(0);
+    addTearDown(reveal.dispose);
+    await t.pumpWidget(Directionality(
+      textDirection: TextDirection.ltr,
+      child: Stack(children: [
+        Positioned.fill(
+          child: CustomScrollView(controller: ctrl, slivers: [
+            HeaderSpacerSliver(height: height, extra: _inset + _gap, slack: _gap, hold: 120),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, i) => const SizedBox(height: 100),
+                childCount: 30,
+              ),
+            ),
+          ]),
+        ),
+        Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          child: ScrollFollower(
+            controller: ctrl,
+            hold: 120,
+            reveal: reveal,
+            child: const SizedBox(key: ValueKey('bant'), height: 68),
+          ),
+        ),
+      ]),
+    ));
+    Rect bant() => t.getRect(find.byKey(const ValueKey('bant')));
+    ctrl.jumpTo(1000);
+    await t.pump();
+    expect(bant().bottom, lessThanOrEqualTo(0), reason: 'kaydırma gizledi');
+    reveal.value = 1;
+    await t.pump();
+    expect(bant().top, 0, reason: 'belirdi');
+    expect(ctrl.offset, 1000, reason: 'menü kımıldamadı');
+    reveal.value = 0.5;
+    await t.pump();
+    expect(bant().top, -34, reason: 'yarı yolda');
+  });
+
   testWidgets('üstte esneme: layer 2 aşağı inmez', (t) async {
     await t.pumpWidget(_Harness(height: height, ctrl: ctrl));
     final g = await t.startGesture(const Offset(200, 300));

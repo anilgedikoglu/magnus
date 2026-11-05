@@ -91,7 +91,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
       await doReveal();
     } finally {
       if (mounted) {
-        HapticFeedback.lightImpact();
+        HapticFeedback.mediumImpact(); // kilit açıldı (2026-11-06)
         setState(() => _opening.remove(field));
       }
     }

@@ -87,7 +87,7 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
       await doReveal();
     } finally {
       if (mounted) {
-        HapticFeedback.lightImpact();
+        HapticFeedback.mediumImpact(); // kilit açıldı (2026-11-06)
         setState(() => _opening.remove(index));
       }
     }

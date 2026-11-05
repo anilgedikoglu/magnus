@@ -17,6 +17,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
@@ -238,7 +239,10 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
             children: konular.map((k) {
               final (key, iconPath, label) = k;
               return GestureDetector(
-                onTap: () => setState(() => _falKonusu = key),
+                onTap: () {
+                  HapticFeedback.lightImpact();
+                  setState(() => _falKonusu = key);
+                },
                 child: Column(
                   children: [
                     // Kare kutu — hücre genişliğini TAM doldurur (görsel yüklenmeden de;

@@ -152,7 +152,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
       await doReveal();
     } finally {
       if (mounted) {
-        HapticFeedback.lightImpact();
+        HapticFeedback.mediumImpact(); // kilit açıldı (2026-11-06)
         setState(() => _opening.remove(key));
       }
     }

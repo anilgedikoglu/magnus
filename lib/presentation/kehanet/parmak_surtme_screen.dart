@@ -2,6 +2,7 @@
 // Parmak sürtme ekranı - kahin seçimi sonrası etkileşim
 
 import 'dart:async';
+import 'dart:math';
 import '../../core/widgets/edge_swipe_back.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -27,12 +28,19 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
   static const double _threshold = 900.0;
 
   Timer? _decayTimer;
+  // %100 patlaması (2026-11-06, Grok): pembe/camgöbeği parçacıklar parmaktan dışa saçılır.
+  Offset? _burstOrigin;
+  DateTime? _burstStart;
+  double get _burstAge => _burstStart == null
+      ? -1
+      : DateTime.now().difference(_burstStart!).inMilliseconds / 1000;
 
   @override
   void initState() {
     super.initState();
     _decayTimer = Timer.periodic(const Duration(milliseconds: 16), (_) {
-      if (_tail.isEmpty || !mounted) return;
+      final burstAlive = _burstStart != null && _burstAge < 0.9;
+      if ((_tail.isEmpty && !burstAlive) || !mounted) return;
       setState(() {
         for (final p in _tail) {
           p.life -= 0.016;
@@ -63,6 +71,8 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
       if ((_progress * 10).floor() > once && _progress < 1.0) HapticFeedback.selectionClick();
       if (_progress >= 1.0 && !_done) {
         _done = true;
+        _burstOrigin = pos;
+        _burstStart = DateTime.now();
         // %100: güçlü vuruş + yankı.
         HapticFeedback.heavyImpact();
         Future.delayed(const Duration(milliseconds: 140), HapticFeedback.mediumImpact);
@@ -173,6 +183,9 @@ class _ParmakSurtmeScreenState extends State<ParmakSurtmeScreen> {
                     borderRadius: BorderRadius.circular(16),
                     child: CustomPaint(
                       painter: _TailPainter(_tail),
+                      foregroundPainter: _burstOrigin == null
+                          ? null
+                          : _BurstPainter(_burstOrigin!, _burstAge),
                       size: Size.infinite,
                     ),
                   ),
@@ -224,6 +237,46 @@ class _TailPoint {
   final Offset pos;
   double life;
   _TailPoint({required this.pos, required this.life});
+}
+
+// ── %100 patlaması ───────────────────────────────────────────────────────────
+
+class _BurstPainter extends CustomPainter {
+  _BurstPainter(this.origin, this.age);
+  final Offset origin;
+  final double age; // sn
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (age < 0 || age > 0.9) return;
+    final rnd = Random(3);
+    final u = age / 0.9;
+    // Halka dalgası
+    canvas.drawCircle(
+      origin,
+      20 + 160 * Curves.easeOutCubic.transform(u),
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3 * (1 - u)
+        ..color = const Color(0xFFFF55FF).withValues(alpha: 0.7 * (1 - u)),
+    );
+    for (var i = 0; i < 24; i++) {
+      final a = rnd.nextDouble() * 2 * pi;
+      final sp = 120 + rnd.nextDouble() * 220;
+      final d = sp * age - 60 * age * age;
+      final p = origin + Offset(cos(a), sin(a)) * d;
+      final r = (2 + rnd.nextDouble() * 3.5) * (1 - u * 0.7);
+      final c = i.isEven ? const Color(0xFFFF55FF) : const Color(0xFF00CCFF);
+      canvas.drawCircle(p, r * 2.2,
+          Paint()
+            ..color = c.withValues(alpha: 0.35 * (1 - u))
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4));
+      canvas.drawCircle(p, r, Paint()..color = Colors.white.withValues(alpha: 0.9 * (1 - u)));
+    }
+  }
+
+  @override
+  bool shouldRepaint(_BurstPainter old) => old.age != age || old.origin != origin;
 }
 
 // ── Kuyruk painter ───────────────────────────────────────────────────────────

@@ -3,6 +3,17 @@
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
 ## Ne yapıldı (2026-11-05) + değişen dosyalar
+- **Gece (build YOK, main'de, 4c9295b4):** Ayrıntı CLAUDE.md "2026-11-05 GÜNCEL" ve "KULLANICI BİLGİLERİ
+  KART DÜZENİ" bölümlerinde.
+  - **Yüzen cam bar tüm uygulamada** (`shell/floating_bar.dart`). Fal ekranlarında seçimsiz.
+  - **Alttaki Geri Git'ler kaldırıldı** (40 ekran, `FloatingBarSpacer`).
+  - **Bar konumu** Instagram ölçümü (`glassBarBottom`).
+  - **Sekme geçişleri:** bar ikonuyla anında; kaydırmayla örten animasyon + titreşim.
+  - **Titreşimler:** kaydırma, fal ikonu, fal gönderildi / hazır.
+  - **Kullanıcı Bilgileri kart kart.** Ayarlar 3. kart; ara panel; kaydırmayla kutular ve halkalar sıkışır.
+  - **Cam saydamlığı** Ayarlar kartında, iOS 26 kaydırıcısı ölçümüyle (`glass_tint.dart`, `liquid_glass_slider.dart`).
+  - Testler 126+ geçiyor (tek kırmızı eski artık `_visual_starfield_capture_test`).
+  - Codex görsel karşılaştırma raporu: `build/visual_check/codex_review/codex_rapor.txt` (gitignored).
 - **Sıvı cam + kaydırmayla küçülme + iki katmanlı ana menü (build YOK, main'de):** Anıl'ın Instagram kayıt/ekran
   görüntülerinden ÖLÇÜLDÜ.
   - (1) Cam bar Impeller'da gerçek ışık kırılması: `shaders/glass_lens.frag` (kenarda dairesel cam pahı, örnek içeri kayar,

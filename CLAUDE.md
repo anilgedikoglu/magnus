@@ -638,6 +638,41 @@ Kontak sayfaları: `screens/kontak_once_A.png` (önce) / `kontak_sonra6_{A,B,C}.
 
 ## ⚠️⚠️⚠️ ANA SEKMELER + CAM ALT BAR (MainTabs / GlassTabBar) — NAVİGASYON MİMARİSİ ⚠️⚠️⚠️
 
+> **2026-11-05 GÜNCEL (Anıl'ın sırayla verdiği istekler; aşağıdaki eski maddeleri bunlar geçersiz kılar):**
+> - **YÜZEN BAR TÜM UYGULAMADA:** bar artık MainTabs'ta DEĞİL. `lib/presentation/shell/floating_bar.dart`
+>   (`FloatingBarHost`) `MaterialApp.builder`'da TÜM rotaların üstünde.
+>   - `/home`'da seçili sekme var; fal ekranlarında SEÇİMSİZ (kapsül yok, ikonlar beyaz).
+>   - Fal ekranında bir ikona dokununca sekme seçilir ve `go('/home')` ile oraya gidilir. Seçimsizden seçiliye
+>     geçişte cam damla belirip oturur.
+>   - Diyalog/alt sayfa açıkken solarak gizlenir (`FloatingBarRouteObserver`, GoRouter observers).
+>   - `/language` ve `/onboarding`'de bar YOK.
+>   - Rota konumu: `currentConfiguration.lastOrNull?.matchedLocation`. Push edilen rota `uri`'yi değiştirmez.
+> - **Alttaki "Geri Git" tuşları KALDIRILDI (40 ekran).** Ekranlar `FloatingBarSpacer` / `floatingBarInset`
+>   (`lib/core/widgets/floating_bar_spacer.dart`) ile bara yer bırakır.
+>   - Geri dönüş yolları: kenardan kaydırma, SwipeBack, Android geri.
+>   - Adımlı ekranlar (numeroloji, yana, dert ortağı) `PopScope` ile bir önceki adıma döner.
+> - **Bar konumu:** `glassBarBottom(safeBottom) = max(safe − 10, 12)`. Instagram ölçümüdür (Pro Max'te alt
+>   kenardan 24 pt); küçülmüş hâl de aynı merkezde.
+> - **Kaydırmayla küçülme TÜM rotalarda.** Yalnız parmakla kaydırma sayılır (UserScrollNotification); programatik
+>   kaydırma sayılmaz.
+>   - Küçülme: 45 pt ölü bölge, karar 72 pt.
+>   - Büyüme: 12 pt ölü bölge, karar 60 pt. Anıl: "çekildiği anda değil".
+> - **Sekme geçişleri:**
+>   - Bar ikonuyla: ANİMASYONSUZ ("tak tak tak").
+>   - KAYDIRMA ile: çağrılan sayfa kaydırma yönünden gelip ötekinin ÜSTÜNÜ örter (320 ms) + güçlü titreşim.
+>     Örnek: gelen kutusunda sağa kaydırma → ana menü soldan gelir.
+> - **Cam:** Impeller'da sıvı cam kırılması (`glass_lens.dart` + `shaders/glass_lens.frag`; uZoom uniform).
+>   - Seçimde kapsül damla gibi bardan taşarak havalanır, ikonları büyütür, yaylı iner.
+>   - Seçili ikon iOS mavisi #5FBBF9.
+>   - Saydamlık `glass_tint.dart`: iOS 26 "Şeffaf ↔ Renkli" kaydırıcısından 13 nokta ölçüldü, varsayılan orta.
+>     Ayar: Kullanıcı Bilgileri 3. kart → CAM / GLASS (`LiquidGlassSlider`, `glassTintProvider`, prefs `glass_bar_tint`).
+> - **Titreşimler:**
+>   - Her kaydırma (sekme, kenardan geri, SwipeBack): güçlü.
+>   - Fal ikonuna dokunuş: orta.
+>   - Yeni fal ("gönderildi"): güçlü + orta.
+>   - Hazırlanan fal açılınca: artan üçlü.
+> - **Kullanıcı Bilgileri = KART KART, kaydırılabilir.** Bkz. aşağıdaki "KULLANICI BİLGİLERİ KART DÜZENİ".
+
 **2026-11-04'ten itibaren** Ana Menü, Kullanıcı Bilgileri ve Gelen Kutusu **rota DEĞİL, sekme**dir.
 `/home` rotası → `MainTabsScreen` (`lib/presentation/shell/main_tabs.dart`): üç ekran tek kapsayıcıda,
 iOS 26 "Liquid Glass" tarzı cam alt bar (`lib/core/widgets/glass_tab_bar.dart`) en üstte, üçünde de
@@ -728,6 +763,31 @@ zamanla turuncu→yeşil, GERÇEK go_router ile geri tuşu: çıkış yok/detay 
 (gerçek uygulama: ana menü üst/orta/alt, başa dönüş, geçiş kareleri, sola kaydırma).
 
 ---
+
+## ⚠️ KULLANICI BİLGİLERİ KART DÜZENİ (2026-11-05) — settings_screen.dart
+
+- **Kartlar ve sıra (yukarıdan aşağı):** tüm alan bir `SingleChildScrollView` içinde kaydırılır.
+  - Kart 1: profil + 11 bilgi kutusu.
+  - Kart 2: Modalite / Polarite / Element.
+  - Kart 3: Ayarlar (dil, CAM/GLASS, uyarılar, tehlikeli işlemler, beyan).
+  - Eski ayarlar penceresi (`_showOptions`) KALDIRILDI. Dişli simgesi 3. karta kaydırır.
+- **Ara panel:** profil (avatar) ya da bir kutucuğa dokununca düzenleyici 1. kartın ALTINDA açılır, 2. ve 3. kartı
+  aşağı iter (`_InsertSlot`, SizeTransition 300 ms). Biri açıkken diğeri istenirse ÖNCE açık olan kapanır,
+  sonra yenisi açılır (`_requestInsert`).
+- **Nizami ölçüler (Anıl: "en ciddi AI yanlışı aralıklar"):** `kProfileCardGap` = 12.
+  - Ekran kenarı → kart: 12 (cam barın yan payıyla aynı).
+  - Kartlar arası ve ara panel arası: 12.
+  - Her kartın ve panelin içi: 16.
+  - Ayarlar bölümleri: üst 16, ayırıcılar 16 iç çizgide.
+  - Ölçüm testi: `build/visual_check/profil_olcu_test.dart`.
+- **Kaydırmayla sıkışma:** ~24 pt parmakla yukarı kaydırınca iki hareket birlikte olur. Aşağı ~24 pt ya da
+  liste başı geri açar. Aşmasız yay `_kProfileCompactSpring` (180/27). Ortak durum `_profileCompactProvider`.
+  - Kart 1'in alt 6 kutusu üst bloğun ALTINA girer: `_CollapsibleLower` (ClipRect + Align bottomCenter
+    heightFactor + hafif solma).
+  - Halkalar 0.8 ölçekle yan yana dizilir (Polarite sol, Modalite orta, Element sağ) ve kart 2 340 → 120
+    kısalır (`_DonutCard`).
+- Klavye: Scaffold `resizeToAvoidBottomInset: true` (bar ayrı katman, yukarı çıkmaz). Metin alanı
+  `scrollPadding` ile düğmeleriyle görünür kayar.
 
 ## Kozmik Gökyüzü Katmanı — Yaşayan Nebula Shader + Twinkle / Kayan Yıldız
 

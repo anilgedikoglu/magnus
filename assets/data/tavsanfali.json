@@ -959,6 +959,217 @@
           "deger": "emekli"
         }
       ]
+    },
+    {
+      "id": 121,
+      "metin": "{{isim}}, önümüzdeki 12 gün içinde {{harf}} harfli biri sana akşam saatlerinde mesaj atacak. Önce sıradan sandığın sohbetin devamını merak edeceksin.",
+      "metin_en": "{{isim}}, within the next 12 days, someone whose name starts with {{harf}} will text you in the evening. What seems like an ordinary conversation at first will leave you wondering what comes next.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "metin": "{{isim}}, {{gun_5}} günü öğleden sonra başvurduğun bir yerden haber gözüme çarptı. Görüşmede daha önce yaptığın bir iş özellikle sorulacak.",
+      "metin_en": "{{isim}}, I caught a glimpse of news arriving on {{gun_5}} in the afternoon from a place you applied to. During the interview, they'll ask you specifically about something you've done before.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "metin": "{{isim}}, bu ay bir çekmecenin arkasında unuttuğun bir kâğıt bulacaksın. Üzerindeki tarih sana ertelediğin bir işi hatırlatacak.",
+      "metin_en": "{{isim}}, this month you'll find a piece of paper you forgot behind a drawer. The date written on it will remind you of something you've been putting off.",
+      "kosullar": []
+    },
+    {
+      "id": 124,
+      "metin": "{{isim}}, önümüzdeki iki hafta içinde yanlışlıkla girdiğin bir sokakta hoş bir dükkân keşfedeceksin. Vitrindeki mavi bir şey aklında kalacak.",
+      "metin_en": "{{isim}}, within the next two weeks, you'll discover a charming little shop on a street you turn into by accident. Something blue in the window will stay on your mind.",
+      "kosullar": []
+    },
+    {
+      "id": 125,
+      "metin": "{{isim}}, gelecek hafta masanda bekleyen bir evrak nihayet ilerleyecek. {{harf}} harfli bir meslektaşının küçük yardımı işini kolaylaştıracak.",
+      "metin_en": "{{isim}}, next week, a document that's been sitting on your desk will finally move forward. A little help from a colleague whose name starts with {{harf}} will make things easier for you.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "metin": "{{isim}}, {{ay_1}} ayında arkadaş ortamında tanışacağın biri seninle aynı şarkıyı sevdiğini söyleyecek. Sohbeti uzatmak için bahanen hazır.",
+      "metin_en": "{{isim}}, in {{ay_1}}, someone you meet through friends will tell you they love the same song as you. There's your perfect excuse to keep the conversation going.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "metin": "{{isim}}, {{gun_3}} günü iki kez çalan bir telefon dikkatimi çekti. İkinci konuşmada beklediğin küçük bir haber nihayet sana ulaşacak.",
+      "metin_en": "{{isim}}, a phone ringing twice on {{gun_3}} caught my attention. During the second conversation, a small piece of news you've been waiting for will finally reach you.",
+      "kosullar": []
+    },
+    {
+      "id": 128,
+      "metin": "{{isim}}, önümüzdeki {{sayi,5,12}} gün içinde sevdiğin kişi eski bir konuşmanızı hatırlatacak. Unuttuğunu sandığın ayrıntıyı saklamış, görüyorum.",
+      "metin_en": "{{isim}}, within the next {{sayi,5,12}} days, someone you love will bring up an old conversation you shared. I can see they've held on to a detail you thought they'd forgotten.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliski_var"
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "metin": "{{isim}}, gelecek hafta eşin eve gelirken sevdiğin bir yiyeceği getirecek. Daha önce söylediğin küçücük bir ayrıntıyı hatırlaması hoşuna gidecek.",
+      "metin_en": "{{isim}}, next week your spouse will bring home one of your favorite foods. You'll love that they remembered a tiny detail you mentioned some time ago.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "metin": "{{isim}}, {{ay_1}} ayında üzerinde çalıştığın bir metne beklediğinden kısa bir geri dönüş gelecek. Kenara aldığın bir kaynak tam yerine oturacak.",
+      "metin_en": "{{isim}}, in {{ay_1}}, you'll receive a shorter response than expected to something you've been writing. A reference you set aside will turn out to be exactly what you need.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "metin": "{{isim}}, bu hafta dolabının arkasında unuttuğun bir kıyafeti bulacaksın. Onu giydiğin ilk gün biri sana güzel bir iltifat edecek, günün rengi değişecek.",
+      "metin_en": "{{isim}}, this week you'll find a piece of clothing you forgot at the back of your wardrobe. The first day you wear it, someone will give you a lovely compliment, brightening your entire day.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "metin": "{{isim}}, {{ay_2}} başında mutfakta denediğin yeni bir tarif beklediğinden iyi olacak. Aileden biri ikinci tabağı isteyecek, tarifi not etmeni söyleyecek.",
+      "metin_en": "{{isim}}, at the beginning of {{ay_2}}, a new recipe you try in the kitchen will turn out better than you expected. Someone in your family will ask for a second helping and tell you to write down the recipe.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "metin": "{{isim}}, {{gun_2}} günü mail kutunda beklediğinden farklı bir başvuru yanıtı göreceksin. Mülakatta sorulacak bir soruya hazırlıksız girsen de cevabın kendiliğinden akacak.",
+      "metin_en": "{{isim}}, on {{gun_2}}, you'll find an unexpected response to an application in your inbox. Even if you're caught off guard by a question during the interview, the answer will flow naturally.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "isariyor"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "metin": "{{isim}}, bu ay sabah yürüyüşünde sık geçtiğin bir sokağın köşesinde yeni açılmış bir dükkân göreceksin. İçeri girdiğinde eski bir tanıdıkla karşılaşacaksın.",
+      "metin_en": "{{isim}}, this month, during your morning walk, you'll notice a newly opened shop on the corner of a street you often pass. When you step inside, you'll run into someone you used to know.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "metin": "{{isim}}, {{gun_2}} günü bir anahtarı ararken cebinde unuttuğun bir kâğıt bulacaksın. Üzerindeki not, aklından çıkmayan bir konuyu çözecek.",
+      "metin_en": "{{isim}}, on {{gun_2}}, while searching for a key, you'll find a piece of paper you forgot in your pocket. The note written on it will help you resolve something that's been on your mind.",
+      "kosullar": []
+    },
+    {
+      "id": 136,
+      "metin": "{{isim}}, bu hafta sevdiğin kişiyle alışverişte küçük bir konuda anlaşamayacaksınız. Akşam gelen kısa bir mesaj, o gerginliği gülüşmeye çevirecek.",
+      "metin_en": "{{isim}}, this week you and someone you love won't see eye to eye about a small thing while shopping. A short message that evening will turn the tension into laughter.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliski_var"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "metin": "{{isim}}, {{gun_2}} günü bir kuyrukta beklerken yanındaki kişiyle bakışlarınız kesişecek. Baş harfi {{harf}} olan biri, {{ay_2}} içinde tekrar karşına çıkacak.",
+      "metin_en": "{{isim}}, on {{gun_2}}, while waiting in line, you'll exchange glances with someone standing beside you. A person whose name begins with {{harf}} will cross your path again during {{ay_2}}.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "metin": "{{isim}}, bu ay eşin fark etmediğini sandığın bir çabanı dile getirecek. Söylediği tek cümle, haftanın yorgunluğunu sana unutturacak.",
+      "metin_en": "{{isim}}, this month your spouse will acknowledge an effort you thought had gone unnoticed. Just one sentence from them will make you forget how exhausting the week has been.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "metin": "{{isim}}, {{ay_2}} içinde bir dergi ya da toplantıdan beklediğin yanıt gelecek. Bir öğrencinin sorusu, aylardır takıldığın bir noktayı açacak.",
+      "metin_en": "{{isim}}, during {{ay_2}}, the response you've been waiting for from a journal or conference will arrive. A student's question will shed light on something you've been struggling with for months.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "metin": "{{isim}}, önümüzdeki {{sayi,4,10}} gün içinde bir defterin ya da notun arasında eski bir liste bulacaksın. Listede yarım kalan bir madde, {{ay_2}} içinde tamamlanacak.",
+      "metin_en": "{{isim}}, within the next {{sayi,4,10}} days, you'll discover an old list tucked inside a notebook or among your notes. One unfinished item on that list will finally be completed during {{ay_2}}.",
+      "kosullar": []
     }
   ]
 }

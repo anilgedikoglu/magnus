@@ -368,6 +368,232 @@
       "metin": "Geleceğine odaklandığımda, bir gelincik tarlasının içinden koşarak geçtiğini görüyorum. {{sayi,4,9}} ay içinde şifalı bir döneme gireceksin. Sana ya da çevrendeki sevdiğin birilerine ait sağlık problemleri hızla ortadan kalkacak. Ben bu durumun altında yatan en büyük sebebin \"iyileşen psikolojiler\" olacağını tahmin ediyorum {{isim}}. Maddi konularda senin ya da ailenin işleri yaver gidecek ve bu rahatlama, sağlıkla ilgili olarak herkese pozitif yansıyacak.",
       "kosullar": [],
       "metin_en": "When I focus on your future, I see a hare running through a daisy field. You will enter a healing period within {{sayi,4,9}} months. Health issues concerning you or your loved ones will quickly disappear. I predict that the main reason behind this will be \"improving mental health\" {{isim}}. Financial matters for you or your family will go smoothly, and this relief will have a positive impact on everyone's health."
+    },
+    {
+      "id": 47,
+      "metin": "Geleceğine odaklandığımda seni {{ay_5}} ayında, geniş aynalı bir mağazanın deneme kabininde görüyorum {{isim}}. Elinde koyu yeşil bir kıyafet var, fiyat etiketine ikinci kez bakıyorsun. Aslında alışveriş için değil, başka bir işini halletmek için çıkmışsın. Telefonuna {{harf}} harfiyle başlayan birinden mesaj geliyor. Yüzündeki ifadeden anlıyorum, bu mesaj seni uzun zamandır beklediğin bir davetin içine çekecek. İlginç olan şu: o gün almaktan vazgeçtiğin kıyafeti birkaç hafta sonra çok daha önemli bir buluşma için yeniden arayacaksın.",
+      "metin_en": "When I focus on your future, I see you in {{ay_5}}, standing in the fitting room of a store with large mirrors, {{isim}}. You're holding a dark green outfit and looking at the price tag for the second time. You actually went out to take care of something else, not to shop. A message arrives on your phone from someone whose name begins with {{harf}}. I can tell from your expression that this message will lead to an invitation you've been waiting for a long time. Here's the interesting part: a few weeks later, you'll go looking for that same outfit you decided not to buy, this time for a much more important meeting.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "metin": "Magnuskop'ta seni {{ay_6}} ayında, küçük ve oldukça kalabalık bir kafede görüyorum {{isim}}. Masanda iki fincan var ama karşındaki sandalye henüz boş. Telefonunu ters çevirmişsin, beklediğin kişiye bakmamaya kararlısın sanki. Biraz sonra içeri giren, üzerinde açık renk gömlek bulunan biri sana gülümseyerek yaklaşıyor. İsminin içinde {{harf}} harfi seçiliyor. Bu kişiyle ilk konuşmanız düşündüğünden kısa sürecek. Fakat ayrılırken söyleyeceği sıradan bir cümle, günlerce aklına takılacak. Kalbinin uzun zamandır kapalı tuttuğun bir köşesi yeniden hareketlenebilir.",
+      "metin_en": "Through the MagnusScope, I see you in {{ay_6}}, sitting in a small, rather crowded café, {{isim}}. There are two cups on your table, but the chair across from you is still empty. You've turned your phone face down, as though you're determined not to check on the person you're waiting for. A little later, someone wearing a light-colored shirt walks in and approaches you with a smile. I can make out the letter {{harf}} in their name. Your first conversation with this person will be shorter than you expect. But an ordinary sentence they say as you part will stay on your mind for days. A corner of your heart that you've kept closed for a long time may begin to stir again.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "metin": "Geleceğinde {{ay_4}} ayında geçen oldukça net bir görüntü yakaladım {{isim}}. Uzun bir koridorda, üzerinde isimlerin bulunduğu bir duyuru panosunun önündesin. Elinde buruşturulmuş bir kâğıt, telefonunda ise açık bir hesap makinesi var. Yanındaki arkadaşın senden önce sevinmeye başlıyor ama sen gördüğüne inanamayıp listeyi ikinci kez inceliyorsun. Bir ders, sınav ya da başvuru konusunda beklediğinden farklı bir sonuç alacaksın. Burada dikkatimi çeken, sana daha önce küçük bir uyarıda bulunan hocanın haklı çıkması. O kişinin tek cümlesi, sonraki tercihini değiştirebilir.",
+      "metin_en": "I've caught a remarkably clear glimpse of your future in {{ay_4}}, {{isim}}. You're standing in a long corridor in front of a noticeboard covered with names. There's a crumpled piece of paper in your hand and an open calculator on your phone. The friend beside you starts celebrating before you do, but you can hardly believe what you're seeing and check the list a second time. You'll receive a result different from what you expected concerning a course, exam, or application. What catches my attention is that a teacher who once gave you a small warning turns out to have been right. That person's single sentence may change the choice you make next.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "metin": "Geleceğine odaklandığımda {{ay_9}} ayında, floresan ışıklı bir toplantı salonunda oturduğunu görüyorum {{isim}}. Önünde üzerinde kırmızı düzeltmeler bulunan bir metin var. Sağındaki kişi gözlüğünü çıkarıp sana bir soru yöneltiyor. Sorunun ilk anda seni rahatsız ettiğini hissediyorum. Bir yayın, proje ya da akademik değerlendirme sürecinde önceden hesaba katmadığın bir ayrıntı gündeme gelecek. Ancak masadan kalkarken yüzündeki ifadeyi de gördüm: rahatlamışsın. Bu toplantının ardından gelecek, başlığında İngilizce {{sayi,4,9}} kelime bulunan bir e-posta, çalışmalarına yeni bir yön verebilir.",
+      "metin_en": "When I focus on your future, I see you in {{ay_9}}, sitting in a meeting room lit by fluorescent lights, {{isim}}. In front of you is a document covered with corrections in red. The person to your right removes their glasses and asks you a question. I sense that the question makes you uncomfortable at first. During a publication, project, or academic review process, a detail you hadn't anticipated will come up. But I've also seen the expression on your face as you leave the table: you're relieved. After this meeting, an email with {{sayi,4,9}} English words in its subject line may take your work in a new direction.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "metin": "Geleceğinde {{ay_5}} ayında bir cumartesi sabahına rastladım {{isim}}. Eşinle mutfaktasınız. Masanın üzerinde yarısı yenmiş bir simit ve açık duran bir telefon var. Eşin sana bir fotoğraf gösteriyor, sen önce pek ilgilenmiyorsun. Sonra telefonu eline alıp görüntüyü büyütüyorsun. Ev düzeninizle, almayı düşündüğünüz bir eşyayla ya da ortak bir harcamayla ilgili kararınız o sabah değişebilir. İşin komik yanı, başta gereksiz bulduğun bu fikri birkaç hafta sonra başkalarına sen anlatacaksın. Eşinin de bunu sana hatırlatacağını görüyorum.",
+      "metin_en": "I came across a Saturday morning in your future, during {{ay_5}}, {{isim}}. You and your spouse are in the kitchen. There's a half-eaten simit, a Turkish sesame bread ring, on the table, along with a phone lying open. Your spouse shows you a photograph, and at first you're not particularly interested. Then you take the phone and zoom in on the image. A decision about your home, something you're considering buying, or a shared expense may change that morning. The funny thing is that a few weeks later, you'll be the one telling other people about this idea you initially thought was unnecessary. And I can see your spouse reminding you of that.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "metin": "{{isim}}, seni {{ay_7}} ayında bir arkadaş toplantısında görüyorum. Masanın üzerinde küçük tabaklar, kenarda ise sarı ışıklı bir abajur var. Karşında oturan biri sana telefonundan bir fotoğraf gösteriyor. Fotoğraftaki kişinin adının {{harf}} harfiyle başladığını seziyorum. Önce konuyu şakaya vuruyorsun, hatta arkadaşının fazla heveslendiğini düşünüyorsun. Fakat {{sayi,2,5}} hafta sonra o kişiyle bambaşka bir ortamda karşılaşacaksın. İlk sohbetinizde aynı konuda zıt düşünmeniz dikkatimi çekti. Gariptir, aranızdaki merakı başlatan şey de tam olarak bu fikir ayrılığı olabilir.",
+      "metin_en": "{{isim}}, I see you at a gathering with friends in {{ay_7}}. There are small plates on the table and a lamp casting a warm yellow glow nearby. Someone sitting across from you shows you a photograph on their phone. I sense that the person in the photograph has a name beginning with {{harf}}. At first, you joke about it, even thinking your friend is getting a little too excited. But {{sayi,2,5}} weeks later, you'll encounter that person in a completely different setting. I notice that during your first conversation, you'll have opposing views on the same subject. Strangely enough, that very disagreement may be what sparks your curiosity about each other.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "metin": "Magnuskop'ta {{ay_4}} ayında seni nişanlınla birlikte uzun bir masanın başında görüyorum {{isim}}. Önünüzde birkaç renk örneği, telefon ekranında ise kaydedilmiş fotoğraflar var. Sen açık bir tonu gösterirken nişanlın koyu olanı tercih ediyor. Aranızda tatlı bir inatlaşma yaşanıyor. Düğün, ev ya da ortak geleceğiniz için yapacağınız bir hazırlıkta küçük bir fikir ayrılığı çıkabilir. Fakat sahnenin sonunda ikinizin de ilk seçmediği üçüncü bir seçeneğe yöneldiğinizi görüyorum. Sizi rahatlatacak asıl gelişme, {{harf}} harfli bir yakından gelecek pratik öneri olabilir.",
+      "metin_en": "Through the MagnusScope, I see you and your fiancé sitting at the end of a long table in {{ay_4}}, {{isim}}. There are several color samples in front of you and saved photographs on a phone screen. While you point to a lighter shade, your fiancé prefers the darker one. A playful battle of wills unfolds between you. A small disagreement may arise while preparing for your wedding, your home, or your future together. But at the end of this scene, I see you both choosing a third option that neither of you originally picked. The development that truly puts your minds at ease may be a practical suggestion from someone close to you whose name begins with {{harf}}.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "metin": "{{isim}}, geleceğine odaklandığımda {{ay_5}} ayında evinde yoğun bir hazırlık görüyorum. Mutfak tezgâhında limon kabukları, küçük bir tabağın içinde ise {{sayi,3,7}} tane kurabiye var. Kapı zili beklediğinden erken çalıyor. Gelen kadın, yanında getirdiği desenli bir poşetten sana küçük bir şey çıkarıp uzatıyor. Bu ziyaretin sıradan bir misafirlik olmadığını hissediyorum. Aile içinde bir süredir konuşulan fakat kimsenin tam olarak üstlenmediği bir konu netleşecek. Senin pratik bir çözümün sayesinde herkes rahatlayabilir. Üstelik son sözü yine sen söyleyeceksin.",
+      "metin_en": "{{isim}}, when I focus on your future, I see a flurry of preparations at your home in {{ay_5}}. There are lemon peels on the kitchen counter and {{sayi,3,7}} cookies on a small plate. The doorbell rings earlier than you expected. A woman arrives and takes a small item from a patterned bag she's brought, then hands it to you. I sense that this isn't an ordinary social visit. A family matter that's been discussed for some time, but that no one has fully taken responsibility for, will finally become clear. Your practical solution may bring everyone relief. And what's more, you'll have the final say once again.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "metin": "Sevgili {{isim}}, seni {{ay_9}} ayında bir kitapçının dar koridorunda görüyorum. Elinde kapağı turuncu olan bir kitap var. Tam yerine koyacakken yanındaki biri kitabın adını söylüyor ve sana bir soru soruyor. Adında {{harf}} harfi bulunan bu kişinin konuşma biçimi dikkatini çekiyor. Önceleri sıradan bir karşılaşma sanacağın bu anın devamı olabilir. Çünkü görüntü değiştiğinde aynı insanla bir başka yerde, bu kez uzun uzun konuştuğunuzu görüyorum. Hayatına girecek kişinin ilk bakışta değil, ikinci karşılaşmada sende iz bırakması ihtimali oldukça güçlü.",
+      "metin_en": "Dear {{isim}}, I see you in the narrow aisle of a bookstore in {{ay_9}}. You're holding a book with an orange cover. Just as you're about to put it back, someone beside you mentions its title and asks you a question. The way this person speaks catches your attention, and their name contains the letter {{harf}}. What initially seems like an ordinary encounter may lead to something more. Because when the vision shifts, I see you talking at length with that same person somewhere else. There's a strong possibility that someone entering your life will leave a lasting impression not at your first meeting, but at your second.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "metin": "Değerli {{isim}}, geleceğine odaklandığımda {{ay_10}} ayında seni eski bir çekmecenin başında görüyorum. Elinde metal gövdeli, yıllardır kullanılmamış bir dolma kalem var. Yanında duran kişi bu kalemin hikâyesini soruyor. Sen gülümseyerek bir isim söylüyorsun. Ardından görüntü değişiyor; geniş bir masada, senden daha genç iki kişiyle bir şeyler planlıyorsun. Yıllar içinde kazandığın tecrübeyi artık yalnızca kendine saklamayacağın bir dönem başlıyor. Daha önce küçük gördüğün bir becerinin başkaları için ne kadar değerli olduğunu fark edeceksin. Bu durum sana yeni bir uğraşın kapısını açabilir.",
+      "metin_en": "Dear {{isim}}, when I focus on your future, I see you standing beside an old drawer in {{ay_10}}. You're holding a fountain pen with a metal body, one that hasn't been used for years. Someone beside you asks about the story behind the pen. You smile and mention a name. Then the vision changes: you're sitting at a large table, planning something with two people younger than you. A period is beginning in which you'll no longer keep the experience you've gained over the years entirely to yourself. You'll realize how valuable a skill you once considered insignificant can be to others. This may open the door to a new pursuit.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": 40
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "metin": "Gözlerimi kapatıp geleceğine baktığımda {{isim}}, seni bir kuyumcu vitrininin önünde durmuş, camdan içeri bakarken görüyorum. Aylardan {{ay_3}}. Sağ elinde küçük, buruşuk bir kağıt var; üzerinde bir isim ve bir telefon numarası yazıyor. O kağıdı cebine koyup gülümsüyorsun, sonra vitrindeki ince bir bileziğe gözün takılıyor. Bileziği almıyorsun ama denemek için içeri giriyorsun. Bileğine taktığında yüzündeki ifadeyi görüyorum: sanki yıllardır kendine söyleyemediğin bir şeyi nihayet söylemişsin gibi. O gün, kendine ayırdığın küçük bir an, ileride büyük bir kararın ilk adımı olacak.",
+      "metin_en": "When I close my eyes and look into your future, {{isim}}, I see you standing outside a jewelry store, gazing through its window. The month is {{ay_3}}. In your right hand is a small, crumpled piece of paper with a name and a phone number written on it. You slip the paper into your pocket and smile, then a delicate bracelet in the display catches your eye. You don't buy it, but you go inside to try it on. When you put it around your wrist, I see the expression on your face: it's as though you've finally told yourself something you haven't been able to admit for years. That day, a small moment you take for yourself will become the first step toward a major decision in the future.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "metin": "Geleceğine odaklandığımda {{isim}}, seni bir otoparkta, arabanın bagajı açık halde görüyorum. Aylardan {{ay_2}}. Bagajda eski bir kutu, içinde çocukluk fotoğrafları ve birkaç anahtar var. Anahtarlardan biri paslanmış, diğeri parlıyor. Parlayan anahtarı eline alıp evirip çeviriyorsun, sonra cebine atıyorsun. O sırada yanına biri yaklaşıyor, adında {{harf}} harfi olan biri. Sana bir şey söylüyor ve sen başını iki kez sallıyorsun. O konuşma, aylardır aklında dönen bir işi netleştirecek. O anahtarı sakla; ileride açacağı kapı seni şaşırtacak.",
+      "metin_en": "When I focus on your future, {{isim}}, I see you in a parking lot with the trunk of your car open. The month is {{ay_2}}. Inside the trunk is an old box containing childhood photographs and several keys. One of the keys is rusty, while another is shining. You pick up the shiny key, turn it over in your hand, then slip it into your pocket. Just then, someone approaches you, a person whose name contains the letter {{harf}}. They say something, and you nod twice. That conversation will bring clarity to something that's been on your mind for months. Keep that key; the door it opens someday will surprise you.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "metin": "Geleceğine odaklandığımda {{isim}}, seni bir sınav salonunun kapısında görüyorum. Aylardan {{ay_2}}, {{gun_3}} günü. Elinde bir kalem var, ucunu ısırmışsın. İçeride sıralar dizilmiş, birkaç kişi oturmuş bekliyor. Sen kapıda bir an duruyorsun, derin bir nefes alıyorsun. Sonra içeri giriyorsun. Sınavın ilk sorusu, geçen dönem bir arkadaşının defterinde gördüğün bir konudan çıkacak. O an, \"iyi ki bakmışım\" diyeceksin. Sonuç beklediğinden iyi olacak; ama asıl kazanç, o gün kendine duyduğun güven olacak.",
+      "metin_en": "When I focus on your future, {{isim}}, I see you standing at the entrance to an examination hall. It's {{gun_3}} in {{ay_2}}. You're holding a pen, and you've been chewing on its tip. Inside, the desks are lined up, and a few people are already sitting and waiting. You pause at the doorway for a moment and take a deep breath. Then you walk in. The first question on the exam will be about a topic you saw in a friend's notebook last term. At that moment, you'll think, 'I'm so glad I looked at that.' Your result will be better than you expected, but the real reward will be the confidence you feel in yourself that day.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "metin": "Geleceğine odaklandığımda {{isim}}, seni bir kütüphanenin sessiz köşesinde, önünde açık bir dergi ve yanında soğumuş bir kahve ile görüyorum. Aylardan {{ay_4}}. Bir makalenin dipnotlarına bakıyorsun, sonra kalemi eline alıp bir cümlenin altını çiziyorsun. O cümle, aylardır aradığın bir boşluğu dolduracak. Yanına bir meslektaşın yaklaşıyor, adında {{harf}} harfi var; sana bir konferans davetinden bahsediyor. İlk tepkin \"ben hazır değilim\" olacak ama sonra kabul edeceksin. O konferansta tanışacağın biri, ileride ortak bir çalışmanın kapısını açacak.",
+      "metin_en": "When I focus on your future, {{isim}}, I see you in a quiet corner of a library, with an open journal in front of you and a cup of cold coffee beside it. The month is {{ay_4}}. You're examining the footnotes of an article, then you pick up your pen and underline a sentence. That sentence will fill a gap you've been trying to resolve for months. A colleague whose name contains the letter {{harf}} approaches and tells you about an invitation to a conference. Your first reaction will be, 'I'm not ready,' but you'll eventually accept. Someone you meet at that conference will later open the door to a collaborative project.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "metin": "Geleceğine odaklandığımda {{isim}}, seni bir apartmanın girişinde, elinde bir anahtar ve bir poşet görüyorum. Aylardan {{ay_3}}, akşamüstü. Poşetin içinde bir ekmek, bir de yoğurt var. Anahtarı kilide sokup çeviriyorsun ama kapı açılmıyor; bir daha deniyorsun, sonra gülüyorsun. Meğer yanlış anahtarmış. Doğru anahtarı bulup kapıyı açtığında içeriden bir koku geliyor: tarçın. O koku, seni çocukluğundaki bir mutfağa götürecek. O akşam, uzun zamandır görüşmediğin biriyle telefonda konuşacaksın; sesi sana iyi gelecek. O konuşma, içindeki bir yükü hafifletecek.",
+      "metin_en": "When I focus on your future, {{isim}}, I see you at the entrance to an apartment building, holding a key and a shopping bag. It's late afternoon in {{ay_3}}. Inside the bag are a loaf of bread and a container of yogurt. You put the key in the lock and turn it, but the door won't open. You try again, then laugh. It turns out you've been using the wrong key. When you find the right one and open the door, a scent drifts from inside: cinnamon. That smell will take you back to a kitchen from your childhood. That evening, you'll speak on the phone with someone you haven't seen in a long time, and hearing their voice will do you good. That conversation will lift a weight from your heart.",
+      "kosullar": []
+    },
+    {
+      "id": 62,
+      "metin": "Geleceğine odaklandığımda {{isim}}, seni bir mobilya mağazasında görüyorum. Aylardan {{ay_4}}. Bir kanepeye oturup elinle kumaşını yokluyorsun. Yanında bir satış danışmanı var, sana renk seçeneklerini gösteriyor. Sen \"bu olabilir\" diyorsun, sonra bir başkasına bakıyorsun. O an yüzünde bir rahatlama var; sanki ilk kez sadece kendin için bir şey seçiyorsun. O gün aldığın o küçük eşya, evine yeni bir hava getirecek. Akşam eve döndüğünde pencereden dışarı bakıp \"burası artık benim\" diyeceksin. İçinden geçen o cümle, yeni bir dönemin başlangıcı olacak.",
+      "metin_en": "When I focus on your future, {{isim}}, I see you in a furniture store. The month is {{ay_4}}. You sit down on a sofa and run your hand over the fabric. A sales assistant beside you shows you the available colors. You say, 'This could work,' then look at another one. There's a sense of relief on your face, as though you're choosing something just for yourself for the first time. That small item you buy that day will bring a fresh feeling into your home. When you return that evening, you'll look out the window and say, 'This place is mine now.' Those words running through your mind will mark the beginning of a new chapter.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "metin": "Geleceğine odaklandığımda {{isim}}, seni eşinle birlikte bir mutfakta görüyorum. Aylardan {{ay_3}}, sabah erken. Eşin ocakta bir şey karıştırıyor, sen tezgaha yaslanmışsın, elinde bir bardak çay. Tezgahın üzerinde bir takvim var; bir gün yuvarlak içine alınmış. O gün için bir planınız var ama henüz konuşmamışsınız. Eşin sana dönüp bir şey soracak; senin cevabın onu güldürecek. O sabah, aranızdaki sessizliğin ne kadar kıymetli olduğunu fark edeceksin. Akşam üzeri ise adında {{harf}} harfi olan biri sizi arayacak; o arama, yazın yapacağınız bir yolculuğun haberini getirecek.",
+      "metin_en": "When I focus on your future, {{isim}}, I see you in a kitchen with your spouse. It's early morning in {{ay_3}}. Your spouse is stirring something on the stove, while you're leaning against the counter with a glass of tea in your hand. There's a calendar on the counter, with one day circled. You have plans for that day, but you haven't talked about them yet. Your spouse will turn and ask you something, and your answer will make them laugh. That morning, you'll realize just how precious the quiet moments between you are. Later in the afternoon, someone whose name contains the letter {{harf}} will call you both. That call will bring news of a journey you'll take in the summer.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "metin": "Geleceğine odaklandığımda {{isim}}, seni bir parkın bankında oturmuş, elinde bir gazete görüyorum. Aylardan {{ay_4}}, öğleden sonra. Yanında bir torba var; içinde kuş yemi. Gazetenin bir sayfasını katlayıp cebine koyuyorsun; o sayfada bir ilan var, bir kurs ya da bir gezinti. Yanına biri gelip oturuyor, adında {{harf}} harfi var. Sohbet başlıyor; eski günlerden, çocuklardan, bir de bir tariften bahsediyorsunuz. O sohbet, haftalık bir alışkanlığa dönüşecek. O bank, artık senin yerin olacak. Ve o gazetedeki ilanı da sonunda arayacaksın.",
+      "metin_en": "When I focus on your future, {{isim}}, I see you sitting on a park bench with a newspaper in your hands. It's afternoon in {{ay_4}}. There's a bag of birdseed beside you. You fold one page of the newspaper and slip it into your pocket. That page contains an advertisement for a course or an excursion. Someone whose name contains the letter {{harf}} comes and sits beside you. A conversation begins, about old times, children, and even a recipe. That conversation will turn into a weekly tradition. That bench will become your special spot. And eventually, you'll call the number in that newspaper advertisement.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "metin": "Geleceğine odaklandığımda {{isim}}, seni bir kafede, tek başına oturmuş, önünde bir defter ve bir kahve ile görüyorum. Aylardan {{ay_2}}, {{gun_2}} günü. Defterin bir sayfasına bir şeyler karalıyorsun; sonra sayfayı çevirip yeni bir şey yazıyorsun. Yan masada biri var; adında {{harf}} harfi geçiyor. Bir ara göz göze geliyorsunuz, ikiniz de başınızı çeviriyorsunuz. Sonra o kalkıp yanına geliyor, bir şey soruyor; belki kalemin, belki defterin hakkında. Kısa bir sohbet başlıyor. O sohbet, birkaç gün sonra bir mesaja dönüşecek. O mesajı okuduğunda, içinden \"işte bu\" diyeceksin.",
+      "metin_en": "When I focus on your future, {{isim}}, I see you sitting alone in a café with a notebook and a coffee in front of you. It's {{gun_2}} in {{ay_2}}. You're scribbling something on a page, then you turn it over and write something new. There's someone at the next table whose name contains the letter {{harf}}. At one point, your eyes meet, and you both look away. Then that person gets up and approaches you, asking something, perhaps about your pen or your notebook. A brief conversation begins. A few days later, that conversation will turn into a message. When you read it, you'll think to yourself, 'This is it.'",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "metin": "Geleceğine odaklandığımda {{isim}}, seni bir merdiven boşluğunda, elinde bir kutu ile görüyorum. Aylardan {{ay_4}}. Kutunun içinde eski mektuplar, birkaç fotoğraf ve bir anahtarlık var. Merdivenlerden inerken bir mektup düşüyor; eğilip alıyorsun. Zarfın üzerindeki el yazısını tanıyorsun ama kim olduğunu çıkaramıyorsun. O mektubu açıp okuduğunda, geçmişte kalmış bir konu yeniden gündemine gelecek. Ama bu kez panik yapmayacaksın; çünkü artık o konuya farklı bakıyorsun. O mektubu okuduktan sonra birine mesaj atacaksın; o mesaj, aylardır süren bir sessizliği bozacak. Kutuyu yerine kaldırırken hafifleyeceksin.",
+      "metin_en": "When I focus on your future, {{isim}}, I see you in a stairwell, holding a box. The month is {{ay_4}}. Inside the box are old letters, several photographs, and a keychain. As you walk down the stairs, a letter falls out. You bend down and pick it up. You recognize the handwriting on the envelope, but you can't quite remember whose it is. When you open and read that letter, an issue from the past will resurface in your life. But this time, you won't panic, because you now see the matter differently. After reading the letter, you'll send someone a message, breaking a silence that's lasted for months. As you put the box back where it belongs, you'll feel lighter.",
+      "kosullar": []
     }
   ]
 }

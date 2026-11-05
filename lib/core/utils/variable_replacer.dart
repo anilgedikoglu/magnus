@@ -66,6 +66,10 @@ class VariableReplacer {
 
   static final Random _rng = Random();
 
+  /// Uygulama İngilizce mi? (app.dart dil sağlayıcısından ayarlanır.) Ay / gün / mevsim adları
+  /// `metin_en` metinlerinde İngilizce basılsın diye (önceden hep Türkçe: "during Ocak").
+  static bool isEn = false;
+
   /// Main replacement function. Takes template text and a variable map,
   /// returns the fully resolved string.
   static String replace(String template, Map<String, String> variables) {
@@ -922,9 +926,11 @@ class VariableReplacer {
 
   // ── Yardımcılar ─────────────────────────────────────────────────────────────
 
+  // Adlar "Tr" sonekli kaldı ama [isEn] açıksa İngilizce döner (çağrı yerleri değişmesin diye).
   static String _dayOfWeekTr(int weekday) {
     const days = ['', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'];
-    return days[weekday];
+    const daysEn = ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    return (isEn ? daysEn : days)[weekday];
   }
 
   static String _monthTr(int month) {
@@ -932,14 +938,18 @@ class VariableReplacer {
       '', 'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
       'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık',
     ];
-    return months[month];
+    const monthsEn = [
+      '', 'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December',
+    ];
+    return (isEn ? monthsEn : months)[month];
   }
 
   static String _seasonTr(int month) {
-    if (month >= 3 && month <= 5) return 'İlkbahar';
-    if (month >= 6 && month <= 8) return 'Yaz';
-    if (month >= 9 && month <= 11) return 'Sonbahar';
-    return 'Kış';
+    if (month >= 3 && month <= 5) return isEn ? 'Spring' : 'İlkbahar';
+    if (month >= 6 && month <= 8) return isEn ? 'Summer' : 'Yaz';
+    if (month >= 9 && month <= 11) return isEn ? 'Autumn' : 'Sonbahar';
+    return isEn ? 'Winter' : 'Kış';
   }
 
   /// Pick one variation from a list. Uses a stable index derived from

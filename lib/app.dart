@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'core/utils/variable_replacer.dart';
 import 'core/widgets/edge_swipe_back.dart';
 import 'core/widgets/startup_disclaimer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -438,6 +439,8 @@ class MagnusApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
     final locale = ref.watch(localeProvider);
+    // Yer tutucu ay/gün/mevsim adları uygulama diline göre (EN metinlerde İngilizce).
+    VariableReplacer.isEn = locale == 'en';
 
     return MaterialApp.router(
       title: 'Magnus',

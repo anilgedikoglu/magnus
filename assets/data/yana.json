@@ -1028,6 +1028,242 @@
         }
       ],
       "metin_en": "MagnuScope has chosen exactly 17 months ahead and expresses its prophecy with a symbolic message. I see you throwing a coin into a wishing well. In seconds, the coin you throw explodes like confetti, multiplying into tens or even hundreds and comes flying back to you, showering down from above. On the date I have given you, a wish you have been longing for, maybe even one you thought was unlikely, will come true. This wish is related to something materialistic {{isim}}. You may become a owner of a place or a vehicle. Perhaps even more valuable than all of these; you will take charge of something and have a say."
+    },
+    {
+      "id": 69,
+      "tur": "bana",
+      "metin": "Magnuskop'u 4 yıl sonrasına ayarladığımda seni sabah erkenden bir binanın önünde görüyorum {{isim}}. Elinde karton bardakta kahve, omzunda siyah bir çanta var. Telefonuna gelen mesajı okuyup gülümsüyorsun. Mesajı atan kişinin adı {{harf}} harfiyle başlıyor. İçeri girerken güvenlik görevlisi sana adınla sesleniyor. Burası daha önce girmek için çok uğraştığın bir yer. Şimdi ise sanki yıllardır oraya aitmişsin gibi rahatsın.",
+      "metin_en": "When I set the MagnusScope four years into the future, I see you standing outside a building early in the morning, {{isim}}. You're holding a coffee in a paper cup, with a black bag over your shoulder. You read a message on your phone and smile. The sender's name begins with {{harf}}. As you walk inside, the security guard greets you by name. This is a place you once tried so hard to get into. Now you seem completely at ease, as though you've belonged there for years.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": 25
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "tur": "bana",
+      "metin": "Magnuskop'u 3 yıl sonrasına çevirdiğimde seni bir cumartesi akşamı aynanın karşısında görüyorum {{isim}}. Üzerinde koyu yeşil bir elbise var, saçlarını toplamakla açık bırakmak arasında kararsızsın. Telefonun çalıyor. Arayan, sonradan hayatına giren ve adında {{harf}} harfi bulunan biri. Seni aşağıda bekliyor. İşin ilginci, ilk tanıştığınız gün bu insanı biraz fazla ciddi bulmuşsun. Şimdiyse onunla aynı şakaya gülüyorsunuz.",
+      "metin_en": "When I turn the MagnusScope three years into the future, I see you standing in front of a mirror on a Saturday evening, {{isim}}. You're wearing a dark green dress, undecided whether to tie your hair up or leave it down. Your phone rings. It's someone who entered your life later, someone whose name contains the letter {{harf}}. They're waiting for you downstairs. Interestingly, when you first met, you thought this person was a little too serious. Now the two of you are laughing at the same joke.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "tur": "bana",
+      "metin": "Magnuskop'u 2 yıl sonraya ayarladığımda seni geniş camlı bir toplantı odasında görüyorum {{isim}}. Önünde açık bir dizüstü bilgisayar, yanında yarısı içilmiş bir kahve var. Masadaki {{sayi,3,7}} kişiden biri sana dönüp fikrini soruyor. Eskiden böyle anlarda biraz çekingen davranırmışsın ama şimdi herkes seni dinliyor. Toplantıdan çıkınca telefonuna bir ödeme bildirimi düşüyor. Tutarı görünce tekrar bakıyorsun, yanlışlık yok. Emeğinin karşılığını almaya başlamışsın.",
+      "metin_en": "When I set the MagnusScope two years into the future, I see you in a meeting room with large glass windows, {{isim}}. There's an open laptop in front of you and a half-finished coffee beside it. One of the {{sayi,3,7}} people at the table turns to ask for your opinion. You used to be a little hesitant in moments like this, but now everyone is listening to you. As you leave the meeting, a payment notification appears on your phone. You look twice at the amount. There's no mistake. You're finally beginning to reap the rewards of your hard work.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "tur": "bana",
+      "metin": "Magnuskop'u 4 yıl sonrasına çevirdiğimde seni sevgilinle birlikte bir mobilya mağazasında görüyorum {{isim}}. İkiniz de açık renkli bir koltuğun karşısında durmuşsunuz. Sen daha koyu rengini beğeniyorsun, o ise açık olanda ısrarcı. Tatlı bir tartışma dönüyor aranızda. Sonra aynı anda gülmeye başlıyorsunuz. Biraz ileride küçük, yuvarlak bir yemek masası dikkatimi çekti. Anlaşılan birlikte kurduğunuz düzen için alışveriş yapıyorsunuz.",
+      "metin_en": "When I turn the MagnusScope four years into the future, I see you in a furniture store with your partner, {{isim}}. You're both standing in front of a light-colored sofa. You prefer the darker version, but your partner insists on the lighter one. A playful argument unfolds between you. Then you both burst out laughing at the same time. A little farther along, a small round dining table catches my eye. It seems you're shopping for the life you're building together.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "tur": "bana",
+      "metin": "Magnuskop'u 3 yıl sonrasına ayarladığımda seni güneş alan bir balkonun kapısında görüyorum {{isim}}. Üzerinde rahat bir kıyafet, elinde sıcak bir içecek var. İçeriden müzik geliyor. Sehpanın üzerinde iki anahtar ve henüz açılmamış bir zarf duruyor. Bir süredir kendi kararlarınla şekillendirdiğin bir hayatın var. Telefonuna gelen daveti okuyup biraz düşünüyorsun, sonra kabul ediyorsun. Bu kez bir yere gitmek için kimsenin fikrini almak zorunda hissetmiyorsun.",
+      "metin_en": "When I set the MagnusScope three years into the future, I see you standing in the doorway of a sunlit balcony, {{isim}}. You're wearing something comfortable and holding a hot drink. Music drifts in from inside. Two keys and an unopened envelope rest on the coffee table. For some time now, you've been living a life shaped by your own decisions. You read an invitation on your phone, think for a moment, then accept. This time, you don't feel the need to ask anyone's opinion before going somewhere.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "tur": "bana",
+      "metin": "Magnuskop'u 3 yıl sonraki {{ay_3}} ayına ayarladığımda seni bir postanenin yakınında görüyorum {{isim}}. Elinde kahverengi, ince uzun bir paket var. Paketi teslim ettikten sonra yolun karşısındaki küçük kafeye geçiyorsun. Tam oturacakken telefonun çalıyor. Arayan kişiyle en son {{sayi,4,9}} ay önce konuşmuşsun. Önce şaşırıyorsun, ardından hemen bir kâğıt çıkarıp adres not ediyorsun. Bu telefonun ardından beklenmedik bir yolculuk hazırlığı başlayacak gibi.",
+      "metin_en": "When I set the MagnusScope to {{ay_3}}, three years from now, I see you near a post office, {{isim}}. You're holding a long, narrow brown package. After dropping it off, you cross the street to a small café. Just as you're about to sit down, your phone rings. You last spoke to the caller {{sayi,4,9}} months ago. At first you're surprised, then you immediately pull out a piece of paper and write down an address. It looks as though this call will set an unexpected journey in motion.",
+      "kosullar": []
+    },
+    {
+      "id": 75,
+      "tur": "bana",
+      "metin": "Magnuskop'u 5 yıl sonrasına çevirdiğimde seni sabah saatlerinde küçük bir sahil kahvesinde görüyorum {{isim}}. Masanda ince belli çay bardağı, yanında katlanmış bir gazete var. Karşındaki eski dostun sana bir yerin fotoğraflarını gösteriyor. İkiniz de oraya gitmek için tarih belirliyorsunuz. Eskiden böyle planları işlerin yüzünden ertelediğin çok olmuş. Şimdiyse takvimine bakıp rahatça gün seçiyorsun. Hatta dönüşü birkaç gün geciktirmeyi bile konuşuyorsunuz.",
+      "metin_en": "When I turn the MagnusScope five years into the future, I see you at a small seaside café in the morning, {{isim}}. There's a tulip-shaped tea glass on your table and a folded newspaper beside it. An old friend sitting across from you is showing you photographs of a place. The two of you pick a date to go there. In the past, work often forced you to postpone plans like this. Now you simply check your calendar and choose a day without hesitation. You're even discussing staying a few extra days before coming back.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "tur": "bana",
+      "metin": "Magnuskop'u 4 yıl sonraya ayarladığımda seni yabancı bir şehirde, büyük bir konferans salonunun girişinde görüyorum {{isim}}. Boynunda isim kartın, elinde notlarla dolu ince bir dosya var. İçerideki konuşmacılardan biri seni özellikle tanıtıyor. Oturanların arasından {{sayi,2,5}} kişi not almaya başlıyor. Sunum bitince yanına gelen gözlüklü biri ortak bir çalışma öneriyor. İlginç olan, bu kişinin bir yayınını yıllar önce okumuş olman.",
+      "metin_en": "When I set the MagnusScope four years into the future, I see you in an unfamiliar city, standing at the entrance to a large conference hall, {{isim}}. You're wearing a name badge around your neck and holding a slim folder filled with notes. One of the speakers inside makes a point of introducing you. Among the audience, {{sayi,2,5}} people begin taking notes. After your presentation, someone wearing glasses approaches you and suggests working together. What's interesting is that you read one of this person's publications years ago.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "tur": "bana",
+      "metin": "Magnuskop'u 2 yıl sonrasına çevirdiğimde seni bir pazar sabahı kalabalık bir kahvaltı masasında görüyorum {{isim}}. Telefonun masanın kenarında, ekranı aşağı dönük duruyor. Yanındaki kişi bir şey anlatırken öyle içten gülüyorsun ki konuşmasını durdurup sana bakıyor. Bir zamanlar sürekli kontrol ettiğin mesajları artık aklına bile getirmiyorsun. Masadan kalkarken telefonunda eski bir fotoğraf beliriyor. Bir an bakıp ekranı kapatıyorsun. Yüzünde hüzünden çok huzur var.",
+      "metin_en": "When I turn the MagnusScope two years into the future, I see you at a crowded breakfast table on a Sunday morning, {{isim}}. Your phone lies face down near the edge of the table. As the person beside you tells a story, you laugh so wholeheartedly that they stop talking and look at you. The messages you once checked constantly don't even cross your mind anymore. As you get up from the table, an old photograph appears on your phone. You glance at it for a moment, then turn off the screen. There's more peace than sadness in your expression.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "tur": "bana",
+      "metin": "Magnuskop'u 3 yıl sonrasına ayarladığımda seni bir okulun geniş merdivenlerinden inerken görüyorum {{isim}}. Elinde kenarları kıvrılmış bir dosya, sırtında koyu renk bir çanta var. Telefonuna gelen mesajda yalnızca 'Oldu mu?' yazıyor. Sen de gülümseyerek 'Oldu!' diye cevap veriyorsun. Bir süredir hazırlandığın önemli bir sınavı ya da değerlendirmeyi geride bırakmışsın. Kapıda seni bekleyen {{sayi,2,4}} arkadaşın var. İçlerinden biri sevinçle sana sarılıyor.",
+      "metin_en": "When I set the MagnusScope three years into the future, I see you walking down the wide steps of a school, {{isim}}. You're carrying a folder with curled edges and wearing a dark-colored backpack. A message arrives on your phone that simply says, 'Did it work out?' You smile and reply, 'It did!' You've just completed an important exam or assessment you've been preparing for. {{sayi,2,4}} friends are waiting for you at the entrance. One of them throws their arms around you with joy.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "tur": "bana",
+      "metin": "Magnuskop'u 4 yıl sonra bir {{gun_3}} sabahına ayarladığımda, seni bir toplantı odasında ayakta görüyorum {{isim}}. Perde aralık, güneş masaya vurmuş. Elinde bir kalem, tahtada yazan bir tarihi daire içine alıyorsun. Masadaki üç kişi sana bakıyor, biri başını sallıyor. Sonra telefonun titriyor, ekranda bir banka mesajı. Yüzünden 'bu sefer oldu' diye geçtiğini hissediyorum.",
+      "metin_en": "When I set the MagnusScope to a {{gun_3}} morning four years from now, I see you standing in a meeting room, {{isim}}. The curtains are slightly open, and sunlight falls across the table. Holding a pen, you circle a date written on the board. Three people at the table are watching you, and one of them nods. Then your phone vibrates. A message from the bank appears on the screen. I can almost sense the words running through your mind: 'This time, it worked.'",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "tur": "bana",
+      "metin": "Magnuskop'u 1 yıl sonraya ayarladığımda, seni bir merdiven boşluğunda görüyorum {{isim}}. Elinde bir anahtar, yeni bir kapının önündesin. Kilit biraz zor dönüyor, gülüyorsun. Kapı açılınca içeri giriyorsun, içeride boya kokusu var. Bir pencereyi açıyorsun, dışarıda bir sokak lambası yanıyor. Yeni bir şeyin eşiğindesin, bunu biliyorsun.",
+      "metin_en": "When I set the MagnusScope one year into the future, I see you in a stairwell, {{isim}}. You're holding a key, standing in front of a new door. The lock is a little stiff, and you laugh. When the door opens, you step inside. The place smells of fresh paint. You open a window, and a streetlight is glowing outside. You're on the threshold of something new, and you know it.",
+      "kosullar": []
+    },
+    {
+      "id": 81,
+      "tur": "bana",
+      "metin": "Magnuskop'u 3 yıla ayarladığımda, seni bir mutfakta görüyorum {{isim}}. Tezgâhta iki tabak, biri yarım kalmış. Sevgilin arkanda, omzuna yaslanmış, sana telefonundaki bir fotoğrafı gösteriyor. Fotoğrafta bir evin bahçesi var. Bir şeyler planlıyorsunuz, ama bunu henüz yüksek sesle söylememişsiniz gibi. Birbirinize bakıp susuyorsunuz, o suskunluk hoşunuza gidiyor.",
+      "metin_en": "When I set the MagnusScope three years into the future, I see you in a kitchen, {{isim}}. There are two plates on the counter, one of them half-finished. Your partner is behind you, leaning against your shoulder and showing you a photo on their phone. The picture shows the garden of a house. You're planning something together, though it seems neither of you has said it out loud yet. You look at each other and fall silent, enjoying that quiet moment.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "tur": "bana",
+      "metin": "Magnuskop'u 2 yıl sonraya ayarladığımda, seni bir mağazanın ayna karşısında görüyorum {{isim}}. Üzerinde bir elbise, elinde telefon, ekranda eşinle bir görüntülü konuşma açık. O sana bir şey söylüyor, sen başını iki yana sallıyorsun, sonra diğer elbiseyi gösteriyorsun. İkiniz de gülüyorsunuz. Kasada beklerken telefonuna bir mesaj geliyor; bir tarih ve bir yer adı. Bir kutlama planlanıyor.",
+      "metin_en": "When I set the MagnusScope two years into the future, I see you standing in front of a mirror in a store, {{isim}}. You're wearing a dress and holding your phone, with a video call to your spouse on the screen. Your spouse says something, you shake your head, then show them the other dress. You both laugh. While you're waiting at the checkout, a message arrives on your phone: a date and the name of a place. A celebration is being planned.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "tur": "bana",
+      "metin": "Magnuskop'u 4 yıl sonraya ayarladığımda, seni bir tren garında görüyorum {{isim}}. Elinde bir bilet, üzerinde {{harf}} ile başlayan bir şehir yazıyor. Peron kalabalık. Bir an etrafına bakıyorsun, birini arıyorsun gibi. Sonra telefonun çalıyor, ekranda bir isim. Açıyorsun, gülümsüyorsun. 'Geldim' diyorsun. Trende yanına oturacak biri var, bunu biliyorum.",
+      "metin_en": "When I set the MagnusScope four years into the future, I see you at a train station, {{isim}}. You're holding a ticket with the name of a city beginning with {{harf}} printed on it. The platform is crowded. You look around for a moment, as though searching for someone. Then your phone rings, and a name appears on the screen. You answer and smile. 'I'm here,' you say. I know there's someone who will be sitting beside you on the train.",
+      "kosullar": []
+    },
+    {
+      "id": 84,
+      "tur": "bana",
+      "metin": "Magnuskop'u 2 yıl sonraya ayarladığımda, seni bir kütüphanenin sessiz bir köşesinde görüyorum {{isim}}. Önünde açık bir kitap, yanında bir not defteri. Bir paragrafın altını çiziyorsun, sonra durup düşünüyorsun. Telefonun titriyor, bir e-posta bildirimi. Ekranda bir dergi adı ve 'kabul' kelimesi. Gözlerin parıldıyor, ama kimseye söylemiyorsun. Sadece defterine bir tarih yazıyorsun.",
+      "metin_en": "When I set the MagnusScope two years into the future, I see you in a quiet corner of a library, {{isim}}. An open book lies in front of you, with a notebook beside it. You underline a paragraph, then pause to think. Your phone vibrates with an email notification. On the screen, there's the name of a journal and the word 'accepted.' Your eyes light up, but you don't tell anyone. You simply write a date in your notebook.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "tur": "bana",
+      "metin": "Magnuskop'u 4 yıl sonraya ayarladığımda, seni bir araba tamircisinde görüyorum {{isim}}. Eşin yanında, elinde bir kahve. Usta bir şeyler söylüyor, sen başını sallıyorsun. Sonra eşinle göz göze geliyorsunuz, ikiniz de gülüyorsunuz. Arabanın bagajında bir kamp sandalyesi ve bir çadır var. Hafta sonu için bir plan yapmışsınız. Usta anahtarı uzatıyor, sen alıyorsun. Yola çıkmak üzeresiniz.",
+      "metin_en": "When I set the MagnusScope four years into the future, I see you at an auto repair shop, {{isim}}. Your spouse is beside you, holding a coffee. The mechanic explains something, and you nod. Then you and your spouse exchange a glance, and you both laugh. There's a camping chair and a tent in the trunk of the car. You've made plans for the weekend. The mechanic hands you the keys, and you take them. You're about to hit the road.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "tur": "bana",
+      "metin": "Magnuskop'u 5 yıl sonraya ayarladığımda, seni bir dükkânın önünde, vitrine bakarken görüyorum {{isim}}. Camda senin yansıman, arkanda bir sokak. Elinde bir anahtar, parmağında bir yüzük değil, bir ip. Kapıyı açıyorsun, içeri giriyorsun. İçeride bir koku var, yeni boyanmış. Bir masaya oturuyorsun, elini masaya koyuyorsun. Bu masa senin. Bunu biliyorum.",
+      "metin_en": "When I set the MagnusScope five years into the future, I see you standing outside a shop, looking through its window, {{isim}}. Your reflection is in the glass, with a street behind you. You're holding a key, and around your finger there's a piece of string instead of a ring. You unlock the door and step inside. There's a smell of fresh paint. You sit down at a table and rest your hand on it. This table is yours. I know it.",
+      "kosullar": []
+    },
+    {
+      "id": 87,
+      "tur": "bana",
+      "metin": "Magnuskop'u 3 yıl sonraya ayarladığımda, seni bir evin salonunda, yerde oturmuş, bir şeyler kurarken görüyorum {{isim}}. Yanında eşin, elinde bir talimatname. Bir mobilya parçası, birkaç vida. Eşin bir şey söylüyor, sen gülüyorsun. Sonra birlikte bir parçayı yerleştiriyorsunuz. Bitince geri çekilip bakıyorsunuz. İkiniz de yorgunsunuz ama mutlusunuz. Ev, sizin ellerinizle şekilleniyor.",
+      "metin_en": "When I set the MagnusScope three years into the future, I see you sitting on the floor of a living room, putting something together, {{isim}}. Your spouse is beside you, holding an instruction manual. There's a piece of furniture and a few screws. Your spouse says something, and you laugh. Then you fit a piece into place together. When you're finished, you step back and admire your work. You're both tired but happy. This home is taking shape through your own hands.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "tur": "bana",
+      "metin": "Magnuskop'u 2 yıla ayarladığımda, seni bir kitapçının vitrinine bakarken görüyorum {{isim}}. Elinde bir kahve, kapağın üstünde {{harf}} harfiyle başlayan bir isim yazıyor. Yanına biri geliyor, senin de baktığın kitabı gösterip bir şey söylüyor. İlk an bir duraksıyorsun, sonra gülüyorsun. O gün eve dönerken adımların normalden hafif, kendine bir şeyi itiraf etmiş gibi.",
+      "metin_en": "When I set the MagnusScope two years into the future, I see you looking through the window of a bookstore, {{isim}}. You're holding a coffee, and on the cover of a book there's a name beginning with {{harf}}. Someone approaches, points to the book you're looking at, and says something. You hesitate for a moment, then smile. As you walk home that day, your steps feel lighter than usual, as though you've finally admitted something to yourself.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
     }
   ],
   "yasama_dair": [

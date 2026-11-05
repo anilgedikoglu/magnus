@@ -269,13 +269,19 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
       case 'kamu sektoru':            return profileJob == 'kamusektoru';
       case 'özel sektör':
       case 'ozel sektor':             return profileJob == 'ozelsektoru';
+      // Profilin ham meslek değerleri: kendiisi, akademisyen, isariyor, calismiyor (2026-11-05 düzeltme:
+      // önceden 'serbest' (hiç olmayan değer) ve akademisyen→kamu/özel sektör eşleniyordu).
       case 'serbest':
       case 'kendi işini yapıyor':
-      case 'kendi isini yapiyor':     return profileJob == 'serbest';
+      case 'kendi isini yapiyor':     return profileJob == 'kendiisi';
       case 'emekli':                  return profileJob == 'emekli';
       case 'ev hanımı':
       case 'ev hanimi':               return profileJob == 'evhanimi';
-      case 'akademisyen':             return profileJob == 'kamusektoru' || profileJob == 'ozelsektoru';
+      case 'akademisyen':             return profileJob == 'akademisyen';
+      case 'iş arıyor':
+      case 'is ariyor':               return profileJob == 'isariyor';
+      case 'çalışmıyor':
+      case 'calismiyor':              return profileJob == 'calismiyor';
       default:                        return profileJob.replaceAll('_', ' ') == kondisyon;
     }
   }

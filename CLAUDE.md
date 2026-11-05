@@ -6,6 +6,12 @@
 
 ### Sürüm
 - **main'deki sürüm: `10.8.7+261`** (2026-11-05 test build'i: Gece Grimuarı + kişisel verisiz yönetici kapısı).
+  Android: Play **Dahili test** kanalında (üretime/incelemeye GÖNDERİLMEDİ — Anıl: "geliştirmeye devam, yalnız test").
+  iOS: Codemagic ödenmemiş fatura yüzünden KAPALI → **GitHub Actions** `.github/workflows/ios-testflight.yml`
+  (elle tetiklenir, yalnız TestFlight'a yükler; repo secrets gerekir — dosyanın başında liste).
+- **Play'e büyük AAB yükleme (Chrome eklentisi 10 MB sınırı):** AAB'yi 9 MB parçalara böl (`split -b 9000000`),
+  sayfaya gizli `<input type=file>` ekle, her parçayı ayrı `file_upload` ile ver (batch'te toplam 10 MB sınırı),
+  JS'te `Blob` ile birleştir, SHA-256'yı yerel dosyayla karşılaştır, `DataTransfer` ile Play'in `.aab` girişine koy.
 - **⚠️ TOOLCHAIN: Flutter 3.41.5 (`C:\src\flutter\bin\flutter.bat`).** main bunu ister (API 36 = 3.41'in
   `flutter.targetSdkVersion`). `C:\flutter` 3.29.2 ile `pub get` çözülmez. Codemagic de 3.41.5'e hizalandı.
 - **Bir sonraki build: `10.8.8+264`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.

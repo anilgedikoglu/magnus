@@ -22,7 +22,13 @@
   Yönetici "godag" girişindeki gerçek kişisel veri koddan çıkarıldı → `lib/core/utils/admin_gate.dart`
   (nötr profil + `admin_mode` bayrağı; eski cihaz FNV-1a özetiyle tanınır), test `test/admin_gate_test.dart`.
 
+- **Yayın durumu:** Android 261 → Play **Dahili test** (2026-11-05 08:31; üretime/incelemeye gönderilmedi).
+  iOS: Codemagic faturası ödenmediği için derleme kapalı → `.github/workflows/ios-testflight.yml` eklendi.
+
 ## Yarım kalan
+- **iOS 261 TestFlight:** GitHub repo secrets (IOS_CERTIFICATE_P12_BASE64, IOS_CERTIFICATE_PASSWORD,
+  IOS_PROFILE_BASE64, ASC_PRIVATE_KEY, ANTHROPIC_API_KEY) Anıl'ın onayıyla girilince
+  `gh workflow run "iOS TestFlight" --repo anilgedikoglu/magnus --ref main`. Yalnız TestFlight; incelemeye gönderme.
 - **Gerçek cihazda ilk kez bu build'le denenecek:** yeni zemin (grain + vinyet), filmli görsellerin parlaklığı,
   cam bar, Olumlama'daki çift `GrimoireBackdrop` çapraz geçişinin düşük cihazda kare süresi.
 - Dert Ortağı içerik verisinde (200 dert + 1000 tavsiye) İngilizce yok → ayrı görev önerildi.

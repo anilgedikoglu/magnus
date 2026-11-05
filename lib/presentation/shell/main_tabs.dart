@@ -108,7 +108,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
   final Set<int> _built = {};
   final Map<int, TabEntry> _entry = {
     MainTab.profile: TabEntry.left,
-    MainTab.inbox: TabEntry.bottom,
+    MainTab.inbox: TabEntry.right, // Anıl: gelen kutusu HER ZAMAN sağdan sola açılır
   };
   TabEntry? _pendingEntry;
 
@@ -219,7 +219,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
       return;
     }
     if (tab == _current) return; // aynı sekme (ev sayfaları homePageProvider ile)
-    if (tab != MainTab.home) _entry[tab] = entry ?? (tab == MainTab.profile ? TabEntry.left : TabEntry.bottom);
+    if (tab != MainTab.home) _entry[tab] = entry ?? (tab == MainTab.profile ? TabEntry.left : TabEntry.right);
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
     setState(() {
       _built.add(tab);
@@ -234,7 +234,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
     }
   }
 
-  Offset _offsetFor(int tab) => switch (_entry[tab] ?? TabEntry.bottom) {
+  Offset _offsetFor(int tab) => switch (_entry[tab] ?? TabEntry.right) {
         TabEntry.left => const Offset(-1, 0),
         TabEntry.right => const Offset(1, 0),
         TabEntry.bottom => const Offset(0, 1),

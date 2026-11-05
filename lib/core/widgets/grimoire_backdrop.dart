@@ -106,6 +106,9 @@ class _AtmospherePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final rect = Offset.zero & size;
     final shortest = size.shortestSide;
+    // Vinyet dairesi (r×1.6) kutunun çok dışına taşar: kırpılmazsa sekme/rota geçişinde
+    // sayfanın ÖNÜNDE yarı saydam koyu bir perde gibi kayar (Anıl, 2026-11-05 cihazda gördü).
+    canvas.clipRect(rect);
 
     // 1) Mum ışığı — üst ortadan, sıcak altın, çok hafif.
     if (candle > 0) {

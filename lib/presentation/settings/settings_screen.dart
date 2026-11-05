@@ -2183,7 +2183,7 @@ class SettingsScreen extends ConsumerWidget {
   void _showOptions(BuildContext context, WidgetRef ref) {
     showDialog(
       context: context,
-      builder: (_) => Dialog(
+      builder: (dialogCtx) => Dialog(
         backgroundColor: Colors.transparent,
         insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
         child: Container(
@@ -2332,7 +2332,7 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.gold,
                 label: ref.read(l10nProvider).termsOfUse,
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pop(dialogCtx);
                   _showLegalText(
                     context,
                     title: ref.read(l10nProvider).termsOfUse,
@@ -2347,7 +2347,7 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.gold,
                 label: ref.read(l10nProvider).privacyPolicy,
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pop(dialogCtx);
                   _showLegalText(
                     context,
                     title: ref.read(l10nProvider).privacyPolicy,
@@ -2362,7 +2362,7 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.gold,
                 label: ref.read(l10nProvider).explicitConsent,
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pop(dialogCtx);
                   _showLegalText(
                     context,
                     title: ref.read(l10nProvider).explicitConsent,
@@ -2398,7 +2398,7 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.warning,
                 label: ref.read(l10nProvider).resetProfile,
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pop(dialogCtx);
                   _confirmReset(context, ref);
                 },
               ),
@@ -2407,7 +2407,7 @@ class SettingsScreen extends ConsumerWidget {
                 iconColor: AppColors.danger,
                 label: ref.read(l10nProvider).deleteAllReadings,
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pop(dialogCtx);
                   _confirmDeleteInbox(context, ref);
                 },
               ),
@@ -2443,7 +2443,7 @@ class SettingsScreen extends ConsumerWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
                 child: GestureDetector(
-                  onTap: () => Navigator.pop(context),
+                  onTap: () => Navigator.pop(dialogCtx),
                   child: Container(
                     height: 44,
                     decoration: BoxDecoration(
@@ -2478,7 +2478,7 @@ class SettingsScreen extends ConsumerWidget {
   }) {
     showDialog(
       context: context,
-      builder: (_) => Dialog(
+      builder: (dialogCtx) => Dialog(
         backgroundColor: Colors.transparent,
         insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 48),
         child: Container(
@@ -2539,7 +2539,7 @@ class SettingsScreen extends ConsumerWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
                 child: GestureDetector(
-                  onTap: () => Navigator.pop(context),
+                  onTap: () => Navigator.pop(dialogCtx),
                   child: Container(
                     height: 44,
                     decoration: BoxDecoration(

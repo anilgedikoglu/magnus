@@ -869,6 +869,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     // (Codex: VoiceOver/TalkBack kullanıcısı özel swipe'a mahkûm kalmasın).
                     child: Semantics(
                       value: '${_currentPage + 1} / $_totalPages',
+                      // value ile birlikte artış/azalış değerleri de verilmeli (semantics assert'i).
+                      increasedValue: _currentPage < _totalPages - 1
+                          ? '${_currentPage + 2} / $_totalPages'
+                          : null,
+                      decreasedValue:
+                          _currentPage > 0 ? '$_currentPage / $_totalPages' : null,
                       onIncrease: _currentPage < _totalPages - 1 ? _goNext : null,
                       onDecrease: _currentPage > 0 ? _goPrev : null,
                       child: PageView.builder(

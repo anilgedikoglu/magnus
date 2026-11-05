@@ -487,13 +487,17 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Başlık + yüzde
-            Text(
-              '$baslik  %$pct',
-              style: TextStyle(
-                color: color,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
+            // Başlık + yüzde: sayı çubukla birlikte 0'dan hedefe sayar (2026-11-06).
+            AnimatedBuilder(
+              animation: _barAnim,
+              builder: (_, __) => Text(
+                '$baslik  %${(pct * _barAnim.value).round()}',
+                style: TextStyle(
+                  color: color,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  fontFeatures: const [FontFeature.tabularFigures()],
+                ),
               ),
             ),
             const SizedBox(height: 8),

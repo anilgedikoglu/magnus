@@ -6,10 +6,11 @@
 const fs = require('fs');
 
 const args = process.argv.slice(2);
+const getPath = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o); // 'kahinler.likia'
 let yeni, havuz = [];
 if (args[0] === '--havuz-araligi') {
   const [, file, key, a, b] = args;
-  const list = JSON.parse(fs.readFileSync(file, 'utf8'))[key];
+  const list = getPath(JSON.parse(fs.readFileSync(file, 'utf8')), key);
   const ia = +a, ib = +b;
   const inR = e => typeof e.id === 'number' && e.id >= ia && e.id <= ib;
   yeni = list.filter(inR).map(e => ({ ad: `#${e.id}`, metin: e.metin }));
@@ -18,7 +19,7 @@ if (args[0] === '--havuz-araligi') {
   yeni = JSON.parse(fs.readFileSync(args[0], 'utf8')).map((e, i) => ({ ad: e.kaynak ? `${e.kaynak[0]}${e.no}` : `#${i + 1}`, metin: e.metin }));
   if (args[1]) {
     const [file, key] = args[1].split(':');
-    havuz = JSON.parse(fs.readFileSync(file, 'utf8'))[key].map(e => e.metin);
+    havuz = getPath(JSON.parse(fs.readFileSync(file, 'utf8')), key).map(e => e.metin);
   }
 }
 
@@ -45,6 +46,8 @@ for (const y of yeni) {
   if (zaman >= Math.max(4, Math.ceil(havuzZaman * 2))) b.push(`saat zinciri (${zaman} zaman ifadesi)`);
   const belki = (m.match(BELKI) || []).length;
   if (belki >= Math.max(2, Math.ceil(havuzBelki * 2))) b.push(`"belki X, belki Y" (${belki})`);
+  // Cold reading: dar, kontrol edilebilir ayrıntı tutmama ihtimalini artırır (uyarı; karar Claude'un)
+  if (/(?<!\p{L})saat\s*(\{\{sayi|\d)/iu.test(m) || /\d[\d.,]*\s*(TL|lira|₺)|(\{\{sayi[^}]*\}\})\s*(TL|lira)/iu.test(m)) b.push('dar ayrıntı (kesin saat/tutar)');
   const ortak = [...gramlar(kelimeler(m))].filter(g => havuzG.has(g));
   if (ortak.length >= 3) b.push(`havuzla ${ortak.length} ortak 5-gram: ${ortak.slice(0, 2).join(' | ')}`);
   if (b.length) { satir.push(`  ${y.ad}: ${b.join(' · ')}`); if (b.some(x => /Tavsiyem|zinciri|havuzla/.test(x))) ciddi++; }

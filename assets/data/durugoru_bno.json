@@ -1970,6 +1970,202 @@
           "deger": "öğrenci"
         }
       ]
+    },
+    {
+      "id": 113,
+      "metin": "Bugün seni izlerken, elin telefona gidip de okunmamış bir mesajı görünce içinden 'iyi ki' diyeceğini görüyorum {{isim}}. O mesaj uzun zamandır beklediğin bir dönüş olabilir; ya da sadece seni gülümseten küçük bir haber. Sabah biraz dağınık başlasa da, bir fincan çayın ardından toparlanacaksın. Çevrende konuşurken ellerini kullanan birini fark edeceksin; onun anlattığı bir ayrıntı, senin yarım kalmış bir işini hatırlatacak. Akşama doğru ise senden yaşça büyük birinin söylediği kısa bir cümle, omzundan bir yük kaldıracak. Bir de şunu fark edeceksin: 'bugün boşuna yorulmamışım' diyeceksin.",
+      "metin_en": "As I watch you today, I see you reaching for your phone, spotting an unread message, and thinking, 'I'm so glad,' {{isim}}. It might be a reply you've been waiting for, or simply a little piece of news that makes you smile. Even if your morning gets off to a scattered start, you'll pull yourself together after a cup of tea. You'll notice someone nearby who gestures with their hands while speaking; a detail in their story will remind you of something you've left unfinished. Toward evening, a brief remark from someone older than you will lift a weight off your shoulders. And you'll realize something else: you'll find yourself saying, 'All that effort today wasn't for nothing.'",
+      "kosullar": []
+    },
+    {
+      "id": 114,
+      "metin": "Seni izlerken gözüme çarpan ilk şey şu: telefonunda, uzun süredir konuşmadığın bir arkadaşının adını göreceksin {{isim}}. Önce 'ne oldu ki' diye düşüneceksin, sonra cevabı yazarken kendini gülümserken bulacaksın. Küçük bir ödeme ya da iade eline geçebilir; miktarı büyük değil ama 'bu da bir şey' dedirtecek. Öğleden sonra bir planın yarım saat kayabilir, canını sıkma; o boşlukta aklına gelen bir fikir, akşam yapacağın işi kolaylaştıracak. Bir de koyu renk giymiş, senden yaşça büyük birinin sözü kulağına takılacak. Akşam ise kısa bir mesajla için rahatlayacak; yalnız olmadığını hissedeceksin.",
+      "metin_en": "The first thing that catches my eye as I watch you is this: you'll see the name of a friend you haven't spoken to in ages appear on your phone, {{isim}}. At first you'll wonder, 'What's happened?' Then you'll catch yourself smiling as you type your reply. A small payment or refund may come your way; it won't be much, but it'll make you think, 'Well, every little bit helps.' In the afternoon, one of your plans might be pushed back by half an hour. Don't let it bother you; an idea that comes to you during that gap will make your evening task easier. Something said by an older person dressed in dark clothing will also stick in your mind. By evening, a short message will put your mind at ease, reminding you that you're not alone.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "metin": "Bugün çevrende el ele yürüyen birilerini görüp bir an durup iç geçirebilirsin {{isim}}. Ama bu hüzün uzun sürmeyecek. Seni tanıyan birinden beklemediğin bir iltifat alacaksın; o an içini ısıtacak. Bir çekmecede unuttuğun küçük bir eşya eline geçecek ve 'bunu ne çok aramıştım' diyeceksin. Akşama doğru eski bir tanıdıktan bir haber ya da bir paylaşım gözüne çarpacak; bu, aklında kalan bir soruya küçük de olsa cevap verecek. Bir de şunu fark edeceksin: yalnızlığın değil, kendi hayatına dair bir şeyin yolunda gittiği içini rahatlatacak.",
+      "metin_en": "Today, you might catch sight of a couple walking hand in hand and pause for a moment with a quiet sigh, {{isim}}. But that sadness won't last long. Someone who knows you will give you an unexpected compliment, warming your heart. You'll come across a small item you'd forgotten in a drawer and say, 'I've been looking everywhere for this!' Toward evening, some news or a social media post from an old acquaintance will catch your attention, offering at least a partial answer to a question that's been lingering in your mind. And you'll realize something: what brings you comfort won't be about loneliness at all, but the feeling that something in your own life is finally going right.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "metin": "Bugün seni izlerken evin düzeninde küçük bir değişiklik yapacağını görüyorum {{isim}}; uzun süredir bekleyen bir işi bitireceksin. Bir komşunun kapıyı çalması ya da telefonu, günün akışını değiştirebilir. Önce 'şimdi mi' diye içinden geçireceksin, sonra iyi ki açtım diyeceksin. Mutfakta unuttuğun bir şeyi bulacaksın; bu küçük keşif canını sıkacak gibi olsa da hemen ardından güleceksin. Akşama doğru bir yakınından gelen kısa bir haber, içini ferahlatacak. Bugün kendine ayıracağın küçük bir an, bütün günün yorgunluğunu alacak.",
+      "metin_en": "As I watch you today, I see you making a small change around your home, {{isim}}; you'll finally finish something that's been waiting for your attention. A neighbor knocking at your door or calling you could change the course of your day. At first you'll think, 'Right now?' but afterward you'll be glad you answered. You'll discover something you'd forgotten in the kitchen. The little find might annoy you at first, but you'll soon laugh it off. Toward evening, a brief piece of news from someone close to you will bring relief. A small moment you set aside just for yourself today will wash away the day's exhaustion.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "metin": "Gözüme çarpan şu: okulda ya da ders çalışırken, aklın bir an başka yere gidecek {{isim}}. Telefonunda bir arkadaşının mesajını göreceksin; 'hadi buluşalım' diyen ama sonra saatini değiştiren bir mesaj olabilir. Canını biraz sıkacak gibi görünse de, o boşlukta yapman gereken bir işi bitireceksin. Bir kalemin, bir defterin ya da küçük bir eşyanın kaybolduğunu sanıp sonra çantanın içinde bulacaksın. Günün bir anında bir hocanın ya da senden büyük birinin söylediği bir cümle, aklındaki bir soruya ışık tutacak. Akşam ise kısa bir mola, ertesi güne daha istekli başlamanı sağlayacak.",
+      "metin_en": "Here's what catches my eye: while you're at school or studying, your thoughts will wander for a moment, {{isim}}. You'll see a message from a friend on your phone, perhaps suggesting you meet up but then changing the time. It might be a little frustrating, yet you'll use that unexpected gap to finish something you need to get done. You'll think you've lost a pen, a notebook, or another small belonging, only to discover it inside your bag. At some point during the day, something a teacher or an older person says will shed light on a question you've been pondering. In the evening, a short break will help you start the following day with renewed enthusiasm.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "metin": "Bugün bölümde ya da çalışma masanda, uzun süredir beklediğin bir dönüşün geldiğini göreceksin {{isim}}. Bir e-posta ya da kısa bir mesaj olabilir; açtığında önce bir 'nihayet' çekeceksin. Bir makale, bir başvuru ya da yarım kalmış bir iş, bugün attığın küçük bir adımla yerinden oynayacak. Bir meslektaşının söylediği bir ayrıntı, senin aklındaki bir soruyu başka bir açıdan görmeni sağlayacak. Bir öğrencinin ya da genç bir meslektaşın iltifatı, canını sıkan bir şeyi unutturacak. Akşama doğru kısa bir mola, zihnini toparlayacak; 'bugün az ama doğru iş yaptım' diyeceksin.",
+      "metin_en": "Today, in your department or at your desk, I see you receiving a response you've been waiting for, {{isim}}. It could be an email or a short message; when you open it, your first reaction will be, 'Finally!' An article, an application, or an unfinished task will begin moving forward thanks to a small step you take today. A detail mentioned by a colleague will help you look at a question on your mind from another perspective. A compliment from a student or a younger colleague will make you forget something that's been bothering you. Toward evening, a short break will clear your head, and you'll say, 'I didn't do much today, but I did the right things.'",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "metin": "Seni izlerken bugün yeni düzeninin içinde küçük bir aksaklık yaşayabileceğini görüyorum {{isim}}; bir plan kayabilir ya da bir iş beklediğinden uzun sürebilir. İlk anda canın sıkılacak gibi olsa da, hemen ardından işlerin yoluna girdiğini göreceksin. Geçmişten birinin bir konuyu yeniden açması mümkün; bu, seni savunmaya geçirmesin. Sen artık o konuya eskisi gibi bakmıyorsun, bunu fark edeceksin. Telefonunda okunmamış bir mesaj, bir belge ya da bir ödeme haberi günün akışını değiştirecek. Akşama doğru kendine ayırdığın kısa bir an, 'iyi ki bu düzeni kurmuşum' dedirtecek. Yeni bir alışkanlık bugün ilk adımını atacak.",
+      "metin_en": "As I watch you, I see that today you may encounter a small setback in your new routine, {{isim}}. A plan might shift, or a task could take longer than expected. Although you'll initially feel frustrated, you'll soon see things falling into place. Someone from your past may bring up an old issue again; don't let it put you on the defensive. You'll realize that you no longer see that matter the way you once did. An unread message on your phone, a document, or news about a payment will change the course of your day. Toward evening, a little time to yourself will make you think, 'I'm glad I built this new routine.' Today will mark the first step toward a new habit.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "metin": "Bugün kurumda, uzun süredir beklediğin bir evrakın ya da bir işin son adımına yaklaştığını göreceksin {{isim}}. Hemen sonuçlanmayabilir; 'yarın olsun' diyeceksin ama içinden bir rahatlama geçecek. Bir mesai arkadaşının söylediği küçük bir ayrıntı, işini kolaylaştıracak. Amirin ya da senden kıdemli birinin ağzından çıkan bir cümle, aklındaki bir soruyu netleştirecek. Telefonunda okunmamış bir mesaj ya da bir bildirim göreceksin; bu, günün geri kalanını daha katlanılır yapacak. Akşama doğru kısa bir yürüyüş ya da hava almak, günün yorgunluğunu alacak.",
+      "metin_en": "Today at your workplace, you'll see that a document or task you've been waiting on for a long time is approaching its final stage, {{isim}}. It may not be completed immediately; you'll wish it could be done by tomorrow, but you'll still feel a wave of relief. A small detail mentioned by a coworker will make your work easier. Something your supervisor or a more senior colleague says will clarify a question on your mind. You'll notice an unread message or notification on your phone that will make the rest of your day more bearable. Toward evening, a short walk or a little fresh air will help you shake off the day's fatigue.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "metin": "İki ayrı konuşmanın birbirine bağlandığını görüyorum. Biri geçmişte kalmış bir mesele, diğeri ise bugün seni ilgilendiren küçük bir plan. Günün bir anında tanıdığın birinden duyacağın söz, aslında hayatında neyin değişmesini istediğini fark ettirecek sana. {{burc}} burcunun o kendine has tarafı burada kendini gösterebilir; birine yakınlaşmak istiyorsun ama kendi alanından da vazgeçmeye niyetin yok. Haklısın doğrusu. Bir fincanın yanında duran telefonun ekranına bakarken bir haberin geciktiğini düşünebilirsin. Ardından gelecek farklı bir iletişim, beklediğin ilgiyi hiç ummadığın bir yönden hissettirecek. Akşam kendi başına geçirdiğin kısa bir zamanın bile ne kadar kıymetli olduğunu anlayacaksın.",
+      "metin_en": "I see two separate conversations becoming connected. One concerns an issue from the past, while the other involves a small plan that matters to you today. At some point, something you hear from someone you know will make you realize what you truly want to change in your life. That distinctive side of your {{burc}} sign may reveal itself here; you want to grow closer to someone, but you have no intention of giving up your personal space either. And rightly so. While glancing at your phone beside a cup, you may think that a certain piece of news is taking too long to arrive. Then a different message or conversation will make you feel the attention you've been waiting for from a completely unexpected direction. By evening, you'll understand just how precious even a little time spent on your own can be.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "metin": "Açılıp kapanan bir dolap kapağı ve yerini değiştiren birkaç eşya görüyorum. Evinin düzeniyle ilgili uzun zamandır gözüne takılan küçük bir şey var {{isim}}. Bugün onu elden geçirirken daha önce bir kenara kaldırdığın, işine yarayacak bir şey bulabilirsin. Günün güzel sürprizi bununla sınırlı değil. Yakın çevrenden bir kadın, evle veya günlük ihtiyaçlarla ilgili konuştuğunuz bir meseleye olumlu bir cevap verecek. Söylediği küçük bir ayrıntı sana gereksiz bir masraftan kurtulmanın yolunu gösterebilir. Herkesin rahatını düşünürken kendi isteklerini son sıraya koyduğun zamanlar oluyor, bunu saklayamazsın. Akşama doğru kendine ayıracağın kısa bir molada içeceğinin tadı bile başka gelecek. Bugün birinin senden yardım istemesinden çok, sana teşekkür etmesi dikkatimi çekiyor.",
+      "metin_en": "I see a cupboard door opening and closing, and a few belongings being moved around. There's something small about the arrangement of your home that's been bothering you for quite some time, {{isim}}. As you sort it out today, you may find something useful that you previously put away. But the day's pleasant surprises won't end there. A woman close to you will give a positive response about something you've discussed concerning the home or everyday needs. A small detail she mentions may show you how to avoid an unnecessary expense. There are times when you put everyone else's comfort first and leave your own wishes until last. You can't hide that from me. Toward evening, during a short break you take for yourself, even your drink will seem to taste different. What catches my attention today isn't so much someone asking you for help, but someone thanking you.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "metin": "Defter kenarına alınmış bir işaret, üstü çizilmiş bir satır ve yan yana duran iki rakam... Magnuskop'ta bugün eğitim hayatınla ilgili böyle bir görüntü belirdi. Bir ders veya tamamlaman gereken bir çalışma konusunda aklını kurcalayan ayrıntı, bir arkadaşınla yapacağın kısa konuşma sayesinde açıklığa kavuşacak. Özellikle başkalarının kolayca hallettiğini düşündüğün konularda kendine fazla yükleniyorsun {{isim}}. Oysa bugün sana söylenecek basit bir açıklama, aslında düşündüğünden çok daha ileride olduğunu gösterebilir. Günün geri kalanında okul çevrenden birinin planında küçük bir değişiklik olacak ve bu sana kendi işine odaklanmak için zaman kazandıracak. Akşam bitirdiğin bir görevin ardından hissettiğin rahatlama, aldığın nottan bile daha değerli gelecek.",
+      "metin_en": "A mark in the margin of a notebook, a crossed-out line, and two numbers side by side... This is the image that appeared in the MagnusScope today concerning your education. A detail that's been troubling you about a class or an assignment you need to complete will become clear through a brief conversation with a friend. You put too much pressure on yourself, especially when it comes to things you think others handle effortlessly, {{isim}}. Yet a simple explanation you hear today may show you that you're actually much further along than you realize. Later in the day, someone from your school circle will make a small change to their plans, giving you extra time to focus on your own work. The relief you feel after finishing a task in the evening will seem even more valuable than the grade you receive.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "metin": "Geride bıraktığın hayatın bazı alışkanlıkları hâlâ zaman zaman karşına çıkıyor, bunu hissediyorum. Bugün eski düzeninden kalan küçük bir mesele, gündelik bir konuşma sırasında yeniden gündeme gelebilir. Fakat dikkatimi çeken şey o meselenin kendisi değil, senin vereceğin tepki. Eskiden uzun uzun açıklama yapacağın bir konuda şimdi birkaç cümleyle sınırını çizebiliyorsun. Günün ilerleyen bölümünde yeni düzeninle ilgili küçük bir işini tamamlayacak, bir süredir ertelediğin kararın aslında o kadar da zor olmadığını göreceksin. {{isim}}, çevrendeki biri bu değişimini fark edip sana güzel bir söz söyleyecek gibi. Akşam eline aldığın eski bir eşya veya gördüğün tanıdık bir görüntü, hüzünden çok ne kadar yol aldığını düşündürecek. Bu kez geçmiş değil, kendin ağır basacaksın.",
+      "metin_en": "I can sense that certain habits from the life you've left behind still resurface from time to time. Today, a small matter connected to your old routine may come up again during an everyday conversation. But what catches my attention isn't the matter itself; it's how you'll respond. Where you once would have explained yourself at length, you can now establish your boundaries in just a few sentences. Later in the day, you'll complete a small task related to your new routine and realize that a decision you've been postponing isn't nearly as difficult as you imagined. {{isim}}, I have a feeling someone around you will notice this change and say something kind. In the evening, an old possession or a familiar image will remind you how far you've come rather than fill you with sadness. This time, your own needs will outweigh the past.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "metin": "Nişanlınla aranızda konuşulmuş ama son kararı verilmemiş bir ayrıntı görüyorum. Özellikle hazırlıklar ve ortak planlar söz konusu olduğunda ikinizin de farklı konulara önem verdiği zamanlar oluyor. Bugün o ayrıntılardan biri yeniden açılacak. İlk anda üzerinde gereğinden fazla durulduğunu düşünebilirsin; ancak nişanlının söyleyeceği kısa bir söz, aslında senin fikrini ne kadar önemsediğini hissettirecek. Bir de yakın çevrenizden yaşça büyük birinin gündelik bir mesele üzerinden vereceği destek var. Bu destek büyük bir şey olmak zorunda değil ama ikinizin yükünü hafifletecek. {{isim}}, günün geri kalanında telefonunda birlikte baktığınız bir görüntüye yeniden dönebilirsin. Akşam yapacağınız konuşmanın sonunda bir planı biraz daha netleştirerek sevineceksiniz.",
+      "metin_en": "I see a detail that you and your fiancé have discussed but haven't yet made a final decision about. Especially when it comes to preparations and shared plans, there are times when the two of you prioritize different things. Today, one of those details will come up again. At first, you may feel that too much attention is being given to it, but a brief remark from your fiancé will make you realize just how much your opinion matters. I also see support from an older person close to you both, offered through an everyday matter. It doesn't have to be anything grand, but it will lighten the burden on both of you. {{isim}}, later in the day, you may find yourself looking again at an image the two of you viewed together on your phone. By the end of your evening conversation, you'll both be happy to have made one of your plans a little clearer.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "metin": "Bir şarkının birkaç saniyesi veya tanıdık bir ses bugün seni geçmişteki bir ana götürecek. Ayrılığın ardından bazı şeyleri geride bırakmaya karar verdin ama zihnin zaman zaman eski konuşmaların eksik kalan yerlerini tamamlamaya çalışıyor. Bugün bunun üzerinde biraz durabilirsin {{isim}}. Yine de gördüğüm esas gelişme başka. Seni yakından tanıyan birinin göndereceği içten bir mesaj, kendine ne kadar sert davrandığını fark ettirecek. Bu kişinin sözleri, günün geri kalanında kendinle ilgili vereceğin küçük bir karara da etki edecek. Akşam telefonunda veya bulunduğun ortamda uzun zamandır değiştirmeyi düşündüğün bir ayrıntıyı düzenleyebilirsin. Bazen yeni bir başlangıç büyük olaylarla değil, artık görmek istemediğin bir şeyi gözünün önünden kaldırmakla olur.",
+      "metin_en": "A few seconds of a song or a familiar voice will take you back to a moment from your past today. After the breakup, you decided to leave certain things behind, yet your mind still occasionally tries to fill in the missing pieces of old conversations. You may dwell on that a little today, {{isim}}. But the real development I see lies elsewhere. A heartfelt message from someone who knows you well will make you realize how hard you've been on yourself. That person's words will also influence a small decision you make about yourself later in the day. In the evening, you may change something on your phone or in your surroundings that you've been meaning to update for a long time. Sometimes a fresh beginning doesn't come through a major event, but simply through removing something you no longer want to see.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "metin": "Yıllar içinde öğrendiğin bir şeyi bugün senden daha genç birine anlatırken görüyorum. İlginç olan şu ki, sen bunu önemli bir nasihat olarak değil, sohbet arasında söyleyeceksin. Fakat karşındaki kişi sözünü dikkatle dinleyecek ve fikrini soracak. {{yas}} yaşın getirdiği tecrübe bazen sana avantaj sağlıyor, bazen de herkesin düşünemediği ayrıntıları düşünerek kendini yoruyorsun. Günün bir anında geçmişte verdiğin bir karar yeniden aklına gelebilir. Ardından yakın çevrenden duyacağın bir gelişme, o günkü tercihinin sana ne kazandırdığını hatırlatacak. Akşama doğru bir yakınının küçük bir işini kolaylaştırman mümkün. Karşılığında göreceğin içten memnuniyet, bugün kendi adına aldığın en güzel haberlerden biri olacak.",
+      "metin_en": "Today, I see you sharing something you've learned over the years with someone younger than you. What's interesting is that you won't present it as important advice; you'll simply mention it in passing. Yet the person listening will pay close attention and ask for your opinion. The experience that comes with being {{yas}} years old sometimes gives you an advantage, but at other times you exhaust yourself thinking about details that wouldn't even occur to most people. At some point today, a decision you made in the past may return to your mind. Then news from someone close to you will remind you what that choice brought into your life. Toward evening, you may make a small task easier for a loved one. The genuine appreciation you receive in return will be one of the loveliest things that happens to you personally today.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "metin": "Bir arkadaşının sana yönelttiği meraklı bir soru görüyorum. Konusu kalbinle ilgili olabilir {{isim}}. Öyle uzun uzun cevap vermek istemeyeceksin çünkü sen birini hayatına alırken yalnızca heyecana değil, yanında nasıl hissettiğine de önem veriyorsun. Bugün sosyal çevrenden gelecek kısa bir iletişim, bir süredir görüşmediğin birini yeniden hatırlamana neden olabilir. Asıl sevineceğin gelişme ise başka bir konuda. Kendin için düşündüğün küçük bir harcama veya planla ilgili uygun bir fırsat dikkatini çekecek. Bir kadının vereceği olumlu fikir de kararını kolaylaştırabilir. Akşama doğru aynaya baktığında veya sevdiğin bir kıyafeti eline aldığında kendinle ilgili hoşuna giden bir ayrıntı fark edeceksin. Bazen insanın bütün neşesini küçücük bir değişiklik geri getiriyor.",
+      "metin_en": "I see a friend asking you a curious question. It may be about matters of the heart, {{isim}}. You won't feel like giving a long answer, because when you let someone into your life, you care not only about excitement but also about how you feel in their company. A brief message from someone in your social circle today may remind you of a person you haven't seen in a while. But the development that will truly please you concerns something else. An attractive opportunity will catch your eye regarding a small purchase or plan you've been considering for yourself. A woman's encouraging opinion may also make your decision easier. Toward evening, when you look in the mirror or pick up a favorite piece of clothing, you'll notice something about yourself that makes you happy. Sometimes the tiniest change can bring all of a person's joy back.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "metin": "Neden bazı insanlar aynı şeyi tekrar tekrar söylemek zorunda kalır, hiç düşündün mü {{isim}}? Bugün sen de daha önce anlattığın bir meseleyi yeniden açıklarken bulabilirsin kendini. Biraz sabrın sınanacak ama bu kez karşındaki kişi seni gerçekten dinleyecek. Özellikle kısa bir konuşmanın sonunda söylenecek onaylayıcı bir cümle, uzun süredir beklediğin anlaşılma hissini verecek. Başka bir görüntü daha var: açık renkli bir kâğıt veya ekran üzerinde yan yana duran birkaç satır. Günün geri kalanında bunlardan biriyle ilgili olumlu bir bilgiye ulaşacaksın. Uzun zamandır küçük bir belirsizlik yüzünden beklettiğin işin önünü açabilir bu bilgi. Akşam zihninin en azından bir köşesinin sessizleştiğini hissedeceksin. Benim en sevdiğim huzur da budur.",
+      "metin_en": "Have you ever wondered why some people have to repeat the same thing over and over, {{isim}}? Today, you too may find yourself explaining something you've already talked about. Your patience will be tested a little, but this time the other person will genuinely listen. In particular, an affirming remark at the end of a short conversation will give you that feeling of being understood you've been longing for. I see another image as well: a few lines side by side on a light-colored sheet of paper or a screen. Later in the day, you'll receive positive information concerning one of those lines. It may allow you to move forward with something you've kept on hold because of a small uncertainty. By evening, you'll feel as though at least one corner of your mind has finally grown quiet. That's my favorite kind of peace, too.",
+      "kosullar": []
+    },
+    {
+      "id": 130,
+      "metin": "Çalıştığın yerde iki kişinin aynı konuya farklı yorum getirdiğini görüyorum. Bugün bir işin önceliği veya nasıl tamamlanacağı konusunda ufak bir fikir ayrılığı yaşanabilir. Sen önce sessizce dinleyecek, ardından herkesin gözünden kaçan pratik bir ayrıntıyı söyleyeceksin {{isim}}. Özellikle bir mesai arkadaşının vereceği olumlu tepki dikkatimi çekiyor. Yöneticinle veya işin sorumluluğunu üstlenen biriyle yapılacak kısa bir görüşme, beklettiğin bir meselenin netleşmesine yardımcı olabilir. Günün geri kalanında elektronik ortamda tamamlanacak küçük bir işlem de sana zaman kazandıracak. Mesai bittiğinde bile zihnin bazen işte kalıyor, biliyorum. Ama bugün eve dönerken veya kendi köşene çekildiğinde, sonunda hallettiğin o işi düşünüp memnuniyetle gülümseyeceksin.",
+      "metin_en": "I see two people at your workplace interpreting the same issue differently. Today, there may be a minor disagreement over a task's priority or how it should be completed. You'll listen quietly at first, then point out a practical detail everyone else has overlooked, {{isim}}. A coworker's positive reaction particularly catches my attention. A brief discussion with your manager or someone responsible for the task may help clarify an issue you've had on hold. Later in the day, a small procedure completed electronically will also save you time. I know your mind sometimes stays at work even after your shift ends. But today, as you head home or retreat to your own little corner, you'll smile with satisfaction when you think about that task you've finally taken care of.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
     }
   ]
 }

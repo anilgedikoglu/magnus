@@ -6,6 +6,27 @@
 > seçim dosyaları), `scripts/metin_birlestir.js aday|ekle` (kitle→koşul, yer tutucu düzeltme, ekleme),
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
+## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
+- **Toplam eklenen: 338** (tur 1: 100, tur 2: 100, tur 3: 138) — her tur sonunda güncelle.
+- Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
+- Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
+  Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
+  Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
+  Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
+- Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 3 — 2026-11-05 (138 metin; cold reading + altın örnekler + kişiselleştirme; DeepSeek→Codex geçişi)
+
+| Kompartman | Dosya / anahtar | Eşleştirici | Eklenen id | Kaynak |
+|---|---|---|---|---|
+| Durugörü – Bugün (2) | `durugoru_bno.json` › `durugoru_bno` | M1 | 113–130 | ChatGPT 10 (Codex seçti) + DeepSeek 8 (ChatGPT seçti; tekrarlılar elendi) |
+| Kahve – Uğurlama | `kahve_ugurlama.json` › `ugurlamalar` | M1 + konu | 144–183 | ChatGPT 20 (Codex) + DeepSeek 20 (ChatGPT) |
+| Kader Kitabı | `kaderkitabi.json` › `kaderkitabi` | M2 (ham anahtar) | 230–269 | ChatGPT 20 (Codex) + DeepSeek 20 (ChatGPT) |
+| Kâhin Likia | `kahinler.json` › `kahinler.likia` | koşulsuz | likia_23–42 | ChatGPT 10 (Codex) + DeepSeek 10 (ChatGPT) |
+| Kâhin Yousuf | `kahinler.json` › `kahinler.yousuf` | koşulsuz | yousuf_23–42 | ChatGPT 10 (Codex) + Codex 10 (ChatGPT) |
+
+Notlar: DeepSeek brief'teki cold-reading örnek ifadelerini 20 metne aynen serpiştirdi (42 ortak 5-gram) → `metin_secim_temizle.js` eklendi; DeepSeek eşzamanlılığı ~2. Anıl: DeepSeek yerine Codex+ChatGPT. Kader Kitabı'nın ESKİ 25 koşullu metni ölü (`medeni durum=ilişkisi yok` biçimi; ekran `medeni_durum=iliskisi_yok` arar) — yeni metinler doğru biçimde.
+
 ## Tur 1 — 2026-11-05 (toplam 100 metin)
 
 | Kompartman | Dosya / anahtar | Eşleştirici | Eklenen id | Kaynak |

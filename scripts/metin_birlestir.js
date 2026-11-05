@@ -6,6 +6,8 @@
 const fs = require('fs');
 const path = require('path');
 const [mode, ...rest] = process.argv.slice(2);
+// İç içe anahtar desteği: 'kahinler.likia'
+const getPath = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
 
 const ALLOWED_PH = /^(isim|isime|isimi|isimden|isimcigim|harf|sabit_harf|burc|burc_ilkHarfBuyuk|rastgeleburc|yas|meslek|medeni_durum|gelecek_ay|gecen_ay|simdiki_ay|tam saat|saat kac yazi|fiziki|kadinisim|erkekisim|xgundur|kullanici sehri|kullanici sehrinde|nereli|dogum gunu|dogum ayi|dogum yili|dogum ayi yazi)$|^(ay|gun|gunsayi|yil|mevsim|yas)_[+-]?\d+$|^(sayi|sabit_sayi),\d+,\d+$|^(kelime|sabitkelime|data|saat|kelimecins|medenidurum|randomtarih),/;
 
@@ -16,7 +18,9 @@ function kosullar(kitle, matcher) {
   const out = [];
   const add = (degisken, deger) => out.push({ degisken, deger });
   if (matcher === 'M7') return []; // Faloya yalnız koşulsuzu gösterir
-  const M1 = matcher === 'M1', M4 = matcher === 'M4', M5 = matcher === 'M5', M3 = matcher === 'M3';
+  const M1 = matcher === 'M1', M4 = matcher === 'M4', M3 = matcher === 'M3';
+  // M2 (Kader Kitabı, Olumlama, Acı Gerçekler…): M5 gibi ham anahtar/değer (medeni_durum=iliskisi_yok) + yaş sınırı bilir
+  const M2 = matcher === 'M2', M5 = matcher === 'M5' || M2;
   if (/kadın/.test(k)) add('cinsiyet', 'kadin');
   if (/erkek/.test(k)) add('cinsiyet', 'erkek');
   const med = [['evli', 'evli', 'evli', 'evli'], ['ilişkisi yok', 'ilişkisi yok', 'ilişkisi yok', 'iliskisi_yok'],
@@ -42,8 +46,8 @@ function kosullar(kitle, matcher) {
   }
   // Yaş sınırı METİN olarak yazılır ("25"): orijinal veri böyle, ekranların çoğu `deger as String` okur
   // (sayı yazılırsa Kahve/Durugörü filtresi TypeError fırlatır — tur 1-2'de yakalandı).
-  if (/25 yaş ve altı/.test(k) && !M5 && !M3) add('yasmax', '25');
-  if (/40 yaş ve üstü/.test(k) && !M5 && !M3) add('yasmin', '40');
+  if (/25 yaş ve altı/.test(k) && (!M5 || M2) && !M3) add('yasmax', '25');
+  if (/40 yaş ve üstü/.test(k) && (!M5 || M2) && !M3) add('yasmin', '40');
   return out;
 }
 
@@ -57,7 +61,8 @@ function fixPh(metin, warn) {
     const inner = ph.slice(2, -2).trim();
     if (!ALLOWED_PH.test(inner)) warn.push(`bilinmeyen yer tutucu ${ph}`);
   }
-  if (!/[.!?…"”')]\s*$/.test(m.trim())) warn.push('noktalama ile bitmiyor');
+  // Kahve uğurlaması "\n\nMagnus" imzasıyla biter — kesik sayılmaz
+  if (!/[.!?…"”')]\s*$/.test(m.trim()) && !/\n\s*Magnus\s*$/.test(m)) warn.push('noktalama ile bitmiyor');
   return m.trim();
 }
 
@@ -67,10 +72,11 @@ if (mode === 'aday') {
   const [inDir, turDir, tur, id] = rest;
   const meta = JSON.parse(fs.readFileSync(path.join(turDir, `tur${tur}_${id}_meta.json`), 'utf8'));
   const sec = JSON.parse(fs.readFileSync(path.join(turDir, 'secimler.json'), 'utf8'))[id];
-  const pool = JSON.parse(fs.readFileSync(path.join('assets/data', meta.file), 'utf8'))[meta.key];
+  const pool = getPath(JSON.parse(fs.readFileSync(path.join('assets/data', meta.file), 'utf8')), meta.key);
   const existing = new Set(pool.map(e => e.metin.slice(0, 40)));
   const out = [];
-  for (const kaynak of ['chatgpt', 'deepseek']) {
+  // secimler.json'daki model anahtarları (chatgpt + deepseek/codex); "not" gibi açıklama alanları atlanır
+  for (const kaynak of Object.keys(sec).filter(k => Array.isArray(sec[k]))) {
     const arr = JSON.parse(fs.readFileSync(path.join(inDir, `tur${tur}_${id}_${kaynak}.json`), 'utf8'));
     for (const no of sec[kaynak]) {
       const t = arr.find(x => x.no === no);
@@ -95,7 +101,7 @@ if (mode === 'aday') {
   const file = path.join('assets/data', meta.file);
   const raw = fs.readFileSync(file, 'utf8');
   const j = JSON.parse(raw);
-  const pool = j[meta.key];
+  const pool = getPath(j, meta.key);
   const numeric = pool.every(e => typeof e.id === 'number');
   let next = numeric ? Math.max(...pool.map(e => e.id)) + 1 : null;
   const prefix = !numeric ? String(pool[pool.length - 1].id).replace(/\d+$/, '') : '';

@@ -8,7 +8,7 @@
 - **main'deki sürüm: `10.8.7+261`** (2026-11-05 test build'i: Gece Grimuarı + kişisel verisiz yönetici kapısı).
   Android: Play **Dahili test** kanalında (üretime/incelemeye GÖNDERİLMEDİ — Anıl: "geliştirmeye devam, yalnız test").
   iOS: Codemagic ödenmemiş fatura yüzünden KAPALI → **GitHub Actions** `.github/workflows/ios-testflight.yml`
-  (elle tetiklenir, yalnız TestFlight'a yükler; repo secrets gerekir — dosyanın başında liste).
+  (elle tetiklenir, yalnız TestFlight'a yükler; secrets tanımlı). 261 bu yolla TestFlight'a yüklendi (~7 dk).
 - **Play'e büyük AAB yükleme (Chrome eklentisi 10 MB sınırı):** AAB'yi 9 MB parçalara böl (`split -b 9000000`),
   sayfaya gizli `<input type=file>` ekle, her parçayı ayrı `file_upload` ile ver (batch'te toplam 10 MB sınırı),
   JS'te `Blob` ile birleştir, SHA-256'yı yerel dosyayla karşılaştır, `DataTransfer` ile Play'in `.aab` girişine koy.

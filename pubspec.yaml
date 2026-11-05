@@ -1,7 +1,7 @@
 name: magnus_app
 description: Magnus — Fal, Tarot ve Astroloji
 publish_to: 'none'
-version: 10.8.8+264
+version: 10.8.9+267
 
 environment:
   sdk: ^3.7.2
@@ -115,6 +115,7 @@ flutter:
     - assets/images/tavsanfali/
     - assets/images/kismetim/
     - assets/images/arabam/
+    - assets/images/evim/
     - assets/images/test/
     - assets/videos/
     - assets/videos/kahinler/

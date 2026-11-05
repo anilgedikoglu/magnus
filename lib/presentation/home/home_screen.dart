@@ -596,9 +596,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   // ─── Günlük limitli fallar (I-Ching, Japon Falı) — reklam yok, git/gel yok (go) ──
-  void _onDailyFalTap(String type, String route) {
+  /// [revisit] true → hak bitse de ekran açılır (Tavşan Falı bugünün kaydını yeniden gösterir).
+  void _onDailyFalTap(String type, String route, {bool revisit = false}) {
     final remaining = _remainingCredits[type] ?? 1;
-    if (remaining <= 0) {
+    if (remaining <= 0 && !revisit) {
       _showDailyLimitBubble(type);
       return;
     }
@@ -759,7 +760,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         // Rüya Yorumu ile Doğum Haritası arası: Tavşan Falı (günde 1, 2026-11-05)
         _MenuItem(s.rabbitFortune, 'assets/images/tavsanfali/tavsanfali_menu.jpg',
             _remainingCredits['tavsanfali'] ?? 1,
-            () => _onDailyFalTap('tavsanfali', '/tavsanfali')),
+            () => _onDailyFalTap('tavsanfali', '/tavsanfali', revisit: true)),
         _MenuItem(s.birthChart, 'assets/images/dogum.png',
             1, () => _pushWithAd('/dogumharitasi')),
         // Rüya Yorumu'nun altı: Kısmetim Kim? (2026-11-05)
@@ -768,8 +769,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         // Kısmetim'in sağı: Arabam Ne? (2026-11-05)
         _MenuItem(s.whatIsMyCar, 'assets/images/arabam/arabam_menu.jpg', 1,
             () => _pushWithAd('/arabam')),
-        // Son yer: Evim Neresi? gelecek
-        _MenuItem('', 'assets/images/soon_placeholder.png', -1, () {}),
+        // Arabam'ın sağı (son yer): Evim Neresi? (2026-11-05)
+        _MenuItem(s.whereIsMyHome, 'assets/images/evim/evim_menu.jpg', 1,
+            () => _pushWithAd('/evim')),
       ];
   }
 

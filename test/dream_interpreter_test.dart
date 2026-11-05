@@ -30,6 +30,23 @@ void main() {
     expect(a, isNot(contains('İkinci cümle')));
   });
 
+  test('profil adı ağa giden metinde maskelenir (tam ad, parça, Türkçe büyük harf)', () {
+    expect(DreamInterpreter.redactName('Ben Deniz, rüyamda deniz gördüm', 'Deniz'),
+        'Ben {{ISIM}}, rüyamda {{ISIM}} gördüm');
+    expect(DreamInterpreter.redactName('ayşe nur ile yürüyorduk', 'Ayşe Nur'), '{{ISIM}} ile yürüyorduk');
+    expect(DreamInterpreter.redactName("İLKAY'ı gördüm", 'İlkay'), "{{ISIM}}'ı gördüm");
+    expect(DreamInterpreter.redactName('ali geldi', 'Al'), 'ali geldi'); // <3 harf maskelenmez
+  });
+
+  test('kesik ya da tek cümlelik AI yanıtı kabul edilmez', () {
+    expect(DreamInterpreter.isCompleteReading(
+        'Değerli X, rüyanda kedi görmen bolluğa delalettir. Bu bir yeniliğe işarettir. Kapını açık tut.'), isTrue);
+    expect(DreamInterpreter.isCompleteReading(
+        'Değerli X, rüyanda kedi görmen bolluğa delalettir. Bu bir yeniliğe işarettir. Kapını açık'), isFalse);
+    expect(DreamInterpreter.isCompleteReading('Değerli X, rüyanda kedi görmen bolluğa delalettir ve uzun bir yol.'),
+        isFalse);
+  });
+
   test('İngilizce çevrimdışı yorum', () {
     final a = DreamInterpreter.offline(dream: 'I saw a white cat in my dream', name: 'Sam', isEn: true);
     expect(a, startsWith('Dear Sam, seeing a white cat in your dream signifies'));

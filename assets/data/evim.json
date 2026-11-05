@@ -1,0 +1,2902 @@
+{
+ "ilceler": [
+  {
+   "il": "Adana",
+   "ilce": "Seyhan",
+   "kiyi": "ic",
+   "mesafe_km": 45,
+   "profil": "merkez"
+  },
+  {
+   "il": "Adana",
+   "ilce": "Çukurova",
+   "kiyi": "ic",
+   "mesafe_km": 45,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Adana",
+   "ilce": "Karaisalı",
+   "kiyi": "ic",
+   "mesafe_km": 70,
+   "profil": "koy"
+  },
+  {
+   "il": "Adana",
+   "ilce": "Ceyhan",
+   "kiyi": "ic",
+   "mesafe_km": 35,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Adana",
+   "ilce": "Yumurtalık",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "koy"
+  },
+  {
+   "il": "Adana",
+   "ilce": "Kozan",
+   "kiyi": "ic",
+   "mesafe_km": 60,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Adıyaman",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 420,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Adıyaman",
+   "ilce": "Kahta",
+   "kiyi": "ic",
+   "mesafe_km": 430,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Afyonkarahisar",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 250,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Afyonkarahisar",
+   "ilce": "Sandıklı",
+   "kiyi": "ic",
+   "mesafe_km": 260,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Afyonkarahisar",
+   "ilce": "Dinar",
+   "kiyi": "ic",
+   "mesafe_km": 230,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Ağrı",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 500,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Ağrı",
+   "ilce": "Doğubayazıt",
+   "kiyi": "ic",
+   "mesafe_km": 550,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Aksaray",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 230,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Aksaray",
+   "ilce": "Ortaköy",
+   "kiyi": "ic",
+   "mesafe_km": 240,
+   "profil": "koy"
+  },
+  {
+   "il": "Amasya",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 110,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Amasya",
+   "ilce": "Merzifon",
+   "kiyi": "ic",
+   "mesafe_km": 100,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Amasya",
+   "ilce": "Suluova",
+   "kiyi": "ic",
+   "mesafe_km": 95,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Ankara",
+   "ilce": "Çankaya",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "merkez"
+  },
+  {
+   "il": "Ankara",
+   "ilce": "Yenimahalle",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "merkez"
+  },
+  {
+   "il": "Ankara",
+   "ilce": "Keçiören",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "merkez"
+  },
+  {
+   "il": "Ankara",
+   "ilce": "Mamak",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "merkez"
+  },
+  {
+   "il": "Ankara",
+   "ilce": "Etimesgut",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Ankara",
+   "ilce": "Gölbaşı",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Ankara",
+   "ilce": "Sincan",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Ankara",
+   "ilce": "Beypazarı",
+   "kiyi": "ic",
+   "mesafe_km": 310,
+   "profil": "koy"
+  },
+  {
+   "il": "Ankara",
+   "ilce": "Polatlı",
+   "kiyi": "ic",
+   "mesafe_km": 320,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Muratpaşa",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Konyaaltı",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Kepez",
+   "kiyi": "yakin",
+   "mesafe_km": 8,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Alanya",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Manavgat",
+   "kiyi": "yakin",
+   "mesafe_km": 6,
+   "profil": "tatil"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Serik",
+   "kiyi": "yakin",
+   "mesafe_km": 5,
+   "profil": "tatil"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Kaş",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Kemer",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Finike",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "emekli"
+  },
+  {
+   "il": "Antalya",
+   "ilce": "Kumluca",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Ardahan",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Ardahan",
+   "ilce": "Göle",
+   "kiyi": "ic",
+   "mesafe_km": 310,
+   "profil": "koy"
+  },
+  {
+   "il": "Artvin",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 100,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Artvin",
+   "ilce": "Hopa",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Artvin",
+   "ilce": "Şavşat",
+   "kiyi": "ic",
+   "mesafe_km": 90,
+   "profil": "koy"
+  },
+  {
+   "il": "Artvin",
+   "ilce": "Arhavi",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Aydın",
+   "ilce": "Efeler",
+   "kiyi": "ic",
+   "mesafe_km": 55,
+   "profil": "merkez"
+  },
+  {
+   "il": "Aydın",
+   "ilce": "Kuşadası",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Aydın",
+   "ilce": "Didim",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "emekli"
+  },
+  {
+   "il": "Aydın",
+   "ilce": "Söke",
+   "kiyi": "yakin",
+   "mesafe_km": 15,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Aydın",
+   "ilce": "Nazilli",
+   "kiyi": "ic",
+   "mesafe_km": 70,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Aydın",
+   "ilce": "Çine",
+   "kiyi": "ic",
+   "mesafe_km": 60,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Balıkesir",
+   "ilce": "Karesi",
+   "kiyi": "ic",
+   "mesafe_km": 70,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Balıkesir",
+   "ilce": "Ayvalık",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Balıkesir",
+   "ilce": "Burhaniye",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "emekli"
+  },
+  {
+   "il": "Balıkesir",
+   "ilce": "Edremit",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "tatil"
+  },
+  {
+   "il": "Balıkesir",
+   "ilce": "Erdek",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Balıkesir",
+   "ilce": "Bandırma",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Balıkesir",
+   "ilce": "Gönen",
+   "kiyi": "yakin",
+   "mesafe_km": 12,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Balıkesir",
+   "ilce": "Altınoluk",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Bartın",
+   "ilce": "Merkez",
+   "kiyi": "yakin",
+   "mesafe_km": 12,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bartın",
+   "ilce": "Amasra",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Batman",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 350,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Batman",
+   "ilce": "Kozluk",
+   "kiyi": "ic",
+   "mesafe_km": 360,
+   "profil": "koy"
+  },
+  {
+   "il": "Bayburt",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 120,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bilecik",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 100,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bilecik",
+   "ilce": "Bozüyük",
+   "kiyi": "ic",
+   "mesafe_km": 130,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bilecik",
+   "ilce": "Söğüt",
+   "kiyi": "ic",
+   "mesafe_km": 110,
+   "profil": "koy"
+  },
+  {
+   "il": "Bingöl",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 450,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bitlis",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 450,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bitlis",
+   "ilce": "Tatvan",
+   "kiyi": "ic",
+   "mesafe_km": 450,
+   "profil": "koy"
+  },
+  {
+   "il": "Bolu",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 130,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bolu",
+   "ilce": "Mudurnu",
+   "kiyi": "ic",
+   "mesafe_km": 140,
+   "profil": "koy"
+  },
+  {
+   "il": "Bolu",
+   "ilce": "Gerede",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Burdur",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 100,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Burdur",
+   "ilce": "Bucak",
+   "kiyi": "ic",
+   "mesafe_km": 90,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bursa",
+   "ilce": "Nilüfer",
+   "kiyi": "yakin",
+   "mesafe_km": 25,
+   "profil": "merkez"
+  },
+  {
+   "il": "Bursa",
+   "ilce": "Osmangazi",
+   "kiyi": "yakin",
+   "mesafe_km": 25,
+   "profil": "merkez"
+  },
+  {
+   "il": "Bursa",
+   "ilce": "Yıldırım",
+   "kiyi": "yakin",
+   "mesafe_km": 25,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Bursa",
+   "ilce": "Mudanya",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Bursa",
+   "ilce": "Gemlik",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bursa",
+   "ilce": "İnegöl",
+   "kiyi": "ic",
+   "mesafe_km": 60,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bursa",
+   "ilce": "Orhangazi",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Bursa",
+   "ilce": "İznik",
+   "kiyi": "yakin",
+   "mesafe_km": 25,
+   "profil": "koy"
+  },
+  {
+   "il": "Çanakkale",
+   "ilce": "Merkez",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Çanakkale",
+   "ilce": "Ayvacık",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Çanakkale",
+   "ilce": "Bozcaada",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Çanakkale",
+   "ilce": "Gökçeada",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "Çanakkale",
+   "ilce": "Ezine",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Çanakkale",
+   "ilce": "Gelibolu",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Çankırı",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 200,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Çankırı",
+   "ilce": "Ilgaz",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "koy"
+  },
+  {
+   "il": "Çorum",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Çorum",
+   "ilce": "Sungurlu",
+   "kiyi": "ic",
+   "mesafe_km": 180,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Denizli",
+   "ilce": "Merkezefendi",
+   "kiyi": "ic",
+   "mesafe_km": 130,
+   "profil": "merkez"
+  },
+  {
+   "il": "Denizli",
+   "ilce": "Pamukkale",
+   "kiyi": "ic",
+   "mesafe_km": 130,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Denizli",
+   "ilce": "Acıpayam",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Denizli",
+   "ilce": "Çivril",
+   "kiyi": "ic",
+   "mesafe_km": 170,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Diyarbakır",
+   "ilce": "Bağlar",
+   "kiyi": "ic",
+   "mesafe_km": 450,
+   "profil": "merkez"
+  },
+  {
+   "il": "Diyarbakır",
+   "ilce": "Kayapınar",
+   "kiyi": "ic",
+   "mesafe_km": 450,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Diyarbakır",
+   "ilce": "Bismil",
+   "kiyi": "ic",
+   "mesafe_km": 460,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Düzce",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 45,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Düzce",
+   "ilce": "Akçakoca",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Edirne",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 120,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Edirne",
+   "ilce": "Keşan",
+   "kiyi": "ic",
+   "mesafe_km": 40,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Edirne",
+   "ilce": "Uzunköprü",
+   "kiyi": "ic",
+   "mesafe_km": 100,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Elazığ",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 400,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Erzincan",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 250,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Erzurum",
+   "ilce": "Yakutiye",
+   "kiyi": "ic",
+   "mesafe_km": 180,
+   "profil": "merkez"
+  },
+  {
+   "il": "Erzurum",
+   "ilce": "Palandöken",
+   "kiyi": "ic",
+   "mesafe_km": 180,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Erzurum",
+   "ilce": "Aziziye",
+   "kiyi": "ic",
+   "mesafe_km": 180,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Eskişehir",
+   "ilce": "Odunpazarı",
+   "kiyi": "ic",
+   "mesafe_km": 200,
+   "profil": "merkez"
+  },
+  {
+   "il": "Eskişehir",
+   "ilce": "Tepebaşı",
+   "kiyi": "ic",
+   "mesafe_km": 200,
+   "profil": "merkez"
+  },
+  {
+   "il": "Eskişehir",
+   "ilce": "Sivrihisar",
+   "kiyi": "ic",
+   "mesafe_km": 230,
+   "profil": "koy"
+  },
+  {
+   "il": "Gaziantep",
+   "ilce": "Şahinbey",
+   "kiyi": "ic",
+   "mesafe_km": 110,
+   "profil": "merkez"
+  },
+  {
+   "il": "Gaziantep",
+   "ilce": "Şehitkamil",
+   "kiyi": "ic",
+   "mesafe_km": 110,
+   "profil": "merkez"
+  },
+  {
+   "il": "Gaziantep",
+   "ilce": "Nizip",
+   "kiyi": "ic",
+   "mesafe_km": 130,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Gaziantep",
+   "ilce": "Oğuzeli",
+   "kiyi": "ic",
+   "mesafe_km": 120,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Giresun",
+   "ilce": "Merkez",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Giresun",
+   "ilce": "Bulancak",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Giresun",
+   "ilce": "Tirebolu",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "Gümüşhane",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 100,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Hakkari",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 500,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Hakkari",
+   "ilce": "Yüksekova",
+   "kiyi": "ic",
+   "mesafe_km": 520,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Hatay",
+   "ilce": "Antakya",
+   "kiyi": "yakin",
+   "mesafe_km": 25,
+   "profil": "merkez"
+  },
+  {
+   "il": "Hatay",
+   "ilce": "İskenderun",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "Hatay",
+   "ilce": "Samandağ",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "tatil"
+  },
+  {
+   "il": "Hatay",
+   "ilce": "Arsuz",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Hatay",
+   "ilce": "Defne",
+   "kiyi": "yakin",
+   "mesafe_km": 15,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Iğdır",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 500,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Isparta",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 130,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Isparta",
+   "ilce": "Eğirdir",
+   "kiyi": "ic",
+   "mesafe_km": 140,
+   "profil": "koy"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Kadıköy",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Beşiktaş",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Üsküdar",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Bakırköy",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Beyoğlu",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Şişli",
+   "kiyi": "yakin",
+   "mesafe_km": 3,
+   "profil": "merkez"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Ataşehir",
+   "kiyi": "yakin",
+   "mesafe_km": 4,
+   "profil": "merkez"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Ümraniye",
+   "kiyi": "yakin",
+   "mesafe_km": 6,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Kartal",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Maltepe",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Beylikdüzü",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Esenyurt",
+   "kiyi": "yakin",
+   "mesafe_km": 6,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Başakşehir",
+   "kiyi": "yakin",
+   "mesafe_km": 12,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Sarıyer",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Beykoz",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Şile",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Adalar",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "İstanbul",
+   "ilce": "Küçükçekmece",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Karşıyaka",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Bornova",
+   "kiyi": "yakin",
+   "mesafe_km": 8,
+   "profil": "merkez"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Konak",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Buca",
+   "kiyi": "yakin",
+   "mesafe_km": 8,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Gaziemir",
+   "kiyi": "yakin",
+   "mesafe_km": 6,
+   "profil": "banliyo"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Çeşme",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Urla",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Seferihisar",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Foça",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Dikili",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Karaburun",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "İzmir",
+   "ilce": "Bayraklı",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "Kahramanmaraş",
+   "ilce": "Dulkadiroğlu",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "merkez"
+  },
+  {
+   "il": "Kahramanmaraş",
+   "ilce": "Onikişubat",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "merkez"
+  },
+  {
+   "il": "Kahramanmaraş",
+   "ilce": "Elbistan",
+   "kiyi": "ic",
+   "mesafe_km": 250,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Karabük",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 60,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Karabük",
+   "ilce": "Safranbolu",
+   "kiyi": "ic",
+   "mesafe_km": 70,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Karaman",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 110,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Karaman",
+   "ilce": "Ermenek",
+   "kiyi": "ic",
+   "mesafe_km": 90,
+   "profil": "koy"
+  },
+  {
+   "il": "Kars",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 280,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kars",
+   "ilce": "Sarıkamış",
+   "kiyi": "ic",
+   "mesafe_km": 270,
+   "profil": "koy"
+  },
+  {
+   "il": "Kastamonu",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 70,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kastamonu",
+   "ilce": "İnebolu",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "Kastamonu",
+   "ilce": "Cide",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "Kayseri",
+   "ilce": "Melikgazi",
+   "kiyi": "ic",
+   "mesafe_km": 170,
+   "profil": "merkez"
+  },
+  {
+   "il": "Kayseri",
+   "ilce": "Kocasinan",
+   "kiyi": "ic",
+   "mesafe_km": 170,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Kayseri",
+   "ilce": "Talas",
+   "kiyi": "ic",
+   "mesafe_km": 170,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Kilis",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 90,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kırıkkale",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 250,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kırklareli",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 50,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kırklareli",
+   "ilce": "Lüleburgaz",
+   "kiyi": "ic",
+   "mesafe_km": 60,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kırklareli",
+   "ilce": "Demirköy",
+   "kiyi": "yakin",
+   "mesafe_km": 20,
+   "profil": "koy"
+  },
+  {
+   "il": "Kırşehir",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kocaeli",
+   "ilce": "İzmit",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "merkez"
+  },
+  {
+   "il": "Kocaeli",
+   "ilce": "Gebze",
+   "kiyi": "yakin",
+   "mesafe_km": 6,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Kocaeli",
+   "ilce": "Darıca",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Kocaeli",
+   "ilce": "Kandıra",
+   "kiyi": "kenar",
+   "mesafe_km": 2,
+   "profil": "koy"
+  },
+  {
+   "il": "Kocaeli",
+   "ilce": "Gölcük",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kocaeli",
+   "ilce": "Körfez",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Konya",
+   "ilce": "Selçuklu",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "merkez"
+  },
+  {
+   "il": "Konya",
+   "ilce": "Meram",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "merkez"
+  },
+  {
+   "il": "Konya",
+   "ilce": "Karatay",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Konya",
+   "ilce": "Beyşehir",
+   "kiyi": "ic",
+   "mesafe_km": 130,
+   "profil": "koy"
+  },
+  {
+   "il": "Konya",
+   "ilce": "Akşehir",
+   "kiyi": "ic",
+   "mesafe_km": 200,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kütahya",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 200,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Kütahya",
+   "ilce": "Tavşanlı",
+   "kiyi": "ic",
+   "mesafe_km": 190,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Malatya",
+   "ilce": "Battalgazi",
+   "kiyi": "ic",
+   "mesafe_km": 350,
+   "profil": "merkez"
+  },
+  {
+   "il": "Malatya",
+   "ilce": "Yeşilyurt",
+   "kiyi": "ic",
+   "mesafe_km": 350,
+   "profil": "merkez"
+  },
+  {
+   "il": "Malatya",
+   "ilce": "Doğanşehir",
+   "kiyi": "ic",
+   "mesafe_km": 340,
+   "profil": "koy"
+  },
+  {
+   "il": "Manisa",
+   "ilce": "Yunusemre",
+   "kiyi": "ic",
+   "mesafe_km": 35,
+   "profil": "merkez"
+  },
+  {
+   "il": "Manisa",
+   "ilce": "Şehzadeler",
+   "kiyi": "ic",
+   "mesafe_km": 35,
+   "profil": "merkez"
+  },
+  {
+   "il": "Manisa",
+   "ilce": "Akhisar",
+   "kiyi": "ic",
+   "mesafe_km": 70,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Manisa",
+   "ilce": "Salihli",
+   "kiyi": "ic",
+   "mesafe_km": 90,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Mardin",
+   "ilce": "Artuklu",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Mardin",
+   "ilce": "Midyat",
+   "kiyi": "ic",
+   "mesafe_km": 310,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Mersin",
+   "ilce": "Mezitli",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Mersin",
+   "ilce": "Yenişehir",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "Mersin",
+   "ilce": "Erdemli",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Mersin",
+   "ilce": "Silifke",
+   "kiyi": "yakin",
+   "mesafe_km": 3,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Mersin",
+   "ilce": "Tarsus",
+   "kiyi": "yakin",
+   "mesafe_km": 12,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Mersin",
+   "ilce": "Anamur",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Mersin",
+   "ilce": "Mut",
+   "kiyi": "ic",
+   "mesafe_km": 50,
+   "profil": "koy"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Bodrum",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Datça",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Fethiye",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Marmaris",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Milas",
+   "kiyi": "yakin",
+   "mesafe_km": 12,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Menteşe",
+   "kiyi": "yakin",
+   "mesafe_km": 20,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Köyceğiz",
+   "kiyi": "yakin",
+   "mesafe_km": 8,
+   "profil": "koy"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Dalaman",
+   "kiyi": "yakin",
+   "mesafe_km": 5,
+   "profil": "koy"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Ortaca",
+   "kiyi": "yakin",
+   "mesafe_km": 8,
+   "profil": "tatil"
+  },
+  {
+   "il": "Muğla",
+   "ilce": "Ula",
+   "kiyi": "yakin",
+   "mesafe_km": 20,
+   "profil": "koy"
+  },
+  {
+   "il": "Muş",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 300,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Nevşehir",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 230,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Nevşehir",
+   "ilce": "Ürgüp",
+   "kiyi": "ic",
+   "mesafe_km": 230,
+   "profil": "koy"
+  },
+  {
+   "il": "Nevşehir",
+   "ilce": "Avanos",
+   "kiyi": "ic",
+   "mesafe_km": 230,
+   "profil": "koy"
+  },
+  {
+   "il": "Niğde",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Niğde",
+   "ilce": "Bor",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Ordu",
+   "ilce": "Altınordu",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Ordu",
+   "ilce": "Ünye",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Ordu",
+   "ilce": "Fatsa",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Osmaniye",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 50,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Osmaniye",
+   "ilce": "Kadirli",
+   "kiyi": "ic",
+   "mesafe_km": 80,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Rize",
+   "ilce": "Merkez",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Rize",
+   "ilce": "Çamlıhemşin",
+   "kiyi": "yakin",
+   "mesafe_km": 30,
+   "profil": "koy"
+  },
+  {
+   "il": "Rize",
+   "ilce": "Ardeşen",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Rize",
+   "ilce": "Pazar",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "Sakarya",
+   "ilce": "Adapazarı",
+   "kiyi": "ic",
+   "mesafe_km": 35,
+   "profil": "merkez"
+  },
+  {
+   "il": "Sakarya",
+   "ilce": "Serdivan",
+   "kiyi": "ic",
+   "mesafe_km": 35,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Sakarya",
+   "ilce": "Karasu",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Sakarya",
+   "ilce": "Sapanca",
+   "kiyi": "ic",
+   "mesafe_km": 35,
+   "profil": "tatil"
+  },
+  {
+   "il": "Sakarya",
+   "ilce": "Akyazı",
+   "kiyi": "ic",
+   "mesafe_km": 40,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Samsun",
+   "ilce": "Atakum",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Samsun",
+   "ilce": "İlkadım",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "Samsun",
+   "ilce": "Bafra",
+   "kiyi": "yakin",
+   "mesafe_km": 18,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Samsun",
+   "ilce": "Çarşamba",
+   "kiyi": "yakin",
+   "mesafe_km": 10,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Siirt",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 450,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Sinop",
+   "ilce": "Merkez",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Sinop",
+   "ilce": "Ayancık",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "Sivas",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 200,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Sivas",
+   "ilce": "Şarkışla",
+   "kiyi": "ic",
+   "mesafe_km": 230,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Şanlıurfa",
+   "ilce": "Haliliye",
+   "kiyi": "ic",
+   "mesafe_km": 280,
+   "profil": "merkez"
+  },
+  {
+   "il": "Şanlıurfa",
+   "ilce": "Karaköprü",
+   "kiyi": "ic",
+   "mesafe_km": 280,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Şanlıurfa",
+   "ilce": "Birecik",
+   "kiyi": "ic",
+   "mesafe_km": 270,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Şırnak",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 500,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Şırnak",
+   "ilce": "Cizre",
+   "kiyi": "ic",
+   "mesafe_km": 490,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Tekirdağ",
+   "ilce": "Süleymanpaşa",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "Tekirdağ",
+   "ilce": "Çorlu",
+   "kiyi": "yakin",
+   "mesafe_km": 28,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Tekirdağ",
+   "ilce": "Çerkezköy",
+   "kiyi": "ic",
+   "mesafe_km": 40,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Tekirdağ",
+   "ilce": "Şarköy",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Tekirdağ",
+   "ilce": "Marmaraereğlisi",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Tekirdağ",
+   "ilce": "Malkara",
+   "kiyi": "ic",
+   "mesafe_km": 40,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Tokat",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 130,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Tokat",
+   "ilce": "Niksar",
+   "kiyi": "ic",
+   "mesafe_km": 110,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Trabzon",
+   "ilce": "Ortahisar",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "merkez"
+  },
+  {
+   "il": "Trabzon",
+   "ilce": "Akçaabat",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Trabzon",
+   "ilce": "Of",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "Trabzon",
+   "ilce": "Sürmene",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "koy"
+  },
+  {
+   "il": "Trabzon",
+   "ilce": "Maçka",
+   "kiyi": "yakin",
+   "mesafe_km": 20,
+   "profil": "koy"
+  },
+  {
+   "il": "Tunceli",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 450,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Uşak",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 150,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Van",
+   "ilce": "İpekyolu",
+   "kiyi": "ic",
+   "mesafe_km": 600,
+   "profil": "merkez"
+  },
+  {
+   "il": "Van",
+   "ilce": "Tuşba",
+   "kiyi": "ic",
+   "mesafe_km": 600,
+   "profil": "banliyo"
+  },
+  {
+   "il": "Van",
+   "ilce": "Erciş",
+   "kiyi": "ic",
+   "mesafe_km": 600,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Yalova",
+   "ilce": "Merkez",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Yalova",
+   "ilce": "Çınarcık",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "tatil"
+  },
+  {
+   "il": "Yalova",
+   "ilce": "Termal",
+   "kiyi": "yakin",
+   "mesafe_km": 6,
+   "profil": "koy"
+  },
+  {
+   "il": "Yozgat",
+   "ilce": "Merkez",
+   "kiyi": "ic",
+   "mesafe_km": 200,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Yozgat",
+   "ilce": "Sorgun",
+   "kiyi": "ic",
+   "mesafe_km": 200,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Zonguldak",
+   "ilce": "Merkez",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Zonguldak",
+   "ilce": "Ereğli",
+   "kiyi": "kenar",
+   "mesafe_km": 1,
+   "profil": "anadolu"
+  },
+  {
+   "il": "Zonguldak",
+   "ilce": "Çaycuma",
+   "kiyi": "yakin",
+   "mesafe_km": 15,
+   "profil": "anadolu"
+  }
+ ],
+ "yurtdisi": [
+  {
+   "ulke": "Almanya",
+   "ulke_en": "Germany",
+   "sehir": "Berlin",
+   "sehir_en": "Berlin",
+   "neden": "kariyer / yaşam",
+   "neden_en": "career / lifestyle",
+   "w": 8
+  },
+  {
+   "ulke": "Almanya",
+   "ulke_en": "Germany",
+   "sehir": "Köln",
+   "sehir_en": "Cologne",
+   "neden": "büyük Türk topluluğu",
+   "neden_en": "large Turkish community",
+   "w": 7
+  },
+  {
+   "ulke": "Almanya",
+   "ulke_en": "Germany",
+   "sehir": "Hamburg",
+   "sehir_en": "Hamburg",
+   "neden": "kariyer",
+   "neden_en": "career",
+   "w": 5
+  },
+  {
+   "ulke": "Almanya",
+   "ulke_en": "Germany",
+   "sehir": "Frankfurt",
+   "sehir_en": "Frankfurt",
+   "neden": "finans / kariyer",
+   "neden_en": "finance / career",
+   "w": 5
+  },
+  {
+   "ulke": "Almanya",
+   "ulke_en": "Germany",
+   "sehir": "Münih",
+   "sehir_en": "Munich",
+   "neden": "kariyer / eğitim",
+   "neden_en": "career / education",
+   "w": 6
+  },
+  {
+   "ulke": "Almanya",
+   "ulke_en": "Germany",
+   "sehir": "Stuttgart",
+   "sehir_en": "Stuttgart",
+   "neden": "sanayi / kariyer",
+   "neden_en": "industry / career",
+   "w": 4
+  },
+  {
+   "ulke": "Almanya",
+   "ulke_en": "Germany",
+   "sehir": "Duisburg",
+   "sehir_en": "Duisburg",
+   "neden": "yerleşik Türk topluluğu",
+   "neden_en": "established Turkish community",
+   "w": 3
+  },
+  {
+   "ulke": "Almanya",
+   "ulke_en": "Germany",
+   "sehir": "Dortmund",
+   "sehir_en": "Dortmund",
+   "neden": "yerleşik Türk topluluğu",
+   "neden_en": "established Turkish community",
+   "w": 3
+  },
+  {
+   "ulke": "Hollanda",
+   "ulke_en": "Netherlands",
+   "sehir": "Amsterdam",
+   "sehir_en": "Amsterdam",
+   "neden": "eğitim / kariyer",
+   "neden_en": "education / career",
+   "w": 6
+  },
+  {
+   "ulke": "Hollanda",
+   "ulke_en": "Netherlands",
+   "sehir": "Rotterdam",
+   "sehir_en": "Rotterdam",
+   "neden": "kariyer / yerleşik topluluk",
+   "neden_en": "career / established community",
+   "w": 3
+  },
+  {
+   "ulke": "Fransa",
+   "ulke_en": "France",
+   "sehir": "Paris",
+   "sehir_en": "Paris",
+   "neden": "eğitim / kariyer",
+   "neden_en": "education / career",
+   "w": 6
+  },
+  {
+   "ulke": "Fransa",
+   "ulke_en": "France",
+   "sehir": "Lyon",
+   "sehir_en": "Lyon",
+   "neden": "kariyer",
+   "neden_en": "career",
+   "w": 2
+  },
+  {
+   "ulke": "İngiltere",
+   "ulke_en": "United Kingdom",
+   "sehir": "Londra",
+   "sehir_en": "London",
+   "neden": "eğitim / kariyer",
+   "neden_en": "education / career",
+   "w": 8
+  },
+  {
+   "ulke": "İngiltere",
+   "ulke_en": "United Kingdom",
+   "sehir": "Manchester",
+   "sehir_en": "Manchester",
+   "neden": "eğitim / kariyer",
+   "neden_en": "education / career",
+   "w": 2
+  },
+  {
+   "ulke": "Avusturya",
+   "ulke_en": "Austria",
+   "sehir": "Viyana",
+   "sehir_en": "Vienna",
+   "neden": "kariyer / yerleşik topluluk",
+   "neden_en": "career / established community",
+   "w": 5
+  },
+  {
+   "ulke": "Belçika",
+   "ulke_en": "Belgium",
+   "sehir": "Brüksel",
+   "sehir_en": "Brussels",
+   "neden": "kariyer / aile",
+   "neden_en": "career / family",
+   "w": 3
+  },
+  {
+   "ulke": "İsviçre",
+   "ulke_en": "Switzerland",
+   "sehir": "Zürih",
+   "sehir_en": "Zurich",
+   "neden": "kariyer / finans",
+   "neden_en": "career / finance",
+   "w": 4
+  },
+  {
+   "ulke": "İsviçre",
+   "ulke_en": "Switzerland",
+   "sehir": "Basel",
+   "sehir_en": "Basel",
+   "neden": "kariyer",
+   "neden_en": "career",
+   "w": 1
+  },
+  {
+   "ulke": "ABD",
+   "ulke_en": "USA",
+   "sehir": "New York",
+   "sehir_en": "New York",
+   "neden": "eğitim / kariyer",
+   "neden_en": "education / career",
+   "w": 5
+  },
+  {
+   "ulke": "Kanada",
+   "ulke_en": "Canada",
+   "sehir": "Toronto",
+   "sehir_en": "Toronto",
+   "neden": "eğitim / yeni bir başlangıç",
+   "neden_en": "education / fresh start",
+   "w": 4
+  },
+  {
+   "ulke": "İsveç",
+   "ulke_en": "Sweden",
+   "sehir": "Stockholm",
+   "sehir_en": "Stockholm",
+   "neden": "kariyer / eğitim",
+   "neden_en": "career / education",
+   "w": 3
+  },
+  {
+   "ulke": "İspanya",
+   "ulke_en": "Spain",
+   "sehir": "Barselona",
+   "sehir_en": "Barcelona",
+   "neden": "yaşam tarzı / kariyer",
+   "neden_en": "lifestyle / career",
+   "w": 6
+  },
+  {
+   "ulke": "Portekiz",
+   "ulke_en": "Portugal",
+   "sehir": "Lizbon",
+   "sehir_en": "Lisbon",
+   "neden": "yaşam tarzı / uzaktan çalışma",
+   "neden_en": "lifestyle / remote work",
+   "w": 4
+  },
+  {
+   "ulke": "Birleşik Arap Emirlikleri",
+   "ulke_en": "United Arab Emirates",
+   "sehir": "Dubai",
+   "sehir_en": "Dubai",
+   "neden": "kariyer / iş fırsatı",
+   "neden_en": "career / business",
+   "w": 5
+  },
+  {
+   "ulke": "Azerbaycan",
+   "ulke_en": "Azerbaijan",
+   "sehir": "Bakü",
+   "sehir_en": "Baku",
+   "neden": "iş / kültürel yakınlık",
+   "neden_en": "business / cultural closeness",
+   "w": 3
+  },
+  {
+   "ulke": "Kuzey Kıbrıs",
+   "ulke_en": "Northern Cyprus",
+   "sehir": "Girne",
+   "sehir_en": "Kyrenia",
+   "neden": "eğitim / yaşam tarzı",
+   "neden_en": "education / lifestyle",
+   "w": 4
+  },
+  {
+   "ulke": "İtalya",
+   "ulke_en": "Italy",
+   "sehir": "Milano",
+   "sehir_en": "Milan",
+   "neden": "tasarım / kariyer",
+   "neden_en": "design / career",
+   "w": 2
+  },
+  {
+   "ulke": "Danimarka",
+   "ulke_en": "Denmark",
+   "sehir": "Kopenhag",
+   "sehir_en": "Copenhagen",
+   "neden": "kariyer / yaşam kalitesi",
+   "neden_en": "career / quality of life",
+   "w": 1
+  },
+  {
+   "ulke": "Avustralya",
+   "ulke_en": "Australia",
+   "sehir": "Melbourne",
+   "sehir_en": "Melbourne",
+   "neden": "yeni bir başlangıç",
+   "neden_en": "fresh start",
+   "w": 1
+  }
+ ],
+ "komsu": {
+  "Adana": [
+   "Hatay",
+   "Kahramanmaraş",
+   "Kayseri",
+   "Mersin",
+   "Niğde",
+   "Osmaniye"
+  ],
+  "Adıyaman": [
+   "Diyarbakır",
+   "Gaziantep",
+   "Kahramanmaraş",
+   "Malatya",
+   "Şanlıurfa"
+  ],
+  "Afyonkarahisar": [
+   "Burdur",
+   "Denizli",
+   "Eskişehir",
+   "Isparta",
+   "Konya",
+   "Kütahya",
+   "Uşak"
+  ],
+  "Ağrı": [
+   "Bitlis",
+   "Erzurum",
+   "Iğdır",
+   "Kars",
+   "Muş",
+   "Van"
+  ],
+  "Aksaray": [
+   "Ankara",
+   "Konya",
+   "Kırşehir",
+   "Nevşehir",
+   "Niğde"
+  ],
+  "Amasya": [
+   "Samsun",
+   "Tokat",
+   "Çorum"
+  ],
+  "Ankara": [
+   "Aksaray",
+   "Bolu",
+   "Eskişehir",
+   "Konya",
+   "Kırıkkale",
+   "Kırşehir",
+   "Çankırı"
+  ],
+  "Antalya": [
+   "Burdur",
+   "Isparta",
+   "Karaman",
+   "Konya",
+   "Mersin",
+   "Muğla"
+  ],
+  "Ardahan": [
+   "Artvin",
+   "Erzurum",
+   "Kars"
+  ],
+  "Artvin": [
+   "Ardahan",
+   "Erzurum",
+   "Rize"
+  ],
+  "Aydın": [
+   "Denizli",
+   "Manisa",
+   "Muğla",
+   "İzmir"
+  ],
+  "Balıkesir": [
+   "Bursa",
+   "Kütahya",
+   "Manisa",
+   "Çanakkale",
+   "İzmir"
+  ],
+  "Bartın": [
+   "Karabük",
+   "Kastamonu",
+   "Zonguldak"
+  ],
+  "Batman": [
+   "Bitlis",
+   "Diyarbakır",
+   "Mardin",
+   "Muş",
+   "Siirt"
+  ],
+  "Bayburt": [
+   "Erzincan",
+   "Erzurum",
+   "Gümüşhane",
+   "Rize",
+   "Trabzon"
+  ],
+  "Bilecik": [
+   "Bolu",
+   "Bursa",
+   "Eskişehir",
+   "Kütahya",
+   "Sakarya"
+  ],
+  "Bingöl": [
+   "Diyarbakır",
+   "Elazığ",
+   "Erzincan",
+   "Erzurum",
+   "Muş",
+   "Tunceli"
+  ],
+  "Bitlis": [
+   "Ağrı",
+   "Batman",
+   "Muş",
+   "Siirt",
+   "Van"
+  ],
+  "Bolu": [
+   "Ankara",
+   "Bilecik",
+   "Düzce",
+   "Eskişehir",
+   "Karabük",
+   "Sakarya",
+   "Zonguldak",
+   "Çankırı"
+  ],
+  "Burdur": [
+   "Afyonkarahisar",
+   "Antalya",
+   "Denizli",
+   "Isparta",
+   "Muğla"
+  ],
+  "Bursa": [
+   "Balıkesir",
+   "Bilecik",
+   "Kocaeli",
+   "Kütahya",
+   "Yalova"
+  ],
+  "Çanakkale": [
+   "Balıkesir",
+   "Edirne",
+   "Tekirdağ"
+  ],
+  "Çankırı": [
+   "Ankara",
+   "Bolu",
+   "Karabük",
+   "Kastamonu",
+   "Kırıkkale",
+   "Çorum"
+  ],
+  "Çorum": [
+   "Amasya",
+   "Kastamonu",
+   "Kırıkkale",
+   "Samsun",
+   "Sinop",
+   "Tokat",
+   "Yozgat",
+   "Çankırı"
+  ],
+  "Denizli": [
+   "Afyonkarahisar",
+   "Aydın",
+   "Burdur",
+   "Manisa",
+   "Muğla",
+   "Uşak"
+  ],
+  "Diyarbakır": [
+   "Adıyaman",
+   "Batman",
+   "Bingöl",
+   "Elazığ",
+   "Malatya",
+   "Mardin",
+   "Muş",
+   "Şanlıurfa"
+  ],
+  "Düzce": [
+   "Bolu",
+   "Sakarya",
+   "Zonguldak"
+  ],
+  "Edirne": [
+   "Kırklareli",
+   "Tekirdağ",
+   "Çanakkale"
+  ],
+  "Elazığ": [
+   "Bingöl",
+   "Diyarbakır",
+   "Malatya",
+   "Tunceli"
+  ],
+  "Erzincan": [
+   "Bayburt",
+   "Bingöl",
+   "Erzurum",
+   "Gümüşhane",
+   "Malatya",
+   "Sivas",
+   "Tunceli"
+  ],
+  "Erzurum": [
+   "Ardahan",
+   "Artvin",
+   "Ağrı",
+   "Bayburt",
+   "Bingöl",
+   "Erzincan",
+   "Kars",
+   "Muş",
+   "Rize"
+  ],
+  "Eskişehir": [
+   "Afyonkarahisar",
+   "Ankara",
+   "Bilecik",
+   "Bolu",
+   "Konya",
+   "Kütahya"
+  ],
+  "Gaziantep": [
+   "Adıyaman",
+   "Hatay",
+   "Kahramanmaraş",
+   "Kilis",
+   "Osmaniye",
+   "Şanlıurfa"
+  ],
+  "Giresun": [
+   "Gümüşhane",
+   "Ordu",
+   "Sivas",
+   "Trabzon"
+  ],
+  "Gümüşhane": [
+   "Bayburt",
+   "Erzincan",
+   "Giresun",
+   "Sivas",
+   "Trabzon"
+  ],
+  "Hakkari": [
+   "Van",
+   "Şırnak"
+  ],
+  "Hatay": [
+   "Adana",
+   "Gaziantep",
+   "Kilis",
+   "Osmaniye"
+  ],
+  "Iğdır": [
+   "Ağrı",
+   "Kars"
+  ],
+  "Isparta": [
+   "Afyonkarahisar",
+   "Antalya",
+   "Burdur",
+   "Konya"
+  ],
+  "İstanbul": [
+   "Kocaeli",
+   "Kırklareli",
+   "Tekirdağ"
+  ],
+  "İzmir": [
+   "Aydın",
+   "Balıkesir",
+   "Manisa"
+  ],
+  "Kahramanmaraş": [
+   "Adana",
+   "Adıyaman",
+   "Gaziantep",
+   "Kayseri",
+   "Malatya",
+   "Osmaniye",
+   "Sivas"
+  ],
+  "Karabük": [
+   "Bartın",
+   "Bolu",
+   "Kastamonu",
+   "Zonguldak",
+   "Çankırı"
+  ],
+  "Karaman": [
+   "Antalya",
+   "Konya",
+   "Mersin"
+  ],
+  "Kars": [
+   "Ardahan",
+   "Ağrı",
+   "Erzurum",
+   "Iğdır"
+  ],
+  "Kastamonu": [
+   "Bartın",
+   "Karabük",
+   "Sinop",
+   "Çankırı",
+   "Çorum"
+  ],
+  "Kayseri": [
+   "Adana",
+   "Kahramanmaraş",
+   "Kırşehir",
+   "Nevşehir",
+   "Niğde",
+   "Sivas",
+   "Yozgat"
+  ],
+  "Kilis": [
+   "Gaziantep",
+   "Hatay"
+  ],
+  "Kırıkkale": [
+   "Ankara",
+   "Kırşehir",
+   "Yozgat",
+   "Çankırı",
+   "Çorum"
+  ],
+  "Kırklareli": [
+   "Edirne",
+   "Tekirdağ",
+   "İstanbul"
+  ],
+  "Kırşehir": [
+   "Aksaray",
+   "Ankara",
+   "Kayseri",
+   "Kırıkkale",
+   "Nevşehir",
+   "Yozgat"
+  ],
+  "Kocaeli": [
+   "Bursa",
+   "Sakarya",
+   "Yalova",
+   "İstanbul"
+  ],
+  "Konya": [
+   "Afyonkarahisar",
+   "Aksaray",
+   "Ankara",
+   "Antalya",
+   "Eskişehir",
+   "Isparta",
+   "Karaman",
+   "Mersin",
+   "Niğde"
+  ],
+  "Kütahya": [
+   "Afyonkarahisar",
+   "Balıkesir",
+   "Bilecik",
+   "Bursa",
+   "Eskişehir",
+   "Manisa",
+   "Uşak"
+  ],
+  "Malatya": [
+   "Adıyaman",
+   "Diyarbakır",
+   "Elazığ",
+   "Erzincan",
+   "Kahramanmaraş",
+   "Sivas",
+   "Tunceli"
+  ],
+  "Manisa": [
+   "Aydın",
+   "Balıkesir",
+   "Denizli",
+   "Kütahya",
+   "Uşak",
+   "İzmir"
+  ],
+  "Mardin": [
+   "Batman",
+   "Diyarbakır",
+   "Siirt",
+   "Şanlıurfa",
+   "Şırnak"
+  ],
+  "Mersin": [
+   "Adana",
+   "Antalya",
+   "Karaman",
+   "Konya",
+   "Niğde"
+  ],
+  "Muğla": [
+   "Antalya",
+   "Aydın",
+   "Burdur",
+   "Denizli"
+  ],
+  "Muş": [
+   "Ağrı",
+   "Batman",
+   "Bingöl",
+   "Bitlis",
+   "Diyarbakır",
+   "Erzurum",
+   "Van"
+  ],
+  "Nevşehir": [
+   "Aksaray",
+   "Kayseri",
+   "Kırşehir",
+   "Niğde"
+  ],
+  "Niğde": [
+   "Adana",
+   "Aksaray",
+   "Kayseri",
+   "Konya",
+   "Mersin",
+   "Nevşehir"
+  ],
+  "Ordu": [
+   "Giresun",
+   "Samsun",
+   "Sivas",
+   "Tokat"
+  ],
+  "Osmaniye": [
+   "Adana",
+   "Gaziantep",
+   "Hatay",
+   "Kahramanmaraş"
+  ],
+  "Rize": [
+   "Artvin",
+   "Bayburt",
+   "Erzurum",
+   "Trabzon"
+  ],
+  "Sakarya": [
+   "Bilecik",
+   "Bolu",
+   "Düzce",
+   "Kocaeli"
+  ],
+  "Samsun": [
+   "Amasya",
+   "Ordu",
+   "Sinop",
+   "Tokat",
+   "Çorum"
+  ],
+  "Siirt": [
+   "Batman",
+   "Bitlis",
+   "Mardin",
+   "Van",
+   "Şırnak"
+  ],
+  "Sinop": [
+   "Kastamonu",
+   "Samsun",
+   "Çorum"
+  ],
+  "Sivas": [
+   "Erzincan",
+   "Giresun",
+   "Gümüşhane",
+   "Kahramanmaraş",
+   "Kayseri",
+   "Malatya",
+   "Ordu",
+   "Tokat",
+   "Yozgat"
+  ],
+  "Şanlıurfa": [
+   "Adıyaman",
+   "Diyarbakır",
+   "Gaziantep",
+   "Mardin"
+  ],
+  "Şırnak": [
+   "Hakkari",
+   "Mardin",
+   "Siirt",
+   "Van"
+  ],
+  "Tekirdağ": [
+   "Edirne",
+   "Kırklareli",
+   "Çanakkale",
+   "İstanbul"
+  ],
+  "Tokat": [
+   "Amasya",
+   "Ordu",
+   "Samsun",
+   "Sivas",
+   "Yozgat",
+   "Çorum"
+  ],
+  "Trabzon": [
+   "Bayburt",
+   "Giresun",
+   "Gümüşhane",
+   "Rize"
+  ],
+  "Tunceli": [
+   "Bingöl",
+   "Elazığ",
+   "Erzincan",
+   "Malatya"
+  ],
+  "Uşak": [
+   "Afyonkarahisar",
+   "Denizli",
+   "Kütahya",
+   "Manisa"
+  ],
+  "Van": [
+   "Ağrı",
+   "Bitlis",
+   "Hakkari",
+   "Muş",
+   "Siirt",
+   "Şırnak"
+  ],
+  "Yalova": [
+   "Bursa",
+   "Kocaeli"
+  ],
+  "Yozgat": [
+   "Kayseri",
+   "Kırıkkale",
+   "Kırşehir",
+   "Sivas",
+   "Tokat",
+   "Çorum"
+  ],
+  "Zonguldak": [
+   "Bartın",
+   "Bolu",
+   "Düzce",
+   "Karabük"
+  ]
+ },
+ "anlati": {
+  "sehir": [
+   {
+    "tr": "Şehrin ritminin tam ortasındasın; her şey birkaç adım ötende.",
+    "en": "You are right in the rhythm of the city; everything is a few steps away."
+   },
+   {
+    "tr": "Hayatın hareketli bir semtte akıyor; kapından çıkınca dünya seni karşılıyor.",
+    "en": "Your life flows through a lively neighbourhood; the world greets you right outside your door."
+   },
+   {
+    "tr": "Kalabalığın içinde kendi küçük, sıcak köşeni buluyorsun.",
+    "en": "In the middle of the crowd you find your own small, warm corner."
+   },
+   {
+    "tr": "Işıkların ve sokak seslerinin arasında enerjin yükseliyor.",
+    "en": "Your energy rises among the lights and street sounds."
+   },
+   {
+    "tr": "Bu dönemde işlerin, dostların ve alışkanlıkların hep yakınında oluyor.",
+    "en": "In this period your work, friends and habits are always close by."
+   }
+  ],
+  "sakin": [
+   {
+    "tr": "Hayatının bu döneminde kalabalıktan biraz uzaklaşıyor ama şehirle bağını koparmıyorsun.",
+    "en": "In this period of your life you drift a little away from the crowd, yet you never cut your ties with the city."
+   },
+   {
+    "tr": "Sabahlar daha sessiz, akşamlar daha uzun; zaman sana ait.",
+    "en": "Mornings are quieter, evenings longer; time belongs to you."
+   },
+   {
+    "tr": "Kapının önünde ağaç sesi, pencerende açık gökyüzü var.",
+    "en": "There is the sound of trees outside your door and open sky in your window."
+   },
+   {
+    "tr": "Nefes almak için bir yere gitmene gerek kalmıyor; yaşadığın yer zaten dinlenme alanın.",
+    "en": "You no longer need to go anywhere to breathe; the place you live is already your retreat."
+   },
+   {
+    "tr": "Komşularınla selamlaştığın, saatin ağır aktığı bir düzen kuruyorsun.",
+    "en": "You build a routine of greeting your neighbours, where the clock moves slowly."
+   }
+  ],
+  "genel": [
+   {
+    "tr": "Taşındığın yeri çabucak sıcak bir yuvaya çeviriyorsun.",
+    "en": "You quickly turn wherever you move into a warm home."
+   },
+   {
+    "tr": "Yeni bir düzen kuruyor, küçük rutinlerini bu evde yerleştiriyorsun.",
+    "en": "You set up a new order and settle your small routines into this home."
+   },
+   {
+    "tr": "Bu ev, dönemin ihtiyaçlarına tam uyan dengeli bir durak gibi.",
+    "en": "This home feels like a balanced stop that fits the needs of this period."
+   },
+   {
+    "tr": "Kapıyı açtığında tanıdık, huzurlu bir his seni karşılıyor.",
+    "en": "When you open the door, a familiar, peaceful feeling greets you."
+   },
+   {
+    "tr": "Eşyalarından çok anılarınla doldurduğun bir yuvan oluyor.",
+    "en": "You make a home filled more with memories than with belongings."
+   }
+  ],
+  "yurtdisi": [
+   {
+    "tr": "Uzakta ama kopuk değilsin; iki ülke arasında yeni bir denge kuruyorsun.",
+    "en": "You are far away but not disconnected; you find a new balance between two countries."
+   },
+   {
+    "tr": "Yeni bir dil, yeni sokaklar; ama içinde hep bir parça memleket kokusu var.",
+    "en": "A new language, new streets; yet there is always a touch of home inside you."
+   },
+   {
+    "tr": "Bu şehir sana kendini yeniden keşfetme fırsatı veriyor; dönmek istediğinde yol hep açık.",
+    "en": "This city gives you the chance to rediscover yourself; the road back stays open whenever you wish."
+   },
+   {
+    "tr": "Yabancı bir şehirde kendi küçük dünyanı kuruyorsun.",
+    "en": "In a foreign city you build your own small world."
+   }
+  ],
+  "emekli": [
+   {
+    "tr": "Acele etmeden yaşadığın, sevdiklerini yakınında tuttuğun bir dönem.",
+    "en": "A period lived without hurry, with your loved ones close by."
+   },
+   {
+    "tr": "Hayatının bu bölümünde zaman senin tarafında; sakin ve rahat bir düzen kuruyorsun.",
+    "en": "In this chapter of your life time is on your side; you build a calm and comfortable routine."
+   },
+   {
+    "tr": "Alışkanlıklarını koruyup güzel manzaralara yaklaşıyorsun.",
+    "en": "You keep your habits while moving closer to beautiful views."
+   },
+   {
+    "tr": "Sabah çayını içtiğin köşe, günün en sevdiğin yeri oluyor.",
+    "en": "The corner where you drink your morning tea becomes your favourite place of the day."
+   }
+  ]
+ }
+}

@@ -45,8 +45,10 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
   }
 
   Future<void> _load() async {
+    final profile = ref.read(userProfileProvider); // await'ten ÖNCE (dispose sonrası ref yok)
     final prefs = await SharedPreferences.getInstance();
-    final t = await KismetEngine.load(prefs, ref.read(userProfileProvider));
+    if (!mounted) return;
+    final t = await KismetEngine.load(prefs, profile);
     if (!mounted) return;
     setState(() {
       _prefs = prefs;
@@ -72,12 +74,24 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
     final t = _t, prefs = _prefs;
     if (t == null || prefs == null || t.isRevealed(p.id, field) || _opening.contains(field)) return;
     setState(() => _opening.add(field));
-    AdService.instance.showInterstitial(onClosed: () async {
-      await KismetEngine.reveal(prefs, t, p.id, field);
-      if (!mounted) return;
-      HapticFeedback.lightImpact();
-      setState(() => _opening.remove(field));
-    });
+    _acReklamla(() => KismetEngine.reveal(prefs, t, p.id, field), field);
+  }
+
+  /// Reklam kapanınca kutuyu açar; reklam hata verse de kutu bekleme halinde kalmaz.
+  Future<void> _acReklamla(Future<void> Function() reveal, String field) async {
+    Future<void>? opened; // tek açılış; herkes aynı işi bekler
+    Future<void> doReveal() => opened ??= reveal();
+    try {
+      await AdService.instance.showInterstitial(onClosed: () => doReveal());
+      await doReveal(); // geri çağrı gelmediyse yine de aç
+    } catch (_) {
+      await doReveal();
+    } finally {
+      if (mounted) {
+        HapticFeedback.lightImpact();
+        setState(() => _opening.remove(field));
+      }
+    }
   }
 
   String _deger(KismetPerson p, String field, int year) => switch (field) {

@@ -510,6 +510,9 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
     final bugun = DateTime.now().toIso8601String().substring(0, 10);
     // Günde 1 çevrimiçi yorum (maliyet); aynı gün sonrakiler cihazdaki motorla.
     final cevrimici = onay && prefs.getString('ruya_ai_tarih') != bugun;
+    // Hak istekten ÖNCE ayrılır: geri çıkıp yeniden girince aynı gün ikinci ağ isteği olmaz.
+    if (cevrimici) await prefs.setString('ruya_ai_tarih', bugun);
+    if (!mounted) return;
 
     setState(() => _yorumlaniyor = true);
     final sonucF = cevrimici
@@ -518,7 +521,6 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
             dream: _arama.trim(), name: isim.isEmpty ? (isEn ? 'friend' : 'dostum') : isim,
             isEn: isEn, symbolHint: ipucu));
     final results = await Future.wait<Object?>([sonucF, Future<void>.delayed(const Duration(seconds: 5))]);
-    if (cevrimici) await prefs.setString('ruya_ai_tarih', bugun);
     if (!mounted) return;
     setState(() => _yorumlaniyor = false);
     final metin = results.first as String;

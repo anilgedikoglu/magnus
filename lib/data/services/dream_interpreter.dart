@@ -42,7 +42,9 @@ class DreamInterpreter {
 
     String? result;
     try {
-      result = await _online(text, isEn, symbolHint);
+      // Profil adı metinde/ipucunda geçse bile sunucuya gitmez: yer tutucuyla maskelenir.
+      result = await _online(redactName(text, name), isEn,
+          symbolHint == null ? null : redactName(symbolHint, name));
       // İsim sunucuya GİTMEZ (Codex): hitap cihazda eklenir.
       result = result?.replaceAll(_namePh, who);
     } catch (_) {
@@ -51,6 +53,24 @@ class DreamInterpreter {
     result ??= offline(dream: text, name: who, isEn: isEn, symbolHint: symbolHint);
     _cache[key] = result;
     return result;
+  }
+
+  /// Bilinen adı (ve çok parçalıysa her ≥3 harfli parçasını) {{ISIM}} ile maskeler.
+  static String redactName(String text, String name) {
+    final parts = <String>{name.trim(), ...name.trim().split(RegExp(r'\s+'))}
+        .where((p) => p.length >= 3)
+        .toList()
+      ..sort((a, b) => b.length.compareTo(a.length)); // önce uzun (tam ad)
+    var out = text;
+    for (final p in parts) {
+      out = out.replaceAll(RegExp(RegExp.escape(p), caseSensitive: false), _namePh);
+      // Türkçe büyük/küçük harf (İ/ı) farkı: elle küçük harfe çevrilmiş halini de yakala
+      final lower = p.replaceAll('I', 'ı').replaceAll('İ', 'i').toLowerCase();
+      if (lower != p.toLowerCase()) {
+        out = out.replaceAll(RegExp(RegExp.escape(lower), caseSensitive: false), _namePh);
+      }
+    }
+    return out;
   }
 
   static String _clean(String s) {
@@ -110,17 +130,27 @@ class DreamInterpreter {
         .timeout(const Duration(seconds: 12));
     if (res.statusCode != 200) return null;
     final data = jsonDecode(utf8.decode(res.bodyBytes));
+    // Token sınırında kesilen yanıt yarım cümle bırakır → kabul etme, cihazdaki motora düş.
+    if (data['stop_reason'] != 'end_turn') return null;
     final content = data['content'];
     if (content is! List || content.isEmpty) return null;
     var out = (content.first['text'] ?? '').toString().replaceAll(RegExp(r'[*#`_>]'), '').trim();
     out = out.replaceAll(RegExp(r'\s+'), ' ');
-    if (out.length < 40 || out.length > 900) return null;
+    if (!isCompleteReading(out)) return null;
     final lead = isEn ? 'Dear' : 'Değerli';
     if (!out.startsWith(lead)) out = '$lead $_namePh, $out';
     if (!out.contains(_namePh)) {
       out = out.replaceFirst(RegExp('^$lead' r'\s+[^,]{0,40},'), '$lead $_namePh,');
     }
     return out;
+  }
+
+  /// AI yanıtı kullanılabilir mi: makul uzunluk, cümle sonu noktalaması, 2-5 cümle.
+  static bool isCompleteReading(String out) {
+    if (out.length < 40 || out.length > 900) return false;
+    if (!RegExp(r'[.!?…]["”’)]?$').hasMatch(out)) return false;
+    final n = RegExp(r'[.!?…](\s|$)').allMatches(out).length;
+    return n >= 2 && n <= 5;
   }
 
   static String _firstSentence(String s) {

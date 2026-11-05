@@ -215,8 +215,8 @@ class AppStrings {
   String get dreamResultTitle => _s('Rüya Yorumun', 'Your Dream Reading');
   String get dreamAiConsentTitle => _s('Rüyanı nasıl yorumlayayım?', 'How should I read your dream?');
   String get dreamAiConsentBody => _s(
-      'Daha kişisel bir yorum için rüya metnin bir yapay zekâ hizmet sağlayıcısına gönderilir (adın gönderilmez). İstemezsen yorum cihazında hazırlanır. Yorumlar eğlence amaçlıdır.',
-      'For a more personal reading, your dream text is sent to an AI service provider (your name is not sent). If you prefer, the reading is prepared on your device. Readings are for entertainment.');
+      'Daha kişisel bir yorum için rüya metnin bir yapay zekâ hizmet sağlayıcısına gönderilir. Profilindeki adın gönderilmez; metinde geçse bile gizlenir. Rüyana başka kişisel bilgi yazmamanı öneririz. İstemezsen yorum cihazında hazırlanır. Yorumlar eğlence amaçlıdır.',
+      'For a more personal reading, your dream text is sent to an AI service provider. Your profile name is never sent; it is masked even if you type it. Please avoid adding other personal details. If you prefer, the reading is prepared on your device. Readings are for entertainment.');
   String get dreamAiAccept => _s('Yapay zekâ ile', 'Use AI');
   String get dreamDeviceOnly => _s('Cihazda yorumla', 'On my device');
   String get dreamSending      => _s('Rüyan yorumlanıyor...', 'Your dream is being interpreted...');

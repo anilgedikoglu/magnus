@@ -97,22 +97,32 @@ class AdService {
       return;
     }
     final completer = Completer<void>();
+    // Kapanış TEK sefer: geri çağrı + show() hatası aynı anda gelse de içerik bir kez açılır.
+    void finish() {
+      if (completer.isCompleted) return;
+      completer.complete();
+      _loadInterstitial();
+      onClosed?.call();
+    }
     ad.fullScreenContentCallback = FullScreenContentCallback(
       onAdDismissedFullScreenContent: (a) {
         a.dispose();
-        _loadInterstitial();
-        onClosed?.call();
-        if (!completer.isCompleted) completer.complete();
+        finish();
       },
       onAdFailedToShowFullScreenContent: (a, err) {
         a.dispose();
-        _loadInterstitial();
-        onClosed?.call();
-        if (!completer.isCompleted) completer.complete();
         debugPrint('[AdService] Interstitial gösterilemedi: $err');
+        finish();
       },
     );
-    await ad.show();
+    try {
+      await ad.show();
+    } catch (e) {
+      // Platform çağrısı patlarsa kapanış geri çağrısı hiç gelmeyebilir → içeriği engelleme.
+      debugPrint('[AdService] Interstitial show hatası: $e');
+      ad.dispose();
+      finish();
+    }
     await completer.future;
   }
 
@@ -156,26 +166,34 @@ class AdService {
     }
     bool earned = false;
     final completer = Completer<void>();
+    void finish({required bool failed}) {
+      if (completer.isCompleted) return;
+      completer.complete();
+      _loadRewarded();
+      if (!failed && earned) {
+        onRewarded();
+      } else {
+        onFailed();
+      }
+    }
     ad.fullScreenContentCallback = FullScreenContentCallback(
       onAdDismissedFullScreenContent: (a) {
         a.dispose();
-        _loadRewarded();
-        if (earned) {
-          onRewarded();
-        } else {
-          onFailed();
-        }
-        if (!completer.isCompleted) completer.complete();
+        finish(failed: false);
       },
       onAdFailedToShowFullScreenContent: (a, err) {
         a.dispose();
-        _loadRewarded();
-        onFailed();
-        if (!completer.isCompleted) completer.complete();
         debugPrint('[AdService] Rewarded gösterilemedi: $err');
+        finish(failed: true);
       },
     );
-    await ad.show(onUserEarnedReward: (_, __) => earned = true);
+    try {
+      await ad.show(onUserEarnedReward: (_, __) => earned = true);
+    } catch (e) {
+      debugPrint('[AdService] Rewarded show hatası: $e');
+      ad.dispose();
+      finish(failed: true);
+    }
     await completer.future;
   }
 }

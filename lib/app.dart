@@ -48,6 +48,7 @@ import 'presentation/iching/iching_screen.dart';
 import 'presentation/japonfali/japonfali_screen.dart';
 import 'presentation/arabam/arabam_screen.dart';
 import 'presentation/kismetim/kismetim_screen.dart';
+import 'presentation/evim/evim_screen.dart';
 import 'presentation/tavsanfali/tavsanfali_screen.dart';
 import 'presentation/language/language_pick_screen.dart';
 
@@ -372,6 +373,11 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/kismetim',
         parentNavigatorKey: _rootKey,
         builder: (_, __) => const KismetimScreen(),
+      ),
+      GoRoute(
+        path: '/evim',
+        parentNavigatorKey: _rootKey,
+        builder: (_, __) => const EvimScreen(),
       ),
       GoRoute(
         path: '/durugoru',

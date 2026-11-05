@@ -134,4 +134,16 @@ void main() {
     expect(t3.seed, 5);
     expect(t3.revealed, isEmpty);
   });
+
+  test('tüm aralıklar geçmişte kalınca (yıllar sonra) yeni çizelge üretilir', () async {
+    SharedPreferences.setMockInitialValues({});
+    final prefs = await SharedPreferences.getInstance();
+    final t1 = await ArabaEngine.load(prefs, _p(), pool, nowYear: base, seed: 11);
+    final ayni = await ArabaEngine.load(prefs, _p(), pool, nowYear: t1.slots.last.end);
+    expect(ayni.seed, 11); // son aralık sürüyor → aynı çizelge
+    final yeni = await ArabaEngine.load(prefs, _p(), pool, nowYear: t1.slots.last.end + 1, seed: 12);
+    expect(yeni.seed, 12);
+    expect(yeni.baseYear, t1.slots.last.end + 1);
+    expect(yeni.slots.first.start, t1.slots.last.end + 1);
+  });
 }

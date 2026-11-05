@@ -139,7 +139,10 @@ class ArabaEngine {
       try {
         final t = ArabaTimeline.fromJson(Map<String, dynamic>.from(jsonDecode(raw) as Map));
         final ids = {for (final c in pool) c.id};
-        if (t != null && t.signature == gender && t.slots.every((s) => s.carId == null || ids.contains(s.carId))) {
+        // Tüm aralıklar geçmişte kaldıysa (yıllar sonra) yeni çizelge üretilir.
+        final stillFuture = t != null && t.slots.isNotEmpty && t.slots.last.end >= year;
+        if (t != null && stillFuture && t.signature == gender &&
+            t.slots.every((s) => s.carId == null || ids.contains(s.carId))) {
           return t;
         }
       } catch (_) {/* bozuk kayıt → yeniden üret */}

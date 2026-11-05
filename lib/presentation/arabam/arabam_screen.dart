@@ -42,9 +42,11 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
   }
 
   Future<void> _load() async {
+    final profile = ref.read(userProfileProvider); // await'ten ÖNCE (dispose sonrası ref yok)
     final prefs = await SharedPreferences.getInstance();
     final pool = await ArabaEngine.loadPool();
-    final t = await ArabaEngine.load(prefs, ref.read(userProfileProvider), pool);
+    if (!mounted) return;
+    final t = await ArabaEngine.load(prefs, profile, pool);
     if (!mounted) return;
     setState(() {
       _prefs = prefs;
@@ -69,12 +71,24 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
     final t = _t, prefs = _prefs;
     if (t == null || prefs == null || t.isRevealed(index) || _opening.contains(index)) return;
     setState(() => _opening.add(index));
-    AdService.instance.showInterstitial(onClosed: () async {
-      await ArabaEngine.reveal(prefs, t, index);
-      if (!mounted) return;
-      HapticFeedback.lightImpact();
-      setState(() => _opening.remove(index));
-    });
+    _acReklamla(() => ArabaEngine.reveal(prefs, t, index), index);
+  }
+
+  /// Reklam kapanınca kutuyu açar; reklam hata verse de kutu bekleme halinde kalmaz.
+  Future<void> _acReklamla(Future<void> Function() reveal, int index) async {
+    Future<void>? opened; // tek açılış; herkes aynı işi bekler
+    Future<void> doReveal() => opened ??= reveal();
+    try {
+      await AdService.instance.showInterstitial(onClosed: () => doReveal());
+      await doReveal(); // geri çağrı gelmediyse yine de aç
+    } catch (_) {
+      await doReveal();
+    } finally {
+      if (mounted) {
+        HapticFeedback.lightImpact();
+        setState(() => _opening.remove(index));
+      }
+    }
   }
 
   // ── Build ────────────────────────────────────────────────────────────────
@@ -212,7 +226,9 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
               Text(_tr('Arabaların', 'Your Cars'),
                   textAlign: TextAlign.center, style: AppTextStyles.screenTitle.copyWith(fontSize: 17)),
               const SizedBox(height: 14),
-              for (var i = 0; i < t.slots.length; i++) _satir(i, t.slots[i]),
+              // Geçmişte kalan aralıklar gösterilmez; süren aralık bu yıldan başlar.
+              for (var i = 0; i < t.slots.length; i++)
+                if (t.slots[i].end >= _thisYear) _satir(i, t.slots[i]),
             ],
           ),
         ),
@@ -220,7 +236,11 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
     );
   }
 
-  String _aralik(ArabaSlot s) => s.start == s.end ? '${s.start}:' : '${s.start} – ${s.end}:';
+  static int get _thisYear => DateTime.now().year;
+  String _aralik(ArabaSlot s) {
+    final from = s.start < _thisYear ? _thisYear : s.start;
+    return from == s.end ? '$from:' : '$from – ${s.end}:';
+  }
 
   Widget _satir(int index, ArabaSlot s) {
     final etiket = SizedBox(

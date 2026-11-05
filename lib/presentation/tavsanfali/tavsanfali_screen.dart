@@ -126,9 +126,11 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
         final updated = List<String>.of(
             prefs.getStringList('tavsanfali_gosterilen') ?? <String>[])
           ..add('${pick['id']}');
+        // Sıra önemli: önce ID + gösterilenler, EN SON tarih. Arada uygulama kapanırsa
+        // tarih eski kalır → ertesi açılış yeni seçim yapar; dünün ID'si bugünün sayılmaz.
+        await prefs.setInt('tavsanfali_bugun_id', pick['id'] as int);
         await prefs.setStringList('tavsanfali_gosterilen', updated);
         await prefs.setString('tavsanfali_bugun_tarih', today);
-        await prefs.setInt('tavsanfali_bugun_id', pick['id'] as int);
       }
 
       final en = pick['metin_en'] as String?;

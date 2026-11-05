@@ -5,7 +5,9 @@
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **main'deki sürüm: `10.8.11+273`** (2026-11-05 akşam test build'i: 3 ikonlu cam bar Ev·Zarf·Profil, tek kaydırmalı
+- **main'deki sürüm: `10.8.12+276`** (2026-11-06 test build'i: yüzen sıvı cam bar tüm uygulamada + kaydırmayla küçülme,
+  Geri Git'ler kaldırıldı, Kullanıcı Bilgileri kart kart, ana menü 3 düzen (1/3 ihtimal), sohbet bandı satır kadar,
+  19 HD büyük kart görseli. Önceki 273:) 3 ikonlu cam bar Ev·Zarf·Profil, tek kaydırmalı
   3×9 ana menü, zarf rozeti turuncu/yeşil, yönlü esneyen kapsül + ~180 yeni metin. Önceki 270; önceki 267: 4 yeni fal — Tavşan Falı, Kısmetim Kim?, Arabam Ne?,
   Evim Neresi? — + serbest metin rüya yorumu (Claude Haiku) + açılış yasal bilgilendirmesi + her yerden kaydırarak geri).
   Android Play Dahili test + iOS TestFlight (GitHub Actions). Ayrıntı → HANDOFF.md.
@@ -20,7 +22,7 @@
 - **10.8.8+264 (2026-11-05, iOS TestFlight GitHub Actions):** Anıl cihazda gördü → RENKLER ESKİ PALETE döndü
   (yapı kaldı), gövde fontları eski (Nunito/Raleway; başlıklar Cinzel), sol kenardan kaydır = geri (tüm iç sayfalar),
   gelen kutusu hep sağdan, Kullanıcı Bilgileri düzenleyicisi dairelerin YERİNDE (satır içi), siyah ekran düzeltmesi.
-- **Bir sonraki build: `10.8.12+276`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
+- **Bir sonraki build: `10.8.13+279`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
@@ -697,10 +699,17 @@ ana menü görünürken).
 
 **Ana menü İKİ KATMAN (Anıl, 2026-11-05; Instagram akışındaki hikâyeler satırı gibi):**
 - **Menu layer 1** = ikon ızgarası, TAM EKRAN, düz zemin `kHomeBackground` #0C0F14 (eski welcomscreenbackground.jpg
-  + karartma KALDIRILDI). Izgara üst dolgusu = layer 2 yüksekliği + 6 → varsayılanda layer 2'nin alt kenarından başlar.
-- **Menu layer 2** = üstteki 3 sıra sohbet balonu, ayrı ÜST katman (`homeMenuLayer2`), zemin `kHomeHeaderBackground`
-  #151515, ekranın en tepesinden (çentik dahil) 3. sıranın hemen altına: yükseklik = üst güvenli alan + `kHomeHeaderHeight` 155.
-- Ofset = ızgara kaydırması, [0, layer 2 yüksekliği]'ne kırpılır (`Transform.translate`): yukarı kaydırınca layer 2
+  + karartma KALDIRILDI). Izgara üst dolgusu = layer 2'nin CANLI yüksekliği + 8 (`HeaderSpacerSliver`).
+- **Menu layer 2** = sohbet balonları, ayrı ÜST katman (`homeMenuLayer2`), zemin `kHomeHeaderBackground` #151515,
+  ekranın en tepesinden (çentik dahil). **Yükseklik O AN görünen satır kadar** (Anıl, 2026-11-06: "chat ne kadar satıra
+  ihtiyaç duyarsa o kadar aşağı alsın menüyü"): son en çok 3 satırın ÖLÇÜLEN boyları (`HeightReporter`, her satır; balon
+  iki satıra taşabilir) + iç boşluk 8/8 + satır arası 8. Satır eklenince bant ve ızgara aşmasız yayla (180/27) birlikte
+  iner; yeni balon bant uzadıkça üstten açılır. 4.+ satırda bant 3 satırda kalır, balonlar içeride yukarı kayar.
+  Bant gizliyken (aşağı kaydırılmış) boy değişirse `HeaderSpacerSliver` sliver `scrollOffsetCorrection` ile ofseti
+  düzeltir → menü piksel bile kıpırdamaz. Dosya `lib/presentation/home/home_header_layout.dart`, test
+  `test/home_header_layout_test.dart`, görsel `build/visual_check/chat_header_capture_test.dart` (CAP_NARROW=true: dar+büyük yazı).
+- Ofset = ızgara kaydırması, [0, layer 2 yüksekliği]'ne kırpılır (`ScrollFollower`: ofseti BOYAMA anında okur — düzeltme
+  bildirim üretmediği için build'de okumak gizli bandı bir kare gösterirdi; semantics de güncellenir): yukarı kaydırınca layer 2
   ızgarayla AYNI hızda çıkıp kaybolur; aşağı çekince ızgara başa yaklaşınca üstten aynı hızla iner, ilk yerinde DURUR
   (üstte esneme olsa da aşağı inmez). Sekme kaydırması (TabSwipe) yalnız ızgarada.
 

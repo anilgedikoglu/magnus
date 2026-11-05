@@ -2,7 +2,18 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
-## Ne yapıldı (2026-11-05) + değişen dosyalar
+## Ne yapıldı (2026-11-06) + değişen dosyalar
+- **10.8.12+276 test build'i** (Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).
+- **Ana menü 3 düzen** (`home/menu_layout.dart`): açılışta 1/3 ihtimalle 3×9 / büyük·3×4·büyük·3×4·büyük /
+  "Favoriler" 3×2 + "Diğer Türler" 3×7 (kullanım sayımı `menu_kullanim`, oturum boyu sabit). Test `menu_layout_test`.
+- **Sohbet bandı satır kadar** (`home/home_header_layout.dart`): bant görünen satır kadar, ızgara yayla birlikte iner,
+  bant gizliyken menü yerinde (sliver ofset düzeltmesi). Codex 2 bulgu (satır kırılması, semantics) düzeltildi.
+- **19 HD menü görseli** (`assets/images/menu_hd/`, ~4 MB): kaynağı <768 px olanlar, ChatGPT'de 1024'e büyütme +
+  keskinleştirme (yeniden çizim değil; birebir). Yalnız büyük kartta (`menuImageFor`).
+- **Cam bar Instagram eşitleme** Codex 4 tur (puanlar 9,5); kalan fark seçim animasyonu zamanlaması — Anıl'ın sekme
+  dokunuşu ekran kaydı gerekli.
+
+## Önceki (2026-11-05)
 - **Gece (build YOK, main'de, 4c9295b4):** Ayrıntı CLAUDE.md "2026-11-05 GÜNCEL" ve "KULLANICI BİLGİLERİ
   KART DÜZENİ" bölümlerinde.
   - **Yüzen cam bar tüm uygulamada** (`shell/floating_bar.dart`). Fal ekranlarında seçimsiz.
@@ -96,7 +107,8 @@
   oturum scratchpad'inde (metin_turN/, secimler.json, bekleyen_secimler.json) — yeni oturumda yoksa ilgili turu baştan üret.
   Codex kullanım sınırı dolunca saatini bekle; o arada ChatGPT tarafı sürer.
 
-- Anıl'ın geri bildirimi → düzelt. Bir sonraki build `10.8.11+273`, yalnız "test çık" ile.
+- Anıl'ın 276 geri bildirimi → düzelt. Bir sonraki build `10.8.13+279`, yalnız "test çık" ile.
+- Cam bar seçim animasyonu: Anıl Instagram'da sekme dokunuşu kaydı gönderirse kare kare ölç, eşitle, Codex'e sor.
 - "Bir tur daha" denirse: `docs/metin_uretim_log.md` → "Sıradaki tur adayları" (Kahve Uğurlama, Kahve Bağlama,
   Japon, Kader Kitabı, Kâhinler) + `magnus-metin-uretimi` skill'i.
 - Güvenlik (Anıl onayı gerekli): repo herkese açık; git geçmişinde eski kişisel veri ve CLAUDE.md'de imza

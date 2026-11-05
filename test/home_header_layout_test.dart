@@ -2,6 +2,7 @@
 // kadar uzun; boyu değişince ızgara görünürken birlikte iner, başlık gizliyken menü yerinde
 // kalır (kaydırma düzeltmesi), layer 2 ızgarayla aynı hızda kayar ve gizliyken görünmez.
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:magnus_app/presentation/home/home_header_layout.dart';
 
@@ -132,6 +133,54 @@ void main() {
     expect(d1, lessThan(0), reason: 'fırlatma sürüyor');
     expect((d2 - d1).abs(), lessThan(6), reason: 'boy değişimi akışa 96 px sıçrama katmadı');
     await t.pumpAndSettle();
+  });
+
+  testWidgets('kaydırmada ekran okuyucu düğümü de bantla birlikte taşınır (Codex)', (t) async {
+    final handle = t.ensureSemantics();
+    await t.pumpWidget(Directionality(
+      textDirection: TextDirection.ltr,
+      child: Stack(children: [
+        Positioned.fill(
+          child: CustomScrollView(controller: ctrl, slivers: [
+            HeaderSpacerSliver(height: height, extra: _inset + _gap, slack: _gap),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, i) => const SizedBox(height: 100),
+                childCount: 30,
+              ),
+            ),
+          ]),
+        ),
+        Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          child: ScrollFollower(
+            controller: ctrl,
+            child: Semantics(
+              label: 'bant',
+              container: true,
+              child: const SizedBox(height: 68),
+            ),
+          ),
+        ),
+      ]),
+    ));
+    Rect global(SemanticsNode n) {
+      var r = n.rect;
+      for (SemanticsNode? c = n; c != null; c = c.parent) {
+        if (c.transform != null) r = MatrixUtils.transformRect(c.transform!, r);
+      }
+      return r;
+    }
+
+    final dpr = t.view.devicePixelRatio;
+    final before = global(t.getSemantics(find.bySemanticsLabel('bant')));
+    ctrl.jumpTo(30);
+    await t.pump();
+    final after = global(t.getSemantics(find.bySemanticsLabel('bant')));
+    expect(after.top, closeTo(before.top - 30 * dpr, 0.01));
+    handle.dispose();
   });
 
   testWidgets('üstte esneme: layer 2 aşağı inmez', (t) async {

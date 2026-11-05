@@ -146,26 +146,39 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   final ScrollController _gridScrollCtrl = ScrollController();
   final ScrollController _chatScrollCtrl = ScrollController();
 
-  // Layer 2'nin canlı yüksekliği (güvenli alan altı) = görünen satır sayısı kadar.
-  double _chatRowH = _kChatRowEstimate;
-  int _hdrRows = 1;
+  // Layer 2'nin canlı yüksekliği (güvenli alan altı) = son en çok 3 görünen satırın
+  // ÖLÇÜLEN boyu (balon metni dar ekranda / büyük yazıda iki satıra taşabilir — Codex).
+  final Map<int, double> _rowH = {};
   double _hdrTarget = chatHeaderHeightFor(1, _kChatRowEstimate);
   late final AnimationController _hdrCtrl =
       AnimationController.unbounded(vsync: this, value: _hdrTarget);
 
-  void _onChatRowHeight(double h) {
-    if (!mounted || (h - _chatRowH).abs() < 0.01) return;
-    setState(() => _chatRowH = h);
+  void _onRowHeight(int i, double h) {
+    if (!mounted || _rowH[i] == h) return;
+    setState(() => _rowH[i] = h);
   }
 
-  /// Layer 2'yi hedef yüksekliğe götür: satır sayısı değiştiyse aşmasız yayla (ızgara
-  /// birlikte iner/çıkar), yalnız ölçü değiştiyse (ilk ölçüm, yazı boyutu) anında.
-  void _retargetHeader(int rows, double target) {
+  /// O an görünen balon sayısı (sabit 2 + ekstralar; yazılan balon dahil).
+  int get _visibleBubbles => (_typingIndex + 1).clamp(1, 2 + _extraBubbles.length);
+
+  /// Layer 2'nin hedef yüksekliği: son en çok [kChatMaxRows] satırın ölçülen boyları +
+  /// aralıklar + iç boşluklar. Ölçülmemiş satır için ilk satırın boyu (yoksa tahmin).
+  double _chatTargetHeight() {
+    final n = _visibleBubbles;
+    final start = max(0, n - kChatMaxRows);
+    final fallback = _rowH[0] ?? _kChatRowEstimate;
+    var h = kChatPadTop + kChatPadBottom + (n - start - 1) * kChatRowGap;
+    for (var i = start; i < n; i++) {
+      h += _rowH[i] ?? fallback;
+    }
+    return h;
+  }
+
+  /// Layer 2'yi hedef yüksekliğe aşmasız yayla götür (ızgara birlikte iner/çıkar).
+  void _retargetHeader(double target) {
     if (!mounted) return;
-    final rowsChanged = rows != _hdrRows;
-    _hdrRows = rows;
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-    if (!rowsChanged || reduce || (_hdrCtrl.value - target).abs() < 0.5) {
+    if (reduce || (_hdrCtrl.value - target).abs() < 0.5) {
       _hdrCtrl.value = target;
       return;
     }
@@ -801,7 +814,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     //   üstünden aynı hızla iner, ilk yerinde DURUR (üstte esneme olsa da aşağı inmez).
     //   Ofset = ızgara kaydırması, [0, layer 2 yüksekliği] aralığına kırpılmış.
     final topInset = MediaQuery.paddingOf(context).top;
-    final maxHeader = chatHeaderHeightFor(kChatMaxRows, _chatRowH);
+    // Hedef boy değişince (yeni satır, satır kırılması) bant yayla ona gider.
+    final chatHeight = _chatTargetHeight();
+    if (chatHeight != _hdrTarget) {
+      _hdrTarget = chatHeight;
+      WidgetsBinding.instance.addPostFrameCallback((_) => _retargetHeader(chatHeight));
+    }
     return Scaffold(
       backgroundColor: kHomeBackground,
       extendBody: true,
@@ -819,9 +837,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             ),
           ),
           // ── Menu layer 2: sohbet balonları (ızgarayla birlikte kayar) ────────
-          // Yükseklik canlı: görünen satır kadar (_hdrCtrl). Balonlar en büyük boyda dizilir,
-          // fazlası kırpılır → yeni satır, bant genişledikçe üstten açılır. Izgaranın kaydırma
-          // ofseti BOYAMA anında okunur (ScrollFollower).
+          // Yükseklik canlı: görünen satır kadar (_hdrCtrl). Balonlar hedef boyda dizilir,
+          // fazlası kırpılır → yeni satır, bant genişledikçe üstten açılır. Zemin hep canlı
+          // boyu doldurur (küçülürken de). Izgaranın kaydırma ofseti BOYAMA anında okunur.
           Positioned(
             top: 0,
             left: 0,
@@ -836,20 +854,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                     height: topInset + max(0.0, _hdrCtrl.value),
                     child: child,
                   ),
-                  child: ClipRect(
-                    child: OverflowBox(
-                      alignment: Alignment.topCenter,
-                      minHeight: topInset + maxHeader,
-                      maxHeight: topInset + maxHeader,
-                      child: ColoredBox(
-                        color: kHomeHeaderBackground,
+                  child: ColoredBox(
+                    color: kHomeHeaderBackground,
+                    child: ClipRect(
+                      child: OverflowBox(
+                        alignment: Alignment.topCenter,
+                        minHeight: topInset + chatHeight,
+                        maxHeight: topInset + chatHeight,
                         child: Padding(
                           padding: EdgeInsets.only(top: topInset),
                           // Balonların kendi (programatik) kaydırması bara ULAŞMASIN — yoksa her
                           // yeni balon "yukarı kaydırma" sayılıp liste başındayken barı küçültürdü.
                           child: NotificationListener<ScrollNotification>(
                             onNotification: (_) => true,
-                            child: _buildChatHeader(maxHeader),
+                            child: _buildChatHeader(chatHeight),
                           ),
                         ),
                       ),
@@ -864,7 +882,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     );
   }
 
-  Widget _buildChatHeader(double maxHeader) {
+  /// [height]: son en çok 3 satır kadar; daha eski balonlar yukarı kayıp gizlenir.
+  Widget _buildChatHeader(double height) {
     // Tüm balonları tek listede birleştir (sabit 2 + dinamik ekstralar)
     final bubbles = [
       _ExtraBubble(
@@ -884,16 +903,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     // (_typingIndex balon tamamlandıkça artar; bubbles.length ile sınırla)
     final visibleCount = (_typingIndex + 1).clamp(0, bubbles.length);
 
-    // Layer 2 o an gereken satır kadar uzar (en çok kChatMaxRows); ızgara onunla iner.
-    final rows = visibleCount.clamp(1, kChatMaxRows);
-    final target = chatHeaderHeightFor(rows, _chatRowH);
-    if (target != _hdrTarget) {
-      _hdrTarget = target;
-      WidgetsBinding.instance.addPostFrameCallback((_) => _retargetHeader(rows, target));
-    }
-
     return SizedBox(
-      height: maxHeader,
+      height: height,
       child: SingleChildScrollView(
         controller: _chatScrollCtrl,
         physics: const NeverScrollableScrollPhysics(),
@@ -912,8 +923,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                           ? (i == 0 ? 0.60 : 1.0)
                           : 1.0,
                   child: HeightReporter(
-                    // Tüm satırlar aynı yapıda (avatar + tek satır balon): ilkini ölçmek yeter.
-                    onHeight: i == 0 ? _onChatRowHeight : _ignoreHeight,
+                    // Her satır ölçülür: balon metni iki satıra taşabilir, ikonlu balon farklı.
+                    onHeight: (h) => _onRowHeight(i, h),
                     child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
@@ -943,8 +954,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       ),
     );
   }
-
-  static void _ignoreHeight(double _) {}
 
   /// Eski sayfa renkleri: her 3 satırlık grup kendi çerçeve rengini korur
   /// (satır 1-3 pembe, 4-6 mavi, 7-9 yeşil).

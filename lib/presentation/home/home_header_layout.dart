@@ -144,22 +144,29 @@ class RenderScrollFollower extends RenderProxyBox {
   set controller(ScrollController v) {
     if (identical(v, _controller)) return;
     if (attached) {
-      _controller.removeListener(markNeedsPaint);
-      v.addListener(markNeedsPaint);
+      _controller.removeListener(_moved);
+      v.addListener(_moved);
     }
     _controller = v;
+    _moved();
+  }
+
+  /// Kaydırma: yeniden boya + ekran okuyucu koordinatlarını güncelle (Codex: yalnız
+  /// boyamak, VoiceOver/TalkBack düğümlerini eski yerde bırakırdı).
+  void _moved() {
     markNeedsPaint();
+    markNeedsSemanticsUpdate();
   }
 
   @override
   void attach(PipelineOwner owner) {
     super.attach(owner);
-    _controller.addListener(markNeedsPaint);
+    _controller.addListener(_moved);
   }
 
   @override
   void detach() {
-    _controller.removeListener(markNeedsPaint);
+    _controller.removeListener(_moved);
     super.detach();
   }
 

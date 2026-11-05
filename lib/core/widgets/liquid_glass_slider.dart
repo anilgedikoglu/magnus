@@ -219,7 +219,7 @@ class _LiquidGlassSliderState extends State<LiquidGlassSlider>
                             ? GlassLensBackdrop(
                                 program: lens,
                                 zoom: 1 + 0.15 * pc, // Codex: 1.35 ray çatallanıyordu
-                                refract: 0.10, // Codex 2. tur: mavi kenar yığılması
+                                refract: 0.08, // Codex 3. tur: mavi kenar yığılması
                                 bevel: 0.18,
                                 child: const ColoredBox(color: Color(0x14FFFFFF)),
                               )
@@ -283,14 +283,14 @@ class _KnobRimPainter extends CustomPainter {
       r,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.2
+        ..strokeWidth = 0.8 // Codex 3. tur
         ..shader = LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
             Colors.white.withValues(alpha: 0.30 * a),
             Colors.white.withValues(alpha: 0.05 * a),
-            Colors.white.withValues(alpha: 0.38 * a),
+            Colors.white.withValues(alpha: 0.28 * a),
           ],
           stops: const [0, 0.5, 1],
         ).createShader(Offset.zero & size),

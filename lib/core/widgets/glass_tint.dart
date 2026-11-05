@@ -17,8 +17,9 @@
 
 import 'package:flutter/painting.dart';
 
-/// Varsayılan: kaydırıcının ortası (videodaki ortadaki hâl).
-const double kGlassTintDefault = 0.5;
+/// Varsayılan: kaydırıcının ortası civarı (videodaki ortadaki hâl). Codex 3. tur: Instagram
+/// merkez parlaklığı için 0.55 (ortanın hemen sağı; geçirgenlik 0.25 → 0.22, Instagram 0.20).
+const double kGlassTintDefault = 0.55;
 
 /// (kaydırıcı, k göreli, c göreli) — videodan ölçülen noktalar.
 const List<(double, double, double)> _kTable = [

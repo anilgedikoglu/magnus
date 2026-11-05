@@ -80,7 +80,7 @@ const double _kMaxStretch = 0.18; // Codex: 0.32 referanstan fazla uzuyordu
 const double _kLiftHeight = 0.15; // tam havada ×1.15 — Codex: daha fazlası ikonları uzatıp çiftliyor
 const double _kLiftWidth = 0.08; // tam havada genişlik ×1.08
 const double _kLandSquash = 0.6; // iniş taşmasında (L<0) yassılaşma: genişlik +0.6·|L|
-const double _kLiftZoom = 0.08; // damla merceği büyütmesi (1.08×, Codex)
+const double _kLiftZoom = 0.04; // damla merceği büyütmesi (1.04×, Codex 3. tur)
 const Duration _kLiftUp = Duration(milliseconds: 130);
 
 class GlassTabBar extends StatefulWidget {
@@ -303,7 +303,7 @@ class _GlassTabBarState extends State<GlassTabBar>
           borderRadius: BorderRadius.circular(radius),
           boxShadow: const [
             // Codex: referansta gölge çok daha hafif (alt kenarda koyu şerit yapıyordu).
-            BoxShadow(color: Color(0x33000000), blurRadius: 18, offset: Offset(0, 3)),
+            BoxShadow(color: Color(0x26000000), blurRadius: 14, offset: Offset(0, 3)), // Codex 3. tur
           ],
         ),
         child: ClipRRect(
@@ -495,7 +495,7 @@ class _LiftedDroplet extends StatelessWidget {
               if (l != null)
                 // Damla küçük ve hareketli: yumuşak mercek (ikon optik uzaması azalır — Codex).
                 GlassLensBackdrop(
-                    program: l, zoom: 1 + _kLiftZoom * lift, refract: 0.15, bevel: 0.18, child: glass)
+                    program: l, zoom: 1 + _kLiftZoom * lift, refract: 0.10, bevel: 0.18, child: glass)
               else
                 glass,
               const CustomPaint(painter: _DropletRimPainter()),
@@ -517,7 +517,7 @@ class _DropletRimPainter extends CustomPainter {
     final rrect = RRect.fromRectAndRadius(rect, Radius.circular(size.height / 2));
     final paint = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.2
+      ..strokeWidth = 0.8 // Codex 3. tur
       ..shader = const LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,

@@ -68,7 +68,7 @@ class GlassTintNotifier extends StateNotifier<double> {
   final SharedPreferences? _prefs;
   static const _key = 'glass_bar_tint';
 
-  GlassTintNotifier(this._prefs) : super((_prefs?.getDouble(_key) ?? 0.5).clamp(0.0, 1.0));
+  GlassTintNotifier(this._prefs) : super((_prefs?.getDouble(_key) ?? 0.55).clamp(0.0, 1.0));
 
   /// Sürükleme sırasında: yalnız durum (her kare diske yazılmaz).
   void preview(double value) => state = value.clamp(0.0, 1.0);

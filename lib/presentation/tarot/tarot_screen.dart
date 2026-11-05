@@ -23,6 +23,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
+import 'deck_deal.dart';
 import 'tarot_table.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/l10n/app_strings.dart';
@@ -137,7 +138,9 @@ class TarotScreen extends ConsumerStatefulWidget {
   ConsumerState<TarotScreen> createState() => _TarotScreenState();
 }
 
-class _TarotScreenState extends ConsumerState<TarotScreen> {
+class _TarotScreenState extends ConsumerState<TarotScreen>
+    with SingleTickerProviderStateMixin {
+  late final DeckDeal _deal = DeckDeal(this);
   late final List<_TarotCard> _shuffled;
   late AppStrings _s;
 
@@ -165,6 +168,9 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
     super.initState();
     _shuffled = List<_TarotCard>.from(_allCards)..shuffle(Random());
     _loadTepki();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _deal.start(context);
+    });
   }
 
   Future<void> _loadTepki() async {
@@ -196,6 +202,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
   @override
   void dispose() {
     _overlayEntry?.remove();
+    _deal.dispose();
     super.dispose();
   }
 
@@ -441,7 +448,9 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
     );
   }
 
-  Widget _buildDeck() {
+  Widget _buildDeck() => AnimatedBuilder(animation: _deal.ctrl, builder: (context, _) => _deckBody());
+
+  Widget _deckBody() {
     final n = _shuffled.length;
     final totalW = _overlap * (n - 1) + _cardW;
 
@@ -452,7 +461,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
       final isDragging = i == _draggingIndex;
       children.add(
         Positioned(
-          left: i * _overlap,
+          left: _deal.left(i, _overlap),
           top: 0,
           width: _cardW,
           height: _cardH,
@@ -476,7 +485,9 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
       );
     }
 
-    return SizedBox(
+    return IgnorePointer(
+      ignoring: _deal.dealing,
+      child: SizedBox(
       height: _deckAreaH,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -494,6 +505,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
           ),
         ),
       ),
+    ),
     );
   }
 

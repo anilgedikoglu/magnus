@@ -26,7 +26,11 @@
   Sıfırlama tek kaynak `lib/data/services/fortune_reset.dart`: Ayarlar > Tüm Falları Sil = alınan fallar (gelen
   kutusu + Tavşan/Kısmetim/Arabam/Evim kayıtları), günlük haklar KALIR; Yönetici > Günlük Hakları Sıfırla = tüm
   günlük haklar + bu dört falın kayıtları.
-- Testler: 89 geçiyor (`flutter test`); tek kırmızı takipsiz artık `test/_visual_starfield_capture_test.dart`.
+- **Metin üretimi turu 1 (270 sonrası, main'de, build YOK):** ChatGPT+DeepSeek çapraz üretim/seçimle 100 yeni metin
+  (Tavşan, Yana Bana Dair, Durugörü Gelecek, Kahve Sonuç, Kahve Gelişme; TR+EN, koşullu). Skill: ;
+  algoritmalar , kayıt , betikler .
+  Arabam v2 (1.865 model), Evim taşınma kuralları, Kısmetim açıklama havuzları,  (EN ay adları).
+- Testler: 100 geçiyor (`flutter test`); tek kırmızı takipsiz artık `test/_visual_starfield_capture_test.dart`.
 - Görsel doğrulama: `build/visual_check/yeni_fallar_capture_test.dart --dart-define=CAP_PHASE=yf` (gitignored).
 
 ## Yarım kalan

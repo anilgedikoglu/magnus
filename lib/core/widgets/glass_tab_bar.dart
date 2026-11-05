@@ -495,7 +495,12 @@ class _LiftedDroplet extends StatelessWidget {
               if (l != null)
                 // Damla küçük ve hareketli: yumuşak mercek (ikon optik uzaması azalır — Codex).
                 GlassLensBackdrop(
-                    program: l, zoom: 1 + _kLiftZoom * lift, refract: 0.10, bevel: 0.18, child: glass)
+                    program: l,
+                    zoom: 1 + _kLiftZoom * lift,
+                    refract: 0.10,
+                    bevel: 0.18,
+                    blur: 0.018, // Codex 4. tur: hareket sırasında ikon bulanıklığı
+                    child: glass)
               else
                 glass,
               const CustomPaint(painter: _DropletRimPainter()),
@@ -598,7 +603,7 @@ class _RimPainter extends CustomPainter {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         stops: [0.0, 0.5, 1.0],
-        colors: [Color(0x66FFFFFF), Color(0x2EFFFFFF), Color(0x66FFFFFF)],
+        colors: [Color(0x66FFFFFF), Color(0x2EFFFFFF), Color(0x52FFFFFF)], // Codex 4. tur: alt biraz sönük
       ).createShader(rect);
     canvas.drawRRect(rrect, paint);
   }

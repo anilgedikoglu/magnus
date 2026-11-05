@@ -39,6 +39,7 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
     this.zoom = 1,
     this.refract = 0.238,
     this.bevel = 0.234,
+    this.blur = 0.028,
     super.child,
   });
 
@@ -49,6 +50,9 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
   final double refract;
   final double bevel;
 
+  /// Normal yönünde bulanıklık σ (h oranı); ölçüm 0.028.
+  final double blur;
+
   /// Büyütme (bar 1; havalanan damla / kaydırıcı topuzu >1 → alttaki büyür).
   final double zoom;
 
@@ -56,7 +60,8 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
   RenderObject createRenderObject(BuildContext context) =>
       RenderGlassLensBackdrop(program, MediaQuery.devicePixelRatioOf(context), zoom)
         ..refract = refract
-        ..bevel = bevel;
+        ..bevel = bevel
+        ..blur = blur;
 
   @override
   void updateRenderObject(BuildContext context, RenderGlassLensBackdrop renderObject) {
@@ -65,7 +70,8 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
       ..devicePixelRatio = MediaQuery.devicePixelRatioOf(context)
       ..zoom = zoom
       ..refract = refract
-      ..bevel = bevel;
+      ..bevel = bevel
+      ..blur = blur;
   }
 }
 
@@ -86,7 +92,12 @@ class RenderGlassLensBackdrop extends RenderProxyBox {
     _bevel = v;
     markNeedsPaint();
   }
-  static const double _blur = 0.028;
+  double _blur = 0.028;
+  set blur(double v) {
+    if (v == _blur) return;
+    _blur = v;
+    markNeedsPaint();
+  }
   static const double _saturation = 1.25;
 
   ui.FragmentProgram _program;

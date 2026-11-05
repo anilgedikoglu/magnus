@@ -218,7 +218,7 @@ class _LiquidGlassSliderState extends State<LiquidGlassSlider>
                         child: lens != null
                             ? GlassLensBackdrop(
                                 program: lens,
-                                zoom: 1 + 0.15 * pc, // Codex: 1.35 ray çatallanıyordu
+                                zoom: 1 + 0.18 * pc, // Codex 4. tur (1.35 çatallıyordu, 1.15 zayıftı)
                                 refract: 0.08, // Codex 3. tur: mavi kenar yığılması
                                 bevel: 0.18,
                                 child: const ColoredBox(color: Color(0x14FFFFFF)),

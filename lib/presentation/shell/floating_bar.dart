@@ -19,6 +19,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
+import 'package:flutter/rendering.dart' show ScrollDirection;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -208,15 +209,23 @@ class _FloatingBarHostState extends ConsumerState<FloatingBarHost>
 
   /// Her ekranın DİKEY ana kaydırması → küçülme mantığı. Esneme (overscroll) sayılmaz;
   /// listenin başı = tam boy. Yatay ve iç içe kaydırmalar yok sayılır.
+  /// Yalnız parmakla kaydırma (sürükleme/fırlatma) barı küçültür/büyütür; programatik
+  /// kaydırma (ör. açılan paneli görünür kılma) sayılmaz. Liste başı her durumda tam boy.
+  bool _userScrolling = false;
+
   bool _onScroll(ScrollNotification n) {
     if (n.depth != 0 || n.metrics.axis != Axis.vertical) return false;
     final m = n.metrics;
+    if (n is UserScrollNotification) {
+      _userScrolling = n.direction != ScrollDirection.idle;
+      return false;
+    }
     if (n is ScrollUpdateNotification) {
       if (m.pixels <= m.minScrollExtent) {
         _logic.reset();
         return false;
       }
-      if (m.pixels > m.maxScrollExtent) return false; // alt esneme
+      if (m.pixels > m.maxScrollExtent || !_userScrolling) return false; // alt esneme / programatik
       // Hareket esneme bölgesinden başladıysa yalnız sınırın içindeki kısmı say.
       final before = m.pixels - (n.scrollDelta ?? 0);
       _logic.add(m.pixels - before.clamp(m.minScrollExtent, m.maxScrollExtent));

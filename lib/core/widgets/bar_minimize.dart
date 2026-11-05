@@ -5,8 +5,8 @@
 // Değerler Anıl'ın Instagram (iOS 26) ekran kaydından kare kare ölçüldü (30/60 fps,
 // içerik kayması kareler arası korelasyonla, bar boyutu kenar taramasıyla):
 //   • Küçük ölçek 0.837 (yükseklik 145/173 px, genişlik 998/1192 px; merkez sabit).
-//   • Büyüme (aşağı kaydırma): parmakla birlikte HEMEN hafif "sürünme" başlar (~60 pt'de
-//     yolun %21'i), 60 pt'de bar kararını verir ve yayla tam boya oturur.
+//   • Büyüme (aşağı kaydırma): ilk 12 pt hiçbir şey olmaz (Anıl: "çekildiği anda değil"),
+//     sonra hafif "sürünme", 60 pt'de bar kararını verir ve yayla tam boya oturur.
 //   • Küçülme (yukarı kaydırma): ilk ~45 pt hiçbir şey olmaz (küçük oynamalar barı
 //     kımıldatmaz), sonra sürünme, 72 pt'de karar + yayla küçülme.
 //   • Yay: kütle 1, sertlik 250, sönüm 24 (ζ≈0.76, ~%2-4 taşma), başlangıç hızı 1/sn —
@@ -41,7 +41,11 @@ class BarMinimizeLogic {
   /// Küçülme kararı (pt).
   static const double collapseSnap = 72;
 
-  /// Büyüme kararı (pt). Büyümede ölü bölge yok.
+  /// Büyümede ölü bölge (pt): Anıl "çekildiği anda değil, çok az çekildikten sonra başlasın
+  /// hep shrink olmaya ya da expand olmaya" → Instagram'daki anlık sürünme yerine 12 pt bekle.
+  static const double expandDead = 12;
+
+  /// Büyüme kararı (pt).
   static const double expandSnap = 60;
 
   /// Karardan önceki sürünmenin en fazla ilerlemesi (yolun oranı).
@@ -87,9 +91,9 @@ class BarMinimizeLogic {
     } else {
       if (_acc >= expandSnap) {
         _commit(false);
-      } else {
+      } else if (_acc > expandDead) {
         _creeping = true;
-        onCreep(1 - creep * _acc / expandSnap);
+        onCreep(1 - creep * (_acc - expandDead) / (expandSnap - expandDead));
       }
     }
   }

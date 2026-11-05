@@ -28,13 +28,16 @@ void main() {
     expect(l.logic.compact, isTrue);
   });
 
-  test('büyüme: ölü bölge yok, sürünme hemen başlar, 60 pt\'de karar', () {
+  test('büyüme: ilk 12 pt ölü bölge (Anıl: çekildiği anda değil), sonra sürünme, 60 pt\'de karar', () {
     final l = _Log();
     l.logic.add(80); // küçült
     expect(l.commits, [true]);
-    l.logic.add(-30);
+    final before = l.creeps.length;
+    l.logic.add(-10); // ölü bölge: kımıldamaz
+    expect(l.creeps.length, before);
+    l.logic.add(-26); // toplam 36 → (36-12)/48 = yarı yol
     expect(l.creeps.last, closeTo(1 - BarMinimizeLogic.creep * 0.5, 1e-9));
-    l.logic.add(-30);
+    l.logic.add(-24); // toplam 60 → karar
     expect(l.commits, [true, false]);
     expect(l.logic.compact, isFalse);
   });

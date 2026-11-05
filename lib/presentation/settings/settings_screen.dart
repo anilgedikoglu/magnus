@@ -2,7 +2,10 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 import 'dart:ui' show ImageFilter;
+import 'dart:ui' as ui show lerpDouble;
 import 'package:flutter/material.dart';
+import 'package:flutter/physics.dart';
+import 'package:flutter/rendering.dart' show ScrollDirection;
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -1655,7 +1658,12 @@ class SettingsScreen extends ConsumerWidget {
             SafeArea(
               bottom: false,
               child: RepaintBoundary(
-                child: SingleChildScrollView(
+                child: NotificationListener<ScrollNotification>(
+                  onNotification: (n) {
+                    _profileCompactScroll(ref, n);
+                    return false; // yüzen bar da görsün
+                  },
+                  child: SingleChildScrollView(
                   key: const ValueKey('profileScroll'),
                   physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                   padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -1675,7 +1683,7 @@ class SettingsScreen extends ConsumerWidget {
                       _ProfileCard(
                         key: const ValueKey('profileCard2'),
                         padding: const EdgeInsets.all(16),
-                        child: Center(child: _buildDonutRow(scores, ref)),
+                        child: _buildDonutRow(scores, ref),
                       ),
                       const SizedBox(height: kProfileCardGap),
                       _ProfileCard(
@@ -1692,6 +1700,7 @@ class SettingsScreen extends ConsumerWidget {
                       const FloatingBarSpacer(extra: 16),
                     ],
                   ),
+                ),
                 ),
               ),
             ),
@@ -1925,218 +1934,226 @@ class SettingsScreen extends ConsumerWidget {
           ),
         ),
 
-        const SizedBox(height: _kGap),
+        // Alt 6 kutu: yukarı kaydırınca üst bloğun ALTINA katman olarak girer, kart kısalır;
+        // aşağı kaydırınca geri açılır (Anıl, 2026-11-05; _CollapsibleLower).
+        _CollapsibleLower(
+          child: Column(
+            children: [
+            const SizedBox(height: _kGap),
 
-        // Alt 3'lü satırlar — üsttekilerle aynı yükseklik/genişlik/aralık
-        SizedBox(
-          height: _kCardH,
-          child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              child: _InfoCard(
-                icon: Icons.access_time_rounded,
-                label: s.birthTime,
-                value: profile.birthTime?.isNotEmpty == true ? profile.birthTime! : '—',
-                onTap: () => _showEditPopup(context, ref,
-                  title: s.birthTime,
-                  icon: Icons.access_time_rounded,
-                  fieldType: 'time',
-                  currentValue: profile.birthTime ?? '',
-                  onSave: (v) async {
-                    final p = ref.read(userProfileProvider);
-                    // Saat değişince Yükselen yeniden hesapla
-                    final rising = _AstroCalc.risingSign(p.birthDate, v);
-                    await ref.read(userProfileProvider.notifier).save(
-                      UserProfile(name: p.name, age: p.age, gender: p.gender,
-                        job: p.job, maritalStatus: p.maritalStatus,
-                        birthDate: p.birthDate, birthCity: p.birthCity,
-                        zodiacSign: p.zodiacSign, onboardingComplete: p.onboardingComplete,
-                        birthTime: v,
-                        risingSign: rising ?? p.risingSign,
-                        moonSign: p.moonSign,
-                        planet: p.planet, profilePicIndex: p.profilePicIndex,
-                        customPhotoPath: p.customPhotoPath));
-                  }),
-              ),
-            ),
-            const SizedBox(width: _kGap),
-            Expanded(
-              child: _InfoCard(
-                icon: Icons.location_on_rounded,
-                label: s.birthPlace,
-                value: profile.birthCity?.isNotEmpty == true ? profile.birthCity! : '—',
-                onTap: () => _showEditPopup(context, ref,
-                  title: s.birthPlace,
-                  icon: Icons.location_on_rounded,
-                  fieldType: 'text',
-                  currentValue: profile.birthCity ?? '',
-                  onSave: (v) async {
-                    final p = ref.read(userProfileProvider);
-                    await ref.read(userProfileProvider.notifier).save(
-                      UserProfile(name: p.name, age: p.age, gender: p.gender,
-                        job: p.job, maritalStatus: p.maritalStatus,
-                        birthDate: p.birthDate, birthCity: v,
-                        zodiacSign: p.zodiacSign,
-                        onboardingComplete: p.onboardingComplete,
-                        birthTime: p.birthTime, risingSign: p.risingSign,
-                        moonSign: p.moonSign, planet: p.planet,
-                        profilePicIndex: p.profilePicIndex,
-                        customPhotoPath: p.customPhotoPath));
-                  }),
-              ),
-            ),
-            const SizedBox(width: _kGap),
-            Expanded(
-              child: _InfoCard(
-                icon: Icons.auto_awesome_rounded,
-                label: s.zodiac,
-                value: s.zodiacName(profile.zodiacSign),
-                onTap: () => _showEditPopup(context, ref,
-                  title: s.zodiac,
-                  icon: Icons.auto_awesome_rounded,
-                  fieldType: 'roller',
-                  currentValue: profile.zodiacSign ?? '',
-                  options: const [
-                    ('Koç','Koç ♈'), ('Boğa','Boğa ♉'), ('İkizler','İkizler ♊'),
-                    ('Yengeç','Yengeç ♋'), ('Aslan','Aslan ♌'), ('Başak','Başak ♍'),
-                    ('Terazi','Terazi ♎'), ('Akrep','Akrep ♏'), ('Yay','Yay ♐'),
-                    ('Oğlak','Oğlak ♑'), ('Kova','Kova ♒'), ('Balık','Balık ♓'),
-                  ],
-                  onSave: (v) async {
-                    final p = ref.read(userProfileProvider);
-                    await ref.read(userProfileProvider.notifier).save(
-                      UserProfile(name: p.name, age: p.age, gender: p.gender,
-                        job: p.job, maritalStatus: p.maritalStatus,
-                        birthDate: p.birthDate, birthCity: p.birthCity,
-                        zodiacSign: v,
-                        onboardingComplete: p.onboardingComplete,
-                        birthTime: p.birthTime, risingSign: p.risingSign,
-                        moonSign: p.moonSign, planet: p.planet,
-                        profilePicIndex: p.profilePicIndex,
-                        customPhotoPath: p.customPhotoPath));
-                  }),
-              ),
-            ),
-          ],
-        )),
+            // Alt 3'lü satırlar — üsttekilerle aynı yükseklik/genişlik/aralık
+            SizedBox(
+              height: _kCardH,
+              child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: _InfoCard(
+                    icon: Icons.access_time_rounded,
+                    label: s.birthTime,
+                    value: profile.birthTime?.isNotEmpty == true ? profile.birthTime! : '—',
+                    onTap: () => _showEditPopup(context, ref,
+                      title: s.birthTime,
+                      icon: Icons.access_time_rounded,
+                      fieldType: 'time',
+                      currentValue: profile.birthTime ?? '',
+                      onSave: (v) async {
+                        final p = ref.read(userProfileProvider);
+                        // Saat değişince Yükselen yeniden hesapla
+                        final rising = _AstroCalc.risingSign(p.birthDate, v);
+                        await ref.read(userProfileProvider.notifier).save(
+                          UserProfile(name: p.name, age: p.age, gender: p.gender,
+                            job: p.job, maritalStatus: p.maritalStatus,
+                            birthDate: p.birthDate, birthCity: p.birthCity,
+                            zodiacSign: p.zodiacSign, onboardingComplete: p.onboardingComplete,
+                            birthTime: v,
+                            risingSign: rising ?? p.risingSign,
+                            moonSign: p.moonSign,
+                            planet: p.planet, profilePicIndex: p.profilePicIndex,
+                            customPhotoPath: p.customPhotoPath));
+                      }),
+                  ),
+                ),
+                const SizedBox(width: _kGap),
+                Expanded(
+                  child: _InfoCard(
+                    icon: Icons.location_on_rounded,
+                    label: s.birthPlace,
+                    value: profile.birthCity?.isNotEmpty == true ? profile.birthCity! : '—',
+                    onTap: () => _showEditPopup(context, ref,
+                      title: s.birthPlace,
+                      icon: Icons.location_on_rounded,
+                      fieldType: 'text',
+                      currentValue: profile.birthCity ?? '',
+                      onSave: (v) async {
+                        final p = ref.read(userProfileProvider);
+                        await ref.read(userProfileProvider.notifier).save(
+                          UserProfile(name: p.name, age: p.age, gender: p.gender,
+                            job: p.job, maritalStatus: p.maritalStatus,
+                            birthDate: p.birthDate, birthCity: v,
+                            zodiacSign: p.zodiacSign,
+                            onboardingComplete: p.onboardingComplete,
+                            birthTime: p.birthTime, risingSign: p.risingSign,
+                            moonSign: p.moonSign, planet: p.planet,
+                            profilePicIndex: p.profilePicIndex,
+                            customPhotoPath: p.customPhotoPath));
+                      }),
+                  ),
+                ),
+                const SizedBox(width: _kGap),
+                Expanded(
+                  child: _InfoCard(
+                    icon: Icons.auto_awesome_rounded,
+                    label: s.zodiac,
+                    value: s.zodiacName(profile.zodiacSign),
+                    onTap: () => _showEditPopup(context, ref,
+                      title: s.zodiac,
+                      icon: Icons.auto_awesome_rounded,
+                      fieldType: 'roller',
+                      currentValue: profile.zodiacSign ?? '',
+                      options: const [
+                        ('Koç','Koç ♈'), ('Boğa','Boğa ♉'), ('İkizler','İkizler ♊'),
+                        ('Yengeç','Yengeç ♋'), ('Aslan','Aslan ♌'), ('Başak','Başak ♍'),
+                        ('Terazi','Terazi ♎'), ('Akrep','Akrep ♏'), ('Yay','Yay ♐'),
+                        ('Oğlak','Oğlak ♑'), ('Kova','Kova ♒'), ('Balık','Balık ♓'),
+                      ],
+                      onSave: (v) async {
+                        final p = ref.read(userProfileProvider);
+                        await ref.read(userProfileProvider.notifier).save(
+                          UserProfile(name: p.name, age: p.age, gender: p.gender,
+                            job: p.job, maritalStatus: p.maritalStatus,
+                            birthDate: p.birthDate, birthCity: p.birthCity,
+                            zodiacSign: v,
+                            onboardingComplete: p.onboardingComplete,
+                            birthTime: p.birthTime, risingSign: p.risingSign,
+                            moonSign: p.moonSign, planet: p.planet,
+                            profilePicIndex: p.profilePicIndex,
+                            customPhotoPath: p.customPhotoPath));
+                      }),
+                  ),
+                ),
+              ],
+            )),
 
-        const SizedBox(height: _kGap),
+            const SizedBox(height: _kGap),
 
-        SizedBox(
-          height: _kCardH,
-          child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              child: _InfoCard(
-                icon: Icons.public_rounded,
-                label: s.planet,
-                value: s.planetName(planet),
-                onTap: () => _showEditPopup(context, ref,
-                  title: s.planet,
-                  icon: Icons.public_rounded,
-                  fieldType: 'roller',
-                  currentValue: planet,
-                  options: const [
-                    ('Güneş',  'Güneş ☀️'),
-                    ('Ay',     'Ay 🌙'),
-                    ('Merkür', 'Merkür ☿'),
-                    ('Venüs',  'Venüs ♀'),
-                    ('Mars',   'Mars ♂'),
-                    ('Jüpiter','Jüpiter ♃'),
-                    ('Satürn', 'Satürn ♄'),
-                    ('Uranüs', 'Uranüs ⛢'),
-                    ('Neptün', 'Neptün ♆'),
-                    ('Plüton', 'Plüton ♇'),
-                  ],
-                  onSave: (v) async {
-                    final p = ref.read(userProfileProvider);
-                    await ref.read(userProfileProvider.notifier).save(
-                      UserProfile(name: p.name, age: p.age, gender: p.gender,
-                        job: p.job, maritalStatus: p.maritalStatus,
-                        birthDate: p.birthDate, birthCity: p.birthCity,
-                        zodiacSign: p.zodiacSign,
-                        onboardingComplete: p.onboardingComplete,
-                        birthTime: p.birthTime,
-                        risingSign: p.risingSign,
-                        moonSign: p.moonSign,
-                        planet: v,
-                        profilePicIndex: p.profilePicIndex,
-                        customPhotoPath: p.customPhotoPath));
-                  }),
-              ),
-            ),
-            const SizedBox(width: _kGap),
-            Expanded(
-              child: _InfoCard(
-                icon: Icons.trending_up_rounded,
-                label: s.rising,
-                value: s.zodiacName(profile.risingSign),
-                onTap: () => _showEditPopup(context, ref,
-                  title: s.rising,
-                  icon: Icons.trending_up_rounded,
-                  fieldType: 'roller',
-                  currentValue: profile.risingSign ?? '',
-                  options: [
-                    ('__auto__', s.autoCalc),
-                    ('Koç','Koç ♈'), ('Boğa','Boğa ♉'), ('İkizler','İkizler ♊'),
-                    ('Yengeç','Yengeç ♋'), ('Aslan','Aslan ♌'), ('Başak','Başak ♍'),
-                    ('Terazi','Terazi ♎'), ('Akrep','Akrep ♏'), ('Yay','Yay ♐'),
-                    ('Oğlak','Oğlak ♑'), ('Kova','Kova ♒'), ('Balık','Balık ♓'),
-                  ],
-                  onSave: (v) async {
-                    final p = ref.read(userProfileProvider);
-                    final rising = v == '__auto__'
-                        ? (_AstroCalc.risingSign(p.birthDate, p.birthTime) ?? p.risingSign)
-                        : v;
-                    await ref.read(userProfileProvider.notifier).save(
-                      UserProfile(name: p.name, age: p.age, gender: p.gender,
-                        job: p.job, maritalStatus: p.maritalStatus,
-                        birthDate: p.birthDate, birthCity: p.birthCity,
-                        zodiacSign: p.zodiacSign, onboardingComplete: p.onboardingComplete,
-                        birthTime: p.birthTime, risingSign: rising, moonSign: p.moonSign,
-                        planet: p.planet, profilePicIndex: p.profilePicIndex,
-                        customPhotoPath: p.customPhotoPath));
-                  }),
-              ),
-            ),
-            const SizedBox(width: _kGap),
-            Expanded(
-              child: _InfoCard(
-                icon: Icons.nightlight_rounded,
-                label: s.moonSign,
-                value: s.zodiacName(profile.moonSign),
-                onTap: () => _showEditPopup(context, ref,
-                  title: s.moonSign,
-                  icon: Icons.nightlight_rounded,
-                  fieldType: 'roller',
-                  currentValue: profile.moonSign ?? '',
-                  options: [
-                    ('__auto__', s.autoCalc),
-                    ('Koç','Koç ♈'), ('Boğa','Boğa ♉'), ('İkizler','İkizler ♊'),
-                    ('Yengeç','Yengeç ♋'), ('Aslan','Aslan ♌'), ('Başak','Başak ♍'),
-                    ('Terazi','Terazi ♎'), ('Akrep','Akrep ♏'), ('Yay','Yay ♐'),
-                    ('Oğlak','Oğlak ♑'), ('Kova','Kova ♒'), ('Balık','Balık ♓'),
-                  ],
-                  onSave: (v) async {
-                    final p = ref.read(userProfileProvider);
-                    final moon = v == '__auto__'
-                        ? (_AstroCalc.moonSign(p.birthDate) ?? p.moonSign)
-                        : v;
-                    await ref.read(userProfileProvider.notifier).save(
-                      UserProfile(name: p.name, age: p.age, gender: p.gender,
-                        job: p.job, maritalStatus: p.maritalStatus,
-                        birthDate: p.birthDate, birthCity: p.birthCity,
-                        zodiacSign: p.zodiacSign, onboardingComplete: p.onboardingComplete,
-                        birthTime: p.birthTime, risingSign: p.risingSign, moonSign: moon,
-                        planet: p.planet, profilePicIndex: p.profilePicIndex,
-                        customPhotoPath: p.customPhotoPath));
-                  }),
-              ),
-            ),
-          ],
-        )),
+            SizedBox(
+              height: _kCardH,
+              child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: _InfoCard(
+                    icon: Icons.public_rounded,
+                    label: s.planet,
+                    value: s.planetName(planet),
+                    onTap: () => _showEditPopup(context, ref,
+                      title: s.planet,
+                      icon: Icons.public_rounded,
+                      fieldType: 'roller',
+                      currentValue: planet,
+                      options: const [
+                        ('Güneş',  'Güneş ☀️'),
+                        ('Ay',     'Ay 🌙'),
+                        ('Merkür', 'Merkür ☿'),
+                        ('Venüs',  'Venüs ♀'),
+                        ('Mars',   'Mars ♂'),
+                        ('Jüpiter','Jüpiter ♃'),
+                        ('Satürn', 'Satürn ♄'),
+                        ('Uranüs', 'Uranüs ⛢'),
+                        ('Neptün', 'Neptün ♆'),
+                        ('Plüton', 'Plüton ♇'),
+                      ],
+                      onSave: (v) async {
+                        final p = ref.read(userProfileProvider);
+                        await ref.read(userProfileProvider.notifier).save(
+                          UserProfile(name: p.name, age: p.age, gender: p.gender,
+                            job: p.job, maritalStatus: p.maritalStatus,
+                            birthDate: p.birthDate, birthCity: p.birthCity,
+                            zodiacSign: p.zodiacSign,
+                            onboardingComplete: p.onboardingComplete,
+                            birthTime: p.birthTime,
+                            risingSign: p.risingSign,
+                            moonSign: p.moonSign,
+                            planet: v,
+                            profilePicIndex: p.profilePicIndex,
+                            customPhotoPath: p.customPhotoPath));
+                      }),
+                  ),
+                ),
+                const SizedBox(width: _kGap),
+                Expanded(
+                  child: _InfoCard(
+                    icon: Icons.trending_up_rounded,
+                    label: s.rising,
+                    value: s.zodiacName(profile.risingSign),
+                    onTap: () => _showEditPopup(context, ref,
+                      title: s.rising,
+                      icon: Icons.trending_up_rounded,
+                      fieldType: 'roller',
+                      currentValue: profile.risingSign ?? '',
+                      options: [
+                        ('__auto__', s.autoCalc),
+                        ('Koç','Koç ♈'), ('Boğa','Boğa ♉'), ('İkizler','İkizler ♊'),
+                        ('Yengeç','Yengeç ♋'), ('Aslan','Aslan ♌'), ('Başak','Başak ♍'),
+                        ('Terazi','Terazi ♎'), ('Akrep','Akrep ♏'), ('Yay','Yay ♐'),
+                        ('Oğlak','Oğlak ♑'), ('Kova','Kova ♒'), ('Balık','Balık ♓'),
+                      ],
+                      onSave: (v) async {
+                        final p = ref.read(userProfileProvider);
+                        final rising = v == '__auto__'
+                            ? (_AstroCalc.risingSign(p.birthDate, p.birthTime) ?? p.risingSign)
+                            : v;
+                        await ref.read(userProfileProvider.notifier).save(
+                          UserProfile(name: p.name, age: p.age, gender: p.gender,
+                            job: p.job, maritalStatus: p.maritalStatus,
+                            birthDate: p.birthDate, birthCity: p.birthCity,
+                            zodiacSign: p.zodiacSign, onboardingComplete: p.onboardingComplete,
+                            birthTime: p.birthTime, risingSign: rising, moonSign: p.moonSign,
+                            planet: p.planet, profilePicIndex: p.profilePicIndex,
+                            customPhotoPath: p.customPhotoPath));
+                      }),
+                  ),
+                ),
+                const SizedBox(width: _kGap),
+                Expanded(
+                  child: _InfoCard(
+                    icon: Icons.nightlight_rounded,
+                    label: s.moonSign,
+                    value: s.zodiacName(profile.moonSign),
+                    onTap: () => _showEditPopup(context, ref,
+                      title: s.moonSign,
+                      icon: Icons.nightlight_rounded,
+                      fieldType: 'roller',
+                      currentValue: profile.moonSign ?? '',
+                      options: [
+                        ('__auto__', s.autoCalc),
+                        ('Koç','Koç ♈'), ('Boğa','Boğa ♉'), ('İkizler','İkizler ♊'),
+                        ('Yengeç','Yengeç ♋'), ('Aslan','Aslan ♌'), ('Başak','Başak ♍'),
+                        ('Terazi','Terazi ♎'), ('Akrep','Akrep ♏'), ('Yay','Yay ♐'),
+                        ('Oğlak','Oğlak ♑'), ('Kova','Kova ♒'), ('Balık','Balık ♓'),
+                      ],
+                      onSave: (v) async {
+                        final p = ref.read(userProfileProvider);
+                        final moon = v == '__auto__'
+                            ? (_AstroCalc.moonSign(p.birthDate) ?? p.moonSign)
+                            : v;
+                        await ref.read(userProfileProvider.notifier).save(
+                          UserProfile(name: p.name, age: p.age, gender: p.gender,
+                            job: p.job, maritalStatus: p.maritalStatus,
+                            birthDate: p.birthDate, birthCity: p.birthCity,
+                            zodiacSign: p.zodiacSign, onboardingComplete: p.onboardingComplete,
+                            birthTime: p.birthTime, risingSign: p.risingSign, moonSign: moon,
+                            planet: p.planet, profilePicIndex: p.profilePicIndex,
+                            customPhotoPath: p.customPhotoPath));
+                      }),
+                  ),
+                ),
+              ],
+            )),
+            ],
+          ),
+        ),
       ],
     );
   }
@@ -2219,13 +2236,6 @@ class SettingsScreen extends ConsumerWidget {
 
   Widget _buildDonutRow(Map<String, double> s, WidgetRef ref) {
     final loc = ref.watch(l10nProvider);
-    // Modalite: size=120, extra=50 → totalHeight=220. Yukarı kaydır: yarıçap=60
-    // Polarite/Element: size=120, extra=20 → totalHeight=160. Yukarı kaydır: çap=120
-    const modTotal = 120.0 + 35 * 2; // 190
-    const rowTotal = 120.0 + 35 * 2; // 190
-    const modShift = 60.0;           // yarıçap
-    const rowShift = 120.0;          // çap
-
     final modalite = _DonutChart(
       title: loc.modality,
       size: 120,
@@ -2238,75 +2248,30 @@ class SettingsScreen extends ConsumerWidget {
         _Seg(const Color(0xFF59DEFF), s['Sabit']!,    loc.modalityName('Sabit')),
       ],
     );
-
-    final polRow = Row(
-      children: [
-        Expanded(
-          child: Center(
-            child: _DonutChart(
-              title: loc.polarity,
-              size: 120,
-              labelInset: 1,
-              delay: const Duration(milliseconds: 950),
-              segments: [
-                _Seg(const Color(0xFFC886FF), s['Feminen']!,  loc.polarityName('Feminen')),
-                _Seg(const Color(0xFF59DEC8), s['Maskülen']!, loc.polarityName('Maskülen')),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: Center(
-            child: _DonutChart(
-              title: loc.element,
-              size: 120,
-              labelInset: 1,
-              labelDy: 1,
-              delay: const Duration(milliseconds: 1900),
-              segments: [
-                _Seg(const Color(0xFFFF9C6F), s['Ateş']!,   loc.elementName('Ateş')),
-                _Seg(const Color(0xFFB2E959), s['Toprak']!, loc.elementName('Toprak')),
-                _Seg(const Color(0xFF59C8FF), s['Hava']!,   loc.elementName('Hava')),
-                _Seg(const Color(0xFF599CFF), s['Su']!,     loc.elementName('Su')),
-              ],
-            ),
-          ),
-        ),
+    final polarite = _DonutChart(
+      title: loc.polarity,
+      size: 120,
+      labelInset: 1,
+      delay: const Duration(milliseconds: 950),
+      segments: [
+        _Seg(const Color(0xFFC886FF), s['Feminen']!,  loc.polarityName('Feminen')),
+        _Seg(const Color(0xFF59DEC8), s['Maskülen']!, loc.polarityName('Maskülen')),
       ],
     );
-
-    // Her donut totalSize=190, merkezi içeride: extra(35) + yarıçap(60) = 95px
-    // Merkez-merkez arası dikey mesafe: gap
-    const donutTotal = 190.0;
-    const centerOffset = 95.0; // donutun üstünden merkezine
-    const gap = 150.0;         // Modalite merkezi ile alt donutlar merkezi arası
-
-    // Toplam yükseklik: Modalite merkezi + gap + alt donut alt kenarı
-    const totalH = centerOffset + gap + (donutTotal - centerOffset);
-
-    return SizedBox(
-      height: totalH,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          // Modalite — yatayda ortala, üstte
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: Center(child: modalite),
-          ),
-          // Polarite + Element — Modalite merkezinden gap kadar aşağıda
-          Positioned(
-            top: gap,
-            left: 0,
-            right: 0,
-            child: polRow,
-          ),
-        ],
-      ),
+    final element = _DonutChart(
+      title: loc.element,
+      size: 120,
+      labelInset: 1,
+      labelDy: 1,
+      delay: const Duration(milliseconds: 1900),
+      segments: [
+        _Seg(const Color(0xFFFF9C6F), s['Ateş']!,   loc.elementName('Ateş')),
+        _Seg(const Color(0xFFB2E959), s['Toprak']!, loc.elementName('Toprak')),
+        _Seg(const Color(0xFF59C8FF), s['Hava']!,   loc.elementName('Hava')),
+        _Seg(const Color(0xFF599CFF), s['Su']!,     loc.elementName('Su')),
+      ],
     );
+    return _DonutCard(modalite: modalite, polarite: polarite, element: element);
   }
 
   // ── Ana Menü butonu ───────────────────────────────────────────────────────
@@ -3260,4 +3225,185 @@ Future<void> _saveProfileEdit(
         profilePicIndex: picIndex,
         customPhotoPath: photoPath,
       ));
+}
+
+// ─── Halkalar: kaydırmayla yan yana dizilme (Anıl, 2026-11-05) ───────────────
+// "Yukarı swipe yapılırken (azıcık yapıldıktan sonra) biraz küçülerek yan yana bir
+// pozisyona doğru animasyonla geçip tam yan yana dizilip kendi kutusu dikeyde animasyonla
+// kısalabilir. Ters swipe ile de hafifçe büyüyüp eski yerlerine gelirler."
+//   • Yukarı ~28 pt kaydırınca: Polarite sol, Modalite orta, Element sağ; ölçek 0.8;
+//     kart yüksekliği 340 → 120. Aşağı ~28 pt ya da liste başı: üçgen düzene döner.
+//   • Bilgi kartının alt 6 kutusu da AYNI anda üst bloğun altına girer (_CollapsibleLower).
+//   • Geçiş aşmasız yumuşak yayla (_kProfileCompactSpring).
+
+final _profileCompactProvider = StateProvider<bool>((ref) => false);
+double _profileCompactAcc = 0;
+/// "Çekildiği anda değil, çok az çekildikten sonra başlasın" (Anıl) → 24 pt sonra.
+const double _kProfileCompactTrigger = 24;
+
+/// Yerleşim geçişleri: aşmasız (kritik sönümlü) yumuşak yay, ~0.45 sn — sallanma yok
+/// (Anıl: "hareketler smooth ve kusursuz olsun").
+const SpringDescription _kProfileCompactSpring =
+    SpringDescription(mass: 1, stiffness: 180, damping: 27);
+
+/// Yalnız PARMAKLA kaydırma (sürükleme/fırlatma) sayılır; açılan paneli görünür kılmak
+/// gibi programatik kaydırmalar kutuları kendiliğinden kapatmasın.
+bool _profileUserScrolling = false;
+
+void _profileCompactScroll(WidgetRef ref, ScrollNotification n) {
+  if (n.depth != 0 || n.metrics.axis != Axis.vertical) return;
+  if (n is UserScrollNotification) {
+    _profileUserScrolling = n.direction != ScrollDirection.idle;
+    return;
+  }
+  if (n is! ScrollUpdateNotification) return;
+  final m = n.metrics;
+  final d = n.scrollDelta ?? 0;
+  final compact = ref.read(_profileCompactProvider);
+  if (m.pixels <= m.minScrollExtent + 0.5) {
+    _profileCompactAcc = 0;
+    if (compact) ref.read(_profileCompactProvider.notifier).state = false;
+    return;
+  }
+  if (m.pixels > m.maxScrollExtent || d == 0 || !_profileUserScrolling) return; // alt esneme / programatik
+  final towardCompact = d > 0;
+  if (towardCompact == compact) {
+    _profileCompactAcc = 0;
+    return;
+  }
+  _profileCompactAcc += d.abs();
+  if (_profileCompactAcc >= _kProfileCompactTrigger) {
+    _profileCompactAcc = 0;
+    ref.read(_profileCompactProvider.notifier).state = towardCompact;
+  }
+}
+
+class _DonutCard extends ConsumerStatefulWidget {
+  const _DonutCard({required this.modalite, required this.polarite, required this.element});
+
+  final Widget modalite;
+  final Widget polarite;
+  final Widget element;
+
+  @override
+  ConsumerState<_DonutCard> createState() => _DonutCardState();
+}
+
+class _DonutCardState extends ConsumerState<_DonutCard> with SingleTickerProviderStateMixin {
+  static const double _foot = 190; // halka + etiket payı (size 120 + 2·35)
+  static const double _tallH = 340; // üçgen düzen (eski ölçü)
+  static const double _rowH = 120; // yan yana düzen
+  static const double _rowScale = 0.8;
+
+  late final AnimationController _t = AnimationController.unbounded(
+      vsync: this, value: ref.read(_profileCompactProvider) ? 1 : 0);
+
+  @override
+  void dispose() {
+    _t.dispose();
+    super.dispose();
+  }
+
+  void _go(bool compact) {
+    final target = compact ? 1.0 : 0.0;
+    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+      _t.value = target;
+      return;
+    }
+    _t.animateWith(SpringSimulation(_kProfileCompactSpring, _t.value, target, _t.velocity));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    ref.listen<bool>(_profileCompactProvider, (_, c) => _go(c));
+    return LayoutBuilder(builder: (context, c) {
+      final w = c.maxWidth;
+      return AnimatedBuilder(
+        animation: _t,
+        builder: (context, _) {
+          final t = _t.value; // yayda hafif taşabilir
+          final tc = t.clamp(0.0, 1.0);
+          final h = ui.lerpDouble(_tallH, _rowH, tc)!;
+          final scale = ui.lerpDouble(1, _rowScale, t)!;
+          // Üçgen düzen merkezleri (eski yerleşim) → yan yana merkezler.
+          Offset lerpC(Offset a, Offset b) => Offset.lerp(a, b, t)!;
+          final mod = lerpC(Offset(w / 2, 95), Offset(w / 2, _rowH / 2));
+          final pol = lerpC(Offset(w / 4 - 4, 245), Offset(w / 6, _rowH / 2));
+          final ele = lerpC(Offset(w * 3 / 4 + 4, 245), Offset(w * 5 / 6, _rowH / 2));
+          Widget place(Offset ctr, Widget child) => Positioned(
+                left: ctr.dx - _foot / 2,
+                top: ctr.dy - _foot / 2,
+                width: _foot,
+                height: _foot,
+                child: Transform.scale(scale: scale, child: Center(child: child)),
+              );
+          return SizedBox(
+            key: const ValueKey('donutCardBody'),
+            height: h,
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                place(mod, widget.modalite),
+                place(pol, widget.polarite),
+                place(ele, widget.element),
+              ],
+            ),
+          );
+        },
+      );
+    });
+  }
+}
+
+/// Bilgi kartının alt 6 kutusu: sıkışık hâlde üst bloğun (4 kutu + avatar) ALTINA kayar —
+/// üst kenarda kırpılarak "altına giriyor" görünür, hafifçe solar; kart birlikte kısalır.
+class _CollapsibleLower extends ConsumerStatefulWidget {
+  const _CollapsibleLower({required this.child});
+
+  final Widget child;
+
+  @override
+  ConsumerState<_CollapsibleLower> createState() => _CollapsibleLowerState();
+}
+
+class _CollapsibleLowerState extends ConsumerState<_CollapsibleLower>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _t = AnimationController.unbounded(
+      vsync: this, value: ref.read(_profileCompactProvider) ? 1 : 0);
+
+  @override
+  void dispose() {
+    _t.dispose();
+    super.dispose();
+  }
+
+  void _go(bool compact) {
+    final target = compact ? 1.0 : 0.0;
+    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+      _t.value = target;
+      return;
+    }
+    _t.animateWith(SpringSimulation(_kProfileCompactSpring, _t.value, target, _t.velocity));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    ref.listen<bool>(_profileCompactProvider, (_, c) => _go(c));
+    return AnimatedBuilder(
+      animation: _t,
+      child: widget.child,
+      builder: (context, child) {
+        final t = _t.value.clamp(0.0, 1.0);
+        if (t >= 0.999) return const SizedBox(key: ValueKey('infoLowerCollapsed'), width: double.infinity);
+        return ClipRect(
+          key: const ValueKey('infoLower'),
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            heightFactor: 1 - t,
+            child: Opacity(opacity: (1 - t * 0.7).clamp(0.0, 1.0), child: child),
+          ),
+        );
+      },
+    );
+  }
 }

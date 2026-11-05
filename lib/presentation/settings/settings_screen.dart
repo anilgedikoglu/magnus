@@ -401,7 +401,8 @@ class _DonutChartState extends State<_DonutChart>
                                 fontFeatures: AppTextStyles.tabular,
                               ),
                             ),
-                            const SizedBox(height: 4),
+                            // Son satırdan sonra boşluk YOK → grup tam ortalanır (eskiden 2 px yukarıdaydı).
+                            if (!identical(seg, widget.segments.last)) const SizedBox(height: 4),
                           ],
                         ],
                       ),
@@ -477,7 +478,8 @@ class _InfoCardState extends State<_InfoCard> {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
               children: [
                 Row(
                   children: [
@@ -734,10 +736,18 @@ class _InlineEditorState extends ConsumerState<_InlineEditor> {
 
     final buttons = Row(
       children: [
+        // İptal: Kaydet ile AYNI ölçü ve çerçeve kalınlığı, nötr renk (Anıl: "iptal'in çerçevesi yok").
         Expanded(
-          child: TextButton(
+          child: OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              foregroundColor: AppColors.bone,
+              backgroundColor: Colors.white.withValues(alpha: 0.06),
+              minimumSize: const Size.fromHeight(44),
+              side: BorderSide(color: Colors.white.withValues(alpha: 0.45), width: 1),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            ),
             onPressed: _close,
-            child: Text(s.cancel, style: AppTextStyles.uiLabel.copyWith(color: AppColors.ash)),
+            child: Text(s.cancel, style: AppTextStyles.uiLabel.copyWith(color: AppColors.boneDim)),
           ),
         ),
         const SizedBox(width: 8),
@@ -1728,6 +1738,11 @@ class SettingsScreen extends ConsumerWidget {
 
   // ── Bilgi grid'i ─────────────────────────────────────────────────────────
 
+  /// Bilgi kutucukları: HEPSİ aynı yükseklik, üç eşit sütun, her yönde aynı aralık
+  /// (Anıl: "en ve boyları eşit değil, eşitle; aralıkları da eşitle").
+  static const double _kCardH = 56;
+  static const double _kGap = 8;
+
   Widget _buildGridSection(BuildContext context, WidgetRef ref, UserProfile profile) {
     final s = ref.watch(l10nProvider);
     final birth = _formatDate(profile.birthDate);
@@ -1737,8 +1752,9 @@ class SettingsScreen extends ConsumerWidget {
 
     return Column(
       children: [
-        // Üst blok: sol/sağ bilgi kartları + ortada avatar
-        IntrinsicHeight(
+        // Üst blok: sol/sağ bilgi kartları + ortada avatar (orta sütun da eşit genişlikte)
+        SizedBox(
+          height: _kCardH * 2 + _kGap,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -1746,7 +1762,8 @@ class SettingsScreen extends ConsumerWidget {
               Expanded(
                 child: Column(
                   children: [
-                    Expanded(
+                    SizedBox(
+                      height: _kCardH,
                       child: _InfoCard(
                         icon: Icons.calendar_month_rounded,
                         label: s.birthDate,
@@ -1782,8 +1799,9 @@ class SettingsScreen extends ConsumerWidget {
                           }),
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    Expanded(
+                    const SizedBox(height: _kGap),
+                    SizedBox(
+                      height: _kCardH,
                       child: _InfoCard(
                         icon: Icons.favorite_rounded,
                         label: s.maritalStatus,
@@ -1814,20 +1832,20 @@ class SettingsScreen extends ConsumerWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: _kGap),
 
-              // Orta: avatar + isim
-              SizedBox(
-                width: 110,
+              // Orta: avatar + isim — diğer sütunlarla eşit genişlik
+              Expanded(
                 child: _buildAvatarCenter(context, ref, profile),
               ),
 
-              const SizedBox(width: 8),
+              const SizedBox(width: _kGap),
               // Sağ sütun
               Expanded(
                 child: Column(
                   children: [
-                    Expanded(
+                    SizedBox(
+                      height: _kCardH,
                       child: _InfoCard(
                         icon: Icons.person_rounded,
                         label: s.gender,
@@ -1853,8 +1871,9 @@ class SettingsScreen extends ConsumerWidget {
                           }),
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    Expanded(
+                    const SizedBox(height: _kGap),
+                    SizedBox(
+                      height: _kCardH,
                       child: _InfoCard(
                         icon: Icons.work_rounded,
                         label: s.occupation,
@@ -1887,10 +1906,13 @@ class SettingsScreen extends ConsumerWidget {
           ),
         ),
 
-        const SizedBox(height: 8),
+        const SizedBox(height: _kGap),
 
-        // Alı 3'lü satırlar
-        Row(
+        // Alt 3'lü satırlar — üsttekilerle aynı yükseklik/genişlik/aralık
+        SizedBox(
+          height: _kCardH,
+          child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
               child: _InfoCard(
@@ -1919,7 +1941,7 @@ class SettingsScreen extends ConsumerWidget {
                   }),
               ),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: _kGap),
             Expanded(
               child: _InfoCard(
                 icon: Icons.location_on_rounded,
@@ -1945,7 +1967,7 @@ class SettingsScreen extends ConsumerWidget {
                   }),
               ),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: _kGap),
             Expanded(
               child: _InfoCard(
                 icon: Icons.auto_awesome_rounded,
@@ -1978,11 +2000,14 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ),
           ],
-        ),
+        )),
 
-        const SizedBox(height: 8),
+        const SizedBox(height: _kGap),
 
-        Row(
+        SizedBox(
+          height: _kCardH,
+          child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
               child: _InfoCard(
@@ -2023,7 +2048,7 @@ class SettingsScreen extends ConsumerWidget {
                   }),
               ),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: _kGap),
             Expanded(
               child: _InfoCard(
                 icon: Icons.trending_up_rounded,
@@ -2057,7 +2082,7 @@ class SettingsScreen extends ConsumerWidget {
                   }),
               ),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: _kGap),
             Expanded(
               child: _InfoCard(
                 icon: Icons.nightlight_rounded,
@@ -2092,7 +2117,7 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ),
           ],
-        ),
+        )),
       ],
     );
   }
@@ -2185,6 +2210,7 @@ class SettingsScreen extends ConsumerWidget {
     final modalite = _DonutChart(
       title: loc.modality,
       size: 120,
+      labelDy: 2, // Anıl: modalite yazıları çok az yukarıdaydı
       labelInset: 1,
       delay: Duration.zero,
       segments: [

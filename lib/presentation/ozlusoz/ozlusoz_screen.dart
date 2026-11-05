@@ -11,6 +11,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/constants/app_colors.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
@@ -168,7 +169,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
     return Scaffold(
       backgroundColor: AppColors.ink,
       extendBody: true,
-      body: GestureDetector(
+      body: NoEdgeSwipeBack(edgeOnly: true, child: GestureDetector(
         onHorizontalDragEnd: (details) {
           if (details.primaryVelocity == null) return;
           if (details.primaryVelocity! < -200) _next();
@@ -201,7 +202,7 @@ class _OzluSozScreenState extends ConsumerState<OzluSozScreen> {
             ),
           ],
         ),
-      ),
+      )),
     );
   }
 

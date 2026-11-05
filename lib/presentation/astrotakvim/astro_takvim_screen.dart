@@ -13,6 +13,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/glass_panel.dart';
 import '../../core/widgets/grimoire_backdrop.dart';
@@ -377,7 +378,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
         asset: _tabs[_activeTab].bgImage,
         imageSaturation: 0.18,
         imageBrightness: 0.55,
-        child: GestureDetector(
+        child: NoEdgeSwipeBack(edgeOnly: true, child: GestureDetector(
           onHorizontalDragEnd: (details) {
             final vx = details.primaryVelocity ?? 0;
             if (vx.abs() < 300) return;
@@ -455,7 +456,7 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
               ],
             ),
           ),
-        ),
+        )),
       ),
     );
   }

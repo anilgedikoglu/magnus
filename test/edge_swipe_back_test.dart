@@ -45,6 +45,36 @@ GoRouter _router() => GoRouter(
           ),
         ),
         GoRoute(
+          path: '/list',
+          parentNavigatorKey: _rootKey,
+          builder: (_, __) => Scaffold(
+            body: Column(children: [
+              const Text('LIST'),
+              SizedBox(
+                height: 200,
+                child: ListView(
+                  key: const ValueKey('hlist'),
+                  scrollDirection: Axis.horizontal,
+                  children: [for (var i = 0; i < 20; i++) SizedBox(width: 120, child: Text('k$i'))],
+                ),
+              ),
+            ]),
+          ),
+        ),
+        GoRoute(
+          path: '/edgeonly',
+          parentNavigatorKey: _rootKey,
+          builder: (_, __) => Scaffold(
+            body: NoEdgeSwipeBack(
+              edgeOnly: true,
+              child: GestureDetector(
+                onHorizontalDragEnd: (_) {},
+                child: const SizedBox.expand(child: Text('EDGEONLY')),
+              ),
+            ),
+          ),
+        ),
+        GoRoute(
           path: '/wheel',
           parentNavigatorKey: _rootKey,
           builder: (_, __) => Scaffold(
@@ -96,11 +126,40 @@ void main() {
     expect(find.text('HOME'), findsOneWidget);
   });
 
-  testWidgets('kenar dışından, kısa ya da dikey kaydırma geri götürmez', (t) async {
+  testWidgets('ekranın ortasından soldan sağa kaydırma da geri götürür', (t) async {
     final r = await _pump(t);
     r.push('/a');
     await t.pumpAndSettle();
-    await _swipe(t, startX: 120); // kenar dışı
+    await _swipe(t, startX: 160);
+    expect(find.text('A'), findsNothing);
+    expect(find.text('HOME'), findsOneWidget);
+  });
+
+  testWidgets('yatay listeyi kaydırmak geri götürmez', (t) async {
+    final r = await _pump(t);
+    r.push('/list');
+    await t.pumpAndSettle();
+    // Listeyi biraz sola kaydır (sağa çekince geri kayabilsin), sonra sağa çek.
+    await t.drag(find.byKey(const ValueKey('hlist')), const Offset(-300, 0));
+    await t.pumpAndSettle();
+    await _swipe(t, startX: 160, y: 100); // listenin üstünde
+    expect(find.text('LIST'), findsOneWidget);
+  });
+
+  testWidgets('"yalnız kenar" alanında ortadan kaydırma geri götürmez, kenardan götürür', (t) async {
+    final r = await _pump(t);
+    r.push('/edgeonly');
+    await t.pumpAndSettle();
+    await _swipe(t, startX: 160);
+    expect(find.text('EDGEONLY'), findsOneWidget);
+    await _swipe(t, startX: 8);
+    expect(find.text('EDGEONLY'), findsNothing);
+  });
+
+  testWidgets('kısa ya da dikey kaydırma geri götürmez', (t) async {
+    final r = await _pump(t);
+    r.push('/a');
+    await t.pumpAndSettle();
     await _swipe(t, dx: 40); // eşik altı
     await _swipe(t, dx: 80, dy: 300); // dikey baskın
     expect(find.text('A'), findsOneWidget);

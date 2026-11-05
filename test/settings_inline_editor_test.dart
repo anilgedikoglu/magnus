@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:magnus_app/app.dart';
+import 'package:magnus_app/core/widgets/startup_disclaimer.dart';
 import 'package:magnus_app/data/models/user_profile.dart';
 import 'package:magnus_app/data/providers.dart';
 import 'package:magnus_app/data/services/storage_service.dart';
@@ -22,6 +23,7 @@ void main() {
   testWidgets('bilgi kartı düzenleyicisi daire alanında açılır, kapanınca daireler döner',
       (t) async {
     GoogleFonts.config.allowRuntimeFetching = false;
+    StartupDisclaimer.debugSkip = true; // açılış perdesi ayrı testte
     t.view.devicePixelRatio = 2.0;
     t.view.physicalSize = const Size(780, 1688);
     addTearDown(t.view.reset);

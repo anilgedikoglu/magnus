@@ -5,14 +5,15 @@ import 'package:go_router/go_router.dart';
 import '../constants/app_colors.dart';
 import 'swipe_back.dart';
 
-/// Kenar şeridi: kaydırma ekranın en solundaki bu kadar mantıksal pikselde başlamalı
-/// (iOS yerel jesti 20 pt; kılıflı telefonda rahat olsun diye biraz geniş).
+/// Kenar şeridi genişliği — yalnız [NoEdgeSwipeBack] `edgeOnly` alanlarında kullanılır
+/// (orada geri için kaydırma en soldaki bu şeritte başlamalı). Diğer her yerde kaydırma
+/// ekranın HERHANGİ bir yerinden başlayabilir (Anıl, 2026-11-05: "daha kolay geri gelinsin").
 const double kEdgeSwipeWidth = 28;
 
 /// Geri için gereken yatay mesafe (mevcut [SwipeBack] ile aynı).
 const double kEdgeSwipeThreshold = 60;
 
-/// Tüm uygulamada "sol kenardan sağa kaydır = geri".
+/// Tüm uygulamada "soldan sağa kaydır = geri" (ekranın her yerinden).
 ///
 /// `MaterialApp.router(builder:)` içinde bir kez sarılır; her sayfaya ayrı eklemek gerekmez.
 /// - Yalnız geri gidilebilecek bir sayfa/pencere açıkken çalışır: ana sekmelerde
@@ -47,19 +48,34 @@ class EdgeSwipeBack extends StatefulWidget {
 /// İçindeki dokunuşlarda global kenar-geri jestini kapatır (kenara değen çark/kazıma alanları).
 /// Daha derindeki Listener önce çalıştığı için işaret, global izleyiciden önce konur.
 class NoEdgeSwipeBack extends StatelessWidget {
-  const NoEdgeSwipeBack({super.key, required this.child});
+  const NoEdgeSwipeBack({super.key, required this.child, this.edgeOnly = false});
 
   final Widget child;
 
-  static int? _blockedPointer;
+  /// true → bu alanda geri YALNIZ sol kenar şeridinden ([kEdgeSwipeWidth]) başlayan
+  /// kaydırmayla olur (alanın kendi sağa kaydırma işi var: önceki öğe / önceki sekme).
+  /// false → bu alanda başlayan dokunuş hiç geri yapmaz (çark, kazıma).
+  final bool edgeOnly;
 
-  /// Bu dokunuş engelli bir alanda mı başladı?
+  static int? _blockedPointer;
+  static int? _edgeOnlyPointer;
+
+  /// Bu dokunuş tamamen engelli bir alanda mı başladı?
   static bool blocks(int pointer) => _blockedPointer == pointer;
+
+  /// Bu dokunuş "yalnız kenar" alanında mı başladı?
+  static bool edgeOnlyFor(int pointer) => _edgeOnlyPointer == pointer;
 
   @override
   Widget build(BuildContext context) {
     return Listener(
-      onPointerDown: (e) => _blockedPointer = e.pointer,
+      onPointerDown: (e) {
+        if (edgeOnly) {
+          _edgeOnlyPointer = e.pointer;
+        } else {
+          _blockedPointer = e.pointer;
+        }
+      },
       child: child,
     );
   }
@@ -142,8 +158,8 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
       _reset();
       return;
     }
-    if (e.position.dx >= widget.edgeWidth) return;
     if (NoEdgeSwipeBack.blocks(e.pointer)) return;
+    if (NoEdgeSwipeBack.edgeOnlyFor(e.pointer) && e.position.dx >= widget.edgeWidth) return;
     final nav = _activeNavigator();
     if (nav == null) return;
     final route = _topOf(nav);
@@ -201,9 +217,21 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
     if (e.pointer == _pointer) _reset();
   }
 
+  /// Bu dokunuş sırasında yatay bir Scrollable sürüklendiyse (liste, PageView) geri yapma.
+  bool _onScroll(ScrollNotification n) {
+    if (_pointer == null || n.metrics.axis != Axis.horizontal) return false;
+    final dragged = (n is ScrollUpdateNotification && n.dragDetails != null) ||
+        (n is OverscrollNotification && n.dragDetails != null) ||
+        (n is ScrollStartNotification && n.dragDetails != null);
+    if (dragged) _reset();
+    return false;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Listener(
+    return NotificationListener<ScrollNotification>(
+      onNotification: _onScroll,
+      child: Listener(
       behavior: HitTestBehavior.translucent,
       onPointerDown: _onDown,
       onPointerMove: _onMove,
@@ -229,7 +257,7 @@ class _EdgeSwipeBackState extends State<EdgeSwipeBack> {
           ),
         ],
       ),
-    );
+    ));
   }
 }
 

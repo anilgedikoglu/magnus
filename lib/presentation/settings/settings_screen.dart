@@ -2868,7 +2868,7 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
               // Tek kaynak: lib/data/services/fortune_reset.dart (yeni günlük fal oraya eklenir).
               // Tavşan / Kısmetim / Arabam / Evim de sıfırlanır (Anıl, 2026-11-05).
               await FortuneReset.resetDailyRights(prefs);
-              setPanelState(() => resetDone = true);
+              if (ctx.mounted) setPanelState(() => resetDone = true);
             }
 
             // ── Reklam toggle ──────────────────────────────────────────────
@@ -3064,13 +3064,16 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
       ),
     );
     if (ok == true) {
+      // Beklemelerden ÖNCE al: silme sürerken ekran kapanırsa ref artık okunamaz.
       final items = ref.read(inboxProvider);
+      final inbox = ref.read(inboxProvider.notifier);
+      final prefs = ref.read(sharedPrefsProvider);
       for (final item in items) {
-        await ref.read(inboxProvider.notifier).deleteItem(item.id);
+        await inbox.deleteItem(item.id);
       }
       // Alınan fallar silinir: yeni fal türleri de hiç alınmamış gibi. Günlük haklar KALIR —
       // onları yönetici panelindeki "Günlük Hakları Sıfırla" sıfırlar (Anıl, 2026-11-05).
-      await FortuneReset.deleteTakenFortunes(ref.read(sharedPrefsProvider));
+      await FortuneReset.deleteTakenFortunes(prefs);
     }
   }
 }

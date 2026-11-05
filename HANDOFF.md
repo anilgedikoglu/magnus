@@ -3,7 +3,7 @@
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
 ## Ne yapıldı (2026-11-05) + değişen dosyalar
-- **Sürüm `10.8.9+267`** (main). Android → Play **Dahili test**; iOS → TestFlight (GitHub Actions
+- **Sürüm `10.8.10+270`** (main; 267 + kayan yazı, Tavşan dokunuş/günde 1, rüya cihazda, sıfırlama ayrımı, yeni ikonlar). Android → Play **Dahili test**; iOS → TestFlight (GitHub Actions
   `.github/workflows/ios-testflight.yml`). İncelemeye/üretime GÖNDERİLMEDİ (Anıl: "yalnız test").
 - **Görünüm:** renkler eski neon/mor palete döndü (yapı kaldı), gövde Nunito/Raleway, başlıklar Cinzel
   (`AppTextStyles.screenTitle`). İç ekranlar (kutular, pencereler, düğmeler) yeniden tasarım öncesine döndü.
@@ -20,7 +20,7 @@
 - **Codex incelemesi (8 bulgu) düzeltildi:** reklam kapanışı tek sefer + `show()` hatasında içerik açılır
   (`ad_service.dart`), await sonrası `ref` yok, Tavşan tarih en son yazılır, rüya hakkı istekten önce ayrılır,
   Arabam geçmiş aralıkları gizler.
-- **267 sonrası (main'de, build YOK):** kayan yazı `lib/core/widgets/marquee_text.dart` (Arabam/Kısmetim/Evim
+- **267 → 270:** kayan yazı `lib/core/widgets/marquee_text.dart` (Arabam/Kısmetim/Evim
   kutuları; sığmayan ad tek satırda yavaş kayar), Tavşan dokununca çeker (kayıt dokununca) ve günde 1 (hak
   bitince menüde balon), 4 yeni fal ikonu turkuaz palete (ChatGPT). Rüya serbest yorumu HEP cihazda (izin/ağ yok).
   Sıfırlama tek kaynak `lib/data/services/fortune_reset.dart`: Ayarlar > Tüm Falları Sil = alınan fallar (gelen
@@ -42,7 +42,7 @@
 - `dusuk.cmd flutter.bat ...` arka planda asılı kalır → `dusuk.cmd cmd /c flutter.bat ... < /dev/null`.
 
 ## Sıradaki adım
-- Anıl'ın geri bildirimi → düzelt. Bir sonraki build `10.8.10+270`, yalnız "test çık" ile.
+- Anıl'ın geri bildirimi → düzelt. Bir sonraki build `10.8.11+273`, yalnız "test çık" ile.
 - Güvenlik (Anıl onayı gerekli): repo herkese açık; git geçmişinde eski kişisel veri ve CLAUDE.md'de imza
   şifreleri var → geçmiş temizliği + anahtarları döndürme önerildi. Uygulamadaki Anthropic anahtarı istemcide
   gömülü → sunucu/proxy önerildi.

@@ -69,8 +69,13 @@ void main() {
     expect(prefs.getString('baska_bir_ayar'), 'kalsin');
   });
 
-  test('ana menüdeki her günlük hak anahtarı Günlük Hakları Sıfırla kapsamında', () {
-    final src = File('lib/presentation/home/home_screen.dart').readAsStringSync();
+  test('koddaki her günlük hak anahtarı Günlük Hakları Sıfırla kapsamında (ekran içi limitler dahil)', () {
+    final src = Directory('lib')
+        .listSync(recursive: true)
+        .whereType<File>()
+        .where((f) => f.path.endsWith('.dart'))
+        .map((f) => f.readAsStringSync())
+        .join('\n');
     final keys = RegExp(r"'(\w+_bugun_tarih)'").allMatches(src).map((m) => m.group(1)!).toSet();
     expect(keys, isNotEmpty);
     for (final k in keys) {

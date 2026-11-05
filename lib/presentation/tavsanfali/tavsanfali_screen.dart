@@ -39,7 +39,7 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
   // Kullanıcı dokunmadan tavşan çekmez (Anıl, 2026-11-05). Kayıt da dokununca yapılır:
   // açıp dokunmadan çıkan kullanıcının günlük hakkı boşa gitmez.
   bool _started = false;
-  Future<void> Function()? _persist;
+  Future<void> Function(String today)? _persist;
   String? _text; // hazır (yer tutucuları doldurulmuş) metin
   bool _repeat = false; // aynı gün tekrar açılış → animasyonsuz
   bool _failed = false;
@@ -63,8 +63,14 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
       _started = true;
       if (paper != null) _target = paper;
     });
-    _persist?.call();
+    // Tarih DOKUNUŞ anında alınır (23.59'da açılıp 00.01'de dokunulursa bugüne yazılır).
+    final persist = _persist;
     _persist = null;
+    if (persist != null) {
+      persist(_today()).catchError((Object e) {
+        debugPrint('[TavsanFali] kayıt hatası: $e');
+      });
+    }
     _idle.stop();
     // Bekleme payını atla: dokunur dokunmaz uzansın.
     _ctrl.forward(from: _kLeadMs / _kTotalMs);
@@ -151,10 +157,10 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
         final updated = List<String>.of(base)..add('${chosen['id']}');
         // Kayıt kullanıcı dokununca (_start). Sıra önemli: önce ID + gösterilenler, EN SON
         // tarih → arada uygulama kapanırsa dünün ID'si bugünün sayılmaz.
-        _persist = () async {
+        _persist = (String tapDay) async {
           await prefs.setInt('tavsanfali_bugun_id', chosen['id'] as int);
           await prefs.setStringList('tavsanfali_gosterilen', updated);
-          await prefs.setString('tavsanfali_bugun_tarih', today);
+          await prefs.setString('tavsanfali_bugun_tarih', tapDay);
         };
       }
 

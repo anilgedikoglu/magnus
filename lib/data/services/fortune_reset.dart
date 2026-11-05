@@ -34,6 +34,8 @@ class FortuneReset {
     'kadercarki_bugun_tarih',
     'askuyumu_bugun_tarih',
     'tavsanfali_bugun_tarih',
+    'elfali_bugun_tarih',
+    'yuzfali_bugun_tarih',
     'ruya_ai_tarih', // eski sürümlerden kalan rüya yapay zekâ hakkı
     // Numeroloji: limit ekran içinden, bu önbelleklerle yönetilir
     'num_bugun_tarih', 'num_bugun_metin', 'num_bugun_unlock',

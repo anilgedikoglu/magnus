@@ -103,13 +103,19 @@ class _MarqueeRunnerState extends State<_MarqueeRunner> with SingleTickerProvide
   @override
   void didUpdateWidget(covariant _MarqueeRunner old) {
     super.didUpdateWidget(old);
-    if (old.cycle != widget.cycle || old.velocity != widget.velocity) {
-      // Kaldığı oranı koru (metin aynıysa sıçrama olmaz), yeni süreyle devam.
-      final v = _ctrl.value;
+    if (old.text != widget.text) {
+      // Yeni metin baştan okunur.
       _ctrl
         ..duration = _duration
         ..repeat()
-        ..value = v;
+        ..value = 0;
+    } else if (old.cycle != widget.cycle || old.velocity != widget.velocity) {
+      // Aynı metin, ölçü değişti: piksel konumunu koru (sıçrama olmaz).
+      final px = _ctrl.value * old.cycle;
+      _ctrl
+        ..duration = _duration
+        ..repeat()
+        ..value = (px % widget.cycle) / widget.cycle;
     }
   }
 

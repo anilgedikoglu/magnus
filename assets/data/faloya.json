@@ -1153,6 +1153,126 @@
         }
       ],
       "metin_en": "Hello {{isim}}.\n\nThe entities are whispering...\n\nI have a foresight about your future.\n\nOn the date of {{randomtarih, 400, 1200}}, starting from the morning hours, an inexplicable rush will engulf you. And with a message coming from afar, you will receive a new job offer. Transforming your career plans into different dimensions in just one day, you will elevate your hopes to the peak once again. In a distant country, you will meet new people and encounter a different culture.\n\nCome back again."
+    },
+    {
+      "id": 112,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih,12,45}} tarihinde, öğleden sonra telefonuna sonu 47 ile biten bir numaradan arama gelecek. Arayan kişi, daha önce yaptığın bir başvurunun kayıtlarda hâlâ açık olduğunu söyleyecek. Unuttuğun bu işin olumlu sonuçlandığını öğrenince eski mesajlarını karıştırdığını görüyorum. Bakalım neye başvurmuştun?",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih,12,45}}, you'll receive an afternoon phone call from a number ending in 47. The caller will tell you that an application you submitted some time ago is still listed as open in their records. I see you searching through your old messages when you learn that this forgotten matter has been resolved in your favor. Now, what was it you applied for?",
+      "kosullar": []
+    },
+    {
+      "id": 113,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_3}} tarihinde, üzerinde mavi bir damga bulunan resmî bir zarf eline ulaşacak. İçindeki yazı, daha önce uğraştığın bir işlemin yeniden değerlendirilmesiyle ilgili. İlk satırları okurken kaşların çatılacak ama son paragraftaki karar seni memnun edecek. O kâğıdı uzun süre saklayacağını hissediyorum.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_3}}, an official envelope bearing a blue stamp will arrive for you. The letter inside concerns a review of a procedure you dealt with in the past. You'll frown as you read the opening lines, but the decision in the final paragraph will please you. I sense that you'll keep that paper for a long time.",
+      "kosullar": []
+    },
+    {
+      "id": 114,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde, telefonundaki fotoğrafları düzenlerken arka planda görünen yeşil bir tabelaya takılacaksın. Tabeladaki işletmenin adını araştırdığında yıllar önce tanıdığın birine ait olduğunu öğreneceksin. Bu keşif seni o kişiye ulaşmaya yöneltecek. Küçük bir ayrıntı, koca bir sohbet başlatacak.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_1}}, while organizing the photos on your phone, a green sign in the background of one picture will catch your eye. When you look up the business named on the sign, you'll discover that it belongs to someone you knew years ago. This discovery will inspire you to reach out to that person. One tiny detail will spark a whole conversation.",
+      "kosullar": []
+    },
+    {
+      "id": 115,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih,15,55}} tarihinde, adının ilk harfi {{harf}} olan bir tanıdığın sana küçük bir kutu uzatacak. Kutunun üzerinde başka birinin adı yazıyor olacak ve önce bir karışıklık olduğunu düşüneceksin. İçinden çıkan şeyin senin aylar önce anlattığın bir isteğinle ilgili olduğunu anlayınca şaşkınlığın sevince dönüşecek.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih,15,55}}, an acquaintance whose name begins with {{harf}} will hand you a small box. Someone else's name will be written on it, and at first you'll think there's been a mix-up. But when you realize that what's inside is connected to a wish you mentioned months ago, your surprise will turn into joy.",
+      "kosullar": []
+    },
+    {
+      "id": 116,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_6}} tarihinde, bir antikacıda eski bir radyonun çaldığı melodiyi duyacaksın. Şarkının adını sorduğunda dükkân sahibi sana üzerinde el yazısı bulunan bir plak gösterecek. O yazı, uzun süredir hatırlamadığın bir ismi aklına getirecek. Eve dönerken aynı şarkıyı tekrar açtığını görüyorum.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_6}}, you'll hear a melody playing on an old radio in an antique shop. When you ask the name of the song, the shopkeeper will show you a record with something handwritten on it. That writing will bring back a name you haven't thought of in a long time. I see you playing the same song again on your way home.",
+      "kosullar": []
+    },
+    {
+      "id": 117,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, bir çiçekçinin önünde mor renkli çiçeklere bakarken yaşlı bir kadın sana bir şey söyleyecek. Söylediği, yıllar önce duyduğun bir söze öylesine benzeyecek ki bir an duraksayacaksın. Kadının önerdiği çiçeği alıp evinde görebileceğin bir yere koyacağını hissediyorum.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_2}}, while admiring purple flowers outside a florist's shop, an elderly woman will say something to you. Her words will sound so much like something you heard years ago that you'll pause for a moment. I sense that you'll buy the flower she recommends and place it somewhere you can see it in your home.",
+      "kosullar": []
+    },
+    {
+      "id": 118,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih,18,65}} tarihinde, bir arkadaşının telefonunda kendi sesini duyunca şaşkınlıktan kalakalacaksın. Yıllar önce kaydedilmiş kısa bir ses dosyası ortaya çıkacak. O kayıtta söylediğin bir cümlenin bugün yaşadığın bir durumla tuhaf biçimde örtüştüğünü fark edeceksin. Biraz kahkaha, biraz da ürperti görüyorum.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih,18,65}}, you'll be stunned to hear your own voice coming from a friend's phone. A short audio recording made years ago will resurface. You'll notice that something you said in that recording bears an uncanny resemblance to a situation you're experiencing today. I see a little laughter and a few shivers down your spine.",
+      "kosullar": []
+    },
+    {
+      "id": 119,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_3}} tarihinde, bir kitapçıda rafların arasından küçük, turuncu kapaklı bir kitap çekeceksin. İçindeki bir sayfada, yakın zamanda kendi kendine sorduğun sorunun neredeyse aynısını göreceksin. Kitabı satın alıp aynı sayfayı bir tanıdığına göstereceksin. Tesadüfün böylesi Magnus'u bile düşündürür!",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_3}}, you'll pull a small, orange-covered book from a shelf in a bookstore. On one of its pages, you'll find almost the exact same question you've recently been asking yourself. You'll buy the book and show that very page to someone you know. A coincidence like that would make even Magnus stop and think!",
+      "kosullar": []
+    },
+    {
+      "id": 120,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih,30,110}} tarihinde, bir apartmanın girişinde üzerinde eski tarih bulunan küçük bir ilan dikkatini çekecek. İlandaki telefon numarasını aradığında, hâlâ geçerli olan ve tam da ihtiyacına uyan bir fırsatla karşılaşacaksın. Görüştüğün kişinin seni aynı gün yeniden aradığını ve anlaşmanın beklediğinden kolay ilerlediğini görüyorum.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih,30,110}}, a small notice bearing an old date will catch your attention at the entrance to an apartment building. When you call the phone number on it, you'll discover an opportunity that's still available and perfectly suited to your needs. I see the person you speak with calling you back that very same day, and the agreement moving forward more easily than you expected.",
+      "kosullar": []
+    },
+    {
+      "id": 121,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_8}} tarihinde, akşamüstü bir sahil yolunda yürürken üzerinde kırmızı tasma bulunan bir köpek yanına yaklaşacak. Biraz ileride sahibiyle tanışacak ve köpeğin adının senin yakından tanıdığın biriyle aynı olduğunu öğreneceksin. Bu komik rastlantı sayesinde daha önce hiç gitmediğin bir yerin adresini alacaksın.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_8}}, while walking along a coastal road in the late afternoon, a dog wearing a red collar will approach you. A little farther along, you'll meet its owner and learn that the dog has the same name as someone you know well. Thanks to this amusing coincidence, you'll get the address of a place you've never visited before.",
+      "kosullar": []
+    },
+    {
+      "id": 122,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_2}} tarihinde, telefonunda uzun süredir açmadığın bir sohbetin en üstte belirdiğini göreceksin. Karşıdan gelen kişi, soyadının ilk harfi {{harf}} olan biri. Yazdığı iki cümle, aylardır kafanda kurduğun bir meseleyi bir anda sadeleştirecek. Ardından pencereden dışarı bakıp gülümseyeceksin.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_2}}, you'll notice a conversation you haven't opened in a long time suddenly appearing at the top of your messages. The person reaching out is someone whose last name begins with {{harf}}. Just two sentences from them will suddenly simplify an issue you've been overthinking for months. Then you'll look out the window and smile.\n\nCome back again.",
+      "kosullar": []
+    },
+    {
+      "id": 123,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 12, 45}} tarihinde, evindeki bir çekmecenin dibinde unuttuğun bir kâğıt parayı ya da kartı bulacaksın. Üzerinde bir isim ve eski bir tarih yazıyor. O an, o parayı neden sakladığını hatırlayacaksın ve bu hatıra, bugünlerde vermen gereken bir kararın rengini değiştirecek.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 12, 45}}, you'll find a forgotten banknote or card at the bottom of a drawer in your home. A name and an old date are written on it. In that moment, you'll remember why you kept that money, and the memory will change how you see a decision you need to make these days.\n\nCome back again.",
+      "kosullar": []
+    },
+    {
+      "id": 124,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_3}} tarihinde, bir marketin kasasında sıra beklerken yanındaki kişinin sana adını sorduğunu görüyorum. Yaşlıca bir hanım, elindeki poşetten sana bir şey uzatacak. Küçük ama tuhaf biçimde yerini bulmuş bir hediye. O gün eve dönerken yolunu uzatacaksın.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_3}}, I see you waiting in line at a supermarket checkout when someone beside you asks your name. An older lady will reach into her shopping bag and offer you something. A small gift, yet one that somehow feels strangely appropriate. You'll take the long way home that day.\n\nCome back again.",
+      "kosullar": []
+    },
+    {
+      "id": 125,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 20, 70}} tarihinde, sabah uyandığında mutfakta bir koku seni karşılayacak; tarçın ya da yeni demlenmiş çay. O kokunun kaynağı, sana küçük bir sürpriz hazırlayan biri olacak. Kim olduğunu söylemeyeceğim, ama yüzünü görünce \"tabii ya\" diyeceksin.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 20, 70}}, when you wake up in the morning, a scent will greet you in the kitchen — cinnamon or freshly brewed tea. The source of that aroma will be someone who's prepared a little surprise for you. I won't tell you who it is, but when you see their face, you'll say, \"Of course!\"\n\nCome back again.",
+      "kosullar": []
+    },
+    {
+      "id": 126,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 8, 35}} tarihinde, bir borcun ya da ödemenin tamamlandığını göreceksin. Bir banka uygulamasında \"işlem tamamlandı\" yazısı, sana sandığından daha büyük bir rahatlama getirecek. O akşam kendine küçük bir ödül vereceksin; büyük ihtimalle tatlı bir şey.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 8, 35}}, you'll see that a debt has been paid off or a payment completed. The words \"Transaction completed\" in a banking app will bring you more relief than you imagine. That evening, you'll treat yourself to a small reward — most likely something sweet.\n\nCome back again.",
+      "kosullar": []
+    },
+    {
+      "id": 127,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde, çok sevdiğin bir şarkıyı rastgele bir yerde duyacaksın. Bir dükkânın içinde, bir asansörde ya da bir telefon zilinde. O şarkı, sana bir dönemi hatırlatacak ve o gün birine, yıllardır söylemek isteyip söyleyemediğin bir cümleyi yazacaksın.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_1}}, you'll unexpectedly hear a song you absolutely love playing somewhere. Perhaps inside a shop, in an elevator, or as someone's ringtone. That song will remind you of a particular time in your life, and that day you'll write someone a sentence you've wanted to say for years but never could.\n\nCome back again.",
+      "kosullar": []
+    },
+    {
+      "id": 128,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 10, 40}} tarihinde, bir kurye kapını çalacak. Paketin içindeki şeyi beklediğini sanıyorsun, ama üzerindeki isim seni bir an durduracak. Yanlış adres gibi görünen bu teslimat, aslında sana çok yakın birinden gelen bir işaret olacak.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 10, 40}}, a courier will knock on your door. You'll think you know what's inside the package, but the name written on it will make you pause. This delivery, which looks like a case of mistaken address, will actually be a sign from someone very close to you.\n\nCome back again.",
+      "kosullar": []
+    },
+    {
+      "id": 129,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 30, 75}} tarihinde, bir sokakta yürürken adını duyacaksın. Dönüp baktığında, seni tanıyan ama senin bir türlü çıkaramadığın biriyle karşılaşacaksın. Konuşma kısa olacak; ama ardında, o gün çözmen gereken bir düğümün ipucunu bırakacak.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 30, 75}}, you'll hear someone calling your name while you're walking down a street. When you turn around, you'll find yourself face to face with someone who knows you, but whom you just can't place. The conversation will be brief, yet it will leave behind a clue to a problem you need to untangle that day.\n\nCome back again.",
+      "kosullar": []
+    },
+    {
+      "id": 130,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_1}} tarihinde, bir yakınının ses tonunda bir değişiklik fark edeceksin. Söylediği kelimeler aynı, ama altında başka bir şey var. Sabırla dinlediğinde, sana yıllardır söylemek istediği bir cümleyi nihayet duyacaksın.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{sayi,1,28}} {{ay_1}}, you'll notice a change in the tone of someone close to you. The words they say will be the same, but something else will lie beneath them. When you listen patiently, you'll finally hear something they've wanted to tell you for years.\n\nCome back again.",
+      "kosullar": []
+    },
+    {
+      "id": 131,
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih, 35, 120}} tarihinde, eline bir belge geçecek. İmza atman gereken, resmî görünen bir kâğıt. Ama okumadan önce bir an duracaksın. O belge, sana bugüne kadar kurduğun bir düzenin aslında ne kadar kırılgan olduğunu gösterecek; ve sen yine de imzalayacaksın.\n\nTekrar gel.",
+      "metin_en": "Hello, {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn {{randomtarih, 35, 120}}, a document will come into your hands. An official-looking paper that requires your signature. But before reading it, you'll pause for a moment. That document will show you just how fragile the life you've built around yourself really is. And you'll sign it anyway.\n\nCome back again.",
+      "kosullar": []
     }
   ]
 }

@@ -13230,6 +13230,307 @@
         "saglik"
       ],
       "metin_en": "I see you digging the soil with all your might in the top third of the cup {{isim}}. You have planted a seed and it didn't take root. You are searching for its roots but can't find them. Above you, there is a pair of hands reaching down from above with palms facing upwards and fresh hazelnuts in them. When you notice these hands, you will pick a hazelnut from there and drop it to the ground, then suddenly you will see a huge tree sprouting and reaching towards the clouds. Whatever or whoever these hands represent, they will put an end to the sorrow and grief caused by your separation from your lover."
+    },
+    {
+      "id": 749,
+      "metin": "Fincanının ağız kısmında, üzerinde üç küçük çizik bulunan bakır bir çalar saat belirmiş {{isim}}. Akrep ile yelkovan birbirine çok yakın; sanki alarm çalmadan hemen önceki anı yakalamışım. Bu görüntü, son zamanlarda bedeninin değil, zihninin dinlenmeye fırsat bulamadığını anlatıyor. Yatağa girdiğinde ertesi gün yapacaklarını düşünerek uyku saatini ertelediğin oluyor. İlginç olan, saatin hemen yanında küçük bir pencerenin bulunması. Önümüzdeki {{sayi,2,5}} hafta içinde sabahlarını değiştirecek yeni bir alışkanlık edinebilirsin. Bunun başlangıcı, erken bir saatte dışarı çıkmanı gerektiren bir randevu veya davet olacak. İlk günlerde üşensen de sonrasında kendine ayırdığın zamanın değerini daha iyi anlayacaksın.",
+      "metin_en": "At the rim of your cup, a copper alarm clock with three tiny scratches on its surface has appeared, {{isim}}. The hour and minute hands are very close together, as though I've captured the moment just before the alarm goes off. This image tells me that lately, it's not your body but your mind that hasn't had a chance to rest. Sometimes you lie in bed thinking about everything you need to do the next day, putting off the moment you finally fall asleep. What's interesting is the small window right beside the clock. Within the next {{sayi,2,5}} weeks, you may develop a new habit that changes your mornings. It will begin with an appointment or invitation that requires you to go out early. You might feel reluctant at first, but afterward you'll come to appreciate the time you set aside for yourself.",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 750,
+      "metin": "Şu fincanın sol kenarındaki ince topuklu ayakkabıya bakar mısın {{isim}}? Önünde uzanan yolun sonunda cam kapılı, aydınlık bir bina var. Ayakkabının bir teki diğerinden biraz önde; bu da mesleki hayatında herkesten önce fark ettiğin fakat henüz dile getirmediğin bir düşünceyi temsil ediyor. Bir konuda fikrinin sorulmasını beklemek yerine kendi önerini sunman gerekecek. {{ay_2}} ayının ilk yarısında, adında {{harf}} harfi bulunan bir kadınla yapacağın konuşmanın ardından yeni bir sorumluluk üstlenme ihtimalin güçleniyor. Bu konuşmada özellikle daha önce hazırladığın bir çalışma veya çözüm önerisi gündeme gelecek. Sana sıradan gelen bir becerinin başkaları tarafından ne kadar değerli görüldüğünü keşfedebilirsin.",
+      "metin_en": "Would you look at that high-heeled shoe along the left edge of your cup, {{isim}}? At the end of the road stretching out before it stands a bright building with glass doors. One shoe is slightly ahead of the other, representing an idea in your professional life that you noticed before anyone else but haven't yet voiced. Rather than waiting for someone to ask your opinion, you'll need to put forward your own suggestion. During the first half of {{ay_2}}, a conversation with a woman whose name contains the letter {{harf}} will strengthen the possibility of you taking on a new responsibility. Something you've previously prepared, perhaps a project or a proposed solution, will come up during this conversation. You may discover just how highly others value a skill you've always considered ordinary.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 751,
+      "metin": "Telvelerin arasında beyaz örtüsü hafifçe kıvrılmış bir yemek masası seçiyorum. Masanın üzerinde dört ayrı tabak var ama seninki boş; bu ayrıntı bana çok şey anlatıyor {{isim}}. Gün içinde herkesin ne yiyeceğini, neye ihtiyacı olduğunu düşünüyor, sıra kendine geldiğinde çoğu zaman aceleye getiriyorsun. Masanın karşısında ise kapağı açık, küçük bir piknik sepeti belirmiş. {{randomtarih,8,25}} civarında yakın çevrenden bir kadın, birlikte yürüyüşe çıkmayı veya açık havada vakit geçirmeyi önerebilir. Başta evdeki işlerini bahane etmeye niyetleneceksin ama bu kez kabul etmen sana iyi gelecek. Fincanın mesajı açık: Kendine ayırdığın bir saat, evdeki düzeni bozmaz; aksine senin de o düzenin içinde görünür olmanı sağlar.",
+      "metin_en": "Among the coffee grounds, I can make out a dining table covered with a slightly rumpled white tablecloth. There are four separate plates on the table, but yours is empty. That detail tells me a great deal, {{isim}}. Throughout the day, you're busy thinking about what everyone will eat and what they need, and when it's finally your turn, you often rush through it. Across from the table, a small picnic basket appears with its lid open. Around {{randomtarih,8,25}}, a woman close to you may suggest going for a walk or spending some time outdoors together. At first, you'll be tempted to use your household chores as an excuse, but accepting this time will do you good. The message in your cup is clear: Taking an hour for yourself won't disrupt the household routine. On the contrary, it will remind everyone that you matter within that routine, too.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 752,
+      "metin": "Kenarları rengârenk çıkartmalarla kaplanmış bir valiz gözüme ilişti {{isim}}. Üzerinde küçük bir pusula resmi bulunuyor fakat pusulanın ibresi iki yön arasında kalmış. Bu sembol, önünde birbirinden oldukça farklı iki seçenek bulunduğunu gösteriyor. Birini seçersen alıştığın çevrede kalacak, diğerini seçersen hiç tanımadığın insanlarla bir araya geleceksin. Özellikle yakın arkadaşlarının ne düşündüğünü fazlasıyla önemsediğin için kendi isteğini ikinci plana atabiliyorsun. {{randomtarih,12,35}} tarihine yakın bir zamanda internet üzerinden göreceğin bir duyuru, etkinlik veya başvuru fırsatı ilgini çekebilir. Önce bağlantıyı kaydedip geçeceksin, sonra yeniden açacaksın. Bu küçük merakın ileride çevreni genişletecek bir deneyime dönüşme ihtimalini güçlü görüyorum.",
+      "metin_en": "A suitcase covered in colorful stickers has caught my eye, {{isim}}. There's a little compass illustration on it, but the needle is caught between two directions. This symbol shows that you have two very different options ahead of you. Choose one, and you'll remain in familiar surroundings; choose the other, and you'll find yourself among people you've never met. Because you care so much about what your closest friends think, you sometimes push your own wishes into the background. Around {{randomtarih,12,35}}, an announcement, event, or application opportunity you come across online may catch your interest. At first, you'll simply save the link and move on, but then you'll return to it. I strongly sense that this small spark of curiosity could eventually turn into an experience that broadens your social circle.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 753,
+      "metin": "Ooo, fincanın içinde minik bir matbaa makinesi var! Üzerinden çıkan kâğıtlardan birinin üzerinde kocaman bir onay işareti seçiyorum {{isim}}. Bu görüntü, hazırladığın veya uzun süredir üzerinde düşündüğün bir çalışmanın başkalarının değerlendirmesine sunulacağını anlatıyor. Özellikle bir şeyi teslim etmeden önce tekrar tekrar kontrol etme alışkanlığın dikkatimi çekti. Bazen tek bir kelimeyi değiştirmek için bile gereğinden fazla zaman harcıyorsun. Önümüzdeki {{sayi,3,6}} hafta içerisinde, daha önce gönderdiğin bir dosya, başvuru veya öneri hakkında olumlu bir geri bildirim alma ihtimalin yüksek. Haberin beklediğinden kısa ve resmî bir ifadeyle gelmesi mümkün. Ancak o birkaç satırın arkasında yeni bir görüşme, görev veya kazanç fırsatı saklı olabilir.",
+      "metin_en": "Ooh, there's a tiny printing press inside your cup! On one of the sheets coming out of it, I can clearly see a huge checkmark, {{isim}}. This image tells me that something you've prepared or been thinking about for a long time will be submitted for others to evaluate. I've particularly noticed your habit of checking things over and over before handing them in. Sometimes you spend far too much time changing even a single word. Within the next {{sayi,3,6}} weeks, there's a strong possibility you'll receive positive feedback about a file, application, or proposal you previously submitted. The news may arrive in a shorter, more formal message than you expected. Yet behind those few lines, there could be an opportunity for a new meeting, assignment, or financial gain.",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 754,
+      "metin": "Fincanının dibinde ağzı açık, içinden tek bir fotoğraf çıkan küçük bir müzik kutusu görüyorum. Kutunun anahtarı hemen yanında duruyor ama kimse çevirmiyor. Bu görüntü, biten ilişkinin ardından bazı hatıralara dönüp dönmemek konusunda yaşadığın kararsızlığı anlatıyor {{isim}}. Özellikle birlikte dinlediğiniz bir şarkı veya sık gittiğiniz bir yer hâlâ beklenmedik anlarda aklına geliyor olabilir. Fakat fotoğrafın arkasında yeni açılmış bir çiçek var. {{ay_2}} ayı içinde, arkadaşlarının düzenlediği küçük bir buluşmada biriyle tanışman mümkün. Bu kişi sana eski ilişkin hakkında sorular yağdırmak yerine, anlattığın sıradan bir olayı bile ilgiyle dinleyecek. Yeni tanışıklığın hemen büyük bir aşka dönüşmesi gerekmiyor; asıl önemli olan, yeniden merak edilmenin sana hatırlatacağı güzel duygu.",
+      "metin_en": "At the bottom of your cup, I see a small music box standing open, with a single photograph emerging from it. The winding key lies right beside it, but nobody is turning it. This image reflects your uncertainty about whether to revisit certain memories after the end of a relationship, {{isim}}. A song you used to listen to together or a place you often visited may still come to mind unexpectedly. But behind the photograph, there's a freshly blooming flower. During {{ay_2}}, you may meet someone at a small gathering organized by your friends. Instead of bombarding you with questions about your previous relationship, this person will listen with genuine interest even when you're telling an ordinary story. This new connection doesn't have to turn into a great romance right away. What matters most is the wonderful feeling of being genuinely interesting to someone again.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 755,
+      "metin": "Fincanın sağ tarafında, kaputunun üzerinde ince bir toz tabakası bulunan koyu renkli bir motosiklet görüyorum {{isim}}. Kontak anahtarı üzerinde fakat araç uzun zamandır yerinden oynatılmamış gibi. Bu sembol, uzun süredir yapmak istediğin bir şeyi uygun zamanı bekleyerek ertelediğini söylüyor. Arkadaş ortamında yeni bir plan konuşulduğunda hevesleniyor, sonra masrafını veya zahmetini hesaplayıp geri çekiliyorsun. {{randomtarih,6,23}} civarında erkek bir arkadaşından şehir dışı gezisi, maç, konser veya benzeri bir etkinlik için teklif gelebilir. Bu kez son anda vazgeçmezsen tanıdık çevrenin dışında farklı insanlarla karşılaşacaksın. Özellikle yolculuk sırasında yapacağınız bir sohbet, kafanı meşgul eden kişisel bir karar konusunda bakış açını değiştirebilir.",
+      "metin_en": "On the right side of your cup, I see a dark-colored motorcycle with a thin layer of dust on its hood, {{isim}}. The ignition key is still in place, but the vehicle looks as though it hasn't moved in ages. This symbol tells me you've been putting off something you've wanted to do for a long time, waiting for the perfect moment. Whenever your friends discuss a new plan, you get excited, only to reconsider the cost or effort and back out. Around {{randomtarih,6,23}}, a male friend may invite you on a trip out of town, to a match, a concert, or a similar event. If you don't cancel at the last minute this time, you'll meet different people outside your usual circle. A conversation during the journey, in particular, may change your perspective on a personal decision that's been weighing on your mind.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 756,
+      "metin": "Bak sen şu işe! Fincanın kenarında üzerinde kırmızı mühür bulunan kalın bir evrak klasörü seçiyorum. Klasörün altından uzanan ince yol, cam bölmeli bir odanın kapısına kadar gidiyor. Bu sembol, kurum içindeki bir görev dağılımı, yazışma veya bekleyen resmî işlemin yeniden gündeme geleceğini anlatıyor {{isim}}. Özellikle görev tanımının dışında kalan bazı işlerin zaman zaman sana yönlendirilmesinden pek hoşnut olmadığını hissediyorum. Önümüzdeki {{sayi,10,28}} gün içerisinde bir amir veya idari birimden gelecek açıklama, sorumlulukların sınırlarını netleştirebilir. Daha önce sözlü olarak konuşulan bir meselenin yazılı hâle gelmesi mümkün. Bu gelişme, işini yaparken daha rahat hareket etmeni ve kendine ayırdığın zamanı daha iyi planlamanı sağlayabilir.",
+      "metin_en": "Well, would you look at that! Along the edge of your cup, I can make out a thick document folder bearing a red official seal. A narrow path runs from beneath the folder all the way to the door of a room with glass partitions. This symbol tells me that an internal assignment, official correspondence, or pending administrative procedure at your workplace will come up again, {{isim}}. I sense that you're not particularly happy about certain tasks outside your job description occasionally being passed on to you. Within the next {{sayi,10,28}} days, an explanation from a supervisor or administrative department may clarify the boundaries of your responsibilities. Something previously discussed only verbally may finally be put in writing. This development could help you work more comfortably and plan your personal time more effectively.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 757,
+      "metin": "Telvelerin ilk dikkatimi çeken yerinde, kapağı yarıya kadar açılmış eski bir ahşap sandık var. İçinden sararmış bir tren bileti ve köşeleri kıvrılmış bir harita çıkıyor. {{isim}}, bu manzara gençlik yıllarında gitmek istediğin fakat hayatın başka bir yöne sürüklediği bir yeri düşündürüyor bana. Zamanla sorumlulukların artmış, eskiden kendiliğinden yaptığın pek çok şeyi önceden planlamak zorunda kalmışsın. Sandığın yanında duran küçük bavul ise eski bir isteğinin yeniden canlanacağını anlatıyor. {{ay_3}} ayına doğru bir akraba veya uzun zamandır görüşmediğin arkadaşın, geçmişte tanıdığın bir şehirle ilgili haber verebilir. Bu vesileyle kısa bir yolculuk planı doğabilir. En çok da yıllar önce bildiğin bir sokağın bugün nasıl göründüğünü merak edeceksin.",
+      "metin_en": "The first thing that catches my attention in your coffee grounds is an old wooden chest with its lid half open. Inside are a yellowed train ticket and a map with curled corners. {{isim}}, this scene makes me think of a place you wanted to visit in your younger years but never reached because life took you in another direction. Over time, your responsibilities have grown, and many things you once did spontaneously now require advance planning. The little suitcase beside the chest, however, tells me that an old desire is about to come back to life. As {{ay_3}} approaches, a relative or a friend you haven't seen in a long time may bring news about a city you knew in the past. This could inspire plans for a short trip. More than anything, you'll be curious to see what a street you remember from years ago looks like today.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 758,
+      "metin": "Fincanının karanlık bölümünde küçük bir posta kutusu var; içinden taşan zarfların arasında parlak turuncu bir kart dikkat çekiyor. Üzerinde hiçbir yazı seçemiyorum ama kartın arkasına iliştirilmiş minik bir kurdele var {{isim}}. Bu sembol, uzun zamandır yüz yüze görüşmediğin birinin seni beklenmedik bir etkinliğe çağırabileceğini düşündürüyor. Özellikle sosyal çevrende herkesin birbiriyle haberleştiği fakat senin bazı gelişmeleri sonradan öğrendiğin bir dönem olmuş gibi. {{randomtarih,14,40}} civarında bir kutlama, açılış veya toplu buluşma daveti alabilirsin. Daveti yapan kişiyle çok yakın olmasan bile katıldığında eski bir tanıdıkla karşılaşman mümkün. Asıl sürpriz, o kişinin senin hakkında hâlâ hatırladığı küçücük bir ayrıntı olacak.",
+      "metin_en": "In the darker part of your cup, there's a little mailbox overflowing with envelopes, and a bright orange card stands out among them. I can't make out any writing on it, but there's a tiny ribbon attached to the back, {{isim}}. This symbol suggests that someone you haven't seen face-to-face in a long time may unexpectedly invite you to an event. It feels as though you've been going through a period when everyone in your social circle keeps in touch with one another, while you sometimes hear about developments only afterward. Around {{randomtarih,14,40}}, you may receive an invitation to a celebration, an opening, or a group gathering. Even if you're not particularly close to the person inviting you, attending could lead to an encounter with an old acquaintance. The real surprise will be a tiny detail that person still remembers about you.",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 759,
+      "metin": "Fincanının kenarına doğru, az önce kırılmış gibi duran bir ceviz kabuğu görüyorum {{isim}}. İçi boş ama kabuğun iç yüzeyi hâlâ nemli; yani bu ceviz çok yakın zamanda kırılmış. Son haftalarda bedenin sana bir şeyler fısıldıyor: sabahları yataktan kalkarken omuzlarında taşınmış gibi bir ağırlık, öğleden sonra üç-dört gibi bastıran o tatlı uyku hali... Bunu hastalık olarak okumuyorum, daha çok \"dolu bir kabuğun çatlaması\" gibi görüyorum. Gece yarısına doğru içtiğin o son kahveyi {{sayi,4,9}} gün içinde kendiliğinden bırakacaksın ve vücudun bunu hemen fark edecek. {{ay_2}} ayına girdiğinde ise aynaya baktığında yüzünde o eski canlılığı göreceksin; biri sana \"iyi görünüyorsun\" diyecek ve sen de gerçekten öyle hissedeceksin.",
+      "metin_en": "Near the rim of your cup, I see a walnut shell that looks as though it was cracked just moments ago, {{isim}}. It's empty, but the inside is still moist, meaning the walnut was opened very recently. Over the past few weeks, your body has been whispering things to you: that heaviness in your shoulders when you get out of bed in the morning, as though you've been carrying a weight, and that irresistible afternoon drowsiness that hits around three or four... I don't read this as an illness. I see it more as the cracking of a shell that's been filled to the brim. Within {{sayi,4,9}} days, you'll quietly give up that last cup of coffee you drink near midnight, and your body will notice the difference immediately. By the time {{ay_2}} arrives, you'll look in the mirror and see that familiar vitality returning to your face. Someone will tell you, 'You look good,' and you'll genuinely feel it, too.",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 760,
+      "metin": "Telvelerinin orta kısmında, tek ayağı havada duran bir merdiven görüyorum {{isim}}. Merdivenin bir basamağı eksik; oraya basmaya kalksan seni düşürür. İş yerinde son dönemde sana verilen bir görev, aslında senin uzmanlık alanına tam oturmuyor, ama kimse bunu dile getirmiyor. Sen de farkındasın, sadece söylemek için doğru anı bekliyorsun. O eksik basamağı tamamlayacak kişi sensin: {{sayi,5,12}} gün içinde bir toplantıda ya da bir e-posta zincirinde sözü sen açacaksın ve \"bunu ben yaparım ama şu şartla\" diyeceksin. Karşı taraf önce bir duraksayacak, sonra kabul edecek. {{ay_1}} ayının ortasında masandaki dosyaların azaldığını, üzerindeki o görünmez yükün hafiflediğini hissedeceksin. Kariyerinde bir sıçrama değil, daha sağlam bir zemin kazanacaksın; bu daha kıymetli.",
+      "metin_en": "In the middle of your coffee grounds, I see a ladder with one leg suspended in the air, {{isim}}. One of its rungs is missing; if you tried to step on it, you'd fall. A task you've recently been assigned at work doesn't quite fit your area of expertise, but nobody is saying anything about it. You're aware of this, too. You're simply waiting for the right moment to speak up. You're the one who can replace that missing rung. Within {{sayi,5,12}} days, you'll raise the issue during a meeting or in an email thread and say, 'I can do this, but on one condition.' The other party will hesitate at first, then agree. By the middle of {{ay_1}}, you'll notice fewer files piled on your desk and feel that invisible burden on your shoulders growing lighter. This won't be a dramatic leap in your career, but rather a firmer foundation beneath your feet. And that's worth even more.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 761,
+      "metin": "Fincanının üst tarafında, bir park bankının üzerinde yan yana oturan iki siluet görüyorum {{isim}}. Aralarında bir gazete var; biri okuyor, diğeri başını hafifçe ona doğru eğmiş. Bu, yıllardır süren bir alışkanlığın görüntüsü. Ama dikkat et: gazetenin bir sayfası rüzgârda kalkmış, ikiniz de tutmuyorsunuz. Hayatında emekliliğin getirdiği o geniş boşluğa bir süredir bir \"üçüncü\" girmiş: her sabah aynı saatte aynı banka gelip gazetenin bulmacasını size soran bir komşu. Bu kişi, sizin o bildik düzeninize tatlı bir telaş kattı. {{sayi,2,5}} hafta içinde bu komşu kapını çalıp elden bir davetiye uzatacak; ailesinin düğününde en ön masada size ayrılmış iki sandalye olacak. O gün gazeteyi tamamen unutacaksın. Eşinle aranda, yıllar sonra yeniden o gençlik günlerindeki gibi bir bakışma geçecek; bunu kimseye söylemene gerek yok, ikiniz bilirsiniz.",
+      "metin_en": "Near the top of your cup, I see two silhouettes sitting side by side on a park bench, {{isim}}. There's a newspaper between them; one is reading while the other leans slightly closer. This is the picture of a habit you've shared for years. But look closely: One page of the newspaper has lifted in the wind, and neither of you is holding it down. For some time now, a 'third presence' has entered the wide-open space that retirement has brought into your life: a neighbor who comes to the same bench at the same hour every morning to ask the two of you for help with the crossword. This person has added a delightful bustle to your familiar routine. Within {{sayi,2,5}} weeks, this neighbor will knock on your door and hand you an invitation in person; at their family's wedding, two chairs at the front table will be reserved for you. That day, you'll forget all about the newspaper. You and your spouse will exchange a glance that feels just like the ones you shared in your younger days. There's no need to tell anyone about it. The two of you will understand.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 762,
+      "metin": "Telvelerinde, bir sıranın üzerine eğilmiş, kalemini ısıran birini görüyorum {{isim}}. Önündeki defterin köşesi kıvrılmış, sayfanın ortasında bir isim yazıyor; sonra karalanmış. O ismi tanıyorum sanki: aynı koridorda, aynı kantinde, belki aynı sırada gördüğün biri. Sen ona bir şey söylemek istiyorsun ama her seferinde cümle ağzında düğümleniyor. {{gun_3}} günü, okul çıkışında ya da bir ders arasında, hiç beklemediğin bir anda yan yana geleceksiniz. Senden geçen haftanın ders notlarını isteyecek; defterini uzattığında sayfanın kenarındaki karalamana gülecek ve sohbet oradan açılacak. Cevabını verirken sesin titrerse hiç şaşırma; o da fark edecek ve gülümseyecek. {{ay_1}} ayına varmadan, o karalanmış isim yeniden yazılacak; bu sefer silinmeden.",
+      "metin_en": "In your coffee grounds, I see someone leaning over a school desk, chewing on a pencil, {{isim}}. The corner of the notebook in front of them is folded, and a name has been written in the middle of the page, then crossed out. I almost feel as though I recognize that name: someone you've seen in the same hallway, the same cafeteria, perhaps even the same classroom. You want to tell this person something, but every time you try, the words get stuck in your throat. On {{gun_3}}, after school or between classes, you'll unexpectedly find yourselves standing side by side. They'll ask to borrow last week's lecture notes; when you hand over your notebook, they'll laugh at the doodle in the margin, and the conversation will take off from there. Don't be surprised if your voice trembles as you answer. They'll notice it, too, and smile. Before {{ay_1}} arrives, that crossed-out name will be written again, and this time it won't be erased.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 763,
+      "metin": "Fincanının tam ortasında, bir masa üzerinde duran, mürekkebi kurumuş bir kalem görüyorum {{isim}}. Kalemin ucu kırılmış, ama gövdesi sağlam. Bu, işinde ya da mesleğinde bir süredir \"yazamadığın\" bir şeyi anlatıyor: bir teklif, bir imza, bir karar. Elin gitmiyor, çünkü attığın imzanın altında kalmaktan çekiniyorsun. Ama kalemin gövdesi sağlamsa, yani sen hâlâ oradaysan, o imzayı atacak gücü de bulacaksın. {{gun_2}} günü ya da {{gun_4}} günü, önüne mavi bir dosyanın içinde, son sayfası imza bekleyen bir sözleşme gelecek. İlk bakışta \"bir düşüneyim\" diyeceksin. Ama o gün, o kalemi eline al ve at. {{ay_2}} ayında, o imzanın seni nereye taşıdığını görünce, iyi ki diyeceksin.",
+      "metin_en": "Right in the center of your cup, I see a pen resting on a desk, its ink dried up, {{isim}}. The tip is broken, but the barrel is intact. This represents something you've been unable to 'put in writing' in your work or professional life for some time: an offer, a signature, a decision. You hesitate because you're afraid of being held accountable for what you sign. But if the barrel is still intact, if you're still standing strong, then you'll find the strength to sign it, too. On {{gun_2}} or {{gun_4}}, a contract in a blue folder will be placed before you, its last page waiting for your signature. Your first reaction will be, 'Let me think about it.' But that day, pick up the pen and sign. During {{ay_2}}, when you see where that signature has taken you, you'll be glad you did.",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 764,
+      "metin": "Fincanında, ters çevrilmiş bir şemsiye görüyorum {{isim}}. Sapı yukarıda, kanatları aşağıda; sanki yağmur yağmış da sen onu kapatmayı unutmuşsun. İçinde biriken su, son günlerde içine attığın şeyler. Ayrılık acısı bazen böyle olur: dışarıdan kuru görünürsün, ama içinde bir göl birikmiştir. O şemsiyeyi ters çevirip suyu boşaltmanın vakti geliyor. {{sayi,5,10}} gün içinde eski sevgilinden bir mesaj, bir hatıra, belki de bir ortak arkadaşın ağzından bir cümle gelecek. Bu, seni geri döndürmek için değil; içindeki o suyu boşaltman için bir fırsat. Cevap vermesen de olur, kısa bir \"iyiyim\" desen de. {{ay_1}} ayında şemsiyeni kurutmuş, katlamış, dolaba kaldırmış olacaksın. Yeni bir yağmurda artık başka bir şemsiye açacaksın.",
+      "metin_en": "I see an upside-down umbrella in your cup, {{isim}}. Its handle points upward and its canopy hangs down, as though the rain has stopped and you've forgotten to close it. The water collected inside represents everything you've been keeping bottled up lately. Heartbreak can be like that sometimes: You look perfectly dry on the outside, while an entire lake has gathered within you. The time is coming to turn that umbrella over and let the water pour out. Within {{sayi,5,10}} days, something connected to your ex will reach you: a message, a memory, perhaps even a remark passed along by a mutual friend. This isn't meant to pull you back into the relationship. It's an opportunity to release what you've been carrying inside. You don't have to reply, or you can simply say, 'I'm fine.' By {{ay_1}}, you'll have dried your umbrella, folded it, and put it away in the closet. When the next rain comes, you'll open a different umbrella.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 765,
+      "metin": "Telvelerinin üst kısmında, tek başına duran bir kamp sandalyesi görüyorum {{isim}}. Yanında bir ateş yanıyor, ama ateşin etrafında kimse yok. Bu, son zamanlarda kendine ayırdığın zamanı anlatıyor: bir yandan iyi geliyor, bir yandan da sessizlik bazen fazla derinleşiyor. Hayatında bir süredir \"kendi kendine yetme\" modundasın; iş, spor ve hafta sonları tek başına çıktığın o uzun yürüyüşler. Ama o sandalyenin yanına bir sandalye daha konabilir. {{sayi,10,20}} gün içinde, hiç beklemediğin bir yerden — bir arkadaşının doğum günü sofrasında, tam karşındaki sandalyede — biriyle tanışacaksın. İlk anda \"bu da ne alaka\" diyeceksin. Ama o kişi, ateşin etrafına oturduğunda sessizliğin o kadar da derin olmadığını fark edeceksin. {{ay_1}} ayında o sandalyenin yanında ikinci bir sandalye olacak; bu kez katlanıp kaldırılacak bir sandalye değil.",
+      "metin_en": "Near the top of your coffee grounds, I see a lone camping chair, {{isim}}. A fire is burning beside it, but nobody is sitting around the flames. This represents the time you've been spending on your own lately. On one hand, it does you good; on the other, the silence sometimes grows a little too deep. For a while now, you've been in a self-sufficient mode: work, exercise, and those long weekend walks you take alone. But there's room for another chair beside yours. Within {{sayi,10,20}} days, you'll meet someone somewhere completely unexpected: in the chair right across from you at a friend's birthday dinner. Your first thought will be, 'Where did this come from?' But once that person sits down beside the fire, you'll realize the silence isn't quite so deep anymore. During {{ay_1}}, there will be a second chair beside yours. And this time, it won't be a folding chair that gets put away.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 766,
+      "metin": "Fincanının ortasında, bir dosya dolabının çekmecesi görüyorum {{isim}}. Çekmece yarı açık, içindeki dosyaların uçları görünüyor. Bu dolap, senin işindeki o \"bekleyen\" işleri temsil ediyor: bir tayin, bir terfi, bir prosedür, bir imza. Bir süredir aynı çekmeceyi açıp kapatıyorsun; içindekiler yerinde duruyor. Ama dikkat et: dosyaların uçları görünüyorsa, çekmece artık kapanmıyor. {{randomtarih,5,12}} günü, o çekmeceyle ilgili bir gelişme olacak: bir üstün koridorda yanından geçerken durup \"öğleden sonra bir uğra, konuşalım\" diyecek. O konuşmada ilk kez \"ben şunu istiyorum\" diyeceksin. {{ay_2}} ayında, o dosyalardan biri artık masanın üzerinde, imzalanmış olarak duracak. Kamu düzeninin o ağır ritmi, bu sefer senin lehine işleyecek.",
+      "metin_en": "In the center of your cup, I see a drawer in a filing cabinet, {{isim}}. It's half open, with the edges of the files inside sticking out. This cabinet represents all those matters still pending at your workplace: a transfer, a promotion, an administrative procedure, a signature. For some time, you've been opening and closing the same drawer, only to find everything exactly where you left it. But look closely: If the files are sticking out, the drawer can no longer close properly. On {{randomtarih,5,12}}, there will be a development concerning that drawer: a superior will stop as they pass you in the corridor and say, 'Drop by this afternoon, let's talk.' During that conversation, you'll say, 'This is what I want,' for the first time. By {{ay_2}}, one of those files will be lying on your desk, finally signed. The slow-moving machinery of public administration will work in your favor this time.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 767,
+      "metin": "Fincanının tam ortasında, bir yüzük kutusu görüyorum {{isim}}. Kutusu açık, ama yüzük içinde değil; yüzük, kutunun hemen yanında duruyor. Bu, nişanlılık döneminin o \"artık resmiyet kazandı ama henüz tam yerine oturmadı\" halini anlatıyor. Bir yandan düğün hazırlıkları, bir yandan iki ailenin beklentileri, bir yandan da içinizdeki o \"acaba her şey yolunda mı\" sorusu. Yüzüğün kutunun dışında durması kötü bir işaret değil; sadece henüz parmağa tam oturmadığını gösteriyor. {{randomtarih,4,10}} günü, nişanlınla aranızda düğünün tarihi yeniden açılacak; ailelerden birinin istediği gün ikinize de uymayacak. O konuşmada ilk kez gerçekten \"biz ne istiyoruz\" diye soracaksınız. {{ay_1}} ayında yüzük, kutunun içine değil, tam olması gereken yere — yani iki kalbin arasına — oturacak.",
+      "metin_en": "Right in the center of your cup, I see a ring box, {{isim}}. The box is open, but the ring isn't inside; it's resting right beside it. This reflects that feeling of being engaged, when everything is now official but hasn't quite settled into place yet. On one side, there are wedding preparations; on another, the expectations of both families; and somewhere in the middle, that lingering question in your hearts: 'Is everything really going to be all right?' The ring being outside its box isn't a bad sign. It simply shows that it hasn't quite found its proper place yet. On {{randomtarih,4,10}}, the wedding date will come up again between you and your fiancé: the day one of the families wants won't suit either of you. For the first time, you'll genuinely ask each other, 'What do we want?' During {{ay_1}}, the ring will find its rightful place, not inside the box, but exactly where it belongs: between two hearts.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 768,
+      "metin": "Fincanının üst kısmında, bir gece lambası görüyorum {{isim}}. Işığı yanıyor, ama çok kısık; sanki birisi uyurken açık bırakmış. Bu, son zamanlarda kendine ayırdığın o \"kısık\" zamanı anlatıyor: geç saatte telefon, erken kalkma, öğün atlama, belki biraz fazla kahve. Bedenin bu kısık ışığa alışmış; ama alışmak, iyi olduğu anlamına gelmiyor. Eşin bunu fark ediyor; dile getirmese de gözü üzerinde. {{randomtarih,3,9}} günü, eşin elindeki telefonu nazikçe alıp \"bu gece erken yatalım\" diyecek; ertesi sabah yıllardır olmadığı kadar dinç kalkacaksın. O soruya \"iyiyim\" deyip geçme; o lambanın ışığını biraz aç. {{ay_1}} ayında, sabahları daha dinç kalktığını, geceleri daha kolay daldığını fark edeceksin. O kısık ışık, yerini gün ışığına bırakacak.",
+      "metin_en": "Near the top of your cup, I see a nightlight, {{isim}}. It's switched on, but the glow is very faint, as though someone left it burning while they slept. This reflects the limited time you've been giving yourself lately: late-night scrolling on your phone, getting up early, skipping meals, perhaps drinking a little too much coffee. Your body has grown accustomed to that dim light, but getting used to something doesn't mean it's good for you. Your spouse has noticed, even if they haven't said anything, and they're keeping a watchful eye on you. On {{randomtarih,3,9}}, your spouse will gently take the phone from your hand and say, 'Let's go to bed early tonight.' The next morning, you'll wake up more rested than you have in years. Don't just brush the question aside with 'I'm fine.' Turn up the brightness of that little lamp. During {{ay_1}}, you'll notice that you're waking up feeling more refreshed and falling asleep more easily at night. That faint glow will finally give way to daylight.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
     }
   ]
 }

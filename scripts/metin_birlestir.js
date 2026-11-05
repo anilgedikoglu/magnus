@@ -15,27 +15,35 @@ function kosullar(kitle, matcher) {
   if (/koşulsuz/.test(k)) return [];
   const out = [];
   const add = (degisken, deger) => out.push({ degisken, deger });
-  const M1 = matcher === 'M1', M4 = matcher === 'M4', M5 = matcher === 'M5';
+  if (matcher === 'M7') return []; // Faloya yalnız koşulsuzu gösterir
+  const M1 = matcher === 'M1', M4 = matcher === 'M4', M5 = matcher === 'M5', M3 = matcher === 'M3';
   if (/kadın/.test(k)) add('cinsiyet', 'kadin');
   if (/erkek/.test(k)) add('cinsiyet', 'erkek');
   const med = [['evli', 'evli', 'evli', 'evli'], ['ilişkisi yok', 'ilişkisi yok', 'ilişkisi yok', 'iliskisi_yok'],
     ['ilişkisi var', 'ilişkisi var', 'ilişkisi var', 'iliski_var'], ['yeni ayrılmış', 'yeni ayrılmış', 'yeni ayrılmış', 'yeni_ayrilmis'],
     ['nişanlı', 'nişanlı', 'nişanlı', 'nisanli'], ['boşanmış', 'boşanmış', 'boşanmış', 'bosanmis']];
   for (const [key, m1, m4, m5] of med) {
-    if (k.includes(key)) add(M1 ? 'medeni durum' : 'medeni_durum', M1 ? m1 : M4 ? m4 : m5);
+    // M3 (Niyet): toVariableMap['medeni durum'] varlık biçimi, birebir
+    if (k.includes(key)) add(M1 || M3 ? 'medeni durum' : 'medeni_durum', M1 || M3 ? m1 : M4 ? m4 : m5);
   }
   const mes = [['öğrenci', 'öğrenci', 'öğrenci', 'ogrenci'], ['özel sektör', 'özel sektör', 'özel sektör', 'ozelsektoru'],
     ['kamu sektörü', 'kamu sektörü', 'kamu sektörü', 'kamusektoru'], ['ev hanımı', 'ev hanımı', 'ev hanımı', 'evhanimi'],
     ['emekli', 'emekli', 'emekli', 'emekli'], ['akademisyen', 'akademisyen', 'akademisyen', 'akademisyen'],
     ['iş arıyor', null, 'iş arıyor', 'isariyor'], ['kendi işini', null, 'kendi işini yapıyor', 'kendiisi']];
+  // M3 (Niyet): toVariableMap['meslek'] = etiket (büyük harfli), birebir karşılaştırma
+  const M3_ETIKET = { 'öğrenci': 'Öğrenci', 'özel sektör': 'Özel Sektör', 'kamu sektörü': 'Kamu Sektörü',
+    'ev hanımı': 'Ev Hanımı', 'emekli': 'Emekli', 'akademisyen': 'Akademisyen', 'iş arıyor': 'İş Arıyor',
+    'kendi işini': 'Kendi İşini Yapıyor' };
   for (const [key, m1, m4, m5] of mes) {
     if (k.includes(key)) {
-      const v = M1 ? m1 : M4 ? m4 : m5;
+      const v = M3 ? M3_ETIKET[key] : M1 ? m1 : M4 ? m4 : m5;
       if (v) add('meslek', v);
     }
   }
-  if (/25 yaş ve altı/.test(k) && !M5) add('yasmax', 25);
-  if (/40 yaş ve üstü/.test(k) && !M5) add('yasmin', 40);
+  // Yaş sınırı METİN olarak yazılır ("25"): orijinal veri böyle, ekranların çoğu `deger as String` okur
+  // (sayı yazılırsa Kahve/Durugörü filtresi TypeError fırlatır — tur 1-2'de yakalandı).
+  if (/25 yaş ve altı/.test(k) && !M5 && !M3) add('yasmax', '25');
+  if (/40 yaş ve üstü/.test(k) && !M5 && !M3) add('yasmin', '40');
   return out;
 }
 

@@ -80,8 +80,8 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
       if (kosullar.isNotEmpty) {
         final varMap = profile.toVariableMap();
         for (final k in kosullar) {
-          final val = varMap[k['degisken']];
-          if (val == null || val != k['deger']) return false;
+          final val = varMap['${k['degisken']}'];
+          if (val == null || val != '${k['deger']}') return false;
         }
       }
       return !shown.contains(e['id'].toString());
@@ -95,8 +95,8 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
         if (kosullar.isEmpty) return true;
         final varMap = profile.toVariableMap();
         for (final k in kosullar) {
-          final val = varMap[k['degisken']];
-          if (val == null || val != k['deger']) return false;
+          final val = varMap['${k['degisken']}'];
+          if (val == null || val != '${k['deger']}') return false;
         }
         return true;
       }).toList();

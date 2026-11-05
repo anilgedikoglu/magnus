@@ -1641,6 +1641,214 @@
       "metin": "Söyleyeceklerinden korktuğun, {{fiziki}} birisi var. Çatal yılan dilinin, sanki pul pul derisi var. Ne yapsan hep biliyor, onun sanki perisi var. Yüzleşeceksin bir anda, ak çıkacak karanda, gücünle tuz buz yeksan, kopacak tüm pranga.",
       "kosullar": [],
       "metin_en": "There's someone {{fiziki}} that you're afraid to speak your mind around. They've got a forked tongue, as if their skin is scaly. Whatever you do, they always seem to know, as if they have a fairy godmother. You'll confront them suddenly, things will come to a head, with your strength everything will be shattered, all chains will be broken."
+    },
+    {
+      "id": 179,
+      "metin": "Masanda yarım kalmış bir çalışma, kenarında kurşun kalemle alınmış notlar görüyorum. {{ay_2}} içinde beklediğin akademik değerlendirmeden olumlu bir dönüş gelecek. Üstelik hakemlerden birinin özellikle övdüğü bölüm, sonraki araştırmanın kapısını açacak. Magnus'un gözü bu kez dipnotta değil, başarıda!",
+      "metin_en": "I see an unfinished project on your desk, with notes scribbled in pencil along the margins. During {{ay_2}}, you'll receive a positive response from the academic review you've been waiting for. What's more, a section specifically praised by one of the reviewers will open the door to your next research project. This time, Magnus has his eye on success, not the footnotes!",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 180,
+      "metin": "Kulağıma bozuk para şıngırtısı değil, kasadan gelen bir iade sesi çalındı. Daha önce ödediğin ve artık unuttuğun bir ücretin bir kısmı geri dönecek. {{sayi,5,18}} gün içinde hesap hareketlerinde tanımadığın bir açıklama göreceksin. Küçük bir tutar diye burun kıvırma; tam gerektiği güne yetişecek.",
+      "metin_en": "What I heard wasn't the jingle of loose change, but the sound of a refund being processed at the register. Part of a fee you paid long ago and have since forgotten about will find its way back to you. Within {{sayi,5,18}} days, you'll notice an unfamiliar transaction description in your account activity. Don't turn your nose up at the small amount. It will arrive on exactly the day you need it.",
+      "kosullar": []
+    },
+    {
+      "id": 181,
+      "metin": "Yeşil bir kapının önünde duraksadığını görüyorum, {{isim}}. Uzun zamandır ertelediğin bir görüşme orada gerçekleşecek. Karşındaki kişi önce mesafeli davranacak, ardından sakladığı bir ayrıntıyı açıklayacak. Görüşmeden çıktığında kararın değişecek; üstelik bunu kendi isteğinle yapacaksın.",
+      "metin_en": "I see you hesitating in front of a green door, {{isim}}. A meeting you've been putting off for a long time will finally take place there. The person facing you will seem distant at first, then reveal a detail they've been keeping to themselves. When you walk out of that meeting, your decision will have changed, and you'll have changed it of your own free will.",
+      "kosullar": []
+    },
+    {
+      "id": 182,
+      "metin": "Nişan yüzüğünün yanında iki farklı tarih beliriyor. Düğünle ilgili bir ayrıntıda kararsız kalmışsınız; bir tarafın fikri diğerine uymuyor. {{ay_2}} içinde gidip göreceğiniz bir mekân ikinizi de aynı anda ikna edecek. Üstelik oradaki görevlinin küçük bir jesti bütçenizi rahatlatacak.",
+      "metin_en": "Two different dates are appearing beside your engagement ring. You and your partner have been undecided about a wedding detail, with one side's preference clashing with the other's. During {{ay_2}}, a venue you visit together will win both of you over at the same time. What's more, a small gesture from a staff member there will ease the pressure on your budget.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 183,
+      "metin": "Sevdiğin kişinin senden gizlediği şey bir sır değil, tatlı bir hazırlık olacak. Masada iki bardak ve katlanmış küçük bir kâğıt görüyorum. {{sayi,2,5}} hafta içinde sıradan sandığın bir akşam, önceden ayarlanmış özel bir buluşmaya dönüşecek. Sen mekânı görünce onun neden son günlerde dalgın olduğunu anlayacaksın.",
+      "metin_en": "What the person you love is hiding from you isn't a secret, but a sweet surprise in the making. I see two glasses on a table and a small folded piece of paper. Within {{sayi,2,5}} weeks, an evening you expect to be perfectly ordinary will turn into a special date arranged in advance. When you see the venue, you'll understand why your partner has seemed so distracted lately.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 184,
+      "metin": "Kalabalık bir masada boş kalan son sandalyeye dikkat et. {{gun_16}} günü ortak bir tanıdığın sayesinde yeni biriyle sohbet edeceksin. İlk konuşmanız aşk üzerine değil, ikinizin de sevdiği tuhaf bir yiyecek üzerine olacak. Sonra o kişi aynı bahaneyle yeniden görüşmek isteyecek. Tesadüfün de damak tadı varmış!",
+      "metin_en": "Pay attention to the last empty chair at a crowded table. On {{gun_16}}, you'll strike up a conversation with someone new through a mutual acquaintance. Your first conversation won't be about love, but about a strange food you both happen to enjoy. Later, that person will use the same excuse to suggest meeting again. Apparently, even coincidence has good taste!",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 185,
+      "metin": "Sana kalabalıkta sürekli göz göze geldiğin bir kadın göstereceğim. Onu önce ciddi ve ulaşılmaz bulacaksın. {{ay_1}} içinde bir arkadaş ortamında aynı konuda farklı düşünmeniz sohbeti başlatacak. Ayrılırken adını telefonuna kaydedeceksin; ilk mesajı ise o gönderecek. Magnus bu atışmayı sevdi!",
+      "metin_en": "Let me show you a woman you keep making eye contact with in a crowd. At first, you'll find her serious and unapproachable. During {{ay_1}}, a disagreement about something at a gathering with friends will spark a conversation between you. Before you part ways, you'll save her name in your phone, but she'll be the one to send the first message. Magnus likes this little battle of wits!",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 186,
+      "metin": "Bilgisayar ekranında son dakikada değişmiş bir toplantı saati görüyorum. İş yerinde hazırladığın ama yeterince fark edilmediğini düşündüğün bir fikir, {{gun_12}} günü üst yönetimin önüne gelecek. Sunumu senden isteyecekler. Ardından başka bir ekiple çalışma teklifi alman gündeme gelecek.",
+      "metin_en": "On a computer screen, I see a meeting time that's been changed at the last minute. On {{gun_12}}, an idea you've developed at work, but feel hasn't received enough recognition, will be brought before senior management. They'll ask you to give the presentation yourself. Afterward, the possibility of being offered a role working with another team will come up.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Özel Sektör"
+        }
+      ]
+    },
+    {
+      "id": 187,
+      "metin": "Telefonunda silmeye kıyamadığın bir konuşma var; fakat gözüm başka bir yere takıldı. {{randomtarih,15,35}} tarihinde eski ilişkinle bağlantılı bir eşyanın sana geri verilmesi için haber gelecek. Kısa ve sakin bir buluşma yaşayacaksın. Dönüş yolunda içindeki sorulardan biri nihayet cevabını bulacak.",
+      "metin_en": "There's a conversation on your phone that you can't bring yourself to delete, but something else has caught my eye. Around {{randomtarih,15,35}}, you'll receive word about an item connected to your former relationship that needs to be returned to you. You'll have a brief, peaceful meeting. On your way home, one of the questions you've been carrying inside will finally find its answer.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 188,
+      "metin": "Kurum koridorunda üzerinde kırmızı mühür bulunan bir evrak gözüme çarptı. Bir süredir sonuçlanmasını beklediğin idari işlemde, {{ay_2}} içinde eksik görülen bir ayrıntı tamamlanacak. Farklı bir birimde çalışan, adında {{harf}} bulunan kişi süreci hızlandıracak. Sonunda dosyanın kapandığını göreceksin.",
+      "metin_en": "A document bearing a red official seal catches my eye in the corridor of a government office. During {{ay_2}}, a missing detail in an administrative procedure you've been waiting to have finalized will be completed. Someone working in a different department whose name contains the letter {{harf}} will help speed up the process. At last, you'll see the case file officially closed.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Kamu Sektörü"
+        }
+      ]
+    },
+    {
+      "id": 189,
+      "metin": "Kütüphanede unuttuğun bir kitabın sayfaları arasından, aylar önce not aldığın bir cümle çıkacak; o cümle, tıkandığın bölümün anahtarını verecek. {{ay_2}} içinde bir dergiden ya da kongreden beklediğinden erken bir kabul gelecek. \"Neden bunu daha önce düşünmedim?\" diyeceksin.",
+      "metin_en": "Between the pages of a book you left behind at the library, you'll discover a sentence you wrote down months ago. That very sentence will give you the key to the section you've been struggling with. During {{ay_2}}, an acceptance from a journal or conference will arrive sooner than you expected. You'll find yourself saying, 'Why didn't I think of this before?'",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 190,
+      "metin": "Telefonunun notlar bölümünde unuttuğun eski bir liste var; ona bakınca yarım bıraktığın bir işi hatırlayacaksın. O işi {{sayi,3,5}} gün içinde tamamlayınca, beklediğin bir ödeme ya da iade eline geçecek. Ama asıl sevincin, parayı almak değil, o işi bitirmiş olmak olacak.",
+      "metin_en": "There's an old list you've forgotten about in the notes app on your phone. When you look at it, you'll remember a task you left unfinished. Once you complete that task within {{sayi,3,5}} days, a payment or refund you've been expecting will come through. But your greatest satisfaction won't be receiving the money. It will be the feeling of finally getting that task done.",
+      "kosullar": []
+    },
+    {
+      "id": 191,
+      "metin": "Bir anahtarı, iki haftadır arıyorsun. Gözünün önündeki bir yerde, belki bir ceket cebinde ya da bir çekmecenin köşesinde duruyor. Onu bulduğun gün, aynı akşam kapına gelen biriyle, seni uzun süredir meşgul eden bir meseleyi kapatacaksın.",
+      "metin_en": "You've been looking for a key for two weeks. It's sitting somewhere right in front of you, perhaps in a jacket pocket or tucked into the corner of a drawer. On the day you find it, someone will come to your door that evening, and together you'll finally bring closure to a matter that's been occupying your mind for a long time.",
+      "kosullar": []
+    },
+    {
+      "id": 192,
+      "metin": "Sabah yürüyüşünde selamlaştığın bir komşun, sana bir eski fotoğraf getirecek. Fotoğrafta, unuttuğun bir dönemden bir yüz var; o yüzün sahibinden {{randomtarih,15,60}} civarı bir haber ya da bir ziyaret gelecek. O gün, evinin balkonunda çayı fazla demleyeceksin.",
+      "metin_en": "A neighbor you exchange greetings with on your morning walks will bring you an old photograph. In it, there's a face from a period of your life you've almost forgotten. Around {{randomtarih,15,60}}, you'll either hear from that person or receive a visit. That day, you'll brew your tea a little too strong on your balcony.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Emekli"
+        }
+      ]
+    },
+    {
+      "id": 193,
+      "metin": "Düğün telaşına dair bir liste, iki tarafın da gözden kaçırdığı bir ayrıntıyı ortaya çıkaracak; bu ayrıntı, ileride anlatacağın en sevilen anı olacak. {{ay_2}} içinde bir akrabadan, masrafı üstlenecek bir destek gelecek. Küçük bir tartışma, bir sarılmayla kapanacak.",
+      "metin_en": "A wedding preparation checklist will reveal a detail that both families have overlooked, and that very detail will become one of your favorite stories to tell in the years ahead. During {{ay_2}}, a relative will offer to cover an expense, giving you some financial relief. A small argument will end with a hug.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 194,
+      "metin": "{{harf}} harfiyle başlayan biri, ortak bir arkadaşın aracılığıyla sohbete girecek. İlk mesajı sıradan olacak, ikincisi seni güldürecek. {{ay_2}} içinde kahve içmek için buluşacaksınız; gideceğiniz yer, senin daha önce hiç fark etmediğin bir sokakta olacak.",
+      "metin_en": "Someone whose name begins with the letter {{harf}} will join a conversation through a mutual friend. Their first message will be ordinary, but the second will make you laugh. During {{ay_2}}, you'll meet for coffee at a place on a street you've never even noticed before.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 195,
+      "metin": "Bir iş meselesinde, ağzından çıkan tek bir cümle, karşı tarafın fikrini değiştirecek. Bunu o an fark etmeyeceksin; ama {{sayi,5,10}} gün sonra teklif yeniden, bu sefer senin şartlarınla gelecek. O gün, ceketinin cebinde unuttuğun bir kartviziti bulacaksın.",
+      "metin_en": "In a work-related matter, a single sentence you say will change the other person's mind. You won't realize it at the time, but {{sayi,5,10}} days later, the offer will come back, this time on your terms. That same day, you'll find a business card you'd forgotten in your jacket pocket.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 196,
+      "metin": "Bir eşyayı, ondan kalanı, ne yapacağını bilemediğin bir köşede tutuyorsun. {{sayi,2,5}} hafta içinde onu bir kutuya koyup kaldıracaksın; o an içinin hafiflediğini fark edeceksin. Aynı günlerde, eski bir arkadaşın arayıp seni bir yürüyüşe çıkaracak.",
+      "metin_en": "You're keeping something that belonged to your ex in a corner where you haven't known what to do with it. Within {{sayi,2,5}} weeks, you'll place it in a box and put it away. In that moment, you'll notice a weight lifting from your heart. Around the same time, an old friend will call and invite you out for a walk.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 197,
+      "metin": "Kendi adına açılmış, unuttuğun bir hesapta ya da bir defterde, geçmişte ayırdığın küçük bir birikim bulacaksın. Bu para, sana ait bir şeyi, belki bir kursu ya da bir yolculuğu, kimseye sormadan yapmanı sağlayacak. {{ay_2}} içinde bu kararı vereceksin.",
+      "metin_en": "In an account opened in your name that you've forgotten about, or in an old notebook, you'll discover a small amount of money you set aside in the past. This money will allow you to do something just for yourself, perhaps take a course or go on a trip, without having to ask anyone. You'll make that decision during {{ay_2}}.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 198,
+      "metin": "Bir evrakın peşinde koşarken, tanıdık bir isimle karşılaşacaksın; işin bir günde bitecek. Bu tanıdık, sana başka bir kapıyı da aralayacak. {{sayi,4,8}} hafta içinde, görev yerinde ya da masanda küçük ama yerini değiştiren bir düzenleme olacak.",
+      "metin_en": "While chasing down some paperwork, you'll come across a familiar name, and the whole matter will be settled in a single day. This acquaintance will also open another door for you. Within {{sayi,4,8}} weeks, a small rearrangement at your workplace or desk will bring a change to your position.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Kamu Sektörü"
+        }
+      ]
     }
   ]
 }

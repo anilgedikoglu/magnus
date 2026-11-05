@@ -10,7 +10,8 @@ const brief = (texts) => {
   let s = 'SEÇİM GÖREVİ\n\n';
   s += 'Bu sohbette sana verdiğim talimatla (aynı fal türü, aynı kompartman, aynı 20 kitle) BAŞKA BİR YAZARIN yazdığı 20 metin aşağıda.\n';
   s += 'Görevin: bu 20 metinden, talimattaki GERÇEK ÖRNEK METİNLERE üslup ve sistem olarak en çok benzeyen, en SPESİFİK, okuyana "wow, bildin!" dedirtecek, BİLİYOR HİSSİ VEREN ve kendi kitlesine en uygun EN İYİ 10 tanesini seçmek.\n';
-  s += 'Yalnız bu 20 metni değerlendir (kendi yazdıklarını değil). Klişe, genel geçer, kitleyle çelişen ya da yer tutucusu hatalı olanları eleme.\n\n';
+  s += 'Yalnız bu 20 metni değerlendir (kendi yazdıklarını değil). Klişe, genel geçer, kitleyle çelişen ya da yer tutucusu hatalı olanları eleme.\n';
+  s += 'ÇEŞİTLİLİK ÖLÇÜTÜ: Örneklere bire bir benzeyenleri ve birbirinin kalıbını tekrarlayanları (moda mod: "Salı günü müjde var / Çarşamba günü müjde var") ELE. Seçtiğin 10 metin; NE olacağı, NEREDEN, KİM aracılığıyla, NASIL, NE ZAMAN ve sonucun nasıl hissedileceği bakımından birbirinden belirgin farklı olsun. "Keyfin yerine gelecek" gibi sonucun NASIL\'ını somutlamayanları değil, somutlayanları seç.\n\n';
   s += 'ÇIKTI: Yalnızca tek bir kod bloğu içinde JSON: {"secilenler":[10 adet no], "gerekce":{"<no>":"kısa gerekçe", …}}\n\n';
   s += 'METİNLER:\n';
   for (const t of texts) s += `\n#${t.no} | kitle: ${t.kitle}\n${t.metin}\n`;

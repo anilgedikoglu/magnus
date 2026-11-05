@@ -106,7 +106,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
     if (kosullar.isEmpty) return true;
     for (final k in kosullar) {
       final m = k as Map;
-      if (_profilDegeri(m['degisken'] as String? ?? '', profile) != (m['deger'] as String? ?? '')) {
+      if (_profilDegeri('${m['degisken'] ?? ''}', profile) != '${m['deger'] ?? ''}') {
         return false;
       }
     }

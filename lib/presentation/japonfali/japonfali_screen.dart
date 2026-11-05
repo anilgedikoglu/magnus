@@ -69,8 +69,8 @@ class _JaponFaliScreenState extends ConsumerState<JaponFaliScreen> {
       final kosullar = (e['kosullar'] as List?) ?? [];
       if (kosullar.isEmpty) return true;
       for (final k in kosullar) {
-        final deg = (k as Map)['degisken'] as String;
-        final bek = k['deger'] as String;
+        final deg = '${(k as Map)['degisken'] ?? ''}';
+        final bek = '${k['deger'] ?? ''}';
         final grc = vars[deg] ?? '';
         if (grc != bek) return false;
       }

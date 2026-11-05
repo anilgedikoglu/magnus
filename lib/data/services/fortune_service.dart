@@ -62,8 +62,8 @@ class FortuneService {
     // Değişken adına göre grupla
     final Map<String, List<String>> groups = {};
     for (final k in kosullar) {
-      final degisken = (k as Map)['degisken'] as String;
-      final deger = k['deger'] as String;
+      final degisken = '${(k as Map)['degisken'] ?? ''}';
+      final deger = '${k['deger'] ?? ''}'; // sayı da gelebilir (yasmax: 25)
       groups.putIfAbsent(degisken, () => []).add(deger);
     }
 

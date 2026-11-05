@@ -255,8 +255,8 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     final uygun = tumListe.where((m) {
       final kosullar = (m['kosullar'] as List?) ?? [];
       for (final k in kosullar) {
-        final deg   = k['degisken'] as String;
-        final deger = k['deger']    as String;
+        final deg   = '${k['degisken'] ?? ''}';
+        final deger = '${k['deger'] ?? ''}';
         if (_profilDeger(deg, profile) != deger) return false;
       }
       return true;

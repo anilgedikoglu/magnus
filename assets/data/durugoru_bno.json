@@ -1763,6 +1763,213 @@
         }
       ],
       "metin_en": "Today you may observe happy relationships around you and feel a bit lonely. Just know that days like this, when you feel like no one is there for you, are limited {{isim}}. I have two good news and one bad news for you today. Do you want the bad news first? Well, you may have to spend some money unexpectedly for reasons related to water. Your finances seem to be on a downward trend today. Now, for the good news; firstly, you will find a satisfying answer to a question that has been bothering you since the past {{gun_0}}. And secondly, something you will experience today will make you wake up happier tomorrow."
+    },
+    {
+      "id": 93,
+      "metin": "Kırmızı bir etiket ve üzeri çizilmiş eski bir fiyat görüyorum {{isim}}. Bugünün geri kalanında almayı düşündüğün bir şeyin beklediğinden farklı bir bedelle karşına çıkması mümkün. Üstelik bunu alışveriş yaparken değil, önünden geçtiğin bir vitrinde ya da tesadüfen açtığın bir sayfada fark edebilirsin. Asıl dikkatimi çeken ise yanında duran, üzerinde {{sayi,3,8}} rakamı bulunan küçük bir kâğıt. Bu rakam bugün sıra numarası, fiş ya da kapı üzerinde yeniden karşına çıkabilir. Bir de senden bir şey öğrenmek isteyen, konuşurken sürekli 'yani' diyen birini görüyorum. Ona vereceğin sıradan bir cevap, farkında olmadan kendi kafandaki bir sorunu çözmeni sağlayacak. Akşam olduğunda, günlerdir ertelediğin ufak bir alışverişi ya tamamlamış ya da artık gereksiz bulmuş olacaksın.",
+      "metin_en": "I see a red price tag with an old price crossed out, {{isim}}. During the rest of today, something you've been thinking of buying may turn up at a price different from what you expected. What's more, you might notice it not while shopping, but in a store window you happen to pass or on a webpage you open by chance. What really catches my attention, though, is a small piece of paper beside it bearing the number {{sayi,3,8}}. That number may appear again today on a queue ticket, receipt, or door. I also see someone who wants to learn something from you and keeps saying 'I mean' while speaking. An ordinary answer you give this person will unexpectedly help you solve a problem that's been on your own mind. By evening, you'll either have made a small purchase you've been putting off for days or decided you no longer need it.",
+      "kosullar": []
+    },
+    {
+      "id": 94,
+      "metin": "Sevdiğin kişinin bugün sana söylemek isteyip de nasıl başlayacağını bilemediği bir şey var {{isim}}. Magnuskop'ta yan yana duran iki sandalye ve aralarında unutulmuş bir atkı görüyorum. Bu görüntü bana akşam saatlerinde yapılacak bir konuşmayı işaret ediyor. Konu ilk bakışta önümüzdeki günlerde nereye gidileceği ya da kiminle görüşüleceği gibi sıradan bir mesele olabilir. Fakat asıl mesele, birbirinizin planlarında ne kadar yer tuttuğunuz. Günün ilerleyen bölümünde partnerinin yakın çevresinden, adında {{harf}} harfi bulunan birinin yaptığı bir yorum kulağına gelebilir. Bunu fazla ciddiye alma derim. Sevdiğin kişi akşam küçük bir ayrıntıyı hatırlayarak seni şaşırtabilir; daha önce beğendiğin bir tatlıyı, bir mekânı ya da söylediğin bir isteği. Bazen dikkat, en güzel hediyedir.",
+      "metin_en": "There's something your loved one wants to tell you today but doesn't quite know how to begin, {{isim}}. In the MagnusScope, I see two chairs standing side by side with a forgotten scarf between them. This image points me toward a conversation that will take place in the evening. At first, the subject may seem perfectly ordinary, such as where you'll go in the coming days or whom you'll meet. But the real issue is how much space you each occupy in the other's plans. Later today, you may hear a comment made by someone close to your partner whose name contains the letter {{harf}}. I'd advise you not to take it too seriously. This evening, your loved one may surprise you by remembering a tiny detail: a dessert you once liked, a place you admired, or a wish you mentioned. Sometimes, thoughtfulness is the loveliest gift of all.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "metin": "Bugün gözüme eski bir fotoğrafın arkasındaki soluk yazılar çarpıyor {{isim}}. Geçmişinden bir yer, belki çocukken geçtiğin bir sokak ya da yıllardır görmediğin bir dükkân, günün geri kalanında yeniden gündemine gelebilir. Bunu sana hatırlatacak olan kişiyle doğrudan konuşman gerekmiyor. Bir mağaza çalışanının söylediği semt adı bile yeterli olabilir. Öğleden sonra elinde sarı renkli bir poşet taşıyan, aceleci birini görüyorum. Bu insanla yolunun kesişmesi küçük bir gecikmeye neden olsa da, hemen ardından aradığın bir şeyin tam gözünün önünde olduğunu fark edeceksin. Akşam ise yarım bıraktığın bir uğraşa dönme isteği ağır basıyor. Sanki eskiden severek yaptığın, sonradan vakit ayırmadığın bir şey. Bugünün sürprizi geçmişinle yeniden kuracağın o küçücük bağ olabilir.",
+      "metin_en": "Today, faded writing on the back of an old photograph catches my eye, {{isim}}. A place from your past, perhaps a street you walked down as a child or a shop you haven't seen in years, may come back into your thoughts during the rest of the day. You won't necessarily have to speak directly with someone who reminds you of it. Even hearing a shop assistant mention a neighborhood could be enough. In the afternoon, I see someone in a hurry carrying a yellow shopping bag. Crossing paths with this person may cause a slight delay, but immediately afterward, you'll realize that something you've been looking for has been right in front of you all along. By evening, you'll feel drawn to return to an activity you left unfinished, something you once loved doing but eventually stopped making time for. Today's surprise may be that tiny connection you rediscover with your past.",
+      "kosullar": []
+    },
+    {
+      "id": 96,
+      "metin": "Kulaklığının tek tarafını çıkarıp birine şaşkınlıkla baktığını görüyorum {{isim}}. Bugünün geri kalanında senden yaşça çok büyük olmayan biri, hakkında yanlış düşündüğün bir konuyu açıklığa kavuşturabilir. Mesele, ortak arkadaş grubunda planlanan ve sana haber verilmediğini sandığın bir doğum günü buluşması. Özellikle koyu yeşil bir üst giyen, konuşurken ellerini çok kullanan biri dikkatimi çekiyor. Bu insanın söyleyeceği şey seni önce hafifçe utandıracak, ardından güldürecek. Akşamüstü dijital bir oyun, müzik listesi ya da kısa bir video üzerinden yeni bir sohbetin başlaması da mümkün. İşin eğlenceli tarafı, normalde pek konuşmadığın biriyle ortak bir zevkin olduğunu fark edebilmen. Günün sonunda aklında 'Bunu daha önce neden bilmiyordum?' sorusu kalacak. Bazı arkadaşlıkların başlangıcı gerçekten böyle tuhaf oluyor.",
+      "metin_en": "I see you taking one earbud out and looking at someone in surprise, {{isim}}. During the rest of today, someone not much older or younger than you may clear up something you've misunderstood. It's about a birthday get-together planned in your shared group of friends, one you thought nobody had told you about. Someone wearing a dark green top who gestures a lot while talking particularly catches my attention. What this person says will leave you slightly embarrassed at first, then make you laugh. Toward evening, a new conversation may also begin over a video game, a music playlist, or a short video. The fun part is that you could discover a shared interest with someone you rarely talk to. By the end of the day, you'll be wondering, 'Why didn't I know this before?' Some friendships really do begin in the strangest ways.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "metin": "Dar bir koridorda karşılıklı açılan iki kapı var görüntümde {{isim}}. Bugün bir yere girdiğinde hangi tarafa yönelmen gerektiğini kısa süreliğine şaşırabilirsin. Bu sırada üzerinde çizgili bir kıyafet bulunan, orta yaşlı biri sana yol gösterecek. İlginç olan şu; bu kişi hemen ardından senin de bildiğin bir semtin ya da mekânın adını anabilir. Böylece hiç tanımadığın biriyle birkaç dakikalık beklenmedik bir sohbet yaşayacaksın. Magnuskop'ta ayrıca üzerinde mavi damga bulunan bir kâğıt beliriyor. Gün içinde teslim alacağın bir belge, fiş veya küçük bir kayıt, daha önce belirsiz kalan bir işlemi netleştirebilir. Akşama doğru cebinde ya da çantanda unuttuğun bir notu bulacaksın. O notun hatırlattığı işi bugün bitirirsen yarının yükünden bir parça eksilecek.",
+      "metin_en": "In my vision, I see two doors facing each other across a narrow corridor, {{isim}}. Today, when you enter a place, you may briefly feel unsure which way to go. At that moment, a middle-aged person wearing something striped will show you the way. Here's the interesting part: Shortly afterward, this person may mention a neighborhood or place you happen to know as well. That will lead to an unexpected conversation lasting a few minutes with a complete stranger. The MagnusScope also reveals a piece of paper bearing a blue stamp. A document, receipt, or small registration record you receive during the day may clarify a process that was previously uncertain. Toward evening, you'll find a note you forgot in your pocket or bag. If you finish the task it reminds you of today, you'll have one less thing to worry about tomorrow.",
+      "kosullar": []
+    },
+    {
+      "id": 98,
+      "metin": "Ocakta değil, mutfak dolabının en üst rafında duran bir kavanoz görüyorum {{isim}}. Bugün evde bir şey hazırlarken eksik sandığın malzemenin aslında elinin altında olduğunu keşfedebilirsin. Fakat günün asıl haberi mutfaktan değil, apartmanın ortak alanından geliyor. Kapıcı, komşu ya da binaya hizmet vermeye gelen bir görevli, önümüzdeki günlerle ilgili bir düzenlemeyi sana bildirebilir. Konu temizlik saatleri, bir bakım işlemi veya ortak kullanım alanıyla ilgili olabilir. Özellikle elinde küçük bir defter taşıyan bir kadın beliriyor görüntümde. Bu kadının vereceği bilgi sayesinde evdeki planını değiştireceksin. Akşamüstü ise aileden birinin senden istediği bir şeyi çoktan hazırlamış olduğunu fark edeceksin. Karşı tarafın şaşkınlığı hoşuna gidecek. Her şeyi önceden düşünme huyun bugün işe yarıyor.",
+      "metin_en": "I see a jar sitting not on the stove, but on the very top shelf of a kitchen cabinet, {{isim}}. While preparing something at home today, you may discover that an ingredient you thought was missing has actually been within reach all along. But the day's main news won't come from the kitchen. It will come from a shared area of your apartment building. A building caretaker, neighbor, or maintenance worker may inform you about an arrangement planned for the coming days. It could concern cleaning schedules, maintenance work, or a communal space. A woman carrying a small notebook stands out particularly clearly in my vision. The information she gives you will lead you to change your plans at home. Later in the afternoon, you'll realize you've already prepared something a family member has asked you for. You'll enjoy their surprise. Your habit of thinking ahead about everything will come in handy today.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "metin": "Burnuma taze kesilmiş limonun kokusu geliyor {{isim}}. Bugünün geri kalanında bu kokuyu bir içecekte, hazırlanan bir yemekte ya da yanından geçtiğin küçük bir işletmede duyabilirsin. Tam o sırada yanında bulunan birinin daha önce anlattığı komik bir olay yeniden gündeme gelecek. Fakat asıl sürpriz biraz sonra: Üzerinde {{sayi,12,29}} yazan bir etiket veya numara, aradığın bir ürünün ya da yerin tam karşısına çıkmanı sağlayabilir. Magnuskop'ta yuvarlak gözlük kullanan, gri saçlı bir insan da beliriyor. Onun bir başkasına verdiği tavsiyeyi tesadüfen duyacaksın. Sana söylenmediği hâlde kendi durumuna uyarlayabileceğin kadar isabetli bulabilirsin. Akşam bir süredir gereksiz yere elinde tuttuğun birkaç küçük şeyi ayırdığını görüyorum. Azıcık yer açmak bile insanın zihnini ferahlatıyor.",
+      "metin_en": "I can smell freshly cut lemon, {{isim}}. During the rest of today, you may catch this scent in a drink, a freshly prepared dish, or a small business you pass by. Right around that moment, someone beside you will bring up a funny story they've told before. But the real surprise comes a little later: A label or number displaying {{sayi,12,29}} may lead you straight to a product or place you've been looking for. In the MagnusScope, I also see a gray-haired person wearing round glasses. You'll happen to overhear this person giving someone else advice. Although it wasn't directed at you, you may find it so fitting that you can apply it to your own situation. By evening, I see you sorting through a few little things you've been holding on to unnecessarily. Even clearing a tiny bit of space can make your mind feel lighter.",
+      "kosullar": []
+    },
+    {
+      "id": 100,
+      "metin": "Aynanın önünde küçük bir karar verdiğin anı yakaladım {{isim}}. Bugün dış görünüşünle ilgili ufak bir değişiklik yapmak isteyebilirsin. Saçını farklı toplamak, uzun süredir kullanmadığın bir aksesuarı takmak veya alışılmışın dışında bir renk seçmek gibi. Bunun üzerine açık renk çanta taşıyan bir kadından beklemediğin bir iltifat duyabilirsin. Ama gün yalnızca bununla sınırlı değil. Öğleden sonra senden yaşça küçük bir kızın ya da genç kadının bir konuda fikrini sorduğunu görüyorum. Söylediklerini ne kadar ciddiye aldığını önce fark etmeyeceksin. Sonra onun tam da senin önerdiğin şeyi yaptığını görebilirsin. Akşam ise bir çekmeceden çıkan eski bir takı ya da küçük hatıra, zamanında verdiğin bir kararı sana yeniden düşündürecek. Bu defa kendini daha anlayışlı değerlendireceksin.",
+      "metin_en": "I've caught a glimpse of you making a small decision in front of the mirror, {{isim}}. Today, you may feel like making a subtle change to your appearance. Perhaps you'll style your hair differently, wear an accessory you haven't used in ages, or choose a color you wouldn't normally pick. As a result, you may receive an unexpected compliment from a woman carrying a light-colored handbag. But there's more to the day than that. In the afternoon, I see a younger girl or young woman asking for your opinion on something. At first, you won't realize how seriously she's taking your words. Later, you may notice that she's done exactly what you suggested. In the evening, an old piece of jewelry or a small keepsake found in a drawer will make you reconsider a decision you made long ago. This time, you'll judge yourself with greater understanding.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "metin": "Bugünün manzarasında eski tip bir duvar saati ve yanında duran küçük bir takvim var {{isim}}. Günün geri kalanında eskiden sık görüştüğün, fakat son zamanlarda yollarınızın seyrek kesiştiği bir tanıdığının adını duyabilirsin. Bu kişiden söz edecek olan, mahalleden ya da eski çalışma çevrenden, bıyıklı ve ağır konuşan bir beyefendi olabilir. Duydukların seni geçmiş günlere götürecek. Öğleden sonra bir banka işlemi, abonelik veya emeklilere yönelik bir hizmet hakkında yeni bir ayrıntı öğrenmen de mümkün. Sana anlatılan ilk bilgiyle yetinmezsen daha uygun bir seçenek bulabilirsin. Akşam bir aile ferdinin senden eski bir olayın ayrıntılarını sorduğunu görüyorum. Anlatmaya başlayınca olayın sandığından çok daha fazlasını hatırladığını fark edeceksin. Hafızanın böyle sürprizleri de vardır.",
+      "metin_en": "Today's vision shows me an old-fashioned wall clock with a small calendar beside it, {{isim}}. During the rest of the day, you may hear the name of an acquaintance you used to see frequently but have rarely crossed paths with lately. The person mentioning them could be a mustached gentleman from your neighborhood or former workplace who speaks slowly and deliberately. What you hear will take you back to earlier days. In the afternoon, you may also learn a new detail about a banking transaction, subscription, or service for retirees. If you don't settle for the first information you're given, you may find a more suitable option. In the evening, I see a family member asking you about the details of an old event. Once you start telling the story, you'll realize you remember far more than you thought. Memory has its own surprises.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "metin": "Kalabalık bir masada boş bırakılmış tek bir sandalye görüyorum {{isim}}. Bugünün geri kalanında bir arkadaş çevresinin yaptığı plana sonradan dâhil olman mümkün. İlginç olan, bu buluşmada daha önce yalnızca ismini duyduğun biriyle karşılaşabilecek olman. Üzerinde açık mavi bir kıyafet bulunan, gülünce gözleri kısılan bu kişinin sohbet sırasında söyleyeceği bir cümle dikkatini çekecek. Konu aşk değil, ikinizin de sevdiği bir yer veya uğraş olabilir. Fakat ortak noktanızın beklediğinden fazla olduğunu fark edebilirsin. Öncesinde, yakın çevrenden birinin senin yalnız yaşamaya ya da kendi kararlarını vermeye alışkın oluşunla ilgili yaptığı bir şakaya rastlayabilirsin. Alınmana gerek yok; akşam verdiğin bir kararla bağımsızlığının sana ne kadar rahatlık sağladığını yeniden göreceksin.",
+      "metin_en": "I see a single empty chair at a crowded table, {{isim}}. During the rest of today, you may find yourself joining a plan your circle of friends has already made. Interestingly, at this gathering you could meet someone whose name you've only heard before. This person, wearing light blue and with eyes that narrow when they smile, will say something during the conversation that catches your attention. The subject won't be love, but perhaps a place or activity you both enjoy. Still, you may discover that you have much more in common than you expected. Beforehand, someone close to you might joke about how accustomed you are to living alone or making your own decisions. There's no need to take offense. A decision you make that evening will remind you just how much freedom your independence gives you.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "metin": "Buzdolabının kapağı açık kalmış, sen bir yandan telefonu omzunla kulağına sıkıştırmışsın — bu görüntüyle açılıyor günün {{isim}}. Arayan, eşinin teyzesi. Bir süredir konuşulmayan bir aile meselesini nazikçe açacak; ilk cümlede canın sıkılacak, ama teyzenin söylediği tek bir cümle — 'senin de bir sözün var artık' — omzundaki yükü alacak. O telefon kapandıktan hemen sonra mutfak çekmecesini karıştırırken, geçen kış kaybettiğini sandığın küçük altın kolyeyi bulacaksın; yumruğunu sıkıp bir an gözlerini kapatacaksın. Akşam eşinle aranızda konuşulmayan o mesele açılmayacak bile; ikiniz de susacak, ama bu susuş artık bir hesap sorma değil, bir anlaşma olacak. Kendine bir kahve yap {{isim}}; bugün sözün geçti.",
+      "metin_en": "The refrigerator door is hanging open, and you're holding your phone against your ear with your shoulder. That's how your day begins in my vision, {{isim}}. The caller is your spouse's aunt. She'll gently bring up a family matter that hasn't been discussed for some time. Her opening words will upset you, but one sentence from her, 'You have a say in this now, too,' will lift a weight from your shoulders. Right after you hang up, you'll be rummaging through a kitchen drawer when you find the little gold necklace you thought you'd lost last winter. You'll clench your fist and close your eyes for a moment. That evening, the unspoken issue between you and your spouse won't even come up. You'll both remain silent, but this silence will no longer be about demanding answers. It will be an understanding. Make yourself a coffee, {{isim}}. Today, your voice was heard.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "metin": "Burnuma simit ve egzoz kokusu karışık geliyor — dar, araçların çift sıra park ettiği bir sokak. Öğleden sonra oradan geçerken arkandan biri seslenecek ve adını yanlış söyleyecek; düzeltmek için dönmeyeceksin, sadece elinle selam verip yürüyeceksin. Asıl mesele şu: telefonunda {{sayi,3,7}} kez açıp kapattığın o sohbet, akşamüstü sana beklemediğin kadar sıcak bir cevap bırakacak — karşı taraf senden özür dileyecek, sen istemesen bile. O cevabı okuduğunda omzunda taşıdığın çantanın askısı hâlâ orada olacak ama ağırlığı gidecek. Akşam bir çay demle ve iki dakika hiçbir şey yapma {{isim}}. O iki dakika bugünün en kıymetli anı olacak.",
+      "metin_en": "I catch a mingled scent of freshly baked simit and exhaust fumes: a narrow street with cars double-parked along it. As you walk down that street this afternoon, someone will call out from behind you and get your name wrong. You won't turn around to correct them. You'll simply wave and keep walking. But here's what really matters: That conversation on your phone, the one you've opened and closed {{sayi,3,7}} times, will receive a reply toward evening that's warmer than you ever expected. The other person will apologize, even though you haven't asked them to. When you read that response, the strap of your bag will still be resting on your shoulder, but the weight will seem to disappear. Brew yourself some tea tonight and do absolutely nothing for two minutes, {{isim}}. Those two minutes will be the most precious part of your day.",
+      "kosullar": []
+    },
+    {
+      "id": 105,
+      "metin": "Bir otoparkın beton duvarında, arabanın kapısını açarken çekilmiş bir fotoğraf beliriyor önümde — senin elin kapı kolunda, yüzün yarısı gölgede. Bugün eşin, arabayla ilgili bir masrafı açacak: muayene yaklaşmış, sen 'bakarız' demiştin. Öğleye doğru sanayideki usta, beklediğinden farklı bir şey söyleyecek — sadece bir keçe değişecek, büyük masraf yok. İçin rahatlayacak ama belli etmeyeceksin. Akşamüstü eşinle birlikte arabanın bagajını boşaltacaksınız; orada çocukluğundan kalma, boyası atmış küçük bir teneke araba bulacaksın. Eşin 'bunu hâlâ saklıyor musun' diyecek, güleceksiniz. O an, yıllardır taşıdığın bir şeyin aslında ne kadar hafif olduğunu fark edeceksin {{isim}}.",
+      "metin_en": "On the concrete wall of a parking garage, a photograph appears before me, taken just as you're opening your car door. Your hand rests on the handle, and half your face is in shadow. Today, your spouse will bring up an expense related to the car. Its inspection is coming up, and you'd said, 'We'll see.' Around noon, the mechanic at the repair shop will tell you something different from what you expected. Only a seal needs replacing, so there won't be a major expense. You'll feel relieved but won't show it. Toward evening, you and your spouse will clear out the trunk together. There, you'll find a little metal toy car from your childhood, its paint chipped and faded. Your spouse will ask, 'You still keep this?' and you'll both laugh. In that moment, you'll realize how light something you've carried for years actually is, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "metin": "Masanın üzerinde soğumuş bir kahve ve kenarı kıvrılmış bir makale var; gözüm o sayfadaki bir dipnota takıldı. Okuyacaksın, bir cümlede duracaksın, sonra o cümle sana bambaşka bir şey açacak {{isim}} — kaynak yılının yanlış yazıldığını fark edeceksin ve bu, haftalardır peşinde koştuğun bir çelişkiyi çözecek. Bunu kimseye söylemeyeceksin, ama o an içinden bir 'ha!' çekeceksin. Öğleden sonra bölümden gözlüklü bir meslektaşın, senin tam da o kaynağa atıf yapman gerektiğini söyleyecek; gülmemek için kendini tutacaksın. Akşam kütüphaneden çıkarken hava serinleyecek; yazdığın o cümleyi silmeyeceksin {{isim}}, sonra pişman olursun.",
+      "metin_en": "There's a cup of cold coffee on the table and a journal article with a curled edge. My eye is drawn to a footnote on that page. You'll read it, stop at one sentence, and suddenly that sentence will reveal something entirely different to you, {{isim}}. You'll notice that the publication year in the reference is incorrect, and this will resolve a contradiction you've been trying to untangle for weeks. You won't tell anyone, but inside you'll have a little 'Aha!' moment. In the afternoon, a bespectacled colleague from your department will tell you that you need to cite that very source. You'll have to hold back a laugh. The air will turn chilly as you leave the library that evening. Don't delete that sentence you've written, {{isim}}. You'll regret it later.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "metin": "Bir kapı pervazında, çakılmış çivinin bıraktığı küçük bir delik görüyorum; orada bir şey asılıydı, artık yok. Bugün evde o deliği fark edeceksin ve bir an donup kalacaksın — sonra gidip dolaptan bir tablo çıkarıp oraya asacaksın, kendi seçtiğin bir şey. Bunu yaparken çekiç sesi duvara vurdukça içindeki bir şeyin de yerine oturduğunu hissedeceksin. Öğleden sonra eski bir iş arkadaşın arayacak; konu iş değil, sadece 'nasılsın' diyecek ve sen ilk kez 'iyiyim' derken yalan söylemeyeceksin {{isim}}. Akşam o tabloya bakacaksın; duvardaki delik kapandı, ama önemli olan o değil — o çiviyi sen çakmıştın, bu tabloyu da sen asıyorsun.",
+      "metin_en": "I see a tiny hole in a doorframe where a nail was once driven in. Something used to hang there, but it's gone now. Today, you'll notice that hole at home and freeze for a moment. Then you'll go to the closet, take out a picture, and hang it there, something you've chosen yourself. As you do, with every strike of the hammer against the wall, you'll feel something inside you settling into place as well. In the afternoon, a former colleague will call. It won't be about work. They'll simply ask, 'How are you?' and for the first time, when you say, 'I'm fine,' you won't be lying, {{isim}}. That evening, you'll look at the picture. The hole in the wall has been covered, but that's not what matters. You were the one who drove in that nail, and now you're the one hanging this picture.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "metin": "Toplantı odasının camında yansımanı görüyorum; elinde bir kalem, kalemin ucunu masaya vuruyorsun. Bugün o toplantıda söz sana gelecek ve sen, aylardır kimsenin dile getirmediği bir şeyi söyleyeceksin — söylediğin anda odada bir sessizlik olacak, sonra yönetici başını sallayacak. İkindiden sonra, hızlı konuşan bir kadın yanına gelecek ve 'senin dediğini yaptım, tuttu' diyecek; o an anlayacaksın ki sözün duyulmuş. Akşam çıkışta asansörde, işten birinin sana 'bugün iyiydin' demesi yetecek {{isim}} — bu cümleyi duymak için bütün gün o kalemi masaya vurmuşsun. Ertelediğin o kararı yarın değil, bugün ver.",
+      "metin_en": "I see your reflection in the meeting room window. You're holding a pen, tapping its tip against the table. Today, during that meeting, it will be your turn to speak, and you'll say something nobody has dared to voice for months. The moment you say it, silence will fall over the room. Then the manager will nod. Later in the afternoon, a fast-talking woman will approach you and say, 'I did what you suggested, and it worked.' That's when you'll understand that your words have been heard. As you're leaving work that evening, all it will take is someone in the elevator telling you, 'You did well today,' {{isim}}. It will feel as though you've been tapping that pen all day just to hear those words. Make that decision you've been postponing today, not tomorrow.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "metin": "Sağ üst köşesinde tarih eksik kalmış resmî bir yazı görüyorum — evrakın peşinde bir imza, bir de yanlış yazılmış bir sayı var. O iş öğleden sonra çözülecek ama beklediğin kişiden değil; koridorda gözlüğünü konuşurken çıkaran bir meslektaşın, 'bunu şöyle yapalım' diyecek ve iş tek hamlede bitecek {{isim}}. Önce sıkılacaksın, sonra ona hak vereceksin. O görüşme kapandıktan sonra masana döndüğünde, doğrudan talep etmediğin bir görev değişikliğinin konuşulduğunu duyacaksın — henüz kesin değil, ama adın olumlu anılıyor. Akşam eve giderken bir şey alacaksın; küçük, gereksiz, ama seni gülümsetecek. Masanda yarım iş bırakmamanın huzuru yüzüne yansıyacak.",
+      "metin_en": "I see an official document with a missing date in its upper-right corner. There's a signature still needed, along with a number that's been written incorrectly. The matter will be resolved this afternoon, but not by the person you're expecting. A colleague who takes off their glasses while talking in the corridor will say, 'Let's do it this way,' and the whole thing will be settled in one move, {{isim}}. At first, you'll feel annoyed, but then you'll realize they're right. When that conversation ends and you return to your desk, you'll hear talk of a change in your duties that you haven't directly requested. Nothing is certain yet, but your name is being mentioned favorably. On your way home that evening, you'll buy something small and unnecessary that nevertheless makes you smile. The peace of knowing you've left no unfinished work on your desk will show on your face.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "metin": "Bir kitaplığın arasında sıkışmış eski bir kartvizit var; üzerindeki isim sana bir dönemi hatırlatıyor. Bugün o isim karşına çıkacak {{isim}} — ama nostalji için değil, bir hesabı kapatmak için. Yıllar önce yarım kalmış bir söz var, birine verdiğin; o kişi senden bir görüş isteyecek ve sen o görüşmede sözünü tutacaksın. İkindiden sonra senden birkaç yaş küçük, konuşurken sürekli saatine bakan biri sana bir soru soracak; senin cevabın onun için önemli olacak ve sen bunu yüzünden okuyacaksın. Akşam bir yürüyüş yapacaksın; bedenin de zihnin gibi hareket istiyor. Kitaplıktaki o kartviziti at {{isim}}; artık gereği kalmadı, bunu bugün anlayacaksın.",
+      "metin_en": "There's an old business card wedged between books on a shelf. The name printed on it reminds you of a particular chapter of your life. Today, that name will come up again, {{isim}}, but not for nostalgia. It will be about settling an old obligation. Years ago, you made someone a promise that was never fully fulfilled. That person will ask for your opinion, and during that conversation, you'll finally keep your word. Later in the afternoon, someone a few years younger than you, who keeps checking their watch while speaking, will ask you a question. Your answer will matter to them, and you'll be able to read it on their face. That evening, you'll go for a walk. Your body wants movement just as much as your mind does. Throw away that business card on your shelf, {{isim}}. You no longer need it, and today you'll understand why.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "metin": "Cam kenarında bir kafe masası görüyorum; önünde yarısı içilmiş bir bardak, gözlerin dışarıdaki kalabalığa dalmış. Bugün o kafede otururken, yan masadaki biri sana bir şey soracak: 'Bu priz çalışıyor mu?' Sıradan bir soru, ama cevabından sonra sohbet açılacak — kısa saçlı, hareketli bir arkadaşın sonradan 'işte tam sana göre' diyecek. İlk tepkin 'boşver' olacak. Ama o kişinin, senin gibi erken kalkıp yürüyüşe çıktığını duyunca merakın uyanacak. Akşamüstü tek başına o kafeden çıkıp aylardır ertelediğin bir şeyi yapacaksın — uzun süredir sayfasını açıp kapattığın bir kursa kaydını yaptıracaksın {{isim}}. O an kendine gülümseyeceksin; mutluluğunu kimsenin programına bağlamadığın için.",
+      "metin_en": "I see a café table by the window. In front of you is a half-finished drink, and your eyes are lost in the crowd outside. Today, while you're sitting in that café, someone at the next table will ask you, 'Does this outlet work?' An ordinary question, but after you answer, a conversation will begin. Later, a lively, short-haired friend of yours will say, 'Now that's exactly your type.' Your first reaction will be, 'Oh, forget it.' But when you hear that this person also gets up early and goes for walks, just like you, your curiosity will awaken. Toward evening, you'll leave that café on your own and do something you've been putting off for months. You'll enroll in a course whose webpage you've been opening and closing for ages, {{isim}}. In that moment, you'll smile to yourself, because you haven't made your happiness dependent on anyone else's schedule.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "metin": "Sınıfın tahtasında silinmemiş bir formül görüyorum; tebeşir izi hâlâ orada. Bugün o formülü defterine geçirirken, hocanın geçen hafta söylediği bir cümleyi hatırlayacaksın — sıranın arkasında oturan, adında {{harf}} harfi olan arkadaşının özetinde o cümleyi göreceksin ve her şey yerine oturacak. İkindiden sonra kütüphanede boş bir sandalye bulacaksın; orada geçireceğin yarım saat, evde saatlerce çalışmandan daha çok işe yarayacak. Akşam danışmanından gelen bir duyuru, sonraki günlerin programını değiştirecek — ilk anda canın sıkılacak, sonra hazırlanmak için zaman kazandığını fark edeceksin {{isim}}. O formülü defterine yaz; yarın sınavda işine yarayacak.",
+      "metin_en": "I see a formula still written on the classroom board, with traces of chalk remaining. Today, as you copy that formula into your notebook, you'll remember something your teacher said last week. You'll spot that very sentence in the study notes of a classmate who sits at the back and whose name contains the letter {{harf}}. Suddenly, everything will fall into place. Later in the afternoon, you'll find an empty chair in the library. The half hour you spend studying there will be more productive than hours of studying at home. That evening, an announcement from your academic advisor will change your schedule for the coming days. At first, you'll feel frustrated, but then you'll realize you've actually gained more time to prepare, {{isim}}. Write that formula in your notebook. You'll need it on tomorrow's exam.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
     }
   ]
 }

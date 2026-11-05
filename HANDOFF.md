@@ -30,7 +30,15 @@
   (Tavşan, Yana Bana Dair, Durugörü Gelecek, Kahve Sonuç, Kahve Gelişme; TR+EN, koşullu). Skill: `magnus-metin-uretimi`;
   algoritmalar `docs/metin_algoritmalari.md`, kayıt `docs/metin_uretim_log.md`, betikler `scripts/metin_*`.
   Arabam v2 (1.865 model), Evim taşınma kuralları, Kısmetim açıklama havuzları, `VariableReplacer.isEn` (EN ay adları).
-- Testler: 100 geçiyor (`flutter test`); tek kırmızı takipsiz artık `test/_visual_starfield_capture_test.dart`.
+- **Metin üretimi turu 2 (build YOK):** 100 metin — Kahve Giriş (749–768), Niyet (179–198), Durugörü Yarın (20–39),
+  Faloya (112–131), Durugörü Bugün (93–112). 30 örnek + ÇEŞİTLİLİK kuralı (moda-mod kalıp yasak). DeepSeek'in kalıplı
+  Yarın metinleri DeepThink ile sıfırdan yazdırıldı; Durugörü Bugün ilk kez çalışıyor (profil başına 8–9 metin).
+  Yeni denetim betiği `scripts/metin_kalip_tara.js`. Ayrıntı ve dersler: `docs/metin_uretim_log.md`.
+- **Koşul değeri hatası düzeltildi:** tur 1'de `"yasmax": 25` sayı yazılmıştı → Kahve/Durugörü filtresi TypeError
+  verirdi (270'te yayında değildi). Veri metne çevrildi; 11 ekranda okuma tip bağımsız (`fortune_service`, durugoru,
+  acigercekler, dertortagi, iching, japonfali, kadercarki, kaderkitabi, biyoritim, olumlama, niyet); koruma testi
+  `test/kosul_deger_tipi_test.dart` (boş/eksik koşul ve sayı olmayan yaş da yakalanır). Codex incelemesi yapıldı.
+- Testler: 101 geçiyor (`flutter test`); tek kırmızı takipsiz artık `test/_visual_starfield_capture_test.dart`.
 - Görsel doğrulama: `build/visual_check/yeni_fallar_capture_test.dart --dart-define=CAP_PHASE=yf` (gitignored).
 
 ## Yarım kalan
@@ -44,9 +52,13 @@
 - Chrome eklentisi 10 MB dosya sınırı → AAB parçalanıp sayfada Blob ile birleştirilerek Play'e yüklenir.
 - JS `String.replace` betiklerinde `$'` / `$&` değiştirme kalıbı metni bozar → split/join ya da işlev kullan.
 - `dusuk.cmd flutter.bat ...` arka planda asılı kalır → `dusuk.cmd cmd /c flutter.bat ... < /dev/null`.
+- DeepSeek'e taslak gösterip "kalıptan kurtar" demek işe yaramadı (iki tur, taslağa yapıştı); çapraz seçim sohbetinde
+  revizyon istemek karşı modelin metinlerini kopyalattı → yeni sohbet + DeepThink + taslaksız yazım.
 
 ## Sıradaki adım
 - Anıl'ın geri bildirimi → düzelt. Bir sonraki build `10.8.11+273`, yalnız "test çık" ile.
+- "Bir tur daha" denirse: `docs/metin_uretim_log.md` → "Sıradaki tur adayları" (Kahve Uğurlama, Kahve Bağlama,
+  Japon, Kader Kitabı, Kâhinler) + `magnus-metin-uretimi` skill'i.
 - Güvenlik (Anıl onayı gerekli): repo herkese açık; git geçmişinde eski kişisel veri ve CLAUDE.md'de imza
   şifreleri var → geçmiş temizliği + anahtarları döndürme önerildi. Uygulamadaki Anthropic anahtarı istemcide
   gömülü → sunucu/proxy önerildi.

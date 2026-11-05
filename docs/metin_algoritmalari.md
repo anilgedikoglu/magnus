@@ -90,7 +90,7 @@ aralık alt anahtarı, ~50/aralık, 80-144 kr) → b4 çakra(59) → b5 Çin tak
 ## 13. I-Ching (37, ~2510 kr) / Japon Falı (27, ~2724 kr, markdown başlıklı Omikuji) — gelen kutusuna; no-repeat.
 
 ## 14. Durugörü — 3 soru (M1, değişken adı küçültülür)
-- Bugün `durugoru_bno.json.durugoru_bno` 92 — **BOZUK**: hepsinde saatmin/saatmax → havuz boş. Yeni Bugün metnine saat koşulu KOYMA.
+- Bugün `durugoru_bno.json.durugoru_bno` 112 — eski 92 metnin hepsi saatmin/saatmax (eşleşmez); **tur 2 ile 93–112 saat koşulsuz eklendi → havuz profil başına 8–9 metin**. Yeni Bugün metnine saat koşulu KOYMA.
 - Yarın `durugoru_yno.json.durugoru_yno` 19 (~867 kr).
 - Gelecek `durugoru_gno.json.durugoru_gno` 46 (~517 kr): "Geleceğine odaklandığımda, seni {{ay_5}} ayında … görüyorum {{isim}}".
 Üslup: Magnus somut sahneler "görür", bazen "Magnuskop".
@@ -114,9 +114,10 @@ aralık alt anahtarı, ~50/aralık, 80-144 kr) → b4 çakra(59) → b5 Çin tak
 
 ## 22. Bilinen hatalar (metin yazarken/etiketlerken dikkat)
 1. `cinsiyet=kadın` (ı) ve `lgbt` hiç eşleşmez → `kadin` yaz.
-2. Durugörü "Bugün" havuzu boş (saatmin/saatmax).
+2. Durugörü "Bugün": eski 92 metin saat koşulu yüzünden hâlâ görünmez (tur 2 ile 20 çalışan metin var).
 3. Ters tarot kartları başka kartın metnini alır (`kart:"TersX"`).
 4. Faloya koşullu metni göstermez; Kader Çarkı koşulları yok sayar.
 5. Maganda cevabı soruyu dikkate almaz.
 6. Değişken adı yazımı eşleştiriciye göre değişir (tablo §1).
 7. `{{yil_+N}}` ve boşluklu `{{sayi, a, b}}` boş basılır.
+8. `kosullar[].deger` METİN olmalı ("25"); sayı yazılırsa eski kod TypeError verirdi — 2026-11-05 kod tip bağımsız yapıldı, `test/kosul_deger_tipi_test.dart` korur (Yana hariç).

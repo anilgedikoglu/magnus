@@ -283,7 +283,8 @@ class _BiyoritimScreenState extends ConsumerState<BiyoritimScreen>
         metin: m['metin'] as String,
         metinEn: (m['metin_en'] as String?) ?? '',
         kosullar: (m['kosullar'] as List)
-            .map((k) => Map<String, String>.from(k as Map))
+            // değerler sayı da olabilir → metne çevir, TypeError yok
+            .map((k) => (k as Map).map((a, b) => MapEntry('$a', '${b ?? ''}')))
             .toList(),
       );
     }).toList();

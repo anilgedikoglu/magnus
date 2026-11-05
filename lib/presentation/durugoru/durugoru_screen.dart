@@ -90,8 +90,8 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
     final Map<String, List<String>> groups = {};
     for (final k in kosullar) {
       final m  = k as Map;
-      final dg = (m['degisken'] as String? ?? '').toLowerCase();
-      final dg2 = m['deger'] as String? ?? '';
+      final dg = '${m['degisken'] ?? ''}'.toLowerCase();
+      final dg2 = '${m['deger'] ?? ''}'; // sayı da gelebilir (yasmax: 25)
       groups.putIfAbsent(dg, () => []).add(dg2);
     }
 

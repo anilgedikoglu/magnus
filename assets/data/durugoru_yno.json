@@ -153,6 +153,232 @@
         }
       ],
       "metin_en": "You've got a few things you wanna do tomorrow in your head, {{isim}}, I know. When you first open your eyes, these plans will be on your mind. You'll get out of bed without lingering and without overthinking. MagnuScope is picking up on some stress signals coming from tomorrow that I can't quite figure out the reason for. I reckon around noon, you'll start feeling some pressure related to your responsibilities. And after {{sayi,13,15}}, your pulse will become more in sync and in harmony with the universe. Some information you'll acquire will expand your heart and ease your mind. Even though tomorrow is Wednesday and \"hump day,\" by the evening, you'll have almost 3/4 of your week's work done. Around {{sayi,19,21}}, you may have a somewhat lengthy chat with someone born in or raised in at the same city with you. From them, you'll receive some good news about someone you haven't seen for {{kelime,years | months | some time}} and whom you love dearly. And when you crawl into bed and close your eyes, \"Thursday\" will come at you incredibly fast, {{isim}}."
+    },
+    {
+      "id": 20,
+      "metin": "{{isim}}, yarının görüntüsünde önce bir aynanın önünde durduğunu görüyorum. Hazırlanırken normalde tercih ettiğin bir aksesuarı son anda değiştireceksin. İlginçtir, günün ilk güzel gelişmesi de bu küçük değişiklikten sonra yaşanacak. Öğleye doğru, bir kadın senden daha önce konuştuğunuz bir konudaki fikrini isteyecek. Özellikle alışveriş, aile veya kişisel bir kararla ilgili söylediklerin onun işine yarayacak. Saat {{sayi,14,17}} civarında açık renkli bir çantanın ya da paketin görüntüsü beliriyor. İçinden çıkan bir şeyin beklediğinden farklı olduğunu fark edeceksin; fakat bu farklılık hoşuna gidebilir. Akşam ise telefonunda eski bir fotoğrafa rastlayıp o günkü halinle bugünkü halini karşılaştıracağını hissediyorum. Sana küçük bir sır vereyim: Yarın kendinde fark edeceğin değişim, başkalarının sana söylediklerinden daha kıymetli olacak. Kendine ayırdığın zamanı erteleme.",
+      "metin_en": "{{isim}}, in my vision of tomorrow, I first see you standing in front of a mirror. As you get ready, you'll change an accessory you would normally choose at the very last moment. Interestingly, the day's first pleasant surprise will come right after this small change. Toward noon, a woman will ask your opinion on something you've discussed before. What you say, especially about shopping, family, or a personal decision, will be helpful to her. Around {{sayi,14,17}}, an image of a light-colored bag or package appears. You'll notice that something inside is different from what you expected, but you may actually like the difference. In the evening, I sense you'll come across an old photo on your phone and compare who you were that day with who you are today. Let me tell you a little secret: The change you notice in yourself tomorrow will be worth more than anything others say about you. Don't put off taking time for yourself.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "metin": "Bir sayı dikkatimi çekiyor {{isim}}: {{sayi,3,9}}. Yarın bu sayıyı bir sıra numarasında, fiyat etiketinde veya ekranın köşesinde görebilirsin. Sabah normalde önemsemeden geçtiğin bir çekmeceyi, rafı ya da dosyayı açman gerekecek. Aradığın şey ilk baktığın yerde olmayacak; fakat başka bir konuyla ilgili unuttuğun küçük bir ayrıntıya rastlayacaksın. Öğleden sonra ödeme veya siparişle bağlantılı bir işlemi kontrol ederken iki farklı tutar gözüne çarpabilir. Aradaki farkı anlamak için yapacağın kısa bir inceleme, gereksiz bir masrafı önleyecek. Akşama doğru dışarıdan gelen yemek kokusuyla eski bir mekânı hatırladığını görüyorum. Belki de uzun zamandır aklında olmayan bir yere yeniden gitmek isteyeceksin. Yarın sana kazandıracak şey hız değil, ikinci kez bakma alışkanlığın olacak.",
+      "metin_en": "A number catches my attention, {{isim}}: {{sayi,3,9}}. Tomorrow, you may spot this number on a queue ticket, a price tag, or in the corner of a screen. In the morning, you'll need to open a drawer, shelf, or file you would normally pass by without a second thought. What you're looking for won't be in the first place you check, but you'll stumble upon a small detail you'd forgotten about something else. In the afternoon, while reviewing a payment or order, you may notice two different amounts. A quick check to understand the difference will save you an unnecessary expense. Toward evening, I see the smell of food drifting in from outside reminding you of a place you used to visit. You may even feel like returning somewhere that hasn't crossed your mind in a long time. Tomorrow, what works in your favor won't be speed, but your habit of taking a second look.",
+      "kosullar": []
+    },
+    {
+      "id": 22,
+      "metin": "Magnuskop yarın için bana beyaz bir kâğıt, yan yana yazılmış iki isim ve üzeri çizilmiş bir tarih gösteriyor {{isim}}. Nişanlınla birlikte düşündüğünüz bir organizasyonda küçük bir değişiklik gündeme gelebilir. Sabah aile büyüklerinden biri, daha önce kesinleştiğini sandığınız bir ayrıntı hakkında farklı bir öneri sunacak. Öğleden sonra bir fiyat, rezervasyon veya davetli sayısı üzerinde yeniden hesap yapmanız gerekebilir. Burada {{sayi,2,5}} rakamının önemli olduğunu hissediyorum. Akşama doğru nişanlınla baş başa konuştuğunuzda, aslında ikinizin de başkalarını memnun etmek için gereğinden fazla çabaladığını fark edeceksiniz. Bu farkındalık, aranızdaki yakınlığı artıracak. Yarın sana uzatılan önerilere o an \"evet\" deme; bir gece beklettiğin cevap, ertesi gün daha güçlü çıkacak. Bazı kararların güzelliği, yalnızca ikinizin ortak isteğinden doğar.",
+      "metin_en": "The MagnusScope shows me a white sheet of paper, two names written side by side, and a crossed-out date for tomorrow, {{isim}}. A small change may come up in an event you've been planning with your fiancé. In the morning, an older family member will offer a different suggestion about a detail you thought was already settled. In the afternoon, you may need to recalculate a price, reservation, or guest count. I sense that the number {{sayi,2,5}} will be important here. Toward evening, when you and your fiancé talk privately, you'll realize that you've both been trying a little too hard to please everyone else. This realization will bring you closer together. Don't say 'yes' on the spot to the suggestions handed to you tomorrow; an answer you let rest overnight will come out stronger the next day. Some decisions are beautiful precisely because they come from what the two of you truly want.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "metin": "{{isim}}, yarın cebinden çıkarıp yeniden yerine koyduğun metal bir nesne görüyorum. Anahtarlık, bozuk para ya da küçük bir aparat olabilir. Sabah günlük işlerini hallederken bir eşyanın tamir edilmesi veya değiştirilmesi gerektiğini fark edeceksin. Öğle civarında teknik konulardan anlayan bir tanıdığın, düşündüğünden çok daha pratik bir çözüm önerecek. Özellikle yeni bir ürün almak yerine mevcut olanı değerlendirme fikri öne çıkıyor. Saat {{sayi,15,18}} arasında bir erkekle yapacağın kısa görüşmede daha önce konuşulmuş bir buluşmanın yeniden gündeme geldiğini hissediyorum. Akşam ise ekran başında araştırdığın iki seçenek arasında kalabilirsin. İlginç olan şu: İlk başta daha gösterişli bulduğun seçenekten vazgeçme ihtimalin yüksek. Yarın kararını verecek şey başkalarının övgüsü değil, gerçekten neye ihtiyacın olduğunu anlaman olacak.",
+      "metin_en": "{{isim}}, I see a metal object that you'll take out of your pocket tomorrow and then put back. It could be a keychain, a coin, or a small gadget. In the morning, while taking care of your daily errands, you'll realize that something needs to be repaired or replaced. Around noon, someone you know who understands technical matters will suggest a solution far more practical than you expected. The idea of making use of what you already have instead of buying something new stands out. Between {{sayi,15,18}}, I sense that a brief conversation with a man will bring up a get-together that was discussed before. In the evening, you may find yourself torn between two options you've been researching online. Here's the interesting part: You're quite likely to abandon the option that initially seemed more impressive. Tomorrow, your decision won't be guided by other people's praise, but by understanding what you genuinely need.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "metin": "Yarın kulağına bir kelime iki kez gelecek {{isim}}. Birincisini sabah duyacak, üzerinde durmayacaksın. İkincisinde ise aynı kelimenin bambaşka bir konuşmada kullanılması dikkatini çekecek. Magnuskop bana bir cam kapı, üzeri yazılı küçük bir tabela ve bekleyen birkaç insan gösteriyor. Öğleden önce gideceğin bir yerde sıra veya işlem düzeni değişmiş olabilir. Bu yüzden birkaç dakika oyalanacaksın. Fakat beklerken göreceğin bir ilan, duyuru ya da broşür, uzun zamandır merak ettiğin bir konuda yeni bir seçenek sunacak. Öğleden sonra bu bilgiyi bir yakınına aktarman gerekebilir. Akşam saatlerinde ise ertesi gün için hazırladığın bir planın aslında daha basit yapılabileceğini anlayacaksın. Her tesadüfe büyük anlamlar yükleme, ama yarın gözünün önündeki küçük yazıları da atlama. İşine yarayan bilgi, tam orada saklı olabilir.",
+      "metin_en": "Tomorrow, you'll hear the same word twice, {{isim}}. You'll hear it first in the morning and think nothing of it. The second time, you'll notice that the very same word is being used in a completely different conversation. The MagnusScope shows me a glass door, a small sign with writing on it, and several people waiting. At a place you visit before noon, the queue or the way things are handled may have changed. This will hold you up for a few minutes. But while you're waiting, an advertisement, notice, or brochure you spot will reveal a new option related to something you've been curious about for a long time. In the afternoon, you may need to pass this information along to someone close to you. In the evening, you'll realize that a plan you've prepared for the following day could actually be carried out much more simply. Don't read too much into every coincidence, but don't overlook the small print right in front of you tomorrow, either. The information you need may be hiding right there.",
+      "kosullar": []
+    },
+    {
+      "id": 25,
+      "metin": "Yarın sabah eşinin senden istediği küçük bir işi hatırlayacağını görüyorum {{isim}}. Banyoda damlayan musluk, aylardır \"hafta sonu bakarım\" dediğin o iş, yarın sırası gelen iş olacak. Başlangıçta birkaç dakikalık mesele gibi görünen bu uğraş, öğleye doğru yeni bir ayrıntı çıkarabilir. Hırdavatçının söylediği fiyatı eşinle yeniden değerlendireceksiniz. Saat {{sayi,17,19}} arasında eve dönüş planında ufak bir değişiklik yaşanabilir. Yanında getireceğin sıradan bir şey, eşinin beklediğinden daha çok hoşuna gidecek. Akşam ise eşinin gündüz yaşadığı bir meseleyi sana anlatmak istediğini hissediyorum. Burada hemen çözüm üretmeye çalışırsan konuşmanın esas noktasını kaçırabilirsin. Bazen insanın istediği bir tamir ustası değil, dikkatle dinleyen bir eş oluyor! Yarın bunu fark etmen aranızdaki havayı güzelleştirebilir.",
+      "metin_en": "I see you remembering a small favor your spouse asked of you tomorrow morning, {{isim}}. It's the dripping bathroom faucet, the job you've been promising to 'look at this weekend' for months. What initially seems like a matter of a few minutes may reveal another detail around noon. You and your spouse will reconsider the price the hardware store quotes you. Between {{sayi,17,19}}, there may be a slight change in your plans for returning home. Something ordinary you bring along will please your spouse more than expected. In the evening, I sense that your spouse will want to tell you about something that happened during the day. If you immediately try to solve the problem, you may miss the real point of the conversation. Sometimes what a person wants isn't a repairman, but a spouse who truly listens! Realizing this tomorrow could bring a lovely warmth to your relationship.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "metin": "{{isim}}, yarın uzun yıllar önce edindiğin bir alışkanlığın sana fayda sağladığını göreceksin. Sabah bir işi planlarken başkalarının gereksiz bulabileceği kadar ayrıntılı davranacaksın. Fakat öğleye doğru ortaya çıkan küçük bir değişiklik, bu hazırlığının neden önemli olduğunu gösterecek. Görüntümde eski tip bir ajanda, sararmış bir kart veya yıllardır saklanan bir telefon numarası var. Bunlardan biriyle bağlantılı bir bilgi yeniden gündeme gelebilir. Öğleden sonra senden yaşça küçük biri, geçmişte benzer bir durumu nasıl çözdüğünü soracak. Ona anlatacağın kısa bir deneyim, tahmin ettiğinden daha fazla işe yarayabilir. Akşam saatlerinde ise {{ay_1}} ayı için uzun süredir ertelediğin kişisel bir planı değerlendireceksin. Yarın geçmişe bağlı kalman değil, geçmişten öğrendiklerini bugüne taşıman öne çıkıyor. Kendine yeni bir başlangıç için geç kaldığını sakın söyleme.",
+      "metin_en": "{{isim}}, tomorrow you'll see how a habit you developed many years ago can work in your favor. In the morning, you'll plan something with a level of detail others might consider excessive. But a small change around noon will show exactly why that preparation mattered. In my vision, there's an old-fashioned planner, a yellowed card, or a phone number you've kept for years. Information connected to one of these may become relevant again. In the afternoon, someone younger than you will ask how you handled a similar situation in the past. A brief experience you share could prove more useful than you imagine. In the evening, you'll consider a personal plan for {{ay_1}} that you've been putting off for a long time. Tomorrow isn't about clinging to the past, but bringing what you've learned from it into the present. Never tell yourself it's too late for a fresh start.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "metin": "Yarın evinde alışılmış düzenin dışına çıkan bir hareketlilik olacak gibi görünüyor {{isim}}. Sabah mutfakta eksildiğini fark ettiğin bir malzeme, günün alışveriş planını değiştirebilir. Tam başka bir hazırlığa başlamışken yakından tanıdığın bir kadın, elindeki fazla bir şeyi sana vermeyi teklif edecek. Bu küçük alışveriş sayesinde yapmayı düşündüğün işi daha az masrafla tamamlayabilirsin. Öğle saatlerinde evin bir köşesinde uzun zamandır yerini değiştirmek istediğin eşyayla ilgileneceksin. Altından veya arkasından çıkan küçük bir nesne sana eski bir günü hatırlatacak. Akşama doğru haneye gelen biri, hazırladığın bir şeyi özellikle beğenecek ve nasıl yaptığını soracak. Magnuskop'ta evin içinde yayılan taze pişmiş bir yiyecek kokusu hissediyorum. Yalnız bir ricam var: Yarın herkesin işini tamamlamaya çalışırken kendi keyfine ayırdığın vakti unutma.",
+      "metin_en": "It looks as though tomorrow will bring an unusual bustle to your home, {{isim}}. In the morning, noticing that you're running low on an ingredient in the kitchen may change your shopping plans for the day. Just as you're about to start preparing something else, a woman you know well will offer you something she has to spare. This little exchange may help you finish what you had in mind at a lower cost. Around noon, you'll turn your attention to something in the house you've wanted to move for a long time. A small object found underneath or behind it will remind you of a day long gone. Toward evening, someone visiting your home will particularly enjoy something you've prepared and ask how you made it. In the MagnusScope, I sense the aroma of freshly cooked food spreading through the house. I have just one request: Tomorrow, while trying to take care of everyone else's needs, don't forget to make time for your own enjoyment.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "metin": "{{isim}}, yarın bir arkadaşının seni alışılmış ortamının dışına çıkarmaya çalıştığını görüyorum. Sabah erkek arkadaşlarından biri, birlikte gidilebilecek bir yer veya yapılabilecek bir etkinlik hakkında fikrini soracak. İlk başta pek istekli görünmeyebilirsin. Öğleden sonra planın ayrıntıları belli oldukça ilgini çeken başka bir kişinin de orada bulunabileceğini öğreneceksin. Bu kişinin adında {{harf}} harfi dikkatimi çekiyor. Akşamüstü giyim, saç veya görünüşünle ilgili küçük bir değişiklik yapma düşüncesi aklından geçebilir. Asıl dikkatimi çeken ise akşamki bir sohbet: Karşındaki kişi senin hiç beklemediğin bir konuda bilgili çıkacak ve aranızdaki konuşma uzayabilecek. Yarın birilerini etkilemek için farklı davranmana gerek yok. Kendini olduğundan başka göstermediğinde çok daha doğal bir yakınlık kurulabilir.",
+      "metin_en": "{{isim}}, I see a friend trying to draw you out of your usual surroundings tomorrow. In the morning, one of your male friends will ask what you think about a place you could visit together or an activity you could do. You may not seem particularly enthusiastic at first. In the afternoon, as the details of the plan become clearer, you'll learn that someone else who catches your interest might be there too. The letter {{harf}} stands out to me in this person's name. Toward evening, you may consider making a small change to your clothes, hair, or appearance. But what really catches my attention is a conversation later that evening: Someone you're talking to will turn out to know a surprising amount about a subject you never expected, and your conversation may go on longer than planned. Tomorrow, there's no need to act differently to impress anyone. When you don't pretend to be someone you're not, a much more natural connection can develop.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "metin": "Magnuskop'ta yarın için bir evrakın köşesine düşülmüş kısa bir not beliriyor {{isim}}. Sabah kurumunda daha önce tamamlandığı düşünülen bir işlem, eksik bir onay veya güncellenmiş bir bilgi nedeniyle yeniden önüne gelebilir. İlk bakışta gereksiz bir tekrar gibi görünecek. Öğleye doğru başka bir birimden görevli biri, konunun aslında hangi aşamada beklediğini açıklayacak. Özellikle tarih veya kayıt numarasıyla ilgili küçük bir ayrıntı önemli olabilir. Öğleden sonra senden yardım isteyen bir çalışma arkadaşın, geçmişte yaptığın benzer bir işlemi hatırlatacak. Tecrüben sayesinde ona pratik bir yol gösterebilirsin. Mesai bitimine yakın duyacağın bir duyuru, önümüzdeki haftanın görev dağılımını etkileyebilir. Yarın aceleyle söz vermekten kaçın; önce yazılı bilgiyi kontrol et. Akşam işten uzaklaştığında zihninin de hafiflediğini hissedeceksin.",
+      "metin_en": "In the MagnusScope, a short note written in the corner of a document appears for tomorrow, {{isim}}. In the morning, a procedure at your workplace that was thought to be completed may come back to your desk because of a missing approval or updated information. At first, it will seem like a pointless repetition. Around noon, someone from another department will explain exactly where the process has been held up. A small detail involving a date or reference number may be especially important. In the afternoon, a coworker asking for your help will remind you of a similar procedure you handled in the past. Your experience will allow you to show them a practical way forward. An announcement you hear near the end of the workday may affect next week's assignment schedule. Avoid making promises in haste tomorrow; check the written information first. Once you leave work behind in the evening, you'll feel your mind growing lighter too.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "metin": "Kapını çalan kişi, iki kat aşağıda oturan ve adını bir türlü öğrenemediğin kadın olacak. Elinde iki fincanla gelecek; 'Çay demledim, tek başıma içmek istemedim' diyecek. Mutfağında otururken, onun aslında ne kadar çok şey bildiğini fark edeceksin: hangi gün evde olduğunu, hangi çiçeği sevdiğini, sabahları erken kalktığını. Konuşma ilerledikçe, yıllardır aynı binada yaşayıp birbirinizi tanımadığınız için için için utanacaksın. Kalkarken sana bir saksı fesleğen bırakacak, kendi eliyle toprağa diktiğini söyleyecek. Kapı kapandıktan sonra o saksıyı pencereye koyup uzun uzun bakacaksın {{isim}}. Yarının en büyük hediyesi, hiç beklemediğin bir komşuluk olacak; belki de yıllardır eksik olan o ses.",
+      "metin_en": "The person knocking on your door will be the woman who lives two floors below you, whose name you've never quite managed to learn. She'll arrive carrying two cups and say, 'I made some tea and didn't feel like drinking it alone.' As you sit together in your kitchen, you'll realize just how much she knows: which days you're home, what flowers you like, and that you get up early in the mornings. As the conversation goes on, you'll feel a quiet sense of embarrassment that you've lived in the same building for years without really knowing each other. Before leaving, she'll give you a pot of basil and tell you she planted it herself. After the door closes, you'll place that pot by the window and gaze at it for a long time, {{isim}}. Tomorrow's greatest gift will be an unexpected neighborly connection, perhaps the very voice that's been missing from your life for years.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "metin": "Davetiyelerin baskıdan beklediğinden üç gün önce çıkacağını öğreneceksin. Matbaanın önünde, kolileri taşıyan çırak sana ilk kutuyu açtırırken, kâğıdın kokusu burnuna gelecek ve bir an için nefesin duracak. Kutunun içinden çıkan ilk davetiye, yanlış yazılmış bir isimle gelecek — nişanlının amcasının adı iki harf eksik. Matbaacı hemen düzeltebileceğini söyleyecek, sen ise o hatalı davetiyeyi ayırıp çantana koyacaksın. Eve dönerken nişanlını arayıp durumu anlatacak, onun gülüşünü duyunca rahatlayacaksın. O tek davetiye, yıllar sonra hatırlayacağın bir anı olarak kalacak {{isim}}. Her şeyin kusursuz olması gerekmiyor; bazen en çok o küçük hatalar hatırlanıyor.",
+      "metin_en": "You'll learn that your wedding invitations will come back from the printer three days earlier than expected. Outside the print shop, as an apprentice carrying the boxes lets you open the first one, the scent of fresh paper will reach your nose and, for a moment, take your breath away. The first invitation you pull out will have a name printed incorrectly: your fiancé's uncle's name is missing two letters. The printer will immediately offer to correct it, but you'll set that misprinted invitation aside and slip it into your bag. On your way home, you'll call your fiancé to explain what happened, and hearing their laughter will put you at ease. That single invitation will become a memory you'll look back on years from now, {{isim}}. Everything doesn't have to be perfect. Sometimes it's those little mistakes we remember most fondly.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "metin": "Müşteriyle imzalanacak sözleşmenin son sayfası, kargo kuryesi tarafından getirilecek. Kurye, paketi uzatırken 'Islak mendille silin, dün yağmurdaydı' diyecek. Zarfı açtığında, karşı tarafın avukatının sayfa kenarına kurşun kalemle düştüğü küçük bir notu göreceksin: 'Madde 4'te hemfikiriz.' Bu, haftalardır süren pazarlığın bittiği anlamına gelecek. Notu okurken elin titremeyecek, aksine sakinleşeceksin. Masana dönüp o sayfayı tarayıcıya koyacak, üzerini kapatacaksın. Sonra çekmecenden hiç kullanmadığın güzel kalemi çıkarıp imza için hazırlayacaksın {{isim}}. O kalemin mürekkebi, bugüne kadar yazdığın hiçbir şeye benzemeyecek; bunu imzayı atarken hissedeceksin.",
+      "metin_en": "The final page of the contract you're about to sign with a client will arrive by courier. As the courier hands you the package, he'll say, 'Wipe it down with a wet wipe. It got caught in the rain yesterday.' When you open the envelope, you'll notice a small pencil note written in the margin by the other party's lawyer: 'We agree on Clause 4.' This will mean that the negotiations you've been going through for weeks are finally over. Your hand won't tremble as you read the note. On the contrary, you'll feel a sense of calm. You'll return to your desk, place the page on the scanner, and close the lid. Then you'll take out that beautiful pen you've never used from your drawer and prepare it for the signature, {{isim}}. The ink from that pen will feel unlike anything you've ever written before. You'll sense it the moment you sign.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "metin": "Yeni taşındığın sokağın köşesindeki nalburun önünde, vitrindeki tabelayı okuyorsun: 'Anahtar kopyalama.' İçeri girdiğinde, tezgâhın arkasındaki yaşlı adam sana bakıp 'Yeni misin sen?' diyecek. Bir hafta önce taşındığını söylediğinde, elindeki anahtarı alıp makineye götürecek ve kopyalarken bir şeyler anlatacak: hangi fırın iyi, hangi kapıcı işini bilir, hangi saatte sokak sessizleşir. İki anahtar uzatacak, biri yedek. Ödeme yapmak istediğinde elini kaldırıp 'İlk kopya benden' diyecek. Dükkândan çıkarken avucundaki soğuk metalin ağırlığını hissedeceksin {{isim}}. Bu sokak, artık senin sokağın olacak; bunu o iki anahtarı cebine koyarken anlayacaksın.",
+      "metin_en": "You're standing outside the hardware store on the corner of the street you've recently moved to, reading the sign in the window: 'Key Cutting.' When you step inside, the elderly man behind the counter will look at you and ask, 'Are you new around here?' When you tell him you moved in a week ago, he'll take your key over to the machine and start sharing little bits of local knowledge as he makes a copy: which bakery is best, which building caretaker knows what he's doing, and what time the street grows quiet. He'll hand you two keys, one of them a spare. When you try to pay, he'll raise his hand and say, 'The first copy's on me.' As you leave the shop, you'll feel the weight of the cold metal in your palm, {{isim}}. This street will finally feel like your own. You'll realize it as you slip those two keys into your pocket.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "metin": "Dergiden gelen e-postayı, ofis arkadaşın kahve alırken açacaksın. Başlıkta 'Karar' yazacak ve ilk cümleyi okumadan önce ekranı kapatmak isteyeceksin. Açtığında, iki hakemin de olumlu rapor verdiğini, sadece küçük düzeltmeler istendiğini göreceksin. Sandalyene yayılıp tavana bakacaksın, sonra gülmeye başlayacaksın — sessizce, kimse duymasın diye. Arkadaşın elinde iki kahveyle döndüğünde yüzünden anlayacak ve hiçbir şey sormadan fincanı önüne bırakacak. Düzeltmeleri o akşam yapmaya karar vereceksin, çünkü beklemek istemiyorsun {{isim}}. Yıllardır sürünen o cümle, sonunda yerine oturacak ve masanın üstündeki kâğıtlar ilk kez hafif gelecek.",
+      "metin_en": "You'll open the email from the journal while your colleague is getting coffee. The subject line will read 'Decision,' and before reading the first sentence, you'll feel an urge to close the screen. When you open it, you'll see that both reviewers have submitted positive reports and only minor revisions are required. You'll lean back in your chair and stare at the ceiling, then begin to laugh, quietly, so nobody can hear. When your colleague returns carrying two coffees, they'll understand from the look on your face and set your cup down without asking a single question. You'll decide to make the revisions that very evening because you don't want to wait, {{isim}}. That sentence you've been struggling with for years will finally fall into place, and for the first time, the papers on your desk will feel light.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "metin": "Eşin, akşam yemeğinde telefonunu masaya bırakıp 'Yarın için bir planım var' diyecek. Sen daha soru sormadan, çekmeceden iki bilet çıkaracak — bir sergiye, senin aylardır gitmek istediğini söylediğin sergiye. Biletlerin tarihine bakacaksın: tam da senin izin günün. Bunu ne zaman ayarladığını soracaksın, o ise omuz silkip tabağına dönecek. Yemekten sonra çayı demlerken, mutfakta yanına gelecek ve sessizce arkandan sarılacak. Bu sessizlik, yıllardır ilk kez bu kadar yerinde olacak {{isim}}. Plan yapmayı bu kadar seven birinin, senin için plan yapması, sandığından çok daha fazla şey anlatacak.",
+      "metin_en": "At dinner, your spouse will put their phone down on the table and say, 'I have a plan for tomorrow.' Before you can ask any questions, they'll take two tickets out of a drawer, tickets to an exhibition you've been saying for months that you want to visit. You'll check the date on the tickets: it's exactly your day off. You'll ask when they arranged it, but they'll simply shrug and turn back to their plate. After dinner, while you're brewing tea, they'll come into the kitchen and quietly wrap their arms around you from behind. For the first time in years, that silence will feel perfectly right, {{isim}}. The fact that someone who loves making plans has made one especially for you will say far more than you realize.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "metin": "Çeyiz sandığını açtığında, en altta duran mendil bohçasının arasından annenin yüzüğü çıkacak. Yıllar önce kaybettiğini sandığın, sonra aramaktan vazgeçtiğin o ince altın halka. Elinde tuttuğunda parmağına tam oturmayacak, ama sıkışıp kalacak. Mendilin kenarına, annenin eliyle işlediği küçük bir çiçek motifi göreceksin — daha önce hiç fark etmediğin. Sandığın kapağını kapatmadan önce uzun bir süre öylece oturacaksın, dizlerinin üstünde mendil, avucunda yüzük. Sonra yüzüğü parmağından çıkarıp boynundaki zincire takacaksın {{isim}}. Annenin çeyizinle birlikte sana verdiği bu emanet, artık sandıkta değil, boynunda duracak.",
+      "metin_en": "When you open your hope chest, you'll find your mother's ring tucked inside a bundle of handkerchiefs at the very bottom. That thin gold band you thought you'd lost years ago and eventually stopped looking for. When you hold it, it won't fit your finger quite right, but it will get stuck. Along the edge of a handkerchief, you'll notice a tiny flower embroidered by your mother's own hand, a detail you've never seen before. Before closing the chest, you'll sit there for a long while, the handkerchief resting on your knees and the ring in your palm. Then you'll carefully remove the ring from your finger and slip it onto the chain around your neck, {{isim}}. This precious keepsake your mother entrusted to you with your bridal belongings will no longer rest inside a chest. It will rest close to your heart.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "metin": "Halı saha maçından önce, soyunma odasında eski bir arkadaşın yanına oturacak. Yıllardır görüşmediğiniz hâlde, sanki dün ayrılmışsınız gibi konuşmaya başlayacaksınız. Sana bir borcunu hatırlatacak; sen unutmuşsun, o unutmamış, hatta miktarını bile söyleyecek. Maç sırasında attığın golün ardından sana koşup sarılacak, sonra kulağına 'Bu, o borcun faizi' diye fısıldayacak. Duştan sonra birlikte çıkacaksınız, kapının önünde telefonunu isteyecek ve numaranı kaydedecek. Eve dönerken, yıllardır eksik olan bir şeyin yerine geldiğini hissedeceksin {{isim}}. Bu, bir borcun değil, bir dostluğun geri gelmesi olacak; ikisi arasındaki farkı yolda anlayacaksın.",
+      "metin_en": "Before a five-a-side football match, an old friend will sit down beside you in the changing room. Although you haven't seen each other in years, you'll start talking as though you only parted yesterday. He'll remind you of a debt you owe him. You've forgotten about it, but he hasn't. He'll even remember the exact amount. During the match, after you score a goal, he'll run over and hug you, then whisper in your ear, 'That's the interest on that debt.' After showering, you'll leave together. Outside the entrance, he'll ask for your phone and save your number. On your way home, you'll feel as though something that's been missing for years has finally returned, {{isim}}. It won't be about the return of a debt, but the return of a friendship. You'll understand the difference on the way.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "metin": "Kapına gelen kargo, sipariş etmediğin bir kitap olacak. Gönderen adı boş, içinde sadece bir kart: 'Bunu okuman gerektiğini düşündüm.' Kartın arkasında, tanıdık bir el yazısı olacak — bir arkadaşının, yıllar önceki. Kitabı karıştırırken, içine bir sayfa yerleştirilmiş olduğunu göreceksin: senin için işaretlenmiş bir bölüm, kenarı kıvrılmış. O bölümü okumak için oturacak, bir çay koyacaksın. Okurken, o arkadaşının neden bunu seçtiğini anlamaya başlayacaksın; satırlar sanki senin için yazılmış gibi gelecek {{isim}}. Bu, bir kitaptan çok, birinin seni hâlâ hatırlaması olacak ve sayfayı çevirirken bunu hissedeceksin.",
+      "metin_en": "A package delivered to your door will contain a book you never ordered. The sender's name will be blank, and inside there'll be just one card: 'I thought you should read this.' On the back, you'll recognize familiar handwriting, belonging to a friend from years ago. As you flip through the book, you'll discover a page tucked inside, marking a particular passage chosen especially for you, its corner folded over. You'll sit down and pour yourself some tea before reading it. As you read, you'll begin to understand why your friend chose that passage. The lines will feel as though they were written just for you, {{isim}}. This will be more than a book. It will be a reminder that someone still remembers you, and you'll feel it as you turn the page.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "metin": "Kurum içi yazışmada, senin adını taşıyan bir üst yazı, sistemde onaylanmış olarak görünecek. Gönderen, iki birim ötedeki memur — yüzünü bile tam hatırlamadığın, ama her bayram kutlama mesajı atan biri. Yazının altına eklediği notta, 'Sizin için elimden geleni yaptım' yazacak. Bu not, resmî bir evrakın içinde fazla sıcak duracak, hatta bir an gereksiz gibi gelecek. Yazıyı yazdırıp dosyalayacak, sonra o memuru arayıp teşekkür edeceksin. Telefonda sesi utançla gülecek, 'İşimiz bu' diyecek ve hemen konuyu değiştirecek. O an anlayacaksın {{isim}}; bu kurumda kimsenin görmediği küçük iyilikler dönüyor ve sen de artık onlardan birini biliyorsun.",
+      "metin_en": "In your organization's internal correspondence system, an official cover letter bearing your name will appear as approved. The sender will be a civil servant from a department two units away, someone whose face you can barely remember but who sends you a greeting every holiday. In a note attached beneath the letter, they'll have written, 'I did everything I could for you.' The note will seem unusually warm for an official document, perhaps even unnecessary for a moment. You'll print the letter and file it away, then call that employee to thank them. They'll give an embarrassed little laugh over the phone, say, 'It's our job,' and quickly change the subject. That's when you'll understand, {{isim}}: Small acts of kindness are quietly happening throughout this institution, unseen by almost everyone. And now you know about one of them.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
     }
   ]
 }

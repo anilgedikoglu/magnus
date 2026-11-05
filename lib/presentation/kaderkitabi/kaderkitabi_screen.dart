@@ -144,7 +144,8 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen>
         metin: m['metin'] as String,
         metinEn: (m['metin_en'] as String?) ?? '',
         kosullar: (m['kosullar'] as List)
-            .map((k) => Map<String, String>.from(k as Map))
+            // değerler sayı da olabilir (yasmax: 25) → metne çevir, TypeError yok
+            .map((k) => (k as Map).map((a, b) => MapEntry('$a', '${b ?? ''}')))
             .toList(),
       );
     }).toList();

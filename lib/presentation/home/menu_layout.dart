@@ -42,6 +42,34 @@ const Set<String> kBigCapableImages = {
   'assets/images/evim/evim_menu.jpg',
 };
 
+/// Yüksek çözünürlüklü menü görselleri (Anıl, 2026-11-06: "hepsini yeniden ürettir, birebir"):
+/// kaynağı 768 px'ten küçük 19 görsel ChatGPT'de 1024 px'e büyütüldü + keskinleştirildi
+/// (yeniden çizim DEĞİL: kompozisyon/renk birebir; yapı 1.00, renk farkı <1). Her biri
+/// orijinaliyle sayısal denetlendi (build/visual_check/menu_hd). JPEG 90, toplam ~4 MB.
+/// Yalnız BÜYÜK kartta kullanılır (küçük kartta orijinal yeter; 27 kart × 1024² çözme
+/// belleği boşa gitmesin). Burada adı olan görsel büyük ikon olabilir.
+const Set<String> kMenuHdNames = {
+  'acigercekler', 'aytakvimi', 'biyoritim', 'dertortagi', 'durugoru', 'elfali',
+  'ichingikon', 'japonfali', 'kadercarkimenu', 'kehanet', 'motivasyon_yeni', 'numeroloji',
+  'olumlama', 'ozelfal', 'ozlusozler', 'ruyaozel', 'tarot', 'tefeulyeni', 'yuzfali',
+};
+
+String _base(String path) {
+  final f = path.split('/').last;
+  final dot = f.lastIndexOf('.');
+  return dot < 0 ? f : f.substring(0, dot);
+}
+
+/// BÜYÜK menü kartında gösterilecek görsel: HD sürümü varsa o, yoksa orijinal.
+String menuImageFor(String path) {
+  final b = _base(path);
+  return kMenuHdNames.contains(b) ? 'assets/images/menu_hd/$b.jpg' : path;
+}
+
+/// Büyük ikon olabilir mi (büyük kartta bulanıklaşmaz mı)?
+bool isBigCapable(String path) =>
+    kMenuHdNames.contains(_base(path)) || kBigCapableImages.contains(path);
+
 class MenuUsage {
   static const _key = 'menu_kullanim';
 
@@ -89,7 +117,7 @@ List<int> sessionBigPicks(List<String> ids, SharedPreferences? prefs, {Random? r
   final cached = _sessionBigs;
   if (cached != null) return cached;
   final rnd = random ?? Random();
-  final pool = [for (var i = 0; i < ids.length; i++) if (kBigCapableImages.contains(ids[i])) i];
+  final pool = [for (var i = 0; i < ids.length; i++) if (isBigCapable(ids[i])) i];
   if (pool.length < 3) {
     pool
       ..clear()

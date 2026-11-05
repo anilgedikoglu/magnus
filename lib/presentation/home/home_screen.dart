@@ -93,6 +93,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/physics.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -105,6 +106,7 @@ import '../../core/widgets/glass_tab_bar.dart';
 import '../../core/widgets/tab_swipe.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
+import 'home_header_layout.dart';
 import 'menu_layout.dart';
 
 /// Ana menünün (menu layer 1, ikonlar) düz arka plan rengi (Anıl'ın örneği: rgb 12,15,20).
@@ -113,8 +115,23 @@ const Color kHomeBackground = Color(0xFF0C0F14);
 /// Menu layer 2'nin (üstteki 3 sıra sohbet balonu) zemini (Anıl'ın örneği: rgb 21,21,21).
 const Color kHomeHeaderBackground = Color(0xFF151515);
 
-/// Menu layer 2'nin güvenli alan ALTINDAKİ yüksekliği: 3. balon sırasının hemen altı.
-const double kHomeHeaderHeight = 155;
+/// Menu layer 2 (Anıl, 2026-11-06): yüksekliği O AN görünen balon satırı kadar (en çok
+/// [kChatMaxRows]); satır eklenince ızgara (layer 1) yumuşakça aşağı iner, boşluk kalmaz.
+/// Nizami ölçüler: üst/alt iç boşluk, satır arası ve layer 2 ile ızgara arası hep 8.
+const double kChatPadTop = 8;
+const double kChatPadBottom = 8;
+const double kChatRowGap = 8;
+const double kHomeLayerGap = 8;
+
+/// Layer 2 en çok bu kadar satır gösterir; fazlası kendi içinde yukarı kayar.
+const int kChatMaxRows = 3;
+
+/// Satır yüksekliği ölçülene kadarki tahmin (avatar 38, tek satır balon ~40).
+const double _kChatRowEstimate = 40;
+
+/// Layer 2'nin güvenli alan altındaki yüksekliği: [rows] satır balon + iç boşluklar.
+double chatHeaderHeightFor(int rows, double rowH) =>
+    kChatPadTop + rows * rowH + (rows - 1) * kChatRowGap + kChatPadBottom;
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -123,10 +140,38 @@ class HomeScreen extends ConsumerStatefulWidget {
   ConsumerState<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends ConsumerState<HomeScreen> {
+class _HomeScreenState extends ConsumerState<HomeScreen>
+    with SingleTickerProviderStateMixin {
   // Tek ana menü (Anıl, 2026-11-05): 3 sütun × 9 satır, yukarıdan aşağı kaydırmalı.
   final ScrollController _gridScrollCtrl = ScrollController();
   final ScrollController _chatScrollCtrl = ScrollController();
+
+  // Layer 2'nin canlı yüksekliği (güvenli alan altı) = görünen satır sayısı kadar.
+  double _chatRowH = _kChatRowEstimate;
+  int _hdrRows = 1;
+  double _hdrTarget = chatHeaderHeightFor(1, _kChatRowEstimate);
+  late final AnimationController _hdrCtrl =
+      AnimationController.unbounded(vsync: this, value: _hdrTarget);
+
+  void _onChatRowHeight(double h) {
+    if (!mounted || (h - _chatRowH).abs() < 0.01) return;
+    setState(() => _chatRowH = h);
+  }
+
+  /// Layer 2'yi hedef yüksekliğe götür: satır sayısı değiştiyse aşmasız yayla (ızgara
+  /// birlikte iner/çıkar), yalnız ölçü değiştiyse (ilk ölçüm, yazı boyutu) anında.
+  void _retargetHeader(int rows, double target) {
+    if (!mounted) return;
+    final rowsChanged = rows != _hdrRows;
+    _hdrRows = rows;
+    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    if (!rowsChanged || reduce || (_hdrCtrl.value - target).abs() < 0.5) {
+      _hdrCtrl.value = target;
+      return;
+    }
+    _hdrCtrl.animateWith(
+        SpringSimulation(kHomeHeaderSpring, _hdrCtrl.value, target, _hdrCtrl.velocity));
+  }
 
   final List<_ExtraBubble> _extraBubbles = [];
   int _typingIndex = 0; // hangi balon şu an yazılıyor
@@ -485,6 +530,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     _unlockTimer?.cancel();
     _gridScrollCtrl.dispose();
     _chatScrollCtrl.dispose();
+    _hdrCtrl.dispose();
     super.dispose();
   }
 
@@ -755,7 +801,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     //   üstünden aynı hızla iner, ilk yerinde DURUR (üstte esneme olsa da aşağı inmez).
     //   Ofset = ızgara kaydırması, [0, layer 2 yüksekliği] aralığına kırpılmış.
     final topInset = MediaQuery.paddingOf(context).top;
-    final headerHeight = topInset + kHomeHeaderHeight;
+    final maxHeader = chatHeaderHeightFor(kChatMaxRows, _chatRowH);
     return Scaffold(
       backgroundColor: kHomeBackground,
       extendBody: true,
@@ -769,36 +815,48 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             child: TabSwipe(
               onSwipeLeft: () =>
                   selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
-              child: _buildGrid(context, topPad: headerHeight + 6),
+              child: _buildGrid(context, topExtra: topInset + kHomeLayerGap),
             ),
           ),
           // ── Menu layer 2: sohbet balonları (ızgarayla birlikte kayar) ────────
+          // Yükseklik canlı: görünen satır kadar (_hdrCtrl). Balonlar en büyük boyda dizilir,
+          // fazlası kırpılır → yeni satır, bant genişledikçe üstten açılır. Izgaranın kaydırma
+          // ofseti BOYAMA anında okunur (ScrollFollower).
           Positioned(
             top: 0,
             left: 0,
             right: 0,
-            height: headerHeight,
-            child: AnimatedBuilder(
-              animation: _gridScrollCtrl,
-              child: ColoredBox(
-                key: const ValueKey('homeMenuLayer2'),
-                color: kHomeHeaderBackground,
-                child: Padding(
-                  padding: EdgeInsets.only(top: topInset),
-                  // Balonların kendi (programatik) kaydırması bara ULAŞMASIN — yoksa her yeni
-                  // balon ~50 pt "yukarı kaydırma" sayılıp liste başındayken barı küçültürdü.
-                  child: NotificationListener<ScrollNotification>(
-                    onNotification: (_) => true,
-                    child: _buildChatHeader(),
+            child: ScrollFollower(
+              controller: _gridScrollCtrl,
+              child: RepaintBoundary(
+                child: AnimatedBuilder(
+                  animation: _hdrCtrl,
+                  builder: (context, child) => SizedBox(
+                    key: const ValueKey('homeMenuLayer2'),
+                    height: topInset + max(0.0, _hdrCtrl.value),
+                    child: child,
+                  ),
+                  child: ClipRect(
+                    child: OverflowBox(
+                      alignment: Alignment.topCenter,
+                      minHeight: topInset + maxHeader,
+                      maxHeight: topInset + maxHeader,
+                      child: ColoredBox(
+                        color: kHomeHeaderBackground,
+                        child: Padding(
+                          padding: EdgeInsets.only(top: topInset),
+                          // Balonların kendi (programatik) kaydırması bara ULAŞMASIN — yoksa her
+                          // yeni balon "yukarı kaydırma" sayılıp liste başındayken barı küçültürdü.
+                          child: NotificationListener<ScrollNotification>(
+                            onNotification: (_) => true,
+                            child: _buildChatHeader(maxHeader),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
-              builder: (context, child) {
-                final scrolled = _gridScrollCtrl.hasClients
-                    ? _gridScrollCtrl.offset.clamp(0.0, headerHeight)
-                    : 0.0;
-                return Transform.translate(offset: Offset(0, -scrolled), child: child);
-              },
             ),
           ),
         ],
@@ -806,7 +864,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Widget _buildChatHeader() {
+  Widget _buildChatHeader(double maxHeader) {
     // Tüm balonları tek listede birleştir (sabit 2 + dinamik ekstralar)
     final bubbles = [
       _ExtraBubble(
@@ -826,18 +884,26 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     // (_typingIndex balon tamamlandıkça artar; bubbles.length ile sınırla)
     final visibleCount = (_typingIndex + 1).clamp(0, bubbles.length);
 
+    // Layer 2 o an gereken satır kadar uzar (en çok kChatMaxRows); ızgara onunla iner.
+    final rows = visibleCount.clamp(1, kChatMaxRows);
+    final target = chatHeaderHeightFor(rows, _chatRowH);
+    if (target != _hdrTarget) {
+      _hdrTarget = target;
+      WidgetsBinding.instance.addPostFrameCallback((_) => _retargetHeader(rows, target));
+    }
+
     return SizedBox(
-      height: kHomeHeaderHeight,
+      height: maxHeader,
       child: SingleChildScrollView(
         controller: _chatScrollCtrl,
         physics: const NeverScrollableScrollPhysics(),
-        padding: const EdgeInsets.fromLTRB(12, 16, 12, 8),
+        padding: const EdgeInsets.fromLTRB(12, kChatPadTop, 12, kChatPadBottom),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             for (int i = 0; i < bubbles.length; i++)
               if (i <= _typingIndex) ...[
-                if (i > 0) const SizedBox(height: 8),
+                if (i > 0) const SizedBox(height: kChatRowGap),
                 // Görünen balon sayısına göre eskilere doğru opasite düşür
                 Opacity(
                   opacity: visibleCount >= 3
@@ -845,7 +911,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       : visibleCount == 2
                           ? (i == 0 ? 0.60 : 1.0)
                           : 1.0,
-                  child: Row(
+                  child: HeightReporter(
+                    // Tüm satırlar aynı yapıda (avatar + tek satır balon): ilkini ölçmek yeter.
+                    onHeight: i == 0 ? _onChatRowHeight : _ignoreHeight,
+                    child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       _MagnusAvatar(),
@@ -866,6 +935,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       ),
                     ],
                   ),
+                  ),
                 ),
               ],
           ],
@@ -873,6 +943,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
     );
   }
+
+  static void _ignoreHeight(double _) {}
 
   /// Eski sayfa renkleri: her 3 satırlık grup kendi çerçeve rengini korur
   /// (satır 1-3 pembe, 4-6 mavi, 7-9 yeşil).
@@ -894,7 +966,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   /// Menü (Anıl, 2026-11-05): üç düzen, açılışta 1/3 ihtimalle (menu_layout.dart).
-  Widget _buildGrid(BuildContext context, {required double topPad}) {
+  Widget _buildGrid(BuildContext context, {required double topExtra}) {
     final base = [
       ..._page1Items(context),
       ..._page2Items(context),
@@ -992,7 +1064,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       controller: _gridScrollCtrl,
       physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       slivers: [
-        space(topPad),
+        // Layer 2'nin canlı yüksekliği kadar boşluk; başlık gizliyken boy değişirse menü
+        // yerinde kalır (kaydırma ofseti düzeltilir).
+        HeaderSpacerSliver(height: _hdrCtrl, extra: topExtra, slack: kHomeLayerGap),
         SliverPadding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           sliver: SliverMainAxisGroup(slivers: slivers),
@@ -1268,7 +1342,8 @@ class _MenuCardState extends State<_MenuCard>
               child: Stack(
                 fit: StackFit.expand,
                 children: [
-                  FilmedImage(item.imagePath, active: _down, vignette: 0.40),
+                  FilmedImage(widget.big ? menuImageFor(item.imagePath) : item.imagePath,
+                      active: _down, vignette: 0.40),
                   // Etiket örtüsü: alttan %45, mürekkep %85 → şeffaf.
                   const IgnorePointer(
                     child: DecoratedBox(

@@ -1,4 +1,6 @@
 // Ana menü düzenleri (Anıl, 2026-11-05): sıklık sırası, büyük ikon seçimi, oturum sabitliği.
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:magnus_app/presentation/home/menu_layout.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -58,5 +60,17 @@ void main() {
       seen.add(l);
     }
     expect(seen, MenuLayout.values.toSet());
+  });
+
+  test('HD menü görselleri: her ad için dosya var, yalnız eşlenenler HD yola gider', () {
+    expect(kMenuHdNames, isNotEmpty);
+    for (final n in kMenuHdNames) {
+      expect(File('assets/images/menu_hd/$n.jpg').existsSync(), isTrue, reason: n);
+    }
+    expect(menuImageFor('assets/images/menu/tarot.png'), 'assets/images/menu_hd/tarot.jpg');
+    expect(menuImageFor('assets/images/astroloji.png'), 'assets/images/astroloji.png',
+        reason: 'kaynağı zaten büyük olan orijinal kalır');
+    expect(isBigCapable('assets/images/menu/tarot.png'), isTrue);
+    expect(isBigCapable('assets/images/astroloji.png'), isTrue);
   });
 }

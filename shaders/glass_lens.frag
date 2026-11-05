@@ -31,6 +31,7 @@ uniform float uRefract; // 6    kırılma katsayısı (h oranı), ölçüm 0.238
 uniform float uBevel;   // 7    cam pahının genişliği (h oranı), ölçüm 0.234
 uniform float uBlur;    // 8    normal yönünde bulanıklık σ (h oranı), ölçüm 0.028
 uniform float uSat;     // 9    doygunluk (bizim cam: 1.25)
+uniform float uZoom;    // 10   büyütme (bar 1.0; seçimde havalanan damla >1 → alttaki ikonlar büyür)
 uniform sampler2D uTex; // arka plan
 
 out vec4 fragColor;
@@ -62,7 +63,8 @@ void main() {
   float t = clamp(w - d, 0.0, w * 0.9999);
   float slope = t / sqrt(w * w - t * t);
   float disp = min(uRefract * h * slope, rad);
-  vec2 s = p - n * disp;
+  vec2 ctr = uRect.xy + 0.5 * uRect.zw;
+  vec2 s = ctr + (p - ctr) / max(uZoom, 0.01) - n * disp;
 
   // Normal yönünde 9 dokunuşlu Gauss (±2.4σ).
   float sig = uBlur * h;

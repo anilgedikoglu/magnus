@@ -60,6 +60,35 @@ final l10nProvider = Provider<AppStrings>((ref) {
   return AppStrings(locale);
 });
 
+// ─── Cam alt bar saydamlığı (Ayarlar kaydırıcısı) ───────────────────────────
+// 0 = şeffaf … 1 = renkli (iOS 26 Liquid Glass ölçümü, core/widgets/glass_tint.dart).
+// Varsayılan orta (0.5). Sürüklerken her değer anında bara yansır; kayıt bırakınca.
+
+class GlassTintNotifier extends StateNotifier<double> {
+  final SharedPreferences? _prefs;
+  static const _key = 'glass_bar_tint';
+
+  GlassTintNotifier(this._prefs) : super((_prefs?.getDouble(_key) ?? 0.5).clamp(0.0, 1.0));
+
+  /// Sürükleme sırasında: yalnız durum (her kare diske yazılmaz).
+  void preview(double value) => state = value.clamp(0.0, 1.0);
+
+  /// Bırakınca: durum + kalıcı kayıt.
+  Future<void> commit(double value) async {
+    state = value.clamp(0.0, 1.0);
+    await _prefs?.setDouble(_key, state);
+  }
+}
+
+final glassTintProvider = StateNotifierProvider<GlassTintNotifier, double>((ref) {
+  // Testlerde/önizlemede SharedPreferences verilmemiş olabilir → varsayılan, kayıtsız.
+  SharedPreferences? prefs;
+  try {
+    prefs = ref.watch(sharedPrefsProvider);
+  } catch (_) {}
+  return GlassTintNotifier(prefs);
+});
+
 // ─── Language Picked (dil seçim ekranı gösterildi mi) ────────────────────────
 
 class _LanguagePickedNotifier extends StateNotifier<bool> {

@@ -96,6 +96,10 @@ class AppStrings {
   String get tabInboxUnread    => _s('Gelen Kutusu, okunmamış fal var', 'Inbox, unread reading');
   String get tabInboxPreparing => _s('Gelen Kutusu, hazırlanan fal var', 'Inbox, a reading is being prepared');
   String get tabHome           => _s('Ana Menü',       'Main Menu');
+  String get glassSectionTitle => _s('CAM / GLASS',    'GLASS');
+  String get glassTransparency => _s('Alt bar cam saydamlığı', 'Bottom bar glass transparency');
+  String get glassClear        => _s('Şeffaf',         'Clear');
+  String get glassTinted       => _s('Renkli',         'Tinted');
   String get clearAll          => _s('Temizle',        'Clear');
   String get inboxEmpty        => _s('BURALAR ÇOK SESSİZ...', 'SO QUIET HERE...');
   String get inboxEmptyDesc    => _s('Okumaya değer bir şey henüz almadın.', "You haven't received anything worth reading yet.");

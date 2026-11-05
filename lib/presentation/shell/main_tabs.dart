@@ -105,7 +105,9 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
   late final AnimationController _minimize = AnimationController.unbounded(vsync: this);
   late final BarMinimizeLogic _minimizeLogic = BarMinimizeLogic(
     onCreep: (v) {
-      if (_reduceMotion) return; // azaltılmış harekette sürünme yok, yalnız karar
+      // Azaltılmış harekette sürünme yok; yay çalışırken de yok (inceleme: ters kaydırmada
+      // çalışan küçülme yayı durup ölçek bir karede sıçrıyordu).
+      if (_reduceMotion || _minimize.isAnimating) return;
       _minimize.value = v;
     },
     onCommit: (compact) => _springMinimize(compact ? 1 : 0,
@@ -344,7 +346,12 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
           enabled: visible,
           child: IgnorePointer(
             ignoring: _from != null, // geçiş sırasında çift dokunuşu engelle
-            child: SlideTransition(position: slide ?? _still, child: _page(tab)),
+            // Yalnız GÖRÜNEN ve geçişte olmayan sekmenin kaydırması barı küçültür
+            // (inceleme: çıkan sekmenin momentumu gelen sekmede barı küçültüyordu).
+            child: NotificationListener<ScrollNotification>(
+              onNotification: (n) => tab == _current && _from == null && _onScroll(n),
+              child: SlideTransition(position: slide ?? _still, child: _page(tab)),
+            ),
           ),
         ),
       ),
@@ -390,12 +397,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
         select: _select,
         child: Stack(
           children: [
-            Positioned.fill(
-              child: NotificationListener<ScrollNotification>(
-                onNotification: _onScroll,
-                child: Stack(children: children),
-              ),
-            ),
+            Positioned.fill(child: Stack(children: children)),
             Positioned(
               left: kGlassBarSide,
               right: kGlassBarSide,
@@ -419,6 +421,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
                   onTap: _onBarTap,
                   badge: badge,
                   minimize: _minimize,
+                  tint: cref.watch(glassTintProvider),
                   labels: [
                     s.tabHome,
                     switch (badge) {

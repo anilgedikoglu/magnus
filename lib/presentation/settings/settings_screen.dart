@@ -14,6 +14,7 @@ import '../../core/services/ad_service.dart';
 import '../../core/utils/admin_gate.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/glass_tab_bar.dart';
+import '../../core/widgets/liquid_glass_slider.dart';
 import '../../core/widgets/living_nebula.dart';
 import '../../core/widgets/tab_swipe.dart';
 import '../../core/widgets/starfield_overlay.dart';
@@ -2366,7 +2367,8 @@ class SettingsScreen extends ConsumerWidget {
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: AppColors.gold, width: 1),
           ),
-          child: Column(
+          child: SingleChildScrollView(
+            child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -2482,6 +2484,14 @@ class SettingsScreen extends ConsumerWidget {
               ),
 
               // Ayırıcı
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+                height: 1,
+                color: const Color(0x29FF55FF),
+              ),
+
+              // ── Cam / Glass: alt barın saydamlığı (iOS 26 "Şeffaf ↔ Renkli") ──
+              const _GlassTintSection(),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
                 height: 1,
@@ -2635,6 +2645,7 @@ class SettingsScreen extends ConsumerWidget {
                 ),
               ),
             ],
+          ),
           ),
         ),
       ),
@@ -3108,6 +3119,103 @@ class _OptionsItem extends StatelessWidget {
                 color: AppColors.bone.withValues(alpha: 0.30), size: 20),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// Ayarlar > CAM / GLASS: alt barın saydamlık kaydırıcısı + canlı önizleme (iOS 26 Liquid
+/// Glass "Şeffaf ↔ Renkli" ayarının birebir karşılığı; ölçüm: core/widgets/glass_tint.dart).
+/// Sürüklerken hem önizleme hem gerçek alt bar anında değişir; bırakınca kaydedilir.
+class _GlassTintSection extends ConsumerWidget {
+  const _GlassTintSection();
+
+  static const _previewImages = [
+    'assets/images/menu/tarot.png',
+    'assets/images/menu/durugoru.png',
+    'assets/images/menu/numeroloji.png',
+  ];
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
+    final tint = ref.watch(glassTintProvider);
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 14, 20, 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            s.glassSectionTitle,
+            style: TextStyle(
+              color: AppColors.gold.withValues(alpha: 0.85),
+              fontSize: 11,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2,
+            ),
+          ),
+          const SizedBox(height: 10),
+          // Önizleme: menü kartlarının üstünde gerçek cam bar (dokunulmaz).
+          ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: SizedBox(
+              height: 104,
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Row(
+                    children: [
+                      for (final p in _previewImages)
+                        Expanded(
+                          child: Image.asset(p,
+                              fit: BoxFit.cover,
+                              errorBuilder: (_, __, ___) => const ColoredBox(color: Color(0xFF14121C))),
+                        ),
+                    ],
+                  ),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: IgnorePointer(
+                        child: GlassTabBar(
+                          key: const ValueKey('glassTintPreviewBar'),
+                          selected: 0,
+                          onTap: (_) {},
+                          tint: tint,
+                          labels: [s.tabHome, s.tabInbox, s.settingsTitle],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
+          DecoratedBox(
+            decoration: BoxDecoration(
+              color: const Color(0xFF1A191B),
+              borderRadius: BorderRadius.circular(26),
+            ),
+            child: LiquidGlassSlider(
+              key: const ValueKey('glassTintSlider'),
+              value: tint,
+              semanticLabel: s.glassTransparency,
+              onChanged: (v) => ref.read(glassTintProvider.notifier).preview(v),
+              onChangeEnd: (v) => ref.read(glassTintProvider.notifier).commit(v),
+            ),
+          ),
+          const SizedBox(height: 6),
+          Row(
+            children: [
+              Text(s.glassClear,
+                  style: const TextStyle(color: AppColors.ash, fontSize: 11.5)),
+              const Spacer(),
+              Text(s.glassTinted,
+                  style: const TextStyle(color: AppColors.ash, fontSize: 11.5)),
+            ],
+          ),
+        ],
       ),
     );
   }

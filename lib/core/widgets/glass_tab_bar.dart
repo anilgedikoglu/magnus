@@ -16,7 +16,9 @@
 //   • SIVI CAM KIRILMASI (2026-11-05, Anıl: "bizde buzlu cam gibi; onlarda iki cam arası
 //     sıvı var gibi kırıyor ışığı"): Impeller'da `shaders/glass_lens.frag` — kenarlarda
 //     içeriği büken mercek + hafif yönlü bulanıklık (Instagram'dan ölçüldü). Geçirgenlik
-//     (tint %55 + doygunluk 1.25) AYNI. Impeller yoksa (Skia) eski buzlu cam (σ20).
+//     (doygunluk 1.25). Impeller yoksa (Skia) eski buzlu cam (σ20).
+//   • Saydamlık [tint] (Ayarlar'daki cam kaydırıcısı; iOS 26 "Şeffaf ↔ Renkli" ölçümü,
+//     glass_tint.dart). Varsayılan orta. Seçili ikon iOS mavisi; seçimde kapsül damla gibi havalanır.
 //   • [minimize] 0 → tam boy, 1 → küçük (0.837): kaydırmayla küçülme (bkz. bar_minimize.dart).
 // Tasarım Codex ile (2026-11-04/05).
 
@@ -24,9 +26,12 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
-import 'package:flutter/rendering.dart';
 
 import 'bar_minimize.dart';
+import 'glass_lens.dart';
+import 'glass_tint.dart';
+
+export 'glass_lens.dart' show debugDisableGlassLens;
 
 /// Barın yüksekliği ve SafeArea altından boşluğu — 3 ekranda AYNI yer.
 const double kGlassBarHeight = 56;
@@ -61,6 +66,16 @@ enum InboxBadge {
 const double _kStretchPerVelocity = 0.03;
 const double _kMaxStretch = 0.32;
 
+
+/// Seçimde kapsülün "havalanması" (iOS 26 Liquid Glass sekme seçimi): dokununca kapsül
+/// camdan bir damla gibi BÜYÜYEREK bardan taşar, alttaki ikonları mercek gibi büyütür,
+/// hedefe kayar, varınca yaylı (hafif ezilerek) bara geri oturur.
+const double _kLiftHeight = 0.40; // tam havada yükseklik ×1.40 (46 → 64 dp; 56'lık bardan taşar)
+const double _kLiftWidth = 0.08; // tam havada genişlik ×1.08
+const double _kLandSquash = 0.6; // iniş taşmasında (L<0) yassılaşma: genişlik +0.6·|L|
+const double _kLiftZoom = 0.22; // damla merceği büyütmesi (1.22×)
+const Duration _kLiftUp = Duration(milliseconds: 130);
+
 class GlassTabBar extends StatefulWidget {
   /// 0 = Ana Menü, 1 = Gelen Kutusu, 2 = Kullanıcı Bilgileri.
   final int selected;
@@ -76,6 +91,9 @@ class GlassTabBar extends StatefulWidget {
   /// aşabilir (taşma). null → hep tam boy.
   final Animation<double>? minimize;
 
+  /// Cam saydamlığı (Ayarlar kaydırıcısı): 0 şeffaf … 1 renkli; bkz. glass_tint.dart.
+  final double tint;
+
   const GlassTabBar({
     super.key,
     required this.selected,
@@ -83,48 +101,41 @@ class GlassTabBar extends StatefulWidget {
     required this.labels,
     this.badge = InboxBadge.none,
     this.minimize,
+    this.tint = kGlassTintDefault,
   }) : assert(labels.length == kGlassBarSlots);
 
   /// Kırılma shader'ını önceden yükle (main'de çağrılır; ilk karede buzlu cam görünmesin).
-  static Future<ui.FragmentProgram?> preloadLens() => _lensProgram();
+  static Future<ui.FragmentProgram?> preloadLens() => loadGlassLens();
 
   @override
   State<GlassTabBar> createState() => _GlassTabBarState();
 }
 
-const String _kLensAsset = 'shaders/glass_lens.frag';
-Future<ui.FragmentProgram?>? _lensLoad;
-ui.FragmentProgram? _lensLoaded;
-
-/// Yalnız görsel karşılaştırma: true → kırılma kapalı, eski buzlu cam.
-@visibleForTesting
-bool debugDisableGlassLens = false;
-
-/// Yalnız Impeller'da (ImageFilter.shader) yüklenir; hata/destek yok → null (buzlu cam).
-Future<ui.FragmentProgram?> _lensProgram() {
-  if (!ui.ImageFilter.isShaderFilterSupported) return Future.value();
-  return _lensLoad ??= ui.FragmentProgram.fromAsset(_kLensAsset).then<ui.FragmentProgram?>(
-    (p) => _lensLoaded = p,
-    onError: (Object _) => null,
-  );
-}
-
 class _GlassTabBarState extends State<GlassTabBar>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   // Konum indeks uzayında (0..2). Codex önerisi: kütle 1, sertlik 420, sönüm 36
   // → sönüm oranı ~0.88: hafif esnek, çabuk oturur (~280 ms).
   static const _spring = SpringDescription(mass: 1, stiffness: 420, damping: 36);
 
   late final AnimationController _pos =
       AnimationController.unbounded(vsync: this, value: widget.selected.toDouble());
+
+  /// Havalanma: 0 = bara oturmuş düz kapsül, 1 = tam havada damla (inişte biraz <0 = ezilme).
+  late final AnimationController _lift = AnimationController.unbounded(vsync: this);
+  static const _landSpring = SpringDescription(mass: 1, stiffness: 320, damping: 22);
+  bool _airborne = false;
+  int _target = 0;
+
   int? _pressed;
-  ui.FragmentProgram? _lens = _lensLoaded;
+  ui.FragmentProgram? _lens = glassLensLoaded;
 
   @override
   void initState() {
     super.initState();
+    _target = widget.selected;
+    _pos.addListener(_checkLanding);
     if (_lens == null) {
-      _lensProgram().then((p) {
+      loadGlassLens().then((p) {
         if (mounted && p != null) setState(() => _lens = p);
       });
     }
@@ -137,20 +148,56 @@ class _GlassTabBarState extends State<GlassTabBar>
   }
 
   void _moveTo(int index) {
+    _target = index;
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
     if (reduce) {
+      _airborne = false;
+      _lift.value = 0;
       _pos.value = index.toDouble();
       return;
     }
     // Mevcut hızdan devam → hızlı art arda dokunuşta kopma/sıçrama olmaz.
     _pos.animateWith(
         SpringSimulation(_spring, _pos.value, index.toDouble(), _pos.velocity));
+    // Havalan (iOS 26): damla büyüyerek kalkar; iniş _checkLanding'de.
+    _airborne = true;
+    _lift.animateTo(1, duration: _kLiftUp, curve: Curves.easeOutCubic);
+  }
+
+  /// Kapsül hedefe yaklaşınca (0.15 slot) damla yaylı bir inişle bara oturur.
+  void _checkLanding() {
+    if (!_airborne || (_pos.value - _target).abs() > 0.15) return;
+    _airborne = false;
+    _lift.animateWith(SpringSimulation(_landSpring, _lift.value, 0, _lift.velocity));
   }
 
   @override
   void dispose() {
+    _pos.removeListener(_checkLanding);
     _pos.dispose();
+    _lift.dispose();
     super.dispose();
+  }
+
+  /// Kapsülün dikdörtgeni (bar koordinatı): konum + yönlü esneme + havalanma ölçeği.
+  Rect _pillRect(double slot, double inset) {
+    final x = _pos.value.clamp(-0.15, kGlassBarSlots - 1 + 0.15);
+    final v = _pos.velocity;
+    // Hareket yönündeki kenar önden koşar: sağa gidiyorsa sağ kenar uzar, sola gidiyorsa
+    // sol kenar. Hız düştükçe (varınca) kısalır.
+    final s = (v.abs() * _kStretchPerVelocity).clamp(0.0, _kMaxStretch);
+    final leftEdge = x - (v < 0 ? s : 0.0);
+    final rightEdge = x + 1 + (v > 0 ? s : 0.0);
+    // Uzarken çok hafif incelir (yüzey gerilimi).
+    final baseH = (kGlassBarHeight - 2 * inset) * (1 - 0.05 * (s / _kMaxStretch));
+    final l = _lift.value;
+    final hf = 1 + _kLiftHeight * l;
+    final wf = 1 + (l >= 0 ? _kLiftWidth * l : -_kLandSquash * l);
+    return Rect.fromCenter(
+      center: Offset(inset + slot * (leftEdge + rightEdge) / 2, kGlassBarHeight / 2),
+      width: slot * (rightEdge - leftEdge) * wf,
+      height: baseH * hf,
+    );
   }
 
   // Doygunluk 1.25 (Rec.709 ağırlıkları) — arka planın renklerini cam içinde canlı tutar.
@@ -188,7 +235,14 @@ class _GlassTabBarState extends State<GlassTabBar>
     final lens = debugDisableGlassLens ? null : _lens;
     return SizedBox(
       height: kGlassBarHeight,
-      child: DecoratedBox(
+      child: LayoutBuilder(builder: (context, c) {
+        const inset = 5.0;
+        final slot = (c.maxWidth - 2 * inset) / kGlassBarSlots;
+        return Stack(
+          clipBehavior: Clip.none, // havalanan damla bardan taşar
+          fit: StackFit.expand,
+          children: [
+            DecoratedBox(
         // Dış yumuşak gölge — cam "yüzüyor" hissi.
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius),
@@ -198,23 +252,20 @@ class _GlassTabBarState extends State<GlassTabBar>
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(radius),
-          child: LayoutBuilder(builder: (context, c) {
-            const inset = 5.0;
-            final slot = (c.maxWidth - 2 * inset) / kGlassBarSlots;
-            return Stack(
+          child: Stack(
               fit: StackFit.expand,
               children: [
                 // 1) Cam: Impeller'da sıvı cam kırılması (shader), değilse buzlu cam;
                 //    üstüne aynı koyu gri tint (geçirgenlik değişmedi).
                 if (lens != null)
-                  _LensBackdrop(
+                  GlassLensBackdrop(
                     program: lens,
-                    child: const ColoredBox(color: Color(0x8C1C1C1E)),
+                    child: ColoredBox(color: glassTintColor(widget.tint)),
                   )
                 else
                   BackdropFilter(
                     filter: _glass,
-                    child: const ColoredBox(color: Color(0x8C1C1C1E)),
+                    child: ColoredBox(color: glassTintColor(widget.tint)),
                   ),
                 // 2) Üst parlama (cam yüzeyinin ışığı yakalaması).
                 const IgnorePointer(
@@ -229,28 +280,16 @@ class _GlassTabBarState extends State<GlassTabBar>
                     ),
                   ),
                 ),
-                // 3) Kayan seçim kapsülü — yalnız bu küçük parça her karede yeniden çizilir.
+                // 3) Kayan seçim kapsülü (bara oturmuş hâli) — havalandıkça solar.
                 AnimatedBuilder(
-                  animation: _pos,
-                  builder: (context, _) {
-                    final x = _pos.value.clamp(-0.15, kGlassBarSlots - 1 + 0.15);
-                    final v = _pos.velocity;
-                    // Hareket yönündeki kenar önden koşar: sağa gidiyorsa sağ kenar
-                    // uzar, sola gidiyorsa sol kenar. Hız düştükçe (varınca) kısalır.
-                    final s = (v.abs() * _kStretchPerVelocity).clamp(0.0, _kMaxStretch);
-                    final leftEdge = x - (v < 0 ? s : 0.0);
-                    final rightEdge = x + 1 + (v > 0 ? s : 0.0);
-                    // Uzarken çok hafif incelir (yüzey gerilimi).
-                    final h = (kGlassBarHeight - 2 * inset) * (1 - 0.05 * (s / _kMaxStretch));
-                    return Positioned(
-                      left: inset + slot * leftEdge,
-                      top: (kGlassBarHeight - h) / 2,
-                      width: slot * (rightEdge - leftEdge),
-                      height: h,
-                      child: const IgnorePointer(
-                          key: ValueKey('glassTabBarPill'), child: _SelectionPill()),
-                    );
-                  },
+                  animation: Listenable.merge([_pos, _lift]),
+                  builder: (context, _) => Positioned.fromRect(
+                    rect: _pillRect(slot, inset),
+                    child: IgnorePointer(
+                      key: const ValueKey('glassTabBarPill'),
+                      child: _SelectionPill(fade: 1 - _lift.value.clamp(0.0, 1.0)),
+                    ),
+                  ),
                 ),
                 // 4) Sekmeler.
                 Padding(
@@ -260,10 +299,27 @@ class _GlassTabBarState extends State<GlassTabBar>
                 // 5) Kenar ışığı (specular rim).
                 const IgnorePointer(child: CustomPaint(painter: _RimPainter(radius))),
               ],
-            );
-          }),
+            ),
         ),
       ),
+            // 6) Havalanan cam damla (bar kırpmasının DIŞINDA): alttaki ikonları büyütür.
+            AnimatedBuilder(
+              animation: Listenable.merge([_pos, _lift]),
+              builder: (context, _) {
+                final l = _lift.value;
+                if (l <= 0.01) return const SizedBox.shrink();
+                return Positioned.fromRect(
+                  rect: _pillRect(slot, inset),
+                  child: IgnorePointer(
+                    key: const ValueKey('glassTabBarDroplet'),
+                    child: _LiftedDroplet(lift: l.clamp(0.0, 1.0), lens: lens),
+                  ),
+                );
+              },
+            ),
+          ],
+        );
+      }),
     );
   }
 
@@ -323,111 +379,95 @@ class _GlassTabBarState extends State<GlassTabBar>
   }
 }
 
-/// Sıvı cam kırılması (Impeller): arka planı `glass_lens.frag` ile büker.
-/// Shader barın GLOBAL fiziksel dikdörtgenini ister → her boyamada dönüşümden hesaplanır
-/// (küçülme ölçeği dahil; Transform değişince bu nesne de yeniden boyanır).
-class _LensBackdrop extends SingleChildRenderObjectWidget {
-  const _LensBackdrop({required this.program, super.child});
-
-  final ui.FragmentProgram program;
-
-  @override
-  RenderObject createRenderObject(BuildContext context) =>
-      _RenderLensBackdrop(program, MediaQuery.devicePixelRatioOf(context));
-
-  @override
-  void updateRenderObject(BuildContext context, _RenderLensBackdrop renderObject) {
-    renderObject
-      ..program = program
-      ..devicePixelRatio = MediaQuery.devicePixelRatioOf(context);
-  }
-}
-
-class _RenderLensBackdrop extends RenderProxyBox {
-  _RenderLensBackdrop(this._program, this._dpr);
-
-  // Ölçülen model (bkz. shaders/glass_lens.frag başlığı). Doygunluk = bizim buzlu camla aynı.
-  static const double _refract = 0.238;
-  static const double _bevel = 0.234;
-  static const double _blur = 0.028;
-  static const double _saturation = 1.25;
-
-  ui.FragmentProgram _program;
-  ui.FragmentShader? _shader;
-  double _dpr;
-
-  set devicePixelRatio(double value) {
-    if (value == _dpr) return;
-    _dpr = value;
-    markNeedsPaint();
-  }
-
-  set program(ui.FragmentProgram value) {
-    if (identical(value, _program)) return;
-    _program = value;
-    _shader?.dispose();
-    _shader = null;
-    markNeedsPaint();
-  }
-
-  @override
-  bool get alwaysNeedsCompositing => child != null;
-
-  @override
-  BackdropFilterLayer? get layer => super.layer as BackdropFilterLayer?;
-
-  @override
-  void paint(PaintingContext context, Offset offset) {
-    if (child == null) {
-      layer = null;
-      return;
-    }
-    // getTransformTo(null) MANTIKSAL global verir (ölçüldü: DPR'yi içermiyor) →
-    // shader'ın FlutterFragCoord'u fiziksel piksel olduğundan DPR ile çarp.
-    final r = MatrixUtils.transformRect(getTransformTo(null), Offset.zero & size);
-    final shader = _shader ??= _program.fragmentShader();
-    shader
-      ..setFloat(0, 0) // uSize: motor doldurur
-      ..setFloat(1, 0)
-      ..setFloat(2, r.left * _dpr)
-      ..setFloat(3, r.top * _dpr)
-      ..setFloat(4, r.width * _dpr)
-      ..setFloat(5, r.height * _dpr)
-      ..setFloat(6, _refract)
-      ..setFloat(7, _bevel)
-      ..setFloat(8, _blur)
-      ..setFloat(9, _saturation);
-    final l = layer ??= BackdropFilterLayer();
-    l.filter = ui.ImageFilter.shader(shader);
-    context.pushLayer(l, super.paint, offset);
-  }
-
-  @override
-  void dispose() {
-    _shader?.dispose();
-    _shader = null;
-    super.dispose();
-  }
-}
-
 /// Açık gri cam mini kapsül (ikinci blur YOK — sadece yarı saydam dolgu + ince kenar).
 class _SelectionPill extends StatelessWidget {
-  const _SelectionPill();
+  const _SelectionPill({this.fade = 1});
+
+  /// 1 = tam görünür (bara oturmuş), 0 = görünmez (damla havada).
+  final double fade;
 
   @override
   Widget build(BuildContext context) {
+    if (fade <= 0) return const SizedBox.shrink();
     return DecoratedBox(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(kGlassBarHeight / 2),
-        gradient: const LinearGradient(
+        borderRadius: BorderRadius.circular(kGlassBarHeight),
+        gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0x33FFFFFF), Color(0x1FFFFFFF)],
+          colors: [
+            Colors.white.withValues(alpha: 0.20 * fade),
+            Colors.white.withValues(alpha: 0.12 * fade),
+          ],
         ),
-        border: Border.all(color: const Color(0x1FFFFFFF), width: 0.8),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.12 * fade), width: 0.8),
       ),
     );
   }
+}
+
+/// Seçimde havalanan cam damla: Impeller'da büyüten mercek (alttaki ikonlar büyür + kenar
+/// kırılması), değilse yarı saydam cam; parlak kenar + yumuşak gölge. [lift] 0..1.
+class _LiftedDroplet extends StatelessWidget {
+  const _LiftedDroplet({required this.lift, required this.lens});
+
+  final double lift;
+  final ui.FragmentProgram? lens;
+
+  @override
+  Widget build(BuildContext context) {
+    final a = (lift * 1.6).clamp(0.0, 1.0);
+    final glass = ColoredBox(color: Colors.white.withValues(alpha: 0.06 + 0.06 * a));
+    final l = lens;
+    return Opacity(
+      opacity: a,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(kGlassBarHeight * 2),
+          boxShadow: const [
+            BoxShadow(color: Color(0x47000000), blurRadius: 16, offset: Offset(0, 5)),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(kGlassBarHeight * 2),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              if (l != null)
+                GlassLensBackdrop(program: l, zoom: 1 + _kLiftZoom * lift, child: glass)
+              else
+                glass,
+              const CustomPaint(painter: _DropletRimPainter()),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Damlanın parlak cam kenarı: üstte güçlü, altta yakalanan ışık.
+class _DropletRimPainter extends CustomPainter {
+  const _DropletRimPainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final rect = (Offset.zero & size).deflate(0.6);
+    final rrect = RRect.fromRectAndRadius(rect, Radius.circular(size.height / 2));
+    final paint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.2
+      ..shader = const LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        stops: [0.0, 0.5, 1.0],
+        colors: [Color(0x99FFFFFF), Color(0x1AFFFFFF), Color(0x4DFFFFFF)],
+      ).createShader(rect);
+    canvas.drawRRect(rrect, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant _DropletRimPainter old) => false;
 }
 
 /// Zarf + sağ üst rozet: hazırlanıyor → turuncu, hepsi hazır → yeşil, yoksa nokta yok.

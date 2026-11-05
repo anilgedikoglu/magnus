@@ -784,7 +784,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 color: kHomeHeaderBackground,
                 child: Padding(
                   padding: EdgeInsets.only(top: topInset),
-                  child: _buildChatHeader(),
+                  // Balonların kendi (programatik) kaydırması bara ULAŞMASIN — yoksa her yeni
+                  // balon ~50 pt "yukarı kaydırma" sayılıp liste başındayken barı küçültürdü.
+                  child: NotificationListener<ScrollNotification>(
+                    onNotification: (_) => true,
+                    child: _buildChatHeader(),
+                  ),
                 ),
               ),
               builder: (context, child) {

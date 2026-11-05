@@ -1,13 +1,20 @@
-// "Arabam Ne?" falı motoru (2026-11-05). Eğlence amaçlıdır.
+// "Arabam Ne?" falı motoru — v2 (2026-11-05, Anıl: "hep Mercedes S500 mantıklı mı? binlerce marka/model,
+// yaşa ve cinsiyete göre olasılıkla; arabalar arasında mantık sırası; aynı arabayla devam edilebilir;
+// Togg, Honda, Nissan, Citroën…").
 //
-// Kullanıcıya özel, kalıcı bir ARABA ÇİZELGESİ bir kez üretilir ve saklanır:
-//  • bu yıldan en fazla +50 yıla kadar 5 ardışık yıl aralığı (2-12 yıl, rastgele);
-//  • %15 olasılıkla aralıkların arasında 1-2 yıllık "arabasız dönem";
-//  • gelir artar → seviye (kademe) genellikle +0..+2 yükselir, en fazla -1 düşer;
-//  • elektrikli: yakın yıllarda nadir, 15+ yıl sonra belirgin, 25+ yıl sonra baskın;
-//    uydurma gelecek modeller (F) yalnız 2040 ve sonrasında;
-//  • kadın/erkek eğilimi ×1.8; aynı model iki kez çıkmaz;
-//  • açılan kutular kalıcı (slot indeksi bazında) → tekrar reklam istemez.
+// Havuz: assets/data/arabam.json — ChatGPT ile hazırlanan Türkiye pazarı listesi (marka, model+donanım,
+// segment, fiyat sınıfı 1-7, yakıt, Türkiye'de yaygınlık 1-10, cinsiyet eğilimi, durum eski/guncel/gelecek).
+//
+// Kullanıcıya özel, kalıcı ÇİZELGE bir kez üretilir:
+//  • bu yıldan +50 yıla kadar 5 ardışık yıl aralığı (2-12 yıl); %15 olasılıkla 1-2 yıllık arabasız dönem;
+//  • ilk sınıf YAŞA göre (gençte ekonomik/popüler ağırlıklı), sonra çoğunlukla aynı sınıf ya da bir üstü;
+//    lüks (6) ve süper lüks (7) ek bir zarla nadir;
+//  • seçim Türkiye'de yaygınlığa göre ağırlıklı (Egea/Clio sık, Ferrari çok seyrek);
+//  • yakıt payı yıllara göre (yakın yıllar benzin/hibrit, 2040+ elektrik);
+//  • "eski" modeller yalnız ilk yıllarda düşük sınıfta (ikinci el), "gelecek" modeller kendi yılından sonra;
+//  • %25 olasılıkla bir sonraki aralıkta AYNI arabayla devam; başka türlü aynı model tekrar çıkmaz;
+//  • cinsiyet eğilimi ve yaş/medeni hale göre hafif segment eğilimi;
+//  • açılan kutular kalıcı (slot indeksi bazında).
 import 'dart:convert';
 import 'dart:math';
 
@@ -20,33 +27,42 @@ import 'kismet_engine.dart' show KismetEngine;
 class ArabaCar {
   const ArabaCar({
     required this.id,
-    required this.model,
-    required this.tier,
+    required this.brand,
+    required this.name,
+    required this.segment,
+    required this.level,
     required this.fuel,
+    required this.popularity,
     required this.lean,
+    required this.status,
+    this.fromYear,
   });
 
   final int id;
-  final String model;
-  final String tier; // K1..K7, E1..E4, F
-  final String fuel; // benzin/dizel/hibrit/elektrik/hidrojen
+  final String brand;
+  final String name; // model + motor/donanım
+  final String segment; // sehir/kompakt/sedan/suv_kucuk/suv/suv_buyuk/mpv/pickup/spor/ust_sedan
+  final int level; // fiyat sınıfı 1..7
+  final String fuel; // benzin/dizel/hibrit/elektrik/lpg
+  final int popularity; // Türkiye'de yollarda görülme 1..10
   final String lean; // kadin/erkek/notr
+  final String status; // eski/guncel/gelecek
+  final int? fromYear; // gelecek modeller için en erken yıl
 
-  /// Fiyat seviyesi (1..7). Elektrikler küçük→lüks sırasıyla 3..6, F = 5.
-  int get level {
-    if (tier == 'F') return 5;
-    final n = int.parse(tier.substring(1));
-    return tier.startsWith('E') ? n + 2 : n;
-  }
-
-  bool get isElectricTier => tier.startsWith('E');
+  /// Ekranda görünen ad: "Fiat Egea Sedan 1.4 Fire Easy".
+  String get model => name.toLowerCase().startsWith(brand.toLowerCase()) ? name : '$brand $name';
 
   static ArabaCar fromJson(Map<String, dynamic> j) => ArabaCar(
         id: j['id'] as int,
-        model: j['model'] as String,
-        tier: j['kademe'] as String,
+        brand: j['marka'] as String,
+        name: j['model'] as String,
+        segment: j['segment'] as String,
+        level: j['sinif'] as int,
         fuel: j['yakit'] as String,
+        popularity: j['yayginlik'] as int,
         lean: j['egilim'] as String,
+        status: j['durum'] as String,
+        fromYear: j['yil'] as int?,
       );
 }
 
@@ -73,7 +89,8 @@ class ArabaTimeline {
     this.computed = false,
   }) : revealed = revealed ?? {};
 
-  static const schema = 1;
+  /// 2: yeni havuz (marka/sınıf/yaygınlık). Eski kayıtlar okunmaz → yeniden üretilir.
+  static const schema = 2;
   final int seed;
   final int baseYear;
   final String signature;
@@ -109,6 +126,9 @@ class ArabaEngine {
   static const prefsKey = 'arabam_v1';
   static const horizon = 50;
   static const rangeCount = 5;
+
+  /// Bir sonraki aralıkta aynı arabayla devam olasılığı.
+  static const pContinue = 0.25;
 
   static List<ArabaCar>? _pool;
 
@@ -148,7 +168,9 @@ class ArabaEngine {
       } catch (_) {/* bozuk kayıt → yeniden üret */}
     }
     final age = year - KismetEngine.birthYearOf(p, year);
-    final t = generate(pool, gender: gender, age: age, baseYear: year, seed: seed ?? Random().nextInt(1 << 31));
+    final evli = KismetEngine.maritalGroupOf(p) == 'evli';
+    final t = generate(pool,
+        gender: gender, age: age, married: evli, baseYear: year, seed: seed ?? Random().nextInt(1 << 31));
     await save(prefs, t);
     return t;
   }
@@ -174,8 +196,10 @@ class ArabaEngine {
     required int age,
     required int baseYear,
     required int seed,
+    bool married = false,
   }) {
     final rnd = Random(seed);
+    final byId = {for (final c in pool) c.id: c};
 
     // 1) Yıl aralıkları: 51 yıl (base..base+50) içinde 5 aralık (+ ops. boşluk)
     var remaining = horizon + 1;
@@ -193,83 +217,144 @@ class ArabaEngine {
       remaining -= len;
     }
 
-    // 2) Seviye + model seçimi
+    // 2) Sınıf + model seçimi
     final used = <int>{};
     final slots = <ArabaSlot>[];
     var cursor = baseYear;
     var prevLevel = 0;
+    int? prevCarId;
+    var prevLen = 0;
     for (var i = 0; i < rangeCount; i++) {
       final start = cursor;
       final end = cursor + lengths[i] - 1;
-      final offset = start - baseYear;
+      final ageAt = age + (start - baseYear);
 
-      int target;
-      if (i == 0) {
-        target = _firstLevel(rnd, age);
+      ArabaCar car;
+      final prevCar = prevCarId == null ? null : byId[prevCarId];
+      final canContinue = prevCar != null && prevCar.status != 'eski' && prevLen + lengths[i] <= 15;
+      if (canContinue && rnd.nextDouble() < pContinue) {
+        car = prevCar; // aynı arabayla devam
       } else {
-        target = prevLevel + _weightedInt(rnd, const [(-1, 3), (0, 30), (1, 40), (2, 27)]);
+        final target = i == 0 ? _firstLevel(rnd, ageAt) : _nextLevel(rnd, prevLevel, ageAt);
+        car = _pickCar(rnd, pool, used,
+            target: target, year: start, baseYear: baseYear, age: ageAt, gender: gender, married: married);
+        used.add(car.id);
       }
-      target = target.clamp(1, 6);
-
-      final car = _pickCar(rnd, pool, gender, used, target: target, startYear: start, offset: offset);
-      used.add(car.id);
       prevLevel = car.level;
+      prevLen = car.id == prevCarId ? prevLen + lengths[i] : lengths[i];
+      prevCarId = car.id;
       slots.add(ArabaSlot(start, end, car.id));
       cursor = end + 1;
 
       if (i == gapAfter) {
         slots.add(ArabaSlot(cursor, cursor + gapLen - 1, null));
         cursor += gapLen;
+        prevCarId = null; // arabasız dönemden sonra yeni araba
+        prevLen = 0;
       }
     }
     return ArabaTimeline(seed: seed, baseYear: baseYear, signature: gender, slots: slots);
   }
 
+  /// İlk arabanın fiyat sınıfı — yaşa göre gerçekçi (Türkiye'de çoğunluk 1-3).
   static int _firstLevel(Random rnd, int age) {
-    if (age < 25) return _weightedInt(rnd, const [(1, 70), (2, 30)]);
-    if (age <= 40) return _weightedInt(rnd, const [(2, 25), (3, 45), (4, 30)]);
-    return _weightedInt(rnd, const [(3, 30), (4, 45), (5, 25)]);
+    if (age < 23) return _weightedInt(rnd, const [(1, 55), (2, 40), (3, 5)]);
+    if (age < 30) return _weightedInt(rnd, const [(1, 25), (2, 50), (3, 22), (4, 3)]);
+    if (age < 40) return _weightedInt(rnd, const [(1, 12), (2, 45), (3, 30), (4, 11), (5, 2)]);
+    if (age < 55) return _weightedInt(rnd, const [(1, 8), (2, 38), (3, 32), (4, 16), (5, 5), (6, 1)]);
+    return _weightedInt(rnd, const [(1, 8), (2, 35), (3, 33), (4, 17), (5, 6), (6, 1)]);
+  }
+
+  /// Sonraki aralık: çoğunlukla aynı sınıf ya da bir üstü; lüks sınıflar ek zarla nadir.
+  static int _nextLevel(Random rnd, int prev, int age) {
+    final delta = age >= 70
+        ? _weightedInt(rnd, const [(-1, 30), (0, 60), (1, 10)])
+        : _weightedInt(rnd, const [(-1, 10), (0, 50), (1, 36), (2, 4)]);
+    var t = (prev + delta).clamp(1, 7);
+    if (t >= 6 && prev < 6 && rnd.nextDouble() > 0.30) t = 5; // lükse geçiş zor
+    if (t == 7 && prev < 7 && rnd.nextDouble() > 0.10) t = 6; // süper lüks çok nadir
+    return t;
+  }
+
+  /// Yıla göre yakıt çarpanı (EV payı zamanla artar).
+  static double _fuelFactor(String fuel, int year) {
+    final p = year < 2030 ? 0 : year < 2035 ? 1 : year < 2040 ? 2 : 3;
+    const t = {
+      'benzin': [1.0, 0.8, 0.45, 0.15],
+      'dizel': [0.8, 0.4, 0.15, 0.05],
+      'hibrit': [0.9, 1.1, 1.0, 0.6],
+      'elektrik': [0.45, 0.9, 1.5, 2.2],
+      'lpg': [0.3, 0.2, 0.1, 0.05],
+    };
+    return (t[fuel] ?? const [0.5, 0.5, 0.5, 0.5])[p];
+  }
+
+  static double _segmentFactor(String seg, int age, String gender, bool married) {
+    var x = 1.0;
+    switch (seg) {
+      case 'sehir':
+        if (age < 30 || gender == 'kadin') x *= 1.3;
+        if (married && age >= 30 && age < 50) x *= 0.8;
+      case 'mpv':
+        x *= (married && age >= 28 && age < 55) ? 1.4 : 0.6;
+      case 'suv_buyuk':
+        if (married) x *= 1.2;
+        if (age < 27) x *= 0.6;
+      case 'pickup':
+        x *= gender == 'erkek' ? 0.8 : 0.3;
+      case 'spor':
+        x *= age < 45 ? 0.6 : 0.4;
+      case 'ust_sedan':
+        if (age < 35) x *= 0.6;
+    }
+    return x;
   }
 
   static ArabaCar _pickCar(
     Random rnd,
     List<ArabaCar> pool,
-    String gender,
     Set<int> used, {
     required int target,
-    required int startYear,
-    required int offset,
+    required int year,
+    required int baseYear,
+    required int age,
+    required String gender,
+    required bool married,
   }) {
-    // Kategori: F (2040+) → elektrik → akaryakıt/hibrit
-    final pFuture = startYear < 2040 ? 0.0 : (offset >= 25 ? 0.25 : 0.12);
-    final pElectric = offset < 8 ? 0.03 : offset < 15 ? 0.12 : offset < 25 ? 0.35 : 0.65;
-    var cat = 'K';
-    final r = rnd.nextDouble();
-    if (r < pFuture && target <= 5) {
-      cat = 'F';
-    } else if (r < pFuture + pElectric) {
-      cat = 'E';
+    bool eligible(ArabaCar c) {
+      if (used.contains(c.id)) return false;
+      if (c.status == 'gelecek' && (c.fromYear ?? baseYear) > year) return false;
+      // Artık satılmayan model: yalnız ilk yıllarda, düşük sınıfta (ikinci el)
+      if (c.status == 'eski' && (year > baseYear + 4 || c.level > 2)) return false;
+      return true;
     }
 
-    List<ArabaCar> cands;
-    if (cat == 'F') {
-      cands = pool.where((c) => c.tier == 'F' && !used.contains(c.id)).toList();
-    } else if (cat == 'E') {
-      final e = (target - 2).clamp(1, 4);
-      cands = pool.where((c) => c.tier == 'E$e' && !used.contains(c.id)).toList();
-    } else {
-      var k = target;
-      // K7 (süper lüks) çok nadir ve yalnız ileri yıllarda
-      if (offset >= 15 && target >= 5 && rnd.nextDouble() < 0.025) k = 7;
-      cands = pool.where((c) => c.tier == 'K$k' && !used.contains(c.id)).toList();
+    // Hedef sınıfta aday yoksa en yakın sınıfa genişle (önce aşağı, sonra yukarı)
+    var cands = <ArabaCar>[];
+    for (final d in const [0, -1, 1, -2, 2, -3, 3]) {
+      final lv = target + d;
+      if (lv < 1 || lv > 7) continue;
+      cands = pool.where((c) => c.level == lv && eligible(c)).toList();
+      if (cands.isNotEmpty) break;
     }
-    if (cands.isEmpty) {
-      // Yedek: aynı seviyeli, kullanılmamış, F olmayan herhangi biri (F kuralı bozulmasın)
-      cands = pool.where((c) => !used.contains(c.id) && c.tier != 'F' && c.level == target).toList();
-      if (cands.isEmpty) cands = pool.where((c) => !used.contains(c.id) && c.tier != 'F').toList();
+    if (cands.isEmpty) cands = pool.where((c) => !used.contains(c.id)).toList();
+
+    final farFuture = year >= baseYear + 15;
+    double w(ArabaCar c) {
+      var x = pow(c.popularity.clamp(1, 10), 1.6).toDouble();
+      x *= _fuelFactor(c.fuel, year);
+      x *= _segmentFactor(c.segment, age, gender, married);
+      if (gender == 'kadin' || gender == 'erkek') {
+        if (c.lean == gender) x *= 1.6;
+        if (c.lean != 'notr' && c.lean != gender) x *= 0.6;
+      }
+      if (c.status == 'eski') x *= 0.6;
+      if (c.status == 'gelecek') x *= farFuture ? 1.8 : 1.2;
+      if (c.status == 'guncel' && year >= baseYear + 20) x *= 0.5; // çok uzak gelecekte bugünün modelleri azalır
+      return x;
     }
-    final want = gender == 'kadin' ? 'kadin' : gender == 'erkek' ? 'erkek' : '';
-    final weights = [for (final c in cands) (want.isNotEmpty && c.lean == want) ? 1.8 : 1.0];
+
+    final weights = [for (final c in cands) w(c)];
     final total = weights.fold<double>(0, (a, b) => a + b);
     var x = rnd.nextDouble() * total;
     for (var i = 0; i < cands.length; i++) {
@@ -299,6 +384,7 @@ class ArabaLabels {
         'dizel' => en ? 'Diesel' : 'Dizel',
         'hibrit' => en ? 'Hybrid' : 'Hibrit',
         'elektrik' => en ? 'Electric' : 'Elektrik',
+        'lpg' => 'LPG',
         'hidrojen' => en ? 'Hydrogen' : 'Hidrojen',
         _ => k,
       };

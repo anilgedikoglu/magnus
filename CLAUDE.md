@@ -5,7 +5,9 @@
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **main'deki sürüm: `10.8.7+261`** (2026-11-05 test build'i: Gece Grimuarı + kişisel verisiz yönetici kapısı).
+- **main'deki sürüm: `10.8.9+267`** (2026-11-05 test build'i: 4 yeni fal — Tavşan Falı, Kısmetim Kim?, Arabam Ne?,
+  Evim Neresi? — + serbest metin rüya yorumu (Claude Haiku) + açılış yasal bilgilendirmesi + her yerden kaydırarak geri).
+  Android Play Dahili test + iOS TestFlight (GitHub Actions). Ayrıntı → HANDOFF.md.
   Android: Play **Dahili test** kanalında (üretime/incelemeye GÖNDERİLMEDİ — Anıl: "geliştirmeye devam, yalnız test").
   iOS: Codemagic ödenmemiş fatura yüzünden KAPALI → **GitHub Actions** `.github/workflows/ios-testflight.yml`
   (elle tetiklenir, yalnız TestFlight'a yükler; secrets tanımlı). 261 bu yolla TestFlight'a yüklendi (~7 dk).
@@ -17,7 +19,7 @@
 - **10.8.8+264 (2026-11-05, iOS TestFlight GitHub Actions):** Anıl cihazda gördü → RENKLER ESKİ PALETE döndü
   (yapı kaldı), gövde fontları eski (Nunito/Raleway; başlıklar Cinzel), sol kenardan kaydır = geri (tüm iç sayfalar),
   gelen kutusu hep sağdan, Kullanıcı Bilgileri düzenleyicisi dairelerin YERİNDE (satır içi), siyah ekran düzeltmesi.
-- **Bir sonraki build: `10.8.9+267`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
+- **Bir sonraki build: `10.8.10+270`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).

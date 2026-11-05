@@ -1,8 +1,3 @@
-import '../../core/widgets/occult_cards.dart';
-import '../../core/widgets/glass_panel.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
-import '../../core/constants/app_text_styles.dart';
-import '../../core/constants/app_colors.dart';
 // Kaynak: C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu1\Numeroloji\Rapor
 // JSON:   assets/data/numeroloji.json
 //
@@ -22,6 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/utils/numeroloji_hesap.dart';
@@ -38,10 +34,14 @@ enum _RaporTur { genel, bugun, yil }
 
 extension _RaporTurExt on _RaporTur {
   String get jsonKey => ['genel', 'bugun', 'yil'][index];
-  // Inbox başlığı için (saklanan veri) TR sabit; ekran metni l10n: numLabel/numDesc
   String get label   => ['Genel Rapor', 'Bugüne Dair', 'Bu Yıla Dair'][index];
+  String get desc    => [
+    'Kalıcı sayılarınla oluşturulan kişilik raporu',
+    'Bugünün enerjisini şekillendiren sayılar',
+    'Bu yıl seni bekleyen döngüler ve fırsatlar',
+  ][index];
   IconData get icon  => [
-    Icons.auto_awesome_outlined,
+    Icons.auto_awesome,
     Icons.wb_sunny_outlined,
     Icons.calendar_today_outlined,
   ][index];
@@ -250,9 +250,28 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
         }
       },
       child: Scaffold(
-      backgroundColor: AppColors.ink,
+      backgroundColor: Colors.black,
       extendBody: true,
-      body: GrimoireBackdrop(asset: 'assets/images/numeroloji_bg.png', child: Column(
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/numeroloji_bg.png',
+              fit: BoxFit.cover,
+              filterQuality: FilterQuality.high,
+              errorBuilder: (_, __, ___) => Container(color: const Color(0xFF050020)),
+            ),
+          ),
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Color(0x88000000), Color(0xCC000000)],
+              ),
+            ),
+          ),
+          Column(
             children: [
               Padding(
                 padding: EdgeInsets.fromLTRB(12, topPad + 10, 12, 0),
@@ -284,7 +303,11 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
                       child: Center(
                         child: Text(
                           ref.watch(l10nProvider).numerologyTitle,
-                          style: AppTextStyles.screenTitle,
+                          style: GoogleFonts.cinzel(
+                            fontSize: 18, fontWeight: FontWeight.bold,
+                            color: Colors.white, letterSpacing: 4,
+                            shadows: const [Shadow(color: Color(0xAA6655FF), blurRadius: 14)],
+                          ),
                         ),
                       ),
                     ),
@@ -295,7 +318,9 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
               const SizedBox(height: 12),
               Expanded(child: _buildBody(bottomPad)),
             ],
-          )),
+          ),
+        ],
+      ),
       ),
     );
   }
@@ -303,7 +328,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
   Widget _buildBody(double bottomPad) {
     if (_json == null) {
       return const Center(child: CircularProgressIndicator(
-        color: AppColors.gold, strokeWidth: 2));
+        color: Color(0xFF9977FF), strokeWidth: 2));
     }
     if (_loading) return _buildLoading();
     if (_cachedMetin != null) return _buildSonuc(bottomPad);
@@ -317,12 +342,16 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const SpinningHourglass(size: 64, color: AppColors.gold),
+          const SpinningHourglass(size: 64, color: Color(0xFFBBAAFF)),
           const SizedBox(height: 24),
           Text(
             'Hesaplamalar başladı, lütfen bekle...',
             textAlign: TextAlign.center,
-            style: AppTextStyles.uiLabel,
+            style: GoogleFonts.cinzel(
+              fontSize: 15,
+              color: Colors.white.withValues(alpha: 0.80),
+              letterSpacing: 1.5,
+            ),
           ),
         ],
       ),
@@ -340,7 +369,10 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
           child: Text(
             ref.watch(l10nProvider).numReportPrompt,
             textAlign: TextAlign.center,
-            style: AppTextStyles.uiLabel,
+            style: GoogleFonts.cinzel(
+              fontSize: 15, color: Colors.white.withValues(alpha: 0.9),
+              letterSpacing: 1, height: 1.5,
+            ),
           ),
         ),
         const SizedBox(height: 24),
@@ -404,13 +436,87 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
          (tur == _RaporTur.yil   && _yilDone)  ||
          (tur == _RaporTur.bugun && _bugunDone));
 
-    return Padding(padding: const EdgeInsets.only(bottom:16),
-      child: Opacity(opacity: disabled ? 0.70 : 1, child: OccultListCard(
-        title: ref.watch(l10nProvider).numLabel(tur.index),
-        subtitle: locked ? ref.watch(l10nProvider).numPreparing : hasCached ? ref.watch(l10nProvider).numReadAgain : ref.watch(l10nProvider).numDesc(tur.index),
-        glyph: (color, size) => Icon(disabled ? Icons.block_outlined : tur.icon, color: color, size: size),
-        onTap: disabled ? null : () => _onTur(tur),
-      )),
+    return GestureDetector(
+      onTap: disabled ? null : () => _onTur(tur),
+      child: Opacity(
+        opacity: disabled ? 0.70 : 1.0,
+        child: Container(
+          margin: const EdgeInsets.only(bottom: 16),
+          padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
+          decoration: BoxDecoration(
+            color: Colors.black.withValues(alpha: disabled ? 0.30 : 0.50),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: const Color(0xFF9977FF).withValues(alpha: disabled ? 0.20 : 0.50),
+              width: 1.2,
+            ),
+            boxShadow: disabled ? [] : [
+              BoxShadow(
+                color: const Color(0xFF6644FF).withValues(alpha: 0.15),
+                blurRadius: 18, spreadRadius: 1,
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              Container(
+                width: 48, height: 48,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF6644FF).withValues(alpha: disabled ? 0.10 : 0.20),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: const Color(0xFF9977FF).withValues(alpha: 0.40)),
+                ),
+                child: Icon(tur.icon,
+                  color: disabled
+                    ? const Color(0xFF9977FF).withValues(alpha: 0.40)
+                    : const Color(0xFFBBAAFF),
+                  size: 22),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      ref.watch(l10nProvider).numLabel(tur.index),
+                      style: GoogleFonts.cinzel(
+                        fontSize: 15, fontWeight: FontWeight.bold,
+                        color: disabled ? Colors.white38 : Colors.white,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      locked
+                        ? ref.watch(l10nProvider).numPreparing
+                        : hasCached
+                          ? ref.watch(l10nProvider).numReadAgain
+                          : ref.watch(l10nProvider).numDesc(tur.index),
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: disabled
+                          ? Colors.white24
+                          : hasCached
+                            ? const Color(0xFFBBAAFF)
+                            : Colors.white.withValues(alpha: 0.60),
+                        height: 1.4,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(
+                disabled ? Icons.block_rounded : Icons.chevron_right_rounded,
+                color: disabled
+                  ? Colors.white24
+                  : const Color(0xFF9977FF).withValues(alpha: 0.70),
+                size: 22,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
@@ -425,17 +531,30 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
             margin: const EdgeInsets.only(bottom: 16),
             padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 7),
             decoration: BoxDecoration(
-              color: AppColors.gold.withValues(alpha: 0.12),
+              color: const Color(0xFF6644FF).withValues(alpha: 0.20),
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: AppColors.gold.withValues(alpha: 0.50), width: 0.8),
+              border: Border.all(color: const Color(0xFF9977FF).withValues(alpha: 0.50)),
             ),
             child: Text(
               ref.watch(l10nProvider).numLabel(_secilen!.index),
-              style: AppTextStyles.uiLabel,
+              style: GoogleFonts.cinzel(
+                fontSize: 13, color: const Color(0xFFBBAAFF), letterSpacing: 2),
             ),
           ),
         ),
-        GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(18), child: RichTextParser.build(_cachedMetin ?? '', style: AppTextStyles.reading)),
+        Container(
+          padding: const EdgeInsets.fromLTRB(18, 18, 18, 18),
+          decoration: BoxDecoration(
+            color: Colors.black.withValues(alpha: 0.55),
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              color: const Color(0xFF9977FF).withValues(alpha: 0.35), width: 1),
+          ),
+          child: RichTextParser.build(
+            _cachedMetin ?? '',
+            style: const TextStyle(color: Colors.white, fontSize: 14, height: 1.80),
+          ),
+        ),
         const SizedBox(height: 24),
         GestureDetector(
           onTap: () => setState(() { _secilen = null; _cachedMetin = null; }),

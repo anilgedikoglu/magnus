@@ -14,15 +14,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/constants/app_text_styles.dart';
-import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
-import '../../core/widgets/glass_panel.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
-import '../../core/widgets/occult_button.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
@@ -162,21 +157,48 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
     return SwipeBack(
       onSwipeBack: () => context.pop(),
       child: Scaffold(
-      backgroundColor: AppColors.ink,
+      backgroundColor: Colors.black,
       extendBody: true,
-      body: GrimoireBackdrop(
-        asset: _bgPath,
-        child: _loading
-            ? const Center(
-                child: CircularProgressIndicator(
-                  color: AppColors.gold,
-                  strokeWidth: 2,
-                ),
-              )
-            : FadeTransition(
-                opacity: _fadeAnim,
-                child: _buildContent(topPad, bottomPad),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // ── Arka plan ────────────────────────────────────────────────────
+          if (_bgPath != null)
+            Image.asset(
+              _bgPath!,
+              fit: BoxFit.cover,
+              alignment: Alignment.center,
+              filterQuality: FilterQuality.high,
+              errorBuilder: (_, __, ___) =>
+                  Container(color: const Color(0xFF0D0A20)),
+            ),
+          // ── Koyu overlay ─────────────────────────────────────────────────
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xAA000000), // üst %67
+                  Color(0x44000000), // orta %27
+                  Color(0xAA000000), // alt %67
+                ],
               ),
+            ),
+          ),
+          // ── İçerik ───────────────────────────────────────────────────────
+          _loading
+              ? const Center(
+                  child: CircularProgressIndicator(
+                    color: Color(0xFFBB88FF),
+                    strokeWidth: 2,
+                  ),
+                )
+              : FadeTransition(
+                  opacity: _fadeAnim,
+                  child: _buildContent(topPad, bottomPad),
+                ),
+        ],
       ),
       ),
     );
@@ -231,13 +253,14 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                 child: Container(
                   width: 38, height: 38,
                   decoration: BoxDecoration(
-                    color: AppColors.glassTint,
+                    color: Colors.white.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: AppColors.rim, width: 0.9),
+                    border: Border.all(
+                      color: Colors.white.withValues(alpha: 0.25), width: 1),
                   ),
                   child: const Icon(
                     Icons.arrow_back_ios_new_rounded,
-                    color: AppColors.bone,
+                    color: Colors.white,
                     size: 18,
                   ),
                 ),
@@ -246,7 +269,15 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                 child: Center(
                   child: Text(
                     s.motivationTitle,
-                    style: AppTextStyles.screenTitle,
+                    style: GoogleFonts.cinzel(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 4,
+                      shadows: const [
+                        Shadow(color: Color(0xAABB88FF), blurRadius: 14),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -262,28 +293,42 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
               child: ConstrainedBox(
                 constraints: BoxConstraints(minHeight: constraints.maxHeight - 36),
                 child: Center(
-                  child: GlassPanel(
-                    variant: GlassVariant.reading,
+                  child: Container(
+                    width: double.infinity,
                     padding: const EdgeInsets.fromLTRB(24, 22, 24, 22),
-                    child: SizedBox(
-                      width: double.infinity,
-                      child: Column(
-                        children: [
-                          const Icon(Icons.auto_awesome_outlined,
-                              color: AppColors.gold, size: 30),
-                          const SizedBox(height: 20),
-                          RichTextParser.build(
-                            text,
-                            textAlign: TextAlign.center,
-                            style: AppTextStyles.reading.copyWith(
-                              fontSize: text.length > 300 ? 15 : (text.length > 150 ? 16 : 18),
-                              height: 1.7,
-                            ),
-                          ),
-                        ],
-                      ),
+              decoration: BoxDecoration(
+                color: Colors.black.withValues(alpha: 0.45),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: Colors.white.withValues(alpha: 0.18),
+                  width: 1.2,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.35),
+                    blurRadius: 24,
+                    spreadRadius: 2,
+                  ),
+                ],
+              ),
+              child: Column(
+                children: [
+                  const Text('💫', style: TextStyle(fontSize: 36)),
+                  const SizedBox(height: 20),
+                  Text(
+                    text,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: text.length > 300 ? 13 : (text.length > 150 ? 15 : 17),
+                      height: 1.75,
+                      fontWeight: FontWeight.w300,
+                      letterSpacing: 0.3,
                     ),
-                  ),  // GlassPanel
+                  ),
+                ],
+              ),  // Column
+                    ),  // Container
                   ),  // Center
                 ),  // ConstrainedBox
               ),  // SingleChildScrollView → builder sonucu
@@ -301,7 +346,18 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                     child: Center(
                       child: Text(
                         s.savedToInbox,
-                        style: AppTextStyles.uiLabel.copyWith(color: AppColors.gold),
+                        style: TextStyle(
+                          color: const Color(0xFFBB88FF).withValues(alpha: 0.9),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 0.3,
+                          shadows: [
+                            Shadow(
+                              color: const Color(0xFFBB88FF).withValues(alpha: 0.6),
+                              blurRadius: 10,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   )
@@ -348,12 +404,37 @@ class _MotivationScreenState extends ConsumerState<MotivationScreen>
                         const SizedBox(width: 12),
                         // Kaydet
                         Expanded(
-                          child: Opacity(
-                            opacity: _zatenKaydedildi ? 0.35 : 1.0,
-                            child: OccultButton(
-                              label: s.save,
-                              onTap: _zatenKaydedildi ? null : () => _kaydet(text),
+                          child: GestureDetector(
+                            onTap: _zatenKaydedildi ? null : () => _kaydet(text),
+                            child: Opacity(
+                              opacity: _zatenKaydedildi ? 0.35 : 1.0,
+                              child: Container(
+                              height: 52,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                  colors: [Color(0xFF8B44FF), Color(0xFFBB66FF)],
+                                ),
+                                borderRadius: BorderRadius.circular(14),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color(0xFF8B44FF).withValues(alpha: 0.4),
+                                    blurRadius: 12,
+                                    spreadRadius: 1,
+                                  ),
+                                ],
+                              ),
+                              child: Center(
+                                child: Text(
+                                  s.save,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
                             ),
+                            ),  // Opacity
                           ),
                         ),
                       ],

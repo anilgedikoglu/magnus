@@ -21,14 +21,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../core/constants/app_colors.dart';
-import '../../core/constants/app_text_styles.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
-import '../../core/widgets/occult_glyphs.dart';
-import '../../core/widgets/glass_panel.dart';
-import '../../core/widgets/occult_button.dart';
-import '../../core/widgets/occult_cards.dart';
-import '../../core/widgets/filmed_image.dart';
-
 import '../../core/l10n/app_strings.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/swipe_back.dart';
@@ -52,7 +44,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   bool _sending = false;
 
   // ── Fal konusu ──────────────────────────────────────────────────────────
-  String? _falKonusu; // null = henüz seçilmedi (konu ekranı gösterilir)
+  String? _falKonusu;   // null = henüz seçilmedi (konu ekranı gösterilir)
 
   static const _fincanImages = [
     'assets/images/kahve/Fincan1.png',
@@ -76,16 +68,16 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     setState(() {
       _mode = mode;
       _photos.fillRange(0, 3, null);
-      _fincanImage =
-          mode == _InputMode.yerimeIc
-              ? _fincanImages[Random().nextInt(_fincanImages.length)]
-              : null;
+      _fincanImage = mode == _InputMode.yerimeIc
+          ? _fincanImages[Random().nextInt(_fincanImages.length)]
+          : null;
     });
   }
 
   Future<void> _pickPhoto(int index) async {
-    final source =
-        _mode == _InputMode.fotoCek ? ImageSource.camera : ImageSource.gallery;
+    final source = _mode == _InputMode.fotoCek
+        ? ImageSource.camera
+        : ImageSource.gallery;
     final image = await _picker.pickImage(
       source: source,
       imageQuality: 85,
@@ -103,17 +95,14 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     final profile = ref.read(userProfileProvider);
     final inboxNotifier = ref.read(inboxProvider.notifier);
 
-    fortuneService
-        .generateCoffeeFortune(
-          profile: profile,
-          photoPath1: _photos[0],
-          photoPath2: _photos[1],
-          photoPath3: _photos[2],
-          falKonusu: _falKonusu ?? 'genel',
-          locale: ref.read(localeProvider),
-        )
-        .then((item) => inboxNotifier.addItem(item))
-        .catchError((_) {});
+    fortuneService.generateCoffeeFortune(
+      profile: profile,
+      photoPath1: _photos[0],
+      photoPath2: _photos[1],
+      photoPath3: _photos[2],
+      falKonusu: _falKonusu ?? 'genel',
+      locale: ref.read(localeProvider),
+    ).then((item) => inboxNotifier.addItem(item)).catchError((_) {});
 
     // 4 saniye fincanın altında kum saati göster
     if (!mounted) return;
@@ -130,130 +119,150 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     final s = ref.watch(l10nProvider);
     return SwipeBack(
       // Konu seçim ekranında soldan sağa swipe → ana menü
-      onSwipeBack: () {
-        if (_falKonusu == null) context.pop();
-      },
+      onSwipeBack: () { if (_falKonusu == null) context.pop(); },
       child: Scaffold(
-        backgroundColor: AppColors.ink,
-        body: GrimoireBackdrop(child: SafeArea(
-          child: Column(
-            children: [
-              _buildTopBar(context, s),
-              // ── Konu seçilmemişse konu ekranını göster ──────────────────
-              if (_falKonusu == null) ...[
-                Expanded(child: _buildKonuSecim(s)),
-              ] else ...[
-                Expanded(
-                  child:
-                      _mode == _InputMode.none
-                          ? Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              _buildSubtitle(s),
-                              const SizedBox(height: 24),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 20,
-                                ),
-                                child: _buildOptionRow(context, s),
-                              ),
+      backgroundColor: AppColors.background,
+      body: SafeArea(
+        child: Column(
+          children: [
+            _buildTopBar(context, s),
+            // ── Konu seçilmemişse konu ekranını göster ──────────────────
+            if (_falKonusu == null) ...[
+              Expanded(child: _buildKonuSecim(s)),
+            ] else ...[
+            Expanded(
+              child: _mode == _InputMode.none
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        _buildSubtitle(s),
+                        const SizedBox(height: 24),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: _buildOptionRow(context, s),
+                        ),
+                      ],
+                    )
+                  : SingleChildScrollView(
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      child: Column(
+                        children: [
+                          _buildSubtitle(s),
+                          const SizedBox(height: 24),
+                          _buildOptionRow(context, s),
+                          if (_mode == _InputMode.fotoCek ||
+                              _mode == _InputMode.dosyadan) ...[
+                            const SizedBox(height: 28),
+                            _buildPhotoSlots(),
+                            if (_sending) ...[
+                              const SizedBox(height: 28),
+                              _buildSendingIndicator(),
                             ],
-                          )
-                          : SingleChildScrollView(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 20,
-                            ),
-                            child: Column(
-                              children: [
-                                _buildSubtitle(s),
-                                const SizedBox(height: 24),
-                                _buildOptionRow(context, s),
-                                if (_mode == _InputMode.fotoCek ||
-                                    _mode == _InputMode.dosyadan) ...[
-                                  const SizedBox(height: 28),
-                                  _buildPhotoSlots(),
-                                  if (_sending) ...[
-                                    const SizedBox(height: 28),
-                                    _buildSendingIndicator(),
-                                  ],
-                                ] else if (_mode == _InputMode.yerimeIc &&
-                                    _fincanImage != null) ...[
-                                  const SizedBox(height: 28),
-                                  _buildFincanImage(),
-                                  if (_sending) ...[
-                                    const SizedBox(height: 28),
-                                    _buildSendingIndicator(),
-                                  ],
-                                ],
-                              ],
-                            ),
-                          ),
-                ),
-                if (_falKonusu != null) _buildSendButton(),
-              ], // end else
-            ],
-          ),
-        )),
+                          ] else if (_mode == _InputMode.yerimeIc &&
+                              _fincanImage != null) ...[
+                            const SizedBox(height: 28),
+                            _buildFincanImage(),
+                            if (_sending) ...[
+                              const SizedBox(height: 28),
+                              _buildSendingIndicator(),
+                            ],
+                          ],
+                        ],
+                      ),
+                    ),
+            ),
+            if (_falKonusu != null) _buildSendButton(),
+            ], // end else
+          ],
+        ),
+      ),
       ),
     );
   }
 
   // ── Konu seçim ekranı (2x2 grid) ────────────────────────────────────────
-  // Yeni glif seti geldiğinde yalnız bu eşlemeyi değiştir.
-  // Gece Grimuarı okült çizgi glifleri (lib/core/widgets/occult_glyphs.dart).
-  GlyphBuilder _konuGlyph(String konu) {
-    final g = switch (konu) {
-      'ask' => OccultGlyph.heart,
-      'kariyer' => OccultGlyph.key,
-      'saglik' => OccultGlyph.sprig,
-      _ => OccultGlyph.eye,
-    };
-    return (c, s) => OccultGlyphIcon(g, color: c, size: s);
-  }
-
   Widget _buildKonuSecim(AppStrings s) {
+    // (key, ikonDosya, etiket)
     final konular = [
-      ('genel', s.general),
-      ('ask', s.love),
-      ('kariyer', s.career),
-      ('saglik', s.health),
+      ('genel',   'assets/images/fal_konu/fgenel.png',   s.general),
+      ('ask',     'assets/images/fal_konu/fask.png',     s.love),
+      ('kariyer', 'assets/images/fal_konu/fkariyer.png', s.career),
+      ('saglik',  'assets/images/fal_konu/fsaglik.png',  s.health),
     ];
-    return LayoutBuilder(
-      builder:
-          (context, box) => SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                minHeight: max(0, box.maxHeight - 40),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  OccultSectionLabel(s.fortuneSubject),
-                  const SizedBox(height: 28),
-                  GridView.count(
-                    crossAxisCount: 2,
-                    shrinkWrap: true,
-                    crossAxisSpacing: 16,
-                    mainAxisSpacing: 16,
-                    childAspectRatio: 1.05,
-                    physics: const NeverScrollableScrollPhysics(),
-                    children:
-                        konular
-                            .map(
-                              (k) => OccultChoiceTile(
-                                label: k.$2,
-                                glyph: _konuGlyph(k.$1),
-                                onTap: () => setState(() => _falKonusu = k.$1),
-                              ),
-                            )
-                            .toList(),
-                  ),
-                ],
-              ),
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            s.fortuneSubject,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
             ),
           ),
+          const SizedBox(height: 28),
+          GridView.count(
+            crossAxisCount: 2,
+            shrinkWrap: true,
+            crossAxisSpacing: 16,
+            mainAxisSpacing: 8,
+            // Kare kutu + alt etiket (~22px) için oran
+            childAspectRatio: 0.85,
+            physics: const NeverScrollableScrollPhysics(),
+            children: konular.map((k) {
+              final (key, iconPath, label) = k;
+              return GestureDetector(
+                onTap: () => setState(() => _falKonusu = key),
+                child: Column(
+                  children: [
+                    // Kare kutu
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [Color(0xFF1A0A2E), Color(0xFF2D1255)],
+                          ),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: const Color(0xFF9B3FCC),
+                            width: 1.5,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(14),
+                          child: Image.asset(
+                            iconPath,
+                            fit: BoxFit.contain,
+                            filterQuality: FilterQuality.high,
+                          ),
+                        ),
+                      ),
+                    ),
+                    // Etiket — kutunun altında
+                    const SizedBox(height: 8),
+                    Text(
+                      label,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        shadows: [
+                          Shadow(color: Colors.black54, blurRadius: 4),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }).toList(),
+          ),
+        ],
+      ),
     );
   }
 
@@ -263,18 +272,20 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       child: Row(
         children: [
           IconButton(
-            icon: const Icon(
-              Icons.arrow_back_ios_new_rounded,
-              color: AppColors.boneDim,
-              size: 20,
-            ),
+            icon: const Icon(Icons.arrow_back_ios_new_rounded,
+                color: Colors.white70, size: 20),
             onPressed: () => context.pop(),
           ),
           Expanded(
             child: Text(
               s.coffeeTitle,
               textAlign: TextAlign.center,
-              style: AppTextStyles.screenTitle,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2,
+              ),
             ),
           ),
           const SizedBox(width: 48),
@@ -284,7 +295,11 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   }
 
   Widget _buildSubtitle(AppStrings s) {
-    return Center(child: OccultSectionLabel(s.howToSend));
+    return Text(
+      s.howToSend,
+      textAlign: TextAlign.center,
+      style: TextStyle(color: Colors.white54, fontSize: 14),
+    );
   }
 
   Widget _buildOptionRow(BuildContext context, AppStrings s) {
@@ -331,49 +346,61 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
               aspectRatio: 1,
               child: GestureDetector(
                 onTap: () => _pickPhoto(i),
-                child: GlassPanel(
-                  selected: photo != null,
-                  child:
-                      photo != null
-                          ? Stack(
-                            fit: StackFit.expand,
-                            children: [
-                              Image.file(File(photo), fit: BoxFit.cover),
-                              // Numara rozeti
-                              Positioned(
-                                top: 6,
-                                left: 6,
-                                child: Container(
-                                  width: 22,
-                                  height: 22,
-                                  decoration: const BoxDecoration(
-                                    color: AppColors.gold,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      '${i + 1}',
-                                      style: const TextStyle(
-                                        color: AppColors.bone,
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 220),
+                  decoration: BoxDecoration(
+                    color: photo != null
+                        ? Colors.transparent
+                        : const Color(0xFF13122A),
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: photo != null
+                          ? AppColors.glowGreen.withValues(alpha: 0.8)
+                          : Colors.white24,
+                      width: photo != null ? 2 : 1,
+                    ),
+                  ),
+                  clipBehavior: Clip.antiAlias,
+                  child: photo != null
+                      ? Stack(
+                          fit: StackFit.expand,
+                          children: [
+                            Image.file(File(photo), fit: BoxFit.cover),
+                            // Numara rozeti
+                            Positioned(
+                              top: 6,
+                              left: 6,
+                              child: Container(
+                                width: 22,
+                                height: 22,
+                                decoration: const BoxDecoration(
+                                  color: AppColors.glowGreen,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '${i + 1}',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ),
                               ),
-                            ],
-                          )
-                          : Center(
-                            child: Text(
-                              '${i + 1}',
-                              style: const TextStyle(
-                                color: AppColors.ash,
-                                fontSize: 32,
-                                fontWeight: FontWeight.w200,
-                              ),
+                            ),
+                          ],
+                        )
+                      : Center(
+                          child: Text(
+                            '${i + 1}',
+                            style: const TextStyle(
+                              color: Colors.white30,
+                              fontSize: 32,
+                              fontWeight: FontWeight.w200,
                             ),
                           ),
+                        ),
                 ),
               ),
             ),
@@ -385,12 +412,15 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
 
   Widget _buildFincanImage() {
     return Center(
-      child: SizedBox(
+      child: Container(
         width: 220,
         height: 220,
-        child: GlassPanel(
-          child: FilmedImage(_fincanImage!, fit: BoxFit.contain),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: Colors.white12),
         ),
+        clipBehavior: Clip.antiAlias,
+        child: Image.asset(_fincanImage!, fit: BoxFit.contain),
       ),
     );
   }
@@ -405,7 +435,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
         Text(
           s.sending,
           style: const TextStyle(
-            color: AppColors.gold,
+            color: Color(0xFFB8E0FF),
             fontSize: 15,
             fontWeight: FontWeight.w500,
           ),
@@ -418,15 +448,14 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
       decoration: const BoxDecoration(
-        color: AppColors.inkSurface,
-        border: Border(top: BorderSide(color: AppColors.rim)),
+        color: Color(0xFF0D0D1A),
+        border: Border(top: BorderSide(color: Colors.white12)),
       ),
       child: SizedBox(
         width: double.infinity,
-        child:
-            _mode == _InputMode.none
-                ? _buildGeriGitButton()
-                : _buildFalGonderButton(),
+        child: _mode == _InputMode.none
+            ? _buildGeriGitButton()
+            : _buildFalGonderButton(),
       ),
     );
   }
@@ -439,18 +468,14 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
         height: 54,
         decoration: BoxDecoration(
           color: Colors.white.withValues(alpha: 0.10),
-          borderRadius: BorderRadius.circular(23),
+          borderRadius: BorderRadius.circular(27),
           border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
         ),
         child: Center(
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(
-                Icons.chevron_left_rounded,
-                color: Colors.white,
-                size: 20,
-              ),
+              const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
               const SizedBox(width: 2),
               Text(
                 s.backButton,
@@ -469,8 +494,8 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
 
   Widget _buildFalGonderButton() {
     final s = ref.read(l10nProvider);
-    final isPhotoMode =
-        _mode == _InputMode.fotoCek || _mode == _InputMode.dosyadan;
+    final isPhotoMode = _mode == _InputMode.fotoCek ||
+        _mode == _InputMode.dosyadan;
     final String label;
     if (_kontrolEdiliyor) {
       label = s.checkingPhotos;
@@ -483,7 +508,95 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     }
     final bool active = _canSend && !_kontrolEdiliyor;
 
-    return OccultButton(label: label, onTap: active ? _sendFortune : null);
+    return AnimatedOpacity(
+      duration: const Duration(milliseconds: 300),
+      opacity: active ? 1.0 : 0.35,
+      child: GestureDetector(
+        onTap: active ? _sendFortune : null,
+        child: Container(
+          height: 54,
+          decoration: BoxDecoration(
+            gradient: active
+                ? const LinearGradient(
+                    colors: [Color(0xFF6B3FA0), Color(0xFF9C6FD6)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  )
+                : null,
+            color: active ? null : Colors.white12,
+            borderRadius: BorderRadius.circular(27),
+            boxShadow: _canSend
+                ? [
+                    BoxShadow(
+                      color: const Color(0xFF7B4FBF).withValues(alpha: 0.5),
+                      blurRadius: 16,
+                      offset: const Offset(0, 4),
+                    ),
+                  ]
+                : null,
+          ),
+          child: Center(
+            child: Text(
+              label,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 0.5,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ── Gönderiliyor overlay — 4 saniyelik kum saati ─────────────────────────────
+class _SendingOverlay extends StatefulWidget {
+  const _SendingOverlay();
+
+  @override
+  State<_SendingOverlay> createState() => _SendingOverlayState();
+}
+
+class _SendingOverlayState extends State<_SendingOverlay> {
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer(const Duration(seconds: 4), () {
+      if (mounted) Navigator.of(context).pop();
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _PulsingHourglass(),
+          SizedBox(height: 16),
+          const Text(
+            'Your reading is being sent...',
+            style: TextStyle(
+              color: Color(0xFFB8E0FF),
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              decoration: TextDecoration.none,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
@@ -498,12 +611,12 @@ class _PulsingHourglass extends StatefulWidget {
 class _PulsingHourglassState extends State<_PulsingHourglass> {
   @override
   Widget build(BuildContext context) {
-    return const PulsingHourglass(size: 48, color: AppColors.gold);
+    return const PulsingHourglass(size: 48, color: Color(0xFFB8E0FF));
   }
 }
 
 // ── Yöntem seçim butonu ───────────────────────────────────────────────────────
-// Cam seçim karosu; yöntemler çizgi gliflerle gösterilir.
+// Görsel çerçeveyi kenarlarına kadar doldurur; etiket altta gradient overlay içinde.
 class _OptionButton extends StatelessWidget {
   final String imageAsset;
   final String label;
@@ -521,23 +634,80 @@ class _OptionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: size,
-      height: size,
-      child: OccultChoiceTile(
-        label: label,
-        selected: selected,
-        onTap: onTap,
-        glyph:
-            (c, s) => Icon(
-              imageAsset.endsWith('camera.png')
-                  ? Icons.camera_alt_outlined
-                  : imageAsset.endsWith('file.png')
-                  ? Icons.photo_library_outlined
-                  : Icons.coffee_outlined,
-              color: c,
-              size: s,
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: selected ? const Color(0xFF9C6FD6) : Colors.white24,
+            width: selected ? 2 : 1,
+          ),
+          boxShadow: selected
+              ? [
+                  BoxShadow(
+                    color: const Color(0xFF7B4FBF).withValues(alpha: 0.45),
+                    blurRadius: 18,
+                    spreadRadius: 2,
+                  ),
+                ]
+              : null,
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            // Görsel — çerçeveyi tam doldurur
+            Image.asset(
+              imageAsset,
+              fit: BoxFit.cover,
+              errorBuilder: (_, __, ___) => const ColoredBox(
+                color: Color(0xFF13122A),
+                child: Icon(Icons.image_not_supported,
+                    color: Colors.white38, size: 40),
+              ),
             ),
+            // Seçili olunca hafif mor tint
+            if (selected)
+              Container(
+                color: const Color(0xFF6B3FA0).withValues(alpha: 0.25),
+              ),
+            // Etiket: alta yapışık, gradient arka plan
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    colors: [
+                      Colors.black.withValues(alpha: 0.82),
+                      Colors.transparent,
+                    ],
+                  ),
+                ),
+                child: Text(
+                  label,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: selected ? Colors.white : Colors.white70,
+                    fontSize: 13,
+                    fontWeight:
+                        selected ? FontWeight.w700 : FontWeight.w500,
+                    letterSpacing: 0.3,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

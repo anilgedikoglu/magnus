@@ -1,4 +1,3 @@
-import '../../core/widgets/grimoire_backdrop.dart';
 // ── AI NOTU: single_tarot_screen.dart ────────────────────────────────────────
 // Tek kartlı tarot ekranı. 3 tür: 'ask' (Aşk), 'dilek' (Dilek), 'sans' (Şans).
 // TarotTypeScreen'den type parametresiyle açılır: SingleTarotScreen(type: 'ask')
@@ -407,11 +406,10 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
   Widget build(BuildContext context) {
     _s = ref.watch(l10nProvider);
     return Scaffold(
-      backgroundColor: AppColors.ink,
-      extendBodyBehindAppBar: true,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: Text(_title, style: AppTextStyles.screenTitle),
+        backgroundColor: AppColors.navBarBackground,
+        title: Text(_title),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new_rounded,
@@ -420,7 +418,7 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
           onPressed: _selectedIndex == null ? () => context.pop() : null,
         ),
       ),
-      body: GrimoireBackdrop(child: Padding(padding: EdgeInsets.only(top: MediaQuery.paddingOf(context).top + kToolbarHeight, bottom: MediaQuery.paddingOf(context).bottom), child: PopScope(
+      body: PopScope(
         canPop: _selectedIndex == null,
         child: Column(
           children: [
@@ -435,7 +433,7 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen> {
             const SizedBox(height: 24),
           ],
         ),
-      ))),
+      ),
     );
   }
 

@@ -24,9 +24,7 @@
 // toVariableMap() → VariableReplacer için tüm alanları string map'e çevirir.
 // Türkçe çekim ekleri (_dative, _accusative, _ablative, _diminutive) bu dosyada.
 //
-// Admin koşulu (settings_screen.dart'ta):
-//   name≈'Anıl' && maritalStatus='evli' && birthDate='1983-10-14'
-//   && job='kamusektoru' && zodiacSign='Terazi' && birthTime='13:30' && birthCity='Ankara'
+// Yönetici kapısı: lib/core/utils/admin_gate.dart (kişisel veri içermez).
 // ─────────────────────────────────────────────────────────────────────────────
 import 'package:hive_flutter/hive_flutter.dart';
 import '../../core/utils/zodiac_calculator.dart';

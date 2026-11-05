@@ -1,13 +1,8 @@
 // C:/src/magnus_app/lib/presentation/kehanet/niyet_screen.dart
 // Niyet Falı — kazı-kazan tarzı metin açma ekranı
 
-import '../../core/constants/app_colors.dart';
-import '../../core/widgets/edge_swipe_back.dart';
-import '../../core/constants/app_text_styles.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
-import '../../core/widgets/glass_panel.dart';
-import '../../core/utils/rich_text_parser.dart';
 import 'dart:convert';
+import '../../core/widgets/edge_swipe_back.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -170,8 +165,8 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.ink,
-      body: GrimoireBackdrop(child: SafeArea(
+      backgroundColor: const Color(0xFF0A0718),
+      body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -180,12 +175,13 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: Row(children: [
                 IconButton(
-                  icon: const Icon(Icons.arrow_back_ios, color: AppColors.bone),
+                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                   onPressed: () => context.pop(),
                 ),
                 Expanded(child: Text(ref.watch(l10nProvider).intentionTitle,
                   textAlign: TextAlign.center,
-                  style: AppTextStyles.screenTitle)),
+                  style: const TextStyle(color: Colors.white, fontSize: 20,
+                      fontWeight: FontWeight.bold, letterSpacing: 1.2))),
                 const SizedBox(width: 48),
               ]),
             ),
@@ -193,7 +189,7 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
             // ── İçerik ──────────────────────────────────────────────────────
             if (_adim == _NiyetAdim.yukleniyor)
               const Expanded(child: Center(
-                child: CircularProgressIndicator(color: AppColors.gold))),
+                child: CircularProgressIndicator(color: Color(0xFFFF55FF)))),
 
             if (_adim != _NiyetAdim.yukleniyor) ...[
               // Kazı-kazan kutusu
@@ -256,12 +252,12 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Icon(Icons.touch_app_outlined, color: AppColors.gold, size: 20),
+                                  const Text('☝️', style: TextStyle(fontSize: 20)),
                                   const SizedBox(width: 8),
                                   Text(
                                     'Parmağınla niyetini kazı!',
                                     style: TextStyle(
-                                      color: AppColors.bone.withValues(alpha: 0.75),
+                                      color: Colors.white.withValues(alpha: 0.75),
                                       fontSize: 15,
                                       letterSpacing: 0.3,
                                     ),
@@ -276,13 +272,13 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
             ],
           ],
         ),
-      )),
+      ),
     );
   }
 
   // ── Kazıma ilerlemesine göre kenarlık/glow rengi ──────────────────────────
   Color _scratchGlowColor() {
-    if (_adim == _NiyetAdim.tamamlandi) return AppColors.gold;
+    if (_adim == _NiyetAdim.tamamlandi) return const Color(0xFF00FF88);
     final t = (_scratchPct / 0.40).clamp(0.0, 1.0);
     if (t < 0.5) {
       // loş kırmızı → parlak kırmızı
@@ -307,18 +303,18 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
         borderRadius: BorderRadius.circular(18),
         border: Border.all(
           color: glowColor.withValues(alpha: 0.25 + intensity * 0.65),
-          width: 0.8,
+          width: 1.5,
         ),
         boxShadow: [
           // İç halka — yoğun, dar
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.12),
+            color: glowColor.withValues(alpha: 0.20 + intensity * 0.45),
             blurRadius: 4 + intensity * 10,
             spreadRadius: intensity * 2,
           ),
           // Dış halo — kısa mesafeli, yumuşak
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.12),
+            color: glowColor.withValues(alpha: 0.08 + intensity * 0.18),
             blurRadius: 8 + intensity * 12,
             spreadRadius: intensity * 2,
           ),
@@ -333,7 +329,7 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
             Container(
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [AppColors.inkRaised, AppColors.inkRaised],
+                  colors: [Color(0xFF12063A), Color(0xFF1E0A4A)],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
@@ -341,7 +337,16 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(28.0),
-                  child: GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(18), child: RichTextParser.build(_metin, style: AppTextStyles.reading)),
+                  child: Text(
+                    _metin,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      height: 1.8,
+                      letterSpacing: 0.3,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -390,7 +395,7 @@ class _ScratchPainter extends CustomPainter {
     // saveLayer: BlendMode.clear'ın doğru çalışması için ayrı katman gerekli
     canvas.saveLayer(
       Offset.zero & size,
-      Paint()..color = AppColors.bone.withValues(alpha: coverOpacity),
+      Paint()..color = Colors.white.withValues(alpha: coverOpacity),
     );
 
     final rect = RRect.fromRectAndRadius(
@@ -398,11 +403,11 @@ class _ScratchPainter extends CustomPainter {
 
     // ── Koyu mor zemin ─────────────────────────────────────────────────────
     canvas.drawRRect(rect,
-        Paint()..color = AppColors.inkRaised);
+        Paint()..color = const Color(0xFF2D1060));
 
     // ── Dekoratif altın nokta deseni ──────────────────────────────────────
     final dotPaint = Paint()
-      ..color = AppColors.gold.withValues(alpha: 0.18)
+      ..color = const Color(0xFFD4AF37).withValues(alpha: 0.18)
       ..style = PaintingStyle.fill;
     const spacing = 28.0;
     for (double x = spacing; x < size.width - 4; x += spacing) {
@@ -415,7 +420,7 @@ class _ScratchPainter extends CustomPainter {
     final centerGlow = Paint()
       ..shader = RadialGradient(
         colors: [
-          AppColors.gold.withValues(alpha: 0.12),
+          const Color(0xFFD4AF37).withValues(alpha: 0.12),
           Colors.transparent,
         ],
       ).createShader(Rect.fromCenter(

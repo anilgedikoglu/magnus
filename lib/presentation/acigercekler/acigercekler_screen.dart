@@ -14,11 +14,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../core/constants/app_colors.dart';
-import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/variable_replacer.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
-import '../../core/widgets/occult_button.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/user_profile.dart';
@@ -179,18 +175,16 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
     return SwipeBack(
       onSwipeBack: () => context.pop(),
       child: Scaffold(
-      backgroundColor: AppColors.ink,
-      body: GrimoireBackdrop(
-        child: SafeArea(
-          child: !_veriYuklendi
-              ? const Center(child: CircularProgressIndicator(
-                  color: AppColors.gold, strokeWidth: 2))
-              : switch (_adim) {
-                  _Adim.yukleniyor => _buildYukleniyor(),
-                  _Adim.icerik     => _buildIcerik(),
-                  _Adim.limit      => _buildLimit(),
-                },
-        ),
+      backgroundColor: const Color(0xFF0A0718),
+      body: SafeArea(
+        child: !_veriYuklendi
+            ? const Center(child: CircularProgressIndicator(
+                color: Color(0xFFAA88FF), strokeWidth: 2))
+            : switch (_adim) {
+                _Adim.yukleniyor => _buildYukleniyor(),
+                _Adim.icerik     => _buildIcerik(),
+                _Adim.limit      => _buildLimit(),
+              },
       ),
       ),
     );
@@ -207,14 +201,19 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
             onPressed: () => context.pop(),
             icon: const Icon(
               Icons.arrow_back_ios_new_rounded,
-              color: AppColors.boneDim,
+              color: Colors.white70,
               size: 20,
             ),
           ),
           Expanded(
             child: Text(
               ref.watch(l10nProvider).bitterTruthsTitle,
-              style: AppTextStyles.screenTitle,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.2,
+              ),
               textAlign: TextAlign.center,
             ),
           ),
@@ -236,13 +235,18 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const ElegantHourglass(size: 72, color: AppColors.gold),
+                const ElegantHourglass(size: 72, color: Color(0xFFCC44FF)),
                 const SizedBox(height: 28),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: Text(
                     ref.watch(l10nProvider).bitterTruthsPreparing,
-                    style: AppTextStyles.meta.copyWith(fontSize: 14, height: 1.5),
+                    style: const TextStyle(
+                      color: Colors.white70,
+                      fontSize: 15,
+                      fontStyle: FontStyle.italic,
+                      height: 1.5,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -268,13 +272,19 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   // Dekoratif alev ikonu
-                  const Icon(Icons.local_fire_department_outlined,
-                      color: AppColors.gold, size: 30),
+                  const Text(
+                    '🔥',
+                    style: TextStyle(fontSize: 28),
+                  ),
                   const SizedBox(height: 16),
                   // Typewriter metin
                   _TypewriterText(
                     text: _metin,
-                    style: AppTextStyles.reading.copyWith(height: 1.65),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      height: 1.65,
+                    ),
                     textAlign: TextAlign.center,
                     msPerChar: 30,
                   ),
@@ -283,7 +293,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
                   Container(
                     height: 1,
                     width: 60,
-                    color: AppColors.gold.withValues(alpha: 0.45),
+                    color: Colors.white.withValues(alpha: 0.15),
                   ),
                 ],
               ),
@@ -300,7 +310,36 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   }
 
   Widget _buildKapatButonu() {
-    return OccultButton(label: ref.read(l10nProvider).close, onTap: () => context.pop());
+    return GestureDetector(
+      onTap: () => context.pop(),
+      child: Container(
+        width: double.infinity,
+        height: 48,
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFFAA00CC), Color(0xFF7700AA)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(
+            color: const Color(0xFFFF55FF).withValues(alpha: 0.8),
+            width: 1.5,
+          ),
+        ),
+        child: Center(
+          child: Text(
+            ref.read(l10nProvider).close,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              letterSpacing: 0.5,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   // ── Limit ekranı ──────────────────────────────────────────────────────────────
@@ -316,17 +355,25 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(Icons.error_outline_rounded, color: AppColors.gold, size: 52),
+                  const Text('⚠️', style: TextStyle(fontSize: 56)),
                   const SizedBox(height: 20),
                   Text(
                     ref.watch(l10nProvider).bitterTruthsLimitTitle,
-                    style: AppTextStyles.ritualTitle.copyWith(fontSize: 22),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      height: 1.4,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 12),
                   Text(
                     ref.watch(l10nProvider).bitterTruthsLimitSub,
-                    style: AppTextStyles.meta.copyWith(fontSize: 14),
+                    style: TextStyle(
+                      color: Colors.white.withValues(alpha: 0.5),
+                      fontSize: 14,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 32),

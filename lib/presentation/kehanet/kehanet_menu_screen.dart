@@ -1,11 +1,6 @@
 // C:/src/magnus_app/lib/presentation/kehanet/kehanet_menu_screen.dart
 // Kehanet ana menüsü - Faloya, Maganda, Tamua, Yana, Kahinlere Sor
 
-import '../../core/constants/app_colors.dart';
-import '../../core/constants/app_text_styles.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
-import '../../core/widgets/glass_panel.dart';
-import '../../core/widgets/filmed_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -28,8 +23,8 @@ class KehanetMenuScreen extends ConsumerWidget {
     return SwipeBack(
       onSwipeBack: () => context.pop(),
       child: Scaffold(
-      backgroundColor: AppColors.ink,
-      body: GrimoireBackdrop(child: SafeArea(
+      backgroundColor: const Color(0xFF0A0718),
+      body: SafeArea(
         child: Column(
           children: [
             Padding(
@@ -37,14 +32,19 @@ class KehanetMenuScreen extends ConsumerWidget {
               child: Row(
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.arrow_back_ios, color: AppColors.bone),
+                    icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                     onPressed: () => context.pop(),
                   ),
                   Expanded(
                     child: Text(
                       s.prophecyTitle,
                       textAlign: TextAlign.center,
-                      style: AppTextStyles.screenTitle,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2,
+                      ),
                     ),
                   ),
                   const SizedBox(width: 48),
@@ -66,7 +66,7 @@ class KehanetMenuScreen extends ConsumerWidget {
             ),
           ],
         ),
-      )),
+      ),
       ),
     );
   }
@@ -74,7 +74,46 @@ class KehanetMenuScreen extends ConsumerWidget {
   Widget _buildItem(BuildContext context, _KehanetItem item) {
     return GestureDetector(
       onTap: () => context.push(item.route),
-      child: _OraclePortraitCard(asset: item.iconPath, label: item.label),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.05),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: const Color(0xFFFF55FF).withValues(alpha: 0.40),
+            width: 1,
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Image.asset(
+                  item.iconPath,
+                  fit: BoxFit.contain,
+                  errorBuilder: (_, __, ___) => const Icon(
+                    Icons.auto_awesome,
+                    color: Color(0xFFFF55FF),
+                    size: 60,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 14),
+              child: Text(
+                item.label,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -82,27 +121,4 @@ class KehanetMenuScreen extends ConsumerWidget {
 class _KehanetItem {
   final String label, iconPath, route;
   const _KehanetItem(this.label, this.iconPath, this.route);
-}
-
-class _OraclePortraitCard extends StatefulWidget {
-  final String asset, label;
-  const _OraclePortraitCard({required this.asset, required this.label});
-  @override
-  State<_OraclePortraitCard> createState() => _OraclePortraitCardState();
-}
-class _OraclePortraitCardState extends State<_OraclePortraitCard> {
-  bool _down = false;
-  @override
-  Widget build(BuildContext context) => Listener(
-    onPointerDown: (_) => setState(() => _down = true),
-    onPointerUp: (_) => setState(() => _down = false),
-    onPointerCancel: (_) => setState(() => _down = false),
-    child: GlassPanel(selected: _down, child: Column(children: [
-      Expanded(child: ClipRRect(borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-        child: FilmedImage(widget.asset, active: _down, fit: BoxFit.contain))),
-      Padding(padding: const EdgeInsets.fromLTRB(10, 10, 10, 16),
-        child: Text(widget.label, textAlign: TextAlign.center, maxLines: 2,
-          overflow: TextOverflow.ellipsis, style: AppTextStyles.cardLabel)),
-    ])),
-  );
 }

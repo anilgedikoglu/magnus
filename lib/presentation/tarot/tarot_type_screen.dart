@@ -1,6 +1,3 @@
-import '../../core/widgets/filmed_image.dart';
-import '../../core/widgets/glass_panel.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -20,20 +17,16 @@ class TarotTypeScreen extends ConsumerWidget {
     return SwipeBack(
       onSwipeBack: () => context.pop(),
       child: Scaffold(
-      backgroundColor: AppColors.ink,
-      extendBodyBehindAppBar: true,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: Text(s.tarot, style: AppTextStyles.screenTitle),
+        backgroundColor: AppColors.navBarBackground,
+        title: Text(s.tarot),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
           onPressed: () => context.pop(),
         ),
       ),
-      body: GrimoireBackdrop(child: Padding(padding: EdgeInsets.only(top: MediaQuery.paddingOf(context).top + kToolbarHeight, bottom: MediaQuery.paddingOf(context).bottom), child: MediaQuery.removePadding(
-        context: context,
-        removeTop: true,
-        removeBottom: true,
+      body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 28, 20, 16),
           child: Column(
@@ -56,21 +49,25 @@ class TarotTypeScreen extends ConsumerWidget {
                     _TypeCard(
                       imagePath: 'assets/images/tarotbir.png',
                       label: s.classicTarot,
+                      gradient: AppColors.bubble1,
                       onTap: () => context.push('/tarot/klasik'),
                     ),
                     _TypeCard(
                       imagePath: 'assets/images/tarotiki.png',
                       label: s.loveTarot,
+                      gradient: const [Color(0xFFCC1177), Color(0xFFFF44AA)],
                       onTap: () => context.push('/tarot/ask'),
                     ),
                     _TypeCard(
                       imagePath: 'assets/images/tarotuc.png',
                       label: s.wishTarot,
+                      gradient: AppColors.bubble5,
                       onTap: () => context.push('/tarot/dilek'),
                     ),
                     _TypeCard(
                       imagePath: 'assets/images/tarotdort.png',
                       label: s.luckTarot,
+                      gradient: AppColors.bubble2,
                       onTap: () => context.push('/tarot/sans'),
                     ),
                   ],
@@ -106,24 +103,82 @@ class TarotTypeScreen extends ConsumerWidget {
             ],
           ),
         ),
-      ))),
+      ),
       ),
     );
   }
 }
 
-class _TypeCard extends StatefulWidget {
- final String imagePath; final String label; final VoidCallback onTap;
- const _TypeCard({required this.imagePath, required this.label, required this.onTap});
- @override State<_TypeCard> createState() => _TypeCardState();
-}
-class _TypeCardState extends State<_TypeCard> {
- bool _down = false;
- @override Widget build(BuildContext context) => Semantics(button: true, label: widget.label, child: GestureDetector(
- onTap: widget.onTap, onTapDown: (_) => setState(() => _down = true),
- onTapUp: (_) => setState(() => _down = false), onTapCancel: () => setState(() => _down = false),
- child: GlassPanel(selected: _down, child: Column(children: [
- Expanded(child: Padding(padding: const EdgeInsets.fromLTRB(12,16,12,8), child: FilmedImage(widget.imagePath, fit: BoxFit.contain, active: _down))),
- Padding(padding: const EdgeInsets.fromLTRB(8,0,8,16), child: Text(widget.label, textAlign: TextAlign.center, style: AppTextStyles.cardLabel)),
- ])),));
+class _TypeCard extends StatelessWidget {
+  final String imagePath;
+  final String label;
+  final List<Color> gradient;
+  final VoidCallback onTap;
+
+  const _TypeCard({
+    required this.imagePath,
+    required this.label,
+    required this.gradient,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(16),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(16),
+        splashColor: gradient.first.withValues(alpha: 0.2),
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                gradient.first.withValues(alpha: 0.15),
+                gradient.last.withValues(alpha: 0.08),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: gradient.first.withValues(alpha: 0.35),
+              width: 1.2,
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 16, 12, 8),
+                  child: Image.asset(
+                    imagePath,
+                    fit: BoxFit.contain,
+                    errorBuilder: (_, __, ___) => const Icon(
+                      Icons.style_rounded,
+                      size: 48,
+                      color: Colors.white38,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 0, 8, 16),
+                child: Text(
+                  label,
+                  textAlign: TextAlign.center,
+                  style: AppTextStyles.inboxTitle.copyWith(
+                    fontSize: 14,
+                    letterSpacing: 0.3,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }

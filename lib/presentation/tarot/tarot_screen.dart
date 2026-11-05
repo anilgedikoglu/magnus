@@ -1,4 +1,3 @@
-import '../../core/widgets/grimoire_backdrop.dart';
 // ── AI NOTU: tarot_screen.dart ────────────────────────────────────────────────
 // KLASİK 3 kartlı tarot ekranı. TarotTypeScreen'den açılır (type: 'klasik').
 //
@@ -290,11 +289,10 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
   Widget build(BuildContext context) {
     _s = ref.watch(l10nProvider);
     return Scaffold(
-      backgroundColor: AppColors.ink,
-      extendBodyBehindAppBar: true,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: Text(_s.tarotTitle, style: AppTextStyles.screenTitle),
+        backgroundColor: AppColors.navBarBackground,
+        title: Text(_s.tarotTitle),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new_rounded,
@@ -303,7 +301,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
           onPressed: _selected.isEmpty ? () => context.pop() : null,
         ),
       ),
-      body: GrimoireBackdrop(child: Padding(padding: EdgeInsets.only(top: MediaQuery.paddingOf(context).top + kToolbarHeight, bottom: MediaQuery.paddingOf(context).bottom), child: PopScope(
+      body: PopScope(
         canPop: _selected.isEmpty,
         child: Column(
           children: [
@@ -318,7 +316,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
             const SizedBox(height: 24),
           ],
         ), // Column
-      ))), // PopScope
+      ), // PopScope
     );
   }
 

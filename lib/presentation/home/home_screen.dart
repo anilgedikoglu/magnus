@@ -91,11 +91,9 @@
 // Türkçe çekim ekleri: {{isime}}, {{isimi}}, {{isimden}}, {{isimcigim}}.
 //
 // ── ADMIN PANELİ ─────────────────────────────────────────────────────────
-// Settings ekranında sol üst köşede sarı dişli çark — sadece şu profil
-// bilgileri eşleşince görünür: name='Anıl', maritalStatus='evli',
-// birthDate='1983-10-14', job='kamusektoru', zodiacSign='Terazi',
-// birthTime='13:30', birthCity='Ankara'. Admin panelinde günlük hakları
-// sıfırlama butonu bulunur.
+// Kullanıcı Bilgileri ekranında sol üstte yönetici ikonu — yönetici kapısı
+// lib/core/utils/admin_gate.dart (kişisel veri içermez). Admin panelinde günlük
+// hakları sıfırlama butonu bulunur.
 //
 // ═════════════════════════════════════════════════════════════════════════════
 

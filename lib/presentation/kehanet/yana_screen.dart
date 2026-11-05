@@ -6,13 +6,6 @@
 //   Her entry: { "id", "tur", "metin", "kosullar": [...] }
 //   Koşul eşleşme mantığı → _matchesProfile() fonksiyonu
 
-import '../../core/constants/app_colors.dart';
-import '../../core/constants/app_text_styles.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
-import '../../core/widgets/glass_panel.dart';
-import '../../core/widgets/filmed_image.dart';
-import '../../core/widgets/occult_button.dart';
-import '../../core/utils/rich_text_parser.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -306,19 +299,22 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
     return AnimatedBuilder(
       animation: _glowCtrl,
       builder: (ctx, child) {
-        final c1 = AppColors.gold;
-        final c2 = AppColors.gold;
-        final c3 = AppColors.gold;
+        final h1 = _glowCtrl.value * 360;
+        final h2 = (h1 + 80)  % 360;
+        final h3 = (h1 + 180) % 360;
+        final c1 = HSVColor.fromAHSV(1, h1, 0.85, 1.0).toColor();
+        final c2 = HSVColor.fromAHSV(1, h2, 0.90, 1.0).toColor();
+        final c3 = HSVColor.fromAHSV(1, h3, 0.80, 1.0).toColor();
         return Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(22),
-            border: Border.all(color: c1.withValues(alpha: 0.16 + _glowCtrl.value * 0.09), width: 0.8),
+            border: Border.all(color: c1.withValues(alpha: 0.85), width: 2.0),
             boxShadow: [
-              BoxShadow(color: Colors.black.withValues(alpha: 0.12),
+              BoxShadow(color: c1.withValues(alpha: 0.55),
                   blurRadius: 10, spreadRadius: 1),
-              BoxShadow(color: Colors.black.withValues(alpha: 0.12),
+              BoxShadow(color: c2.withValues(alpha: 0.30),
                   blurRadius: 22, spreadRadius: 4),
-              BoxShadow(color: Colors.black.withValues(alpha: 0.12),
+              BoxShadow(color: c3.withValues(alpha: 0.18),
                   blurRadius: 40, spreadRadius: 10),
             ],
           ),
@@ -327,7 +323,10 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
       },
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
-        child: SizedBox(width: _imgSize, height: _imgSize, child: FilmedImage('assets/images/kehanet/yana.png', fit: BoxFit.cover)),
+        child: Image.asset(
+          'assets/images/kehanet/yana.png',
+          width: _imgSize, height: _imgSize, fit: BoxFit.cover,
+        ),
       ),
     );
   }
@@ -347,33 +346,39 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
         );
       },
       child: Text(_rainChars[i],
-          style: const TextStyle(color: AppColors.boneDim, fontSize: 16, height: 1.6)),
+          style: const TextStyle(color: Colors.white70, fontSize: 16, height: 1.6)),
     );
   }
 
   // ── Kehanet metni: kelimeler aşağıdan yerlerine çıkar ────────────────────
   Widget _buildRisingText(double t) {
-    final spans = RichTextParser.span(_metin, style: AppTextStyles.reading);
-    final words = <({String text, TextStyle style})>[];
-    void collect(InlineSpan span, TextStyle inherited) {
-      if (span is! TextSpan) return;
-      final style = inherited.merge(span.style);
-      for (final match in RegExp(r'\n|[^\S\n]*\S+[^\S\n]*').allMatches(span.text ?? '')) {
-        words.add((text: match[0]!, style: style));
-      }
-      for (final child in span.children ?? <InlineSpan>[]) { collect(child, style); }
-    }
-    collect(spans, AppTextStyles.reading);
-    final totalWords = words.where((w) => w.text != '\n').length;
+    // Renk taglarını soy — animasyon düz text üzerinde çalışır
+    final cleanText = _metin.replaceAll(
+        RegExp(r'<color=[^>]+>|</color>', caseSensitive: false), '');
+
     final widgetList = <Widget>[];
+    final lines = cleanText.split('\n');
+
+    // Toplam kelime sayısını hesapla (stagger için)
+    int totalWords = 0;
+    for (final line in lines) {
+      totalWords += line.split(' ').where((w) => w.isNotEmpty).length;
+    }
+
     int wordIndex = 0;
-    for (final word in words) {
-      if (word.text == '\n') {
+    for (int li = 0; li < lines.length; li++) {
+      if (li > 0) {
+        // Wrap içinde satır sonu — tam genişlik boşluk
         widgetList.add(const SizedBox(width: double.infinity, height: 2));
-      } else {
-        widgetList.add(_buildRisingWord(word.text, wordIndex++, totalWords, t, word.style));
+      }
+      final words =
+          lines[li].split(' ').where((w) => w.isNotEmpty).toList();
+      for (final word in words) {
+        widgetList.add(
+            _buildRisingWord(word, wordIndex++, totalWords, t));
       }
     }
+
     return Wrap(
       alignment: WrapAlignment.center,
       spacing: 0,
@@ -382,7 +387,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
   }
 
   Widget _buildRisingWord(
-      String word, int index, int total, double t, TextStyle style) {
+      String word, int index, int total, double t) {
     // Stagger: ilk kelime hemen çıkar, son kelime 0.65'te başlar
     const maxDelay = 0.65;
     final delay =
@@ -395,7 +400,14 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
       opacity: eased,
       child: Transform.translate(
         offset: Offset(0, (1.0 - eased) * 38),
-        child: RichTextParser.build(word, style: style),
+        child: Text(
+          '$word ',
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 15,
+            height: 1.7,
+          ),
+        ),
       ),
     );
   }
@@ -426,7 +438,22 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
   }
 
   Widget _secimBtn(String label, String tur) {
-    return OccultButton.secondary(label: label, onTap: () => _onSecimTap(tur));
+    return GestureDetector(
+      onTap: () => _onSecimTap(tur),
+      child: Container(
+        width: double.infinity, height: 52,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          gradient: const LinearGradient(
+            colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)]),
+          border: Border.all(
+            color: const Color(0xFFFF55FF).withValues(alpha: 0.80), width: 1.5),
+        ),
+        child: Center(child: Text(label,
+          style: const TextStyle(color: Colors.white, fontSize: 16,
+              fontWeight: FontWeight.bold))),
+      ),
+    );
   }
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -435,8 +462,8 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.ink,
-      body: GrimoireBackdrop(child: SafeArea(
+      backgroundColor: const Color(0xFF0A0718),
+      body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -466,9 +493,10 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                     ),
                   ),
                 ),
-                Expanded(child: Text('Yana',
+                const Expanded(child: Text('YANA',
                   textAlign: TextAlign.center,
-                  style: AppTextStyles.screenTitle)),
+                  style: TextStyle(color: Colors.white, fontSize: 20,
+                      fontWeight: FontWeight.bold, letterSpacing: 1.2))),
                 const SizedBox(width: 80), // dengeleyici
               ]),
             ),
@@ -485,7 +513,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                       padding: EdgeInsets.symmetric(horizontal: 40),
                       child: Text('Ne hakkında kehanet istersin?',
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: AppColors.boneDim, fontSize: 16)),
+                        style: TextStyle(color: Colors.white70, fontSize: 16)),
                     ),
                     const SizedBox(height: 28),
                     Padding(
@@ -537,13 +565,13 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                               'Kehanetine odaklanıyorum...',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: AppColors.boneDim,
+                                color: Colors.white70,
                                 fontSize: 16,
                                 height: 1.6,
                               ),
                             ),
                             const SizedBox(height: 20),
-                            const ElegantHourglass(size: 56, color: AppColors.gold),
+                            const ElegantHourglass(size: 56, color: Colors.white),
                           ],
                         ),
                       ),
@@ -577,17 +605,29 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
                                     constraints: BoxConstraints(
                                         minHeight: constraints.maxHeight),
                                     child: Center(
-                                      child: Padding(
-                                        padding: const EdgeInsets.fromLTRB(
+                                      child: Container(
+                                        margin: const EdgeInsets.fromLTRB(
                                             20, 0, 20, 0),
- child: GlassPanel(variant: GlassVariant.reading, padding: const EdgeInsets.all(20),
- // Kelimeler aşağıdan yerlerine çıkar
+                                        padding: const EdgeInsets.all(20),
+                                        decoration: BoxDecoration(
+                                          color: Colors.white
+                                              .withValues(alpha: 0.07),
+                                          borderRadius:
+                                              BorderRadius.circular(18),
+                                          border: Border.all(
+                                            color: const Color(0xFFFF55FF)
+                                                .withValues(alpha: 0.30),
+                                            width: 1.2,
+                                          ),
+                                        ),
+                                        // Kelimeler aşağıdan yerlerine çıkar
                                         child: AnimatedBuilder(
                                           animation: _fadeCtrl,
                                           builder: (ctx, _) =>
                                               _buildRisingText(
                                                   _fadeCtrl.value),
-                                        )),),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -607,7 +647,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
               ),
           ],
         ),
-      )),
+      ),
     );
   }
 }

@@ -1,4 +1,3 @@
-import '../../core/widgets/grimoire_backdrop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -20,18 +19,16 @@ class TarotResultScreen extends ConsumerWidget {
 
     if (item == null) {
       return Scaffold(
-        backgroundColor: AppColors.ink,
-      extendBodyBehindAppBar: true,
+        backgroundColor: AppColors.background,
         body: const Center(child: Text('Fal bulunamadı.')),
       );
     }
 
     return Scaffold(
-      backgroundColor: AppColors.ink,
-      extendBodyBehindAppBar: true,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: Text(s.cardMeaning, style: AppTextStyles.screenTitle),
+        backgroundColor: AppColors.navBarBackground,
+        title: Text(s.cardMeaning),
         leading: IconButton(
           icon: const Icon(Icons.close_rounded),
           onPressed: () => context.go('/home'),
@@ -48,7 +45,7 @@ class TarotResultScreen extends ConsumerWidget {
           ),
         ],
       ),
-      body: GrimoireBackdrop(child: Padding(padding: EdgeInsets.only(top: MediaQuery.paddingOf(context).top + kToolbarHeight, bottom: MediaQuery.paddingOf(context).bottom), child: SingleChildScrollView(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,7 +123,7 @@ class TarotResultScreen extends ConsumerWidget {
             const SizedBox(height: 24),
           ],
         ),
-      ))),
+      ),
     );
   }
 

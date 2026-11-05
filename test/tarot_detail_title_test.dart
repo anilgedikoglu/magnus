@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:magnus_app/core/widgets/filmed_image.dart';
 import 'package:magnus_app/data/models/inbox_item.dart';
 import 'package:magnus_app/data/providers.dart';
 import 'package:magnus_app/data/services/fortune_service.dart';
@@ -18,9 +17,14 @@ Future<List<String>> _cardAssets(WidgetTester t, InboxItem item, {String lang = 
     child: MaterialApp(home: InboxDetailScreen(item: item)),
   ));
   await t.pump();
+  // Kart görselleri hangi bileşenle çizilirse çizilsin (Image.asset / FilmedImage),
+  // ekrandaki tarot asset yollarını sırayla topla.
   return t
-      .widgetList<FilmedImage>(find.byType(FilmedImage))
-      .map((f) => f.asset)
+      .widgetList<Image>(find.byType(Image))
+      .map((i) => i.image)
+      .whereType<AssetImage>()
+      .map((a) => a.assetName)
+      .where((p) => RegExp(r'^assets/images/tarot\d*/').hasMatch(p))
       .toList();
 }
 

@@ -11,15 +11,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/widgets/edge_swipe_back.dart';
-import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/widgets/elegant_hourglass.dart';
-import '../../core/widgets/filmed_image.dart';
-import '../../core/widgets/glass_panel.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
 import '../../data/providers.dart';
 
 // ─── Burç listesi (index 0=Koç … 11=Balık) ───────────────────────────────────
@@ -332,19 +327,60 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.ink,
+      backgroundColor: Colors.black,
       extendBody: true,
-      body: GrimoireBackdrop(
-        asset: 'assets/images/askuyumu.png',
-        imageAlignment: Alignment.topCenter,
-        child: SafeArea(
-          child: _phase == 1
-              ? _buildPhase1()
-              : _phase == 2
-                  ? _buildPhase2()
-                  : _buildPhase3(),
-        ),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          _buildBackground(),
+          SafeArea(
+            child: _phase == 1
+                ? _buildPhase1()
+                : _phase == 2
+                    ? _buildPhase2()
+                    : _buildPhase3(),
+          ),
+        ],
       ),
+    );
+  }
+
+  Widget _buildBackground() {
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        const ColoredBox(color: Colors.black),
+        Align(
+          alignment: Alignment.topCenter,
+          child: FractionallySizedBox(
+            heightFactor: 0.52,
+            widthFactor: 1.0,
+            child: Image.asset(
+              'assets/images/askuyumu.png',
+              fit: BoxFit.cover,
+              alignment: Alignment.topCenter,
+              errorBuilder: (_, __, ___) =>
+                  Container(color: const Color(0xFF0A0018)),
+            ),
+          ),
+        ),
+        Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              stops: [0.0, 0.25, 0.52, 0.65, 1.0],
+              colors: [
+                Color(0x00000000),
+                Color(0x22000000),
+                Color(0xBB000000),
+                Color(0xEE000000),
+                Color(0xFF000000),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -367,7 +403,11 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
           ),
         ),
         const Spacer(),
-        Text(ref.watch(l10nProvider).askUyumuTitle, style: AppTextStyles.screenTitle),
+        Text(
+          ref.watch(l10nProvider).askUyumuTitle,
+          style: const TextStyle(
+              color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
+        ),
         const Spacer(),
         const SizedBox(width: 36),
       ]),
@@ -388,7 +428,12 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               child: Text(
                 ref.watch(l10nProvider).askUyumuPrompt,
                 textAlign: TextAlign.center,
-                style: AppTextStyles.bubbleText.copyWith(color: AppColors.boneDim),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  height: 1.6,
+                  fontWeight: FontWeight.w300,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -396,12 +441,20 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             const SizedBox(height: 8),
             Text(
               ref.watch(l10nProvider).zodiacName(_selectedBurc),
-              style: AppTextStyles.ritualTitle.copyWith(fontSize: 20),
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 0.5,
+              ),
             ),
             const SizedBox(height: 24),
             _buildHoldButton(),
             const SizedBox(height: 10),
-            Text(ref.watch(l10nProvider).askUyumuHold, style: AppTextStyles.meta),
+            Text(
+              ref.watch(l10nProvider).askUyumuHold,
+              style: const TextStyle(color: Colors.white38, fontSize: 12),
+            ),
             const SizedBox(height: 16),
           ],
         ),
@@ -459,15 +512,11 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             onPanEnd: _onWheelPanEnd,
             child: Transform.rotate(
               angle: _wheelAngle,
-              child: ColorFiltered(
-                colorFilter: ColorFilter.matrix(
-                    FilmedImage.matrix(1.0, 1.0)),
-                child: Image.asset(
-                  'assets/images/burclar_wheel.png',
-                  width: wheelSize,
-                  height: wheelSize,
-                  fit: BoxFit.contain,
-                ),
+              child: Image.asset(
+                'assets/images/burclar_wheel.png',
+                width: wheelSize,
+                height: wheelSize,
+                fit: BoxFit.contain,
               ),
             ),
           )),
@@ -477,20 +526,16 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               clipper: const _TopSegmentClipper(wheelSize: wheelSize),
               child: Transform.rotate(
                 angle: _wheelAngle,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.matrix(FilmedImage.matrix(
-                      FilmedImage.activeSaturation, FilmedImage.activeBrightness)),
-                  child: Image.asset(
-                    'assets/images/burclar_wheel_highlight.png',
-                    width: wheelSize,
-                    height: wheelSize,
-                    fit: BoxFit.contain,
-                  ),
+                child: Image.asset(
+                  'assets/images/burclar_wheel_highlight.png',
+                  width: wheelSize,
+                  height: wheelSize,
+                  fit: BoxFit.contain,
                 ),
               ),
             ),
           ),
-          // Seçili dilim altın ışık — fixed, touch geçirgen
+          // Seçili dilim sarı ışık — fixed, touch geçirgen
           IgnorePointer(
             child: CustomPaint(
               size: const Size(wheelSize, wheelSize),
@@ -501,7 +546,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             bottom: 0,
             child: Icon(
               Icons.arrow_drop_up_rounded,
-              color: AppColors.gold,
+              color: Colors.white,
               size: pointerSize,
             ),
           ),
@@ -530,10 +575,10 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                   height: buttonRadius * 2,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: AppColors.glassTint,
+                    color: Colors.white.withValues(alpha: 0.12),
                     border: Border.all(
-                      color: AppColors.gold.withValues(alpha: 0.45),
-                      width: 1,
+                      color: Colors.white.withValues(alpha: 0.35),
+                      width: 1.5,
                     ),
                   ),
                 ),
@@ -542,11 +587,10 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                   painter: _FillCirclePainter(
                     progress: _fillCtrl.value,
                     maxRadius: buttonRadius,
-                    color: AppColors.gold,
+                    color: const Color(0xFFFF4466),
                   ),
                 ),
-                const Icon(Icons.favorite_border_rounded,
-                    color: AppColors.gold, size: 28),
+                const Icon(Icons.favorite_rounded, color: Colors.white, size: 28),
               ],
             ),
           );
@@ -563,12 +607,17 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       Expanded(
         child: Center(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            const ElegantHourglass(size: 56, color: AppColors.gold),
+            const ElegantHourglass(size: 56, color: Color(0xFFFF4466)),
             const SizedBox(height: 20),
             Text(
               ref.watch(l10nProvider).askUyumuCalculating,
               textAlign: TextAlign.center,
-              style: AppTextStyles.bubbleText.copyWith(color: AppColors.boneDim),
+              style: const TextStyle(
+                color: Colors.white70,
+                fontSize: 16,
+                fontWeight: FontWeight.w300,
+                height: 1.5,
+              ),
             ),
           ]),
         ),
@@ -585,7 +634,8 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         _buildHeader(),
         Expanded(
           child: Center(
-            child: Text(ref.watch(l10nProvider).askUyumuLoadFail, style: AppTextStyles.meta),
+            child: Text(ref.watch(l10nProvider).askUyumuLoadFail,
+                style: const TextStyle(color: Colors.white70, fontSize: 14)),
           ),
         ),
       ]);
@@ -608,21 +658,22 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   }
 
   Widget _buildBarCard(_BarResult bar) {
-    // Kategori başına ayrı renk yok: altın dolgu; düşük değer (<25) kurumuş kan.
-    final fill = bar.pct < 25 ? AppColors.blood : AppColors.gold;
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: GlassPanel(
-        variant: GlassVariant.reading,
+      child: Container(
         padding: const EdgeInsets.fromLTRB(14, 12, 14, 14),
+        decoration: BoxDecoration(
+          color: Colors.black.withValues(alpha: 0.55),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: bar.color.withValues(alpha: 0.30), width: 1),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               '${bar.label}  %${bar.pct}',
-              style: AppTextStyles.value.copyWith(
-                  fontWeight: FontWeight.w600,
-                  fontFeatures: AppTextStyles.tabular),
+              style: TextStyle(
+                  color: bar.color, fontSize: 16, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             AnimatedBuilder(
@@ -633,16 +684,23 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                   borderRadius: BorderRadius.circular(4),
                   child: Stack(children: [
                     Container(
-                        height: 6,
+                        height: 10,
                         width: double.infinity,
-                        color: AppColors.bone.withValues(alpha: 0.10)),
+                        color: Colors.white.withValues(alpha: 0.12)),
                     FractionallySizedBox(
                       widthFactor: widthFactor,
                       child: Container(
-                        height: 6,
+                        height: 10,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(4),
-                          color: fill,
+                          gradient: LinearGradient(
+                            colors: [
+                              bar.color.withValues(alpha: 0.7),
+                              bar.color,
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                          ),
                         ),
                       ),
                     ),
@@ -654,7 +712,8 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             bar.metin.isNotEmpty
                 ? RichTextParser.build(
                     bar.metin,
-                    style: AppTextStyles.reading.copyWith(fontSize: 15.5),
+                    style: const TextStyle(
+                        color: Color(0xEEFFFFFF), fontSize: 13, height: 1.6),
                   )
                 : const SizedBox.shrink(),
           ],
@@ -711,7 +770,7 @@ class _SegmentGlowPainter extends CustomPainter {
       Rect.fromCircle(center: Offset(cx, cy), radius: r * 0.92),
       startAngle, sweepAngle, true,
       Paint()
-        ..color = AppColors.gold.withValues(alpha: 0.10)
+        ..color = const Color(0xFFFFD700).withValues(alpha: 0.18)
         ..style = PaintingStyle.fill,
     );
 
@@ -720,10 +779,10 @@ class _SegmentGlowPainter extends CustomPainter {
       Rect.fromCircle(center: Offset(cx, cy), radius: r * 0.92),
       startAngle, sweepAngle, false,
       Paint()
-        ..color = AppColors.gold.withValues(alpha: 0.55)
+        ..color = const Color(0xFFFFD700).withValues(alpha: 0.70)
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.5
-        ..maskFilter = const MaskFilter.blur(BlurStyle.outer, 3),
+        ..strokeWidth = 2.0
+        ..maskFilter = const MaskFilter.blur(BlurStyle.outer, 6),
     );
   }
 

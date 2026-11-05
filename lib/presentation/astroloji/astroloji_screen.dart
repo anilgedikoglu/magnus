@@ -1,9 +1,3 @@
-import '../../core/utils/rich_text_parser.dart';
-import '../../core/widgets/occult_cards.dart';
-import '../../core/widgets/glass_panel.dart';
-import '../../core/widgets/grimoire_backdrop.dart';
-import '../../core/constants/app_text_styles.dart';
-import '../../core/constants/app_colors.dart';
 // Kaynak: C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\GunlukAstroloji\GunlukAstro
 // JSON:   assets/data/gunlukastroloji.json
 // Bölümler (sırayla): giris · astroyorum · astrogununsozu · astrogununayeti ·
@@ -23,6 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/providers.dart';
@@ -32,20 +27,21 @@ import '../../data/providers.dart';
 class _Section {
   final String key;        // JSON anahtarı
   final String baslik;     // Ekranda gösterilecek başlık
-  const _Section(this.key, this.baslik);
+  final Color renk;        // Başlık / vurgu rengi
+  const _Section(this.key, this.baslik, this.renk);
 }
 
 const _sections = [
-  _Section('giris',             'Giriş'),
-  _Section('astroyorum',        'Astro Yorum'),
-  _Section('astrogununsozu',    'Günün Sözü'),
-  _Section('astrogununayeti',   'Günün Ayeti'),
-  _Section('astrogununhadisi',  'Günün Hadisi'),
-  _Section('astroeglencelibilgi','Eğlenceli Bilgi'),
-  _Section('astrokesif',        'Astro Keşif'),
-  _Section('astrogununismi',    'Günün İsmi'),
-  _Section('astrogununyemegi',  'Günün Yemeği'),
-  _Section('astroveda',         'Astro Veda'),
+  _Section('giris',             'Giriş',           Color(0xFFBB88FF)),
+  _Section('astroyorum',        'Astro Yorum',      Color(0xFF00D4FF)),
+  _Section('astrogununsozu',    'Günün Sözü',       Color(0xFFFFCC44)),
+  _Section('astrogununayeti',   'Günün Ayeti',      Color(0xFF66FF99)),
+  _Section('astrogununhadisi',  'Günün Hadisi',     Color(0xFF88DDFF)),
+  _Section('astroeglencelibilgi','Eğlenceli Bilgi', Color(0xFFFF88AA)),
+  _Section('astrokesif',        'Astro Keşif',      Color(0xFFFFAA44)),
+  _Section('astrogununismi',    'Günün İsmi',       Color(0xFFBBFF88)),
+  _Section('astrogununyemegi',  'Günün Yemeği',     Color(0xFFFFDD88)),
+  _Section('astroveda',         'Astro Veda',       Color(0xFFBB88FF)),
 ];
 
 // ─── Veri modeli ──────────────────────────────────────────────────────────────
@@ -166,9 +162,35 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.ink,
+      backgroundColor: Colors.black,
       extendBody: true,
-      body: GrimoireBackdrop(asset: 'assets/images/space_bg.png', child: SafeArea(
+      body: Stack(
+        children: [
+          // Arka plan — uzay görseli
+          SizedBox.expand(
+            child: Image.asset(
+              'assets/images/space_bg.png',
+              fit: BoxFit.cover,
+              errorBuilder: (_, __, ___) =>
+                  Container(color: const Color(0xFF050010)),
+            ),
+          ),
+          // Karartma katmanı
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xCC000000),
+                  Color(0x99000000),
+                  Color(0xCC000000),
+                ],
+              ),
+            ),
+          ),
+          // İçerik
+          SafeArea(
             child: Column(
               children: [
                 _buildHeader(),
@@ -177,7 +199,9 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
                 ),
               ],
             ),
-          )),
+          ),
+        ],
+      ),
     );
   }
 
@@ -212,7 +236,15 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
                 child: Center(
                   child: Text(
                     ref.watch(l10nProvider).astrologyTitle,
-                    style: AppTextStyles.screenTitle,
+                    style: GoogleFonts.cinzel(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFFBB88FF),
+                      letterSpacing: 4,
+                      shadows: const [
+                        Shadow(color: Color(0xAABB88FF), blurRadius: 16),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -223,7 +255,11 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
           // Tarih alt başlığı
           Text(
             _todayStr(),
-            style: AppTextStyles.meta.copyWith(fontFeatures: AppTextStyles.tabular),
+            style: const TextStyle(
+              color: Color(0x99FFFFFF),
+              fontSize: 12,
+              letterSpacing: 2,
+            ),
           ),
           const SizedBox(height: 8),
           // İnce ayraç
@@ -231,7 +267,7 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
             height: 1,
             decoration: BoxDecoration(
               gradient: const LinearGradient(
-                colors: [Colors.transparent, AppColors.rim, Colors.transparent],
+                colors: [Colors.transparent, Color(0x88BB88FF), Colors.transparent],
               ),
               borderRadius: BorderRadius.circular(1),
             ),
@@ -251,7 +287,7 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
   Widget _buildLoading() {
     return const Center(
       child: CircularProgressIndicator(
-        color: AppColors.gold,
+        color: Color(0xFFBB88FF),
         strokeWidth: 2,
       ),
     );
@@ -272,13 +308,59 @@ class _AstrolojiScreenState extends ConsumerState<AstrolojiScreen> {
   }
 
   Widget _buildSectionCard(_SelectedText item) {
-    return Padding(padding: const EdgeInsets.only(bottom: 14), child: GlassPanel(
-      variant: GlassVariant.reading, padding: const EdgeInsets.all(18),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        OccultSectionLabel(ref.watch(l10nProvider).astroSectionLabel(item.section.key)), const SizedBox(height:12),
-        RichTextParser.build(item.metin, style: AppTextStyles.reading),
-      ]),
-    ));
+    final color = item.section.renk;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 14),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.black.withValues(alpha: 0.45),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: color.withValues(alpha: 0.45), width: 1),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Başlık şeridi
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.12),
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(11)),
+                border: Border(
+                  bottom: BorderSide(color: color.withValues(alpha: 0.35), width: 0.8),
+                ),
+              ),
+              child: Text(
+                ref.watch(l10nProvider).astroSectionLabel(item.section.key).toUpperCase(),
+                style: GoogleFonts.cinzel(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  color: color,
+                  letterSpacing: 3,
+                  shadows: [
+                    Shadow(color: color.withValues(alpha: 0.7), blurRadius: 8),
+                  ],
+                ),
+              ),
+            ),
+            // Metin
+            Padding(
+              padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
+              child: Text(
+                item.metin,
+                style: const TextStyle(
+                  color: Color(0xF0FFFFFF),
+                  fontSize: 14,
+                  height: 1.7,
+                  shadows: [Shadow(color: Colors.black87, blurRadius: 3)],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Widget _buildBackButton() {

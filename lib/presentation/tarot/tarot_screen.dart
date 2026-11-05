@@ -23,6 +23,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
+import 'tarot_table.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../core/utils/variable_replacer.dart';
@@ -303,7 +304,8 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
           onPressed: _selected.isEmpty ? () => context.pop() : null,
         ),
       ),
-      body: PopScope(
+      // Kadife tarot masası (2026-11-06).
+      body: TarotTable(child: PopScope(
         canPop: _selected.isEmpty,
         child: Column(
           children: [
@@ -318,7 +320,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen> {
             const FloatingBarSpacer(),
           ],
         ), // Column
-      ), // PopScope
+      )), // PopScope
     );
   }
 

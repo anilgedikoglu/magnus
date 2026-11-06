@@ -1,10 +1,15 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-/// Minimal, çizgisel kum saati widget'ı.
-/// [size]   : Genel boyut (varsayılan 56)
-/// [color]  : Çizgi + kum rengi
-/// [animate]: true → kum akışı animasyonu (varsayılan true)
+/// Zarif, SÜREKLİ kum saati bekleme animasyonu (Anıl, 2026-11-06 — Codex incelemesiyle).
+///
+/// Eski sürüm kum bitince GÖRSEL SIÇRAMAYLA baştan başlıyordu. Bu sürümde kum aşağı akar,
+/// alt hazne dolunca kum saati 180° DÖNER ve diğer yönden akmaya devam eder — dikişsiz.
+/// Dönüşün sonu (angle=π, alt dolu) ile döngü başı (angle=0, üst dolu) birebir aynı görüntüyü
+/// verir (cam + kapaklar + kum konturları 180° simetrik) → reset görünmez.
+///
+/// API değişmedi: [size], [color], [animate]. (color'dan tüm tonlar türetilir — her ekranda
+/// farklı renkle çağrılabilir.)
 class ElegantHourglass extends StatefulWidget {
   final double size;
   final Color color;
@@ -23,16 +28,38 @@ class ElegantHourglass extends StatefulWidget {
 
 class _ElegantHourglassState extends State<ElegantHourglass>
     with SingleTickerProviderStateMixin {
-  late final AnimationController _ctrl;
+  late final AnimationController _ctrl = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 3000), // 2400 akış + 600 dönüş
+  );
+  late _HgGeometry _geo = _HgGeometry(widget.size);
+  bool _reduced = false;
 
   @override
-  void initState() {
-    super.initState();
-    _ctrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 1800),
-    );
-    if (widget.animate) _ctrl.repeat();
+  void didUpdateWidget(ElegantHourglass old) {
+    super.didUpdateWidget(old);
+    if (old.size != widget.size) _geo = _HgGeometry(widget.size);
+    if (old.animate != widget.animate) _apply();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final reduced = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    if (reduced != _reduced) {
+      _reduced = reduced;
+      _apply();
+    } else if (!_ctrl.isAnimating && widget.animate && !_reduced) {
+      _apply();
+    }
+  }
+
+  void _apply() {
+    if (widget.animate && !_reduced) {
+      if (!_ctrl.isAnimating) _ctrl.repeat();
+    } else {
+      _ctrl.stop();
+    }
   }
 
   @override
@@ -43,150 +70,299 @@ class _ElegantHourglassState extends State<ElegantHourglass>
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _ctrl,
-      builder: (_, __) {
-        return CustomPaint(
-          size: Size(widget.size, widget.size),
-          painter: _HourglassPainter(
-            progress: _ctrl.value,
-            color: widget.color,
-          ),
-        );
-      },
+    final still = !widget.animate || _reduced;
+    return RepaintBoundary(
+      child: CustomPaint(
+        size: Size(widget.size, widget.size),
+        painter: _HourglassPainter(
+          anim: _ctrl,
+          geo: _geo,
+          color: widget.color,
+          still: still,
+        ),
+      ),
     );
   }
 }
 
-class _HourglassPainter extends CustomPainter {
-  final double progress; // 0.0 → 1.0 (bir tam döngü)
-  final Color color;
+/// Kum saati iç geometrisi + alan→yükseklik tablosu (boyut başına bir kez hesaplanır).
+class _HgGeometry {
+  _HgGeometry(this.s) {
+    topY = s * 0.09;
+    botY = s * 0.91;
+    neckY = s * 0.50;
+    halfW = s * 0.36;
+    halfNeck = s * 0.05;
+    _buildTable();
+  }
 
-  const _HourglassPainter({required this.progress, required this.color});
+  final double s;
+  late final double topY, botY, neckY, halfW, halfNeck;
+
+  // Kümülatif kum alanı tablosu (topY..botY), ve bir haznenin alanı A.
+  final List<double> _ys = [];
+  final List<double> _cum = [];
+  late final double area; // tek hazne alanı
+
+  /// Belirli Y'deki iç cam yarı genişliği — boyuna doğru daralan, simetrik "bel".
+  double hwAt(double y) {
+    final d = (y - neckY).abs();
+    final maxD = neckY - topY;
+    final u = (d / maxD).clamp(0.0, 1.0);
+    return halfNeck + (halfW - halfNeck) * pow(u, 1.5).toDouble();
+  }
+
+  void _buildTable() {
+    const m = 96;
+    double acc = 0;
+    double prevY = topY;
+    _ys.add(topY);
+    _cum.add(0);
+    for (var k = 1; k <= m; k++) {
+      final y = topY + (botY - topY) * k / m;
+      final midY = (prevY + y) / 2;
+      acc += 2 * hwAt(midY) * (y - prevY);
+      _ys.add(y);
+      _cum.add(acc);
+      prevY = y;
+    }
+    // neckY tam ortada → tek hazne alanı toplamın yarısı.
+    area = acc / 2;
+  }
+
+  /// Kümülatif alan (topY'den) hedefe eşit olduğu Y (lineer interpolasyon).
+  double yForCum(double target) {
+    target = target.clamp(0.0, _cum.last);
+    // ikili arama
+    var lo = 0, hi = _cum.length - 1;
+    while (lo + 1 < hi) {
+      final mid = (lo + hi) >> 1;
+      if (_cum[mid] < target) {
+        lo = mid;
+      } else {
+        hi = mid;
+      }
+    }
+    final c0 = _cum[lo], c1 = _cum[hi];
+    final t = (c1 - c0).abs() < 1e-6 ? 0.0 : (target - c0) / (c1 - c0);
+    return _ys[lo] + (_ys[hi] - _ys[lo]) * t;
+  }
+}
+
+class _HourglassPainter extends CustomPainter {
+  _HourglassPainter({
+    required this.anim,
+    required this.geo,
+    required this.color,
+    required this.still,
+  }) : super(repaint: anim);
+
+  final Animation<double> anim;
+  final _HgGeometry geo;
+  final Color color;
+  final bool still;
 
   @override
   void paint(Canvas canvas, Size size) {
-    final w = size.width;
-    final h = size.height;
+    final t = anim.value;
+    // Faz: 0..0.8 akış (q: 0→1), 0.8..1 dönüş (q=1, angle 0→π).
+    double q, angle;
+    if (still) {
+      q = 0.5;
+      angle = 0;
+    } else if (t < 0.8) {
+      q = t / 0.8;
+      angle = 0;
+    } else {
+      q = 1;
+      final f = (t - 0.8) / 0.2;
+      angle = pi * (3 * f * f - 2 * f * f * f); // smoothstep
+    }
 
-    // Hizalama sabitleri
-    final cx = w / 2;
-    final topY = h * 0.06;
-    final botY = h * 0.94;
-    final neckY = h / 2;
-    final halfNeck = w * 0.04; // boyun yarı genişliği
-    final halfTop = w * 0.40;  // üst/alt kenar yarı genişliği
+    final cx = size.width / 2;
+    final cyY = size.height / 2;
 
-    // --- Çerçeve çizgisi ---
-    final framePaint = Paint()
-      ..color = color
-      ..strokeWidth = w * 0.055
-      ..strokeCap = StrokeCap.round
-      ..style = PaintingStyle.stroke;
+    // Ekrana sabit, çok hafif ışıma (dönüşte kaymasın → simetri bozulmaz).
+    canvas.drawCircle(
+      Offset(cx, cyY),
+      geo.halfW * 1.15,
+      Paint()
+        ..color = color.withValues(alpha: 0.06)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 10),
+    );
 
-    final framePath = Path()
-      // Üst yatay çizgi
-      ..moveTo(cx - halfTop, topY)
-      ..lineTo(cx + halfTop, topY)
-      // Sağ taraf: üstten boyuna
-      ..moveTo(cx + halfTop, topY)
-      ..lineTo(cx + halfNeck, neckY)
-      // Sağ taraf: boyundan alta
-      ..moveTo(cx + halfNeck, neckY)
-      ..lineTo(cx + halfTop, botY)
-      // Alt yatay çizgi
-      ..moveTo(cx + halfTop, botY)
-      ..lineTo(cx - halfTop, botY)
-      // Sol taraf: alttan boyuna
-      ..moveTo(cx - halfTop, botY)
-      ..lineTo(cx - halfNeck, neckY)
-      // Sol taraf: boyundan üste
-      ..moveTo(cx - halfNeck, neckY)
-      ..lineTo(cx - halfTop, topY);
+    canvas.save();
+    canvas.translate(cx, cyY);
+    canvas.rotate(angle);
+    canvas.translate(-cx, -cyY);
 
-    canvas.drawPath(framePath, framePaint);
+    _paintSand(canvas, q, t);
+    _paintGlass(canvas);
 
-    // --- Kum doluluk oranı ---
-    // progress 0→1: üst boşalır, alt dolar
-    // 0..0.85: aktif akış; 0.85..1.0: flip geçişi (görsel sıfırlanır)
-    final t = progress < 0.85 ? progress / 0.85 : 1.0;
+    canvas.restore();
+  }
 
-    final sandPaint = Paint()
-      ..color = color.withValues(alpha: 0.80)
+  // ── Kum ────────────────────────────────────────────────────────────────────
+  void _paintSand(Canvas canvas, double q, double t) {
+    final cx = geo.s / 2;
+    final a = geo.area;
+    final sand = Paint()
+      ..color = Color.lerp(color, Colors.white, 0.10)!.withValues(alpha: 0.92)
       ..style = PaintingStyle.fill;
 
-    // Üst bölme: t=0 → dolu, t=1 → boş
-    final topFill = 1.0 - t;
-    if (topFill > 0.01) {
-      // Kum saati üst bölmesinin doluluk poligonu
-      // Y=neckY üstünde, üstten aşağı doğru topFill kadar dolu
-      final topSandTop = topY + (neckY - topY) * (1.0 - topFill);
-
-      // Üst bölme: yamuk (üste geniş, alta dar — kum saati iç şekli)
-      // topSandTop'taki genişlik = interpolasyon
-      final topSandTopHalf = _xAtY(cx, topSandTop, topY, halfTop, neckY, halfNeck);
-      final topSandBotHalf = _xAtY(cx, neckY - 1, topY, halfTop, neckY, halfNeck);
-
-      final topSandPath = Path()
-        ..moveTo(cx - topSandTopHalf, topSandTop)
-        ..lineTo(cx + topSandTopHalf, topSandTop)
-        ..lineTo(cx + topSandBotHalf, neckY - 1)
-        ..lineTo(cx - topSandBotHalf, neckY - 1)
-        ..close();
-      canvas.drawPath(topSandPath, sandPaint);
+    // Üst kum: [topSurf, neckY], alan A*(1-q) → cum(topSurf)=A*q.
+    if (q < 0.995) {
+      final topSurf = geo.yForCum(a * q);
+      final path = _bulbPath(topSurf, geo.neckY, domeAt: topSurf, dome: 0);
+      canvas.drawPath(path, sand);
     }
 
-    // Alt bölme: t=0 → boş, t=1 → dolu
-    final botFill = t;
-    if (botFill > 0.01) {
-      final botSandBot = botY - (botY - neckY) * (1.0 - botFill);
-      final botSandBotHalf = _xAtY(cx, botSandBot, neckY, halfNeck, botY, halfTop);
-      final botSandTopHalf = _xAtY(cx, neckY + 1, neckY, halfNeck, botY, halfTop);
-
-      final botSandPath = Path()
-        ..moveTo(cx - botSandTopHalf, neckY + 1)
-        ..lineTo(cx + botSandTopHalf, neckY + 1)
-        ..lineTo(cx + botSandBotHalf, botSandBot)
-        ..lineTo(cx - botSandBotHalf, botSandBot)
-        ..close();
-      canvas.drawPath(botSandPath, sandPaint);
+    // Alt kum: [botSurf, botY], alan A*q → cum(botSurf)=A*(2-q). Üstte hafif kubbe.
+    if (q > 0.005) {
+      final botSurf = geo.yForCum(a * (2 - q));
+      final dome = (geo.hwAt(botSurf) * 0.18).clamp(0.0, geo.s * 0.03);
+      final path = _bulbPath(botSurf, geo.botY, domeAt: botSurf, dome: dome);
+      canvas.drawPath(path, sand);
     }
 
-    // --- Boyun kum damlası (aktif akış sırasında) ---
-    if (progress < 0.85 && topFill > 0.02) {
-      final dropPaint = Paint()
-        ..color = color.withValues(alpha: 0.55)
+    // Akan kum şeridi + taneler (yalnız akışta; uçlarda yumuşak açılıp kapanır).
+    if (!still && t < 0.8 && q > 0.02 && q < 0.98) {
+      final botSurf = geo.yForCum(a * (2 - q));
+      final fade = (sin(pi * (q.clamp(0.0, 1.0))) * 1.4).clamp(0.0, 1.0);
+      final streamPaint = Paint()
+        ..color = Color.lerp(color, Colors.white, 0.2)!.withValues(alpha: 0.55 * fade)
         ..style = PaintingStyle.fill;
-
-      // Boyundan akan ince bir şerit
-      final dropPath = Path()
-        ..addOval(Rect.fromCenter(
-          center: Offset(cx, neckY + h * 0.04),
-          width: w * 0.06,
-          height: h * 0.08,
-        ));
-      canvas.drawPath(dropPath, dropPaint);
+      final sw = geo.s * 0.016;
+      final top = geo.neckY + geo.s * 0.01;
+      final bottom = botSurf - geo.s * 0.005;
+      if (bottom > top) {
+        canvas.drawRRect(
+          RRect.fromRectAndRadius(
+            Rect.fromLTRB(cx - sw, top, cx + sw, bottom),
+            Radius.circular(sw),
+          ),
+          streamPaint,
+        );
+        // 2 küçük tane, zamana bağlı aşağı akar
+        final grainPaint = Paint()..color = streamPaint.color.withValues(alpha: 0.75 * fade);
+        for (var i = 0; i < 2; i++) {
+          final ph = ((t * 6) + i * 0.5) % 1.0;
+          final gy = top + (bottom - top) * ph;
+          canvas.drawCircle(Offset(cx, gy), sw * 0.9, grainPaint);
+        }
+      }
     }
   }
 
-  /// İç kum saati duvarının belirli Y'deki X yarı genişliği (lineer interpolasyon)
-  double _xAtY(
-      double cx, double y, double y1, double x1, double y2, double x2) {
-    if ((y2 - y1).abs() < 0.001) return x1;
-    final ratio = (y - y1) / (y2 - y1);
-    return x1 + (x2 - x1) * ratio.clamp(0.0, 1.0);
+  /// Verilen y aralığında, cam duvarlarına oturan kum poligonu. [dome]>0 ise üst kenar
+  /// (domeAt) ortada hafif kubbeli.
+  Path _bulbPath(double yTop, double yBot, {required double domeAt, required double dome}) {
+    final cx = geo.s / 2;
+    const n = 14;
+    final left = <Offset>[];
+    final right = <Offset>[];
+    for (var i = 0; i <= n; i++) {
+      final y = yTop + (yBot - yTop) * i / n;
+      var yy = y;
+      if (dome > 0 && i == 0) yy = y; // üst kenarı ayrı işleyeceğiz
+      final hw = geo.hwAt(yy);
+      left.add(Offset(cx - hw, yy));
+      right.add(Offset(cx + hw, yy));
+    }
+    final path = Path()..moveTo(left.first.dx, left.first.dy);
+    for (final p in left.skip(1)) {
+      path.lineTo(p.dx, p.dy);
+    }
+    for (final p in right.reversed) {
+      path.lineTo(p.dx, p.dy);
+    }
+    // Üst kenar kubbesi (alt kum): düz kenar yerine ortada yukarı doğru çıkıntı.
+    if (dome > 0) {
+      final hw = geo.hwAt(domeAt);
+      path.moveTo(cx - hw, domeAt);
+      path.quadraticBezierTo(cx, domeAt - dome, cx + hw, domeAt);
+    }
+    path.close();
+    return path;
+  }
+
+  // ── Cam + kapaklar (180° simetrik) ──────────────────────────────────────────
+  void _paintGlass(Canvas canvas) {
+    final cx = geo.s / 2;
+    final stroke = Paint()
+      ..color = color.withValues(alpha: 0.95)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = geo.s * 0.028
+      ..strokeJoin = StrokeJoin.round
+      ..strokeCap = StrokeCap.round;
+
+    // Sol + sağ cam duvar (eğri "bel").
+    const n = 20;
+    Path wall(double sign) {
+      final p = Path();
+      for (var i = 0; i <= n; i++) {
+        final y = geo.topY + (geo.botY - geo.topY) * i / n;
+        final x = cx + sign * geo.hwAt(y);
+        if (i == 0) {
+          p.moveTo(x, y);
+        } else {
+          p.lineTo(x, y);
+        }
+      }
+      return p;
+    }
+
+    canvas.drawPath(wall(-1), stroke);
+    canvas.drawPath(wall(1), stroke);
+
+    // Kapaklar: üst ve alt, aynı yuvarlatılmış kısa çubuk (simetrik).
+    final capW = geo.halfW + geo.s * 0.02;
+    final capStroke = Paint()
+      ..color = color
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = geo.s * 0.05
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(Offset(cx - capW, geo.topY), Offset(cx + capW, geo.topY), capStroke);
+    canvas.drawLine(Offset(cx - capW, geo.botY), Offset(cx + capW, geo.botY), capStroke);
+
+    // İnce cam parlaması (tek, sol duvarda).
+    final shine = Paint()
+      ..color = Colors.white.withValues(alpha: 0.18)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = geo.s * 0.012
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(
+      Offset(cx - geo.halfW * 0.72, geo.topY + geo.s * 0.08),
+      Offset(cx - geo.halfNeck * 1.4, geo.neckY - geo.s * 0.06),
+      shine,
+    );
   }
 
   @override
   bool shouldRepaint(_HourglassPainter old) =>
-      old.progress != progress || old.color != color;
+      old.color != color || old.geo != geo || old.still != still;
 }
 
-/// Flip animasyonlu versiyon — eski `_top ? hourglass_top : hourglass_bottom` kalıbı ile uyumlu
-class FlipHourglass extends StatefulWidget {
+/// Yalnız görsel doğrulama: kum saatini sabit bir faz [t] (0..1) ile çizer (canlı controller
+/// olmadan → testte bekleyen zamanlayıcı yok).
+@visibleForTesting
+Widget debugHourglassFrame({required double size, required Color color, required double t}) {
+  return CustomPaint(
+    size: Size(size, size),
+    painter: _HourglassPainter(
+      anim: AlwaysStoppedAnimation<double>(t),
+      geo: _HgGeometry(size),
+      color: color,
+      still: false,
+    ),
+  );
+}
+
+/// Flip animasyonlu eski ad — artık ana [ElegantHourglass] zaten dikişsiz döner.
+class FlipHourglass extends StatelessWidget {
   final double size;
   final Color color;
-  final Duration flipInterval;
+  final Duration flipInterval; // yok sayılır (geriye dönük uyumluluk)
 
   const FlipHourglass({
     super.key,
@@ -196,52 +372,10 @@ class FlipHourglass extends StatefulWidget {
   });
 
   @override
-  State<FlipHourglass> createState() => _FlipHourglassState();
+  Widget build(BuildContext context) => ElegantHourglass(size: size, color: color);
 }
 
-class _FlipHourglassState extends State<FlipHourglass>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _ctrl;
-
-  @override
-  void initState() {
-    super.initState();
-    _ctrl = AnimationController(
-      vsync: this,
-      duration: widget.flipInterval,
-    )..repeat();
-  }
-
-  @override
-  void dispose() {
-    _ctrl.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _ctrl,
-      builder: (_, __) {
-        // 0→0.5: normal yön; 0.5→1.0: ters çevrilmiş
-        final flipped = _ctrl.value >= 0.5;
-        final turnProgress = flipped ? (_ctrl.value - 0.5) * 2 : _ctrl.value * 2;
-        return Transform.rotate(
-          angle: flipped ? pi : 0,
-          child: CustomPaint(
-            size: Size(widget.size, widget.size),
-            painter: _HourglassPainter(
-              progress: turnProgress * 0.85,
-              color: widget.color,
-            ),
-          ),
-        );
-      },
-    );
-  }
-}
-
-/// Pulse (büyüyüp küçülen) animasyonlu versiyon — ScaleTransition + FlipHourglass
+/// Pulse (hafif büyüyüp küçülen) sarmalayıcı.
 class PulsingHourglass extends StatefulWidget {
   final double size;
   final Color color;
@@ -266,11 +400,22 @@ class _PulsingHourglassState extends State<PulsingHourglass>
     super.initState();
     _pulse = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 600),
-    )..repeat(reverse: true);
-    _scale = Tween<double>(begin: 0.85, end: 1.0).animate(
+      duration: const Duration(milliseconds: 1400),
+    );
+    _scale = Tween<double>(begin: 0.92, end: 1.0).animate(
       CurvedAnimation(parent: _pulse, curve: Curves.easeInOut),
     );
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final reduced = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    if (reduced) {
+      _pulse.stop();
+    } else if (!_pulse.isAnimating) {
+      _pulse.repeat(reverse: true);
+    }
   }
 
   @override
@@ -288,8 +433,9 @@ class _PulsingHourglassState extends State<PulsingHourglass>
   }
 }
 
-/// Dönen (360°) animasyonlu versiyon — numeroloji_screen'deki kalıbı değiştirir
-class SpinningHourglass extends StatefulWidget {
+/// Numeroloji'deki dönen kalıp — artık kum saati zaten kendi içinde dönüyor, bu yüzden
+/// yalnız hafif bir nabızla sarmalar (çift 360° dönüş gürültü yapıyordu).
+class SpinningHourglass extends StatelessWidget {
   final double size;
   final Color color;
 
@@ -300,48 +446,6 @@ class SpinningHourglass extends StatefulWidget {
   });
 
   @override
-  State<SpinningHourglass> createState() => _SpinningHourglassState();
-}
-
-class _SpinningHourglassState extends State<SpinningHourglass>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _ctrl;
-  late final Animation<double> _scale;
-
-  @override
-  void initState() {
-    super.initState();
-    _ctrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 1200),
-    )..repeat();
-    _scale = TweenSequence<double>([
-      TweenSequenceItem(tween: Tween(begin: 0.85, end: 1.0), weight: 50),
-      TweenSequenceItem(tween: Tween(begin: 1.0, end: 0.85), weight: 50),
-    ]).animate(CurvedAnimation(parent: _ctrl, curve: Curves.easeInOut));
-  }
-
-  @override
-  void dispose() {
-    _ctrl.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _ctrl,
-      builder: (_, __) => Transform.scale(
-        scale: _scale.value,
-        child: Transform.rotate(
-          angle: _ctrl.value * 2 * pi,
-          child: ElegantHourglass(
-            size: widget.size,
-            color: widget.color,
-            animate: false,
-          ),
-        ),
-      ),
-    );
-  }
+  Widget build(BuildContext context) =>
+      PulsingHourglass(size: size, color: color);
 }

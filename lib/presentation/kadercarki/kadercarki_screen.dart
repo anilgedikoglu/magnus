@@ -246,7 +246,9 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     _prevSpinMicros = DateTime.now().microsecondsSinceEpoch;
     _kazananIndex = hedefBolme;
     // Metin dönüş sırasında hazırlanır (sonra bekleme yok).
-    _metinFuture = _rastgeleMetnAl(_bolmeler[hedefBolme].key, ref.read(userProfileProvider));
+    // Hata _sonucuGoster'deki await'te yakalanır; o ana kadar "yakalanmamış" sayılmasın.
+    _metinFuture = _rastgeleMetnAl(_bolmeler[hedefBolme].key, ref.read(userProfileProvider))
+      ..ignore();
     _spinCtrl.forward(from: 0);
   }
 
@@ -261,7 +263,11 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   void _onSpinComplete() {
     HapticFeedback.heavyImpact();
     setState(() { _doniyor = false; _bitti = true; _speedFraction = 0.0; });
-    _winCtrl.repeat(reverse: true);
+    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+      _winCtrl.value = 1; // azaltılmış harekette nabız yok, kazanan sabit parlar
+    } else {
+      _winCtrl.repeat(reverse: true);
+    }
     // Kazanan an kısa sürsün ama görülsün (1,2 sn), sonra reklam → sonuç.
     Future.delayed(const Duration(milliseconds: 1200), () {
       if (!mounted) return;
@@ -521,8 +527,9 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   Widget _buildMetin() {
     final s = ref.watch(l10nProvider);
     final bolme = _bolmeler[_kazananIndex];
-    Animation<double> seg(double a, double b) => CurvedAnimation(
-        parent: _revealCtrl, curve: Interval(a, b, curve: Curves.easeOutCubic));
+    // drive: CurvedAnimation gibi kontrolcüye kalıcı durum dinleyicisi eklemez (her build'de sızıntı yok).
+    Animation<double> seg(double a, double b) =>
+        _revealCtrl.drive(CurveTween(curve: Interval(a, b, curve: Curves.easeOutCubic)));
     final ikonA = seg(0.0, 0.45);
     final baslikA = seg(0.18, 0.6);
     final metinA = seg(0.38, 1.0);

@@ -598,15 +598,20 @@ class AvucCizgileri extends StatefulWidget {
 }
 
 class _AvucCizgileriState extends State<AvucCizgileri> with SingleTickerProviderStateMixin {
+  // Çizgiler ilk ~2,4 sn'de çizilir; sonra [_dongu, _toplam] aralığı sonsuz döner: tarama
+  // (2,4 sn) ve nefes (1,8 sn) 7,2 sn'de birlikte başa döner → dikişsiz (analiz uzun sürerse
+  // ekran donmuş görünmesin; inceleme bulgusu).
+  static const _toplam = 9800.0;
+  static const _dongu = 2600.0;
   late final AnimationController _c =
-      AnimationController(vsync: this, duration: const Duration(milliseconds: 5000));
+      AnimationController(vsync: this, duration: Duration(milliseconds: _toplam.toInt()));
   int _bitenler = 0;
 
   @override
   void initState() {
     super.initState();
     _c.addListener(() {
-      final n = (_c.value * 5000 / 420).floor().clamp(0, 5);
+      final n = (_c.value * _toplam / 420).floor().clamp(0, 5);
       if (n > _bitenler) {
         _bitenler = n;
         HapticFeedback.selectionClick();
@@ -616,7 +621,9 @@ class _AvucCizgileriState extends State<AvucCizgileri> with SingleTickerProvider
     if (reduce) {
       _c.value = 1;
     } else {
-      _c.forward();
+      _c.forward().then((_) {
+        if (mounted) _c.repeat(min: _dongu / _toplam, max: 1);
+      });
     }
   }
 
@@ -629,7 +636,7 @@ class _AvucCizgileriState extends State<AvucCizgileri> with SingleTickerProvider
   @override
   Widget build(BuildContext context) => AnimatedBuilder(
         animation: _c,
-        builder: (context, _) => CustomPaint(painter: _AvucPainter(_c.value * 5000)),
+        builder: (context, _) => CustomPaint(painter: _AvucPainter(_c.value * _toplam)),
       );
 }
 

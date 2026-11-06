@@ -59,8 +59,7 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
     _idle = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 2600));
     _blink = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: _kBlinkCycleMs))
-      ..repeat();
+        vsync: this, duration: const Duration(milliseconds: _kBlinkCycleMs));
     _card = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 280), value: 1);
     _load();
@@ -101,6 +100,14 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    // Azaltılmış harekette göz kırpma yok (gözler açık kalır).
+    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+      _blink
+        ..stop()
+        ..value = 0;
+    } else if (!_blink.isAnimating) {
+      _blink.repeat();
+    }
     if (_precached) return;
     _precached = true;
     // İlk kırpışta katman yüklenirken boş kare olmasın.

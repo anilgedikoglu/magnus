@@ -339,7 +339,9 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
           onTap: kullanildi ? null : () => _soruyuSec(tip),
           child: AnimatedScale(
             scale: _vurgulu == tip ? 1.08 : (_vurgulu != null ? 0.94 : 1.0),
-            duration: const Duration(milliseconds: 380),
+            duration: (MediaQuery.maybeDisableAnimationsOf(context) ?? false)
+                ? Duration.zero
+                : const Duration(milliseconds: 380),
             curve: Curves.easeOutBack,
             child: AnimatedOpacity(
             opacity: kullanildi ? 0.38 : (_vurgulu != null && _vurgulu != tip ? 0.45 : 1.0),

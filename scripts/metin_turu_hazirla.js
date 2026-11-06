@@ -331,6 +331,18 @@ const CESITLILIK = `ÖRNEKLER YALNIZCA YAPI İÇİN — ÇOK ÖNEMLİ:
 - 20 metnin hiçbirinde aynı "ne + nasıl + kim" üçlüsü tekrar etmesin; açılış cümleleri de birbirinden farklı olsun.
 - KALIP YASAKLARI (tur 2'de yakalandı): metni "Tavsiyem: …" öğüdüyle bitirme; "Öğleye doğru… Öğleden sonra… Akşamüstü… Akşam…" saat zinciri kurma (bir metinde en fazla 2 zaman ifadesi; kimi metin tek bir sahneyi derinleştirsin); "belki X, belki Y" listesi yazma (olay tek ve canlı bir ifadeyle — ama COLD READING kuralı gereği YAYGIN bir olay); "adında {{harf}} harfi olan biri" 20 metnin en fazla 2'sinde.
 - GİZLİ VARSAYIM YAPMA: kitlede yazmayanı varsayma ("nişanlı" cinsiyetsizdir — damat/gelin deme; "ev hanımı" evli olmak zorunda değil; "boşanmış" çocuklu olmak zorunda değil; anne/babanın öldüğünü ima etme).`;
+// Haber verme söylemi: "…görüyorum" tek kalıbına saplanma; mistik/gizemli fiillerle BOL çeşitlendir (Anıl, 2026-11-06).
+const HABER_SOYLEM = `HABER VERME SÖYLEMİ — ÇEŞİTLENDİR (Anıl'ın ZORUNLU kuralı, 2026-11-06):
+Magnus haberi/öngörüyü duyururken HEP aynı "… olduğunu görüyorum" kalıbına saplanma. Haberi veren fiili/çerçeveyi HER metinde DEĞİŞTİR; mistik, gizemli, kâhince söyleyişlerle BOL çeşitlendir. Çerçeve örnekleri (AYNEN kopyalama — çoğalt, kendi mistik varyasyonlarını üret):
+- "… olduğunu görüyorum" · "… olacağını öngörüyorum / seziyorum" · "… olacağını hissediyorum"
+- "hislerim … olacağını işaret ediyor" · "… olacağını söyleyebilirim" · "… olacağı ihtimali üzerinde duruyorum"
+- "… olabileceği yönünde bir kanaatim var" · "… olacağına inanıyorum" · "tüm işaretler … olacağını gösteriyor"
+- "… olacağı kulağıma fısıldanıyor" · "… olacağı yönündeki hislerim çok kuvvetli"
+- Daha mistik: "yıldızlar … diyor", "sular bana … getiriyor", "fincanın dibinde … beliriyor", "kartlar … işaret ediyor",
+  "içimden bir ses … diyor", "gölgeler arasında … seçiliyor", "kaderin ipliği … örüyor", "bir önsezi … fısıldıyor",
+  "ruhum … sezinliyor", "işaretleri okuyorum ve …", "perde aralanıyor, … beliriyor", "sezgilerim … tarafına kayıyor".
+KURAL: Aynı haber-verme çerçevesi 20 metnin EN FAZLA 2'sinde geçer. Bazı metin çerçevesiz, doğrudan sahneyle de açılabilir.
+Çerçeve metne doğal gömülsün (liste gibi sıralama yok); türe uysun (kahve→fincan/telve, tarot→kartlar, su falı→sular, astro→yıldızlar).`;
 const YASAK = 'YASAKLAR: hastalık, ölüm, kaza, felaket, aldatma kehaneti yok; kesinlik/garanti iddiası yok; yapay zekâ olduğunu söyleme; emoji en fazla 1.';
 
 const list = TURLAR[tur];
@@ -363,7 +375,7 @@ for (const k of list) {
   let s = `Magnus adlı bir fal uygulamasının metin yazarısın. Bu uygulamanın gerçek metinlerini yazan kişinin üslubunu sürdüreceksin.\n\n`;
   s += `FAL TÜRÜ: ${k.tur}\nSİSTEM: ${k.sistem}\nKOMPARTMAN: ${k.gorev}\n`;
   s += (k.uslup || `ÜSLUP: Magnus birinci tekil konuşur ("görüyorum", "gözüme çarptı"), kullanıcıya "sen" diye hitap eder; sıcak, hafif esprili, gizemli, kendinden emin.`) + `\n\n`;
-  s += `${HEDEF}\n\n${COLD_READING}\n\n${ALTIN_ORNEK}\n\n${CESITLILIK}\n\n${ORTAK_YER}\n\n${YASAK}${k.ekYasak ? ' ' + k.ekYasak : ''}\n\n`;
+  s += `${HEDEF}\n\n${COLD_READING}\n\n${ALTIN_ORNEK}\n\n${CESITLILIK}\n\n${HABER_SOYLEM}\n\n${ORTAK_YER}\n\n${YASAK}${k.ekYasak ? ' ' + k.ekYasak : ''}\n\n`;
   s += `KİTLE KURALI: Her metni aşağıda numarasıyla verilen kitleye göre yaz. "Koşulsuz" metin herkese gösterilir; içinde cinsiyet, medeni durum, meslek, yaş VARSAYMA. Koşullu metin yalnız o kitleye gösterilir; içeriği o kitleye özel ve isabetli olsun.\n\n`;
   s += `YAZILACAK ${N} METİN:\n`;
   kit.forEach((x, i) => { s += `${i + 1}. kitle: ${x}${konular ? ` | konu: ${konular[i]}` : ''}\n`; });

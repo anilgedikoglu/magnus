@@ -144,7 +144,8 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
     // Koşul filtresi
     final uygunlar = tumListe.where((e) => _uygun(e, profile)).toList();
     if (uygunlar.isEmpty) {
-        if (mounted) setState(() => _odaklaniyor = false);
+      // Vurgu da sıfırlanmalı: yoksa diğer kartlar sönük kalır ve dokunuş alınmaz.
+      if (mounted) setState(() { _odaklaniyor = false; _vurgulu = null; });
       return;
     }
 

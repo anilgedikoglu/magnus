@@ -560,6 +560,7 @@ class _TarotScreenState extends ConsumerState<TarotScreen>
   }
 
   Future<void> _generateReading() async {
+    if (_isGenerating) return; // aynı karede çift dokunuş iki fal üretmesin
     setState(() => _isGenerating = true);
     try {
       final profile = ref.read(userProfileProvider);

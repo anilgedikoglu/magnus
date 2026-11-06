@@ -34,6 +34,11 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
 
   bool _done = false;
 
+  /// Seçilen metin ve ondan türetilen çizgiler: animasyon metindeki yazı-turayla aynı
+  /// heksagramı çizer (inceleme bulgusu: eskiden rastgele çiziyordu).
+  Map<String, dynamic>? _secilen;
+  List<bool>? _cizgiler;
+
   @override
   void initState() {
     super.initState();
@@ -41,11 +46,20 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
   }
 
   Future<void> _start() async {
-    // 5 saniye bekle
-    await Future.delayed(const Duration(seconds: 5));
+    final basla = DateTime.now();
+    await _sec();
+    if (!mounted) return;
+    setState(() => _cizgiler = _secilen == null
+        ? List.generate(6, (_) => Random().nextBool())
+        : (ichingCizgileri(_secilen!['metin'] as String? ?? '') ??
+            List.generate(6, (_) => Random().nextBool())));
+
+    // Toplam ~5 sn ritüel (seçim süresi dahil)
+    final kalan = const Duration(seconds: 5) - DateTime.now().difference(basla);
+    if (kalan > Duration.zero) await Future.delayed(kalan);
     if (!mounted) return;
 
-    await _generateAndSave();
+    await _kaydet();
     if (!mounted) return;
 
     setState(() => _done = true);
@@ -53,10 +67,10 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
     context.go('/home');
   }
 
-  Future<void> _generateAndSave() async {
-    final prefs   = await SharedPreferences.getInstance();
+  /// Metni seçer (henüz kaydetmez).
+  Future<void> _sec() async {
     final profile = ref.read(userProfileProvider);
-    final vars    = profile.toVariableMap();
+    final prefs   = await SharedPreferences.getInstance();
 
     final raw  = await rootBundle.loadString('assets/data/iching.json');
     final data = jsonDecode(raw) as Map<String, dynamic>;
@@ -79,7 +93,7 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
 
     if (uygunlar.isEmpty) return;
 
-    // No-repeat seçim
+    // No-repeat seçim (kayıt _kaydet'te, ritüel bitince)
     List<String> gosterilen = prefs.getStringList(_prefKeyGosterilen) ?? [];
     var kalan = uygunlar.where((e) => !gosterilen.contains('${e['id']}')).toList();
 
@@ -92,7 +106,16 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
     }
 
     kalan.shuffle(Random());
-    final secilen = kalan.first;
+    _secilen = kalan.first;
+  }
+
+  /// Ritüel bitince: no-repeat kaydı + gelen kutusu.
+  Future<void> _kaydet() async {
+    final secilen = _secilen;
+    if (secilen == null) return;
+    final prefs = await SharedPreferences.getInstance();
+    final vars  = ref.read(userProfileProvider).toVariableMap();
+    final gosterilen = prefs.getStringList(_prefKeyGosterilen) ?? [];
     gosterilen.add('${secilen['id']}');
     await prefs.setStringList(_prefKeyGosterilen, gosterilen);
 
@@ -202,7 +225,9 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
                   children: [
                     // Bekleme bir ritüel: hexagram aşağıdan yukarı çizgi çizgi atılır (2026-11-06;
                     // eskiden "zarlar atılıyor" yazıp yalnız kum saati gösteriyordu).
-                    const _HexagramCasting(),
+                    _cizgiler == null
+                        ? const SizedBox(width: 180, height: 150)
+                        : _HexagramCasting(yang: _cizgiler!),
                     const SizedBox(height: 24),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 32),
@@ -267,7 +292,10 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
 /// Hexagram atılışı: 6 çizgi (yin kesik / yang düz) alttan üste ~0,75 sn arayla belirir;
 /// her çizgide altın parlama + hafif tık. Toplam ~4,6 sn (ekran 5 sn bekler).
 class _HexagramCasting extends StatefulWidget {
-  const _HexagramCasting();
+  const _HexagramCasting({required this.yang});
+
+  /// Alttan üste 6 çizgi (true = düz/yang).
+  final List<bool> yang;
   @override
   State<_HexagramCasting> createState() => _HexagramCastingState();
 }
@@ -275,7 +303,7 @@ class _HexagramCasting extends StatefulWidget {
 class _HexagramCastingState extends State<_HexagramCasting> with SingleTickerProviderStateMixin {
   late final AnimationController _c =
       AnimationController(vsync: this, duration: const Duration(milliseconds: 4600));
-  final List<bool> _yang = List.generate(6, (_) => Random().nextBool());
+  List<bool> get _yang => widget.yang;
   int _shown = 0;
 
   @override
@@ -414,4 +442,20 @@ class _DotsIndicatorState extends State<_DotsIndicator> {
       }),
     );
   }
+}
+
+/// Metindeki "N. sıra: Yazı, Tura, Tura" satırlarından heksagram çizgileri (alttan üste,
+/// true = yang). Üç para yöntemi: Yazı = 3, Tura = 2; toplam tekse (yazı sayısı tek) yang.
+/// 6 satır bulunamazsa null.
+@visibleForTesting
+List<bool>? ichingCizgileri(String metin) {
+  final re = RegExp(r'(\d)\.\s*sıra:\s*([^\n]*)');
+  final satirlar = <int, bool>{};
+  for (final m in re.allMatches(metin)) {
+    final no = int.parse(m.group(1)!);
+    final yazi = RegExp('Yazı').allMatches(m.group(2)!).length;
+    satirlar[no] = yazi.isOdd;
+  }
+  if (!List.generate(6, (i) => i + 1).every(satirlar.containsKey)) return null;
+  return List.generate(6, (i) => satirlar[i + 1]!);
 }

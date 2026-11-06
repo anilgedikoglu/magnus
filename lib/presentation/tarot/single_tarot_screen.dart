@@ -666,6 +666,7 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen>
   }
 
   Future<void> _generateReading() async {
+    if (_isGenerating) return; // aynı karede çift dokunuş iki fal üretmesin
     setState(() => _isGenerating = true);
     try {
       final profile = ref.read(userProfileProvider);
@@ -687,7 +688,12 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen>
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Hata: $e'), backgroundColor: Colors.red),
+          SnackBar(
+            content: Text(ref.read(localeProvider) == 'en'
+                ? 'Something went wrong, please try again.'
+                : 'Bir hata oluştu, lütfen tekrar dene.'),
+            backgroundColor: Colors.red,
+          ),
         );
       }
     } finally {

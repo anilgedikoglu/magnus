@@ -72,10 +72,16 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
     final videoPath =
         'assets/videos/kahinler/${widget.kahinId}v.mp4';
     try {
-      _videoCtrl = VideoPlayerController.asset(videoPath);
-      await _videoCtrl!.initialize();
-      _videoCtrl!.setLooping(true);
-      _videoCtrl!.play();
+      final ctrl = VideoPlayerController.asset(videoPath);
+      await ctrl.initialize();
+      if (!mounted) {
+        // Ekran init sirasinda kapandi → kontrolcuyu birak; disposed'da kullanma.
+        await ctrl.dispose();
+        return;
+      }
+      ctrl.setLooping(true);
+      ctrl.play();
+      _videoCtrl = ctrl;
     } catch (e) {
       _videoCtrl = null;
     }

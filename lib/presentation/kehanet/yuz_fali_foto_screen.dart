@@ -78,7 +78,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
       });
       _scanCtrl.repeat(reverse: true);
       await _analizEt();
-      _scanCtrl.stop();
+      if (mounted) _scanCtrl.stop();
     } catch (e) {
       if (mounted) {
         setState(() {
@@ -108,7 +108,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
       // Günlük hak, ön kontrol GEÇİNCE _analizEt içinde işaretlenir (yanlış fotoda hak gitmesin).
       _scanCtrl.repeat(reverse: true);
       await _analizEt();
-      _scanCtrl.stop();
+      if (mounted) _scanCtrl.stop();
     } catch (e) {
       if (mounted) {
         setState(() {

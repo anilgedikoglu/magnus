@@ -5849,6 +5849,222 @@
           "deger": "bosanmis"
         }
       ]
+    },
+    {
+      "id": 593,
+      "metin": "<color=yellow><b>Eşimle paylaştığım evde, sevginin de huzurun da gün geçtikçe büyüdüğünü hissediyorum.</b></color>",
+      "metin_en": "<color=yellow><b>In the home I share with my spouse, I feel both love and peace growing with each passing day.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 594,
+      "metin": "<color=yellow><b>Bugünün bana getirdiği her şeyi, elimden gelenin en iyisiyle karşılamaya hazırım.</b></color>",
+      "metin_en": "<color=yellow><b>I am ready to meet whatever today brings me with the very best I can offer.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 595,
+      "metin": "<color=yellow><b>Kurduğumuz yeni hayatın her adımına umutla ve sabırla yürüyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I walk every step of the new life we are building with hope and patience.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nisanli"
+        }
+      ]
+    },
+    {
+      "id": 596,
+      "metin": "<color=yellow><b>Ailemin huzuru için güçlüyüm; eşimle omuz omuza her zorluğu aşabileceğimize inanıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I am strong for my family's peace; I believe my spouse and I can overcome any hardship side by side.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 597,
+      "metin": "<color=yellow><b>Duygularımı bastırmak zorunda değilim; onları anlamak beni daha güçlü kılıyor.</b></color>",
+      "metin_en": "<color=yellow><b>I don't have to suppress my feelings; understanding them makes me stronger.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 598,
+      "metin": "<color=yellow><b>Derslerime verdiğim emek boşa gitmiyor; her çalıştığım konu beni hedefime yaklaştırıyor.</b></color>",
+      "metin_en": "<color=yellow><b>The effort I put into my studies is not wasted; every topic I work on brings me closer to my goal.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 599,
+      "metin": "<color=yellow><b>Geçmişin yükünü bırakıyor, bugünü hafif ve açık bir kalple karşılıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I set down the weight of the past and meet today with a light and open heart.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 600,
+      "metin": "<color=yellow><b>Sevdiğim kişiye açık ve dürüst oldukça, aramızdaki bağ her gün güçleniyor.</b></color>",
+      "metin_en": "<color=yellow><b>The more open and honest I am with the one I love, the stronger our bond grows each day.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliski_var"
+        }
+      ]
+    },
+    {
+      "id": 601,
+      "metin": "<color=yellow><b>Kendi değerimi başkalarının onayında değil, kendi gözümde buluyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I find my worth not in others' approval, but in my own eyes.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 602,
+      "metin": "<color=yellow><b>Bana iyi gelmeyen her şeyi usulca bırakıyor, yerine huzuru davet ediyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I gently release everything that does not serve me, and invite peace in its place.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 603,
+      "metin": "<color=yellow><b>Küçük adımların beni büyük yerlere taşıdığına her gün yeniden inanıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I believe anew each day that small steps carry me to great places.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 604,
+      "metin": "<color=yellow><b>Yalnız olduğum bu dönemi bir eksiklik değil, kendimi tanıdığım bir fırsat olarak görüyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I see this time of being on my own not as a lack, but as a chance to get to know myself.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 605,
+      "metin": "<color=yellow><b>Eşimle aramızdaki küçük anların, mutluluğun asıl kaynağı olduğunu biliyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I know that the small moments between my spouse and me are the true source of happiness.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 606,
+      "metin": "<color=yellow><b>Kendime verdiğim sevgi, bir başkasından bekleyeceğim her şeyin temelidir.</b></color>",
+      "metin_en": "<color=yellow><b>The love I give myself is the foundation of everything I would ever expect from another.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 607,
+      "metin": "<color=yellow><b>Kapanan bir kapının ardında, bana daha çok yakışan yeni bir yol açılıyor.</b></color>",
+      "metin_en": "<color=yellow><b>Behind a door that has closed, a new path that suits me far better is opening.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 608,
+      "metin": "<color=yellow><b>Kendi ayaklarımın üzerinde durmanın gücünü ve özgürlüğünü her gün daha çok seviyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I love more and more each day the strength and freedom of standing on my own feet.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 609,
+      "metin": "<color=yellow><b>Bu dönem benim zamanım; yıllarca verdiğim emeğin huzurunu dinginlikle çıkarıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>This is my time; I savor the peace of the years of effort I gave, in calm tranquility.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 610,
+      "metin": "<color=yellow><b>İş yerimde karşılaştığım her zorluğu, kendimi geliştiren bir basamak olarak görüyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I see every challenge I meet at work as a step that helps me grow.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 611,
+      "metin": "<color=yellow><b>Kurumdaki işimi sabırla ve özenle yapıyor, yarattığım düzenle gurur duyuyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I do my work at the institution with patience and care, and I take pride in the order I create.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 612,
+      "metin": "<color=yellow><b>Ürettiğim her satırın bilgiye küçük bir katkı olduğuna inanarak çalışıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I work believing that every line I produce is a small contribution to knowledge.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
     }
   ]
 }

@@ -2,6 +2,34 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
+## Ne yapıldı (2026-11-06 gece — "kalanları yap": hata avı + metin turları 18-20)
+Build YOK (Anıl "test çık" demedi). Hepsi commit + push + **main'e FF** (sürüm 10.8.17+285'te kaldı).
+⚠️ **Ana klasör (`C:\src\magnus_app`) `git pull` ister** (remote main güncel, yerel ana checkout değil — sonraki build öncesi çek).
+
+- **Fal-türü hata avı (Codex, salt-okur, 23 bulgu) → P1 hak-kaybı sınıfı düzeltildi** (commit b36f6c4a):
+  Numeroloji, Tarot, Tek-Kart Tarot, Durugörü, Kahve'de inbox notifier (+locale) `await`'ten ÖNCE yakalanıyor →
+  bekleme/animasyon dolmadan çıkılsa da sonuç inbox'a düşer, günlük hak boşa gitmez (el/yüz'de zaten yapılmıştı).
+  Kahve: üretim fire-and-forget hemen başlar, hak arkasından işaretlenir.
+- **Ayarlar editör dibi (Codex P1):** roller/tarih düzenleyicisi (380px) açılınca 1. kart otomatik sıkışıyor →
+  sayfa scroll kilitli olsa da kaydet/iptal foldun altında kalmaz (`settings_screen.dart` `_inlineEditProvider` listener).
+- **Metin turları 18-19-20 (magnus-metin-uretimi):** toplam **+300 (tur18:110, tur19:115, tur20:75)**.
+  ⚠️ **Gemini free-tier kotası TÜKENDİ (limit 0, ~17 saat retry); Codex HAFTALIK sınıra takıldı (11 Kasım'a kadar).**
+  Yazarlar **Codex + Claude**; seçim/denetim Claude (tarafsız) + `metin_kalip_tara.js`; çeviri tur18-19 **Codex**
+  (yeni `scripts/metin_codex_ceviri.sh`), tur20 **Claude** (iki AI de tükenince, elle, parite test edildi). Hepsi
+  `metin_tur_kontrol_test` + `kosul_deger_tipi_test` yeşil. Toplam üretilen metin: **2749** (bkz. `docs/metin_uretim_log.md`).
+  Yeni tur tanımları `metin_turu_hazirla.js` TUR 18-22'de. Gemini yardımcıları scratchpad'de (`gemini_helper.js`,
+  `metin_gemini.js`, `yuzfali_en.js`) EPHEMERAL — kota dönünce yeniden üretilebilir; yüz/el falı EN + yüksek-hızlı turlar için.
+
+### ⏭️ ERTELENEN — sıradaki adım (Gemini kotası ~17 saat sonra döner)
+1. **~10.000 yeni metin hedefi:** 2674/~?; tur tur devam (Codex + Gemini çift yazar + çapraz seçim). Küçük havuzlar öncelikli.
+2. **Yüz falı EN + El falı EN:** `yuzfali_kullanici.json`(557)/`yuzfali_baskasi.json`(85)/`elfali.json` + `fortune_service.generateElFali`
+   locale param — hepsi `metin_en` eksik. Gemini dönünce `scratchpad/yuzfali_en.js` ile toplu çeviri (parite doğrulamalı).
+3. **Codex'in diğer bulguları (ERTELENDİ — Anıl kararı; çoğu BİLİNEN/tasarım ya da riskli seçim-semantiği):** no-repeat
+   sıfırlamada son-id koruması (Faloya/Niyet/Kâhinler/Maganda/Tamua — CLAUDE.md "Doğru Yöntem"e göre eksik); Motivasyon
+   gün-içi cache (davranış tablosu "her açılışta sıradaki" diyor); Maganda hızlı-dokunuş çift reklam; kahin_metin/yüz
+   dispose-sonrası controller; `kadın`/`kadin` + `medeni durum`/`medeni_durum` normalize (eski ölü metinleri diriltir).
+   BİLİNEN/tasarım (dokunulmadı): Faloya koşulsuz-only, Durugörü saat-ölü, Kader Çarkı M6, Maganda soru-bağımsız.
+
 ## Ne yapıldı (2026-11-06 akşam — 282 geri bildirim bug'ları + evim v2; sürüm 10.8.17+285, test build ALINDI)
 Anıl 282'yi cihazda gezdi, bug bildirdi + büyük otonom görev verdi (Codex + Gemini danışıldı). Yapılanlar:
 - **Ayarlar scroll regresyonu:** elastik overscroll (benim 282'de eklediğim) KALDIRILDI; AYARLAR başlığı

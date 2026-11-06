@@ -200,7 +200,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   void _revealHeader() {
     if (!mounted) return;
     void release() {
-      if (mounted && _bubbleGate != null) setState(() => _bubbleGate = null);
+      if (!mounted || _bubbleGate == null) return;
+      setState(() => _bubbleGate = null);
+      // Yeni balon ancak şimdi ağaca girdi: bekletilirken yapılan "en alta kaydır" çağrıları
+      // eski uçta kaldı, balon görünür alanın altında yazılırdı (inceleme bulgusu).
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted && _chatScrollCtrl.hasClients) {
+          _chatScrollCtrl.animateTo(
+            _chatScrollCtrl.position.maxScrollExtent,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeOut,
+          );
+        }
+      });
     }
 
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;

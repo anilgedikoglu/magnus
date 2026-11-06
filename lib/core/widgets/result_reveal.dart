@@ -28,6 +28,9 @@ class _ResultRevealState extends State<ResultReveal> with SingleTickerProviderSt
   late final AnimationController _c =
       AnimationController(vsync: this, duration: const Duration(milliseconds: 2200));
   bool _started = false;
+  // Süpürme bitince sarmalayıcılar kalkar; içerik GlobalKey ile yerinden taşınır, yeniden
+  // kurulmaz (içerideki animasyonlar/dokunuşlar kesilmez).
+  final _icerik = GlobalKey();
 
   @override
   void didChangeDependencies() {
@@ -60,7 +63,7 @@ class _ResultRevealState extends State<ResultReveal> with SingleTickerProviderSt
       onPointerDown: (_) => _skip(),
       child: AnimatedBuilder(
         animation: _c,
-        child: widget.child,
+        child: KeyedSubtree(key: _icerik, child: widget.child),
         builder: (context, child) {
           final v = ResultReveal.debugValue ?? _c.value;
           if (v >= 1) return child!;

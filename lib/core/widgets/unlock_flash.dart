@@ -54,30 +54,34 @@ class _UnlockFlashState extends State<UnlockFlash> with SingleTickerProviderStat
       animation: _c,
       child: widget.child,
       builder: (context, child) {
+        // Ağaç şekli her zaman aynı (DecoratedBox > Stack > [child, ...]): flaş başlarken/biterken
+        // çocuğun durumu (AnimatedContainer, AnimatedSwitcher, kayan yazı) sıfırlanmaz.
         final t = _c.value;
-        if (t >= 1) return child!;
-        final glow = math.sin(t * math.pi); // 0→1→0
+        final glow = t >= 1 ? 0.0 : math.sin(t * math.pi); // 0→1→0
         return DecoratedBox(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(widget.radius),
-            boxShadow: [
-              BoxShadow(
-                color: widget.color.withValues(alpha: 0.55 * glow),
-                blurRadius: 6 + 16 * glow,
-                spreadRadius: 1.5 * glow,
-              ),
-            ],
+            boxShadow: glow <= 0
+                ? const []
+                : [
+                    BoxShadow(
+                      color: widget.color.withValues(alpha: 0.55 * glow),
+                      blurRadius: 6 + 16 * glow,
+                      spreadRadius: 1.5 * glow,
+                    ),
+                  ],
           ),
           child: Stack(children: [
             child!,
-            Positioned.fill(
-              child: IgnorePointer(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(widget.radius),
-                  child: CustomPaint(painter: _SheenPainter(t: t)),
+            if (t < 1)
+              Positioned.fill(
+                child: IgnorePointer(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(widget.radius),
+                    child: CustomPaint(painter: _SheenPainter(t: t)),
+                  ),
                 ),
               ),
-            ),
           ]),
         );
       },

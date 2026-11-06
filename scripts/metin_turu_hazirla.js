@@ -296,6 +296,21 @@ TURLAR[21] = [tekrar(4, 'tavsanfali'), tekrar(4, 'niyet'), tekrar(4, 'yana_bana'
   tekrar(6, 'durugoru_yno')];
 TURLAR[22] = [tekrar(4, 'kahve_gelisme'), tekrar(4, 'kahve_sonuc'), { ...tekrar(3, 'kahve_ugurlama'), orijinalMaxId: 143 },
   tekrar(8, 'astroyorum'), tekrar(6, 'durugoru_gno')];
+// Tur 23-42 (2026-11-07, Anıl: "20 tur daha"): 5'li döngü ×4 — tüm havuzlar dörder geçiş. Yazar ChatGPT (Codex 11 Kasım'a dek haftalık sınırda).
+const KAHIN = () => [{ ...tekrar(5, 'kahin_derun'), orijinalMaxId: 33 }, { ...tekrar(5, 'kahin_khaleesi'), orijinalMaxId: 31 },
+  { ...tekrar(5, 'kahin_uraz'), orijinalMaxId: 23 }, { ...tekrar(3, 'kahin_likia'), orijinalMaxId: 22 },
+  { ...tekrar(3, 'kahin_yousuf'), orijinalMaxId: 22 }];
+const KAHVE = () => [tekrar(6, 'kahve_giris'), tekrar(6, 'kahve_baglama'), tekrar(4, 'kahve_gelisme'),
+  tekrar(4, 'kahve_sonuc'), { ...tekrar(3, 'kahve_ugurlama'), orijinalMaxId: 143 }];
+const SHORTS = () => [tekrar(4, 'tavsanfali'), tekrar(4, 'niyet'), tekrar(6, 'faloya'),
+  tekrar(4, 'yana_bana'), tekrar(5, 'yana_yasama')];
+const DURU = () => [tekrar(3, 'durugoru_bno'), tekrar(6, 'durugoru_yno'), tekrar(6, 'durugoru_gno'),
+  { ...tekrar(3, 'kaderkitabi'), orijinalMaxId: 229 }, tekrar(8, 'astroyorum')];
+const ICERIK = () => [{ ...tekrar(7, 'motivasyon'), orijinalMaxId: 80 }, { ...tekrar(7, 'olumlama'), orijinalMaxId: 514 },
+  tekrar(7, 'acigercekler'), tekrar(5, 'kahve_karsilama'),
+  karsilamaZ(1, 'KARŞILAMA (GÜNÜN İLK AÇILIŞI) — güne başlarken Magnus\'un sıcak, gizemli ya da esprili kısa selamı; kimi zaman günün havasına dair Barnum tarzı kısa bir sezgi ya da hafif bir müjde ipucu. "Yine geldin" DEME (bugün ilk kez). {{isim}} çoğu metinde. HEPSİ KOŞULSUZ. Uzunluk: 50-160 karakter.')];
+const DONGU = [KAHIN, KAHVE, SHORTS, DURU, ICERIK];
+for (let t = 23; t <= 42; t++) { TURLAR[t] = DONGU[(t - 23) % 5](); }
 
 const ORTAK_YER = 'YER TUTUCULAR (yalnız bunları, AYNEN yaz): {{isim}} = kullanıcının adı; {{ay_N}} = bugünden N ay sonraki ayın adı (ör. {{ay_2}}); {{sayi,a,b}} = a ile b arası rastgele sayı (BOŞLUKSUZ, ör. {{sayi,2,6}}); {{randomtarih,a,b}} = bugünden a-b gün sonraki tarih (ör. "17 Ocak"); {{kelime, A | B | C}} = seçeneklerden rastgele biri; {{harf}} = rastgele bir harf (isim baş harfi için); {{gun_N}} = N gün sonraki haftanın günü adı; {{burc}} = kullanıcının burcu. Cinsiyete göre kelime gerekirse: {{data, cinsiyet=erkek, X | cinsiyet=kadin, Y}}. {{yil_+1}} gibi artı işaretli biçim YASAK.';
 const HEDEF = 'HEDEF: Okuyana "wow, bildin!" dedirtecek, BİLİYOR HİSSİ VEREN, SPESİFİK GÖRÜNEN metinler. Somut gündelik ayrıntı kullan (bir mesaj, bir anahtar, bir koku, bir renk, bir sokak, bir harfle başlayan isim, bir ay/gün, bir sayı, bir alışkanlık) ve kişinin hayatına dokunan isabetli gözlemler yap. Herkese uyan basmakalıp klişelerden kaçın — ama ayrıntı, olayın TUTMA ihtimalini düşürmesin (aşağıdaki COLD READING kuralı).';

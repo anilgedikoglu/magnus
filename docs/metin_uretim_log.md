@@ -7,13 +7,28 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 2849** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120, tur 16: 160, tur 17: 140, tur 18: 110, tur 19: 115, tur 20: 75, tur 21: 100) — her tur sonunda güncelle.
+- **Toplam eklenen: 2949** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120, tur 16: 160, tur 17: 140, tur 18: 110, tur 19: 115, tur 20: 75, tur 21: 100, tur 22: 100) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 22 — 2026-11-07 (100 metin; ChatGPT yazar + Claude denetler/seçer, çeviri ChatGPT)
+
+> Anıl: "siradaki tura gec sonra 20 tur daha yap sonra test et herseyini". Codex HAFTALIK sınırda (11 Kasım) → yazar
+> yalnız **ChatGPT** (5 geçici sohbet paralel), Claude seçer/`metin_kalip_tara`, çeviri **ChatGPT** (3 parça: a/b/c).
+> 4 kompartman uzun (adet 20, hepsi tutuldu); kahve_uğurlama 40→20 (en geniş kitle + çeşitlilik). `tur_kontrol` +
+> `kosul_deger_tipi` yeşil (100 metin). Betik: `metin_turu_hazirla.js` TURLAR[23-42] = 5'li döngü ×4 (bu turdan sonra).
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Kahve – Gelişme | `kahve_gelisme.json` › `gelismeler` | 519–538 (ChatGPT 20/20) |
+| Kahve – Sonuç | `kahve_sonuc.json` › `sonuclar` | 499–518 (ChatGPT 20/20; 2 açılış "fincanının dibinde…" çeşitlendirildi) |
+| Kahve – Uğurlama | `kahve_ugurlama.json` › `ugurlamalar` | 224–243 (ChatGPT 40→20, Claude kitle çeşitliliğiyle seçti) |
+| Günlük Astroloji – Yorum | `gunlukastroloji.json` › `astroyorum` | 120–139 (ChatGPT 20/20) |
+| Durugörü – Gelecek | `durugoru_gno.json` › `durugoru_gno` | 147–166 (ChatGPT 20/20; 2 havuz-ortak ifade düzeltildi) |
 
 ## Tur 21 — 2026-11-06 (100 metin; ChatGPT yazar + Claude denetler/seçer, çeviri ChatGPT/Claude)
 

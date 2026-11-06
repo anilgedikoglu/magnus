@@ -159,88 +159,58 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   late final AnimationController _hdrCtrl =
       AnimationController.unbounded(vsync: this, value: _hdrTarget);
 
-  // Bant kaydırılıp gizlenmişken yeni balon gelirse bant ÜSTTE belirir, yazı sonra başlar;
-  // bandın dışına dokununca yavaşça geri kalkar (Anıl, 2026-11-06).
-  late final AnimationController _hdrReveal = AnimationController(vsync: this);
-  int? _bubbleGate; // bant inerken yeni balon bekletilir
-  int _lastShown = 0;
+  // Bant artık scroll'a BAĞLI DEĞİL (Anıl, 2026-11-06): yalnız Magnus bir şey söyleyince ÜST'ten
+  // pop-up gibi iner, 5 sn sonra yukarı kalkıp gizlenir. Menü ızgarası TAM EKRAN en üstten başlar.
+  // 0 = gizli (yukarıda), 1 = inmiş/görünür.
+  late final AnimationController _bandShow =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 320));
+  Timer? _bandTimer;
+  int _lastExtraCount = 0; // _extraBubbles büyüyünce bandı patlat (fal durumu / günlük limit)
   bool _downInBand = false;
-  bool _downDismiss = false; // bu dokunuş yalnız beliren bandı kapatır (kart açmaz)
+  bool _downDismiss = false;
   int? _gatePointer; // bayrakları koyan parmak
 
   double get _layerHeight => MediaQuery.paddingOf(context).top + max(0.0, _hdrCtrl.value);
 
-  /// Kaydırmanın gerektirdiği kayma (0 = bant yerinde, katman boyu = tamamen gizli).
-  double get _naturalShift {
-    if (!_gridScrollCtrl.hasClients) return 0;
-    return (_gridScrollCtrl.positions.first.pixels - kHomeHeaderHold)
-        .clamp(0.0, _layerHeight)
-        .toDouble();
-  }
+  /// Bandın ekrandaki alt kenarı (görünürlük payıyla) — dokunuş bunun altındaysa bant bölgesidir.
+  double get _bandBottom => _layerHeight * _bandShow.value;
 
-  /// Bandın ekrandaki alt kenarı (kaydırma ve belirme payıyla).
-  double get _bandBottom => _layerHeight - _naturalShift * (1 - _hdrReveal.value);
-
-  /// Gösterilecek balon sayısı: bant gizliyken yeni balon gelirse bant inene kadar bekletir.
-  int _shownBubbles() {
-    final v = _visibleBubbles;
-    if (v > _lastShown &&
-        _lastShown > 0 &&
-        _bubbleGate == null &&
-        _naturalShift > 0.5 &&
-        _hdrReveal.value < 0.99) {
-      _bubbleGate = _lastShown;
-      WidgetsBinding.instance.addPostFrameCallback((_) => _revealHeader());
-    }
-    final gate = _bubbleGate;
-    final shown = gate == null ? v : min(v, gate);
-    _lastShown = shown;
-    return shown;
-  }
-
-  void _revealHeader() {
+  /// Yeni Magnus mesajı gelince bandı aşağı indir (pop); 5 sn sonra yukarı kaldır. Scroll'dan bağımsız.
+  void _popBand() {
     if (!mounted) return;
-    void release() {
-      if (!mounted || _bubbleGate == null) return;
-      setState(() => _bubbleGate = null);
-      // Yeni balon ancak şimdi ağaca girdi: bekletilirken yapılan "en alta kaydır" çağrıları
-      // eski uçta kaldı, balon görünür alanın altında yazılırdı (inceleme bulgusu).
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (mounted && _chatScrollCtrl.hasClients) {
-          _chatScrollCtrl.animateTo(
-            _chatScrollCtrl.position.maxScrollExtent,
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeOut,
-          );
-        }
-      });
-    }
-
+    _bandTimer?.cancel();
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
     if (reduce) {
-      _hdrReveal.value = 1;
-      release();
-      return;
+      _bandShow.value = 1;
+    } else {
+      _bandShow.forward();
     }
-    _hdrReveal
-        .animateTo(1, duration: const Duration(milliseconds: 280), curve: Curves.easeOutCubic)
-        .whenCompleteOrCancel(release);
+    // Balonlar yazıldıkça içerik en alta kaysın.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted && _chatScrollCtrl.hasClients) {
+        _chatScrollCtrl.jumpTo(_chatScrollCtrl.position.maxScrollExtent);
+      }
+    });
+    _bandTimer = Timer(const Duration(seconds: 5), _hideBand);
   }
 
-  /// Izgaraya dokunuş: bandın üstündeyse altındaki kart açılmasın; bant "belirmiş" ve
-  /// kaydırma onu gizlemeyi gerektiriyorsa yavaşça geri kalkar.
+  void _hideBand() {
+    if (!mounted) return;
+    _bandTimer?.cancel();
+    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    if (reduce) {
+      _bandShow.value = 0;
+    } else {
+      _bandShow.reverse();
+    }
+  }
+
+  /// Izgaraya dokunuş: bant görünürken üstüne dokunuş altındaki kartı açmasın + bandı erken kapatsın.
   void _onGridPointerDown(PointerDownEvent e) {
     _gatePointer = e.pointer;
-    _downInBand = e.localPosition.dy < _bandBottom;
+    _downInBand = _bandShow.value > 0.01 && e.localPosition.dy < _bandBottom;
     _downDismiss = false;
-    if (_downInBand || _hdrReveal.value == 0) return;
-    if (_naturalShift <= 0.5) {
-      _hdrReveal.value = 0;
-      return;
-    }
-    _downDismiss = true; // açılır pencere dışı gibi: bu dokunuş kart açmaz
-    _hdrReveal.animateBack(0,
-        duration: const Duration(milliseconds: 520), curve: Curves.easeInOutCubic);
+    if (_downInBand) _hideBand();
   }
 
   /// Parmak kalkınca bayraklar sıfırlanır. Kartın onTap'i aynı olay işlemesinde (arena
@@ -254,13 +224,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       _downInBand = false;
       _downDismiss = false;
     });
-  }
-
-  void _onGridScroll() {
-    // Başa dönülünce belirme payı sessizce sıfırlanır (görünüşte fark yok).
-    if (_hdrReveal.value > 0 && !_hdrReveal.isAnimating && _naturalShift <= 0.5) {
-      _hdrReveal.value = 0;
-    }
   }
 
   void _onRowHeight(int i, double h) {
@@ -350,7 +313,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   @override
   void initState() {
     super.initState();
-    _gridScrollCtrl.addListener(_onGridScroll);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _scheduleUnlockTimer();
       _refreshCredits();
@@ -617,7 +579,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     super.didChangeDependencies();
     if (!_selamlamaYuklendi) {
       _selamlamaYuklendi = true;
-      _loadSelamlama();
+      // Selamlama yüklenince bandı patlat (Magnus açılışta "konuşur"); 5 sn sonra gizlenir.
+      _loadSelamlama().whenComplete(() {
+        if (mounted) _popBand();
+      });
     }
     if (!_listenersAttached) {
       _listenersAttached = true;
@@ -651,10 +616,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   @override
   void dispose() {
     _unlockTimer?.cancel();
+    _bandTimer?.cancel();
     _gridScrollCtrl.dispose();
     _chatScrollCtrl.dispose();
     _hdrCtrl.dispose();
-    _hdrReveal.dispose();
+    _bandShow.dispose();
     super.dispose();
   }
 
@@ -930,11 +896,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     //   Ofset = ızgara kaydırması, [0, layer 2 yüksekliği] aralığına kırpılmış.
     final topInset = MediaQuery.paddingOf(context).top;
     // Hedef boy değişince (yeni satır, satır kırılması) bant yayla ona gider.
-    final shown = _shownBubbles();
+    final shown = _visibleBubbles;
     final chatHeight = _chatTargetHeight(shown);
     if (chatHeight != _hdrTarget) {
       _hdrTarget = chatHeight;
       WidgetsBinding.instance.addPostFrameCallback((_) => _retargetHeader(chatHeight));
+    }
+    // Yeni Magnus mesajı (fal durumu / günlük limit → _extraBubbles büyür) gelince bandı patlat.
+    if (_extraBubbles.length != _lastExtraCount) {
+      _lastExtraCount = _extraBubbles.length;
+      WidgetsBinding.instance.addPostFrameCallback((_) => _popBand());
     }
     return Scaffold(
       backgroundColor: kHomeBackground,
@@ -965,32 +936,42 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             top: 0,
             left: 0,
             right: 0,
-            child: ScrollFollower(
-              controller: _gridScrollCtrl,
-              hold: kHomeHeaderHold,
-              reveal: _hdrReveal,
-              child: RepaintBoundary(
-                child: AnimatedBuilder(
-                  animation: _hdrCtrl,
-                  builder: (context, child) => SizedBox(
-                    key: const ValueKey('homeMenuLayer2'),
-                    height: topInset + max(0.0, _hdrCtrl.value),
-                    child: child,
-                  ),
-                  child: ColoredBox(
-                    color: kHomeHeaderBackground,
-                    child: ClipRect(
-                      child: OverflowBox(
-                        alignment: Alignment.topCenter,
-                        minHeight: topInset + chatHeight,
-                        maxHeight: topInset + chatHeight,
-                        child: Padding(
-                          padding: EdgeInsets.only(top: topInset),
-                          // Balonların kendi (programatik) kaydırması bara ULAŞMASIN — yoksa her
-                          // yeni balon "yukarı kaydırma" sayılıp liste başındayken barı küçültürdü.
-                          child: NotificationListener<ScrollNotification>(
-                            onNotification: (_) => true,
-                            child: _buildChatHeader(chatHeight, shown),
+            child: AnimatedBuilder(
+              animation: _bandShow,
+              builder: (context, child) {
+                final s = _bandShow.value.clamp(0.0, 1.0);
+                // Gizliyken HİÇ yer/hit yok → ızgara en üstten tam tıklanabilir (tam ekran menü).
+                if (s <= 0.001) return const SizedBox.shrink();
+                final bandH = topInset + max(0.0, _hdrCtrl.value);
+                return Transform.translate(
+                  offset: Offset(0, -(1 - s) * bandH),
+                  child: Opacity(opacity: s, child: child),
+                );
+              },
+              child: GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: _hideBand, // banda dokun → erken kapat
+                child: RepaintBoundary(
+                  child: AnimatedBuilder(
+                    animation: _hdrCtrl,
+                    builder: (context, child) => SizedBox(
+                      key: const ValueKey('homeMenuLayer2'),
+                      height: topInset + max(0.0, _hdrCtrl.value),
+                      child: child,
+                    ),
+                    child: ColoredBox(
+                      color: kHomeHeaderBackground,
+                      child: ClipRect(
+                        child: OverflowBox(
+                          alignment: Alignment.topCenter,
+                          minHeight: topInset + chatHeight,
+                          maxHeight: topInset + chatHeight,
+                          child: Padding(
+                            padding: EdgeInsets.only(top: topInset),
+                            child: NotificationListener<ScrollNotification>(
+                              onNotification: (_) => true,
+                              child: _buildChatHeader(chatHeight, shown),
+                            ),
                           ),
                         ),
                       ),
@@ -1200,8 +1181,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       slivers: [
         // Layer 2'nin canlı yüksekliği kadar boşluk; başlık gizliyken boy değişirse menü
         // yerinde kalır (kaydırma ofseti düzeltilir).
-        HeaderSpacerSliver(
-            height: _hdrCtrl, extra: topExtra, slack: kHomeLayerGap, hold: kHomeHeaderHold),
+        // Menü TAM EKRAN en üstten başlar; bant ayrı overlay katmanı (ızgarayı itmez). Üst boşluk sabit.
+        SliverToBoxAdapter(child: SizedBox(height: topExtra)),
         SliverPadding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           sliver: SliverMainAxisGroup(slivers: slivers),

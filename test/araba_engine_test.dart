@@ -69,7 +69,9 @@ void main() {
         if (s[i].carId == s[i - 1].carId) same++;
       }
     }
-    expect(same / pairs, inInclusiveRange(0.12, 0.35), reason: '$same/$pairs');
+    // v3 kademeli ilerleme rnd akışını kaydırdı → gerçekleşen devam oranı ~%11 (eskiden ~%15);
+    // "ara sıra devam" davranışı korunuyor, alt sınır buna göre.
+    expect(same / pairs, inInclusiveRange(0.08, 0.35), reason: '$same/$pairs');
   });
 
   test('gerçekçilik: 28 yaşında ilk araba çoğunlukla sınıf 1-3; lüks (6+) nadir, süper lüks çok nadir', () {
@@ -182,6 +184,69 @@ void main() {
     final prefs = await SharedPreferences.getInstance();
     final t = await ArabaEngine.load(prefs, _p(), pool, nowYear: base, seed: 9);
     expect(t.seed, 9);
+  });
+
+  // ── v3: marka tabanlı başlangıç + ±1 kademeli ilerleme (Anıl + Codex, 2026-11-06) ──
+  test('markalar A-Z sıralı, benzersiz, popüler markalar var', () {
+    final b = ArabaEngine.brands(pool);
+    expect(b.length, greaterThan(20));
+    expect(b.toSet().length, b.length);
+    final sorted = [...b]..sort((x, y) => x.toLowerCase().compareTo(y.toLowerCase()));
+    expect(b, sorted);
+    final lower = b.map((e) => e.toLowerCase()).toSet();
+    for (final m in ['fiat', 'renault', 'mercedes-benz', 'bmw']) {
+      expect(lower, contains(m), reason: m);
+    }
+  });
+
+  test('marka başlangıç sınıfı: ekonomik marka düşük, premium yüksek', () {
+    int lv(String br) => ArabaEngine.brandStartLevel(pool, br);
+    expect(lv('Fiat'), lessThan(lv('Mercedes-Benz')));
+    expect(lv('Renault'), lessThanOrEqualTo(lv('BMW')));
+    expect(lv('Fiat'), inInclusiveRange(1, 3));
+    expect(lv('BilinmeyenMarka'), 2); // bilinmeyen → 2
+  });
+
+  test('arabam yok → ilk araba sınıf 1; marka seçilince ilk araba marka sınıfında', () {
+    for (var seed = 0; seed < 150; seed++) {
+      final yok = ArabaEngine.generate(pool,
+          gender: 'erkek', age: 30, baseYear: base, seed: seed, currentBrand: null);
+      final lv = [for (final s in yok.slots) if (!s.isGap) byId[s.carId]!.level];
+      expect(lv.first, 1, reason: 'arabam yok ilk sınıf 1');
+    }
+    final startMb = ArabaEngine.brandStartLevel(pool, 'Mercedes-Benz');
+    for (var seed = 0; seed < 150; seed++) {
+      final t = ArabaEngine.generate(pool,
+          gender: 'erkek', age: 42, baseYear: base, seed: seed, currentBrand: 'Mercedes-Benz');
+      final lv = [for (final s in t.slots) if (!s.isGap) byId[s.carId]!.level];
+      expect((lv.first - startMb).abs(), lessThanOrEqualTo(1), reason: 'ilk araba marka sınıfında');
+    }
+  });
+
+  test('kademeli ilerleme: ardışık arabalar arasında uçuk zıplama yok (fark ≤2, çoğu ≤1)', () {
+    var pairs = 0, le1 = 0;
+    for (var seed = 0; seed < 600; seed++) {
+      final t = ArabaEngine.generate(pool,
+          gender: 'erkek', age: 30, baseYear: base, seed: seed, currentBrand: 'Fiat');
+      final lv = [for (final s in t.slots) if (!s.isGap) byId[s.carId]!.level];
+      for (var i = 1; i < lv.length; i++) {
+        final d = (lv[i] - lv[i - 1]).abs();
+        expect(d, lessThanOrEqualTo(2), reason: 'seed=$seed uçuk zıplama');
+        pairs++;
+        if (d <= 1) le1++;
+      }
+    }
+    expect(le1 / pairs, greaterThan(0.9), reason: 'çoğu geçiş ±1 olmalı');
+  });
+
+  test('marka değişince imza değişir → yeniden üretilir', () async {
+    SharedPreferences.setMockInitialValues({});
+    final prefs = await SharedPreferences.getInstance();
+    final a = await ArabaEngine.load(prefs, _p(), pool, nowYear: base, seed: 1, currentBrand: 'Fiat');
+    final ayni = await ArabaEngine.load(prefs, _p(), pool, nowYear: base, currentBrand: 'Fiat');
+    expect(ayni.seed, 1, reason: 'aynı marka → aynı çizelge');
+    final yeni = await ArabaEngine.load(prefs, _p(), pool, nowYear: base, seed: 2, currentBrand: 'Mercedes-Benz');
+    expect(yeni.seed, 2, reason: 'marka değişti → yeniden');
   });
 
   test('tüm aralıklar geçmişte kalınca (yıllar sonra) yeni çizelge üretilir', () async {

@@ -1,6 +1,8 @@
 // "Arabam Ne?" falı (2026-11-05). Mantık: lib/data/services/araba_engine.dart.
 // Akış: panel ("Tıkla") → kısa hesaplama → 5 yıl aralığı (alt alta, yanında kapalı kutu).
 // Her kutu: geçiş reklamı (AdService sıklık sınırıyla) → model açılır ve KALICI açık kalır.
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -13,10 +15,12 @@ import '../../core/services/ad_service.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/marquee_text.dart';
 import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/hold_to_reveal.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../data/providers.dart';
 import '../../data/services/araba_engine.dart';
 
-enum _Adim { giris, hesap, liste }
+enum _Adim { marka, hesap, liste }
 
 class ArabamScreen extends ConsumerStatefulWidget {
   const ArabamScreen({super.key});
@@ -29,11 +33,16 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
   static const _pink = Color(0xFFFF55FF);
   static const _purple = Color(0xFF8B5CF6);
 
-  _Adim _adim = _Adim.giris;
+  _Adim _adim = _Adim.marka;
   ArabaTimeline? _t;
   Map<int, ArabaCar> _cars = {};
   SharedPreferences? _prefs;
   final Set<int> _opening = {};
+
+  // Marka seçimi: "arabam yok" (üstte) + A–Z markalar.
+  List<String> _brands = const [];
+  String? _selectedBrand; // null & !_noCar → henüz seçilmedi
+  bool _noCar = false;
 
   bool get _en => ref.read(localeProvider) == 'en';
   String _tr(String tr, String en) => _en ? en : tr;
@@ -51,23 +60,46 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
     if (!mounted) return;
     final t = await ArabaEngine.load(prefs, profile, pool);
     if (!mounted) return;
+    // Önceden markasını seçip hesapladıysa → doğrudan liste; yoksa marka seçimi.
+    final saved = prefs.getString(ArabaEngine.brandPrefsKey);
     setState(() {
       _prefs = prefs;
       _cars = {for (final c in pool) c.id: c};
-      _t = t;
-      if (t.computed) _adim = _Adim.liste; // daha önce hesaplandı → doğrudan liste
+      _brands = ArabaEngine.brands(pool);
+      if (t.computed) {
+        _t = t;
+        _adim = _Adim.liste;
+      } else {
+        _adim = _Adim.marka;
+        if (saved != null) {
+          if (saved.isEmpty) {
+            _noCar = true;
+          } else {
+            _selectedBrand = saved;
+          }
+        }
+      }
     });
   }
 
   Future<void> _hesapla() async {
-    final t = _t, prefs = _prefs;
-    if (t == null || prefs == null) return;
+    final prefs = _prefs;
+    if (prefs == null || !(_noCar || _selectedBrand != null)) return;
+    final profile = ref.read(userProfileProvider);
+    final pool = await ArabaEngine.loadPool();
+    if (!mounted) return;
     HapticFeedback.mediumImpact();
     setState(() => _adim = _Adim.hesap);
+    final brandStr = _noCar ? '' : (_selectedBrand ?? '');
+    final t = await ArabaEngine.load(prefs, profile, pool,
+        currentBrand: brandStr, seed: Random().nextInt(1 << 31));
     await Future<void>.delayed(const Duration(milliseconds: 2500));
     await ArabaEngine.markComputed(prefs, t);
     if (!mounted) return;
-    setState(() => _adim = _Adim.liste);
+    setState(() {
+      _t = t;
+      _adim = _Adim.liste;
+    });
   }
 
   void _ac(int index) {
@@ -135,7 +167,7 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
                       child: ScaleTransition(scale: Tween(begin: 0.95, end: 1.0).animate(a), child: c),
                     ),
                     child: switch (_adim) {
-                      _Adim.giris => KeyedSubtree(key: const ValueKey('giris'), child: _buildGiris()),
+                      _Adim.marka => KeyedSubtree(key: const ValueKey('marka'), child: _buildMarka()),
                       _Adim.hesap => KeyedSubtree(key: const ValueKey('hesap'), child: _buildHesap()),
                       _Adim.liste => KeyedSubtree(key: const ValueKey('liste'), child: _buildListe()),
                     },
@@ -166,22 +198,112 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
         child: child,
       );
 
-  Widget _buildGiris() {
-    return Center(
-      child: _panel(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Icon(Icons.directions_car_filled_rounded, color: _pink, size: 34),
-            const SizedBox(height: 12),
-            Text(
-              _tr('Gelecekte sahip olacağın arabaları merak ediyor musun? Tıkla.',
-                  'Curious about the cars you will own in the future? Tap.'),
-              textAlign: TextAlign.center,
-              style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600, height: 1.35),
+  Widget _buildMarka() {
+    final secildi = _noCar || _selectedBrand != null;
+    // "Arabam yok" + A–Z markalar. Kaydırırken sayfa geri gitmesin → NoEdgeSwipeBack.
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(18, 4, 18, 8),
+      child: Column(
+        children: [
+          const Icon(Icons.directions_car_filled_rounded, color: _pink, size: 32),
+          const SizedBox(height: 8),
+          Text(
+            _tr('Şu an hangi marka araban var?', 'What car brand do you have now?'),
+            textAlign: TextAlign.center,
+            style: const TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w600, height: 1.3),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            _tr('Geleceğini buradan okuyacağım.', "I'll read your future from here."),
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 12.5),
+          ),
+          const SizedBox(height: 12),
+          Expanded(
+            child: NoEdgeSwipeBack(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.black.withValues(alpha: 0.30),
+                  border: Border.all(color: _pink.withValues(alpha: 0.35), width: 1.2),
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: ListView.builder(
+                  padding: const EdgeInsets.symmetric(vertical: 6),
+                  itemCount: _brands.length + 1,
+                  itemBuilder: (_, i) {
+                    if (i == 0) {
+                      return _markaSatir(
+                        _tr('Arabam yok', 'I have no car'),
+                        selected: _noCar,
+                        italic: true,
+                        onTap: () => setState(() {
+                          _noCar = true;
+                          _selectedBrand = null;
+                        }),
+                      );
+                    }
+                    final b = _brands[i - 1];
+                    return _markaSatir(
+                      b,
+                      selected: !_noCar && _selectedBrand == b,
+                      onTap: () => setState(() {
+                        _selectedBrand = b;
+                        _noCar = false;
+                      }),
+                    );
+                  },
+                ),
+              ),
             ),
-            const SizedBox(height: 18),
-            _gradientButton(_tr('Tıkla', 'Tap'), onTap: _t == null ? null : _hesapla),
+          ),
+          const SizedBox(height: 14),
+          Opacity(
+            opacity: secildi ? 1 : 0.4,
+            child: IgnorePointer(
+              ignoring: !secildi,
+              child: HoldToReveal(
+                onComplete: _hesapla,
+                color: _pink,
+                icon: Icons.directions_car_filled_rounded,
+                radius: 46,
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            secildi
+                ? _tr('Geleceğe odaklanmak için basılı tut', 'Hold to focus on the future')
+                : _tr('Önce bir marka seç', 'First pick a brand'),
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontSize: 12),
+          ),
+          const SizedBox(height: 4),
+        ],
+      ),
+    );
+  }
+
+  Widget _markaSatir(String ad, {required bool selected, required VoidCallback onTap, bool italic = false}) {
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        color: selected ? _pink.withValues(alpha: 0.22) : Colors.transparent,
+        child: Row(
+          children: [
+            Expanded(
+              child: Text(
+                ad,
+                style: TextStyle(
+                  color: selected ? Colors.white : Colors.white.withValues(alpha: 0.78),
+                  fontSize: 15.5,
+                  fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+                  fontStyle: italic ? FontStyle.italic : FontStyle.normal,
+                ),
+              ),
+            ),
+            if (selected) const Icon(Icons.check_circle_rounded, color: _pink, size: 20),
           ],
         ),
       ),
@@ -337,20 +459,4 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
     );
   }
 
-  Widget _gradientButton(String text, {VoidCallback? onTap}) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 50,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          gradient: const LinearGradient(colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)]),
-          boxShadow: [BoxShadow(color: _pink.withValues(alpha: 0.35), blurRadius: 12)],
-        ),
-        child: Center(
-          child: Text(text, style: const TextStyle(color: Colors.white, fontSize: 16.5, fontWeight: FontWeight.bold)),
-        ),
-      ),
-    );
-  }
 }

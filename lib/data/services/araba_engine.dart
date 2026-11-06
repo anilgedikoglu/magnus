@@ -89,8 +89,9 @@ class ArabaTimeline {
     this.computed = false,
   }) : revealed = revealed ?? {};
 
-  /// 2: yeni havuz (marka/sınıf/yaygınlık). Eski kayıtlar okunmaz → yeniden üretilir.
-  static const schema = 2;
+  /// 3: marka tabanlı başlangıç + ±1 kademeli ilerleme (Anıl + Codex, 2026-11-06). Eski kayıtlar
+  /// okunmaz → yeniden üretilir.
+  static const schema = 3;
   final int seed;
   final int baseYear;
   final String signature;
@@ -124,6 +125,7 @@ class ArabaEngine {
   ArabaEngine._();
 
   static const prefsKey = 'arabam_v1';
+  static const brandPrefsKey = 'arabam_marka'; // kullanıcının seçtiği şu anki marka ("" = arabam yok)
   static const horizon = 50;
   static const rangeCount = 5;
 
@@ -144,6 +146,46 @@ class ArabaEngine {
     return [for (final e in j['arabalar'] as List) ArabaCar.fromJson(Map<String, dynamic>.from(e as Map))];
   }
 
+  /// Seçilebilir markalar — havuzdaki benzersiz markalar, A–Z sıralı (gelecek-only markalar dahil).
+  static List<String> brands(List<ArabaCar> pool) {
+    final set = <String>{for (final c in pool) c.brand};
+    final list = set.toList()
+      ..sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
+    return list;
+  }
+
+  /// Markanın BAŞLANGIÇ sınıfı (1..7): o markanın güncel/eski modellerinin yaygınlık ağırlıklı
+  /// MEDYAN fiyat sınıfı (Codex). Marka tek başına serveti belirlemez; yalnız gerçekçi bir
+  /// başlangıç noktası verir. Bilinmeyen marka → 2.
+  static int brandStartLevel(List<ArabaCar> pool, String brand) {
+    final key = brand.toLowerCase();
+    final cars = pool.where((c) => c.brand.toLowerCase() == key && c.status != 'gelecek').toList();
+    if (cars.isEmpty) return 2;
+    final levels = <int>[];
+    for (final c in cars) {
+      final w = c.popularity.clamp(1, 10);
+      for (var i = 0; i < w; i++) {
+        levels.add(c.level);
+      }
+    }
+    levels.sort();
+    return levels[levels.length ~/ 2].clamp(1, 7);
+  }
+
+  /// Bir sonraki araba sınıfı: en fazla ±1 kademe (Codex). [prevLen] önceki arabanın yıl süresi;
+  /// yukarı çıkış için en az 4 yıl bekle. 6–7'ye giriş ek zorlukla. [jobBoost] küçük meslek etkisi.
+  static int _progressLevel(Random rnd, int prev, int prevLen, double jobBoost) {
+    final canUp = prevLen >= 4;
+    var pUp = (0.18 + 0.025 * min(prevLen, 10) + jobBoost).clamp(0.15, 0.45);
+    if (!canUp) pUp = 0;
+    const pDown = 0.10;
+    final r = rnd.nextDouble();
+    var delta = r < pUp ? 1 : (r < pUp + pDown ? -1 : 0);
+    if (delta > 0 && prev >= 5 && rnd.nextDouble() > 0.45) delta = 0; // lükse giriş zor
+    if (delta > 0 && prev >= 6 && rnd.nextDouble() > 0.25) delta = 0; // süper lükse çok zor
+    return (prev + delta).clamp(1, 7);
+  }
+
   /// Kayıtlı çizelgeyi yükler; yoksa / cinsiyet değiştiyse / havuzla uyuşmuyorsa üretir.
   static Future<ArabaTimeline> load(
     SharedPreferences prefs,
@@ -151,9 +193,14 @@ class ArabaEngine {
     List<ArabaCar> pool, {
     int? nowYear,
     int? seed,
+    String? currentBrand, // null → kayıtlı markayı oku; "" → arabam yok
   }) async {
     final year = nowYear ?? DateTime.now().year;
     final gender = KismetEngine.genderOf(p);
+    // Seçili marka: parametre verildiyse onu kaydet, yoksa kayıttan oku ("" = arabam yok).
+    final brand = currentBrand ?? (prefs.getString(brandPrefsKey) ?? '');
+    if (currentBrand != null) await prefs.setString(brandPrefsKey, currentBrand);
+    final sig = _signature(gender, brand);
     final raw = prefs.getString(prefsKey);
     if (raw != null) {
       try {
@@ -161,7 +208,7 @@ class ArabaEngine {
         final ids = {for (final c in pool) c.id};
         // Tüm aralıklar geçmişte kaldıysa (yıllar sonra) yeni çizelge üretilir.
         final stillFuture = t != null && t.slots.isNotEmpty && t.slots.last.end >= year;
-        if (t != null && stillFuture && t.signature == gender &&
+        if (t != null && stillFuture && t.signature == sig &&
             t.slots.every((s) => s.carId == null || ids.contains(s.carId))) {
           return t;
         }
@@ -170,10 +217,15 @@ class ArabaEngine {
     final age = year - KismetEngine.birthYearOf(p, year);
     final evli = KismetEngine.maritalGroupOf(p) == 'evli';
     final t = generate(pool,
-        gender: gender, age: age, married: evli, baseYear: year, seed: seed ?? Random().nextInt(1 << 31));
+        gender: gender, age: age, married: evli, baseYear: year,
+        currentBrand: brand.isEmpty ? null : brand,
+        seed: seed ?? Random().nextInt(1 << 31));
     await save(prefs, t);
     return t;
   }
+
+  static String _signature(String gender, String brand) =>
+      '$gender|${brand.isEmpty ? '_yok' : brand.toLowerCase()}';
 
   static Future<void> save(SharedPreferences prefs, ArabaTimeline t) =>
       prefs.setString(prefsKey, jsonEncode(t.toJson()));
@@ -197,9 +249,12 @@ class ArabaEngine {
     required int baseYear,
     required int seed,
     bool married = false,
+    String? currentBrand, // null → arabam yok
   }) {
     final rnd = Random(seed);
     final byId = {for (final c in pool) c.id: c};
+    // Başlangıç sınıfı: markadan (Codex) — arabam yok → 0 (ilk alım sınıf 1). Doğum yeri KULLANILMAZ.
+    final startLevel = currentBrand == null ? 0 : brandStartLevel(pool, currentBrand);
 
     // 1) Yıl aralıkları: 51 yıl (base..base+50) içinde 5 aralık (+ ops. boşluk)
     var remaining = horizon + 1;
@@ -235,7 +290,13 @@ class ArabaEngine {
       if (canContinue && rnd.nextDouble() < pContinue) {
         car = prevCar; // aynı arabayla devam
       } else {
-        final target = i == 0 ? _firstLevel(rnd, ageAt) : _nextLevel(rnd, prevLevel, ageAt);
+        final int target;
+        if (i == 0) {
+          // İlk gelecek araç: mevcut markanın başlangıç sınıfında (arabam yok → 1).
+          target = startLevel == 0 ? 1 : startLevel;
+        } else {
+          target = _progressLevel(rnd, prevLevel, prevLen, 0.0); // ±1 kademeli; meslek etkisi nötr (v1)
+        }
         car = _pickCar(rnd, pool, used,
             target: target, year: start, baseYear: baseYear, age: ageAt, gender: gender, married: married);
         used.add(car.id);
@@ -253,28 +314,11 @@ class ArabaEngine {
         prevLen = 0;
       }
     }
-    return ArabaTimeline(seed: seed, baseYear: baseYear, signature: gender, slots: slots);
+    return ArabaTimeline(
+        seed: seed, baseYear: baseYear,
+        signature: _signature(gender, currentBrand ?? ''), slots: slots);
   }
 
-  /// İlk arabanın fiyat sınıfı — yaşa göre gerçekçi (Türkiye'de çoğunluk 1-3).
-  static int _firstLevel(Random rnd, int age) {
-    if (age < 23) return _weightedInt(rnd, const [(1, 55), (2, 40), (3, 5)]);
-    if (age < 30) return _weightedInt(rnd, const [(1, 25), (2, 50), (3, 22), (4, 3)]);
-    if (age < 40) return _weightedInt(rnd, const [(1, 12), (2, 45), (3, 30), (4, 11), (5, 2)]);
-    if (age < 55) return _weightedInt(rnd, const [(1, 8), (2, 38), (3, 32), (4, 16), (5, 5), (6, 1)]);
-    return _weightedInt(rnd, const [(1, 8), (2, 35), (3, 33), (4, 17), (5, 6), (6, 1)]);
-  }
-
-  /// Sonraki aralık: çoğunlukla aynı sınıf ya da bir üstü; lüks sınıflar ek zarla nadir.
-  static int _nextLevel(Random rnd, int prev, int age) {
-    final delta = age >= 70
-        ? _weightedInt(rnd, const [(-1, 30), (0, 60), (1, 10)])
-        : _weightedInt(rnd, const [(-1, 10), (0, 50), (1, 36), (2, 4)]);
-    var t = (prev + delta).clamp(1, 7);
-    if (t >= 6 && prev < 6 && rnd.nextDouble() > 0.30) t = 5; // lükse geçiş zor
-    if (t == 7 && prev < 7 && rnd.nextDouble() > 0.10) t = 6; // süper lüks çok nadir
-    return t;
-  }
 
   /// Yıla göre yakıt çarpanı (EV payı zamanla artar).
   static double _fuelFactor(String fuel, int year) {
@@ -364,15 +408,6 @@ class ArabaEngine {
     return cands.last;
   }
 
-  static int _weightedInt(Random rnd, List<(int, int)> items) {
-    final sum = items.fold<int>(0, (a, b) => a + b.$2);
-    var r = rnd.nextInt(sum);
-    for (final (v, w) in items) {
-      if (r < w) return v;
-      r -= w;
-    }
-    return items.last.$1;
-  }
 }
 
 /// Yakıt adları (TR / EN).

@@ -267,10 +267,18 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
           children: [
             const Icon(Icons.home_rounded, color: _pink, size: 30),
             const SizedBox(height: 10),
+            // Falın amacı (Anıl, 2026-11-06): önce merakı uyandır, sonra şehri sor.
             Text(
-              _tr('Şu an hangi ilde yaşıyorsun?', 'Which province do you live in right now?'),
+              _tr('Gelecekte nerelerde yaşayacağını merak ediyor musun?',
+                  "Curious where you'll be living in the years to come?"),
               textAlign: TextAlign.center,
-              style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600, height: 1.35),
+              style: TextStyle(color: _pink, fontSize: 15.5, fontWeight: FontWeight.w700, height: 1.3),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              _tr('Önce şu an hangi ilde yaşadığını söyle:', 'First, tell me which province you live in now:'),
+              textAlign: TextAlign.center,
+              style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600, height: 1.35),
             ),
             const SizedBox(height: 12),
             SizedBox(
@@ -396,8 +404,8 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 16),
-            // Basılı-tut: geleceğe odaklan (Anıl, 2026-11-06).
+            // Basılı-tut yıl tekerleğinden uzak dursun, dokunma alanı rahat olsun (Anıl, 2026-11-06).
+            const SizedBox(height: 30),
             Opacity(
               opacity: _t == null ? 0.4 : 1,
               child: IgnorePointer(
@@ -406,11 +414,11 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                   onComplete: _goster,
                   color: _pink,
                   icon: Icons.home_rounded,
-                  radius: 44,
+                  radius: 58,
                 ),
               ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 12),
             Text(
               _tr('Geleceğe odaklanmak için basılı tut', 'Hold to focus on the future'),
               style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontSize: 12),

@@ -28,6 +28,7 @@ class _HoldToRevealState extends State<HoldToReveal> with SingleTickerProviderSt
   late final AnimationController _c =
       AnimationController(vsync: this, duration: widget.duration);
   bool _done = false;
+  bool _pressed = false; // parmak basılı → anında görsel tepki (Anıl: dokunuş görünsün)
 
   @override
   void initState() {
@@ -56,6 +57,8 @@ class _HoldToRevealState extends State<HoldToReveal> with SingleTickerProviderSt
 
   void _down() {
     if (_done) return;
+    HapticFeedback.selectionClick(); // basıldığı anda his
+    if (mounted) setState(() => _pressed = true);
     if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
       _done = true;
       HapticFeedback.mediumImpact();
@@ -66,6 +69,7 @@ class _HoldToRevealState extends State<HoldToReveal> with SingleTickerProviderSt
   }
 
   void _up() {
+    if (mounted) setState(() => _pressed = false);
     if (!_done) _c.reverse();
   }
 
@@ -79,7 +83,11 @@ class _HoldToRevealState extends State<HoldToReveal> with SingleTickerProviderSt
       child: AnimatedBuilder(
         animation: _c,
         builder: (context, _) {
-          return SizedBox(
+          return AnimatedScale(
+            scale: _pressed ? 0.93 : 1.0,
+            duration: const Duration(milliseconds: 120),
+            curve: Curves.easeOut,
+            child: SizedBox(
             width: r * 2,
             height: r * 2,
             child: Stack(
@@ -90,13 +98,16 @@ class _HoldToRevealState extends State<HoldToReveal> with SingleTickerProviderSt
                   height: r * 2,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.white.withValues(alpha: 0.10),
-                    border: Border.all(color: Colors.white.withValues(alpha: 0.30), width: 1.5),
+                    // Basılınca zemin ve kenar anında parlar (dokunuş belli olsun).
+                    color: widget.color.withValues(alpha: _pressed ? 0.30 : 0.10),
+                    border: Border.all(
+                        color: Colors.white.withValues(alpha: _pressed ? 0.85 : 0.30),
+                        width: _pressed ? 2.4 : 1.5),
                     boxShadow: [
                       BoxShadow(
-                        color: widget.color.withValues(alpha: 0.25 + _c.value * 0.35),
-                        blurRadius: 14 + _c.value * 18,
-                        spreadRadius: _c.value * 2,
+                        color: widget.color.withValues(alpha: (_pressed ? 0.45 : 0.25) + _c.value * 0.35),
+                        blurRadius: (_pressed ? 22 : 14) + _c.value * 18,
+                        spreadRadius: (_pressed ? 3 : 0) + _c.value * 2,
                       ),
                     ],
                   ),
@@ -107,6 +118,7 @@ class _HoldToRevealState extends State<HoldToReveal> with SingleTickerProviderSt
                 ),
                 Icon(widget.icon, color: Colors.white, size: r * 0.7),
               ],
+            ),
             ),
           );
         },

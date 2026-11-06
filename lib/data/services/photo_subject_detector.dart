@@ -52,24 +52,23 @@ class PhotoSubjectDetector {
           return true; // kullanilamaz + ipucu yok → engelleme (hoşgörü)
 
         case FotoKonu.el:
-          // Hedef sinyalini öncele: avuç + yüz AYNI karede olabilir (kişi kendi avucunu
-          // yüzüyle çekebilir) → yüz bulundu diye eli reddetme (Codex).
-          if (has(_elWords)) return true; // ML Kit "Hand/Nail" gördü
-          if (has(_fincanWords)) return false; // fincan (el etiketi yoksa)
-          if (skin >= 0.35) return true; // bol ten → el (yüz de kadrajdaysa bile)
-          if (face == FaceDurum.bulundu) return false; // yüz var + az ten → el'e yollanmış selfie
-          if (skin >= 0.12) return true; // el gibi ten, yüz yok → el
+          // Anıl (2026-11-06): el falına YÜZ atınca reddetmeli. Yüz tespiti güçlü RET sinyali;
+          // ten miktarı EL kanıtı değil (selfie yüzü kadrajı doldurur) → yüz, ten'den ÖNCE (Codex).
+          if (has(_elWords)) return true; // güvenilir el etiketi (Hand/Nail)
+          if (face == FaceDurum.bulundu) return false; // yüz → el değil (selfie elenir)
+          if (has(_fincanWords)) return false; // fincan
+          if (has(_yuzWordsStrong)) return false; // güçlü yüz etiketi
+          if (skin >= 0.12) return true; // el gibi ten, yüz yok → el (ML Kit yoksa sezgi)
           if (skin >= 0 && skin < 0.03) return false; // neredeyse hiç ten → el değil
           return true; // ara/belirsiz → engelleme
 
         case FotoKonu.fincan:
-          if (has(_fincanWords)) return true; // ML Kit "Coffee/Cup/Cappuccino" gördü (varsa en güçlü)
-          if (face == FaceDurum.bulundu) return false; // yüz
+          if (face == FaceDurum.bulundu) return false; // yüz → fincan değil (önce)
+          if (has(_fincanWords)) return true; // güvenilir fincan etiketi (Coffee/Cup/Cappuccino)
           if (has(_elWords)) return false; // el
-          if (has(_yuzWordsStrong)) return false; // yüz
-          // Ten-reddi SON ÇARE + çok yüksek eşik: gri/beyaz/krem fincan maskeden çıkarıldı ama
-          // yine de yanlış rete karşı eşik yüksek; asıl işi etiket + yüz tespiti yapar (Codex).
-          if (skin >= 0.55) return false; // açıkça ten-baskın → el/yüz, fincan değil
+          if (has(_yuzWordsStrong)) return false; // güçlü yüz etiketi
+          // Ten-reddi SON ÇARE + yüksek eşik: gri/beyaz/krem fincan maskeden çıkarıldı.
+          if (skin >= 0.45) return false; // açıkça ten-baskın → el/yüz, fincan değil
           return true; // fincan'ı offline pozitif doğrulamak zor → varsayılan kabul
       }
     } catch (_) {

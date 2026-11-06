@@ -1702,7 +1702,6 @@ class SettingsScreen extends ConsumerWidget {
                 child: NotificationListener<ScrollNotification>(
                   onNotification: (n) {
                     _profileCompactScroll(ref, n);
-                    _profileElasticScroll(n); // üst sınırda lastik çekiştirme (Anıl, 2026-11-06)
                     return false; // yüzen bar da görsün
                   },
                   child: SingleChildScrollView(
@@ -1724,24 +1723,16 @@ class SettingsScreen extends ConsumerWidget {
                       ),
                       const _InsertSlot(),
                       const SizedBox(height: kProfileCardGap),
-                      // Üst sınırda aşağı çekildikçe kartlar birbirinden lastik gibi açılır
-                      // (paint-zamanı Transform → layout/metrik bozulmaz; bırakınca yay geri getirir).
-                      _ElasticSpread(
-                        factor: 0.18,
-                        child: _ProfileCard(
-                          key: const ValueKey('profileCard2'),
-                          padding: const EdgeInsets.all(16),
-                          child: _buildDonutRow(scores, ref),
-                        ),
+                      _ProfileCard(
+                        key: const ValueKey('profileCard2'),
+                        padding: const EdgeInsets.all(16),
+                        child: _buildDonutRow(scores, ref),
                       ),
                       const SizedBox(height: kProfileCardGap),
-                      _ElasticSpread(
-                        factor: 0.36,
-                        child: _ProfileCard(
-                          key: _settingsCardKey,
-                          padding: EdgeInsets.zero,
-                          child: _buildSettingsCard(context, ref),
-                        ),
+                      _ProfileCard(
+                        key: _settingsCardKey,
+                        padding: EdgeInsets.zero,
+                        child: _buildSettingsCard(context, ref),
                       ),
                       // Tek başına rota olarak açıldıysa eski "Ana Menü" butonu (yedek).
                       if (MainTabsScope.maybeOf(context) == null)
@@ -2382,12 +2373,8 @@ class SettingsScreen extends ConsumerWidget {
               //    ile içi aşağı doğru açılır; aşağı swipe ile kapanır (Anıl, 2026-11-06).
               GestureDetector(
                 behavior: HitTestBehavior.opaque,
+                // Yalnız DOKUNUŞ ile aç/kapa (dikey swipe sayfa scroll'uyla yarışıyordu → Codex).
                 onTap: () => toggle(!expanded),
-                onVerticalDragEnd: (d) {
-                  final v = d.primaryVelocity ?? 0;
-                  if (v < -60) toggle(true);   // yukarı swipe → aç
-                  if (v > 60) toggle(false);   // aşağı swipe → kapat
-                },
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
                   child: Column(
@@ -3317,35 +3304,6 @@ Future<void> _saveProfileEdit(
 final _profileCompactProvider = StateProvider<bool>((ref) => false);
 double _profileCompactAcc = 0;
 
-// ── Üst sınırda lastik çekiştirme (Anıl, 2026-11-06) ─────────────────────────
-// BouncingScrollPhysics üst overscroll'da metrics.pixels'i NEGATİF yapar. O miktarı yayınla;
-// kartlar paint-zamanı Transform.translate ile birbirinden açılır (layout/metrik değişmez →
-// jitter yok). Bırakınca yay pixels'i 0'a getirir, bildirimler VN'yi 0'a çeker → elastik.
-final ValueNotifier<double> _profileOverscroll = ValueNotifier<double>(0);
-void _profileElasticScroll(ScrollNotification n) {
-  if (n is ScrollEndNotification) {
-    if (_profileOverscroll.value != 0) _profileOverscroll.value = 0;
-    return;
-  }
-  if (n is ScrollUpdateNotification || n is OverscrollNotification) {
-    final p = n.metrics.pixels;
-    final over = p < 0 ? -p : 0.0; // yalnız ÜST sınır (aşağı çekiş)
-    if ((_profileOverscroll.value - over).abs() > 0.5) _profileOverscroll.value = over;
-  }
-}
-
-/// Çocuğunu, üst overscroll miktarının [factor] katı kadar aşağı kaydırır (yalnız paint).
-class _ElasticSpread extends StatelessWidget {
-  const _ElasticSpread({required this.factor, required this.child});
-  final double factor;
-  final Widget child;
-  @override
-  Widget build(BuildContext context) => ValueListenableBuilder<double>(
-        valueListenable: _profileOverscroll,
-        builder: (_, over, c) => Transform.translate(offset: Offset(0, over * factor), child: c),
-        child: child,
-      );
-}
 
 /// "Çekildiği anda değil, çok az çekildikten sonra başlasın" (Anıl) → 24 pt sonra.
 const double _kProfileCompactTrigger = 24;

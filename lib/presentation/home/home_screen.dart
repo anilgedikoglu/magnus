@@ -175,8 +175,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   /// Bandın ekrandaki alt kenarı (görünürlük payıyla) — dokunuş bunun altındaysa bant bölgesidir.
   double get _bandBottom => _layerHeight * _bandShow.value;
 
-  /// Yeni Magnus mesajı gelince bandı aşağı indir (pop); 5 sn sonra yukarı kaldır. Scroll'dan bağımsız.
-  void _popBand() {
+  /// Yeni Magnus mesajı gelince bandı aşağı indir (pop); [hold] kadar durup yukarı kaldır.
+  /// Normal 5 sn; kayan (marquee) uzun yazıda uzunluğa göre 8–10 sn (Anıl, 2026-11-06).
+  void _popBand({Duration hold = const Duration(seconds: 5)}) {
     if (!mounted) return;
     _bandTimer?.cancel();
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
@@ -191,7 +192,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         _chatScrollCtrl.jumpTo(_chatScrollCtrl.position.maxScrollExtent);
       }
     });
-    _bandTimer = Timer(const Duration(seconds: 5), _hideBand);
+    _bandTimer = Timer(hold, _hideBand);
+  }
+
+  /// Bant açık kalma süresi: kısa yazı 5 sn, taşan/kayan (marquee) yazı uzunluğa göre 8–10 sn.
+  Duration _bandHold(String text) {
+    final n = text.trim().length;
+    if (n > 110) return const Duration(seconds: 10);
+    if (n > 55) return const Duration(seconds: 8);
+    return const Duration(seconds: 5);
   }
 
   void _hideBand() {
@@ -579,9 +588,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     super.didChangeDependencies();
     if (!_selamlamaYuklendi) {
       _selamlamaYuklendi = true;
-      // Selamlama yüklenince bandı patlat (Magnus açılışta "konuşur"); 5 sn sonra gizlenir.
+      // Açılıştan ~3 sn SONRA band TAZE gelsin (Anıl: açılır açılmaz görünmeyip kaybolmasın);
+      // açık kalma süresi selamlama uzunluğuna göre 5–10 sn.
       _loadSelamlama().whenComplete(() {
-        if (mounted) _popBand();
+        if (!mounted) return;
+        _bandTimer?.cancel();
+        _bandTimer = Timer(const Duration(seconds: 3), () {
+          if (mounted) _popBand(hold: _bandHold(_selamlama));
+        });
       });
     }
     if (!_listenersAttached) {

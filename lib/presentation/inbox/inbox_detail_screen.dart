@@ -7,6 +7,7 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/result_reveal.dart';
+import '../home/home_screen.dart' show kHomeBackground;
 import '../../data/models/inbox_item.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../data/providers.dart';
@@ -145,10 +146,12 @@ class InboxDetailScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(l10nProvider);
     return Scaffold(
-      backgroundColor: AppColors.background,
+      // Arka planı olmayan türlerde (motivasyon, olumlama, özlü söz…) zemin gelen
+      // kutusu listesiyle AYNI renk olsun (Anıl, 2026-11-06): kHomeBackground #0C0F14.
+      backgroundColor: kHomeBackground,
       appBar: AppBar(
         // Başlık bandı gelen kutusu bg'siyle AYNI renk (Anıl: açık lacivert istenmiyor).
-        backgroundColor: AppColors.background,
+        backgroundColor: kHomeBackground,
         title: Text(item.fortuneTypeLabel),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded),

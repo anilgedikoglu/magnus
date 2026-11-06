@@ -7,13 +7,23 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 2559** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120, tur 16: 160, tur 17: 140, tur 18: 110) — her tur sonunda güncelle.
+- **Toplam eklenen: 2674** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120, tur 16: 160, tur 17: 140, tur 18: 110, tur 19: 115) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 19 — 2026-11-06 akşam (115 metin; Codex + Claude, Gemini kotası bitik)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Kahve – Karşılama | `kahve_akarsilama.json` › `karsilamalar` | 427–446 (Codex; kitle+konu eşli) |
+| Kahve – Bağlama | `kahve_baglama.json` › `baglamalar` | 371–382 (Codex; büyük havuz, modest) |
+| Kahve – Giriş | `kahve_giris.json` › `girisler` | 829–838 (Codex; en büyük havuz, modest) |
+| Yana – Yaşama Dair | `yana.json` › `yasama_dair` | 231–264 (Codex 20 + Claude 14; mistik çerçeve çeşitliliği) |
+| Acı Gerçekler | `acigercekler.json` › `acigercekler` | ag152–ag190 (Codex 20 + Claude 19) |
 
 ## Tur 18 — 2026-11-06 akşam (110 metin; Codex + Claude yazar, Gemini kotası bitince)
 

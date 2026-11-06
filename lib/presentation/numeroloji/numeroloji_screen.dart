@@ -47,6 +47,12 @@ extension _RaporTurExt on _RaporTur {
     Icons.wb_sunny_outlined,
     Icons.calendar_today_outlined,
   ][index];
+  // ChatGPT'ye üretilen mistik numeroloji ikonları (yoksa Material ikon yedeği).
+  String get iconAsset => [
+    'assets/images/numeroloji_konu/ngenel.png',
+    'assets/images/numeroloji_konu/nbugun.png',
+    'assets/images/numeroloji_konu/nyil.png',
+  ][index];
 }
 
 // ─── Ekran ───────────────────────────────────────────────────────────────────
@@ -413,34 +419,43 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
   // ─── Seçim ekranı ─────────────────────────────────────────────────────────
 
   Widget _buildSecim() {
-    return Column(
-      children: [
-        const Spacer(),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Text(
-            ref.watch(l10nProvider).numReportPrompt,
-            textAlign: TextAlign.center,
-            style: GoogleFonts.cinzel(
-              fontSize: 15, color: Colors.white.withValues(alpha: 0.9),
-              letterSpacing: 1, height: 1.5,
-            ),
-          ),
-        ),
-        const SizedBox(height: 24),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+    // Kartlar dikey; ikon üstte, yazı altta (Anıl). Sığdığında ortalı, sığmazsa kaydırılır.
+    return LayoutBuilder(builder: (context, box) {
+      return SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: box.maxHeight),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              for (final tur in _RaporTur.values)
-                _buildTurKart(tur),
+              const SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  ref.watch(l10nProvider).numReportPrompt,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.cinzel(
+                    fontSize: 15, color: Colors.white.withValues(alpha: 0.9),
+                    letterSpacing: 1, height: 1.5,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 22),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  children: [
+                    for (final tur in _RaporTur.values)
+                      _buildTurKart(tur),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 8),
+              const FloatingBarSpacer(),
             ],
           ),
         ),
-        const Spacer(),
-        const FloatingBarSpacer(),
-      ],
-    );
+      );
+    });
   }
 
   Widget _buildTurKart(_RaporTur tur) {
@@ -460,8 +475,9 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
       child: Opacity(
         opacity: disabled ? 0.70 : 1.0,
         child: Container(
+          width: double.infinity,
           margin: const EdgeInsets.only(bottom: 16),
-          padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
+          padding: const EdgeInsets.fromLTRB(18, 18, 18, 18),
           decoration: BoxDecoration(
             color: Colors.black.withValues(alpha: disabled ? 0.30 : 0.50),
             borderRadius: BorderRadius.circular(16),
@@ -476,65 +492,69 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
               ),
             ],
           ),
-          child: Row(
+          // İkon ÜSTTE, yazı ALTTA (ortalı) — Anıl, 2026-11-06.
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                width: 48, height: 48,
+                width: 68, height: 68,
                 decoration: BoxDecoration(
                   color: const Color(0xFF6644FF).withValues(alpha: disabled ? 0.10 : 0.20),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(18),
                   border: Border.all(
                     color: const Color(0xFF9977FF).withValues(alpha: 0.40)),
                 ),
-                child: Icon(tur.icon,
-                  color: disabled
-                    ? const Color(0xFF9977FF).withValues(alpha: 0.40)
-                    : const Color(0xFFBBAAFF),
-                  size: 22),
+                alignment: Alignment.center,
+                child: _turIcon(tur, disabled),
               ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      ref.watch(l10nProvider).numLabel(tur.index),
-                      style: GoogleFonts.cinzel(
-                        fontSize: 15, fontWeight: FontWeight.bold,
-                        color: disabled ? Colors.white38 : Colors.white,
-                        letterSpacing: 1,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      locked
-                        ? ref.watch(l10nProvider).numPreparing
-                        : hasCached
-                          ? ref.watch(l10nProvider).numReadAgain
-                          : ref.watch(l10nProvider).numDesc(tur.index),
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: disabled
-                          ? Colors.white24
-                          : hasCached
-                            ? const Color(0xFFBBAAFF)
-                            : Colors.white.withValues(alpha: 0.60),
-                        height: 1.4,
-                      ),
-                    ),
-                  ],
+              const SizedBox(height: 12),
+              Text(
+                ref.watch(l10nProvider).numLabel(tur.index),
+                textAlign: TextAlign.center,
+                style: GoogleFonts.cinzel(
+                  fontSize: 16, fontWeight: FontWeight.bold,
+                  color: disabled ? Colors.white38 : Colors.white,
+                  letterSpacing: 1.5,
                 ),
               ),
-              Icon(
-                disabled ? Icons.block_rounded : Icons.chevron_right_rounded,
-                color: disabled
-                  ? Colors.white24
-                  : const Color(0xFF9977FF).withValues(alpha: 0.70),
-                size: 22,
+              const SizedBox(height: 5),
+              Text(
+                locked
+                  ? ref.watch(l10nProvider).numPreparing
+                  : hasCached
+                    ? ref.watch(l10nProvider).numReadAgain
+                    : ref.watch(l10nProvider).numDesc(tur.index),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12.5,
+                  color: disabled
+                    ? Colors.white24
+                    : hasCached
+                      ? const Color(0xFFBBAAFF)
+                      : Colors.white.withValues(alpha: 0.60),
+                  height: 1.4,
+                ),
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  /// Kart ikonu: ChatGPT'ye üretilen mistik PNG varsa onu, yoksa Material ikon yedeğini
+  /// gösterir (ikonlar eklenince pubspec'te `assets/images/numeroloji_konu/` tanımlanır).
+  Widget _turIcon(_RaporTur tur, bool disabled) {
+    return Image.asset(
+      tur.iconAsset,
+      width: 46, height: 46,
+      filterQuality: FilterQuality.high,
+      errorBuilder: (_, __, ___) => Icon(
+        tur.icon,
+        color: disabled
+            ? const Color(0xFF9977FF).withValues(alpha: 0.40)
+            : const Color(0xFFBBAAFF),
+        size: 30,
       ),
     );
   }

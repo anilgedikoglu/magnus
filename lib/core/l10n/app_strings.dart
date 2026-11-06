@@ -442,7 +442,7 @@ class AppStrings {
   /// Bazı fal türleri için özel günlük-limit mesajı (yoksa null → genel mesaj).
   String? fortuneLimitMessage(String type) {
     switch (type) {
-      case 'kaderkitabi': return _s('Kader kitabının bugünkü sayfasını okudun.', "You've read today's page of the book of fate.");
+      case 'kaderkitabi': return _s('Kader kitabının bugünkü sayfasını okudun. Yarın yeni bir sayfa açılacak.', "You've read today's page of the book of fate. A new page will open tomorrow.");
       case 'dertortagi':  return _s('Bugün yeterince dertleştik.', "We've shared enough troubles today.");
       case 'acigercekler':return _s('Bugün gerçeklerle yüzleştin.', "You've faced the truths today.");
       case 'kadercarki':  return _s('Günlük Kader Çarkı hakkın doldu.', 'Your daily Wheel of Fate limit is used.');

@@ -42,10 +42,14 @@ class KaderBookScene extends StatefulWidget {
     this.waterline = 0.72,
     this.onRisen,
     this.onTap,
+    this.dropCap = true,
   });
 
-  /// Kitaba dokununca (ör. metni büyük yazıyla yakından okuma penceresi).
+  /// Kitaba dokununca (metin iki sayfaya sığmıyorsa sonraki açılıma geç).
   final VoidCallback? onTap;
+
+  /// Sol sayfanın ilk harfi büyük (yalnız ilk açılımda; sonraki sayfalarda düz).
+  final bool dropCap;
 
   /// Sol ve sağ sayfaya yazılacak metin (bölme [splitKaderPages] ile).
   final String leftText;
@@ -136,7 +140,7 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
       c.transform(((t - a) / (b - a)).clamp(0.0, 1.0));
 
   Widget _bookFor(double t, double bookW, double bookH) {
-    final key = (t, bookW, bookH, widget.leftText, widget.rightText, widget.textScale);
+    final key = (t, bookW, bookH, widget.leftText, widget.rightText, widget.textScale, widget.dropCap);
     if (_bookCache != null && _bookKey == key) return _bookCache!;
     final wet = 1 - _seg(t, 0.34, 0.86, Curves.easeInOut); // 1 ıslak … 0 kuru
     final leftInk = _seg(t, 0.60, 0.80, Curves.easeInOut);
@@ -188,7 +192,7 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
               ),
             ),
           ),
-        _page(kKaderLeftPage, bookW, bookH, widget.leftText, leftInk, dropCap: true),
+        _page(kKaderLeftPage, bookW, bookH, widget.leftText, leftInk, dropCap: widget.dropCap),
         _page(kKaderRightPage, bookW, bookH, widget.rightText, rightInk),
         IgnorePointer(
           child: CustomPaint(painter: _DropsPainter(t: t, seed: 11)),
@@ -217,9 +221,9 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
           final sunkTop = water + bookH * 0.06;
           final bob = (t >= 0.42 ? 1.0 : _seg(t, 0.30, 0.42)) * 3.0 * math.sin(idle);
           final top = sunkTop + (restTop - sunkTop) * up + bob;
-          // Hooop: eğik çıkar, düzleşerek oturur.
-          final tilt = (1 - up) * (1 - up) * -0.24 +
-              (t >= 0.42 ? 0.010 * math.sin(idle + 1.1) : 0.0);
+          // Anıl (2026-11-06): kitap sudan DÜZ çıksın (eski "eğik çıkıp düzelme" kaldırıldı).
+          // Yalnız oturduktan sonra çok hafif, göze çarpmayan bir salınım kalır.
+          final tilt = t >= 0.42 ? 0.010 * math.sin(idle + 1.1) : 0.0;
           final left = (w - bookW) / 2;
           final waterInBook = water - top; // kitap yerel koordinatında su çizgisi
           final phase = idle;
@@ -415,6 +419,67 @@ TextStyle kaderPageStyle(Size page, {double scale = 1}) => GoogleFonts.raleway(
     return (chars.take(half).toString(), chars.skip(half).toString(), 0.6);
   }
   return (text.substring(0, mid), text.substring(mid + 1), 0.6);
+}
+
+/// Bir sayfaya SIĞAN kadar metni (en fazla [maxLines] satır) kelime sınırında keser.
+/// Dönen: (sayfaya sığan, kalan). Kalan boşsa tek sayfaya sığmıştır.
+(String, String) _kaderCutPage(
+    String text, Size page, TextStyle style, TextScaler scaler, int maxLines) {
+  final tp = TextPainter(
+    text: TextSpan(text: text, style: style),
+    textDirection: TextDirection.ltr,
+    textScaler: scaler,
+  )..layout(maxWidth: page.width);
+  final lines = tp.computeLineMetrics();
+  if (lines.length <= maxLines) {
+    tp.dispose();
+    return (text, '');
+  }
+  final lineH = lines.first.height;
+  final y = lines[maxLines - 1].baseline - lineH * 0.3;
+  var cut = tp.getLineBoundary(tp.getPositionForOffset(Offset(page.width - 1, y))).end;
+  tp.dispose();
+  cut = cut.clamp(1, text.length - 1);
+  while (cut > 0 && text[cut - 1] != ' ' && text[cut] != ' ') {
+    cut--;
+  }
+  if (cut <= 0) {
+    // Boşluksuz uzun metin: harf sınırında yarıdan böl (RangeError olmasın).
+    final chars = text.characters;
+    final half = (chars.length / 2).ceil().clamp(1, chars.length - 1);
+    return (chars.take(half).toString(), chars.skip(half).toString());
+  }
+  return (text.substring(0, cut).trimRight(), text.substring(cut).trimLeft());
+}
+
+/// Uzun metni, her biri iki sayfaya (sol+sağ) KÜÇÜLTMEDEN sığan "açılımlara" böler.
+/// Metin iki sayfaya sığıyorsa [splitKaderPages] dengeli tek açılım verir; buraya yalnız
+/// sığmayan metinler gelir → sayfalanır, kullanıcı dokununca sıradaki açılıma geçer (Anıl).
+/// İlk açılımın sol sayfasında büyük ilk harf için bir satır pay bırakılır.
+List<(String, String)> paginateKaderPages(String text, Size page, TextScaler scaler) {
+  final style = kaderPageStyle(page);
+  final probe = TextPainter(
+    text: TextSpan(text: 'Xy', style: style),
+    textDirection: TextDirection.ltr,
+    textScaler: scaler,
+  )..layout();
+  final perPage = (page.height / probe.preferredLineHeight).floor().clamp(1, 999);
+  probe.dispose();
+
+  final spreads = <(String, String)>[];
+  var rest = text.trim();
+  var first = true;
+  for (var guard = 0; guard < 60 && rest.isNotEmpty; guard++) {
+    final leftCap = first ? math.max(1, perPage - 1) : perPage;
+    final (left, afterLeft) = _kaderCutPage(rest, page, style, scaler, leftCap);
+    final (right, afterRight) =
+        afterLeft.isEmpty ? ('', '') : _kaderCutPage(afterLeft, page, style, scaler, perPage);
+    spreads.add((left, right));
+    rest = afterRight;
+    first = false;
+  }
+  if (spreads.isEmpty) spreads.add((text, ''));
+  return spreads;
 }
 
 class _PageText extends StatelessWidget {

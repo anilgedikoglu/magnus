@@ -711,6 +711,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     if (!mounted) return;
     if (result == 'hazirlanıyor') {
       _showHazirlaniyorBubble(type);
+    } else if (result == 'zaten_okundu') {
+      // Kader Kitabı o gün okunmuşsa "okudun" mesajı kitapta DEĞİL, ana menü sohbetinde
+      // söylenir (Anıl, 2026-11-06). Ekran kendini kapatıp bu sonucu döndürür.
+      _showDailyLimitBubble(type);
     }
     await _refreshCredits();
   }

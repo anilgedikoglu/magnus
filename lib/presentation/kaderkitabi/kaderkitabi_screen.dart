@@ -60,7 +60,11 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
 
   String? _metin;
   bool    _loading  = true;
-  bool    _hakDoldu = false;
+
+  // Sayfalama: metin iki sayfaya sığmazsa açılımlara bölünür, dokununca ilerlenir.
+  int _spread = 0;
+  List<(String, String)>? _spreads;
+  Object? _spreadKey;
 
   @override
   void initState() {
@@ -125,10 +129,13 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
 
     final uygunListe = tumListe.where((e) => _tumKosullarUygun(e.kosullar, profile)).toList();
 
-    // Aynı gün → hak doldu
+    // Aynı gün → bugünkü sayfa okunmuş. "Okudun" mesajı KİTAPTA gösterilmez; ekran
+    // kendini kapatıp 'zaten_okundu' döndürür, ana menü sohbeti söyler (Anıl, 2026-11-06).
     if ((prefs.getString(_prefKeyBugunTarih) ?? '') == bugunStr) {
       if (!mounted) return;
-      setState(() { _hakDoldu = true; _loading = false; });
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) context.pop('zaten_okundu');
+      });
       return;
     }
 
@@ -203,9 +210,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
                   child: _loading
                       ? const Center(child: CircularProgressIndicator(
                           color: Color(0xFFD4AF37), strokeWidth: 2))
-                      : _hakDoldu
-                          ? _buildHakDoldu()
-                          : _buildContent(context),
+                      : _buildContent(context),
                 ),
               ],
             ),
@@ -262,22 +267,6 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
     );
   }
 
-  // ─── Hak Doldu ───────────────────────────────────────────────────────────
-
-  Widget _buildHakDoldu() {
-    final s = ref.watch(l10nProvider);
-    return Column(children: [
-      Expanded(
-        child: KaderBookScene(
-          leftText: s.fatebookPageRead,
-          rightText: s.fatebookTomorrow,
-          animate: false,
-        ),
-      ),
-      const FloatingBarSpacer(),
-    ]);
-  }
-
   // ─── Metin içeriği ────────────────────────────────────────────────────────
 
   Widget _buildContent(BuildContext context) {
@@ -289,58 +278,74 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
           final bookW = min(box.maxWidth * 0.94, 560.0);
           final bookH = bookW / kKaderParchmentAspect;
           final page = Size(kKaderLeftPage.width * bookW, kKaderLeftPage.height * bookH);
-          final (sol, sag, olcek) = splitKaderPages(metin, page, scaler);
-          return KaderBookScene(
-            leftText: sol,
-            rightText: sag,
-            textScale: olcek,
-            onTap: metin.isEmpty ? null : () => _yakinOku(metin),
-          );
+
+          // Açılımları hesapla (boyut/metin/yazı ölçeği değişince): metin iki sayfaya
+          // sığıyorsa dengeli tek açılım; sığmıyorsa küçültmeden sayfalara böl.
+          final key = (metin, bookW.round(), bookH.round(), scaler.scale(16).toStringAsFixed(2));
+          if (_spreadKey != key) {
+            final (sol, sag, olcek) = splitKaderPages(metin, page, scaler);
+            _spreads = olcek >= 0.999
+                ? [(sol, sag)]
+                : paginateKaderPages(metin, page, scaler);
+            _spreadKey = key;
+            if (_spread >= _spreads!.length) _spread = 0;
+          }
+          final spreads = _spreads!;
+          final idx = _spread.clamp(0, spreads.length - 1);
+          final multi = spreads.length > 1;
+
+          return Stack(children: [
+            KaderBookScene(
+              leftText: spreads[idx].$1,
+              rightText: spreads[idx].$2,
+              dropCap: idx == 0,
+              // Metin iki sayfaya sığmadıysa dokunuş SONRAKİ açılıma geçer; sığdıysa dokunuş yok.
+              onTap: multi
+                  ? () {
+                      HapticFeedback.selectionClick();
+                      setState(() => _spread = (_spread + 1) % spreads.length);
+                    }
+                  : null,
+            ),
+            if (multi)
+              Positioned(
+                left: 0,
+                right: 0,
+                bottom: 6,
+                child: IgnorePointer(child: _PageDots(count: spreads.length, active: idx)),
+              ),
+          ]);
         }),
       ),
       const FloatingBarSpacer(),
     ]);
   }
+}
 
-  /// Kitaba dokununca metin büyük yazıyla, parşömen renginde bir pencerede okunur
-  /// (küçük ekranda ve büyük sistem yazısında sayfalar küçük kalıyordu; inceleme bulgusu).
-  void _yakinOku(String metin) {
-    HapticFeedback.lightImpact();
-    showDialog<void>(
-      context: context,
-      barrierColor: const Color(0xB3000000),
-      builder: (dctx) => Dialog(
-        backgroundColor: Colors.transparent,
-        insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 48),
-        child: GestureDetector(
-          onTap: () => Navigator.pop(dctx),
-          child: Container(
-            constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(dctx).height * 0.72),
-            padding: const EdgeInsets.fromLTRB(24, 26, 24, 26),
+/// Çok açılımlı Kader Kitabı'nda sayfa göstergesi: ince altın noktalar (dokununca ilerler).
+class _PageDots extends StatelessWidget {
+  const _PageDots({required this.count, required this.active});
+  final int count;
+  final int active;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        for (var i = 0; i < count; i++)
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 220),
+            margin: const EdgeInsets.symmetric(horizontal: 3),
+            width: i == active ? 18 : 6,
+            height: 6,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
-              gradient: const LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFEBD7AE), Color(0xFFD9BC86)],
-              ),
-              border: Border.all(color: const Color(0xFF6B4A1E), width: 1.2),
-              boxShadow: const [BoxShadow(color: Color(0x99000000), blurRadius: 24)],
-            ),
-            child: SingleChildScrollView(
-              child: Text(
-                metin,
-                style: GoogleFonts.raleway(
-                  fontSize: 17,
-                  height: 1.5,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFF2A1808),
-                ),
-              ),
+              borderRadius: BorderRadius.circular(3),
+              color: const Color(0xFFD4AF37)
+                  .withValues(alpha: i == active ? 0.95 : 0.4),
             ),
           ),
-        ),
-      ),
+      ],
     );
   }
 }

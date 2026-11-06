@@ -13,6 +13,7 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/edge_swipe_back.dart';
+import '../../core/widgets/hold_to_reveal.dart';
 import '../../core/widgets/marquee_text.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
@@ -395,8 +396,25 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 18),
-            _gradientButton(_tr('Evimi Göster', 'Show My Home'), onTap: _t == null ? null : _goster),
+            const SizedBox(height: 16),
+            // Basılı-tut: geleceğe odaklan (Anıl, 2026-11-06).
+            Opacity(
+              opacity: _t == null ? 0.4 : 1,
+              child: IgnorePointer(
+                ignoring: _t == null,
+                child: HoldToReveal(
+                  onComplete: _goster,
+                  color: _pink,
+                  icon: Icons.home_rounded,
+                  radius: 44,
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              _tr('Geleceğe odaklanmak için basılı tut', 'Hold to focus on the future'),
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontSize: 12),
+            ),
             const SizedBox(height: 6),
             TextButton(
               onPressed: _ilDegistir,

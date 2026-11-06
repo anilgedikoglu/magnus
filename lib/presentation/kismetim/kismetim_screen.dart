@@ -9,6 +9,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/widgets/unlock_flash.dart';
 import '../../core/widgets/edge_swipe_back.dart';
+import '../../core/widgets/hold_to_reveal.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 
 import '../../core/constants/app_text_styles.dart';
@@ -257,9 +258,23 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
               ),
             ),
             const SizedBox(height: 18),
-            _gradientButton(
-              _tr('Kısmetimi Göster', 'Show My Destiny'),
-              onTap: _t == null ? null : _goster,
+            // Basılı-tut: geleceğe odaklan (Anıl, 2026-11-06; Aşk Uyumu gibi).
+            Opacity(
+              opacity: _t == null ? 0.4 : 1,
+              child: IgnorePointer(
+                ignoring: _t == null,
+                child: HoldToReveal(
+                  onComplete: _goster,
+                  color: _pink,
+                  icon: Icons.favorite_rounded,
+                  radius: 44,
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              _tr('Geleceğe odaklanmak için basılı tut', 'Hold to focus on the future'),
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontSize: 12),
             ),
           ],
         ),

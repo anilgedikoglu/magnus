@@ -143,6 +143,16 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       }
     }
 
+    // Günlük hakkı ŞİMDİ işaretle (gönderim onaylandı): kullanıcı 4 sn'lik "gönderiliyor"
+    // ekranı dolmadan geri çıksa bile günde-1 kuralı korunur (Codex bug avı). HomeScreen'in
+    // _checkKahveSent'i de aynı anahtar/formatı yazar → idempotent (tarih değeri, çift sayım yok).
+    try {
+      await ref
+          .read(sharedPrefsProvider)
+          .setString('kahve_bugun_tarih', DateTime.now().toIso8601String().substring(0, 10));
+    } catch (_) {}
+    if (!mounted) return;
+
     // Fal üretimini hemen arka planda başlat (sabitlenen fotoğraflarla)
     final fortuneService = ref.read(fortuneServiceProvider);
     final profile = ref.read(userProfileProvider);

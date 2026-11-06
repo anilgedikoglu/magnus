@@ -22,6 +22,27 @@ Anıl 279'u cihazda gezip düzeltme istedi. Hepsi commit+push (build YALNIZ "tes
 - **Tavşan Falı** (`tavsanfali_screen.dart`, `_paperXform`): masadaki zarflar perspektife uyar. Eski ekran-içi
   dönüş zarfları kart destesi gibi yelpazeliyordu; yeni masa normali etrafında döner (foreshortened) → hepsi tek
   yüzeye yatmış görünür + derinlik ölçeği; seçilen uçarken flat→0 dikleşir.
+- **Metin üretimi T16** (`scripts/metin_turu_hazirla.js` `HABER_SOYLEM` + skill): haber-verme söylemini çeşitlendir
+  ("…görüyorum" tek kalıbı yerine öngörüyorum/hissediyorum/yıldızlar diyor/fincanın dibinde beliriyor…), ≤2/20.
+- **Kader Çarkı** (`kadercarki_screen.dart`): segment görselleri ilk açılışta görünür. `_ikonCache` tek Map'ti,
+  yerinde değişiyordu → `shouldRepaint` referansla göremeyince ancak dönünce çiziliyordu; artık her yüklemede yeni
+  Map referansı.
+- **Kısmetim/Evim** popup içi yatay kaydırma sayfayı geri götürmez (`NoEdgeSwipeBack`; yıl tekerleği RotatedBox'ta
+  dikey eksenli → global yatay-scroll koruması atlanıyordu). **Arabam** son yıl aralığı açık uçlu (2074 yerine →).
+- **ElegantHourglass yeniden** (Codex incelemesi): SÜREKLİ kum saati — akar, alt dolunca 180° döner, diğer yönden
+  akar; dikişsiz (angle=π+alt-dolu == angle=0+üst-dolu, 180° simetri). Alan-korumalı seviye, eğri bezier cam,
+  color'dan tonlar. 15 ekran otomatik. `debugHourglassFrame` test yardımcısı. Flip/Spinning/Pulsing ana widget'e delege.
+- **Aşk Uyumu** (`askuyumu_screen.dart`): çark 280→320, basılı-tut butonu yarıçap 40→54 (ikon 38), buton kalan
+  boşlukta dikeyde ortalandı.
+- **Arabam Ne? yeniden** (`araba_engine.dart` schema 3 + `arabam_screen.dart`, Codex etik incelemesi): kullanıcı ŞU
+  ANKİ araba markasını seçer ("Arabam yok" + A–Z); markadan başlangıç sınıfı (yaygınlık ağırlıklı medyan; marka=servet
+  DEĞİL); sonraki arabalar en fazla ±1 kademe (yukarı ≥4 yıl + lüks zorluğu); arabam yok → ilk alım sınıf 1.
+  **DOĞUM YERİ ekonomik tahminde KULLANILMAZ** (Codex: kaba bölgesel klişe). Meslek nötr (v1). İlk ekran basılı-tut.
+  `brands()`, `brandStartLevel()`, `_progressLevel()`, imzaya marka. 6 yeni test.
+- **Basılı-tut girişi** (`core/widgets/hold_to_reveal.dart` `HoldToReveal`): kısmetim/arabam/evim ilk ekranda
+  seçim sonrası basılı-tut → geleceğe odaklan (Aşk Uyumu gibi). Azaltılmış harekette tek dokunuş.
+- ⚠️ **YARIM — ChatGPT oturumu KAPALI:** (1) numeroloji 3 mistik ikon, (2) kısmetim/arabam/evim SONUÇ ekranlarına
+  üstte tematik görsel (kısmet/araba/ev). İkisi de ChatGPT görseli ister → Anıl girince üret-indir-göm, düzen hazır.
 
 ## Ne yapıldı (2026-11-06 gece, 276 sonrası; main'de) + değişen dosyalar
 - **10.8.13+279 test build'i** (2026-11-06 05:25 Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).

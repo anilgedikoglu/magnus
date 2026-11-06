@@ -1720,7 +1720,9 @@ class SettingsScreen extends ConsumerWidget {
                   key: const ValueKey('profileScroll'),
                   physics: lockScroll
                       ? const NeverScrollableScrollPhysics()
-                      : const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                      // Lastikleşme (overscroll bounce) KALDIRILDI (Anıl, 2026-11-06): swipe'ta
+                      // zıplama yapıyordu; sıkışma reflow'u da bounce overshoot'u olmadan daha oturur.
+                      : const ClampingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,

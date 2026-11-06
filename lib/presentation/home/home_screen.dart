@@ -94,6 +94,7 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
+import 'package:flutter/rendering.dart' show ScrollDirection;
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -589,12 +590,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     if (!_selamlamaYuklendi) {
       _selamlamaYuklendi = true;
       // Açılıştan ~3 sn SONRA band TAZE gelsin (Anıl: açılır açılmaz görünmeyip kaybolmasın);
-      // açık kalma süresi selamlama uzunluğuna göre 5–10 sn.
+      // açılış selamlaması 10 sn kalır ya da yukarı swipe'a kadar (Anıl, 2026-11-06).
       _loadSelamlama().whenComplete(() {
         if (!mounted) return;
         _bandTimer?.cancel();
         _bandTimer = Timer(const Duration(seconds: 3), () {
-          if (mounted) _popBand(hold: _bandHold(_selamlama));
+          if (mounted) _popBand(hold: const Duration(seconds: 10));
         });
       });
     }
@@ -942,7 +943,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               child: TabSwipe(
                 onSwipeLeft: () =>
                     selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
-                child: _buildGrid(context, topExtra: topInset + kHomeLayerGap),
+                child: NotificationListener<UserScrollNotification>(
+                  onNotification: (n) {
+                    // Yukarı swipe (menüyü kaydır) → açık selamlama bandını kapat
+                    // (Anıl: açılış yazısı 10 sn kalsın ya da yukarı swipe'a kadar).
+                    if (n.direction == ScrollDirection.reverse &&
+                        _bandShow.value > 0.01) {
+                      _hideBand();
+                    }
+                    return false;
+                  },
+                  child: _buildGrid(context, topExtra: topInset + kHomeLayerGap),
+                ),
               ),
             ),
           ),
@@ -1060,7 +1072,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                             gradient: bubbles[i].gradient,
                             borderColor: bubbles[i].borderColor,
                             isActive: i == _typingIndex,
-                            enableMarquee: i == 0,
+                            enableMarquee: false, // kayan uzun yazı kaldırıldı (Anıl, 2026-11-06); uzunlar havuzdan elenir + sarılır
                             onComplete: () => _onBubbleComplete(i),
                             iconPath: bubbles[i].iconPath,
                           ),
@@ -1305,13 +1317,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             .toList();
       }
 
-      // %10 Biliyor muydun? (yalnızca 1. ziyarette)
+      // Çok uzun (eskiden kayan) karşılama metinlerini ELE → bant kısa kalsın (Anıl, 2026-11-06).
+      // ~110+ karakter ≈ 3+ satır. Havuz tümüyle uzunsa güvenli yedek: filtresiz havuz.
+      bool kisa(Map<String, dynamic> e) {
+        final t = ((isEn ? e['metin_en'] as String? : null) ?? e['metin'] as String? ?? '').trim();
+        return t.length <= 110;
+      }
+      final havuzKisa = havuz.where(kisa).toList();
+      if (havuzKisa.isNotEmpty) havuz = havuzKisa;
+
+      // %10 Biliyor muydun? (yalnızca 1. ziyarette; yalnız kısa olanlar — uzunlar artık gösterilmez)
       List<Map<String, dynamic>> secimHavuzu = havuz;
       String noRepeatKey = 'karsilama_gosterilen_$ziyaretKey';
-      if (visitCount == 1 && biliyormuydun.isNotEmpty &&
-          Random().nextDouble() < 0.10) {
-        secimHavuzu = biliyormuydun;
-        noRepeatKey = 'karsilama_gosterilen_biliyormuydun';
+      if (visitCount == 1 && Random().nextDouble() < 0.10) {
+        final bmKisa = biliyormuydun.where(kisa).toList();
+        if (bmKisa.isNotEmpty) {
+          secimHavuzu = bmKisa;
+          noRepeatKey = 'karsilama_gosterilen_biliyormuydun';
+        }
       }
 
       metin = secimHavuzu.isNotEmpty

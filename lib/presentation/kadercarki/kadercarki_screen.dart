@@ -110,8 +110,10 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   int    _lastSeg         = -1;
   int    _lastHapticMs    = 0;
 
-  // Görsel cache
-  final Map<String, ui.Image?> _ikonCache = {};
+  // Görsel cache. Her yüklemede YENİ Map referansı atanır (aşağıda): yerinde değiştirilen
+  // tek Map'i _WheelPainter.shouldRepaint referansla karşılaştırıyordu → görseller yüklenince
+  // çark yeniden çizilmiyor, ancak dönünce (açı değişince) beliriyordu (Anıl, 2026-11-06).
+  Map<String, ui.Image?> _ikonCache = {};
 
   @override
   void initState() {
@@ -142,7 +144,8 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       final data = await rootBundle.load(b.ikonAsset);
       final codec = await ui.instantiateImageCodec(data.buffer.asUint8List());
       final frame = await codec.getNextFrame();
-      if (mounted) setState(() => _ikonCache[b.key] = frame.image);
+      // Yeni Map referansı → shouldRepaint değişimi görür, çark hemen yeniden çizilir.
+      if (mounted) setState(() => _ikonCache = {..._ikonCache, b.key: frame.image});
     }
   }
 

@@ -3,13 +3,13 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:video_player/video_player.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 
@@ -52,28 +52,20 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
 
     final prefs = await SharedPreferences.getInstance();
     final key = 'kahinler_${widget.kahinId}_gosterilen';
-    var shown = prefs.getStringList(key) ?? [];
+    final shown = prefs.getStringList(key) ?? [];
 
-    var eligible = list
-        .where((e) => !shown.contains(e['id'].toString()))
-        .toList();
-    if (eligible.isEmpty) {
-      await prefs.remove(key);
-      shown = [];
-      eligible = List.from(list);
-    }
+    final pick =
+        pickNoRepeat(pool: list, shown: shown, idOf: (e) => e['id'].toString());
+    if (pick == null) return;
+    final selected = pick.selected;
+    await prefs.setStringList(key, pick.shown);
 
-    eligible.shuffle(Random());
-    final selected = eligible.first;
     final isEn = ref.read(localeProvider) == 'en';
     _metin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
         ? selected['metin_en']
         : (selected['metin'] ?? '');
     final profile = ref.read(userProfileProvider);
     _metin = VariableReplacer.replace(_metin, profile.toVariableMap());
-
-    shown.add(selected['id'].toString());
-    await prefs.setStringList(key, shown);
   }
 
   Future<void> _initVideo() async {

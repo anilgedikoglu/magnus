@@ -3,7 +3,6 @@
 
 import 'dart:convert';
 import '../../core/widgets/edge_swipe_back.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,6 +10,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
@@ -71,47 +71,33 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
 
     final prefs = await SharedPreferences.getInstance();
     const key   = 'niyet_gosterilen';
-    var shown   = prefs.getStringList(key) ?? [];
+    final shown = prefs.getStringList(key) ?? [];
 
     final profile = ref.read(userProfileProvider);
+    final varMap = profile.toVariableMap();
 
-    // Koşul filtresi + daha önce gösterilmemiş
-    var eligible = all.where((e) {
+    // Koşul filtresi uygulanmış havuz (shown DIŞLANMAZ — helper yönetir).
+    bool uygun(dynamic e) {
       final kosullar = e['kosullar'] as List? ?? [];
-      if (kosullar.isNotEmpty) {
-        final varMap = profile.toVariableMap();
-        for (final k in kosullar) {
-          final val = varMap['${k['degisken']}'];
-          if (val == null || val != '${k['deger']}') return false;
-        }
+      for (final k in kosullar) {
+        final val = varMap['${k['degisken']}'];
+        if (val == null || val != '${k['deger']}') return false;
       }
-      return !shown.contains(e['id'].toString());
-    }).toList();
-
-    if (eligible.isEmpty) {
-      await prefs.remove(key);
-      shown    = [];
-      eligible = all.where((e) {
-        final kosullar = e['kosullar'] as List? ?? [];
-        if (kosullar.isEmpty) return true;
-        final varMap = profile.toVariableMap();
-        for (final k in kosullar) {
-          final val = varMap['${k['degisken']}'];
-          if (val == null || val != '${k['deger']}') return false;
-        }
-        return true;
-      }).toList();
+      return true;
     }
 
-    eligible.shuffle(Random());
-    final selected = eligible.first as Map<String, dynamic>;
+    final pool = all.where(uygun).toList();
+    final pick =
+        pickNoRepeat(pool: pool, shown: shown, idOf: (e) => e['id'].toString());
+    if (pick == null) return;
+    final selected = pick.selected as Map<String, dynamic>;
+    await prefs.setStringList(key, pick.shown);
+
     final isEn = ref.read(localeProvider) == 'en';
     final selMetin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
         ? selected['metin_en'] as String
         : (selected['metin'] as String? ?? '');
-    _metin = VariableReplacer.replace(selMetin, profile.toVariableMap());
-    shown.add(selected['id'].toString());
-    await prefs.setStringList(key, shown);
+    _metin = VariableReplacer.replace(selMetin, varMap);
 
     if (mounted) setState(() => _adim = _NiyetAdim.kazima);
   }

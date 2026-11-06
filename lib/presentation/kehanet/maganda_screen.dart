@@ -12,6 +12,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/focus_ripple.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
@@ -107,17 +108,12 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
 
     final prefs = await SharedPreferences.getInstance();
     const key = 'maganda_gosterilen';
-    var shown = prefs.getStringList(key) ?? [];
+    final shown = prefs.getStringList(key) ?? [];
 
-    var eligible = cevaplar.where((e) => !shown.contains(e['id'].toString())).toList();
-    if (eligible.isEmpty) {
-      await prefs.remove(key);
-      shown = [];
-      eligible = List.from(cevaplar);
-    }
-
-    eligible.shuffle(Random());
-    final selected = eligible.first;
+    final pick = pickNoRepeat(
+        pool: cevaplar, shown: shown, idOf: (e) => e['id'].toString());
+    if (pick == null) return;
+    final selected = pick.selected;
     final isEn = ref.read(localeProvider) == 'en';
     final rawMetin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
         ? selected['metin_en'] as String
@@ -131,8 +127,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
     _cevap = varyasyonlar.isNotEmpty ? varyasyonlar.first : rawMetin;
     final profile = ref.read(userProfileProvider);
     _cevap = VariableReplacer.replace(_cevap, profile.toVariableMap());
-    shown.add(selected['id'].toString());
-    await prefs.setStringList(key, shown);
+    await prefs.setStringList(key, pick.shown);
 
     if (!mounted) return;
 

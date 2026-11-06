@@ -3,7 +3,6 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,6 +10,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/focus_ripple.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
@@ -68,32 +68,23 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
 
     final prefs = await SharedPreferences.getInstance();
     const key = 'faloya_gosterilen';
-    var shown = prefs.getStringList(key) ?? [];
+    final shown = prefs.getStringList(key) ?? [];
 
-    var eligible = all.where((e) {
-      final kosullar = e['kosullar'] as List? ?? [];
-      return kosullar.isEmpty && !shown.contains(e['id'].toString());
-    }).toList();
+    // Yalnız koşulsuz metinler (Faloya herkese aynı havuzdan okur).
+    final pool =
+        all.where((e) => (e['kosullar'] as List? ?? []).isEmpty).toList();
+    final pick =
+        pickNoRepeat(pool: pool, shown: shown, idOf: (e) => e['id'].toString());
+    if (pick == null) return;
+    final selected = pick.selected;
+    await prefs.setStringList(key, pick.shown);
 
-    if (eligible.isEmpty) {
-      await prefs.remove(key);
-      shown = [];
-      eligible = all.where((e) {
-        final kosullar = e['kosullar'] as List? ?? [];
-        return kosullar.isEmpty;
-      }).toList();
-    }
-
-    eligible.shuffle(Random());
-    final selected = eligible.first;
     final isEn = ref.read(localeProvider) == 'en';
     _metin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
         ? selected['metin_en'] as String
         : (selected['metin'] as String? ?? '');
     final profile = ref.read(userProfileProvider);
     _metin = VariableReplacer.replace(_metin, profile.toVariableMap());
-    shown.add(selected['id'].toString());
-    await prefs.setStringList(key, shown);
 
     if (mounted) {
       _dataReady = true;

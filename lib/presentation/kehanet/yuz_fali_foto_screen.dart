@@ -11,12 +11,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
-import '../../data/services/claude_vision_service.dart';
 import '../../data/services/face_analyzer.dart';
 import '../../data/services/photo_subject_detector.dart';
 import 'package:uuid/uuid.dart';
@@ -140,65 +138,41 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
       return;
     }
 
-    // Kontrol geçti → günlük hakkı şimdi işaretle.
-    final prefs    = await SharedPreferences.getInstance();
-    final today    = DateTime.now();
-    final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
-    await prefs.setString('yuzfali_bugun_tarih', todayStr);
-
-    try {
-      // Analiz + minimum 12 saniyelik "analiz ediliyor" beklemesi eş zamanlı
-      final sonuclar = await Future.wait<dynamic>([
-        OnDeviceFaceAnalyzer.analiz(_foto!.path, isSelf: isSelf, profileGender: profileGender),
-        Future.delayed(const Duration(seconds: 12)),
-      ]);
-
-      if (!mounted) return;
-
-      final analiz = sonuclar[0] as YuzAnalizi;
-
-      if (!analiz.isHuman) {
-        setState(() {
-          _hataMetni = _t('Lütfen gerçek bir insan fotoğrafı gönder.', 'Please send a photo of a real person.');
-          _adim      = _YFAdim.hatali;
-        });
-        return;
-      }
-
-      // JSON yükle
-      final jsonKey = widget.kimin == 'kullanici'
+    // Fal üretimi + inbox + günlük hak TEK İŞ (Codex P1): 12 sn "analiz ediliyor" sırasında geri
+    // çıksa bile arka planda tamamlanır → ne hak boşa gider ne fal kaybolur. Hak YALNIZ fal kaydedilince.
+    final profile       = ref.read(userProfileProvider);
+    final inboxNotifier = ref.read(inboxProvider.notifier);
+    final prefs         = ref.read(sharedPrefsProvider);
+    final fotoPath      = _foto!.path;
+    final kimin         = widget.kimin;
+    final today         = DateTime.now();
+    final todayStr      = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
+    final isEn          = ref.read(localeProvider) == 'en';
+    Future<void>(() async {
+      final analiz = await OnDeviceFaceAnalyzer.analiz(fotoPath, isSelf: isSelf, profileGender: profileGender);
+      final jsonKey = kimin == 'kullanici'
           ? 'assets/data/yuzfali_kullanici.json'
           : 'assets/data/yuzfali_baskasi.json';
       final jsonStr = await rootBundle.loadString(jsonKey);
       final data    = jsonDecode(jsonStr) as Map<String, dynamic>;
-
-      // Cinsiyet → tam fal seçimi
-      final profile  = ref.read(userProfileProvider);
-      final cinsiyet = widget.kimin == 'kullanici'
-          ? profile.gender        // kullanıcının kendi profil cinsiyeti
-          : analiz.cinsiyet;      // fotoğraftaki kişinin Claude'dan gelen cinsiyeti
+      final cinsiyet = kimin == 'kullanici' ? profile.gender : analiz.cinsiyet;
       final tamKey = cinsiyet == 'erkek' ? 'yuzfalitame' : 'yuzfalitamkl';
-
-      // Fal parçalarını sıraya diz
       final parcalar = <String>[];
-
+      // İngilizcesi varsa onu kullan (parallel İngilizce kuralı); yoksa Türkçe.
       String sec(List<dynamic>? liste) {
         if (liste == null || liste.isEmpty) return '';
         final item = liste[_rng.nextInt(liste.length)] as Map<String, dynamic>;
+        final en = (item['metin_en'] as String?)?.trim();
+        if (isEn && en != null && en.isNotEmpty) return en;
         return (item['metin'] as String? ?? '').trim();
       }
-
       String kategori(String cat, String variant) {
         final m = data[cat] as Map<String, dynamic>?;
         if (m == null) return '';
         return sec(m[variant] as List<dynamic>?);
       }
-
-      // 1. Tam fal
       final t = sec(data[tamKey] as List<dynamic>?);
       if (t.isNotEmpty) parcalar.add(t);
-
-      // 2–8. Özellik metinleri (kullanıcı sırası)
       final ozellikler = [
         ('yfmoral',    analiz.moral),
         ('yfsapka',    analiz.sapka),
@@ -212,41 +186,27 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         final p = kategori(cat, variant);
         if (p.isNotEmpty) parcalar.add(p);
       }
-
-      // {{isim}} değiştirme
       final varMap = profile.toVariableMap();
-      _falMetni = parcalar
-          .map((p) => VariableReplacer.replace(p, varMap))
-          .join('\n\n');
-
-      // Inbox'a kaydet — 6 dakika sonra açılır
-      if (!mounted) return;
-      final now      = DateTime.now();
-      final unlockAt = now.add(const Duration(minutes: 6)).toIso8601String();
+      final falMetni = parcalar.map((p) => VariableReplacer.replace(p, varMap)).join('\n\n');
+      final now = DateTime.now();
       final inboxItem = InboxItem(
         id:             const Uuid().v4(),
-        title:          'Yüz Falın Hazır',
-        text:           _falMetni,
+        title:          isEn ? 'Your Face Reading Is Ready' : 'Yüz Falın Hazır',
+        text:           falMetni,
         date:           now.toIso8601String(),
         fortuneTypeKey: 'yuzfali',
         iconAsset:      'assets/images/inbox_icons/elfali.png',
-        unlockAt:       unlockAt,
+        unlockAt:       now.add(const Duration(minutes: 6)).toIso8601String(),
       );
-      await ref.read(inboxProvider.notifier).addItem(inboxItem);
+      await inboxNotifier.addItem(inboxItem);
+      await prefs.setString('yuzfali_bugun_tarih', todayStr);
+    }).catchError((_) {/* üretilemezse hak yazılmaz */});
 
-      // Ana menüye dön, balon göster
-      if (!mounted) return;
-      ref.read(yuzFaliSentProvider.notifier).state = true;
-      context.go('/home');
-    } catch (e) {
-      if (mounted) {
-        setState(() {
-          _hataMetni = _t('Analiz sırasında bir hata oluştu. İnternet bağlantını kontrol et.',
-              'Something went wrong during the analysis. Check your internet connection.');
-          _adim = _YFAdim.hatali;
-        });
-      }
-    }
+    // Ekranda 12 sn "analiz ediliyor", sonra ana menü.
+    await Future.delayed(const Duration(seconds: 12));
+    if (!mounted) return;
+    ref.read(yuzFaliSentProvider.notifier).state = true;
+    context.go('/home');
   }
 
   // ─────────────────────────────────────────────────────────────────────────

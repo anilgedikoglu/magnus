@@ -63,11 +63,12 @@ class PhotoSubjectDetector {
           return true; // ara/belirsiz → engelleme
 
         case FotoKonu.fincan:
-          if (face == FaceDurum.bulundu) return false; // yüz → fincan değil (önce)
-          if (has(_fincanWords)) return true; // güvenilir fincan etiketi (Coffee/Cup/Cappuccino)
+          // Fincan etiketi EN GÜÇLÜ: kişi fincanı elinde tutup yüzü de kadrajda olabilir → kabul
+          // (yüz reddinden önce; aksi halde fincanlı selfie 3 fotoda da reddediliyordu — Codex P2).
+          if (has(_fincanWords)) return true; // Coffee/Cup/Cappuccino
+          if (face == FaceDurum.bulundu) return false; // fincan etiketi YOK + yüz var → selfie
           if (has(_elWords)) return false; // el
           if (has(_yuzWordsStrong)) return false; // güçlü yüz etiketi
-          // Ten-reddi SON ÇARE + yüksek eşik: gri/beyaz/krem fincan maskeden çıkarıldı.
           if (skin >= 0.45) return false; // açıkça ten-baskın → el/yüz, fincan değil
           return true; // fincan'ı offline pozitif doğrulamak zor → varsayılan kabul
       }

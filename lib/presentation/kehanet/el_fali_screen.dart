@@ -109,35 +109,24 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
       return;
     }
 
-    // Kontrol geçti → günlük hakkı şimdi işaretle.
-    final prefs    = await SharedPreferences.getInstance();
-    final today    = DateTime.now();
-    final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
-    await prefs.setString('elfali_bugun_tarih', todayStr);
+    // Fal üretimi + inbox + günlük hak TEK İŞ (Codex P1): kullanıcı 5 sn ritüelde geri çıksa bile
+    // arka planda tamamlanır → ne hak boşa gider ne fal kaybolur. Hak YALNIZ fal kaydedilince yazılır.
+    final fortuneService = ref.read(fortuneServiceProvider);
+    final profile        = ref.read(userProfileProvider);
+    final inboxNotifier  = ref.read(inboxProvider.notifier);
+    final prefs          = ref.read(sharedPrefsProvider);
+    final today          = DateTime.now();
+    final todayStr       = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
+    fortuneService.generateElFali(profile: profile).then((item) async {
+      await inboxNotifier.addItem(item);
+      await prefs.setString('elfali_bugun_tarih', todayStr);
+    }).catchError((_) {/* üretilemezse hak yazılmaz */});
 
-    try {
-      // API kontrolü yok — fotoğraf alındıktan sonra direkt fal üretilir
-      await Future.delayed(const Duration(seconds: 5));
-
-      if (!mounted) return;
-
-      // Fal üret
-      final fortuneService = ref.read(fortuneServiceProvider);
-      final profile        = ref.read(userProfileProvider);
-      final item           = await fortuneService.generateElFali(profile: profile);
-
-      // Inbox'a kaydet
-      await ref.read(inboxProvider.notifier).addItem(item);
-
-      // Ana menüye dön, balon göster
-      if (!mounted) return;
-      ref.read(elFaliSentProvider.notifier).state = true;
-      context.go('/home');
-    } catch (e) {
-      if (mounted) {
-        setState(() => _adim = _EFAdim.secim);
-      }
-    }
+    // Ekranda 5 sn okuma ritüeli, sonra ana menü.
+    await Future.delayed(const Duration(seconds: 5));
+    if (!mounted) return;
+    ref.read(elFaliSentProvider.notifier).state = true;
+    context.go('/home');
   }
 
   // ─────────────────────────────────────────────────────────────────────────

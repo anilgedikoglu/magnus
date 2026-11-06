@@ -3316,11 +3316,16 @@ const SpringDescription _kProfileCompactSpring =
 /// Yalnız PARMAKLA kaydırma (sürükleme/fırlatma) sayılır; açılan paneli görünür kılmak
 /// gibi programatik kaydırmalar kutuları kendiliğinden kapatmasın.
 bool _profileUserScrolling = false;
+// Yeni compact'tan hemen sonra, compaction içeriği kısaltıp konumu başa KIRPARSA (aynı parmak
+// hareketinde) un-compact tetiklenip içerik yeniden büyüyordu → salınım, ayarlara inilemiyordu
+// (Codex P1). Guard: bu gesture boyunca top-clamp açmayı engeller; parmak kalkınca sıfırlanır.
+bool _profileCompactGuard = false;
 
 void _profileCompactScroll(WidgetRef ref, ScrollNotification n) {
   if (n.depth != 0 || n.metrics.axis != Axis.vertical) return;
   if (n is UserScrollNotification) {
     _profileUserScrolling = n.direction != ScrollDirection.idle;
+    if (n.direction == ScrollDirection.idle) _profileCompactGuard = false; // hareket bitti
     return;
   }
   if (n is! ScrollUpdateNotification) return;
@@ -3329,7 +3334,11 @@ void _profileCompactScroll(WidgetRef ref, ScrollNotification n) {
   final compact = ref.read(_profileCompactProvider);
   if (m.pixels <= m.minScrollExtent + 0.5) {
     _profileCompactAcc = 0;
-    if (compact) ref.read(_profileCompactProvider.notifier).state = false;
+    // YALNIZ kullanıcı gerçekten yukarı çekerek başa geldiyse aç; compaction'ın başa kırpması
+    // (aynı gesture, guard) ya da programatik konum açmasın → geri-sekme döngüsü biter.
+    if (compact && !_profileCompactGuard && _profileUserScrolling && d < 0) {
+      ref.read(_profileCompactProvider.notifier).state = false;
+    }
     return;
   }
   if (m.pixels > m.maxScrollExtent || d == 0 || !_profileUserScrolling) return; // alt esneme / programatik
@@ -3342,6 +3351,7 @@ void _profileCompactScroll(WidgetRef ref, ScrollNotification n) {
   if (_profileCompactAcc >= _kProfileCompactTrigger) {
     _profileCompactAcc = 0;
     ref.read(_profileCompactProvider.notifier).state = towardCompact;
+    if (towardCompact) _profileCompactGuard = true; // bu gesture'da top-clamp un-compact etmesin
   }
 }
 

@@ -143,9 +143,12 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       }
     }
 
-    // Günlük hakkı ŞİMDİ işaretle (gönderim onaylandı): kullanıcı 4 sn'lik "gönderiliyor"
-    // ekranı dolmadan geri çıksa bile günde-1 kuralı korunur (Codex bug avı). HomeScreen'in
-    // _checkKahveSent'i de aynı anahtar/formatı yazar → idempotent (tarih değeri, çift sayım yok).
+    // Gönderim onaylandı → HEMEN kilitle (prefs/üretim beklenirken ikinci dokunuş çift üretim
+    // başlatmasın — Codex P2). _sending guard'da ve butonda zaten kontrol ediliyor.
+    setState(() => _sending = true);
+
+    // Günlük hakkı ŞİMDİ işaretle (kullanıcı 4 sn'lik "gönderiliyor" ekranı dolmadan geri çıksa bile
+    // günde-1 kuralı korunur). HomeScreen _checkKahveSent de aynı anahtar/format → idempotent.
     try {
       await ref
           .read(sharedPrefsProvider)
@@ -167,9 +170,8 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       locale: ref.read(localeProvider),
     ).then((item) => inboxNotifier.addItem(item)).catchError((_) {});
 
-    // 4 saniye fincanın altında kum saati göster
+    // 4 saniye fincanın altında kum saati göster (_sending yukarıda zaten true).
     if (!mounted) return;
-    setState(() => _sending = true);
     await Future.delayed(const Duration(seconds: 4));
 
     if (!mounted) return;

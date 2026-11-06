@@ -917,9 +917,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       WidgetsBinding.instance.addPostFrameCallback((_) => _retargetHeader(chatHeight));
     }
     // Yeni Magnus mesajı (fal durumu / günlük limit → _extraBubbles büyür) gelince bandı patlat.
+    // Süre, yeni eklenen balon(lar)ın toplam uzunluğuna göre (uzun mesaj bitmeden kapanmasın — Codex P2).
     if (_extraBubbles.length != _lastExtraCount) {
       _lastExtraCount = _extraBubbles.length;
-      WidgetsBinding.instance.addPostFrameCallback((_) => _popBand());
+      final yeni = _extraBubbles.length >= 2
+          ? (_extraBubbles[_extraBubbles.length - 2].text + _extraBubbles.last.text)
+          : (_extraBubbles.isNotEmpty ? _extraBubbles.last.text : _selamlama);
+      WidgetsBinding.instance.addPostFrameCallback((_) => _popBand(hold: _bandHold(yeni)));
     }
     return Scaffold(
       backgroundColor: kHomeBackground,

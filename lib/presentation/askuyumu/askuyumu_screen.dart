@@ -444,8 +444,8 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       _buildHeader(),
       Expanded(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
               child: Text(
@@ -459,7 +459,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 16),
             _buildWheelWithPointer(),
             const SizedBox(height: 8),
             Text(
@@ -471,14 +471,23 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                 letterSpacing: 0.5,
               ),
             ),
-            const SizedBox(height: 24),
-            _buildHoldButton(),
-            const SizedBox(height: 10),
-            Text(
-              ref.watch(l10nProvider).askUyumuHold,
-              style: const TextStyle(color: Colors.white38, fontSize: 12),
+            // Basılı-tut butonu kalan boşlukta dikeyde ORTALANIR (Anıl, 2026-11-06:
+            // "biraz aşağı indir, kalan boşluğa dikeyde ortala").
+            Expanded(
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _buildHoldButton(),
+                    const SizedBox(height: 12),
+                    Text(
+                      ref.watch(l10nProvider).askUyumuHold,
+                      style: const TextStyle(color: Colors.white38, fontSize: 12),
+                    ),
+                  ],
+                ),
+              ),
             ),
-            const SizedBox(height: 16),
           ],
         ),
       ),
@@ -487,8 +496,8 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   }
 
   Widget _buildWheelWithPointer() {
-    const wheelSize = 280.0;
-    const pointerSize = 28.0;
+    const wheelSize = 320.0; // Anıl, 2026-11-06: çark biraz büyütüldü (280→320).
+    const pointerSize = 30.0;
     return SizedBox(
       width: wheelSize,
       height: wheelSize + pointerSize * 0.5,
@@ -545,7 +554,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   }
 
   Widget _buildHoldButton() {
-    const double buttonRadius = 40.0;
+    const double buttonRadius = 54.0; // Anıl, 2026-11-06: basılı-tut butonu büyütüldü (40→54).
     return GestureDetector(
       onTapDown: (_) => _fillCtrl.forward(),
       onTapUp: (_) => _fillCtrl.reverse(),
@@ -579,7 +588,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                     color: const Color(0xFFFF4466),
                   ),
                 ),
-                const Icon(Icons.favorite_rounded, color: Colors.white, size: 28),
+                const Icon(Icons.favorite_rounded, color: Colors.white, size: 38),
               ],
             ),
           );

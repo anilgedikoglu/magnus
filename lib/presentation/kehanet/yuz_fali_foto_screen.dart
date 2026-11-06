@@ -17,6 +17,7 @@ import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 import '../../data/services/claude_vision_service.dart';
+import '../../data/services/face_analyzer.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 
@@ -128,12 +129,16 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
     }
   }
 
-  // ── Claude Vision API + metin oluşturma ───────────────────────────────────
+  // ── Cihaz-içi (offline) analiz + metin oluşturma ──────────────────────────
+  // Eskiden Claude Vision API'ye bağlıydı → internet hatasında çöküyordu (Anıl, 2026-11-06).
+  // Artık `OnDeviceFaceAnalyzer` ile tamamen offline; hiç hata vermez.
   Future<void> _analizEt() async {
+    final isSelf = widget.kimin == 'kullanici';
+    final profileGender = ref.read(userProfileProvider).gender; // await ÖNCESİ
     try {
-      // API çağrısı ve minimum 12 saniyelik bekleme eş zamanlı
+      // Analiz + minimum 12 saniyelik "analiz ediliyor" beklemesi eş zamanlı
       final sonuclar = await Future.wait<dynamic>([
-        ClaudeVisionService.analiz(_foto!.path),
+        OnDeviceFaceAnalyzer.analiz(_foto!.path, isSelf: isSelf, profileGender: profileGender),
         Future.delayed(const Duration(seconds: 12)),
       ]);
 

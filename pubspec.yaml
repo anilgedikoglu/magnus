@@ -27,6 +27,9 @@ dependencies:
   # Camera / image picker
   image_picker: ^1.1.2
 
+  # Cihaz-içi (offline) fotoğraf analizi — yüz falı (saf Dart, piksel işleme)
+  image: ^4.3.0
+
   # HTTP client (Claude Vision API için)
   http: ^1.2.2
 

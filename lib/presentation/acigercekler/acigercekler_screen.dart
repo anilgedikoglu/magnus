@@ -14,7 +14,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/burning_paper.dart';
 import '../../core/widgets/focus_ripple.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/swipe_back.dart';
@@ -45,9 +47,10 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   _Adim   _adim        = _Adim.yukleniyor;
   String  _metin       = '';
   bool    _veriYuklendi = false;
+  bool    _yandi        = false; // kağıt küle döndü mü → altın yazı belirsin
+  final double _seed    = (Random().nextDouble() * 50) + 1; // her açılışta farklı çatlak/alev
 
   Timer? _gecisTimer;
-  final _yaziKey = GlobalKey<_TypewriterTextState>();
 
   String get _bugun => DateTime.now().toIso8601String().substring(0, 10);
 
@@ -164,8 +167,8 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   // ── Kum saati ────────────────────────────────────────────────────────────────
 
   void _baslatKumSaati() {
-    // 3.2 sn nabız gözü, sonra içerik (2026-11-06: 5 sn ölü bekleme kısaltıldı)
-    _gecisTimer = Timer(const Duration(milliseconds: 3200), () {
+    // Kısa nabız gözü, sonra yanan kağıt sahnesi (kağıt yanar → altın yazı belirir).
+    _gecisTimer = Timer(const Duration(milliseconds: 1400), () {
       if (!mounted) return;
       HapticFeedback.mediumImpact();
       setState(() => _adim = _Adim.icerik);
@@ -265,87 +268,68 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
       children: [
         _buildBaslikBar(),
         Expanded(
-          // İçerik alanının herhangi bir yerine dokununca yazı hemen tamamlanır.
-          child: GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onTap: () => _yaziKey.currentState?._hemenTamamla(),
-            child: Center(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(14, 6, 14, 12),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Stack(
+                fit: StackFit.expand,
                 children: [
-                  // Dekoratif alev ikonu
-                  const Text(
-                    '🔥',
-                    style: TextStyle(fontSize: 28),
+                  // Beyaz kağıt köşeden tutuşur, alev sarar, KÜLE döner (3D shader).
+                  BurningPaper(
+                    seed: _seed,
+                    onBurnComplete: () {
+                      if (!mounted) return;
+                      HapticFeedback.lightImpact();
+                      setState(() => _yandi = true);
+                    },
                   ),
-                  const SizedBox(height: 16),
-                  // Typewriter metin
-                  _TypewriterText(
-                    key: _yaziKey,
-                    text: _metin,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 17,
-                      height: 1.65,
+                  // Küle dönen simsiyah kağıtta altın-sarısı, çatlaklardan ışık sızar gibi yazı belirir.
+                  IgnorePointer(
+                    ignoring: !_yandi,
+                    child: AnimatedSlide(
+                      offset: _yandi ? Offset.zero : const Offset(0, 0.035),
+                      duration: const Duration(milliseconds: 1100),
+                      curve: Curves.easeOutCubic,
+                      child: AnimatedOpacity(
+                        opacity: _yandi ? 1 : 0,
+                        duration: const Duration(milliseconds: 1100),
+                        curve: Curves.easeOutCubic,
+                        child: Center(
+                          child: SingleChildScrollView(
+                            padding: const EdgeInsets.fromLTRB(30, 26, 30, 30),
+                            child: _buildKulYazi(),
+                          ),
+                        ),
+                      ),
                     ),
-                    textAlign: TextAlign.center,
-                    msPerChar: 30,
-                  ),
-                  const SizedBox(height: 24),
-                  // İnce ayırıcı
-                  Container(
-                    height: 1,
-                    width: 60,
-                    color: Colors.white.withValues(alpha: 0.15),
                   ),
                 ],
               ),
             ),
           ),
-          ),
-        ),
-        // Kapat butonu
-        Padding(
-          padding: const EdgeInsets.fromLTRB(24, 8, 24, 0),
-          child: _buildKapatButonu(),
         ),
         const FloatingBarSpacer(),
       ],
     );
   }
 
-  Widget _buildKapatButonu() {
-    return GestureDetector(
-      onTap: () => context.pop(),
-      child: Container(
-        width: double.infinity,
-        height: 48,
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [Color(0xFFAA00CC), Color(0xFF7700AA)],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
-          borderRadius: BorderRadius.circular(24),
-          border: Border.all(
-            color: const Color(0xFFFF55FF).withValues(alpha: 0.8),
-            width: 1.5,
-          ),
-        ),
-        child: Center(
-          child: Text(
-            ref.read(l10nProvider).close,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 15,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 0.5,
-            ),
-          ),
-        ),
+  /// Küle dönen kağıttaki altın-sarısı, ışık sızan yazı.
+  Widget _buildKulYazi() {
+    return RichTextParser.build(
+      _metin,
+      style: const TextStyle(
+        color: Color(0xFFEBC973), // altın sarısı
+        fontSize: 17.5,
+        height: 1.78,
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.2,
+        shadows: [
+          Shadow(color: Color(0xDDFFC24D), blurRadius: 11), // iç sıcak hale
+          Shadow(color: Color(0x88FF8A1E), blurRadius: 26), // çatlaktan sızan ışık
+        ],
       ),
+      textAlign: TextAlign.center,
     );
   }
 
@@ -378,8 +362,6 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 32),
-                  _buildKapatButonu(),
                 ],
               ),
             ),
@@ -391,90 +373,4 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Typewriter widget
-// ─────────────────────────────────────────────────────────────────────────────
-
-class _TypewriterText extends StatefulWidget {
-  final String text;
-  final TextStyle style;
-  final TextAlign textAlign;
-  final int msPerChar;
-
-  const _TypewriterText({
-    super.key,
-    required this.text,
-    required this.style,
-    this.textAlign = TextAlign.start,
-    this.msPerChar = 30,
-  });
-
-  @override
-  State<_TypewriterText> createState() => _TypewriterTextState();
-}
-
-class _TypewriterTextState extends State<_TypewriterText> {
-  String _displayed = '';
-  Timer? _timer;
-  int _index = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _startTyping();
-  }
-
-  @override
-  void didUpdateWidget(_TypewriterText old) {
-    super.didUpdateWidget(old);
-    if (old.text != widget.text) {
-      _timer?.cancel();
-      _displayed = '';
-      _index = 0;
-      _startTyping();
-    }
-  }
-
-  @override
-  void dispose() {
-    _timer?.cancel();
-    super.dispose();
-  }
-
-  void _startTyping() {
-    final chars = widget.text.characters.toList();
-    _timer = Timer.periodic(
-      Duration(milliseconds: widget.msPerChar),
-      (t) {
-        if (!mounted) { t.cancel(); return; }
-        if (_index >= chars.length) {
-          t.cancel();
-          return;
-        }
-        setState(() {
-          _displayed += chars[_index];
-          _index++;
-        });
-      },
-    );
-  }
-
-  /// Dokununca yazı hemen tamamlanır (beklemek istemeyen okur için).
-  void _hemenTamamla() {
-    if (_timer?.isActive != true) return;
-    _timer?.cancel();
-    setState(() {
-      _displayed = widget.text;
-      _index = widget.text.characters.length;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      _displayed,
-      style: widget.style,
-      textAlign: widget.textAlign,
-    );
-  }
-}
+// (Typewriter widget kaldırıldı — Acı Gerçekler artık yanan kağıt + altın yazı ile açılır.)

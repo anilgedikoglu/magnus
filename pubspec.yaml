@@ -109,6 +109,7 @@ flutter:
     - shaders/living_nebula.frag
     - shaders/glass_lens.frag
     - shaders/living_sea.frag
+    - shaders/burning_paper.frag
 
   assets:
     - assets/data/

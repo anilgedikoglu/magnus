@@ -56,8 +56,13 @@ Anıl 279'u cihazda gezip düzeltme istedi. Hepsi commit+push (build YALNIZ "tes
     kullanıcıları dışlanır). ML Kit yolu ANCAK cihaz build'inde (TestFlight) doğrulanır; pod sorunu çıkarsa orada bak.
     Gray-world beyaz dengesi denendi, yüz ten-baskın olduğu için rengi bozdu → kaldırıldı.
   - Not: Kahve/El Falı HÂLÂ `ClaudeVisionService` (API) kullanıyor → istenirse onlara da offline muamele.
-- ⚠️ **YARIM — ChatGPT oturumu KAPALI:** (1) numeroloji 3 mistik ikon, (2) kısmetim/arabam/evim SONUÇ ekranlarına
-  üstte tematik görsel (kısmet/araba/ev). İkisi de ChatGPT görseli ister → Anıl girince üret-indir-göm, düzen hazır.
+- ✅ **ChatGPT görselleri (Anıl giriş yaptı, arkadan üretildi):** (1) **numeroloji 3 mistik ikon**
+  (`assets/images/numeroloji_konu/{ngenel,nbugun,nyil}.png` — yıldız-sigil/güneş/ay-fazları çarkı); (2) **sonuç
+  ekranı amblemleri** (`assets/images/fal_sonuc/{kismet,araba,ev}.png` — iç içe kalpler/araba/ev), kısmetim/arabam/evim
+  sonuç sayfalarının en üstünde. Hat: ChatGPT (NORMAL sohbet; geçici sohbette görsel üretimi KAPALI) → `<a download>`
+  blob indirme (`indirilen`) → `build/visual_check/ikon_isle.dart` ile 3'e böl + parlaklık-anahtarıyla şeffaf zemin +
+  256/300 tuval → asset. ⚠️ **ChatGPT foto-gerçekçi YÜZ üretmez** ("Görsel kullanılamıyor", politika) → yüz-falı
+  kalibrasyonu için yapay yüz ÜRETİLEMEDİ; motor ML Kit + sezgi hâliyle kalır.
 
 ## Ne yapıldı (2026-11-06 gece, 276 sonrası; main'de) + değişen dosyalar
 - **10.8.13+279 test build'i** (2026-11-06 05:25 Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).

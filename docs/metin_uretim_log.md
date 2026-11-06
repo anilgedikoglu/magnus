@@ -7,7 +7,7 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 2009** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 140 — Kahve Gelişme bekliyor) — her tur sonunda güncelle.
+- **Toplam eklenen: 2029** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
@@ -15,7 +15,20 @@
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
 
-## Tur 13–14 — 2026-11-06 gece (280 metin; ChatGPT + Codex)
+## Gece dersleri (2026-11-06, tur 11–17)
+- **Geçici sohbet (`chatgpt.com/?temporary-chat=true`)**: normal "Yeni sohbet" kutusunda başka işin uzun taslağı
+  duruyordu (dokunulmadı). Geçici sohbetin kutusu boş açılıyor; yazım/seçim/çeviri orada yapıldı. Sekme başlığı ilk
+  mesajı yansıttığı için `document.title='w15_derun'` gibi kısa ad verildi (araç çıktısı şişmesin).
+- **Toplu yükleme**: tek gizli `<input multiple>`'a 10-15 dosya bir `file_upload` ile verilip `localStorage`'a
+  (`claude_metin_<ad>`) yazıldı; her sekme metni oradan alıp `.ProseMirror`'a `insertText` + `button[aria-label="Gönder"]`
+  (testid yok; durdur = `aria-label="Durdur"`). Async IIFE `{}` döndürür → üst düzey `await` kullan.
+- **Ön çeviri** (`scripts/metin_on_ceviri.js`): Codex sınırda beklerken ChatGPT çıktılarının TAMAMI seçimden önce
+  çevrildi; seçim gelince `uygula` ile eşlenir. Seçim sonrası çeviri beklemesi ortadan kalkar.
+- **ChatGPT oturumu 02:15'te düştü** (yeni yüklenen sayfa "Oturum aç" gösterdi, `/api/auth/session` boş). Açık ve önceden
+  yüklenmiş sekmeler bellekteki oturumla çalışmaya devam etti → bu sekmelerde sayfa YENİLEMEDEN aynı sohbete "Şimdi
+  yeni bir görev: …" diye ek mesaj yazıldı. Parola girilmedi (yasak); oturum açmak Anıl'da.
+
+## Tur 13–14 — 2026-11-06 gece (300 metin; ChatGPT + Codex)
 
 | Kompartman | Dosya / anahtar | Eklenen id |
 |---|---|---|
@@ -28,7 +41,7 @@
 | Niyet | `niyet.json` › `niyet` | 279–318 |
 | Yana – Bana Dair | `yana.json` › `bana_dair` | 169–208 |
 | Kahve – Sonuç | `kahve_sonuc.json` › `sonuclar` | 459–478 |
-| Kahve – Gelişme | `kahve_gelisme.json` › `gelismeler` | (Codex seçimi 04:35 sınırı sonrası) |
+| Kahve – Gelişme | `kahve_gelisme.json` › `gelismeler` | 479–498 (Codex seçimi 04:37; 1 "tıbbi sonuç değil" ibaresi çıkarıldı) |
 
 ## Tur 11–12 — 2026-11-06 gece (331 metin; ChatGPT + Codex, ikinci geçiş)
 

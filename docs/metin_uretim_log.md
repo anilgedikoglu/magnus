@@ -7,13 +7,27 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 2749** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120, tur 16: 160, tur 17: 140, tur 18: 110, tur 19: 115, tur 20: 75) — her tur sonunda güncelle.
+- **Toplam eklenen: 2849** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120, tur 16: 160, tur 17: 140, tur 18: 110, tur 19: 115, tur 20: 75, tur 21: 100) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 21 — 2026-11-06 (100 metin; ChatGPT yazar + Claude denetler/seçer, çeviri ChatGPT/Claude)
+
+> Anıl: "metin yazdır 10 tur chatgpt'ye ve kontrol edip koy". Codex HAFTALIK sınırda (11 Kasım) → yazar yalnız
+> **ChatGPT** (Anıl'ın Chrome'u, paralel 2 sekme), Claude 40→20 seçer + `metin_kalip_tara`. Çeviri: tavsanfali/niyet
+> **Claude** (elle), yana_bana/durugoru_bno/durugoru_yno **ChatGPT** (parite `ekle` ile test). Hepsi `tur_kontrol` + `kosul_deger_tipi` yeşil (100 metin).
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Tavşan Falı | `tavsanfali.json` › `tavsanfali` | 301–320 (ChatGPT 40→20) |
+| Niyet | `niyet.json` › `niyet` | 359–378 (ChatGPT 40→20) |
+| Yana – Bana Dair | `yana.json` › `bana_dair` | 209–228 (ChatGPT 40→20) |
+| Durugörü – Bugün | `durugoru_bno.json` › `durugoru_bno` | 171–190 (ChatGPT 20/20) |
+| Durugörü – Yarın | `durugoru_yno.json` › `durugoru_yno` | 100–119 (ChatGPT 20/20) |
 
 ## Tur 20 — 2026-11-06 gece (75 metin; Codex + Claude, ÇEVİRİ CLAUDE — her iki AI tükendi)
 

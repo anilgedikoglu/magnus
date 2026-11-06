@@ -7,13 +7,27 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 2449** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120, tur 16: 160, tur 17: 140) — her tur sonunda güncelle.
+- **Toplam eklenen: 2559** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120, tur 16: 160, tur 17: 140, tur 18: 110) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 18 — 2026-11-06 akşam (110 metin; Codex + Claude yazar, Gemini kotası bitince)
+
+> ⚠️ Gemini free-tier kotası (limit 0, ~17 saat) tükendi → ChatGPT tarayıcısı oturum riski (Anıl yok) →
+> bu tur **iki yazar = Codex + Claude**; seçim/denetim Claude (tarafsız üçüncü) + `metin_kalip_tara.js`;
+> İngilizce çeviri **Codex** (`scripts/metin_codex_ceviri.sh`, yeni; Gemini yedeği). Hepsi `tur_kontrol` + `kosul_deger_tipi` yeşil.
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Kâhin Uraz | `kahinler.json` › `kahinler.uraz` | uraz_64–81 (Codex 10 + Claude 8; nezaket açılışı ≤2/aile) |
+| Kâhin Likia | `kahinler.json` › `kahinler.likia` | likia_83–102 (Codex 10 + Claude 10) |
+| Durugörü – Gelecek | `durugoru_gno.json` › `durugoru_gno` | 127–146 (Codex kitle 1-10 + Claude kitle 11-20 → 20 kitle çakışmasız) |
+| Faloya | `faloya.json` › `faloya` | 246–277 (Codex 20 + Claude 12; 'belki' + 'tarihine doğru' kümesi elendi) |
+| Kader Kitabı | `kaderkitabi.json` › `kaderkitabi` | 350–369 (yalnız Codex; havuz 349 büyük) |
 
 ## Tur 17 — 2026-11-06 sabah (140 metin)
 

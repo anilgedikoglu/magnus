@@ -56,6 +56,12 @@ void main() {
     expect(find.byType(Dialog), findsNothing);
     expect(find.text('DİL / LANGUAGE'), findsOneWidget);
 
+    // Ayarlar kartı artık varsayılan KAPALI (Anıl, 2026-11-06): yasal metinler açılır bölümde.
+    // Önce "AYARLAR" başlığına dokunup aç.
+    await t.ensureVisible(find.text('AYARLAR'));
+    await t.tap(find.text('AYARLAR'));
+    await _settle(t);
+
     await t.ensureVisible(find.text('Kullanım Koşulları'));
     await _settle(t, steps: 4);
     await t.tap(find.text('Kullanım Koşulları'));

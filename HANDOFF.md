@@ -20,15 +20,38 @@ Build YOK (Anıl "test çık" demedi). Hepsi commit + push + **main'e FF** (sür
   Yeni tur tanımları `metin_turu_hazirla.js` TUR 18-22'de. Gemini yardımcıları scratchpad'de (`gemini_helper.js`,
   `metin_gemini.js`, `yuzfali_en.js`) EPHEMERAL — kota dönünce yeniden üretilebilir; yüz/el falı EN + yüksek-hızlı turlar için.
 
-### ⏭️ ERTELENEN — sıradaki adım (Gemini kotası ~17 saat sonra döner)
-1. **~10.000 yeni metin hedefi:** 2674/~?; tur tur devam (Codex + Gemini çift yazar + çapraz seçim). Küçük havuzlar öncelikli.
-2. **Yüz falı EN + El falı EN:** `yuzfali_kullanici.json`(557)/`yuzfali_baskasi.json`(85)/`elfali.json` + `fortune_service.generateElFali`
-   locale param — hepsi `metin_en` eksik. Gemini dönünce `scratchpad/yuzfali_en.js` ile toplu çeviri (parite doğrulamalı).
-3. **Codex'in diğer bulguları (ERTELENDİ — Anıl kararı; çoğu BİLİNEN/tasarım ya da riskli seçim-semantiği):** no-repeat
-   sıfırlamada son-id koruması (Faloya/Niyet/Kâhinler/Maganda/Tamua — CLAUDE.md "Doğru Yöntem"e göre eksik); Motivasyon
-   gün-içi cache (davranış tablosu "her açılışta sıradaki" diyor); Maganda hızlı-dokunuş çift reklam; kahin_metin/yüz
-   dispose-sonrası controller; `kadın`/`kadin` + `medeni durum`/`medeni_durum` normalize (eski ölü metinleri diriltir).
-   BİLİNEN/tasarım (dokunulmadı): Faloya koşulsuz-only, Durugörü saat-ölü, Kader Çarkı M6, Maganda soru-bağımsız.
+## Ne yapıldı (2026-11-06 geç — "kendin devam et": ERTELENEN Codex bulgularının GÜVENLİ olanları)
+Build YOK. 3 commit, hepsi push + main FF. analyze temiz; testler **206 geçer** (-1 takipsiz golden). Sürüm 10.8.17+285'te.
+- **No-repeat sıfırlama son-id koruması (commit 36c18ff8):** Faloya/Niyet/Kâhinler/Maganda/Tamua havuz tükenince
+  `prefs.remove(key)` ile sıfırlıyordu → CLAUDE.md "Doğru Yöntem" son-id'yi tutmayı şart koşar (üst üste aynı metin
+  yasağı). Ortak `pickNoRepeat` yardımcısına taşındı (`lib/core/utils/no_repeat_picker.dart`) + 6 vakalık birim test
+  (`test/no_repeat_picker_test.dart`). Her ekranın havuz kurulumu/koşul filtresi aynen korundu.
+- **Dispose-sonrası controller crash'leri (commit 6b761147):** (1) `kahin_metin` `_initVideo` `_videoCtrl`'i
+  `initialize()` await'inden ÖNCE atıyordu → init sırasında kapanınca disposed kontrolcüde setLooping/play. Yerel
+  ctrl + `mounted` guard + orphan dispose. (2) `yuz_fali_foto` `await _analizEt(); _scanCtrl.stop();` → `_analizEt`
+  12 sn bekler; çıkınca disposed `_scanCtrl.stop()`. İki çağrı da `if (mounted)` ile korundu. (el_fali'de bu kalıp YOK.)
+- **Maganda hızlı çift-dokunuş (commit 6e321f9f):** `_onSoruSecildi` await'leri setState(odaklaniyor)'dan önce →
+  soru kartları açıkken ikinci dokunuş ikinci seçim/reklam/zamanlayıcı. `_secimYapildi` reentrancy bayrağı.
+- **⛔ DOKUNULMADI (gerekçeli — Anıl kararı):**
+  - **Motivasyon gün-içi cache:** `home_screen._creditPrefKeys`'e BİLEREK bağlı (günlük-limit rozeti; `olumlama`
+    yorumla açıkça hariç) → sorun STALE davranış tablosu, kod değil. Değiştirmek rozet/limit davranışını bozar.
+  - **`kadın`/`kadin` + `medeni durum`/`medeni_durum` normalize:** veri İKİ konvansiyonu birden içeriyor ÖLÇEKTE
+    (tüm JSON'larda `medeni durum`:1873 vs `medeni_durum`:293; `kadın`:334 vs `kadin`:188; `öğrenci`:379 vs `ogrenci`:35).
+    Normalleştirme BİNLERCE metnin kime gösterileceğini değiştirir → önce matcher davranışı denetimi + Anıl kararı.
+  - **Reklam çift-dokunuş kalıntısı:** `ad_service.showRewarded` grab-and-null (satır 160-161) ile GERÇEK çift reklamı
+    zaten önler; menü seçim ekranlarında (kahinler_menu vb. sync onTap) kalan tek şey "çift push" (küçük). Ekran-başı
+    guard geniş/riskli sweep → bırakıldı.
+
+### ⏭️ ERTELENEN — sıradaki adım (Anıl gerekli)
+1. **~10.000 yeni metin hedefi:** 2749/~?; tur tur devam (Codex + Gemini çift yazar + çapraz seçim). Küçük havuzlar öncelikli.
+   ⚠️ **Gemini: kota + ANAHTAR yok.** `~/.gemini/settings.json`'da `AIza…` anahtarı YOK (Anıl AI Studio'dan env
+   `GEMINI_API_KEY`'e ya da settings.json'a koymalı). Codex haftalık sınır (11 Kasım). İkisi de dönene kadar tur yok.
+2. **Yüz falı EN + El falı EN — HEPSİ `metin_en` EKSİK:** `yuzfali_baskasi.json`(85) + `yuzfali_kullanici.json`(557)
+   + `elfali.json`(579) = **1221 metin**. `scripts/yuzfali_en.js` hazır (Gemini + parite) ama anahtar yok → Anıl anahtarı
+   verince `GEMINI_API_KEY=<key> node scripts/yuzfali_en.js assets/data/<dosya>`. Ayrıca `fortune_service.generateElFali`
+   locale param. Metinlerde çevrilebilir yer-tutucu seçenekleri var (`{{kelime, A | B}}`, `{{data,…}}`) → parite şart.
+3. **Codex'in diğer bulguları — GÜVENLİ olanlar YAPILDI (yukarı).** Kalan BİLİNEN/tasarım (dokunulmadı):
+   Faloya koşulsuz-only, Durugörü saat-ölü, Kader Çarkı M6, Maganda soru-bağımsız.
 
 ## Ne yapıldı (2026-11-06 akşam — 282 geri bildirim bug'ları + evim v2; sürüm 10.8.17+285, test build ALINDI)
 Anıl 282'yi cihazda gezdi, bug bildirdi + büyük otonom görev verdi (Codex + Gemini danışıldı). Yapılanlar:

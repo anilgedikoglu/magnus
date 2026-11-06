@@ -2,7 +2,30 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
-## Ne yapıldı (2026-11-06 — FOTO ÖN KONTROL: fincan/el/yüz; main'e push, BUILD ALINMADI)
+## Ne yapıldı (2026-11-06 akşam — 282 geri bildirim bug'ları + evim v2; sürüm 10.8.17+285, test build ALINDI)
+Anıl 282'yi cihazda gezdi, bug bildirdi + büyük otonom görev verdi (Codex + Gemini danışıldı). Yapılanlar:
+- **Ayarlar scroll regresyonu:** elastik overscroll (benim 282'de eklediğim) KALDIRILDI; AYARLAR başlığı
+  tap-only; compact geri-sekme döngüsü `_profileCompactGuard` ile kırıldı (Codex: compaction içeriği
+  kısaltıp başa kırpınca un-compact tetikleniyordu → ayarlara inilemiyordu). **Cihazda doğrulanmalı.**
+- **Ana menü chat bandı:** açılışta hemen çıkıp kaybolmuyor → ~3 sn sonra taze gelir; süre yazıya göre
+  5/8/10 sn (`_bandHold`, marquee). Fal-durumu balonları da uzunluğa göre.
+- **El/yüz falı P1:** hak analiz ÖNCESİ yazılıp beklemede çıkınca hem hak gidiyor hem fal kayboluyordu →
+  üretim+inbox+hak TEK İŞ, mounted'dan bağımsız; hak YALNIZ fal kaydedilince.
+- **Foto ön kontrol:** el falına YÜZ → artık reddedilir (yüz bulundu, ten'den önce). Fincan: fincan etiketi
+  yüz reddinden ÖNCE (fincanı elinde tutup yüzü kadrajda olan reddedilmesin).
+- **Evim Neresi motoru v2** (schema 1→2): vade havuzlu — yakın mevcut şehir, orta kıyı+metropol, uzun
+  Ege/Akdeniz kıyı; mevcut şehir ilk segmentten sonra dışlanır; yurt dışı orta/uzun vadede makul (≤2); emeklilik
+  kıyıya. İstanbul tekrarı bitti. 14 ev testi + `test/_evim_diag_test.dart`.
+- **evim/araba/kısmet:** ilk ekrana amaç intro cümlesi; basılı-tut yıl tekerleğinden uzak + büyük (r 56/58)
+  + basınca anında görsel tepki (`hold_to_reveal.dart`).
+- **Kahve:** kredi gönderim onaylanınca hemen (idempotent) + `_sending` kilidi (çift üretim).
+- ⏭️ **ERTELENEN (önemli):** (1) küçük ekranda tile-editor (380px) dibine ulaşamama — editör açıkken sayfa
+  scroll kilitli; (2) **yüz falı JSON'unda İngilizce içerik YOK** (altyapı hazır, `metin_en` eklenmeli);
+  (3) **Anıl'ın istediği ~10.000 YENİ METİN** (magnus-metin-uretimi skill'i, çok-ajanlı tur tur) — AYRI büyük
+  iş, bu oturumda BAŞLANMADI; (4) tüm fal türlerinin ajanlarla tek tek canlı testi — emülatör yok, app ML Kit
+  nedeniyle Windows/web'de çalışmıyor → test build (Play internal + TestFlight) ile cihazda test edilecek.
+
+## Ne yapıldı (2026-11-06 — FOTO ÖN KONTROL: fincan/el/yüz; main'e push)
 Anıl: kahve/el/yüz fallarına, gönderilen foto gerçekten fincan/el/yüz mü anlayan OFFLINE ön kontrol. Değilse
 "Ben bu fotoğraftan bir X göremiyorum, karışıklık olmuş olabilir mi?" uyarısı; fal başlamaz, günlük hak tüketilmez.
 - **Yeni: `lib/data/services/photo_subject_detector.dart`** — `PhotoSubjectDetector.uygunMu(path, FotoKonu{yuz,el,fincan})`.

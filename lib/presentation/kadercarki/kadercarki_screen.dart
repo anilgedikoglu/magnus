@@ -483,7 +483,10 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
             child: SizedBox(
               width:  size,
               height: size,
-              child: AnimatedBuilder(
+              // Gölge sabit: ayrı katmanda bir kez çizilir (dönerken her karede bulanıklık yok).
+              child: Stack(fit: StackFit.expand, children: [
+                const RepaintBoundary(child: CustomPaint(painter: _WheelShadowPainter())),
+                RepaintBoundary(child: AnimatedBuilder(
                 animation: _winCtrl,
                 builder: (context, _) => CustomPaint(
                   painter: _WheelPainter(
@@ -496,7 +499,8 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
                     winGlow:       _bitti ? Curves.easeInOut.transform(_winCtrl.value) : 0,
                   ),
                 ),
-              ),
+              )),
+              ]),
             ),
           )),
           // Ok: altta, çarkın kenarına batan altın gösterge; çivi geçişinde seker.
@@ -647,6 +651,29 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
 
 Color _shade(Color c, double t) => Color.lerp(c, t >= 0 ? Colors.white : Colors.black, t.abs())!;
 
+/// Çarkın zemine düşen gölgesi (Grok: çarkın gölgesi yok). Dönmez → ayrı katmanda bir kez.
+class _WheelShadowPainter extends CustomPainter {
+  const _WheelShadowPainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final cx = size.width / 2;
+    final cy = size.height / 2;
+    final rim = min(cx, cy) * 0.075;
+    final r = min(cx, cy) - rim - 6;
+    canvas.drawCircle(
+      Offset(cx, cy) + Offset(0, rim * 1.4),
+      r + rim,
+      Paint()
+        ..color = const Color(0x8C000000)
+        ..maskFilter = MaskFilter.blur(BlurStyle.normal, rim * 2.2),
+    );
+  }
+
+  @override
+  bool shouldRepaint(_WheelShadowPainter old) => false;
+}
+
 class _WheelPainter extends CustomPainter {
   final double            angle;
   final List<_Bolme>      bolmeler;
@@ -678,14 +705,7 @@ class _WheelPainter extends CustomPainter {
     final r  = min(cx, cy) - rim - 6;          // dilim yarıçapı
     final center = Offset(cx, cy);
 
-    // -1. Gölge: çark zemine oturur, derinlik (Grok: çarkın gölgesi yok).
-    canvas.drawCircle(
-      center + Offset(0, rim * 1.4),
-      r + rim,
-      Paint()
-        ..color = const Color(0x8C000000)
-        ..maskFilter = MaskFilter.blur(BlurStyle.normal, rim * 2.2),
-    );
+    // -1. Gölge: _WheelShadowPainter (ayrı, sabit katman).
 
     // 0. Dış hale (gerçek hıza göre; durgunken sakin)
     canvas.drawCircle(

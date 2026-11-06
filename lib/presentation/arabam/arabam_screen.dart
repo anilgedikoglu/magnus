@@ -239,6 +239,10 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
   static int get _thisYear => DateTime.now().year;
   String _aralik(ArabaSlot s) {
     final from = s.start < _thisYear ? _thisYear : s.start;
+    // Son (ufka kadar süren) aralık açık uçlu: bitiş yılı yerine sağ ok — "2074 sonrası ne
+    // oluyor?" dedirtmesin (Anıl, 2026-11-06).
+    final acikUclu = _t != null && _t!.slots.isNotEmpty && identical(s, _t!.slots.last);
+    if (acikUclu) return '$from →';
     return from == s.end ? '$from:' : '$from – ${s.end}:';
   }
 

@@ -12,6 +12,7 @@ import '../../core/widgets/unlock_flash.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/widgets/marquee_text.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../data/providers.dart';
@@ -324,6 +325,8 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
   // ── Adım: yıl seçimi ────────────────────────────────────────────────────
   Widget _buildSecim() {
     return Center(
+      // Popup içinde yatay kaydırma (yıl tekerleği) sayfayı GERİ götürmesin (Anıl, 2026-11-06).
+      child: NoEdgeSwipeBack(
       child: _panel(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -409,6 +412,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
             ),
           ],
         ),
+      ),
       ),
     );
   }

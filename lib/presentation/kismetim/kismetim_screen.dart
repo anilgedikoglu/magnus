@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/widgets/unlock_flash.dart';
+import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 
 import '../../core/constants/app_text_styles.dart';
@@ -182,6 +183,10 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
 
   Widget _buildSecim() {
     return Center(
+      // Popup içinde yatay kaydırma (yıl tekerleği) sayfayı GERİ götürmesin (Anıl, 2026-11-06):
+      // tekerlek RotatedBox içinde dikey eksenli olduğundan global EdgeSwipeBack'in yatay-scroll
+      // koruması devreye girmiyordu; kutuyu NoEdgeSwipeBack ile sarıyoruz.
+      child: NoEdgeSwipeBack(
       child: _panel(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -258,6 +263,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
             ),
           ],
         ),
+      ),
       ),
     );
   }

@@ -147,7 +147,8 @@ class InboxDetailScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: AppColors.navBarBackground,
+        // Başlık bandı gelen kutusu bg'siyle AYNI renk (Anıl: açık lacivert istenmiyor).
+        backgroundColor: AppColors.background,
         title: Text(item.fortuneTypeLabel),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
@@ -318,14 +319,29 @@ class InboxDetailScreen extends ConsumerWidget {
                   ),
                   if (item.fortuneType == FortuneType.tarot)
                     const SizedBox(height: 24),
-                  // Fortune text — <color=X>...</color> tag'larını renklendir
-                  RichTextParser.build(
-                    item.text,
-                    style: AppTextStyles.bubbleText.copyWith(
-                      height: 1.8,
-                      color: AppColors.textPrimary,
+                  // Fortune text — <color=X>...</color> tag'larını renklendir.
+                  // Arka planı olan türlerde (kahve/tarot/yüz falı) okunaklı kutu içinde
+                  // (I-Ching/Japon gibi) — bg üstünde yazı okunsun (Anıl, 2026-11-06).
+                  if (_elseHasBg)
+                    _readableBox(
+                      accent: _elseBoxAccent,
+                      child: RichTextParser.build(
+                        item.text,
+                        style: AppTextStyles.bubbleText.copyWith(
+                          height: 1.85,
+                          color: const Color(0xFFEDE6F5),
+                          fontSize: 14.5,
+                        ),
+                      ),
+                    )
+                  else
+                    RichTextParser.build(
+                      item.text,
+                      style: AppTextStyles.bubbleText.copyWith(
+                        height: 1.8,
+                        color: AppColors.textPrimary,
+                      ),
                     ),
-                  ),
                   const SizedBox(height: 40),
                   // Footer
                   _buildMagnusFooter(),
@@ -340,6 +356,68 @@ class InboxDetailScreen extends ConsumerWidget {
           ), // SingleChildScrollView
         ],
       ), // Stack
+    );
+  }
+
+  // ─── Arka planı olan türlerde genel metin: okunaklı kutu ────────────────────
+  // Arka plan görseli olan ve kendi özel kutusu OLMAYAN türler (kahve/tarot/yüz falı) genel
+  // metni I-Ching/Japon gibi koyu, çerçeveli bir kutuda gösterir → bg üstünde yazı okunur.
+  bool get _elseHasBg =>
+      item.fortuneType == FortuneType.tarot ||
+      item.fortuneType == FortuneType.coffee ||
+      item.fortuneType == FortuneType.yuzfali;
+
+  Color get _elseBoxAccent {
+    switch (item.fortuneType) {
+      case FortuneType.coffee:
+        return const Color(0xFFC9A86B); // kahve: sıcak altın
+      case FortuneType.yuzfali:
+        return const Color(0xFFFF55FF); // yüz falı: pembe
+      case FortuneType.tarot:
+        return AppColors.bubble1.first; // tarot: pembe/mor
+      default:
+        return const Color(0xFF9A86C8); // nötr lavanta
+    }
+  }
+
+  /// I-Ching kutusuyla aynı aileden: koyu yarı saydam panel + aksan çerçeve + üst/alt ayraç.
+  Widget _readableBox({required Widget child, required Color accent}) {
+    Widget divider() => Container(
+          height: 1,
+          margin: const EdgeInsets.symmetric(horizontal: 20),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [
+              Colors.transparent,
+              accent.withValues(alpha: 0.5),
+              Colors.transparent,
+            ]),
+          ),
+        );
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(18),
+        color: const Color(0xFF0A0912).withValues(alpha: 0.86),
+        border: Border.all(color: accent.withValues(alpha: 0.35), width: 1.2),
+        boxShadow: [
+          BoxShadow(
+            color: accent.withValues(alpha: 0.12),
+            blurRadius: 24,
+            spreadRadius: 2,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          Padding(padding: const EdgeInsets.only(top: 16), child: divider()),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 16, 20, 16),
+            child: child,
+          ),
+          Padding(padding: const EdgeInsets.only(bottom: 16), child: divider()),
+        ],
+      ),
     );
   }
 

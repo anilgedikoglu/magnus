@@ -32,6 +32,11 @@ void main() {
     expect(FocusRipple.beat(0.6), lessThan(0.01));
   });
 
+  test('kalp atışı zarfı periyodik: döngü sonu ile başı aynı (sarmada sıçrama yok)', () {
+    expect((FocusRipple.beat(0.0) - FocusRipple.beat(0.99999)).abs(), lessThan(0.001));
+    expect((FocusRipple.beat(0.001) - FocusRipple.beat(0.999)).abs(), lessThan(0.05));
+  });
+
   testWidgets('titreşim yalnız ilk N vuruşta, sonra susar', (tester) async {
     await tester.pumpWidget(host(beats: 3));
     // 8 nabız döngüsü (1500 ms) boyunca ilerlet.

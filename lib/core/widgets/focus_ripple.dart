@@ -33,7 +33,12 @@ class FocusRipple extends StatefulWidget {
   /// İki vuruşlu kalp atışı zarfı, t ∈ [0,1): 0.06'da güçlü, 0.26'da zayıf vuruş.
   @visibleForTesting
   static double beat(double t) {
-    double g(double c, double w) => math.exp(-math.pow((t - c) / w, 2).toDouble());
+    // Periyodik uzaklık: t=1 ile t=0 aynı değeri verir (Codex: sarmada ~0,3 sıçrıyordu).
+    double g(double c, double w) {
+      var d = (t - c).abs() % 1.0;
+      if (d > 0.5) d = 1 - d;
+      return math.exp(-math.pow(d / w, 2).toDouble());
+    }
     return (g(0.06, 0.055) + 0.55 * g(0.26, 0.06)).clamp(0.0, 1.0);
   }
 

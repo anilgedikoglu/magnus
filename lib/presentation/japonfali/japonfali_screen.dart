@@ -275,12 +275,21 @@ class _OmikujiShakeState extends State<_OmikujiShake> with SingleTickerProviderS
         HapticFeedback.mediumImpact();
       }
     });
-    final reduce = WidgetsBinding.instance.platformDispatcher.accessibilityFeatures.disableAnimations;
-    if (reduce) {
+  }
+
+  bool _basladi = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Azaltılmış hareket MediaQuery'den: ekran açıkken açılırsa da son kareye atlar.
+    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+      _c.stop();
       _c.value = 1;
-    } else {
+    } else if (!_basladi) {
       _c.forward();
     }
+    _basladi = true;
   }
 
   @override

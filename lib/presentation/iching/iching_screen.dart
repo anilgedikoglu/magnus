@@ -113,13 +113,15 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
   Future<void> _kaydet() async {
     final secilen = _secilen;
     if (secilen == null) return;
-    final prefs = await SharedPreferences.getInstance();
+    // ref yalnız await ÖNCESİ (kayıt sürerken ekrandan çıkılabilir).
     final vars  = ref.read(userProfileProvider).toVariableMap();
+    final isEn  = ref.read(localeProvider) == 'en';
+    final inbox = ref.read(inboxProvider.notifier);
+    final prefs = await SharedPreferences.getInstance();
     final gosterilen = prefs.getStringList(_prefKeyGosterilen) ?? [];
     gosterilen.add('${secilen['id']}');
     await prefs.setStringList(_prefKeyGosterilen, gosterilen);
 
-    final isEn = ref.read(localeProvider) == 'en';
     final secilenMetin = (isEn && (secilen['metin_en'] as String?)?.isNotEmpty == true)
         ? secilen['metin_en'] as String
         : secilen['metin'] as String;
@@ -138,7 +140,7 @@ class _IChingScreenState extends ConsumerState<IChingScreen> {
       iconAsset:      'assets/images/ichingikon.png',
       unlockAt:       unlockAt,
     );
-    ref.read(inboxProvider.notifier).addItem(item);
+    inbox.addItem(item);
   }
 
   String _profileDegeri(String deg, Map<String, String> vars) {
@@ -316,12 +318,21 @@ class _HexagramCastingState extends State<_HexagramCasting> with SingleTickerPro
         HapticFeedback.selectionClick();
       }
     });
-    final reduce = WidgetsBinding.instance.platformDispatcher.accessibilityFeatures.disableAnimations;
-    if (reduce) {
+  }
+
+  bool _basladi = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Azaltılmış hareket MediaQuery'den: ekran açıkken açılırsa da son kareye atlar.
+    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+      _c.stop();
       _c.value = 1;
-    } else {
+    } else if (!_basladi) {
       _c.forward();
     }
+    _basladi = true;
   }
 
   @override

@@ -166,6 +166,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   int _lastShown = 0;
   bool _downInBand = false;
   bool _downDismiss = false; // bu dokunuş yalnız beliren bandı kapatır (kart açmaz)
+  int? _gatePointer; // bayrakları koyan parmak
 
   double get _layerHeight => MediaQuery.paddingOf(context).top + max(0.0, _hdrCtrl.value);
 
@@ -229,6 +230,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   /// Izgaraya dokunuş: bandın üstündeyse altındaki kart açılmasın; bant "belirmiş" ve
   /// kaydırma onu gizlemeyi gerektiriyorsa yavaşça geri kalkar.
   void _onGridPointerDown(PointerDownEvent e) {
+    _gatePointer = e.pointer;
     _downInBand = e.localPosition.dy < _bandBottom;
     _downDismiss = false;
     if (_downInBand || _hdrReveal.value == 0) return;
@@ -239,6 +241,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     _downDismiss = true; // açılır pencere dışı gibi: bu dokunuş kart açmaz
     _hdrReveal.animateBack(0,
         duration: const Duration(milliseconds: 520), curve: Curves.easeInOutCubic);
+  }
+
+  /// Parmak kalkınca bayraklar sıfırlanır. Kartın onTap'i aynı olay işlemesinde (arena
+  /// süpürmesinde) çalışır; sıfırlama mikro görevde, yani ondan SONRA olur. Böylece ekran
+  /// okuyucunun (işaretçisiz) kart etkinleştirmesi önceki dokunuşun engeline takılmaz.
+  void _onGridPointerEnd(PointerEvent e) {
+    final p = e.pointer;
+    scheduleMicrotask(() {
+      if (_gatePointer != p) return; // arada yeni dokunuş başladıysa onun bayrakları kalır
+      _gatePointer = null;
+      _downInBand = false;
+      _downDismiss = false;
+    });
   }
 
   void _onGridScroll() {
@@ -929,6 +944,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
           Positioned.fill(
             child: Listener(
               onPointerDown: _onGridPointerDown,
+              onPointerUp: _onGridPointerEnd,
+              onPointerCancel: _onGridPointerEnd,
               child: TabSwipe(
                 onSwipeLeft: () =>
                     selectMainTab(context, MainTab.inbox, entry: TabEntry.right),

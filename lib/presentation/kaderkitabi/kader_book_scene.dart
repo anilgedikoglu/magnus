@@ -271,7 +271,7 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
                             maxHeight: bookH,
                             child: Transform.translate(
                               offset: Offset(
-                                  2.5 * math.sin(phase * 1.3), water - top - bookH),
+                                  2.5 * math.sin(phase), water - top - bookH),
                               child: Transform.flip(flipY: true, child: book),
                             ),
                           ),
@@ -408,6 +408,12 @@ TextStyle kaderPageStyle(Size page, {double scale = 1}) => GoogleFonts.raleway(
     return (text.substring(0, cut).trimRight(), text.substring(cut).trimLeft(), scale);
   }
   final mid = text.lastIndexOf(' ', text.length ~/ 2);
+  if (mid <= 0) {
+    // Boşluksuz metin (Codex bulgusu: substring(0, -1) → RangeError): harf sınırında ortadan böl.
+    final chars = text.characters;
+    final half = chars.length ~/ 2;
+    return (chars.take(half).toString(), chars.skip(half).toString(), 0.6);
+  }
   return (text.substring(0, mid), text.substring(mid + 1), 0.6);
 }
 
@@ -471,7 +477,7 @@ class _WaterClip extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     final p = Path();
-    double wave(double x) => y + 2.4 * math.sin(x / 38 + phase) + 1.2 * math.sin(x / 17 - phase * 1.3);
+    double wave(double x) => y + 2.4 * math.sin(x / 38 + phase) + 1.2 * math.sin(x / 17 - phase * 2);
     if (below) {
       p.moveTo(0, size.height + 40);
       p.lineTo(0, wave(0));
@@ -541,7 +547,7 @@ class _WaterFxPainter extends CustomPainter {
       final a = ((t - 0.3) / 0.2).clamp(0.0, 1.0);
       final path = Path();
       for (double x = -bookW * 0.52; x <= bookW * 0.52; x += 5) {
-        final y = water + 1.5 + 1.5 * math.sin(x / 14 + phase * 1.7);
+        final y = water + 1.5 + 1.5 * math.sin(x / 14 + phase * 2);
         x == -bookW * 0.52 ? path.moveTo(cx + x, y) : path.lineTo(cx + x, y);
       }
       canvas.drawPath(

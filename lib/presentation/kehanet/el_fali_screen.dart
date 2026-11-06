@@ -617,13 +617,24 @@ class _AvucCizgileriState extends State<AvucCizgileri> with SingleTickerProvider
         HapticFeedback.selectionClick();
       }
     });
-    final reduce = WidgetsBinding.instance.platformDispatcher.accessibilityFeatures.disableAnimations;
-    if (reduce) {
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Azaltılmış hareket MediaQuery'den (Codex: yalnız açılışta okunuyordu; ekran açıkken
+    // açılırsa sonsuz tarama sürüyordu).
+    if (MediaQuery.maybeDisableAnimationsOf(context) ?? false) {
+      _c.stop(); // durdurulan forward'ın .then'i çalışmaz
       _c.value = 1;
-    } else {
-      _c.forward().then((_) {
-        if (mounted) _c.repeat(min: _dongu / _toplam, max: 1);
-      });
+    } else if (!_c.isAnimating) {
+      if (_c.value < _dongu / _toplam) {
+        _c.forward().then((_) {
+          if (mounted) _c.repeat(min: _dongu / _toplam, max: 1);
+        });
+      } else {
+        _c.repeat(min: _dongu / _toplam, max: 1);
+      }
     }
   }
 

@@ -280,6 +280,8 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   Future<void> _sonucuGoster() async {
     if (!mounted || _sonucIstendi) return; // reklamın iki geri çağrısı da gelse tek akış
     _sonucIstendi = true;
+    // ref yalnız await ÖNCESİ (Codex: ekrandan çıkılırsa catch içindeki ref.read de patlardı).
+    final hataMetni = ref.read(l10nProvider).kaderCarkiError;
     String metin;
     try {
       metin = await (_metinFuture ??
@@ -288,7 +290,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       await prefs.setString('kadercarki_bugun_tarih',
           DateTime.now().toIso8601String().substring(0, 10));
     } catch (_) {
-      metin = ref.read(l10nProvider).kaderCarkiError;
+      metin = hataMetni;
     }
     if (!mounted) return;
     _winCtrl.stop();
@@ -303,6 +305,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   // ── Metin motoru: no-repeat, koşul filtreli ──────────────────────────────────
 
   Future<String> _rastgeleMetnAl(String key, UserProfile profile) async {
+    final isEn = ref.read(localeProvider) == 'en'; // await öncesi (ekran kapanabilir)
     final jsonStr  = await rootBundle.loadString('assets/data/kadercarki_$key.json');
     final jsonData = json.decode(jsonStr) as Map<String, dynamic>;
     final tumListe = (jsonData['kadercarki_$key'] as List)
@@ -342,7 +345,6 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
       'medeni_durum': profile.maritalStatus,
       'meslek':      profile.job,
     };
-    final isEn = ref.read(localeProvider) == 'en';
     final secMetin = (isEn && (secilen['metin_en'] as String?)?.isNotEmpty == true)
         ? secilen['metin_en'] as String
         : secilen['metin'] as String;

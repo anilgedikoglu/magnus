@@ -290,10 +290,57 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
           final bookH = bookW / kKaderParchmentAspect;
           final page = Size(kKaderLeftPage.width * bookW, kKaderLeftPage.height * bookH);
           final (sol, sag, olcek) = splitKaderPages(metin, page, scaler);
-          return KaderBookScene(leftText: sol, rightText: sag, textScale: olcek);
+          return KaderBookScene(
+            leftText: sol,
+            rightText: sag,
+            textScale: olcek,
+            onTap: metin.isEmpty ? null : () => _yakinOku(metin),
+          );
         }),
       ),
       const FloatingBarSpacer(),
     ]);
+  }
+
+  /// Kitaba dokununca metin büyük yazıyla, parşömen renginde bir pencerede okunur
+  /// (küçük ekranda ve büyük sistem yazısında sayfalar küçük kalıyordu; inceleme bulgusu).
+  void _yakinOku(String metin) {
+    HapticFeedback.lightImpact();
+    showDialog<void>(
+      context: context,
+      barrierColor: const Color(0xB3000000),
+      builder: (dctx) => Dialog(
+        backgroundColor: Colors.transparent,
+        insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 48),
+        child: GestureDetector(
+          onTap: () => Navigator.pop(dctx),
+          child: Container(
+            constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(dctx).height * 0.72),
+            padding: const EdgeInsets.fromLTRB(24, 26, 24, 26),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(14),
+              gradient: const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Color(0xFFEBD7AE), Color(0xFFD9BC86)],
+              ),
+              border: Border.all(color: const Color(0xFF6B4A1E), width: 1.2),
+              boxShadow: const [BoxShadow(color: Color(0x99000000), blurRadius: 24)],
+            ),
+            child: SingleChildScrollView(
+              child: Text(
+                metin,
+                style: GoogleFonts.raleway(
+                  fontSize: 17,
+                  height: 1.5,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFF2A1808),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

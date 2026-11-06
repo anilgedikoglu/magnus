@@ -50,6 +50,7 @@ class _LivingSeaBackgroundState extends State<LivingSeaBackground>
   Ticker? _ticker;
   final ValueNotifier<double> _time = ValueNotifier<double>(0);
   double _timeBase = 0;
+  double _lastSecs = -1;
   bool _reducedMotion = false;
 
   bool get _ready => !_failed && _shader != null && _image != null;
@@ -58,8 +59,12 @@ class _LivingSeaBackgroundState extends State<LivingSeaBackground>
   void initState() {
     super.initState();
     _ticker = createTicker((elapsed) {
+      // ~30 Hz yeter (yavaş deniz; nebula ile aynı kural): ekran hızında tam ekran shader pil yer.
+      final secs = elapsed.inMicroseconds / 1e6;
+      if (secs >= _lastSecs && secs - _lastSecs < 1 / 30) return;
+      _lastSecs = secs;
       // Sarma: mediump GPU'da büyük zaman değerleri sinüsü bozmasın (10 dk'da bir).
-      _time.value = (_timeBase + elapsed.inMicroseconds / 1e6) % 600.0;
+      _time.value = (_timeBase + secs) % 600.0;
     });
     _loadShader();
   }

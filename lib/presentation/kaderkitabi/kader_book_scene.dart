@@ -23,8 +23,8 @@ import 'package:google_fonts/google_fonts.dart';
 const String kKaderParchment = 'assets/images/kaderkitabi/parsomen.webp';
 const double kKaderParchmentAspect = 1200 / 885; // en / boy (kırpılmış görsel)
 // Yazı alanları: sayfaların yırtık kenarlarından ve cilt kıvrımından içeride.
-const Rect kKaderLeftPage = Rect.fromLTRB(0.14, 0.125, 0.455, 0.83);
-const Rect kKaderRightPage = Rect.fromLTRB(0.545, 0.125, 0.86, 0.83);
+const Rect kKaderLeftPage = Rect.fromLTRB(0.12, 0.105, 0.462, 0.85);
+const Rect kKaderRightPage = Rect.fromLTRB(0.532, 0.105, 0.874, 0.85);
 
 const int _kRiseMs = 6400;
 
@@ -41,7 +41,11 @@ class KaderBookScene extends StatefulWidget {
     this.animate = true,
     this.waterline = 0.72,
     this.onRisen,
+    this.onTap,
   });
+
+  /// Kitaba dokununca (ör. metni büyük yazıyla yakından okuma penceresi).
+  final VoidCallback? onTap;
 
   /// Sol ve sağ sayfaya yazılacak metin (bölme [splitKaderPages] ile).
   final String leftText;
@@ -70,9 +74,25 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
   bool _splashed = false;
   bool _reduced = false;
 
+  // Boşta sallanma ekran hızında değil ~30 Hz'de yenilenir (inceleme: okurken sahnenin
+  // her karede yeniden çizilmesi pil/ısı).
+  final ValueNotifier<double> _idleTick = ValueNotifier<double>(0);
+  Duration _lastIdle = Duration.zero;
+
+  // Kitap içeriği (parşömen + sayfalar + damlalar) yalnız yükseliş sürerken değişir.
+  Widget? _bookCache;
+  Object? _bookKey;
+
   @override
   void initState() {
     super.initState();
+    _idle.addListener(() {
+      final e = _idle.lastElapsedDuration ?? Duration.zero;
+      if ((e - _lastIdle).abs() >= const Duration(milliseconds: 33)) {
+        _lastIdle = e;
+        _idleTick.value = _idle.value;
+      }
+    });
     _rise.addListener(() {
       if (!_splashed && _rise.value >= 0.12) {
         _splashed = true;
@@ -108,24 +128,89 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
   void dispose() {
     _rise.dispose();
     _idle.dispose();
+    _idleTick.dispose();
     super.dispose();
   }
 
   static double _seg(double t, double a, double b, [Curve c = Curves.linear]) =>
       c.transform(((t - a) / (b - a)).clamp(0.0, 1.0));
 
+  Widget _bookFor(double t, double bookW, double bookH) {
+    final key = (t, bookW, bookH, widget.leftText, widget.rightText, widget.textScale);
+    if (_bookCache != null && _bookKey == key) return _bookCache!;
+    final wet = 1 - _seg(t, 0.34, 0.86, Curves.easeInOut); // 1 ıslak … 0 kuru
+    final leftInk = _seg(t, 0.60, 0.80, Curves.easeInOut);
+    final rightInk = _seg(t, 0.74, 0.96, Curves.easeInOut);
+
+    final book = RepaintBoundary(child: SizedBox(
+      width: bookW,
+      height: bookH,
+      child: Stack(fit: StackFit.expand, children: [
+        // Görsel stüdyo ışığında; gece denizine uysun diye karartılıp soğutulur.
+        ColorFiltered(
+          colorFilter: const ColorFilter.matrix(<double>[
+            0.80, 0, 0, 0, 0, //
+            0, 0.76, 0, 0, 0, //
+            0, 0, 0.86, 0, 8, //
+            0, 0, 0, 1, 0,
+          ]),
+          child: Image.asset(kKaderParchment,
+              fit: BoxFit.fill,
+              filterQuality: FilterQuality.high,
+              errorBuilder: (_, __, ___) => const _FallbackParchment()),
+        ),
+        // Ay ışığı: üstten soğuk, kenarlarda karanlık (sahneye oturtur).
+        const IgnorePointer(
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: RadialGradient(
+                center: Alignment(0, -0.35),
+                radius: 0.95,
+                colors: [Color(0x00000000), Color(0x3A0A0620), Color(0x8A05030F)],
+                stops: [0.45, 0.8, 1.0],
+              ),
+            ),
+          ),
+        ),
+        // Islaklık: koyu, soğuk ton; yukarıdan aşağı kurur.
+        if (wet > 0.001)
+          IgnorePointer(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    const Color(0xFF0A1630).withValues(alpha: 0.42 * wet * wet),
+                    const Color(0xFF0A1630).withValues(alpha: 0.46 * wet),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        _page(kKaderLeftPage, bookW, bookH, widget.leftText, leftInk, dropCap: true),
+        _page(kKaderRightPage, bookW, bookH, widget.rightText, rightInk),
+        IgnorePointer(
+          child: CustomPaint(painter: _DropsPainter(t: t, seed: 11)),
+        ),
+      ]),
+    ));
+    _bookKey = key;
+    return _bookCache = book;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, box) {
+    final scene = LayoutBuilder(builder: (context, box) {
       final w = box.maxWidth, h = box.maxHeight;
       final bookW = math.min(w * 0.94, 560.0);
       final bookH = bookW / kKaderParchmentAspect;
       final water = h * widget.waterline;
       return AnimatedBuilder(
-        animation: Listenable.merge([_rise, _idle]),
+        animation: Listenable.merge([_rise, _idleTick]),
         builder: (context, _) {
           final t = debugKaderBookT ?? _rise.value;
-          final idle = _idle.value * 2 * math.pi;
+          final idle = _idleTick.value * 2 * math.pi;
           // Yükseliş: suyun altından (tamamen batık) → son yer (alt %7'si suda).
           final up = _seg(t, 0.08, 0.42, const _RiseCurve());
           final restTop = water - bookH * 0.93;
@@ -137,64 +222,8 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
               (t >= 0.42 ? 0.010 * math.sin(idle + 1.1) : 0.0);
           final left = (w - bookW) / 2;
           final waterInBook = water - top; // kitap yerel koordinatında su çizgisi
-          final wet = 1 - _seg(t, 0.34, 0.86, Curves.easeInOut); // 1 ıslak … 0 kuru
-          final leftInk = _seg(t, 0.60, 0.80, Curves.easeInOut);
-          final rightInk = _seg(t, 0.74, 0.96, Curves.easeInOut);
           final phase = idle;
-
-          final book = SizedBox(
-            width: bookW,
-            height: bookH,
-            child: Stack(fit: StackFit.expand, children: [
-              // Görsel stüdyo ışığında; gece denizine uysun diye karartılıp soğutulur.
-              ColorFiltered(
-                colorFilter: const ColorFilter.matrix(<double>[
-                  0.80, 0, 0, 0, 0, //
-                  0, 0.76, 0, 0, 0, //
-                  0, 0, 0.86, 0, 8, //
-                  0, 0, 0, 1, 0,
-                ]),
-                child: Image.asset(kKaderParchment,
-                    fit: BoxFit.fill,
-                    filterQuality: FilterQuality.high,
-                    errorBuilder: (_, __, ___) => const _FallbackParchment()),
-              ),
-              // Ay ışığı: üstten soğuk, kenarlarda karanlık (sahneye oturtur).
-              const IgnorePointer(
-                child: DecoratedBox(
-                  decoration: BoxDecoration(
-                    gradient: RadialGradient(
-                      center: Alignment(0, -0.35),
-                      radius: 0.95,
-                      colors: [Color(0x00000000), Color(0x3A0A0620), Color(0x8A05030F)],
-                      stops: [0.45, 0.8, 1.0],
-                    ),
-                  ),
-                ),
-              ),
-              // Islaklık: koyu, soğuk ton; yukarıdan aşağı kurur.
-              if (wet > 0.001)
-                IgnorePointer(
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          const Color(0xFF0A1630).withValues(alpha: 0.42 * wet * wet),
-                          const Color(0xFF0A1630).withValues(alpha: 0.46 * wet),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              _page(kKaderLeftPage, bookW, bookH, widget.leftText, leftInk, dropCap: true),
-              _page(kKaderRightPage, bookW, bookH, widget.rightText, rightInk),
-              IgnorePointer(
-                child: CustomPaint(painter: _DropsPainter(t: t, seed: 11)),
-              ),
-            ]),
-          );
+          final book = _bookFor(t, bookW, bookH);
 
           return Stack(clipBehavior: Clip.none, children: [
             // Kabarcıklar + halkalar (kitabın arkasında, su yüzeyinde)
@@ -307,6 +336,8 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
         },
       );
     });
+    if (widget.onTap == null) return scene;
+    return GestureDetector(behavior: HitTestBehavior.opaque, onTap: widget.onTap, child: scene);
   }
 
   Widget _page(Rect r, double bw, double bh, String text, double ink, {bool dropCap = false}) {
@@ -333,7 +364,7 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
 /// Sayfa yazısının stili (sayfa alanına göre ölçeklenir).
 TextStyle kaderPageStyle(Size page, {double scale = 1}) => GoogleFonts.raleway(
       fontSize: (page.width * 0.095).clamp(10.0, 15.0) * scale,
-      height: 1.42,
+      height: 1.32,
       fontWeight: FontWeight.w600,
       color: const Color(0xFF2A1808),
     );
@@ -364,7 +395,8 @@ TextStyle kaderPageStyle(Size page, {double scale = 1}) => GoogleFonts.raleway(
       tp.dispose();
       return (text, '', scale);
     }
-    final leftLines = (lines.length / 2).ceil();
+    // Sol sayfada büyük ilk harf ilk satırı uzatır ve satır kaydırabilir: bir satır pay.
+    final leftLines = math.min((lines.length / 2).ceil(), perPage - 1);
     final y = lines[leftLines - 1].baseline - lineH * 0.3;
     var cut = tp.getLineBoundary(tp.getPositionForOffset(Offset(page.width - 1, y))).end;
     tp.dispose();

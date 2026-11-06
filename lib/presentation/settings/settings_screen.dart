@@ -667,7 +667,10 @@ class _InlineEditorState extends ConsumerState<_InlineEditor> {
     _textCtrl = TextEditingController(
       text: (e.fieldType == 'text' && e.currentValue != '—') ? e.currentValue : '',
     );
-    _revealAfterOpen(this);
+    // Kutucuk düzenleyicisi açılınca ekran KAYDIRILMAZ (Anıl, 2026-11-06): 1. kart ve ekran
+    // konumu sabit kalsın; düzenleyici 1. kartın altına girip alttaki kartları aşağı itsin.
+    // Sayfa scroll'u düzenleyici açıkken kilitlenir (build'de physics). Profil düzenleyicisi
+    // (büyük, boşluğa sığmaz) hariç — o _revealAfterOpen ile görünür kılınır + scroll açık kalır.
   }
 
   @override
@@ -1646,6 +1649,13 @@ class SettingsScreen extends ConsumerWidget {
       }
     });
 
+    // Araya giren KUTUCUK düzenleyicisi açıkken sayfa scroll'u KİLİTLENİR (Anıl, 2026-11-06):
+    // seçeneklerin (roller/metin) scroll'u ile sayfa scroll'u karışmasın; 1. kart ve ekran konumu
+    // sabit kalsın. Düzenleyici X/iptal/kaydet/aynı kutuya tekrar dokunuşla kapanınca açılır.
+    // Profil düzenleyicisi (fieldType 'profile') büyük → boşluğa sığmaz → scroll açık kalır.
+    final insertEdit = ref.watch(_inlineEditProvider);
+    final lockScroll = insertEdit != null && insertEdit.fieldType != 'profile';
+
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
@@ -1691,7 +1701,9 @@ class SettingsScreen extends ConsumerWidget {
                   },
                   child: SingleChildScrollView(
                   key: const ValueKey('profileScroll'),
-                  physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                  physics: lockScroll
+                      ? const NeverScrollableScrollPhysics()
+                      : const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,

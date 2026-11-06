@@ -17,6 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/focus_ripple.dart';
+import '../../core/widgets/swipe_back.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
 import '../../data/models/user_profile.dart';
@@ -446,7 +447,12 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
   // ─────────────────────────────────────────────────────────────────────────
   @override
   Widget build(BuildContext context) {
-    return PopScope(
+    // Soldan sağa swipe = geri (sonuç adımında da). PopScope(canPop:false) olduğunda global
+    // EdgeSwipeBack popDisposition.doNotPop görüp hiçbir şey yapmıyordu → kendi SwipeBack'imiz
+    // adım-farkında _goBack'i doğrudan çağırır (Anıl, 2026-11-06).
+    return SwipeBack(
+      onSwipeBack: _goBack,
+      child: PopScope(
       canPop: _adim == _YanaAdim.secim,
       onPopInvokedWithResult: (didPop, _) {
         if (!didPop) _goBack();
@@ -463,31 +469,24 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
               child: Row(children: [
                 GestureDetector(
                   onTap: _goBack,
+                  behavior: HitTestBehavior.opaque,
+                  // Yalnız ok (Anıl, 2026-11-06: "geri git" yazısı kaldırıldı).
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    width: 38, height: 38,
                     decoration: BoxDecoration(
                       color: Colors.white.withValues(alpha: 0.10),
-                      borderRadius: BorderRadius.circular(14),
+                      borderRadius: BorderRadius.circular(12),
                       border: Border.all(
                         color: Colors.white.withValues(alpha: 0.25)),
                     ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 20),
-                        const SizedBox(width: 2),
-                        Text(ref.read(l10nProvider).backButton,
-                          style: const TextStyle(color: Colors.white, fontSize: 15,
-                              fontWeight: FontWeight.w500)),
-                      ],
-                    ),
+                    child: const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 22),
                   ),
                 ),
                 const Expanded(child: Text('YANA',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white, fontSize: 20,
                       fontWeight: FontWeight.bold, letterSpacing: 1.2))),
-                const SizedBox(width: 80), // dengeleyici
+                const SizedBox(width: 38), // dengeleyici
               ]),
             ),
 
@@ -633,6 +632,7 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
               ),
           ],
         ),
+      ),
       ),
       ),
     );

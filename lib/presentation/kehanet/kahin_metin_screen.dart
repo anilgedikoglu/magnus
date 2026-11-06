@@ -7,7 +7,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:video_player/video_player.dart';
 import '../../core/utils/variable_replacer.dart';
@@ -161,36 +160,8 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: GestureDetector(
-                onTap: () => context.pop(),
-                child: Container(
-                  width: double.infinity,
-                  height: 48,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    gradient: const LinearGradient(
-                      colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-                    ),
-                    border: Border.all(
-                      color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                      width: 1.5,
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      ref.read(l10nProvider).ok,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            // Tamam butonu kaldırıldı (Anıl, 2026-11-06; kenardan kaydırarak geri dönülür).
+            const SizedBox(height: 12),
             const FloatingBarSpacer(),
           ],
         ),

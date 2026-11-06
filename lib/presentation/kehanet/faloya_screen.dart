@@ -241,46 +241,18 @@ class _FaloyaScreenState extends ConsumerState<FaloyaScreen>
               ),
               const Spacer(),
 
-            // ── İçerik: typewriter + kapat ─────────────────────────────────
+            // ── İçerik: typewriter (Kapat butonu kaldırıldı — Anıl, 2026-11-06; kenardan
+            //    kaydırarak geri dönülür) ──────────────────────────────────────────
             ] else ...[
               Expanded(
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.fromLTRB(24, 20, 24, 12),
+                  padding: const EdgeInsets.fromLTRB(24, 20, 24, 20),
                   child: Text(
                     _displayed,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                       height: 1.7,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20),
-                child: GestureDetector(
-                  onTap: () => context.pop(),
-                  child: Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-                      ),
-                      border: Border.all(
-                        color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                        width: 1.5,
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        s.close,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
                     ),
                   ),
                 ),

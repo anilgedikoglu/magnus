@@ -484,35 +484,6 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
     );
   }
 
-  // ── Kapat butonu ─────────────────────────────────────────────────────────────
-  Widget _buildCloseButton() {
-    return GestureDetector(
-      onTap: () => context.pop(),
-      child: Container(
-        height: 44,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          gradient: const LinearGradient(
-            colors: [Color(0xFF9B00D3), Color(0xFFFF55FF)],
-          ),
-          border: Border.all(
-            color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-            width: 1.5,
-          ),
-        ),
-        child: Center(
-          child: Text(
-            ref.watch(l10nProvider).close,
-            style: const TextStyle(
-              color: Colors.white, fontSize: 15,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
   // ── Alt bölüm: her adımda sabit 160 px → tray konumu hiç kayamaz ──────────
   // hazir        → soru metni + "Geçirdim" butonu
   // animasyon /
@@ -620,10 +591,8 @@ class _TamuaScreenState extends ConsumerState<TamuaScreen>
                 SizedBox(height: (_expandedH - _traySize) / 2),
               Center(child: _buildTrayStack()),
               Expanded(child: Center(child: _buildGlowFrame())),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
-                child: _buildCloseButton(),
-              ),
+              // Kapat butonu kaldırıldı (Anıl, 2026-11-06; kenardan kaydırarak geri dönülür).
+              const SizedBox(height: 8),
             ]
 
             // ── hazir / animasyon / karakterGiriyor ─────────────────────────

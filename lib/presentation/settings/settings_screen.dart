@@ -3365,6 +3365,12 @@ void _profileCompactScroll(WidgetRef ref, ScrollNotification n) {
   if (_profileCompactAcc >= _kProfileCompactTrigger) {
     _profileCompactAcc = 0;
     ref.read(_profileCompactProvider.notifier).state = towardCompact;
+    // Aşağı swipe (towardCompact=false) AYARLAR kartını açar; yukarı swipe katlar
+    // (Anıl, 2026-11-06). Header'a dikey jest scroll'la yarıştığı için (Codex) tetik
+    // buradan, scroll yönünden — çakışmasız.
+    if (ref.read(_settingsExpandedProvider) == towardCompact) {
+      ref.read(_settingsExpandedProvider.notifier).state = !towardCompact;
+    }
     if (towardCompact) _profileCompactGuard = true; // bu gesture'da top-clamp un-compact etmesin
   }
 }

@@ -14,6 +14,11 @@ class FaceBox {
   final double? smile; // 0..1 (gülümseme olasılığı), yoksa null
 }
 
+/// Foto ön kontrolü için üç durum: yüz BULUNDU / tespit çalıştı ama yüz YOK /
+/// detektör KULLANILAMAZ (test ortamı, platform hatası). "yok" ile "kullanilamaz"
+/// ayrımı şart: yalnız "yok" güvenilir bir "bu bir yüz değil" sinyalidir.
+enum FaceDurum { bulundu, yok, kullanilamaz }
+
 class FaceLandmarks {
   FaceLandmarks._();
 
@@ -38,6 +43,17 @@ class FaceLandmarks {
       return FaceBox(r.left, r.top, r.width, r.height, f.smilingProbability);
     } catch (_) {
       return null; // test ortamı / platform / tespit hatası → yedeğe düş
+    }
+  }
+
+  /// Foto ön kontrolü: üç durumlu. [path] ham seçilen foto (yönelim fark etmez — yalnız
+  /// yüz VAR/YOK aranıyor). Hata/platform/test → kullanilamaz (asla çökmez).
+  static Future<FaceDurum> durumu(String path) async {
+    try {
+      final faces = await _d.processImage(InputImage.fromFilePath(path));
+      return faces.isEmpty ? FaceDurum.yok : FaceDurum.bulundu;
+    } catch (_) {
+      return FaceDurum.kullanilamaz;
     }
   }
 }

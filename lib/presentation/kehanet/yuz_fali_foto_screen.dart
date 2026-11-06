@@ -18,6 +18,7 @@ import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
 import '../../data/services/claude_vision_service.dart';
 import '../../data/services/face_analyzer.dart';
+import '../../data/services/photo_subject_detector.dart';
 import 'package:uuid/uuid.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 
@@ -77,10 +78,6 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         _foto = file;
         _adim = _YFAdim.analiz;
       });
-      final prefs    = await SharedPreferences.getInstance();
-      final today    = DateTime.now();
-      final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
-      await prefs.setString('yuzfali_bugun_tarih', todayStr);
       _scanCtrl.repeat(reverse: true);
       await _analizEt();
       _scanCtrl.stop();
@@ -110,12 +107,7 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         _adim = _YFAdim.analiz;
       });
 
-      // Günlük hakkı işaretle
-      final prefs    = await SharedPreferences.getInstance();
-      final today    = DateTime.now();
-      final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
-      await prefs.setString('yuzfali_bugun_tarih', todayStr);
-
+      // Günlük hak, ön kontrol GEÇİNCE _analizEt içinde işaretlenir (yanlış fotoda hak gitmesin).
       _scanCtrl.repeat(reverse: true);
       await _analizEt();
       _scanCtrl.stop();
@@ -135,6 +127,25 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
   Future<void> _analizEt() async {
     final isSelf = widget.kimin == 'kullanici';
     final profileGender = ref.read(userProfileProvider).gender; // await ÖNCESİ
+
+    // ── Ön kontrol: gönderilen foto gerçekten bir yüz mü? Değilse hak tüketmeden uyar.
+    final uygun = await PhotoSubjectDetector.uygunMu(_foto!.path, FotoKonu.yuz);
+    if (!mounted) return;
+    if (!uygun) {
+      _scanCtrl.stop();
+      setState(() {
+        _hataMetni = ref.read(l10nProvider).photoNotFace;
+        _adim      = _YFAdim.hatali;
+      });
+      return;
+    }
+
+    // Kontrol geçti → günlük hakkı şimdi işaretle.
+    final prefs    = await SharedPreferences.getInstance();
+    final today    = DateTime.now();
+    final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
+    await prefs.setString('yuzfali_bugun_tarih', todayStr);
+
     try {
       // Analiz + minimum 12 saniyelik "analiz ediliyor" beklemesi eş zamanlı
       final sonuclar = await Future.wait<dynamic>([

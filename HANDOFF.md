@@ -2,6 +2,38 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
+## Ne yapıldı (2026-11-06 — FOTO ÖN KONTROL: fincan/el/yüz; main'e push, BUILD ALINMADI)
+Anıl: kahve/el/yüz fallarına, gönderilen foto gerçekten fincan/el/yüz mü anlayan OFFLINE ön kontrol. Değilse
+"Ben bu fotoğraftan bir X göremiyorum, karışıklık olmuş olabilir mi?" uyarısı; fal başlamaz, günlük hak tüketilmez.
+- **Yeni: `lib/data/services/photo_subject_detector.dart`** — `PhotoSubjectDetector.uygunMu(path, FotoKonu{yuz,el,fincan})`.
+  ENSEMBLE (HOŞGÖRÜLÜ — yalnız EMİN olunca false; hata/belirsizlik→true, asla çökmez):
+  (1) ML Kit yüz tespiti `FaceLandmarks.durumu()` (yeni, üç-durumlu: bulundu/yok/kullanilamaz),
+  (2) ML Kit görüntü etiketleme `ImageLabels.etiketler()` (yeni, `image_labels.dart`; Hand/Nail, Coffee/Cup/Cappuccino,
+  Selfie/Hair/Beard/Mouth/Ear...), (3) YCbCr ten oranı (`image` paketi).
+  - yuz: yüz bulundu → kabul; güçlü yüz etiketi → kabul; el/fincan etiketi → ret; yüz YOK (tespit çalıştı) → **ret**
+    (kapının amacı; portre selfie'de ML Kit accurate güvenilir; etiket yedeği + "Tekrar Dene" yanlış-reddi hafifletir).
+  - el: Hand/Nail etiketi → kabul; fincan etiketi → ret; **bol ten (≥0.35) → kabul (yüz de kadrajdaysa bile, Codex)**;
+    yüz var + az ten → ret (selfie); ten≥0.12 kabul; ten<0.03 → ret.
+  - fincan: Coffee/Cup etiketi → kabul (en güçlü); yüz bulundu → ret; Hand/yüz etiketi → ret; ten≥0.55 → ret (son çare).
+  - **Ten maskesi gri/beyaz HARİÇ** (Codex: eski maskede gri fincan/masa/duvar ten sayılıyordu): cr≥137 + r>b+12.
+- **ML Kit sürüm hizalama (pubspec):** `google_mlkit_face_detection` 0.13.2 → **0.13.0 SABİT** + yeni
+  `google_mlkit_image_labeling: 0.14.0` → ortak **commons ^0.10.0** (lock: commons 0.10.0). 1.0.0 train Flutter 3.44
+  ister (bizde 3.41.5) → kullanılamaz. 0.13.2 (commons ^0.11.0) image_labeling ile çakışıyordu. API değişmedi;
+  iOS 15.5 min aynı (aynı GoogleMLKit pod ailesi). ⚠️ **iOS'ta YENİ pod (ImageLabeling) eklendi → cihaz build'inde doğrula.**
+- **3 ekran bağlandı:** `yuz_fali_foto_screen.dart` (_analizEt başına ön kontrol; günlük hak artık kontrol GEÇİNCE),
+  `el_fali_screen.dart` (yeni `hatali` state + `_buildHatali`; günlük hak taşındı), `coffee_screen.dart`
+  (`_sendFortune` ön kontrol — 3 fotoda ilk kabulde dur, üçü de retse `_showFincanUyari` dialog; "Yerime İç" atlanır).
+  Günlük hak pref'leri (`yuzfali_bugun_tarih`/`elfali_bugun_tarih`) artık yalnız kontrol geçince yazılır →
+  yanlış fotoda hak gitmez (`yuz_fali_kimin_screen`/el `_kontrolEt` gate'iyle tutarlı).
+- **Codex bug avı düzeltmeleri (kahve):** (P1) çift gönderim — `_sending` artık giriş korumasında + buton aktifliğinde;
+  (P2) kontrol edilen≠gönderilen — fotoğraflar await ÖNCESİ sabitlenip üretime öyle veriliyor.
+- **Metinler** (`app_strings.dart`): `photoNotCup/photoNotHand/photoNotFace` TR+EN. **Test** `photo_subject_detector_test.dart`
+  (10, sezgi yolu: ten→el kabul/fincan ret, gri→el ret/fincan kabul, bozuk/yok dosya→çökmez). analyze temiz; 196 test geçer
+  (tek kırmızı: git'te olmayan `_visual_starfield_capture_test.dart`).
+- ⏭️ **Codex P2 (kapsam dışı, ayrı task açıldı):** kahve falında kullanıcı "gönderiliyor" 4 sn'si dolmadan çıkarsa fal
+  üretilir ama `kahveSentProvider` yazılmaz → günlük hak işaretlenmez (günde 1 delinebilir). Krediyi üretim başında
+  idempotent işaretle. (El/yüz offline muamelesi gibi kahve/el hâlâ ClaudeVisionService API — istenirse offline'a çekilir.)
+
 ## Ne yapıldı (2026-11-06 sabah, 279 sonrası cihaz geri bildirimi; main'de, BUILD ALINMADI)
 Anıl 279'u cihazda gezip düzeltme istedi. Hepsi commit+push (build YALNIZ "test çık" deyince):
 - **CAM/GLASS kaydırıcısı** (`settings_screen.dart`, `_glassDragProvider`): parmakla çekilirken profil→gelen

@@ -13,9 +13,10 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/providers.dart';
+import '../../data/services/photo_subject_detector.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
-enum _EFAdim { secim, analiz, sonuc }
+enum _EFAdim { secim, analiz, hatali, sonuc }
 
 class ElFaliScreen extends ConsumerStatefulWidget {
   const ElFaliScreen({super.key});
@@ -29,6 +30,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
   _EFAdim _adim = _EFAdim.secim;
   File?   _foto;
   bool    _gunlukDoldu = false;
+  String  _hataMetni = '';
 
   // Parsed result
   String _genelMetin = '';
@@ -65,10 +67,6 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
         _foto = file;
         _adim = _EFAdim.analiz;
       });
-      final prefs    = await SharedPreferences.getInstance();
-      final today    = DateTime.now();
-      final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
-      await prefs.setString('elfali_bugun_tarih', todayStr);
       await _analizEt();
     } catch (e) {
       if (mounted) setState(() => _adim = _EFAdim.secim);
@@ -91,12 +89,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
         _adim = _EFAdim.analiz;
       });
 
-      // Günlük hakkı işaretle
-      final prefs    = await SharedPreferences.getInstance();
-      final today    = DateTime.now();
-      final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
-      await prefs.setString('elfali_bugun_tarih', todayStr);
-
+      // Günlük hak, ön kontrol GEÇİNCE _analizEt içinde işaretlenir (yanlış fotoda hak gitmesin).
       await _analizEt();
     } catch (e) {
       if (mounted) setState(() => _adim = _EFAdim.secim);
@@ -105,6 +98,23 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
 
   // ── Fal üretimi ───────────────────────────────────────────────────────────
   Future<void> _analizEt() async {
+    // ── Ön kontrol: gönderilen foto gerçekten bir el mi? Değilse hak tüketmeden uyar.
+    final uygun = await PhotoSubjectDetector.uygunMu(_foto!.path, FotoKonu.el);
+    if (!mounted) return;
+    if (!uygun) {
+      setState(() {
+        _hataMetni = ref.read(l10nProvider).photoNotHand;
+        _adim      = _EFAdim.hatali;
+      });
+      return;
+    }
+
+    // Kontrol geçti → günlük hakkı şimdi işaretle.
+    final prefs    = await SharedPreferences.getInstance();
+    final today    = DateTime.now();
+    final todayStr = '${today.year}-${today.month.toString().padLeft(2,'0')}-${today.day.toString().padLeft(2,'0')}';
+    await prefs.setString('elfali_bugun_tarih', todayStr);
+
     try {
       // API kontrolü yok — fotoğraf alındıktan sonra direkt fal üretilir
       await Future.delayed(const Duration(seconds: 5));
@@ -163,6 +173,7 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
               child: switch (_adim) {
                 _EFAdim.secim  => _buildSecim(),
                 _EFAdim.analiz => _buildAnaliz(),
+                _EFAdim.hatali => _buildHatali(),
                 _EFAdim.sonuc  => _buildSonuc(),
               },
             ),
@@ -360,6 +371,34 @@ class _ElFaliScreenState extends ConsumerState<ElFaliScreen>
         ),
         const Spacer(),
       ],
+    );
+  }
+
+  // ── Durum: hatali (foto el değil) ──────────────────────────────────────────
+  Widget _buildHatali() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 28),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('⚠️', style: TextStyle(fontSize: 56)),
+          const SizedBox(height: 24),
+          Text(
+            _hataMetni,
+            textAlign: TextAlign.center,
+            style: const TextStyle(color: Colors.white, fontSize: 17, height: 1.6),
+          ),
+          const SizedBox(height: 36),
+          _buildGradientButton(
+            label: _t('Tekrar Dene', 'Try Again'),
+            onTap: () => setState(() {
+              _foto      = null;
+              _hataMetni = '';
+              _adim      = _EFAdim.secim;
+            }),
+          ),
+        ],
+      ),
     );
   }
 

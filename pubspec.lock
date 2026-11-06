@@ -377,18 +377,26 @@ packages:
     dependency: transitive
     description:
       name: google_mlkit_commons
-      sha256: "3e69fea4211727732cc385104e675ad1e40b29f12edd492ee52fa108423a6124"
+      sha256: c83d32c86c555d807637f8bf01ca803df10e155e416279118e624dec7478dae3
       url: "https://pub.dev"
     source: hosted
-    version: "0.11.1"
+    version: "0.10.0"
   google_mlkit_face_detection:
     dependency: "direct main"
     description:
       name: google_mlkit_face_detection
-      sha256: "7b6ddcc69dbd6fbfa313fb2d974ad0f0c3a0d1657560f0da6be465baf1889687"
+      sha256: "570d24f6294621c97b023ff49fbb653b0dc10b0448b4e61268aa5dc5eda2fb14"
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.2"
+    version: "0.13.0"
+  google_mlkit_image_labeling:
+    dependency: "direct main"
+    description:
+      name: google_mlkit_image_labeling
+      sha256: "01528efb3941c107b6301aba85833454613cc4fc7edd49572da4ff53b44694f3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.14.0"
   google_mobile_ads:
     dependency: "direct main"
     description:
@@ -1140,4 +1148,4 @@ packages:
     version: "3.1.3"
 sdks:
   dart: ">=3.9.0-0 <4.0.0"
-  flutter: ">=3.32.0"
+  flutter: ">=3.29.0"

@@ -32,7 +32,14 @@ dependencies:
 
   # Cihaz-içi yüz tespiti (ML Kit) — yüz kadrajını bulup bölge isabetini artırır + gülümseme.
   # ⚠️ iOS asgari 15.5 ister (eski iOS kullanıcıları dışlanır — Anıl onayladı, 2026-11-06).
-  google_mlkit_face_detection: ^0.13.1
+  # ⚠️ 0.13.0'a SABİTLENDİ: image_labeling 0.14.0 ile ortak commons ^0.10.0 gerekiyor. 0.13.1+
+  #    commons ^0.11.0'a geçiyor → image_labeling ile çakışır. 1.0.0 train Flutter 3.44 ister (bizde 3.41.5).
+  google_mlkit_face_detection: 0.13.0
+
+  # Cihaz-içi (offline) görüntü etiketleme (ML Kit varsayılan model) — foto ön kontrolü:
+  # kahve=fincan mı / el=el mi / yüz=yüz mü? Etiketler: Hand, Nail, Coffee, Cup, Cappuccino,
+  # Selfie, Hair, Beard... (PhotoSubjectDetector). Offline, hata→sezgi yedeği. commons ^0.10.0 (yukarı bak).
+  google_mlkit_image_labeling: 0.14.0
 
   # HTTP client (Claude Vision API için)
   http: ^1.2.2

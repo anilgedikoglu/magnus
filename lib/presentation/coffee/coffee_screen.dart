@@ -28,6 +28,7 @@ import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/swipe_back.dart';
 import 'cup_steam.dart';
 import '../../data/providers.dart';
+import '../../data/services/photo_subject_detector.dart';
 import '../../core/constants/app_text_styles.dart';
 
 class CoffeeScreen extends ConsumerStatefulWidget {
@@ -112,18 +113,46 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   }
 
   Future<void> _sendFortune() async {
-    if (!_canSend || _kontrolEdiliyor) return;
+    if (!_canSend || _kontrolEdiliyor || _sending) return;
 
-    // Fal üretimini hemen arka planda başlat
+    // Gönderilecek fotoğrafları ŞİMDİ sabitle: kontrol sürerken yöntem/yuva değişirse kontrol
+    // edilenle gönderilen farklılaşmasın (Codex). "Yerime İç"te üçü de null (zaten kullanılmaz).
+    final p1 = _photos[0], p2 = _photos[1], p3 = _photos[2];
+
+    // ── Ön kontrol: foto modlarında gönderilen görseller gerçekten fincan mı?
+    //    "Yerime İç" bizim hazır fincan görselimizdir → kontrol atlanır.
+    //    En az biri fincan sayılırsa geç; hiçbiri değilse uyar (hak/üretim başlamaz).
+    if (_mode == _InputMode.fotoCek || _mode == _InputMode.dosyadan) {
+      final paths = [p1, p2, p3].whereType<String>().toList();
+      setState(() => _kontrolEdiliyor = true);
+      var fincanVar = false;
+      try {
+        for (final p in paths) {
+          if (await PhotoSubjectDetector.uygunMu(p, FotoKonu.fincan)) {
+            fincanVar = true;
+            break;
+          }
+        }
+      } finally {
+        if (mounted) setState(() => _kontrolEdiliyor = false);
+      }
+      if (!mounted) return;
+      if (!fincanVar) {
+        _showFincanUyari();
+        return;
+      }
+    }
+
+    // Fal üretimini hemen arka planda başlat (sabitlenen fotoğraflarla)
     final fortuneService = ref.read(fortuneServiceProvider);
     final profile = ref.read(userProfileProvider);
     final inboxNotifier = ref.read(inboxProvider.notifier);
 
     fortuneService.generateCoffeeFortune(
       profile: profile,
-      photoPath1: _photos[0],
-      photoPath2: _photos[1],
-      photoPath3: _photos[2],
+      photoPath1: p1,
+      photoPath2: p2,
+      photoPath3: p3,
       falKonusu: _falKonusu ?? 'genel',
       locale: ref.read(localeProvider),
     ).then((item) => inboxNotifier.addItem(item)).catchError((_) {});
@@ -136,6 +165,31 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     if (!mounted) return;
     ref.read(kahveSentProvider.notifier).state = true;
     context.go('/home');
+  }
+
+  // Foto fincan değilse uyarı — fotoğraflar korunur, kullanıcı değiştirip tekrar gönderebilir.
+  void _showFincanUyari() {
+    final s = ref.read(l10nProvider);
+    showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: const Color(0xFF17122A),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18),
+          side: const BorderSide(color: Color(0x339C6FD6)),
+        ),
+        content: Text(
+          s.photoNotCup,
+          style: const TextStyle(color: Colors.white, fontSize: 15, height: 1.5),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: Text(s.ok, style: const TextStyle(color: Color(0xFFB8E0FF), fontWeight: FontWeight.w600)),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -522,7 +576,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     } else {
       label = s.sendFortune;
     }
-    final bool active = _canSend && !_kontrolEdiliyor;
+    final bool active = _canSend && !_kontrolEdiliyor && !_sending;
 
     return AnimatedOpacity(
       duration: const Duration(milliseconds: 300),

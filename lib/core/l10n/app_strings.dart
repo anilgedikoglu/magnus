@@ -79,6 +79,13 @@ class AppStrings {
   String photoCount(int n)  => _s('$n/3 Fotoğraf', '$n/3 Photos');
   String get sending        => _s('Falın gönderiliyor...', 'Your reading is being sent...');
   String get checkingPhotos => _s('Kontrol ediliyor...', 'Checking...');
+  // ── Foto ön kontrol uyarıları (fincan/el/yüz tanınmazsa) ────────────────
+  String get photoNotCup  => _s('Ben bu fotoğraftan bir fincan göremiyorum, karışıklık olmuş olabilir mi?',
+      "I can't make out a coffee cup in this photo — could there have been a mix-up?");
+  String get photoNotHand => _s('Ben bu fotoğraftan bir el göremiyorum, karışıklık olmuş olabilir mi?',
+      "I can't make out a hand in this photo — could there have been a mix-up?");
+  String get photoNotFace => _s('Ben bu fotoğraftan bir yüz göremiyorum, karışıklık olmuş olabilir mi?',
+      "I can't make out a face in this photo — could there have been a mix-up?");
   String get fortuneSubject => _s('Fal konusu ne olsun?', 'What topic for the reading?');
   String get general        => _s('Genel',            'General');
   String get love           => _s('Aşk',              'Love');

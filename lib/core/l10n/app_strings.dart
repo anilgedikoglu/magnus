@@ -134,6 +134,7 @@ class AppStrings {
   String get language          => _s('DİL',                 'LANGUAGE');
   String get languageTurkish   => _s('Türkçe',              'Turkish');
   String get languageEnglish   => _s('English',             'English');
+  String get settingsSection   => _s('AYARLAR',             'SETTINGS');
   String get warnings          => _s('UYARILAR',            'DISCLAIMERS');
   String get entertainmentOnly => _s(
     '⚠️ Magnus yalnızca eğlence amaçlıdır. İçerikler kurgusal ve sembolik niteliktedir; gerçek kehanet, tıbbi, hukuki veya finansal tavsiye sunmaz.',

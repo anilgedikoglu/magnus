@@ -562,6 +562,11 @@ final _inlineEditProvider = StateProvider<_InlineEdit?>((ref) => null);
 // parmak kalkınca/iptalde false. Yatay sürüklemenin sekme değiştirmesi böyle engellenir (Anıl).
 final _glassDragProvider = StateProvider<bool>((ref) => false);
 
+/// Ayarlar kartı (card 3) açık mı? Varsayılan KAPALI/sıkışık: yalnız "AYARLAR" başlığı + dil
+/// (TR/EN) + sil görünür. "AYARLAR" başlığına dokunuş ya da yukarı swipe ile içi aşağı açılır
+/// (Anıl, 2026-11-06).
+final _settingsExpandedProvider = StateProvider<bool>((ref) => false);
+
 /// 1. kartın altındaki ARA panel isteği (Anıl, 2026-11-05): "hali hazırda açık olan
 /// (araya giren) kapanmadan bir diğer araya giren çıkamaz; kapatıp öyle çıkacak".
 /// Açık panel varsa önce kapanır (300 ms), sonra yenisi açılır.
@@ -2357,12 +2362,48 @@ class SettingsScreen extends ConsumerWidget {
   //    kullanıcı bilgilerinin altında bir kart yalnızca"; eski açılır pencere kaldırıldı).
 
   Widget _buildSettingsCard(BuildContext context, WidgetRef ref) {
+    final expanded = ref.watch(_settingsExpandedProvider);
+    void toggle(bool v) => ref.read(_settingsExpandedProvider.notifier).state = v;
+    const expandDur = Duration(milliseconds: 280);
     return Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              // ── "AYARLAR" başlığı (ekran başlık fontu, ortalı) — dokun ya da YUKARI swipe
+              //    ile içi aşağı doğru açılır; aşağı swipe ile kapanır (Anıl, 2026-11-06).
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () => toggle(!expanded),
+                onVerticalDragEnd: (d) {
+                  final v = d.primaryVelocity ?? 0;
+                  if (v < -60) toggle(true);   // yukarı swipe → aç
+                  if (v > 60) toggle(false);   // aşağı swipe → kapat
+                },
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                  child: Column(
+                    children: [
+                      Text(
+                        ref.read(l10nProvider).settingsSection,
+                        textAlign: TextAlign.center,
+                        style: AppTextStyles.screenTitle,
+                      ),
+                      const SizedBox(height: 6),
+                      AnimatedRotation(
+                        turns: expanded ? 0.5 : 0,
+                        duration: const Duration(milliseconds: 250),
+                        child: Icon(
+                          Icons.keyboard_arrow_down_rounded,
+                          color: AppColors.gold.withValues(alpha: 0.8),
+                          size: 22,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
 
-              // ── Dil / Language bölümü ────────────────────────────────────
+              // ── Dil / Language bölümü (her zaman görünür) ────────────────
               Consumer(
                 builder: (ctx, cRef, _) {
                   final currentLocale = cRef.watch(localeProvider);
@@ -2453,6 +2494,17 @@ class SettingsScreen extends ConsumerWidget {
                 },
               ),
 
+              // ── Açılır orta bölüm (cam · yasal · sıfırla) — yalnız AYARLAR açıkken ────
+              AnimatedSize(
+                duration: expandDur,
+                curve: Curves.easeOutCubic,
+                alignment: Alignment.topCenter,
+                child: !expanded
+                    ? const SizedBox(width: double.infinity)
+                    : Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
               // Ayırıcı
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -2552,6 +2604,11 @@ class SettingsScreen extends ConsumerWidget {
                   _confirmReset(context, ref);
                 },
               ),
+                        ],
+                      ),
+              ),
+
+              // ── Sil — HER ZAMAN görünür (kapalıyken de: dil + sil) ───────────
               _OptionsItem(
                 icon: Icons.delete_outline_rounded,
                 iconColor: AppColors.danger,
@@ -2561,31 +2618,36 @@ class SettingsScreen extends ConsumerWidget {
                 },
               ),
 
-              const SizedBox(height: 8),
-
-              // ── Eğlence beyanı ───────────────────────────────────────────
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: AppColors.bone.withValues(alpha: 0.04),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: AppColors.bone.withValues(alpha: 0.10),
-                      width: 1,
-                    ),
-                  ),
-                  child: Text(
-                    ref.read(l10nProvider).entertainmentOnly,
-                    style: const TextStyle(
-                      color: Color(0x99FFFFFF),
-                      fontSize: 10.5,
-                      height: 1.5,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
+              // ── Eğlence beyanı — yalnız AYARLAR açıkken ──────────────────────
+              AnimatedSize(
+                duration: expandDur,
+                curve: Curves.easeOutCubic,
+                alignment: Alignment.topCenter,
+                child: !expanded
+                    ? const SizedBox(width: double.infinity)
+                    : Padding(
+                        padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                          decoration: BoxDecoration(
+                            color: AppColors.bone.withValues(alpha: 0.04),
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(
+                              color: AppColors.bone.withValues(alpha: 0.10),
+                              width: 1,
+                            ),
+                          ),
+                          child: Text(
+                            ref.read(l10nProvider).entertainmentOnly,
+                            style: const TextStyle(
+                              color: Color(0x99FFFFFF),
+                              fontSize: 10.5,
+                              height: 1.5,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
               ),
             ],
     );

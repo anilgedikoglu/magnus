@@ -30,6 +30,10 @@ dependencies:
   # Cihaz-içi (offline) fotoğraf analizi — yüz falı (saf Dart, piksel işleme)
   image: ^4.3.0
 
+  # Cihaz-içi yüz tespiti (ML Kit) — yüz kadrajını bulup bölge isabetini artırır + gülümseme.
+  # ⚠️ iOS asgari 15.5 ister (eski iOS kullanıcıları dışlanır — Anıl onayladı, 2026-11-06).
+  google_mlkit_face_detection: ^0.13.1
+
   # HTTP client (Claude Vision API için)
   http: ^1.2.2
 

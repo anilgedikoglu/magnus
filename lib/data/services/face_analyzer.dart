@@ -15,6 +15,7 @@ import 'dart:math' as math;
 import 'package:image/image.dart' as img;
 
 import 'claude_vision_service.dart' show YuzAnalizi;
+import 'face_landmarks.dart';
 
 class OnDeviceFaceAnalyzer {
   OnDeviceFaceAnalyzer._();
@@ -33,24 +34,41 @@ class OnDeviceFaceAnalyzer {
 
       // Renk için ~512, kenar için ~256 genişlikte kopya.
       final big = src.width > 560 ? img.copyResize(src, width: 512) : src;
-      final small = img.copyResize(big, width: 256);
-
-      final w = big.width, h = big.height;
 
       // Deterministik tohum (fotoğraf imzası) — String.hashCode DEĞİL, sabit FNV-1a.
       final seed = _imzaHash(big);
 
+      // ── ML Kit yüz tespiti → yüz kadrajına kırp (bölgeler isabetlenir) + gülümseme.
+      //    Başarısızsa / yüz yoksa / test ortamında tam görüntüye düşer (sezgi yedeği).
+      var analiz = big;
+      double? smile;
+      try {
+        final temp = '${Directory.systemTemp.path}/mlkit_${DateTime.now().microsecondsSinceEpoch}.jpg';
+        final tf = File(temp)..writeAsBytesSync(img.encodeJpg(src));
+        final fb = await FaceLandmarks.detect(temp);
+        try {
+          tf.deleteSync();
+        } catch (_) {}
+        if (fb != null) {
+          analiz = _cropFace(big, src.width, fb);
+          smile = fb.smile;
+        }
+      } catch (_) {/* yedeğe düş */}
+
+      final w = analiz.width, h = analiz.height;
+      final small = img.copyResize(analiz, width: 256);
+
       // ── Saç rengi (üst saç bandı; HSV aday sınıflandırma, çoğunluk) ──
-      final sacRengi = _sacRengi(big, w, h);
+      final sacRengi = _sacRengi(analiz, w, h);
 
       // ── Göz rengi (iki göz penceresi; ten hariç adaylar) ──
-      final gozRengi = _gozRengi(big, w, h);
+      final gozRengi = _gozRengi(analiz, w, h);
 
       // ── Gözlük (256 px'de kenar yoğunluğu) ──
       final gozluk = _gozluk(small) ? 'Gozluklu' : 'Gozluksuz';
 
       // ── Sakal (çene-yanak kontrastı) ──
-      final beardSignal = _beardSignal(big, w, h);
+      final beardSignal = _beardSignal(analiz, w, h);
 
       // ── Cinsiyet ──
       final cinsiyet = isSelf
@@ -59,10 +77,12 @@ class OnDeviceFaceAnalyzer {
 
       final sakal = cinsiyet == 'erkek' ? (beardSignal ? 'SakalKisa' : 'SakalYok') : 'SakalYok';
 
-      // ── Deterministik-rastgele (güvenilmez özellikler) ──
-      final moral = _secWeighted(seed, 'moral', const [
-        ('Moralinormal', 60), ('Moraliiyi', 30), ('Moralikotu', 10),
-      ]);
+      // ── Moral: ML Kit gülümseme olasılığı varsa ondan, yoksa deterministik ──
+      final moral = smile != null
+          ? (smile > 0.55 ? 'Moraliiyi' : (smile < 0.22 ? 'Moralikotu' : 'Moralinormal'))
+          : _secWeighted(seed, 'moral', const [
+              ('Moralinormal', 60), ('Moraliiyi', 30), ('Moralikotu', 10),
+            ]);
       final sapka = _secWeighted(seed, 'sapka', const [
         ('Sapkasiz', 82), ('Sapkali', 10), ('Bereli', 5), ('Kapali', 3),
       ]);
@@ -95,6 +115,22 @@ class OnDeviceFaceAnalyzer {
     } catch (_) {
       return _varsayilan(isSelf, profileGender);
     }
+  }
+
+  /// ML Kit yüz kutusunu, üstte saç payı bırakarak (yüz kutusu alın/saçı dışlar) kırpar.
+  /// Koordinatlar baked src'de → big'e ölçeklenir. Böylece sabit % bölgeler gerçek yüze oturur.
+  static img.Image _cropFace(img.Image big, int srcWidth, FaceBox fb) {
+    final scale = big.width / srcWidth;
+    final l = fb.left * scale, t = fb.top * scale, bw = fb.width * scale, bh = fb.height * scale;
+    var cl = (l - bw * 0.12).round();
+    var ct = (t - bh * 0.60).round(); // saç payı
+    var cr = (l + bw + bw * 0.12).round();
+    var cb = (t + bh + bh * 0.08).round();
+    cl = cl.clamp(0, big.width - 2);
+    ct = ct.clamp(0, big.height - 2);
+    cr = cr.clamp(cl + 2, big.width);
+    cb = cb.clamp(ct + 2, big.height);
+    return img.copyCrop(big, x: cl, y: ct, width: cr - cl, height: cb - ct);
   }
 
   static YuzAnalizi _varsayilan(bool isSelf, String profileGender) => YuzAnalizi(

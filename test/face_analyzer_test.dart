@@ -36,6 +36,18 @@ Future<String> _yaz(img.Image im) async {
   return f.path;
 }
 
+// Renk sapması (ışık) simülasyonu: tüm görüntüyü R×rMul, B×bMul ile çarp.
+img.Image _cast(img.Image im, double rMul, double bMul) {
+  for (var y = 0; y < im.height; y++) {
+    for (var x = 0; x < im.width; x++) {
+      final p = im.getPixel(x, y);
+      im.setPixelRgb(x, y, (p.r * rMul).clamp(0, 255).round(), p.g.toInt(),
+          (p.b * bMul).clamp(0, 255).round());
+    }
+  }
+  return im;
+}
+
 void main() {
   test('saç rengi: sarışın / esmer / beyaz doğru sınıflanır', () async {
     final sari = await OnDeviceFaceAnalyzer.analiz(await _yaz(_yuz(sac: (200, 170, 80))),
@@ -49,6 +61,19 @@ void main() {
     final beyaz = await OnDeviceFaceAnalyzer.analiz(await _yaz(_yuz(sac: (230, 228, 225))),
         isSelf: true, profileGender: 'kadin');
     expect(beyaz.sacRengi, 'Beyaz');
+  });
+
+  test('hafif ışık sapmasında saç rengi KAYMAZ (HSV eşikleri toleranslı)', () async {
+    // Sarışın saç, hafif sıcak (R↑ B↓) ışık → yine Sarisin.
+    final sicak = await OnDeviceFaceAnalyzer.analiz(
+        await _yaz(_cast(_yuz(sac: (200, 170, 80)), 1.1, 0.9)),
+        isSelf: true, profileGender: 'kadin');
+    expect(sicak.sacRengi, 'Sarisin');
+    // Esmer saç, hafif soğuk (R↓ B↑) ışık → yine Esmer.
+    final soguk = await OnDeviceFaceAnalyzer.analiz(
+        await _yaz(_cast(_yuz(sac: (35, 30, 28)), 0.9, 1.12)),
+        isSelf: true, profileGender: 'kadin');
+    expect(soguk.sacRengi, 'Esmer');
   });
 
   test('göz rengi: mavi gözler mavi sınıflanır', () async {

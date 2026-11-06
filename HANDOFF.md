@@ -20,6 +20,17 @@ Build YOK (Anıl "test çık" demedi). Hepsi commit + push + **main'e FF** (sür
   Yeni tur tanımları `metin_turu_hazirla.js` TUR 18-22'de. Gemini yardımcıları scratchpad'de (`gemini_helper.js`,
   `metin_gemini.js`, `yuzfali_en.js`) EPHEMERAL — kota dönünce yeniden üretilebilir; yüz/el falı EN + yüksek-hızlı turlar için.
 
+## Ne yapıldı (2026-11-06 en geç — Anıl cihaz geri bildirimi: chat + ayarlar) — CİHAZDA DOĞRULA
+Build YOK. commit 73166c11, push + main FF. Flutter-içi → panelde görünmez, cihazda görünür.
+- **Ana menü karşılama balonu:** marquee (kayan yazı) KAPATILDI + çok uzun (>110 kr) karşılama/biliyormuydun
+  metinleri havuzdan elenir (kısa olanlar sarılarak gösterilir; ilk giriş + özel gün elenmez) → `home_screen.dart`
+  `_loadSelamlama` + `enableMarquee: false`.
+- **Açılış selamlaması 10 sn kalır** (5 yerine) **ya da yukarı swipe'a kadar** → ızgara `UserScrollNotification`
+  reverse → `_hideBand` (`home_screen.dart`).
+- **Kullanıcı Bilgileri lastikleşme KALDIRILDI:** ana scroll `BouncingScrollPhysics` → `ClampingScrollPhysics`
+  (`settings_screen.dart:1723`) — swipe'ta zıplama + sıkışma reflow overshoot biter. Compact mantığı etkilenmez.
+- Testler 206 geçer (-1 takipsiz golden). analyze temiz.
+
 ## Ne yapıldı (2026-11-06 geç — "kendin devam et": ERTELENEN Codex bulgularının GÜVENLİ olanları)
 Build YOK. 3 commit, hepsi push + main FF. analyze temiz; testler **206 geçer** (-1 takipsiz golden). Sürüm 10.8.17+285'te.
 - **No-repeat sıfırlama son-id koruması (commit 36c18ff8):** Faloya/Niyet/Kâhinler/Maganda/Tamua havuz tükenince

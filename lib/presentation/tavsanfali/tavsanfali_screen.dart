@@ -293,6 +293,26 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
   double _seg(double p, double a, double b, [Curve c = Curves.linear]) =>
       c.transform(((p - a) / (b - a)).clamp(0.0, 1.0));
 
+  // ── Zarfların masa düzlemine oturması (perspektif, Anıl 2026-11-06) ──────────
+  // Zarf görseli zaten hafif tepeden çizili ("uzak = yukarı" gömülü). Yelpaze için
+  // ekran düzleminde döndürmek (eski Transform.rotate) her zarfın perspektifini farklı
+  // yöne çevirip onları elde tutulan desteye benzetiyordu — masaya yatmış değil. Bunun
+  // yerine zarfı MASA NORMALİ etrafında döndürürüz: rotateX(θ)·rotateZ(φ)·rotateX(−θ).
+  // Böylece φ dağılımı dikeyde kısalır (foreshortening) ama yüz yönü dik kalır → hepsi
+  // tek ve aynı masa yüzeyine yatmış görünür. Seçilen zarf uçup karta dönüşürken flat→0.
+  static const double _kTableTheta = 1.02; // masa eğimi (foreshortening miktarı)
+  static const double _kPersp = 0.0016;
+
+  Matrix4 _paperXform(double phi, double scale, double flat) {
+    final theta = _kTableTheta * flat; // 1 = masaya yatık … 0 = dik
+    return Matrix4.identity()
+      ..setEntry(3, 2, _kPersp * flat)
+      ..rotateX(theta)
+      ..rotateZ(phi)
+      ..rotateX(-theta)
+      ..scaleByDouble(scale, scale, 1.0, 1.0);
+  }
+
   Widget _buildStage(bool isEn) {
     return LayoutBuilder(builder: (context, box) {
       final w = box.maxWidth;
@@ -458,6 +478,10 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
       y -= 3 * wave;
       scale = 1 + 0.025 * (wave + 1) / 2;
     }
+    // Masaya yatıklık (1) ↔ diklik (0). Seçilen zarf uçtukça dikleşip karta dönüşür.
+    var flat = 1.0;
+    // Derinlik: ortadaki zarf en yakın (yayda en altta) → biraz büyük; uçlar biraz küçük.
+    var depth = 1 - 0.05 * (i - 2).abs();
     if (isTarget) {
       y -= h * 0.14 * lift;
       final cx = w / 2, cy = h * 0.40;
@@ -465,6 +489,8 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
       y = y + (cy - y) * fly;
       angle = rot * (1 - fly);
       scale = 1 + (math.min(w * 0.4, 190.0) / pw - 1) * fly;
+      flat = 1 - fly;
+      depth = 1 - (1 - depth) * (1 - fly); // uçarken öne gelir → 1'e yaklaşır
       opacity = 1 - open;
     } else {
       opacity = 1 - 0.7 * lift;
@@ -480,15 +506,13 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
         onTap: _started ? null : () => _start(i),
         child: Opacity(
         opacity: opacity.clamp(0.0, 1.0),
-        child: Transform.rotate(
-          angle: angle,
-          child: Transform.scale(
-            scale: scale,
-            child: Image.asset('assets/images/tavsanfali/tavsan_kagit.png',
-                fit: BoxFit.contain,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) => const SizedBox.shrink()),
-          ),
+        child: Transform(
+          alignment: Alignment.center,
+          transform: _paperXform(angle, scale * depth, flat),
+          child: Image.asset('assets/images/tavsanfali/tavsan_kagit.png',
+              fit: BoxFit.contain,
+              filterQuality: FilterQuality.high,
+              errorBuilder: (_, __, ___) => const SizedBox.shrink()),
         ),
       ),
       ),

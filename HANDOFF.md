@@ -2,6 +2,27 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
+## Ne yapıldı (2026-11-06 sabah, 279 sonrası cihaz geri bildirimi; main'de, BUILD ALINMADI)
+Anıl 279'u cihazda gezip düzeltme istedi. Hepsi commit+push (build YALNIZ "test çık" deyince):
+- **CAM/GLASS kaydırıcısı** (`settings_screen.dart`, `_glassDragProvider`): parmakla çekilirken profil→gelen
+  kutusu TabSwipe kilitlenir (kaydırıcının Listener'ı TabSwipe'tan daha içte → pointer-down'da enabled false).
+  Test `tab_swipe_test.dart`.
+- **Kader Kitabı** (`kaderkitabi_screen.dart`, `kader_book_scene.dart`): (1) sudan DÜZ çıkar (rise Z-tilt
+  kaldırıldı). (2) Dokunuş pop-up AÇMAZ; metin iki sayfaya sığmazsa dokunuş sonraki açılıma geçer
+  (`paginateKaderPages`, küçültmesiz; sayfa noktaları `_PageDots`) — sığıyorsa dokunuş yok. (3) "okudun" mesajı
+  KİTAPTA değil: ekran o gün okunmuşsa `context.pop('zaten_okundu')` döner, ana menü `_showDailyLimitBubble`
+  sohbet balonunu söyler (`fortuneLimitMessage('kaderkitabi')` iki cümleye çıkarıldı). `_buildHakDoldu` SİLİNDİ.
+  Test `kader_sayfalama_test.dart`.
+- **Numeroloji seçim kartları** (`numeroloji_screen.dart`): ikon ÜSTTE, yazı ALTTA (dikey, ortalı,
+  kaydırılabilir). ChatGPT mistik ikonu gelince `Image.asset(iconAsset)` yedeği Material ikonu değiştirir.
+  ⚠️ **YARIM:** Anıl 3 mistik numeroloji ikonu (genel/bugün/yıl) istedi (kahve fal_konu gibi). ChatGPT oturumu
+  ÇIKIŞ YAPMIŞ (`/api/auth/session` boş) → Anıl Chrome'da ChatGPT'ye yeniden girince üret, düz solid fon,
+  indir → `tools\gorsel_isle.ps1` → `assets/images/numeroloji_konu/{ngenel,nbugun,nyil}.png`, pubspec'e
+  `assets/images/numeroloji_konu/` ekle. Düzen hazır, dosyalar gelince otomatik görünür.
+- **Tavşan Falı** (`tavsanfali_screen.dart`, `_paperXform`): masadaki zarflar perspektife uyar. Eski ekran-içi
+  dönüş zarfları kart destesi gibi yelpazeliyordu; yeni masa normali etrafında döner (foreshortened) → hepsi tek
+  yüzeye yatmış görünür + derinlik ölçeği; seçilen uçarken flat→0 dikleşir.
+
 ## Ne yapıldı (2026-11-06 gece, 276 sonrası; main'de) + değişen dosyalar
 - **10.8.13+279 test build'i** (2026-11-06 05:25 Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).
 Anıl: "her falın alınışı daha mistik/animatif/profesyonel olsun, Codex ve Grok'a danış". Envanter + Grok raporu:

@@ -352,6 +352,11 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
       child: SingleChildScrollView(
         child: _panel(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
+            // Tematik amblem (kısmet) — Anıl, 2026-11-06.
+            Image.asset('assets/images/fal_sonuc/kismet.png',
+                height: 104, filterQuality: FilterQuality.high,
+                errorBuilder: (_, __, ___) => const SizedBox(height: 8)),
+            const SizedBox(height: 6),
             baslik,
             const SizedBox(height: 16),
             govde,

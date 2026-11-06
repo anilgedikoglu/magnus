@@ -461,6 +461,11 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
       child: SingleChildScrollView(
         child: _panel(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
+            // Tematik amblem (ev) — Anıl, 2026-11-06.
+            Image.asset('assets/images/fal_sonuc/ev.png',
+                height: 104, filterQuality: FilterQuality.high,
+                errorBuilder: (_, __, ___) => const SizedBox(height: 8)),
+            const SizedBox(height: 6),
             Text(_tr('$_year Evin', 'Your Home in $_year'),
                 textAlign: TextAlign.center, style: AppTextStyles.screenTitle.copyWith(fontSize: 17)),
             const SizedBox(height: 16),

@@ -345,6 +345,11 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              // Tematik amblem (araba) — Anıl, 2026-11-06.
+              Image.asset('assets/images/fal_sonuc/araba.png',
+                  height: 100, filterQuality: FilterQuality.high,
+                  errorBuilder: (_, __, ___) => const SizedBox(height: 8)),
+              const SizedBox(height: 4),
               Text(_tr('Arabaların', 'Your Cars'),
                   textAlign: TextAlign.center, style: AppTextStyles.screenTitle.copyWith(fontSize: 17)),
               const SizedBox(height: 14),

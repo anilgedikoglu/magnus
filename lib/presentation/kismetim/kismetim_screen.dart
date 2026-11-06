@@ -193,11 +193,19 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             const Icon(Icons.favorite_rounded, color: _pink, size: 30),
-            const SizedBox(height: 12),
+            const SizedBox(height: 10),
+            // Falın amacı (Anıl, 2026-11-06): önce merakı uyandır.
+            Text(
+              _tr('Gönlünün gelecekte kiminle olacağını merak ediyor musun?',
+                  'Curious who your heart will belong to in the future?'),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: _pink, fontSize: 15, fontWeight: FontWeight.w700, height: 1.25),
+            ),
+            const SizedBox(height: 10),
             Text(
               _tr('Hangi tarihteki kısmetini merak ediyorsun?', 'Which year of your destiny are you curious about?'),
               textAlign: TextAlign.center,
-              style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600, height: 1.35),
+              style: const TextStyle(color: Colors.white, fontSize: 16.5, fontWeight: FontWeight.w600, height: 1.3),
             ),
             const SizedBox(height: 6),
             Text(
@@ -257,8 +265,8 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 18),
-            // Basılı-tut: geleceğe odaklan (Anıl, 2026-11-06; Aşk Uyumu gibi).
+            const SizedBox(height: 28),
+            // Basılı-tut: geleceğe odaklan (Anıl, 2026-11-06; yıl tekerleğinden uzak + büyük).
             Opacity(
               opacity: _t == null ? 0.4 : 1,
               child: IgnorePointer(
@@ -267,7 +275,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
                   onComplete: _goster,
                   color: _pink,
                   icon: Icons.favorite_rounded,
-                  radius: 44,
+                  radius: 58,
                 ),
               ),
             ),

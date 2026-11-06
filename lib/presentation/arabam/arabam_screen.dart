@@ -207,16 +207,18 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
         children: [
           const Icon(Icons.directions_car_filled_rounded, color: _pink, size: 32),
           const SizedBox(height: 8),
+          // Falın amacı (Anıl, 2026-11-06): önce merakı uyandır.
           Text(
-            _tr('Şu an hangi marka araban var?', 'What car brand do you have now?'),
+            _tr('Yıllar içinde nasıl arabalara bineceğini merak ediyor musun?',
+                'Curious what cars you’ll be driving over the years?'),
             textAlign: TextAlign.center,
-            style: const TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w600, height: 1.3),
+            style: TextStyle(color: _pink, fontSize: 14.5, fontWeight: FontWeight.w700, height: 1.25),
           ),
-          const SizedBox(height: 2),
+          const SizedBox(height: 8),
           Text(
-            _tr('Geleceğini buradan okuyacağım.', "I'll read your future from here."),
+            _tr('Önce şu an hangi marka araban var?', 'First, what car brand do you have now?'),
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 12.5),
+            style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600, height: 1.3),
           ),
           const SizedBox(height: 12),
           Expanded(
@@ -257,7 +259,7 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 22),
           Opacity(
             opacity: secildi ? 1 : 0.4,
             child: IgnorePointer(
@@ -266,7 +268,7 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
                 onComplete: _hesapla,
                 color: _pink,
                 icon: Icons.directions_car_filled_rounded,
-                radius: 46,
+                radius: 56,
               ),
             ),
           ),

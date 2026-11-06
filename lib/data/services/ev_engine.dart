@@ -209,7 +209,7 @@ class EvimTimeline {
     Map<String, Set<String>>? revealed,
   }) : revealed = revealed ?? {};
 
-  static const schema = 1;
+  static const schema = 2; // v2: vade havuzlu yer seçimi (Anıl, 2026-11-06) → eski senaryolar yeniden üretilir
   final int seed;
   final int baseYear;
   final String signature;
@@ -271,13 +271,6 @@ class EvimEngine {
   /// Şehir büyüklüğü: 3 = üç büyük, 2 = büyükşehir, 1 = diğer.
   static int sizeOf(String il) => _bigThree.contains(il) ? 3 : _metros.contains(il) ? 2 : 1;
 
-  /// Taşınma ağırlığı: büyükten küçüğe geçiş nadir (Anıl, 2026-11-05: "İstanbul seçtim, 3 yıla
-  /// Tekirdağ çok anlamlı bir ihtimal mi?").
-  static double _sizeFactor(String from, String to) {
-    final a = sizeOf(from), b = sizeOf(to);
-    if (b >= a) return 1.0;
-    return a - b >= 2 ? 0.05 : 0.25;
-  }
   static const _retireCoastIller = {'İzmir', 'Aydın', 'Muğla', 'Balıkesir', 'Antalya', 'Mersin', 'Çanakkale'};
 
   // ── Yükleme / kayıt ───────────────────────────────────────────────────────
@@ -357,10 +350,10 @@ class EvimEngine {
     final endYear = baseYear + horizon;
     final birthIl = d.matchIl(p.birthCity);
 
-    // Yurt dışı: senaryo başına tek zar
-    final baseAge = baseYear - userBirth;
-    final abroadPlanned = baseAge <= 45 && r.nextDouble() < (ogrenci || job.contains('ozelsektor') ? 0.05 : 0.03);
-    var abroadDone = false;
+    // Yurt dışı: orta/uzun vadede olası (Anıl, 2026-11-06: "uzun vade için yurt dışı da çıksın");
+    // en fazla 2 segment. Öğrenci/özel sektör biraz daha olası.
+    var abroadCount = 0;
+    final abroadBoost = (ogrenci || ozel) ? 1.3 : 1.0;
 
     final segs = <EvimSegment>[];
     var cursor = baseYear;
@@ -372,20 +365,25 @@ class EvimEngine {
       final age = cursor - userBirth;
       final retire = age >= 62;
 
-      // ── yurt dışı mı? ───────────────────────────────────────────────────
+      // ── vade + yurt dışı kararı ─────────────────────────────────────────
+      final offset = cursor - baseYear;
+      final term = offset < 5 ? 0 : offset < 15 ? 1 : 2; // 0 yakın · 1 orta · 2 uzun
       var goAbroad = false;
-      if (abroadPlanned && !abroadDone && prev != null && !prev.abroad && cursor >= baseYear + 5 &&
-          age >= 20 && age <= 50 && r.nextDouble() < 0.35) {
-        goAbroad = true;
+      if (prev != null && !prev.abroad && abroadCount < 2 && offset >= 4 && age >= 20) {
+        var pAbroad = term == 2 ? 0.30 : term == 1 ? 0.15 : 0.0; // uzun vadede daha olası
+        pAbroad *= abroadBoost;
+        if (age > 58) pAbroad *= 0.4; // yaşlıyken daha az, ama KAPALI değil
+        if (r.nextDouble() < pAbroad) goAbroad = true;
       }
 
-      var len = goAbroad ? min(_range(r, 3, 8), userBirth + 55 - cursor + 1) : _lengthFor(r, age);
+      // Yurt dışı uzunluğu kalan ufukla sınırlı (negatif uzunluk bug'ı: eski cap yaş>60'ta eksiydi).
+      var len = goAbroad ? min(_range(r, 3, 8), endYear - cursor + 1) : _lengthFor(r, age);
       final end = min(endYear, cursor + len - 1);
       len = end - cursor + 1;
 
       EvimSegment seg;
       if (goAbroad) {
-        abroadDone = true;
+        abroadCount++;
         final a = _pickW(r, d.yurtdisi, [for (final x in d.yurtdisi) x.w]);
         final dur = r.nextDouble() < 0.85 ? 'kiraci' : 'sahip';
         final tip = _pickW(r, ['apartman', 'site', 'mustakil'], [80, 15, 5]);
@@ -397,53 +395,16 @@ class EvimEngine {
           narrIdx: r.nextInt(d.anlati[pool]!.length),
         );
       } else {
-        // ── il seçimi ─────────────────────────────────────────────────────
+        // ── vade havuzlu yer seçimi (Anıl, 2026-11-06) ─────────────────────
+        //  yakın (0): mevcut şehir/çevre · orta (1): kıyı + başka metropol · uzun (2): Ege/Akdeniz kıyı.
+        //  İlk segmentten SONRA mevcut şehri (home) dışla → İstanbul/Ankara döngüsü biter, çeşitlilik + wow.
         final first = prev == null;
         final afterAbroad = prev?.abroad == true;
-        final ref = (first || afterAbroad) ? (first ? home : lastTrIl) : prev.il;
-        final anchor = afterAbroad ? home : ref;
-        late final String il;
-        EvimIlce? forced;
-        var coastRetire = false;
-        if (retire) {
-          final x = r.nextDouble();
-          if (x < 0.55) {
-            il = ref;
-          } else if (x < 0.80) {
-            final pool = d.ilceler.where((e) =>
-                _retireCoastIller.contains(e.il) && e.kiyi == 'kenar' && (e.profil == 'emekli' || e.profil == 'tatil'));
-            final list = pool.toList();
-            final pick = _pickW(r, list, [for (final e in list) e.profil == 'emekli' ? 3 : 2]);
-            forced = pick;
-            il = pick.il;
-            coastRetire = true;
-          } else if (birthIl != null && !_bigThree.contains(birthIl) && birthIl != ref) {
-            il = birthIl;
-          } else {
-            il = ref;
-          }
-        } else {
-          final kamuMove = kamu && age >= 30 && age <= 45 && !first;
-          // Yakın yıllarda aynı şehirde kalma çok olası; uzak gelecekte taşınma artar.
-          final offset = cursor - baseYear;
-          final w = first
-              ? const [94, 3, 3, 0]
-              : afterAbroad
-                  ? const [75, 10, 15, 0]
-                  : kamuMove
-                      ? const [58, 17, 18, 7]
-                      : offset < 10
-                          ? const [91, 3, 5, 1]
-                          : offset < 20
-                              ? const [78, 9, 10, 3]
-                              : const [66, 14, 15, 5];
-          final c = _pickW(r, [0, 1, 2, 3], w);
-          il = _chooseIl(r, d, c, anchor, age);
-        }
-
-        // ── ilçe ──────────────────────────────────────────────────────────
-        final ilce = forced ??
-            _pickIlce(r, d, il, age: age, evli: evli, exclude: (first || il != ref) ? null : prev.ilce);
+        final prevIl = afterAbroad ? home : lastTrIl;
+        final coastRetire = retire; // emeklilik anlatısı için
+        final ilce = _pickLocation(r, d, term: term, first: first, home: home,
+            prevIl: prevIl, prevIlce: (first || afterAbroad) ? null : prev.ilce,
+            birthIl: birthIl, age: age, retire: retire, evli: evli, kamu: kamu);
 
         // ── konut durumu ──────────────────────────────────────────────────
         final dur = _durum(r, age, evli, owner);
@@ -466,7 +427,7 @@ class EvimEngine {
         final coastalMain = ilce.kiyi != 'ic' && (ilce.profil == 'tatil' || ilce.profil == 'emekli');
         final yazP = (age >= 40 && age <= 60 && evli && ozel) ? 0.15 : 0.06;
         if (age >= 30 && dur != 'aile' && !coastalMain && r.nextDouble() < yazP) {
-          final near = {il, ...?d.komsu[il]};
+          final near = {ilce.il, ...?d.komsu[ilce.il]};
           final cands = d.ilceler.where((e) => e.kiyi == 'kenar' && (e.profil == 'tatil' || e.profil == 'emekli') &&
               !(e.il == ilce.il && e.ilce == ilce.ilce)).toList();
           final y = _pickW(r, cands, [for (final e in cands) near.contains(e.il) ? 4 : 1]);
@@ -502,26 +463,64 @@ class EvimEngine {
     return EvimTimeline(seed: seed, baseYear: baseYear, signature: signatureOf(p, home), segments: segs);
   }
 
-  /// c: 0 aynı il, 1 komşu, 2 başka büyükşehir, 3 sürpriz.
-  static String _chooseIl(Random r, EvimData d, int c, String ref, int age) {
-    bool ok(String il) => age < 50 || !farIller.contains(il) || il == ref;
-    // Büyükten küçüğe taşınma hem daha az seçilir hem de çoğunlukla "kabul edilmez" → aynı şehirde
-    // kalınır. Böylece komşularının hepsi küçük olan İstanbul'dan da kaçış olmaz.
-    String accept(String to) => r.nextDouble() < _sizeFactor(ref, to) ? to : ref;
-    switch (c) {
-      case 1:
-        final n = (d.komsu[ref] ?? const <String>[]).where(ok).toList();
-        return n.isEmpty ? ref : accept(_pickW(r, n, [for (final x in n) _sizeFactor(ref, x)]));
-      case 2:
-        final idx = [for (var i = 0; i < _metros.length; i++) if (_metros[i] != ref && ok(_metros[i])) i];
-        if (idx.isEmpty) return ref;
-        return accept(_metros[_pickW(r, idx, [for (final i in idx) _metroW[i] * _sizeFactor(ref, _metros[i])])]);
-      case 3:
-        final all = d.iller.where((e) => e != ref && ok(e)).toList();
-        return all.isEmpty ? ref : accept(_pickW(r, all, [for (final x in all) _sizeFactor(ref, x)]));
-      default:
-        return ref;
+  /// Vade havuzlu yer seçimi (Anıl, 2026-11-06). term: 0 yakın · 1 orta · 2 uzun.
+  /// İlk segment gerçekçi (mevcut şehir); sonra orta/uzun vadede mevcut şehir (home) DIŞLANIR →
+  /// İstanbul/Ankara döngüsü biter, kıyı/yurt dışı/çeşitlilik gelir.
+  static EvimIlce _pickLocation(Random r, EvimData d, {
+    required int term, required bool first, required String home, required String prevIl,
+    String? prevIlce, String? birthIl, required int age, required bool retire,
+    required bool evli, required bool kamu,
+  }) {
+    if (first) return _pickIlce(r, d, home, age: age, evli: evli, exclude: null);
+    if (retire) {
+      if (r.nextDouble() < 0.72) return _pickCoastal(r, d, excludeIl: null);
+      if (birthIl != null && !_bigThree.contains(birthIl)) return _pickIlce(r, d, birthIl, age: age, evli: evli);
+      return _pickIlce(r, d, prevIl, age: age, evli: evli, exclude: prevIlce);
     }
+    switch (term) {
+      case 0: // yakın: mevcut çevre (kamu + 28-45 yaş → tayin ile daha çok taşınma)
+        final w0 = (kamu && age >= 28 && age <= 45) ? const [44, 26, 30] : const [62, 20, 18];
+        final c = _pickW(r, [0, 1, 2], w0);
+        final il = c == 0 ? prevIl : c == 1 ? _neighbor(r, d, prevIl, age) : _otherMetro(r, {prevIl});
+        return _pickIlce(r, d, il, age: age, evli: evli, exclude: il == prevIl ? prevIlce : null);
+      case 1: // orta: kıyı + başka metropol — mevcut şehir dışla
+        final c = _pickW(r, [0, 1, 2], const [50, 35, 15]);
+        if (c == 0) return _pickCoastal(r, d, excludeIl: home);
+        if (c == 1) return _pickIlce(r, d, _otherMetro(r, {home, prevIl}), age: age, evli: evli);
+        return _pickIlce(r, d, _neighbor(r, d, prevIl, age), age: age, evli: evli);
+      default: // uzun: Ege/Akdeniz kıyı ağırlıklı — mevcut şehir dışla
+        final c = _pickW(r, [0, 1], const [65, 35]);
+        if (c == 0) return _pickCoastal(r, d, excludeIl: home);
+        return _pickIlce(r, d, _otherMetro(r, {home, prevIl}), age: age, evli: evli);
+    }
+  }
+
+  /// Ege/Akdeniz kıyı güzel ilçeler (Bodrum, Çeşme, Datça, Fethiye…). [excludeIl] varsa o il hariç.
+  static EvimIlce _pickCoastal(Random r, EvimData d, {String? excludeIl}) {
+    var l = d.ilceler
+        .where((e) => _retireCoastIller.contains(e.il) && e.kiyi == 'kenar' &&
+            (e.profil == 'tatil' || e.profil == 'emekli'))
+        .toList();
+    if (excludeIl != null) {
+      final f = l.where((e) => e.il != excludeIl).toList();
+      if (f.isNotEmpty) l = f;
+    }
+    if (l.isEmpty) l = d.ilceler.where((e) => e.kiyi == 'kenar').toList();
+    if (l.isEmpty) return d.ilceler.first;
+    return _pickW(r, l, [for (final e in l) e.profil == 'tatil' ? 3.0 : 2.0]);
+  }
+
+  static String _neighbor(Random r, EvimData d, String il, int age) {
+    final n = (d.komsu[il] ?? const <String>[])
+        .where((x) => age < 50 || !farIller.contains(x))
+        .toList();
+    return n.isEmpty ? il : n[r.nextInt(n.length)];
+  }
+
+  static String _otherMetro(Random r, Set<String> exclude) {
+    final idx = [for (var i = 0; i < _metros.length; i++) if (!exclude.contains(_metros[i])) i];
+    if (idx.isEmpty) return _metros.first;
+    return _metros[_pickW(r, idx, [for (final i in idx) _metroW[i].toDouble()])];
   }
 
   static EvimIlce _pickIlce(Random r, EvimData d, String il,

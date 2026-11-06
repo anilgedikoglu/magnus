@@ -82,75 +82,62 @@ void main() {
     }
   });
 
-  test('ardışık Türkiye segmentlerinde çoğunlukla aynı / komşu il (≥%70); anlamsız sıçrama azdır', () {
-    var total = 0, near = 0;
+  test('v2 vade havuzlu: senaryoda çeşitlilik var (50 yılda ≥3 farklı yer); tek şehirde takılmaz', () {
+    // Eski "≥%70 aynı/komşu" kuralı KALDIRILDI (Anıl: hep aynı şehir çıkıyor, çeşitlilik istiyor).
     for (var seed = 0; seed < 400; seed++) {
       final t = EvimEngine.generate(data, _p(), 'Ankara', baseYear: base, seed: seed);
-      for (var i = 1; i < t.segments.length; i++) {
-        final a = t.segments[i - 1], b = t.segments[i];
-        if (a.abroad || b.abroad) continue;
-        total++;
-        if (a.il == b.il || data.komsu[a.il]!.contains(b.il)) near++;
-      }
+      final yerler = <String>{for (final s in t.segments) s.abroad ? 'AB:${s.ulke}' : s.il};
+      expect(yerler.length, greaterThanOrEqualTo(3), reason: 'seed $seed çeşitlilik: $yerler');
     }
-    expect(near / total, greaterThanOrEqualTo(0.70), reason: '$near/$total');
   });
 
-  test('ilk segmentte mevcut il ağırlığı ~%94 (yakın yıllarda aynı şehir)', () {
-    var same = 0, neighbor = 0;
+  test('ilk segment DETERMİNİSTİK mevcut il (v2: yakın vade = yaşadığın şehir)', () {
+    var same = 0;
     const n = 1000;
     for (var seed = 0; seed < n; seed++) {
       final t = EvimEngine.generate(data, _p(), 'Ankara', baseYear: base, seed: seed);
-      final s = t.segments.first;
-      if (s.il == 'Ankara') same++;
-      if (data.komsu['Ankara']!.contains(s.il)) neighbor++;
+      if (t.segments.first.il == 'Ankara') same++;
     }
-    expect(same / n, inInclusiveRange(0.92, 0.99));
-    expect(neighbor / n, inInclusiveRange(0.0, 0.05));
+    expect(same, n); // ilk segment her zaman mevcut şehir (İstanbul/Ankara tekrarı değil, gerçekçi başlangıç)
   });
 
-  test('İstanbul: ilk 10 yılda aynı şehir çok olası, büyükten küçük şehre geçiş nadir', () {
-    var stayAll10 = 0, toSmall10 = 0, toSmallAll = 0;
-    const n = 1000;
+  test('İstanbul: ilk segment İstanbul; uzun vadede (15+ yıl) kıyı/yurt dışı baskın; İstanbul takılı kalmaz', () {
+    const coastIl = {'İzmir', 'Aydın', 'Muğla', 'Antalya', 'Balıkesir', 'Çanakkale', 'Mersin'};
+    var firstIst = 0, longNice = 0, longTotal = 0;
+    const n = 800;
     for (var seed = 0; seed < n; seed++) {
       final t = EvimEngine.generate(data, _p(), 'İstanbul', baseYear: base, seed: seed);
-      final tr10 = t.segments.where((s) => !s.abroad && s.start < base + 10).toList();
-      if (tr10.every((s) => s.il == 'İstanbul')) stayAll10++;
-      if (tr10.any((s) => EvimEngine.sizeOf(s.il) == 1)) toSmall10++;
-      if (t.segments.any((s) => !s.abroad && EvimEngine.sizeOf(s.il) == 1 && s.start - base < 30)) toSmallAll++;
+      if (t.segments.first.il == 'İstanbul') firstIst++;
+      for (final s in t.segments.where((s) => s.start - base >= 15)) {
+        longTotal++;
+        if (s.abroad || (coastIl.contains(s.il) && s.kiyi == 'kenar')) longNice++;
+      }
     }
-    expect(stayAll10 / n, greaterThan(0.75), reason: 'ilk 10 yıl hep İstanbul: $stayAll10/$n');
-    expect(toSmall10 / n, lessThan(0.04), reason: 'ilk 10 yılda küçük şehir: $toSmall10/$n');
-    expect(toSmallAll / n, lessThan(0.15), reason: '30 yılda küçük şehir: $toSmallAll/$n');
+    expect(firstIst / n, greaterThan(0.9), reason: 'ilk segment İstanbul: $firstIst/$n');
+    expect(longNice / longTotal, greaterThan(0.5), reason: 'uzun vade kıyı/yurt dışı: $longNice/$longTotal');
   });
 
-  test('yurt dışı: senaryoların <%8\'inde, 20-50 yaş ve ≥ bu yıl+5, en çok 1 segment; 60+ yaşta hiç yok', () {
+  test('v2 yurt dışı: orta/uzun vadede makul sıklıkta (artık nadir değil), en çok 2 segment, yakın vadede değil', () {
+    // Anıl: "uzun vade için yurt dışı da çıksın." Eski <%8 kuralı KALDIRILDI.
     for (final job in ['ogrenci', 'ozelsektoru', 'kamusektoru']) {
-      var abroadScenarios = 0;
-      const n = 800;
+      var withAbroad = 0;
+      const n = 600;
       for (var seed = 0; seed < n; seed++) {
         final t = EvimEngine.generate(data, _p(job: job, birth: '2004-01-01', age: 22), 'İzmir',
             baseYear: base, seed: seed);
         final ab = t.segments.where((s) => s.abroad).toList();
-        expect(ab.length, lessThanOrEqualTo(1));
+        expect(ab.length, lessThanOrEqualTo(2)); // en çok 2 stint
         if (ab.isNotEmpty) {
-          abroadScenarios++;
-          final s = ab.single;
-          expect(s.start, greaterThanOrEqualTo(base + 5));
-          expect(s.start - 2004, inInclusiveRange(20, 50));
-          expect(s.length, inInclusiveRange(3, 8));
-          expect(s.sehir, isNotEmpty);
-          // sonra Türkiye'ye dönüş (son segment değilse)
-          final idx = t.segments.indexOf(s);
-          if (idx < t.segments.length - 1) expect(t.segments[idx + 1].abroad, isFalse);
+          withAbroad++;
+          for (final s in ab) {
+            expect(s.start, greaterThanOrEqualTo(base + 4)); // yakın vadede değil
+            expect(s.length, inInclusiveRange(1, 8));
+            expect(s.sehir, isNotEmpty);
+            expect(s.end, greaterThanOrEqualTo(s.start)); // negatif uzunluk yok
+          }
         }
       }
-      expect(abroadScenarios / n, lessThan(0.08), reason: '$job: $abroadScenarios/$n');
-    }
-    for (var seed = 0; seed < 400; seed++) {
-      final t = EvimEngine.generate(data, _p(birth: '1966-05-05', age: 60, job: 'ozelsektoru'), 'İzmir',
-          baseYear: base, seed: seed);
-      expect(t.segments.any((s) => s.abroad), isFalse);
+      expect(withAbroad / n, greaterThan(0.1), reason: '$job yurt dışı artık görülür: $withAbroad/$n');
     }
   });
 
@@ -206,30 +193,25 @@ void main() {
     expect(EvimLabels.seaKey(101), 'uzak');
   });
 
-  test('50 yaş üstü: uzak doğu/sınır illeri çıkmaz; 62+ yaşta emeklilik düzeni (sahil/memleket) görülür', () {
-    var coast = 0, home = 0, stay = 0, total = 0;
+  test('50 yaş üstü sınır illeri çıkmaz; emeklilikte (62+) çoğunlukla Ege/Akdeniz kıyıya kayar (v2)', () {
+    var coast = 0, total = 0;
     for (var seed = 0; seed < 500; seed++) {
       final t = EvimEngine.generate(data, _p(birth: '1970-01-01', age: 56, city: 'Sivas'), 'Ankara',
           baseYear: base, seed: seed);
-      for (var i = 0; i < t.segments.length; i++) {
-        final s = t.segments[i];
+      for (final s in t.segments) {
         if (s.abroad) continue;
         if (s.start - 1970 >= 50) expect(EvimEngine.farIller, isNot(contains(s.il)), reason: 'seed $seed ${s.il}');
         if (s.start - 1970 >= 62) {
           total++;
-          if (s.il == 'Sivas') home++;
           if (['İzmir', 'Aydın', 'Muğla', 'Balıkesir', 'Antalya', 'Mersin', 'Çanakkale'].contains(s.il) &&
               s.kiyi == 'kenar') {
             coast++;
           }
-          if (i > 0 && t.segments[i - 1].il == s.il) stay++; // mevcut ilde kal
         }
       }
     }
     expect(total, greaterThan(300));
-    expect(stay / total, greaterThan(0.35)); // mevcut ilde kal en büyük pay
-    expect(coast / total, greaterThan(0.10));
-    expect(home / total, greaterThan(0.08));
+    expect(coast / total, greaterThan(0.4)); // emeklilik kıyıya kayar (Anıl: tatil/emeklilik yerleri)
   });
 
   test('kalıcılık: aynı kayıt, açılan kutular kalıcı, il/medeni hal değişince yeniden üretilir', () async {

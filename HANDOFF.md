@@ -3,6 +3,7 @@
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
 ## Ne yapıldı (2026-11-06 gece, 276 sonrası; main'de) + değişen dosyalar
+- **10.8.13+279 test build'i** (Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).
 Anıl: "her falın alınışı daha mistik/animatif/profesyonel olsun, Codex ve Grok'a danış". Envanter + Grok raporu:
 `build/visual_check/codex_review/fal_akis_envanteri.md` (gitignored). Codex'in fal akışı raporu kullanım sınırında yarım kaldı.
 - **Ana menü sohbet bandı:** önce yerinde durur, ızgara altına girer (`kHomeHeaderHold`); bant gizliyken yeni balon
@@ -25,7 +26,7 @@ Anıl: "her falın alınışı daha mistik/animatif/profesyonel olsun, Codex ve 
 - **Tavşan:** zarflar yukarı, çift göz kırpma (`tavsan_goz_kapali.png`, `tools/tavsan_kapali_goz.py`), kart dışına
   dokununca kapanır. Fal konusu ikonları yeniden çizildi (ChatGPT). AstroTakvim düğmeleri eski boyutta.
 - **Paralel İngilizce eksikleri:** El/Yüz Falı ekranları, Niyet, Tamua, Yana, yasal metin "Anladım", tarot yedek metni.
-- **Metin turları 11-14** (+611 metin) — ayrıntı `docs/metin_uretim_log.md`.
+- **Metin turları 11-17** (+1051 metin, toplam 2449; ChatGPT↔Codex iki yönlü seçim) — ayrıntı `docs/metin_uretim_log.md`.
 - **Claude kod incelemesi (14 bulgu) düzeltildi:** gizli bant belirince sohbet en alta kayar; UnlockFlash /
   ResultReveal içeriği yeniden kurmaz (GlobalKey / sabit ağaç); I-Ching animasyonu metindeki yazı-turadan aynı
   heksagramı çizer (`ichingCizgileri`, test); Kader Kitabı okurken 30 Hz + kitap önbellekte, deniz 30 Hz, sayfa alanı
@@ -34,7 +35,11 @@ Anıl: "her falın alınışı daha mistik/animatif/profesyonel olsun, Codex ve 
   **Bilerek bırakılanlar:** tek kart tarotta kart seçilince geri kilidi (klasik tarotla aynı; yeniden çekmeyi önler,
   alt bar çıkış yolu); deniz shader'ı 10 dk'da bir zaman sarması (tek karelik dalga sıçraması); çark metni dönüş
   başında no-repeat'e yazılıyor (dönerken çıkan kullanıcıda bir metin "görülmüş" sayılır).
-- Testler: 164 geçiyor; tek kırmızı takipsiz `test/_visual_starfield_capture_test.dart`.
+- **Codex gece incelemesi (7 bulgu) düzeltildi:** Kader Kitabı boşluksuz metinde çökmez (`splitKaderPages`);
+  ana menü bant dokunuş engeli parmak kalkınca sıfırlanır (ekran okuyucu kartı açabilir); Kader Çarkı / I-Ching
+  await sonrası `ref` kullanmaz; El Falı / I-Ching / Japon azaltılmış hareketi MediaQuery'den ekran açıkken de izler;
+  kitap dalgası ve odak nabzı dikişsiz. Yeni testler: `codex_gece_saf_mantik_test`, `reduced_motion_toggle_test`.
+- Testler: 170 geçiyor; tek kırmızı takipsiz `test/_visual_starfield_capture_test.dart`.
 
 ## Önceki (2026-11-06 gündüz)
 - **10.8.12+276 test build'i** (Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).
@@ -130,18 +135,17 @@ Anıl: "her falın alınışı daha mistik/animatif/profesyonel olsun, Codex ve 
   revizyon istemek karşı modelin metinlerini kopyalattı → yeni sohbet + DeepThink + taslaksız yazım.
 
 ## Sıradaki adım
-- **Metin döngüsü durumu (2026-11-05 20:50):** toplam eklenen **1398** (tur 1–10 tamam). Tur 11–14: ChatGPT yazımları
-  `C:\Users\AG\Desktop\indirilen\tur1[1-4]_*_chatgpt.json` (14/kahve_gelisme yeniden yazılıyor); ChatGPT'nin Codex
-  metinlerinden seçimleri oturum scratchpad'inde `bekleyen_secimler.json`. Codex kullanım sınırında (23:34'te kuyruk
-  `codex_isler.txt` kaldığı yerden: 12. tur 4 yazım + 11–14 seçim + 13–14 yazım). Kader Çarkı'na metin EKLENMEDİ —
-  koşul filtresi bozuk (tüm metinlerde `wheel mod=fal`), ayrı görev önerildi.
+- **Metin döngüsü durumu (2026-11-06 05:20):** toplam eklenen **2449** (tur 1–17 tamam). ⚠️ Anıl'ın Chrome'unda
+  ChatGPT oturumu 02:15'te düştü (yeni sayfa "Oturum aç"); döngüye devam için Anıl yeniden giriş yapmalı. Tur 18+
+  tanımları `scripts/metin_turu_hazirla.js` TURLAR'a eklenmeli. Kader Çarkı'na metin EKLENMEDİ — koşul filtresi bozuk
+  (tüm metinlerde `wheel mod=fal`), ayrı görev.
 - **METİN DÖNGÜSÜ SÜRÜYOR (Anıl: 4-5 bin ilave metin; "sonra 10 tur daha"):** toplam/ilerleme `docs/metin_uretim_log.md` en üstte.
   Hat: ChatGPT (Anıl'ın Chrome'u) + Codex CLI (`scripts/metin_codex.sh`); adımlar skill `magnus-metin-uretimi` → "Döngü akışı".
   Tur tanımları `scripts/metin_turu_hazirla.js` TURLAR[3..10] (9-10 önceki tanımları yeniden kullanır). Çalışma dosyaları
   oturum scratchpad'inde (metin_turN/, secimler.json, bekleyen_secimler.json) — yeni oturumda yoksa ilgili turu baştan üret.
   Codex kullanım sınırı dolunca saatini bekle; o arada ChatGPT tarafı sürer.
 
-- Anıl'ın 276 geri bildirimi → düzelt. Bir sonraki build `10.8.13+279`, yalnız "test çık" ile.
+- Anıl'ın 279 geri bildirimi → düzelt. Bir sonraki build `10.8.14+282`, yalnız "test çık" ile.
 - Cam bar seçim animasyonu: Anıl Instagram'da sekme dokunuşu kaydı gönderirse kare kare ölç, eşitle, Codex'e sor.
 - "Bir tur daha" denirse: `docs/metin_uretim_log.md` → "Sıradaki tur adayları" (Kahve Uğurlama, Kahve Bağlama,
   Japon, Kader Kitabı, Kâhinler) + `magnus-metin-uretimi` skill'i.

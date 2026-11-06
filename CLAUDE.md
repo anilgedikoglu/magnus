@@ -5,7 +5,9 @@
 > Yeni session: önce burayı oku. Sürüm, build, tamamlananlar burada.
 
 ### Sürüm
-- **main'deki sürüm: `10.8.12+276`** (2026-11-06 test build'i: yüzen sıvı cam bar tüm uygulamada + kaydırmayla küçülme,
+- **main'deki sürüm: `10.8.13+279`** (2026-11-06 sabah test build'i: fal ritüelleri yeniden — Kader Çarkı ve
+  Kader Kitabı yeniden, tarot deste dağıtma, kahve buharı, odak nabzı, kilit parıltısı, I-Ching metinle aynı heksagram;
+  Claude + Codex kod incelemesi düzeltmeleri; metin turları 11–17 (+1051, toplam 2449). Önceki 276: yüzen sıvı cam bar tüm uygulamada + kaydırmayla küçülme,
   Geri Git'ler kaldırıldı, Kullanıcı Bilgileri kart kart, ana menü 3 düzen (1/3 ihtimal), sohbet bandı satır kadar,
   19 HD büyük kart görseli. Önceki 273:) 3 ikonlu cam bar Ev·Zarf·Profil, tek kaydırmalı
   3×9 ana menü, zarf rozeti turuncu/yeşil, yönlü esneyen kapsül + ~180 yeni metin. Önceki 270; önceki 267: 4 yeni fal — Tavşan Falı, Kısmetim Kim?, Arabam Ne?,
@@ -22,12 +24,21 @@
 - **10.8.8+264 (2026-11-05, iOS TestFlight GitHub Actions):** Anıl cihazda gördü → RENKLER ESKİ PALETE döndü
   (yapı kaldı), gövde fontları eski (Nunito/Raleway; başlıklar Cinzel), sol kenardan kaydır = geri (tüm iç sayfalar),
   gelen kutusu hep sağdan, Kullanıcı Bilgileri düzenleyicisi dairelerin YERİNDE (satır içi), siyah ekran düzeltmesi.
-- **Bir sonraki build: `10.8.13+279`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
+- **Bir sonraki build: `10.8.14+282`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).
 
-### En son session'da tamamlananlar (2026-11-05 — TÜM UYGULAMA "Gece Grimuarı" yeniden tasarımı)
+### En son session'da tamamlananlar (2026-11-06 gece — fal ritüelleri + kod incelemesi + metin turları)
+Ayrıntı → HANDOFF.md "Ne yapıldı (2026-11-06 gece…)". Yeni ortak parçalar (`lib/core/widgets/`): `FocusRipple`
+(kum saati yerine nabız gözü), `UnlockFlash` (kilit açılış parıltısı), `ResultReveal` (fal detayı ışık süpürmesi),
+`StaggerIn`, `LivingSea` (+ `shaders/living_sea.frag`); `tarot/deck_deal.dart`, `coffee/cup_steam.dart`.
+**Azaltılmış hareket:** her yerde `MediaQuery.maybeDisableAnimationsOf(context)` ile ve `didChangeDependencies`'te oku
+(platformDispatcher DEĞİL — ekran açıkken ayar değişirse de uyulmalı). Döngüsel animasyonda frekansları tam sayı seç
+(sarmada sıçrama olmasın). await sonrası `ref.read` yapma — ref'i await ÖNCESİ al.
+Claude code-reviewer (14 bulgu) + Codex gece incelemesi (7 bulgu) düzeltildi. Testler: 170 geçiyor.
+
+### Önceki session (2026-11-05 — TÜM UYGULAMA "Gece Grimuarı" yeniden tasarımı)
 Anıl: "daha az renkli, ciddi, ürpertici, koyu, liquid glass, çok cilalı". Tüm ekranlar (ana menü 3 sayfa,
 Kullanıcı Bilgileri + açılır pencereleri, Gelen Kutusu, fal detayı, 28 fal ekranı, onboarding balonları)
 tek dile geçti: mürekkep zemin + filmli görseller + cam kartlar + TEK vurgu mum altını + Cinzel/Jost/EB Garamond

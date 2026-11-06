@@ -1654,6 +1654,18 @@ class SettingsScreen extends ConsumerWidget {
       }
     });
 
+    // Roller/tarih düzenleyicisi (380 px kutu) açılınca sayfa scroll'u kilitlenir (aşağıda);
+    // küçük ekranda 1. kart tam boyken düzenleyicinin kaydet/iptal'i foldun altında kalabilirdi
+    // (Codex P1). Bu düzenleyiciler açıkken 1. kartı otomatik sıkıştır → ekrana sığar, düğmelere
+    // ulaşılır; kapanınca eski haline döner. Profil/metin düzenleyicisi 380 kutuda değil (dokunma).
+    ref.listen<_InlineEdit?>(_inlineEditProvider, (prev, next) {
+      final wantCompact =
+          next != null && next.fieldType != 'profile' && next.fieldType != 'text';
+      if (ref.read(_profileCompactProvider) != wantCompact) {
+        ref.read(_profileCompactProvider.notifier).state = wantCompact;
+      }
+    });
+
     // Araya giren KUTUCUK düzenleyicisi açıkken sayfa scroll'u KİLİTLENİR (Anıl, 2026-11-06):
     // seçeneklerin (roller/metin) scroll'u ile sayfa scroll'u karışmasın; 1. kart ve ekran konumu
     // sabit kalsın. Düzenleyici X/iptal/kaydet/aynı kutuya tekrar dokunuşla kapanınca açılır.

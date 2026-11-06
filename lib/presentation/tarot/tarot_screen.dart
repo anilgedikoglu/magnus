@@ -565,6 +565,10 @@ class _TarotScreenState extends ConsumerState<TarotScreen>
     try {
       final profile = ref.read(userProfileProvider);
       final service = ref.read(fortuneServiceProvider);
+      // ref'leri await'ten ÖNCE yakala → ekran dispose olsa bile sonuç inbox'a teslim edilir
+      // (Codex P1: await sonrası ref.read disposed widget'ta fırlar, no-repeat/hak işaretlenmiş olurdu).
+      final inbox = ref.read(inboxProvider.notifier);
+      final loc = ref.read(localeProvider);
       await service.init();
 
       // Seçilen kartları sırayla (gecmis→simdi→gelecek) listele
@@ -579,9 +583,9 @@ class _TarotScreenState extends ConsumerState<TarotScreen>
       final item = await service.generateTarotFortune(
         profile: profile,
         cards: cardList,
-        locale: ref.read(localeProvider),
+        locale: loc,
       );
-      await ref.read(inboxProvider.notifier).addItem(item);
+      await inbox.addItem(item);
       if (!mounted) return;
       // Ana menüye dön ve "tarot gönderildi" balon bildirimini tetikle
       ref.read(tarotSentProvider.notifier).state = true;

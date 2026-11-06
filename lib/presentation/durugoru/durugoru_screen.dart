@@ -126,6 +126,9 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
 
     HapticFeedback.mediumImpact();
     setState(() => _vurgulu = tip);
+    // ref'leri await'ten ÖNCE yakala → ekran dispose olsa bile sonuç inbox'a teslim edilir (Codex P1).
+    final inbox = ref.read(inboxProvider.notifier);
+    final isEn = ref.read(localeProvider) == 'en';
     await Future<void>.delayed(const Duration(milliseconds: 620));
     if (!mounted) return;
     setState(() => _odaklaniyor = true);
@@ -163,7 +166,6 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
 
     kalan.shuffle(Random());
     final secilen = kalan.first;
-    final isEn = ref.read(localeProvider) == 'en';
     final secilenMetin = (isEn && (secilen['metin_en'] as String?)?.isNotEmpty == true)
         ? secilen['metin_en'] as String
         : secilen['metin'] as String;
@@ -186,7 +188,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
       iconAsset:      'assets/images/menu/durugoru.png',
       unlockAt:       unlockAt,
     );
-    ref.read(inboxProvider.notifier).addItem(item);
+    inbox.addItem(item);
 
     // 2 saniye animasyon sonra ana menüye dön
     await Future.delayed(const Duration(seconds: 2));

@@ -671,6 +671,9 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen>
     try {
       final profile = ref.read(userProfileProvider);
       final service = ref.read(fortuneServiceProvider);
+      // ref'leri await'ten ÖNCE yakala → dispose olsa bile sonuç inbox'a teslim edilir (Codex P1).
+      final inbox = ref.read(inboxProvider.notifier);
+      final loc = ref.read(localeProvider);
       await service.init();
 
       final card = _shuffled[_selectedIndex!];
@@ -679,9 +682,9 @@ class _SingleTarotScreenState extends ConsumerState<SingleTarotScreen>
         type: widget.type,
         cardJsonName: card.jsonName,
         cardDisplayName: card.displayName,
-        locale: ref.read(localeProvider),
+        locale: loc,
       );
-      await ref.read(inboxProvider.notifier).addItem(item);
+      await inbox.addItem(item);
       if (!mounted) return;
       ref.read(tarotSentProvider.notifier).state = true;
       context.go('/home');

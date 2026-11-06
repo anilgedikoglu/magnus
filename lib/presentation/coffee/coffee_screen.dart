@@ -147,19 +147,14 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     // başlatmasın — Codex P2). _sending guard'da ve butonda zaten kontrol ediliyor.
     setState(() => _sending = true);
 
-    // Günlük hakkı ŞİMDİ işaretle (kullanıcı 4 sn'lik "gönderiliyor" ekranı dolmadan geri çıksa bile
-    // günde-1 kuralı korunur). HomeScreen _checkKahveSent de aynı anahtar/format → idempotent.
-    try {
-      await ref
-          .read(sharedPrefsProvider)
-          .setString('kahve_bugun_tarih', DateTime.now().toIso8601String().substring(0, 10));
-    } catch (_) {}
-    if (!mounted) return;
-
-    // Fal üretimini hemen arka planda başlat (sabitlenen fotoğraflarla)
+    // Üretim + inbox teslimi + günlük hak işaretlemesi ekran yaşamından BAĞIMSIZ (Codex P1):
+    // ref'leri await'ten ÖNCE yakala, fal üretimini hemen fire-and-forget başlat, sonra hakkı işaretle.
+    // Böylece 4 sn'lik "gönderiliyor" ekranı dolmadan çıkılsa bile fal kaybolmaz / hak boşa gitmez.
     final fortuneService = ref.read(fortuneServiceProvider);
     final profile = ref.read(userProfileProvider);
     final inboxNotifier = ref.read(inboxProvider.notifier);
+    final prefs = ref.read(sharedPrefsProvider);
+    final locale = ref.read(localeProvider);
 
     fortuneService.generateCoffeeFortune(
       profile: profile,
@@ -167,8 +162,14 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       photoPath2: p2,
       photoPath3: p3,
       falKonusu: _falKonusu ?? 'genel',
-      locale: ref.read(localeProvider),
+      locale: locale,
     ).then((item) => inboxNotifier.addItem(item)).catchError((_) {});
+
+    // Günlük hakkı işaretle (HomeScreen _checkKahveSent de aynı anahtar/format → idempotent).
+    try {
+      await prefs.setString(
+          'kahve_bugun_tarih', DateTime.now().toIso8601String().substring(0, 10));
+    } catch (_) {}
 
     // 4 saniye fincanın altında kum saati göster (_sending yukarıda zaten true).
     if (!mounted) return;

@@ -209,6 +209,8 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
     // Yeni rapor: loading göster (hesaplanan sayılarla)
     final profile = ref.read(userProfileProvider);
     final isEn = ref.read(localeProvider) == 'en';
+    // inbox notifier'ı await'ten ÖNCE yakala → dispose olsa bile teslim edilir (Codex P1).
+    final inbox = ref.read(inboxProvider.notifier);
     final List<(String, int)> sayilar;
     if (tur == _RaporTur.bugun) {
       sayilar = [(isEn ? 'Day Number' : 'Günün Sayısı', NumerologiHesap.bugunSayisi(profile))];
@@ -253,7 +255,7 @@ class _NumerologiScreenState extends ConsumerState<NumerologiScreen> {
       await prefs.setString('num_bugun_metin', metin);
       await prefs.setString('num_bugun_unlock', unlockIso);
     }
-    await ref.read(inboxProvider.notifier).addItem(InboxItem(
+    await inbox.addItem(InboxItem(
       id:             _uuid.v4(),
       title:          'Numeroloji — ${tur.label}',
       text:           metin,

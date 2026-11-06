@@ -41,6 +41,21 @@ Anıl 279'u cihazda gezip düzeltme istedi. Hepsi commit+push (build YALNIZ "tes
   `brands()`, `brandStartLevel()`, `_progressLevel()`, imzaya marka. 6 yeni test.
 - **Basılı-tut girişi** (`core/widgets/hold_to_reveal.dart` `HoldToReveal`): kısmetim/arabam/evim ilk ekranda
   seçim sonrası basılı-tut → geleceğe odaklan (Aşk Uyumu gibi). Azaltılmış harekette tek dokunuş.
+- **Kapat/Tamam/Kaydet butonları kaldırıldı:** Faloya/Maganda/Tamua (Kapat), Kahinler sonucu `kahin_metin` (Tamam),
+  Motivasyon (Kaydet + kullanılmayan kayıt mantığı temizlendi). Geri dönüş kenardan kaydırma.
+- **Yana** sonucunda soldan-sağa swipe geri çalışır (kendi `SwipeBack`'i; PopScope canPop:false iken global
+  EdgeSwipeBack `doNotPop` görüp durmuştu); sol üstte "Geri Git" yazısı yalnız ok.
+- **Yüz Falı: API → CİHAZ-İÇİ (offline) analiz** (`lib/data/services/face_analyzer.dart`, Anıl + Codex). İnternet
+  hatasında çökme bitti. Saf Dart + `image`: YCbCr ten, HSV saç/göz rengi, kenar yoğunluğu gözlük, çene-yanak sakal;
+  cinsiyet profilden; moral/şapka/küpe/saç boyu fotoğraf hash'inden deterministik. isHuman hep true. Test:
+  `test/face_analyzer_test.dart` (sentetik görsel). Eşikler Codex raporunda.
+  - **GÜÇLENDİRME — ML Kit yüz tespiti** (`face_landmarks.dart`, `google_mlkit_face_detection`): yüz kutusu bulunup
+    görüntü yüze göre kırpılır → sabit % bölgeler gerçek yüze oturur (Codex: asıl hata kaynağı kadraj) + gülümsemeden
+    moral. **GÜVENLİ YEDEK:** ML Kit yoksa/başarısızsa/test ortamında tam görüntü sezgi motoruna düşer → çökmez.
+  - ⚠️ **ML Kit iOS ASGARİ 15.5 İSTER** → `ios/Podfile` + `pbxproj` 13→**15.5** çıkarıldı (Anıl onayı; eski iOS
+    kullanıcıları dışlanır). ML Kit yolu ANCAK cihaz build'inde (TestFlight) doğrulanır; pod sorunu çıkarsa orada bak.
+    Gray-world beyaz dengesi denendi, yüz ten-baskın olduğu için rengi bozdu → kaldırıldı.
+  - Not: Kahve/El Falı HÂLÂ `ClaudeVisionService` (API) kullanıyor → istenirse onlara da offline muamele.
 - ⚠️ **YARIM — ChatGPT oturumu KAPALI:** (1) numeroloji 3 mistik ikon, (2) kısmetim/arabam/evim SONUÇ ekranlarına
   üstte tematik görsel (kısmet/araba/ev). İkisi de ChatGPT görseli ister → Anıl girince üret-indir-göm, düzen hazır.
 

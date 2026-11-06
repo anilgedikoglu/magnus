@@ -3,7 +3,7 @@
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
 ## Ne yapıldı (2026-11-06 gece, 276 sonrası; main'de) + değişen dosyalar
-- **10.8.13+279 test build'i** (Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).
+- **10.8.13+279 test build'i** (2026-11-06 05:25 Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).
 Anıl: "her falın alınışı daha mistik/animatif/profesyonel olsun, Codex ve Grok'a danış". Envanter + Grok raporu:
 `build/visual_check/codex_review/fal_akis_envanteri.md` (gitignored). Codex'in fal akışı raporu kullanım sınırında yarım kaldı.
 - **Ana menü sohbet bandı:** önce yerinde durur, ızgara altına girer (`kHomeHeaderHold`); bant gizliyken yeni balon
@@ -146,6 +146,8 @@ Anıl: "her falın alınışı daha mistik/animatif/profesyonel olsun, Codex ve 
   Codex kullanım sınırı dolunca saatini bekle; o arada ChatGPT tarafı sürer.
 
 - Anıl'ın 279 geri bildirimi → düzelt. Bir sonraki build `10.8.14+282`, yalnız "test çık" ile.
+- Apple uyarısı (279 yüklemesinde): iOS dağıtım hedefi 13.0; **Nisan 2027'den itibaren en az 15.0** gerekir →
+  `ios/Podfile` `platform :ios` + Xcode `IPHONEOS_DEPLOYMENT_TARGET` 15.0'a çıkarılmalı (eklentilerle birlikte dene).
 - Cam bar seçim animasyonu: Anıl Instagram'da sekme dokunuşu kaydı gönderirse kare kare ölç, eşitle, Codex'e sor.
 - "Bir tur daha" denirse: `docs/metin_uretim_log.md` → "Sıradaki tur adayları" (Kahve Uğurlama, Kahve Bağlama,
   Japon, Kader Kitabı, Kâhinler) + `magnus-metin-uretimi` skill'i.

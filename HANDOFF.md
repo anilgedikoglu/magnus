@@ -26,7 +26,15 @@ Anıl: "her falın alınışı daha mistik/animatif/profesyonel olsun, Codex ve 
   dokununca kapanır. Fal konusu ikonları yeniden çizildi (ChatGPT). AstroTakvim düğmeleri eski boyutta.
 - **Paralel İngilizce eksikleri:** El/Yüz Falı ekranları, Niyet, Tamua, Yana, yasal metin "Anladım", tarot yedek metni.
 - **Metin turları 11-14** (+611 metin) — ayrıntı `docs/metin_uretim_log.md`.
-- Testler: 157+ geçiyor; tek kırmızı takipsiz `test/_visual_starfield_capture_test.dart`.
+- **Claude kod incelemesi (14 bulgu) düzeltildi:** gizli bant belirince sohbet en alta kayar; UnlockFlash /
+  ResultReveal içeriği yeniden kurmaz (GlobalKey / sabit ağaç); I-Ching animasyonu metindeki yazı-turadan aynı
+  heksagramı çizer (`ichingCizgileri`, test); Kader Kitabı okurken 30 Hz + kitap önbellekte, deniz 30 Hz, sayfa alanı
+  büyüdü (360 dp en uzun metin 9,9 px) + kitaba dokununca büyük yazılı okuma penceresi; Durugörü boş havuzda kilitlenmez;
+  tarot çift dokunuş koruması; El Falı taraması döngüde; azaltılmış hareket eksikleri; çark gölgesi ayrı katman.
+  **Bilerek bırakılanlar:** tek kart tarotta kart seçilince geri kilidi (klasik tarotla aynı; yeniden çekmeyi önler,
+  alt bar çıkış yolu); deniz shader'ı 10 dk'da bir zaman sarması (tek karelik dalga sıçraması); çark metni dönüş
+  başında no-repeat'e yazılıyor (dönerken çıkan kullanıcıda bir metin "görülmüş" sayılır).
+- Testler: 164 geçiyor; tek kırmızı takipsiz `test/_visual_starfield_capture_test.dart`.
 
 ## Önceki (2026-11-06 gündüz)
 - **10.8.12+276 test build'i** (Android Play Dahili test + iOS TestFlight; incelemeye GÖNDERİLMEDİ).

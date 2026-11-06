@@ -35,6 +35,7 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
   Timer? _typeTimer;
   int _charIndex = 0;
   bool _loading = true;
+  bool _secimYapildi = false; // hizli cift-dokunus korumasi (tek reklam/tek secim)
 
   // Parlaklık titremesi — 1200ms hızlı
   late AnimationController _glowCtrl;
@@ -102,6 +103,11 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
   }
 
   Future<void> _onSoruSecildi(int index) async {
+    // Soru kartlari, asset/prefs await'leri bitip _adim 'odaklaniyor'a gecene
+    // kadar ekranda kalir → bu pencerede ikinci dokunus ikinci reklam acardi.
+    if (_secimYapildi) return;
+    _secimYapildi = true;
+
     final str = await rootBundle.loadString('assets/data/maganda.json');
     final data = jsonDecode(str);
     final List cevaplar = data['cevaplar'] ?? [];

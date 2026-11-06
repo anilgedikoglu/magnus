@@ -7,13 +7,23 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 2149** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120) — her tur sonunda güncelle.
+- **Toplam eklenen: 2309** (tur 1: 100, tur 2: 100, tur 3: 138, tur 4: 160, tur 5: 140, tur 6: 140, tur 7: 140, tur 8: 180, tur 9: 160, tur 10: 140, tur 11: 174, tur 12: 157, tur 13: 140, tur 14: 160, tur 15: 120, tur 16: 160) — her tur sonunda güncelle.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
 - Kuyruk (sıradaki turlar; tükenince 2. tura dön): Kahve Bağlama · Kahve Gelişme (2) · Kahve Sonuç (2) · Kahve Karşılama ·
   Yana Yaşama Dair · Yana Bana Dair (2) · Tavşan (2) · Niyet (2) · Faloya (2) · Durugörü Yarın (2) · Durugörü Gelecek (2) ·
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 16 — 2026-11-06 sabaha karşı (160 metin)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Kahve – Giriş | `kahve_giris.json` › `girisler` | 809–828 |
+| Kahve – Bağlama | `kahve_baglama.json` › `baglamalar` | 331–370 |
+| Yana – Yaşama Dair | `yana.json` › `yasama_dair` | 191–230 (Codex ilk seçimde cold reading ölçütüyle 0 seçti; kompartmana özel notla yeniden seçtirildi) |
+| Faloya | `faloya.json` › `faloya` | 206–245 |
+| Durugörü – Gelecek | `durugoru_gno.json` › `durugoru_gno` | 107–126 |
 
 ## Tur 15 — 2026-11-06 sabaha karşı (120 metin; ChatGPT + Codex; seçim+çeviri tek mesajda)
 

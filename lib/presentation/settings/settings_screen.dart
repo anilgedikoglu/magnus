@@ -556,6 +556,12 @@ class _InlineEdit {
 
 final _inlineEditProvider = StateProvider<_InlineEdit?>((ref) => null);
 
+// CAM/GLASS kaydırıcısı parmakla tutulurken profil→gelen kutusu sekme kaydırması (TabSwipe)
+// tetiklenmesin: kaydırıcıya dokunuşta true olur (kaydırıcının kendi Listener'ı TabSwipe'ın
+// Listener'ından ÖNCE, daha içte tetiklenir → TabSwipe pointer-down'da enabled'ı false görür),
+// parmak kalkınca/iptalde false. Yatay sürüklemenin sekme değiştirmesi böyle engellenir (Anıl).
+final _glassDragProvider = StateProvider<bool>((ref) => false);
+
 /// 1. kartın altındaki ARA panel isteği (Anıl, 2026-11-05): "hali hazırda açık olan
 /// (araya giren) kapanmadan bir diğer araya giren çıkamaz; kapatıp öyle çıkacak".
 /// Açık panel varsa önce kapanır (300 ms), sonra yenisi açılır.
@@ -1653,7 +1659,9 @@ class SettingsScreen extends ConsumerWidget {
       body: TabSwipe(
         threshold: 60,
         enabled: () =>
-            MainTabsScope.maybeOf(context) != null && ref.read(_inlineEditProvider) == null,
+            MainTabsScope.maybeOf(context) != null &&
+            ref.read(_inlineEditProvider) == null &&
+            !ref.read(_glassDragProvider),
         onSwipeRight: () => selectMainTab(context, MainTab.inbox, entry: TabEntry.left),
         child: Stack(
           children: [
@@ -3081,17 +3089,23 @@ class _GlassTintSection extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 10),
-          DecoratedBox(
-            decoration: BoxDecoration(
-              color: const Color(0xFF1A191B),
-              borderRadius: BorderRadius.circular(26),
-            ),
-            child: LiquidGlassSlider(
-              key: const ValueKey('glassTintSlider'),
-              value: tint,
-              semanticLabel: s.glassTransparency,
-              onChanged: (v) => ref.read(glassTintProvider.notifier).preview(v),
-              onChangeEnd: (v) => ref.read(glassTintProvider.notifier).commit(v),
+          // Kaydırıcıya dokunuş → sekme kaydırmasını kilitle (yatay sürükleme mesajlara geçmesin).
+          Listener(
+            onPointerDown: (_) => ref.read(_glassDragProvider.notifier).state = true,
+            onPointerUp: (_) => ref.read(_glassDragProvider.notifier).state = false,
+            onPointerCancel: (_) => ref.read(_glassDragProvider.notifier).state = false,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A191B),
+                borderRadius: BorderRadius.circular(26),
+              ),
+              child: LiquidGlassSlider(
+                key: const ValueKey('glassTintSlider'),
+                value: tint,
+                semanticLabel: s.glassTransparency,
+                onChanged: (v) => ref.read(glassTintProvider.notifier).preview(v),
+                onChangeEnd: (v) => ref.read(glassTintProvider.notifier).commit(v),
+              ),
             ),
           ),
           const SizedBox(height: 6),

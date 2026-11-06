@@ -60,4 +60,39 @@ void main() {
     await tester.dragFrom(const Offset(300, 400), const Offset(-150, 0));
     expect(calls, isEmpty);
   });
+
+  // Cam kaydırıcısı düzeltmesi: içteki bir kontrol (daha derin Listener) dokunuşta bayrağı
+  // kaldırır; TabSwipe pointer-down'da enabled'ı false görür → o kontrolün üstünde başlayan
+  // yatay sürükleme sekme değiştirmez. Kontrol dışında kaydırma hâlâ çalışır.
+  testWidgets('içteki kontrolde başlayan yatay sürükleme sekme değiştirmez', (tester) async {
+    var onControl = false;
+    await tester.pumpWidget(MaterialApp(
+      home: TabSwipe(
+        enabled: () => !onControl,
+        onSwipeRight: () => calls.add('sag'),
+        child: Stack(children: [
+          const Positioned.fill(child: ColoredBox(color: Colors.black)),
+          Positioned(
+            left: 100,
+            top: 380,
+            width: 160,
+            height: 60,
+            child: Listener(
+              behavior: HitTestBehavior.opaque,
+              onPointerDown: (_) => onControl = true,
+              onPointerUp: (_) => onControl = false,
+              onPointerCancel: (_) => onControl = false,
+              child: const SizedBox.expand(),
+            ),
+          ),
+        ]),
+      ),
+    ));
+    // Kaydırıcının üstünde başlayan sürükleme → sekme değişmez.
+    await tester.dragFrom(const Offset(150, 410), const Offset(150, 0));
+    expect(calls, isEmpty);
+    // Kaydırıcı dışında başlayan sürükleme → sekme değişir (800×600 test ekranında).
+    await tester.dragFrom(const Offset(150, 520), const Offset(150, 0));
+    expect(calls, ['sag']);
+  });
 }

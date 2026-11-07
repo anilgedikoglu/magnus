@@ -7,8 +7,10 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 5099** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100, 2026-11-07 tur dışı
-  ChatGPT turları: 250 [motivasyon 50, faloya 40, niyet 30, yana 80, kâhin 50], tur 28: 100, tur 29: 100, tur 30: 100, tur 31: 100, tur 32: 100, tur 37: 100, tur 34: 100, tur 35: 100, tur 36: 100, tur 33: 100, tur 42: 100, tur 40: 100, tur 39: 100, tur 41: 100) — her tur sonunda güncelle.
+- **Toplam eklenen: 5199** ✅ hedef (4.000–5.000) aşıldı (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100, 2026-11-07 tur dışı
+  ChatGPT turları: 250 [motivasyon 50, faloya 40, niyet 30, yana 80, kâhin 50], tur 28: 100, tur 29: 100, tur 30: 100, tur 31: 100, tur 32: 100, tur 37: 100, tur 34: 100, tur 35: 100, tur 36: 100, tur 33: 100, tur 42: 100, tur 40: 100, tur 39: 100, tur 41: 100, tur 38: 100) — her tur sonunda güncelle.
+  **"20 tur daha" döngüsü (tur 23–42) TAMAMLANDI (2026-11-08).** Tur 28–32 ChatGPT yazar, 33–42 Claude yazar (ChatGPT
+  oturumu düştü); hepsinde Claude ajanı seçer/denetler/çevirir, ekle + tur_kontrol ana oturum.
   (Ayrıca fal-metni dışı: Maganda 20 soru + 244 cevap, Dert Ortağı 400 yeni tavsiye seti + 200 soru EN — 2026-11-07.)
   (tur 1-20 dağılımı: 100/100/138/160/140/140/140/180/160/140/174/157/140/160/120/160/140/110/115/75.)
 - **2026-11-07 Anıl "20 tur daha" döngüsü (tur 23-42):** `metin_turu_hazirla.js` TURLAR[23-42] = 5'li grup ×4 — KAHIN (derun/khaleesi/uraz/likia/yousuf) · KAHVE (giriş/bağlama/gelişme/sonuç/uğurlama) · SHORTS (tavşan/niyet/faloya/yana_bana/yana_yasama) · DURU (bugün/yarın/gelecek/kaderkitabı/astroyorum) · ICERIK (motivasyon/olumlama/acıgerçekler/kahve_karşılama/karşılama_z1). Her kompartman dörder geçiş. Yazar ChatGPT (Codex 11 Kasım'a dek sınırda), çeviri ChatGPT.
@@ -18,6 +20,18 @@
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 38 — 2026-11-08 (100 metin; 5 kâhin; **CLAUDE YAZAR**; döngünün son turu)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Kâhin Derun | `kahinler.json` › `kahinler.derun` | derun_179–198 ("…güce selam olsun" 2/20) |
+| Kâhin Khaleesi | `kahinler.json` › `kahinler.khaleesi` | khaleesi_177–196 |
+| Kâhin Uraz | `kahinler.json` › `kahinler.uraz` | uraz_152–171 |
+| Kâhin Likia | `kahinler.json` › `kahinler.likia` | likia_173–192 |
+| Kâhin Yousuf | `kahinler.json` › `kahinler.yousuf` | yousuf_168–187 |
+
+> Kâhinler arası ortak 4-gram 25 → 0; orta paragraf "Yakında…" açılışı (Likia 13, Yousuf 19, Uraz 18/20) → kâhin başına 1–3.
 
 ## Tur 41 — 2026-11-08 (100 metin; durugörü + kader kitabı + astro; **CLAUDE YAZAR**)
 

@@ -25,7 +25,11 @@
   (yapı kaldı), gövde fontları eski (Nunito/Raleway; başlıklar Cinzel), sol kenardan kaydır = geri (tüm iç sayfalar),
   gelen kutusu hep sağdan, Kullanıcı Bilgileri düzenleyicisi dairelerin YERİNDE (satır içi), siyah ekran düzeltmesi.
 - **main'deki sürüm (2026-11-07 18:49 ÇIKTI): `10.8.26+294`** — **Android Play Dahili test YAYINLANDI + iOS TestFlight YÜKLENDİ (GitHub Actions).** İçerik: Dert Ortağı her derde 3 tavsiye seti (`dermanSetleri`/`dermanSetleri_en`, derman adımına geçerken no-repeat `dert_set_<id>_gosterilen`) + 200 soruya `metin_en` (liste kartı + derman alıntısı locale'e göre); Maganda 56 soru, `cevaplar` soruId-bazlı obje `{ "<id>": {metinler:[5], metinler_en:[5]} }` (seçilen soruya UYGUN cevaptan no-repeat `maganda_cevap_<id>_gosterilen`); Kısmetim/Arabam gerçek flu görseller (`kismetim/portre_01..16.jpg`, `arabam/araba_01..16.jpg`; `BlurRevealSpinner` yedek `errorBuilder`'da); `papirus.png` → `BurningPaper`; kahve foto yuvaları EŞİT; `photo_subject_detector` fail-open (bozuk/eksik dosya hiçbir konuda engellemez) + ML Kit yokken ten-baskın (≥0.30) fincan reddi. AAB 170MB ana klasörden, parça-birleştir+SHA-256 ile Play'e. Önceki: 291 (ayarlar hep-açık, esneme yok, chat 3sn/10sn), 288 (+500 metin), 285, 282 (foto ön kontrol, chat pop-up).
-- **Bir sonraki build: `10.8.29+297`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince.
+- **294 sonrası main'de (build bekliyor, 2026-11-08):** ana menü chat menü GÖRÜNDÜKTEN 3 sn sonra (açılış perdesi
+  `StartupDisclaimer.perdeAcik` kalkınca; fal dönüşünde de 3 sn; karta dokunuşa cevap anında), kahve seçim/foto vurgusu
+  `foregroundDecoration` ile görselle aynı ovalde, **metin turları 28–42 tamam (+1500, toplam 5199)**. Ayrıntı → HANDOFF.md.
+- **Bir sonraki build: `10.8.29+297`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince — ve o an, "her şey
+  bitince" gibi koşullu talimatlarda bile bitişte tek satırla teyit al (294 erken alındı, Anıl uyardı).
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).
   ⚠️ Codemagic `main`'den build alır — versiyon `main`'de güncel olmalı (bkz. Codemagic bölümü).

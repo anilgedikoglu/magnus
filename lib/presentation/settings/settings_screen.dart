@@ -562,10 +562,8 @@ final _inlineEditProvider = StateProvider<_InlineEdit?>((ref) => null);
 // parmak kalkınca/iptalde false. Yatay sürüklemenin sekme değiştirmesi böyle engellenir (Anıl).
 final _glassDragProvider = StateProvider<bool>((ref) => false);
 
-/// Ayarlar kartı (card 3) açık mı? Varsayılan KAPALI/sıkışık: yalnız "AYARLAR" başlığı + dil
-/// (TR/EN) + sil görünür. "AYARLAR" başlığına dokunuş ya da yukarı swipe ile içi aşağı açılır
-/// (Anıl, 2026-11-06).
-final _settingsExpandedProvider = StateProvider<bool>((ref) => false);
+// Ayarlar kartı (card 3) HER ZAMAN açık (Anıl, 2026-11-07: "ayarlar hep açık olsun, hiçbir
+// scroll ile kapanmasın"). Eski aç/kapa provider'ı kaldırıldı.
 
 /// 1. kartın altındaki ARA panel isteği (Anıl, 2026-11-05): "hali hazırda açık olan
 /// (araya giren) kapanmadan bir diğer araya giren çıkamaz; kapatıp öyle çıkacak".
@@ -1720,9 +1718,9 @@ class SettingsScreen extends ConsumerWidget {
                   key: const ValueKey('profileScroll'),
                   physics: lockScroll
                       ? const NeverScrollableScrollPhysics()
-                      // Lastikleşme (overscroll bounce) KALDIRILDI (Anıl, 2026-11-06): swipe'ta
-                      // zıplama yapıyordu; sıkışma reflow'u da bounce overshoot'u olmadan daha oturur.
-                      : const ClampingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                      // Lastik (overscroll bounce) GERİ GETİRİLDİ (Anıl, 2026-11-07: "lastik gibi
+                      // demeden önceki hale dön"); Clamping ile scroll takılıyordu.
+                      : const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -2376,40 +2374,20 @@ class SettingsScreen extends ConsumerWidget {
   //    kullanıcı bilgilerinin altında bir kart yalnızca"; eski açılır pencere kaldırıldı).
 
   Widget _buildSettingsCard(BuildContext context, WidgetRef ref) {
-    final expanded = ref.watch(_settingsExpandedProvider);
-    void toggle(bool v) => ref.read(_settingsExpandedProvider.notifier).state = v;
+    // Ayarlar her zaman açık; hiçbir scroll/dokunuş kapatmaz (Anıl, 2026-11-07).
     const expandDur = Duration(milliseconds: 280);
     return Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // ── "AYARLAR" başlığı (ekran başlık fontu, ortalı) — dokun ya da YUKARI swipe
-              //    ile içi aşağı doğru açılır; aşağı swipe ile kapanır (Anıl, 2026-11-06).
-              GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                // Yalnız DOKUNUŞ ile aç/kapa (dikey swipe sayfa scroll'uyla yarışıyordu → Codex).
-                onTap: () => toggle(!expanded),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                  child: Column(
-                    children: [
-                      Text(
-                        ref.read(l10nProvider).settingsSection,
-                        textAlign: TextAlign.center,
-                        style: AppTextStyles.screenTitle,
-                      ),
-                      const SizedBox(height: 6),
-                      AnimatedRotation(
-                        turns: expanded ? 0.5 : 0,
-                        duration: const Duration(milliseconds: 250),
-                        child: Icon(
-                          Icons.keyboard_arrow_down_rounded,
-                          color: AppColors.gold.withValues(alpha: 0.8),
-                          size: 22,
-                        ),
-                      ),
-                    ],
-                  ),
+              // ── "AYARLAR" başlığı (ekran başlık fontu, ortalı) — kart HEP açık, hiçbir
+              //    scroll/dokunuş kapatmaz (Anıl, 2026-11-07; aç/kapa kaldırıldı) ──
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                child: Text(
+                  ref.read(l10nProvider).settingsSection,
+                  textAlign: TextAlign.center,
+                  style: AppTextStyles.screenTitle,
                 ),
               ),
 
@@ -2504,14 +2482,12 @@ class SettingsScreen extends ConsumerWidget {
                 },
               ),
 
-              // ── Açılır orta bölüm (cam · yasal · sıfırla) — yalnız AYARLAR açıkken ────
+              // ── Orta bölüm (cam · yasal · sıfırla) — HEP görünür (AYARLAR hep açık) ──
               AnimatedSize(
                 duration: expandDur,
                 curve: Curves.easeOutCubic,
                 alignment: Alignment.topCenter,
-                child: !expanded
-                    ? const SizedBox(width: double.infinity)
-                    : Column(
+                child: Column(
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
@@ -2628,14 +2604,12 @@ class SettingsScreen extends ConsumerWidget {
                 },
               ),
 
-              // ── Eğlence beyanı — yalnız AYARLAR açıkken ──────────────────────
+              // ── Eğlence beyanı — HEP görünür (AYARLAR hep açık) ──────────────
               AnimatedSize(
                 duration: expandDur,
                 curve: Curves.easeOutCubic,
                 alignment: Alignment.topCenter,
-                child: !expanded
-                    ? const SizedBox(width: double.infinity)
-                    : Padding(
+                child: Padding(
                         padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -3365,12 +3339,8 @@ void _profileCompactScroll(WidgetRef ref, ScrollNotification n) {
   if (_profileCompactAcc >= _kProfileCompactTrigger) {
     _profileCompactAcc = 0;
     ref.read(_profileCompactProvider.notifier).state = towardCompact;
-    // Aşağı swipe (towardCompact=false) AYARLAR kartını açar; yukarı swipe katlar
-    // (Anıl, 2026-11-06). Header'a dikey jest scroll'la yarıştığı için (Codex) tetik
-    // buradan, scroll yönünden — çakışmasız.
-    if (ref.read(_settingsExpandedProvider) == towardCompact) {
-      ref.read(_settingsExpandedProvider.notifier).state = !towardCompact;
-    }
+    // AYARLAR kartı scroll'dan ETKİLENMEZ: hiçbir kaydırma onu açıp kapatmaz; hep açık
+    // (Anıl, 2026-11-07). Daraltırken YALNIZ kart 1 kutucukları içeri + kart 2 daireler yan yana.
     if (towardCompact) _profileCompactGuard = true; // bu gesture'da top-clamp un-compact etmesin
   }
 }

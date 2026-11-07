@@ -177,8 +177,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   double get _bandBottom => _layerHeight * _bandShow.value;
 
   /// Yeni Magnus mesajı gelince bandı aşağı indir (pop); [hold] kadar durup yukarı kaldır.
-  /// Normal 5 sn; kayan (marquee) uzun yazıda uzunluğa göre 8–10 sn (Anıl, 2026-11-06).
-  void _popBand({Duration hold = const Duration(seconds: 5)}) {
+  /// Her chat gelişi 10 sn kalır (Anıl, 2026-11-07: "her chat gelişte 10 saniye kalıp öyle gitsin").
+  void _popBand({Duration hold = const Duration(seconds: 10)}) {
     if (!mounted) return;
     _bandTimer?.cancel();
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
@@ -194,14 +194,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       }
     });
     _bandTimer = Timer(hold, _hideBand);
-  }
-
-  /// Bant açık kalma süresi: kısa yazı 5 sn, taşan/kayan (marquee) yazı uzunluğa göre 8–10 sn.
-  Duration _bandHold(String text) {
-    final n = text.trim().length;
-    if (n > 110) return const Duration(seconds: 10);
-    if (n > 55) return const Duration(seconds: 8);
-    return const Duration(seconds: 5);
   }
 
   void _hideBand() {
@@ -589,14 +581,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     super.didChangeDependencies();
     if (!_selamlamaYuklendi) {
       _selamlamaYuklendi = true;
-      // Açılıştan ~3 sn SONRA band TAZE gelsin (Anıl: açılır açılmaz görünmeyip kaybolmasın);
-      // açılış selamlaması 10 sn kalır ya da yukarı swipe'a kadar (Anıl, 2026-11-06).
-      _loadSelamlama().whenComplete(() {
-        if (!mounted) return;
-        _bandTimer?.cancel();
-        _bandTimer = Timer(const Duration(seconds: 3), () {
-          if (mounted) _popBand(hold: const Duration(seconds: 10));
-        });
+      // Band GİZLİ başlar; selamlama JSON'u arka planda yüklenir. Band görünmediği için
+      // typewriter henüz çalışmaz (layer 2 band açılana kadar mount edilmez) → açılışta yazı akmaz.
+      _loadSelamlama();
+      // Açılıştan TAM 3 sn sonra band TAZE iner (Anıl, 2026-11-07: "önce açılsın, chat
+      // açılıştan 3 saniye sonra gelsin"); açılış selamlaması 10 sn kalır ya da yukarı swipe'a kadar.
+      _bandTimer?.cancel();
+      _bandTimer = Timer(const Duration(seconds: 3), () {
+        if (mounted) _popBand(hold: const Duration(seconds: 10));
       });
     }
     if (!_listenersAttached) {
@@ -921,10 +913,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     // Süre, yeni eklenen balon(lar)ın toplam uzunluğuna göre (uzun mesaj bitmeden kapanmasın — Codex P2).
     if (_extraBubbles.length != _lastExtraCount) {
       _lastExtraCount = _extraBubbles.length;
-      final yeni = _extraBubbles.length >= 2
-          ? (_extraBubbles[_extraBubbles.length - 2].text + _extraBubbles.last.text)
-          : (_extraBubbles.isNotEmpty ? _extraBubbles.last.text : _selamlama);
-      WidgetsBinding.instance.addPostFrameCallback((_) => _popBand(hold: _bandHold(yeni)));
+      // Her yeni Magnus mesajında band 10 sn kalır (Anıl, 2026-11-07).
+      WidgetsBinding.instance.addPostFrameCallback((_) => _popBand());
     }
     return Scaffold(
       backgroundColor: kHomeBackground,

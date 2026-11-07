@@ -21,6 +21,11 @@ class StartupDisclaimer extends StatefulWidget {
   @visibleForTesting
   static bool debugSkip = false;
 
+  /// Perde ekranı kaplıyor mu? (true: açılış bilgilendirmesi görünür/sönüyor; false: tamamen kalktı.)
+  /// Ana menü, "menü açıldıktan 3 sn sonra chat insin" sayacını perde KALKINCA başlatır — yoksa sayaç
+  /// perdenin arkasında dolar ve perde kalkınca menü ile chat aynı anda görünür (Anıl, 2026-11-07).
+  static final ValueNotifier<bool> perdeAcik = ValueNotifier<bool>(false);
+
   @override
   State<StartupDisclaimer> createState() => _StartupDisclaimerState();
 }
@@ -33,6 +38,7 @@ class _StartupDisclaimerState extends State<StartupDisclaimer> {
   @override
   void initState() {
     super.initState();
+    StartupDisclaimer.perdeAcik.value = _visible;
     if (_visible) {
       _timer = Timer(StartupDisclaimer.showFor, () {
         if (mounted) setState(() => _visible = false);
@@ -43,6 +49,7 @@ class _StartupDisclaimerState extends State<StartupDisclaimer> {
   @override
   void dispose() {
     _timer?.cancel();
+    StartupDisclaimer.perdeAcik.value = false;
     super.dispose();
   }
 
@@ -59,7 +66,10 @@ class _StartupDisclaimerState extends State<StartupDisclaimer> {
             duration: const Duration(milliseconds: 400),
             curve: Curves.easeOut,
             onEnd: () {
-              if (!_visible && mounted) setState(() => _mounted = false);
+              if (!_visible && mounted) {
+                setState(() => _mounted = false);
+                StartupDisclaimer.perdeAcik.value = false; // perde tamamen kalktı → menü görünür
+              }
             },
             child: AbsorbPointer(
               child: Consumer(builder: (context, ref, _) {

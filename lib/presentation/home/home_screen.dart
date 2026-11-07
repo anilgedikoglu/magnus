@@ -103,6 +103,7 @@ import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/filmed_image.dart';
 import '../../core/widgets/glass_tab_bar.dart';
+import '../../core/widgets/startup_disclaimer.dart';
 import '../../core/widgets/tab_swipe.dart';
 import '../../core/widgets/word_safe_text.dart';
 import '../../data/providers.dart';
@@ -173,6 +174,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   // Yukarı swipe birikimi: band görünürken yeterince (eşik) yukarı kaydırılınca band da çıkar.
   double _bandDismissAcc = 0;
   int _lastExtraCount = 0; // _extraBubbles büyüyünce bandı patlat (fal durumu / günlük limit)
+  // Yeni balon menüde bir KARTA DOKUNUŞA cevap mı (hak bitti / hazırlanıyor)? → band anında.
+  // Değilse (fal gönderilip menüye DÖNÜLDÜ) → menü önce görünür, band 3 sn SONRA (Anıl, 2026-11-07).
+  bool _tapPop = false;
+  VoidCallback? _perdeDinleyici; // açılış perdesi kalkınca 3 sn sayacını başlatır
   bool _downInBand = false;
   bool _downDismiss = false;
   int? _gatePointer; // bayrakları koyan parmak
@@ -614,12 +619,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       // Band GİZLİ başlar; selamlama JSON'u arka planda yüklenir. Band görünmediği için
       // typewriter henüz çalışmaz (layer 2 band açılana kadar mount edilmez) → açılışta yazı akmaz.
       _loadSelamlama();
-      // Açılıştan TAM 3 sn sonra band TAZE iner (Anıl, 2026-11-07: "önce açılsın, chat
+      // Menü GÖRÜNDÜKTEN TAM 3 sn sonra band TAZE iner (Anıl, 2026-11-07: "önce açılsın, chat
       // açılıştan 3 saniye sonra gelsin"); açılış selamlaması 10 sn kalır ya da yukarı swipe'a kadar.
-      _bandTimer?.cancel();
-      _bandTimer = Timer(const Duration(seconds: 3), () {
-        if (mounted) _popBand(hold: const Duration(seconds: 10));
-      });
+      // ⚠️ Her açılışta 6 sn'lik yasal bilgilendirme perdesi menünün ÜSTÜNDE durur; sayaç perde
+      // KALKINCA başlar (yoksa perde arkasında dolar → perde kalkınca menü + chat aynı anda görünürdü).
+      _acilisBandiniPlanla();
     }
     if (!_listenersAttached) {
       _listenersAttached = true;
@@ -650,8 +654,42 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     }
   }
 
+  /// Açılış selamlaması: menü görünür olduktan (açılış perdesi kalktıktan) 3 sn sonra band iner.
+  void _acilisBandiniPlanla() {
+    void baslat() {
+      _bandTimer?.cancel();
+      _bandTimer = Timer(const Duration(seconds: 3), () {
+        if (mounted) _popBand(hold: const Duration(seconds: 10));
+      });
+    }
+
+    if (!StartupDisclaimer.perdeAcik.value) {
+      baslat();
+      return;
+    }
+    late final VoidCallback dinle;
+    dinle = () {
+      if (StartupDisclaimer.perdeAcik.value) return;
+      StartupDisclaimer.perdeAcik.removeListener(dinle);
+      _perdeDinleyici = null;
+      if (mounted) baslat();
+    };
+    _perdeDinleyici = dinle;
+    StartupDisclaimer.perdeAcik.addListener(dinle);
+  }
+
+  /// Menüye DÖNÜŞTE gelen Magnus mesajı (fal gönderildi vb.): menü önce görünsün, band 3 sn sonra insin.
+  void _donusBandiniPlanla() {
+    _bandTimer?.cancel();
+    _bandTimer = Timer(const Duration(seconds: 3), () {
+      if (mounted) _popBand();
+    });
+  }
+
   @override
   void dispose() {
+    final d = _perdeDinleyici;
+    if (d != null) StartupDisclaimer.perdeAcik.removeListener(d);
     _unlockTimer?.cancel();
     _bandTimer?.cancel();
     _gridScrollCtrl.dispose();
@@ -706,10 +744,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   Future<void> _onFortuneItemTap(String type, String route) async {
     final remaining = _remainingCredits[type] ?? 1;
     if (remaining <= 0) {
+      _tapPop = true; // menüden çıkılmadı, dokunuşa cevap → band anında
       _showDailyLimitBubble(type);
       return;
     }
     if (!mounted) return;
+    // Ekrandan menüye DÖNÜŞTE gelen mesajlar (hazırlanıyor / zaten okundu) → menü önce, chat 3 sn sonra.
     final result = await context.push<String?>(route);
     if (!mounted) return;
     if (result == 'hazirlanıyor') {
@@ -726,6 +766,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   void _onDailyFalTap(String type, String route) {
     final remaining = _remainingCredits[type] ?? 1;
     if (remaining <= 0) {
+      _tapPop = true; // menüden çıkılmadı, dokunuşa cevap → band anında
       _showDailyLimitBubble(type);
       return;
     }
@@ -944,7 +985,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     if (_extraBubbles.length != _lastExtraCount) {
       _lastExtraCount = _extraBubbles.length;
       // Her yeni Magnus mesajında band 10 sn kalır (Anıl, 2026-11-07).
-      WidgetsBinding.instance.addPostFrameCallback((_) => _popBand());
+      if (_tapPop) {
+        // Menüdeki karta dokunuşa cevap (hak bitti / hazırlanıyor) → anında.
+        _tapPop = false;
+        WidgetsBinding.instance.addPostFrameCallback((_) => _popBand());
+      } else {
+        // Fal gönderilip menüye dönüldü → menü önce, chat 3 sn sonra.
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) _donusBandiniPlanla();
+        });
+      }
     }
     return Scaffold(
       backgroundColor: kHomeBackground,

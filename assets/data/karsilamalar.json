@@ -4948,6 +4948,146 @@
       "metin": "{{isim}}, içimdeki küçük kâhin bugün pek iddialı! Eskiden canını sıkan bir ayrıntıya artık eskisi kadar takılmadığını fark edeceksin. Ne güzel!",
       "metin_en": "{{isim}}, the little seer inside me is feeling bold today! You'll notice that a detail that used to bother you no longer gets to you as much. How lovely!",
       "kosullar": []
+    },
+    {
+      "id": 740,
+      "ziyaret": 1,
+      "metin": "Kum saatimi yeni çevirdim {{isim}}; bugünün ilk tanesi senin için düştü. Hoş geldin!",
+      "metin_en": "I just turned my hourglass over, {{isim}}; today's first grain fell for you. Welcome!",
+      "kosullar": []
+    },
+    {
+      "id": 741,
+      "ziyaret": 1,
+      "metin": "Hoş geldin {{isim}}! Bugün kulağın çınlarsa bil ki bir yerde adın güzel bir cümlenin içinde geçiyor.",
+      "metin_en": "Welcome, {{isim}}! If your ears ring today, know that somewhere your name is being mentioned in a lovely sentence.",
+      "kosullar": []
+    },
+    {
+      "id": 742,
+      "ziyaret": 1,
+      "metin": "Merhaba {{isim}}! Gece gördüğün rüyanın küçük bir parçası gün içinde birden aklına düşebilir; gülümseyip geç.",
+      "metin_en": "Hello, {{isim}}! A small piece of last night's dream may suddenly come back to you during the day; just smile and let it pass.",
+      "kosullar": []
+    },
+    {
+      "id": 743,
+      "ziyaret": 1,
+      "metin": "Selam {{isim}}! Bugün gözüne aynı sayı iki kez çarparsa, onu benden bir göz kırpması say.",
+      "metin_en": "Hi, {{isim}}! If the same number catches your eye twice today, take it as a wink from me.",
+      "kosullar": []
+    },
+    {
+      "id": 744,
+      "ziyaret": 1,
+      "metin": "Sarkacım bugün hep senin tarafına salınıyor {{isim}}! Verdiğin küçük bir sözü tutmanın keyfini yaşayacaksın.",
+      "metin_en": "My pendulum keeps swinging your way today, {{isim}}! You'll enjoy the satisfaction of keeping a small promise you made.",
+      "kosullar": []
+    },
+    {
+      "id": 745,
+      "ziyaret": 1,
+      "metin": "Avucun kaşınırsa bana haber ver {{isim}}! Bugün küçük ama tatlı bir kazancın kokusunu alıyorum.",
+      "metin_en": "If your palm itches, let me know, {{isim}}! I can smell a small but sweet gain today.",
+      "kosullar": []
+    },
+    {
+      "id": 746,
+      "ziyaret": 1,
+      "metin": "Bugün birinin sana 'iyi ki varsın' demesine az kaldı {{isim}}; ben şimdiden söyleyeyim: İyi ki varsın!",
+      "metin_en": "Someone is about to tell you 'I'm so glad you're here' today, {{isim}}; let me say it first: I'm so glad you're here!",
+      "kosullar": []
+    },
+    {
+      "id": 747,
+      "ziyaret": 1,
+      "metin": "Baykuşumun gözleri parladı, demek ki gelen sensin {{isim}}! Bugün kendine iyi bakacağın bir gün olsun.",
+      "metin_en": "My owl's eyes lit up, so it must be you, {{isim}}! May today be a day you take good care of yourself.",
+      "kosullar": []
+    },
+    {
+      "id": 748,
+      "ziyaret": 1,
+      "metin": "İçinden 'kendime bir şey ısmarlasam mı' diye geçerse ısmarla {{isim}}; o küçük keyfi bugün hak ettin.",
+      "metin_en": "If you catch yourself thinking 'should I treat myself to something?', go ahead, {{isim}}; you've earned that little pleasure today.",
+      "kosullar": []
+    },
+    {
+      "id": 749,
+      "ziyaret": 1,
+      "metin": "Bugün hava nasıl olursa olsun, senin havan açık {{isim}}. Hoş geldin!",
+      "metin_en": "Whatever the weather is like today, your skies are clear, {{isim}}. Welcome!",
+      "kosullar": []
+    },
+    {
+      "id": 750,
+      "ziyaret": 1,
+      "metin": "Magnus'un cebinden bugün senin için bir avuç 'kolay gelsin' çıktı {{isim}}. Hoş geldin!",
+      "metin_en": "Out of Magnus's pocket came a handful of 'may it all go easy' for you today, {{isim}}. Welcome!",
+      "kosullar": []
+    },
+    {
+      "id": 751,
+      "ziyaret": 1,
+      "metin": "Gün bitmeden, birine yaptığın küçük bir iyilik başka bir kapıdan sana dönecek {{isim}}. Hoş geldin!",
+      "metin_en": "Before the day is out, a small kindness you did for someone will come back to you through another door, {{isim}}. Welcome!",
+      "kosullar": []
+    },
+    {
+      "id": 752,
+      "ziyaret": 1,
+      "metin": "{{burc}} burcunun o tatlı inadı bugün işine yarayacak {{isim}}; bir konuda sonuna kadar gidip kazanabilirsin.",
+      "metin_en": "That sweet stubbornness of your {{burc}} sign will come in handy today, {{isim}}; you could see something through to the end and win.",
+      "kosullar": []
+    },
+    {
+      "id": 753,
+      "ziyaret": 1,
+      "metin": "Sezgilerim diyor ki bugün nazikçe söyleyeceğin bir 'hayır' seni epey rahatlatacak {{isim}}. Hoş geldin!",
+      "metin_en": "My intuition says a gently spoken 'no' today will bring you a great deal of relief, {{isim}}. Welcome!",
+      "kosullar": []
+    },
+    {
+      "id": 754,
+      "ziyaret": 1,
+      "metin": "Birine 'tam da seni düşünüyordum' diyeceğin bir an var bugün {{isim}}. Selam!",
+      "metin_en": "There's a moment today when you'll tell someone 'I was just thinking of you,' {{isim}}. Hi!",
+      "kosullar": []
+    },
+    {
+      "id": 755,
+      "ziyaret": 1,
+      "metin": "Kendine yapacağın küçük bir iyilik, bugün başkalarına yaptıklarından bile çok iyi gelecek {{isim}}. Merhaba!",
+      "metin_en": "A small kindness you do for yourself today will do you even more good than the ones you do for others, {{isim}}. Hello!",
+      "kosullar": []
+    },
+    {
+      "id": 756,
+      "ziyaret": 1,
+      "metin": "Bir şeyi tam vaktinde hatırlayıp kendini içinden tebrik edeceğin bir gün bugün {{isim}}. Merhaba!",
+      "metin_en": "Today's a day when you'll remember something just in time and quietly congratulate yourself, {{isim}}. Hello!",
+      "kosullar": []
+    },
+    {
+      "id": 757,
+      "ziyaret": 1,
+      "metin": "Senden genç biri bugün sana yeni bir şey gösterecek {{isim}} ve buna içtenlikle güleceksin. Selam olsun!",
+      "metin_en": "Someone younger than you will show you something new today, {{isim}}, and you'll laugh about it wholeheartedly. Greetings!",
+      "kosullar": []
+    },
+    {
+      "id": 758,
+      "ziyaret": 1,
+      "metin": "İlk sezgin bugün seni yanıltmayacak {{isim}}; aklına gelen ilk tahmine güven. Hoş geldin!",
+      "metin_en": "Your first hunch won't let you down today, {{isim}}; trust the first guess that comes to mind. Welcome!",
+      "kosullar": []
+    },
+    {
+      "id": 759,
+      "ziyaret": 1,
+      "metin": "Sana bugün bir soru sorulacak {{isim}}; vereceğin cevapla kendini bile şaşırtacaksın. Merhaba!",
+      "metin_en": "You'll be asked a question today, {{isim}}; your answer will surprise even you. Hello!",
+      "kosullar": []
     }
   ],
   "biliyormuydun": [

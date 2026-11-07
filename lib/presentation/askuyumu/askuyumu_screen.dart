@@ -81,11 +81,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
   double _snapTarget = pi + pi / 12;
   late Ticker _spinTicker;
 
-  // Pan geçici durumu
-  double? _panStartAngle;
-  double _lastPanAngle = 0;
-  int _prevPanMs = 0;
-
   // Faz 1 — basma doldurma animasyonu
   late AnimationController _fillCtrl;
 
@@ -157,48 +152,33 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     setState(() {});
   }
 
-  // ── Pan işleyicileri ──────────────────────────────────────────────────────
+  // ── Çark döndürme — yatay sürükleme (ekranın HERHANGİ bir yerinde) ──────────
+  // Snap + atalet (spin ticker) mantığı aynı kalır; girdi, atan2 (çarka dokunma)
+  // yerine yatay sürükleme deltasından (primaryDelta) açıya çevrilir — böylece
+  // çarka dokunmak gerekmez, ekranın her yerinde eşit his verir.
+  static const double _kDragToAngle = 1 / 160.0; // piksel → radyan (çark yarıçapı ~160)
 
-  void _onWheelPanStart(DragStartDetails details) {
+  void _onWheelDragStart(DragStartDetails _) {
     _spinTicker.stop();
     _snapping = false;
     _velocity = 0;
-    const center = Offset(140, 140); // 280/2
-    final d = details.localPosition - center;
-    _panStartAngle = atan2(d.dy, d.dx);
-    _lastPanAngle = _panStartAngle!;
-    _prevPanMs = DateTime.now().millisecondsSinceEpoch;
   }
 
-  void _onWheelPanUpdate(DragUpdateDetails details) {
-    if (_panStartAngle == null) return;
-    const center = Offset(140, 140);
-    final d = details.localPosition - center;
-    final currentAngle = atan2(d.dy, d.dx);
-    final delta = _wrapAngle(currentAngle - _lastPanAngle);
-    _wheelAngle += delta;
-    final now = DateTime.now().millisecondsSinceEpoch;
-    final dt = (now - _prevPanMs).clamp(1, 50);
-    _velocity = delta / dt * 16.0;
-    _prevPanMs = now;
-    _lastPanAngle = currentAngle;
+  void _onWheelDragUpdate(DragUpdateDetails details) {
+    _wheelAngle += -(details.primaryDelta ?? 0) * _kDragToAngle;
     _burcTik();
     setState(() {});
   }
 
-  void _onWheelPanEnd(DragEndDetails _) {
-    _panStartAngle = null;
+  void _onWheelDragEnd(DragEndDetails details) {
+    // Atışı yakala: yatay hız (px/sn) → rad/frame (≈16 ms).
+    _velocity = -(details.primaryVelocity ?? 0) * _kDragToAngle * 0.016;
     _snapping = _velocity.abs() <= 0.002;
     if (_snapping) {
-      _snapTarget = ((_wheelAngle - _kSnapOffset) / (pi / 6)).round() * (pi / 6) + _kSnapOffset;
+      _snapTarget =
+          ((_wheelAngle - _kSnapOffset) / (pi / 6)).round() * (pi / 6) + _kSnapOffset;
     }
     _spinTicker.start();
-  }
-
-  double _wrapAngle(double a) {
-    while (a > pi) a -= 2 * pi;
-    while (a < -pi) a += 2 * pi;
-    return a;
   }
 
   // ── Faz 2 başlatıcı ───────────────────────────────────────────────────────
@@ -364,6 +344,24 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                     ? _buildPhase2()
                     : _buildPhase3(),
           ),
+          // Faz 1 (burç seçimi): ekranın HERHANGİ bir yerinde yatay sürükleme çarkı
+          // çevirir — çarka dokunmak gerekmez. Katman saydam: dokunuşlar altındaki
+          // basılı-tut dairesine ve Geri Git okuna geçer; yalnız yatay sürüklemeyi
+          // (jest arenası) bu katman alır, böylece basılı-tut bozulmaz.
+          // NoEdgeSwipeBack bu ekranda global "soldan sağa kaydır = geri"yi kapatır
+          // (Anıl: sağa swipe geri gitmesin, çarkı çevirsin). Geri dönüş: üstteki ok,
+          // Android geri tuşu, sistemin kenar jesti.
+          if (_phase == 1)
+            Positioned.fill(
+              child: NoEdgeSwipeBack(
+                child: GestureDetector(
+                  behavior: HitTestBehavior.translucent,
+                  onHorizontalDragStart: _onWheelDragStart,
+                  onHorizontalDragUpdate: _onWheelDragUpdate,
+                  onHorizontalDragEnd: _onWheelDragEnd,
+                ),
+              ),
+            ),
         ],
       ),
     );
@@ -504,20 +502,17 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
       child: Stack(
         alignment: Alignment.topCenter,
         children: [
-          NoEdgeSwipeBack(child: GestureDetector(
-            onPanStart: _onWheelPanStart,
-            onPanUpdate: _onWheelPanUpdate,
-            onPanEnd: _onWheelPanEnd,
-            child: Transform.rotate(
-              angle: _wheelAngle,
-              child: Image.asset(
-                'assets/images/burclar_wheel.png',
-                width: wheelSize,
-                height: wheelSize,
-                fit: BoxFit.contain,
-              ),
+          // Çark görseli — döndürme ekranın tamamını kaplayan sürükleme katmanıyla
+          // yapılır (build'deki Positioned.fill GestureDetector); burada yalnız döner.
+          Transform.rotate(
+            angle: _wheelAngle,
+            child: Image.asset(
+              'assets/images/burclar_wheel.png',
+              width: wheelSize,
+              height: wheelSize,
+              fit: BoxFit.contain,
             ),
-          )),
+          ),
           // Highlight çarkı — çarkla aynı dönüşte, sadece üstteki dilim kliplenir
           IgnorePointer(
             child: ClipPath(

@@ -6705,6 +6705,222 @@
       "metin": "<color=yellow><b>{{burc}} burcunun merakını bugün yeni bir şey öğrenmek için kullanıyorum.</b></color>",
       "metin_en": "<color=yellow><b>Today I'm putting my {{burc}} curiosity to work learning something new.</b></color>",
       "kosullar": []
+    },
+    {
+      "id": 673,
+      "metin": "<color=yellow><b>Yalnız geçirdiğim hafta sonlarında kendime yeni bir şey öğretiyor, bekâr hayatımı merakla dolduruyorum.</b></color>",
+      "metin_en": "<color=yellow><b>On the weekends I spend alone, I teach myself something new and fill my single life with curiosity.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 674,
+      "metin": "<color=yellow><b>Derste yanıldığım bir noktayı öğrencilerimin önünde düzeltmeyi bilimsel dürüstlüğümün parçası sayıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I consider correcting a point I got wrong in class, right in front of my students, part of my scientific integrity.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 675,
+      "metin": "<color=yellow><b>Hoşlandığım birine ilgimi göstermekten çekinmiyorum; ilk adımı atmak da bir kadına yakışır.</b></color>",
+      "metin_en": "<color=yellow><b>I'm not shy about showing interest in someone I like; taking the first step suits a woman, too.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 676,
+      "metin": "<color=yellow><b>Kurumda sırası gelmeyen bir dosya için kimseyi kayırmıyor, adil davranmanın verdiği huzurla çalışıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>At my institution I don't play favorites with a file whose turn hasn't come, and I work with the peace that fairness brings.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 677,
+      "metin": "<color=yellow><b>Sokakta göz göze geldiğim bir yabancıya gülümsemekten çekinmiyorum; küçük nezaketler günümü genişletiyor.</b></color>",
+      "metin_en": "<color=yellow><b>I'm not shy about smiling at a stranger whose eyes meet mine on the street; small kindnesses make my day wider.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 678,
+      "metin": "<color=yellow><b>Bir sınavın sonucu ne olursa olsun, ona hazırlanırken öğrendiklerim benimle kalıyor.</b></color>",
+      "metin_en": "<color=yellow><b>Whatever the result of an exam, what I learned while preparing for it stays with me.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 679,
+      "metin": "<color=yellow><b>Kendime, en sevdiğim arkadaşıma konuştuğum kadar şefkatle konuşuyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I speak to myself as kindly as I speak to my dearest friend.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 680,
+      "metin": "<color=yellow><b>Pazar yerinde tezgâhları acele etmeden dolaşmak, emekliliğin bana sunduğu tatlı bir lüks.</b></color>",
+      "metin_en": "<color=yellow><b>Strolling past the market stalls without any hurry is a sweet luxury retirement offers me.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 681,
+      "metin": "<color=yellow><b>Nişanlımla anlaşamadığımızda sesimi değil, onu dinleme isteğimi yükseltiyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When my fiancé and I disagree, I raise not my voice but my willingness to listen.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nisanli"
+        }
+      ]
+    },
+    {
+      "id": 682,
+      "metin": "<color=yellow><b>Eşimle aynı evde ayrı odalarda sessizce vakit geçirebilmeyi, sevgimizin en rahat hâli olarak görüyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I see being able to spend time quietly in separate rooms of the same home with my spouse as the most relaxed form of our love.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 683,
+      "metin": "<color=yellow><b>Sevdiğim kişinin başarısına kendi başarımmış gibi seviniyor, aramızda yarış değil destek olduğunu biliyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I rejoice in my loved one's success as if it were my own, knowing there's support between us, not competition.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliski_var"
+        }
+      ]
+    },
+    {
+      "id": 684,
+      "metin": "<color=yellow><b>Bir hatamı kabul etmek beni küçültmüyor; özür dileyebilen bir adam olmaktan gurur duyuyorum.</b></color>",
+      "metin_en": "<color=yellow><b>Admitting a mistake doesn't make me smaller; I'm proud to be a man who can apologize.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 685,
+      "metin": "<color=yellow><b>Eşime sürpriz yapmak için özel bir gün beklemiyor, sıradan bir akşamı küçük bir jestle güzelleştiriyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I don't wait for a special day to surprise my spouse; I brighten an ordinary evening with a small gesture.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 686,
+      "metin": "<color=yellow><b>Kendime verdiğim küçük sözleri tuttukça kendime olan güvenim büyüyor.</b></color>",
+      "metin_en": "<color=yellow><b>The more I keep the small promises I make to myself, the more my trust in myself grows.</b></color>",
+      "kosullar": []
+    },
+    {
+      "id": 687,
+      "metin": "<color=yellow><b>Ayrılığın ardından ilk kez kendi başıma güldüğüm anı, iyileşmemin müjdesi sayıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I take the first time I laughed on my own after the breakup as good news of my healing.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 688,
+      "metin": "<color=yellow><b>Boşanmak bana yalnızlığı değil, kendi sesimi duymayı öğretti.</b></color>",
+      "metin_en": "<color=yellow><b>Divorce taught me not loneliness, but how to hear my own voice.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "bosanmis"
+        }
+      ]
+    },
+    {
+      "id": 689,
+      "metin": "<color=yellow><b>Yeni bir tarifi denerken tutmazsa da gülüp geçiyorum; mutfağım benim deneme alanım.</b></color>",
+      "metin_en": "<color=yellow><b>When a new recipe I'm trying doesn't work out, I just laugh it off; my kitchen is my testing ground.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 690,
+      "metin": "<color=yellow><b>Kendi kararlarımı verirken 'bir kadın böyle yapmaz' cümlelerine kulak asmıyorum.</b></color>",
+      "metin_en": "<color=yellow><b>When I make my own decisions, I pay no attention to lines like 'a woman doesn't do that.'</b></color>",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 691,
+      "metin": "<color=yellow><b>Mesai bitiminde gelen acil işlere her zaman evet demiyorum; emeğimin de bir sınırı olduğunu biliyorum.</b></color>",
+      "metin_en": "<color=yellow><b>I don't always say yes to urgent tasks that land at the end of the workday; I know my effort has its limits, too.</b></color>",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 692,
+      "metin": "<color=yellow><b>Kahvemi ya da çayımı acele etmeden içtiğim beş dakika, günümün en sakin limanı.</b></color>",
+      "metin_en": "<color=yellow><b>The five minutes I spend drinking my coffee or tea without rushing are the calmest harbor of my day.</b></color>",
+      "kosullar": []
     }
   ]
 }

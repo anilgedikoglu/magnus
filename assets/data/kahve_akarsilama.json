@@ -6778,6 +6778,308 @@
         "ask",
         "genel"
       ]
+    },
+    {
+      "id": 507,
+      "metin": "Kahveni yarısına kadar sıcak, gerisini soğuk içtin galiba {{isim}}; sohbete dalınca fincanı unutanlardansın. Bunu fincanının kenarındaki izden anladım: aceleyle değil, keyifle içilmiş bir kahvenin yumuşak çizgileri var orada. Genel falında önüme serilen haberler de en az o sohbet kadar uzun; sırayla anlatıyorum…",
+      "metin_en": "Looks like you drank half your coffee hot and the rest cold, {{isim}}; you're one of those who forgets the cup once the conversation gets going. I could tell from the mark on the rim: soft lines of a coffee sipped with pleasure, not in a hurry. The news laid out before me in your general reading is just as long as that conversation; I'll tell it in order…",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 508,
+      "metin": "Kimse acele ettirmediği hâlde sabahları erkenden uyanan o eski alışkanlığın hâlâ yerinde, değil mi {{isim}}? Yılların ritmi insanı kolay bırakmıyor. Sağlık niyetine kapattığın fincanda, ağır ağır yürünen bir yolun kenarında açmış küçük bir papatya fark ettim; bana telaşsız günlerin dinlendiren tarafını anlatıyor. Buyur, birlikte okuyalım…",
+      "metin_en": "That old habit of waking up early in the morning, even though no one rushes you anymore, is still there, isn't it, {{isim}}? The rhythm of the years doesn't let go easily. In the cup you closed with a wish for your health, I noticed a little daisy blooming beside a slowly walked road; it tells me about the restful side of unhurried days. Please, let's read it together…",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 509,
+      "metin": "Bir zamanlar 'biz' diye kurduğun cümleleri şimdi 'ben' diye kurarken sesinin nasıl netleştiğini fark ettin mi {{isim}}? Kariyer niyetinde bu netlik telvelere de yansımış. Fincanın sağ kenarında rüzgârı arkasına almış küçük bir yelkenli var; demir almaya hazır gibi duruyor. Hoş geldin, rotanı birlikte çizelim;",
+      "metin_en": "Have you noticed how your voice has grown clearer now that you build the sentences you once started with 'we' with 'I', {{isim}}? With your career wish, that clarity is reflected in the grounds too. On the right edge of your cup there's a little sailboat with the wind at its back; it looks ready to weigh anchor. Welcome, let's chart your course together;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 510,
+      "metin": "Kırmızı kalemle düzeltme yapmaya alışmış bir elin, gönül meselesinde bile virgül aradığını tahmin ediyorum hocam. Buyur {{isim}}. Aşk niyetinde fincanın senden beklenmedik bir şey istiyor: kenar notlarını bırakıp metni bir kez de baştan sona, keyifle okumanı. Telvenin ortasında açılmış bir kitap sayfası duruyor; ilk satırdan okumaya koyuluyorum…",
+      "metin_en": "I'd guess a hand used to correcting with a red pen looks for commas even in matters of the heart, professor. Please, {{isim}}. With your love wish, your cup asks something unexpected of you: to put the margin notes aside and read the text once from start to finish, just for the pleasure of it. An open book page sits in the middle of the grounds; I'm starting to read from the first line…",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 511,
+      "metin": "Bir imzanın üç ayrı masadan geçmesini beklerken sabrın ne kadar uzayabildiğini bilenlerdensin {{isim}}. Kurumda herkes sana 'sen bilirsin' diye dosya uzatıyor gibi. Genel falında bu sabrın karşılığı olarak fincanının kulpuna yakın yerde parlak bir mühür izi gördüm; onay bekleyen bir işin yoluna girişini andırıyor. Dosyayı açıyorum;",
+      "metin_en": "You're one who knows how long patience can stretch while waiting for a signature to pass through three different desks, {{isim}}. At the institution, everyone seems to hand you files saying 'you'll know best.' In your general reading, as the reward for that patience, I saw a shiny seal mark near the handle of your cup; it looks like a pending matter finally getting on its way. I'm opening the file;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 512,
+      "metin": "Bir yürüyüşe 'kısa bir tur' diye çıkıp dönüşü uzatanlardansın {{isim}}; kimseye haber vermeden yön değiştirmek hoşuna gidiyor. Sağlık falında ilk dikkatimi çeken, fincanın dibindeki dolgun bir nar oldu; bana bereketli ve kendine iyi bakılan günlerden söz ediyor. Bu tatlı serbestliğin izinden telvelere giriyorum;",
+      "metin_en": "You're one of those who heads out for 'just a short walk' and stretches the way back, {{isim}}; you enjoy changing direction without telling anyone. In your health reading, the first thing that caught my eye was a plump pomegranate at the bottom of the cup; it speaks to me of abundant days when you take good care of yourself. Following the trail of this sweet freedom, I'm stepping into your grounds;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 513,
+      "metin": "Sevdiğin kişiyle aynı anda aynı kelimeyi söyleyip gülüştüğünüz anları sayıyor musun {{isim}}? Ben saydım, fincanın bile biliyor. Aşk niyetinde telvelerin ortasında birbirine doğru açılmış iki yaprak var; aralarında incecik bir ışık yolu kalmış. O ışığın ne anlattığına bakmak için kahvene eğiliyorum…",
+      "metin_en": "Do you count the moments when you and your loved one say the same word at the same time and burst out laughing, {{isim}}? I did, and even your cup knows. With your love wish, there are two leaves opening toward each other in the middle of the grounds, with a thin path of light left between them. I'm leaning over your coffee to see what that light has to say…",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 514,
+      "metin": "Bir kokuyu duyup birini hatırladığın oluyor mu {{isim}}? Kalabalıkta yanından geçen birinin bıraktığı iz, seni bir anda başka bir mevsime götürebiliyor. Aşk falında da böyle hafif ama akılda kalan bir iz var: fincanın kenarında kanatlarını yeni açmış bir kelebek. Bakalım hangi çiçeğe konacak…",
+      "metin_en": "Does a scent ever make you remember someone, {{isim}}? The trace left by someone passing you in a crowd can carry you off to another season in an instant. Your love reading has just such a light but lingering trace: a butterfly that has just opened its wings on the rim of your cup. Let's see which flower it will land on…",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 515,
+      "metin": "Tam ceketini almışken gelen 'küçük bir rica' cümlesini tanıyorum {{isim}}; mesainin en uzun on dakikası hep onunla başlar. Yine de işini yarım bırakmadığın için çalıştığın yerde güvenilen isimlerden birisin. Genel falında fincanının dibinde yanan bir fener seçiyorum; uzun bir günün sonunda yolunu aydınlatacak bir haberin işareti. Mesai bitmeden anlatayım;",
+      "metin_en": "I know that 'one small favor' that comes just as you've picked up your jacket, {{isim}}; the longest ten minutes of the workday always start with it. Still, because you never leave a job half-done, you're one of the trusted names where you work. In your general reading, I spot a lit lantern at the bottom of your cup; a sign of news that will light your way at the end of a long day. Let me tell you before the shift is over;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 516,
+      "metin": "Ocakta yemek varken kapı çalınınca aynı anda hem kapıya hem tencereye yetişen bir maharetin var {{isim}}. Evin düzeni senin elinden geçiyor ama bu düzende sana ayrılan köşe biraz dar kalıyor sanki. Genel falında fincanın sağ yanında ağzına kadar dolu bir sepet duruyor; emeklerinin karşılığı olan bir bolluğun habercisi. Bakalım neler anlatacak;",
+      "metin_en": "You have a knack for getting to the door and the pot at the same time when someone knocks while dinner is on the stove, {{isim}}. The household runs through your hands, but the corner left for you in that order seems a bit cramped. In your general reading there's a basket filled to the brim on the right side of your cup; a herald of abundance as the reward for your efforts. Let's see what it has to tell;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 517,
+      "metin": "'Bu akşam erken yatacağım' diye güne başlayıp gece yarısını yine bir şeylerle karşıladığın oluyor mu {{isim}}? Söyleme, telvelerin söyledi. Sağlık niyetine kapattığın fincanda ince bir hilal beliriyor; bana dinlenmeye daha çok vakit ayıracağın sakin geceleri anlatıyor. Önce bu tatlı itirafla başladık, şimdi ayrıntılara geçiyorum…",
+      "metin_en": "Do you ever start the day saying 'I'm going to bed early tonight' and still greet midnight busy with something, {{isim}}? Don't tell me, your grounds already did. In the cup you closed with a wish for your health, a thin crescent moon appears; it tells me of calm nights when you'll make more time for rest. We started with that sweet confession; now I'm moving on to the details…",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 518,
+      "metin": "Ders notunu ödünç isteyen herkesin derdinin ders olmadığını sen de biliyorsun {{isim}}. Okulda bir bakışın ardından gelen o masum 'notların var mı?' sorusuna gülümsediğin olmuştur. Aşk falında fincanının ortasında yan yana duran iki defter görüyorum; birinin köşesine küçük bir işaret karalanmış. Bakalım kimin defteri;",
+      "metin_en": "You know as well as I do that not everyone who asks to borrow your class notes is really after the notes, {{isim}}. You've surely smiled at that innocent 'do you have your notes?' that follows a glance at school. In your love reading I see two notebooks side by side in the middle of your cup; a little mark has been scribbled in the corner of one. Let's see whose notebook it is;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 519,
+      "metin": "Kendine koyduğun çayın çoğu zaman soğuduğunu biliyorum {{isim}}; evde herkes bir şey isterken senin bardağın hep beklemede kalıyor. Eşin fark ettiğinde bile 'ben hallederim' diyorsun. Sağlık falında fincanının dibinde dumanı tüten sıcacık bir bardak var; bu kez sıcakken içeceğin günlerin işareti. Hoş geldin, çayın soğumadan başlayalım;",
+      "metin_en": "I know the tea you pour for yourself often goes cold, {{isim}}; while everyone at home wants something, your glass is always left waiting. Even when your spouse notices, you say 'I'll handle it.' In your health reading there's a steaming hot glass at the bottom of your cup; a sign of days when you'll drink it while it's still hot. Welcome, let's begin before your tea gets cold;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 520,
+      "metin": "Evinizde günün en zor bilmecesi bazen 'akşama ne yesek?' sorusudur {{isim}}; eşinle ikiniz de kararı ötekine bırakmayı seversiniz. Bu tatlı top atma oyununun ardında birbirinizi memnun etme isteği saklı. Genel falında fincanının ortasında bir üzüm salkımı seçtim; sofranıza ve gününüze bereket getiriyor gibi. Başlayalım;",
+      "metin_en": "Sometimes the hardest riddle of the day in your home is 'what should we have for dinner?', {{isim}}; you and your spouse both like leaving the decision to the other. Behind this sweet game of passing the ball lies a wish to please each other. In your general reading I picked out a bunch of grapes in the middle of your cup; it seems to bring abundance to your table and your days. Let's begin;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 521,
+      "metin": "Başkasının yaptığı bir işe bakıp içinden 'ben bunu daha iyi yapardım' dediğin anlar oluyor {{isim}}; çoğu zaman da haklısın. Kariyer niyetinde bu iddianın bir karşılık bulacağını seziyorum. Fincanının sapına yakın bir yerde başı dik bir aslan figürü var; emeğinin hakkını alacağın bir dönemi anlatıyor. Buyur, kulak ver;",
+      "metin_en": "There are moments when you look at someone else's work and think to yourself 'I'd have done this better', {{isim}}; and you're usually right. With your career wish, I sense this claim will find its answer. Near the handle of your cup there's a lion figure with its head held high; it speaks of a period when you'll get your due for your efforts. Please, listen closely;",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 522,
+      "metin": "Yeni bir eşyayı kılavuzuna bakmadan kurmaya çalıştığını ve sonunda bir vidanın ortada kaldığını tahmin ediyorum {{isim}}! Kendi yolunu bulmayı seviyorsun ve çoğu zaman da buluyorsun. Kariyer falında fincanının içinde dişlileri birbirine geçmiş bir çark var; uzun süredir uğraştığın bir işin oturmaya başladığına işaret ediyor. Beyefendi, kılavuzsuz ama yönümüz belli; başlıyorum…",
+      "metin_en": "My guess is you tried to assemble something new without looking at the manual and ended up with one screw left over, {{isim}}! You like finding your own way, and most of the time you do. In your career reading there's a gear with interlocking teeth inside your cup; it points to something you've long been working on starting to fall into place. Sir, no manual, but our direction is clear; I'm beginning…",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 523,
+      "metin": "Arkadaşların sana 'çok seçicisin' dediğinde içinden 'iyi ki de öyleyim' diye geçirdiğini biliyorum {{isim}}. Kapını herkese değil, gerçekten çalana açıyorsun. Aşk falında fincanının kenarında dolunay ışığı düşmüş incecik bir patika uzanıyor; acele etmeyen ama doğru yere çıkan bir yakınlaşmayı anlatıyor gibi. Hanımefendi, buyur;",
+      "metin_en": "I know that when your friends tell you 'you're so picky', you think to yourself 'and thank goodness I am', {{isim}}. You open your door not to everyone, but to the one who truly knocks. In your love reading, a narrow path touched by full-moon light stretches along the rim of your cup; it seems to describe a closeness that doesn't rush but leads to the right place. Please, my lady;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 524,
+      "metin": "Yolda karşılaştığın eski bir tanıdıkla 'iki dakika' diye başlayıp yarım saat ayaküstü konuştuğun olur {{isim}}. Tecrübe insana sohbetin kıymetini öğretiyor. Genel falında fincanının kulpuna yakın bir yerde karşılıklı duran iki fincan gözüme ilişti; yakında edilecek keyifli bir sohbetin, uzun zamandır görmediğin bir yüzün habercisi. Gel, bu kez ayaküstü değil, oturarak konuşalım…",
+      "metin_en": "You've surely run into an old acquaintance on the street, said 'just two minutes' and ended up chatting on your feet for half an hour, {{isim}}. Experience teaches you the value of conversation. In your general reading, two cups facing each other near the handle caught my eye; the herald of a pleasant chat soon, of a face you haven't seen in a long while. Come, this time let's talk sitting down, not on our feet…",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 525,
+      "metin": "Nişanlınla bir perdenin rengini konuşurken lafın nasıl yıllar sonrasının hayallerine vardığını fark ettin mi {{isim}}? Küçük bir ayrıntı bile ikinizde koca bir gelecek açıyor. Aşk falında fincanının ortasında iç içe geçmiş iki halka parlıyor; yaklaşan güzel günlerin ışığını taşıyor. Haydi, telvelere bakalım…",
+      "metin_en": "Have you noticed how, while discussing the color of a curtain with your fiancé, the talk ends up in dreams of years from now, {{isim}}? Even a small detail opens up a whole future for the two of you. In your love reading, two interlocking rings shine in the middle of your cup; they carry the light of the beautiful days approaching. Come, let's look at the grounds…",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 526,
+      "metin": "Bir yere hazırlanırken son anda küpeni ya da kolyeni değiştirip 'şimdi oldu' dediğin anları bilirim {{isim}}. Ayrıntıya gösterdiğin bu özen hayatının her köşesine sinmiş. Genel falında fincanının kenarında oval bir ayna beliriyor; kendine daha şefkatle bakacağın günleri anlatıyor. Gel, başlayalım;",
+      "metin_en": "I know those moments when, getting ready to go out, you switch your earrings or necklace at the last minute and say 'now that's it', {{isim}}. The care you give to details has seeped into every corner of your life. In your general reading an oval mirror appears on the rim of your cup; it speaks of days when you'll look at yourself with more tenderness. Come, let's begin;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
     }
   ]
 }

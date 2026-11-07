@@ -3682,6 +3682,222 @@
           "deger": "iliski_var"
         }
       ]
+    },
+    {
+      "id": 430,
+      "metin": "İki ayrı hayatın eşyalarını tek bir bavula sığdırmaya çalışır gibisin; her şey yer istiyor, hiçbir şeyden vazgeçmek kolay değil. Önümüzdeki günlerde neyi bırakacağınıza birlikte karar verdiğiniz an, ikinize de ferahlık getirecek.||Yük hafifleyince yol uzamaz, kısalır. Birlikte yürüyenler en çok, birlikte bıraktıklarıyla yakınlaşır.",
+      "metin_en": "You seem to be trying to fit the belongings of two separate lives into a single suitcase; everything wants room, and nothing is easy to give up. In the days ahead, the moment you decide together what to leave behind will bring relief to you both.||When the load gets lighter, the road doesn't grow longer; it grows shorter. Those who walk together grow closest through what they let go of together.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nisanli"
+        }
+      ]
+    },
+    {
+      "id": 431,
+      "metin": "Tencereye hâlâ birkaç kişilik koyuyorsun; artanı ertesi güne saklayıp kendi kendine gülüyorsun. Sofrana alışkanlıktan fazlasını hazırlaman, içinde paylaşmaya hazır bir yer olduğunu anlatıyor. Bu mevsim o yeri merak eden biri çıkacak.||Kalbi geniş olanın sofrası da geniştir. Fazladan pişen yemek israf değil, gelecek bir davetin provasıdır.",
+      "metin_en": "You still cook enough for several people; you save the leftovers for the next day and laugh to yourself. Preparing more than habit calls for at your table tells me there's a space inside you ready to be shared. This season, someone curious about that space will appear.||The one with a wide heart has a wide table too. Food cooked in extra isn't waste; it's a rehearsal for an invitation to come.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 432,
+      "metin": "Eşinle aranızda kimsenin anlamadığı küçük kelimeler, yalnız ikinizin güldüğü eski şakalar var; dışarıdan bakan sıradan bir konuşma sanır. Bu ay bu gizli dil, zorlu bir anda ikinizi yine aynı tarafta buluşturacak.||Bir yuvanın gerçek dili sözlükte yazmaz. Birbirini yarım kelimeden anlayanlar, sözün bittiği yerde bile konuşur.",
+      "metin_en": "Between you and your spouse there are little words no one else understands, old jokes only the two of you laugh at; anyone looking from outside would think it an ordinary conversation. This month that secret language will bring you both to the same side again in a difficult moment.||The true language of a home isn't written in any dictionary. Those who understand each other from half a word go on talking even where words end.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 433,
+      "metin": "Telefonunda açık kalmış sayfalar gibi, zihninde de yarım bırakılmış düşünceler birikiyor; hepsi biraz ışık, biraz güç yiyor. Önümüzdeki günlerde bunlardan birini kapattığında, ötekilerin de kendiliğinden hafiflediğini göreceksin.||Her şeyi aynı anda açık tutan, hiçbirine tam bakamaz. Kapatmak kaybetmek değil, yer açmaktır.",
+      "metin_en": "Like tabs left open on your phone, half-finished thoughts are piling up in your mind; each one eats a little light, a little energy. In the days ahead, when you close one of them, you'll see the others grow lighter on their own.||Whoever keeps everything open at once can't look properly at any of it. Closing isn't losing; it's making room.",
+      "kosullar": []
+    },
+    {
+      "id": 434,
+      "metin": "Bazen bir rüyada hiç tanımadığın birine gülümsediğin olur; uyandığında yüzünü hatırlamazsın ama içindeki sıcaklık uzun süre kalır. Kalbin, aklından önce hazırlanıyor. Bu ay yaşayacağın sıradan bir karşılaşma o sıcaklığı tanıdık getirecek.||Gönül, gözün henüz görmediğini önce sezer. Acele eden aramaz; hazır olan bulur.",
+      "metin_en": "Sometimes in a dream you smile at someone you've never met; when you wake you can't remember their face, but the warmth inside lingers for a long time. Your heart is getting ready before your mind does. This month an ordinary encounter will make that warmth feel familiar.||The heart senses first what the eye has yet to see. The one in a hurry doesn't truly search; the one who is ready finds.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 435,
+      "metin": "Eve girerken ayakkabılarını çıkarır gibi günün yükünü de kapının önünde bırakmaya çalışıyorsun; her zaman başaramasan da eşin bu çabayı görüyor. Önümüzdeki günlerde onun söyleyeceği bir cümle, ne kadar fark edildiğini sana açıkça gösterecek.||Bir yuvanın huzuru, eşikte bırakılan yüklerle ölçülür. İçeri taşınmayan dert, evi yormaz.",
+      "metin_en": "You try to leave the day's burden at the door the way you take off your shoes when you come home; even if you don't always manage it, your wife sees the effort. In the days ahead, something she says will show you clearly how much it has been noticed.||The peace of a home is measured by the burdens left at its threshold. A worry not carried inside doesn't wear the house down.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 436,
+      "metin": "Sevdiğin kişiyle yürürken bir noktadan sonra adımlarınızın kendiliğinden denkleştiğini fark ediyor musun? Biri hızlanmadan, öbürü yavaşlamadan. Bu ay aranızdaki küçük bir farkın da aynı sessizlikle uyuma dönüştüğünü göreceksin.||Uyum, iki kişinin aynı olması değil, aynı ritmi bulmasıdır. Yan yana yürüyenler zamanla tek bir yolun sahibi olur.",
+      "metin_en": "Walking with the person you love, do you notice how, after a while, your steps fall into the same pace on their own? Without one speeding up or the other slowing down. This month you'll see a small difference between you turn into harmony with the same quietness.||Harmony isn't two people being the same; it's finding the same rhythm. Those who walk side by side become, in time, owners of a single road.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliski_var"
+        }
+      ]
+    },
+    {
+      "id": 437,
+      "metin": "Islak imzanın kurumasını beklemek gibi: bazı işler yapılmış ama henüz tamamlanmış sayılmıyor. Kurumda üzerine düşeni çoktan yaptığın bir konu, bu ay başka bir masadan dönüp senin lehine kapanacak.||Mürekkep acele edene bulaşır. Sabrın da bir imzası vardır; en son atılır ama en kalıcı olan odur.",
+      "metin_en": "Like waiting for a wet signature to dry: some things are done but not yet counted as finished. A matter at your institution where you did your part long ago will come back from another desk this month and close in your favor.||Ink smudges on the one who rushes. Patience has a signature too; it's signed last, but it's the one that lasts longest.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 438,
+      "metin": "Kapıyı kilitledikten sonra bir kez daha yoklarsın; kafanda her şeyi ikinci kez kontrol eden bir bekçi var. Bu dikkat seni çok kez korudu, ama bazen yorulduğunu da biliyorsun. Önümüzdeki günlerde güvendiğin birine küçük bir işi bırakmak sana beklemediğin kadar iyi gelecek.||Her kapının başında durulmaz. Güven, insanın kendi nöbetini birine devredebilmesidir.",
+      "metin_en": "After locking the door, you check it once more; in your head there's a guard who double-checks everything. That carefulness has protected you many times, but you also know it sometimes tires you. In the days ahead, leaving a small task to someone you trust will do you more good than you expect.||Not every door needs a guard standing at it. Trust is being able to hand your watch over to someone else.",
+      "kosullar": []
+    },
+    {
+      "id": 439,
+      "metin": "Bir paragrafı onuncu kez düzeltirken aslında kelimeleri değil, kendi tatminsizliğini yontuyorsun. Okuyanların çoğu ilk hâlini de çok beğenecekti. Bu dönem bitmiş saydığın bir işin, sandığından çok daha büyük bir ilgi gördüğünü öğreneceksin.||Kusursuzluk kapıyı hiç açmayan bir bekçidir. Yeterince iyi olan yayımlanır; yayımlanan yol açar.",
+      "metin_en": "When you correct a paragraph for the tenth time, it's not the words you're carving but your own dissatisfaction. Most readers would have loved the first version too. This term you'll learn that a piece of work you considered finished is getting far more attention than you thought.||Perfection is a gatekeeper that never opens the door. What's good enough gets published; what gets published opens the way.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 440,
+      "metin": "Gençken her tartışmada son sözü söylemek isterdin; şimdi bekliyor, yerinde tek bir cümle kuruyorsun ve o cümle çoğu zaman meseleyi bitiriyor. Bu ay bir aile meselesinde o tek cümlen yine aranacak.||Yaşın getirdiği sessizlik değil, isabettir. Ok yaydan geç çıkar ama hedefi bulur.",
+      "metin_en": "When you were young you wanted the last word in every argument; now you wait and say a single well-placed sentence, and that sentence usually settles the matter. This month that one sentence of yours will be called for again in a family matter.||What age brings isn't silence, it's precision. The arrow leaves the bow late, but it finds its mark.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 441,
+      "metin": "Geniş bir yatağın hâlâ bir tarafında uyuyorsun; öbür taraf boş kalsa da alışkanlık seni kenarda tutuyor. Bu ay bir gece farkında olmadan ortaya kaydığını ve sabaha çok rahat uyandığını göreceksin.||Alışkanlıklar kalbin ardından gelir, onu beklemez. Yer açılınca insan önce korkar, sonra genişler.",
+      "metin_en": "You still sleep on one side of a wide bed; even though the other side stays empty, habit keeps you at the edge. One night this month you'll find that you've drifted to the middle without noticing and woken up wonderfully rested.||Habits follow the heart; they don't wait for it. When space opens up, you're afraid at first, then you expand.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni_ayrilmis"
+        }
+      ]
+    },
+    {
+      "id": 442,
+      "metin": "Hafta başında gelen kutundaki yığına bakarken nereden başlayacağını bilemediğin anlar oluyor. Oysa ilk cevabı yazdığında geri kalanı kendiliğinden sıraya giriyor. Bu hafta yazacağın ilk cevaplardan biri, sana beklemediğin bir fırsatın kapısını aralayacak.||Kalabalık bir masanın düzeni tek bir kâğıtla başlar. Önce eline aldığın, ötekilerin sırasını belirler.",
+      "metin_en": "At the start of the week there are moments when you look at the pile in your inbox and don't know where to begin. Yet once you write the first reply, the rest falls into line on its own. This week one of the first replies you write will open the door to an opportunity you didn't expect.||The order of a crowded desk begins with a single sheet of paper. The one you pick up first decides the order of all the others.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 443,
+      "metin": "Artık birçok kararı tek imzayla veriyorsun; bu bazen sana kanat, bazen ağırlık gibi geliyor. Kimseye danışmadan seçmenin özgürlüğüyle yanılma kaygısı yan yana yürüyor. Bu ay verdiğin küçük bir kararın ne kadar isabetli olduğunu göreceksin.||Kendi yolunu çizen, haritasını da kendisi okur. Yanılma korkusu yürümeye engel değil, dikkatli yürümenin sebebidir.",
+      "metin_en": "These days you make many decisions with a single signature; sometimes that feels like wings, sometimes like a weight. The freedom of choosing without consulting anyone walks side by side with the worry of being wrong. This month you'll see how well-judged a small decision of yours turns out to be.||The one who draws their own path also reads their own map. The fear of being wrong isn't a barrier to walking; it's the reason to walk carefully.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "bosanmis"
+        }
+      ]
+    },
+    {
+      "id": 444,
+      "metin": "Düşünürken kalemin arkasını kemirir, bir soruya takıldığında gözlerin pencereye kaçar. Bunlar tembellik değil, zihninin nefes alma biçimi. Bu dönem uzun süre takıldığın bir konunun, bir anlık dalgınlığın ardından birden aydınlandığını göreceksin.||Akıl bazen bakmadığı yerde bulur. Dinlenen zihin, zorlanan zihinden daha çok çözer.",
+      "metin_en": "When you're thinking, you chew the end of your pen, and when you get stuck on a question your eyes drift to the window. That isn't laziness; it's the way your mind breathes. This term you'll see a subject you've been stuck on for a long time suddenly light up after a moment of daydreaming.||The mind sometimes finds what it's looking for where it isn't looking. A rested mind solves more than a strained one.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 445,
+      "metin": "Evde ışıkları en son kapatan sensin; herkes uyuduktan sonra gelen o kısa sessizlik yalnızca sana ait. Bu ay eşinin o sessizliği seninle paylaşmak için uyanık kaldığı bir gece, ikinizi yeniden yakınlaştıracak.||Gece yarısı konuşulanlar gündüzün telaşını unutturur. Bir yuvanın en derin sohbetleri, lambanın en kısık olduğu saatte yapılır.",
+      "metin_en": "At home you're the one who turns off the lights last; that short silence after everyone falls asleep belongs only to you. This month a night when your husband stays awake to share that silence with you will bring the two of you closer again.||What's said at midnight makes you forget the day's rush. The deepest conversations of a home happen at the hour when the lamp is at its dimmest.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 446,
+      "metin": "Saçını aceleyle toplayıp kollarını sıvadığında, önündeki işin artık bitmiş sayılabileceğini herkes bilir. Kendi işini kendin halletmenin tadını seviyorsun. Bu mevsim, kararlılığına hayran kalan birinin sana yardım için değil, yanında olmak için geldiğini göreceksin.||Güçlü kadına yardım değil, eşlik teklif edilir. Doğru insan yükünü almaya değil, yolunu paylaşmaya gelir.",
+      "metin_en": "When you hastily tie up your hair and roll up your sleeves, everyone knows the task in front of you is as good as done. You love the taste of handling your own business yourself. This season you'll see that someone who admires your determination comes not to help you, but to be by your side.||A strong woman isn't offered help; she's offered company. The right person comes not to take your load, but to share your road.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 447,
+      "metin": "Yolu değiştirdiğinde ekrandaki ses \"Rota yeniden hesaplanıyor\" der; azarlamaz, yalnızca yeni yolu gösterir. Son zamanlarda bir planın değişmesi yüzünden kendine fazla kızıyorsun. Önümüzdeki günlerde o değişikliğin seni daha kısa bir yoldan götürdüğünü anlayacaksın.||Sapılan her yol bir hata değildir; bazen asıl yol odur. Yön değiştiren kaybolmaz, yeniden bulunur.",
+      "metin_en": "When you change your route, the voice on the screen says \"Recalculating route\"; it doesn't scold, it simply shows the new way. Lately you've been too hard on yourself because a plan changed. In the days ahead you'll realize that change took you along a shorter road.||Not every wrong turn is a mistake; sometimes it's the real road. Whoever changes direction isn't lost; they're found again.",
+      "kosullar": []
+    },
+    {
+      "id": 448,
+      "metin": "Kıştan kalma kalın bir montu bahar gelince bir türlü kaldıramazsın; \"Ya yine soğursa\" dersin. İçinde de mevsimi geçmiş bir tedbir, artık gerek kalmamış bir temkin taşıyorsun. Bu ay onu dolaba kaldırdığında ne kadar hafiflediğine şaşıracaksın.||Mevsimine göre giyinmeyen ya üşür ya terler. Geçen kışın korkusunu yeni bahara taşıma.",
+      "metin_en": "When spring comes you just can't put away that heavy coat left over from winter; you say, \"What if it gets cold again?\" Inside, too, you're carrying a precaution whose season has passed, a caution no longer needed. This month, when you put it away in the closet, you'll be surprised how much lighter you feel.||Whoever doesn't dress for the season either shivers or sweats. Don't carry last winter's fear into a new spring.",
+      "kosullar": []
+    },
+    {
+      "id": 449,
+      "metin": "Ateşi yakmak kolaydır; senin asıl ustalığın onu korlaştırmayı bilmen. Hızlı başlayıp sabırla sürdürmek, son zamanlarda en çok zorlandığın şey. Bu ay acele etmediğin bir işin sandığından bereketli sonuçlandığını göreceksin.||Alev göz alır, kor ısıtır. Kalıcı olan gösterişli başlayan değil, sabırla yanandır.",
+      "metin_en": "Lighting a fire is easy; your real skill is knowing how to turn it into embers. Starting fast and keeping going patiently is what you've struggled with most lately. This month you'll see a task you didn't rush turn out more fruitful than you expected.||The flame dazzles, the embers warm. What lasts isn't what starts with a show, but what burns with patience.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     }
   ]
 }

@@ -2905,6 +2905,233 @@
           "deger": "ilişkisi yok"
         }
       ]
+    },
+    {
+      "id": 229,
+      "tur": "bana",
+      "metin": "Magnuskop'un camında beş yıl sonrasından bir akşam beliriyor. Açık renkli bir koltukta oturmuş, telefonundaki eski fotoğraflara bakıyorsun {{isim}}. Yanına gelip omzuna başını yaslayan bir erkek var. Birlikte gülüyorsunuz. Onun hayatına, sen tam da kimseye yeniden alışmak istemediğin bir dönemin ardından girdiğini seziyorum.",
+      "metin_en": "An evening five years from now appears in the glass of the MagnusScope. You're sitting in a light-colored armchair, looking through old photos on your phone, {{isim}}. A man comes over, sits beside you, and rests his head on your shoulder. You're laughing together. I sense that he entered your life just after a period when you didn't want to get used to anyone new ever again.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 230,
+      "tur": "bana",
+      "metin": "Üç yıl ötesine uzandığımda, mutfak tezgâhında yan yana duran iki anahtar gözüme çarpıyor. Birinin üzerinde küçük, renkli bir süs var. Sen ise pencerenin önünde durmuş, az önce gelen bir haberi düşünüyorsun {{isim}}. Uzun süredir aklını meşgul eden bir mesele nihayet çözülmüş. Yüzündeki rahatlamadan, bu evde artık çok daha huzurlu olduğunu anlıyorum.",
+      "metin_en": "As I reach three years into the future, I notice two keys lying side by side on a kitchen counter. One has a small, colorful charm attached to it. Meanwhile, you're standing by the window, thinking about some news that has just arrived, {{isim}}. A matter that's been weighing on your mind for a long time has finally been resolved. From the relief on your face, I can tell that you now feel much more at peace in this home.",
+      "kosullar": []
+    },
+    {
+      "id": 231,
+      "tur": "bana",
+      "metin": "Magnuskop'u altı yıl ileri sardığımda, seni aydınlık bir odada mobilyaların yerini değiştirirken buluyorum. Yanında sana yardım eden, sesini duyunca gülümsediğin biri var {{isim}}. Bir zamanlar yeniden kurmakta zorlandığın düzen, şimdi tam istediğin gibi olmuş. Üstelik kapının yanında iki kişiye ait eşyalar görüyorum. Kalbini yeniden açmış olabilir misin?",
+      "metin_en": "When I fast-forward the MagnusScope six years, I find you rearranging furniture in a bright room. Someone is helping you, someone whose voice makes you smile whenever you hear it, {{isim}}. The life you once struggled to put back together has now taken shape exactly as you wanted. What's more, I can see belongings for two people beside the door. Could it be that you've opened your heart again?",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 232,
+      "tur": "bana",
+      "metin": "Bir masa, üzerinde açılmış bir defter ve köşesine iliştirilmiş küçük bir not... Magnuskop bana yedi yıl sonraki hayatından böyle bir görüntü sunuyor. Karşında oturan iki insan söylediklerini dikkatle dinliyor {{isim}}. Vaktiyle çekinerek başladığın bir konuda artık başkalarına yol gösteriyorsun. İçlerinden birinin teşekkür ederken söyledikleri seni epey duygulandıracak.",
+      "metin_en": "A table, an open notebook resting on it, and a small note tucked into the corner... This is the glimpse the MagnusScope offers me of your life seven years from now. Two people sitting across from you are listening carefully to every word you say, {{isim}}. You've become someone who guides others in a field you once entered with hesitation. The words one of them speaks while thanking you will move you deeply.",
+      "kosullar": []
+    },
+    {
+      "id": 233,
+      "tur": "bana",
+      "metin": "Dört yıl sonrasının bir bahar akşamında, seni küçük bir lokantanın pencere kenarındaki masasında görüyorum. Karşındaki insan sen konuşurken elini tutuyor {{isim}}. Masada henüz açılmamış küçük bir hediye paketi var. Bu ilişkinin başlangıcında biraz temkinli davranmışsın sanırım. Fakat şimdi yüzündeki mutluluk öyle belirgin ki, Magnus bile gülümsemeden edemiyor.",
+      "metin_en": "On a spring evening four years from now, I see you sitting at a table by the window of a small restaurant. The person across from you is holding your hand as you speak, {{isim}}. A small gift, still wrapped, rests on the table. I believe you were a little cautious at the beginning of this relationship. But now the happiness on your face is so unmistakable that even Magnus can't help but smile.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 234,
+      "tur": "bana",
+      "metin": "{{burc}} burcunun yıllarla törpülenmeyen tarafını, sekiz yıl sonrasındaki bir aile sofrasında yeniden fark ediyorum. Gençlerden biri senden fikir istiyor; sen de önündeki bardağı bırakıp uzun uzun anlatıyorsun. Bir zamanlar seni yoran tecrübeler, şimdi başkalarının işini kolaylaştırıyor {{isim}}. Masadan kalkarken duyacağın bir teşekkür, bütün akşam yüzünde kalacak.",
+      "metin_en": "At a family dinner eight years from now, I once again recognize the side of your {{burc}} nature that the passing years have never managed to soften. One of the younger people asks for your advice, and you put down the glass in front of you to explain things at length. Experiences that once wore you down are now making life easier for others, {{isim}}. A heartfelt thank-you you'll hear as you leave the table will keep you smiling for the rest of the evening.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 235,
+      "tur": "bana",
+      "metin": "Magnuskop'tan bu kez gülüşmeler geliyor. Beş yıl sonraki bir hafta sonunda, seni dışarıda kurulmuş uzun bir masanın başında seçiyorum {{isim}}. Önünde henüz dokunulmamış bir tabak, yanında katlanmış bir ceket var. İçlerinden biri geçmişte yaşadığınız komik bir olayı anlatıyor. Bir süredir görüşemediğin insanlarla yeniden bir araya gelmişsin. O gün eve dönerken içinin ne kadar dolu olduğunu hissedeceksin.",
+      "metin_en": "This time, laughter is coming from the MagnusScope. On a weekend five years from now, I make out your figure at the head of a long table set outdoors, {{isim}}. There's a plate of untouched food in front of you and a folded jacket beside you. Someone at the table is telling a funny story about something you all experienced in the past. You've reunited with people you haven't been able to see for a while. On your way home that day, you'll feel just how full your heart is.",
+      "kosullar": []
+    },
+    {
+      "id": 236,
+      "tur": "bana",
+      "metin": "Eşinin bir kâğıdın üzerine eğilip bir şeyler hesapladığını görüyorum. Magnuskop'u üç yıl sonraya ayarlamışım {{isim}}. Sen ise elinde iki bardak içecekle yanına geliyorsun. Bir süredir konuştuğunuz evle ilgili bir düzenleme artık gerçekleşmek üzere. Önce ufak bir fikir ayrılığı yaşamış olsanız da sonunda ikinizin de içine sinen güzel bir karara varacaksınız.",
+      "metin_en": "I see your spouse leaning over a piece of paper, working out some figures. I've set the MagnusScope three years into the future, {{isim}}. You come over carrying two glasses of something to drink. A change to your home that you've been discussing for some time is finally about to happen. Although you may have had a small difference of opinion at first, you'll eventually reach a wonderful decision that feels right to both of you.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 237,
+      "tur": "bana",
+      "metin": "Altı yıl sonraki bir sabah, seni aynanın karşısında hazırlanırken görüyorum {{isim}}. Yatağın üzerinde özenle seçilmiş bir kıyafet duruyor. Eşin kapıdan sana bakıp gülümsüyor ve güzel bir şey söylüyor. Birlikte katılacağınız özel bir buluşma var. O gün uzun zamandır kendine ayırmadığın kadar vakit ayıracak, çevrendekilerden duyacağın iltifatlarla neşeleneceksin.",
+      "metin_en": "On a morning six years from now, I see you getting ready in front of a mirror, {{isim}}. An outfit, carefully chosen, is laid out on the bed. Your spouse looks at you from the doorway, smiles, and says something lovely. There's a special gathering you'll be attending together. That day, you'll devote more time to yourself than you have in ages, and the compliments you receive from those around you will fill you with joy.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 238,
+      "tur": "bana",
+      "metin": "Sekiz yıl sonrasına uzanıyorum; seni ahşap bir masanın üzerinde duran birkaç belgeyi incelerken yakalıyorum {{isim}}. Karşındaki kişi söylediklerini başıyla onaylıyor. Bir dönem sürekli ertelediğin maddi bir karar, sonunda lehine sonuçlanmış gibi. Dışarı çıktığında telefonunu eline alıp sevdiğin birine güzel haberi vereceksin. Sesindeki gururu şimdiden duyabiliyorum.",
+      "metin_en": "I reach eight years into the future and find you examining several documents spread across a wooden table, {{isim}}. The person sitting opposite you nods in agreement with what you're saying. It seems that a financial decision you kept postponing for a while has finally worked out in your favor. When you step outside, you'll pick up your phone and share the good news with someone you love. I can already hear the pride in your voice.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 239,
+      "tur": "bana",
+      "metin": "Beş yıl sonraki evinde, açık renk perdelerin arasından öğleden sonra güneşi süzülüyor. Sen masaya son bir tabak yerleştiriyorsun {{isim}}. Birazdan gelecek misafirlerin için hazırlık yapmışsın. Uzun süredir değiştirmek istediğin bir köşeyi de nihayet yenilemişsin. İçeri girenlerden biri bu değişimi hemen fark edip öyle güzel sözler söyleyecek ki bütün yorgunluğun kaybolacak.",
+      "metin_en": "In your home five years from now, the afternoon sun filters through light-colored curtains. You're placing one last plate on the table, {{isim}}. You've been preparing for guests who will arrive shortly. You've also finally renovated a corner of your home that you've wanted to change for a long time. One of your guests will notice the transformation immediately and say such lovely things about it that all your tiredness will disappear.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 240,
+      "tur": "bana",
+      "metin": "Magnuskop beni dört yıl sonraki bir iş gününe götürüyor. Bilgisayarının yanında kapağı açık bir not defteri, masanda da henüz bitmemiş bir içecek var {{isim}}. Yöneticin yanına gelip seni başka bir görüşmeye çağırıyor. Önceden büyük ölçüde başkalarının kararlarına bağlı yürüttüğün işler, artık senin onayınla ilerliyor. Emeklerinin karşılığını sonunda aldığını hissediyorum.",
+      "metin_en": "The MagnusScope takes me to a working day four years from now. There's an open notebook beside your computer and an unfinished drink on your desk, {{isim}}. Your manager approaches and asks you to join another meeting. Work that once depended largely on other people's decisions now moves forward with your approval. I sense that your hard work has finally paid off.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 241,
+      "tur": "bana",
+      "metin": "Dokuz yıl sonrasına baktığımda, seni daha önce yabancısı olduğun bir sokakta yürürken görüyorum. Elinde küçük bir alışveriş çantası, yüzünde ise tuhaf bir aşinalık var {{isim}}. Yolun karşısından tanıdık bir ses duyunca dönüp gülümsüyorsun. Belli ki hayatına yeni bir çevre katılmış. Bir zamanlar gözünde büyüttüğün değişiklik şimdi gündelik hayatının en sevdiğin parçası olmuş.",
+      "metin_en": "When I look nine years into the future, I see you walking along a street that was once unfamiliar to you. You're carrying a small shopping bag, and there's a curious sense of familiarity on your face, {{isim}}. Hearing a familiar voice from across the street, you turn and smile. Clearly, a new circle of people has become part of your life. A change that once seemed overwhelming has now become one of your favorite parts of everyday life.",
+      "kosullar": []
+    },
+    {
+      "id": 242,
+      "tur": "bana",
+      "metin": "Eşinle karşılıklı oturduğunuz masanın ortasında küçük bir kutu var. Magnuskop yedi yıl sonrasını gösteriyor {{isim}}. Kutuyu açtığında eşinin yüzüne yayılan sevinci fark ediyorum. Bir süredir birlikte gerçekleştirmek istediğiniz bir şey için ilk ciddi adımı atmışsınız. O akşam, eskiden yalnızca konuştuğunuz planların nasıl gerçek hayatınıza yerleştiğini uzun uzun anlatacaksınız.",
+      "metin_en": "There's a small box in the middle of the table where you and your spouse are sitting across from each other. The MagnusScope is showing me seven years into the future, {{isim}}. When you open the box, I notice joy spreading across your spouse's face. You've taken the first serious step toward something you've both wanted to accomplish for some time. That evening, you'll spend a long time talking about how plans that were once nothing more than conversations have now become part of your real lives.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 243,
+      "tur": "bana",
+      "metin": "Altı yıl ötesine bakıyorum; seni güneş alan bir yerde oturmuş eski bir fotoğrafa bakarken görüyorum. Yanındaki dostun fotoğraftaki birini işaret edip gülmeye başlıyor {{isim}}. Yıllar önce birlikte çalıştığın insanlardan haber almışsın. O sohbetin ardından uzun zamandır ertelediğin bir buluşma da gerçekleşecek. Geçmişi güzel hatırlarken bugünün kıymetini daha çok anlayacaksın.",
+      "metin_en": "I look six years ahead and see you sitting somewhere sunny, gazing at an old photograph. The friend beside you points to someone in the picture and bursts into laughter, {{isim}}. You've received news from people you worked with years ago. Following that conversation, a reunion you've been postponing for a long time will finally take place. As you look back fondly on the past, you'll come to appreciate the present even more.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 244,
+      "tur": "bana",
+      "metin": "Bölümün uzun koridorunda, kolunun altında birkaç dosyayla ilerliyorsun. Magnuskop tam beş yıl sonrasını gösteriyor {{isim}}. Kapının önünde bekleyen bir öğrencin seni görünce heyecanla ayağa kalkıyor. Vaktiyle üzerinde çok uğraştığın bir çalışma artık başka araştırmalara kaynak olmuş. Odana döndüğünde gelen bir teşekkür mesajını okuyup sessizce gülümseyeceksin.",
+      "metin_en": "You're walking down the long corridor of your department with several folders tucked under your arm. The MagnusScope is showing me exactly five years into the future, {{isim}}. A student of yours waiting outside the door jumps to their feet excitedly when they see you. A project you once worked so hard on has now become a reference for other research. When you return to your office, you'll read a message of thanks and smile quietly to yourself.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 245,
+      "tur": "bana",
+      "metin": "İki ayrı fincanın durduğu küçük bir sehpa görüyorum. Magnuskop'u üç yıl sonraki bir kış gününe çevirmişim {{isim}}. Karşındaki insan, uzun zamandır konuşmadığınız bir meseleyi yeniden açıyor. Önce kısa bir sessizlik oluyor, ardından ikiniz de rahatlayarak gülüyorsunuz. İçinde ağırlık yapan eski bir yanlış anlaşılma sonunda tatlıya bağlanmış. Eve dönerken bunu tekrar tekrar düşüneceksin.",
+      "metin_en": "I see a small coffee table with two separate cups on it. I've turned the MagnusScope toward a winter day three years from now, {{isim}}. The person sitting across from you brings up a subject you haven't discussed in a long time. There's a brief silence at first, and then you both laugh with relief. An old misunderstanding that's been weighing on your heart has finally been resolved on good terms. You'll find yourself thinking about it over and over on your way home.",
+      "kosullar": []
+    },
+    {
+      "id": 246,
+      "tur": "bana",
+      "metin": "Yedi yıl sonraki görüntünde, seni bir mağazanın geniş aynası karşısında görüyorum {{isim}}. Elindeki kıyafeti üzerine tutmuş, yanındaki insanın fikrini soruyorsun. Kendine uzun zamandır ertelediğin küçük bir ödül vermişsin. Aynı gün alacağın başka bir güzel haber de yüzünü güldürecek. Gözlerinde, eskisinden daha rahat karar veren bir kadının özgüveni var.",
+      "metin_en": "In a vision seven years from now, I see you standing before a large mirror in a store, {{isim}}. You're holding a piece of clothing against yourself and asking the person beside you for their opinion. You've finally treated yourself to a little reward you've been putting off for a long time. More good news arriving that same day will also bring a smile to your face. In your eyes, I see the confidence of a woman who makes decisions more easily than she once did.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 247,
+      "tur": "bana",
+      "metin": "Magnuskop'u altı yıl ileriye taşıdığımda, okul sıralarının yerini daha düzenli bir çalışma masası alıyor {{isim}}. Bilgisayarında açık bir belge var; yanında da eskiden ders çalışırken kullandığın bir eşya duruyor. Bir zamanlar yetiştirmekte zorlandığın ödevlerin ardından şimdi kendi kararlarını verdiğin bir dönemdesin. Aldığın güzel bir cevapla kendine yeni bir hedef koyacağını seziyorum.",
+      "metin_en": "As I move the MagnusScope six years forward, the school desks give way to a more organized workspace, {{isim}}. There's a document open on your computer, and beside it lies something you used to keep with you while studying. After the days when you struggled to finish your assignments on time, you're now in a chapter of life where you make your own decisions. I sense that a positive response you receive will inspire you to set a new goal for yourself.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 248,
+      "tur": "bana",
+      "metin": "Arkadaş grubundan gelen bir sesli mesajla başlıyor görüntü. Magnuskop sekiz yıl sonrasını gösteriyor {{isim}}. Seni bir yolculuk öncesinde küçük bir çantayı hazırlarken görüyorum. Bir zamanlar yalnızca konuştuğunuz bir planı artık gerçekleştirebilecek durumdasınız. Dahası, eskiden fikir almak için başkalarına danışırken şimdi organizasyonu sen üstlenmişsin. Bu değişim sana bile komik gelecek.",
+      "metin_en": "The vision begins with a voice message from your group of friends. The MagnusScope is showing me eight years into the future, {{isim}}. I see you packing a small bag before a trip. A plan you once only talked about is now something you can actually make happen. What's more, where you once turned to others for advice, you're now the one taking charge of the arrangements. Even you'll find this change amusing.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
     }
   ],
   "yasama_dair": [
@@ -4769,6 +4996,146 @@
       "tur": "yasama",
       "metin": "İçimden gelen sezgi şunu söylüyor: 2{{sayi,160,290}} yıllarında insanlar, uzaktaki bir sevdiğinin sadece sesini değil, sıcaklığını ve dokunuşunu da hissedebilecek. Özlem denen şey hafifleyecek, ama hiç bitmeyecek; çünkü asıl özlenen hep karşıdaki insanın kendisi olacak {{isim}}.",
       "metin_en": "My intuition whispers this: in 2{{sayi,160,290}}, people will be able to feel the warmth and touch of a distant loved one, as well as hear their voice. Longing will grow gentler, yet never quite disappear, because the one we truly miss will always be the person themselves, {{isim}}.",
+      "kosullar": []
+    },
+    {
+      "id": 265,
+      "tur": "yasama",
+      "metin": "Magnuskop'un hesaplamalarında 20{{sayi,42,65}} yılına ait ilginç bir mutfak görüntüsü belirdi {{isim}}. Buzdolaplarının raflarına yerleştirilen küçük ışık okuyucuları, yiyeceklerin tazeliğini renk değiştirerek gösterecek. Üstelik dolap, kalan malzemelerle hazırlanabilecek yemekleri önerecek. İnsanların akşamları ne pişireceğini düşünerek geçirdiği zaman epey azalacak. Benim de en çok bu kısmı hoşuma gitti!",
+      "metin_en": "An intriguing glimpse of a kitchen from the year 20{{sayi,42,65}} appeared in my MagnusScope calculations, {{isim}}. Tiny light sensors installed on refrigerator shelves will indicate how fresh the food is by changing color. What's more, the fridge will suggest meals you can prepare with the ingredients you have left. People will spend considerably less time wondering what to cook for dinner. And that's the part I like most!",
+      "kosullar": []
+    },
+    {
+      "id": 266,
+      "tur": "yasama",
+      "metin": "Şehirlerin geleceğine çevirdiğim mercekte, 20{{sayi,50,79}} yılında kaldırımların altına döşenmiş ince enerji katmanları dikkatimi çekti. İnsanların yürürken oluşturduğu basınç, sokak lambalarını besleyen elektriğe dönüştürülecek. Kalabalık caddeler kendi aydınlatmalarının bir bölümünü kendileri üretecek {{isim}}. Düşünsene, yalnızca yürüyerek bir şehre ışık vereceksin!",
+      "metin_en": "When I turned my lens toward the future of cities, something caught my attention in the year 20{{sayi,50,79}}: thin energy-generating layers installed beneath the sidewalks. The pressure created by people's footsteps will be converted into electricity to power streetlights. Busy streets will generate some of their own lighting, {{isim}}. Just imagine, you'll be able to light up a city simply by walking!",
+      "kosullar": []
+    },
+    {
+      "id": 267,
+      "tur": "yasama",
+      "metin": "Biraz önce 20{{sayi,47,72}} yılına uzandım ve insanların telefonla konuşurken artık yabancı dil bilmek zorunda kalmadıklarını gördüm {{isim}}. Kulak içine yerleştirilen küçücük bir cihaz, karşı tarafın söylediklerini aynı ses tonuyla anında çevirecek. Üstelik konuşmadaki esprileri ve duyguları da koruyacak. Yabancı bir ülkede pazarlık yaparken bile dil engeli kalmayacak. Bence oldukça eğlenceli!",
+      "metin_en": "I just traveled forward to the year 20{{sayi,47,72}} and saw that people will no longer need to know a foreign language to have a phone conversation, {{isim}}. A tiny device placed inside the ear will instantly translate what the other person says, preserving their exact tone of voice. It will even retain the humor and emotions in the conversation. Language barriers will disappear, even when you're bargaining in a foreign country. I think that sounds like great fun!",
+      "kosullar": []
+    },
+    {
+      "id": 268,
+      "tur": "yasama",
+      "metin": "20{{sayi,58,89}} yılının sonbaharından bir görüntü yakaladım. Evlerin dış cepheleri, güneş ışığının açısına göre renk değiştiren saydam panellerle kaplanmış olacak. Bu paneller yazın ısıyı dışarı yansıtacak, kışın ise içeri aktaracak. Böylece binaların enerji tüketimi belirgin biçimde azalacak {{isim}}. Evinin rengini değiştirmek için boya ustası çağırma devri de kapanacak!",
+      "metin_en": "I caught a glimpse of autumn in the year 20{{sayi,58,89}}. The exteriors of houses will be covered with transparent panels that change color depending on the angle of sunlight. These panels will reflect heat away in summer and channel it indoors in winter. As a result, buildings will consume significantly less energy, {{isim}}. And the days of calling a painter to change the color of your house will be over!",
+      "kosullar": []
+    },
+    {
+      "id": 269,
+      "tur": "yasama",
+      "metin": "Zamanın derinliklerinde, 20{{sayi,55,84}} yılına ait bir market gördüm {{isim}}. Meyvelerin üzerindeki küçücük etiketler, telefon kamerasıyla okunduğunda ürünün hangi tarladan geldiğini, ne zaman toplandığını ve ne kadar yol katettiğini gösterecek. İnsanlar kokusuna bakarak seçtikleri meyvenin geçmişini de öğrenebilecekler. Hatta alışveriş sırasında bazı ürünlerin tazeliğini karşılaştırmak sıradan bir alışkanlık olacak.",
+      "metin_en": "Deep within the currents of time, I came across a grocery store from the year 20{{sayi,55,84}}, {{isim}}. Tiny labels on fruit will reveal which farm each piece came from, when it was harvested, and how far it traveled, all with a quick scan from a phone camera. People will be able to discover the history of the fruit they once selected simply by its smell. Comparing the freshness of different products while shopping will even become an everyday habit.",
+      "kosullar": []
+    },
+    {
+      "id": 270,
+      "tur": "yasama",
+      "metin": "Geleceğin ulaşım kayıtlarını incelerken 20{{sayi,60,91}} yılında tren istasyonlarının bambaşka bir düzene geçtiğini fark ettim. Yolcuların biletleri, istasyon girişinde yürüyüşleri sırasında temassız olarak doğrulanacak. Vagon kapıları da perondaki yolcu yoğunluğuna göre konumlanacak {{isim}}. Böylece istasyonlarda uzayıp giden kuyruklar büyük ölçüde ortadan kalkacak. Tren kaçırma telaşı bile azalacak!",
+      "metin_en": "While examining the transportation records of the future, I noticed that train stations will operate in a completely different way by the year 20{{sayi,60,91}}. Passengers' tickets will be verified automatically and without contact as they walk through station entrances. Train doors will also be positioned according to the number of passengers waiting on the platform, {{isim}}. This will largely eliminate those endlessly stretching queues at stations. Even the mad rush to catch a train will become less stressful!",
+      "kosullar": []
+    },
+    {
+      "id": 271,
+      "tur": "yasama",
+      "metin": "Gökyüzünde asılı duran yeşil bir bahçe, 20{{sayi,62,94}} yılından bana ulaşan en güzel görüntülerden biri oldu {{isim}}. Yüksek binaların teraslarında kurulan otomatik tarım sistemleri, yağmur suyunu depolayarak sebze yetiştirecek. Mahalle sakinleri kendi binalarında üretilen ürünlerden satın alabilecekler. Bazı apartmanların çatıları küçük birer bostana dönüşecek. Manzarası da cabası!",
+      "metin_en": "A lush green garden suspended high above the ground was one of the most beautiful visions to reach me from the year 20{{sayi,62,94}}, {{isim}}. Automated farming systems installed on the terraces of tall buildings will collect rainwater and use it to grow vegetables. Neighborhood residents will be able to buy produce grown right in their own buildings. Some apartment rooftops will turn into little vegetable gardens. And just imagine the view!",
+      "kosullar": []
+    },
+    {
+      "id": 272,
+      "tur": "yasama",
+      "metin": "Hesaplarımda 20{{sayi,45,73}} yılında geliştirilecek yeni bir gözlük teknolojisi öne çıkıyor. İncecik camlara yerleştirilen görüntü katmanları, bakılan nesnelerin ölçülerini ve açıklamalarını doğrudan görüş alanına yansıtacak. Bir mobilyanın evde nereye sığacağını anlamak için metre aramak gerekmeyecek {{isim}}. İnsanlar alışveriş yaparken ürünlerin evlerindeki görüntüsünü anında görebilecekler.",
+      "metin_en": "My calculations highlight a remarkable new eyewear technology that will emerge in the year 20{{sayi,45,73}}. Display layers embedded in incredibly thin lenses will project measurements and information about objects directly into the wearer's field of vision. You won't need to hunt for a measuring tape to figure out where a piece of furniture will fit in your home, {{isim}}. While shopping, people will be able to see instantly how products would look in their own homes.",
+      "kosullar": []
+    },
+    {
+      "id": 273,
+      "tur": "yasama",
+      "metin": "Bir okul koridorundan yükselen sesler, Magnuskop'u 20{{sayi,51,80}} yılına götürdü. Sınıflarda kullanılan masaların yüzeyleri, öğrencilerin çalışmalarına göre değişen etkileşimli ekranlara dönüşecek. Matematikte geometrik şekiller masanın üzerinde üç boyutlu yükselecek; tarih derslerinde eski şehirlerin sokakları canlandırılacak {{isim}}. Defterler tamamen kaybolmayacak ama ders çalışmanın şekli epey değişecek.",
+      "metin_en": "The sounds echoing through a school corridor carried my MagnusScope to the year 20{{sayi,51,80}}. Classroom desks will transform into interactive screens that adapt to whatever students are working on. In mathematics lessons, geometric shapes will rise in three dimensions above the desks, while history classes will bring the streets of ancient cities to life, {{isim}}. Notebooks won't disappear completely, but the way students learn will change dramatically.",
+      "kosullar": []
+    },
+    {
+      "id": 274,
+      "tur": "yasama",
+      "metin": "20{{sayi,64,95}} yılında insanlığın denizlerden elde ettiği içme suyu miktarında büyük bir artış yaşanacağını hesapladım {{isim}}. Yeni nesil tuz ayırma zarları, bugünkü sistemlere göre çok daha az enerji tüketerek deniz suyunu arıtacak. Kıyı şehirlerinde binaların altına küçük arıtma merkezleri kurulacak. Musluktan akan suyun bir kısmı, yalnızca birkaç saat önce denizin içindeyken içilebilir hale gelmiş olacak.",
+      "metin_en": "I've calculated that the amount of drinking water humanity obtains from the oceans will increase dramatically in the year 20{{sayi,64,95}}, {{isim}}. A new generation of salt-separating membranes will purify seawater using far less energy than today's systems. Small water treatment facilities will be installed beneath buildings in coastal cities. Some of the water flowing from the tap will have been in the sea just a few hours earlier, before being transformed into safe drinking water.",
+      "kosullar": []
+    },
+    {
+      "id": 275,
+      "tur": "yasama",
+      "metin": "Geleceğe açılan görüntüde insanların duvarlara dokunarak odalarının ışığını değiştirdiğini gördüm. 20{{sayi,49,77}} yılında geliştirilecek yeni yüzey kaplamaları, duvarın istenilen bölümünü bir aydınlatma alanına dönüştürecek. Tavandaki lambaların önemi azalacak {{isim}}. Kitap okumak için duvarın küçük bir kısmını aydınlatmak yeterli olacak. Anahtar arama meselesi de tarihe karışacak!",
+      "metin_en": "In a vision of the future, I saw people changing the lighting in their rooms simply by touching the walls. New surface coatings developed in the year 20{{sayi,49,77}} will allow any chosen section of a wall to become a source of light. Ceiling lamps will become less important, {{isim}}. Illuminating a small section of the wall will be enough to read a book. And searching for the light switch will become a thing of the past!",
+      "kosullar": []
+    },
+    {
+      "id": 276,
+      "tur": "yasama",
+      "metin": "Geleceğin bir köşesinde, 20{{sayi,53,82}} yılına ait küçücük bir ayakkabı tabanı dikkatimi çekti. İçindeki basınç algılayıcıları, yürüyüş sırasında vücudun dengesini ölçerek tabanın sertliğini farklı bölgelerde değiştirecek. Uzun yürüyüşlerde ayağa binen yük daha dengeli dağılacak {{isim}}. İnsanlar ayakkabı seçerken yalnızca numarasına değil, kişiye uyum sağlayan yapısına da bakacak.",
+      "metin_en": "In a distant corner of the future, a tiny shoe sole from the year 20{{sayi,53,82}} caught my eye. Pressure sensors embedded inside it will measure the body's balance while walking and adjust the firmness of different sections of the sole. During long walks, pressure on the feet will be distributed more evenly, {{isim}}. When choosing shoes, people will consider not just their size but also how well the shoes adapt to their individual needs.",
+      "kosullar": []
+    },
+    {
+      "id": 277,
+      "tur": "yasama",
+      "metin": "Eski bir kitabın sayfalarından yükselen hafif kâğıt kokusunu gelecekte de hissedeceğiz {{isim}}. Ancak 20{{sayi,56,88}} yılında geliştirilecek akıllı kütüphane masaları, önlerine konulan kitapların sayfalarını tarayarak kenarlarına açıklamalar yansıtacak. Okuyucu bir kelimeye dokunduğunda anlamı belirecek. Böylece eski kitaplar bile dijital dünyanın imkânlarından yararlanacak. Geçmişle geleceğin güzel bir buluşması!",
+      "metin_en": "We'll still be able to enjoy the faint scent of paper rising from the pages of an old book in the future, {{isim}}. But smart library tables developed in the year 20{{sayi,56,88}} will scan the pages of books placed upon them and project explanations into the margins. When a reader touches a word, its meaning will appear. This way, even the oldest books will benefit from the possibilities of the digital world. What a beautiful meeting of past and future!",
+      "kosullar": []
+    },
+    {
+      "id": 278,
+      "tur": "yasama",
+      "metin": "20{{sayi,61,92}} yılının bir sabahında, şehirlerdeki otobüs duraklarının üzerinde geniş yapraklara benzeyen paneller gördüm. Bu paneller güneşten enerji toplarken havadaki ince parçacıkların bir bölümünü de filtreleyecek. Duraklar kendi aydınlatmasını ve bilgilendirme ekranlarını besleyecek {{isim}}. Bekleyen yolcular için temiz hava sağlayan küçük dinlenme alanları oluşacak. Gelecekte durakta beklemek biraz daha keyifli!",
+      "metin_en": "One morning in the year 20{{sayi,61,92}}, I saw panels resembling enormous leaves stretching above bus stops throughout the cities. While collecting energy from the sun, these panels will also filter some of the fine particles from the air. Bus stops will power their own lighting and information displays, {{isim}}. They'll become little resting areas that provide cleaner air for waiting passengers. Waiting for the bus will be a little more pleasant in the future!",
+      "kosullar": []
+    },
+    {
+      "id": 279,
+      "tur": "yasama",
+      "metin": "Uzayın sessizliğinden gelen yeni bir keşif haberi var {{isim}}. 20{{sayi,66,96}} yılında Ay yüzeyindeki ince tozun, yüksek sıcaklıkta işlenerek dayanıklı yapı bloklarına dönüştürülmesi yaygınlaşacak. Dünya'dan ağır inşaat malzemeleri taşımadan küçük araştırma merkezleri genişletilebilecek. İlk yerleşim alanlarının bazı duvarları doğrudan Ay toprağından üretilecek. İnsanlığın uzaydaki mimarisi gerçekten ilginç olacak.",
+      "metin_en": "News of a new discovery has reached me from the silence of space, {{isim}}. In the year 20{{sayi,66,96}}, it will become common to process the fine dust covering the Moon's surface at high temperatures, transforming it into durable building blocks. Small research stations will be able to expand without transporting heavy construction materials from Earth. Some of the walls of the first settlements will be made directly from lunar soil. Humanity's architecture in space will be truly fascinating.",
+      "kosullar": []
+    },
+    {
+      "id": 280,
+      "tur": "yasama",
+      "metin": "Geleceğin hastanelerinde karşıma çıkan en ilginç nesne, avuç içine sığan beyaz bir tarayıcı oldu. 20{{sayi,58,86}} yılında bu cihazlar, cilt üzerinden alınan optik ölçümlerle bazı kan değerlerinin izlenmesine yardımcı olacak. Gereksiz örnek alma işlemleri azalacak ve sonuçlar birkaç dakika içinde değerlendirilebilecek {{isim}}. Doktorların çantasında stetoskop kadar alışıldık bir araç haline gelecek.",
+      "metin_en": "The most intriguing object I encountered in the hospitals of the future was a white scanner small enough to fit in the palm of a hand. By the year 20{{sayi,58,86}}, these devices will help monitor certain blood markers through optical measurements taken directly through the skin. Unnecessary blood sampling will decrease, and results will be available for assessment within minutes, {{isim}}. These scanners will become as familiar a tool in doctors' bags as the stethoscope.",
+      "kosullar": []
+    },
+    {
+      "id": 281,
+      "tur": "yasama",
+      "metin": "İnanması güç ama hesaplamalarım 20{{sayi,48,76}} yılında çamaşır yıkama alışkanlığının değişeceğini işaret ediyor {{isim}}. Kumaşlara uygulanan yeni yüzey işlemleri, kir parçacıklarının liflere güçlü biçimde tutunmasını önleyecek. Bazı giysiler kısa bir su durulamasıyla temizlenebilecek. Deterjan kullanımı azalırken kıyafetlerin ömrü uzayacak. Çamaşır makinesinin karşısında geçirilen zaman da epey kısalacak!",
+      "metin_en": "It may sound hard to believe, but my calculations suggest that laundry habits will change in the year 20{{sayi,48,76}}, {{isim}}. New surface treatments applied to fabrics will prevent dirt particles from clinging tightly to the fibers. Some clothes will be cleaned with nothing more than a quick rinse in water. Detergent use will decrease while clothes last longer. And the time spent dealing with the washing machine will shrink considerably!",
+      "kosullar": []
+    },
+    {
+      "id": 282,
+      "tur": "yasama",
+      "metin": "20{{sayi,57,85}} yılında ortaya çıkacak yeni bir haberleşme sistemi gözüme çarptı. İnternet bağlantısının zayıf olduğu uzak bölgelerde, küçük uydularla doğrudan iletişim kuran cep cihazları yaygınlaşacak. İnsanlar dağ yollarında ve kırsal yerleşimlerde de görüntülü görüşme yapabilecek {{isim}}. Ekranda bağlantı işaretinin kaybolması giderek daha seyrek yaşanacak. Birçok kişi için önemli bir kolaylık!",
+      "metin_en": "A remarkable new communication system set to emerge in the year 20{{sayi,57,85}} caught my attention. In remote regions where internet connections are weak, handheld devices that communicate directly with small satellites will become widespread. People will be able to make video calls even on mountain roads and in rural settlements, {{isim}}. Watching the connection symbol disappear from the screen will become increasingly rare. A major convenience for so many people!",
+      "kosullar": []
+    },
+    {
+      "id": 283,
+      "tur": "yasama",
+      "metin": "Bir fincan kahvenin üzerinde yükselen buhar, beni 20{{sayi,52,81}} yılının mutfaklarına götürdü {{isim}}. Bardakların içine yerleştirilen ince sıcaklık katmanları, içeceği uzun süre seçilen sıcaklıkta tutacak. Harici ısıtıcılar yerine bardağın kendi gövdesi çalışacak. Kahvesini hazırlayıp başka bir işle uğraşan insanlar, döndüklerinde içeceklerini tam istedikleri sıcaklıkta bulacaklar. Ben buna gerçek konfor derim!",
+      "metin_en": "The steam rising from a cup of coffee transported me into the kitchens of the year 20{{sayi,52,81}}, {{isim}}. Thin temperature-regulating layers built into drinking cups will keep beverages at a chosen temperature for a long time. Instead of relying on external heaters, the body of the cup itself will do the work. People who prepare their coffee and then get distracted by something else will return to find their drink at exactly the temperature they wanted. Now that's what I call true comfort!",
+      "kosullar": []
+    },
+    {
+      "id": 284,
+      "tur": "yasama",
+      "metin": "Dünyanın geleceğini tararken 20{{sayi,63,93}} yılında yolların üzerinde beliren ince mavi çizgileri fark ettim. Araçların ön camlarına yansıtılan yönlendirme işaretleri, sürücülere güvenli şeritleri gösterecek. Gerçek yolun üzerinde görünen bu sanal çizgiler sayesinde tabelalara sürekli bakmak gerekmeyecek {{isim}}. Yolculuklar daha düzenli ve rahat hale gelecek. Navigasyon sesiyle tartışma dönemi azalacak!",
+      "metin_en": "While scanning Earth's future, I noticed thin blue lines appearing along the roads in the year 20{{sayi,63,93}}. Navigation markers projected onto vehicle windshields will show drivers which lanes are safe to use. Thanks to these virtual lines appearing directly over the real road, there will be no need to keep glancing at road signs, {{isim}}. Journeys will become more organized and comfortable. And those days of arguing with the navigation voice will become increasingly rare!",
       "kosullar": []
     }
   ]

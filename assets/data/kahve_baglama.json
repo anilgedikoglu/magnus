@@ -5554,6 +5554,322 @@
         "kariyer",
         "genel"
       ]
+    },
+    {
+      "id": 383,
+      "metin": "Masandaki notlar gibi fincanındaki izler de üst üste binmiş {{isim}}. Bölümde herkese yetişmeye çalışırken kendine ayırdığın vakti biraz ihmal ettiğini seziyorum. Telvenin kenarında dinlenmeyle ilgili güzel bir işaret var; gel, biraz daha yakından inceleyelim…",
+      "metin_en": "Just like the notes scattered across your desk, the patterns in your cup are overlapping, {{isim}}. I sense that while trying to keep up with everyone in your department, you've been neglecting the time you need for yourself. There's a lovely sign near the edge of the coffee grounds concerning rest. Come, let's take a closer look…",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 384,
+      "metin": "Bitmiş bir ilişkinin bazı cümlelerini içinden hâlâ tekrarladığını fincanın bana sezdiriyor. Fakat {{isim}}, telvenin dip tarafında geçmişten çok yeni düzenine ışık tutan bir şekil belirdi. Bakalım bu şekil sana neler anlatacak;",
+      "metin_en": "Your cup tells me that you still find yourself repeating certain words from a relationship that has ended. But {{isim}}, a shape has appeared at the bottom of the coffee grounds, shedding light on your new life rather than your past. Let's see what this shape has to tell you;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 385,
+      "metin": "Evde bir şey aksadığında önce çözümü düşünüyorsun, kendi yorgunluğunu ise çoğu zaman sonraya bırakıyorsun. Eşinle paylaştığın günlük düzenin ve kendine ayıracağın vakitle ilgili telvede ince bir yol açılmış. Şimdi o yolun nereye uzandığına bakalım;",
+      "metin_en": "When something goes wrong at home, your first thought is how to fix it, while you often put your own exhaustion aside until later. A narrow path has opened in the coffee grounds, connected to the daily routine you share with your spouse and the time you set aside for yourself. Now let's see where that path leads;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 386,
+      "metin": "Eski günlerden kalan bir ses, bazen yıllar sonra duyulmuş gibi insanın içine dokunur. Fincanında geçmişten tanıdığın biriyle ilgili sıcak bir iz seçtim. Gönül meselelerinde yılların getirdiği o ince sezgine güvenmeni sağlayacak başka işaretler de var;",
+      "metin_en": "A voice from long ago can sometimes touch your heart as though you've heard it again after all these years. I've spotted a warm trace in your cup connected to someone you knew in the past. There are other signs here that will encourage you to trust the delicate intuition you've gained through years of experience in matters of the heart;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 387,
+      "metin": "Defterin bir köşesine aldığın küçük notlar kadar kolay gözden kaçabilecek bir işaret buldum fincanında. Derslerle arkadaşlarına ayırdığın zaman arasında gidip geldiğin oluyor. Ancak bu kez okul hayatını ilgilendiren ferah bir gelişmenin izini sürüyorum;",
+      "metin_en": "I've found a sign in your cup that's as easy to overlook as the little notes you jot down in the corner of your notebook. Sometimes you find yourself torn between your studies and spending time with your friends. But this time, I'm following the signs of a welcome development concerning your school life;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 388,
+      "metin": "Kalbinin kapısına kocaman bir kilit asmamışsın ama anahtarı da herkese uzatmıyorsun, bunu anladım {{isim}}. Telvenin üst kısmında birbirine dönük iki siluet seçiliyor. Yakınlaşmalar konusunda daha önce söylemediğim ayrıntılar var;",
+      "metin_en": "You haven't put a great big lock on the door to your heart, but you don't hand the key to just anyone either. I've figured that much out, {{isim}}. Near the top of the coffee grounds, I can make out two silhouettes facing each other. There are details about growing closer to someone that I haven't told you yet;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 389,
+      "metin": "Kurumdaki günlük koşuşturmanın dışında kalan özel hayatını da merak ettim ve fincanını biraz çevirdim. Evrakların, görevlerin ve alışılmış konuşmaların arasında gönlünü ilgilendiren küçücük bir işaret saklanmış {{isim}}. Asıl ilginç tarafı şimdi geliyor;",
+      "metin_en": "I grew curious about your personal life beyond the daily hustle and bustle at your workplace, so I turned your cup a little. Hidden among the paperwork, responsibilities, and familiar conversations is a tiny sign concerning your heart, {{isim}}. And now comes the truly interesting part;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 390,
+      "metin": "Mesai bitse de zihnindeki iş listesi hemen bitmiyor, öyle değil mi? Fincanının dibinde yan yana duran kısa çizgiler, çalışma temponla dinlenme düzenin arasındaki dengeyi hatırlatıyor. Bu yoğunluğun ardından seni rahatlatacak bir ayrıntı da yakaladım;",
+      "metin_en": "Even when your workday ends, the to-do list in your mind doesn't disappear right away, does it? The short lines sitting side by side at the bottom of your cup remind me of the balance between your workload and your rest. I've also spotted a detail that promises some relief after all this busyness;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 391,
+      "metin": "Bir kadının çantasında nice küçük eşya, zihninde ise onlardan çok daha fazla düşünce bulunur. Senin fincanında da farklı yönlere uzanan izler var {{isim}}. Özellikle ertelediğin bir konuşmayla ilgili sezgilerim kuvvetlendi. Şimdi biraz derine iniyorum;",
+      "metin_en": "A woman's handbag holds all sorts of little things, but her mind carries far more thoughts than that. Your cup, too, has traces stretching in different directions, {{isim}}. My intuition has grown particularly strong about a conversation you've been putting off. Now I'm going to look a little deeper;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 392,
+      "metin": "Kendi düzenini yeniden kurarken hangi kararları tek başına vermek istediğini artık daha iyi biliyorsun. Telvede iş hayatına uzanan, ilk bakışta belli olmayan bir açıklık yakaladım. Geçmişten öğrendiklerinin mesleki geleceğine nasıl yansıyacağını inceleyelim;",
+      "metin_en": "As you rebuild your life on your own terms, you've become much clearer about which decisions you want to make for yourself. I've spotted an opening in the coffee grounds that isn't obvious at first glance, and it leads toward your professional life. Let's explore how the lessons you've learned from the past will shape your career ahead;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 393,
+      "metin": "Nişan hazırlığında küçücük bir ayrıntının bile nasıl uzun bir konuşmaya dönüşebildiğini tahmin edebiliyorum. Fincanında iki ayrı yöne uzanıp sonunda birleşen çizgiler var. Nişanlınla birlikte alacağınız kararları ilgilendiren başka şeyler seziyorum {{isim}};",
+      "metin_en": "I can imagine how even the tiniest detail in your engagement preparations can turn into a lengthy discussion. There are lines in your cup that stretch in two different directions before finally coming together. I'm sensing something more about the decisions you and your fiancé will make together, {{isim}};",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 394,
+      "metin": "Şimdi fincanındaki şu geniş, tertemiz boşluğa bakıyorum. Gün içinde güçlü görünmeye çalışırken bedeninin senden biraz sakinlik istediği zamanlar oluyor. Telveler bunun yanında ferahlatıcı bir değişime de işaret ediyor. Ayrıntıları beraber çözelim;",
+      "metin_en": "Right now, I'm looking at this wide, perfectly clear space in your cup. There are times when you try to appear strong throughout the day, even as your body asks you to slow down a little. The coffee grounds also point toward a refreshing change. Let's unravel the details together;",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 395,
+      "metin": "Kendi ayaklarının üzerinde durma isteğinin fincanına kadar yansıdığını söyleyebilirim. Kimseye hesap vermeden ilerlemek güzel ama bazen bütün kararların ağırlığını da üzerinde hissediyorsun. İş ve kazanç tarafında gözüme takılan ikinci şekle geçiyorum;",
+      "metin_en": "I can tell that your desire to stand on your own two feet has found its way into your cup. It's wonderful to move forward without having to answer to anyone, but sometimes you feel the weight of every decision resting on your shoulders. Now let me turn to a second shape that's caught my eye concerning work and earnings;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 396,
+      "metin": "Eşinle bazen tek bakışta anlaşıyor, bazen en küçük konuyu bile uzun uzun konuşuyorsunuz. Fincanın kulbuna yakın iki iz, aranızdaki alışılmış düzenin içinde hoş bir yeniliğin kapısını aralıyor. Şimdi gönlünüzü ilgilendiren kısma daha dikkatli bakıyorum;",
+      "metin_en": "Sometimes you and your spouse understand each other with a single glance, while other times even the smallest matter turns into a long conversation. Two traces near the handle of your cup are opening the door to a delightful change in your familiar routine together. Now I'm taking a closer look at the part that concerns your hearts;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 397,
+      "metin": "Evdeki sorumluluklarla kendi hedeflerini aynı güne sığdırmaya çalıştığın zamanlar olmuş. Üstelik sen bir işe karar verdin mi kolay kolay yarım bırakmıyorsun. Fincanının üst çizgisinde kariyerine dair küçük ama sevindirici bir hareketlilik seziyorum;",
+      "metin_en": "There have been times when you've tried to fit your household responsibilities and your personal goals into the very same day. And once you set your mind to something, you're not one to leave it unfinished. Along the upper rim of your cup, I'm sensing a small but encouraging development in your career;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 398,
+      "metin": "Bir süredir kendi planlarına ağırlık vermiş, bazı şeylerin kendiliğinden şekillenmesini beklemiş gibisin. Telvenin ortasındaki yarım halka dikkatimi çekti {{isim}}. Dost çevrenden gelecek bir sözün sende uyandıracağı düşüncelerle ilgili başka izler var;",
+      "metin_en": "For a while now, you seem to have been focusing on your own plans, allowing certain things to take shape naturally. The half-circle in the middle of the coffee grounds has caught my attention, {{isim}}. There are other traces here concerning the thoughts that someone's words from your circle of friends will stir within you;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 399,
+      "metin": "Arkadaşlarınla uzun uzun konuşup sonra kendi başına kaldığında bambaşka şeyler düşündüğün oluyor. Fincanın dibindeki hafif dalgalanma, uyku ve günlük enerjin konusunda yeni bir denge aradığını düşündürdü. İç açıcı ayrıntılara geçiyorum;",
+      "metin_en": "Sometimes you spend hours talking with your friends, only to find yourself thinking about completely different things once you're alone. The gentle ripples at the bottom of your cup make me think you're searching for a new balance in your sleep and daily energy. Now let's move on to the more uplifting details;",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 400,
+      "metin": "Sevdiğin kişiyle geleceğe dair konuşurken kendi mesleki hedeflerini de hesaba kattığını anlıyorum. Fincanında biri kısa, diğeri uzun iki yol var. Bu yolların iş hayatındaki kararlarınla nasıl birleştiğine dair merak uyandıran bir işaret buldum;",
+      "metin_en": "I can see that when you talk about the future with the person you love, you also take your professional ambitions into account. There are two paths in your cup, one short and one long. I've found an intriguing sign about how these paths connect with the decisions you'll make in your working life;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 401,
+      "metin": "Evinin düzenindeki küçücük değişiklikleri herkesten önce fark ettiğin gibi insanların ses tonundaki farklılıkları da kaçırmıyorsun. Fincanında gönül meselelerine ayrılmış sanki özel bir köşe var {{isim}}. Oradaki sıcak izleri şimdi yorumlayacağım;",
+      "metin_en": "Just as you're the first to notice the tiniest changes around your home, you never miss a subtle shift in someone's tone of voice. It's as though your cup has a special corner reserved entirely for matters of the heart, {{isim}}. I'm going to interpret the warm traces I've found there now;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 402,
+      "metin": "Bir dakika, fincanı biraz sola çevireyim... İşte şimdi! Telvelerin arasındaki ince kıvrım, bir süredir karşılığını merak ettiğin duygulara dokunuyor. Dışarıdan rahat görünsen de gönlün bazı cevapları bekliyor. O kıvrımın devamında güzel şeyler var;",
+      "metin_en": "One moment, let me turn the cup a little to the left... There it is! That delicate curve among the coffee grounds touches on feelings whose reciprocation you've been wondering about for some time. You may seem carefree on the outside, but your heart is waiting for certain answers. And there are lovely things further along that curve;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
     }
   ]
 }

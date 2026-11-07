@@ -99,7 +99,6 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   Future<String>? _metinFuture;
 
   // Swipe takibi
-  double _panPrevAngle    = 0;
   double _angularVelocity = 0;
   DateTime _lastPanTime   = DateTime.now();
   // pi/6 = yarım bölme offset → başlangıçta pointer tam bölme merkezinde
@@ -183,50 +182,45 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   }
 
   // ── Swipe işleme ────────────────────────────────────────────────────────────
+  // Ekranın HERHANGİ bir yerindeki yatay sürükleme çarkı çevirir (Anıl, 2026-11-07):
+  // yatay piksel hareketi açısal dönüşe çevrilir; bırakınca sürükleme hızıyla savrulur.
+  // Jest tüm gövdeye yayıldı (bkz. build()); soldan-sağa "geri gitme" bu ekranda kaldırıldı.
 
-  double _angleFromPosition(Offset local, Size size) {
-    final center = Offset(size.width / 2, size.height / 2);
-    return atan2(local.dy - center.dy, local.dx - center.dx);
-  }
+  /// Yatay piksel → açısal dönüş katsayısı (rad/piksel). Çark kenarında ~1:1 hissi + hafif
+  /// ivme; tüm ekrana yayılan savurmanın çarkı rahat döndürmesi için.
+  static const double _kDragToAngle = 0.008;
 
   bool get _kilitli => _doniyor || _bitti || _metinGeldi;
 
-  void _onPanStart(DragStartDetails d, Size size) {
+  void _onDragStart(DragStartDetails d) {
     if (_kilitli) return;
-    _panPrevAngle = _angleFromPosition(d.localPosition, size);
     _angularVelocity = 0;
     _lastPanTime = DateTime.now();
   }
 
-  void _onPanUpdate(DragUpdateDetails d, Size size) {
+  void _onDragUpdate(DragUpdateDetails d) {
     if (_kilitli) return;
-    final angle = _angleFromPosition(d.localPosition, size);
-    final delta = _wrapAngle(angle - _panPrevAngle);
-    final now   = DateTime.now();
-    final dt    = now.difference(_lastPanTime).inMicroseconds / 1e6;
-    if (dt > 0) _angularVelocity = delta / dt;
-    _currentAngle += delta;
-    _panPrevAngle  = angle;
+    final deltaAngle = (d.primaryDelta ?? 0) * _kDragToAngle;
+    final now = DateTime.now();
+    final dt  = now.difference(_lastPanTime).inMicroseconds / 1e6;
+    if (dt > 0) _angularVelocity = deltaAngle / dt;
+    _currentAngle += deltaAngle;
     _lastPanTime   = now;
     _speedFraction = (_angularVelocity.abs() / 16.0).clamp(0.0, 1.0);
-    _checkPeg(_currentAngle, delta);
+    _checkPeg(_currentAngle, deltaAngle);
     setState(() {});
   }
 
-  void _onPanEnd(DragEndDetails d) {
+  void _onDragEnd(DragEndDetails d) {
     if (_kilitli) return;
-    final speed = _angularVelocity.abs();
+    // Savurma hızı: framework'ün hız ölçerinden (px/sn) açısal hıza (rad/sn).
+    final angVel = (d.primaryVelocity ?? 0) * _kDragToAngle;
+    final speed  = angVel.abs();
     if (speed < 0.5) {
       setState(() => _speedFraction = 0);
       return;
     }
-    _startSpin(speed, _angularVelocity >= 0 ? 1 : -1);
-  }
-
-  double _wrapAngle(double a) {
-    while (a >  pi) a -= 2 * pi;
-    while (a < -pi) a += 2 * pi;
-    return a;
+    _startSpin(speed, angVel >= 0 ? 1 : -1);
   }
 
   // ── Spin başlat ──────────────────────────────────────────────────────────────
@@ -375,34 +369,45 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Image.asset(
-            'assets/images/kadercarkimenu.png',
-            fit: BoxFit.cover,
-            errorBuilder: (_, __, ___) => const ColoredBox(color: Color(0xFF060D1A)),
-          ),
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Color(0xBB000000), Color(0x55000000), Color(0xBB000000)],
+      // Soldan-sağa "geri gitme" bu ekranda KALDIRILDI: gövde NoEdgeSwipeBack ile sarılı
+      // (global kenar-geri jesti devre dışı; geri = üstteki buton / Android geri / sistem
+      // kenar jesti). Ekranın HERHANGİ bir yerindeki yatay sürükleme çarkı çevirir.
+      body: NoEdgeSwipeBack(
+        child: GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onHorizontalDragStart:  _onDragStart,
+          onHorizontalDragUpdate: _onDragUpdate,
+          onHorizontalDragEnd:    _onDragEnd,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              Image.asset(
+                'assets/images/kadercarkimenu.png',
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) => const ColoredBox(color: Color(0xFF060D1A)),
               ),
-            ),
+              Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [Color(0xBB000000), Color(0x55000000), Color(0xBB000000)],
+                  ),
+                ),
+              ),
+              SafeArea(
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 420),
+                  switchInCurve: Curves.easeOutCubic,
+                  switchOutCurve: Curves.easeInCubic,
+                  child: _metinGeldi
+                      ? KeyedSubtree(key: const ValueKey('metin'), child: _buildMetin())
+                      : KeyedSubtree(key: const ValueKey('cark'), child: _buildCark()),
+                ),
+              ),
+            ],
           ),
-          SafeArea(
-            child: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 420),
-              switchInCurve: Curves.easeOutCubic,
-              switchOutCurve: Curves.easeInCubic,
-              child: _metinGeldi
-                  ? KeyedSubtree(key: const ValueKey('metin'), child: _buildMetin())
-                  : KeyedSubtree(key: const ValueKey('cark'), child: _buildCark()),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
@@ -481,17 +486,15 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
         alignment: Alignment.topCenter,
         clipBehavior: Clip.none,
         children: [
-          NoEdgeSwipeBack(child: GestureDetector(
-            onPanStart:  (d) => _onPanStart(d, Size(size, size)),
-            onPanUpdate: (d) => _onPanUpdate(d, Size(size, size)),
-            onPanEnd:    _onPanEnd,
-            child: SizedBox(
-              width:  size,
-              height: size,
-              // Gölge sabit: ayrı katmanda bir kez çizilir (dönerken her karede bulanıklık yok).
-              child: Stack(fit: StackFit.expand, children: [
-                const RepaintBoundary(child: CustomPaint(painter: _WheelShadowPainter())),
-                RepaintBoundary(child: AnimatedBuilder(
+          // Çark yüzeyi. Sürükleme jesti artık tüm ekranda (bkz. build()); burada
+          // yalnız çizim var.
+          SizedBox(
+            width:  size,
+            height: size,
+            // Gölge sabit: ayrı katmanda bir kez çizilir (dönerken her karede bulanıklık yok).
+            child: Stack(fit: StackFit.expand, children: [
+              const RepaintBoundary(child: CustomPaint(painter: _WheelShadowPainter())),
+              RepaintBoundary(child: AnimatedBuilder(
                 animation: _winCtrl,
                 builder: (context, _) => CustomPaint(
                   painter: _WheelPainter(
@@ -505,9 +508,8 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
                   ),
                 ),
               )),
-              ]),
-            ),
-          )),
+            ]),
+          ),
           // Ok: altta, çarkın kenarına batan altın gösterge; çivi geçişinde seker.
           Positioned(
             top: size - 30,

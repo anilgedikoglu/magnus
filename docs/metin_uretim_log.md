@@ -7,7 +7,9 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 3449** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100) — her tur sonunda güncelle.
+- **Toplam eklenen: 3799** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100, 2026-11-07 tur dışı
+  ChatGPT turları: 250 [motivasyon 50, faloya 40, niyet 30, yana 80, kâhin 50], tur 28: 100) — her tur sonunda güncelle.
+  (Ayrıca fal-metni dışı: Maganda 20 soru + 244 cevap, Dert Ortağı 400 yeni tavsiye seti + 200 soru EN — 2026-11-07.)
   (tur 1-20 dağılımı: 100/100/138/160/140/140/140/180/160/140/174/157/140/160/120/160/140/110/115/75.)
 - **2026-11-07 Anıl "20 tur daha" döngüsü (tur 23-42):** `metin_turu_hazirla.js` TURLAR[23-42] = 5'li grup ×4 — KAHIN (derun/khaleesi/uraz/likia/yousuf) · KAHVE (giriş/bağlama/gelişme/sonuç/uğurlama) · SHORTS (tavşan/niyet/faloya/yana_bana/yana_yasama) · DURU (bugün/yarın/gelecek/kaderkitabı/astroyorum) · ICERIK (motivasyon/olumlama/acıgerçekler/kahve_karşılama/karşılama_z1). Her kompartman dörder geçiş. Yazar ChatGPT (Codex 11 Kasım'a dek sınırda), çeviri ChatGPT.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
@@ -16,6 +18,20 @@
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 28 — 2026-11-07 akşam (100 metin; 5 kâhin; ChatGPT YAZAR + Claude ajanı seçer/denetler/çevirir)
+
+> Yeni düzen: ChatGPT 5 geçici sohbette paralel yazar (brief gizli `<input>` + `insertText`, gönder `button[aria-label*="önder"]`,
+> çıktı son `<pre>`'den Blob ile `tur<N>_<id>_chatgpt.json`). Sonlandırma ajanı (`scratchpad/turlar/SONLANDIRMA_TALIMATI.md`)
+> seçer, `aday` + `metin_kalip_tara`, zayıfları yeniden yazar, `<id>_en.json` yazar; `ekle` + tur_kontrol ana oturum sırayla.
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Kâhin Derun | `kahinler.json` › `kahinler.derun` | derun_139–158 (20/20 elden geçti; #13 kahve falını küçümseyen açılış değişti) |
+| Kâhin Khaleesi | `kahinler.json` › `kahinler.khaleesi` | khaleesi_137–156 (kar/buz tanıtımları çeşitlendi) |
+| Kâhin Uraz | `kahinler.json` › `kahinler.uraz` | uraz_112–131 (1 havuz-ortak 5-gram giderildi) |
+| Kâhin Likia | `kahinler.json` › `kahinler.likia` | likia_133–152 |
+| Kâhin Yousuf | `kahinler.json` › `kahinler.yousuf` | yousuf_128–147 (kâhinler arası ortak "telefon" imgesi ayrıştırıldı) |
 
 ## Tur 27 — 2026-11-07 (100 metin; içerik; ChatGPT YAZAR + Claude denetler, çeviri CLAUDE)
 

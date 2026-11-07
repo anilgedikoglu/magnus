@@ -110,6 +110,7 @@ flutter:
     - shaders/glass_lens.frag
     - shaders/living_sea.frag
     - shaders/burning_paper.frag
+    - shaders/golden_script.frag
 
   assets:
     - assets/data/

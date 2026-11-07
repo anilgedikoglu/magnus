@@ -2,48 +2,50 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
-## Ne yapıldı (2026-11-07 13:52 — TEST BUILD 10.8.23+291 ÇIKTI)
-**Android Play Dahili test YAYINLANDI (7 Kas 13:52) + iOS TestFlight YÜKLENDİ (GitHub Actions ✓ 7m35s).**
-AAB 167.1MB (SHA-256 `e7ea1ea3…3960`), ANA klasörden (`C:\src\magnus_app`, main) derlendi, 20×9MB
-parça-birleştir+SHA-256+DataTransfer ile Play'e yüklendi (0 cihaz düşüşü, 1 standart cihaz-uyarısı). İçerik =
-aşağıdaki cihaz geri bildirimleri. Bir sonraki build: **`10.8.26+294`** (yalnız "test çık" deyince).
+## Ne yapıldı (2026-11-07 18:49 — TEST BUILD 10.8.26+294 ÇIKTI)
+**Android Play Dahili test YAYINLANDI (7 Kas 18:49) + iOS TestFlight YÜKLENDİ (GitHub Actions run 42387111342 ✓).**
+AAB 170MB (178.652.380 bayt, SHA-256 `6f1b44c4…03db`), ANA klasörden (`C:\src\magnus_app`, main `663fe0c0`) derlendi,
+20×9MB parça-birleştir+SHA-256+DataTransfer ile Play'e yüklendi (0 cihaz düşüşü). Testler 206/207 (tek kırmızı:
+commit'lenmemiş scratch `test/_visual_starfield_capture_test.dart`, pakete dahil değil). Bir sonraki build: **`10.8.29+297`**.
 
-## Ne yapıldı (2026-11-07 — cihaz geri bildirimi: Kullanıcı Bilgileri + ana menü chat)
-Commit'ler `6211db17` + `c1c95f68` (main'e FF, ana klasör güncel). Değişen: `settings_screen.dart`, `home_screen.dart`.
-- **AYARLAR kartı HEP AÇIK:** hiçbir scroll/dokunuş kapatmaz (aç/kapa provider + chevron + aşağı-swipe
-  katla bağı kaldırıldı). Daraltma davranışı AYNI: yalnız kart 1 kutucukları içeri + kart 2 daireler yan yana.
-- **Profil scroll lastiksi çekiştirme/esneme KALDIRILDI** (Anıl düzeltti: "lastik geri gelsin demedim,
-  lastiksi çekiştirmeyle esneme olmasın"): `ClampingScrollPhysics` (bounce yok) + `_NoStretchScrollBehavior`
-  (`buildOverscrollIndicator`→child) ile Android 12+ stretch göstergesi kapalı, profil `SingleChildScrollView`
-  `ScrollConfiguration` ile sarıldı. Ayarlar hep-açık: `0ebcdbd8` aç/kapa + `dc88117f` katla-bağı söküldü.
-- **Ana menü chat:** açılışta band GİZLİ (typewriter mount edilmez, yazı akmaz) → açılıştan TAM 3 sn sonra
-  iner (yükleme süresinden bağımsız). Her chat gelişi 10 sn kalır (`_popBand` varsayılan 10 sn, değişken
-  `_bandHold` 5/8/10 kaldırıldı). Testler 25/25 (home_header + main_tabs + settings_dialog_pop + inline_editor).
-- ⚠️ Flutter-içi değişiklik tarayıcı panelinde görünmez → CİHAZDA görünür. Build YOK ("test çık" denmedi).
-
-## Ne yapıldı (2026-11-07 — "20 tur daha + bitir test çık")
-**TEST BUILD ÇIKTI: `10.8.20+288`** (versionCode +3). Hepsi commit + push + **main'e FF**. Ana klasör
-(`C:\src\magnus_app`) main'e çekildi, AAB oradan derlendi.
-- **Android 10.8.20+288 → Play Dahili test YAYINLANDI** (7 Kas 09:56). AAB 167MB (ML Kit gömülü),
-  SHA-256 `121cac64…3100`, parçala(9MB×20)-birleştir+DataTransfer ile yüklendi (0 cihaz uyumsuzluğu).
-- **iOS 10.8.20+288 → TestFlight YÜKLENDİ** (GitHub Actions `iOS TestFlight` ✓ 5m46s, main'den).
-- **Metin turları 22–27 → +500 yeni fal metni (toplam 3449)** (`docs/metin_uretim_log.md`). Değişen veri:
-  kahve_giris/baglama/gelisme/sonuc/ugurlama/akarsilama, kahinler, tavsanfali, niyet, faloya, yana,
-  durugoru_bno/yno/gno, kaderkitabi, gunlukastroloji(astroyorum), motivasyonlar, olumlamalar, acigercekler,
-  karsilamalar. Yazar **ChatGPT** (Anıl'ın Chrome'u, 5 geçici sohbet paralel), Claude seçer/`metin_kalip_tara`,
-  çeviri ChatGPT (tur 27 çeviri Claude — ChatGPT oturumu düştü). `metin_turu_hazirla.js` TURLAR[23-42] = 5'li döngü ×4.
+Değişen dosyalar / içerik:
+- **Dert Ortağı** — `assets/data/dertortagi.json`: 200 derde `dermanSetleri` + `dermanSetleri_en` (3 set × 4-6 adım;
+  Set 1 = eski `dermanlar` birebir korundu, 2 yeni set farklı açıdan: pratik / duygusal / sosyal-dış kaynak) + 200 soruya
+  `metin_en`. `lib/presentation/dertortagi/dertortagi_screen.dart`: derman adımına geçerken `pickNoRepeat` ile TEK set
+  (`dert_set_<id>_gosterilen`; aynı dert tekrar açılınca tüm setler bitene kadar farklı tavsiye); liste kartı ve derman
+  alıntısı locale'e göre (`_dertMetni`). Eski `dermanlar` alanı yedek olarak duruyor.
+- **Maganda** — `assets/data/maganda.json`: 36→56 soru (id 37-56 yeni); `cevaplar` artık
+  `{ "<soruId>": {metinler:[5], metinler_en:[5]} }`. `lib/presentation/kehanet/maganda_screen.dart`: seçilen soruya UYGUN
+  cevaptan no-repeat (`maganda_cevap_<id>_gosterilen`; eskiden havuzdan rastgele geliyordu); eski liste formatına yedek var.
+  Kaynak hataları düzeltildi: id1 `{{name}}`→`{{isim}}`, id15/id17 EN yanlış eşleme.
+- **Kısmetim / Arabam** — `assets/images/kismetim/portre_01..16.jpg`, `assets/images/arabam/araba_01..16.jpg`
+  (ChatGPT 4×4 grid → 16 hücre, 256px, inset 18; `scratchpad/slice_grid.ps1`); `BlurRevealSpinner` artık gerçek
+  görsellerle döner, prosedürel yedek `errorBuilder`'da kalır.
+- **Acı Gerçekler** — `assets/images/papirus.png` (ChatGPT, 1086×1448, eski açık papirüs) → `BurningPaper.paperAsset`.
+- **Kahve** — `coffee_screen.dart` `_buildPhotoSlots`: 3 yuva EŞİT kare (soldaki yuva asimetrik padding yüzünden büyüktü;
+  SizedBox aralıklarına geçildi).
+- **Foto ön-kontrol** — `lib/data/services/photo_subject_detector.dart`: el → dosya çözülemezse (`skin<0`) ENGELLEME;
+  fincan → ML Kit yokken `skin<0` engelleme, ten-baskın (≥0.30) reddet, düşük ten hoşgörü. `photo_subject_detector_test`
+  3 kırmızıdan 10/10 yeşile.
+- Bakım: main'e girmiş 7 `worktree-agent-*` worktree'si kaldırıldı (başka oturumların `eloquent-agnesi`/`tender-ride`
+  worktree'lerine dokunulmadı).
 
 ## Yarım kalan
-- **Metin turları 28–42 (15 tur)** yapılmadı — Anıl "bitir test çık" dedi, tur 27'de durdu. Brief'ler
-  `node scripts/metin_turu_hazirla.js <scratch>/turN N` ile üretilir (TURLAR[23-42] tanımlı). Sıra: 28 KAHIN,
-  29 KAHVE, 30 SHORTS, 31 DURU, 32 ICERIK, … (döngü (N-23)%5).
-- ⚠️ **ChatGPT oturumu kararsız:** hızlı giriş tutmuyor, birkaç kez düştü (`/api/auth/session` loggedIn:false).
-  Tam giriş + tarayıcı yenileme gerekti. Codex HAFTALIK sınırda (11 Kasım'a dek).
+- **Metin turları 28–42 (15 tur)** yapılmadı (`node scripts/metin_turu_hazirla.js <scratch>/turN N`, TURLAR[23-42]).
+- Kahve **konu seçim ikonu "highlight oval değil"** şikâyeti: konu ızgarasında (`_buildKonuSecim`) ayrı bir seçim vurgusu
+  yok, kutu radius 16; Anıl'ın ekran görüntüsü olmadan hangi öğe olduğu tespit edilemedi → ondan ekran görüntüsü iste.
+- Dert kaynak TR metninde küçük bozukluklar (çeviri ajanı bağlamdan çevirdi): s034 "Eklemleri ağrıyor" (→ "Eklemlerim"),
+  k049 "Çalışan işe girdi", a014 "anlaşmaya döndü". Düzeltilirse `metin_en` ile birlikte.
 
 ## Denenip olmayan ve nedeni
-- Tur 28-42 ChatGPT ile sürdürülemedi: oturum kararsızlığı (yukarı). Fallback Claude-yazar önerildi ama Anıl
-  ChatGPT-yazar'ı seçmişti; "bitir" deyince durduruldu.
+- Dert genel/sağlık tavsiye ajanları 5 saatlik kullanım sınırında düştü; parçaları (`batch1-5.json`, `chunk1-5.json`)
+  tamdı → birleştirme+doğrulama Claude yaptı (Set 1 kaynakla birebir, adım 4-6, TR/EN eşit, kesik cümle yok; 0 uyarı).
+- `protect-secrets` hook `[xargs-cat-env]` kuralı `ls | xargs stat` + `cat part_*` kalıbında yanlış pozitif verdi
+  (.env yok); komut xargs'sız yeniden yazıldı, hook'un etrafından dolaşılmadı.
+- `javascript_tool` async IIFE dönüşü `{}` görünüyor (Promise serileşmiyor); Play yüklemesi ekrandan doğrulandı
+  (ilerleme çubuğu → "1 uygulama paketi yüklendi" → 294 satırı).
 
 ## Sıradaki adım
-- İstenirse metin turları 28–42'ye devam (ChatGPT oturumu sağlamsa 5 sekmeli paralel pipeline; değilse Claude-yazar).
-- Bir sonraki build: **`10.8.23+291`** (yalnız "test çık" deyince).
+- Anıl 294'ü cihazda görsün (Play Dahili test + TestFlight); geri bildirime göre düzelt.
+- Build yalnız "test çık" deyince: **`10.8.29+297`** (ANA klasörden derle, parça-birleştir ile yükle).
+- İstenirse metin turları 28–42.

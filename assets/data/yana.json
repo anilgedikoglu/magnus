@@ -3890,6 +3890,237 @@
           "deger": "kamu sektörü"
         }
       ]
+    },
+    {
+      "id": 329,
+      "tur": "bana",
+      "metin": "Balkonda, kenarları toprak lekeli saksıların arasında çömelmiş, yeni kızaran ilk çileği koparıyorsun {{isim}}. Magnuskop'un gösterdiği tarih {{sayi,3,7}} yıl sonrası. Tek bir meyve için bu kadar sevinmene kendin de gülüyorsun. Biraz sonra onu ikiye bölüp yanındakiyle paylaşacaksın; tadı, aldığın bütün meyvelerden güzel gelecek. Küçük şeylerin peşine düşmeyi öğrendiğin bir dönemdesin.",
+      "metin_en": "On the balcony, crouched among pots with soil-stained rims, you're picking the first strawberry to turn red, {{isim}}. The date the MagnusScope shows is {{sayi,3,7}} years from now. You laugh at yourself for being this happy over a single fruit. In a moment you'll split it in two and share it with the person beside you; it will taste better than any fruit you've ever bought. You're in a time when you've learned to go after the little things.",
+      "kosullar": []
+    },
+    {
+      "id": 330,
+      "tur": "bana",
+      "metin": "Fırının camından içeri bakıyorsun; hamur tam istediğin gibi kabarmış {{isim}}. {{sayi,3,6}} yıl sonraki bu sabahta mutfağı sıcak bir kabuk kokusu sarmış. Defalarca denediğin, kimi zaman yassı kimi zaman fazla pişmiş çıkan ekmeğin sonunda kusursuz olmuş. Bıçağı değdirince yükselen çıtırtıyı duyduğunda kendi kendine alkış tutacaksın. O günden sonra sevdiklerin seni bu ekmekle anacak.",
+      "metin_en": "You're peering through the oven window; the dough has risen just the way you wanted, {{isim}}. On this morning {{sayi,3,6}} years from now, a warm smell of crust fills the kitchen. The bread you tried again and again, sometimes flat, sometimes overbaked, has finally turned out perfect. When you hear the crackle as the knife touches it, you'll give yourself a round of applause. From that day on, your loved ones will think of you whenever they think of this bread.",
+      "kosullar": []
+    },
+    {
+      "id": 331,
+      "tur": "bana",
+      "metin": "Rüzgârda dalgalanan bir çadırın ipini tutmaya çalışıyorsun {{isim}}; çadır üçüncü kez yan yatıyor. {{sayi,2,6}} yıl sonraki bu kamp akşamında etraftaki herkes gülmekten sana yardım edemiyor. Sonunda çadır ayağa kalktığında küçük bir alkış kopuyor. Gece ateşin başında yıldızları sayarken bu çadır macerası, yıllarca anlatacağın hikâyelerin en sevileni olacak.",
+      "metin_en": "You're trying to hold the rope of a tent flapping in the wind, {{isim}}; it's tipping over for the third time. On this camping evening {{sayi,2,6}} years from now, everyone around is laughing too hard to help you. When the tent finally stands up, a small round of applause breaks out. Later, counting stars by the fire, this tent adventure will become the best-loved of the stories you'll tell for years.",
+      "kosullar": []
+    },
+    {
+      "id": 332,
+      "tur": "bana",
+      "metin": "Bir hayvan barınağının avlusunda, kuyruğunu durmadan sallayan bir köpek ayaklarının dibinden ayrılmıyor {{isim}}. Magnuskop beni {{sayi,3,7}} yıl sonrasına götürdü. Gönüllü olarak geldiğin bu yerde birini sahiplenmek aklında yoktu; ama o seni çoktan seçmiş. Birkaç hafta sonra kapında seni o karşılayacak. Hayatına giren bu neşeli dost, günlerine bambaşka bir düzen getirecek.",
+      "metin_en": "In the yard of an animal shelter, a dog wagging its tail nonstop won't leave your feet, {{isim}}. The MagnusScope took me {{sayi,3,7}} years ahead. You came here as a volunteer with no thought of adopting anyone; but it has already chosen you. A few weeks later, it will be the one greeting you at your door. This cheerful friend coming into your life will bring a whole new rhythm to your days.",
+      "kosullar": []
+    },
+    {
+      "id": 333,
+      "tur": "bana",
+      "metin": "Bir çınarın gölgesinde, tahta bir tavlanın başındasın {{isim}}. Karşında senden epey yaşlı, bıyıkları kırlaşmış bir rakip var; zarlar her döndüğünde birbirinize takılıyorsunuz. {{sayi,4,9}} yıl sonraki bu yaz öğleden sonrasında oyunu son zarda sen kazanacaksın. Rakibin rövanş isteyecek; o çınarın altında yıllarca sürecek bir dostluğun ilk oyununu oynamış olacaksınız.",
+      "metin_en": "In the shade of a plane tree, you're sitting at a wooden backgammon board, {{isim}}. Across from you is a much older opponent with a graying mustache; every time the dice roll, you tease each other. On this summer afternoon {{sayi,4,9}} years from now, you'll win the game on the last roll. Your opponent will demand a rematch; under that plane tree, you'll have played the first game of a friendship that will last for years.",
+      "kosullar": []
+    },
+    {
+      "id": 334,
+      "tur": "bana",
+      "metin": "Bir duvarın yarısı açık sarıya boyanmış, yarısı hâlâ eski renginde. Elinde rulo fırça, yanağında bir boya lekesi var {{isim}}; {{sayi,3,6}} yıl sonrasındayız. Sevdiğin kişi merdivenin üstünden seçtiğin renge takılıyor, sen de fırçayı ona doğru sallayıp kaçıyorsun. Akşam yerdeki gazetelerin üstüne oturup yorgun ama gururlu yemeğinizi yiyeceksiniz. O duvar yıllarca ikinizin en sevdiği köşe olacak.",
+      "metin_en": "Half a wall is painted pale yellow, the other half still its old color. You have a paint roller in your hand and a smudge of paint on your cheek, {{isim}}; we're {{sayi,3,6}} years ahead. The person you love teases you about your color choice from the top of the ladder, and you wave the roller at them and run off. In the evening you'll sit on the newspapers on the floor and eat dinner, tired but proud. That wall will be your favorite corner for years.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 335,
+      "tur": "bana",
+      "metin": "Uzun bir masanın etrafında, yıllar önce aynı sıralarda oturduğun insanlarla bir aradasın {{isim}}. Takvim {{sayi,3,7}} yıl ilerisini gösteriyor. Biri eski bir sınıf fotoğrafını masaya koyuyor; herkes kendini bulmaya çalışırken kahkahalar yükseliyor. Gecenin sonunda aynı pozu yeniden vermek için yan yana dizileceksiniz. Yıllar saçlarınıza dokunmuş ama gülüşleriniz hiç değişmemiş.",
+      "metin_en": "You're around a long table with people who sat at the same desks as you years ago, {{isim}}. The calendar shows {{sayi,3,7}} years ahead. Someone puts an old class photo on the table; laughter rises as everyone tries to find themselves. At the end of the night, you'll line up side by side to strike the same pose again. The years have touched your hair, but your smiles haven't changed one bit.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 336,
+      "tur": "bana",
+      "metin": "Yabancı bir şehirde, bir dil okulunun aydınlık sınıfındasın {{isim}}. Magnuskop'u {{sayi,3,7}} yıl ileri aldığımda öğretmenin sana bir soru yönelttiğini görüyorum. Bir zamanlar 'bu yaştan sonra mı' dediğin dilde akıcı bir cevap veriyorsun; sınıftakiler şaşkınlıkla dönüp bakıyor. Ders çıkışında yeni arkadaşlarınla kahve içmeye gideceksin. Kendi seçtiğin bu yol sana yeni bir dünya açmış.",
+      "metin_en": "You're in a bright classroom at a language school in a foreign city, {{isim}}. When I move the MagnusScope {{sayi,3,7}} years ahead, I see the teacher asking you a question. You answer fluently in a language you once dismissed with 'at my age?'; the class turns to look at you in surprise. After the lesson, you'll go for coffee with your new friends. This path you chose for yourself has opened up a whole new world for you.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 337,
+      "tur": "bana",
+      "metin": "Magnuskop'u {{sayi,4,8}} yıl sonrasının açık bir gecesine ayarladığımda, seni bir terasta ince ayaklı bir teleskopun başında buldum {{isim}}. Eşinle sıra kapmaca oynuyorsunuz. 'Gördüm!' diye heyecanla fısıldıyorsun; eşin de merceğe eğilip aynı yıldızı arıyor. Omuzlarınızda battaniyeler, termosta ılık bir içecek var. O gece, bir zamanlar yalnızca konuştuğunuz bir hayalin terasınıza taşındığını fark edeceksin.",
+      "metin_en": "When I set the MagnusScope to a clear night {{sayi,4,8}} years from now, I found you on a terrace at a slender-legged telescope, {{isim}}. You and your spouse are taking turns. 'I see it!' you whisper excitedly; your spouse leans over the eyepiece looking for the same star. Blankets over your shoulders, a warm drink in the thermos. That night you'll realize that a dream you once only talked about has moved onto your terrace.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 338,
+      "tur": "bana",
+      "metin": "Magnuskop beni {{sayi,2,5}} yıl sonrasına, bir mahalle kütüphanesinin halı kaplı köşesine götürdü {{isim}}. Etrafına oturmuş küçük dinleyicilere kitap okuyorsun. Sesini kalınlaştırıp bir masal kahramanını taklit ettiğinde çocuklar kıkırdıyor. Okuma bitince içlerinden biri 'haftaya da gelecek misin' diye soracak. Gönüllü başladığın bu iş, emekliliğinin en tatlı sürprizi olacak.",
+      "metin_en": "The MagnusScope took me {{sayi,2,5}} years ahead, to the carpeted corner of a neighborhood library, {{isim}}. You're reading a book to the little listeners sitting around you. When you deepen your voice to imitate a fairy-tale hero, the children giggle. When the reading ends, one of them will ask, 'will you come next week too?' This work you started as a volunteer will be the sweetest surprise of your retirement.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 339,
+      "tur": "bana",
+      "metin": "Bir yemek kursunun tezgâhında soğan doğrarken gözlerin yaşarıyor {{isim}}; {{sayi,3,6}} yıl sonrasındayız. Yan tezgâhtaki kişi gülerek sana bir peçete uzatıyor ve 'kursun ilk gözyaşı senden' diye takılıyor. Dersin sonunda hazırladığınız yemekleri aynı masada tadacaksınız. Haftalar sonra o kursa yemek için değil, o masa için yeniden yazıldığını itiraf edeceksin.",
+      "metin_en": "At the counter of a cooking class, your eyes are watering as you chop onions, {{isim}}; we're {{sayi,3,6}} years ahead. The person at the next counter hands you a napkin with a laugh and teases, 'the class's first tears are yours'. At the end of the lesson, you'll taste the dishes you made at the same table. Weeks later, you'll admit that you signed up again not for the cooking but for that table.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 340,
+      "tur": "bana",
+      "metin": "Ayda bir toplanan bir kitap kulübünün kurucususun {{isim}}; Magnuskop'u {{sayi,3,7}} yıl ileri aldığımda seni o toplantıyı yönetirken buluyorum. Bu ayın kitabını sen seçmişsin ve tartışma beklediğinden hararetli geçiyor. Gruba yeni katılan biri söylediğin bir yorumu not alıyor. Çıkışta kapıda seni bekleyecek ve bir sonraki kitabı birlikte seçmeyi teklif edecek.",
+      "metin_en": "You're the founder of a book club that meets once a month, {{isim}}; when I move the MagnusScope {{sayi,3,7}} years ahead, I find you leading that meeting. You picked this month's book, and the discussion is livelier than you expected. Someone new to the group writes down a comment you make. On the way out, they'll be waiting for you at the door and offer to choose the next book together.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 341,
+      "tur": "bana",
+      "metin": "Yeni odanın masasında 'hayırlı olsun' notuyla bırakılmış bir kutu kurabiye duruyor {{isim}}. {{sayi,3,7}} yıl sonrasında, uzun süredir emek verdiğin işte kendi ekibinin başına geçmişsin. İlk toplantıda herkes sana bakarken bir an duraksıyorsun, sonra gülümseyip söze başlıyorsun. Toplantı bittiğinde ekipten biri, seninle çalışmayı uzun zamandır beklediğini söyleyecek.",
+      "metin_en": "On the desk of your new office sits a box of cookies left with a note saying 'congratulations', {{isim}}. {{sayi,3,7}} years from now, you've taken the lead of your own team in the work you've long put your heart into. At your first meeting, you pause for a moment as everyone looks at you, then you smile and begin. When the meeting ends, someone from the team will tell you they've been looking forward to working with you for a long time.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 342,
+      "tur": "bana",
+      "metin": "Küçük bir salonun sahnesinde, yıllar sonra yeniden çalmayı öğrendiğin bir enstrüman kucağında {{isim}}. Magnuskop'un {{sayi,4,8}} yıl sonraki görüntüsünde ilk resitalindesin. İlk notalarda parmakların hafifçe titriyor, sonra müzik seni alıp götürüyor. Son notayla birlikte salonda uzun bir alkış kopacak. Ön sıradaki dostların ayağa kalktığında, ertelediğin hayallerin hiçbirinin geç kalmadığını anlayacaksın.",
+      "metin_en": "On the stage of a small hall, you're holding an instrument you learned to play again after many years, {{isim}}. In the MagnusScope's view {{sayi,4,8}} years ahead, you're at your first recital. Your fingers tremble slightly on the first notes, then the music carries you away. With the last note, long applause will fill the hall. When your friends in the front row stand up, you'll understand that none of the dreams you put off came too late.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 343,
+      "tur": "bana",
+      "metin": "Durgun suyun ortasında, küçük bir teknede eşinle yan yana oltalarınızın başındasınız {{isim}}. {{sayi,4,8}} yıl sonrasının sakin bir sabahı bu. İlk balığı eşin tutuyor ve bunu sana gün boyu hatırlatacağı belli. Sen hâlâ oltanın ucunu beklerken ikiniz de güneşin altında gülmekten kırılıyorsunuz. Akşam o balığın hikâyesi her anlatılışında biraz daha büyüyecek.",
+      "metin_en": "In the middle of still water, in a small boat, you and your spouse sit side by side with your fishing rods, {{isim}}. This is a calm morning {{sayi,4,8}} years from now. Your spouse catches the first fish, and it's clear you'll hear about it all day. While you're still waiting at the end of your line, you're both laughing your heads off under the sun. By evening, the story of that fish will grow a little bigger every time it's told.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 344,
+      "tur": "bana",
+      "metin": "Direksiyonun başında aynayı ayarlıyor, emniyet kemerini takarken gülümsüyorsun {{isim}}. {{sayi,2,5}} yıl sonrasının bu sabahında aylardır çalıştığın sınavı geçmiş, ilk kez tek başına yola çıkıyorsun. Sevdiğin bir şarkıyı yüksek sesle söylüyorsun. Gideceğin yer çok uzak değil; ama o kısa yolculuk, sana yıllardır hissetmediğin türden bir özgürlük duygusu verecek.",
+      "metin_en": "At the wheel, you adjust the mirror and smile as you buckle your seatbelt, {{isim}}. On this morning {{sayi,2,5}} years from now, you've passed the test you studied for for months and are setting out on your own for the first time. You're singing a song you love at the top of your voice. Where you're headed isn't very far; but that short drive will give you a feeling of freedom you haven't felt in years.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ]
+    },
+    {
+      "id": 345,
+      "tur": "bana",
+      "metin": "Gün doğarken yükselen bir sıcak hava balonunun sepetindesin {{isim}}; yanında eşin, aşağıda peribacalarını andıran kayalar var. {{sayi,3,7}} yıl sonrasından bu görüntü. Yükseldikçe elini sıkıca tutuyorsun, sonra korkunun yerini kahkaha alıyor. Eşin bu yolculuğu yıllar önce sana verdiği bir sözü tutmak için planlamış. İnişte ikiniz de 'bir dahakine nereye' diye konuşmaya başlayacaksınız.",
+      "metin_en": "You're in the basket of a hot-air balloon rising at sunrise, {{isim}}; your spouse beside you, rocks that look like fairy chimneys below. This view is from {{sayi,3,7}} years ahead. As you rise, you hold your spouse's hand tight, then laughter replaces the fear. Your spouse planned this trip to keep a promise made to you years ago. As you land, you'll both start talking about 'where to next time'.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 346,
+      "tur": "bana",
+      "metin": "Magnuskop'u {{sayi,2,5}} yıl sonrasına çevirdiğimde seni renkli tutamaklarla dolu bir tırmanış duvarının en tepesinde, zile uzanırken buldum {{isim}}. Aşağıdan tezahüratlar yükseliyor. Bir zamanlar yüksekten çekindiğini artık kimse bilmiyor. Zili çaldığında içinden bir yükün daha düştüğünü hissedeceksin; aşağı indiğinde yeni dostların seni kucaklayacak.",
+      "metin_en": "When I turned the MagnusScope {{sayi,2,5}} years ahead, I found you at the very top of a climbing wall covered in colorful holds, reaching for the bell, {{isim}}. Cheers rise from below. No one knows anymore that you were once afraid of heights. When you ring the bell, you'll feel one more weight fall from you; when you come down, your new friends will hug you.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 347,
+      "tur": "bana",
+      "metin": "Kolilerle dolu boş bir odanın ortasında, yere oturmuş pizza yiyorsun {{isim}}. {{sayi,3,6}} yıl sonrasının bu akşamında ilk kez kendi evine taşınmışsın. Yardıma gelen arkadaşların yorgun ama keyifli; biri kolilerin üstüne isim yazan kalemle duvardaki prize komik bir yüz çiziyor. O gece perdesiz pencereden dışarı bakıp kendi ellerinle kurduğun bu yeni bölüme sessizce kadeh değil, bir bardak çay kaldıracaksın.",
+      "metin_en": "In the middle of an empty room full of boxes, you're sitting on the floor eating pizza, {{isim}}. On this evening {{sayi,3,6}} years from now, you've moved into your own place for the first time. The friends who came to help are tired but cheerful; one of them is drawing a funny face on the wall socket with the marker used to label the boxes. That night, looking out of the curtainless window, you'll quietly raise not a toast but a glass of tea to this new chapter you built with your own hands.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 348,
+      "tur": "bana",
+      "metin": "Başında bir güneş şapkası, elinde bir defter, öğrencilerinle birlikte bir arazi çalışmasındasın {{isim}}. {{sayi,3,8}} yıl sonrasında yürüttüğün projenin en heyecanlı günü bu. Öğrencilerinden biri yerden bir şey kaldırıp koşarak sana getiriyor. Onu incelerken yüzündeki ifadeden, aylardır aradığınız izi bulduğunuzu anlıyorum. O akşam yazacağın ilk not, önemli bir makalenin ilk cümlesi olacak.",
+      "metin_en": "A sun hat on your head and a notebook in hand, you're doing fieldwork with your students, {{isim}}. {{sayi,3,8}} years from now, this is the most exciting day of the project you're running. One of your students picks something up from the ground and runs it over to you. From the look on your face as you examine it, I can tell you've found the trace you've been searching for for months. The first note you write that evening will be the opening sentence of an important paper.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
     }
   ],
   "yasama_dair": [
@@ -6454,6 +6685,146 @@
       "tur": "yasama",
       "metin": "Kulağıma eski bir vapur düdüğü ve bir sokak satıcısının uzun seslenişi geliyor. Önümüzdeki {{sayi,15,35}} yılda şehirler, kaybolmaya yüz tutan seslerini kaydedip sesli müzelerde saklayacak; isteyen bir semtin yüz yıl önceki sabahını kulaklığıyla dinleyebilecek. {{isim}}, çocukluğundan kalma bir sesi yıllar sonra orada yeniden duyduğunda gözlerin dolacak.",
       "metin_en": "The whistle of an old ferry and the long call of a street vendor reach my ears. Over the next {{sayi,15,35}} years, cities will record their fading sounds and keep them in sound museums; anyone will be able to listen through headphones to a neighborhood's morning from a hundred years ago. {{isim}}, when you hear a sound from your childhood there again after many years, your eyes will fill with tears.",
+      "kosullar": []
+    },
+    {
+      "id": 365,
+      "tur": "yasama",
+      "metin": "Kumun bittiği yerde başlayan yeşil bir şerit görüyorum; kıtanın bir ucundan öbürüne uzanıyor. 20{{sayi,42,70}} yılında çölün kenarına dikilen milyonlarca ağaç ve çalı birbirine kavuşacak, rüzgârın taşıdığı kumu durduracak. Kuruyan kuyulara su dönecek, köylerden göç edenler tarlalarına geri gelecek. {{isim}}, bir haritada o yeşil kuşağı gördüğünde insanlığın sabrına hayran kalacaksın.",
+      "metin_en": "I see a green strip beginning where the sand ends; it stretches from one end of the continent to the other. In 20{{sayi,42,70}}, the millions of trees and shrubs planted along the edge of the desert will join together and stop the sand carried by the wind. Water will return to dried-up wells, and those who left their villages will come back to their fields. {{isim}}, when you see that green belt on a map, you'll marvel at humanity's patience.",
+      "kosullar": []
+    },
+    {
+      "id": 366,
+      "tur": "yasama",
+      "metin": "Asfaltın altında yıllardır duyulmayan bir şırıltı var. 20{{sayi,38,62}} yılında pek çok şehir, betonla örttüğü dereleri yeniden gün ışığına çıkaracak; eski otoparkların yerinde kıyısı söğütlü yürüyüş yolları olacak. Yaz sıcağında o derelerin çevresi mahallenin en serin yeri hâline gelecek. {{isim}}, bir gün çıplak ayaklarını o suya sokup çocukluğundaki bir dereyi hatırlayacaksın.",
+      "metin_en": "Under the asphalt there's a babbling no one has heard for years. In 20{{sayi,38,62}}, many cities will bring the streams they once covered with concrete back into daylight; where old parking lots stood, there will be walking paths lined with willows. In the summer heat, the banks of those streams will become the coolest spot in the neighborhood. {{isim}}, one day you'll dip your bare feet in that water and remember a stream from your childhood.",
+      "kosullar": []
+    },
+    {
+      "id": 367,
+      "tur": "yasama",
+      "metin": "Her yıl yeniden sürülmeyen bir buğday tarlası düşün {{isim}}. Olasılık hesaplarım, 20{{sayi,42,70}} yılında kökleri metrelerce derine inen çok yıllık tahılların yaygınlaşacağını gösteriyor. Toprak her mevsim altüst edilmeyecek, yağmur suyu tarlada kalacak, çiftçinin yorgunluğu azalacak. Hasattan sonra tarla boş kalmayacak, kendiliğinden yeniden filizlenecek. Sofrandaki ekmek, toprağa daha nazik davranan bir tarladan gelecek.",
+      "metin_en": "Imagine a wheat field that doesn't have to be plowed again every year, {{isim}}. My probability calculations show that in 20{{sayi,42,70}}, perennial grains whose roots reach meters deep will become widespread. The soil won't be turned over every season, rainwater will stay in the field, and the farmer's workload will ease. After the harvest the field won't sit empty; it will sprout again on its own. The bread on your table will come from a field that treats the soil more gently.",
+      "kosullar": []
+    },
+    {
+      "id": 368,
+      "tur": "yasama",
+      "metin": "Bir kara tahtanın önünde gece yarısı sevinçten zıplayan bir matematikçi seçiyorum. 20{{sayi,38,74}} yılında, yüz elli yılı aşkın süredir çözülemeyen ünlü bir sayı bilmecesi, insanlarla bilgisayarların ortak çalışmasıyla nihayet çözülecek. Asal sayıların gizli düzeni anlaşılınca şifrelemeden fiziğe kadar pek çok alanda yeni kapılar açılacak. {{isim}}, o gün okulda sevmediğin bir derse bile biraz kıyak geçeceksin.",
+      "metin_en": "I make out a mathematician jumping for joy in front of a blackboard at midnight. In 20{{sayi,38,74}}, a famous number puzzle that has gone unsolved for more than a hundred and fifty years will finally be cracked through the joint work of people and computers. Once the hidden order of prime numbers is understood, new doors will open in many fields, from encryption to physics. {{isim}}, that day you'll even go a little easier on a subject you didn't like at school.",
+      "kosullar": []
+    },
+    {
+      "id": 369,
+      "tur": "yasama",
+      "metin": "Yerin kilometrelerce altından yükselen bir sıcaklık hissediyorum. 20{{sayi,42,72}} yılında yeni sondaj teknikleri sayesinde neredeyse her şehir kendi ayağının altındaki ısıdan elektrik ve ısınma enerjisi üretebilecek. Kömür kokusu kış akşamlarından silinecek. {{isim}}, soğuk bir günde ellerini ısıttığın kaloriferin sıcaklığının dünyanın kalbinden geldiğini bilmek sana ayrı bir huzur verecek.",
+      "metin_en": "I feel a warmth rising from kilometers beneath the ground. In 20{{sayi,42,72}}, thanks to new drilling techniques, almost every city will be able to produce electricity and heating from the heat right under its own feet. The smell of coal will vanish from winter evenings. {{isim}}, on a cold day, knowing that the warmth of the radiator you warm your hands on comes from the heart of the Earth will give you a special peace.",
+      "kosullar": []
+    },
+    {
+      "id": 370,
+      "tur": "yasama",
+      "metin": "Gökyüzünde sekiz rakamı çizerek dolaşan dev bir uçurtma gözüme çarptı. 20{{sayi,40,66}} yılında yüksek irtifadaki güçlü rüzgârlardan elektrik üreten uçurtma türbinleri yaygınlaşacak; kule dikmeye gerek kalmadan kıyılarda ve ovalarda enerji toplanacak. Çocukluğun oyuncağı, büyüklerin santraline dönüşecek {{isim}}. Bir bayram günü uçurtma uçururken bu fikri ilk kimin bulduğunu merak edeceksin.",
+      "metin_en": "A giant kite drawing figure eights across the sky caught my eye. In 20{{sayi,40,66}}, kite turbines that generate electricity from strong high-altitude winds will become widespread; energy will be harvested along coasts and plains without the need to build towers. A childhood toy will become a power plant for grown-ups, {{isim}}. One holiday, while flying a kite, you'll wonder who came up with this idea first.",
+      "kosullar": []
+    },
+    {
+      "id": 371,
+      "tur": "yasama",
+      "metin": "Üstü cam kaplı, kilometrelerce uzanan bir yolda sabah işe giden yüzlerce bisikletli var. 20{{sayi,38,60}} yılında komşu şehirleri birbirine bağlayan, yağmur ve rüzgârdan korunaklı bisiklet otoyolları açılacak. Şehirler arası yolculuk hem spor hem keyif olacak; yol boyunca dinlenme noktalarında sıcak çay bekleyecek. {{isim}}, bir hafta sonu bu yolda pedal çevirirken zamanın nasıl geçtiğini anlamayacaksın.",
+      "metin_en": "On a glass-covered road stretching for kilometers, hundreds of cyclists are heading to work in the morning. In 20{{sayi,38,60}}, bicycle highways connecting neighboring cities and sheltered from rain and wind will open. Traveling between cities will be both exercise and pleasure; hot tea will be waiting at rest stops along the way. {{isim}}, pedaling along this road one weekend, you won't notice the time flying by.",
+      "kosullar": []
+    },
+    {
+      "id": 372,
+      "tur": "yasama",
+      "metin": "Dalgalar yükseldikçe onlarla birlikte hafifçe yükselen bir mahalle var. Magnuskop'u 20{{sayi,48,80}} yılına ayarladığımda, birbirine yüzen köprülerle bağlı evler, okullar ve meydanlar gördüm. Kıyı şehirleri denizden korkmak yerine onunla birlikte yaşamayı öğrenecek. Çocuklar okula küçük teknelerle gidecek {{isim}}. Belki bir gün sen de pencereden balıkları seyrederek sabah kahveni içeceksin.",
+      "metin_en": "There's a neighborhood that rises gently along with the waves. When I set the MagnusScope to 20{{sayi,48,80}}, I saw homes, schools and squares connected by floating bridges. Coastal cities will learn to live with the sea instead of fearing it. Children will go to school in small boats, {{isim}}. Maybe one day you too will drink your morning coffee watching fish through your window.",
+      "kosullar": []
+    },
+    {
+      "id": 373,
+      "tur": "yasama",
+      "metin": "Tencere sesleri ve kahkahalar bir apartmanın zemin katından kulağıma geliyor. 20{{sayi,36,58}} yılında pek çok mahallede, komşuların sırayla yemek pişirip birlikte yediği ortak mutfaklar yaygınlaşacak. Tek başına yaşayanlar akşam sofrasını yalnız kurmayacak, yemek israfı da azalacak. {{isim}}, bir gün o uzun masada yanına oturan biriyle senin de tarifler değiş tokuş edeceğini görüyorum.",
+      "metin_en": "The clatter of pots and laughter reaches my ears from the ground floor of an apartment building. In 20{{sayi,36,58}}, shared kitchens where neighbors take turns cooking and eat together will become common in many neighborhoods. People who live alone won't set their dinner tables by themselves, and food waste will shrink too. {{isim}}, I see that one day you too will be swapping recipes with someone who sits next to you at that long table.",
+      "kosullar": []
+    },
+    {
+      "id": 374,
+      "tur": "yasama",
+      "metin": "Karla kaplı bir düzlükte, kalın tüylü ve kıvrık dişli bir sürü ağır ağır yürüyor. 20{{sayi,55,90}} yılında soyu binlerce yıl önce tükenmiş mamutların özelliklerini taşıyan hayvanlar, kuzeyin ıssız tundralarında yeniden yaşamaya başlayacak. Ayak bastıkları toprak daha iyi korunacak, otlaklar canlanacak. {{isim}}, bir belgeselde o sürünün yürüyüşünü izlerken ekrana dokunmak isteyeceksin.",
+      "metin_en": "On a snow-covered plain, a herd with thick fur and curved tusks walks slowly. In 20{{sayi,55,90}}, animals carrying the traits of mammoths, extinct for thousands of years, will begin to live again on the desolate tundras of the north. The ground they tread will be better protected, and the grasslands will come back to life. {{isim}}, watching that herd walk in a documentary, you'll want to reach out and touch the screen.",
+      "kosullar": []
+    },
+    {
+      "id": 375,
+      "tur": "yasama",
+      "metin": "Tahtadan bir pencere ama ardındaki bahçe olduğu gibi görünüyor. 20{{sayi,40,64}} yılında ağacın renk veren özü alınıp yerine reçine doldurularak üretilen şeffaf ahşap, camın yerini almaya başlayacak; kırılmayacak, evi daha iyi yalıtacak. {{isim}}, bir gün dokunduğun pencerenin camdan değil ağaçtan olduğunu öğrendiğinde elini çekip bir kez daha bakacaksın.",
+      "metin_en": "A window made of wood, and yet the garden behind it shows through just as it is. In 20{{sayi,40,64}}, transparent wood, made by removing the part of the wood that gives it color and filling it with resin, will begin to replace glass; it won't shatter and will insulate homes better. {{isim}}, when you learn one day that the window you touched is made of wood rather than glass, you'll pull your hand back and take another look.",
+      "kosullar": []
+    },
+    {
+      "id": 376,
+      "tur": "yasama",
+      "metin": "Plastik bir şişe, cam bir kabın içinde birkaç saatte sessizce eriyip kayboluyor. Tüm işaretler, 20{{sayi,36,58}} yılında plastikleri ilk yapıtaşlarına ayıran enzimlerin büyük tesislerde kullanılacağını gösteriyor. Ayrışan parçalardan yepyeni ve tertemiz şişeler yapılacak, çöp dağları küçülmeye başlayacak. {{isim}}, elindeki şişenin belki onuncu hayatını yaşadığını düşününce gülümseyeceksin.",
+      "metin_en": "A plastic bottle quietly melts away inside a glass container within a few hours. All the signs show that in 20{{sayi,36,58}}, enzymes that break plastics down into their original building blocks will be used in large facilities. Brand-new, spotless bottles will be made from the separated pieces, and mountains of garbage will start to shrink. {{isim}}, thinking that the bottle in your hand may be living its tenth life will make you smile.",
+      "kosullar": []
+    },
+    {
+      "id": 377,
+      "tur": "yasama",
+      "metin": "Bir müzenin camekânında, kızılımsı tozlu küçük bir taş duruyor; önünde uzun bir kuyruk var. 20{{sayi,36,48}} yılında Mars'tan toplanan kaya örnekleri Dünya'ya ulaşacak ve laboratuvarlarda incelendikten sonra bir parçası halka sergilenecek. Kızıl gezegenin geçmişinde su ve belki yaşam izleri olup olmadığı o taşlarda okunacak. {{isim}}, sırada beklerken başka bir gezegene bu kadar yakın durmanın heyecanını yaşayacaksın.",
+      "metin_en": "In a museum display case sits a small, reddish, dusty stone, with a long line in front of it. In 20{{sayi,36,48}}, rock samples collected from Mars will reach Earth, and after being studied in laboratories, a piece will be put on public display. Whether the red planet's past held water, and perhaps traces of life, will be read in those stones. {{isim}}, waiting in line, you'll feel the thrill of standing so close to another planet.",
+      "kosullar": []
+    },
+    {
+      "id": 378,
+      "tur": "yasama",
+      "metin": "Bir yaz gecesi gökyüzünde uzun, soluk bir kuyruk beliriyor. 2061 yılının temmuz ayında Halley Kuyruklu Yıldızı yetmiş beş yıllık yolculuğunu tamamlayıp yeniden Güneş'e yaklaşacak; bu kez bir önceki gelişinden çok daha iyi görünecek. Dünyanın dört bir yanında insanlar balkonlara ve tepelere çıkacak. {{isim}}, o gece bu kehaneti hatırlayıp gökyüzüne benim yerime de bir selam vereceksin.",
+      "metin_en": "On a summer night, a long, faint tail appears in the sky. In July 2061, Halley's Comet will complete its seventy-five-year journey and approach the Sun again; this time it will be far easier to see than on its previous visit. People all over the world will head out onto balconies and hilltops. {{isim}}, that night you'll remember this prophecy and greet the sky for me too.",
+      "kosullar": []
+    },
+    {
+      "id": 379,
+      "tur": "yasama",
+      "metin": "Üç bin yıllık bir çömleğin dibinde kalmış ince bir iz, bir laboratuvarda okunuyor. 20{{sayi,36,60}} yılında arkeologlar kap kacaktaki kalıntılardan antik tarifleri ayrıntısıyla çözecek; şefler o tarifleri yeniden pişirip sofralara getirecek. İnsanlar atalarının bayram yemeklerinin tadına bakacak. {{isim}}, bir gün tattığın bir çorbanın binlerce yıl önce de aynı baharatlarla kaynatıldığını öğrenince bir an duraksayacaksın.",
+      "metin_en": "A faint trace left at the bottom of a three-thousand-year-old pot is being read in a laboratory. In 20{{sayi,36,60}}, archaeologists will decode ancient recipes in detail from the residues in pots and pans; chefs will cook those recipes again and bring them to the table. People will taste the holiday dishes of their ancestors. {{isim}}, when you learn one day that a soup you tasted was simmered with the same spices thousands of years ago, you'll pause for a moment.",
+      "kosullar": []
+    },
+    {
+      "id": 380,
+      "tur": "yasama",
+      "metin": "Sular bana Marmara'nın dibinden bir haber getiriyor: yeniden yeşeren deniz çayırları ve aralarında dolaşan balık sürüleri. 20{{sayi,38,58}} yılında kıyı şehirlerinin atık suları tamamen arıtılacak ve deniz yıllar sonra yeniden derin bir nefes alacak. Balıkçıların ağları dolacak, yazın kıyılarda yüzmek eski keyfine kavuşacak. {{isim}}, bir vapur yolculuğunda suyun berraklığına bakıp içinden bir teşekkür edeceksin.",
+      "metin_en": "The waters bring me news from the bottom of the Sea of Marmara: seagrass meadows growing green again, with schools of fish swimming among them. In 20{{sayi,38,58}}, the wastewater of coastal cities will be fully treated, and after many years the sea will take a deep breath again. Fishermen's nets will fill, and swimming along the shores in summer will regain its old joy. {{isim}}, on a ferry ride you'll look at the clear water and silently say thank you.",
+      "kosullar": []
+    },
+    {
+      "id": 381,
+      "tur": "yasama",
+      "metin": "Uzun, kıvrık gagalı, kara tüylü kuşlar bir yarın kenarında kanat çırpıyor. 20{{sayi,38,60}} yılında neredeyse yok olmanın eşiğine gelmiş kelaynakların sayısı binleri bulacak ve yeniden doğada özgürce göç edecekler. Onların dönüşü, emek veren gönüllülerin sabrının ödülü olacak. {{isim}}, bir gün gökyüzünde onların uçuşunu gördüğünde başını kaldırıp uzun uzun bakacaksın.",
+      "metin_en": "Birds with long, curved beaks and dark feathers are flapping their wings at the edge of a cliff. In 20{{sayi,38,60}}, the northern bald ibises, once on the brink of disappearing, will number in the thousands and migrate freely in the wild again. Their return will be the reward for the patience of the volunteers who worked for it. {{isim}}, when you see them flying across the sky one day, you'll look up and watch them for a long time.",
+      "kosullar": []
+    },
+    {
+      "id": 382,
+      "tur": "yasama",
+      "metin": "Biri ilk kez kırmızıyla yeşili ayırt ettiği için bir meyve tabağının başında gözyaşlarını tutamıyor. 20{{sayi,40,66}} yılında tek bir uygulamayla yapılan gen tedavileri, doğuştan gelen renk körlüğünü kalıcı biçimde düzeltebilecek. Bu insanlar gün batımını ilk kez herkesin gördüğü renklerle izleyecek. {{isim}}, böyle bir anı anlatan bir videoyu izlerken sen de renklerin kıymetini yeniden fark edeceksin.",
+      "metin_en": "Someone can't hold back tears over a fruit plate because they can tell red from green for the first time. In 20{{sayi,40,66}}, gene therapies given in a single treatment will be able to permanently correct inherited color blindness. These people will watch a sunset in the colors everyone else sees for the first time. {{isim}}, watching a video of such a moment, you'll rediscover how precious colors are.",
+      "kosullar": []
+    },
+    {
+      "id": 383,
+      "tur": "yasama",
+      "metin": "Perde aralanıyor: bir ormanın ortasında özenle korunan bin fidan ve ahşap bir kutuda mühürlü el yazmaları beliriyor. Her yıl bir yazarın teslim ettiği kitaplar, yüz yıl sonra o ağaçlardan yapılacak kâğıda basılmak üzere saklanıyor. 21{{sayi,10,20}} yılında o kutu açılacak ve torunlarımız bizim onlara bıraktığımız hikâyeleri ilk kez okuyacak. {{isim}}, sabrın böyle güzel bir hediyeye dönüşebileceğini düşünmek sana umut verecek.",
+      "metin_en": "The curtain parts: in the middle of a forest, a thousand carefully protected saplings and manuscripts sealed in a wooden box appear. The books handed in each year by one author are being kept to be printed, a hundred years later, on paper made from those trees. In 21{{sayi,10,20}}, that box will be opened, and our grandchildren will read for the first time the stories we left for them. {{isim}}, thinking that patience can turn into such a beautiful gift will give you hope.",
+      "kosullar": []
+    },
+    {
+      "id": 384,
+      "tur": "yasama",
+      "metin": "Gri bir toprağın üstünde, cam bir kubbenin altında minicik beyaz bir çiçek açıyor. 20{{sayi,40,62}} yılında Ay toprağında yetiştirilen ilk bitki çiçeğini gösterecek ve o fotoğraf dünyanın her yerinde paylaşılacak. Uzayda bahçe kurmanın ilk adımı küçücük bir taç yaprakla atılacak. {{isim}}, kendi saksındaki bir filizi sularken bile o çiçeği hatırlayacaksın.",
+      "metin_en": "On gray soil, under a glass dome, a tiny white flower is blooming. In 20{{sayi,40,62}}, the first plant grown in lunar soil will show its flower, and that photo will be shared all over the world. The first step toward gardening in space will be taken with a tiny petal. {{isim}}, even while watering a sprout in your own pot, you'll remember that flower.",
       "kosullar": []
     }
   ]

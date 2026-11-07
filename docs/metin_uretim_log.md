@@ -7,8 +7,8 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 4799** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100, 2026-11-07 tur dışı
-  ChatGPT turları: 250 [motivasyon 50, faloya 40, niyet 30, yana 80, kâhin 50], tur 28: 100, tur 29: 100, tur 30: 100, tur 31: 100, tur 32: 100, tur 37: 100, tur 34: 100, tur 35: 100, tur 36: 100, tur 33: 100, tur 42: 100) — her tur sonunda güncelle.
+- **Toplam eklenen: 4899** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100, 2026-11-07 tur dışı
+  ChatGPT turları: 250 [motivasyon 50, faloya 40, niyet 30, yana 80, kâhin 50], tur 28: 100, tur 29: 100, tur 30: 100, tur 31: 100, tur 32: 100, tur 37: 100, tur 34: 100, tur 35: 100, tur 36: 100, tur 33: 100, tur 42: 100, tur 40: 100) — her tur sonunda güncelle.
   (Ayrıca fal-metni dışı: Maganda 20 soru + 244 cevap, Dert Ortağı 400 yeni tavsiye seti + 200 soru EN — 2026-11-07.)
   (tur 1-20 dağılımı: 100/100/138/160/140/140/140/180/160/140/174/157/140/160/120/160/140/110/115/75.)
 - **2026-11-07 Anıl "20 tur daha" döngüsü (tur 23-42):** `metin_turu_hazirla.js` TURLAR[23-42] = 5'li grup ×4 — KAHIN (derun/khaleesi/uraz/likia/yousuf) · KAHVE (giriş/bağlama/gelişme/sonuç/uğurlama) · SHORTS (tavşan/niyet/faloya/yana_bana/yana_yasama) · DURU (bugün/yarın/gelecek/kaderkitabı/astroyorum) · ICERIK (motivasyon/olumlama/acıgerçekler/kahve_karşılama/karşılama_z1). Her kompartman dörder geçiş. Yazar ChatGPT (Codex 11 Kasım'a dek sınırda), çeviri ChatGPT.
@@ -18,6 +18,16 @@
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 40 — 2026-11-08 (100 metin; kısa fallar 40→20; **CLAUDE YAZAR**)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Tavşan Falı | `tavsanfali.json` › `tavsanfali` | 381–400 (6 koşulsuz + 14 kitle) |
+| Niyet | `niyet.json` › `niyet` | 469–488 |
+| Faloya | `faloya.json` › `faloya` | 378–397 (20 farklı tarih girişi) |
+| Yana – Bana Dair | `yana.json` › `bana_dair` | 329–348 (Magnuskop açılışı 3/20) |
+| Yana – Yaşama Dair | `yana.json` › `yasama_dair` | 365–384 (havuzda olmayan 20 konu; Halley 2061 ve Future Library 2114 gerçek tarih) |
 
 ## Tur 42 — 2026-11-08 (100 metin; içerik; **CLAUDE YAZAR**)
 

@@ -4576,6 +4576,212 @@
           "deger": "Özel Sektör"
         }
       ]
+    },
+    {
+      "id": 469,
+      "metin": "Neden güzel haberleri hep en son sen öğreniyorsun? Bu kez öyle olmayacak, {{isim}}. Niyetinle ilgili ilk kıpırtıyı herkesten önce sen fark edeceksin; {{randomtarih,7,25}} civarında gelecek bir ileti, sessizce beklediğin şeyin yola çıktığını haber verecek.",
+      "metin_en": "Why are you always the last to hear good news? Not this time, {{isim}}. You'll be the first to notice the first stir around your wish; a message arriving around {{randomtarih,7,25}} will tell you that what you've been quietly waiting for is on its way.",
+      "kosullar": []
+    },
+    {
+      "id": 470,
+      "metin": "Biri sana 'haberin var mı?' diye başlayan bir cümle kuracak, {{isim}}. Haberin yarısını zaten biliyor olacaksın; asıl sürpriz öteki yarısında. {{sayi,4,15}} gün içinde yapılacak bu konuşma, niyetinle ilgili beklediğin kapıyı bir anda aralayacak.",
+      "metin_en": "Someone will start a sentence with 'have you heard?', {{isim}}. You'll already know half of the news; the real surprise is in the other half. This conversation, within {{sayi,4,15}} days, will suddenly open the door you've been waiting for regarding your wish.",
+      "kosullar": []
+    },
+    {
+      "id": 471,
+      "metin": "İlk yağmurdan sonra yükselen toprak kokusu gibi, niyetinin karşılığı da önce kendini sezdirecek, {{isim}}. {{sayi,1,28}} {{ay_1}} civarında içine düşecek tatlı bir önseziyi ciddiye al; birkaç gün içinde onu doğrulayan bir haber kapını çalacak.",
+      "metin_en": "Like the smell of earth rising after the first rain, the answer to your wish will make itself felt first, {{isim}}. Take seriously the sweet hunch that will come to you around {{sayi,1,28}} {{ay_1}}; within a few days, news confirming it will knock on your door.",
+      "kosullar": []
+    },
+    {
+      "id": 472,
+      "metin": "İyi haberleri önce kendine saklamak gibi bir huyun var, {{isim}}. Bu kez saklayamayacaksın. {{sayi,5,20}} gün içinde niyetinle ilgili gelecek gelişme öyle sevindirecek ki, duyduğun anda birine anlatmak için telefona sarılacaksın.",
+      "metin_en": "You have a habit of keeping good news to yourself first, {{isim}}. This time you won't be able to. Within {{sayi,5,20}} days, a development about your wish will make you so happy that the moment you hear it, you'll grab your phone to tell someone.",
+      "kosullar": []
+    },
+    {
+      "id": 473,
+      "metin": "{{burc}} burcunun 'ben bilirim' diyen tarafı bu niyette haklı çıkacak, {{isim}}. Çevrenden gelen 'biraz bekle' sözlerine rağmen sezgine güvenirsen {{sayi,2,5}} hafta içinde ilk karşılığı alacaksın. Gelen cevap, içinden 'biliyordum' dedirtecek.",
+      "metin_en": "The 'I know best' side of your {{burc}} sign will be proven right with this wish, {{isim}}. If you trust your intuition despite the 'just wait a bit' from those around you, you'll get the first response within {{sayi,2,5}} weeks. The answer will make you say 'I knew it' to yourself.",
+      "kosullar": []
+    },
+    {
+      "id": 474,
+      "metin": "Saate baktığında aynı rakamların yan yana geldiğini sık sık yakalıyorsun, değil mi, {{isim}}? Bu niyette o tekrarın bir anlamı var. {{sayi,3,13}} gün içinde iki ayrı yerden aynı konuyla ilgili haber alacak, niyetinin olgunlaştığını o çift işaretten anlayacaksın.",
+      "metin_en": "You often catch the same digits lined up when you look at the clock, don't you, {{isim}}? In this wish, that repetition means something. Within {{sayi,3,13}} days, you'll hear about the same matter from two different places, and from that double sign you'll know your wish has ripened.",
+      "kosullar": []
+    },
+    {
+      "id": 475,
+      "metin": "Artık kararlarını tek imzayla veriyorsun, {{isim}}; bu bazen ağır, çoğu zaman özgürlük. Niyetin o imzanın değerini gösterecek. {{sayi,10,30}} gün içinde kendi seçimini haklı çıkaran bir gelişme yaşayacak, gecikmiş ama doyurucu bir sevinçle gülümseyeceksin.",
+      "metin_en": "You make your decisions with a single signature now, {{isim}}; sometimes that's heavy, most of the time it's freedom. Your wish will show the worth of that signature. Within {{sayi,10,30}} days, something will happen that proves your choice right, and you'll smile with a late but deeply satisfying joy.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 476,
+      "metin": "Eşinle aranızda gülüşerek söylenen bir 'bir gün' var, {{isim}}. Niyetin ona dokunuyorsa sevin: ay dönmeden o 'bir gün' takvimde bir tarihe dönüşecek. Başka bir şeyse bile, o akşamki sevinç niyetine de güç verecek.",
+      "metin_en": "There's a 'someday' you and your spouse say to each other with a laugh, {{isim}}. If your wish touches on it, rejoice: before the month is out, that 'someday' will become a date on the calendar. Even if it's about something else, that evening's joy will give your wish strength too.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 477,
+      "metin": "Masanda unutup soğuttuğun çaylar boşa gitmeyecek, {{isim}}. Niyetin derslerle ilgiliyse emeğin beklediğinden yüksek bir karşılık bulacak; başka bir şeyse okul çevrenden biri tam aradığın kapıyı gösterecek. {{sayi,2,6}} hafta içinde ilk haberi alacaksın.",
+      "metin_en": "All the tea you forgot on your desk until it went cold won't be in vain, {{isim}}. If your wish is about your studies, your effort will be rewarded more than you expect; if it's something else, someone from your school circle will show you exactly the door you're looking for. You'll get the first news within {{sayi,2,6}} weeks.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 478,
+      "metin": "Telefonunda yazıp göndermediğin bir mesaj taslağı gibi, niyetin de bir 'gönder' tuşu bekliyor, {{isim}}. {{sayi,3,12}} gün içinde karşı taraftan gelecek beklenmedik bir adım, o tuşa basmanı kolaylaştıracak. Cevap hemen gelmeyebilir; geldiğinde ise yanaklarını ısıtacak.",
+      "metin_en": "Like a message draft you've typed on your phone but never sent, your wish is waiting for a 'send' button, {{isim}}. Within {{sayi,3,12}} days, an unexpected step from the other side will make it easier to press it. The reply may not come right away; but when it does, it'll make your cheeks glow.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 479,
+      "metin": "Herkesin işini yetiştirirken kendi isteğini hep listenin sonuna yazıyorsun, {{isim}}. Niyetin o en alttaki satır. {{ay_1}} ayı bitmeden bir yakının sana 'bu sefer sen söyle' diyecek; ağzından çıkacak cevap ikinizi de önce şaşırtacak, sonra sevindirecek.",
+      "metin_en": "While keeping up with everyone else's tasks, you always write your own wish at the bottom of the list, {{isim}}. Your wish is that very last line. Before the end of {{ay_1}}, someone close to you will say, 'this time, you tell us'; the answer that comes out of your mouth will first surprise you both, then make you happy.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Ev Hanımı"
+        }
+      ]
+    },
+    {
+      "id": 480,
+      "metin": "Sabah yürüyüşünde selamlaştığın yüzlerden biri niyetinin habercisi olacak, {{isim}}. {{sayi,1,28}} {{ay_1}} civarında ayaküstü başlayan bir sohbet, uzun süredir aklında olan işi kolaylaştıracak bilgiyi getirecek. Yılların birikimi o gün sana bir kez daha gülümseyecek.",
+      "metin_en": "One of the faces you greet on your morning walk will be the messenger of your wish, {{isim}}. Around {{sayi,1,28}} {{ay_1}}, a chat that starts on the spot will bring information that eases the matter you've long had in mind. That day, the wisdom of the years will smile on you once again.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Emekli"
+        }
+      ]
+    },
+    {
+      "id": 481,
+      "metin": "Son dakikada gelen bir gol gibi, niyetin de geç ama tam yerinde sonuçlanacak, {{isim}}. İlk yarı biraz sıkıcı geçecek; {{sayi,2,4}} hafta içinde bir dostunun aracılığı oyunu değiştirecek. Düdük çaldığında 'iyi ki ummayı bırakmamışım' diyeceksin.",
+      "metin_en": "Like a goal in the final minute, your wish will come through late but right on target, {{isim}}. The first half will be a bit dull; within {{sayi,2,4}} weeks, a friend's help will change the game. When the final whistle blows, you'll say, 'I'm glad I never stopped hoping'.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 482,
+      "metin": "Geçen doğum gününde mumu üflerken tuttuğun dilekle bugünkü niyetin aynı kapıya çıkıyor, {{isim}}. Gönülle ilgiliyse biri sana sandığından uzun süredir ilgi duyuyor; başka bir şeyse kapıyı açacak kişi yine aynı. {{sayi,2,5}} hafta içinde ilk işaret gelecek.",
+      "metin_en": "The wish you made blowing out the candles on your last birthday and today's wish lead to the same door, {{isim}}. If it's about the heart, someone has been interested in you for longer than you think; if it's something else, the one who will open the door is still the same person. The first sign will come within {{sayi,2,5}} weeks.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 483,
+      "metin": "'Nasılsın' diye soranlara 'iyiyim' derken bir gün bunun gerçekten doğru olduğunu fark edeceksin, {{isim}}. {{ay_1}} ayı bitmeden gelecek bir davet, niyetinin ilk somut adımını kendiliğinden attıracak. O akşam eve, unuttuğun bir neşeyle döneceksin.",
+      "metin_en": "While telling those who ask 'how are you?' that you're 'fine', one day you'll realize it's actually true, {{isim}}. An invitation arriving before the end of {{ay_1}} will take the first real step of your wish all by itself. That evening you'll come home with a joy you had forgotten.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 484,
+      "metin": "Sözün kısa, bakışın derin; dışın sakin, gönlün serin. Bir masada yan yana düşecek yollar, bir çay söylenecek, kalkacak perdeler. Selamı önce sen ver, {{isim}}, gerisi gelir peşinden; niyetin {{sayi,2,5}} haftada bulur yerini kendiliğinden.",
+      "metin_en": "Your words are few, your gaze is deep; calm outside, a cool heart you keep. At one table your paths will cross, a tea is poured, all shyness lost. Say hello first, {{isim}}, the rest will come along; within {{sayi,2,5}} weeks your wish will find where it belongs.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 485,
+      "metin": "Takviminde beliren bir toplantı davetinin başlığı ilk anda içini biraz daraltabilir, {{isim}}. Oysa o odadan niyetini destekleyen bir haberle çıkacaksın. {{sayi,2,4}} hafta içinde yaşanacak bu sürpriz, iş yerinde senin hakkında düşünülenlerin sandığından iyi olduğunu da gösterecek.",
+      "metin_en": "The subject line of a meeting invitation popping up in your calendar may tighten your chest a little at first, {{isim}}. Yet you'll leave that room with news that supports your wish. This surprise, within {{sayi,2,4}} weeks, will also show that what people at work think of you is better than you imagined.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Özel Sektör"
+        }
+      ]
+    },
+    {
+      "id": 486,
+      "metin": "Sevdiğin kişiyle şakalaşırken bir cümlenin ucunda ciddi bir istek saklıydı, {{isim}}; o da fark etti. Niyetin buna dokunuyorsa {{sayi,2,6}} hafta içinde aynı istek bu kez onun ağzından, gülmeden söylenecek. Başka bir niyetse bile en büyük desteği yine ondan göreceksin.",
+      "metin_en": "While joking with the person you love, a serious wish was hidden at the tip of one sentence, {{isim}}; they noticed too. If your wish touches on that, within {{sayi,2,6}} weeks the same wish will be spoken again, this time from their lips and without a laugh. Even if it's another wish, your greatest support will still come from them.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 487,
+      "metin": "Hazırlıkların arasında kimseye söylemediğin küçük bir hayal saklıyorsun, {{isim}}. Niyetin buysa sevin: nişanlın da o hayalin ucunu bir yerden yakalamış. {{sayi,2,6}} hafta içinde yapacağı bir sürpriz, gizli isteğini gün yüzüne çıkaracak.",
+      "metin_en": "Among all the preparations, you're hiding a small dream you haven't told anyone, {{isim}}. If that's your wish, rejoice: your fiancé has caught hold of that dream from somewhere too. A surprise they'll arrange within {{sayi,2,6}} weeks will bring your secret wish to light.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 488,
+      "metin": "Eşinin 'sen bilirsin' diyerek bıraktığı bir konu var, {{isim}}; aslında senden bir işaret bekliyor. Niyetin bununla ilgiliyse {{sayi,3,10}} gün içinde atacağın küçük bir adım evinizde koca bir gülümseme yaratacak. Başka bir niyetse de aynı hafta gelen bir haber ikinizi birden sevindirecek.",
+      "metin_en": "There's a matter your spouse left with a 'you decide', {{isim}}; they're actually waiting for a sign from you. If your wish is about this, a small step you take within {{sayi,3,10}} days will bring a big smile to your home. Even if it's another wish, news arriving the same week will make you both happy.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
     }
   ]
 }

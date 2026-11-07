@@ -2,6 +2,18 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
+## Ne yapıldı (2026-11-07 — cihaz geri bildirimi: Kullanıcı Bilgileri + ana menü chat)
+Commit `6211db17` (main'e FF, ana klasör güncel). Değişen: `settings_screen.dart`, `home_screen.dart`.
+- **AYARLAR kartı HEP AÇIK:** hiçbir scroll/dokunuş kapatmaz (aç/kapa provider + chevron + aşağı-swipe
+  katla bağı kaldırıldı). Daraltma davranışı AYNI: yalnız kart 1 kutucukları içeri + kart 2 daireler yan yana.
+- **Profil scroll lastiği GERİ:** `ClampingScrollPhysics` → `BouncingScrollPhysics` (Anıl: "lastik gibi
+  demeden önceki hale dön"; Clamping ile scroll takılıyordu). İki geri bildirim commit'i geri alındı: `73166c11`
+  (lastik kaldırma) + `dc88117f` (ayarlar katla); `0ebcdbd8`'in aç/kapa mekanizması da sökülüp hep-açık yapıldı.
+- **Ana menü chat:** açılışta band GİZLİ (typewriter mount edilmez, yazı akmaz) → açılıştan TAM 3 sn sonra
+  iner (yükleme süresinden bağımsız). Her chat gelişi 10 sn kalır (`_popBand` varsayılan 10 sn, değişken
+  `_bandHold` 5/8/10 kaldırıldı). Testler 25/25 (home_header + main_tabs + settings_dialog_pop + inline_editor).
+- ⚠️ Flutter-içi değişiklik tarayıcı panelinde görünmez → CİHAZDA görünür. Build YOK ("test çık" denmedi).
+
 ## Ne yapıldı (2026-11-07 — "20 tur daha + bitir test çık")
 **TEST BUILD ÇIKTI: `10.8.20+288`** (versionCode +3). Hepsi commit + push + **main'e FF**. Ana klasör
 (`C:\src\magnus_app`) main'e çekildi, AAB oradan derlendi.

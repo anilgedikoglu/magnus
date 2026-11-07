@@ -14,7 +14,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/burning_paper.dart';
 import '../../core/widgets/focus_ripple.dart';
@@ -42,6 +41,19 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   // ── Pref anahtarları ────────────────────────────────────────────────────────
   static const _prefGosterilen = 'acigercekler_gosterilen';
   static const _prefBugun      = 'acigercekler_bugun_tarih';
+
+  // Kül kağıttaki altın-sarısı yazı stili (GoldenScriptText yedek + maske metriği).
+  static const _goldStyle = TextStyle(
+    color: Color(0xFFEBC973), // altın sarısı
+    fontSize: 17.5,
+    height: 1.78,
+    fontWeight: FontWeight.w500,
+    letterSpacing: 0.2,
+    shadows: [
+      Shadow(color: Color(0xDDFFC24D), blurRadius: 11), // iç sıcak hale
+      Shadow(color: Color(0x88FF8A1E), blurRadius: 26), // çatlaktan sızan ışık
+    ],
+  );
 
   // ── Durum ───────────────────────────────────────────────────────────────────
   _Adim   _adim        = _Adim.yukleniyor;
@@ -264,6 +276,9 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
   // ── İçerik ekranı ─────────────────────────────────────────────────────────────
 
   Widget _buildIcerik() {
+    // Reduced-motion: yazı anında (son kare) belirsin.
+    final reduced = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    final revealDur = Duration(milliseconds: reduced ? 0 : 1100);
     return Column(
       children: [
         _buildBaslikBar(),
@@ -275,7 +290,7 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
               child: Stack(
                 fit: StackFit.expand,
                 children: [
-                  // Beyaz kağıt köşeden tutuşur, alev sarar, KÜLE döner (3D shader).
+                  // Papirüs sağ alt köşeden tutuşur → alev/köz/duman sarar → kara kağıt.
                   BurningPaper(
                     seed: _seed,
                     onBurnComplete: () {
@@ -284,22 +299,20 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
                       setState(() => _yandi = true);
                     },
                   ),
-                  // Küle dönen simsiyah kağıtta altın-sarısı, çatlaklardan ışık sızar gibi yazı belirir.
+                  // Kara kağıtta altın-sarısı yazı belirir; ışık harflerin İÇİNDEN geçer.
                   IgnorePointer(
                     ignoring: !_yandi,
                     child: AnimatedSlide(
                       offset: _yandi ? Offset.zero : const Offset(0, 0.035),
-                      duration: const Duration(milliseconds: 1100),
+                      duration: revealDur,
                       curve: Curves.easeOutCubic,
                       child: AnimatedOpacity(
                         opacity: _yandi ? 1 : 0,
-                        duration: const Duration(milliseconds: 1100),
+                        duration: revealDur,
                         curve: Curves.easeOutCubic,
-                        child: Center(
-                          child: SingleChildScrollView(
-                            padding: const EdgeInsets.fromLTRB(30, 26, 30, 30),
-                            child: _buildKulYazi(),
-                          ),
+                        child: GoldenScriptText(
+                          text: _metin,
+                          style: _goldStyle,
                         ),
                       ),
                     ),
@@ -311,25 +324,6 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
         ),
         const FloatingBarSpacer(),
       ],
-    );
-  }
-
-  /// Küle dönen kağıttaki altın-sarısı, ışık sızan yazı.
-  Widget _buildKulYazi() {
-    return RichTextParser.build(
-      _metin,
-      style: const TextStyle(
-        color: Color(0xFFEBC973), // altın sarısı
-        fontSize: 17.5,
-        height: 1.78,
-        fontWeight: FontWeight.w500,
-        letterSpacing: 0.2,
-        shadows: [
-          Shadow(color: Color(0xDDFFC24D), blurRadius: 11), // iç sıcak hale
-          Shadow(color: Color(0x88FF8A1E), blurRadius: 26), // çatlaktan sızan ışık
-        ],
-      ),
-      textAlign: TextAlign.center,
     );
   }
 

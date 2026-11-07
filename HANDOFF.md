@@ -2,13 +2,20 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
+## Ne yapıldı (2026-11-07 13:52 — TEST BUILD 10.8.23+291 ÇIKTI)
+**Android Play Dahili test YAYINLANDI (7 Kas 13:52) + iOS TestFlight YÜKLENDİ (GitHub Actions ✓ 7m35s).**
+AAB 167.1MB (SHA-256 `e7ea1ea3…3960`), ANA klasörden (`C:\src\magnus_app`, main) derlendi, 20×9MB
+parça-birleştir+SHA-256+DataTransfer ile Play'e yüklendi (0 cihaz düşüşü, 1 standart cihaz-uyarısı). İçerik =
+aşağıdaki cihaz geri bildirimleri. Bir sonraki build: **`10.8.26+294`** (yalnız "test çık" deyince).
+
 ## Ne yapıldı (2026-11-07 — cihaz geri bildirimi: Kullanıcı Bilgileri + ana menü chat)
-Commit `6211db17` (main'e FF, ana klasör güncel). Değişen: `settings_screen.dart`, `home_screen.dart`.
+Commit'ler `6211db17` + `c1c95f68` (main'e FF, ana klasör güncel). Değişen: `settings_screen.dart`, `home_screen.dart`.
 - **AYARLAR kartı HEP AÇIK:** hiçbir scroll/dokunuş kapatmaz (aç/kapa provider + chevron + aşağı-swipe
   katla bağı kaldırıldı). Daraltma davranışı AYNI: yalnız kart 1 kutucukları içeri + kart 2 daireler yan yana.
-- **Profil scroll lastiği GERİ:** `ClampingScrollPhysics` → `BouncingScrollPhysics` (Anıl: "lastik gibi
-  demeden önceki hale dön"; Clamping ile scroll takılıyordu). İki geri bildirim commit'i geri alındı: `73166c11`
-  (lastik kaldırma) + `dc88117f` (ayarlar katla); `0ebcdbd8`'in aç/kapa mekanizması da sökülüp hep-açık yapıldı.
+- **Profil scroll lastiksi çekiştirme/esneme KALDIRILDI** (Anıl düzeltti: "lastik geri gelsin demedim,
+  lastiksi çekiştirmeyle esneme olmasın"): `ClampingScrollPhysics` (bounce yok) + `_NoStretchScrollBehavior`
+  (`buildOverscrollIndicator`→child) ile Android 12+ stretch göstergesi kapalı, profil `SingleChildScrollView`
+  `ScrollConfiguration` ile sarıldı. Ayarlar hep-açık: `0ebcdbd8` aç/kapa + `dc88117f` katla-bağı söküldü.
 - **Ana menü chat:** açılışta band GİZLİ (typewriter mount edilmez, yazı akmaz) → açılıştan TAM 3 sn sonra
   iner (yükleme süresinden bağımsız). Her chat gelişi 10 sn kalır (`_popBand` varsayılan 10 sn, değişken
   `_bandHold` 5/8/10 kaldırıldı). Testler 25/25 (home_header + main_tabs + settings_dialog_pop + inline_editor).

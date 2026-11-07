@@ -7,8 +7,8 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 4499** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100, 2026-11-07 tur dışı
-  ChatGPT turları: 250 [motivasyon 50, faloya 40, niyet 30, yana 80, kâhin 50], tur 28: 100, tur 29: 100, tur 30: 100, tur 31: 100, tur 32: 100, tur 37: 100, tur 34: 100, tur 35: 100) — her tur sonunda güncelle.
+- **Toplam eklenen: 4599** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100, 2026-11-07 tur dışı
+  ChatGPT turları: 250 [motivasyon 50, faloya 40, niyet 30, yana 80, kâhin 50], tur 28: 100, tur 29: 100, tur 30: 100, tur 31: 100, tur 32: 100, tur 37: 100, tur 34: 100, tur 35: 100, tur 36: 100) — her tur sonunda güncelle.
   (Ayrıca fal-metni dışı: Maganda 20 soru + 244 cevap, Dert Ortağı 400 yeni tavsiye seti + 200 soru EN — 2026-11-07.)
   (tur 1-20 dağılımı: 100/100/138/160/140/140/140/180/160/140/174/157/140/160/120/160/140/110/115/75.)
 - **2026-11-07 Anıl "20 tur daha" döngüsü (tur 23-42):** `metin_turu_hazirla.js` TURLAR[23-42] = 5'li grup ×4 — KAHIN (derun/khaleesi/uraz/likia/yousuf) · KAHVE (giriş/bağlama/gelişme/sonuç/uğurlama) · SHORTS (tavşan/niyet/faloya/yana_bana/yana_yasama) · DURU (bugün/yarın/gelecek/kaderkitabı/astroyorum) · ICERIK (motivasyon/olumlama/acıgerçekler/kahve_karşılama/karşılama_z1). Her kompartman dörder geçiş. Yazar ChatGPT (Codex 11 Kasım'a dek sınırda), çeviri ChatGPT.
@@ -18,6 +18,16 @@
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 36 — 2026-11-08 (100 metin; durugörü + kader kitabı + astro; **CLAUDE YAZAR**)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Durugörü – Bugün | `durugoru_bno.json` › `durugoru_bno` | 231–250 |
+| Durugörü – Yarın | `durugoru_yno.json` › `durugoru_yno` | 160–179 ("Yarın" açılışı 1/20; saat zinciri yok) |
+| Durugörü – Gelecek | `durugoru_gno.json` › `durugoru_gno` | 207–226 |
+| Kader Kitabı | `kaderkitabi.json` › `kaderkitabi` | 410–429 (40→20; her kitle 1; "||" metin başına 1) |
+| Günlük Astroloji – Yorum | `gunlukastroloji.json` › `astroyorum` | 180–199 (tek paragraf, 956–1072 kr) |
 
 ## Tur 35 — 2026-11-08 (100 metin; kısa fallar 40→20; **CLAUDE YAZAR**)
 

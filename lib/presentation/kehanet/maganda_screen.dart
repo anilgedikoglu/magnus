@@ -108,32 +108,51 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
     if (_secimYapildi) return;
     _secimYapildi = true;
 
+    final secilenSoru = _sorular[index];
+    final soruId = '${secilenSoru['id']}';
+
     final str = await rootBundle.loadString('assets/data/maganda.json');
     final data = jsonDecode(str);
-    final List cevaplar = data['cevaplar'] ?? [];
+    final isEn = ref.read(localeProvider) == 'en';
+
+    // Yeni model: cevaplar = { "<soruId>": {metinler:[5], metinler_en:[5]} }.
+    // Her soruya ait 5 cevaptan biri no-repeat ile seçilir (digerleri bitmeden tekrar yok).
+    List<String> varyasyonlar = [];
+    final dynamic cevaplarRaw = data['cevaplar'];
+    if (cevaplarRaw is Map) {
+      final entry = (cevaplarRaw[soruId] ??
+          (cevaplarRaw.values.isNotEmpty ? cevaplarRaw.values.first : null));
+      if (entry is Map) {
+        final tr = (entry['metinler'] as List?)
+                ?.map((e) => e.toString()).where((s) => s.isNotEmpty).toList() ??
+            const [];
+        final en = (entry['metinler_en'] as List?)
+                ?.map((e) => e.toString()).where((s) => s.isNotEmpty).toList() ??
+            const [];
+        varyasyonlar = (isEn && en.isNotEmpty) ? en : tr;
+        if (varyasyonlar.isEmpty) varyasyonlar = tr;
+      }
+    } else if (cevaplarRaw is List && cevaplarRaw.isNotEmpty) {
+      // Eski/yedek format — herhangi bir cevabı \n\n ile böl.
+      final any = cevaplarRaw.first as Map;
+      final raw = (isEn ? any['metin_en'] : any['metin']) as String? ??
+          (any['metin'] as String? ?? '');
+      varyasyonlar =
+          raw.split('\n\n').map((s) => s.trim()).where((s) => s.isNotEmpty).toList();
+    }
+    if (varyasyonlar.isEmpty) { _secimYapildi = false; return; }
 
     final prefs = await SharedPreferences.getInstance();
-    const key = 'maganda_gosterilen';
+    final key   = 'maganda_cevap_${soruId}_gosterilen';
     final shown = prefs.getStringList(key) ?? [];
+    final idxPool = List.generate(varyasyonlar.length, (i) => i);
+    final pick = pickNoRepeat<int>(
+        pool: idxPool, shown: shown, idOf: (i) => i.toString());
+    final vi = pick?.selected ?? 0;
+    if (pick != null) await prefs.setStringList(key, pick.shown);
 
-    final pick = pickNoRepeat(
-        pool: cevaplar, shown: shown, idOf: (e) => e['id'].toString());
-    if (pick == null) return;
-    final selected = pick.selected;
-    final isEn = ref.read(localeProvider) == 'en';
-    final rawMetin = (isEn && (selected['metin_en'] as String?)?.isNotEmpty == true)
-        ? selected['metin_en'] as String
-        : (selected['metin'] as String? ?? '');
-    final varyasyonlar = rawMetin
-        .split('\n\n')
-        .map((s) => s.trim())
-        .where((s) => s.isNotEmpty)
-        .toList();
-    varyasyonlar.shuffle(Random());
-    _cevap = varyasyonlar.isNotEmpty ? varyasyonlar.first : rawMetin;
     final profile = ref.read(userProfileProvider);
-    _cevap = VariableReplacer.replace(_cevap, profile.toVariableMap());
-    await prefs.setStringList(key, pick.shown);
+    _cevap = VariableReplacer.replace(varyasyonlar[vi], profile.toVariableMap());
 
     if (!mounted) return;
 

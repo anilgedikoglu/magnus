@@ -179,188 +179,1004 @@
       "id": 36,
       "metin": "Anlaşma sağlanır mı?",
       "metin_en": "Will an agreement be reached?"
+    },
+    {
+      "id": 37,
+      "metin": "Şansım ne zaman dönecek?",
+      "metin_en": "When will my luck turn around?"
+    },
+    {
+      "id": 38,
+      "metin": "Bu yıl benim için nasıl geçecek?",
+      "metin_en": "How will this year go for me?"
+    },
+    {
+      "id": 39,
+      "metin": "Hayatımda büyük bir değişiklik olacak mı?",
+      "metin_en": "Will there be a big change in my life?"
+    },
+    {
+      "id": 40,
+      "metin": "Beklediğim haber gelecek mi?",
+      "metin_en": "Will the news I'm waiting for come?"
+    },
+    {
+      "id": 41,
+      "metin": "Kısmetim açık mı?",
+      "metin_en": "Is my fortune open?"
+    },
+    {
+      "id": 42,
+      "metin": "Yeni bir şehre taşınır mıyım?",
+      "metin_en": "Will I move to a new city?"
+    },
+    {
+      "id": 43,
+      "metin": "Bana şans getirecek biri var mı?",
+      "metin_en": "Is there someone who will bring me luck?"
+    },
+    {
+      "id": 44,
+      "metin": "İnsanların bana bakışı değişecek mi?",
+      "metin_en": "Will the way people see me change?"
+    },
+    {
+      "id": 45,
+      "metin": "Yakın zamanda güzel bir sürpriz var mı?",
+      "metin_en": "Is there a lovely surprise coming soon?"
+    },
+    {
+      "id": 46,
+      "metin": "Bolluk ve bereket kapımı çalacak mı?",
+      "metin_en": "Will abundance and blessing knock on my door?"
+    },
+    {
+      "id": 47,
+      "metin": "Geçmişten biri hayatıma geri dönecek mi?",
+      "metin_en": "Will someone from the past come back into my life?"
+    },
+    {
+      "id": 48,
+      "metin": "Birisi bana gönülden bağlı mı?",
+      "metin_en": "Is someone devoted to me from the heart?"
+    },
+    {
+      "id": 49,
+      "metin": "Hak ettiğim değeri görecek miyim?",
+      "metin_en": "Will I get the value I deserve?"
+    },
+    {
+      "id": 50,
+      "metin": "İçimdeki o soruya evren ne diyor?",
+      "metin_en": "What does the universe say to the question inside me?"
+    },
+    {
+      "id": 51,
+      "metin": "Bu dönemde cesur bir adım atmalı mıyım?",
+      "metin_en": "Should I take a bold step in this period?"
+    },
+    {
+      "id": 52,
+      "metin": "Uzaktan beni merak eden biri var mı?",
+      "metin_en": "Is there someone wondering about me from afar?"
+    },
+    {
+      "id": 53,
+      "metin": "Önümdeki yol açık mı?",
+      "metin_en": "Is the road ahead of me open?"
+    },
+    {
+      "id": 54,
+      "metin": "Yeni bir dostluk beni bekliyor mu?",
+      "metin_en": "Is a new friendship waiting for me?"
+    },
+    {
+      "id": 55,
+      "metin": "Hayalini kurduğum şeye kavuşacak mıyım?",
+      "metin_en": "Will I attain the thing I dream of?"
+    },
+    {
+      "id": 56,
+      "metin": "Rızkım bollaşacak mı?",
+      "metin_en": "Will my sustenance grow abundant?"
     }
   ],
-  "cevaplar": [
-    {
-      "id": 1,
-      "metin": "Sen oldukça sevilen ve beğenilen birisin. Dikkat çekiyorsun {{isim}}.\n\nİnsanlar sana imrenerek bakıyorlar. Sana dair birçok şey insanlar tarafından takdirle karşılanıyor {{isim}}.\n\nHem çok beğeniliyor hem de zaman zaman kıskanılıyorsun {{isim}}. Gözler genellikle üzerinde.",
-      "metin_en": "You are quite loved and admired. You attract attention {{isim}}.\n\nPeople look at you with envy. Many things about you are admired by others, {{name}}.\n\nYou are both highly admired and sometimes envied, {{isim}}. Eyes are often on you."
+  "cevaplar": {
+    "1": {
+      "metinler": [
+        "Sen oldukça sevilen ve beğenilen birisin. Dikkat çekiyorsun {{isim}}.",
+        "İnsanlar sana imrenerek bakıyorlar. Sana dair birçok şey insanlar tarafından takdirle karşılanıyor {{isim}}.",
+        "Hem çok beğeniliyor hem de zaman zaman kıskanılıyorsun {{isim}}. Gözler genellikle üzerinde.",
+        "İnsanlar sana güveniyor {{isim}}. Çoğu, bir sıkıntıya düştüğünde ilk senin aklına geldiğini itiraf eder. Sağlam bir duruşun var, bunu hissediyorlar.",
+        "Seni ilk tanıyanlar biraz mesafeli bulabilir {{isim}}, fakat tanıdıkça fikirleri tamamen değişiyor. Arkandan çoğunlukla iyi konuşuluyor; merak etme."
+      ],
+      "metinler_en": [
+        "You are quite loved and admired. You attract attention {{isim}}.",
+        "People look at you with envy. Many things about you are admired by others, {{isim}}.",
+        "You are both highly admired and sometimes envied, {{isim}}. Eyes are often on you.",
+        "People trust you, {{isim}}. Most of them admit that you are the first one who comes to mind when they're in trouble. You have a solid presence, and they can feel it.",
+        "Those who first meet you may find you a little distant, {{isim}}, but as they get to know you, their opinion changes completely. Behind your back, people mostly speak well of you; don't worry."
+      ]
     },
-    {
-      "id": 2,
-      "metin": "Gelecekte sen çok para sahibi olacaksın {{isim}}. Efsane paralar bunlar.\n\nSeni gelecekte büyük bir para ve mal varlığı bekliyor. Bu konuda hayatında ani gelişmeler yaşayacaksın ve sahip olacağın şeyler eline bir anda geçecek {{isim}}.\n\nPara konusunda astronomik beklentiler içinde olman çok doğru olmasa da, varlıklı ve konforlu bir hayat süreceğini söyleyebilirim {{isim}}.",
-      "metin_en": "In the future, you will be very wealthy {{isim}}. Legendary bucks these are.\n\nGreat wealth and assets await you in the future, {{isim}}. You will experience sudden developments in this regard, and the things you will own will come into your hands all at once.\n\nAlthough it wouldn't be very realistic to have astronomical expectations about money, I can say that you will live a wealthy and comfortable life, {{isim}}."
+    "2": {
+      "metinler": [
+        "Gelecekte sen çok para sahibi olacaksın {{isim}}. Efsane paralar bunlar.",
+        "Seni gelecekte büyük bir para ve mal varlığı bekliyor. Bu konuda hayatında ani gelişmeler yaşayacaksın ve sahip olacağın şeyler eline bir anda geçecek {{isim}}.",
+        "Para konusunda astronomik beklentiler içinde olman çok doğru olmasa da, varlıklı ve konforlu bir hayat süreceğini söyleyebilirim {{isim}}.",
+        "Paran bir anda değil, emeğinle yavaş yavaş birikecek {{isim}}. Ama birikince de sağlam birikecek; kolay kolay erimeyen bir bereket var kaderinde.",
+        "Maddi açıdan hiçbir zaman darda kalmayacaksın {{isim}}, bundan emin ol. Fakat senin asıl zenginliğin cebinde değil, çevrende; o zenginliğin de her geçen yıl artıyor."
+      ],
+      "metinler_en": [
+        "In the future, you will be very wealthy {{isim}}. Legendary bucks these are.",
+        "Great wealth and assets await you in the future, {{isim}}. You will experience sudden developments in this regard, and the things you will own will come into your hands all at once.",
+        "Although it wouldn't be very realistic to have astronomical expectations about money, I can say that you will live a wealthy and comfortable life, {{isim}}.",
+        "Your money won't come all at once; it will accumulate slowly through your own effort, {{isim}}. But once it does, it will be solid; there is a kind of abundance in your destiny that doesn't easily melt away.",
+        "You will never be in financial trouble, {{isim}}, rest assured. But your true wealth is not in your pocket; it's in the people around you, and that wealth grows with each passing year."
+      ]
     },
-    {
-      "id": 3,
-      "metin": "Çevrende pek düşmanın yok senin {{isim}}. Sen genellikle sevilen birisin.\n\nSana hasetle bakan ve dara düştüğünü görmek isteyen bazı insanlar olduğunu söyleyebilirim {{isim}}.\n\nSenin pek düşmanın olmadığı gibi, düşman sandığın ve seni aslında çok seven ve iyiliğini isteyen bazı tanıdıkların olduğunu görüyorum {{isim}}.",
-      "metin_en": "You don’t have many enemies around you, {{isim}}. You are generally a well-liked person.\n\nI can say that there are some people who look at you with envy and wish to see you in difficult situations, {{isim}}.\n\nJust as you don’t have many enemies, I see that there are some acquaintances whom you consider enemies but who actually love you and wish the best for you, {{isim}}."
+    "3": {
+      "metinler": [
+        "Çevrende pek düşmanın yok senin {{isim}}. Sen genellikle sevilen birisin.",
+        "Sana hasetle bakan ve dara düştüğünü görmek isteyen bazı insanlar olduğunu söyleyebilirim {{isim}}.",
+        "Senin pek düşmanın olmadığı gibi, düşman sandığın ve seni aslında çok seven ve iyiliğini isteyen bazı tanıdıkların olduğunu görüyorum {{isim}}.",
+        "Gerçek anlamda düşman değil ama seni çekemeyen bir kişi var çevrende {{isim}}. Yüzüne güler, içten içe kıskanır. Zamanla sen de bu kişiyi sezeceksin.",
+        "Dışarıda korkacağın bir düşmanın yok {{isim}}. Senin tek rakibin bazen kendi şüphelerin ve ertelemelerin. Onları yendiğin gün, kimse sana dokunamaz."
+      ],
+      "metinler_en": [
+        "You don’t have many enemies around you, {{isim}}. You are generally a well-liked person.",
+        "I can say that there are some people who look at you with envy and wish to see you in difficult situations, {{isim}}.",
+        "Just as you don’t have many enemies, I see that there are some acquaintances whom you consider enemies but who actually love you and wish the best for you, {{isim}}.",
+        "Not a true enemy, but there is one person around you who can't stand your success, {{isim}}. They smile to your face while secretly envying you. In time, you too will sense who this is.",
+        "You have no enemy outside to fear, {{isim}}. Your only rival is sometimes your own doubts and hesitations. The day you overcome them, no one can touch you."
+      ]
     },
-    {
-      "id": 4,
-      "metin": "Yakınlarında olan ve senden çok etkilenen bazı insanların varlığından eminim {{isim}}.\n\nSen dikkat çekici birisin. Senden etkilenen bazı insanlar var ancak bunu dile getirmiyorlar {{isim}}.\n\nÇaba sarf etmediğin zaman birinin senden etkilenmesi zor. Ancak kendini tanıttığın insanlar, seninle ilgili bazı detaylar öğrendiklerinde çok etkileniyorlar {{isim}}.",
-      "metin_en": "I am sure of the presence of some people close to you who are deeply impressed by you, {{isim}}.\n\nYou are a remarkable person. There are some people who are impressed by you but do not express it, {{isim}}.\n\nWhen you don’t make an effort, it’s hard for someone to be impressed by you. However, when people get to know you and learn certain details about you, they are deeply impressed, {{isim}}."
+    "4": {
+      "metinler": [
+        "Yakınlarında olan ve senden çok etkilenen bazı insanların varlığından eminim {{isim}}.",
+        "Sen dikkat çekici birisin. Senden etkilenen bazı insanlar var ancak bunu dile getirmiyorlar {{isim}}.",
+        "Çaba sarf etmediğin zaman birinin senden etkilenmesi zor. Ancak kendini tanıttığın insanlar, seninle ilgili bazı detaylar öğrendiklerinde çok etkileniyorlar {{isim}}.",
+        "Uzaktan seni örnek alan biri var {{isim}}. Senin nasıl davrandığını, nasıl konuştuğunu izliyor; farkında bile değilsin. Sen ona iyi geliyorsun.",
+        "Sen bir ortama girdiğinde havanın değiştiğini hiç fark ettin mi {{isim}}? İnsanlar senin enerjinden etkileniyor; bazıları bunu yıllar sonra sana söyleyecek."
+      ],
+      "metinler_en": [
+        "I am sure of the presence of some people close to you who are deeply impressed by you, {{isim}}.",
+        "You are a remarkable person. There are some people who are impressed by you but do not express it, {{isim}}.",
+        "When you don’t make an effort, it’s hard for someone to be impressed by you. However, when people get to know you and learn certain details about you, they are deeply impressed, {{isim}}.",
+        "There is someone who takes you as a role model from afar, {{isim}}. They watch how you behave and speak; you're not even aware of it. You have a good influence on them.",
+        "Have you ever noticed how the mood of a room changes when you walk in, {{isim}}? People are affected by your energy; some of them will tell you this only years later."
+      ]
     },
-    {
-      "id": 5,
-      "metin": "Evren senin içsel dönüşümünü tamamlamanı bekliyor. Kayıpları hazmettiğinde, önüne hazineler serecek {{isim}}.\n\nEvren senin çok mutlu olmanı istiyor. Ancak öncesinde, mutsuzluğun ne olduğunu iyi anlaman ve sahip olacağın mutluluklar için tam manasıyla şükredebilir hale gelmen gerekli {{isim}}.\n\nEvren senin pek çok mutluluğu ayrı ayrı tatmanı istiyor. Bunun için de değişik yollardan geçmen gerektiği görülüyor. Yolların zaman zaman değişmesi, seni endişeye sevk etmemeli {{isim}}.",
-      "metin_en": "The universe is waiting for you to complete your inner transformation. When you come to terms with your losses, it will lay treasures before you, {{isim}}.\n\nThe universe wants you to be very happy. However, before that, you need to fully understand what unhappiness is and become truly grateful for the happiness you will have, {{isim}}.\n\nThe universe wants you to experience many different forms of happiness. For this, it seems that you need to go through various paths. The changing paths from time to time should not cause you anxiety, {{isim}}."
+    "5": {
+      "metinler": [
+        "Evren senin içsel dönüşümünü tamamlamanı bekliyor. Kayıpları hazmettiğinde, önüne hazineler serecek {{isim}}.",
+        "Evren senin çok mutlu olmanı istiyor. Ancak öncesinde, mutsuzluğun ne olduğunu iyi anlaman ve sahip olacağın mutluluklar için tam manasıyla şükredebilir hale gelmen gerekli {{isim}}.",
+        "Evren senin pek çok mutluluğu ayrı ayrı tatmanı istiyor. Bunun için de değişik yollardan geçmen gerektiği görülüyor. Yolların zaman zaman değişmesi, seni endişeye sevk etmemeli {{isim}}.",
+        "Evrenin seninle ilgili planı yalnız seni değil, çevreni de ilgilendiriyor {{isim}}. Bir gün başkalarına yol gösteren, dokunduğunu iyileştiren biri olacaksın. O güne hazırlanıyorsun.",
+        "Evren şu sıralar seni hiç beklemediğin bir kapıya doğru yönlendiriyor {{isim}}. Bugün aksilik sandığın bir olay, aslında seni asıl yoluna çeken bir el. Sabret, anlam birkaç ay sonra açılacak."
+      ],
+      "metinler_en": [
+        "The universe is waiting for you to complete your inner transformation. When you come to terms with your losses, it will lay treasures before you, {{isim}}.",
+        "The universe wants you to be very happy. However, before that, you need to fully understand what unhappiness is and become truly grateful for the happiness you will have, {{isim}}.",
+        "The universe wants you to experience many different forms of happiness. For this, it seems that you need to go through various paths. The changing paths from time to time should not cause you anxiety, {{isim}}.",
+        "The universe's plan for you concerns not only you but also those around you, {{isim}}. One day you will become someone who guides others, who heals whatever they touch. You are being prepared for that day.",
+        "These days the universe is steering you toward a door you never expected, {{isim}}. An event you consider a setback today is actually a hand pulling you toward your true path. Be patient; the meaning will unfold in a few months."
+      ]
     },
-    {
-      "id": 6,
-      "metin": "Bulunduğun yerden çok uzaklara yakın yıllarda bazı seyahatlerin olacak {{isim}}; ancak bunlar kısa sürecek.\n\nSenin gelecekteki en uzak yolculuğun 3-5 uçuş saati olacak {{isim}}. Uzun süreli daha uzak yolculuklar beklemiyorum.\n\nSenin gelecekte çok uzun mesafelere, uzun da sürecek bazı yolculukların olacak. Bir ayağın öte diyarlarda olacak {{isim}}.",
-      "metin_en": "You will have some journeys to places far from where you are in the coming years, {{isim}}; however, they will be brief.\n\nYour farthest journey in the future will be 3-5 flight hours, {{isim}}. I don’t expect longer or more distant travels.\n\nYou will have some very long-distance and lengthy journeys in the future, {{isim}}. One foot of yours will be in distant lands."
+    "6": {
+      "metinler": [
+        "Bulunduğun yerden çok uzaklara yakın yıllarda bazı seyahatlerin olacak {{isim}}; ancak bunlar kısa sürecek.",
+        "Senin gelecekteki en uzak yolculuğun 3-5 uçuş saati olacak {{isim}}. Uzun süreli daha uzak yolculuklar beklemiyorum.",
+        "Senin gelecekte çok uzun mesafelere, uzun da sürecek bazı yolculukların olacak. Bir ayağın öte diyarlarda olacak {{isim}}.",
+        "Senin en önemli yolculuğun bir deniz aşırı olacak {{isim}} ve bu yolculuk bir insanla bağlantılı. Gittiğin yerden döndüğünde biraz değişmiş olacaksın.",
+        "Gezmeye en çok ileriki yıllarda doyacaksın {{isim}}. Yakın zamanda ise hiç planlamadığın, aniden çıkan kısa bir yolculuk görüyorum; bavulunu hazır tut."
+      ],
+      "metinler_en": [
+        "You will have some journeys to places far from where you are in the coming years, {{isim}}; however, they will be brief.",
+        "Your farthest journey in the future will be 3-5 flight hours, {{isim}}. I don’t expect longer or more distant travels.",
+        "You will have some very long-distance and lengthy journeys in the future, {{isim}}. One foot of yours will be in distant lands.",
+        "Your most important journey will be across the sea, {{isim}}, and it will be connected to a person. You will return from that place a little changed.",
+        "You will satisfy your thirst for travel most in your later years, {{isim}}. In the near future, though, I see a short, sudden trip you never planned; keep your suitcase ready."
+      ]
     },
-    {
-      "id": 7,
-      "metin": "Sen aşk insanısın {{isim}}, kaderin de aşk üzerine örülü. Gelecekte seni buram buram aşk bekliyor.\n\nGelecekte aşkın hayatındaki yeri biraz azalacak ve yaşamına mantığın hükmedecek senin {{isim}}.\n\nAşk mı, sevgi mi, alışkanlık mı, tutku mu bilemem, fakat gelecekte seni hiç yalnız görmüyorum {{isim}}.",
-      "metin_en": "You are a person of love, {{isim}}, and your destiny is woven with love. In the future, overwhelming love awaits you.\n\nIn the future, love will take a slightly smaller place in your life, and logic will rule your life, {{isim}}.\n\nLove, affection, habit, or passion; I don’t know which, but I never see you alone in the future, {{isim}}."
+    "7": {
+      "metinler": [
+        "Sen aşk insanısın {{isim}}, kaderin de aşk üzerine örülü. Gelecekte seni buram buram aşk bekliyor.",
+        "Gelecekte aşkın hayatındaki yeri biraz azalacak ve yaşamına mantığın hükmedecek senin {{isim}}.",
+        "Aşk mı, sevgi mi, alışkanlık mı, tutku mu bilemem, fakat gelecekte seni hiç yalnız görmüyorum {{isim}}.",
+        "Geleceğinde aşk var {{isim}}, hem de hiç beklemediğin bir yerden, hiç aklında olmayan biriyle. Seni şaşırtacak ama yüzünü güldürecek bir karşılaşma bu.",
+        "Seni bekleyen aşk, eski yaralarını saran türden bir aşk {{isim}}. Geçmişte 'olmadı' dediğin şeyin aslında bu büyük aşka yer açmak için olduğunu anlayacaksın."
+      ],
+      "metinler_en": [
+        "You are a person of love, {{isim}}, and your destiny is woven with love. In the future, overwhelming love awaits you.",
+        "In the future, love will take a slightly smaller place in your life, and logic will rule your life, {{isim}}.",
+        "Love, affection, habit, or passion; I don’t know which, but I never see you alone in the future, {{isim}}.",
+        "There is love in your future, {{isim}}, coming from a place you never expected, with someone you never had in mind. It's an encounter that will surprise you but make you smile.",
+        "The love that awaits you is the kind that heals your old wounds, {{isim}}. You will understand that what you once called a failure was actually making room for this great love."
+      ]
     },
-    {
-      "id": 8,
-      "metin": "Gelecekte \"mutluluk\" kelimesini yeniden anlamlandırmana vesile olacak çok güzel şeyler yaşayacaksın sen {{isim}}.\n\nGelecekte bugünden çok daha mutlu olacaksın {{isim}}. Fakat bu mutluluklar, şimdiye kadar yaşadıklarından biraz daha farklı olabilir. Elma ile armutu kıyaslamaman gerekecek.\n\nGelecekte seni mutsuz edebilecek pek bir olay görmüyorum ben {{isim}}. Yüzün hep gülecek, buna emin ol.",
-      "metin_en": "In the future, you will experience wonderful things that will lead you to redefine the word \"happiness,\" {{isim}}.\n\nIn the future, you will be much happier than you are today, {{isim}}. However, this happiness might be a bit different from what you've experienced before. You will need to avoid comparing apples to oranges.\n\nI don’t see many events that could make you unhappy in the future, {{isim}}. Your face will always smile, rest assured."
+    "8": {
+      "metinler": [
+        "Gelecekte \"mutluluk\" kelimesini yeniden anlamlandırmana vesile olacak çok güzel şeyler yaşayacaksın sen {{isim}}.",
+        "Gelecekte bugünden çok daha mutlu olacaksın {{isim}}. Fakat bu mutluluklar, şimdiye kadar yaşadıklarından biraz daha farklı olabilir. Elma ile armutu kıyaslamaman gerekecek.",
+        "Gelecekte seni mutsuz edebilecek pek bir olay görmüyorum ben {{isim}}. Yüzün hep gülecek, buna emin ol.",
+        "Mutluluk aslında sandığından çok daha yakın {{isim}}. Büyük bir olayı beklerken, küçük bir anın seni bambaşka mutlu edeceğini göreceksin. O anı kaçırma.",
+        "Seni mutluluğa götüren yol, bir yükü bıraktığın gün açılacak {{isim}}. Uzun süredir sırtında taşıdığın bir düşünceyi indirince, nefesin bile rahatlayacak. O günün çok uzak olmadığını seziyorum."
+      ],
+      "metinler_en": [
+        "In the future, you will experience wonderful things that will lead you to redefine the word \"happiness,\" {{isim}}.",
+        "In the future, you will be much happier than you are today, {{isim}}. However, this happiness might be a bit different from what you've experienced before. You will need to avoid comparing apples to oranges.",
+        "I don’t see many events that could make you unhappy in the future, {{isim}}. Your face will always smile, rest assured.",
+        "Happiness is actually much closer than you think, {{isim}}. While waiting for a big event, you'll find that a small moment makes you happy in a whole new way. Don't miss it.",
+        "The road to your happiness will open the day you set down a burden, {{isim}}. Once you put down a thought you've long carried on your back, even your breathing will ease. I sense that day is not far off."
+      ]
     },
-    {
-      "id": 9,
-      "metin": "Düşündüğün kişi her kimse, seni neredeyse her gün düşünüyor {{isim}}. Değişik bir bağ var aranızda.\n\nDüşündüğün kişinin anladığım kadarıyla farklı gündemleri var {{isim}}. Sen çok nadir aklına geliyorsun.\n\nDüşündüğün kişi seni hiç unutmamış ve unutacak gibi de gözükmüyor {{isim}}. En önemli zamanlarında hep aklına geliyorsun.",
-      "metin_en": "Whoever you are thinking of, they think about you almost every day, {{isim}}. There is a unique connection between you two.\n\nThe person you’re thinking of seems to have different things on their mind, {{isim}}. You cross their mind only rarely.\n\nThe person you’re thinking of has never forgotten you and doesn't seem likely to, {{isim}}. You always come to mind during their most significant moments."
+    "9": {
+      "metinler": [
+        "Düşündüğün kişi her kimse, seni neredeyse her gün düşünüyor {{isim}}. Değişik bir bağ var aranızda.",
+        "Düşündüğün kişinin anladığım kadarıyla farklı gündemleri var {{isim}}. Sen çok nadir aklına geliyorsun.",
+        "Düşündüğün kişi seni hiç unutmamış ve unutacak gibi de gözükmüyor {{isim}}. En önemli zamanlarında hep aklına geliyorsun.",
+        "O kişi seni düşünüyor {{isim}}, hem de sandığından sık. Fakat gururu mu, çekingenliği mi bilmem, bir türlü adım atamıyor. Belki de ilk adımı senin atman gerekiyor.",
+        "Bir şarkı, bir koku ya da bir yer o kişiye seni hatırlatıyor {{isim}}. Yakında ondan hiç beklemediğin bir işaret gelecek; o işareti gördüğünde bu cevabı hatırla."
+      ],
+      "metinler_en": [
+        "Whoever you are thinking of, they think about you almost every day, {{isim}}. There is a unique connection between you two.",
+        "The person you’re thinking of seems to have different things on their mind, {{isim}}. You cross their mind only rarely.",
+        "The person you’re thinking of has never forgotten you and doesn't seem likely to, {{isim}}. You always come to mind during their most significant moments.",
+        "That person thinks of you, {{isim}}, more often than you'd imagine. But whether it's pride or shyness, I can't tell, they just can't take the step. Perhaps it's you who needs to make the first move.",
+        "A song, a scent, or a place reminds that person of you, {{isim}}. Soon a sign you never expected will come from them; when you see it, remember this answer."
+      ]
     },
-    {
-      "id": 10,
-      "metin": "Eski sevgilinle çok yakın bir zamanda, hiç tahmin etmediğin bir yerde ve beklemediğin bir anda karşılaşacaksınız {{isim}}.\n\nEski sevgilinle önümüzdeki 2-3 yıl içinde sizin için eskiden önemi olan bir yer ya da noktada karşılaşacak, bazı şeyler konuşacaksınız {{isim}}.\n\nEski sevgilinle yakın vadede bir karşılaşmanız olmayacak {{isim}}. Belki uzak gelecekte...\n\nEski sevgilinle sizin defteriniz henüz kapanmamış {{isim}}. Yaşayacağınız daha çok fazla şey var.\n\nSenin eski sevgilinle yolların tekrar kesişecek {{isim}}. Onunla geçireceğin mutlu zamanlar olduğunu görmekteyim; ilginç...",
-      "metin_en": "You will run into your ex very soon, in a completely unexpected place and at a moment you least anticipate, {{isim}}.\n\nWithin the next 2-3 years, you will run into your ex at a place or spot that used to be significant for both of you, and you will have some conversations, {{isim}}.\n\nYou won’t run into your ex in the near future, {{isim}}. Maybe in the distant future...\n\nYour chapter with your ex isn’t closed yet, {{isim}}. There are still many things left for you to experience together.\n\nYour paths will cross with your ex again, {{isim}}. I see happy times ahead with them; interesting..."
+    "10": {
+      "metinler": [
+        "Eski sevgilinle çok yakın bir zamanda, hiç tahmin etmediğin bir yerde ve beklemediğin bir anda karşılaşacaksınız {{isim}}.",
+        "Eski sevgilinle önümüzdeki 2-3 yıl içinde sizin için eskiden önemi olan bir yer ya da noktada karşılaşacak, bazı şeyler konuşacaksınız {{isim}}.",
+        "Eski sevgilinle yakın vadede bir karşılaşmanız olmayacak {{isim}}. Belki uzak gelecekte...",
+        "Eski sevgilinle sizin defteriniz henüz kapanmamış {{isim}}. Yaşayacağınız daha çok fazla şey var.",
+        "Senin eski sevgilinle yolların tekrar kesişecek {{isim}}. Onunla geçireceğin mutlu zamanlar olduğunu görmekteyim; ilginç..."
+      ],
+      "metinler_en": [
+        "You will run into your ex very soon, in a completely unexpected place and at a moment you least anticipate, {{isim}}.",
+        "Within the next 2-3 years, you will run into your ex at a place or spot that used to be significant for both of you, and you will have some conversations, {{isim}}.",
+        "You won’t run into your ex in the near future, {{isim}}. Maybe in the distant future...",
+        "Your chapter with your ex isn’t closed yet, {{isim}}. There are still many things left for you to experience together.",
+        "Your paths will cross with your ex again, {{isim}}. I see happy times ahead with them; interesting..."
+      ]
     },
-    {
-      "id": 11,
-      "metin": "Geleceğinde hiçbir ciddi rahatsızlık yaşamayacaksın {{isim}}. Dikkat etmen gereken ufak tefek şeyler olacak. Onları da kolaylıklar gerçekleştireceksin.\n\nGeleceğinde, pek çok kişinin yaşadığı bazı önemsiz sağlık sorunları yaşayabilirsin {{isim}}. Bunlar önceden önlem alabileceğin şeyler.\n\nGelecekte birkaç rahatsızlığın olabilir {{isim}}. Fakat bunlar sık karşılaşılan kronik rahatsızlıklar. İlaç kullanman, iyi hissetmene yetecek.",
-      "metin_en": "You won't experience any serious health issues in your future, {{isim}}. There will be a few minor things to watch out for, but you’ll handle them with ease.\n\nIn your future, you might encounter some minor health issues that many people experience, {{isim}}. These are things you can prevent in advance.\n\nIn the future, you might have a few health issues, {{isim}}. However, these are common chronic conditions. Taking medication will be enough to make you feel good."
+    "11": {
+      "metinler": [
+        "Geleceğinde hiçbir ciddi rahatsızlık yaşamayacaksın {{isim}}. Dikkat etmen gereken ufak tefek şeyler olacak. Onları da kolaylıklar gerçekleştireceksin.",
+        "Geleceğinde, pek çok kişinin yaşadığı bazı önemsiz sağlık sorunları yaşayabilirsin {{isim}}. Bunlar önceden önlem alabileceğin şeyler.",
+        "Gelecekte birkaç rahatsızlığın olabilir {{isim}}. Fakat bunlar sık karşılaşılan kronik rahatsızlıklar. İlaç kullanman, iyi hissetmene yetecek.",
+        "Senin sağlığın büyük ölçüde huzuruna bağlı {{isim}}. Uykunu ve stresini dengelediğin dönemlerde turp gibi olacaksın. Bedenin sana sürekli küçük işaretler veriyor, onları dinle.",
+        "Sağlam bir bünyen var {{isim}}. Ara sıra bir şeyler atlatacak olsan da, toparlanma hızın çoğu insandan yüksek. İleri yaşlarda bile dinçliğinle çevrendekilere örnek olacaksın."
+      ],
+      "metinler_en": [
+        "You won't experience any serious health issues in your future, {{isim}}. There will be a few minor things to watch out for, but you’ll handle them with ease.",
+        "In your future, you might encounter some minor health issues that many people experience, {{isim}}. These are things you can prevent in advance.",
+        "In the future, you might have a few health issues, {{isim}}. However, these are common chronic conditions. Taking medication will be enough to make you feel good.",
+        "Your health is largely tied to your peace of mind, {{isim}}. In the periods when you balance your sleep and stress, you'll be as fit as a fiddle. Your body constantly gives you small signals; listen to them.",
+        "You have a strong constitution, {{isim}}. Even if you go through a few things now and then, your recovery is faster than most people's. Even in old age, your vitality will be an example to those around you."
+      ]
     },
-    {
-      "id": 12,
-      "metin": "Ünlü olmaktan kastın kıtalar ötesi adını duyurmaksa, bu senin için pek mümkün olmayacak gibi gözüküyor {{isim}}.\n\nEnteresandır, senin bir hobinle ilgili yaptıkların sayesinde gelecekte adını çokça duyuracağını görüyorum {{isim}}.\n\nSeni ünlü biri olarak hayal edemiyorum {{isim}}. Sevdiklerinin seni bilmesi ve tanıması sana ömür boyu yetmeli bence.",
-      "metin_en": "If by fame you mean making your name known across continents, that doesn’t seem very likely for you, {{isim}}.\n\nInterestingly, I see that you will make your name known quite a bit in the future thanks to something you do related to a hobby, {{isim}}.\n\nI can’t imagine you as a famous person, {{isim}}. I think having your loved ones know and appreciate you should be enough for a lifetime."
+    "12": {
+      "metinler": [
+        "Ünlü olmaktan kastın kıtalar ötesi adını duyurmaksa, bu senin için pek mümkün olmayacak gibi gözüküyor {{isim}}.",
+        "Enteresandır, senin bir hobinle ilgili yaptıkların sayesinde gelecekte adını çokça duyuracağını görüyorum {{isim}}.",
+        "Seni ünlü biri olarak hayal edemiyorum {{isim}}. Sevdiklerinin seni bilmesi ve tanıması sana ömür boyu yetmeli bence.",
+        "Dünya çapında değil ama kendi çevrende, kendi alanında adın saygıyla anılacak {{isim}}. İnsanlar bir konuda 'bir de şuna soralım' dediğinde akıllarına sen geleceksin. Bu da bir tür şöhret.",
+        "İlginç bir şey söyleyeyim {{isim}}: şöhret belki de hiç peşinde koşmadığın bir anda, beklenmedik bir vesileyle gelecek. Önemli olan geldiğinde başının dönmemesi; sen bunu başarırsın."
+      ],
+      "metinler_en": [
+        "If by fame you mean making your name known across continents, that doesn’t seem very likely for you, {{isim}}.",
+        "Interestingly, I see that you will make your name known quite a bit in the future thanks to something you do related to a hobby, {{isim}}.",
+        "I can’t imagine you as a famous person, {{isim}}. I think having your loved ones know and appreciate you should be enough for a lifetime.",
+        "Not worldwide, but within your own circle and field, your name will be spoken with respect, {{isim}}. When people say 'let's ask this one too' about a subject, you'll be who comes to mind. That, too, is a kind of fame.",
+        "Let me tell you something interesting, {{isim}}: fame may come at a moment when you least chase it, through an unexpected occasion. What matters is not letting it go to your head when it arrives; you'll manage that."
+      ]
     },
-    {
-      "id": 13,
-      "metin": "Geleceğinde, seni üzecek ya da kalbini yoracak, senin de dayanamayacağın büyük bir sorun görmüyorum {{isim}}. Huruz yaşamında her zaman hakim olacak.\n\nGelecekte huzuru şimdikinden daha çok bulacaksın {{isim}}. Bu artış, yaşadığın yerin ya da koşulların iyileşmesi sebebiyle olabilir.\n\nHuzurdan kastın durağanlıksa, bunu elde edebileceğini pek söyleyemem. Seni koşuşturmacalı ve hareketli bir hayat bekliyor {{isim}}.",
-      "metin_en": "I don’t see any major issues in your future that would upset you or weigh heavily on your heart, {{isim}}. Peace will always prevail in your life.\n\nIn the future, you will find more peace than you have now, {{isim}}. This increase might be due to an improvement in your living situation or circumstances.\n\nIf by peace you mean calmness, I can’t really say you’ll achieve that. A busy and dynamic life awaits you, {{isim}}."
+    "13": {
+      "metinler": [
+        "Geleceğinde, seni üzecek ya da kalbini yoracak, senin de dayanamayacağın büyük bir sorun görmüyorum {{isim}}. Huruz yaşamında her zaman hakim olacak.",
+        "Gelecekte huzuru şimdikinden daha çok bulacaksın {{isim}}. Bu artış, yaşadığın yerin ya da koşulların iyileşmesi sebebiyle olabilir.",
+        "Huzurdan kastın durağanlıksa, bunu elde edebileceğini pek söyleyemem. Seni koşuşturmacalı ve hareketli bir hayat bekliyor {{isim}}.",
+        "Önünde bir süre dalgalı sular var gibi {{isim}}, ama o dalgaları geçtikten sonra seni uzun ve dingin bir dönem bekliyor. En huzurlu yıllarını ortalarda değil, ileride yaşayacaksın.",
+        "Huzurun büyük ölçüde senin elinde {{isim}}. Olaylara nasıl baktığını değiştirdiğin gün, dışarısı değişmese bile içindeki fırtına dinecek. Sende o dinginliği kurma gücü fazlasıyla var."
+      ],
+      "metinler_en": [
+        "I don’t see any major issues in your future that would upset you or weigh heavily on your heart, {{isim}}. Peace will always prevail in your life.",
+        "In the future, you will find more peace than you have now, {{isim}}. This increase might be due to an improvement in your living situation or circumstances.",
+        "If by peace you mean calmness, I can’t really say you’ll achieve that. A busy and dynamic life awaits you, {{isim}}.",
+        "There seem to be some choppy waters ahead for a while, {{isim}}, but once you pass those waves, a long and serene period awaits you. You will live your most peaceful years not in the middle, but later on.",
+        "Your peace is largely in your own hands, {{isim}}. The day you change how you look at things, even if nothing outside changes, the storm within you will calm. You have more than enough power to build that calm."
+      ]
     },
-    {
-      "id": 14,
-      "metin": "Ben senin 90 yaşın üzerine çıkacağını ve bunu da dinç ve hareketli bir şekilde yapacağını öngörüyorum {{isim}}.\n\nTahminimi sorarsan senin yaşam süren {{sayi,92,103}} yaşa kadar {{isim}}.\n\n90'larını çok rahat göreceğini düşünürsek, bence böyle bir ömür hiç de kısa sayılmaz {{isim}}.",
-      "metin_en": "I foresee that you will live beyond the age of 90, and you will do so in a lively and active way, {{isim}}.\n\nIf you ask for my prediction, your lifespan will be around {{sayi,92,103}} years, {{isim}}.\n\nConsidering that you will comfortably reach your 90s, I think such a lifespan is by no means short, {{isim}}."
+    "14": {
+      "metinler": [
+        "Ben senin 90 yaşın üzerine çıkacağını ve bunu da dinç ve hareketli bir şekilde yapacağını öngörüyorum {{isim}}.",
+        "Tahminimi sorarsan senin yaşam süren {{sayi,92,103}} yaşa kadar {{isim}}.",
+        "90'larını çok rahat göreceğini düşünürsek, bence böyle bir ömür hiç de kısa sayılmaz {{isim}}.",
+        "Senin soyunda uzun ömür var {{isim}}, bunu kanında taşıyorsun. Üstelik yıllara yalnız sayı olarak değil, kaliteyle de ulaşacaksın; yani uzun değil, dolu dolu bir ömür.",
+        "Kaç yıl yaşayacağından çok, o yılları neyle dolduracağın önemli {{isim}}. Yine de merak ediyorsan söyleyeyim: işaretler epey uzun bir ömre işaret ediyor. Torunlarını bile dizinde göreceksin."
+      ],
+      "metinler_en": [
+        "I foresee that you will live beyond the age of 90, and you will do so in a lively and active way, {{isim}}.",
+        "If you ask for my prediction, your lifespan will be around {{sayi,92,103}} years, {{isim}}.",
+        "Considering that you will comfortably reach your 90s, I think such a lifespan is by no means short, {{isim}}.",
+        "There is longevity in your bloodline, {{isim}}; you carry it in your veins. What's more, you'll reach those years not just in number but in quality; so it won't just be a long life, but a full one.",
+        "It matters less how many years you'll live than what you'll fill them with, {{isim}}. Still, since you're curious: the signs point to quite a long life. You'll even hold your grandchildren on your knee."
+      ]
     },
-    {
-      "id": 15,
-      "metin": "Senin gelecekte büyük ve 3 katlı bir evin olacak {{isim}}.\n\nGelecekte aşırı büyük olmayan fakat müstakil, bahçeli ve havuzlu bir evin olacak Değerli {{isim}}.\n\nGelecekte şu an tahmin edebileceğinden çok daha büyük bir villada oturacaksın {{isim}}.",
-      "metin_en": "I foresee that you will live beyond the age of 90, and you will do so in a lively and active way, {{isim}}.\n\nIn the future, you will have a not-too-big but detached house with a garden and a pool, dear {{isim}}.\n\nIn the future, you will live in a villa much larger than you can currently imagine, {{isim}}."
+    "15": {
+      "metinler": [
+        "Senin gelecekte büyük ve 3 katlı bir evin olacak {{isim}}.",
+        "Gelecekte aşırı büyük olmayan fakat müstakil, bahçeli ve havuzlu bir evin olacak Değerli {{isim}}.",
+        "Gelecekte şu an tahmin edebileceğinden çok daha büyük bir villada oturacaksın {{isim}}.",
+        "Senin evinde asıl büyüleyici olan büyüklüğü değil, manzarası olacak {{isim}}. Penceresinden baktığında içinin açıldığı bir yerde oturacaksın. Mekânın seni bulması an meselesi.",
+        "Hayalini kurduğun o eve bir anda değil, adım adım kavuşacaksın {{isim}}. Biraz sabır, biraz emek isteyecek; ama kapısından ilk girdiğin gün tüm bekleyişin değdiğini anlayacaksın."
+      ],
+      "metinler_en": [
+        "You will have a big, three-story house in the future, {{isim}}.",
+        "In the future, you will have a not-too-big but detached house with a garden and a pool, dear {{isim}}.",
+        "In the future, you will live in a villa much larger than you can currently imagine, {{isim}}.",
+        "What will be truly enchanting about your house won't be its size but its view, {{isim}}. You'll live somewhere that lifts your spirits the moment you look out the window. It's only a matter of time before that place finds you.",
+        "You will reach that dream house not all at once but step by step, {{isim}}. It will take a little patience and a little effort; but the first day you walk through its door, you'll realize all the waiting was worth it."
+      ]
     },
-    {
-      "id": 16,
-      "metin": "Geleceğinde finansal birtakım tehlikeler görüyorum. Büyük risklere girmemeli, harcamalarına her zaman dikkat etmelisin {{isim}}.\n\nGelecekte samimiyet kurduğun insanlara dikkat etmelisin {{isim}}. Aşırı temiz kalpli olduğun için, dost kazığı senin adına her zaman bir tehdit olacak.\n\nAilenin ve akrabalarının senden beklentilerinin yüksek oluşu, her zaman sağlığını negatif etkileyen bir tehdit olarak kalacak {{isim}}. Kendini çok fazla yormamalısın.",
-      "metin_en": "I see some financial dangers in your future. You should avoid taking big risks and always be mindful of your expenses, {{isim}}.\n\nIn the future, you should be cautious with the people you get close to, {{isim}}. Because you have such a pure heart, betrayal from those you trust will always be a potential threat.\n\nThe high expectations of your family and relatives will always remain a threat to your well-being, {{isim}}. You shouldn’t push yourself too hard."
+    "16": {
+      "metinler": [
+        "Geleceğinde finansal birtakım tehlikeler görüyorum. Büyük risklere girmemeli, harcamalarına her zaman dikkat etmelisin {{isim}}.",
+        "Gelecekte samimiyet kurduğun insanlara dikkat etmelisin {{isim}}. Aşırı temiz kalpli olduğun için, dost kazığı senin adına her zaman bir tehdit olacak.",
+        "Ailenin ve akrabalarının senden beklentilerinin yüksek oluşu, her zaman sağlığını negatif etkileyen bir tehdit olarak kalacak {{isim}}. Kendini çok fazla yormamalısın.",
+        "Senin için asıl tehlike dışarıda değil, aceleci bir kararın içinde saklı {{isim}}. Büyük bir kararın eşiğindeyken bir gece bekle, sabah fikrin netleşir. Acele etmezsen tehlike kendiliğinden dağılır.",
+        "Yollarda biraz temkinli ol {{isim}}, özellikle yorgunken direksiyona geçme. Bunun dışında seni koruyan güçlü bir el var; büyük bir tehlikeyi sana yaklaştırmadan savuşturuyor."
+      ],
+      "metinler_en": [
+        "I see some financial dangers in your future. You should avoid taking big risks and always be mindful of your expenses, {{isim}}.",
+        "In the future, you should be cautious with the people you get close to, {{isim}}. Because you have such a pure heart, betrayal from those you trust will always be a potential threat.",
+        "The high expectations of your family and relatives will always remain a threat to your well-being, {{isim}}. You shouldn’t push yourself too hard.",
+        "The real danger for you isn't outside; it hides in a hasty decision, {{isim}}. When you're on the verge of a big choice, wait a night, and by morning your mind will clear. If you don't rush, the danger disperses on its own.",
+        "Be a little cautious on the roads, {{isim}}, especially don't drive when you're tired. Apart from that, there is a strong hand protecting you; it wards off any great danger before it can get close to you."
+      ]
     },
-    {
-      "id": 17,
-      "metin": "Sevgilin seni çok seviyor {{isim}}, fakat bu aralar bunu çok fazla gösteremiyor olabilir. Kafasının biraz meşgul olduğunu ve bazı dertleri olduğunu görüyorum.\n\nSevgilin seni hem çok seviyor, hem de onun için çok önemlisin {{isim}}. Dikkat et, çok fazla üzerine düşmesi, sana karşı bazı hatalar yapmasına da neden olabilir.\n\nSevgilinin seninle ilgili hisleri bana biraz karmaşık geldi {{isim}}. Seni sevip sevmediğini zamanla anlayacaksın.\n\nBence senin sevgiline dair hissettiklerin, onun sana karşı hissettiklerinden daha yoğun {{isim}}. Fakat zaman bu durumu değiştirebilir.",
-      "metin_en": "I see some financial dangers in your future. You should avoid taking big risks and always be mindful of your expenses, {{isim}}.\n\nYour lover loves you very much and you are very important to them, {{isim}}. Be careful, as being overly attentive may also cause them to make some mistakes towards you.\n\nYour lover's feelings for you seem a bit complicated to me, {{isim}}. You will understand over time whether they love you or not.\n\nI think your feelings for your lover are stronger than their feelings for you, {{isim}}. However, time may change this situation."
+    "17": {
+      "metinler": [
+        "Sevgilin seni çok seviyor {{isim}}, fakat bu aralar bunu çok fazla gösteremiyor olabilir. Kafasının biraz meşgul olduğunu ve bazı dertleri olduğunu görüyorum.",
+        "Sevgilin seni hem çok seviyor, hem de onun için çok önemlisin {{isim}}. Dikkat et, çok fazla üzerine düşmesi, sana karşı bazı hatalar yapmasına da neden olabilir.",
+        "Sevgilinin seninle ilgili hisleri bana biraz karmaşık geldi {{isim}}. Seni sevip sevmediğini zamanla anlayacaksın.",
+        "Bence senin sevgiline dair hissettiklerin, onun sana karşı hissettiklerinden daha yoğun {{isim}}. Fakat zaman bu durumu değiştirebilir.",
+        "Sevgilin seni kelimelerle değil, davranışlarıyla seviyor {{isim}}. 'Seni seviyorum' demekte zorlansa da, küçük jestlerine dikkat et; asıl cevap orada saklı. Sevgisinden şüphen olmasın."
+      ],
+      "metinler_en": [
+        "Your sweetheart loves you very much {{isim}}, but lately they may not be able to show it much. I can see that their mind is a bit preoccupied and that they have some worries on their plate.",
+        "Your lover loves you very much and you are very important to them, {{isim}}. Be careful, as being overly attentive may also cause them to make some mistakes towards you.",
+        "Your lover's feelings for you seem a bit complicated to me, {{isim}}. You will understand over time whether they love you or not.",
+        "I think your feelings for your lover are stronger than their feelings for you, {{isim}}. However, time may change this situation.",
+        "Your lover loves you through actions rather than words, {{isim}}. Even if they struggle to say 'I love you,' pay attention to their small gestures; the real answer is hidden there. Have no doubt about their love."
+      ]
     },
-    {
-      "id": 18,
-      "metin": "Sevgilinle yakın zamanda bir evlilik gözükmüyor {{isim}}. Bunun gerçekleşmesi için hem zaman lazım, hem de bazı koşulların değişmesi.\n\nSevgilinle bir evlilik gözlemliyorum Değerli {{isim}}. Fakat bunun için şartların biraz daha olgunlaşması gerekiyor.\n\nSevgilinle gelecekte bir evlilik görmüyorum {{isim}}. Bu konuda sana yalan söyleyemem.",
-      "metin_en": "There doesn’t seem to be a marriage with your lover in the near future, {{isim}}. For this to happen, both time is needed and some conditions must change.\n\nI observe a marriage with your lover, Dear {{isim}}. However, the conditions need to mature a bit more for this to happen.\n\nI don’t see a marriage with your lover in the future, {{isim}}. I can't lie to you about this."
+    "18": {
+      "metinler": [
+        "Sevgilinle yakın zamanda bir evlilik gözükmüyor {{isim}}. Bunun gerçekleşmesi için hem zaman lazım, hem de bazı koşulların değişmesi.",
+        "Sevgilinle bir evlilik gözlemliyorum Değerli {{isim}}. Fakat bunun için şartların biraz daha olgunlaşması gerekiyor.",
+        "Sevgilinle gelecekte bir evlilik görmüyorum {{isim}}. Bu konuda sana yalan söyleyemem.",
+        "Sevgilinle bir evlilik görüyorum {{isim}}, fakat öncesinde sizi sınayan bir dönemden geçeceksiniz. O sınavı birlikte verdiğinizde, aranızdaki bağ evliliğe hazır hale gelecek.",
+        "Bu evliliğin kaderi, uzun süredir ertelediğiniz bir konuşmada saklı {{isim}}. O konuşmayı dürüstçe yaptığınız gün, önünüzdeki yol ya çok netleşecek ya da bambaşka bir renge bürünecek. Korkma, konuş."
+      ],
+      "metinler_en": [
+        "There doesn’t seem to be a marriage with your lover in the near future, {{isim}}. For this to happen, both time is needed and some conditions must change.",
+        "I observe a marriage with your lover, Dear {{isim}}. However, the conditions need to mature a bit more for this to happen.",
+        "I don’t see a marriage with your lover in the future, {{isim}}. I can't lie to you about this.",
+        "I see a marriage with your lover, {{isim}}, but beforehand you'll go through a period that tests you both. Once you pass that test together, the bond between you will be ready for marriage.",
+        "The fate of this marriage is hidden in a conversation you've long postponed, {{isim}}. The day you have that talk honestly, the road ahead will either become very clear or take on a whole new color. Don't be afraid; speak."
+      ]
     },
-    {
-      "id": 19,
-      "metin": "Sevgilin seni kesinlikle aldatmaz {{isim}}. Bu konuda kafanda bir soru işareti olması bile saçma.\n\nSevgilinin birtakım zaafları var {{isim}}. Aranızın açık olduğu ya da pek görüşmediğiniz bir döneme denk gelirse, seni aldatabilir.\n\nSevgilinin seni aldatacağını pek sanmıyorum. Bu ihtimal bana göre senin için daha fazla {{isim}}.",
-      "metin_en": "Your lover would never cheat on you, {{isim}}. Even having a doubt about this is ridiculous.\n\nYour lover has some weaknesses, {{isim}}. If it coincides with a period when you are distant or not seeing each other much, they might cheat on you.\n\nI don't really think your lover would cheat on you. In my opinion, this possibility is more of a concern for you, {{isim}}."
+    "19": {
+      "metinler": [
+        "Sevgilin seni kesinlikle aldatmaz {{isim}}. Bu konuda kafanda bir soru işareti olması bile saçma.",
+        "Sevgilinin birtakım zaafları var {{isim}}. Aranızın açık olduğu ya da pek görüşmediğiniz bir döneme denk gelirse, seni aldatabilir.",
+        "Sevgilinin seni aldatacağını pek sanmıyorum. Bu ihtimal bana göre senin için daha fazla {{isim}}.",
+        "Sevgilin sadık biri {{isim}}, aldatmak onun doğasında yok. Yalnız, kendini değersiz hissettiği anlarda içine kapanır. Ona değer verdiğini gösterdiğin sürece gözü başka kimseyi görmez.",
+        "Bu korkunun kaynağı sevgilin değil, senin geçmişte yaşadıkların {{isim}}. Ona haksızlık ediyorsun gibi geliyor bana. Güvenini ona verdiğin gün, bu soru aklından tamamen silinecek."
+      ],
+      "metinler_en": [
+        "Your lover would never cheat on you, {{isim}}. Even having a doubt about this is ridiculous.",
+        "Your lover has some weaknesses, {{isim}}. If it coincides with a period when you are distant or not seeing each other much, they might cheat on you.",
+        "I don't really think your lover would cheat on you. In my opinion, this possibility is more of a concern for you, {{isim}}.",
+        "Your lover is a loyal person, {{isim}}; cheating isn't in their nature. Still, in moments they feel undervalued, they withdraw into themselves. As long as you show them they matter, their eyes won't see anyone else.",
+        "The source of this fear isn't your lover but what you experienced in the past, {{isim}}. It feels to me like you're being unfair to them. The day you give them your trust, this question will vanish from your mind completely."
+      ]
     },
-    {
-      "id": 20,
-      "metin": "Evet, sevgilinin kalbinde geçmiş yıllardan kalma birisi var. Bu konuda işin biraz zor gözüküyor {{isim}}.\n\nSevgilinin kalbinde şu anda senden başka kimse yok {{isim}}. Sevecen biri, fakat ilişki anlamında kesinlikle tek eşli.\n\nSevgilinin kalbinde biri olduğunu düşünmüyorum {{isim}}. Fakat kötü ayrılık yaşadığı ve izlerinin halen geçmediği biri var.",
-      "metin_en": "Yes, there is someone from past years in your lover's heart. This seems to be a bit difficult for you, {{isim}}.\n\nThere is no one else in your lover's heart right now besides you, {{isim}}. They are affectionate, but definitely monogamous in terms of relationships.\n\nI don't think there is someone in your lover's heart, {{isim}}. However, there is someone they had a bad breakup with, and the traces of it haven't completely faded yet."
+    "20": {
+      "metinler": [
+        "Evet, sevgilinin kalbinde geçmiş yıllardan kalma birisi var. Bu konuda işin biraz zor gözüküyor {{isim}}.",
+        "Sevgilinin kalbinde şu anda senden başka kimse yok {{isim}}. Sevecen biri, fakat ilişki anlamında kesinlikle tek eşli.",
+        "Sevgilinin kalbinde biri olduğunu düşünmüyorum {{isim}}. Fakat kötü ayrılık yaşadığı ve izlerinin halen geçmediği biri var.",
+        "Sevgilinin kalbinde senden başka kimse yok {{isim}}. Yalnız eski bir arkadaşlığını yanlış okuyor olabilirsin; o yakınlık aşk değil, alışkanlık. Boş yere kıskanıp kendini yıpratma.",
+        "Sevgilinin kalbinde bir başkası değil, kendi dertleri var {{isim}}. Dalgın görünmesinin sebebi bu, bir rakip değil. Ona biraz alan açtığında, bütün dikkatinin yine sana döndüğünü göreceksin."
+      ],
+      "metinler_en": [
+        "Yes, there is someone from past years in your lover's heart. This seems to be a bit difficult for you, {{isim}}.",
+        "There is no one else in your lover's heart right now besides you, {{isim}}. They are affectionate, but definitely monogamous in terms of relationships.",
+        "I don't think there is someone in your lover's heart, {{isim}}. However, there is someone they had a bad breakup with, and the traces of it haven't completely faded yet.",
+        "There is no one in your lover's heart but you, {{isim}}. You may just be misreading an old friendship of theirs; that closeness is habit, not love. Don't wear yourself out with needless jealousy.",
+        "What fills your lover's heart isn't someone else but their own worries, {{isim}}. That's why they seem distracted, not because of a rival. When you give them a little space, you'll see all their attention return to you."
+      ]
     },
-    {
-      "id": 21,
-      "metin": "Eşin seni kesinlikle çok seviyor. Bu konuda hiçbir şüphen olmasın {{isim}}. Bunu sorgulaman çok yersiz.\n\nEşinin de sana dair zaman zaman böyle soruları oluyor. Siz birbirinizi çok sevdiğinize neden bir türlü ikna olamadınız {{isim}}? Ki bence çok seviyorsunuz...\n\nEşin seni seviyor ama zaman zaman o da senin sevgini sorguluyor {{isim}}. Birbirinize hoyrat davrandığınız dönemler olduğunu görüyorum. Yapmayın...",
-      "metin_en": "Your spouse definitely loves you very much. Have no doubt about this, {{isim}}. Questioning it is completely unnecessary.\n\nYour spouse also has such questions about you from time to time. Why can’t you both fully convince yourselves that you love each other, {{isim}}? In my opinion, you really do love each other...\n\nYour spouse loves you, but from time to time, they also question your love, {{isim}}. I see that there are periods when you treat each other harshly. Don't do that..."
+    "21": {
+      "metinler": [
+        "Eşin seni kesinlikle çok seviyor. Bu konuda hiçbir şüphen olmasın {{isim}}. Bunu sorgulaman çok yersiz.",
+        "Eşinin de sana dair zaman zaman böyle soruları oluyor. Siz birbirinizi çok sevdiğinize neden bir türlü ikna olamadınız {{isim}}? Ki bence çok seviyorsunuz...",
+        "Eşin seni seviyor ama zaman zaman o da senin sevgini sorguluyor {{isim}}. Birbirinize hoyrat davrandığınız dönemler olduğunu görüyorum. Yapmayın...",
+        "Eşinin sevgisi artık çağlayan gibi değil, derin bir nehir gibi {{isim}}; sessiz ama güçlü. Eskisi kadar coşkulu görünmese de, o sevgi her gün biraz daha köklendi. Yokluğunda bunu en çok o hisseder.",
+        "Eşin seni seviyor {{isim}}, hem de her sabahki küçük alışkanlıklarında saklı bir sevgiyle. Belki büyük sözler duymuyorsun ama o seni her gün yeniden seçiyor. Bunun kıymetini bil."
+      ],
+      "metinler_en": [
+        "Your spouse definitely loves you very much. Have no doubt about this, {{isim}}. Questioning it is completely unnecessary.",
+        "Your spouse also has such questions about you from time to time. Why can’t you both fully convince yourselves that you love each other, {{isim}}? In my opinion, you really do love each other...",
+        "Your spouse loves you, but from time to time, they also question your love, {{isim}}. I see that there are periods when you treat each other harshly. Don't do that...",
+        "Your spouse's love is no longer like a waterfall but like a deep river, {{isim}}; quiet but strong. Even if it seems less exuberant than before, that love has rooted deeper each day. In your absence, they're the one who feels it most.",
+        "Your spouse loves you, {{isim}}, with a love hidden in the small habits of every morning. Perhaps you don't hear grand words, but they choose you anew each day. Know the value of this."
+      ]
     },
-    {
-      "id": 22,
-      "metin": "Eşinle sizin kader bağlarınız \"bir\" kesilmiş {{isim}}. Geleceğinizde boşanma gibi bir durum söz konusu olmayacak.\n\nİstemeden de olsa bu duruma gelebileceğiniz bir dönem olduğunu görüyorum {{isim}}. Bana sararsan boşanmadan atlatacaksınız.\n\nEşin bunu senden asla talep etmeyecek {{isim}}. Fakat sen özgür iradenle bir gün bunu isteyebilirsin. Gerçekleşecek mi dersen, bunu kader-i mutlak gösterecek.",
-      "metin_en": "Your destiny with your spouse has been tied as \"one,\" {{isim}}. There will be no such thing as divorce in your future.\n\nI see a period where you might reach this point, even if unintentionally, {{isim}}. If you hold on tightly, you will get through it without a divorce.\n\nYour spouse will never ask this from you, {{isim}}. However, one day, you might want it of your own free will. If you ask whether it will happen, only absolute destiny will show."
+    "22": {
+      "metinler": [
+        "Eşinle sizin kader bağlarınız \"bir\" kesilmiş {{isim}}. Geleceğinizde boşanma gibi bir durum söz konusu olmayacak.",
+        "İstemeden de olsa bu duruma gelebileceğiniz bir dönem olduğunu görüyorum {{isim}}. Bana sararsan boşanmadan atlatacaksınız.",
+        "Eşin bunu senden asla talep etmeyecek {{isim}}. Fakat sen özgür iradenle bir gün bunu isteyebilirsin. Gerçekleşecek mi dersen, bunu kader-i mutlak gösterecek.",
+        "Aranızdan bir fırtına geçecek {{isim}}, bunu saklamayacağım. Ama o fırtına sizi ayırmak için değil, zayıf noktalarınızı gösterip bağınızı sağlamlaştırmak için gelecek. Boşanma görmüyorum.",
+        "Zaman zaman bu düşünce ikinizin de aklından geçecek {{isim}}, fakat araya giren hayırlı bir el sizi barıştıracak. O günleri geride bıraktığınızda, 'iyi ki ayrılmamışız' diyeceksiniz."
+      ],
+      "metinler_en": [
+        "Your destiny with your spouse has been tied as \"one,\" {{isim}}. There will be no such thing as divorce in your future.",
+        "I see a period where you might reach this point, even if unintentionally, {{isim}}. If you hold on tightly, you will get through it without a divorce.",
+        "Your spouse will never ask this from you, {{isim}}. However, one day, you might want it of your own free will. If you ask whether it will happen, only absolute destiny will show.",
+        "A storm will pass between you, {{isim}}; I won't hide that. But that storm won't come to separate you, it will come to show your weak spots and strengthen your bond. I see no divorce.",
+        "From time to time this thought will cross both your minds, {{isim}}, but a well-meaning hand that steps in will reconcile you. Once you leave those days behind, you'll say, 'thank goodness we didn't part.'"
+      ]
     },
-    {
-      "id": 23,
-      "metin": "Eşin seni asla aldatmaz {{isim}}. Senin de böyle bir şeye yatkın olmadığın kanaatindeyim.\n\nEşin istese seni aldatabilir {{isim}}. Fakat böyle bir şey isteyecek karakterde değil. Bu soruyu kağıtlara yazıp kırk kat denizlere atalım biz.\n\nEşin seni aldatmayacak. Fakat bunu yapıp yapmadığını sorgulayabileceğin çok saçma bazı dönemleriniz olacak {{isim}}. Ona daha çok güvenmelisin.",
-      "metin_en": "Your spouse would never cheat on you, {{isim}}. I also believe that you are not inclined to do such a thing.\n\nYour spouse could cheat on you if they wanted to, {{isim}}. However, they are not the kind of person who would want such a thing. Let’s write this question on papers and cast them into the deepest seas.\n\nYour spouse will not cheat on you. However, there will be some very irrational periods when you might question this, {{isim}}. You should trust them more."
+    "23": {
+      "metinler": [
+        "Eşin seni asla aldatmaz {{isim}}. Senin de böyle bir şeye yatkın olmadığın kanaatindeyim.",
+        "Eşin istese seni aldatabilir {{isim}}. Fakat böyle bir şey isteyecek karakterde değil. Bu soruyu kağıtlara yazıp kırk kat denizlere atalım biz.",
+        "Eşin seni aldatmayacak. Fakat bunu yapıp yapmadığını sorgulayabileceğin çok saçma bazı dönemleriniz olacak {{isim}}. Ona daha çok güvenmelisin.",
+        "Eşin için sadakat bir onur meselesi {{isim}}. Verdiği sözü bozmak, onun karakterine ters. Bu konuda içini ferah tut; endişen sevgini gölgelemesin.",
+        "İleride küçük bir yanlış anlaşma bu kuşkuyu aklına düşürebilir {{isim}}, ama gerçekle alakası olmayacak. Şüpheyi büyütmeden konuşarak çözdüğünüzde, aranız eskisinden bile sağlam olacak."
+      ],
+      "metinler_en": [
+        "Your spouse would never cheat on you, {{isim}}. I also believe that you are not inclined to do such a thing.",
+        "Your spouse could cheat on you if they wanted to, {{isim}}. However, they are not the kind of person who would want such a thing. Let’s write this question on papers and cast them into the deepest seas.",
+        "Your spouse will not cheat on you. However, there will be some very irrational periods when you might question this, {{isim}}. You should trust them more.",
+        "For your spouse, loyalty is a matter of honor, {{isim}}. Breaking a promise goes against their character. Set your mind at ease on this matter; don't let your worry cast a shadow over your love.",
+        "In the future, a small misunderstanding may plant this doubt in your mind, {{isim}}, but it will have nothing to do with reality. When you resolve it by talking instead of letting the suspicion grow, you'll be even stronger than before."
+      ]
     },
-    {
-      "id": 24,
-      "metin": "Eşinin kalbinde senden önce bir başkası varmış {{isim}}; yalan yok. Ancak senin adın, o kişinin üzerini tamamen örtmüş. Artık senden başkasını gözü görmüyor.\n\nEşinin kalbinde senden başka hiç kimse yok {{isim}}. Tüm varlığını ve benliğini sana adamış, sana odaklanmış durumda.\n\nEşinin kalbindeki tek insan sensin {{isim}}. Ancak gönlünden geçen ve yapmak istediği pek çok şey olduğunu söyleyebilirim. Bunların bazılarına sen pek müsaade etmiyor gibisin?...\n\nEşinin kalbinde maalesef başka biri daha var. Ara ara onu düşündüğünü görüyorum {{isim}}. Lakin ondan çok uzakta ve o kişi çok geçmişte kalmış...",
-      "metin_en": "There was someone else in your spouse’s heart before you, {{isim}}; that’s the truth. However, your name has completely covered that person. Now, they see no one but you.\n\nThere is no one else in your spouse’s heart but you, {{isim}}. They have dedicated their entire existence and being to you, fully focused on you.\n\nYou are the only person in your spouse's heart, {{isim}}. However, I can say that there are many things they long for and wish to do. It seems like you might not be allowing some of them...?\n\nUnfortunately, there is someone else in your spouse's heart. I see that they think about this person from time to time, {{isim}}. However, they are far away, and that person belongs to the distant past..."
+    "24": {
+      "metinler": [
+        "Eşinin kalbinde senden önce bir başkası varmış {{isim}}; yalan yok. Ancak senin adın, o kişinin üzerini tamamen örtmüş. Artık senden başkasını gözü görmüyor.",
+        "Eşinin kalbinde senden başka hiç kimse yok {{isim}}. Tüm varlığını ve benliğini sana adamış, sana odaklanmış durumda.",
+        "Eşinin kalbindeki tek insan sensin {{isim}}. Ancak gönlünden geçen ve yapmak istediği pek çok şey olduğunu söyleyebilirim. Bunların bazılarına sen pek müsaade etmiyor gibisin?...",
+        "Eşinin kalbinde maalesef başka biri daha var. Ara ara onu düşündüğünü görüyorum {{isim}}. Lakin ondan çok uzakta ve o kişi çok geçmişte kalmış...",
+        "Eşinin kalbinde taht kurmuş tek kişi sensin {{isim}}. Ara sıra rüyalarına geçmişten bir yüz düşse de, bu bir özlem değil, kapanmış bir defterin son yaprağı. Uyanınca aradığı yine sensin."
+      ],
+      "metinler_en": [
+        "There was someone else in your spouse’s heart before you, {{isim}}; that’s the truth. However, your name has completely covered that person. Now, they see no one but you.",
+        "There is no one else in your spouse’s heart but you, {{isim}}. They have dedicated their entire existence and being to you, fully focused on you.",
+        "You are the only person in your spouse's heart, {{isim}}. However, I can say that there are many things they long for and wish to do. It seems like you might not be allowing some of them...?",
+        "Unfortunately, there is someone else in your spouse's heart. I see that they think about this person from time to time, {{isim}}. However, they are far away, and that person belongs to the distant past...",
+        "The only one enthroned in your spouse's heart is you, {{isim}}. Even if a face from the past occasionally slips into their dreams, it's not longing but the last page of a closed book. When they wake, the one they seek is you again."
+      ]
     },
-    {
-      "id": 25,
-      "metin": "Dileğinin gerçekleşmesi için çok az bir zaman kalmış durumda {{isim}}. Her biri bir aydan fazla 4-5 vade ile her biri bir yılı aşmayacak bir iki vade içinde.\n\nDileğinin gerçekleşmesi, yakın zamanda yaşayacağın bir olay sonrası mümkün olacak {{isim}}. Tam olarak gerçekleşmesine ise birkaç ay dönümü bir vakit kalmış durumda.\n\nDileğin gerçekleşecek ancak senin istediğin yapıda değil {{isim}}; biraz form değiştirecek. Senin için daha hayırlı bir oluşum hayata geçecek. Buna daha çok sevineceksin.\n\nSon günlerde de aklında olan dileğinin gerçekleşmesi için maalesef önünde uzun bir vade var {{isim}}. Sabırlı olmalısın. Tanrının seninle ilgili çok ince planları var ve bunları ince ince, ağır ağır işliyor...\n\nBugünün şartları itibariyle bakıldığında dileğin gerçekleşmeyecekmiş gibi gözüküyor {{isim}}. Ancak bu dilek ilerleyen dönemlerde senin için evrim geçirecek. Gerçekleşecek olan daha farklı bir formunu isteyip, onu elde edeceksin.",
-      "metin_en": "There is very little time left for your wish to come true, {{isim}}. Each stage is more than a month long, with 4-5 phases in total, and within one or two phases, none exceeding a year.\n\nYour wish will become possible after an event you will experience soon, {{isim}}. There are only a few lunar cycles left until it fully comes true.\n\nYour wish will come true, but not in the exact form you desire, {{isim}}; it will change shape a little. A more favorable outcome for you will take place. You will be even happier with this.\n\nUnfortunately, there is a long period ahead for the wish that has been on your mind in recent days to come true, {{isim}}. You must be patient. God has very delicate plans for you and is weaving them carefully, slowly but surely...\n\nConsidering today's conditions, your wish does not seem likely to come true, {{isim}}. However, this wish will evolve for you in the future. You will desire a different form of it, and that is what you will achieve."
+    "25": {
+      "metinler": [
+        "Dileğinin gerçekleşmesi için çok az bir zaman kalmış durumda {{isim}}. Her biri bir aydan fazla 4-5 vade ile her biri bir yılı aşmayacak bir iki vade içinde.",
+        "Dileğinin gerçekleşmesi, yakın zamanda yaşayacağın bir olay sonrası mümkün olacak {{isim}}. Tam olarak gerçekleşmesine ise birkaç ay dönümü bir vakit kalmış durumda.",
+        "Dileğin gerçekleşecek ancak senin istediğin yapıda değil {{isim}}; biraz form değiştirecek. Senin için daha hayırlı bir oluşum hayata geçecek. Buna daha çok sevineceksin.",
+        "Son günlerde de aklında olan dileğinin gerçekleşmesi için maalesef önünde uzun bir vade var {{isim}}. Sabırlı olmalısın. Tanrının seninle ilgili çok ince planları var ve bunları ince ince, ağır ağır işliyor...",
+        "Bugünün şartları itibariyle bakıldığında dileğin gerçekleşmeyecekmiş gibi gözüküyor {{isim}}. Ancak bu dilek ilerleyen dönemlerde senin için evrim geçirecek. Gerçekleşecek olan daha farklı bir formunu isteyip, onu elde edeceksin."
+      ],
+      "metinler_en": [
+        "There is very little time left for your wish to come true, {{isim}}. Each stage is more than a month long, with 4-5 phases in total, and within one or two phases, none exceeding a year.",
+        "Your wish will become possible after an event you will experience soon, {{isim}}. There are only a few lunar cycles left until it fully comes true.",
+        "Your wish will come true, but not in the exact form you desire, {{isim}}; it will change shape a little. A more favorable outcome for you will take place. You will be even happier with this.",
+        "Unfortunately, there is a long period ahead for the wish that has been on your mind in recent days to come true, {{isim}}. You must be patient. God has very delicate plans for you and is weaving them carefully, slowly but surely...",
+        "Considering today's conditions, your wish does not seem likely to come true, {{isim}}. However, this wish will evolve for you in the future. You will desire a different form of it, and that is what you will achieve."
+      ]
     },
-    {
-      "id": 26,
-      "metin": "Bugünden yarına büyük bir maddi yardım beklersen, hayal kırıklığı yaşarsın {{isim}}. Yardımı alsan bile istediğin miktarda ya da istediğin şekilde olmayacak.\n\nÖnümüzdeki aylarda sana büyük bir maddi yardım geleceğinden hiçbir şüphem yok {{isim}}. Ancak bu yardım, senin planlarını gerçekleştirmene ya da hayati işlerini görmene yetmeyebilir.\n\nÇok kısa bir zaman sonra beklediğin maddi yardımın çok daha fazlasını elde edeceksin {{isim}}. Karşılaşacağın manzara seni hem şaşırtacak hem de yardımı eden kişiye hiç olmadığı kadar minnet duyacaksın.\n\nYakın vadede sana herhangi bir yerden önemli miktarlarda maddi yardım geleceğini düşünmüyorum {{isim}}. Buna güvenmemeli, ayağını yorganına göre uzatmalısın.",
-      "metin_en": "If you expect a significant financial aid overnight, you will be disappointed, {{isim}}. Even if you receive help, it won’t be in the amount or form you desire.\n\nI have no doubt that you will receive a significant financial aid in the coming months, {{isim}}. However, this help may not be enough to fulfill your plans or cover your essential needs.\n\nIn a very short time, you will receive much more than the financial aid you were expecting, {{isim}}. The outcome will both surprise you and make you feel more grateful than ever to the person providing the help.\n\nI don't think you will receive any significant financial aid from anywhere in the near future, {{isim}}. You shouldn't rely on this; instead, you should live within your means."
+    "26": {
+      "metinler": [
+        "Bugünden yarına büyük bir maddi yardım beklersen, hayal kırıklığı yaşarsın {{isim}}. Yardımı alsan bile istediğin miktarda ya da istediğin şekilde olmayacak.",
+        "Önümüzdeki aylarda sana büyük bir maddi yardım geleceğinden hiçbir şüphem yok {{isim}}. Ancak bu yardım, senin planlarını gerçekleştirmene ya da hayati işlerini görmene yetmeyebilir.",
+        "Çok kısa bir zaman sonra beklediğin maddi yardımın çok daha fazlasını elde edeceksin {{isim}}. Karşılaşacağın manzara seni hem şaşırtacak hem de yardımı eden kişiye hiç olmadığı kadar minnet duyacaksın.",
+        "Yakın vadede sana herhangi bir yerden önemli miktarlarda maddi yardım geleceğini düşünmüyorum {{isim}}. Buna güvenmemeli, ayağını yorganına göre uzatmalısın.",
+        "Beklediğin yardım umduğun kapıdan değil, hiç ummadığın bir yönden gelecek {{isim}}. Belki büyük bir meblağ olmayacak ama tam ihtiyacın olan anda yetişecek; işte asıl bereket de bu."
+      ],
+      "metinler_en": [
+        "If you expect a significant financial aid overnight, you will be disappointed, {{isim}}. Even if you receive help, it won’t be in the amount or form you desire.",
+        "I have no doubt that you will receive a significant financial aid in the coming months, {{isim}}. However, this help may not be enough to fulfill your plans or cover your essential needs.",
+        "In a very short time, you will receive much more than the financial aid you were expecting, {{isim}}. The outcome will both surprise you and make you feel more grateful than ever to the person providing the help.",
+        "I don't think you will receive any significant financial aid from anywhere in the near future, {{isim}}. You shouldn't rely on this; instead, you should live within your means.",
+        "The help you're waiting for will come not through the door you hoped, but from a direction you never expected, {{isim}}. It may not be a large sum, but it will arrive exactly when you need it; and that, truly, is the real blessing."
+      ]
     },
-    {
-      "id": 27,
-      "metin": "Seni çok sevenler ya da daha az sevenler var ama hiçbir düşmanın yok {{isim}}. Sen iyi ve pozitif bir insansın. Negatiflikleri ister istemez öteleyen bir enerjin var.\n\nEvet {{isim}}, adında ya da soyadında {{harf}} harfi olan bir düşmanın olduğunu görüyorum. Bu kişi arkandan sözlü çok iş çeviriyor. Orta vadede onunla yüzleşeceksin.\n\nSenin büyük bir düşmanın var ve işin kötüsü bu düşman sana yakın olan da biri {{isim}}. Bu yakınlık fiziksel olmasa da, mahiyeten sana çok tanıdık bir kişi. Adı {{sayi,2,3}} heceli ve soyadında L, G ya da R harflerinden biri var.\n\nSenin birden fazla düşmanın var ve bunların cinsiyetleri aynı {{isim}}. Ne acı ki, kim olduklarını tahmin edebileceğin ve zamanında çok iyilikler yaptığın kişiler...",
-      "metin_en": "There are people who love you a lot and some who love you less, but you have no enemies, {{isim}}. You are a good and positive person. Your energy naturally pushes away negativity.\n\nYes, {{isim}}, I see that you have an enemy whose name or surname contains the letter {{harf}}. This person is speaking behind your back and stirring things up. In the mid-term, you will confront them.\n\nYou have a great enemy, and the worst part is that this enemy is someone close to you, {{isim}}. Even if not physically, they are someone very familiar to you in essence. Their name consists of {{sayi,2,3}} syllables, and their surname contains one of the letters L, G, or R.\n\nYou have more than one enemy, and they are all of the same gender, {{isim}}. Sadly, they are people you can probably guess-ones to whom you have shown great kindness in the past..."
+    "27": {
+      "metinler": [
+        "Seni çok sevenler ya da daha az sevenler var ama hiçbir düşmanın yok {{isim}}. Sen iyi ve pozitif bir insansın. Negatiflikleri ister istemez öteleyen bir enerjin var.",
+        "Evet {{isim}}, adında ya da soyadında {{harf}} harfi olan bir düşmanın olduğunu görüyorum. Bu kişi arkandan sözlü çok iş çeviriyor. Orta vadede onunla yüzleşeceksin.",
+        "Senin büyük bir düşmanın var ve işin kötüsü bu düşman sana yakın olan da biri {{isim}}. Bu yakınlık fiziksel olmasa da, mahiyeten sana çok tanıdık bir kişi. Adı {{sayi,2,3}} heceli ve soyadında L, G ya da R harflerinden biri var.",
+        "Senin birden fazla düşmanın var ve bunların cinsiyetleri aynı {{isim}}. Ne acı ki, kim olduklarını tahmin edebileceğin ve zamanında çok iyilikler yaptığın kişiler...",
+        "Düşman dediğin şey çoğu zaman senin yükselişinin gölgesidir {{isim}}. Sen ne kadar ilerlersen, seni çekemeyen birkaç kişi kendiliğinden belirir. Onlara aldırma; en iyi cevap, yoluna devam etmendir."
+      ],
+      "metinler_en": [
+        "There are people who love you a lot and some who love you less, but you have no enemies, {{isim}}. You are a good and positive person. Your energy naturally pushes away negativity.",
+        "Yes, {{isim}}, I see that you have an enemy whose name or surname contains the letter {{harf}}. This person is speaking behind your back and stirring things up. In the mid-term, you will confront them.",
+        "You have a great enemy, and the worst part is that this enemy is someone close to you, {{isim}}. Even if not physically, they are someone very familiar to you in essence. Their name consists of {{sayi,2,3}} syllables, and their surname contains one of the letters L, G, or R.",
+        "You have more than one enemy, and they are all of the same gender, {{isim}}. Sadly, they are people you can probably guess-ones to whom you have shown great kindness in the past...",
+        "What you call an enemy is most often the shadow of your own rise, {{isim}}. The more you advance, the more a few people who can't stand it appear on their own. Pay them no mind; the best answer is to keep going."
+      ]
     },
-    {
-      "id": 28,
-      "metin": "Evet {{isim}}, uzun vadede {{kelime, strese bağlı cilt döküntülerin | tansiyon rahatsızlığın | kilo problemlerin | reflün | migrenin | alerjik rinitin | gerilim tipi baş ağrın | mide yanmaların | bağırsak düzensizliklerin | kas gerginliklerin | odaklanma zorlukların | şişkinliklerin | gaz sancıların | eklem ağrıların | halsizliğin | demir eksikliğin | uyku bozuklukların | sinüzitin | göz kuruluğun | kulak çınlamaların | sık idrara çıkmaların | elde uyuşmaların | unutkanlığın | depresif ruh halin | diş gıcırdatmaların | panik atakların | sabah yorgunlukların | bel ağrıların | kabızlık sorunların | kas seyirmelerin}} olabilir. Tedavisi ise çok zor olmayacak.\n\n{{isim}} birtakım tedavisi kolay rahatsızlıklar geçirebilirsin. Üst solunum yolu enfeksiyonları, kas ağrıları, yorgunluk, bağırsak problemler ya da göz bozuklukları gibi. Bunların dışında ciddi bir problem yaşayacağını sanmıyorum.\n\nKısa ve orta vadede önemli bir rahatsızlık yaşayacağını sanmıyorum {{isim}}. Belki var olan bazı şikayetlerinin üzerine yenileri eklenebilir, ki bunlar senin için hayati olmayacak.",
-      "metin_en": "Yes, {{isim}}, in the long term, you may experience {{kelime, stress-related skin rashes | blood pressure issues | weight problems | acid reflux | migraines | allergic rhinitis | tension-type headaches | heartburn | bowel irregularities | muscle tension | difficulty concentrating | bloating | gas pains | joint pain | fatigue | iron deficiency | sleep disorders | sinusitis | dry eyes | tinnitus | frequent urination | numbness in hands | forgetfulness | depressive mood | teeth grinding | panic attacks | morning fatigue | lower back pain | constipation issues | muscle twitches}}. The threatment will not be difficult.\n\n{{isim}}, you may experience some easily treatable ailments, such as upper respiratory infections, muscle pain, fatigue, bowel issues, or vision problems. Other than these, I don't think you will face any serious problems.\n\nI don't think you will experience any significant health issues in the short or medium term, {{isim}}. Maybe some new complaints will add to your existing ones, but they won’t be life-threatening for you."
+    "28": {
+      "metinler": [
+        "Evet {{isim}}, uzun vadede {{kelime, strese bağlı cilt döküntülerin | tansiyon rahatsızlığın | kilo problemlerin | reflün | migrenin | alerjik rinitin | gerilim tipi baş ağrın | mide yanmaların | bağırsak düzensizliklerin | kas gerginliklerin | odaklanma zorlukların | şişkinliklerin | gaz sancıların | eklem ağrıların | halsizliğin | demir eksikliğin | uyku bozuklukların | sinüzitin | göz kuruluğun | kulak çınlamaların | sık idrara çıkmaların | elde uyuşmaların | unutkanlığın | depresif ruh halin | diş gıcırdatmaların | panik atakların | sabah yorgunlukların | bel ağrıların | kabızlık sorunların | kas seyirmelerin}} olabilir. Tedavisi ise çok zor olmayacak.",
+        "{{isim}} birtakım tedavisi kolay rahatsızlıklar geçirebilirsin. Üst solunum yolu enfeksiyonları, kas ağrıları, yorgunluk, bağırsak problemler ya da göz bozuklukları gibi. Bunların dışında ciddi bir problem yaşayacağını sanmıyorum.",
+        "Kısa ve orta vadede önemli bir rahatsızlık yaşayacağını sanmıyorum {{isim}}. Belki var olan bazı şikayetlerinin üzerine yenileri eklenebilir, ki bunlar senin için hayati olmayacak.",
+        "Zaman zaman küçük rahatsızlıklar kapını çalabilir {{isim}}, ama hiçbiri seni uzun süre yatakta tutamaz. Bedenin sana her zaman önceden haber verir; o uyarıları ciddiye aldığın sürece ayakta kalırsın.",
+        "Sağlığın, hızını biraz düşürdüğün dönemlerde belirgin şekilde düzelecek {{isim}}. Senin en büyük şansın, hastalanmadan önlem alabilen bir sezgiye sahip olman. Bu sezgine güven, seni koruyacak."
+      ],
+      "metinler_en": [
+        "Yes, {{isim}}, in the long term, you may experience {{kelime, stress-related skin rashes | blood pressure issues | weight problems | acid reflux | migraines | allergic rhinitis | tension-type headaches | heartburn | bowel irregularities | muscle tension | difficulty concentrating | bloating | gas pains | joint pain | fatigue | iron deficiency | sleep disorders | sinusitis | dry eyes | tinnitus | frequent urination | numbness in hands | forgetfulness | depressive mood | teeth grinding | panic attacks | morning fatigue | lower back pain | constipation issues | muscle twitches}}. The threatment will not be difficult.",
+        "{{isim}}, you may experience some easily treatable ailments, such as upper respiratory infections, muscle pain, fatigue, bowel issues, or vision problems. Other than these, I don't think you will face any serious problems.",
+        "I don't think you will experience any significant health issues in the short or medium term, {{isim}}. Maybe some new complaints will add to your existing ones, but they won’t be life-threatening for you.",
+        "From time to time, minor ailments may knock on your door, {{isim}}, but none of them will keep you bedridden for long. Your body always warns you in advance; as long as you take those warnings seriously, you'll stay on your feet.",
+        "Your health will noticeably improve in the periods when you slow down a bit, {{isim}}. Your greatest fortune is having an intuition that lets you take precautions before falling ill. Trust that intuition; it will protect you."
+      ]
     },
-    {
-      "id": 29,
-      "metin": "Hayır {{isim}}, ne yazık ki düşündüğün kişi ile bir kavuşman gözükmüyor. Zaten bence bu senin için hayırlı olan bir şey de değil.\n\nEvet {{isim}}, zor da olsa, araya çok fazla zaman ve olay girmiş de olsa, kavuşacaksınız. Kader sizi birbirinize kenetli kılmış.\n\nKavuşmanızın önünde çok fazla engel var gibi duruyor. Hatta bu engellerden bazıları insan. Fakat yine de kavuşacağınızı düşünüyorum {{isim}}, hem de mucizevi bir şekilde...\n\nHayır {{isim}}. Araya o kadar yol, o kadar insan, o kadar \"yaşanmışlık\" girmiş ki, artık kavuşmanız hem imkansız, hem de sanırım anlamsız...",
-      "metin_en": "No, {{isim}}, unfortunately, I don’t see a reunion with the person you are thinking about. In fact, I believe this is something that is actually for the best for you.\n\nYes, {{isim}}, even though it will be difficult and a lot of time and events have come between you, you will reunite. Fate has bound you together.\n\nThere seem to be many obstacles in the way of your reunion. Some of these obstacles are even people. However, I still believe you will reunite, {{isim}}, and in a miraculous way...\n\nNo, {{isim}}. So much distance, so many people, and so many \"life experiences\" have come between you that your reunion is now both impossible and, I believe, meaningless..."
+    "29": {
+      "metinler": [
+        "Hayır {{isim}}, ne yazık ki düşündüğün kişi ile bir kavuşman gözükmüyor. Zaten bence bu senin için hayırlı olan bir şey de değil.",
+        "Evet {{isim}}, zor da olsa, araya çok fazla zaman ve olay girmiş de olsa, kavuşacaksınız. Kader sizi birbirinize kenetli kılmış.",
+        "Kavuşmanızın önünde çok fazla engel var gibi duruyor. Hatta bu engellerden bazıları insan. Fakat yine de kavuşacağınızı düşünüyorum {{isim}}, hem de mucizevi bir şekilde...",
+        "Hayır {{isim}}. Araya o kadar yol, o kadar insan, o kadar \"yaşanmışlık\" girmiş ki, artık kavuşmanız hem imkansız, hem de sanırım anlamsız...",
+        "Kavuşmanız bir zamanlama meselesi {{isim}}. İkiniz de aynı anda hazır olduğunuzda, hayat sizi aynı yolda buluşturmanın bir yolunu bulacak. Şimdilik kendini hazırlamana bak, gerisi akışına bırak."
+      ],
+      "metinler_en": [
+        "No, {{isim}}, unfortunately, I don’t see a reunion with the person you are thinking about. In fact, I believe this is something that is actually for the best for you.",
+        "Yes, {{isim}}, even though it will be difficult and a lot of time and events have come between you, you will reunite. Fate has bound you together.",
+        "There seem to be many obstacles in the way of your reunion. Some of these obstacles are even people. However, I still believe you will reunite, {{isim}}, and in a miraculous way...",
+        "No, {{isim}}. So much distance, so many people, and so many \"life experiences\" have come between you that your reunion is now both impossible and, I believe, meaningless...",
+        "Your reunion is a matter of timing, {{isim}}. When you are both ready at the same moment, life will find a way to bring you onto the same path. For now, focus on preparing yourself and let the rest flow."
+      ]
     },
-    {
-      "id": 30,
-      "metin": "Aklına sık geldiğini söylersem yalan olur {{isim}}. Bence onun zihni artık alternatif ve farklı bir evrende, değişik meşgalelerle dolu.\n\nAra ara aklına geliyorsun fakat o anları hızlı geçmeye, savuşturmaya çalışıyor {{isim}}. Seni düşünüp düşünmediğini belki de hiçbir zaman anlayamayacaksın.\n\nGerçekçi ve dürüst olmak gerekirse onca zaman sonra seni merak ettiğini ya da hatırından geçirdiğini pek düşünmüyorum {{isim}}.\n\nBu sorunun cevabı \"evet\" {{isim}}. Hatta siz benzer zamanlarda, benzer bazı durumlarda birbirinizi düşünüyorsunuz...\n\nEvet {{isim}}, hatta senin onu düşündüğünden daha sık düşünüyor seni. Bu işin sonu nereye varacak bilmem... <sprite=7>",
-      "metin_en": "I would be lying if I said you cross their mind often, {{isim}}. I believe their mind is now in an alternative and different universe, occupied with various other concerns.\n\nYou cross their mind from time to time, but they try to move past those moments quickly, {{isim}}. You may never truly know whether they think about you or not.\n\nTo be realistic and honest, I don’t really think they wonder about you or think of you after all this time, {{isim}}.\n\nThe answer to this question is \"yes,\" {{isim}}. In fact, you both think about each other at similar times and in similar situations...\n\nYes, {{isim}}, in fact, they think about you even more often than you think about them. Where this will lead, I don’t know..."
+    "30": {
+      "metinler": [
+        "Aklına sık geldiğini söylersem yalan olur {{isim}}. Bence onun zihni artık alternatif ve farklı bir evrende, değişik meşgalelerle dolu.",
+        "Ara ara aklına geliyorsun fakat o anları hızlı geçmeye, savuşturmaya çalışıyor {{isim}}. Seni düşünüp düşünmediğini belki de hiçbir zaman anlayamayacaksın.",
+        "Gerçekçi ve dürüst olmak gerekirse onca zaman sonra seni merak ettiğini ya da hatırından geçirdiğini pek düşünmüyorum {{isim}}.",
+        "Bu sorunun cevabı \"evet\" {{isim}}. Hatta siz benzer zamanlarda, benzer bazı durumlarda birbirinizi düşünüyorsunuz...",
+        "Evet {{isim}}, hatta senin onu düşündüğünden daha sık düşünüyor seni. Bu işin sonu nereye varacak bilmem... <sprite=7>"
+      ],
+      "metinler_en": [
+        "I would be lying if I said you cross their mind often, {{isim}}. I believe their mind is now in an alternative and different universe, occupied with various other concerns.",
+        "You cross their mind from time to time, but they try to move past those moments quickly, {{isim}}. You may never truly know whether they think about you or not.",
+        "To be realistic and honest, I don’t really think they wonder about you or think of you after all this time, {{isim}}.",
+        "The answer to this question is \"yes,\" {{isim}}. In fact, you both think about each other at similar times and in similar situations...",
+        "Yes, {{isim}}, in fact, they think about you even more often than you think about them. Where this will lead, I don’t know..."
+      ]
     },
-    {
-      "id": 31,
-      "metin": "Senin kaderinde 2 evlat sahibi olmak var {{isim}}. Bir tanesi net şekilde \"erkek\" gözüküyor. Dur bakalım, hayırlısı...\n\nSenin kaderinde 3 çocuk sahibi olmak var {{isim}}. Neden bilmiyorum, bir tanesi diğer ikisinden bir yönden farklı. Ne yönden, kestiremedim...\n\nSenin birden fazla çocuğun olacak {{isim}}. Cinsiyetlerini tahmin etmek zor. Nedense orada bir belirsizlik görüyorum. Belki de son anda belli olacak.",
-      "metin_en": "It is in your destiny to have two children, {{isim}}. One of them clearly appears to be a \"boy.\" Let’s see, may it be for the best...\n\nIt is in your destiny to have three children, {{isim}}. For some reason, one of them is different from the other two in some way. I can’t quite determine in what way...\n\nYou will have more than one child, {{isim}}. It's difficult to predict their genders. For some reason, I see uncertainty there-perhaps it will only become clear at the last moment."
+    "31": {
+      "metinler": [
+        "Senin kaderinde 2 evlat sahibi olmak var {{isim}}. Bir tanesi net şekilde \"erkek\" gözüküyor. Dur bakalım, hayırlısı...",
+        "Senin kaderinde 3 çocuk sahibi olmak var {{isim}}. Neden bilmiyorum, bir tanesi diğer ikisinden bir yönden farklı. Ne yönden, kestiremedim...",
+        "Senin birden fazla çocuğun olacak {{isim}}. Cinsiyetlerini tahmin etmek zor. Nedense orada bir belirsizlik görüyorum. Belki de son anda belli olacak.",
+        "Senin bir evladın olacak {{isim}} ve bu çocuk sana alabildiğine düşkün olacak. Geldiği gün hayatına bir bereket, bir şans getirecek; sanki seni bekliyormuş gibi.",
+        "Çocuk konusu senin için tam zamanı geldiğinde, hiç zorlamadan çözülecek {{isim}}. Acele etmene gerek yok; kaderin bu sayfası kendi vaktinde, en güzel haliyle açılacak."
+      ],
+      "metinler_en": [
+        "It is in your destiny to have two children, {{isim}}. One of them clearly appears to be a \"boy.\" Let’s see, may it be for the best...",
+        "It is in your destiny to have three children, {{isim}}. For some reason, one of them is different from the other two in some way. I can’t quite determine in what way...",
+        "You will have more than one child, {{isim}}. It's difficult to predict their genders. For some reason, I see uncertainty there-perhaps it will only become clear at the last moment.",
+        "You will have a child, {{isim}}, and this child will be utterly devoted to you. The day they arrive, they'll bring an abundance and a stroke of luck into your life; as if they had been waiting for you.",
+        "The matter of children will resolve itself for you when the time is right, without any forcing, {{isim}}. There's no need to rush; this page of your destiny will open in its own time, in its most beautiful form."
+      ]
     },
-    {
-      "id": 32,
-      "metin": "Sen bol odalı, dubleks bir ev mi istiyorsun {{isim}}? Evet, bu eve bir gün kavuşacaksın.\n\nSenin gelecekte müstakil bir eve sahip olacağını görüyorum {{isim}}. Bir ya da iki katlı. Bahçesinde ise meyve ağaçları olacak.\n\nSen kendine ait bir ev istiyorsun; büyük küçük çok önemli değil. Yeni ya da merkezi olsun yeter. Buna kavuşacaksın {{isim}}. Önünde en fazla 4-5 sene var.\n\nSenin çok güzel bir evin olacak {{isim}} fakat bulunduğun şehirden farklı bir yerde...\n\nSen istediğin evi kafanda belirlemişsin bile. O ev bir gün senin olacak {{isim}}, buna kesinlikle eminim.",
-      "metin_en": "Do you want a spacious, multi-room duplex house, {{isim}}? Yes, one day, you will have this home.\n\nI see that you will own a detached house in the future, {{isim}}. It will be one or two stories high, and there will be fruit trees in the garden.\n\nYou want a home of your own; the size doesn’t matter much. As long as it’s new or centrally located, that’s enough. You will achieve this, {{isim}}. You have at most 4-5 years ahead of you.\n\nYou will have a very beautiful home, {{isim}}, but it will be in a different city from where you are now...\n\nYou have already envisioned the house you want in your mind. That house will be yours one day, {{isim}}, I am absolutely sure of it."
+    "32": {
+      "metinler": [
+        "Sen bol odalı, dubleks bir ev mi istiyorsun {{isim}}? Evet, bu eve bir gün kavuşacaksın.",
+        "Senin gelecekte müstakil bir eve sahip olacağını görüyorum {{isim}}. Bir ya da iki katlı. Bahçesinde ise meyve ağaçları olacak.",
+        "Sen kendine ait bir ev istiyorsun; büyük küçük çok önemli değil. Yeni ya da merkezi olsun yeter. Buna kavuşacaksın {{isim}}. Önünde en fazla 4-5 sene var.",
+        "Senin çok güzel bir evin olacak {{isim}} fakat bulunduğun şehirden farklı bir yerde...",
+        "Sen istediğin evi kafanda belirlemişsin bile. O ev bir gün senin olacak {{isim}}, buna kesinlikle eminim."
+      ],
+      "metinler_en": [
+        "Do you want a spacious, multi-room duplex house, {{isim}}? Yes, one day, you will have this home.",
+        "I see that you will own a detached house in the future, {{isim}}. It will be one or two stories high, and there will be fruit trees in the garden.",
+        "You want a home of your own; the size doesn’t matter much. As long as it’s new or centrally located, that’s enough. You will achieve this, {{isim}}. You have at most 4-5 years ahead of you.",
+        "You will have a very beautiful home, {{isim}}, but it will be in a different city from where you are now...",
+        "You have already envisioned the house you want in your mind. That house will be yours one day, {{isim}}, I am absolutely sure of it."
+      ]
     },
-    {
-      "id": 33,
-      "metin": "Bence güvenebilirsin {{isim}}. Seni yanıltacağını sanmıyorum ama sen yine de temkini elden bırakma.\n\nÇok fazla güvenmemen gerektiğini düşünüyorum {{isim}}. Ona karşı her zaman bir fren mesafen olsun. Aniden durabilir, arkasından çarpma.\n\nDüşündüğün kişinin çok güvenilir bir insan olduğunu hissediyorum {{isim}}. Seni yanıltacağını ya da inancını boşa çıkaracağını sanmam.",
-      "metin_en": "I think you can trust them, {{isim}}. I don’t believe they will deceive you, but still, don’t let your guard down.\n\nI think you shouldn't trust them too much {{isim}}. Always keep a safe distance. They might stop suddenly, and you don’t want to crash into them.\n\nI feel that the person you are thinking about is very trustworthy, {{isim}}. I don’t think they will deceive you or let you down."
+    "33": {
+      "metinler": [
+        "Bence güvenebilirsin {{isim}}. Seni yanıltacağını sanmıyorum ama sen yine de temkini elden bırakma.",
+        "Çok fazla güvenmemen gerektiğini düşünüyorum {{isim}}. Ona karşı her zaman bir fren mesafen olsun. Aniden durabilir, arkasından çarpma.",
+        "Düşündüğün kişinin çok güvenilir bir insan olduğunu hissediyorum {{isim}}. Seni yanıltacağını ya da inancını boşa çıkaracağını sanmam.",
+        "Güven bir anda değil, zamanla kazanılır {{isim}}. O kişinin sözlerine değil, zor anlarda nasıl davrandığına bak. Bir iki sınavdan geçtikten sonra içindeki soru kendiliğinden yanıt bulacak.",
+        "O kişi büyük konularda arkanı kollar {{isim}}, ama küçük şeylerde biraz dağınık ve unutkan olabilir. Bunu bir ihanet gibi görme; sadece ona neyi emanet edeceğini doğru seç, gerisi yolunda gider."
+      ],
+      "metinler_en": [
+        "I think you can trust them, {{isim}}. I don’t believe they will deceive you, but still, don’t let your guard down.",
+        "I think you shouldn't trust them too much {{isim}}. Always keep a safe distance. They might stop suddenly, and you don’t want to crash into them.",
+        "I feel that the person you are thinking about is very trustworthy, {{isim}}. I don’t think they will deceive you or let you down.",
+        "Trust is earned over time, not in an instant, {{isim}}. Look not at that person's words but at how they behave in hard moments. After they pass a test or two, the question inside you will answer itself.",
+        "That person has your back on big matters, {{isim}}, but can be a bit careless and forgetful with small things. Don't take this as a betrayal; just choose wisely what you entrust to them, and the rest will go smoothly."
+      ]
     },
-    {
-      "id": 34,
-      "metin": "Seni ekonomik anlamda rahatlatacak yeni fırsatlarla karşılaşman olası {{isim}}. Becerilerine güvenmeye devam et.\n\nKendine olan inancını kaybetmediğin sürece, yeni ve farklı fırsatlarla karşılaşacağını düşünüyorum {{isim}}. Sabırlı ol.\n\nİçinde bulunduğun maddi kriz bir süre daha devam edebilir {{isim}}. İstediğin gelir profilini elde etmen için biraz daha beklemen gerekecek.\n\nYepyeni bir iş kolundan yeni fırsatlar kapında. Sektör değiştirebilirsin bence {{isim}}.",
-      "metin_en": "It is possible that you will encounter new opportunities that will ease you financially, {{isim}}. Keep trusting your skills.\n\nAs long as you don't lose faith in yourself, I believe you will encounter new and different opportunities, {{isim}}. Be patient.\n\nThe financial crisis you are in may continue for a while, {{isim}}. You will need to wait a little longer to achieve the income level you desire.\n\nBrand new opportunities from a completely different field are knocking at your door. I think you might consider changing industries, {{isim}}."
+    "34": {
+      "metinler": [
+        "Seni ekonomik anlamda rahatlatacak yeni fırsatlarla karşılaşman olası {{isim}}. Becerilerine güvenmeye devam et.",
+        "Kendine olan inancını kaybetmediğin sürece, yeni ve farklı fırsatlarla karşılaşacağını düşünüyorum {{isim}}. Sabırlı ol.",
+        "İçinde bulunduğun maddi kriz bir süre daha devam edebilir {{isim}}. İstediğin gelir profilini elde etmen için biraz daha beklemen gerekecek.",
+        "Yepyeni bir iş kolundan yeni fırsatlar kapında. Sektör değiştirebilirsin bence {{isim}}.",
+        "Uzun süredir verdiğin emeğin karşılığını almana az kaldı {{isim}}. Çaldığın bir kapı tam da vazgeçmeyi düşündüğün anda aralanacak. Pes etme; terfi ya da yeni bir görev, göründüğünden daha yakın."
+      ],
+      "metinler_en": [
+        "It is possible that you will encounter new opportunities that will ease you financially, {{isim}}. Keep trusting your skills.",
+        "As long as you don't lose faith in yourself, I believe you will encounter new and different opportunities, {{isim}}. Be patient.",
+        "The financial crisis you are in may continue for a while, {{isim}}. You will need to wait a little longer to achieve the income level you desire.",
+        "Brand new opportunities from a completely different field are knocking at your door. I think you might consider changing industries, {{isim}}.",
+        "You're close to receiving the reward for the effort you've long put in, {{isim}}. A door you've been knocking on will crack open just when you're thinking of giving up. Don't quit; a promotion or a new role is closer than it appears."
+      ]
     },
-    {
-      "id": 35,
-      "metin": "Beklentilerini ona doğru bir şekilde dile getirdiğinde seni reddedeceğini asla düşünmüyorum {{isim}}.\n\nŞu aralar ona açılırsan, seni reddedebilir {{isim}}. Belki de doğru zaman değil...\n\nSeni reddedeceğini hissediyor olabilirsin {{isim}}, fakat etmeyecek. İçinden geleni yap ve dürüst ol. Karşılığını alacaksın.",
-      "metin_en": "When you express your expectations to them clearly, I don't think they will reject you at all, {{isim}}.\n\nIf you open up to them right now, they might reject you, {{isim}}. Maybe it's not the right time...\n\nYou might feel that they will reject you, {{isim}}, but they won’t. Do what feels right and be honest. You will receive the response you deserve."
+    "35": {
+      "metinler": [
+        "Beklentilerini ona doğru bir şekilde dile getirdiğinde seni reddedeceğini asla düşünmüyorum {{isim}}.",
+        "Şu aralar ona açılırsan, seni reddedebilir {{isim}}. Belki de doğru zaman değil...",
+        "Seni reddedeceğini hissediyor olabilirsin {{isim}}, fakat etmeyecek. İçinden geleni yap ve dürüst ol. Karşılığını alacaksın.",
+        "Reddedilme korkusu, gerçek ihtimalden çok daha büyük büyümüş kafanda {{isim}}. Oysa karşındaki senin düşündüğünden çok daha açık bir kalple bekliyor. Cesaretini topla, sonuç seni şaşırtacak.",
+        "Diyelim ki bir 'hayır' duydun {{isim}}; bunu bir kapanış değil, bir yön değişikliği olarak gör. Bazen evren, daha hayırlısı için bir kapıyı kapatır. Ama şu an bana reddedilmek yerine kabul görmek daha yakın geliyor."
+      ],
+      "metinler_en": [
+        "When you express your expectations to them clearly, I don't think they will reject you at all, {{isim}}.",
+        "If you open up to them right now, they might reject you, {{isim}}. Maybe it's not the right time...",
+        "You might feel that they will reject you, {{isim}}, but they won’t. Do what feels right and be honest. You will receive the response you deserve.",
+        "The fear of rejection has grown much larger in your mind than the real odds, {{isim}}. Yet the other person is waiting with a far more open heart than you imagine. Gather your courage; the outcome will surprise you.",
+        "Say you hear a 'no,' {{isim}}; see it not as an ending but as a change of direction. Sometimes the universe closes one door for the sake of something better. But right now, acceptance feels closer to me than rejection."
+      ]
     },
-    {
-      "id": 36,
-      "metin": "Aklındaki taraflar arasında kesinlikle bir anlaşma sağlanacak {{isim}}. Kaderin akışı o yönde.\n\nMaalesef herkesin memnun kalacağı bir noktada sulh olmak şu an için imkansız gözüküyor {{isim}}.\n\nAnlaşmanın sağlanabilmesi için devreye {{harf}} harfli birinin girmesi gerek {{isim}}. Bunun da bir vakti var.\n\nAnlaşma nihayet sağlanacak ve her iki taraf da bu durumdan çok memnun olacak {{isim}}. Bu aynı zamanda bazı husumetlerin de noktalanmasına vesile olacak.",
-      "metin_en": "An agreement will definitely be reached between the parties in your mind, {{isim}}. The flow of your fate is headed in that direction.\n\nUnfortunately, it seems impossible to reach a point of reconciliation where everyone will be satisfied at this moment, {{isim}}.\n\nIn order for an agreement to be reached, someone with the letter {{harf}} in their name will need to step in, {{isim}}. And there is a time for this.\n\nThe agreement will finally be reached, and both parties will be very pleased with the outcome, {{isim}}. This will also lead to the resolution of some hostilities."
+    "36": {
+      "metinler": [
+        "Aklındaki taraflar arasında kesinlikle bir anlaşma sağlanacak {{isim}}. Kaderin akışı o yönde.",
+        "Maalesef herkesin memnun kalacağı bir noktada sulh olmak şu an için imkansız gözüküyor {{isim}}.",
+        "Anlaşmanın sağlanabilmesi için devreye {{harf}} harfli birinin girmesi gerek {{isim}}. Bunun da bir vakti var.",
+        "Anlaşma nihayet sağlanacak ve her iki taraf da bu durumdan çok memnun olacak {{isim}}. Bu aynı zamanda bazı husumetlerin de noktalanmasına vesile olacak.",
+        "Anlaşma olacak {{isim}}, fakat masaya çok yüklenmemelisin. Bir süre sabırla beklediğinde, karşı taraf kendi isteğiyle sana yaklaşacak. Zorlamazsan kazanan sen olacaksın."
+      ],
+      "metinler_en": [
+        "An agreement will definitely be reached between the parties in your mind, {{isim}}. The flow of your fate is headed in that direction.",
+        "Unfortunately, it seems impossible to reach a point of reconciliation where everyone will be satisfied at this moment, {{isim}}.",
+        "In order for an agreement to be reached, someone with the letter {{harf}} in their name will need to step in, {{isim}}. And there is a time for this.",
+        "The agreement will finally be reached, and both parties will be very pleased with the outcome, {{isim}}. This will also lead to the resolution of some hostilities.",
+        "An agreement will be reached, {{isim}}, but you mustn't press too hard at the table. When you wait patiently for a while, the other side will come toward you of their own accord. If you don't force it, you'll be the one who wins."
+      ]
+    },
+    "37": {
+      "metinler": [
+        "Şansının çoktan dönmeye başladığını görüyorum {{isim}}; sen henüz tam farkında değilsin. Son zamanlarda ufak da olsa lehine gelişen bazı tesadüfler yaşadın, değil mi? İşte o küçük işaretler, büyük bir dönüşün habercisi.",
+        "İçimden bir ses, önümüzdeki mevsim değişiminde senin için işlerin rayına oturacağını söylüyor {{isim}}. Belki birkaç gün daha sıkışık hissedeceksin ama bu geçici. Kapanmış bir kapının hemen yanında, aralanmayı bekleyen bir başkası var.",
+        "Şansın aslında senin cesaretine bağlı {{isim}}. Tüm işaretler, sen bir adım attığın anda talihin de seninle birlikte hareket edeceğini gösteriyor. Oturup beklediğin sürece biraz gecikebilir, ama harekete geçtiğinde her şey hızlanacak.",
+        "Yıldızlar, yakın zamanda beklenmedik bir yerden sana gülen bir talih kapısı açılacağını fısıldıyor {{isim}}. Uzun süredir emek verdiğin bir konuda nihayet karşılığını almaya başlayacaksın. Sabrın boşa gitmeyecek.",
+        "Kaderin ipliği şu sıralar senin lehine örülüyor {{isim}}. Geçmişte yaşadığın bazı aksilikler aslında seni daha büyük bir kayıptan korumak içinmiş; bunu ileride anlayacaksın. Önümüzdeki dönem senin için bereketli görünüyor."
+      ],
+      "metinler_en": [
+        "I see that your luck has already begun to turn, {{isim}}; you just haven't fully noticed it yet. Lately you've had a few small coincidences work in your favor, haven't you? Those little signs are the heralds of a great turning point.",
+        "Something inside me tells me that with the coming change of season, things will fall into place for you, {{isim}}. You may feel a bit cornered for a few more days, but this is temporary. Right next to a door that has closed, there is another one waiting to open.",
+        "Your luck is actually tied to your courage, {{isim}}. All the signs show that the moment you take a step, fortune will move together with you. As long as you sit and wait, it may be a little delayed, but once you act, everything will speed up.",
+        "The stars whisper that soon a door of fortune will open for you from an unexpected place, {{isim}}. In a matter you've long worked hard on, you will finally start to see its reward. Your patience will not go to waste.",
+        "The thread of fate is being woven in your favor these days, {{isim}}. Some of the setbacks you experienced in the past were actually to protect you from a greater loss, and you'll understand this later. The coming period looks bountiful for you."
+      ]
+    },
+    "38": {
+      "metinler": [
+        "Bu yılın senin için bir toparlanma yılı olacağını hissediyorum {{isim}}. İlk aylarda biraz tempolu, hatta zaman zaman yorucu bir koşuşturma var; ama yıl ilerledikçe hem içinin rahatladığını hem de elindekilerin değerini daha iyi anladığını göreceksin.",
+        "Tüm işaretler bu yılın senin için önceki yıllardan farklı geçeceğini gösteriyor {{isim}}. Özellikle ilişkilerinde ve ailenle bağlarında güzel gelişmeler var. Küçük bir pürüz çıksa bile, onu kolayca aşacak güçtesin.",
+        "Bu yıl senin adına kapıların tek tek aralandığı bir yıl olacak {{isim}}. Baharla birlikte moralini yükseltecek bir haber alabilirsin. Yılın sonuna doğru ise, başladığın bir işin meyvesini toplayacaksın.",
+        "Yıldızlar bu yıl için sana \"sabır ve bereket\" diyor {{isim}}. Ortalarda bir dönem işler biraz ağırdan alıyormuş gibi gelebilir, ama bu bir duraklama değil, güç toplama zamanı. Topladığın enerjiyle yılı güçlü kapatacaksın.",
+        "İçimden bir ses, bu yılın senin için dönüm noktalarıyla dolu olacağını söylüyor {{isim}}. Alışkanlıklarından birini geride bırakacak, yerine sana çok daha iyi gelen yeni bir düzen kuracaksın. Yıl boyunca kendini giderek daha hafif hissedeceksin."
+      ],
+      "metinler_en": [
+        "I feel that this year will be a year of getting back on your feet for you, {{isim}}. In the first months there's a busy, even at times tiring, rush; but as the year goes on, you'll see both your heart easing and yourself coming to appreciate what you have more.",
+        "All the signs show that this year will pass differently from previous ones for you, {{isim}}. Especially in your relationships and your bonds with your family, there are lovely developments. Even if a small snag comes up, you have the strength to overcome it easily.",
+        "This year will be one where doors open for you one by one, {{isim}}. With spring, you may receive news that lifts your spirits. And toward the end of the year, you'll harvest the fruit of something you started.",
+        "The stars say \"patience and abundance\" for you this year, {{isim}}. For a period in the middle, things may feel like they're moving slowly, but this isn't a standstill, it's a time of gathering strength. With the energy you build up, you'll close the year strong.",
+        "Something inside me says this year will be full of turning points for you, {{isim}}. You'll leave behind one of your habits and replace it with a new order that suits you far better. Throughout the year, you'll feel yourself growing lighter and lighter."
+      ]
+    },
+    "39": {
+      "metinler": [
+        "Evet {{isim}}, yaklaşan büyük bir değişimin eşiğinde durduğunu açıkça görüyorum. Bu değişim bir anda kapını çalmayacak; yavaş yavaş, sen hazır oldukça gelecek. İçindeki o huzursuzluk aslında bu dönüşümün ilk kıpırtısı.",
+        "Hayatında köklü bir değişiklik seni bekliyor {{isim}}, ama bu korkulacak bir şey değil. Belki yaşadığın yer, belki çevren, belki de bakış açın değişecek. Değişimden sonra geriye dönüp baktığında \"iyi ki\" diyeceksin.",
+        "Tüm işaretler yakın zamanda hayatında bir sayfanın kapanıp yeni bir sayfanın açılacağını gösteriyor {{isim}}. Alıştığın bir rutini bırakmak başta zor gelebilir; ama yeni düzen sana çok daha çok yakışacak.",
+        "İçimden bir ses, bu değişimin seni uzun süredir istediğin bir yöne taşıyacağını söylüyor {{isim}}. Kafanda bir süredir dönüp duran o fikir, sandığından daha yakın. Cesaretini topladığında her şey kendiliğinden yerine oturacak.",
+        "Kaderin seni yeni bir evreye hazırlıyor {{isim}}. Önce ufak işaretler göreceksin: beklenmedik bir teklif, aklına takılan bir düşünce, uzaktan gelen bir ses. Bunları görmezden gelme, çünkü büyük değişim bu küçük kıvılcımlardan doğacak."
+      ],
+      "metinler_en": [
+        "Yes, {{isim}}, I clearly see that you stand on the threshold of a great change that is approaching. This change won't knock on your door all at once; it will come slowly, as you become ready. That restlessness inside you is actually the first stirring of this transformation.",
+        "A profound change awaits you in your life, {{isim}}, but it's nothing to fear. Perhaps where you live, perhaps your surroundings, or perhaps your perspective will change. When you look back after the change, you'll say it was a good thing it happened.",
+        "All the signs show that soon a chapter in your life will close and a new one will open, {{isim}}. Leaving behind a routine you're used to may feel hard at first; but the new order will suit you far better.",
+        "Something inside me says this change will carry you in a direction you've long wanted, {{isim}}. That idea that's been turning over in your mind for a while is closer than you think. Once you gather your courage, everything will fall into place on its own.",
+        "Fate is preparing you for a new phase, {{isim}}. First you'll see small signs: an unexpected offer, a thought on your mind, a voice from afar. Don't ignore them, because the great change will be born from these little sparks."
+      ]
+    },
+    "40": {
+      "metinler": [
+        "Beklediğin o haberin yola çıktığını hissediyorum {{isim}}. Belki sandığından biraz geç gelecek, ama geldiğinde içini ferahlatacak. Son günlerde telefonuna ya da gelen kutuna sık sık bakıyorsun, değil mi? Boşuna değil.",
+        "Tüm işaretler beklediğin haberin olumlu olacağını gösteriyor {{isim}}. İçeriği tam hayal ettiğin gibi olmasa da, seni bir yükten kurtaracak bir tarafı var. O haber geldiğinde rahat bir nefes alacaksın.",
+        "İçimden bir ses, bu haberin gelmesinin bir başkasının elinde olduğunu söylüyor {{isim}}. Bu kişi biraz ağırdan alıyor, sen de bu yüzden tedirginsin. Ama sonuç senin lehine; sadece biraz daha sabır istiyor.",
+        "Beklediğin haber yakında kapını çalacak {{isim}}, hem de tam umudunu kesmeye başladığın bir anda. Hayat çoğu zaman güzel sürprizleri böyle saklar. Geldiğinde sevincini paylaşacak birini de yanında bulacaksın.",
+        "Kaderin ipliğinde bu haberin izini sürüyorum {{isim}}. Gelecek, ama belki de beklediğin konudan değil, bambaşka bir yerden güzel bir gelişme olarak karşına çıkacak. Gözünü tek bir yöne dikme, çünkü bereket başka bir kapıdan girebilir."
+      ],
+      "metinler_en": [
+        "I feel that the news you're waiting for has set out on its way, {{isim}}. It may come a little later than you expect, but when it arrives it will put your heart at ease. These past days you keep checking your phone or your inbox, don't you? It's not for nothing.",
+        "All the signs show that the news you're waiting for will be positive, {{isim}}. Even if its content isn't exactly as you imagined, part of it will free you from a burden. When that news comes, you'll breathe a sigh of relief.",
+        "Something inside me says that the arrival of this news is in someone else's hands, {{isim}}. This person is taking their time, and that's why you feel uneasy. But the outcome is in your favor; it just asks for a little more patience.",
+        "The news you're waiting for will knock on your door soon, {{isim}}, and just at a moment when you're beginning to lose hope. Life often hides its lovely surprises this way. When it comes, you'll find someone beside you to share your joy with.",
+        "I'm tracing this news along the thread of fate, {{isim}}. It will come, but perhaps not from the matter you expect; it will appear before you as a lovely development from an entirely different place. Don't fix your eyes on only one direction, because blessings may enter through another door."
+      ]
+    },
+    "41": {
+      "metinler": [
+        "Kısmetinin açık olduğunu rahatlıkla söyleyebilirim {{isim}}. Zaman zaman üzerine bir sis çöküyormuş gibi hissetsen de, o sis gerçek değil, yalnızca senin endişelerinden ibaret. Gönlünü ferah tut, çünkü yolun aydınlık.",
+        "Kısmetinin önünde küçük bir düğüm varmış gibi görünüyor {{isim}}, ama bu düğüm çözülmeye çok yakın. Çoğu zaman kendi tereddütlerin kısmetinin önüne geçiyor. İçindeki o sesi biraz susturduğunda, kapıların ardına kadar açıldığını göreceksin.",
+        "Tüm işaretler kısmetinin tam da bu dönemde açılmaya başladığını gösteriyor {{isim}}. Uzun süredir beklediğin bir konuda nihayet hareketlenme olacak. Bunu küçük bir kıpırtıyla, ince bir işaretle fark edeceksin.",
+        "İçimden bir ses, kısmetinin hiç kapanmadığını, yalnızca senin bakmadığın bir yerde seni beklediğini söylüyor {{isim}}. Belki de aradığın şey hep yakınındaydı. Gözlerini biraz kısıp etrafına baktığında şaşıracaksın.",
+        "Yıldızlar senin kısmetinin bereketli olduğunu fısıldıyor {{isim}}. Hem gönül işlerinde hem de bolluk konusunda önünde güzel kapılar var. Yeter ki sen kendine olan inancını kaybetme; gerisi kendiliğinden gelecek."
+      ],
+      "metinler_en": [
+        "I can comfortably say that your fortune is open, {{isim}}. Even if from time to time you feel as though a mist settles over you, that mist isn't real, it's made only of your worries. Keep your heart at ease, because your path is bright.",
+        "It seems there's a small knot in front of your fortune, {{isim}}, but this knot is very close to being untied. Most of the time it's your own hesitations that get in the way of your fortune. Once you quiet that voice inside you a little, you'll see the doors open wide.",
+        "All the signs show that your fortune is beginning to open precisely in this period, {{isim}}. In a matter you've long awaited, there will finally be movement. You'll notice it through a small stir, a subtle sign.",
+        "Something inside me says your fortune has never closed, it's only waiting for you in a place you haven't looked, {{isim}}. Perhaps what you've been searching for was always near you. When you narrow your eyes a little and look around, you'll be surprised.",
+        "The stars whisper that your fortune is bountiful, {{isim}}. There are lovely doors ahead of you both in matters of the heart and in abundance. Just don't lose your faith in yourself; the rest will come on its own."
+      ]
+    },
+    "42": {
+      "metinler": [
+        "Yaşadığın yerle ilgili içinde bir arayış olduğunu görüyorum {{isim}}. Yakın olmasa da orta vadede yerini değiştireceğin, belki de bambaşka bir şehre yerleşeceğin bir dönem var. Bu taşınma sana iyi gelecek.",
+        "Tüm işaretler bir gün bulunduğun şehirden ayrılacağını gösteriyor {{isim}}, ama bu aceleye gelmeyecek. Önce içinde \"burada bir şey eksik\" hissi büyüyecek, sonra fırsat ayağına kadar gelecek. Kaçırma.",
+        "İçimden bir ses, suyun ya da yeşilin yakın olduğu bir yere doğru çekildiğini söylüyor {{isim}}. Belki hemen değil ama ileride, daha sakin bir yerde yeni bir düzen kuracaksın. Orada kendini çok daha huzurlu hissedeceksin.",
+        "Şehir değiştirme fikri kafanda bir süredir dönüyor olabilir {{isim}}. Yıldızlar bu konuda acele etmemeni, ama kapıyı da tamamen kapatmamanı söylüyor. Doğru zaman geldiğinde içinden gelen ses sana yolu gösterecek.",
+        "Kaderin ipliği seni bir gün doğduğun yerden farklı bir diyara taşıyacak {{isim}}. Bu değişim bir işin, bir sevdiğinin ya da yepyeni bir başlangıcın peşinden gelecek. Yeni şehir sana yeni bir sen armağan edecek."
+      ],
+      "metinler_en": [
+        "I see that there's a searching inside you about where you live, {{isim}}. Even if not soon, in the medium term there's a period when you'll change your place, perhaps settling in an entirely different city. This move will be good for you.",
+        "All the signs show that one day you'll leave the city you're in, {{isim}}, but it won't happen in a rush. First the feeling that something is missing here will grow inside you, then the opportunity will come right to your feet. Don't miss it.",
+        "Something inside me says you're being drawn toward a place where water or greenery is close by, {{isim}}. Maybe not right away, but later on, you'll build a new order in a calmer place. There you'll feel far more at peace.",
+        "The idea of changing cities may have been turning over in your mind for a while, {{isim}}. The stars tell you not to rush this, but also not to close the door completely. When the right time comes, the voice within you will show you the way.",
+        "The thread of fate will one day carry you from where you were born to a different land, {{isim}}. This change will follow a job, a loved one, or a brand-new beginning. The new city will gift you a new you."
+      ]
+    },
+    "43": {
+      "metinler": [
+        "Hayatına şans getirecek birinin yolda olduğunu hissediyorum {{isim}}. Bu kişiyle tanışman sıradan bir anda, belki de hiç beklemediğin bir ortamda olacak. İlk bakışta fark etmeyebilirsin, ama varlığı yavaş yavaş hayatını aydınlatacak.",
+        "Tüm işaretler çevrende sana uğur getiren bir enerjinin dolaştığını gösteriyor {{isim}}. Bu biri yeni biri olmayabilir; belki de zaten tanıdığın, ama kıymetini henüz tam anlamadığın bir kişi. Ona daha yakından bakmanı öneririm.",
+        "İçimden bir ses, adında açık bir sesli harf olan birinin sana kapı açacağını söylüyor {{isim}}. Bu kişi senin için bir fırsatın ya da güzel bir tanışmanın vesilesi olacak. Hayata onun eliyle bir kapı aralanacak.",
+        "Şans dediğin şey çoğu zaman doğru kişiyle doğru anda karşılaşmaktır {{isim}}, ve ben senin için böyle bir karşılaşma görüyorum. Bu kişi sana yeni bir yol, yeni bir bakış açısı getirecek. Tanıştığında içinden \"iyi ki\" diyeceksin.",
+        "Kaderin ipliğinde sana destek olacak sıcak bir el görüyorum {{isim}}. Zor bir anında tam da ihtiyacın olan kişi karşına çıkacak. Bu yardım belki maddi, belki de sadece doğru bir söz olacak; ama tam zamanında gelecek."
+      ],
+      "metinler_en": [
+        "I feel that someone who will bring luck into your life is on the way, {{isim}}. You'll meet this person in an ordinary moment, perhaps in a setting you never expected. You may not notice it at first glance, but their presence will slowly light up your life.",
+        "All the signs show that an energy bringing you good fortune is circulating around you, {{isim}}. This person may not be someone new; perhaps it's someone you already know but whose worth you haven't fully understood yet. I'd suggest you look at them more closely.",
+        "Something inside me says that someone with a clear vowel in their name will open a door for you, {{isim}}. This person will be the means for an opportunity or a lovely acquaintance. A door into life will open through their hand.",
+        "What you call luck is most often meeting the right person at the right moment, {{isim}}, and I see such a meeting for you. This person will bring you a new path, a new perspective. When you meet them, you'll tell yourself it's a good thing.",
+        "In the thread of fate I see a warm hand that will support you, {{isim}}. At a difficult moment, exactly the person you need will appear before you. This help may be material, or it may be just the right word; but it will come at just the right time."
+      ]
+    },
+    "44": {
+      "metinler": [
+        "İnsanların sana bakışının yakın zamanda değişeceğini görüyorum {{isim}}, hem de senin lehine. Şu ana kadar hakkında yanlış bir izlenime sahip birkaç kişi var; ama bir olay onların fikrini tamamen değiştirecek. Gerçek değerin ortaya çıkacak.",
+        "Tüm işaretler çevrendeki insanların seni giderek daha çok takdir ettiğini gösteriyor {{isim}}. Belki şimdiye dek sessiz kaldın, kendini çok anlatmadın; ama yaptıkların konuşmaya başladı bile. İnsanlar artık seni daha dikkatli dinliyor.",
+        "İçimden bir ses, bir süredir seni küçümseyen birinin yakında saygı duymak zorunda kalacağını söylüyor {{isim}}. Sen kimseye bir şey ispatlamak zorunda değilsin; ama hayat bunu senin yerine yapacak. O gün geldiğinde sadece gülümseyeceksin.",
+        "İnsanların sana olan bakışı aslında senin kendine bakışının bir yansıması {{isim}}. İçindeki değeri fark ettiğin an, çevrenin de sana olan tavrı değişecek. Bu değişim sandığından çok daha hızlı gerçekleşecek.",
+        "Yıldızlar yakın bir dönemde itibarının yükseleceğini fısıldıyor {{isim}}. Bir çevrede adın güzel bir şekilde anılacak, belki de hiç ummadığın biri senin hakkında övgüyle konuşacak. Bu, uzun zamandır hak ettiğin bir takdir."
+      ],
+      "metinler_en": [
+        "I see that the way people see you will change soon, {{isim}}, and in your favor. Up to now there are a few people who have the wrong impression of you; but an event will change their minds completely. Your true worth will come to light.",
+        "All the signs show that the people around you appreciate you more and more, {{isim}}. Perhaps until now you've stayed quiet and haven't explained yourself much; but what you've done has already begun to speak. People now listen to you more carefully.",
+        "Something inside me says that someone who has been looking down on you for a while will soon be forced to respect you, {{isim}}. You don't have to prove anything to anyone; but life will do it for you. When that day comes, you'll simply smile.",
+        "The way people see you is actually a reflection of the way you see yourself, {{isim}}. The moment you recognize the worth within you, the attitude of those around you will change too. This change will happen much faster than you think.",
+        "The stars whisper that your standing will rise in the near term, {{isim}}. Your name will be mentioned fondly in a certain circle, and perhaps someone you'd never expect will speak of you with praise. This is an appreciation you've long deserved."
+      ]
+    },
+    "45": {
+      "metinler": [
+        "Çok yakında seni şaşırtacak güzel bir sürprizin olduğunu görüyorum {{isim}}. Sıradan görünen bir gün, umulmadık bir sevince dönüşecek. O an geldiğinde \"demek böyleymiş\" diye gülümseyeceksin.",
+        "Tüm işaretler kapına bir müjdenin yaklaştığını gösteriyor {{isim}}. Bu sürpriz belki bir hediye, belki bir haber, belki de uzaktan gelen bir ses olacak. Küçük görünse de kalbini ısıtacak.",
+        "İçimden bir ses, sevdiğin birinin senin için güzel bir şey hazırladığını söylüyor {{isim}}. Bundan henüz haberin yok, ama sezgilerin bir şeylerin değiştiğini hissediyor. Biraz sabret, bozma sürprizi.",
+        "Yakın zamanda beklemediğin bir yerden güzel bir gelişme karşına çıkacak {{isim}}. Belki aylardır takıldığın bir konu birden çözülecek, belki de yeni bir kapı aralanacak. Her iki halde de yüzün gülecek.",
+        "Yıldızlar önümüzdeki günlerde seni mutlu edecek küçük ama anlamlı bir olay olduğunu fısıldıyor {{isim}}. Büyük bir patlama değil, ama tam da ihtiyacın olan anda gelen bir tebessüm olacak. Bazen en küçük sürprizler en çok iyi gelir."
+      ],
+      "metinler_en": [
+        "I see that very soon you'll have a lovely surprise that will astonish you, {{isim}}. A day that looks ordinary will turn into unexpected joy. When that moment comes, you'll smile and realize that's how it was meant to be.",
+        "All the signs show that good news is approaching your door, {{isim}}. This surprise may be a gift, may be a piece of news, or may be a voice from afar. Though it may seem small, it will warm your heart.",
+        "Something inside me says that someone you love has prepared something lovely for you, {{isim}}. You don't know of it yet, but your intuition senses that something is changing. Be patient a little, don't spoil the surprise.",
+        "Soon a lovely development will appear before you from a place you don't expect, {{isim}}. Perhaps a matter you've been stuck on for months will suddenly resolve, or a new door will open. Either way, you'll smile.",
+        "The stars whisper that in the coming days there's a small but meaningful event that will make you happy, {{isim}}. It won't be a big bang, but a smile that arrives exactly when you need it. Sometimes the smallest surprises do the most good."
+      ]
+    },
+    "46": {
+      "metinler": [
+        "Bolluk ve bereketin kapına doğru yol aldığını görüyorum {{isim}}. Önce küçük kolaylıklar şeklinde başlayacak: beklemediğin bir indirim, eline geçen ufak bir fırsat. Sonra bunlar çoğalarak bir akışa dönüşecek.",
+        "Tüm işaretler evinde bereketin artacağını gösteriyor {{isim}}. Belki büyük bir servet değil, ama elindekinin daha çok yetmeye başladığı, kendini daha rahat hissedeceğin bir dönem geliyor. Şükrettikçe bereket büyüyecek.",
+        "İçimden bir ses, bir süredir sıkıştığın maddi konularda yakında nefes alacağını söylüyor {{isim}}. Tam umudunu kaybetmeye yaklaştığın bir anda işler lehine dönecek. Bereket çoğu zaman en dar günün hemen ardından gelir.",
+        "Kaderin ipliğinde senin için bereketli bir dönem örülüyor {{isim}}. Emek verdiğin bir iş, beklediğinden daha fazla karşılık getirecek. Eline geçen bolluğu paylaştıkça, geriye kat kat fazlası dönecek.",
+        "Yıldızlar bereket kapının çoktan aralandığını fısıldıyor {{isim}}. Sen henüz tam görmesen de, çevrendeki küçük işaretler bunu müjdeliyor. Gönlünü geniş tut, çünkü bolluk cömert kalplere akmayı sever."
+      ],
+      "metinler_en": [
+        "I see abundance and blessing making their way toward your door, {{isim}}. It will start with small conveniences at first: an unexpected discount, a little opportunity that comes your way. Then these will multiply and turn into a flow.",
+        "All the signs show that the blessing in your home will increase, {{isim}}. Perhaps not a great fortune, but a period is coming when what you have will start to stretch further and you'll feel more at ease. The more you give thanks, the more the blessing will grow.",
+        "Something inside me says that in the financial matters you've been struggling with for a while, you'll soon breathe easier, {{isim}}. Just at a moment when you're close to losing hope, things will turn in your favor. Blessing often comes right after the tightest day.",
+        "In the thread of fate, a bountiful period is being woven for you, {{isim}}. A job you've put effort into will bring back more than you expect. The more you share the abundance that comes your way, the more it will return to you many times over.",
+        "The stars whisper that your door of blessing has already opened a crack, {{isim}}. Even if you can't fully see it yet, the small signs around you herald it. Keep your heart open, because abundance loves to flow to generous hearts."
+      ]
+    },
+    "47": {
+      "metinler": [
+        "Geçmişten birinin yeniden hayatına girmek üzere olduğunu hissediyorum {{isim}}. Bu kişi bir gün hiç beklemediğin bir anda, belki bir mesajla, belki tesadüfi bir karşılaşmayla karşına çıkacak. İçinde eski bir duygu kıpırdayacak.",
+        "Tüm işaretler geçmişte bıraktığın birinin seni hâlâ aklından çıkaramadığını gösteriyor {{isim}}. Geri dönmek için uygun bir bahane arıyor olabilir. Döndüğünde aranızdaki o yarım kalmış konuyu konuşma fırsatı bulacaksınız.",
+        "İçimden bir ses, geçmişten dönecek kişinin bir dost olduğunu söylüyor {{isim}}, illa bir sevgili değil. Uzun süredir görüşmediğin biri yeniden hayatına renk katacak. Bu yeniden buluşma sana iyi gelecek.",
+        "Geçmişin bir kapısı yeniden aralanacak {{isim}}, ama bu sefer eskisi gibi olmayacak. Hem sen değiştin hem de o kişi. Bu yüzden dönüş, eski bir hikâyenin tekrarı değil, yepyeni bir başlangıç olabilir.",
+        "Kaderin ipliği geçmişten bir simayı yeniden sana doğru çekiyor {{isim}}. Fakat bu dönüşün senin için hayırlı olup olmayacağına kalbinle karar vereceksin. İşaretleri iyi oku; geçmiş bazen ders vermek için geri gelir, bazen de eksik kalanı tamamlamak için."
+      ],
+      "metinler_en": [
+        "I feel that someone from the past is about to enter your life again, {{isim}}. This person will appear before you one day at a moment you never expect, perhaps with a message, perhaps through a chance encounter. An old feeling will stir inside you.",
+        "All the signs show that someone you left in the past still can't get you off their mind, {{isim}}. They may be looking for a suitable excuse to come back. When they return, you'll find the chance to talk about that unfinished matter between you.",
+        "Something inside me says the person returning from the past is a friend, {{isim}}, not necessarily a lover. Someone you haven't seen in a long time will bring color back into your life. This reunion will do you good.",
+        "A door of your past will open again, {{isim}}, but this time it won't be like before. Both you and that person have changed. So this return may not be the repeat of an old story, but a brand-new beginning.",
+        "The thread of fate is drawing a face from the past back toward you, {{isim}}. But whether this return will be good for you is something you'll decide with your heart. Read the signs well; the past sometimes comes back to teach a lesson, and sometimes to complete what was left unfinished."
+      ]
+    },
+    "48": {
+      "metinler": [
+        "Birinin sana gönülden bağlı olduğunu açıkça görüyorum {{isim}}. Bu kişi hislerini belki yüksek sesle söylemiyor, ama davranışlarında, bakışlarında belli ediyor. Sen de içten içe bunu seziyorsun, değil mi?",
+        "Tüm işaretler çevrende seni kalbine koymuş birinin olduğunu gösteriyor {{isim}}. Bu bağ gösterişli değil, sessiz ama derin. Böyle bir sevgi, gürültülü olanlardan çok daha kıymetlidir.",
+        "İçimden bir ses, sana bağlı olan kişinin bunu itiraf etmekte zorlandığını söylüyor {{isim}}. Çekingen davranmasının sebebi ilgisizlik değil, aksine seni kaybetme korkusu. Ona biraz alan açarsan, kalbini açacak.",
+        "Birinin kalbinde özel bir yer tuttuğun kesin {{isim}}. Belki bu kişi uzakta, belki çok yakınında; ama senin adını andığında gözleri parlıyor. Bu bağ zamanla daha da güçlenecek.",
+        "Yıldızlar sana gönülden bağlı birinin varlığını fısıldıyor {{isim}}. İlginçtir, bu kişiyi bazen fark etmiyor, kıymetini tam bilmiyor olabilirsin. Etrafına biraz daha dikkatli baktığında o sıcaklığı hissedeceksin."
+      ],
+      "metinler_en": [
+        "I clearly see that someone is devoted to you from the heart, {{isim}}. This person may not say their feelings out loud, but they show it in their actions and their glances. Deep down you sense it too, don't you?",
+        "All the signs show that there is someone around you who holds you in their heart, {{isim}}. This bond isn't showy, it's quiet but deep. Such a love is far more precious than the loud ones.",
+        "Something inside me says that the person devoted to you struggles to confess it, {{isim}}. The reason they act shy isn't indifference, but rather the fear of losing you. If you open up a little space for them, they'll open their heart.",
+        "It's certain that you hold a special place in someone's heart, {{isim}}. Perhaps this person is far away, perhaps very close; but when they mention your name, their eyes light up. This bond will grow even stronger over time.",
+        "The stars whisper of the presence of someone devoted to you from the heart, {{isim}}. Interestingly, you may sometimes not notice this person or fully know their worth. When you look around a little more carefully, you'll feel that warmth."
+      ]
+    },
+    "49": {
+      "metinler": [
+        "Hak ettiğin değeri yakında göreceğini görüyorum {{isim}}. Uzun süredir emek verdiğin, ama karşılığını alamadığını düşündüğün bir konuda nihayet takdir edileceksin. Sabrının meyvesini toplama vaktin geliyor.",
+        "Tüm işaretler değerinin giderek daha çok anlaşıldığını gösteriyor {{isim}}. Belki şimdiye dek fazla ses çıkarmadın, haklarını savunmadın; ama bu durum değişiyor. Artık emeğin görünür olacak.",
+        "İçimden bir ses, bir süredir kıymetini bilmeyen bir ortamda olduğunu söylüyor {{isim}}. Merak etme, bu kalıcı değil. Ya orada tavırlar değişecek ya da seni gerçekten takdir edecek yeni bir çevre kapını çalacak.",
+        "Değerin aslında hiç azalmadı {{isim}}; sadece yanlış kişiler tarafından görülmedi. Doğru insanların arasına katıldığın an, hak ettiğin saygıyı fazlasıyla alacaksın. O gün çok uzakta değil.",
+        "Kaderin ipliği senin alnının akıyla çıkacağın bir döneme işaret ediyor {{isim}}. Verdiğin emekler ve dürüstlüğün, hiç ummadığın bir anda karşılığını bulacak. Değerin, seni en çok eleştirenler tarafından bile itiraf edilecek."
+      ],
+      "metinler_en": [
+        "I see that you'll soon get the value you deserve, {{isim}}. In a matter you've long put effort into but felt you weren't rewarded for, you'll finally be appreciated. The time to harvest the fruit of your patience is coming.",
+        "All the signs show that your worth is being understood more and more, {{isim}}. Perhaps until now you haven't made much noise or defended your rights; but this is changing. From now on your effort will be visible.",
+        "Something inside me says that for a while you've been in an environment that doesn't know your worth, {{isim}}. Don't worry, this isn't permanent. Either attitudes there will change, or a new circle that truly appreciates you will knock on your door.",
+        "Your worth never actually diminished, {{isim}}; it simply wasn't seen by the wrong people. The moment you join the right people, you'll receive the respect you deserve and then some. That day isn't far off.",
+        "The thread of fate points to a period when you'll come out with your honor intact, {{isim}}. The effort you've given and your honesty will find their reward at a moment you never expect. Your worth will be admitted even by those who criticize you the most."
+      ]
+    },
+    "50": {
+      "metinler": [
+        "İçindeki o soruyu duyuyorum {{isim}}, ve evren sana \"merak etme, her şey yoluna girecek\" diyor. Cevabı aslında çoktan kalbinin bir köşesinde biliyorsun; sadece onaylanmayı bekliyorsun. İşaretler seni haklı çıkaracak.",
+        "Tüm işaretler içindeki o sorunun yakında yanıtını bulacağını gösteriyor {{isim}}. Evren acele etmeni değil, akışına güvenmeni istiyor. Zorladığın değil, bıraktığın an çözülecek düğüm.",
+        "İçimden bir ses, aklındaki o konuda endişeye gerek olmadığını söylüyor {{isim}}. Kafanda büyüttüğün şey, gerçekte göründüğü kadar büyük değil. Evren sana sabır ve biraz da cesaret öğütlüyor.",
+        "İçinde taşıdığın o soru, aslında bir dönüm noktasının habercisi {{isim}}. Evren bu konuda sana \"sen hazır olduğunda cevap kendiliğinden gelecek\" diyor. Yakın zamanda içini rahatlatacak bir işaret alacaksın.",
+        "Kaderin ipliği, içindeki o soruyla ilgili güzel bir sona işaret ediyor {{isim}}. Belki yol biraz dolambaçlı olacak, ama varış noktası senin lehine. Evren seni asla yüzüstü bırakmayacak; buna gönülden inan."
+      ],
+      "metinler_en": [
+        "I hear that question inside you, {{isim}}, and the universe says to you, \"don't worry, everything will work out.\" You actually already know the answer in a corner of your heart; you're just waiting to have it confirmed. The signs will prove you right.",
+        "All the signs show that the question inside you will soon find its answer, {{isim}}. The universe wants you not to rush, but to trust its flow. The knot will come undone not when you force it, but when you let go.",
+        "Something inside me says there's no need to worry about the matter on your mind, {{isim}}. The thing you've blown up in your head isn't as big as it really appears. The universe counsels you patience and a little courage.",
+        "That question you carry inside is actually the herald of a turning point, {{isim}}. On this matter the universe tells you, \"when you're ready, the answer will come on its own.\" Soon you'll receive a sign that puts your heart at ease.",
+        "The thread of fate points to a lovely ending regarding that question inside you, {{isim}}. Perhaps the road will be a bit winding, but the destination is in your favor. The universe will never let you down; believe this with all your heart."
+      ]
+    },
+    "51": {
+      "metinler": [
+        "İçindeki o cesareti toplamanın tam zamanı olduğunu görüyorum {{isim}}. Uzun süredir ertelediğin o adım, sandığından çok daha hayırlı sonuçlar getirecek. Korkun gerçek değil, sadece bilinmeyenin gölgesi.",
+        "Tüm işaretler bu dönemde atacağın cesur bir adımın kaderini olumlu yönde değiştireceğini gösteriyor {{isim}}. Belki başta elin ayağın titreyecek, ama ardından büyük bir ferahlık geleceğini hissediyorum. Riskin karşılığını alacaksın.",
+        "İçimden bir ses, acele etmeden ama kararlılıkla ilerlemeni söylüyor {{isim}}. Her cesur adım gürültülü olmak zorunda değil; bazen sessiz ve emin bir karar en güçlüsüdür. Zamanlamana güven.",
+        "Cesur adımı atmadan önce içinden gelen sesi bir kez daha dinle {{isim}}. Çünkü sezgilerin bu konuda sana doğruyu fısıldıyor. Eğer içinde ufak bir \"evet\" varsa, o evet büyük bir kapının anahtarı olabilir.",
+        "Kaderin ipliği, cesaretini kuşandığın anda önünün açılacağını gösteriyor {{isim}}. Çekindiğin o konu, aslında seni yeni bir evreye taşıyacak eşik. Bir adım at, gerisi kendiliğinden gelecek."
+      ],
+      "metinler_en": [
+        "I see that it's exactly the right time to gather that courage inside you, {{isim}}. That step you've long postponed will bring far better results than you think. Your fear isn't real, it's only the shadow of the unknown.",
+        "All the signs show that a bold step you take in this period will change your fate for the better, {{isim}}. Perhaps your hands will tremble at first, but I sense that a great relief will follow. You'll be rewarded for the risk.",
+        "Something inside me says to move forward without rushing but with determination, {{isim}}. Every bold step doesn't have to be loud; sometimes a quiet, sure decision is the strongest. Trust your timing.",
+        "Before taking the bold step, listen once more to the voice within you, {{isim}}. Because your intuition is whispering the truth to you on this matter. If there's a small \"yes\" inside you, that yes may be the key to a great door.",
+        "The thread of fate shows that the moment you arm yourself with courage, your path will open, {{isim}}. That matter you hesitate over is actually the threshold that will carry you to a new phase. Take one step, and the rest will come on its own."
+      ]
+    },
+    "52": {
+      "metinler": [
+        "Uzaktan seni merak eden birinin olduğunu açıkça hissediyorum {{isim}}. Bu kişi seni anıyor, sosyal medyandan ya da ortak bir tanıdıktan haberlerini takip ediyor olabilir. Adını duyduğunda içi bir hoş oluyor.",
+        "Tüm işaretler aranızda mesafe olan birinin aklından geçtiğini gösteriyor {{isim}}. Belki aynı şehirde değilsiniz, belki araya bir dargınlık girdi; ama o kişi seni hâlâ merak ediyor. Zaman zaman sana ulaşmayı düşünüyor.",
+        "İçimden bir ses, uzaktaki birinin seninle ilgili güzel şeyler düşündüğünü söylüyor {{isim}}. Bu merak kötü niyetli değil; aksine özlem dolu. Günün birinde bu kişiden bir haber gelmesi hiç şaşırtmaz beni.",
+        "Seni uzaktan izleyen, ama belli etmekten çekinen biri var {{isim}}. Gurur mu, çekingenlik mi bilmiyorum; ama içinden hep senin nasıl olduğunu merak ediyor. Bazen attığın bir paylaşım bile onun gününü değiştiriyor.",
+        "Kaderin ipliği, uzaktaki bir gönülden sana doğru uzanıyor {{isim}}. Bu kişi belki yıllar önce yolun kesiştiği biri, belki de yeni tanıdığın biri. Her halükârda zihninde sık sık yer ediyorsun."
+      ],
+      "metinler_en": [
+        "I clearly feel that there is someone wondering about you from afar, {{isim}}. This person remembers you, and may be following news of you through social media or a mutual acquaintance. When they hear your name, a warmth comes over them.",
+        "All the signs show that someone with distance between you has you on their mind, {{isim}}. Maybe you're not in the same city, maybe a falling-out came between you; but that person still wonders about you. From time to time they think about reaching out to you.",
+        "Something inside me says that someone far away is thinking lovely things about you, {{isim}}. This curiosity isn't ill-intentioned; on the contrary, it's full of longing. It wouldn't surprise me at all if word came from this person one day.",
+        "There is someone who watches you from afar but hesitates to show it, {{isim}}. Whether it's pride or shyness I don't know; but inside they always wonder how you're doing. Sometimes even a post you share changes their whole day.",
+        "The thread of fate stretches toward you from a heart far away, {{isim}}. This person may be someone whose path crossed yours years ago, or someone you've recently met. Either way, you often take a place in their mind."
+      ]
+    },
+    "53": {
+      "metinler": [
+        "Önündeki yolun açık olduğunu görüyorum {{isim}}, sadece bazı yerlerinde küçük virajlar var. Bu virajlar seni yavaşlatabilir ama asla durduramaz. Yola devam ettikçe manzaranın güzelleştiğini fark edeceksin.",
+        "Tüm işaretler önündeki engellerin birer birer kalkmakta olduğunu gösteriyor {{isim}}. Bir süredir tıkandığını hissettiğin konuda yakında bir açılma olacak. Yol göründüğünden çok daha düz.",
+        "İçimden bir ses, yolunun açık olduğunu ama senin bazen kendi önüne set çektiğini söylüyor {{isim}}. Tereddütlerini bir kenara bıraktığında, ilerlemenin ne kadar kolay olduğuna şaşıracaksın. Kendine biraz daha güven.",
+        "Önündeki yol açık {{isim}}, ama bir yol ayrımına yaklaşıyorsun. Hangi tarafa döneceğine kalbinle karar vereceksin ve ikisi de seni kötü bir yere götürmeyecek. Rahat ol, kaybolmayacaksın.",
+        "Kaderin ipliği önünde aydınlık bir patika seriyor {{isim}}. Zaman zaman sis içinde gibi hissetsen de, attığın her adım o sisi biraz daha dağıtacak. Yürümeye devam et; varacağın yer düşündüğünden güzel."
+      ],
+      "metinler_en": [
+        "I see that the road ahead of you is open, {{isim}}, there are just small bends in some places. These bends may slow you down but can never stop you. As you keep going, you'll notice the view growing more beautiful.",
+        "All the signs show that the obstacles ahead of you are being lifted one by one, {{isim}}. In a matter where you've felt blocked for a while, there will soon be an opening. The road is far straighter than it seems.",
+        "Something inside me says your road is open but that you sometimes put up a barrier in your own way, {{isim}}. When you set your hesitations aside, you'll be surprised at how easy it is to move forward. Trust yourself a little more.",
+        "The road ahead of you is open, {{isim}}, but you're approaching a fork. You'll decide which way to turn with your heart, and neither will take you to a bad place. Relax, you won't get lost.",
+        "The thread of fate lays a bright path before you, {{isim}}. Even if from time to time you feel as though you're in a fog, every step you take will scatter that fog a little more. Keep walking; the place you'll reach is lovelier than you think."
+      ]
+    },
+    "54": {
+      "metinler": [
+        "Yakın zamanda hayatına girecek yeni bir dostluk görüyorum {{isim}}. Bu kişiyle beklenmedik bir ortamda tanışacaksın ve kısa sürede aranızda samimi bir bağ kurulacak. Bazen en güzel dostluklar en sade başlangıçlardan doğar.",
+        "Tüm işaretler çevrene yeni ve iyi niyetli birinin katılacağını gösteriyor {{isim}}. Bu dostluk sana yeni bir bakış açısı, belki de yeni bir uğraş getirecek. Onunla vakit geçirdikçe kendini daha iyi hissedeceksin.",
+        "İçimden bir ses, yeni tanışacağın kişiyle ortak çok şeyiniz olacağını söylüyor {{isim}}. İlk sohbetinizde bile yılların dostu gibi konuşacaksınız. Bu bağ zamanla hayatının en değerlilerinden biri olacak.",
+        "Yeni bir dostluğun eşiğindesin {{isim}}, ama bu dostluk kalabalıkların arasından değil, sakin bir anın içinden çıkacak. Belki bir ortak ilgi, belki bir tesadüf sizi buluşturacak. Kalbini biraz aç, güzel insanlar yakında.",
+        "Kaderin ipliği hayatına sıcak bir dostluk örüyor {{isim}}. Bu kişi zor günlerinde yanında olacak, sırdaşın olacak. Yeni dostluklara kapını kapatma, çünkü bu dönemde çevren güzelleşmeye hazırlanıyor."
+      ],
+      "metinler_en": [
+        "I see a new friendship that will enter your life soon, {{isim}}. You'll meet this person in an unexpected setting and a warm bond will form between you in a short time. Sometimes the loveliest friendships are born from the simplest beginnings.",
+        "All the signs show that someone new and well-intentioned will join your circle, {{isim}}. This friendship will bring you a new perspective, perhaps a new pursuit. The more time you spend with them, the better you'll feel.",
+        "Something inside me says you'll have a lot in common with the person you're about to meet, {{isim}}. Even in your first conversation, you'll talk like old friends. This bond will in time become one of the most precious in your life.",
+        "You're on the threshold of a new friendship, {{isim}}, but this friendship will emerge not from a crowd, but from a quiet moment. Perhaps a shared interest, perhaps a coincidence will bring you together. Open your heart a little; lovely people are near.",
+        "The thread of fate is weaving a warm friendship into your life, {{isim}}. This person will be by your side on hard days and will become your confidant. Don't close your door to new friendships, because in this period your circle is preparing to grow lovelier."
+      ]
+    },
+    "55": {
+      "metinler": [
+        "Hayalini kurduğun o şeye kavuşacağını görüyorum {{isim}}, ama belki tam da hayal ettiğin anda değil. Kader onu senin için en doğru zamana saklıyor. O gün geldiğinde beklemenin neden gerektiğini anlayacaksın.",
+        "Tüm işaretler hayalinin gerçeğe dönüşmeye başladığını gösteriyor {{isim}}. Her ne kadar uzak görünse de, sen farkında olmadan ona doğru ilerliyorsun. Attığın küçük adımlar bir araya gelip seni o hayale ulaştıracak.",
+        "İçimden bir ses, hayalinin biçim değiştirerek gerçekleşeceğini söylüyor {{isim}}. Belki tam istediğin gibi olmayacak, ama senin için daha hayırlı bir hale bürünecek. Sonunda \"demek en iyisi buymuş\" diyeceksin.",
+        "Hayalini kurduğun şeye olan inancını kaybetmediğin sürece, ona kavuşacağını hissediyorum {{isim}}. En büyük engel çoğu zaman insanın kendi şüpheleridir. Sen inandıkça kapılar aralanacak.",
+        "Kaderin ipliği seni yavaş yavaş o hayale doğru çekiyor {{isim}}. Yol biraz uzun olabilir, zaman zaman sabrın zorlanabilir; ama varış mutlu. O hayale kavuştuğunda bugünleri gülümseyerek hatırlayacaksın."
+      ],
+      "metinler_en": [
+        "I see that you'll attain the thing you dream of, {{isim}}, but perhaps not at the exact moment you imagine. Fate is saving it for the most right time for you. When that day comes, you'll understand why the wait was necessary.",
+        "All the signs show that your dream is beginning to turn into reality, {{isim}}. However distant it may seem, you're moving toward it without realizing. The small steps you take will come together and bring you to that dream.",
+        "Something inside me says your dream will come true by changing shape, {{isim}}. Perhaps it won't be exactly as you wanted, but it will take on a form more favorable for you. In the end you'll say this was the best after all.",
+        "As long as you don't lose faith in the thing you dream of, I feel that you'll attain it, {{isim}}. The greatest obstacle is most often a person's own doubts. As you believe, the doors will open.",
+        "The thread of fate is slowly drawing you toward that dream, {{isim}}. The road may be a bit long, and your patience may be tested from time to time; but the arrival is happy. When you attain that dream, you'll remember these days with a smile."
+      ]
+    },
+    "56": {
+      "metinler": [
+        "Rızkının bollaşacağını görüyorum {{isim}}. Önce ufak kolaylıklarla başlayacak, sonra kazancın emeğinle orantılı şekilde artacak. Darlık dediğin şey geçici bir gölgeden ibaret; aydınlık çok yakın.",
+        "Tüm işaretler kapından rızkın bollukla gireceği bir döneme yaklaştığını gösteriyor {{isim}}. Belki büyük bir servet değil, ama elinin giderek daha çok yeteceği, içinin rahatlayacağı bir zaman geliyor. Bereket emeğinle büyüyecek.",
+        "İçimden bir ses, rızık kapılarının senin için aralandığını söylüyor {{isim}}. Hiç ummadığın bir yönden eline bir imkân geçebilir. Önemli olan onu doğru değerlendirmen; o zaman bolluk kalıcı olacak.",
+        "Rızkın aslında hiç kesilmedi {{isim}}, sadece bazen akışı yavaşladı. Önümüzdeki dönemde bu akış yeniden hızlanacak. Elindekinin kıymetini bildikçe, berekete bereket katılacak.",
+        "Kaderin ipliğinde senin için bereketli bir sofra görüyorum {{isim}}. Paylaştıkça çoğalan, cömertlikle büyüyen bir rızık bu. Gönlünü ferah tut; darlık günlerin geride kalıyor, bolluk kapını çalmak üzere."
+      ],
+      "metinler_en": [
+        "I see that your sustenance will grow abundant, {{isim}}. It will start with small conveniences at first, then your earnings will increase in proportion to your effort. What you call hardship is nothing but a passing shadow; the light is very near.",
+        "All the signs show that you're approaching a period when sustenance will enter your door in abundance, {{isim}}. Perhaps not a great fortune, but a time is coming when what you have will stretch further and your heart will ease. The blessing will grow with your effort.",
+        "Something inside me says the doors of sustenance are opening for you, {{isim}}. An opportunity may come into your hands from a direction you'd never expect. What matters is that you make good use of it; then the abundance will be lasting.",
+        "Your sustenance never actually stopped, {{isim}}, its flow just slowed at times. In the coming period this flow will speed up again. As you appreciate what you have, blessing will be added upon blessing.",
+        "In the thread of fate I see a bountiful table for you, {{isim}}. This is a sustenance that multiplies as it's shared and grows with generosity. Keep your heart at ease; your days of hardship are ending, and abundance is about to knock on your door."
+      ]
     }
-  ]
+  }
 }

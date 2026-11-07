@@ -428,15 +428,18 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
 
   // ── 3 fotoğraf yuvası — yan yana kareler, sadece numara ──────────────────────
   Widget _buildPhotoSlots() {
+    // 3 EŞİT kare yuva: aralar SizedBox ile; per-yuva asimetrik padding YOK
+    // (önceden soldaki yuva padding'siz olduğu için diğerlerinden büyüktü — Anıl).
     return Row(
-      children: List.generate(3, (i) {
-        final photo = _photos[i];
-        return Expanded(
-          child: Padding(
-            padding: EdgeInsets.only(left: i > 0 ? 10 : 0),
-            child: AspectRatio(
-              aspectRatio: 1,
-              child: GestureDetector(
+      children: [
+        for (int i = 0; i < 3; i++) ...[
+          if (i > 0) const SizedBox(width: 10),
+          Expanded(
+            child: Builder(builder: (_) {
+              final photo = _photos[i];
+              return AspectRatio(
+                aspectRatio: 1,
+                child: GestureDetector(
                 onTap: () => _pickPhoto(i),
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 220),
@@ -493,12 +496,13 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
                             ),
                           ),
                         ),
+                  ),
                 ),
-              ),
-            ),
+              );
+            }),
           ),
-        );
-      }),
+        ],
+      ],
     );
   }
 

@@ -60,6 +60,8 @@ class PhotoSubjectDetector {
           if (has(_fincanWords)) return false; // fincan
           if (has(_yuzWordsStrong)) return false; // güçlü yüz etiketi
           // ML Kit "el" etiketi yok → el close-up BOL ten ister; yoksa el DEĞİL.
+          // Dosya çözülemediyse (skin<0: bozuk/eksik foto) ENGELLEME — kullanıcı cezalandırılmaz.
+          if (skin < 0) return true;
           // ML Kit yoksa (null) sezgi eşiği biraz daha hoşgörülü.
           return labels == null ? skin >= 0.22 : skin >= 0.30;
 
@@ -70,7 +72,13 @@ class PhotoSubjectDetector {
           // Anıl (2026-11-07, !!!): "3/3 fincan değilse UYARI ÇIKSIN + hak dolmasın". ML Kit
           // çalıştı ama fincan etiketi YOK → fincan DEĞİL. Kahve ekranındaki "≥1/3 fincan"
           // kuralı gerçek fincanı korur (3 kareden en az biri etiketlenmesi beklenir).
-          if (labels == null) return true; // ML Kit yok (test/platform) → engelleme
+          if (labels == null) {
+            // ML Kit yok (test/platform ya da cihazda etiketleme başarısız). Dosya
+            // çözülemediyse (skin<0) ENGELLEME. Aksi halde ten-baskın kare (el/yüz kadrajı
+            // doldurmuş) fincan DEĞİL → reddet; belirsiz/düşük-ten → hoşgörü (fincan olabilir).
+            if (skin < 0) return true;
+            return skin < 0.30;
+          }
           return false; // etiketler var, fincan yok → fincan değil
       }
     } catch (_) {

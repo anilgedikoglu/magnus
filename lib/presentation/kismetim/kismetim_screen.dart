@@ -193,7 +193,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             const Icon(Icons.favorite_rounded, color: _pink, size: 30),
-            const SizedBox(height: 10),
+            const SizedBox(height: 22),
             // Falın amacı (Anıl, 2026-11-06): önce merakı uyandır.
             Text(
               _tr('Gelecekte kimine olacaksın?',
@@ -201,18 +201,18 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
               textAlign: TextAlign.center,
               style: TextStyle(color: _pink, fontSize: 15, fontWeight: FontWeight.w700, height: 1.25),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 18),
             Text(
               _tr('Hangi tarihteki kısmetini merak ediyorsun?', 'Which year of your destiny are you curious about?'),
               textAlign: TextAlign.center,
               style: const TextStyle(color: Colors.white, fontSize: 16.5, fontWeight: FontWeight.w600, height: 1.3),
             ),
-            const SizedBox(height: 6),
+            const SizedBox(height: 12),
             Text(
               _tr('Sola kaydırarak geleceğe git', 'Swipe left to travel into the future'),
               style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 12.5),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 38),
             // Yatay yıl tekerleği: bu yıl solda/ortada başlar, geçmiş yok, sola kaydır → gelecek
             SizedBox(
               height: 78,
@@ -265,7 +265,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 28),
+            const SizedBox(height: 56),
             // Basılı-tut: geleceğe odaklan (Anıl, 2026-11-06; yıl tekerleğinden uzak + büyük).
             Opacity(
               opacity: _t == null ? 0.4 : 1,
@@ -279,7 +279,7 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 18),
             Text(
               _tr('Geleceğe odaklanmak için basılı tut', 'Hold to focus on the future'),
               style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontSize: 12),

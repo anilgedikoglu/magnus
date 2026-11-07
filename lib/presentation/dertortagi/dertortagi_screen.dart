@@ -548,29 +548,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
               ),
             ),
           ),
-          // Kapat
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
-            child: GestureDetector(
-              onTap: () => context.pop(),
-              child: Container(
-                width: double.infinity,
-                height: 48,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(colors: [Color(0xFFAA00CC), Color(0xFF7700AA)]),
-                  borderRadius: BorderRadius.circular(24),
-                  border: Border.all(
-                    color: const Color(0xFFFF55FF).withValues(alpha: 0.80),
-                    width: 1.5,
-                  ),
-                ),
-                child: Center(
-                  child: Text(ref.watch(l10nProvider).thanks,
-                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15)),
-                ),
-              ),
-            ),
-          ),
+          // "Teşekkürler" butonu KALDIRILDI (Anıl, 2026-11-07) — geri: başlık oku / kaydır.
           const FloatingBarSpacer(),
         ],
       ),

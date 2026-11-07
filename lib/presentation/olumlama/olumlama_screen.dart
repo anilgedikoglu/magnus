@@ -536,31 +536,7 @@ class _OlumlamaScreenState extends ConsumerState<OlumlamaScreen>
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           _NavBtn(icon: Icons.chevron_left_rounded,  onTap: _prev),
-          // Çıkış butonu — ortada, ikon yok
-          GestureDetector(
-            onTap: () => context.pop(),
-            child: Container(
-              height: 56,
-              padding: const EdgeInsets.symmetric(horizontal: 22),
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.10),
-                borderRadius: BorderRadius.circular(28),
-                border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.25), width: 1,
-                ),
-              ),
-              child: Center(
-                child: Text(
-                  ref.watch(l10nProvider).exit,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          // Çıkış butonu KALDIRILDI (Anıl, 2026-11-07) — geri: kaydır / Android geri.
           _NavBtn(icon: Icons.chevron_right_rounded, onTap: _next),
         ],
       ),

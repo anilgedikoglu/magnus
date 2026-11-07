@@ -1187,6 +1187,217 @@
       "metin": "Yarın birinin sana yönelteceği basit bir soru, beklediğinden güzel bir gelişmenin başlangıcı olacak {{isim}}. Magnuskop'ta hafifçe aralanmış bir perde, üzerinde ışık gezinen düz bir yüzey ve bir yere uzanmış elin görünüyor. Sanki gündelik işlerinden biriyle uğraşırken kısa bir konuşma için duracaksın. Karşındaki insanın söyleyecekleri, bir süredir aklında tuttuğun meseleye farklı bir açıdan bakmanı sağlayacak. İlk anda bu konuşmanın önemini fark etmeyebilirsin ama aradan biraz zaman geçince duyduğun bir ayrıntının işine yaradığını anlayacaksın. Yarın ayrıca yakın zamanda verdiğin küçük bir kararın doğru olduğunu gösteren sevindirici bir işaret alabilirsin. Sen çoğu zaman başkalarının içini rahatlatıyorsun, kendi kaygılarını ise sessizce çözmeye çalışıyorsun. Bu kez başkasından gelen birkaç güzel söz sana iyi gelecek. Geceye ulaşırken günün en hoş tarafının hiç planlamadığın o kısa karşılaşma olduğunu düşüneceksin.",
       "metin_en": "A simple question someone asks you tomorrow will mark the beginning of a development more delightful than you expect, {{isim}}. In the Magnuscope, I see a curtain slightly drawn back, a smooth surface with light moving across it, and your hand reaching toward something. It's as though you'll pause in the middle of an everyday task for a brief conversation. What the other person says will help you see an issue that's been on your mind for some time from a different perspective. You may not recognize the importance of this conversation at first, but after a little while, you'll realize that a detail you heard has turned out to be genuinely useful. Tomorrow, you may also receive an encouraging sign confirming that a small decision you made recently was the right one. You're often the person who puts others at ease, while trying to work through your own worries quietly and alone. This time, a few kind words from someone else will do you a world of good. As night approaches, you'll find yourself thinking that the loveliest part of the entire day was that brief encounter you never planned.",
       "kosullar": []
+    },
+    {
+      "id": 120,
+      "metin": "{{isim}}, yarın evinin içinde, uzun zamandır fark etmediğin küçük bir güzelliğin gözüne çarpacağını seziyorum. Sabah bir şeyleri yerli yerine koyarken eşinle aranda geçen eski bir konuşmayı hatırlayacaksın. O konuşmanın yarım kalan tarafı, günün ilerleyen bölümünde hiç beklemediğin kadar tatlı bir biçimde tamamlanabilir. Magnuskop'umda açık renkli bir örtü ve üzerine bırakılmış iki küçük eşya beliriyor. Bunlar, ikinizin de aklında olan fakat bir türlü fırsat bulup ilgilenemediğiniz bir meseleye işaret ediyor. Eşinin söyleyeceği birkaç kelime seni önce şaşırtacak, ardından fazlasıyla sevindirecek. Herkesin yükünü sırtlanmaya alışmışsın ama yarın birinin de senin yükünü hafiflettiğini hissedeceksin. Gecenin sonunda yüzünde, kendinin bile fark etmediği bir tebessüm olacak.",
+      "metin_en": "{{isim}}, I sense that tomorrow you'll notice a small beauty in your home that has escaped your attention for a long time. As you put things in their proper places in the morning, you'll remember an old conversation with your spouse. The unfinished part of that conversation may reach an unexpectedly sweet conclusion later in the day. In my MagnusScope, I see a light-colored cloth with two small objects resting on it. These point to something you've both had in mind but haven't managed to find the time to deal with. A few words from your spouse will surprise you at first, then fill you with delight. You're used to carrying everyone's burdens, but tomorrow you'll feel someone lightening yours for a change. By the end of the night, there will be a smile on your face that you may not even notice yourself.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "metin": "İki ayrı konuşmanın yarın senin için düşündüğünden daha fazla anlam taşıyacağını söyleyebilirim. Bunların ilki, arkadaş grubunda önemsizmiş gibi başlayan bir meseleyle ilgili olacak. Birinin kullandığı kısa bir ifade canını biraz sıkabilir; çünkü sen şakaya vurduğun bazı şeyleri aslında fazlasıyla önemsiyorsun. Fakat birkaç saat içerisinde gelecek ikinci konuşma, kendine olan güvenini yeniden yükseltecek. Gözümün önünde ekranı ışıldayan bir telefon ve aceleyle yazılıp silinen kelimeler var. Sana ulaşacak bir haberin, önümüzdeki günler için düşündüğün bir planı kolaylaştıracağına inanıyorum. Yarın bir konuda ilk adımı atmaya sandığından daha yakın olduğunu anlayacaksın {{isim}}. Üstelik bunu fark eden tek kişi sen olmayacaksın.",
+      "metin_en": "I can tell you that two separate conversations tomorrow will carry more meaning for you than you might expect. The first will concern something that starts out seeming insignificant among your friends. A brief remark someone makes may bother you a little, because some of the things you joke about actually matter a great deal to you. But a second conversation a few hours later will restore your confidence. Before my eyes, I see a phone with a glowing screen and words being hastily typed and deleted. I believe news that reaches you will make a plan you're considering for the coming days easier to carry out. Tomorrow, you'll realize that you're closer to taking the first step toward something than you thought, {{isim}}. And you won't be the only person who notices.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "metin": "Yarın nişanlınla aranızda geçecek kısa bir konuşmanın, geleceğe dair güzel bir kapıyı aralayacağı kulağıma fısıldanıyor. İlginçtir, konuşma başlangıçta son derece sıradan bir konuyla ilgili olacak. Bir yerde gördüğünüz bir eşya yahut daha önce konuştuğunuz bir hazırlık yeniden gündeme gelebilir. Magnuskop'umda yan yana duran iki sandalye ve masanın kenarına iliştirilmiş küçük bir not seçiyorum. Bir süredir her ayrıntının kusursuz olmasını istiyorsun; oysa yarın seni rahatlatacak şey, hiç hesaplamadığın kadar basit bir çözüm olacak. Günün ilerleyen kısmında nişanlının yaklaşımı seni çok memnun edebilir. Birlikte kurduğunuz geleceğin yalnızca büyük kararlarla değil, böyle küçük anlaşmalarla da güzelleştiğini hissedeceksin.",
+      "metin_en": "A whisper tells me that a brief conversation with your fiancé tomorrow will open a beautiful door to your shared future. Interestingly, the conversation will begin with something entirely ordinary. An item you saw somewhere or a preparation you've discussed before may come up again. In my MagnusScope, I can make out two chairs standing side by side and a small note tucked against the edge of a table. For some time now, you've wanted every detail to be perfect, yet what brings you relief tomorrow will be a solution so simple you never even considered it. Your fiancé's approach later in the day may make you very happy. You'll feel that the future you're building together becomes more beautiful not only through major decisions, but also through these small moments of agreement.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "metin": "Sevdiğin kişinin yarın söyleyeceği bir cümlede, uzun zamandır duymayı beklediğin bir anlam saklı {{isim}}. Bunu bana gösteren görüntü biraz tuhaf: yarısı gölgede kalmış bir pencere ve önünde yan yana duran iki bardak. İkiniz de zaman zaman birbirinizin zihnini okuyabildiğinizi sanıyorsunuz; halbuki en basit duyguları bile söylemeden anlaşmak mümkün olmuyor. Sabah saatlerinde iletişiminizde küçük bir duraksama yaşanabilir. Ancak ardından gelecek sıcak bir yaklaşım, bütün o gereksiz düşünceleri dağıtacak. Sezgilerim, yarın ilişkinizde geleceğe dönük bir konunun kendiliğinden açılacağı yönünde kuvvetleniyor. Konuşmanın sonunda, sevdiğin kişinin seni sandığından daha dikkatli dinlediğini fark edeceksin. Bu farkındalık sana günün en güzel hediyesi olabilir.",
+      "metin_en": "Hidden within something your loved one says tomorrow is a meaning you've been waiting a long time to hear, {{isim}}. The image revealing this to me is rather strange: a window half-covered in shadow, with two glasses standing side by side in front of it. You both sometimes imagine you can read each other's minds, yet even the simplest feelings cannot always be understood without being spoken. There may be a slight pause in your communication during the morning. But a warm gesture afterward will sweep away all those unnecessary thoughts. My intuition grows stronger that a subject concerning the future of your relationship will arise naturally tomorrow. By the end of the conversation, you'll realize that your loved one listens to you more attentively than you imagined. That realization may become the most beautiful gift of your day.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "metin": "Kırmızıya çalan küçük bir işaret, yarına ait görüntülerimin tam ortasında duruyor {{isim}}. Bunun ne olduğunu henüz seçemiyorum fakat aceleyle gözden geçireceğin bir yazıyla bağlantılı olduğunu hissediyorum. Uzun süredir aklının gerisinde tuttuğun bir mesele, yarın yeniden önüne gelebilir. İlk anda bununla uğraşmak istemeyeceksin. Fakat birkaç satır okuduktan sonra, aslında düşündüğünden çok daha kolay bir çözüme yaklaştığını anlayacaksın. Magnuskop'un bana ulaştırdığı işaretler, yarım kalmış bir görüşmenin yahut beklenen bir yanıtın sana rahatlık getireceğini söylüyor. Her şeyi zihninde büyütmeye yatkın olduğun anlar var; yarın bunlardan birini gülümseyerek geride bırakacaksın. Günün sonunda küçük ama gerçek bir başarı hissi seni bekliyor.",
+      "metin_en": "A small reddish sign stands at the very center of my visions for tomorrow, {{isim}}. I can't quite make out what it is yet, but I sense that it's connected to something written that you'll glance over in a hurry. A matter you've kept at the back of your mind for a long time may come before you again tomorrow. At first, you won't want to deal with it. But after reading a few lines, you'll realize that you're much closer to a solution than you thought. The signs reaching me through the MagnusScope tell me that an unfinished conversation or a long-awaited response will bring you relief. There are times when you tend to make things bigger in your mind than they really are; tomorrow, you'll leave one of those worries behind with a smile. A small but genuine sense of accomplishment awaits you at the end of the day.",
+      "kosullar": []
+    },
+    {
+      "id": 125,
+      "metin": "Bir süredir kendi düzeninin rahatlığıyla, hayatına yeni birini alma düşüncesi arasında gidip geldiğini fark ediyorum. Yarın bu ikilemle ilgili eğlenceli bir gelişme yaşanabilir. Gözümün önünden, kalabalık bir ortamda kısa süreliğine birbirine dönen iki yüz geçiyor. Bir sohbet sırasında karşındaki kişinin sana yönelteceği beklenmedik bir soru, üzerinde hoş bir iz bırakacak. Bunun hemen büyük bir yakınlaşmaya dönüşeceğini söylemiyorum; fakat günün ilerleyen bölümünde o konuşmayı yeniden hatırlayacağına dair güçlü bir sezgim var. {{isim}}, sen bazen ilgini belli etmemek için gereğinden ciddi davranıyorsun. Yarın yüzünde oluşacak istemsiz bir gülümseme seni ele verebilir. Akşama doğru, sosyal hayatına ilişkin küçük bir fırsatın düşündüğünden daha cazip olduğunu anlayacaksın.",
+      "metin_en": "I can see that you've been going back and forth for some time between the comfort of your established routine and the idea of welcoming someone new into your life. Tomorrow, something amusing may happen in connection with this dilemma. Before my eyes, two faces briefly turn toward each other in a crowded setting. An unexpected question someone asks you during a conversation will leave a pleasant impression. I'm not saying this will immediately turn into a deep connection, but I have a strong feeling that you'll find yourself remembering that conversation again later in the day. {{isim}}, sometimes you act more serious than necessary to hide your interest. Tomorrow, an involuntary smile may give you away. Toward evening, you'll realize that a small opportunity in your social life is more appealing than you initially thought.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "metin": "Yarın duyacağın tanıdık bir ses, seni birkaç saniyeliğine çok eski bir anının içine götürecek. Magnuskop'umda kenarları hafif kıvrılmış bir fotoğraf ve onun üzerine düşen gün ışığı beliriyor. Bu görüntünün, geçmişte hayatında yer etmiş bir insanla bağlantılı olduğunu düşünüyorum. Gün içerisinde bir konuşma sırasında eski bir isim anılabilir. O anda, uzun süredir düşünmediğin bir ayrıntıyı hatırlayıp kendi kendine gülümseyeceksin. Ardından yakın çevrenden gelecek sıcak bir haber, gününün yönünü güzelce değiştirebilir. {{burc}} burcunun sende bıraktığı o kolay vazgeçmeyen taraf, bazı hatıraları da sıkı sıkıya koruyor {{isim}}. Yarın geçmişi hatırlamak sana hüzünden çok güç verecek. Gelecekle ilgili bir kararın da bu sayede biraz daha netleşebilir.",
+      "metin_en": "A familiar voice you hear tomorrow will carry you back into a very old memory for a few seconds. In my MagnusScope, I see a photograph with slightly curled edges and sunlight falling across it. I believe this image is connected to someone who once held an important place in your life. During the day, an old name may come up in conversation. At that moment, you'll remember a detail you haven't thought about in a long time and smile to yourself. Soon afterward, some heartwarming news from someone close to you may change the course of your day for the better. That part of you shaped by your {{burc}} sign, the part that doesn't give up easily, also holds tightly to certain memories, {{isim}}. Tomorrow, remembering the past will give you strength rather than sadness. It may even help you see a decision about the future a little more clearly.",
+      "kosullar": []
+    },
+    {
+      "id": 127,
+      "metin": "Bir kapının açılmasıyla başlayan tuhaf derecede canlı bir görüntü geldi gözlerimin önüne. Kapının ardında bekleyen büyük bir sürpriz yok; fakat içeri girer girmez göreceğin küçük bir değişiklik dikkatini çekecek. Yarın alıştığın bir ortamda, daha önce üzerinde durmadığın bir ayrıntıyı fark edeceksin. Bu farkındalık sana uzun zamandır ertelediğin bir düzenlemeyi hatırlatabilir. Biraz uğraştıracağını düşünsen de başladığında işin düşündüğünden kolay ilerlediğini anlayacaksın. İçimdeki önsezi, bu küçük hareketin ardından birinden takdir dolu sözler işiteceğini fısıldıyor. {{isim}}, yaptığın güzel şeylerin çoğunu küçümsüyorsun. Yarın bir başkasının gözünden bakınca kendi emeğinin değerini daha iyi göreceksin. Günün hoş sürprizi de tam burada gizli.",
+      "metin_en": "An unusually vivid vision appeared before my eyes, beginning with a door opening. There's no grand surprise waiting behind it, but a small change you'll notice as soon as you enter will catch your attention. Tomorrow, in a familiar environment, you'll spot a detail you've never really considered before. This discovery may remind you of an adjustment you've been putting off for a long time. Although you'll expect it to take some effort, once you begin, you'll find that things progress more easily than you imagined. My intuition whispers that someone will offer you words of appreciation after this small action. {{isim}}, you tend to underestimate many of the good things you do. Tomorrow, seeing your efforts through someone else's eyes will help you recognize their true value. And that's exactly where the day's pleasant surprise is hidden.",
+      "kosullar": []
+    },
+    {
+      "id": 128,
+      "metin": "Geride bıraktığın ilişkinin ardından, bazen kendini son derece güçlü hissedip bazen küçücük bir hatırayla duraksadığını biliyorum {{isim}}. Yarın bu iki duygunun arasında ilginç bir denge kurulacak. Magnuskop'umda katlanıp kaldırılmış bir kumaş ve ardından açılan aydınlık bir yol beliriyor. Günün bir anında geçmişten kalan bir sözü ya da alışkanlığı hatırlayabilirsin. Fakat bu kez eskisi kadar uzun süre üzerinde durmayacaksın. Biraz sonra yakın çevrenden biriyle gerçekleşecek içten bir konuşma, dikkatini yeniden kendi hayatına çevirecek. Yarın kendin için yapmak istediğin küçük bir şeyin ilk adımını atacağına dair işaretler alıyorum. Bir süredir başkalarının ne düşündüğünü fazla önemsemişsin. Günün sonunda kendi isteklerinin sesini daha berrak duyacaksın.",
+      "metin_en": "I know that since your previous relationship ended, there have been times when you've felt incredibly strong and others when the smallest memory has made you pause, {{isim}}. Tomorrow, an interesting balance will emerge between these two feelings. In my MagnusScope, I see a piece of fabric being folded and put away, followed by a bright road opening ahead. At some point during the day, you may remember a phrase or habit left over from the past. But this time, you won't dwell on it for nearly as long as you once would have. Shortly afterward, a heartfelt conversation with someone close to you will turn your attention back toward your own life. I'm receiving signs that tomorrow you'll take the first step toward something small you've wanted to do for yourself. You've been giving too much importance to what others think lately. By the end of the day, you'll hear the voice of your own desires more clearly.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "metin": "Parlak yüzeyli küçük bir aynanın önünde durduğunu görüyorum {{isim}}. Fakat yarına dair asıl dikkatimi çeken şey görüntün değil, kendin hakkında vereceğin bir karar. Son zamanlarda kimi insanlara karşı fazla anlayışlı davranırken kendi isteklerini ikinci plana atmış olabilirsin. Yarın seni yakından tanıyan birinin söyleyeceği samimi bir söz, bunu fark etmeni sağlayacak. Söz konusu kişi, sende başkalarının kolayca göremediği güzel bir özelliğe dikkat çekecek. Bu iltifatın ardından gün boyunca daha neşeli ve kendinden emin davranacağını seziyorum. Akşama doğru, bir süredir mesafeli yaklaştığın sosyal bir fırsat yeniden gündeme gelebilir. Kalbinin kapısını herkese açmak zorunda değilsin; fakat yarın dışarıdaki dünyanın sandığından daha davetkâr olduğunu hissedeceksin.",
+      "metin_en": "I see you standing before a small mirror with a shining surface, {{isim}}. Yet what truly catches my attention about tomorrow isn't your reflection, but a decision you'll make about yourself. Lately, you may have been so understanding toward certain people that you've pushed your own wishes into the background. Tomorrow, a sincere remark from someone who knows you well will help you recognize this. That person will draw attention to a beautiful quality in you that others don't easily see. After receiving this compliment, I sense that you'll carry yourself more cheerfully and confidently throughout the day. Toward evening, a social opportunity you've been keeping at arm's length may arise again. You don't have to open your heart to everyone, but tomorrow you'll feel that the world outside is more welcoming than you imagined.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "metin": "{{sayi,2,4}} küçük ayrıntının birleşerek seni sevindireceği bir günün işaretlerini okuyorum. Bunlardan biri, uzun süredir aklında kalan bir hesapla yahut harcamayla ilgili olacak. Yarın eline geçen bir bilgi sayesinde, düşündüğünden daha avantajlı bir seçeneğin bulunduğunu fark edebilirsin. Gözümün önünde üst üste duran birkaç kâğıt ve kenarına çekilmiş ince bir çizgi var. İlk anda önemsiz görünen bu gelişme, zihnindeki küçük bir belirsizliği giderecek. Ardından yapacağın bir görüşmede, karşındaki insanın senden yana tavır alması hoşuna gidecek. Bir süredir pek çok şeyi tek başına çözmek zorundaymışsın gibi hissediyorsun {{isim}}. Oysa yarın destek istemeden de destek görebileceğini anlayacaksın. Bu küçük kolaylıkların toplamı, gününü tahmin ettiğinden çok daha güzel kılacak.",
+      "metin_en": "I'm reading signs of a day when {{sayi,2,4}} small details will come together to bring you happiness. One of these will concern a calculation or expense that's been on your mind for some time. Tomorrow, information you receive may help you discover a more advantageous option than you expected. Before my eyes, I see several sheets of paper stacked together, with a thin line drawn along the edge of one. This development, which may seem insignificant at first, will clear up a small uncertainty in your mind. Then, during a conversation, you'll be pleased when the person you're speaking with takes your side. For some time now, you've felt as though you have to solve so many things all on your own, {{isim}}. But tomorrow, you'll discover that support can come your way even without asking for it. Together, these little conveniences will make your day far more pleasant than you anticipate.",
+      "kosullar": []
+    },
+    {
+      "id": 131,
+      "metin": "Eşinle yarın konuşacağın bir meselenin, ikinizin de tahmin ettiğinden daha kolay çözüleceğini işaret eden güçlü bir titreşim aldım. Magnuskop'umda bir masanın üzerine bırakılmış ev anahtarları ve yanında duran boş bir fincan seçiliyor. Bu görüntü, ortak yaşamınızın gündelik sorumluluklarıyla ilgili. Son günlerde aynı konunun farklı ayrıntılarına takılmış olabilirsiniz. Yarın birinizin ortaya atacağı basit bir fikir, diğerinin de aklına yatacak. Daha sonra evinizle ya da birlikte yapmayı düşündüğünüz bir planla ilgili sevindirici bir gelişme gündeme gelebilir. {{isim}}, bazen eşinin seni anlaması için uzun uzun anlatman gerektiğini düşünüyorsun. Yarın birkaç kelimenin fazlasıyla yeterli olduğunu göreceksin. Birlikte güleceğiniz küçük bir an, günün bütün yorgunluğunu unutturacak.",
+      "metin_en": "I've sensed a powerful vibration indicating that something you discuss with your spouse tomorrow will be resolved more easily than either of you expects. In my MagnusScope, I can make out house keys left on a table, with an empty cup beside them. This image relates to the everyday responsibilities of your shared life. In recent days, you may have been focusing on different details of the same matter. Tomorrow, a simple idea suggested by one of you will make perfect sense to the other. Later, a happy development may arise concerning your home or a plan you're considering together. {{isim}}, sometimes you think you need to explain things at great length for your spouse to understand you. Tomorrow, you'll see that a few words can be more than enough. A little moment of shared laughter will make you forget all the day's tiredness.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "metin": "Yarın bir kadından duyacağın sözlerin sana beklemediğin kadar iyi geleceğini hissediyorum. Aranızdaki konuşma başlangıçta oldukça sıradan ilerleyecek; hatta günün yoğunluğu yüzünden biraz kısa kesmek isteyebilirsin. Fakat onun kendiliğinden açacağı bir konu, uzun zamandır zihninde taşıdığın bir soruya farklı bir açıdan bakmanı sağlayacak. Gözümün önünde açık renkli bir çanta ve içinden çıkarılan küçük bir not beliriyor. Bir şeyi hatırlatmak için söylenen söz, sende çok daha büyük bir karşılık bulacak. {{isim}}, güçlü görünmeye alıştığın için bazen en yakınındaki insanların bile seni ne kadar yorduğunu anlamadığını düşünüyorsun. Yarın bunun tersini gösteren nazik bir davranışla karşılaşabilirsin. Akşama doğru kendinle ilgili güzel bir karar vermen de mümkün. İçindeki o canlılık yeniden yüzüne yansıyacak.",
+      "metin_en": "I sense that something a woman says to you tomorrow will do you more good than you expect. Your conversation will begin quite ordinarily; in fact, with everything you have to do, you may even want to cut it short. But a subject she brings up spontaneously will help you look at a question you've been carrying in your mind for a long time from a different angle. Before my eyes, I see a light-colored handbag and a small note being taken from it. Words intended as a simple reminder will resonate with you on a much deeper level. {{isim}}, because you're accustomed to appearing strong, you sometimes feel that even those closest to you fail to understand just how exhausted you are. Tomorrow, you may encounter a thoughtful gesture that proves otherwise. Toward evening, you might also make a positive decision about yourself. That lively spark within you will shine through your face once again.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "metin": "Üzerinde birkaç kez düzeltme yapılmış bir sayfa görüyorum; yarının eğitim hayatınla ilgili işaretleri orada toplanmış {{isim}}. Okulda yahut derslerinle ilgili bir konuşmada, daha önce anlamakta zorlandığın bir konunun aslında ne kadar basit bir mantığa dayandığını fark edebilirsin. İlk anda kendine biraz kızacaksın; çünkü cevabın uzun zamandır gözünün önünde olduğunu düşüneceksin. Fakat ardından gelecek küçük bir başarı, bu duyguyu hemen dağıtacak. Sezgilerim, derslerine ilişkin bir konuda başka bir öğrenciden faydalı bir bilgi alacağını söylüyor. Sen bazen kendini başkalarıyla karşılaştırıp gereksiz yere zorlanıyorsun. Yarın kendi öğrenme hızının değerini daha iyi anlayacaksın. Günün sonunda ileride işine yarayacak yeni bir çalışma yöntemi de aklına yerleşebilir.",
+      "metin_en": "I see a page that has been revised several times; the signs concerning your education tomorrow are gathered there, {{isim}}. During a conversation at school or about your classes, you may realize that a subject you've struggled to understand is actually based on a remarkably simple principle. At first, you'll feel a little annoyed with yourself, thinking the answer has been right in front of you all along. But a small success that follows will quickly chase that feeling away. My intuition tells me that you'll receive useful information from another student about something related to your studies. Sometimes you compare yourself with others and put yourself under unnecessary pressure. Tomorrow, you'll gain a greater appreciation for your own pace of learning. By the end of the day, a new study method that could prove useful in the future may also take shape in your mind.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "metin": "Çalıştığın yerde yarın alıştığından farklı bir konuşma duyabilirsin {{isim}}. Magnuskop'umda bilgisayar ekranına eğilmiş iki insan ve masanın kenarında bekleyen bir dosya beliriyor. Bir süredir üzerinde çalıştığın yahut tamamlanmasını beklediğin bir işle ilgili küçük bir değişiklik gündeme gelebilir. İlk anda fazladan uğraşacağını düşünmen mümkün. Ancak birkaç saat içerisinde, bu değişikliğin aslında işini kolaylaştıracak bir yönü olduğunu anlayacaksın. Gelecek haberin, mesai arkadaşlarından biri aracılığıyla sana ulaşacağı hissi oldukça kuvvetli. Özellikle emeğinin yeterince fark edilmediğini düşündüğün bir konu varsa, yarın bu konuda yüzünü güldürecek sözler duyabilirsin. Akşama doğru işten zihnen uzaklaşmak sana her zamankinden kolay gelecek. Kendinle gurur duymayı ihmal etme.",
+      "metin_en": "Tomorrow, you may hear a conversation at work that's different from what you're used to, {{isim}}. In my MagnusScope, I see two people leaning toward a computer screen and a file waiting at the edge of a desk. A small change may arise concerning something you've been working on or waiting to have completed. At first, you may think it will mean extra work. But within a few hours, you'll realize that this change actually has the potential to make your job easier. I have a particularly strong feeling that the news will reach you through one of your colleagues. If there's something you've worked hard on without feeling adequately recognized, tomorrow you may hear words that bring a smile to your face. As evening approaches, you'll find it easier than usual to mentally switch off from work. Don't forget to take pride in yourself.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "metin": "Yarın ailene ilişkin küçük bir sorumluluğun düşündüğünden çok daha kolay hallolacağını seziyorum. Gözümün önünde ahşap bir yüzeyin üzerine bırakılmış koyu renkli bir cüzdan ve yanında duran katlanmış bir kâğıt var. Eşinle bir süredir konuştuğunuz maddi yahut ev düzeniyle ilgili bir konuda yeni bir bilgi edinebilirsin. Başlangıçta pek önemsemeyeceğin bu bilgi, sonradan oldukça işine yarayacak. {{isim}}, zaman zaman her şeyi önceden hesaplama ihtiyacı hissediyorsun. Fakat yarın eşinin aklına gelen pratik bir önerinin senin planından daha iyi sonuç verebileceğini anlayacaksın. Günün ilerleyen bölümünde yapacağınız kısa bir sohbet, aranızdaki dayanışmayı güçlendirecek. Evinde seni bekleyen huzurun, dışarıdaki bütün telaştan daha kıymetli olduğunu bir kez daha hissedeceksin.",
+      "metin_en": "I sense that a small family responsibility will be taken care of much more easily than you expect tomorrow. Before my eyes, I see a dark-colored wallet resting on a wooden surface, with a folded piece of paper beside it. You may learn something new about a financial matter or a household arrangement you've been discussing with your spouse for some time. The information won't seem particularly important at first, but it will turn out to be quite useful later. {{isim}}, sometimes you feel the need to calculate everything in advance. Tomorrow, however, you may discover that a practical suggestion your spouse comes up with produces better results than your own plan. A brief conversation later in the day will strengthen the sense of teamwork between you. Once again, you'll feel that the peace waiting for you at home is more precious than all the bustle of the outside world.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "metin": "Bir süredir cevabını aradığın sorunun yarın bambaşka bir yoldan açıklığa kavuşabileceğini söylüyor sezgilerim. Magnuskop'umda birbirine dolanmış ince ipler görüyorum; fakat bu iplerden biri çekildiğinde diğerleri de kolaylıkla çözülüyor. Günün ilk bölümünde, daha önce konuştuğun bir mesele yeniden gündeme gelebilir. Karşındaki kişinin verdiği küçük bir ayrıntı, düşündüğün çözümü tamamen değiştirecek. {{isim}}, bazen doğru karar vermek için bütün ihtimalleri tüketmen gerektiğine inanıyorsun. Yarın ise tek bir bilgiyle de insanın içinin rahatlayabileceğini anlayacaksın. Ardından yapılacak bir görüşmenin beklediğinden daha olumlu geçmesi mümkün. Gün sonunda zihninde bir süredir yer kaplayan konuya çok daha sakin bakacaksın. Bu rahatlık uykuna bile yansıyabilir.",
+      "metin_en": "My intuition tells me that a question you've been seeking an answer to for some time may become clear through a completely unexpected route tomorrow. In my MagnusScope, I see thin threads tangled together, yet when one is pulled, the others unravel with surprising ease. During the first part of the day, a matter you've discussed before may come up again. A small detail shared by the person you're speaking with will completely change the solution you had in mind. {{isim}}, sometimes you believe you must exhaust every possibility before making the right decision. Tomorrow, you'll discover that a single piece of information can be enough to put your mind at ease. A conversation that follows may also go more positively than you expect. By the end of the day, you'll look at an issue that's been occupying your thoughts for some time with much greater calm. That relief may even carry over into your sleep.",
+      "kosullar": []
+    },
+    {
+      "id": 137,
+      "metin": "Yeni kurduğun düzenin içerisinde, yarın seni gururlandıracak küçük bir gelişme beliriyor. Sezgilerimin önüne gelen görüntüde, aralık bırakılmış bir çekmece ve üzerine özenle yerleştirilmiş birkaç kişisel eşya var. Bir zamanlar başkasıyla birlikte verdiğin kararların ardından, artık kendi tercihlerini daha özgürce yapabilmenin değerini öğreniyorsun. Yarın gündelik yaşamınla ilgili bir konuda, uzun süredir ertelediğin küçük bir değişikliği gerçekleştirebilirsin. Ardından yakın çevrenden gelecek içten bir söz, bu kararının ne kadar yerinde olduğunu hissettirecek. {{isim}}, geçmişte yaşadıkların seni daha temkinli kılmış olsa da içindeki neşe kaybolmuş değil. Akşama doğru kendini bir süredir olduğundan daha hafif hissedeceksin. Önünde açılan yeni sayfanın güzel tarafları yavaş yavaş görünür oluyor.",
+      "metin_en": "Within the new life you've established, I see a small development tomorrow that will fill you with pride. The image appearing before my intuition shows a drawer left slightly open, with a few personal belongings carefully arranged inside. After a time when you made decisions together with someone else, you're now learning to appreciate the freedom of making your own choices. Tomorrow, you may finally make a small change in your everyday life that you've been postponing for a long time. A heartfelt remark from someone close to you afterward will reassure you that you've made the right decision. {{isim}}, although your past experiences have made you more cautious, the joy within you hasn't disappeared. Toward evening, you'll feel lighter than you have in quite some time. The beautiful possibilities of this new chapter in your life are slowly beginning to reveal themselves.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "metin": "Tecrübenin sana kazandırdığı en önemli özelliklerden biri, insanların söylediklerinden çok söylemediklerine dikkat etmen {{isim}}. Yarın bu yeteneğinin ne kadar işe yaradığını gösteren bir konuşma yaşayabilirsin. Magnuskop'umda kenarları yıpranmış bir defter ve açılmış eski bir sayfa beliriyor. Senden daha genç birinin fikrini almak istediği bir mesele gündeme gelebilir. Önce fazla karışmak istemeyeceksin; fakat paylaşacağın kısa bir deneyim, karşı taraf için düşündüğünden daha değerli olacak. Ardından o kişiden duyacağın teşekkür, günün güzel anlarından birine dönüşecek. Yarın senin de epeydir bir köşeye bıraktığın özel bir dileğini yeniden ele almaya başlayacağını hissediyorum. Başkalarına yol gösterirken kendi hayallerine ayırdığın zamanı unutmuşsun. Bu defa sıra biraz da sende.",
+      "metin_en": "One of the most important qualities experience has given you is the ability to pay more attention to what people leave unsaid than to what they actually say, {{isim}}. Tomorrow, you may have a conversation that demonstrates just how valuable this ability is. In my MagnusScope, I see a notebook with worn edges and an old page lying open. A matter may arise in which someone younger than you wants your opinion. At first, you won't want to interfere too much, but a brief experience you share will prove more valuable to that person than you imagine. The thanks you receive afterward will become one of the day's loveliest moments. I also sense that tomorrow you'll begin reconsidering a personal wish you've set aside for quite some time. While guiding others, you've forgotten to devote time to your own dreams. This time, it's your turn.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "metin": "Yarın kurumda, bir süredir sonuçlanmasını beklediğin küçük bir meselenin hareketleneceğine dair işaretler alıyorum. Magnuskop'umda üzerinde mavi kalemle işaretlenmiş satırlar bulunan bir evrak beliriyor. Daha önce konuşulmuş fakat ilerlememiş bir işin yeniden gündeme gelmesi mümkün. İlk anda aynı açıklamaları tekrar yapman gerekeceğini düşünüp biraz sıkılabilirsin. Ancak görüşeceğin bir meslektaşının vereceği bilgi, sürecin sandığından daha kolay ilerlemesini sağlayacak. {{isim}}, işinde düzeni önemsediğin için başkalarının ağırdan aldığı konular seni gereğinden fazla yoruyor. Yarın ise beklediğin bir dönüşün olumlu bir yöne girdiğini fark edebilirsin. Günün sonunda amirinden yahut birlikte çalıştığın birinden duyacağın takdir dolu sözler, mesai boyunca harcadığın emeği fazlasıyla anlamlı kılacak.",
+      "metin_en": "I'm receiving signs that a small matter at your institution, one you've been waiting to see resolved for some time, will begin moving forward tomorrow. In my MagnusScope, I see a document with lines marked in blue pen. A task that was discussed previously but never progressed may come up again. At first, you might feel a little frustrated, thinking you'll have to repeat all the same explanations. However, information provided by a colleague you speak with will help the process move along more easily than you expected. {{isim}}, because you value order and efficiency in your work, matters that others handle too slowly wear you out more than they should. Tomorrow, however, you may notice that a response you've been waiting for is taking a positive turn. By the end of the day, words of appreciation from your supervisor or someone you work with will make all the effort you've put in throughout your working day feel truly worthwhile.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ]
     }
   ]
 }

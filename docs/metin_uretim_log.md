@@ -7,7 +7,7 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 3249** (… tur 21: 100, tur 22: 100, tur 23: 100, tur 24: 100, tur 25: 100) — her tur sonunda güncelle.
+- **Toplam eklenen: 3349** (… tur 22: 100, tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100) — her tur sonunda güncelle.
   (tur 1-20 dağılımı: 100/100/138/160/140/140/140/180/160/140/174/157/140/160/120/160/140/110/115/75.)
 - **2026-11-07 Anıl "20 tur daha" döngüsü (tur 23-42):** `metin_turu_hazirla.js` TURLAR[23-42] = 5'li grup ×4 — KAHIN (derun/khaleesi/uraz/likia/yousuf) · KAHVE (giriş/bağlama/gelişme/sonuç/uğurlama) · SHORTS (tavşan/niyet/faloya/yana_bana/yana_yasama) · DURU (bugün/yarın/gelecek/kaderkitabı/astroyorum) · ICERIK (motivasyon/olumlama/acıgerçekler/kahve_karşılama/karşılama_z1). Her kompartman dörder geçiş. Yazar ChatGPT (Codex 11 Kasım'a dek sınırda), çeviri ChatGPT.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
@@ -16,6 +16,16 @@
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 26 — 2026-11-07 (100 metin; durugörü + içerik, ChatGPT yazar + Claude denetler, çeviri ChatGPT)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Durugörü – Bugün | `durugoru_bno.json` › `durugoru_bno` | 191–210 (1 havuz-ortak ifade düzeltildi) |
+| Durugörü – Yarın | `durugoru_yno.json` › `durugoru_yno` | 120–139 (1 ifade çeşitlendirildi) |
+| Durugörü – Gelecek | `durugoru_gno.json` › `durugoru_gno` | 167–186 (1 ifade çeşitlendirildi) |
+| Kader Kitabı | `kaderkitabi.json` › `kaderkitabi` | 370–389 (40→20, en çeşitli imge/kitle) |
+| Günlük Astroloji – Yorum | `gunlukastroloji.json` › `astroyorum` | 140–159 |
 
 ## Tur 25 — 2026-11-07 (100 metin; kısa fallar 40→20, ChatGPT yazar + Claude denetler, çeviri ChatGPT)
 

@@ -3051,6 +3051,218 @@
           "deger": "iliskisi_yok"
         }
       ]
+    },
+    {
+      "id": 370,
+      "metin": "Üzerinde çalıştığın bir metnin tek cümlesini defalarca değiştirdiğin oluyor. Oysa bölümde bir öğrencinin soracağı sade bir soru, zihninde uzun zamandır aradığın açıklığı uyandırabilir. Bilgini küçümseme; onu paylaş.||En derin ilim, anlaşılmaz sözler söylemek değil, güç olanı anlaşılır kılmaktır. Bir kandil başka bir kandili tutuşturunca ışığından eksilmez.",
+      "metin_en": "Sometimes you find yourself rewriting a single sentence of a text you're working on over and over again. Yet a simple question from a student in your department may bring the clarity you've been seeking for so long. Don't underestimate your knowledge; share it.||The deepest wisdom lies not in speaking words others cannot understand, but in making difficult things clear. One lamp loses none of its light by kindling another.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 371,
+      "metin": "Telefonunun ekranına bakıp sonra sebepsizce uzaklara daldığın zamanlar var. Kalbinin kapısını kapattığını söylüyorsun ama içten bir söz duyunca yüzündeki ifade değişiyor. Yakında sıradan bir sohbetin sonunda bunu yeniden fark edeceksin.||Gönül, zorlanarak açılan bir kilit değildir. Kendini olduğun gibi göster; seni anlayacak olan, kapıyı kırmadan da içeri girebilir.",
+      "metin_en": "There are times when you glance at your phone screen, then find yourself staring into the distance for no particular reason. You say you've closed the door to your heart, yet your expression changes whenever you hear a sincere word. Soon, at the end of an ordinary conversation, you'll notice this once again.||The heart is not a lock that can be forced open. Show yourself as you truly are; someone who understands you can enter without breaking down the door.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 372,
+      "metin": "Aynanın karşısında hazırlanırken bazen kendine değil, başkalarının seni nasıl göreceğine dikkat ediyorsun. Kalbinde yer açmak istediğin biri olsa da seçilmekten çok anlaşılmayı arzuluyorsun. Yakın zamanda alacağın küçük bir iltifat sana bunu hatırlatacak.||Gülün güzelliği, ona bakan gözlerin sayısıyla ölçülmez. Kendi değerini bilen kadın, sevgiyi bir ödül değil, bir paylaşım olarak karşılar.",
+      "metin_en": "Sometimes, as you get ready in front of the mirror, you pay more attention to how others will see you than to how you see yourself. Even if there's someone you'd like to make room for in your heart, what you desire most is not to be chosen, but to be understood. A small compliment you receive soon will remind you of this.||The beauty of a rose is not measured by the number of eyes admiring it. A woman who knows her own worth welcomes love not as a reward, but as something to be shared.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliskisi_yok"
+        }
+      ]
+    },
+    {
+      "id": 373,
+      "metin": "Yeni düzeninde bazı eşyaların yerini değiştirdin, fakat geçmişten kalan birkaç düşünce hâlâ aynı yerde duruyor. Bir zamanlar birlikte alınmış kararları artık tek başına verirken kendi sesinin güçlendiğini hissedeceksin.||Kapanan bir kapının önünde ömür geçirilmez. İnsan, bir vakitler iki kişi yürüdüğü yoldan tek başına geçince de yolun sonundaki bahara varabilir.",
+      "metin_en": "You've rearranged some of the belongings in your new life, yet a few thoughts from the past still remain exactly where they were. As you begin making decisions alone that you once made together with someone else, you'll feel your own voice growing stronger.||A lifetime should not be spent standing before a closed door. Even when a person walks alone along a path once traveled by two, they can still reach the spring waiting at its end.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "bosanmis"
+        }
+      ]
+    },
+    {
+      "id": 374,
+      "metin": "Sevdiğin kişinin sesindeki küçücük değişikliği fark ediyor, bazen söylenmeyen sözlere gereğinden fazla anlam yüklüyorsun. Önümüzdeki günlerde gündelik bir konuşmanız, kafanda büyüttüğün meseleyi hafifletebilir.||Sevgi, her sessizliğin anlamını çözmek değildir. Aynı sofrada birbirini korkmadan dinleyebilen iki gönül, uzun yolları da birlikte aşar.",
+      "metin_en": "You notice even the slightest change in your loved one's voice, and sometimes you read too much into words left unspoken. In the coming days, an ordinary conversation between you may ease an issue you've made much bigger in your mind.||Love does not mean deciphering the meaning of every silence. Two hearts that can listen to each other without fear at the same table can also overcome the longest journeys together.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "iliski_var"
+        }
+      ]
+    },
+    {
+      "id": 375,
+      "metin": "Sabah çayını eskisine göre daha ağır içtiğin zamanlar oluyor. Yıllarca yetişmen gereken yerleri düşünürken şimdi vakti nasıl değerlendireceğini seçiyorsun. Eski günlerden açılacak bir sohbet, yılların sana kazandırdığı değeri yeniden hissettirecek.||İnsanın emeği, çalışma günleri bittiğinde tükenmez. Meyvesini vermiş ağaç da gölgesiyle nice yolcunun hayatına güzellik katar.",
+      "metin_en": "There are mornings when you sip your tea more slowly than you used to. After years of thinking about all the places you needed to be, you're now choosing how you want to spend your time. A conversation about the old days will remind you of the value that the passing years have given you.||A person's contribution does not end when their working days are over. Even a tree that has already borne its fruit can enrich the lives of countless travelers with its shade.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ]
+    },
+    {
+      "id": 376,
+      "metin": "Bir kapıyı kapattıktan sonra dönüp yeniden kontrol ettiğin gibi, verdiğin bazı kararları da zihninde tekrar tekrar yokluyorsun. İçinde tereddüt olsa da aslında neyi istemediğini gayet iyi biliyorsun.||Her eşiğin önünde uzun süre bekleyen, yolun kendisini unutur. Bir kararı olgunlaştıran düşüncedir; onu hayata geçiren ise cesaret.",
+      "metin_en": "Just as you sometimes turn back to check a door after closing it, you repeatedly revisit certain decisions in your mind. Though you have your doubts, deep down you know perfectly well what you don't want.||Those who linger too long before every threshold eventually forget the journey itself. Thought is what brings a decision to maturity; courage is what brings it to life.",
+      "kosullar": []
+    },
+    {
+      "id": 377,
+      "metin": "Düğün hazırlığındaki küçük ayrıntılar bazen nişanlınla kurduğun büyük hayalin önüne geçiyor. Bir masanın etrafında konuşulan hesaplar ve tercihler arasında birbirinizin gönlünü ihmal etmeyin. Yakında birlikte çözeceğiniz küçük bir mesele sizi sevindirecek.||Bir yuvayı değerli kılan, içindeki eşyaların kusursuzluğu değildir. İki insan aynı çatı altında birbirinin yükünü hafifletebiliyorsa o ev çoktan kurulmuştur.",
+      "metin_en": "The little details of wedding preparations sometimes overshadow the great dream you're building with your fiancé. Amid all the discussions about budgets and choices around the table, don't neglect each other's hearts. A small problem you'll soon solve together will bring you both happiness.||What makes a home precious is not the perfection of the things inside it. If two people can lighten each other's burdens beneath the same roof, that home has already been built.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nisanli"
+        }
+      ]
+    },
+    {
+      "id": 378,
+      "metin": "Defterinin bir köşesine yazdığın kısa bir notu bile sonradan aradığın oluyor. Çalışırken öğrendiğini sandığın bazı konular gözünde büyüyor, fakat yeniden başladığında sandığından fazlasını hatırlıyorsun.||Bir sayfayı çevirmek küçük bir iştir; yüzlerce sayfanın sonuna varmak ise bu küçük işin tekrarından doğar. Zekânı sabrınla destekle, emeğinin karşılığını görmeye başlayacaksın.",
+      "metin_en": "Sometimes you find yourself searching for even a short note you scribbled in the corner of your notebook. Certain subjects you thought you'd learned while studying begin to seem overwhelming, yet when you return to them, you remember more than you expected.||Turning a page is a small act; reaching the end of hundreds of pages is simply the result of repeating that small act. Support your intelligence with patience, and you'll begin to see the rewards of your efforts.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
+    },
+    {
+      "id": 379,
+      "metin": "Arkadaşlarının paylaştığı fotoğraflara bakarken kendi hayatının geride kaldığını düşündüğün anlar oluyor. Oysa sen de kimseye anlatmadığın küçük başarılar biriktiriyorsun. Yakında denediğin bir şeyde ilerlediğini fark edeceksin.||Herkesin mevsimi aynı gün başlamaz. Başkasının açan çiçeğine bakarken kendi toprağını susuz bırakma; senin de büyümekte olan bir bahçen var.",
+      "metin_en": "There are moments when you look at the photos your friends share and feel as though your own life is falling behind. Yet you've been collecting little achievements of your own that you've never told anyone about. Soon, you'll notice how much progress you've made at something you've tried.||Not everyone's season begins on the same day. Don't leave your own soil thirsty while admiring someone else's blooming flowers; you have a garden of your own that's growing, too.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 380,
+      "metin": "Günün yorgunluğunu eve taşımamaya çalışsan da bazen sofrada sessizleşiyorsun. Eşinle paylaşmadığın ufak bir sıkıntı, zihninde olduğundan büyük yer tutuyor. İçini açacağın sakin bir akşam, düşündüğünden daha huzurlu geçebilir.||Güçlü olmak, bütün yükleri tek başına taşımak değildir. Aynı yolu paylaşan iki insan, birbirinin yorgunluğunu duyabildiğinde evin duvarları bile hafifler.",
+      "metin_en": "Even though you try not to bring the day's exhaustion home with you, sometimes you grow quiet at the dinner table. A small worry you haven't shared with your spouse takes up more room in your mind than it deserves. A peaceful evening when you open your heart may turn out to be far more comforting than you expect.||Being strong does not mean carrying every burden alone. When two people walking the same path can hear each other's weariness, even the walls of their home seem to grow lighter.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 381,
+      "metin": "Mesai bitse de aklında tamamlanmamış bir işin kalıyor. Çalıştığın yerde emek verdiğin bazı ayrıntıların fark edilmediğini düşünüyorsun. Önümüzdeki günlerde alacağın olumlu bir geri dönüş, bütün çabanın görünmez olmadığını gösterebilir.||İyi iş, yalnız alkış duyulduğunda kıymet kazanmaz. Taşı yerine sağlam koyan usta, duvar yükseldiğinde kendi emeğinin nerede durduğunu bilir.",
+      "metin_en": "Even after your workday ends, an unfinished task remains on your mind. You sometimes feel that the effort you've put into certain details at work goes unnoticed. In the coming days, some positive feedback may show you that not all your hard work has been invisible.||Good work does not gain its worth only when applause is heard. The craftsman who sets each stone firmly in place knows exactly where his contribution lies when the wall rises.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
+    },
+    {
+      "id": 382,
+      "metin": "Kurumda aynı usulü defalarca uygularken bazen emeğinin sıradanlaştığını hissediyorsun. Bir evrakın küçük ayrıntısına gösterdiğin dikkat, önümüzdeki günlerde işini kolaylaştırabilir. Sabırla kurduğun düzen sandığından değerlidir.||Düzeni ayakta tutan yalnız büyük kararlar değildir. Yerine konmuş küçük bir taş, nice insanın üzerinden güvenle geçeceği köprünün parçasıdır.",
+      "metin_en": "As you follow the same procedures over and over at your institution, you sometimes feel that your work has become ordinary. The care you give to a small detail in a document may make your job easier in the coming days. The order you've patiently established is more valuable than you realize.||It is not only great decisions that keep things standing. A small stone set in its proper place becomes part of a bridge that countless people can cross safely.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
+    },
+    {
+      "id": 383,
+      "metin": "Eskiden uzun uzun açıklamaya çalıştığın bazı şeyleri artık tek cümleyle geçiyorsun. Tecrüben sana her tartışmanın kazanılmaya değmediğini öğretti. Yakınında senden fikir isteyen birinin sözleri, yılların birikimini yeniden hatırlatacak.||Olgunluk, her sorunun cevabını bilmek değil, hangi soruya cevap vermemek gerektiğini de anlamaktır. Derinleşen nehir, sesini azaltır.",
+      "metin_en": "These days, you can sum up in a single sentence things you once spent ages trying to explain. Experience has taught you that not every argument is worth winning. Someone close to you asking for your advice will soon remind you of the wisdom you've accumulated over the years.||Maturity is not knowing the answer to every question, but also understanding which questions are best left unanswered. The deeper a river flows, the quieter it becomes.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ]
+    },
+    {
+      "id": 384,
+      "metin": "Sabah pencereyi açtığında havanın kokusu bile bazen ruh hâlini değiştiriyor. İçinde uzun süredir beklettiğin küçük bir isteği, hep daha uygun bir güne erteliyorsun. Önümüzdeki günlerde ona ilk adımı attığında ferahlık duyabilirsin.||Büyük yollar, kapının önündeki ilk adımla başlar. Ufuk, yürümeye cesaret edene yaklaşır; yerinde bekleyene ise hep uzak görünür.",
+      "metin_en": "Sometimes, even the scent of the air when you open your window in the morning can change your mood. There's a small wish you've been holding onto for a long time, always postponing it until a better day. Taking the first step toward it in the coming days may bring you a wonderful sense of relief.||Great journeys begin with the first step beyond your doorstep. The horizon draws closer to those who dare to walk toward it; to those who stand still, it always seems far away.",
+      "kosullar": []
+    },
+    {
+      "id": 385,
+      "metin": "Evin düzenini sağlamak için yaptığın küçük işler, çoğu zaman ancak yapılmadığında fark ediliyor. Bir dolabın kapağını açıp eksikleri düşünürken kendine ayıracağın zamanı da hatırla. Yakında evindeki küçük bir değişiklik sana sevinç verebilir.||Bir evi güzelleştiren yalnız temizliği ve düzeni değildir. İçinde yaşayan insanın gönlü de ferah olmalı; kendine gösterdiğin özen, yuvanın huzurundan eksiltmez.",
+      "metin_en": "The little things you do to keep your home running smoothly often go unnoticed until they're left undone. As you open a cupboard and think about what's missing, remember to make time for yourself, too. A small change in your home may soon bring you joy.||It is not only cleanliness and order that make a home beautiful. The heart of the person living within it must also feel at ease; caring for yourself takes nothing away from the peace of your household.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
+    },
+    {
+      "id": 386,
+      "metin": "Ayakkabılarını çıkarıp günün sonunda oturduğunda bedenin dinleniyor ama zihnin hâlâ yapılacakları sıralıyor. Kendine verdiğin sözlerden birini küçük bir adımla yerine getirirsen içindeki ağırlık azalacak.||İnsan, bütün meselelerini bir günde çözmek zorunda değildir. Ağır bir kapıyı açan şey de bazen yalnızca menteşesine gösterilen küçücük bir özendir.",
+      "metin_en": "When you take off your shoes and sit down at the end of the day, your body begins to rest, but your mind is still listing everything that needs to be done. If you fulfill one of the promises you've made to yourself, even through a small step, the weight inside you will begin to lift.||No one is obliged to solve every problem in a single day. Sometimes, all it takes to open a heavy door is a little care given to its hinges.",
+      "kosullar": []
+    },
+    {
+      "id": 387,
+      "metin": "Gece telefonunu bir kenara bıraktıktan sonra bile arkadaş grubunda konuşulan bir söz aklında dönüyor. Bazen herkesin senden daha emin olduğunu sanıyorsun. Yakında kendi başına vereceğin küçük bir karar, sandığından daha güçlü olduğunu gösterecek.||Genç bir ağacın rüzgârda eğilmesi, köklerinin zayıf olduğunu göstermez. Kendi yönünü bulman için başkalarının adımlarını saymayı bırakman gerekir.",
+      "metin_en": "Even after you put your phone aside at night, something said in your group of friends keeps circling through your mind. Sometimes you imagine that everyone else is more certain of themselves than you are. Soon, a small decision you make on your own will show you that you're stronger than you think.||A young tree bending in the wind does not mean its roots are weak. To find your own direction, you must stop counting the steps other people take.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ]
+    },
+    {
+      "id": 388,
+      "metin": "Eski bir defterin sayfasında karşılaştığın bir kelime, bir zamanlar önem verdiğin bir dileği hatırlatabilir. Bugünkü düşüncelerinle o günkü isteklerin aynı değil. Değiştiğin için kendini suçlama.||Yolcu, yola çıktığı yerdeki insan olarak menzile varmaz. Yolun öğrettiklerini kabul etmek, eski hayallerine ihanet değil, kendi hakikatine yaklaşmaktır.",
+      "metin_en": "A word you come across on the page of an old notebook may remind you of a wish that once meant a great deal to you. What you think today is not the same as what you wanted back then. Don't blame yourself for changing.||A traveler never reaches the destination as exactly the same person who first set out. Accepting what the journey has taught you is not a betrayal of your old dreams, but a step closer to your own truth.",
+      "kosullar": []
+    },
+    {
+      "id": 389,
+      "metin": "Bazen yorgunluğunu belli etmemek için konuşmayı kısa kesiyor, zihnindeki hesabı kimseye açmıyorsun. Senden beklenenlerle kendi arzuların arasında sessizce bir denge kurmaya çalışıyorsun. Yakın günlerde alacağın küçük bir haber içini rahatlatabilir.||Yükü ağır olanın her zaman sert görünmesi gerekmez. Demir ateşte şekil alır; insan ise bazen yumuşak bir sözle yeniden kuvvet bulur.",
+      "metin_en": "Sometimes you keep conversations short to hide your exhaustion, keeping the concerns weighing on your mind to yourself. You're quietly trying to find a balance between what others expect of you and what you truly desire. A small piece of news in the coming days may put your mind at ease.||Those who carry heavy burdens do not always have to appear stern. Iron takes shape in fire; a person, however, can sometimes find renewed strength through a gentle word.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     }
   ]
 }

@@ -6162,6 +6162,311 @@
         "kariyer",
         "saglik"
       ]
+    },
+    {
+      "id": 467,
+      "metin": "Kitapların, notların ve araya sıkışmış bir kahvenin ardından Magnus'a uğramana sevindim {{isim}}!\n\nOkulda bazen her şeyi son ana bıraksan da sıkışınca şaşırtıcı derecede iyi toparlanıyorsun. Bir arkadaşınla yarım kalan konuşmanın da zihninin bir köşesinde durduğunu seziyorum. Genel falında derslerin dışındaki hareketliliğe de bakacağım. Fincanın sanki küçük bir sırrını saklıyor; açalım bakalım...",
+      "metin_en": "After the books, the notes and a coffee squeezed in between, I'm glad you stopped by Magnus, {{isim}}!\n\nAt school you sometimes leave everything to the last minute, yet when you're cornered you pull it together surprisingly well. I sense an unfinished conversation with a friend still sitting in a corner of your mind. In your general reading I'll also look at what's stirring beyond your classes. Your cup seems to be keeping a little secret; let's open it up...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 468,
+      "metin": "Kalbinin kapısına şöyle hafifçe vurayım mı {{isim}}? Merhaba, ben Magnus!\n\nBekar olman, aşk konusunda beklentin olmadığı anlamına gelmiyor; aradıkların az ama net. Hoşuna giden birini önce uzaktan tanımaya çalışıyor, güven duymadan adım atmıyorsun. Arkadaşlarının 'seni biriyle tanıştırayım mı?' sorusuna gülüp geçsen de içinden bir an düşündüğün oluyor. Kahvenin aşk tarafında tatlı bir kıpırtı var; bakalım...",
+      "metin_en": "Shall I knock gently on the door of your heart, {{isim}}? Hello, I'm Magnus!\n\nBeing single doesn't mean you have no expectations in love; what you're looking for is little, but clear. You first try to get to know someone you like from a distance, and you don't take a step until you feel trust. You may laugh off your friends' 'Shall I introduce you to someone?' but for a moment you do think about it. There's a sweet flutter on the love side of your coffee; let's see...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 469,
+      "metin": "Merhabalar kıymetli {{isim}}! Kahve falını yorumlamak üzere Magnus karşında.\n\nEvde yapılacakları düşünürken kendi dinlenmeni ikinci sıraya attığın zamanlar oluyor. Eşinle iki lafın belini kırdığın sakin bir akşamın bile sana iyi geldiğini hissediyorum. Sağlık konusunda merak ettiğin şeyler olsa da fincanından biraz huzur ve toparlanma haberi almak niyetindeyim. Şu kahvenin bıraktığı izleri birlikte okuyalım...",
+      "metin_en": "Greetings, dear {{isim}}! Magnus is here to read your coffee.\n\nThere are times when, thinking about everything that needs doing at home, you push your own rest to second place. I feel that even a quiet evening of small talk with your spouse does you good. Even if you have questions about your health, I intend to find some news of peace and recovery in your cup. Let's read the traces this coffee has left together...",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 470,
+      "metin": "Resmî yazıların arasında gönül meselelerine de yer açılır elbet {{isim}}! Magnus'a hoş geldin.\n\nKurumda aynı konuyu birkaç kişiye sabırla anlatabiliyorsun ama o sabrı özel hayatında herkese göstermiyorsun. Aşk konusunda söylenmeyenleri anlamaya çalıştığın bir dönemden geçtiğini telvelerin şimdiden fısıldıyor. Masanın üzerindeki dosyalar bir yana, kalbinin gündemi başka. Bakalım fincan neyi öne çıkaracak...",
+      "metin_en": "Even among official paperwork there's always room for matters of the heart, {{isim}}! Welcome to Magnus.\n\nAt the institution you can patiently explain the same thing to several people, but you don't show that patience to everyone in your private life. Your grounds are already whispering that you're going through a time of trying to understand what goes unsaid in love. The files on your desk aside, your heart has its own agenda. Let's see what the cup brings forward...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 471,
+      "metin": "Yarım kalmış bir cümlenin ardından gelen sessizlik... Seni bu duyguyla karşılıyorum {{isim}}.\n\nBen Magnus. Ayrılıktan sonra alışkanlıkların bile yavaş yavaş değişiyor. Eskiden birlikte gittiğiniz bir yerin önünden geçerken artık adımlarını hızlandırmadığını fark ediyorsun. Burukluk sürse de yeni düzenini kuracak gücü topladığın belli. Genel falında geçmişe değil, önünde açılacak sayfalara bakacağım; başlayalım...",
+      "metin_en": "The silence after an unfinished sentence... That's the feeling I welcome you with, {{isim}}.\n\nI'm Magnus. Since the breakup, even your habits are slowly changing. When you pass a place you used to go together, you notice you no longer quicken your steps. Though some heartache lingers, it's clear you've gathered the strength to build your new routine. In your general reading I'll look not at the past but at the pages opening ahead of you; let's begin...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 472,
+      "metin": "Bir fincan kahvenin yanında söylenmeyen ne çok şey birikir {{isim}}! Magnus'tan sevgiler.\n\nGünün içinde bir işle uğraşırken aklına bambaşka bir mesele düşüyor. Sonra kaldığın yere dönüp hiçbir şey olmamış gibi devam ediyorsun. Genel falında, ertelediğin küçük bir işi bitirdiğinde başka bir kapının da kendiliğinden aralanacağına dair bir sezgim var. Şimdi telvelere kulak verelim...",
+      "metin_en": "So much goes unsaid beside a cup of coffee, {{isim}}! Love from Magnus.\n\nWhile you're busy with one task during the day, a completely different matter pops into your head. Then you return to where you left off and carry on as if nothing happened. In your general reading I have a hunch that once you finish a small task you've been putting off, another door will open on its own. Now let's listen to the grounds...",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 473,
+      "metin": "Emekliliğe 'dinlenme' diyenler seni pek tanımıyor galiba {{isim}}! Magnus seni saygıyla selamlıyor.\n\nZamanın bollaşmış olsa da zihnindeki çalışma alışkanlığı hemen kaybolmamış. Hâlâ bir işin en düzgün nasıl yapılacağını düşünüyorsun. Eski meslek hayatından kalan bir tecrübenin yeniden işe yarayacağını seziyorum. Kariyer falında birikiminin bugünkü değerini araştıracağım; müsaadenle başlıyorum...",
+      "metin_en": "Those who call retirement 'rest' don't know you very well, it seems, {{isim}}! Magnus greets you with respect.\n\nYou may have more time now, but your working habits haven't faded from your mind. You still think about the proper way to get a job done. I sense that some experience from your working years is about to be useful again. In your career reading I'll explore what your accumulated experience is worth today; with your permission, I'm beginning...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 474,
+      "metin": "Hanımefendi, bu kahvenin kokusunda bile bir kararlılık var! Merhaba {{isim}}, ben Magnus.\n\nHedeflerin söz konusu olduğunda nezaketini koruyorsun ama gerektiğinde sınır koymayı da biliyorsun. Yakın zamanda emeğini anlatmak için doğru kelimeleri aradığın bir an olmuş gibi. Önümüzdeki günlerde fikrini bir kez daha savunman gerekecek; bu kez sesin daha net çıkacak. Fincanında bu gelişmenin izini süreceğim; haydi...",
+      "metin_en": "Madam, there's determination even in the aroma of this coffee! Hello {{isim}}, I'm Magnus.\n\nWhen it comes to your goals you stay courteous, yet you know how to draw a line when needed. Recently there seems to have been a moment when you searched for the right words to explain your efforts. In the coming days you'll need to defend your idea once more; this time your voice will come out clearer. I'll follow the trace of this development in your cup; here we go...",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 475,
+      "metin": "Derin bir nefes alıp kahveni bitirdiğin o anı düşün {{isim}}. Magnus seni selamlıyor!\n\nGün içinde birçok şeye yetişirken dinlenmeyi sonraya bırakabiliyorsun. Özellikle akşamları omuzlarından yük indirir gibi rahatlamak istediğin zamanlar var. Sağlık niyetiyle kapattığın fincanda sana huzur verecek alışkanlıkların işaretini arayacağım. Önce telvelerin ne anlattığına bakalım; güzel başlayalım...",
+      "metin_en": "Think of that moment when you take a deep breath and finish your coffee, {{isim}}. Magnus greets you!\n\nWhile keeping up with so many things during the day, you tend to put rest off until later. There are times, especially in the evenings, when you want to unwind as if setting a load down from your shoulders. In the cup you closed with health in mind, I'll look for signs of habits that will bring you peace. First let's see what the grounds say; let's start well...",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 476,
+      "metin": "İki kişilik hayatın bazen tek bir fincana yansıyan yorgunlukları vardır {{isim}}.\n\nMagnus olarak hoş geldin diyorum. Eşinle günlük telaşları paylaşırken kendine ayıracağın sakin bir zamanı özlediğini sezdim. Birinizin yorgunluğunu öteki daha kapıdan girerken fark ediyor; bu, sizin en güzel ortak dilinizden biri. Sağlık falında bedenini dinlemene ve evindeki huzura eşlik eden işaretleri inceleyeceğim; başlayalım...",
+      "metin_en": "A life for two sometimes has a tiredness that shows up in a single cup, {{isim}}.\n\nI, Magnus, say welcome. I sensed that while sharing the daily rush with your spouse, you miss a calm moment to set aside for yourself. One of you notices the other's tiredness the moment they walk through the door; that is one of the loveliest shared languages you have. In your health reading I'll examine the signs that help you listen to your body and accompany the peace in your home; let's begin...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 477,
+      "metin": "Biraz enerji, biraz uykusuzluk, biraz da 'yarın hallederim' düşüncesi... Tanıdık geldi mi {{isim}}?\n\nMagnus seni kahve falında karşılıyor. Arkadaş grubunla hareketli zamanlar geçirirken bazen sessiz bir köşeye çekilmek istiyorsun. Sağlık konusunda en çok kendi ritmini bulmaya ihtiyaç duyduğunu hissediyorum. Bakalım fincanında dinlenmeye ve yeniden canlanmaya dair ne gibi güzel işaretler gizli...",
+      "metin_en": "A bit of energy, a bit of sleeplessness, and a bit of 'I'll handle it tomorrow'... Sound familiar, {{isim}}?\n\nMagnus welcomes you to your coffee reading. While having lively times with your group of friends, you sometimes want to withdraw to a quiet corner. I feel that when it comes to health, what you need most is to find your own rhythm. Let's see what lovely signs of rest and renewal are hidden in your cup...",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 478,
+      "metin": "Seçimlerinde eskisinden daha titiz olduğun belli {{isim}}. Magnus'a hoş geldin!\n\nGeride bıraktığın evlilik sana kendi önceliklerini daha iyi tanımayı öğretmiş. Kariyer konusunda artık bir kararın yalnızca maddi tarafını değil, sana bırakacağı huzuru da düşünüyorsun. Daha önce çekindiğin küçük bir girişimi yeniden ele alma isteğinin kıpırdadığını görüyorum. Bakalım kahven bu yeni sayfaya nasıl ışık tutacak...",
+      "metin_en": "It's clear you're more careful with your choices than before, {{isim}}. Welcome to Magnus!\n\nThe marriage you left behind has taught you to know your own priorities better. In your career, you now think not only about the financial side of a decision but also about the peace it will leave you. I see the urge stirring again to take up a small venture you once hesitated over. Let's see how your coffee lights up this new page...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 479,
+      "metin": "Nişan yüzüğünün yanında bir de bitmek bilmeyen hazırlıklar var, öyle mi {{isim}}?\n\nMagnus burada, buyur. Hazırlık listesi uzadıkça uykunun biraz kısaldığını, yemeklerin ayaküstüne kaldığını sezer gibiyim. Yine de nişanlınla bir işi daha bitirdiğinizde gelen o rahatlama bütün yorgunluğu alıyor. Sağlık falında bu tatlı telaşın içinde kendine ayıracağın huzurlu anların izini arayacağım; gel başlayalım...",
+      "metin_en": "Besides the engagement ring there are also preparations that never seem to end, is that so, {{isim}}?\n\nMagnus is here, come in. As the preparation list grows longer, I sense your sleep getting a little shorter and your meals being eaten on the go. Still, the relief that comes each time the two of you finish another task takes away all the tiredness. In your health reading I'll look for traces of the peaceful moments you'll set aside for yourself amid this sweet bustle; come, let's begin...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 480,
+      "metin": "Söylenmiş bir söz mü daha değerlidir, yoksa zamanında gösterilen ilgi mi {{isim}}?\n\nBen Magnus, kahve falınla karşındayım. Sözden çok davranışa bakan birisin; birinin unutmadığı küçük bir ayrıntı seni günlerce düşündürebiliyor. İçtenliği sezmekte de kendine güveniyorsun. Telvelerin arasından gönlünü hafifletecek bir konuşmanın izlerini yakalamaya çalışacağım; başlayalım...",
+      "metin_en": "Is a spoken word worth more, or attention shown at the right time, {{isim}}?\n\nI'm Magnus, here with your coffee reading. You're someone who looks at actions more than words; a small detail someone didn't forget can keep you thinking for days. You also trust yourself to sense sincerity. I'll try to catch, among your grounds, the traces of a conversation that will lighten your heart; let's begin...",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 481,
+      "metin": "Bilimsel meselelerde kanıt arıyorsun, peki gönül işlerinde ne yapıyorsun {{isim}}?\n\nMagnus seni fincanının başında bekliyordu. Bölümde bir konuyu uzun uzun tartışabilirken duygularını anlatmak için bazen doğru anı bekliyorsun. Birinin düşüncelerine gösterdiği gerçek ilgi, sana sıradan bir iltifattan daha anlamlı geliyor. Aşk fincanında akılla kalbin uzlaşacağı hoş bir işaret var gibi; inceleyelim...",
+      "metin_en": "In scientific matters you look for evidence, but what do you do in matters of the heart, {{isim}}?\n\nMagnus was waiting for you beside your cup. In the department you can debate a topic at length, yet to express your feelings you sometimes wait for the right moment. Genuine interest in your ideas means more to you than an ordinary compliment. In your love cup there seems to be a lovely sign of reason and heart coming to terms; let's examine it...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 482,
+      "metin": "Bir erkeğin hayatında düzen ve özgürlük bazen çekişir, sen de bilirsin {{isim}}!\n\nMerhaba, ben Magnus. Bekar hayatında kendi kararlarını rahatça almak hoşuna gidiyor ama bazı sorumlulukları da ertelemek istemiyorsun. Arkadaşlarınla yaptığın bir planı sonradan yeniden değerlendirdiğin olmuş gibi. Genel falında bu iki isteği dengeleyecek güzel bir gelişmenin işaretleri var; gel bakalım...",
+      "metin_en": "In a man's life, order and freedom sometimes wrestle, and you know it, {{isim}}!\n\nHello, I'm Magnus. In your single life you enjoy making your own decisions freely, but you don't want to put off certain responsibilities either. It seems you've reconsidered a plan you made with your friends after the fact. In your general reading there are signs of a pleasant development that will balance these two wishes; come, let's look...",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 483,
+      "metin": "Pencereden içeri giren ışığın bile evinin havasını değiştirdiğini bilirsin {{isim}}. Magnus'a hoş geldin!\n\nEvinin düzenini kendi elinle kurmuşsun; bir yastığın yeri bile senin onayından geçiyor. Bazen bir dolabı açıp asıl aradığından başka bir şeyi düzenlemeye başladığın oluyor. Genel falında evin içinden doğacak ufak bir sevincin büyüyeceği daha ilk bakışta gözüme çarptı. Telvelere birlikte bakalım...",
+      "metin_en": "You know that even the light coming through the window changes the mood of your home, {{isim}}. Welcome to Magnus!\n\nYou've built the order of your home with your own hands; even the place of a cushion needs your approval. Sometimes you open a cupboard and start tidying something other than what you were looking for. In your general reading, a small joy born inside your home that is set to grow caught my eye at first glance. Let's look at the grounds together...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 484,
+      "metin": "Mesai arkadaşlarının 'bunu sen bilirsin' diye sana döndüğü anları tanıyorum {{isim}}. Selam, ben Magnus!\n\nÖzel sektörün temposu seni hızlı düşünmeye alıştırmış. Fakat bazen iş yerinde söylediğin bir cümlenin yanlış anlaşılmaması için sonradan yeniden açıklama yapıyorsun. Genel falında iş yerindeki küçük bir pürüzün bir çay molasında kendiliğinden çözüleceğine dair işaretler var. Şimdi fincanı konuşturalım...",
+      "metin_en": "I know those moments when your colleagues turn to you saying 'you'd know this', {{isim}}. Hi, I'm Magnus!\n\nThe pace of the private sector has taught you to think fast. But sometimes you explain a sentence you said at work all over again afterwards, so it won't be misunderstood. In your general reading there are signs that a small snag at work will sort itself out over a tea break. Now let's get the cup talking...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 485,
+      "metin": "Kariyer basamaklarını çıkarken yanında seni anlayan birinin olması güzel şey {{isim}}!\n\nMagnus'tan selamlar. Sevdiğin kişiyle iş hayatına dair konuştuğunda bazen çözüm önerisinden çok, seni sonuna kadar dinlemesini istiyorsun. Bir süredir değerlendirdiğin mesleki bir seçenek de zihninin arka planında duruyor. Fincanında yakın bir sohbetin bu konuda düşüncelerini berraklaştıracağına dair izler var; başlayalım...",
+      "metin_en": "It's a fine thing to have someone who understands you by your side as you climb the career ladder, {{isim}}!\n\nGreetings from Magnus. When you talk about work with the person you love, sometimes you want them to hear you out completely rather than offer a solution. A career option you've been weighing for a while is also sitting in the back of your mind. In your cup there are traces that a close conversation will clarify your thoughts on this; let's begin...",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 486,
+      "metin": "Sert bir duruşun ardında ince bir gönül saklanabilir {{isim}}. Bunu en iyi sen bilirsin!\n\nMerhaba, Magnus karşında. Aşk hayatında gereksiz tartışmalardan hoşlanmıyorsun ama önem verdiğin bir sözün unutulmasını da kolay geçiştiremiyorsun. Kimi zaman duygularını bir esprinin arkasına saklaman dikkatimi çekti. Telvelerin arasında içten bir yakınlaşmanın sıcaklığı var; bakalım neler anlatacak...",
+      "metin_en": "A soft heart can hide behind a tough stance, {{isim}}. You know that better than anyone!\n\nHello, Magnus is here. In love you dislike pointless arguments, but when words that mattered to you are forgotten, you can't easily let it go. At times, the way you hide your feelings behind a joke caught my attention. There's the warmth of a sincere closeness among your grounds; let's see what it tells us...",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
     }
   ]
 }

@@ -4808,6 +4808,146 @@
       "metin": "Efendim, buyurunuz! Magnus'un kapısından girene çay da var, kehanet de. Bugün küçük bir tesadüfün yüzünü güldüreceğini haber veriyor içimdeki ses.",
       "metin_en": "Please, come in! There's tea and prophecy for whoever enters Magnus's door. The voice in me says a small coincidence will make you smile today.",
       "kosullar": []
+    },
+    {
+      "id": 720,
+      "ziyaret": 1,
+      "metin": "Pusulam bugün senden yana dönmüş {{isim}}! Aklının bir köşesinde beklettiğin bir konu, ufak bir gelişmeyle yoluna girebilir.",
+      "metin_en": "My compass has turned in your favor today, {{isim}}! A matter you've kept waiting in a corner of your mind may fall into place with a small development.",
+      "kosullar": []
+    },
+    {
+      "id": 721,
+      "ziyaret": 1,
+      "metin": "Hoş geldin {{isim}}! Bugün birinin sana hiç sormadan uzatacağı küçük bir ikram, gönlünü sandığından çok ısıtacak gibi.",
+      "metin_en": "Welcome, {{isim}}! Today a small treat someone offers you without even asking seems set to warm your heart more than you'd expect.",
+      "kosullar": []
+    },
+    {
+      "id": 722,
+      "ziyaret": 1,
+      "metin": "Telefonunun ekranında belirecek birkaç kelimeye gözüm takıldı {{isim}}. Günün bir anında gelecek kısa bir cevap yüzüne kocaman bir tebessüm kondurabilir!",
+      "metin_en": "My eye caught a few words about to appear on your phone screen, {{isim}}. A short reply arriving at some point today may put a big smile on your face!",
+      "kosullar": []
+    },
+    {
+      "id": 723,
+      "ziyaret": 1,
+      "metin": "{{isim}}, hoş geldin! Bugün içinden iki ses konuşabilir; biri acele et, öteki bekle diyecek. Sezgilerim, sakin olanın sana güzel bir kapı açacağını söylüyor.",
+      "metin_en": "{{isim}}, welcome! Today two voices may speak inside you; one will say hurry, the other wait. My intuition says the calm one will open a lovely door for you.",
+      "kosullar": []
+    },
+    {
+      "id": 724,
+      "ziyaret": 1,
+      "metin": "Bir davet sezdim {{isim}}! Bugün ya da yarın sözlü olarak bir yere çağrılabilirsin; gidersen orada seni gülümsetecek bir sohbet var.",
+      "metin_en": "I sensed an invitation, {{isim}}! Today or tomorrow you may be invited somewhere in person; if you go, a conversation that will make you smile awaits you there.",
+      "kosullar": []
+    },
+    {
+      "id": 725,
+      "ziyaret": 1,
+      "metin": "Selam {{isim}}! Bugün hiç tanımadığın birinin sana göstereceği küçük bir incelik, keyfini akşama kadar taşıyacak gibi görünüyor.",
+      "metin_en": "Hi {{isim}}! Today a small kindness from someone you don't know at all looks set to carry your good mood all the way to the evening.",
+      "kosullar": []
+    },
+    {
+      "id": 726,
+      "ziyaret": 1,
+      "metin": "Üç küçük kıvılcım saydım, üçüncüsü senin için parladı! Hoş geldin {{isim}}. Önemsiz sandığın bir ayrıntı bugün işini beklediğinden fazla kolaylaştırabilir.",
+      "metin_en": "I counted three little sparks, and the third one glowed for you! Welcome, {{isim}}. A detail you think is unimportant may make your work easier than expected today.",
+      "kosullar": []
+    },
+    {
+      "id": 727,
+      "ziyaret": 1,
+      "metin": "Hoop, Magnus burada! {{isim}}, bugün bir tanıdığından gelecek güzel bir haberin seni de en az onun kadar sevindireceğini hissediyorum.",
+      "metin_en": "Ta-da, Magnus is here! {{isim}}, I feel that good news from someone you know will make you as happy today as it makes them.",
+      "kosullar": []
+    },
+    {
+      "id": 728,
+      "ziyaret": 1,
+      "metin": "Bir köşede saklanan küçük bir şey sana göz kırpıyor {{isim}}! Bugün aradığın bir eşyanın hiç beklemediğin bir yerden çıkacağını seziyorum.",
+      "metin_en": "Something small hidden in a corner is winking at you, {{isim}}! I sense that today an item you've been looking for will turn up where you least expect it.",
+      "kosullar": []
+    },
+    {
+      "id": 729,
+      "ziyaret": 1,
+      "metin": "Aklına ansızın düşen bir isim, günün küçük bilmecesi olabilir. Merhaba {{isim}}! Eski bir tanışıklığın sana hoş bir hatıra getireceği kulağıma fısıldanıyor.",
+      "metin_en": "A name that suddenly crosses your mind may be the day's little riddle. Hello {{isim}}! A whisper in my ear says an old acquaintance will bring you a sweet memory.",
+      "kosullar": []
+    },
+    {
+      "id": 730,
+      "ziyaret": 1,
+      "metin": "Masamdaki mor taş var ya {{isim}}, sen gelince ışıldadı! Bugün ufak bir fikir değişikliğinin seni hayli memnun edeceğine dair güçlü hislerim var.",
+      "metin_en": "You know that purple stone on my table, {{isim}}? It lit up when you arrived! I have a strong feeling a small change of mind will please you a lot today.",
+      "kosullar": []
+    },
+    {
+      "id": 731,
+      "ziyaret": 1,
+      "metin": "{{isim}}, bugün zihninin çekmecelerini biraz karıştırdım! Unuttuğunu sandığın küçük bir yanlış anlaşılma, tek bir cümleyle tatlıya bağlanabilir.",
+      "metin_en": "{{isim}}, I rummaged a bit through the drawers of your mind today! A small misunderstanding you thought you'd forgotten could be smoothed over with a single sentence.",
+      "kosullar": []
+    },
+    {
+      "id": 732,
+      "ziyaret": 1,
+      "metin": "Magnus'un görünmez mürekkebi bugün tek kelime yazdı: Ferahlık. Hoş geldin {{isim}}; uzun süredir düşündüğün bir konuda küçük ama gerçek bir ilerleme var.",
+      "metin_en": "Magnus's invisible ink wrote just one word today: Relief. Welcome, {{isim}}; there's small but real progress on a matter you've been mulling over for a long time.",
+      "kosullar": []
+    },
+    {
+      "id": 733,
+      "ziyaret": 1,
+      "metin": "Biraz tarçın kokusu, biraz eski zaman büyüsü... Merhaba {{isim}}! Bir zamanlar duyduğun bir öğüt, bugün tam ihtiyacın olan anda aklına gelecek gibi.",
+      "metin_en": "A hint of cinnamon, a touch of old-time magic... Hello {{isim}}! A piece of advice you once heard seems set to come to mind today exactly when you need it.",
+      "kosullar": []
+    },
+    {
+      "id": 734,
+      "ziyaret": 1,
+      "metin": "Bugün damağında iz bırakacak bir gün {{isim}}! Tadı aklında kalacak bir lokma, sıradan bir anı küçük bir şenliğe çevirebilir.",
+      "metin_en": "Today is a day that will leave a mark on your palate, {{isim}}! A bite whose taste stays with you may turn an ordinary moment into a little celebration.",
+      "kosullar": []
+    },
+    {
+      "id": 735,
+      "ziyaret": 1,
+      "metin": "Merhaba {{isim}}! Bugün bir an başını kaldırıp gökyüzüne bakacak ve içinden 'iyi ki' diyeceksin; o kısa duraklama günün en güzel yeri olabilir.",
+      "metin_en": "Hello {{isim}}! At some point today you'll look up at the sky and think 'I'm so glad'; that brief pause may be the best part of your day.",
+      "kosullar": []
+    },
+    {
+      "id": 736,
+      "ziyaret": 1,
+      "metin": "{{isim}}, pelerinimi düzeltip seni karşılamaya geldim! Bugün ufak bir aksiliğe bulacağın pratik çözümle kendini bile şaşırtabilirsin.",
+      "metin_en": "{{isim}}, I straightened my cloak and came to greet you! Today you may surprise even yourself with the practical fix you find for a small mishap.",
+      "kosullar": []
+    },
+    {
+      "id": 737,
+      "ziyaret": 1,
+      "metin": "Camın buğusuna çizilmiş küçücük bir gülümseme var {{isim}}. Bugün ayaküstü edeceğin bir sohbetten, umduğundan güzel bir hisle ayrılacağını öngörüyorum.",
+      "metin_en": "There's a tiny smile drawn on the fogged-up glass, {{isim}}. I foresee that today you'll walk away from a quick chat with a better feeling than you hoped.",
+      "kosullar": []
+    },
+    {
+      "id": 738,
+      "ziyaret": 1,
+      "metin": "Safa geldin {{isim}}! Bugün yolda gözüne ilişen sıradan bir ayrıntı, uzun zamandır içinde tuttuğun güzel bir isteği yeniden canlandırabilir.",
+      "metin_en": "What a pleasure to see you, {{isim}}! Today an ordinary detail that catches your eye on the way may rekindle a lovely wish you've held inside for a long time.",
+      "kosullar": []
+    },
+    {
+      "id": 739,
+      "ziyaret": 1,
+      "metin": "{{isim}}, içimdeki küçük kâhin bugün pek iddialı! Eskiden canını sıkan bir ayrıntıya artık eskisi kadar takılmadığını fark edeceksin. Ne güzel!",
+      "metin_en": "{{isim}}, the little seer inside me is feeling bold today! You'll notice that a detail that used to bother you no longer gets to you as much. How lovely!",
+      "kosullar": []
     }
   ],
   "biliyormuydun": [

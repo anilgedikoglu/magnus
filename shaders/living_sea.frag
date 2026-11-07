@@ -30,8 +30,9 @@ void main() {
   float t = uTime;
   vec4 orig = texture(uImage, uv);
 
-  // Su maskesi: ufkun altı, ufukta yumuşak geçiş.
-  float m = smoothstep(uHorizon - 0.005, uHorizon + 0.045, uv.y);
+  // Su maskesi: ufkun altı, ufukta ÇOK yumuşak/geniş geçiş (dar bant görünür bir "çizgi"
+  // yapıyordu — Anıl, 2026-11-07). Geçiş 0.05 → ~0.19 uv'ye yayıldı, dikiş kayboldu.
+  float m = smoothstep(uHorizon - 0.03, uHorizon + 0.16, uv.y);
   // Yakın (alt) bölgede dalgalar daha büyük ve yavaş.
   float near = clamp((uv.y - uHorizon) / max(1.0 - uHorizon, 0.001), 0.0, 1.0);
   float k = mix(0.35, 1.0, near);

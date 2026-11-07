@@ -562,7 +562,8 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
 
   Widget _buildTabBar(Color accent) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+      // Yan dolgu 16→10: büyüyen düğmelere yer aç, değmesinler (Anıl, 2026-11-07).
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: List.generate(_tabs.length, (i) => _iconBtn(
@@ -587,23 +588,23 @@ class _AstroTakvimScreenState extends ConsumerState<AstroTakvimScreen>
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
-        // Boyut eski hâline döndü (Anıl, 2026-11-06: "fazla küçülmüş, eski haline getir");
-        // aralar açık kaldı (yan dolgu 16, düğmeler eşit aralıklı).
-        width: active ? 50 : 44,
-        height: active ? 40 : 36,
+        // ~%32 büyütüldü (Anıl, 2026-11-07: "üstteki butonları %30-40 büyüt, değmesinler");
+        // yan dolgu 10 + spaceEvenly ile 320px'e kadar değmeden sığar, içerik doğal akışla iner.
+        width: active ? 66 : 56,
+        height: active ? 54 : 48,
         decoration: BoxDecoration(
           color: bg,
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(11),
           border: active && activeColor != null
               ? Border.all(
-                  color: Colors.white.withValues(alpha: 0.65), width: 1.5)
+                  color: Colors.white.withValues(alpha: 0.65), width: 1.6)
               : null,
           boxShadow: active && activeColor != null
               ? [BoxShadow(
-                  color: activeColor.withValues(alpha: 0.55), blurRadius: 8)]
+                  color: activeColor.withValues(alpha: 0.55), blurRadius: 10)]
               : null,
         ),
-        child: Icon(icon, color: Colors.white, size: active ? 21 : 19),
+        child: Icon(icon, color: Colors.white, size: active ? 28 : 25),
       ),
     );
   }

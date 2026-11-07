@@ -617,7 +617,10 @@ class _MagnusBalonu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    // Yanlardan kenara değmesin (Anıl, 2026-11-07): her kullanımda 16px yatay boşluk.
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Container(
@@ -657,6 +660,7 @@ class _MagnusBalonu extends StatelessWidget {
           ),
         ),
       ],
+    ),
     );
   }
 }

@@ -54,23 +54,24 @@ class PhotoSubjectDetector {
         case FotoKonu.el:
           // Anıl (2026-11-06): el falına YÜZ atınca reddetmeli. Yüz tespiti güçlü RET sinyali;
           // ten miktarı EL kanıtı değil (selfie yüzü kadrajı doldurur) → yüz, ten'den ÖNCE (Codex).
+          // Anıl (2026-11-07): "el değilse el değil diye uyarı çıksın" → KATILAŞTI.
           if (has(_elWords)) return true; // güvenilir el etiketi (Hand/Nail)
           if (face == FaceDurum.bulundu) return false; // yüz → el değil (selfie elenir)
           if (has(_fincanWords)) return false; // fincan
           if (has(_yuzWordsStrong)) return false; // güçlü yüz etiketi
-          if (skin >= 0.12) return true; // el gibi ten, yüz yok → el (ML Kit yoksa sezgi)
-          if (skin >= 0 && skin < 0.03) return false; // neredeyse hiç ten → el değil
-          return true; // ara/belirsiz → engelleme
+          // ML Kit "el" etiketi yok → el close-up BOL ten ister; yoksa el DEĞİL.
+          // ML Kit yoksa (null) sezgi eşiği biraz daha hoşgörülü.
+          return labels == null ? skin >= 0.22 : skin >= 0.30;
 
         case FotoKonu.fincan:
           // Fincan etiketi EN GÜÇLÜ: kişi fincanı elinde tutup yüzü de kadrajda olabilir → kabul
           // (yüz reddinden önce; aksi halde fincanlı selfie 3 fotoda da reddediliyordu — Codex P2).
           if (has(_fincanWords)) return true; // Coffee/Cup/Cappuccino
-          if (face == FaceDurum.bulundu) return false; // fincan etiketi YOK + yüz var → selfie
-          if (has(_elWords)) return false; // el
-          if (has(_yuzWordsStrong)) return false; // güçlü yüz etiketi
-          if (skin >= 0.45) return false; // açıkça ten-baskın → el/yüz, fincan değil
-          return true; // fincan'ı offline pozitif doğrulamak zor → varsayılan kabul
+          // Anıl (2026-11-07, !!!): "3/3 fincan değilse UYARI ÇIKSIN + hak dolmasın". ML Kit
+          // çalıştı ama fincan etiketi YOK → fincan DEĞİL. Kahve ekranındaki "≥1/3 fincan"
+          // kuralı gerçek fincanı korur (3 kareden en az biri etiketlenmesi beklenir).
+          if (labels == null) return true; // ML Kit yok (test/platform) → engelleme
+          return false; // etiketler var, fincan yok → fincan değil
       }
     } catch (_) {
       return true; // asla engelleme

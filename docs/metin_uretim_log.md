@@ -7,7 +7,7 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 3349** (… tur 22: 100, tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100) — her tur sonunda güncelle.
+- **Toplam eklenen: 3449** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100) — her tur sonunda güncelle.
   (tur 1-20 dağılımı: 100/100/138/160/140/140/140/180/160/140/174/157/140/160/120/160/140/110/115/75.)
 - **2026-11-07 Anıl "20 tur daha" döngüsü (tur 23-42):** `metin_turu_hazirla.js` TURLAR[23-42] = 5'li grup ×4 — KAHIN (derun/khaleesi/uraz/likia/yousuf) · KAHVE (giriş/bağlama/gelişme/sonuç/uğurlama) · SHORTS (tavşan/niyet/faloya/yana_bana/yana_yasama) · DURU (bugün/yarın/gelecek/kaderkitabı/astroyorum) · ICERIK (motivasyon/olumlama/acıgerçekler/kahve_karşılama/karşılama_z1). Her kompartman dörder geçiş. Yazar ChatGPT (Codex 11 Kasım'a dek sınırda), çeviri ChatGPT.
 - Ölçek: kısa bölmede (≤350 kr) model başına 40 yaz / karşı model 20 seç (`adet: 40`); uzunlarda 20/10.
@@ -16,6 +16,20 @@
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 27 — 2026-11-07 (100 metin; içerik; ChatGPT YAZAR + Claude denetler, çeviri CLAUDE)
+
+> ChatGPT oturumu bu tur ortasında düştü (loggedIn:false, yeni yüklenen sekmeler "oturum aç"). Anıl tekrar
+> girdi, yazım ChatGPT ile bitti; ama çeviri aşamasında oturum YİNE düştü → çeviri **Claude** (yer tutucu/etiket
+> paritesi `ekle` ile test; `<color=yellow><b>` ve `{{isim}}/{{burc}}` korundu). ChatGPT dönünce bağımsız gözden geçirilebilir.
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Motivasyon | `motivasyonlar.json` › `motivasyonlar` | 131–150 |
+| Olumlama | `olumlamalar.json` › `olumlamalar` | 613–632 (40→20) |
+| Acı Gerçekler | `acigercekler.json` › `acigercekler` | ag191–ag210 (40→20) |
+| Kahve – Karşılama | `kahve_akarsilama.json` › `karsilamalar` | 447–466 (40→20; "Magnus'un kahve falına hoş geldin" çeşitlendirildi) |
+| Karşılama – 1. ziyaret | `karsilamalar.json` › `karsilamalar` | 700–719 (40→20) |
 
 ## Tur 26 — 2026-11-07 (100 metin; durugörü + içerik, ChatGPT yazar + Claude denetler, çeviri ChatGPT)
 

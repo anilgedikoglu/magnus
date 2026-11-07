@@ -1714,13 +1714,16 @@ class SettingsScreen extends ConsumerWidget {
                     _profileCompactScroll(ref, n);
                     return false; // yüzen bar da görsün
                   },
+                  child: ScrollConfiguration(
+                  // Lastiksi esneme/çekiştirme göstergesi kapalı (Android 12+ stretch + glow).
+                  behavior: const _NoStretchScrollBehavior(),
                   child: SingleChildScrollView(
                   key: const ValueKey('profileScroll'),
                   physics: lockScroll
                       ? const NeverScrollableScrollPhysics()
-                      // Lastik (overscroll bounce) GERİ GETİRİLDİ (Anıl, 2026-11-07: "lastik gibi
-                      // demeden önceki hale dön"); Clamping ile scroll takılıyordu.
-                      : const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                      // Lastiksi çekiştirme/esneme OLMASIN (Anıl, 2026-11-07): Clamping = bounce yok;
+                      // Android 12+ stretch göstergesi de _NoStretchScrollBehavior ile kapatıldı.
+                      : const ClampingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -1755,6 +1758,7 @@ class SettingsScreen extends ConsumerWidget {
                       const FloatingBarSpacer(extra: 16),
                     ],
                   ),
+                ),
                 ),
                 ),
               ),
@@ -3343,6 +3347,18 @@ void _profileCompactScroll(WidgetRef ref, ScrollNotification n) {
     // (Anıl, 2026-11-07). Daraltırken YALNIZ kart 1 kutucukları içeri + kart 2 daireler yan yana.
     if (towardCompact) _profileCompactGuard = true; // bu gesture'da top-clamp un-compact etmesin
   }
+}
+
+/// Kullanıcı Bilgileri scroll'unda lastiksi overscroll göstergesini kapatır — Android 12+
+/// "stretch" (içeriği esnetme) ve eski "glow" ikisi de olmasın (Anıl, 2026-11-07:
+/// "lastiksi çekiştirmeyle esneme olmasın"). Clamping physics ile birlikte kenara dayanınca
+/// hiçbir esneme/çekiştirme olmaz.
+class _NoStretchScrollBehavior extends MaterialScrollBehavior {
+  const _NoStretchScrollBehavior();
+  @override
+  Widget buildOverscrollIndicator(
+          BuildContext context, Widget child, ScrollableDetails details) =>
+      child;
 }
 
 class _DonutCard extends ConsumerStatefulWidget {

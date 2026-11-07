@@ -3910,6 +3910,301 @@
         "kariyer",
         "saglik"
       ]
+    },
+    {
+      "id": 264,
+      "metin": "Bilgisayarın kapanmasına rağmen zihninde devam eden o mesaiyi telveler bile fark etmiş! Çalıştığın yerdeki yoğunluk hafifleyince ihmal ettiğin dinlenme saatlerini geri kazanacaksın. Bir sonraki kahvemizde daha dinç görüşelim.\n\nSevgiler,\n\nMagnus",
+      "metin_en": "Even the coffee grounds noticed that the workday keeps running in your mind after the computer is switched off! Once things calm down at work, you'll win back the hours of rest you've been neglecting. Let's meet over our next coffee, with you feeling more refreshed.\n\nWith love,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 265,
+      "metin": "Bir yanda kendine çizdiğin büyük hedefler, diğer yanda masanda bekleyen küçük işler... İkisini de fincanında yakaladım. O küçük işleri bitirdikçe büyük hedefe giden yolun kendiliğinden açıldığını göreceksin. Gönlünün de yolunun da açık olması dileğiyle {{isim}}.\n\nMagnus",
+      "metin_en": "On one side, the big goals you've set for yourself; on the other, the small tasks waiting on your desk... I caught both of them in your cup. As you finish those small tasks, you'll see the road to the big goal opening up on its own. Wishing you an open heart and an open road, {{isim}}.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 266,
+      "metin": "Sevgili {{isim}}, birilerinin onayını beklemeden de ne kadar başarılı olabileceğini bazen unutuyorsun. İş hayatına dair bir süredir beklemede kalan bir konunun yeniden hareketlenmesiyle cesaretin artacak. Fincanını güzel haberlerle kapatıyorum.\n\nSevgiler,\n\nMagnus",
+      "metin_en": "Dear {{isim}}, you sometimes forget how successful you can be without waiting for anyone's approval. Your courage will grow as a work matter that has been on hold for a while starts moving again. I'm closing your cup with good news.\n\nWith love,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 267,
+      "metin": "Kariyer yolunda atacağın adımları sevdiğin kişiyle konuşurken bazen kendi isteklerini ikinci plana bırakıyorsun. Telvenin kıvrımı, bu kez fikrinin anlayışla karşılanacağını fısıldıyor. Hem gönlünde hem işinde güzel bir denge kurman dileğiyle.\n\nMagnus",
+      "metin_en": "When you talk about the steps you'll take on your career path with the person you love, you sometimes put your own wishes second. The curve in the grounds whispers that this time your view will be met with understanding. Wishing you a lovely balance in both your heart and your work.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 268,
+      "metin": "Sana veda etmeden önce şunu söylemeliyim: Telefon ekranında birkaç kez dönüp baktığın bir konuşmanın izi fincanında kalmış. Yakın zamanda duyacağın sıcak bir söz, o konuşmaya bambaşka gözle bakmanı sağlayacak. Kalbinin neşesi eksilmesin.\n\nMagnus",
+      "metin_en": "Before I say goodbye, I have to tell you this: a conversation you've gone back to look at several times on your phone screen has left its trace in your cup. A warm word you hear soon will make you see that conversation in a whole new light. May the joy in your heart never fade.\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 269,
+      "metin": "Eşinle birlikte üstlendiğin günlük sorumlulukların arasında kendine ayırdığın zamanı biraz kısmışsın. Fincandaki açık alan, yakında evinizde geçireceğiniz telaşsız bir günün ikinize de iyi geleceğini söylüyor. Huzurlu ve sağlıklı günlerde buluşalım.\n\nMagnus",
+      "metin_en": "Amid the daily responsibilities you share with your spouse, you've cut back a little on the time you keep for yourself. The open space in your cup says that an unhurried day at home soon will do you both good. Let's meet again in peaceful, healthy days.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 270,
+      "metin": "Bir çantanın içinde günlerce taşınan küçük bir not gibi, sen de bazı düşüncelerini kimseye belli etmeden yanında taşıyorsun. Fincanında bunlardan birini paylaşacağın keyifli bir sohbet beliriyor. İçini hafifleten haberlerle yeniden görüşmek dileğiyle.\n\nSevgiler,\n\nMagnus",
+      "metin_en": "Like a little note carried in a handbag for days, you too carry some of your thoughts with you without letting anyone know. A pleasant conversation in which you'll share one of them is appearing in your cup. Hoping to meet again with news that lightens your heart.\n\nWith love,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 271,
+      "metin": "Eskiden seni hüzünlendiren bir şarkıyı bir gün mırıldanırken yakalayacaksın kendini. Bunu telvenin ortasındaki aydınlıktan anladım. Geride bıraktığın ilişkinin ardından kendi isteklerini yeniden keşfetmek sana sandığından çok iyi gelecek. Kalbine iyi bak.\n\nSevgiler,\n\nMagnus",
+      "metin_en": "One day you'll catch yourself humming a song that used to make you sad. I could tell from the light in the middle of the grounds. After the relationship you left behind, rediscovering your own wishes will do you more good than you imagine. Take good care of your heart.\n\nWith love,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 272,
+      "metin": "Fincanın ağız kısmındaki ferahlığı görünce sana son bir hatırlatmada bulunmak istedim: Uzun süre aynı yerde oturduktan sonra kalkıp gerindiğin o an, günün en tatlı molası oluyor. Önümüzdeki günlerde bu küçük molaları çoğaltman sana çok iyi gelecek.\n\nSağlıkla kal,\n\nMagnus",
+      "metin_en": "When I saw the openness at the rim of your cup, I wanted to leave you with one last reminder: that moment when you get up and stretch after sitting in the same spot for a long time is the sweetest break of the day. In the coming days, having more of these little breaks will do you a lot of good.\n\nStay healthy,\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 273,
+      "metin": "İki küçük telve noktası bana art arda çözülecek iki gündelik meseleyi düşündürdü. Özellikle uzun zamandır gözünde büyüttüğün bir işi bitirince içinden kocaman bir oh çekeceksin. Şimdi fincanını kapatıyorum; şansın açık olsun {{isim}}.\n\nMagnus",
+      "metin_en": "Two little dots in the grounds made me think of two everyday matters that will be resolved one after the other. Especially when you finish a task you've been blowing out of proportion for a long time, you'll let out a huge sigh of relief. Now I'm closing your cup; may luck be on your side, {{isim}}.\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 274,
+      "metin": "Bir dolabın kapağını açıp neyi nereye koyacağını yeniden düşündüğün o anlar var ya, fincanında tam da böyle bir düzen arayışı sezdim. Evinde tamamlayacağın küçük bir değişiklik içini açacak. Kahvenin kokusu, evinin neşesi eksik olmasın.\n\nSevgiler,\n\nMagnus",
+      "metin_en": "You know those moments when you open a cupboard and rethink what goes where? I sensed exactly that kind of search for order in your cup. A small change you complete at home will lift your spirits. May the scent of coffee and the joy of your home never be missing.\n\nWith love,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 275,
+      "metin": "Bir anlığına burnuna gelen tanıdık bir koku, geçmişteki güzel bir duyguyu yeniden uyandırabilir. Fincanın son halkası bana böyle bir hatırlayışı anlattı. Ardından kuracağın sıcak bir iletişim kalbini hafifletecek. Sevgiyle yeniden görüşelim {{isim}}.\n\nMagnus",
+      "metin_en": "A familiar scent that reaches you for a moment may reawaken a lovely feeling from the past. The last ring in your cup told me about just such a remembering. A warm connection you make afterward will lighten your heart. Let's meet again with love, {{isim}}.\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 276,
+      "metin": "Ders çalışırken masanın üzerindeki bardak boşalıyor ama sen hâlâ aynı sayfaya bakıyor olabiliyorsun! Fincanındaki dağınık çizgiler yoğun temponu anlatmış. Önümüzdeki günlerde vereceğin küçük molalarla kendini daha zinde hissedeceksin.\n\nSağlıkla kal,\n\nMagnus",
+      "metin_en": "While you're studying, the glass on your desk empties but you may still be staring at the same page! The scattered lines in your cup have told me about your busy pace. In the coming days, you'll feel more energetic thanks to the short breaks you take.\n\nStay healthy,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 277,
+      "metin": "Hayatını yeniden kurarken bir gün son derece enerjik, ertesi gün biraz isteksiz hissetmen çok doğal. Telvenin dağılan gölgesi, kendi ritmini yeniden bulacağını fısıldıyor. Kendine gösterdiğin özenin arttığı ferah günlerde görüşelim.\n\nMagnus",
+      "metin_en": "While rebuilding your life, it's perfectly natural to feel full of energy one day and a little unmotivated the next. The fading shadow in the grounds whispers that you'll find your own rhythm again. Let's meet in brighter days, when the care you show yourself has grown.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 278,
+      "metin": "{{isim}}, evde bir şey bozulduğunda ya da aksadığında önce çözüm arayan taraf olman gözüme çarptı. Yakında eşinle uzun süredir konuştuğunuz küçük bir işi aradan çıkarıp rahatlayacaksınız. Hanımefendiye de selamlarımı iletiyorum.\n\nSaygılarımla,\n\nMagnus",
+      "metin_en": "{{isim}}, it caught my eye that when something at home breaks down or goes wrong, you're the one who looks for a solution first. Soon you and your wife will feel relieved after getting a small task you've long talked about out of the way. Please give her my regards as well.\n\nWith my respects,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 279,
+      "metin": "Nişanlının söylediği sıradan bir sözün gün boyu aklında kaldığı zamanlar oluyor. Fincanındaki küçük kalp biçimi, yakın zamanda birbirinize duyduğunuz sevgiyi daha açık ifade edeceğiniz bir ana göz kırpıyor. Mutluluğunuz daim olsun.\n\nSevgiler,\n\nMagnus",
+      "metin_en": "There are times when an ordinary thing your fiancé says stays on your mind all day. The little heart shape in your cup winks at a moment soon when you'll express your love for each other more openly. May your happiness last forever.\n\nWith love,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 280,
+      "metin": "Gece telefonunu bir kenara bırakıp biraz dinleneyim derken zihninin hâlâ hareketli kaldığı anlar var. Telvede beliren geniş boşluk, günlük temponu biraz yavaşlatmanın sana iyi geleceğini hatırlatıyor. Enerjinin yerinde olduğu günlerde buluşalım.\n\nMagnus",
+      "metin_en": "There are moments at night when you put your phone aside to get some rest, yet your mind is still racing. The wide open space appearing in the grounds reminds you that slowing down your daily pace a little will do you good. Let's meet on days when your energy is just right.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 281,
+      "metin": "Üzerinde çalıştığın bir metnin tek paragrafını defalarca değiştirdiğin o titizliğin fincana bile sinmiş. Hiç beklemediğin bir anda aklına gelecek tek bir cümle, takıldığın noktayı aydınlatacak. Üretkenliğin daim olsun {{isim}}.\n\nMagnus",
+      "metin_en": "That meticulousness with which you rewrite a single paragraph of a text you're working on again and again has seeped into the cup itself. A single sentence that comes to you at a completely unexpected moment will shed light on the point where you're stuck. May your productivity last, {{isim}}.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 282,
+      "metin": "Çok eskiden duyduğun güzel bir sözün bugün bile yüzünü güldürebildiğini hissediyorum. Telvenin son kıvrımı, yakınındaki biriyle paylaşacağın içten bir hatıranın aranızdaki sevgiyi tazeleyeceğini söylüyor. Gönlünün gençliği hiç eksilmesin.\n\nSaygılarımla,\n\nMagnus",
+      "metin_en": "I feel that a kind word you heard long ago can still make you smile today. The last curve in the grounds says that a heartfelt memory you share with someone close to you will refresh the affection between you. May the youth of your heart never fade.\n\nWith my respects,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 283,
+      "metin": "{{burc}} burcunun kendine has tarafları bir yana, sen birinin samimiyetini çoğu zaman uzun açıklamalardan değil, küçük davranışlardan anlıyorsun. Fincanın son işareti, beklemediğin bir inceliğin kalbini ısıtacağını müjdeliyor. Aşkla kal.\n\nMagnus",
+      "metin_en": "Setting aside the particular traits of the {{burc}} sign, you usually recognize someone's sincerity not from long explanations but from small actions. The last sign in your cup brings the good news that an unexpected kindness will warm your heart. Stay in love.\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
     }
   ]
 }

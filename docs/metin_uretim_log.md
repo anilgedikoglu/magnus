@@ -7,8 +7,8 @@
 > `scripts/metin_ceviri_hazirla.js brief|bol` (İngilizce çeviri, ChatGPT).
 
 ## 🎯 HEDEF ve İLERLEME (Anıl, 2026-11-05: "örnek ver, metin al" döngüsü, app genelinde 4.000–5.000 ilave metin)
-- **Toplam eklenen: 3799** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100, 2026-11-07 tur dışı
-  ChatGPT turları: 250 [motivasyon 50, faloya 40, niyet 30, yana 80, kâhin 50], tur 28: 100) — her tur sonunda güncelle.
+- **Toplam eklenen: 3899** (… tur 23: 100, tur 24: 100, tur 25: 100, tur 26: 100, tur 27: 100, 2026-11-07 tur dışı
+  ChatGPT turları: 250 [motivasyon 50, faloya 40, niyet 30, yana 80, kâhin 50], tur 28: 100, tur 29: 100) — her tur sonunda güncelle.
   (Ayrıca fal-metni dışı: Maganda 20 soru + 244 cevap, Dert Ortağı 400 yeni tavsiye seti + 200 soru EN — 2026-11-07.)
   (tur 1-20 dağılımı: 100/100/138/160/140/140/140/180/160/140/174/157/140/160/120/160/140/110/115/75.)
 - **2026-11-07 Anıl "20 tur daha" döngüsü (tur 23-42):** `metin_turu_hazirla.js` TURLAR[23-42] = 5'li grup ×4 — KAHIN (derun/khaleesi/uraz/likia/yousuf) · KAHVE (giriş/bağlama/gelişme/sonuç/uğurlama) · SHORTS (tavşan/niyet/faloya/yana_bana/yana_yasama) · DURU (bugün/yarın/gelecek/kaderkitabı/astroyorum) · ICERIK (motivasyon/olumlama/acıgerçekler/kahve_karşılama/karşılama_z1). Her kompartman dörder geçiş. Yazar ChatGPT (Codex 11 Kasım'a dek sınırda), çeviri ChatGPT.
@@ -18,6 +18,16 @@
   Kâhin Derun · Kâhin Khaleesi · Kâhin Uraz · Olumlama · Motivasyon · Özlü Söz · Acı Gerçekler · Kader Çarkı (6 bölme) ·
   Günlük Astroloji (bölümler) · Karşılamalar · Japon Falı (uzun, 10'luk parçalar) · I-Ching (uzun).
 - Magnus taktikleri (cold reading, altın örnekler, iskelet/tümleç, kişiselleştirme…) skill'deki tabloda; her brief'e girer.
+
+## Tur 29 — 2026-11-07 akşam (100 metin; kahve; ChatGPT YAZAR + Claude ajanı seçer/denetler/çevirir)
+
+| Kompartman | Dosya / anahtar | Eklenen id |
+|---|---|---|
+| Kahve – Giriş | `kahve_giris.json` › `girisler` | 859–878 (20/20; 6 düzeltme) |
+| Kahve – Bağlama | `kahve_baglama.json` › `baglamalar` | 403–422 (40→20; her kitle 1 kez, 5 koşulsuz) |
+| Kahve – Gelişme | `kahve_gelisme.json` › `gelismeler` | 559–578 (20/20; havuzla 4 ortak 5-gram giderildi) |
+| Kahve – Sonuç | `kahve_sonuc.json` › `sonuclar` | 539–558 (20/20; parçalar arası sembol çakışmaları ayrıştırıldı) |
+| Kahve – Uğurlama | `kahve_ugurlama.json` › `ugurlamalar` | 264–283 (40→20; havuz id 179 ile aynı açılış yeniden yazıldı) |
 
 ## Tur 28 — 2026-11-07 akşam (100 metin; 5 kâhin; ChatGPT YAZAR + Claude ajanı seçer/denetler/çevirir)
 

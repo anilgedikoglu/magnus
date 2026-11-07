@@ -5870,6 +5870,309 @@
         "ask",
         "genel"
       ]
+    },
+    {
+      "id": 403,
+      "metin": "Fincanın kenarında birbirinden uzaklaşan iki ince iz gözüme çarptı. Geride bıraktığın ilişkiye dair zihninde hâlâ cevaplanmamış küçük bir soru var. Fakat telvenin devamı, bu sorunun ağırlığından kurtulacağını fısıldıyor. Gel, biraz daha derine inelim;",
+      "metin_en": "Two thin traces drifting apart at the edge of your cup caught my eye. There's still a small, unanswered question in your mind about the relationship you left behind. But the rest of the grounds whispers that you'll be freed from the weight of that question. Come, let's go a little deeper;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 404,
+      "metin": "Evde bir konuyu açmadan önce doğru anı kollayan çoğu zaman sensin {{isim}}, bunu sezdim. Fincanın kulba yakın tarafında iki ayrı çizgi birleşiyor. Eşinle sıradan bir sohbetin nasıl tatlı bir yakınlaşmaya dönüşeceğini anlatan başka işaretler de var...",
+      "metin_en": "At home, you're usually the one who waits for the right moment before bringing something up, {{isim}}; I sensed it. Near the handle of your cup, two separate lines merge. There are other signs, too, telling how an ordinary chat with your spouse will turn into a sweet closeness...",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 405,
+      "metin": "Defterin arasına sıkıştırılmış küçük bir notu andıran şekil var burada! Derslerle ilgili aklını meşgul eden bir konunun beklediğinden kolay çözüleceğine dair kuvvetli bir izlenim edindim. Şimdi fincanın okul hayatına açılan kısmını inceleyelim;",
+      "metin_en": "There's a shape here that looks like a little note tucked between the pages of a notebook! I have a strong impression that something about your classes that's been on your mind will be solved more easily than you expect. Now let's examine the part of the cup that opens onto your school life;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 406,
+      "metin": "Bir merdivenin son iki basamağını andırıyor şu telveler. Geleceğine dair ertelediğin bir adımı, kendi içinde defalarca tartmışsın. Sezgilerim, önümüzdeki günlerde alacağın küçük bir karşılığın cesaretini artıracağını söylüyor. Ayrıntılar hemen aşağıda...",
+      "metin_en": "These grounds look like the last two steps of a staircase. You've weighed a step toward your future that you postponed, over and over, in your own mind. My intuition tells me that a small response you'll receive in the coming days will boost your courage. The details are right below...",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 407,
+      "metin": "Düğün hazırlıklarının arasında kendini de dinlemeyi unutmuş olabilir misin? Fincanın dibinde küçük bir yastığı andıran şekil belirdi. Bunu dinlenmeye ve üzerindeki tatlı telaşın hafiflemesine yoruyorum. Bir de hemen yanında dikkat çekici bir iz var;",
+      "metin_en": "Could it be that you've forgotten to listen to yourself amid all the wedding preparations? A shape resembling a small pillow has appeared at the bottom of your cup. I read it as rest, and as the sweet rush you're in starting to ease. And right next to it, there's a striking mark;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 408,
+      "metin": "Bir dakika {{isim}}, fincanın tabağa yakın bölümünü atlamayalım! Orada katlanmış bir kâğıda benzeyen bir iz var. Uzun zamandır kafanın bir kenarında bekleyen küçük bir işin nihayet sonuçlanacağını anlatıyor telveler. Bakalım devamında neler var...",
+      "metin_en": "Wait a minute, {{isim}}, let's not skip the part of your cup near the saucer! There's a mark there that looks like a folded piece of paper. The grounds say that a small task that's been waiting at the back of your mind for a long time will finally be settled. Let's see what comes next...",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 409,
+      "metin": "Kurumdaki resmî konuşmaların arasında bazen içinden geçenleri sakladığını fark ettim. Fincanın kulp tarafındaki küçük kalp, mesai telaşından sonra yaşanacak sıcak bir iletişimi müjdeliyor gibi. Şimdi evrakların değil, gönül işlerinin izini sürelim;",
+      "metin_en": "I noticed that amid the formal conversations at your institution, you sometimes hide what you really feel. The little heart near the handle of your cup seems to herald a warm exchange after the rush of the workday. Now let's follow the trail of matters of the heart rather than paperwork;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 410,
+      "metin": "İki sandalye arasındaki dar boşluğu andıran bir şekil dikkatimi çekti {{isim}}. Eşinle aynı konuda farklı düşünseniz bile sonunda birbirinizi güldürmeyi başarıyorsunuz. Fincanın alt bölümünde bu yakınlığın başka bir güzel yansıması saklı. Açıyorum o perdeyi;",
+      "metin_en": "A shape resembling the narrow gap between two chairs caught my attention, {{isim}}. Even when you and your spouse see the same thing differently, you still manage to make each other laugh in the end. Another lovely reflection of this closeness is hidden in the lower part of your cup. I'm drawing back that curtain;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 411,
+      "metin": "Omuzlarından ağır bir çantayı indirmişsin gibi bir görüntü var burada. Son zamanlarda dinlenmeye fırsat bulduğunda bile zihnini tam susturamamış olabilirsin. Telvenin açılan bölümünü içini ferahlatacak küçük bir alışkanlığın başlangıcına yoruyorum;",
+      "metin_en": "There's an image here as if you've just set down a heavy bag from your shoulders. Lately, even when you've found a chance to rest, you may not have been able to fully quiet your mind. I read the opening part of the grounds as the start of a small habit that will lift your spirits;",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 412,
+      "metin": "Masada üst üste binmiş iki takvim yaprağını andırıyor şu şekil. Çalıştığın yerde senden beklenenlerle kendi hedeflerin arasında ince bir denge kuruyorsun. Koyu telveler, mesai arkadaşlarından biriyle yapacağın faydalı bir konuşmaya uzanıyor...",
+      "metin_en": "This shape resembles two calendar pages piled on top of each other on a desk. At work, you strike a delicate balance between what's expected of you and your own goals. The dark grounds stretch toward a helpful conversation you'll have with one of your coworkers...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 413,
+      "metin": "Üst üste konmuş sayfaları andıran telveler akademik hayatındaki ayrıntıcılığa dikkatimi çekti. Bölümde herkesin fark etmediği küçük bir eksikliği sen çoğu zaman hemen yakalıyorsun. Şimdi bir çalışmanın ardından gelecek ferahlığı anlatan işaretlere geçiyorum;",
+      "metin_en": "Grounds that look like stacked pages drew my attention to the meticulousness of your academic life. In your department, you're usually the one who immediately spots a small gap that others miss. Now I'm moving on to the signs that speak of the relief that will follow a piece of work;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 414,
+      "metin": "Bir kalp değil de sanki yarım kalmış bir cümle çizilmiş buraya {{isim}}. Gönül meselelerinde söylemek istediğin her şeyi her zaman söylemiyorsun. İçimdeki ses, yakın günlerde duyacağın içten bir sözün bazı düşüncelerini değiştireceğini söylüyor...",
+      "metin_en": "It's not quite a heart; it's more as if an unfinished sentence has been drawn here, {{isim}}. In matters of the heart, you don't always say everything you want to say. A voice inside me says that a heartfelt word you hear in the coming days will change some of your thoughts...",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 415,
+      "metin": "Yeni düzenini kurarken değiştirdiğin küçük alışkanlıklar bile fincanda iz bırakmış sanki. Telvenin dibindeki açık kapı, kendi kararlarına giderek daha çok güveneceğinin işareti. Geçmişe ait bir konunun zihnindeki yerini kaybetmeye başladığını da fark ettim;",
+      "metin_en": "Even the small habits you changed while building your new life seem to have left a trace in your cup. The open door at the bottom of the grounds is a sign that you'll trust your own decisions more and more. I also noticed that something from the past is starting to lose its place in your mind;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 416,
+      "metin": "Yıllar önce kullandığın bir ajandanın sayfasına benziyor şu şekil. Çalışma hayatın geride kalmış olsa da bir işi yarım bırakmak hâlâ sana göre değil. Fincanın altında, tecrübene danışılacak bir konuşmanın güzel izleri var. Biraz daha yakından inceleyelim;",
+      "metin_en": "This shape resembles a page from a planner you used years ago. Even though your working life is behind you, leaving something half-done still isn't your style. At the bottom of your cup there are lovely traces of a conversation in which your experience will be sought. Let's take a closer look;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 417,
+      "metin": "Gençlerin aceleciliğine bazen gülümsüyor, bazen de içinden aynı heyecanı yaşamak istiyorsun. Fincandaki küçük çiçek şekli, sevgi konusunda tecrübenin yanında tatlı sürprizlere de yer olduğunu anlatıyor. Bakalım bu çiçeğin kökleri nereye uzanıyor...",
+      "metin_en": "You sometimes smile at the haste of young people, and sometimes you secretly wish to feel that same excitement. The little flower shape in your cup says that when it comes to love, there's room for sweet surprises alongside your experience. Let's see where this flower's roots lead...",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 418,
+      "metin": "Sevdiğin kişinin sesindeki en ufak değişikliği bile fark ettiğin zamanlar oluyor. Fincanın sağ kenarında birbirine yaklaşan iki küçük nokta seçtim; aranızda konuşulmayı bekleyen tatlı bir konunun kendiliğinden açılacağını düşündürüyor. Ayrıntılara bakalım;",
+      "metin_en": "There are times when you notice even the slightest change in the voice of the person you love. On the right edge of your cup I made out two small dots drawing closer; they suggest that a sweet subject waiting to be talked about between you will come up on its own. Let's look at the details;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 419,
+      "metin": "Telefonunu eline alıp birine yazmaktan vazgeçtiğin anları hatırladın mı? Telvenin kenarında geri dönen bir ok seçiyorum; mesafeli kaldığın bir iletişimin yeniden hareketleneceğine dair bir önsezim var. Fincanın asıl sürprizi ise daha aşağıda;",
+      "metin_en": "Do you remember the moments you picked up your phone to write to someone and then changed your mind? I can make out an arrow turning back at the edge of the grounds; I have a hunch that a connection you've kept at a distance will come alive again. But the cup's real surprise is further down;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 420,
+      "metin": "Arkadaş grubunda herkesi güldürdüğün hâlde bazen kendi düşüncelerine dalıp gittiğini fark ettim {{isim}}. Fincanın ortasındaki üç küçük çizgi, önümüzdeki günlerde yaşanacak keyifli bir plan değişikliğini çağrıştırıyor. Gel şimdi bu çizgilerin devamına bakalım;",
+      "metin_en": "I noticed that even though you make everyone laugh in your group of friends, you sometimes drift off into your own thoughts, {{isim}}. The three little lines in the middle of your cup hint at a fun change of plans in the coming days. Come, let's look at where these lines lead;",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 421,
+      "metin": "Şurada küçük bir zarfın açık kalan ağzı gibi bir iz var. Birinden beklediğin dönüş zihninin köşesinde hâlâ duruyor, değil mi? Telveler bu bekleyişin ardından yüzünü gülümsetecek bir açıklama geleceğini ima ediyor. Şimdi fincanın diğer yarısına geçiyorum;",
+      "metin_en": "There's a mark here like the open flap of a small envelope. A reply you're waiting for from someone is still sitting at the back of your mind, isn't it? The grounds hint that after this wait, an explanation will come that puts a smile on your face. Now I'm moving on to the other half of the cup;",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 422,
+      "metin": "Bir parfümün geride bıraktığı hafif iz gibi kıvrılıyor telveler. {{isim}}, hoşuna giden bir sözü kimseye belli etmeden günlerce aklında tutabiliyorsun. Yakında duyacağın küçük bir iltifatın ardında daha sıcak bir ilgi sezeceğine dair işaretler var;",
+      "metin_en": "The grounds curl like the faint trail a perfume leaves behind. {{isim}}, you can keep a kind remark you liked in your mind for days without letting anyone know. There are signs that soon, behind a small compliment you hear, you'll sense a warmer interest;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
     }
   ]
 }

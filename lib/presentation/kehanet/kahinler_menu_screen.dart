@@ -47,16 +47,30 @@ class KahinlerMenuScreen extends ConsumerWidget {
               ),
             ),
             Expanded(
-              child: GridView.builder(
-                padding: const EdgeInsets.all(20),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 16,
-                  mainAxisSpacing: 16,
-                  childAspectRatio: 0.85,
-                ),
-                itemCount: kahinler.length,
-                itemBuilder: (ctx, i) => _buildKahin(ctx, kahinler[i]),
+              // Kartlar mevcut yüksekliğe TAM sığsın → scroll kalmasın (Anıl, 2026-11-07):
+              // oran kullanılabilir yükseklikten hesaplanır, grid kaydırılmaz.
+              child: LayoutBuilder(
+                builder: (ctx, c) {
+                  const cols = 2;
+                  const pad = 20.0, gap = 16.0;
+                  final rows = (kahinler.length + cols - 1) ~/ cols;
+                  final tileW = (c.maxWidth - pad * 2 - gap * (cols - 1)) / cols;
+                  final tileH = (c.maxHeight - pad * 2 - gap * (rows - 1)) / rows;
+                  final ratio =
+                      (tileH > 0 ? tileW / tileH : 0.85).clamp(0.5, 1.4);
+                  return GridView.builder(
+                    padding: const EdgeInsets.all(pad),
+                    physics: const NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: cols,
+                      crossAxisSpacing: gap,
+                      mainAxisSpacing: gap,
+                      childAspectRatio: ratio,
+                    ),
+                    itemCount: kahinler.length,
+                    itemBuilder: (ctx, i) => _buildKahin(ctx, kahinler[i]),
+                  );
+                },
               ),
             ),
             const FloatingBarSpacer(),

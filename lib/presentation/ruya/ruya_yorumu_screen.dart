@@ -723,7 +723,18 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
         // ── Arama kutusu ──────────────────────────────────────────────────
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: TextField(
+          // Koyu kutu: SOLA doğru daha koyu, SAĞA doğru mevcut açıklıkta
+          // yatay gradyan. fillColor şeffaf; gradyan DecoratedBox'tan gelir.
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              gradient: const LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [Color(0xDB07050F), Color(0x800D0A1E)],
+              ),
+            ),
+            child: TextField(
             controller: _aramaCtrl,
             onChanged: (v) => setState(() => _arama = v),
             style: const TextStyle(color: Colors.white, fontSize: 14),
@@ -744,7 +755,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                     )
                   : null,
               filled: true,
-              fillColor: const Color(0x800D0A1E),
+              fillColor: Colors.transparent,
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               border: OutlineInputBorder(
@@ -763,6 +774,7 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                     const BorderSide(color: Color(0xFF8B5CF6), width: 1.5),
               ),
             ),
+          ),
           ),
         ),
         const SizedBox(height: 10),
@@ -815,9 +827,21 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
+                          // Seçili değilken koyu kutu: SOLA doğru daha koyu,
+                          // SAĞA doğru mevcut açıklıkta yatay gradyan.
                           color: secili
                               ? const Color(0xFF6D28D9).withValues(alpha: 0.35)
-                              : const Color(0x800D0A1E),
+                              : null,
+                          gradient: secili
+                              ? null
+                              : const LinearGradient(
+                                  begin: Alignment.centerLeft,
+                                  end: Alignment.centerRight,
+                                  colors: [
+                                    Color(0xDB07050F),
+                                    Color(0x800D0A1E),
+                                  ],
+                                ),
                           border: Border.all(
                             color: secili
                                 ? const Color(0xFF8B5CF6)

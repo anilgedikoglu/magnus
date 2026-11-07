@@ -4139,6 +4139,227 @@
       "metin": "Güzel bir şey olacakmış hissiyle uyandığın ama bunun nedenini açıklayamadığın zamanlar vardır. Senin de içinde son dönemde böyle sessiz bir beklenti birikmiş. {{randomtarih,9,33}} dolaylarında gündelik hayatının akışını değiştirmeyen, fakat iç dünyanda büyük karşılık bulan bir haber alacaksın. Her şey bir anda kesinleşmeyebilir; yine de öğrendiklerin sana doğru yönde ilerlediğini düşündürecek. Tuttuğun niyetin hiç de uzak olmadığını hissederek içten içe gülümseyeceksin {{isim}}.",
       "kosullar": [],
       "metin_en": "There are mornings when you wake up with the feeling that something wonderful is about to happen, even though you can't explain why. Lately, a quiet sense of anticipation like that has been building inside you. Around {{randomtarih,9,33}}, you'll receive news that may not change the course of your everyday life, but will mean a great deal to you personally. Everything might not become certain at once, yet what you learn will reassure you that you're moving in the right direction. You'll find yourself smiling quietly, feeling that the wish you've been holding close to your heart may not be so far away after all, {{isim}}."
+    },
+    {
+      "id": 429,
+      "metin": "Defterinin kenarına aldığın küçücük bir not, yakında işine yarayacak. Okulda gözünde büyüttüğün bir meselenin beklediğinden hafif çıkacağını seziyorum. Bir arkadaşının söyleyeceği iki kelimeyle kafandaki düğüm çözülecek; sonunda kendine güleceksin!",
+      "metin_en": "A tiny note you jotted in the margin of your notebook will soon come in handy. I sense that an issue at school you've blown out of proportion will turn out lighter than you expect. Two words from a friend will untangle the knot in your head, and in the end you'll laugh at yourself!",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Öğrenci"
+        }
+      ]
+    },
+    {
+      "id": 430,
+      "metin": "Evin içinde günlerdir konuşulup bir türlü sonuca varmayan o küçük mesele nihayet tatlıya bağlanacak. Eşinle aynı sofrada yapacağın kısa bir sohbetin ardından ikinizin de yüzü gülecek. Bu defa ilk yumuşayan tarafın kim olacağını söylemeyeyim!",
+      "metin_en": "That small issue at home that's been discussed for days without ever being settled will finally end on a sweet note. After a short chat with your spouse at the dinner table, you'll both be smiling. As for who softens first this time, I'd better not say!",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 431,
+      "metin": "Yeni silinmiş bir masanın üzerinde unutulmuş bir eşya gözüme ilişti. Bir süredir içinden geçirip kimseye tam anlatmadığın isteğin, bu ay beklemediğin bir yerden destek bulacak. Ardından yakın çevrenden birinin ağzından öyle hoş bir takdir duyacaksın ki bütün yorgunluğun uçup gidecek.",
+      "metin_en": "I spotted an item left forgotten on a freshly wiped table. A wish you've been carrying inside without fully telling anyone will find support this month from a place you didn't expect. Then you'll hear such a kind word of appreciation from someone close to you that all your tiredness will melt away.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Ev Hanımı"
+        }
+      ]
+    },
+    {
+      "id": 432,
+      "metin": "Kurumdaki masaların arasında dolaşan bir söz kulağıma kadar geldi. Uzun zamandır bekleyen bir evrakın yeniden gündeme alınacağını hissediyorum. İlk anda biraz uğraştırsa da amirinden duyacağın açıklama işini kolaylaştıracak. Sonunda rahat bir nefes alacak, niyetin için de elini serbest bırakacaksın.",
+      "metin_en": "A remark circulating between the desks at your institution has reached my ears. I have a feeling that a document that's been waiting a long time will be brought back onto the agenda. It may take a little effort at first, but the explanation you get from your supervisor will make things easier. In the end you'll breathe a sigh of relief and have your hands free for your wish.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Kamu Sektörü"
+        }
+      ]
+    },
+    {
+      "id": 433,
+      "metin": "Bir kapının önünde durup hangi zile basacağını düşünür gibi kararsız kaldığın konu yakında açıklığa kavuşacak. Kaderin çizgilerinde iki ayrı görüşme seçiyorum. İlki kafanı kurcalayan ayrıntıyı ortaya çıkaracak, ikincisi ise niyetine dair içini ferahlatacak.",
+      "metin_en": "The matter you've been hesitating over, as if standing at a door wondering which bell to ring, will soon become clear. In the lines of fate I can make out two separate conversations. The first will bring to light the detail that's been nagging you, and the second will put your mind at ease about your wish.",
+      "kosullar": []
+    },
+    {
+      "id": 434,
+      "metin": "Üzerinde düzeltme işaretleri bulunan bir sayfa gözümde canlandı. Bölümde uzun süredir emek verdiğin bir çalışmayla ilgili beklediğin değerlendirme gelecek. İlk yorum biraz düşündürecek ama ardından duyacağın yapıcı sözler sana yeni bir kapı aralayacak.",
+      "metin_en": "A page covered in correction marks came alive before my eyes. The evaluation you've been waiting for on a project you've long worked on in your department is on its way. The first comment will make you think a little, but the constructive words that follow will open a new door for you.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Akademisyen"
+        }
+      ]
+    },
+    {
+      "id": 435,
+      "metin": "Bir bardak suyun kenarında beliren ince ışık çizgisi dikkatimi çekti. Önümüzdeki günlerde önemsiz sandığın bir ayrıntının işini kolaylaştıracağına dair güçlü bir işaret aldım. Ufak bir gecikmeden sonra işler öyle güzel ilerleyecek ki kendi kendine 'Neyse ki!' diyeceksin.",
+      "metin_en": "A thin line of light shimmering at the rim of a glass of water caught my attention. I've received a strong sign that in the coming days, a detail you consider unimportant will make things easier for you. After a small delay, things will move along so nicely that you'll say to yourself, 'Thank goodness!'",
+      "kosullar": []
+    },
+    {
+      "id": 436,
+      "metin": "Mesai bitimine yakın konuşulan bir konu, beklediğinden daha önemli çıkacak. Çalıştığın yerde emeğinin fark edildiğini gösteren küçük ama sevindirici bir gelişme var. Yöneticinin sıradan bir cümlesinden bile bunu anlayacak, hem işine hem niyetine başka bir hevesle sarılacaksın.",
+      "metin_en": "Something discussed near the end of the workday will turn out to be more important than you expect. There's a small but pleasing development at work showing that your efforts have been noticed. You'll sense it even from an ordinary remark by your manager, and you'll throw yourself into both your work and your wish with fresh enthusiasm.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Özel Sektör"
+        }
+      ]
+    },
+    {
+      "id": 437,
+      "metin": "Evde bir köşeye bırakılmış, elden geçmeyi bekleyen bir şey var gibi. Eşinin dile getirdiği küçük bir isteği önümüzdeki günlerde yerine getireceksin. O işin ardından alacağın içten bir teşekkür, sandığından çok daha fazla hoşuna gidecek.",
+      "metin_en": "It seems there's something at home set aside in a corner, waiting to be fixed up. In the coming days you'll take care of a small request your spouse has mentioned. The heartfelt thanks you receive afterward will please you far more than you'd imagine.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 438,
+      "metin": "Yeni düzeninde kendine ait küçük alışkanlıklar oluşturmaya başladın. Eski bir konunun yeniden açılacağını ama bu kez seni eskisi kadar yormayacağını okuyorum. Karşına çıkacak basit bir kolaylıkla, verdiğin kararların arkasında durmanın huzurunu tadacaksın.",
+      "metin_en": "You've begun forming little habits of your own in your new life. I read that an old matter will come up again, but this time it won't wear you out the way it used to. Thanks to a simple convenience that comes your way, you'll enjoy the peace of standing behind your decisions.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ]
+    },
+    {
+      "id": 439,
+      "metin": "Mutfaktan gelen tanıdık bir koku, aklındaki niyetin etrafında dönüp duruyor. Eşinle bir süredir konuştuğun ortak plan için beklediğin uygun fırsat ortaya çıkacak. Bir akşam birlikte atacağınız küçücük bir adımın, evinizin havasını değiştirdiğine şahit olacaksın.",
+      "metin_en": "A familiar smell drifting from the kitchen keeps circling around the wish on your mind. The right opportunity will arise for the shared plan you and your spouse have been discussing for a while. You'll see how one tiny step you take together one evening changes the whole atmosphere of your home.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ]
+    },
+    {
+      "id": 440,
+      "metin": "Kalbinin kapısını kilitlemiş gibi yapsan da anahtarı pek uzağa koymamışsın. Yakında tanıdık bir çevreden başlayacak neşeli bir muhabbetin uzayacağını haber alıyorum. Karşındaki kişinin sana yönelteceği sıradan bir soru, gün boyunca yüzünde tebessüm bırakacak.",
+      "metin_en": "You may act as if you've locked the door to your heart, but you haven't put the key very far away. Word reaches me that a cheerful chat starting among familiar faces will soon stretch on longer than expected. An ordinary question the other person asks you will keep a smile on your face all day.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 441,
+      "metin": "Birinin sana bakarken söylemekten vazgeçtiği bir söz var sanki. Hislerimin gösterdiği yol, önümüzdeki günlerde alacağın içten bir yakınlık işaretine çıkıyor. Kalbin hemen karar vermeyecek ama kendini beklediğinden daha çok gülümserken yakalayacaksın.",
+      "metin_en": "It seems there's something someone held back from saying while looking at you. The path my intuition points to leads to a sincere sign of closeness you'll receive in the coming days. Your heart won't decide right away, but you'll catch yourself smiling more than you expected.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ]
+    },
+    {
+      "id": 442,
+      "metin": "Bir dost meclisinde herkes konuşurken senin söylediğin kısa bir söz, beklenmedik biçimde karşılık bulacak. {{burc}} burcunun, kimi zaman içinde sakladığın o kararlılığı bu kez işine yarayacak. Ay bitmeden birinin senden destek istemesiyle niyetin için yeni bir fırsat sezeceksin.",
+      "metin_en": "In a gathering of friends, while everyone is talking, a brief remark of yours will strike a chord in an unexpected way. That {{burc}} determination you sometimes keep hidden will serve you well this time. Before the month is out, when someone asks for your support, you'll sense a new opportunity for your wish.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
+    },
+    {
+      "id": 443,
+      "metin": "Sabahın dinginliğinde içilen bir çayın buharında güzel bir haberin izini buldum. Uzun zamandır aklında olan bir görüşme önümüzdeki haftalarda gerçekleşecek. Senden fikir alan birinin teşekkürünü duyduğunda, yılların sana kattığı bilgeliğe bir kez daha sevineceksin.",
+      "metin_en": "In the steam rising from a cup of tea sipped in the stillness of the morning, I found the trace of good news. A meeting you've had in mind for a long time will take place in the coming weeks. When you hear the thanks of someone who asked for your advice, you'll once again be glad of the wisdom the years have given you.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "Emekli"
+        }
+      ]
+    },
+    {
+      "id": 444,
+      "metin": "Bir kitabın arasında unutulmuş kurutulmuş bir çiçek gibi, zihninin gerisinde sakladığın bir istek var. {{isim}}, o isteği yeniden hatırlatacak tatlı bir rastlantı yaklaşıyor. Hiç ummadığın birinin olumlu sözleriyle kendine güvenin artacak; bu kez kararını ertelemeyeceksin.",
+      "metin_en": "Like a dried flower forgotten between the pages of a book, there's a wish you keep at the back of your mind. {{isim}}, a sweet coincidence that will remind you of that wish is on its way. Kind words from someone you'd never expect will boost your confidence, and this time you won't put off your decision.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
+    },
+    {
+      "id": 445,
+      "metin": "Birbirine uymayan iki küçük ayrıntı yüzünden hazırlıkların biraz uzayabilir. Ama nişanlından gelecek pratik bir fikirle her şey yoluna girecek. Önümüzdeki haftalarda birlikte vereceğiniz bir kararın ardından 'İyi ki acele etmemişiz' diyeceksin.",
+      "metin_en": "Your preparations may drag on a little because of two small details that don't quite fit together. But a practical idea from the person you're engaged to will set everything right. After a decision you make together in the coming weeks, you'll say, 'Good thing we didn't rush.'",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ]
+    },
+    {
+      "id": 446,
+      "metin": "İçinde bir taraf hemen harekete geçmek isterken öteki taraf 'biraz daha düşün' diyor. Sezgi aynama yansıyan görüntüde, {{sayi,4,9}} gün içinde duyacağın bir cümle var. O söz sana yeni bir bakış açısı kazandıracak ve niyetinle ilgili kararın belirginleşecek.",
+      "metin_en": "One part of you wants to act right away, while the other says, 'Think a little longer.' In the image reflected in my mirror of intuition, there's a sentence you'll hear within {{sayi,4,9}} days. Those words will give you a new perspective, and your decision about your wish will become clear.",
+      "kosullar": []
+    },
+    {
+      "id": 447,
+      "metin": "Son zamanlarda günlerini kendi ritmine göre yeniden kurmaya başladın; bunu çevrendekilerden önce sen fark ettin. Önümüzdeki günlerde sana yakın birinin sıradan bir sözü, içindeki son düğümü de çözecek. O andan sonra geçmişten çok geleceği düşündüğünü fark edecek, niyetinin yolunu kendin seçeceksin.",
+      "metin_en": "Lately you've begun rebuilding your days around your own rhythm, and you noticed it before anyone around you did. In the coming days, an ordinary remark from someone close to you will untie the last knot inside you. From then on you'll find yourself thinking more about the future than the past, and you'll choose the path to your wish yourself.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ]
+    },
+    {
+      "id": 448,
+      "metin": "Bazen bir bakışın anlattığını, sevdiğin kişiyle aranızda uzun cümleler bile anlatamıyor. Yakında birlikte geçireceğiniz sıradan bir an, beklediğin yakınlığı yeniden hissettirecek. Kalbime düşen işaret, ardından konuşacağınız bir gelecek planının ikinize de umut vereceğini söylüyor.",
+      "metin_en": "Sometimes a single look between you and the one you love says what even long sentences can't. Soon an ordinary moment you spend together will make you feel the closeness you've been longing for once again. The sign that has fallen into my heart says that a plan for the future you'll talk about afterward will give you both hope.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ]
     }
   ]
 }

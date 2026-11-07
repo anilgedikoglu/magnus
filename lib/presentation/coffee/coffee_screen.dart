@@ -448,6 +448,11 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
                         ? Colors.transparent
                         : const Color(0xFF13122A),
                     borderRadius: BorderRadius.circular(14),
+                  ),
+                  // Yeşil "dolu" çerçeve fotoğrafın ÜSTÜNDE → foto köşesiyle aynı eğri
+                  // (altta kalınca foto köşelerde çerçeveyi örtüyordu).
+                  foregroundDecoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
                     border: Border.all(
                       color: photo != null
                           ? AppColors.glowGreen.withValues(alpha: 0.8)
@@ -727,12 +732,19 @@ class _OptionButton extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         width: size,
         height: size,
-        decoration: BoxDecoration(
+        // Vurgu çerçevesi görselin ÜSTÜNE çizilir (foregroundDecoration) → görselin
+        // oval köşesiyle birebir aynı eğri. decoration'daki border görselin ALTINDA
+        // kalıyordu; köşelerde görsel çerçeveyi örtüp vurguyu köşeli gösteriyordu
+        // (Anıl: "ikonlar oval ama highlight oval değil").
+        foregroundDecoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
             color: selected ? const Color(0xFF9C6FD6) : Colors.white24,
             width: selected ? 2 : 1,
           ),
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
           boxShadow: selected
               ? [
                   BoxShadow(

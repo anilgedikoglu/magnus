@@ -196,8 +196,8 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
             const SizedBox(height: 10),
             // Falın amacı (Anıl, 2026-11-06): önce merakı uyandır.
             Text(
-              _tr('Gönlünün gelecekte kiminle olacağını merak ediyor musun?',
-                  'Curious who your heart will belong to in the future?'),
+              _tr('Gelecekte kimine olacaksın?',
+                  'Who will you belong to in the future?'),
               textAlign: TextAlign.center,
               style: TextStyle(color: _pink, fontSize: 15, fontWeight: FontWeight.w700, height: 1.25),
             ),

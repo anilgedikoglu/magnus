@@ -9780,6 +9780,311 @@
         "ask",
         "genel"
       ]
+    },
+    {
+      "id": 579,
+      "metin": "Bir avlunun göbeğinde, suyu havaya fışkırtan küçük bir fıskiye var fincanının tam ortasında {{isim}}. Su her seferinde aynı yüksekliğe çıkmıyor; bazen alçalıyor, bazen birden göğe uzanıyor. Bu görüntü, sevdiğin kişiyle aranızdaki enerjinin son haftalarda inişli çıkışlı gittiğini yansıtıyor. Bir gün her şey yolunda, ertesi gün sıradan bir konu ikinizin de canını biraz sıkabiliyor. Ama fıskiyenin havuzu hiç boşalmıyor; yani bağınızın özü sağlam. Telveler, {{sayi,5,14}} gün içinde ikinizi aynı anda rahatlatacak bir cevabın tek bir telefonla netleşeceğini müjdeliyor.\n\nFıskiyenin hemen yanında, meyveleri turuncuya dönmeye başlamış bir kayısı ağacı seçiyorum. Dallarından biri havuzun üzerine eğilmiş; sanki hem suyu hem meyvesini paylaşmak istiyor. Bu ağaç, birlikte kurduğunuz bir planın {{ay_2}} ayına doğru meyve vereceğinin işareti. Önce küçük bir erteleme canınızı sıkabilir; fakat ardından gelen gelişme ikinizin de yüzünü aynı anda güldürecek. O gün sevdiğin kişinin gözlerinde, uzun zamandır görmediğin o rahat ışığı yeniden yakalayacaksın {{isim}}.",
+      "metin_en": "In the very middle of your cup there's a little fountain in the center of a courtyard, shooting water into the air, {{isim}}. The water doesn't rise to the same height every time; sometimes it drops low, sometimes it suddenly reaches for the sky. This image reflects how the energy between you and the person you love has gone up and down in recent weeks. One day everything's fine, the next an ordinary topic can get under both your skins a little. But the fountain's pool never runs dry; in other words, the core of your bond is solid. The coffee grounds bring the good news that within {{sayi,5,14}} days, an answer that puts you both at ease at the same moment will be settled with a single phone call.\n\nRight beside the fountain I can make out an apricot tree whose fruit has begun to turn orange. One of its branches leans over the pool, as if it wants to share both the water and its fruit. This tree is a sign that a plan you've made together will bear fruit around {{ay_2}}. At first a small delay may annoy you; but the development that follows will make you both smile at the same time. That day you'll catch once more in your loved one's eyes that easy light you haven't seen in a long time, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 580,
+      "metin": "Gece göğüne doğru süzülen, içinde küçük bir alev titreyen bir dilek feneri var fincanında {{isim}}. Fenerin kâğıdında iki ayrı el yazısı seçiliyor; biri seninki, diğeri eşinin. Evlilikte zamanla dilekler ortaklaşır ama bazen birinin dileği, öbürünün sessizliğinin arkasında kalır. Sen son zamanlarda eşinin seni gerçekten dinlediği o eski günleri biraz özlüyorsun. Fenerin yükseldiği yöne bakınca bu özlemin karşılık bulacağını öngörüyorum. {{sayi,1,3}} hafta içinde, gündelik telaşın ortasında eşinin soracağı sıradan bir sorunun ardından uzun ve keyifli bir sohbet başlayacak; sen kendini yeniden ilk zamanlardaki gibi hissedeceksin.\n\nFincanın biraz daha aşağısında, kapağı hafifçe kalkmış küçük bir hediye kutusu var. Bu kutu sana gelecek bir hediyeyi değil, senin hazırlayacağın bir sürprizi temsil ediyor. Yakın zamanda eşin için yapacağın küçük bir jest, beklediğinden çok daha büyük bir sevinçle karşılanacak. Eşinin yüzünde göreceğin o şaşkın gülümseme evinizin havasını haftalarca ısıtacak; üstelik bunun karşılığını sana hiç beklemediğin bir anda, çok tatlı bir şekilde verecek.",
+      "metin_en": "In your cup there's a wish lantern drifting up toward the night sky, a tiny flame flickering inside it, {{isim}}. Two different handwritings can be made out on the lantern's paper; one is yours, the other your husband's. In a marriage, wishes become shared over time, but sometimes one person's wish gets left behind the other's silence. Lately you've been missing those old days when your husband really listened to you. Looking at the direction the lantern is rising, I foresee this longing being answered. Within {{sayi,1,3}} weeks, in the middle of the everyday rush, an ordinary question from your husband will lead to a long, enjoyable conversation, and you'll feel just like you did in the early days.\n\nA little farther down in your cup there's a small gift box with its lid slightly lifted. This box doesn't stand for a gift coming to you, but for a surprise you'll prepare. A small gesture you make for your husband soon will be met with far more joy than you expect. The astonished smile you'll see on his face will warm the atmosphere of your home for weeks; and on top of that, he'll repay you at a moment you least expect, in a very sweet way.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 581,
+      "metin": "Eski usul bir çıkrığın başında yün eğiren eller görüyorum telvelerinin merkezinde {{isim}}. Yün yumak yumak birikmiş; ip ise kopmadan, sabırla uzuyor. Hayatını yeniden kurduğun bu dönemde iş tarafında da her şeyi baştan dokuyormuşsun gibi hissettiğin anlar oldu. Kimse görmese de kendine bir düzen kurdun ve bu düzen artık meyvesini vermeye hazırlanıyor. Çıkrığın dönüş hızına bakılırsa, {{sayi,3,8}} hafta içinde iş hayatında yeni bir sorumluluğun kapısı aralanacak. Bu teklif önce seni biraz düşündürebilir, 'yetişebilir miyim' diye kendine sorabilirsin; ama yünü eğiren el senin, ipin sağlamlığı da ortada.\n\nFincanın sağ tarafında ise bir tren peronu belirmiş. Peronda, yanında küçük bir valiz bulunan bir bank duruyor. Bu sahne, iş için çıkacağın kısa bir yolculuğa işaret ediyor. Orada tanışacağın, konuşurken sık sık gülümseyen bir meslektaş, ilerleyen aylarda çok işine yarayacak bir bağlantı kazandıracak sana. Peronun ucundaki ışık yeşil yanıyor {{isim}}; yeni düzeninin trenine binmek için artık beklemene gerek yok.",
+      "metin_en": "At the center of your coffee grounds I see hands spinning wool at an old-fashioned spinning wheel, {{isim}}. The wool has piled up in balls, while the thread stretches on patiently without breaking. During this period of rebuilding your life, there were moments when you felt as if you were weaving everything from scratch on the work front too. Even if no one saw it, you built yourself an order, and that order is now getting ready to bear fruit. Judging by how fast the wheel is turning, within {{sayi,3,8}} weeks the door to a new responsibility will open in your working life. At first this offer may give you pause, and you may ask yourself 'can I keep up?'; but the hand spinning the wool is yours, and the thread's strength speaks for itself.\n\nOn the right side of your cup a train platform has appeared. On it stands a bench with a small suitcase beside it. This scene points to a short trip you'll take for work. A colleague you'll meet there, someone who smiles a lot while talking, will gain you a connection that will prove very useful in the months ahead. The light at the end of the platform is green, {{isim}}; you no longer need to wait to board the train of your new life.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 582,
+      "metin": "Taze bir biberiye kokusu yükseliyor sanki telvelerinden {{isim}}; incecik yapraklarıyla dimdik duran bir biberiye dalı seçiyorum. Biberiye, zihni açan ve yorgunluğu silen bir bitki olarak bilinir. Son zamanlarda gün içinde odaklanmakta zorlandığın, bir işi yaparken aklının başka bir işe kaydığı anlar olmuş. Bunun sebebi tembellik değil; zihnin, bedeninin ihtiyaç duyduğu molayı ondan önce istiyor. Dalın ucundaki taze sürgünlere bakınca, {{sayi,4,10}} gün içinde günlük düzenine ekleyeceğin, ekrandan başını kaldırdığın kısa molaların sana sandığından fazla berraklık getireceğine inanıyorum.\n\nBiberiyenin yanında, gümüş rengi parlak bir bisiklet zili var. Zil, bir sokağın başında neşeyle çalıyor ve sanki 'yol ver, geliyorum' diyor. Bu sembol, yakın çevrenden birinin seni hareketli bir plana davet edeceğinin habercisi. İlk anda 'yorgunum' deyip geri çevirmek isteyebilirsin; ama bu kez kabul et. O gün açık havada geçireceğin birkaç saat, haftalardır biriktirdiğin gerginliği alıp götürecek. Gece yastığa başını koyduğunda uykunun ne kadar çabuk geldiğine şaşıracaksın {{isim}}.",
+      "metin_en": "It's as if the fresh scent of rosemary is rising from your coffee grounds, {{isim}}; I can make out a rosemary sprig standing straight with its slender leaves. Rosemary is known as a herb that clears the mind and wipes away fatigue. Lately there have been moments when you found it hard to focus during the day, when your mind drifted to another task while you were doing one. The reason isn't laziness; your mind is asking for the break your body needs before your body does. Looking at the fresh shoots at the tip of the sprig, I believe that the short breaks you'll add to your daily routine within {{sayi,4,10}} days, lifting your head from the screen, will bring you more clarity than you'd think.\n\nBeside the rosemary there's a shiny silver bicycle bell. It rings cheerfully at the top of a street, as if saying 'make way, here I come.' This symbol heralds that someone close to you will invite you to a lively plan. At first you may want to turn it down with 'I'm tired'; but this time, accept. The few hours you spend outdoors that day will carry away the tension you've been storing up for weeks. When you lay your head on the pillow that night, you'll be surprised at how quickly sleep comes, {{isim}}.",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 583,
+      "metin": "Vay vay vay! Fincanının orta kısmında, havada asılı kalmış gibi duran rengârenk konfeti parçaları var {{isim}}. Bir kutlamanın tam ortasındayız sanki. Konfetiler, gönül dünyanda yakın zamanda yaşanacak sevindirici bir sürprizi simgeliyor. Sen duygularını kolay kolay ortaya dökmeyen, önce karşındakinin ne hissettiğinden emin olmak isteyen birisin. Bu temkin seni bugüne kadar çok korudu ama bazen sevinçlerini de erteletti. Tüm işaretler, {{sayi,2,4}} hafta içinde kalabalık bir ortamda sevdiğin bir insanın seni herkesin arasından ayırıp göstereceği küçük bir inceliğin yüzünü kızartacağını gösteriyor.\n\nKonfetilerin arasından sarı, ponpon gibi mimoza çiçekleri dökülüyor. Mimoza, uzun bir kışın ardından ilk açan çiçeklerdendir ve 'gönlüm sende' demenin en zarif yoludur. Bu çiçekler, bir süredir içinde sakladığın bir duygunun artık söze dökülmeye hazır olduğunu fısıldıyor. {{ay_1}} ayı bitmeden aklından çıkmayan o cümleyi söyleme fırsatı ayağına kadar gelecek. Söylediğinde karşı taraftan alacağın cevap, mimozanın rengi kadar sıcak olacak {{isim}}.",
+      "metin_en": "Well, well, well! In the middle of your cup there are colorful pieces of confetti that seem to hang in the air, {{isim}}. It's as if we're right in the middle of a celebration. The confetti symbolizes a joyful surprise that will soon happen in your love life. You're someone who doesn't easily pour out your feelings and wants to be sure first of what the other person feels. That caution has protected you a lot so far, but sometimes it has also made you postpone your joys. All the signs show that within {{sayi,2,4}} weeks, in a crowded setting, a small kindness from someone you love, singling you out from everyone else, will make you blush.\n\nAmong the confetti, yellow, pom-pom-like mimosa flowers are tumbling down. The mimosa is one of the first flowers to bloom after a long winter, and it's the most graceful way of saying 'my heart is yours.' These flowers whisper that a feeling you've been hiding inside for a while is now ready to be put into words. Before {{ay_1}} is over, the chance to say that sentence you can't get out of your head will come right to your doorstep. When you say it, the answer you get will be as warm as the mimosa's color, {{isim}}.",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 584,
+      "metin": "Eski bir pazar yerinde kurulmuş kocaman bir kantar seçiyorum fincanının ortasında {{isim}}. Kefesinde üst üste yığılmış dosyalar var ama ibre, sanki gerçekte taşıdığından daha hafif gösteriyor. Kurumda yaptığın işin ağırlığının tam olarak görülmediğini düşündüğün zamanlar oluyor. Sen sessizce çalışıp sonucu konuşturmayı seviyorsun; bu yüzden emeğin bazen başkalarının hanesine yazılıyor. Kantarın ibresi ise oynamak üzere. Hislerim, {{sayi,2,6}} hafta içinde amirinin uzun zamandır yürüttüğün bir işi herkesin önünde anacağını işaret ediyor. Bu küçük takdir, kurumdaki ağırlığını bir anda değiştirecek.\n\nFincanın kulba yakın tarafında ise sarı bir yağmurluk asılı duruyor. Islanmış ama sahibini kuru tutmuş. Bu, kurumda esecek küçük bir değişiklik rüzgârının sana dokunmadan geçeceğini ima ediyor. Herkes telaşla şemsiye ararken sen hazırlıklı olacaksın; çünkü bir evrakı önceden tamamlamış olman, o gün seni herkesin danıştığı kişi yapacak. {{gun_4}} gününden sonra ortalık sakinleşecek ve sen o haftayı keyifle kapatacaksın {{isim}}.",
+      "metin_en": "In the middle of your cup I can make out a huge set of scales set up in an old marketplace, {{isim}}. Its pan holds a stack of files, yet the needle shows them lighter than they really are. There are times when you feel the weight of the work you do at your institution isn't fully seen. You like to work quietly and let the results speak; that's why your effort sometimes gets credited to someone else. But the needle on the scales is about to move. My feelings point to your supervisor, within {{sayi,2,6}} weeks, mentioning in front of everyone a job you've long been handling. This small recognition will change your standing at the institution in an instant.\n\nNear the handle of your cup, a yellow raincoat is hanging. It's wet, but it has kept its owner dry. This hints that a small wind of change blowing through your institution will pass without touching you. While everyone scrambles for an umbrella, you'll be prepared, because having finished a document ahead of time will make you the person everyone consults that day. After {{gun_4}}, things will calm down and you'll wrap up that week in good spirits, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 585,
+      "metin": "Kayaların arasında bitmiş, mor çiçekli bir kekik öbeği beliriyor fincanında {{isim}}. Kekik sert topraklarda yetişir ama kokusu en hafif rüzgârla bile yayılır. Sen de zor zamanlarda kendini toparlamayı bilen birisin; fakat bunu yaparken bedenini biraz ihmal ediyorsun. Özellikle yoğun geçen günlerin ardından enerjinin aniden düştüğünü, akşamüstü bir ağırlığın çöktüğünü fark ediyor olabilirsin. Kekiğin yeşerdiği yerden anlıyorum ki bu dönem uzun sürmeyecek. {{sayi,1,3}} hafta içinde sofrana ekleyeceğin taze ve hafif bir alışkanlık, bedeninin sana çok daha canlı bir şekilde cevap vermesini sağlayacak.\n\nKekiklerin arasında, rüzgârla fırıl fırıl dönen renkli bir fırıldak var. Bir çocuğun elinden düşmüş gibi duruyor ama hâlâ dönüyor. Fırıldak, nefesin ve hareketin sembolüdür. Bir sezgim var: Yakında bir sabah kendiliğinden erken uyanacak, pencereyi açıp günü derin nefeslerle karşılayacaksın. Bu küçük ritüel, {{ay_1}} ayının sonuna kadar sürecek bir enerji yükselişinin başlangıcı olacak {{isim}}; çevrendekiler bile yüzündeki canlılığı konuşacak.",
+      "metin_en": "A clump of purple-flowered thyme growing among the rocks appears in your cup, {{isim}}. Thyme grows in hard soil, yet its scent spreads with even the gentlest breeze. You too are someone who knows how to pull yourself together in hard times; but while doing so, you neglect your body a little. Especially after busy days, you may notice your energy suddenly dropping and a heaviness settling in by late afternoon. From where the thyme is turning green, I understand this phase won't last long. Within {{sayi,1,3}} weeks, a fresh, light habit you bring to your table will make your body respond to you with much more vitality.\n\nAmong the thyme there's a colorful pinwheel spinning round and round in the wind. It looks as if it fell from a child's hand, yet it's still spinning. The pinwheel is a symbol of breath and movement. I have an intuition: Soon, one morning you'll wake up early on your own, open the window and greet the day with deep breaths. This little ritual will be the start of an energy boost that lasts until the end of {{ay_1}}, {{isim}}; even the people around you will talk about the liveliness in your face.",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 586,
+      "metin": "Kolu ahşap, gövdesi pirinç işlemeli eski bir kahve değirmeni duruyor fincanının orta yerinde {{isim}}. Değirmenin kolunu çeviren el acele etmiyor; çünkü iyi kahvenin sabırla öğütüldüğünü biliyor. Yıllar boyu biriktirdiğin tecrübe de böyle: ağır ağır ama tam kıvamında. Çalışma hayatın geride kaldı diye bilginin de rafa kalktığını sanma. Kulağıma fısıldanan şu: {{sayi,3,8}} hafta içinde yakın çevrende yürüyen bir işin hesap kitap tarafında senin titizliğine ihtiyaç duyulacak. Önce 'şöyle bir bakıver' diye istenecek bu yardım, zamanla düzenli ve keyifli bir uğraşa dönüşecek.\n\nDeğirmenin dibinde, şapkası yerinde duran iri bir palamut var. Palamut küçüktür ama içinde koca bir meşenin sırrını taşır. Bu, şimdi atacağın küçük bir adımın uzun vadede büyük bir memnuniyete dönüşeceğinin işareti. {{ay_2}} ayına doğru bu uğraşın karşılığı olarak eline geçecek ilk kazanç, miktarından çok taşıdığı anlamla seni mutlu edecek. Sevdiklerine anlatırken sesindeki gururu sen de duyacaksın {{isim}}.",
+      "metin_en": "In the middle of your cup stands an old coffee grinder with a wooden handle and an engraved brass body, {{isim}}. The hand turning its handle isn't in a hurry, because it knows good coffee is ground with patience. The experience you've gathered over the years is the same: slow, but just right. Don't think your knowledge has been shelved just because your working life is behind you. Here's what's being whispered in my ear: Within {{sayi,3,8}} weeks, your meticulousness will be needed on the bookkeeping side of a business run by someone close to you. This help, first asked for with a 'could you just take a look,' will gradually turn into a regular and enjoyable pastime.\n\nAt the bottom of the grinder there's a big acorn with its cap still on. An acorn is small, yet it carries the secret of a mighty oak. This is a sign that a small step you take now will turn into great satisfaction in the long run. Around {{ay_2}}, the first earnings you receive in return for this pastime will make you happy more for their meaning than their amount. When you tell your loved ones about it, you'll hear the pride in your own voice, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 587,
+      "metin": "Kulelerini iki ayrı elin yaptığı belli olan bir kumdan kale seçiyorum fincanının ortasında {{isim}}. Kulelerden biri daha yüksek, diğeri daha geniş; ama ikisi de aynı surun üzerinde duruyor. Nişanlınla geleceği planlarken iş hayatlarınızı da aynı haritaya yerleştirmeye çalışıyorsunuz. Düğün hazırlığının telaşı derken kariyerinle ilgili bazı kararları 'sonra bakarız' diye ertelemişsin. Kalenin kapısı ise ardına kadar açık. Seziyorum ki {{sayi,3,7}} hafta içinde, uzun zamandır yanıt beklediğin bir iş meselesinden olumlu bir haber gelecek. Bu haberi ilk paylaştığın kişi nişanlın olacak ve onun sevinci seninkini ikiye katlayacak.\n\nKalenin hemen yanında, ağzından su damlayan küçük bir sulama kabı var. Kumdan kaleler suyla sağlamlaşır; bu da emeğinizi koruyacak bir desteğin yolda olduğunu haber veriyor. Nişanlının çevresinden birinin ortaya atacağı bir iş fikri, ikinizin de ufkunu açacak. {{ay_2}} ayına doğru bu fikir üzerine yapacağınız uzun bir sohbet, ortak geleceğinize sağlam bir taş daha ekleyecek. Kalenin bayrağı rüzgârda dalgalanıyor {{isim}}; hem gönlünüzün hem kariyerinizin bayrağı bu.",
+      "metin_en": "In the middle of your cup I can make out a sandcastle whose towers were clearly built by two different hands, {{isim}}. One tower is taller, the other wider; but both stand on the same wall. While planning the future with the person you're engaged to, you're trying to fit both your working lives onto the same map. Amid the rush of wedding preparations, you've postponed some decisions about your career with 'we'll see later.' The castle gate, though, is wide open. I sense that within {{sayi,3,7}} weeks, good news will arrive about a work matter you've long been waiting to hear back on. The first person you share it with will be your partner, and their joy will double yours.\n\nRight beside the castle there's a small watering can with water dripping from its spout. Sandcastles grow stronger with water; this brings word that support to protect your efforts is on its way. A business idea put forward by someone in your partner's circle will broaden both your horizons. Around {{ay_2}}, a long talk about this idea will add one more solid stone to your shared future. The castle's flag is waving in the wind, {{isim}}; it's the flag of both your hearts and your careers.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 588,
+      "metin": "Sığ bir suyun kenarında, tek ayağının üzerinde kıpırdamadan bekleyen bir balıkçıl var fincanında {{isim}}. Balıkçıl acele etmez; suyun durulmasını bekler ve doğru anda hamlesini yapar. Ayrılığın ardından sen de böyle bir bekleyişin içindesin: Bir yandan geride bıraktığın ilişkinin nedenlerini tartıyor, bir yandan da ileriye bakmaya çalışıyorsun. Bazı geceler telefonu eline alıp bırakıyor, içinden 'konuşsam mı' diye geçiriyorsun. Suyun durulacağı günün yaklaştığını hissediyorum: {{sayi,2,5}} hafta içinde kafandaki karmaşık sorulardan biri, bir dostunla yapacağın içten bir sohbet sırasında kendiliğinden cevabını bulacak.\n\nSuyun kıyısında, dalları mor çiçeklerle dolup taşan bir erguvan ağacı seçiyorum. Erguvan baharın en cesur rengidir; yapraklarından önce çiçek açar. Bu ağaç, yeni düzeninde önce gönlünün açılacağını, sonra her şeyin yerli yerine oturacağını müjdeliyor. {{ay_1}} ayında yaşadığın yerin bir köşesini baştan düzenleyeceksin ve o köşe yeni hayatının ilk gerçek simgesi olacak. Orada içeceğin ilk kahvede, geleceğe dair ilk kez korkusuzca plan yaptığını fark edeceksin {{isim}}.",
+      "metin_en": "In your cup there's a heron standing motionless on one leg at the edge of shallow water, {{isim}}. A heron doesn't rush; it waits for the water to settle and makes its move at the right moment. Since the breakup, you've been in a similar kind of waiting: On one hand you're weighing the reasons behind the relationship you left behind, on the other you're trying to look ahead. Some nights you pick up the phone and put it back down, wondering 'should I talk to them?' I feel the day the water settles is drawing near: Within {{sayi,2,5}} weeks, one of the tangled questions in your mind will find its answer on its own during a heartfelt conversation with a friend.\n\nOn the shore I can make out a Judas tree, its branches overflowing with purple blossoms. The Judas tree is spring's boldest color; it blooms before it puts out leaves. This tree brings the good news that in your new life your heart will open first, and then everything will fall into place. In {{ay_1}}, you'll redo a corner of the place where you live from scratch, and that corner will become the first real symbol of your new life. Over the first coffee you drink there, you'll notice that for the first time you're making plans for the future without fear, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 589,
+      "metin": "Bir derenin üzerine dal dal set kuran, dişleri iş başında bir kunduz gözüme çarptı {{isim}}! Ne kadar çalışkan bir hayvan; durmadan taşıyor, örüyor, onarıyor. Sana benzettim doğrusu. Yılların kazandırdığı sorumluluk duygusuyla çevrendeki herkesin işini düşünüyor, kendi bedenini ise en sona bırakıyorsun. Omuzlarının ve sırtının akşamları sana bunu hatırlattığı oluyor. Kunduzun seti ise bitmek üzere; yani yükünün bir kısmını çok yakında başka ellere bırakacaksın. {{sayi,2,5}} hafta içinde gençlerden birinin gönüllü olarak üstleneceği bir iş, sana kendine ayıracak zaman kazandıracak.\n\nSetin yanında, tatlı kokusu fincandan taşacakmış gibi duran bir hanımeli dalı var. Hanımeli dinlenmenin ve keyfin çiçeğidir. Bu dalın kokusu, {{ay_1}} ayına doğru sevdiğin bir müziği açıp yapacağın düzenli esneme hareketlerinin bedenine yeni bir esneklik getireceğinin müjdesini taşıyor. İlk haftanın sonunda omuzlarının daha hafif olduğunu fark edeceksin; ikinci haftanın sonunda ise o anları iple çekeceksin {{isim}}.",
+      "metin_en": "A beaver building a dam branch by branch over a stream, its teeth hard at work, caught my eye, {{isim}}! What a hardworking animal; constantly carrying, weaving, repairing. I couldn't help comparing it to you. With the sense of responsibility the years have given you, you think about everyone else's business and leave your own body for last. Your shoulders and back sometimes remind you of this in the evenings. But the beaver's dam is almost finished, which means you'll soon hand part of your load over to other hands. Within {{sayi,2,5}} weeks, a task one of the younger ones volunteers to take on will win you time for yourself.\n\nBeside the dam there's a honeysuckle branch whose sweet scent seems ready to spill out of the cup. Honeysuckle is the flower of rest and pleasure. The scent of this branch carries the good news that around {{ay_1}}, regular stretching to music you love will bring new flexibility to your body. By the end of the first week you'll notice your shoulders feel lighter; by the end of the second, you'll be looking forward to those moments, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 590,
+      "metin": "Güneş vurunca rengârenk ışıklar saçan bir vitray beliriyor fincanında {{isim}}. Camların her biri ayrı renkte ama birlikte tek bir resim oluşturuyorlar: birbirine doğru uzanan iki el. Çalıştığın yerin yoğunluğu, özel hayatını da parçalara ayırmış gibi; bir parça mesai, bir parça yorgunluk, bir parça da kalbine ayırmaya çalıştığın zaman. Sen bu parçaları bir araya getirmeye uğraşırken, gönlünün istediği resmin aslında çoktan oluştuğunu fark etmiyorsun. Vitraydaki ışık bana şunu sezdiriyor: Yoğun bir mesai gününün ortasında sevdiğin birinden gelecek küçük bir not, toplantı arasında yüzüne yayılan bir gülümsemeye dönüşecek.\n\nVitrayın üst köşesinde, V harfi çizerek uçan bir sürü yaban kazı var. Göçmen kuşlar yolculuklarını hep birlikte ve aynı yöne yaparlar. Bu kuşlar, gönül hayatında tek başına taşıdığın bir hayalin {{ay_2}} ayına doğru paylaşılan bir plana dönüşeceğini resmediyor. Uzun süredir konuşulan bir kaçamak, nihayet tarihiyle birlikte netleşecek. O yolculuğun öncesinde hissedeceğin heyecan bile, iş yerindeki en yorucu günü hafifletmeye yetecek {{isim}}.",
+      "metin_en": "A stained-glass window that scatters colorful light when the sun hits it appears in your cup, {{isim}}. Each pane is a different color, but together they form a single picture: two hands reaching toward each other. The intensity at your workplace seems to have broken your private life into pieces too; a piece for work hours, a piece for exhaustion, and a piece for the time you try to set aside for your heart. While you struggle to put these pieces together, you don't notice that the picture your heart wants has already formed. The light in the stained glass lets me sense this: In the middle of a busy workday, a little note from someone you love will turn into a smile spreading across your face between meetings.\n\nIn the upper corner of the stained glass, a flock of wild geese flies in a V. Migrating birds always travel together and in the same direction. These birds picture a dream you've been carrying alone in your love life turning into a shared plan around {{ay_2}}. A getaway that's been talked about for a long time will finally be settled, date and all. Even the excitement you'll feel before that trip will be enough to lighten the most exhausting day at work, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 591,
+      "metin": "Kabuğu güneşte pembeleşmiş, dalından koparılmayı bekleyen bir şeftali var fincanının orta yerinde {{isim}}. Şeftali olgunlaşmadan koparılırsa tadı eksik kalır; olgunlaşınca da dalda fazla bekletilmez. Bu meyve, gönül meselelerinde zamanlamayı ne kadar önemsediğini ele veriyor. Bir duyguyu ifade etmeden önce doğru anı bekliyorsun; bazen bu bekleyiş öyle uzuyor ki karşındaki kişi ne düşündüğünü tahmin etmekte zorlanıyor. Şeftalinin rengi ise tam kıvamında. Önümüzdeki {{sayi,7,20}} gün içinde kalbini meşgul eden konuda beklediğin an kendiliğinden gelecek; tek bir cümleyle içini dökeceksin ve aldığın sıcak karşılık seni günlerce gülümsetecek.\n\nŞeftali dalının altında, ağzı yarı açık bir bahçe makası duruyor. Makas, budamanın ve seçmenin sembolüdür. Sevgi dolu bir kadın olarak herkese yer açmaya çalışıyorsun ama bazı ilişkiler enerjini senden habersiz tüketiyor. Bir önsezi bana, {{sayi,2,4}} hafta içinde seni yoran gereksiz bir mesaj trafiğini kendiliğinden azaltacağını fısıldıyor. Budanan dalın yerine daha güçlü bir filiz çıkar; sen de boşalan o yere, seni gerçekten mutlu eden birine ayırdığın vakti koyacaksın {{isim}}.",
+      "metin_en": "In the middle of your cup there's a peach, its skin blushing pink in the sun, waiting to be picked from its branch, {{isim}}. Picked before it's ripe, a peach lacks flavor; once ripe, it isn't left on the branch for long. This fruit gives away how much you care about timing in matters of the heart. Before expressing a feeling, you wait for the right moment; sometimes that wait drags on so long that the other person struggles to guess what you're thinking. But the peach's color is just right. Within the next {{sayi,7,20}} days, the moment you've been waiting for in the matter that occupies your heart will come on its own; you'll pour your heart out in a single sentence, and the warm response you receive will keep you smiling for days.\n\nBelow the peach branch lies a pair of garden shears, half open. Shears are a symbol of pruning and choosing. As a loving woman, you try to make room for everyone, but some relationships drain your energy without you noticing. A hunch whispers to me that within {{sayi,2,4}} weeks you'll naturally cut back on a pointless stream of messages that wears you out. Where a branch is pruned, a stronger shoot grows; and into that freed-up space you'll put the time you give to someone who truly makes you happy, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 592,
+      "metin": "Kumların arasında beş kolunu sonuna kadar açmış bir denizyıldızı seçiyorum telvelerinde {{isim}}. Denizyıldızı, kaybettiği kolunu yeniden büyütebilen nadir canlılardandır. Bu dönem okulda bazı şeylerin istediğin gibi gitmediğini, bir sınav sonucunun moralini biraz bozduğunu hissediyorum. Ama denizyıldızının gücü sende de var: Kendini toparlama hızın, çevrendekileri her seferinde şaşırtıyor. {{sayi,2,5}} hafta içinde bir öğretmeninin sınıfta söyleyeceği tek bir cümle, zayıf sandığın konuda aslında ne kadar ilerlediğini sana gösterecek. O gün eve dönerken adımların hafifleyecek.\n\nDenizyıldızının hemen yanında, ağzı kapalı, içi dolu bir matara duruyor. Matara, yolda ihtiyaç duyacağın her şeyi yanında taşıdığını anlatır. {{ay_1}} ayı içinde arkadaşlarınla yapacağınız bir gezi planı, sıradan bir hafta sonunu unutulmaz bir hatıraya çevirecek. O gün yanında olacak biri sana ilgi alanınla ilgili bir topluluktan söz edecek; oraya katılmak, okul hayatına yepyeni bir renk katacak {{isim}}.",
+      "metin_en": "Among the sand in your coffee grounds I can make out a starfish with all five arms spread wide, {{isim}}. The starfish is one of the rare creatures that can regrow a lost arm. I feel that this term some things at school haven't gone the way you wanted, and that an exam result dampened your spirits a little. But you have the starfish's strength too: The speed at which you bounce back surprises the people around you every time. Within {{sayi,2,5}} weeks, a single sentence a teacher says in class will show you how much progress you've actually made in a subject you thought was your weak spot. Your steps will feel lighter on your way home that day.\n\nRight beside the starfish stands a canteen, closed and full. A canteen says you carry everything you'll need on the road. During {{ay_1}}, a trip you plan with your friends will turn an ordinary weekend into an unforgettable memory. Someone who's with you that day will tell you about a group related to your interests; joining it will add a whole new color to your school life, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 593,
+      "metin": "Fuşya renkli bir begonvil, eski bir taş duvarı baştan aşağı sarmış fincanında {{isim}}. Begonvil tutunduğu duvarı süsler, ama aynı zamanda ondan güç alır. Evliliğiniz de böyle: Biriniz duvar, diğeriniz çiçek; hangisinin hangisi olduğu güne göre değişiyor. Son zamanlarda gündelik koşuşturma aranızdaki o romantik dokunuşları biraz geri plana itmiş. Ama begonvilin yeni açan çiçeklerine bakılırsa, bu durum değişmek üzere. Telveler, {{sayi,1,3}} hafta içinde eşinin sana uzun zamandır duymadığın içtenlikte bir iltifatta bulunacağını ve bunun bütün haftanın havasını değiştireceğini bildiriyor.\n\nBegonvilin gölgesinde, örtüsü serilmiş bir piknik sepeti seçiyorum. Sepetin içinden ikiye bölünmüş bir ekmek ve iki bardak görünüyor. Bu, eşinle baş başa geçireceğiniz telaşsız bir günün habercisi. {{ay_1}} ayına doğru, uzun süredir 'bir gün yaparız' dediğiniz bir planı nihayet hayata geçireceksiniz. O gün çekeceğiniz bir fotoğraf, uzun süre telefonunun ekranında duracak ve her baktığında içini ısıtacak {{isim}}.",
+      "metin_en": "A fuchsia bougainvillea has covered an old stone wall from top to bottom in your cup, {{isim}}. Bougainvillea adorns the wall it clings to, but it also draws strength from it. Your marriage is the same: One of you is the wall, the other the flower; which is which changes from day to day. Lately the daily rush has pushed those romantic touches between you a little into the background. But judging by the bougainvillea's freshly opened blossoms, that's about to change. The coffee grounds announce that within {{sayi,1,3}} weeks your spouse will pay you a compliment with a sincerity you haven't heard in a long time, and it will change the mood of the whole week.\n\nIn the bougainvillea's shade I can make out a picnic basket with its cloth spread out. Inside it, a loaf of bread broken in two and two glasses are visible. This heralds an unhurried day you'll spend alone together with your spouse. Around {{ay_1}}, you'll finally bring to life a plan you've long been putting off with 'someday.' A photo you take that day will stay on your phone screen for a long time and warm your heart every time you look at it, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 594,
+      "metin": "Gülümseten bir görüntü var fincanında {{isim}}: Buzların üzerinde, kanatlarını iki yana açmış, paytak adımlarla ama son derece kararlı yürüyen bir penguen! Penguenin yürüyüşü komik görünür ama yönünü asla şaşırmaz. Sen de dışarıdan rahat, hatta biraz umursamaz görünsen de kafana koyduğun bir şeyden kolay kolay vazgeçmiyorsun. Son zamanlarda kendine bir söz vermiş, kimseye çaktırmadan bir plan için hazırlanıyorsun. Kanaatimce {{sayi,3,8}} hafta içinde bu hazırlığın ilk somut sonucunu bir telefon görüşmesinin ardından alacaksın; 'tamam, başlıyoruz' dediğin an içindeki bir düğüm çözülecek.\n\nFincanın alt tarafında, etrafında birkaç kişinin oturduğu bir kamp ateşi seçiyorum; çıtırtısını neredeyse duyar gibiyim. Bu, eski dostlarınla yeniden bir araya geleceğin samimi bir buluşmanın işareti. Bir süredir herkes kendi derdine düşmüştü; ama içlerinden biri inisiyatif alıp sizi toplayacak. O gece anlatılan hikâyelerden biri, planların için çok işine yarayacak bir fikir verecek; gönlüne de hoş bir merak düşecek {{isim}}.",
+      "metin_en": "There's an image in your cup that makes me smile, {{isim}}: A penguin on the ice, flippers spread to either side, waddling along but utterly determined! A penguin's walk looks funny, but it never loses its way. You too may look relaxed, even a bit carefree from the outside, but you don't easily give up on something you've set your mind to. Lately you've made yourself a promise and have been quietly preparing for a plan without letting anyone know. In my view, within {{sayi,3,8}} weeks you'll get the first concrete result of these preparations after a phone call; the moment you say 'okay, we're starting,' a knot inside you will come undone.\n\nIn the lower part of your cup I can make out a campfire with a few people sitting around it; I can almost hear it crackling. This is a sign of a warm gathering where you'll reunite with old friends. For a while everyone had been caught up in their own troubles, but one of them will take the initiative and bring you all together. One of the stories told that night will give you an idea that's very useful for your plans, and a pleasant curiosity will settle in your heart too, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 595,
+      "metin": "Bir çift paten görüyorum fincanında {{isim}}; tekerlekleri yepyeni, bağcıkları sıkıca bağlanmış. Patenle ilk kayışlar hep biraz sallantılıdır ama birkaç denemeden sonra rüzgârı yüzünde hissetmeye başlarsın. Kariyerinin başında olmanın getirdiği o tatlı sallantıyı yaşıyorsun: Arkadaş grubunda herkes bir yöne gidiyor gibi görünürken sen hangi yolun sana ait olduğunu düşünüyorsun. Patenlerin parlayan tekerlekleri, bu belirsizliğin kısa süreceğini haber veriyor. {{sayi,2,6}} hafta içinde ilk kez denediğin bir işte alacağın olumlu bir geri bildirim, kendine olan güvenini katlayacak.\n\nPatenlerin yanında, içi renkli çizgili bir cam bilye parlıyor. Çocuk oyunlarında bilye, doğru nişan almanın ve sabrın simgesidir. Bu bilye, {{ay_2}} ayına doğru işinin ehli, tecrübesi yüzünden okunan birinin sana bir kapı göstereceğini dile getiriyor. Bu kişi bir süredir seni uzaktan izliyormuş; becerilerini fark etmiş ve doğru zamanı bekliyormuş. Ondan gelecek bir öneri, cebine girecek ilk ciddi kazancın kapısını aralayacak {{isim}}. Nişanın bu kez tam on ikiden olacak.",
+      "metin_en": "I see a pair of roller skates in your cup, {{isim}}; their wheels brand new, their laces tied tight. The first glides on skates are always a little wobbly, but after a few tries you start to feel the wind on your face. You're living that sweet wobble of being at the start of your career: While everyone in your group of friends seems to be heading somewhere, you're wondering which path is yours. The skates' shining wheels bring news that this uncertainty won't last long. Within {{sayi,2,6}} weeks, positive feedback on a job you try for the first time will multiply your self-confidence.\n\nBeside the skates, a glass marble with colorful stripes inside is sparkling. In children's games, the marble is a symbol of good aim and patience. This marble speaks of someone who truly knows their craft, with experience written all over their face, showing you a door around {{ay_2}}. This person has been watching you from afar for a while; they've noticed your skills and have been waiting for the right time. A suggestion from them will open the door to the first serious money in your pocket, {{isim}}. This time your aim will be dead on.",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 596,
+      "metin": "Aynı dala tünemiş, başlarını birbirine yaslamış iki saz kuşu var fincanının orta kısmında {{isim}}. Saz kuşları, bağlandıkları eşe ömür boyu sadık kalan kuşlar olarak bilinir. Bu görüntü, gönül hayatında aradığın şeyin heyecandan çok güven olduğunu düşündürüyor. Sen duygularını kelimelerle değil, yaptıklarınla göstermeyi seven bir adamsın; ama bazen karşındakinin o kelimeleri de duymak istediğini unutuyorsun. İçimden bir ses, {{sayi,5,15}} gün içinde değer verdiğin kişiyle yapacağın kısa bir konuşmada ağzından çıkacak tek bir içten cümlenin, aranızdaki bağı bambaşka bir yere taşıyacağını söylüyor.\n\nKuşların hemen altında, bir gömleğin manşetinde parlayan bir çift kol düğmesi seçiyorum. Kol düğmesi özenin ve özel bir günün işaretidir. {{ay_1}} ayı içinde şık giyinmeni gerektiren bir davet seni bekliyor. O akşam hiç beklemediğin birinden gelecek bir iltifat yüzünü güldürecek ve seninle ilgili çok tatlı bir gerçeği öğreneceksin: Çevrende seni sessizce takdir edenlerin sayısı sandığından çok daha fazla {{isim}}.",
+      "metin_en": "In the middle of your cup there are two lovebirds perched on the same branch, their heads resting against each other, {{isim}}. Lovebirds are known as birds that stay loyal for life to the mate they bond with. This image makes me think that what you look for in love is trust more than excitement. You're a man who likes to show his feelings through actions rather than words; but sometimes you forget that the other person wants to hear those words too. A voice inside me says that within {{sayi,5,15}} days, in a short conversation with someone you care about, a single heartfelt sentence from your lips will carry the bond between you somewhere entirely new.\n\nRight below the birds I can make out a pair of cufflinks shining on a shirt cuff. Cufflinks are a sign of care and of a special day. During {{ay_1}}, an invitation that calls for dressing up awaits you. That evening, a compliment from someone you'd never expect will make you smile, and you'll learn a very sweet truth about yourself: The number of people around you who quietly admire you is far greater than you think, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 597,
+      "metin": "Susamları ışıl ışıl parlayan yuvarlak bir simit beliriyor telvelerinin ortasında {{isim}}. Simit ucu bucağı olmayan bir halkadır; bir bereketin başka bir berekete bağlandığını anlatır. Evinin düzeni senin elinde; herkesin neye ihtiyacı olduğunu onlar söylemeden biliyorsun. Bu yüzden insanlar sana kolayca içini açıyor, akıl danışıyor. Simidin ortasındaki boşluk ise bana, kendine ayırmadığın o küçük boşluğu hatırlattı. Hislerim çok kuvvetli: {{sayi,4,12}} gün içinde evinde yapacağın ufak bir düzenleme sırasında, uzun süredir aradığın ve 'kesin kayboldu' dediğin bir şey karşına çıkacak. Ardından gelen bir telefon da o günü iyice tatlandıracak.\n\nSimidin yanında, mis kokulu yapraklarıyla bir fesleğen öbeği var. Eski evlerde fesleğen, kapıdan girenleri karşılasın diye yetiştirilirdi. Bu fesleğen bana, {{ay_1}} ayında evinde ağırlayacağın, uzun zamandır görmediğin birinin ziyaretinin kokusunu getiriyor. O ziyaretle evine bir neşe, bir kahkaha dolacak; sohbetin arasında eski günleri anıp gözlerinizden yaş gelene kadar güleceksiniz {{isim}}.",
+      "metin_en": "A round simit, its sesame seeds sparkling, appears in the middle of your coffee grounds, {{isim}}. A simit is a ring with no beginning or end; it tells of one blessing linking to another. The order of your home is in your hands; you know what everyone needs before they say it. That's why people easily open up to you and ask your advice. The hole in the middle of the simit, though, reminded me of that little space you never set aside for yourself. My feelings are very strong: Within {{sayi,4,12}} days, while doing a little reorganizing at home, something you've been looking for for a long time and were sure was lost for good will turn up. A phone call that follows will make that day even sweeter.\n\nNext to the simit there's a clump of fragrant basil. In old houses, basil was grown to welcome those coming through the door. This basil brings me the scent of a visit in {{ay_1}} from someone you haven't seen in a long time, whom you'll host at home. That visit will fill your home with joy and laughter; in the middle of the chat you'll recall the old days and laugh until tears come to your eyes, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 598,
+      "metin": "Pembe tüyleriyle, tek ayağının üzerinde zarafetle duran bir flamingo var fincanında {{isim}}. Flamingo dengeyi öyle doğal kurar ki tek ayak üstünde uyuyabilir bile. Senin de hayatında böyle bir denge arayışı var: Kendi düzenini kendin kurmanın keyfini çıkarıyorsun; ama bu serbestlik bazen düzensiz uykulara, ayakta geçiştirilen öğünlere dönüşüyor. Flamingonun duruşu, bu dengenin kurulmak üzere olduğunu gösteriyor. {{sayi,1,3}} hafta içinde bir arkadaşının ısrarıyla başlayacağın düzenli bir etkinlik, haftanın belli günlerini senin için küçük bir bayrama çevirecek.\n\nFlamingonun ayaklarının dibinde taze nane yaprakları var. Nane serinlik ve ferahlık getirir. Bu yapraklar, {{ay_2}} ayına doğru gün içinde kendine ayıracağın küçük nefes molalarının, en yoğun günlerde bile seni ferah tutacağını anlatıyor. Bu dönemde yüzündeki dinç ifadeyi ilk sen fark edeceksin; aynaya bakarken kendine gülümsediğin o an, yeni bir dönemin başladığının en güzel kanıtı olacak {{isim}}.",
+      "metin_en": "In your cup there's a flamingo with pink feathers, standing gracefully on one leg, {{isim}}. A flamingo finds its balance so naturally that it can even sleep standing on one leg. You too are searching for that kind of balance in your life: You enjoy setting up your days your own way; but that freedom sometimes turns into irregular sleep and meals gulped down on the go. The flamingo's stance shows that this balance is about to be found. Within {{sayi,1,3}} weeks, a regular activity you start at a friend's insistence will turn certain days of the week into a little celebration for you.\n\nAt the flamingo's feet there are fresh mint leaves. Mint brings coolness and freshness. These leaves tell me that around {{ay_2}}, the little breathing breaks you give yourself during the day will keep you feeling fresh even on the busiest days. In this period you'll be the first to notice the vibrant look on your face; the moment you smile at yourself in the mirror will be the best proof that a new chapter has begun, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
     }
   ]
 }

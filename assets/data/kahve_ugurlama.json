@@ -4205,6 +4205,304 @@
         "ask",
         "genel"
       ]
+    },
+    {
+      "id": 284,
+      "metin": "Evini sevgiyle dolduran birinin kalbi de sevgiden yana hiç boş kalmaz {{isim}}. Gönlünün beklediği o sıcak sözü yakında duyman dileğiyle; kahven hep köpüklü, kalbin hep kıpır kıpır olsun.\n\nSevgiyle,\n\nMagnus",
+      "metin_en": "The heart of someone who fills their home with love is never short on love, {{isim}}. Wishing that you soon hear the warm words your heart has been waiting for; may your coffee always be frothy and your heart always aflutter.\n\nWith love,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 285,
+      "metin": "Kalbinin en sevdiği melodi hangisiyse, önümüzdeki günlerde onu sık sık duyman dileğiyle {{isim}}. Gönül fincanın hep tatlı kalsın.\n\nSevgiler,\n\nMagnus",
+      "metin_en": "Whatever melody your heart loves most, I wish you hear it often in the days ahead, {{isim}}. May the cup of your heart always stay sweet.\n\nLove,\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 286,
+      "metin": "Gençlik enerjin fincandan taşıyor {{isim}}; yalnız bu enerjinin bir kısmını da uykuna sakla, olur mu? Dinç, neşeli ve bol kahkahalı günlerde yeniden görüşelim.\n\nMagnus",
+      "metin_en": "Your youthful energy is overflowing from your cup, {{isim}}; just save some of that energy for your sleep too, okay? Let's meet again in lively, cheerful days full of laughter.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 287,
+      "metin": "Sen sevildiğini hissettiğinde etrafına ışık saçan bir kadınsın {{isim}}. O ışığı hiç kısmayacak birinin her zaman yanında olmasını dilerim.\n\nSevgiyle kal,\n\nMagnus",
+      "metin_en": "When you feel loved, you're a woman who shines light all around her, {{isim}}. I wish you always have someone by your side who will never dim that light.\n\nStay loved,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 288,
+      "metin": "Derslerin arasında geleceğini düşünüp kaygılandığın anlar oluyor, biliyorum {{isim}}. Ama şu an attığın her küçük adım, ileride büyük bir yolun taşları olacak. Başarılarla dolu bir dönem dilerim!\n\nMagnus",
+      "metin_en": "I know there are moments between classes when you think about your future and worry, {{isim}}. But every small step you take now will become a stone on a great road later. I wish you a term full of success!\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 289,
+      "metin": "Mesai bitince telefonunu sessize alıp kendine dönmeni dilerim {{isim}}. Çalıştığın yerde emeğinin görüldüğü, boş vakitlerinin ise tamamen sana ait olduğu günler yakın.\n\nSevgiler,\n\nMagnus",
+      "metin_en": "I hope you put your phone on silent after work and turn back to yourself, {{isim}}. The days when your efforts at work are seen and your free time belongs entirely to you are close.\n\nLove,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 290,
+      "metin": "Fincanını ters çevirip tabağına bıraktığım şu anda içimden tek bir dilek geçti {{isim}}: Bu hafta seni beklenmedik bir yerden gelecek güzel bir haber bulsun.\n\nSevgiyle kal…\n\nMagnus",
+      "metin_en": "As I turned your cup over onto its saucer just now, a single wish crossed my mind, {{isim}}: May good news from an unexpected place find you this week.\n\nStay loved…\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 291,
+      "metin": "Emeğin karşılığı bazen gecikir ama asla kaybolmaz {{isim}}. Önümüzdeki günlerde bunun ilk işaretini görmeni dilerim. Bereketli, verimli günler!\n\nMagnus",
+      "metin_en": "The reward for effort is sometimes late, but never lost, {{isim}}. I hope you see the first sign of it in the days ahead. Wishing you fruitful, productive days!\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 292,
+      "metin": "Öğrencilerine verdiğin emeğin bir gün bambaşka bir yerden sana geri döndüğünü göreceksin {{isim}}. Bölümde huzurlu, kalemine bereketli günler dilerim.\n\nSaygılarımla,\n\nMagnus",
+      "metin_en": "One day you'll see the effort you give your students come back to you from a completely different place, {{isim}}. I wish you peaceful days in your department and a prolific pen.\n\nWith respect,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 293,
+      "metin": "Nişanlınla birlikte kuracağınız yuvanın temelleri sevgiyle atılıyor {{isim}}; fincan bunu gördü, ben de gördüm. Düğün telaşınız tatlı, mutluluğunuz kalıcı olsun.\n\nMagnus",
+      "metin_en": "The foundations of the home you'll build with the person you're engaged to are being laid with love, {{isim}}; the cup saw it, and so did I. May your wedding rush be sweet and your happiness lasting.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 294,
+      "metin": "Kahvenin son yudumuyla birlikte bu falın da sonuna geldik {{isim}}. Gördüklerimden biri bile seni gülümsettiyse ne mutlu bana. Yeni bir fincanda buluşalım.\n\nHoşça kal,\n\nMagnus",
+      "metin_en": "With the last sip of coffee, we've also come to the end of this reading, {{isim}}. If even one of the things I saw made you smile, I'm glad. Let's meet in a new cup.\n\nGoodbye for now,\n\nMagnus",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 295,
+      "metin": "Kalbin şu sıralar biraz yorgun ama kırgın değil {{isim}}; aradaki farkı yakında sen de göreceksin. Yeniden gülmeyi, yeniden heyecanlanmayı sonuna kadar hak ediyorsun.\n\nSevgiyle kal,\n\nMagnus",
+      "metin_en": "Your heart is a little tired these days, but not broken, {{isim}}; soon you'll see the difference too. You fully deserve to laugh again and to feel excited again.\n\nStay loved,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 296,
+      "metin": "Bu hafta kendine deliksiz bir uyku borçlusun {{isim}}; o borcu öde derim. Güçlü ve zinde günlerde yeniden görüşelim.\n\nEsen kal,\n\nMagnus",
+      "metin_en": "This week you owe yourself a good, deep sleep, {{isim}}; I say pay that debt. Let's meet again in strong, energetic days.\n\nTake care,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 297,
+      "metin": "Sevdiğin kişiyle aynı yöne bakmanın huzurunu fincanında da gördüm {{isim}}. İkinize de bol kahkahalı, telaşsız günler dilerim.\n\nGörüşmek üzere,\n\nMagnus",
+      "metin_en": "I saw in your cup, too, the peace of looking in the same direction as the person you love, {{isim}}. I wish you both unhurried days full of laughter.\n\nSee you soon,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 298,
+      "metin": "Sözünün eri olmak sana yakışıyor {{isim}}; telveler de bunu doğruluyor. Önündeki haftalar, verdiğin emeklerin karşılığını getirsin.\n\nEsen kal,\n\nMagnus",
+      "metin_en": "Being a man of your word suits you, {{isim}}; the coffee grounds confirm it too. May the weeks ahead bring the reward for your efforts.\n\nTake care,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 299,
+      "metin": "Kurumda herkesin işine koşan sen, bu akşam biraz da kendine koş {{isim}}. Evrakların değil, keyfinin peşinde olduğun huzurlu günler dilerim.\n\nSelamlarımla,\n\nMagnus",
+      "metin_en": "You who rush to help with everyone's work at the institution, tonight rush a little toward yourself, {{isim}}. I wish you peaceful days spent chasing your own joy instead of paperwork.\n\nRegards,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 300,
+      "metin": "Evliliğin en güzel yanı, aynı fincandan içilen kahvenin bile paylaşılınca tadının artmasıdır {{isim}}. Eşinle tatlı sohbetlerin hiç eksik olmasın.\n\nMagnus",
+      "metin_en": "The best part of marriage is that even coffee from the same cup tastes better when it's shared, {{isim}}. May sweet chats with your spouse never be in short supply.\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 301,
+      "metin": "Bedenin yılların hikâyesini taşıyor {{isim}}; ona bir dostun gibi davran, o da sana iyilikle karşılık versin. Sağlıklı, huzurlu ve uzun soluklu günler dilerim.\n\nSaygılarımla,\n\nMagnus",
+      "metin_en": "Your body carries the story of the years, {{isim}}; treat it like a friend, and may it repay you with kindness. I wish you healthy, peaceful, long-lasting days.\n\nWith respect,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 302,
+      "metin": "Yıllarca başkalarının saatine göre yaşadın; şimdi sıra kendi ritminde {{isim}}. Güneşli yürüyüşler, deliksiz uykular ve keyifli sohbetlerle dolu günler dilerim.\n\nSaygılarımla,\n\nMagnus",
+      "metin_en": "For years you lived by other people's clocks; now it's time for your own rhythm, {{isim}}. I wish you days full of sunny walks, deep sleep and pleasant conversations.\n\nWith respect,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 303,
+      "metin": "Yeni düzeninin her köşesine kendi imzanı atıyorsun {{isim}}; bu sana çok yakışıyor. Huzurun daim, gönlün ferah olsun.\n\nSevgiyle kal,\n\nMagnus",
+      "metin_en": "You're putting your own signature on every corner of your new life, {{isim}}; it suits you very well. May your peace last and your heart be at ease.\n\nStay loved,\n\nMagnus",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
     }
   ]
 }

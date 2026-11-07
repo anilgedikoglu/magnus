@@ -6173,6 +6173,308 @@
         "ask",
         "genel"
       ]
+    },
+    {
+      "id": 423,
+      "metin": "Kalbinle ilgili kısma gelince telveler bir anda yumuşadı {{isim}}, sanki biraz utandılar. Gönlünü ilgilendiren o ince çizgiyi şimdi tek tek okuyorum;",
+      "metin_en": "When we got to the part about your heart, the coffee grounds suddenly softened, {{isim}}, as if they got a little shy. Now I'm reading that delicate line about your love life, one detail at a time;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 424,
+      "metin": "Emeğinin karşılığını sessizce bekleyenlerdensin {{isim}}; ama telvelerin bu konuda hiç de sessiz değil. İş ve kazanç tarafındaki hareketliliğe geçiyorum:",
+      "metin_en": "You're one of those who quietly wait for the reward of their efforts, {{isim}}; but your coffee grounds aren't quiet about it at all. Moving on to the activity on the work and earnings side:",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 425,
+      "metin": "Şimdi kahvenin en koyu yerine geldik; kahve ne kadar koyuysa haber de o kadar demli olur. Hazırsan anlatıyorum;",
+      "metin_en": "Now we've reached the darkest part of the coffee; the darker the coffee, the richer the news. If you're ready, here goes;",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 426,
+      "metin": "{{burc}} burcunun merakı depreşti, değil mi? Söz, hiçbir ayrıntıyı atlamayacağım. Fincanının asıl hareketli kısmına geçiyoruz;",
+      "metin_en": "That {{burc}} curiosity of yours is stirring, isn't it? I promise I won't skip a single detail. We're moving on to the liveliest part of your cup;",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 427,
+      "metin": "Bölümde herkes seni ciddi biri olarak bilir ama fincanın başka bir hikâye anlatıyor {{isim}}: İçinde romantik bir yan saklıyorsun. Onu açalım;",
+      "metin_en": "In your department everyone knows you as a serious person, but your cup tells another story, {{isim}}: You're hiding a romantic side. Let's open it up;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 428,
+      "metin": "Yılların ustalığı telvelerde bile belli oluyor; çizgilerin hiçbiri aceleyle çekilmemiş. Emeklilik bir son değil, yeni bir mesainin başı olabilir. İşaretler de bunu söylüyor:",
+      "metin_en": "The mastery of the years shows even in the coffee grounds; not one of these lines was drawn in a hurry. Retirement isn't an ending; it can be the start of a new kind of work. The signs say so too:",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 429,
+      "metin": "Teneffüs zili çaldı sayalım {{isim}}; şimdi fincanının ikinci dersine geçiyoruz. Bu derste sınav yok, yalnızca güzel haberler var;",
+      "metin_en": "Let's say the bell for recess has rung, {{isim}}; now we're moving on to your cup's second lesson. There's no exam in this one, only good news;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 430,
+      "metin": "Herkese yetişmeye çalışan bir kadının fincanı böyle olur: kenarları hareketli, ortası sakin. O sakin ortada bedenine dair güzel bir işaret var, bakalım…",
+      "metin_en": "This is what the cup of a woman trying to keep up with everyone looks like: busy around the edges, calm in the middle. In that calm middle there's a lovely sign about your body, let's see…",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 431,
+      "metin": "Sevdiğin kişiyle aranızdaki bağ, fincanda iki ayrı telvenin aynı noktada buluşmasıyla resmedilmiş. O buluşma noktasında neler olduğuna yakından bakalım;",
+      "metin_en": "The bond between you and the person you love is pictured in your cup as two separate streaks of grounds meeting at the same point. Let's take a close look at what's happening at that meeting point;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi var"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 432,
+      "metin": "Bir kapı kapandığında evin havası da değişir {{isim}}. Fincanının bu kısmında, yeni düzeninden esen o taze rüzgârı hissediyorum;",
+      "metin_en": "When a door closes, the air in the house changes too, {{isim}}. In this part of your cup, I can feel that fresh breeze blowing from your new life;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 433,
+      "metin": "Nişanlı olmanın tatlı telaşı fincanına da bulaşmış {{isim}}; telveler adeta koşturuyor. Ama ortalarda bir yerde, ikinize de nefes aldıracak bir duraklama var;",
+      "metin_en": "The sweet rush of being engaged has rubbed off on your cup too, {{isim}}; the grounds are practically running around. But somewhere in the middle there's a pause that will let you both breathe;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 434,
+      "metin": "Arkadaş grubundaki o malum sohbetlerde adı sık sık geçen biri var mı {{isim}}? Çünkü fincanının şu kısmı tam olarak onu anlatıyor gibi;",
+      "metin_en": "Is there someone whose name keeps coming up in those well-known chats with your group of friends, {{isim}}? Because this part of your cup seems to be talking about exactly that person;",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 435,
+      "metin": "Kalbinin kapısı aralık ama sen kapının önünde durmayı seviyorsun {{isim}}, itiraf et. Telveler o kapıdan kimin geçeceğine dair ipuçları veriyor;",
+      "metin_en": "The door to your heart is ajar, but you like standing in the doorway, {{isim}}, admit it. The coffee grounds are dropping hints about who will walk through that door;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 436,
+      "metin": "Evin bütçesiyle iş hayatının hesabını aynı anda yapan birinin fincanı ancak bu kadar düzenli olur. Kazanç tarafındaki işaretlere bakalım;",
+      "metin_en": "Only someone who balances the household budget and the accounts of their working life at the same time could have a cup this orderly. Let's look at the signs on the earnings side;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 437,
+      "metin": "Yaşla birlikte sevginin dili de değişir; daha az söz, daha çok anlam. Fincanında tam da böyle sessiz ama derin bir işaret var {{isim}};",
+      "metin_en": "As we grow older, the language of love changes too; fewer words, more meaning. In your cup there's exactly that kind of quiet but deep sign, {{isim}};",
+      "kosullar": [
+        {
+          "degisken": "yasmin",
+          "deger": "40"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 438,
+      "metin": "Yorulduğunu söylemektense bir kahve daha içip devam etmeyi seçenlerdensin {{isim}}. Neyse ki bu kahve, sana dinlenmeye dair güzel şeyler söyleyecek;",
+      "metin_en": "Rather than admit you're tired, you're one of those who'd have another coffee and keep going, {{isim}}. Luckily, this coffee has lovely things to tell you about rest;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 439,
+      "metin": "Evin, eşin, işlerin derken kendine ayıracak beş dakikan bile kalmıyor gibi. Fincanın sana o beş dakikayı geri vermek istiyor {{isim}}; bak:",
+      "metin_en": "Between your home, your husband and your chores, it seems you don't even have five minutes left for yourself. Your cup wants to give you those five minutes back, {{isim}}; look:",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 440,
+      "metin": "Geride bıraktığın evlilikten sonra kalbin temkinli, ama asla kapalı değil. Telvelerin bunun kanıtı {{isim}}; şuraya bak:",
+      "metin_en": "After the marriage you left behind, your heart is cautious, but never closed. Your coffee grounds are proof of it, {{isim}}; look here:",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 441,
+      "metin": "Toplantılar, mesajlar, yetişmesi gereken işler… Fincanın bile mesai yapıyor sanki {{isim}}. Ama arasında sana özel güzel bir mola var;",
+      "metin_en": "Meetings, messages, tasks to finish… Even your cup seems to be working overtime, {{isim}}. But in between there's a lovely break just for you;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 442,
+      "metin": "Evinin her köşesine yetişen ellerin biraz dinlenmeyi hak ediyor {{isim}}. Fincanın da aynı fikirde; işaretlere geçelim:",
+      "metin_en": "Your hands, which reach every corner of your home, deserve a little rest, {{isim}}. Your cup agrees; let's move on to the signs:",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
     }
   ]
 }

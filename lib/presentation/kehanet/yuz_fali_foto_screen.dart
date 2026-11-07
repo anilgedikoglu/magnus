@@ -197,6 +197,8 @@ class _YuzFaliFotoScreenState extends ConsumerState<YuzFaliFotoScreen>
         fortuneTypeKey: 'yuzfali',
         iconAsset:      'assets/images/inbox_icons/elfali.png',
         unlockAt:       now.add(const Duration(minutes: 6)).toIso8601String(),
+        // Yüz fotoğrafı: detayda üst-orta gösterilsin (kahve falı foto yolu saklama deseniyle aynı).
+        photoPath1:     fotoPath,
       );
       await inboxNotifier.addItem(inboxItem);
       await prefs.setString('yuzfali_bugun_tarih', todayStr);

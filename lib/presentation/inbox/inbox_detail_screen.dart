@@ -174,20 +174,7 @@ class InboxDetailScreen extends ConsumerWidget {
               ),
             ),
           ],
-          // Kahve: arka plan görseli + koyu overlay
-          if (item.fortuneType == FortuneType.coffee) ...[
-            Positioned.fill(
-              child: Image.asset(
-                'assets/images/kahvefalibg.png',
-                fit: BoxFit.cover,
-              ),
-            ),
-            Positioned.fill(
-              child: ColoredBox(
-                color: Colors.black.withValues(alpha: 0.55),
-              ),
-            ),
-          ],
+          // Kahve: özel arka plan YOK — diğer türler gibi normal koyu zemin (Anıl).
           // I-Ching: arka plan görseli + koyu overlay
           if (item.fortuneType == FortuneType.iching) ...[
             Positioned.fill(
@@ -244,8 +231,12 @@ class InboxDetailScreen extends ConsumerWidget {
         child: ResultReveal(child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Photos for coffee fortune
-            if (_hasPhotos) _buildPhotos(context),
+            // Kahve falı: 3 foto üstte yan yana (kaydırmasız, eşit, kırpılı)
+            if (item.fortuneType == FortuneType.coffee && _hasPhotos)
+              _buildPhotos(context),
+            // Yüz falı: tek yüz fotoğrafı üst-orta, çerçeveli + altında ince ayraç
+            if (item.fortuneType == FortuneType.yuzfali && item.photoPath1 != null)
+              _buildFacePhoto(context),
             // Tarot: özel başlık (kartlar görselli)
             if (item.fortuneType == FortuneType.tarot)
               _buildTarotHeader(s),
@@ -1050,30 +1041,93 @@ class InboxDetailScreen extends ConsumerWidget {
       item.photoPath2 != null ||
       item.photoPath3 != null;
 
+  // Kahve falı: 3 foto üstte yan yana — yatay kaydırma YOK (Anıl). Row + Expanded +
+  // kare (AspectRatio 1) → eşit genişlik, kırpılarak ekrana sığar.
   Widget _buildPhotos(BuildContext context) {
     final photos = [item.photoPath1, item.photoPath2, item.photoPath3]
         .whereType<String>()
         .toList();
+    if (photos.isEmpty) return const SizedBox.shrink();
 
-    return SizedBox(
-      height: 180,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-        itemCount: photos.length,
-        separatorBuilder: (_, __) => const SizedBox(width: 12),
-        itemBuilder: (_, i) => GestureDetector(
-          onTap: () => _viewPhoto(context, photos[i]),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Image.file(
-              File(photos[i]),
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 16, 20, 4),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          for (var i = 0; i < photos.length; i++) ...[
+            if (i > 0) const SizedBox(width: 8),
+            Expanded(
+              child: GestureDetector(
+                onTap: () => _viewPhoto(context, photos[i]),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Image.file(
+                      File(photos[i]),
+                      fit: BoxFit.cover,
+                      errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  // Yüz falı: tek yüz fotoğrafı üst-orta, çerçeveli kutuda (kahve stiliyle aynı dil) +
+  // altında ince ayraç çizgi.
+  Widget _buildFacePhoto(BuildContext context) {
+    final path = item.photoPath1!;
+    const accent = Color(0xFFFF55FF); // yüz falı pembe teması
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 4),
+      child: Column(
+        children: [
+          GestureDetector(
+            onTap: () => _viewPhoto(context, path),
+            child: Container(
               width: 148,
               height: 148,
-              fit: BoxFit.cover,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: accent.withValues(alpha: 0.45), width: 1.4),
+                boxShadow: [
+                  BoxShadow(
+                    color: accent.withValues(alpha: 0.18),
+                    blurRadius: 18,
+                    spreadRadius: 1,
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image.file(
+                  File(path),
+                  width: 148,
+                  height: 148,
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+                ),
+              ),
             ),
           ),
-        ),
+          const SizedBox(height: 16),
+          Container(
+            height: 1,
+            margin: const EdgeInsets.symmetric(horizontal: 24),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+                Colors.transparent,
+                accent.withValues(alpha: 0.5),
+                Colors.transparent,
+              ]),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -25,39 +25,17 @@ class InboxItemCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final s = ref.watch(l10nProvider);
     final locked = item.isLocked;
-    return Dismissible(
-      key: Key(item.id),
-      direction: DismissDirection.endToStart,
-      dismissThresholds: const {DismissDirection.endToStart: 0.75},
-      background: Container(
-        alignment: Alignment.centerRight,
-        padding: const EdgeInsets.only(right: 24),
-        color: AppColors.inboxDeleteBackground,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.delete_outline_rounded, color: AppColors.danger, size: 22),
-            const SizedBox(height: 4),
-            Text(s.deleteSwipe,
-                style: AppTextStyles.meta.copyWith(
-                  color: AppColors.danger,
-                  fontSize: 11,
-                  letterSpacing: 0.6,
-                )),
-          ],
-        ),
-      ),
-      onDismissed: (_) => onDismissed(),
-      child: InkWell(
-        onTap: locked ? null : onTap, // kilitliyse dokunma engeli
-        splashColor: locked
-            ? Colors.transparent
-            : AppColors.gold.withValues(alpha: 0.06),
-        highlightColor: locked
-            ? Colors.transparent
-            : AppColors.bone.withValues(alpha: 0.04),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+    // Silme KİLİDİ (Anıl, 2026-11-07): sol-swipe DİREKT silmez → sağdan KARE düğme belirir.
+    // Fal "okundu" olana kadar silinemez: okunmuş → koyu vişne "Sil"; okunmamış/hazırlanan →
+    // turuncu kilit (basınca silmez). Swipe en fazla düğme kadar → yazı ekrandan çıkmaz.
+    final deletable = item.isRead;
+    return _SwipeActionRow(
+      deletable: deletable,
+      deleteLabel: s.deleteSwipe,
+      onDelete: onDismissed,
+      onTapWhenClosed: locked ? null : onTap,
+      child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -139,7 +117,6 @@ class InboxItemCard extends ConsumerWidget {
             ],
           ),
         ),
-      ),
     );
   }
 
@@ -392,4 +369,189 @@ class _SweepOverlayPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_SweepOverlayPainter old) => old.progress != progress;
+}
+
+// ─── Sol-swipe ile sağdan KARE aksiyon düğmesi (Anıl, 2026-11-07) ─────────────
+// Direkt silmez: swipe satırı sola kaydırır, arkadan kare düğme belirir. Okunmuş →
+// koyu vişne "Sil" (basınca siler); okunmamış/hazırlanan → turuncu kilit (silmez).
+// Kaydırma en fazla düğme kadar → preview yazısının solu ekrandan çıkmaz.
+const Color _kCherry = Color(0xFF8A1E2D); // koyu vişne
+const double _kMaxButton = 76; // kare kenar üst sınırı (yazı ekranda kalsın)
+
+class _SwipeActionRow extends StatefulWidget {
+  final Widget child;
+  final bool deletable;
+  final String deleteLabel;
+  final VoidCallback onDelete;
+  final VoidCallback? onTapWhenClosed;
+
+  const _SwipeActionRow({
+    required this.child,
+    required this.deletable,
+    required this.deleteLabel,
+    required this.onDelete,
+    this.onTapWhenClosed,
+  });
+
+  @override
+  State<_SwipeActionRow> createState() => _SwipeActionRowState();
+}
+
+class _SwipeActionRowState extends State<_SwipeActionRow>
+    with SingleTickerProviderStateMixin {
+  final GlobalKey _contentKey = GlobalKey();
+  late final AnimationController _ctrl =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 200));
+  double _buttonW = 72; // kare: satır yüksekliği (ölçülünce güncellenir, ≤ _kMaxButton)
+  double _dragX = 0; // sürükleme sırasında anlık ofset
+  bool _dragging = false;
+
+  double get _x => _dragging ? _dragX : -_ctrl.value * _buttonW;
+  bool get _isOpen => !_dragging && _ctrl.value > 0.5;
+
+  @override
+  void initState() {
+    super.initState();
+    _ctrl.addListener(() {
+      if (mounted) setState(() {});
+    });
+    WidgetsBinding.instance.addPostFrameCallback((_) => _measure());
+  }
+
+  void _measure() {
+    final h = _contentKey.currentContext?.size?.height;
+    if (h == null) return;
+    final w = h.clamp(52.0, _kMaxButton);
+    if ((w - _buttonW).abs() > 0.5 && mounted) setState(() => _buttonW = w);
+  }
+
+  void _onDragUpdate(DragUpdateDetails d) {
+    setState(() {
+      _dragging = true;
+      _dragX = (_dragX + d.delta.dx).clamp(-_buttonW, 0.0);
+    });
+  }
+
+  void _onDragEnd(DragEndDetails d) {
+    final v = d.primaryVelocity ?? 0;
+    final open = _dragX < -_buttonW / 2 || v < -400;
+    _ctrl.value = (-_dragX / _buttonW).clamp(0.0, 1.0);
+    setState(() {
+      _dragging = false;
+      _dragX = 0;
+    });
+    if (open) {
+      _ctrl.forward();
+    } else {
+      _ctrl.reverse();
+    }
+  }
+
+  void _close() => _ctrl.reverse();
+
+  void _onButtonTap() {
+    if (widget.deletable) {
+      widget.onDelete();
+    } else {
+      _close(); // kilitli → silinemez, düğmeyi kapat
+    }
+  }
+
+  @override
+  void dispose() {
+    _ctrl.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) => _measure());
+    final x = _x;
+    return ClipRect(
+      child: Stack(
+        children: [
+          // Arkadaki KARE aksiyon düğmesi (sağda, satır yüksekliğince)
+          Positioned(
+            top: 0,
+            bottom: 0,
+            right: 0,
+            width: _buttonW,
+            child: _ActionButton(
+              deletable: widget.deletable,
+              label: widget.deleteLabel,
+              onTap: _onButtonTap,
+            ),
+          ),
+          // İçerik — opak zemin (kapalıyken düğmeyi örter), swipe + dokunuş burada.
+          Transform.translate(
+            offset: Offset(x, 0),
+            child: GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onHorizontalDragUpdate: _onDragUpdate,
+              onHorizontalDragEnd: _onDragEnd,
+              onTap: () {
+                if (_isOpen) {
+                  _close();
+                } else {
+                  widget.onTapWhenClosed?.call();
+                }
+              },
+              child: ColoredBox(
+                color: AppColors.ink,
+                child: KeyedSubtree(key: _contentKey, child: widget.child),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ActionButton extends StatelessWidget {
+  final bool deletable;
+  final String label;
+  final VoidCallback onTap;
+
+  const _ActionButton({
+    required this.deletable,
+    required this.label,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: onTap,
+      child: ColoredBox(
+        color: deletable ? _kCherry : AppColors.warning,
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                deletable ? Icons.delete_outline_rounded : Icons.lock_rounded,
+                color: Colors.white, // TAM beyaz (gri gözükmüyordu — Anıl)
+                size: 24,
+              ),
+              if (deletable) ...[
+                const SizedBox(height: 3),
+                Text(
+                  label,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 11,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.4,
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }

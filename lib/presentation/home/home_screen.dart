@@ -94,7 +94,6 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
-import 'package:flutter/rendering.dart' show ScrollDirection;
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -163,9 +162,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   // Bant artık scroll'a BAĞLI DEĞİL (Anıl, 2026-11-06): yalnız Magnus bir şey söyleyince ÜST'ten
   // pop-up gibi iner, 5 sn sonra yukarı kalkıp gizlenir. Menü ızgarası TAM EKRAN en üstten başlar.
   // 0 = gizli (yukarıda), 1 = inmiş/görünür.
+  // Giriş/çıkış YAVAŞ ve görünür (Anıl, 2026-11-07): üstten aşağı yumuşak kayar, bitince yukarı kalkar.
   late final AnimationController _bandShow =
-      AnimationController(vsync: this, duration: const Duration(milliseconds: 320));
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 560));
   Timer? _bandTimer;
+  // Band TAM indikten sonra typewriter başlar (giriş sırasında yazı akmaz) — Anıl, 2026-11-07.
+  bool _bandEntered = false;
+  // Bekleme süresi yazı TAMAMLANINCA işler (pop anında değil).
+  Duration _pendingHold = const Duration(seconds: 10);
+  // Yukarı swipe birikimi: band görünürken yeterince (eşik) yukarı kaydırılınca band da çıkar.
+  double _bandDismissAcc = 0;
   int _lastExtraCount = 0; // _extraBubbles büyüyünce bandı patlat (fal durumu / günlük limit)
   bool _downInBand = false;
   bool _downDismiss = false;
@@ -176,16 +182,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   /// Bandın ekrandaki alt kenarı (görünürlük payıyla) — dokunuş bunun altındaysa bant bölgesidir.
   double get _bandBottom => _layerHeight * _bandShow.value;
 
-  /// Yeni Magnus mesajı gelince bandı aşağı indir (pop); [hold] kadar durup yukarı kaldır.
-  /// Her chat gelişi 10 sn kalır (Anıl, 2026-11-07: "her chat gelişte 10 saniye kalıp öyle gitsin").
+  /// Yeni Magnus mesajı gelince bandı üstten AŞAĞI yavaşça indir (pop). Band TAM indikten
+  /// sonra yazı typewriter ile yazılır; yazı bitince [hold] (10 sn) beklenip yukarı kalkar.
   void _popBand({Duration hold = const Duration(seconds: 10)}) {
     if (!mounted) return;
     _bandTimer?.cancel();
+    _bandDismissAcc = 0;
+    _pendingHold = hold;
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
     if (reduce) {
       _bandShow.value = 1;
+      if (!_bandEntered) setState(() => _bandEntered = true); // animasyon yok → hemen yaz
     } else {
-      _bandShow.forward();
+      _bandShow.forward(); // tamamlanınca status listener _bandEntered'i true yapar
     }
     // Balonlar yazıldıkça içerik en alta kaysın.
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -193,12 +202,22 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         _chatScrollCtrl.jumpTo(_chatScrollCtrl.position.maxScrollExtent);
       }
     });
-    _bandTimer = Timer(hold, _hideBand);
+    // Yazacak yeni balon yoksa (hepsi zaten yazılı) bekleme sayacını hemen başlat.
+    if (_typingIndex >= 2 + _extraBubbles.length) _startHoldTimer();
+  }
+
+  /// Yazı tamamlandıktan sonra çağrılır: [_pendingHold] kadar bekleyip bandı gizler.
+  void _startHoldTimer() {
+    if (!mounted) return;
+    _bandTimer?.cancel();
+    _bandTimer = Timer(_pendingHold, _hideBand);
   }
 
   void _hideBand() {
     if (!mounted) return;
     _bandTimer?.cancel();
+    _bandDismissAcc = 0;
+    _bandEntered = false; // yeniden açılınca giriş bitene kadar yazı beklesin
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
     if (reduce) {
       _bandShow.value = 0;
@@ -308,6 +327,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         );
       }
     });
+    // TÜM balonlar yazıldıysa → bekleme sayacı burada başlar (yazı tamamlandıktan HOLD sonra kapan).
+    if (_typingIndex >= 2 + _extraBubbles.length) _startHoldTimer();
   }
 
   bool _selamlamaYuklendi = false;
@@ -315,6 +336,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   @override
   void initState() {
     super.initState();
+    // Band TAM indiğinde (giriş animasyonu bitince) yazı başlasın; gizlenince sıfırla.
+    _bandShow.addStatusListener((status) {
+      if (!mounted) return;
+      if (status == AnimationStatus.completed && !_bandEntered) {
+        setState(() => _bandEntered = true);
+      } else if (status == AnimationStatus.dismissed && _bandEntered) {
+        setState(() => _bandEntered = false);
+      }
+    });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _scheduleUnlockTimer();
       _refreshCredits();
@@ -933,13 +963,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               child: TabSwipe(
                 onSwipeLeft: () =>
                     selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
-                child: NotificationListener<UserScrollNotification>(
+                child: NotificationListener<ScrollNotification>(
                   onNotification: (n) {
-                    // Yukarı swipe (menüyü kaydır) → açık selamlama bandını kapat
-                    // (Anıl: açılış yazısı 10 sn kalsın ya da yukarı swipe'a kadar).
-                    if (n.direction == ScrollDirection.reverse &&
-                        _bandShow.value > 0.01) {
-                      _hideBand();
+                    // Yukarı swipe YETERİNCE uzun olursa (eşik) band da menüyle yukarı çıkıp gider
+                    // (Anıl, 2026-11-07: "yukarı swipe biraz uzun yapılırsa menü yukarı giderken
+                    // chat de çıkıp gitsin"); 10 sn beklemeden erken kapanış.
+                    if (_bandShow.value > 0.01 && n is ScrollUpdateNotification) {
+                      final d = n.scrollDelta ?? 0;
+                      if (d > 0) {
+                        _bandDismissAcc += d;
+                        if (_bandDismissAcc > 56) _hideBand(); // ~bir satır yukarı
+                      } else if (d < 0) {
+                        _bandDismissAcc = 0; // aşağı çekilince sıfırla
+                      }
                     }
                     return false;
                   },
@@ -959,9 +995,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             child: AnimatedBuilder(
               animation: _bandShow,
               builder: (context, child) {
-                final s = _bandShow.value.clamp(0.0, 1.0);
+                final raw = _bandShow.value.clamp(0.0, 1.0);
                 // Gizliyken HİÇ yer/hit yok → ızgara en üstten tam tıklanabilir (tam ekran menü).
-                if (s <= 0.001) return const SizedBox.shrink();
+                if (raw <= 0.001) return const SizedBox.shrink();
+                // Yumuşak giriş/çıkış eğrisi (üstten aşağı yavaşça iner, yukarı yavaşça kalkar).
+                final s = Curves.easeInOutCubic.transform(raw);
                 final bandH = topInset + max(0.0, _hdrCtrl.value);
                 return Transform.translate(
                   offset: Offset(0, -(1 - s) * bandH),
@@ -989,7 +1027,17 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                           child: Padding(
                             padding: EdgeInsets.only(top: topInset),
                             child: NotificationListener<ScrollNotification>(
-                              onNotification: (_) => true,
+                              onNotification: (n) {
+                                // Band içi scroll → 10 sn geri sayımı DURDUR; parmak kalkınca
+                                // (idle) yeniden 10 sn (Anıl, 2026-11-07). Izgaraya sızdırma.
+                                if (n is ScrollStartNotification ||
+                                    n is ScrollUpdateNotification) {
+                                  _bandTimer?.cancel();
+                                } else if (n is ScrollEndNotification) {
+                                  _startHoldTimer();
+                                }
+                                return true;
+                              },
                               child: _buildChatHeader(chatHeight, shown),
                             ),
                           ),
@@ -1031,7 +1079,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       height: height,
       child: SingleChildScrollView(
         controller: _chatScrollCtrl,
-        physics: const NeverScrollableScrollPhysics(),
+        // Band indikten sonra içi yukarı/aşağı kaydırılabilir → eski mesajlar görünür
+        // (Anıl, 2026-11-07). Kaydırırken 10 sn geri sayım durur, bırakınca yeniden (aşağıda).
+        physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.fromLTRB(12, kChatPadTop, 12, kChatPadBottom),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -1062,6 +1112,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                             gradient: bubbles[i].gradient,
                             borderColor: bubbles[i].borderColor,
                             isActive: i == _typingIndex,
+                            // Band TAM indikten sonra yaz (giriş sırasında değil) — Anıl, 2026-11-07.
+                            startTyping: _bandEntered,
                             enableMarquee: false, // kayan uzun yazı kaldırıldı (Anıl, 2026-11-06); uzunlar havuzdan elenir + sarılır
                             onComplete: () => _onBubbleComplete(i),
                             iconPath: bubbles[i].iconPath,
@@ -1681,6 +1733,8 @@ class _TypewriterChatBubble extends StatefulWidget {
   final bool enableMarquee;
   final VoidCallback onComplete;
   final String? iconPath;
+  // Yazmaya izin — band TAM indikten sonra true olur; false iken aktif balon boş bekler.
+  final bool startTyping;
 
   const _TypewriterChatBubble({
     super.key,
@@ -1691,6 +1745,7 @@ class _TypewriterChatBubble extends StatefulWidget {
     required this.onComplete,
     this.enableMarquee = false,
     this.iconPath,
+    this.startTyping = true,
   });
 
   @override
@@ -1717,8 +1772,10 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
     if (widget.enableMarquee) {
       _marqueeCtrl = AnimationController(vsync: this, duration: const Duration(seconds: 10));
     }
-    if (widget.isActive) {
+    if (widget.isActive && widget.startTyping) {
       _startTyping();
+    } else if (widget.isActive) {
+      _charCount = 0; // aktif ama band girişi bitmedi → boş bekle
     } else {
       _charCount = widget.text.length;
       if (widget.enableMarquee) {
@@ -1730,20 +1787,25 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
   @override
   void didUpdateWidget(_TypewriterChatBubble old) {
     super.didUpdateWidget(old);
-    if (widget.isActive && !old.isActive) {
+    final nowReady = widget.isActive && widget.startTyping;
+    final wasReady = old.isActive && old.startTyping;
+    // Geçit açıldı (band girişi tamamlandı ya da bu balon aktifleşti) → yazmaya başla.
+    if (nowReady && !wasReady) {
       _charCount = 0;
       _marqueeRunning = false;
       _marqueeCtrl?.stop();
       _startTyping();
+      return;
     }
     // Metin değişti (selamlama async yüklendi)
     if (widget.text != old.text) {
       _charCount = 0;
       _marqueeRunning = false;
       _marqueeCtrl?.stop();
-      // Boş metinden dolu metne geçiş: isActive olmasa bile (typingIndex geçmiş olabilir) yeniden başlat
-      if (widget.isActive || old.text.isEmpty) {
+      if (nowReady) {
         _startTyping();
+      } else if (!widget.isActive) {
+        _charCount = widget.text.length; // aktif değil → tam göster
       }
     }
   }
@@ -1816,7 +1878,12 @@ class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
     final displayText = widget.text.substring(0, safeCount);
 
     if (!widget.enableMarquee) {
-      return _ChatBubble(text: displayText, gradient: widget.gradient, borderColor: widget.borderColor, iconPath: widget.iconPath);
+      // Tam metin yerleşir (boyut baştan sabit), yalnız yazılan kısım görünür → yazarken
+      // balon büyümez, "typewrite bitene kadar yarım görünme" biter (Anıl, 2026-11-07).
+      return _ChatBubble(
+          fullText: widget.text,
+          visibleCount: safeCount,
+          iconPath: widget.iconPath);
     }
 
     // Marquee-aware balon
@@ -1910,35 +1977,52 @@ class _EdgeFade extends StatelessWidget {
   }
 }
 
+// Claude giriş kutusu dili (Anıl, 2026-11-07): koyu kömür zemin + ince kenar + oval köşe.
+const Color _kChatBubbleFill = Color(0xFF2B2B30); // "su" koyu gri (Claude input içi)
+const Color _kChatBubbleBorder = Color(0x24FFFFFF); // ince kenar (beyaz %14)
+BoxDecoration _claudeBubble() => BoxDecoration(
+      color: _kChatBubbleFill,
+      borderRadius: BorderRadius.circular(20), // oval köşe
+      border: Border.all(color: _kChatBubbleBorder, width: 1),
+    );
+
 class _ChatBubble extends StatelessWidget {
-  final String text;
-  final List<Color> gradient;
-  final Color borderColor;
+  final String fullText; // boyut bunun üstünden → yazarken balon büyümez
+  final int visibleCount; // görünen (yazılmış) karakter sayısı
   final String? iconPath;
 
   const _ChatBubble({
-    required this.text,
-    required this.gradient,
-    required this.borderColor,
+    required this.fullText,
+    required this.visibleCount,
     this.iconPath,
   });
 
   @override
   Widget build(BuildContext context) {
+    final vc = visibleCount.clamp(0, fullText.length);
+    // Tam metin yerleşir (yazılmamış kısım SAYDAM) → balon baştan son boyunda, jitter yok.
+    final textWidget = Text.rich(TextSpan(style: _bubbleTextStyle, children: [
+      TextSpan(text: fullText.substring(0, vc)),
+      TextSpan(
+        text: fullText.substring(vc),
+        style: _bubbleTextStyle.copyWith(color: const Color(0x00000000)),
+      ),
+    ]));
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-      decoration: _oldBubble(gradient, borderColor),
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+      decoration: _claudeBubble(),
       child: iconPath != null
           ? Row(
               mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(iconPath!, width: 22, height: 22,
                     errorBuilder: (_, __, ___) => const SizedBox.shrink()),
                 const SizedBox(width: 8),
-                Flexible(child: Text(text, style: _bubbleTextStyle)),
+                Flexible(child: textWidget),
               ],
             )
-          : Text(text, style: _bubbleTextStyle),
+          : textWidget,
     );
   }
 }

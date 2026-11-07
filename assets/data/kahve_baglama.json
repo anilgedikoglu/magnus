@@ -6475,6 +6475,310 @@
         "saglik",
         "genel"
       ]
+    },
+    {
+      "id": 443,
+      "metin": "Ocağın başındaki işi bırakıp bir dakika otur {{isim}}; fincanın şimdi gönül faslını açıyor ve bu kısım ayakta dinlenmez;",
+      "metin_en": "Leave what's on the stove and sit down for a minute, {{isim}}; your cup is now opening the chapter of the heart, and this part isn't to be heard standing up;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ev hanımı"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 444,
+      "metin": "Gönül işlerine gelince fincanın sesi alçaldı {{isim}}; telveler artık fısıltıyla konuşuyor. Kulağımı biraz daha yaklaştırıyorum;",
+      "metin_en": "When it came to matters of the heart, your cup lowered its voice, {{isim}}; the grounds are whispering now. I'm leaning my ear a little closer;",
+      "kosullar": [],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 445,
+      "metin": "Sınav kâğıdının son sorusuna gelmiş gibiyiz {{isim}}, ama bu soruda yanlış cevap yok. Fincanının okul tarafındaki işaretlere geçiyorum;",
+      "metin_en": "It feels like we've reached the last question on the exam paper, {{isim}}, but there's no wrong answer to this one. I'm moving on to the signs about your school life;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "öğrenci"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 446,
+      "metin": "Her işin bir yedek planını cebinde tutan kadınlardansın {{isim}}; fincanın da öyle, bir haberin arkasına hep bir ikincisini saklamış. Sırayla açıyorum:",
+      "metin_en": "You're one of those women who always keeps a backup plan in her pocket, {{isim}}; so is your cup, it has hidden a second piece of news behind every first. I'm opening them one by one:",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 447,
+      "metin": "Telefonunda en üste sabitlenmiş bir sohbet var mı {{isim}}? Çünkü fincanının şu köşesi tam o sohbetin enerjisini taşıyor. Biraz yakından bakalım…",
+      "metin_en": "Is there a chat pinned to the top of your phone, {{isim}}? Because this corner of your cup carries exactly that chat's energy. Let's take a closer look…",
+      "kosullar": [
+        {
+          "degisken": "yasmax",
+          "deger": "25"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 448,
+      "metin": "Liste yapmayı seven biri için nişanlılık bitmeyen bir yapılacaklar sayfasıdır {{isim}}. Fincanın o sayfaya birkaç güzel madde eklemek istiyor;",
+      "metin_en": "For someone who loves making lists, being engaged is an endless to-do page, {{isim}}. Your cup wants to add a few lovely items to that page;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "nişanlı"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 449,
+      "metin": "Yılların içinden süzülüp gelen bir tebessüm var telvelerinde {{isim}}; gönül defterin hiç kapanmamış belli ki. O sayfayı biraz daha çeviriyorum;",
+      "metin_en": "There's a smile filtering through the years in your grounds, {{isim}}; clearly your heart's notebook was never closed. I'm turning that page a little further;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "emekli"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 450,
+      "metin": "Fincanın kenarındaki telveler hafif, ortası ise ağır {{isim}}; tıpkı gün içinde omuzlarına aldıkların gibi. Bedeninin sana söylemek istediklerine geçiyorum:",
+      "metin_en": "The grounds at the edge of your cup are light, but the middle is heavy, {{isim}}; just like what you take on your shoulders during the day. Moving on to what your body wants to tell you:",
+      "kosullar": [],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 451,
+      "metin": "Yeni düzenin kendi saatini kurdu; şimdi sıra bedeninin o saate ayak uydurmasında {{isim}}. Telvelerin bu konuda müjdeli şeyler söylüyor;",
+      "metin_en": "Your new life has set its own clock; now it's your body's turn to keep pace with it, {{isim}}. Your grounds have good news on that front;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "boşanmış"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 452,
+      "metin": "Hakem raporu bekler gibi beklediğin bir sonucun izi var fincanında {{isim}}. Sayfayı çeviriyorum, bölümü ilgilendiren kısma geliyoruz;",
+      "metin_en": "There's a trace in your cup of a result you've been awaiting like a peer review report, {{isim}}. I'm turning the page; here comes the part about your department;",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "akademisyen"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 453,
+      "metin": "Günlerini kendi ritminde yaşamanın keyfini çıkarıyorsun ama gönlün arada bir 'ya şimdi?' diye soruyor {{isim}}. Telveler bu soruya cevap vermeye hazır;",
+      "metin_en": "You're enjoying living your days at your own rhythm, but now and then your heart asks 'what now?', {{isim}}. The grounds are ready to answer that question;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 454,
+      "metin": "Telve dediğimiz şey tortu gibi görünür ama asıl hikâye oradadır {{isim}}. Tortunun içine iniyorum;",
+      "metin_en": "The grounds may look like mere sediment, but the real story lies there, {{isim}}. I'm diving into the sediment;",
+      "kosullar": [],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 455,
+      "metin": "Hedefini sessizce belirleyip kimseye söylemeden yürüyenlerdensin {{isim}}; fincan senin kadar ketum değil ama. İş tarafındaki sırları açık ediyor:",
+      "metin_en": "You're one of those who set their goal quietly and walk toward it without telling anyone, {{isim}}; your cup isn't as tight-lipped as you, though. It's giving away your work secrets:",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "ilişkisi yok"
+        }
+      ],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 456,
+      "metin": "Evde hangi çekmecede ne olduğunu bilen tek kişi sensin {{isim}}; fincanın ise ikinizin de henüz açmadığı bir çekmeceyi gösteriyor. İçine bakalım;",
+      "metin_en": "You're the only one who knows what's in which drawer at home, {{isim}}; your cup, however, is pointing to a drawer neither of you has opened yet. Let's look inside;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 457,
+      "metin": "Kurumda imza sırası beklerken bile zihnin bir sonraki işi sıraya koyuyor {{isim}}. Fincanının bu kısmı o sıranın en başına seni ve dinlenmeni yazmamı istiyor:",
+      "metin_en": "Even while waiting in line for a signature at the institution, your mind is already lining up the next task, {{isim}}. This part of your cup wants me to put you and your rest at the top of that line:",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamu sektörü"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 458,
+      "metin": "Evin direği olmak güzel ama direğin de bakıma ihtiyacı var {{isim}}. Telveler bu konuda epey ısrarcı; dinleyelim:",
+      "metin_en": "Being the pillar of the home is wonderful, but pillars need care too, {{isim}}. The grounds are quite insistent about this; let's listen:",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        },
+        {
+          "degisken": "medeni durum",
+          "deger": "evli"
+        }
+      ],
+      "fal_konusu": [
+        "saglik",
+        "genel"
+      ]
+    },
+    {
+      "id": 459,
+      "metin": "Emeğinin hesabını telvelerden iyi tutan yok {{isim}}; defterin bu sayfasında iş ve kazanç adına güzel rakamlar var. Bakalım;",
+      "metin_en": "No one keeps track of your efforts better than the grounds, {{isim}}; on this page of the ledger there are good numbers for work and earnings. Let's see;",
+      "kosullar": [],
+      "fal_konusu": [
+        "kariyer",
+        "genel"
+      ]
+    },
+    {
+      "id": 460,
+      "metin": "Ne istediğini bilen bir adamın fincanı bu {{isim}}; her telve yerli yerinde. Şimdi o düzenin içindeki haberlere geçiyorum;",
+      "metin_en": "This is the cup of a man who knows what he wants, {{isim}}; every bit of the grounds is in its place. Now I'm moving on to the news within that order;",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ],
+      "fal_konusu": [
+        "genel",
+        "ask",
+        "kariyer",
+        "saglik"
+      ]
+    },
+    {
+      "id": 461,
+      "metin": "İş yerinde e-postalara hızla cevap veren sen, gönlündeki mesaja neden bu kadar yavaş cevap veriyorsun {{isim}}? Fincan da bunu merak etmiş; bak:",
+      "metin_en": "You who answer emails so quickly at work, why are you so slow to answer the message in your heart, {{isim}}? Your cup wondered the same; look:",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "özel sektör"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
+    },
+    {
+      "id": 462,
+      "metin": "Kalbinin bir köşesi hâlâ eski adresi tutuyor, biliyorum {{isim}}; ama telveler yeni bir adrese doğru ok çizmiş. O oku izleyelim;",
+      "metin_en": "A corner of your heart still keeps the old address, I know, {{isim}}; but the grounds have drawn an arrow toward a new one. Let's follow that arrow;",
+      "kosullar": [
+        {
+          "degisken": "medeni durum",
+          "deger": "yeni ayrılmış"
+        }
+      ],
+      "fal_konusu": [
+        "ask",
+        "genel"
+      ]
     }
   ]
 }

@@ -16,6 +16,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
+import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/stagger_in.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
@@ -47,6 +48,8 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
   _DertAdim _adim               = _DertAdim.kategori;
   String    _seciliKategori     = '';
   Map<String, dynamic>? _seciliDert;
+  // Derman adımına geçerken no-repeat ile seçilen TEK tavsiye seti (locale'e göre).
+  List<String> _secilenDerman   = const [];
   bool _limitDoldu  = false;
   bool _ilkYukleme  = true;
 
@@ -209,15 +212,59 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
 
     // 5 saniye sonra tavsiyelere geç
     _gecisTimer?.cancel();
-    _gecisTimer = Timer(const Duration(seconds: 5), () {
-      if (mounted) {
-        setState(() {
-          _adim = _DertAdim.derman;
-          _dermanAni = DateTime.now(); // kartlar sırayla gelsin
-        });
-        _fadeCtrl.forward(from: 0);
-      }
+    _gecisTimer = Timer(const Duration(seconds: 5), () async {
+      if (!mounted) return;
+      await _secDermanSeti();            // no-repeat ile 1 tavsiye seti seç
+      if (!mounted) return;
+      setState(() {
+        _adim = _DertAdim.derman;
+        _dermanAni = DateTime.now(); // kartlar sırayla gelsin
+      });
+      _fadeCtrl.forward(from: 0);
     });
+  }
+
+  // Seçilen dert için 3 tavsiye setinden birini no-repeat ile seç (locale'e göre).
+  // Aynı dert tekrar açıldığında — tüm setler bitene kadar — farklı set gelir.
+  Future<void> _secDermanSeti() async {
+    final dert = _seciliDert;
+    if (dert == null) { _secilenDerman = const []; return; }
+    final isEn = ref.read(localeProvider) == 'en';
+    // Yeni format: dermanSetleri / dermanSetleri_en = List<List<String>>.
+    final dynamic raw = isEn
+        ? (dert['dermanSetleri_en'] ?? dert['dermanSetleri'])
+        : dert['dermanSetleri'];
+    if (raw is! List || raw.isEmpty) {
+      // Eski/yedek format: tek 'dermanlar' listesi.
+      final d = dert['dermanlar'];
+      _secilenDerman =
+          d is List ? d.map((e) => e.toString()).toList() : const [];
+      return;
+    }
+    final setler = raw
+        .map<List<String>>((s) =>
+            (s as List).map((e) => e.toString()).toList())
+        .where((s) => s.isNotEmpty)
+        .toList();
+    if (setler.isEmpty) { _secilenDerman = const []; return; }
+
+    final prefs = await SharedPreferences.getInstance();
+    final key   = 'dert_set_${dert['id']}_gosterilen';
+    final shown = prefs.getStringList(key) ?? [];
+    final idx   = List.generate(setler.length, (i) => i);
+    final pick  = pickNoRepeat<int>(
+        pool: idx, shown: shown, idOf: (i) => i.toString());
+    final secili = pick?.selected ?? 0;
+    if (pick != null) await prefs.setStringList(key, pick.shown);
+    _secilenDerman = setler[secili.clamp(0, setler.length - 1)];
+  }
+
+  // Dert/soru metni (locale'e göre): İngilizce ise metin_en, yoksa metin.
+  String _dertMetni(Map<String, dynamic> dert) {
+    final isEn = ref.read(localeProvider) == 'en';
+    final en = dert['metin_en'];
+    if (isEn && en is String && en.isNotEmpty) return en;
+    return dert['metin'] as String? ?? '';
   }
 
   // ── Geri git ─────────────────────────────────────────────────────────────────
@@ -418,7 +465,7 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
                             for (int i = 0; i < _gosterilenDertler.length; i++) ...[
                               if (i > 0) const SizedBox(height: 10),
                               _DertSecenegi(
-                                metin: _gosterilenDertler[i]['metin'] as String,
+                                metin: _dertMetni(_gosterilenDertler[i]),
                                 onTap: () => _dertSec(_gosterilenDertler[i]),
                               ),
                             ],
@@ -498,8 +545,8 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
   Widget _buildDermanSayfasi() {
     final profile   = ref.read(userProfileProvider);
     final varMap    = profile.toVariableMap();
-    final dermanlar = (_seciliDert!['dermanlar'] as List).cast<String>();
-    final secilenM  = _seciliDert!['metin'] as String;
+    final dermanlar = _secilenDerman;
+    final secilenM  = _dertMetni(_seciliDert!);
 
     return SafeArea(
       child: Column(

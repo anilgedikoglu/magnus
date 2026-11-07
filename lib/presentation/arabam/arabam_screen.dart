@@ -14,13 +14,34 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/marquee_text.dart';
-import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/blur_reveal_spinner.dart';
 import '../../core/widgets/hold_to_reveal.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../data/providers.dart';
 import '../../data/services/araba_engine.dart';
 
 enum _Adim { marka, hesap, liste }
+
+// Hesaplanıyor ekranındaki reveal spinner'ının döndüğü belirsiz araba görselleri (Anıl, 2026-11-07).
+// Görseller henüz yok → BlurRevealSpinner errorBuilder ile prosedürel yedeğe düşer, kod çalışır.
+const List<String> _kArabaGorselleri = [
+  'assets/images/arabam/araba_01.jpg',
+  'assets/images/arabam/araba_02.jpg',
+  'assets/images/arabam/araba_03.jpg',
+  'assets/images/arabam/araba_04.jpg',
+  'assets/images/arabam/araba_05.jpg',
+  'assets/images/arabam/araba_06.jpg',
+  'assets/images/arabam/araba_07.jpg',
+  'assets/images/arabam/araba_08.jpg',
+  'assets/images/arabam/araba_09.jpg',
+  'assets/images/arabam/araba_10.jpg',
+  'assets/images/arabam/araba_11.jpg',
+  'assets/images/arabam/araba_12.jpg',
+  'assets/images/arabam/araba_13.jpg',
+  'assets/images/arabam/araba_14.jpg',
+  'assets/images/arabam/araba_15.jpg',
+  'assets/images/arabam/araba_16.jpg',
+];
 
 class ArabamScreen extends ConsumerStatefulWidget {
   const ArabamScreen({super.key});
@@ -89,17 +110,22 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
     final pool = await ArabaEngine.loadPool();
     if (!mounted) return;
     HapticFeedback.mediumImpact();
-    setState(() => _adim = _Adim.hesap);
     final brandStr = _noCar ? '' : (_selectedBrand ?? '');
+    // Sonucu önce hesapla; bekleme süresi artık BlurRevealSpinner'a ait. Spinner ~5.5 sn
+    // belirsiz araba görselleri arasında dönüp durunca _spinnerBitti() listeye geçirir.
     final t = await ArabaEngine.load(prefs, profile, pool,
         currentBrand: brandStr, seed: Random().nextInt(1 << 31));
-    await Future<void>.delayed(const Duration(milliseconds: 2500));
     await ArabaEngine.markComputed(prefs, t);
     if (!mounted) return;
     setState(() {
       _t = t;
-      _adim = _Adim.liste;
+      _adim = _Adim.hesap;
     });
+  }
+
+  void _spinnerBitti() {
+    if (!mounted || _adim != _Adim.hesap) return;
+    setState(() => _adim = _Adim.liste);
   }
 
   void _ac(int index) {
@@ -325,7 +351,13 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
               style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 14, height: 1.35),
             ),
             const SizedBox(height: 20),
-            const ElegantHourglass(size: 60, color: Colors.white),
+            // Belirsiz araba görselleri arasında dönüp yavaşlayarak birinde durur.
+            BlurRevealSpinner(
+              assetPaths: _kArabaGorselleri,
+              accent: _pink,
+              size: 190,
+              onDone: (_) => _spinnerBitti(),
+            ),
             const SizedBox(height: 16),
             Text(
               _tr('Hesaplanıyor...', 'Calculating...'),

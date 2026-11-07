@@ -16,11 +16,32 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/marquee_text.dart';
 import '../../data/services/kismet_lines.dart';
-import '../../core/widgets/elegant_hourglass.dart';
+import '../../core/widgets/blur_reveal_spinner.dart';
 import '../../data/providers.dart';
 import '../../data/services/kismet_engine.dart';
 
 enum _Adim { secim, hesap, sonuc }
+
+// Hesaplanıyor ekranındaki reveal spinner'ının döndüğü belirsiz portreler (Anıl, 2026-11-07).
+// Görseller henüz yok → BlurRevealSpinner errorBuilder ile prosedürel yedeğe düşer, kod çalışır.
+const List<String> _kKismetPortreler = [
+  'assets/images/kismetim/portre_01.jpg',
+  'assets/images/kismetim/portre_02.jpg',
+  'assets/images/kismetim/portre_03.jpg',
+  'assets/images/kismetim/portre_04.jpg',
+  'assets/images/kismetim/portre_05.jpg',
+  'assets/images/kismetim/portre_06.jpg',
+  'assets/images/kismetim/portre_07.jpg',
+  'assets/images/kismetim/portre_08.jpg',
+  'assets/images/kismetim/portre_09.jpg',
+  'assets/images/kismetim/portre_10.jpg',
+  'assets/images/kismetim/portre_11.jpg',
+  'assets/images/kismetim/portre_12.jpg',
+  'assets/images/kismetim/portre_13.jpg',
+  'assets/images/kismetim/portre_14.jpg',
+  'assets/images/kismetim/portre_15.jpg',
+  'assets/images/kismetim/portre_16.jpg',
+];
 
 class KismetimScreen extends ConsumerStatefulWidget {
   const KismetimScreen({super.key});
@@ -68,11 +89,15 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
     super.dispose();
   }
 
-  Future<void> _goster() async {
+  void _goster() {
     HapticFeedback.mediumImpact();
+    // Sonuç zaten _load()'da hesaplandı (_t). Bekleme süresi artık BlurRevealSpinner'a ait:
+    // spinner ~5.5 sn belirsiz portreler arasında dönüp durunca _spinnerBitti() sonuca geçirir.
     setState(() => _adim = _Adim.hesap);
-    await Future<void>.delayed(const Duration(milliseconds: 2200));
-    if (!mounted) return;
+  }
+
+  void _spinnerBitti() {
+    if (!mounted || _adim != _Adim.hesap) return;
     setState(() => _adim = _Adim.sonuc);
   }
 
@@ -296,8 +321,14 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const ElegantHourglass(size: 64, color: Colors.white),
-          const SizedBox(height: 20),
+          // Belirsiz portreler arasında dönüp yavaşlayarak birinde durur (gelecek kısmet).
+          BlurRevealSpinner(
+            assetPaths: _kKismetPortreler,
+            accent: _pink,
+            size: 200,
+            onDone: (_) => _spinnerBitti(),
+          ),
+          const SizedBox(height: 22),
           Text(
             _tr('$_year yılındaki kısmetin hesaplanıyor...', 'Calculating your destiny for $_year...'),
             textAlign: TextAlign.center,

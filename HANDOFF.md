@@ -27,8 +27,8 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 ## Yarım kalan
 - **Build `10.8.29+297`** hazır değil-alınmadı: Anıl'ın "test çık" demesi gerekiyor (294'ü kendi kararımla erken almıştım —
   Anıl uyardı; bir daha "her şey bitince" talimatı olsa bile bitiş anında tek satırla teyit al).
-- **ChatGPT oturumu kapalı** (`/api/auth/session` loggedIn:false) — sonraki ChatGPT-yazar turları için Anıl'ın Chrome'da
-  chatgpt.com'a giriş yapması gerekiyor (şifre girilmez).
+- ChatGPT oturumu 2026-11-08'de yeniden açıldı (Anıl girdi; `/api/auth/session` loggedIn:true, Plus) — ChatGPT-yazar
+  turları yeniden mümkün. Tur 33–42'yi (1000 metin) Claude yazdı; ChatGPT ikinci göz denetiminden geçmedi.
 
 ## Denenip olmayan ve nedeni
 - ChatGPT yazarı havuzdaki SAHNELERİ farklı kelimelerle geri getiriyor; 5-gram `metin_kalip_tara` yakalamıyor → ajanlar havuzu

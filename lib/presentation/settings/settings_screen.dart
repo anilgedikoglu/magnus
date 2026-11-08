@@ -1,3 +1,4 @@
+import '../../core/widgets/lamp_toggle.dart';
 import 'dart:async';
 import 'dart:io';
 import 'dart:math';
@@ -2510,6 +2511,14 @@ class SettingsScreen extends ConsumerWidget {
                 color: const Color(0x29FF55FF),
               ),
 
+              // ── Bildirimler: yanan/sönük lamba sürgüsü (CAM'ın altında) ──
+              const _NotificationsSection(),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 16),
+                height: 1,
+                color: const Color(0x29FF55FF),
+              ),
+
               // ── Uyarılar bölümü ──────────────────────────────────────────
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
@@ -3179,6 +3188,61 @@ class _GlassTintSection extends ConsumerWidget {
               Text(s.glassTinted,
                   style: const TextStyle(color: AppColors.ash, fontSize: 11.5)),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Ayarlar > BİLDİRİMLER: "falın hazır" bildirimlerini açıp kapatan lamba sürgüsü.
+class _NotificationsSection extends ConsumerWidget {
+  const _NotificationsSection();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
+    final on = ref.watch(notificationsEnabledProvider);
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            s.notificationsSection,
+            style: TextStyle(
+              color: AppColors.gold.withValues(alpha: 0.85),
+              fontSize: 11,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2,
+            ),
+          ),
+          const SizedBox(height: 10),
+          // Yatay sürükleme sekme değiştirmesin (CAM kaydırıcısıyla aynı kilit).
+          Listener(
+            onPointerDown: (_) => ref.read(_glassDragProvider.notifier).state = true,
+            onPointerUp: (_) => ref.read(_glassDragProvider.notifier).state = false,
+            onPointerCancel: (_) => ref.read(_glassDragProvider.notifier).state = false,
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 280),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(22),
+                  child: LampToggle(
+                    key: const ValueKey('notificationsLampToggle'),
+                    value: on,
+                    semanticLabel: s.notificationsLabel,
+                    onChanged: (v) async {
+                      final messenger = ScaffoldMessenger.maybeOf(context);
+                      final ok = await ref.read(notificationsEnabledProvider.notifier).set(v);
+                      if (!ok) {
+                        messenger?.showSnackBar(SnackBar(content: Text(s.notificationsDenied)));
+                      }
+                    },
+                  ),
+                ),
+              ),
+            ),
           ),
         ],
       ),

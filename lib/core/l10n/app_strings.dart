@@ -107,6 +107,11 @@ class AppStrings {
   String get menuOtherTypes    => _s('Diğer Türler',   'Other Readings');
   String get glassSectionTitle => _s('CAM / GLASS',    'GLASS');
   String get glassTransparency => _s('Alt bar cam saydamlığı', 'Bottom bar glass transparency');
+  String get notificationsSection => _s('BİLDİRİMLER', 'NOTIFICATIONS');
+  String get notificationsLabel  => _s('Bildirimler', 'Notifications');
+  String get notificationsChannel => _s('Fal bildirimleri', 'Reading notifications');
+  String get notificationsDenied => _s('Bildirim izni kapalı. Telefon ayarlarından açabilirsin.', 'Notifications are off. You can enable them in your phone settings.');
+  String get fortuneReadyTitle   => _s('Falın hazır', 'Your reading is ready');
   String get glassClear        => _s('Şeffaf',         'Clear');
   String get glassTinted       => _s('Renkli',         'Tinted');
   String get clearAll          => _s('Temizle',        'Clear');

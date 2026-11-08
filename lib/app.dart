@@ -53,6 +53,7 @@ import 'presentation/evim/evim_screen.dart';
 import 'presentation/tavsanfali/tavsanfali_screen.dart';
 import 'presentation/language/language_pick_screen.dart';
 import 'presentation/shell/floating_bar.dart';
+import 'presentation/shell/notification_sync.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 final _homeKey = GlobalKey<NavigatorState>(debugLabel: 'home');
@@ -455,7 +456,10 @@ class MagnusApp extends ConsumerWidget {
       builder: (context, child) => StartupDisclaimer(
         child: EdgeSwipeBack(
           router: router,
-          child: FloatingBarHost(router: router, child: child ?? const SizedBox.shrink()),
+          child: NotificationSync(
+            router: router,
+            child: FloatingBarHost(router: router, child: child ?? const SizedBox.shrink()),
+          ),
         ),
       ),
       debugShowCheckedModeBanner: false,

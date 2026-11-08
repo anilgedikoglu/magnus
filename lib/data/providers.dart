@@ -19,6 +19,7 @@
 //   await ref.read(userProfileProvider.notifier).save(profile.copyWith(...));
 //   final s = ref.watch(l10nProvider);  // localization
 // ─────────────────────────────────────────────────────────────────────────────
+import '../core/services/notification_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'models/user_profile.dart';
@@ -195,6 +196,34 @@ class InboxNotifier extends Notifier<List<InboxItem>> {
 
   int get unreadCount => state.where((e) => !e.isRead).length;
 }
+
+/// "Falın hazır" bildirimleri (varsayılan kapalı). Açarken izin istenir; verilmezse geri kapanır.
+class NotificationsEnabledNotifier extends StateNotifier<bool> {
+  NotificationsEnabledNotifier(this._prefs) : super(_prefs?.getBool(_key) ?? false);
+  static const _key = 'bildirimler_acik';
+  final SharedPreferences? _prefs;
+
+  /// İzin reddedilirse false döner ve durum geri kapanır.
+  Future<bool> set(bool on) async {
+    state = on;
+    if (on && !await NotificationService.instance.requestPermission()) {
+      if (mounted) state = false;
+      await _prefs?.setBool(_key, false);
+      return false;
+    }
+    await _prefs?.setBool(_key, on);
+    return true;
+  }
+}
+
+final notificationsEnabledProvider =
+    StateNotifierProvider<NotificationsEnabledNotifier, bool>((ref) {
+  SharedPreferences? prefs;
+  try {
+    prefs = ref.watch(sharedPrefsProvider);
+  } catch (_) {}
+  return NotificationsEnabledNotifier(prefs);
+});
 
 final inboxProvider =
     NotifierProvider<InboxNotifier, List<InboxItem>>(InboxNotifier.new);

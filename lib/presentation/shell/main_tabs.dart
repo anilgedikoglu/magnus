@@ -80,6 +80,14 @@ void selectMainTab(BuildContext context, int tab, {TabEntry? entry}) {
   GoRouter.of(context).go('/home');
 }
 
+bool Function()? _closeTabOverlays;
+
+/// Sekme dalının navigatöründe kapsayıcının ÜSTÜNE `Navigator.push` ile açılmış sayfaları
+/// (ör. Gelen Kutusu → fal detayı) kapatır; kapattıysa true. Bu sayfalar go_router'a
+/// görünmez (rota hâlâ /home) → yüzen bar dokunuşu yalnız sekmeyi değiştirip detayı açık
+/// bırakıyordu (Anıl, 2026-11-08: "fal içindeyken alt navigator çalışmıyor").
+bool closeMainTabsOverlays() => _closeTabOverlays?.call() ?? false;
+
 class MainTabsScreen extends ConsumerStatefulWidget {
   const MainTabsScreen({super.key, this.debugPageBuilder});
 
@@ -120,6 +128,16 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
     _built.add(_current);
     _cover = AnimationController(vsync: this, duration: const Duration(milliseconds: 320));
     _coverCurve = CurvedAnimation(parent: _cover, curve: Curves.easeOutCubic);
+    _closeTabOverlays = _popOverlays;
+  }
+
+  /// Bkz. [closeMainTabsOverlays].
+  bool _popOverlays() {
+    if (!mounted) return false;
+    final route = ModalRoute.of(context);
+    if (route == null || route.isCurrent) return false;
+    Navigator.of(context).popUntil((r) => r == route);
+    return true;
   }
 
   @override
@@ -161,6 +179,7 @@ class _MainTabsScreenState extends ConsumerState<MainTabsScreen>
 
   @override
   void dispose() {
+    if (_closeTabOverlays == _popOverlays) _closeTabOverlays = null;
     _releaseBack();
     _coverCurve.dispose();
     _cover.dispose();

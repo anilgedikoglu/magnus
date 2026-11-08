@@ -529,6 +529,38 @@ void _routerTests() {
     sem.dispose();
   });
 
+  testWidgets('yüzen bar: sekmede Navigator.push ile açılan detay (gelen kutusu → fal) bar dokunuşuyla kapanır', (
+    tester,
+  ) async {
+    // Anıl, 2026-11-08: "fal içindeyken alt navigator ana menü düğmesi çalışmıyor".
+    // Detay go_router'a görünmez (rota /home) → eskiden yalnız sekme değişip detay açık kalıyordu.
+    final sem = tester.ensureSemantics();
+    await tester.pumpWidget(_routerApp(_router()));
+    await tester.pumpAndSettle();
+    await tester.tap(find.bySemanticsLabel('Gelen Kutusu'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('detay I'));
+    await tester.pumpAndSettle();
+    expect(find.text('DAL DETAY'), findsOneWidget);
+    // Ana menüye dokun → detay kapanır, ana menü görünür.
+    await tester.tap(find.bySemanticsLabel('Ana Menü'));
+    await tester.pumpAndSettle();
+    expect(find.text('DAL DETAY'), findsNothing);
+    expect(find.text('H:0'), findsOneWidget);
+    expect(iconColor(tester, 0), kGlassBarSelectedColor);
+    // Aynı sekmenin ikonu (zarf) detay açıkken: detay kapanır, gelen kutusu listesi kalır.
+    await tester.tap(find.bySemanticsLabel('Gelen Kutusu'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('detay I'));
+    await tester.pumpAndSettle();
+    expect(find.text('DAL DETAY'), findsOneWidget);
+    await tester.tap(find.bySemanticsLabel('Gelen Kutusu'));
+    await tester.pumpAndSettle();
+    expect(find.text('DAL DETAY'), findsNothing);
+    expect(find.text('I:0'), findsOneWidget);
+    sem.dispose();
+  });
+
   testWidgets('yüzen bar: diyalog açıkken gizlenir, kapanınca döner', (tester) async {
     await tester.pumpWidget(_routerApp(_router()));
     await tester.pumpAndSettle();

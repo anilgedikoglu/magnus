@@ -270,8 +270,11 @@ class _FloatingBarHostState extends ConsumerState<FloatingBarHost>
     final tab = kMainTabOrder[slot];
     final current = ref.read(mainTabProvider);
     if (_path == '/home') {
+      // Sekmenin üstünde Navigator.push ile açılmış detay (gelen kutusu → fal) varsa önce
+      // onu kapat; yoksa dokunuş yalnız sekmeyi değiştirip detayı açık bırakıyordu.
+      final closed = closeMainTabsOverlays();
       if (tab == current) {
-        ref.read(mainTabReselectProvider.notifier).state++;
+        if (!closed) ref.read(mainTabReselectProvider.notifier).state++;
       } else {
         ref.read(mainTabProvider.notifier).state = tab;
       }

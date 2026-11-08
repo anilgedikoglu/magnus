@@ -1,15 +1,15 @@
 // lib/presentation/home/menu_layout.dart
 //
-// Ana menünün üç düzeni (Anıl, 2026-11-05). Açılışta her biri 1/3 ihtimalle seçilir ve o
-// oturum boyunca DEĞİŞMEZ (gezinirken menü zıplamaz, sıralama her harekette yeniden
-// hesaplanmaz → performans).
-//   1) grid       : 3×9 (eski düzen).
-//   2) bigBlocks  : büyük · 3×4 · büyük · 3×4 · büyük. Büyük ikon 3×3 hücre kadar
-//                   (en-boy ≈ küçük kartla aynı: 0.758 / 0.750). Büyükler rastgele; bir önceki
-//                   açılıştakiler mümkünse tekrar gelmez. 3 büyük + 24 küçük = 27 (hepsi görünür).
-//   3) favorites  : "Favoriler" 3×2 (en çok açılan 6, çoktan aza) · boşluk · "Diğer Türler"
-//                   3×7 (kalan 21, yine kullanım sıklığına göre).
-// Kullanım sayımı: menü kartına her dokunuş (SharedPreferences 'menu_kullanim').
+// Ana menü düzeni — TEK düzen (Anıl, 2026-11-08: "tek bir tane olacak", "her seferinde bu
+// set up'la çıksın, randomu kaldırdık"). Eski üç düzen (1/3 ihtimalle grid / büyük bloklar /
+// favoriler) KALDIRILDI.
+//   "Favoriler"    : 3×2 — en çok açılan 6 tür, çoktan aza (kullanım yoksa varsayılan sıra).
+//   "Diğer Türler" : 27 türün TAMAMI (favoriler de; aşağıdan çıkarılmaz), büyük ikonlu dizilim:
+//                    büyük · 3×4 · büyük · 3×4 · büyük. Büyük ikon 3×3 hücre kadar (en-boy ≈
+//                    küçük kartla aynı: 0.758 / 0.750). Büyükler açılışta seçilir; bir önceki
+//                    açılıştakiler mümkünse tekrar gelmez. 3 büyük + 24 küçük = 27.
+// Sıralama ve büyükler açılışta bir kez hesaplanır, oturum boyunca DEĞİŞMEZ (gezinirken menü
+// zıplamaz). Kullanım sayımı: menü kartına her dokunuş (SharedPreferences 'menu_kullanim').
 
 import 'dart:convert';
 import 'dart:math';
@@ -17,17 +17,16 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum MenuLayout { grid, bigBlocks, favorites }
+/// [standard] = uygulamanın tek düzeni. [grid] (düz 3×9) yalnız görsel test düzenekleri için:
+/// kart konumları sabit kalsın diye (build/visual_check). Üretimde seçilmez.
+enum MenuLayout { standard, grid }
 
 /// Yalnız test/görsel doğrulama: düzeni sabitle.
 @visibleForTesting
 MenuLayout? debugMenuLayout;
 
-MenuLayout? _sessionLayout;
-
-/// Bu oturumun düzeni (açılışta 1/3 ihtimalle, sonra sabit).
-MenuLayout get sessionMenuLayout =>
-    debugMenuLayout ?? (_sessionLayout ??= MenuLayout.values[Random().nextInt(3)]);
+/// Menü düzeni: her zaman [MenuLayout.standard] (test dışında).
+MenuLayout get sessionMenuLayout => debugMenuLayout ?? MenuLayout.standard;
 
 /// Büyük ikon olabilecek görseller (büyük kartta bulanıklaşmayacak çözünürlükte olanlar).
 /// Kaynak ≥ 768 px; 27 görsel yüksek çözünürlükle yeniden üretilince hepsi eklenir.
@@ -111,7 +110,7 @@ List<int> orderByUsage(List<String> ids, Map<String, int> counts) {
 List<int>? _sessionBigs;
 const _kLastBigsKey = 'menu_buyukler_son';
 
-/// Düzen 2'nin 3 büyük ikonu (indeks, artan sırada). Havuz: [kBigCapableImages] ∩ [ids].
+/// "Diğer Türler"in 3 büyük ikonu (indeks, artan sırada). Havuz: [kBigCapableImages] ∩ [ids].
 /// Bir önceki açılıştakiler, havuz yetiyorsa, tekrar seçilmez.
 List<int> sessionBigPicks(List<String> ids, SharedPreferences? prefs, {Random? random}) {
   final cached = _sessionBigs;
@@ -135,7 +134,6 @@ List<int> sessionBigPicks(List<String> ids, SharedPreferences? prefs, {Random? r
 /// Yalnız test: oturum önbelleklerini sıfırla.
 @visibleForTesting
 void debugResetMenuSession() {
-  _sessionLayout = null;
   _sessionCounts = null;
   _sessionBigs = null;
 }

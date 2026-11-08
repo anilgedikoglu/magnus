@@ -1,4 +1,5 @@
-// Ana menü düzenleri (Anıl, 2026-11-05): sıklık sırası, büyük ikon seçimi, oturum sabitliği.
+// Ana menü düzeni (Anıl, 2026-11-05 / 11-08 tek düzen): sıklık sırası, büyük ikon seçimi,
+// oturum sabitliği, rastgele düzen seçiminin kalktığı.
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -35,7 +36,7 @@ void main() {
     expect(sessionUsage(p)['a'], 2, reason: 'oturum boyu sabit (her harekette değişmez)');
   });
 
-  test('düzen 2: 3 büyük ikon havuzdan, bir önceki açılıştakiler tekrar gelmez', () async {
+  test('Diğer Türler: 3 büyük ikon havuzdan, bir önceki açılıştakiler tekrar gelmez', () async {
     SharedPreferences.setMockInitialValues({});
     final p = await SharedPreferences.getInstance();
     final ids = [...kBigCapableImages, for (var i = 0; i < 19; i++) 'assets/k$i.png'];
@@ -51,15 +52,13 @@ void main() {
         reason: 'havuz (8) yettiği için önceki 3 tekrar gelmez');
   });
 
-  test('düzen seçimi oturum boyu sabit ve üç düzen de çıkabiliyor', () {
-    final seen = <MenuLayout>{};
+  test('tek düzen: rastgele seçim yok, her açılışta Favoriler + büyük ikonlu düzen', () {
+    // Anıl, 2026-11-08: "her seferinde bu set up'la çıksın, randomu kaldırdık".
+    debugMenuLayout = null;
     for (var i = 0; i < 200; i++) {
       debugResetMenuSession();
-      final l = sessionMenuLayout;
-      expect(sessionMenuLayout, l);
-      seen.add(l);
+      expect(sessionMenuLayout, MenuLayout.standard);
     }
-    expect(seen, MenuLayout.values.toSet());
   });
 
   test('HD menü görselleri: her ad için dosya var, yalnız eşlenenler HD yola gider', () {

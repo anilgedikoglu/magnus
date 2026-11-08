@@ -43,10 +43,11 @@
 //   dönüşte _refreshCredits() → eğer fal tamamlanmamışsa (geri basıldıysa)
 //   date key set edilmemiştir, kredi otomatik 1'e döner.
 //
-// ── MENÜ YAPISI (tek ana menü, 3×9) — Anıl, 2026-11-05 ───────────────────
-// Sayfa YOK: 27 kart tek ızgarada, 3 sütun × 9 satır, yukarıdan aşağı kaydırılır
-// (_buildGrid). Sıra = eski sayfa 1 + 2 + 3 (_page1Items/_page2Items/_page3Items);
-// her 3 satırlık grup eski sayfa rengini korur (pembe / mavi / yeşil).
+// ── MENÜ YAPISI (tek ana menü) — Anıl, 2026-11-05 / 2026-11-08 ────────────
+// Sayfa YOK; yukarıdan aşağı kaydırılır (_buildGrid). TEK düzen (menu_layout.dart):
+// "Favoriler" 3×2 (en çok açılan 6) + "Diğer Türler" (27'nin tamamı, büyük ikonlu dizilim).
+// Varsayılan sıra = eski sayfa 1 + 2 + 3 (_page1Items/_page2Items/_page3Items); kart rengi
+// eski sayfa rengini korur (pembe / mavi / yeşil).
 // Izgara cam barın ARKASINA uzanır (alt pay = güvenli alan + bar). Sayfa göstergesi
 // ve hazırlanan fal yuvarlakları kaldırıldı; fal durumu bardaki zarf rozetinde.
 // Sola kaydırma (yatay > dikey×1.5) → gelen kutusu. Bardaki eve tekrar dokunuş →
@@ -1200,7 +1201,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     }
   }
 
-  /// Menü (Anıl, 2026-11-05): üç düzen, açılışta 1/3 ihtimalle (menu_layout.dart).
+  /// Menü (Anıl, 2026-11-08): tek düzen — Favoriler + büyük ikonlu Diğer Türler (menu_layout.dart).
   Widget _buildGrid(BuildContext context, {required double topExtra}) {
     final base = [
       ..._page1Items(context),
@@ -1211,7 +1212,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     try {
       prefs = ref.read(sharedPrefsProvider);
     } catch (_) {}
-    // Her dokunuş kullanım sayımına yazılır (Düzen 3 sıralaması bir SONRAKİ açılışta).
+    // Her dokunuş kullanım sayımına yazılır (Favoriler sıralaması bir SONRAKİ açılışta).
     final items = [
       for (final it in base)
         _MenuItem(it.title, it.imagePath, it.credits, () {
@@ -1270,30 +1271,25 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     final s = ref.read(l10nProvider);
     final List<Widget> slivers;
     switch (sessionMenuLayout) {
-      case MenuLayout.grid:
+      case MenuLayout.grid: // yalnız görsel test düzenekleri
         slivers = [cells(List<int>.generate(items.length, (i) => i))];
-      case MenuLayout.bigBlocks:
+      case MenuLayout.standard:
+        // Favoriler (en çok açılan 6) + Diğer Türler (27'nin tamamı, büyük ikonlu dizilim).
+        final favs = orderByUsage(ids, sessionUsage(prefs)).take(6).toList();
         final bigs = sessionBigPicks(ids, prefs);
         final rest = [for (var i = 0; i < items.length; i++) if (!bigs.contains(i)) i];
-        slivers = [
-          big(bigs[0]),
-          space(gap),
-          cells(rest.sublist(0, 12)),
-          space(gap),
-          big(bigs[1]),
-          space(gap),
-          cells(rest.sublist(12, 24)),
-          space(gap),
-          big(bigs[2]),
-        ];
-      case MenuLayout.favorites:
-        final order = orderByUsage(ids, sessionUsage(prefs));
+        final half = (rest.length + 1) ~/ 2; // 24 küçük → 12 + 12
         slivers = [
           header(s.menuFavorites),
-          cells(order.sublist(0, 6)),
+          cells(favs),
           space(22),
           header(s.menuOtherTypes),
-          cells(order.sublist(6)),
+          if (bigs.isNotEmpty) ...[big(bigs[0]), space(gap)],
+          cells(rest.sublist(0, half)),
+          if (bigs.length > 1) ...[space(gap), big(bigs[1])],
+          space(gap),
+          cells(rest.sublist(half)),
+          if (bigs.length > 2) ...[space(gap), big(bigs[2])],
         ];
     }
     return CustomScrollView(

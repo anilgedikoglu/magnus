@@ -197,15 +197,29 @@ class InboxNotifier extends Notifier<List<InboxItem>> {
   int get unreadCount => state.where((e) => !e.isRead).length;
 }
 
-/// "Falın hazır" bildirimleri (varsayılan kapalı). Açarken izin istenir; verilmezse geri kapanır.
+/// "Falın hazır" bildirimleri (varsayılan AÇIK). İzin, ilk fal gönderildiğinde bir kez istenir;
+/// verilmezse düğme kapanır.
 class NotificationsEnabledNotifier extends StateNotifier<bool> {
-  NotificationsEnabledNotifier(this._prefs) : super(_prefs?.getBool(_key) ?? false);
+  NotificationsEnabledNotifier(this._prefs) : super(_prefs?.getBool(_key) ?? true);
   static const _key = 'bildirimler_acik';
+  static const _askedKey = 'bildirim_izni_soruldu';
   final SharedPreferences? _prefs;
+
+  /// Varsayılan açıkken sistem iznini ilk kez ister (yalnız bir kez).
+  Future<void> askOnce() async {
+    final prefs = _prefs;
+    if (!state || prefs == null || (prefs.getBool(_askedKey) ?? false)) return;
+    await prefs.setBool(_askedKey, true);
+    if (!await NotificationService.instance.requestPermission()) {
+      if (mounted) state = false;
+      await prefs.setBool(_key, false);
+    }
+  }
 
   /// İzin reddedilirse false döner ve durum geri kapanır.
   Future<bool> set(bool on) async {
     state = on;
+    await _prefs?.setBool(_askedKey, true);
     if (on && !await NotificationService.instance.requestPermission()) {
       if (mounted) state = false;
       await _prefs?.setBool(_key, false);

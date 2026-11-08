@@ -4,6 +4,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:magnus_app/core/services/notification_service.dart';
 import 'package:magnus_app/core/widgets/lamp_toggle.dart';
 import 'package:magnus_app/data/models/inbox_item.dart';
+import 'package:magnus_app/data/providers.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 InboxItem _item(String id, DateTime? unlock) => InboxItem(
       id: id,
@@ -42,6 +44,41 @@ void main() {
           ),
         ),
       );
+
+  test('bildirimler varsayılan açık; kapatılmışsa kapalı kalır', () async {
+    SharedPreferences.setMockInitialValues({});
+    expect(NotificationsEnabledNotifier(await SharedPreferences.getInstance()).state, isTrue);
+    SharedPreferences.setMockInitialValues({'bildirimler_acik': false});
+    expect(NotificationsEnabledNotifier(await SharedPreferences.getInstance()).state, isFalse);
+  });
+
+  test('izin yalnız bir kez sorulur; reddedilirse kapanır', () async {
+    SharedPreferences.setMockInitialValues({});
+    final prefs = await SharedPreferences.getInstance();
+    final n = NotificationsEnabledNotifier(prefs);
+    await n.askOnce(); // test ortamında izin verilmez
+    expect(n.state, isFalse);
+    expect(prefs.getBool('bildirimler_acik'), isFalse);
+    expect(prefs.getBool('bildirim_izni_soruldu'), isTrue);
+  });
+
+  testWidgets('1/3 boyutta düğmenin 22 pt altına dokunmak da çalışır', (t) async {
+    final got = <bool>[];
+    await t.pumpWidget(Directionality(
+      textDirection: TextDirection.ltr,
+      child: Center(
+        child: SizedBox(
+          width: 280 / 3,
+          child: LampToggle(value: false, onChanged: got.add, debugSeed: 1),
+        ),
+      ),
+    ));
+    await t.pump(const Duration(milliseconds: 16));
+    final box = t.getRect(find.byType(LampToggle));
+    await t.tapAt(box.center + const Offset(0, 22));
+    await t.pump(const Duration(milliseconds: 16));
+    expect(got, [true]);
+  });
 
   testWidgets('dokununca durum değişir; iz dışına dokunuş sayılmaz', (t) async {
     final got = <bool>[];

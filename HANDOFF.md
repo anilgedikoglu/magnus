@@ -35,7 +35,9 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   Referans karşılaştırma: `build/visual_check/lamp_compare_test.dart` (dinlenme kareleri SSIM 0.92–0.94; imleç/kadraj farkı dahil).
 
 - **297 sonrası main'de (build bekliyor):** Kehanet menüsü 5 kartı ekran yüksekliğine göre boyutlanır, kaydırma yok
-  (`kehanet_menu_screen.dart`, test `test/kehanet_menu_fit_test.dart`).
+  (`kehanet_menu_screen.dart`, test `test/kehanet_menu_fit_test.dart`). Bildirimler varsayılan AÇIK: sistem izni ilk fal
+  gönderilince bir kez istenir (`askOnce`, prefs `bildirim_izni_soruldu`), reddedilirse düğme kapanır. Lamba sürgüsü 1/3 boyut
+  (93 pt), dokunma alanı en az 48 pt (`_touchPad`).
 
 ## Yarım kalan
 - `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.

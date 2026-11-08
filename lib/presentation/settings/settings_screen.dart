@@ -3225,9 +3225,9 @@ class _NotificationsSection extends ConsumerWidget {
             onPointerCancel: (_) => ref.read(_glassDragProvider.notifier).state = false,
             child: Center(
               child: ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 280),
+                constraints: const BoxConstraints(maxWidth: 280 / 3),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(22),
+                  borderRadius: BorderRadius.circular(8),
                   child: LampToggle(
                     key: const ValueKey('notificationsLampToggle'),
                     value: on,

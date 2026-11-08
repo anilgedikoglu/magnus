@@ -504,10 +504,13 @@ class _LampToggleState extends State<LampToggle> with SingleTickerProviderStateM
         0;
   }
 
-  bool _overTrack(Offset local) =>
-      _inRRect(_toDesign(local), Offset.zero, _kTrackHalfW, _kTrackHalfH, _kTrackR);
-  bool _overKnob(Offset local) => _inRRect(
-      _toDesign(local), Offset(_sim.knobX, 0), _kKnobHalf, _kKnobHalf, _kKnobR);
+  /// Küçük çizimde dokunma alanı en az 48 pt yüksek kalsın (tasarım px).
+  double get _touchPad => math.max(0, 24 / _scale - _kTrackHalfH);
+
+  bool _overTrack(Offset local) => _inRRect(_toDesign(local), Offset.zero,
+      _kTrackHalfW + _touchPad, _kTrackHalfH + _touchPad, _kTrackR + _touchPad);
+  bool _overKnob(Offset local) => _inRRect(_toDesign(local), Offset(_sim.knobX, 0),
+      _kKnobHalf + _touchPad, _kKnobHalf + _touchPad, _kKnobR + _touchPad);
 
   void _onDown(Offset local) {
     if (!_overTrack(local)) return;

@@ -39,8 +39,12 @@ class _NotificationSyncState extends ConsumerState<NotificationSync> {
     widget.router.go('/home');
   }
 
-  void _sync() {
+  Future<void> _sync() async {
     if (!mounted) return;
+    if (pendingForNotification(ref.read(inboxProvider), DateTime.now()).isNotEmpty) {
+      await ref.read(notificationsEnabledProvider.notifier).askOnce();
+      if (!mounted) return;
+    }
     final s = ref.read(l10nProvider);
     NotificationService.instance.sync(
       enabled: ref.read(notificationsEnabledProvider),

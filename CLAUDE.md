@@ -31,7 +31,8 @@
   bildirim lamba sürgüsü + yerel "falın hazır" bildirimleri. Ayrıntı → HANDOFF.md.
 - **Son build (2026-11-08 20:41 ÇIKTI): `10.8.32+300`** — Android Play Dahili test + iOS TestFlight. Kehanet menüsü kaydırmasız, bildirimler varsayılan açık,
   lamba sürgüsü 1/3, karşılamalar yenilendi (105 metin, gün/vakit/kişi koşulları, tek balon), Arabam/Evim bulanık arama, Kader Kitabı sonraki sayfa oku.
-- **Bir sonraki build: `10.8.35+303`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince — ve o an, "her şey
+- **Son build (2026-11-09 00:10 ÇIKTI): `10.8.35+303`** — Android Play Dahili test + iOS TestFlight. Sohbet kutusu (üstten inen bant yerine), Flat/Candy cam teması, Evim popup'ları LG + yıl tekerleği, lamba düğmesi tam en/çerçeve/amber cam, Arabam motoru v4, kalın numeroloji ikonu, kahve fincan uyarısı yuvaların altında, Kader Çarkı parmağı takip eder, Doğum Haritası çerçevesi sabit, Gelen Kutusu başlığı sabit.
+- **Bir sonraki build: `10.8.38+306`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince — ve o an, "her şey
   bitince" gibi koşullu talimatlarda bile bitişte tek satırla teyit al (294 erken alındı, Anıl uyardı).
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.
 - iOS: Codemagic `ios-release` workflow'undan **manuel** tetiklenir (kullanıcı).

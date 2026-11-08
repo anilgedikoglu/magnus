@@ -2,7 +2,7 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
-## Ne yapıldı (2026-11-09 — `10.8.35+303` ÇIKTI: Android Play Dahili test 00:10 + iOS TestFlight run 42523049509; 300: 2026-11-08 20:41)
+## Ne yapıldı (2026-11-09 — `10.8.38+306` ÇIKTI: Android Play Dahili test 02:08 + iOS TestFlight run 42532776170; 303: 00:10, 300: 2026-11-08 20:41)
 Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit'lenmemiş scratch
 `test/_visual_starfield_capture_test.dart`). Ad taraması (lib+assets) temiz, tüm `assets/data/*.json` geçerli.
 
@@ -54,7 +54,7 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 
 - **303 sonrası main'de (build bekliyor):** Lamba düğmesinde ampul simgesi yerine ortalı AÇIK / KAPALI (`onLabel/offLabel`, nokta dokusu kaldırıldı); kenar ışığının sona yakın atlaması düzeltildi (yön yalnız tam oturunca değişir).
 
-- **Magnus sesi (303 sonrası, build bekliyor):** `lib/core/magnus_ses/`: `magnus_hafiza` (cihazda kullanım hafızası), `magnus_takvim` (Diyanet 2026-2030 + millî günler; 2031 sonrası tablo eklenmeli), `magnus_ses` (seçim beyni), `magnus_rota_gozlemci` (fal giriş/çıkış). Metinler `assets/data/magnus_ses.json`: dönüş 500, giriş 500, özel gün 160, durum 251; TR+EN; 5 yazar ajan + ChatGPT adayından seçildi, iki bağımsız son okumadan geçti. Ağırbaşlı günlerde (10 Kasım, 18 Mart, 15 Temmuz) şaka yok, Ramazan'da yemek şakası yok. `karsilamalar.json` artık kullanılmıyor (testi duruyor).
+- **Magnus sesi (306'da çıktı):** `lib/core/magnus_ses/`: `magnus_hafiza` (cihazda kullanım hafızası), `magnus_takvim` (Diyanet 2026-2030 + millî günler; 2031 sonrası tablo eklenmeli), `magnus_ses` (seçim beyni), `magnus_rota_gozlemci` (fal giriş/çıkış). Metinler `assets/data/magnus_ses.json`: dönüş 500, giriş 500, özel gün 160, durum 251; TR+EN; 5 yazar ajan + ChatGPT adayından seçildi, iki bağımsız son okumadan geçti. Ağırbaşlı günlerde (10 Kasım, 18 Mart, 15 Temmuz) şaka yok, Ramazan'da yemek şakası yok. `karsilamalar.json` artık kullanılmıyor (testi duruyor).
 
 - **Reklam düzeni (306):** `docs/reklam_duzeni.md`; zorunlu ödüllü reklamlar kalktı. Teklifli ödüllü: hak bitti +1, hazırlanan falı hemen aç, Kısmetim/Arabam/Evim kutuları. Geçiş yalnız fal kapanırken, 180 sn / oturum 2 / gün 5 (`AdPacing`). UMP, iOS NPA, SKAdNetworkItems. AdMob panelinde GDPR mesajı açılmalı.
 - **Satın alma YOK (bilinçli):** Türkiye'de ücretli fal riski (677 sayılı Kanun, Faladdin/Binnaz soruşturması). Önerilen model: Mühür haftalık 39,99/aylık 99,99/yıllık 599,99 TL (yıllıkta 7 gün deneme), Ömürlük 1.499,99, Reklamsız 149,99, 10 hak 49,99, Kısmetim/Arabam/Evim 49,99 tek tek ya da 99,99 üçü. Avukat görüşü ya da Anıl'ın açık kararı beklenir.
@@ -80,6 +80,9 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 - Anıl 297'de bildirim düğmesini gerçek cihazda dener (açınca izin, kilitli fal hazır olunca bildirim, dokununca gelen kutusu).
 - Anıl 300'de giriş mesajlarını, Arabam/Evim aramasını, Kader Kitabı okunu dener.
 - Anıl 303'te sohbet kutusu yazı efektini, Candy temayı (kenar ışığı/performans), lamba düğmesini, Evim popup'larını dener.
-- Sonraki build `10.8.38+306`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
+- Anıl 306'da reklam akışlarını gerçek cihazda dener (teklif penceresi, +1 hak, hemen aç, kutular, geçiş sıklığı; test build'de kendi reklamına tıklamadan). Bu akışlar testlerde gerçek reklamla çalıştırılmadı.
+- AdMob panelinde GDPR mesajı Anıl tarafından oluşturulacak (uygulama dışı adım).
+- Satın alma (IAP/abonelik): avukat görüşü ya da Anıl'ın açık "riski biliyorum, yap" kararı gelince yapılır; önerilen ürünler yukarıda.
+- Sonraki build `10.8.41+309`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
   Play Dahili test, `gh workflow run "iOS TestFlight" --repo anilgedikoglu/magnus --ref main`.
 - Anıl 294/297'de fincan kontrolünü dener; hâlâ geçerse yönetici teşhis satırı (ML Kit etiketleri) ekle.

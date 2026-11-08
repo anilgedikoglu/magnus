@@ -1,6 +1,8 @@
 // C:/src/magnus_app/lib/presentation/kehanet/kehanet_menu_screen.dart
 // Kehanet ana menüsü - Faloya, Maganda, Tamua, Yana, Kahinlere Sor
 
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -49,16 +51,26 @@ class KehanetMenuScreen extends ConsumerWidget {
               ),
             ),
             Expanded(
-              child: GridView.builder(
-                padding: const EdgeInsets.all(20),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 16,
-                  mainAxisSpacing: 16,
-                  childAspectRatio: 0.85,
-                ),
-                itemCount: items.length,
-                itemBuilder: (ctx, i) => _buildItem(ctx, items[i]),
+              // Kartlar ekrana sığacak şekilde boyutlanır, kaydırma yok (5 öğe: 2 sütun × 3 satır).
+              child: LayoutBuilder(
+                builder: (ctx, c) {
+                  const columns = 2, rows = 3;
+                  const gap = 16.0, padH = 20.0, padV = 8.0;
+                  final cellW = (c.maxWidth - 2 * padH - (columns - 1) * gap) / columns;
+                  final cellH = (c.maxHeight - 2 * padV - (rows - 1) * gap) / rows;
+                  return GridView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    padding: const EdgeInsets.symmetric(horizontal: padH, vertical: padV),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: columns,
+                      crossAxisSpacing: gap,
+                      mainAxisSpacing: gap,
+                      childAspectRatio: cellW / math.max(cellH, 1),
+                    ),
+                    itemCount: items.length,
+                    itemBuilder: (ctx, i) => _buildItem(ctx, items[i]),
+                  );
+                },
               ),
             ),
             const FloatingBarSpacer(),
@@ -86,7 +98,7 @@ class KehanetMenuScreen extends ConsumerWidget {
           children: [
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(16),
+                padding: const EdgeInsets.all(12),
                 child: Image.asset(
                   item.iconPath,
                   fit: BoxFit.contain,

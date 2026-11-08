@@ -34,6 +34,9 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   bildirimi `core/services/notification_service.dart`, `shell/notification_sync.dart` (sunucu yok, unlockAt'e zamanlanır; varsayılan kapalı).
   Referans karşılaştırma: `build/visual_check/lamp_compare_test.dart` (dinlenme kareleri SSIM 0.92–0.94; imleç/kadraj farkı dahil).
 
+- **297 sonrası main'de (build bekliyor):** Kehanet menüsü 5 kartı ekran yüksekliğine göre boyutlanır, kaydırma yok
+  (`kehanet_menu_screen.dart`, test `test/kehanet_menu_fit_test.dart`).
+
 ## Yarım kalan
 - `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.
 - **⚠️ Lamba sürgüsünün LİSANSI YOK:** Zsolt Kacso'nun "Glass Light Toggle" demosunun (lisanssız) shader/fizik çevirisi. Dahili test

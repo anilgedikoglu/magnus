@@ -512,3 +512,7 @@ Notlar (dersler → skill'e işlendi):
 ## Sıradaki tur adayları (öncelik sırası)
 1. Kahve – Uğurlama (143) · 2. Kahve – Bağlama (250) · 3. Japon Falı (27, uzun metin) · 4. Kader Kitabı (229, M2)
 5. Kâhinler (her kâhin ayrı) · 6. Yana – Yaşama Dair (110) · 7. Kahve – Karşılama · 8. Durugörü – Bugün (2. tur, havuz hâlâ küçük: 20)
+
+## Tur 33–42 ikinci göz denetimi (2026-11-08)
+1000 metin, 35 dosya: ChatGPT denetçi, Claude hakem ajanları kabul/düzelt/red; yeni metin eklenmedi, toplam 5199 aynı.
+3 profil × TR/EN render kontrolü: 1000 metin geçti.

@@ -24,14 +24,22 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   oturum sırayla. Düzen: `scratchpad/turlar/SONLANDIRMA_TALIMATI.md`, `CLAUDE_YAZAR_TALIMATI.md`, `ekle_tur.js`
   (meta'dan dosya/anahtar okuyup ekler + `build/visual_check/tur_kontrol.json` yazar).
 
+- **Tur 33–42 ikinci göz denetimi BİTTİ (1000/1000):** ChatGPT önerdi, hakem ajanı kabul/düzelt/red verdi. Son partilerde
+  sistematik: ChatGPT "-abilir" ile yumuşatıp dokuyu siliyor → önerilerin yaklaşık yarısı aynen geçmedi. Hakem notlarında kalan
+  tekrarlar (kâhin iskeletleri, motivasyonda kehanet paragrafı, kahve karşılamada eski havuzdaki sabit konu adları) dokunulmadı.
+- **Ana menü tek düzen** (`menu_layout.dart`): Favoriler 3×2 + Diğer Türler büyük ikonlu 27 kart; rastgele düzen kalktı,
+  büyük 3 kart hâlâ açılışta değişiyor.
+- **Yüzen bar:** sekmede `Navigator.push` ile açılan detay (gelen kutusu → fal) bar dokunuşuyla kapanır (`closeMainTabsOverlays`).
+- **Ayarlar > BİLDİRİMLER:** lamba sürgüsü `lib/core/widgets/lamp_toggle.dart` + `shaders/lamp_toggle.frag`; yerel "falın hazır"
+  bildirimi `core/services/notification_service.dart`, `shell/notification_sync.dart` (sunucu yok, unlockAt'e zamanlanır; varsayılan kapalı).
+  Referans karşılaştırma: `build/visual_check/lamp_compare_test.dart` (dinlenme kareleri SSIM 0.92–0.94; imleç/kadraj farkı dahil).
+
 ## Yarım kalan
-- **Build `10.8.29+297`** hazır değil-alınmadı: Anıl'ın "test çık" demesi gerekiyor (294'ü kendi kararımla erken almıştım —
-  Anıl uyardı; bir daha "her şey bitince" talimatı olsa bile bitiş anında tek satırla teyit al).
-- **Tur 33–42 ikinci göz denetimi (Anıl seçti, 2026-11-08): 5/35 dosya bitti** (kahve bağlama/uğurlama, tavşan,
-  karşılama z1, olumlama → 46 düzeltme, commit a23bd434). Düzen: ChatGPT her metni puanlar/düzeltme önerir → hakem
-  ajanı kabul/düzelt/red → `uygula.js` (yer tutucu + yasak kalıp + orijinal eşleşme kontrolü) → tur_kontrol testi.
-  Betikler oturum scratchpad'inde (`scratchpad/denetim/`: hazirla.js, rapor.js, uygula.js, HAKEM_TALIMATI.md,
-  plan.json); kalan 30 dosya `sira.txt`. ChatGPT oturumu 10 dk sonra yine düştü → Anıl yeniden girince TEK sekmeyle sürer.
+- **Build `10.8.29+297`** alınmadı (pubspec hâlâ 294): bitişte Anıl'dan tek satır teyit.
+- **⚠️ Lamba sürgüsünün LİSANSI YOK:** Zsolt Kacso'nun "Glass Light Toggle" demosunun (lisanssız) shader/fizik çevirisi. Dahili test
+  dışında (üretim/App Store) çıkmadan yazardan izin alınmalı ya da kod özgün yazılmalı.
+- Bildirimler gerçek cihazda henüz denenmedi (Android derlemesi geçti, iOS CI'da derlenecek). Codex benzerlik teyidi yapılamadı
+  (haftalık sınır 11 Kas 21:56'da açılır).
 
 ## Denenip olmayan ve nedeni
 - 2026-11-08: ChatGPT girişinden ~10 dk sonra, 5 sekme AYNI ANDA yeniden yüklenip 40–45 KB mesaj gönderilince oturum

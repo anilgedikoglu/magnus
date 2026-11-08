@@ -706,6 +706,8 @@ Bilgisayar·Ev1·Ev2·Ev3·Zarf düzeni KALDIRILDI). Sıra `kMainTabOrder = [hom
 | 1 | Gelen Kutusu (`InboxScreen`, `MainTab.inbox`) | `_EnvelopePainter` — zarf + rozet | evden sağdan, profilden soldan |
 | 2 | Kullanıcı Bilgileri (`SettingsScreen`, `MainTab.profile`) | `_PersonPainter` — insan büstü (baş + omuz) | sağdan |
 
+**2026-11-08 GÜNCEL:** Ana menü TEK düzen, rastgele seçim YOK (`menu_layout.dart`): "Favoriler" 3×2 (en çok açılan 6) + "Diğer Türler" 27 kartın tamamı büyük ikonlu dizilimle (büyük · 12 · büyük · 12 · büyük). Aşağıdaki 3×9 anlatımı yalnız varsayılan sıra/renk için geçerli.
+
 **Ana menü = TEK sayfa, 3 sütun × 9 satır, yukarıdan aşağı kaydırmalı** (`HomeScreen._buildGrid`, GridView.builder,
 Bouncing). Sıra eski sayfa 1+2+3; her 3 satır eski sayfa rengini korur (pembe/mavi/yeşil çerçeve). PageView,
 sayfa göstergesi (üçlü çizgi), `homePageProvider`, hazırlanan fal yuvarlakları (`_FortuneProgressRow`,

@@ -1,6 +1,7 @@
 // "Arabam Ne?" falı (2026-11-05). Mantık: lib/data/services/araba_engine.dart.
 // Akış: panel ("Tıkla") → kısa hesaplama → 5 yıl aralığı (alt alta, yanında kapalı kutu).
-// Her kutu: geçiş reklamı (AdService sıklık sınırıyla) → model açılır ve KALICI açık kalır.
+// Kapalı kutu: ödüllü reklam teklifi (kullanıcı seçerse) → model açılır, KALICI; reklam yoksa /
+// sınır doluysa / yönetici modunda ücretsiz açılır.
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -11,7 +12,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/widgets/unlock_flash.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/services/ad_pacing.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/odul_teklifi.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/marquee_text.dart';
 import '../../core/widgets/blur_reveal_spinner.dart';
@@ -128,23 +131,25 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
     setState(() => _adim = _Adim.liste);
   }
 
-  void _ac(int index) {
-    final t = _t, prefs = _prefs;
-    if (t == null || prefs == null || t.isRevealed(index) || _opening.contains(index)) return;
-    setState(() => _opening.add(index));
-    _acReklamla(() => ArabaEngine.reveal(prefs, t, index), index);
-  }
+  bool _teklifte = false; // teklif penceresi / reklam sürerken ikinci dokunuş yok
 
-  /// Reklam kapanınca kutuyu açar; reklam hata verse de kutu bekleme halinde kalmaz.
-  Future<void> _acReklamla(Future<void> Function() reveal, int index) async {
-    Future<void>? opened; // tek açılış; herkes aynı işi bekler
-    Future<void> doReveal() => opened ??= reveal();
+  Future<void> _ac(int index) async {
+    final t = _t, prefs = _prefs;
+    if (t == null || prefs == null || t.isRevealed(index) || _opening.contains(index) || _teklifte) return;
+    _teklifte = true;
     try {
-      await AdService.instance.showInterstitial(onClosed: () => doReveal());
-      await doReveal(); // geri çağrı gelmediyse yine de aç
+      // Ödül mümkünse teklif; değilse (reklam yok / sınır dolu) kutu ücretsiz açılır.
+      var ac = true;
+      if (AdService.instance.odulMumkun(OdulTuru.kutuAc)) {
+        ac = await ref.kutuAcTeklifi(context, ref.read(l10nProvider).adOpenBoxSingleBody);
+      }
+      if (!ac || !mounted) return;
+      setState(() => _opening.add(index));
+      await ArabaEngine.reveal(prefs, t, index);
     } catch (_) {
-      await doReveal();
+      // Açılış hatası kutuyu bekleme halinde bırakmaz.
     } finally {
+      _teklifte = false;
       if (mounted) {
         HapticFeedback.mediumImpact(); // kilit açıldı (2026-11-06)
         setState(() => _opening.remove(index));

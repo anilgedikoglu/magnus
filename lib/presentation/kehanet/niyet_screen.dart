@@ -8,7 +8,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
@@ -30,7 +29,6 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
   String _metin = '';
 
   // ── Kazıma durumu ──────────────────────────────────────────────────────────
-  bool _adShown = false; // ilk kazımada bir kez rewarded reklam gösterilir
   final List<Offset> _scratchPoints = [];
   // Izgara tabanlı kazılan alan takibi (hassas % hesabı için)
   final Set<int> _scratchedCells = {};
@@ -105,16 +103,6 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
   // ── Parmak hareketi → kazıma ───────────────────────────────────────────────
   void _onPanUpdate(DragUpdateDetails d) {
     if (_fullyRevealed) return;
-
-    // İlk kazımada rewarded reklam — sonrasında normal devam
-    if (!_adShown) {
-      _adShown = true;
-      AdService.instance.showRewarded(
-        onRewarded: () {}, // reklam sonrası kullanıcı yeniden kazır
-        onFailed:   () {},
-      );
-      return;
-    }
 
     final pos = d.localPosition;
     if (pos.dx < 0 || pos.dy < 0 || pos.dx > _boxW || pos.dy > _boxH) return;

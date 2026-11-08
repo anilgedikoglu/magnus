@@ -74,6 +74,18 @@ class StorageService {
     }
   }
 
+  /// Kilitli (hazırlanan) falı hemen hazır yapar; kalıcı. Zaten açıksa değişmez.
+  Future<void> unlockInboxItemNow(String id, DateTime now) async {
+    final items = loadInbox();
+    final index = items.indexWhere((e) => e.id == id);
+    if (index == -1) return;
+    final item = items[index];
+    final at = DateTime.tryParse(item.unlockAt ?? '');
+    if (at == null || !at.isAfter(now)) return;
+    item.unlockAt = now.toIso8601String();
+    await saveInbox(items);
+  }
+
   Future<void> deleteInboxItem(String id) async {
     final items = loadInbox();
     items.removeWhere((e) => e.id == id);

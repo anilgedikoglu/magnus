@@ -1,7 +1,8 @@
 // "Kısmetim Kim?" falı (2026-11-05). Mantık: lib/data/services/kismet_engine.dart.
 // Akış: yıl seç (bu yıl ortada, geçmiş yok, sola kaydır → +50) → kısa hesaplama →
 // sonuç: "Eşin" / "Şu anki partnerin" / "yeni tanışma görünmüyor" / 6 kapalı kutu.
-// Her kutu: geçiş reklamı (AdService sıklık sınırıyla) → bilgi açılır ve KALICI açık kalır.
+// Kapalı kutuya dokununca ödüllü reklam teklifi (kullanıcı seçerse) → o kişinin TÜM kutuları açılır, KALICI.
+// Reklam hazır değilse / sınır doluysa / yönetici modunda kutu ücretsiz açılır (kullanıcı kilitlenmez).
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -13,7 +14,9 @@ import '../../core/widgets/hold_to_reveal.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 
 import '../../core/constants/app_text_styles.dart';
+import '../../core/services/ad_pacing.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/odul_teklifi.dart';
 import '../../core/widgets/marquee_text.dart';
 import '../../data/services/kismet_lines.dart';
 import '../../core/widgets/blur_reveal_spinner.dart';
@@ -101,23 +104,27 @@ class _KismetimScreenState extends ConsumerState<KismetimScreen> {
     setState(() => _adim = _Adim.sonuc);
   }
 
-  void _ac(KismetPerson p, String field) {
-    final t = _t, prefs = _prefs;
-    if (t == null || prefs == null || t.isRevealed(p.id, field) || _opening.contains(field)) return;
-    setState(() => _opening.add(field));
-    _acReklamla(() => KismetEngine.reveal(prefs, t, p.id, field), field);
-  }
+  bool _teklifte = false; // teklif penceresi / reklam sürerken ikinci dokunuş yok
 
-  /// Reklam kapanınca kutuyu açar; reklam hata verse de kutu bekleme halinde kalmaz.
-  Future<void> _acReklamla(Future<void> Function() reveal, String field) async {
-    Future<void>? opened; // tek açılış; herkes aynı işi bekler
-    Future<void> doReveal() => opened ??= reveal();
+  Future<void> _ac(KismetPerson p, String field) async {
+    final t = _t, prefs = _prefs;
+    if (t == null || prefs == null || t.isRevealed(p.id, field) || _opening.contains(field) || _teklifte) return;
+    _teklifte = true;
     try {
-      await AdService.instance.showInterstitial(onClosed: () => doReveal());
-      await doReveal(); // geri çağrı gelmediyse yine de aç
+      // Ödül mümkünse teklif; değilse (reklam yok / sınır dolu) kutu ücretsiz açılır.
+      var ac = true;
+      if (AdService.instance.odulMumkun(OdulTuru.kutuAc)) {
+        ac = await ref.kutuAcTeklifi(context, ref.read(l10nProvider).adOpenBoxPersonBody);
+      }
+      if (!ac || !mounted) return;
+      setState(() => _opening.add(field));
+      for (final f in kKismetFields) {
+        if (!t.isRevealed(p.id, f)) await KismetEngine.reveal(prefs, t, p.id, f);
+      }
     } catch (_) {
-      await doReveal();
+      // Açılış hatası kutuyu bekleme halinde bırakmaz.
     } finally {
+      _teklifte = false;
       if (mounted) {
         HapticFeedback.mediumImpact(); // kilit açıldı (2026-11-06)
         setState(() => _opening.remove(field));

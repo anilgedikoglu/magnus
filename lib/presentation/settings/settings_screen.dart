@@ -2575,6 +2575,8 @@ class SettingsScreen extends ConsumerWidget {
                   );
                 },
               ),
+              // UMP gizlilik seçenekleri: yalnız rıza çerçevesi gerektiriyorsa görünür.
+              const _PrivacyOptionsRow(),
 
               // ── Ayırıcı ─────────────────────────────────────────────────
               Container(
@@ -3084,6 +3086,37 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
 }
 
 // ── Options Dialog Liste Öğesi ─────────────────────────────────────────────────
+
+/// "Gizlilik seçenekleri" satırı (UMP). Bölge rıza çerçevesi gerektirmiyorsa hiç görünmez.
+class _PrivacyOptionsRow extends ConsumerStatefulWidget {
+  const _PrivacyOptionsRow();
+
+  @override
+  ConsumerState<_PrivacyOptionsRow> createState() => _PrivacyOptionsRowState();
+}
+
+class _PrivacyOptionsRowState extends ConsumerState<_PrivacyOptionsRow> {
+  bool _gerekli = false;
+
+  @override
+  void initState() {
+    super.initState();
+    AdService.instance.privacyOptionsRequired().then((v) {
+      if (mounted && v) setState(() => _gerekli = true);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!_gerekli) return const SizedBox.shrink();
+    return _OptionsItem(
+      icon: Icons.tune_rounded,
+      iconColor: AppColors.gold,
+      label: ref.watch(l10nProvider).privacyOptions,
+      onTap: () => AdService.instance.showPrivacyOptions(),
+    );
+  }
+}
 
 class _OptionsItem extends StatelessWidget {
   final IconData icon;

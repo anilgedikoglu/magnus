@@ -126,6 +126,10 @@ Her fal türünün metin seçim davranışı aşağıdaki tabloda tanımlıdır.
 | **El Falı** | — (AI üretimi) | — | ✅ Günde 1 |
 | **Yüz Falı** | — (AI üretimi) | — | ✅ Günde 1 |
 
+> **Hak bitti ödüllü +1 (2026-11-09):** Kahve, Tarot, Durugörü, Dert Ortağı, Acı Gerçekler ve Aşk Uyumu'nda günlük hak
+> bitince kullanıcı isterse ödüllü reklam izleyerek +1 hak kazanır (tür başına günde 1, toplam günde 3; bkz. "Reklam Düzeni").
+> Diğer türlerde ek hak yok.
+
 ---
 
 ## ⚠️⚠️⚠️ NO-REPEAT KURALI — TÜM FAL TÜRLERİ İÇİN ZORUNLU ⚠️⚠️⚠️
@@ -1497,22 +1501,20 @@ Kodda `testDeviceIds` tanımlı değil → canlı uygulamada kendi reklamına t�
 
 ---
 
-## Rewarded Reklam — Sadece Okunmamış İtemler (inbox_screen.dart)
+## Reklam Düzeni (2026-11-09) — docs/reklam_duzeni.md (ürün kararı, anlaşılmadan değiştirme)
 
-**Kural (2026-05-10'dan itibaren):** Rewarded reklam sadece **yeni ve okunmamış** inbox itemleri açılırken gösterilir. Zaten okunmuş iteme tıklanırsa reklam atlanır, direkt detay ekranı açılır.
-
-```dart
-void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
-  if (!item.isRead) {
-    AdService.instance.showRewarded(
-      onRewarded: () => _navigateToDetail(context, ref, item),
-      onFailed:   () => _navigateToDetail(context, ref, item),
-    );
-  } else {
-    _navigateToDetail(context, ref, item);
-  }
-}
-```
+- **Zorunlu ödüllü reklam YOK.** Ödüllü yalnız kullanıcı seçince: `odulTeklifiGoster` (`lib/core/widgets/odul_teklifi.dart`,
+  sıvı cam alt sayfa, eşit "Reklam izle / Vazgeç"). `Future<bool>` yalnız `onUserEarnedReward` gelince true.
+- Yerler: hak bitti (kahve, tarot, durugörü, dert ortağı, acı gerçekler, aşk uyumu → +1 hak: o türün `*_bugun_tarih`
+  anahtarı silinir) · gelen kutusunda kilitli kart (`InboxNotifier.unlockNow`) · Kısmetim/Arabam/Evim kapalı kutu
+  (kişi/dönemin tüm kutuları). Reklam hazır değil / sınır dolu / admin → kutu ücretsiz açılır, hak bitti eski mesajı verir.
+- Geçiş reklamı yalnız doğal arada: fal kapanıp menüye dönerken (`home_screen._falCikti`, ≥25 sn, Dert Ortağı hariç) ve
+  gelen kutusundan okunan fal kapanınca. Sınırlar kalıcı: `lib/core/services/ad_pacing.dart` (180 sn aralık, oturum 2,
+  gün 5, 2 fal tamamlanmadan yok; ödüllü: hak bitti tür başına 1 / gün 3, hemen aç gün 3, kutu gün 6, toplam gün 10).
+  "Tamamlanan fal" = `MagnusHafiza.tamamlananFal` (okunan + ≥25 sn anlık fal).
+- `AdService`: UMP (`canRequestAds` olmadan reklam istenmez, hata akışı bozmaz), iOS `nonPersonalizedAds: true`,
+  yükleme hatasında 3 deneme, SKAdNetworkItems `Info.plist`'te. Kullanıcı Bilgileri 3. kartta (gerekirse) "Gizlilik seçenekleri".
+- AdMob panelinde GDPR mesajı oluşturulmalı (uygulama dışı adım). Aşağıdaki platform-ID bölümü geçerli.
 
 ---
 
@@ -1664,19 +1666,10 @@ Sonra kullanıcı Codemagic `ios-release` workflow'unu `main`'den tetikler.
 
 ## 2026-06-09 Session — Rewarded Ads + iOS App Store Yayın
 
-### Rewarded Ad Entegrasyonu (6 ekran)
+### Rewarded Ad Entegrasyonu — KALDIRILDI (2026-11-09)
 
-`AdService.instance.showRewarded(onRewarded: fn, onFailed: fn)` — her iki callback da içeriğe devam eder.
-
-| Ekran | Tetikleyici |
-|---|---|
-| `faloya_screen.dart` | 3s beklemeden sonra, metin gelmeden önce |
-| `maganda_screen.dart` | 3s beklemeden sonra, cevap gelmeden önce |
-| `tamua_screen.dart` | "Geçirdim Hazırım" butonuna basınca |
-| `yana_screen.dart` | Bana Dair / Yaşama Dair seçimine basınca |
-| `kahinler_menu_screen.dart` | Kahin (Derun/Uraz/Likia/Khallesi/Yousuf) seçimine basınca |
-| `niyet_screen.dart` | İlk kazıma hareketi başladığında (sadece bir kez) |
-| `kadercarki_screen.dart` | Çark dönüp durduktan sonra |
+Bu 7 ekrandaki zorunlu ödüllü reklamlar (faloya, maganda, tamua, yana, kahinler, niyet, kader çarkı) ve gelen kutusundaki
+okunmamış-fal reklamı kaldırıldı; akışlar reklamsız aynen sürer. Yeni düzen: "Reklam Düzeni (2026-11-09)" bölümü.
 
 ### Yana Screen Düzeltmeleri (yana_screen.dart)
 

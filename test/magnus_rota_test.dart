@@ -9,6 +9,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:magnus_app/app.dart';
 import 'package:magnus_app/core/magnus_ses/magnus_hafiza.dart';
+import 'package:magnus_app/core/magnus_ses/magnus_rota_gozlemci.dart';
 import 'package:magnus_app/core/widgets/startup_disclaimer.dart';
 import 'package:magnus_app/data/models/user_profile.dart';
 import 'package:magnus_app/data/providers.dart';
@@ -59,6 +60,7 @@ void main() {
     router.pop();
     await _bekle(t);
     expect(kayit()['bv'], 1, reason: 'geri ile hemen çıktı');
+    expect(MagnusRotaGozlemci.sonHedefRota, anyOf(isNull, '/home'), reason: 'menüye dönüş tanınmalı (geçiş reklamı)');
 
     router.push('/evim');
     await _bekle(t);
@@ -66,6 +68,7 @@ void main() {
     await _bekle(t);
     expect(kayit()['a'], 2);
     expect(kayit()['bv'], 2, reason: 'go ile çıkış da sayılır');
+    expect(MagnusRotaGozlemci.sonHedefRota, anyOf(isNull, '/home'), reason: 'go ile menüye dönüş tanınmalı');
 
     // pageBuilder ile tanımlı rotalar da izlenir.
     for (final (yol, tur) in const [

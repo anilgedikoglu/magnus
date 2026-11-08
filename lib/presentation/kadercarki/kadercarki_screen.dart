@@ -13,7 +13,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../core/services/ad_service.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
@@ -280,10 +279,10 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     } else {
       _winCtrl.repeat(reverse: true);
     }
-    // Kazanan an kısa sürsün ama görülsün (1,2 sn), sonra reklam → sonuç.
+    // Kazanan an kısa sürsün ama görülsün (1,2 sn), sonra sonuç.
     Future.delayed(const Duration(milliseconds: 1200), () {
       if (!mounted) return;
-      AdService.instance.showRewarded(onRewarded: _sonucuGoster, onFailed: _sonucuGoster);
+      _sonucuGoster();
     });
   }
 

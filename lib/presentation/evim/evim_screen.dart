@@ -1,7 +1,8 @@
 // "Evim Neresi?" falı (2026-11-05). Mantık: lib/data/services/ev_engine.dart.
 // Akış: (ilk kullanımda bir kez) "Şu an hangi ilde yaşıyorsun?" → yıl seç (bu yıl ortada, geçmiş yok,
 // sola kaydır → +50) → kısa hesaplama → sonuç: yer, ev tipi, denize mesafe, durum, kullanım, (varsa) yazlık
-// + kısa bir anlatı. Her satır kapalı kutu: geçiş reklamı (AdService sıklık sınırıyla) → açılır ve KALICI kalır.
+// + kısa bir anlatı. Kapalı kutu: ödüllü reklam teklifi (kullanıcı seçerse) → o dönemin tüm kutuları açılır, KALICI;
+// reklam yoksa / sınır doluysa / yönetici modunda ücretsiz açılır.
 import 'dart:async';
 import 'dart:math' as math;
 import 'dart:ui' show lerpDouble;
@@ -15,7 +16,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/widgets/blur_reveal_spinner.dart';
 import '../../core/widgets/unlock_flash.dart';
 import '../../core/constants/app_text_styles.dart';
+import '../../core/services/ad_pacing.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/odul_teklifi.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/widgets/hold_to_reveal.dart';
@@ -149,24 +152,28 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
     setState(() => _adim = _Adim.sonuc);
   }
 
-  void _ac(EvimSegment s, String field) {
+  bool _teklifte = false; // teklif penceresi / reklam sürerken ikinci dokunuş yok
+
+  Future<void> _ac(EvimSegment s, String field) async {
     final t = _t, prefs = _prefs;
     final key = '${s.id}:$field';
-    if (t == null || prefs == null || t.isRevealed(s.id, field) || _opening.contains(key)) return;
-    setState(() => _opening.add(key));
-    _acReklamla(() => EvimEngine.reveal(prefs, t, s.id, field), key);
-  }
-
-  /// Reklam kapanınca kutuyu açar; reklam hata verse de kutu bekleme halinde kalmaz.
-  Future<void> _acReklamla(Future<void> Function() reveal, String key) async {
-    Future<void>? opened; // tek açılış; herkes aynı işi bekler
-    Future<void> doReveal() => opened ??= reveal();
+    if (t == null || prefs == null || t.isRevealed(s.id, field) || _opening.contains(key) || _teklifte) return;
+    _teklifte = true;
     try {
-      await AdService.instance.showInterstitial(onClosed: () => doReveal());
-      await doReveal(); // geri çağrı gelmediyse yine de aç
+      // Ödül mümkünse teklif; değilse (reklam yok / sınır dolu) kutu ücretsiz açılır.
+      var ac = true;
+      if (AdService.instance.odulMumkun(OdulTuru.kutuAc)) {
+        ac = await ref.kutuAcTeklifi(context, ref.read(l10nProvider).adOpenBoxPeriodBody);
+      }
+      if (!ac || !mounted) return;
+      setState(() => _opening.add(key));
+      for (final f in s.fields) {
+        if (!t.isRevealed(s.id, f)) await EvimEngine.reveal(prefs, t, s.id, f);
+      }
     } catch (_) {
-      await doReveal();
+      // Açılış hatası kutuyu bekleme halinde bırakmaz.
     } finally {
+      _teklifte = false;
       if (mounted) {
         HapticFeedback.mediumImpact(); // kilit açıldı (2026-11-06)
         setState(() => _opening.remove(key));

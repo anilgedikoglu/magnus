@@ -211,6 +211,14 @@ class InboxNotifier extends Notifier<List<InboxItem>> {
     state = storage.loadInbox();
   }
 
+  /// Hazırlanan falı hemen hazır yapar (ödüllü reklam karşılığı); kalıcı. Rozet ve "falın hazır"
+  /// bildirimi gelen kutusu değişince kendiliğinden yenilenir.
+  Future<void> unlockNow(String id) async {
+    final storage = ref.read(storageServiceProvider);
+    await storage.unlockInboxItemNow(id, DateTime.now());
+    state = storage.loadInbox();
+  }
+
   Future<void> deleteItem(String id) async {
     final storage = ref.read(storageServiceProvider);
     await storage.deleteInboxItem(id);

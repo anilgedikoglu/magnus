@@ -431,6 +431,7 @@ class AppStrings {
       case 'ozlusoz':     return quotes;
       case 'tarot':       return tarot;
       case 'kahve':       return coffeeFortune;
+      case 'durugoru':    return durugoru;
       case 'astroloji':   return astrology;
       case 'kaderkitabi': return fatebook;
       case 'dertortagi':  return companion;
@@ -468,6 +469,25 @@ class AppStrings {
       default:            return null;
     }
   }
+
+  // ── Ödüllü reklam teklifi (docs/reklam_duzeni.md) ──
+  String get adWatch   => _s('Reklam izle', 'Watch ad');
+  String get adDecline => _s('Vazgeç', 'No thanks');
+  String get adExtraRightTitle => _s('Bir hak daha', 'One more reading');
+  String adExtraRightBody(String fortuneName) => _s(
+      'Kısa bir reklam izlersen: +1 $fortuneName hakkı.',
+      'Watch a short ad to get +1 $fortuneName reading.');
+  String get adOpenNowTitle => _s('Falı hemen aç', 'Open the reading now');
+  String get adOpenNowBody => _s('Kısa bir reklam izlersen falın beklemeden hazır olur.',
+      'Watch a short ad and your reading is ready right away.');
+  String get adOpenBoxTitle => _s('Kutuları aç', 'Open the boxes');
+  String get adOpenBoxPersonBody => _s('Kısa bir reklam izlersen bu kişinin tüm kutuları açılır.',
+      "Watch a short ad to open all of this person's boxes.");
+  String get adOpenBoxPeriodBody => _s('Kısa bir reklam izlersen bu dönemin tüm kutuları açılır.',
+      "Watch a short ad to open all of this period's boxes.");
+  String get adOpenBoxSingleBody => _s('Kısa bir reklam izlersen bu kutu açılır.',
+      'Watch a short ad to open this box.');
+  String get privacyOptions => _s('Gizlilik seçenekleri', 'Privacy options');
 
   // ── Gece Grimuarı l10n borcu (2026-11) ──
   String get exit => _s('Çıkış', 'Exit');

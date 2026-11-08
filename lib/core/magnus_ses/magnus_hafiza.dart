@@ -62,6 +62,7 @@ class MagnusHafiza {
   int _seri = 0;
   int _saniyeBugun = 0;
   bool ilkFalDendi = false;
+  int _tamamFal = 0; // tamamlanan (anlık fal ≥25 sn) + okunan (gelen kutusu) fal sayısı; reklam sıklığı için
   bool _eskiKullanici = false; // hafıza gelmeden önce de uygulamayı kullanıyordu
   final Map<String, FalKaydi> _fallar = {};
   final List<(String, DateTime)> _sonAcilislar = [];
@@ -93,6 +94,7 @@ class MagnusHafiza {
       _seri = (j['seri'] as num?)?.toInt() ?? 0;
       _saniyeBugun = (j['sn'] as num?)?.toInt() ?? 0;
       ilkFalDendi = j['ifd'] as bool? ?? false;
+      _tamamFal = (j['tf'] as num?)?.toInt() ?? 0;
       _eskiKullanici = j['eski'] as bool? ?? false;
       (j['fal'] as Map<String, dynamic>? ?? const {}).forEach((k, v) {
         _fallar[k] = FalKaydi.fromJson(v as Map<String, dynamic>);
@@ -113,6 +115,7 @@ class MagnusHafiza {
         'seri': _seri,
         'sn': _saniyeBugun,
         'ifd': ilkFalDendi,
+        'tf': _tamamFal,
         'eski': _eskiKullanici,
         'fal': _fallar.map((k, v) => MapEntry(k, v.toJson())),
       }),
@@ -175,7 +178,21 @@ class MagnusHafiza {
     kaydet();
   }
 
-  void okundu(String tur, DateTime now) => sonOkunan = (tur, now);
+  /// Gelen kutusundan okunan her fal bir tamamlanan fal sayılır.
+  void okundu(String tur, DateTime now) {
+    sonOkunan = (tur, now);
+    _tamamFal++;
+    kaydet();
+  }
+
+  /// Ekranda sonucu gösteren (anlık) bir fal yeterince süre açık kalıp kapandı.
+  void falTamamlandi() {
+    _tamamFal++;
+    kaydet();
+  }
+
+  /// Uygulamada toplam tamamlanan/okunan fal (geçiş reklamı için "ilk 2 fal" eşiği).
+  int get tamamlananFal => _tamamFal;
 
   /// Son 5 dakikada kaç farklı türe girildi?
   int sonFarkliTur(DateTime now) => _sonAcilislar

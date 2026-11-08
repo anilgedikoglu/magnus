@@ -4,7 +4,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../../core/services/ad_service.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
@@ -83,14 +82,7 @@ class KahinlerMenuScreen extends ConsumerWidget {
   Widget _buildKahin(BuildContext context, _Kahin kahin) {
     return GestureDetector(
       onTap: () {
-        AdService.instance.showRewarded(
-          onRewarded: () {
-            if (context.mounted) context.push('/parmak_surtme', extra: kahin.id);
-          },
-          onFailed: () {
-            if (context.mounted) context.push('/parmak_surtme', extra: kahin.id);
-          },
-        );
+        if (context.mounted) context.push('/parmak_surtme', extra: kahin.id);
       },
       child: Container(
         decoration: BoxDecoration(

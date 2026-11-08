@@ -14,7 +14,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/focus_ripple.dart';
 import '../../core/widgets/swipe_back.dart';
@@ -101,12 +100,9 @@ class _YanaScreenState extends ConsumerState<YanaScreen>
   bool get _isEn => ref.read(localeProvider) == 'en';
   String get _odakMetni => _isEn ? 'Focusing on your prophecy...' : 'Kehanetine odaklanıyorum...';
 
-  // ── Seçim butonu: rewarded reklam → akışa devam ──────────────────────────
+  // ── Seçim butonu → akışa devam ────────────────────────────────────────────
   void _onSecimTap(String tur) {
-    AdService.instance.showRewarded(
-      onRewarded: () => _onSecim(tur),
-      onFailed:   () => _onSecim(tur),
-    );
+    _onSecim(tur);
   }
 
   // ── Seçim yapıldı ─────────────────────────────────────────────────────────

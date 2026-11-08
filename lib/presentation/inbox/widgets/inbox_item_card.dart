@@ -14,11 +14,15 @@ class InboxItemCard extends ConsumerWidget {
   final VoidCallback onTap;
   final VoidCallback onDismissed;
 
+  /// Kilitli (hazırlanan) karta dokunuş: ödüllü "hemen aç" teklifi. null ise kilitli kart tepkisiz.
+  final VoidCallback? onLockedTap;
+
   const InboxItemCard({
     super.key,
     required this.item,
     required this.onTap,
     required this.onDismissed,
+    this.onLockedTap,
   });
 
   @override
@@ -33,7 +37,7 @@ class InboxItemCard extends ConsumerWidget {
       deletable: deletable,
       deleteLabel: s.deleteSwipe,
       onDelete: onDismissed,
-      onTapWhenClosed: locked ? null : onTap,
+      onTapWhenClosed: locked ? onLockedTap : onTap,
       child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           child: Row(

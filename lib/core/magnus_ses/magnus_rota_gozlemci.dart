@@ -10,12 +10,17 @@ class MagnusRotaGozlemci extends NavigatorObserver {
   static void Function(String tur)? girdi;
   static void Function(String tur, Duration sure)? cikti;
 
+  /// Son çıkıştan sonra görünen rotanın adı (geçiş reklamı "menüye dönüyor mu?" diye bakar).
+  /// Bilinmiyorsa null.
+  static String? sonHedefRota;
+
   Route<dynamic>? _aktif;
   String? _tur;
   DateTime? _baslangic;
 
-  void _kapa(Route<dynamic>? route) {
+  void _kapa(Route<dynamic>? route, [Route<dynamic>? hedef]) {
     if (route == null || !identical(route, _aktif)) return;
+    sonHedefRota = hedef?.settings.name;
     final tur = _tur!;
     final sure = DateTime.now().difference(_baslangic!);
     _aktif = null;
@@ -38,11 +43,11 @@ class MagnusRotaGozlemci extends NavigatorObserver {
   void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) => _ac(route);
 
   @override
-  void didPop(Route<dynamic> route, Route<dynamic>? previousRoute) => _kapa(route);
+  void didPop(Route<dynamic> route, Route<dynamic>? previousRoute) => _kapa(route, previousRoute);
 
   @override
-  void didRemove(Route<dynamic> route, Route<dynamic>? previousRoute) => _kapa(route);
+  void didRemove(Route<dynamic> route, Route<dynamic>? previousRoute) => _kapa(route, previousRoute);
 
   @override
-  void didReplace({Route<dynamic>? newRoute, Route<dynamic>? oldRoute}) => _kapa(oldRoute);
+  void didReplace({Route<dynamic>? newRoute, Route<dynamic>? oldRoute}) => _kapa(oldRoute, newRoute);
 }

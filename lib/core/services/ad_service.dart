@@ -2,18 +2,26 @@ import 'dart:async';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-/// Singleton reklam yöneticisi.
+import 'ad_pacing.dart';
+
+/// Singleton reklam yöneticisi. Düzen: docs/reklam_duzeni.md.
 ///
-/// Kullanım:
-///   await AdService.instance.initialize();   // main() içinde
-///   await AdService.instance.showInterstitial();
-///   await AdService.instance.showRewarded(onRewarded: ..., onFailed: ...);
+///   await AdService.instance.initialize();           // main() içinde (UMP arka planda sürer)
+///   AdService.instance.maybeShowInterstitial(...)    // yalnız doğal arada (fal kapanışı)
+///   AdService.instance.showRewardedFor(...)          // yalnız kullanıcı "izle" deyince
 ///
-/// TODO: Gerçek ID'leri aşağıdaki 3 satırda güncelle.
+/// Kurallar: ödül YALNIZ `onUserEarnedReward` gelince verilir; `canRequestAds` (UMP) olmadan reklam
+/// istenmez; iOS'ta ATT yok, istekler `nonPersonalizedAds: true`.
 class AdService {
   AdService._();
-  static final AdService instance = AdService._();
+
+  /// Yalnız testlerde alt sınıf için.
+  @visibleForTesting
+  AdService.forTest();
+
+  static AdService instance = AdService._();
 
   // ── Reklam ID'leri (platforma ÖZEL — AdMob'da iOS ve Android ayrı uygulamalar) ─
   // Android app:  ca-app-pub-6470338276121414~6209031577
@@ -26,83 +34,182 @@ class AdService {
       ? 'ca-app-pub-6470338276121414/5318605820'  // iOS — Ödüllü
       : 'ca-app-pub-6470338276121414/2337219262'; // Android — Ödüllü
 
+  /// iOS'ta ATT yok → kişiselleştirilmemiş reklam. Android'de varsayılan (UMP kararı geçerli).
+  static AdRequest _request() =>
+      Platform.isIOS ? const AdRequest(nonPersonalizedAds: true) : const AdRequest();
+
+  /// Yükleme hatasında en çok bu kadar yeniden dene (10 sn, 30 sn, 90 sn).
+  static const _retryDelays = [Duration(seconds: 10), Duration(seconds: 30), Duration(seconds: 90)];
+
   InterstitialAd? _interstitialAd;
   RewardedAd?     _rewardedAd;
   bool _interstitialLoading = false;
   bool _rewardedLoading     = false;
+  int _interstitialRetry = 0;
+  int _rewardedRetry     = 0;
+  bool _reklamDevam = false; // tam ekran reklam gösteriliyor → ikincisi başlamaz
 
   /// Admin modunda reklamlar tamamen devre dışı bırakılır.
   bool _adsDisabled = false;
+
+  /// UMP sonucu: false iken hiçbir reklam istenmez.
+  bool _canRequestAds = false;
+  bool _sdkBasladi = false;
+  int _rizaDenemesi = 0;
+  static const _rizaBeklemeleri = [Duration(seconds: 30), Duration(minutes: 2), Duration(minutes: 10)];
+
+  AdPacing? _pacing;
+
+  /// Kalıcı sıklık sayaçları (initialize'da kurulur; testte elle verilebilir).
+  AdPacing? get pacing => _pacing;
+  @visibleForTesting
+  set pacing(AdPacing? p) => _pacing = p;
 
   /// Admin mod toggle — settings admin panelinden veya godag bypass'tan çağrılır.
   void setAdsDisabled(bool value) => _adsDisabled = value;
   bool get adsDisabled => _adsDisabled;
 
-  /// Geçiş reklamı çağrı sayacı.
-  /// Her 3 çağrıdan 1'inde reklam gösterilir (1 göster, 2 atla).
-  int _interstitialCallCount = 0;
+  bool get canRequestAds => _canRequestAds;
 
   // ── Başlatma ────────────────────────────────────────────────────────────────
 
+  /// Hızlı döner (uygulama açılışını bekletmez): sayaçları yükler, rıza + SDK başlatmayı arka planda sürdürür.
   Future<void> initialize() async {
-    await MobileAds.instance.initialize();
+    try {
+      _pacing ??= AdPacing(await SharedPreferences.getInstance());
+    } catch (e) {
+      debugPrint('[AdService] Sayaçlar yüklenemedi: $e');
+    }
+    unawaited(_rizaVeBaslat());
+  }
+
+  /// UMP: her açılışta bilgi güncellenir, gerekirse form gösterilir; hata olursa akış bozulmaz.
+  Future<void> _rizaVeBaslat() async {
+    try {
+      final done = Completer<void>();
+      ConsentInformation.instance.requestConsentInfoUpdate(
+        ConsentRequestParameters(),
+        () async {
+          try {
+            await ConsentForm.loadAndShowConsentFormIfRequired((FormError? e) {
+              if (e != null) debugPrint('[AdService] Rıza formu: ${e.message}');
+              if (!done.isCompleted) done.complete();
+            });
+          } catch (e) {
+            debugPrint('[AdService] Rıza formu hatası: $e');
+            if (!done.isCompleted) done.complete();
+          }
+        },
+        (FormError e) {
+          debugPrint('[AdService] Rıza bilgisi alınamadı: ${e.message}');
+          if (!done.isCompleted) done.complete();
+        },
+      );
+      await done.future.timeout(const Duration(minutes: 3), onTimeout: () {});
+    } catch (e) {
+      debugPrint('[AdService] UMP hatası: $e');
+    }
+    await _rizaDurumunuYenile();
+    // İnternet yokken ya da geçici hatada rıza bilinmez; o oturum reklamsız kalmasın.
+    if (!_canRequestAds && _rizaDenemesi < _rizaBeklemeleri.length) {
+      Timer(_rizaBeklemeleri[_rizaDenemesi++], () => unawaited(_rizaVeBaslat()));
+    }
+  }
+
+  Future<void> _rizaDurumunuYenile() async {
+    try {
+      _canRequestAds = await ConsentInformation.instance.canRequestAds();
+    } catch (e) {
+      _canRequestAds = false;
+      debugPrint('[AdService] canRequestAds okunamadı: $e');
+    }
+    if (!_canRequestAds) return;
+    if (!_sdkBasladi) {
+      _sdkBasladi = true;
+      try {
+        await MobileAds.instance.initialize();
+      } catch (e) {
+        debugPrint('[AdService] MobileAds başlatılamadı: $e');
+        _sdkBasladi = false;
+        return;
+      }
+    }
     if (kDebugMode) return; // emülatörde video codec crash — release'de yükle
     _loadInterstitial();
     _loadRewarded();
   }
 
+  /// Kullanıcı Bilgileri 3. kart: UMP gizlilik seçenekleri gerekiyor mu?
+  Future<bool> privacyOptionsRequired() async {
+    try {
+      return await ConsentInformation.instance.getPrivacyOptionsRequirementStatus() ==
+          PrivacyOptionsRequirementStatus.required;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  Future<void> showPrivacyOptions() async {
+    try {
+      final done = Completer<void>();
+      await ConsentForm.showPrivacyOptionsForm((FormError? e) {
+        if (e != null) debugPrint('[AdService] Gizlilik seçenekleri: ${e.message}');
+        if (!done.isCompleted) done.complete();
+      });
+      await done.future.timeout(const Duration(minutes: 3), onTimeout: () {});
+    } catch (e) {
+      debugPrint('[AdService] Gizlilik formu hatası: $e');
+    }
+    await _rizaDurumunuYenile();
+  }
+
   // ── Interstitial ────────────────────────────────────────────────────────────
 
   void _loadInterstitial() {
-    if (kDebugMode) return;
+    if (kDebugMode || _adsDisabled || !_canRequestAds) return;
     if (_interstitialLoading || _interstitialAd != null) return;
     _interstitialLoading = true;
     InterstitialAd.load(
       adUnitId: _interstitialId,
-      request: const AdRequest(),
+      request: _request(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
           _interstitialAd = ad;
           _interstitialLoading = false;
+          _interstitialRetry = 0;
         },
         onAdFailedToLoad: (err) {
           _interstitialLoading = false;
           debugPrint('[AdService] Interstitial yüklenemedi: $err');
+          if (_interstitialRetry < _retryDelays.length) {
+            Timer(_retryDelays[_interstitialRetry++], _loadInterstitial);
+          }
         },
       ),
     );
   }
 
-  /// Geçiş reklamını gösterir. Kapanınca (veya yüklü değilse hemen) döner.
-  ///
-  /// [throttle] true (varsayılan) → her 3 çağrıdan 1'inde gösterilir.
-  /// [throttle] false → her çağrıda gösterilir (olumlama/özlü sözler gibi
-  ///   kendi sıklık mantığını ekranda yöneten yerler bunu kullanır).
-  Future<void> showInterstitial({VoidCallback? onClosed, bool throttle = true}) async {
-    if (_adsDisabled) { onClosed?.call(); return; }
-    if (throttle) {
-      _interstitialCallCount++;
-      // 1. çağrı → göster, 2. ve 3. çağrı → atla, 4. çağrı → göster, ...
-      if (_interstitialCallCount % 3 != 1) {
-        onClosed?.call();
-        return;
-      }
-    }
-
+  /// Doğal arada (fal kapanıp menüye dönerken) geçiş reklamı gösterir. Gösterildiyse true.
+  /// Sınırlar [AdPacing]'den: 180 sn aralık, oturumda 2, günde 5, [tamamlananFal] ≥ 2.
+  /// Hazır reklam yoksa ya da sınır doluysa sessizce false; hiçbir akışı bekletmez.
+  Future<bool> maybeShowInterstitial({required int tamamlananFal, DateTime? now}) async {
+    if (_adsDisabled || !_canRequestAds || _reklamDevam) return false;
+    final pacing = _pacing;
+    final t = now ?? DateTime.now();
+    if (pacing == null || !pacing.canShowInterstitial(t, tamamlananFal: tamamlananFal)) return false;
     final ad = _interstitialAd;
-    _interstitialAd = null;
     if (ad == null) {
-      onClosed?.call();
       _loadInterstitial();
-      return;
+      return false;
     }
+    _interstitialAd = null;
+    _reklamDevam = true;
     final completer = Completer<void>();
-    // Kapanış TEK sefer: geri çağrı + show() hatası aynı anda gelse de içerik bir kez açılır.
     void finish() {
       if (completer.isCompleted) return;
       completer.complete();
+      _reklamDevam = false;
       _loadInterstitial();
-      onClosed?.call();
     }
     ad.fullScreenContentCallback = FullScreenContentCallback(
       onAdDismissedFullScreenContent: (a) {
@@ -115,76 +222,87 @@ class AdService {
         finish();
       },
     );
+    var gosterildi = false;
     try {
+      await pacing.recordInterstitial(t); // gösterim denemesi sayılır (üst üste denemeyi önler)
       await ad.show();
+      gosterildi = true;
     } catch (e) {
-      // Platform çağrısı patlarsa kapanış geri çağrısı hiç gelmeyebilir → içeriği engelleme.
       debugPrint('[AdService] Interstitial show hatası: $e');
       ad.dispose();
       finish();
     }
-    await completer.future;
+    return gosterildi;
   }
 
   // ── Rewarded ────────────────────────────────────────────────────────────────
 
   void _loadRewarded() {
-    if (kDebugMode) return;
+    if (kDebugMode || _adsDisabled || !_canRequestAds) return;
     if (_rewardedLoading || _rewardedAd != null) return;
     _rewardedLoading = true;
     RewardedAd.load(
       adUnitId: _rewardedId,
-      request: const AdRequest(),
+      request: _request(),
       rewardedAdLoadCallback: RewardedAdLoadCallback(
         onAdLoaded: (ad) {
           _rewardedAd = ad;
           _rewardedLoading = false;
+          _rewardedRetry = 0;
         },
         onAdFailedToLoad: (err) {
           _rewardedLoading = false;
           debugPrint('[AdService] Rewarded yüklenemedi: $err');
+          if (_rewardedRetry < _retryDelays.length) {
+            Timer(_retryDelays[_rewardedRetry++], _loadRewarded);
+          }
         },
       ),
     );
   }
 
-  /// Rewarded reklamı gösterir.
-  /// - Reklam yüklüyse: gösterilir, kapanınca [onRewarded] çağrılır.
-  /// - Reklam yüklü değilse: [onFailed] hemen çağrılır (içerik engellenmez).
-  /// Not: Rewarded gösterilse bile kullanıcı izlemeden kapatırsa [onFailed] çağrılır.
-  Future<void> showRewarded({
-    required VoidCallback onRewarded,
-    required VoidCallback onFailed,
-  }) async {
-    if (_adsDisabled) { onRewarded(); return; }
+  /// Hazır bir ödüllü reklam var mı?
+  bool get isRewardedReady => _rewardedAd != null;
+
+  /// Bu ödül için teklif yapılabilir mi? Admin modunda her zaman true (ödül doğrudan verilir).
+  /// Normalde: rıza var + hazır reklam var + kalıcı sınırlar uygun.
+  bool odulMumkun(OdulTuru tur, {String? falTuru}) {
+    if (_adsDisabled) return true;
+    if (!_canRequestAds || !isRewardedReady) return false;
+    final pacing = _pacing;
+    return pacing != null && pacing.canOfferReward(tur, DateTime.now(), falTuru: falTuru);
+  }
+
+  /// Ödüllü reklamı izletir. **true yalnız `onUserEarnedReward` geldiyse.** Kapatma/hata/hazır
+  /// değil → false (ödül yok). Admin modunda reklam yok, ödül doğrudan verilir (true).
+  Future<bool> showRewardedFor(OdulTuru tur, {String? falTuru}) async {
+    if (_adsDisabled) return true;
+    final pacing = _pacing;
     final ad = _rewardedAd;
-    _rewardedAd = null;
-    if (ad == null) {
-      onFailed();
-      _loadRewarded();
-      return;
+    if (!_canRequestAds || _reklamDevam || pacing == null || ad == null ||
+        !pacing.canOfferReward(tur, DateTime.now(), falTuru: falTuru)) {
+      return false;
     }
-    bool earned = false;
-    final completer = Completer<void>();
-    void finish({required bool failed}) {
+    _rewardedAd = null;
+    _reklamDevam = true;
+    var earned = false;
+    final completer = Completer<bool>();
+    void finish() {
       if (completer.isCompleted) return;
-      completer.complete();
+      _reklamDevam = false;
       _loadRewarded();
-      if (!failed && earned) {
-        onRewarded();
-      } else {
-        onFailed();
-      }
+      completer.complete(earned);
     }
     ad.fullScreenContentCallback = FullScreenContentCallback(
       onAdDismissedFullScreenContent: (a) {
         a.dispose();
-        finish(failed: false);
+        finish();
       },
       onAdFailedToShowFullScreenContent: (a, err) {
         a.dispose();
         debugPrint('[AdService] Rewarded gösterilemedi: $err');
-        finish(failed: true);
+        earned = false;
+        finish();
       },
     );
     try {
@@ -192,8 +310,11 @@ class AdService {
     } catch (e) {
       debugPrint('[AdService] Rewarded show hatası: $e');
       ad.dispose();
-      finish(failed: true);
+      earned = false;
+      finish();
     }
-    await completer.future;
+    final sonuc = await completer.future;
+    if (sonuc) await pacing.recordReward(tur, DateTime.now(), falTuru: falTuru);
+    return sonuc;
   }
 }

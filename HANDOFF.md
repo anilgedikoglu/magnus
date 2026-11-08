@@ -56,6 +56,9 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 
 - **Magnus sesi (303 sonrası, build bekliyor):** `lib/core/magnus_ses/`: `magnus_hafiza` (cihazda kullanım hafızası), `magnus_takvim` (Diyanet 2026-2030 + millî günler; 2031 sonrası tablo eklenmeli), `magnus_ses` (seçim beyni), `magnus_rota_gozlemci` (fal giriş/çıkış). Metinler `assets/data/magnus_ses.json`: dönüş 500, giriş 500, özel gün 160, durum 251; TR+EN; 5 yazar ajan + ChatGPT adayından seçildi, iki bağımsız son okumadan geçti. Ağırbaşlı günlerde (10 Kasım, 18 Mart, 15 Temmuz) şaka yok, Ramazan'da yemek şakası yok. `karsilamalar.json` artık kullanılmıyor (testi duruyor).
 
+- **Reklam düzeni (306):** `docs/reklam_duzeni.md`; zorunlu ödüllü reklamlar kalktı. Teklifli ödüllü: hak bitti +1, hazırlanan falı hemen aç, Kısmetim/Arabam/Evim kutuları. Geçiş yalnız fal kapanırken, 180 sn / oturum 2 / gün 5 (`AdPacing`). UMP, iOS NPA, SKAdNetworkItems. AdMob panelinde GDPR mesajı açılmalı.
+- **Satın alma YOK (bilinçli):** Türkiye'de ücretli fal riski (677 sayılı Kanun, Faladdin/Binnaz soruşturması). Önerilen model: Mühür haftalık 39,99/aylık 99,99/yıllık 599,99 TL (yıllıkta 7 gün deneme), Ömürlük 1.499,99, Reklamsız 149,99, 10 hak 49,99, Kısmetim/Arabam/Evim 49,99 tek tek ya da 99,99 üçü. Avukat görüşü ya da Anıl'ın açık kararı beklenir.
+
 ## Yarım kalan
 - `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.
 - Bildirimler gerçek cihazda henüz denenmedi (Android derlemesi geçti, iOS CI'da derlenecek). Codex benzerlik teyidi yapılamadı

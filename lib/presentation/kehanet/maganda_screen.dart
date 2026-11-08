@@ -10,7 +10,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/focus_ripple.dart';
@@ -163,13 +162,10 @@ class _MagandaScreenState extends ConsumerState<MagandaScreen>
       _displayed = '';
     });
 
-    // 3s bekle → rewarded reklam → cevap animasyonu
+    // 3s bekle → cevap animasyonu
     Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
-      AdService.instance.showRewarded(
-        onRewarded: _goCevap,
-        onFailed:   _goCevap,
-      );
+      _goCevap();
     });
   }
 

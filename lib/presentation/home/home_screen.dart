@@ -81,6 +81,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/ad_pacing.dart';
+import '../../core/services/ad_service.dart';
+import '../../core/widgets/odul_teklifi.dart';
 import '../../core/magnus_ses/magnus_fal_adlari.dart';
 import '../../core/magnus_ses/magnus_hafiza.dart';
 import '../../core/magnus_ses/magnus_rota_gozlemci.dart';
@@ -181,6 +184,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
   void _falCikti(String tur, Duration sure) {
     final hafiza = _hafiza, ses = _ses;
+    // Geçiş reklamı yalnız doğal arada: fal kapanıp menüye dönerken, rota kapanırken HEMEN
+    // (docs/reklam_duzeni.md). Sınırlar AdPacing'de; hazır reklam yoksa sessizce atlanır.
+    final hedef = MagnusRotaGozlemci.sonHedefRota;
+    if (mounted &&
+        AdPacing.dogalAraMi(tur, sure, menuyeDonuyor: hedef == null || hedef == '/home')) {
+      unawaited(AdService.instance.maybeShowInterstitial(tamamlananFal: hafiza?.tamamlananFal ?? 0));
+    }
     if (hafiza == null || ses == null || !mounted) return;
     // Sonuç mesajları (hazırlanıyor, hak bitti) ekran kapandıktan hemen sonra gelir; biraz beklenir.
     Timer(const Duration(milliseconds: 600), () {
@@ -189,6 +199,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       final tamam = kutu.isNotEmpty && kutu.first.id != _falGirisUstId;
       final esik = kAnlikFallar.contains(tur) ? 6 : 20;
       final vazgecti = !tamam && sure.inSeconds < esik && _menuGorunur && _chatPending.isEmpty;
+      // Sonucu ekranda gösteren fal yeterince açık kaldıysa "tamamlanan fal" sayılır (reklam eşiği).
+      if (!tamam && kAnlikFallar.contains(tur) && sure >= AdPacing.gecisIcinMinSure) {
+        hafiza.falTamamlandi();
+      }
       hafiza.falCikti(tur, DateTime.now(), vazgecti: vazgecti, tamam: tamam);
       if (_sesKonusabilir) _sesSoyle(ses.falDonus(_baglam(), tur, sure, vazgecti: vazgecti));
     });
@@ -272,6 +286,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
   // Kilit açılma zamanlayıcısı — en erken unlockAt'e göre kurulur
   Timer? _unlockTimer;
+
+  /// Hak bitince ödüllü +1 hak teklif edilen türler (docs/reklam_duzeni.md). Diğerlerinde ek hak yok.
+  static const _odulluHakTurleri = {
+    'kahve', 'tarot', 'durugoru', 'dertortagi', 'acigercekler', 'askuyumu',
+  };
 
   // Pref anahtarları — her fal türü için tamamlanma tarihi
   static const _creditPrefKeys = {
@@ -538,6 +557,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   Future<void> _onFortuneItemTap(String type, String route) async {
     final remaining = _remainingCredits[type] ?? 1;
     if (remaining <= 0) {
+      // Hak bitti: docs'taki türlerde ödüllü +1 hak teklifi (kullanıcı seçerse); sınır dolu ya da
+      // reklam hazır değilse eski mesaj.
+      if (_odulluHakTurleri.contains(type) &&
+          AdService.instance.odulMumkun(OdulTuru.hakBitti, falTuru: type)) {
+        final kazandi = await ref.hakBittiTeklifi(context, type);
+        if (!kazandi || !mounted) return;
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.remove(_creditPrefKeys[type]!); // o türün "bugün aldın" tarihi silinir → +1 hak
+        await _refreshCredits();
+        if (mounted) await _onFortuneItemTap(type, route);
+        return;
+      }
       _tapPop = true; // menüden çıkılmadı, dokunuşa cevap → band anında
       _showDailyLimitBubble(type);
       return;

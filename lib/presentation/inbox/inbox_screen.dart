@@ -5,7 +5,9 @@ import '../../core/constants/app_text_styles.dart';
 import '../../core/l10n/app_strings.dart';
 import '../../core/magnus_ses/magnus_fal_adlari.dart';
 import '../../core/magnus_ses/magnus_hafiza.dart';
+import '../../core/services/ad_pacing.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/odul_teklifi.dart';
 import '../../core/widgets/glass_tab_bar.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/providers.dart';
@@ -171,6 +173,7 @@ class InboxScreen extends ConsumerWidget {
         return InboxItemCard(
           item: item,
           onTap: () => _openDetail(context, ref, item),
+          onLockedTap: () => _openLocked(context, ref, item),
           onDismissed: () => ref.read(inboxProvider.notifier).deleteItem(item.id),
         );
       },
@@ -178,15 +181,16 @@ class InboxScreen extends ConsumerWidget {
   }
 
   void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
-    // Rewarded reklam yalnızca yeni (okunmamış) fallarda gösterilir.
-    if (!item.isRead) {
-      AdService.instance.showRewarded(
-        onRewarded: () => _navigateToDetail(context, ref, item),
-        onFailed:   () => _navigateToDetail(context, ref, item),
-      );
-    } else {
-      _navigateToDetail(context, ref, item);
-    }
+    _navigateToDetail(context, ref, item);
+  }
+
+  /// Hazırlanan (kilitli) karta dokunuş: kullanıcı isterse ödüllü reklamla fal hemen hazır olur.
+  /// Reklam hazır değil / sınır dolu ise kart eski davranışında (dokunuş bir şey yapmaz).
+  Future<void> _openLocked(BuildContext context, WidgetRef ref, InboxItem item) async {
+    if (!AdService.instance.odulMumkun(OdulTuru.hemenAc)) return;
+    final notifier = ref.read(inboxProvider.notifier); // await'ten ÖNCE
+    final kazandi = await ref.hemenAcTeklifi(context);
+    if (kazandi) await notifier.unlockNow(item.id);
   }
 
   void _navigateToDetail(BuildContext context, WidgetRef ref, InboxItem item) {
@@ -195,9 +199,16 @@ class InboxScreen extends ConsumerWidget {
       final tur = falTuruGelenKutusu(item.fortuneTypeKey);
       if (tur != null) MagnusHafiza.aktif?.okundu(tur, DateTime.now());
     }
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => InboxDetailScreen(item: item)),
-    );
+    final basla = DateTime.now();
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (_) => InboxDetailScreen(item: item)))
+        .then((_) {
+      // Okunan faldan çıkış doğal ara: geçiş reklamı (sınırlar AdPacing'de, yeterince okunduysa).
+      if (DateTime.now().difference(basla) >= AdPacing.gecisIcinMinSure) {
+        AdService.instance.maybeShowInterstitial(
+            tamamlananFal: MagnusHafiza.aktif?.tamamlananFal ?? 0);
+      }
+    });
   }
 
   Future<void> _confirmClearAll(BuildContext context, WidgetRef ref) async {

@@ -75,14 +75,16 @@
 // ═════════════════════════════════════════════════════════════════════════════
 
 import 'dart:async';
-import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/utils/variable_replacer.dart';
+import '../../core/magnus_ses/magnus_fal_adlari.dart';
+import '../../core/magnus_ses/magnus_hafiza.dart';
+import '../../core/magnus_ses/magnus_rota_gozlemci.dart';
+import '../../core/magnus_ses/magnus_ses.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/filmed_image.dart';
@@ -93,7 +95,6 @@ import '../../core/widgets/word_safe_text.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
 import 'home_chat_box.dart';
-import 'greeting_filter.dart';
 import 'menu_layout.dart';
 
 /// Ana menünün (menu layer 1, ikonlar) düz arka plan rengi (Anıl'ın örneği: rgb 12,15,20).
@@ -124,13 +125,118 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   // Değilse (fal gönderilip menüye DÖNÜLDÜ) → menü önce görünür, mesaj 3 sn SONRA (Anıl, 2026-11-07).
   bool _tapPop = false;
   VoidCallback? _perdeDinleyici; // açılış perdesi kalkınca 3 sn sayacını başlatır
-  String _selamlama = ''; // async yüklenir — JSON'dan
+  String _selamlama = ''; // async yüklenir
+
+  // Magnus'un sesi: hafıza + seçim beyni (core/magnus_ses).
+  MagnusHafiza? _hafiza;
+  MagnusSes? _ses;
+  late final AppLifecycleListener _yasam;
+  DateTime _oturumBas = DateTime.now();
+  DateTime? _arkaPlanBas;
+  String? _falGirisUstId; // fala girerken gelen kutusunun en üstündeki öğe
+  DateTime? _onemliMesajAni; // fal durumu / hak mesajı yakın zamanda söylendi
+
+  /// Arka planda bu kadar kaldıysa dönüş yeni bir "geliş" sayılır.
+  static const _yeniGelisEsigi = Duration(seconds: 60);
+
+  MagnusBaglam _baglam() => MagnusBaglam(
+        now: DateTime.now(),
+        profile: ref.read(userProfileProvider),
+        isEn: ref.read(localeProvider) == 'en',
+        gelenKutusu: ref.read(inboxProvider),
+        oturumSaniye: DateTime.now().difference(_oturumBas).inSeconds,
+      );
+
+  bool get _menuGorunur =>
+      mounted &&
+      ref.read(mainTabProvider) == MainTab.home &&
+      !Navigator.of(context, rootNavigator: true).canPop();
+
+  /// Magnus şimdi kendiliğinden konuşabilir mi? Metin seçilmeden ÖNCE bakılır: söylenmeyen söz
+  /// tekrarsız listeye yazılmasın, tek seferlik sözler boşa gitmesin.
+  bool get _sesKonusabilir {
+    if (!_menuGorunur || !_chatGateOpen || _chatPending.isNotEmpty) return false;
+    final an = _onemliMesajAni;
+    return an == null || DateTime.now().difference(an) > const Duration(seconds: 7);
+  }
+
+  void _sesSoyle(String? metin) {
+    if (metin != null && mounted) _chatBox.currentState?.say(metin, now: true);
+  }
+
+  void _sekmeDonus(int onceki) {
+    final kaynak = onceki == MainTab.inbox ? DonusKaynagi.gelenKutusu : DonusKaynagi.profil;
+    Timer(const Duration(milliseconds: 400), () {
+      final ses = _ses;
+      if (ses == null || !_sesKonusabilir) return;
+      _sesSoyle(ses.sekmeDonus(_baglam(), kaynak));
+    });
+  }
+
+  void _falGirdi(String tur) {
+    _hafiza?.falGirdi(tur, DateTime.now());
+    final kutu = ref.read(inboxProvider);
+    _falGirisUstId = kutu.isEmpty ? null : kutu.first.id;
+  }
+
+  void _falCikti(String tur, Duration sure) {
+    final hafiza = _hafiza, ses = _ses;
+    if (hafiza == null || ses == null || !mounted) return;
+    // Sonuç mesajları (hazırlanıyor, hak bitti) ekran kapandıktan hemen sonra gelir; biraz beklenir.
+    Timer(const Duration(milliseconds: 600), () {
+      if (!mounted) return;
+      final kutu = ref.read(inboxProvider);
+      final tamam = kutu.isNotEmpty && kutu.first.id != _falGirisUstId;
+      final esik = kAnlikFallar.contains(tur) ? 6 : 20;
+      final vazgecti = !tamam && sure.inSeconds < esik && _menuGorunur && _chatPending.isEmpty;
+      hafiza.falCikti(tur, DateTime.now(), vazgecti: vazgecti, tamam: tamam);
+      if (_sesKonusabilir) _sesSoyle(ses.falDonus(_baglam(), tur, sure, vazgecti: vazgecti));
+    });
+  }
+
+  void _arkaPlanaGecti() {
+    final now = DateTime.now();
+    _arkaPlanBas = now;
+    _hafiza?.sureEkle(now.difference(_oturumBas), now);
+  }
+
+  void _onPlanaGeldi() {
+    final now = DateTime.now();
+    final bas = _arkaPlanBas;
+    if (bas == null) return; // bildirim perdesi gibi kısa kesintide oturum sürer
+    _arkaPlanBas = null;
+    _oturumBas = now;
+    final hafiza = _hafiza, ses = _ses;
+    if (hafiza == null || ses == null) return;
+    if (now.difference(bas) < _yeniGelisEsigi) return;
+    final bilgi = hafiza.girisKaydet(now);
+    Timer(const Duration(milliseconds: 1200), () {
+      if (!_sesKonusabilir) return;
+      _sesSoyle(ses.giris(_baglam(), bilgi));
+    });
+  }
+
+  /// Az önce hazır olan fal varsa haber verir.
+  void _hazirOlaniSoyle() {
+    final ses = _ses;
+    if (ses == null || !_sesKonusabilir) return;
+    final now = DateTime.now();
+    for (final i in ref.read(inboxProvider)) {
+      final an = DateTime.tryParse(i.unlockAt ?? '');
+      if (an == null || i.isRead || i.isLocked) continue;
+      if (now.difference(an).inSeconds < 90) {
+        _sesSoyle(ses.hazirOldu(_baglam(), i));
+        return;
+      }
+    }
+  }
 
   /// Magnus'un yeni mesajı.
   void _say(String text) {
     if (!mounted) return;
     if (_tapPop) {
       _tapPop = false;
+      _onemliMesajAni = DateTime.now();
       _chatBox.currentState?.say(text, now: true);
       return;
     }
@@ -145,6 +251,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   void _flushChat() {
     final box = _chatBox.currentState;
     if (box == null) return;
+    if (_chatPending.isNotEmpty) _onemliMesajAni = DateTime.now();
     _chatPending.forEach(box.say);
     _chatPending.clear();
   }
@@ -194,6 +301,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   @override
   void initState() {
     super.initState();
+    _yasam = AppLifecycleListener(onPause: _arkaPlanaGecti, onResume: _onPlanaGeldi);
+    MagnusRotaGozlemci.girdi = _falGirdi;
+    MagnusRotaGozlemci.cikti = _falCikti;
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _scheduleUnlockTimer();
       _refreshCredits();
@@ -375,6 +485,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     if (d != null) StartupDisclaimer.perdeAcik.removeListener(d);
     _unlockTimer?.cancel();
     _chatTimer?.cancel();
+    _yasam.dispose();
+    MagnusRotaGozlemci.girdi = null;
+    MagnusRotaGozlemci.cikti = null;
     _gridScrollCtrl.dispose();
     super.dispose();
   }
@@ -402,6 +515,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       // inboxProvider'ı yenile → readyUnreadCountProvider → flare yansır
       ref.invalidate(inboxProvider);
       setState(() {});
+      _hazirOlaniSoyle();
       _scheduleUnlockTimer(); // sonraki kilit için tekrar kur
     });
   }
@@ -586,11 +700,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     ref.listen<int>(mainTabProvider, (prev, next) {
       if (next != MainTab.home) _scheduleUnlockTimer();
       // Ana menüye HER dönüşte (Codex: ayarlar→reset→inbox→ana menü yolu kaçıyordu).
-      if (next == MainTab.home && prev != MainTab.home && mounted) _refreshCredits();
+      if (next == MainTab.home && prev != MainTab.home && mounted) {
+        _refreshCredits();
+        if (prev != null) _sekmeDonus(prev);
+      }
     });
     // Ana menüdeyken bardaki eve tekrar dokunuş → listenin başına kaydır (iOS alışkanlığı).
     // Yalnız ana menü görünürken (başka sekmeye tekrar dokunuş listeyi başa sarmasın).
     // Dil değişince kutuda eski dilde yazı kalmasın.
+    // Yeni fal gelince kilit zamanlayıcısı kurulsun (hazır olunca haber vermek için).
+    ref.listen(inboxProvider, (_, __) => _scheduleUnlockTimer());
     ref.listen<String>(localeProvider, (prev, next) {
       if (prev == next) return;
       final name = ref.read(userProfileProvider).name;
@@ -769,167 +888,27 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   // ── Ana Menü 1. Sohbet Balonu ──────────────────────────────────────────────
   // App açılışında bir kez hesaplanır (didChangeDependencies).
   // Her build'de yeniden çağrılmaz — typewriter RangeError'ı önler.
+  /// Hafızayı açar, bu gelişi kaydeder ve karşılamayı hazırlar.
   Future<void> _loadSelamlama() async {
+    final profile = ref.read(userProfileProvider);
+    final yedek = ref.read(localeProvider) == 'en'
+        ? (profile.name.isNotEmpty ? 'Welcome ${profile.name}!' : 'Welcome!')
+        : (profile.name.isNotEmpty ? 'Hoş geldin ${profile.name}!' : 'Hoş geldin!');
     try {
-      final profile = ref.read(userProfileProvider);
-      final vars = profile.toVariableMap();
-      final isEn = ref.read(localeProvider) == 'en';
       final prefs = await SharedPreferences.getInstance();
-      final raw = await rootBundle.loadString('assets/data/karsilamalar.json');
-      final data = jsonDecode(raw) as Map<String, dynamic>;
-
-      final now = DateTime.now();
-      final todayStr = '${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
-
-      String metin;
-
-      // ─── 1. İLK KEZ GELİŞ ───────────────────────────────────────
-      final ilkGirisDone = prefs.getBool('ilk_giris_yapildi') ?? false;
-      if (!ilkGirisDone) {
-        await prefs.setBool('ilk_giris_yapildi', true);
-        metin = (isEn ? data['ilk_giris_en'] as String? : null) ??
-            data['ilk_giris'] as String? ??
-            (isEn ? 'And here I am! Welcome {{isim}}.' : 'Ve işte karşındayım! Hoş geldin {{isim}}.');
-        metin = VariableReplacer.replace(metin, vars);
-        if (!mounted) return;
-        _selamlamaHazir(metin);
-        return;
-      }
-
-      // ─── Günlük ziyaret sayacı ───────────────────────────────────
-      final visitDate = prefs.getString('karsilama_tarih') ?? '';
-      int visitCount;
-      if (visitDate != todayStr) {
-        visitCount = 1;
-        await prefs.setString('karsilama_tarih', todayStr);
-        await prefs.setInt('karsilama_sayi', 1);
-      } else {
-        visitCount = (prefs.getInt('karsilama_sayi') ?? 0) + 1;
-        await prefs.setInt('karsilama_sayi', visitCount);
-      }
-
-      vars['ziyaret'] = '$visitCount'; // "Bugün {{ziyaret}}. kez beraberiz"
-      // Güne, vakte ve kişiye özel metinler yalnız uyan kullanıcıya.
-      final karsilamalar = (data['karsilamalar'] as List)
-          .map((e) => e as Map<String, dynamic>)
-          .where((e) => greetingMatches(e['kosullar'] as List?, profile, now))
-          .toList();
-      final biliyormuydun = (data['biliyormuydun'] as List)
-          .map((e) => e as Map<String, dynamic>)
-          .toList();
-
-      // ─── 2. ÖZEL GÜN (sadece günün ilk ziyaretinde) ─────────────
-      if (visitCount == 1) {
-        final ozelGunler = (data['ozel_gunler'] as List)
-            .map((e) => e as Map<String, dynamic>)
-            .toList();
-        Map<String, dynamic>? ozelEslesme;
-        for (final og in ozelGunler) {
-          final ay  = og['ay'] as int;
-          final gun = og['gun'] as int;
-          if (ay == 0 && gun == 0) {
-            if (profile.birthDate != null && profile.birthDate!.isNotEmpty) {
-              try {
-                final bd = DateTime.parse(profile.birthDate!);
-                if (bd.month == now.month && bd.day == now.day) {
-                  ozelEslesme = og;
-                  break;
-                }
-              } catch (_) {}
-            }
-          } else if (ay == now.month && gun == now.day) {
-            ozelEslesme = og;
-            break;
-          }
-        }
-        if (ozelEslesme != null) {
-          final ozMetin = (isEn ? ozelEslesme['metin_en'] as String? : null) ??
-              ozelEslesme['metin'] as String;
-          metin = VariableReplacer.replace(ozMetin, vars);
-          if (!mounted) return;
-          _selamlamaHazir(metin);
-          return;
-        }
-      }
-
-      // ─── 3. ZİYARET SAYISINA GÖRE METİN SEÇİMİ ─────────────────
-      // ziyaret=1..5 spesifik, ziyaret=6 → 6+ için catch-all
-      final ziyaretKey = visitCount.clamp(1, 6);
-      var havuz = karsilamalar
-          .where((e) => (e['ziyaret'] as int? ?? 1) == ziyaretKey)
-          .toList();
-      if (havuz.isEmpty) {
-        havuz = karsilamalar
-            .where((e) => (e['ziyaret'] as int? ?? 1) == 6)
-            .toList();
-      }
-
-      // Çok uzun karşılama metinlerini ELE (Anıl, 2026-11-06); sığmayanlar kutuda sayfalanır.
-      // Havuz tümüyle uzunsa güvenli yedek: filtresiz havuz.
-      bool kisa(Map<String, dynamic> e) {
-        final t = ((isEn ? e['metin_en'] as String? : null) ?? e['metin'] as String? ?? '').trim();
-        return t.length <= 110;
-      }
-      final havuzKisa = havuz.where(kisa).toList();
-      if (havuzKisa.isNotEmpty) havuz = havuzKisa;
-
-      // %10 Biliyor muydun? (yalnızca 1. ziyarette; yalnız kısa olanlar — uzunlar artık gösterilmez)
-      List<Map<String, dynamic>> secimHavuzu = havuz;
-      String noRepeatKey = 'karsilama_gosterilen_$ziyaretKey';
-      if (visitCount == 1 && Random().nextDouble() < 0.10) {
-        final bmKisa = biliyormuydun.where(kisa).toList();
-        if (bmKisa.isNotEmpty) {
-          secimHavuzu = bmKisa;
-          noRepeatKey = 'karsilama_gosterilen_biliyormuydun';
-        }
-      }
-
-      metin = secimHavuzu.isNotEmpty
-          ? _noRepeatSec(prefs, noRepeatKey, secimHavuzu, isEn)
-          : (profile.name.isNotEmpty
-              ? (isEn ? 'Welcome ${profile.name}!' : 'Hoş geldin ${profile.name}!')
-              : (isEn ? 'Welcome!' : 'Hoş geldin!'));
-
-      metin = VariableReplacer.replace(metin, vars);
+      final hafiza = MagnusHafiza(prefs);
+      MagnusHafiza.aktif = hafiza;
+      final bilgi = hafiza.girisKaydet(DateTime.now());
+      final ses = MagnusSes(prefs, hafiza);
+      await ses.yukle();
       if (!mounted) return;
-      _selamlamaHazir(metin);
+      _hafiza = hafiza;
+      _ses = ses;
+      _selamlamaHazir(ses.giris(_baglam(), bilgi) ?? yedek);
     } catch (e) {
-      final name = ref.read(userProfileProvider).name;
-      if (!mounted) return;
-      _selamlamaHazir(name.isNotEmpty ? 'Hoş geldin $name!' : 'Hoş geldin!');
+      debugPrint('Magnus sesi açılamadı: $e');
+      if (mounted) _selamlamaHazir(yedek);
     }
-  }
-
-  /// No-repeat seçim: havuzdaki tüm metinler gösterilmeden aynısı tekrar gelmez.
-  String _noRepeatSec(SharedPreferences prefs, String key,
-      List<Map<String, dynamic>> havuz, [bool isEn = false]) {
-    final shown = prefs.getStringList(key) ?? [];
-    final allIds = havuz.map((e) => '${e['id']}').toList();
-
-    // Gösterilmemiş olanlar
-    var available = havuz.where((e) => !shown.contains('${e['id']}')).toList();
-
-    // Hepsi bitti → son gösterileni koruyarak sıfırla
-    if (available.isEmpty) {
-      final lastId = shown.isNotEmpty ? shown.last : null;
-      final resetShown = lastId != null ? [lastId] : <String>[];
-      prefs.setStringList(key, resetShown);
-      available = havuz.where((e) => e['id'].toString() != lastId).toList();
-      if (available.isEmpty) available = List.from(havuz);
-    }
-
-    available.shuffle(Random());
-    final pick = available.first;
-
-    // Seçimi kaydet (listeyi gereksiz şişirmemek için sadece son N ID tut)
-    final updated = [...shown, '${pick['id']}'];
-    // Havuzdan fazla ID biriktirme — en fazla havuz.length kadar tut
-    final trimmed = updated.length > allIds.length
-        ? updated.sublist(updated.length - allIds.length)
-        : updated;
-    prefs.setStringList(key, trimmed);
-
-    return (isEn ? pick['metin_en'] as String? : null) ?? pick['metin'] as String;
   }
 }
 

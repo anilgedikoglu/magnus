@@ -54,6 +54,8 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 
 - **303 sonrası main'de (build bekliyor):** Lamba düğmesinde ampul simgesi yerine ortalı AÇIK / KAPALI (`onLabel/offLabel`, nokta dokusu kaldırıldı); kenar ışığının sona yakın atlaması düzeltildi (yön yalnız tam oturunca değişir).
 
+- **Magnus sesi (303 sonrası, build bekliyor):** `lib/core/magnus_ses/`: `magnus_hafiza` (cihazda kullanım hafızası), `magnus_takvim` (Diyanet 2026-2030 + millî günler; 2031 sonrası tablo eklenmeli), `magnus_ses` (seçim beyni), `magnus_rota_gozlemci` (fal giriş/çıkış). Metinler `assets/data/magnus_ses.json`: dönüş 500, giriş 500, özel gün 160, durum 251; TR+EN; 5 yazar ajan + ChatGPT adayından seçildi, iki bağımsız son okumadan geçti. Ağırbaşlı günlerde (10 Kasım, 18 Mart, 15 Temmuz) şaka yok, Ramazan'da yemek şakası yok. `karsilamalar.json` artık kullanılmıyor (testi duruyor).
+
 ## Yarım kalan
 - `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.
 - Bildirimler gerçek cihazda henüz denenmedi (Android derlemesi geçti, iOS CI'da derlenecek). Codex benzerlik teyidi yapılamadı

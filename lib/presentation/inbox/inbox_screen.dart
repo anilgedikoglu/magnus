@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/l10n/app_strings.dart';
+import '../../core/magnus_ses/magnus_fal_adlari.dart';
+import '../../core/magnus_ses/magnus_hafiza.dart';
 import '../../core/services/ad_service.dart';
 import '../../core/widgets/glass_tab_bar.dart';
 import '../../data/models/inbox_item.dart';
@@ -190,6 +192,8 @@ class InboxScreen extends ConsumerWidget {
   void _navigateToDetail(BuildContext context, WidgetRef ref, InboxItem item) {
     if (!item.isRead) {
       ref.read(inboxProvider.notifier).markRead(item.id);
+      final tur = falTuruGelenKutusu(item.fortuneTypeKey);
+      if (tur != null) MagnusHafiza.aktif?.okundu(tur, DateTime.now());
     }
     Navigator.of(context).push(
       MaterialPageRoute(builder: (_) => InboxDetailScreen(item: item)),

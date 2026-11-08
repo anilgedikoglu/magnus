@@ -9,6 +9,7 @@
 //   • Yazı değişimi geçişsiz, tek karede; yeni yazı 1,1 sn sonra ilk taramasına başlar.
 //
 // İki satıra sığmayan mesaj cümle cümle sayfalanır; sayfalar sırayla değişir, yazı kesilmez.
+// Metinde \n varsa her parça ayrı sayfadır: birincisi görünür, bekler, sonra ikincisi gelir.
 
 import 'dart:async';
 import 'dart:math' as math;
@@ -77,6 +78,7 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
   String? _message;
   List<String> _pages = const [];
   int _page = 0;
+  bool _dongu = false; // kendiliğinden bölünen uzun mesaj başa döner; \n ile yazılan sırada biter
   double _width = 0;
   TextScaler? _scaler;
   bool _holding = false;
@@ -166,7 +168,7 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
     } else if (!last) {
       setState(() => _page++);
       _startPage();
-    } else if (_pages.length > 1) {
+    } else if (_pages.length > 1 && _dongu) {
       setState(() => _page = 0); // uzun mesaj bütün kalsın: başa döner
       _startPage();
     }
@@ -202,7 +204,9 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
       return ok;
     }
 
-    final pages = paginateChatText(text, fits);
+    final parcalar = text.split('\n').map((p) => p.trim()).where((p) => p.isNotEmpty).toList();
+    final pages = [for (final p in parcalar) ...paginateChatText(p, fits)];
+    _dongu = parcalar.length <= 1;
     return pages.isEmpty ? [text] : pages;
   }
 

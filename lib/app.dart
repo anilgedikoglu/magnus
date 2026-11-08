@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/utils/variable_replacer.dart';
+import 'core/magnus_ses/magnus_rota_gozlemci.dart';
 import 'core/widgets/glass_theme.dart';
 import 'core/widgets/edge_swipe_back.dart';
 import 'core/widgets/startup_disclaimer.dart';
@@ -78,7 +79,7 @@ final routerProvider = Provider<GoRouter>((ref) {
     navigatorKey: _rootKey,
     initialLocation: initialLocation,
     // Açık diyalog / alt sayfa varken yüzen cam bar gizlenir (shell/floating_bar.dart).
-    observers: [FloatingBarRouteObserver()],
+    observers: [FloatingBarRouteObserver(), MagnusRotaGozlemci()],
     redirect: (context, state) {
       final onboarded = ref.read(onboardingCompleteProvider);
       final picked = ref.read(languagePickedProvider);
@@ -180,6 +181,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/astroloji',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
+          name: '/astroloji',
           child: const AstrolojiScreen(),
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
@@ -192,6 +194,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/biyoritim',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
+          name: '/biyoritim',
           child: const BiyoritimScreen(),
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
@@ -204,6 +207,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/dogumharitasi',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
+          name: '/dogumharitasi',
           child: const DogumHaritasiScreen(),
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
@@ -216,6 +220,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/kaderkitabi',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
+          name: '/kaderkitabi',
           child: const KaderKitabiScreen(),
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
@@ -228,6 +233,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/numeroloji',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
+          name: '/numeroloji',
           child: const NumerologiScreen(),
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
@@ -240,6 +246,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/astrotakvim',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
+          name: '/astrotakvim',
           child: const AstroTakvimScreen(),
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
@@ -389,6 +396,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/durugoru',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
+          name: '/durugoru',
           child: const DurugoruScreen(),
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => FadeTransition(
@@ -401,6 +409,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/inbox-full',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
+          name: '/inbox-full',
           child: const InboxScreen(),
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => SlideTransition(
@@ -416,6 +425,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/settings',
         parentNavigatorKey: _rootKey,
         pageBuilder: (_, __) => CustomTransitionPage(
+          name: '/settings',
           child: const SettingsScreen(),
           opaque: true,
           transitionsBuilder: (_, anim, __, child) => SlideTransition(

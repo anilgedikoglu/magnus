@@ -37,7 +37,10 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 - **297 sonrası main'de (build bekliyor):** Kehanet menüsü 5 kartı ekran yüksekliğine göre boyutlanır, kaydırma yok
   (`kehanet_menu_screen.dart`, test `test/kehanet_menu_fit_test.dart`). Bildirimler varsayılan AÇIK: sistem izni ilk fal
   gönderilince bir kez istenir (`askOnce`, prefs `bildirim_izni_soruldu`), reddedilirse düğme kapanır. Lamba sürgüsü 1/3 boyut
-  (93 pt), dokunma alanı en az 48 pt (`_touchPad`).
+  (93 pt), dokunma alanı en az 48 pt (`_touchPad`). Ana menü: "ana menüsü karşında" balonu kaldırıldı, yalnız mesaj; karşılamalar
+  105 metin yenilendi (altın/Plus/eski özellikler gitti), gün-vakit-kişi koşulları `greeting_filter.dart`, `{{ziyaret}}` değişkeni.
+  Arabam her açılışta bulanık arama; Evim harita yerine 16 bulanık ev (`assets/images/evim/ev_01..16.jpg`, ChatGPT). Kader Kitabı:
+  sonraki sayfa varsa sağ sayfada ok.
 
 ## Yarım kalan
 - `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.

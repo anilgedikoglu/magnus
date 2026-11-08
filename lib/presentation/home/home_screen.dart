@@ -13,10 +13,7 @@
 //             rastgele seçilir (isim dahil, örn. "Hoş geldin Anıl!").
 //             Renk: yeşil-camgöbeği gradient (#1A6B5A → #1A5E6B).
 //
-//   Balon 2 : Sabit metin — "Magnus'un ana menüsü karşında!"
-//             Renk: mor gradient (#3A1F8C → #4835A6).
-//
-//   Balon 3+ : Dinamik ekstra balonlar (_extraBubbles listesi).
+//   Balon 2+ : Dinamik ekstra balonlar (_extraBubbles listesi).
 //             Şu anda tetiklenen durumlar:
 //             • Tarot falı gönderildi → turuncu uyarı balonu + mor balon
 //             • Günlük fal hakkı doldu → kırmızımsı uyarı + mor balon
@@ -110,6 +107,7 @@ import '../../core/widgets/word_safe_text.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
 import 'home_header_layout.dart';
+import 'greeting_filter.dart';
 import 'menu_layout.dart';
 
 /// Ana menünün (menu layer 1, ikonlar) düz arka plan rengi (Anıl'ın örneği: rgb 12,15,20).
@@ -209,7 +207,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       }
     });
     // Yazacak yeni balon yoksa (hepsi zaten yazılı) bekleme sayacını hemen başlat.
-    if (_typingIndex >= 2 + _extraBubbles.length) _startHoldTimer();
+    if (_typingIndex >= 1 + _extraBubbles.length) _startHoldTimer();
   }
 
   /// Yazı tamamlandıktan sonra çağrılır: [_pendingHold] kadar bekleyip bandı gizler.
@@ -258,8 +256,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     setState(() => _rowH[i] = h);
   }
 
-  /// O an görünen balon sayısı (sabit 2 + ekstralar; yazılan balon dahil).
-  int get _visibleBubbles => (_typingIndex + 1).clamp(1, 2 + _extraBubbles.length);
+  /// O an görünen balon sayısı (karşılama + ekstralar; yazılan balon dahil).
+  int get _visibleBubbles => (_typingIndex + 1).clamp(1, 1 + _extraBubbles.length);
 
   /// Layer 2'nin hedef yüksekliği: son en çok [kChatMaxRows] satırın ölçülen boyları +
   /// aralıklar + iç boşluklar. Ölçülmemiş satır için ilk satırın boyu (yoksa tahmin).
@@ -334,7 +332,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       }
     });
     // TÜM balonlar yazıldıysa → bekleme sayacı burada başlar (yazı tamamlandıktan HOLD sonra kapan).
-    if (_typingIndex >= 2 + _extraBubbles.length) _startHoldTimer();
+    if (_typingIndex >= 1 + _extraBubbles.length) _startHoldTimer();
   }
 
   bool _selamlamaYuklendi = false;
@@ -381,11 +379,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
         borderColor: const Color(0xFFE8820C),
       ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
-      ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_chatScrollCtrl.hasClients) {
@@ -414,11 +407,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
         borderColor: const Color(0xFFE8820C),
       ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
-      ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_chatScrollCtrl.hasClients) {
@@ -443,11 +431,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
         borderColor: const Color(0xFFE8820C),
       ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
-      ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_chatScrollCtrl.hasClients) {
@@ -470,11 +453,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         text: ref.read(l10nProvider).ruyaSentBubble(name),
         gradient: const [Color(0xFF1A0A4C), Color(0xFF2D1580)],
         borderColor: const Color(0xFF7B5CF6),
-      ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
       ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -504,11 +482,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         gradient: const [Color(0xFF0A1A10), Color(0xFF0F2D1A)],
         borderColor: const Color(0xFFB8941F),
       ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
-      ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_chatScrollCtrl.hasClients) {
@@ -537,11 +510,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         gradient: const [Color(0xFF2A0008), Color(0xFF4A0012)],
         borderColor: const Color(0xFFCC2244),
       ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
-      ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_chatScrollCtrl.hasClients) {
@@ -565,11 +533,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         gradient: const [Color(0xFF1A0A2E), Color(0xFF2D1255)],
         borderColor: const Color(0xFF9B3FCC),
       ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
-      ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_chatScrollCtrl.hasClients) {
@@ -592,11 +555,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         text: ref.read(l10nProvider).yuzFaliSentBubble(name),
         gradient: const [Color(0xFF1A0A2E), Color(0xFF2D1255)],
         borderColor: const Color(0xFF9B3FCC),
-      ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
       ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -798,11 +756,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         borderColor: const Color(0xFF7755CC),
         iconPath: bubbleIcon,
       ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
-      ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_chatScrollCtrl.hasClients) {
@@ -826,11 +779,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         text: limitText,
         gradient: const [Color(0xFF5C2508), Color(0xFF7A3510)],
         borderColor: const Color(0xFFCC6622),
-      ));
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
       ));
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -1107,17 +1055,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
   /// [height]: son en çok 3 satır kadar; daha eski balonlar yukarı kayıp gizlenir.
   Widget _buildChatHeader(double height, int shown) {
-    // Tüm balonları tek listede birleştir (sabit 2 + dinamik ekstralar)
+    // Karşılama + dinamik ekstralar
     final bubbles = [
       _ExtraBubble(
         text: _selamlama, // initState/didChangeDependencies'te bir kez hesaplandı
         gradient: const [Color(0xFF1A6B5A), Color(0xFF1A5E6B)],
         borderColor: const Color(0xFF2DAAA0),
-      ),
-      _ExtraBubble(
-        text: ref.read(l10nProvider).magnusMainMenu,
-        gradient: const [Color(0xFF3A1F8C), Color(0xFF4835A6)],
-        borderColor: const Color(0xFF7B5ECC),
       ),
       ..._extraBubbles,
     ];
@@ -1352,8 +1295,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         await prefs.setInt('karsilama_sayi', visitCount);
       }
 
+      vars['ziyaret'] = '$visitCount'; // "Bugün {{ziyaret}}. kez beraberiz"
+      // Güne, vakte ve kişiye özel metinler yalnız uyan kullanıcıya.
       final karsilamalar = (data['karsilamalar'] as List)
           .map((e) => e as Map<String, dynamic>)
+          .where((e) => greetingMatches(e['kosullar'] as List?, profile, now))
           .toList();
       final biliyormuydun = (data['biliyormuydun'] as List)
           .map((e) => e as Map<String, dynamic>)

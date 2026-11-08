@@ -147,7 +147,7 @@
     },
     {
       "id": 19,
-      "metin": "Magnus'dan yeni bir günde tekrar merhabalar {{isim}}. Bugünün Dünya Tiyatro Günü olduğunu biliyor muydun? Hangi film ya da dizi canlı canlı izlenen güzel bir tiyatronun yerini tutabilir ki, öyle değil mi? Umarım bu sanatı hep yaşar ve yaşatırız. Ülkemizde de daha fazla gelişmesini diliyorum...",
+      "metin": "Magnus'tan yeni bir günde tekrar merhabalar {{isim}}. Bugünün Dünya Tiyatro Günü olduğunu biliyor muydun? Hangi film ya da dizi canlı canlı izlenen güzel bir tiyatronun yerini tutabilir ki, öyle değil mi? Umarım bu sanatı hep yaşar ve yaşatırız. Ülkemizde de daha fazla gelişmesini diliyorum...",
       "dosya": "dunyatiyatrogunu",
       "ay": 3,
       "gun": 27,
@@ -243,9 +243,9 @@
     },
     {
       "id": 2,
-      "metin": "Selam!",
+      "metin": "Telveler kıpırdadı, demek ki sen geliyordun {{isim}}.",
       "ziyaret": 1,
-      "metin_en": "Hi!"
+      "metin_en": "The coffee grounds stirred, so I knew you were coming, {{isim}}."
     },
     {
       "id": 3,
@@ -273,9 +273,9 @@
     },
     {
       "id": 7,
-      "metin": "Tekrar merhaba! Sen sık uğrayan bir takipçimsin {{isim}}. Magnus Plus üyesi olmayı düşünmez misin? Şu reklamlar aramızdan kalksa ne güzel olur...",
+      "metin": "Tekrar merhaba {{isim}}! Bugün fincanın dibinde ne var, birlikte bakalım mı?",
       "ziyaret": 1,
-      "metin_en": "Tekrar merhaba! Sen sık uğrayan bir takipçimsin {{isim}}. Magnus Plus üyesi olmayı düşünmez misin? Şu reklamlar aramızdan kalksa ne güzel olur..."
+      "metin_en": "Hello again {{isim}}! Shall we see what's waiting at the bottom of your cup today?"
     },
     {
       "id": 8,
@@ -305,31 +305,61 @@
       "id": 12,
       "metin": "Magnus, haftanın ikinci gününde karşında! Hoş geldin safalar getirdin {{isim}}.",
       "ziyaret": 1,
-      "metin_en": "Magnus, here you are on the second day of the week! Welcome aboard {{isim}}!"
+      "metin_en": "Magnus, here you are on the second day of the week! Welcome aboard {{isim}}!",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "2"
+        }
+      ]
     },
     {
       "id": 13,
       "metin": "Merhaba! Bendeniz Magnus, seni hafta ortasında selam ve muhabbetle karşılıyorum.",
       "ziyaret": 1,
-      "metin_en": "Hello! I, Magnus, greet you with love and conversation in the middle of the week."
+      "metin_en": "Hello! I, Magnus, greet you with love and conversation in the middle of the week.",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "3"
+        }
+      ]
     },
     {
       "id": 14,
       "metin": "Hoş geldin {{isim}}! Hafta sonuna bir gün kala karşı karşıyayız.",
       "ziyaret": 1,
-      "metin_en": "Welcome {{isim}}! We're face to face with just one day before the weekend."
+      "metin_en": "Welcome {{isim}}! We're face to face with just one day before the weekend.",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "5"
+        }
+      ]
     },
     {
       "id": 15,
       "metin": "Hayırlı cumalar {{isim}}, Magnus'a hoş geldin.",
       "ziyaret": 1,
-      "metin_en": "Happy Friday {{isim}}, welcome to Magnus."
+      "metin_en": "Happy Friday {{isim}}, welcome to Magnus.",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "5"
+        }
+      ]
     },
     {
       "id": 16,
       "metin": "Güzel bir cumartesi gününden merhaba {{isim}}!",
       "ziyaret": 1,
-      "metin_en": "Hello {{isim}} from a beautiful Saturday!"
+      "metin_en": "Hello {{isim}} from a beautiful Saturday!",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "6"
+        }
+      ]
     },
     {
       "id": 17,
@@ -353,13 +383,25 @@
       "id": 20,
       "metin": "Hoş geldin Değerli {{isim}}, hayırlı cumalar dilerim...",
       "ziyaret": 1,
-      "metin_en": "Welcome, dear {{isim}}, wishing you a happy Friday..."
+      "metin_en": "Welcome, dear {{isim}}, wishing you a happy Friday...",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "5"
+        }
+      ]
     },
     {
       "id": 21,
       "metin": "Hanımefendiciğim Magnus'a hoş geldin.",
       "ziyaret": 1,
-      "metin_en": "Welcome to Mr. Magnus, my lady."
+      "metin_en": "Welcome to Mr. Magnus, my lady.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
     },
     {
       "id": 22,
@@ -419,31 +461,37 @@
       "id": 31,
       "metin": "Tatlı bir cumartesi {{saat, sabahında | öğleninde | gününün ortasında | akşamında | gecesinde}} beraberiz {{isim}}.",
       "ziyaret": 1,
-      "metin_en": "A sweet saturday {{saat, morning | noon | evening | evening | night}}, {{isim}}..."
+      "metin_en": "A sweet saturday {{saat, morning | noon | evening | evening | night}}, {{isim}}...",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "6"
+        }
+      ]
     },
     {
       "id": 32,
-      "metin": "'{{isim}} selamlar!'",
+      "metin": "Perdeyi araladım {{isim}}, bugün içerisi aydınlık.",
       "ziyaret": 1,
-      "metin_en": "{{isim}} greetings!"
+      "metin_en": "I've drawn back the curtain, {{isim}}. It's bright in here today."
     },
     {
       "id": 33,
-      "metin": "'{{isim}} merhaba!'",
+      "metin": "Kapıyı çalmadan geldiğini anladım {{isim}}. Mumlar bir anda dikleşti.",
       "ziyaret": 1,
-      "metin_en": "Hello!"
+      "metin_en": "I knew you were here before you knocked, {{isim}}. The candles all stood up straight."
     },
     {
       "id": 34,
-      "metin": "Hoş geldin {{isim}}!",
+      "metin": "Defterimde bugünün sayfası sana ayrılmış {{isim}}.",
       "ziyaret": 1,
-      "metin_en": "Welcome {{isim}}."
+      "metin_en": "Today's page in my ledger is set aside for you, {{isim}}."
     },
     {
       "id": 35,
-      "metin": "Merhaba {{isim}}.",
+      "metin": "Bugün rüzgâr senin tarafından esiyor {{isim}}, hoş geldin.",
       "ziyaret": 1,
-      "metin_en": "Hello!"
+      "metin_en": "The wind is blowing your way today, {{isim}}. Welcome."
     },
     {
       "id": 36,
@@ -455,11 +503,17 @@
       "id": 37,
       "metin": "Magnus iyi pazarlar diler!",
       "ziyaret": 1,
-      "metin_en": "Magnus wishes you a happy Sunday!"
+      "metin_en": "Magnus wishes you a happy Sunday!",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "7"
+        }
+      ]
     },
     {
       "id": 38,
-      "metin": "Merhaba {{isim}}. Magnus'dasın! Şeref verdin...",
+      "metin": "Merhaba {{isim}}. Magnus'tasın! Şeref verdin...",
       "ziyaret": 1,
       "metin_en": "Hello {{isim}}. You're at Magnus! You honored us..."
     },
@@ -489,13 +543,13 @@
     },
     {
       "id": 43,
-      "metin": "Merhaba {{isim}}. Magnus'dasın!...",
+      "metin": "Merhaba {{isim}}. Magnus'tasın!...",
       "ziyaret": 1,
       "metin_en": "Hello {{isim}}. You're in Magnus!..."
     },
     {
       "id": 44,
-      "metin": "Selamlar {{isim}}! Magnus'dasın...",
+      "metin": "Selamlar {{isim}}! Magnus'tasın...",
       "ziyaret": 1,
       "metin_en": "Greetings {{isim}}! You're at Magnus..."
     },
@@ -545,13 +599,29 @@
       "id": 52,
       "metin": "Hafta sonunun en keyifli tercihlerinden birini yaparak Magnus'a geldin. Hoş geldin {{isim}}!",
       "ziyaret": 1,
-      "metin_en": "You've made one of the most enjoyable choices for the weekend by coming to Magnus. Welcome {{isim}}!"
+      "metin_en": "You've made one of the most enjoyable choices for the weekend by coming to Magnus. Welcome {{isim}}!",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "6"
+        },
+        {
+          "degisken": "hafta_gunu",
+          "deger": "7"
+        }
+      ]
     },
     {
       "id": 53,
       "metin": "Hoş geldin {{isim}}, bendeniz Magnus. Pazar günleri seni burada görmek bambaşka bir keyif.",
       "ziyaret": 1,
-      "metin_en": "Hoş geldin {{isim}}, bendeniz Magnus. Pazar günleri seni burada görmek bambaşka bir keyif."
+      "metin_en": "Hoş geldin {{isim}}, bendeniz Magnus. Pazar günleri seni burada görmek bambaşka bir keyif.",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "7"
+        }
+      ]
     },
     {
       "id": 54,
@@ -603,7 +673,7 @@
     },
     {
       "id": 62,
-      "metin": "Güzel günler Değerli {{isim}}. Yeni bir günde yine Magnus'dasın. Güç seninle olsun!",
+      "metin": "Güzel günler Değerli {{isim}}. Yeni bir günde yine Magnus'tasın. Güç seninle olsun!",
       "ziyaret": 1,
       "metin_en": "Good day Dear {{isim}}. You're in Magnus again on a new day. Power be with you!"
     },
@@ -621,7 +691,7 @@
     },
     {
       "id": 65,
-      "metin": "Dikkaaat! Güzeller güzeli yine Magnus'da! Hoş geldin {{isimcigim}}.",
+      "metin": "Dikkaaat! Güzeller güzeli yine Magnus'ta! Hoş geldin {{isimcigim}}.",
       "ziyaret": 1,
       "metin_en": "Dikkaaat! Güzeller güzeli yine Magnus'da! Hoş geldin {{isimcigim}}."
     },
@@ -635,13 +705,25 @@
       "id": 67,
       "metin": "Hoş geldin kral! Umarım iyisindir...",
       "ziyaret": 1,
-      "metin_en": "Welcome, king! Hope you're good..."
+      "metin_en": "Welcome, king! Hope you're good...",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     },
     {
       "id": 68,
       "metin": "Adam paşası gelmiş! Hoş geldin {{isimcigim}}.",
       "ziyaret": 1,
-      "metin_en": "The man has arrived! Welcome {{isim}}."
+      "metin_en": "The man has arrived! Welcome {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     },
     {
       "id": 69,
@@ -693,7 +775,7 @@
     },
     {
       "id": 77,
-      "metin": "İhtiyaç duyduğun tüm yardımlar, kaldırım taşları gibi dizilsin yollarına! Hoş geldin {{isim}}; Magnus'dasın...",
+      "metin": "İhtiyaç duyduğun tüm yardımlar, kaldırım taşları gibi dizilsin yollarına! Hoş geldin {{isim}}; Magnus'tasın...",
       "ziyaret": 1,
       "metin_en": "İhtiyaç duyduğun tüm yardımlar, kaldırım taşları gibi dizilsin yollarına! Hoş geldin {{isim}}; Magnus'dasın..."
     },
@@ -767,25 +849,49 @@
       "id": 89,
       "metin": "Öğrencilerin sıkıcı sınav zamanlarında da tek yoldaşı Magnus, karşında!",
       "ziyaret": 1,
-      "metin_en": "Students' faithful companion Magnus is here for you even during the boring exam times!"
+      "metin_en": "Students' faithful companion Magnus is here for you even during the boring exam times!",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
     },
     {
       "id": 90,
       "metin": "Ev hanımlarının fallardaki Müge Anlı'sı Magnus, karşında! Az sonra kim nerede kiminle ne yapıyor, hepsini çözeceğiz {{isim}}. Bundan hiç şüphem yok.",
       "ziyaret": 1,
-      "metin_en": "Ev hanımlarının fallardaki Müge Anlı'sı Magnus, karşında! Az sonra kim nerede kiminle ne yapıyor, hepsini çözeceğiz {{isim}}. Bundan hiç şüphem yok."
+      "metin_en": "Ev hanımlarının fallardaki Müge Anlı'sı Magnus, karşında! Az sonra kim nerede kiminle ne yapıyor, hepsini çözeceğiz {{isim}}. Bundan hiç şüphem yok.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "evhanimi"
+        }
+      ]
     },
     {
       "id": 91,
       "metin": "Özel sektör çalışanlarına, aldıkları primler kadar iyi gelen metinleriyle Magnus karşında!",
       "ziyaret": 1,
-      "metin_en": "Get ready to face Magnus with texts that hit as hard as the bonuses private sector employees receive!"
+      "metin_en": "Get ready to face Magnus with texts that hit as hard as the bonuses private sector employees receive!",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ozelsektoru"
+        }
+      ]
     },
     {
       "id": 92,
       "metin": "Kamu çalışanlarına özel resmi kıyafetlerimi giymiş şekilde karşındayım {{isim}}!",
       "ziyaret": 1,
-      "metin_en": "I'm here in my official outfit specially dressed for public employees {{isim}}!"
+      "metin_en": "I'm here in my official outfit specially dressed for public employees {{isim}}!",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "kamusektoru"
+        }
+      ]
     },
     {
       "id": 93,
@@ -837,15 +943,21 @@
     },
     {
       "id": 101,
-      "metin": "Yeni bir günde, Magnus'a tekrar hoş geldin {{isim}}. Bakıyorum bugün havandasın. Bir de Magnus Plus üyeliği patlatırsan, senden kralı yok. Sırtın reklama gelmez.",
+      "metin": "Yeni bir günde yeniden hoş geldin {{isim}}. Bakıyorum bugün havandasın, kader de sana göz kırpıyor.",
       "ziyaret": 1,
-      "metin_en": "Yeni bir günde, Magnus'a tekrar hoş geldin {{isim}}. Bakıyorum bugün havandasın. Bir de Magnus Plus üyeliği patlatırsan, senden kralı yok. Sırtın reklama gelmez."
+      "metin_en": "A new day and you're back, {{isim}}. You look in good spirits; fate is winking at you."
     },
     {
       "id": 102,
       "metin": "Selamlar {{isim}}. Pazartesi sendromundan kurtulmak için doğru yerdesin. Hoş geldin!",
       "ziyaret": 1,
-      "metin_en": "Hey {{isim}}. You're in the right place to get rid of the Monday blues. Welcome!"
+      "metin_en": "Hey {{isim}}. You're in the right place to get rid of the Monday blues. Welcome!",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "1"
+        }
+      ]
     },
     {
       "id": 103,
@@ -857,7 +969,13 @@
       "id": 104,
       "metin": "Sevgili {{isim}} merhaba! Gün ve gece hanene bereket getirsin. Eşinle muhabbetiniz artsın, eksilmesin...",
       "ziyaret": 1,
-      "metin_en": "Sevgili {{isim}} merhaba! Gün ve gece hanene bereket getirsin. Eşinle muhabbetiniz artsın, eksilmesin..."
+      "metin_en": "Sevgili {{isim}} merhaba! Gün ve gece hanene bereket getirsin. Eşinle muhabbetiniz artsın, eksilmesin...",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "evli"
+        }
+      ]
     },
     {
       "id": 105,
@@ -885,31 +1003,31 @@
     },
     {
       "id": 109,
-      "metin": "Tanışmamızın üçüncü gününde yeniden merhaba {{isim}}! Umarım Magnus'a alışmaya başlamışsındır. Emin ol burada keşfedebileceğin çok fazla şey var.",
+      "metin": "Yeniden merhaba {{isim}}! Burada açmadığın daha çok kapı var.",
       "ziyaret": 1,
-      "metin_en": "Tanışmamızın üçüncü gününde yeniden merhaba {{isim}}! Umarım Magnus'a alışmaya başlamışsındır. Emin ol burada keşfedebileceğin çok fazla şey var."
+      "metin_en": "Hello again {{isim}}! There are still plenty of doors you haven't opened here."
     },
     {
       "id": 110,
-      "metin": "Merhaba eski dostum! Bugün biz tanışalı tam 2 ay olmuş {{isim}}. Nice yıllar da olur umarım...",
+      "metin": "Merhaba eski dostum! Seninle tanıştığım güne hâlâ teşekkür ediyorum {{isim}}.",
       "ziyaret": 1,
-      "metin_en": "Merhaba eski dostum! Bugün biz tanışalı tam 2 ay olmuş {{isim}}. Nice yıllar da olur umarım..."
+      "metin_en": "Hello, old friend! I'm still grateful for the day I met you, {{isim}}."
     },
     {
       "id": 111,
-      "metin": "Magnus'a tekrar hoş geldin {{isim}}! Bugün seninle bir araya geldiğimiz ikinci gün. Nasıl, acemiliği biraz biraz attık mı? Dilerim tüm fal türlerini keyifle takip ediyorsundur...",
+      "metin": "Magnus'a tekrar hoş geldin {{isim}}! Acemiliği attık mı? Bugün hangi fala bakalım?",
       "ziyaret": 1,
-      "metin_en": "Magnus'a tekrar hoş geldin {{isim}}! Bugün seninle bir araya geldiğimiz ikinci gün. Nasıl, acemiliği biraz biraz attık mı? Dilerim tüm fal türlerini keyifle takip ediyorsundur..."
+      "metin_en": "Welcome back to Magnus, {{isim}}! Past the beginner stage yet? Which reading today?"
     },
     {
       "id": 112,
-      "metin": "Nev-i şahsına münhasır fal uygulaması Magnus'dasın! Lütfen uygulama marketlerde benim için yorum yapmayı ihmal etme {{isim}}. Bu beni çok mutlu eder.",
+      "metin": "Nev-i şahsına münhasır fal uygulaması Magnus'tasın! Lütfen uygulama marketlerde benim için yorum yapmayı ihmal etme {{isim}}. Bu beni çok mutlu eder.",
       "ziyaret": 1,
       "metin_en": "Nev-i şahsına münhasır fal uygulaması Magnus'dasın! Lütfen uygulama marketlerde benim için yorum yapmayı ihmal etme {{isim}}. Bu beni çok mutlu eder."
     },
     {
       "id": 113,
-      "metin": "Emsali olmayan fal, astroloji ve motivasyon uygulaması Magnus'dasın. Bir şey istemekte pek mahir değilim ama eğer memnun kaldıysan uygulama marketlerde puan verip yorum yaparak bana destek olmanı rica ederim {{isim}}.",
+      "metin": "Emsali olmayan fal, astroloji ve motivasyon uygulaması Magnus'tasın. Bir şey istemekte pek mahir değilim ama eğer memnun kaldıysan uygulama marketlerde puan verip yorum yaparak bana destek olmanı rica ederim {{isim}}.",
       "ziyaret": 1,
       "metin_en": "Emsali olmayan fal, astroloji ve motivasyon uygulaması Magnus'dasın. Bir şey istemekte pek mahir değilim ama eğer memnun kaldıysan uygulama marketlerde puan verip yorum yaparak bana destek olmanı rica ederim {{isim}}."
     },
@@ -923,7 +1041,13 @@
       "id": 115,
       "metin": "Sevgili {{isim}} merhaba! Gün ve gece yüreğine müjdeler salsın. Zihnin açık, derslerin başarılı olsun...",
       "ziyaret": 1,
-      "metin_en": "Sevgili {{isim}} merhaba! Gün ve gece yüreğine müjdeler salsın. Zihnin açık, derslerin başarılı olsun..."
+      "metin_en": "Sevgili {{isim}} merhaba! Gün ve gece yüreğine müjdeler salsın. Zihnin açık, derslerin başarılı olsun...",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
     },
     {
       "id": 116,
@@ -957,7 +1081,7 @@
     },
     {
       "id": 121,
-      "metin": "Bu hayat \"bir tabak pilav\" ise, Magnus'dan alınan bilgiler de o pilavın üzerindeki az kuru fasulyedir. Hoş geldin safalar getirdin Değerli {{isim}}.",
+      "metin": "Bu hayat \"bir tabak pilav\" ise, Magnus'tan alınan bilgiler de o pilavın üzerindeki az kuru fasulyedir. Hoş geldin safalar getirdin Değerli {{isim}}.",
       "ziyaret": 1,
       "metin_en": "If this life is \"a plate of rice\", then the information taken from Magnus is just a few dry beans on top of that rice. Welcome, dear {{isim}}."
     },
@@ -971,7 +1095,21 @@
       "id": 123,
       "metin": "Şu misler gibi yaz gününde, sana ışıl ışıl haberler taşımak üzere Magnus karşında!",
       "ziyaret": 1,
-      "metin_en": "On this sunny day, like a boss, Magnus is here to bring you some lit news!"
+      "metin_en": "On this sunny day, like a boss, Magnus is here to bring you some lit news!",
+      "kosullar": [
+        {
+          "degisken": "ay",
+          "deger": "6"
+        },
+        {
+          "degisken": "ay",
+          "deger": "7"
+        },
+        {
+          "degisken": "ay",
+          "deger": "8"
+        }
+      ]
     },
     {
       "id": 124,
@@ -993,7 +1131,7 @@
     },
     {
       "id": 127,
-      "metin": "Hoş geldin Kıymetli {{isim}}. Magnus'da bulunuyor olmandan onur duydum.",
+      "metin": "Hoş geldin Kıymetli {{isim}}. Magnus'ta bulunuyor olmandan onur duydum.",
       "ziyaret": 1,
       "metin_en": "Welcome, Dear {{isim}}. I am honored to have you here at Magnus."
     },
@@ -1011,7 +1149,7 @@
     },
     {
       "id": 130,
-      "metin": "Merhaba {{isim}}, ben Magnus. Senin gibi değerli insanları burada görmek bana büyük mutluluk veriyor; sağol, var ol.",
+      "metin": "Merhaba {{isim}}, ben Magnus. Senin gibi değerli insanları burada görmek bana büyük mutluluk veriyor; sağ ol, var ol.",
       "ziyaret": 1,
       "metin_en": "Merhaba {{isim}}, ben Magnus. Senin gibi değerli insanları burada görmek bana büyük mutluluk veriyor; sağol, var ol."
     },
@@ -1023,7 +1161,7 @@
     },
     {
       "id": 132,
-      "metin": "Şimdi susalım ve yazgının uzaklardan gelen fısıltılarına beraberce kulak verelim... Hoş geldin {{isim}}. Magnus'dasın.",
+      "metin": "Şimdi susalım ve yazgının uzaklardan gelen fısıltılarına beraberce kulak verelim... Hoş geldin {{isim}}. Magnus'tasın.",
       "ziyaret": 1,
       "metin_en": "Şimdi susalım ve yazgının uzaklardan gelen fısıltılarına beraberce kulak verelim... Hoş geldin {{isim}}. Magnus'dasın."
     },
@@ -1055,7 +1193,13 @@
       "id": 137,
       "metin": "Değerli {{isim}} merhaba! Sen yarına varmadan müjdeler sana varsın, nişanlından en güzel haberleri alasın.",
       "ziyaret": 1,
-      "metin_en": "Değerli {{isim}} merhaba! Sen yarına varmadan müjdeler sana varsın, nişanlından en güzel haberleri alasın."
+      "metin_en": "Değerli {{isim}} merhaba! Sen yarına varmadan müjdeler sana varsın, nişanlından en güzel haberleri alasın.",
+      "kosullar": [
+        {
+          "degisken": "medeni_durum",
+          "deger": "nisanli"
+        }
+      ]
     },
     {
       "id": 138,
@@ -1107,7 +1251,7 @@
     },
     {
       "id": 146,
-      "metin": "'{{isim}} selam, naber?'",
+      "metin": "{{isim}} selam, naber?",
       "ziyaret": 1,
       "metin_en": "{{isim}}, hey, what's up?"
     },
@@ -1127,7 +1271,13 @@
       "id": 149,
       "metin": "Magnus'a tekrar hoş geldin {{isim}}. Haftaya güzel bir sözle başlamak ister misin?",
       "ziyaret": 1,
-      "metin_en": "Magnus'a tekrar hoş geldin {{isim}}. Haftaya güzel bir sözle başlamak ister misin?"
+      "metin_en": "Magnus'a tekrar hoş geldin {{isim}}. Haftaya güzel bir sözle başlamak ister misin?",
+      "kosullar": [
+        {
+          "degisken": "hafta_gunu",
+          "deger": "1"
+        }
+      ]
     },
     {
       "id": 150,
@@ -1143,7 +1293,7 @@
     },
     {
       "id": 152,
-      "metin": "Kıymetli dostum, Magnus'da seni görmek çok güzel; hoş geldin!",
+      "metin": "Kıymetli dostum, Magnus'ta seni görmek çok güzel; hoş geldin!",
       "ziyaret": 1,
       "metin_en": "Dear friend, seeing you in Magnus is great; welcome!"
     },
@@ -1221,15 +1371,15 @@
     },
     {
       "id": 165,
-      "metin": "Yine beraberiz.",
+      "metin": "Yine sen, yine ben; masa hâlâ sıcak.",
       "ziyaret": 2,
-      "metin_en": "Here we are again."
+      "metin_en": "You again, me again; the table's still warm."
     },
     {
       "id": 166,
-      "metin": "Tekrar beraberiz.",
+      "metin": "İlk gelişinde bir şey eksik kaldı sanki, değil mi {{isim}}?",
       "ziyaret": 2,
-      "metin_en": "We're back together."
+      "metin_en": "Something felt left unsaid on your first visit, didn't it, {{isim}}?"
     },
     {
       "id": 167,
@@ -1269,9 +1419,9 @@
     },
     {
       "id": 173,
-      "metin": "En gelişmiş yapay zeka dil modeli olan Magnus tekrar karşında {{isim}}.",
+      "metin": "Fincanları, kartları ve yıldızlarıyla Magnus tekrar karşında {{isim}}.",
       "ziyaret": 2,
-      "metin_en": "The most advanced artificial intelligence language model Magnus is back in front of you, {{isim}}."
+      "metin_en": "Magnus is back with its cups, cards and stars, {{isim}}."
     },
     {
       "id": 174,
@@ -1305,7 +1455,7 @@
     },
     {
       "id": 179,
-      "metin": "Aa tekrar burdasın! Sen gelince bi ayrı mutlu oluyorum {{isim}}.",
+      "metin": "Aa tekrar buradasın! Sen gelince bi ayrı mutlu oluyorum {{isim}}.",
       "ziyaret": 2,
       "metin_en": "Oh, you're back again! I get extra happy when you're around {{isim}}."
     },
@@ -1353,21 +1503,21 @@
     },
     {
       "id": 187,
-      "metin": "Derme çatma sevdalardan geçenlerin son durağı Magnus'da yeniden beraberiz.",
+      "metin": "Derme çatma sevdalardan geçenlerin son durağı Magnus'ta yeniden beraberiz.",
       "ziyaret": 2,
       "metin_en": "In the final stop of those passing through makeshift loves, we are together again in Magnus."
     },
     {
       "id": 188,
-      "metin": "Bugün bir kez daha aşk acısına çare arayanların eczanesi Magnus'dasın.",
+      "metin": "Bugün bir kez daha aşk acısına çare arayanların eczanesi Magnus'tasın.",
       "ziyaret": 2,
       "metin_en": "Today, once again, you are at Magnus's pharmacy, where those looking for a cure for heartache come."
     },
     {
       "id": 189,
-      "metin": "Tekrar merhaba {{isim}}. Magnus Plus üyesi olsan da şu sıkıcı reklamlar tamamen ortadan kalksa keşke. İnan buna değer...",
+      "metin": "Tekrar merhaba {{isim}}. Kapıyı açık bırakmıştım, geleceğini biliyordum.",
       "ziyaret": 2,
-      "metin_en": "Tekrar merhaba {{isim}}. Magnus Plus üyesi olsan da şu sıkıcı reklamlar tamamen ortadan kalksa keşke. İnan buna değer..."
+      "metin_en": "Hello again {{isim}}. I left the door open; I knew you'd come."
     },
     {
       "id": 190,
@@ -1383,7 +1533,7 @@
     },
     {
       "id": 192,
-      "metin": "Aşk acısı çekenlerin tek ilacı Magnus'dasın. Hoş geldin {{isim}}!",
+      "metin": "Aşk acısı çekenlerin tek ilacı Magnus'tasın. Hoş geldin {{isim}}!",
       "ziyaret": 2,
       "metin_en": "The one and only cure for heartbreak is at Magnus. Welcome {{isim}}!"
     },
@@ -1401,27 +1551,27 @@
     },
     {
       "id": 195,
-      "metin": "Sevip da kavuşamayanları birbirine bağlayan Magnus'dasın! O konuya da geleceğiz, hiç merak etme .",
+      "metin": "Sevip de kavuşamayanları birbirine bağlayan Magnus'tasın! O konuya da geleceğiz, hiç merak etme.",
       "ziyaret": 2,
       "metin_en": "You're in Magnus, connecting those who love each other but can't be together! We'll get to that topic, don't worry."
     },
     {
       "id": 196,
-      "metin": "Magnus'a hoş geldin {{isim}}. Erkek arkadaşından ayrılmanın burukluğu biraz olsun geçmiş sanırım. Bugün bir gülden daha güzel olmanı başka türlü açıklayamam çünkü.",
+      "metin": "Magnus'a hoş geldin {{isim}}. Geçen günlerin burukluğu biraz olsun geçmiş gibi.",
       "ziyaret": 2,
-      "metin_en": "Welcome Magnus, {{isim}}. I guess the bitterness of breaking up with your boyfriend has somewhat passed. I can't explain it any other way than you being more beautiful than a rose today."
+      "metin_en": "Welcome to Magnus, {{isim}}. The ache of recent days seems to have eased a little."
     },
     {
       "id": 197,
-      "metin": "Magnus'a hoş geldin. Ben Faloya. Bundan böyle bana \"diğer falcılar\" bölümünden ulaşabilirsin!",
+      "metin": "Magnus'a hoş geldin. Kehanet bölümünde Faloya seni bekliyor, fincanını da hazırlamış.",
       "ziyaret": 2,
-      "metin_en": "Welcome to Magnus. I'm Faloya. From now on, you can reach me through the \"other psychics\" section!"
+      "metin_en": "Welcome to Magnus. Faloya is waiting for you in Prophecy, with your cup ready."
     },
     {
       "id": 198,
-      "metin": "Magnus'a \"Su Falı\" geldi, haberin var mı {{isim}}? Fala bakan ise Tamua! Korkmayacağına eminsen, seni \"Diğer falcılar\" bölümünde bekliyor...",
+      "metin": "Tamua seni Kehanet bölümünde bekliyor {{isim}}. Korkmayacağına eminsen tabii...",
       "ziyaret": 2,
-      "metin_en": "Magnus got a \"Water Divination\", do you have any idea {{isim}}? If you want a fortune teller, it's Tamua! If you're not scared, they are waiting for you in the \"Other fortune tellers\" section..."
+      "metin_en": "Tamua is waiting for you in Prophecy, {{isim}}. If you're sure you won't be scared..."
     },
     {
       "id": 199,
@@ -1443,9 +1593,9 @@
     },
     {
       "id": 202,
-      "metin": "Merhaba {{isim}}! Pardon, bana biraz müsaade edebilir misin? Seninle ilgili tuttuğum notları 5 saniyede gözden geçirmek istiyorum...|5s|Eveet, geldim. Kusura bakma.",
+      "metin": "Merhaba {{isim}}! Seninle ilgili notlarıma bakıyordum, tam zamanında geldin.",
       "ziyaret": 2,
-      "metin_en": "Merhaba {{isim}}! Pardon, bana biraz müsaade edebilir misin? Seninle ilgili tuttuğum notları 5 saniyede gözden geçirmek istiyorum...|5s|Eveet, geldim. Kusura bakma."
+      "metin_en": "Hello {{isim}}! I was going through my notes on you; you came just in time."
     },
     {
       "id": 203,
@@ -1509,27 +1659,27 @@
     },
     {
       "id": 213,
-      "metin": "Tekrar merhaba {{isim}}.",
+      "metin": "İkinci fincan genelde daha çok konuşur {{isim}}.",
       "ziyaret": 2,
-      "metin_en": "Hello again, {{isim}}."
+      "metin_en": "The second cup usually talks more, {{isim}}."
     },
     {
       "id": 214,
-      "metin": "Tekrar hoş geldin!",
+      "metin": "Dönüp geleceğini kartlar bana önceden söylemişti.",
       "ziyaret": 2,
-      "metin_en": "{{isim}} welcome back."
+      "metin_en": "The cards told me beforehand you'd be back."
     },
     {
       "id": 215,
-      "metin": "Aaa, {{isim}}! Tekrar merhaba. \nBiraz bekletebilir miyim seni? Yemek yiyordum, şu mutfağı hemen bir toparlayayım... Yalnızca 7 saniye sürecek.",
+      "metin": "Aaa, {{isim}}! Tam mutfağı toparlıyordum. Neyse, önce sen.",
       "ziyaret": 2,
-      "metin_en": "Aaa, {{isim}}! Tekrar merhaba. \nBiraz bekletebilir miyim seni? Yemek yiyordum, şu mutfağı hemen bir toparlayayım... Yalnızca 7 saniye sürecek."
+      "metin_en": "Oh, {{isim}}! I was just tidying the kitchen. Never mind, you come first."
     },
     {
       "id": 216,
-      "metin": "Geldim! Fena dağıtmışım da, özür diliyorum...",
+      "metin": "Geldim! Masayı fena dağıtmışım, kusura bakma.",
       "ziyaret": 2,
-      "metin_en": "I'm here! I really messed up, I apologize..."
+      "metin_en": "Here I am! I've made quite a mess of the table, forgive me."
     },
     {
       "id": 217,
@@ -1551,9 +1701,9 @@
     },
     {
       "id": 220,
-      "metin": "Tekrar hoş geldin {{isim}}!",
+      "metin": "Üçüncü gelişe 'tesadüf' demezler {{isim}}.",
       "ziyaret": 3,
-      "metin_en": "{{isim}} welcome back."
+      "metin_en": "Nobody calls a third visit a coincidence, {{isim}}."
     },
     {
       "id": 221,
@@ -1649,7 +1799,13 @@
       "id": 236,
       "metin": "Bugün henüz günün erken saatleri olmasına rağmen 3. kez beraberiz {{isim}}.",
       "ziyaret": 3,
-      "metin_en": "It's still early hours of the day and this is the third time we're together, {{isim}}."
+      "metin_en": "It's still early hours of the day and this is the third time we're together, {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "sabah"
+        }
+      ]
     },
     {
       "id": 237,
@@ -1659,9 +1815,9 @@
     },
     {
       "id": 238,
-      "metin": "Bugün Magnus'a iPhone'undan 3. kez giriş yapıyorsun {{isim}}. Tekrar merhaba.",
+      "metin": "Bugün 3. kez giriş yapıyorsun {{isim}}. Anlaşılan aklına takılan bir şey var.",
       "ziyaret": 3,
-      "metin_en": "Today you are logging in to Magnus' iPhone for the third time, {{isim}}. Hello again."
+      "metin_en": "That's your 3rd visit today, {{isim}}. Something must be on your mind."
     },
     {
       "id": 239,
@@ -1685,7 +1841,13 @@
       "id": 242,
       "metin": "Prenses yeniden giriş yaptı. Herkes ayağa kalksın!",
       "ziyaret": 3,
-      "metin_en": "The princess has entered again. Stand up, everyone!"
+      "metin_en": "The princess has entered again. Stand up, everyone!",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
     },
     {
       "id": 243,
@@ -1743,21 +1905,21 @@
     },
     {
       "id": 252,
-      "metin": "Asın sarı lacivert bayrakları, Fenerbahçeli {{isim}} bugün 3. kez aramızda!",
+      "metin": "Asın bayrakları, {{isim}} bugün 3. kez aramızda!",
       "ziyaret": 3,
-      "metin_en": "Raise the yellow and navy flags, Fenerbahçe fan {{isim}} is with us for the 3rd time today!"
+      "metin_en": "Raise the flags, {{isim}} is with us for the 3rd time today!"
     },
     {
       "id": 253,
-      "metin": "Asın siyah beyaz bayrakları, Beşiktaşlı {{isim}} bugün 3. kez aramızda!",
+      "metin": "Davulu zurnayı çağırın, {{isim}} bugün 3. kez aramızda!",
       "ziyaret": 3,
-      "metin_en": "Raise the black and white flags, Beşiktaş fan {{isim}} is here for the 3rd time today!"
+      "metin_en": "Call the drummers, {{isim}} is with us for the 3rd time today!"
     },
     {
       "id": 254,
-      "metin": "Asın sarı kırmızı bayrakları, Galatasaraylı {{isim}} bugün 3. kez aramızda!",
+      "metin": "Çayları tazeleyin, {{isim}} bugün 3. kez aramızda!",
       "ziyaret": 3,
-      "metin_en": "Wave the yellow and red flags, Galatasaray fan {{isim}} is among us for the third time today!"
+      "metin_en": "Refresh the tea, {{isim}} is with us for the 3rd time today!"
     },
     {
       "id": 255,
@@ -1767,9 +1929,9 @@
     },
     {
       "id": 256,
-      "metin": "Bir kez daha beraberiz.",
+      "metin": "Dördüncü kapıdan da geçtin, kalan kapıları sayıyorum.",
       "ziyaret": 4,
-      "metin_en": "Once again, we are together..."
+      "metin_en": "You've passed the fourth door too; I'm counting the ones left."
     },
     {
       "id": 257,
@@ -1809,15 +1971,15 @@
     },
     {
       "id": 263,
-      "metin": "4 büyük kitap, 4 büyük melek var. Şu an saat 4 ve bu da bugün senin dördüncü gelişin. Bu bir tesadüf olabilir mi {{isim}}?",
+      "metin": "Dört mevsim, dört yön, bugün de dördüncü gelişin. Tesadüf olabilir mi {{isim}}?",
       "ziyaret": 4,
-      "metin_en": "There are 4 major books, 4 major angels. It's 4 o'clock right now and this is your fourth arrival today. Could this be a coincidence {{isim}}?"
+      "metin_en": "Four seasons, four directions, and your fourth visit today. Could it be chance, {{isim}}?"
     },
     {
       "id": 264,
-      "metin": "4 büyük kitap, 4 büyük melek var. 4. aydayız, şu an saat 4 ve bu da bugün senin dördüncü gelişin. Bu bir tesadüf olabilir mi {{isim}}?",
+      "metin": "Bugünkü dördüncü gelişin {{isim}}. Yıldızlar bu sayıyı not etti.",
       "ziyaret": 4,
-      "metin_en": "There are 4 major books, 4 major angels. We are in the 4th month, it's 4 o'clock now, and this is your fourth arrival today. Could this be a coincidence {{isim}}?"
+      "metin_en": "Your fourth visit today, {{isim}}. The stars have taken note."
     },
     {
       "id": 265,
@@ -1833,9 +1995,9 @@
     },
     {
       "id": 267,
-      "metin": "Tekrar merhabalar...",
+      "metin": "Bugün seninle konuşmaktan kâğıtlarım bitti {{isim}}.",
       "ziyaret": 4,
-      "metin_en": "Hello again..."
+      "metin_en": "I've run out of paper talking with you today, {{isim}}."
     },
     {
       "id": 268,
@@ -1851,9 +2013,9 @@
     },
     {
       "id": 270,
-      "metin": "Yeniden buluştuk.",
+      "metin": "Çayı demledim, gelmesen ayıp olurdu.",
       "ziyaret": 4,
-      "metin_en": "We meet again {{isim}}."
+      "metin_en": "I'd brewed the tea; it would've been rude not to come."
     },
     {
       "id": 271,
@@ -1893,21 +2055,21 @@
     },
     {
       "id": 277,
-      "metin": "Fal türleri ve bilgi verici yönlerinin yanı sıra, gizli oyunlarıyla da eğlendiren Magnus'a tekrar hoş geldin!",
+      "metin": "Fallarıyla, kehanetleriyle, bir de küçük sürprizleriyle Magnus'a tekrar hoş geldin!",
       "ziyaret": 4,
-      "metin_en": "Welcome back to Magnus, who entertains with her secret games as well as her fortune telling and informative aspects!"
+      "metin_en": "Welcome back to Magnus, with its readings, prophecies and little surprises!"
     },
     {
       "id": 278,
-      "metin": "Magnus'la görüşmektesin.",
+      "metin": "Dördüncü mumu da yaktım {{isim}}, gel otur.",
       "ziyaret": 4,
-      "metin_en": "You're meeting up with Magnus."
+      "metin_en": "I've lit a fourth candle, {{isim}}. Come, sit."
     },
     {
       "id": 279,
-      "metin": "Bugün 4. ayın 4'ü ve senin bugün Magnus'a 4. gelişin. Hadi bir dilek tut {{isim}}!",
+      "metin": "Bugün Magnus'a 4. gelişin. Hadi bir dilek tut {{isim}}!",
       "ziyaret": 4,
-      "metin_en": "Today is the 4th of April and it's your 4th visit to Magnus today. Go ahead and make a wish, {{isim}}!"
+      "metin_en": "It's your 4th visit today. Go on, make a wish, {{isim}}!"
     },
     {
       "id": 280,
@@ -1929,9 +2091,9 @@
     },
     {
       "id": 283,
-      "metin": "Aaa dünya ne küçük! Yeniden karşılaştık {{isim}}, hem de aynı gün dördüncü kez! Moralinin iyi olmadığını söylemiştin, biraz daha iyisindir umarım...",
+      "metin": "Aaa dünya ne küçük! Yeniden karşılaştık {{isim}}, hem de aynı gün dördüncü kez!",
       "ziyaret": 4,
-      "metin_en": "Aaa dünya ne küçük! Yeniden karşılaştık {{isim}}, hem de aynı gün dördüncü kez! Moralinin iyi olmadığını söylemiştin, biraz daha iyisindir umarım..."
+      "metin_en": "What a small world! We meet again, {{isim}}, for the fourth time today!"
     },
     {
       "id": 284,
@@ -1941,15 +2103,15 @@
     },
     {
       "id": 285,
-      "metin": "Tekrar karşındayım.",
+      "metin": "Gölgem bile seni tanımaya başladı {{isim}}.",
       "ziyaret": 4,
-      "metin_en": "I'm back again!"
+      "metin_en": "Even my shadow has started to recognise you, {{isim}}."
     },
     {
       "id": 286,
-      "metin": "Yeniden bir aradayız.",
+      "metin": "Bugün aramızdaki ip iyice kısaldı.",
       "ziyaret": 4,
-      "metin_en": "We're back together."
+      "metin_en": "The thread between us has grown very short today."
     },
     {
       "id": 287,
@@ -1971,9 +2133,9 @@
     },
     {
       "id": 290,
-      "metin": "Magnus'a yeniden hoş geldin {{isim}}! Bugün bana sık uğradığın için sana 2 altın hediye ettim. İçimden geldi!",
+      "metin": "Magnus'a yeniden hoş geldin {{isim}}! Bugün sık uğruyorsun, sana en iyi mumumu yaktım.",
       "ziyaret": 5,
-      "metin_en": "Magnus'a yeniden hoş geldin {{isim}}! Bugün bana sık uğradığın için sana 2 altın hediye ettim. İçimden geldi!"
+      "metin_en": "Welcome back to Magnus, {{isim}}! You've been visiting often, so I lit my best candle for you."
     },
     {
       "id": 291,
@@ -2081,31 +2243,37 @@
       "id": 308,
       "metin": "İşte tekrar karşındayım! Eğitim hayatınla ilgili son birkaç gündür kafana yerleşmiş sorular varsa, cevapları bende {{isim}}. Bırak sınav sonuçlarınla ilgili genel değerlendirmeyi, sana {{yil_+1}} senesinin transkriptini bile verebilirim.",
       "ziyaret": 5,
-      "metin_en": "İşte tekrar karşındayım! Eğitim hayatınla ilgili son birkaç gündür kafana yerleşmiş sorular varsa, cevapları bende {{isim}}. Bırak sınav sonuçlarınla ilgili genel değerlendirmeyi, sana {{yil_+1}} senesinin transkriptini bile verebilirim."
+      "metin_en": "İşte tekrar karşındayım! Eğitim hayatınla ilgili son birkaç gündür kafana yerleşmiş sorular varsa, cevapları bende {{isim}}. Bırak sınav sonuçlarınla ilgili genel değerlendirmeyi, sana {{yil_+1}} senesinin transkriptini bile verebilirim.",
+      "kosullar": [
+        {
+          "degisken": "meslek",
+          "deger": "ogrenci"
+        }
+      ]
     },
     {
       "id": 309,
-      "metin": "Magnus'un transistör, bobin, kondansatör ve dirençlerine senin için 6. kez kan gidiyor!",
+      "metin": "Magnus'un transistör, bobin ve dirençlerine senin için {{ziyaret}}. kez kan gidiyor!",
       "ziyaret": 6,
-      "metin_en": "Blood is flowing to Magnus's transistors, coils, capacitors and resistors for the 6th time!"
+      "metin_en": "Blood is rushing to Magnus's transistors and coils for you, visit number {{ziyaret}}!"
     },
     {
       "id": 310,
-      "metin": "Yeni bir karşılaşmada daha beraberiz.",
+      "metin": "Gözümü kapattım, açtım; yine buradasın.",
       "ziyaret": 6,
-      "metin_en": "Here we are, together in another encounter."
+      "metin_en": "I closed my eyes, opened them, and here you are again."
     },
     {
       "id": 311,
-      "metin": "Yine bir oturumda daha birlikteyiz.",
+      "metin": "Sen geldin, kuzgunlar sustu.",
       "ziyaret": 6,
-      "metin_en": "Here we are again, in another session."
+      "metin_en": "You came, and the ravens fell silent."
     },
     {
       "id": 312,
-      "metin": "Başka bir sohbette daha karşı karşıyayız {{isim}}.",
+      "metin": "Aynı yıldızın altında yine karşılaştık {{isim}}.",
       "ziyaret": 6,
-      "metin_en": "We meet again in another conversation, {{isim}}."
+      "metin_en": "Under the same star, we meet again, {{isim}}."
     },
     {
       "id": 313,
@@ -2141,13 +2309,31 @@
       "id": 318,
       "metin": "Tekrar merhaba {{isim}}. Bugün hava biraz sıcak gibi mi, bana mı öyle geliyor? Huhh!",
       "ziyaret": 6,
-      "metin_en": "Tekrar merhaba {{isim}}. Bugün hava biraz sıcak gibi mi, bana mı öyle geliyor? Huhh!"
+      "metin_en": "Tekrar merhaba {{isim}}. Bugün hava biraz sıcak gibi mi, bana mı öyle geliyor? Huhh!",
+      "kosullar": [
+        {
+          "degisken": "ay",
+          "deger": "6"
+        },
+        {
+          "degisken": "ay",
+          "deger": "7"
+        },
+        {
+          "degisken": "ay",
+          "deger": "8"
+        },
+        {
+          "degisken": "ay",
+          "deger": "9"
+        }
+      ]
     },
     {
       "id": 319,
-      "metin": "Bugün 6. kez beraberiz.",
+      "metin": "Bugün {{ziyaret}}. kez beraberiz.",
       "ziyaret": 6,
-      "metin_en": "Today is the 6th time we are together."
+      "metin_en": "This is visit number {{ziyaret}} today."
     },
     {
       "id": 320,
@@ -2157,21 +2343,21 @@
     },
     {
       "id": 321,
-      "metin": "{{isim}} merhaba. Bugün 7. kez beraberiz. Sevgilin laf etmesin sonra?",
+      "metin": "{{isim}} merhaba. Bugün {{ziyaret}}. kez beraberiz. Seni buraya çeken bir şey var.",
       "ziyaret": 6,
-      "metin_en": "{{isim}} hello. We are together for the 7th time today. Shouldn't your girlfriend talk about it later?"
+      "metin_en": "Hello {{isim}}. Visit number {{ziyaret}} today. Something keeps bringing you here."
     },
     {
       "id": 322,
-      "metin": "Selam!",
+      "metin": "Yine mi sen? İyi ki sen.",
       "ziyaret": 6,
-      "metin_en": "Hi!"
+      "metin_en": "You again? Thank goodness it's you."
     },
     {
       "id": 323,
-      "metin": "Merhaba.",
+      "metin": "Kristal küreyi yeni sildim, tam zamanında geldin.",
       "ziyaret": 6,
-      "metin_en": "Hello!"
+      "metin_en": "I'd just wiped the crystal ball. Perfect timing."
     },
     {
       "id": 324,
@@ -2187,27 +2373,27 @@
     },
     {
       "id": 326,
-      "metin": "Bugün yedinci defa bir aradayız.",
+      "metin": "Bugün {{ziyaret}}. defa bir aradayız.",
       "ziyaret": 6,
-      "metin_en": "Today we are together for the seventh time."
+      "metin_en": "Together again, visit number {{ziyaret}} today."
     },
     {
       "id": 327,
-      "metin": "Gölgelerin gücü adına... Magnus 7. kez karşında!",
+      "metin": "Gölgelerin gücü adına... Magnus {{ziyaret}}. kez karşında!",
       "ziyaret": 6,
-      "metin_en": "In the name of the shadows... Magnus is here for the 7th time!"
+      "metin_en": "In the name of the shadows... Magnus appears, visit number {{ziyaret}}!"
     },
     {
       "id": 328,
-      "metin": "Geleceğe dair tüm zorlu lekelerin düşmanı Magnus, bugün 7. kez karşında!",
+      "metin": "Geleceğe dair tüm zorlu lekelerin düşmanı Magnus, bugün {{ziyaret}}. kez karşında!",
       "ziyaret": 6,
-      "metin_en": "The enemy of all difficult stains in the future, Magnus, faces you for the 7th time today!"
+      "metin_en": "Magnus, enemy of all stubborn stains on the future, appears: visit number {{ziyaret}}!"
     },
     {
       "id": 329,
-      "metin": "Bugün yedinci kez beraberiz sanırım.",
+      "metin": "Bugün {{ziyaret}}. kez beraberiz sanırım.",
       "ziyaret": 6,
-      "metin_en": "I think this is the seventh time we're hanging out today."
+      "metin_en": "Visit number {{ziyaret}} today, I believe."
     },
     {
       "id": 330,
@@ -2217,21 +2403,21 @@
     },
     {
       "id": 331,
-      "metin": "Tesafüde bak, ikimiz de buradayız; üstelik 7. karşılaşmamız!",
+      "metin": "Tesadüfe bak, ikimiz de buradayız; üstelik {{ziyaret}}. karşılaşmamız!",
       "ziyaret": 6,
-      "metin_en": "What a coincidence, we're both here; and it's our 7th encounter!"
+      "metin_en": "What a coincidence, we're both here; and it's encounter number {{ziyaret}}!"
     },
     {
       "id": 332,
-      "metin": "Bugün sekizinci kez karşı karşıyayız. Kabaca bir hesap makinesi yapısında olduğum için her şeyi tek tek yazıyorum işte...",
+      "metin": "Bugün {{ziyaret}}. kez karşı karşıyayız. Hesap makinesi gibiyim, her şeyi yazıyorum.",
       "ziyaret": 6,
-      "metin_en": "Bugün sekizinci kez karşı karşıyayız. Kabaca bir hesap makinesi yapısında olduğum için her şeyi tek tek yazıyorum işte..."
+      "metin_en": "Visit number {{ziyaret}} today. I'm a bit of a calculator; I write everything down."
     },
     {
       "id": 333,
-      "metin": "Değerli dostum, Magnus'a 8. kez hoş geldin.",
+      "metin": "Değerli dostum, bugün Magnus'a {{ziyaret}}. kez hoş geldin.",
       "ziyaret": 6,
-      "metin_en": "Dear friend, Welcome Magnus for the 8th time."
+      "metin_en": "Dear friend, welcome to Magnus, visit number {{ziyaret}} today."
     },
     {
       "id": 334,
@@ -2241,21 +2427,21 @@
     },
     {
       "id": 335,
-      "metin": "Yine, yeniden beraberiz. Hem de 8. kez! \"Yeniden\" deyince aklıma Ayna grubunun bir şakısı geldi, ne diyordu; \"Sensiz avare geçer, hüzünlü akşamlar Yeniden de sevebiliriz, Akdeniz...\"",
+      "metin": "Yine, yeniden beraberiz. Hem de {{ziyaret}}. kez!",
       "ziyaret": 6,
-      "metin_en": "Yine, yeniden beraberiz. Hem de 8. kez! \"Yeniden\" deyince aklıma Ayna grubunun bir şakısı geldi, ne diyordu; \"Sensiz avare geçer, hüzünlü akşamlar Yeniden de sevebiliriz, Akdeniz...\""
+      "metin_en": "Again and again we meet. Visit number {{ziyaret}}, in fact!"
     },
     {
       "id": 336,
-      "metin": "Naber {{isim}}, çocuklar çok yaramazlık yapıyorlar mı? Bugün bana 8. uğrayışın. Çocuklardan iyi vakit buluyorsun vallahi...",
+      "metin": "Naber {{isim}}? Bugün {{ziyaret}}. uğrayışın. Kendine vakit ayırmışsın, iyi etmişsin.",
       "ziyaret": 6,
-      "metin_en": "Naber {{isim}}, çocuklar çok yaramazlık yapıyorlar mı? Bugün bana 8. uğrayışın. Çocuklardan iyi vakit buluyorsun vallahi..."
+      "metin_en": "How's it going, {{isim}}? Visit number {{ziyaret}} today. Good of you to take some time for yourself."
     },
     {
       "id": 337,
-      "metin": "Bir günde tam sekizinci kez beraberiz!",
+      "metin": "Bir günde tam {{ziyaret}}. kez beraberiz!",
       "ziyaret": 6,
-      "metin_en": "It's our eighth time being together in a single day!"
+      "metin_en": "That's visit number {{ziyaret}} in a single day!"
     },
     {
       "id": 338,
@@ -2283,9 +2469,9 @@
     },
     {
       "id": 342,
-      "metin": "Tekrar karşı karşıyayız.",
+      "metin": "Mürekkebim kurumadan döndün.",
       "ziyaret": 6,
-      "metin_en": "We are facing each other again."
+      "metin_en": "You're back before my ink has dried."
     },
     {
       "id": 343,
@@ -2295,33 +2481,33 @@
     },
     {
       "id": 344,
-      "metin": "Bugünkü 9. buluşmamızla karşı karşıyayız.",
+      "metin": "Bugünkü {{ziyaret}}. buluşmamızla karşı karşıyayız.",
       "ziyaret": 6,
-      "metin_en": "We're facing our 9th date today."
+      "metin_en": "Here we are at meeting number {{ziyaret}} today."
     },
     {
       "id": 345,
-      "metin": "'{{isim}} {{soyisim}} yeniden merhaba. '",
+      "metin": "Yine buradayız {{isim}}, masa aynı masa.",
       "ziyaret": 6,
-      "metin_en": "Hello again {{isim}}."
+      "metin_en": "Here we are again, {{isim}}. Same old table."
     },
     {
       "id": 346,
-      "metin": "Mr. {{soyisim}}, tekrar merhaba.",
+      "metin": "Sayın {{isim}}, masanız hazır.",
       "ziyaret": 6,
-      "metin_en": "Mr. {{soyisim}}, hello again."
+      "metin_en": "Your table is ready, dear {{isim}}."
     },
     {
       "id": 347,
-      "metin": "Mrs. {{soyisim}}, tekrar merhaba.",
+      "metin": "Buyurun {{isim}}, bugünün konuğu sizsiniz.",
       "ziyaret": 6,
-      "metin_en": "Mrs. {{soyisim}}, hello again."
+      "metin_en": "Come in, {{isim}}. You are today's guest."
     },
     {
       "id": 348,
-      "metin": "Miss. {{soyisim}}, tekrar merhaba.",
+      "metin": "Hoş geldiniz {{isim}}, defterde adınızı en üste yazdım.",
       "ziyaret": 6,
-      "metin_en": "Miss. {{soyisim}}, hello again."
+      "metin_en": "Welcome, {{isim}}. I've put your name at the top of the ledger."
     },
     {
       "id": 349,
@@ -2331,27 +2517,27 @@
     },
     {
       "id": 350,
-      "metin": "Merhabalar! Bugün 9. gelişin {{isim}}. Gördüğün gibi havsalam kuvvetli ha! Çok cigolayt.",
+      "metin": "Merhabalar! Bugün {{ziyaret}}. gelişin {{isim}}. Gördüğün gibi havsalam kuvvetli!",
       "ziyaret": 6,
-      "metin_en": "Merhabalar! Bugün 9. gelişin {{isim}}. Gördüğün gibi havsalam kuvvetli ha! Çok cigolayt."
+      "metin_en": "Greetings! Visit number {{ziyaret}} today, {{isim}}. As you can see, my memory is sharp!"
     },
     {
       "id": 351,
-      "metin": "'{{isim}} merhaba!'",
+      "metin": "{{isim}}, bugün yıldızlar senin adını fısıldayıp duruyor.",
       "ziyaret": 6,
-      "metin_en": "Hello!"
+      "metin_en": "{{isim}}, the stars keep whispering your name today."
     },
     {
       "id": 352,
-      "metin": "'{{isimcigim}} merhaba!'",
+      "metin": "{{isimcigim}}, sana ayırdığım sandalye hiç boş kalmıyor.",
       "ziyaret": 6,
-      "metin_en": "Hello!"
+      "metin_en": "{{isim}}, the chair I keep for you is never empty for long."
     },
     {
       "id": 353,
-      "metin": "Bugünkü dokuzuncu buluşmamız.",
+      "metin": "Bugünkü {{ziyaret}}. buluşmamız.",
       "ziyaret": 6,
-      "metin_en": "Our ninth meeting today."
+      "metin_en": "Meeting number {{ziyaret}} today."
     },
     {
       "id": 354,
@@ -2361,33 +2547,39 @@
     },
     {
       "id": 355,
-      "metin": "Yeniden merhaba {{isim}}.",
+      "metin": "Yeniden merhaba {{isim}}, telveler senin için sıraya girdi.",
       "ziyaret": 6,
-      "metin_en": "Hello again {{isim}}."
+      "metin_en": "Hello again {{isim}}, the grounds have lined up for you."
     },
     {
       "id": 356,
-      "metin": "Bir kez daha hoş geldin diyorum.",
+      "metin": "Sen geldikçe kartlarım canlanıyor.",
       "ziyaret": 6,
-      "metin_en": "I'm welcoming you once again."
+      "metin_en": "The cards come alive whenever you're here."
     },
     {
       "id": 357,
-      "metin": "Tekrar merhaba.",
+      "metin": "Tozlu kitapları açtım, adın yine çıktı karşıma.",
       "ziyaret": 6,
-      "metin_en": "Hello again, {{isim}}."
+      "metin_en": "I opened the dusty books, and your name came up again."
     },
     {
       "id": 358,
       "metin": "{{kelime, Dingin | Esrarlı | Gizemli | Efsunlu | Huzurlu | Dingin}} bir akşamda yeniden beraberiz.",
       "ziyaret": 6,
-      "metin_en": "We're together again, on a {{kelime, Serene | Mysterious | Mysterious | Peaceful}} evening."
+      "metin_en": "We're together again, on a {{kelime, Serene | Mysterious | Mysterious | Peaceful}} evening.",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 359,
-      "metin": "Bir buluşmada daha beraberiz.",
+      "metin": "Aynı masa, aynı mum, ama bu defa başka bir haber.",
       "ziyaret": 6,
-      "metin_en": "We are together at another date."
+      "metin_en": "Same table, same candle, but different news this time."
     },
     {
       "id": 360,
@@ -2415,15 +2607,15 @@
     },
     {
       "id": 364,
-      "metin": "Tekrar merhaba.",
+      "metin": "Bu sefer hangi soruyla geldin, tahmin edeyim mi?",
       "ziyaret": 6,
-      "metin_en": "Hello again, {{isim}}."
+      "metin_en": "What question brought you this time? Shall I guess?"
     },
     {
       "id": 365,
-      "metin": "Yeniden hoş geldin.",
+      "metin": "Eşikte durma {{isim}}, içerisi sıcak.",
       "ziyaret": 6,
-      "metin_en": "Welcome back {{isim}}!"
+      "metin_en": "Don't linger at the door, {{isim}}. It's warm inside."
     },
     {
       "id": 366,
@@ -2433,15 +2625,15 @@
     },
     {
       "id": 367,
-      "metin": "Yeniden merhaba!",
+      "metin": "Bak, saatler senin gelişine göre ayarlanmış.",
       "ziyaret": 6,
-      "metin_en": "Hello again {{isim}}."
+      "metin_en": "Look, the clocks have been set to your arrival."
     },
     {
       "id": 368,
-      "metin": "Tekrar bir aradayız!",
+      "metin": "Kapıyı aralık bırakmıştım, iyi ki bırakmışım.",
       "ziyaret": 6,
-      "metin_en": "Here we are again!"
+      "metin_en": "I left the door ajar. Glad I did."
     },
     {
       "id": 369,
@@ -2453,25 +2645,49 @@
       "id": 370,
       "metin": "Akşamları zihnim daha berrak oluyor. Tekrar merhaba {{isim}}!",
       "ziyaret": 6,
-      "metin_en": "My mind is clearer in the evenings. Hello again {{isim}}!"
+      "metin_en": "My mind is clearer in the evenings. Hello again {{isim}}!",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 371,
       "metin": "Şu akşamlar ne kadar sakin, ne kadar dingin oluyor... Merhaba {{isim}}.",
       "ziyaret": 6,
-      "metin_en": "How calm, how serene these evenings are... Hello {{isim}}."
+      "metin_en": "How calm, how serene these evenings are... Hello {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 372,
       "metin": "Kimisi günü, güneşi daha çok sever. Ben akşamı, geceyi seviyorum. Sükut insanıyım... Hoş geldin {{isim}}.",
       "ziyaret": 6,
-      "metin_en": "Kimisi günü, güneşi daha çok sever. Ben akşamı, geceyi seviyorum. Sükut insanıyım... Hoş geldin {{isim}}."
+      "metin_en": "Kimisi günü, güneşi daha çok sever. Ben akşamı, geceyi seviyorum. Sükut insanıyım... Hoş geldin {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 373,
       "metin": "Evet {{isim}}, bugün de neredeyse akşam oldu. Gramafona bir plak taktım, drink'imi koydum, fallar için hazırım.",
       "ziyaret": 6,
-      "metin_en": "Evet {{isim}}, bugün de neredeyse akşam oldu. Gramafona bir plak taktım, drink'imi koydum, fallar için hazırım."
+      "metin_en": "Evet {{isim}}, bugün de neredeyse akşam oldu. Gramafona bir plak taktım, drink'imi koydum, fallar için hazırım.",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 374,
@@ -2493,7 +2709,7 @@
     },
     {
       "id": 377,
-      "metin": "Tekrar hoş geldin {{isim}}. Geleceği gösteren camları sildim, geçmişi yansıtan dikiz aynasını düzelttim, moturu çalıştırıp el frenini indirdim. Kemerler de bağlıysa, başlayalım!",
+      "metin": "Tekrar hoş geldin {{isim}}. Geleceği gösteren camları sildim, geçmişi yansıtan dikiz aynasını düzelttim, motoru çalıştırıp el frenini indirdim. Kemerler de bağlıysa, başlayalım!",
       "ziyaret": 6,
       "metin_en": "Tekrar hoş geldin {{isim}}. Geleceği gösteren camları sildim, geçmişi yansıtan dikiz aynasını düzelttim, moturu çalıştırıp el frenini indirdim. Kemerler de bağlıysa, başlayalım!"
     },
@@ -2519,7 +2735,13 @@
       "id": 381,
       "metin": "Hayırlı akşamların olsun {{isim}}! Ben tekrar geldim.",
       "ziyaret": 6,
-      "metin_en": "Have a good evening {{isim}}! I came again."
+      "metin_en": "Have a good evening {{isim}}! I came again.",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 382,
@@ -2541,21 +2763,21 @@
     },
     {
       "id": 385,
-      "metin": "Tekrar merhaba! {{isim}} ekranın sol üst köşesindeki mavi bar ne işe yarar, biliyorsun öyle değil mi? Altının varsa reklamsız fal yorumu alabiliyorsun. Altının yoksa reklam izliyorsun. Gayet basit.",
+      "metin": "Tekrar merhaba {{isim}}! Zarfın üstündeki nokta yeşile dönünce falın hazır demektir.",
       "ziyaret": 6,
-      "metin_en": "Tekrar merhaba! {{isim}} ekranın sol üst köşesindeki mavi bar ne işe yarar, biliyorsun öyle değil mi? Altının varsa reklamsız fal yorumu alabiliyorsun. Altının yoksa reklam izliyorsun. Gayet basit."
+      "metin_en": "Hello again {{isim}}! When the dot on the envelope turns green, your reading is ready."
     },
     {
       "id": 386,
-      "metin": "A aa {{isim}} geldi! {{isim}} sana ekranın sağ üst köşesindeki mor elmas barından hiç bahsetmiş miydim? Bazı fal türleri çok özel ve elmas gerekiyor. Mağaza'dan kolaylıkla alabilir, \"Kazan\" bölümündeki Simyacı ile altınlarını elmasa dönüştürebilirsin!",
+      "metin": "A aa {{isim}} geldi! Alttaki zarfa bir göz at; sana yazdıklarım orada bekliyor.",
       "ziyaret": 6,
-      "metin_en": "A aa {{isim}} geldi! {{isim}} sana ekranın sağ üst köşesindeki mor elmas barından hiç bahsetmiş miydim? Bazı fal türleri çok özel ve elmas gerekiyor. Mağaza'dan kolaylıkla alabilir, \"Kazan\" bölümündeki Simyacı ile altınlarını elmasa dönüştürebilirsin!"
+      "metin_en": "Oh, {{isim}} is here! Check the envelope below; what I wrote for you is waiting there."
     },
     {
       "id": 387,
-      "metin": "Bu defa aniden çağırdın, hazırlıksız yakalandım {{isim}}. Gözlüklerim nerede? Bir saniye...|3s|Hah buldum! Başlayabiliriz.",
+      "metin": "Bu defa aniden çağırdın {{isim}}. Gözlüklerim neredeydi... Hah, buldum! Başlayabiliriz.",
       "ziyaret": 6,
-      "metin_en": "Bu defa aniden çağırdın, hazırlıksız yakalandım {{isim}}. Gözlüklerim nerede? Bir saniye...|3s|Hah buldum! Başlayabiliriz."
+      "metin_en": "You called so suddenly this time, {{isim}}. Where were my glasses... Ah, found them! Let's begin."
     },
     {
       "id": 388,
@@ -2585,7 +2807,13 @@
       "id": 392,
       "metin": "{{isim}}? Gözden kayboldun sanmıştım. Akşamı ettik bak...",
       "ziyaret": 6,
-      "metin_en": "{{isim}}? I thought you had disappeared. Look, we spent the evening..."
+      "metin_en": "{{isim}}? I thought you had disappeared. Look, we spent the evening...",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 393,
@@ -2597,37 +2825,85 @@
       "id": 394,
       "metin": "Genelde bu saatlerde uyuyor olurum ama bugün sanırım ikimizi de uyku tutmadı {{isim}}.",
       "ziyaret": 6,
-      "metin_en": "I usually sleep around these hours but it seems like neither of us is feeling sleepy today {{isim}}."
+      "metin_en": "I usually sleep around these hours but it seems like neither of us is feeling sleepy today {{isim}}.",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "gece"
+        }
+      ]
     },
     {
       "id": 395,
       "metin": "Gecelerin kraliçesi ile sanal ortamda yeniden rastlaştık, bak şu işe!",
       "ziyaret": 6,
-      "metin_en": "We met the Queen of the Night once again in the virtual world, what a coincidence!"
+      "metin_en": "We met the Queen of the Night once again in the virtual world, what a coincidence!",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "gece"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
     },
     {
       "id": 396,
       "metin": "Gecelerin prensi ile sanal ortamda yeniden rastlaştık, bak şu işe!",
       "ziyaret": 6,
-      "metin_en": "We met again with the prince of nights in the virtual world, what a surprise!"
+      "metin_en": "We met again with the prince of nights in the virtual world, what a surprise!",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "gece"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "erkek"
+        }
+      ]
     },
     {
       "id": 397,
       "metin": "Gecelerin prensesi ile sanal ortamda yeniden rastlaştık, bak şu işe!",
       "ziyaret": 6,
-      "metin_en": "We met again with the night princess in the virtual world, what a coincidence!"
+      "metin_en": "We met again with the night princess in the virtual world, what a coincidence!",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "gece"
+        },
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
     },
     {
       "id": 398,
-      "metin": "Yarın iş yok mu {{isim}}, sen hala uyumamışsın?",
+      "metin": "Yarın iş yok mu {{isim}}, sen hâlâ uyumamışsın?",
       "ziyaret": 6,
-      "metin_en": "You have to go to work tomorrow {{isim}}, don't you? You still haven't slept?"
+      "metin_en": "You have to go to work tomorrow {{isim}}, don't you? You still haven't slept?",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "gece"
+        }
+      ]
     },
     {
       "id": 399,
       "metin": "Gece su içmeye kalkıp Magnus'a girenlerde bugün...",
       "ziyaret": 6,
-      "metin_en": "The ones who waked up in the midnight trying to drink water and met Magnus..."
+      "metin_en": "The ones who waked up in the midnight trying to drink water and met Magnus...",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "gece"
+        }
+      ]
     },
     {
       "id": 400,
@@ -2651,7 +2927,13 @@
       "id": 403,
       "metin": "{{isim}} nerelerdeydin? Akşam oldu...",
       "ziyaret": 6,
-      "metin_en": "{{isim}}, where have you been? It's evening..."
+      "metin_en": "{{isim}}, where have you been? It's evening...",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 404,
@@ -2709,7 +2991,7 @@
     },
     {
       "id": 413,
-      "metin": "Kerameti kendinden menkul uygulamalarda değil, bir kez daha Magnus'dasın!",
+      "metin": "Kerameti kendinden menkul uygulamalarda değil, bir kez daha Magnus'tasın!",
       "ziyaret": 6,
       "metin_en": "You're not in some miraculous app, you're in Magnus once again!"
     },
@@ -2717,7 +2999,13 @@
       "id": 414,
       "metin": "Bugün de akşamı ettik hamdolsun.",
       "ziyaret": 6,
-      "metin_en": "We made it through the evening again today."
+      "metin_en": "We made it through the evening again today.",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 415,
@@ -2733,21 +3021,27 @@
     },
     {
       "id": 417,
-      "metin": "Tekrar merhaba {{isim}}! Şans çarkında şansını bir denemek ister misin?",
+      "metin": "Tekrar merhaba {{isim}}! Kader Çarkı'nda şansını bir denemek ister misin?",
       "ziyaret": 6,
-      "metin_en": "Tekrar merhaba {{isim}}! Şans çarkında şansını bir denemek ister misin?"
+      "metin_en": "Hello again {{isim}}! Want to try your luck on the Wheel of Fate?"
     },
     {
       "id": 418,
-      "metin": "{{isim}} hoş geldin. Nerede yaşadığın bilgisine ulaşamıyorum. Telefonunun ayarlarından konum servislerine erişmeme izin verirsen sana ara sıra hava durumu gibi bilgiler verebilirim.",
+      "metin": "{{isim}} hoş geldin. Bugün nereye gidersen git, bir haber senden önce varacak.",
       "ziyaret": 6,
-      "metin_en": "{{isim}} hoş geldin. Nerede yaşadığın bilgisine ulaşamıyorum. Telefonunun ayarlarından konum servislerine erişmeme izin verirsen sana ara sıra hava durumu gibi bilgiler verebilirim."
+      "metin_en": "Welcome {{isim}}. Wherever you go today, a piece of news will get there before you."
     },
     {
       "id": 419,
       "metin": "Yeniden merhaba prenses!",
       "ziyaret": 6,
-      "metin_en": "Hello again princess!"
+      "metin_en": "Hello again princess!",
+      "kosullar": [
+        {
+          "degisken": "cinsiyet",
+          "deger": "kadin"
+        }
+      ]
     },
     {
       "id": 420,
@@ -2783,7 +3077,17 @@
       "id": 425,
       "metin": "Akşamları gündüzlerden daha çok sevdiğime eminim!",
       "ziyaret": 6,
-      "metin_en": "I'm sure I love the nights more than the days!"
+      "metin_en": "I'm sure I love the nights more than the days!",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        },
+        {
+          "degisken": "vakit",
+          "deger": "gece"
+        }
+      ]
     },
     {
       "id": 426,
@@ -2849,7 +3153,13 @@
       "id": 436,
       "metin": "Merhaba. Dingin bir akşam, öyle değil mi?...",
       "ziyaret": 6,
-      "metin_en": "Hello. A peaceful evening, isn't it?..."
+      "metin_en": "Hello. A peaceful evening, isn't it?...",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "aksam"
+        }
+      ]
     },
     {
       "id": 437,
@@ -2915,7 +3225,13 @@
       "id": 447,
       "metin": "Selam. Karalara bürünmüş şu geceyi güzel haberler aydınlatsın...",
       "ziyaret": 6,
-      "metin_en": "Selam. Karalara bürünmüş şu geceyi güzel haberler aydınlatsın..."
+      "metin_en": "Selam. Karalara bürünmüş şu geceyi güzel haberler aydınlatsın...",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "gece"
+        }
+      ]
     },
     {
       "id": 448,
@@ -2925,15 +3241,21 @@
     },
     {
       "id": 449,
-      "metin": "İyi geceler. Sana bu geç saatte bir sürprizim var {{isim}}. Biraz gülümseyesin diye 3 altın hediye ettim.",
+      "metin": "İyi geceler {{isim}}. Bu saatte gelene yıldızlar daha açık konuşur.",
       "ziyaret": 6,
-      "metin_en": "İyi geceler. Sana bu geç saatte bir sürprizim var {{isim}}. Biraz gülümseyesin diye 3 altın hediye ettim."
+      "metin_en": "Good night, {{isim}}. The stars speak more plainly to those who come at this hour.",
+      "kosullar": [
+        {
+          "degisken": "vakit",
+          "deger": "gece"
+        }
+      ]
     },
     {
       "id": 450,
-      "metin": "Selamlar {{isim}}!",
+      "metin": "Selamlar {{isim}}, ay bugün senden yana.",
       "ziyaret": 6,
-      "metin_en": "{{isim}} greetings!"
+      "metin_en": "Greetings {{isim}}, the moon is on your side today."
     },
     {
       "id": 451,
@@ -2943,51 +3265,51 @@
     },
     {
       "id": 452,
-      "metin": "Merhaba {{isim}}!",
+      "metin": "Merhaba {{isim}}, kaderin bugün biraz geveze.",
       "ziyaret": 6,
-      "metin_en": "Hello!"
+      "metin_en": "Hello {{isim}}, your fate is a bit chatty today."
     },
     {
       "id": 453,
-      "metin": "Hoş geldin {{isim}}!",
+      "metin": "Hoş geldin {{isim}}, pusulam yine sana döndü.",
       "ziyaret": 6,
-      "metin_en": "Welcome {{isim}}."
+      "metin_en": "Welcome {{isim}}, my compass has turned to you again."
     },
     {
       "id": 454,
-      "metin": "Magnus'a hoş geldin {{isim}}!",
+      "metin": "Geldin {{isim}}, kapının önündeki kedi bile sevindi.",
       "ziyaret": 6,
-      "metin_en": "Welcome to Magnus, {{isim}}! I believe I will give you some good news this {{saat, morning time | noon time | midday | evening time | night time}}."
+      "metin_en": "You're here, {{isim}}. Even the cat at the door is pleased."
     },
     {
       "id": 455,
-      "metin": "Merhaba {{isim}}, ben Magnus!",
+      "metin": "Merhaba {{isim}}, ben Magnus; bugün en çok seni merak ettim.",
       "ziyaret": 6,
-      "metin_en": "Hello {{isim}}, I'm Magnus!"
+      "metin_en": "Hello {{isim}}, I'm Magnus, and you're the one I've been most curious about today."
     },
     {
       "id": 456,
-      "metin": "Selamlar {{isim}}, ben Magnus!",
+      "metin": "Selamlar {{isim}}, bende sana ait küçük bir işaret var.",
       "ziyaret": 6,
-      "metin_en": "Greetings {{isim}}, I'm Magnus!"
+      "metin_en": "Greetings {{isim}}, I've got a small sign meant for you."
     },
     {
       "id": 457,
-      "metin": "Selamlar {{isim}}, Magnus'lasın!",
+      "metin": "Magnus'lasın {{isim}}, acele etme; kader bekler.",
       "ziyaret": 6,
-      "metin_en": "Hello {{isim}}, you're with Magnus!"
+      "metin_en": "You're with Magnus, {{isim}}. No rush; fate can wait."
     },
     {
       "id": 458,
-      "metin": "Merhabalar {{isim}}!",
+      "metin": "Merhabalar {{isim}}, bugün gözüm sende.",
       "ziyaret": 6,
-      "metin_en": "Hello {{isim}}!"
+      "metin_en": "Greetings {{isim}}, I've got my eye on you today."
     },
     {
       "id": 459,
-      "metin": "Selamlar {{isim}}!",
+      "metin": "Selam {{isim}}, bir sır var ama önce otur.",
       "ziyaret": 6,
-      "metin_en": "{{isim}} greetings!"
+      "metin_en": "Hello {{isim}}, there's a secret, but sit down first."
     },
     {
       "id": 460,
@@ -5258,8 +5580,8 @@
     },
     {
       "id": 6,
-      "metin": "Magnus'un markasının, logosunun, algoritmasının ve tüm içeriğinin tescilli olduğunu biliyor muydun? Ticari maksatlarla izinsiz kopyalanması yasaktır.",
-      "metin_en": "Did you know that Magnus's brand, logo, algorithm, and all content are registered? Unauthorized copying for commercial purposes is prohibited."
+      "metin": "Numerolojide adındaki harflerin birer sayıya karşılık geldiğini biliyor muydun?",
+      "metin_en": "Did you know that in numerology each letter of your name stands for a number?"
     },
     {
       "id": 7,
@@ -5283,8 +5605,8 @@
     },
     {
       "id": 11,
-      "metin": "Magnus'un, internet ile bağlantılı pek çok kaynaktan senin için anlık olarak veri topladığını ve \"hava durumu\" gibi bilgileri seninle yaptığı sohbetlerde seni daha iyi bilgilendirebilmek adına kullandığını biliyor muydun?",
-      "metin_en": "Did you know that Magnus gathers real-time data from various internet sources to provide you with information like \"weather\" during your conversations to better inform you?"
+      "metin": "Yorumlarımı burcuna, yaşına ve hayat durumuna göre seçtiğimi biliyor muydun {{isim}}?",
+      "metin_en": "Did you know I choose my readings by your sign, age and situation, {{isim}}?"
     },
     {
       "id": 12,
@@ -5298,13 +5620,13 @@
     },
     {
       "id": 14,
-      "metin": "Kahve içemediysen ve yine de fal baktırmak istiyorsan, Magnus'un senin niyetine kahve içip falını yorumlayabileceğini biliyor muydun {{isim}}? Bunun için kahve falı kısmında fal konusunu seçtikten sonra, \"niyetime iç, yorumla\" demen yeterli!",
-      "metin_en": "If you haven't had coffee and still want to have your fortune told, did you know that Magnus can drink coffee on your behalf and interpret your fortune, {{isim}}? After selecting the fortune-telling section in the coffee cup reading, just say \"drink for my intention, interpret\"!"
+      "metin": "Dert Ortağı'na içini dökmek için her gün bir hakkın olduğunu biliyor muydun?",
+      "metin_en": "Did you know you get one chance a day to pour your heart out to the Confidant?"
     },
     {
       "id": 15,
-      "metin": "Magnus'un istemediğin bir bölümüne girdiğinde, istemediğin bir konuşmanın ortasında kaldığında, ekranın herhangi \"boş\" bir yerine \"çift tıklayarak\" süren tüm sohbetleri ve mevcut işlemleri iptal edebileceğini biliyor muydun?",
-      "metin_en": "Did you know that when you accidentally stumble into a section Magnus didn't want you to, or find yourself in the middle of a conversation you didn't want, you can cancel all ongoing chats and processes by \"double-clicking\" on any \"empty\" part of the screen?"
+      "metin": "Japon Falı'nın tapınaklardaki omikuji kâğıtlarından esinlendiğini biliyor muydun?",
+      "metin_en": "Did you know the Japanese reading is inspired by the omikuji slips found at shrines?"
     },
     {
       "id": 16,
@@ -5318,8 +5640,8 @@
     },
     {
       "id": 18,
-      "metin": "Magnus'un \"Kazan\" bölümünden kazanabileceğin altının SINIRSIZ olduğunu biliyor muydun? Tek ihtiyacın olan şey biraz dikkat, biraz şans ve eğlenmeyi seven bir ruh!",
-      "metin_en": "Did you know that the gold you can earn from Magnus' \"Golden Cauldron\" section is UNLIMITED? All you need is a little bit of attention, a little bit of luck, and a spirit that loves to have fun!"
+      "metin": "Zarfın yanında turuncu nokta varsa falının hâlâ hazırlandığını biliyor muydun?",
+      "metin_en": "Did you know an orange dot on the envelope means your reading is still being prepared?"
     },
     {
       "id": 19,
@@ -5328,38 +5650,38 @@
     },
     {
       "id": 20,
-      "metin": "Magnus'u yaratan kişinin aslında Faladdin'in de asıl \"fikir babası\" olduğunu, Faladdin'in tüm fallarını yine o kişinin oluşturduğunu, kendisine yapılan haksızlıklar neticesinde Magnus'u yaratmak için Faladdin'den ayrıldığını ve o kişinin aslında hiç medyatik de olmadığını biliyor muydun? Baş harfi \"A\"",
-      "metin_en": "Did you know that the creator of Magnus is actually the true \"father of ideas\" for Faladdin as well, that all of Faladdin's fortunes were created by that same person, and that due to the injustices done to him, he separated from Faladdin to create Magnus, and that person is actually not at all media-savvy? Did you know that the initial letter of him is \"A\"?"
+      "metin": "Ana menüde en çok açtığın falların Favoriler'e geçtiğini biliyor muydun?",
+      "metin_en": "Did you know the readings you open most move up to Favorites on the main menu?"
     },
     {
       "id": 21,
-      "metin": "Magnus'un geleceği öngörebilen fal motorunun ChatGPT, Gemini ve Claude gibi yapay zekalardan daha üstün bir dil modeli olduğunu biliyor muydun?",
-      "metin_en": "Did you know that Magnus' fortune-telling engine is a more superior language model than artificial intelligences like ChatGPT, Gemini and Claude?"
+      "metin": "Ekranın kenarından sağa kaydırınca bir önceki sayfaya döndüğünü biliyor muydun?",
+      "metin_en": "Did you know swiping right from the screen's edge takes you back a page?"
     },
     {
       "id": 22,
-      "metin": "Magnus'un \"dahi\" baş yazılımcısının bir makine mühendisi olduğunu biliyor muydun?",
-      "metin_en": "Did you know that Magnus' \"genius\" lead developer CTO is a mechanical engineer?"
+      "metin": "Alttaki cam barın saydamlığını Kullanıcı Bilgileri'nden ayarlayabildiğini biliyor muydun?",
+      "metin_en": "Did you know you can adjust the glass bar's transparency in your profile?"
     },
     {
       "id": 23,
-      "metin": "Magnus'un seni zamanla daha iyi tanıdığını, seçimlerin arasında gerçek zamanlı bağlantılar kurduğunu, sana olan yaklaşımlarını bu doğrultuda değiştirdiğini ve tüm yorumlarını ona göre yaptığını biliyor muydun?",
-      "metin_en": "Did you know that Magnus gets to know you better over time, establishes real-time connections between your choices, changes his approaches to you accordingly and makes all his comments accordingly?"
+      "metin": "I-Ching'in 64 heksagramdan oluştuğunu biliyor muydun?",
+      "metin_en": "Did you know the I Ching is made up of 64 hexagrams?"
     },
     {
       "id": 24,
-      "metin": "Magnus'un CEO'sunun bir tıp doktoru olduğunu ve Faladdin'in CEO'su Sertaç Taşdelen ile eskiden çok yakın arkadaş olduklarını biliyor muydun?",
-      "metin_en": "Did you know that Magnus' CEO is a medical doctor and that Faladdin's CEO used to be very close friends with Sertaç Taşdelen?"
+      "metin": "Falın hazır olunca sana haber verebildiğimi biliyor muydun? Bildirimler açık olsun yeter.",
+      "metin_en": "Did you know I can tell you when your reading is ready? Just keep notifications on."
     },
     {
       "id": 25,
-      "metin": "Magnus'un tüm kullanıcılarına ilk gelişlerinde 10 altın hediye ettiğini biliyor muydun?",
-      "metin_en": "Did you know that Magnus gives all users 10 gold on their first arrival, and for each subsequent day, 1 gold for regular users and 3 gold for Magnus Plus users?"
+      "metin": "Dert Ortağı'nda her derde birden çok tavsiye sakladığımı biliyor muydun {{isim}}?",
+      "metin_en": "Did you know I keep more than one piece of advice for every trouble, {{isim}}?"
     },
     {
       "id": 26,
-      "metin": "Magnus'daki tüm falların aslında BEDAVA olduğunu ve hiçbir ücret ödemeden tüm Magnus hizmetlerinden faydalanabileceğini biliyor muydun? Altının bittiğinde \"kazan\" bölümünü ziyaret et yeter.",
-      "metin_en": "Did you know that all fortunes in Magnus are actually FREE and you can benefit from all Magnus services without paying any fees? Just visit the \"win\" section when you run out of gold."
+      "metin": "Kader Kitabı'nın her gün sana yeni bir sayfa açtığını biliyor muydun?",
+      "metin_en": "Did you know the Book of Fate opens a new page for you every day?"
     },
     {
       "id": 27,
@@ -5373,8 +5695,8 @@
     },
     {
       "id": 29,
-      "metin": "Magnus Plus üyesi olduğunda tüm Magnus logolarının Plus'a özel olarak değiştiğini biliyor muydun?",
-      "metin_en": "Did you know that when you become a Magnus Plus member, all Magnus logos change specifically for Plus?"
+      "metin": "Kullanıcı Bilgileri'ni güncelleyince fallarının da değiştiğini biliyor muydun?",
+      "metin_en": "Did you know your readings change when you update your profile?"
     },
     {
       "id": 30,
@@ -5383,8 +5705,8 @@
     },
     {
       "id": 31,
-      "metin": "Magnus'un beynini oluşturan kodların, sana dair ve hayata dair tüm bilgiler arasında çapraz bağlantılar kurduğunu, dolayısıyla gerçek bir yapay zeka olduğunu biliyor muydun?",
-      "metin_en": "Did you know that the code composing Magnus's brain establishes cross-connections among all the information about you and life, making it a true artificial intelligence?"
+      "metin": "Tarot destesinde 78 kart olduğunu biliyor muydun?",
+      "metin_en": "Did you know a tarot deck has 78 cards?"
     },
     {
       "id": 32,
@@ -5393,8 +5715,8 @@
     },
     {
       "id": 33,
-      "metin": "Magnus'un \"Özlü Sözler\" bölümü hariç, başka hiçbir yerinde hiçbir kitaptan ya da kaynaktan alıntı olmadığını, okuduğun ve okuyacağın tüm cümlelerin yalnızca Magnus'a özel olduğunu, Magnus'un kendi cümleleri olduğunu biliyor muydun?",
-      "metin_en": "Did you know that, apart from the \"Quotes\" section of Magnus, none of the sentences you read or will read are quoted from any book or source? All the sentences you read, except for the \"Quotes\" section, are unique to Magnus, did you know that?"
+      "metin": "Türk kahvesi falının yüzyıllardır fincandaki telveden okunduğunu biliyor muydun?",
+      "metin_en": "Did you know Turkish coffee has been read from its grounds for centuries?"
     }
   ],
   "ilk_giris_en": "Ve işte karşındayım! Hoş geldin {{isim}}."

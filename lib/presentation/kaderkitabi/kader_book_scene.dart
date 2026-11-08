@@ -43,7 +43,11 @@ class KaderBookScene extends StatefulWidget {
     this.onRisen,
     this.onTap,
     this.dropCap = true,
+    this.showNextArrow = false,
   });
+
+  /// Sonraki açılım varsa sağ sayfanın altında ok.
+  final bool showNextArrow;
 
   /// Kitaba dokununca (metin iki sayfaya sığmıyorsa sonraki açılıma geç).
   final VoidCallback? onTap;
@@ -140,7 +144,7 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
       c.transform(((t - a) / (b - a)).clamp(0.0, 1.0));
 
   Widget _bookFor(double t, double bookW, double bookH) {
-    final key = (t, bookW, bookH, widget.leftText, widget.rightText, widget.textScale, widget.dropCap);
+    final key = (t, bookW, bookH, widget.leftText, widget.rightText, widget.textScale, widget.dropCap, widget.showNextArrow);
     if (_bookCache != null && _bookKey == key) return _bookCache!;
     final wet = 1 - _seg(t, 0.34, 0.86, Curves.easeInOut); // 1 ıslak … 0 kuru
     final leftInk = _seg(t, 0.60, 0.80, Curves.easeInOut);
@@ -194,6 +198,21 @@ class _KaderBookSceneState extends State<KaderBookScene> with TickerProviderStat
           ),
         _page(kKaderLeftPage, bookW, bookH, widget.leftText, leftInk, dropCap: widget.dropCap),
         _page(kKaderRightPage, bookW, bookH, widget.rightText, rightInk),
+        if (widget.showNextArrow)
+          Positioned(
+            key: const ValueKey('kaderNextArrow'),
+            // Sağ sayfanın son satır yeri (paginateKaderPages o satırı boş bırakır).
+            left: kKaderRightPage.right * bookW - bookW * 0.105,
+            top: kKaderRightPage.bottom * bookH - bookW * 0.05,
+            width: bookW * 0.105,
+            height: bookW * 0.05,
+            child: IgnorePointer(
+              child: Opacity(
+                opacity: rightInk,
+                child: const CustomPaint(painter: _NextArrowPainter()),
+              ),
+            ),
+          ),
         IgnorePointer(
           child: CustomPaint(painter: _DropsPainter(t: t, seed: 11)),
         ),
@@ -473,13 +492,43 @@ List<(String, String)> paginateKaderPages(String text, Size page, TextScaler sca
     final leftCap = first ? math.max(1, perPage - 1) : perPage;
     final (left, afterLeft) = _kaderCutPage(rest, page, style, scaler, leftCap);
     final (right, afterRight) =
-        afterLeft.isEmpty ? ('', '') : _kaderCutPage(afterLeft, page, style, scaler, perPage);
+        afterLeft.isEmpty
+            ? ('', '')
+            : _kaderCutPage(afterLeft, page, style, scaler, math.max(1, perPage - 1)); // son satır: ok yeri
     spreads.add((left, right));
     rest = afterRight;
     first = false;
   }
   if (spreads.isEmpty) spreads.add((text, ''));
   return spreads;
+}
+
+/// Parşömene kalemle çizilmiş gibi sağ ok.
+class _NextArrowPainter extends CustomPainter {
+  const _NextArrowPainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final w = size.width, h = size.height;
+    final p = Paint()
+      ..color = const Color(0xFF2A1808).withValues(alpha: 0.72)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = math.max(1.4, h * 0.09)
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
+    canvas.drawPath(
+      Path()
+        ..moveTo(w * 0.02, h * 0.54)
+        ..quadraticBezierTo(w * 0.5, h * 0.46, w * 0.96, h * 0.5)
+        ..moveTo(w * 0.66, h * 0.08)
+        ..lineTo(w * 0.97, h * 0.5)
+        ..lineTo(w * 0.64, h * 0.94),
+      p,
+    );
+  }
+
+  @override
+  bool shouldRepaint(_NextArrowPainter old) => false;
 }
 
 class _PageText extends StatelessWidget {

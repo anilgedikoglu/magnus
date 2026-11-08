@@ -89,7 +89,7 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
       _brands = ArabaEngine.brands(pool);
       if (t.computed) {
         _t = t;
-        _adim = _Adim.liste;
+        _adim = _Adim.hesap; // her açılışta arama animasyonu, sonra liste
       } else {
         _adim = _Adim.marka;
         if (saved != null) {
@@ -344,13 +344,6 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              _tr('Gelecekte sahip olacağın arabaları merak ediyor musun? Tıkla.',
-                  'Curious about the cars you will own in the future? Tap.'),
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 14, height: 1.35),
-            ),
-            const SizedBox(height: 20),
             // Belirsiz araba görselleri arasında dönüp yavaşlayarak birinde durur.
             BlurRevealSpinner(
               assetPaths: _kArabaGorselleri,
@@ -360,7 +353,7 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
             ),
             const SizedBox(height: 16),
             Text(
-              _tr('Hesaplanıyor...', 'Calculating...'),
+              _tr('Gelecekteki araban aranıyor...', 'Searching for your future car...'),
               textAlign: TextAlign.center,
               style: const TextStyle(color: Color(0xFFD8C4FF), fontSize: 17, fontWeight: FontWeight.w600),
             ),

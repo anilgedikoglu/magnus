@@ -31,7 +31,6 @@ class AppStrings {
 
   // ── Home Screen ─────────────────────────────────────────────────────────
   String get mainMenu       => _s('Ana Menü',    'Main Menu');
-  String get magnusMainMenu => _s("Magnus'un ana menüsü karşında!", "Magnus's main menu is before you!");
   String get settings       => _s('Ayarlar',     'Settings');
   String get page           => _s('Sayfa',       'Page');
   String get readyInbox     => _s('Hazır',       'Ready');

@@ -3,7 +3,6 @@
 // sola kaydır → +50) → kısa hesaplama → sonuç: yer, ev tipi, denize mesafe, durum, kullanım, (varsa) yazlık
 // + kısa bir anlatı. Her satır kapalı kutu: geçiş reklamı (AdService sıklık sınırıyla) → açılır ve KALICI kalır.
 import 'dart:async';
-import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,6 +10,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../core/widgets/blur_reveal_spinner.dart';
 import '../../core/widgets/unlock_flash.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_service.dart';
@@ -22,6 +22,10 @@ import '../../data/providers.dart';
 import '../../data/services/ev_engine.dart';
 
 enum _Adim { yukleniyor, il, secim, hesap, sonuc }
+
+final _kEvGorselleri = [
+  for (var i = 1; i <= 16; i++) 'assets/images/evim/ev_${i.toString().padLeft(2, '0')}.jpg',
+];
 
 class EvimScreen extends ConsumerStatefulWidget {
   const EvimScreen({super.key});
@@ -132,8 +136,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
 
   void _goster() {
     HapticFeedback.mediumImpact();
-    // Sonuç zaten _useIl()'de hesaplandı (_t). Bekleme süresi artık dünya-haritası nabız
-    // animasyonuna ait: ~5 sn harita üzerinde noktalar yanıp söner, bitince _hesapBitti().
+    // Sonuç zaten _useIl()'de hesaplandı (_t). Bekleme süresi BlurRevealSpinner'a ait.
     setState(() => _adim = _Adim.hesap);
   }
 
@@ -454,16 +457,16 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Dünya haritası üzerinde rastgele noktalar ardı ardına yanıp söner (~5 sn),
-          // sonra sonuç. Harita görseli varsa kullanır, yoksa stilize koyu dünya çizer.
-          _WorldMapPulse(
-            size: 230,
+          // Belirsiz ev görselleri arasında dönüp yavaşlayarak birinde durur.
+          BlurRevealSpinner(
+            assetPaths: _kEvGorselleri,
             accent: _pink,
-            onDone: _hesapBitti,
+            size: 200,
+            onDone: (_) => _hesapBitti(),
           ),
           const SizedBox(height: 22),
           Text(
-            _tr('Haritada evin aranıyor...', 'Searching the map for your home...'),
+            _tr('Gelecekteki evin aranıyor...', 'Searching for your future home...'),
             textAlign: TextAlign.center,
             style: const TextStyle(color: Color(0xFFD8C4FF), fontSize: 17, fontWeight: FontWeight.w600),
           ),
@@ -587,315 +590,4 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
       ),
     );
   }
-}
-
-// ── "Hesaplanıyor" dünya-haritası nabzı ──────────────────────────────────────
-// Koyu bir dünya haritası (varsa görsel, yoksa stilize glob) üzerinde rastgele konumlarda
-// ~150-250 ms'de bir yeni ışık noktası parlayıp söner. [duration] sonunda onDone çağrılır.
-// Azaltılmış hareket: nokta üretimi kapanır, birkaç durağan nokta gösterilir, kısa süre
-// sonra onDone (akış yine ilerler). Harita görseli: assets/images/evim/world_map.jpg (opsiyonel).
-class _WorldMapPulse extends StatefulWidget {
-  final double size;
-  final Color accent;
-  final VoidCallback? onDone;
-
-  const _WorldMapPulse({
-    required this.size,
-    required this.accent,
-    this.onDone,
-  });
-
-  @override
-  State<_WorldMapPulse> createState() => _WorldMapPulseState();
-}
-
-class _WorldMapPulseState extends State<_WorldMapPulse>
-    with SingleTickerProviderStateMixin {
-  static const int _kLifeMs = 950; // bir noktanın parlayıp sönme süresi
-  static const int _kMaxPulses = 48;
-  static const Duration _kDuration = Duration(milliseconds: 5000); // toplam süre ~5 sn
-
-  late final AnimationController _ctrl =
-      AnimationController(vsync: this, duration: _kDuration); // kare tetikleyici
-  final Stopwatch _sw = Stopwatch(); // nokta yaşlarını ölçer
-  final math.Random _rnd = math.Random();
-  final List<_Pulse> _pulses = [];
-  Timer? _spawnTimer;
-  Timer? _holdTimer;
-  bool _reduced = false;
-  bool _started = false;
-  bool _done = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _ctrl.addStatusListener(_onStatus);
-  }
-
-  void _onStatus(AnimationStatus s) {
-    if (s == AnimationStatus.completed && !_done) {
-      _spawnTimer?.cancel();
-      _holdTimer?.cancel();
-      _holdTimer = Timer(const Duration(milliseconds: 350), _finish);
-    }
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _reduced = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-    if (!_started) {
-      _started = true;
-      _sw.start();
-      if (_reduced) {
-        // Durağan birkaç nokta, kısa bekleme, bitir.
-        for (var i = 0; i < 4; i++) {
-          _pulses.add(_Pulse(_randomPoint(), -_kLifeMs ~/ 3));
-        }
-        _ctrl.value = 1.0;
-        _holdTimer = Timer(const Duration(milliseconds: 600), _finish);
-        setState(() {});
-      } else {
-        _ctrl.forward();
-        _spawn();
-      }
-    }
-  }
-
-  Offset _randomPoint() {
-    // Glob/orta oval içinde kalacak dağılım (hem stilize glob hem tam harita için makul).
-    final ang = _rnd.nextDouble() * 2 * math.pi;
-    final r = math.sqrt(_rnd.nextDouble()) * 0.44;
-    return Offset(0.5 + r * math.cos(ang), 0.5 + r * math.sin(ang) * 0.92);
-  }
-
-  void _spawn() {
-    if (!mounted || _done) return;
-    _pulses.add(_Pulse(_randomPoint(), _sw.elapsedMilliseconds));
-    // Sönmüş olanları temizle + taşmayı sınırla.
-    final now = _sw.elapsedMilliseconds;
-    _pulses.removeWhere((p) => now - p.bornMs > _kLifeMs);
-    if (_pulses.length > _kMaxPulses) {
-      _pulses.removeRange(0, _pulses.length - _kMaxPulses);
-    }
-    final next = 150 + _rnd.nextInt(100); // 150-250 ms
-    _spawnTimer = Timer(Duration(milliseconds: next), _spawn);
-  }
-
-  void _finish() {
-    if (_done || !mounted) return;
-    _done = true;
-    widget.onDone?.call();
-  }
-
-  @override
-  void dispose() {
-    _spawnTimer?.cancel();
-    _holdTimer?.cancel();
-    _ctrl.removeStatusListener(_onStatus);
-    _ctrl.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final radius = BorderRadius.circular(widget.size * 0.1);
-    return RepaintBoundary(
-      child: SizedBox(
-        width: widget.size,
-        height: widget.size,
-        child: ClipRRect(
-          borderRadius: radius,
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              // Harita görseli (opsiyonel) → yoksa stilize koyu glob.
-              Image.asset(
-                'assets/images/evim/world_map.jpg',
-                fit: BoxFit.cover,
-                errorBuilder: (_, __, ___) =>
-                    CustomPaint(painter: _StylizedMapPainter(accent: widget.accent)),
-              ),
-              // Yanıp sönen noktalar.
-              AnimatedBuilder(
-                animation: _ctrl,
-                builder: (_, __) => CustomPaint(
-                  painter: _MapPulsePainter(
-                    pulses: _pulses,
-                    nowMs: _sw.elapsedMilliseconds,
-                    lifeMs: _kLifeMs,
-                    accent: widget.accent,
-                  ),
-                ),
-              ),
-              // Gizemli vinyet + rim.
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  borderRadius: radius,
-                  border: Border.all(color: widget.accent.withValues(alpha: 0.30), width: 1.2),
-                  gradient: RadialGradient(
-                    radius: 0.98,
-                    colors: [
-                      Colors.transparent,
-                      Colors.black.withValues(alpha: 0.18),
-                      Colors.black.withValues(alpha: 0.5),
-                    ],
-                    stops: const [0.5, 0.8, 1.0],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _Pulse {
-  final Offset pos; // normalize (0..1)
-  final int bornMs;
-  const _Pulse(this.pos, this.bornMs);
-}
-
-class _MapPulsePainter extends CustomPainter {
-  final List<_Pulse> pulses;
-  final int nowMs;
-  final int lifeMs;
-  final Color accent;
-  _MapPulsePainter({
-    required this.pulses,
-    required this.nowMs,
-    required this.lifeMs,
-    required this.accent,
-  });
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final w = size.width, h = size.height;
-    for (final p in pulses) {
-      final age = nowMs - p.bornMs;
-      if (age < 0 || age > lifeMs) continue;
-      final t = age / lifeMs; // 0..1
-      final appear = (age / 110).clamp(0.0, 1.0);
-      final fade = ((lifeMs - age) / 520).clamp(0.0, 1.0);
-      final a = appear * fade; // zarf 0..1
-      if (a <= 0.01) continue;
-      final c = Offset(p.pos.dx * w, p.pos.dy * h);
-
-      // Genişleyen radar halkası.
-      final ringR = w * (0.012 + t * 0.07);
-      canvas.drawCircle(
-        c,
-        ringR,
-        Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 1.4
-          ..color = accent.withValues(alpha: 0.5 * a * (1 - t)),
-      );
-
-      // Hale.
-      canvas.drawCircle(
-        c,
-        w * 0.03,
-        Paint()
-          ..color = accent.withValues(alpha: 0.35 * a)
-          ..maskFilter = MaskFilter.blur(BlurStyle.normal, w * 0.03),
-      );
-
-      // Çekirdek parlak nokta.
-      canvas.drawCircle(
-        c,
-        w * 0.011,
-        Paint()..color = Color.lerp(accent, Colors.white, 0.6)!.withValues(alpha: a),
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(_MapPulsePainter old) => true;
-}
-
-/// Harita görseli yoksa: koyu stilize bir dünya glob'u (ızgara + silik kara noktaları).
-class _StylizedMapPainter extends CustomPainter {
-  final Color accent;
-  _StylizedMapPainter({required this.accent});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final w = size.width, h = size.height;
-    final rect = Offset.zero & size;
-    final center = Offset(w / 2, h / 2);
-    final r = w * 0.44;
-
-    // Uzay zemini.
-    canvas.drawRect(
-      rect,
-      Paint()
-        ..shader = const RadialGradient(
-          colors: [Color(0xFF14102E), Color(0xFF070512)],
-        ).createShader(rect),
-    );
-
-    // Glob gövdesi.
-    canvas.drawCircle(
-      center,
-      r,
-      Paint()
-        ..shader = RadialGradient(
-          center: const Alignment(-0.3, -0.35),
-          colors: [
-            accent.withValues(alpha: 0.16),
-            const Color(0xFF0E1B3A).withValues(alpha: 0.92),
-            const Color(0xFF060A1C),
-          ],
-          stops: const [0.0, 0.6, 1.0],
-        ).createShader(Rect.fromCircle(center: center, radius: r)),
-    );
-
-    canvas.save();
-    canvas.clipPath(Path()..addOval(Rect.fromCircle(center: center, radius: r)));
-
-    // Enlem/boylam ızgarası.
-    final grid = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 0.8
-      ..color = accent.withValues(alpha: 0.14);
-    for (var i = 1; i < 6; i++) {
-      final dy = -r + 2 * r * i / 6;
-      final chord = math.sqrt(math.max(0.0, r * r - dy * dy));
-      canvas.drawLine(Offset(center.dx - chord, center.dy + dy),
-          Offset(center.dx + chord, center.dy + dy), grid);
-    }
-    for (var i = 0; i < 5; i++) {
-      canvas.drawOval(
-        Rect.fromCenter(center: center, width: 2 * (r - r * i * 0.33), height: 2 * r),
-        grid,
-      );
-    }
-
-    // Silik "kara" noktaları (deterministik seed → sabit desen).
-    final dots = math.Random(7);
-    final dotPaint = Paint()..color = accent.withValues(alpha: 0.22);
-    for (var i = 0; i < 90; i++) {
-      final ang = dots.nextDouble() * 2 * math.pi;
-      final rr = math.sqrt(dots.nextDouble()) * r * 0.96;
-      final p = Offset(center.dx + rr * math.cos(ang), center.dy + rr * math.sin(ang));
-      canvas.drawCircle(p, 1.1 + dots.nextDouble() * 1.3, dotPaint);
-    }
-    canvas.restore();
-
-    // İnce dış halka.
-    canvas.drawCircle(
-      center,
-      r,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.2
-        ..color = accent.withValues(alpha: 0.3),
-    );
-  }
-
-  @override
-  bool shouldRepaint(_StylizedMapPainter old) => old.accent != accent;
 }

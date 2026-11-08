@@ -299,6 +299,7 @@ class _KaderKitabiScreenState extends ConsumerState<KaderKitabiScreen> {
               leftText: spreads[idx].$1,
               rightText: spreads[idx].$2,
               dropCap: idx == 0,
+              showNextArrow: idx < spreads.length - 1,
               // Metin iki sayfaya sığmadıysa dokunuş SONRAKİ açılıma geçer; sığdıysa dokunuş yok.
               onTap: multi
                   ? () {

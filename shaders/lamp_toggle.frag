@@ -1,9 +1,8 @@
 // shaders/lamp_toggle.frag
 //
-// Bildirimler düğmesi: koyu çerçeve + oyuk iz + geniş cam sürgü + LED şerit + noktalı ikon
+// Bildirimler düğmesi: koyu çerçeve + oyuk iz + geniş cam sürgü + LED şerit
 // (Anıl, 2026-11-08). Çerçeve ve iz her durumda koyu; sürgünün rengi değişir, LED ışığı ikisine yansır.
-// Ölçüler "tasarım pikseli"; ekrana uScale ile ölçeklenir. Noktalı ikon Dart'ta
-// (lamp_toggle.dart) sürgüye göre dokuya basılır, burada camın ardından okunur.
+// Ölçüler "tasarım pikseli"; ekrana uScale ile ölçeklenir. AÇIK / KAPALI yazısı Dart'ta üste konur.
 
 #version 460 core
 #include <flutter/runtime_effect.glsl>
@@ -19,11 +18,8 @@ uniform float uLed;      // 9     LED şiddeti
 uniform float uLift;     // 10    düğme kalkışı (gölge)
 uniform vec3 uLight;     // 11-13 LED rengi
 uniform float uTheta;    // 14    şeridin düğme çevresindeki açısı
-uniform vec2 uBoxHalf;   // 15,16 ikon dokusunun yarı boyu (tasarım px, düğmeye göre)
-uniform float uDpr;      // 17    fiziksel / mantıksal px
-uniform float uTrackW;   // 18    izin yarı eni (tasarım px; ekran enine göre)
-uniform sampler2D uPix;  // sampler 0: keskin noktalar
-uniform sampler2D uGlow; // sampler 1: bulanık noktalar
+uniform float uDpr;      // 15    fiziksel / mantıksal px
+uniform float uTrackW;   // 16    izin yarı eni (tasarım px; ekran enine göre)
 
 out vec4 fragColor;
 
@@ -34,8 +30,6 @@ const float OUTER_R    = 112.0;  // dış çerçeve: tam kapsül
 const float STRIP_HALF = 0.92;   // şeridin açısal yarı uzunluğu (rad)
 const float STRIP_GAP  = 6.5;    // şeridin camdan uzaklığı
 const float REFRACT    = 24.0;
-const float FROST      = 0.76;
-const float ICON_GLOW  = 0.64;
 
 // smoothstep; kenarlar ters verilebilir (GLSL'de tanımsız olan durum).
 float ramp(float a, float b, float x) {
@@ -61,31 +55,6 @@ vec3 emit(vec3 col, float amt, float t) {
   return mix(onDark, onLight, t);
 }
 
-vec2 boxP(vec2 p) {
-  return p - vec2(uKx, 0.0);
-}
-
-vec2 boxUv(vec2 p) {
-  vec2 uv = (boxP(p) + uBoxHalf) / (2.0 * uBoxHalf);
-#ifdef IMPELLER_TARGET_OPENGLES
-  uv.y = 1.0 - uv.y;
-#endif
-  return uv;
-}
-
-bool outsideBox(vec2 p) {
-  vec2 q = boxP(p);
-  return abs(q.x) > uBoxHalf.x || abs(q.y) > uBoxHalf.y;
-}
-
-float dotsSharp(vec2 p) {
-  return outsideBox(p) ? 0.0 : texture(uPix, boxUv(p)).a;
-}
-
-float dotsSoft(vec2 p) {
-  return outsideBox(p) ? 0.0 : texture(uGlow, boxUv(p)).a;
-}
-
 // Düğmeyi dışarıdan saran, çevresinde dönen ışık şeridinin uzaklık alanı.
 float stripDist(vec2 p) {
   vec2 q = p - vec2(uKx, 0.0);
@@ -101,29 +70,13 @@ float floorWash(vec2 p) {
   return (exp(-d / 14.0) * 0.85 + exp(-d / 55.0) * 0.32) * uLed;
 }
 
-// Camın altındaki dünya. [th] tabanın aydınlığı: izde 0 (hep koyu), cam içinde sürgünün rengi.
-// [iconA]: bu noktadaki ikon örtüsü (cam tonu için).
-vec3 underGlass(vec2 p, float frost, vec2 split, float th, float washK, out float iconA) {
-  vec3 base = vec3(mix(0.030, 0.900, th));
-  base *= 1.0 + p.y / TRACK_HALF.y * mix(0.05, 0.012, th);
+// Camın altındaki dünya: iz tabanı + LED yıkaması.
+vec3 underGlass(vec2 p, float washK) {
+  vec3 base = vec3(0.030);
+  base *= 1.0 + p.y / TRACK_HALF.y * 0.05;
   float inner = ramp(-14.0, 3.0, roundBox(p - vec2(0.0, 7.0), TRACK_HALF, TRACK_R));
-  base = mix(base * (1.0 - inner * 0.6), base - inner * 0.085, th);
-
-  float wash = floorWash(p) * washK;
-  base = emit(base, wash * 0.55, th);
-
-  float softC = dotsSoft(p);
-  vec3 a = vec3(
-    mix(dotsSharp(p - split), dotsSoft(p - split) * 1.35, frost),
-    mix(dotsSharp(p), softC * 1.35, frost),
-    mix(dotsSharp(p + split), dotsSoft(p + split) * 1.35, frost));
-  float lum = dot(base, vec3(0.299, 0.587, 0.114));
-  vec3 ink = mix(vec3(1.0, 0.965, 0.925), vec3(0.11, 0.105, 0.10), ramp(0.40, 0.56, lum));
-  ink = mix(ink + uLight * wash * 0.9, ink + vec3(0.25, 0.08, 0.0) * wash, th);
-  iconA = clamp(a.g, 0.0, 1.0);
-  vec3 col = mix(base, ink, clamp(a, 0.0, 1.0));
-  col += vec3(1.0, 0.78, 0.55) * softC * ICON_GLOW * (1.0 - th);
-  return col;
+  base *= 1.0 - inner * 0.6;
+  return emit(base, floorWash(p) * washK * 0.55, 0.0);
 }
 
 void main() {
@@ -158,8 +111,7 @@ void main() {
 
   // Oyuk iz (sürgünün oturduğu yer)
   if (trackD < 2.0) {
-    float ignored;
-    vec3 tc = underGlass(p, 0.0, vec2(0.0), 0.0, 1.0, ignored);
+    vec3 tc = underGlass(p, 1.0);
     float shadow = 1.0 - ramp(-8.0, 20.0 + uLift * 8.0,
         roundBox(p - knob - vec2(0.0, 7.0 + uLift * 5.0), uKH, uKR));
     tc *= 1.0 - shadow * 0.6;
@@ -181,13 +133,12 @@ void main() {
     float bevel = pow(1.0 - clamp(depth / 26.0, 0.0, 1.0), 2.6);
 
     vec2 bend = -n * bevel * REFRACT - (p - knob) * 0.055;
-    float iconA;
-    vec3 seen = underGlass(p + bend, 0.06 + FROST * bevel, n * bevel * 3.2 + (p - knob) * 0.006, 0.0, 1.0, iconA);
+    vec3 seen = underGlass(p + bend, 1.0);
 
     float vy = clamp((p.y + uKH.y) / (2.0 * uKH.y), 0.0, 1.0);
     // Her iki hâl de koyu cam; açıkken cam amber ışıkla dolar.
     vec3 glass = seen * 0.84 + vec3(0.135) * (1.0 - vy * 0.55);
-    glass += uLight * th * (0.20 + 0.16 * (1.0 - vy)) * (1.0 - iconA * 0.7);
+    glass += uLight * th * (0.20 + 0.16 * (1.0 - vy));
 
     float toLed = max(stripDist(p), 0.0);
     glass = emit(glass, (exp(-toLed / 24.0) * 0.8 + exp(-toLed / 64.0) * 0.2) * uLed * 0.8, 0.0);

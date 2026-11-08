@@ -3300,6 +3300,8 @@ class _NotificationsSection extends ConsumerWidget {
               key: const ValueKey('notificationsLampToggle'),
               value: on,
               semanticLabel: s.notificationsLabel,
+              onLabel: s.notificationsOn,
+              offLabel: s.notificationsOff,
               onChanged: (v) async {
                 final messenger = ScaffoldMessenger.maybeOf(context);
                 final ok = await ref.read(notificationsEnabledProvider.notifier).set(v);

@@ -47,6 +47,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
   String? _fincanImage;
   bool _kontrolEdiliyor = false;
   bool _sending = false;
+  bool _fincanYokUyari = false; // ilk görsel yeniden seçilince kalkar
 
   // ── Fal konusu ──────────────────────────────────────────────────────────
   String? _falKonusu;   // null = henüz seçilmedi (konu ekranı gösterilir)
@@ -92,6 +93,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     if (_mode == mode) return;
     setState(() {
       _mode = mode;
+      _fincanYokUyari = false;
       _photos.fillRange(0, 3, null);
       _fincanImage = mode == _InputMode.yerimeIc
           ? _fincanImages[Random().nextInt(_fincanImages.length)]
@@ -109,7 +111,10 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       maxWidth: 1200,
     );
     if (image == null || !mounted) return;
-    setState(() => _photos[index] = image.path);
+    setState(() {
+      _photos[index] = image.path;
+      if (index == 0) _fincanYokUyari = false;
+    });
   }
 
   Future<void> _sendFortune() async {
@@ -124,7 +129,10 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     //    En az biri fincan sayılırsa geç; hiçbiri değilse uyar (hak/üretim başlamaz).
     if (_mode == _InputMode.fotoCek || _mode == _InputMode.dosyadan) {
       final paths = [p1, p2, p3].whereType<String>().toList();
-      setState(() => _kontrolEdiliyor = true);
+      setState(() {
+        _kontrolEdiliyor = true;
+        _fincanYokUyari = false;
+      });
       var fincanVar = false;
       try {
         for (final p in paths) {
@@ -138,7 +146,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
       }
       if (!mounted) return;
       if (!fincanVar) {
-        _showFincanUyari();
+        setState(() => _fincanYokUyari = true);
         return;
       }
     }
@@ -180,30 +188,25 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
     context.go('/home');
   }
 
-  // Foto fincan değilse uyarı — fotoğraflar korunur, kullanıcı değiştirip tekrar gönderebilir.
-  void _showFincanUyari() {
-    final s = ref.read(l10nProvider);
-    showDialog<void>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        backgroundColor: const Color(0xFF17122A),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18),
-          side: const BorderSide(color: Color(0x339C6FD6)),
-        ),
-        content: Text(
-          s.photoNotCup,
-          style: const TextStyle(color: Colors.white, fontSize: 15, height: 1.5),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(ctx).pop(),
-            child: Text(s.ok, style: const TextStyle(color: Color(0xFFB8E0FF), fontWeight: FontWeight.w600)),
+  // Foto fincan değilse yuvaların altındaki uyarı; fotoğraflar korunur, ilk görsel değişince kalkar.
+  Widget _buildFincanUyari(AppStrings s) => Semantics(
+        liveRegion: true,
+        child: Padding(
+          key: const ValueKey('coffeeNotCupWarning'),
+          padding: const EdgeInsets.fromLTRB(12, 36, 12, 0),
+          child: Column(
+            children: [
+              const Icon(Icons.warning_rounded, color: Color(0xFFFF3B3B), size: 46),
+              const SizedBox(height: 12),
+              Text(
+                s.photoNotCup,
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: Colors.white, fontSize: 15, height: 1.5),
+              ),
+            ],
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -246,6 +249,7 @@ class _CoffeeScreenState extends ConsumerState<CoffeeScreen> {
                               _mode == _InputMode.dosyadan) ...[
                             const SizedBox(height: 28),
                             _buildPhotoSlots(),
+                            if (_fincanYokUyari) _buildFincanUyari(s),
                             if (_sending) ...[
                               const SizedBox(height: 28),
                               _buildSendingIndicator(),

@@ -13,6 +13,7 @@
 // çalışmaz → sezgiye (ten oranı) düşer; hiçbir koşulda çökmez, belirsizlikte kullanıcıyı engellemez.
 import 'dart:io';
 
+import 'package:flutter/foundation.dart' show visibleForTesting;
 import 'package:image/image.dart' as img;
 
 import 'face_landmarks.dart';
@@ -34,8 +35,14 @@ class PhotoSubjectDetector {
     'laugh', 'forehead'
   };
 
+  /// Yalnız test: sonucu sabitler.
+  @visibleForTesting
+  static Future<bool> Function(String path, FotoKonu konu)? debugSonuc;
+
   /// [path] fotoğrafı [konu] için uygun mu? Yalnız EMİN olunca false; hata/belirsizlik → true.
   static Future<bool> uygunMu(String path, FotoKonu konu) async {
+    final debug = debugSonuc;
+    if (debug != null) return debug(path, konu);
     try {
       final labels = await ImageLabels.etiketler(path); // Set<String>? (null = kullanılamaz)
       bool has(Set<String> s) => labels != null && labels.intersection(s).isNotEmpty;

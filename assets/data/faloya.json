@@ -2632,8 +2632,8 @@
     },
     {
       "id": 358,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nKapına beklenenden erken gelen bir paket var. {{randomtarih,6,30}} tarihine yakın bir gün, söylenen günden önce eline geçecek bir gönderi o günün planını rahatlatacak. Varlıkların gösterdiği sahnede, paketi açarken yüzündeki gülümseme uzun süre kaybolmuyor.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nThere is a package coming to your door earlier than expected. On a day close to {{randomtarih,6,30}}, a delivery that reaches you before the promised date will make that day's plans easier. In the scene the spirits show me, the smile on your face as you open it doesn't fade for a long time.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nKapına beklenenden erken gelen bir paket var. {{randomtarih,6,30}} tarihine yakın bir gün, söylenen günden önce eline geçecek bir gönderi bekleyişini kısa kesecek. Varlıkların gösterdiği sahnede, paketi açarken yüzündeki gülümseme uzun süre kaybolmuyor.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nThere is a package coming to your door earlier than expected. On a day close to {{randomtarih,6,30}}, a delivery that reaches you before the promised date will cut your wait short. In the scene the spirits show me, the smile on your face as you open it doesn't fade for a long time.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2644,8 +2644,8 @@
     },
     {
       "id": 360,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nBir anlığına sönen ışıklar ve ardından gelen sessizlik beliriyor. {{sayi,1,28}} {{ay_1}} akşamı ya da ona yakın bir akşam, kısa süren bir kesinti canını biraz sıkabilir. Fakat ekranların karardığı o boşlukta yapacağın bir sohbet, uzun süredir aradığın bir fikri önüne koyacak.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nLights going out for a moment and the silence that follows appear before me. On the evening of {{sayi,1,28}} {{ay_1}} or one close to it, a short outage may annoy you a little. But a conversation you have in that gap, while the screens are dark, will put an idea you've long been searching for right in front of you.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nBir anda kararan bir ekran ve ardından gelen sessizlik beliriyor. {{sayi,1,28}} {{ay_1}} akşamı ya da ona yakın bir akşam, tam yanlış anda biten şarj canını biraz sıkabilir. Fakat ekranın karardığı o boşlukta yapacağın bir sohbet, uzun süredir aradığın bir fikri önüne koyacak.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nA screen suddenly going dark and the silence that follows appear before me. On the evening of {{sayi,1,28}} {{ay_1}} or one close to it, a battery dying at just the wrong moment may annoy you a little. But a conversation you have in that gap, while the screen is dark, will put an idea you've long been searching for right in front of you.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2656,8 +2656,8 @@
     },
     {
       "id": 362,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nKapına uzanan, üstü örtülü bir tabak görüyorum. {{randomtarih,10,42}} tarihinden birkaç gün önce ya da sonra, bir yakının sana bir ikram getirecek. Tabağı boş göndermemek için yapacağın şey aranızda tatlı bir alışveriş başlatacak; bu küçük gelenek ihtiyaç duyduğun bir yardımı da kapına getirecek.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nI see a covered plate being held out at your door. A few days before or after {{randomtarih,10,42}}, someone close to you will bring you a treat. What you do so as not to send the plate back empty will start a sweet exchange between you; this little custom will also bring a help you need right to your door.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nSana uzatılan, üstü örtülü bir tabak görüyorum. {{randomtarih,10,42}} tarihinden birkaç gün önce ya da sonra, bir yakının sana bir ikram getirecek. Tabağı boş göndermemek için yapacağın şey aranızda tatlı bir alışveriş başlatacak; bu küçük gelenek ihtiyaç duyduğun bir yardımı da beraberinde getirecek.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nI see a covered plate being held out to you. A few days before or after {{randomtarih,10,42}}, someone close to you will bring you a treat. What you do so as not to send the plate back empty will start a sweet exchange between you; this little custom will also bring with it the help you need.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2692,14 +2692,14 @@
     },
     {
       "id": 368,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nAynı anda iki telefonun birbirini aradığı bir tesadüf seçiliyor. {{sayi,1,28}} {{ay_3}} tarihine denk gelen günlerde, aramayı ertelediğin birini nihayet arayacaksın ve o da tam o sırada seni aramak üzere olduğunu söyleyecek. Bu denk geliş konuşmayı tatlı bir şakaya, sonra güzel bir habere bağlayacak.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nA coincidence of two phones calling each other at the same moment is taking shape. In the days around {{sayi,1,28}} {{ay_3}}, you'll finally call someone you've been putting off, and they'll say they were just about to call you. That coincidence will turn the call into a sweet joke, then into good news.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nTelefona aynı anda uzanan iki el seçiliyor. {{sayi,1,28}} {{ay_3}} tarihine denk gelen günlerde, aramayı ertelediğin birini nihayet arayacaksın ve o da tam o sırada seni aramak üzere olduğunu söyleyecek. Bu denk geliş konuşmayı tatlı bir şakaya, sonra güzel bir habere bağlayacak.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nI can make out two hands reaching for the phone at the same moment. In the days around {{sayi,1,28}} {{ay_3}}, you'll finally call someone you've been putting off, and they'll say they were just about to call you. That coincidence will turn the call into a sweet joke, then into good news.\n\nCome back again.",
       "kosullar": []
     },
     {
       "id": 369,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nBir tezgâhın başında, avucuna fazladan konan birkaç meyve var. {{randomtarih,8,40}} gibi alışveriş yaptığın bir yerde satıcı, sen istemeden üstüne bir şey ekleyecek. Bu küçük cömertlikle başlayan muhabbet, sana uzun süredir aradığın bir şeyin nerede bulunacağını öğretecek.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nAt a market stall, a few extra pieces of fruit are being slipped into your hand. Around {{randomtarih,8,40}}, at a place where you shop, the seller will add something extra without you asking. The chat that starts with this small generosity will tell you where to find something you've long been looking for.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nPoşetine fazladan atılan birkaç meyve var. {{randomtarih,8,40}} gibi alışveriş yaptığın bir yerde satıcı, hesaba katmadan üstüne bir şey ekleyecek. Bu küçük cömertlikle başlayan muhabbet, sana uzun süredir aradığın bir şeyin nerede bulunacağını öğretecek.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nA few extra pieces of fruit are being slipped into your bag. Around {{randomtarih,8,40}}, at a place where you shop, the seller will throw in something extra without charging you. The chat that starts with this small generosity will tell you where to find something you've long been looking for.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2716,8 +2716,8 @@
     },
     {
       "id": 372,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nDilinin ucunda dönüp duran bir isim var. {{sayi,1,28}} {{ay_2}} dolaylarında, haftalardır hatırlayamadığın o adı hiç zorlamadan, sıradan bir anda hatırlayacaksın. Varlıklar diyor ki hatırladığın gün o kişiyle ilgili bir haber de gelecek; tesadüfe sen bile şaşıracaksın.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nThere's a name spinning on the tip of your tongue. Around {{sayi,1,28}} {{ay_2}}, you'll recall that name you couldn't remember for weeks, effortlessly, in an ordinary moment. The spirits say that on the day you remember it, news about that person will arrive too; even you will be amazed at the coincidence.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nDilinin ucunda dönüp duran bir isim var. {{sayi,1,28}} {{ay_2}} dolaylarında, bir süredir hatırlayamadığın o adı hiç zorlamadan, sıradan bir anda hatırlayacaksın. Varlıklar diyor ki çok geçmeden o kişiyle ilgili bir haber de gelecek; tesadüfe sen bile şaşıracaksın.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nThere's a name spinning on the tip of your tongue. Around {{sayi,1,28}} {{ay_2}}, you'll recall that name you haven't been able to remember for a while, effortlessly, in an ordinary moment. The spirits say that before long, news about that person will arrive too; even you will be amazed at the coincidence.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2728,8 +2728,8 @@
     },
     {
       "id": 374,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nBitti dediğin bir şeyin aynı gün kapına geldiğini görüyorum. {{randomtarih,4,30}} günlerinde, evde tükendiğini fark ettiğin bir ihtiyaç, sen almaya fırsat bulamadan biri tarafından getirilecek. Buna güleceksin; ardından getiren kişiyle uzayan sohbet gününü güzelleştirecek.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nI see something you thought had run out arriving at your door the same day. Around {{randomtarih,4,30}}, something you notice has run out at home will be brought by someone before you even get the chance to buy it. You'll laugh at this; then the chat with the person who brought it will brighten your day.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nBitti dediğin bir şeyin başka bir elden geldiğini görüyorum. {{randomtarih,4,30}} günlerinde, evde tükendiğini fark ettiğin bir ihtiyaç, sen almaya fırsat bulamadan biri tarafından getirilecek. Buna güleceksin; ardından getiren kişiyle uzayan sohbet gününü güzelleştirecek.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nI see something you thought had run out coming to you from someone else's hand. Around {{randomtarih,4,30}}, something you notice has run out at home will be brought by someone before you even get the chance to buy it. You'll laugh at this; then the chat with the person who brought it will brighten your day.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2740,14 +2740,14 @@
     },
     {
       "id": 376,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nGülmemen gereken bir anda kahkaha krizine gireceksin. {{sayi,1,28}} {{ay_1}} tarihinin yakınlarında yaşanacak bu an, yanındaki kişiye de bulaşacak. Sonradan her hatırladığınızda yeniden güleceksiniz; kaderin ipliği o gün aranızda yeni bir dostluk örecek.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nYou're going to burst out laughing at a moment when you really shouldn't. That moment, around {{sayi,1,28}} {{ay_1}}, will spread to the person next to you. Every time you remember it later, you'll laugh all over again; on that day the thread of fate will weave a new friendship between you.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nGülmemen gereken bir anda kahkahanı tutamayacaksın. {{sayi,1,28}} {{ay_1}} tarihinin yakınlarında yaşanacak bu an, yanındaki kişiye de bulaşacak. Sonradan her hatırladığınızda yeniden güleceksiniz; o gün paylaştığınız neşe aranızdaki yakınlığı bir adım öteye taşıyacak.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nYou won't be able to hold back your laughter at a moment when you really shouldn't laugh. That moment, around {{sayi,1,28}} {{ay_1}}, will spread to the person next to you. Every time you remember it later, you'll laugh all over again; the joy you share that day will bring you a step closer.\n\nCome back again.",
       "kosullar": []
     },
     {
       "id": 377,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nPencerenin pervazına konan bir kuş beliriyor. {{randomtarih,7,38}} sularında bir kuşun pencerene yakın bir yerde uzun süre durduğunu fark edeceksin. Eskiler buna haber derdi; nitekim aynı gün ya da ertesi gün beklediğin bir müjde sana ulaşacak.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nA bird landing on the windowsill appears before me. Around {{randomtarih,7,38}}, you'll notice a bird lingering somewhere near your window. The elders used to say this meant news; and sure enough, that same day or the next, the good news you've been waiting for will reach you.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nPencerenin pervazına konan bir kuş beliriyor. {{randomtarih,7,38}} sularında bir kuşun pencerene yakın bir yerde uzun süre durduğunu fark edeceksin. Eskiler buna haber derdi; nitekim ardından gelen birkaç gün içinde beklediğin bir müjde sana ulaşacak.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nA bird landing on the windowsill appears before me. Around {{randomtarih,7,38}}, you'll notice a bird lingering somewhere near your window. The elders used to say this meant news; and sure enough, within the next few days, the good news you've been waiting for will reach you.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2758,14 +2758,14 @@
     },
     {
       "id": 379,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nKalabalık bir grupla çekilecek bir fotoğraf beliriyor. {{randomtarih,12,48}} gününe denk gelen hafta sonunda, o karede en güzel sen çıkacaksın. Fotoğraf elden ele dolaşırken biri onu ayrıca isteyecek; o gün duyduğun güzel sözler aklından uzun süre çıkmayacak.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nA photo taken with a large group appears before me. On the weekend that falls around {{randomtarih,12,48}}, you'll come out looking the best in that shot. As the photo is passed around, someone will ask for it separately; the kind words you hear that day won't leave your mind for a long time.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nKalabalık bir grupla çekilecek bir fotoğraf beliriyor. {{randomtarih,12,48}} tarihine yakın günlerde, o karede en çok senin gülüşün göze çarpacak. Fotoğraf elden ele dolaşırken biri onu ayrıca isteyecek; o gün duyduğun güzel sözler aklından uzun süre çıkmayacak.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nA photo taken with a large group appears before me. In the days around {{randomtarih,12,48}}, your smile will be the one that stands out most in that shot. As the photo is passed around, someone will ask for it separately; the kind words you hear that day won't leave your mind for a long time.\n\nCome back again.",
       "kosullar": []
     },
     {
       "id": 380,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{ay_1}} ayının ilk haftasında, doğum günün olmayan sıradan bir günde biri sana 'bunu görünce aklıma sen geldin' diyerek küçük bir şey uzatacak. Hediyenin kendisinden çok, düşünülmüş olmak gözlerini parlatacak. O akşam aynı kişiye senin de bir sürpriz hazırlamak isteyeceğini seziyorum.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nIn the first week of {{ay_1}}, on an ordinary day that isn't your birthday, someone will hand you a little something, saying, 'I saw this and thought of you'. More than the gift itself, being thought of will make your eyes shine. I sense that the same evening you'll want to prepare a surprise for that person too.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{ay_1}} ayının ilk haftasında, doğum günün olmayan sıradan bir günde biri sana 'bunu görünce aklıma sen geldin' diyerek küçük bir şey gönderecek. O şeyin kendisinden çok, düşünülmüş olmak gözlerini parlatacak. O akşam aynı kişiyi senin de sevindirmek isteyeceğini seziyorum.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nIn the first week of {{ay_1}}, on an ordinary day that isn't your birthday, someone will send you a little something, saying, 'I saw this and thought of you'. More than the thing itself, being thought of will make your eyes shine. I sense that the same evening you'll want to make that person happy too.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2776,14 +2776,14 @@
     },
     {
       "id": 382,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nSenin için hazırlanan bir sürprizin ucunu {{randomtarih,20,60}} tarihine birkaç gün kala istemeden yakalayacaksın. Bilmezden gelmek zor olacak; o gün geldiğinde şaşırmış gibi yapacaksın ama sonunda gerçekten şaşıracaksın. Fısıltının devamı şöyle: asıl sürpriz, senin gördüğün kısım değil.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nA few days before {{randomtarih,20,60}}, you'll accidentally catch a glimpse of a surprise being prepared for you. Pretending not to know will be hard; when the day comes you'll act surprised, but in the end you'll truly be surprised. The whisper continues like this: the real surprise isn't the part you saw.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nSenden gizlenen tatlı bir şeyin ucunu {{randomtarih,20,60}} tarihine birkaç gün kala istemeden yakalayacaksın. Bilmezden gelmek zor olacak; o gün geldiğinde şaşırmış gibi yapacaksın ama sonunda gerçekten şaşıracaksın. Fısıltının devamı şöyle: asıl sürpriz, senin gördüğün kısım değil.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nA few days before {{randomtarih,20,60}}, you'll accidentally catch the edge of something sweet being kept from you. Pretending not to know will be hard; when the day comes you'll act surprised, but in the end you'll truly be surprised. The whisper continues like this: the real surprise isn't the part you saw.\n\nCome back again.",
       "kosullar": []
     },
     {
       "id": 383,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{ay_2}} ayının son günlerine doğru, uzakta yaşayan bir tanıdığından bu tarafa geleceğine dair bir haber alacaksın. Kısa bir buluşma sandığın o ziyaret saatlerce süren bir sohbete dönüşecek; ayrılırken ikiniz de bir sonraki buluşmanın tarihini konuşmaya başlayacaksınız.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nToward the last days of {{ay_2}}, you'll hear from an acquaintance who lives far away that they're coming your way. That visit, which you'll think will be a short meeting, will turn into a conversation lasting hours; as you part, you'll both start talking about the date of the next one.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{ay_2}} ayının son günlerine doğru, bir süredir görmediğin bir tanıdığın sana uğramak istediğini haber verecek. Kısa bir buluşma sandığın o ziyaret saatlerce süren bir sohbete dönüşecek; ayrılırken ikiniz de bir sonraki buluşmanın tarihini konuşmaya başlayacaksınız.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nToward the last days of {{ay_2}}, an acquaintance you haven't seen in a while will let you know they'd like to drop by. That visit, which you'll think will be a short meeting, will turn into a conversation lasting hours; as you part, you'll both start talking about the date of the next one.",
       "kosullar": []
     },
     {
@@ -2800,14 +2800,14 @@
     },
     {
       "id": 386,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nBundan {{sayi,3,7}} hafta sonra, uzun zaman önce ödünç verip artık geri gelmesini beklemediğin bir şey sana dönecek. Getiren kişinin mahcup gülümsemesi ve yanına eklediği küçük ikram, o eşyadan da çok sevindirecek seni. Aranızdaki sohbet de kaldığı yerden devam edecek.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\n{{sayi,3,7}} weeks from now, something you lent out long ago and no longer expected back will return to you. The bashful smile of the person bringing it and the little treat they add will please you even more than the item itself. The conversation between you will pick up right where it left off.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nBundan {{sayi,3,7}} hafta sonra, uzun zaman önce ödünç verip artık geri gelmesini beklemediğin bir şey sana dönecek. Getiren kişinin mahcup gülümsemesi ve 'çok beklettim' diye başlayan özrü, o eşyadan da çok sevindirecek seni. Aranızdaki sohbet de kaldığı yerden devam edecek.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\n{{sayi,3,7}} weeks from now, something you lent out long ago and no longer expected back will return to you. The bashful smile of the person bringing it and the apology that begins with 'I've kept you waiting so long' will please you even more than the item itself. The conversation between you will pick up right where it left off.\n\nCome back again.",
       "kosullar": []
     },
     {
       "id": 387,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih,14,52}} tarihini izleyen ilk hafta sonu, biri seni bir tanıdığına benzetip sıcak bir selam verecek. Yanlışlık anlaşılınca ikiniz de güleceksiniz; ama o tatlı karışıklıktan başlayan sohbet, işine yarayacak yeni bir tanışıklığa dönüşecek.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn the first weekend after {{randomtarih,14,52}}, someone will mistake you for an acquaintance and greet you warmly. When the mix-up becomes clear, you'll both laugh; but the conversation that starts from that sweet confusion will turn into a new acquaintance that will be useful to you.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih,14,52}} tarihini izleyen günlerde, biri sana öyle sıcak bir selam verecek ki onu nereden tanıdığını bir an çıkaramayacaksın. Hatırladığında ikiniz de güleceksiniz; o tatlı duraksamadan başlayan sohbet sana yeni ve faydalı bir tanışıklık kazandıracak.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nIn the days after {{randomtarih,14,52}}, someone will greet you so warmly that for a moment you won't be able to place where you know them from. When it comes back to you, you'll both laugh; the chat that starts from that sweet pause will bring you a new and helpful acquaintance.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2830,14 +2830,14 @@
     },
     {
       "id": 391,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nYıllardır elini sürmediğin bir uğraşı {{randomtarih,20,80}} tarihinin öncesinde ya da hemen sonrasında yeniden deneyeceksin. Ellerinin hâlâ unutmadığını görünce şaşıracaksın; yanındakiler de bu gizli yeteneğini ilk kez fark edip senden bir kez daha yapmanı isteyecek.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nShortly before or right after {{randomtarih,20,80}}, you'll take up again a pastime you haven't touched in years. You'll be surprised to see that your hands still haven't forgotten; those around you will notice this hidden talent for the first time and ask you to do it once more.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nYıllardır elini sürmediğin bir uğraşı {{randomtarih,20,80}} tarihinin öncesinde ya da hemen sonrasında yeniden deneyeceksin. Ellerinin hâlâ unutmadığını görünce şaşıracaksın; bu gizli yeteneğini gören biri de senden bir kez daha yapmanı isteyecek.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nShortly before or right after {{randomtarih,20,80}}, you'll take up again a pastime you haven't touched in years. You'll be surprised to see that your hands still haven't forgotten; someone who sees this hidden talent of yours will ask you to do it once more.\n\nCome back again.",
       "kosullar": []
     },
     {
       "id": 392,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nAynı gün içinde aynı kişiyle iki ayrı yerde karşılaşacaksın. {{sayi,1,28}} {{ay_3}} tarihinde ya da ona çok yakın bir günde yaşanacak bu tesadüfe ikiniz de güleceksiniz; ikinci karşılaşmada 'artık bir kahve içmemiz şart' diyeceksiniz. Kaderin ipliği o kahveyi, ikinize de iyi gelecek bir dostluğun ilk düğümü yapacak.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nYou'll run into the same person in two different places on the same day. You'll both laugh at this coincidence, which will happen on {{sayi,1,28}} {{ay_3}} or a day very close to it; at the second encounter you'll say, 'now we really have to get a coffee'. The thread of fate will make that coffee the first knot of a friendship that will do you both good.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nAynı kişiyle kısa arayla iki kez karşılaşacaksın. {{sayi,1,28}} {{ay_3}} tarihinde ya da ona çok yakın günlerde yaşanacak bu tesadüfe ikiniz de güleceksiniz; ikinci karşılaşmada 'artık bir kahve içmemiz şart' diyeceksiniz. Kaderin ipliği o kahveyi, ikinize de iyi gelecek bir dostluğun ilk düğümü yapacak.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nYou'll run into the same person twice within a short time. You'll both laugh at this coincidence, which will happen on {{sayi,1,28}} {{ay_3}} or in the days very close to it; at the second encounter you'll say, 'now we really have to get a coffee'. The thread of fate will make that coffee the first knot of a friendship that will do you both good.\n\nCome back again.",
       "kosullar": []
     },
     {
@@ -2854,20 +2854,20 @@
     },
     {
       "id": 395,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_6}} tarihinde, kalabalık bir kutlamada söz beklenmedik bir anda sana verilecek. Hazırlıksız ama içten söyleyeceğin birkaç cümle masadakileri duygulandıracak; o akşamın en çok hatırlanan anı senin konuşman olacak.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn the coming {{sayi,1,28}} {{ay_6}}, at a crowded celebration, the floor will unexpectedly be handed to you. The few unprepared but heartfelt sentences you say will move everyone at the table; your speech will be the most remembered moment of that evening.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\nÖnümüzdeki {{sayi,1,28}} {{ay_6}} tarihinde ya da ona yakın bir günde, kalabalık bir sofrada söz beklenmedik bir anda sana gelecek. Hazırlıksız ama içten söyleyeceğin birkaç cümle masadakileri duygulandıracak; söylediklerin sofradan kalkıldıktan sonra da konuşulacak.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nOn the coming {{sayi,1,28}} {{ay_6}} or a day close to it, at a crowded table, the floor will unexpectedly come to you. The few unprepared but heartfelt sentences you say will move everyone at the table; your words will still be talked about long after everyone has left the table.\n\nCome back again.",
       "kosullar": []
     },
     {
       "id": 396,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{sayi,10,25}} gün içinde, gitmeye üşendiğin bir etkinliğe bir arkadaşının ısrarıyla katılacaksın. Kapıda geri dönmeyi düşüneceksin ama içerideki neşeli hava bütün yorgunluğunu alacak; gecenin sonunda en çok eğlenen sen olacaksın. Eve döndüğünde, 'iyi ki gitmişim' diye arkadaşına teşekkür mesajı yazacaksın.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nWithin {{sayi,10,25}} days, at a friend's insistence, you'll go to an event you can't be bothered to attend. At the door you'll think about turning back, but the cheerful atmosphere inside will take away all your tiredness; by the end of the night you'll be the one having the most fun. When you get home, you'll text your friend a thank-you: 'I'm so glad I went'.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{sayi,10,25}} gün içinde, gitmeye üşendiğin bir etkinliğe bir arkadaşının ısrarıyla katılacaksın. Kapıda geri dönmeyi düşüneceksin ama içerideki neşeli hava bütün yorgunluğunu alacak; gecenin sonunda en çok eğlenenlerden biri sen olacaksın. Ayrılırken arkadaşına 'iyi ki ısrar etmişsin' diyeceksin.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nWithin {{sayi,10,25}} days, at a friend's insistence, you'll go to an event you can't be bothered to attend. At the door you'll think about turning back, but the cheerful atmosphere inside will take away all your tiredness; by the end of the night you'll be one of the people having the most fun. As you leave, you'll tell your friend, 'I'm so glad you insisted'.\n\nCome back again.",
       "kosullar": []
     },
     {
       "id": 397,
-      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih,7,21}} tarihinin yakınlarında, bir tanıdığının elinde fazladan kalan bir bilet sana teklif edilecek. İlk anda tereddüt edeceksin; kabul edersen o gün hem çok eğlenecek hem de aklındaki bir konuda işine yarayacak bir bilgiyle eve döneceksin.\n\nTekrar gel.",
-      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nAround {{randomtarih,7,21}}, an acquaintance will offer you an extra ticket they have. You'll hesitate at first; if you accept, you'll have a great time that day and come home with information that helps with something on your mind.\n\nCome back again.",
+      "metin": "Merhaba {{isim}}.\n\nVarlıklar fısıldıyor...\n\nGeleceğine dair bir öngörüm var.\n\n{{randomtarih,7,21}} tarihinin yakınlarında, bir tanıdığının planında boşa çıkan bir kişilik yer sana teklif edilecek. İlk anda tereddüt edeceksin; kabul edersen o gün hem çok eğlenecek hem de aklındaki bir konuda işine yarayacak bir bilgiyle eve döneceksin.\n\nTekrar gel.",
+      "metin_en": "Hello {{isim}}.\n\nThe spirits are whispering...\n\nI have a prediction about your future.\n\nAround {{randomtarih,7,21}}, an acquaintance will offer you a spot that has opened up in their plans. You'll hesitate at first; if you accept, you'll have a great time that day and come home with information that helps with something on your mind.\n\nCome back again.",
       "kosullar": []
     }
   ]

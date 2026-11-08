@@ -46,6 +46,9 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   ~%73-80 üst sınıf (profil/markaya göre; kesin değil), yıl tabanı (10+ yıl sınıf 3, 18+ sınıf 4, 26+ sınıf 5), aralıklar çoğu 3-6 yıl,
   aynı araba en çok 10 yıl ve son aralıkta devam yok, aynı model ailesi tekrarsız, lüks sınıfta yaygınlık etkisi az (Porsche/Ferrari çıkar),
   15+ yıl sonrası yalnız marka (`displayName`) ve uzak yıllarda art arda aynı marka yok. Havuz: 57 marka, 1865 model.
+  **LG paneli** `lib/core/widgets/liquid_glass_panel.dart` ("LG yap" = alt bar camı, daha az saydam; `glass_lens.frag` artık köşe yarıçapı alır).
+  Evim popup'ları LG, dikeyde uzun (küçük ekranda uzamaz), yıl şeridinin arkasında dönen tekerlek (`_YearDrumPainter`), giriş tek satır, Geç yok.
+  Lamba düğmesi CAM önizlemesi ölçüsünde tam kapsül (`kGlassBarHeight`), sürgü yarım en: açık sol yarı, kapalı sağ yarı; taban hep koyu.
 
 ## Yarım kalan
 - `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.

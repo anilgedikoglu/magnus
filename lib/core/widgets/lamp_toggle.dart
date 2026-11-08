@@ -7,7 +7,8 @@
 //
 // Optik tümüyle shaders/lamp_toggle.frag'da. Burada: durum fiziği (yay), her nokta için ayrı
 // yay, noktaların dokuya basılması, dokunma/sürükleme.
-// İlerleme p: 0 = kapalı (karanlık, düğme solda), 1 = açık (aydınlık, düğme sağda).
+// İlerleme p: 0 = kapalı (koyu sürgü sağ yarıda), 1 = açık (aydınlık sürgü sol yarıda).
+// Dış biçim CAM önizlemesiyle aynı: tam en, kGlassBarHeight boy, tam kapsül (Anıl, 2026-11-08).
 
 import 'dart:math' as math;
 import 'dart:ui' as ui;
@@ -17,12 +18,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
-const double _kTrackHalfW = 216;
+import 'glass_tab_bar.dart' show kGlassBarHeight;
+
 const double _kTrackHalfH = 112;
-const double _kTrackR = 72;
-const double _kKnobHalf = 99;
-const double _kKnobR = 58;
-const double _kTravel = _kTrackHalfW - 13 - _kKnobHalf; // düğme merkezi ±104
+const double _kBarScale = kGlassBarHeight / (2 * _kTrackHalfH); // mantıksal px / tasarım px
+const double _kInset = 18; // sürgünün tabandan payı (~5 pt, alt bar kapsülü gibi)
+const double _kCenterGap = 7; // sürgü ortadan bu kadar önce biter
+const double _kKnobHalfY = _kTrackHalfH - _kInset;
 const int _kGrid = 17;
 const int _kMid = 8;
 const double _kPitch = 5.7;
@@ -31,14 +33,11 @@ const double _kSwirl = 1.62;
 const double _kBurst = 0.38;
 const double _kStiffness = 129;
 const double _kLedPower = 1.89;
-const double _kLightSpan = _kTrackHalfW + 12; // ikon dokusunun yarı eni
+const double _kLightSpan = 140; // ikon dokusunun yarı eni (sürgüye göre)
 const double _kLightSpanY = _kTrackHalfH + 8; // ikon dokusunun yarı boyu
 
 const Color _kOffLight = Color(0xFF6F86FF);
 const Color _kOnLight = Color(0xFFFFA82E);
-
-/// Uygulamadaki sahne (tasarım px): iz + gölge ve LED taşması için kenar payı.
-const Size kLampStage = Size(520, 320);
 
 enum _DotKind { solid, dim, star, ray }
 
@@ -107,50 +106,6 @@ List<_Cell> _lampBase(_DotKind kind) => [
       _Cell(8, 15, 1, kind),
     ];
 
-/// Yalnız referansla kare kare karşılaştırma: kaynaktaki ay.
-List<_Cell> _refMoon() {
-  final out = <_Cell>[];
-  for (var y = 0; y < _kGrid; y++) {
-    for (var x = 0; x < _kGrid; x++) {
-      final dx = x - _kMid, dy = y - _kMid;
-      final main = dx * dx + dy * dy <= 6.6 * 6.6;
-      final sx = x - 11.3, sy = y - 5.6;
-      final shade = sx * sx + sy * sy <= 5.4 * 5.4;
-      if (main && !shade) {
-        final half = (x == 3 && y == 9) || (x == 6 && y == 12) || (x == 4 && y == 12);
-        out.add(_Cell(x, y, half ? .5 : 1, _DotKind.solid));
-      } else if (main && shade && (x + y).isEven) {
-        out.add(_Cell(x, y, .2, _DotKind.dim));
-      }
-    }
-  }
-  const stars = [[15, 1, 1.0], [14, 1, .45], [16, 1, .45], [15, 0, .45], [15, 2, .45], [11, 0, .75], [16, 5, .6]];
-  for (final s in stars) {
-    out.add(_Cell(s[0] as int, s[1] as int, s[2] as double, _DotKind.star));
-  }
-  return out;
-}
-
-/// Yalnız referansla kare kare karşılaştırma: kaynaktaki güneş.
-List<_Cell> _refSun() {
-  final m = <String, _Cell>{};
-  void add(_Cell c) => m.putIfAbsent('${c.x},${c.y}', () => c);
-  for (var y = 0; y < _kGrid; y++) {
-    for (var x = 0; x < _kGrid; x++) {
-      final dx = x - _kMid, dy = y - _kMid;
-      if (dx * dx + dy * dy <= 3.7 * 3.7) add(_Cell(x, y, 1, _DotKind.solid));
-    }
-  }
-  for (var a = 0; a < 8; a++) {
-    final ang = a * math.pi / 4;
-    final rs = a.isOdd ? const [5.9, 7.2] : const [5.6, 6.6, 7.6];
-    for (final r in rs) {
-      add(_Cell((_kMid + math.cos(ang) * r).round(), (_kMid + math.sin(ang) * r).round(), 1, _DotKind.ray, ang));
-    }
-  }
-  return m.values.toList();
-}
-
 class _Dot {
   _Dot(this.a, this.b, math.Random r)
       : delay = .04 + (1 - a.x / (_kGrid - 1)) * .26 + r.nextDouble() * .06,
@@ -215,8 +170,33 @@ class _LampSim {
   bool dragging = false;
   final List<_Dot> dots;
 
-  double knobX = 0, knobHalfX = _kKnobHalf, knobHalfY = _kKnobHalf;
+  double trackHalfW = 400;
+  double knobX = 0, knobHalfX = 0, knobHalfY = _kKnobHalfY;
   double theme = 0, theta = 0;
+
+  double get knobBaseX => (trackHalfW - _kInset - _kCenterGap) / 2;
+  double get travel => trackHalfW - _kInset - knobBaseX;
+
+  /// İz eni bilinince sürgüyü yerleştir.
+  void layout(double halfW) {
+    trackHalfW = halfW;
+    _placeKnob();
+  }
+
+  void _placeKnob() {
+    final pc = p.clamp(0.0, 1.0);
+    final over = math.max(math.max(-p, p - 1), 0.0);
+    final stretch = math.min(v.abs() * 6.5, 16.0);
+    final squeeze = 1 - press * .035;
+    knobHalfX = (knobBaseX + stretch - over * 110) * squeeze;
+    knobHalfY = math.min(_kKnobHalfY - stretch * .45 + over * 30, _kKnobHalfY + 5) * squeeze;
+    knobX = travel - 2 * travel * pc; // açıkken sol yarı, kapalıyken sağ yarı
+    if (p > 1) {
+      knobX -= over * 110;
+    } else if (p < 0) {
+      knobX += over * 110;
+    }
+  }
 
   void step(double dt, double time, {bool still = false}) {
     if (!dragging) {
@@ -236,17 +216,7 @@ class _LampSim {
     led = 1 + math.min(v.abs() * .05, .18) + kick * .12;
 
     final pc = p.clamp(0.0, 1.0);
-    final over = math.max(math.max(-p, p - 1), 0.0);
-    final stretch = math.min(v.abs() * 6.5, 16.0);
-    final squeeze = 1 - press * .035;
-    knobHalfX = (_kKnobHalf + stretch - over * 110) * squeeze;
-    knobHalfY = math.min(_kKnobHalf - stretch * .45 + over * 30, _kKnobHalf + 5) * squeeze;
-    knobX = -_kTravel + 2 * _kTravel * pc;
-    if (p > 1) {
-      knobX += over * 110;
-    } else if (p < 0) {
-      knobX -= over * 110;
-    }
+    _placeKnob();
     theme = _smooth(.18, .82, pc);
 
     // Şerit düğmenin çevresinde tek yönde döner; yön yalnız dururken kilitlenir.
@@ -266,7 +236,7 @@ class _LampSim {
     }
     theta = orbitDir > 0 ? math.pi / 2 - math.pi * sp : -math.pi / 2 - math.pi * (1 - sp);
 
-    final knobSpeed = v * 2 * _kTravel;
+    final knobSpeed = -v * 2 * travel;
     for (final d in dots) {
       _stepDot(d, pc, still ? 0 : time, dt, knobSpeed, still);
     }
@@ -306,7 +276,7 @@ class _LampSim {
     d.vy += (-d.k * (d.y - ty) - c * d.vy) * dt;
     d.x += d.vx * dt;
     d.y += d.vy * dt;
-    d.sx = knobX + d.x + (-knobSpeed * d.drag).clamp(-14.0, 14.0);
+    d.sx = d.x + (-knobSpeed * d.drag).clamp(-14.0, 14.0); // sürgüye göre
     d.sy = d.y;
   }
 
@@ -318,16 +288,13 @@ class _LampSim {
       press < .01;
 }
 
-/// Cam sürgü: [value] true = yanan lamba, sağda, aydınlık.
+/// Cam sürgü: [value] true = yanan lamba, sol yarıda, aydınlık.
 class LampToggle extends StatefulWidget {
   const LampToggle({
     super.key,
     required this.value,
     required this.onChanged,
     this.semanticLabel,
-    this.debugReferenceIcons = false,
-    this.debugStage,
-    this.debugOriginOffset = Offset.zero,
     this.debugProgress,
     this.debugSeed,
     this.debugTime,
@@ -337,26 +304,14 @@ class LampToggle extends StatefulWidget {
   final ValueChanged<bool> onChanged;
   final String? semanticLabel;
 
-  /// Yalnız karşılaştırma: kaynaktaki güneş/ay ikonları.
-  @visibleForTesting
-  final bool debugReferenceIcons;
-
-  /// Yalnız karşılaştırma: sahnenin tasarım boyu (varsayılan [kLampStage]).
-  @visibleForTesting
-  final Size? debugStage;
-
-  /// Yalnız karşılaştırma: iz merkezinin sahne merkezine göre kayması (tasarım px).
-  @visibleForTesting
-  final Offset debugOriginOffset;
-
-  /// Yalnız karşılaştırma: p'yi sabitle (sürüklenmiş gibi).
+  /// Yalnız görsel doğrulama: p'yi sabitle (sürüklenmiş gibi).
   @visibleForTesting
   final double? debugProgress;
 
   @visibleForTesting
   final int? debugSeed;
 
-  /// Yalnız karşılaştırma: sabit zaman (tohumlu gren/ışıltı).
+  /// Yalnız görsel doğrulama: sabit zaman (tohumlu gren/ışıltı).
   @visibleForTesting
   final double? debugTime;
 
@@ -392,20 +347,12 @@ class _LampToggleState extends State<LampToggle> with SingleTickerProviderStateM
   double _dragStartP = 0, _moved = 0, _dragV = 0;
   double _dragDx = 0;
   Duration _dragT = Duration.zero;
-  bool _downOnKnob = false;
-
-  Size get _stage => widget.debugStage ?? kLampStage;
 
   @override
   void initState() {
     super.initState();
     final rnd = math.Random(widget.debugSeed ?? 7);
-    _sim = _LampSim(
-      widget.value,
-      widget.debugReferenceIcons ? _refMoon() : _lampOff(),
-      widget.debugReferenceIcons ? _refSun() : _lampOn(),
-      rnd,
-    );
+    _sim = _LampSim(widget.value, _lampOff(), _lampOn(), rnd);
     _applyDebugP();
     _sim.step(1 / 60, widget.debugTime ?? 0);
     _ticker = createTicker(_onTick);
@@ -489,11 +436,9 @@ class _LampToggleState extends State<LampToggle> with SingleTickerProviderStateM
     _commit(on);
   }
 
-  double get _scale => context.size == null ? 1 : context.size!.width / _stage.width;
-
   Offset _toDesign(Offset local) {
     final size = context.size ?? Size.zero;
-    return (local - size.center(Offset.zero)) / _scale - widget.debugOriginOffset;
+    return (local - size.center(Offset.zero)) / _kBarScale;
   }
 
   static bool _inRRect(Offset p, Offset c, double hw, double hh, double r) {
@@ -504,18 +449,11 @@ class _LampToggleState extends State<LampToggle> with SingleTickerProviderStateM
         0;
   }
 
-  /// Küçük çizimde dokunma alanı en az 48 pt yüksek kalsın (tasarım px).
-  double get _touchPad => math.max(0, 24 / _scale - _kTrackHalfH);
-
-  bool _overTrack(Offset local) => _inRRect(_toDesign(local), Offset.zero,
-      _kTrackHalfW + _touchPad, _kTrackHalfH + _touchPad, _kTrackR + _touchPad);
   bool _overKnob(Offset local) => _inRRect(_toDesign(local), Offset(_sim.knobX, 0),
-      _kKnobHalf + _touchPad, _kKnobHalf + _touchPad, _kKnobR + _touchPad);
+      _sim.knobBaseX, _kKnobHalfY, _kKnobHalfY);
 
-  void _onDown(Offset local) {
-    if (!_overTrack(local)) return;
+  void _onDown() {
     _sim.pressTarget = 1;
-    _downOnKnob = _overKnob(local);
     _ensureTicking();
   }
 
@@ -535,7 +473,7 @@ class _LampToggleState extends State<LampToggle> with SingleTickerProviderStateM
     if (!_sim.dragging) return;
     _dragDx += d.delta.dx;
     _moved = math.max(_moved, _dragDx.abs());
-    var p = _dragStartP + (_dragDx / _scale) / (2 * _kTravel);
+    var p = _dragStartP - (_dragDx / _kBarScale) / (2 * _sim.travel); // sola çekmek açar
     if (p > 1) p = 1 + (p - 1) * .22;
     if (p < 0) p *= .22;
     final ts = d.sourceTimeStamp ?? _dragT;
@@ -582,37 +520,37 @@ class _LampToggleState extends State<LampToggle> with SingleTickerProviderStateM
       label: widget.semanticLabel,
       onTap: _toggle,
       excludeSemantics: true,
-      child: AspectRatio(
-        aspectRatio: _stage.width / _stage.height,
-        child: GestureDetector(
-          behavior: HitTestBehavior.opaque,
-          onTapDown: (d) => _onDown(d.localPosition),
-          onTapCancel: () => _sim.pressTarget = 0,
-          onTapUp: (d) {
-            _sim.pressTarget = 0;
-            if (_overTrack(d.localPosition) || _downOnKnob) _toggle();
-            _downOnKnob = false;
-          },
-          onHorizontalDragDown: (d) => _onDown(d.localPosition),
-          onHorizontalDragStart: _onDragStart,
-          onHorizontalDragUpdate: _onDragUpdate,
-          onHorizontalDragEnd: (_) => _onDragEnd(),
-          onHorizontalDragCancel: _onDragEnd,
-          child: RepaintBoundary(
-            child: CustomPaint(
-              size: Size.infinite,
-              painter: _LampPainter(
-                sim: _sim,
-                shader: _shader,
-                stage: _stage,
-                originOffset: widget.debugOriginOffset,
-                dpr: dpr,
-                timeOf: () => widget.debugTime ?? _time,
-                repaint: _repaint,
+      child: SizedBox(
+        height: kGlassBarHeight,
+        child: LayoutBuilder(builder: (context, box) {
+          _sim.layout(box.maxWidth / (2 * _kBarScale));
+          return GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTapDown: (_) => _onDown(),
+            onTapCancel: () => _sim.pressTarget = 0,
+            onTapUp: (_) {
+              _sim.pressTarget = 0;
+              _toggle();
+            },
+            onHorizontalDragDown: (_) => _onDown(),
+            onHorizontalDragStart: _onDragStart,
+            onHorizontalDragUpdate: _onDragUpdate,
+            onHorizontalDragEnd: (_) => _onDragEnd(),
+            onHorizontalDragCancel: _onDragEnd,
+            child: RepaintBoundary(
+              child: CustomPaint(
+                size: Size.infinite,
+                painter: _LampPainter(
+                  sim: _sim,
+                  shader: _shader,
+                  dpr: dpr,
+                  timeOf: () => widget.debugTime ?? _time,
+                  repaint: _repaint,
+                ),
               ),
             ),
-          ),
-        ),
+          );
+        }),
       ),
     );
   }
@@ -622,8 +560,6 @@ class _LampPainter extends CustomPainter {
   _LampPainter({
     required this.sim,
     required this.shader,
-    required this.stage,
-    required this.originOffset,
     required this.dpr,
     required this.timeOf,
     required Listenable repaint,
@@ -631,18 +567,16 @@ class _LampPainter extends CustomPainter {
 
   final _LampSim sim;
   final ui.FragmentShader? shader;
-  final Size stage;
-  final Offset originOffset;
   final double dpr;
   final double Function() timeOf;
 
   @override
   void paint(Canvas canvas, Size size) {
-    final scale = size.width / stage.width;
-    final origin = size.center(Offset.zero) + originOffset * scale;
+    const scale = _kBarScale;
+    final origin = size.center(Offset.zero);
     final s = shader;
     if (s == null) {
-      _paintFallback(canvas, size, origin, scale);
+      _paintFallback(canvas, origin, scale);
       return;
     }
     final texScale = (scale * dpr).clamp(1.0, 2.0);
@@ -679,9 +613,8 @@ class _LampPainter extends CustomPainter {
     pic2.dispose();
 
     final light = Color.lerp(_kOffLight, _kOnLight, sim.theme)!;
-    final kr = math.min(_kKnobR, math.min(sim.knobHalfX - 1, sim.knobHalfY - 1));
+    final kr = math.min(sim.knobHalfX - 1, sim.knobHalfY - 1); // tam kapsül
     final uniforms = <double>[
-      size.width, size.height,
       origin.dx, origin.dy,
       scale,
       sim.knobX,
@@ -695,6 +628,7 @@ class _LampPainter extends CustomPainter {
       sim.theta,
       _kLightSpan, _kLightSpanY,
       dpr,
+      sim.trackHalfW,
     ];
     for (var i = 0; i < uniforms.length; i++) {
       s.setFloat(i, uniforms[i]);
@@ -708,30 +642,27 @@ class _LampPainter extends CustomPainter {
   }
 
   // Shader yüklenene / yüklenemezse: düz iz + düğme (aynı konum).
-  void _paintFallback(Canvas canvas, Size size, Offset origin, double scale) {
-    final th = sim.theme;
-    canvas.drawRect(Offset.zero & size,
-        Paint()..color = Color.lerp(const Color(0xFF0A0A0A), const Color(0xFFD3D1CF), th)!);
+  void _paintFallback(Canvas canvas, Offset origin, double scale) {
     canvas.drawRRect(
       RRect.fromRectAndRadius(
-        Rect.fromCenter(center: origin, width: 2 * _kTrackHalfW * scale, height: 2 * _kTrackHalfH * scale),
-        Radius.circular(_kTrackR * scale),
+        Rect.fromCenter(center: origin, width: 2 * sim.trackHalfW * scale, height: 2 * _kTrackHalfH * scale),
+        Radius.circular(_kTrackHalfH * scale),
       ),
-      Paint()..color = Color.lerp(const Color(0xFF080808), const Color(0xFFE6E4E2), th)!,
+      Paint()..color = const Color(0xFF080808),
     );
     canvas.drawRRect(
       RRect.fromRectAndRadius(
         Rect.fromCenter(
             center: origin + Offset(sim.knobX * scale, 0),
-            width: 2 * _kKnobHalf * scale,
-            height: 2 * _kKnobHalf * scale),
-        Radius.circular(_kKnobR * scale),
+            width: 2 * sim.knobHalfX * scale,
+            height: 2 * sim.knobHalfY * scale),
+        Radius.circular(sim.knobHalfY * scale),
       ),
-      Paint()..color = Color.lerp(const Color(0xFF2A2A2E), const Color(0xFFF4F2EF), th)!,
+      Paint()..color = Color.lerp(const Color(0xFF2A2A2E), const Color(0xFFF4F2EF), sim.theme)!,
     );
   }
 
   @override
   bool shouldRepaint(_LampPainter old) =>
-      old.shader != shader || old.stage != stage || old.dpr != dpr || old.sim != sim;
+      old.shader != shader || old.dpr != dpr || old.sim != sim;
 }

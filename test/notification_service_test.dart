@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:magnus_app/core/services/notification_service.dart';
+import 'package:magnus_app/core/widgets/glass_tab_bar.dart' show kGlassBarHeight;
 import 'package:magnus_app/core/widgets/lamp_toggle.dart';
 import 'package:magnus_app/data/models/inbox_item.dart';
 import 'package:magnus_app/data/providers.dart';
@@ -62,47 +63,32 @@ void main() {
     expect(prefs.getBool('bildirim_izni_soruldu'), isTrue);
   });
 
-  testWidgets('1/3 boyutta düğmenin 22 pt altına dokunmak da çalışır', (t) async {
-    final got = <bool>[];
-    await t.pumpWidget(Directionality(
-      textDirection: TextDirection.ltr,
-      child: Center(
-        child: SizedBox(
-          width: 280 / 3,
-          child: LampToggle(value: false, onChanged: got.add, debugSeed: 1),
-        ),
-      ),
-    ));
+  testWidgets('dış biçim cam bar ölçüsünde: tam en, kGlassBarHeight boy', (t) async {
+    await t.pumpWidget(host(false, (_) {}));
     await t.pump(const Duration(milliseconds: 16));
     final box = t.getRect(find.byType(LampToggle));
-    await t.tapAt(box.center + const Offset(0, 22));
-    await t.pump(const Duration(milliseconds: 16));
-    expect(got, [true]);
+    expect(box.width, 260);
+    expect(box.height, kGlassBarHeight);
   });
 
-  testWidgets('dokununca durum değişir; iz dışına dokunuş sayılmaz', (t) async {
+  testWidgets('dokununca durum değişir', (t) async {
     final got = <bool>[];
     await t.pumpWidget(host(false, got.add));
     await t.pump(const Duration(milliseconds: 16));
     await t.tap(find.byType(LampToggle));
     await t.pump(const Duration(milliseconds: 16));
     expect(got, [true]);
-    final box = t.getRect(find.byType(LampToggle));
-    await t.tapAt(box.topLeft + const Offset(2, 2));
-    await t.pump(const Duration(milliseconds: 16));
-    expect(got, [true], reason: 'sahne kenarı düğme değil');
   });
 
-  testWidgets('düğmeyi karşıya sürükleyip bırakmak açar', (t) async {
+  testWidgets('kapalıyken sağ yarıdaki sürgüyü sola sürükleyip bırakmak açar', (t) async {
     final got = <bool>[];
     await t.pumpWidget(host(false, got.add));
     await t.pump(const Duration(milliseconds: 16));
     final box = t.getRect(find.byType(LampToggle));
-    // Düğme kapalıyken solda: merkez − 104 tasarım px (260/520 = 0.5 ölçek).
-    final start = box.center - const Offset(52, 0);
+    final start = box.center + const Offset(65, 0); // kapalıyken sürgü sağ yarının ortasında
     final g = await t.startGesture(start);
-    for (var i = 0; i < 12; i++) {
-      await g.moveBy(const Offset(10, 0));
+    for (var i = 0; i < 14; i++) {
+      await g.moveBy(const Offset(-10, 0));
       await t.pump(const Duration(milliseconds: 16));
     }
     await g.up();

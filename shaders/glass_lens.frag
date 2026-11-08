@@ -32,6 +32,7 @@ uniform float uBevel;   // 7    cam pahının genişliği (h oranı), ölçüm 0
 uniform float uBlur;    // 8    normal yönünde bulanıklık σ (h oranı), ölçüm 0.028
 uniform float uSat;     // 9    doygunluk (bizim cam: 1.25)
 uniform float uZoom;    // 10   büyütme (bar 1.0; seçimde havalanan damla >1 → alttaki ikonlar büyür)
+uniform float uRadius;  // 11   köşe yarıçapı (fiziksel px); 0 = kapsül (bar). LG paneli köşeli dikdörtgendir.
 uniform sampler2D uTex; // arka plan
 
 out vec4 fragColor;
@@ -47,16 +48,39 @@ vec4 tapAt(vec2 p) {
 void main() {
   vec2 p = FlutterFragCoord().xy;
   float h = max(uRect.w, 1.0);
-  float rad = 0.5 * h;
+  float rad = uRadius > 0.0 ? min(uRadius, 0.5 * min(h, uRect.z)) : 0.5 * h;
 
-  // Kapsülün orta çizgisine en yakın nokta → dışa normal + kenara uzaklık.
+  // İç dikdörtgene (kapsülde orta çizgi) en yakın nokta → dışa normal + kenara uzaklık.
   float x0 = uRect.x + rad;
   float x1 = max(x0, uRect.x + uRect.z - rad);
-  vec2 q = vec2(clamp(p.x, x0, x1), uRect.y + rad);
+  float y0 = uRect.y + rad;
+  float y1 = max(y0, uRect.y + h - rad);
+  vec2 q = clamp(p, vec2(x0, y0), vec2(x1, y1));
   vec2 v = p - q;
   float r = length(v);
-  vec2 n = r > 0.001 ? v / r : vec2(0.0, -1.0);
-  float d = max(rad - r, 0.0);
+  vec2 n = vec2(0.0, -1.0);
+  float d = 0.0;
+  if (r > 0.001) {
+    n = v / r;
+    d = max(rad - r, 0.0);
+  } else {
+    // İç dikdörtgenin içi: en yakın kenar (kapsülde üst kenar, eski davranış).
+    float dt = p.y - y0;
+    float db = y1 - p.y;
+    float dl = p.x - x0;
+    float dr = x1 - p.x;
+    float m = min(min(dt, db), min(dl, dr));
+    if (m == dt) {
+      n = vec2(0.0, -1.0);
+    } else if (m == db) {
+      n = vec2(0.0, 1.0);
+    } else if (m == dl) {
+      n = vec2(-1.0, 0.0);
+    } else {
+      n = vec2(1.0, 0.0);
+    }
+    d = rad + m;
+  }
 
   // Kırılma: kenara yakın pikseller içeriden örnek alır.
   float w = max(uBevel * h, 0.001);

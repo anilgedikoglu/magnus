@@ -356,7 +356,7 @@ class _GlassTabBarState extends State<GlassTabBar>
                   child: Row(children: List.generate(kGlassBarSlots, _slot)),
                 ),
                 // 5) Kenar ışığı (specular rim).
-                const IgnorePointer(child: CustomPaint(painter: _RimPainter(radius))),
+                const IgnorePointer(child: CustomPaint(painter: GlassBarRimPainter(radius))),
               ],
             ),
         ),
@@ -586,9 +586,9 @@ class _InboxIcon extends StatelessWidget {
 }
 
 /// Cam kenarı: üstte parlak, altta sönük, en altta hafif "yakalanan ışık".
-class _RimPainter extends CustomPainter {
+class GlassBarRimPainter extends CustomPainter {
   final double radius;
-  const _RimPainter(this.radius);
+  const GlassBarRimPainter(this.radius);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -609,7 +609,7 @@ class _RimPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant _RimPainter old) => old.radius != radius;
+  bool shouldRepaint(covariant GlassBarRimPainter old) => old.radius != radius;
 }
 
 /// Ortak glif çizgisi: 24'lük ızgarada 2.1 birim, yuvarlak uç/birleşim.

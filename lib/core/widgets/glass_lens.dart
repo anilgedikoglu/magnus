@@ -40,6 +40,7 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
     this.refract = 0.238,
     this.bevel = 0.234,
     this.blur = 0.028,
+    this.cornerRadius = 0,
     super.child,
   });
 
@@ -53,6 +54,9 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
   /// Normal yönünde bulanıklık σ (h oranı); ölçüm 0.028.
   final double blur;
 
+  /// Köşe yarıçapı (mantıksal); 0 → kapsül (bar). LG paneli köşeli dikdörtgendir.
+  final double cornerRadius;
+
   /// Büyütme (bar 1; havalanan damla / kaydırıcı topuzu >1 → alttaki büyür).
   final double zoom;
 
@@ -61,7 +65,8 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
       RenderGlassLensBackdrop(program, MediaQuery.devicePixelRatioOf(context), zoom)
         ..refract = refract
         ..bevel = bevel
-        ..blur = blur;
+        ..blur = blur
+        ..cornerRadius = cornerRadius;
 
   @override
   void updateRenderObject(BuildContext context, RenderGlassLensBackdrop renderObject) {
@@ -71,7 +76,8 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
       ..zoom = zoom
       ..refract = refract
       ..bevel = bevel
-      ..blur = blur;
+      ..blur = blur
+      ..cornerRadius = cornerRadius;
   }
 }
 
@@ -98,6 +104,13 @@ class RenderGlassLensBackdrop extends RenderProxyBox {
     _blur = v;
     markNeedsPaint();
   }
+  double _cornerRadius = 0;
+  set cornerRadius(double v) {
+    if (v == _cornerRadius) return;
+    _cornerRadius = v;
+    markNeedsPaint();
+  }
+
   static const double _saturation = 1.25;
 
   ui.FragmentProgram _program;
@@ -152,7 +165,8 @@ class RenderGlassLensBackdrop extends RenderProxyBox {
       ..setFloat(7, _bevel)
       ..setFloat(8, _blur)
       ..setFloat(9, _saturation)
-      ..setFloat(10, _zoom);
+      ..setFloat(10, _zoom)
+      ..setFloat(11, size.height > 0 ? _cornerRadius * r.height / size.height * _dpr : 0);
     final l = layer ??= BackdropFilterLayer();
     l.filter = ui.ImageFilter.shader(shader);
     context.pushLayer(l, super.paint, offset);

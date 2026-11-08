@@ -3223,25 +3223,17 @@ class _NotificationsSection extends ConsumerWidget {
             onPointerDown: (_) => ref.read(_glassDragProvider.notifier).state = true,
             onPointerUp: (_) => ref.read(_glassDragProvider.notifier).state = false,
             onPointerCancel: (_) => ref.read(_glassDragProvider.notifier).state = false,
-            child: Center(
-              child: ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 280 / 3),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: LampToggle(
-                    key: const ValueKey('notificationsLampToggle'),
-                    value: on,
-                    semanticLabel: s.notificationsLabel,
-                    onChanged: (v) async {
-                      final messenger = ScaffoldMessenger.maybeOf(context);
-                      final ok = await ref.read(notificationsEnabledProvider.notifier).set(v);
-                      if (!ok) {
-                        messenger?.showSnackBar(SnackBar(content: Text(s.notificationsDenied)));
-                      }
-                    },
-                  ),
-                ),
-              ),
+            child: LampToggle(
+              key: const ValueKey('notificationsLampToggle'),
+              value: on,
+              semanticLabel: s.notificationsLabel,
+              onChanged: (v) async {
+                final messenger = ScaffoldMessenger.maybeOf(context);
+                final ok = await ref.read(notificationsEnabledProvider.notifier).set(v);
+                if (!ok) {
+                  messenger?.showSnackBar(SnackBar(content: Text(s.notificationsDenied)));
+                }
+              },
             ),
           ),
         ],

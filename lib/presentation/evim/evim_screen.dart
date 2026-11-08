@@ -3,6 +3,8 @@
 // sola kaydır → +50) → kısa hesaplama → sonuç: yer, ev tipi, denize mesafe, durum, kullanım, (varsa) yazlık
 // + kısa bir anlatı. Her satır kapalı kutu: geçiş reklamı (AdService sıklık sınırıyla) → açılır ve KALICI kalır.
 import 'dart:async';
+import 'dart:math' as math;
+import 'dart:ui' show lerpDouble;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,6 +19,7 @@ import '../../core/services/ad_service.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/widgets/hold_to_reveal.dart';
+import '../../core/widgets/liquid_glass_panel.dart';
 import '../../core/widgets/marquee_text.dart';
 import '../../data/providers.dart';
 import '../../data/services/ev_engine.dart';
@@ -49,7 +52,8 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
   final _yearCtrl = FixedExtentScrollController();
   final _ilCtrl = ScrollController();
   static const double _ilItemH = 42;
-  static const double _ilListH = 250;
+  static const double _yearItemW = 82;
+  static const double _yearDiameter = 1.5; // tekerleğin eğriliği (çizim de bunu kullanır)
   final Set<String> _opening = {};
 
   bool get _en => ref.read(localeProvider) == 'en';
@@ -121,7 +125,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
       if (!mounted || data == null || sel == null || !_ilCtrl.hasClients) return;
       final i = _sortedIller(data).indexOf(sel);
       if (i < 0) return;
-      final target = (i * _ilItemH - (_ilListH - _ilItemH) / 2)
+      final target = (i * _ilItemH - (_ilCtrl.position.viewportDimension - _ilItemH) / 2)
           .clamp(0.0, _ilCtrl.position.maxScrollExtent);
       _ilCtrl.jumpTo(target);
     });
@@ -201,7 +205,7 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
             fit: BoxFit.cover,
             errorBuilder: (_, __, ___) => const ColoredBox(color: Color(0xFF0D0A20)),
           ),
-          const ColoredBox(color: Color(0xD90D0A20)),
+          const ColoredBox(color: Color(0xA60D0A20)), // LG panelin arkası azıcık görünsün
           SafeArea(
             child: Column(
               children: [
@@ -246,21 +250,16 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
     );
   }
 
-  Widget _panel({required Widget child}) => Container(
-        margin: const EdgeInsets.symmetric(horizontal: 18),
-        padding: const EdgeInsets.fromLTRB(18, 20, 18, 18),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          gradient: const LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Color(0xEE1E1150), Color(0xEE2D1580)],
-          ),
-          border: Border.all(color: _pink.withValues(alpha: 0.75), width: 1.4),
-          boxShadow: [BoxShadow(color: _pink.withValues(alpha: 0.30), blurRadius: 18)],
-        ),
-        child: child,
+  Widget _panel({required Widget child, EdgeInsets padding = const EdgeInsets.fromLTRB(18, 20, 18, 18)}) => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18),
+        child: LiquidGlassPanel(padding: padding, child: child),
       );
+
+  /// Popup'ın ek yüksekliği için 0..1: küçük ekranda 0 (taşma yok), büyükte 1. [base] sıkışık hâl, [extra] ek boy.
+  double _uzama(BuildContext context, double maxH, double base, double extra) {
+    final yazi = math.max(1.0, MediaQuery.textScalerOf(context).scale(14) / 14);
+    return ((maxH - 16 - base * yazi) / extra).clamp(0.0, 1.0);
+  }
 
   // ── Adım: il sorusu ─────────────────────────────────────────────────────
   Widget _buildIl() {
@@ -268,30 +267,39 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
     if (data == null) return const SizedBox.shrink();
     final iller = _sortedIller(data);
     final secili = _ilSecili;
-    final ilkKez = !(_prefs?.getBool(EvimEngine.prefsAskedKey) ?? false);
-    return Center(
+    return LayoutBuilder(builder: (context, box) {
+      final k = _uzama(context, box.maxHeight, 448, 108);
+      double g(double a, double b) => lerpDouble(a, b, k)!;
+      return Center(
+      // Büyük yazı boyutunda taşmasın; sığdığında kaydırma yok (basılı tutmayı da bozmaz).
+      child: SingleChildScrollView(
+      physics: const ClampingScrollPhysics(),
       child: _panel(
+        padding: EdgeInsets.fromLTRB(18, g(20, 34), 18, g(18, 28)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             const Icon(Icons.home_rounded, color: _pink, size: 30),
-            const SizedBox(height: 10),
-            // Falın amacı (Anıl, 2026-11-06): önce merakı uyandır, sonra şehri sor.
-            Text(
-              _tr('Gelecekte nerelerde yaşayacağını merak ediyor musun?',
-                  "Curious where you'll be living in the years to come?"),
-              textAlign: TextAlign.center,
-              style: TextStyle(color: _pink, fontSize: 15.5, fontWeight: FontWeight.w700, height: 1.3),
+            SizedBox(height: g(10, 16)),
+            // Tek satır kalır: sığmazsa yazı küçülür, alta inmez (Anıl, 2026-11-08).
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                _tr('Gelecekte nerede yaşayacağını söyleyeceğim.', "I'll tell you where you're going to live."),
+                maxLines: 1,
+                softWrap: false,
+                style: const TextStyle(color: _pink, fontSize: 15.5, fontWeight: FontWeight.w700, height: 1.3),
+              ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: g(10, 14)),
             Text(
               _tr('Önce şu an hangi ilde yaşadığını söyle:', 'First, tell me which province you live in now:'),
               textAlign: TextAlign.center,
               style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600, height: 1.35),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: g(12, 18)),
             SizedBox(
-              height: _ilListH,
+              height: g(250, 310),
               child: ListView.builder(
                 controller: _ilCtrl,
                 itemCount: iller.length,
@@ -324,49 +332,55 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                 },
               ),
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: g(14, 22)),
             _gradientButton(_tr('Devam', 'Continue'), onTap: secili == null ? null : () => _ilKaydet(secili)),
-            if (ilkKez) ...[
-              const SizedBox(height: 8),
-              TextButton(
-                onPressed: () => _ilKaydet(data.matchIl(ref.read(userProfileProvider).birthCity) ?? 'İstanbul'),
-                child: Text(_tr('Geç', 'Skip'),
-                    style: TextStyle(color: Colors.white.withValues(alpha: 0.7), fontSize: 14)),
-              ),
-            ],
           ],
         ),
       ),
-    );
+      ),
+      );
+    });
   }
 
   // ── Adım: yıl seçimi ────────────────────────────────────────────────────
   Widget _buildSecim() {
-    return Center(
+    return LayoutBuilder(builder: (context, box) {
+      final k = _uzama(context, box.maxHeight, 445, 148);
+      double g(double a, double b) => lerpDouble(a, b, k)!;
+      return Center(
       // Popup içinde yatay kaydırma (yıl tekerleği) sayfayı GERİ götürmesin (Anıl, 2026-11-06).
       child: NoEdgeSwipeBack(
+      child: SingleChildScrollView(
+      physics: const ClampingScrollPhysics(),
       child: _panel(
+        padding: EdgeInsets.fromLTRB(18, g(20, 38), 18, g(18, 30)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             const Icon(Icons.home_rounded, color: _pink, size: 30),
-            const SizedBox(height: 12),
+            SizedBox(height: g(12, 20)),
             Text(
               _tr('Hangi yıldaki evini merak ediyorsun?', 'Which year\'s home are you curious about?'),
               textAlign: TextAlign.center,
               style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600, height: 1.35),
             ),
-            const SizedBox(height: 6),
+            SizedBox(height: g(6, 10)),
             Text(
               _tr('Sola kaydırarak geleceğe git', 'Swipe left to travel into the future'),
               style: TextStyle(color: Colors.white.withValues(alpha: 0.55), fontSize: 12.5),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: g(16, 36)),
             SizedBox(
-              height: 78,
+              height: g(78, 88),
               child: Stack(
                 alignment: Alignment.center,
                 children: [
+                  // Yılların arkasındaki tekerlek: kaydırmayla döner, döndürülebilir olduğu anlaşılır.
+                  Positioned.fill(
+                    child: CustomPaint(
+                      painter: _YearDrumPainter(_yearCtrl, itemExtent: _yearItemW, diameterRatio: _yearDiameter),
+                    ),
+                  ),
                   Container(
                     width: 84,
                     height: 54,
@@ -380,8 +394,8 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                     quarterTurns: 3,
                     child: ListWheelScrollView.useDelegate(
                       controller: _yearCtrl,
-                      itemExtent: 82,
-                      diameterRatio: 2.4,
+                      itemExtent: _yearItemW,
+                      diameterRatio: _yearDiameter,
                       perspective: 0.004,
                       physics: const FixedExtentScrollPhysics(),
                       onSelectedItemChanged: (i) {
@@ -410,11 +424,25 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                       ),
                     ),
                   ),
+                  // Kenarlara doğru tekerlek arkaya dönerken kararır.
+                  const Positioned.fill(
+                    child: IgnorePointer(
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          gradient: LinearGradient(
+                            stops: [0.0, 0.24, 0.76, 1.0],
+                            colors: [Color(0xB3050310), Color(0x00050310), Color(0x00050310), Color(0xB3050310)],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
             // Basılı-tut yıl tekerleğinden uzak dursun, dokunma alanı rahat olsun (Anıl, 2026-11-06).
-            const SizedBox(height: 30),
+            SizedBox(height: g(30, 80)),
             Opacity(
               opacity: _t == null ? 0.4 : 1,
               child: IgnorePointer(
@@ -427,12 +455,12 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: g(12, 24)),
             Text(
               _tr('Geleceğe odaklanmak için basılı tut', 'Hold to focus on the future'),
               style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontSize: 12),
             ),
-            const SizedBox(height: 6),
+            SizedBox(height: g(6, 20)),
             TextButton(
               onPressed: _ilDegistir,
               child: Text(
@@ -449,7 +477,9 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
         ),
       ),
       ),
-    );
+      ),
+      );
+    });
   }
 
   Widget _buildHesap() {
@@ -590,4 +620,68 @@ class _EvimScreenState extends ConsumerState<EvimScreen> {
       ),
     );
   }
+}
+
+/// Yıl şeridinin arkasındaki yatay tekerlek: silindir gölgesi + üstte ve altta tırtıklar.
+/// Tırtıklar yıllarla aynı eğride döner (ListWheelScrollView yarıçapı = genişlik × çap oranı / 2).
+class _YearDrumPainter extends CustomPainter {
+  _YearDrumPainter(this.controller, {required this.itemExtent, required this.diameterRatio})
+      : super(repaint: controller);
+
+  final FixedExtentScrollController controller;
+  final double itemExtent;
+  final double diameterRatio;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final rect = Offset.zero & size;
+    final rrect = RRect.fromRectAndRadius(rect, const Radius.circular(16));
+    canvas.save();
+    canvas.clipRRect(rrect);
+    canvas.drawRect(
+      rect,
+      Paint()
+        ..shader = const LinearGradient(
+          stops: [0.0, 0.5, 1.0],
+          colors: [Color(0x66000000), Color(0x2EFFFFFF), Color(0x66000000)],
+        ).createShader(rect),
+    );
+
+    final pos = controller.positions.length == 1 ? controller.position : null;
+    final pixels = pos != null && pos.hasPixels ? pos.pixels : 0.0;
+    final radius = size.width * diameterRatio / 2;
+    final spacing = itemExtent / 4;
+    final maxAngle = math.pi / 2;
+    final first = ((pixels - radius * maxAngle) / spacing).floor();
+    final last = ((pixels + radius * maxAngle) / spacing).ceil();
+    final tick = Paint()
+      ..strokeCap = StrokeCap.round
+      ..color = Colors.white;
+    for (var i = first; i <= last; i++) {
+      final angle = (i * spacing - pixels) / radius;
+      if (angle.abs() >= maxAngle) continue;
+      final depth = math.cos(angle);
+      final x = size.width / 2 + radius * math.sin(angle);
+      final major = i % 4 == 0;
+      final len = major ? 12.0 : 7.0;
+      tick
+        ..strokeWidth = (major ? 1.6 : 1.0) * (0.45 + 0.55 * depth)
+        ..color = Colors.white.withValues(alpha: (major ? 0.48 : 0.26) * depth);
+      canvas.drawLine(Offset(x, 2), Offset(x, 2 + len), tick);
+      canvas.drawLine(Offset(x, size.height - 2 - len), Offset(x, size.height - 2), tick);
+    }
+    canvas.restore();
+
+    canvas.drawRRect(
+      rrect.deflate(0.5),
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1
+        ..color = Colors.white.withValues(alpha: 0.16),
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _YearDrumPainter old) =>
+      old.controller != controller || old.itemExtent != itemExtent || old.diameterRatio != diameterRatio;
 }

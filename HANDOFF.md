@@ -31,6 +31,9 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   turları yeniden mümkün. Tur 33–42'yi (1000 metin) Claude yazdı; ChatGPT ikinci göz denetiminden geçmedi.
 
 ## Denenip olmayan ve nedeni
+- 2026-11-08: ChatGPT girişinden ~10 dk sonra, 5 sekme AYNI ANDA yeniden yüklenip 40–45 KB mesaj gönderilince oturum
+  düştü (tur 32'de de yoğun paralel kullanımda düşmüştü). Olası neden: sekmeler oturum belirtecini aynı anda yeniliyor.
+  → Tek sekme, sekme yüklemeleri arasında bekleme. Codex haftalık sınırda (11 Kas 21:56'ya kadar), Gemini anahtarı yerel değil.
 - ChatGPT yazarı havuzdaki SAHNELERİ farklı kelimelerle geri getiriyor; 5-gram `metin_kalip_tara` yakalamıyor → ajanlar havuzu
   elle okuyup ayıkladı. ChatGPT'ye dönülürse brief'e havuz sahnelerinin "kullanma" listesi eklenmeli.
 - Haftalık kullanım sınırı (gece 11'de sıfırlandı) 5 yazar ajanını yarıda kesti; işleri kayıtlı kaldı, `SendMessage` ile

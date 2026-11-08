@@ -3543,14 +3543,14 @@
     },
     {
       "id": 361,
-      "metin": "Kulağıma bir kapı zili geliyor. Ay dönmeden seni yüz yüze bulan biri, aklındaki bir işi kendi ağzıyla açacak; o kısa konuşmanın ferahlığı günlerce sürecek.",
-      "metin_en": "A doorbell is ringing in my ears. Before the month turns, someone who meets you face to face will bring up a matter on their mind in their own words; the relief of that short talk will last for days.",
+      "metin": "Kulağıma bir kapı zili geliyor. Ay dönmeden yüz yüze geldiğin biri, aklını kurcalayan bir konuyu kendiliğinden açacak; o kısa sohbetin ferahlığı günlerce sürecek.",
+      "metin_en": "A doorbell is ringing in my ears. Before the month turns, someone you meet face to face will bring up, unprompted, a matter that's been on your mind; the relief of that short talk will last for days.",
       "kosullar": []
     },
     {
       "id": 362,
-      "metin": "Kurumda çizelgeler yeniden yazılırken adının yanına beklediğin bir boşluk düşecek. {{isim}}, o güne şimdiden küçük bir plan kurmaya başlayabilirsin.",
-      "metin_en": "As the schedules at your institution are rewritten, the gap you have been hoping for will land next to your name. {{isim}}, you can already start making a small plan for that day.",
+      "metin": "Kurumda çizelgeler yeniden yazılırken adının yanına beklediğin bir boş gün düşecek. {{isim}}, o güne şimdiden küçük bir plan kurmaya başlayabilirsin.",
+      "metin_en": "As the schedules at your institution are rewritten, the day off you've been hoping for will land next to your name. {{isim}}, you can already start making a small plan for that day.",
       "kosullar": [
         {
           "degisken": "meslek",
@@ -3575,8 +3575,8 @@
     },
     {
       "id": 364,
-      "metin": "Kâğıdın köşesinde bir e-posta simgesi seçiyorum. Yıllar önce ders verdiğin birinden gelecek kısa bir yazı, anlattığın bir şeyi hâlâ unutmadığını söyleyecek.",
-      "metin_en": "In the corner of the paper I can make out an email icon. A short note from someone you taught years ago will tell you they still remember something you once explained.",
+      "metin": "Kâğıdın köşesinde bir e-posta simgesi seçiyorum. Ders verdiğin birinden gelecek kısa bir yazı, anlattığın bir şeyi hâlâ unutmadığını söyleyecek.",
+      "metin_en": "In the corner of the paper I can make out an email icon. A short note from someone you've taught will tell you they still remember something you once explained.",
       "kosullar": [
         {
           "degisken": "meslek",
@@ -3597,8 +3597,8 @@
     },
     {
       "id": 366,
-      "metin": "Evindeki saksılardan biri bu ay herkesten önce çiçeğe duracak. Komşun usulünü soracak; anlatırken bildiğin şeyin değerini yeniden fark edeceksin.",
-      "metin_en": "One of the plants in your home will bloom before all the others this month. A neighbor will ask your secret, and as you explain, you will notice again how much your know-how is worth.",
+      "metin": "Evindeki saksılardan biri bu ay seni yeni bir tomurcukla şaşırtacak. O küçük sevinç, emeğinin evin her köşesinde karşılık bulduğunu sana hatırlatacak.",
+      "metin_en": "One of the plants in your home will surprise you with a new bud this month. That small joy will remind you that your care pays off in every corner of your home.",
       "kosullar": [
         {
           "degisken": "meslek",
@@ -3625,8 +3625,8 @@
     },
     {
       "id": 369,
-      "metin": "Tanıştığınız ilk günden bir ayrıntıyı ortak bir dostunuz bu ay sohbete getirecek. Nişanlınla aynı anda o güne dönecek, uzun uzun güleceksiniz.",
-      "metin_en": "This month a mutual friend will bring up a detail from the very first day you met. You and your fiancé will go back to that day at the same moment and laugh for a long time.",
+      "metin": "Tanıştığınız ilk günden bir ayrıntı bu ay bir sohbette yeniden açılacak. Nişanlınla aynı anda o güne dönecek, uzun uzun güleceksiniz.",
+      "metin_en": "This month a detail from the very first day you met will come up again in a conversation. You and your fiancé will go back to that day at the same moment and laugh for a long time.",
       "kosullar": [
         {
           "degisken": "medeni_durum",
@@ -3673,8 +3673,8 @@
     },
     {
       "id": 373,
-      "metin": "Sevdiğin kişiyle aynı anda aynı cümleyi kuracağınız bir an yaklaşıyor. Bu hafta o tesadüf, konuşmak istediğin planı kendiliğinden gündeme getirecek.",
-      "metin_en": "A moment is coming when you and the one you love will say the very same sentence at the same time. This week that coincidence will bring up, all on its own, the plan you have been wanting to talk about.",
+      "metin": "Sevdiğin kişiyle aynı şeyi düşündüğünüzü fark edeceğiniz bir an yaklaşıyor. Bu hafta o tatlı tesadüf, konuşmak istediğin planı kendiliğinden gündeme getirecek.",
+      "metin_en": "A moment is coming when you and the one you love will realize you've been thinking the same thing. This week that sweet coincidence will bring up, all on its own, the plan you've been wanting to talk about.",
       "kosullar": [
         {
           "degisken": "medeni_durum",
@@ -3684,8 +3684,8 @@
     },
     {
       "id": 374,
-      "metin": "Bu ay bir kutlamada en çok dinlenen hikâye seninki olacak, {{isim}}. Gençler kahkahayla dinleyecek, biri de anlattıklarını kaydetmek için telefonunu çıkaracak.",
-      "metin_en": "At a celebration this month, the story everyone listens to most will be yours, {{isim}}. The young ones will listen laughing, and one of them will pull out a phone to record what you tell.",
+      "metin": "{{isim}}, bu ay bir buluşmada anlattığın eski bir hikâyeyi gençler kahkahayla dinleyecek. İçlerinden biri 'bunu bir daha anlat' diye ısrar edecek.",
+      "metin_en": "{{isim}}, this month the young ones will listen, laughing, to an old story you tell at a get-together. One of them will insist you tell it one more time.",
       "kosullar": [
         {
           "degisken": "meslek",
@@ -3695,8 +3695,8 @@
     },
     {
       "id": 375,
-      "metin": "Çalıştığın yerde oturma düzeni değişecek, {{isim}}. Yanına düşen kişiyle kurduğun ilk sohbet, işlerini sandığından çok kolaylaştıracak.",
-      "metin_en": "The seating arrangement at your workplace is about to change, {{isim}}. Your first chat with the person who ends up next to you will make your work far easier than you expect.",
+      "metin": "Çalıştığın yerde görev dağılımı değişecek, {{isim}}. Yolunun daha sık kesişeceği bir mesai arkadaşın, işlerini sandığından çok kolaylaştıracak.",
+      "metin_en": "The division of tasks at your workplace is about to change, {{isim}}. A coworker whose path will cross yours more often will make your work far easier than you expect.",
       "kosullar": [
         {
           "degisken": "meslek",
@@ -3717,8 +3717,8 @@
     },
     {
       "id": 377,
-      "metin": "Bir arkadaşının kutlamasında masaya sonradan katılan biri, gece bitmeden adını iki kez soracak, {{isim}}. Ertesi gün gelen selam yüzünü güldürecek.",
-      "metin_en": "At a friend's celebration, someone who joins the table late will ask your name twice before the night is over, {{isim}}. The hello that arrives the next day will make you smile.",
+      "metin": "Bir arkadaş buluşmasında yeni tanıştığın biri, ayrılmadan önce adını bir kez daha soracak, {{isim}}. Ardından gelen selam yüzünü güldürecek.",
+      "metin_en": "At a gathering with friends, someone you've just met will ask your name once more before leaving, {{isim}}. The hello that follows will make you smile.",
       "kosullar": [
         {
           "degisken": "cinsiyet",
@@ -3738,8 +3738,8 @@
     },
     {
       "id": 379,
-      "metin": "Geride bıraktığın döneme ait resmî bir işin son adımı bu ay kolayca tamamlanacak, {{isim}}. Kapattığın o dosya omzundaki son yükü de alacak.",
-      "metin_en": "The last step of an official matter from the period you left behind will be wrapped up easily this month, {{isim}}. Closing that file will lift the last weight off your shoulders.",
+      "metin": "Geride bıraktığın döneme ait, ucu açık kalmış bir iş bu ay kolayca tamamlanacak, {{isim}}. O dosyayı kapattığında omzundan bir yük daha kalkacak.",
+      "metin_en": "A loose end from the period you left behind will be wrapped up easily this month, {{isim}}. When you close that file, one more weight will lift off your shoulders.",
       "kosullar": [
         {
           "degisken": "medeni_durum",
@@ -3749,8 +3749,8 @@
     },
     {
       "id": 380,
-      "metin": "Dışarıdan aceleci görünsen de asıl kararlarını ağır ağır verirsin. Kaderin ipliği bu ay o sabrı ödüllendirecek: geri çevirdiğin bir teklif daha iyi şartlarla dönecek.",
-      "metin_en": "You may look hasty from the outside, but you make your real decisions slowly. This month the thread of fate will reward that patience: an offer you turned down will come back on better terms.",
+      "metin": "Dışarıdan aceleci görünsen de asıl kararlarını ağır ağır verirsin. Kaderin ipliği bu ay o sabrı ödüllendirecek: beklettiğin bir konu daha iyi şartlarla önüne gelecek.",
+      "metin_en": "You may look hasty from the outside, but you make your real decisions slowly. This month the thread of fate will reward that patience: a matter you've been holding off on will come your way on better terms.",
       "kosullar": []
     },
     {
@@ -3767,14 +3767,14 @@
     },
     {
       "id": 383,
-      "metin": "Bir önsezi fısıldıyor, {{isim}}: bu ay biri seni yaşından genç tahmin edecek. Gülüp geçeceksin ama o gün aynaya her bakışında aynı tebessüm yüzünde olacak.",
-      "metin_en": "A hunch is whispering, {{isim}}: this month someone will guess you're younger than you are. You'll laugh it off, but every time you look in the mirror that day, the same smile will be on your face.",
+      "metin": "Bir önsezi fısıldıyor, {{isim}}: bu ay biri sana durup dururken 'gözlerin gülüyor' diyecek. Gülüp geçeceksin ama o gün aynaya her bakışında aynı tebessüm yüzünde olacak.",
+      "metin_en": "A hunch is whispering, {{isim}}: this month someone will tell you, out of the blue, that your eyes are smiling. You'll laugh it off, but every time you look in the mirror that day, the same smile will be on your face.",
       "kosullar": []
     },
     {
       "id": 384,
-      "metin": "Bir mesaj grubunda biri yanlışlıkla gönderdiğini silmeye çalışacak, {{isim}}; sen çoktan görmüş olacaksın. O gülüşme bu ayın en tatlı anısı olacak.",
-      "metin_en": "Someone in a group chat will try to delete something they sent by mistake, {{isim}}; you'll have already seen it. That laugh will be this month's sweetest memory.",
+      "metin": "Bir mesaj grubunda biri yanlışlıkla gönderdiğini telaşla silecek, {{isim}}; ardından gelen açıklama hepinizi güldürecek. O an bu ayın tatlı anılarından olacak.",
+      "metin_en": "Someone in a group chat will hurriedly delete something they sent by mistake, {{isim}}; the explanation that follows will make you all laugh. That moment will be one of this month's sweet memories.",
       "kosullar": []
     },
     {
@@ -3791,8 +3791,8 @@
     },
     {
       "id": 387,
-      "metin": "Eşin bu ay sevdiğin bir şarkıyı açıp seni dansa kaldıracak, {{isim}}. Önce utanacak, sonra salonun ortasında kahkahayla döneceksin.",
-      "metin_en": "This month your spouse will put on a song you love and pull you up to dance, {{isim}}. You'll be shy at first, then you'll be twirling in the middle of the living room, laughing.",
+      "metin": "Eşin bu ay sevdiğin bir şarkıyı açıp seni yanına çağıracak, {{isim}}. Önce şaşıracak, sonra birlikte şarkıya eşlik ederken kahkahalarla güleceksiniz.",
+      "metin_en": "This month your spouse will put on a song you love and call you over, {{isim}}. You'll be surprised at first, then the two of you will end up singing along and laughing together.",
       "kosullar": [
         {
           "degisken": "cinsiyet",
@@ -3817,8 +3817,8 @@
     },
     {
       "id": 389,
-      "metin": "{{isim}}, eşinin uzun zamandır anmadığı bir yemeği bu ay sen yapmaya kalkacaksın. Sonuç kusursuz olmasa da sofrada kopan kahkaha haftanın en güzel anı olacak.",
-      "metin_en": "{{isim}}, this month you'll try your hand at a dish your spouse hasn't mentioned in a long time. Even if it doesn't turn out perfect, the laughter around the table will be the best moment of the week.",
+      "metin": "{{isim}}, bu ay bir akşam mutfağa sen gireceksin, eşinin sevdiği bir yemeği deneyeceksin. Sonuç kusursuz olmasa da sofrada kopan kahkaha haftanın en güzel anı olacak.",
+      "metin_en": "{{isim}}, one evening this month you'll take over the kitchen and try making a dish your spouse loves. Even if it doesn't turn out perfect, the laughter around the table will be the best moment of the week.",
       "kosullar": [
         {
           "degisken": "cinsiyet",
@@ -3854,8 +3854,8 @@
     },
     {
       "id": 392,
-      "metin": "Kalabalık bir masada sana uzatılan tuzluğun ardında kısa bir bakış seçiyorum, {{isim}}. Ay dönmeden o bakışın sahibi seni bir bahaneyle yeniden bulacak.",
-      "metin_en": "Behind the salt shaker passed to you at a crowded table, I make out a brief glance, {{isim}}. Before the month is out, the owner of that glance will find you again on some pretext.",
+      "metin": "Kalabalık bir masada sana uzatılan tuzluğun ardında kısa bir bakış seçiyorum, {{isim}}. Ay dönmeden o bakışın sahibiyle aranızda sıcak bir sohbet geçecek.",
+      "metin_en": "Behind the salt shaker passed to you at a crowded table, I make out a brief glance, {{isim}}. Before the month is out, you'll share a warm conversation with the owner of that glance.",
       "kosullar": [
         {
           "degisken": "cinsiyet",
@@ -3880,8 +3880,8 @@
     },
     {
       "id": 394,
-      "metin": "Masana bırakılmış küçük bir ikram ve yanında bir not gözüme ilişti, {{isim}}. Bir mesai arkadaşın, sessizce yaptığın yardımı unutmadığını bu ay böyle gösterecek.",
-      "metin_en": "A small treat left on your desk with a note beside it caught my eye, {{isim}}. This month a coworker will show you this way that they haven't forgotten the help you quietly gave.",
+      "metin": "Çalıştığın yerde küçük bir ikramın yanında gelen teşekkür gözüme ilişti, {{isim}}. Bir mesai arkadaşın, sessizce yaptığın yardımı unutmadığını bu ay böyle gösterecek.",
+      "metin_en": "A small treat accompanied by a word of thanks caught my eye at your workplace, {{isim}}. This month a coworker will show you this way that they haven't forgotten the help you quietly gave.",
       "kosullar": [
         {
           "degisken": "meslek",
@@ -3913,8 +3913,8 @@
     },
     {
       "id": 397,
-      "metin": "Biri sana bu ay 'senin gibi birini arıyordum' diyecek, {{isim}}; önce bir rica sanacaksın. İkinci buluşmada işin içinde başka bir şey olduğunu anlayıp gülümseyeceksin.",
-      "metin_en": "This month someone will tell you, 'I've been looking for someone like you', {{isim}}; at first you'll think they want a favor. At the second meeting you'll realize there's something more to it and smile.",
+      "metin": "Biri sana bu ay 'senin gibi birini arıyordum' diyecek, {{isim}}; önce bir rica sanacaksın. Sonra işin içinde başka bir şey olduğunu anlayıp gülümseyeceksin.",
+      "metin_en": "This month someone will tell you, 'I've been looking for someone like you', {{isim}}; at first you'll think they want a favor. Then you'll realize there's something more to it and smile.",
       "kosullar": [
         {
           "degisken": "medeni_durum",
@@ -3924,8 +3924,8 @@
     },
     {
       "id": 398,
-      "metin": "Nişanlınla bir vitrinin önünde aynı anda durup aynı şeyi göstereceksiniz, {{isim}}. Bu küçük tesadüf, ay dönmeden ortak eviniz için ilk seçime dönüşecek.",
-      "metin_en": "You and your fiancé will stop in front of a shop window at the same moment and point at the same thing, {{isim}}. Before the month is out, this little coincidence will turn into the first choice for your shared home.",
+      "metin": "Nişanlınla bir vitrinin önünde aynı şeye gözünüz takılacak, {{isim}}. Bu küçük tesadüf, ay dönmeden ortak eviniz için güzel bir seçime dönüşecek.",
+      "metin_en": "In front of a shop window, you and your fiancé will find your eyes drawn to the same thing, {{isim}}. Before the month is out, this little coincidence will turn into a lovely choice for your shared home.",
       "kosullar": [
         {
           "degisken": "medeni_durum",

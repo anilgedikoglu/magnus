@@ -386,30 +386,34 @@ class _DogumHaritasiScreenState extends ConsumerState<DogumHaritasiScreen>
           child: _buildWheelChart(),
         ),
 
-        // Metin kutusu — görsel ve buton arasında kalan tüm alanı doldurur,
-        // içerik uzunsa kendi içinde scroll eder
+        // Metin kutusu — görsel ve buton arasında kalan tüm alanı doldurur.
+        // Çerçeve sabit; uzun yazı yalnız çerçevenin İÇİNDE kayar.
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.only(top: 4, bottom: 16),
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
-                decoration: BoxDecoration(
-                  color: Colors.black.withValues(alpha: 0.55),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: const Color(0xFF9988FF).withValues(alpha: 0.35),
-                    width: 1,
-                  ),
+            padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+            child: Container(
+              key: const ValueKey('dogumMetinCerceve'),
+              width: double.infinity,
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                color: Colors.black.withValues(alpha: 0.55),
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(
+                  color: const Color(0xFF9988FF).withValues(alpha: 0.35),
+                  width: 1,
                 ),
-                child: RichTextParser.build(
-                  _metin ?? '',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    height: 1.75,
+              ),
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: RichTextParser.build(
+                    _metin ?? '',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      height: 1.75,
+                    ),
                   ),
                 ),
               ),

@@ -20,28 +20,14 @@ class InboxScreen extends ConsumerWidget {
     final items = ref.watch(inboxProvider);
     final s = ref.watch(l10nProvider);
 
-    // Gece Grimuarı (2026-11): başlık bandı şeffaf — liste başlığın altından mürekkep
-    // geçişiyle kayar; zemin ortak atmosfer (mum ışığı + vinyet + grain).
+    // Başlık bandı sabit ve opak: liste altında kesilir, başlığın üstüne binmez (Anıl, 2026-11-08).
     return Scaffold(
       // Zemin ana menüyle aynı düz renk (Anıl, 2026-11-06).
       backgroundColor: kHomeBackground,
-      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: kHomeBackground,
         surfaceTintColor: Colors.transparent,
         scrolledUnderElevation: 0,
-        flexibleSpace: const IgnorePointer(
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                stops: [0.0, 0.70, 1.0],
-                colors: [Color(0xF20C0F14), Color(0xCC0C0F14), Color(0x000C0F14)],
-              ),
-            ),
-          ),
-        ),
         title: Text(s.inboxTitle, style: AppTextStyles.screenTitle),
         actions: [
           if (items.isNotEmpty)
@@ -168,10 +154,8 @@ class InboxScreen extends ConsumerWidget {
     final bottomPad = inTabs
         ? MediaQuery.paddingOf(context).bottom + kGlassBarReserve + 12
         : 12.0;
-    // Üst pay: şeffaf başlık bandının altından başlar (extendBodyBehindAppBar).
-    final topPad = MediaQuery.paddingOf(context).top + kToolbarHeight + 6;
     return ListView.separated(
-      padding: EdgeInsets.fromLTRB(0, topPad, 0, bottomPad),
+      padding: EdgeInsets.fromLTRB(0, 6, 0, bottomPad),
       itemCount: items.length,
       separatorBuilder: (_, __) => Divider(
         height: 1,

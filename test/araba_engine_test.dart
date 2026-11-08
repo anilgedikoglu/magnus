@@ -59,7 +59,7 @@ void main() {
     }
   });
 
-  test('aynı arabayla devam ara sıra olur (~%12-35)', () {
+  test('aynı arabayla devam nadir olur', () {
     var pairs = 0, same = 0;
     for (var seed = 0; seed < 1000; seed++) {
       final s = gen(seed).slots;
@@ -69,12 +69,10 @@ void main() {
         if (s[i].carId == s[i - 1].carId) same++;
       }
     }
-    // v3 kademeli ilerleme rnd akışını kaydırdı → gerçekleşen devam oranı ~%11 (eskiden ~%15);
-    // "ara sıra devam" davranışı korunuyor, alt sınır buna göre.
-    expect(same / pairs, inInclusiveRange(0.08, 0.35), reason: '$same/$pairs');
+    expect(same / pairs, inInclusiveRange(0.002, 0.10), reason: '$same/$pairs');
   });
 
-  test('gerçekçilik: 28 yaşında ilk araba çoğunlukla sınıf 1-3; lüks (6+) nadir, süper lüks çok nadir', () {
+  test('gerçekçilik: ilk araba çoğunlukla sınıf 1-3; lüks ulaşılabilir, süper lüks azınlıkta', () {
     var firstLow = 0, anyLux = 0, anySuper = 0;
     const n = 2000;
     for (var seed = 0; seed < n; seed++) {
@@ -85,8 +83,8 @@ void main() {
       if (levels.any((l) => l == 7)) anySuper++;
     }
     expect(firstLow / n, greaterThanOrEqualTo(0.85), reason: '$firstLow');
-    expect(anyLux / n, lessThan(0.08), reason: 'lüks $anyLux/$n');
-    expect(anySuper / n, lessThan(0.015), reason: 'süper lüks $anySuper/$n');
+    expect(anyLux / n, inInclusiveRange(0.15, 0.60), reason: 'lüks $anyLux/$n');
+    expect(anySuper / n, inInclusiveRange(0.01, 0.20), reason: 'süper lüks $anySuper/$n');
   });
 
   test('yaygınlık: seçilen arabaların ortalama yaygınlığı havuz ortalamasından belirgin yüksek', () {
@@ -99,7 +97,7 @@ void main() {
         cnt++;
       }
     }
-    expect(sum / cnt, greaterThan(poolMean + 1.0), reason: 'seçilen ${sum / cnt} havuz $poolMean');
+    expect(sum / cnt, greaterThan(poolMean + 0.5), reason: 'seçilen ${sum / cnt} havuz $poolMean');
   });
 
   test('yakıt: 2040+ aralıklarda elektrik payı yakın yıllardakinden çok yüksek', () {
@@ -223,8 +221,7 @@ void main() {
     }
   });
 
-  test('kademeli ilerleme: ardışık arabalar arasında uçuk zıplama yok (fark ≤2, çoğu ≤1)', () {
-    var pairs = 0, le1 = 0;
+  test('kademeli ilerleme: ardışık arabalar arasında uçuk zıplama yok (fark ≤2)', () {
     for (var seed = 0; seed < 600; seed++) {
       final t = ArabaEngine.generate(pool,
           gender: 'erkek', age: 30, baseYear: base, seed: seed, currentBrand: 'Fiat');
@@ -232,11 +229,81 @@ void main() {
       for (var i = 1; i < lv.length; i++) {
         final d = (lv[i] - lv[i - 1]).abs();
         expect(d, lessThanOrEqualTo(2), reason: 'seed=$seed uçuk zıplama');
-        pairs++;
-        if (d <= 1) le1++;
       }
     }
-    expect(le1 / pairs, greaterThan(0.9), reason: 'çoğu geçiş ±1 olmalı');
+  });
+
+  test('zaman ilerledikçe araba çok büyük ihtimalle pahalılaşır ama kesin değildir', () {
+    var pairs = 0, up = 0, notUp = 0;
+    for (var seed = 0; seed < 1500; seed++) {
+      final lv = [for (final s in gen(seed).slots) if (!s.isGap) byId[s.carId]!.level];
+      for (var i = 1; i < lv.length; i++) {
+        pairs++;
+        lv[i] > lv[i - 1] ? up++ : notUp++;
+      }
+    }
+    expect(up / pairs, greaterThan(0.70), reason: '$up/$pairs');
+    expect(notUp, greaterThan(0), reason: 'kesin pahalılaşma olmamalı');
+  });
+
+  test('aynı araba 10 yılı geçmez, 8+ yıl çok nadir; son aralıkta devam yok', () {
+    var long = 0, runs = 0;
+    for (var seed = 0; seed < 2000; seed++) {
+      final s = gen(seed).slots;
+      var i = 0;
+      while (i < s.length) {
+        if (s[i].isGap) {
+          i++;
+          continue;
+        }
+        var j = i;
+        while (j + 1 < s.length && s[j + 1].carId == s[i].carId) {
+          j++;
+        }
+        final years = s[j].end - s[i].start + 1;
+        expect(years, lessThanOrEqualTo(10), reason: 'seed=$seed');
+        runs++;
+        if (years >= 8) long++;
+        i = j + 1;
+      }
+      expect(s.last.carId, isNot(s[s.length - 2].carId), reason: 'seed=$seed');
+    }
+    expect(long / runs, lessThan(0.06), reason: '$long/$runs');
+  });
+
+  test('uzak gelecekte sıradan araba çok nadir', () {
+    var far = 0, cheap = 0;
+    for (var seed = 0; seed < 2000; seed++) {
+      for (final s in gen(seed).slots) {
+        if (s.isGap || s.start - base < 18) continue;
+        far++;
+        if (byId[s.carId]!.level <= 3) cheap++;
+      }
+    }
+    expect(far, greaterThan(100));
+    expect(cheap / far, lessThan(0.12), reason: '$cheap/$far');
+  });
+
+  test('aynı model ailesi çizelgede iki kez çıkmaz', () {
+    for (var seed = 0; seed < 800; seed++) {
+      final cars = [for (final s in gen(seed).slots) if (!s.isGap) s.carId!].toSet().map((id) => byId[id]!);
+      final fams = cars.map((c) => '${c.brand} ${c.name.replaceFirst(c.brand, '').trim().split(' ').first}'.toLowerCase());
+      expect(fams.toSet().length, cars.length, reason: 'seed=$seed');
+    }
+  });
+
+  test('15+ yıl sonrası yalnız marka yazılır, yakın yıllarda model; uzakta art arda aynı marka olmaz', () {
+    final car = pool.firstWhere((c) => c.brand == 'Honda');
+    expect(ArabaEngine.displayName(car, const ArabaSlot(2040, 2044, 1), base), car.model);
+    expect(ArabaEngine.displayName(car, const ArabaSlot(2041, 2044, 1), base), 'Honda');
+    for (var seed = 0; seed < 1500; seed++) {
+      final s = gen(seed).slots;
+      for (var i = 1; i < s.length; i++) {
+        if (s[i].isGap || s[i - 1].isGap || s[i].carId == s[i - 1].carId) continue;
+        if (s[i].start - base < ArabaEngine.brandOnlyAfter) continue;
+        expect(byId[s[i].carId]!.brand, isNot(byId[s[i - 1].carId]!.brand), reason: 'seed=$seed');
+      }
+    }
   });
 
   test('marka değişince imza değişir → yeniden üretilir', () async {

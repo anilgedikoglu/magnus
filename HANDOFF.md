@@ -42,6 +42,11 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   Arabam her açılışta bulanık arama; Evim harita yerine 16 bulanık ev (`assets/images/evim/ev_01..16.jpg`, ChatGPT). Kader Kitabı:
   sonraki sayfa varsa sağ sayfada ok.
 
+- **300 sonrası main'de (build bekliyor):** Arabam motoru v4 (`araba_engine.dart`, şema 4 → eski çizelgeler yenilenir): sonraki araba
+  ~%73-80 üst sınıf (profil/markaya göre; kesin değil), yıl tabanı (10+ yıl sınıf 3, 18+ sınıf 4, 26+ sınıf 5), aralıklar çoğu 3-6 yıl,
+  aynı araba en çok 10 yıl ve son aralıkta devam yok, aynı model ailesi tekrarsız, lüks sınıfta yaygınlık etkisi az (Porsche/Ferrari çıkar),
+  15+ yıl sonrası yalnız marka (`displayName`) ve uzak yıllarda art arda aynı marka yok. Havuz: 57 marka, 1865 model.
+
 ## Yarım kalan
 - `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.
 - **⚠️ Lamba sürgüsünün LİSANSI YOK:** Zsolt Kacso'nun "Glass Light Toggle" demosunun (lisanssız) shader/fizik çevirisi. Dahili test

@@ -461,7 +461,7 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     // Sığmayan model adı alt satıra inmez: tek satırda yavaşça kayar.
-                    MarqueeText(car.model,
+                    MarqueeText(ArabaEngine.displayName(car, s, _t!.baseYear),
                         textAlign: TextAlign.center,
                         style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w700)),
                     const SizedBox(height: 2),

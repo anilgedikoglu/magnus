@@ -6,13 +6,15 @@
 // segment, fiyat sınıfı 1-7, yakıt, Türkiye'de yaygınlık 1-10, cinsiyet eğilimi, durum eski/guncel/gelecek).
 //
 // Kullanıcıya özel, kalıcı ÇİZELGE bir kez üretilir:
-//  • bu yıldan +50 yıla kadar 5 ardışık yıl aralığı (2-12 yıl); %15 olasılıkla 1-2 yıllık arabasız dönem;
-//  • ilk sınıf YAŞA göre (gençte ekonomik/popüler ağırlıklı), sonra çoğunlukla aynı sınıf ya da bir üstü;
-//    lüks (6) ve süper lüks (7) ek bir zarla nadir;
+//  • 5 ardışık yıl aralığı (çoğu 3-6 yıl, en çok 10); %15 olasılıkla 1-2 yıllık arabasız dönem;
+//  • ilk sınıf mevcut markadan; sonra BÜYÜK İHTİMALLE bir-iki sınıf üstü (kesin değil: bazen aynı, nadiren alt);
+//    yıl ilerledikçe sınıf tabanı yükselir (Anıl, 2026-11-08: "30 yıl sonra da Honda Civic deme");
+//  • bugünden 15+ yıl sonraki aralıklarda yalnız marka gösterilir (o yıllarda model adları değişmiş olur);
 //  • seçim Türkiye'de yaygınlığa göre ağırlıklı (Egea/Clio sık, Ferrari çok seyrek);
 //  • yakıt payı yıllara göre (yakın yıllar benzin/hibrit, 2040+ elektrik);
 //  • "eski" modeller yalnız ilk yıllarda düşük sınıfta (ikinci el), "gelecek" modeller kendi yılından sonra;
-//  • %25 olasılıkla bir sonraki aralıkta AYNI arabayla devam; başka türlü aynı model tekrar çıkmaz;
+//  • aynı arabayla devam, toplam süre uzadıkça hızla imkânsızlaşır (10 yılı geçmez, son aralıkta yok);
+//    aynı model ailesi (Civic → başka Civic) çizelgede iki kez çıkmaz;
 //  • cinsiyet eğilimi ve yaş/medeni hale göre hafif segment eğilimi;
 //  • açılan kutular kalıcı (slot indeksi bazında).
 import 'dart:convert';
@@ -89,9 +91,9 @@ class ArabaTimeline {
     this.computed = false,
   }) : revealed = revealed ?? {};
 
-  /// 3: marka tabanlı başlangıç + ±1 kademeli ilerleme (Anıl + Codex, 2026-11-06). Eski kayıtlar
+  /// 4: pahalılaşan çizelge, kısa aralıklar, model ailesi tekrarsız (Anıl, 2026-11-08). Eski kayıtlar
   /// okunmaz → yeniden üretilir.
-  static const schema = 3;
+  static const schema = 4;
   final int seed;
   final int baseYear;
   final String signature;
@@ -129,8 +131,49 @@ class ArabaEngine {
   static const horizon = 50;
   static const rangeCount = 5;
 
-  /// Bir sonraki aralıkta aynı arabayla devam olasılığı.
-  static const pContinue = 0.25;
+  /// Bugünden bu kadar yıl sonrası için model verilmez, yalnız marka yazılır.
+  static const brandOnlyAfter = 15;
+
+  /// Ekranda görünen ad: yakın yıllarda model, uzak yıllarda yalnız marka.
+  static String displayName(ArabaCar car, ArabaSlot slot, int baseYear) =>
+      slot.start - baseYear >= brandOnlyAfter ? car.brand : car.model;
+
+  /// Aynı arabayla devam olasılığı; [totalYears] devam edilirse arabanın toplam yılı.
+  static double continueChance(int totalYears) => totalYears <= 5
+      ? 0.18
+      : totalYears <= 7
+          ? 0.05
+          : totalYears <= 10
+              ? 0.01
+              : 0;
+
+  /// Aralık uzunluğu ağırlıkları (yıl: ağırlık); 8+ yıl çok nadir.
+  static const _lengthWeights = {2: 10, 3: 20, 4: 26, 5: 22, 6: 12, 7: 6, 8: 2, 9: 1, 10: 1};
+
+  static int _pickLength(Random rnd, int maxLen) {
+    final options = _lengthWeights.entries.where((e) => e.key <= maxLen).toList();
+    var x = rnd.nextInt(options.fold(0, (a, e) => a + e.value));
+    for (final e in options) {
+      x -= e.value;
+      if (x < 0) return e.key;
+    }
+    return options.last.key;
+  }
+
+  /// Yıla göre sınıf tabanı: uzak gelecekte sıradan araba çıkmasın.
+  static int _yearFloor(int yearsAhead) => yearsAhead >= 26
+      ? 5
+      : yearsAhead >= 18
+          ? 4
+          : yearsAhead >= 10
+              ? 3
+              : 0;
+
+  /// Model ailesi: "Honda Civic Sedan 2.0" ve "Honda Civic Hatchback 1.5" aynı aile.
+  static String _family(ArabaCar c) {
+    final words = c.model.toLowerCase().substring(c.brand.length).trim().split(' ');
+    return '${c.brand.toLowerCase()} ${words.first}';
+  }
 
   static List<ArabaCar>? _pool;
 
@@ -172,18 +215,18 @@ class ArabaEngine {
     return levels[levels.length ~/ 2].clamp(1, 7);
   }
 
-  /// Bir sonraki araba sınıfı: en fazla ±1 kademe (Codex). [prevLen] önceki arabanın yıl süresi;
-  /// yukarı çıkış için en az 4 yıl bekle. 6–7'ye giriş ek zorlukla. [jobBoost] küçük meslek etkisi.
-  static int _progressLevel(Random rnd, int prev, int prevLen, double jobBoost) {
-    final canUp = prevLen >= 4;
-    var pUp = (0.18 + 0.025 * min(prevLen, 10) + jobBoost).clamp(0.15, 0.45);
-    if (!canUp) pUp = 0;
-    const pDown = 0.10;
+  /// Bir sonraki araba sınıfı: çok büyük ihtimalle üst sınıf (kesin değil), arada aynı, nadiren alt.
+  /// [prevLen] önceki arabanın yıl süresi, [yearsAhead] bugünden uzaklık.
+  static int _progressLevel(Random rnd, int prev, int prevLen, int yearsAhead) {
+    final pUp = 0.76 + 0.015 * min(prevLen, 10);
+    const pDown = 0.05;
     final r = rnd.nextDouble();
-    var delta = r < pUp ? 1 : (r < pUp + pDown ? -1 : 0);
-    if (delta > 0 && prev >= 5 && rnd.nextDouble() > 0.45) delta = 0; // lükse giriş zor
-    if (delta > 0 && prev >= 6 && rnd.nextDouble() > 0.25) delta = 0; // süper lükse çok zor
-    return (prev + delta).clamp(1, 7);
+    var delta = r < pUp ? (rnd.nextDouble() < 0.30 ? 2 : 1) : (r < pUp + pDown ? -1 : 0);
+    if (prev < 6 && prev + delta >= 6 && rnd.nextDouble() > 0.70) delta = 5 - prev; // lükse giriş biraz zor
+    if (prev + delta >= 7 && rnd.nextDouble() > 0.28) delta = 6 - prev; // süper lükse daha zor
+    var next = (prev + delta).clamp(1, 7);
+    if (rnd.nextDouble() < 0.90) next = max(next, min(_yearFloor(yearsAhead), prev + 2));
+    return next.clamp(1, 7);
   }
 
   /// Kayıtlı çizelgeyi yükler; yoksa / cinsiyet değiştiyse / havuzla uyuşmuyorsa üretir.
@@ -266,14 +309,13 @@ class ArabaEngine {
     }
     final lengths = <int>[];
     for (var i = 0; i < rangeCount; i++) {
-      final maxLen = min(12, remaining - 2 * (rangeCount - 1 - i));
-      final len = 2 + rnd.nextInt(maxLen - 1);
+      final len = _pickLength(rnd, remaining - 2 * (rangeCount - 1 - i));
       lengths.add(len);
       remaining -= len;
     }
 
     // 2) Sınıf + model seçimi
-    final used = <int>{};
+    final used = <String>{}; // kullanılan model aileleri
     final slots = <ArabaSlot>[];
     var cursor = baseYear;
     var prevLevel = 0;
@@ -286,8 +328,8 @@ class ArabaEngine {
 
       ArabaCar car;
       final prevCar = prevCarId == null ? null : byId[prevCarId];
-      final canContinue = prevCar != null && prevCar.status != 'eski' && prevLen + lengths[i] <= 15;
-      if (canContinue && rnd.nextDouble() < pContinue) {
+      final canContinue = prevCar != null && prevCar.status != 'eski' && i < rangeCount - 1;
+      if (canContinue && rnd.nextDouble() < continueChance(prevLen + lengths[i])) {
         car = prevCar; // aynı arabayla devam
       } else {
         final int target;
@@ -295,11 +337,13 @@ class ArabaEngine {
           // İlk gelecek araç: mevcut markanın başlangıç sınıfında (arabam yok → 1).
           target = startLevel == 0 ? 1 : startLevel;
         } else {
-          target = _progressLevel(rnd, prevLevel, prevLen, 0.0); // ±1 kademeli; meslek etkisi nötr (v1)
+          target = _progressLevel(rnd, prevLevel, prevLen, start - baseYear);
         }
         car = _pickCar(rnd, pool, used,
-            target: target, year: start, baseYear: baseYear, age: ageAt, gender: gender, married: married);
-        used.add(car.id);
+            target: target, year: start, baseYear: baseYear, age: ageAt, gender: gender, married: married,
+            // Uzak yıllarda yalnız marka yazıldığı için art arda aynı marka aynı araba gibi görünür.
+            avoidBrand: start - baseYear >= brandOnlyAfter ? prevCar?.brand : null);
+        used.add(_family(car));
       }
       prevLevel = car.level;
       prevLen = car.id == prevCarId ? prevLen + lengths[i] : lengths[i];
@@ -357,16 +401,17 @@ class ArabaEngine {
   static ArabaCar _pickCar(
     Random rnd,
     List<ArabaCar> pool,
-    Set<int> used, {
+    Set<String> used, {
     required int target,
     required int year,
     required int baseYear,
     required int age,
     required String gender,
     required bool married,
+    String? avoidBrand,
   }) {
     bool eligible(ArabaCar c) {
-      if (used.contains(c.id)) return false;
+      if (used.contains(_family(c)) || c.brand == avoidBrand) return false;
       if (c.status == 'gelecek' && (c.fromYear ?? baseYear) > year) return false;
       // Artık satılmayan model: yalnız ilk yıllarda, düşük sınıfta (ikinci el)
       if (c.status == 'eski' && (year > baseYear + 4 || c.level > 2)) return false;
@@ -381,11 +426,12 @@ class ArabaEngine {
       cands = pool.where((c) => c.level == lv && eligible(c)).toList();
       if (cands.isNotEmpty) break;
     }
-    if (cands.isEmpty) cands = pool.where((c) => !used.contains(c.id)).toList();
+    if (cands.isEmpty) cands = pool.where((c) => !used.contains(_family(c))).toList();
 
     final farFuture = year >= baseYear + 15;
     double w(ArabaCar c) {
-      var x = pow(c.popularity.clamp(1, 10), 1.6).toDouble();
+      // Lüks sınıfta yaygınlık az belirler: Porsche, Ferrari, Lamborghini de çıkabilsin.
+      var x = pow(c.popularity.clamp(1, 10), c.level >= 6 ? 0.4 : (c.level == 5 ? 1.0 : 1.6)).toDouble();
       x *= _fuelFactor(c.fuel, year);
       x *= _segmentFactor(c.segment, age, gender, married);
       if (gender == 'kadin' || gender == 'erkek') {

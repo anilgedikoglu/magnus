@@ -2,7 +2,7 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
-## Ne yapıldı (2026-11-08 — 294 sonrası, main'de; BUILD BEKLİYOR: `10.8.29+297`, yalnız Anıl "test çık" deyince)
+## Ne yapıldı (2026-11-08 — `10.8.29+297` ÇIKTI: Android Play Dahili test 17:26 + iOS TestFlight)
 Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit'lenmemiş scratch
 `test/_visual_starfield_capture_test.dart`). Ad taraması (lib+assets) temiz, tüm `assets/data/*.json` geçerli.
 
@@ -35,7 +35,7 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   Referans karşılaştırma: `build/visual_check/lamp_compare_test.dart` (dinlenme kareleri SSIM 0.92–0.94; imleç/kadraj farkı dahil).
 
 ## Yarım kalan
-- **Build `10.8.29+297`** alınmadı (pubspec hâlâ 294): bitişte Anıl'dan tek satır teyit.
+- `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.
 - **⚠️ Lamba sürgüsünün LİSANSI YOK:** Zsolt Kacso'nun "Glass Light Toggle" demosunun (lisanssız) shader/fizik çevirisi. Dahili test
   dışında (üretim/App Store) çıkmadan yazardan izin alınmalı ya da kod özgün yazılmalı.
 - Bildirimler gerçek cihazda henüz denenmedi (Android derlemesi geçti, iOS CI'da derlenecek). Codex benzerlik teyidi yapılamadı
@@ -54,6 +54,7 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   çıktı: son `<pre>` (mesaj rol öznitelikleri kaldırılmış).
 
 ## Sıradaki adım
-- Anıl "test çık" derse: `10.8.29+297` — ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile Play Dahili
-  test, `gh workflow run "iOS TestFlight" --repo anilgedikoglu/magnus --ref main`.
+- Anıl 297'de bildirim düğmesini gerçek cihazda dener (açınca izin, kilitli fal hazır olunca bildirim, dokununca gelen kutusu).
+- Sonraki build `10.8.32+300`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
+  Play Dahili test, `gh workflow run "iOS TestFlight" --repo anilgedikoglu/magnus --ref main`.
 - Anıl 294/297'de fincan kontrolünü dener; hâlâ geçerse yönetici teşhis satırı (ML Kit etiketleri) ekle.

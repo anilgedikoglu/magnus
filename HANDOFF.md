@@ -27,8 +27,11 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 ## Yarım kalan
 - **Build `10.8.29+297`** hazır değil-alınmadı: Anıl'ın "test çık" demesi gerekiyor (294'ü kendi kararımla erken almıştım —
   Anıl uyardı; bir daha "her şey bitince" talimatı olsa bile bitiş anında tek satırla teyit al).
-- ChatGPT oturumu 2026-11-08'de yeniden açıldı (Anıl girdi; `/api/auth/session` loggedIn:true, Plus) — ChatGPT-yazar
-  turları yeniden mümkün. Tur 33–42'yi (1000 metin) Claude yazdı; ChatGPT ikinci göz denetiminden geçmedi.
+- **Tur 33–42 ikinci göz denetimi (Anıl seçti, 2026-11-08): 5/35 dosya bitti** (kahve bağlama/uğurlama, tavşan,
+  karşılama z1, olumlama → 46 düzeltme, commit a23bd434). Düzen: ChatGPT her metni puanlar/düzeltme önerir → hakem
+  ajanı kabul/düzelt/red → `uygula.js` (yer tutucu + yasak kalıp + orijinal eşleşme kontrolü) → tur_kontrol testi.
+  Betikler oturum scratchpad'inde (`scratchpad/denetim/`: hazirla.js, rapor.js, uygula.js, HAKEM_TALIMATI.md,
+  plan.json); kalan 30 dosya `sira.txt`. ChatGPT oturumu 10 dk sonra yine düştü → Anıl yeniden girince TEK sekmeyle sürer.
 
 ## Denenip olmayan ve nedeni
 - 2026-11-08: ChatGPT girişinden ~10 dk sonra, 5 sekme AYNI ANDA yeniden yüklenip 40–45 KB mesaj gönderilince oturum

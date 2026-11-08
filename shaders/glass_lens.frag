@@ -33,6 +33,7 @@ uniform float uBlur;    // 8    normal yönünde bulanıklık σ (h oranı), öl
 uniform float uSat;     // 9    doygunluk (bizim cam: 1.25)
 uniform float uZoom;    // 10   büyütme (bar 1.0; seçimde havalanan damla >1 → alttaki ikonlar büyür)
 uniform float uRadius;  // 11   köşe yarıçapı (fiziksel px); 0 = kapsül (bar). LG paneli köşeli dikdörtgendir.
+uniform float uDisk;    // 12   disk bulanıklığı yarıçapı (fiziksel px); 0 = Flat, >0 = Candy
 uniform sampler2D uTex; // arka plan
 
 out vec4 fragColor;
@@ -94,11 +95,22 @@ void main() {
   float sig = uBlur * h;
   vec4 acc = vec4(0.0);
   float wsum = 0.0;
-  for (int i = -4; i <= 4; i++) {
-    float k = float(i) * 0.6;
-    float w = exp(-0.5 * k * k);
-    acc += w * tapAt(s + n * (k * sig));
-    wsum += w;
+  if (uDisk > 0.0) {
+    // Candy: altın açılı spiral disk → her yöne yumuşak, kalın cam.
+    for (int i = 0; i < 20; i++) {
+      float fi = float(i);
+      float rr = uDisk * sqrt((fi + 0.5) / 20.0);
+      float ang = fi * 2.399963;
+      acc += tapAt(s + rr * vec2(cos(ang), sin(ang)));
+      wsum += 1.0;
+    }
+  } else {
+    for (int i = -4; i <= 4; i++) {
+      float k = float(i) * 0.6;
+      float g = exp(-0.5 * k * k);
+      acc += g * tapAt(s + n * (k * sig));
+      wsum += g;
+    }
   }
   vec4 c = acc / wsum;
 

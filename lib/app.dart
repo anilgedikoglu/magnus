@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/utils/variable_replacer.dart';
+import 'core/widgets/glass_theme.dart';
 import 'core/widgets/edge_swipe_back.dart';
 import 'core/widgets/startup_disclaimer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -446,6 +447,7 @@ class MagnusApp extends ConsumerWidget {
     // Yer tutucu ay/gün/mevsim adları uygulama diline göre (EN metinlerde İngilizce).
     VariableReplacer.isEn = locale == 'en';
 
+    final glassStyle = ref.watch(glassStyleProvider);
     return MaterialApp.router(
       title: 'Magnus',
       theme: AppTheme.dark,
@@ -453,12 +455,15 @@ class MagnusApp extends ConsumerWidget {
       // Sol kenardan sağa kaydır = geri (tüm iç sayfalarda; ana sekmelerde etkisiz).
       // Açılışta 6 sn yasal bilgilendirme (Oyuncu Dükkânı ile aynı süre) + kaydırarak geri.
       // Yüzen cam alt bar TÜM rotaların üstünde (Anıl 2026-11-05; shell/floating_bar.dart).
-      builder: (context, child) => StartupDisclaimer(
-        child: EdgeSwipeBack(
-          router: router,
-          child: NotificationSync(
+      builder: (context, child) => GlassTheme(
+        style: glassStyle,
+        child: StartupDisclaimer(
+          child: EdgeSwipeBack(
             router: router,
-            child: FloatingBarHost(router: router, child: child ?? const SizedBox.shrink()),
+            child: NotificationSync(
+              router: router,
+              child: FloatingBarHost(router: router, child: child ?? const SizedBox.shrink()),
+            ),
           ),
         ),
       ),

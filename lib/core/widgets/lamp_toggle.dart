@@ -20,9 +20,11 @@ import 'package:flutter/services.dart';
 
 import 'glass_tab_bar.dart' show kGlassBarHeight;
 
-const double _kTrackHalfH = 112;
-const double _kBarScale = kGlassBarHeight / (2 * _kTrackHalfH); // mantıksal px / tasarım px
-const double _kInset = 18; // sürgünün tabandan payı (~5 pt, alt bar kapsülü gibi)
+const double _kOuterHalfH = 112; // dış çerçeve (= kGlassBarHeight)
+const double _kFrame = 22; // çerçeve kalınlığı (~6 pt)
+const double _kTrackHalfH = _kOuterHalfH - _kFrame; // sürgünün oturduğu oyuk iz
+const double _kBarScale = kGlassBarHeight / (2 * _kOuterHalfH); // mantıksal px / tasarım px
+const double _kInset = 13; // sürgünün izden payı
 const double _kCenterGap = 7; // sürgü ortadan bu kadar önce biter
 const double _kKnobHalfY = _kTrackHalfH - _kInset;
 const int _kGrid = 17;
@@ -34,7 +36,7 @@ const double _kBurst = 0.38;
 const double _kStiffness = 129;
 const double _kLedPower = 1.89;
 const double _kLightSpan = 140; // ikon dokusunun yarı eni (sürgüye göre)
-const double _kLightSpanY = _kTrackHalfH + 8; // ikon dokusunun yarı boyu
+const double _kLightSpanY = _kOuterHalfH + 8; // ikon dokusunun yarı boyu
 
 const Color _kOffLight = Color(0xFF6F86FF);
 const Color _kOnLight = Color(0xFFFFA82E);
@@ -523,7 +525,7 @@ class _LampToggleState extends State<LampToggle> with SingleTickerProviderStateM
       child: SizedBox(
         height: kGlassBarHeight,
         child: LayoutBuilder(builder: (context, box) {
-          _sim.layout(box.maxWidth / (2 * _kBarScale));
+          _sim.layout(box.maxWidth / (2 * _kBarScale) - _kFrame);
           return GestureDetector(
             behavior: HitTestBehavior.opaque,
             onTapDown: (_) => _onDown(),
@@ -645,6 +647,14 @@ class _LampPainter extends CustomPainter {
   void _paintFallback(Canvas canvas, Offset origin, double scale) {
     canvas.drawRRect(
       RRect.fromRectAndRadius(
+        Rect.fromCenter(
+            center: origin, width: 2 * (sim.trackHalfW + _kFrame) * scale, height: 2 * _kOuterHalfH * scale),
+        Radius.circular(_kOuterHalfH * scale),
+      ),
+      Paint()..color = const Color(0xFF1A1A1E),
+    );
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
         Rect.fromCenter(center: origin, width: 2 * sim.trackHalfW * scale, height: 2 * _kTrackHalfH * scale),
         Radius.circular(_kTrackHalfH * scale),
       ),
@@ -658,7 +668,7 @@ class _LampPainter extends CustomPainter {
             height: 2 * sim.knobHalfY * scale),
         Radius.circular(sim.knobHalfY * scale),
       ),
-      Paint()..color = Color.lerp(const Color(0xFF2A2A2E), const Color(0xFFF4F2EF), sim.theme)!,
+      Paint()..color = Color.lerp(const Color(0xFF2A2A2E), const Color(0xFF6B4A1E), sim.theme)!,
     );
   }
 

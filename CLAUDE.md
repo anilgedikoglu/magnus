@@ -718,6 +718,10 @@ sayfa göstergesi (üçlü çizgi), `homePageProvider`, hazırlanan fal yuvarlak
 alt pay = güvenli alan + bar + 14. Bardaki eve TEKRAR dokunuş → liste başa kayar (`mainTabReselectProvider`, yalnız
 ana menü görünürken).
 
+**2026-11-08 GÜNCEL — SOHBET KUTUSU:** Üstten inen, 3 satırlı, kaydırmalı bant ve daktilo efekti KALKTI (aşağıdaki "İKİ KATMAN" anlatımı geçersiz). Yerine `lib/presentation/home/home_chat_box.dart`: alt barla aynı biçim ve cam (`LiquidGlassPanel(barOptics: true)`), sabit, tek mesaj. Yazı efekti Anıl'ın kaydından ölçüldü: 1,5 sn döngü, ilk %62'sinde soldan sağa karartma, en koyu %25, yarı en yazının %47'si; değişim tek karede, yeni yazıda 1,1 sn sonra ilk tarama. İki satıra sığmayan mesaj cümle cümle sayfalanır. Mesaj: `_say()`; açılışta menü göründükten 3 sn sonra, menüye dönüşte 3 sn sonra, karta dokunuşa anında.
+
+**LG / CAM TEMASI (2026-11-08):** "LG yap" = alt bar camı, daha az saydam → `LiquidGlassPanel`. Ayarlar > CAM: Flat / Candy (`glass_theme.dart`, `GlassTheme.of`, `glassStyleProvider`, prefs `glass_style`). Yeni LG yüzeyi bu paneli kullanırsa temaya kendiliğinden uyar; saydamlık kaydırıcısı iki temayı da etkiler.
+
 **Ana menü İKİ KATMAN (Anıl, 2026-11-05; Instagram akışındaki hikâyeler satırı gibi):**
 - **Menu layer 1** = ikon ızgarası, TAM EKRAN, düz zemin `kHomeBackground` #0C0F14 (eski welcomscreenbackground.jpg
   + karartma KALDIRILDI). Izgara üst dolgusu = layer 2'nin CANLI yüksekliği + 8 (`HeaderSpacerSliver`).

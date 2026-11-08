@@ -48,7 +48,9 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   15+ yıl sonrası yalnız marka (`displayName`) ve uzak yıllarda art arda aynı marka yok. Havuz: 57 marka, 1865 model.
   **LG paneli** `lib/core/widgets/liquid_glass_panel.dart` ("LG yap" = alt bar camı, daha az saydam; `glass_lens.frag` artık köşe yarıçapı alır).
   Evim popup'ları LG, dikeyde uzun (küçük ekranda uzamaz), yıl şeridinin arkasında dönen tekerlek (`_YearDrumPainter`), giriş tek satır, Geç yok.
-  Lamba düğmesi CAM önizlemesi ölçüsünde tam kapsül (`kGlassBarHeight`), sürgü yarım en: açık sol yarı, kapalı sağ yarı; taban hep koyu.
+  **Ana menü sohbet kutusu** `home_chat_box.dart` (üstten inen bant kalktı; alt barla aynı cam, tek mesaj, ölçülen karartma taraması, uzun mesaj sayfalanır).
+  **Flat / Candy cam teması** `glass_theme.dart` + Ayarlar > CAM (`glassStyleProvider`); bar, sohbet kutusu ve her `LiquidGlassPanel` uyar. `home_header_layout.dart` artık kullanılmıyor ama testi duruyor (test silmeyi kanca engeller).
+  Lamba düğmesi CAM önizlemesi ölçüsünde tam kapsül (`kGlassBarHeight`), sürgü yarım en: açık sol yarı, kapalı sağ yarı; koyu çerçeve + oyuk iz, LED ışığı ikisine yansır; açıkken sürgü amber cam.
 
 ## Yarım kalan
 - `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.

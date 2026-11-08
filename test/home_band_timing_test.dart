@@ -4,8 +4,9 @@
 //     (eskiden perdenin arkasında dolup perde kalkınca menü + chat aynı anda görünüyordu).
 //  2) Fal gönderilip menüye DÖNÜLÜNCE gelen mesaj da 3 sn sonra iner (eskiden anında).
 //  3) Menüden çıkmadan karta dokunuşa cevap (hak bitti) ANINDA iner.
-// Band gizliyken katman ağaçta yok (SizedBox.shrink); görününce 'homeMenuLayer2' belirir.
+// Kutu hep yerinde; mesaj gelince içindeki 'homeChatText' belirir.
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,7 @@ import 'package:magnus_app/data/services/storage_service.dart';
 import 'package:magnus_app/presentation/shell/main_tabs.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-const _band = ValueKey('homeMenuLayer2');
+const _band = ValueKey('homeChatText');
 bool _bandVar() => find.byKey(_band).evaluate().isNotEmpty;
 
 /// Gerçek zamanlı async işleri (prefs, rootBundle) bitirir; SAHTE saati İLERLETMEZ.
@@ -64,6 +65,9 @@ Future<void> _kapat(WidgetTester t) async {
 }
 
 void main() {
+  // Önbellekteki yükleme önceki testin sahte zamanına bağlı kalıyor: her testte temizle.
+  setUp(rootBundle.clear);
+
   testWidgets('açılış: chat perde KALKTIKTAN 3 sn sonra iner (perde arkasında inmez)', (t) async {
     await _ac(t, perde: true);
     expect(StartupDisclaimer.perdeAcik.value, isTrue);
@@ -99,6 +103,21 @@ void main() {
 
     await _kare(t, 500);
     expect(_bandVar(), isTrue, reason: '3 sn sonra "falın hazırlanıyor" mesajıyla iner');
+    await _kapat(t);
+  });
+
+  testWidgets('selamlamadan sonra gelen dönüş mesajı tam 3 sn sonra görünür', (t) async {
+    await _ac(t, perde: false);
+    await _kare(t, 7500); // selamlama çıktı, okuma süresi doldu
+    String yazi() => t.widget<Text>(find.byKey(_band)).data!;
+    final selam = yazi();
+
+    final c = ProviderScope.containerOf(t.element(find.byType(MainTabsScreen)));
+    c.read(kahveSentProvider.notifier).state = true;
+    await _kare(t, 2800);
+    expect(yazi(), selam, reason: '3 sn dolmadan değişmez');
+    await _kare(t, 400);
+    expect(yazi(), isNot(selam), reason: '3 sn sonra yeni mesaj');
     await _kapat(t);
   });
 

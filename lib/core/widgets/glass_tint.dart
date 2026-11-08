@@ -43,8 +43,12 @@ const double _kClearTransmit = 0.61;
 /// Instagram iOS 26 barının cam rengi (ölçüm: c / α = (12, 13, 16.5) / 0.80).
 const (int, int, int) _kTint = (15, 16, 21);
 
+/// Candy cam: lacivert tint, biraz daha geçirgen (arkanın rengi daha çok görünür).
+const (int, int, int) _kCandyTint = (16, 21, 46);
+const double _kCandyAlpha = 0.86;
+
 /// Kaydırıcı değeri (0 şeffaf … 1 renkli) → camın tint rengi (alfa = opaklık).
-Color glassTintColor(double value) {
+Color glassTintColor(double value, {bool candy = false}) {
   final s = value.clamp(0.0, 1.0);
   var i = 0;
   while (i < _kTable.length - 2 && s > _kTable[i + 1].$1) {
@@ -59,5 +63,9 @@ Color glassTintColor(double value) {
   final alpha = 1 - transmit;
   // Renk: Instagram camı (koyu, hafif soğuk). c (iOS'un eklediği ışık) yalnız oranı kurar.
   assert(c >= 0);
+  if (candy) {
+    return Color.fromARGB(
+        (alpha * _kCandyAlpha * 255).round(), _kCandyTint.$1, _kCandyTint.$2, _kCandyTint.$3);
+  }
   return Color.fromARGB((alpha * 255).round(), _kTint.$1, _kTint.$2, _kTint.$3);
 }

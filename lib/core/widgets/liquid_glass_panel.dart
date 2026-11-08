@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 
 import 'glass_lens.dart';
 import 'glass_tab_bar.dart' show GlassBarRimPainter;
+import 'glass_theme.dart';
 import 'glass_tint.dart';
 
 /// Panel saydamlığı: alt barın kaydırıcı ölçeğinde (bar varsayılanı 0.55; büyüdükçe kapanır).
@@ -23,12 +24,16 @@ class LiquidGlassPanel extends StatefulWidget {
     this.padding = EdgeInsets.zero,
     this.radius = 24,
     this.tint = kLiquidGlassPanelTint,
+    this.barOptics = false,
   });
 
   final Widget child;
   final EdgeInsetsGeometry padding;
   final double radius;
   final double tint;
+
+  /// Alt barın camı birebir (kapsül boyunda ve oranlarında). Sohbet kutusu gibi aynı biçim için.
+  final bool barOptics;
 
   @override
   State<LiquidGlassPanel> createState() => _LiquidGlassPanelState();
@@ -52,11 +57,16 @@ class _LiquidGlassPanelState extends State<LiquidGlassPanel> {
     }
   }
 
-  Widget _glass() {
-    final tint = ColoredBox(color: glassTintColor(widget.tint));
+  Widget _glass(bool candy) {
+    final tint = ColoredBox(color: glassTintColor(widget.tint, candy: candy));
+    final saturation = candy ? kCandySaturation : 1.25;
+    final disk = candy ? kCandyDiskBlur : 0.0;
     final lens = debugDisableGlassLens ? null : _lens;
     if (lens == null) {
       return BackdropFilter(filter: ui.ImageFilter.blur(sigmaX: 20, sigmaY: 20), child: tint);
+    }
+    if (widget.barOptics) {
+      return GlassLensBackdrop(program: lens, saturation: saturation, diskBlur: disk, child: tint);
     }
     return LayoutBuilder(builder: (context, c) {
       final h = c.maxHeight <= 0 ? 1.0 : c.maxHeight;
@@ -66,6 +76,8 @@ class _LiquidGlassPanelState extends State<LiquidGlassPanel> {
         bevel: _bevelPt / h,
         refract: _refractPt / h,
         blur: _blurPt / h,
+        saturation: saturation,
+        diskBlur: disk,
         child: tint,
       );
     });
@@ -74,25 +86,28 @@ class _LiquidGlassPanelState extends State<LiquidGlassPanel> {
   @override
   Widget build(BuildContext context) {
     final r = BorderRadius.circular(widget.radius);
+    final candy = GlassTheme.isCandy(context);
     return DecoratedBox(
       decoration: BoxDecoration(
         borderRadius: r,
-        boxShadow: const [BoxShadow(color: Color(0x26000000), blurRadius: 14, offset: Offset(0, 3))],
+        boxShadow: candy
+            ? kCandyShadows
+            : const [BoxShadow(color: Color(0x26000000), blurRadius: 14, offset: Offset(0, 3))],
       ),
       child: ClipRRect(
         borderRadius: r,
         child: Stack(
           children: [
-            Positioned.fill(child: _glass()),
-            const Positioned.fill(
+            Positioned.fill(child: _glass(candy)),
+            Positioned.fill(
               child: IgnorePointer(
                 child: DecoratedBox(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      stops: [0.0, 0.02, 0.98, 1.0],
-                      colors: [Color(0x10FFFFFF), Color(0x00FFFFFF), Color(0x00FFFFFF), Color(0x12FFFFFF)],
+                      stops: widget.barOptics ? const [0.0, 0.07, 0.93, 1.0] : const [0.0, 0.02, 0.98, 1.0],
+                      colors: const [Color(0x10FFFFFF), Color(0x00FFFFFF), Color(0x00FFFFFF), Color(0x12FFFFFF)],
                     ),
                   ),
                 ),
@@ -100,7 +115,11 @@ class _LiquidGlassPanelState extends State<LiquidGlassPanel> {
             ),
             Padding(padding: widget.padding, child: widget.child),
             Positioned.fill(
-              child: IgnorePointer(child: CustomPaint(painter: GlassBarRimPainter(widget.radius))),
+              child: IgnorePointer(
+                child: CustomPaint(
+                  painter: candy ? CandyRimPainter(widget.radius) : GlassBarRimPainter(widget.radius),
+                ),
+              ),
             ),
           ],
         ),

@@ -1,3 +1,4 @@
+import '../../core/widgets/glass_theme.dart';
 import '../../core/widgets/lamp_toggle.dart';
 import 'dart:async';
 import 'dart:io';
@@ -3160,6 +3161,8 @@ class _GlassTintSection extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 10),
+          const _GlassStyleSwitch(),
+          const SizedBox(height: 10),
           // Kaydırıcıya dokunuş → sekme kaydırmasını kilitle (yatay sürükleme mesajlara geçmesin).
           Listener(
             onPointerDown: (_) => ref.read(_glassDragProvider.notifier).state = true,
@@ -3189,6 +3192,76 @@ class _GlassTintSection extends ConsumerWidget {
                   style: const TextStyle(color: AppColors.ash, fontSize: 11.5)),
             ],
           ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Ayarlar > CAM: Flat / Candy tema seçimi; tüm Liquid Glass yüzeyleri buna uyar.
+class _GlassStyleSwitch extends ConsumerWidget {
+  const _GlassStyleSwitch();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(l10nProvider);
+    final style = ref.watch(glassStyleProvider);
+    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    Widget option(GlassStyle v, String label) => Expanded(
+          child: Semantics(
+            button: true,
+            selected: style == v,
+            label: '${s.glassStyleLabel}: $label',
+            excludeSemantics: true,
+            child: GestureDetector(
+              key: ValueKey('glassStyle_${v.name}'),
+              behavior: HitTestBehavior.opaque,
+              onTap: () {
+                if (style == v) return;
+                HapticFeedback.selectionClick();
+                ref.read(glassStyleProvider.notifier).set(v);
+              },
+              child: Center(
+                child: Text(
+                  label,
+                  style: TextStyle(
+                    color: style == v ? Colors.white : AppColors.ash,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+    return Container(
+      height: 46,
+      padding: const EdgeInsets.all(4),
+      decoration: BoxDecoration(
+        color: const Color(0xFF1A191B),
+        borderRadius: BorderRadius.circular(23),
+      ),
+      child: Stack(
+        children: [
+          AnimatedAlign(
+            duration: reduce ? Duration.zero : const Duration(milliseconds: 240),
+            curve: Curves.easeOutCubic,
+            alignment: style == GlassStyle.flat ? Alignment.centerLeft : Alignment.centerRight,
+            child: FractionallySizedBox(
+              widthFactor: 0.5,
+              heightFactor: 1,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.14),
+                  borderRadius: BorderRadius.circular(19),
+                ),
+              ),
+            ),
+          ),
+          Row(children: [
+            option(GlassStyle.flat, s.glassFlat),
+            option(GlassStyle.candy, s.glassCandy),
+          ]),
         ],
       ),
     );

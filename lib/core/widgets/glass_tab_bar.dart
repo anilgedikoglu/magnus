@@ -29,6 +29,7 @@ import 'package:flutter/physics.dart';
 
 import 'bar_minimize.dart';
 import 'glass_lens.dart';
+import 'glass_theme.dart';
 import 'glass_tint.dart';
 
 export 'glass_lens.dart' show debugDisableGlassLens;
@@ -288,6 +289,8 @@ class _GlassTabBarState extends State<GlassTabBar>
   Widget _buildBar() {
     const radius = kGlassBarHeight / 2;
     final lens = debugDisableGlassLens ? null : _lens;
+    final candy = GlassTheme.isCandy(context);
+    final tintColor = glassTintColor(widget.tint, candy: candy);
     return SizedBox(
       height: kGlassBarHeight,
       child: LayoutBuilder(builder: (context, c) {
@@ -301,10 +304,12 @@ class _GlassTabBarState extends State<GlassTabBar>
         // Dış yumuşak gölge — cam "yüzüyor" hissi.
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius),
-          boxShadow: const [
-            // Codex: referansta gölge çok daha hafif (alt kenarda koyu şerit yapıyordu).
-            BoxShadow(color: Color(0x26000000), blurRadius: 14, offset: Offset(0, 3)), // Codex 3. tur
-          ],
+          boxShadow: candy
+              ? kCandyShadows
+              : const [
+                  // Codex: referansta gölge çok daha hafif (alt kenarda koyu şerit yapıyordu).
+                  BoxShadow(color: Color(0x26000000), blurRadius: 14, offset: Offset(0, 3)), // Codex 3. tur
+                ],
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(radius),
@@ -316,12 +321,14 @@ class _GlassTabBarState extends State<GlassTabBar>
                 if (lens != null)
                   GlassLensBackdrop(
                     program: lens,
-                    child: ColoredBox(color: glassTintColor(widget.tint)),
+                    saturation: candy ? kCandySaturation : 1.25,
+                    diskBlur: candy ? kCandyDiskBlur : 0,
+                    child: ColoredBox(color: tintColor),
                   )
                 else
                   BackdropFilter(
                     filter: _glass,
-                    child: ColoredBox(color: glassTintColor(widget.tint)),
+                    child: ColoredBox(color: tintColor),
                   ),
                 // 2) İç kenar parıltısı (Instagram ölçümü): üst ve alt kenarın ~4 pt içinde
                 //    +13..15 seviye açılma, ortada yok (eski: yalnız üstte %8 parlama).
@@ -356,7 +363,11 @@ class _GlassTabBarState extends State<GlassTabBar>
                   child: Row(children: List.generate(kGlassBarSlots, _slot)),
                 ),
                 // 5) Kenar ışığı (specular rim).
-                const IgnorePointer(child: CustomPaint(painter: GlassBarRimPainter(radius))),
+                IgnorePointer(
+                  child: CustomPaint(
+                    painter: candy ? const CandyRimPainter(radius) : const GlassBarRimPainter(radius),
+                  ),
+                ),
               ],
             ),
         ),
@@ -448,6 +459,7 @@ class _SelectionPill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (fade <= 0) return const SizedBox.shrink();
+    final candy = GlassTheme.isCandy(context);
     return DecoratedBox(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(kGlassBarHeight),
@@ -459,8 +471,16 @@ class _SelectionPill extends StatelessWidget {
             Colors.white.withValues(alpha: 0.12 * fade),
           ],
         ),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.04 * fade), width: 0.5),
+        border: candy ? null : Border.all(color: Colors.white.withValues(alpha: 0.04 * fade), width: 0.5),
       ),
+      child: candy
+          ? LayoutBuilder(
+              builder: (_, c) => CustomPaint(
+                size: Size.infinite,
+                painter: CandyRimPainter(c.maxHeight / 2, opacity: fade * 0.65, glow: 3),
+              ),
+            )
+          : null,
     );
   }
 }
@@ -503,7 +523,14 @@ class _LiftedDroplet extends StatelessWidget {
                     child: glass)
               else
                 glass,
-              const CustomPaint(painter: _DropletRimPainter()),
+              GlassTheme.isCandy(context)
+                  ? LayoutBuilder(
+                      builder: (_, c) => CustomPaint(
+                        size: Size.infinite,
+                        painter: CandyRimPainter(c.maxHeight / 2, glow: 3),
+                      ),
+                    )
+                  : const CustomPaint(painter: _DropletRimPainter()),
             ],
           ),
         ),

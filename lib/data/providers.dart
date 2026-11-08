@@ -20,6 +20,7 @@
 //   final s = ref.watch(l10nProvider);  // localization
 // ─────────────────────────────────────────────────────────────────────────────
 import '../core/services/notification_service.dart';
+import '../core/widgets/glass_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'models/user_profile.dart';
@@ -80,6 +81,28 @@ class GlassTintNotifier extends StateNotifier<double> {
     await _prefs?.setDouble(_key, state);
   }
 }
+
+/// Liquid Glass teması (Ayarlar > CAM): Flat / Candy. Değişince her LG yüzeyi uyar.
+class GlassStyleNotifier extends StateNotifier<GlassStyle> {
+  final SharedPreferences? _prefs;
+  static const _key = 'glass_style';
+
+  GlassStyleNotifier(this._prefs)
+      : super(_prefs?.getString(_key) == GlassStyle.candy.name ? GlassStyle.candy : GlassStyle.flat);
+
+  Future<void> set(GlassStyle style) async {
+    state = style;
+    await _prefs?.setString(_key, style.name);
+  }
+}
+
+final glassStyleProvider = StateNotifierProvider<GlassStyleNotifier, GlassStyle>((ref) {
+  SharedPreferences? prefs;
+  try {
+    prefs = ref.watch(sharedPrefsProvider);
+  } catch (_) {}
+  return GlassStyleNotifier(prefs);
+});
 
 final glassTintProvider = StateNotifierProvider<GlassTintNotifier, double>((ref) {
   // Testlerde/önizlemede SharedPreferences verilmemiş olabilir → varsayılan, kayıtsız.

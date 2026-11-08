@@ -41,6 +41,8 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
     this.bevel = 0.234,
     this.blur = 0.028,
     this.cornerRadius = 0,
+    this.saturation = 1.25,
+    this.diskBlur = 0,
     super.child,
   });
 
@@ -57,6 +59,12 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
   /// Köşe yarıçapı (mantıksal); 0 → kapsül (bar). LG paneli köşeli dikdörtgendir.
   final double cornerRadius;
 
+  /// Arka planın doygunluğu (Flat 1.25; Candy daha yüksek).
+  final double saturation;
+
+  /// Her yöne bulanıklık yarıçapı (mantıksal px); 0 → Flat (yalnız kenar normali yönünde).
+  final double diskBlur;
+
   /// Büyütme (bar 1; havalanan damla / kaydırıcı topuzu >1 → alttaki büyür).
   final double zoom;
 
@@ -66,7 +74,9 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
         ..refract = refract
         ..bevel = bevel
         ..blur = blur
-        ..cornerRadius = cornerRadius;
+        ..cornerRadius = cornerRadius
+        ..saturation = saturation
+        ..diskBlur = diskBlur;
 
   @override
   void updateRenderObject(BuildContext context, RenderGlassLensBackdrop renderObject) {
@@ -77,7 +87,9 @@ class GlassLensBackdrop extends SingleChildRenderObjectWidget {
       ..refract = refract
       ..bevel = bevel
       ..blur = blur
-      ..cornerRadius = cornerRadius;
+      ..cornerRadius = cornerRadius
+      ..saturation = saturation
+      ..diskBlur = diskBlur;
   }
 }
 
@@ -111,7 +123,19 @@ class RenderGlassLensBackdrop extends RenderProxyBox {
     markNeedsPaint();
   }
 
-  static const double _saturation = 1.25;
+  double _saturation = 1.25;
+  set saturation(double v) {
+    if (v == _saturation) return;
+    _saturation = v;
+    markNeedsPaint();
+  }
+
+  double _diskBlur = 0;
+  set diskBlur(double v) {
+    if (v == _diskBlur) return;
+    _diskBlur = v;
+    markNeedsPaint();
+  }
 
   ui.FragmentProgram _program;
   ui.FragmentShader? _shader;
@@ -166,7 +190,8 @@ class RenderGlassLensBackdrop extends RenderProxyBox {
       ..setFloat(8, _blur)
       ..setFloat(9, _saturation)
       ..setFloat(10, _zoom)
-      ..setFloat(11, size.height > 0 ? _cornerRadius * r.height / size.height * _dpr : 0);
+      ..setFloat(11, size.height > 0 ? _cornerRadius * r.height / size.height * _dpr : 0)
+      ..setFloat(12, size.height > 0 ? _diskBlur * r.height / size.height * _dpr : 0);
     final l = layer ??= BackdropFilterLayer();
     l.filter = ui.ImageFilter.shader(shader);
     context.pushLayer(l, super.paint, offset);

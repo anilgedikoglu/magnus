@@ -4,23 +4,10 @@
 // isimlendirme kurallarını özetler. Yeni bir oturumda bu bloğu oku.
 // ═════════════════════════════════════════════════════════════════════════════
 //
-// ── BALON SİSTEMİ (Chat Header) ───────────────────────────────────────────
-// Ana menünün en üstünde Magnus karakterinin konuşma balonları sıralanır.
-// Balonlar dizi halinde yazılır; her biri tamamlanınca bir sonraki başlar
-// (typewriter animasyonu, 30ms/karakter).
-//
-//   Balon 1 : Selamlama balonu — her uygulama açılışında 6 selamlamadan biri
-//             rastgele seçilir (isim dahil, örn. "Hoş geldin Anıl!").
-//             Renk: yeşil-camgöbeği gradient (#1A6B5A → #1A5E6B).
-//
-//   Balon 2+ : Dinamik ekstra balonlar (_extraBubbles listesi).
-//             Şu anda tetiklenen durumlar:
-//             • Tarot falı gönderildi → turuncu uyarı balonu + mor balon
-//             • Günlük fal hakkı doldu → kırmızımsı uyarı + mor balon
-//             Uyarı rengi: (#5C2508 → #7A3510), border: #CC6622
-//
-// Chat header yüksekliği: SizedBox(height: 155). Bir balon yaklaşık 45-55px
-// kaplar. Balonlar NonScrollable ScrollView içinde aşağı kayar.
+// ── SOHBET KUTUSU ───────────────────────────────────────────────────────
+// Ana menünün üstünde alt barla aynı biçim ve camda tek satırlık kutu (home_chat_box.dart).
+// Tek mesaj görünür; açılışta selamlama, sonra fal durumu / günlük limit mesajları
+// (_say). Menüye dönüşte gelen mesaj 3 sn sonra, karta dokunuşa cevap anında.
 //
 // ── GÜNLÜK KREDİ SİSTEMİ ─────────────────────────────────────────────────
 // Her aktif fal türü için günde 1 hak vardır. _remainingCredits map'i:
@@ -91,7 +78,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -106,38 +92,16 @@ import '../../core/widgets/tab_swipe.dart';
 import '../../core/widgets/word_safe_text.dart';
 import '../../data/providers.dart';
 import '../shell/main_tabs.dart';
-import 'home_header_layout.dart';
+import 'home_chat_box.dart';
 import 'greeting_filter.dart';
 import 'menu_layout.dart';
 
 /// Ana menünün (menu layer 1, ikonlar) düz arka plan rengi (Anıl'ın örneği: rgb 12,15,20).
 const Color kHomeBackground = Color(0xFF0C0F14);
 
-/// Menu layer 2'nin (üstteki 3 sıra sohbet balonu) zemini (Anıl'ın örneği: rgb 21,21,21).
-const Color kHomeHeaderBackground = Color(0xFF151515);
-
-/// Menu layer 2 (Anıl, 2026-11-06): yüksekliği O AN görünen balon satırı kadar (en çok
-/// [kChatMaxRows]); satır eklenince ızgara (layer 1) yumuşakça aşağı iner, boşluk kalmaz.
-/// Nizami ölçüler: satır arası, alt iç boşluk ve layer 2 ile ızgara arası 8; üstte durum çubuğunun
-/// güvenli alanı zaten nefes payı verdiği için yalnız 4 (Anıl: "en üstte boşluk görüyorum").
-const double kChatPadTop = 4;
-const double kChatPadBottom = 8;
-const double kChatRowGap = 8;
-const double kHomeLayerGap = 8;
-
-/// Yukarı kaydırmada layer 2 bu kadar yerinde durur, menü ALTINA girer; sonra menüyle
-/// birlikte yukarı çıkıp kaybolur (Anıl, 2026-11-06). Geri gelişte simetrik.
-const double kHomeHeaderHold = 120;
-
-/// Layer 2 en çok bu kadar satır gösterir; fazlası kendi içinde yukarı kayar.
-const int kChatMaxRows = 3;
-
-/// Satır yüksekliği ölçülene kadarki tahmin (avatar 38, tek satır balon ~40).
-const double _kChatRowEstimate = 40;
-
-/// Layer 2'nin güvenli alan altındaki yüksekliği: [rows] satır balon + iç boşluklar.
-double chatHeaderHeightFor(int rows, double rowH) =>
-    kChatPadTop + rows * rowH + (rows - 1) * kChatRowGap + kChatPadBottom;
+/// Sohbet kutusunun güvenli alandan uzaklığı ve kutu ile menü arası.
+const double kHomeChatTop = 6;
+const double kHomeChatGap = 10;
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -150,142 +114,51 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     with TickerProviderStateMixin {
   // Tek ana menü (Anıl, 2026-11-05): 3 sütun × 9 satır, yukarıdan aşağı kaydırmalı.
   final ScrollController _gridScrollCtrl = ScrollController();
-  final ScrollController _chatScrollCtrl = ScrollController();
 
-  // Layer 2'nin canlı yüksekliği (güvenli alan altı) = son en çok 3 görünen satırın
-  // ÖLÇÜLEN boyu (balon metni dar ekranda / büyük yazıda iki satıra taşabilir — Codex).
-  final Map<int, double> _rowH = {};
-  double _hdrTarget = chatHeaderHeightFor(1, _kChatRowEstimate);
-  late final AnimationController _hdrCtrl =
-      AnimationController.unbounded(vsync: this, value: _hdrTarget);
-
-  // Bant artık scroll'a BAĞLI DEĞİL (Anıl, 2026-11-06): yalnız Magnus bir şey söyleyince ÜST'ten
-  // pop-up gibi iner, 5 sn sonra yukarı kalkıp gizlenir. Menü ızgarası TAM EKRAN en üstten başlar.
-  // 0 = gizli (yukarıda), 1 = inmiş/görünür.
-  // Giriş/çıkış YAVAŞ ve görünür (Anıl, 2026-11-07): üstten aşağı yumuşak kayar, bitince yukarı kalkar.
-  late final AnimationController _bandShow =
-      AnimationController(vsync: this, duration: const Duration(milliseconds: 560));
-  Timer? _bandTimer;
-  // Band TAM indikten sonra typewriter başlar (giriş sırasında yazı akmaz) — Anıl, 2026-11-07.
-  bool _bandEntered = false;
-  // Bekleme süresi yazı TAMAMLANINCA işler (pop anında değil).
-  Duration _pendingHold = const Duration(seconds: 10);
-  // Yukarı swipe birikimi: band görünürken yeterince (eşik) yukarı kaydırılınca band da çıkar.
-  double _bandDismissAcc = 0;
-  int _lastExtraCount = 0; // _extraBubbles büyüyünce bandı patlat (fal durumu / günlük limit)
-  // Yeni balon menüde bir KARTA DOKUNUŞA cevap mı (hak bitti / hazırlanıyor)? → band anında.
-  // Değilse (fal gönderilip menüye DÖNÜLDÜ) → menü önce görünür, band 3 sn SONRA (Anıl, 2026-11-07).
+  final GlobalKey<HomeChatBoxState> _chatBox = GlobalKey<HomeChatBoxState>();
+  final List<String> _chatPending = [];
+  Timer? _chatTimer;
+  bool _chatGateOpen = false; // açılışta menü göründükten 3 sn sonra açılır
+  bool _greeted = false;
+  // Yeni mesaj menüde bir KARTA DOKUNUŞA cevap mı (hak bitti)? → anında.
+  // Değilse (fal gönderilip menüye DÖNÜLDÜ) → menü önce görünür, mesaj 3 sn SONRA (Anıl, 2026-11-07).
   bool _tapPop = false;
   VoidCallback? _perdeDinleyici; // açılış perdesi kalkınca 3 sn sayacını başlatır
-  bool _downInBand = false;
-  bool _downDismiss = false;
-  int? _gatePointer; // bayrakları koyan parmak
+  String _selamlama = ''; // async yüklenir — JSON'dan
 
-  double get _layerHeight => MediaQuery.paddingOf(context).top + max(0.0, _hdrCtrl.value);
-
-  /// Bandın ekrandaki alt kenarı (görünürlük payıyla) — dokunuş bunun altındaysa bant bölgesidir.
-  double get _bandBottom => _layerHeight * _bandShow.value;
-
-  /// Yeni Magnus mesajı gelince bandı üstten AŞAĞI yavaşça indir (pop). Band TAM indikten
-  /// sonra yazı typewriter ile yazılır; yazı bitince [hold] (10 sn) beklenip yukarı kalkar.
-  void _popBand({Duration hold = const Duration(seconds: 10)}) {
+  /// Magnus'un yeni mesajı.
+  void _say(String text) {
     if (!mounted) return;
-    _bandTimer?.cancel();
-    _bandDismissAcc = 0;
-    _pendingHold = hold;
-    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-    if (reduce) {
-      _bandShow.value = 1;
-      if (!_bandEntered) setState(() => _bandEntered = true); // animasyon yok → hemen yaz
-    } else {
-      _bandShow.forward(); // tamamlanınca status listener _bandEntered'i true yapar
-    }
-    // Balonlar yazıldıkça içerik en alta kaysın.
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted && _chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.jumpTo(_chatScrollCtrl.position.maxScrollExtent);
-      }
-    });
-    // Yazacak yeni balon yoksa (hepsi zaten yazılı) bekleme sayacını hemen başlat.
-    if (_typingIndex >= 1 + _extraBubbles.length) _startHoldTimer();
-  }
-
-  /// Yazı tamamlandıktan sonra çağrılır: [_pendingHold] kadar bekleyip bandı gizler.
-  void _startHoldTimer() {
-    if (!mounted) return;
-    _bandTimer?.cancel();
-    _bandTimer = Timer(_pendingHold, _hideBand);
-  }
-
-  void _hideBand() {
-    if (!mounted) return;
-    _bandTimer?.cancel();
-    _bandDismissAcc = 0;
-    _bandEntered = false; // yeniden açılınca giriş bitene kadar yazı beklesin
-    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-    if (reduce) {
-      _bandShow.value = 0;
-    } else {
-      _bandShow.reverse();
-    }
-  }
-
-  /// Izgaraya dokunuş: bant görünürken üstüne dokunuş altındaki kartı açmasın + bandı erken kapatsın.
-  void _onGridPointerDown(PointerDownEvent e) {
-    _gatePointer = e.pointer;
-    _downInBand = _bandShow.value > 0.01 && e.localPosition.dy < _bandBottom;
-    _downDismiss = false;
-    if (_downInBand) _hideBand();
-  }
-
-  /// Parmak kalkınca bayraklar sıfırlanır. Kartın onTap'i aynı olay işlemesinde (arena
-  /// süpürmesinde) çalışır; sıfırlama mikro görevde, yani ondan SONRA olur. Böylece ekran
-  /// okuyucunun (işaretçisiz) kart etkinleştirmesi önceki dokunuşun engeline takılmaz.
-  void _onGridPointerEnd(PointerEvent e) {
-    final p = e.pointer;
-    scheduleMicrotask(() {
-      if (_gatePointer != p) return; // arada yeni dokunuş başladıysa onun bayrakları kalır
-      _gatePointer = null;
-      _downInBand = false;
-      _downDismiss = false;
-    });
-  }
-
-  void _onRowHeight(int i, double h) {
-    if (!mounted || _rowH[i] == h) return;
-    setState(() => _rowH[i] = h);
-  }
-
-  /// O an görünen balon sayısı (karşılama + ekstralar; yazılan balon dahil).
-  int get _visibleBubbles => (_typingIndex + 1).clamp(1, 1 + _extraBubbles.length);
-
-  /// Layer 2'nin hedef yüksekliği: son en çok [kChatMaxRows] satırın ölçülen boyları +
-  /// aralıklar + iç boşluklar. Ölçülmemiş satır için ilk satırın boyu (yoksa tahmin).
-  double _chatTargetHeight(int n) {
-    final start = max(0, n - kChatMaxRows);
-    final fallback = _rowH[0] ?? _kChatRowEstimate;
-    var h = kChatPadTop + kChatPadBottom + (n - start - 1) * kChatRowGap;
-    for (var i = start; i < n; i++) {
-      h += _rowH[i] ?? fallback;
-    }
-    return h;
-  }
-
-  /// Layer 2'yi hedef yüksekliğe aşmasız yayla götür (ızgara birlikte iner/çıkar).
-  void _retargetHeader(double target) {
-    if (!mounted) return;
-    final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-    if (reduce || (_hdrCtrl.value - target).abs() < 0.5) {
-      _hdrCtrl.value = target;
+    if (_tapPop) {
+      _tapPop = false;
+      _chatBox.currentState?.say(text, now: true);
       return;
     }
-    _hdrCtrl.animateWith(
-        SpringSimulation(kHomeHeaderSpring, _hdrCtrl.value, target, _hdrCtrl.velocity));
+    _chatPending.add(text);
+    if (_chatGateOpen) {
+      _donusBandiniPlanla();
+    } else if (_perdeDinleyici == null) {
+      _kapiyiAc(); // menü göründükten sonra gelen mesaj da tam 3 sn bekler
+    }
   }
 
-  final List<_ExtraBubble> _extraBubbles = [];
-  int _typingIndex = 0; // hangi balon şu an yazılıyor
-  String _selamlama = ''; // async yüklenir — JSON'dan
+  void _flushChat() {
+    final box = _chatBox.currentState;
+    if (box == null) return;
+    _chatPending.forEach(box.say);
+    _chatPending.clear();
+  }
+
+  void _selamla() {
+    if (_greeted || _selamlama.isEmpty) return;
+    _greeted = true;
+    _chatBox.currentState?.say(_selamlama);
+  }
+
+  void _selamlamaHazir(String metin) {
+    _selamlama = metin;
+    if (_chatGateOpen) _selamla();
+  }
 
   // Günlük kalan kredi: 1 = hak var, 0 = kullanıldı
   Map<String, int> _remainingCredits = {};
@@ -316,39 +189,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   String get _today => DateTime.now().toIso8601String().substring(0, 10);
 
 
-  void _onBubbleComplete(int index) {
-    if (!mounted) return;
-    setState(() {
-      if (index == _typingIndex) _typingIndex++;
-    });
-    // Sonraki balon başlayınca scroll'u güncelle
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
-    // TÜM balonlar yazıldıysa → bekleme sayacı burada başlar (yazı tamamlandıktan HOLD sonra kapan).
-    if (_typingIndex >= 1 + _extraBubbles.length) _startHoldTimer();
-  }
-
   bool _selamlamaYuklendi = false;
 
   @override
   void initState() {
     super.initState();
-    // Band TAM indiğinde (giriş animasyonu bitince) yazı başlasın; gizlenince sıfırla.
-    _bandShow.addStatusListener((status) {
-      if (!mounted) return;
-      if (status == AnimationStatus.completed && !_bandEntered) {
-        setState(() => _bandEntered = true);
-      } else if (status == AnimationStatus.dismissed && _bandEntered) {
-        setState(() => _bandEntered = false);
-      }
-    });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _scheduleUnlockTimer();
       _refreshCredits();
@@ -373,22 +218,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       _refreshCredits();
     });
     final name = ref.read(userProfileProvider).name;
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).tarotSentBubble(name),
-        gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
-        borderColor: const Color(0xFFE8820C),
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(ref.read(l10nProvider).tarotSentBubble(name));
   }
 
   void _checkKahveSent() {
@@ -401,22 +231,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       _refreshCredits();
     });
     final name = ref.read(userProfileProvider).name;
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).kahveSentBubble(name),
-        gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
-        borderColor: const Color(0xFFE8820C),
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(ref.read(l10nProvider).kahveSentBubble(name));
   }
 
   void _checkDurugoruSent() {
@@ -425,22 +240,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     ref.read(durugoruSentProvider.notifier).state = false;
     _refreshCredits();
     final name = ref.read(userProfileProvider).name;
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).durugoruSentBubble(name),
-        gradient: const [Color(0xFF7A3A00), Color(0xFF9C5200)],
-        borderColor: const Color(0xFFE8820C),
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(ref.read(l10nProvider).durugoruSentBubble(name));
   }
 
   void _checkRuyaSent() {
@@ -448,22 +248,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     if (!sent) return;
     ref.read(ruyaSentProvider.notifier).state = false;
     final name = ref.read(userProfileProvider).name;
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).ruyaSentBubble(name),
-        gradient: const [Color(0xFF1A0A4C), Color(0xFF2D1580)],
-        borderColor: const Color(0xFF7B5CF6),
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(ref.read(l10nProvider).ruyaSentBubble(name));
   }
 
   void _checkIchingSent() {
@@ -476,22 +261,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       _refreshCredits();
     });
     final name = ref.read(userProfileProvider).name;
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).ichingSentBubble(name),
-        gradient: const [Color(0xFF0A1A10), Color(0xFF0F2D1A)],
-        borderColor: const Color(0xFFB8941F),
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(ref.read(l10nProvider).ichingSentBubble(name));
   }
 
   void _checkJaponFaliSent() {
@@ -504,22 +274,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       _refreshCredits();
     });
     final name = ref.read(userProfileProvider).name;
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).japonSentBubble(name),
-        gradient: const [Color(0xFF2A0008), Color(0xFF4A0012)],
-        borderColor: const Color(0xFFCC2244),
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(ref.read(l10nProvider).japonSentBubble(name));
   }
 
   void _checkElFaliSent() {
@@ -527,22 +282,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     if (!sent) return;
     ref.read(elFaliSentProvider.notifier).state = false;
     final name = ref.read(userProfileProvider).name;
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).elFaliSentBubble(name),
-        gradient: const [Color(0xFF1A0A2E), Color(0xFF2D1255)],
-        borderColor: const Color(0xFF9B3FCC),
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(ref.read(l10nProvider).elFaliSentBubble(name));
   }
 
   void _checkYuzFaliSent() {
@@ -550,22 +290,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     if (!sent) return;
     ref.read(yuzFaliSentProvider.notifier).state = false;
     final name = ref.read(userProfileProvider).name;
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: ref.read(l10nProvider).yuzFaliSentBubble(name),
-        gradient: const [Color(0xFF1A0A2E), Color(0xFF2D1255)],
-        borderColor: const Color(0xFF9B3FCC),
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(ref.read(l10nProvider).yuzFaliSentBubble(name));
   }
 
   bool _listenersAttached = false;
@@ -575,13 +300,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     super.didChangeDependencies();
     if (!_selamlamaYuklendi) {
       _selamlamaYuklendi = true;
-      // Band GİZLİ başlar; selamlama JSON'u arka planda yüklenir. Band görünmediği için
-      // typewriter henüz çalışmaz (layer 2 band açılana kadar mount edilmez) → açılışta yazı akmaz.
+      // Selamlama JSON'u arka planda yüklenir; menü GÖRÜNDÜKTEN 3 sn sonra kutuda belirir.
+      // ⚠️ Her açılışta 6 sn'lik yasal perde menünün ÜSTÜNDE durur; sayaç perde KALKINCA başlar.
       _loadSelamlama();
-      // Menü GÖRÜNDÜKTEN TAM 3 sn sonra band TAZE iner (Anıl, 2026-11-07: "önce açılsın, chat
-      // açılıştan 3 saniye sonra gelsin"); açılış selamlaması 10 sn kalır ya da yukarı swipe'a kadar.
-      // ⚠️ Her açılışta 6 sn'lik yasal bilgilendirme perdesi menünün ÜSTÜNDE durur; sayaç perde
-      // KALKINCA başlar (yoksa perde arkasında dolar → perde kalkınca menü + chat aynı anda görünürdü).
       _acilisBandiniPlanla();
     }
     if (!_listenersAttached) {
@@ -613,17 +334,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     }
   }
 
-  /// Açılış selamlaması: menü görünür olduktan (açılış perdesi kalktıktan) 3 sn sonra band iner.
-  void _acilisBandiniPlanla() {
-    void baslat() {
-      _bandTimer?.cancel();
-      _bandTimer = Timer(const Duration(seconds: 3), () {
-        if (mounted) _popBand(hold: const Duration(seconds: 10));
-      });
-    }
+  /// Açılış selamlaması: menü görünür olduktan (açılış perdesi kalktıktan) 3 sn sonra.
+  void _kapiyiAc() {
+    _chatTimer?.cancel();
+    _chatTimer = Timer(const Duration(seconds: 3), () {
+      if (!mounted) return;
+      _chatGateOpen = true;
+      _selamla();
+      _flushChat();
+    });
+  }
 
+  void _acilisBandiniPlanla() {
     if (!StartupDisclaimer.perdeAcik.value) {
-      baslat();
+      _kapiyiAc();
       return;
     }
     late final VoidCallback dinle;
@@ -631,17 +355,17 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       if (StartupDisclaimer.perdeAcik.value) return;
       StartupDisclaimer.perdeAcik.removeListener(dinle);
       _perdeDinleyici = null;
-      if (mounted) baslat();
+      if (mounted) _kapiyiAc();
     };
     _perdeDinleyici = dinle;
     StartupDisclaimer.perdeAcik.addListener(dinle);
   }
 
-  /// Menüye DÖNÜŞTE gelen Magnus mesajı (fal gönderildi vb.): menü önce görünsün, band 3 sn sonra insin.
+  /// Menüye DÖNÜŞTE gelen Magnus mesajı (fal gönderildi vb.): menü önce görünsün, mesaj 3 sn sonra.
   void _donusBandiniPlanla() {
-    _bandTimer?.cancel();
-    _bandTimer = Timer(const Duration(seconds: 3), () {
-      if (mounted) _popBand();
+    _chatTimer?.cancel();
+    _chatTimer = Timer(const Duration(seconds: 3), () {
+      if (mounted) _flushChat();
     });
   }
 
@@ -650,11 +374,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     final d = _perdeDinleyici;
     if (d != null) StartupDisclaimer.perdeAcik.removeListener(d);
     _unlockTimer?.cancel();
-    _bandTimer?.cancel();
+    _chatTimer?.cancel();
     _gridScrollCtrl.dispose();
-    _chatScrollCtrl.dispose();
-    _hdrCtrl.dispose();
-    _bandShow.dispose();
     super.dispose();
   }
 
@@ -743,29 +464,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
   void _showHazirlaniyorBubble(String type) {
     final msg = ref.read(l10nProvider).hazirlaniyorMessage(type);
-    // Fal türüne göre balonda ikon göster
-    final String? bubbleIcon = switch (type) {
-      'kahve'     => 'assets/images/inbox_icons/kahve.png',
-      'japonfali' => 'assets/images/inbox_icons/japonfali.png',
-      _           => null,
-    };
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: msg,
-        gradient: const [Color(0xFF2A1060), Color(0xFF3D1F88)],
-        borderColor: const Color(0xFF7755CC),
-        iconPath: bubbleIcon,
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 350),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(msg);
   }
 
   void _showDailyLimitBubble(String type) {
@@ -774,22 +473,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     final fortuneName = s.fortuneDisplayName(type);
     final customMsg   = s.fortuneLimitMessage(type);
     final limitText   = customMsg ?? s.dailyLimitBubble(fortuneName, name);
-    setState(() {
-      _extraBubbles.add(_ExtraBubble(
-        text: limitText,
-        gradient: const [Color(0xFF5C2508), Color(0xFF7A3510)],
-        borderColor: const Color(0xFFCC6622),
-      ));
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_chatScrollCtrl.hasClients) {
-        _chatScrollCtrl.animateTo(
-          _chatScrollCtrl.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 350),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _say(limitText);
   }
 
   // ─── Satır 1-3 (eski sayfa 1) ───────────────────────────────────────────────
@@ -906,6 +590,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     });
     // Ana menüdeyken bardaki eve tekrar dokunuş → listenin başına kaydır (iOS alışkanlığı).
     // Yalnız ana menü görünürken (başka sekmeye tekrar dokunuş listeyi başa sarmasın).
+    // Dil değişince kutuda eski dilde yazı kalmasın.
+    ref.listen<String>(localeProvider, (prev, next) {
+      if (prev == next) return;
+      final name = ref.read(userProfileProvider).name;
+      _chatBox.currentState
+        ?..clear()
+        ..say(next == 'en'
+            ? (name.isNotEmpty ? 'Welcome $name!' : 'Welcome!')
+            : (name.isNotEmpty ? 'Hoş geldin $name!' : 'Hoş geldin!'));
+    });
     ref.listen<int>(mainTabReselectProvider, (_, __) {
       if (ref.read(mainTabProvider) == MainTab.home) _scrollGridToTop();
     });
@@ -913,38 +607,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     // ── Ana menü arka planı: DÜMDÜZ koyu renk (Anıl, 2026-11-05 "ikonların olduğu yerden
     // background'u kaldırıp bg'yi dümdüz bu renk yap" — örnek görselden ölçüldü #0C0F14).
     // Eski welcomscreenbackground.jpg + %42 karartma kaldırıldı.
-    // ── İki katman (Anıl, 2026-11-05) ──────────────────────────────────────
-    //   Menu layer 1 = ikon ızgarası: TAM EKRAN, içerik layer 2'nin alt kenarından başlar.
-    //   Menu layer 2 = üstteki 3 sıra sohbet balonu: ayrı ÜST katman, ekranın en üstünden
-    //     3. sıranın hemen altına kadar, zemin #151515.
-    //   Yukarı kaydırınca layer 2 ızgarayla AYNI hızda yukarı kayar ve ekrandan çıkar;
-    //   aşağı çekince ızgara başa yaklaşınca (kalan yol < layer 2 yüksekliği) ekranın
-    //   üstünden aynı hızla iner, ilk yerinde DURUR (üstte esneme olsa da aşağı inmez).
-    //   Ofset = ızgara kaydırması, [0, layer 2 yüksekliği] aralığına kırpılmış.
     final topInset = MediaQuery.paddingOf(context).top;
-    // Hedef boy değişince (yeni satır, satır kırılması) bant yayla ona gider.
-    final shown = _visibleBubbles;
-    final chatHeight = _chatTargetHeight(shown);
-    if (chatHeight != _hdrTarget) {
-      _hdrTarget = chatHeight;
-      WidgetsBinding.instance.addPostFrameCallback((_) => _retargetHeader(chatHeight));
-    }
-    // Yeni Magnus mesajı (fal durumu / günlük limit → _extraBubbles büyür) gelince bandı patlat.
-    // Süre, yeni eklenen balon(lar)ın toplam uzunluğuna göre (uzun mesaj bitmeden kapanmasın — Codex P2).
-    if (_extraBubbles.length != _lastExtraCount) {
-      _lastExtraCount = _extraBubbles.length;
-      // Her yeni Magnus mesajında band 10 sn kalır (Anıl, 2026-11-07).
-      if (_tapPop) {
-        // Menüdeki karta dokunuşa cevap (hak bitti / hazırlanıyor) → anında.
-        _tapPop = false;
-        WidgetsBinding.instance.addPostFrameCallback((_) => _popBand());
-      } else {
-        // Fal gönderilip menüye dönüldü → menü önce, chat 3 sn sonra.
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (mounted) _donusBandiniPlanla();
-        });
-      }
-    }
     return Scaffold(
       backgroundColor: kHomeBackground,
       extendBody: true,
@@ -955,172 +618,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
           // Sola kaydırma → gelen kutusu (barda ana menünün sağındaki sekme).
           // Yön kilitli: dikey kaydırma bir kez başladıysa sekme değişmez.
           Positioned.fill(
-            child: Listener(
-              onPointerDown: _onGridPointerDown,
-              onPointerUp: _onGridPointerEnd,
-              onPointerCancel: _onGridPointerEnd,
-              child: TabSwipe(
-                onSwipeLeft: () =>
-                    selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
-                child: NotificationListener<ScrollNotification>(
-                  onNotification: (n) {
-                    // Yukarı swipe YETERİNCE uzun olursa (eşik) band da menüyle yukarı çıkıp gider
-                    // (Anıl, 2026-11-07: "yukarı swipe biraz uzun yapılırsa menü yukarı giderken
-                    // chat de çıkıp gitsin"); 10 sn beklemeden erken kapanış.
-                    if (_bandShow.value > 0.01 && n is ScrollUpdateNotification) {
-                      final d = n.scrollDelta ?? 0;
-                      if (d > 0) {
-                        _bandDismissAcc += d;
-                        if (_bandDismissAcc > 56) _hideBand(); // ~bir satır yukarı
-                      } else if (d < 0) {
-                        _bandDismissAcc = 0; // aşağı çekilince sıfırla
-                      }
-                    }
-                    return false;
-                  },
-                  child: _buildGrid(context, topExtra: topInset + kHomeLayerGap),
-                ),
+            child: TabSwipe(
+              onSwipeLeft: () =>
+                  selectMainTab(context, MainTab.inbox, entry: TabEntry.right),
+              child: _buildGrid(
+                context,
+                topExtra: topInset + kHomeChatTop + kGlassBarHeight + kHomeChatGap,
               ),
             ),
           ),
-          // ── Menu layer 2: sohbet balonları (ızgarayla birlikte kayar) ────────
-          // Yükseklik canlı: görünen satır kadar (_hdrCtrl). Balonlar hedef boyda dizilir,
-          // fazlası kırpılır → yeni satır, bant genişledikçe üstten açılır. Zemin hep canlı
-          // boyu doldurur (küçülürken de). Izgaranın kaydırma ofseti BOYAMA anında okunur.
+          // ── Sohbet kutusu: alt barla aynı biçim ve cam, menü ARKASINDAN kayar ────
           Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: AnimatedBuilder(
-              animation: _bandShow,
-              builder: (context, child) {
-                final raw = _bandShow.value.clamp(0.0, 1.0);
-                // Gizliyken HİÇ yer/hit yok → ızgara en üstten tam tıklanabilir (tam ekran menü).
-                if (raw <= 0.001) return const SizedBox.shrink();
-                // Yumuşak giriş/çıkış eğrisi (üstten aşağı yavaşça iner, yukarı yavaşça kalkar).
-                final s = Curves.easeInOutCubic.transform(raw);
-                final bandH = topInset + max(0.0, _hdrCtrl.value);
-                return Transform.translate(
-                  offset: Offset(0, -(1 - s) * bandH),
-                  child: Opacity(opacity: s, child: child),
-                );
-              },
-              child: GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                onTap: _hideBand, // banda dokun → erken kapat
-                child: RepaintBoundary(
-                  child: AnimatedBuilder(
-                    animation: _hdrCtrl,
-                    builder: (context, child) => SizedBox(
-                      key: const ValueKey('homeMenuLayer2'),
-                      height: topInset + max(0.0, _hdrCtrl.value),
-                      child: child,
-                    ),
-                    child: ColoredBox(
-                      color: kHomeHeaderBackground,
-                      child: ClipRect(
-                        child: OverflowBox(
-                          alignment: Alignment.topCenter,
-                          minHeight: topInset + chatHeight,
-                          maxHeight: topInset + chatHeight,
-                          child: Padding(
-                            padding: EdgeInsets.only(top: topInset),
-                            child: NotificationListener<ScrollNotification>(
-                              onNotification: (n) {
-                                // Band içi scroll → 10 sn geri sayımı DURDUR; parmak kalkınca
-                                // (idle) yeniden 10 sn (Anıl, 2026-11-07). Izgaraya sızdırma.
-                                if (n is ScrollStartNotification ||
-                                    n is ScrollUpdateNotification) {
-                                  _bandTimer?.cancel();
-                                } else if (n is ScrollEndNotification) {
-                                  _startHoldTimer();
-                                }
-                                return true;
-                              },
-                              child: _buildChatHeader(chatHeight, shown),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            top: topInset + kHomeChatTop,
+            left: kGlassBarSide,
+            right: kGlassBarSide,
+            height: kGlassBarHeight,
+            child: HomeChatBox(key: _chatBox, tint: ref.watch(glassTintProvider)),
           ),
         ],
-      ),
-    );
-  }
-
-  /// [height]: son en çok 3 satır kadar; daha eski balonlar yukarı kayıp gizlenir.
-  Widget _buildChatHeader(double height, int shown) {
-    // Karşılama + dinamik ekstralar
-    final bubbles = [
-      _ExtraBubble(
-        text: _selamlama, // initState/didChangeDependencies'te bir kez hesaplandı
-        gradient: const [Color(0xFF1A6B5A), Color(0xFF1A5E6B)],
-        borderColor: const Color(0xFF2DAAA0),
-      ),
-      ..._extraBubbles,
-    ];
-
-    // Şu an ekranda görünen balon sayısı
-    // (_typingIndex balon tamamlandıkça artar; bubbles.length ile sınırla)
-    final visibleCount = shown.clamp(0, bubbles.length);
-
-    return SizedBox(
-      height: height,
-      child: SingleChildScrollView(
-        controller: _chatScrollCtrl,
-        // Band indikten sonra içi yukarı/aşağı kaydırılabilir → eski mesajlar görünür
-        // (Anıl, 2026-11-07). Kaydırırken 10 sn geri sayım durur, bırakınca yeniden (aşağıda).
-        physics: const BouncingScrollPhysics(),
-        padding: const EdgeInsets.fromLTRB(12, kChatPadTop, 12, kChatPadBottom),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            for (int i = 0; i < bubbles.length; i++)
-              if (i < visibleCount) ...[
-                if (i > 0) const SizedBox(height: kChatRowGap),
-                // Görünen balon sayısına göre eskilere doğru opasite düşür
-                Opacity(
-                  opacity: visibleCount >= 3
-                      ? (i == visibleCount - 1 ? 1.0 : (i == visibleCount - 2 ? 0.60 : 0.30))
-                      : visibleCount == 2
-                          ? (i == 0 ? 0.60 : 1.0)
-                          : 1.0,
-                  child: HeightReporter(
-                    // Her satır ölçülür: balon metni iki satıra taşabilir, ikonlu balon farklı.
-                    onHeight: (h) => _onRowHeight(i, h),
-                    child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      _MagnusAvatar(),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: RepaintBoundary(
-                          child: _TypewriterChatBubble(
-                            key: ValueKey(i),
-                            text: bubbles[i].text,
-                            gradient: bubbles[i].gradient,
-                            borderColor: bubbles[i].borderColor,
-                            isActive: i == _typingIndex,
-                            // Band TAM indikten sonra yaz (giriş sırasında değil) — Anıl, 2026-11-07.
-                            startTyping: _bandEntered,
-                            enableMarquee: false, // kayan uzun yazı kaldırıldı (Anıl, 2026-11-06); uzunlar havuzdan elenir + sarılır
-                            onComplete: () => _onBubbleComplete(i),
-                            iconPath: bubbles[i].iconPath,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  ),
-                ),
-              ],
-          ],
-        ),
       ),
     );
   }
@@ -1159,8 +674,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     final items = [
       for (final it in base)
         _MenuItem(it.title, it.imagePath, it.credits, () {
-          // Sohbet bandının üstüne dokunuş, altındaki kartı açmasın.
-          if (_downInBand || _downDismiss) return;
           MenuUsage.increment(prefs, it.imagePath);
           it.onTap();
         }),
@@ -1279,7 +792,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             (isEn ? 'And here I am! Welcome {{isim}}.' : 'Ve işte karşındayım! Hoş geldin {{isim}}.');
         metin = VariableReplacer.replace(metin, vars);
         if (!mounted) return;
-        setState(() => _selamlama = metin);
+        _selamlamaHazir(metin);
         return;
       }
 
@@ -1334,7 +847,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               ozelEslesme['metin'] as String;
           metin = VariableReplacer.replace(ozMetin, vars);
           if (!mounted) return;
-          setState(() => _selamlama = metin);
+          _selamlamaHazir(metin);
           return;
         }
       }
@@ -1351,8 +864,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             .toList();
       }
 
-      // Çok uzun (eskiden kayan) karşılama metinlerini ELE → bant kısa kalsın (Anıl, 2026-11-06).
-      // ~110+ karakter ≈ 3+ satır. Havuz tümüyle uzunsa güvenli yedek: filtresiz havuz.
+      // Çok uzun karşılama metinlerini ELE (Anıl, 2026-11-06); sığmayanlar kutuda sayfalanır.
+      // Havuz tümüyle uzunsa güvenli yedek: filtresiz havuz.
       bool kisa(Map<String, dynamic> e) {
         final t = ((isEn ? e['metin_en'] as String? : null) ?? e['metin'] as String? ?? '').trim();
         return t.length <= 110;
@@ -1379,11 +892,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
       metin = VariableReplacer.replace(metin, vars);
       if (!mounted) return;
-      setState(() => _selamlama = metin);
+      _selamlamaHazir(metin);
     } catch (e) {
       final name = ref.read(userProfileProvider).name;
       if (!mounted) return;
-      setState(() => _selamlama = name.isNotEmpty ? 'Hoş geldin $name!' : 'Hoş geldin!');
+      _selamlamaHazir(name.isNotEmpty ? 'Hoş geldin $name!' : 'Hoş geldin!');
     }
   }
 
@@ -1423,19 +936,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 // ─────────────────────────────────────────────────────────────────────────────
 // Veri modelleri
 // ─────────────────────────────────────────────────────────────────────────────
-
-class _ExtraBubble {
-  final String text;
-  final List<Color> gradient;
-  final Color borderColor;
-  final String? iconPath; // opsiyonel — balon içinde sol tarafta küçük ikon
-  const _ExtraBubble({
-    required this.text,
-    required this.gradient,
-    required this.borderColor,
-    this.iconPath,
-  });
-}
 
 class _MenuItem {
   final String title;
@@ -1708,345 +1208,6 @@ class _CreditBadge extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Typewriter balonu
-// ─────────────────────────────────────────────────────────────────────────────
-
-class _TypewriterChatBubble extends StatefulWidget {
-  final String text;
-  final List<Color> gradient;
-  final Color borderColor;
-  final bool isActive;
-  final bool enableMarquee;
-  final VoidCallback onComplete;
-  final String? iconPath;
-  // Yazmaya izin — band TAM indikten sonra true olur; false iken aktif balon boş bekler.
-  final bool startTyping;
-
-  const _TypewriterChatBubble({
-    super.key,
-    required this.text,
-    required this.gradient,
-    required this.borderColor,
-    required this.isActive,
-    required this.onComplete,
-    this.enableMarquee = false,
-    this.iconPath,
-    this.startTyping = true,
-  });
-
-  @override
-  State<_TypewriterChatBubble> createState() => _TypewriterChatBubbleState();
-}
-
-class _TypewriterChatBubbleState extends State<_TypewriterChatBubble>
-    with SingleTickerProviderStateMixin {
-  int _charCount = 0;
-  Timer? _timer;
-
-  // Marquee
-  AnimationController? _marqueeCtrl;
-  double _bubbleInnerWidth = 0;
-  bool _marqueeRunning = false;
-
-  // Gece Grimuarı: kemik beyazı Jost (ölçüm de aynı stille → marquee hesabı tutarlı).
-  static final TextStyle _textStyle = _bubbleTextStyle;
-  static const _hPad = 24.0; // horizontal padding inside bubble (12*2)
-
-  @override
-  void initState() {
-    super.initState();
-    if (widget.enableMarquee) {
-      _marqueeCtrl = AnimationController(vsync: this, duration: const Duration(seconds: 10));
-    }
-    if (widget.isActive && widget.startTyping) {
-      _startTyping();
-    } else if (widget.isActive) {
-      _charCount = 0; // aktif ama band girişi bitmedi → boş bekle
-    } else {
-      _charCount = widget.text.length;
-      if (widget.enableMarquee) {
-        WidgetsBinding.instance.addPostFrameCallback((_) => _maybeStartMarquee());
-      }
-    }
-  }
-
-  @override
-  void didUpdateWidget(_TypewriterChatBubble old) {
-    super.didUpdateWidget(old);
-    final nowReady = widget.isActive && widget.startTyping;
-    final wasReady = old.isActive && old.startTyping;
-    // Geçit açıldı (band girişi tamamlandı ya da bu balon aktifleşti) → yazmaya başla.
-    if (nowReady && !wasReady) {
-      _charCount = 0;
-      _marqueeRunning = false;
-      _marqueeCtrl?.stop();
-      _startTyping();
-      return;
-    }
-    // Metin değişti (selamlama async yüklendi)
-    if (widget.text != old.text) {
-      _charCount = 0;
-      _marqueeRunning = false;
-      _marqueeCtrl?.stop();
-      if (nowReady) {
-        _startTyping();
-      } else if (!widget.isActive) {
-        _charCount = widget.text.length; // aktif değil → tam göster
-      }
-    }
-  }
-
-  void _startTyping() {
-    _timer?.cancel();
-    _timer = Timer.periodic(const Duration(milliseconds: 60), (t) {
-      if (!mounted) { t.cancel(); return; }
-      if (_charCount >= widget.text.length) {
-        t.cancel();
-        // Boş metinde onComplete çağırma — JSON yüklenince metin gelecek
-        if (widget.text.isNotEmpty) {
-          widget.onComplete();
-          if (widget.enableMarquee) {
-            // Yazım bitince 3 saniye bekleyip marquee başlat
-            Future.delayed(const Duration(seconds: 3), () {
-              if (mounted) _maybeStartMarquee();
-            });
-          }
-        }
-        return;
-      }
-      setState(() => _charCount++);
-    });
-  }
-
-  // Marquee ayraç boşluğu — metin bittikten sonra kaç karakter boşluk
-  static const _marqueeGap = '                              '; // 30 boşluk
-
-  double _measureText(String text) {
-    final tp = TextPainter(
-      text: TextSpan(text: text, style: _textStyle),
-      maxLines: 1,
-      textDirection: TextDirection.ltr,
-    )..layout();
-    return tp.width;
-  }
-
-  void _maybeStartMarquee() {
-    if (!mounted || _marqueeCtrl == null || _bubbleInnerWidth <= 0) return;
-    final textW = _measureText(widget.text);
-    // 8px buffer: TextPainter ölçümü ile gerçek render arasındaki farkı telafi eder
-    if (textW < _bubbleInnerWidth - 8) return; // kesin sığıyor, marquee gerekmez
-
-    // Bir döngü = text + gap genişliği — bu kadar kaydırınca seamless sıfırlanır
-    final gapW = _measureText(_marqueeGap);
-    final cycleW = textW + gapW;
-
-    // Hız: ~55 px/saniye
-    final durationMs = max(3000, (cycleW / 55 * 1000).round());
-    _marqueeCtrl!.duration = Duration(milliseconds: durationMs);
-    _marqueeRunning = true;
-
-    // repeat(reverse:false) → 0→1, anında 0→1... sürekli döngü
-    _marqueeCtrl!.repeat();
-    if (mounted) setState(() {});
-  }
-
-  @override
-  void dispose() {
-    _timer?.cancel();
-    _marqueeRunning = false;
-    _marqueeCtrl?.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final safeCount = _charCount.clamp(0, widget.text.length);
-    final displayText = widget.text.substring(0, safeCount);
-
-    if (!widget.enableMarquee) {
-      // Tam metin yerleşir (boyut baştan sabit), yalnız yazılan kısım görünür → yazarken
-      // balon büyümez, "typewrite bitene kadar yarım görünme" biter (Anıl, 2026-11-07).
-      return _ChatBubble(
-          fullText: widget.text,
-          visibleCount: safeCount,
-          iconPath: widget.iconPath);
-    }
-
-    // Marquee-aware balon
-    return LayoutBuilder(builder: (ctx, constraints) {
-      _bubbleInnerWidth = (constraints.maxWidth - _hPad).clamp(1.0, double.infinity);
-
-      // Seamless loop için içerik: "metin<boşluk>metin"
-      // cycleW kadar kaydırınca ilk metin ile ikinci metin aynı konuma gelir → seamless
-      final loopContent = '${widget.text}$_marqueeGap${widget.text}';
-
-      return Container(
-        decoration: _oldBubble(widget.gradient, widget.borderColor),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-        // Kayan yazı iki kenarda 14px yumuşak söner (sanat yön.: keskin kesik 'eniz.' yoktu).
-        child: _EdgeFade(
-          enabled: _marqueeRunning,
-          child: ClipRect(
-          child: _marqueeRunning && _marqueeCtrl != null
-            ? AnimatedBuilder(
-                animation: _marqueeCtrl!,
-                builder: (_, __) {
-                  final textW = _measureText(widget.text);
-                  final gapW  = _measureText(_marqueeGap);
-                  final cycleW = textW + gapW;
-                  // value 0→1 → offset 0→cycleW (seamless loop)
-                  final offset = _marqueeCtrl!.value * cycleW;
-                  return Transform.translate(
-                    offset: Offset(-offset, 0),
-                    child: Text(loopContent, style: _textStyle, maxLines: 1,
-                        overflow: TextOverflow.visible, softWrap: false),
-                  );
-                },
-              )
-            : Builder(builder: (_) {
-                // Typewriter aşaması: yazılan kısmı göster, sona kaydır
-                // +4px buffer → son karakter kliplenmesini önler
-                final typedW = _measureText(displayText);
-                final offset = max(0.0, typedW - _bubbleInnerWidth + 4);
-                return Transform.translate(
-                  offset: Offset(-offset, 0),
-                  child: Text(displayText, style: _textStyle, maxLines: 1,
-                      overflow: TextOverflow.visible, softWrap: false),
-                );
-              }),
-          ),
-        ),
-      );
-    });
-  }
-}
-
-// ── Gece Grimuarı balon dili (tüm balonlar tek cam; çağıranın gradient/borderColor'ı
-//    artık yalnız API uyumu için — renkli teal/mor/pembe balonlar kalktı, 2026-11) ──
-const _bubbleRadius = BorderRadius.only(
-  topLeft: Radius.circular(4), topRight: Radius.circular(14),
-  bottomLeft: Radius.circular(14), bottomRight: Radius.circular(14),
-);
-/// 2026-11-05 eski renkler: balon, çağıranın gradyanı + çerçeve rengi (%50) ile çizilir.
-BoxDecoration _oldBubble(List<Color> gradient, Color border) => BoxDecoration(
-      gradient: LinearGradient(
-        colors: gradient.length >= 2 ? gradient : [gradient.first, gradient.first],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      ),
-      borderRadius: _bubbleRadius,
-      border: Border.all(color: border.withValues(alpha: 0.5)),
-    );
-final TextStyle _bubbleTextStyle =
-    AppTextStyles.uiLabel.copyWith(fontSize: 13.5, height: 1.4, letterSpacing: 0.1);
-
-/// Yatay kenar sönümü (marquee): iki kenarda 14px.
-class _EdgeFade extends StatelessWidget {
-  final bool enabled;
-  final Widget child;
-  const _EdgeFade({required this.enabled, required this.child});
-
-  @override
-  Widget build(BuildContext context) {
-    if (!enabled) return child;
-    return ShaderMask(
-      blendMode: BlendMode.dstIn,
-      shaderCallback: (r) {
-        final f = r.width <= 0 ? 0.0 : (14 / r.width).clamp(0.0, 0.3);
-        return LinearGradient(
-          stops: [0, f, 1 - f, 1],
-          colors: const [Color(0x00000000), Color(0xFF000000), Color(0xFF000000), Color(0x00000000)],
-        ).createShader(r);
-      },
-      child: child,
-    );
-  }
-}
-
-// Claude giriş kutusu dili (Anıl, 2026-11-07): koyu kömür zemin + ince kenar + oval köşe.
-const Color _kChatBubbleFill = Color(0xFF2B2B30); // "su" koyu gri (Claude input içi)
-const Color _kChatBubbleBorder = Color(0x24FFFFFF); // ince kenar (beyaz %14)
-BoxDecoration _claudeBubble() => BoxDecoration(
-      color: _kChatBubbleFill,
-      borderRadius: BorderRadius.circular(20), // oval köşe
-      border: Border.all(color: _kChatBubbleBorder, width: 1),
-    );
-
-class _ChatBubble extends StatelessWidget {
-  final String fullText; // boyut bunun üstünden → yazarken balon büyümez
-  final int visibleCount; // görünen (yazılmış) karakter sayısı
-  final String? iconPath;
-
-  const _ChatBubble({
-    required this.fullText,
-    required this.visibleCount,
-    this.iconPath,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final vc = visibleCount.clamp(0, fullText.length);
-    // Tam metin yerleşir (yazılmamış kısım SAYDAM) → balon baştan son boyunda, jitter yok.
-    final textWidget = Text.rich(TextSpan(style: _bubbleTextStyle, children: [
-      TextSpan(text: fullText.substring(0, vc)),
-      TextSpan(
-        text: fullText.substring(vc),
-        style: _bubbleTextStyle.copyWith(color: const Color(0x00000000)),
-      ),
-    ]));
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
-      decoration: _claudeBubble(),
-      child: iconPath != null
-          ? Row(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image.asset(iconPath!, width: 22, height: 22,
-                    errorBuilder: (_, __, ___) => const SizedBox.shrink()),
-                const SizedBox(width: 8),
-                Flexible(child: textWidget),
-              ],
-            )
-          : textWidget,
-    );
-  }
-}
-
-class _MagnusAvatar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 38,
-      height: 38,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(color: const Color(0xFFAA88FF), width: 1.0),
-      ),
-      child: ClipOval(
-        child: Image.asset(
-          'assets/images/magnusicon.png',
-          fit: BoxFit.cover,
-          errorBuilder: (_, __, ___) => Container(
-            color: AppColors.inkCard,
-            child: const Center(
-              child: Text(
-                'M',
-                style: TextStyle(
-                  color: AppColors.bone,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ),
-          ),
-        ),
       ),
     );
   }

@@ -113,6 +113,9 @@ class AppStrings {
   String get fortuneReadyTitle   => _s('Falın hazır', 'Your reading is ready');
   String get glassClear        => _s('Şeffaf',         'Clear');
   String get glassTinted       => _s('Renkli',         'Tinted');
+  String get glassFlat         => _s('Flat',           'Flat');
+  String get glassCandy        => _s('Candy',          'Candy');
+  String get glassStyleLabel   => _s('Cam teması',     'Glass theme');
   String get clearAll          => _s('Temizle',        'Clear');
   String get inboxEmpty        => _s('BURALAR ÇOK SESSİZ...', 'SO QUIET HERE...');
   String get inboxEmptyDesc    => _s('Okumaya değer bir şey henüz almadın.', "You haven't received anything worth reading yet.");

@@ -2,7 +2,7 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
-## Ne yapıldı (2026-11-08 — `10.8.29+297` ÇIKTI: Android Play Dahili test 17:26 + iOS TestFlight)
+## Ne yapıldı (2026-11-08 — `10.8.32+300` ÇIKTI: Android Play Dahili test 20:41 + iOS TestFlight run 42505401195; 297 de aynı gün 17:26)
 Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit'lenmemiş scratch
 `test/_visual_starfield_capture_test.dart`). Ad taraması (lib+assets) temiz, tüm `assets/data/*.json` geçerli.
 
@@ -34,7 +34,7 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
   bildirimi `core/services/notification_service.dart`, `shell/notification_sync.dart` (sunucu yok, unlockAt'e zamanlanır; varsayılan kapalı).
   Referans karşılaştırma: `build/visual_check/lamp_compare_test.dart` (dinlenme kareleri SSIM 0.92–0.94; imleç/kadraj farkı dahil).
 
-- **297 sonrası main'de (build bekliyor):** Kehanet menüsü 5 kartı ekran yüksekliğine göre boyutlanır, kaydırma yok
+- **300'e giren (297 sonrası):** Kehanet menüsü 5 kartı ekran yüksekliğine göre boyutlanır, kaydırma yok
   (`kehanet_menu_screen.dart`, test `test/kehanet_menu_fit_test.dart`). Bildirimler varsayılan AÇIK: sistem izni ilk fal
   gönderilince bir kez istenir (`askOnce`, prefs `bildirim_izni_soruldu`), reddedilirse düğme kapanır. Lamba sürgüsü 1/3 boyut
   (93 pt), dokunma alanı en az 48 pt (`_touchPad`). Ana menü: "ana menüsü karşında" balonu kaldırıldı, yalnız mesaj; karşılamalar
@@ -63,6 +63,7 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 
 ## Sıradaki adım
 - Anıl 297'de bildirim düğmesini gerçek cihazda dener (açınca izin, kilitli fal hazır olunca bildirim, dokununca gelen kutusu).
-- Sonraki build `10.8.32+300`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
+- Anıl 300'de giriş mesajlarını, Arabam/Evim aramasını, Kader Kitabı okunu dener.
+- Sonraki build `10.8.35+303`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
   Play Dahili test, `gh workflow run "iOS TestFlight" --repo anilgedikoglu/magnus --ref main`.
 - Anıl 294/297'de fincan kontrolünü dener; hâlâ geçerse yönetici teşhis satırı (ML Kit etiketleri) ekle.

@@ -67,6 +67,11 @@ double kaderSpinEnd(double current, int target, int dir, int turns) {
   return current + dir * (turns * 2 * pi + kalan);
 }
 
+/// Sağa sürüklemede dönüş yönü: parmak çark merkezinin üstündeyse +1 (saat yönü), altındaysa -1.
+/// Çarkın parmağın altındaki kısmı parmakla aynı yöne gider.
+@visibleForTesting
+int kaderDragSign(double fingerY, double centerY) => fingerY <= centerY ? 1 : -1;
+
 // ─── Ana ekran ────────────────────────────────────────────────────────────────
 
 class KaderCarkiScreen extends ConsumerStatefulWidget {
@@ -192,15 +197,25 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
 
   bool get _kilitli => _doniyor || _bitti || _metinGeldi;
 
+  final GlobalKey _wheelKey = GlobalKey();
+  int _dragSign = 1; // sürükleme başında sabitlenir, yolda yön değişmez
+
+  double _wheelCenterY() {
+    final box = _wheelKey.currentContext?.findRenderObject() as RenderBox?;
+    if (box == null || !box.hasSize) return MediaQuery.sizeOf(context).height / 2;
+    return box.localToGlobal(box.size.center(Offset.zero)).dy;
+  }
+
   void _onDragStart(DragStartDetails d) {
     if (_kilitli) return;
     _angularVelocity = 0;
     _lastPanTime = DateTime.now();
+    _dragSign = kaderDragSign(d.globalPosition.dy, _wheelCenterY());
   }
 
   void _onDragUpdate(DragUpdateDetails d) {
     if (_kilitli) return;
-    final deltaAngle = (d.primaryDelta ?? 0) * _kDragToAngle;
+    final deltaAngle = (d.primaryDelta ?? 0) * _kDragToAngle * _dragSign;
     final now = DateTime.now();
     final dt  = now.difference(_lastPanTime).inMicroseconds / 1e6;
     if (dt > 0) _angularVelocity = deltaAngle / dt;
@@ -214,7 +229,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
   void _onDragEnd(DragEndDetails d) {
     if (_kilitli) return;
     // Savurma hızı: framework'ün hız ölçerinden (px/sn) açısal hıza (rad/sn).
-    final angVel = (d.primaryVelocity ?? 0) * _kDragToAngle;
+    final angVel = (d.primaryVelocity ?? 0) * _kDragToAngle * _dragSign;
     final speed  = angVel.abs();
     if (speed < 0.5) {
       setState(() => _speedFraction = 0);
@@ -489,6 +504,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
           // Çark yüzeyi. Sürükleme jesti artık tüm ekranda (bkz. build()); burada
           // yalnız çizim var.
           SizedBox(
+            key:    _wheelKey,
             width:  size,
             height: size,
             // Gölge sabit: ayrı katmanda bir kez çizilir (dönerken her karede bulanıklık yok).

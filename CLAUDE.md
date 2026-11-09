@@ -1513,11 +1513,11 @@ Kodda `testDeviceIds` tanımlı değil → canlı uygulamada kendi reklamına t�
   ("Reklam izle, hemen aç" işareti, `InboxNotifier.unlockNow`) · Kısmetim/Arabam/Evim kapalı kutu
   (kişi/dönemin tüm kutuları). Reklam hazır değil / sınır dolu / admin → kutu ücretsiz açılır, hak bitti eski mesajı verir.
 - Geçiş reklamı yalnız doğal arada: fal kapanıp menüye dönerken (`home_screen._falCikti`, ≥25 sn, Dert Ortağı hariç) ve
-  gelen kutusundan okunan fal kapanınca. Sınırlar kalıcı: `lib/core/services/ad_pacing.dart` (önceki reklamdan 120 sn sonra, oturum 3,
-  gün 6, 2 fal tamamlanmadan yok; ödüllü: hak bitti tür başına 2 / gün 6, hemen aç gün 5, kutu gün 8, toplam gün 15). Yüklenen reklam 55 dk'da yenilenir.
+  gelen kutusundan okunan fal kapanınca. Sınırlar kalıcı: `lib/core/services/ad_pacing.dart` (geçişten 90 sn, ödüllüden 120 sn sonra, oturum 3,
+  gün 6, ilk falın çıkışında yok; ödüllü: hak bitti tür başına 2 / gün 6, hemen aç gün 5, kutu gün 8, toplam gün 15). Yüklenen reklam 55 dk'da yenilenir.
   Kullanıcıdaki 10.8.5'te geçiş reklamı yüklenip hiç gösterilmiyordu (AdMob: 1.411 istek, 0 gösterim; gelirin tamamı ödüllü).
   "Tamamlanan fal" = `MagnusHafiza.tamamlananFal` (okunan + ≥25 sn anlık fal).
-- Sonuç sonu `BirTaneDaha` (`lib/core/widgets/bir_tane_daha.dart`), Aşk Uyumu genel yorumu kilidi, kehanet menüsü günde 3 giriş + ödüllü 3 (`KehanetHak`). Tam tablo: docs/reklam_duzeni.md.
+- Sonuç sonu `BirTaneDaha` (`lib/core/widgets/bir_tane_daha.dart`), kehanet menüsü günde 3 giriş + ödüllü 3 (`KehanetHak`). Tam tablo: docs/reklam_duzeni.md.
 - `AdService`: UMP (`canRequestAds` olmadan reklam istenmez, hata akışı bozmaz), iOS `nonPersonalizedAds: true`,
   yükleme hatasında 3 deneme, SKAdNetworkItems `Info.plist`'te. Kullanıcı Bilgileri 3. kartta (gerekirse) "Gizlilik seçenekleri".
 - AdMob panelinde GDPR mesajı oluşturulmalı (uygulama dışı adım). Aşağıdaki platform-ID bölümü geçerli.

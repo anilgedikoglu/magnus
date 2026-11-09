@@ -3,8 +3,8 @@
 // Reklam sıklık sınırları (docs/reklam_duzeni.md). Sayaçlar SharedPreferences'ta KALICIDIR
 // (uygulama kapanınca sıfırlanmaz). Saf mantık: saat dışarıdan verilir, test edilebilir.
 //
-// Geçiş reklamı : önceki reklamdan (geçiş ya da ödüllü) en az 120 sn sonra, oturumda 3, günde 6;
-//                 uygulamada 2 fal tamamlanmadan yok.
+// Geçiş reklamı : önceki geçişten en az 90 sn, ödüllüden en az 120 sn sonra; oturumda 3, günde 6;
+//                 ilk falın çıkışında yok, ikinci falın çıkışından itibaren.
 // Ödüllü        : hak bitti +1 tür başına 2 ve günde toplam 6; hemen aç günde 5; kutu açma günde 8;
 //                 hepsi toplam günde 15.
 // Saat geri alınırsa: gün sayaçları sıfırlanmaz (kullanıcı saati oynayarak sınırı aşamaz) ve son
@@ -25,10 +25,16 @@ class AdPacing {
   static const prefsKey = 'ad_pacing_v1';
 
   // ── Geçiş sınırları ──
-  static const gecisAraligi = Duration(seconds: 120);
+  static const gecisAraligi = Duration(seconds: 90);
+  static const odulSonrasiAralik = Duration(seconds: 120);
   static const gecisOturumMax = 3;
   static const gecisGunMax = 6;
-  static const gecisIcinMinFal = 2;
+
+  /// Çıkış anında sayılan, daha önce tamamlanmış fal sayısı (o an biten fal henüz sayılmaz).
+  static const gecisIcinMinFal = 1;
+
+  /// Uygulama bu kadar arka planda kaldıysa dönüş yeni oturumdur.
+  static const oturumAraligi = Duration(minutes: 30);
 
   // ── Ödüllü sınırları ──
   static const hakBittiTurBasina = 2;
@@ -56,6 +62,7 @@ class AdPacing {
   String? _gun;
   int _gecisBugun = 0;
   int _sonGecisMs = 0;
+  int _sonOdulMs = 0;
   final Map<String, int> _odul = {};
   final Map<String, int> _hakBittiTurleri = {};
 
@@ -73,6 +80,7 @@ class AdPacing {
       _gun = j['d'] as String?;
       _gecisBugun = (j['ig'] as num?)?.toInt() ?? 0;
       _sonGecisMs = (j['li'] as num?)?.toInt() ?? 0;
+      _sonOdulMs = (j['lr'] as num?)?.toInt() ?? 0;
       (j['r'] as Map<String, dynamic>? ?? const {}).forEach((k, v) => _odul[k] = (v as num).toInt());
       // 306 kaydı liste (tür başına 1 hak); sonrası tür → adet.
       final hb = j['hb'];
@@ -94,6 +102,7 @@ class AdPacing {
           'd': _gun,
           'ig': _gecisBugun,
           'li': _sonGecisMs,
+          'lr': _sonOdulMs,
           'r': _odul,
           'hb': _hakBittiTurleri,
         }),
@@ -114,7 +123,11 @@ class AdPacing {
     // _gun > bugün → saat geri alındı: sayaçlar korunur.
     final ms = now.millisecondsSinceEpoch;
     if (_sonGecisMs > ms) _sonGecisMs = ms;
+    if (_sonOdulMs > ms) _sonOdulMs = ms;
   }
+
+  /// Uygulama uzun süre arka planda kaldı: oturum sayacı sıfırlanır (gün sayacı kalır).
+  void yeniOturum() => oturumGecis = 0;
 
   int _o(String k) => _odul[k] ?? 0;
   int get _odulToplam => _o('hakBitti') + _o('hemenAc') + _o('kutuAc');
@@ -126,10 +139,9 @@ class AdPacing {
     if (tamamlananFal < gecisIcinMinFal) return false;
     if (oturumGecis >= gecisOturumMax) return false;
     if (_gecisBugun >= gecisGunMax) return false;
-    if (_sonGecisMs != 0 &&
-        now.millisecondsSinceEpoch - _sonGecisMs < gecisAraligi.inMilliseconds) {
-      return false;
-    }
+    final ms = now.millisecondsSinceEpoch;
+    if (_sonGecisMs != 0 && ms - _sonGecisMs < gecisAraligi.inMilliseconds) return false;
+    if (_sonOdulMs != 0 && ms - _sonOdulMs < odulSonrasiAralik.inMilliseconds) return false;
     return true;
   }
 
@@ -161,8 +173,8 @@ class AdPacing {
   Future<void> recordReward(OdulTuru tur, DateTime now, {String? falTuru}) {
     _normalize(now);
     _odul[tur.name] = _o(tur.name) + 1;
-    // Ödüllü izleyen kullanıcıya hemen ardından geçiş çıkmasın: aralık yeniden başlar.
-    _sonGecisMs = now.millisecondsSinceEpoch;
+    // Ödüllü izleyen kullanıcıya hemen ardından geçiş çıkmasın.
+    _sonOdulMs = now.millisecondsSinceEpoch;
     if (tur == OdulTuru.hakBitti && falTuru != null) {
       _hakBittiTurleri[falTuru] = (_hakBittiTurleri[falTuru] ?? 0) + 1;
     }

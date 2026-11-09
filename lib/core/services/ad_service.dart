@@ -95,11 +95,25 @@ class AdService {
     } catch (e) {
       debugPrint('[AdService] Sayaçlar yüklenemedi: $e');
     }
-    _yasamDongusu ??= AppLifecycleListener(onResume: reklamlariTazele);
+    _yasamDongusu ??= AppLifecycleListener(
+      onHide: () => _arkaPlanBas = DateTime.now(),
+      onShow: _onPlanaDondu,
+      onResume: reklamlariTazele,
+    );
     unawaited(_rizaVeBaslat());
   }
 
   AppLifecycleListener? _yasamDongusu;
+  DateTime? _arkaPlanBas;
+
+  /// Uzun arka plandan dönüş yeni oturumdur; yoksa oturum sınırı günlerce sıfırlanmazdı.
+  void _onPlanaDondu() {
+    final bas = _arkaPlanBas;
+    _arkaPlanBas = null;
+    if (bas != null && DateTime.now().difference(bas) >= AdPacing.oturumAraligi) {
+      _pacing?.yeniOturum();
+    }
+  }
 
   /// Süresi dolanı atar, eksik reklamı yükler (uygulamaya dönüşte ve teklif öncesi).
   void reklamlariTazele() {
@@ -233,7 +247,7 @@ class AdService {
   }
 
   /// Doğal arada (fal kapanıp menüye dönerken) geçiş reklamı gösterir. Gösterildiyse true.
-  /// Sınırlar [AdPacing]'den: 120 sn aralık, oturumda 3, günde 6, [tamamlananFal] ≥ 2.
+  /// Sınırlar [AdPacing]'den: 90 sn aralık, ödüllüden 120 sn, oturumda 3, günde 6, [tamamlananFal] ≥ 1.
   /// Hazır reklam yoksa ya da sınır doluysa sessizce false; hiçbir akışı bekletmez.
   Future<bool> maybeShowInterstitial({required int tamamlananFal, DateTime? now}) async {
     if (_adsDisabled || !_canRequestAds || _reklamDevam) return false;

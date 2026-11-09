@@ -57,7 +57,7 @@ class InboxItem extends HiveObject {
   /// Reklamla "hemen aç" teklifi anlamlı mı? (Birkaç saniyesi kalan fal için reklam izletilmez.)
   bool get hemenAcmayaDeger {
     final t = unlockAt == null ? null : DateTime.tryParse(unlockAt!);
-    return t != null && t.difference(DateTime.now()) > const Duration(seconds: 30);
+    return t != null && t.difference(DateTime.now()) > const Duration(seconds: 60);
   }
 
   /// true ise kart henüz açılmamış (kilitli)

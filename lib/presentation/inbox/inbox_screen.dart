@@ -220,8 +220,9 @@ class InboxScreen extends ConsumerWidget {
         .then((_) {
       // Okunan faldan çıkış doğal ara: geçiş reklamı (sınırlar AdPacing'de, yeterince okunduysa).
       if (DateTime.now().difference(basla) >= AdPacing.gecisIcinMinSure) {
-        AdService.instance.maybeShowInterstitial(
-            tamamlananFal: MagnusHafiza.aktif?.tamamlananFal ?? 0);
+        // Sayaç bu okumayı da içerir; ilk okunan falın çıkışında reklam çıkmasın.
+        final oncekiFal = (MagnusHafiza.aktif?.tamamlananFal ?? 0) - 1;
+        AdService.instance.maybeShowInterstitial(tamamlananFal: oncekiFal);
       }
     });
   }

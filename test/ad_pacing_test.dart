@@ -12,18 +12,28 @@ void main() {
   final t0 = DateTime(2026, 11, 9, 12, 0, 0);
 
   group('Geçiş reklamı', () {
-    test('ilk 2 fal tamamlanmadan geçiş yok', () async {
+    test('ilk falın çıkışında geçiş yok, ikinci falın çıkışından itibaren var', () async {
       final p = await _yeni();
       expect(p.canShowInterstitial(t0, tamamlananFal: 0), isFalse);
-      expect(p.canShowInterstitial(t0, tamamlananFal: 1), isFalse);
-      expect(p.canShowInterstitial(t0, tamamlananFal: 2), isTrue);
+      expect(p.canShowInterstitial(t0, tamamlananFal: 1), isTrue);
     });
 
-    test('en az 120 sn aralık', () async {
+    test('en az 90 sn aralık', () async {
       final p = await _yeni();
       await p.recordInterstitial(t0);
-      expect(p.canShowInterstitial(t0.add(const Duration(seconds: 119)), tamamlananFal: 9), isFalse);
-      expect(p.canShowInterstitial(t0.add(const Duration(seconds: 120)), tamamlananFal: 9), isTrue);
+      expect(p.canShowInterstitial(t0.add(const Duration(seconds: 89)), tamamlananFal: 9), isFalse);
+      expect(p.canShowInterstitial(t0.add(const Duration(seconds: 90)), tamamlananFal: 9), isTrue);
+    });
+
+    test('uzun arka plandan dönüş yeni oturum, gün sayacı kalır', () async {
+      final p = await _yeni();
+      for (var i = 0; i < 3; i++) {
+        await p.recordInterstitial(t0.add(Duration(minutes: 3 * i)));
+      }
+      final sonra = t0.add(const Duration(hours: 1));
+      expect(p.canShowInterstitial(sonra, tamamlananFal: 9), isFalse);
+      p.yeniOturum();
+      expect(p.canShowInterstitial(sonra, tamamlananFal: 9), isTrue);
     });
 
     test('oturumda en çok 3; yeniden açılışta oturum sıfırlanır, gün sayacı kalır', () async {
@@ -73,7 +83,7 @@ void main() {
       await p2.recordInterstitial(t0);
       final geri = t0.subtract(const Duration(hours: 3));
       expect(p2.canShowInterstitial(geri, tamamlananFal: 9), isFalse);
-      expect(p2.canShowInterstitial(geri.add(const Duration(seconds: 121)), tamamlananFal: 9), isTrue);
+      expect(p2.canShowInterstitial(geri.add(const Duration(seconds: 91)), tamamlananFal: 9), isTrue);
     });
 
     test('ödüllü izledikten sonra 120 sn geçiş yok', () async {
@@ -88,6 +98,7 @@ void main() {
       expect(p.canShowInterstitial(t0, tamamlananFal: 2), isTrue);
     });
   });
+
 
   group('Doğal ara', () {
     test('menüye dönüş + 25 sn ve üstü + Dert Ortağı hariç', () {

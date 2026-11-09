@@ -11,16 +11,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/services/ad_pacing.dart';
-import '../../core/services/ad_service.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/bir_tane_daha.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
-import '../../core/widgets/occult_button.dart';
-import '../../core/widgets/odul_teklifi.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
 
@@ -132,34 +128,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
 
   final _rng = Random();
   List<_BarResult>? _results;
-  bool _uyumKilitli = false;
-  bool _uyumTeklifte = false;
-
-  Future<void> _uyumuAc() async {
-    if (_uyumTeklifte) return;
-    _uyumTeklifte = true;
-    final ads = AdService.instance;
-    final s = ref.read(l10nProvider);
-    try {
-      await ads.odulluBekle();
-      if (!mounted) return;
-      if (!ads.odulMumkun(OdulTuru.kutuAc)) {
-        setState(() => _uyumKilitli = false); // reklam yok: yorum engellenmez
-        return;
-      }
-      final kazandi = await odulTeklifiGoster(
-        context,
-        tur: OdulTuru.kutuAc,
-        baslik: s.adOpenReadingTitle,
-        aciklama: s.adOpenReadingBody,
-        izleEtiketi: s.adWatch,
-        vazgecEtiketi: s.adDecline,
-      );
-      if (kazandi && mounted) setState(() => _uyumKilitli = false);
-    } finally {
-      _uyumTeklifte = false;
-    }
-  }
 
   String get _selectedBurc {
     final idx = ((6 - ((_wheelAngle - _kSnapOffset) / (pi / 6)).round()) % 12 + 12) % 12;
@@ -274,7 +242,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     await Future.wait<void>([
       _metinleriHazirla(burc),
       Future.delayed(const Duration(seconds: 5)),
-      AdService.instance.odulluBekle(enFazla: const Duration(seconds: 5)),
     ]);
     if (!mounted) return;
 
@@ -283,9 +250,6 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         DateTime.now().toIso8601String().substring(0, 10));
     if (!mounted) return;
 
-    // Genel yorum yalnız teklif yapılabiliyorsa kilitli başlar; reklam yoksa açık gelir.
-    final ads = AdService.instance;
-    _uyumKilitli = !ads.adsDisabled && ads.odulMumkun(OdulTuru.kutuAc);
     setState(() => _phase = 3);
     Future.delayed(const Duration(milliseconds: 300), () {
       if (mounted) _barCtrl.forward();
@@ -842,13 +806,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               },
             ),
             const SizedBox(height: 10),
-            bar.key == 'uyum' && _uyumKilitli
-                ? OccultButton.secondary(
-                    label: ref.watch(l10nProvider).adOpenReadingHint,
-                    icon: Icons.play_arrow_rounded,
-                    onTap: _uyumuAc,
-                  )
-                : bar.metin.isNotEmpty
+            bar.metin.isNotEmpty
                 ? RichTextParser.build(
                     bar.metin,
                     style: const TextStyle(

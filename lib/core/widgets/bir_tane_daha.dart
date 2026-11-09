@@ -13,7 +13,6 @@ import '../../data/providers.dart';
 import '../services/ad_pacing.dart';
 import '../services/ad_service.dart';
 import 'occult_button.dart';
-import 'odul_teklifi.dart';
 
 /// Fal ekranı bu sonuçla kapanınca ana menü aynı falı yeniden açar.
 const String kBirTaneDaha = 'bir_tane_daha';
@@ -65,7 +64,8 @@ class _BirTaneDahaState extends ConsumerState<BirTaneDaha> {
     if (!ads.odulMumkun(OdulTuru.hakBitti, falTuru: widget.falTuru)) return;
     _mesgul = true;
     try {
-      final kazandi = await ref.hakBittiTeklifi(context, widget.falTuru);
+      // Düğme eylemi ve ödülü açıkça yazıyor; ek pencere yok, reklam doğrudan başlar.
+      final kazandi = await ads.showRewardedFor(OdulTuru.hakBitti, falTuru: widget.falTuru);
       if (!kazandi) return;
       final prefs = await SharedPreferences.getInstance();
       await prefs.remove(widget.hakAnahtari); // ekran kapanmış olsa da hak verilir

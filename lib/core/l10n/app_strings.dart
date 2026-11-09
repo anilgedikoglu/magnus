@@ -483,10 +483,6 @@ class AppStrings {
   String get adOpenNowHint => _s('Reklam izle, hemen aç', 'Watch an ad, open now');
   String get adOneMore => _s('Reklam izle, bir tane daha', 'Watch an ad for one more');
   String get adOtherSign => _s('Reklam izle, başka burca bak', 'Watch an ad to try another sign');
-  String get adOpenReadingHint => _s('Reklam izle, yorumu aç', 'Watch an ad to read it');
-  String get adOpenReadingTitle => _s('Genel yorumu aç', 'Open the overall reading');
-  String get adOpenReadingBody => _s('Kısa bir reklam izlersen genel uyum yorumun açılır.',
-      'Watch a short ad to open your overall compatibility reading.');
   String get oracleDailyLimit => _s('Bugünkü kehanet hakların bitti. Yarın yeniden gel.',
       'Your prophecies for today are used up. Come back tomorrow.');
   String get adOracleTitle =>_s('Üç kehanet daha', 'Three more prophecies');

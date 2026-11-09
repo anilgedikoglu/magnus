@@ -5,28 +5,31 @@
 ## Temel kurallar
 - **Ödüllü reklam yalnız kullanıcı açıkça seçince gösterilir.** Önce ödül ve eylem yazılır, iki eşit düğme: izle / vazgeç. Metin yönlendirmez, korkutmaz.
 - Ödül yalnız `onUserEarnedReward` gelince verilir. Reklam kapatıldıysa ya da gösterilemediyse ödül yok.
-- Hazır reklam yoksa: hak dolduysa eski mesaj; kutu ve Aşk Uyumu genel yorumu ücretsiz açılır. Yüklenmekte olan reklam 2,5 sn beklenir (`AdService.odulluBekle`).
-- **Günlük sınırlar reklamdan bağımsızdır** (kehanet dahil): reklam yoksa ya da reddedilirse "yarın gel". Google: reddetmek normal kullanımı engellememeli; sınır reklam olmasa da aynı olduğu için red ceza olmaz. Aşk Uyumu yorumu ve kutular ek içeriktir.
-- Ödül belirli olur: +1 hak, falı hemen aç, kutuyu aç, yorumu aç, 3 kehanet.
+- Hazır reklam yoksa: hak dolduysa eski mesaj; kutu ücretsiz açılır (ölçülen eşleşme %98-100; asıl kaçak yükleme gecikmesiydi). Yüklenmekte olan reklam 2,5 sn beklenir (`AdService.odulluBekle`).
+- **Günlük sınırlar reklamdan bağımsızdır** (kehanet dahil): reklam yoksa ya da reddedilirse "yarın gel". Google: reddetmek normal kullanımı engellememeli; sınır reklam olmasa da aynı olduğu için red ceza olmaz. Kutular ek içeriktir.
+- Ödül belirli olur: +1 hak, falı hemen aç, kutuyu aç, 3 kehanet.
 - **Fal metni ortadan kesilmez.** Temel sonuç hep ücretsizdir; kilitlenen yalnız ek parçadır.
 - **Geçiş reklamı yalnız doğal arada:** fal tamamlanıp menüye dönerken ya da okunan faldan çıkarken. Açılışta, içerik/okuma sırasında, her dokunuşta, üst üste YOK. Reddedilen fal (fincan onaylanmadı vb.) sonrası yok.
-- Geçiş sınırı (kalıcı): önceki reklamdan (geçiş ya da ödüllü) en az 120 sn sonra, oturumda 3, günde 6. İlk 2 fal tamamlanmadan yok. Dert Ortağı çıkışında yok. Ekranda kalma: gelen kutusuna düşen falda en az 4 sn, sonucu ekranda gösteren falda en az 25 sn.
-- Ödüllü sınırlar (kalıcı): hak bitti tür başına 2, günde toplam 6; hemen aç günde 5; kutu/yorum açma günde 8; hepsi toplam günde 15.
+- Geçiş sınırı (kalıcı): önceki geçişten en az 90 sn, ödüllüden en az 120 sn sonra; oturumda 3, günde 6. İlk falın çıkışında yok, ikinci falın çıkışından itibaren. 30 dakikadan uzun arka plandan dönüş yeni oturumdur. Dert Ortağı çıkışında yok. Ekranda kalma: gelen kutusuna düşen falda en az 4 sn, sonucu ekranda gösteren falda en az 25 sn.
+- Ödüllü sınırlar (kalıcı): hak bitti tür başına 2, günde toplam 6; hemen aç günde 5; kutu açma günde 8; hepsi toplam günde 15.
 
 ## Yerler
 | Yer | Biçim | Ödül |
 |---|---|---|
-| Sonucun sonunda, hak kullanılmışsa: Kahve, Tarot, I-Ching, Japon (fal detayında), Aşk Uyumu, Kader Çarkı, Tavşan, Acı Gerçekler (`BirTaneDaha`) | Düğme → teklif → ödüllü | Fal hemen yeniden açılır |
+| Sonucun sonunda, hak kullanılmışsa: Kahve, Tarot, I-Ching, Japon (fal detayında), Aşk Uyumu, Kader Çarkı, Tavşan, Acı Gerçekler (`BirTaneDaha`) | Düğme ödülü yazar → ödüllü (ek pencere yok) | Fal hemen yeniden açılır |
 | Menüde hak bitti (yukarıdakiler + Dert Ortağı) | Teklif → ödüllü | +1 hak |
 | Durugörü'de bugün sorulmuş soru | Teklif → ödüllü | Soru yeniden sorulur |
-| Gelen kutusunda hazırlanan fal (30 sn'den fazla kaldıysa) | "Reklam izle, hemen aç" → teklif → ödüllü | Fal hemen açılır ve okunur |
+| Gelen kutusunda hazırlanan fal (60 sn'den fazla kaldıysa) | "Reklam izle, hemen aç" → teklif → ödüllü | Fal hemen açılır ve okunur |
 | Kısmetim, Arabam, Evim kapalı kutu | Teklif → ödüllü | Kutu(lar) açılır |
-| Aşk Uyumu genel uyum yorumu (6 çubuk ve yüzde ücretsiz) | Düğme → teklif → ödüllü | Yorum açılır |
 | Kehanet menüsü, günün 4. girişinden sonra | Teklif → ödüllü | 3 giriş |
 | Fal tamamlanıp menüye dönüş, okunan faldan çıkış | Geçiş (sınırlarla) | - |
 
 Kader Kitabı günlük ritüel; astroloji, biyoritim, doğum haritası gün boyu aynı metni verdiği için ek hak yok.
 Aşk Uyumu yüzdeleri kullanıcı burcu + seçilen burç + güne göre sabittir: aynı gün aynı burca bakan aynı yüzdeyi görür.
+
+## Dış denetim (2026-11-09: ChatGPT, DeepSeek, Gemini; Codex sınırda)
+- Alınan: ilk reklam ikinci falın çıkışında; geçiş aralığı 90 sn (ödüllüden 120); Aşk Uyumu genel yorumu kilidi kaldırıldı; hemen aç eşiği 60 sn; düğme ödülü yazıyorsa ek pencere yok.
+- Alınmayan: reklam yokken kutuyu kilitlemek (fal bozulur, ölçülen eşleşme zaten yüksek), reklam önbelleğini 30-40 dk'ya indirmek (Google: reklam yaklaşık 1 saat geçerli), fal açılırken geçiş (beklenmedik reklam), yerleşim başına reklam birimi (önyükleme bölünür, bu trafikte değmez), banner (yalnız Gemini önerdi).
 
 ## Kullanılmayan biçimler
 - **Zorunlu ödüllü:** politika ihlali (eski sürümde vardı); aynı hesaptaki diğer uygulamaları da riske atar.

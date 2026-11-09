@@ -49,7 +49,11 @@ class KehanetMenuScreen extends ConsumerWidget {
           if (context.mounted) {
             ScaffoldMessenger.of(context)
               ..hideCurrentSnackBar()
-              ..showSnackBar(SnackBar(content: Text(s.oracleDailyLimit)));
+              ..showSnackBar(SnackBar(
+                content: Text(s.oracleDailyLimit),
+                behavior: SnackBarBehavior.floating, // yüzen cam barın üstünde kalsın
+                margin: EdgeInsets.fromLTRB(16, 0, 16, floatingBarInset(context) + 8),
+              ));
           }
           return;
         }

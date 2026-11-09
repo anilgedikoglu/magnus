@@ -80,9 +80,35 @@ class AdService {
   @visibleForTesting
   set pacing(AdPacing? p) => _pacing = p;
 
-  /// Admin mod toggle — settings admin panelinden veya godag bypass'tan çağrılır.
-  void setAdsDisabled(bool value) => _adsDisabled = value;
+  /// Admin mod toggle — settings admin panelinden, godag bypass'tan ya da profil değişiminden çağrılır.
+  /// Reklamlar yeniden açılınca hemen yüklenir; yoksa ilk teklif hazır reklam bulamazdı.
+  void setAdsDisabled(bool value) {
+    final acildi = _adsDisabled && !value;
+    _adsDisabled = value;
+    if (acildi) reklamlariTazele();
+  }
+
   bool get adsDisabled => _adsDisabled;
+
+  String? _rizaHatasi;
+  String? _odulluHatasi;
+  String? _gecisHatasi;
+
+  /// Admin panelindeki durum satırı (dilden bağımsız teknik özet; kod 3 = reklam dolmadı).
+  String get tanilama {
+    String durum(bool hazir, bool yukleniyor, String? hata) => hazir
+        ? 'ready'
+        : yukleniyor
+            ? 'loading'
+            : hata == null
+                ? 'none'
+                : 'error $hata';
+    String im(bool v) => v ? '✓' : '✗';
+    final ump = _rizaHatasi == null ? '' : '\nump: $_rizaHatasi';
+    return 'ads ${_adsDisabled ? 'off' : 'on'} · consent ${im(_canRequestAds)} · sdk ${im(_sdkHazir)}\n'
+        'rewarded: ${durum(_rewardedAd != null, _rewardedLoading, _odulluHatasi)}\n'
+        'interstitial: ${durum(_interstitialAd != null, _interstitialLoading, _gecisHatasi)}$ump';
+  }
 
   bool get canRequestAds => _canRequestAds;
 
@@ -140,6 +166,7 @@ class AdService {
 
   /// UMP: her açılışta bilgi güncellenir, gerekirse form gösterilir; hata olursa akış bozulmaz.
   Future<void> _rizaVeBaslat() async {
+    _rizaHatasi = null;
     try {
       final done = Completer<void>();
       ConsentInformation.instance.requestConsentInfoUpdate(
@@ -147,21 +174,27 @@ class AdService {
         () async {
           try {
             await ConsentForm.loadAndShowConsentFormIfRequired((FormError? e) {
-              if (e != null) debugPrint('[AdService] Rıza formu: ${e.message}');
+              if (e != null) {
+                _rizaHatasi = '${e.errorCode} ${e.message}';
+                debugPrint('[AdService] Rıza formu: ${e.message}');
+              }
               if (!done.isCompleted) done.complete();
             });
           } catch (e) {
+            _rizaHatasi = '$e';
             debugPrint('[AdService] Rıza formu hatası: $e');
             if (!done.isCompleted) done.complete();
           }
         },
         (FormError e) {
+          _rizaHatasi = '${e.errorCode} ${e.message}';
           debugPrint('[AdService] Rıza bilgisi alınamadı: ${e.message}');
           if (!done.isCompleted) done.complete();
         },
       );
       await done.future.timeout(const Duration(minutes: 3), onTimeout: () {});
     } catch (e) {
+      _rizaHatasi = '$e';
       debugPrint('[AdService] UMP hatası: $e');
     }
     await _rizaDurumunuYenile();
@@ -234,9 +267,11 @@ class AdService {
           _interstitialYuklendi = DateTime.now();
           _interstitialLoading = false;
           _interstitialRetry = 0;
+          _gecisHatasi = null;
         },
         onAdFailedToLoad: (err) {
           _interstitialLoading = false;
+          _gecisHatasi = '${err.code}';
           debugPrint('[AdService] Interstitial yüklenemedi: $err');
           if (_interstitialRetry < _retryDelays.length) {
             Timer(_retryDelays[_interstitialRetry++], _loadInterstitial);
@@ -308,10 +343,12 @@ class AdService {
           _rewardedYuklendi = DateTime.now();
           _rewardedLoading = false;
           _rewardedRetry = 0;
+          _odulluHatasi = null;
           odulluHazir.value = true;
         },
         onAdFailedToLoad: (err) {
           _rewardedLoading = false;
+          _odulluHatasi = '${err.code}';
           debugPrint('[AdService] Rewarded yüklenemedi: $err');
           if (_rewardedRetry < _retryDelays.length) {
             Timer(_retryDelays[_rewardedRetry++], _loadRewarded);

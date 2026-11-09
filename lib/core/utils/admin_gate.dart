@@ -12,6 +12,9 @@ import '../../data/models/user_profile.dart';
 /// godag girişiyle açılan yönetici modu bayrağı.
 const kAdminModeKey = 'admin_mode';
 
+/// Admin panelindeki "Reklamlar" anahtarının kalıcı değeri.
+const kAdsDisabledKey = 'admin_ads_disabled';
+
 /// Eski (2026-11 öncesi) godag profilinin parmak izi özeti.
 const _kLegacyFingerprint = 0xac4a7277;
 
@@ -57,3 +60,8 @@ int _fingerprint(UserProfile p) => fnv1a32([
 /// Yönetici paneli gösterilsin mi?
 bool isAdmin(UserProfile p, SharedPreferences prefs) =>
     (prefs.getBool(kAdminModeKey) ?? false) || _fingerprint(p) == _kLegacyFingerprint;
+
+/// Reklamlar kapalı mı? Ayar yalnız yönetici iken geçerlidir: profil değişip yönetici olmaktan
+/// çıkılınca reklamlar açılır (yoksa eski ayar reklamı sessizce kapalı tutar, ödül bedava verilirdi).
+bool reklamlarKapaliMi(UserProfile p, SharedPreferences prefs) =>
+    (prefs.getBool(kAdsDisabledKey) ?? false) && isAdmin(p, prefs);

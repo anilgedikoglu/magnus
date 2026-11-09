@@ -22,8 +22,7 @@ class StartupDisclaimer extends StatefulWidget {
   static bool debugSkip = false;
 
   /// Perde ekranı kaplıyor mu? (true: açılış bilgilendirmesi görünür/sönüyor; false: tamamen kalktı.)
-  /// Ana menü, "menü açıldıktan 3 sn sonra chat insin" sayacını perde KALKINCA başlatır — yoksa sayaç
-  /// perdenin arkasında dolar ve perde kalkınca menü ile chat aynı anda görünür (Anıl, 2026-11-07).
+  /// Ana menü sohbeti perde KALKINCA açılır; yoksa ilk söz perdenin arkasında harcanırdı.
   static final ValueNotifier<bool> perdeAcik = ValueNotifier<bool>(false);
 
   @override

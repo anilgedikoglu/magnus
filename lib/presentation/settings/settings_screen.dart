@@ -2885,7 +2885,7 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
             // ── Reklam toggle ──────────────────────────────────────────────
             Future<void> toggleAds(bool value) async {
               final prefs = await SharedPreferences.getInstance();
-              await prefs.setBool('admin_ads_disabled', value);
+              await prefs.setBool(kAdsDisabledKey, value);
               AdService.instance.setAdsDisabled(value);
               setPanelState(() => adsDisabled = value);
             }
@@ -3008,6 +3008,8 @@ Magnus içerikleri tamamen eğlence amaçlıdır. Fal yorumları, astroloji anal
                       ],
                     ),
                   ),
+                  const SizedBox(height: 10),
+                  const _ReklamDurumu(),
                 ],
               ),
             );
@@ -3653,4 +3655,37 @@ class _CollapsibleLowerState extends ConsumerState<_CollapsibleLower>
       },
     );
   }
+}
+
+/// Admin panelinde canlı reklam durumu: cihazda reklam neden çıkmıyor, buradan okunur.
+class _ReklamDurumu extends StatefulWidget {
+  const _ReklamDurumu();
+
+  @override
+  State<_ReklamDurumu> createState() => _ReklamDurumuState();
+}
+
+class _ReklamDurumuState extends State<_ReklamDurumu> {
+  late final Timer _yenile;
+
+  @override
+  void initState() {
+    super.initState();
+    _yenile = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (mounted) setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    _yenile.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => Text(
+        AdService.instance.tanilama,
+        key: const ValueKey('adminReklamDurumu'),
+        style: const TextStyle(color: AppColors.boneDim, fontSize: 12, height: 1.4),
+      );
 }

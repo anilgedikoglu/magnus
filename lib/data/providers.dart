@@ -19,7 +19,9 @@
 //   await ref.read(userProfileProvider.notifier).save(profile.copyWith(...));
 //   final s = ref.watch(l10nProvider);  // localization
 // ─────────────────────────────────────────────────────────────────────────────
+import '../core/services/ad_service.dart';
 import '../core/services/notification_service.dart';
+import '../core/utils/admin_gate.dart';
 import '../core/widgets/glass_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -158,10 +160,17 @@ class UserProfileNotifier extends Notifier<UserProfile> {
     final storage = ref.read(storageServiceProvider);
     await storage.saveProfile(profile);
     state = profile;
+    _reklamAyariniEsitle();
   }
 
   void update(UserProfile Function(UserProfile) fn) {
     state = fn(state);
+    _reklamAyariniEsitle();
+  }
+
+  /// Profil değişip yönetici olmaktan çıkılınca "reklamlar kapalı" ayarı geçerliliğini yitirir.
+  void _reklamAyariniEsitle() {
+    AdService.instance.setAdsDisabled(reklamlarKapaliMi(state, ref.read(sharedPrefsProvider)));
   }
 
   Future<void> completeOnboarding(UserProfile profile) async {

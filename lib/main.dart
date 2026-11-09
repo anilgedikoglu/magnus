@@ -5,9 +5,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'app.dart';
 import 'core/services/ad_service.dart';
+import 'core/utils/admin_gate.dart';
 import 'core/widgets/glass_tab_bar.dart';
 import 'core/widgets/lamp_toggle.dart';
+import 'data/models/user_profile.dart';
 import 'data/providers.dart';
+import 'data/services/storage_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -50,9 +53,9 @@ void main() async {
 
   final prefs = await SharedPreferences.getInstance();
 
-  // Admin modu: godag bypass ile girildiyse reklamlar kapalıdır
-  final adsDisabled = prefs.getBool('admin_ads_disabled') ?? false;
-  AdService.instance.setAdsDisabled(adsDisabled);
+  // Reklam kapatma yalnız yönetici iken geçerli (admin_gate.dart).
+  AdService.instance.setAdsDisabled(
+      reklamlarKapaliMi(StorageService(prefs).loadProfile() ?? UserProfile.empty(), prefs));
 
   runApp(
     ProviderScope(

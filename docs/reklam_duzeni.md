@@ -48,6 +48,10 @@ Aşk Uyumu yüzdeleri kullanıcı burcu + seçilen burç + güne göre sabittir:
 ## Teknik
 - Yüklenen reklam 55 dakikadan eskiyse atılır, yenisi istenir (`AdService.reklamOmru`). Uygulamaya dönüşte ve teklif öncesinde eksik reklam yeniden istenir.
 
+## Yönetici
+- Admin panelindeki Reklamlar anahtarı yalnız yönetici iken geçerlidir (`reklamlarKapaliMi`); profil değişip yönetici olmaktan çıkılınca reklamlar açılır. Kapalıyken ödül reklamsız verilir.
+- Panelde canlı durum satırı: `ads · consent · sdk`, `rewarded`, `interstitial`, varsa `ump` hatası. `error 3` = reklam dolmadı.
+
 ## Rıza ve gizlilik
 - UMP: her açılışta bilgi güncellenir, gerekirse form; `canRequestAds` olmadan reklam istenmez. Hata olursa reklam akışı bozulmaz.
 - iOS: ATT yok, istekler `nonPersonalizedAds: true`, Info.plist'te SKAdNetworkItems.

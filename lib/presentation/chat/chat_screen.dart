@@ -248,7 +248,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     await ref.read(languagePickedProvider.notifier).markPicked();
     // Admin modunda reklamlar kapalı
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('admin_ads_disabled', true);
+    await prefs.setBool(kAdsDisabledKey, true);
     await prefs.setBool(kAdminModeKey, true);
     AdService.instance.setAdsDisabled(true);
     if (mounted) context.go('/home');

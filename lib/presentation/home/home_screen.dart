@@ -123,13 +123,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
   final GlobalKey<HomeChatBoxState> _chatBox = GlobalKey<HomeChatBoxState>();
   final List<String> _chatPending = [];
-  Timer? _chatTimer;
-  bool _chatGateOpen = false; // açılışta menü göründükten 3 sn sonra açılır
+  // Açılışta perde kalkınca açılır. Mesajlar beklemeden gelir (Anıl, 2026-11-09: 3 sn gecikmeler kaldırıldı).
+  bool _chatGateOpen = false;
   bool _greeted = false;
-  // Yeni mesaj menüde bir KARTA DOKUNUŞA cevap mı (hak bitti)? → anında.
-  // Değilse (fal gönderilip menüye DÖNÜLDÜ) → menü önce görünür, mesaj 3 sn SONRA (Anıl, 2026-11-07).
-  bool _tapPop = false;
-  VoidCallback? _perdeDinleyici; // açılış perdesi kalkınca 3 sn sayacını başlatır
+  VoidCallback? _perdeDinleyici; // açılış perdesi kalkınca sohbeti açar
   String _selamlama = ''; // async yüklenir
 
   // Magnus'un sesi: hafıza + seçim beyni (core/magnus_ses).
@@ -256,18 +253,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   /// Magnus'un yeni mesajı.
   void _say(String text) {
     if (!mounted) return;
-    if (_tapPop) {
-      _tapPop = false;
+    if (_chatGateOpen) {
       _onemliMesajAni = DateTime.now();
       _chatBox.currentState?.say(text, now: true);
       return;
     }
-    _chatPending.add(text);
-    if (_chatGateOpen) {
-      _donusBandiniPlanla();
-    } else if (_perdeDinleyici == null) {
-      _kapiyiAc(); // menü göründükten sonra gelen mesaj da tam 3 sn bekler
-    }
+    _chatPending.add(text); // perde kalkınca söylenir
+    if (_perdeDinleyici == null) _kapiyiAc();
   }
 
   void _flushChat() {
@@ -439,8 +431,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     super.didChangeDependencies();
     if (!_selamlamaYuklendi) {
       _selamlamaYuklendi = true;
-      // Selamlama JSON'u arka planda yüklenir; menü GÖRÜNDÜKTEN 3 sn sonra kutuda belirir.
-      // ⚠️ Her açılışta 6 sn'lik yasal perde menünün ÜSTÜNDE durur; sayaç perde KALKINCA başlar.
+      // Selamlama JSON'u arka planda yüklenir; menü GÖRÜNÜR görünmez kutuda belirir.
+      // ⚠️ Her açılışta 6 sn'lik yasal perde menünün ÜSTÜNDE durur; sohbet perde KALKINCA açılır.
       _loadSelamlama();
       _acilisBandiniPlanla();
     }
@@ -473,15 +465,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     }
   }
 
-  /// Açılış selamlaması: menü görünür olduktan (açılış perdesi kalktıktan) 3 sn sonra.
+  /// Açılış selamlaması: menü görünür olur olmaz (açılış perdesi kalkınca).
   void _kapiyiAc() {
-    _chatTimer?.cancel();
-    _chatTimer = Timer(const Duration(seconds: 3), () {
+    void ac() {
       if (!mounted) return;
       _chatGateOpen = true;
       _selamla();
       _flushChat();
-    });
+    }
+
+    if (_chatBox.currentState != null) {
+      ac();
+    } else {
+      WidgetsBinding.instance.addPostFrameCallback((_) => ac()); // kutu ilk karede kurulur
+    }
   }
 
   void _acilisBandiniPlanla() {
@@ -500,20 +497,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     StartupDisclaimer.perdeAcik.addListener(dinle);
   }
 
-  /// Menüye DÖNÜŞTE gelen Magnus mesajı (fal gönderildi vb.): menü önce görünsün, mesaj 3 sn sonra.
-  void _donusBandiniPlanla() {
-    _chatTimer?.cancel();
-    _chatTimer = Timer(const Duration(seconds: 3), () {
-      if (mounted) _flushChat();
-    });
-  }
-
   @override
   void dispose() {
     final d = _perdeDinleyici;
     if (d != null) StartupDisclaimer.perdeAcik.removeListener(d);
     _unlockTimer?.cancel();
-    _chatTimer?.cancel();
     _yasam.dispose();
     MagnusRotaGozlemci.girdi = null;
     MagnusRotaGozlemci.cikti = null;
@@ -571,12 +559,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       // reklam hazır değilse eski mesaj.
       if (await _hakTeklifiCozuldu(type, () => _onFortuneItemTap(type, route))) return;
       if (!mounted) return;
-      _tapPop = true; // menüden çıkılmadı, dokunuşa cevap → band anında
       _showDailyLimitBubble(type);
       return;
     }
     if (!mounted) return;
-    // Ekrandan menüye DÖNÜŞTE gelen mesajlar (hazırlanıyor / zaten okundu) → menü önce, chat 3 sn sonra.
     final result = await context.push<String?>(route);
     if (!mounted) return;
     if (result == kBirTaneDaha) {
@@ -635,7 +621,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     if (remaining <= 0) {
       if (await _hakTeklifiCozuldu(type, () => _onDailyFalTap(type, route))) return;
       if (!mounted) return;
-      _tapPop = true; // menüden çıkılmadı, dokunuşa cevap → band anında
       _showDailyLimitBubble(type);
       return;
     }

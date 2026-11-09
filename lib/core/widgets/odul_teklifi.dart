@@ -157,13 +157,13 @@ extension OdulTeklifiKisayol on WidgetRef {
     );
   }
 
-  /// Kapalı kutu: [aciklama] kişi/dönem/tek kutu metni.
-  Future<bool> kutuAcTeklifi(BuildContext context, String aciklama) {
+  /// Kapalı kutu: [aciklama] kişi/dönem/tek kutu metni; [tek] ise başlık da tekil.
+  Future<bool> kutuAcTeklifi(BuildContext context, String aciklama, {bool tek = false}) {
     final s = read(l10nProvider);
     return odulTeklifiGoster(
       context,
       tur: OdulTuru.kutuAc,
-      baslik: s.adOpenBoxTitle,
+      baslik: tek ? s.adOpenBoxSingleTitle : s.adOpenBoxTitle,
       aciklama: aciklama,
       izleEtiketi: s.adWatch,
       vazgecEtiketi: s.adDecline,

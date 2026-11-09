@@ -143,7 +143,7 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
       await AdService.instance.odulluBekle();
       if (!mounted) return;
       if (AdService.instance.odulMumkun(OdulTuru.kutuAc)) {
-        ac = await ref.kutuAcTeklifi(context, ref.read(l10nProvider).adOpenBoxSingleBody);
+        ac = await ref.kutuAcTeklifi(context, ref.read(l10nProvider).adOpenBoxSingleBody, tek: true);
       }
       if (!ac || !mounted) return;
       setState(() => _opening.add(index));

@@ -54,3 +54,6 @@ app_secrets.dart
 *.cer
 *.mobileprovision
 ios_certs/
+
+# Yerel ajan notu; imza bilgisi içerebilir
+AGENTS.md

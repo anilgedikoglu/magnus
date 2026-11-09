@@ -320,14 +320,14 @@ Row(
 ### Keystore Dosyası
 - **Konum:** `C:\src\magnus_app\android\magnus_release.jks`
 - **Alias:** `magnus`
-- **Keystore şifresi:** `magnus2024!`
-- **Key şifresi:** `magnus2024!`
+- **Keystore şifresi:** `android/key.properties` yerel dosyasında (git dışı, repoya yazılmaz)
+- **Key şifresi:** `android/key.properties` yerel dosyasında (git dışı, repoya yazılmaz)
 - **Yapı:** RSA 2048-bit, 10000 gün geçerli, CN=Magnus App, C=TR
 
 ### key.properties (android/key.properties)
 ```
-storePassword=magnus2024!
-keyPassword=magnus2024!
+storePassword=<yerel dosyada>
+keyPassword=<yerel dosyada>
 keyAlias=magnus
 storeFile=../magnus_release.jks
 ```
@@ -1577,7 +1577,7 @@ Tüm sayfalar TR/EN dil seçimi içeriyor (tarayıcı diline göre otomatik).
 - **Team ID:** `SN5Y726ZKF`
 - **Distribution cert:** Apple Distribution: FUTURASTIC... (Jun 2026–Jun 2027)
 - **Provisioning Profile:** Magnus App Store Profile (UUID: 068091fb-8ada-45bb-b14d-ea3d7f01ebfc)
-- **P12:** `C:\src\magnus_app\ios_certs\ios_distribution.p12` (şifre: `Magnus2026iOS`)
+- **P12:** `C:\src\magnus_app\ios_certs\ios_distribution.p12` (parola repoda yok: GitHub Actions secret `IOS_CERTIFICATE_PASSWORD`, yerel kopya parola yöneticisinde)
 - **P12 formatı:** legacy PBE-SHA1-3DES (macOS Keychain uyumlu — OpenSSL 3 default PBES2 değil)
 
 ### Codemagic

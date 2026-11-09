@@ -13,6 +13,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/widgets/bir_tane_daha.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/utils/rich_text_parser.dart';
@@ -323,6 +324,8 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     _sonucIstendi = true;
     // ref yalnız await ÖNCESİ (Codex: ekrandan çıkılırsa catch içindeki ref.read de patlardı).
     final hataMetni = ref.read(l10nProvider).kaderCarkiError;
+    await sonucOncesiReklam();
+    if (!mounted) return;
     String metin;
     try {
       metin = await (_metinFuture ??

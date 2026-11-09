@@ -7,6 +7,7 @@ import '../../core/magnus_ses/magnus_fal_adlari.dart';
 import '../../core/magnus_ses/magnus_hafiza.dart';
 import '../../core/services/ad_pacing.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/widgets/odul_teklifi.dart';
 import '../../core/widgets/glass_tab_bar.dart';
 import '../../data/models/inbox_item.dart';
@@ -180,9 +181,22 @@ class InboxScreen extends ConsumerWidget {
     );
   }
 
-  void _openDetail(BuildContext context, WidgetRef ref, InboxItem item) {
+  /// Hazır fala dokunuş: okunmamışsa reklam fal açılmadan hemen önce (reklam.md).
+  Future<void> _openDetail(BuildContext context, WidgetRef ref, InboxItem item) async {
+    if (_aciliyor) return;
+    if (!item.isRead) {
+      _aciliyor = true;
+      try {
+        await sonucOncesiReklam();
+      } finally {
+        _aciliyor = false;
+      }
+      if (!context.mounted) return;
+    }
     _navigateToDetail(context, ref, item);
   }
+
+  static bool _aciliyor = false;
 
   /// Hazırlanan (kilitli) karta dokunuş: kullanıcı isterse ödüllü reklamla fal hemen hazır olur.
   /// Reklam hazır değil / sınır dolu ise kart eski davranışında (dokunuş bir şey yapmaz).
@@ -219,7 +233,7 @@ class InboxScreen extends ConsumerWidget {
         .push(MaterialPageRoute(builder: (_) => InboxDetailScreen(item: item)))
         .then((_) {
       // Okunan faldan çıkış doğal ara: geçiş reklamı (sınırlar AdPacing'de, yeterince okunduysa).
-      if (DateTime.now().difference(basla) >= AdPacing.gecisIcinMinSure) {
+      if (!kSonucOncesiReklam && DateTime.now().difference(basla) >= AdPacing.gecisIcinMinSure) {
         // Sayaç bu okumayı da içerir; ilk okunan falın çıkışında reklam çıkmasın.
         final oncekiFal = (MagnusHafiza.aktif?.tamamlananFal ?? 0) - 1;
         AdService.instance.maybeShowInterstitial(tamamlananFal: oncekiFal);

@@ -46,6 +46,9 @@ class AdPacing {
   /// Geçiş reklamı için fal en az bu kadar açık kalmış olmalı.
   static const gecisIcinMinSure = Duration(seconds: 25);
 
+  /// Sonucu ekranda gösteren fal bu kadar açık kaldıysa görülmüş sayılır (ilk fal muafiyeti için).
+  static const sonucGorulduMinSure = Duration(seconds: 10);
+
   /// Gelen kutusuna düşen fallarda ekranın kısa kalması normal (fal gönderildi, tamamlandı).
   static const gecisIcinMinSureGonderim = Duration(seconds: 4);
 

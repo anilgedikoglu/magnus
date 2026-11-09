@@ -14,6 +14,7 @@ import '../../core/widgets/unlock_flash.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/services/ad_pacing.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/widgets/odul_teklifi.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/marquee_text.dart';
@@ -126,7 +127,13 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
     });
   }
 
-  void _spinnerBitti() {
+  bool _reklamda = false;
+
+  Future<void> _spinnerBitti() async {
+    if (!mounted || _adim != _Adim.hesap || _reklamda) return;
+    _reklamda = true;
+    await sonucOncesiReklam();
+    _reklamda = false;
     if (!mounted || _adim != _Adim.hesap) return;
     setState(() => _adim = _Adim.liste);
   }

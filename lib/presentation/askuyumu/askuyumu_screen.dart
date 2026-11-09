@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/bir_tane_daha.dart';
@@ -248,6 +249,8 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('askuyumu_bugun_tarih',
         DateTime.now().toIso8601String().substring(0, 10));
+    if (!mounted) return;
+    await sonucOncesiReklam();
     if (!mounted) return;
 
     setState(() => _phase = 3);

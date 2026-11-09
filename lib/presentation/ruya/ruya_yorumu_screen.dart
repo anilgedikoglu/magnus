@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uuid/uuid.dart';
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../data/services/dream_interpreter.dart';
@@ -481,6 +482,8 @@ class _RuyaYorumuScreenState extends ConsumerState<RuyaYorumuScreen> {
 
     setState(() => _yorumlaniyor = true);
     await Future<void>.delayed(const Duration(seconds: 5));
+    if (!mounted) return;
+    await sonucOncesiReklam();
     if (!mounted) return;
     setState(() => _yorumlaniyor = false);
     await showDialog<void>(

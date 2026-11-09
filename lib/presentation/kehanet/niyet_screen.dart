@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
@@ -134,11 +135,17 @@ class _NiyetScreenState extends ConsumerState<NiyetScreen>
       if (!_fullyRevealed && _scratchPct >= 0.40) {
         _fullyRevealed = true;
         HapticFeedback.heavyImpact();
-        _revealCtrl.forward().then((_) {
-          if (mounted) setState(() => _adim = _NiyetAdim.tamamlandi);
-        });
+        _acilis();
       }
     });
+  }
+
+  // Eşik aşıldı: reklam, sonra örtü açılır (_fullyRevealed tek tetikler).
+  Future<void> _acilis() async {
+    await sonucOncesiReklam();
+    if (!mounted) return;
+    await _revealCtrl.forward();
+    if (mounted) setState(() => _adim = _NiyetAdim.tamamlandi);
   }
 
   // ─────────────────────────────────────────────────────────────────────────

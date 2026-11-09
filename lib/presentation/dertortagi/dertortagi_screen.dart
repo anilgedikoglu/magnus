@@ -15,6 +15,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/elegant_hourglass.dart';
@@ -215,6 +216,8 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
     _gecisTimer = Timer(const Duration(seconds: 5), () async {
       if (!mounted) return;
       await _secDermanSeti();            // no-repeat ile 1 tavsiye seti seç
+      if (!mounted) return;
+      await sonucOncesiReklam();
       if (!mounted) return;
       setState(() {
         _adim = _DertAdim.derman;

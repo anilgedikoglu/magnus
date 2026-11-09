@@ -83,6 +83,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_pacing.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/widgets/bir_tane_daha.dart';
 import '../../data/models/inbox_item.dart';
 import '../../core/widgets/odul_teklifi.dart';
@@ -190,6 +191,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     final ustKutu = mounted ? ref.read(inboxProvider) : const <InboxItem>[];
     final kutuyaDustu = ustKutu.isNotEmpty && ustKutu.first.id != _falGirisUstId;
     if (mounted &&
+        !kSonucOncesiReklam &&
         kutuyaDustu &&
         AdPacing.dogalAraMi(tur, sure,
             menuyeDonuyor: hedef == null || hedef == '/home', kutuyaDustu: true)) {
@@ -204,7 +206,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       final esik = kAnlikFallar.contains(tur) ? 6 : 20;
       final vazgecti = !tamam && sure.inSeconds < esik && _menuGorunur && _chatPending.isEmpty;
       // Sonucu ekranda gösteren fal yeterince açık kaldıysa "tamamlanan fal" sayılır (reklam eşiği).
-      if (!tamam && kAnlikFallar.contains(tur) && sure >= AdPacing.gecisIcinMinSure) {
+      if (!tamam && kAnlikFallar.contains(tur) && sure >= AdPacing.sonucGorulduMinSure) {
         hafiza.falTamamlandi();
       }
       hafiza.falCikti(tur, DateTime.now(), vazgecti: vazgecti, tamam: tamam);
@@ -562,6 +564,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       return;
     }
     if (!mounted) return;
+    if (_acilirAcilmazReklamli.contains(type)) {
+      if (_girisReklami) return;
+      _girisReklami = true;
+      try {
+        await sonucOncesiReklam();
+      } finally {
+        _girisReklami = false;
+      }
+      if (!mounted) return;
+    }
     final result = await context.push<String?>(route);
     if (!mounted) return;
     if (result == kBirTaneDaha) {
@@ -632,10 +644,27 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   }
 
   // ─── Navigasyon yardımcısı ────────────────────────────────────────────────
-  Future<void> _pushWithAd(String route) async {
+  Future<void> _pushDirekt(String route) async {
     if (!mounted) return;
     await context.push(route);
   }
+
+  /// Ritüeli olmayan, sonucu hemen gösteren türler: önce reklam, kapanınca fal (reklam.md).
+  Future<void> _reklamlaGir(String route) async {
+    if (_girisReklami) return;
+    _girisReklami = true;
+    try {
+      await sonucOncesiReklam();
+    } finally {
+      _girisReklami = false;
+    }
+    await _pushDirekt(route);
+  }
+
+  bool _girisReklami = false;
+
+  /// Hak kullanan ama ritüeli olmayan türler.
+  static const _acilirAcilmazReklamli = {'olumlama', 'ozlusoz', 'kaderkitabi'};
 
   void _showHazirlaniyorBubble(String type) {
     final msg = ref.read(l10nProvider).hazirlaniyorMessage(type);
@@ -662,7 +691,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             _remainingCredits['tarot'] ?? 1,
             () => _onFortuneItemTap('tarot', '/tarot')),
         _MenuItem(s.astrology, 'assets/images/astroloji.png',
-            -1, () => _pushWithAd('/astroloji')),
+            -1, () => _reklamlaGir('/astroloji')),
         _MenuItem(s.numerology, 'assets/images/menu/numeroloji.png',
             -1,
             () => _onFortuneItemTap('numeroloji', '/numeroloji')),
@@ -670,13 +699,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             _remainingCredits['durugoru'] ?? 1,
             () => _onFortuneItemTap('durugoru', '/durugoru')),
         _MenuItem(s.faceFortune, 'assets/images/menu/yuzfali.png', 1,
-            () => _pushWithAd('/yuz_fali_kimin')),
+            () => _pushDirekt('/yuz_fali_kimin')),
         _MenuItem(s.palmReading, 'assets/images/menu/elfali.png', 1,
-            () => _pushWithAd('/el_fali')),
+            () => _pushDirekt('/el_fali')),
         _MenuItem(s.astroCalendar, 'assets/images/aytakvimi.png',
-            -1, () => _pushWithAd('/astrotakvim')),
+            -1, () => _reklamlaGir('/astrotakvim')),
         _MenuItem(s.biorhythm, 'assets/images/falbg/biyoritim.png',
-            -1, () => _pushWithAd('/biyoritim')),
+            -1, () => _reklamlaGir('/biyoritim')),
       ];
   }
 
@@ -687,8 +716,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         _MenuItem(s.motivation, 'assets/images/motivasyon_yeni.png',
             -1,
             () async {
-              if (!mounted) return;
-              await context.push('/motivation');
+              await _reklamlaGir('/motivation');
               if (!mounted) return;
               await _refreshCredits();
             }),
@@ -710,7 +738,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         _MenuItem(s.prophecy, 'assets/images/menu/kehanet.png', 1,
             () => _onFortuneItemTap('kehanet', '/kehanet')),
         _MenuItem(s.intention, 'assets/images/menu/mistikfallar.png', 1,
-            () => _pushWithAd('/niyet')),
+            () => _pushDirekt('/niyet')),
         _MenuItem(s.japaneseFortune, 'assets/images/japonfali.png',
             _remainingCredits['japonfali'] ?? 1,
             () => _onDailyFalTap('japonfali', '/japonfali')),
@@ -731,22 +759,22 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             _remainingCredits['kadercarki'] ?? 1,
             () => _onFortuneItemTap('kadercarki', '/kadercarki')),
         _MenuItem(s.dreamReading, 'assets/images/menu/ruyaozel.png', 1,
-            () => _pushWithAd('/ruya_yorumu')),
+            () => _pushDirekt('/ruya_yorumu')),
         // Rüya Yorumu ile Doğum Haritası arası: Tavşan Falı (günde 1, 2026-11-05)
         _MenuItem(s.rabbitFortune, 'assets/images/tavsanfali/tavsanfali_menu.jpg',
             _remainingCredits['tavsanfali'] ?? 1,
             () => _onDailyFalTap('tavsanfali', '/tavsanfali')), // günde 1: bugün çektiyse balon (Anıl)
         _MenuItem(s.birthChart, 'assets/images/dogum.png',
-            1, () => _pushWithAd('/dogumharitasi')),
+            1, () => _reklamlaGir('/dogumharitasi')),
         // Rüya Yorumu'nun altı: Kısmetim Kim? (2026-11-05)
         _MenuItem(s.whoIsMyDestiny, 'assets/images/kismetim/kismetim_menu.jpg', 1,
-            () => _pushWithAd('/kismetim')),
+            () => _pushDirekt('/kismetim')),
         // Kısmetim'in sağı: Arabam Ne? (2026-11-05)
         _MenuItem(s.whatIsMyCar, 'assets/images/arabam/arabam_menu.jpg', 1,
-            () => _pushWithAd('/arabam')),
+            () => _pushDirekt('/arabam')),
         // Arabam'ın sağı (son yer): Evim Neresi? (2026-11-05)
         _MenuItem(s.whereIsMyHome, 'assets/images/evim/evim_menu.jpg', 1,
-            () => _pushWithAd('/evim')),
+            () => _pushDirekt('/evim')),
       ];
   }
 

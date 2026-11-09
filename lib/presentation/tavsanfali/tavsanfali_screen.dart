@@ -12,6 +12,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../core/constants/app_text_styles.dart';
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/bir_tane_daha.dart';
@@ -84,7 +85,16 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
     }
     _idle.stop();
     // Bekleme payını atla: dokunur dokunmaz uzansın.
-    _ctrl.forward(from: _kLeadMs / _kTotalMs);
+    _ctrl.value = _kLeadMs / _kTotalMs;
+    // Süzülme (p=0.79) bitince dur, reklamdan sonra not kartı açılsın.
+    _ctrl
+        .animateTo((_kLeadMs + 0.79 * _kActionMs) / _kTotalMs, curve: Curves.linear)
+        .then((_) async {
+      if (!mounted) return;
+      await sonucOncesiReklam();
+      if (!mounted) return;
+      _ctrl.forward();
+    });
   }
 
   @override

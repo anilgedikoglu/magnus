@@ -284,7 +284,12 @@ class AdService {
   /// Doğal arada (fal kapanıp menüye dönerken) geçiş reklamı gösterir. Gösterildiyse true.
   /// Sınırlar [AdPacing]'den: 90 sn aralık, ödüllüden 120 sn, oturumda 3, günde 6, [tamamlananFal] ≥ 1.
   /// Hazır reklam yoksa ya da sınır doluysa sessizce false; hiçbir akışı bekletmez.
-  Future<bool> maybeShowInterstitial({required int tamamlananFal, DateTime? now}) async {
+  /// [kapanincaDon]: reklam kapanana kadar bekler (fal, reklamdan sonra açılacaksa).
+  Future<bool> maybeShowInterstitial({
+    required int tamamlananFal,
+    DateTime? now,
+    bool kapanincaDon = false,
+  }) async {
     if (_adsDisabled || !_canRequestAds || _reklamDevam) return false;
     final pacing = _pacing;
     final t = now ?? DateTime.now();
@@ -320,6 +325,9 @@ class AdService {
       await pacing.recordInterstitial(t); // gösterim denemesi sayılır (üst üste denemeyi önler)
       await ad.show();
       gosterildi = true;
+      if (kapanincaDon) {
+        await completer.future.timeout(const Duration(minutes: 2), onTimeout: () {});
+      }
     } catch (e) {
       debugPrint('[AdService] Interstitial show hatası: $e');
       ad.dispose();

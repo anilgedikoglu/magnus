@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:video_player/video_player.dart';
+import '../../core/services/sonuc_reklami.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/utils/no_repeat_picker.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
@@ -38,6 +39,12 @@ class _KahinMetinScreenState extends ConsumerState<KahinMetinScreen> {
   Future<void> _init() async {
     await _loadMetin();
     await _initVideo();
+    if (!mounted) return;
+    await _videoCtrl?.pause(); // reklam açıkken video arkada oynamasın
+    await sonucOncesiReklam();
+    if (mounted) {
+      await _videoCtrl?.play();
+    }
     if (mounted) {
       setState(() => _loading = false);
       _startTypewriter();

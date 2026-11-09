@@ -9,7 +9,7 @@
 - **Günlük sınırlar reklamdan bağımsızdır** (kehanet dahil): reklam yoksa ya da reddedilirse "yarın gel". Google: reddetmek normal kullanımı engellememeli; sınır reklam olmasa da aynı olduğu için red ceza olmaz. Kutular ek içeriktir.
 - Ödül belirli olur: +1 hak, falı hemen aç, kutuyu aç, 3 kehanet.
 - **Fal metni ortadan kesilmez.** Temel sonuç hep ücretsizdir; kilitlenen yalnız ek parçadır.
-- **Geçiş reklamı yalnız doğal arada:** fal tamamlanıp menüye dönerken ya da okunan faldan çıkarken. Açılışta, içerik/okuma sırasında, her dokunuşta, üst üste YOK. Reddedilen fal (fincan onaylanmadı vb.) sonrası yok.
+- **Geçiş reklamı yalnız doğal arada:** fal gelen kutusuna gönderilip uygulama kendiliğinden menüye dönerken ya da okunan faldan çıkarken. Fal türlerinden geri tuşuyla menüye dönüşte YOK. Açılışta, içerik/okuma sırasında, her dokunuşta, üst üste YOK. Reddedilen fal (fincan onaylanmadı vb.) sonrası yok.
 - Geçiş sınırı (kalıcı): önceki geçişten en az 90 sn, ödüllüden en az 120 sn sonra; oturumda 3, günde 6. İlk falın çıkışında yok, ikinci falın çıkışından itibaren. 30 dakikadan uzun arka plandan dönüş yeni oturumdur. Dert Ortağı çıkışında yok. Ekranda kalma: gelen kutusuna düşen falda en az 4 sn, sonucu ekranda gösteren falda en az 25 sn.
 - Ödüllü sınırlar (kalıcı): hak bitti tür başına 2, günde toplam 6; hemen aç günde 5; kutu açma günde 8; hepsi toplam günde 15.
 
@@ -22,7 +22,7 @@
 | Gelen kutusunda hazırlanan fal (60 sn'den fazla kaldıysa) | "Reklam izle, hemen aç" → teklif → ödüllü | Fal hemen açılır ve okunur |
 | Kısmetim, Arabam, Evim kapalı kutu | Teklif → ödüllü | Kutu(lar) açılır |
 | Kehanet menüsü, günün 4. girişinden sonra | Teklif → ödüllü | 3 giriş |
-| Fal tamamlanıp menüye dönüş, okunan faldan çıkış | Geçiş (sınırlarla) | - |
+| Fal gönderilip menüye dönüş, okunan faldan çıkış | Geçiş (sınırlarla) | - |
 
 Kader Kitabı günlük ritüel; astroloji, biyoritim, doğum haritası gün boyu aynı metni verdiği için ek hak yok.
 Aşk Uyumu yüzdeleri kullanıcı burcu + seçilen burç + güne göre sabittir: aynı gün aynı burca bakan aynı yüzdeyi görür.
@@ -30,6 +30,8 @@ Aşk Uyumu yüzdeleri kullanıcı burcu + seçilen burç + güne göre sabittir:
 ## Dış denetim (2026-11-09: ChatGPT, DeepSeek, Gemini; Codex sınırda)
 - Alınan: ilk reklam ikinci falın çıkışında; geçiş aralığı 90 sn (ödüllüden 120); Aşk Uyumu genel yorumu kilidi kaldırıldı; hemen aç eşiği 60 sn; düğme ödülü yazıyorsa ek pencere yok.
 - Alınmayan: reklam yokken kutuyu kilitlemek (fal bozulur, ölçülen eşleşme zaten yüksek), reklam önbelleğini 30-40 dk'ya indirmek (Google: reklam yaklaşık 1 saat geçerli), fal açılırken geçiş (beklenmedik reklam), yerleşim başına reklam birimi (önyükleme bölünür, bu trafikte değmez), banner (yalnız Gemini önerdi).
+
+Her noktanın güncel yerleşimi ve gelir kaydı: kök dizindeki `reklam.md`.
 
 ## Kullanılmayan biçimler
 - **Zorunlu ödüllü:** politika ihlali (eski sürümde vardı); aynı hesaptaki diğer uygulamaları da riske atar.

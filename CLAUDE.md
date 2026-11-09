@@ -1513,7 +1513,8 @@ Kodda `testDeviceIds` tanımlı değil → canlı uygulamada kendi reklamına t�
   `*_bugun_tarih` anahtarı silinir; Durugörü'de kendi ekranında, sorunun `*_tarih` anahtarı) · gelen kutusunda kilitli kart
   ("Reklam izle, hemen aç" işareti, `InboxNotifier.unlockNow`) · Kısmetim/Arabam/Evim kapalı kutu
   (kişi/dönemin tüm kutuları). Reklam hazır değil / sınır dolu / admin → kutu ücretsiz açılır, hak bitti eski mesajı verir.
-- Geçiş reklamı yalnız doğal arada: fal kapanıp menüye dönerken (`home_screen._falCikti`, ≥25 sn, Dert Ortağı hariç) ve
+- **Her reklam değişikliği kök dizindeki `reklam.md` defterine yazılır.** Düğmeye basınca ya da sonuç açılmadan hemen önce düz geçiş reklamı Google Play politikasına göre YASAK.
+- Geçiş reklamı yalnız doğal arada: fal gönderilip menüye kendiliğinden dönerken (`home_screen._falCikti`; geri tuşuyla fal türünden çıkışta YOK) ve
   gelen kutusundan okunan fal kapanınca. Sınırlar kalıcı: `lib/core/services/ad_pacing.dart` (geçişten 90 sn, ödüllüden 120 sn sonra, oturum 3,
   gün 6, ilk falın çıkışında yok; ödüllü: hak bitti tür başına 2 / gün 6, hemen aç gün 5, kutu gün 8, toplam gün 15). Yüklenen reklam 55 dk'da yenilenir.
   Kullanıcıdaki 10.8.5'te geçiş reklamı yüklenip hiç gösterilmiyordu (AdMob: 1.411 istek, 0 gösterim; gelirin tamamı ödüllü).

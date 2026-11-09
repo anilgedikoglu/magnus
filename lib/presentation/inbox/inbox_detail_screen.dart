@@ -350,18 +350,7 @@ class InboxDetailScreen extends ConsumerWidget {
                   // Footer
                   _buildMagnusFooter(),
                   const SizedBox(height: 20),
-                  // Okuma bitti: hak kullanıldıysa isteğe bağlı "bir tane daha".
-                  if (_kBirTaneDahaHedefleri[item.fortuneTypeKey] case final h?)
-                    BirTaneDaha(
-                      falTuru: h.$1,
-                      hakAnahtari: h.$3,
-                      sonra: (c) {
-                        // Detay kapanır: fal bitince eski detaya dönülmez, düğme boşa kalmaz.
-                        final router = GoRouter.of(c);
-                        Navigator.of(c).pop();
-                        router.push(h.$2);
-                      },
-                    ),
+                  _birTaneDaha(),
                 ],
               ),
             ),
@@ -372,6 +361,22 @@ class InboxDetailScreen extends ConsumerWidget {
           ), // SingleChildScrollView
         ],
       ), // Stack
+    );
+  }
+
+  // ─── Okuma bitti: hak kullanıldıysa isteğe bağlı "bir tane daha" ────────────
+  Widget _birTaneDaha() {
+    final h = _kBirTaneDahaHedefleri[item.fortuneTypeKey];
+    if (h == null) return const SizedBox.shrink();
+    return BirTaneDaha(
+      falTuru: h.$1,
+      hakAnahtari: h.$3,
+      sonra: (c) {
+        // Detay kapanır: fal bitince eski detaya dönülmez, düğme boşa kalmaz.
+        final router = GoRouter.of(c);
+        Navigator.of(c).pop();
+        router.push(h.$2);
+      },
     );
   }
 
@@ -545,6 +550,8 @@ class InboxDetailScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 28),
           _buildMagnusFooter(),
+          const SizedBox(height: 20),
+          _birTaneDaha(),
         ],
       ),
     );
@@ -643,6 +650,8 @@ class InboxDetailScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 28),
           _buildMagnusFooter(),
+          const SizedBox(height: 20),
+          _birTaneDaha(),
         ],
       ),
     );

@@ -183,17 +183,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
   void _falCikti(String tur, Duration sure) {
     final hafiza = _hafiza, ses = _ses;
-    // Geçiş reklamı yalnız doğal arada: fal kapanıp menüye dönerken, rota kapanırken HEMEN
-    // (docs/reklam_duzeni.md). Sınırlar AdPacing'de; hazır reklam yoksa sessizce atlanır.
+    // Geçiş reklamı yalnız fal gelen kutusuna gönderilip uygulama kendiliğinden menüye dönerken
+    // (reklam.md). Fal türünden geri tuşuyla menüye dönüşte YOK (Anıl, 2026-11-09). Sınırlar
+    // AdPacing'de; hazır reklam yoksa sessizce atlanır.
     final hedef = MagnusRotaGozlemci.sonHedefRota;
-    // Fal gerçekten tamamlandıysa: gelen kutusuna düştü ya da sonucu ekranda gösteren anlık fal
-    // (fincanı reddedilip geri çıkana reklam çıkmaz).
     final ustKutu = mounted ? ref.read(inboxProvider) : const <InboxItem>[];
     final kutuyaDustu = ustKutu.isNotEmpty && ustKutu.first.id != _falGirisUstId;
     if (mounted &&
-        (kutuyaDustu || kAnlikFallar.contains(tur)) &&
+        kutuyaDustu &&
         AdPacing.dogalAraMi(tur, sure,
-            menuyeDonuyor: hedef == null || hedef == '/home', kutuyaDustu: kutuyaDustu)) {
+            menuyeDonuyor: hedef == null || hedef == '/home', kutuyaDustu: true)) {
       unawaited(AdService.instance.maybeShowInterstitial(tamamlananFal: hafiza?.tamamlananFal ?? 0));
     }
     if (hafiza == null || ses == null || !mounted) return;

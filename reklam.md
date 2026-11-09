@@ -77,7 +77,7 @@ Sonuçtan hemen önceki düz geçiş reklamı, [Google Play Reklam Politikası](
 
 ## Test kanalı
 
-312: Play Dahili test + TestFlight, 2026-11-09 15:08. Üretime henüz çıkmadı.
+312: Play Dahili test + TestFlight, 2026-11-09 15:08. **Üretim incelemesine gönderildi: 2026-11-09 15:59 (Play %100, App Store).** Onay gelince 3, 3a, 4 ve 5. satırların "Üretime çıkış" sütununa tarih, "Kontrol" sütununa +14 gün yazılır.
 
 ## Sonraki kontrol
 

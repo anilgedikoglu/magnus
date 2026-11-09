@@ -13,7 +13,7 @@
   3×9 ana menü, zarf rozeti turuncu/yeşil, yönlü esneyen kapsül + ~180 yeni metin. Önceki 270; önceki 267: 4 yeni fal — Tavşan Falı, Kısmetim Kim?, Arabam Ne?,
   Evim Neresi? — + serbest metin rüya yorumu (Claude Haiku) + açılış yasal bilgilendirmesi + her yerden kaydırarak geri).
   Android Play Dahili test + iOS TestFlight (GitHub Actions). Ayrıntı → HANDOFF.md.
-  Android: Play **Dahili test** kanalında (üretime/incelemeye GÖNDERİLMEDİ — Anıl: "geliştirmeye devam, yalnız test").
+  Android: 312 üretim incelemesinde (9 Kas). Sonraki geliştirmeler yine önce Dahili test.
   iOS: Codemagic ödenmemiş fatura yüzünden KAPALI → **GitHub Actions** `.github/workflows/ios-testflight.yml`
   (elle tetiklenir, yalnız TestFlight'a yükler; secrets tanımlı). 261 bu yolla TestFlight'a yüklendi (~7 dk).
 - **Play'e büyük AAB yükleme (Chrome eklentisi 10 MB sınırı):** AAB'yi 9 MB parçalara böl (`split -b 9000000`),
@@ -34,7 +34,7 @@
 - **Son build (2026-11-09 00:10 ÇIKTI): `10.8.35+303`** — Android Play Dahili test + iOS TestFlight. Sohbet kutusu (üstten inen bant yerine), Flat/Candy cam teması, Evim popup'ları LG + yıl tekerleği, lamba düğmesi tam en/çerçeve/amber cam, Arabam motoru v4, kalın numeroloji ikonu, kahve fincan uyarısı yuvaların altında, Kader Çarkı parmağı takip eder, Doğum Haritası çerçevesi sabit, Gelen Kutusu başlığı sabit.
 - **Son build (2026-11-09 02:08 ÇIKTI): `10.8.38+306`** — Android Play Dahili test + iOS TestFlight (run 42532776170). Reklam düzeni (zorunlu ödüllü yok, teklifli ödüllü + sıklık sınırlı geçiş, UMP; bkz. "Reklam Düzeni"), Magnus sesi (1411 bağlamlı cümle, takvim + kullanım hafızası), bildirim düğmesi AÇIK/KAPALI. Satın alma bilinçli olarak YOK (HANDOFF).
 - **Son build (2026-11-09 12:34 ÇIKTI): `10.8.41+309`** — Android Play Dahili test + iOS TestFlight (run 42593321952). Reklam düzeni dış denetimden geçmiş hâli (docs/reklam_duzeni.md), Aşk Uyumu çarkı. İncelemeye gönderilmedi: Anıl bir ödüllü + bir geçiş reklamı görünce ayrı onayla.
-- **Son build (2026-11-09 15:08 ÇIKTI): `10.8.44+312`** — Android Play Dahili test + iOS TestFlight (run 42613171378). Reklam sonuçtan hemen önce (politika riski bilerek; `reklam.md`), sohbet kutusu yuvarlağa toplanır, teklif penceresi ortada, Dert Ortağı amblemleri, Acı Gerçekler kağıdı kararır. İncelemeye gönderilmedi.
+- **Son build (2026-11-09 15:08 ÇIKTI): `10.8.44+312`** — Android Play Dahili test + iOS TestFlight (run 42613171378). Reklam sonuçtan hemen önce (politika riski bilerek; `reklam.md`), sohbet kutusu yuvarlağa toplanır, teklif penceresi ortada, Dert Ortağı amblemleri, Acı Gerçekler kağıdı kararır. **İNCELEMEYE GÖNDERİLDİ (9 Kas 15:59): Play üretim %100 (yönetilen yayın kapalı: onaylanınca kendiliğinden yayına girer), App Store 10.8.44 build 312 WAITING_FOR_REVIEW, submission 0d4afc7e.**
 - **Bir sonraki build: `10.8.47+315`** (versionCode +3 kuralı). Build YALNIZ Anıl "test çık" deyince — ve o an, "her şey
   bitince" gibi koşullu talimatlarda bile bitişte tek satırla teyit al (294 erken alındı, Anıl uyardı).
 - 257 (önceki): iOS AdMob reklam birimi ID'leri `Platform.isIOS` ile ayrıldı (bkz. AdMob bölümü). 254: swipe + gradient + alt menü.

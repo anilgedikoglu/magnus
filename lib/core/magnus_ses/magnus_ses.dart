@@ -58,6 +58,9 @@ enum DonusKaynagi { gelenKutusu, profil }
 class MagnusSes {
   MagnusSes(this._prefs, this.hafiza, {Random? rng}) : _rng = rng ?? Random();
 
+  /// Faldan dönüşte Magnus'un yorum yapma olasılığı.
+  static const double falDonusOlasiligi = 0.08;
+
   final SharedPreferences _prefs;
   final MagnusHafiza hafiza;
   final Random _rng;
@@ -357,7 +360,7 @@ class MagnusSes {
     final okunan = hafiza.sonOkunan;
     if (kaynak == DonusKaynagi.gelenKutusu && okunan != null && b.now.difference(okunan.$2).inMinutes < 10) {
       hafiza.sonOkunan = null;
-      if (_zar(0.85)) {
+      if (_zar(falDonusOlasiligi)) {
         final s = _durumSoyle('memnun', b, _falEkleri(okunan.$1, b.isEn));
         if (s != null) return s;
       }
@@ -427,6 +430,7 @@ class MagnusSes {
   /// Fal ekranından menüye dönüşteki tepki; söyleyecek bir şey yoksa null.
   String? falDonus(MagnusBaglam b, String tur, Duration sure, {required bool vazgecti}) {
     if (MagnusTakvim.agirGun(b.now) != null) return null;
+    if (!_zar(falDonusOlasiligi)) return null; // Anıl, 2026-11-09: boş dönüş lafları çok nadir
     final k = hafiza.kayit(tur, b.now);
     final ekler = _falEkleri(tur, b.isEn);
     if (vazgecti) {

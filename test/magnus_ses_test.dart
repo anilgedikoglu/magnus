@@ -247,15 +247,15 @@ void main() {
       expect(goruldu, isTrue);
     });
 
-    test('gelen kutusunda okunan fal hatırlanıp sorulur', () async {
+    test('gelen kutusunda okunan fal nadiren anılır', () async {
       var soruldu = 0;
-      for (var seed = 0; seed < 30; seed++) {
+      for (var seed = 0; seed < 300; seed++) {
         final (_, h, s) = await _kur(seed: seed);
         h.okundu('kahve', sali);
         final m = s.sekmeDonus(_b(sali), DonusKaynagi.gelenKutusu);
         if (m == 'Umarım Kahve Falı içine sinmiştir.') soruldu++;
       }
-      expect(soruldu, greaterThan(20));
+      expect(soruldu, inInclusiveRange(5, 60), reason: '$soruldu/300');
     });
 
     test('dönüşte her seferinde konuşmaz, peş peşe de konuşmaz', () async {

@@ -489,6 +489,7 @@ class AppStrings {
   String get adOracleBody => _s('Kısa bir reklam izlersen bugün üç kehanet hakkı daha kazanırsın.',
       'Watch a short ad to get three more prophecies today.');
   String get adOpenBoxTitle => _s('Kutuları aç', 'Open the boxes');
+  String get chatBoxOpen => _s("Magnus'un mesajını aç", "Open Magnus's message");
   String get adOpenBoxSingleTitle => _s('Kutuyu aç', 'Open the box');
   String get adOpenBoxPersonBody => _s('Kısa bir reklam izlersen bu kişinin tüm kutuları açılır.',
       "Watch a short ad to open all of this person's boxes.");

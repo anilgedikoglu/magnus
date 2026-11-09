@@ -841,7 +841,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
             left: kGlassBarSide,
             right: kGlassBarSide,
             height: kGlassBarHeight,
-            child: HomeChatBox(key: _chatBox, tint: ref.watch(glassTintProvider)),
+            child: HomeChatBox(
+              key: _chatBox,
+              tint: ref.watch(glassTintProvider),
+              acEtiketi: ref.watch(l10nProvider).chatBoxOpen,
+            ),
           ),
         ],
       ),

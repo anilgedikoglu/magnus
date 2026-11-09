@@ -6,7 +6,10 @@
 // Yazı efekti Anıl'ın ekran kaydından ölçüldü (60 fps, 411 kare):
 //   • Döngü 1,5 sn: karartma soldan sağa geçer, sonra yazı kısa süre tam parlak kalır.
 //   • Geçiş döngünün ilk %62'si; en koyu yerde parlaklık %25; karartma yarı eni yazı eninin %47'si.
-//   • Yazı değişimi geçişsiz, tek karede; yeni yazı 1,1 sn sonra ilk taramasına başlar.
+//   • Yeni yazı 1,1 sn sonra ilk taramasına başlar.
+//
+// Kutu (Anıl, 2026-11-09): son yazı geldikten 6 sn sonra sola toplanıp avatarlı yuvarlağa dönüşür,
+// yeni yazıda ya da yuvarlağa dokununca sağa açılır. Açıkken yeni yazı parlayıp sönerek gelir.
 //
 // İki satıra sığmayan mesaj cümle cümle sayfalanır; sayfalar sırayla değişir, yazı kesilmez.
 // Metinde \n varsa her parça ayrı sayfadır: birincisi görünür, bekler, sonra ikincisi gelir.
@@ -16,10 +19,10 @@ import 'dart:math' as math;
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/physics.dart';
 
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
-import '../../core/widgets/glass_tab_bar.dart' show kGlassBarHeight;
 import '../../core/widgets/liquid_glass_panel.dart';
 
 const Duration _kSweepPeriod = Duration(milliseconds: 1500);
@@ -27,6 +30,21 @@ const Duration _kSweepDelay = Duration(milliseconds: 1100);
 const double _kSweepActive = 0.62;
 const double _kBandHalf = 0.47;
 const Color _kBandDim = Color(0x40FFFFFF);
+
+/// Son yazı bu kadar kaldıktan sonra kutu yuvarlağa toplanır.
+const Duration _kKapanma = Duration(seconds: 6);
+const double _kAvatar = 40;
+const double _kAvatarArasi = 11;
+const double _kSagPay = 20;
+const Duration _kParlama = Duration(milliseconds: 720);
+const Color _kParlakRenk = Color(0xFFFFC4F7);
+const Color _kParlakHale = Color(0xFFFF77F0);
+
+// Yaylar: açılış çok hafif esner, kapanış aşmadan oturur; yarıda tersine dönünce hız korunur.
+final SpringDescription _kAcilmaYayi =
+    SpringDescription.withDampingRatio(mass: 1, stiffness: 210, ratio: 0.82);
+final SpringDescription _kKapanmaYayi =
+    SpringDescription.withDampingRatio(mass: 1, stiffness: 150, ratio: 1);
 
 /// Dış yazı, kutu boyunu aşmasın diye en çok bu orana kadar büyür.
 const double _kMaxTextScale = 1.3;
@@ -63,22 +81,29 @@ List<String> paginateChatText(String text, bool Function(String) fits) {
 }
 
 class HomeChatBox extends StatefulWidget {
-  const HomeChatBox({super.key, required this.tint});
+  const HomeChatBox({super.key, required this.tint, this.acEtiketi});
 
   /// Alt barla aynı saydamlık ayarı (Ayarlar > CAM).
   final double tint;
+
+  /// Ekran okuyucu: yuvarlak hâldeyken düğme adı.
+  final String? acEtiketi;
 
   @override
   State<HomeChatBox> createState() => HomeChatBoxState();
 }
 
-class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderStateMixin {
+class HomeChatBoxState extends State<HomeChatBox> with TickerProviderStateMixin {
   late final AnimationController _sweep;
+  late final AnimationController _acilma; // 0 yuvarlak, 1 açık (yay, değer biraz taşabilir)
+  late final AnimationController _parla; // 0 → 1: yeni yazının parlayıp sönmesi
+  bool _hedefAcik = false;
+  bool _basili = false;
+  Timer? _kapanma;
   final List<String> _queue = [];
   String? _message;
   List<String> _pages = const [];
   int _page = 0;
-  bool _dongu = false; // kendiliğinden bölünen uzun mesaj başa döner; \n ile yazılan sırada biter
   double _width = 0;
   TextScaler? _scaler;
   bool _holding = false;
@@ -99,6 +124,50 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
   void initState() {
     super.initState();
     _sweep = AnimationController(vsync: this, duration: _kSweepPeriod, value: 1);
+    _acilma = AnimationController.unbounded(vsync: this);
+    _parla = AnimationController(vsync: this, duration: _kParlama, value: 1);
+  }
+
+  bool get _acikGorunuyor => _hedefAcik && _acilma.value > 0.85;
+
+  void _yayla(double hedef, SpringDescription yay) {
+    if (_reduce) {
+      _acilma.value = hedef;
+      return;
+    }
+    _acilma.animateWith(SpringSimulation(yay, _acilma.value, hedef, _acilma.velocity));
+  }
+
+  void _ac() {
+    if (_hedefAcik) return;
+    _hedefAcik = true;
+    _yayla(1, _kAcilmaYayi);
+  }
+
+  void _kapat() {
+    if (!mounted || _queue.isNotEmpty) return;
+    _dwell?.cancel();
+    _holding = false;
+    _sweepStart?.cancel();
+    _sweep
+      ..stop()
+      ..value = 1;
+    _hedefAcik = false;
+    _yayla(0, _kKapanmaYayi);
+  }
+
+  void _parlat() {
+    if (!_reduce) _parla.forward(from: 0);
+  }
+
+  void _dokunus() {
+    if (_hedefAcik || _message == null) return;
+    setState(() {
+      _page = 0;
+      _readOnce = false;
+    });
+    _startPage();
+    _ac();
   }
 
   /// Yeni mesaj: kutu boşsa ya da eldeki yazı yeterince kaldıysa hemen, değilse sırayla.
@@ -109,6 +178,7 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
     if (now) {
       if (t == _message) {
         _startPage(); // aynı cevap tekrar: yalnız süre ve tarama baştan
+        _ac();
         return;
       }
       _dwell?.cancel();
@@ -124,12 +194,15 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
   void clear() {
     _dwell?.cancel();
     _sweepStart?.cancel();
+    _kapanma?.cancel();
     _sweep
       ..stop()
       ..value = 1;
     _queue.clear();
     _holding = false;
     if (!mounted) return;
+    _hedefAcik = false;
+    _yayla(0, _kKapanmaYayi);
     setState(() {
       _message = null;
       _pages = const [];
@@ -140,6 +213,7 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
 
   void _next() {
     if (_holding || _queue.isEmpty || !mounted) return;
+    final yaziVardi = _acikGorunuyor && _message != null;
     final m = _queue.removeAt(0);
     setState(() {
       _message = m;
@@ -148,6 +222,8 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
       _readOnce = false;
     });
     _startPage();
+    _ac();
+    if (yaziVardi) _parlat();
   }
 
   void _startPage() {
@@ -156,6 +232,8 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
     _dwell?.cancel();
     final text = _page < _pages.length ? _pages[_page] : (_message ?? '');
     _dwell = Timer(chatPageDwell(text), _onDwellEnd);
+    _kapanma?.cancel();
+    if (_page >= _pages.length - 1) _kapanma = Timer(_kKapanma, _kapat); // son sayfa kaldı, sonra toplanır
   }
 
   void _onDwellEnd() {
@@ -168,9 +246,7 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
     } else if (!last) {
       setState(() => _page++);
       _startPage();
-    } else if (_pages.length > 1 && _dongu) {
-      setState(() => _page = 0); // uzun mesaj bütün kalsın: başa döner
-      _startPage();
+      _parlat();
     }
   }
 
@@ -206,7 +282,6 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
 
     final parcalar = text.split('\n').map((p) => p.trim()).where((p) => p.isNotEmpty).toList();
     final pages = [for (final p in parcalar) ...paginateChatText(p, fits)];
-    _dongu = parcalar.length <= 1;
     return pages.isEmpty ? [text] : pages;
   }
 
@@ -224,7 +299,10 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
   void dispose() {
     _dwell?.cancel();
     _sweepStart?.cancel();
+    _kapanma?.cancel();
     _sweep.dispose();
+    _acilma.dispose();
+    _parla.dispose();
     super.dispose();
   }
 
@@ -263,12 +341,33 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
               shaderCallback: _bandShader,
               child: child,
             ),
-            child: Text(
-              text,
-              key: const ValueKey('homeChatText'),
-              style: _style,
-              maxLines: 2,
-              textWidthBasis: TextWidthBasis.longestLine,
+            child: AnimatedBuilder(
+              animation: _parla,
+              builder: (context, _) {
+                final p = _parla.value;
+                // Hızla parlar, sonra yavaşça söner; yeni yazı ilk anda belirir.
+                final g = p < 0.18
+                    ? Curves.easeOut.transform((p / 0.18).clamp(0.0, 1.0))
+                    : 1 - Curves.easeInOutCubic.transform(((p - 0.18) / 0.82).clamp(0.0, 1.0));
+                return Opacity(
+                  opacity: (p / 0.1).clamp(0.0, 1.0),
+                  child: Text(
+                    text,
+                    key: const ValueKey('homeChatText'),
+                    style: g <= 0.001
+                        ? _style
+                        : _style.copyWith(
+                            color: Color.lerp(Colors.white, _kParlakRenk, g),
+                            shadows: [
+                              Shadow(color: _kParlakHale.withValues(alpha: 0.85 * g), blurRadius: 16 * g),
+                              Shadow(color: Colors.white.withValues(alpha: 0.5 * g), blurRadius: 5 * g),
+                            ],
+                          ),
+                    maxLines: 2,
+                    textWidthBasis: TextWidthBasis.longestLine,
+                  ),
+                );
+              },
             ),
           ),
         ),
@@ -279,37 +378,78 @@ class HomeChatBoxState extends State<HomeChatBox> with SingleTickerProviderState
     final scaler = MediaQuery.textScalerOf(context);
     return MediaQuery.withClampedTextScaling(
       maxScaleFactor: _kMaxTextScale,
-      child: GestureDetector(
-        // Kutuya dokunuş altındaki kartı açmasın.
-        behavior: HitTestBehavior.opaque,
-        excludeFromSemantics: true,
-        onTap: () {},
-        child: LiquidGlassPanel(
-          key: const ValueKey('homeChatBox'),
-          barOptics: true,
-          radius: kGlassBarHeight / 2,
-          tint: widget.tint,
-          padding: const EdgeInsets.only(left: 11, right: 20),
-          child: SizedBox.expand(
-            child: Row(
-              children: [
-                const _MagnusAvatar(),
-                const SizedBox(width: 11),
-                Expanded(
-                  child: LayoutBuilder(builder: (context, box) {
-                    _measure(box.maxWidth, scaler);
-                    final hasText = _message != null && _pages.isNotEmpty;
-                    return Align(
-                      alignment: Alignment.centerLeft,
-                      child: hasText ? _text(_pages[_page]) : const SizedBox.shrink(),
-                    );
-                  }),
+      child: LayoutBuilder(builder: (context, c) {
+        final h = c.maxHeight;
+        final full = c.maxWidth;
+        final avatarSol = (h - _kAvatar) / 2;
+        final yaziSol = avatarSol + _kAvatar + _kAvatarArasi;
+        final yaziEn = math.max(0.0, full - yaziSol - _kSagPay);
+        _measure(yaziEn, scaler);
+        return Align(
+          alignment: Alignment.centerLeft,
+          child: AnimatedBuilder(
+            animation: _acilma,
+            builder: (context, _) {
+              final t = _acilma.value.clamp(0.0, 1.0);
+              final hasText = _message != null && _pages.isNotEmpty && (_hedefAcik || t > 0.01);
+              final kapali = !_hedefAcik && _message != null;
+              return SizedBox(
+                width: ui.lerpDouble(h, full, t)!,
+                height: h,
+                child: Semantics(
+                  container: true,
+                  button: kapali,
+                  label: kapali ? widget.acEtiketi : null,
+                  onTap: kapali ? _dokunus : null,
+                  child: GestureDetector(
+                    // Kutuya dokunuş altındaki kartı açmasın.
+                    behavior: HitTestBehavior.opaque,
+                    excludeFromSemantics: true,
+                    onTapDown: kapali ? (_) => setState(() => _basili = true) : null,
+                    onTapUp: (_) => setState(() => _basili = false),
+                    onTapCancel: () => setState(() => _basili = false),
+                    onTap: _dokunus,
+                    child: AnimatedScale(
+                      scale: _basili ? 0.94 : 1,
+                      duration: const Duration(milliseconds: 130),
+                      curve: Curves.easeOut,
+                      child: LiquidGlassPanel(
+                        key: const ValueKey('homeChatBox'),
+                        barOptics: true,
+                        radius: h / 2,
+                        tint: widget.tint,
+                        child: SizedBox.expand(
+                          child: Stack(
+                            clipBehavior: Clip.hardEdge,
+                            children: [
+                              Positioned(left: avatarSol, top: avatarSol, child: const _MagnusAvatar()),
+                              if (hasText)
+                                Positioned(
+                                  left: yaziSol,
+                                  top: 0,
+                                  bottom: 0,
+                                  width: yaziEn,
+                                  child: Opacity(
+                                    // Yazı, kutu kapanırken erkenden söner; açılırken geç belirir.
+                                    opacity: ((t - 0.4) / 0.6).clamp(0.0, 1.0),
+                                    child: Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: _text(_pages[_page]),
+                                    ),
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
-              ],
-            ),
+              );
+            },
           ),
-        ),
-      ),
+        );
+      }),
     );
   }
 }

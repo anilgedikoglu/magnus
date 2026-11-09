@@ -107,10 +107,9 @@ void main() {
     await t.pump();
     final first = _shown(t);
     var other = false;
-    for (var i = 0; i < 60; i++) {
+    for (var i = 0; i < 20 && !other; i++) {
       await t.pump(const Duration(milliseconds: 500));
       if (_shown(t) != first) other = true;
-      if (other && _shown(t) == first) break;
     }
     expect(other, isTrue);
     box.say('Sıradaki.');
@@ -131,11 +130,82 @@ void main() {
     await dispose(t);
   });
 
-  testWidgets('kısa mesaj süresi dolunca da yerinde bekler', (t) async {
+  Size kutu(WidgetTester t) => t.getSize(find.byKey(const ValueKey('homeChatBox')));
+
+  Future<void> oturt(WidgetTester t) async {
+    for (var i = 0; i < 90; i++) {
+      await t.pump(const Duration(milliseconds: 16));
+    }
+  }
+
+  testWidgets('6 sn sonra sola toplanıp yuvarlak kalır', (t) async {
     final box = await pump(t);
     box.say('Bekleyen mesaj.');
     await t.pump();
-    await t.pump(const Duration(seconds: 30));
+    await oturt(t);
+    expect(kutu(t).width, closeTo(366, 1));
+    await t.pump(const Duration(milliseconds: 4400));
+    await t.pump();
+    expect(_shown(t), 'Bekleyen mesaj.', reason: '6 sn dolmadı');
+    expect(kutu(t).width, closeTo(366, 1));
+    await t.pump(const Duration(milliseconds: 200));
+    await oturt(t);
+    expect(kutu(t).width, closeTo(kGlassBarHeight, 1), reason: 'yuvarlak');
+    expect(t.getTopLeft(find.byKey(const ValueKey('homeChatBox'))).dx, (800 - 366) / 2, reason: 'sola toplanır');
+    expect(find.byKey(_text), findsNothing);
+    await dispose(t);
+  });
+
+  testWidgets('yuvarlakken yeni yazı gelince sağa açılır, 6 sn sonra yine toplanır', (t) async {
+    final box = await pump(t);
+    box.say('Birinci.');
+    await t.pump();
+    await t.pump(const Duration(seconds: 6));
+    await oturt(t);
+    expect(kutu(t).width, closeTo(kGlassBarHeight, 1));
+
+    box.say('İkinci.');
+    await t.pump();
+    await oturt(t);
+    expect(kutu(t).width, closeTo(366, 1));
+    expect(_shown(t), 'İkinci.');
+    await dispose(t);
+  });
+
+  testWidgets('yuvarlağa dokununca son yazıyla açılır', (t) async {
+    final box = await pump(t);
+    box.say('Son söz.');
+    await t.pump();
+    await t.pump(const Duration(seconds: 6));
+    await oturt(t);
+    await t.tap(find.byKey(const ValueKey('homeChatBox')));
+    await t.pump();
+    await oturt(t);
+    expect(kutu(t).width, closeTo(366, 1));
+    expect(_shown(t), 'Son söz.');
+    await dispose(t);
+  });
+
+  testWidgets('açıkken yeni yazı parlayıp sönerek gelir', (t) async {
+    final box = await pump(t);
+    box.say('Eski.');
+    await t.pump();
+    await oturt(t);
+    box.say('Yeni.', now: true);
+    await t.pump();
+    await t.pump(const Duration(milliseconds: 130));
+    expect(_shown(t), 'Yeni.');
+    expect(t.widget<Text>(find.byKey(_text)).style!.shadows, isNotEmpty, reason: 'parlıyor');
+    await t.pump(const Duration(milliseconds: 800));
+    expect(t.widget<Text>(find.byKey(_text)).style!.shadows ?? const [], isEmpty, reason: 'söndü');
+    await dispose(t);
+  });
+
+  testWidgets('kısa mesaj süresi dolunca da 6 sn yerinde bekler', (t) async {
+    final box = await pump(t);
+    box.say('Bekleyen mesaj.');
+    await t.pump();
+    await t.pump(const Duration(seconds: 5));
     expect(_shown(t), 'Bekleyen mesaj.');
     await dispose(t);
   });

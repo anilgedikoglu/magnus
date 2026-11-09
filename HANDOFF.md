@@ -2,7 +2,7 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
-## Ne yapıldı (2026-11-09 — `10.8.38+306` ÇIKTI: Android Play Dahili test 02:08 + iOS TestFlight run 42532776170; 303: 00:10, 300: 2026-11-08 20:41)
+## Ne yapıldı (2026-11-09 — `10.8.41+309` ÇIKTI: Android Play Dahili test + iOS TestFlight run 42593321952, 12:34; 306: 02:08, 303: 00:10)
 Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit'lenmemiş scratch
 `test/_visual_starfield_capture_test.dart`). Ad taraması (lib+assets) temiz, tüm `assets/data/*.json` geçerli.
 
@@ -83,9 +83,10 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 - Anıl 297'de bildirim düğmesini gerçek cihazda dener (açınca izin, kilitli fal hazır olunca bildirim, dokununca gelen kutusu).
 - Anıl 300'de giriş mesajlarını, Arabam/Evim aramasını, Kader Kitabı okunu dener.
 - Anıl 303'te sohbet kutusu yazı efektini, Candy temayı (kenar ışığı/performans), lamba düğmesini, Evim popup'larını dener.
-- Anıl 306'da reklam akışlarını gerçek cihazda dener (teklif penceresi, +1 hak, hemen aç, kutular, geçiş sıklığı; test build'de kendi reklamına tıklamadan). Bu akışlar testlerde gerçek reklamla çalıştırılmadı.
+- Anıl 309'da reklam akışlarını gerçek cihazda dener (teklif penceresi, +1 hak, hemen aç, kutular, geçiş sıklığı; test build'de kendi reklamına tıklamadan). Bu akışlar testlerde gerçek reklamla çalıştırılmadı.
 - Reklamların cihazda doğrulanması: AdMob'da `Uygulama sürümü` ve `Biçim` kırılımında geçiş gösterimi 0'dan büyük olmalı. Bilgisayara cihaz bağlı olmadığı için gerçek reklam henüz denenmedi. Firebase bağlı değil, AdMob'da kullanıcı sayısı yok.
 - Codex son incelemesi yapılamadı (sınır 11 Kas 21:56'da açılır); Claude code-reviewer yaptı.
-- Sonraki build `10.8.41+309`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
+- **309 çıktı (9 Kas 12:34): Play Dahili test + TestFlight (run 42593321952). İncelemeye GÖNDERİLMEDİ.** Anıl telefonda bir ödüllü ve bir geçiş reklamı görünce, ayrı onayla aynı sürüm incelemeye gider (Play: "Sürümü yükselt"; App Store Connect: build 309).
+- Sonraki build `10.8.44+312`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
   Play Dahili test, `gh workflow run "iOS TestFlight" --repo anilgedikoglu/magnus --ref main`.
 - Anıl 294/297'de fincan kontrolünü dener; hâlâ geçerse yönetici teşhis satırı (ML Kit etiketleri) ekle.

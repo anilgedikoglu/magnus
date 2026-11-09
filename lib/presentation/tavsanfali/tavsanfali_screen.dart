@@ -14,6 +14,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/bir_tane_daha.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/models/user_profile.dart';
 import '../../data/providers.dart';
@@ -587,6 +588,10 @@ class _TavsanFaliScreenState extends ConsumerState<TavsanFaliScreen>
               style: const TextStyle(color: Colors.white70, fontSize: 14),
             ),
           ),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: BirTaneDaha(falTuru: 'tavsanfali', hakAnahtari: 'tavsanfali_bugun_tarih'),
+        ),
       ],
     );
   }

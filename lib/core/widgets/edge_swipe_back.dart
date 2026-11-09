@@ -69,6 +69,7 @@ class NoEdgeSwipeBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Listener(
+      behavior: HitTestBehavior.translucent, // boş alanda da işaretler; dokunuş alttakilere geçer
       onPointerDown: (e) {
         if (edgeOnly) {
           _edgeOnlyPointer = e.pointer;

@@ -11,11 +11,16 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../core/services/ad_pacing.dart';
+import '../../core/services/ad_service.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/bir_tane_daha.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
+import '../../core/widgets/occult_button.dart';
+import '../../core/widgets/odul_teklifi.dart';
 import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
 
@@ -24,6 +29,43 @@ const _kBurclar = [
   'Koç', 'Boğa', 'İkizler', 'Yengeç', 'Aslan', 'Başak',
   'Terazi', 'Akrep', 'Yay', 'Oğlak', 'Kova', 'Balık',
 ];
+
+// ─── Çark hareketi (saf hesap, testli) ───────────────────────────────────────
+
+/// Merkeze bu kadar yakın dokunuşta açı kararsızdır; çevirme başlatmaz.
+const double kCarkOluYaricap = 18;
+
+/// Dokunuş çarkın dairesi içinde mi? (Köşeler ve göbek hariç.)
+bool carkUzerindeMi(Offset p, Offset merkez, double yaricap) {
+  final d = (p - merkez).distance;
+  return d <= yaricap && d >= kCarkOluYaricap;
+}
+
+/// [onceki]den [simdi]ye parmağın merkez etrafında süpürdüğü açı (radyan).
+/// Ekranda y aşağı olduğundan pozitif = saat yönü (Transform.rotate ile aynı).
+double carkAciFarki(Offset onceki, Offset simdi, Offset merkez) {
+  final a = onceki - merkez;
+  final b = simdi - merkez;
+  if (a.distance < kCarkOluYaricap || b.distance < kCarkOluYaricap) return 0;
+  return atan2(a.dx * b.dy - a.dy * b.dx, a.dx * b.dx + a.dy * b.dy);
+}
+
+/// Parmağın [hiz]ının (px/sn) merkez etrafındaki açısal karşılığı (rad/sn, pozitif = saat yönü).
+double carkAcisalHiz(Offset konum, Offset hiz, Offset merkez) {
+  final r = konum - merkez;
+  final r2 = r.distanceSquared;
+  if (r2 < kCarkOluYaricap * kCarkOluYaricap) return 0;
+  return (r.dx * hiz.dy - r.dy * hiz.dx) / r2;
+}
+
+/// Kullanıcı burcu + seçilen burç + gün → sabit tohum (FNV-1a).
+int askUyumuTohumu(String kullanici, String secilen, DateTime gun) {
+  var h = 0x811c9dc5;
+  for (final c in '$kullanici|$secilen|${gun.year}-${gun.month}-${gun.day}'.codeUnits) {
+    h = ((h ^ c) * 0x01000193) & 0x7fffffff;
+  }
+  return h;
+}
 
 // ─── Veri modeli ──────────────────────────────────────────────────────────────
 
@@ -90,6 +132,34 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
 
   final _rng = Random();
   List<_BarResult>? _results;
+  bool _uyumKilitli = false;
+  bool _uyumTeklifte = false;
+
+  Future<void> _uyumuAc() async {
+    if (_uyumTeklifte) return;
+    _uyumTeklifte = true;
+    final ads = AdService.instance;
+    final s = ref.read(l10nProvider);
+    try {
+      await ads.odulluBekle();
+      if (!mounted) return;
+      if (!ads.odulMumkun(OdulTuru.kutuAc)) {
+        setState(() => _uyumKilitli = false); // reklam yok: yorum engellenmez
+        return;
+      }
+      final kazandi = await odulTeklifiGoster(
+        context,
+        tur: OdulTuru.kutuAc,
+        baslik: s.adOpenReadingTitle,
+        aciklama: s.adOpenReadingBody,
+        izleEtiketi: s.adWatch,
+        vazgecEtiketi: s.adDecline,
+      );
+      if (kazandi && mounted) setState(() => _uyumKilitli = false);
+    } finally {
+      _uyumTeklifte = false;
+    }
+  }
 
   String get _selectedBurc {
     final idx = ((6 - ((_wheelAngle - _kSnapOffset) / (pi / 6)).round()) % 12 + 12) % 12;
@@ -152,27 +222,39 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     setState(() {});
   }
 
-  // ── Çark döndürme — yatay sürükleme (ekranın HERHANGİ bir yerinde) ──────────
-  // Snap + atalet (spin ticker) mantığı aynı kalır; girdi, atan2 (çarka dokunma)
-  // yerine yatay sürükleme deltasından (primaryDelta) açıya çevrilir — böylece
-  // çarka dokunmak gerekmez, ekranın her yerinde eşit his verir.
-  static const double _kDragToAngle = 1 / 160.0; // piksel → radyan (çark yarıçapı ~160)
+  // ── Çark döndürme — yalnız çarkın üzerinde, parmağı merkez etrafında izler ──
+  // Açı farkı merkezden çıkan doğruya göre hesaplanır: nereden olursa olsun saat
+  // yönünde yapılan kaydırma çarkı saat yönünde döndürür. Çark dışında başlayan
+  // dokunuş çarkı çevirmez (Anıl, 2026-11-09).
+  double _carkCapi = 320;
+  bool _carkSuruklu = false;
+  Offset _sonDokunus = Offset.zero;
 
-  void _onWheelDragStart(DragStartDetails _) {
+  Offset get _carkMerkezi => Offset(_carkCapi / 2, _carkCapi / 2);
+
+  void _onWheelDragStart(DragStartDetails d) {
+    _carkSuruklu = carkUzerindeMi(d.localPosition, _carkMerkezi, _carkCapi / 2);
+    if (!_carkSuruklu) return;
     _spinTicker.stop();
     _snapping = false;
     _velocity = 0;
+    _sonDokunus = d.localPosition;
   }
 
-  void _onWheelDragUpdate(DragUpdateDetails details) {
-    _wheelAngle += -(details.primaryDelta ?? 0) * _kDragToAngle;
+  void _onWheelDragUpdate(DragUpdateDetails d) {
+    if (!_carkSuruklu) return;
+    _wheelAngle += carkAciFarki(_sonDokunus, d.localPosition, _carkMerkezi);
+    _sonDokunus = d.localPosition;
     _burcTik();
     setState(() {});
   }
 
-  void _onWheelDragEnd(DragEndDetails details) {
-    // Atışı yakala: yatay hız (px/sn) → rad/frame (≈16 ms).
-    _velocity = -(details.primaryVelocity ?? 0) * _kDragToAngle * 0.016;
+  void _onWheelDragEnd(DragEndDetails d) {
+    if (!_carkSuruklu) return;
+    _carkSuruklu = false;
+    // Atışı yakala: parmağın teğet hızı (rad/sn) → rad/frame (≈16 ms).
+    _velocity = (carkAcisalHiz(_sonDokunus, d.velocity.pixelsPerSecond, _carkMerkezi) * 0.016)
+        .clamp(-0.6, 0.6);
     _snapping = _velocity.abs() <= 0.002;
     if (_snapping) {
       _snapTarget =
@@ -192,6 +274,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     await Future.wait<void>([
       _metinleriHazirla(burc),
       Future.delayed(const Duration(seconds: 5)),
+      AdService.instance.odulluBekle(enFazla: const Duration(seconds: 5)),
     ]);
     if (!mounted) return;
 
@@ -200,6 +283,9 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         DateTime.now().toIso8601String().substring(0, 10));
     if (!mounted) return;
 
+    // Genel yorum yalnız teklif yapılabiliyorsa kilitli başlar; reklam yoksa açık gelir.
+    final ads = AdService.instance;
+    _uyumKilitli = !ads.adsDisabled && ads.odulMumkun(OdulTuru.kutuAc);
     setState(() => _phase = 3);
     Future.delayed(const Duration(milliseconds: 300), () {
       if (mounted) _barCtrl.forward();
@@ -226,11 +312,14 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
         ('iletisim', ref.read(l10nProvider).askUyumuCategory('iletisim'), const Color(0xFF44DDCC)),
       ];
 
+      // Aynı gün aynı burca bakan aynı yüzdeleri görür; "başka burca bak" anlamlı olur.
+      final tohumlu = Random(askUyumuTohumu(
+          profile.toVariableMap()['burc'] ?? '', selectedBurc, DateTime.now()));
       final results = <_BarResult>[];
       for (final (key, label, color) in barDefs) {
         final catData = barsData[key] as Map<String, dynamic>;
         const ranges = ['0-25', '25-50', '50-75', '75-100'];
-        final pickedRange = ranges[_rng.nextInt(ranges.length)];
+        final pickedRange = ranges[tohumlu.nextInt(ranges.length)];
         final rangeEntries = (catData[pickedRange] as List)
             .map((e) => e as Map<String, dynamic>)
             .toList();
@@ -240,7 +329,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
           key: key,
           label: label,
           color: color,
-          pct: _rangeValue(pickedRange),
+          pct: _rangeValue(pickedRange, tohumlu),
           metin: metin,
         ));
       }
@@ -286,18 +375,18 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
     }
   }
 
-  int _rangeValue(String range) {
+  int _rangeValue(String range, Random rng) {
     switch (range) {
       case '0-25':
-        return _rng.nextInt(26);
+        return rng.nextInt(26);
       case '25-50':
-        return 25 + _rng.nextInt(26);
+        return 25 + rng.nextInt(26);
       case '50-75':
-        return 50 + _rng.nextInt(26);
+        return 50 + rng.nextInt(26);
       case '75-100':
-        return 75 + _rng.nextInt(26);
+        return 75 + rng.nextInt(26);
       default:
-        return _rng.nextInt(101);
+        return rng.nextInt(101);
     }
   }
 
@@ -344,24 +433,11 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
                     ? _buildPhase2()
                     : _buildPhase3(),
           ),
-          // Faz 1 (burç seçimi): ekranın HERHANGİ bir yerinde yatay sürükleme çarkı
-          // çevirir — çarka dokunmak gerekmez. Katman saydam: dokunuşlar altındaki
-          // basılı-tut dairesine ve Geri Git okuna geçer; yalnız yatay sürüklemeyi
-          // (jest arenası) bu katman alır, böylece basılı-tut bozulmaz.
-          // NoEdgeSwipeBack bu ekranda global "soldan sağa kaydır = geri"yi kapatır
-          // (Anıl: sağa swipe geri gitmesin, çarkı çevirsin). Geri dönüş: üstteki ok,
-          // Android geri tuşu, sistemin kenar jesti.
+          // Faz 1: bu ekranda global "soldan sağa kaydır = geri" kapalı (Anıl: sağa swipe geri
+          // gitmesin). Katman saydam, dokunuşlar altındaki çarka ve düğmelere geçer. Geri dönüş:
+          // üstteki ok, Android geri tuşu, sistemin kenar jesti.
           if (_phase == 1)
-            Positioned.fill(
-              child: NoEdgeSwipeBack(
-                child: GestureDetector(
-                  behavior: HitTestBehavior.translucent,
-                  onHorizontalDragStart: _onWheelDragStart,
-                  onHorizontalDragUpdate: _onWheelDragUpdate,
-                  onHorizontalDragEnd: _onWheelDragEnd,
-                ),
-              ),
-            ),
+            const Positioned.fill(child: NoEdgeSwipeBack(child: SizedBox.expand())),
         ],
       ),
     );
@@ -437,7 +513,47 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
 
   // ── Faz 1: burç seçimi + dokunma ─────────────────────────────────────────
 
+  /// Çark çapı: yanlarda 12 pt pay, altında burç adı ve basılı-tut düğmesi sığacak kadar.
+  double _carkCapiHesapla(Size yer, double barPayi, TextScaler olcek, String metin) {
+    const yanPay = 24.0;
+    final yonerge = TextPainter(
+      text: TextSpan(text: metin, style: _kYonergeStili),
+      textDirection: TextDirection.ltr,
+      textScaler: olcek,
+    )..layout(maxWidth: yer.width - 64);
+    final ustBlok = 48 + 10 + yonerge.height + 16; // başlık, boşluk, yönerge, boşluk
+    yonerge.dispose();
+    final altBlok = 22 + 8 + olcek.scale(26) + 108 + 12 + olcek.scale(18) + 12; // imleç, burç adı, düğme, ipucu, nefes
+    final enFazla = min(yer.width - yanPay, yer.height - ustBlok - altBlok - barPayi);
+    return enFazla.clamp(120.0, 520.0);
+  }
+
+  int? _carkOlcuAnahtari; // çap yalnız ekran/yazı değişince yeniden hesaplanır
+
+  static const _kYonergeStili = TextStyle(
+    color: Colors.white,
+    fontSize: 16,
+    height: 1.6,
+    fontWeight: FontWeight.w300,
+  );
+
   Widget _buildPhase1() {
+    // `context` SafeArea'nın dışındadır: alt güvenli alan SafeArea'da düşer, bar için kalan bırakılır.
+    final ekran = MediaQuery.sizeOf(context);
+    final pay = MediaQuery.paddingOf(context);
+    final barPayi = max(0.0, floatingBarInset(context) - pay.bottom);
+    final yer = Size(ekran.width, ekran.height - pay.vertical);
+    final olcek = MediaQuery.textScalerOf(context);
+    final metin = ref.watch(l10nProvider).askUyumuPrompt;
+    final anahtar = Object.hash(yer, barPayi, olcek.scale(100), metin);
+    if (anahtar != _carkOlcuAnahtari) {
+      _carkOlcuAnahtari = anahtar;
+      _carkCapi = _carkCapiHesapla(yer, barPayi, olcek, metin);
+    }
+    return _buildPhase1Govde(barPayi);
+  }
+
+  Widget _buildPhase1Govde(double barPayi) {
     return Column(children: [
       _buildHeader(),
       Expanded(
@@ -449,12 +565,7 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               child: Text(
                 ref.watch(l10nProvider).askUyumuPrompt,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  height: 1.6,
-                  fontWeight: FontWeight.w300,
-                ),
+                style: _kYonergeStili,
               ),
             ),
             const SizedBox(height: 16),
@@ -472,7 +583,8 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
             // Basılı-tut butonu kalan boşlukta dikeyde ORTALANIR (Anıl, 2026-11-06:
             // "biraz aşağı indir, kalan boşluğa dikeyde ortala").
             Expanded(
-              child: Center(
+              child: FittedBox( // çok büyük yazı boyutunda taşmak yerine küçülür
+                fit: BoxFit.scaleDown,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -489,58 +601,81 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
           ],
         ),
       ),
-      const FloatingBarSpacer(),
+      SizedBox(height: barPayi),
     ]);
   }
 
   Widget _buildWheelWithPointer() {
-    const wheelSize = 320.0; // Anıl, 2026-11-06: çark biraz büyütüldü (280→320).
+    final wheelSize = _carkCapi; // Anıl, 2026-11-09: ekrana göre büyür (yanlarda 12 pt pay).
     const pointerSize = 30.0;
     return SizedBox(
       width: wheelSize,
-      height: wheelSize + pointerSize * 0.5,
+      height: wheelSize + 22, // imleç diskin hemen altında, burç yazısını örtmez
       child: Stack(
         alignment: Alignment.topCenter,
         children: [
-          // Çark görseli — döndürme ekranın tamamını kaplayan sürükleme katmanıyla
-          // yapılır (build'deki Positioned.fill GestureDetector); burada yalnız döner.
-          Transform.rotate(
-            angle: _wheelAngle,
-            child: Image.asset(
-              'assets/images/burclar_wheel.png',
+          // Görselde dairenin çevresinde saydam pay var (512'de 468 dolu): disk tam çap kadar çizilir.
+          Transform.scale(
+            scale: 512 / 468,
+            child: SizedBox(
               width: wheelSize,
               height: wheelSize,
-              fit: BoxFit.contain,
-            ),
-          ),
-          // Highlight çarkı — çarkla aynı dönüşte, sadece üstteki dilim kliplenir
-          IgnorePointer(
-            child: ClipPath(
-              clipper: const _TopSegmentClipper(wheelSize: wheelSize),
-              child: Transform.rotate(
-                angle: _wheelAngle,
-                child: Image.asset(
-                  'assets/images/burclar_wheel_highlight.png',
-                  width: wheelSize,
-                  height: wheelSize,
-                  fit: BoxFit.contain,
-                ),
+              child: Stack(
+                children: [
+                  Transform.rotate(
+                    angle: _wheelAngle,
+                    child: Image.asset(
+                      'assets/images/burclar_wheel.png',
+                      width: wheelSize,
+                      height: wheelSize,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                  // Highlight çarkı — çarkla aynı dönüşte, sadece üstteki dilim kliplenir
+                  IgnorePointer(
+                    child: ClipPath(
+                      clipper: _TopSegmentClipper(wheelSize: wheelSize),
+                      child: Transform.rotate(
+                        angle: _wheelAngle,
+                        child: Image.asset(
+                          'assets/images/burclar_wheel_highlight.png',
+                          width: wheelSize,
+                          height: wheelSize,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ),
+                  // Seçili dilim sarı ışık — fixed, touch geçirgen
+                  IgnorePointer(
+                    child: CustomPaint(
+                      size: Size(wheelSize, wheelSize),
+                      painter: _SegmentGlowPainter(),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-          // Seçili dilim sarı ışık — fixed, touch geçirgen
-          IgnorePointer(
-            child: CustomPaint(
-              size: const Size(wheelSize, wheelSize),
-              painter: _SegmentGlowPainter(),
-            ),
-          ),
           const Positioned(
-            bottom: 0,
+            bottom: 0, // kutu diskin 8 pt üstünden başlar; üçgenin ucu diskin altında kalır
             child: Icon(
               Icons.arrow_drop_up_rounded,
               color: Colors.white,
               size: pointerSize,
+            ),
+          ),
+          // Sürükleme alanı: yalnız çark karesi; daire dışı başlangıçlar yok sayılır.
+          Positioned(
+            top: 0,
+            width: wheelSize,
+            height: wheelSize,
+            child: GestureDetector(
+              key: const ValueKey('ask_uyumu_cark'),
+              behavior: HitTestBehavior.opaque,
+              onPanStart: _onWheelDragStart,
+              onPanUpdate: _onWheelDragUpdate,
+              onPanEnd: _onWheelDragEnd,
             ),
           ),
         ],
@@ -642,6 +777,12 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
           children: [
             for (final bar in results) _buildBarCard(bar),
             const SizedBox(height: 8),
+            BirTaneDaha(
+              falTuru: 'askuyumu',
+              hakAnahtari: 'askuyumu_bugun_tarih',
+              etiket: ref.watch(l10nProvider).adOtherSign,
+            ),
+            const SizedBox(height: 8),
             const FloatingBarSpacer(),
           ],
         ),
@@ -701,7 +842,13 @@ class _AskUyumuScreenState extends ConsumerState<AskUyumuScreen>
               },
             ),
             const SizedBox(height: 10),
-            bar.metin.isNotEmpty
+            bar.key == 'uyum' && _uyumKilitli
+                ? OccultButton.secondary(
+                    label: ref.watch(l10nProvider).adOpenReadingHint,
+                    icon: Icons.play_arrow_rounded,
+                    onTap: _uyumuAc,
+                  )
+                : bar.metin.isNotEmpty
                 ? RichTextParser.build(
                     bar.metin,
                     style: const TextStyle(

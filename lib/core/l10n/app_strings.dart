@@ -481,6 +481,17 @@ class AppStrings {
   String get adOpenNowBody => _s('Kısa bir reklam izlersen falın beklemeden hazır olur.',
       'Watch a short ad and your reading is ready right away.');
   String get adOpenNowHint => _s('Reklam izle, hemen aç', 'Watch an ad, open now');
+  String get adOneMore => _s('Reklam izle, bir tane daha', 'Watch an ad for one more');
+  String get adOtherSign => _s('Reklam izle, başka burca bak', 'Watch an ad to try another sign');
+  String get adOpenReadingHint => _s('Reklam izle, yorumu aç', 'Watch an ad to read it');
+  String get adOpenReadingTitle => _s('Genel yorumu aç', 'Open the overall reading');
+  String get adOpenReadingBody => _s('Kısa bir reklam izlersen genel uyum yorumun açılır.',
+      'Watch a short ad to open your overall compatibility reading.');
+  String get oracleDailyLimit => _s('Bugünkü kehanet hakların bitti. Yarın yeniden gel.',
+      'Your prophecies for today are used up. Come back tomorrow.');
+  String get adOracleTitle =>_s('Üç kehanet daha', 'Three more prophecies');
+  String get adOracleBody => _s('Kısa bir reklam izlersen bugün üç kehanet hakkı daha kazanırsın.',
+      'Watch a short ad to get three more prophecies today.');
   String get adOpenBoxTitle => _s('Kutuları aç', 'Open the boxes');
   String get adOpenBoxPersonBody => _s('Kısa bir reklam izlersen bu kişinin tüm kutuları açılır.',
       "Watch a short ad to open all of this person's boxes.");

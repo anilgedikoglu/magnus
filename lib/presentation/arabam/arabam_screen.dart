@@ -140,6 +140,8 @@ class _ArabamScreenState extends ConsumerState<ArabamScreen> {
     try {
       // Ödül mümkünse teklif; değilse (reklam yok / sınır dolu) kutu ücretsiz açılır.
       var ac = true;
+      await AdService.instance.odulluBekle();
+      if (!mounted) return;
       if (AdService.instance.odulMumkun(OdulTuru.kutuAc)) {
         ac = await ref.kutuAcTeklifi(context, ref.read(l10nProvider).adOpenBoxSingleBody);
       }

@@ -40,9 +40,16 @@ class AdPacing {
   /// Geçiş reklamı için fal en az bu kadar açık kalmış olmalı.
   static const gecisIcinMinSure = Duration(seconds: 25);
 
+  /// Gelen kutusuna düşen fallarda ekranın kısa kalması normal (fal gönderildi, tamamlandı).
+  static const gecisIcinMinSureGonderim = Duration(seconds: 4);
+
   /// Doğal ara mı? Fal ekranı kapanıp menüye dönüyor, süre yeterli, Dert Ortağı değil.
-  static bool dogalAraMi(String falTuru, Duration sure, {required bool menuyeDonuyor}) =>
-      menuyeDonuyor && falTuru != 'dertortagi' && sure >= gecisIcinMinSure;
+  /// [kutuyaDustu]: fal gelen kutusuna düştü; dokunuştan hemen sonra reklam çıkmasın diye yine kısa eşik var.
+  static bool dogalAraMi(String falTuru, Duration sure,
+          {required bool menuyeDonuyor, bool kutuyaDustu = false}) =>
+      menuyeDonuyor &&
+      falTuru != 'dertortagi' &&
+      sure >= (kutuyaDustu ? gecisIcinMinSureGonderim : gecisIcinMinSure);
 
   final SharedPreferences _prefs;
 

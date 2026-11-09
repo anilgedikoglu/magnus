@@ -2,9 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/utils/rich_text_parser.dart';
+import '../../core/widgets/bir_tane_daha.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../core/widgets/result_reveal.dart';
 import '../home/home_screen.dart' show kHomeBackground;
@@ -133,6 +135,14 @@ const _sans2file = <String, String>{
   'Tilsimsovalyesi': 'TilsimSovalyesi.png', 'Tilsimuclusu': 'Tilsimuclusu.png',
   'Tilsimyedilisi': 'Tilsimyedilisi.png', 'YikilanKule': 'YikilanKule.png',
   'Yildiz': 'Yildiz.png',
+};
+
+/// Gelen kutusu türü → (fal türü, rota, günlük hak anahtarı).
+const _kBirTaneDahaHedefleri = <String, (String, String, String)>{
+  'coffee': ('kahve', '/coffee', 'kahve_bugun_tarih'),
+  'tarot': ('tarot', '/tarot', 'tarot_bugun_tarih'),
+  'iching': ('iching', '/iching', 'iching_bugun_tarih'),
+  'japonfali': ('japonfali', '/japonfali', 'japonfali_bugun_tarih'),
 };
 
 /// Fal metninin tamamını gösteren detay ekranı.
@@ -340,6 +350,18 @@ class InboxDetailScreen extends ConsumerWidget {
                   // Footer
                   _buildMagnusFooter(),
                   const SizedBox(height: 20),
+                  // Okuma bitti: hak kullanıldıysa isteğe bağlı "bir tane daha".
+                  if (_kBirTaneDahaHedefleri[item.fortuneTypeKey] case final h?)
+                    BirTaneDaha(
+                      falTuru: h.$1,
+                      hakAnahtari: h.$3,
+                      sonra: (c) {
+                        // Detay kapanır: fal bitince eski detaya dönülmez, düğme boşa kalmaz.
+                        final router = GoRouter.of(c);
+                        Navigator.of(c).pop();
+                        router.push(h.$2);
+                      },
+                    ),
                 ],
               ),
             ),

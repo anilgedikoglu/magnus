@@ -4,7 +4,7 @@
 // Akış (2026-11-07, Anıl):
 //   Araya giren omikuji-kutusu görsel ekranı/animasyonu KALDIRILDI. Japon Falı istenince
 //   diğer hızlı fallar (I-Ching) gibi DOĞRUDAN gelen kutusuna "hazırlanıyor" (kilitli,
-//   unlockAt = +2 dakika) olarak düşer ve ana menüye dönülür. Ara ekran yoktur; ekran yalnız
+//   unlockAt = +3 dakika) olarak düşer ve ana menüye dönülür. Ara ekran yoktur; ekran yalnız
 //   bir kare, görselsiz (sade zemin) görünür. "Hazırlanıyor" balonunu ana menü gösterir.
 
 import 'dart:convert';
@@ -93,9 +93,9 @@ class _JaponFaliScreenState extends ConsumerState<JaponFaliScreen> {
         : secilen['metin'] as String;
     final metin = VariableReplacer.replace(secilenMetin, vars);
 
-    // 2 dakika sonra açılır
+    // 3 dakika sonra açılır
     final now      = DateTime.now();
-    final unlockAt = now.add(const Duration(minutes: 2)).toIso8601String();
+    final unlockAt = now.add(const Duration(minutes: 3)).toIso8601String();
 
     final item = InboxItem(
       id:             const Uuid().v4(),

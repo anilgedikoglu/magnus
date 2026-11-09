@@ -6,6 +6,10 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../../core/services/ad_pacing.dart';
+import '../../core/services/ad_service.dart';
+import '../../core/services/kehanet_hak.dart';
+import '../../core/widgets/odul_teklifi.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 import '../../data/providers.dart';
@@ -13,6 +17,50 @@ import '../../core/constants/app_text_styles.dart';
 
 class KehanetMenuScreen extends ConsumerWidget {
   const KehanetMenuScreen({super.key});
+
+  static bool _mesgul = false; // teklif sürerken ikinci dokunuş yok
+
+  /// Günde 3 ücretsiz giriş; sınır reklamdan bağımsızdır. Bitince isteğe bağlı ödüllü +3;
+  /// reklam yoksa ya da reddedilirse diğer günlük haklar gibi "yarın gel".
+  Future<void> _gir(BuildContext context, WidgetRef ref, _KehanetItem item) async {
+    if (_mesgul) return;
+    _mesgul = true;
+    try {
+      final hak = KehanetHak(ref.read(sharedPrefsProvider));
+      final s = ref.read(l10nProvider);
+      final now = DateTime.now();
+      if (!hak.girebilir(now)) {
+        final ads = AdService.instance;
+        await ads.odulluBekle();
+        if (!context.mounted) return;
+        var kazandi = false;
+        if (ads.odulMumkun(OdulTuru.hakBitti, falTuru: 'kehanet')) {
+          kazandi = await odulTeklifiGoster(
+            context,
+            tur: OdulTuru.hakBitti,
+            falTuru: 'kehanet',
+            baslik: s.adOracleTitle,
+            aciklama: s.adOracleBody,
+            izleEtiketi: s.adWatch,
+            vazgecEtiketi: s.adDecline,
+          );
+        }
+        if (!kazandi) {
+          if (context.mounted) {
+            ScaffoldMessenger.of(context)
+              ..hideCurrentSnackBar()
+              ..showSnackBar(SnackBar(content: Text(s.oracleDailyLimit)));
+          }
+          return;
+        }
+        await hak.odulEkle(now);
+      }
+      await hak.kullan(now);
+      if (context.mounted) context.push(item.route);
+    } finally {
+      _mesgul = false;
+    }
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -68,7 +116,7 @@ class KehanetMenuScreen extends ConsumerWidget {
                       childAspectRatio: cellW / math.max(cellH, 1),
                     ),
                     itemCount: items.length,
-                    itemBuilder: (ctx, i) => _buildItem(ctx, items[i]),
+                    itemBuilder: (ctx, i) => _buildItem(ctx, ref, items[i]),
                   );
                 },
               ),
@@ -81,9 +129,9 @@ class KehanetMenuScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildItem(BuildContext context, _KehanetItem item) {
+  Widget _buildItem(BuildContext context, WidgetRef ref, _KehanetItem item) {
     return GestureDetector(
-      onTap: () => context.push(item.route),
+      onTap: () => _gir(context, ref, item),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white.withValues(alpha: 0.05),

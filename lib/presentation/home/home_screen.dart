@@ -83,6 +83,8 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/ad_pacing.dart';
 import '../../core/services/ad_service.dart';
+import '../../core/widgets/bir_tane_daha.dart';
+import '../../data/models/inbox_item.dart';
 import '../../core/widgets/odul_teklifi.dart';
 import '../../core/magnus_ses/magnus_fal_adlari.dart';
 import '../../core/magnus_ses/magnus_hafiza.dart';
@@ -187,8 +189,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     // Geçiş reklamı yalnız doğal arada: fal kapanıp menüye dönerken, rota kapanırken HEMEN
     // (docs/reklam_duzeni.md). Sınırlar AdPacing'de; hazır reklam yoksa sessizce atlanır.
     final hedef = MagnusRotaGozlemci.sonHedefRota;
+    // Fal gerçekten tamamlandıysa: gelen kutusuna düştü ya da sonucu ekranda gösteren anlık fal
+    // (fincanı reddedilip geri çıkana reklam çıkmaz).
+    final ustKutu = mounted ? ref.read(inboxProvider) : const <InboxItem>[];
+    final kutuyaDustu = ustKutu.isNotEmpty && ustKutu.first.id != _falGirisUstId;
     if (mounted &&
-        AdPacing.dogalAraMi(tur, sure, menuyeDonuyor: hedef == null || hedef == '/home')) {
+        (kutuyaDustu || kAnlikFallar.contains(tur)) &&
+        AdPacing.dogalAraMi(tur, sure,
+            menuyeDonuyor: hedef == null || hedef == '/home', kutuyaDustu: kutuyaDustu)) {
       unawaited(AdService.instance.maybeShowInterstitial(tamamlananFal: hafiza?.tamamlananFal ?? 0));
     }
     if (hafiza == null || ses == null || !mounted) return;
@@ -571,6 +579,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     // Ekrandan menüye DÖNÜŞTE gelen mesajlar (hazırlanıyor / zaten okundu) → menü önce, chat 3 sn sonra.
     final result = await context.push<String?>(route);
     if (!mounted) return;
+    if (result == kBirTaneDaha) {
+      await _refreshCredits(); // sonuç ekranında reklam izlendi, hak verildi → fal yeniden açılır
+      if (mounted) await _onFortuneItemTap(type, route);
+      return;
+    }
     if (result == 'hazirlanıyor') {
       _showHazirlaniyorBubble(type);
     } else if (result == 'zaten_okundu') {
@@ -595,18 +608,26 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       if (mounted) await devam();
       return true;
     }
-    if (!_odulluHakTurleri.contains(type) ||
-        !AdService.instance.odulMumkun(OdulTuru.hakBitti, falTuru: type)) {
-      return false;
+    if (!_odulluHakTurleri.contains(type)) return false;
+    if (_hakTeklifte) return true; // reklam beklenirken ikinci dokunuş
+    _hakTeklifte = true;
+    try {
+      await AdService.instance.odulluBekle();
+      if (!mounted) return true;
+      if (!AdService.instance.odulMumkun(OdulTuru.hakBitti, falTuru: type)) return false;
+      final kazandi = await ref.hakBittiTeklifi(context, type);
+      if (!kazandi) return true;
+      await prefs.remove(anahtar); // ekran kapanmış olsa da izlenen reklamın hakkı verilir
+    } finally {
+      _hakTeklifte = false;
     }
-    final kazandi = await ref.hakBittiTeklifi(context, type);
-    if (!kazandi) return true;
-    await prefs.remove(anahtar); // ekran kapanmış olsa da izlenen reklamın hakkı verilir
     if (!mounted) return true;
     await _refreshCredits();
     if (mounted) await devam();
     return true;
   }
+
+  bool _hakTeklifte = false;
 
   // ─── Günlük limitli fallar (I-Ching, Japon Falı, Tavşan) — git/gel yok (go) ──
   Future<void> _onDailyFalTap(String type, String route) async {
@@ -619,8 +640,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       return;
     }
     // Dönüşte rozeti yenile (Tavşan Falı gibi ekranda tamamlanan fallar için).
-    context.push(route).then((_) {
-      if (mounted) _refreshCredits();
+    context.push<String?>(route).then((sonuc) async {
+      if (!mounted) return;
+      await _refreshCredits();
+      if (sonuc == kBirTaneDaha && mounted) await _onDailyFalTap(type, route);
     });
   }
 

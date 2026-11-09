@@ -191,11 +191,22 @@ class InboxScreen extends ConsumerWidget {
       _openDetail(context, ref, item); // liste geç yenilendiyse kilit çoktan bitmiştir
       return;
     }
-    if (!item.hemenAcmayaDeger || !AdService.instance.odulMumkun(OdulTuru.hemenAc)) return;
+    if (!item.hemenAcmayaDeger || _hemenAcTeklifte) return;
     final notifier = ref.read(inboxProvider.notifier); // await'ten ÖNCE
-    final kazandi = await ref.hemenAcTeklifi(context);
-    if (kazandi) await notifier.unlockNow(item.id);
+    _hemenAcTeklifte = true;
+    try {
+      await AdService.instance.odulluBekle();
+      if (!context.mounted || !AdService.instance.odulMumkun(OdulTuru.hemenAc)) return;
+      final kazandi = await ref.hemenAcTeklifi(context);
+      if (!kazandi) return;
+      await notifier.unlockNow(item.id);
+      if (context.mounted) _navigateToDetail(context, ref, item); // ödülün karşılığı: fal hemen okunur
+    } finally {
+      _hemenAcTeklifte = false;
+    }
   }
+
+  static bool _hemenAcTeklifte = false;
 
   void _navigateToDetail(BuildContext context, WidgetRef ref, InboxItem item) {
     if (!item.isRead) {

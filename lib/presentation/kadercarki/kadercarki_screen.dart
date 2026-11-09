@@ -13,6 +13,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../core/widgets/bir_tane_daha.dart';
 import '../../core/widgets/edge_swipe_back.dart';
 import '../../core/utils/rich_text_parser.dart';
 import '../../core/utils/variable_replacer.dart';
@@ -652,6 +653,10 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
         ),
       ),
       const SizedBox(height: 12),
+      const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        child: BirTaneDaha(falTuru: 'kadercarki', hakAnahtari: 'kadercarki_bugun_tarih'),
+      ),
       const FloatingBarSpacer(),
     ]);
   }

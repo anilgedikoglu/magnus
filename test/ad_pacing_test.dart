@@ -97,6 +97,12 @@ void main() {
       expect(AdPacing.dogalAraMi('kahve', sure, menuyeDonuyor: false), isFalse);
       expect(AdPacing.dogalAraMi('dertortagi', const Duration(minutes: 5), menuyeDonuyor: true), isFalse);
     });
+
+    test('gelen kutusuna düşen falda kısa eşik; dokunuştan hemen sonra yok', () {
+      expect(AdPacing.dogalAraMi('iching', const Duration(seconds: 5), menuyeDonuyor: true, kutuyaDustu: true), isTrue);
+      expect(AdPacing.dogalAraMi('japonfali', const Duration(seconds: 1), menuyeDonuyor: true, kutuyaDustu: true), isFalse);
+      expect(AdPacing.dogalAraMi('iching', const Duration(seconds: 5), menuyeDonuyor: true), isFalse);
+    });
   });
 
   group('Ödüllü', () {

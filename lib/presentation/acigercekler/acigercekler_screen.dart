@@ -15,6 +15,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/variable_replacer.dart';
+import '../../core/widgets/bir_tane_daha.dart';
 import '../../core/widgets/burning_paper.dart';
 import '../../core/widgets/focus_ripple.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
@@ -322,6 +323,11 @@ class _AciGerceklerScreenState extends ConsumerState<AciGerceklerScreen>
             ),
           ),
         ),
+        if (_yandi)
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 8, 16, 0),
+            child: BirTaneDaha(falTuru: 'acigercekler', hakAnahtari: _prefBugun),
+          ),
         const FloatingBarSpacer(),
       ],
     );

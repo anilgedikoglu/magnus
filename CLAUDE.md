@@ -1045,6 +1045,7 @@ No-repeat: `dh_gosterilen_1/2/3` ayrı prefs anahtarları.
 ## Aşk Uyumu Çark Ekranı (askuyumu_screen.dart)
 
 **Çark bölümü** (`build()` metodu içi, `_AskUyumuWheelState`):
+- **Dokunma (2026-11-09):** yalnız çark dairesinde başlayan kaydırma çevirir; açı merkez etrafında hesaplanır (`carkAciFarki`), saat yönü her yerde saat yönü. Çap ekrana göre (`_carkCapiHesapla`), yanlarda 12 pt pay; görselin saydam payı `Transform.scale(512/468)` ile atılır.
 - Snap offset: `_kSnapOffset = pi/12`, başlangıç: `_wheelAngle = pi + pi/12`
 - Snap formülü: `((_wheelAngle - _kSnapOffset) / (pi/6)).round() * (pi/6) + _kSnapOffset`
 - İndeks (CCW burç yönü): `((6 - ((_wheelAngle - _kSnapOffset) / (pi/6)).round()) % 12 + 12) % 12`
@@ -1194,7 +1195,7 @@ Tüm `⏳`/`⌛` emoji'ler ve `Icons.hourglass_*` ikonları bu widget'larla değ
 
 **Inbox item:**
 - `fortuneTypeKey: 'iching'`
-- `unlockAt: now + 2 dakika`
+- `unlockAt: now + 3 dakika`
 - No-repeat key: `iching_gosterilen`
 - JSON: `assets/data/iching.json`
 
@@ -1256,7 +1257,7 @@ Kaynak: `C:\src\magnus_app\assets\images\Yeniikonlar\` (renkli) ve `Yeniikonlar\
 **Kaynak:** `C:\Magnus\Assets\Resources\Editor\OnlineDOSYALAR\AnaMenu2\JaponFali\Metinler` — 27 .asset dosyası
 **JSON:** `assets/data/japonfali.json` → `{"japonfali": [{"id": 1, "metin": "...", "kosullar": []}, ...]}`
 **Arka plan:** `assets/images/falbg/omikujibg.png`
-**Ekran akışı:** 5s kum saati + "Japon Falı çalışılıyor..." → inbox (unlockAt +2 dak) → `japonFaliSentProvider = true` → `context.go('/home')`
+**Ekran akışı:** 5s kum saati + "Japon Falı çalışılıyor..." → inbox (unlockAt +3 dak) → `japonFaliSentProvider = true` → `context.go('/home')`
 **Home balon:** "Japon Falın değerlendiriliyor..." (kırmızı #CC2244 tema)
 **Günlük limit pref anahtarı:** `japonfali_bugun_tarih`
 **No-repeat pref anahtarı:** `japonfali_gosterilen`
@@ -1516,6 +1517,7 @@ Kodda `testDeviceIds` tanımlı değil → canlı uygulamada kendi reklamına t�
   gün 6, 2 fal tamamlanmadan yok; ödüllü: hak bitti tür başına 2 / gün 6, hemen aç gün 5, kutu gün 8, toplam gün 15). Yüklenen reklam 55 dk'da yenilenir.
   Kullanıcıdaki 10.8.5'te geçiş reklamı yüklenip hiç gösterilmiyordu (AdMob: 1.411 istek, 0 gösterim; gelirin tamamı ödüllü).
   "Tamamlanan fal" = `MagnusHafiza.tamamlananFal` (okunan + ≥25 sn anlık fal).
+- Sonuç sonu `BirTaneDaha` (`lib/core/widgets/bir_tane_daha.dart`), Aşk Uyumu genel yorumu kilidi, kehanet menüsü günde 3 giriş + ödüllü 3 (`KehanetHak`). Tam tablo: docs/reklam_duzeni.md.
 - `AdService`: UMP (`canRequestAds` olmadan reklam istenmez, hata akışı bozmaz), iOS `nonPersonalizedAds: true`,
   yükleme hatasında 3 deneme, SKAdNetworkItems `Info.plist`'te. Kullanıcı Bilgileri 3. kartta (gerekirse) "Gizlilik seçenekleri".
 - AdMob panelinde GDPR mesajı oluşturulmalı (uygulama dışı adım). Aşağıdaki platform-ID bölümü geçerli.

@@ -319,6 +319,17 @@ class AdService {
     return odulTeklifiHazir(tur, falTuru: falTuru);
   }
 
+  /// Reklam yükleniyorsa kısa süre bekler: art arda dokunuşta teklif kaçmasın, kutu bedava açılmasın.
+  Future<void> odulluBekle({Duration enFazla = const Duration(milliseconds: 2500)}) async {
+    if (_adsDisabled || !_canRequestAds) return;
+    reklamlariTazele(); // süresi dolmuş reklam "hazır" sayılmasın
+    if (isRewardedReady) return;
+    final bitis = DateTime.now().add(enFazla);
+    while (_rewardedLoading && !isRewardedReady && DateTime.now().isBefore(bitis)) {
+      await Future<void>.delayed(const Duration(milliseconds: 100));
+    }
+  }
+
   /// [odulMumkun]'un yan etkisiz hâli (build içinde kullanılır).
   bool odulTeklifiHazir(OdulTuru tur, {String? falTuru}) {
     if (_adsDisabled) return true;

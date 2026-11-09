@@ -289,7 +289,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
   /// Hak bitince ödüllü +1 hak teklif edilen türler (docs/reklam_duzeni.md). Diğerlerinde ek hak yok.
   static const _odulluHakTurleri = {
-    'kahve', 'tarot', 'durugoru', 'dertortagi', 'acigercekler', 'askuyumu',
+    'kahve', 'tarot', 'dertortagi', 'acigercekler', 'askuyumu',
+    'iching', 'japonfali', 'tavsanfali', 'kadercarki',
+    // Durugörü: hak soru başına, teklif kendi ekranında (durugoru_screen.dart).
   };
 
   // Pref anahtarları — her fal türü için tamamlanma tarihi
@@ -559,16 +561,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     if (remaining <= 0) {
       // Hak bitti: docs'taki türlerde ödüllü +1 hak teklifi (kullanıcı seçerse); sınır dolu ya da
       // reklam hazır değilse eski mesaj.
-      if (_odulluHakTurleri.contains(type) &&
-          AdService.instance.odulMumkun(OdulTuru.hakBitti, falTuru: type)) {
-        final kazandi = await ref.hakBittiTeklifi(context, type);
-        if (!kazandi || !mounted) return;
-        final prefs = await SharedPreferences.getInstance();
-        await prefs.remove(_creditPrefKeys[type]!); // o türün "bugün aldın" tarihi silinir → +1 hak
-        await _refreshCredits();
-        if (mounted) await _onFortuneItemTap(type, route);
-        return;
-      }
+      if (await _hakTeklifiCozuldu(type, () => _onFortuneItemTap(type, route))) return;
+      if (!mounted) return;
       _tapPop = true; // menüden çıkılmadı, dokunuşa cevap → band anında
       _showDailyLimitBubble(type);
       return;
@@ -587,10 +581,39 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     await _refreshCredits();
   }
 
-  // ─── Günlük limitli fallar (I-Ching, Japon Falı) — reklam yok, git/gel yok (go) ──
-  void _onDailyFalTap(String type, String route) {
+  /// Hak bitti: ödüllü +1 hak teklif edilebiliyorsa teklif eder, true döner (eski mesaj gösterilmez).
+  /// Kullanıcı ödülü kazanırsa o türün "bugün aldın" tarihi silinir ve [devam] çalışır.
+  Future<bool> _hakTeklifiCozuldu(String type, Future<void> Function() devam) async {
+    final anahtar = _creditPrefKeys[type];
+    if (anahtar == null) return false;
+    final prefs = await SharedPreferences.getInstance();
+    if (!mounted) return true;
+    // Ekrandaki sayaç eski olabilir (uygulama gece yarısını arka planda geçirdi): yeni günün hakkı
+    // için reklam istenmez.
+    if (prefs.getString(anahtar) != _today) {
+      await _refreshCredits();
+      if (mounted) await devam();
+      return true;
+    }
+    if (!_odulluHakTurleri.contains(type) ||
+        !AdService.instance.odulMumkun(OdulTuru.hakBitti, falTuru: type)) {
+      return false;
+    }
+    final kazandi = await ref.hakBittiTeklifi(context, type);
+    if (!kazandi) return true;
+    await prefs.remove(anahtar); // ekran kapanmış olsa da izlenen reklamın hakkı verilir
+    if (!mounted) return true;
+    await _refreshCredits();
+    if (mounted) await devam();
+    return true;
+  }
+
+  // ─── Günlük limitli fallar (I-Ching, Japon Falı, Tavşan) — git/gel yok (go) ──
+  Future<void> _onDailyFalTap(String type, String route) async {
     final remaining = _remainingCredits[type] ?? 1;
     if (remaining <= 0) {
+      if (await _hakTeklifiCozuldu(type, () => _onDailyFalTap(type, route))) return;
+      if (!mounted) return;
       _tapPop = true; // menüden çıkılmadı, dokunuşa cevap → band anında
       _showDailyLimitBubble(type);
       return;

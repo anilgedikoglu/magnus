@@ -21,6 +21,35 @@ import '../../data/providers.dart';
 import '../../core/constants/app_text_styles.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
 
+String _trKucuk(String s) => s.replaceAll('İ', 'i').replaceAll('I', 'ı').toLowerCase();
+
+/// Metin bu kullanıcıya uygun mu? Aynı değişken → OR, farklı değişkenler → AND.
+/// `wheel mod` yalnız kategori etiketidir, profille karşılaştırılmaz.
+bool kaderCarkiMetniUygun(Map<String, dynamic> metin, UserProfile profil) {
+  final kosullar = (metin['kosullar'] as List?) ?? const [];
+  final gruplar = <String, List<String>>{};
+  for (final k in kosullar) {
+    final degisken = '${k['degisken'] ?? ''}'.toLowerCase();
+    if (degisken == 'wheel mod') continue;
+    gruplar.putIfAbsent(degisken, () => []).add('${k['deger'] ?? ''}');
+  }
+  final vars = profil.toVariableMap();
+  for (final g in gruplar.entries) {
+    if (g.key == 'yasmax' || g.key == 'yasmin') {
+      final ok = g.value.any((d) {
+        final sinir = int.tryParse(d);
+        if (sinir == null) return false;
+        return g.key == 'yasmax' ? profil.age <= sinir : profil.age >= sinir;
+      });
+      if (!ok) return false;
+      continue;
+    }
+    final deger = _trKucuk(vars[g.key] ?? '');
+    if (deger.isEmpty || !g.value.any((d) => _trKucuk(d) == deger)) return false;
+  }
+  return true;
+}
+
 // ─── Çark bölmeleri (saat yönünde, 0'dan başlar) ─────────────────────────────
 
 class _Bolme {
@@ -324,15 +353,7 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
         .toList();
 
     // Koşul filtresi
-    final uygun = tumListe.where((m) {
-      final kosullar = (m['kosullar'] as List?) ?? [];
-      for (final k in kosullar) {
-        final deg   = '${k['degisken'] ?? ''}';
-        final deger = '${k['deger'] ?? ''}';
-        if (_profilDeger(deg, profile) != deger) return false;
-      }
-      return true;
-    }).toList();
+    final uygun = tumListe.where((m) => kaderCarkiMetniUygun(m, profile)).toList();
 
     // No-repeat
     final prefsKey  = 'kadercarki_${key}_gosterilen';
@@ -340,9 +361,12 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
     List<String> gosterilen = prefs.getStringList(prefsKey) ?? [];
     var kalan = uygun.where((m) => !gosterilen.contains('${m['id']}')).toList();
     if (kalan.isEmpty) {
-      await prefs.remove(prefsKey);
-      gosterilen = [];
-      kalan = List.from(uygun);
+      // Hepsi bitti: üst üste aynı metin gelmesin (no-repeat kuralı).
+      final sonId = gosterilen.isNotEmpty ? gosterilen.last : null;
+      gosterilen = sonId != null ? [sonId] : [];
+      await prefs.setStringList(prefsKey, gosterilen);
+      kalan = uygun.where((m) => '${m['id']}' != sonId).toList();
+      if (kalan.isEmpty) kalan = List.from(uygun);
     }
     if (kalan.isEmpty) kalan = List.from(tumListe); // koşullar çok kısıtlıysa fallback
     kalan.shuffle();
@@ -360,16 +384,6 @@ class _KaderCarkiScreenState extends ConsumerState<KaderCarkiScreen>
         ? secilen['metin_en'] as String
         : secilen['metin'] as String;
     return VariableReplacer.replace(secMetin, vars);
-  }
-
-  String _profilDeger(String deg, UserProfile p) {
-    switch (deg) {
-      case 'cinsiyet':     return p.gender;
-      case 'medeni durum': return p.maritalStatusLabel;
-      case 'medeni_durum': return p.maritalStatusLabel;
-      case 'meslek':       return p.jobLabel;
-      default:             return '';
-    }
   }
 
   // Anlık pointer'ın altındaki bölmenin adı

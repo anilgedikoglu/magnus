@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../core/services/ad_pacing.dart';
+import '../../../core/services/ad_service.dart';
 import '../../../core/widgets/filmed_image.dart';
 import '../../../data/models/inbox_item.dart';
 import '../../../core/l10n/app_strings.dart';
@@ -104,6 +106,8 @@ class InboxItemCard extends ConsumerWidget {
                         _formatDate(item.date, s),
                         style: AppTextStyles.inboxMeta,
                       ),
+                      if (onLockedTap != null && item.hemenAcmayaDeger)
+                        _HemenAcIsareti(etiket: s.adOpenNowHint),
                     ],
                   ],
                 ),
@@ -136,6 +140,49 @@ class InboxItemCard extends ConsumerWidget {
     } catch (_) {
       return '';
     }
+  }
+}
+
+// ─── "Reklam izle, hemen aç" işareti: yalnız teklif yapılabiliyorsa görünür ──
+
+class _HemenAcIsareti extends StatelessWidget {
+  final String etiket;
+  const _HemenAcIsareti({required this.etiket});
+
+  @override
+  Widget build(BuildContext context) {
+    final ads = AdService.instance;
+    return ValueListenableBuilder<bool>(
+      valueListenable: ads.odulluHazir,
+      builder: (_, __, ___) {
+        if (!ads.odulTeklifiHazir(OdulTuru.hemenAc)) return const SizedBox.shrink();
+        return Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(8, 4, 10, 4),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(999),
+              border: Border.all(color: AppColors.gold.withValues(alpha: 0.55), width: 0.8),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.play_arrow_rounded, color: AppColors.gold, size: 14),
+                const SizedBox(width: 3),
+                Flexible(
+                  child: Text(
+                    etiket,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTextStyles.inboxMeta.copyWith(color: AppColors.textPrimary),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
   }
 }
 

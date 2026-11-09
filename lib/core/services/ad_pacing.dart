@@ -3,9 +3,10 @@
 // Reklam sıklık sınırları (docs/reklam_duzeni.md). Sayaçlar SharedPreferences'ta KALICIDIR
 // (uygulama kapanınca sıfırlanmaz). Saf mantık: saat dışarıdan verilir, test edilebilir.
 //
-// Geçiş reklamı : en az 180 sn aralık, oturumda 2, günde 5; uygulamada 2 fal tamamlanmadan yok.
-// Ödüllü        : hak bitti +1 tür başına 1 ve günde toplam 3; hemen aç günde 3; kutu açma günde 6;
-//                 hepsi toplam günde 10.
+// Geçiş reklamı : önceki reklamdan (geçiş ya da ödüllü) en az 120 sn sonra, oturumda 3, günde 6;
+//                 uygulamada 2 fal tamamlanmadan yok.
+// Ödüllü        : hak bitti +1 tür başına 2 ve günde toplam 6; hemen aç günde 5; kutu açma günde 8;
+//                 hepsi toplam günde 15.
 // Saat geri alınırsa: gün sayaçları sıfırlanmaz (kullanıcı saati oynayarak sınırı aşamaz) ve son
 // geçiş "gelecekte" kalmışsa o an sınırı doldurulmuş sayılır; saat yeniden ilerleyince kendiliğinden düzelir.
 
@@ -24,17 +25,17 @@ class AdPacing {
   static const prefsKey = 'ad_pacing_v1';
 
   // ── Geçiş sınırları ──
-  static const gecisAraligi = Duration(seconds: 180);
-  static const gecisOturumMax = 2;
-  static const gecisGunMax = 5;
+  static const gecisAraligi = Duration(seconds: 120);
+  static const gecisOturumMax = 3;
+  static const gecisGunMax = 6;
   static const gecisIcinMinFal = 2;
 
   // ── Ödüllü sınırları ──
-  static const hakBittiTurBasina = 1;
-  static const hakBittiGunMax = 3;
-  static const hemenAcGunMax = 3;
-  static const kutuAcGunMax = 6;
-  static const odulToplamGunMax = 10;
+  static const hakBittiTurBasina = 2;
+  static const hakBittiGunMax = 6;
+  static const hemenAcGunMax = 5;
+  static const kutuAcGunMax = 8;
+  static const odulToplamGunMax = 15;
 
   /// Geçiş reklamı için fal en az bu kadar açık kalmış olmalı.
   static const gecisIcinMinSure = Duration(seconds: 25);
@@ -49,7 +50,7 @@ class AdPacing {
   int _gecisBugun = 0;
   int _sonGecisMs = 0;
   final Map<String, int> _odul = {};
-  final Set<String> _hakBittiTurleri = {};
+  final Map<String, int> _hakBittiTurleri = {};
 
   /// Bu uygulama çalışmasında gösterilen geçiş sayısı (kalıcı DEĞİL: "oturum").
   int oturumGecis = 0;
@@ -66,7 +67,15 @@ class AdPacing {
       _gecisBugun = (j['ig'] as num?)?.toInt() ?? 0;
       _sonGecisMs = (j['li'] as num?)?.toInt() ?? 0;
       (j['r'] as Map<String, dynamic>? ?? const {}).forEach((k, v) => _odul[k] = (v as num).toInt());
-      _hakBittiTurleri.addAll((j['hb'] as List? ?? const []).map((e) => '$e'));
+      // 306 kaydı liste (tür başına 1 hak); sonrası tür → adet.
+      final hb = j['hb'];
+      if (hb is List) {
+        for (final e in hb) {
+          _hakBittiTurleri['$e'] = 1;
+        }
+      } else if (hb is Map) {
+        hb.forEach((k, v) => _hakBittiTurleri['$k'] = (v as num).toInt());
+      }
     } catch (_) {
       // Bozuk kayıt: sıfırdan başlanır.
     }
@@ -79,7 +88,7 @@ class AdPacing {
           'ig': _gecisBugun,
           'li': _sonGecisMs,
           'r': _odul,
-          'hb': _hakBittiTurleri.toList(),
+          'hb': _hakBittiTurleri,
         }),
       );
 
@@ -133,7 +142,7 @@ class AdPacing {
     switch (tur) {
       case OdulTuru.hakBitti:
         if (_o('hakBitti') >= hakBittiGunMax) return false;
-        if (falTuru != null && _hakBittiTurleri.contains(falTuru)) return false;
+        if (falTuru != null && (_hakBittiTurleri[falTuru] ?? 0) >= hakBittiTurBasina) return false;
         return true;
       case OdulTuru.hemenAc:
         return _o('hemenAc') < hemenAcGunMax;
@@ -145,7 +154,11 @@ class AdPacing {
   Future<void> recordReward(OdulTuru tur, DateTime now, {String? falTuru}) {
     _normalize(now);
     _odul[tur.name] = _o(tur.name) + 1;
-    if (tur == OdulTuru.hakBitti && falTuru != null) _hakBittiTurleri.add(falTuru);
+    // Ödüllü izleyen kullanıcıya hemen ardından geçiş çıkmasın: aralık yeniden başlar.
+    _sonGecisMs = now.millisecondsSinceEpoch;
+    if (tur == OdulTuru.hakBitti && falTuru != null) {
+      _hakBittiTurleri[falTuru] = (_hakBittiTurleri[falTuru] ?? 0) + 1;
+    }
     return _yaz();
   }
 }

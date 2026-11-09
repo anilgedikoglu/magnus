@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart' show AppLifecycleListener;
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -41,8 +42,21 @@ class AdService {
   /// Yükleme hatasında en çok bu kadar yeniden dene (10 sn, 30 sn, 90 sn).
   static const _retryDelays = [Duration(seconds: 10), Duration(seconds: 30), Duration(seconds: 90)];
 
+  /// Yüklenen reklam 1 saat sonra geçersiz olur; süresi dolmuşu gösterince gelir yazılmaz.
+  static const reklamOmru = Duration(minutes: 55);
+
+  /// [yuklendi] anında yüklenen reklamın süresi [simdi] itibarıyla doldu mu?
+  @visibleForTesting
+  static bool suresiDoldu(DateTime yuklendi, DateTime simdi) =>
+      simdi.difference(yuklendi) >= reklamOmru;
+
   InterstitialAd? _interstitialAd;
   RewardedAd?     _rewardedAd;
+  DateTime? _interstitialYuklendi;
+  DateTime? _rewardedYuklendi;
+
+  /// Hazır ödüllü reklam değişince arayüz (gelen kutusundaki "hemen aç" işareti) güncellenir.
+  final ValueNotifier<bool> odulluHazir = ValueNotifier<bool>(false);
   bool _interstitialLoading = false;
   bool _rewardedLoading     = false;
   int _interstitialRetry = 0;
@@ -55,6 +69,7 @@ class AdService {
   /// UMP sonucu: false iken hiçbir reklam istenmez.
   bool _canRequestAds = false;
   bool _sdkBasladi = false;
+  bool _sdkHazir = false;
   int _rizaDenemesi = 0;
   static const _rizaBeklemeleri = [Duration(seconds: 30), Duration(minutes: 2), Duration(minutes: 10)];
 
@@ -80,7 +95,33 @@ class AdService {
     } catch (e) {
       debugPrint('[AdService] Sayaçlar yüklenemedi: $e');
     }
+    _yasamDongusu ??= AppLifecycleListener(onResume: reklamlariTazele);
     unawaited(_rizaVeBaslat());
+  }
+
+  AppLifecycleListener? _yasamDongusu;
+
+  /// Süresi dolanı atar, eksik reklamı yükler (uygulamaya dönüşte ve teklif öncesi).
+  void reklamlariTazele() {
+    if (_adsDisabled || !_canRequestAds || !_sdkHazir) return;
+    final simdi = DateTime.now();
+    if (!_reklamDevam) {
+      final yg = _interstitialYuklendi;
+      if (_interstitialAd != null && yg != null && suresiDoldu(yg, simdi)) {
+        _interstitialAd!.dispose();
+        _interstitialAd = null;
+        _interstitialYuklendi = null;
+      }
+      final yo = _rewardedYuklendi;
+      if (_rewardedAd != null && yo != null && suresiDoldu(yo, simdi)) {
+        _rewardedAd!.dispose();
+        _rewardedAd = null;
+        _rewardedYuklendi = null;
+        odulluHazir.value = false;
+      }
+    }
+    _loadInterstitial();
+    _loadRewarded();
   }
 
   /// UMP: her açılışta bilgi güncellenir, gerekirse form gösterilir; hata olursa akış bozulmaz.
@@ -128,6 +169,7 @@ class AdService {
       _sdkBasladi = true;
       try {
         await MobileAds.instance.initialize();
+        _sdkHazir = true;
       } catch (e) {
         debugPrint('[AdService] MobileAds başlatılamadı: $e');
         _sdkBasladi = false;
@@ -175,6 +217,7 @@ class AdService {
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
           _interstitialAd = ad;
+          _interstitialYuklendi = DateTime.now();
           _interstitialLoading = false;
           _interstitialRetry = 0;
         },
@@ -190,13 +233,14 @@ class AdService {
   }
 
   /// Doğal arada (fal kapanıp menüye dönerken) geçiş reklamı gösterir. Gösterildiyse true.
-  /// Sınırlar [AdPacing]'den: 180 sn aralık, oturumda 2, günde 5, [tamamlananFal] ≥ 2.
+  /// Sınırlar [AdPacing]'den: 120 sn aralık, oturumda 3, günde 6, [tamamlananFal] ≥ 2.
   /// Hazır reklam yoksa ya da sınır doluysa sessizce false; hiçbir akışı bekletmez.
   Future<bool> maybeShowInterstitial({required int tamamlananFal, DateTime? now}) async {
     if (_adsDisabled || !_canRequestAds || _reklamDevam) return false;
     final pacing = _pacing;
     final t = now ?? DateTime.now();
     if (pacing == null || !pacing.canShowInterstitial(t, tamamlananFal: tamamlananFal)) return false;
+    reklamlariTazele(); // süresi dolmuş reklam gösterilmesin
     final ad = _interstitialAd;
     if (ad == null) {
       _loadInterstitial();
@@ -247,8 +291,10 @@ class AdService {
       rewardedAdLoadCallback: RewardedAdLoadCallback(
         onAdLoaded: (ad) {
           _rewardedAd = ad;
+          _rewardedYuklendi = DateTime.now();
           _rewardedLoading = false;
           _rewardedRetry = 0;
+          odulluHazir.value = true;
         },
         onAdFailedToLoad: (err) {
           _rewardedLoading = false;
@@ -266,7 +312,15 @@ class AdService {
 
   /// Bu ödül için teklif yapılabilir mi? Admin modunda her zaman true (ödül doğrudan verilir).
   /// Normalde: rıza var + hazır reklam var + kalıcı sınırlar uygun.
+  ///
+  /// Dokunuş anında çağrılır: reklam hazır değilse ya da süresi dolduysa yenisini ister.
   bool odulMumkun(OdulTuru tur, {String? falTuru}) {
+    reklamlariTazele();
+    return odulTeklifiHazir(tur, falTuru: falTuru);
+  }
+
+  /// [odulMumkun]'un yan etkisiz hâli (build içinde kullanılır).
+  bool odulTeklifiHazir(OdulTuru tur, {String? falTuru}) {
     if (_adsDisabled) return true;
     if (!_canRequestAds || !isRewardedReady) return false;
     final pacing = _pacing;
@@ -277,6 +331,7 @@ class AdService {
   /// değil → false (ödül yok). Admin modunda reklam yok, ödül doğrudan verilir (true).
   Future<bool> showRewardedFor(OdulTuru tur, {String? falTuru}) async {
     if (_adsDisabled) return true;
+    reklamlariTazele(); // teklif penceresi açıkken süresi dolmuş olabilir
     final pacing = _pacing;
     final ad = _rewardedAd;
     if (!_canRequestAds || _reklamDevam || pacing == null || ad == null ||
@@ -284,6 +339,8 @@ class AdService {
       return false;
     }
     _rewardedAd = null;
+    _rewardedYuklendi = null;
+    odulluHazir.value = false;
     _reklamDevam = true;
     var earned = false;
     final completer = Completer<bool>();

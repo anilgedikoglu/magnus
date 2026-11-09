@@ -480,6 +480,7 @@ class AppStrings {
   String get adOpenNowTitle => _s('Falı hemen aç', 'Open the reading now');
   String get adOpenNowBody => _s('Kısa bir reklam izlersen falın beklemeden hazır olur.',
       'Watch a short ad and your reading is ready right away.');
+  String get adOpenNowHint => _s('Reklam izle, hemen aç', 'Watch an ad, open now');
   String get adOpenBoxTitle => _s('Kutuları aç', 'Open the boxes');
   String get adOpenBoxPersonBody => _s('Kısa bir reklam izlersen bu kişinin tüm kutuları açılır.',
       "Watch a short ad to open all of this person's boxes.");

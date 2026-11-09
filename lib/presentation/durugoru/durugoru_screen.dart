@@ -14,9 +14,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 
+import '../../core/services/ad_pacing.dart';
+import '../../core/services/ad_service.dart';
 import '../../core/utils/variable_replacer.dart';
 import '../../core/widgets/elegant_hourglass.dart';
 import '../../core/widgets/floating_bar_spacer.dart';
+import '../../core/widgets/odul_teklifi.dart';
 import '../../core/widgets/swipe_back.dart';
 import '../../data/models/inbox_item.dart';
 import '../../data/models/user_profile.dart';
@@ -120,6 +123,21 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
   }
 
   // ── Soru seçimi ───────────────────────────────────────────────────────────
+
+  /// Bugün sorulmuş soru: kullanıcı isterse ödüllü reklamla o soruya +1 hak.
+  Future<void> _ekHakTeklifi(_SoruTipi tip) async {
+    if (_vurgulu != null ||
+        !AdService.instance.odulMumkun(OdulTuru.hakBitti, falTuru: 'durugoru')) {
+      return;
+    }
+    final kazandi = await ref.hakBittiTeklifi(context, 'durugoru');
+    if (!kazandi) return;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(tip.tarihKey);
+    if (!mounted) return;
+    setState(() => _kullanildi[tip] = false);
+    await _soruyuSec(tip);
+  }
 
   Future<void> _soruyuSec(_SoruTipi tip) async {
     if (_kullanildi[tip] == true || _vurgulu != null) return;
@@ -338,7 +356,7 @@ class _DurugoruScreenState extends ConsumerState<DurugoruScreen>
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: GestureDetector(
-          onTap: kullanildi ? null : () => _soruyuSec(tip),
+          onTap: () => kullanildi ? _ekHakTeklifi(tip) : _soruyuSec(tip),
           child: AnimatedScale(
             scale: _vurgulu == tip ? 1.08 : (_vurgulu != null ? 0.94 : 1.0),
             duration: (MediaQuery.maybeDisableAnimationsOf(context) ?? false)

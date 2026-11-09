@@ -56,8 +56,9 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 
 - **Magnus sesi (306'da çıktı):** `lib/core/magnus_ses/`: `magnus_hafiza` (cihazda kullanım hafızası), `magnus_takvim` (Diyanet 2026-2030 + millî günler; 2031 sonrası tablo eklenmeli), `magnus_ses` (seçim beyni), `magnus_rota_gozlemci` (fal giriş/çıkış). Metinler `assets/data/magnus_ses.json`: dönüş 500, giriş 500, özel gün 160, durum 251; TR+EN; 5 yazar ajan + ChatGPT adayından seçildi, iki bağımsız son okumadan geçti. Ağırbaşlı günlerde (10 Kasım, 18 Mart, 15 Temmuz) şaka yok, Ramazan'da yemek şakası yok. `karsilamalar.json` artık kullanılmıyor (testi duruyor).
 
-- **Reklam düzeni (306):** `docs/reklam_duzeni.md`; zorunlu ödüllü reklamlar kalktı. Teklifli ödüllü: hak bitti +1, hazırlanan falı hemen aç, Kısmetim/Arabam/Evim kutuları. Geçiş yalnız fal kapanırken, 180 sn / oturum 2 / gün 5 (`AdPacing`). UMP, iOS NPA, SKAdNetworkItems. AdMob panelinde GDPR mesajı açılmalı.
-- **Satın alma YOK (bilinçli):** Türkiye'de ücretli fal riski (677 sayılı Kanun, Faladdin/Binnaz soruşturması). Önerilen model: Mühür haftalık 39,99/aylık 99,99/yıllık 599,99 TL (yıllıkta 7 gün deneme), Ömürlük 1.499,99, Reklamsız 149,99, 10 hak 49,99, Kısmetim/Arabam/Evim 49,99 tek tek ya da 99,99 üçü. Avukat görüşü ya da Anıl'ın açık kararı beklenir.
+- **Reklam düzeni (306):** `docs/reklam_duzeni.md`; zorunlu ödüllü reklamlar kalktı. Teklifli ödüllü: hak bitti +1, hazırlanan falı hemen aç, Kısmetim/Arabam/Evim kutuları. Geçiş yalnız fal kapanırken (`AdPacing`). UMP, iOS NPA, SKAdNetworkItems. AdMob GDPR mesajı yayında, Magnus gizlilik adresleri düzeltildi.
+- **Gelir ayarı (309 için, 9 Kas):** geçiş 120 sn / oturum 3 / gün 6, ödüllüden sonra da 120 sn; ödüllü sınırları yükseldi; I-Ching, Japon, Tavşan, Çark ve Durugörü'ye +1 hak; gelen kutusunda "hemen aç" işareti; 55 dk'da reklam yenileme. AdMob 30 gün: ödüllü 1.106 gösterim ₺234, geçiş 1.411 istek 0 gösterim (10.8.5'te gösteren kod yok). Kader Çarkı koşul filtresi ve no-repeat düzeltildi (`kaderCarkiMetniUygun`).
+- **Satın alma YOK (Anıl'ın kararı, 9 Kas):** yalnız reklam; dış tanıtım da yapılmayacak, adlar değişmeyecek. Ücretli fal riski: 677 sayılı Kanun, Faladdin/Binnaz.
 
 ## Yarım kalan
 - `test/_visual_starfield_capture_test.dart` + `test/goldens/` yanlışlıkla main'e girdi; silmeyi protect-tests hook'u engelledi, Anıl'ın kararı bekleniyor.
@@ -81,8 +82,8 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 - Anıl 300'de giriş mesajlarını, Arabam/Evim aramasını, Kader Kitabı okunu dener.
 - Anıl 303'te sohbet kutusu yazı efektini, Candy temayı (kenar ışığı/performans), lamba düğmesini, Evim popup'larını dener.
 - Anıl 306'da reklam akışlarını gerçek cihazda dener (teklif penceresi, +1 hak, hemen aç, kutular, geçiş sıklığı; test build'de kendi reklamına tıklamadan). Bu akışlar testlerde gerçek reklamla çalıştırılmadı.
-- AdMob panelinde GDPR mesajı Anıl tarafından oluşturulacak (uygulama dışı adım).
-- Satın alma (IAP/abonelik): avukat görüşü ya da Anıl'ın açık "riski biliyorum, yap" kararı gelince yapılır; önerilen ürünler yukarıda.
+- Reklamların cihazda doğrulanması: AdMob'da `Uygulama sürümü` ve `Biçim` kırılımında geçiş gösterimi 0'dan büyük olmalı. Bilgisayara cihaz bağlı olmadığı için gerçek reklam henüz denenmedi. Firebase bağlı değil, AdMob'da kullanıcı sayısı yok.
+- Codex son incelemesi yapılamadı (sınır 11 Kas 21:56'da açılır); Claude code-reviewer yaptı.
 - Sonraki build `10.8.41+309`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
   Play Dahili test, `gh workflow run "iOS TestFlight" --repo anilgedikoglu/magnus --ref main`.
 - Anıl 294/297'de fincan kontrolünü dener; hâlâ geçerse yönetici teşhis satırı (ML Kit etiketleri) ekle.

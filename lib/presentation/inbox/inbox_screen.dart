@@ -187,7 +187,11 @@ class InboxScreen extends ConsumerWidget {
   /// Hazırlanan (kilitli) karta dokunuş: kullanıcı isterse ödüllü reklamla fal hemen hazır olur.
   /// Reklam hazır değil / sınır dolu ise kart eski davranışında (dokunuş bir şey yapmaz).
   Future<void> _openLocked(BuildContext context, WidgetRef ref, InboxItem item) async {
-    if (!AdService.instance.odulMumkun(OdulTuru.hemenAc)) return;
+    if (!item.isLocked) {
+      _openDetail(context, ref, item); // liste geç yenilendiyse kilit çoktan bitmiştir
+      return;
+    }
+    if (!item.hemenAcmayaDeger || !AdService.instance.odulMumkun(OdulTuru.hemenAc)) return;
     final notifier = ref.read(inboxProvider.notifier); // await'ten ÖNCE
     final kazandi = await ref.hemenAcTeklifi(context);
     if (kazandi) await notifier.unlockNow(item.id);

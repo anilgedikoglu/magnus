@@ -127,8 +127,9 @@ Her fal türünün metin seçim davranışı aşağıdaki tabloda tanımlıdır.
 | **El Falı** | — (AI üretimi) | — | ✅ Günde 1 |
 | **Yüz Falı** | — (AI üretimi) | — | ✅ Günde 1 |
 
-> **Hak bitti ödüllü +1 (2026-11-09):** Kahve, Tarot, Durugörü, Dert Ortağı, Acı Gerçekler ve Aşk Uyumu'nda günlük hak
-> bitince kullanıcı isterse ödüllü reklam izleyerek +1 hak kazanır (tür başına günde 1, toplam günde 3; bkz. "Reklam Düzeni").
+> **Hak bitti ödüllü +1 (2026-11-09):** Kahve, Tarot, Durugörü (soru başına, kendi ekranında), Dert Ortağı, Acı Gerçekler, Aşk Uyumu,
+> I-Ching, Japon Falı, Tavşan ve Kader Çarkı'nda günlük hak bitince kullanıcı isterse ödüllü reklam izleyerek +1 hak kazanır
+> (tür başına günde 2, toplam günde 6; bkz. "Reklam Düzeni").
 > Diğer türlerde ek hak yok.
 
 ---
@@ -1506,12 +1507,14 @@ Kodda `testDeviceIds` tanımlı değil → canlı uygulamada kendi reklamına t�
 
 - **Zorunlu ödüllü reklam YOK.** Ödüllü yalnız kullanıcı seçince: `odulTeklifiGoster` (`lib/core/widgets/odul_teklifi.dart`,
   sıvı cam alt sayfa, eşit "Reklam izle / Vazgeç"). `Future<bool>` yalnız `onUserEarnedReward` gelince true.
-- Yerler: hak bitti (kahve, tarot, durugörü, dert ortağı, acı gerçekler, aşk uyumu → +1 hak: o türün `*_bugun_tarih`
-  anahtarı silinir) · gelen kutusunda kilitli kart (`InboxNotifier.unlockNow`) · Kısmetim/Arabam/Evim kapalı kutu
+- Yerler: hak bitti (kahve, tarot, dert ortağı, acı gerçekler, aşk uyumu, I-Ching, Japon, Tavşan, Kader Çarkı → +1 hak: o türün
+  `*_bugun_tarih` anahtarı silinir; Durugörü'de kendi ekranında, sorunun `*_tarih` anahtarı) · gelen kutusunda kilitli kart
+  ("Reklam izle, hemen aç" işareti, `InboxNotifier.unlockNow`) · Kısmetim/Arabam/Evim kapalı kutu
   (kişi/dönemin tüm kutuları). Reklam hazır değil / sınır dolu / admin → kutu ücretsiz açılır, hak bitti eski mesajı verir.
 - Geçiş reklamı yalnız doğal arada: fal kapanıp menüye dönerken (`home_screen._falCikti`, ≥25 sn, Dert Ortağı hariç) ve
-  gelen kutusundan okunan fal kapanınca. Sınırlar kalıcı: `lib/core/services/ad_pacing.dart` (180 sn aralık, oturum 2,
-  gün 5, 2 fal tamamlanmadan yok; ödüllü: hak bitti tür başına 1 / gün 3, hemen aç gün 3, kutu gün 6, toplam gün 10).
+  gelen kutusundan okunan fal kapanınca. Sınırlar kalıcı: `lib/core/services/ad_pacing.dart` (önceki reklamdan 120 sn sonra, oturum 3,
+  gün 6, 2 fal tamamlanmadan yok; ödüllü: hak bitti tür başına 2 / gün 6, hemen aç gün 5, kutu gün 8, toplam gün 15). Yüklenen reklam 55 dk'da yenilenir.
+  Kullanıcıdaki 10.8.5'te geçiş reklamı yüklenip hiç gösterilmiyordu (AdMob: 1.411 istek, 0 gösterim; gelirin tamamı ödüllü).
   "Tamamlanan fal" = `MagnusHafiza.tamamlananFal` (okunan + ≥25 sn anlık fal).
 - `AdService`: UMP (`canRequestAds` olmadan reklam istenmez, hata akışı bozmaz), iOS `nonPersonalizedAds: true`,
   yükleme hatasında 3 deneme, SKAdNetworkItems `Info.plist`'te. Kullanıcı Bilgileri 3. kartta (gerekirse) "Gizlilik seçenekleri".

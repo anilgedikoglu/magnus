@@ -2,7 +2,7 @@
 
 > Claude ↔ Codex ↔ diğer oturumlar için güncel devir teslim. Ayrıntılı proje hafızası: `CLAUDE.md`.
 
-## Ne yapıldı (2026-11-09 — `10.8.41+309` ÇIKTI: Android Play Dahili test + iOS TestFlight run 42593321952, 12:34; 306: 02:08, 303: 00:10)
+## Ne yapıldı (2026-11-09 — `10.8.44+312` ÇIKTI: Android Play Dahili test + iOS TestFlight run 42613171378, 15:08; 309: 12:34, 306: 02:08)
 Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit'lenmemiş scratch
 `test/_visual_starfield_capture_test.dart`). Ad taraması (lib+assets) temiz, tüm `assets/data/*.json` geçerli.
 
@@ -88,6 +88,7 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 - Codex son incelemesi yapılamadı (sınır 11 Kas 21:56'da açılır); Claude code-reviewer yaptı.
 - **309 çıktı (9 Kas 12:34): Play Dahili test + TestFlight (run 42593321952). İncelemeye GÖNDERİLMEDİ.** Anıl telefonda bir ödüllü ve bir geçiş reklamı görünce, ayrı onayla aynı sürüm incelemeye gider (Play: "Sürümü yükselt"; App Store Connect: build 309).
 - 309'da Anıl "hemen aç"ta reklamsız açılma gördü, moddan çıkınca da reklam görmedi. 312 için: reklam kapatma artık yalnız yönetici iken geçerli (`reklamlarKapaliMi`), reklamlar açılınca hemen yüklenir, Admin Panel'de canlı durum satırı var. Kök neden cihazda kesinleşmedi: 312'de panel satırını oku (`consent ✗` = UMP, `error 3` = dolmadı, `ads off` = ayar). Sohbetteki 3 sn gecikmeler (açılış, fal gönderildi) kaldırıldı.
-- Sonraki build `10.8.44+312`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
+- **312 çıktı (9 Kas 15:08): Play Dahili test + TestFlight (run 42613171378). İncelemeye GÖNDERİLMEDİ.** Reklam sonuçtan hemen önce (politika riski bilerek; `reklam.md`), sohbet kutusu yuvarlağa toplanır, teklif penceresi ortada, Dert Ortağı amblemleri, Acı Gerçekler kağıdı kararır. Anıl yeni reklam yerlerini cihazda dener; reklam.md'nin "Üretime çıkış" sütunu üretimde doldurulur. Google Play uyarısı gelirse aynı noktalar atlanabilir reklama çevrilir.
+- Sonraki build `10.8.47+315`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
   Play Dahili test, `gh workflow run "iOS TestFlight" --repo anilgedikoglu/magnus --ref main`.
 - Anıl 294/297'de fincan kontrolünü dener; hâlâ geçerse yönetici teşhis satırı (ML Kit etiketleri) ekle.

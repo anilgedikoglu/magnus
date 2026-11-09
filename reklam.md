@@ -75,6 +75,10 @@ Sonuçtan hemen önceki düz geçiş reklamı, [Google Play Reklam Politikası](
 
 Üçü de (sahip bu görüşün bir kısmını reddetti; yukarıya bakın): açılış, karta dokunuş, sonuçtan hemen önce, okuma ortası, sekme ve arka plan dönüşünde geçiş yok; hak bitti, hemen aç, fal sonu, kapalı kutular, Kehanet +3 ve başka burçta ödüllü; fal bitip menüye dönüşte geçiş. Gelir sırası tahminidir, ödüllü kabul oranı ölçülmeden hesaplanamaz. Codex kullanım sınırındaydı (11 Kasım 21:56).
 
+## Test kanalı
+
+312: Play Dahili test + TestFlight, 2026-11-09 15:08. Üretime henüz çıkmadı.
+
 ## Sonraki kontrol
 
 312 üretime çıkınca "Üretime çıkış" ve "Kontrol" sütunlarını doldur. Kontrol gününde AdMob ve tutma sayılarını "Sonuç"a yaz.

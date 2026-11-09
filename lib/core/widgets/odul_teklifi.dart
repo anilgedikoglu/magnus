@@ -1,12 +1,12 @@
 // lib/core/widgets/odul_teklifi.dart
 //
-// Ödüllü reklam teklif penceresi (docs/reklam_duzeni.md): alt sayfa, sıvı cam, başlık + ödülün
+// Ödüllü reklam teklif penceresi (docs/reklam_duzeni.md): ekranın ortasında, sıvı cam, başlık + ödülün
 // açık yazısı, EŞİT iki düğme (Reklam izle / Vazgeç). Reddetmek normal kullanımı engellemez;
 // metin yönlendirmez. Yalnız kullanıcı "Reklam izle" derse reklam başlar; true YALNIZ ödül
 // kazanıldıysa döner (kapatma/hata/hazır değil → false).
 //
-// Azaltılmış hareket: sayfa animasyonsuz açılır/kapanır. Alt sayfa bir PopupRoute olduğu için
-// yüzen bar kendiliğinden gizlenir (FloatingBarRouteObserver).
+// Azaltılmış hareket: pencere animasyonsuz açılır/kapanır. Kök navigatörde açılır: yüzen bar
+// düğmelerin üstüne binmez, kendiliğinden gizlenir (FloatingBarRouteObserver).
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -34,19 +34,26 @@ Future<bool> odulTeklifiGoster(
   final ads = servis ?? AdService.instance;
   if (ads.adsDisabled) return true;
   final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-  final izle = await showModalBottomSheet<bool>(
+  final izle = await showGeneralDialog<bool>(
     context: context,
-    backgroundColor: Colors.transparent,
+    barrierDismissible: true,
+    barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
     barrierColor: const Color(0x99000000),
-    elevation: 0,
-    useSafeArea: false,
-    sheetAnimationStyle: reduce ? const AnimationStyle(duration: Duration.zero, reverseDuration: Duration.zero) : null,
-    builder: (_) => OdulTeklifiSayfasi(
+    transitionDuration: reduce ? Duration.zero : const Duration(milliseconds: 200),
+    pageBuilder: (_, __, ___) => OdulTeklifiSayfasi(
       baslik: baslik,
       aciklama: aciklama,
       izleEtiketi: izleEtiketi,
       vazgecEtiketi: vazgecEtiketi,
     ),
+    transitionBuilder: (_, anim, __, child) {
+      if (reduce) return child;
+      final e = CurvedAnimation(parent: anim, curve: Curves.easeOutCubic, reverseCurve: Curves.easeInCubic);
+      return FadeTransition(
+        opacity: e,
+        child: ScaleTransition(scale: Tween<double>(begin: 0.96, end: 1).animate(e), child: child),
+      );
+    },
   );
   if (izle != true) return false;
   return ads.showRewardedFor(tur, falTuru: falTuru);
@@ -69,12 +76,17 @@ class OdulTeklifiSayfasi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bottom = MediaQuery.paddingOf(context).bottom;
-    return Padding(
-      padding: EdgeInsets.fromLTRB(12, 0, 12, bottom + 12),
-      child: LiquidGlassPanel(
-        padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
-        child: Column(
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 420),
+          child: Material(
+            type: MaterialType.transparency,
+            child: LiquidGlassPanel(
+              key: const ValueKey('odulTeklifiPaneli'),
+              padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
+              child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -107,6 +119,9 @@ class OdulTeklifiSayfasi extends StatelessWidget {
               ],
             ),
           ],
+              ),
+            ),
+          ),
         ),
       ),
     );

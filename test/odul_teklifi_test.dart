@@ -96,6 +96,17 @@ void main() {
     });
   }
 
+  testWidgets('pencere ekranın ortasında ve kök navigatörde açılır (cam bar üstüne binmez)', (t) async {
+    final r = _Sonuc();
+    await _kur(t, _SahteServis(), r);
+    final panel = find.byKey(const ValueKey('odulTeklifiPaneli'));
+    final ekran = t.view.physicalSize / t.view.devicePixelRatio;
+    final merkez = t.getCenter(panel);
+    expect((merkez.dx - ekran.width / 2).abs(), lessThan(1));
+    expect((merkez.dy - ekran.height / 2).abs(), lessThan(1));
+    expect(ModalRoute.of(t.element(panel)), isA<PopupRoute<dynamic>>());
+  });
+
   testWidgets('admin modunda pencere yok, ödül doğrudan', (t) async {
     final s = _SahteServis(admin: true);
     final r = _Sonuc();

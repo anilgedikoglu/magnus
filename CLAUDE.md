@@ -1508,7 +1508,7 @@ Kodda `testDeviceIds` tanımlı değil → canlı uygulamada kendi reklamına t�
 ## Reklam Düzeni (2026-11-09) — docs/reklam_duzeni.md (ürün kararı, anlaşılmadan değiştirme)
 
 - **Zorunlu ödüllü reklam YOK.** Ödüllü yalnız kullanıcı seçince: `odulTeklifiGoster` (`lib/core/widgets/odul_teklifi.dart`,
-  sıvı cam alt sayfa, eşit "Reklam izle / Vazgeç"). `Future<bool>` yalnız `onUserEarnedReward` gelince true.
+  sıvı cam, ekranın ortasında, eşit "Reklam izle / Vazgeç"). `Future<bool>` yalnız `onUserEarnedReward` gelince true.
 - Yerler: hak bitti (kahve, tarot, dert ortağı, acı gerçekler, aşk uyumu, I-Ching, Japon, Tavşan, Kader Çarkı → +1 hak: o türün
   `*_bugun_tarih` anahtarı silinir; Durugörü'de kendi ekranında, sorunun `*_tarih` anahtarı) · gelen kutusunda kilitli kart
   ("Reklam izle, hemen aç" işareti, `InboxNotifier.unlockNow`) · Kısmetim/Arabam/Evim kapalı kutu

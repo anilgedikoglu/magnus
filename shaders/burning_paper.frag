@@ -3,7 +3,8 @@
 //   1) Açık, eski bir papirüs (gerçek görsel varsa uPaper, yoksa prosedürel yedek).
 //   2) SAĞ ALT köşeden tutuşur; ak-sıcak cephe + alev dilleri + köz/ember + yoğun duman
 //      yavaşça sola-yukarı tüm kağıdı sarar.
-//   3) Cephenin gerisinden KAPKARA (kömürleşmiş) kağıt çıkar; bütünlük bozulmaz.
+//   3) Cephenin gerisinde kağıdın KENDİSİ kömürleşir: dokusu durur, siyaha yakın koyulaşır
+//      (Anıl, 2026-11-09: alttan siyah zemin çıkmasın, kağıt gitmesin).
 //   4) Kömür üstündeki gri dumanlar yavaşça kaybolur → geriye yanık izli kara kağıt.
 //   (Altın yazı + glif-içi ışık huzmeleri AYRI katmanda: golden_script.frag + ShaderMask.)
 //
@@ -101,11 +102,11 @@ void main() {
 
   // ── Faz 3: KÖMÜRLEŞMİŞ kara kağıt + yanık izi dokusu ──────────────────────────
   float ash = fbm(st * 6.0 + seed * 3.1);
-  vec3 charred = mix(vec3(0.020, 0.016, 0.014), vec3(0.006, 0.005, 0.005), ash);
-  // Kalıcı yanık izi: soluk kahve/kül mottling (parlamaz) → "yanık izli kara kağıt".
+  vec3 charred = paper * mix(vec3(0.20, 0.155, 0.125), vec3(0.105, 0.085, 0.075), ash);
+  // Kalıcı yanık izi: kağıt lifleri üzerinde koyu lekeler ve soluk kül.
   float scorch = fbm(st * vec2(9.0, 11.0) + seed * 4.0);
-  charred += vec3(0.035, 0.022, 0.012) * smoothstep(0.48, 0.82, scorch);
-  charred += vec3(0.018, 0.016, 0.015) * smoothstep(0.60, 0.90, ash); // gri kül parçaları
+  charred *= 0.78 + 0.22 * smoothstep(0.30, 0.70, scorch);
+  charred += vec3(0.016, 0.012, 0.010) * smoothstep(0.60, 0.90, ash);
 
   // Cephenin HEMEN gerisinde dar sıcak köz bandı (yalnız yanarken).
   float afterGlow = exp(-sq((edge - (front - 0.05)) / 0.05)) * charAmt;

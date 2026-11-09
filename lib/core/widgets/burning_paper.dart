@@ -4,7 +4,7 @@
 //
 // İki parça:
 //   • BurningPaper      — papirüs → sağ alt köşeden tutuşur → ak-sıcak cephe + alev +
-//     köz + YOĞUN duman tüm kağıdı sarar → kömürleşmiş kara kağıt → dumanlar dağılır.
+//     köz + YOĞUN duman tüm kağıdı sarar → kağıdın kendisi siyaha yakın koyulaşır → dumanlar dağılır.
 //     shaders/burning_paper.frag (saf fragment; Impeller GEREKMEZ, Skia'da da çalışır).
 //     Gerçek papirüs görseli (assets/images/papirus.png) varsa KULLANILIR; yoksa
 //     prosedürel papirüs yedeği. Görsel sonradan eklenince otomatik devreye girer.
@@ -214,16 +214,15 @@ class _BurningPaperState extends State<BurningPaper>
   @override
   Widget build(BuildContext context) {
     if (_shaderFailed || _shader == null) {
-      // Yedek: koyu kömür zemin (shader gelene kadar / desteklenmezse).
-      return const DecoratedBox(
-        decoration: BoxDecoration(
-          gradient: RadialGradient(
-            center: Alignment(0.2, 0.1),
-            radius: 1.1,
-            colors: [Color(0xFF17100A), Color(0xFF080605)],
-          ),
+      // Yedek: koyulaşmış kağıt (shader gelene kadar / desteklenmezse).
+      return SizedBox.expand(
+        child: Image.asset(
+          widget.paperAsset,
+          fit: BoxFit.cover,
+          color: const Color(0xFF2A2019),
+          colorBlendMode: BlendMode.multiply,
+          errorBuilder: (_, __, ___) => const ColoredBox(color: Color(0xFF120D09)),
         ),
-        child: SizedBox.expand(),
       );
     }
     return RepaintBoundary(

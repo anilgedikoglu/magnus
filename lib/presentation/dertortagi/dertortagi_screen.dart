@@ -397,13 +397,13 @@ class _DertOrtagiScreenState extends ConsumerState<DertOrtagiScreen>
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         children: [
-                          _KategoriKutu(label: ref.watch(l10nProvider).general,  emoji: '🌀',
+                          _KategoriKutu(label: ref.watch(l10nProvider).general,  ikon: 'genel',
                               renk: const Color(0xFF6A3FBF), onTap: () => _kategoriSec('genel')),
-                          _KategoriKutu(label: ref.watch(l10nProvider).love,    emoji: '💜',
+                          _KategoriKutu(label: ref.watch(l10nProvider).love,    ikon: 'ask',
                               renk: const Color(0xFFBB1A7A), onTap: () => _kategoriSec('ask')),
-                          _KategoriKutu(label: ref.watch(l10nProvider).health, emoji: '🌿',
+                          _KategoriKutu(label: ref.watch(l10nProvider).health, ikon: 'saglik',
                               renk: const Color(0xFF1A6B4A), onTap: () => _kategoriSec('saglik')),
-                          _KategoriKutu(label: ref.watch(l10nProvider).career,emoji: '⚡',
+                          _KategoriKutu(label: ref.watch(l10nProvider).career,ikon: 'kariyer',
                               renk: const Color(0xFF1A3A8F), onTap: () => _kategoriSec('kariyer')),
                         ],
                       ),
@@ -698,10 +698,10 @@ class _MagnusBalonu extends StatelessWidget {
 // ─────────────────────────────────────────────────────────────────────────────
 
 class _KategoriKutu extends StatefulWidget {
-  final String label, emoji;
+  final String label, ikon;
   final Color renk;
   final VoidCallback onTap;
-  const _KategoriKutu({required this.label, required this.emoji, required this.renk, required this.onTap});
+  const _KategoriKutu({required this.label, required this.ikon, required this.renk, required this.onTap});
 
   @override
   State<_KategoriKutu> createState() => _KategoriKutuState();
@@ -732,8 +732,14 @@ class _KategoriKutuState extends State<_KategoriKutu> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(widget.emoji, style: const TextStyle(fontSize: 38)),
-              const SizedBox(height: 8),
+              Image.asset(
+                'assets/images/dert_konu/${widget.ikon}.png',
+                width: 92,
+                height: 92,
+                filterQuality: FilterQuality.medium,
+                errorBuilder: (_, __, ___) => const SizedBox(width: 92, height: 92),
+              ),
+              const SizedBox(height: 6),
               Text(widget.label,
                   style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
             ],

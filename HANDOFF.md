@@ -92,3 +92,6 @@ Hepsi commit + push + main'e FF. Tam test paketi 209/210 (tek kırmızı: commit
 - Sonraki build `10.8.47+315`, yalnız Anıl "test çık" deyince: ANA klasörden derle (`git pull` sonrası), parça-birleştir + SHA-256 ile
   Play Dahili test, `gh workflow run "iOS TestFlight" --repo anilgedikoglu/magnus --ref main`.
 - Anıl 294/297'de fincan kontrolünü dener; hâlâ geçerse yönetici teşhis satırı (ML Kit etiketleri) ekle.
+
+## Reklam düzeltmesi (24 Kas 2026) — BUILD BEKLİYOR
+iOS ATT izni eklendi (app_tracking_transparency), npa kaldırıldı → kişiselleştirilmiş reklam. YAYINDAN ÖNCE: App Store Connect gizlilik etiketine 'İzleme: Reklam verileri / Tanımlayıcılar' ekle. Kod main'de; mağazaya çıkması için "test çık" onayı + build gerekir.

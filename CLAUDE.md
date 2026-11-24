@@ -1894,3 +1894,6 @@ Gezinme sırası: insertion order + array index. `{{data, cinsiyet=..., X | ...}
 ### TÜM STATİK İÇERİK ÇEVRİLDİ ✅ (~9550 metin_en + 100 rüya sembolü Dart'ta)
 Geriye yalnızca runtime AI üretimi kalır (el fali/yüz fali/dert ortağı/durugörü AI/kahve
 foto analizi) — bunlar API çağrısına locale geçilerek İngilizce üretilir, statik çeviri gerekmez.
+
+## Reklam düzeltmesi (24 Kas 2026) — BUILD BEKLİYOR
+iOS ATT izni eklendi (app_tracking_transparency), npa kaldırıldı → kişiselleştirilmiş reklam. YAYINDAN ÖNCE: App Store Connect gizlilik etiketine 'İzleme: Reklam verileri / Tanımlayıcılar' ekle. Kod main'de; mağazaya çıkması için "test çık" onayı + build gerekir.

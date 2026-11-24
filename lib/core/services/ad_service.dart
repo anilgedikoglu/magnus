@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io' show Platform;
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart' show AppLifecycleListener;
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -14,7 +15,7 @@ import 'ad_pacing.dart';
 ///   AdService.instance.showRewardedFor(...)          // yalnız kullanıcı "izle" deyince
 ///
 /// Kurallar: ödül YALNIZ `onUserEarnedReward` gelince verilir; `canRequestAds` (UMP) olmadan reklam
-/// istenmez; iOS'ta ATT yok, istekler `nonPersonalizedAds: true`.
+/// istenmez; iOS'ta önce ATT sorulur (24 Kas), istekler normal `AdRequest()`.
 class AdService {
   AdService._();
 
@@ -35,9 +36,24 @@ class AdService {
       ? 'ca-app-pub-6470338276121414/5318605820'  // iOS — Ödüllü
       : 'ca-app-pub-6470338276121414/2337219262'; // Android — Ödüllü
 
-  /// iOS'ta ATT yok → kişiselleştirilmemiş reklam. Android'de varsayılan (UMP kararı geçerli).
-  static AdRequest _request() =>
-      Platform.isIOS ? const AdRequest(nonPersonalizedAds: true) : const AdRequest();
+  /// 24 Kas: iOS'ta da ATT sorusu var (rızadan sonra, SDK'dan önce). İzin verilmezse
+  /// SDK reklam kimliğini zaten kullanmaz; UMP kararı iki platformda da geçerli.
+  /// (Önceden iOS'ta hep kişiselleştirilmemiş istek gidiyordu → düşük eBGBM.)
+  static AdRequest _request() => const AdRequest();
+
+  /// iOS: Apple'ın takip izni sorusu yalnız bir kez (karar verilmemişse) sorulur.
+  static Future<void> _attSor() async {
+    if (!Platform.isIOS) return;
+    try {
+      final durum = await AppTrackingTransparency.trackingAuthorizationStatus;
+      if (durum == TrackingStatus.notDetermined) {
+        await Future.delayed(const Duration(milliseconds: 400));
+        await AppTrackingTransparency.requestTrackingAuthorization();
+      }
+    } catch (e) {
+      debugPrint('[AdService] ATT hatası: $e');
+    }
+  }
 
   /// Yükleme hatasında en çok bu kadar yeniden dene (10 sn, 30 sn, 90 sn).
   static const _retryDelays = [Duration(seconds: 10), Duration(seconds: 30), Duration(seconds: 90)];
@@ -214,6 +230,7 @@ class AdService {
     if (!_canRequestAds) return;
     if (!_sdkBasladi) {
       _sdkBasladi = true;
+      await _attSor();
       try {
         await MobileAds.instance.initialize();
         _sdkHazir = true;

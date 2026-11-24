@@ -61,6 +61,8 @@
 		<false/>
 		<key>ITSAppUsesNonExemptEncryption</key>
 		<false/>
+		<key>NSUserTrackingUsageDescription</key>
+		<string>Bu izin, size daha alakalı reklamlar gösterilmesi için kullanılır.</string>
 		<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
